@@ -3,4 +3,4 @@
 /build
 /doc
 /lib
-/include/config.hpp
+/include/arctk/config.hpp
