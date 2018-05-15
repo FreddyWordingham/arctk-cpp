@@ -310,6 +310,15 @@ add_library(arctk STATIC ${SOURCE_FILES} ${HEADER_FILES})
 
 
 #   == MODULES ==
+#   -- Core --
+if (NOT DEFINED ARCTK_MOD_CORE)
+    set(ARCTK_MOD_CORE OFF)
+endif ()
+message("Module core: '${ARCTK_MOD_CORE}'.")
+if (ARCTK_CORE)
+    #   -- Macros --
+    target_compile_definitions(arctk PRIVATE ARCTK_MOD_CORE)
+endif ()
 
 
 #   == INCLUDES ==
