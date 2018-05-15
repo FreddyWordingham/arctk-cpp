@@ -58,3 +58,26 @@ arctk_make()
 
     return $cmake_compile_status;
 }
+
+
+#   -- Installation --
+arctk_install()
+{
+    cd $ARCTK_DIR/build > /dev/null;
+
+    arctk_uninstall;
+
+    make install;
+
+    cd - > /dev/null;
+}
+
+arctk_uninstall()
+{
+    rm /usr/local/lib/libarctk.a;
+    rm -r /usr/local/include/arctk/;
+}
+
+
+
+printf "arctk build bash functions loaded.\n";
