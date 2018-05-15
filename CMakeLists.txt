@@ -9,9 +9,6 @@ project(arctk)
 
 
 #   == DIRECTORIES ==
-#   -- Source --
-set(ARCTK_SOURCE_DIR ${CMAKE_SOURCE_DIR}/include)
-
 #   -- Output --
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
@@ -34,8 +31,8 @@ message("IWYU: '${IWYU}'.")
 
 #   == SOURCE CODE ==
 #   -- Glob Files --
-file(GLOB_RECURSE SOURCE_FILES ${ARCTK_SOURCE_DIR}/*.cpp)
-file(GLOB_RECURSE HEADER_FILES ${ARCTK_SOURCE_DIR}/*.hpp)
+file(GLOB_RECURSE SOURCE_FILES ${ARCTK_SOURCE_DIR}/src/*.cpp)
+file(GLOB_RECURSE HEADER_FILES ${ARCTK_SOURCE_DIR}/include/*.hpp)
 
 
 #   == FLAGS ==
