@@ -63,8 +63,8 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
 #   == CONFIGURATION ==
 #   -- Header --
-set(CONFIG_HEADER_IN ${CMAKE_SOURCE_DIR}/config/include/config.hpp.in)
-set(CONFIG_HEADER ${CMAKE_SOURCE_DIR}/include/config.hpp)
+set(CONFIG_HEADER_IN ${CMAKE_SOURCE_DIR}/config/include/arctk/config.hpp.in)
+set(CONFIG_HEADER ${CMAKE_SOURCE_DIR}/include/arctk/config.hpp)
 configure_file(${CONFIG_HEADER_IN} ${CONFIG_HEADER} @ONLY)
 
 #   -- Doxygen --
@@ -105,7 +105,7 @@ message("Document: ${DOCUMENT}")
 #   == SOURCE CODE ==
 #   -- Glob Files --
 file(GLOB_RECURSE SOURCE_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
-file(GLOB_RECURSE HEADER_FILES ${CMAKE_SOURCE_DIR}/include/*.hpp)
+file(GLOB_RECURSE HEADER_FILES ${CMAKE_SOURCE_DIR}/include/arctk/*.hpp)
 
 
 #   == FLAGS ==
