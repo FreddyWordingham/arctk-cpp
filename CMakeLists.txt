@@ -8,6 +8,44 @@ cmake_minimum_required(VERSION 3.11.1)
 project(arctk)
 
 
+#   == BUILD INFORMATION ==
+#   -- Date --
+execute_process(COMMAND git log -1 --format=%cd --date=short OUTPUT_VARIABLE BUILD_DATE)
+string(REGEX REPLACE "\n$" "" BUILD_DATE "${BUILD_DATE}")
+set(BUILD_DATE ${BUILD_DATE})
+message("Build date: '${BUILD_DATE}'.")
+
+#   -- Branch --
+execute_process(COMMAND git rev-parse --abbrev-ref HEAD OUTPUT_VARIABLE BUILD_BRANCH)
+string(REGEX REPLACE "\n$" "" BUILD_BRANCH "${BUILD_BRANCH}")
+set(BUILD_BRANCH ${BUILD_BRANCH})
+message("Build branch: '${BUILD_BRANCH}'.")
+
+#   -- Patch --
+execute_process(COMMAND git rev-list --count HEAD OUTPUT_VARIABLE BUILD_PATCH)
+string(REGEX REPLACE "\n$" "" BUILD_PATCH "${BUILD_PATCH}")
+set(BUILD_PATCH ${BUILD_PATCH})
+message("Build patch: '${BUILD_PATCH}'.")
+
+#   -- Hash --
+execute_process(COMMAND git rev-parse --short HEAD OUTPUT_VARIABLE BUILD_HASH)
+string(REGEX REPLACE "\n$" "" BUILD_HASH "${BUILD_HASH}")
+set(BUILD_HASH ${BUILD_HASH})
+message("Build hash: '${BUILD_HASH}'.")
+
+#   -- Type --
+set(BUILD_TYPE ${CMAKE_BUILD_TYPE})
+message("Build type: '${BUILD_TYPE}'.")
+
+#   -- Compiler --
+set(BUILD_COMPILER ${CMAKE_CXX_COMPILER_ID})
+message("Build compiler: '${BUILD_COMPILER}'.")
+
+#   -- Directory --
+set(ARCTK_DIR ${CMAKE_SOURCE_DIR})
+message("Build directory: '${ARCTK_DIR}'.")
+
+
 #   == DIRECTORIES ==
 #   -- Output --
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
