@@ -1,6 +1,6 @@
 //  == INCLUDES ==
 //  -- Arctk --
-#include <arctk/config.hpp>
+#include <arctk/config.hpp> // IWYU pragma: keep
 
 
 
