@@ -1,5 +1,6 @@
 //  == INCLUDES ==
 //  -- Arctk --
+#include <arctk/config.hpp>
 
 
 
