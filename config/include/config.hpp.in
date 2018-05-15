@@ -19,20 +19,20 @@ namespace arc
 
         //  == CONSTANTS ==
         //  -- Version --
-        constexpr const unsigned long int ARCTK_VERSION_MAJOR = @ARCTK_VERSION_MAJOR@; //! Version major number.
-        constexpr const unsigned long int ARCTK_VERSION_MINOR = @ARCTK_VERSION_MINOR@; //! Version minor number.
-        constexpr const unsigned long int ARCTK_VERSION_PATCH = @ARCTK_VERSION_PATCH@; //! Version patch number.
+        constexpr const unsigned long int VERSION_MAJOR = @VERSION_MAJOR@; //! Version major number.
+        constexpr const unsigned long int VERSION_MINOR = @VERSION_MINOR@; //! Version minor number.
+        constexpr const unsigned long int VERSION_PATCH = @VERSION_PATCH@; //! Version patch number.
 
         //  -- Build Info --
-        constexpr const char* ARCTK_DIR      = "@ARCTK_DIR@";      //! Build directory.
-        constexpr const char* ARCTK_BRANCH   = "@ARCTK_BRANCH@";   //! Build branch.
-        constexpr const char* ARCTK_HASH     = "@ARCTK_HASH@";     //! Git hash.
-        constexpr const char* ARCTK_COMPILER = "@ARCTK_COMPILER@"; //! Compiler id.
-        constexpr const char* ARCTK_TYPE     = "@ARCTK_TYPE@";     //! Optimisation type.
-        constexpr const char* ARCTK_DATE     = "@ARCTK_DATE@";     //! Build date
+        constexpr const char* DIR      = "@DIR@";      //! Build directory.
+        constexpr const char* BRANCH   = "@BRANCH@";   //! Build branch.
+        constexpr const char* HASH     = "@HASH@";     //! Git hash.
+        constexpr const char* COMPILER = "@COMPILER@"; //! Compiler id.
+        constexpr const char* TYPE     = "@TYPE@";     //! Optimisation type.
+        constexpr const char* DATE     = "@DATE@";     //! Build date
 
         //  -- Module Status --
-        constexpr const char* ARCTK_MOD_CORE = "@ARCTK_MOD_CORE@"; //! Arctk core.
+        constexpr const char* MOD_CORE = "@MOD_CORE@"; //! Arctk core.
 
 
 

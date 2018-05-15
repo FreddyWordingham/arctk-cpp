@@ -21,12 +21,12 @@ namespace arc
         //  -- Version --
         constexpr const unsigned long int ARCTK_VERSION_MAJOR = 0; //! Version major number.
         constexpr const unsigned long int ARCTK_VERSION_MINOR = 0; //! Version minor number.
-        constexpr const unsigned long int ARCTK_VERSION_PATCH = 55; //! Version patch number.
+        constexpr const unsigned long int ARCTK_VERSION_PATCH = 58; //! Version patch number.
 
         //  -- Build Info --
         constexpr const char* ARCTK_DIR      = "/Users/freddy/arctk";      //! Build directory.
         constexpr const char* ARCTK_BRANCH   = "master";   //! Build branch.
-        constexpr const char* ARCTK_HASH     = "6ab4169";     //! Git hash.
+        constexpr const char* ARCTK_HASH     = "6d0e83f";     //! Git hash.
         constexpr const char* ARCTK_COMPILER = "Clang"; //! Compiler id.
         constexpr const char* ARCTK_TYPE     = "debug";     //! Optimisation type.
         constexpr const char* ARCTK_DATE     = "2018-05-15";     //! Build date
