@@ -9,6 +9,7 @@ arctk_clean()
     rm -r bin;
     rm -r build;
     rm -r doc;
+    rm include/config.hpp;
 
     cd - > /dev/null;
 }
