@@ -17,6 +17,22 @@ arctk_commit()
     cd - > /dev/null;
 }
 
+arctk_ammend()
+{
+    if [ "$#" != "1" ]; then
+        printf "Error! Unable to ammend commit.\n";
+        printf "Ammend requires a single commit message string.\n";
+
+        return;
+    fi
+
+    cd $ARCTK_DIR > /dev/null;
+
+    git commit --amend -m "$1";
+
+    cd - > /dev/null;
+}
+
 arctk_push()
 {
     cd $ARCTK_DIR > /dev/null;
