@@ -65,12 +65,12 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 #   -- Header --
 set(CONFIG_HEADER_IN ${CMAKE_SOURCE_DIR}/config/include/config.hpp.in)
 set(CONFIG_HEADER ${CMAKE_SOURCE_DIR}/include/config.hpp)
-configure_file(CONFIG_HEADER_IN CONFIG_HEADER @ONLY)
+configure_file(${CONFIG_HEADER_IN} ${CONFIG_HEADER} @ONLY)
 
 #   -- Doxygen --
 set(DOXYFILE_IN ${CMAKE_SOURCE_DIR}/config/doc/Doxyfile.in)
 set(DOXYFILE ${CMAKE_SOURCE_DIR}/doc/Doxyfile)
-configure_file(DOXYFILE_IN DOXYFILE @ONLY)
+configure_file(${DOXYFILE_IN} ${DOXYFILE} @ONLY)
 
 
 #   == OPTIONS ==
