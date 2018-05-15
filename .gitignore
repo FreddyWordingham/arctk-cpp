@@ -1,6 +1,7 @@
 # Compiled
 /bin
 /lib
+/include/config.hpp
 
 # Build files
 /build
