@@ -67,6 +67,11 @@ endif ()
 message("IWYU: '${IWYU}'.")
 
 
+#   == CONFIGURATION ==
+#   -- Header --
+configure_file(${CMAKE_SOURCE_DIR}/res/include/config.hpp.in ${CMAKE_SOURCE_DIR}/include/config.hpp)
+
+
 #   == SOURCE CODE ==
 #   -- Glob Files --
 file(GLOB_RECURSE SOURCE_FILES ${ARCTK_SOURCE_DIR}/src/*.cpp)
