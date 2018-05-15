@@ -53,6 +53,18 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
 
+#   == CONFIGURATION ==
+#   -- Header --
+set(CONFIG_HEADER_IN ${CMAKE_SOURCE_DIR}/res/include/config.hpp.in)
+set(CONFIG_HEADER ${CMAKE_SOURCE_DIR}/include/config.hpp)
+configure_file(CONFIG_HEADER_IN CONFIG_HEADER @ONLY)
+
+#   -- Doxygen --
+set(DOXYFILE_IN ${CMAKE_SOURCE_DIR}/res/doc/Doxyfile.in)
+set(DOXYFILE ${CMAKE_SOURCE_DIR}/doc/Doxyfile)
+configure_file(DOXYFILE_IN DOXYFILE @ONLY)
+
+
 #   == OPTIONS ==
 #   -- Clang-Tidy --
 if (CLANG_TIDY)
@@ -67,12 +79,19 @@ endif ()
 message("IWYU: '${IWYU}'.")
 
 #   -- Doxygen --
+if (DOCUMENT)
+    find_package(Doxygen)
+    if (NOT DOXYGEN_FOUND)
+        message (FATAL_ERROR "Doxygen is required to build the documentation.")
+    endif ()
 
-
-
-#   == CONFIGURATION ==
-#   -- Header --
-configure_file(${CMAKE_SOURCE_DIR}/res/include/config.hpp.in ${CMAKE_SOURCE_DIR}/include/config.hpp)
+    add_custom_target(doc
+        COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE}
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/doc
+        COMMENT "Generating API documentation with Doxygen."
+        VERBATIM)
+endif ()
+message("Document: '${DOCUMENT}'.")
 
 
 #   == SOURCE CODE ==
