@@ -10,16 +10,16 @@ project(arctk)
 
 #   == VERSION ==
 #   -- Major --
-set(VERSION_MAJOR 0)
+set(ARCTK_VERSION_MAJOR 0)
 
 #   -- Minor --
-set(VERSION_MINOR 0)
+set(ARCTK_VERSION_MINOR 0)
 
 #   -- Patch --
-execute_process(COMMAND git rev-list --count HEAD OUTPUT_VARIABLE VERSION_PATCH)
-string(REGEX REPLACE "\n$" "" VERSION_PATCH "${VERSION_PATCH}")
-set(VERSION_PATCH ${VERSION_PATCH})
-message("arctk version: ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}")
+execute_process(COMMAND git rev-list --count HEAD OUTPUT_VARIABLE ARCTK_VERSION_PATCH)
+string(REGEX REPLACE "\n$" "" ARCTK_VERSION_PATCH "${ARCTK_VERSION_PATCH}")
+set(ARCTK_VERSION_PATCH ${ARCTK_VERSION_PATCH})
+message("arctk version: ${ARCTK_VERSION_MAJOR}.${ARCTK_VERSION_MINOR}.${ARCTK_VERSION_PATCH}")
 
 
 #   == BUILD INFORMATION ==
