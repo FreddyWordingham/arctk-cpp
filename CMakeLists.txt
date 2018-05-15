@@ -36,3 +36,10 @@ message("IWYU: '${IWYU}'.")
 #   -- Glob Files --
 file(GLOB_RECURSE SOURCE_FILES ${ARCTK_SOURCE_DIR}/*.cpp)
 file(GLOB_RECURSE HEADER_FILES ${ARCTK_SOURCE_DIR}/*.hpp)
+
+
+#   == FLAGS ==
+#   -- Standard --
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
