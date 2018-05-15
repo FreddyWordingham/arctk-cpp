@@ -10,40 +10,40 @@ project(arctk)
 
 #   == BUILD INFORMATION ==
 #   -- Date --
-execute_process(COMMAND git log -1 --format=%cd --date=short OUTPUT_VARIABLE BUILD_DATE)
-string(REGEX REPLACE "\n$" "" BUILD_DATE "${BUILD_DATE}")
-set(BUILD_DATE ${BUILD_DATE})
-message("Build date: '${BUILD_DATE}'.")
+execute_process(COMMAND git log -1 --format=%cd --date=short OUTPUT_VARIABLE ARCTK_DATE)
+string(REGEX REPLACE "\n$" "" ARCTK_DATE "${ARCTK_DATE}")
+set(ARCTK_DATE ${ARCTK_DATE})
+message("arctk date: '${ARCTK_DATE}'.")
 
 #   -- Branch --
-execute_process(COMMAND git rev-parse --abbrev-ref HEAD OUTPUT_VARIABLE BUILD_BRANCH)
-string(REGEX REPLACE "\n$" "" BUILD_BRANCH "${BUILD_BRANCH}")
-set(BUILD_BRANCH ${BUILD_BRANCH})
-message("Build branch: '${BUILD_BRANCH}'.")
+execute_process(COMMAND git rev-parse --abbrev-ref HEAD OUTPUT_VARIABLE ARCTK_BRANCH)
+string(REGEX REPLACE "\n$" "" ARCTK_BRANCH "${ARCTK_BRANCH}")
+set(BUILD_BRANCH ${ARCTK_BRANCH})
+message("arctk branch: '${ARCTK_BRANCH}'.")
 
 #   -- Patch --
-execute_process(COMMAND git rev-list --count HEAD OUTPUT_VARIABLE BUILD_PATCH)
-string(REGEX REPLACE "\n$" "" BUILD_PATCH "${BUILD_PATCH}")
-set(BUILD_PATCH ${BUILD_PATCH})
-message("Build patch: '${BUILD_PATCH}'.")
+execute_process(COMMAND git rev-list --count HEAD OUTPUT_VARIABLE ARCTK_PATCH)
+string(REGEX REPLACE "\n$" "" ARCTK_PATCH "${ARCTK_PATCH}")
+set(BUILD_PATCH ${ARCTK_PATCH})
+message("arctk patch: '${ARCTK_PATCH}'.")
 
 #   -- Hash --
-execute_process(COMMAND git rev-parse --short HEAD OUTPUT_VARIABLE BUILD_HASH)
-string(REGEX REPLACE "\n$" "" BUILD_HASH "${BUILD_HASH}")
-set(BUILD_HASH ${BUILD_HASH})
-message("Build hash: '${BUILD_HASH}'.")
+execute_process(COMMAND git rev-parse --short HEAD OUTPUT_VARIABLE ARCTK_HASH)
+string(REGEX REPLACE "\n$" "" ARCTK_HASH "${BUILD_HASH}")
+set(ARCTK_HASH ${ARCTK_HASH})
+message("arctk hash: '${ARCTK_HASH}'.")
 
 #   -- Type --
-set(BUILD_TYPE ${CMAKE_BUILD_TYPE})
-message("Build type: '${BUILD_TYPE}'.")
+set(ARCTK_TYPE ${CMAKE_BUILD_TYPE})
+message("arctk type: '${ARCTK_TYPE}'.")
 
 #   -- Compiler --
-set(BUILD_COMPILER ${CMAKE_CXX_COMPILER_ID})
-message("Build compiler: '${BUILD_COMPILER}'.")
+set(ARCTK_COMPILER ${CMAKE_CXX_COMPILER_ID})
+message("arctk compiler: '${ARCTK_COMPILER}'.")
 
 #   -- Directory --
 set(ARCTK_DIR ${CMAKE_SOURCE_DIR})
-message("Build directory: '${ARCTK_DIR}'.")
+message("arctk directory: '${ARCTK_DIR}'.")
 
 
 #   == DIRECTORIES ==
