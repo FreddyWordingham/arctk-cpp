@@ -47,4 +47,4 @@ namespace arc
 
 
 //  == GUARD END ==
-#define ARCTK_CONFIG_HPP
+#endif ARCTK_CONFIG_HPP
