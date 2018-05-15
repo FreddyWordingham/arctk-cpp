@@ -29,7 +29,7 @@ message("arctk patch: '${ARCTK_PATCH}'.")
 
 #   -- Hash --
 execute_process(COMMAND git rev-parse --short HEAD OUTPUT_VARIABLE ARCTK_HASH)
-string(REGEX REPLACE "\n$" "" ARCTK_HASH "${BUILD_HASH}")
+string(REGEX REPLACE "\n$" "" ARCTK_HASH "${ARCTK_HASH}")
 set(ARCTK_HASH ${ARCTK_HASH})
 message("arctk hash: '${ARCTK_HASH}'.")
 

@@ -20,15 +20,15 @@ namespace arc
         //  == CONSTANTS ==
         //  -- Build Info --
         constexpr const char* ARCTK_DIR      = "/Users/freddy/arctk";      //! Build directory.
-        constexpr const char* ARCTK_BRANCH   = "";   //! Build branch.
+        constexpr const char* ARCTK_BRANCH   = "master";   //! Build branch.
         constexpr const char* ARCTK_HASH     = "";     //! Git hash.
-        constexpr const char* ARCTK_PATCH    = "";    //! Git patch number.
-        constexpr const char* ARCTK_COMPILER = ""; //! Compiler id.
-        constexpr const char* ARCTK_TYPE     = "";     //! Optimisation type.
-        constexpr const char* ARCTK_DATE     = "";     //! Build date
+        constexpr const char* ARCTK_PATCH    = "42";    //! Git patch number.
+        constexpr const char* ARCTK_COMPILER = "Clang"; //! Compiler id.
+        constexpr const char* ARCTK_TYPE     = "debug";     //! Optimisation type.
+        constexpr const char* ARCTK_DATE     = "2018-05-15";     //! Build date
 
         //  -- Module Status --
-        constexpr const char* ARCTK_MOD_CORE = ""; //! Arctk core.
+        constexpr const char* ARCTK_MOD_CORE = "true"; //! Arctk core.
 
 
 
