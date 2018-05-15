@@ -5,7 +5,7 @@
 
 
 //  == MODULE ==
-#ifdef ARCTK_CODE_MOD
+#ifdef ARCTK_CORE_MOD
 
 
 
@@ -42,7 +42,7 @@ namespace arc
 
 
 //  == MODULE END ==
-#endif // ARCTK_CODE_MOD
+#endif // ARCTK_CORE_MOD
 
 
 
