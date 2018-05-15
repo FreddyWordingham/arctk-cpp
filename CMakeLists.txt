@@ -266,7 +266,7 @@ endif ()
 
 #   == TARGETS ==
 #   -- Libraries --
-add_library(cptk STATIC ${SOURCE_FILES} ${HEADER_FILES})
+add_library(arctk STATIC ${SOURCE_FILES} ${HEADER_FILES})
 
 
 #   == MODULES ==
@@ -275,3 +275,11 @@ add_library(cptk STATIC ${SOURCE_FILES} ${HEADER_FILES})
 #   == INCLUDES ==
 #   -- Local --
 target_include_directories(arctk PRIVATE ${CMAKE_SOURCE_DIR}/include)
+
+
+#   == INSTALLATION ==
+#   -- Headers --
+install(DIRECTORY ./include/arctk/ DESTINATION include/arctk FILES_MATCHING PATTERN "*.hpp")
+
+#   -- Library --
+install(TARGETS arctk EXPORT arctk LIBRARY DESTINATION lib ARCHIVE DESTINATION lib INCLUDES DESTINATION include)
