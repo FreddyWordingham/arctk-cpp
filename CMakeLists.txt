@@ -55,7 +55,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
 #   == OPTIONS ==
 #   -- Clang-Tidy --
-if (IWYU)
+if (CLANG_TIDY)
     set(CMAKE_CXX_CLANG_TIDY "clang-tidy")
 endif ()
 message("Clang-Tidy: '${CLANG_TIDY}'.")
@@ -65,6 +65,9 @@ if (IWYU)
     set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE "iwyu")
 endif ()
 message("IWYU: '${IWYU}'.")
+
+#   -- Doxygen --
+
 
 
 #   == CONFIGURATION ==
