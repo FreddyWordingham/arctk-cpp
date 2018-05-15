@@ -18,13 +18,13 @@ message("arctk date: '${ARCTK_DATE}'.")
 #   -- Branch --
 execute_process(COMMAND git rev-parse --abbrev-ref HEAD OUTPUT_VARIABLE ARCTK_BRANCH)
 string(REGEX REPLACE "\n$" "" ARCTK_BRANCH "${ARCTK_BRANCH}")
-set(BUILD_BRANCH ${ARCTK_BRANCH})
+set(ARCTK_BRANCH ${ARCTK_BRANCH})
 message("arctk branch: '${ARCTK_BRANCH}'.")
 
 #   -- Patch --
 execute_process(COMMAND git rev-list --count HEAD OUTPUT_VARIABLE ARCTK_PATCH)
 string(REGEX REPLACE "\n$" "" ARCTK_PATCH "${ARCTK_PATCH}")
-set(BUILD_PATCH ${ARCTK_PATCH})
+set(ARCTK_PATCH ${ARCTK_PATCH})
 message("arctk patch: '${ARCTK_PATCH}'.")
 
 #   -- Hash --
