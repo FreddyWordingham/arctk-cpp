@@ -8,6 +8,7 @@ arctk_clean()
 
     rm -r bin;
     rm -r build;
+    rm -r doc;
 
     cd - > /dev/null;
 }
