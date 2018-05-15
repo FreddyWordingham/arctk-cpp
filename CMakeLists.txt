@@ -78,13 +78,13 @@ configure_file(${DOXYFILE_IN} ${DOXYFILE} @ONLY)
 if (CLANG_TIDY)
     set(CMAKE_CXX_CLANG_TIDY "clang-tidy")
 endif ()
-message("Clang-Tidy: '${CLANG_TIDY}'.")
+message("Clang-Tidy: ${CLANG_TIDY}")
 
 #   -- Include What You Use --
 if (IWYU)
     set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE "iwyu")
 endif ()
-message("IWYU: '${IWYU}'.")
+message("IWYU: ${IWYU}")
 
 #   -- Doxygen --
 if (DOCUMENT)
@@ -99,7 +99,7 @@ if (DOCUMENT)
         COMMENT "Generating API documentation with Doxygen."
         VERBATIM)
 endif ()
-message("Document: '${DOCUMENT}'.")
+message("Document: ${DOCUMENT}")
 
 
 #   == SOURCE CODE ==
@@ -128,7 +128,7 @@ elseif (CMAKE_BUILD_TYPE MATCHES "release")
         -O3                                 \
     ")
 else ()
-    message(FATAL_ERROR "Optimisation flags are not defined for build type: '${CMAKE_BUILD_TYPE}'.")
+    message(FATAL_ERROR "Optimisation flags are not defined for build type: ${CMAKE_BUILD_TYPE}")
 endif ()
 
 #   -- Warning --
@@ -330,7 +330,7 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
         -Wzero-as-null-pointer-constant         \
     ")
 else ()
-    message(FATAL_ERROR "Warning flags are not defined for compiler type: '${CMAKE_CXX_COMPILER_ID}'.")
+    message(FATAL_ERROR "Warning flags are not defined for compiler type: ${CMAKE_CXX_COMPILER_ID}")
 endif ()
 
 
@@ -344,7 +344,7 @@ add_library(arctk STATIC ${SOURCE_FILES} ${HEADER_FILES})
 if (NOT DEFINED MOD_CORE)
     set(MOD_CORE OFF)
 endif ()
-message("Module core: '${MOD_CORE}'.")
+message("Module core: ${MOD_CORE}")
 if (MOD_CORE)
     #   -- Macros --
     target_compile_definitions(arctk PRIVATE ARCTK_MOD_CORE)
