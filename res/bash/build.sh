@@ -63,6 +63,19 @@ arctk_make()
     return $cmake_compile_status;
 }
 
+arctk_make_doc()
+{
+    cd $ARCTK_DIR/build > /dev/null;
+
+    make doc;
+
+    local cmake_compile_status=$?;
+
+    cd - > /dev/null;
+
+    return $cmake_compile_status;
+}
+
 
 #   -- Installation --
 arctk_install()
