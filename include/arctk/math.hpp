@@ -17,6 +17,23 @@ namespace arc
 
 
 
+        //  == FUNCTION PROTOTYPES ==
+        //  -- Power --
+        template <class T>
+        inline T sq(T x_) noexcept;
+
+
+
+        //  == FUNCTIONS ==
+        //  -- Power --
+        template <class T>
+        inline T sq(const T x_) noexcept
+        {
+            return (x_ * x_);
+        }
+
+
+
     } // namespace math
 } // namespace arc
 
