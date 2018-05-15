@@ -19,9 +19,9 @@ namespace arc
 
         //  == CONSTANTS ==
         //  -- Version --
-        constexpr const unsigned long int VERSION_MAJOR = @VERSION_MAJOR@; //! Version major number.
-        constexpr const unsigned long int VERSION_MINOR = @VERSION_MINOR@; //! Version minor number.
-        constexpr const unsigned long int VERSION_PATCH = @VERSION_PATCH@; //! Version patch number.
+        constexpr const uint64_t VERSION_MAJOR = @VERSION_MAJOR@; //! Version major number.
+        constexpr const uint64_t VERSION_MINOR = @VERSION_MINOR@; //! Version minor number.
+        constexpr const uint64_t VERSION_PATCH = @VERSION_PATCH@; //! Version patch number.
 
         //  -- Build Info --
         constexpr const char* DIR      = "@DIR@";      //! Build directory.
