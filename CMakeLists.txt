@@ -10,48 +10,48 @@ project(arctk)
 
 #   == VERSION ==
 #   -- Major --
-set(ARCTK_VERSION_MAJOR 0)
+set(VERSION_MAJOR 0)
 
 #   -- Minor --
-set(ARCTK_VERSION_MINOR 0)
+set(VERSION_MINOR 0)
 
 #   -- Patch --
-execute_process(COMMAND git rev-list --count HEAD OUTPUT_VARIABLE ARCTK_VERSION_PATCH)
-string(REGEX REPLACE "\n$" "" ARCTK_VERSION_PATCH "${ARCTK_VERSION_PATCH}")
-set(ARCTK_VERSION_PATCH ${ARCTK_VERSION_PATCH})
-message("arctk version: ${ARCTK_VERSION_MAJOR}.${ARCTK_VERSION_MINOR}.${ARCTK_VERSION_PATCH}")
+execute_process(COMMAND git rev-list --count HEAD OUTPUT_VARIABLE VERSION_PATCH)
+string(REGEX REPLACE "\n$" "" VERSION_PATCH "${VERSION_PATCH}")
+set(VERSION_PATCH ${VERSION_PATCH})
+message("arctk version: ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}")
 
 
 #   == BUILD INFORMATION ==
 #   -- Date --
-execute_process(COMMAND git log -1 --format=%cd --date=short OUTPUT_VARIABLE ARCTK_DATE)
-string(REGEX REPLACE "\n$" "" ARCTK_DATE "${ARCTK_DATE}")
-set(ARCTK_DATE ${ARCTK_DATE})
-message("arctk date: ${ARCTK_DATE}")
+execute_process(COMMAND git log -1 --format=%cd --date=short OUTPUT_VARIABLE DATE)
+string(REGEX REPLACE "\n$" "" DATE "${DATE}")
+set(DATE ${DATE})
+message("arctk date: ${DATE}")
 
 #   -- Branch --
-execute_process(COMMAND git rev-parse --abbrev-ref HEAD OUTPUT_VARIABLE ARCTK_BRANCH)
-string(REGEX REPLACE "\n$" "" ARCTK_BRANCH "${ARCTK_BRANCH}")
-set(ARCTK_BRANCH ${ARCTK_BRANCH})
-message("arctk branch: ${ARCTK_BRANCH}")
+execute_process(COMMAND git rev-parse --abbrev-ref HEAD OUTPUT_VARIABLE BRANCH)
+string(REGEX REPLACE "\n$" "" BRANCH "${BRANCH}")
+set(BRANCH ${BRANCH})
+message("arctk branch: ${BRANCH}")
 
 #   -- Hash --
-execute_process(COMMAND git rev-parse --short HEAD OUTPUT_VARIABLE ARCTK_HASH)
-string(REGEX REPLACE "\n$" "" ARCTK_HASH "${ARCTK_HASH}")
-set(ARCTK_HASH ${ARCTK_HASH})
-message("arctk hash: ${ARCTK_HASH}")
+execute_process(COMMAND git rev-parse --short HEAD OUTPUT_VARIABLE HASH)
+string(REGEX REPLACE "\n$" "" HASH "${HASH}")
+set(HASH ${HASH})
+message("arctk hash: ${HASH}")
 
 #   -- Type --
-set(ARCTK_TYPE ${CMAKE_BUILD_TYPE})
-message("arctk type: ${ARCTK_TYPE}")
+set(TYPE ${CMAKE_BUILD_TYPE})
+message("arctk type: ${TYPE}")
 
 #   -- Compiler --
-set(ARCTK_COMPILER ${CMAKE_CXX_COMPILER_ID})
-message("arctk compiler: ${ARCTK_COMPILER}")
+set(COMPILER ${CMAKE_CXX_COMPILER_ID})
+message("arctk compiler: ${COMPILER}")
 
 #   -- Directory --
-set(ARCTK_DIR ${CMAKE_SOURCE_DIR})
-message("arctk directory: ${ARCTK_DIR}")
+set(DIR ${CMAKE_SOURCE_DIR})
+message("arctk directory: ${DIR}")
 
 
 #   == DIRECTORIES ==
@@ -341,11 +341,11 @@ add_library(arctk STATIC ${SOURCE_FILES} ${HEADER_FILES})
 
 #   == MODULES ==
 #   -- Core --
-if (NOT DEFINED ARCTK_MOD_CORE)
-    set(ARCTK_MOD_CORE OFF)
+if (NOT DEFINED MOD_CORE)
+    set(MOD_CORE OFF)
 endif ()
-message("Module core: '${ARCTK_MOD_CORE}'.")
-if (ARCTK_CORE)
+message("Module core: '${MOD_CORE}'.")
+if (MOD_CORE)
     #   -- Macros --
     target_compile_definitions(arctk PRIVATE ARCTK_MOD_CORE)
 endif ()
