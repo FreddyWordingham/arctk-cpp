@@ -8,42 +8,50 @@ cmake_minimum_required(VERSION 3.11.1)
 project(arctk)
 
 
+#   == VERSION ==
+#   -- Major --
+set(VERSION_MAJOR 0)
+
+#   -- Minor --
+set(VERSION_MINOR 0)
+
+#   -- Patch --
+execute_process(COMMAND git rev-list --count HEAD OUTPUT_VARIABLE VERSION_PATCH)
+string(REGEX REPLACE "\n$" "" VERSION_PATCH "${VERSION_PATCH}")
+set(VERSION_PATCH ${VERSION_PATCH})
+message("arctk version: ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}")
+
+
 #   == BUILD INFORMATION ==
 #   -- Date --
 execute_process(COMMAND git log -1 --format=%cd --date=short OUTPUT_VARIABLE ARCTK_DATE)
 string(REGEX REPLACE "\n$" "" ARCTK_DATE "${ARCTK_DATE}")
 set(ARCTK_DATE ${ARCTK_DATE})
-message("arctk date: '${ARCTK_DATE}'.")
+message("arctk date: ${ARCTK_DATE}")
 
 #   -- Branch --
 execute_process(COMMAND git rev-parse --abbrev-ref HEAD OUTPUT_VARIABLE ARCTK_BRANCH)
 string(REGEX REPLACE "\n$" "" ARCTK_BRANCH "${ARCTK_BRANCH}")
 set(ARCTK_BRANCH ${ARCTK_BRANCH})
-message("arctk branch: '${ARCTK_BRANCH}'.")
-
-#   -- Patch --
-execute_process(COMMAND git rev-list --count HEAD OUTPUT_VARIABLE ARCTK_PATCH)
-string(REGEX REPLACE "\n$" "" ARCTK_PATCH "${ARCTK_PATCH}")
-set(ARCTK_PATCH ${ARCTK_PATCH})
-message("arctk patch: '${ARCTK_PATCH}'.")
+message("arctk branch: ${ARCTK_BRANCH}")
 
 #   -- Hash --
 execute_process(COMMAND git rev-parse --short HEAD OUTPUT_VARIABLE ARCTK_HASH)
 string(REGEX REPLACE "\n$" "" ARCTK_HASH "${ARCTK_HASH}")
 set(ARCTK_HASH ${ARCTK_HASH})
-message("arctk hash: '${ARCTK_HASH}'.")
+message("arctk hash: ${ARCTK_HASH}")
 
 #   -- Type --
 set(ARCTK_TYPE ${CMAKE_BUILD_TYPE})
-message("arctk type: '${ARCTK_TYPE}'.")
+message("arctk type: ${ARCTK_TYPE}")
 
 #   -- Compiler --
 set(ARCTK_COMPILER ${CMAKE_CXX_COMPILER_ID})
-message("arctk compiler: '${ARCTK_COMPILER}'.")
+message("arctk compiler: ${ARCTK_COMPILER}")
 
 #   -- Directory --
 set(ARCTK_DIR ${CMAKE_SOURCE_DIR})
-message("arctk directory: '${ARCTK_DIR}'.")
+message("arctk directory: ${ARCTK_DIR}")
 
 
 #   == DIRECTORIES ==
