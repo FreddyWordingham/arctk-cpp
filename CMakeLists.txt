@@ -267,3 +267,11 @@ endif ()
 #   == TARGETS ==
 #   -- Libraries --
 add_library(cptk STATIC ${SOURCE_FILES} ${HEADER_FILES})
+
+
+#   == MODULES ==
+
+
+#   == INCLUDES ==
+#   -- Local --
+target_include_directories(arctk PRIVATE ${CMAKE_SOURCE_DIR}/include)
