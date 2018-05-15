@@ -306,8 +306,6 @@ endif ()
 
 #   == TARGETS ==
 #   -- Libraries --
-message("src: '${SOURCE_FILES}'.")
-message("hdr: '${HEADER_FILES}'.")
 add_library(arctk STATIC ${SOURCE_FILES} ${HEADER_FILES})
 
 
