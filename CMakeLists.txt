@@ -30,3 +30,9 @@ if (IWYU)
     set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE "iwyu")
 endif ()
 message("IWYU: '${IWYU}'.")
+
+
+#   == SOURCE CODE ==
+#   -- Glob Files --
+file(GLOB_RECURSE SOURCE_FILES ${ARCTK_SOURCE_DIR}/*.cpp)
+file(GLOB_RECURSE HEADER_FILES ${ARCTK_SOURCE_DIR}/*.hpp)
