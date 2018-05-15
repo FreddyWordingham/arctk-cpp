@@ -74,8 +74,8 @@ configure_file(${CMAKE_SOURCE_DIR}/res/include/config.hpp.in ${CMAKE_SOURCE_DIR}
 
 #   == SOURCE CODE ==
 #   -- Glob Files --
-file(GLOB_RECURSE SOURCE_FILES ${ARCTK_SOURCE_DIR}/src/*.cpp)
-file(GLOB_RECURSE HEADER_FILES ${ARCTK_SOURCE_DIR}/include/*.hpp)
+file(GLOB_RECURSE SOURCE_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
+file(GLOB_RECURSE HEADER_FILES ${CMAKE_SOURCE_DIR}/include/*.hpp)
 
 
 #   == FLAGS ==
@@ -306,6 +306,8 @@ endif ()
 
 #   == TARGETS ==
 #   -- Libraries --
+message("src: '${SOURCE_FILES}'.")
+message("hdr: '${HEADER_FILES}'.")
 add_library(arctk STATIC ${SOURCE_FILES} ${HEADER_FILES})
 
 
