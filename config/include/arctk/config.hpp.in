@@ -9,6 +9,12 @@
 
 
 
+//  == INCLUDES ==
+//  -- Std --
+#include <cstdint>
+
+
+
 //  == NAMESPACE ==
 namespace arc
 {
