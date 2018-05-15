@@ -262,3 +262,8 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
 else ()
     message(FATAL_ERROR "Warning flags are not defined for compiler type: '${CMAKE_CXX_COMPILER_ID}'.")
 endif ()
+
+
+#   == TARGETS ==
+#   -- Libraries --
+add_library(cptk STATIC ${SOURCE_FILES} ${HEADER_FILES})
