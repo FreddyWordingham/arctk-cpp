@@ -6,6 +6,7 @@
  */
 
 
+
 //  == GUARD ==
 #ifndef ARCTK_MATH_HPP
 #define ARCTK_MATH_HPP
