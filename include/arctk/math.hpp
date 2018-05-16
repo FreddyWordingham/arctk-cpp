@@ -21,7 +21,7 @@
 //  == NAMESPACE ==
 namespace arc //! arc namespace
 {
-    namespace math //! arc namespace
+    namespace math //! math namespace
     {
 
 
