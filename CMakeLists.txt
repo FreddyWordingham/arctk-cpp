@@ -8,6 +8,17 @@ cmake_minimum_required(VERSION 3.11.1)
 project(arctk)
 
 
+#   == MODULES ==
+#   -- Core --
+if (NOT DEFINED ARCTK_MOD_CORE)
+    set(ARCTK_MOD_CORE OFF)
+endif ()
+message("Module core: ${ARCTK_MOD_CORE}")
+if (ARCTK_MOD_CORE)
+    set(ARCTK_MOD_DEFS "${ARCTK_MOD_DEFS} ARCTK_MOD_CORE")
+endif ()
+
+
 #   == VERSION ==
 #   -- Major --
 set(ARCTK_VERSION_MAJOR 0)
@@ -337,16 +348,9 @@ endif ()
 add_library(arctk STATIC ${SOURCE_FILES} ${HEADER_FILES})
 
 
-#   == MODULES ==
-#   -- Core --
-if (NOT DEFINED ARCTK_MOD_CORE)
-    set(ARCTK_MOD_CORE OFF)
-endif ()
-message("Module core: ${ARCTK_MOD_CORE}")
-if (ARCTK_MOD_CORE)
-    #   -- Macros --
-    target_compile_definitions(arctk PRIVATE ARCTK_MOD_CORE)
-endif ()
+#   == DEFINITIONS ==
+#   -- Macros --
+target_compile_definitions(arctk PRIVATE ARCTK_MOD_DEFS)
 
 
 #   == INCLUDES ==
