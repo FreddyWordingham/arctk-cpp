@@ -47,7 +47,7 @@ namespace arc //! arc namespace
         constexpr const char* DATE     = "@ARCTK_DATE@";     //!< Build date
 
         //  -- Module Status --
-        constexpr const char* MOD_CORE = "@ARCTK_MOD_CORE@"; //!< Arctk core.
+        constexpr const char* MOD_CORE = "@ARCTK_MOD_CORE@"; //!< Arctk core module status.
 
 
 
