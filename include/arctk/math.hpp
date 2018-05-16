@@ -1,3 +1,11 @@
+/**
+ *  @author Freddy Wordingham
+ *  @email  fjmw201@exeter.ac.uk
+ *
+ *  @date   16/05/2018.
+ */
+
+
 //  == GUARD ==
 #ifndef ARCTK_MATH_HPP
 #define ARCTK_MATH_HPP
@@ -12,7 +20,7 @@
 //  == NAMESPACE ==
 namespace arc //! arc namespace
 {
-    namespace math //! math namespace
+    namespace math //! arc namespace
     {
 
 
