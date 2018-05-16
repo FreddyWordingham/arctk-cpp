@@ -1,3 +1,14 @@
+/**
+ *  @author Freddy Wordingham
+ *  @email  fjmw201@exeter.ac.uk
+ *
+ *  @date   15/05/2018.
+ *
+ *  Library build-time configuration constants.
+ */
+
+
+
 //  == GUARD ==
 #ifndef ARCTK_CONFIG_HPP
 #define ARCTK_CONFIG_HPP
