@@ -10,9 +10,9 @@
 
 
 //  == NAMESPACE ==
-namespace arc
+namespace arc //! arc namespace
 {
-    namespace math
+    namespace math //! math namespace
     {
 
 
