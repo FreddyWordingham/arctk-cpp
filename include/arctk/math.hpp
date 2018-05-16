@@ -3,6 +3,8 @@
  *  @email  fjmw201@exeter.ac.uk
  *
  *  @date   16/05/2018.
+ *
+ *  Collection of mathematical classes and functions.
  */
 
 
