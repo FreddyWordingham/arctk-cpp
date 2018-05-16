@@ -26,6 +26,13 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Power --
+        /**
+         *  Find the square of a given value.
+         *
+         *  @param  x_  Value to be squared.
+         *
+         *  @return The square of x_.
+         */
         template <class T>
         inline T sq(const T x_) noexcept
         {
