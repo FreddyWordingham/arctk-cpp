@@ -1,8 +1,6 @@
 /**
- *  @author Freddy Wordingham
- *  @email  fjmw201@exeter.ac.uk
- *
  *  @date   16/05/2018.
+ *  @author Freddy Wordingham
  *
  *  Collection of mathematical classes and functions.
  */
