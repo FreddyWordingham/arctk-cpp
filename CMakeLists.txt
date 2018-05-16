@@ -10,16 +10,16 @@ project(arctk)
 
 #   == VERSION ==
 #   -- Major --
-set(VERSION_MAJOR 0)
+set(ARCTK_VERSION_MAJOR 0)
 
 #   -- Minor --
-set(VERSION_MINOR 0)
+set(ARCTK_VERSION_MINOR 0)
 
 #   -- Patch --
 execute_process(COMMAND git rev-list --count HEAD OUTPUT_VARIABLE ARCTK_VERSION_PATCH)
 string(REGEX REPLACE "\n$" "" ARCTK_VERSION_PATCH "${ARCTK_VERSION_PATCH}")
 set(ARCTK_VERSION_PATCH ${ARCTK_VERSION_PATCH})
-message("arctk version: ${VERSION_MAJOR}.${VERSION_MINOR}.${ARCTK_VERSION_PATCH}")
+message("arctk version: ${ARCTK_VERSION_MAJOR}.${ARCTK_VERSION_MINOR}.${ARCTK_VERSION_PATCH}")
 
 
 #   == BUILD INFORMATION ==
@@ -340,11 +340,11 @@ add_library(arctk STATIC ${SOURCE_FILES} ${HEADER_FILES})
 
 #   == MODULES ==
 #   -- Core --
-if (NOT DEFINED MOD_CORE)
-    set(MOD_CORE OFF)
+if (NOT DEFINED ARCTK_MOD_CORE)
+    set(ARCTK_MOD_CORE OFF)
 endif ()
-message("Module core: ${MOD_CORE}")
-if (MOD_CORE)
+message("Module core: ${ARCTK_MOD_CORE}")
+if (ARCTK_MOD_CORE)
     #   -- Macros --
     target_compile_definitions(arctk PRIVATE ARCTK_MOD_CORE)
 endif ()
