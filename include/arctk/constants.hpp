@@ -1,5 +1,5 @@
 /**
- *  @date   17/05/2018.
+ *  @date   17/05/2018
  *  @author Freddy Wordingham
  *
  *  Collection of mathematical and physical constants.
