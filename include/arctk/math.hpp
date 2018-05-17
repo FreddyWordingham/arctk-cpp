@@ -19,8 +19,8 @@
 
 
 //  == INCLUDES ==
-//  -- Std --
-#include <cmath>
+//  -- Arctk --
+#include <arctk/constants.hpp>
 
 
 
@@ -92,7 +92,7 @@ namespace arc //! arc namespace
         {
             static_assert(std::is_arithmetic<T>::value);
 
-            return (static_cast<T>(180.0 / M_PI) * x_);
+            return (static_cast<T>(180.0 / PI) * x_);
         }
 
         /**
@@ -111,7 +111,7 @@ namespace arc //! arc namespace
         {
             static_assert(std::is_arithmetic<T>::value);
 
-            return (static_cast<T>(M_PI / 180.0) * x_);
+            return (static_cast<T>(PI / 180.0) * x_);
         }
 
 
