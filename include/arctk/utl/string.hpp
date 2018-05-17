@@ -23,6 +23,9 @@
 //  -- Std --
 #include <sstream>
 
+//  -- Arctk --
+#include <arctk/utl/char.hpp>
+
 
 
 //  == NAMESPACE ==
