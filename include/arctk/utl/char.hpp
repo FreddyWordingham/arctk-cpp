@@ -94,7 +94,7 @@ namespace arc //! arc namespace
         {
             for (auto it = GLYPH_CHARS; *it != 0; ++it)
             {
-                if (ch_ == *it)
+                if ((ch_ == *it) && !numerical(ch_))
                 {
                     return (true);
                 }
