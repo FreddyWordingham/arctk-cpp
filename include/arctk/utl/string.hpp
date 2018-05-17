@@ -27,6 +27,37 @@ namespace arc //! arc namespace
 
 
 
+        //  == FUNCTION PROTOTYPES ==
+        //  -- Properties --
+        template <class T>
+        inline bool parsable(const std::string& str_) noexcept;
+
+
+
+        //  == FUNCTIONS ==
+        //  -- Properties --
+        /**
+         *  Determine if a given string can be converted to a given type.
+         *
+         *  @tparam T   Type to convert the string to.
+         *
+         *  @param  str_    String to be converted.
+         *
+         *  @return True if the string can be converted to the given type.
+         */
+        template <class T>
+        inline bool parsable(const std::string& str_) noexcept
+        {
+            T                 result;
+            std::stringstream stream(str_);
+
+            stream >> result;
+
+            return (stream.fail() || stream.eof());
+        }
+
+
+
     } // namespace utl
 } // namespace arc
 
