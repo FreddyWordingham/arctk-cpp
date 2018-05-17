@@ -27,11 +27,31 @@ namespace arc //! arc namespace
 
 
 
+        //  == SETTINGS ==
+        //  -- Whitespace --
+        constexpr const std::string whitespace(" \f\n\r\t\v"); //!< String of characters which are considered whitespace.
+
+
+
         //  == FUNCTION PROTOTYPES ==
+        //  -- Properties --
+        inline bool whitespace(char ch_) noexcept;
 
 
 
         //  == FUNCTIONS ==
+        //  -- Properties --
+        /**
+         *  Determine if the given character is whitespace.
+         *
+         *  @param  ch_ Character to be tested.
+         *
+         *  @return True if the given character is considered whitespace.
+         */
+        inline bool whitespace(const char ch_) noexcept
+        {
+            return ((ch_ == ' ') || (ch_ == '\f') || (ch_ == '\n') || (ch_ == '\r') || (ch_ == '\t') || (ch_ == '\v'));
+        }
 
 
 
