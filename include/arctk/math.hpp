@@ -78,13 +78,13 @@ namespace arc //! arc namespace
 
 
         //  -- Conversion --
-        template <typename T, std::enable_if<std::is_arithmetic<T>::value, T>::type>
+        template <typename T, typename std::enable_if<std::is_arithmetic<T>::value, T>::type>
         inline T rad_to_deg(const T x_) noexcept
         {
             return (static_cast<T>(180.0 / M_PI) * x_);
         }
 
-        template <typename T, std::enable_if<std::is_arithmetic<T>::value, T>::type>
+        template <typename T, typename std::enable_if<std::is_arithmetic<T>::value, T>::type>
         inline T deg_to_rad(const T x_) noexcept
         {
             return (static_cast<T>(M_PI / 180.0) * x_);
