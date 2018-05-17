@@ -19,6 +19,12 @@
 
 
 
+//  == INCLUDES ==
+//  -- Std --
+#include <string>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arc namespace
 {
