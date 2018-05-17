@@ -19,6 +19,12 @@
 
 //  == MAIN ==
 //  -- Function --
+/**
+ *  Main function of Arctk.
+ *  Serves only as a main entity.
+ *
+ *  @return Zero upon a successful run.
+ */
 int main(const int /*unused*/, char** /*unused*/)
 {
     return (0);
