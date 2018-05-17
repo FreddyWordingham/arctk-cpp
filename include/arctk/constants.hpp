@@ -1,5 +1,5 @@
 /**
- *  @file   config.hpp
+ *  @file   constants.hpp
  *  @date   17/05/2018
  *  @author Freddy Wordingham
  *
