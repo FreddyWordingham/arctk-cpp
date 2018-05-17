@@ -350,7 +350,10 @@ add_library(arctk STATIC ${SOURCE_FILES} ${HEADER_FILES})
 
 #   == DEFINITIONS ==
 #   -- Macros --
-target_compile_definitions(arctk PRIVATE ARCTK_MOD_DEFS)
+foreach (i ${ARCTK_MOD_DEFS})
+    target_compile_definitions(arctk PRIVATE ${i})
+    message("Pre-defined: ${i}")
+endforeach (i)
 
 
 #   == INCLUDES ==
