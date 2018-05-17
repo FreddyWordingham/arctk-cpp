@@ -19,6 +19,9 @@
 
 
 //  == INCLUDES ==
+//  -- Std --
+#include <type_traits>
+
 //  -- Arctk --
 #include <arctk/constants.hpp>
 
