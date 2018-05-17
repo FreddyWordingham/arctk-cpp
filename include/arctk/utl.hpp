@@ -21,6 +21,7 @@
 
 //  == INCLUDES ==
 //  -- Arctk --
+#include <arctk/utl/char.hpp>
 #include <arctk/utl/string.hpp>
 
 
