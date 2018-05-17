@@ -43,7 +43,7 @@ namespace arc //! arc namespace
 
     namespace phys //! physics namespace
     {
-    }
+    } // namespace phys
 } // namespace arc
 
 
