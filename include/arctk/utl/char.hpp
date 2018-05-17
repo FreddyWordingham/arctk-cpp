@@ -29,13 +29,15 @@ namespace arc //! arc namespace
 
         //  == SETTINGS ==
         //  -- Whitespace --
-        constexpr const char* const WHITESPACE_CHARS(" \f\n\r\t\v"); //!< String of characters which are considered whitespace.
+        constexpr const char* const WHITESPACE_CHARS(" \f\n\r\t\v"); //!< Characters which are considered whitespace.
+        constexpr const char* const GLYPH_CHARS("-_");               //!< Additional characters which are considered glyphs.
 
 
 
         //  == FUNCTION PROTOTYPES ==
         //  -- Properties --
         inline bool whitespace(char ch_) noexcept;
+        inline bool glyph(char ch_) noexcept;
 
 
 
@@ -59,6 +61,26 @@ namespace arc //! arc namespace
             }
 
             return (false);
+        }
+
+        /**
+         *  Determine if the given character is a glyph.
+         *
+         *  @param  ch_ Character to be tested.
+         *
+         *  @return True if the given character is considered a glyph.
+         */
+        inline bool glyph(const char ch_) noexcept
+        {
+            for (auto it = GLYPH_CHARS; *it != 0; ++it)
+            {
+                if (ch_ == *it)
+                {
+                    return (true);
+                }
+            }
+
+            return (std::isalnum(ch_) != 0);
         }
 
 
