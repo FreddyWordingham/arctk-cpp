@@ -21,7 +21,6 @@
 //  == INCLUDES ==
 //  -- Std --
 #include <cmath>
-#include <type_traits>
 
 
 
@@ -41,10 +40,9 @@ namespace arc //! arc namespace
         inline T cube(T x_) noexcept;
 
         //  -- Conversion --
-        template <typename T>
+        template <class T>
         inline T rad_to_deg(const T x_) noexcept;
-
-        template <typename T>
+        template <class T>
         inline T deg_to_rad(const T x_) noexcept;
 
 
@@ -78,15 +76,41 @@ namespace arc //! arc namespace
 
 
         //  -- Conversion --
-        template <typename T, typename std::enable_if<std::is_arithmetic<T>::value, T>::type>
+        /**
+         *  Convert the value in radians to degrees.
+         *
+         *  @pre    T must be an arithmetic type.
+         *
+         *  @tparam T   Type of value to convert.
+         *
+         *  @param  x_  Value to be converted to degrees.
+         *
+         *  @return Value of x_ in degrees.
+         */
+        template <class T>
         inline T rad_to_deg(const T x_) noexcept
         {
+            static_assert(std::is_arithmetic<T>::value);
+
             return (static_cast<T>(180.0 / M_PI) * x_);
         }
 
-        template <typename T, typename std::enable_if<std::is_arithmetic<T>::value, T>::type>
+        /**
+         *  Convert the value in degrees to radians.
+         *
+         *  @pre    T must be an arithmetic type.
+         *
+         *  @tparam T   Type of value to convert.
+         *
+         *  @param  x_  Value to be converted to radians.
+         *
+         *  @return Value of x_ in radians.
+         */
+        template <class T>
         inline T deg_to_rad(const T x_) noexcept
         {
+            static_assert(std::is_arithmetic<T>::value);
+
             return (static_cast<T>(M_PI / 180.0) * x_);
         }
 
