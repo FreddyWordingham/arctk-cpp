@@ -18,12 +18,6 @@
 
 
 
-//  == INCLUDES ==
-//  -- Std --
-#include <cmath>
-
-
-
 //  == NAMESPACE ==
 namespace arc //! arc namespace
 {
