@@ -60,7 +60,7 @@ namespace arc //! arc namespace
          */
         inline bool numerical(const char ch_) noexcept
         {
-            return ((ch_ < '0') || (ch_ > '9'));
+            return ((ch_ >= '0') && (ch_ <= '9'));
         }
 
         /**
