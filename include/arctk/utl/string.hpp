@@ -41,6 +41,8 @@ namespace arc //! arc namespace
         template <class T>
         inline bool parsable(const std::string& str_) noexcept;
         inline bool numerical(const std::string& str_) noexcept;
+        inline bool whitespace(const std::string& str_) noexcept;
+        inline bool glyph(const std::string& str_) noexcept;
 
 
 
@@ -78,6 +80,19 @@ namespace arc //! arc namespace
         inline bool numerical(const std::string& str_) noexcept
         {
             return (parsable<double>(str_));
+        }
+
+        /**
+         *  Determine if a given string contains only whitespace characters.
+         *  Empty strings are considered to be whitespace.
+         *
+         *  @param  str_    String to be tested.
+         *
+         *  @return True if the string contains only whitespace characters.
+         */
+        inline bool whitespace(const std::string& str_) noexcept
+        {
+            return (str_.find_first_not_of(WHITESPACE_CHARS) == std::string::npos);
         }
 
 
