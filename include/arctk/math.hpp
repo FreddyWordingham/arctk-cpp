@@ -18,6 +18,12 @@
 
 
 
+//  == INCLUDES ==
+//  -- Std --
+#include <type_traits>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arc namespace
 {
@@ -33,6 +39,12 @@ namespace arc //! arc namespace
         template <class T>
         inline T cube(T x_) noexcept;
 
+        //  -- Conversion --
+        template <typename T>
+        inline T rad_to_deg(const T x_) noexcept;
+
+        template <typename T>
+        inline T deg_to_rad(const T x_) noexcept;
 
 
         //  == FUNCTIONS ==
@@ -61,6 +73,20 @@ namespace arc //! arc namespace
         inline T cube(const T x_) noexcept
         {
             return (x_ * x_ * x_);
+        }
+
+
+        //  -- Conversion --
+        template <typename T, std::enable_if<std::is_arithmetic<T>::value, T>::type>
+        inline T rad_to_deg(const T x_) noexcept
+        {
+            return (static_cast<T>(180.0 / M_PI) * x_);
+        }
+
+        template <typename T, std::enable_if<std::is_arithmetic<T>::value, T>::type>
+        inline T deg_to_rad(const T x_) noexcept
+        {
+            return (static_cast<T>(M_PI / 180.0) * x_);
         }
 
 
