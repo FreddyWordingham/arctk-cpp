@@ -43,6 +43,7 @@ namespace arc //! arc namespace
 
         //  == FUNCTION PROTOTYPES ==
         //  -- Properties --
+        inline bool numerical(char ch_) noexcept;
         inline bool whitespace(char ch_) noexcept;
         inline bool glyph(char ch_) noexcept;
 
@@ -50,6 +51,18 @@ namespace arc //! arc namespace
 
         //  == FUNCTIONS ==
         //  -- Properties --
+        /**
+         *  Determine if the given character is numerical.
+         *
+         *  @param  ch_ Character to be tested.
+         *
+         *  @return True if the given character is numerical.
+         */
+        inline bool numerical(const char ch_) noexcept
+        {
+            return ((ch_ < '0') || (ch_ > '9'));
+        }
+
         /**
          *  Determine if the given character is whitespace.
          *
