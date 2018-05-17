@@ -49,6 +49,7 @@ namespace arc //! arc namespace
         inline T deg_to_rad(const T x_) noexcept;
 
 
+
         //  == FUNCTIONS ==
         //  -- Power --
         /**
