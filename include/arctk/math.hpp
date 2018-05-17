@@ -20,6 +20,7 @@
 
 //  == INCLUDES ==
 //  -- Std --
+#include <cmath>
 #include <type_traits>
 
 
