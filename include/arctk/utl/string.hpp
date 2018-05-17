@@ -19,6 +19,12 @@
 
 
 
+//  == INCLUDES ==
+//  -- Std --
+#include <sstream>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arc namespace
 {
