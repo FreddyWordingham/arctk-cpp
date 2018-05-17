@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_STRING_HPP
-#define ARCTK_STRING_HPP
+#ifndef ARCTK_UTL_STRING_HPP
+#define ARCTK_UTL_STRING_HPP
 
 
 
@@ -38,4 +38,4 @@ namespace arc //! arc namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_STRING_HPP
+#endif // ARCTK_UTL_STRING_HPP
