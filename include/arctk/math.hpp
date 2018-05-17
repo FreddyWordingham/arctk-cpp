@@ -30,6 +30,8 @@ namespace arc //! arc namespace
         //  -- Power --
         template <class T>
         inline T sq(T x_) noexcept;
+        template <class T>
+        inline T cube(T x_) noexcept;
 
 
 
@@ -46,6 +48,19 @@ namespace arc //! arc namespace
         inline T sq(const T x_) noexcept
         {
             return (x_ * x_);
+        }
+
+        /**
+         *  Find the cube of a given value.
+         *
+         *  @param  x_  Value to be cubed.
+         *
+         *  @return The cube of x_.
+         */
+        template <class T>
+        inline T cube(const T x_) noexcept
+        {
+            return (x_ * x_ * x_);
         }
 
 
