@@ -45,9 +45,9 @@ namespace arc //! arc namespace
 
         //  -- Conversion --
         template <class T>
-        inline T rad_to_deg(const T x_) noexcept;
+        inline T rad_to_deg(T x_) noexcept;
         template <class T>
-        inline T deg_to_rad(const T x_) noexcept;
+        inline T deg_to_rad(T x_) noexcept;
 
 
 
