@@ -1,0 +1,49 @@
+/**
+ *  @date   17/05/2018.
+ *  @author Freddy Wordingham
+ *
+ *  Collection of mathematical and physical constants.
+ */
+
+
+
+//  == GUARD ==
+#ifndef ARCTK_CONSTANTS_HPP
+#define ARCTK_CONSTANTS_HPP
+
+
+
+//  == MODULE ==
+#ifdef ARCTK_MOD_CORE
+
+
+
+//  == INCLUDES ==
+//  -- Std --
+#include <cmath>
+
+
+
+//  == NAMESPACE ==
+namespace arc //! arc namespace
+{
+    namespace math //! mathematical namespace
+    {
+    } // namespace math
+
+
+
+    namespace phys //! physics namespace
+    {
+    }
+} // namespace arc
+
+
+
+//  == MODULE END ==
+#endif // ARCTK_MOD_CORE
+
+
+
+//  == GUARD END ==
+#endif // ARCTK_CONSTANTS_HPP
