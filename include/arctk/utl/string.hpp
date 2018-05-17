@@ -58,8 +58,9 @@ namespace arc //! arc namespace
             std::stringstream stream(str_);
 
             stream >> result;
+            stream >> std::ws;
 
-            return (stream.fail() || stream.eof());
+            return (!stream.fail() && stream.eof());
         }
 
 
