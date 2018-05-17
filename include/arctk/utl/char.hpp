@@ -50,7 +50,15 @@ namespace arc //! arc namespace
          */
         inline bool whitespace(const char ch_) noexcept
         {
-            return ((ch_ == ' ') || (ch_ == '\f') || (ch_ == '\n') || (ch_ == '\r') || (ch_ == '\t') || (ch_ == '\v'));
+            for (auto it = WHITESPACE_CHARS; *it; ++it)
+            {
+                if (ch_ == *it)
+                {
+                    return (true);
+                }
+            }
+
+            return (false);
         }
 
 
