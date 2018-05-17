@@ -11,10 +11,11 @@
 
 //  == INCLUDES ==
 //  -- Arctk --
-#include <arctk/config.hpp>    // IWYU pragma: keep
-#include <arctk/constants.hpp> // IWYU pragma: keep
-#include <arctk/math.hpp>      // IWYU pragma: keep
-#include <arctk/utl.hpp>       // IWYU pragma: keep
+#include <arctk/config.hpp>     // IWYU pragma: keep
+#include <arctk/constants.hpp>  // IWYU pragma: keep
+#include <arctk/math.hpp>       // IWYU pragma: keep
+#include <arctk/utl.hpp>        // IWYU pragma: keep
+#include <arctk/utl/string.hpp> // IWYU pragma: keep
 
 
 
