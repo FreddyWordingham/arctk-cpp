@@ -29,7 +29,7 @@ namespace arc //! arc namespace
 
         //  == SETTINGS ==
         //  -- Whitespace --
-        constexpr const char* const whitespace_chars(" \f\n\r\t\v"); //!< String of characters which are considered whitespace.
+        constexpr const char* const WHITESPACE_CHARS(" \f\n\r\t\v"); //!< String of characters which are considered whitespace.
 
 
 
