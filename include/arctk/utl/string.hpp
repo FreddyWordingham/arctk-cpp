@@ -37,6 +37,7 @@ namespace arc //! arc namespace
         //  -- Properties --
         template <class T>
         inline bool parsable(const std::string& str_) noexcept;
+        inline bool numerical(const std::string& str_) noexcept;
 
 
 
@@ -47,7 +48,7 @@ namespace arc //! arc namespace
          *
          *  @tparam T   Type to convert the string to.
          *
-         *  @param  str_    String to be converted.
+         *  @param  str_    String to be tested.
          *
          *  @return True if the string can be converted to the given type.
          */
@@ -61,6 +62,19 @@ namespace arc //! arc namespace
             stream >> std::ws;
 
             return (!stream.fail() && stream.eof());
+        }
+
+        /**
+         *  Determine if a given string can be converted to an arithmetic type.
+         *  If the string can be converted to a double, then it can be converted to any arithmetic type.
+         *
+         *  @param  str_    String to be tested.
+         *
+         *  @return True if the string can be converted to an arithmetic type.
+         */
+        inline bool numerical(const std::string& str_) noexcept
+        {
+            return (parsable<double>(str_));
         }
 
 
