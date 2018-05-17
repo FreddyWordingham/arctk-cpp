@@ -1,6 +1,6 @@
 /**
  *  @file   main.cpp
- *  @date   15/05/2018.
+ *  @date   15/05/2018
  *  @author Freddy Wordingham
  *
  *  Main source file of arctk.
