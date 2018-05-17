@@ -1,6 +1,6 @@
 /**
  *  @file   math.hpp
- *  @date   16/05/2018.
+ *  @date   16/05/2018
  *  @author Freddy Wordingham
  *
  *  Collection of mathematical classes and functions.
