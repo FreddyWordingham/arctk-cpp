@@ -21,6 +21,7 @@
 
 //  == INCLUDES ==
 //  -- Std --
+#include <assert>
 #include <sstream>
 
 //  -- Arctk --
