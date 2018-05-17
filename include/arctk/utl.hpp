@@ -20,6 +20,8 @@
 
 
 //  == INCLUDES ==
+//  -- Arctk --
+#include <arctk/utl/string.hpp>
 
 
 
