@@ -51,7 +51,7 @@ namespace arc //! arc namespace
         inline void remove(std::string* str_, char ch_) noexcept;
         inline void remove(std::string* str_, const std::string& sub_) noexcept;
         inline void remove_blank_lines(std::string* str_) noexcept;
-
+        inline void replace(std::string* str_, const std::string& find_, const std::string& replace_) noexcept;
 
 
         //  == FUNCTIONS ==
@@ -155,9 +155,30 @@ namespace arc //! arc namespace
          *
          *  @param  str_    String to be filtered.
          */
-        inline void remove_blank_lines(std::string* str_) noexcept
+        inline void remove_blank_lines(std::string* const str_) noexcept
         {
             str_->erase(std::unique(str_->begin(), str_->end(), [](const char first_, const char second_) { return ((first_ == '\n') && (second_ == '\n')); }), str_->end());
+        }
+
+        /**
+         *  Find and replace all instances of a sub-string within a string by a given replacement string.
+         *
+         *  @pre    find_ must not be empty.
+         *  @pre    replace_ must not be empty.
+         *
+         *  @param  str_        String to be filtered.
+         *  @param  find_       Sub-string to be replaced.
+         *  @param  replace_    Sub-string to replace find_ sub-string with.
+         */
+        inline void replace(std::string* const str_, const std::string& find_, const std::string& replace_) noexcept
+        {
+            assert(!find_.empty());
+            assert(!replace_.empty());
+
+            for (size_t pos{0}; (pos = str_->find(find_, pos)) != std::string::npos; pos += replace_.size())
+            {
+                str_->replace(pos, find_.size(), replace_);
+            }
         }
 
 
