@@ -52,6 +52,7 @@ namespace arc //! arc namespace
         inline void remove(std::string* str_, const std::string& sub_) noexcept;
         inline void remove_blank_lines(std::string* str_) noexcept;
         inline void replace(std::string* str_, const std::string& find_, const std::string& replace_) noexcept;
+        inline void filter(std::string* str_, const std::string& start_, const std::string& end_ = "\n") noexcept;
 
 
         //  == FUNCTIONS ==
@@ -178,6 +179,36 @@ namespace arc //! arc namespace
             for (size_t pos{0}; (pos = str_->find(find_, pos)) != std::string::npos; pos += replace_.size())
             {
                 str_->replace(pos, find_.size(), replace_);
+            }
+        }
+
+        /**
+         *  Filter out parts of string between given start and end strings.
+         *
+         *  @pre    start_ must not be empty.
+         *  @pre    end_ must not be empty.
+         *
+         *  @param  str_    String to be filtered.
+         *  @param  start_  Start of the filter range.
+         *  @param  end_    End of the filter range.
+         */
+        inline void filter(std::string* str_, const std::string& start_, const std::string& end_) noexcept
+        {
+            assert(!start_.empty());
+            assert(!end_.empty());
+
+            size_t start;
+            while ((start = str_->find(start_)) != std::string::npos)
+            {
+                size_t end;
+                if ((end = str_->find(end_, start)) != std::string::npos)
+                {
+                    str_->erase(start, end - start + end_.size());
+                }
+                else
+                {
+                    return;
+                }
             }
         }
 
