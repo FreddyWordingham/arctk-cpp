@@ -19,12 +19,6 @@
 
 
 
-//  == INCLUDES ==
-//  -- Std --
-#include <cctype>
-
-
-
 //  == NAMESPACE ==
 namespace arc //! arc namespace
 {
