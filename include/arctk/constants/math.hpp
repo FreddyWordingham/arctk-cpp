@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_CONSTANTS_MATH_HPP
-#define ARCTK_CONSTANTS_MATH_HPP
+#ifndef ARCTK_CONSTANT_MATH_HPP
+#define ARCTK_CONSTANT_MATH_HPP
 
 
 
@@ -22,7 +22,7 @@
 //  == NAMESPACE ==
 namespace arc //! arc namespace
 {
-    namespace con //! constants namespace
+    namespace constant //! constant namespace
     {
 
 
@@ -37,7 +37,7 @@ namespace arc //! arc namespace
 
 
 
-    } // namespace con
+    } // namespace constant
 } // namespace arc
 
 
@@ -48,4 +48,4 @@ namespace arc //! arc namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_CONSTANTS_MATH_HPP
+#endif // ARCTK_CONSTANT_MATH_HPP
