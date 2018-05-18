@@ -65,7 +65,7 @@ namespace arc //! arc namespace
          */
         inline bool whitespace(const char ch_) noexcept
         {
-            for (auto it = WHITESPACE_CHARS; *it != 0; ++it)
+            for (const char* it{WHITESPACE_CHARS}; *it != 0; ++it)
             {
                 if (ch_ == *it)
                 {
@@ -85,7 +85,7 @@ namespace arc //! arc namespace
          */
         inline bool glyph(const char ch_) noexcept
         {
-            for (auto it = GLYPH_CHARS; *it != 0; ++it)
+            for (const char* it{GLYPH_CHARS}; *it != 0; ++it)
             {
                 if ((ch_ == *it) && !numerical(ch_))
                 {
