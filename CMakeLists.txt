@@ -88,12 +88,6 @@ if (CLANG_TIDY)
 endif ()
 message("Clang-Tidy: ${CLANG_TIDY}")
 
-#   -- Include What You Use --
-if (IWYU)
-    set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE "iwyu")
-endif ()
-message("IWYU: ${IWYU}")
-
 #   -- Doxygen --
 if (DOCUMENT)
     find_package(Doxygen)
