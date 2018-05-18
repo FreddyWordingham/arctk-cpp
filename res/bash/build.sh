@@ -53,19 +53,6 @@ arctk_make()
 {
     cd $ARCTK_DIR/build > /dev/null;
 
-    make -j 8;
-
-    local cmake_compile_status=$?;
-
-    cd - > /dev/null;
-
-    return $cmake_compile_status;
-}
-
-arctk_make_scan()
-{
-    cd $ARCTK_DIR/build > /dev/null;
-
     scan-build -analyze-headers --force-analyze-debug-code --view make -j 8;
 
     local cmake_compile_status=$?;
