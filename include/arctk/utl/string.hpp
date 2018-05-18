@@ -23,6 +23,7 @@
 //  -- Std --
 #include <cassert>
 #include <sstream>
+#include <string>
 
 //  -- Arctk --
 #include <arctk/utl/char.hpp>
