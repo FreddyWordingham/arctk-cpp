@@ -31,7 +31,7 @@ arctk_build()
 
     cd $ARCTK_DIR/build > /dev/null;
 
-    cmake -j 4 -DCMAKE_EXPORT_COMPILE_COMMANDS=on   \
+    cmake -j 4 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON   \
         -DCMAKE_BUILD_TYPE=$1                       \
         -DCMAKE_C_COMPILER=$2                       \
         -DCMAKE_CXX_COMPILER=$3                     \
