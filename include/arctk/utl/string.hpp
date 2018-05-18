@@ -45,6 +45,9 @@ namespace arc //! arc namespace
         inline bool whitespace(const std::string& str_) noexcept;
         inline bool glyph(const std::string& str_) noexcept;
 
+        //  -- Filtering --
+        inline void remove(std::string* str_, char ch_) noexcept;
+
 
 
         //  == FUNCTIONS ==
@@ -113,6 +116,19 @@ namespace arc //! arc namespace
             assert(!str_.empty());
 
             return ((str_.find_first_not_of(GLYPH_CHARS) == std::string::npos) && !numerical(str_));
+        }
+
+
+        //  -- Filtering --
+        /**
+         *  Remove all instances of a character from a string.
+         *
+         *  @param  str_    String to be filtered.
+         *  @param  ch_     Character to be removed from the string.
+         */
+        inline void remove(std::string* const str_, const char ch_) noexcept
+        {
+            str_->erase(std::remove(str_->begin(), str_->end(), ch_), str_->end());
         }
 
 
