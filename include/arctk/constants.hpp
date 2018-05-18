@@ -19,6 +19,12 @@
 
 
 
+//  == COLLECTION ==
+//  -- Constants --
+#include <arctk/constants/math.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arc namespace
 {
