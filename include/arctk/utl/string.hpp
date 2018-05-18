@@ -49,6 +49,7 @@ namespace arc //! arc namespace
 
         //  -- Filtering --
         inline void remove(std::string* str_, char ch_) noexcept;
+        inline void remove(std::string* str_, const std::string& sub_) noexcept;
 
 
 
@@ -131,6 +132,21 @@ namespace arc //! arc namespace
         inline void remove(std::string* const str_, const char ch_) noexcept
         {
             str_->erase(std::remove(str_->begin(), str_->end(), ch_), str_->end());
+        }
+
+        /**
+         *  Remove all instances of a sub-string from a string.
+         *
+         *  @pre    sub_ must not be empty.
+         *
+         *  @param  str_    String to be filtered.
+         *  @param  sub_    Sub-string to be removed from the string.
+         */
+        inline void remove(std::string* const str_, const std::string& sub_) noexcept
+        {
+            assert(!sub_.empty());
+
+            replace(str_, sub_, "");
         }
 
 
