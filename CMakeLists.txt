@@ -112,8 +112,7 @@ message("Document: ${DOCUMENT}")
 
 #   == SOURCE CODE ==
 #   -- Glob Files --
-file(GLOB_RECURSE SOURCE_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
-file(GLOB_RECURSE HEADER_FILES ${CMAKE_SOURCE_DIR}/include/arctk/*.hpp)
+file(GLOB_RECURSE SOURCE_FILES ${CMAKE_SOURCE_DIR}/include/arctk/*)
 
 
 #   == FLAGS ==
@@ -345,7 +344,7 @@ endif ()
 
 #   == TARGETS ==
 #   -- Libraries --
-add_library(arctk STATIC ${SOURCE_FILES} ${HEADER_FILES})
+add_library(arctk STATIC ${SOURCE_FILES})
 
 
 #   == DEFINITIONS ==
