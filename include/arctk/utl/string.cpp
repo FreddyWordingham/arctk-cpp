@@ -1,5 +1,5 @@
 /**
- *  @file   string.hpp
+ *  @file   string.cpp
  *  @date   18/05/2018
  *  @author Freddy Wordingham
  *
