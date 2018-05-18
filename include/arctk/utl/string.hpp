@@ -21,6 +21,7 @@
 
 //  == INCLUDES ==
 //  -- Std --
+#include <algorithm>
 #include <cassert>
 #include <sstream>
 #include <string>
