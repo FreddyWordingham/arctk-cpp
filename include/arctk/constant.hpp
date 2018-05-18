@@ -1,5 +1,5 @@
 /**
- *  @file   constants.hpp
+ *  @file   constant.hpp
  *  @date   17/05/2018
  *  @author Freddy Wordingham
  *
@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_CONSTANTS_HPP
-#define ARCTK_CONSTANTS_HPP
+#ifndef ARCTK_CONSTANT_HPP
+#define ARCTK_CONSTANT_HPP
 
 
 
@@ -32,4 +32,4 @@
 
 
 //  == GUARD END ==
-#endif // ARCTK_CONSTANTS_HPP
+#endif // ARCTK_CONSTANT_HPP
