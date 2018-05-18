@@ -97,7 +97,7 @@ namespace arc //! arc namespace
         {
             static_assert(std::is_arithmetic<T>::value);
 
-            return (static_cast<T>(180.0 / PI) * x_);
+            return (static_cast<T>(180.0 / constant::PI) * x_);
         }
 
         /**
@@ -116,7 +116,7 @@ namespace arc //! arc namespace
         {
             static_assert(std::is_arithmetic<T>::value);
 
-            return (static_cast<T>(PI / 180.0) * x_);
+            return (static_cast<T>(constant::PI / 180.0) * x_);
         }
 
 
