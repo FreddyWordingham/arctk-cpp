@@ -62,7 +62,7 @@ namespace arc //! arc namespace
         inline bool parsable(const std::string& str_) noexcept
         {
             T                 result;
-            std::stringstream stream(str_);
+            std::stringstream stream{str_};
 
             stream >> result;
             stream >> std::ws;
