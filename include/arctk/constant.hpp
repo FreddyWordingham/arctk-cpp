@@ -21,8 +21,8 @@
 
 //  == COLLECTION ==
 //  -- Constants --
-#include <arctk/constants/math.hpp>
-#include <arctk/constants/phys.hpp>
+#include <arctk/constant/math.hpp>
+#include <arctk/constant/phys.hpp>
 
 
 
