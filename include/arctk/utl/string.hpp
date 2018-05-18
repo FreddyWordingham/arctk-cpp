@@ -51,8 +51,11 @@ namespace arc //! arc namespace
         inline void remove(std::string* str_, char ch_) noexcept;
         inline void remove(std::string* str_, const std::string& sub_) noexcept;
         inline void remove_blank_lines(std::string* str_) noexcept;
-        inline void replace(std::string* str_, const std::string& find_, const std::string& replace_) noexcept;
         inline void filter(std::string* str_, const std::string& start_, const std::string& end_ = "\n") noexcept;
+
+        //  -- Replacement --
+        inline void replace(std::string* str_, const std::string& find_, const std::string& replace_) noexcept;
+
 
 
         //  == FUNCTIONS ==
@@ -162,27 +165,6 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Find and replace all instances of a sub-string within a string by a given replacement string.
-         *
-         *  @pre    find_ must not be empty.
-         *  @pre    replace_ must not be empty.
-         *
-         *  @param  str_        String to be filtered.
-         *  @param  find_       Sub-string to be replaced.
-         *  @param  replace_    Sub-string to replace find_ sub-string with.
-         */
-        inline void replace(std::string* const str_, const std::string& find_, const std::string& replace_) noexcept
-        {
-            assert(!find_.empty());
-            assert(!replace_.empty());
-
-            for (size_t pos{0}; (pos = str_->find(find_, pos)) != std::string::npos; pos += replace_.size())
-            {
-                str_->replace(pos, find_.size(), replace_);
-            }
-        }
-
-        /**
          *  Filter out parts of string between given start and end strings.
          *
          *  @pre    start_ must not be empty.
@@ -209,6 +191,29 @@ namespace arc //! arc namespace
                 {
                     return;
                 }
+            }
+        }
+
+
+        //  -- Replacement --
+        /**
+         *  Find and replace all instances of a sub-string within a string by a given replacement string.
+         *
+         *  @pre    find_ must not be empty.
+         *  @pre    replace_ must not be empty.
+         *
+         *  @param  str_        String to be modified.
+         *  @param  find_       Sub-string to be replaced.
+         *  @param  replace_    Sub-string to replace find_ sub-string with.
+         */
+        inline void replace(std::string* const str_, const std::string& find_, const std::string& replace_) noexcept
+        {
+            assert(!find_.empty());
+            assert(!replace_.empty());
+
+            for (size_t pos{0}; (pos = str_->find(find_, pos)) != std::string::npos; pos += replace_.size())
+            {
+                str_->replace(pos, find_.size(), replace_);
             }
         }
 
