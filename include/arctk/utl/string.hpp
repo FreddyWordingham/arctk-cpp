@@ -50,6 +50,7 @@ namespace arc //! arc namespace
         //  -- Filtering --
         inline void remove(std::string* str_, char ch_) noexcept;
         inline void remove(std::string* str_, const std::string& sub_) noexcept;
+        inline void remove_blank_lines(std::string* str_) noexcept;
 
 
 
@@ -147,6 +148,16 @@ namespace arc //! arc namespace
             assert(!sub_.empty());
 
             replace(str_, sub_, "");
+        }
+
+        /**
+         *  Remove all blank lines from a string.
+         *
+         *  @param  str_    String to be filtered.
+         */
+        inline void remove_blank_lines(std::string* str_) noexcept
+        {
+            str_->erase(std::unique(str_->begin(), str_->end(), [](const char first_, const char second_) { return ((first_ == '\n') && (second_ == '\n')); }), str_->end());
         }
 
 
