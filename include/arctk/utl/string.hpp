@@ -48,10 +48,10 @@ namespace arc //! arc namespace
         inline bool glyph(const std::string& str_) noexcept;
 
         //  -- Filtering --
-        inline void remove(std::string* str_, char ch_) noexcept;
-        inline void remove(std::string* str_, const std::string& sub_) noexcept;
-        inline void remove_blank_lines(std::string* str_) noexcept;
+        inline void filter(std::string* str_, char ch_) noexcept;
+        inline void filter(std::string* str_, const std::string& sub_) noexcept;
         inline void filter(std::string* str_, const std::string& start_, const std::string& end_ = "\n") noexcept;
+        inline void filter_blank_lines(std::string* str_) noexcept;
 
         //  -- Replacement --
         inline void replace(std::string* str_, const std::string& find_, const std::string& replace_) noexcept;
@@ -129,39 +129,29 @@ namespace arc //! arc namespace
 
         //  -- Filtering --
         /**
-         *  Remove all instances of a character from a string.
+         *  Filter all instances of a character from a string.
          *
          *  @param  str_    String to be filtered.
          *  @param  ch_     Character to be removed from the string.
          */
-        inline void remove(std::string* const str_, const char ch_) noexcept
+        inline void filter(std::string* const str_, const char ch_) noexcept
         {
             str_->erase(std::remove(str_->begin(), str_->end(), ch_), str_->end());
         }
 
         /**
-         *  Remove all instances of a sub-string from a string.
+         *  Filter all instances of a sub-string from a string.
          *
          *  @pre    sub_ must not be empty.
          *
          *  @param  str_    String to be filtered.
          *  @param  sub_    Sub-string to be removed from the string.
          */
-        inline void remove(std::string* const str_, const std::string& sub_) noexcept
+        inline void filter(std::string* const str_, const std::string& sub_) noexcept
         {
             assert(!sub_.empty());
 
             replace(str_, sub_, "");
-        }
-
-        /**
-         *  Remove all blank lines from a string.
-         *
-         *  @param  str_    String to be filtered.
-         */
-        inline void remove_blank_lines(std::string* const str_) noexcept
-        {
-            str_->erase(std::unique(str_->begin(), str_->end(), [](const char first_, const char second_) { return ((first_ == '\n') && (second_ == '\n')); }), str_->end());
         }
 
         /**
@@ -192,6 +182,16 @@ namespace arc //! arc namespace
                     return;
                 }
             }
+        }
+
+        /**
+         *  Filter all blank lines from a string.
+         *
+         *  @param  str_    String to be filtered.
+         */
+        inline void filter_blank_lines(std::string* const str_) noexcept
+        {
+            str_->erase(std::unique(str_->begin(), str_->end(), [](const char first_, const char second_) { return ((first_ == '\n') && (second_ == '\n')); }), str_->end());
         }
 
 
