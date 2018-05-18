@@ -90,7 +90,7 @@ message("Clang-Tidy: ${CLANG_TIDY}")
 
 #   -- Include-What-You-Use --
 if (IWYU)
-    set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE "include-what-you-use")
+    set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE include-what-you-use --check_also=${CMAKE_SOURCE_DIR}/include/arctk/*.hpp)
 endif ()
 message("IWYU: ${IWYU}")
 
@@ -144,6 +144,7 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
         -Weverything                        \
         -Wno-c++98-compat                   \
+        -Wno-reserved-id-macro \
     ")
 elseif (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}     \
@@ -359,6 +360,10 @@ endforeach (i)
 #   == INCLUDES ==
 #   -- Local --
 target_include_directories(arctk PRIVATE ${CMAKE_SOURCE_DIR}/include)
+if (IWYU)
+    target_include_directories(arctk PRIVATE /usr/local/Cellar/llvm/6.0.0/include/c++/v1/)
+    target_include_directories(arctk PRIVATE /usr/local/Cellar/llvm/6.0.0/lib/clang/6.0.0/include/)
+endif ()
 
 
 #   == INSTALLATION ==
