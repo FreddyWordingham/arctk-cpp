@@ -26,35 +26,6 @@
 
 
 
-//  == NAMESPACE ==
-namespace arc //! arc namespace
-{
-    namespace math //! mathematical namespace
-    {
-
-
-
-        //  == COMMON ==
-        //  -- Archimedes' Constant --
-        constexpr const double PI = 3.141592653589793238462643383279502884197169399375105820974; //!<  Archimedes' Constant.
-
-
-        //  -- Euler's Number --
-        constexpr const double EXP = 2.718281828459045235360287471352662497757247093699959574966; //!< Euler's Number.
-
-
-
-    } // namespace math
-
-
-
-    namespace phys //! physics namespace
-    {
-    } // namespace phys
-} // namespace arc
-
-
-
 //  == MODULE END ==
 #endif // ARCTK_MOD_CORE
 
