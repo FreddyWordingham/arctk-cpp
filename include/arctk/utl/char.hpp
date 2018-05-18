@@ -29,9 +29,9 @@ namespace arc //! arc namespace
 
         //  == SETTINGS ==
         //  -- Whitespace --
-        constexpr const char* const WHITESPACE_CHARS(" \f\n\r\t\v"); //!< Characters which are considered whitespace.
-        constexpr const char* const GLYPH_CHARS(
-          "-_0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"); //!< Characters which are considered glyphs.
+        constexpr const char* const WHITESPACE_CHARS{" \f\n\r\t\v"}; //!< Characters which are considered whitespace.
+        constexpr const char* const GLYPH_CHARS{
+          "-_0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"}; //!< Characters which are considered glyphs.
 
 
 
