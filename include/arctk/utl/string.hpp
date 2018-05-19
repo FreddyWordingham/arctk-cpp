@@ -23,6 +23,7 @@
 //  -- Std --
 #include <algorithm>
 #include <cassert>
+#include <iostream>
 #include <sstream>
 #include <string>
 
@@ -178,6 +179,8 @@ namespace arc //! arc namespace
             size_t start;
             while ((start = str.find(start_)) != std::string::npos)
             {
+
+                std::cout << "ping\n";
                 size_t end;
                 if ((end = str.find(end_, start)) != std::string::npos)
                 {
@@ -185,11 +188,11 @@ namespace arc //! arc namespace
                 }
                 else
                 {
-                    return (str_);
+                    return (str);
                 }
             }
 
-            return (str_);
+            return (str);
         }
 
         /**
@@ -203,7 +206,7 @@ namespace arc //! arc namespace
 
             str.erase(std::unique(str.begin(), str.end(), [](const char first_, const char second_) { return ((first_ == '\n') && (second_ == '\n')); }), str.end());
 
-            return (str_);
+            return (str);
         }
 
 
