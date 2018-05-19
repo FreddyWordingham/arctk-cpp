@@ -98,8 +98,7 @@ namespace arc //! arc namespace
 
         /**
          *  Determine if a given string contains only whitespace characters.
-         *
-         *  @pre    str_ must not be empty.
+         *  Empty strings are considered whitespace.
          *
          *  @param  str_    String to be tested.
          *
@@ -107,15 +106,12 @@ namespace arc //! arc namespace
          */
         inline bool whitespace(const std::string& str_) noexcept
         {
-            assert(!str_.empty());
-
             return (str_.find_first_not_of(WHITESPACE_CHARS) == std::string::npos);
         }
 
         /**
          *  Determine if a given string contains only glyph characters and is not numerical.
-         *
-         *  @pre    str_ must not be empty.
+         *  Empty strings are not considered glyphs.
          *
          *  @param  str_    String to be tested.
          *
@@ -123,9 +119,7 @@ namespace arc //! arc namespace
          */
         inline bool glyph(const std::string& str_) noexcept
         {
-            assert(!str_.empty());
-
-            return ((str_.find_first_not_of(GLYPH_CHARS) == std::string::npos) && !numerical(str_));
+            return (str_.empty() || ((str_.find_first_not_of(GLYPH_CHARS) == std::string::npos) && !numerical(str_)));
         }
 
 
