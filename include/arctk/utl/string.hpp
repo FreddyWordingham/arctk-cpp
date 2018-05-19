@@ -52,6 +52,7 @@ namespace arc //! arc namespace
         inline std::string filter(const std::string& str_, const std::string& sub_) noexcept;
         inline std::string filter(const std::string& str_, const std::string& start_, const std::string& end_ = "\n") noexcept;
         inline std::string filter_blank_lines(const std::string& str_) noexcept;
+        inline std::string filter_whitespace(const std::string& str_) noexcept;
 
         //  -- Replacement --
         inline std::string replace(const std::string& str_, char find_, char replace_) noexcept;
@@ -210,6 +211,23 @@ namespace arc //! arc namespace
             return (str);
         }
 
+        /**
+         *  Filter leading and trailing whitespace from a string.
+         *
+         *  @param  str_    String to be filtered.
+         *
+         *  @return A copy of str_ filtered of leading and trailing whitespace.
+         */
+        inline std::string filter_whitespace(const std::string& str_) noexcept
+        {
+            std::string str{str_};
+
+            str.erase(0, str.find_first_not_of(" \f\n\r\t\v"));
+            str.erase(str.find_last_not_of(" \f\n\r\t\v") + 1);
+
+            return (str);
+        }
+
 
         //  -- Replacement --
         /**
@@ -275,9 +293,11 @@ namespace arc //! arc namespace
 
             std::string str{str_};
 
+
+
             for (size_t i = 0; i < str.size(); ++i)
             {
-                if (glyph(str[i]))
+                if (!glyph(str[i]))
                 {
                     str[i] = ch_;
                 }
