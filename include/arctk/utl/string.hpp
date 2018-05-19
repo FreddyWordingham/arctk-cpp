@@ -52,8 +52,10 @@ namespace arc //! arc namespace
         inline std::string filter(const std::string& str_, const std::string& sub_) noexcept;
         inline std::string filter(const std::string& str_, const std::string& start_, const std::string& end_ = "\n") noexcept;
         inline std::string filter_blank_lines(const std::string& str_) noexcept;
+        inline std::string filter_whitespace(const std::string& str_) noexcept;
 
         //  -- Replacement --
+        inline std::string replace(const std::string& str_, char find_, char replace_) noexcept;
         inline std::string replace(const std::string& str_, const std::string& find_, const std::string& replace_) noexcept;
 
 
@@ -214,10 +216,40 @@ namespace arc //! arc namespace
             return (str);
         }
 
+        inline std::string filter_whitespace(const std::string& str_) noexcept
+        {
+            std::string str{str_};
+
+
+
+            //            str_.erase(0, str_.find_first_not_of(" \f\n\r\t\v"));
+            //            str_.erase(str_.find_last_not_of(" \f\n\r\t\v") + 1);
+
+            return (str);
+        }
+
 
         //  -- Replacement --
         /**
-         *  Find and replace all instances of a sub-string within a string by a given replacement string.
+         *  Find and replace all instances of a character within a string with a given replacement character.
+         *
+         *  @param  str_        String to be modified.
+         *  @param  find_       Character to be replaced.
+         *  @param  replace_    Character to replace find_ character with.
+         *
+         *  @return A copy of str_ with all instances of the find_ character replaced with the replace_ character.
+         */
+        inline std::string replace(const std::string& str_, const char find_, const char replace_) noexcept
+        {
+            std::string str{str_};
+
+            std::replace(str.begin(), str.end(), find_, replace_);
+
+            return (str);
+        }
+
+        /**
+         *  Find and replace all instances of a sub-string within a string with a given replacement string.
          *
          *  @pre    find_ must not be empty.
          *  @pre    replace_ must not be empty.
