@@ -52,11 +52,11 @@ namespace arc //! arc namespace
         inline std::string filter(const std::string& str_, const std::string& sub_) noexcept;
         inline std::string filter(const std::string& str_, const std::string& start_, const std::string& end_ = "\n") noexcept;
         inline std::string filter_blank_lines(const std::string& str_) noexcept;
-        inline std::string filter_whitespace(const std::string& str_) noexcept;
 
         //  -- Replacement --
         inline std::string replace(const std::string& str_, char find_, char replace_) noexcept;
         inline std::string replace(const std::string& str_, const std::string& find_, const std::string& replace_) noexcept;
+        inline std::string make_glyph(const std::string& str_, char ch_) noexcept;
 
 
 
@@ -206,28 +206,6 @@ namespace arc //! arc namespace
             std::string str{str_};
 
             str.erase(std::unique(str.begin(), str.end(), [](const char first_, const char second_) { return ((first_ == '\n') && (second_ == '\n')); }), str.end());
-
-            return (str);
-        }
-
-        /**
-         *  Filter whitespace from a string.
-         *  All whitespace characters are replaced with blank spaces.
-         *  Consecutive blank spaces are reduced to a single space.
-         *
-         *  @param  str_    String to be filtered.
-         *
-         *  @return A copy of str_ filtered of whitespace.
-         */
-        inline std::string filter_whitespace(const std::string& str_) noexcept
-        {
-            std::string str{str_};
-
-            for (const char* it{WHITESPACE_CHARS}; *it != 0; ++it)
-            {
-                str = replace(str, *it, ' ');
-            }
-            str.erase(std::unique(str.begin(), str.end(), [](const char first_, const char second_) { return ((first_ == ' ') && (second_ == ' ')); }), str.end());
 
             return (str);
         }
