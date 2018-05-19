@@ -257,6 +257,37 @@ namespace arc //! arc namespace
             return (str);
         }
 
+        /**
+         *  Form the given string into a glyph string by replacing all non-glyph characters using a replacement character.
+         *
+         *  @pre    ch_ must be a glyph.
+         *
+         *  @post   str must be a glyph.
+         *
+         *  @param  str_    String to be formed into a glyph.
+         *  @param  ch_     Character used to replace non-glyph characters.
+         *
+         *  @return A copy of str_ with non-glyph characters replaced with the ch_ character.
+         */
+        inline std::string make_glyph(const std::string& str_, const char ch_) noexcept
+        {
+            assert(glyph(ch_));
+
+            std::string str{str_};
+
+            for (size_t i = 0; i < str.size(); ++i)
+            {
+                if (glyph(str[i]))
+                {
+                    str[i] = ch_;
+                }
+            }
+
+            assert(glyph(str));
+
+            return (str);
+        }
+
 
 
     } // namespace utl
