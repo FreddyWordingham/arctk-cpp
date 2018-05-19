@@ -210,14 +210,24 @@ namespace arc //! arc namespace
             return (str);
         }
 
+        /**
+         *  Filter whitespace from a string.
+         *  All whitespace characters are replaced with blank spaces.
+         *  Consecutive blank spaces are reduced to a single space.
+         *
+         *  @param  str_    String to be filtered.
+         *
+         *  @return A copy of str_ filtered of whitespace.
+         */
         inline std::string filter_whitespace(const std::string& str_) noexcept
         {
             std::string str{str_};
 
-
-
-            //            str_.erase(0, str_.find_first_not_of(" \f\n\r\t\v"));
-            //            str_.erase(str_.find_last_not_of(" \f\n\r\t\v") + 1);
+            for (const char* it{WHITESPACE_CHARS}; *it != 0; ++it)
+            {
+                replace(str, *it, ' ');
+            }
+            str.erase(std::unique(str.begin(), str.end(), [](const char first_, const char second_) { return ((first_ == ' ') && (second_ == ' ')); }), str.end());
 
             return (str);
         }
