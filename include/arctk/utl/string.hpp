@@ -133,6 +133,8 @@ namespace arc //! arc namespace
          *
          *  @param  str_    String to be filtered.
          *  @param  ch_     Character to be removed from the string.
+         *
+         *  @return A copy of str_ filtered of ch_ characters.
          */
         inline std::string filter(const std::string& str_, const char ch_) noexcept
         {
@@ -150,6 +152,8 @@ namespace arc //! arc namespace
          *
          *  @param  str_    String to be filtered.
          *  @param  sub_    Sub-string to be removed from the string.
+         *
+         *  @return A copy of str_ filtered of sub_ sub-strings.
          */
         inline std::string filter(const std::string& str_, const std::string& sub_) noexcept
         {
@@ -167,6 +171,8 @@ namespace arc //! arc namespace
          *  @param  str_    String to be filtered.
          *  @param  start_  Start of the filter range.
          *  @param  end_    End of the filter range.
+         *
+         *  @return A filtered copy of str_.
          */
         inline std::string filter(const std::string& str_, const std::string& start_, const std::string& end_) noexcept
         {
@@ -196,6 +202,8 @@ namespace arc //! arc namespace
          *  Filter all blank lines from a string.
          *
          *  @param  str_    String to be filtered.
+         *
+         *  @return A copy of str_ filtered of blank lines.
          */
         inline std::string filter_blank_lines(const std::string& str_) noexcept
         {
@@ -217,6 +225,8 @@ namespace arc //! arc namespace
          *  @param  str_        String to be modified.
          *  @param  find_       Sub-string to be replaced.
          *  @param  replace_    Sub-string to replace find_ sub-string with.
+         *
+         *  @return A copy of str_ with all instances of the find_ sub-string replaced with the replace_ sub-string.
          */
         inline std::string replace(const std::string& str_, const std::string& find_, const std::string& replace_) noexcept
         {
