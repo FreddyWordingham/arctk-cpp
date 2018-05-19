@@ -56,7 +56,7 @@ namespace arc //! arc namespace
         //  -- Replacement --
         inline std::string replace(const std::string& str_, char find_, char replace_) noexcept;
         inline std::string replace(const std::string& str_, const std::string& find_, const std::string& replace_) noexcept;
-        inline std::string make_glyph(const std::string& str_, char ch_) noexcept;
+        inline std::string make_glyph(const std::string& str_, char ch_ = '_') noexcept;
 
 
 
