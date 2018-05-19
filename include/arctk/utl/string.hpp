@@ -48,13 +48,13 @@ namespace arc //! arc namespace
         inline bool glyph(const std::string& str_) noexcept;
 
         //  -- Filtering --
-        inline void filter(std::string* str_, char ch_) noexcept;
-        inline void filter(std::string* str_, const std::string& sub_) noexcept;
-        inline void filter(std::string* str_, const std::string& start_, const std::string& end_ = "\n") noexcept;
-        inline void filter_blank_lines(std::string* str_) noexcept;
+        inline std::string filter(const std::string& str_, char ch_) noexcept;
+        inline std::string filter(const std::string& str_, const std::string& sub_) noexcept;
+        inline std::string filter(const std::string& str_, const std::string& start_, const std::string& end_ = "\n") noexcept;
+        inline std::string filter_blank_lines(const std::string& str_) noexcept;
 
         //  -- Replacement --
-        inline void replace(std::string* str_, const std::string& find_, const std::string& replace_) noexcept;
+        inline std::string replace(const std::string& str_, const std::string& find_, const std::string& replace_) noexcept;
 
 
 
@@ -134,9 +134,13 @@ namespace arc //! arc namespace
          *  @param  str_    String to be filtered.
          *  @param  ch_     Character to be removed from the string.
          */
-        inline void filter(std::string* const str_, const char ch_) noexcept
+        inline std::string filter(const std::string& str_, const char ch_) noexcept
         {
-            str_->erase(std::remove(str_->begin(), str_->end(), ch_), str_->end());
+            std::string str{str_};
+
+            str.erase(std::remove(str.begin(), str.end(), ch_), str.end());
+
+            return (str);
         }
 
         /**
@@ -147,11 +151,11 @@ namespace arc //! arc namespace
          *  @param  str_    String to be filtered.
          *  @param  sub_    Sub-string to be removed from the string.
          */
-        inline void filter(std::string* const str_, const std::string& sub_) noexcept
+        inline std::string filter(const std::string& str_, const std::string& sub_) noexcept
         {
             assert(!sub_.empty());
 
-            replace(str_, sub_, "");
+            return (replace(str_, sub_, ""));
         }
 
         /**
@@ -164,24 +168,28 @@ namespace arc //! arc namespace
          *  @param  start_  Start of the filter range.
          *  @param  end_    End of the filter range.
          */
-        inline void filter(std::string* str_, const std::string& start_, const std::string& end_) noexcept
+        inline std::string filter(const std::string& str_, const std::string& start_, const std::string& end_) noexcept
         {
             assert(!start_.empty());
             assert(!end_.empty());
 
+            std::string str{str_};
+
             size_t start;
-            while ((start = str_->find(start_)) != std::string::npos)
+            while ((start = str.find(start_)) != std::string::npos)
             {
                 size_t end;
-                if ((end = str_->find(end_, start)) != std::string::npos)
+                if ((end = str.find(end_, start)) != std::string::npos)
                 {
-                    str_->erase(start, end - start + end_.size());
+                    str.erase(start, end - start + end_.size());
                 }
                 else
                 {
-                    return;
+                    return (str_);
                 }
             }
+
+            return (str_);
         }
 
         /**
@@ -189,9 +197,13 @@ namespace arc //! arc namespace
          *
          *  @param  str_    String to be filtered.
          */
-        inline void filter_blank_lines(std::string* const str_) noexcept
+        inline std::string filter_blank_lines(const std::string& str_) noexcept
         {
-            str_->erase(std::unique(str_->begin(), str_->end(), [](const char first_, const char second_) { return ((first_ == '\n') && (second_ == '\n')); }), str_->end());
+            std::string str{str_};
+
+            str.erase(std::unique(str.begin(), str.end(), [](const char first_, const char second_) { return ((first_ == '\n') && (second_ == '\n')); }), str.end());
+
+            return (str_);
         }
 
 
@@ -206,15 +218,19 @@ namespace arc //! arc namespace
          *  @param  find_       Sub-string to be replaced.
          *  @param  replace_    Sub-string to replace find_ sub-string with.
          */
-        inline void replace(std::string* const str_, const std::string& find_, const std::string& replace_) noexcept
+        inline std::string replace(const std::string& str_, const std::string& find_, const std::string& replace_) noexcept
         {
             assert(!find_.empty());
             assert(!replace_.empty());
 
-            for (size_t pos{0}; (pos = str_->find(find_, pos)) != std::string::npos; pos += replace_.size())
+            std::string str{str_};
+
+            for (size_t pos{0}; (pos = str.find(find_, pos)) != std::string::npos; pos += replace_.size())
             {
-                str_->replace(pos, find_.size(), replace_);
+                str.replace(pos, find_.size(), replace_);
             }
+
+            return (str);
         }
 
 
