@@ -291,9 +291,7 @@ namespace arc //! arc namespace
         {
             assert(glyph(ch_));
 
-            std::string str{str_};
-
-
+            std::string str = filter_whitespace(str_);
 
             for (size_t i = 0; i < str.size(); ++i)
             {
