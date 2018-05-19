@@ -23,7 +23,6 @@
 //  -- Std --
 #include <algorithm>
 #include <cassert>
-#include <iostream>
 #include <sstream>
 #include <string>
 
@@ -179,8 +178,6 @@ namespace arc //! arc namespace
             size_t start;
             while ((start = str.find(start_)) != std::string::npos)
             {
-
-                std::cout << "ping\n";
                 size_t end;
                 if ((end = str.find(end_, start)) != std::string::npos)
                 {
