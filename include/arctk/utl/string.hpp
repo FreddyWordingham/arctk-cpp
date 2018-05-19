@@ -225,7 +225,7 @@ namespace arc //! arc namespace
 
             for (const char* it{WHITESPACE_CHARS}; *it != 0; ++it)
             {
-                replace(str, *it, ' ');
+                str = replace(str, *it, ' ');
             }
             str.erase(std::unique(str.begin(), str.end(), [](const char first_, const char second_) { return ((first_ == ' ') && (second_ == ' ')); }), str.end());
 
