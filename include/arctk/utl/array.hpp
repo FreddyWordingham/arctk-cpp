@@ -35,6 +35,8 @@ namespace arc //! arc namespace
         inline bool ascending(const std::array<T, N>& arr_) noexcept;
         template <class T, size_t N>
         inline bool descending(const std::array<T, N>& arr_) noexcept;
+        template <class T, size_t N>
+        inline bool monotonic(const std::array<T, N>& arr_) noexcept;
 
 
 
@@ -94,6 +96,19 @@ namespace arc //! arc namespace
             }
 
             return (true);
+        }
+
+        /**
+         *  Determine if an array is sorted in monotonic order.
+         *
+         *  @param  arr_    Array to be tested.
+         *
+         *  @return True if the array is monotonic.
+         */
+        template <class T, size_t N>
+        inline bool monotonic(const std::array<T, N>& arr_) noexcept
+        {
+            return (ascending(arr_) || (descending(arr_)));
         }
 
 
