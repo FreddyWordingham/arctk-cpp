@@ -490,11 +490,11 @@ namespace arc //! arc namespace
          *  @tparam T   Type stored by the array.
          *  @tparam N   Size of the array.
          *
-         *  @pre    arr_ must contain at least two elements.
-         *  @pre    arr_ must be ascending.
-         *
          *  @param  arr_    Array to search.
          *  @param  val_    Value to locate.
+         *
+         *  @pre    arr_ must contain at least two elements.
+         *  @pre    arr_ must be ascending.
          *
          *  @return The lower index of the element pair which encapsulates the value.
          */
