@@ -39,6 +39,8 @@ namespace arc //! arc namespace
         inline bool monotonic(const std::array<T, N>& arr_) noexcept;
         template <class T, size_t N>
         inline bool uniform(const std::array<T, N>& arr_, double tol_ = std::numeric_limits<double>::epsilon()) noexcept;
+        template <class T, size_t N>
+        inline bool always_less_than(const std::array<T, N>& arr_, T limit_) noexcept;
 
 
 
@@ -118,7 +120,7 @@ namespace arc //! arc namespace
          *  Consecutive value deltas must differ by less than the given tolerance.
          *
          *  @param  arr_    Array to be tested.
-         *  @param  tol_    Maximum tolerance of consecutive values.
+         *  @param  tol_    Maximum tolerance for consecutive values.
          *
          *  @return True if the array is uniform.
          */
@@ -130,6 +132,28 @@ namespace arc //! arc namespace
             for (size_t i = 1; i < N; ++i)
             {
                 if ((std::fabs((arr_[i - 1] - arr_[i]) - ave_delta)) > tol_)
+                {
+                    return (false);
+                }
+            }
+
+            return (true);
+        }
+
+        /**
+         *  Determine if an array's elements are always less than the given limit.
+         *
+         *  @param  arr_    Array to be tested.
+         *  @param  limit_  Limit to be tested.
+         *
+         *  @return True if all of the array's elements are less than the given limit.
+         */
+        template <class T, size_t N>
+        inline bool always_less_than(const std::array<T, N>& arr_, const T limit_) noexcept
+        {
+            for (size_t i = 0; i < N; ++i)
+            {
+                if (!(arr_[i] < limit_))
                 {
                     return (false);
                 }
