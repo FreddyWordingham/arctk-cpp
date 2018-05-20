@@ -57,8 +57,13 @@ namespace arc //! arc namespace
         //  -- Replacement --
         inline std::string replace(const std::string& str_, char find_, char replace_) noexcept;
         inline std::string replace(const std::string& str_, const std::string& find_, const std::string& replace_) noexcept;
+
+        //  -- Glyphs --
         inline std::string make_glyph(const std::string& str_, char ch_ = '_') noexcept;
 
+        //  -- File Paths --
+        inline std::string filename(const std::string& path_) noexcept;
+        inline std::string extension(const std::string& path_) noexcept;
 
 
         //  == FUNCTIONS ==
@@ -275,6 +280,8 @@ namespace arc //! arc namespace
             return (str);
         }
 
+
+        //  -- Glyphs --
         /**
          *  Form the given string into a glyph string by replacing all non-glyph characters using a replacement character.
          *
@@ -304,6 +311,30 @@ namespace arc //! arc namespace
             assert(glyph(str));
 
             return (str);
+        }
+
+
+        //  -- File Paths --
+        /**
+         *  Determine the filename from a the file path.
+         *
+         *  @pre    path_ may not be empty.
+         *
+         *  @param  path_   Full file path.
+         *
+         *  @return Name of the file.
+         */
+        inline std::string filename(const std::string& path_) noexcept
+        {
+            assert(!path_.empty());
+
+            const size_t slash_pos{path_.find_last_of('/')};
+
+            return (slash_pos == std::string::npos ? path_ : path_.substr(slash_pos + 1));
+        }
+
+        inline std::string extension(const std::string& path_) noexcept
+        {
         }
 
 
