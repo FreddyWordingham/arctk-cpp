@@ -84,6 +84,9 @@ namespace arc //! arc namespace
         /**
          *  Determine if an array contains a given value.
          *
+         *  @tparam T   Type stored by the array.
+         *  @tparam N   Size of the array.
+         *
          *  @param  arr_    Array to be tested.
          *  @param  val_    Value to search the array for.
          *
