@@ -323,6 +323,9 @@ namespace arc //! arc namespace
          *  Determine the minimum value within an array.
          *  If multiple values are equally the smallest, the first is returned.
          *
+         *  @tparam T   Type stored by the array.
+         *  @tparam N   Size of the array.
+         *
          *  @pre    arr_ must not be empty.
          *
          *  @param  arr_    Array to be searched.
