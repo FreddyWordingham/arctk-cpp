@@ -37,6 +37,8 @@ namespace arc //! arc namespace
         inline bool descending(const std::array<T, N>& arr_) noexcept;
         template <class T, size_t N>
         inline bool monotonic(const std::array<T, N>& arr_) noexcept;
+        template <class T, size_t N>
+        inline bool uniform(const std::array<T, N>& arr_, double tol_ = std::numeric_limits<double>::epsilon()) noexcept;
 
 
 
@@ -109,6 +111,31 @@ namespace arc //! arc namespace
         inline bool monotonic(const std::array<T, N>& arr_) noexcept
         {
             return (ascending(arr_) || (descending(arr_)));
+        }
+
+        /**
+         *  Determine if an array's elements are uniformly spaced.
+         *  Consecutive value deltas must differ by less than the given tolerance.
+         *
+         *  @param  arr_    Array to be tested.
+         *  @param  tol_    Maximum tolerance of consecutive values.
+         *
+         *  @return True if the array is uniform.
+         */
+        template <class T, size_t N>
+        inline bool uniform(const std::array<T, N>& arr_, const double tol_) noexcept
+        {
+            const double ave_delta = (arr_.front() - arr_.back()) / static_cast<double>(N - 1);
+
+            for (size_t i = 1; i < N; ++i)
+            {
+                if ((std::fabs((arr_[i - 1] - arr_[i]) - ave_delta)) > tol_)
+                {
+                    return (false);
+                }
+            }
+
+            return (true);
         }
 
 
