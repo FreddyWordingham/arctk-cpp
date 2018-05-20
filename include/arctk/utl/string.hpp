@@ -293,12 +293,12 @@ namespace arc //! arc namespace
         /**
          *  Form the given string into a glyph string by replacing all non-glyph characters using a replacement character.
          *
+         *  @param  str_    String to be formed into a glyph.
+         *  @param  ch_     Character used to replace non-glyph characters.
+         *
          *  @pre    ch_ must be a glyph.
          *
          *  @post   str must be a glyph.
-         *
-         *  @param  str_    String to be formed into a glyph.
-         *  @param  ch_     Character used to replace non-glyph characters.
          *
          *  @return A copy of str_ with non-glyph characters replaced with the ch_ character.
          */
