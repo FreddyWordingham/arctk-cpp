@@ -154,6 +154,9 @@ namespace arc //! arc namespace
          *  Determine if an array's elements are uniformly spaced.
          *  Consecutive value deltas must differ by less than the given tolerance.
          *
+         *  @tparam T   Type stored by the array.
+         *  @tparam N   Size of the array.
+         *
          *  @param  arr_    Array to be tested.
          *  @param  tol_    Maximum tolerance for consecutive values.
          *
