@@ -467,11 +467,11 @@ namespace arc //! arc namespace
          *  @tparam T   Type stored by the array.
          *  @tparam N   Size of the array.
          *
-         *  @pre    arr_ must contain at least two elements.
-         *  @pre    arr_ must be ascending.
-         *
          *  @param  arr_    Array to test.
          *  @param  val_    Value to test.
+         *
+         *  @pre    arr_ must contain at least two elements.
+         *  @pre    arr_ must be ascending.
          *
          *  @return True if the value falls within the bounds of the array.
          */
