@@ -416,6 +416,9 @@ namespace arc //! arc namespace
          *  Determine if a value is within the bounds of an array.
          *  If the value is equal to a bound it is considered within the array.
          *
+         *  @tparam T   Type stored by the array.
+         *  @tparam N   Size of the array.
+         *
          *  @pre    arr_ must contain at least two elements.
          *  @pre    arr_ must be ascending.
          *
