@@ -70,6 +70,7 @@ namespace arc //! arc namespace
         inline T parse(const std::string& str_) noexcept;
 
 
+
         //  == FUNCTIONS ==
         //  -- Properties --
         /**
