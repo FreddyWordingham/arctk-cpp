@@ -335,6 +335,11 @@ namespace arc //! arc namespace
 
         inline std::string extension(const std::string& path_) noexcept
         {
+            assert(!path_.empty());
+
+            const size_t dot_pos{path_.find_last_of('.')};
+
+            return (dot_pos == std::string::npos ? path_ : path_.substr(dot_pos + 1));
         }
 
 
