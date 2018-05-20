@@ -90,7 +90,7 @@ namespace arc //! arc namespace
 
             stream >> result;
 
-            return (!stream.fail() && stream.eof() && (stream.rdbuf()->in_avail() == 0));
+            return (!stream.fail() && (stream.rdbuf()->in_avail() == 0));
         }
 
         /**
@@ -361,7 +361,9 @@ namespace arc //! arc namespace
         /**
          *  Parse a value from a string.
          *
-         *  @pre    String must be parsable.
+         *  @pre    Str_ must be parsable.
+         *
+         *  @tparam T   Type to be parsed.
          *
          *  @param  str_    String to be parsed.
          *
@@ -376,6 +378,8 @@ namespace arc //! arc namespace
             std::stringstream stream{str_};
 
             stream >> result;
+
+            return (result);
         }
 
 
