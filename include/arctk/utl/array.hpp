@@ -64,6 +64,12 @@ namespace arc //! arc namespace
         template <class T, size_t N>
         inline double mag(const std::array<T, N>& arr_) noexcept;
 
+        //  -- Searching --
+        template <class T, size_t N>
+        inline bool within(const std::array<T, N>& arr_, T val_) noexcept;
+        template <class T, size_t N>
+        inline size_t search(const std::array<T, N>& arr_, T val_) noexcept;
+
 
 
         //  == FUNCTIONS ==
@@ -395,6 +401,29 @@ namespace arc //! arc namespace
             }
 
             return (std::sqrt(static_cast<double>(sq_sum)));
+        }
+
+
+        //  -- Searching --
+        /**
+         *  Determine if a value is within the bounds of an array.
+         *  If the value is equal to a bound it is considered within the array.
+         *
+         *  @pre    arr_ must contain at least two elements.
+         *  @pre    arr_ must be ascending.
+         *
+         *  @param  arr_    Array to test.
+         *  @param  val_    Value to test.
+         *
+         *  @return True if the value falls within the bounds of the array.
+         */
+        template <class T, size_t N>
+        inline bool within(const std::array<T, N>& arr_, T val_) noexcept
+        {
+            assert(N >= 2);
+            assert(monotonic(arr_));
+
+            return ((val_ >= arr_.front()) && (val_ <= arr_.back()));
         }
 
 
