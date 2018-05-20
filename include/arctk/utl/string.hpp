@@ -158,10 +158,10 @@ namespace arc //! arc namespace
         /**
          *  Filter all instances of a sub-string from a string.
          *
-         *  @pre    sub_ must not be empty.
-         *
          *  @param  str_    String to be filtered.
          *  @param  sub_    Sub-string to be removed from the string.
+         *
+         *  @pre    sub_ must not be empty.
          *
          *  @return A copy of str_ filtered of sub_ sub-strings.
          */
