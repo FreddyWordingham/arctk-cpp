@@ -353,7 +353,6 @@ namespace arc //! arc namespace
         inline T sum(const std::array<T, N>& arr_) noexcept
         {
             T sum = 0;
-
             for (size_t i = 0; i < N; ++i)
             {
                 sum += arr_[i];
@@ -379,11 +378,17 @@ namespace arc //! arc namespace
             return (sum(arr_) / static_cast<double>(N));
         }
 
+        /**
+         *  Determine the magnitude of the elements within an array.
+         *
+         *  @param  arr_    Array to find the magnitude of.
+         *
+         *  @return Magnitude of the array elements.
+         */
         template <class T, size_t N>
         inline double mag(const std::array<T, N>& arr_) noexcept
         {
             T sq_sum = 0;
-
             for (size_t i = 0; i < N; ++i)
             {
                 sq_sum += (arr_[i] * arr_[i]);
