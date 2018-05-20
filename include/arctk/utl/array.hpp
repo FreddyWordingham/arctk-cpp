@@ -380,9 +380,9 @@ namespace arc //! arc namespace
          *  @tparam T   Type stored by the array.
          *  @tparam N   Size of the array.
          *
-         *  @pre    arr_ must not be empty.
-         *
          *  @param  arr_    Array to be searched.
+         *
+         *  @pre    arr_ must not be empty.
          *
          *  @return Maximum value within the array.
          */
