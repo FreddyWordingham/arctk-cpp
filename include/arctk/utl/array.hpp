@@ -342,6 +342,13 @@ namespace arc //! arc namespace
             return (arr_[max_index(arr_)]);
         }
 
+        /**
+         *  Determine the sum of all elements within an array.
+         *
+         *  @param  arr_    Array to be summed.
+         *
+         *  @return Sum of array elements.
+         */
         template <class T, size_t N>
         inline T sum(const std::array<T, N>& arr_) noexcept
         {
