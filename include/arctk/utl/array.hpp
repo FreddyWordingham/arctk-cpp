@@ -436,6 +436,9 @@ namespace arc //! arc namespace
         /**
          *  Determine the lower index of the elements within the array which encapsulate a value.
          *
+         *  @tparam T   Type stored by the array.
+         *  @tparam N   Size of the array.
+         *
          *  @pre    arr_ must contain at least two elements.
          *  @pre    arr_ must be ascending.
          *
