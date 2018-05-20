@@ -43,6 +43,8 @@ namespace arc //! arc namespace
         inline bool always_less_than(const std::array<T, N>& arr_, T limit_) noexcept;
         template <class T, size_t N>
         inline bool always_less_than_or_equal_to(const std::array<T, N>& arr_, T limit_) noexcept;
+        template <class T, size_t N>
+        inline bool always_greater_than(const std::array<T, N>& arr_, T limit_) noexcept;
 
 
 
@@ -178,6 +180,28 @@ namespace arc //! arc namespace
             for (size_t i = 0; i < N; ++i)
             {
                 if (!(arr_[i] <= limit_))
+                {
+                    return (false);
+                }
+            }
+
+            return (true);
+        }
+
+        /**
+         *  Determine if an array's elements are always greater than the given limit.
+         *
+         *  @param  arr_    Array to be tested.
+         *  @param  limit_  Limit to be tested.
+         *
+         *  @return True if all of the array's elements are greater than the given limit.
+         */
+        template <class T, size_t N>
+        inline bool always_greater_than(const std::array<T, N>& arr_, const T limit_) noexcept
+        {
+            for (size_t i = 0; i < N; ++i)
+            {
+                if (!(arr_[i] > limit_))
                 {
                     return (false);
                 }
