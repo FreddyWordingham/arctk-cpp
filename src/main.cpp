@@ -17,6 +17,7 @@
 #include <arctk/constant/phys.hpp>
 #include <arctk/math.hpp>
 #include <arctk/utl.hpp>
+#include <arctk/utl/array.hpp>
 #include <arctk/utl/char.hpp>
 #include <arctk/utl/string.hpp>
 
