@@ -65,11 +65,16 @@ namespace arc //! arc namespace
         inline std::string filename(const std::string& path_) noexcept;
         inline std::string extension(const std::string& path_) noexcept;
 
+        //  -- Parsing --
+        template <class T>
+        inline T parse(const std::string& str_) noexcept;
+
 
         //  == FUNCTIONS ==
         //  -- Properties --
         /**
          *  Determine if a given string can be converted to a given type.
+         *  Trailing whitespace is not tolerated.
          *
          *  @tparam T   Type to convert the string to.
          *
@@ -84,9 +89,8 @@ namespace arc //! arc namespace
             std::stringstream stream{str_};
 
             stream >> result;
-            stream >> std::ws;
 
-            return (!stream.fail() && stream.eof());
+            return (!stream.fail() && stream.eof() && (stream.rdbuf()->in_avail() == 0));
         }
 
         /**
@@ -350,6 +354,28 @@ namespace arc //! arc namespace
             const size_t dot_pos{path_.find_last_of('.')};
 
             return (dot_pos == std::string::npos ? "" : path_.substr(dot_pos + 1));
+        }
+
+
+        //  -- Parsing --
+        /**
+         *  Parse a value from a string.
+         *
+         *  @pre    String must be parsable.
+         *
+         *  @param  str_    String to be parsed.
+         *
+         *  @return Value of the parsed string.
+         */
+        template <class T>
+        inline T parse(const std::string& str_) noexcept
+        {
+            assert(parsable<T>(str_));
+
+            T                 result;
+            std::stringstream stream{str_};
+
+            stream >> result;
         }
 
 
