@@ -33,6 +33,8 @@ namespace arc //! arc namespace
         inline bool contains(const std::array<T, N>& arr_, T val_) noexcept;
         template <class T, size_t N>
         inline bool ascending(const std::array<T, N>& arr_) noexcept;
+        template <class T, size_t N>
+        inline bool descending(const std::array<T, N>& arr_) noexcept;
 
 
 
@@ -72,6 +74,28 @@ namespace arc //! arc namespace
 
             return (true);
         }
+
+        /**
+         *  Determine if an array is sorted in descending order.
+         *
+         *  @param  arr_    Array to be tested.
+         *
+         *  @return True if the array is descending.
+         */
+        template <class T, size_t N>
+        inline bool descending(const std::array<T, N>& arr_) noexcept
+        {
+            for (size_t i = 1; i < N; ++i)
+            {
+                if (arr_[i] > arr_[i - 1])
+                {
+                    return (false);
+                }
+            }
+
+            return (true);
+        }
+
 
 
     } // namespace utl
