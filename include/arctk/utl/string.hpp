@@ -175,12 +175,12 @@ namespace arc //! arc namespace
         /**
          *  Filter out parts of string between given start and end strings.
          *
-         *  @pre    start_ must not be empty.
-         *  @pre    end_ must not be empty.
-         *
          *  @param  str_    String to be filtered.
          *  @param  start_  Start of the filter range.
          *  @param  end_    End of the filter range.
+         *
+         *  @pre    start_ must not be empty.
+         *  @pre    end_ must not be empty.
          *
          *  @return A filtered copy of str_.
          */
