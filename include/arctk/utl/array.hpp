@@ -358,6 +358,9 @@ namespace arc //! arc namespace
         /**
          *  Determine the sum of all elements within an array.
          *
+         *  @tparam T   Type stored by the array.
+         *  @tparam N   Size of the array.
+         *
          *  @param  arr_    Array to be summed.
          *
          *  @return Sum of array elements.
