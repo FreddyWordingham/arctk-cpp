@@ -326,9 +326,9 @@ namespace arc //! arc namespace
         /**
          *  Determine the filename from a the file path.
          *
-         *  @pre    path_ may not be empty.
-         *
          *  @param  path_   Full file path.
+         *
+         *  @pre    path_ may not be empty.
          *
          *  @return Name of the file.
          */
