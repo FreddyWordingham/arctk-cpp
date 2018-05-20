@@ -362,9 +362,20 @@ namespace arc //! arc namespace
             return (sum);
         }
 
+        /**
+         *  Determine the average of the elements within an array.
+         *
+         *  @pre    arr_ must not be empty.
+         *
+         *  @param  arr_    Array to find the average of.
+         *
+         *  @return Average of the array elements.
+         */
         template <class T, size_t N>
         inline double ave(const std::array<T, N>& arr_) noexcept
         {
+            static_assert(!arr_.empty());
+
             return (sum(arr_) / static_cast<double>(N));
         }
 
