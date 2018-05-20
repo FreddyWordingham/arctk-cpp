@@ -22,6 +22,7 @@
 //  == INCLUDES ==
 //  -- Std --
 #include <array>
+#include <cmath>
 
 
 
