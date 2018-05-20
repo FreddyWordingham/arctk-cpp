@@ -119,6 +119,9 @@ namespace arc //! arc namespace
         /**
          *  Determine if an array is sorted in descending order.
          *
+         *  @tparam T   Type stored by the array.
+         *  @tparam N   Size of the array.
+         *
          *  @param  arr_    Array to be tested.
          *
          *  @return True if the array is descending.
