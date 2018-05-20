@@ -69,6 +69,10 @@ namespace arc //! arc namespace
         template <class T>
         inline T parse(const std::string& str_) noexcept;
 
+        //  -- Time --
+        inline std::string time() noexcept;
+        inline std::string time(double total_sec_) noexcept;
+
 
 
         //  == FUNCTIONS ==
@@ -381,6 +385,37 @@ namespace arc //! arc namespace
             stream >> result;
 
             return (result);
+        }
+
+
+        //  -- Time --
+        inline std::string time() noexcept
+        {
+        }
+
+        /**
+         *  Convert the number of seconds into a time string.
+         *
+         *  @pre    total_sec_ must be positive.
+         *
+         *  @param  total_sec_  Number of seconds.
+         *
+         *  @return String of the time.
+         */
+        inline std::string time(const double total_sec_) noexcept
+        {
+            assert(total_sec_ >= 0.0);
+
+            auto       sec      = static_cast<unsigned long int>(total_sec_);
+            const auto millisec = static_cast<unsigned long int>((total_sec_ - sec) * 1000);
+
+            const unsigned long int hrs = sec / 3600;
+            sec %= 3600;
+
+            const unsigned long int min = sec / 60;
+            sec %= 60;
+
+            return (std::to_string(hrs) + "hrs " + std::to_string(min) + "min " + std::to_string(sec) + "sec " + std::to_string(millisec) + "ms");
         }
 
 
