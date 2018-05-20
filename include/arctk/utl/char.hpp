@@ -29,8 +29,8 @@ namespace arc //! arc namespace
 
         //  == SETTINGS ==
         //  -- Whitespace --
-        constexpr const char* const WHITESPACE_CHARS{" \f\n\r\t\v"};                                                 //!< Characters which are considered whitespace.
-        constexpr const char* const GLYPH_CHARS{"-_0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"}; //!< Characters which are considered glyphs.
+        constexpr const char* const WHITESPACE_CHARS = " \f\n\r\t\v";                                                      //!< Characters which are considered whitespace.
+        constexpr const char* const GLYPH_CHARS      = "-_0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; //!< Characters which are considered glyphs.
 
 
 
@@ -65,7 +65,7 @@ namespace arc //! arc namespace
          */
         inline bool whitespace(const char ch_) noexcept
         {
-            for (const char* it{WHITESPACE_CHARS}; *it != 0; ++it)
+            for (const char* it = WHITESPACE_CHARS; *it != 0; ++it)
             {
                 if (ch_ == *it)
                 {
@@ -85,7 +85,7 @@ namespace arc //! arc namespace
          */
         inline bool glyph(const char ch_) noexcept
         {
-            for (const char* it{GLYPH_CHARS}; *it != 0; ++it)
+            for (const char* it = GLYPH_CHARS; *it != 0; ++it)
             {
                 if ((ch_ == *it) && !numerical(ch_))
                 {
