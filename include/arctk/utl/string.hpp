@@ -345,9 +345,9 @@ namespace arc //! arc namespace
          *  Determine the extension from a the file path.
          *  If no dot is found within the file path, an empty string is returned.
          *
-         *  @pre    path_ may not be empty.
-         *
          *  @param  path_   Full file path.
+         *
+         *  @pre    path_ may not be empty.
          *
          *  @return Extension of the file.
          */
