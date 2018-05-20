@@ -27,6 +27,31 @@ namespace arc //! arc namespace
 
 
 
+        //  == FUNCTION PROTOTYPES ==
+        //  -- Properties --
+        template <class T, size_t N>
+        inline bool contains(const std::array<T, N>& arr_, T val_) noexcept;
+
+
+
+        //  == FUNCTIONS ==
+        //  -- Properties --
+        /**
+         *  Determine if an array contains a given value.
+         *
+         *  @param  arr_    Array to be tested.
+         *  @param  val_    Value to search the array for.
+         *
+         *  @return True if the array contains the given value.
+         */
+        template <class T, size_t N>
+        inline bool contains(const std::array<T, N>& arr_, const T val_) noexcept
+        {
+            return (std::find(arr_.begin(), arr_.end(), val_) != arr_.end());
+        }
+
+
+
     } // namespace utl
 } // namespace arc
 
