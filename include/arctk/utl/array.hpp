@@ -222,6 +222,9 @@ namespace arc //! arc namespace
         /**
          *  Determine if an array's elements are always greater than the given limit.
          *
+         *  @tparam T   Type stored by the array.
+         *  @tparam N   Size of the array.
+         *
          *  @param  arr_    Array to be tested.
          *  @param  limit_  Limit to be tested.
          *
