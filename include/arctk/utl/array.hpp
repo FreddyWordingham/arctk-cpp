@@ -377,6 +377,9 @@ namespace arc //! arc namespace
         /**
          *  Determine the average of the elements within an array.
          *
+         *  @tparam T   Type stored by the array.
+         *  @tparam N   Size of the array.
+         *
          *  @pre    arr_ must not be empty.
          *
          *  @param  arr_    Array to find the average of.
