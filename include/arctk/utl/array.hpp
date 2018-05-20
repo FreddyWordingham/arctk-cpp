@@ -324,6 +324,16 @@ namespace arc //! arc namespace
             return (arr_[min_index(arr_)]);
         }
 
+        /**
+         *  Determine the maximum value within an array.
+         *  If multiple values are equally the largest, the first is returned.
+         *
+         *  @pre    arr_ must not be empty.
+         *
+         *  @param  arr_    Array to be searched.
+         *
+         *  @return Maximum value within the array.
+         */
         template <class T, size_t N>
         inline T max(const std::array<T, N>& arr_) noexcept
         {
