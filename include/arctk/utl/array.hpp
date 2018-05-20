@@ -394,6 +394,9 @@ namespace arc //! arc namespace
         /**
          *  Determine the magnitude of the elements within an array.
          *
+         *  @tparam T   Type stored by the array.
+         *  @tparam N   Size of the array.
+         *
          *  @param  arr_    Array to find the magnitude of.
          *
          *  @return Magnitude of the array elements.
