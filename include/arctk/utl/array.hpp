@@ -292,6 +292,8 @@ namespace arc //! arc namespace
         template <class T, size_t N>
         inline size_t max_index(const std::array<T, N>& arr_) noexcept
         {
+            static_assert(!arr_.empty());
+
             size_t max = 0;
             for (size_t i = 1; i < N; ++i)
             {
@@ -304,15 +306,29 @@ namespace arc //! arc namespace
             return (max);
         }
 
+        /**
+         *  Determine the minimum value within an array.
+         *  If multiple values are equally the smallest, the first is returned.
+         *
+         *  @pre    arr_ must not be empty.
+         *
+         *  @param  arr_    Array to be searched.
+         *
+         *  @return Minimum value within the array.
+         */
         template <class T, size_t N>
         inline T min(const std::array<T, N>& arr_) noexcept
         {
+            static_assert(!arr_.empty());
+
             return (arr_[min_index(arr_)]);
         }
 
         template <class T, size_t N>
         inline T max(const std::array<T, N>& arr_) noexcept
         {
+            static_assert(!arr_.empty());
+
             return (arr_[max_index(arr_)]);
         }
 
