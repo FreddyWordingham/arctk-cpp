@@ -420,10 +420,32 @@ namespace arc //! arc namespace
         template <class T, size_t N>
         inline bool within(const std::array<T, N>& arr_, T val_) noexcept
         {
-            assert(N >= 2);
+            static_assert(N >= 2);
             assert(monotonic(arr_));
 
             return ((val_ >= arr_.front()) && (val_ <= arr_.back()));
+        }
+
+        /**
+         *  Determine the lower index of the elements within the array which encapsulate a value.
+         *
+         *  @pre    arr_ must contain at least two elements.
+         *  @pre    arr_ must be ascending.
+         *
+         *  @param  arr_    Array to search.
+         *  @param  val_    Value to locate.
+         *
+         *  @return The lower index of the element pair which encapsulates the value.
+         */
+        template <class T, size_t N>
+        inline size_t search(const std::array<T, N>& arr_, const T val_) noexcept
+        {
+            static_assert(N > 1);
+            assert(ascending(arr_));
+
+            const auto index = static_cast<size_t>(std::distance(arr_.begin(), std::lower_bound(arr_.begin(), arr_.end(), val_)));
+
+            return ((index == 0) ? index : (index - 1));
         }
 
 
