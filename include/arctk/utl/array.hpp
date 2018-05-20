@@ -341,6 +341,9 @@ namespace arc //! arc namespace
          *  Determine the maximum value within an array.
          *  If multiple values are equally the largest, the first is returned.
          *
+         *  @tparam T   Type stored by the array.
+         *  @tparam N   Size of the array.
+         *
          *  @pre    arr_ must not be empty.
          *
          *  @param  arr_    Array to be searched.
