@@ -48,6 +48,22 @@ namespace arc //! arc namespace
         template <class T, size_t N>
         inline bool always_greater_than_or_equal_to(const std::array<T, N>& arr_, T limit_) noexcept;
 
+        //  -- Mathematical --
+        template <class T, size_t N>
+        inline size_t min_index(const std::array<T, N>& arr_) noexcept;
+        template <class T, size_t N>
+        inline size_t max_index(const std::array<T, N>& arr_) noexcept;
+        template <class T, size_t N>
+        inline T min(const std::array<T, N>& arr_) noexcept;
+        template <class T, size_t N>
+        inline T max(const std::array<T, N>& arr_) noexcept;
+        template <class T, size_t N>
+        inline T sum(const std::array<T, N>& arr_) noexcept;
+        template <class T, size_t N>
+        inline double ave(const std::array<T, N>& arr_) noexcept;
+        template <class T, size_t N>
+        inline double mag(const std::array<T, N>& arr_) noexcept;
+
 
 
         //  == FUNCTIONS ==
@@ -232,6 +248,94 @@ namespace arc //! arc namespace
             }
 
             return (true);
+        }
+
+
+        //  -- Mathematical --
+        /**
+         *  Determine the minimum index within an array.
+         *  If multiple values are equally the smallest, the first index is returned.
+         *
+         *  @pre    arr_ must not be empty.
+         *
+         *  @param  arr_    Array to be searched.
+         *
+         *  @return Index of the minimum value within the array.
+         */
+        template <class T, size_t N>
+        inline size_t min_index(const std::array<T, N>& arr_) noexcept
+        {
+            static_assert(!arr_.empty());
+
+            size_t min = 0;
+            for (size_t i = 1; i < N; ++i)
+            {
+                if (arr_[i] < arr_[min])
+                {
+                    min = i;
+                }
+            }
+
+            return (min);
+        }
+
+        template <class T, size_t N>
+        inline size_t max_index(const std::array<T, N>& arr_) noexcept
+        {
+            size_t max = 0;
+            for (size_t i = 1; i < N; ++i)
+            {
+                if (arr_[i] > arr_[max])
+                {
+                    max = i;
+                }
+            }
+
+            return (max);
+        }
+
+        template <class T, size_t N>
+        inline T min(const std::array<T, N>& arr_) noexcept
+        {
+            return (arr_[min_index(arr_)]);
+        }
+
+        template <class T, size_t N>
+        inline T max(const std::array<T, N>& arr_) noexcept
+        {
+            return (arr_[max_index(arr_)]);
+        }
+
+        template <class T, size_t N>
+        inline T sum(const std::array<T, N>& arr_) noexcept
+        {
+            T sum = 0;
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                sum += arr_[i];
+            }
+
+            return (sum);
+        }
+
+        template <class T, size_t N>
+        inline double ave(const std::array<T, N>& arr_) noexcept
+        {
+            return (sum(arr_) / static_cast<double>(N));
+        }
+
+        template <class T, size_t N>
+        inline double mag(const std::array<T, N>& arr_) noexcept
+        {
+            T sq_sum = 0;
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                sq_sum += (arr_[i] * arr_[i]);
+            }
+
+            return (std::sqrt(static_cast<double>(sq_sum)));
         }
 
 
