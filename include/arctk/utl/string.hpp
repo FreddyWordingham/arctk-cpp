@@ -264,12 +264,12 @@ namespace arc //! arc namespace
         /**
          *  Find and replace all instances of a sub-string within a string with a given replacement string.
          *
-         *  @pre    find_ must not be empty.
-         *  @pre    replace_ must not be empty.
-         *
          *  @param  str_        String to be modified.
          *  @param  find_       Sub-string to be replaced.
          *  @param  replace_    Sub-string to replace find_ sub-string with.
+         *
+         *  @pre    find_ must not be empty.
+         *  @pre    replace_ must not be empty.
          *
          *  @return A copy of str_ with all instances of the find_ sub-string replaced with the replace_ sub-string.
          */
