@@ -103,11 +103,11 @@ namespace arc //! arc namespace
         /**
          *  Convert the value in degrees to radians.
          *
-         *  @pre    T must be an arithmetic type.
-         *
          *  @tparam T   Type of value to convert.
          *
          *  @param  x_  Value to be converted to radians.
+         *
+         *  @pre    T must be an arithmetic type.
          *
          *  @return Value of x_ in radians.
          */
