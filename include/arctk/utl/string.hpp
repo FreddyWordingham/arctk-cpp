@@ -90,7 +90,7 @@ namespace arc //! arc namespace
         inline bool parsable(const std::string& str_) noexcept
         {
             T                 result;
-            std::stringstream stream{str_};
+            std::stringstream stream(str_);
 
             stream >> result;
 
@@ -148,7 +148,7 @@ namespace arc //! arc namespace
          */
         inline std::string filter(const std::string& str_, const char ch_) noexcept
         {
-            std::string str{str_};
+            std::string str(str_);
 
             str.erase(std::remove(str.begin(), str.end(), ch_), str.end());
 
@@ -189,7 +189,7 @@ namespace arc //! arc namespace
             assert(!start_.empty());
             assert(!end_.empty());
 
-            std::string str{str_};
+            std::string str(str_);
 
             size_t start;
             while ((start = str.find(start_)) != std::string::npos)
@@ -217,7 +217,7 @@ namespace arc //! arc namespace
          */
         inline std::string filter_blank_lines(const std::string& str_) noexcept
         {
-            std::string str{str_};
+            std::string str(str_);
 
             str.erase(std::unique(str.begin(), str.end(), [](const char first_, const char second_) { return ((first_ == '\n') && (second_ == '\n')); }), str.end());
 
@@ -233,7 +233,7 @@ namespace arc //! arc namespace
          */
         inline std::string filter_whitespace(const std::string& str_) noexcept
         {
-            std::string str{str_};
+            std::string str(str_);
 
             str.erase(0, str.find_first_not_of(" \f\n\r\t\v"));
             str.erase(str.find_last_not_of(" \f\n\r\t\v") + 1);
@@ -254,7 +254,7 @@ namespace arc //! arc namespace
          */
         inline std::string replace(const std::string& str_, const char find_, const char replace_) noexcept
         {
-            std::string str{str_};
+            std::string str(str_);
 
             std::replace(str.begin(), str.end(), find_, replace_);
 
@@ -278,9 +278,9 @@ namespace arc //! arc namespace
             assert(!find_.empty());
             assert(!replace_.empty());
 
-            std::string str{str_};
+            std::string str(str_);
 
-            for (size_t pos{0}; (pos = str.find(find_, pos)) != std::string::npos; pos += replace_.size())
+            for (size_t pos = 0; (pos = str.find(find_, pos)) != std::string::npos; pos += replace_.size())
             {
                 str.replace(pos, find_.size(), replace_);
             }
@@ -336,7 +336,7 @@ namespace arc //! arc namespace
         {
             assert(!path_.empty());
 
-            const size_t slash_pos{path_.find_last_of('/')};
+            const size_t slash_pos = path_.find_last_of('/');
 
             return (slash_pos == std::string::npos ? path_ : path_.substr(slash_pos + 1));
         }
@@ -355,7 +355,7 @@ namespace arc //! arc namespace
         {
             assert(!path_.empty());
 
-            const size_t dot_pos{path_.find_last_of('.')};
+            const size_t dot_pos = path_.find_last_of('.');
 
             return (dot_pos == std::string::npos ? "" : path_.substr(dot_pos + 1));
         }
@@ -379,7 +379,7 @@ namespace arc //! arc namespace
             assert(parsable<T>(str_));
 
             T                 result;
-            std::stringstream stream{str_};
+            std::stringstream stream(str_);
 
             stream >> result;
 
@@ -404,10 +404,10 @@ namespace arc //! arc namespace
             auto       sec      = static_cast<uint64_t>(total_sec_);
             const auto millisec = static_cast<uint64_t>((total_sec_ - sec) * 1000);
 
-            const uint64_t hrs{sec / 3600};
+            const uint64_t hrs = sec / 3600;
             sec %= 3600;
 
-            const uint64_t min{sec / 60};
+            const uint64_t min = sec / 60;
             sec %= 60;
 
             return (std::to_string(hrs) + "hrs " + std::to_string(min) + "min " + std::to_string(sec) + "sec " + std::to_string(millisec) + "ms");
