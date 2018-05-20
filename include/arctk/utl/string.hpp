@@ -391,9 +391,9 @@ namespace arc //! arc namespace
         /**
          *  Convert the number of seconds into a time string.
          *
-         *  @pre    total_sec_ must be positive.
-         *
          *  @param  total_sec_  Number of seconds.
+         *
+         *  @pre    total_sec_ must be positive.
          *
          *  @return String of the time.
          */
