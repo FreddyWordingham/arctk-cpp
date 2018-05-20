@@ -365,11 +365,11 @@ namespace arc //! arc namespace
         /**
          *  Parse a value from a string.
          *
-         *  @pre    Str_ must be parsable.
-         *
          *  @tparam T   Type to be parsed.
          *
          *  @param  str_    String to be parsed.
+         *
+         *  @pre    Str_ must be parsable.
          *
          *  @return Value of the parsed string.
          */
