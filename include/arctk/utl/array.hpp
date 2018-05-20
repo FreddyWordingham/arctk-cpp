@@ -462,6 +462,46 @@ namespace arc //! arc namespace
 
 
 
+//  == OPERATOR PROTOTYPES ==
+//  -- Io --
+template <class T, size_t N>
+inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& arr_) noexcept;
+
+
+
+//  == OPERATORS ==
+//  -- Io --
+/**
+ *  Enable writing of an array to an ostream.
+ *
+ *  @tparam T   Type stored by the array.
+ *  @tparam N   Size of the array.
+ *
+ *  @param  stream_ Stream to write to.
+ *  @param  arr_    Array to be written.
+ *
+ *  return  Reference to the stream post-write.
+ */
+template <class T, size_t N>
+inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& arr_) noexcept
+{
+    if (arr_.empty())
+    {
+        return (stream_);
+    }
+
+    stream_ << "{" << arr_[0];
+    for (size_t i = 1; i < N; ++i)
+    {
+        stream_ << ", " << arr_[i];
+    }
+    stream_ << "}";
+
+    return (stream_);
+}
+
+
+
 //  == MODULE END ==
 #endif // ARCTK_MOD_CORE
 
