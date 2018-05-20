@@ -333,13 +333,23 @@ namespace arc //! arc namespace
             return (slash_pos == std::string::npos ? path_ : path_.substr(slash_pos + 1));
         }
 
+        /**
+         *  Determine the extension from a the file path.
+         *  If no dot is found within the file path, an empty string is returned.
+         *
+         *  @pre    path_ may not be empty.
+         *
+         *  @param  path_   Full file path.
+         *
+         *  @return Extension of the file.
+         */
         inline std::string extension(const std::string& path_) noexcept
         {
             assert(!path_.empty());
 
             const size_t dot_pos{path_.find_last_of('.')};
 
-            return (dot_pos == std::string::npos ? path_ : path_.substr(dot_pos + 1));
+            return (dot_pos == std::string::npos ? "" : path_.substr(dot_pos + 1));
         }
 
 
