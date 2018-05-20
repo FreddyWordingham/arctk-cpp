@@ -401,13 +401,13 @@ namespace arc //! arc namespace
         {
             assert(total_sec_ >= 0.0);
 
-            auto       sec      = static_cast<unsigned long int>(total_sec_);
-            const auto millisec = static_cast<unsigned long int>((total_sec_ - sec) * 1000);
+            auto       sec      = static_cast<uint64_t>(total_sec_);
+            const auto millisec = static_cast<uint64_t>((total_sec_ - sec) * 1000);
 
-            const unsigned long int hrs = sec / 3600;
+            const uint64_t hrs{sec / 3600};
             sec %= 3600;
 
-            const unsigned long int min = sec / 60;
+            const uint64_t min{sec / 60};
             sec %= 60;
 
             return (std::to_string(hrs) + "hrs " + std::to_string(min) + "min " + std::to_string(sec) + "sec " + std::to_string(millisec) + "ms");
