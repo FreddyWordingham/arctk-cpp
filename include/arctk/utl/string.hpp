@@ -70,7 +70,6 @@ namespace arc //! arc namespace
         inline T parse(const std::string& str_) noexcept;
 
         //  -- Time --
-        inline std::string time() noexcept;
         inline std::string time(double total_sec_) noexcept;
 
 
@@ -389,10 +388,6 @@ namespace arc //! arc namespace
 
 
         //  -- Time --
-        inline std::string time() noexcept
-        {
-        }
-
         /**
          *  Convert the number of seconds into a time string.
          *
