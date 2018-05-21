@@ -63,6 +63,38 @@ namespace arc //! arc namespace
 
 
         //  == INSTANTIATION --
+        //  -- Constructors --
+        /**
+         *  Construct a warning object which, when destructed, will write its contents to the terminal.
+         *  Boolean values are printed as words.
+         *  If LOCATION is defined, then its value is used to colour the output location of the message.
+         *
+         *  @param  file_   File location of the message.
+         *  @param  func_   Function location of the message.
+         *  @param  line_   Line location of the message.
+         *
+         *  @pre    file_ must not be empty.
+         *  @pre    func_ must not be empty.
+         *  @pre    line_ must be greater than zero.
+         */
+        inline Message::Message(const std::string& file_, const std::string& func_, const int line_) noexcept
+        {
+            assert(!file_.empty());
+            assert(!func_.empty());
+            assert(line_ > 0);
+
+            *this << std::boolalpha;
+#ifdef LOC_OUTPUT
+            *this << LOC_OUTPUT << file_ << " :: " << func_ << " :: " << line_ << ANSI.reset << "\n";
+#else
+            (void)(file_);
+            (void)(func_);
+            (void)(line_);
+#endif
+            *this << "[" << ANSI.yellow << "Warning!" << ANSI.reset << "] : ";
+        }
+
+
         //  -- Destructors --
         /**
          *  Write the contents of the stream to the terminal.
