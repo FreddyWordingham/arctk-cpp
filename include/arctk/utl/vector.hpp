@@ -531,7 +531,7 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec
     }
 
     stream_ << "{" << vec_[0];
-    for (size_t i = 1; i < N; ++i)
+    for (size_t i = 1; i < vec_.size(); ++i)
     {
         stream_ << ", " << vec_[i];
     }
