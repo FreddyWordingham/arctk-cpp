@@ -49,9 +49,9 @@ namespace arc //! arc namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Message(const Message&) = default; //!< Defaulted default constructor.
-                inline Message(const Message&) = delete;  //!< Deleted copy constructor.
-                inline Message(Message&&)      = delete;  //!< Deleted move constructor.
+                inline Message(const std::string& file_, const std::string& func_, int line_) noexcept;
+                inline Message(const Message&) = delete; //!< Deleted copy constructor.
+                inline Message(Message&&)      = delete; //!< Deleted move constructor.
 
                 //  -- Destructors --
                 inline ~Message() noexcept override;
@@ -67,6 +67,13 @@ namespace arc //! arc namespace
 
 
             //  == INSTANTIATION --
+            //  -- Constructors --
+            inline Message::Message(const std::string& file_, const std::string& func_, const int line_) noexcept
+              : Cout(file_, func_, line_)
+            {
+            }
+
+
             //  -- Destructors --
             /**
              *  Reset ansi escape codes and append a newline character.
