@@ -62,6 +62,20 @@ namespace arc //! arc namespace
 
 
 
+        //  == INSTANTIATION --
+        //  -- Destructors --
+        /**
+         *  Write the contents of the stream to the terminal.
+         */
+        inline Warning::~Warning() noexcept
+        {
+            *this << ANSI.reset << '\n';
+
+            Logger::instance().cout(str());
+        }
+
+
+
     } // namespace log
 } // namespace arc
 
