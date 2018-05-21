@@ -42,6 +42,22 @@ namespace arc //! arc namespace
          */
         class Warning : public std::stringstream
         {
+            //  == INSTANTIATION ==
+          public:
+            //  -- Constructors --
+            inline Warning(const std::string& file_, const std::string& func_, int line_) noexcept;
+            inline Warning(const Warning&) = delete; //!< Deleted copy constructor.
+            inline Warning(Warning&&)      = delete; //!< Deleted move constructor.
+
+            //  -- Destructors --
+            inline ~Warning() noexcept override;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Warning& operator=(const Warning&) = delete; //!< Deleted copy operator. @return Reference to copied object.
+            inline Warning& operator=(Warning&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
         };
 
 
