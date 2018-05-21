@@ -31,7 +31,7 @@
 //  == MACROS ==
 //  -- Logging --
 #define LOG arc::log::Message(__FILE__, __func__, __LINE__) << "" //!< Log a standard message.
-#ifdef VERB_OUTPUT
+#ifdef VERBOSE
 #define VERB arc::log::Message(__FILE__, __func__, __LINE__) << "" //!< Log a verbose message.
 #else
 #define VERB arc::log::Verbose() << "" //!< Ignore a verbose message.
