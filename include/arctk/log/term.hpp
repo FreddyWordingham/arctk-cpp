@@ -35,17 +35,21 @@ namespace arc //! arc namespace
 
 
         //  == CLASS ==
-        class ClsName
+        class Term
         {
             //  == FIELDS ==
           private:
+            //  -- Writing --
+            std::mutex _write_guard;
+
+
             //  == INSTANTIATION ==
           public:
-            //  -- Constructors --
-
-
-            //  == OPERATORS ==
           private:
+            //  -- Constructors --
+            inline Term() noexcept = default;
+
+
             //  == METHODS ==
           public:
             //  -- Getters --
