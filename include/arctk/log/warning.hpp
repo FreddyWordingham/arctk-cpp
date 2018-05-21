@@ -84,8 +84,8 @@ namespace arc //! arc namespace
             assert(line_ > 0);
 
             *this << std::boolalpha;
-#ifdef LOC_OUTPUT
-            *this << LOC_OUTPUT << file_ << " :: " << func_ << " :: " << line_ << ANSI.reset << "\n";
+#ifdef LOCATION
+            *this << LOCATION << file_ << " :: " << func_ << " :: " << line_ << ANSI.reset << "\n";
 #else
             (void)(file_);
             (void)(func_);
