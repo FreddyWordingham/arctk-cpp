@@ -45,7 +45,7 @@ namespace arc //! arc namespace
             //  == FIELDS ==
           private:
             //  -- Writing --
-            std::mutex _write_guard;
+            std::mutex _write_guard; //!< Terminal write guard.
 
 
             //  == INSTANTIATION ==
