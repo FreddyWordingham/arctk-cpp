@@ -26,9 +26,9 @@
 
 
 //  == NAMESPACE ==
-namespace arc
+namespace arc //! arc namespace
 {
-    namespace log
+    namespace log //! logging namespace
     {
 
 
