@@ -94,7 +94,7 @@ namespace arc
         {
             *this << ANSI.reset << '\n';
 
-            Logger::instance().cout(str());
+            Term::instance().cout(str());
         }
 
 
