@@ -46,13 +46,18 @@ namespace arc
           public:
             //  -- Constructors --
             inline Message(const std::string& file_, const std::string& func_, int line_) noexcept;
+            inline Message(const Message&) = delete;
+            inline Message(Message&&)      = delete;
 
             //  -- Destructors --
             inline ~Message() noexcept override;
 
 
             //  == OPERATORS ==
-          private:
+          public:
+            //  -- Assignment --
+            inline Message& operator=(const Message&) = delete;
+            inline Message& operator=(Message&&) = default;
         };
 
 
