@@ -42,17 +42,16 @@ namespace arc //! arc namespace
 
             //  == CLASS ==
             /**
-             *  Message logging class.
-             *  Will print contents of stream to cout upon destruction.
+             *  Standard cout message logging.
              */
-            class Message : public std::stringstream
+            class Message : public Cout
             {
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
                 inline Message(const std::string& file_, const std::string& func_, int line_) noexcept;
-                inline Message(const Message&) = delete; //!< Deleted copy constructor.
-                inline Message(Message&&)      = delete; //!< Deleted move constructor.
+                //        inline Message(const Message&) = delete; //!< Deleted copy constructor.
+                //        inline Message(Message&&)      = delete; //!< Deleted move constructor.
 
                 //  -- Destructors --
                 inline ~Message() noexcept override;
@@ -61,8 +60,8 @@ namespace arc //! arc namespace
                 //  == OPERATORS ==
               public:
                 //  -- Assignment --
-                inline Message& operator=(const Message&) = delete; //!< Deleted copy operator. @return Reference to copied object.
-                inline Message& operator=(Message&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
+                //        inline Message& operator=(const Message&) = delete; //!< Deleted copy operator. @return Reference to copied object.
+                //        inline Message& operator=(Message&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
             };
 
 
@@ -70,13 +69,11 @@ namespace arc //! arc namespace
             //  == INSTANTIATION --
             //  -- Destructors --
             /**
-             *  Write the contents of the stream to the terminal.
+             *  Reset ansi escape codes and append a newline character.
              */
             inline Message::~Message() noexcept
             {
                 *this << ANSI.reset << '\n';
-
-                Term::instance().cout(str());
             }
 
 
