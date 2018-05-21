@@ -488,7 +488,7 @@ namespace arc //! arc namespace
         template <class T>
         inline size_t search(const std::vector<T>& vec_, const T val_) noexcept
         {
-            static_assert(N > 1);
+            assert(vec_.size() >= 2);
             assert(ascending(vec_));
 
             const auto index = static_cast<size_t>(std::distance(vec_.begin(), std::lower_bound(vec_.begin(), vec_.end(), val_)));
