@@ -162,7 +162,7 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine if an vector's elements are uniformly spaced.
+         *  Determine if a vector's elements are uniformly spaced.
          *  Consecutive value deltas must differ by less than the given tolerance.
          *
          *  @tparam T   Type stored by the vector.
@@ -170,14 +170,18 @@ namespace arc //! arc namespace
          *  @param  vec_    Vector to be tested.
          *  @param  tol_    Maximum tolerance for consecutive values.
          *
+         *  @pre    vec_ size must be greater than one.
+         *
          *  @return True if the vector is uniform.
          */
         template <class T>
         inline bool uniform(const std::vector<T>& vec_, const double tol_) noexcept
         {
-            const double ave_delta = (vec_.front() - vec_.back()) / static_cast<double>(N - 1);
+            assert(vec_.size() > 1);
 
-            for (size_t i = 1; i < N; ++i)
+            const double ave_delta = (vec_.front() - vec_.back()) / static_cast<double>(vec_.size() - 1);
+
+            for (size_t i = 1; i < vec_.size(); ++i)
             {
                 if ((std::fabs((vec_[i - 1] - vec_[i]) - ave_delta)) > tol_)
                 {
