@@ -520,7 +520,7 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec
  *  @param  stream_ Stream to write to.
  *  @param  vec_    Vector to be written.
  *
- *  return  Reference to the stream post-write.
+ *  @return Reference to the stream post-write.
  */
 template <class T>
 inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec_) noexcept
