@@ -21,6 +21,7 @@
 
 //  == INCLUDES ==
 //  -- Arctk --
+#include <arctk/log/ansi.hpp>
 #include <arctk/log/message.hpp>
 #include <arctk/log/term.hpp>
 
