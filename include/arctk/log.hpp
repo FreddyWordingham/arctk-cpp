@@ -23,6 +23,7 @@
 //  -- Arctk --
 #include <arctk/log/ansi.hpp>
 #include <arctk/log/cout.hpp>
+#include <arctk/log/cout/message.hpp>
 #include <arctk/log/term.hpp>
 
 
