@@ -63,6 +63,9 @@ namespace arc //! arc namespace
             const std::string bright_cyan;    //!< Colour the text bright cyan.
             const std::string bright_white;   //!< Colour the text bright white.
 
+            //  -- Utility --
+            const std::string overwrite; //!< Overwrite the previous printed line.
+
 
             //  == INSTANTIATION ==
           public:
