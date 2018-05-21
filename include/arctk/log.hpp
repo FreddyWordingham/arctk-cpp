@@ -22,14 +22,13 @@
 //  == INCLUDES ==
 //  -- Arctk --
 #include <arctk/log/ansi.hpp>
-#include <arctk/log/message.hpp>
+#include <arctk/log/cout.hpp>
 #include <arctk/log/term.hpp>
 
 
 
 //  == MACROS ==
 //  -- Logging --
-#define LOG arc::log::Message(__FILE__, __func__, __LINE__) << "" //!< Log a standard message.
 
 
 
