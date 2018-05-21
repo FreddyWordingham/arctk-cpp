@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/log/message.hpp
+ *  @file   arctk/log/cout.hpp
  *  @date   21/05/2018
  *  @author Freddy Wordingham
  *
@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_LOG_MESSAGE_HPP
-#define ARCTK_LOG_MESSAGE_HPP
+#ifndef ARCTK_LOG_COUT_HPP
+#define ARCTK_LOG_COUT_HPP
 
 
 
@@ -70,11 +70,11 @@ namespace arc //! arc namespace
         /**
          *  Construct a stream object which, when destructed, will write its contents to the terminal.
          *  Boolean values are printed as words.
-         *  If LOCATION is defined, then its value is used to colour the output location of the message.
+         *  If LOCATION is defined, then its value is used to colour the output location of the message instantiation.
          *
-         *  @param  file_   File location of the message.
-         *  @param  func_   Function location of the message.
-         *  @param  line_   Line location of the message.
+         *  @param  file_   File location of the message instantiation.
+         *  @param  func_   Function location of the message instantiation.
+         *  @param  line_   Line location of the message instantiation.
          *
          *  @pre    file_ must not be empty.
          *  @pre    func_ must not be empty.
@@ -100,7 +100,7 @@ namespace arc //! arc namespace
 
         //  -- Destructors --
         /**
-         *  Write the contents of the message to the terminal.
+         *  Write contents to console output.
          */
         inline Cout::~Cout() noexcept
         {
@@ -120,4 +120,4 @@ namespace arc //! arc namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_LOG_MESSAGE_HPP
+#endif // ARCTK_LOG_COUT_HPP
