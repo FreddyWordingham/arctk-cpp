@@ -44,6 +44,9 @@ namespace arc
             //  -- Constructors --
             inline Message(const std::string& file_, const std::string& func_, int line_) noexcept;
 
+            //  -- Destructors --
+            inline ~Message() noexcept override;
+
 
             //  == OPERATORS ==
           private:
@@ -80,6 +83,18 @@ namespace arc
             (void)(func_);
             (void)(line_);
 #endif
+        }
+
+
+        //  -- Destructors --
+        /**
+         *  Write the contents of the stream to the terminal.
+         */
+        inline Message::~Message() noexcept
+        {
+            *this << ANSI.reset << '\n';
+
+            Logger::instance().cout(str());
         }
 
 
