@@ -193,7 +193,7 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine if an vector's elements are always less than the given limit.
+         *  Determine if a vector's elements are always less than the given limit.
          *
          *  @tparam T   Type stored by the vector.
          *
@@ -205,7 +205,7 @@ namespace arc //! arc namespace
         template <class T>
         inline bool always_less_than(const std::vector<T>& vec_, const T limit_) noexcept
         {
-            for (size_t i = 0; i < N; ++i)
+            for (size_t i = 0; i < vec_.size(); ++i)
             {
                 if (!(vec_[i] < limit_))
                 {
