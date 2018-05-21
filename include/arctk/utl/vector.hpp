@@ -389,7 +389,7 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine the sum of all elements within an vector.
+         *  Determine the sum of all elements within a vector.
          *
          *  @tparam T   Type stored by the vector.
          *
@@ -401,7 +401,7 @@ namespace arc //! arc namespace
         inline T sum(const std::vector<T>& vec_) noexcept
         {
             T sum = 0;
-            for (size_t i = 0; i < N; ++i)
+            for (size_t i = 0; i < vec_.size(); ++i)
             {
                 sum += vec_[i];
             }
