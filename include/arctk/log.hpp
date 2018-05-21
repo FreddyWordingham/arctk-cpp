@@ -25,6 +25,7 @@
 #include <arctk/log/message.hpp>
 #include <arctk/log/term.hpp>
 #include <arctk/log/verbose.hpp>
+#include <arctk/log/warning.hpp>
 
 
 
