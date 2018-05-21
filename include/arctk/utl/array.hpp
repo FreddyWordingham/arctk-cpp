@@ -477,7 +477,6 @@ namespace arc //! arc namespace
          *  @param  arr_    Array to test.
          *  @param  val_    Value to test.
          *
-         *  @pre    arr_ must contain at least two elements.
          *  @pre    arr_ must be ascending.
          *
          *  @return True if the value falls within the bounds of the array.
@@ -485,7 +484,6 @@ namespace arc //! arc namespace
         template <class T, size_t N>
         inline bool within(const std::array<T, N>& arr_, T val_) noexcept
         {
-            static_assert(N >= 2);
             assert(monotonic(arr_));
 
             return ((val_ >= arr_.front()) && (val_ <= arr_.back()));
