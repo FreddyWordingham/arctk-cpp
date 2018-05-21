@@ -51,7 +51,7 @@ namespace arc //! arc namespace
          *  @return A const reference to this object.
          */
         template <class T>
-        inline const Verbose& operator<<(const T&) const noexcept
+        inline const Verbose& Verbose::operator<<(const T&) const noexcept
         {
             return (*this);
         }
