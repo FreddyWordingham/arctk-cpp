@@ -34,6 +34,10 @@ namespace arc //! arc namespace
 
 
         //  == CLASS ==
+        /**
+         *  Ansi escape code definitions.
+         *  Codes are set for the platform during instantiation.
+         */
         class Ansi
         {
             //  == FIELDS ==
