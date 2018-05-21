@@ -60,7 +60,8 @@ namespace arc //! arc namespace
 
             //  == METHODS ==
           public:
-            //  -- Getters --
+            //  -- Output --
+            inline void cout(const std::string& str_) noexcept;
         };
 
 
@@ -82,7 +83,18 @@ namespace arc //! arc namespace
 
 
         //  == METHODS ==
-        //  -- Getters --
+        //  -- Output --
+        /**
+         *  Write a string to the standard output.
+         *
+         *  @param  str_    String to be written.
+         */
+        inline void Term::cout(const std::string& str_) noexcept
+        {
+            std::lock_guard<std::mutex> write_lock(_write_guard);
+
+            std::cout << str_;
+        }
 
 
 
