@@ -41,6 +41,7 @@ namespace arc //! arc namespace
         //  == CLASS ==
         /**
          *  Message logging class.
+         *  Will print contents of stream to cout upon destruction.
          */
         class Message : public std::stringstream
         {
