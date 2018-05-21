@@ -15,6 +15,7 @@
 #include <arctk/constant.hpp>
 #include <arctk/constant/math.hpp>
 #include <arctk/constant/phys.hpp>
+#include <arctk/log.hpp>
 #include <arctk/math.hpp>
 #include <arctk/utl.hpp>
 #include <arctk/utl/array.hpp>
