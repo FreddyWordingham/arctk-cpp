@@ -45,6 +45,9 @@ namespace arc //! arc namespace
 
             //  == INSTANTIATION ==
           public:
+            //  -- Singleton --
+            inline static Term& instance() noexcept;
+
           private:
             //  -- Constructors --
             inline Term() noexcept = default;
@@ -58,11 +61,18 @@ namespace arc //! arc namespace
 
 
         //  == INSTANTIATION --
-        //  -- Constructors --
+        //  -- Singleton --
+        /**
+         *  Term singleton getter method.
+         *
+         *  @return Reference to the static term instance.
+         */
+        inline Term& Term::instance() noexcept
+        {
+            static Term static_term;
 
-
-
-        //  == OPERATORS ==
+            return (static_term);
+        }
 
 
 
