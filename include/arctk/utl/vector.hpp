@@ -369,7 +369,7 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine the maximum value within an vector.
+         *  Determine the maximum value within a vector.
          *  If multiple values are equally the largest, the first is returned.
          *
          *  @tparam T   Type stored by the vector.
@@ -383,7 +383,7 @@ namespace arc //! arc namespace
         template <class T>
         inline T max(const std::vector<T>& vec_) noexcept
         {
-            static_assert(!vec_.empty());
+            assert(!vec_.empty());
 
             return (vec_[max_index(vec_)]);
         }
