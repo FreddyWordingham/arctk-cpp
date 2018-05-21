@@ -138,7 +138,8 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
         -Weverything                        \
         -Wno-c++98-compat                   \
-        -Wno-reserved-id-macro \
+        -Wno-padded                         \
+        -Wno-reserved-id-macro              \
     ")
 elseif (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}     \
