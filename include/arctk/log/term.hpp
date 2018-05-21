@@ -77,7 +77,7 @@ namespace arc //! arc namespace
         inline Term& Term::instance() noexcept
         {
 #pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wexit-time-destructors]"
+#pragma clang diagnostic ignored "-Wexit-time-destructors"
             static Term static_term;
 #pragma clang diagnostic pop
 
