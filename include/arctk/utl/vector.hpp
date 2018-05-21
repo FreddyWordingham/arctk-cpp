@@ -147,7 +147,7 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine if an vector is sorted in monotonic order.
+         *  Determine if a vector is sorted in monotonic order.
          *
          *  @tparam T   Type stored by the vector.
          *
