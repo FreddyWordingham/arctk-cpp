@@ -410,7 +410,7 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine the average of the elements within an vector.
+         *  Determine the average of the elements within a vector.
          *
          *  @tparam T   Type stored by the vector.
          *
@@ -423,9 +423,9 @@ namespace arc //! arc namespace
         template <class T>
         inline double ave(const std::vector<T>& vec_) noexcept
         {
-            static_assert(!vec_.empty());
+            assert(!vec_.empty());
 
-            return (sum(vec_) / static_cast<double>(N));
+            return (sum(vec_) / static_cast<double>(vec_.size()));
         }
 
         /**
