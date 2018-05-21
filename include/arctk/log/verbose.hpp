@@ -34,7 +34,27 @@ namespace arc //! arc namespace
          */
         class Verbose
         {
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            template <class T>
+            inline const Verbose& operator<<(const T&) const noexcept;
         };
+
+
+
+        //  == OPERATORS ==
+        //  -- Assignment --
+        /**
+         *  Accept a value to the stream and discard it.
+         *
+         *  @return A const reference to this object.
+         */
+        template <class T>
+        inline const Verbose& operator<<(const T&) const noexcept
+        {
+            return (*this);
+        }
 
 
 
