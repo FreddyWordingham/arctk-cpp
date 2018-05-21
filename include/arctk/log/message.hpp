@@ -91,7 +91,7 @@ namespace arc //! arc namespace
          */
         inline Message::~Message() noexcept
         {
-            Logger::instance().cout(str());
+            Term::instance().cout(str());
         }
 
 
