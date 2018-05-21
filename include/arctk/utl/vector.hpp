@@ -22,10 +22,10 @@
 //  == INCLUDES ==
 //  -- Std --
 #include <algorithm>
-#include <array>
 #include <cassert>
 #include <cmath>
 #include <iostream>
+#include <vector>
 
 
 
@@ -39,84 +39,82 @@ namespace arc //! arc namespace
 
         //  == FUNCTION PROTOTYPES ==
         //  -- Properties --
-        template <class T, size_t N>
-        inline bool contains(const std::array<T, N>& arr_, T val_) noexcept;
-        template <class T, size_t N>
-        inline bool ascending(const std::array<T, N>& arr_) noexcept;
-        template <class T, size_t N>
-        inline bool descending(const std::array<T, N>& arr_) noexcept;
-        template <class T, size_t N>
-        inline bool monotonic(const std::array<T, N>& arr_) noexcept;
-        template <class T, size_t N>
-        inline bool uniform(const std::array<T, N>& arr_, double tol_ = std::numeric_limits<double>::epsilon()) noexcept;
-        template <class T, size_t N>
-        inline bool always_less_than(const std::array<T, N>& arr_, T limit_) noexcept;
-        template <class T, size_t N>
-        inline bool always_less_than_or_equal_to(const std::array<T, N>& arr_, T limit_) noexcept;
-        template <class T, size_t N>
-        inline bool always_greater_than(const std::array<T, N>& arr_, T limit_) noexcept;
-        template <class T, size_t N>
-        inline bool always_greater_than_or_equal_to(const std::array<T, N>& arr_, T limit_) noexcept;
+        template <class T>
+        inline bool contains(const std::vector<T>& vec_, T val_) noexcept;
+        template <class T>
+        inline bool ascending(const std::vector<T>& vec_) noexcept;
+        template <class T>
+        inline bool descending(const std::vector<T>& vec_) noexcept;
+        template <class T>
+        inline bool monotonic(const std::vector<T>& vec_) noexcept;
+        template <class T>
+        inline bool uniform(const std::vector<T>& vec_, double tol_ = std::numeric_limits<double>::epsilon()) noexcept;
+        template <class T>
+        inline bool always_less_than(const std::vector<T>& vec_, T limit_) noexcept;
+        template <class T>
+        inline bool always_less_than_or_equal_to(const std::vector<T>& vec_, T limit_) noexcept;
+        template <class T>
+        inline bool always_greater_than(const std::vector<T>& vec_, T limit_) noexcept;
+        template <class T>
+        inline bool always_greater_than_or_equal_to(const std::vector<T>& vec_, T limit_) noexcept;
 
         //  -- Mathematical --
-        template <class T, size_t N>
-        inline size_t min_index(const std::array<T, N>& arr_) noexcept;
-        template <class T, size_t N>
-        inline size_t max_index(const std::array<T, N>& arr_) noexcept;
-        template <class T, size_t N>
-        inline T min(const std::array<T, N>& arr_) noexcept;
-        template <class T, size_t N>
-        inline T max(const std::array<T, N>& arr_) noexcept;
-        template <class T, size_t N>
-        inline T sum(const std::array<T, N>& arr_) noexcept;
-        template <class T, size_t N>
-        inline double ave(const std::array<T, N>& arr_) noexcept;
-        template <class T, size_t N>
-        inline double mag(const std::array<T, N>& arr_) noexcept;
+        template <class T>
+        inline size_t min_index(const std::vector<T>& vec_) noexcept;
+        template <class T>
+        inline size_t max_index(const std::vector<T>& vec_) noexcept;
+        template <class T>
+        inline T min(const std::vector<T>& vec_) noexcept;
+        template <class T>
+        inline T max(const std::vector<T>& vec_) noexcept;
+        template <class T>
+        inline T sum(const std::vector<T>& vec_) noexcept;
+        template <class T>
+        inline double ave(const std::vector<T>& vec_) noexcept;
+        template <class T>
+        inline double mag(const std::vector<T>& vec_) noexcept;
 
         //  -- Searching --
-        template <class T, size_t N>
-        inline bool within(const std::array<T, N>& arr_, T val_) noexcept;
-        template <class T, size_t N>
-        inline size_t search(const std::array<T, N>& arr_, T val_) noexcept;
+        template <class T>
+        inline bool within(const std::vector<T>& vec_, T val_) noexcept;
+        template <class T>
+        inline size_t search(const std::vector<T>& vec_, T val_) noexcept;
 
 
 
         //  == FUNCTIONS ==
         //  -- Properties --
         /**
-         *  Determine if an array contains a given value.
+         *  Determine if a vector contains a given value.
          *
-         *  @tparam T   Type stored by the array.
-         *  @tparam N   Size of the array.
+         *  @tparam T   Type stored by the vector.
          *
-         *  @param  arr_    Array to be tested.
-         *  @param  val_    Value to search the array for.
+         *  @param  vec_    Vector to be tested.
+         *  @param  val_    Value to search the vector for.
          *
-         *  @return True if the array contains the given value.
+         *  @return True if the vector contains the given value.
          */
-        template <class T, size_t N>
-        inline bool contains(const std::array<T, N>& arr_, const T val_) noexcept
+        template <class T>
+        inline bool contains(const std::vector<T>& vec_, const T val_) noexcept
         {
-            return (std::find(arr_.begin(), arr_.end(), val_) != arr_.end());
+            return (std::find(vec_.begin(), vec_.end(), val_) != vec_.end());
         }
 
         /**
-         *  Determine if an array is sorted in ascending order.
+         *  Determine if an vector is sorted in ascending order.
          *
-         *  @tparam T   Type stored by the array.
-         *  @tparam N   Size of the array.
+         *  @tparam T   Type stored by the vector.
          *
-         *  @param  arr_    Array to be tested.
+         *  @param  vec_    Vector to be tested.
          *
-         *  @return True if the array is ascending.
+         *  @return True if the vector is ascending.
          */
-        template <class T, size_t N>
-        inline bool ascending(const std::array<T, N>& arr_) noexcept
+        template <class T>
+        inline bool ascending(const std::vector<T>& vec_) noexcept
         {
             for (size_t i = 1; i < N; ++i)
             {
-                if (arr_[i] < arr_[i - 1])
+                if (vec_[i] < vec_[i - 1])
                 {
                     return (false);
                 }
@@ -126,21 +124,20 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine if an array is sorted in descending order.
+         *  Determine if an vector is sorted in descending order.
          *
-         *  @tparam T   Type stored by the array.
-         *  @tparam N   Size of the array.
+         *  @tparam T   Type stored by the vector.
          *
-         *  @param  arr_    Array to be tested.
+         *  @param  vec_    Vector to be tested.
          *
-         *  @return True if the array is descending.
+         *  @return True if the vector is descending.
          */
-        template <class T, size_t N>
-        inline bool descending(const std::array<T, N>& arr_) noexcept
+        template <class T>
+        inline bool descending(const std::vector<T>& vec_) noexcept
         {
             for (size_t i = 1; i < N; ++i)
             {
-                if (arr_[i] > arr_[i - 1])
+                if (vec_[i] > vec_[i - 1])
                 {
                     return (false);
                 }
@@ -150,41 +147,39 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine if an array is sorted in monotonic order.
+         *  Determine if an vector is sorted in monotonic order.
          *
-         *  @tparam T   Type stored by the array.
-         *  @tparam N   Size of the array.
+         *  @tparam T   Type stored by the vector.
          *
-         *  @param  arr_    Array to be tested.
+         *  @param  vec_    Vector to be tested.
          *
-         *  @return True if the array is monotonic.
+         *  @return True if the vector is monotonic.
          */
-        template <class T, size_t N>
-        inline bool monotonic(const std::array<T, N>& arr_) noexcept
+        template <class T>
+        inline bool monotonic(const std::vector<T>& vec_) noexcept
         {
-            return (ascending(arr_) || (descending(arr_)));
+            return (ascending(vec_) || (descending(vec_)));
         }
 
         /**
-         *  Determine if an array's elements are uniformly spaced.
+         *  Determine if an vector's elements are uniformly spaced.
          *  Consecutive value deltas must differ by less than the given tolerance.
          *
-         *  @tparam T   Type stored by the array.
-         *  @tparam N   Size of the array.
+         *  @tparam T   Type stored by the vector.
          *
-         *  @param  arr_    Array to be tested.
+         *  @param  vec_    Vector to be tested.
          *  @param  tol_    Maximum tolerance for consecutive values.
          *
-         *  @return True if the array is uniform.
+         *  @return True if the vector is uniform.
          */
-        template <class T, size_t N>
-        inline bool uniform(const std::array<T, N>& arr_, const double tol_) noexcept
+        template <class T>
+        inline bool uniform(const std::vector<T>& vec_, const double tol_) noexcept
         {
-            const double ave_delta = (arr_.front() - arr_.back()) / static_cast<double>(N - 1);
+            const double ave_delta = (vec_.front() - vec_.back()) / static_cast<double>(N - 1);
 
             for (size_t i = 1; i < N; ++i)
             {
-                if ((std::fabs((arr_[i - 1] - arr_[i]) - ave_delta)) > tol_)
+                if ((std::fabs((vec_[i - 1] - vec_[i]) - ave_delta)) > tol_)
                 {
                     return (false);
                 }
@@ -194,22 +189,21 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine if an array's elements are always less than the given limit.
+         *  Determine if an vector's elements are always less than the given limit.
          *
-         *  @tparam T   Type stored by the array.
-         *  @tparam N   Size of the array.
+         *  @tparam T   Type stored by the vector.
          *
-         *  @param  arr_    Array to be tested.
+         *  @param  vec_    Vector to be tested.
          *  @param  limit_  Limit to be tested.
          *
-         *  @return True if all of the array's elements are less than the given limit.
+         *  @return True if all of the vector's elements are less than the given limit.
          */
-        template <class T, size_t N>
-        inline bool always_less_than(const std::array<T, N>& arr_, const T limit_) noexcept
+        template <class T>
+        inline bool always_less_than(const std::vector<T>& vec_, const T limit_) noexcept
         {
             for (size_t i = 0; i < N; ++i)
             {
-                if (!(arr_[i] < limit_))
+                if (!(vec_[i] < limit_))
                 {
                     return (false);
                 }
@@ -219,22 +213,21 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine if an array's elements are always less than, or equal to, the given limit.
+         *  Determine if an vector's elements are always less than, or equal to, the given limit.
          *
-         *  @tparam T   Type stored by the array.
-         *  @tparam N   Size of the array.
+         *  @tparam T   Type stored by the vector.
          *
-         *  @param  arr_    Array to be tested.
+         *  @param  vec_    Vector to be tested.
          *  @param  limit_  Limit to be tested.
          *
-         *  @return True if all of the array's elements are less than, or equal to, the given limit.
+         *  @return True if all of the vector's elements are less than, or equal to, the given limit.
          */
-        template <class T, size_t N>
-        inline bool always_less_than_or_equal_to(const std::array<T, N>& arr_, const T limit_) noexcept
+        template <class T>
+        inline bool always_less_than_or_equal_to(const std::vector<T>& vec_, const T limit_) noexcept
         {
             for (size_t i = 0; i < N; ++i)
             {
-                if (!(arr_[i] <= limit_))
+                if (!(vec_[i] <= limit_))
                 {
                     return (false);
                 }
@@ -244,22 +237,21 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine if an array's elements are always greater than the given limit.
+         *  Determine if an vector's elements are always greater than the given limit.
          *
-         *  @tparam T   Type stored by the array.
-         *  @tparam N   Size of the array.
+         *  @tparam T   Type stored by the vector.
          *
-         *  @param  arr_    Array to be tested.
+         *  @param  vec_    Vector to be tested.
          *  @param  limit_  Limit to be tested.
          *
-         *  @return True if all of the array's elements are greater than the given limit.
+         *  @return True if all of the vector's elements are greater than the given limit.
          */
-        template <class T, size_t N>
-        inline bool always_greater_than(const std::array<T, N>& arr_, const T limit_) noexcept
+        template <class T>
+        inline bool always_greater_than(const std::vector<T>& vec_, const T limit_) noexcept
         {
             for (size_t i = 0; i < N; ++i)
             {
-                if (!(arr_[i] > limit_))
+                if (!(vec_[i] > limit_))
                 {
                     return (false);
                 }
@@ -269,22 +261,21 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine if an array's elements are always greater than, or equal to, the given limit.
+         *  Determine if an vector's elements are always greater than, or equal to, the given limit.
          *
-         *  @tparam T   Type stored by the array.
-         *  @tparam N   Size of the array.
+         *  @tparam T   Type stored by the vector.
          *
-         *  @param  arr_    Array to be tested.
+         *  @param  vec_    Vector to be tested.
          *  @param  limit_  Limit to be tested.
          *
-         *  @return True if all of the array's elements are greater than, or equal to, the given limit.
+         *  @return True if all of the vector's elements are greater than, or equal to, the given limit.
          */
-        template <class T, size_t N>
-        inline bool always_greater_than_or_equal_to(const std::array<T, N>& arr_, const T limit_) noexcept
+        template <class T>
+        inline bool always_greater_than_or_equal_to(const std::vector<T>& vec_, const T limit_) noexcept
         {
             for (size_t i = 0; i < N; ++i)
             {
-                if (!(arr_[i] >= limit_))
+                if (!(vec_[i] >= limit_))
                 {
                     return (false);
                 }
@@ -296,27 +287,26 @@ namespace arc //! arc namespace
 
         //  -- Mathematical --
         /**
-         *  Determine the minimum index within an array.
+         *  Determine the minimum index within an vector.
          *  If multiple values are equally the smallest, the first index is returned.
          *
-         *  @tparam T   Type stored by the array.
-         *  @tparam N   Size of the array.
+         *  @tparam T   Type stored by the vector.
          *
-         *  @param  arr_    Array to be searched.
+         *  @param  vec_    Vector to be searched.
          *
-         *  @pre    arr_ must not be empty.
+         *  @pre    vec_ must not be empty.
          *
-         *  @return Index of the minimum value within the array.
+         *  @return Index of the minimum value within the vector.
          */
-        template <class T, size_t N>
-        inline size_t min_index(const std::array<T, N>& arr_) noexcept
+        template <class T>
+        inline size_t min_index(const std::vector<T>& vec_) noexcept
         {
-            static_assert(!arr_.empty());
+            static_assert(!vec_.empty());
 
             size_t min = 0;
             for (size_t i = 1; i < N; ++i)
             {
-                if (arr_[i] < arr_[min])
+                if (vec_[i] < vec_[min])
                 {
                     min = i;
                 }
@@ -326,27 +316,26 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine the maximum index within an array.
+         *  Determine the maximum index within an vector.
          *  If multiple values are equally the largest, the first index is returned.
          *
-         *  @tparam T   Type stored by the array.
-         *  @tparam N   Size of the array.
+         *  @tparam T   Type stored by the vector.
          *
-         *  @param  arr_    Array to be searched.
+         *  @param  vec_    Vector to be searched.
          *
-         *  @pre    arr_ must not be empty.
+         *  @pre    vec_ must not be empty.
          *
-         *  @return Index of the maximum value within the array.
+         *  @return Index of the maximum value within the vector.
          */
-        template <class T, size_t N>
-        inline size_t max_index(const std::array<T, N>& arr_) noexcept
+        template <class T>
+        inline size_t max_index(const std::vector<T>& vec_) noexcept
         {
-            static_assert(!arr_.empty());
+            static_assert(!vec_.empty());
 
             size_t max = 0;
             for (size_t i = 1; i < N; ++i)
             {
-                if (arr_[i] > arr_[max])
+                if (vec_[i] > vec_[max])
                 {
                     max = i;
                 }
@@ -356,106 +345,101 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine the minimum value within an array.
+         *  Determine the minimum value within an vector.
          *  If multiple values are equally the smallest, the first is returned.
          *
-         *  @tparam T   Type stored by the array.
-         *  @tparam N   Size of the array.
+         *  @tparam T   Type stored by the vector.
          *
-         *  @param  arr_    Array to be searched.
+         *  @param  vec_    Vector to be searched.
          *
-         *  @pre    arr_ must not be empty.
+         *  @pre    vec_ must not be empty.
          *
-         *  @return Minimum value within the array.
+         *  @return Minimum value within the vector.
          */
-        template <class T, size_t N>
-        inline T min(const std::array<T, N>& arr_) noexcept
+        template <class T>
+        inline T min(const std::vector<T>& vec_) noexcept
         {
-            static_assert(!arr_.empty());
+            static_assert(!vec_.empty());
 
-            return (arr_[min_index(arr_)]);
+            return (vec_[min_index(vec_)]);
         }
 
         /**
-         *  Determine the maximum value within an array.
+         *  Determine the maximum value within an vector.
          *  If multiple values are equally the largest, the first is returned.
          *
-         *  @tparam T   Type stored by the array.
-         *  @tparam N   Size of the array.
+         *  @tparam T   Type stored by the vector.
          *
-         *  @param  arr_    Array to be searched.
+         *  @param  vec_    Vector to be searched.
          *
-         *  @pre    arr_ must not be empty.
+         *  @pre    vec_ must not be empty.
          *
-         *  @return Maximum value within the array.
+         *  @return Maximum value within the vector.
          */
-        template <class T, size_t N>
-        inline T max(const std::array<T, N>& arr_) noexcept
+        template <class T>
+        inline T max(const std::vector<T>& vec_) noexcept
         {
-            static_assert(!arr_.empty());
+            static_assert(!vec_.empty());
 
-            return (arr_[max_index(arr_)]);
+            return (vec_[max_index(vec_)]);
         }
 
         /**
-         *  Determine the sum of all elements within an array.
+         *  Determine the sum of all elements within an vector.
          *
-         *  @tparam T   Type stored by the array.
-         *  @tparam N   Size of the array.
+         *  @tparam T   Type stored by the vector.
          *
-         *  @param  arr_    Array to be summed.
+         *  @param  vec_    Vector to be summed.
          *
-         *  @return Sum of array elements.
+         *  @return Sum of vector elements.
          */
-        template <class T, size_t N>
-        inline T sum(const std::array<T, N>& arr_) noexcept
+        template <class T>
+        inline T sum(const std::vector<T>& vec_) noexcept
         {
             T sum = 0;
             for (size_t i = 0; i < N; ++i)
             {
-                sum += arr_[i];
+                sum += vec_[i];
             }
 
             return (sum);
         }
 
         /**
-         *  Determine the average of the elements within an array.
+         *  Determine the average of the elements within an vector.
          *
-         *  @tparam T   Type stored by the array.
-         *  @tparam N   Size of the array.
+         *  @tparam T   Type stored by the vector.
          *
-         *  @param  arr_    Array to find the average of.
+         *  @param  vec_    Vector to find the average of.
          *
-         *  @pre    arr_ must not be empty.
+         *  @pre    vec_ must not be empty.
          *
-         *  @return Average of the array elements.
+         *  @return Average of the vector elements.
          */
-        template <class T, size_t N>
-        inline double ave(const std::array<T, N>& arr_) noexcept
+        template <class T>
+        inline double ave(const std::vector<T>& vec_) noexcept
         {
-            static_assert(!arr_.empty());
+            static_assert(!vec_.empty());
 
-            return (sum(arr_) / static_cast<double>(N));
+            return (sum(vec_) / static_cast<double>(N));
         }
 
         /**
-         *  Determine the magnitude of the elements within an array.
+         *  Determine the magnitude of the elements within an vector.
          *
-         *  @tparam T   Type stored by the array.
-         *  @tparam N   Size of the array.
+         *  @tparam T   Type stored by the vector.
          *
-         *  @param  arr_    Array to find the magnitude of.
+         *  @param  vec_    Vector to find the magnitude of.
          *
-         *  @return Magnitude of the array elements.
+         *  @return Magnitude of the vector elements.
          */
-        template <class T, size_t N>
-        inline double mag(const std::array<T, N>& arr_) noexcept
+        template <class T>
+        inline double mag(const std::vector<T>& vec_) noexcept
         {
             T sq_sum = 0;
             for (size_t i = 0; i < N; ++i)
             {
-                sq_sum += (arr_[i] * arr_[i]);
+                sq_sum += (vec_[i] * vec_[i]);
             }
 
             return (std::sqrt(static_cast<double>(sq_sum)));
@@ -464,50 +448,48 @@ namespace arc //! arc namespace
 
         //  -- Searching --
         /**
-         *  Determine if a value is within the bounds of an array.
-         *  If the value is equal to a bound it is considered within the array.
+         *  Determine if a value is within the bounds of an vector.
+         *  If the value is equal to a bound it is considered within the vector.
          *
-         *  @tparam T   Type stored by the array.
-         *  @tparam N   Size of the array.
+         *  @tparam T   Type stored by the vector.
          *
-         *  @param  arr_    Array to test.
+         *  @param  vec_    Vector to test.
          *  @param  val_    Value to test.
          *
-         *  @pre    arr_ must contain at least two elements.
-         *  @pre    arr_ must be ascending.
+         *  @pre    vec_ must contain at least two elements.
+         *  @pre    vec_ must be ascending.
          *
-         *  @return True if the value falls within the bounds of the array.
+         *  @return True if the value falls within the bounds of the vector.
          */
-        template <class T, size_t N>
-        inline bool within(const std::array<T, N>& arr_, T val_) noexcept
+        template <class T>
+        inline bool within(const std::vector<T>& vec_, T val_) noexcept
         {
             static_assert(N >= 2);
-            assert(monotonic(arr_));
+            assert(monotonic(vec_));
 
-            return ((val_ >= arr_.front()) && (val_ <= arr_.back()));
+            return ((val_ >= vec_.front()) && (val_ <= vec_.back()));
         }
 
         /**
-         *  Determine the lower index of the elements within the array which encapsulate a value.
+         *  Determine the lower index of the elements within the vector which encapsulate a value.
          *
-         *  @tparam T   Type stored by the array.
-         *  @tparam N   Size of the array.
+         *  @tparam T   Type stored by the vector.
          *
-         *  @param  arr_    Array to search.
+         *  @param  vec_    Vector to search.
          *  @param  val_    Value to locate.
          *
-         *  @pre    arr_ must contain at least two elements.
-         *  @pre    arr_ must be ascending.
+         *  @pre    vec_ must contain at least two elements.
+         *  @pre    vec_ must be ascending.
          *
          *  @return The lower index of the element pair which encapsulates the value.
          */
-        template <class T, size_t N>
-        inline size_t search(const std::array<T, N>& arr_, const T val_) noexcept
+        template <class T>
+        inline size_t search(const std::vector<T>& vec_, const T val_) noexcept
         {
             static_assert(N > 1);
-            assert(ascending(arr_));
+            assert(ascending(vec_));
 
-            const auto index = static_cast<size_t>(std::distance(arr_.begin(), std::lower_bound(arr_.begin(), arr_.end(), val_)));
+            const auto index = static_cast<size_t>(std::distance(vec_.begin(), std::lower_bound(vec_.begin(), vec_.end(), val_)));
 
             return ((index == 0) ? index : (index - 1));
         }
@@ -521,36 +503,35 @@ namespace arc //! arc namespace
 
 //  == OPERATOR PROTOTYPES ==
 //  -- Io --
-template <class T, size_t N>
-inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& arr_) noexcept;
+template <class T>
+inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec_) noexcept;
 
 
 
 //  == OPERATORS ==
 //  -- Io --
 /**
- *  Enable writing of an array to an ostream.
+ *  Enable writing of an vector to an ostream.
  *
- *  @tparam T   Type stored by the array.
- *  @tparam N   Size of the array.
+ *  @tparam T   Type stored by the vector.
  *
  *  @param  stream_ Stream to write to.
- *  @param  arr_    Array to be written.
+ *  @param  vec_    Vector to be written.
  *
  *  return  Reference to the stream post-write.
  */
-template <class T, size_t N>
-inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& arr_) noexcept
+template <class T>
+inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec_) noexcept
 {
-    if (arr_.empty())
+    if (vec_.empty())
     {
         return (stream_);
     }
 
-    stream_ << "{" << arr_[0];
+    stream_ << "{" << vec_[0];
     for (size_t i = 1; i < N; ++i)
     {
-        stream_ << ", " << arr_[i];
+        stream_ << ", " << vec_[i];
     }
     stream_ << "}";
 
