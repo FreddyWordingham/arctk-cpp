@@ -30,7 +30,7 @@
 
 //  == MACROS ==
 //  -- Logging --
-#define LOG arc::log::cout::Message(__FILE__, __func__, __LINE__) << ""
+#define LOG arc::log::cout::Message(__FILE__, __func__, __LINE__) << "" //!< Log a standard message to console output.
 
 
 
