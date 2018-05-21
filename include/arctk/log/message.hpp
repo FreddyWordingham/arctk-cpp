@@ -34,6 +34,9 @@ namespace arc
 
 
         //  == CLASS ==
+        /**
+         *  Message logging class.
+         */
         class Message : public std::stringstream
         {
             //  == FIELDS ==
