@@ -175,11 +175,15 @@ namespace arc //! arc namespace
          *  @param  arr_    Array to be tested.
          *  @param  tol_    Maximum tolerance for consecutive values.
          *
+         *  @pre    N must be greater than one.
+         *
          *  @return True if the array is uniform.
          */
         template <class T, size_t N>
         inline bool uniform(const std::array<T, N>& arr_, const double tol_) noexcept
         {
+            static_assert(N > 1);
+
             const double ave_delta = (arr_.front() - arr_.back()) / static_cast<double>(N - 1);
 
             for (size_t i = 1; i < N; ++i)
