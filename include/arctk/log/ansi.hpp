@@ -22,6 +22,9 @@
 //  == INCLUDES ==
 //  -- Std --
 #include <string>
+#if defined(__APPLE__) || defined(___unix__)
+#include <unistd.h>
+#endif
 
 
 
