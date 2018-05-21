@@ -32,9 +32,9 @@
 //  -- Logging --
 #define LOG arc::log::Message(__FILE__, __func__, __LINE__) << "" //!< Log a standard message.
 #ifdef VERB_OUTPUT
-#define VERB cptk::term::Message(__FILE__, __func__, __LINE__) << "" //!< Log a verbose message.
+#define VERB arc::log::Message(__FILE__, __func__, __LINE__) << "" //!< Log a verbose message.
 #else
-#define VERB cptk::term::Verbose() << "" //!< Ignore a verbose message.
+#define VERB arc::log::Verbose() << "" //!< Ignore a verbose message.
 #endif
 
 
