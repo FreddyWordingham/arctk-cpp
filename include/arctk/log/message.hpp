@@ -22,9 +22,11 @@
 //  == INCLUDES ==
 //  -- Std --
 #include <cassert>
+#include <sstream>
 
 //  -- Arctk --
 #include <arctk/log/ansi.hpp>
+#include <arctk/log/term.hpp>
 
 
 
