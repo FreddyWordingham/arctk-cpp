@@ -69,29 +69,23 @@ namespace arc //! arc namespace
 
             //  == INSTANTIATION ==
           public:
-            //  -- Constructors --
+            //  -- Singleton --
+            inline static const Ansi& instance() noexcept;
 
-
-            //  == OPERATORS ==
           private:
-            //  == METHODS ==
-          public:
-            //  -- Getters --
+            //  -- Constructors --
         };
 
 
 
         //  == INSTANTIATION --
-        //  -- Constructors --
+        //  -- Singleton --
+        inline const Ansi& Ansi::instance() noexcept
+        {
+            static const Ansi static_ansi;
 
-
-
-        //  == OPERATORS ==
-
-
-
-        //  == METHODS ==
-        //  -- Getters --
+            return (static_ansi);
+        }
 
 
 
