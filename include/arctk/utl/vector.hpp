@@ -291,7 +291,7 @@ namespace arc //! arc namespace
 
         //  -- Mathematical --
         /**
-         *  Determine the minimum index within an vector.
+         *  Determine the minimum index within a vector.
          *  If multiple values are equally the smallest, the first index is returned.
          *
          *  @tparam T   Type stored by the vector.
@@ -320,7 +320,7 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine the maximum index within an vector.
+         *  Determine the maximum index within a vector.
          *  If multiple values are equally the largest, the first index is returned.
          *
          *  @tparam T   Type stored by the vector.
@@ -334,10 +334,10 @@ namespace arc //! arc namespace
         template <class T>
         inline size_t max_index(const std::vector<T>& vec_) noexcept
         {
-            static_assert(!vec_.empty());
+            assert(!vec_.empty());
 
             size_t max = 0;
-            for (size_t i = 1; i < N; ++i)
+            for (size_t i = 1; i < vec_.size(); ++i)
             {
                 if (vec_[i] > vec_[max])
                 {
