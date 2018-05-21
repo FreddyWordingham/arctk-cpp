@@ -429,7 +429,7 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine the magnitude of the elements within an vector.
+         *  Determine the magnitude of the elements within a vector.
          *
          *  @tparam T   Type stored by the vector.
          *
@@ -441,7 +441,7 @@ namespace arc //! arc namespace
         inline double mag(const std::vector<T>& vec_) noexcept
         {
             T sq_sum = 0;
-            for (size_t i = 0; i < N; ++i)
+            for (size_t i = 0; i < vec_.size(); ++i)
             {
                 sq_sum += (vec_[i] * vec_[i]);
             }
