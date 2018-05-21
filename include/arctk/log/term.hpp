@@ -35,6 +35,11 @@ namespace arc //! arc namespace
 
 
         //  == CLASS ==
+        /**
+         *  Terminal access class.
+         *  Singleton object.
+         *  Provides thread-safe terminal logging.
+         */
         class Term
         {
             //  == FIELDS ==
