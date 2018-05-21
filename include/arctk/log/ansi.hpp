@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/log/message.hpp
+ *  @file   arctk/log/ansi.hpp
  *  @date   21/05/2018
  *  @author Freddy Wordingham
  *
