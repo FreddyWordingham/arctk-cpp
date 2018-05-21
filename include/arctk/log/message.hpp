@@ -23,6 +23,9 @@
 //  -- Std --
 #include <sstream>
 
+//  -- Arctk --
+#include <arctk/log/term.hpp>
+
 
 
 //  == NAMESPACE ==
