@@ -43,6 +43,9 @@ namespace arc //! arc namespace
           public:
             //  -- Constructors --
             inline Message(const std::string& file_, const std::string& func_, int line_) noexcept;
+
+            //  -- Destructors --
+            inline ~Message() noexcept override;
         };
 
 
@@ -76,6 +79,17 @@ namespace arc //! arc namespace
             (void)(func_);
             (void)(line_);
 #endif
+        }
+
+
+
+        //  -- Destructors --
+        /**
+         *  Write the contents of the message to the terminal.
+         */
+        inline Message::~Message() noexcept
+        {
+            Logger::instance().cout(str());
         }
 
 
