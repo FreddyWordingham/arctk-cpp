@@ -41,7 +41,11 @@ namespace arc //! arc namespace
         class Ansi
         {
             //  == FIELDS ==
-          private:
+          public:
+            //  -- General --
+            const std::string reset; //!< Reset ansi settings to default.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
