@@ -21,6 +21,8 @@
 
 //  == INCLUDES ==
 //  -- Std --
+#include <iostream>
+#include <mutex>
 
 
 
@@ -29,6 +31,39 @@ namespace arc //! arc namespace
 {
     namespace log //! logging namespace
     {
+
+
+
+        //  == CLASS ==
+        class ClsName
+        {
+            //  == FIELDS ==
+          private:
+            //  == INSTANTIATION ==
+          public:
+            //  -- Constructors --
+
+
+            //  == OPERATORS ==
+          private:
+            //  == METHODS ==
+          public:
+            //  -- Getters --
+        };
+
+
+
+        //  == INSTANTIATION --
+        //  -- Constructors --
+
+
+
+        //  == OPERATORS ==
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
 
 
 
