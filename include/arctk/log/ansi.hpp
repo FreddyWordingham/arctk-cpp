@@ -146,6 +146,12 @@ namespace arc //! arc namespace
 
 
 
+        //  == ALIASES ==
+        //  -- Ansi --
+        const auto ANSI = cptk::term::Ansi::instance();
+
+
+
     } // namespace log
 } // namespace arc
 
