@@ -3,7 +3,7 @@
  *  @date   21/05/2018
  *  @author Freddy Wordingham
  *
- *  Message log base class class.
+ *  Console output logging class.
  */
 
 
@@ -40,27 +40,27 @@ namespace arc //! arc namespace
 
         //  == CLASS ==
         /**
-         *  Message logging class.
-         *  Will print contents of stream to cout upon destruction.
+         *  Console output logging class.
+         *  Will print contents of stream to std::cout upon destruction.
          */
-        class Message : public std::stringstream
+        class Cout : public std::stringstream
         {
             //  == INSTANTIATION --
           public:
             //  -- Constructors --
-            inline Message(const std::string& file_, const std::string& func_, int line_) noexcept;
-            inline Message(const Message&) = delete; //!< Deleted copy constructor.
-            inline Message(Message&&)      = delete; //!< Deleted move constructor.
+            inline Cout(const std::string& file_, const std::string& func_, int line_) noexcept;
+            inline Cout(const Cout&) = delete; //!< Deleted copy constructor.
+            inline Cout(Cout&&)      = delete; //!< Deleted move constructor.
 
             //  -- Destructors --
-            inline ~Message() noexcept override;
+            inline ~Cout() noexcept override;
 
 
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            inline Message& operator=(const Message&) = delete; //!< Deleted copy operator. @return Reference to copied object.
-            inline Message& operator=(Message&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
+            inline Cout& operator=(const Cout&) = delete; //!< Deleted copy operator. @return Reference to copied object.
+            inline Cout& operator=(Cout&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
         };
 
 
@@ -68,7 +68,7 @@ namespace arc //! arc namespace
         //  == INSTANTIATION --
         //  -- Constructors --
         /**
-         *  Construct a message object which, when destructed, will write its contents to the terminal.
+         *  Construct a stream object which, when destructed, will write its contents to the terminal.
          *  Boolean values are printed as words.
          *  If LOCATION is defined, then its value is used to colour the output location of the message.
          *
@@ -80,7 +80,7 @@ namespace arc //! arc namespace
          *  @pre    func_ must not be empty.
          *  @pre    line_ must be greater than zero.
          */
-        inline Message::Message(const std::string& file_, const std::string& func_, const int line_) noexcept
+        inline Cout::Cout(const std::string& file_, const std::string& func_, const int line_) noexcept
         {
             assert(!file_.empty());
             assert(!func_.empty());
@@ -102,7 +102,7 @@ namespace arc //! arc namespace
         /**
          *  Write the contents of the message to the terminal.
          */
-        inline Message::~Message() noexcept
+        inline Cout::~Cout() noexcept
         {
             Term::instance().cout(str());
         }
