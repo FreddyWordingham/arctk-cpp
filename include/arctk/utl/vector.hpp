@@ -452,7 +452,7 @@ namespace arc //! arc namespace
 
         //  -- Searching --
         /**
-         *  Determine if a value is within the bounds of an vector.
+         *  Determine if a value is within the bounds of a vector.
          *  If the value is equal to a bound it is considered within the vector.
          *
          *  @tparam T   Type stored by the vector.
@@ -460,7 +460,6 @@ namespace arc //! arc namespace
          *  @param  vec_    Vector to test.
          *  @param  val_    Value to test.
          *
-         *  @pre    vec_ must contain at least two elements.
          *  @pre    vec_ must be ascending.
          *
          *  @return True if the value falls within the bounds of the vector.
@@ -468,7 +467,6 @@ namespace arc //! arc namespace
         template <class T>
         inline bool within(const std::vector<T>& vec_, T val_) noexcept
         {
-            static_assert(N >= 2);
             assert(monotonic(vec_));
 
             return ((val_ >= vec_.front()) && (val_ <= vec_.back()));
