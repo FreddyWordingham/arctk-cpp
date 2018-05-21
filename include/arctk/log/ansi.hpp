@@ -153,6 +153,7 @@ namespace arc //! arc namespace
 //  -- Ansi --
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wexit-time-destructors"
+#pragma clang diagnostic ignored "-Wglobal-constructors"
         const auto ANSI = Ansi::instance();
 #pragma clang diagnostic pop
 
