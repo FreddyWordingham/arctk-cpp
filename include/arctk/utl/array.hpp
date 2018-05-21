@@ -506,7 +506,7 @@ namespace arc //! arc namespace
         template <class T, size_t N>
         inline size_t search(const std::array<T, N>& arr_, const T val_) noexcept
         {
-            static_assert(N > 1);
+            static_assert(N >= 2);
             assert(ascending(arr_));
 
             const auto index = static_cast<size_t>(std::distance(arr_.begin(), std::lower_bound(arr_.begin(), arr_.end(), val_)));
