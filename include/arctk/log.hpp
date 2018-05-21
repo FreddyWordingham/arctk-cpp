@@ -20,6 +20,8 @@
 
 
 //  == INCLUDES ==
+//  -- Arctk --
+#include <arctk/log/term.hpp>
 
 
 
