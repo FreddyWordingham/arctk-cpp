@@ -19,6 +19,7 @@
 #include <arctk/log/ansi.hpp>
 #include <arctk/log/message.hpp>
 #include <arctk/log/term.hpp>
+#include <arctk/log/verbose.hpp>
 #include <arctk/math.hpp>
 #include <arctk/utl.hpp>
 #include <arctk/utl/array.hpp>
