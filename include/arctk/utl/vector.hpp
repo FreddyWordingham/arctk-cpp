@@ -349,7 +349,7 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine the minimum value within an vector.
+         *  Determine the minimum value within a vector.
          *  If multiple values are equally the smallest, the first is returned.
          *
          *  @tparam T   Type stored by the vector.
@@ -363,7 +363,7 @@ namespace arc //! arc namespace
         template <class T>
         inline T min(const std::vector<T>& vec_) noexcept
         {
-            static_assert(!vec_.empty());
+            assert(!vec_.empty());
 
             return (vec_[min_index(vec_)]);
         }
