@@ -101,7 +101,7 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine if an vector is sorted in ascending order.
+         *  Determine if a vector is sorted in ascending order.
          *
          *  @tparam T   Type stored by the vector.
          *
@@ -112,7 +112,7 @@ namespace arc //! arc namespace
         template <class T>
         inline bool ascending(const std::vector<T>& vec_) noexcept
         {
-            for (size_t i = 1; i < N; ++i)
+            for (size_t i = 1; i < vec_.size(); ++i)
             {
                 if (vec_[i] < vec_[i - 1])
                 {
