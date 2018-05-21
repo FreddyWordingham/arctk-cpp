@@ -265,7 +265,7 @@ namespace arc //! arc namespace
         }
 
         /**
-         *  Determine if an vector's elements are always greater than, or equal to, the given limit.
+         *  Determine if a vector's elements are always greater than, or equal to, the given limit.
          *
          *  @tparam T   Type stored by the vector.
          *
@@ -305,10 +305,10 @@ namespace arc //! arc namespace
         template <class T>
         inline size_t min_index(const std::vector<T>& vec_) noexcept
         {
-            static_assert(!vec_.empty());
+            assert(!vec_.empty());
 
             size_t min = 0;
-            for (size_t i = 1; i < N; ++i)
+            for (size_t i = 1; i < vec_.size(); ++i)
             {
                 if (vec_[i] < vec_[min])
                 {
