@@ -57,6 +57,12 @@ namespace arc //! arc namespace
             //  -- Constructors --
 
 
+            //  == OPERATORS ==
+          public:
+            //  -- Access --
+            inline std::string& operator[](size_t index_) noexcept;
+
+
             //  == METHODS ==
           public:
             //  -- Setters --
@@ -78,6 +84,26 @@ namespace arc //! arc namespace
                 _data.emplace(std::make_pair(title_, col));
             }
         };
+
+
+
+        //  == OPERATORS ==
+        //  -- Access --
+        /**
+         *  Access a data column.
+         *
+         *  @param  index_  Index of the data column to access.
+         *
+         *  @pre    index_ must be less than _data.size();
+         *
+         *  @return A reference to the data column.
+         */
+        inline std::string& Table::operator[](const size_t index_) noexcept
+        {
+            assert(index_ < _data.size());
+
+            return (_data[index_]);
+        }
 
 
 
