@@ -401,16 +401,16 @@ namespace arc //! arc namespace
         {
             assert(us_ >= 0);
 
-            const long int hrs = us_ / 3600000000;
+            const uint64_t hrs = us_ / 3600000000;
             us_ %= 3600000000;
 
-            const long int min = us_ / 60000000;
+            const uint64_t min = us_ / 60000000;
             us_ %= 60000000;
 
-            const long int sec = us_ / 1000000;
+            const uint64_t sec = us_ / 1000000;
             us_ %= 1000000;
 
-            const long int ms = us_ / 1000;
+            const uint64_t ms = us_ / 1000;
             us_ %= 1000;
 
             return (std::to_string(hrs) + "hrs " + std::to_string(min) + "min " + std::to_string(sec) + "sec " + std::to_string(ms) + "ms " + std::to_string(us_) + "µs");
