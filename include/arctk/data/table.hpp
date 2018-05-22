@@ -26,6 +26,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/log.hpp>
 #include <arctk/utl.hpp>
 
 
