@@ -67,6 +67,9 @@ namespace arc //! arc namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            template <class T>
+            inline std::vector<T> col(const std::string& title_) const noexcept;
         };
 
 
@@ -81,7 +84,7 @@ namespace arc //! arc namespace
                           << "Column title of: '" << title_ << "' does not exist.";
             }
 
-            return (_data.find(title_));
+            return (_data.find(title_)->second);
         }
 
         inline const std::vector<std::any>& Table::operator[](const std::string& title_) const noexcept
@@ -92,7 +95,29 @@ namespace arc //! arc namespace
                           << "Column title of: '" << title_ << "' does not exist.";
             }
 
-            return (_data.find(title_));
+            return (_data.find(title_)->second);
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        template <class T>
+        inline std::vector<T> Table::col(const std::string& title_) const noexcept
+        {
+            if (_data.find(title_) == _data.end())
+            {
+                ERROR(42) << "Unable to access table data column.\n"
+                          << "Column title of: '" << title_ << "' does not exist.";
+            }
+
+            std::vector<T> vec;
+            for (size_t i = 0; i < _data.find(title_)->second.size(); ++i)
+            {
+                vec.emplace_back(std::any_cast<T>(_data.find(title_)->second[i]));
+            }
+
+            return (vec);
         }
 
 
