@@ -17,8 +17,8 @@
 #include <arctk/constant/phys.hpp>
 #include <arctk/log.hpp>
 #include <arctk/log/ansi.hpp>
-#include <arctk/log/cout.hpp>
-#include <arctk/log/cout/message.hpp>
+#include <arctk/log/output.hpp>
+#include <arctk/log/output/message.hpp>
 #include <arctk/log/term.hpp>
 #include <arctk/math.hpp>
 #include <arctk/utl.hpp>
