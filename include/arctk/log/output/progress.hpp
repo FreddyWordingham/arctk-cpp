@@ -52,14 +52,14 @@ namespace arc //! arc namespace
                 const uint64_t _update_delta; //!< Minimum microseconds between prints.
 
                 //  -- Buffer --
-                const std::string& _str;
-                const double       _prog;
+                const std::string& _str;  //!< Update string.
+                const double       _frac; //!< Update progress fraction.
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline explicit Progress(const uint64_t update_delta_, const std::string& str_, double prog_) noexcept;
+                inline explicit Progress(const uint64_t update_delta_, const std::string& str_, double frac_) noexcept;
                 inline Progress(const Progress&) = delete; //!< Deleted copy constructor.
                 inline Progress(Progress&&)      = delete; //!< Deleted move constructor.
 
@@ -85,10 +85,10 @@ namespace arc //! arc namespace
              *
              *  @pre    update_delta_ must be positive.
              */
-            inline Progress::Progress(const uint64_t update_delta_, const std::string& str_, const double prog_) noexcept
+            inline Progress::Progress(const uint64_t update_delta_, const std::string& str_, const double frac_) noexcept
               : _update_delta(update_delta_)
               , _str(str_)
-              , _prog(prog_)
+              , _frac(frac_)
             {
                 assert(update_delta_ > 0);
             }
@@ -107,7 +107,7 @@ namespace arc //! arc namespace
                 {
                     static_last_update = cur_time;
 
-                    *this << _str << " : " << _prog;
+                    *this << _str << " : " << _frac;
 
                     *this << ANSI.reset << ANSI.overwrite;
                 }
