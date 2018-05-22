@@ -43,7 +43,6 @@ namespace arc //! arc namespace
             //  == CLASS ==
             /**
              *  Standard output progress logging.
-             *  Message will be overwritten with next print.
              */
             class Progress : public Output
             {
@@ -56,7 +55,7 @@ namespace arc //! arc namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Progress(const std::string& file_, const std::string& func_, int line_, const std::string& str_) noexcept;
+                inline Progress(const std::string& file_, const std::string& func_, int line_, const std::string& str_, const uint64_t update_delta_) noexcept;
                 inline Progress(const Progress&) = delete; //!< Deleted copy constructor.
                 inline Progress(Progress&&)      = delete; //!< Deleted move constructor.
 
@@ -76,7 +75,7 @@ namespace arc //! arc namespace
             //  == INSTANTIATION --
             //  -- Constructors --
             /**
-             *  Construct a stopwatch object which, when destructed, will write its age.
+             *  Construct a progress message which will only be printed if sufficient time has elapsed since the last print.
              *
              *  @param  file_   File location of the message.
              *  @param  func_   Function location of the message.
@@ -85,19 +84,17 @@ namespace arc //! arc namespace
              *
              *  @pre    file_ must not be empty.
              *  @pre    func_ must not be empty.
-             *  @pre    line_ must be greater than zero.
-             *  @pre    str_ must not be empty.
+             *  @pre    line_ must be positive.
+             *  @pre    update_delta_ must be positive.
              */
             inline Progress::Progress(const std::string& file_, const std::string& func_, const int line_, const std::string& str_) noexcept
               : Output(file_, func_, line_)
-              , _construct_time(std::chrono::high_resolution_clock::now())
+              , _update_delta(update_delta_)
             {
                 assert(!file_.empty());
                 assert(!func_.empty());
                 assert(line_ > 0);
-                assert(!str_.empty());
-
-                *this << ANSI.yellow << str_;
+                assert(update_delta_ > 0);
             }
 
 
