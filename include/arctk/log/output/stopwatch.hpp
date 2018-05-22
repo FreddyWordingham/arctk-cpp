@@ -58,7 +58,7 @@ namespace arc //! arc namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Stopwatch(const std::string& file_, const std::string& func_, int line_) noexcept;
+                inline Stopwatch(const std::string& file_, const std::string& func_, int line_, const std::string& str_) noexcept;
                 inline Stopwatch(const Stopwatch&) = delete; //!< Deleted copy constructor.
                 inline Stopwatch(Stopwatch&&)      = delete; //!< Deleted move constructor.
 
@@ -78,22 +78,27 @@ namespace arc //! arc namespace
             //  == INSTANTIATION --
             //  -- Constructors --
             /**
-             *  Construct a message object which, when destructed, will write its contents to the terminal.
+             *  Construct a stopwatch object which, when destructed, will write its age.
              *
              *  @param  file_   File location of the message.
              *  @param  func_   Function location of the message.
              *  @param  line_   Line location of the message.
+             *  @param  str_    String prepended to lifetime report message.
              *
              *  @pre    file_ must not be empty.
              *  @pre    func_ must not be empty.
              *  @pre    line_ must be greater than zero.
+             *  @pre    str_ must not be empty.
              */
-            inline Stopwatch::Stopwatch(const std::string& file_, const std::string& func_, const int line_) noexcept
+            inline Stopwatch::Stopwatch(const std::string& file_, const std::string& func_, const int line_, const std::string& str_) noexcept
               : Output(file_, func_, line_)
             {
                 assert(!file_.empty());
                 assert(!func_.empty());
                 assert(line_ > 0);
+                assert(!str_.empty());
+
+                *this << ANSI.yellow << str_;
             }
 
 
@@ -103,7 +108,7 @@ namespace arc //! arc namespace
              */
             inline Stopwatch::~Stopwatch() noexcept
             {
-                *this << " took: " << utl::time(std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now() - _start).count());
+                *this << ANSI.yellow << " took: " << utl::time(std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now() - _start).count());
                 *this << ANSI.reset << '\n';
             }
 
