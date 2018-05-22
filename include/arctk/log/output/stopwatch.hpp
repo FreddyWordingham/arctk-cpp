@@ -108,7 +108,7 @@ namespace arc //! arc namespace
              */
             inline Stopwatch::~Stopwatch() noexcept
             {
-                *this << ANSI.yellow << " took: " << utl::time(std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now() - _start).count());
+                *this << ANSI.yellow << " took: " << utl::time(std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now() - _construct_time).count());
                 *this << ANSI.reset << '\n';
             }
 
