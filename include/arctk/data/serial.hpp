@@ -65,6 +65,11 @@ namespace arc //! arc namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a serial object from a fundamental type.
+         *
+         *  @param  val_    Value used to form the serialised object.
+         */
         template <class T, typename = typename std::enable_if_t<std::is_fundamental<T>::value>>
         inline Serial::Serial(const T val_) noexcept
           : _str(std::to_string(val_))
