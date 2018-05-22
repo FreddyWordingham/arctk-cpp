@@ -78,20 +78,25 @@ namespace arc //! arc namespace
          *  Construct a stream object which, when destructed, will write its contents to the terminal.
          *  Boolean values are printed as words.
          *  If LOCATION is defined, then its value is used to colour the output location of the message instantiation.
+         *  If exit_val_ is set to a positive value, upon destruction program will exit with an exit code of _exit_val.
          *
-         *  @param  file_   File location of the message instantiation.
-         *  @param  func_   Function location of the message instantiation.
-         *  @param  line_   Line location of the message instantiation.
+         *  @param  file_       File location of the message instantiation.
+         *  @param  func_       Function location of the message instantiation.
+         *  @param  line_       Line location of the message instantiation.
+         *  @param  exit_val_   Exit value of program used when reporting a fatal error. Set to zero for non-fatal messages.
          *
-         *  @pre    file_ must not be empty.
-         *  @pre    func_ must not be empty.
-         *  @pre    line_ must be greater than zero.
+         *  @pre    file_       must not be empty.
+         *  @pre    func_       must not be empty.
+         *  @pre    line_       must be greater than zero.
+         *  @pre    exit_val_   must be non-negative.
          */
-        inline Output::Output(const std::string& file_, const std::string& func_, const int line_) noexcept
+        inline Output::Output(const std::string& file_, const std::string& func_, const int line_, const int exit_val_) noexcept
+          : _exit_val(exit_val_)
         {
             assert(!file_.empty());
             assert(!func_.empty());
             assert(line_ > 0);
+            assert(exit_val_ >= 0);
 
             *this << std::boolalpha;
 #ifdef LOCATION
