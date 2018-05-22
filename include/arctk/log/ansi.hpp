@@ -123,7 +123,7 @@ namespace arc //! arc namespace
           , bright_magenta((isatty(fileno(stdout)) == 1) ? "\033[0;95m" : "")
           , bright_cyan((isatty(fileno(stdout)) == 1) ? "\033[0;96m" : "")
           , bright_white((isatty(fileno(stdout)) == 1) ? "\033[0;97m" : "")
-          , overwrite((isatty(fileno(stdout)) == 1) ? "%\n\033[A\33[2K\r" : "\n")
+          , overwrite((isatty(fileno(stdout)) == 1) ? "\n\033[A\33[2K\r" : "\n")
 #else
           : reset("")
           , black("")
