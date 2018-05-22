@@ -21,6 +21,9 @@
 
 //  == INCLUDES ==
 //  -- Std --
+#include <map>
+#include <string>
+#include <vector>
 
 
 
@@ -35,14 +38,14 @@ namespace arc //! arc namespace
         //  == CLASS ==
         /**
          *  Store a data table of variable types.
+         *  Column order is sorted in std::string order.
          */
         class Table
         {
             //  == FIELDS ==
           private:
             //  -- Data --
-            std::vector<std::string>              _title; //!< Vector of column title strings.
-            std::vector<std::vector<std::string>> _data;  //!< Table of stringified data.
+            std::map<std::string, std::vector<std::string>> _data; //!< Table of stringified data.
 
 
             //  == INSTANTIATION ==
