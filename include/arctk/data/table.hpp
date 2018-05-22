@@ -70,6 +70,10 @@ namespace arc //! arc namespace
             //  -- Getters --
             template <class T>
             inline std::vector<T> col(const std::string& title_) const noexcept;
+
+            //  -- Setters --
+            template <class T>
+            inline void add_col(const std::string& title_, const std::vector<T>& col_) noexcept;
         };
 
 
@@ -118,6 +122,26 @@ namespace arc //! arc namespace
             }
 
             return (vec);
+        }
+
+
+        //  -- Setters --
+        template <class T>
+        inline void Table::add_col(const std::string& title_, const std::vector<T>& col_) noexcept
+        {
+            if (_data.find(title_) != _data.end())
+            {
+                ERROR(42) << "Unable to add table data column.\n"
+                          << "Column title of: '" << title_ << "' already exists.";
+            }
+
+            std::vector<std::any> col;
+            for (size_t i = 0; i < col_.size(); ++i)
+            {
+                col.emplace_back(std::make_any(col_[i]));
+            }
+
+            _data.emplace(title_, col);
         }
 
 
