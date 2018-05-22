@@ -41,7 +41,7 @@ namespace arc //! arc namespace
         //  == CLASS ==
         /**
          *  Console output logging class.
-         *  Will print contents of stream to std::cout upon destruction.
+         *  Will print contents of stream to console output upon destruction.
          */
         class Output : public std::stringstream
         {
