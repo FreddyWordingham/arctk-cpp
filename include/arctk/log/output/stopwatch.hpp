@@ -22,6 +22,7 @@
 //  == INCLUDES ==
 //  -- Std --
 #include <cassert>
+#include <chrono>
 #include <sstream>
 
 //  -- Arctk --
