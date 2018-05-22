@@ -60,6 +60,8 @@ namespace arc //! arc namespace
             //  == OPERATORS ==
           public:
             //  -- Access --
+            template <class T>
+            inline std::vector<T> operator[](const std::string& title_) noexcept;
 
 
             //  == METHODS ==
@@ -88,6 +90,19 @@ namespace arc //! arc namespace
 
         //  == OPERATORS ==
         //  -- Access --
+        template <class T>
+        inline std::vector<T> Table::operator[](const std::string& title_) noexcept
+        {
+            std::vector<T> vec;
+            vec.reserve(_data[title_].size());
+
+            for (size_t i = 0; i < _data[title_].size(); ++i)
+            {
+                vec.emplace_back(utl::parse<T>(_data[title_][i]));
+            }
+
+            return (vec);
+        }
 
 
     } // namespace data
