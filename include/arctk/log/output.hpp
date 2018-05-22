@@ -55,7 +55,7 @@ namespace arc //! arc namespace
             //  == INSTANTIATION --
           public:
             //  -- Constructors --
-            inline Output(const std::string& file_, const std::string& func_, int line_, int exit_val_ = 0) noexcept;
+            inline Output(const std::string& file_, const std::string& func_, int line_, int exit_val_ = 0, const bool print_loc_ = true) noexcept;
             inline Output(const Output&) = delete; //!< Deleted copy constructor.
             inline Output(Output&&)      = delete; //!< Deleted move constructor.
 
@@ -84,13 +84,14 @@ namespace arc //! arc namespace
          *  @param  func_       Function location of the message instantiation.
          *  @param  line_       Line location of the message instantiation.
          *  @param  exit_val_   Exit value of program used when reporting a fatal error. Set to zero for non-fatal messages.
+         *  @param  print_loc_  When true print the call location if LOCATION is defined.
          *
          *  @pre    file_       must not be empty.
          *  @pre    func_       must not be empty.
          *  @pre    line_       must be greater than zero.
          *  @pre    exit_val_   must be non-negative.
          */
-        inline Output::Output(const std::string& file_, const std::string& func_, const int line_, const int exit_val_) noexcept
+        inline Output::Output(const std::string& file_, const std::string& func_, const int line_, const int exit_val_, const bool print_loc_) noexcept
           : _exit_val(exit_val_)
         {
             assert(!file_.empty());
@@ -100,7 +101,10 @@ namespace arc //! arc namespace
 
             *this << std::boolalpha;
 #ifdef LOCATION
-            *this << LOCATION << file_ << " :: " << func_ << " :: " << line_ << ANSI.reset << "\n";
+            if (print_loc_)
+            {
+                *this << LOCATION << file_ << " :: " << func_ << " :: " << line_ << ANSI.reset << "\n";
+            }
 #else
             (void)(file_);
             (void)(func_);

@@ -51,6 +51,9 @@ namespace arc //! arc namespace
                 //  -- Timing --
                 const uint64_t _update_delta; //!< Minimum microseconds between prints.
 
+                //  -- Buffer --
+                const std::stringstream _buffer; //!< Message buffer which may be discarded.
+
 
                 //  == INSTANTIATION ==
               public:
