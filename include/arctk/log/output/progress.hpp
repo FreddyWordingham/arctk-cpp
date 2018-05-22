@@ -96,7 +96,7 @@ namespace arc //! arc namespace
             {
                 assert(update_delta_ > 0);
                 assert(!str_.empty());
-                assert(frac >= 0.0);
+                assert(frac_ >= 0.0);
             }
 
 
