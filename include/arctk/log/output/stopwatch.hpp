@@ -92,6 +92,7 @@ namespace arc //! arc namespace
              */
             inline Stopwatch::Stopwatch(const std::string& file_, const std::string& func_, const int line_, const std::string& str_) noexcept
               : Output(file_, func_, line_)
+              , _construct_time(std::chrono::high_resolution_clock::now())
             {
                 assert(!file_.empty());
                 assert(!func_.empty());
