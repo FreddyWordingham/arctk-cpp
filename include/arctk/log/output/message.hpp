@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/log/cout/message.hpp
+ *  @file   arctk/log/output/message.hpp
  *  @date   21/05/2018
  *  @author Freddy Wordingham
  *
@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_LOG_COUT_MESSAGE_HPP
-#define ARCTK_LOG_COUT_MESSAGE_HPP
+#ifndef ARCTK_LOG_OUTPUT_MESSAGE_HPP
+#define ARCTK_LOG_OUTPUT_MESSAGE_HPP
 
 
 
@@ -26,7 +26,7 @@
 
 //  -- Arctk --
 #include <arctk/log/ansi.hpp>
-#include <arctk/log/cout.hpp>
+#include <arctk/log/output.hpp>
 
 
 
@@ -35,16 +35,16 @@ namespace arc //! arc namespace
 {
     namespace log //! logging namespace
     {
-        namespace cout //! console output namespace
+        namespace output //! console output namespace
         {
 
 
 
             //  == CLASS ==
             /**
-             *  Standard cout message logging.
+             *  Standard output message logging.
              */
-            class Message : public Cout
+            class Message : public Output
             {
                 //  == INSTANTIATION ==
               public:
@@ -80,7 +80,7 @@ namespace arc //! arc namespace
              *  @pre    line_ must be greater than zero.
              */
             inline Message::Message(const std::string& file_, const std::string& func_, const int line_) noexcept
-              : Cout(file_, func_, line_)
+              : Output(file_, func_, line_)
             {
                 assert(!file_.empty());
                 assert(!func_.empty());
@@ -99,7 +99,7 @@ namespace arc //! arc namespace
 
 
 
-        } // namespace cout
+        } // namespace output
     }     // namespace log
 } // namespace arc
 
@@ -111,4 +111,4 @@ namespace arc //! arc namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_LOG_COUT_MESSAGE_HPP
+#endif // ARCTK_LOG_OUTPUT_MESSAGE_HPP
