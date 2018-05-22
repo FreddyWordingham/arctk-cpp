@@ -59,7 +59,7 @@ namespace arc //! arc namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline explicit Progress(const uint64_t update_delta_, const std::string& str_, double frac_) noexcept;
+                inline explicit Progress(uint64_t update_delta_, const std::string& str_, double frac_) noexcept;
                 inline Progress(const Progress&) = delete; //!< Deleted copy constructor.
                 inline Progress(Progress&&)      = delete; //!< Deleted move constructor.
 
