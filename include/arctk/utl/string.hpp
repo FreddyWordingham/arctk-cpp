@@ -399,7 +399,7 @@ namespace arc //! arc namespace
         inline std::string to_string(const T val_) noexcept
         {
             std::stringstream stream;
-            stream << T;
+            stream << val_;
 
             return (stream.str());
         }
