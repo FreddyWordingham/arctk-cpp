@@ -69,6 +69,7 @@ namespace arc //! arc namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline std::string str() noexcept;
             template <class T>
             inline T parse() noexcept;
             template <class T>
@@ -153,6 +154,16 @@ namespace arc //! arc namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the value of _str.
+         *
+         *  @return Copt of _str.
+         */
+        inline std::string Serial::str() noexcept
+        {
+            return (_str);
+        }
+
         /**
          *  Convert the serial type to another type.
          *
