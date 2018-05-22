@@ -68,6 +68,8 @@ namespace arc //! arc namespace
         //  -- Parsing --
         template <class T>
         inline T parse(const std::string& str_) noexcept;
+        template <class T>
+        inline std::string to_string(const T val_) noexcept;
 
         //  -- Time --
         inline std::string time(uint64_t us_) noexcept;
@@ -384,6 +386,22 @@ namespace arc //! arc namespace
             stream >> result;
 
             return (result);
+        }
+
+        /**
+         *  Form a string from a given value.
+         *
+         *  @param  val_    Value to be formed into a string.
+         *
+         *  @return Stingified value.
+         */
+        template <class T>
+        inline std::string to_string(const T val_) noexcept
+        {
+            std::stringstream stream;
+            stream << T;
+
+            return (stream.str());
         }
 
 
