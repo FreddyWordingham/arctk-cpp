@@ -70,7 +70,7 @@ namespace arc //! arc namespace
         inline T parse(const std::string& str_) noexcept;
 
         //  -- Time --
-        inline std::string time(double total_sec_) noexcept;
+        inline std::string time(uint64_t us_) noexcept;
 
 
 
@@ -389,28 +389,31 @@ namespace arc //! arc namespace
 
         //  -- Time --
         /**
-         *  Convert the number of seconds into a time string.
+         *  Convert the number of microseconds into a time string.
          *
-         *  @param  total_sec_  Number of seconds.
+         *  @param  us_ Number of microseconds.
          *
-         *  @pre    total_sec_ must be positive.
+         *  @pre    us_ must be non-negative.
          *
          *  @return String of the time.
          */
-        inline std::string time(const double total_sec_) noexcept
+        inline std::string time(uint64_t us_) noexcept
         {
-            assert(total_sec_ >= 0.0);
+            assert(us_ >= 0);
 
-            auto       sec      = static_cast<uint64_t>(total_sec_);
-            const auto millisec = static_cast<uint64_t>((total_sec_ - sec) * 1000);
+            const long int hrs = us_ / 3600000000;
+            us_ %= 3600000000;
 
-            const uint64_t hrs = sec / 3600;
-            sec %= 3600;
+            const long int min = us_ / 60000000;
+            us_ %= 60000000;
 
-            const uint64_t min = sec / 60;
-            sec %= 60;
+            const long int sec = us_ / 1000000;
+            us_ %= 1000000;
 
-            return (std::to_string(hrs) + "hrs " + std::to_string(min) + "min " + std::to_string(sec) + "sec " + std::to_string(millisec) + "ms");
+            const long int ms = us_ / 1000;
+            us_ %= 1000;
+
+            return (std::to_string(hrs) + "hrs " + std::to_string(min) + "min " + std::to_string(sec) + "sec " + std::to_string(ms) + "ms " + std::to_string(us) + "µs");
         }
 
 
