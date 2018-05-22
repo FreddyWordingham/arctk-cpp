@@ -141,21 +141,13 @@ namespace arc //! arc namespace
         template <class T>
         inline T Serial::parse() noexcept
         {
-            std::stringstream stream(_str);
-            T                 val;
-
-            stream >> val;
-
-            assert(!stream.fail());
-            assert(stream.rdbuf()->in_avail() == 0);
-
-            return (val);
+            return (utl::parse<T>(_str));
         }
 
         template <class T>
         inline T Serial::parsable() noexcept
         {
-            return (utl::parsable(_str));
+            return (utl::parsable<T>(_str));
         }
 
 
