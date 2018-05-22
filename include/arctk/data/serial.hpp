@@ -60,10 +60,10 @@ namespace arc //! arc namespace
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            template <class T>
-            inline typename std::enable_if<std::is_fundamental<T>::value, Serial&>::type operator=(T val_) noexcept;
-            inline Serial&                                                               operator=(const std::string& str_) noexcept;
-            inline Serial&                                                               operator=(const char* c_str_) noexcept;
+            template <class T, typename = typename std::enable_if<std::is_fundamental<T>::value, T>::type>
+            inline Serial& operator=(T val_) noexcept;
+            inline Serial& operator=(const std::string& str_) noexcept;
+            inline Serial& operator=(const char* c_str_) noexcept;
 
 
             //  == METHODS ==
@@ -114,8 +114,8 @@ namespace arc //! arc namespace
          *
          *  @return Reference to this object.
          */
-        template <class T>
-        inline typename std::enable_if<std::is_fundamental<T>::value, Serial&>::type Serial::operator=(const T val_) noexcept
+        template <class T, typename = typename std::enable_if<std::is_fundamental<T>::value, T>::type>
+        inline Serial& Serial::operator=(T val_) noexcept
         {
             _str = std::to_string(val_);
 
