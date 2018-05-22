@@ -63,7 +63,7 @@ namespace arc //! arc namespace
             template <class T>
             inline void add_col(const std::string& title_, const std::vector<T>& col_) noexcept
             {
-                if (_data.find(title) != _data.end())
+                if (_data.find(title_) != _data.end())
                 {
                     ERROR(42) << "Unable to add column to data table.\n"
                               << "Column title of: '" << title_ << "' already exists.";
