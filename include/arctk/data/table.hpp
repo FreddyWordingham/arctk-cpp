@@ -40,6 +40,10 @@ namespace arc //! arc namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Data --
+            std::vector<std::string> _title; //!< Vector of column title strings.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
