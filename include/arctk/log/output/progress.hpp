@@ -52,8 +52,8 @@ namespace arc //! arc namespace
                 const uint64_t _update_delta; //!< Minimum microseconds between prints.
 
                 //  -- Buffer --
-                const std::string& _str;  //!< Update string.
-                const double       _frac; //!< Update progress fraction.
+                const std::string _str;  //!< Update string.
+                const double      _frac; //!< Update progress fraction.
 
 
                 //  == INSTANTIATION ==
