@@ -121,6 +121,13 @@ namespace arc //! arc namespace
             return (*this);
         }
 
+        /**
+         *  Set str_ to a string.
+         *
+         *  @param  str_    String used to form the serialised object.
+         *
+         *  @return Reference to this object.
+         */
         inline Serial& Serial::operator=(const std::string& str_) noexcept
         {
             _str = str_;
