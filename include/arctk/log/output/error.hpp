@@ -71,6 +71,7 @@ namespace arc //! arc namespace
             /**
              *  Construct a message object which, when destructed, will write its contents to the terminal and exit the program.
              *  Error call location is reported.
+             *  Error report string is prepended.
              *
              *  @param  file_       File location of the message.
              *  @param  func_       Function location of the message.
@@ -97,10 +98,13 @@ namespace arc //! arc namespace
 
             //  -- Destructors --
             /**
+             *  Error report string is appended.
              *  Reset ansi escape codes and append a newline character.
+             *  Exit will be called by base class destructor method.
              */
             inline Error::~Error() noexcept
             {
+                *this << ANSI.reset << " : [ " << ANSI.red << "!ERROR!" << ANSI.reset << "]";
                 *this << ANSI.reset << '\n';
             }
 
