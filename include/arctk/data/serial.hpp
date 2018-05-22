@@ -52,7 +52,7 @@ namespace arc //! arc namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            template <class T>
+            template <class T, typename = typename std::enable_if<std::is_fundamental<T>::value, T>::type>
             inline explicit Serial(T val_) noexcept;
             inline explicit Serial(const std::string& str_) noexcept;
 
@@ -84,7 +84,7 @@ namespace arc //! arc namespace
          *
          *  @param  val_    Value used to form the serialised object.
          */
-        template <class T>
+        template <class T, typename = typename std::enable_if<std::is_fundamental<T>::value, T>::type>
         inline Serial::Serial(const T val_) noexcept
           : _str(std::to_string(val_))
         {
