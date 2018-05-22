@@ -49,7 +49,7 @@ namespace arc //! arc namespace
             //  == FIELDS ==
           private:
             //  -- Exit --
-            const int _exit_val; //!< Exit value. Positive when a fatal error.
+            const int _exit_val{0}; //!< Exit value. Positive when a fatal error.
 
 
             //  == INSTANTIATION --
@@ -81,7 +81,6 @@ namespace arc //! arc namespace
          *  Boolean values are printed as words.
          */
         inline Output::Output() noexcept
-          : _exit_val(0)
         {
             *this << std::boolalpha;
         }
@@ -100,7 +99,6 @@ namespace arc //! arc namespace
          *  @pre    line_       must be greater than zero.
          */
         inline Output::Output(const std::string& file_, const std::string& func_, const int line_) noexcept
-          : _exit_val(0)
         {
             assert(!file_.empty());
             assert(!func_.empty());
