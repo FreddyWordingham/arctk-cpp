@@ -50,7 +50,7 @@ namespace arc //! arc namespace
                 //  == FIELDS ==
               private:
                 //  -- Timing --
-                std::chrono::high_resolution_clock::time_point _construct_time; //!< Construction time.
+                const uint64_t _update_delta; //!< Minimum microseconds between prints.
 
 
                 //  == INSTANTIATION ==
