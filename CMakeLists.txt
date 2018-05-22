@@ -315,7 +315,6 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
         -Wunused                                \
         -Wunused-but-set-parameter              \
         -Wunused-but-set-variable               \
-        -Wunused-const-variable                 \
         -Wunused-function                       \
         -Wunused-label                          \
         -Wunused-local-typedefs                 \
