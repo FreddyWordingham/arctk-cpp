@@ -68,7 +68,7 @@ namespace arc //! arc namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            template <class T>
+            template <class T, typename>
             inline T parse() noexcept;
             template <class T>
             inline T parsable() noexcept;
@@ -138,7 +138,16 @@ namespace arc //! arc namespace
 
         //  == METHODS ==
         //  -- Getters --
-        template <class T>
+        /**
+         *  Convert the serial type to a
+         *
+         *  @pre
+         *
+         *  @post
+         *
+         *  @return [description]
+         */
+        template <class T, typename = typename std::enable_if_t<std::is_fundamental<T>::value>>
         inline T Serial::parse() noexcept
         {
             return (utl::parse<T>(_str));
