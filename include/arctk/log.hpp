@@ -42,6 +42,7 @@
 #endif
 #define WARN arc::log::output::Warning(__FILE__, __func__, __LINE__) << ""                        //!< Log a warning message to console output.
 #define ERROR(exit_val_) arc::log::output::Error(__FILE__, __func__, __LINE__, (exit_val_)) << "" //!< Log an error message to console output.
+#define STOPWATCH(str_) arc::log::output::Stopwatch(__FILE__, __func__, __LINE__, (str_));        //!< Construct a stopwatch logging object.
 
 
 
