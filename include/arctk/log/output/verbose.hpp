@@ -31,7 +31,8 @@ namespace arc //! arc namespace
 
             //  == CLASS ==
             /**
-             *  Standard output verbose logging.
+             *  Verbose logging class.
+             *  Provides an object to stream to, which will do nothing upon destruction.
              */
             class Verbose
             {
