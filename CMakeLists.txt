@@ -309,6 +309,7 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
         -Wtype-limits                           \
         -Wundef                                 \
         -Wuninitialized                         \
+        -Wno-unknown-pragmas                    \
         -Wunreachable-code                      \
         -Wunsafe-loop-optimizations             \
         -Wunused                                \
