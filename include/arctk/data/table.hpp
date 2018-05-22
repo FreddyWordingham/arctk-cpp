@@ -60,62 +60,11 @@ namespace arc //! arc namespace
             //  == OPERATORS ==
           public:
             //  -- Access --
-            template <class T>
-            inline std::vector<T> operator[](const std::string& title_) noexcept;
 
 
             //  == METHODS ==
           public:
-            //  -- Setters --
-            template <class T>
-            inline void add_col(const std::string& title_, const std::vector<T>& col_) noexcept
-            {
-                if (_data.find(title_) != _data.end())
-                {
-                    ERROR(42) << "Unable to add column to data table.\n"
-                              << "Column title of: '" << title_ << "' already exists.";
-                }
-
-                std::vector<std::string> col;
-                for (size_t i = 0; i < col_.size(); ++i)
-                {
-                    col.emplace_back(utl::to_string(col_[i]));
-                }
-
-                _data.emplace(std::make_pair(title_, col));
-            }
         };
-
-
-
-        //  == OPERATORS ==
-        //  -- Access --
-        /**
-         *  Convert the data column to a vector of the requested type.
-         *
-         *  @param  title_  Title of the column to access.
-         *
-         *  @return Converted vector of data.
-         */
-        template <class T>
-        inline std::vector<T> Table::operator[](const std::string& title_) noexcept
-        {
-            if (_data.find(title_) == _data.end())
-            {
-                ERROR(42) << "Unable to convert data column.\n"
-                          << "Column title: '" << title_ << "' does not exist within the table.";
-            }
-
-            std::vector<T> vec;
-            vec.reserve(_data[title_].size());
-
-            for (size_t i = 0; i < _data[title_].size(); ++i)
-            {
-                vec.emplace_back(utl::parse<T>(_data[title_][i]));
-            }
-
-            return (vec);
-        }
 
 
 
