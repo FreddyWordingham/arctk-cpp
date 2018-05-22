@@ -104,6 +104,15 @@ namespace arc //! arc namespace
 
         //  == OPERATORS ==
         //  -- Assignment --
+        /**
+         *  Set str_ to a serial object from a value of fundamental type.
+         *
+         *  @tparam T   Type to be serialised.
+         *
+         *  @param  val_    Value used to form the serialised object.
+         *
+         *  @return Reference to this object.
+         */
         template <class T>
         inline typename std::enable_if<std::is_fundamental<T>::value, Serial&>::type Serial::operator=(const T val_) noexcept
         {
