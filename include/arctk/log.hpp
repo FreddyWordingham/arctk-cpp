@@ -31,7 +31,8 @@
 
 //  == MACROS ==
 //  -- Logging --
-#define LOG arc::log::output::Message(__FILE__, __func__, __LINE__) << "" //!< Log a standard message to console output.
+#define LOG arc::log::output::Message(__FILE__, __func__, __LINE__) << ""                         //!< Log a standard message to console output.
+#define ERROR(exit_val_) arc::log::output::Error(__FILE__, __func__, __LINE__, (exit_val_)) << "" //!< Log an error message to console output.
 
 
 
