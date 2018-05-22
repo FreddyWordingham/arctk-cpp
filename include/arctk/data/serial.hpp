@@ -70,6 +70,8 @@ namespace arc //! arc namespace
             //  -- Getters --
             template <class T>
             inline T parse() noexcept;
+            template <class T>
+            inline T parsable() noexcept;
         };
 
 
@@ -148,6 +150,12 @@ namespace arc //! arc namespace
             assert(stream.rdbuf()->in_avail() == 0);
 
             return (val);
+        }
+
+        template <class T>
+        inline T Serial::parsable() noexcept
+        {
+            return (utl::parsable(_str));
         }
 
 
