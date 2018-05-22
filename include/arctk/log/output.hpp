@@ -87,6 +87,8 @@ namespace arc //! arc namespace
         }
 
         /**
+         *  Construct a stream object which, when destructed, will write its contents to console output.
+         *  Boolean values are printed as words.
          *  If LOCATION is defined, then its value is used to colour the output location of the message instantiation.
          *
          *  @param  file_       File location of the message instantiation.
@@ -98,7 +100,7 @@ namespace arc //! arc namespace
          *  @pre    line_       must be greater than zero.
          */
         inline Output::Output(const std::string& file_, const std::string& func_, const int line_) noexcept
-          : Output()
+          : _exit_val(0)
         {
             assert(!file_.empty());
             assert(!func_.empty());
@@ -114,7 +116,10 @@ namespace arc //! arc namespace
         }
 
         /**
+         *  Construct a stream object which, when destructed, will write its contents to console output.
+         *  Boolean values are printed as words.
          *  Upon destruction program will exit with an exit code of _exit_val.
+         *  If LOCATION is defined, then its value is used to colour the output location of the message instantiation.
          *
          *  @param  file_       File location of the message instantiation.
          *  @param  func_       Function location of the message instantiation.
@@ -127,13 +132,22 @@ namespace arc //! arc namespace
          *  @pre    exit_val_   must be positive.
          */
         inline Output::Output(const std::string& file_, const std::string& func_, const int line_, const int exit_val_) noexcept
-          : Output(file_, func_, line_)
-          , _exit_val(exit_val_)
+          : _exit_val(exit_val_)
         {
             assert(!file_.empty());
             assert(!func_.empty());
             assert(line_ > 0);
             assert(exit_val_ > 0);
+
+            *this << std::boolalpha;
+
+#ifdef LOCATION
+            *this << LOCATION << file_ << " :: " << func_ << " :: " << line_ << ANSI.reset << "\n";
+#else
+            (void)(file_);
+            (void)(func_);
+            (void)(line_);
+#endif
         }
 
 
