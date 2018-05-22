@@ -57,7 +57,7 @@ namespace arc //! arc namespace
             //  -- Constructors --
             inline Output() noexcept;
             inline Output(const std::string& file_, const std::string& func_, int line_) noexcept;
-            inline Output(const std::string& file_, const std::string& func_, int line_, int exit_val_ = 0) noexcept;
+            inline Output(const std::string& file_, const std::string& func_, int line_, int exit_val_) noexcept;
             inline Output(const Output&) = delete; //!< Deleted copy constructor.
             inline Output(Output&&)      = delete; //!< Deleted move constructor.
 
