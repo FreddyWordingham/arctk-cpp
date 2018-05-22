@@ -96,7 +96,7 @@ namespace arc //! arc namespace
 
             //  -- Destructors --
             /**
-             *  Report age of class.
+             *  If more, or equal, time has passed than the specified update_delta_, then print the update string and fraction.
              */
             inline Progress::~Progress() noexcept
             {
