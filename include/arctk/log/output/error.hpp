@@ -104,7 +104,7 @@ namespace arc //! arc namespace
              */
             inline Error::~Error() noexcept
             {
-                *this << ANSI.reset << " : [ " << ANSI.red << "!ERROR!" << ANSI.reset << "]";
+                *this << ANSI.reset << " : [" << ANSI.red << "!ERROR!" << ANSI.reset << "]";
                 *this << ANSI.reset << '\n';
             }
 
