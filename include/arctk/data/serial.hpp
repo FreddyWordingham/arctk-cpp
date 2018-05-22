@@ -62,11 +62,8 @@ namespace arc //! arc namespace
             //  -- Assignment --
             template <class T>
             inline typename std::enable_if<std::is_fundamental<T>::value, Serial&>::type operator=(T val_) noexcept;
-            template <class T>
-            inline typename std::enable_if<std::is_same<T, std::string>::value, Serial&>::type operator=(T val_) noexcept;
-            template <class T>
-            inline typename std::enable_if<std::is_same<T, const char*>::value, Serial&>::type operator=(T val_) noexcept;
-
+            inline Serial&                                                               operator=(const std::string& str_) noexcept;
+            inline Serial&                                                               operator=(const char* c_str_) noexcept;
 
 
             //  == METHODS ==
@@ -115,22 +112,19 @@ namespace arc //! arc namespace
             return (*this);
         }
 
-        template <class T>
-        inline typename std::enable_if<std::is_same<T, std::string>::value, Serial&>::type Serial::operator=(const T val_) noexcept
+        inline Serial& Serial::operator=(const std::string& str_) noexcept
         {
-            _str = val_;
+            _str = str_;
 
             return (*this);
         }
 
-        template <class T>
-        inline typename std::enable_if<std::is_same<T, const char*>::value, Serial&>::type Serial::operator=(const T val_) noexcept
+        inline Serial& Serial::operator=(const char* c_str_) noexcept
         {
-            _str = std::string(val_);
+            _str = std::string(c_str_);
 
             return (*this);
         }
-
 
         /**
          *  Set str_ to a serial object from a value of fundamental type.
