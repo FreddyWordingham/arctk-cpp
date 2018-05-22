@@ -155,6 +155,12 @@ namespace arc //! arc namespace
             return (utl::parse<T>(_str));
         }
 
+        template <>
+        inline std::string Serial::parse() noexcept
+        {
+            return (_str);
+        }
+
         /**
          *  Determine if the serial object is parsable to a type.
          *
