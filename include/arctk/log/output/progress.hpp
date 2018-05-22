@@ -51,6 +51,9 @@ namespace arc //! arc namespace
                 //  -- Timing --
                 const uint64_t _update_delta; //!< Minimum microseconds between prints.
 
+                //  -- Buffer --
+                std::stringstream _buffer;
+
 
                 //  == INSTANTIATION ==
               public:
@@ -68,6 +71,15 @@ namespace arc //! arc namespace
                 //  -- Assignment --
                 inline Progress& operator=(const Progress&) = delete; //!< Deleted copy operator. @return Reference to copied object.
                 inline Progress& operator=(Progress&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
+
+                //  -- Io --
+                template <class T>
+                inline Progress& operator<<(const T& val_) noexcept
+                {
+                    _buffer << val_;
+
+                    return (*this);
+                }
             };
 
 
@@ -100,6 +112,8 @@ namespace arc //! arc namespace
                 if (static_cast<uint64_t>(std::chrono::duration_cast<std::chrono::microseconds>(cur_time - static_last_update).count()) >= _update_delta)
                 {
                     static_last_update = cur_time;
+
+                    *this << _buffer.str();
 
                     *this << ANSI.reset << ANSI.overwrite;
                 }
