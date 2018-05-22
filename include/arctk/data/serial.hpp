@@ -61,7 +61,7 @@ namespace arc //! arc namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <class T>
-        inline explicit Serial::Serial(const T val_) noexcept
+        inline Serial::Serial(const T val_) noexcept
           : _str(utl::to_string(val_))
         {
         }
