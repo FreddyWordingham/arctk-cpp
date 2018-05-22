@@ -66,7 +66,7 @@ namespace arc //! arc namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         /**
-         *  Construct a serial object from a fundamental type.
+         *  Construct a serial object from a value of fundamental type.
          *
          *  @param  val_    Value used to form the serialised object.
          */
@@ -76,6 +76,11 @@ namespace arc //! arc namespace
         {
         }
 
+        /**
+         *  Construct a serial object from a string object.
+         *
+         *  @param  str_    String used to form the serialised object.
+         */
         inline Serial::Serial(const std::string& str_) noexcept
           : _str(str_)
         {
