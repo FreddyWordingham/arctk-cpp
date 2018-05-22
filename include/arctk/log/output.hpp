@@ -38,6 +38,12 @@ namespace arc //! arc namespace
 
 
 
+        //  == CONSTANTS ==
+        //  -- Settings --
+        constexpr const DEFAULT_EXIT_VAL = 0; //!< Default exit value to be used when not reporting a fatal error.
+
+
+
         //  == CLASS ==
         /**
          *  Console output logging class.
@@ -54,7 +60,7 @@ namespace arc //! arc namespace
             //  == INSTANTIATION --
           public:
             //  -- Constructors --
-            inline Output(const std::string& file_, const std::string& func_, int line_) noexcept;
+            inline Output(const std::string& file_, const std::string& func_, int line_, int exit_val_ = 0) noexcept;
             inline Output(const Output&) = delete; //!< Deleted copy constructor.
             inline Output(Output&&)      = delete; //!< Deleted move constructor.
 
