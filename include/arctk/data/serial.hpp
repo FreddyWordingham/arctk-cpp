@@ -49,10 +49,22 @@ namespace arc //! arc namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            template <class T>
+            inline explicit Serial(T val_) noexcept;
 
             //  == OPERATORS ==
           public:
         };
+
+
+
+        //  == INSTANTIATION ==
+        //  -- Constructors --
+        template <class T>
+        inline explicit Serial::Serial(const T val_) noexcept
+          : _str(utl::to_string(val_))
+        {
+        }
 
 
 
