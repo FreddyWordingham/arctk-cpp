@@ -61,7 +61,8 @@ namespace arc //! arc namespace
             //  == OPERATORS ==
           public:
             //  -- Access --
-            inline std::vector<std::any>& operator[](const std::string& title_) noexcept;
+            inline std::vector<std::any>&       operator[](const std::string& title_) noexcept;
+            inline const std::vector<std::any>& operator[](const std::string& title_) const noexcept;
 
 
             //  == METHODS ==
@@ -73,6 +74,17 @@ namespace arc //! arc namespace
         //  == OPERATORS ==
         //  -- Access --
         inline std::vector<std::any>& Table::operator[](const std::string& title_) noexcept
+        {
+            if (_data.find(title_) == _data.end())
+            {
+                ERROR(42) << "Unable to access table data column.\n"
+                          << "Column title of: '" << title_ << "' does not exist.";
+            }
+
+            return (_data.find(title_));
+        }
+
+        inline const std::vector<std::any>& Table::operator[](const std::string& title_) const noexcept
         {
             if (_data.find(title_) == _data.end())
             {
