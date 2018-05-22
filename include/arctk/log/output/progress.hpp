@@ -107,7 +107,7 @@ namespace arc //! arc namespace
                 {
                     static_last_update = cur_time;
 
-                    *this << _str << " : " << _frac;
+                    *this << _str << " : " << (_frac * 100.0) << "%";
 
                     *this << ANSI.reset << ANSI.overwrite;
                 }
