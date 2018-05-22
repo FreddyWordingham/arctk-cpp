@@ -54,7 +54,7 @@ namespace arc //! arc namespace
                 inline Error(Error&&)      = delete; //!< Deleted move constructor.
 
                 //  -- Destructors --
-                inline ~Error() noexcept override;
+                [[noreturn]] inline ~Error() noexcept override;
 
 
                 //  == OPERATORS ==
