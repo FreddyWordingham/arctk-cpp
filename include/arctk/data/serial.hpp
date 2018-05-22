@@ -63,6 +63,13 @@ namespace arc //! arc namespace
             template <class T, typename>
             inline Serial& operator=(T val_) noexcept;
             inline Serial& operator=(const std::string& str_) noexcept;
+
+
+            //  == METHODS ==
+          public:
+            //  -- Getters --
+            template <class T>
+            inline T parse() noexcept;
         };
 
 
@@ -123,6 +130,24 @@ namespace arc //! arc namespace
             _str = str_;
 
             return (*this);
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        template <class T>
+        inline T Serial::parse() noexcept
+        {
+            std::stringstream stream(_str);
+            T                 val;
+
+            stream >> val;
+
+            assert(!stream.fail());
+            assert(stream.rdbuf()->in_avail() == 0);
+
+            return (val);
         }
 
 
