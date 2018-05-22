@@ -56,19 +56,19 @@ namespace arc //! arc namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Stopwatch(const std::string& file_, const std::string& func_, int line_, const std::string& str_) noexcept;
-                inline Stopwatch(const Stopwatch&) = delete; //!< Deleted copy constructor.
-                inline Stopwatch(Stopwatch&&)      = delete; //!< Deleted move constructor.
+                inline Progress(const std::string& file_, const std::string& func_, int line_, const std::string& str_) noexcept;
+                inline Progress(const Progress&) = delete; //!< Deleted copy constructor.
+                inline Progress(Progress&&)      = delete; //!< Deleted move constructor.
 
                 //  -- Destructors --
-                inline ~Stopwatch() noexcept override;
+                inline ~Progress() noexcept override;
 
 
                 //  == OPERATORS ==
               public:
                 //  -- Assignment --
-                inline Stopwatch& operator=(const Stopwatch&) = delete; //!< Deleted copy operator. @return Reference to copied object.
-                inline Stopwatch& operator=(Stopwatch&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
+                inline Progress& operator=(const Progress&) = delete; //!< Deleted copy operator. @return Reference to copied object.
+                inline Progress& operator=(Progress&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
             };
 
 
@@ -88,7 +88,7 @@ namespace arc //! arc namespace
              *  @pre    line_ must be greater than zero.
              *  @pre    str_ must not be empty.
              */
-            inline Stopwatch::Stopwatch(const std::string& file_, const std::string& func_, const int line_, const std::string& str_) noexcept
+            inline Progress::Progress(const std::string& file_, const std::string& func_, const int line_, const std::string& str_) noexcept
               : Output(file_, func_, line_)
               , _construct_time(std::chrono::high_resolution_clock::now())
             {
@@ -105,7 +105,7 @@ namespace arc //! arc namespace
             /**
              *  Report age of class.
              */
-            inline Stopwatch::~Stopwatch() noexcept
+            inline Progress::~Progress() noexcept
             {
                 *this << ANSI.yellow << " took: " << utl::time(static_cast<uint64_t>(std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now() - _construct_time).count()));
                 *this << ANSI.reset << '\n';
