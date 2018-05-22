@@ -58,7 +58,7 @@ namespace arc //! arc namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Progress(const std::string& file_, const std::string& func_, int line_, const std::string& str_, const uint64_t update_delta_) noexcept;
+                inline explicit Progress(const uint64_t update_delta_) noexcept;
                 inline Progress(const Progress&) = delete; //!< Deleted copy constructor.
                 inline Progress(Progress&&)      = delete; //!< Deleted move constructor.
 
@@ -80,23 +80,13 @@ namespace arc //! arc namespace
             /**
              *  Construct a progress message which will only be printed if sufficient time has elapsed since the last print.
              *
-             *  @param  file_   File location of the message.
-             *  @param  func_   Function location of the message.
-             *  @param  line_   Line location of the message.
-             *  @param  str_    String prepended to lifetime report message.
+             *  @param  update_delta_   Minimum time, in microseconds, between progress update prints.
              *
-             *  @pre    file_ must not be empty.
-             *  @pre    func_ must not be empty.
-             *  @pre    line_ must be positive.
              *  @pre    update_delta_ must be positive.
              */
-            inline Progress::Progress(const std::string& file_, const std::string& func_, const int line_, const std::string& str_) noexcept
-              : Output(file_, func_, line_, 0, false)
-              , _update_delta(update_delta_)
+            inline Progress::Progress(const uint64_t update_delta_) noexcept
+              : _update_delta(update_delta_)
             {
-                assert(!file_.empty());
-                assert(!func_.empty());
-                assert(line_ > 0);
                 assert(update_delta_ > 0);
             }
 
