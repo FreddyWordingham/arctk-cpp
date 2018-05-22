@@ -94,8 +94,15 @@ namespace arc //! arc namespace
              */
             inline Progress::~Progress() noexcept
             {
-                *this << ANSI.yellow << " took: " << utl::time(static_cast<uint64_t>(std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now() - _construct_time).count()));
-                *this << ANSI.reset << '\n';
+                static std::chrono::high_resolution_clock::time_point static_last_update = std::chrono::high_resolution_clock::now();
+                const std::chrono::high_resolution_clock::time_point  cur_time           = std::chrono::high_resolution_clock::now();
+
+                if (static_cast<uint64_t>(std::chrono::duration_cast<std::chrono::microseconds>(cur_time - static_last_update).count()) >= _update_delta)
+                {
+                    static_last_update = cur_time;
+
+                    *this << ANSI.reset << ANSI.overwrite;
+                }
             }
 
 
