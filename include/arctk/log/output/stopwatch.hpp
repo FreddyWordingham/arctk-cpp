@@ -28,6 +28,7 @@
 //  -- Arctk --
 #include <arctk/log/ansi.hpp>
 #include <arctk/log/output.hpp>
+#include <arctk/utl.hpp>
 
 
 
@@ -98,10 +99,11 @@ namespace arc //! arc namespace
 
             //  -- Destructors --
             /**
-             *  Reset ansi escape codes and append a newline character.
+             *  Report age of class.
              */
             inline Stopwatch::~Stopwatch() noexcept
             {
+                *this << " took: " << utl::time(std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now() - _start).count());
                 *this << ANSI.reset << '\n';
             }
 
