@@ -82,8 +82,12 @@ namespace arc //! arc namespace
              *  Construct a progress message which will only be printed if sufficient time has elapsed since the last print.
              *
              *  @param  update_delta_   Minimum time, in microseconds, between progress update prints.
+             *  @param  str_            Update string.
+             *  @param  frac_           Update fraction complete.
              *
              *  @pre    update_delta_ must be positive.
+             *  @pre    str_ must not be empty.
+             *  @pre    frac_ must be non-negative.
              */
             inline Progress::Progress(const uint64_t update_delta_, const std::string& str_, const double frac_) noexcept
               : _update_delta(update_delta_)
@@ -91,6 +95,8 @@ namespace arc //! arc namespace
               , _frac(frac_)
             {
                 assert(update_delta_ > 0);
+                assert(!str_.empty());
+                assert(frac >= 0.0);
             }
 
 
