@@ -52,13 +52,14 @@ namespace arc //! arc namespace
                 const uint64_t _update_delta; //!< Minimum microseconds between prints.
 
                 //  -- Buffer --
-                std::stringstream _buffer;
+                const std::string& _str;
+                const double       _prog;
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline explicit Progress(const uint64_t update_delta_) noexcept;
+                inline explicit Progress(const uint64_t update_delta_, const std::string& str_, double prog_) noexcept;
                 inline Progress(const Progress&) = delete; //!< Deleted copy constructor.
                 inline Progress(Progress&&)      = delete; //!< Deleted move constructor.
 
@@ -71,15 +72,6 @@ namespace arc //! arc namespace
                 //  -- Assignment --
                 inline Progress& operator=(const Progress&) = delete; //!< Deleted copy operator. @return Reference to copied object.
                 inline Progress& operator=(Progress&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
-
-                //  -- Io --
-                template <class T>
-                inline Progress& operator<<(const T& val_) noexcept
-                {
-                    _buffer << val_;
-
-                    return (*this);
-                }
             };
 
 
@@ -93,8 +85,10 @@ namespace arc //! arc namespace
              *
              *  @pre    update_delta_ must be positive.
              */
-            inline Progress::Progress(const uint64_t update_delta_) noexcept
+            inline Progress::Progress(const uint64_t update_delta_, const std::string& str_, const double prog_) noexcept
               : _update_delta(update_delta_)
+              , _str(str_)
+              , _prog(prog_)
             {
                 assert(update_delta_ > 0);
             }
@@ -113,7 +107,7 @@ namespace arc //! arc namespace
                 {
                     static_last_update = cur_time;
 
-                    *this << _buffer.str();
+                    *this << _str << " : " << _prog;
 
                     *this << ANSI.reset << ANSI.overwrite;
                 }
