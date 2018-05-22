@@ -49,19 +49,19 @@ namespace arc //! arc namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Message(const std::string& file_, const std::string& func_, int line_) noexcept;
-                inline Message(const Message&) = delete; //!< Deleted copy constructor.
-                inline Message(Message&&)      = delete; //!< Deleted move constructor.
+                inline Warning(const std::string& file_, const std::string& func_, int line_) noexcept;
+                inline Warning(const Warning&) = delete; //!< Deleted copy constructor.
+                inline Warning(Warning&&)      = delete; //!< Deleted move constructor.
 
                 //  -- Destructors --
-                inline ~Message() noexcept override;
+                inline ~Warning() noexcept override;
 
 
                 //  == OPERATORS ==
               public:
                 //  -- Assignment --
-                inline Message& operator=(const Message&) = delete; //!< Deleted copy operator. @return Reference to copied object.
-                inline Message& operator=(Message&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
+                inline Warning& operator=(const Warning&) = delete; //!< Deleted copy operator. @return Reference to copied object.
+                inline Warning& operator=(Warning&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
             };
 
 
@@ -69,7 +69,8 @@ namespace arc //! arc namespace
             //  == INSTANTIATION --
             //  -- Constructors --
             /**
-             *  Construct a message object which, when destructed, will write its contents to the terminal.
+             *  Construct a warning message object which, when destructed, will write its contents to the terminal.
+             *  Warning report string is prepended.
              *
              *  @param  file_   File location of the message.
              *  @param  func_   Function location of the message.
@@ -79,12 +80,14 @@ namespace arc //! arc namespace
              *  @pre    func_ must not be empty.
              *  @pre    line_ must be greater than zero.
              */
-            inline Message::Message(const std::string& file_, const std::string& func_, const int line_) noexcept
+            inline Warning::Warning(const std::string& file_, const std::string& func_, const int line_) noexcept
               : Output(file_, func_, line_)
             {
                 assert(!file_.empty());
                 assert(!func_.empty());
                 assert(line_ > 0);
+
+                *this << "[" << ANSI.yellow << "Warning!" << ANSI.reset << "] : ";
             }
 
 
@@ -92,7 +95,7 @@ namespace arc //! arc namespace
             /**
              *  Reset ansi escape codes and append a newline character.
              */
-            inline Message::~Message() noexcept
+            inline Warning::~Warning() noexcept
             {
                 *this << ANSI.reset << '\n';
             }
