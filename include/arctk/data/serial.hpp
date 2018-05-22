@@ -54,6 +54,7 @@ namespace arc //! arc namespace
             //  -- Constructors --
             template <class T, typename>
             inline explicit Serial(const T val_) noexcept;
+            inline explicit Serial(const std::string& str_) noexcept;
 
 
             //  == OPERATORS ==
@@ -67,6 +68,11 @@ namespace arc //! arc namespace
         template <class T, typename = typename std::enable_if_t<std::is_fundamental<T>::value>>
         inline Serial::Serial(const T val_) noexcept
           : _str(std::to_string(val_))
+        {
+        }
+
+        inline Serial::Serial(const std::string& str_) noexcept
+          : _str(str_)
         {
         }
 
