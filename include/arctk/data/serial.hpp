@@ -35,6 +35,8 @@ namespace arc //! arc namespace
 
         //  == CLASS ==
         /**
+         *  Serialised object class.
+         *  Stores any data that may be represented as a string.
          */
         class Serial
         {
