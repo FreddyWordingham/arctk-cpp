@@ -38,7 +38,7 @@ namespace arc //! arc namespace
             {
                 //  == OPERATORS ==
               public:
-                //  -- Assignment --
+                //  -- Io --
                 template <class T>
                 inline const Verbose& operator<<(const T& /*unused*/) const noexcept;
             };
@@ -46,7 +46,7 @@ namespace arc //! arc namespace
 
 
             //  == OPERATORS ==
-            //  -- Assignment --
+            //  -- Io --
             /**
              *  Accept a value to the stream and discard it.
              *
