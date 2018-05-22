@@ -42,9 +42,16 @@ namespace arc //! arc namespace
         /**
          *  Console error logging class.
          *  Will print contents of stream to std::cerr upon destruction.
+         *  Will exit with _exit_val upon destruction.
          */
         class Cerr : public std::stringstream
         {
+            //  == FIELDS ==
+          private:
+            //  -- Exit --
+            const int _exit_val; //!< Exit code upon destruction.
+
+
             //  == INSTANTIATION --
           public:
             //  -- Constructors --
