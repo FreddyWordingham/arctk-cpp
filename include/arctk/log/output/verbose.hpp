@@ -1,6 +1,6 @@
 /**
  *  @file   arctk/log/output/verbose.hpp
- *  @date   21/05/2018
+ *  @date   22/05/2018
  *  @author Freddy Wordingham
  *
  *  Standard console output verbose log class.
