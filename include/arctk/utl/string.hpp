@@ -413,7 +413,7 @@ namespace arc //! arc namespace
             const long int ms = us_ / 1000;
             us_ %= 1000;
 
-            return (std::to_string(hrs) + "hrs " + std::to_string(min) + "min " + std::to_string(sec) + "sec " + std::to_string(ms) + "ms " + std::to_string(us) + "µs");
+            return (std::to_string(hrs) + "hrs " + std::to_string(min) + "min " + std::to_string(sec) + "sec " + std::to_string(ms) + "ms " + std::to_string(us_) + "µs");
         }
 
 
