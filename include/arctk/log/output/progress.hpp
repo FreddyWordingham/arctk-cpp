@@ -91,7 +91,7 @@ namespace arc //! arc namespace
              *  @pre    update_delta_ must be positive.
              */
             inline Progress::Progress(const std::string& file_, const std::string& func_, const int line_, const std::string& str_) noexcept
-              : Output(file_, func_, line_)
+              : Output(file_, func_, line_, 0, false)
               , _update_delta(update_delta_)
             {
                 assert(!file_.empty());

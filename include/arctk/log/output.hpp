@@ -55,7 +55,8 @@ namespace arc //! arc namespace
             //  == INSTANTIATION --
           public:
             //  -- Constructors --
-            inline Output(const std::string& file_, const std::string& func_, int line_, int exit_val_ = 0, const bool print_loc_ = true) noexcept;
+            inline Output() noexcept;
+            inline Output(const std::string& file_, const std::string& func_, int line_, int exit_val_ = 0) noexcept;
             inline Output(const Output&) = delete; //!< Deleted copy constructor.
             inline Output(Output&&)      = delete; //!< Deleted move constructor.
 
@@ -75,23 +76,31 @@ namespace arc //! arc namespace
         //  == INSTANTIATION --
         //  -- Constructors --
         /**
+         *  Construct a stream object which, when destructed, will write its contents to console output.
+         */
+        inline Output::Output() noexcept
+          : _exit_val(0)
+        {
+            *this << std::boolalpha;
+        }
+
+        /**
          *  Construct a stream object which, when destructed, will write its contents to the terminal.
          *  Boolean values are printed as words.
          *  If LOCATION is defined, then its value is used to colour the output location of the message instantiation.
-         *  If exit_val_ is set to a positive value, upon destruction program will exit with an exit code of _exit_val.
+         *  Upon destruction program will exit with an exit code of _exit_val.
          *
          *  @param  file_       File location of the message instantiation.
          *  @param  func_       Function location of the message instantiation.
          *  @param  line_       Line location of the message instantiation.
          *  @param  exit_val_   Exit value of program used when reporting a fatal error. Set to zero for non-fatal messages.
-         *  @param  print_loc_  When true print the call location if LOCATION is defined.
          *
          *  @pre    file_       must not be empty.
          *  @pre    func_       must not be empty.
          *  @pre    line_       must be greater than zero.
          *  @pre    exit_val_   must be non-negative.
          */
-        inline Output::Output(const std::string& file_, const std::string& func_, const int line_, const int exit_val_, const bool print_loc_) noexcept
+        inline Output::Output(const std::string& file_, const std::string& func_, const int line_, const int exit_val_) noexcept
           : _exit_val(exit_val_)
         {
             assert(!file_.empty());
@@ -101,10 +110,7 @@ namespace arc //! arc namespace
 
             *this << std::boolalpha;
 #ifdef LOCATION
-            if (print_loc_)
-            {
-                *this << LOCATION << file_ << " :: " << func_ << " :: " << line_ << ANSI.reset << "\n";
-            }
+            *this << LOCATION << file_ << " :: " << func_ << " :: " << line_ << ANSI.reset << "\n";
 #else
             (void)(file_);
             (void)(func_);
