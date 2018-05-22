@@ -21,6 +21,7 @@
 
 //  == INCLUDES ==
 //  -- Std --
+#include <any>
 #include <map>
 #include <string>
 #include <vector>
@@ -49,7 +50,7 @@ namespace arc //! arc namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            std::map<std::string, std::vector<std::string>> _data; //!< Table of stringified data.
+            std::map<std::string, std::vector<std::any>> _data; //!< Data mapping.
 
 
             //  == INSTANTIATION ==
