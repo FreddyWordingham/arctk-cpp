@@ -138,7 +138,7 @@ namespace arc //! arc namespace
             std::vector<std::any> col;
             for (size_t i = 0; i < col_.size(); ++i)
             {
-                col.emplace_back(std::make_any(col_[i]));
+                col.emplace_back(col_[i]);
             }
 
             _data.emplace(title_, col);
