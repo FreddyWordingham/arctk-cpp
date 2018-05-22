@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/log/cout.hpp
+ *  @file   arctk/log/output.hpp
  *  @date   21/05/2018
  *  @author Freddy Wordingham
  *
@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_LOG_COUT_HPP
-#define ARCTK_LOG_COUT_HPP
+#ifndef ARCTK_LOG_OUTPUT_HPP
+#define ARCTK_LOG_OUTPUT_HPP
 
 
 
@@ -43,24 +43,24 @@ namespace arc //! arc namespace
          *  Console output logging class.
          *  Will print contents of stream to std::cout upon destruction.
          */
-        class Cout : public std::stringstream
+        class Output : public std::stringstream
         {
             //  == INSTANTIATION --
           public:
             //  -- Constructors --
-            inline Cout(const std::string& file_, const std::string& func_, int line_) noexcept;
-            inline Cout(const Cout&) = delete; //!< Deleted copy constructor.
-            inline Cout(Cout&&)      = delete; //!< Deleted move constructor.
+            inline Output(const std::string& file_, const std::string& func_, int line_) noexcept;
+            inline Output(const Output&) = delete; //!< Deleted copy constructor.
+            inline Output(Output&&)      = delete; //!< Deleted move constructor.
 
             //  -- Destructors --
-            inline ~Cout() noexcept override;
+            inline ~Output() noexcept override;
 
 
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            inline Cout& operator=(const Cout&) = delete; //!< Deleted copy operator. @return Reference to copied object.
-            inline Cout& operator=(Cout&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
+            inline Output& operator=(const Output&) = delete; //!< Deleted copy operator. @return Reference to copied object.
+            inline Output& operator=(Output&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
         };
 
 
@@ -80,7 +80,7 @@ namespace arc //! arc namespace
          *  @pre    func_ must not be empty.
          *  @pre    line_ must be greater than zero.
          */
-        inline Cout::Cout(const std::string& file_, const std::string& func_, const int line_) noexcept
+        inline Output::Output(const std::string& file_, const std::string& func_, const int line_) noexcept
         {
             assert(!file_.empty());
             assert(!func_.empty());
@@ -102,7 +102,7 @@ namespace arc //! arc namespace
         /**
          *  Write contents to console output.
          */
-        inline Cout::~Cout() noexcept
+        inline Output::~Output() noexcept
         {
             Term::instance().cout(str());
         }
@@ -120,4 +120,4 @@ namespace arc //! arc namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_LOG_COUT_HPP
+#endif // ARCTK_LOG_OUTPUT_HPP
