@@ -90,9 +90,22 @@ namespace arc //! arc namespace
 
         //  == OPERATORS ==
         //  -- Access --
+        /**
+         *  Convert the data column to a vector of the requested type.
+         *
+         *  @param  title_  Title of the column to access.
+         *
+         *  @return Converted vector of data.
+         */
         template <class T>
         inline std::vector<T> Table::operator[](const std::string& title_) noexcept
         {
+            if (_data.find(title_) == _data.end())
+            {
+                ERROR(42) << "Unable to convert data column.\n"
+                          << "Column title: '" << title_ << "' does not exist within the table.";
+            }
+
             std::vector<T> vec;
             vec.reserve(_data[title_].size());
 
