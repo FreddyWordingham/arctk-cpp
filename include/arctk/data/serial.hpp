@@ -61,11 +61,12 @@ namespace arc //! arc namespace
           public:
             //  -- Assignment --
             template <class T>
-            typename std::enable_if<std::is_fundamental<T>::value, Serial&>::type operator=(T val_);
+            inline typename std::enable_if<std::is_fundamental<T>::value, Serial&>::type operator=(T val_) noexcept;
             template <class T>
-            typename std::enable_if<std::is_same<T, std::string>::value, Serial&>::type operator=(T val_);
+            inline typename std::enable_if<std::is_same<T, std::string>::value, Serial&>::type operator=(T val_) noexcept;
             template <class T>
-            typename std::enable_if<std::is_same<T, const char*>::value, Serial&>::type operator=(T val_);
+            inline typename std::enable_if<std::is_same<T, const char*>::value, Serial&>::type operator=(T val_) noexcept;
+
 
 
             //  == METHODS ==
@@ -107,7 +108,7 @@ namespace arc //! arc namespace
         //  == OPERATORS ==
         //  -- Assignment --
         template <class T>
-        typename std::enable_if<std::is_fundamental<T>::value, Serial&>::type Serial::operator=(const T val_)
+        inline typename std::enable_if<std::is_fundamental<T>::value, Serial&>::type Serial::operator=(const T val_) noexcept
         {
             _str = std::to_string(val_);
 
@@ -115,7 +116,7 @@ namespace arc //! arc namespace
         }
 
         template <class T>
-        typename std::enable_if<std::is_same<T, std::string>::value, Serial&>::type Serial::operator=(const T val_)
+        inline typename std::enable_if<std::is_same<T, std::string>::value, Serial&>::type Serial::operator=(const T val_) noexcept
         {
             _str = val_;
 
@@ -123,7 +124,7 @@ namespace arc //! arc namespace
         }
 
         template <class T>
-        typename std::enable_if<std::is_same<T, const char*>::value, Serial&>::type Serial::operator=(const T val_)
+        inline typename std::enable_if<std::is_same<T, const char*>::value, Serial&>::type Serial::operator=(const T val_) noexcept
         {
             _str = std::string(val_);
 
