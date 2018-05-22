@@ -43,10 +43,17 @@ namespace arc //! arc namespace
 
             //  == CLASS ==
             /**
-             *  Standard output message logging.
+             *  Standard output stopwatch logging.
+             *  Prints wall clock lifetime of object upon destruction.
              */
-            class Message : public Output
+            class Stopwatch : public Output
             {
+                //  == FIELDS ==
+              private:
+                //  -- Timing --
+                std::chrono::high_resolution_clock::time_point _construct_time; //!< Construction time.
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
