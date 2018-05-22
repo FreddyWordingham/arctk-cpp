@@ -59,6 +59,9 @@ namespace arc //! arc namespace
 
             //  == OPERATORS ==
           public:
+            //  -- Assignment --
+            template <class T, typename>
+            inline Serial& operator=(T val_) noexcept;
         };
 
 
@@ -84,6 +87,23 @@ namespace arc //! arc namespace
         inline Serial::Serial(const std::string& str_) noexcept
           : _str(str_)
         {
+        }
+
+
+
+        //  == OPERATORS ==
+        //  -- Assignment --
+        /**
+         *  Set str_ to a serial object from a value of fundamental type.
+         *
+         *  @param  val_    A reference to this object.
+         */
+        template <class T, typename = typename std::enable_if_t<std::is_fundamental<T>::value>>
+        inline Serial& Serial::operator=(const T val_) noexcept
+        {
+            _str = std::to_string(val_);
+
+            return (*this);
         }
 
 
