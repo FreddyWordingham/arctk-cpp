@@ -78,7 +78,7 @@ namespace arc //! arc namespace
              *
              *  @pre    file_ must not be empty.
              *  @pre    func_ must not be empty.
-             *  @pre    line_ must be greater than zero.
+             *  @pre    line_ must be positive.
              */
             inline Warning::Warning(const std::string& file_, const std::string& func_, const int line_) noexcept
               : Output(file_, func_, line_)
