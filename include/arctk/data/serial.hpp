@@ -155,6 +155,13 @@ namespace arc //! arc namespace
             return (utl::parse<T>(_str));
         }
 
+        /**
+         *  Determine if the serial object is parsable to a type.
+         *
+         *  @tparam T   Type to test.
+         *
+         *  @return True if _str can be parsed to type T.
+         */
         template <class T>
         inline T Serial::parsable() noexcept
         {
