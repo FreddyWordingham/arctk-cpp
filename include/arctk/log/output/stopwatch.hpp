@@ -87,7 +87,7 @@ namespace arc //! arc namespace
              *
              *  @pre    file_ must not be empty.
              *  @pre    func_ must not be empty.
-             *  @pre    line_ must be greater than zero.
+             *  @pre    line_ must be positive.
              *  @pre    str_ must not be empty.
              */
             inline Stopwatch::Stopwatch(const std::string& file_, const std::string& func_, const int line_, const std::string& str_) noexcept
