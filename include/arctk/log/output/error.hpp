@@ -49,19 +49,19 @@ namespace arc //! arc namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Message(const std::string& file_, const std::string& func_, int line_) noexcept;
-                inline Message(const Message&) = delete; //!< Deleted copy constructor.
-                inline Message(Message&&)      = delete; //!< Deleted move constructor.
+                inline Error(const std::string& file_, const std::string& func_, int line_) noexcept;
+                inline Error(const Error&) = delete; //!< Deleted copy constructor.
+                inline Error(Error&&)      = delete; //!< Deleted move constructor.
 
                 //  -- Destructors --
-                inline ~Message() noexcept override;
+                inline ~Error() noexcept override;
 
 
                 //  == OPERATORS ==
               public:
                 //  -- Assignment --
-                inline Message& operator=(const Message&) = delete; //!< Deleted copy operator. @return Reference to copied object.
-                inline Message& operator=(Message&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
+                inline Error& operator=(const Error&) = delete; //!< Deleted copy operator. @return Reference to copied object.
+                inline Error& operator=(Error&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
             };
 
 
@@ -79,7 +79,7 @@ namespace arc //! arc namespace
              *  @pre    func_ must not be empty.
              *  @pre    line_ must be greater than zero.
              */
-            inline Message::Message(const std::string& file_, const std::string& func_, const int line_) noexcept
+            inline Error::Error(const std::string& file_, const std::string& func_, const int line_) noexcept
               : Output(file_, func_, line_)
             {
                 assert(!file_.empty());
@@ -92,7 +92,7 @@ namespace arc //! arc namespace
             /**
              *  Reset ansi escape codes and append a newline character.
              */
-            inline Message::~Message() noexcept
+            inline Error::~Error() noexcept
             {
                 *this << ANSI.reset << '\n';
             }
