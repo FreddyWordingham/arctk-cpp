@@ -31,7 +31,7 @@
 //  == NAMESPACE ==
 namespace arc //! arc namespace
 {
-    namespace log //! logging namespace
+    namespace data //! data namespace
     {
 
 
@@ -155,6 +155,11 @@ namespace arc //! arc namespace
             return (utl::parse<T>(_str));
         }
 
+        /**
+         *  Get the serial type string.
+         *
+         *  @return Copy of _str.
+         */
         template <>
         inline std::string Serial::parse() noexcept
         {
@@ -176,7 +181,7 @@ namespace arc //! arc namespace
 
 
 
-    } // namespace log
+    } // namespace data
 } // namespace arc
 
 
