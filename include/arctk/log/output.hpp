@@ -56,6 +56,7 @@ namespace arc //! arc namespace
           public:
             //  -- Constructors --
             inline Output() noexcept;
+            inline Output(const std::string& file_, const std::string& func_, int line_) noexcept;
             inline Output(const std::string& file_, const std::string& func_, int line_, int exit_val_ = 0) noexcept;
             inline Output(const Output&) = delete; //!< Deleted copy constructor.
             inline Output(Output&&)      = delete; //!< Deleted move constructor.
@@ -77,11 +78,39 @@ namespace arc //! arc namespace
         //  -- Constructors --
         /**
          *  Construct a stream object which, when destructed, will write its contents to console output.
+         *  Boolean values are printed as words.
          */
         inline Output::Output() noexcept
           : _exit_val(0)
         {
             *this << std::boolalpha;
+        }
+
+        /**
+         *  If LOCATION is defined, then its value is used to colour the output location of the message instantiation.
+         *
+         *  @param  file_       File location of the message instantiation.
+         *  @param  func_       Function location of the message instantiation.
+         *  @param  line_       Line location of the message instantiation.
+         *
+         *  @pre    file_       must not be empty.
+         *  @pre    func_       must not be empty.
+         *  @pre    line_       must be greater than zero.
+         */
+        inline Output::Output(const std::string& file_, const std::string& func_, const int line_) noexcept
+          : Output()
+        {
+            assert(!file_.empty());
+            assert(!func_.empty());
+            assert(line_ > 0);
+
+#ifdef LOCATION
+            *this << LOCATION << file_ << " :: " << func_ << " :: " << line_ << ANSI.reset << "\n";
+#else
+            (void)(file_);
+            (void)(func_);
+            (void)(line_);
+#endif
         }
 
         /**
