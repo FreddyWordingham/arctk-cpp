@@ -38,23 +38,18 @@ namespace arc //! arc namespace
 
 
 
-        //  == CONSTANTS ==
-        //  -- Settings --
-        constexpr const DEFAULT_EXIT_VAL = 0; //!< Default exit value to be used when not reporting a fatal error.
-
-
-
         //  == CLASS ==
         /**
          *  Console output logging class.
          *  Will print contents of stream to console output upon destruction.
+         *  If _exit_val is set to a positive value upon destruction value is used as program error exit value.
          */
         class Output : public std::stringstream
         {
             //  == FIELDS ==
           private:
             //  -- Exit --
-            const int _exit_val; //!< Exit value. Greater than zero when a fatal error.
+            const int _exit_val; //!< Exit value. Positive when a fatal error.
 
 
             //  == INSTANTIATION --
@@ -113,10 +108,16 @@ namespace arc //! arc namespace
         //  -- Destructors --
         /**
          *  Write contents to console output.
+         *  If _exit_val is positive then exit the program using _exit_val as the error code.
          */
         inline Output::~Output() noexcept
         {
             Term::instance().cout(str());
+
+            if (_exit_val > 0)
+            {
+                exit(_exit_val);
+            }
         }
 
 
