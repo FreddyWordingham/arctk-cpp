@@ -34,6 +34,7 @@ namespace arc //! arc namespace
 
         //  == CLASS ==
         /**
+         *  Store a data table of variable types.
          */
         class Table
         {
