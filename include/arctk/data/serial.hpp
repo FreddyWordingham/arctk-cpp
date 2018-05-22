@@ -38,6 +38,12 @@ namespace arc //! arc namespace
          */
         class Serial
         {
+            //  == FIELDS ==
+          private:
+            //  -- Serialised Object --
+            std::string _str; //!< Serialised string object data.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
