@@ -69,7 +69,7 @@ namespace arc //! arc namespace
             //  == INSTANTIATION --
             //  -- Constructors --
             /**
-             *  Construct a message object which, when destructed, will write its contents to the terminal and exit the program.
+             *  Construct an error message object which, when destructed, will write its contents to the terminal and exit the program.
              *  Error call location is reported.
              *  Error report string is prepended.
              *
