@@ -55,6 +55,24 @@ namespace arc //! arc namespace
 
             //  == METHODS ==
           public:
+            //  -- Setters --
+            template <class T>
+            inline void add_col(const std::string& title_, const std::vector<T>& col_) noexcept
+            {
+                if (_data.find(title) != _data.end())
+                {
+                    ERROR(42) << "Unable to add column to data table.\n"
+                              << "Column title of: '" << title_ << "' already exists.";
+                }
+
+                std::vector<std::string> col;
+                for (size_t i = 0; i < col_.size(); ++i)
+                {
+                    col.emplace_back(utl::to_string(col_[i]));
+                }
+
+                _data.emplace(std::make_pair(title_, col));
+            }
         };
 
 
