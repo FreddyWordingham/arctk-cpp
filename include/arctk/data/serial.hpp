@@ -52,7 +52,7 @@ namespace arc //! arc namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            template <class T, typename>
+            template <class T>
             inline explicit Serial(const T val_) noexcept;
             inline explicit Serial(const std::string& str_) noexcept;
 
@@ -60,9 +60,12 @@ namespace arc //! arc namespace
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            template <class T, typename>
-            inline Serial& operator=(T val_) noexcept;
-            inline Serial& operator=(const std::string& str_) noexcept;
+            template <class T>
+            typename std::enable_if<std::is_fundamental<T>::value, Serial&>::type operator=(T val_);
+            template <class T>
+            typename std::enable_if<std::is_same<T, std::string>::value, Serial&>::type operator=(T val_);
+            template <class T>
+            typename std::enable_if<std::is_same<T, const char*>::value, Serial&>::type operator=(T val_);
 
 
             //  == METHODS ==
@@ -83,7 +86,7 @@ namespace arc //! arc namespace
          *
          *  @param  val_    Value used to form the serialised object.
          */
-        template <class T, typename = typename std::enable_if_t<std::is_fundamental<T>::value>>
+        template <class T>
         inline Serial::Serial(const T val_) noexcept
           : _str(std::to_string(val_))
         {
@@ -103,6 +106,31 @@ namespace arc //! arc namespace
 
         //  == OPERATORS ==
         //  -- Assignment --
+        template <class T>
+        typename std::enable_if<std::is_fundamental<T>::value, Serial&>::type Serial::operator=(const T val_)
+        {
+            _str = std::to_string(val_);
+
+            return (*this);
+        }
+
+        template <class T>
+        typename std::enable_if<std::is_same<T, std::string>::value, Serial&>::type Serial::operator=(const T val_)
+        {
+            _str = val_;
+
+            return (*this);
+        }
+
+        template <class T>
+        typename std::enable_if<std::is_same<T, const char*>::value, Serial&>::type Serial::operator=(const T val_)
+        {
+            _str = std::string(val_);
+
+            return (*this);
+        }
+
+
         /**
          *  Set str_ to a serial object from a value of fundamental type.
          *
@@ -112,13 +140,13 @@ namespace arc //! arc namespace
          *
          *  @return Reference to this object.
          */
-        template <class T, typename = typename std::enable_if_t<std::is_fundamental<T>::value>>
-        inline Serial& Serial::operator=(const T val_) noexcept
-        {
-            _str = std::to_string(val_);
+        /*        template <class T, typename = typename std::enable_if_t<std::is_fundamental<T>::value>>
+                inline Serial& Serial::operator=(const T val_) noexcept
+                {
+                    _str = std::to_string(val_);
 
-            return (*this);
-        }
+                    return (*this);
+                }*/
 
         /**
          *  Set str_ to a string.
@@ -127,12 +155,12 @@ namespace arc //! arc namespace
          *
          *  @return Reference to this object.
          */
-        inline Serial& Serial::operator=(const std::string& str_) noexcept
-        {
-            _str = str_;
+        /*        inline Serial& Serial::operator=(const std::string& str_) noexcept
+                {
+                    _str = str_;
 
-            return (*this);
-        }
+                    return (*this);
+                }*/
 
 
 
