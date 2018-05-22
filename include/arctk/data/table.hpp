@@ -41,7 +41,8 @@ namespace arc //! arc namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            std::vector<std::string> _title; //!< Vector of column title strings.
+            std::vector<std::string>              _title; //!< Vector of column title strings.
+            std::vector<std::vector<std::string>> _data;  //!< Table of stringified data.
 
 
             //  == INSTANTIATION ==
