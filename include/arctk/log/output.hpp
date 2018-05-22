@@ -45,6 +45,12 @@ namespace arc //! arc namespace
          */
         class Output : public std::stringstream
         {
+            //  == FIELDS ==
+          private:
+            //  -- Exit --
+            const int _exit_val; //!< Exit value. Greater than zero when a fatal error.
+
+
             //  == INSTANTIATION --
           public:
             //  -- Constructors --
