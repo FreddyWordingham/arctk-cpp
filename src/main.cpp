@@ -16,6 +16,7 @@
 #include <arctk/constant/math.hpp>
 #include <arctk/constant/phys.hpp>
 #include <arctk/data.hpp>
+#include <arctk/data/table.hpp>
 #include <arctk/log.hpp>
 #include <arctk/log/ansi.hpp>
 #include <arctk/log/output.hpp>
