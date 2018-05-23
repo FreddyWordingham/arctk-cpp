@@ -107,7 +107,7 @@ namespace arc //! arc namespace
             return (_name);
         }
 
-        inline const std::vector<Serial>& data() const noexcept
+        inline const std::vector<Serial>& Column::data() const noexcept
         {
             return (_data);
         }
