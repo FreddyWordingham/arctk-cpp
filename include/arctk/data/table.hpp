@@ -21,6 +21,7 @@
 
 //  == INCLUDES ==
 //  -- Std --
+#include <tuple>
 
 
 
@@ -41,6 +42,10 @@ namespace arc //! arc namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Data --
+            std::tuple<std::vector<T>...> _cols; //!< Data columns.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
