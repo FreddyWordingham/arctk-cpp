@@ -52,7 +52,7 @@ namespace arc //! arc namespace
         };
 
         template <typename T, typename F, int... Is>
-        std::string for_each(T&& t, F f, const size_t i, seq<Is...>)
+        std::string str_for_each(T&& t, F f, const size_t i, seq<Is...>)
         {
             std::stringstream stream;
 
@@ -62,11 +62,11 @@ namespace arc //! arc namespace
         }
 
         template <typename... Ts, typename F>
-        std::string for_each_in_tuple(std::tuple<Ts...>& t, F f, const size_t i)
+        std::string str_for_each_in_tuple(std::tuple<Ts...>& t, F f, const size_t i)
         {
             std::stringstream stream;
 
-            stream << for_each(t, f, i, gen_seq<sizeof...(Ts)>());
+            stream << str_for_each(t, f, i, gen_seq<sizeof...(Ts)>());
 
             return (stream.str());
         }
@@ -141,7 +141,7 @@ namespace arc //! arc namespace
 
                 for (size_t i = 0; i < 5; ++i)
                 {
-                    stream << for_each_in_tuple(_cols, print_row(), i) << "\n";
+                    stream << str_for_each_in_tuple(_cols, print_row(), i) << "\n";
                 }
 
                 return (stream.str());
