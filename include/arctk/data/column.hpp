@@ -81,6 +81,8 @@ namespace arc //! arc namespace
             //  -- Access --
             inline Serial&       front() noexcept;
             inline const Serial& front() const noexcept;
+            inline Serial&       back() noexcept;
+            inline const Serial& back() const noexcept;
         };
 
 
@@ -176,6 +178,16 @@ namespace arc //! arc namespace
         inline const Serial& Column::front() const noexcept
         {
             return (_data.front());
+        }
+
+        inline Serial& Column::back() noexcept
+        {
+            return (_data.back());
+        }
+
+        inline const Serial& Column::back() const noexcept
+        {
+            return (_data.back());
         }
 
 
