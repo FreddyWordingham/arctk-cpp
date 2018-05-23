@@ -53,6 +53,8 @@ namespace arc //! arc namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            template <class T>
+            inline Column(const std::string& name_, const std::vector<T>& data_) noexcept;
 
 
             //  == OPERATORS ==
@@ -62,6 +64,17 @@ namespace arc //! arc namespace
             //  -- Getters --
             const std::string& name() const noexcept;
         };
+
+
+
+        //  == INSTANTIATION ==
+        //  -- Constructors --
+        template <class T>
+        inline Column::Column(const std::string& name_, const std::vector<T>& data_) noexcept
+          : _name(name_)
+          , _data(init_data(data_))
+        {
+        }
 
 
 
