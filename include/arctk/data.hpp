@@ -23,6 +23,7 @@
 //  -- Arctk --
 #include <arctk/data/column.hpp>
 #include <arctk/data/serial.hpp>
+#include <arctk/data/table.hpp>
 
 
 
