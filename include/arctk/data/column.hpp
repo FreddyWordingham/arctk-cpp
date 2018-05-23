@@ -46,7 +46,7 @@ namespace arc //! arc namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            const std::string   _name; //!< Name of the data column.
+            std::string         _name; //!< Name of the data column.
             std::vector<Serial> _data; //!< Serialised vector.
 
 
