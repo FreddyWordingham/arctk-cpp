@@ -77,6 +77,10 @@ namespace arc //! arc namespace
             inline std::vector<T> parse() const noexcept;
             inline bool           empty() const noexcept;
             inline size_t         size() const noexcept;
+
+            //  -- Access --
+            inline Serial&       front() noexcept;
+            inline const Serial& front() const noexcept;
         };
 
 
@@ -160,6 +164,18 @@ namespace arc //! arc namespace
         inline size_t Column::size() const noexcept
         {
             return (_data.size());
+        }
+
+
+        //  -- Access --
+        inline Serial& Column::front() noexcept
+        {
+            return (_data.front());
+        }
+
+        inline const Serial& Column::front() const noexcept
+        {
+            return (_data.front());
         }
 
 
