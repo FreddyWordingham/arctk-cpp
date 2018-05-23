@@ -22,6 +22,7 @@
 //  == INCLUDES ==
 //  -- Std --
 #include <tuple>
+#include <vector>
 
 
 
@@ -38,6 +39,7 @@ namespace arc //! arc namespace
          *  Data table class.
          *  Stores vectors of different types.
          */
+        template <class... T>
         class Table
         {
             //  == FIELDS ==
@@ -49,11 +51,22 @@ namespace arc //! arc namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Table(const std::tuple<std::vector<T>...> cols_) noexcept;
 
 
             //  == METHODS ==
           public:
         };
+
+
+
+        //  == INSTANTIATION ==
+        //  -- Constructors --
+        template <class... T>
+        inline Table<T...>::Table(const std::tuple<std::vector<T>...> cols_) noexcept
+          : _cols(cols_)
+        {
+        }
 
 
 
