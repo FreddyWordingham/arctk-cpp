@@ -76,6 +76,7 @@ namespace arc //! arc namespace
             template <class T>
             inline std::vector<T> parse() const noexcept;
             inline bool           empty() const noexcept;
+            inline size_t         size() const noexcept;
         };
 
 
@@ -154,6 +155,11 @@ namespace arc //! arc namespace
         inline bool Column::empty() const noexcept
         {
             return (_data.empty());
+        }
+
+        inline size_t Column::size() const noexcept
+        {
+            return (_data.size());
         }
 
 
