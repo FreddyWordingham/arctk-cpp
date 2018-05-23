@@ -159,7 +159,7 @@ namespace arc //! arc namespace
          *
          *  @return Copt of _str.
          */
-        inline std::string Serial::str() noexcept
+        inline std::string Serial::str() const noexcept
         {
             return (_str);
         }

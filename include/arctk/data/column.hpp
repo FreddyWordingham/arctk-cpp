@@ -106,6 +106,20 @@ namespace arc //! arc namespace
             return (_name);
         }
 
+        template <class T>
+        inline std::vector<T> Column::parse() const noexcept
+        {
+            std::vector<T> vec;
+            vec.reserve(_data.size());
+
+            for (size_t i = 0; i < _data.size(); ++i)
+            {
+                vec.emplace_back(_data[i].parse<T>());
+            }
+
+            return (vec);
+        }
+
 
 
     } // namespace data
