@@ -63,6 +63,11 @@ namespace arc //! arc namespace
 
             //  == OPERATORS ==
           public:
+            //  -- Access --
+            inline Serial&       operator[](size_t index_) noexcept;
+            inline const Serial& operator[](size_t index_) const noexcept;
+
+
             //  == METHODS ==
           public:
             //  -- Getters --
@@ -98,6 +103,25 @@ namespace arc //! arc namespace
 
             return (data);
         }
+
+
+
+        //  == OPERATORS ==
+        //  -- Access --
+        inline Serial& Column::operator[](const size_t index_) noexcept
+        {
+            assert(index_ < _data.size());
+
+            return (_data[index_]);
+        }
+
+        inline const Serial& Column::operator[](const size_t index_) const noexcept
+        {
+            assert(index_ < _data.size());
+
+            return (_data[index_]);
+        }
+
 
 
         //  == METHODS ==
