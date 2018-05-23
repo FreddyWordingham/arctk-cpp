@@ -103,6 +103,37 @@ namespace arc //! arc namespace
 
 
 
+        template <typename T, typename F, int... Is>
+        size_t for_each(T&& t, F f, seq<Is...>)
+        {
+            size_t max{0};
+
+            auto l = {(max = f(std::get<Is>(t), max), 0)...};
+
+            return (max);
+        }
+
+        template <typename... Ts, typename F>
+        size_t max_tuple_size(std::tuple<Ts...>& t, F f)
+        {
+            size_t max{0};
+
+            max = for_each(t, f, gen_seq<sizeof...(Ts)>());
+
+            return (max);
+        }
+
+        struct get_max_size
+        {
+            template <typename T>
+            size_t operator()(const T& t, const size_t size_)
+            {
+                return (std::max(size_, t.size()));
+            }
+        };
+
+
+
         //  == CLASS ==
         /**
          *  Data table class.
@@ -134,12 +165,17 @@ namespace arc //! arc namespace
                 return (sizeof...(T));
             }
 
+            inline size_t num_rows() noexcept
+            {
+                return (max_tuple_size(_cols, get_max_size()));
+            }
+
 
             inline std::string str() noexcept
             {
                 std::stringstream stream;
 
-                for (size_t i = 0; i < 5; ++i)
+                for (size_t i = 0; i < num_rows(); ++i)
                 {
                     stream << str_for_each_in_tuple(_cols, print_row(), i) << "\n";
                 }
