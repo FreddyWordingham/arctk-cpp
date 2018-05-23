@@ -134,6 +134,29 @@ namespace arc //! arc namespace
 
 
 
+        template <typename T, typename F, int... Is, typename R, int... Rs>
+        void t_push_back(T&& t, F f, seq<Is...>, R&& r, seq<Rs...>)
+        {
+            auto l = {(f(std::get<Is>(t), std::get<Rs>(r)), 0)...};
+        }
+
+        template <typename... Ts, typename F, typename... Rs>
+        void tuple_push_back(std::tuple<Ts...>& t, F f, const std::tuple<Rs...>& row_) // Call
+        {
+            t_push_back(t, f, gen_seq<sizeof...(Ts)>(), row_, gen_seq<sizeof...(Rs)>());
+        }
+
+        struct s_tuple_push_back // Using this
+        {
+            template <typename T, typename R>
+            void operator()(T& t, const R& r)
+            {
+                t.push_back(r);
+            }
+        };
+
+
+
         //  == CLASS ==
         /**
          *  Data table class.
@@ -181,6 +204,11 @@ namespace arc //! arc namespace
                 }
 
                 return (stream.str());
+            }
+
+            inline void push_back(const std::tuple<T...>& row_) noexcept
+            {
+                tuple_push_back(_cols, s_tuple_push_back(), row_);
             }
         };
 
