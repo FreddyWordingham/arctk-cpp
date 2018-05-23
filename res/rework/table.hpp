@@ -46,12 +46,13 @@ namespace arc //! arc namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            std::vector<Column> _cols;
+            std::vector<Column> _cols; //<! Vector of data columns.
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+
 
             //  == OPERATORS ==
           public:
