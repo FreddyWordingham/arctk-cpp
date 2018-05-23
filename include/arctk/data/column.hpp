@@ -47,7 +47,7 @@ namespace arc //! arc namespace
           private:
             //  -- Data --
             const std::string         _name; //!< Name of the data column.
-            const std::vector<serial> _data; //!< Serialised vector.
+            const std::vector<Serial> _data; //!< Serialised vector.
 
 
             //  == INSTANTIATION ==
@@ -55,6 +55,10 @@ namespace arc //! arc namespace
             //  -- Constructors --
             template <class T>
             inline Column(const std::string& name_, const std::vector<T>& data_) noexcept;
+
+            //  -- Initialisation --
+            template <class T>
+            inline std::vector<Serial> init_data(const std::vector<T>& data_) noexcept;
 
 
             //  == OPERATORS ==
@@ -76,6 +80,21 @@ namespace arc //! arc namespace
         {
         }
 
+
+        //  -- Initialisation --
+        template <class T>
+        inline std::vector<Serial> Column::init_data(const std::vector<T>& data_) noexcept
+        {
+            std::vector<Serial> data;
+            data.reserve(data_.size());
+
+            for (size_t i = 0; i < data_.size(); ++i)
+            {
+                data.emplace_back(data_[i]);
+            }
+
+            return (data);
+        }
 
 
         //  == METHODS ==
