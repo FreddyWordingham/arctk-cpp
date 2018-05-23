@@ -21,6 +21,8 @@
 
 //  == INCLUDES ==
 //  -- Std --
+#include <sstream>
+#include <string>
 #include <tuple>
 #include <vector>
 
@@ -31,6 +33,73 @@ namespace arc //! arc namespace
 {
     namespace data //! data namespace
     {
+
+
+
+        template <int... Is>
+        struct seq
+        {
+        };
+
+        template <int N, int... Is>
+        struct gen_seq : gen_seq<N - 1, N - 1, Is...>
+        {
+        };
+
+        template <int... Is>
+        struct gen_seq<0, Is...> : seq<Is...>
+        {
+        };
+
+        template <typename T, typename F, int... Is>
+        std::string for_each(T&& t, F f, const size_t i, seq<Is...>)
+        {
+            std::stringstream stream;
+
+            auto l = {(stream << f(std::get<Is>(t), i), 0)...};
+
+            return (stream.str());
+        }
+
+        template <typename... Ts, typename F>
+        std::string for_each_in_tuple(std::tuple<Ts...>& t, F f, const size_t i)
+        {
+            std::stringstream stream;
+
+            stream << for_each(t, f, i, gen_seq<sizeof...(Ts)>());
+
+            return (stream.str());
+        }
+
+
+        struct print_row
+        {
+            size_t index{0};
+
+            template <typename T>
+            std::string operator()(const T& t, const size_t i)
+            {
+                std::stringstream stream;
+
+                if (index != 0)
+                {
+                    stream << ',';
+                }
+
+                if (i < t.size())
+                {
+                    stream << t[i];
+                }
+                else
+                {
+                    stream << "*";
+                }
+
+                ++index;
+
+                return (stream.str());
+            }
+        };
 
 
 
@@ -60,14 +129,22 @@ namespace arc //! arc namespace
             template <std::size_t I, class... Ts>
             inline auto& col() noexcept;
 
-            inline std::string str() noexcept
-            {
-                assert(!std::get<0>(_cols).empty());
-            }
-
             inline size_t num_cols() noexcept
             {
-                return (sizeof...(Types));
+                return (sizeof...(T));
+            }
+
+
+            inline std::string str() noexcept
+            {
+                std::stringstream stream;
+
+                for (size_t i = 0; i < 5; ++i)
+                {
+                    stream << for_each_in_tuple(_cols, print_row(), i) << "\n";
+                }
+
+                return (stream.str());
             }
         };
 
