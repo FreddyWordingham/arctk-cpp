@@ -66,7 +66,8 @@ namespace arc //! arc namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const std::string& name() const noexcept;
+            inline const std::string&         name() const noexcept;
+            inline const std::vector<Serial>& data() const noexcept;
             template <class T>
             inline std::vector<T> parse() const noexcept;
         };
@@ -104,6 +105,11 @@ namespace arc //! arc namespace
         inline const std::string& Column::name() const noexcept
         {
             return (_name);
+        }
+
+        inline const std::vector<Serial>& data() const noexcept
+        {
+            return (_data);
         }
 
         template <class T>
