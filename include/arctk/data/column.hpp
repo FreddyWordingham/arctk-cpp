@@ -75,6 +75,7 @@ namespace arc //! arc namespace
             inline const std::vector<Serial>& data() const noexcept;
             template <class T>
             inline std::vector<T> parse() const noexcept;
+            inline bool           empty() const noexcept;
         };
 
 
@@ -148,6 +149,11 @@ namespace arc //! arc namespace
             }
 
             return (vec);
+        }
+
+        inline bool Column::empty() const noexcept
+        {
+            return (_data.empty());
         }
 
 
