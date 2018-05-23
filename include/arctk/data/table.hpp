@@ -56,6 +56,9 @@ namespace arc //! arc namespace
 
             //  == METHODS ==
           public:
+            //  -- Access --
+            template <std::size_t I, class... Ts>
+            inline auto& col() noexcept;
         };
 
 
@@ -66,6 +69,17 @@ namespace arc //! arc namespace
         inline Table<T...>::Table(const std::tuple<std::vector<T>...> cols_) noexcept
           : _cols(cols_)
         {
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Access --
+        template <class... T>
+        template <std::size_t I, class... Ts>
+        inline auto& Table<T...>::col() noexcept
+        {
+            return (std::get<I>(_cols));
         }
 
 
