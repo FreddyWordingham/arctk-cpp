@@ -59,7 +59,18 @@ namespace arc //! arc namespace
           public:
             //  == METHODS ==
           public:
+            //  -- Getters --
+            const std::string& name() const noexcept;
         };
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        const std::string& Column::name() const noexcept
+        {
+            return (_name);
+        }
 
 
 
