@@ -69,11 +69,11 @@ namespace arc //! arc namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline std::string str() noexcept;
+            inline std::string str() const noexcept;
             template <class T>
-            inline T parse() noexcept;
+            inline T parse() const noexcept;
             template <class T>
-            inline T parsable() noexcept;
+            inline T parsable() const noexcept;
         };
 
 
@@ -174,7 +174,7 @@ namespace arc //! arc namespace
          *  @return Converted value.
          */
         template <class T>
-        inline T Serial::parse() noexcept
+        inline T Serial::parse() const noexcept
         {
             assert(parsable<T>());
 
@@ -187,7 +187,7 @@ namespace arc //! arc namespace
          *  @return Copy of _str.
          */
         template <>
-        inline std::string Serial::parse() noexcept
+        inline std::string Serial::parse() const noexcept
         {
             return (_str);
         }
@@ -200,7 +200,7 @@ namespace arc //! arc namespace
          *  @return True if _str can be parsed to type T.
          */
         template <class T>
-        inline T Serial::parsable() noexcept
+        inline T Serial::parsable() const noexcept
         {
             return (utl::parsable<T>(_str));
         }

@@ -68,7 +68,7 @@ namespace arc //! arc namespace
             //  -- Getters --
             inline const std::string& name() const noexcept;
             template <class T>
-            inline
+            inline std::vector<T> parse() const noexcept;
         };
 
 
