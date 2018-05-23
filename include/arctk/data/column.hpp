@@ -83,6 +83,9 @@ namespace arc //! arc namespace
             inline const Serial& front() const noexcept;
             inline Serial&       back() noexcept;
             inline const Serial& back() const noexcept;
+
+            //  -- Setters --
+            inline void push_back(const Serial& val_) noexcept;
         };
 
 
@@ -188,6 +191,13 @@ namespace arc //! arc namespace
         inline const Serial& Column::back() const noexcept
         {
             return (_data.back());
+        }
+
+
+        //  -- Setters --
+        inline void Column::push_back(const Serial& val_) noexcept
+        {
+            _data.push_back(val_);
         }
 
 
