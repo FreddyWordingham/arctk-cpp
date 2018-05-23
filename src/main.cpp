@@ -18,6 +18,7 @@
 #include <arctk/data.hpp>
 #include <arctk/data/column.hpp>
 #include <arctk/data/serial.hpp>
+#include <arctk/data/table.hpp>
 #include <arctk/log.hpp>
 #include <arctk/log/ansi.hpp>
 #include <arctk/log/output.hpp>
