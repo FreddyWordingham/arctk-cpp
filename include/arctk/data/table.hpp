@@ -59,6 +59,16 @@ namespace arc //! arc namespace
             //  -- Access --
             template <std::size_t I, class... Ts>
             inline auto& col() noexcept;
+
+            inline std::string str() noexcept
+            {
+                assert(!std::get<0>(_cols).empty());
+            }
+
+            inline size_t num_cols() noexcept
+            {
+                return (sizeof...(Types));
+            }
         };
 
 
