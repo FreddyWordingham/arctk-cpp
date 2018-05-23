@@ -86,6 +86,7 @@ namespace arc //! arc namespace
 
             //  -- Setters --
             inline void set_name(const std::string& name_) noexcept;
+            inline void set_data(const std::vector<Serial>& data_) noexcept;
             inline void push_back(const Serial& val_) noexcept;
             inline void pop_back() noexcept;
         };
@@ -200,6 +201,11 @@ namespace arc //! arc namespace
         inline void Column::set_name(const std::string& name_) noexcept
         {
             _name = name_;
+        }
+
+        inline void Column::set_data(const std::vector<Serial>& data_) noexcept
+        {
+            _data = data_;
         }
 
         inline void Column::push_back(const Serial& val_) noexcept
