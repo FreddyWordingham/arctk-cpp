@@ -43,10 +43,22 @@ namespace arc //! arc namespace
             //  - Data --
             std::tuple<std::vector<T>...> _cols; //!< Data columns.
 
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline explicit Table(const std::tuple<std::vector<T>...> _cols) noexcept;
         };
+
+
+
+        //  == INSTANTIATION ==
+        //  -- Constructors --
+        template <class... T>
+        inline Table<T...>::Table(const std::tuple<std::vector<T>...> _cols) noexcept
+          : _cols(cols_)
+        {
+        }
 
 
 
