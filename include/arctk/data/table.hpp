@@ -35,10 +35,14 @@ namespace arc //! arc namespace
         //  == CLASS ==
         /**
          */
+        template <class... T>
         class Table
         {
             //  == FIELDS ==
           private:
+            //  - Data --
+            std::tuple<std::vector<T>...> _cols; //!< Data columns.
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
