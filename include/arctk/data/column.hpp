@@ -42,6 +42,7 @@ namespace arc //! arc namespace
             //  == FIELDS ==
           private:
             //  - Data --
+            std::vector<T> _data;
 
 
             //  == INSTANTIATION ==
