@@ -56,16 +56,9 @@ namespace arc //! arc namespace
           public:
             //  -- Getters --
             template <std::size_t I, class S = typename std::tuple_element<I, std::tuple<T...>>::type>
-            std::vector<S>& col()
-            {
-                return (std::get<I>(_cols));
-            }
-
+            std::vector<S>& col();
             template <std::size_t I, class S = typename std::tuple_element<I, std::tuple<T...>>::type>
-            const std::vector<S>& col() const
-            {
-                return (std::get<I>(_cols));
-            }
+            const std::vector<S>& col() const;
         };
 
 
@@ -76,6 +69,22 @@ namespace arc //! arc namespace
         inline Table<T...>::Table(const std::tuple<std::vector<T>...> cols_) noexcept
           : _cols(cols_)
         {
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        template <std::size_t I, class S = typename std::tuple_element<I, std::tuple<T...>>::type>
+        std::vector<S>& Table::col()
+        {
+            return (std::get<I>(_cols));
+        }
+
+        template <std::size_t I, class S = typename std::tuple_element<I, std::tuple<T...>>::type>
+        const std::vector<S>& Table::col() const
+        {
+            return (std::get<I>(_cols));
         }
 
 
