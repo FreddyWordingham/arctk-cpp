@@ -546,6 +546,8 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& a
 {
     if (arr_.empty())
     {
+        stream_ << "{}";
+
         return (stream_);
     }
 
