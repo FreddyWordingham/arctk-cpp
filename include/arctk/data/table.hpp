@@ -49,7 +49,7 @@ namespace arc //! arc namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline explicit Table(const std::tuple<std::vector<T>...> _cols) noexcept;
+            inline explicit Table(const std::tuple<std::vector<T>...> cols_) noexcept;
 
 
             //  == METHODS ==
@@ -73,7 +73,7 @@ namespace arc //! arc namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <class... T>
-        inline Table<T...>::Table(const std::tuple<std::vector<T>...> _cols) noexcept
+        inline Table<T...>::Table(const std::tuple<std::vector<T>...> cols_) noexcept
           : _cols(cols_)
         {
         }
