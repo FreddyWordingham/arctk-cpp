@@ -48,6 +48,16 @@ namespace arc //! arc namespace
           public:
             //  -- Constructors --
             inline explicit Table(const std::tuple<std::vector<T>...> _cols) noexcept;
+
+
+            //  == METHODS ==
+          public:
+            //  -- Getters --
+            template <size_t I, class S = typename std::tuple_element<I, std::tuple<T...>>::type>
+            std::vector<S>& col()
+            {
+                return (std::get<I>(_cols[i]));
+            }
         };
 
 
