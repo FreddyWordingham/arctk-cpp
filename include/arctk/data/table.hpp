@@ -58,13 +58,13 @@ namespace arc //! arc namespace
             template <size_t I, class S = typename std::tuple_element<I, std::tuple<T...>>::type>
             std::vector<S>& col()
             {
-                return (std::get<I>(_cols[i]));
+                return (std::get<I>(_cols));
             }
 
             template <size_t I, class S = typename std::tuple_element<I, std::tuple<T...>>::type>
             const std::vector<S>& col()
             {
-                return (std::get<I>(_cols[i]));
+                return (std::get<I>(_cols));
             }
         };
 
