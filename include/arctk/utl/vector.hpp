@@ -527,7 +527,7 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec
 {
     if (vec_.empty())
     {
-        stream << "{}";
+        stream_ << "{}";
 
         return (stream_);
     }
