@@ -83,6 +83,32 @@ namespace arc //! arctk namespace
         }
 
         /**
+         *  Determine if all elements of a container are less than, or equal to, a given limit.
+         *
+         *  @tparam C   Container type.
+         *  @tparam I   Iterator type of C.
+         *  @tparam T   Type stored by C.
+         *
+         *  @param  cont_   Container to test.
+         *  @param  limit_  Limit to compare elements against.
+         *
+         *  @return True if all elements are less than, or equal to, the limit.
+         */
+        template <typename C, typename I, typename T>
+        inline bool always_less_than_or_equal_to(const C& cont_, const T limit_) noexcept
+        {
+            for (I it = std::begin(cont_); it != std::end(cont_); ++it)
+            {
+                if (!(*it <= limit_))
+                {
+                    return (false);
+                }
+            }
+
+            return (true);
+        }
+
+        /**
          *  Determine if all elements of a container are greater than a given limit.
          *
          *  @tparam C   Container type.
