@@ -66,7 +66,7 @@ namespace arc //! arc namespace
          *
          *  @return Size of the container.
          */
-        template <typename C, typename I>
+        template <typename C>
         inline size_t size(const C& cont_) noexcept
         {
             return (std::distance(std::begin(cont_), std::end(cont_)));
@@ -101,7 +101,7 @@ namespace arc //! arc namespace
          *
          *  @return Average of the containers elements.
          */
-        template <typename C, typename I>
+        template <typename C>
         inline double ave(const C& cont_) noexcept
         {
             return (static_cast<double>(sum(cont_)) / cont::size(cont_));
