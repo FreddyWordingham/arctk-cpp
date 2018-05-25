@@ -20,6 +20,7 @@
 
 
 //  == IMPORTS ==
+#include <cassert>
 #include <iterator>
 
 
@@ -53,11 +54,15 @@ namespace arc //! arctk namespace
          *
          *  @param  cont_   Container to determine the minimum element index of.
          *
+         *  @pre    cont_ must not be empty.
+         *
          *  @return Index of the minimum element within the container.
          */
         template <typename C, typename I>
         inline size_t min_index(const C& cont_) noexcept
         {
+            assert(!cont_.empty());
+
             I min_index = std::begin(cont_);
 
             for (I it = min_index + 1; it != std::end(cont_); ++it)
@@ -79,11 +84,15 @@ namespace arc //! arctk namespace
          *
          *  @param  cont_   Container to determine the maximum element index of.
          *
+         *  @pre    cont_ must not be empty.
+         *
          *  @return Index of the maximum element within the container.
          */
         template <typename C, typename I>
         inline size_t max_index(const C& cont_) noexcept
         {
+            assert(!cont_.empty());
+
             I max_index = std::begin(cont_);
 
             for (I it = max_index + 1; it != std::end(cont_); ++it)
@@ -105,11 +114,15 @@ namespace arc //! arctk namespace
          *
          *  @param  cont_   Container to determine the minimum element of.
          *
+         *  @pre    cont_ must not be empty.
+         *
          *  @return Value of the minimum element within the container.
          */
         template <typename C, typename T>
         inline T min(const C& cont_) noexcept
         {
+            assert(!cont_.empty());
+
             return (cont_[min_index(cont_)]);
         }
 
@@ -126,6 +139,8 @@ namespace arc //! arctk namespace
         template <typename C, typename T>
         inline T max(const C& cont_) noexcept
         {
+            assert(!cont_.empty());
+
             return (cont_[max_index(cont_)]);
         }
 
