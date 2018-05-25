@@ -52,7 +52,8 @@ namespace arc //! arc namespace
             //  == METHODS ==
           public:
             //  -- Io --
-            virtual inline std::string str() const noexcept = 0;
+            //            virtual inline std::string str() const noexcept = 0;
+            //            inline void save(const std::string& path_) const noexcept;
         };
 
 
