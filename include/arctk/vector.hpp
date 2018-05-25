@@ -95,6 +95,7 @@ namespace arc //! arc namespace
     template <class T>
     inline const std::vector<T>& Vector<T>::std() const noexcept
     {
+        return (_std);
     }
 
 
@@ -102,6 +103,7 @@ namespace arc //! arc namespace
     template <class T>
     inline std::vector<T>& Vector<T>::std() noexcept
     {
+        return (_std);
     }
 
 
