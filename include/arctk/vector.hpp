@@ -62,6 +62,7 @@ namespace arc //! arc namespace
         inline const std::vector<T>& std() const noexcept;
         inline bool                  empty() const noexcept;
         inline size_t                size() const noexcept;
+        inline size_t                capacity() const noexcept;
 
         //  -- Access --
         inline std::vector<T>& std() noexcept;
@@ -117,6 +118,12 @@ namespace arc //! arc namespace
     inline size_t Vector<T>::size() const noexcept
     {
         return (_std.size());
+    }
+
+    template <class T>
+    inline size_t Vector<T>::capacity() const noexcept
+    {
+        return (_std.capacity());
     }
 
 
