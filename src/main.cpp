@@ -11,28 +11,6 @@
 
 //  == INCLUDES ==
 //  -- Arctk --
-#include <arctk/config.hpp>
-#include <arctk/constant.hpp>
-#include <arctk/constant/math.hpp>
-#include <arctk/constant/phys.hpp>
-#include <arctk/data.hpp>
-#include <arctk/data/table.hpp>
-#include <arctk/log.hpp>
-#include <arctk/log/ansi.hpp>
-#include <arctk/log/output.hpp>
-#include <arctk/log/output/error.hpp>
-#include <arctk/log/output/message.hpp>
-#include <arctk/log/output/progress.hpp>
-#include <arctk/log/output/stopwatch.hpp>
-#include <arctk/log/output/verbose.hpp>
-#include <arctk/log/output/warning.hpp>
-#include <arctk/log/term.hpp>
-#include <arctk/math.hpp>
-#include <arctk/utl.hpp>
-#include <arctk/utl/array.hpp>
-#include <arctk/utl/char.hpp>
-#include <arctk/utl/string.hpp>
-#include <arctk/utl/vector.hpp>
 
 
 
