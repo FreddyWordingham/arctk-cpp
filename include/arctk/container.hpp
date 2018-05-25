@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/math.hpp
+ *  @file   arctk/container.hpp
  *  @date   25/05/2018
  *  @author Freddy Wordingham
  *
- *  Collection of mathematical classes and functions.
+ *  Collection of container focused functions.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_MATH_HPP
-#define ARCTK_MATH_HPP
+#ifndef ARCTK_CONTAINER_HPP
+#define ARCTK_CONTAINER_HPP
 
 
 
@@ -28,7 +28,7 @@
 //  == NAMESPACE ==
 namespace arc //! arc namespace
 {
-    namespace math //! math namespace
+    namespace cont //! container namespace
     {
 
 
@@ -81,12 +81,12 @@ namespace arc //! arc namespace
                 ave += *it;
             }
 
-            return (ave);
+            return (ave /);
         }
 
 
 
-    } // namespace math
+    } // namespace cont
 } // namespace arc
 
 
@@ -97,4 +97,4 @@ namespace arc //! arc namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_MATH_HPP
+#endif // ARCTK_CONTAINER_HPP
