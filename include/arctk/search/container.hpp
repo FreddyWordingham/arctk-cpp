@@ -28,7 +28,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace math //! mathematical namespace
+    namespace search //! search namespace
     {
 
 
@@ -41,7 +41,7 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace math
+    } // namespace search
 } // namespace arc
 
 
