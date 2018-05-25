@@ -37,6 +37,8 @@ namespace arc //! arctk namespace
         inline size_t size(const C& cont_) noexcept;
         template <typename C, typename T = typename C::value_type>
         inline bool contains(const C& cont_, const T& val_) noexcept;
+        template <typename C>
+        inline bool ascending(const C& cont_) noexcept;
         template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
         inline bool always_less_than(const C& cont_) noexcept;
         template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
@@ -79,6 +81,35 @@ namespace arc //! arctk namespace
         inline bool contains(const C& cont_, const T& val_) noexcept
         {
             return (std::find(std::begin(cont_), std::end(cont_), val_) != std::end(cont_));
+        }
+
+        /**
+         *  Test if a containers elements are sorted in ascending order.
+         *  Container is still considered ascending if consecutive values are equal.
+         *
+         *  @tparam C   Container type.
+         *  @tparam I   Iterator type of C.
+         *
+         *  @param  cont_   Container to test.
+         *
+         *  @pre    cont_ must contain more than one element.
+         *
+         *  @return True if the containers elements are sorted in ascending order.
+         */
+        template <typename C, typename I>
+        inline bool ascending(const C& cont_) noexcept
+        {
+            assert(size(cont_) > 1);
+
+            for (I it = std::begin(cont_); it != std::prev(std::end(cont_)); ++it)
+            {
+                if (*it < *std::next(it))
+                {
+                    return (false);
+                }
+            }
+
+            return (true);
         }
 
         /**
