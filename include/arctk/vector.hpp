@@ -45,7 +45,7 @@ namespace arc //! arc namespace
         //  == INSTANTIATION ==
       public:
         //  -- Constructors --
-        inline Vector(size_t size_) noexcept;
+        inline explicit Vector(size_t size_) noexcept;
         inline Vector(std::initializer_list<T> init_) noexcept;
 
 
