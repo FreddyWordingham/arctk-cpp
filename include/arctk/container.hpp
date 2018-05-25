@@ -34,6 +34,10 @@ namespace arc //! arc namespace
 
 
         //  == FUNCTION PROTOTYPES ==
+        //  -- Properties --
+        template <typename C>
+        inline size_t size(const C& cont_) noexcept;
+
         //  -- Mathematical --
         template <typename C, typename T = typename C::value_type>
         inline T sum(const C& cont_) noexcept;
@@ -43,6 +47,21 @@ namespace arc //! arc namespace
 
 
         //  == FUNCTIONS ==
+        //  -- Properties --
+        /**
+         *  Calculate the size of a container.
+         *
+         *  @param  cont_   Container to determine the size of.
+         *
+         *  @return Size of the container.
+         */
+        template <typename C>
+        inline size_t size(const C& cont_) noexcept
+        {
+            return (std::distance(std::begin(cont_), std::end(cont_)));
+        }
+
+
         //  -- Mathematical --
         /**
          *  Calculate the sum of a container's elements.
