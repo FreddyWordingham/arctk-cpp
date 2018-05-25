@@ -82,6 +82,32 @@ namespace arc //! arctk namespace
             return (true);
         }
 
+        /**
+         *  Determine if all elements of a container are greater than a given limit.
+         *
+         *  @tparam C   Container type.
+         *  @tparam I   Iterator type of C.
+         *  @tparam T   Type stored by C.
+         *
+         *  @param  cont_   Container to test.
+         *  @param  limit_  Limit to compare elements against.
+         *
+         *  @return True if all elements are greater than the limit.
+         */
+        template <typename C, typename I, typename T>
+        inline bool always_greater_than(const C& cont_, const T limit_) noexcept
+        {
+            for (I it = std::begin(cont_); it != std::end(cont_); ++it)
+            {
+                if (!(*it > limit_))
+                {
+                    return (false);
+                }
+            }
+
+            return (true);
+        }
+
 
 
     } // namespace prop
