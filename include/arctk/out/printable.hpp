@@ -45,6 +45,10 @@ namespace arc //! arc namespace
 
             //  == OPERATORS ==
           public:
+            //  -- Io --
+            friend inline std::ostream& operator<<(std::ostream& stream_, const Printable& print_) noexcept;
+
+
             //  == METHODS ==
           public:
         };
@@ -57,6 +61,13 @@ namespace arc //! arc namespace
 
 
         //  == OPERATORS ==
+        //  -- Io --
+        inline std::ostream& operator<<(std::ostream& stream_, const Printable& print_) noexcept
+        {
+            stream_ << print_.str();
+
+            return (stream_);
+        }
 
 
 
