@@ -43,6 +43,8 @@ namespace arc //! arc namespace
         inline T sum(const C& cont_) noexcept;
         template <typename C>
         inline double ave(const C& cont_) noexcept;
+        template <typename C>
+        inline double mag(const C& cont_) noexcept;
 
 
 
@@ -68,7 +70,7 @@ namespace arc //! arc namespace
          *
          *  @param  cont_   Container to determine the sum of.
          *
-         *  @return Sum of containers elements.
+         *  @return Sum of the containers elements.
          */
         template <typename C, typename T>
         inline T sum(const C& cont_) noexcept
@@ -88,12 +90,32 @@ namespace arc //! arc namespace
          *
          *  @param  cont_   Container to determine the average of.
          *
-         *  @return Average of containers elements.
+         *  @return Average of the containers elements.
          */
         template <typename C>
         inline double ave(const C& cont_) noexcept
         {
             return (static_cast<double>(sum(cont_)) / cont::size(cont_));
+        }
+
+        /**
+         *  Calculate the magnitude of a container's elements.
+         *
+         *  @param  cont_   Container to determine the magnitude of.
+         *
+         *  @return Magnitude the containers elements.
+         */
+        template <typename C, typename T>
+        inline double mag(const C& cont_) noexcept
+        {
+            T sq_sum{};
+
+            for (auto it = std::begin(cont_); it != std::end(cont_); ++it)
+            {
+                sq_sum += *it * *it;
+            }
+
+            return (std::sqrt(static_cast<double>(sq_sum)));
         }
 
 
