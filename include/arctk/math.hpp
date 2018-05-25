@@ -42,6 +42,13 @@ namespace arc //! arc namespace
 
         //  == FUNCTIONS ==
         //  -- Mathematical --
+        /**
+         *  Calculate the sum of a container's elements.
+         *
+         *  @param  cont_   Container to be summed.
+         *
+         *  @return Sum of containers elements.
+         */
         template <typename C, typename T>
         inline T sum(const C& cont_) noexcept
         {
