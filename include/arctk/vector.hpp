@@ -89,11 +89,13 @@ namespace arc //! arc namespace
 
     //  == INSTANTIATION --
     //  -- Constructors --
+    template <class T>
     inline Vector<T>::Vector(const size_t size_) noexcept
       : _std(size_)
     {
     }
 
+    template <class T>
     inline Vector<T>::Vector(std::initializer_list<T> init_) noexcept
       : _std(init_)
     {
