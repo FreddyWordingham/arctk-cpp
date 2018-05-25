@@ -11,7 +11,6 @@
 
 //  == INCLUDES ==
 //  -- Arctk --
-#include <arctk/container.hpp>
 #include <arctk/math.hpp>
 #include <arctk/math/container.hpp>
 #include <arctk/properties.hpp>
