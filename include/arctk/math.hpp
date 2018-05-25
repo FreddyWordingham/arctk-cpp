@@ -25,27 +25,6 @@
 
 
 
-//  == NAMESPACE ==
-namespace arc //! arctk namespace
-{
-    namespace math //! mathematical namespace
-    {
-
-
-
-        //  == FUNCTION PROTOTYPES ==
-
-
-
-        //  == FUNCTIONS ==
-
-
-
-    } // namespace math
-} // namespace arc
-
-
-
 //  == MODULE END ==
 #endif // ARCTK_MOD_CORE
 
