@@ -46,6 +46,8 @@ namespace arc //! arc namespace
         inline double ave(const C& cont_) noexcept;
         template <typename C, typename T = typename C::value_type>
         inline double mag(const C& cont_) noexcept;
+        template <typename C, typename T = typename C::value_type>
+        inline T min(const C& cont_) noexcept;
 
 
 
@@ -117,6 +119,19 @@ namespace arc //! arc namespace
             }
 
             return (std::sqrt(static_cast<double>(sq_sum)));
+        }
+
+        /**
+         *  Find the minimum element within a container.
+         *
+         *  @param  cont_   Container to determine the minimum element of.
+         *
+         *  @return Value of the minimum element within the container.
+         */
+        template <typename C, typename T>
+        inline T min(const C& cont_) noexcept
+        {
+            return (cont_[min_index(cont_)]);
         }
 
 
