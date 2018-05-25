@@ -113,7 +113,7 @@ namespace arc //! arc namespace
     }
 
     template <class T>
-    inline T& Vector<T>::front() noexcept
+    inline const T& Vector<T>::front() const noexcept
     {
         return (_std.front());
     }
