@@ -37,8 +37,8 @@ namespace arc //! arc namespace
         //  -- Mathematical --
         template <typename C, typename T = typename C::value_type>
         inline T sum(const C& cont_) noexcept;
-        template <typename C, typename T = typename C::value_type>
-        inline T ave(const C& cont_) noexcept;
+        template <typename C>
+        inline double ave(const C& cont_) noexcept;
 
 
 
@@ -71,17 +71,10 @@ namespace arc //! arc namespace
          *
          *  @return Average of containers elements.
          */
-        template <typename C, typename T>
-        inline T ave(const C& cont_) noexcept
+        template <typename C>
+        inline double ave(const C& cont_) noexcept
         {
-            T ave{};
-
-            for (auto it = std::begin(cont_); it != std::end(cont_); ++it)
-            {
-                ave += *it;
-            }
-
-            return (ave /);
+            return (static_cast<double>(sum(cont_)) / size(cont_));
         }
 
 
