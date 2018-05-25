@@ -93,7 +93,7 @@ namespace arc //! arc namespace
         template <typename C>
         inline double ave(const C& cont_) noexcept
         {
-            return (static_cast<double>(sum(cont_)) / size(cont_));
+            return (static_cast<double>(sum(cont_)) / cont::size(cont_));
         }
 
 
