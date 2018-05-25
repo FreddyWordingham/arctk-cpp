@@ -1,15 +1,14 @@
 #   == CMAKE ==
-#   -- Version --
 cmake_minimum_required(VERSION 3.11.1)
 
 
+
 #   == PROJECTS ==
-#   -- Arctk Library --
 project(arctk)
 
 
+
 #   == MODULES ==
-#   -- Core --
 if (NOT DEFINED ARCTK_MOD_CORE)
     set(ARCTK_MOD_CORE OFF)
 endif ()
@@ -19,76 +18,67 @@ if (ARCTK_MOD_CORE)
 endif ()
 
 
+
 #   == VERSION ==
-#   -- Major --
 set(ARCTK_VERSION_MAJOR 0)
 
-#   -- Minor --
 set(ARCTK_VERSION_MINOR 0)
 
-#   -- Patch --
 execute_process(COMMAND git rev-list --count HEAD OUTPUT_VARIABLE ARCTK_VERSION_PATCH)
 string(REGEX REPLACE "\n$" "" ARCTK_VERSION_PATCH "${ARCTK_VERSION_PATCH}")
 set(ARCTK_VERSION_PATCH ${ARCTK_VERSION_PATCH})
 message("arctk version: ${ARCTK_VERSION_MAJOR}.${ARCTK_VERSION_MINOR}.${ARCTK_VERSION_PATCH}")
 
 
+
 #   == BUILD INFORMATION ==
-#   -- Date --
 execute_process(COMMAND git log -1 --format=%cd --date=short OUTPUT_VARIABLE ARCTK_DATE)
 string(REGEX REPLACE "\n$" "" ARCTK_DATE "${ARCTK_DATE}")
 message("arctk date: ${ARCTK_DATE}")
 
-#   -- Branch --
 execute_process(COMMAND git rev-parse --abbrev-ref HEAD OUTPUT_VARIABLE ARCTK_BRANCH)
 string(REGEX REPLACE "\n$" "" ARCTK_BRANCH "${ARCTK_BRANCH}")
 message("arctk branch: ${ARCTK_BRANCH}")
 
-#   -- Hash --
 execute_process(COMMAND git rev-parse --short HEAD OUTPUT_VARIABLE ARCTK_HASH)
 string(REGEX REPLACE "\n$" "" ARCTK_HASH "${ARCTK_HASH}")
 message("arctk hash: ${ARCTK_HASH}")
 
-#   -- Type --
 set(ARCTK_TYPE ${CMAKE_BUILD_TYPE})
 message("arctk type: ${ARCTK_TYPE}")
 
-#   -- Compiler --
 set(ARCTK_COMPILER ${CMAKE_CXX_COMPILER_ID})
 message("arctk compiler: ${ARCTK_COMPILER}")
 
-#   -- Directory --
 set(ARCTK_DIR ${CMAKE_SOURCE_DIR})
 message("arctk directory: ${ARCTK_DIR}")
 
 
+
 #   == DIRECTORIES ==
-#   -- Output --
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
 
+
 #   == CONFIGURATION ==
-#   -- Header --
 set(CONFIG_HEADER_IN ${CMAKE_SOURCE_DIR}/config/include/arctk/config.hpp.in)
 set(CONFIG_HEADER ${CMAKE_SOURCE_DIR}/include/arctk/config.hpp)
 configure_file(${CONFIG_HEADER_IN} ${CONFIG_HEADER} @ONLY)
 
-#   -- Doxygen --
 set(DOXYFILE_IN ${CMAKE_SOURCE_DIR}/config/doc/Doxyfile.in)
 set(DOXYFILE ${CMAKE_SOURCE_DIR}/doc/Doxyfile)
 configure_file(${DOXYFILE_IN} ${DOXYFILE} @ONLY)
 
 
+
 #   == OPTIONS ==
-#   -- Clang-Tidy --
 if (CLANG_TIDY)
     set(CMAKE_CXX_CLANG_TIDY "clang-tidy")
 endif ()
 message("Clang-Tidy: ${CLANG_TIDY}")
 
-#   -- Doxygen --
 if (DOCUMENT)
     find_package(Doxygen)
     if (NOT DOXYGEN_FOUND)
@@ -104,19 +94,18 @@ endif ()
 message("Document: ${DOCUMENT}")
 
 
+
 #   == SOURCE CODE ==
-#   -- Glob Files --
 file(GLOB_RECURSE SOURCE_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 file(GLOB_RECURSE HEADER_FILES ${CMAKE_SOURCE_DIR}/include/arctk/*.hpp)
 
 
+
 #   == FLAGS ==
-#   -- Standard --
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-#   -- Optimisation --
 if (CMAKE_BUILD_TYPE MATCHES "debug")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
         -DDEBUG                             \
@@ -133,7 +122,6 @@ else ()
     message(FATAL_ERROR "Optimisation flags are not defined for build type: ${CMAKE_BUILD_TYPE}")
 endif ()
 
-#   -- Warning --
 if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
         -Weverything                        \
@@ -339,27 +327,25 @@ else ()
 endif ()
 
 
+
 #   == TARGETS ==
-#   -- Libraries --
 add_library(arctk STATIC ${SOURCE_FILES} ${HEADER_FILES})
 
 
+
 #   == DEFINITIONS ==
-#   -- Macros --
 foreach (i ${ARCTK_MOD_DEFS})
     target_compile_definitions(arctk PRIVATE ${i})
     message("Pre-defined: ${i}")
 endforeach (i)
 
 
+
 #   == INCLUDES ==
-#   -- Local --
 target_include_directories(arctk PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
 
-#   == INSTALLATION ==
-#   -- Headers --
-install(DIRECTORY ./include/arctk/ DESTINATION include/arctk FILES_MATCHING PATTERN "*.hpp")
 
-#   -- Library --
+#   == INSTALLATION ==
+install(DIRECTORY ./include/arctk/ DESTINATION include/arctk FILES_MATCHING PATTERN "*.hpp")
 install(TARGETS arctk EXPORT arctk LIBRARY DESTINATION lib ARCHIVE DESTINATION lib INCLUDES DESTINATION include)
