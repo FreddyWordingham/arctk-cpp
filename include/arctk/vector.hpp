@@ -60,6 +60,8 @@ namespace arc //! arc namespace
       public:
         //  -- Getters --
         inline const std::vector<T>& std() const noexcept;
+        inline const T&              front() const noexcept;
+        inline const T&              back() const noexcept;
         inline bool                  empty() const noexcept;
         inline size_t                size() const noexcept;
         inline size_t                capacity() const noexcept;
@@ -108,6 +110,18 @@ namespace arc //! arc namespace
     inline const std::vector<T>& Vector<T>::std() const noexcept
     {
         return (_std);
+    }
+
+    template <class T>
+    inline T& Vector<T>::front() noexcept
+    {
+        return (_std.front());
+    }
+
+    template <class T>
+    inline const T& Vector<T>::back() const noexcept
+    {
+        return (_std.back());
     }
 
     template <class T>
