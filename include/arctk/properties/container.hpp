@@ -35,6 +35,8 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         template <typename C>
         inline size_t size(const C& cont_) noexcept;
+        template <typename C, typename T = typename C::value_type>
+        inline bool contains(const C& cont_, const T& val_) noexcept;
         template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
         inline bool always_less_than(const C& cont_) noexcept;
         template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
@@ -60,6 +62,23 @@ namespace arc //! arctk namespace
         inline size_t size(const C& cont_) noexcept
         {
             return (std::distance(std::begin(cont_), std::end(cont_)));
+        }
+
+        /**
+         *  Determine if a container contains a value.
+         *
+         *  @tparam C   Container type.
+         *  @tparam T   Type stored by C.
+         *
+         *  @param  cont_   Container to check.
+         *  @param  val_    Value to check container for.
+         *
+         *  @return True if the container contains the value.
+         */
+        template <typename C, typename T>
+        inline bool contains(const C& cont_, const T& val_) noexcept
+        {
+            return (std::find(std::begin(cont_), std::end(cont_), val_) != std::end(cont_));
         }
 
         /**
