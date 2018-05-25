@@ -44,7 +44,7 @@ namespace arc //! arc namespace
         inline T sum(const C& cont_) noexcept;
         template <typename C>
         inline double ave(const C& cont_) noexcept;
-        template <typename C>
+        template <typename C, typename T = typename C::value_type>
         inline double mag(const C& cont_) noexcept;
 
 
