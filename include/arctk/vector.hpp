@@ -67,6 +67,7 @@ namespace arc //! arc namespace
         inline std::vector<T>& std() noexcept;
 
         //  -- Capacity --
+        inline void reserve(size_t size_) noexcept;
 
         //  -- Setters --
         inline void clear() noexcept;
@@ -123,6 +124,13 @@ namespace arc //! arc namespace
     inline std::vector<T>& Vector<T>::std() noexcept
     {
         return (_std);
+    }
+
+
+    //  -- Capacity --
+    inline void Vector<T>::reserve(const size_t size_) noexcept
+    {
+        _std.reserve(size_);
     }
 
 
