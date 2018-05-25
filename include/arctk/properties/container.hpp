@@ -35,8 +35,6 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
-        template <typename C>
-        inline size_t size(const C& cont_) noexcept;
         template <typename C, typename T = typename C::value_type>
         inline bool contains(const C& cont_, const T& val_) noexcept;
         template <typename C, typename I = typename C::const_iterator>
