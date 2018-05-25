@@ -150,9 +150,27 @@ namespace arc //! arc namespace
             return (min_index);
         }
 
+        /**
+         *  Find the index of the maximum element within a container.
+         *
+         *  @param  cont_   Container to determine the maximum element index of.
+         *
+         *  @return Index of the maximum element within the container.
+         */
         template <typename C>
         inline size_t max_index(const C& cont_) noexcept
         {
+            size_t max_index = 0;
+
+            for (auto it = std::begin(cont_); it != std::end(cont_); ++it)
+            {
+                if (*it > max_index)
+                {
+                    max_index = *it;
+                }
+            }
+
+            return (max_index);
         }
 
         /**
