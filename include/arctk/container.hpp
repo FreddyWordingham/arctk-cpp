@@ -86,7 +86,7 @@ namespace arc //! arc namespace
         {
             T sum{};
 
-            for (auto it = std::begin(cont_); it != std::end(cont_); ++it)
+            for (I it = std::begin(cont_); it != std::end(cont_); ++it)
             {
                 sum += *it;
             }
@@ -119,7 +119,7 @@ namespace arc //! arc namespace
         {
             T sq_sum{};
 
-            for (auto it = std::begin(cont_); it != std::end(cont_); ++it)
+            for (I it = std::begin(cont_); it != std::end(cont_); ++it)
             {
                 sq_sum += *it * *it;
             }
