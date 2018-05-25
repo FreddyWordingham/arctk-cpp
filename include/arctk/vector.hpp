@@ -68,6 +68,7 @@ namespace arc //! arc namespace
 
         //  -- Capacity --
         inline void reserve(size_t size_) noexcept;
+        inline void shrink_to_fit() noexcept;
 
         //  -- Setters --
         inline void clear() noexcept;
@@ -128,9 +129,16 @@ namespace arc //! arc namespace
 
 
     //  -- Capacity --
+    template <class T>
     inline void Vector<T>::reserve(const size_t size_) noexcept
     {
         _std.reserve(size_);
+    }
+
+    template <class T>
+    inline void Vector<T>::shrink_to_fit() noexcept
+    {
+        _std.shrink_to_fit();
     }
 
 
