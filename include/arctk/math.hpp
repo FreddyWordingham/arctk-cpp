@@ -21,6 +21,7 @@
 
 //  == INCLUDES ==
 //  -- Std --
+#include <iterator>
 
 
 
@@ -33,10 +34,26 @@ namespace arc //! arc namespace
 
 
         //  == FUNCTION PROTOTYPES ==
+        //  -- Mathematical --
+        template <typename C, typename T = typename C::value_type>
+        inline T sum(const C& cont_) noexcept;
 
 
 
         //  == FUNCTIONS ==
+        //  -- Mathematical --
+        template <typename C, typename T>
+        inline T sum(const C& cont_) noexcept
+        {
+            T sum = 0;
+
+            for (auto it = std::begin(cont_); it != std::end(cont_); ++it)
+            {
+                sum += *it;
+            }
+
+            return (sum);
+        }
 
 
 
