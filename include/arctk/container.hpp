@@ -50,9 +50,9 @@ namespace arc //! arc namespace
         inline size_t min_index(const C& cont_) noexcept;
         template <typename C, typename I = typename C::const_iterator>
         inline size_t max_index(const C& cont_) noexcept;
-        template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
+        template <typename C, typename T = typename C::value_type>
         inline T min(const C& cont_) noexcept;
-        template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
+        template <typename C, typename T = typename C::value_type>
         inline T max(const C& cont_) noexcept;
 
 
@@ -180,7 +180,7 @@ namespace arc //! arc namespace
          *
          *  @return Value of the minimum element within the container.
          */
-        template <typename C, typename I, typename T>
+        template <typename C, typename T>
         inline T min(const C& cont_) noexcept
         {
             return (cont_[min_index(cont_)]);
@@ -193,7 +193,7 @@ namespace arc //! arc namespace
          *
          *  @return Value of the maximum element within the container.
          */
-        template <typename C, typename I, typename T>
+        template <typename C, typename T>
         inline T max(const C& cont_) noexcept
         {
             return (cont_[max_index(cont_)]);
