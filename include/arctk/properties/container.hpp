@@ -20,6 +20,7 @@
 
 
 //  == IMPORTS ==
+#include <algorithm>
 #include <iterator>
 
 
