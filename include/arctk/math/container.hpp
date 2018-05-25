@@ -49,6 +49,10 @@ namespace arc //! arctk namespace
         /**
          *  Calculate the sum of a container's elements.
          *
+         *  @tparam C   Container type.
+         *  @tparam I   Iterator type of C.
+         *  @tparam T   Type stored by C.
+         *
          *  @param  cont_   Container to determine the sum of.
          *
          *  @return Sum of the containers elements.
@@ -69,6 +73,8 @@ namespace arc //! arctk namespace
         /**
          *  Calculate the average of a container's elements.
          *
+         *  @tparam C   Container type.
+         *
          *  @param  cont_   Container to determine the average of.
          *
          *  @return Average of the containers elements.
@@ -81,6 +87,10 @@ namespace arc //! arctk namespace
 
         /**
          *  Calculate the magnitude of a container's elements.
+         *
+         *  @tparam C   Container type.
+         *  @tparam I   Iterator type of C.
+         *  @tparam T   Type stored by C.
          *
          *  @param  cont_   Container to determine the magnitude of.
          *
