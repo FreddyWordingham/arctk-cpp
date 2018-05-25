@@ -60,9 +60,12 @@ namespace arc //! arc namespace
       public:
         //  -- Getters --
         inline const std::vector<T>& std() const noexcept;
+        inline bool                  empty() const noexcept;
 
         //  -- Access --
         inline std::vector<T>& std() noexcept;
+
+        //  -- Capacity --
 
         //  -- Setters --
         inline void clear() noexcept;
@@ -99,6 +102,12 @@ namespace arc //! arc namespace
     inline const std::vector<T>& Vector<T>::std() const noexcept
     {
         return (_std);
+    }
+
+    template <class T>
+    inline bool Vector<T>::empty() const noexcept
+    {
+        return (_std.emprt());
     }
 
 
