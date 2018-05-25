@@ -20,7 +20,6 @@
 
 
 //  == IMPORTS ==
-//  -- Arctk --
 #include <arctk/math/container.hpp>
 
 
