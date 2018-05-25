@@ -20,7 +20,6 @@
 
 
 //  == IMPORTS ==
-//  -- Arctk --
 #include <arctk/search/container.hpp>
 
 
