@@ -33,10 +33,15 @@ namespace arc //! arc namespace
     //  == CLASS ==
     /**
      */
-    class Name
+    template <class T>
+    class Vector
     {
         //  == FIELDS ==
       private:
+        //  -- Encapsulation --
+        std::vector<T> _std; //!< Encapsulated vector.
+
+
         //  == INSTANTIATION ==
       public:
         //  -- Constructors --
