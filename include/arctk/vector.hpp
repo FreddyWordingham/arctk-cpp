@@ -46,6 +46,7 @@ namespace arc //! arc namespace
       public:
         //  -- Constructors --
         inline Vector(size_t size_) noexcept;
+        inline Vector(std::initializer_list<T> init_) noexcept;
 
 
         //  == OPERATORS ==
@@ -89,6 +90,11 @@ namespace arc //! arc namespace
     //  -- Constructors --
     inline Vector<T>::Vector(const size_t size_) noexcept
       : _std(size_)
+    {
+    }
+
+    inline Vector<T>::Vector(std::initializer_list<T> init_) noexcept
+      : _std(init_)
     {
     }
 
