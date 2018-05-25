@@ -77,18 +77,18 @@ namespace arc //! arctk namespace
          *
          *  @param  cont_   Container to test.
          *
-         *  @pre    cont_ must contain more than one element.
+         *  @pre    cont_ must not be empty.
          *
          *  @return True if the containers elements are sorted in ascending order.
          */
         template <typename C, typename I>
         inline bool ascending(const C& cont_) noexcept
         {
-            assert(cont_.size() > 1);
+            assert(!cont_.empty());
 
-            for (I it = std::begin(cont_); it != std::prev(std::end(cont_)); ++it)
+            for (I it = std::begin(cont_); it != --std::end(cont_); ++it)
             {
-                if (*it > *std::next(it))
+                if (*it > *++it)
                 {
                     return (false);
                 }
