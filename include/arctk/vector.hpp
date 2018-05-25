@@ -68,6 +68,7 @@ namespace arc //! arc namespace
         inline void clear() noexcept;
         inline void push_back(const T& val_) noexcept;
         inline void push_back(T&& val_) noexcept;
+        inline void pop_back() noexcept;
     };
 
 
@@ -128,6 +129,11 @@ namespace arc //! arc namespace
         _std.push_back(val_);
     }
 
+    template <class T>
+    inline void Vector<T>::pop_back() noexcept
+    {
+        _std.pop_back();
+    }
 
 
 } // namespace arc
