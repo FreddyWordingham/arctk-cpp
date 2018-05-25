@@ -20,6 +20,7 @@
 
 
 //  == IMPORTS ==
+#include <arctk/properties.hpp>
 #include <cmath>
 #include <iterator>
 
@@ -74,7 +75,7 @@ namespace arc //! arctk namespace
         template <typename C>
         inline double ave(const C& cont_) noexcept
         {
-            return (static_cast<double>(sum(cont_)) / cont::size(cont_));
+            return (static_cast<double>(sum(cont_)) / size(cont_));
         }
 
         /**
