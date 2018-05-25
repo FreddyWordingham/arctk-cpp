@@ -21,6 +21,7 @@
 
 //  == INCLUDES ==
 //  -- Std --
+#include <sstream>
 #include <tuple>
 #include <vector>
 
@@ -37,28 +38,52 @@ namespace arc //! arc namespace
         //  == CLASS ==
         /**
          */
+        template <class T>
+        class Column : public std::vector<T>
+        {
+          private:
+            using std::vector<T>::push_back;
+            using std::vector<T>::emplace_back;
+            using std::vector<T>::pop_back;
+
+          public:
+            inline Column() noexcept
+              : std::vector<T>()
+            {
+            }
+            inline Column(const size_t size_) noexcept
+              : std::vector<T>(size_)
+            {
+            }
+            inline Column(const std::initializer_list<T>& init_list_) noexcept
+              : std::vector<T>(init_list_)
+            {
+            }
+        };
+
+
         template <class... T>
         class Table
         {
             //  == FIELDS ==
           private:
             //  - Data --
-            std::tuple<std::vector<T>...> _cols; //!< Data columns.
+            std::tuple<Column<T>...> _cols; //!< Data columns.
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline explicit Table(const std::tuple<std::vector<T>...> cols_) noexcept;
+            inline explicit Table(const std::tuple<Column<T>...> cols_) noexcept;
 
 
             //  == METHODS ==
           public:
             //  -- Getters --
             template <size_t I, class S = typename std::tuple_element<I, std::tuple<T...>>::type>
-            std::vector<S>& col();
+            Column<S>& col();
             template <size_t I, class S = typename std::tuple_element<I, std::tuple<T...>>::type>
-            const std::vector<S>& col() const;
+            const Column<S>& col() const;
         };
 
 
@@ -66,7 +91,7 @@ namespace arc //! arc namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <class... T>
-        inline Table<T...>::Table(const std::tuple<std::vector<T>...> cols_) noexcept
+        inline Table<T...>::Table(const std::tuple<Column<T>...> cols_) noexcept
           : _cols(cols_)
         {
         }
@@ -77,14 +102,14 @@ namespace arc //! arc namespace
         //  -- Getters --
         template <class... T>
         template <size_t I, class S>
-        std::vector<S>& Table<T...>::col()
+        Column<S>& Table<T...>::col()
         {
             return (std::get<I>(_cols));
         }
 
         template <class... T>
         template <size_t I, class S>
-        const std::vector<S>& Table<T...>::col() const
+        const Column<S>& Table<T...>::col() const
         {
             return (std::get<I>(_cols));
         }

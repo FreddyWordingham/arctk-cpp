@@ -21,7 +21,6 @@
 
 //  == INCLUDES ==
 //  -- Arctk --
-#include <arctk/data/column.hpp>
 #include <arctk/data/table.hpp>
 
 
