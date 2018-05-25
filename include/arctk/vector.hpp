@@ -49,16 +49,23 @@ namespace arc //! arc namespace
 
         //  == OPERATORS ==
       public:
-        //  -- Access --
-        inline T&       operator[](size_t index_) noexcept;
+        //  -- Getters --
         inline const T& operator[](size_t index_) const noexcept;
+
+        //  -- Access --
+        inline T& operator[](size_t index_) noexcept;
 
 
         //  == METHODS ==
       public:
         //  -- Getters --
-        inline std::vector<T>&       std() noexcept;
         inline const std::vector<T>& std() const noexcept;
+
+        //  -- Access --
+        inline std::vector<T>& std() noexcept;
+
+        //  -- Setters --
+        inline void clear() noexcept;
     };
 
 
@@ -68,13 +75,15 @@ namespace arc //! arc namespace
 
 
     //  == OPERATORS ==
-    //  -- Access --
-    inline T& operator[](const size_t index_) noexcept
+    //  -- Getters --
+    inline const T& operator[](const size_t index_) const noexcept
     {
         return (_std[index_]);
     }
 
-    inline const T& operator[](const size_t index_) const noexcept
+
+    //  -- Access --
+    inline T& operator[](const size_t index_) noexcept
     {
         return (_std[index_]);
     }
@@ -84,13 +93,23 @@ namespace arc //! arc namespace
     //  == METHODS ==
     //  -- Getters --
     template <class T>
+    inline const std::vector<T>& Vector<T>::std() const noexcept
+    {
+    }
+
+
+    //  -- Access --
+    template <class T>
     inline std::vector<T>& Vector<T>::std() noexcept
     {
     }
 
+
+    //  -- Setters --
     template <class T>
-    inline const std::vector<T>& Vector<T>::std() const noexcept
+    inline void Vector<T>::clear() noexcept
     {
+        _std.clear();
     }
 
 
