@@ -52,7 +52,7 @@ namespace arc //! arc namespace
         template <typename C, typename T>
         inline T sum(const C& cont_) noexcept
         {
-            T sum = 0;
+            T sum{};
 
             for (auto it = std::begin(cont_); it != std::end(cont_); ++it)
             {
