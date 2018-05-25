@@ -20,9 +20,10 @@
 
 
 //  == IMPORTS ==
-#include <arctk/properties.hpp>
 #include <cmath>
 #include <iterator>
+
+#include <arctk/properties.hpp>
 
 
 
