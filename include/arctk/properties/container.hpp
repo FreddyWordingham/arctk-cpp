@@ -39,6 +39,8 @@ namespace arc //! arctk namespace
         inline bool contains(const C& cont_, const T& val_) noexcept;
         template <typename C, typename I = typename C::const_iterator>
         inline bool ascending(const C& cont_) noexcept;
+        template <typename C, typename I = typename C::const_iterator>
+        inline bool descending(const C& cont_) noexcept;
         template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
         inline bool always_less_than(const C& cont_) noexcept;
         template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
@@ -89,6 +91,35 @@ namespace arc //! arctk namespace
             for (I it = std::begin(cont_); it != --std::end(cont_); ++it)
             {
                 if (*it > *++it)
+                {
+                    return (false);
+                }
+            }
+
+            return (true);
+        }
+
+        /**
+         *  Test if a containers elements are sorted in descending order.
+         *  Container is still considered descending if consecutive values are equal.
+         *
+         *  @tparam C   Container type.
+         *  @tparam I   Iterator type of C.
+         *
+         *  @param  cont_   Container to test.
+         *
+         *  @pre    cont_ must not be empty.
+         *
+         *  @return True if the containers elements are sorted in descending order.
+         */
+        template <typename C, typename I>
+        inline bool descending(const C& cont_) noexcept
+        {
+            assert(!cont_.empty());
+
+            for (I it = std::begin(cont_); it != --std::end(cont_); ++it)
+            {
+                if (*it < *++it)
                 {
                     return (false);
                 }
