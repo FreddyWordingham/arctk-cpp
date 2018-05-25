@@ -41,6 +41,8 @@ namespace arc //! arctk namespace
         inline bool ascending(const C& cont_) noexcept;
         template <typename C, typename I = typename C::const_iterator>
         inline bool descending(const C& cont_) noexcept;
+        template <typename C>
+        inline bool monotonic(const C& cont_) noexcept;
         template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
         inline bool always_less_than(const C& cont_) noexcept;
         template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
@@ -126,6 +128,27 @@ namespace arc //! arctk namespace
             }
 
             return (true);
+        }
+
+        /**
+         *  Test if a containers elements are sorted in monotonic order.
+         *  Container is still considered monotonic if consecutive values are equal.
+         *
+         *  @tparam C   Container type.
+         *  @tparam I   Iterator type of C.
+         *
+         *  @param  cont_   Container to test.
+         *
+         *  @pre    cont_ must not be empty.
+         *
+         *  @return True if the containers elements are sorted in monotonic order.
+         */
+        template <typename C>
+        inline bool monotonic(const C& cont_) noexcept
+        {
+            assert(!cont_.empty());
+
+            return (ascending(cont_) || descending(cont_));
         }
 
         /**
