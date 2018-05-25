@@ -48,6 +48,9 @@ namespace arc //! arctk namespace
         /**
          *  Find the index of the minimum element within a container.
          *
+         *  @tparam C   Container type.
+         *  @tparam I   Iterator type of C.
+         *
          *  @param  cont_   Container to determine the minimum element index of.
          *
          *  @return Index of the minimum element within the container.
@@ -70,6 +73,9 @@ namespace arc //! arctk namespace
 
         /**
          *  Find the index of the maximum element within a container.
+         *
+         *  @tparam C   Container type.
+         *  @tparam I   Iterator type of C.
          *
          *  @param  cont_   Container to determine the maximum element index of.
          *
@@ -94,6 +100,9 @@ namespace arc //! arctk namespace
         /**
          *  Find the minimum element within a container.
          *
+         *  @tparam C   Container type.
+         *  @tparam T   Type stored by C.
+         *
          *  @param  cont_   Container to determine the minimum element of.
          *
          *  @return Value of the minimum element within the container.
@@ -106,6 +115,9 @@ namespace arc //! arctk namespace
 
         /**
          *  Find the maximum element within a container.
+         *
+         *  @tparam C   Container type.
+         *  @tparam T   Type stored by C.
          *
          *  @param  cont_   Container to determine the maximum element of.
          *
