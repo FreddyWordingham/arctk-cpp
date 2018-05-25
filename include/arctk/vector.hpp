@@ -45,6 +45,7 @@ namespace arc //! arc namespace
         //  == INSTANTIATION ==
       public:
         //  -- Constructors --
+        inline Vector(size_t size_) noexcept;
 
 
         //  == OPERATORS ==
@@ -85,19 +86,26 @@ namespace arc //! arc namespace
 
 
     //  == INSTANTIATION --
+    //  -- Constructors --
+    inline Vector<T>::Vector(const size_t size_) noexcept
+      : _std(size_)
+    {
+    }
 
 
 
     //  == OPERATORS ==
     //  -- Getters --
-    inline const T& operator[](const size_t index_) const noexcept
+    template <class T>
+    inline const T& Vector<T>::operator[](const size_t index_) const noexcept
     {
         return (_std[index_]);
     }
 
 
     //  -- Access --
-    inline T& operator[](const size_t index_) noexcept
+    template <class T>
+    inline T& Vector<T>::operator[](const size_t index_) noexcept
     {
         return (_std[index_]);
     }
