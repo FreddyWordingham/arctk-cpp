@@ -49,6 +49,9 @@ namespace arc //! arc namespace
 
         //  == METHODS ==
       public:
+        //  -- Access --
+        inline std::vector<T>&       std() noexcept;
+        inline const std::vector<T>& std() const noexcept;
     };
 
 
@@ -58,6 +61,16 @@ namespace arc //! arc namespace
 
 
     //  == METHODS ==
+    //  -- Access --
+    template <class T>
+    inline std::vector<T>& Vector<T>::std() noexcept
+    {
+    }
+
+    template <class T>
+    inline const std::vector<T>& Vector<T>::std() const noexcept
+    {
+    }
 
 
 
