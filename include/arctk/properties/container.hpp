@@ -104,7 +104,7 @@ namespace arc //! arctk namespace
 
             for (I it = std::begin(cont_); it != std::prev(std::end(cont_)); ++it)
             {
-                if (*it < *std::next(it))
+                if (*it > *std::next(it))
                 {
                     return (false);
                 }
