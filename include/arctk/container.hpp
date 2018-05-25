@@ -134,6 +134,19 @@ namespace arc //! arc namespace
             return (cont_[min_index(cont_)]);
         }
 
+        /**
+         *  Find the maximum element within a container.
+         *
+         *  @param  cont_   Container to determine the maximum element of.
+         *
+         *  @return Value of the maximum element within the container.
+         */
+        template <typename C, typename T>
+        inline T max(const C& cont_) noexcept
+        {
+            return (cont_[max_index(cont_)]);
+        }
+
 
 
     } // namespace cont
