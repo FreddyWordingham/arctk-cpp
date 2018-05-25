@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_VECTOR_HPP
-#define ARCTK_VECTOR_HPP
+#ifndef ARCTK_CONT_VECTOR_HPP
+#define ARCTK_CONT_VECTOR_HPP
 
 
 
@@ -233,4 +233,4 @@ namespace arc //! arc namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_VECTOR_HPP
+#endif // ARCTK_CONT_VECTOR_HPP
