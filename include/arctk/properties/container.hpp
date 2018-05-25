@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
         inline size_t size(const C& cont_) noexcept;
         template <typename C, typename T = typename C::value_type>
         inline bool contains(const C& cont_, const T& val_) noexcept;
-        template <typename C>
+        template <typename C, typename I = typename C::const_iterator>
         inline bool ascending(const C& cont_) noexcept;
         template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
         inline bool always_less_than(const C& cont_) noexcept;
