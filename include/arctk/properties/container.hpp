@@ -54,21 +54,6 @@ namespace arc //! arctk namespace
 
         //  == FUNCTIONS ==
         /**
-         *  Calculate the size of a container.
-         *
-         *  @tparam C   Container type.
-         *
-         *  @param  cont_   Container to determine the size of.
-         *
-         *  @return Size of the container.
-         */
-        template <typename C>
-        inline size_t size(const C& cont_) noexcept
-        {
-            return (std::distance(std::begin(cont_), std::end(cont_)));
-        }
-
-        /**
          *  Determine if a container contains a value.
          *
          *  @tparam C   Container type.
