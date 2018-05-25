@@ -67,6 +67,7 @@ namespace arc //! arc namespace
         //  -- Access --
         inline std::vector<T>& std() noexcept;
         inline T&              front() noexcept;
+        inline T&              back() noexcept;
 
         //  -- Capacity --
         inline void reserve(size_t size_) noexcept;
@@ -139,6 +140,12 @@ namespace arc //! arc namespace
     inline T& Vector<T>::front() noexcept
     {
         return (_std.front());
+    }
+
+    template <class T>
+    inline T& Vector<T>::back() noexcept
+    {
+        return (_std.back());
     }
 
 
