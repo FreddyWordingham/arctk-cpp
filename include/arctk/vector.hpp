@@ -66,6 +66,7 @@ namespace arc //! arc namespace
 
         //  -- Setters --
         inline void clear() noexcept;
+        inline void push_back() noexcept;
     };
 
 
@@ -112,6 +113,12 @@ namespace arc //! arc namespace
     inline void Vector<T>::clear() noexcept
     {
         _std.clear();
+    }
+
+    template <class T>
+    inline void push_back(const T& val_) noexcept
+    {
+        _std.push_back(val_);
     }
 
 
