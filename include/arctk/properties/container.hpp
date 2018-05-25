@@ -33,10 +33,24 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
+        template <typename C>
+        inline size_t size(const C& cont_) noexcept;
 
 
 
         //  == FUNCTIONS ==
+        /**
+         *  Calculate the size of a container.
+         *
+         *  @param  cont_   Container to determine the size of.
+         *
+         *  @return Size of the container.
+         */
+        template <typename C>
+        inline size_t size(const C& cont_) noexcept
+        {
+            return (std::distance(std::begin(cont_), std::end(cont_)));
+        }
 
 
 
