@@ -44,6 +44,8 @@ namespace arc //! arctk namespace
         /**
          *  Calculate the size of a container.
          *
+         *  @tparam C   Container type.
+         *
          *  @param  cont_   Container to determine the size of.
          *
          *  @return Size of the container.
@@ -56,6 +58,10 @@ namespace arc //! arctk namespace
 
         /**
          *  Determine if all elements of a container are less than a given limit.
+         *
+         *  @tparam C   Container type.
+         *  @tparam I   Iterator type of C.
+         *  @tparam T   Type stored by C.
          *
          *  @param  cont_   Container to test.
          *  @param  limit_  Limit to compare elements against.
