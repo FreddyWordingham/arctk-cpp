@@ -86,7 +86,7 @@ namespace arc //! arctk namespace
         template <typename C, typename I>
         inline bool ascending(const C& cont_) noexcept
         {
-            assert(size(cont_) > 1);
+            assert(cont_.size() > 1);
 
             for (I it = std::begin(cont_); it != std::prev(std::end(cont_)); ++it)
             {
