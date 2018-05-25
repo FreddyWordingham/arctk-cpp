@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 #include <algorithm>
+#include <cassert>
 #include <iterator>
 
 
