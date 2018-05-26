@@ -13,8 +13,8 @@
 //  -- Arctk --
 #include <arctk/math.hpp>
 #include <arctk/math/container.hpp>
-#include <arctk/properties.hpp>
-#include <arctk/properties/container.hpp>
+#include <arctk/prop.hpp>
+#include <arctk/prop/container.hpp>
 #include <arctk/search.hpp>
 #include <arctk/search/container.hpp>
 
