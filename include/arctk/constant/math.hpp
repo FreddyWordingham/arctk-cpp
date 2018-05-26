@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/constants/math.hpp
+ *  @file   arctk/constant/math.hpp
  *  @date   26/05/2018
  *  @author Freddy Wordingham
  *
