@@ -226,7 +226,7 @@ namespace arc //! arctk namespace
          *  @return True if all elements are less than the limit.
          */
         template <typename C, typename I, typename T>
-        inline bool always_less_than(const C& cont_, const T limit_) noexcept
+        inline bool always_less_than(const C& cont_, const T& limit_) noexcept
         {
             for (I it = std::begin(cont_); it != std::end(cont_); ++it)
             {
@@ -252,7 +252,7 @@ namespace arc //! arctk namespace
          *  @return True if all elements are less than, or equal to, the limit.
          */
         template <typename C, typename I, typename T>
-        inline bool always_less_than_or_equal_to(const C& cont_, const T limit_) noexcept
+        inline bool always_less_than_or_equal_to(const C& cont_, const T& limit_) noexcept
         {
             for (I it = std::begin(cont_); it != std::end(cont_); ++it)
             {
@@ -278,7 +278,7 @@ namespace arc //! arctk namespace
          *  @return True if all elements are greater than the limit.
          */
         template <typename C, typename I, typename T>
-        inline bool always_greater_than(const C& cont_, const T limit_) noexcept
+        inline bool always_greater_than(const C& cont_, const T& limit_) noexcept
         {
             for (I it = std::begin(cont_); it != std::end(cont_); ++it)
             {
@@ -304,7 +304,7 @@ namespace arc //! arctk namespace
          *  @return True if all elements are greater than, or equal to, the limit.
          */
         template <typename C, typename I, typename T>
-        inline bool always_greater_than_or_equal_to(const C& cont_, const T limit_) noexcept
+        inline bool always_greater_than_or_equal_to(const C& cont_, const T& limit_) noexcept
         {
             for (I it = std::begin(cont_); it != std::end(cont_); ++it)
             {
