@@ -19,6 +19,11 @@
 
 
 
+//  == IMPORTS ==
+#include <arctk/constants.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
