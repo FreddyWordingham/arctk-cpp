@@ -170,7 +170,9 @@ namespace arc //! arctk namespace
             assert(prop::ascending(cont_));
             assert(prop::within(cont_, val_));
 
-            return (std::distance(std::begin(cont_), std::lower_bound(std::begin(cont_), std::end(cont_), val_)));
+            const size_t index = std::distance(std::begin(cont_), std::lower_bound(std::begin(cont_), std::end(cont_), val_));
+
+            return (index == 0 ? index : (index - 1));
         }
 
 
