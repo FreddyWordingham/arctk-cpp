@@ -18,6 +18,7 @@
 #include <arctk/math/container.hpp>
 #include <arctk/math/conversion.hpp>
 #include <arctk/print.hpp>
+#include <arctk/print/container.hpp>
 #include <arctk/prop.hpp>
 #include <arctk/prop/container.hpp>
 #include <arctk/search.hpp>
