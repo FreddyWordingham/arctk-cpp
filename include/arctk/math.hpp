@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 #include <arctk/math/container.hpp>
+#include <arctk/math/conversion.hpp>
 
 
 
