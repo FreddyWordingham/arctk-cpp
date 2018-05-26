@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/constants/phys.hpp
+ *  @file   arctk/constant/phys.hpp
  *  @date   26/05/2018
  *  @author Freddy Wordingham
  *
