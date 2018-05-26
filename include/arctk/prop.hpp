@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_PROPERTIES_HPP
-#define ARCTK_PROPERTIES_HPP
+#ifndef ARCTK_PROP_HPP
+#define ARCTK_PROP_HPP
 
 
 
@@ -30,4 +30,4 @@
 
 
 //  == GUARD END ==
-#endif // ARCTK_PROPERTIES_HPP
+#endif // ARCTK_PROP_HPP
