@@ -45,6 +45,8 @@ namespace arc //! arctk namespace
         inline bool monotonic(const C& cont_) noexcept;
         template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
         inline bool uniform(const C& cont_) noexcept;
+        template <typename C, typename T = typename C::value_type>
+        inline bool within(const C& cont_, const T& val_) noexcept;
         template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
         inline bool always_less_than(const C& cont_) noexcept;
         template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
@@ -187,6 +189,27 @@ namespace arc //! arctk namespace
             }
 
             return (true);
+        }
+
+        /**
+         *  Determine if a value falls within the range of a container.
+         *
+         *  @tparam C   Container type.
+         *  @tparam T   Type stored by C.
+         *
+         *  @param  cont_   Container to test.
+         *  @param  val_    Value to test.
+         *
+         *  @pre    cont_ must be monotonic.
+         *
+         *  @return True if the value falls within the containers range.
+         */
+        template <typename C, typename T>
+        inline bool within(const C& cont_, const T& val_) noexcept
+        {
+            assert(monotonic(cont_));
+
+            return (((cont_.front() <= val) && (val <= cont_.back())) || ((cont_.front() >= val) && (val >= cont_.back())));
         }
 
         /**
