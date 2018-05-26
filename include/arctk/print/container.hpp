@@ -47,7 +47,7 @@ inline S& operator<<(S& stream_, const C& cont_) noexcept
     {
         stream_ << cont_.front();
 
-        for (I it = ++std::begin(cont_); it != std::end(cont_); ++it)
+        for (I it = std::next(std::begin(cont_)); it != std::end(cont_); std::advance(it, 1))
         {
             stream_ << ", " << *it;
         }
