@@ -25,7 +25,7 @@
 
 
 //  == NAMESPACE ==
-namespace arc //! arc namespace
+namespace arc //! arctk namespace
 {
     namespace config //! configuration namespace
     {
