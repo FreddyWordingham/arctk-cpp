@@ -23,6 +23,8 @@
 #include <cassert>
 #include <iterator>
 
+#include <arctk/properties.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -157,6 +159,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    cont_ must not be empty.
          *  @pre    cont_ must be sorted in ascending order.
+         *  @pre    val_ must be within the range of cont_.
          *
          *  @return Index of the first element of the container that is not greater than or equal to the value given.
          */
@@ -165,6 +168,7 @@ namespace arc //! arctk namespace
         {
             assert(!cont_.empty());
             assert(prop::ascending(cont_));
+            assert(prop::within(cont_, val_));
 
             return (std::distance(std::begin(cont_), std::lower_bound(std::begin(cont_), std::end(cont_), val_)));
         }
