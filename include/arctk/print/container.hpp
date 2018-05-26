@@ -19,16 +19,32 @@
 
 
 
-//  == NAMESPACE ==
-namespace arc //! arctk namespace
+//  == OPERATOR PROTOTYPES ==
+template <typename S, typename C, typename I = typename C::const_iterator>
+inline S& operator<<(S& stream_, const C& cont_) noexcept;
+
+
+
+//  == OPERATORS ==
+template <typename S, typename C, typename I>
+inline S& operator<<(S& stream_, const C& cont_) noexcept
 {
-    namespace print //! print namespace
+    stream_ << '{';
+
+    if (!cont_.empty())
     {
+        stream_ << cont_.front();
 
+        for (I it = ++std::begin(cont_); it != std::end(cont_); ++it)
+        {
+            stream_ << ", " << *it;
+        }
+    }
 
+    stream_ << '}';
 
-    } // namespace print
-} // namespace arc
+    return (stream_);
+}
 
 
 
