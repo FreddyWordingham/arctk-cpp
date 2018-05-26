@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_PROPERTIES_CONTAINER_HPP
-#define ARCTK_PROPERTIES_CONTAINER_HPP
+#ifndef ARCTK_PROP_CONTAINER_HPP
+#define ARCTK_PROP_CONTAINER_HPP
 
 
 
@@ -330,4 +330,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_PROPERTIES_CONTAINER_HPP
+#endif // ARCTK_PROP_CONTAINER_HPP
