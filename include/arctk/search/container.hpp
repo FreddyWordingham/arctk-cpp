@@ -46,6 +46,8 @@ namespace arc //! arctk namespace
         inline T max(const C& cont_) noexcept;
         template <typename C, typename T = typename C::value_type>
         inline size_t lower(const C& cont_, const T& val_) noexcept;
+        template <typename C, typename T = typename C::value_type>
+        inline size_t upper(const C& cont_, const T& val_) noexcept;
 
 
 
@@ -173,6 +175,33 @@ namespace arc //! arctk namespace
             const size_t index = std::distance(std::begin(cont_), std::lower_bound(std::begin(cont_), std::end(cont_), val_));
 
             return (index == 0 ? index : (index - 1));
+        }
+
+        /**
+         *  Find the index of the first element of the container that is greater than the value given.
+         *
+         *  @tparam C   Container type.
+         *  @tparam T   Type stored by C.
+         *
+         *  @param  cont_   Container to search.
+         *  @param  val_    Value to place.
+         *
+         *  @pre    cont_ must not be empty.
+         *  @pre    cont_ must be sorted in ascending order.
+         *  @pre    val_ must be within the range of cont_.
+         *
+         *  @return Index of the first element of the container that is greater than the value given.
+         */
+        template <typename C, typename T>
+        inline size_t upper(const C& cont_, const T& val_) noexcept
+        {
+            assert(!cont_.empty());
+            assert(prop::ascending(cont_));
+            assert(prop::within(cont_, val_));
+
+            const size_t index = std::distance(std::begin(cont_), std::upper_bound(std::begin(cont_), std::end(cont_), val_));
+
+            return (index == cont_.size() ? (index - 1) : index);
         }
 
 
