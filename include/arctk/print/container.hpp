@@ -26,6 +26,18 @@ inline S& operator<<(S& stream_, const C& cont_) noexcept;
 
 
 //  == OPERATORS ==
+/**
+ *  Print container contents to a stream.
+ *
+ *  @tparam S   Stream type.
+ *  @tparam C   Container type.
+ *  @tparam I   Iterator type of C.
+ *
+ *  @param  stream_ Stream to print to.
+ *  @param  cont_   Container to print.
+ *
+ *  @return Reference to stream post-print.
+ */
 template <typename S, typename C, typename I>
 inline S& operator<<(S& stream_, const C& cont_) noexcept
 {
