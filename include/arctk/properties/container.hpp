@@ -94,7 +94,7 @@ namespace arc //! arctk namespace
         {
             assert(!cont_.empty());
 
-            for (I it = std::begin(cont_); it != std::last(cont_); ++it)
+            for (I it = std::begin(cont_); it != --std::end(cont_); ++it)
             {
                 if (*it > *++it)
                 {
@@ -123,7 +123,7 @@ namespace arc //! arctk namespace
         {
             assert(!cont_.empty());
 
-            for (I it = std::begin(cont_); it != std::last(cont_); ++it)
+            for (I it = std::begin(cont_); it != --std::end(cont_); ++it)
             {
                 if (*it < *++it)
                 {
