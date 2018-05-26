@@ -20,6 +20,7 @@
 
 
 //  == IMPORTS ==
+#include <arctk/constant/math.hpp>
 
 
 
