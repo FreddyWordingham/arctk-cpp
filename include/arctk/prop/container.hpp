@@ -95,9 +95,9 @@ namespace arc //! arctk namespace
         {
             assert(!cont_.empty());
 
-            for (I it = std::begin(cont_); it != --std::end(cont_); ++it)
+            for (I it = std::begin(cont_); it != std::prev(std::end(cont_)); std::advance(it, 1))
             {
-                if (*it > *(it + 1))
+                if (*it > *std::next(it))
                 {
                     return (false);
                 }
@@ -124,9 +124,9 @@ namespace arc //! arctk namespace
         {
             assert(!cont_.empty());
 
-            for (I it = std::begin(cont_); it != --std::end(cont_); ++it)
+            for (I it = std::begin(cont_); it != std::prev(std::end(cont_)); std::advance(it, 1))
             {
-                if (*it < *(it + 1))
+                if (*it < *std::next(it))
                 {
                     return (false);
                 }
@@ -178,12 +178,12 @@ namespace arc //! arctk namespace
                 return (true);
             }
 
-            const T delta = *++std::begin(cont_) - *std::begin(cont_);
+            const T delta = *std::next(std::begin(cont_)) - *std::begin(cont_);
 
-            for (I it = std::begin(cont_); it != --std::end(cont_); ++it)
+            for (I it = std::begin(cont_); it != std::prev(std::end(cont_)); std::advance(it, 1))
             {
 
-                if (std::abs((*(it + 1) - *it) - delta) > std::numeric_limits<T>::epsilon())
+                if (std::abs((*std::next(it) - *it) - delta) > std::numeric_limits<T>::epsilon())
                 {
                     return (false);
                 }
@@ -228,7 +228,7 @@ namespace arc //! arctk namespace
         template <typename C, typename I, typename T>
         inline bool always_less_than(const C& cont_, const T& limit_) noexcept
         {
-            for (I it = std::begin(cont_); it != std::end(cont_); ++it)
+            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
             {
                 if (!(*it < limit_))
                 {
@@ -254,7 +254,7 @@ namespace arc //! arctk namespace
         template <typename C, typename I, typename T>
         inline bool always_less_than_or_equal_to(const C& cont_, const T& limit_) noexcept
         {
-            for (I it = std::begin(cont_); it != std::end(cont_); ++it)
+            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
             {
                 if (!(*it <= limit_))
                 {
@@ -280,7 +280,7 @@ namespace arc //! arctk namespace
         template <typename C, typename I, typename T>
         inline bool always_greater_than(const C& cont_, const T& limit_) noexcept
         {
-            for (I it = std::begin(cont_); it != std::end(cont_); ++it)
+            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
             {
                 if (!(*it > limit_))
                 {
@@ -306,7 +306,7 @@ namespace arc //! arctk namespace
         template <typename C, typename I, typename T>
         inline bool always_greater_than_or_equal_to(const C& cont_, const T& limit_) noexcept
         {
-            for (I it = std::begin(cont_); it != std::end(cont_); ++it)
+            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
             {
                 if (!(*it >= limit_))
                 {
