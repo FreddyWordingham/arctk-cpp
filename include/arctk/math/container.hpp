@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
         {
             T sum{};
 
-            for (I it = std::begin(cont_); it != std::end(cont_); ++it)
+            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
             {
                 sum += *it;
             }
@@ -101,7 +101,7 @@ namespace arc //! arctk namespace
         {
             T sq_sum{};
 
-            for (I it = std::begin(cont_); it != std::end(cont_); ++it)
+            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
             {
                 sq_sum += *it * *it;
             }
