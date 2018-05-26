@@ -45,7 +45,7 @@ inline S& operator<<(S& stream_, const C& cont_) noexcept
 
     if (!cont_.empty())
     {
-        stream_ << cont_.front();
+        stream_ << *std::begin(cont_);
 
         for (I it = std::next(std::begin(cont_)); it != std::end(cont_); std::advance(it, 1))
         {
