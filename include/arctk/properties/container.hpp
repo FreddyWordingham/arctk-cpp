@@ -209,7 +209,7 @@ namespace arc //! arctk namespace
         {
             assert(monotonic(cont_));
 
-            return (((cont_.front() <= val) && (val <= cont_.back())) || ((cont_.front() >= val) && (val >= cont_.back())));
+            return (((cont_.front() <= val_) && (val_ <= cont_.back())) || ((cont_.front() >= val_) && (val_ >= cont_.back())));
         }
 
         /**
