@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 #include <algorithm>
 #include <cassert>
+#include <iostream>
 #include <iterator>
 
 
@@ -96,7 +97,7 @@ namespace arc //! arctk namespace
 
             for (I it = std::begin(cont_); it != --std::end(cont_); ++it)
             {
-                if (*it > *++it)
+                if (*it > *(it + 1))
                 {
                     return (false);
                 }
