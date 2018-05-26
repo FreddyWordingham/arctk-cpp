@@ -30,14 +30,36 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         template <typename T>
         inline T rad_to_deg(const T x_) noexcept;
+        template <typename T>
+        inline T deg_to_rad(const T x_) noexcept;
 
 
 
         //  == FUNCTIONS ==
+        /**
+         *  Convert a value in radians to degrees.
+         *
+         *  @param  x_  Value to convert to degrees.
+         *
+         *  @return Value in degrees.
+         */
         template <typename T>
         inline T rad_to_deg(const T x_) noexcept
         {
-            return (static_cast<T>(180.0 / constant::PI) * x_);
+            return (static_cast<T>(180.0 / constant::PI * x_));
+        }
+
+        /**
+         *  Convert a value in degrees to radians.
+         *
+         *  @param  x_  Value to convert to radians.
+         *
+         *  @return Value in radians.
+         */
+        template <typename T>
+        inline T deg_to_rad(const T x_) noexcept
+        {
+            return (static_cast<T>(constant::PI / 180.0 * x_));
         }
 
 
