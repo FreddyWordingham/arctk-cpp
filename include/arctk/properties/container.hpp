@@ -44,6 +44,8 @@ namespace arc //! arctk namespace
         template <typename C>
         inline bool monotonic(const C& cont_) noexcept;
         template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
+        inline bool uniform(const C& cont_) noexcept;
+        template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
         inline bool always_less_than(const C& cont_) noexcept;
         template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
         inline bool always_less_than_or_qual_to(const C& cont_) noexcept;
@@ -73,7 +75,7 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Test if a containers elements are sorted in ascending order.
+         *  Test if a container's elements are sorted in ascending order.
          *  Container is still considered ascending if consecutive values are equal.
          *
          *  @tparam C   Container type.
@@ -83,7 +85,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    cont_ must not be empty.
          *
-         *  @return True if the containers elements are sorted in ascending order.
+         *  @return True if the container's elements are sorted in ascending order.
          */
         template <typename C, typename I>
         inline bool ascending(const C& cont_) noexcept
@@ -102,7 +104,7 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Test if a containers elements are sorted in descending order.
+         *  Test if a container's elements are sorted in descending order.
          *  Container is still considered descending if consecutive values are equal.
          *
          *  @tparam C   Container type.
@@ -112,7 +114,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    cont_ must not be empty.
          *
-         *  @return True if the containers elements are sorted in descending order.
+         *  @return True if the container's elements are sorted in descending order.
          */
         template <typename C, typename I>
         inline bool descending(const C& cont_) noexcept
@@ -131,17 +133,16 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Test if a containers elements are sorted in monotonic order.
+         *  Test if a container's elements are sorted in monotonic order.
          *  Container is still considered monotonic if consecutive values are equal.
          *
          *  @tparam C   Container type.
-         *  @tparam I   Iterator type of C.
          *
          *  @param  cont_   Container to test.
          *
          *  @pre    cont_ must not be empty.
          *
-         *  @return True if the containers elements are sorted in monotonic order.
+         *  @return True if the container's elements are sorted in monotonic order.
          */
         template <typename C>
         inline bool monotonic(const C& cont_) noexcept
@@ -149,6 +150,43 @@ namespace arc //! arctk namespace
             assert(!cont_.empty());
 
             return (ascending(cont_) || descending(cont_));
+        }
+
+        /**
+         *  Test if a container's elements are uniformly spaced.
+         *
+         *  @tparam C   Container type.
+         *  @tparam I   Iterator type of C.
+         *  @tparam T   Type stored by C.
+         *
+         *  @param  cont_   Container to test.
+         *
+         *  @pre    cont_ must not be empty.
+         *
+         *  @return True if the container's elements are uniformly spaced.
+         */
+        template <typename C, typename I, typename T>
+        inline bool uniform(const C& cont_) noexcept
+        {
+            assert(!cont_.empty());
+
+            if (cont_.size() == 1)
+            {
+                return (true);
+            }
+
+            const T delta = *++std::begin(cont_) - *std::begin(cont_);
+
+            for (I it = std::begin(cont_); it != --std::end(cont_); ++it)
+            {
+
+                if (std::abs((*(it + 1) - *it) - delta) > std::numeric_limits<T>::epsilon())
+                {
+                    return (false);
+                }
+            }
+
+            return (true);
         }
 
         /**
