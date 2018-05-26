@@ -23,7 +23,7 @@
 #include <cmath>
 #include <iterator>
 
-#include <arctk/properties.hpp>
+#include <arctk/prop.hpp>
 
 
 
