@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
 
             I min_index = std::begin(cont_);
 
-            for (I it = min_index + 1; it != std::end(cont_); ++it)
+            for (I it = std::next(std::begin(cont_)); it != std::end(cont_); std::advance(it, 1))
             {
                 if (*it < *min_index)
                 {
@@ -101,7 +101,7 @@ namespace arc //! arctk namespace
 
             I max_index = std::begin(cont_);
 
-            for (I it = max_index + 1; it != std::end(cont_); ++it)
+            for (I it = std::next(std::begin(max_index)); it != std::end(cont_); std::advance(it, 1))
             {
                 if (*it > *max_index)
                 {
