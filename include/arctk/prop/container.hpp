@@ -51,11 +51,11 @@ namespace arc //! arctk namespace
         template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
         inline bool always_less_than(const C& cont_, const T& limit_) noexcept;
         template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
-        inline bool always_less_than_or_qual_to(const C& cont_, const T& limit_) noexcept;
+        inline bool always_less_than_or_equal_to(const C& cont_, const T& limit_) noexcept;
         template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
         inline bool always_greater_than(const C& cont_) noexcept;
         template <typename C, typename I = typename C::const_iterator, typename T = typename C::value_type>
-        inline bool always_greater_than_or_qual_to(const C& cont_) noexcept;
+        inline bool always_greater_than_or_equal_to(const C& cont_) noexcept;
 
 
 
