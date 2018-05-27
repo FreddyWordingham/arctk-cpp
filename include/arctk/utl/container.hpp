@@ -28,14 +28,24 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
-        template <typename C, typename I = typename C::const_iterator, typename F>
-        inline size_t apply(const C& cont_, F func_) noexcept;
+        template <typename C, typename I = typename C::iterator, typename F>
+        inline void apply(C& cont_, F func_) noexcept;
 
 
 
         //  == FUNCTIONS ==
+        /**
+         *  Apply a given functor to each element of a container.
+         *
+         *  @tparam C   Type of the container.
+         *  @tparam I   Iterator of type C.
+         *  @tparam F   Type of functor to be applied.
+         *
+         *  @param  cont_   Container to be applied to.
+         *  @param  func_   Functor to be applied.
+         */
         template <typename C, typename I, typename F>
-        inline size_t apply(const C& cont_, F func_) noexcept
+        inline void apply(C& cont_, F func_) noexcept
         {
             for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
             {
