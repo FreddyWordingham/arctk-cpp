@@ -20,7 +20,7 @@
 
 
 //  == OPERATOR PROTOTYPES ==
-template <typename S, typename C, typename I = typename C::const_iterator>
+template <typename S, typename C, typename I = typename C::const_iterator, typename = typename std::enable_if<!std::is_same<C, std::string>::type>>
 inline S& operator<<(S& stream_, const C& cont_) noexcept;
 
 

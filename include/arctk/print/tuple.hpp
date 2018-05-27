@@ -26,7 +26,7 @@
 
 //  == OPERATOR PROTOTYPES ==
 template <typename... A>
-inlinestd::ostream& operator<<(std::ostream& stream_, const std::tuple<A...>& tup_) noexcept;
+inline std::ostream& operator<<(std::ostream& stream_, const std::tuple<A...>& tup_) noexcept;
 
 
 
