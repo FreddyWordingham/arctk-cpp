@@ -19,6 +19,7 @@
 #include <arctk/math/conversion.hpp>
 #include <arctk/print.hpp>
 #include <arctk/print/container.hpp>
+#include <arctk/print/pair.hpp>
 #include <arctk/print/tuple.hpp>
 #include <arctk/prop.hpp>
 #include <arctk/prop/container.hpp>
