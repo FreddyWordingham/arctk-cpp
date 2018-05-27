@@ -28,6 +28,7 @@
 #include <arctk/prop/container.hpp>
 #include <arctk/search.hpp>
 #include <arctk/search/container.hpp>
+#include <arctk/str.hpp>
 #include <arctk/utl.hpp>
 #include <arctk/utl/container.hpp>
 #include <arctk/utl/pair.hpp>
