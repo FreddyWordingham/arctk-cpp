@@ -32,9 +32,16 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
+        template <typename C, typename I = typename C::const_iterator>
+        inline std::string table(const C& cont_) noexcept;
+
 
 
         //  == FUNCTIONS ==
+        template <typename C, typename I = typename C::const_iterator>
+        inline std::string table(const C& cont_) noexcept
+        {
+        }
 
 
 
