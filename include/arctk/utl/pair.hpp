@@ -28,10 +28,26 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
-
+        template <typename A0, typename A1, typename F>
+        void apply(std::pair<A0, A1>& pair_, F func_);
+        template <typename A0, typename A1, typename F>
+        void apply(const std::pair<A0, A1>& pair_, F func_);
 
 
         //  == FUNCTIONS ==
+        template <typename A0, typename A1, typename F>
+        void apply(std::pair<A0, A1>& pair_, F func_)
+        {
+            func_(std::get<0>(pair_));
+            func_(std::get<1>(pair_));
+        }
+
+        template <typename A0, typename A1, typename F>
+        void apply(const std::pair<A0, A1>& pair_, F func_)
+        {
+            func_(std::get<0>(pair_));
+            func_(std::get<1>(pair_));
+        }
 
 
 
