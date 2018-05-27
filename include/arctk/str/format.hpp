@@ -53,10 +53,13 @@ namespace arc //! arctk namespace
         inline std::string table(const C& cont_) noexcept
         {
             std::stringstream stream;
+            size_t            index = 0;
 
             for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
             {
-                stream << *it << '\n';
+                stream << index << "\t: " << *it << '\n';
+
+                ++index;
             }
 
             return (stream.str());
