@@ -25,8 +25,8 @@
 
 
 //  == OPERATOR PROTOTYPES ==
-template <typename S, typename... A>
-inline S& operator<<(S& stream_, const std::tuple<A...>& tup_) noexcept;
+template <typename... A>
+inlinestd::ostream& operator<<(std::ostream& stream_, const std::tuple<A...>& tup_) noexcept;
 
 
 
@@ -42,8 +42,8 @@ inline S& operator<<(S& stream_, const std::tuple<A...>& tup_) noexcept;
  *
  *  @return Reference to stream post-print.
  */
-template <typename S, typename... A>
-inline S& operator<<(S& stream_, const std::tuple<A...>& tup_) noexcept
+template <typename... A>
+inline std::ostream& operator<<(std::ostream& stream_, const std::tuple<A...>& tup_) noexcept
 {
     stream_ << '(';
     arc::utl::apply_with_index(tup_, [&stream_]<typename L>(const L& val_, const size_t i, const size_t total) { stream_ << ((i == 0) ? "" : ", ") << val_; });
