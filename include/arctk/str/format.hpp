@@ -3,7 +3,7 @@
  *  @date   27/05/2018
  *  @author Freddy Wordingham
  *
- *  Table formatting string functions.
+ *  Formatting string functions.
  */
 
 
