@@ -32,6 +32,11 @@ namespace arc //! arctk namespace
         void apply(std::pair<A0, A1>& pair_, F func_);
         template <typename A0, typename A1, typename F>
         void apply(const std::pair<A0, A1>& pair_, F func_);
+        template <typename A0, typename A1, typename F>
+        void apply_with_index(std::pair<A0, A1>& pair_, F func_);
+        template <typename A0, typename A1, typename F>
+        void apply_with_index(const std::pair<A0, A1>& pair_, F func_);
+
 
 
         //  == FUNCTIONS ==
@@ -47,6 +52,20 @@ namespace arc //! arctk namespace
         {
             func_(std::get<0>(pair_));
             func_(std::get<1>(pair_));
+        }
+
+        template <typename A0, typename A1, typename F>
+        void apply_with_index(std::pair<A0, A1>& pair_, F func_)
+        {
+            func_(std::get<0>(pair_), 0, 2);
+            func_(std::get<1>(pair_), 1, 2);
+        }
+
+        template <typename A0, typename A1, typename F>
+        void apply_with_index(const std::pair<A0, A1>& pair_, F func_)
+        {
+            func_(std::get<0>(pair_), 0, 2);
+            func_(std::get<1>(pair_), 1, 2);
         }
 
 
