@@ -49,9 +49,25 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
+            //  -- Getters --
+            const std::tuple<A...>& operator[](const size_t index_);
+
+            //  -- Access --
+
+
+
             //  == METHODS ==
           public:
         };
+
+
+
+        //  == OPERATORS ==
+        //  -- Getters --
+        const std::tuple<A...>& Table<A...>::operator[](const size_t index_)
+        {
+            return (_rows[index_]);
+        }
 
 
 
