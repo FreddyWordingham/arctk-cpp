@@ -39,6 +39,16 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTIONS ==
+        /**
+         *  Form a container into a tabulated string.
+         *
+         *  @tparam C   Container type.
+         *  @tparam I   Iterator type of C.
+         *
+         *  @param  cont_   Container to form into a table string.
+         *
+         *  @return Tabulated string of cont_.
+         */
         template <typename C, typename I = typename C::const_iterator>
         inline std::string table(const C& cont_) noexcept
         {
