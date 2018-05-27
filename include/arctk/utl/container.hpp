@@ -28,10 +28,20 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
+        template <typename C, typename I = typename C::const_iterator, typename F>
+        inline size_t apply(const C& cont_, F func_) noexcept;
 
 
 
         //  == FUNCTIONS ==
+        template <typename C, typename I, typename F>
+        inline size_t apply(const C& cont_, F func_) noexcept
+        {
+            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+            {
+                func_(*it);
+            }
+        }
 
 
 
