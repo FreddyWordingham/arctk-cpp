@@ -41,6 +41,14 @@ namespace arc //! arctk namespace
         template <typename C, typename I = typename C::const_iterator>
         inline std::string table(const C& cont_) noexcept
         {
+            std::stringstream stream;
+
+            for (I it = std::begin(cont_); it != std::prev(std::end(cont_)); std::advance(it, 1))
+            {
+                stream << *it << '\n';
+            }
+
+            return (stream.str());
         }
 
 
