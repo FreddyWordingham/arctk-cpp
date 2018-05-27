@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 #include <arctk/print/container.hpp>
 #include <arctk/print/pair.hpp>
+#include <arctk/print/table.hpp>
 #include <arctk/print/tuple.hpp>
 
 
