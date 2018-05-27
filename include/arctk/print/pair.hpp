@@ -20,10 +20,29 @@
 
 
 //  == OPERATOR PROTOTYPES ==
+template <typename S, typename A0, typename A1>
+inline S& operator<<(S& stream_, const std::pair<A0, A1>& pair_) noexcept;
 
 
 
 //  == OPERATORS ==
+/**
+ *  Print pair's contents to a stream.
+ *
+ *  @tparam S   Stream type.
+ *  @tparam A0  First type stored by pair.
+ *  @tparam A1  Second type stored by pair.
+ *
+ *  @param  stream_ Stream to print to.
+ *  @param  pair_   Pair to print.
+ *
+ *  @return Reference to stream post-print.
+ */
+template <typename S, typename A0, typename A1>
+inline S& operator<<(S& stream_, const std::pair<A0, A1>& pair_) noexcept
+{
+    stream_ << '(' << std::get<0>(pair_) << ", " << std::get<1>(pair_) << ')';
+}
 
 
 
