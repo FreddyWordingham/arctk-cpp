@@ -20,6 +20,7 @@
 
 
 //  == IMPORTS ==
+#include <arctk/str/format.hpp>
 
 
 
