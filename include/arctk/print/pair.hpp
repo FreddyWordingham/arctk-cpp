@@ -20,8 +20,8 @@
 
 
 //  == OPERATOR PROTOTYPES ==
-template <typename A0, typename A1>
-inline std::ostream& operator<<(std::ostream& stream_, const std::pair<A0, A1>& pair_) noexcept;
+template <typename S, typename A0, typename A1>
+inline S& operator<<(S& stream_, const std::pair<A0, A1>& pair_) noexcept;
 
 
 
@@ -38,8 +38,8 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::pair<A0, A1>& 
  *
  *  @return Reference to stream post-print.
  */
-template <typename A0, typename A1>
-inline std::ostream& operator<<(std::ostream& stream_, const std::pair<A0, A1>& pair_) noexcept
+template <typename S, typename A0, typename A1>
+inline S& operator<<(S& stream_, const std::pair<A0, A1>& pair_) noexcept
 {
     stream_ << '(' << std::get<0>(pair_) << ", " << std::get<1>(pair_) << ')';
 }
