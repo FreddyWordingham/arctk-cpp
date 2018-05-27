@@ -28,10 +28,20 @@ namespace arc //! arctk namespace
 
 
         //  == CLASS ==
+        /**
+         *  Data table class storing rows of heterogeneous types.
+         *
+         *  @tparam A   Types stored by each row.
+         */
+        template <class... A>
         class Table
         {
             //  == FIELDS ==
           private:
+            //  -- Data --
+            std::vector<std::tuple<A...>> _rows{};
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
