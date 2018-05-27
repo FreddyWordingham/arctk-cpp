@@ -14,6 +14,7 @@
 #include <arctk/constant.hpp>
 #include <arctk/constant/math.hpp>
 #include <arctk/constant/phys.hpp>
+#include <arctk/data.hpp>
 #include <arctk/math.hpp>
 #include <arctk/math/container.hpp>
 #include <arctk/math/conversion.hpp>
