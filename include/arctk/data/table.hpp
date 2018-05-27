@@ -53,6 +53,7 @@ namespace arc //! arctk namespace
             const std::tuple<A...>& operator[](const size_t index_);
 
             //  -- Access --
+            std::tuple<A...>& operator[](const size_t index_);
 
 
 
@@ -65,6 +66,13 @@ namespace arc //! arctk namespace
         //  == OPERATORS ==
         //  -- Getters --
         const std::tuple<A...>& Table<A...>::operator[](const size_t index_)
+        {
+            return (_rows[index_]);
+        }
+
+
+        //  -- Access --
+        std::tuple<A...>& Table<A...>::operator[](const size_t index_)
         {
             return (_rows[index_]);
         }
