@@ -40,6 +40,16 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTIONS ==
+        /**
+         *  Call a functor on each element of a pair.
+         *
+         *  @tparam A0  First type stored by pair.
+         *  @tparam A1  Second type stored by pair.
+         *  @tparam F   Type of functor to be applied.
+         *
+         *  @param  pair_   Pair to be applied to.
+         *  @param  func_   Functor to be applied.
+         */
         template <typename A0, typename A1, typename F>
         void apply(std::pair<A0, A1>& pair_, F func_)
         {
@@ -47,6 +57,16 @@ namespace arc //! arctk namespace
             func_(std::get<1>(pair_));
         }
 
+        /**
+         *  Call a functor on each element of a const pair.
+         *
+         *  @tparam A0  First type stored by pair.
+         *  @tparam A1  Second type stored by pair.
+         *  @tparam F   Type of functor to be applied.
+         *
+         *  @param  pair_   Pair to be applied to.
+         *  @param  func_   Functor to be applied.
+         */
         template <typename A0, typename A1, typename F>
         void apply(const std::pair<A0, A1>& pair_, F func_)
         {
@@ -54,6 +74,17 @@ namespace arc //! arctk namespace
             func_(std::get<1>(pair_));
         }
 
+        /**
+         *  Call a functor on each element of a pair.
+         *  Provide the pair index and the total number of pair types.
+         *
+         *  @tparam A0  First type stored by pair.
+         *  @tparam A1  Second type stored by pair.
+         *  @tparam F   Type of functor to be applied.
+         *
+         *  @param  pair_   Pair to be applied to.
+         *  @param  func_   Functor to be applied.
+         */
         template <typename A0, typename A1, typename F>
         void apply_with_index(std::pair<A0, A1>& pair_, F func_)
         {
@@ -61,6 +92,17 @@ namespace arc //! arctk namespace
             func_(std::get<1>(pair_), 1, 2);
         }
 
+        /**
+         *  Call a functor on each element of a const pair.
+         *  Provide the pair index and the total number of pair types.
+         *
+         *  @tparam A0  First type stored by pair.
+         *  @tparam A1  Second type stored by pair.
+         *  @tparam F   Type of functor to be applied.
+         *
+         *  @param  pair_   Pair to be applied to.
+         *  @param  func_   Functor to be applied.
+         */
         template <typename A0, typename A1, typename F>
         void apply_with_index(const std::pair<A0, A1>& pair_, F func_)
         {
