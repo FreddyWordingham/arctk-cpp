@@ -32,6 +32,10 @@ namespace arc //! arctk namespace
         inline void apply(C& cont_, F func_) noexcept;
         template <typename C, typename I = typename C::cont_iterator, typename F>
         inline void apply(const C& cont_, F func_) noexcept;
+        template <typename C, typename I = typename C::iterator, typename F>
+        inline void apply_with_index(C& cont_, F func_) noexcept;
+        template <typename C, typename I = typename C::cont_iterator, typename F>
+        inline void apply_with_index(const C& cont_, F func_) noexcept;
 
 
 
@@ -71,6 +75,56 @@ namespace arc //! arctk namespace
             for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
             {
                 func_(*it);
+            }
+        }
+
+        /**
+         *  Apply a given functor to each element of a container.
+         *  Provide the current element index and the total number of elements.
+         *
+         *  @tparam C   Type of the container.
+         *  @tparam I   Iterator of type C.
+         *  @tparam F   Type of functor to be applied.
+         *
+         *  @param  cont_   Container to be applied to.
+         *  @param  func_   Functor to be applied.
+         */
+        template <typename C, typename I, typename F>
+        inline void apply_with_index(C& cont_, F func_) noexcept
+        {
+            const size_t size  = std::distance(std::begin(cont_), std::end(cont_));
+            size_t       index = 0;
+
+            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+            {
+                func_(*it, index, size);
+
+                ++index;
+            }
+        }
+
+        /**
+         *  Apply a given functor to each element of a const container.
+         *  Provide the current element index and the total number of elements.
+         *
+         *  @tparam C   Type of the container.
+         *  @tparam I   Iterator of type C.
+         *  @tparam F   Type of functor to be applied.
+         *
+         *  @param  cont_   Container to be applied to.
+         *  @param  func_   Functor to be applied.
+         */
+        template <typename C, typename I, typename F>
+        inline void apply_with_index(const C& cont_, F func_) noexcept
+        {
+            const size_t size  = std::distance(std::begin(cont_), std::end(cont_));
+            size_t       index = 0;
+
+            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+            {
+                func_(*it, index, size);
+
+                ++index;
             }
         }
 
