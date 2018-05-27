@@ -34,9 +34,9 @@ namespace arc //! arctk namespace
 
         //  == FUNCTION PROTOTYPES ==
         template <typename T>
-        inline T rad_to_deg(const T x_) noexcept;
+        inline T rad_to_deg(T x_) noexcept;
         template <typename T>
-        inline T deg_to_rad(const T x_) noexcept;
+        inline T deg_to_rad(T x_) noexcept;
 
 
 
