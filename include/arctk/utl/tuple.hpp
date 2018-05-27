@@ -43,8 +43,8 @@ namespace arc //! arctk namespace
          *  Call a functor on each element of a functor.
          *
          *  @tparam T   Type of tuple.
-         *  @tparam A   Types stored by tuple.
-         *  @tparam F   Functor to be applied.
+         *  @tparam F   Type of functor to be applied.
+         *  @tparam I   Indices of the tuple.
          *
          *  @param  tuple_  Tuple to be applied to.
          *  @param  func_   Functor to be applied.
@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
          *
          *  @tparam T   Type of tuple.
          *  @tparam A   Types stored by tuple.
-         *  @tparam F   Functor to be applied.
+         *  @tparam F   Type of functor to be applied.
          *
          *  @param  tuple_  Tuple to be applied to.
          *  @param  func_   Functor to be applied.
@@ -74,17 +74,17 @@ namespace arc //! arctk namespace
         /**
          *  Apply a given functor to each element of a const tuple.
          *
-         *  @tparam T       Type of tuple.
-         *  @tparam Args    Types stored by tuple.
-         *  @tparam F       Functor to be applied.
+         *  @tparam T   Type of tuple.
+         *  @tparam A   Types stored by tuple.
+         *  @tparam F   Type of functor to be applied.
          *
          *  @param  tuple_  Tuple to be applied to.
          *  @param  func_   Functor to be applied.
          */
-        template <template <typename...> typename T, typename... Args, typename F>
-        void apply(const T<Args...>& tuple_, F func_)
+        template <template <typename...> typename T, typename... A, typename F>
+        void apply(const T<A...>& tuple_, F func_)
         {
-            apply_to_each(tuple_, func_, std::index_sequence_for<Args...>{});
+            apply_to_each(tuple_, func_, std::index_sequence_for<A...>{});
         }
 
 
