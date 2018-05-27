@@ -30,10 +30,10 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         template <typename T, typename F, size_t... I>
         void apply_to_each(T&& tuple_, F func_, std::index_sequence<I...>);
-        template <template <typename...> typename T, typename... Args, typename F>
-        void apply(T<Args...>& tuple_, F func_);
-        template <template <typename...> typename T, typename... Args, typename F>
-        void apply(const T<Args...>& tuple_, F func_);
+        template <template <typename...> typename T, typename... A, typename F>
+        void apply(T<A...>& tuple_, F func_);
+        template <template <typename...> typename T, typename... A, typename F>
+        void apply(const T<A...>& tuple_, F func_);
 
 
 
@@ -42,9 +42,9 @@ namespace arc //! arctk namespace
          *  Apply helper function.
          *  Call a functor on each element of a functor.
          *
-         *  @tparam T       Type of tuple.
-         *  @tparam Args    Types stored by tuple.
-         *  @tparam F       Functor to be applied.
+         *  @tparam T   Type of tuple.
+         *  @tparam A   Types stored by tuple.
+         *  @tparam F   Functor to be applied.
          *
          *  @param  tuple_  Tuple to be applied to.
          *  @param  func_   Functor to be applied.
