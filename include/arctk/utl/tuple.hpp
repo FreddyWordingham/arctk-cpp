@@ -31,6 +31,8 @@ namespace arc //! arctk namespace
         template <typename T, typename F, size_t... I>
         void apply_to_each(T&& tuple_, F func_, std::index_sequence<I...>);
         template <template <typename...> typename T, typename... Args, typename F>
+        void apply(T<Args...>& tuple_, F func_);
+        template <template <typename...> typename T, typename... Args, typename F>
         void apply(const T<Args...>& tuple_, F func_);
 
 
@@ -55,6 +57,22 @@ namespace arc //! arctk namespace
 
         /**
          *  Apply a given functor to each element of a tuple.
+         *
+         *  @tparam T       Type of tuple.
+         *  @tparam Args    Types stored by tuple.
+         *  @tparam F       Functor to be applied.
+         *
+         *  @param  tuple_  Tuple to be applied to.
+         *  @param  func_   Functor to be applied.
+         */
+        template <template <typename...> typename T, typename... Args, typename F>
+        void apply(T<Args...>& tuple_, F func_)
+        {
+            apply_to_each(tuple_, func_, std::index_sequence_for<Args...>{});
+        }
+
+        /**
+         *  Apply a given functor to each element of a const tuple.
          *
          *  @tparam T       Type of tuple.
          *  @tparam Args    Types stored by tuple.
