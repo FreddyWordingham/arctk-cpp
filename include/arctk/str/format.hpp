@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
         {
             std::stringstream stream;
 
-            for (I it = std::begin(cont_); it != std::prev(std::end(cont_)); std::advance(it, 1))
+            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
             {
                 stream << *it << '\n';
             }
