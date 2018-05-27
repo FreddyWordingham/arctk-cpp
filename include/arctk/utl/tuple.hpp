@@ -29,7 +29,7 @@ namespace arc //! arctk namespace
 
         //  == FUNCTION PROTOTYPES ==
         template <typename T, typename F, size_t... I>
-        void apply_to_each(T&& tuple_, F func_, std::index_sequence<I...>);
+        void apply_to_each(T&& tuple_, F func_, std::index_sequence<I...> /*unused*/);
         template <template <typename...> typename T, typename... A, typename F>
         void apply(T<A...>& tuple_, F func_);
         template <template <typename...> typename T, typename... A, typename F>
@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
          *  @param  func_   Functor to be applied.
          */
         template <typename T, typename F, size_t... I>
-        void apply_to_each(T&& tuple_, F func_, std::index_sequence<I...>)
+        void apply_to_each(T&& tuple_, F func_, std::index_sequence<I...> /*unused*/)
         {
             ((func_(std::get<I>(tuple_)), 0), ...);
         }
