@@ -25,6 +25,7 @@
 #include <arctk/search.hpp>
 #include <arctk/search/container.hpp>
 #include <arctk/utl.hpp>
+#include <arctk/utl/tuple.hpp>
 
 
 
