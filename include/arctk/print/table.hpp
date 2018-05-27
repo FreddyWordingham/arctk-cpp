@@ -23,6 +23,26 @@
 
 
 
+//  == NAMESPACE ==
+namespace arc //! arctk namespace
+{
+    namespace print //! print namespace
+    {
+
+
+
+        //  == FUNCTION PROTOTYPES ==
+
+
+        //  == FUNCTIONS ==
+
+
+
+    } // namespace print
+} // namespace arc
+
+
+
 //  == MODULE END ==
 #endif // ARCTK_MOD_CORE
 
