@@ -45,6 +45,19 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTIONS ==
+        /**
+         *  Form a container into a human-readable string.
+         *
+         *  @tparam C   Container type.
+         *  @tparam I   Iterator type of C.
+         *
+         *  @param  cont_   Container to form into a string.
+         *  @param  pre_    String to prepend the formed string with.
+         *  @param  delim_  Delimiter used to separate elements.
+         *  @param  app_    String to append the formed string with.
+         *
+         *  @return A human readable string of the container.
+         */
         template <typename C, typename I>
         inline std::string to_string(const C& cont_, const std::string& pre_, const std::string& delim_, const std::string& app_) noexcept
         {
