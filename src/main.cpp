@@ -15,6 +15,7 @@
 #include <arctk/constant/math.hpp>
 #include <arctk/constant/phys.hpp>
 #include <arctk/data.hpp>
+#include <arctk/format.hpp>
 #include <arctk/math.hpp>
 #include <arctk/math/container.hpp>
 #include <arctk/math/conversion.hpp>
@@ -29,6 +30,7 @@
 #include <arctk/str.hpp>
 #include <arctk/str/convert.hpp>
 #include <arctk/str/format.hpp>
+#include <arctk/str/format/container.hpp>
 #include <arctk/utl.hpp>
 #include <arctk/utl/container.hpp>
 #include <arctk/utl/pair.hpp>
