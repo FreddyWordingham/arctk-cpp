@@ -20,6 +20,8 @@
 
 
 //  == IMPORTS ==
+#include <sstream>
+#include <string>
 
 
 
