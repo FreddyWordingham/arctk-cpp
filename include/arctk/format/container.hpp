@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
 
             for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
             {
-                stream << str::to_string(tup_, "", delim_, "") << '\n';
+                stream << str::to_string(*it, "", delim_, "") << '\n';
             }
 
             return (stream.str());
