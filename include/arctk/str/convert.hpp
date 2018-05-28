@@ -38,7 +38,6 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
-        inline std::string to_string(const std::string& str_, const std::string& /*unused*/, const std::string& /*unused*/, const std::string& /*unused*/) noexcept;
         template <typename C, typename I = typename C::const_iterator>
         inline std::string to_string(const C& cont_, const std::string& pre_ = "{", const std::string& delim_ = ", ", const std::string& app_ = "}") noexcept;
         template <typename A0, typename A1>
@@ -49,11 +48,6 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTIONS ==
-        inline std::string to_string(const std::string& str_, const std::string& /*unused*/, const std::string& /*unused*/, const std::string& /*unused*/) noexcept
-        {
-            return (str_);
-        }
-
         /**
          *  Form a container into a human-readable string.
          *
