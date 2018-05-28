@@ -22,6 +22,8 @@
 //  == IMPORTS ==
 #include <sstream>
 #include <string>
+#include <tuple>
+#include <utility>
 
 #include <arctk/str.hpp>
 
@@ -38,6 +40,8 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         template <typename C, typename I = typename C::const_iterator>
         inline std::string row(const C& cont_) noexcept;
+        template <typename A0, typename A1>
+        inline std::string row(const std::pair<A0, A1>& pair_) noexcept;
         template <typename C, typename I = typename C::const_iterator>
         inline std::string table(const C& cont_) noexcept;
 
@@ -48,6 +52,12 @@ namespace arc //! arctk namespace
         inline std::string row(const C& cont_) noexcept
         {
             return (str::to_string(cont_, "", ", ", ""));
+        }
+
+        template <typename A0, typename A1>
+        inline std::string row(const std::pair<A0, A1>& pair_) noexcept
+        {
+            return (str::to_string(pair_, "", ", ", ""));
         }
 
         /**
