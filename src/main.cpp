@@ -13,6 +13,7 @@
 //  -- Arctk --
 #include <arctk/config.hpp>
 #include <arctk/format.hpp>
+#include <arctk/format/table.hpp>
 #include <arctk/print.hpp>
 #include <arctk/str.hpp>
 #include <arctk/str/convert.hpp>
