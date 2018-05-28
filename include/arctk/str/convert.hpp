@@ -20,6 +20,7 @@
 
 
 //  == IMPORTS ==
+#include <iterator>
 #include <sstream>
 
 #include <arctk/utl.hpp>
