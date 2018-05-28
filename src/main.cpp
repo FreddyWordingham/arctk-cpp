@@ -11,29 +11,6 @@
 
 //  == INCLUDES ==
 //  -- Arctk --
-#include <arctk/constant.hpp>
-#include <arctk/constant/math.hpp>
-#include <arctk/constant/phys.hpp>
-#include <arctk/data.hpp>
-#include <arctk/format.hpp>
-#include <arctk/format/container.hpp>
-#include <arctk/math.hpp>
-#include <arctk/math/container.hpp>
-#include <arctk/math/conversion.hpp>
-#include <arctk/print.hpp>
-#include <arctk/print/container.hpp>
-#include <arctk/print/pair.hpp>
-#include <arctk/print/tuple.hpp>
-#include <arctk/prop.hpp>
-#include <arctk/prop/container.hpp>
-#include <arctk/search.hpp>
-#include <arctk/search/container.hpp>
-#include <arctk/str.hpp>
-#include <arctk/str/convert.hpp>
-#include <arctk/utl.hpp>
-#include <arctk/utl/container.hpp>
-#include <arctk/utl/pair.hpp>
-#include <arctk/utl/tuple.hpp>
 
 
 
