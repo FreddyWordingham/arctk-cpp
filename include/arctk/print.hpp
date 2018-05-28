@@ -20,6 +20,9 @@
 
 
 //  == IMPORTS ==
+#include <tuple>
+#include <utility>
+
 #include <arctk/str.hpp>
 
 
