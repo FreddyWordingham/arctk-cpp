@@ -26,7 +26,7 @@
 
 //  == OPERATOR PROTOTYPES ==
 template <typename S, typename C, typename I = typename C::const_iterator, typename = typename std::enable_if<!std::is_same<C, std::string>::value>::type>
-  > inline S& operator<<(S& stream_, const C& cont_) noexcept;
+inline S& operator<<(S& stream_, const C& cont_) noexcept;
 
 
 
@@ -46,7 +46,7 @@ template <typename S, typename C, typename I = typename C::const_iterator, typen
 template <typename S, typename C, typename I>
 inline S& operator<<(S& stream_, const C& cont_) noexcept
 {
-    stream_ << str::to_string(cont_);
+    stream_ << arc::str::to_string(cont_);
 
     return (stream_);
 }
