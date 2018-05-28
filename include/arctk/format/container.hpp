@@ -38,49 +38,12 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
-        inline std::string row(const std::string& str_) noexcept;
-        template <typename T>
-        inline std::string row(const T val_) noexcept;
-        template <typename C, typename I = typename C::const_iterator>
-        inline std::string row(const C& cont_) noexcept;
-        template <typename A0, typename A1>
-        inline std::string row(const std::pair<A0, A1>& pair_) noexcept;
-        template <typename... A>
-        inline std::string row(const std::tuple<A...>& tup_) noexcept;
         template <typename C, typename I = typename C::const_iterator>
         inline std::string table(const C& cont_, const std::string& delim_ = ", ") noexcept;
 
 
+
         //  == FUNCTIONS ==
-        inline std::string row(const std::string& str_) noexcept
-        {
-            return (str_);
-        }
-
-        template <typename T>
-        inline std::string row(const T val_) noexcept
-        {
-            return (std::to_string(val_));
-        }
-
-        template <typename C, typename I = typename C::const_iterator>
-        inline std::string row(const C& cont_) noexcept
-        {
-            return (str::to_string(cont_, "", ", ", ""));
-        }
-
-        template <typename A0, typename A1>
-        inline std::string row(const std::pair<A0, A1>& pair_) noexcept
-        {
-            return (str::to_string(pair_, "", ", ", ""));
-        }
-
-        template <typename... A>
-        inline std::string row(const std::tuple<A...>& tup_) noexcept
-        {
-            return (str::to_string(tup_, "", ", ", ""));
-        }
-
         /**
          *  Form a container into a tabulated string.
          *
