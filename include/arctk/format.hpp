@@ -20,6 +20,7 @@
 
 
 //  == IMPORTS ==
+#include <arctk/format/table.hpp>
 
 
 
