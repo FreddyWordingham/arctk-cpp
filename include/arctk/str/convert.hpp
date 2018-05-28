@@ -78,6 +78,19 @@ namespace arc //! arctk namespace
             return (stream.str());
         }
 
+        /**
+         *  Form a pair into a human-readable string.
+         *
+         *  @tparam A0  First type stored by pair.
+         *  @tparam A1  Second type stored by pair.
+         *
+         *  @param  cont_   Container to form into a string.
+         *  @param  pre_    String to prepend the formed string with.
+         *  @param  delim_  Delimiter used to separate elements.
+         *  @param  app_    String to append the formed string with.
+         *
+         *  @return A human readable string of the pair.
+         */
         template <typename A0, typename A1>
         inline std::string to_string(const std::pair<A0, A1>& pair_, const std::string& pre_, const std::string& delim_, const std::string& app_) noexcept
         {
