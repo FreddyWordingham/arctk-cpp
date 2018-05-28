@@ -36,11 +36,10 @@ namespace arc //! arctk namespace
 
 
 
-    //  == OPERATORS ==
-    template <typename S, typename C, typename T, typename>
+    template <typename S, typename C, typename T, typename I, typename>
     inline S& operator<<(S& stream_, const C& cont_)
     {
-        stream_ << to_string(cont_);
+        stream_ << arc::str::to_string(cont_);
 
         return (stream_);
     }
