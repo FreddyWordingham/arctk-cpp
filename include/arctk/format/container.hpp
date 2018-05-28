@@ -23,6 +23,8 @@
 #include <sstream>
 #include <string>
 
+#include <arctk/str.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -35,11 +37,19 @@ namespace arc //! arctk namespace
 
         //  == FUNCTION PROTOTYPES ==
         template <typename C, typename I = typename C::const_iterator>
+        inline std::string row(const C& cont_) noexcept;
+        template <typename C, typename I = typename C::const_iterator>
         inline std::string table(const C& cont_) noexcept;
 
 
 
         //  == FUNCTIONS ==
+        template <typename C, typename I = typename C::const_iterator>
+        inline std::string row(const C& cont_) noexcept
+        {
+            return (str::to_string(cont_, "", ", ", ""));
+        }
+
         /**
          *  Form a container into a tabulated string.
          *
@@ -57,7 +67,7 @@ namespace arc //! arctk namespace
 
             for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
             {
-                stream << *it << '\n';
+                stream << row(*it) << '\n';
             }
 
             return (stream.str());
