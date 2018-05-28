@@ -103,6 +103,18 @@ namespace arc //! arctk namespace
             return (stream.str());
         }
 
+        /**
+         *  Form a tuple into a human-readable string.
+         *
+         *  @tparam A   Types stored by tuple.
+         *
+         *  @param  cont_   Container to form into a string.
+         *  @param  pre_    String to prepend the formed string with.
+         *  @param  delim_  Delimiter used to separate elements.
+         *  @param  app_    String to append the formed string with.
+         *
+         *  @return A human readable string of the tuple.
+         */
         template <typename... A>
         inline std::string to_string(const std::tuple<A...>& tup_, const std::string& pre_, const std::string& delim_, const std::string& app_) noexcept
         {
