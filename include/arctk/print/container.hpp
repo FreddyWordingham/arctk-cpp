@@ -43,7 +43,7 @@ inline S& operator<<(S& stream_, const C& cont_) noexcept;
  *
  *  @return Reference to stream post-print.
  */
-template <typename S, typename C, typename I>
+template <typename S, typename C, typename I, typename>
 inline S& operator<<(S& stream_, const C& cont_) noexcept
 {
     stream_ << arc::str::to_string(cont_);
