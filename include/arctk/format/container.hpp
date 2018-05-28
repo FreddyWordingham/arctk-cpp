@@ -38,14 +38,16 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
-        template <typename C, typename I = typename C::const_iterator>
-        inline std::string table(const C& cont_, const std::string& delim_ = ", ") noexcept;
+        template <template <typename> typename C, typename I = typename C<std::string>::const_iterator>
+        inline std::string table(const C<std::string>& cont_, const std::string& delim_ = ", ") noexcept;
+        template <template <typename> typename C, typename T, typename I = typename C<T>::const_iterator>
+        inline std::string table(const C<T>& cont_, const std::string& delim_ = ", ") noexcept;
 
 
 
         //  == FUNCTIONS ==
         /**
-         *  Form a container into a tabulated string.
+         *  Form a container of strings into a tabulated string.
          *
          *  @tparam C   Container type.
          *  @tparam I   Iterator type of C.
@@ -55,8 +57,33 @@ namespace arc //! arctk namespace
          *
          *  @return Tabulated string of cont_.
          */
-        template <typename C, typename I = typename C::const_iterator>
-        inline std::string table(const C& cont_, const std::string& delim_) noexcept
+        template <template <typename> typename C, typename I>
+        inline std::string table(const C<std::string>& cont_, const std::string& delim_) noexcept
+        {
+            std::stringstream stream;
+
+            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+            {
+                stream << *it << '\n';
+            }
+
+            return (stream.str());
+        }
+
+        /**
+         *  Form a container into a tabulated string.
+         *
+         *  @tparam C   Container type.
+         *  @tpatam T   Type stored by C.
+         *  @tparam I   Iterator type of C.
+         *
+         *  @param  cont_   Container to form into a table string.
+         *  @param  delim_  Delimiter string.
+         *
+         *  @return Tabulated string of cont_.
+         */
+        template <template <typename> typename C, typename T, typename I>
+        inline std::string table(const C<T>& cont_, const std::string& delim_) noexcept
         {
             std::stringstream stream;
 
