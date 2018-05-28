@@ -1,9 +1,9 @@
 /**
- *  @file   arctk/str/container.hpp
+ *  @file   arctk/str/convertsion.hpp
  *  @date   27/05/2018
  *  @author Freddy Wordingham
  *
- *  Container string functions.
+ *  Conversion to string functions.
  */
 
 
