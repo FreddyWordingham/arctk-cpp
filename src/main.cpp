@@ -27,7 +27,7 @@
 #include <arctk/search.hpp>
 #include <arctk/search/container.hpp>
 #include <arctk/str.hpp>
-#include <arctk/str/container.hpp>
+#include <arctk/str/conversion.hpp>
 #include <arctk/str/format.hpp>
 #include <arctk/utl.hpp>
 #include <arctk/utl/container.hpp>
