@@ -45,9 +45,7 @@ inline S& operator<<(S& stream_, const std::tuple<A...>& tup_) noexcept;
 template <typename S, typename... A>
 inline S& operator<<(S& stream_, const std::tuple<A...>& tup_) noexcept
 {
-    stream_ << '(';
-    arc::utl::apply_with_index(tup_, [&stream_]<typename L>(const L& val_, const size_t i, const size_t total) { stream_ << ((i == 0) ? "" : ", ") << val_; });
-    stream_ << ')';
+    stream_ << arc::str::to_string(pair_);
 }
 
 
