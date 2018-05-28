@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
         template <typename A0, typename A1>
         inline std::string to_string(const std::pair<A0, A1>& pair_, const std::string& pre_ = "(", const std::string& delim_ = ", ", const std::string& post_ = ")");
         template <typename... A>
-        inline std::string to_string(const std::tuple<A...>& tuple_, const std::string& pre_ = "(", const std::string& delim_ = ", ", const std::string& post_ = ")");
+        inline std::string to_string(const std::tuple<A...>& tup_, const std::string& pre_ = "(", const std::string& delim_ = ", ", const std::string& post_ = ")");
 
 
 
@@ -79,13 +79,13 @@ namespace arc //! arctk namespace
         }
 
         template <typename... A>
-        inline std::string to_string(const std::tuple<A...>& tuple_, const std::string& pre_, const std::string& delim_, const std::string& post_)
+        inline std::string to_string(const std::tuple<A...>& tup_, const std::string& pre_, const std::string& delim_, const std::string& post_)
         {
             std::stringstream stream;
 
             stream << pre_;
             arc::utl::apply_with_index(tup_, [&stream, &delim_]<typename L>(const L& val_, const size_t i, const size_t total) { stream << ((i == 0) ? "" : delim_) << val_; });
-            stream << pos_;
+            stream << post_;
 
             return (stream.str());
         }
