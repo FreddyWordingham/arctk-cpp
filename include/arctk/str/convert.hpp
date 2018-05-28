@@ -64,13 +64,13 @@ namespace arc //! arctk namespace
         }
 
         template <typename A0, typename A1>
-        inline std::string to_string(const std::pair<A0, A1>& pair_, const std::string& pre_ = "(", const std::string& delim_ = ", ", const std::string& app_ = ")") noexcept
+        inline std::string to_string(const std::pair<A0, A1>& pair_, const std::string& pre_, const std::string& delim_, const std::string& app_) noexcept
         {
             std::stringstream stream;
 
             stream << pre_;
 
-            stream_ << std::get<0>(pair_) << delim_ << std::get<1>(pair_);
+            stream << std::get<0>(pair_) << delim_ << std::get<1>(pair_);
 
             stream << app_;
 
