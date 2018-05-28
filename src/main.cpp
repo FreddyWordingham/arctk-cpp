@@ -11,6 +11,7 @@
 
 //  == INCLUDES ==
 //  -- Arctk --
+#include <arctk/str.hpp>
 
 
 
