@@ -41,7 +41,7 @@ inline S& operator<<(S& stream_, const std::pair<A0, A1>& pair_) noexcept;
 template <typename S, typename A0, typename A1>
 inline S& operator<<(S& stream_, const std::pair<A0, A1>& pair_) noexcept
 {
-    stream_ << '(' << std::get<0>(pair_) << ", " << std::get<1>(pair_) << ')';
+    stream_ << arc::str::to_string(pair_);
 }
 
 
