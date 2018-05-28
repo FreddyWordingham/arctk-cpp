@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_STR_CONTAINER_HPP
-#define ARCTK_STR_CONTAINER_HPP
+#ifndef ARCTK_STR_CONVERT_HPP
+#define ARCTK_STR_CONVERT_HPP
 
 
 
@@ -51,4 +51,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_STR_CONTAINER_HPP
+#endif // ARCTK_STR_CONVERT_HPP
