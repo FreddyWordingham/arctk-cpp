@@ -12,6 +12,7 @@
 //  == INCLUDES ==
 //  -- Arctk --
 #include <arctk/str.hpp>
+#include <arctk/str/conversion.hpp>
 
 
 
