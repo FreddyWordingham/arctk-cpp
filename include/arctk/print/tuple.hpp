@@ -45,7 +45,7 @@ inline S& operator<<(S& stream_, const std::tuple<A...>& tup_) noexcept;
 template <typename S, typename... A>
 inline S& operator<<(S& stream_, const std::tuple<A...>& tup_) noexcept
 {
-    stream_ << arc::str::to_string(pair_);
+    stream_ << arc::str::to_string(tup_);
 }
 
 
