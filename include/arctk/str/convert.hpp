@@ -23,6 +23,7 @@
 #include <array>
 #include <sstream>
 #include <string>
+#include <utility>
 
 
 
@@ -37,6 +38,8 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline std::string to_string(const C& cont_, const std::string& pre_ = "{", const std::string& delim_ = ", ", const std::string& post_ = "}");
+        template <typename A0, typename A1>
+        inline std::string to_string(const std::pair<A0, A1>& pair_, const std::string& pre_ = "(", const std::string& delim_ = ", ", const std::string& post_ = ")");
 
 
 
@@ -56,6 +59,16 @@ namespace arc //! arctk namespace
                 }
             }
             stream << post_;
+
+            return (stream.str());
+        }
+
+        template <typename A0, typename A1>
+        inline std::string to_string(const std::pair<A0, A1>& pair_, const std::string& pre_, const std::string& delim_, const std::string& post_)
+        {
+            std::stringstream stream;
+
+            stream << pre_ << std::get<0>(pair_) << delim_ << std::get<1>(pair_) << post_;
 
             return (stream.str());
         }
