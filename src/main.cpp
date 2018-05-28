@@ -14,6 +14,7 @@
 #include <arctk/print.hpp>
 #include <arctk/str.hpp>
 #include <arctk/str/convert.hpp>
+#include <arctk/utl.hpp>
 
 
 
