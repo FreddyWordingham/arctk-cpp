@@ -38,6 +38,8 @@ namespace arc //! arctk namespace
     template <typename S, typename... A>
     inline S& operator<<(S& stream_, const std::tuple<A...>& tup_);
 
+
+
     //  == OPERATORS ==
     template <typename S, typename C, typename T, typename I, typename>
     inline S& operator<<(S& stream_, const C& cont_)
