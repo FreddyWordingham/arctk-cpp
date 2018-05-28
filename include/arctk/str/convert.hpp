@@ -83,7 +83,7 @@ namespace arc //! arctk namespace
 
             stream << pre_;
             arc::utl::apply_with_index(tup_, [&stream, &delim_]<typename L>(const L& val_, const size_t i, const size_t total) { stream << ((i == 0) ? "" : delim_) << val_; });
-            stream << app_;
+            stream << pos_;
 
             return (stream.str());
         }
