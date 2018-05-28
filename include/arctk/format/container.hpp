@@ -42,6 +42,8 @@ namespace arc //! arctk namespace
         inline std::string row(const C& cont_) noexcept;
         template <typename A0, typename A1>
         inline std::string row(const std::pair<A0, A1>& pair_) noexcept;
+        template <typename... A>
+        inline std::string row(const std::tuple<A...>& tup_) noexcept;
         template <typename C, typename I = typename C::const_iterator>
         inline std::string table(const C& cont_) noexcept;
 
@@ -58,6 +60,12 @@ namespace arc //! arctk namespace
         inline std::string row(const std::pair<A0, A1>& pair_) noexcept
         {
             return (str::to_string(pair_, "", ", ", ""));
+        }
+
+        template <typename... A>
+        inline std::string row(const std::tuple<A...>& tup_) noexcept
+        {
+            return (str::to_string(tup_, "", ", ", ""));
         }
 
         /**
