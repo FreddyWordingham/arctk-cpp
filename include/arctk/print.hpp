@@ -19,7 +19,30 @@
 
 
 
-//  == IMPORTS ==
+//  == NAMESPACE ==
+namespace arc //! arctk namespace
+{
+
+
+
+    //  == OPERATOR PROTOTYPES ==
+    template <typename S, typename C, typename T = typename C::value_type, typename I = typename C::const_iterator, typename = typename std::enable_if<!std::is_same<C, std::string>::value>::type>
+    inline S& operator<<(S& stream_, const C& cont_);
+
+
+
+    //  == OPERATORS ==
+    template <typename S, typename C, typename T, typename>
+    inline S& operator<<(S& stream_, const C& cont_)
+    {
+        stream_ << to_string(cont_);
+
+        return (stream_);
+    }
+
+
+
+} // namespace arc
 
 
 
