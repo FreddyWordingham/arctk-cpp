@@ -38,6 +38,8 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
+        template <typename T>
+        inline std::string row(const T val_) noexcept;
         template <typename C, typename I = typename C::const_iterator>
         inline std::string row(const C& cont_) noexcept;
         template <typename A0, typename A1>
@@ -48,8 +50,13 @@ namespace arc //! arctk namespace
         inline std::string table(const C& cont_) noexcept;
 
 
-
         //  == FUNCTIONS ==
+        template <typename T>
+        inline std::string row(const T val_) noexcept
+        {
+            return (std::to_string(val_));
+        }
+
         template <typename C, typename I = typename C::const_iterator>
         inline std::string row(const C& cont_) noexcept
         {
