@@ -35,7 +35,7 @@ namespace arc //! arctk namespace
 
         //  == FUNCTION PROTOTYPES ==
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
-        inline std::string table(const C& cont_, const std::string& delim_ = ", ") noexcept;
+        inline std::string table(const C& cont_, const size_t width_ = 0, const std::string& delim_ = ", ") noexcept;
 
 
 
@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
          *  @return Formatted data table string.
          */
         template <typename C, typename T, typename I>
-        inline std::string table(const C& cont_, const std::string& delim_) noexcept
+        inline std::string table(const C& cont_, const size_t width_, const std::string& delim_) noexcept
         {
             std::stringstream stream;
 
@@ -57,11 +57,11 @@ namespace arc //! arctk namespace
             {
                 if constexpr (std::is_fundamental<T>::value || std::is_same<T, std::string>::value)
                 {
-                    stream << *it << '\n';
+                    stream << std::setw(width_) << *it << '\n';
                 }
                 else
                 {
-                    stream << str::to_string(*it, "", delim_, "") << '\n';
+                    stream << str::to_string(*it, width_, "", delim_, "") << '\n';
                 }
             }
 
