@@ -15,6 +15,7 @@
 #include <arctk/format.hpp>
 #include <arctk/format/table.hpp>
 #include <arctk/print.hpp>
+#include <arctk/prop.hpp>
 #include <arctk/search.hpp>
 #include <arctk/search/container.hpp>
 #include <arctk/str.hpp>
