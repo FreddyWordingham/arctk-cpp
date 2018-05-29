@@ -182,8 +182,9 @@ namespace arc //! arctk namespace
         /**
          *  Find the index of the first element of the container that is greater than the value given.
          *
-         *  @tparam C   Container type.
+         *  @tparam C   Type of container.
          *  @tparam T   Type stored by C.
+         *  @tparam I   Type of const iterator of C.
          *
          *  @param  cont_   Container to search.
          *  @param  val_    Value to place.
