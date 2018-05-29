@@ -36,17 +36,17 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
-        template <typename C, typename T = typename C::value_type, typename I = typename C::iterator>
+        template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline size_t min_index(const C& cont_) noexcept;
-        template <typename C, typename T = typename C::value_type, typename I = typename C::iterator>
+        template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline size_t max_index(const C& cont_) noexcept;
-        template <typename C, typename T = typename C::value_type, typename I = typename C::iterator>
+        template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline T min(const C& cont_) noexcept;
-        template <typename C, typename T = typename C::value_type, typename I = typename C::iterator>
+        template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline T max(const C& cont_) noexcept;
-        template <typename C, typename T = typename C::value_type, typename I = typename C::iterator>
+        template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline size_t lower(const C& cont_, const T& val_) noexcept;
-        template <typename C, typename T = typename C::value_type, typename I = typename C::iterator>
+        template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline size_t upper(const C& cont_, const T& val_) noexcept;
 
 
