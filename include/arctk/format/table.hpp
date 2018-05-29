@@ -40,6 +40,14 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTIONS ==
+        /**
+         *  Format a given container into a table.
+         *
+         *  @param  cont_   Container to form into table.
+         *  @param  delim_  Table delimiter string.
+         *
+         *  @return Formatted data table string.
+         */
         template <typename C, typename T, typename I>
         inline std::string table(const C& cont_, const std::string& delim_) noexcept
         {
