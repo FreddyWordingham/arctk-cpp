@@ -141,7 +141,9 @@ namespace arc //! arctk namespace
          *  Test if a container's elements are sorted in monotonic order.
          *  Container is still considered monotonic if consecutive values are equal.
          *
-         *  @tparam C   Container type.
+         *  @tparam C   Type of container.
+         *  @tparam T   Type stored by C.
+         *  @tparam I   Type of const iterator of C.
          *
          *  @param  cont_   Container to test.
          *
