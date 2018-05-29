@@ -221,9 +221,9 @@ namespace arc //! arctk namespace
         /**
          *  Determine if all elements of a container are less than a given limit.
          *
-         *  @tparam C   Container type.
-         *  @tparam I   Iterator type of C.
+         *  @tparam C   Type of container.
          *  @tparam T   Type stored by C.
+         *  @tparam I   Type of const iterator of C.
          *
          *  @param  cont_   Container to test.
          *  @param  limit_  Limit to compare elements against.
