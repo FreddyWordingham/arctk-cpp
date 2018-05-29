@@ -23,6 +23,8 @@
 #include <cassert>
 #include <iterator>
 
+#include <arctk/prop.hpp>
+
 
 
 //  == NAMESPACE ==
