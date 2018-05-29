@@ -114,8 +114,9 @@ namespace arc //! arctk namespace
         /**
          *  Find the minimum element within a container.
          *
-         *  @tparam C   Container type.
+         *  @tparam C   Type of container.
          *  @tparam T   Type stored by C.
+         *  @tparam I   Type of const iterator of C.
          *
          *  @param  cont_   Container to determine the minimum element of.
          *
