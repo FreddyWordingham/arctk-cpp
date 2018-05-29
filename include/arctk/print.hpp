@@ -86,6 +86,17 @@ namespace arc //! arctk namespace
         return (stream_);
     }
 
+    /**
+     *  Print a tuple as a human-readable string.
+     *
+     *  @tparam S   Type of stream to print to.
+     *  @tparam A   Types stored by the tuple.
+     *
+     *  @param  stream_ Stream to print to.
+     *  @param  tup_    Tuple to print.
+     *
+     *  @return A reference to the stream post-print.
+     */
     template <typename S, typename... A>
     inline S& operator<<(S& stream_, const std::tuple<A...>& tup_)
     {
