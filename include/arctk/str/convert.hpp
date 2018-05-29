@@ -108,6 +108,19 @@ namespace arc //! arctk namespace
             return (stream.str());
         }
 
+        /**
+         *  Form a tuple into a human-readable string.
+         *
+         *  @tparam A   Types stored by the tuple.
+         *
+         *  @param  tup_    Tuple to print.
+         *  @param  width_  Print width allocated to each element.
+         *  @param  pre_    String prepended before the element data.
+         *  @param  delim_  Delimiter added between elements.
+         *  @param  post_   String appended after the element data.
+         *
+         *  @return A human-readable string of the tuple.
+         */
         template <typename... A>
         inline std::string to_string(const std::tuple<A...>& tup_, const size_t width_, const std::string& pre_, const std::string& delim_, const std::string& post_)
         {
