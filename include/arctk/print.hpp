@@ -44,6 +44,20 @@ namespace arc //! arctk namespace
 
 
     //  == OPERATORS ==
+    /**
+     *  Print a container as a human-readable string.
+     *  This function is disabled for the std::string container type.
+     *
+     *  @tparam S   Type of stream to print to.
+     *  @tparam C   Type of container to print.
+     *  @tparam T   Type stored by C.
+     *  @tparam I   Type of const iterator of C.
+     *
+     *  @param  stream_ Stream to print to.
+     *  @param  cont_   Container to print.
+     *
+     *  @return A reference to the stream post-print.
+     */
     template <typename S, typename C, typename T, typename I, typename>
     inline S& operator<<(S& stream_, const C& cont_)
     {
