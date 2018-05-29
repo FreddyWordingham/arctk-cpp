@@ -20,6 +20,7 @@
 
 
 //  == IMPORTS ==
+#include <cassert>
 #include <iterator>
 
 
