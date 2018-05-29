@@ -66,6 +66,18 @@ namespace arc //! arctk namespace
         return (stream_);
     }
 
+    /**
+     *  Print a pair as a human-readable string.
+     *
+     *  @tparam S   Type of stream to print to.
+     *  @tparam A0  First type stored by pair.
+     *  @tparam A1  Second type stored by pair.
+     *
+     *  @param  stream_ Stream to print to.
+     *  @param  pair_   pair to print.
+     *
+     *  @return A reference to the stream post-print.
+     */
     template <typename S, typename A0, typename A1>
     inline S& operator<<(S& stream_, const std::pair<A0, A1>& pair_)
     {
