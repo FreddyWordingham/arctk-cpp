@@ -50,6 +50,21 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTIONS ==
+        /**
+         *  Form a container into a human-readable string.
+         *
+         *  @tparam C   Type of container to print.
+         *  @tparam T   Type stored by C.
+         *  @tparam I   Type of const iterator of C.
+         *
+         *  @param  cont_   Container to print.
+         *  @param  width_  Print width allocated to each element.
+         *  @param  pre_    String prepended before the element data.
+         *  @param  delim_  Delimiter added between elements.
+         *  @param  post_   String appended after the element data.
+         *
+         *  @return A human-readable string of the container.
+         */
         template <typename C, typename T, typename I>
         inline std::string to_string(const C& cont_, const size_t width_, const std::string& pre_, const std::string& delim_, const std::string& post_)
         {
