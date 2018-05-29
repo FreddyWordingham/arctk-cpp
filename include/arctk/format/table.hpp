@@ -44,6 +44,7 @@ namespace arc //! arctk namespace
          *  Format a given container into a table.
          *
          *  @param  cont_   Container to form into table.
+         *  @param  width_  Print width allocated to each element.
          *  @param  delim_  Table delimiter string.
          *
          *  @return Formatted data table string.
