@@ -83,8 +83,9 @@ namespace arc //! arctk namespace
         /**
          *  Find the index of the maximum element within a container.
          *
-         *  @tparam C   Container type.
-         *  @tparam I   Iterator type of C.
+         *  @tparam C   Type of container.
+         *  @tparam T   Type stored by C.
+         *  @tparam I   Type of const iterator of C.
          *
          *  @param  cont_   Container to determine the maximum element index of.
          *
