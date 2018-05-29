@@ -18,6 +18,7 @@
 #include <arctk/str.hpp>
 #include <arctk/str/convert.hpp>
 #include <arctk/utl.hpp>
+#include <arctk/utl/pair.hpp>
 #include <arctk/utl/tuple.hpp>
 
 
