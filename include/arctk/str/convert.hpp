@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 #include <array>
+#include <iomanip>
 #include <sstream>
 #include <string>
 #include <tuple>
@@ -40,7 +41,7 @@ namespace arc //! arctk namespace
 
         //  == FUNCTION PROTOTYPES ==
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
-        inline std::string to_string(const C& cont_, const std::string& pre_ = "{", const std::string& delim_ = ", ", const std::string& post_ = "}");
+        inline std::string to_string(const C& cont_, const std::string& pre_ = "{", const std::string& delim_ = ", ", const std::string& post_ = "}", const size_t width_ = 0);
         template <typename A0, typename A1>
         inline std::string to_string(const std::pair<A0, A1>& pair_, const std::string& pre_ = "(", const std::string& delim_ = ", ", const std::string& post_ = ")");
         template <typename... A>
@@ -50,17 +51,26 @@ namespace arc //! arctk namespace
 
         //  == FUNCTIONS ==
         template <typename C, typename T, typename I>
-        inline std::string to_string(const C& cont_, const std::string& pre_, const std::string& delim_, const std::string& post_)
+        inline std::string to_string(const C& cont_, const std::string& pre_, const std::string& delim_, const std::string& post_, const size_t width_)
         {
             std::stringstream stream;
 
             stream << pre_;
             if (!cont_.empty())
             {
+                if (width_ > 0)
+                {
+                    stream << std::setw(width_);
+                }
                 stream << *std::begin(cont_);
                 for (I it = std::next(std::begin(cont_)); it != std::end(cont_); std::advance(it, 1))
                 {
-                    stream << delim_ << *it;
+                    stream << delim_;
+                    if (width_ > 0)
+                    {
+                        stream << std::setw(width_);
+                    }
+                    stream << *it;
                 }
             }
             stream << post_;
