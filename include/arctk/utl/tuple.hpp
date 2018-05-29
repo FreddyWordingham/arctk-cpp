@@ -58,7 +58,7 @@ namespace arc //! arctk namespace
          *  Apply helper function.
          *  Call a functor on each element of a const tuple.
          *
-         *  @tparam A   Types stored by tuple.
+         *  @tparam A   Types stored by the tuple.
          *  @tparam F   Type of functor to be applied.
          *  @tparam I   Indices of the tuple.
          *
@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
         /**
          *  Apply a given functor to each element of a tuple.
          *
-         *  @tparam A   Types stored by tuple.
+         *  @tparam A   Types stored by the tuple.
          *  @tparam F   Type of functor to be applied.
          *
          *  @param  tuple_  Tuple to be applied to.
@@ -90,7 +90,7 @@ namespace arc //! arctk namespace
          *  Apply helper function.
          *  Call a functor on each element of a tuple.
          *
-         *  @tparam A   Types stored by tuple.
+         *  @tparam A   Types stored by the tuple.
          *  @tparam F   Type of functor to be applied.
          *  @tparam I   Indices of the tuple.
          *
@@ -106,7 +106,7 @@ namespace arc //! arctk namespace
         /**
          *  Apply a given functor to each element of a const tuple.
          *
-         *  @tparam A   Types stored by tuple.
+         *  @tparam A   Types stored by the tuple.
          *  @tparam F   Type of functor to be applied.
          *
          *  @param  tuple_  Tuple to be applied to.
@@ -123,7 +123,7 @@ namespace arc //! arctk namespace
          *  Call a functor on each element of a tuple.
          *  Provide the current tuple index and the total number of tuple types.
          *
-         *  @tparam A   Types stored by tuple.
+         *  @tparam A   Types stored by the tuple.
          *  @tparam F   Type of functor to be applied.
          *  @tparam I   Indices of the tuple.
          *
@@ -141,7 +141,7 @@ namespace arc //! arctk namespace
          *  Apply a given functor to each element of a tuple.
          *  Current tuple index and the total number of tuple types are provided.
          *
-         *  @tparam A   Types stored by tuple.
+         *  @tparam A   Types stored by the tuple.
          *  @tparam F   Type of functor to be applied.
          *
          *  @param  tuple_  Tuple to be applied to.
@@ -158,7 +158,7 @@ namespace arc //! arctk namespace
          *  Call a functor on each element of a const tuple.
          *  Provide the current tuple index and the total number of tuple types.
          *
-         *  @tparam A   Types stored by tuple.
+         *  @tparam A   Types stored by the tuple.
          *  @tparam F   Type of functor to be applied.
          *  @tparam I   Indices of the tuple.
          *
@@ -176,7 +176,7 @@ namespace arc //! arctk namespace
          *  Apply a given functor to each element of a const tuple.
          *  Current tuple index and the total number of tuple types are provided.
          *
-         *  @tparam A   Types stored by tuple.
+         *  @tparam A   Types stored by the tuple.
          *  @tparam F   Type of functor to be applied.
          *
          *  @param  tuple_  Tuple to be applied to.
