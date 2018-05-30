@@ -35,6 +35,12 @@ namespace arc //! arctk namespace
 
 
 
+        //  == CONSTANTS ==
+        //  -- Standard Output --
+        const bool STDOUT_IS_TERM = isatty(fileno(stdout)) == 1; //!< True if standard output is a terminal.
+
+
+
         //  == CLASS ==
         /**
          *  Ansi escape code definitions.
