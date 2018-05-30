@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
             //  == ENUMERATIONS ==
           public:
             //  -- Colours --
-            enum class Col
+            enum class col
             {
                 BLACK,
                 RED,
@@ -77,7 +77,7 @@ namespace arc //! arctk namespace
 
 
             //  -- Text Colouring --
-            const std::array<std::string, static_cast<Col::TOTAL>> col;
+            const std::array<std::string, static_cast<size_t>(col::TOTAL)> text_col;
             /*
                         const std::string black;          //!< Colour the text black.
                         const std::string red;            //!< Colour the text red.
@@ -134,44 +134,29 @@ namespace arc //! arctk namespace
          */
         inline Ansi::Ansi() noexcept
 #if defined(__APPLE__) || defined(___unix__)
-          : reset((isatty(fileno(stdout)) == 1) ? "\033[0;0m" : "")
-          , black((isatty(fileno(stdout)) == 1) ? "\033[0;30m" : "")
-          , red((isatty(fileno(stdout)) == 1) ? "\033[0;31m" : "")
-          , green((isatty(fileno(stdout)) == 1) ? "\033[0;32m" : "")
-          , yellow((isatty(fileno(stdout)) == 1) ? "\033[0;33m" : "")
-          , blue((isatty(fileno(stdout)) == 1) ? "\033[0;34m" : "")
-          , magenta((isatty(fileno(stdout)) == 1) ? "\033[0;35m" : "")
-          , cyan((isatty(fileno(stdout)) == 1) ? "\033[0;36m" : "")
-          , white((isatty(fileno(stdout)) == 1) ? "\033[0;37m" : "")
-          , bright_black((isatty(fileno(stdout)) == 1) ? "\033[0;90m" : "")
-          , bright_red((isatty(fileno(stdout)) == 1) ? "\033[0;91m" : "")
-          , bright_green((isatty(fileno(stdout)) == 1) ? "\033[0;92m" : "")
-          , bright_yellow((isatty(fileno(stdout)) == 1) ? "\033[0;93m" : "")
-          , bright_blue((isatty(fileno(stdout)) == 1) ? "\033[0;94m" : "")
-          , bright_magenta((isatty(fileno(stdout)) == 1) ? "\033[0;95m" : "")
-          , bright_cyan((isatty(fileno(stdout)) == 1) ? "\033[0;96m" : "")
-          , bright_white((isatty(fileno(stdout)) == 1) ? "\033[0;97m" : "")
+          : reset((isatty(fileno(stdout)) == 1) ? "\033[0;0m" : "") /*
+           , black((isatty(fileno(stdout)) == 1) ? "\033[0;30m" : "")
+           , red((isatty(fileno(stdout)) == 1) ? "\033[0;31m" : "")
+           , green((isatty(fileno(stdout)) == 1) ? "\033[0;32m" : "")
+           , yellow((isatty(fileno(stdout)) == 1) ? "\033[0;33m" : "")
+           , blue((isatty(fileno(stdout)) == 1) ? "\033[0;34m" : "")
+           , magenta((isatty(fileno(stdout)) == 1) ? "\033[0;35m" : "")
+           , cyan((isatty(fileno(stdout)) == 1) ? "\033[0;36m" : "")
+           , white((isatty(fileno(stdout)) == 1) ? "\033[0;37m" : "")
+           , bright_black((isatty(fileno(stdout)) == 1) ? "\033[0;90m" : "")
+           , bright_red((isatty(fileno(stdout)) == 1) ? "\033[0;91m" : "")
+           , bright_green((isatty(fileno(stdout)) == 1) ? "\033[0;92m" : "")
+           , bright_yellow((isatty(fileno(stdout)) == 1) ? "\033[0;93m" : "")
+           , bright_blue((isatty(fileno(stdout)) == 1) ? "\033[0;94m" : "")
+           , bright_magenta((isatty(fileno(stdout)) == 1) ? "\033[0;95m" : "")
+           , bright_cyan((isatty(fileno(stdout)) == 1) ? "\033[0;96m" : "")
+           , bright_white((isatty(fileno(stdout)) == 1) ? "\033[0;97m" : "")*/
           , overwrite((isatty(fileno(stdout)) == 1) ? "\n\033[A\33[2K\r" : "\n")
+          , text_col({{"", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}})
 #else
           : reset("")
-
-          , black("")
-          , red("")
-          , green("")
-          , yellow("")
-          , blue("")
-          , magenta("")
-          , cyan("")
-          , white("")
-          , bright_black("")
-          , bright_red("")
-          , bright_green("")
-          , bright_yellow("")
-          , bright_blue("")
-          , bright_magenta("")
-          , bright_cyan("")
-          , bright_white("")
           , overwrite("\n")
+          , text_col({{"", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}})
 #endif
         {
         }
