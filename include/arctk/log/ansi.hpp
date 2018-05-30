@@ -71,18 +71,29 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
           public:
+            //  -- Singleton --
+            inline static const Ansi& instance() noexcept;
+
+          private:
             //  -- Constructors --
-
-
-            //  == OPERATORS ==
-          public:
-            //  == METHODS ==
-          public:
+            inline Ansi() noexcept;
         };
 
 
 
-        //  == METHODS ==
+        //  == INSTANTIATION --
+        //  -- Singleton --
+        /**
+         *  Ansi singleton getter method.
+         *
+         *  @return Const reference to the static ansi instance.
+         */
+        inline const Ansi& Ansi::instance() noexcept
+        {
+            static const Ansi static_ansi;
+
+            return (static_ansi);
+        }
 
 
 
