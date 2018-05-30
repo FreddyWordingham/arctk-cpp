@@ -93,7 +93,7 @@ namespace arc //! arctk namespace
              */
             inline Message::~Message() noexcept
             {
-                *this << ANSI.reset << '\n';
+                *this << Ansi::instance().reset << '\n';
             }
 
 

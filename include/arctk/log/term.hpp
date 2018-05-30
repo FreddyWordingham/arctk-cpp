@@ -102,9 +102,9 @@ namespace arc //! arctk namespace
          *  Should only be called via the instance method.
          */
         inline Term::Term() noexcept
-          : _message_col{ANSI.text_col[static_cast<size_t>(Ansi::col::WHITE)]}
-          , _warn_col{ANSI.text_col[static_cast<size_t>(Ansi::col::YELLOW)]}
-          , _error_col{ANSI.text_col[static_cast<size_t>(Ansi::col::RED)]}
+          : _message_col{Ansi::instance().text_col[static_cast<size_t>(Ansi::col::WHITE)]}
+          , _warn_col{Ansi::instance().text_col[static_cast<size_t>(Ansi::col::YELLOW)]}
+          , _error_col{Ansi::instance().text_col[static_cast<size_t>(Ansi::col::RED)]}
         {
         }
 
@@ -119,7 +119,7 @@ namespace arc //! arctk namespace
          */
         inline void Term::set_message_col(const Ansi::col col_) noexcept
         {
-            _message_col = ANSI.text_col[static_cast<size_t>(col_)];
+            _message_col = Ansi::instance().text_col[static_cast<size_t>(col_)];
         }
 
         /**
@@ -129,7 +129,7 @@ namespace arc //! arctk namespace
          */
         inline void Term::set_warn_col(const Ansi::col col_) noexcept
         {
-            _warn_col = ANSI.text_col[static_cast<size_t>(col_)];
+            _warn_col = Ansi::instance().text_col[static_cast<size_t>(col_)];
         }
 
         /**
@@ -139,7 +139,7 @@ namespace arc //! arctk namespace
          */
         inline void Term::set_error_col(const Ansi::col col_) noexcept
         {
-            _error_col = ANSI.text_col[static_cast<size_t>(col_)];
+            _error_col = Ansi::instance().text_col[static_cast<size_t>(col_)];
         }
 
 
