@@ -101,7 +101,7 @@ namespace arc //! arctk namespace
 
             *this << std::boolalpha;
 
-            *this << file_ << " :: " << func_ << " :: " << line_ << Ansi::instance().reset << "\n";
+            *this << file_ << " :: " << func_ << " :: " << line_ << Term::instance().reset() << "\n";
         }
 
 
