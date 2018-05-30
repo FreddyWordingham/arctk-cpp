@@ -54,8 +54,8 @@ namespace arc //! arctk namespace
             std::stringstream& _stream; //!< Stream to write to.
 
             //  -- Formatting --
-            const std::string& _delim; //!< Delimiter added between elements.
-            const size_t       _width; //!< Print width allocated to each element.
+            const std::string _delim; //!< Delimiter added between elements.
+            const size_t      _width; //!< Print width allocated to each element.
 
 
             //  == INSTANTIATION ==
