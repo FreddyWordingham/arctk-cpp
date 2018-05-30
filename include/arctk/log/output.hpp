@@ -88,7 +88,6 @@ namespace arc //! arctk namespace
          *  @pre    line_       must be greater than zero.
          */
         inline Output::Output(const std::string& file_, const std::string& func_, const int line_) noexcept
-          : _exit_val(exit_val_)
         {
             assert(!file_.empty());
             assert(!func_.empty());
@@ -96,7 +95,7 @@ namespace arc //! arctk namespace
 
             *this << std::boolalpha;
 
-            *this << LOCATION << file_ << " :: " << func_ << " :: " << line_ << ANSI.reset << "\n";
+            *this << file_ << " :: " << func_ << " :: " << line_ << ANSI.reset << "\n";
         }
 
 
