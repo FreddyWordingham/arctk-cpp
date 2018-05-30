@@ -97,6 +97,12 @@ namespace arc //! arctk namespace
 
 
 
+        //  == ALIASES ==
+        //  -- Ansi --
+        const auto ANSI = Ansi::instance(); //!< Alias for the ansi singleton instance.
+
+
+
     } // namespace log
 } // namespace arc
 
