@@ -72,6 +72,10 @@ namespace arc //! arctk namespace
             //  -- General --
             const std::string reset; //!< Reset ansi settings to default.
 
+            //  -- Utility --
+            const std::string overwrite; //!< Overwrite the previous printed line.
+
+
             //  -- Text Colouring --
             const std::array<std::string, static_cast<Col::TOTAL>> col;
             /*
@@ -92,8 +96,6 @@ namespace arc //! arctk namespace
                         const std::string bright_cyan;    //!< Colour the text bright cyan.
                         const std::string bright_white;   //!< Colour the text bright white.
             */
-            //  -- Utility --
-            const std::string overwrite; //!< Overwrite the previous printed line.
 
 
             //  == INSTANTIATION ==
@@ -152,6 +154,7 @@ namespace arc //! arctk namespace
           , overwrite((isatty(fileno(stdout)) == 1) ? "\n\033[A\33[2K\r" : "\n")
 #else
           : reset("")
+
           , black("")
           , red("")
           , green("")
