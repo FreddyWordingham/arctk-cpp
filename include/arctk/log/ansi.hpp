@@ -54,6 +54,9 @@ namespace arc //! arctk namespace
             //  == ENUMERATIONS ==
           public:
             //  -- Colours --
+            /**
+             *  Standard text colouring options.
+             */
             enum class col
             {
                 BLACK,
