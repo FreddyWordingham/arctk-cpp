@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_LOG_ANSI_HPP
-#define ARCTK_LOG_ANSI_HPP
+#ifndef ARCTK_LOG_MESSAGE_HPP
+#define ARCTK_LOG_MESSAGE_HPP
 
 
 
@@ -33,6 +33,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
+         *  Standard output message logging.
          */
         class Message
         {
@@ -61,4 +62,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_LOG_ANSI_HPP
+#endif // ARCTK_LOG_MESSAGE_HPP
