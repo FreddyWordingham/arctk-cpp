@@ -43,6 +43,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Message() noexcept = default;
         };
 
 
