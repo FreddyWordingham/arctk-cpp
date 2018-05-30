@@ -90,7 +90,10 @@ namespace arc //! arctk namespace
          */
         inline const Ansi& Ansi::instance() noexcept
         {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wexit-time-destructors"
             static const Ansi static_ansi;
+#pragma clang diagnostic pop
 
             return (static_ansi);
         }
