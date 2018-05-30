@@ -54,6 +54,9 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Output(const std::string& file_, const std::string& func_, int line_, int exit_val_) noexcept;
 
+            //  -- Destructors --
+            inline ~Output() noexcept override;
+
 
             //  == OPERATORS ==
           public:
@@ -96,6 +99,22 @@ namespace arc //! arctk namespace
             (void)(func_);
             (void)(line_);
 #endif
+        }
+
+
+        //  -- Destructors --
+        /**
+         *  Write contents to console output.
+         *  If _exit_val is positive then exit the program using _exit_val as the error code.
+         */
+        inline Output::~Output() noexcept
+        {
+            Term::instance().cout(str());
+
+            if (_exit_val > 0)
+            {
+                exit(_exit_val);
+            }
         }
 
 
