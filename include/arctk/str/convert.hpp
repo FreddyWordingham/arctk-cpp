@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 #include <array>
 #include <iomanip>
+#include <iostream>
 #include <sstream>
 #include <string>
 #include <tuple>
@@ -36,6 +37,61 @@ namespace arc //! arctk namespace
 {
     namespace str //! string namespace
     {
+
+
+
+        //  == FUNCTORS ==
+        /**
+         *  Functor used by to_string tuple method.
+         *  Required while standard does not support template lambdas.
+         *  Should be able to remove this in c++2a.
+         */
+        struct TupleToString
+        {
+            //  == FIELDS ==
+          private:
+            //  -- Stream --
+            std::stringstream& _stream; //!< Stream to write to.
+
+            //  -- Formatting --
+            const std::string& _delim; //!< Delimiter added between elements.
+            const size_t       _width; //!< Print width allocated to each element.
+
+
+            //  == INSTANTIATION ==
+          public:
+            //  -- Constructors --
+            /**
+             *  Construct a TupleToString functor which will write to a given stream.
+             *
+             *  @param  stream_ Stream to write to.
+             *  @param  width_  Print width allocated to each element.
+             *  @param  delim_  Delimiter added between elements.
+             */
+            TupleToString(std::stringstream& stream_, const std::string& delim_, const size_t width_)
+              : _stream(stream_)
+              , _delim(delim_)
+              , _width(width_)
+            {
+            }
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Call --
+            /**
+             *  Write the element to _stream.
+             *
+             *  @param  val_    Value to write to the _stream.
+             *  @param  i_      Index of element.
+             *  @param  total_  Total number of elements.
+             */
+            template <typename L>
+            void operator()(const L& val_, const size_t i_, const size_t total_)
+            {
+                _stream << ((i_ == 0) ? "" : _delim) << std::setw(_width) << val_;
+            }
+        };
 
 
 
@@ -110,6 +166,8 @@ namespace arc //! arctk namespace
 
         /**
          *  Form a tuple into a human-readable string.
+         *  C++17 does not support template lambdas.
+         *  Helper functor can be replaced with template lambda in C++2a.
          *
          *  @tparam A   Types stored by the tuple.
          *
@@ -127,7 +185,8 @@ namespace arc //! arctk namespace
             std::stringstream stream;
 
             stream << pre_;
-            arc::utl::apply_with_index(tup_, [&stream, &delim_, width_]<typename L>(const L& val_, const size_t i, const size_t total) { stream << ((i == 0) ? "" : delim_) << std::setw(width_) << val_; });
+            //            arc::utl::apply_with_index(tup_, [&stream, &delim_, width_]<typename L>(const L& val_, const size_t i, const size_t total) { stream << ((i == 0) ? "" : delim_) << std::setw(width_) << val_; });
+            arc::utl::apply_with_index(tup_, TupleToString(stream, delim_, width_));
             stream << post_;
 
             return (stream.str());
