@@ -9,8 +9,7 @@
 
 
 
-//  == INCLUDES ==
-//  -- Arctk --
+//  == IMPORTS ==
 #include <arctk/config.hpp>
 #include <arctk/constant.hpp>
 #include <arctk/constant/math.hpp>
@@ -20,7 +19,7 @@
 #include <arctk/log.hpp>
 #include <arctk/log/ansi.hpp>
 #include <arctk/log/output.hpp>
-#include <arctk/log/output/collection.hpp>
+#include <arctk/log/output/message.hpp>
 #include <arctk/log/term.hpp>
 #include <arctk/print.hpp>
 #include <arctk/prop.hpp>
