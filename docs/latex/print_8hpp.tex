@@ -1,0 +1,43 @@
+\hypertarget{print_8hpp}{}\section{include/arctk/print.hpp File Reference}
+\label{print_8hpp}\index{include/arctk/print.\+hpp@{include/arctk/print.\+hpp}}
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$arctk/str.\+hpp$>$}\newline
+Include dependency graph for print.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{print_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{print_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacearc}{arc}}
+\begin{DoxyCompactList}\small\item\em arctk namespace \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename S , typename C , typename T  = typename C\+::value\+\_\+type, typename I  = typename C\+::const\+\_\+iterator, typename  = typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$\+C, std\+::string$>$\+::value$>$\+::type$>$ }\\S \& \mbox{\hyperlink{namespacearc_af1dbfe8cd5fb9a3a09bfe75114f9057b}{arc\+::operator$<$$<$}} (S \&stream\+\_\+, const C \&cont\+\_\+)
+\item 
+{\footnotesize template$<$typename S , typename A0 , typename A1 $>$ }\\S \& \mbox{\hyperlink{namespacearc_ae2d7de3bec14ccfaf44ea00f134895f9}{arc\+::operator$<$$<$}} (S \&stream\+\_\+, const std\+::pair$<$ A0, A1 $>$ \&pair\+\_\+)
+\item 
+{\footnotesize template$<$typename S , typename... A$>$ }\\S \& \mbox{\hyperlink{namespacearc_a50e1f816ae8c0b1a32e9adabbe66579a}{arc\+::operator$<$$<$}} (S \&stream\+\_\+, const std\+::tuple$<$ A... $>$ \&tup\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyDate}{Date}
+28/05/2018 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Freddy Wordingham
+\end{DoxyAuthor}
+Collection of print functions. 

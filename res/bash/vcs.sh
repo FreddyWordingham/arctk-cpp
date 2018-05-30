@@ -37,6 +37,17 @@ arctk_push()
 {
     cd $ARCTK_DIR > /dev/null;
 
+    arctk_make_doc;
+    if [ "$?" != "0" ]; then
+        printf "Error! Unable to push.\n"
+        printf "Failed to generate documentation.\n"
+
+        return
+    fi
+
+    rm -r $ARCTK_DIR/docs
+    mv $ARCTK_DIR/build/docs/html $ARCTK_DIR/docs
+
     arctk_clean;
 
     git push;
