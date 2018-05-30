@@ -97,11 +97,6 @@ namespace arc //! arctk namespace
         inline Output::~Output() noexcept
         {
             Term::instance().cout(str());
-
-            if (_exit_val > 0)
-            {
-                exit(_exit_val);
-            }
         }
 
 
