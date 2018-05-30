@@ -37,8 +37,10 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
+         *  Ansi escape code definitions.
+         *  Codes are set for the platform during instantiation.
          */
-        struct Ansi
+        class Ansi
         {
             //  == FIELDS ==
           private:
