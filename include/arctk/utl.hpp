@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_UTK_HPP
-#define ARCTK_UTK_HPP
+#ifndef ARCTK_UTL_HPP
+#define ARCTK_UTL_HPP
 
 
 
@@ -32,4 +32,4 @@
 
 
 //  == GUARD END ==
-#endif // ARCTK_UTK_HPP
+#endif // ARCTK_UTL_HPP
