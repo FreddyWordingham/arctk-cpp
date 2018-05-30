@@ -20,6 +20,7 @@
 #include <arctk/log.hpp>
 #include <arctk/log/ansi.hpp>
 #include <arctk/log/output.hpp>
+#include <arctk/log/output/collection.hpp>
 #include <arctk/log/term.hpp>
 #include <arctk/print.hpp>
 #include <arctk/prop.hpp>
