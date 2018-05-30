@@ -46,6 +46,9 @@ namespace arc //! arctk namespace
             //  -- Writing --
             std::mutex _write_guard{}; //!< Terminal write guard.
 
+            //  -- Colouring --
+            std::string _error_col; //!< String used to colour error message text.
+
 
             //  == INSTANTIATION ==
           public:
