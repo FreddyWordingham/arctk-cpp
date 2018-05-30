@@ -145,9 +145,12 @@ namespace arc //! arctk namespace
 
 
 
-        //  == ALIASES ==
-        //  -- Ansi --
+//  == ALIASES ==
+//  -- Ansi --
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wexit-time-destructors"
         const auto ANSI = Ansi::instance(); //!< Alias for the ansi singleton instance.
+#pragma clang diagnostic pop
 
 
 
