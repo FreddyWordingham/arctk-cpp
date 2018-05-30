@@ -51,6 +51,7 @@ namespace arc //! arctk namespace
                 inline Message(const std::string& file_, const std::string& func_, int line_) noexcept;
 
                 //  -- Destructors --
+                inline ~Message() noexcept override;
 
 
                 //  == OPERATORS ==
@@ -83,6 +84,13 @@ namespace arc //! arctk namespace
 
 
             //  -- Destructors --
+            /**
+             *  Reset ansi escape codes and append a newline character.
+             */
+            inline Message::~Message() noexcept
+            {
+                *this << ANSI.reset << '\n';
+            }
 
 
 
