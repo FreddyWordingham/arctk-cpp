@@ -17,6 +17,7 @@
 #include <arctk/constant/phys.hpp>
 #include <arctk/format.hpp>
 #include <arctk/format/table.hpp>
+#include <arctk/log.hpp>
 #include <arctk/print.hpp>
 #include <arctk/prop.hpp>
 #include <arctk/prop/container.hpp>
