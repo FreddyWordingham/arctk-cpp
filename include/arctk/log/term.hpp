@@ -33,6 +33,9 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
+         *  Terminal access class.
+         *  Singleton object.
+         *  Provides thread-safe terminal logging.
          */
         class Term
         {
