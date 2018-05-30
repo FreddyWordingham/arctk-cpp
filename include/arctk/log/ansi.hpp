@@ -89,7 +89,7 @@ namespace arc //! arctk namespace
 
 
             //  -- Text Colouring --
-            const std::array<std::string, static_cast<size_t>(col::TOTAL)> text_col;
+            const std::array<std::string, static_cast<size_t>(col::TOTAL)> text_col; //!< Array of text colour escape strings.
 
 
             //  == INSTANTIATION ==
