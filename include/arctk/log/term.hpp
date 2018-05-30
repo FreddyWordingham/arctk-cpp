@@ -66,6 +66,9 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Setters --
+            inline void set_message_col(Ansi::col col_) noexcept;
+
             //  -- Output --
             inline void cout(const std::string& str_) noexcept;
             inline void cerr(const std::string& str_) noexcept;
@@ -106,6 +109,18 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Setters --
+        /**
+         *  Set the standard message colour.
+         *
+         *  @param  col_    Ansi colour used to colour standard messages.
+         */
+        inline void Term::set_message_col(const Ansi::col col_) noexcept
+        {
+            _message_col = ANSI.text_col[static_cast<size_t>(col_)];
+        }
+
+
         //  -- Output --
         /**
          *  Write a string to the standard output.
