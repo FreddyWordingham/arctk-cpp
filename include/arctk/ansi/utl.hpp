@@ -28,7 +28,8 @@ namespace arc //! arctk namespace
 
 
         //  == CONSTANTS ==
-        constexpr const char* const ANSI_FG_BLACK = "\033[0;30m";
+        constexpr const char* const RESET     = "\033[0;0m";
+        constexpr const char* const OVERWRITE = "\n\033[A\33[2K\r";
 
 
 
