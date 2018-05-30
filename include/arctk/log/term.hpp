@@ -69,6 +69,7 @@ namespace arc //! arctk namespace
             //  -- Setters --
             inline void set_message_col(Ansi::col col_) noexcept;
             inline void set_warn_col(Ansi::col col_) noexcept;
+            inline void set_error_col(Ansi::col col_) noexcept;
 
             //  -- Output --
             inline void cout(const std::string& str_) noexcept;
