@@ -47,6 +47,8 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                //                inline Message() noexcept;
+                inline Message(const std::string& file_, const std::string& func_, int line_) noexcept;
 
                 //  -- Destructors --
 
@@ -60,6 +62,26 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION --
             //  -- Constructors --
+            /**
+             *  Construct a message object which, when destructed, will write its contents to the terminal.
+             *
+             *  @param  file_   File location of the message.
+             *  @param  func_   Function location of the message.
+             *  @param  line_   Line location of the message.
+             *
+             *  @pre    file_ must not be empty.
+             *  @pre    func_ must not be empty.
+             *  @pre    line_ must be positive.
+             */
+            inline Message::Message(const std::string& file_, const std::string& func_, const int line_) noexcept
+              : Output(file_, func_, line_)
+            {
+                assert(!file_.empty());
+                assert(!func_.empty());
+                assert(line_ > 0);
+            }
+
+
             //  -- Destructors --
 
 
