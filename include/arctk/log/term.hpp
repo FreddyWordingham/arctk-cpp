@@ -40,9 +40,9 @@ namespace arc //! arctk namespace
         class Term
         {
             //  == FIELDS ==
-          private:
+          public:
             //  -- Writing --
-            std::mutex _write_guard; //!< Terminal write guard.
+            std::mutex _write_guard{}; //!< Terminal write guard.
 
 
             //  == INSTANTIATION ==
@@ -52,7 +52,7 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Constructors --
-            //            inline Term() noexcept;
+            inline Term() noexcept = default;
 
 
             //  == METHODS ==
