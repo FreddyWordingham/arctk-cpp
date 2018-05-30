@@ -67,9 +67,9 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Setters --
-            inline void set_message_col(Ansi::col col_) noexcept;
-            inline void set_warn_col(Ansi::col col_) noexcept;
-            inline void set_error_col(Ansi::col col_) noexcept;
+            inline void set_message_col(const std::string& str_) noexcept;
+            inline void set_warn_col(const std::string& str_) noexcept;
+            inline void set_error_col(const std::string& str_) noexcept;
 
             //  -- Output --
             inline void cout(const std::string& str_) noexcept;
@@ -115,31 +115,31 @@ namespace arc //! arctk namespace
         /**
          *  Set the standard message colour.
          *
-         *  @param  col_    Ansi colour used to colour standard messages.
+         *  @param  str_    String used to colour standard messages.
          */
-        inline void Term::set_message_col(const Ansi::col col_) noexcept
+        inline void Term::set_message_col(const std::string& str_) noexcept
         {
-            _message_col = Ansi::instance().text_col[static_cast<size_t>(col_)];
+            _message_col = str_;
         }
 
         /**
          *  Set the warning message colour.
          *
-         *  @param  col_    Ansi colour used to colour warning messages.
+         *  @param  str_    String used to colour warning messages.
          */
-        inline void Term::set_warn_col(const Ansi::col col_) noexcept
+        inline void Term::set_warn_col(const std::string& str_) noexcept
         {
-            _warn_col = Ansi::instance().text_col[static_cast<size_t>(col_)];
+            _warn_col = str_;
         }
 
         /**
          *  Set the error message colour.
          *
-         *  @param  col_    Ansi colour used to colour error messages.
+         *  @param  str_    String used to colour error messages.
          */
-        inline void Term::set_error_col(const Ansi::col col_) noexcept
+        inline void Term::set_error_col(const std::string& str_) noexcept
         {
-            _error_col = Ansi::instance().text_col[static_cast<size_t>(col_)];
+            _error_col = str_;
         }
 
 
