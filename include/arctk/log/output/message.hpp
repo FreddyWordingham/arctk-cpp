@@ -40,6 +40,7 @@ namespace arc //! arctk namespace
 
             //  == CLASS ==
             /**
+             *  Standard output message logging.
              */
             class Message : public Output
             {
