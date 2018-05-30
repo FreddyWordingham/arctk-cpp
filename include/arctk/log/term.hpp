@@ -53,6 +53,13 @@ namespace arc //! arctk namespace
           private:
             //  -- Constructors --
             inline Term() noexcept;
+
+
+            //  == METHODS ==
+          public:
+            //  -- Output --
+            inline void cout(const std::string& str_) noexcept;
+            inline void cerr(const std::string& str_) noexcept;
         };
 
 
@@ -72,6 +79,34 @@ namespace arc //! arctk namespace
 #pragma clang diagnostic pop
 
             return (static_term);
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Output --
+        /**
+         *  Write a string to the standard output.
+         *
+         *  @param  str_    String to be written.
+         */
+        inline void Term::cout(const std::string& str_) noexcept
+        {
+            std::lock_guard<std::mutex> write_lock(_write_guard);
+
+            std::cout << str_;
+        }
+
+        /**
+         *  Write a string to the standard error.
+         *
+         *  @param  str_    String to be written.
+         */
+        inline void Term::cerr(const std::string& str_) noexcept
+        {
+            std::lock_guard<std::mutex> write_lock(_write_guard);
+
+            std::cerr << str_;
         }
 
 
