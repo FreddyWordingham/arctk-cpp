@@ -23,6 +23,10 @@
 #include <arctk/prop/container.hpp>
 
 
+void bobob()
+{
+}
+
 
 //  == MODULE END ==
 #endif // ARCTK_MOD_CORE
