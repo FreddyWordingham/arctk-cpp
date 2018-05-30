@@ -12,6 +12,7 @@
 //  == IMPORTS ==
 #include <arctk/ansi.hpp>
 #include <arctk/ansi/foreground.hpp>
+#include <arctk/ansi/utl.hpp>
 #include <arctk/config.hpp>
 #include <arctk/constant.hpp>
 #include <arctk/constant/math.hpp>
