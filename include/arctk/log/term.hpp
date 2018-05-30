@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
         class Term
         {
             //  == FIELDS ==
-          public:
+          private:
             //  -- Writing --
             std::mutex _write_guard{}; //!< Terminal write guard.
 
