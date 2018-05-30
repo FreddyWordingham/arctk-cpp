@@ -23,6 +23,8 @@
 #include <iostream>
 #include <mutex>
 
+#include <arctk/log/ansi.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -44,7 +46,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Writing --
-            std::mutex _write_guard{}; //!< Terminal write guard.
+            std::mutex _write_guard; //!< Terminal write guard.
 
             //  -- Colouring --
             std::string _error_col; //!< String used to colour error message text.
@@ -57,7 +59,7 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Constructors --
-            inline Term() noexcept = default;
+            inline Term() noexcept;
 
 
             //  == METHODS ==
@@ -84,6 +86,17 @@ namespace arc //! arctk namespace
 #pragma clang diagnostic pop
 
             return (static_term);
+        }
+
+
+        //  -- Constructors --
+        /**
+         *  Construct a terminal writer object.
+         *  Should only be called via the instance method.
+         */
+        inline Term::Term() noexcept
+          : _error_col{ANSI.text_col[static_cast<size_t>(Ansi::col::RED)]}
+        {
         }
 
 
