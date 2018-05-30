@@ -87,7 +87,7 @@ namespace arc //! arctk namespace
          *  @pre    func_       must not be empty.
          *  @pre    line_       must be greater than zero.
          */
-        inline Output(const std::string& file_, const std::string& func_, const int line_) noexcept
+        inline Output::Output(const std::string& file_, const std::string& func_, const int line_) noexcept
           : _exit_val(exit_val_)
         {
             assert(!file_.empty());
