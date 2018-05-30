@@ -68,6 +68,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Setters --
             inline void set_message_col(Ansi::col col_) noexcept;
+            inline void set_warn_col(Ansi::col col_) noexcept;
 
             //  -- Output --
             inline void cout(const std::string& str_) noexcept;
@@ -118,6 +119,16 @@ namespace arc //! arctk namespace
         inline void Term::set_message_col(const Ansi::col col_) noexcept
         {
             _message_col = ANSI.text_col[static_cast<size_t>(col_)];
+        }
+
+        /**
+         *  Set the warning message colour.
+         *
+         *  @param  col_    Ansi colour used to colour warning messages.
+         */
+        inline void Term::set_warn_col(const Ansi::col col_) noexcept
+        {
+            _warn_col = ANSI.text_col[static_cast<size_t>(col_)];
         }
 
 
