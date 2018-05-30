@@ -102,9 +102,9 @@ namespace arc //! arctk namespace
          *  Should only be called via the instance method.
          */
         inline Term::Term() noexcept
-          : _message_col{Ansi::instance().text_col[static_cast<size_t>(Ansi::col::WHITE)]}
-          , _warn_col{Ansi::instance().text_col[static_cast<size_t>(Ansi::col::YELLOW)]}
-          , _error_col{Ansi::instance().text_col[static_cast<size_t>(Ansi::col::RED)]}
+          : _message_col{(isatty(fileno(stdout)) == 1) ? ansi::FG_CYAN : ""}
+          , _warn_col{(isatty(fileno(stdout)) == 1) ? ansi::FG_YELLOW : ""}
+          , _error_col{(isatty(fileno(stdout)) == 1) ? ansi::FG_RED : ""}
         {
         }
 
