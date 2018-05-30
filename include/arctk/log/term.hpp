@@ -109,6 +109,8 @@ namespace arc //! arctk namespace
           : _message_col{(isatty(fileno(stdout)) == 1) ? ansi::FG_CYAN : ""}
           , _warn_col{(isatty(fileno(stdout)) == 1) ? ansi::FG_YELLOW : ""}
           , _error_col{(isatty(fileno(stdout)) == 1) ? ansi::FG_RED : ""}
+          , _reset{(isatty(fileno(stdout)) == 1) ? ansi::RESET : ""}
+          , _overwrite{(isatty(fileno(stdout)) == 1) ? ansi::OVERWRITE : "\n"}
         {
         }
 
