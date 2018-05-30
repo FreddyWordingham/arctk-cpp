@@ -41,6 +41,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           public:
+            //  -- Writing --
+            std::mutex _write_guard; //!< Terminal write guard.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Singleton --
