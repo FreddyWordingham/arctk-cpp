@@ -28,6 +28,7 @@ namespace arc //! arctk namespace
 
 
         //  == CONSTANTS ==
+        constexpr const double SPEED_OF_LIGHT = 2.99792458e+8; //!< Speed of light in vacuum.
 
 
 
