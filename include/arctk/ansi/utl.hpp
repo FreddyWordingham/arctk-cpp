@@ -28,8 +28,8 @@ namespace arc //! arctk namespace
 
 
         //  == CONSTANTS ==
-        constexpr const char* const RESET     = "\033[0;0m";
-        constexpr const char* const OVERWRITE = "\n\033[A\33[2K\r";
+        constexpr const char* const RESET     = "\033[0;0m";        //!< Reset ansi options.
+        constexpr const char* const OVERWRITE = "\n\033[A\33[2K\r"; //!< Overwrite the previous string.
 
 
 
