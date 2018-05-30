@@ -84,10 +84,9 @@ namespace arc //! arctk namespace
              *
              *  @param  val_    Value to write to the _stream.
              *  @param  i_      Index of element.
-             *  @param  total_  Total number of elements.
              */
             template <typename L>
-            void operator()(const L& val_, const size_t i_, const size_t total_)
+            void operator()(const L& val_, const size_t i_, const size_t /*unused*/)
             {
                 _stream << ((i_ == 0) ? "" : _delim) << std::setw(_width) << val_;
             }
