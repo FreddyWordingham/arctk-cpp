@@ -143,25 +143,11 @@ namespace arc //! arctk namespace
          */
         inline Ansi::Ansi() noexcept
 #if defined(__APPLE__) || defined(___unix__)
-          : reset((isatty(fileno(stdout)) == 1) ? "\033[0;0m" : "") /*
-           , black((isatty(fileno(stdout)) == 1) ? "\033[0;30m" : "")
-           , red((isatty(fileno(stdout)) == 1) ? "\033[0;31m" : "")
-           , green((isatty(fileno(stdout)) == 1) ? "\033[0;32m" : "")
-           , yellow((isatty(fileno(stdout)) == 1) ? "\033[0;33m" : "")
-           , blue((isatty(fileno(stdout)) == 1) ? "\033[0;34m" : "")
-           , magenta((isatty(fileno(stdout)) == 1) ? "\033[0;35m" : "")
-           , cyan((isatty(fileno(stdout)) == 1) ? "\033[0;36m" : "")
-           , white((isatty(fileno(stdout)) == 1) ? "\033[0;37m" : "")
-           , bright_black((isatty(fileno(stdout)) == 1) ? "\033[0;90m" : "")
-           , bright_red((isatty(fileno(stdout)) == 1) ? "\033[0;91m" : "")
-           , bright_green((isatty(fileno(stdout)) == 1) ? "\033[0;92m" : "")
-           , bright_yellow((isatty(fileno(stdout)) == 1) ? "\033[0;93m" : "")
-           , bright_blue((isatty(fileno(stdout)) == 1) ? "\033[0;94m" : "")
-           , bright_magenta((isatty(fileno(stdout)) == 1) ? "\033[0;95m" : "")
-           , bright_cyan((isatty(fileno(stdout)) == 1) ? "\033[0;96m" : "")
-           , bright_white((isatty(fileno(stdout)) == 1) ? "\033[0;97m" : "")*/
+          : reset((isatty(fileno(stdout)) == 1) ? "\033[0;0m" : "")
           , overwrite((isatty(fileno(stdout)) == 1) ? "\n\033[A\33[2K\r" : "\n")
-          , text_col({{"", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}})
+          , text_col({{STDOUT_IS_TERM ? "\033[0;30m" : "", STDOUT_IS_TERM ? "\033[0;31m" : "", STDOUT_IS_TERM ? "\033[0;32m" : "", STDOUT_IS_TERM ? "\033[0;33m" : "", STDOUT_IS_TERM ? "\033[0;34m" : "", STDOUT_IS_TERM ? "\033[0;35m" : "",
+                       STDOUT_IS_TERM ? "\033[0;36m" : "", STDOUT_IS_TERM ? "\033[0;37m" : "", STDOUT_IS_TERM ? "\033[0;90m" : "", STDOUT_IS_TERM ? "\033[0;91m" : "", STDOUT_IS_TERM ? "\033[0;92m" : "", STDOUT_IS_TERM ? "\033[0;93m" : "",
+                       STDOUT_IS_TERM ? "\033[0;94m" : "", STDOUT_IS_TERM ? "\033[0;95m" : "", STDOUT_IS_TERM ? "\033[0;96m" : "", STDOUT_IS_TERM ? "\033[0;97m" : ""}})
 #else
           : reset("")
           , overwrite("\n")
