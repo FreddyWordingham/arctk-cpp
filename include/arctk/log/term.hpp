@@ -131,6 +131,16 @@ namespace arc //! arctk namespace
             _warn_col = ANSI.text_col[static_cast<size_t>(col_)];
         }
 
+        /**
+         *  Set the error message colour.
+         *
+         *  @param  col_    Ansi colour used to colour error messages.
+         */
+        inline void Term::set_error_col(const Ansi::col col_) noexcept
+        {
+            _error_col = ANSI.text_col[static_cast<size_t>(col_)];
+        }
+
 
         //  -- Output --
         /**
