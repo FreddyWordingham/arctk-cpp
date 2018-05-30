@@ -10,6 +10,7 @@
 
 
 //  == IMPORTS ==
+#include <arctk/ansi.hpp>
 #include <arctk/config.hpp>
 #include <arctk/constant.hpp>
 #include <arctk/constant/math.hpp>
