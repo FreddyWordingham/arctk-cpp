@@ -67,8 +67,8 @@ set(CONFIG_HEADER_IN ${CMAKE_SOURCE_DIR}/config/include/arctk/config.hpp.in)
 set(CONFIG_HEADER ${CMAKE_SOURCE_DIR}/include/arctk/config.hpp)
 configure_file(${CONFIG_HEADER_IN} ${CONFIG_HEADER} @ONLY)
 
-set(DOXYFILE_IN ${CMAKE_SOURCE_DIR}/config/doc/Doxyfile.in)
-set(DOXYFILE ${CMAKE_SOURCE_DIR}/doc/Doxyfile)
+set(DOXYFILE_IN ${CMAKE_SOURCE_DIR}/config/docs/Doxyfile.in)
+set(DOXYFILE ${CMAKE_SOURCE_DIR}/build/docs/Doxyfile)
 configure_file(${DOXYFILE_IN} ${DOXYFILE} @ONLY)
 
 
@@ -87,7 +87,7 @@ if (DOCUMENT)
 
     add_custom_target(doc
         COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE}
-        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/doc
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/build/docs
         COMMENT "Generating API documentation with Doxygen."
         VERBATIM)
 endif ()
