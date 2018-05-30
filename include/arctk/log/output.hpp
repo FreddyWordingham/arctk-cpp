@@ -46,6 +46,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Output() noexcept;
             inline Output(const std::string& file_, const std::string& func_, int line_) noexcept;
 
             //  -- Destructors --
@@ -64,6 +65,15 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        /**
+         *  Construct a stream object which, when destructed, will write its contents to console output.
+         *  Boolean values are printed as words.
+         */
+        inline Output::Output() noexcept
+        {
+            *this << std::boolalpha;
+        }
+
         /**
          *  Construct a stream object which, when destructed, will write its contents to console output.
          *  Boolean values are printed as words.
