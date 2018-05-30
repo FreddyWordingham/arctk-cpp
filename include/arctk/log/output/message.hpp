@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                //                inline Message() noexcept;
+                inline Message() noexcept = default;
                 inline Message(const std::string& file_, const std::string& func_, int line_) noexcept;
 
                 //  -- Destructors --
