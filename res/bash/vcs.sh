@@ -45,10 +45,12 @@ arctk_push()
         return
     fi
 
-    rm -r $ARCTK_DIR/docs
-    mv $ARCTK_DIR/build/docs/html $ARCTK_DIR/docs
+    rm -r $ARCTK_DIR/docs;
+    mv $ARCTK_DIR/build/docs/html $ARCTK_DIR/docs;
 
     arctk_clean;
+
+    arctk_commit "Cleaned build files and updated documentation.";
 
     git push;
 
