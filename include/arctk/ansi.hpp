@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 #include <arctk/ansi/foreground.hpp>
+#include <arctk/ansi/utl.hpp>
 
 
 
