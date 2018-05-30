@@ -49,8 +49,9 @@ namespace arc //! arctk namespace
             std::mutex _write_guard; //!< Terminal write guard.
 
             //  -- Colouring --
-            std::string _warn_col;  //!< String used to colour warning message text.
-            std::string _error_col; //!< String used to colour error message text.
+            std::string _message_col; //!< String used to colour standard message text.
+            std::string _warn_col;    //!< String used to colour warning message text.
+            std::string _error_col;   //!< String used to colour error message text.
 
 
             //  == INSTANTIATION ==
@@ -96,7 +97,8 @@ namespace arc //! arctk namespace
          *  Should only be called via the instance method.
          */
         inline Term::Term() noexcept
-          : _warn_col{ANSI.text_col[static_cast<size_t>(Ansi::col::YELLOW)]}
+          : _message_col{ANSI.text_col[static_cast<size_t>(Ansi::col::WHITE)]}
+          , _warn_col{ANSI.text_col[static_cast<size_t>(Ansi::col::YELLOW)]}
           , _error_col{ANSI.text_col[static_cast<size_t>(Ansi::col::RED)]}
         {
         }
