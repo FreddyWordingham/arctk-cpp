@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Singleton --
-            inline static const Term& instance() noexcept;
+            inline static Term& instance() noexcept;
 
           private:
             //  -- Constructors --
@@ -58,7 +58,21 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION --
-        //  -- Constructors --
+        //  -- Singleton --
+        /**
+         *  Term singleton getter method.
+         *
+         *  @return Reference to the static term instance.
+         */
+        inline Term& Term::instance() noexcept
+        {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wexit-time-destructors"
+            static Term static_term;
+#pragma clang diagnostic pop
+
+            return (static_term);
+        }
 
 
 
