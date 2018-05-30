@@ -87,7 +87,6 @@ namespace arc //! arctk namespace
             //  -- Utility --
             const std::string overwrite; //!< Overwrite the previous printed line.
 
-
             //  -- Text Colouring --
             const std::array<std::string, static_cast<size_t>(col::TOTAL)> text_col; //!< Array of text colour escape strings.
 
