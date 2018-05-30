@@ -54,8 +54,8 @@ namespace arc //! arctk namespace
             std::string _error_col;   //!< String used to colour error message text.
 
             //  -- Utility --
-            std::string _reset;     //!< String used to reset colouring.
-            std::string _overwrite; //!< String used to overwrite the previous string.
+            const std::string _reset;     //!< String used to reset colouring.
+            const std::string _overwrite; //!< String used to overwrite the previous string.
 
 
             //  == INSTANTIATION ==
