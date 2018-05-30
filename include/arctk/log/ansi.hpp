@@ -35,9 +35,12 @@ namespace arc //! arctk namespace
 
 
 
-        //  == CONSTANTS ==
-        //  -- Standard Output --
+//  == CONSTANTS ==
+//  -- Standard Output --
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wglobal-constructors"
         const bool STDOUT_IS_TERM = isatty(fileno(stdout)) == 1; //!< True if standard output is a terminal.
+#pragma clang diagnostic pop
 
 
 
