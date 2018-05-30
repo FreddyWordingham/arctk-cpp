@@ -38,8 +38,8 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
-         *  Ansi escape code definitions.
-         *  Codes are set for the platform during instantiation.
+         *  Console output logging class.
+         *  Will print contents of stream to console output upon destruction.
          */
         class Output : public std::stringstream
         {
