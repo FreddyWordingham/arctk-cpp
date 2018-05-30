@@ -60,6 +60,10 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
+            //  == METHODS ==
+          public:
+            //  -- Exiting --
+            inline void exit(int exit_val_) noexcept;
         };
 
 
@@ -105,7 +109,6 @@ namespace arc //! arctk namespace
         //  -- Destructors --
         /**
          *  Write contents to console output.
-         *  If _exit_val is positive then exit the program using _exit_val as the error code.
          */
         inline Output::~Output() noexcept
         {
@@ -115,6 +118,26 @@ namespace arc //! arctk namespace
             {
                 exit(_exit_val);
             }
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Exiting --
+        /**
+         *  Write contents to console output then exit with an error value.
+         *
+         *  @param  exit_val_   Value to exit program with.
+         *
+         *  @pre    exit_val_   Must be greater than zero.
+         */
+        inline void Output::exit(const int exit_val_) noexcept
+        {
+            assert(exit_val_ > 0);
+
+            Term::instance().cout(str());
+
+            exit(exit_val_);
         }
 
 
