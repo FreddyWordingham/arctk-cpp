@@ -41,10 +41,14 @@ namespace arc //! arctk namespace
          *  Ansi escape code definitions.
          *  Codes are set for the platform during instantiation.
          */
-        class Ansi
+        class Output : public std::stringstream
         {
             //  == FIELDS ==
           public:
+            //  -- Exit --
+            const int _exit_val{0}; //!< Exit value. Positive when exiting with fatal error.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
