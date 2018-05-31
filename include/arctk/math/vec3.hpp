@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Vec3() noexcept;
+            constexpr inline Vec3() noexcept = default;
 
 
             //  == METHODS ==
