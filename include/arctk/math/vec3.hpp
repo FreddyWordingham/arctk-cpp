@@ -77,7 +77,22 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION --
         //  -- Constructors --
         /**
+         *  Construct a vec3 with initial element values of zero.
+         *
+         *  @tparam T   Type stored by the vector.
+         */
+        template <typename T>
+        constexpr inline Vec3<T>::Vec3() noexcept
+          : x({})
+          , y({})
+          , z({})
+        {
+        }
+
+        /**
          *  Construct a vec3 with initial element values.
+         *
+         *  @tparam T   Type stored by the vector.
          *
          *  @param  x_  Initial value of the x component.
          *  @param  y_  Initial value of the y component.
