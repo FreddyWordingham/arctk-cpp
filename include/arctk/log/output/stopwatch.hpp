@@ -57,6 +57,7 @@ namespace arc //! arc namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Stopwatch(const std::string& str_) noexcept;
                 inline Stopwatch(const std::string& file_, const std::string& func_, int line_, const std::string& str_) noexcept;
                 inline Stopwatch(const Stopwatch&) = delete; //!< Deleted copy constructor.
                 inline Stopwatch(Stopwatch&&)      = delete; //!< Deleted move constructor.
@@ -90,6 +91,22 @@ namespace arc //! arc namespace
 
 
             //  -- Constructors --
+            /**
+             *  Construct a stopwatch object which, when destructed, will write its age.
+             *
+             *  @param  str_    String prepended to lifetime report message.
+             *
+             *  @pre    str_ must not be empty.
+             */
+            inline Stopwatch::Stopwatch(const std::string& str_) noexcept
+              : Output()
+              , _construct_time(std::chrono::high_resolution_clock::now())
+            {
+                assert(!str_.empty());
+
+                *this << _col << str_;
+            }
+
             /**
              *  Construct a stopwatch object which, when destructed, will write its age.
              *
