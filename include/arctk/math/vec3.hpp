@@ -375,6 +375,15 @@ namespace arc //! arctk namespace
 
 
         //  -- Access --
+        /**
+         *  Access an element of the vec.
+         *
+         *  @param  index_  Index of the element to access.
+         *
+         *  @pre    index_ must be less than three.
+         *
+         *  @return A reference to the element requested.
+         */
         template <typename T>
         constexpr inline T& Vec3::operator[](const size_t index_) noexcept
         {
@@ -383,6 +392,15 @@ namespace arc //! arctk namespace
             return ((&x)[index_]);
         }
 
+        /**
+         *  Access an element of the vec.
+         *
+         *  @param  index_  Index of the element to access.
+         *
+         *  @pre    index_ must be less than three.
+         *
+         *  @return A const reference to the element requested.
+         */
         template <typename T>
         constexpr inline const T& Vec3::operator[](const size_t index_) const noexcept
         {
