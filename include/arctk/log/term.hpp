@@ -155,6 +155,11 @@ namespace arc //! arctk namespace
             return (_error_col);
         }
 
+        /**
+         *  Get the reset string.
+         *
+         *  @return Reset string.
+         */
         inline const std::string& Term::reset() noexcept
         {
             return (_reset);
