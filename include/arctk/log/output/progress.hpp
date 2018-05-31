@@ -112,7 +112,7 @@ namespace arc //! arctk namespace
              */
             inline Progress::Progress(const std::string& str_, const double frac_) noexcept
               : Output()
-              , _str(str_)
+              , _buff(str_)
               , _frac(frac_)
             {
                 assert(!str_.empty());
