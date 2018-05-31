@@ -97,6 +97,12 @@ namespace arc //! arctk namespace
             constexpr inline Vec3<T>& operator*=(T val_) noexcept;
             constexpr inline Vec3<T>& operator/=(T val_) noexcept;
             constexpr inline Vec3<T>& operator^=(const Vec3<T>& vec_) noexcept;
+
+            //  -- Increment / Decrement --
+            inline Vec3<T>&      operator++() noexcept;
+            inline const Vec3<T> operator++(int) noexcept;
+            inline Vec3<T>&      operator--() noexcept;
+            inline const Vec3<T> operator--(int) noexcept;
         };
 
 
@@ -291,6 +297,29 @@ namespace arc //! arctk namespace
             z = (pre_x * vec_.y) - (pre_y * vec_.x);
 
             return (*this);
+        }
+
+
+        //  -- Increment / Decrement --
+        inline Vec3<T>& Vec3<T>::operator++() noexcept
+        {
+            ++x;
+            ++y;
+            ++z;
+
+            return (*this);
+        }
+
+        inline const Vec3<T> Vec3<T>::operator++(int) noexcept
+        {
+        }
+
+        inline Vec3<T>& Vec3<T>::operator--() noexcept
+        {
+        }
+
+        inline const Vec3<T> Vec3<T>::operator--(int) noexcept
+        {
         }
 
 
