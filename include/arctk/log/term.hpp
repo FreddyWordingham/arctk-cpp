@@ -116,7 +116,8 @@ namespace arc //! arctk namespace
          *  Should only be called via the instance method.
          */
         inline Term::Term() noexcept
-          : _message_col{(isatty(fileno(stdout)) == 1) ? ansi::FG_CYAN : ""}
+          : _location_col{(isatty(fileno(stdout)) == 1) ? ansi::FG_WHITE : ""}
+          , _message_col{(isatty(fileno(stdout)) == 1) ? ansi::FG_CYAN : ""}
           , _warn_col{(isatty(fileno(stdout)) == 1) ? ansi::FG_YELLOW : ""}
           , _error_col{(isatty(fileno(stdout)) == 1) ? ansi::FG_RED : ""}
           , _reset{(isatty(fileno(stdout)) == 1) ? ansi::RESET : ""}
