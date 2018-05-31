@@ -335,6 +335,13 @@ namespace arc //! arctk namespace
             return (vec);
         }
 
+        /**
+         *  Decrement each element of the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return A reference to this vec post-decrement.
+         */
         inline Vec3<T>& Vec3<T>::operator--() noexcept
         {
             --x;
