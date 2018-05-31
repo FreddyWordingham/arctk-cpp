@@ -391,6 +391,13 @@ namespace arc //! arctk namespace
 
 
         //  -- Arithmetic --
+        /**
+         *  Positive copy the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return Positive copy of the vec.
+         */
         template <typename T>
         constexpr inline Vec3<T> Vec3<T>::operator+() const noexcept
         {
