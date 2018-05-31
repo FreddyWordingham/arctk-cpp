@@ -30,6 +30,7 @@
 #include <arctk/log/term.hpp>
 #include <arctk/math.hpp>
 #include <arctk/math/conversion.hpp>
+#include <arctk/math/power.hpp>
 #include <arctk/print.hpp>
 #include <arctk/prop.hpp>
 #include <arctk/prop/container.hpp>
