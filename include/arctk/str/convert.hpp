@@ -105,6 +105,9 @@ namespace arc //! arctk namespace
         template <typename... A>
         inline std::string to_string(const std::tuple<A...>& tup_, size_t width_ = 0, const std::string& pre_ = "(", const std::string& delim_ = ", ", const std::string& post_ = ")");
 
+        //  -- Time --
+        inline std::string time(uint64_t us_) noexcept;
+
 
 
         //  == FUNCTIONS ==
@@ -193,6 +196,32 @@ namespace arc //! arctk namespace
             stream << post_;
 
             return (stream.str());
+        }
+
+
+        //  -- Time --
+        /**
+         *  Convert the number of microseconds into a time string.
+         *
+         *  @param  us_ Number of microseconds.
+         *
+         *  @return String of the time.
+         */
+        inline std::string time(uint64_t us_) noexcept
+        {
+            const uint64_t hrs = us_ / 3600000000;
+            us_ %= 3600000000;
+
+            const uint64_t min = us_ / 60000000;
+            us_ %= 60000000;
+
+            const uint64_t sec = us_ / 1000000;
+            us_ %= 1000000;
+
+            const uint64_t ms = us_ / 1000;
+            us_ %= 1000;
+
+            return (std::to_string(hrs) + "hrs " + std::to_string(min) + "min " + std::to_string(sec) + "sec " + std::to_string(ms) + "ms " + std::to_string(us_) + "µs");
         }
 
 
