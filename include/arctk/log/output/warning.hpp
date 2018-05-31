@@ -42,43 +42,35 @@ namespace arc //! arctk namespace
              */
             class Warning : public Output
             {
-                //  == FIELDS ==
+                //  -- FIELDS --
               public:
-                //  -- Colouring --
                 static std::string _col;
 
 
-                //  == INSTANTIATION ==
+                //  -- INSTANTIATION --
               public:
-                //  -- Constructors --
                 inline Warning() noexcept;
                 inline Warning(const std::string& file_, const std::string& func_, int line_) noexcept;
                 inline Warning(const Warning&) = delete; //!< Deleted copy constructor.
                 inline Warning(Warning&&)      = delete; //!< Deleted move constructor.
-
-                //  -- Destructors --
                 inline ~Warning() noexcept override;
 
 
-                //  == OPERATORS ==
+                //  -- OPERATORS --
               public:
-                //  -- Assignment --
                 inline Warning& operator=(const Warning&) = delete; //!< Deleted copy operator. @return Reference to copied object.
                 inline Warning& operator=(Warning&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
             };
 
 
 
-//  == INSTANTIATION --
-//  -- Statics --
+            //  == INSTANTIATION --
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wexit-time-destructors"
 #pragma clang diagnostic ignored "-Wglobal-constructors"
             std::string Warning::_col = ansi::FG_MAGENTA;
 #pragma clang diagnostic pop
 
-
-            //  -- Constructors --
             /**
              *  Construct a message object which, when destructed, will write its contents to the terminal.
              *  Warning report string is prepended.
@@ -111,8 +103,6 @@ namespace arc //! arctk namespace
                 *this << _col << "[Warning!] : ";
             }
 
-
-            //  -- Destructors --
             /**
              *  Reset ansi escape codes and append a newline character.
              */
