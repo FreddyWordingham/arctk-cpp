@@ -477,6 +477,15 @@ namespace arc //! arctk namespace
             return (Vec3(x - vec_.x, y - vec_.y, z - vec_.z));
         }
 
+        /**
+         *  Multiply a vecs elements by a value.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @param  val_    Value used to multipy the vec elements.
+         *
+         *  @return Vec formed by multiplying the vec elements by the value.
+         */
         template <typename T>
         constexpr inline Vec3<T> Vec3<T>::operator*(T val_) const noexcept
         {
