@@ -48,7 +48,9 @@ namespace arc //! arctk namespace
               public:
                 //  -- Colour --
                 static std::string _col;
-                static uint64_t    _update_delta = 1000; //!< Minimum microseconds between prints.
+
+                //  -- Updating --
+                static uint64_t _update_delta = 1000; //!< Minimum microseconds between prints.
 
                 //  -- Buffer --
                 const std::string _buff; //!< Update string.
