@@ -157,9 +157,13 @@ namespace arc //! arctk namespace
              *  Set the update delta minimum time.
              *
              *  @param  delta_  Minimum time, in microseconds, between progress update prints.
+             *
+             *  @pre    delta_ must be positive.
              */
             inline void set_update_delta(const uint64_t delta_) noexcept
             {
+                assert(delta_ > 0);
+
                 _update_delta = delta_;
             }
 
