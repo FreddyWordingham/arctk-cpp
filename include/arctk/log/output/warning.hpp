@@ -42,12 +42,6 @@ namespace arc //! arctk namespace
              */
             class Warning : public Output
             {
-                //  == FIELDS ==
-              private:
-                //  -- Colour --
-                static std::string _col;
-
-
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
