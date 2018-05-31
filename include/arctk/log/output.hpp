@@ -59,6 +59,11 @@ namespace arc //! arctk namespace
             //  -- Assignment --
             inline Output& operator=(const Output&) = delete; //!< Deleted copy operator. @return Reference to copied object.
             inline Output& operator=(Output&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
+
+
+            //  == METHODS ==
+            //  -- Getters --
+            inline void Warning::set_col(const std::string& col_) noexcept;
         };
 
 
@@ -106,6 +111,20 @@ namespace arc //! arctk namespace
         inline Output::~Output() noexcept
         {
             Term::instance().cout(str());
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        /**
+         *  Set the colouring string of this message type.
+         *
+         *  @param  col_    Colouring string.
+         */
+        inline void Output::set_col(const std::string& col_) noexcept
+        {
+            _col = col_;
         }
 
 
