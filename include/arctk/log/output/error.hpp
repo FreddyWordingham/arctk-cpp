@@ -98,7 +98,7 @@ namespace arc //! arctk namespace
             {
                 assert(exit_val_ > 0);
 
-                *this << Term::instance().error_col() << "[Error!] : ";
+                *this << _col << "[Error!] : ";
             }
 
             /**
@@ -124,7 +124,7 @@ namespace arc //! arctk namespace
                 assert(line_ > 0);
                 assert(exit_val_ > 0);
 
-                *this << Term::instance().error_col() << "[Error!] : ";
+                *this << _col << "[Error!] : ";
             }
 
 
