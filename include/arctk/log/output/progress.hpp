@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
                 static std::string _col; //!< String used to colour this type of message. // NOLINT
 
                 //  -- Updating --
-                static uint64_t _update_delta; //!< Minimum microseconds between prints.
+                static uint64_t _update_delta; //!< Minimum microseconds between prints. // NOLINT
 
                 //  -- Buffer --
                 const std::string _buff; //!< Update string.
@@ -97,7 +97,7 @@ namespace arc //! arctk namespace
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wexit-time-destructors"
 #pragma clang diagnostic ignored "-Wglobal-constructors"
-            uint64_t Progress::_update_delta = 1E6;
+            uint64_t Progress::_update_delta = 1E6; // NOLINT
 #pragma clang diagnostic pop
 
 
