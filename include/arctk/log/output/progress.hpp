@@ -92,6 +92,7 @@ namespace arc //! arctk namespace
             std::string Progress::_col = ansi::FG_BLUE;
 #pragma clang diagnostic pop
 
+
             //  -- Updating --
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wexit-time-destructors"
