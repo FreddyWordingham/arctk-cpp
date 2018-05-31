@@ -42,6 +42,11 @@ namespace arc //! arctk namespace
              */
             class Error : public Output
             {
+                //  == FIELDS ==
+              private:
+                const int _exit_val; //!< Value to exit the program with after printing error message.
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
