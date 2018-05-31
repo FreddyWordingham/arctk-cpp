@@ -48,7 +48,7 @@ namespace arc //! arc namespace
                 //  == FIELDS ==
               private:
                 //  -- Colour --
-                static std::string _col; //!< String used to colour this type of message.
+                static std::string _col; //!< String used to colour this type of message. // NOLINT
 
                 //  -- Timing --
                 const std::chrono::high_resolution_clock::time_point _construct_time; //!< Construction time.
@@ -86,7 +86,7 @@ namespace arc //! arc namespace
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wexit-time-destructors"
 #pragma clang diagnostic ignored "-Wglobal-constructors"
-            std::string Stopwatch::_col = ansi::FG_MAGENTA;
+            std::string Stopwatch::_col = ansi::FG_MAGENTA; // NOLINT
 #pragma clang diagnostic pop
 
 
