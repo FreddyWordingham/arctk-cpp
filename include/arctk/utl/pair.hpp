@@ -33,6 +33,7 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
+        //  -- Apply --
         template <typename A0, typename A1, typename F>
         void apply(std::pair<A0, A1>& pair_, F func_);
         template <typename A0, typename A1, typename F>
@@ -45,6 +46,7 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTIONS ==
+        //  -- Apply --
         /**
          *  Call a functor on each element of a pair.
          *
