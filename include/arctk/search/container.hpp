@@ -36,6 +36,7 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
+        //  -- Limits --
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline size_t min_index(const C& cont_) noexcept;
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
@@ -44,6 +45,8 @@ namespace arc //! arctk namespace
         inline T min(const C& cont_) noexcept;
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline T max(const C& cont_) noexcept;
+
+        //  -- Placement --
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline size_t lower(const C& cont_, const T& val_) noexcept;
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
@@ -52,6 +55,7 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTIONS ==
+        //  -- Limits --
         /**
          *  Find the index of the minimum element within a container.
          *
@@ -154,6 +158,8 @@ namespace arc //! arctk namespace
             return (cont_[max_index(cont_)]);
         }
 
+
+        //  -- Placement --
         /**
          *  Find the index of the first element of the container that is not greater than or equal to the value given.
          *
