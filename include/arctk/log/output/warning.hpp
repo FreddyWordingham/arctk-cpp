@@ -42,6 +42,12 @@ namespace arc //! arctk namespace
              */
             class Warning : public Output
             {
+                //  == FIELDS ==
+              public:
+                //  -- Colouring --
+                static std::string _col;
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
@@ -61,7 +67,7 @@ namespace arc //! arctk namespace
                 inline Warning& operator=(Warning&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
             };
 
-
+            std::string Warning::_col = ansi::FG_MAGENTA;
 
             //  == INSTANTIATION --
             //  -- Constructors --
@@ -72,7 +78,7 @@ namespace arc //! arctk namespace
             inline Warning::Warning() noexcept
               : Output()
             {
-                *this << Term::instance().warn_col() << "[Warning!] : ";
+                *this << _col << "[Warning!] : ";
             }
 
             /**
@@ -94,7 +100,7 @@ namespace arc //! arctk namespace
                 assert(!func_.empty());
                 assert(line_ > 0);
 
-                *this << Term::instance().warn_col() << "[Warning!] : ";
+                *this << _col << "[Warning!] : ";
             }
 
 
