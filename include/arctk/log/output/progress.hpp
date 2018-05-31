@@ -96,7 +96,7 @@ namespace arc //! arctk namespace
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wexit-time-destructors"
 #pragma clang diagnostic ignored "-Wglobal-constructors"
-            uint64_t Progress::_update_delta = 1000;
+            uint64_t Progress::_update_delta = 1E6;
 #pragma clang diagnostic pop
 
 
