@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
          */
         inline double rad_to_deg(const double val_) noexcept
         {
-            return (180.0 / constant::math::PI * val_);
+            return (180.0 / constant::PI * val_);
         }
 
         /**
@@ -63,7 +63,7 @@ namespace arc //! arctk namespace
          */
         inline double deg_to_rad(const double val_) noexcept
         {
-            return (constant::math::PI / 180.0 * val_);
+            return (constant::PI / 180.0 * val_);
         }
 
 
