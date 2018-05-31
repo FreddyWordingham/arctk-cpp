@@ -68,11 +68,12 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             /**
              *  Construct a message object which, when destructed, will write its contents to the terminal.
+             *  Warning report string is prepended.
              */
             inline Warning::Warning() noexcept
               : Output()
             {
-                *this << Term::instance().message_col();
+                *this << Term::instance().message_col() << "[Warning!] : ";
             }
 
             /**
