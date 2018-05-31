@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/math/conversion.hpp>
+#include <arctk/math/power.hpp>
 
 
 
