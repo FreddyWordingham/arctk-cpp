@@ -20,9 +20,11 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
 #include <cassert>
 #include <iterator>
 
+//  -- Arctk --
 #include <arctk/prop.hpp>
 
 
