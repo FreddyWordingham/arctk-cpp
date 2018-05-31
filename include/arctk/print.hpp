@@ -36,6 +36,7 @@ namespace arc //! arctk namespace
 
 
     //  == OPERATOR PROTOTYPES ==
+    //  -- Stream --
     template <typename S, typename C, typename T = typename C::value_type, typename I = typename C::const_iterator, typename = typename std::enable_if<!std::is_same<C, std::string>::value>::type>
     inline S& operator<<(S& stream_, const C& cont_);
     template <typename S, typename A0, typename A1>
@@ -46,6 +47,7 @@ namespace arc //! arctk namespace
 
 
     //  == OPERATORS ==
+    //  -- Stream --
     /**
      *  Print a container as a human-readable string.
      *  This function is disabled for the std::string container type.
