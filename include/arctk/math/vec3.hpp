@@ -105,16 +105,16 @@ namespace arc //! arctk namespace
             constexpr inline const Vec3<T> operator--(int) noexcept;
 
             //  -- Arithmetic --
-            constexpr inline Vec3<T>& operator+() const noexcept;
-            constexpr inline Vec3<T>& operator-() const noexcept;
-            constexpr inline Vec3<T>& operator+(T val_) const noexcept;
-            constexpr inline Vec3<T>& operator+(const Vec3<T>& vec_) const noexcept;
-            constexpr inline Vec3<T>& operator-(T val_) const noexcept;
-            constexpr inline Vec3<T>& operator-(const Vec3<T>& vec_) const noexcept;
-            constexpr inline Vec3<T>& operator*(T val_) const noexcept;
-            constexpr inline T        operator*(const Vec3<T>& vec_) const noexcept;
-            constexpr inline Vec3<T>& operator/(T val_) const noexcept;
-            constexpr inline Vec3<T>& operator^(const Vec3<T>& vec_) const noexcept;
+            constexpr inline Vec3<T> operator+() const noexcept;
+            constexpr inline Vec3<T> operator-() const noexcept;
+            constexpr inline Vec3<T> operator+(T val_) const noexcept;
+            constexpr inline Vec3<T> operator+(const Vec3<T>& vec_) const noexcept;
+            constexpr inline Vec3<T> operator-(T val_) const noexcept;
+            constexpr inline Vec3<T> operator-(const Vec3<T>& vec_) const noexcept;
+            constexpr inline Vec3<T> operator*(T val_) const noexcept;
+            constexpr inline T       operator*(const Vec3<T>& vec_) const noexcept;
+            constexpr inline Vec3<T> operator/(T val_) const noexcept;
+            constexpr inline Vec3<T> operator^(const Vec3<T>& vec_) const noexcept;
 
             //  -- Access --
             constexpr inline T&       operator[](size_t index_) noexcept;
@@ -392,52 +392,53 @@ namespace arc //! arctk namespace
 
         //  -- Arithmetic --
         template <typename T>
-        constexpr inline Vec3<T>& Vec3<T>::operator+() const noexcept
+        constexpr inline Vec3<T> Vec3<T>::operator+() const noexcept
+        {
+            return (Vec3(+x, +y, +z));
+        }
+
+        template <typename T>
+        constexpr inline Vec3<T> Vec3<T>::operator-() const noexcept
         {
         }
 
         template <typename T>
-        constexpr inline Vec3<T>& Vec3<T>::operator-() const noexcept
+        constexpr inline Vec3<T> Vec3<T>::operator+(T val_) const noexcept
         {
         }
 
         template <typename T>
-        constexpr inline Vec3<T>& Vec3<T>::operator+(T val_) const noexcept
+        constexpr inline Vec3<T> Vec3<T>::operator+(const Vec3<T>& vec_) const noexcept
         {
         }
 
         template <typename T>
-        constexpr inline Vec3<T>& Vec3<T>::operator+(const Vec3<T>& vec_) const noexcept
+        constexpr inline Vec3<T> Vec3<T>::operator-(T val_) const noexcept
         {
         }
 
         template <typename T>
-        constexpr inline Vec3<T>& Vec3<T>::operator-(T val_) const noexcept
+        constexpr inline Vec3<T> Vec3<T>::operator-(const Vec3<T>& vec_) const noexcept
         {
         }
 
         template <typename T>
-        constexpr inline Vec3<T>& Vec3<T>::operator-(const Vec3<T>& vec_) const noexcept
+        constexpr inline Vec3<T> Vec3<T>::operator*(T val_) const noexcept
         {
         }
 
         template <typename T>
-        constexpr inline Vec3<T>& Vec3<T>::operator*(T val_) const noexcept
+        constexpr inline T Vec3<T>::operator*(const Vec3<T>& vec_) const noexcept
         {
         }
 
         template <typename T>
-        constexpr inline T operatoVec3<T>::r*(const Vec3<T>& vec_) const noexcept
+        constexpr inline Vec3<T> Vec3<T>::operator/(T val_) const noexcept
         {
         }
 
         template <typename T>
-        constexpr inline Vec3<T>& Vec3<T>::operator/(T val_) const noexcept
-        {
-        }
-
-        template <typename T>
-        constexpr inline Vec3<T>& Vec3<T>::operator^(const Vec3<T>& vec_) const noexcept
+        constexpr inline Vec3<T> Vec3<T>::operator^(const Vec3<T>& vec_) const noexcept
         {
         }
 
