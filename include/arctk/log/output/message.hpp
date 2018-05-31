@@ -23,7 +23,7 @@
 #include <cassert>
 #include <sstream>
 
-#include <arctk/log/ansi.hpp>
+#include <arctk/ansi.hpp>
 #include <arctk/log/output.hpp>
 
 
