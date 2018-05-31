@@ -84,6 +84,8 @@ namespace arc //! arctk namespace
                 assert(!file_.empty());
                 assert(!func_.empty());
                 assert(line_ > 0);
+
+                *this << Term::instance().message_col();
             }
 
 
