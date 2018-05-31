@@ -323,6 +323,11 @@ namespace arc //! arctk namespace
 
         inline Vec3<T>& Vec3<T>::operator--() noexcept
         {
+            --x;
+            --y;
+            --z;
+
+            return (*this);
         }
 
         inline const Vec3<T> Vec3<T>::operator--(int) noexcept
