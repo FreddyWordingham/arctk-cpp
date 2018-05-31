@@ -1,6 +1,6 @@
 /**
  *  @file   arctk/log/output/message.hpp
- *  @date   30/05/2018
+ *  @date   31/05/2018
  *  @author Freddy Wordingham
  *
  *  Standard console output message log class.
