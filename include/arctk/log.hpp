@@ -29,9 +29,11 @@
 
 //  == MACROS ==
 #ifdef LOG_LOCATION
-#define LOG arc::log::output::Message(__FILE__, __func__, __LINE__) << "" //!< Log a standard message to console output.
+#define LOG arc::log::output::Message(__FILE__, __func__, __LINE__) << ""  //!< Log a standard message to standard output.
+#define WARN arc::log::output::Warning(__FILE__, __func__, __LINE__) << "" //!< Log a warning message to standard output.
 #else
-#define LOG arc::log::output::Message() << "" //!< Log a standard message to console output.
+#define LOG arc::log::output::Message() << ""  //!< Log a standard message to standard output.
+#define WARN arc::log::output::Warning() << "" //!< Log a warning message to standard output.
 #endif
 
 
