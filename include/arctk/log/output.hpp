@@ -59,12 +59,6 @@ namespace arc //! arctk namespace
             //  -- Assignment --
             inline Output& operator=(const Output&) = delete; //!< Deleted copy operator. @return Reference to copied object.
             inline Output& operator=(Output&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
-
-
-            //  == METHODS ==
-          public:
-            //  -- Exiting --
-            inline void exit(int exit_val_) noexcept;
         };
 
 
@@ -112,26 +106,6 @@ namespace arc //! arctk namespace
         inline Output::~Output() noexcept
         {
             Term::instance().cout(str());
-        }
-
-
-
-        //  == METHODS ==
-        //  -- Exiting --
-        /**
-         *  Write contents to console output then exit with an error value.
-         *
-         *  @param  exit_val_   Value to exit program with.
-         *
-         *  @pre    exit_val_   Must be greater than zero.
-         */
-        inline void Output::exit(const int exit_val_) noexcept
-        {
-            assert(exit_val_ > 0);
-
-            Term::instance().cout(str());
-
-            exit(exit_val_);
         }
 
 
