@@ -112,25 +112,21 @@ namespace arc //! arctk namespace
 
             //  -- Destructors --
             /**
-             *  Reset ansi escape codes and append a newline character.
+             *  If more, or equal, time has passed than the specified update_delta_, then print the update string and fraction.
              */
             inline Progress::~Progress() noexcept
             {
-                *this << Term::instance().reset() << '\n';
-            }
+                static std::chrono::high_resolution_clock::time_point static_last_update = std::chrono::high_resolution_clock::now();
+                const std::chrono::high_resolution_clock::time_point  cur_time           = std::chrono::high_resolution_clock::now();
 
+                if (static_cast<uint64_t>(std::chrono::duration_cast<std::chrono::microseconds>(cur_time - static_last_update).count()) >= _update_delta)
+                {
+                    static_last_update = cur_time;
 
+                    *this << _str << " : " << (_frac * 100.0) << "%";
 
-            //  == METHODS ==
-            //  -- Setters --
-            /**
-             *  Set the colouring string of this message type.
-             *
-             *  @param  col_    Colouring string.
-             */
-            inline void Progress::set_col(const std::string& col_) noexcept
-            {
-                _col = col_;
+                    *this << ANSI.reset << ANSI.overwrite;
+                }
             }
 
 
