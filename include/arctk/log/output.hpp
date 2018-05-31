@@ -42,6 +42,12 @@ namespace arc //! arctk namespace
          */
         class Output : public std::stringstream
         {
+            //  == FIELDS ==
+          private:
+            //  -- Colour --
+            static std::string _col;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
