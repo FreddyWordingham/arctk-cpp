@@ -20,7 +20,6 @@
 #include <arctk/format.hpp>
 #include <arctk/format/table.hpp>
 #include <arctk/log.hpp>
-#include <arctk/log/message.hpp>
 #include <arctk/log/output.hpp>
 #include <arctk/log/term.hpp>
 #include <arctk/print.hpp>
