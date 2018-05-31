@@ -404,6 +404,13 @@ namespace arc //! arctk namespace
             return (Vec3(+x, +y, +z));
         }
 
+        /**
+         *  Negative copy the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return Negative copy of the vec.
+         */
         template <typename T>
         constexpr inline Vec3<T> Vec3<T>::operator-() const noexcept
         {
