@@ -75,6 +75,14 @@ namespace arc //! arctk namespace
 
 
             //  == INSTANTIATION --
+            //  -- Colour --
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wexit-time-destructors"
+#pragma clang diagnostic ignored "-Wglobal-constructors"
+            std::string Error::_col = ansi::FG_RED;
+#pragma clang diagnostic pop
+
+
             //  -- Constructors --
             /**
              *  Construct a message object which, when destructed, will write its contents to the terminal.
