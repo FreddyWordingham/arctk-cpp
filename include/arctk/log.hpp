@@ -27,8 +27,11 @@
 
 
 //  == MACROS ==
-//  -- Logging --
+#ifdef LOG_LOCATION
 #define LOG arc::log::output::Message(__FILE__, __func__, __LINE__) << "" //!< Log a standard message to console output.
+#else
+#define LOG arc::log::output::Message() << "" //!< Log a standard message to console output.
+#endif
 
 
 
