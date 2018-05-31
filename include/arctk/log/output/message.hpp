@@ -65,6 +65,12 @@ namespace arc //! arctk namespace
                 //  -- Assignment --
                 inline Message& operator=(const Message&) = delete; //!< Deleted copy operator. @return Reference to copied object.
                 inline Message& operator=(Message&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
+
+
+                //  == METHODS ==
+              public:
+                //  -- Setters --
+                inline static void set_col(const std::string& col_) noexcept;
             };
 
 
@@ -117,6 +123,20 @@ namespace arc //! arctk namespace
             inline Message::~Message() noexcept
             {
                 *this << Term::instance().reset() << '\n';
+            }
+
+
+
+            //  == METHODS ==
+            //  -- Setters --
+            /**
+             *  Set the colouring string of this message type.
+             *
+             *  @param  col_    Colouring string.
+             */
+            inline void Message::set_col(const std::string& col_) noexcept
+            {
+                _col = col_;
             }
 
 
