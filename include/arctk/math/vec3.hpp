@@ -432,6 +432,15 @@ namespace arc //! arctk namespace
             return (Vec3(x + val_, y + val_, z + val_));
         }
 
+        /**
+         *  Add a vec to a vec.
+         *
+         *  @tparam T   Type stored by the vecs.
+         *
+         *  @param  vec_    Vec to add to the vec.
+         *
+         *  @return Vec formed by adding the vec to the vec.
+         */
         template <typename T>
         constexpr inline Vec3<T> Vec3<T>::operator+(const Vec3<T>& vec_) const noexcept
         {
