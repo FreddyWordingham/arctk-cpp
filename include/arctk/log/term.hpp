@@ -74,6 +74,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline const std::string& location_col() noexcept;
             inline const std::string& message_col() noexcept;
             inline const std::string& warn_col() noexcept;
             inline const std::string& error_col() noexcept;
@@ -130,6 +131,16 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the location colouring string.
+         *
+         *  @return Location colour string.
+         */
+        inline const std::string& Term::location_col() noexcept
+        {
+            return (_location_col);
+        }
+
         /**
          *  Get the message colouring string.
          *
