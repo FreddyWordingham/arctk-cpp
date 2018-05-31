@@ -493,7 +493,7 @@ namespace arc //! arctk namespace
         }
 
         /**
-         * Calculate the dot-product of two vecs.
+         *  Calculate the dot-product of two vecs.
          *
          *  @tparam T   Type stored by the vecs.
          *
@@ -522,6 +522,15 @@ namespace arc //! arctk namespace
             return (Vec3(x / val_, y / val_, z / val_));
         }
 
+        /**
+         *  Calculate the cross-product of two vecs.
+         *
+         *  @tparam T   Type stored by the vecs.
+         *
+         *  @param  vec_    Vec to perform the cross-product with.
+         *
+         *  @return Cross-product of the vecs.
+         */
         template <typename T>
         constexpr inline Vec3<T> Vec3<T>::operator^(const Vec3<T>& vec_) const noexcept
         {
