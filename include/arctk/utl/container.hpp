@@ -33,6 +33,7 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
+        //  -- Apply --
         template <typename C, typename T = typename C::value_type, typename I = typename C::iterator, typename F>
         inline void apply(C& cont_, F func_) noexcept;
         template <typename C, typename T = typename C::value_type, typename I = typename C::cont_iterator, typename F>
@@ -45,6 +46,7 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTIONS ==
+        //  -- Apply --
         /**
          *  Apply a given functor to each element of a container.
          *
