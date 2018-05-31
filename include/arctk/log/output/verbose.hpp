@@ -44,6 +44,20 @@ namespace arc //! arctk namespace
 
 
 
+            //  == OPERATORS ==
+            /**
+             *  Accept a value to the stream and discard it.
+             *
+             *  @return A const reference to this object.
+             */
+            template <typename T>
+            inline const Verbose& Verbose::operator<<(const T& /*unused*/) const noexcept
+            {
+                return (*this);
+            }
+
+
+
         } // namespace output
     }     // namespace log
 } // namespace arc
