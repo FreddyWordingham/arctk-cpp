@@ -82,7 +82,7 @@ namespace arc //! arctk namespace
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wexit-time-destructors"
 #pragma clang diagnostic ignored "-Wglobal-constructors"
-            std::string Warning::_col = ansi::FG_MAGENTA;
+            std::string Warning::_col = ansi::FG_YELLOW;
 #pragma clang diagnostic pop
 
 
