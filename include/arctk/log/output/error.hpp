@@ -44,10 +44,6 @@ namespace arc //! arctk namespace
             class Error : public Output
             {
                 //  == FIELDS ==
-              public:
-                //  -- Colour --
-                static std::string _col;
-
               private:
                 //  -- Exiting --
                 const int _exit_val; //!< Value to exit the program with after printing error message.
