@@ -136,7 +136,7 @@ namespace arc //! arctk namespace
              *
              *  @param  col_    Colouring string.
              */
-            inline static void Warning::set_col(const std::string& col_) noexcept
+            inline void Warning::set_col(const std::string& col_) noexcept
             {
                 _col = col_;
             }
