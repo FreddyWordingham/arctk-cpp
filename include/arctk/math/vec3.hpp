@@ -222,6 +222,11 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Vec3<T>& Vec3<T>::operator/=(const T val_) noexcept
         {
+            x /= val_;
+            y /= val_;
+            z /= val_;
+
+            return (*this);
         }
 
         template <typename T>
