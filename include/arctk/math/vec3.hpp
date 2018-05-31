@@ -45,18 +45,29 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           public:
             //  -- Data --
+            /**
+             *  First vector element.
+             */
             union
             {
                 T x,   //!< Cartesian x-dimension.
                   rho, //!< Polar radial-dimension.
                   r;   //!< Colour red-dimension.
             };
+
+            /**
+             *  Second vector element.
+             */
             union
             {
                 T y,     //!< Cartesian y-dimension.
                   theta, //!< Polar inclination-dimension.
                   g;     //!< Colour green-dimension.
             };
+
+            /**
+             *  Third vector element.
+             */
             union
             {
                 T z,   //!< Cartesian z-dimension.
