@@ -231,6 +231,8 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored by the vec.
          *
          *  @param  val_    Value to subtract from each vec element.
+         *
+         *  @return Reference to this vec post-operation.
          */
         template <typename T>
         constexpr inline Vec3<T>& Vec3<T>::operator-=(const T val_) noexcept
