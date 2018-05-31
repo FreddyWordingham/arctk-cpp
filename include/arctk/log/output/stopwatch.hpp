@@ -111,7 +111,7 @@ namespace arc //! arc namespace
                 assert(line_ > 0);
                 assert(!str_.empty());
 
-                *this << ANSI.yellow << str_;
+                *this << _col << str_;
             }
 
 
@@ -121,8 +121,8 @@ namespace arc //! arc namespace
              */
             inline Stopwatch::~Stopwatch() noexcept
             {
-                *this << ANSI.yellow << " took: " << utl::time(static_cast<uint64_t>(std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now() - _construct_time).count()));
-                *this << ANSI.reset << '\n';
+                *this << _col << " took: " << utl::time(static_cast<uint64_t>(std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now() - _construct_time).count()));
+                *this << Term::instance().reset() << '\n';
             }
 
 
