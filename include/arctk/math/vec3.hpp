@@ -88,15 +88,18 @@ namespace arc //! arctk namespace
             //  -- Stream --
             template <typename S, typename L>
             friend inline S& operator<<(S& stream_, const Vec3<T>& vec_) noexcept;
-
-
-            //  == METHODS ==
-          public:
-            //  -- Mathematical --
-            inline T      sum() const noexcept;
-            inline double mag() const noexcept;
-            inline void   normalise() noexcept;
         };
+
+
+
+        //  == FUNCTION PROTOTYPES ==
+        //  -- Mathematical --
+        template <typename T>
+        inline T sum(const Vec3<T>& vec_) noexcept;
+        template <typename T>
+        inline double mag(const Vec3<T>& vec_) noexcept;
+        template <typename T>
+        inline void normalise(Vec3<T>& vec_) noexcept;
 
 
 
@@ -157,47 +160,53 @@ namespace arc //! arctk namespace
 
 
 
-        //  == METHODS ==
+        //  == FUNCTIONS ==
         //  -- Mathematical --
         /**
-         *  Determine the sum of the vector's elements.
+         *  Determine the sum of a vector's elements.
          *
          *  @tparam T   Type stored by the vec.
+         *
+         *  @param  vec_    Vector to find the sum of.
          *
          *  @return Sum of vector's elements.
          */
         template <typename T>
-        inline T Vec3<T>::sum() const noexcept
+        inline T sum(const Vec3<T>& vec_) noexcept
         {
-            return (x + y + z);
+            return (vec_.x + vec_.y + vec_.z);
         }
 
         /**
-         *  Determine the magnitude of the vector's elements.
+         *  Determine the magnitude of a vector.
          *
          *  @tparam T   Type stored by the vec.
+         *
+         *  @param  vec_    Vector to find the magnitude of.
          *
          *  @return Magnitude of vector's elements.
          */
         template <typename T>
-        inline double Vec3<T>::mag() const noexcept
+        inline double mag(const Vec3<T>& vec_) noexcept
         {
-            return (std::sqrt(static_cast<double>(x * x) + static_cast<double>(y * y) + static_cast<double>(z * z)));
+            return (std::sqrt(static_cast<double>(vec_.x * vec_.x) + static_cast<double>(vec_.y * vec_.y) + static_cast<double>(vec_.z * vec_.z)));
         }
 
         /**
-         *  Normalise the vector.
+         *  Normalise a vector.
          *
          *  @tparam T   Type stored by the vec.
+         *
+         *  @param  vec_    Vector to normalise.
          */
         template <typename T>
-        inline void Vec3<T>::normalise() noexcept
+        inline void normalise(Vec3<T>& vec_) noexcept
         {
-            const double m = 1.0 / mag();
+            const double m = 1.0 / mag(vec_);
 
-            x *= m;
-            y *= m;
-            z *= m;
+            vec_.x *= m;
+            vec_.y *= m;
+            vec_.z *= m;
         }
 
 
