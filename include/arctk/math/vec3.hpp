@@ -37,7 +37,7 @@ namespace arc //! arctk namespace
         /**
          *  Size three mathematical vector class.
          *
-         *  @tparam T   Type stored by the vector.
+         *  @tparam T   Type stored by the vec.
          */
         template <typename T>
         class Vec3
@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Data --
             /**
-             *  First vector element.
+             *  First vec element.
              */
             union
             {
@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
             };
 
             /**
-             *  Second vector element.
+             *  Second vec element.
              */
             union
             {
@@ -66,7 +66,7 @@ namespace arc //! arctk namespace
             };
 
             /**
-             *  Third vector element.
+             *  Third vec element.
              */
             union
             {
@@ -117,7 +117,7 @@ namespace arc //! arctk namespace
         /**
          *  Construct a vec3 with initial element values of zero.
          *
-         *  @tparam T   Type stored by the vector.
+         *  @tparam T   Type stored by the vec.
          */
         template <typename T>
         constexpr inline Vec3<T>::Vec3() noexcept
@@ -130,7 +130,7 @@ namespace arc //! arctk namespace
         /**
          *  Construct a vec3 with initial element values.
          *
-         *  @tparam T   Type stored by the vector.
+         *  @tparam T   Type stored by the vec.
          *
          *  @param  x_  Initial value of the x component.
          *  @param  y_  Initial value of the y component.
@@ -169,6 +169,13 @@ namespace arc //! arctk namespace
 
 
         //  -- Assignment --
+        /**
+         *  Add a value to all elements of the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @param  val_    Value to add to each vec element.
+         */
         template <typename T>
         constexpr inline Vec3<T>& Vec3<T>::operator+=(const T val_) noexcept
         {
@@ -248,13 +255,13 @@ namespace arc //! arctk namespace
         //  == FUNCTIONS ==
         //  -- Mathematical --
         /**
-         *  Determine the sum of a vector's elements.
+         *  Determine the sum of a vec's elements.
          *
          *  @tparam T   Type stored by the vec.
          *
          *  @param  vec_    Vector to find the sum of.
          *
-         *  @return Sum of vector's elements.
+         *  @return Sum of vec's elements.
          */
         template <typename T>
         inline T sum(const Vec3<T>& vec_) noexcept
@@ -263,13 +270,13 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Determine the magnitude of a vector.
+         *  Determine the magnitude of a vec.
          *
          *  @tparam T   Type stored by the vec.
          *
          *  @param  vec_    Vector to find the magnitude of.
          *
-         *  @return Magnitude of vector's elements.
+         *  @return Magnitude of vec's elements.
          */
         template <typename T>
         inline double mag(const Vec3<T>& vec_) noexcept
@@ -278,7 +285,7 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Normalise a vector.
+         *  Normalise a vec.
          *
          *  @tparam T   Type stored by the vec.
          *
