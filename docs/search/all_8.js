@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['instance',['instance',['../classarc_1_1log_1_1_term.html#aebeecbc3cf22b9b629838443228ea920',1,'arc::log::Term']]]
+  ['hash',['HASH',['../namespacearc_1_1config.html#acba74c1165508123cf039684296dd007',1,'arc::config']]]
 ];

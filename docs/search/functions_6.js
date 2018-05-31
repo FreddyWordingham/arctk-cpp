@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['mag',['mag',['../namespacearc_1_1math.html#a9ec6f1aaf4e9a2f8a442a98709329ef9',1,'arc::math']]],
   ['main',['main',['../main_8cpp.html#a3718b1cdde8158b6d3991e85fd04d50d',1,'main.cpp']]],
   ['max',['max',['../namespacearc_1_1search.html#ab5608d27962c637137d2c243213fa366',1,'arc::search']]],
   ['max_5findex',['max_index',['../namespacearc_1_1search.html#aac33af22b716309501eaa7f5a10cc1d0',1,'arc::search']]],

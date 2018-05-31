@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['overwrite',['OVERWRITE',['../namespacearc_1_1ansi.html#af66d083e1eb322ff4e5a6bfec338f66c',1,'arc::ansi']]]
+  ['mod_5fcore',['MOD_CORE',['../namespacearc_1_1config.html#a91b9e1afbcd188b61eb1430caeac30db',1,'arc::config']]]
 ];

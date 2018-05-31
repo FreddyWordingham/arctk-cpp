@@ -103,6 +103,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a83348b9117e92b18801b32eaf2c9d3c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1log_1_1output_1_1_stopwatch.html#a83348b9117e92b18801b32eaf2c9d3c9">Stopwatch</a> (const std::string &amp;str_) noexcept</td></tr>
+<tr class="separator:a83348b9117e92b18801b32eaf2c9d3c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83a5526d730b31f03374e755c8a1eb2d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1log_1_1output_1_1_stopwatch.html#a83a5526d730b31f03374e755c8a1eb2d">Stopwatch</a> (const std::string &amp;file_, const std::string &amp;func_, int line_, const std::string &amp;str_) noexcept</td></tr>
 <tr class="separator:a83a5526d730b31f03374e755c8a1eb2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac703c3ddef27fbf367c370eaaecf4232"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1log_1_1output_1_1_stopwatch.html#ac703c3ddef27fbf367c370eaaecf4232">Stopwatch</a> (const <a class="el" href="classarc_1_1log_1_1output_1_1_stopwatch.html">Stopwatch</a> &amp;)=delete</td></tr>
@@ -153,14 +155,48 @@ Private Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:aee69beff8ed834aaba59987cb6c32e70"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1log_1_1output_1_1_stopwatch.html#aee69beff8ed834aaba59987cb6c32e70">_col</a> = <a class="el" href="namespacearc_1_1ansi.html#afafad539efff0d375dd76ae7f3545f7a">ansi::FG_MAGENTA</a></td></tr>
-<tr class="memdesc:aee69beff8ed834aaba59987cb6c32e70"><td class="mdescLeft">&#160;</td><td class="mdescRight">String used to colour this type of message.  <a href="#aee69beff8ed834aaba59987cb6c32e70">More...</a><br /></td></tr>
+<tr class="memdesc:aee69beff8ed834aaba59987cb6c32e70"><td class="mdescLeft">&#160;</td><td class="mdescRight">String used to colour this type of message. // NOLINT.  <a href="#aee69beff8ed834aaba59987cb6c32e70">More...</a><br /></td></tr>
 <tr class="separator:aee69beff8ed834aaba59987cb6c32e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Standard output stopwatch logging. Prints wall clock lifetime of object upon destruction. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a83348b9117e92b18801b32eaf2c9d3c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83348b9117e92b18801b32eaf2c9d3c9">&#9670;&nbsp;</a></span>Stopwatch() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">arc::log::output::Stopwatch::Stopwatch </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Construct a stopwatch object which, when destructed, will write its age.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str_</td><td>String prepended to lifetime report message.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>str_ must not be empty. </dd></dl>
+
+</div>
+</div>
 <a id="a83a5526d730b31f03374e755c8a1eb2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83a5526d730b31f03374e755c8a1eb2d">&#9670;&nbsp;</a></span>Stopwatch() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a83a5526d730b31f03374e755c8a1eb2d">&#9670;&nbsp;</a></span>Stopwatch() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -225,7 +261,7 @@ str_ must not be empty. </dd></dl>
 </div>
 </div>
 <a id="ac703c3ddef27fbf367c370eaaecf4232"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac703c3ddef27fbf367c370eaaecf4232">&#9670;&nbsp;</a></span>Stopwatch() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac703c3ddef27fbf367c370eaaecf4232">&#9670;&nbsp;</a></span>Stopwatch() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -253,7 +289,7 @@ str_ must not be empty. </dd></dl>
 </div>
 </div>
 <a id="af68befcf007e815d0a60d7863a7c3408"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af68befcf007e815d0a60d7863a7c3408">&#9670;&nbsp;</a></span>Stopwatch() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af68befcf007e815d0a60d7863a7c3408">&#9670;&nbsp;</a></span>Stopwatch() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -435,7 +471,7 @@ str_ must not be empty. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>String used to colour this type of message. </p>
+<p>String used to colour this type of message. // NOLINT. </p>
 
 </div>
 </div>
@@ -469,7 +505,7 @@ str_ must not be empty. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 31 2018 21:06:01 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 1 2018 00:11:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

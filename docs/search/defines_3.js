@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['verb',['VERB',['../log_8hpp.html#af6b4549ade364646b6875471a060ccbf',1,'log.hpp']]]
+  ['stopwatch',['STOPWATCH',['../log_8hpp.html#a3adf58bf0a40e9b26b6de8437f30f500',1,'log.hpp']]]
 ];

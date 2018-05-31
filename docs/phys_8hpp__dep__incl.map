@@ -1,4 +1,7 @@
 <map id="include/arctk/constant/phys.hpp" name="include/arctk/constant/phys.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="32,165,129,191"/>
-<area shape="rect" id="node3" href="$constant_8hpp.html" title="include/arctk/constant.hpp" alt="" coords="55,92,231,117"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="71,325,168,351"/>
+<area shape="rect" id="node3" href="$constant_8hpp.html" title="include/arctk/constant.hpp" alt="" coords="68,92,245,117"/>
+<area shape="rect" id="node4" href="$conversion_8hpp.html" title="include/arctk/math\l/conversion.hpp" alt="" coords="106,165,236,204"/>
+<area shape="rect" id="node6" href="$power_8hpp.html" title="include/arctk/math\l/power.hpp" alt="" coords="260,165,389,204"/>
+<area shape="rect" id="node5" href="$math_8hpp.html" title="include/arctk/math.hpp" alt="" coords="156,252,312,277"/>
 </map>

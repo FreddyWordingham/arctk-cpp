@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['search_2ehpp',['search.hpp',['../search_8hpp.html',1,'']]],
-  ['set_5fcol',['set_col',['../classarc_1_1log_1_1output_1_1_error.html#ab0add577826d88539bb15f4c35659626',1,'arc::log::output::Error::set_col()'],['../classarc_1_1log_1_1output_1_1_message.html#a08617c5f3d09eeb964b6559c64b8ead9',1,'arc::log::output::Message::set_col()'],['../classarc_1_1log_1_1output_1_1_progress.html#a23ea60be1f6d68411eb0ae4b130f89c3',1,'arc::log::output::Progress::set_col()'],['../classarc_1_1log_1_1output_1_1_stopwatch.html#a817a831b7b8faf28c593369ca18ab0b9',1,'arc::log::output::Stopwatch::set_col()'],['../classarc_1_1log_1_1output_1_1_warning.html#a221c68df7217a6c063937d4a867704fc',1,'arc::log::output::Warning::set_col()']]],
-  ['set_5flocation_5fcol',['set_location_col',['../classarc_1_1log_1_1_term.html#a86a8762023add5d93695bf0039051927',1,'arc::log::Term']]],
-  ['set_5fupdate_5fdelta',['set_update_delta',['../classarc_1_1log_1_1output_1_1_progress.html#a6c100ac27e6068630e85ae8576e47aa2',1,'arc::log::output::Progress']]],
-  ['speed_5fof_5flight',['SPEED_OF_LIGHT',['../namespacearc_1_1constant.html#a7380a245f82a0bc10f7cc9b7140d4e14',1,'arc::constant']]],
-  ['stopwatch',['Stopwatch',['../classarc_1_1log_1_1output_1_1_stopwatch.html',1,'arc::log::output::Stopwatch'],['../classarc_1_1log_1_1output_1_1_stopwatch.html#a83a5526d730b31f03374e755c8a1eb2d',1,'arc::log::output::Stopwatch::Stopwatch(const std::string &amp;file_, const std::string &amp;func_, int line_, const std::string &amp;str_) noexcept'],['../classarc_1_1log_1_1output_1_1_stopwatch.html#ac703c3ddef27fbf367c370eaaecf4232',1,'arc::log::output::Stopwatch::Stopwatch(const Stopwatch &amp;)=delete'],['../classarc_1_1log_1_1output_1_1_stopwatch.html#af68befcf007e815d0a60d7863a7c3408',1,'arc::log::output::Stopwatch::Stopwatch(Stopwatch &amp;&amp;)=delete']]],
-  ['stopwatch_2ehpp',['stopwatch.hpp',['../stopwatch_8hpp.html',1,'']]],
-  ['str_2ehpp',['str.hpp',['../str_8hpp.html',1,'']]]
+  ['pair_2ehpp',['pair.hpp',['../pair_8hpp.html',1,'']]],
+  ['phi',['phi',['../classarc_1_1math_1_1_vec3.html#a363f86b226241ce24ba832bc47a378f0',1,'arc::math::Vec3']]],
+  ['phys_2ehpp',['phys.hpp',['../phys_8hpp.html',1,'']]],
+  ['pi',['PI',['../namespacearc_1_1constant.html#a3eccb0dc76feae32072ab77709824a47',1,'arc::constant']]],
+  ['power_2ehpp',['power.hpp',['../power_8hpp.html',1,'']]],
+  ['print_2ehpp',['print.hpp',['../print_8hpp.html',1,'']]],
+  ['progress',['Progress',['../classarc_1_1log_1_1output_1_1_progress.html',1,'arc::log::output::Progress'],['../classarc_1_1log_1_1output_1_1_progress.html#ab068c7a1e1d09009346ebee753aa3f89',1,'arc::log::output::Progress::Progress(const std::string &amp;str_, double frac_) noexcept'],['../classarc_1_1log_1_1output_1_1_progress.html#a8c18cbcaab799f7baf033f4102f12ce7',1,'arc::log::output::Progress::Progress(const Progress &amp;)=delete'],['../classarc_1_1log_1_1output_1_1_progress.html#ac5ae93b107c9479c28873a837e502496',1,'arc::log::output::Progress::Progress(Progress &amp;&amp;)=delete'],['../log_8hpp.html#aea8610b641483dd04cf7415d64070ca6',1,'PROGRESS():&#160;log.hpp']]],
+  ['progress_2ehpp',['progress.hpp',['../progress_8hpp.html',1,'']]],
+  ['prop_2ehpp',['prop.hpp',['../prop_8hpp.html',1,'']]]
 ];
