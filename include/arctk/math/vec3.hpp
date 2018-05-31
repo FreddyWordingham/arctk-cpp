@@ -254,6 +254,13 @@ namespace arc //! arctk namespace
             return (*this);
         }
 
+        /**
+         *  Divide all elements of the vec by a value.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @param  val_    Value used to divide each vec element by.
+         */
         template <typename T>
         constexpr inline Vec3<T>& Vec3<T>::operator/=(const T val_) noexcept
         {
