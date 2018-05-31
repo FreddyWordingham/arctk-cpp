@@ -20,6 +20,7 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
 #include <cstdint>
 
 
@@ -33,16 +34,19 @@ namespace arc //! arctk namespace
 
 
         //  == CONSTANTS ==
+        //  -- Version --
         constexpr const uint64_t VERSION_MAJOR = @ARCTK_VERSION_MAJOR@; //!< Version major number.
         constexpr const uint64_t VERSION_MINOR = @ARCTK_VERSION_MINOR@; //!< Version minor number.
         constexpr const uint64_t VERSION_PATCH = @ARCTK_VERSION_PATCH@; //!< Version patch number.
-        constexpr const char*    DIR           = "@ARCTK_DIR@";         //!< Build directory.
-        constexpr const char*    BRANCH        = "@ARCTK_BRANCH@";      //!< Build branch.
-        constexpr const char*    HASH          = "@ARCTK_HASH@";        //!< Git hash.
-        constexpr const char*    COMPILER      = "@ARCTK_COMPILER@";    //!< Compiler id.
-        constexpr const char*    TYPE          = "@ARCTK_TYPE@";        //!< Optimisation type.
-        constexpr const char*    DATE          = "@ARCTK_DATE@";        //!< Build date
-        constexpr const char*    MOD_CORE      = "@ARCTK_MOD_CORE@";    //!< Arctk core module status.
+
+        //  -- Build Information --
+        constexpr const char* DIR      = "@ARCTK_DIR@";      //!< Build directory.
+        constexpr const char* BRANCH   = "@ARCTK_BRANCH@";   //!< Build branch.
+        constexpr const char* HASH     = "@ARCTK_HASH@";     //!< Git hash.
+        constexpr const char* COMPILER = "@ARCTK_COMPILER@"; //!< Compiler id.
+        constexpr const char* TYPE     = "@ARCTK_TYPE@";     //!< Optimisation type.
+        constexpr const char* DATE     = "@ARCTK_DATE@";     //!< Build date
+        constexpr const char* MOD_CORE = "@ARCTK_MOD_CORE@"; //!< Arctk core module status.
 
 
 
