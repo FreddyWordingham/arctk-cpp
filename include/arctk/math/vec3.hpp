@@ -385,7 +385,7 @@ namespace arc //! arctk namespace
          *  @return A reference to the element requested.
          */
         template <typename T>
-        constexpr inline T& Vec3::operator[](const size_t index_) noexcept
+        constexpr inline T& Vec3<T>::operator[](const size_t index_) noexcept
         {
             assert(index_ < 3);
 
@@ -402,7 +402,7 @@ namespace arc //! arctk namespace
          *  @return A const reference to the element requested.
          */
         template <typename T>
-        constexpr inline const T& Vec3::operator[](const size_t index_) const noexcept
+        constexpr inline const T& Vec3<T>::operator[](const size_t index_) const noexcept
         {
             assert(index_ < 3);
 
