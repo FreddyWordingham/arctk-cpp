@@ -20,6 +20,7 @@
 
 
 //  == IMPORTS ==
+//  -- Arctk --
 #include <arctk/print.hpp>
 #include <arctk/str.hpp>
 
@@ -34,12 +35,14 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
+        //  -- Table --
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline std::string table(const C& cont_, size_t width_ = 0, const std::string& delim_ = ", ") noexcept;
 
 
 
         //  == FUNCTIONS ==
+        //  -- Table --
         /**
          *  Format a given container into a table.
          *
