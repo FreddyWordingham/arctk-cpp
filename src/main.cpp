@@ -23,6 +23,7 @@
 #include <arctk/log/output.hpp>
 #include <arctk/log/output/error.hpp>
 #include <arctk/log/output/message.hpp>
+#include <arctk/log/output/verbose.hpp>
 #include <arctk/log/output/warning.hpp>
 #include <arctk/log/term.hpp>
 #include <arctk/print.hpp>
