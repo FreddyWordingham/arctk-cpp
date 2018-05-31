@@ -101,10 +101,13 @@ namespace arc //! arctk namespace
             //  -- Destructors --
             /**
              *  Reset ansi escape codes and append a newline character.
+             *  Exit the program.
              */
             inline Error::~Error() noexcept
             {
                 *this << Term::instance().reset() << '\n';
+
+                exit(_exit_val);
             }
 
 
