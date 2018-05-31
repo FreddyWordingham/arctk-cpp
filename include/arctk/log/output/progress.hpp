@@ -133,9 +133,9 @@ namespace arc //! arctk namespace
                 {
                     static_last_update = cur_time;
 
-                    *this << _str << " : " << (_frac * 100.0) << "%";
+                    *this << _buff << " : " << (_frac * 100.0) << "%";
 
-                    *this << ANSI.reset << ANSI.overwrite;
+                    *this << Term::instance().reset() << Term::instance().overwrite();
                 }
             }
 
@@ -160,7 +160,7 @@ namespace arc //! arctk namespace
              *
              *  @pre    delta_ must be positive.
              */
-            inline void set_update_delta(const uint64_t delta_) noexcept
+            inline void Progress::set_update_delta(const uint64_t delta_) noexcept
             {
                 assert(delta_ > 0);
 
