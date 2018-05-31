@@ -35,6 +35,8 @@ namespace arc //! arctk namespace
         //  == CLASS ==
         /**
          *  Size three mathematical vector class.
+         *
+         *  @tparam T   Type stored by the vector.
          */
         template <typename T>
         class Vec3
@@ -51,6 +53,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             constexpr inline Vec3() noexcept = default;
+            constexpr inline Vec3(T x_, T y_, T z_) noexcept;
 
 
             //  == OPERATORS ==
@@ -64,6 +67,10 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        template <typename T>
+        constexpr inline Vec3<T>::Vec3(const T x_, const T y_, const T z_) noexcept
+        {
+        }
 
 
 
