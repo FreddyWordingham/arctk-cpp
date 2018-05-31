@@ -301,6 +301,13 @@ namespace arc //! arctk namespace
 
 
         //  -- Increment / Decrement --
+        /**
+         *  Increment each element of the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return A reference to this vec post-increment.
+         */
         inline Vec3<T>& Vec3<T>::operator++() noexcept
         {
             ++x;
