@@ -26,6 +26,12 @@
 
 
 
+//  == MACROS ==
+//  -- Logging --
+#define LOG arc::log::output::Message(__FILE__, __func__, __LINE__) << "" //!< Log a standard message to console output.
+
+
+
 //  == MODULE END ==
 #endif // ARCTK_MOD_CORE
 
