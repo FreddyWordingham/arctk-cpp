@@ -42,6 +42,12 @@ namespace arc //! arctk namespace
              */
             class Message : public Output
             {
+                //  == FIELDS ==
+              public:
+                //  -- Colour --
+                static std::string _col;
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
