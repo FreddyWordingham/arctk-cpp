@@ -312,6 +312,7 @@ namespace arc //! arctk namespace
          *
          *  @return A reference to this vec post-increment.
          */
+        template <typename T>
         inline Vec3<T>& Vec3<T>::operator++() noexcept
         {
             ++x;
@@ -328,6 +329,7 @@ namespace arc //! arctk namespace
          *
          *  @return A copy of this vec pre-increment.
          */
+        template <typename T>
         inline const Vec3<T> Vec3<T>::operator++(int) noexcept
         {
             const Vec3 vec = *this;
@@ -346,6 +348,7 @@ namespace arc //! arctk namespace
          *
          *  @return A reference to this vec post-decrement.
          */
+        template <typename T>
         inline Vec3<T>& Vec3<T>::operator--() noexcept
         {
             --x;
@@ -362,6 +365,7 @@ namespace arc //! arctk namespace
          *
          *  @return A copy of this vec pre-decrement.
          */
+        template <typename T>
         inline const Vec3<T> Vec3<T>::operator--(int) noexcept
         {
             const Vec3 vec = *this;
