@@ -498,6 +498,15 @@ namespace arc //! arctk namespace
             return ((x * vec_.x) + (y * vec_.y) + (z * vec_.z));
         }
 
+        /**
+         *  Divide a vecs elements by a value.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @param  val_    Value used to divide the vec elements.
+         *
+         *  @return Vec formed by dividing the vec elements by the value.
+         */
         template <typename T>
         constexpr inline Vec3<T> Vec3<T>::operator/(T val_) const noexcept
         {
