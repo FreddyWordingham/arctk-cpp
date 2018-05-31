@@ -74,9 +74,6 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline const std::string& location_col() noexcept;
-            inline const std::string& message_col() noexcept;
-            inline const std::string& warn_col() noexcept;
-            inline const std::string& error_col() noexcept;
             inline const std::string& reset() noexcept;
             inline const std::string& overwrite() noexcept;
 
