@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            inline void Warning::set_col(const std::string& col_) noexcept;
+            inline void set_col(const std::string& col_) noexcept;
         };
 
 
