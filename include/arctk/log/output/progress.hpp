@@ -131,6 +131,20 @@ namespace arc //! arctk namespace
 
 
 
+            //  == METHODS ==
+            //  -- Setters --
+            /**
+             *  Set the colouring string of this message type.
+             *
+             *  @param  col_    Colouring string.
+             */
+            inline void Progress::set_col(const std::string& col_) noexcept
+            {
+                _col = col_;
+            }
+
+
+
         } // namespace output
     }     // namespace log
 } // namespace arc
