@@ -23,6 +23,7 @@
 //  -- Arctk --
 #include <arctk/math/conversion.hpp>
 #include <arctk/math/power.hpp>
+#include <arctk/math/vec.hpp>
 
 
 
