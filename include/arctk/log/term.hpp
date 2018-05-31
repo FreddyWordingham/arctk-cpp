@@ -165,6 +165,11 @@ namespace arc //! arctk namespace
             return (_reset);
         }
 
+        /**
+         *  Get the overwrite string.
+         *
+         *  @return Overwrite string.
+         */
         inline const std::string& Term::overwrite() noexcept
         {
             return (_overwrite);
