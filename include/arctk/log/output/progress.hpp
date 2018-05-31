@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
 
                 //  -- Buffer --
                 const std::string _buff; //!< Update string.
-                const douvle      _frac; //!< Update progress fraction.
+                const double      _frac; //!< Update progress fraction.
 
 
                 //  == INSTANTIATION ==
