@@ -74,6 +74,14 @@ namespace arc //! arc namespace
 
 
             //  == INSTANTIATION --
+            //  -- Colour --
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wexit-time-destructors"
+#pragma clang diagnostic ignored "-Wglobal-constructors"
+            std::string Stopwatch::_col = ansi::FG_MAGENTA;
+#pragma clang diagnostic pop
+
+
             //  -- Constructors --
             /**
              *  Construct a stopwatch object which, when destructed, will write its age.
