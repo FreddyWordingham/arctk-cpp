@@ -482,7 +482,7 @@ namespace arc //! arctk namespace
          *
          *  @tparam T   Type stored by the vec.
          *
-         *  @param  val_    Value used to multipy the vec elements.
+         *  @param  val_    Value used to multiply the vec elements.
          *
          *  @return Vec formed by multiplying the vec elements by the value.
          */
