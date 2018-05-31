@@ -57,7 +57,7 @@ namespace arc //! arc namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Stopwatch(const std::string& str_) noexcept;
+                inline explicit Stopwatch(const std::string& str_) noexcept;
                 inline Stopwatch(const std::string& file_, const std::string& func_, int line_, const std::string& str_) noexcept;
                 inline Stopwatch(const Stopwatch&) = delete; //!< Deleted copy constructor.
                 inline Stopwatch(Stopwatch&&)      = delete; //!< Deleted move constructor.
