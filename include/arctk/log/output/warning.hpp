@@ -76,7 +76,8 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Construct a message object which, when destructed, will write its contents to the terminal.
+             *  Construct a warning message object which, when destructed, will write its contents to the terminal.
+             *  Warning report string is prepended.
              *
              *  @param  file_   File location of the message.
              *  @param  func_   Function location of the message.
@@ -93,7 +94,7 @@ namespace arc //! arctk namespace
                 assert(!func_.empty());
                 assert(line_ > 0);
 
-                *this << Term::instance().message_col();
+                *this << Term::instance().message_col() << "[Warning!] : ";
             }
 
 
