@@ -448,6 +448,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Vec3<T> Vec3<T>::operator^(const Vec3<T>& vec_) const noexcept
         {
+            return (Vec3((y * vec_.z) - (z * vec_.y), (z * vec_.x) - (x * vec_.z), (x * vec_.y) - (y * vec_.x)));
         }
 
 
