@@ -88,6 +88,15 @@ namespace arc //! arctk namespace
             //  -- Stream --
             template <typename S, typename L>
             friend inline S& operator<<(S& stream_, const Vec3<T>& vec_) noexcept;
+
+            //  -- Assignment --
+            constexpr inline Vec3<T>& operator+=(T val_) noexcept;
+            constexpr inline Vec3<T>& operator+=(const Vec3<T>& vec_) noexcept;
+            constexpr inline Vec3<T>& operator-=(T val_) noexcept;
+            constexpr inline Vec3<T>& operator-=(const Vec3<T>& vec_) noexcept;
+            constexpr inline Vec3<T>& operator*=(T val_) noexcept;
+            constexpr inline Vec3<T>& operator/=(T val_) noexcept;
+            constexpr inline Vec3<T>& operator^=(const Vec3<T>& vec_) noexcept;
         };
 
 
@@ -156,6 +165,48 @@ namespace arc //! arctk namespace
             stream_ << '{' << vec_.x << ", " << vec_.y << ", " << vec_.z << '}';
 
             return (stream_);
+        }
+
+
+        //  -- Assignment --
+        template <typename T>
+        constexpr inline Vec3<T>& Vec3<T>::operator+=(const T val_) noexcept
+        {
+            x += val_;
+            y += val_;
+            z += val_;
+
+            return (*this);
+        }
+
+        template <typename T>
+        constexpr inline Vec3<T>& Vec3<T>::operator+=(const Vec3<T>& vec_) noexcept
+        {
+        }
+
+        template <typename T>
+        constexpr inline Vec3<T>& Vec3<T>::operator-=(const T val_) noexcept
+        {
+        }
+
+        template <typename T>
+        constexpr inline Vec3<T>& Vec3<T>::operator-=(const Vec3<T>& vec_) noexcept
+        {
+        }
+
+        template <typename T>
+        constexpr inline Vec3<T>& Vec3<T>::operator*=(const T val_) noexcept
+        {
+        }
+
+        template <typename T>
+        constexpr inline Vec3<T>& Vec3<T>::operator/=(const T val_) noexcept
+        {
+        }
+
+        template <typename T>
+        constexpr inline Vec3<T>& Vec3<T>::operator^=(const Vec3<T>& vec_) noexcept
+        {
         }
 
 
