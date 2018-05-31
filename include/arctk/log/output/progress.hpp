@@ -58,8 +58,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Progress() noexcept;
-                inline Progress(const std::string& file_, const std::string& func_, int line_) noexcept;
+                inline Progress(const std::string& str_, double frac_) noexcept;
                 inline Progress(const Progress&) = delete; //!< Deleted copy constructor.
                 inline Progress(Progress&&)      = delete; //!< Deleted move constructor.
 
@@ -93,33 +92,21 @@ namespace arc //! arctk namespace
 
             //  -- Constructors --
             /**
-             *  Construct a message object which, when destructed, will write its contents to the terminal.
+             *  Construct a progress message which will only be printed if sufficient time has elapsed since the last print.
+             *
+             *  @param  str_    Update string.
+             *  @param  frac_   Update fraction complete.
+             *
+             *  @pre    str_ must not be empty.
+             *  @pre    frac_ must be non-negative.
              */
-            inline Progress::Progress() noexcept
+            inline Progress::Progress(const std::string& str_, const double frac_) noexcept
               : Output()
+              , _str(str_)
+              , _frac(frac_)
             {
-                *this << _col;
-            }
-
-            /**
-             *  Construct a message object which, when destructed, will write its contents to the terminal.
-             *
-             *  @param  file_   File location of the message.
-             *  @param  func_   Function location of the message.
-             *  @param  line_   Line location of the message.
-             *
-             *  @pre    file_ must not be empty.
-             *  @pre    func_ must not be empty.
-             *  @pre    line_ must be positive.
-             */
-            inline Progress::Progress(const std::string& file_, const std::string& func_, const int line_) noexcept
-              : Output(file_, func_, line_)
-            {
-                assert(!file_.empty());
-                assert(!func_.empty());
-                assert(line_ > 0);
-
-                *this << _col;
+                assert(!str_.empty());
+                assert(frac_ >= 0.0);
             }
 
 
