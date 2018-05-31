@@ -161,6 +161,13 @@ namespace arc //! arctk namespace
             return (x + y + z);
         }
 
+        /**
+         *  Determine the magnitude of the vector's elements.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return Magnitude of vector's elements.
+         */
         template <typename T>
         inline double Vec3<T>::mag() const noexcept
         {
