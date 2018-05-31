@@ -67,8 +67,18 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        /**
+         *  Construct a vec3 with initial element values.
+         *
+         *  @param  x_  Initial value of the x component.
+         *  @param  y_  Initial value of the y component.
+         *  @param  z_  Initial value of the z component.
+         */
         template <typename T>
         constexpr inline Vec3<T>::Vec3(const T x_, const T y_, const T z_) noexcept
+          : _x(x_)
+          , _y(y_)
+          , _z(z_)
         {
         }
 
