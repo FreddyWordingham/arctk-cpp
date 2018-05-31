@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Colour --
                 static std::string _col;
-                static uint64_t    _update_delta; //!< Minimum microseconds between prints.
+                static uint64_t    _update_delta = 1000; //!< Minimum microseconds between prints.
 
                 //  -- Buffer --
                 const std::string _buff; //!< Update string.
@@ -86,7 +86,7 @@ namespace arc //! arctk namespace
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wexit-time-destructors"
 #pragma clang diagnostic ignored "-Wglobal-constructors"
-            std::string Progress::_col = ansi::FG_WHITE;
+            std::string Progress::_col = ansi::FG_BLUE;
 #pragma clang diagnostic pop
 
 
