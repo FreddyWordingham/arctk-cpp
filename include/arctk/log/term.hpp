@@ -52,9 +52,6 @@ namespace arc //! arctk namespace
 
             //  -- Colouring --
             std::string _location_col; //!< String used to colour location text.
-            std::string _message_col;  //!< String used to colour standard message text.
-            std::string _warn_col;     //!< String used to colour warning message text.
-            std::string _error_col;    //!< String used to colour error message text.
 
             //  -- Utility --
             const std::string _reset;     //!< String used to reset colouring.
@@ -83,9 +80,6 @@ namespace arc //! arctk namespace
 
             //  -- Setters --
             inline void set_location_col(const std::string& str_) noexcept;
-            inline void set_message_col(const std::string& str_) noexcept;
-            inline void set_warn_col(const std::string& str_) noexcept;
-            inline void set_error_col(const std::string& str_) noexcept;
 
             //  -- Output --
             inline void cout(const std::string& str_) noexcept;
@@ -119,9 +113,6 @@ namespace arc //! arctk namespace
          */
         inline Term::Term() noexcept
           : _location_col{(isatty(fileno(stdout)) == 1) ? ansi::FG_WHITE : ""}
-          , _message_col{(isatty(fileno(stdout)) == 1) ? ansi::FG_CYAN : ""}
-          , _warn_col{(isatty(fileno(stdout)) == 1) ? ansi::FG_YELLOW : ""}
-          , _error_col{(isatty(fileno(stdout)) == 1) ? ansi::FG_RED : ""}
           , _reset{(isatty(fileno(stdout)) == 1) ? ansi::RESET : ""}
           , _overwrite{(isatty(fileno(stdout)) == 1) ? ansi::OVERWRITE : "\n"}
         {
@@ -139,36 +130,6 @@ namespace arc //! arctk namespace
         inline const std::string& Term::location_col() noexcept
         {
             return (_location_col);
-        }
-
-        /**
-         *  Get the message colouring string.
-         *
-         *  @return Message colour string.
-         */
-        inline const std::string& Term::message_col() noexcept
-        {
-            return (_message_col);
-        }
-
-        /**
-         *  Get the warning colouring string.
-         *
-         *  @return Warning colour string.
-         */
-        inline const std::string& Term::warn_col() noexcept
-        {
-            return (_warn_col);
-        }
-
-        /**
-         *  Get the error colouring string.
-         *
-         *  @return Error colour string.
-         */
-        inline const std::string& Term::error_col() noexcept
-        {
-            return (_error_col);
         }
 
         /**
@@ -201,36 +162,6 @@ namespace arc //! arctk namespace
         inline void Term::set_location_col(const std::string& str_) noexcept
         {
             _location_col = str_;
-        }
-
-        /**
-         *  Set the standard message colour.
-         *
-         *  @param  str_    String used to colour standard messages.
-         */
-        inline void Term::set_message_col(const std::string& str_) noexcept
-        {
-            _message_col = str_;
-        }
-
-        /**
-         *  Set the warning message colour.
-         *
-         *  @param  str_    String used to colour warning messages.
-         */
-        inline void Term::set_warn_col(const std::string& str_) noexcept
-        {
-            _warn_col = str_;
-        }
-
-        /**
-         *  Set the error message colour.
-         *
-         *  @param  str_    String used to colour error messages.
-         */
-        inline void Term::set_error_col(const std::string& str_) noexcept
-        {
-            _error_col = str_;
         }
 
 
