@@ -50,8 +50,8 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Error() noexcept;
-                inline Error(const std::string& file_, const std::string& func_, int line_) noexcept;
+                inline Error(int exit_val_) noexcept;
+                inline Error(const std::string& file_, const std::string& func_, int line_, int exit_val_) noexcept;
                 inline Error(const Error&) = delete; //!< Deleted copy constructor.
                 inline Error(Error&&)      = delete; //!< Deleted move constructor.
 
@@ -73,10 +73,17 @@ namespace arc //! arctk namespace
             /**
              *  Construct a message object which, when destructed, will write its contents to the terminal.
              *  Error report string is prepended.
+             *
+             *  @param  exit_val_   Value to exit the program with after reporting the error.
+             *
+             *  @pre    exit_val_ must be positive.
              */
-            inline Error::Error() noexcept
+            inline Error::Error(const int exit_val_) noexcept
               : Output()
+              , _exit_val(exit_val_)
             {
+                assert(exit_val_ > 0);
+
                 *this << Term::instance().error_col() << "[Error!] : ";
             }
 
@@ -84,20 +91,24 @@ namespace arc //! arctk namespace
              *  Construct a warning message object which, when destructed, will write its contents to the terminal.
              *  Error report string is prepended.
              *
-             *  @param  file_   File location of the message.
-             *  @param  func_   Function location of the message.
-             *  @param  line_   Line location of the message.
+             *  @param  file_       File location of the message.
+             *  @param  func_       Function location of the message.
+             *  @param  line_       Line location of the message.
+             *  @param  exit_val_   Value to exit the program with after reporting the error.
              *
              *  @pre    file_ must not be empty.
              *  @pre    func_ must not be empty.
              *  @pre    line_ must be positive.
+             *  @pre    exit_val_ must be positive.
              */
-            inline Error::Error(const std::string& file_, const std::string& func_, const int line_) noexcept
+            inline Error::Error(const std::string& file_, const std::string& func_, const int line_, const int exit_val_) noexcept
               : Output(file_, func_, line_)
+              , _exit_val(exit_val_)
             {
                 assert(!file_.empty());
                 assert(!func_.empty());
                 assert(line_ > 0);
+                assert(exit_val_ > 0);
 
                 *this << Term::instance().error_col() << "[Error!] : ";
             }
