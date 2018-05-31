@@ -70,6 +70,13 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline const std::string& message_col() noexcept;
+            inline const std::string& warn_col() noexcept;
+            inline const std::string& error_col() noexcept;
+            inline const std::string& reset() noexcept;
+            inline const std::string& overwrite() noexcept;
+
             //  -- Setters --
             inline void set_message_col(const std::string& str_) noexcept;
             inline void set_warn_col(const std::string& str_) noexcept;
@@ -117,6 +124,33 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Getters --
+        inline const std::string& Term::message_col() noexcept
+        {
+            return (_message_col);
+        }
+
+        inline const std::string& Term::warn_col() noexcept
+        {
+            return (_warn_col);
+        }
+
+        inline const std::string& Term::error_col() noexcept
+        {
+            return (_error_col);
+        }
+
+        inline const std::string& Term::reset() noexcept
+        {
+            return (_reset);
+        }
+
+        inline const std::string& Term::overwrite() noexcept
+        {
+            return (_overwrite);
+        }
+
+
         //  -- Setters --
         /**
          *  Set the standard message colour.
