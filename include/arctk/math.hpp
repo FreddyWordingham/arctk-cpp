@@ -19,6 +19,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/math/conversion.hpp>
+
+
+
 //  == MODULE END ==
 #endif // ARCTK_MOD_CORE
 
