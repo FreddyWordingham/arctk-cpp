@@ -25,6 +25,7 @@
 #include <arctk/log/output/error.hpp>
 #include <arctk/log/output/message.hpp>
 #include <arctk/log/output/progress.hpp>
+#include <arctk/log/output/stopwatch.hpp>
 #include <arctk/log/output/verbose.hpp>
 #include <arctk/log/output/warning.hpp>
 #include <arctk/log/term.hpp>
