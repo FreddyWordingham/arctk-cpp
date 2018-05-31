@@ -81,7 +81,7 @@ namespace arc //! arctk namespace
             inline Message::Message() noexcept
               : Output()
             {
-                *this << Term::instance().message_col();
+                *this << _col;
             }
 
             /**
@@ -102,7 +102,7 @@ namespace arc //! arctk namespace
                 assert(!func_.empty());
                 assert(line_ > 0);
 
-                *this << Term::instance().message_col();
+                *this << _col;
             }
 
 
