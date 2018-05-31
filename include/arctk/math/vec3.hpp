@@ -46,15 +46,15 @@ namespace arc //! arctk namespace
             //  -- Data --
             union
             {
-                T x;
+                T x, rho, r;
             };
             union
             {
-                T y;
+                T y, theta, g;
             };
             union
             {
-                T z;
+                T z, phi, b;
             };
 
 
