@@ -99,10 +99,10 @@ namespace arc //! arctk namespace
             constexpr inline Vec3<T>& operator^=(const Vec3<T>& vec_) noexcept;
 
             //  -- Increment / Decrement --
-            inline Vec3<T>&      operator++() noexcept;
-            inline const Vec3<T> operator++(int) noexcept;
-            inline Vec3<T>&      operator--() noexcept;
-            inline const Vec3<T> operator--(int) noexcept;
+            constexpr inline Vec3<T>&      operator++() noexcept;
+            constexpr inline const Vec3<T> operator++(int) noexcept;
+            constexpr inline Vec3<T>&      operator--() noexcept;
+            constexpr inline const Vec3<T> operator--(int) noexcept;
 
             //  -- Access --
             constexpr inline T&       operator[](size_t index_) noexcept;
@@ -313,7 +313,7 @@ namespace arc //! arctk namespace
          *  @return A reference to this vec post-increment.
          */
         template <typename T>
-        inline Vec3<T>& Vec3<T>::operator++() noexcept
+        constexpr inline Vec3<T>& Vec3<T>::operator++() noexcept
         {
             ++x;
             ++y;
@@ -330,7 +330,7 @@ namespace arc //! arctk namespace
          *  @return A copy of this vec pre-increment.
          */
         template <typename T>
-        inline const Vec3<T> Vec3<T>::operator++(int) noexcept
+        constexpr inline const Vec3<T> Vec3<T>::operator++(int) noexcept
         {
             const Vec3 vec = *this;
 
@@ -349,7 +349,7 @@ namespace arc //! arctk namespace
          *  @return A reference to this vec post-decrement.
          */
         template <typename T>
-        inline Vec3<T>& Vec3<T>::operator--() noexcept
+        constexpr inline Vec3<T>& Vec3<T>::operator--() noexcept
         {
             --x;
             --y;
@@ -366,7 +366,7 @@ namespace arc //! arctk namespace
          *  @return A copy of this vec pre-decrement.
          */
         template <typename T>
-        inline const Vec3<T> Vec3<T>::operator--(int) noexcept
+        constexpr inline const Vec3<T> Vec3<T>::operator--(int) noexcept
         {
             const Vec3 vec = *this;
 
