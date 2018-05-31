@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Message() = default;
+                inline Message() noexcept;
                 inline Message(const std::string& file_, const std::string& func_, int line_) noexcept;
                 inline Message(const Message&) = delete; //!< Deleted copy constructor.
                 inline Message(Message&&)      = delete; //!< Deleted move constructor.
@@ -67,6 +67,15 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION --
             //  -- Constructors --
+            /**
+             *  Construct a message object which, when destructed, will write its contents to the terminal.
+             */
+            inline Message::Message() noexcept
+              : Output()
+            {
+                *this << Term::instance().message_col();
+            }
+
             /**
              *  Construct a message object which, when destructed, will write its contents to the terminal.
              *
