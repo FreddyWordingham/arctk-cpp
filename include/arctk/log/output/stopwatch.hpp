@@ -69,6 +69,12 @@ namespace arc //! arc namespace
                 //  -- Assignment --
                 inline Stopwatch& operator=(const Stopwatch&) = delete; //!< Deleted copy operator. @return Reference to copied object.
                 inline Stopwatch& operator=(Stopwatch&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
+
+
+                //  == METHODS ==
+              public:
+                //  -- Setters --
+                inline static void set_col(const std::string& col_) noexcept;
             };
 
 
@@ -117,6 +123,20 @@ namespace arc //! arc namespace
             {
                 *this << ANSI.yellow << " took: " << utl::time(static_cast<uint64_t>(std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now() - _construct_time).count()));
                 *this << ANSI.reset << '\n';
+            }
+
+
+
+            //  == METHODS ==
+            //  -- Setters --
+            /**
+             *  Set the colouring string of this message type.
+             *
+             *  @param  col_    Colouring string.
+             */
+            inline void Stopwatch::set_col(const std::string& col_) noexcept
+            {
+                _col = col_;
             }
 
 
