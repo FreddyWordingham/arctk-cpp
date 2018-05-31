@@ -20,7 +20,6 @@
 
 
 //  == IMPORTS ==
-#include <arctk/log/message.hpp>
 #include <arctk/log/output.hpp>
 #include <arctk/log/term.hpp>
 
