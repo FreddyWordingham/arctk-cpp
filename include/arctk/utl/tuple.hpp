@@ -34,6 +34,7 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
+        //  -- Apply --
         template <typename... A, typename F, size_t... I>
         void apply_to_each(std::tuple<A...>& tuple_, F func_, std::index_sequence<I...> /*unused*/);
         template <typename... A, typename F>
@@ -54,6 +55,7 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTIONS ==
+        //  -- Apply --
         /**
          *  Apply helper function.
          *  Call a functor on each element of a const tuple.
