@@ -43,7 +43,7 @@
 #else
 #define VERB arc::log::output::Verbose() << "" //!< Discard a verbose message to standard output.
 #endif
-#define PROGRESS(str_, prog_) arc::log::output::Progress((str_), (prog_)) << "" //!< Log a progress update.
+#define STOPWATCH(str_) arc::log::output::Stopwatch stop_watch_##str_(__FILE__, __func__, __LINE__, (#str_)); //!< Construct a stopwatch logging object.
 #else
 #define LOG arc::log::output::Message() << ""                       //!< Log a standard message to standard output.
 #define WARN arc::log::output::Warning() << ""                      //!< Log a warning message to standard output.
@@ -53,8 +53,9 @@
 #else
 #define VERB arc::log::output::Verbose() << "" //!< Discard a verbose message to standard output.
 #endif
-#define PROGRESS(str_, prog_) arc::log::output::Progress((str_), (prog_)) << "" //!< Log a progress update.
+#define STOPWATCH(str_) arc::log::output::Stopwatch stop_watch_##str_((#str_)); //!< Construct a stopwatch logging object.
 #endif
+#define PROGRESS(str_, prog_) arc::log::output::Progress((str_), (prog_)) << "" //!< Log a progress update.
 
 
 
