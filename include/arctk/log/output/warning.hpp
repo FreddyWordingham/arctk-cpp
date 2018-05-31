@@ -22,7 +22,6 @@
 //  == IMPORTS ==
 #include <cassert>
 
-#include <arctk/ansi.hpp>
 #include <arctk/log/output.hpp>
 
 
