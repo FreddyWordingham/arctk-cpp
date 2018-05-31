@@ -50,6 +50,10 @@ namespace arc //! arctk namespace
                 static std::string _col;
                 static uint64_t    _update_delta; //!< Minimum microseconds between prints.
 
+                //  -- Buffer --
+                const std::string _buff; //!< Update string.
+                const douvle      _frac; //!< Update progress fraction.
+
 
                 //  == INSTANTIATION ==
               public:
