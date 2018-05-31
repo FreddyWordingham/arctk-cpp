@@ -317,6 +317,13 @@ namespace arc //! arctk namespace
             return (*this);
         }
 
+        /**
+         *  Increment each element of the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return A copy of this vec pre-increment.
+         */
         inline const Vec3<T> Vec3<T>::operator++(int) noexcept
         {
             const Vec3 vec = *this;
