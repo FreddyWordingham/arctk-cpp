@@ -271,6 +271,14 @@ namespace arc //! arctk namespace
             return (*this);
         }
 
+        /**
+         *  Perform the cross product using another vec.
+         *  This vec forms the left-hand-side of the cross operator.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @param  vec_    Vec used to perform the cross product with.
+         */
         template <typename T>
         constexpr inline Vec3<T>& Vec3<T>::operator^=(const Vec3<T>& vec_) noexcept
         {
