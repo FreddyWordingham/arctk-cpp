@@ -1,4 +1,21 @@
 var searchData=
 [
+  ['fg_5fblack',['FG_BLACK',['../namespacearc_1_1ansi.html#adef23ed6cd90a1db89066a1aaef2fecd',1,'arc::ansi']]],
+  ['fg_5fblue',['FG_BLUE',['../namespacearc_1_1ansi.html#aba6d09704e1065c28451a324a93f63eb',1,'arc::ansi']]],
+  ['fg_5fbright_5fblack',['FG_BRIGHT_BLACK',['../namespacearc_1_1ansi.html#a535d03a7098816a584554311190d0d95',1,'arc::ansi']]],
+  ['fg_5fbright_5fblue',['FG_BRIGHT_BLUE',['../namespacearc_1_1ansi.html#abcdd03ee00c7446d3bbe743eafb7aa3a',1,'arc::ansi']]],
+  ['fg_5fbright_5fcyan',['FG_BRIGHT_CYAN',['../namespacearc_1_1ansi.html#ad456bad5764a1fa78dd08da54f36a7aa',1,'arc::ansi']]],
+  ['fg_5fbright_5fgreen',['FG_BRIGHT_GREEN',['../namespacearc_1_1ansi.html#ab0daccd1d248d11c0093f9e6884cfc96',1,'arc::ansi']]],
+  ['fg_5fbright_5fmagenta',['FG_BRIGHT_MAGENTA',['../namespacearc_1_1ansi.html#a90f0751020cc270924a9beb1a5709981',1,'arc::ansi']]],
+  ['fg_5fbright_5fred',['FG_BRIGHT_RED',['../namespacearc_1_1ansi.html#a268fc4efab7b0dc46fc5443a2f57af89',1,'arc::ansi']]],
+  ['fg_5fbright_5fwhite',['FG_BRIGHT_WHITE',['../namespacearc_1_1ansi.html#ad0d412b730a1bbc6f50a5b18c5bd5790',1,'arc::ansi']]],
+  ['fg_5fbright_5fyellow',['FG_BRIGHT_YELLOW',['../namespacearc_1_1ansi.html#a20b2cf1043884c10ccac9e28ae5cfb0a',1,'arc::ansi']]],
+  ['fg_5fcyan',['FG_CYAN',['../namespacearc_1_1ansi.html#a0669d4ed7164ff9c53074d3a690e47d2',1,'arc::ansi']]],
+  ['fg_5fgreen',['FG_GREEN',['../namespacearc_1_1ansi.html#ae6d51b4be8cbaf40f98ebc4201e69bcd',1,'arc::ansi']]],
+  ['fg_5fmagenta',['FG_MAGENTA',['../namespacearc_1_1ansi.html#afafad539efff0d375dd76ae7f3545f7a',1,'arc::ansi']]],
+  ['fg_5fred',['FG_RED',['../namespacearc_1_1ansi.html#a9e1508c27462183a72e42199349cfe9b',1,'arc::ansi']]],
+  ['fg_5fwhite',['FG_WHITE',['../namespacearc_1_1ansi.html#af494011bc92bbe6d25b6dc2f8fe24b80',1,'arc::ansi']]],
+  ['fg_5fyellow',['FG_YELLOW',['../namespacearc_1_1ansi.html#a0a78195873d901ed7f63b648a6ffe9dc',1,'arc::ansi']]],
+  ['foreground_2ehpp',['foreground.hpp',['../foreground_8hpp.html',1,'']]],
   ['format_2ehpp',['format.hpp',['../format_8hpp.html',1,'']]]
 ];

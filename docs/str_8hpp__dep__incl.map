@@ -1,6 +1,8 @@
 <map id="include/arctk/str.hpp" name="include/arctk/str.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="83,312,180,337"/>
-<area shape="rect" id="node3" href="$table_8hpp.html" title="include/arctk/format\l/table.hpp" alt="" coords="90,152,228,191"/>
-<area shape="rect" id="node5" href="$print_8hpp.html" title="include/arctk/print.hpp" alt="" coords="113,79,265,104"/>
-<area shape="rect" id="node4" href="$format_8hpp.html" title="include/arctk/format.hpp" alt="" coords="109,239,273,264"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="135,312,232,337"/>
+<area shape="rect" id="node3" href="$table_8hpp.html" title="include/arctk/format\l/table.hpp" alt="" coords="56,152,193,191"/>
+<area shape="rect" id="node5" href="$stopwatch_8hpp.html" title="include/arctk/log/output\l/stopwatch.hpp" alt="" coords="280,152,439,191"/>
+<area shape="rect" id="node7" href="$print_8hpp.html" title="include/arctk/print.hpp" alt="" coords="162,79,314,104"/>
+<area shape="rect" id="node4" href="$format_8hpp.html" title="include/arctk/format.hpp" alt="" coords="43,239,206,264"/>
+<area shape="rect" id="node6" href="$log_8hpp.html" title="include/arctk/log.hpp" alt="" coords="331,239,475,264"/>
 </map>

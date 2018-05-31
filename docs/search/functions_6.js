@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['table',['table',['../namespacearc_1_1format.html#a0c2871882ac6679e40c71a2176ddd529',1,'arc::format']]],
-  ['to_5fstring',['to_string',['../namespacearc_1_1str.html#a53e4e5a084da03d5cc8ea2d4ee8ba7d0',1,'arc::str::to_string(const C &amp;cont_, size_t width_=0, const std::string &amp;pre_=&quot;{&quot;, const std::string &amp;delim_=&quot;, &quot;, const std::string &amp;post_=&quot;}&quot;)'],['../namespacearc_1_1str.html#a272000ff280c6447f036e80aeb3c3794',1,'arc::str::to_string(const std::pair&lt; A0, A1 &gt; &amp;pair_, size_t width_=0, const std::string &amp;pre_=&quot;(&quot;, const std::string &amp;delim_=&quot;, &quot;, const std::string &amp;post_=&quot;)&quot;)'],['../namespacearc_1_1str.html#ab73894966cf4d5672f5c86ba7a1a1465',1,'arc::str::to_string(const std::tuple&lt; A... &gt; &amp;tup_, size_t width_=0, const std::string &amp;pre_=&quot;(&quot;, const std::string &amp;delim_=&quot;, &quot;, const std::string &amp;post_=&quot;)&quot;)']]],
-  ['tupletostring',['TupleToString',['../structarc_1_1str_1_1_tuple_to_string.html#ac2dac7554cf6813ef164c9ea01f3553a',1,'arc::str::TupleToString']]]
+  ['main',['main',['../main_8cpp.html#a3718b1cdde8158b6d3991e85fd04d50d',1,'main.cpp']]],
+  ['max',['max',['../namespacearc_1_1search.html#ab5608d27962c637137d2c243213fa366',1,'arc::search']]],
+  ['max_5findex',['max_index',['../namespacearc_1_1search.html#aac33af22b716309501eaa7f5a10cc1d0',1,'arc::search']]],
+  ['message',['Message',['../classarc_1_1log_1_1output_1_1_message.html#a76bf42e516e780f7d71489a6b03263f0',1,'arc::log::output::Message::Message() noexcept'],['../classarc_1_1log_1_1output_1_1_message.html#a79b9a69b3eb2300518e505d526827eff',1,'arc::log::output::Message::Message(const std::string &amp;file_, const std::string &amp;func_, int line_) noexcept'],['../classarc_1_1log_1_1output_1_1_message.html#a6c9377bc0d215538e063c259b20942f9',1,'arc::log::output::Message::Message(const Message &amp;)=delete'],['../classarc_1_1log_1_1output_1_1_message.html#a1650e88c29a159bf0b9743359b654b85',1,'arc::log::output::Message::Message(Message &amp;&amp;)=delete']]],
+  ['min',['min',['../namespacearc_1_1search.html#a1cf0173ae1f8475d3b1652c006d5649d',1,'arc::search']]],
+  ['min_5findex',['min_index',['../namespacearc_1_1search.html#ae457da2cc210e1edfaf811bc83154f4b',1,'arc::search']]],
+  ['monotonic',['monotonic',['../namespacearc_1_1prop.html#a0b6cfeae4fa16eddbb6b7f1e9c355258',1,'arc::prop']]]
 ];

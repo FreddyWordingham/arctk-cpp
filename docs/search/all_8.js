@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lower',['lower',['../namespacearc_1_1search.html#ab5171637f0c917d6f387cb619a319ab5',1,'arc::search']]]
+  ['instance',['instance',['../classarc_1_1log_1_1_term.html#aebeecbc3cf22b9b629838443228ea920',1,'arc::log::Term']]]
 ];
