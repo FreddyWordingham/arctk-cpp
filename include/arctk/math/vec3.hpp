@@ -44,15 +44,24 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           public:
             //  -- Data --
-            T x{0};
-            T y{0};
-            T z{0};
+            union
+            {
+                T x;
+            };
+            union
+            {
+                T y;
+            };
+            union
+            {
+                T z;
+            };
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            constexpr inline Vec3() noexcept = default;
+            constexpr inline Vec3() noexcept;
             constexpr inline Vec3(T x_, T y_, T z_) noexcept;
 
 
