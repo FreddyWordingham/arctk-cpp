@@ -125,11 +125,21 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the message colouring string.
+         *
+         *  @return Message colour string.
+         */
         inline const std::string& Term::message_col() noexcept
         {
             return (_message_col);
         }
 
+        /**
+         *  Get the warning colouring string.
+         *
+         *  @return Warning colour string.
+         */
         inline const std::string& Term::warn_col() noexcept
         {
             return (_warn_col);
