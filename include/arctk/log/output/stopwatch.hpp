@@ -46,8 +46,11 @@ namespace arc //! arc namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Colour --
+                static std::string _col; //!< String used to colour this type of message.
+
                 //  -- Timing --
-                std::chrono::high_resolution_clock::time_point _construct_time; //!< Construction time.
+                const std::chrono::high_resolution_clock::time_point _construct_time; //!< Construction time.
 
 
                 //  == INSTANTIATION ==
