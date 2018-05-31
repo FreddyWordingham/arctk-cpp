@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
             class Message : public Output
             {
                 //  == FIELDS ==
-              public:
+              private:
                 //  -- Colour --
                 static std::string _col; //!< String used to colour this type of message.
 
