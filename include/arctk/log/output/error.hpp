@@ -66,6 +66,12 @@ namespace arc //! arctk namespace
                 //  -- Assignment --
                 inline Error& operator=(const Error&) = delete; //!< Deleted copy operator. @return Reference to copied object.
                 inline Error& operator=(Error&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
+
+
+                //  == METHODS ==
+              public:
+                //  -- Setters --
+                inline static void set_col(const std::string& col_) noexcept;
             };
 
 
@@ -137,6 +143,20 @@ namespace arc //! arctk namespace
                 Term::instance().cout(str());
 
                 std::exit(_exit_val);
+            }
+
+
+
+            //  == METHODS ==
+            //  -- Setters --
+            /**
+             *  Set the colouring string of this message type.
+             *
+             *  @param  col_    Colouring string.
+             */
+            inline void Error::set_col(const std::string& col_) noexcept
+            {
+                _col = col_;
             }
 
 
