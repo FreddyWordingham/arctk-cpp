@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               public:
                 //  -- Colour --
-                static std::string _col;
+                static std::string _col; //!< String used to colour this type of message.
 
               private:
                 //  -- Exiting --
