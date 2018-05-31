@@ -51,9 +51,10 @@ namespace arc //! arctk namespace
             std::mutex _write_guard; //!< Terminal write guard.
 
             //  -- Colouring --
-            std::string _message_col; //!< String used to colour standard message text.
-            std::string _warn_col;    //!< String used to colour warning message text.
-            std::string _error_col;   //!< String used to colour error message text.
+            std::string _location_col; //!< String used to colour location text.
+            std::string _message_col;  //!< String used to colour standard message text.
+            std::string _warn_col;     //!< String used to colour warning message text.
+            std::string _error_col;    //!< String used to colour error message text.
 
             //  -- Utility --
             const std::string _reset;     //!< String used to reset colouring.
