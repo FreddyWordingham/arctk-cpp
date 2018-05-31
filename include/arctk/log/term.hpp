@@ -81,6 +81,7 @@ namespace arc //! arctk namespace
             inline const std::string& overwrite() noexcept;
 
             //  -- Setters --
+            inline void set_location_col(const std::string& str_) noexcept;
             inline void set_message_col(const std::string& str_) noexcept;
             inline void set_warn_col(const std::string& str_) noexcept;
             inline void set_error_col(const std::string& str_) noexcept;
@@ -181,6 +182,16 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
+        /**
+         *  Set the location text colour.
+         *
+         *  @param  str_    String used to colour location text.
+         */
+        inline void Term::set_location_col(const std::string& str_) noexcept
+        {
+            _location_col = str_;
+        }
+
         /**
          *  Set the standard message colour.
          *
