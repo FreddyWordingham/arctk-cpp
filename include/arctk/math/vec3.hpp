@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cmath>
 
 
 
@@ -76,6 +77,14 @@ namespace arc //! arctk namespace
             //  -- Stream --
             template <typename S, typename L>
             friend inline S& operator<<(S& stream_, const Vec3<T>& vec_) noexcept;
+
+
+            //  == METHODS ==
+          public:
+            //  -- Mathematical --
+            inline T      sum() const noexcept;
+            inline double mag() const noexcept;
+            inline void   normalise() noexcept;
         };
 
 
@@ -138,6 +147,28 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Mathematical --
+        template <typename T>
+        inline T Vec3<T>::sum() const noexcept
+        {
+            return (x + y + z);
+        }
+
+        template <typename T>
+        inline double Vec3<T>::mag() const noexcept
+        {
+            return (std::sqrt(static_cast<double>(x * x) + static_cast<double>(y * y) + static_cast<double>(z * z)));
+        }
+
+        template <typename T>
+        inline void Vec3<T>::normalise() noexcept
+        {
+            const double m = 1.0 / mag();
+
+            x *= m;
+            y *= m;
+            z *= m;
+        }
 
 
 
