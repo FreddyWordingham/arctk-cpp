@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Colour --
-                static std::string _col; //!< String used to colour this type of message.
+                static std::string _col; //!< String used to colour this type of message. // NOLINT
 
 
                 //  == INSTANTIATION ==
@@ -82,7 +82,7 @@ namespace arc //! arctk namespace
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wexit-time-destructors"
 #pragma clang diagnostic ignored "-Wglobal-constructors"
-            std::string Warning::_col = ansi::FG_YELLOW;
+            std::string Warning::_col = ansi::FG_YELLOW; // NOLINT
 #pragma clang diagnostic pop
 
 
