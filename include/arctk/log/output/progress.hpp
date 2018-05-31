@@ -77,6 +77,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Setters --
                 inline static void set_col(const std::string& col_) noexcept;
+                inline static void set_update_delta(uint64_t delta_) noexcept;
             };
 
 
@@ -141,6 +142,16 @@ namespace arc //! arctk namespace
             inline void Progress::set_col(const std::string& col_) noexcept
             {
                 _col = col_;
+            }
+
+            /**
+             *  Set the update delta minimum time.
+             *
+             *  @param  delta_  Minimum time, in microseconds, between progress update prints.
+             */
+            inline void set_update_delta(const uint64_t delta_) noexcept
+            {
+                _update_delta = delta_;
             }
 
 
