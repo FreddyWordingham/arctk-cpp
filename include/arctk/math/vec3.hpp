@@ -103,6 +103,10 @@ namespace arc //! arctk namespace
             inline const Vec3<T> operator++(int) noexcept;
             inline Vec3<T>&      operator--() noexcept;
             inline const Vec3<T> operator--(int) noexcept;
+
+            //  -- Access --
+            constexpr inline T&       operator[](size_t index_) noexcept;
+            constexpr inline const T& operator[](size_t index_) const noexcept;
         };
 
 
@@ -367,6 +371,24 @@ namespace arc //! arctk namespace
             --z;
 
             return (vec);
+        }
+
+
+        //  -- Access --
+        template <typename T>
+        constexpr inline T& Vec3::operator[](const size_t index_) noexcept
+        {
+            assert(index_ < 3);
+
+            return ((&x)[index_]);
+        }
+
+        template <typename T>
+        constexpr inline const T& Vec3::operator[](const size_t index_) const noexcept
+        {
+            assert(index_ < 3);
+
+            return ((&x)[index_]);
         }
 
 
