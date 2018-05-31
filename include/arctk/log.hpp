@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 #include <arctk/log/output.hpp>
+#include <arctk/log/output/message.hpp>
 #include <arctk/log/term.hpp>
 
 
