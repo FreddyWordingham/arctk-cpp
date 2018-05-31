@@ -22,6 +22,8 @@
 //  == IMPORTS ==
 #include <iostream>
 #include <mutex>
+#include <string>
+#include <unistd.h>
 
 #include <arctk/ansi.hpp>
 
