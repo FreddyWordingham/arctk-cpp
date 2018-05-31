@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
-                //  -- Getters --
+                //  -- Setters --
                 inline static void set_col(const std::string& col_) noexcept;
             };
 
@@ -130,7 +130,7 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
-            //  -- Getters --
+            //  -- Setters --
             /**
              *  Set the colouring string of this message type.
              *
