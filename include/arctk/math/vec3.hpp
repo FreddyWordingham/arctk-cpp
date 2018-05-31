@@ -492,6 +492,15 @@ namespace arc //! arctk namespace
             return (Vec3(x * val_, y * val_, z * val_));
         }
 
+        /**
+         * Calculate the dot-product of two vecs.
+         *
+         *  @tparam T   Type stored by the vecs.
+         *
+         *  @param  vec_    Vec to perform the dot-product with.
+         *
+         *  @return Dot-product of the vecs.
+         */
         template <typename T>
         constexpr inline T Vec3<T>::operator*(const Vec3<T>& vec_) const noexcept
         {
