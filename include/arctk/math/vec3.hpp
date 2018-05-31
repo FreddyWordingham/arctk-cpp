@@ -53,14 +53,29 @@ namespace arc //! arctk namespace
             constexpr inline Vec3() noexcept = default;
 
 
-            //  == METHODS ==
+            //  == OPERATORS ==
           public:
+            //  -- Stream --
+            template <typename S, typename L>
+            friend inline S& operator<<(S& stream_, const Vec3<T>& vec_) noexcept;
         };
 
 
 
         //  == INSTANTIATION --
         //  -- Constructors --
+
+
+
+        //  == OPERATORS ==
+        //  -- Stream --
+        template <typename S, typename T>
+        inline S& operator<<(S& stream_, const Vec3<T>& vec_) noexcept
+        {
+            stream_ << '{' << vec_.x << ", " << vec_.y << ", " << vec_.z << '}';
+
+            return (stream_);
+        }
 
 
 
