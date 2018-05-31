@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
             class Warning : public Output
             {
                 //  == FIELDS ==
-              public:
+              private:
                 //  -- Colour --
                 static std::string _col;
 
@@ -65,6 +65,12 @@ namespace arc //! arctk namespace
                 //  -- Assignment --
                 inline Warning& operator=(const Warning&) = delete; //!< Deleted copy operator. @return Reference to copied object.
                 inline Warning& operator=(Warning&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
+
+
+                //  == METHODS ==
+              public:
+                //  -- Getters --
+                inline static void set_col(const std::string& col_) noexcept;
             };
 
 
@@ -119,6 +125,20 @@ namespace arc //! arctk namespace
             inline Warning::~Warning() noexcept
             {
                 *this << Term::instance().reset() << '\n';
+            }
+
+
+
+            //  == METHODS ==
+            //  -- Getters --
+            /**
+             *  Set the colouring string of this message type.
+             *
+             *  @param  col_    Colouring string.
+             */
+            inline static void Warning::set_col(const std::string& col_) noexcept
+            {
+                _col = col_;
             }
 
 
