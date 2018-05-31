@@ -145,6 +145,11 @@ namespace arc //! arctk namespace
             return (_warn_col);
         }
 
+        /**
+         *  Get the error colouring string.
+         *
+         *  @return Error colour string.
+         */
         inline const std::string& Term::error_col() noexcept
         {
             return (_error_col);
