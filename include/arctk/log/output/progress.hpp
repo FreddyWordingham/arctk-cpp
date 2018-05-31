@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Colour --
-                static std::string _col; //!< String used to colour this type of message.
+                static std::string _col; //!< String used to colour this type of message. // NOLINT
 
                 //  -- Updating --
                 static uint64_t _update_delta; //!< Minimum microseconds between prints.
@@ -89,7 +89,7 @@ namespace arc //! arctk namespace
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wexit-time-destructors"
 #pragma clang diagnostic ignored "-Wglobal-constructors"
-            std::string Progress::_col = ansi::FG_BLUE;
+            std::string Progress::_col = ansi::FG_BLUE; // NOLINT
 #pragma clang diagnostic pop
 
 
