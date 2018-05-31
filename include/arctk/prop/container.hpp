@@ -35,8 +35,13 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
+        //  -- Contents --
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline bool contains(const C& cont_, const T& val_) noexcept;
+        template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
+        inline bool within(const C& cont_, const T& val_) noexcept;
+
+        //  -- Order --
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline bool ascending(const C& cont_) noexcept;
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
@@ -45,8 +50,8 @@ namespace arc //! arctk namespace
         inline bool monotonic(const C& cont_) noexcept;
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline bool uniform(const C& cont_) noexcept;
-        template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
-        inline bool within(const C& cont_, const T& val_) noexcept;
+
+        //  -- Limits --
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline bool always_less_than(const C& cont_, const T& limit_) noexcept;
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
@@ -59,6 +64,7 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTIONS ==
+        //  -- Contents --
         /**
          *  Determine if a container contains a value.
          *
@@ -77,6 +83,30 @@ namespace arc //! arctk namespace
             return (std::find(std::begin(cont_), std::end(cont_), val_) != std::end(cont_));
         }
 
+        /**
+         *  Determine if a value falls within the range of a container.
+         *
+         *  @tparam C   Type of container.
+         *  @tparam T   Type stored by C.
+         *  @tparam I   Type of const iterator of C.
+         *
+         *  @param  cont_   Container to test.
+         *  @param  val_    Value to test.
+         *
+         *  @pre    cont_ must be monotonic.
+         *
+         *  @return True if the value falls within the containers range.
+         */
+        template <typename C, typename T, typename I>
+        inline bool within(const C& cont_, const T& val_) noexcept
+        {
+            assert(monotonic(cont_));
+
+            return (((*std::begin(cont_) <= val_) && (val_ <= *std::end(cont_))) || ((*std::begin(cont_) >= val_) && (val_ >= *std::end(cont_))));
+        }
+
+
+        //  -- Order --
         /**
          *  Test if a container's elements are sorted in ascending order.
          *  Container is still considered ascending if consecutive values are equal.
@@ -196,28 +226,8 @@ namespace arc //! arctk namespace
             return (true);
         }
 
-        /**
-         *  Determine if a value falls within the range of a container.
-         *
-         *  @tparam C   Type of container.
-         *  @tparam T   Type stored by C.
-         *  @tparam I   Type of const iterator of C.
-         *
-         *  @param  cont_   Container to test.
-         *  @param  val_    Value to test.
-         *
-         *  @pre    cont_ must be monotonic.
-         *
-         *  @return True if the value falls within the containers range.
-         */
-        template <typename C, typename T, typename I>
-        inline bool within(const C& cont_, const T& val_) noexcept
-        {
-            assert(monotonic(cont_));
 
-            return (((*std::begin(cont_) <= val_) && (val_ <= *std::end(cont_))) || ((*std::begin(cont_) >= val_) && (val_ >= *std::end(cont_))));
-        }
-
+        //  -- Limits --
         /**
          *  Determine if all elements of a container are less than a given limit.
          *
