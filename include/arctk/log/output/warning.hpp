@@ -67,9 +67,13 @@ namespace arc //! arctk namespace
                 inline Warning& operator=(Warning&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
             };
 
-            std::string Warning::_col = ansi::FG_MAGENTA;
+
 
             //  == INSTANTIATION --
+            //  -- Statics --
+            std::string Warning::_col = ansi::FG_MAGENTA;
+
+
             //  -- Constructors --
             /**
              *  Construct a message object which, when destructed, will write its contents to the terminal.
