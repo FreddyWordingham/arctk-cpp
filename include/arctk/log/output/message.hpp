@@ -42,8 +42,9 @@ namespace arc //! arctk namespace
              */
             class Message : public Output
             {
-                //  -- FIELDS --
+                //  == FIELDS ==
               public:
+                //  -- Colour --
                 static std::string _col;
 
 
@@ -69,12 +70,15 @@ namespace arc //! arctk namespace
 
 
             //  == INSTANTIATION --
+            //  -- Colour --
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wexit-time-destructors"
 #pragma clang diagnostic ignored "-Wglobal-constructors"
             std::string Message::_col = ansi::FG_WHITE;
 #pragma clang diagnostic pop
 
+
+            //  -- Constructors --
             /**
              *  Construct a message object which, when destructed, will write its contents to the terminal.
              */
