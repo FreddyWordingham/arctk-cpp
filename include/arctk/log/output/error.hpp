@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Error(int exit_val_) noexcept;
+                inline explicit Error(int exit_val_) noexcept;
                 inline Error(const std::string& file_, const std::string& func_, int line_, int exit_val_) noexcept;
                 inline Error(const Error&) = delete; //!< Deleted copy constructor.
                 inline Error(Error&&)      = delete; //!< Deleted move constructor.
