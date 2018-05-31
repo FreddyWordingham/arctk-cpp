@@ -462,6 +462,15 @@ namespace arc //! arctk namespace
             return (Vec3(x - val_, y - val_, z - val_));
         }
 
+        /**
+         *  Subtract a vec from a vec.
+         *
+         *  @tparam T   Type stored by the vecs.
+         *
+         *  @param  vec_    Vec to subtract from the vec.
+         *
+         *  @return Vec formed by subtracting the vec from the vec.
+         */
         template <typename T>
         constexpr inline Vec3<T> Vec3<T>::operator-(const Vec3<T>& vec_) const noexcept
         {
