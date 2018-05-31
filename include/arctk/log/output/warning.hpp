@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
             inline Warning::Warning() noexcept
               : Output()
             {
-                *this << Term::instance().message_col() << "[Warning!] : ";
+                *this << Term::instance().warn_col() << "[Warning!] : ";
             }
 
             /**
@@ -95,7 +95,7 @@ namespace arc //! arctk namespace
                 assert(!func_.empty());
                 assert(line_ > 0);
 
-                *this << Term::instance().message_col() << "[Warning!] : ";
+                *this << Term::instance().warn_col() << "[Warning!] : ";
             }
 
 
