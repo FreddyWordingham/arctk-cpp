@@ -46,15 +46,21 @@ namespace arc //! arctk namespace
             //  -- Data --
             union
             {
-                T x, rho, r;
+                T x,   //!< Cartesian x-dimension.
+                  rho, //!< Polar radial-dimension.
+                  r;   //!< Colour red-dimension.
             };
             union
             {
-                T y, theta, g;
+                T y,     //!< Cartesian y-dimension.
+                  theta, //!< Polar inclination-dimension.
+                  g;     //!< Colour green-dimension.
             };
             union
             {
-                T z, phi, b;
+                T z,   //!< Cartesian z-dimension.
+                  phi, //!< Polar azimuthal-dimension.
+                  b;   //!< Colour blue-dimension.
             };
 
 
