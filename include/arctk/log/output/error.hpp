@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Colour --
-                static std::string _col; //!< String used to colour this type of message.
+                static std::string _col; //!< String used to colour this type of message. // NOLINT
 
                 //  -- Exiting --
                 const int _exit_val; //!< Value to exit the program with after printing error message.
@@ -86,7 +86,7 @@ namespace arc //! arctk namespace
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wexit-time-destructors"
 #pragma clang diagnostic ignored "-Wglobal-constructors"
-            std::string Error::_col = ansi::FG_RED;
+            std::string Error::_col = ansi::FG_RED; // NOLINT
 #pragma clang diagnostic pop
 
 
