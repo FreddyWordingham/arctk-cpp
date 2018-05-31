@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 #include <cassert>
+#include <cstdlib>
 
 #include <arctk/log/output.hpp>
 
@@ -117,13 +118,16 @@ namespace arc //! arctk namespace
             //  -- Destructors --
             /**
              *  Reset ansi escape codes and append a newline character.
+             *  Write the message buffer to standard output.
              *  Exit the program.
              */
             inline Error::~Error() noexcept
             {
                 *this << Term::instance().reset() << '\n';
 
-                exit(_exit_val);
+                Term::instance().cout(str());
+
+                std::exit(_exit_val);
             }
 
 
