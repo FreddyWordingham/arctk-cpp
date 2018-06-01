@@ -24,7 +24,7 @@ namespace arc //! arctk namespace
 {
     namespace rng //! random number generation namespace
     {
-        namespace distribution //! distribution namespace.
+        namespace distribution //! distribution namespace
         {
 
 
