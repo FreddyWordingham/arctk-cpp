@@ -41,6 +41,8 @@ namespace arc //! arctk namespace
             //  == CLASS ==
             /**
              *  Form a random number drawn from a uniform probability distribution.
+             *
+             *  @tparam T   Type to be generated.
              */
             template <typename T>
             class Uniform : public Distribution<T>
@@ -73,8 +75,10 @@ namespace arc //! arctk namespace
             /**
              *  Construct a uniform distribution which will return values uniformly over the given range.
              *
-             *  @param  min_    Minimum value to be returned.
-             *  @param  max_    Maximum value to be returned.
+             *  @tparam T   Type to be generated.
+             *
+             *  @param  min_    Minimum value to be generated.
+             *  @param  max_    Maximum value to be generated.
              *
              *  @pre    min_ must be less that max_.
              */
@@ -91,6 +95,13 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
             //  -- Call --
+            /**
+             *  Generate a value within the limits of the distribution.
+             *
+             *  @tparam T   Type to be generated.
+             *
+             *  @return Generated value within the distribution limits.
+             */
             template <typename T>
             inline T Uniform<T>::operator()(Generator& gen_) noexcept override
             {
@@ -99,6 +110,19 @@ namespace arc //! arctk namespace
                 return (static_cast<T>(_min + (range_ * xi)));
             }
 
+            /**
+             *  Generate a value within given limits.
+             *  Does not require an active uniform object instance.
+             *
+             *  @tparam T   Type to be generated.
+             *
+             *  @param  min_    Minimum value to be generated.
+             *  @param  max_    Maximum value to be generated.
+             *
+             *  @pre    min_ must be less that max_.
+             *
+             *  @return Generated value within the given limits.
+             */
             template <typename T>
             static inline T operator()(Generator& gen_, const T min_, const T max_) noexcept
             {
