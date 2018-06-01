@@ -33,7 +33,8 @@ namespace arc //! arctk namespace
             /**
              *  Form a random number drawn from a uniform probability distribution.
              */
-            class Uniform : public Distribution
+            template <typename T>
+            class Uniform : public Distribution<T>
             {
                 //  == FIELDS ==
               public:
