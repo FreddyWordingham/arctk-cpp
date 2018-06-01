@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/prop.hpp
- *  @date   29/05/2018
+ *  @file   arctk/rng.hpp
+ *  @date   01/06/2018
  *  @author Freddy Wordingham
  *
- *  Collection of property functions.
+ *  Collection of random number generator functions and classes.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_RANDOM_HPP
-#define ARCTK_RANDOM_HPP
+#ifndef ARCTK_RNG_HPP
+#define ARCTK_RNG_HPP
 
 
 
@@ -30,4 +30,4 @@
 
 
 //  == GUARD END ==
-#endif // ARCTK_RANDOM_HPP
+#endif // ARCTK_RNG_HPP
