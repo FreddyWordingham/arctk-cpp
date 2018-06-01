@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
          *  Initialise a generator using the next seed value.
          */
         inline Generator::Generator() noexcept
-          : _seed(++next_seed)
+          : _seed(next_seed++)
         {
         }
 
