@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline explicit Quality(uint64_t seed_ = static_cast<uint64_t>(std::time(nullptr))) noexcept;
+                inline Quality() noexcept;
 
 
                 //  == METHODS ==
@@ -66,20 +66,13 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
-             *  Construct a quality generator using a seed.
-             *
-             *  @param  seed_   Initialisation seed.
-             *
-             *  @pre    seed_ must not equal the initial value of _v.
+             *  Construct a quality generator.
              */
-            inline Quality::Quality(const uint64_t seed_) noexcept
-              : _seed(seed_)
-              , _u(static_cast<uint64_t>(0))
+            inline Quality::Quality() noexcept
+              : _u(static_cast<uint64_t>(0))
               , _v(static_cast<uint64_t>(4101842887655102017))
               , _w(static_cast<uint64_t>(1))
             {
-                assert(seed_ != _v);
-
                 _u = _seed ^ _v;
                 gen_base();
                 _v = _u;
