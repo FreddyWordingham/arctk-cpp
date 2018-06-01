@@ -37,13 +37,21 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           public:
             //  -- Seed --
-            const uint64_t _seed; //!< Value used to initialise the generator.
+            const uint64_t  _seed;           //!< Value used to initialise the generator.
+            static uint64_t _last_used_seed; //!< Last value used to seed a generator.
 
 
-            //  == METHODS ==
+            //  == INSTANTIATION ==
           public:
-            //  -- Getters --
-            inline uint64_t seed() noexcept;
+            //  -- Constructors --
+            inline explicit Generator(uint64_t seed_)
+
+
+              //  == METHODS ==
+              public
+              :
+              //  -- Getters --
+              inline uint64_t seed() noexcept;
 
             //  -- Generation --
             virtual inline double gen() noexcept = 0;
