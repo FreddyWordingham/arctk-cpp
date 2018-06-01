@@ -133,7 +133,7 @@ namespace arc //! arctk namespace
              *  @return Generated value within the given limits.
              */
             template <typename T>
-            static inline T Uniform<T>::gen(Generator& gen_, const T min_, const T max_) noexcept
+            inline T Uniform<T>::gen(Generator& gen_, const T min_, const T max_) noexcept
             {
                 assert(min_ < max_);
 
