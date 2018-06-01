@@ -52,6 +52,9 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline uint64_t seed() noexcept;
 
+            //  -- Setters --
+            static inline void set_next_seed(uint64_t next_seed_) noexcept;
+
             //  -- Generation --
             virtual inline double gen() noexcept = 0;
         };
@@ -84,6 +87,17 @@ namespace arc //! arctk namespace
         inline uint64_t Generator::seed() noexcept
         {
             return (_seed);
+        }
+
+        //  -- Setters --
+        /**
+         *  Set the value of the next seed to be used to construct a generator.
+         *
+         *  @param  next_seed_  Value of the next seed to be used.
+         */
+        static inline void Generator::set_next_seed(const uint64_t next_seed_) noexcept
+        {
+            next_seed = next_seed_;
         }
 
 
