@@ -45,9 +45,10 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
 
 
-                //  == METHODS ==
+                //  == OPERATORS ==
               public:
-                //  -- Generation --
+                //  -- Call --
+                inline T operator()(Generator& gen_) noexcept override;
             };
 
 
@@ -57,7 +58,15 @@ namespace arc //! arctk namespace
 
 
 
-            //  == METHODS ==
+            //  == OPERATORS ==
+            //  -- Call --
+            template <typename T>
+            inline T Uniform<T>::operator()(Generator& gen_) noexcept override
+            {
+                const double xi = gen_.gen();
+
+                return (static_cast<T>(_min + (range_ * xi)));
+            }
 
 
 
