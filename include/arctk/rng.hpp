@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/rng/generator.hpp>
+#include <arctk/rng/generator/quality.hpp>
 
 
 
