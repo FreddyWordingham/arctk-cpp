@@ -114,6 +114,16 @@ namespace arc //! arctk namespace
                 return ((x + _v) ^ _w);
             }
 
+            /**
+             *  Generate a floating point value between zero and unity.
+             *
+             *  @return Floating point value between zero and unity.
+             */
+            inline double Quality::gen() noexcept
+            {
+                return (gen_base() * static_cast<double>(1.0 / std::numeric_limits<uint64_t>::max()));
+            }
+
 
 
         } // namespace generator
