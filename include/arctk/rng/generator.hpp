@@ -37,14 +37,14 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           public:
             //  -- Seed --
-            static uint64_t last_seed; //!< Value of the last used seed.
+            static uint64_t next_seed; //!< Value of the next useed.
             const uint64_t  _seed;     //!< Value used to initialise the generator.
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline explicit Generator(uint64_t seed_) noexcept;
+            inline explicit Generator() noexcept;
 
 
             //  == METHODS ==
@@ -59,12 +59,16 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
+        //  -- Seed --
+        uint64_t Generator::_seed = ansi::FG_MAGENTA;
+
+
         //  -- Constructors --
         /**
-         *  Initialise a generator using an incrementation of the last seed used.
+         *  Initialise a generator using the next seed value.
          */
         inline Generator::Generator() noexcept
-          : _seed(last_seed++)
+          : _seed(++next_seed)
         {
         }
 
