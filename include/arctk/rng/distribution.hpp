@@ -38,6 +38,7 @@ namespace arc //! arctk namespace
          *  Distribution conversion class.
          *  Uses a pseudo random generator to draw a value from a probability distribution.
          */
+        template <typename T>
         class Distribution
         {
             //  == INSTANTIATION ==
@@ -49,7 +50,7 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Call --
-            virtual inline double operator()(Generator& gen_) noexcept = 0;
+            virtual inline T operator()(Generator& gen_) noexcept = 0;
         };
 
 
