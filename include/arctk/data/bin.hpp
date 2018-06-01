@@ -30,6 +30,7 @@ namespace arc //! arctk namespace
         //  == CLASS ==
         /**
          */
+        template <typename T>
         class Bin
         {
             //  == FIELDS ==
@@ -40,6 +41,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
         };
 
 
