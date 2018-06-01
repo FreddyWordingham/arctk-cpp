@@ -84,11 +84,11 @@ namespace arc //! arctk namespace
                 assert(seed_ != _v);
 
                 _u = _seed ^ _v;
-                gen_int();
+                gen_base();
                 _v = _u;
-                gen_int();
+                gen_base();
                 _w = _v;
-                gen_int();
+                gen_base();
             }
 
 
