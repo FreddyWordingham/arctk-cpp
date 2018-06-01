@@ -46,10 +46,20 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            virtual inline double min() const noexcept   = 0;
-            virtual inline double max() const noexcept   = 0;
-            virtual inline double width() const noexcept = 0;
+            virtual inline double             min() const noexcept   = 0;
+            virtual inline double             max() const noexcept   = 0;
+            virtual inline double             width() const noexcept = 0;
+            inline const std::vector<double>& counts() const noexcept;
         };
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        inline const std::vector<double>& Bin::counts() const noexcept
+        {
+            return (_counts);
+        }
 
 
 
