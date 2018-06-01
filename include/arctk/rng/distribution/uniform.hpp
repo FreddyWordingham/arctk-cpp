@@ -123,12 +123,22 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the minimum bound of the distribution.
+             *
+             *  @return Minimum bound of the distribution.
+             */
             template <typename T>
             inline T Uniform<T>::min() noexcept
             {
                 return (_min);
             }
 
+            /**
+             *  Get the maximum bound of the distribution.
+             *
+             *  @return Maximum bound of the distribution.
+             */
             template <typename T>
             inline T Uniform<T>::max() noexcept
             {
