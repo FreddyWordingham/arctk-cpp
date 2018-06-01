@@ -30,12 +30,15 @@ namespace arc //! arctk namespace
         //  == CLASS ==
         /**
          *  Random generator base class.
+         *  Generates pseudo random numbers.
          */
         class Generator
         {
             //  == FIELDS ==
           public:
-            //  -- Data --
+            //  -- Seed --
+            const uint64_t _seed; //!< Value used to initialise the generator.
+
 
             //  == INSTANTIATION ==
           public:
