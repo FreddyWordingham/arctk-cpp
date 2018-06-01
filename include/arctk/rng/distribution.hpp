@@ -19,6 +19,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/rng/generator.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -39,8 +45,10 @@ namespace arc //! arctk namespace
             //  -- Constructors --
 
 
-            //  == METHODS ==
+            //  == OPERATORS ==
           public:
+            //  -- Call --
+            virtual inline double operator()(Generator& gen_) noexcept = 0;
         };
 
 
