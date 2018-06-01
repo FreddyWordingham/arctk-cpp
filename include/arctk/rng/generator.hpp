@@ -92,6 +92,7 @@ namespace arc //! arctk namespace
             return (_seed);
         }
 
+
         //  -- Setters --
         /**
          *  Set the value of the next seed to be used to construct a generator.
