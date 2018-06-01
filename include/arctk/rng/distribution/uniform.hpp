@@ -112,7 +112,7 @@ namespace arc //! arctk namespace
             {
                 const double xi = gen_.gen();
 
-                return (static_cast<T>(_min + (range_ * xi)));
+                return (static_cast<T>(_min + (_range * xi)));
             }
 
 
