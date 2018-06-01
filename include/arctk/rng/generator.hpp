@@ -95,7 +95,7 @@ namespace arc //! arctk namespace
          *
          *  @param  next_seed_  Value of the next seed to be used.
          */
-        static inline void Generator::set_next_seed(const uint64_t next_seed_) noexcept
+        inline void Generator::set_next_seed(const uint64_t next_seed_) noexcept
         {
             next_seed = next_seed_;
         }
