@@ -39,9 +39,6 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               public:
-                //  -- Seed --
-                const uint64_t _seed; //!< Value used to initialise the generator.
-
                 //  -- Generation --
                 uint64_t _u; //!< First generation variable.
                 uint64_t _v; //!< Second generation variable.
