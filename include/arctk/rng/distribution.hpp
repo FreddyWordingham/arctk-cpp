@@ -36,13 +36,14 @@ namespace arc //! arctk namespace
         //  == CLASS ==
         /**
          *  Distribution conversion class.
-         *  Converts a uniform floating point number between zero and unity to a random value of the probability distribution.
+         *  Uses a pseudo random generator to draw a value from a probability distribution.
          */
         class Distribution
         {
             //  == INSTANTIATION ==
           public:
-            //  -- Constructors --
+            //  -- Destructors --
+            virtual inline ~Generator() noexcept = default;
 
 
             //  == OPERATORS ==
@@ -50,15 +51,6 @@ namespace arc //! arctk namespace
             //  -- Call --
             virtual inline double operator()(Generator& gen_) noexcept = 0;
         };
-
-
-
-        //  == INSTANTIATION ==
-        //  -- Constructors --
-
-
-
-        //  == METHODS ==
 
 
 
