@@ -50,9 +50,9 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               public:
                 //  -- Range --
-                const T _min;
-                const T _max;
-                const T _range;
+                const T _min;   //!< Minimum bound of the distribution.
+                const T _max;   //!< Maximum bound of the distribution.
+                const T _range; //!< Range of the distribution.
 
 
                 //  == INSTANTIATION ==
