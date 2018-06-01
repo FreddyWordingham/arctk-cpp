@@ -33,8 +33,6 @@ namespace arc //! arctk namespace
         template <typename T>
         class Bin
         {
-            //  == FIELDS ==
-          public:
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
@@ -42,8 +40,9 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            virtual inline double min() const noexcept = 0;
-            virtual inline double max() const noexcept = 0;
+            virtual inline double min() const noexcept   = 0;
+            virtual inline double max() const noexcept   = 0;
+            virtual inline double width() const noexcept = 0;
         };
 
 
