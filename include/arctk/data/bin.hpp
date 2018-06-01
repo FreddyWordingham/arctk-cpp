@@ -56,6 +56,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the bin counts vector.
+         *
+         *  @return Bin counts vector.
+         */
         inline const std::vector<double>& Bin::counts() const noexcept
         {
             return (_counts);
