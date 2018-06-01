@@ -33,6 +33,12 @@ namespace arc //! arctk namespace
         template <typename T>
         class Bin
         {
+            //  == FIELDS ==
+          private:
+            //  -- Data --
+            std::vector<double> _counts; //!< Hit count of each bin.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
