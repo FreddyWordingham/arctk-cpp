@@ -72,6 +72,7 @@ namespace arc //! arctk namespace
                 //  -- Getters --
                 inline T min() noexcept;
                 inline T max() noexcept;
+                inline T range() noexcept;
 
                 //  -- Generation --
                 static inline T gen(Generator& gen_, T min_, T max_) noexcept;
@@ -143,6 +144,17 @@ namespace arc //! arctk namespace
             inline T Uniform<T>::max() noexcept
             {
                 return (_max);
+            }
+
+            /**
+             *  Get the range of the distribution.
+             *
+             *  @return Range bound of the distribution.
+             */
+            template <typename T>
+            inline T Uniform<T>::range() noexcept
+            {
+                return (_range);
             }
 
 
