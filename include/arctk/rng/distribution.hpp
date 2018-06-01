@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Destructors --
-            virtual inline ~Generator() noexcept = default;
+            virtual inline ~Distribution() noexcept = default;
 
 
             //  == OPERATORS ==
