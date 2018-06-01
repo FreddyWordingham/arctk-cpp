@@ -108,7 +108,7 @@ namespace arc //! arctk namespace
              *  @return Generated value within the distribution limits.
              */
             template <typename T>
-            inline T Uniform<T>::operator()(Generator& gen_) noexcept override
+            inline T Uniform<T>::operator()(Generator& gen_) noexcept
             {
                 const double xi = gen_.gen();
 
