@@ -53,9 +53,6 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
-                //  -- Getters --
-                inline uint64_t seed() noexcept;
-
                 //  -- Generation --
                 inline uint64_t gen_base() noexcept;
                 inline double   gen() noexcept override;
