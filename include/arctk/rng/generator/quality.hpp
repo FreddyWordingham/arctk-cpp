@@ -42,6 +42,11 @@ namespace arc //! arctk namespace
                 //  -- Seed --
                 const uint64_t _seed; //!< Value used to initialise the generator.
 
+                //  -- Generation --
+                uint64_t _u; //!< First generation variable.
+                uint64_t _v; //!< Second generation variable.
+                uint64_t _w; //!< Third generation variable.
+
 
                 //  == METHODS ==
               public:
@@ -49,11 +54,8 @@ namespace arc //! arctk namespace
                 inline uint64_t seed() noexcept;
 
                 //  -- Generation --
-                virtual inline uint64_t gen_base() noexcept = 0;
-                template <typename T>
-                virtual inline T gen() noexcept = 0;
-                template <typename T>
-                virtual inline T gen(T min_, T max_) noexcept = 0;
+                inline uint64_t gen_base() noexcept;
+                inline double   gen() noexcept override;
             };
 
 
