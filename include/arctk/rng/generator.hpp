@@ -47,6 +47,10 @@ namespace arc //! arctk namespace
 
             //  -- Generation --
             virtual inline uint64_t gen_base() noexcept = 0;
+            template <typename T>
+            virtual inline T gen() noexcept = 0;
+            template <typename T>
+            virtual inline T gen(T min_, T max_) noexcept = 0;
         };
 
 
