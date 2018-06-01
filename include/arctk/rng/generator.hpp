@@ -37,25 +37,36 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           public:
             //  -- Seed --
-            const uint64_t  _seed;           //!< Value used to initialise the generator.
-            static uint64_t _last_used_seed; //!< Last value used to seed a generator.
+            static uint64_t last_seed; //!< Value of the last used seed.
+            const uint64_t  _seed;     //!< Value used to initialise the generator.
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline explicit Generator(uint64_t seed_)
+            inline explicit Generator(uint64_t seed_) noexcept;
 
 
-              //  == METHODS ==
-              public
-              :
-              //  -- Getters --
-              inline uint64_t seed() noexcept;
+            //  == METHODS ==
+          public:
+            //  -- Getters --
+            inline uint64_t seed() noexcept;
 
             //  -- Generation --
             virtual inline double gen() noexcept = 0;
         };
+
+
+
+        //  == INSTANTIATION ==
+        //  -- Constructors --
+        /**
+         *  Initialise a generator using an incrementation of the last seed used.
+         */
+        inline Generator::Generator() noexcept
+          : _seed(last_seed++)
+        {
+        }
 
 
 
