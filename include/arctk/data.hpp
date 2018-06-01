@@ -1,6 +1,6 @@
 /**
  *  @file   arctk/data.hpp
- *  @date   01/06/2018
+ *  @date   02/06/2018
  *  @author Freddy Wordingham
  *
  *  Collection of data functions and classes.
