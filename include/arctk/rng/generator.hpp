@@ -40,23 +40,14 @@ namespace arc //! arctk namespace
             const uint64_t _seed; //!< Value used to initialise the generator.
 
 
-            //  == INSTANTIATION ==
-          public:
-            //  -- Constructors --
-
-
-            //  == OPERATORS ==
-          public:
             //  == METHODS ==
           public:
             //  -- Getters --
             inline uint64_t seed() noexcept;
+
+            //  -- Generation --
+            virtual inline uint64_t gen_base() noexcept = 0;
         };
-
-
-
-        //  == INSTANTIATION --
-        //  -- Constructors --
 
 
 
