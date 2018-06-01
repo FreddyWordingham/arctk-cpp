@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
             static inline void set_next_seed(uint64_t next_seed_) noexcept;
 
             //  -- Generation --
-            virtual inline double gen() noexcept = 0;
+            virtual inline double gen() noexcept = 0; //!< Generate a random double between zero and unity. @return Random double between zero and unity.
         };
 
 
