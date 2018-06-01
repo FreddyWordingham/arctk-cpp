@@ -47,6 +47,10 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
+            //  == METHODS ==
+          public:
+            //  -- Getters --
+            inline uint64_t seed() noexcept;
         };
 
 
@@ -56,7 +60,17 @@ namespace arc //! arctk namespace
 
 
 
-        //  == OPERATORS ==
+        //  == METHODS ==
+        //  -- Getters --
+        /**
+         *  Get the value used to seed the generator.
+         *
+         *  @return Value used to seed the generator.
+         */
+        inline uint64_t Generator::seed() noexcept
+        {
+            return (_seed);
+        }
 
 
 
