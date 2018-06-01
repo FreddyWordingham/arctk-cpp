@@ -69,6 +69,10 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline T min() noexcept;
+                inline T max() noexcept;
+
                 //  -- Generation --
                 static inline T gen(Generator& gen_, T min_, T max_) noexcept;
             };
@@ -118,6 +122,20 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Getters --
+            template <typename T>
+            inline T Uniform<T>::min() noexcept
+            {
+                return (_min);
+            }
+
+            template <typename T>
+            inline T Uniform<T>::max() noexcept
+            {
+                return (_max);
+            }
+
+
             //  -- Generation --
             /**
              *  Generate a value within given limits.
