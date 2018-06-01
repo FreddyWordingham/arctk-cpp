@@ -64,8 +64,13 @@ namespace arc //! arctk namespace
                 //  == OPERATORS ==
               public:
                 //  -- Call --
-                inline T        operator()(Generator& gen_) noexcept override;
-                static inline T operator()(Generator& gen_, T min_, T max_) noexcept;
+                inline T operator()(Generator& gen_) noexcept override;
+
+
+                //  == METHODS ==
+              public:
+                //  -- Generation --
+                static inline T gen(Generator& gen_, T min_, T max_) noexcept;
             };
 
 
@@ -110,6 +115,10 @@ namespace arc //! arctk namespace
                 return (static_cast<T>(_min + (range_ * xi)));
             }
 
+
+
+            //  == METHODS ==
+            //  -- Generation --
             /**
              *  Generate a value within given limits.
              *  Does not require an active uniform object instance.
@@ -124,7 +133,7 @@ namespace arc //! arctk namespace
              *  @return Generated value within the given limits.
              */
             template <typename T>
-            static inline T operator()(Generator& gen_, const T min_, const T max_) noexcept
+            static inline T Uniform<T>::gen(Generator& gen_, const T min_, const T max_) noexcept
             {
                 assert(min_ < max_);
 
