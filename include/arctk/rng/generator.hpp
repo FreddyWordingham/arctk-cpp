@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Seed --
-        uint64_t Generator::_seed = ansi::FG_MAGENTA;
+        uint64_t Generator::next_seed = 0;
 
 
         //  -- Constructors --
