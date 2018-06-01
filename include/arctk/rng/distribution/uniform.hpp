@@ -19,6 +19,15 @@
 
 
 
+//  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
+//  -- Arctk --
+#include <arctk/rng/generator.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -38,11 +47,16 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               public:
-                //  -- Generation --
+                //  -- Range --
+                const T _min;
+                const T _max;
+                const T _range;
+
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Uniform(T min_, T max_) noexcept;
 
 
                 //  == OPERATORS ==
@@ -55,6 +69,22 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a uniform distribution which will return values uniformly over the given range.
+             *
+             *  @param  min_    Minimum value to be returned.
+             *  @param  max_    Maximum value to be returned.
+             *
+             *  @pre    min_ must be less that max_.
+             */
+            template <typename T>
+            inline Uniform<T>::Uniform(const T min_, const T max_) noexcept
+              : _min(min_)
+              , _max(max_)
+              , _range(max_ - min_)
+            {
+                assert(min_ < max_);
+            }
 
 
 
