@@ -62,7 +62,8 @@ namespace arc //! arctk namespace
                 //  == OPERATORS ==
               public:
                 //  -- Call --
-                inline T operator()(Generator& gen_) noexcept override;
+                inline T        operator()(Generator& gen_) noexcept override;
+                static inline T operator()(Generator& gen_, T min_, T max_) noexcept;
             };
 
 
@@ -96,6 +97,16 @@ namespace arc //! arctk namespace
                 const double xi = gen_.gen();
 
                 return (static_cast<T>(_min + (range_ * xi)));
+            }
+
+            template <typename T>
+            static inline T operator()(Generator& gen_, const T min_, const T max_) noexcept
+            {
+                assert(min_ < max_);
+
+                const double xi = gen_.gen();
+
+                return (static_cast<T>(min_ + ((max_ - min_) * xi)));
             }
 
 
