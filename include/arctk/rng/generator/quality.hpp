@@ -35,7 +35,7 @@ namespace arc //! arctk namespace
              *  Period of generator is approximately 3.138e57.
              *  Relative speed is 1.0 for doubles, 1.9 for uint64.
              */
-            class Quality
+            class Quality : public Generator
             {
                 //  == FIELDS ==
               public:
