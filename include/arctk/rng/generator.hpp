@@ -46,6 +46,9 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline explicit Generator() noexcept;
 
+            //  -- Destructors --
+            virtual inline ~Generator() noexcept = default;
+
 
             //  == METHODS ==
           public:
