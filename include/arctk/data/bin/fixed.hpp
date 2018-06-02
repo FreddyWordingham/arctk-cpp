@@ -50,7 +50,8 @@ namespace arc //! arctk namespace
                 const double _max; //!< Maximum bound of the bin range.
 
                 //  -- Data --
-                const double _width; //!< Bin bag width.
+                const double _width;  //!< Bin bag width.
+                T            _misses; //!< Sum of total range misses.
 
 
                 //  == INSTANTIATION ==
