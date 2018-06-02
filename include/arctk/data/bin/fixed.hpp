@@ -67,9 +67,9 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                virtual inline double min() const noexcept   = 0;
-                virtual inline double max() const noexcept   = 0;
-                virtual inline double width() const noexcept = 0;
+                inline double min() const noexcept override;
+                inline double max() const noexcept override;
+                inline double width() const noexcept override;
 
                 //  -- Collection --
                 virtual inline void collect(double pos_, T weight_) noexcept = 0;
@@ -98,6 +98,26 @@ namespace arc //! arctk namespace
             {
                 assert(min_ < max_);
                 assert(res_ > 0);
+            }
+
+
+
+            //  == METHODS ==
+            //  -- Getters --
+            template <typename T>
+            inline double Fixed<T>::min() const noexcept override
+            {
+                return (_min);
+            }
+
+            template <typename T>
+            inline double Fixed<T>::max() const noexcept override
+            {
+            }
+
+            template <typename T>
+            inline double Fixed<T>::width() const noexcept override
+            {
             }
 
 
