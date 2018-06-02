@@ -111,6 +111,19 @@ namespace arc //! arctk namespace
             return (min() + (width() * (index_ * 0.5)));
         }
 
+        template <typename T>
+        inline const std::vector<double> Bin<T>::centers() const noexcept
+        {
+            std::vector<double> centres(_counts.size());
+
+            for (size_t i = 0; i < centres.size(); ++i)
+            {
+                centres[i] = centre(i);
+            }
+
+            return (centres);
+        }
+
 
         //  -- Placement --
         /**
