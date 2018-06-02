@@ -130,6 +130,13 @@ namespace arc //! arctk namespace
                 return (_max);
             }
 
+            /**
+             *  Get the inter bin width.
+             *
+             *  @tparam T   Type of value to be counted.
+             *
+             *  @return Inter bin width.
+             */
             template <typename T>
             inline double Fixed<T>::width() const noexcept override
             {
