@@ -66,7 +66,7 @@ namespace arc //! arctk namespace
             //  -- Collection --
             virtual inline void collect(double pos_, T weight_) noexcept = 0;
 
-          private:
+          protected:
             //  -- Placement --
             inline size_t index(double pos_) const noexcept;
         };
