@@ -90,7 +90,7 @@ namespace arc //! arctk namespace
               : _min(min_)
               , _max(max_)
               , _width((max_ - min_) / res_)
-              , _miss({})
+              , _misses({})
             {
                 assert(min_ < max_);
                 assert(res_ > 0);
