@@ -47,10 +47,11 @@ namespace arc //! arctk namespace
             virtual inline ~Distribution() noexcept = default;
 
 
-            //  == OPERATORS ==
+            //  == METHODS ==
           public:
-            //  -- Call --
-            virtual inline T operator()(Generator& gen_) noexcept = 0;
+            //  -- Generation --
+            virtual inline T gen(Generator& gen_) noexcept = 0;
+            //            static inline T  gen(Generator& gen_, T min_, T max_) noexcept;
         };
 
 
