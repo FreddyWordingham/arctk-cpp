@@ -49,8 +49,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
-            //  -- Generation --
-            virtual inline T gen(Generator& gen_) noexcept = 0;
+            //  -- Sampling --
+            virtual inline T sample(Generator& gen_) noexcept = 0;
         };
 
 
