@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
         template <typename... A>
         inline std::string rows(int width_, const std::string& delim_, A... args);
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
-        inline std::string rows(const C& cont_, int width_ = 0, const std::string& delim_ = ", ") noexcept;
+        inline std::string rows(int width_ = 0, const std::string& delim_ = ", ", const C& cont_) noexcept;
 
         template <typename... A>
         inline std::string cols(int width, const std::string& delim_, A... args);
@@ -102,14 +102,14 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored by C.
          *  @tparam I   Type of const iterator of C.
          *
-         *  @param  cont_   Container to form into a table.
          *  @param  width_  Width allocated to each container element print.
          *  @param  delim_  Delimiter used to separate container elements.
+         *  @param  cont_   Container to form into a table.
          *
          *  @return String of table of rows.
          */
         template <typename C, typename T, typename I>
-        inline std::string rows(const C& cont_, int width_, const std::string& delim_) noexcept
+        inline std::string rows(int width_, const std::string& delim_, const C& cont_) noexcept
         {
             std::stringstream stream;
 
