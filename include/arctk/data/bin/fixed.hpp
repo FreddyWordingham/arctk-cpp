@@ -163,7 +163,7 @@ namespace arc //! arctk namespace
                     return;
                 }
 
-                _counts[index(pos_)] += weight_;
+                Bin<T>::_counts[Bin<T>::index(pos_)] += weight_;
             }
 
 
