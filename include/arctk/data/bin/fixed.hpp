@@ -114,7 +114,7 @@ namespace arc //! arctk namespace
              *  @return Range minimum.
              */
             template <typename T>
-            inline double Fixed<T>::min() const noexcept override
+            inline double Fixed<T>::min() const noexcept
             {
                 return (_min);
             }
@@ -127,7 +127,7 @@ namespace arc //! arctk namespace
              *  @return Range maximum.
              */
             template <typename T>
-            inline double Fixed<T>::max() const noexcept override
+            inline double Fixed<T>::max() const noexcept
             {
                 return (_max);
             }
@@ -140,7 +140,7 @@ namespace arc //! arctk namespace
              *  @return Inter bin width.
              */
             template <typename T>
-            inline double Fixed<T>::width() const noexcept override
+            inline double Fixed<T>::width() const noexcept
             {
                 return (_width);
             }
