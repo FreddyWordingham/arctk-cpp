@@ -195,39 +195,29 @@ namespace arc //! arctk namespace
         template <typename C, typename T, typename I, typename J>
         inline std::string cols(int width_, const std::string& delim_, const C& cont_) noexcept
         {
-            std::vector<size_t> cols;
-            cols.reserve(cont_.size());
+            std::vector<size_t> rows;
+            rows.reserve(cont_.size());
             for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
             {
-                cols.emplace_back((*it).size());
+                rows.emplace_back((*it).size());
             }
 
-            std::vector<std::stringstream> row_stream(search::max(cols));
+            std::vector<std::stringstream> row_stream(search::max(rows));
             size_t                         row = 0;
             for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
             {
-            }
+                row_stream[row] << delim_;
 
-            for (size_t i = 0; i < row_stream.size(); ++i)
-            {
-                if (i != 0)
+                if ((*it).size() < rows[row])
                 {
-                    row_stream[i] << delim_;
+                    row_stream[row] << std::setw(width_) << (*it)[row];
+                }
+                else
+                {
+                    row_stream[row] << std::setw(width_) << "";
                 }
 
-                for (size_t j = 0; j < cont_.size(); ++j)
-                {
-                    row_stream[i] << std::setw(width_);
-
-                    if (j < ((*std::next(std::begin(cont_), i)).size()))
-                    {
-                        row_stream[i] << (*std::next(std::begin(cont_), i))[j];
-                    }
-                    else
-                    {
-                        row_stream[i] << "";
-                    }
-                }
+                ++row;
             }
 
             std::stringstream stream;
