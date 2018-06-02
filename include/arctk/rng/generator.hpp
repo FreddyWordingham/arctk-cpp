@@ -66,7 +66,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Seed --
-        uint64_t Generator::next_seed = 0;
+        uint64_t Generator::next_seed = static_cast<uint64_t>(std::time(nullptr));
 
 
         //  -- Constructors --
