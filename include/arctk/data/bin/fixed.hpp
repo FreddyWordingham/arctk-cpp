@@ -75,6 +75,16 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a fixed range bin object.
+             *
+             *  @param  min_    Minimum range bound of the bin.
+             *  @param  max_    Maximum range bound of the bin.
+             *  @param  res_    Resolution of the bin.
+             *
+             *  @pre    min_ must me less than max_.
+             *  @pre    res_ must be positive.
+             */
             template <typename T>
             inline Fixed::Fixed<T>(const double min_, const double max_, const size_t res_) noexcept
               : _min(min_)
@@ -83,6 +93,7 @@ namespace arc //! arctk namespace
               , _miss({})
             {
                 assert(min_ < max_);
+                assert(res_ > 0);
             }
 
 
