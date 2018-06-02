@@ -68,8 +68,8 @@ namespace arc //! arctk namespace
                 inline T max() noexcept;
                 inline T range() noexcept;
 
-                //  -- Generation --
-                inline T gen(Generator& gen_) noexcept;
+                //  -- Sampling --
+                inline T sample(Generator& gen_) noexcept;
             };
 
 
@@ -133,18 +133,18 @@ namespace arc //! arctk namespace
             }
 
 
-            //  -- Generation --
+            //  -- Sampling --
             /**
-             *  Generate a value within the limits of the distribution.
+             *  Sample a value from the distribution.
              *
              *  @tparam T   Type to be generated.
              *
              *  @param  gen_    Generator used to create the uniform deviates.
              *
-             *  @return Generated value within the distribution limits.
+             *  @return Sampled value from the distribution.
              */
             template <typename T>
-            inline T Uniform<T>::gen(Generator& gen_) noexcept
+            inline T Uniform<T>::sample(Generator& gen_) noexcept
             {
                 const double xi = gen_.gen();
 
