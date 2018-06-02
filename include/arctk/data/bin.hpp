@@ -58,6 +58,7 @@ namespace arc //! arctk namespace
             inline const std::vector<double>& counts() const noexcept;
 
             //  -- Collection --
+            virtual inline void collect(double val_, double weight_) noexcept = 0;
         };
 
 
