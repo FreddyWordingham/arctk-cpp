@@ -91,7 +91,7 @@ namespace arc //! arctk namespace
         {
             std::stringstream& _stream; //!< Stream to write to.
             const std::string  _delim;  //!< Delimiter added between elements.
-            const size_t       _width;  //!< Print width allocated to each element.
+            const int          _width;  //!< Print width allocated to each element.
             size_t             _index;
 
             RowsHelper(std::stringstream& stream_, const std::string& delim_, const size_t width_)
@@ -134,7 +134,7 @@ namespace arc //! arctk namespace
         {
             std::vector<std::stringstream>& _stream; //!< Stream to write to.
             const std::string               _delim;  //!< Delimiter added between elements.
-            const size_t                    _width;  //!< Print width allocated to each element.
+            const int                       _width;  //!< Print width allocated to each element.
             size_t                          _index;
 
             ColsHelper(std::vector<std::stringstream>& stream_, const std::string& delim_, const size_t width_)
