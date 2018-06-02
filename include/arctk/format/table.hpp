@@ -49,6 +49,10 @@ namespace arc //! arctk namespace
         /**
          *  Format a given container into a table.
          *
+         *  @tparam C   Type of container.
+         *  @tparam T   Type stored by C.
+         *  @tparam I   Type of const iterator of C.
+         *
          *  @param  cont_   Container to form into table.
          *  @param  width_  Print width allocated to each element.
          *  @param  delim_  Table delimiter string.
