@@ -127,11 +127,17 @@ namespace arc //! arctk namespace
 
             std::vector<std::stringstream> row_stream(search::max(rows));
 
+            auto to_string = [](auto x) {
+                std::stringstream val_stream;
+                val_stream << x;
+                return (val_stream.str());
+            };
+
             for (size_t i = 0; i < search::max(rows); ++i)
             {
                 size_t col = 0;
 
-                ((row_stream[i] << ((col != 0) ? delim_ : "") << std::setw(width_) << ((i < rows[col]) ? str::to_string(args[i]) : ""), ++col), ...);
+                ((row_stream[i] << ((col != 0) ? delim_ : "") << std::setw(width_) << ((i < rows[col]) ? to_string(args[i]) : ""), ++col), ...);
             }
 
             std::stringstream stream;

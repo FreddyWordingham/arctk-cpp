@@ -104,15 +104,6 @@ namespace arc //! arctk namespace
         inline std::string to_string(const std::pair<A0, A1>& pair_, size_t width_ = 0, const std::string& pre_ = "(", const std::string& delim_ = ", ", const std::string& post_ = ")");
         template <typename... A>
         inline std::string to_string(const std::tuple<A...>& tup_, size_t width_ = 0, const std::string& pre_ = "(", const std::string& delim_ = ", ", const std::string& post_ = ")");
-        template <typename T>
-        inline std::string to_string(const T& val_)
-        {
-            std::stringstream stream;
-
-            stream << val_;
-
-            return (stream.str());
-        }
 
         //  -- Time --
         inline std::string time(uint64_t us_) noexcept;
