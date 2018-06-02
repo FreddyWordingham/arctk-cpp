@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Generation --
             virtual inline T gen(Generator& gen_) noexcept = 0;
-            //            static inline T  gen(Generator& gen_, T min_, T max_) noexcept;
+            //            virtual inline T gen(Generator& gen_, T min_, T max_) noexcept =0;
         };
 
 
