@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
                 inline double width() const noexcept override;
 
                 //  -- Collection --
-                virtual inline void collect(double pos_, T weight_) noexcept = 0;
+                inline void collect(double pos_, T weight_) noexcept override;
             };
 
 
@@ -143,6 +143,22 @@ namespace arc //! arctk namespace
             inline double Fixed<T>::width() const noexcept
             {
                 return (_width);
+            }
+
+
+            //  -- Collection --
+
+            template <typename T>
+            inline void Fixed<T>::collect(const double pos_, const T weight_) noexcept
+            {
+                if ((pos_ < _min) || (pos_ > _max))
+                {
+                    _miss += weight_;
+
+                    return;
+                }
+
+                _counts[index(val_)] += weight_;
             }
 
 
