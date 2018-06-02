@@ -61,10 +61,12 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            virtual inline double        min() const noexcept   = 0;
-            virtual inline double        max() const noexcept   = 0;
-            virtual inline double        width() const noexcept = 0;
-            inline const std::vector<T>& counts() const noexcept;
+            virtual inline double            min() const noexcept   = 0;
+            virtual inline double            max() const noexcept   = 0;
+            virtual inline double            width() const noexcept = 0;
+            inline const std::vector<T>&     counts() const noexcept;
+            inline const double              center(size_t index_) const noexcept;
+            inline const std::vector<double> centers() const noexcept;
 
             //  -- Collection --
             virtual inline void collect(double pos_, T weight_) noexcept = 0;
@@ -99,6 +101,14 @@ namespace arc //! arctk namespace
         inline const std::vector<T>& Bin<T>::counts() const noexcept
         {
             return (_counts);
+        }
+
+        template <typename T>
+        inline const double Bin<T>::center(size_t index_) const noexcept
+        {
+            assert(index_ < _counts.size());
+
+            return (min() + (width() * (index_ * 0.5)));
         }
 
 
