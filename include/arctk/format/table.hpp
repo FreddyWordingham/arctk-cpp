@@ -132,6 +132,11 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i < max_rows; ++i)
             {
+                if (i != 0)
+                {
+                    stream << '\n';
+                }
+
                 stream << std::setw(width_);
 
                 if (std::get<0>(pair_).size() < i)
