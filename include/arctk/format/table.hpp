@@ -43,6 +43,11 @@ namespace arc //! arctk namespace
 
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline std::string row_table(const C& cont_, int width_ = 0, const std::string& delim_ = ", ") noexcept;
+
+
+        template <typename A0, typename A1>
+        inline std::string col_table(const std::pair<A0, A1>& pair_, int width_ = 0, const std::string& delim_ = ", ") noexcept;
+
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline std::string col_table(const C& cont_, int width_ = 0, const std::string& delim_ = ", ") noexcept;
 
@@ -115,6 +120,43 @@ namespace arc //! arctk namespace
 
             return (stream.str());
         }
+
+
+        template <typename A0, typename A1>
+        inline std::string col_table(const std::pair<A0, A1>& pair_, int width_, const std::string& delim_) noexcept
+        {
+            std::stringstream stream;
+
+            std::vector<size_t> rows({std::get<0>(pair_).size(), std::get<1>(pair_).size()});
+            const size_t        max_rows = search::max(rows);
+
+            for (size_t i = 0; i < max_rows; ++i)
+            {
+                stream << std::setw(width_);
+
+                if (std::get<0>(pair_).size() < i)
+                {
+                    stream << *std::next(std::begin(std::get<0>(pair_)), i);
+                }
+                else
+                {
+                    stream << ' ';
+                }
+
+                stream << std::setw(width_) << delim_;
+                if (std::get<1>(pair_).size() < i)
+                {
+                    stream << *std::next(std::begin(std::get<1>(pair_)), i);
+                }
+                else
+                {
+                    stream << ' ';
+                }
+            }
+
+            return (stream.str());
+        }
+
 
         /**
          *  Format a given container into a column focused table.
