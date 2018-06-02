@@ -139,7 +139,7 @@ namespace arc //! arctk namespace
 
                 stream << std::setw(width_);
 
-                if (std::get<0>(pair_).size() < i)
+                if (i < std::get<0>(pair_).size())
                 {
                     stream << *std::next(std::begin(std::get<0>(pair_)), i);
                 }
@@ -148,8 +148,8 @@ namespace arc //! arctk namespace
                     stream << ' ';
                 }
 
-                stream << std::setw(width_) << delim_;
-                if (std::get<1>(pair_).size() < i)
+                stream << delim_ << std::setw(width_);
+                if (i < std::get<1>(pair_).size())
                 {
                     stream << *std::next(std::begin(std::get<1>(pair_)), i);
                 }
