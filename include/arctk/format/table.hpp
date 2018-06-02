@@ -188,7 +188,7 @@ namespace arc //! arctk namespace
                 }
 
                 std::string row_str = row_stream[i].str();
-                row_str.erase(std::prev(std::end(row_str), delim_.size()), std::end(row_str));
+                row_str.erase(std::prev(std::end(row_str), static_cast<int>(delim_.size())), std::end(row_str));
 
                 stream << row_str;
             }
