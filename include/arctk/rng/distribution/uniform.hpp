@@ -69,8 +69,7 @@ namespace arc //! arctk namespace
                 inline T range() noexcept;
 
                 //  -- Generation --
-                inline T        gen(Generator& gen_) noexcept;
-                static inline T gen(Generator& gen_, T min_, T max_) noexcept;
+                inline T gen(Generator& gen_) noexcept;
             };
 
 
@@ -150,30 +149,6 @@ namespace arc //! arctk namespace
                 const double xi = gen_.gen();
 
                 return (static_cast<T>(_min + (_range * xi)));
-            }
-
-            /**
-             *  Generate a value within given limits.
-             *  Does not require an active uniform object instance.
-             *
-             *  @tparam T   Type to be generated.
-             *
-             *  @param  gen_    Generator used to create the uniform deviates.
-             *  @param  min_    Minimum value to be generated.
-             *  @param  max_    Maximum value to be generated.
-             *
-             *  @pre    min_ must be less that max_.
-             *
-             *  @return Generated value within the given limits.
-             */
-            template <typename T>
-            inline T Uniform<T>::gen(Generator& gen_, const T min_, const T max_) noexcept
-            {
-                assert(min_ < max_);
-
-                const double xi = gen_.gen();
-
-                return (static_cast<T>(min_ + ((max_ - min_) * xi)));
             }
 
 
