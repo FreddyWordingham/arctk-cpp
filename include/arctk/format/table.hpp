@@ -116,16 +116,35 @@ namespace arc //! arctk namespace
             }
         };
 
-        template <typename... A, size_t... I>
-        inline std::string rows(int width_, const std::string& delim_, A... args, std::index_sequence<I...>)
+        template <typename... A>
+        inline std::string rows(int width_, const std::string& delim_, A... args)
         {
             std::vector<std::stringstream> row_stream(sizeof...(A));
+            size_t                         row = 0;
+            ((row_stream[row] << str::to_string(args, width_, "", delim_, ""), ++row), ...);
 
-            ((row_stream[I] << "bean"), ...);
+            std::vector<size_t> rows;
+            (rows.emplace_back(args.size()), ...);
 
-            //            ((row_stream[I] << std::to_string(args, width_, "", delim_, "")), ...);
+            for (size_t i = 0; i < rows.size(); ++i)
+            {
+                for (size_t j = rows[i]; j < search::max(rows); ++j)
+                {
+                    row_stream[i] << delim_ << std::setw(width_) << ' ';
+                }
+            }
 
             std::stringstream stream;
+
+            for (size_t i = 0; i < row_stream.size(); ++i)
+            {
+                if (i != 0)
+                {
+                    stream << '\n';
+                }
+
+                stream << row_stream[i].str();
+            }
 
             /*            std::vector<size_t> rows;
                         ((rows.emplace_back(args.size()), 0), ...);
