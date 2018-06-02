@@ -147,7 +147,7 @@ namespace arc //! arctk namespace
          *  Form a pack of container objects into a table.
          *  Containers are formatted as columns.
          *
-         *  @tparam Container type pack.
+         *  @tparam A   Container type pack.
          *
          *  @param  width_  Width allocated to each container element print.
          *  @param  delim_  Delimiter used to separate container elements.
