@@ -20,6 +20,8 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cassert>
 #include <vector>
 
 
