@@ -178,7 +178,7 @@ namespace arc //! arctk namespace
 
             std::vector<std::stringstream> row_stream(search::max(rows));
             ColsHelper                     ch(row_stream, delim_, width_);
-            int                            gummy[] = {0, ((void)rh(std::forward<A>(args)), 0)...};
+            int                            gummy[] = {0, ((void)ch(std::forward<A>(args)), 0)...};
 
             for (size_t i = 0; i < row_stream.size(); ++i)
             {
