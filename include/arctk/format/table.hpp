@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
         //  -- Table --
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline std::string row_table(const C& cont_, int width_ = 0, const std::string& delim_ = ", ") noexcept;
-        template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator, typename J = typename T::const_iterator>
+        template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline std::string col_table(const C& cont_, int width_ = 0, const std::string& delim_ = ", ") noexcept;
 
 
@@ -80,7 +80,7 @@ namespace arc //! arctk namespace
             return (stream.str());
         }
 
-        template <typename C, typename T, typename I, typename J>
+        template <typename C, typename T, typename I>
         inline std::string col_table(const C& cont_, const int width_, const std::string& delim_) noexcept
         {
             std::stringstream stream;
