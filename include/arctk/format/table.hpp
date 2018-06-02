@@ -37,11 +37,10 @@ namespace arc //! arctk namespace
 
         //  == FUNCTION PROTOTYPES ==
         //  -- Table --
-        template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
-        inline std::string rows(const C& cont_, int width_ = 0, const std::string& delim_ = ", ") noexcept;
-
         template <typename... A>
         inline std::string rows(int width_, const std::string& delim_, A... args);
+        template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
+        inline std::string rows(const C& cont_, int width_ = 0, const std::string& delim_ = ", ") noexcept;
 
         template <typename... A>
         inline std::string cols(int width, const std::string& delim_, A... args);
@@ -50,41 +49,6 @@ namespace arc //! arctk namespace
 
         //  == FUNCTIONS ==
         //  -- Table --
-        /**
-         *  Form a container into a human reader table.
-         *  Each element of the container is treated as a row.
-         *
-         *  @param cont_ [description]
-         *  @param width_ [description]
-         *  @param delim_ [description]
-         *
-         *  @return [description]
-         */
-        template <typename C, typename T, typename I>
-        inline std::string rows(const C& cont_, int width_, const std::string& delim_) noexcept
-        {
-            std::stringstream stream;
-
-            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
-            {
-                if (it != std::begin(cont_))
-                {
-                    stream << '\n';
-                }
-
-                if constexpr (std::is_same<T, std::string>::value)
-                {
-                    stream << std::setw(width_) << *it;
-                }
-                else
-                {
-                    stream << str::to_string(*it, width_, "", delim_, "");
-                }
-            }
-
-            return (stream.str());
-        }
-
         /**
          *  Form a pack of container objects into a table.
          *  Containers are formatted as rows.
@@ -125,6 +89,41 @@ namespace arc //! arctk namespace
                 }
 
                 stream << row_stream[i].str();
+            }
+
+            return (stream.str());
+        }
+
+        /**
+         *  Form a container into a human reader table.
+         *  Each element of the container is treated as a row.
+         *
+         *  @param cont_ [description]
+         *  @param width_ [description]
+         *  @param delim_ [description]
+         *
+         *  @return [description]
+         */
+        template <typename C, typename T, typename I>
+        inline std::string rows(const C& cont_, int width_, const std::string& delim_) noexcept
+        {
+            std::stringstream stream;
+
+            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+            {
+                if (it != std::begin(cont_))
+                {
+                    stream << '\n';
+                }
+
+                if constexpr (std::is_same<T, std::string>::value)
+                {
+                    stream << std::setw(width_) << *it;
+                }
+                else
+                {
+                    stream << str::to_string(*it, width_, "", delim_, "");
+                }
             }
 
             return (stream.str());
