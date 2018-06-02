@@ -46,13 +46,13 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Data --
-            std::vector<T> _counts{}; //!< Hit count of each bin.
+            std::vector<T> _counts; //!< Hit count of each bin.
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Bin() noexcept = default;
+            inline Bin(size_t res_) noexcept = default;
 
             //  -- Destructors --
             virtual inline ~Bin() noexcept = default;
@@ -73,6 +73,15 @@ namespace arc //! arctk namespace
             //  -- Placement --
             inline size_t index(double pos_) const noexcept;
         };
+
+
+
+        //  == INSTANTIATION ==
+        //  -- Constructors --
+        inline Bin<T>::Bin(const size_t res_) noexcept
+          : _counts(res_)
+        {
+        }
 
 
 
