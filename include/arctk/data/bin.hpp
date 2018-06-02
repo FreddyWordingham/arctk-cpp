@@ -35,7 +35,6 @@ namespace arc //! arctk namespace
         //  == CLASS ==
         /**
          */
-        template <typename T>
         class Bin
         {
             //  == FIELDS ==
