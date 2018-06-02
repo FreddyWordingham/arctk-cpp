@@ -19,6 +19,11 @@
 
 
 
+//  == IMPORTS ==
+#include <vector>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -50,6 +55,8 @@ namespace arc //! arctk namespace
             virtual inline double             max() const noexcept   = 0;
             virtual inline double             width() const noexcept = 0;
             inline const std::vector<double>& counts() const noexcept;
+
+            //  -- Collection --
         };
 
 
