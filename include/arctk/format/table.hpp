@@ -191,7 +191,21 @@ namespace arc //! arctk namespace
             return (stream.str());
         }
 
-
+        /**
+         *  Form a container into a human reader table.
+         *  Each element of the container is treated as a column.
+         *
+         *  @tparam C   Type of container.
+         *  @tparam T   Type stored by C.
+         *  @tparam I   Type of const iterator of C.
+         *  @tparam J   Type of const iterator of T.
+         *
+         *  @param  width_  Width allocated to each container element print.
+         *  @param  delim_  Delimiter used to separate container elements.
+         *  @param  cont_   Container to form into a table.
+         *
+         *  @return String of table of columns.
+         */
         template <typename C, typename T, typename I, typename J>
         inline std::string cols(int width_, const std::string& delim_, const C& cont_) noexcept
         {
