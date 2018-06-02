@@ -94,7 +94,7 @@ namespace arc //! arctk namespace
             const int          _width;  //!< Print width allocated to each element.
             size_t             _index;
 
-            RowsHelper(std::stringstream& stream_, const std::string& delim_, const size_t width_)
+            RowsHelper(std::stringstream& stream_, const std::string& delim_, const int width_)
               : _stream(stream_)
               , _delim(delim_)
               , _width(width_)
@@ -137,7 +137,7 @@ namespace arc //! arctk namespace
             const int                       _width;  //!< Print width allocated to each element.
             size_t                          _index;
 
-            ColsHelper(std::vector<std::stringstream>& stream_, const std::string& delim_, const size_t width_)
+            ColsHelper(std::vector<std::stringstream>& stream_, const std::string& delim_, const int width_)
               : _stream(stream_)
               , _delim(delim_)
               , _width(width_)
