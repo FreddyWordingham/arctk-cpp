@@ -41,10 +41,10 @@ namespace arc //! arctk namespace
         inline std::string rows(const C& cont_, int width_ = 0, const std::string& delim_ = ", ") noexcept;
 
         template <typename... A>
-        inline std::string rows(int width_ = 0, const std::string& delim_ = ", ", A...);
+        inline std::string rows(int width_, const std::string& delim_, A... args);
 
         template <typename... A>
-        inline std::string cols(int width_ = 0, const std::string& delim_ = ", ", A...);
+        inline std::string cols(int width, const std::string& delim_, A... args);
 
 
 
@@ -116,25 +116,31 @@ namespace arc //! arctk namespace
             }
         };
 
-        template <typename... A>
-        inline std::string rows(int width_, const std::string& delim_, A... args)
+        template <typename... A, size_t... I>
+        inline std::string rows(int width_, const std::string& delim_, A... args, std::index_sequence<I...>)
         {
+            std::vector<std::stringstream> row_stream(sizeof...(A));
+
+            ((row_stream[I] << "bean"), ...);
+
+            //            ((row_stream[I] << std::to_string(args, width_, "", delim_, "")), ...);
+
             std::stringstream stream;
 
-            std::vector<size_t> rows;
-            ((rows.emplace_back(args.size()), 0), ...);
+            /*            std::vector<size_t> rows;
+                        ((rows.emplace_back(args.size()), 0), ...);
 
-            RowsHelper rh(stream, delim_, width_);
-
-
-
-            int dummy[] = {0, ((void)rh(std::forward<A>(args)), 0)...};
+                        RowsHelper rh(stream, delim_, width_);
 
 
-            for (size_t i = rows[i]; i < search::max(rows); ++i)
-            {
-                stream << delim_ << std::setw(width_) << ' ';
-            }
+
+                        int dummy[] = {0, ((void)rh(std::forward<A>(args)), 0)...};
+
+
+                        for (size_t i = rows[i]; i < search::max(rows); ++i)
+                        {
+                            stream << delim_ << std::setw(width_) << ' ';
+                        }*/
 
             return (stream.str());
         }
