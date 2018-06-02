@@ -37,11 +37,164 @@ namespace arc //! arctk namespace
 
         //  == FUNCTION PROTOTYPES ==
         //  -- Table --
+        template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
+        inline std::string rows(const C& cont_, int width_ = 0, const std::string& delim_ = ", ") noexcept;
+
+        template <typename... A>
+        inline std::string rows(int width_ = 0, const std::string& delim_ = ", ", A...);
+
+        template <typename... A>
+        inline std::string cols(int width_ = 0, const std::string& delim_ = ", ", A...);
 
 
 
         //  == FUNCTIONS ==
         //  -- Table --
+        /**
+         *  Form a container into a human reader table.
+         *  Each element of the container is treated as a row.
+         *
+         *  @param cont_ [description]
+         *  @param width_ [description]
+         *  @param delim_ [description]
+         *
+         *  @return [description]
+         */
+        template <typename C, typename T, typename I>
+        inline std::string rows(const C& cont_, int width_, const std::string& delim_) noexcept
+        {
+            std::stringstream stream;
+
+            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+            {
+                if (it != std::begin(cont_))
+                {
+                    stream << '\n';
+                }
+
+                if constexpr (std::is_same<T, std::string>::value)
+                {
+                    stream << std::setw(width_) << *it;
+                }
+                else
+                {
+                    stream << str::to_string(*it, width_, "", delim_, "");
+                }
+            }
+
+            return (stream.str());
+        }
+
+
+
+        struct RowsHelper
+        {
+            std::stringstream& _stream; //!< Stream to write to.
+            const std::string  _delim;  //!< Delimiter added between elements.
+            const size_t       _width;  //!< Print width allocated to each element.
+            size_t             _index;
+
+            RowsHelper(std::stringstream& stream_, const std::string& delim_, const size_t width_)
+              : _stream(stream_)
+              , _delim(delim_)
+              , _width(width_)
+              , _index(0)
+            {
+            }
+
+            template <typename L>
+            void operator()(const L& val_)
+            {
+                if (_index != 0)
+                {
+                    _stream << '\n';
+                }
+
+                _stream << str::to_string(val_, _width, "", _delim, "");
+
+                ++_index;
+            }
+        };
+
+        template <typename... A>
+        inline std::string rows(int width_, const std::string& delim_, A... args)
+        {
+            std::stringstream stream;
+
+            RowsHelper rh(stream, delim_, width_);
+
+            int dummy[] = {0, ((void)rh(std::forward<A>(args)), 0)...};
+
+            return (stream.str());
+        }
+
+
+
+        struct ColsHelper
+        {
+            std::vector<std::stringstream>& _stream; //!< Stream to write to.
+            const std::string               _delim;  //!< Delimiter added between elements.
+            const size_t                    _width;  //!< Print width allocated to each element.
+            size_t                          _index;
+
+            ColsHelper(std::vector<std::stringstream>& stream_, const std::string& delim_, const size_t width_)
+              : _stream(stream_)
+              , _delim(delim_)
+              , _width(width_)
+              , _index(0)
+            {
+            }
+
+            template <typename L>
+            void operator()(const L& val_)
+            {
+                for (size_t i = 0; i < _stream.size(); ++i)
+                {
+                    _stream[i] << std::setw(_width);
+
+                    if (i < val_.size())
+                    {
+                        _stream[i] << val_[i];
+                    }
+                    else
+                    {
+                        _stream[i] << ' ';
+                    }
+
+                    _stream[i] << _delim;
+                }
+
+                ++_index;
+            }
+        };
+
+        template <typename... A>
+        inline std::string cols(int width_, const std::string& delim_, A... args)
+        {
+            std::stringstream stream;
+
+            std::vector<size_t> rows;
+            int                 dummy[] = {0, (rows.emplace_back(args.size()), 0)...};
+
+            std::vector<std::stringstream> row_stream(search::max(rows));
+            ColsHelper                     ch(row_stream, delim_, width_);
+            int                            gummy[] = {0, (ch(args), 0)...};
+
+            for (size_t i = 0; i < row_stream.size(); ++i)
+            {
+                if (i != 0)
+                {
+                    stream << '\n';
+                }
+
+                std::string row_str = row_stream[i].str();
+                row_str.erase(std::prev(std::end(row_str), delim_.size()), std::end(row_str));
+
+                stream << row_str;
+            }
+
+            return (stream.str());
+        }
 
 
 
