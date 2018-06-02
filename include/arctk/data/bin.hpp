@@ -81,7 +81,7 @@ namespace arc //! arctk namespace
          *  @return Bin counts vector.
          */
         template <typename T>
-        inline const std::vector<T>& Bin::counts() const noexcept
+        inline const std::vector<T>& Bin<T>::counts() const noexcept
         {
             return (_counts);
         }
@@ -89,18 +89,21 @@ namespace arc //! arctk namespace
 
         //  -- Placement --
         /**
-         *  Determine the index which a value would be placed.
+         *  Determine the index which a position count would be located within counts vector.
          *
-         *  @param  val_    Value to place.
+         *  @tparam T   Type of value to be counted.
          *
-         *  @return Index where value would be placed.
+         *  @param  pos_    Position to place.
+         *
+         *  @return Index where the position count would be placed.
          */
-        inline size_t Bin::index(const double val_) const noexcept
+        template <typename T>
+        inline size_t Bin<T>::index(const double pos_) const noexcept
         {
-            assert(val_ >= min());
-            assert(val_ <= max());
+            assert(pos_ >= min());
+            assert(pos_ <= max());
 
-            const auto index = static_cast<size_t>((val_ - min()) / width());
+            const auto index = static_cast<size_t>((pos_ - min()) / width());
 
             return ((index == _counts.size()) ? (index - 1) : index);
         }
