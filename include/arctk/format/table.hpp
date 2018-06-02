@@ -38,9 +38,9 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         //  -- Table --
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
-        inline std::string row_table(const C& cont_, size_t width_ = 0, const std::string& delim_ = ", ") noexcept;
+        inline std::string row_table(const C& cont_, int width_ = 0, const std::string& delim_ = ", ") noexcept;
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator, typename J = typename T::const_iterator>
-        inline std::string col_table(const C& cont_, size_t width_ = 0, const std::string& delim_ = ", ") noexcept;
+        inline std::string col_table(const C& cont_, int width_ = 0, const std::string& delim_ = ", ") noexcept;
 
 
 
@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
          *  @return Formatted data table string.
          */
         template <typename C, typename T, typename I>
-        inline std::string row_table(const C& cont_, const size_t width_, const std::string& delim_) noexcept
+        inline std::string row_table(const C& cont_, const int width_, const std::string& delim_) noexcept
         {
             std::stringstream stream;
 
@@ -81,7 +81,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename C, typename T, typename I, typename J>
-        inline std::string col_table(const C& cont_, const size_t width_, const std::string& delim_) noexcept
+        inline std::string col_table(const C& cont_, const int width_, const std::string& delim_) noexcept
         {
             std::stringstream stream;
 
