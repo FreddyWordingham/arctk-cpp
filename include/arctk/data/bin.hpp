@@ -52,7 +52,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Bin(size_t res_) noexcept = default;
+            inline explicit Bin(size_t res_) noexcept = default;
 
             //  -- Destructors --
             virtual inline ~Bin() noexcept = default;
