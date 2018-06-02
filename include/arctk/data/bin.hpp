@@ -34,6 +34,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
+         *  Histogram class which bins values into a data vector.
          */
         class Bin
         {
