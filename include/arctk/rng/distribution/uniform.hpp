@@ -183,6 +183,7 @@ namespace arc //! arctk namespace
              *
              *  @tparam T   Type to be generated.
              *
+             *  @param  gen_    Generator used to create the uniform deviates.
              *  @param  min_    Minimum value to be generated.
              *  @param  max_    Maximum value to be generated.
              *
