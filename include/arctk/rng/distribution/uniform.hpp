@@ -61,12 +61,6 @@ namespace arc //! arctk namespace
                 inline Uniform(T min_, T max_) noexcept;
 
 
-                //  == OPERATORS ==
-              public:
-                //  -- Call --
-                inline T operator()(Generator& gen_) noexcept override;
-
-
                 //  == METHODS ==
               public:
                 //  -- Getters --
@@ -100,25 +94,6 @@ namespace arc //! arctk namespace
               , _range(max_ - min_)
             {
                 assert(min_ < max_);
-            }
-
-
-
-            //  == OPERATORS ==
-            //  -- Call --
-            /**
-             *  Generate a value within the limits of the distribution.
-             *
-             *  @tparam T   Type to be generated.
-             *
-             *  @return Generated value within the distribution limits.
-             */
-            template <typename T>
-            inline T Uniform<T>::operator()(Generator& gen_) noexcept
-            {
-                const double xi = gen_.gen();
-
-                return (static_cast<T>(_min + (_range * xi)));
             }
 
 
