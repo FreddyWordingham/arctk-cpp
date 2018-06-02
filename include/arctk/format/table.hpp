@@ -129,12 +129,22 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i < search::max(rows); ++i)
             {
-                row_stream[i];
+                size_t col = 0;
 
-                ((if (i != 0){row_stream[i] << delim_}, row_stream[i] << std::setw(width_) << args[i]), ...);
+                ((row_stream[i] << ((col != 0) ? delim_ : "") << std::setw(width_) << ((i < rows[i]) ? str::to_string(args[i]) : ""), ++col), ...);
             }
 
             std::stringstream stream;
+
+            for (size_t i = 0; i < row_stream.size(); ++i)
+            {
+                if (i != 0)
+                {
+                    stream << '\n';
+                }
+
+                stream << row_stream[i].str();
+            }
 
             return (stream.str());
         }
