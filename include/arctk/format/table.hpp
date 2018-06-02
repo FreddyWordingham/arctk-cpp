@@ -131,7 +131,7 @@ namespace arc //! arctk namespace
             {
                 size_t col = 0;
 
-                ((row_stream[i] << ((col != 0) ? delim_ : "") << std::setw(width_) << ((i < rows[i]) ? str::to_string(args[i]) : ""), ++col), ...);
+                ((row_stream[i] << ((col != 0) ? delim_ : "") << std::setw(width_) << ((i < rows[col]) ? str::to_string(args[i]) : ""), ++col), ...);
             }
 
             std::stringstream stream;
