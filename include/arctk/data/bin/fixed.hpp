@@ -154,6 +154,7 @@ namespace arc //! arctk namespace
          *  @param  pos_    Position of the weight.
          *  @param  weight_ Weight of value to be binned.
          */
+        /*
         template <typename T>
         inline void Fixed<T>::collect(const double pos_, const T weight_) noexcept
         {
@@ -165,7 +166,7 @@ namespace arc //! arctk namespace
             }
 
             _counts[index(pos_)] += weight_;
-        }
+        }*/
 
 
 
