@@ -119,6 +119,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline double Fixed<T>::width() const noexcept override
             {
+                return (_width);
             }
 
 
