@@ -86,7 +86,7 @@ namespace arc //! arctk namespace
              *  @pre    res_ must be positive.
              */
             template <typename T>
-            inline Fixed::Fixed<T>(const double min_, const double max_, const size_t res_) noexcept
+            inline Fixed<T>::Fixed(const double min_, const double max_, const size_t res_) noexcept
               : _min(min_)
               , _max(max_)
               , _width((max_ - min_) / res_)
