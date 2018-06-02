@@ -44,6 +44,8 @@ namespace arc //! arctk namespace
 
         template <typename... A>
         inline std::string cols(int width, const std::string& delim_, A... args);
+        template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator, typename J = typename T::const_iterator>
+        inline std::string cols(int width_, const std::string& delim_, const C& cont_) noexcept;
 
 
 
@@ -111,8 +113,16 @@ namespace arc //! arctk namespace
         template <typename C, typename T, typename I>
         inline std::string rows(int width_, const std::string& delim_, const C& cont_) noexcept
         {
+            std::vector<size_t> cols;
+            cols.reserve(cont_.size());
+            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+            {
+                cols.emplace_back((*it).size());
+            }
+
             std::stringstream stream;
 
+            size_t row = 0;
             for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
             {
                 if (it != std::begin(cont_))
@@ -120,14 +130,14 @@ namespace arc //! arctk namespace
                     stream << '\n';
                 }
 
-                if constexpr (std::is_same<T, std::string>::value)
+                stream << str::to_string(*it, width_, "", delim_, "");
+
+                for (size_t i = cols[row]; i < search::max(cols); ++i)
                 {
-                    stream << std::setw(width_) << *it;
+                    stream << delim_ << std::setw(width_) << "";
                 }
-                else
-                {
-                    stream << str::to_string(*it, width_, "", delim_, "");
-                }
+
+                ++row;
             }
 
             return (stream.str());
@@ -164,6 +174,60 @@ namespace arc //! arctk namespace
                 size_t col = 0;
 
                 ((row_stream[i] << ((col != 0) ? delim_ : "") << std::setw(width_) << ((i < rows[col]) ? to_string(args[i]) : ""), ++col), ...);
+            }
+
+            std::stringstream stream;
+
+            for (size_t i = 0; i < row_stream.size(); ++i)
+            {
+                if (i != 0)
+                {
+                    stream << '\n';
+                }
+
+                stream << row_stream[i].str();
+            }
+
+            return (stream.str());
+        }
+
+
+        template <typename C, typename T, typename I, typename J>
+        inline std::string cols(int width_, const std::string& delim_, const C& cont_) noexcept
+        {
+            std::vector<size_t> cols;
+            cols.reserve(cont_.size());
+            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+            {
+                cols.emplace_back((*it).size());
+            }
+
+            std::vector<std::stringstream> row_stream(search::max(cols));
+            size_t                         row = 0;
+            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+            {
+            }
+
+            for (size_t i = 0; i < row_stream.size(); ++i)
+            {
+                if (i != 0)
+                {
+                    row_stream[i] << delim_;
+                }
+
+                for (size_t j = 0; j < cont_.size(); ++j)
+                {
+                    row_stream[i] << std::setw(width_);
+
+                    if (j < ((*std::next(std::begin(cont_), i)).size()))
+                    {
+                        row_stream[i] << (*std::next(std::begin(cont_), i))[j];
+                    }
+                    else
+                    {
+                        row_stream[i] << "";
+                    }
+                }
             }
 
             std::stringstream stream;
