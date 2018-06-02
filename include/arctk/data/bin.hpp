@@ -65,8 +65,8 @@ namespace arc //! arctk namespace
             virtual inline double            max() const noexcept   = 0;
             virtual inline double            width() const noexcept = 0;
             inline const std::vector<T>&     counts() const noexcept;
-            inline double                    center(size_t index_) const noexcept;
-            inline const std::vector<double> centers() const noexcept;
+            inline double                    centre(size_t index_) const noexcept;
+            inline const std::vector<double> centres() const noexcept;
 
             //  -- Collection --
             virtual inline void collect(double pos_, T weight_) noexcept = 0;
@@ -104,7 +104,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        inline const double Bin<T>::center(size_t index_) const noexcept
+        inline const double Bin<T>::centre(size_t index_) const noexcept
         {
             assert(index_ < _counts.size());
 
@@ -112,7 +112,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        inline const std::vector<double> Bin<T>::centers() const noexcept
+        inline const std::vector<double> Bin<T>::centres() const noexcept
         {
             std::vector<double> centres(_counts.size());
 
