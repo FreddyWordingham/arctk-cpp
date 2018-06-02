@@ -85,37 +85,6 @@ namespace arc //! arctk namespace
             return (stream.str());
         }
 
-
-
-        struct RowsHelper
-        {
-            std::stringstream& _stream; //!< Stream to write to.
-            const std::string  _delim;  //!< Delimiter added between elements.
-            const int          _width;  //!< Print width allocated to each element.
-            size_t             _index;
-
-            RowsHelper(std::stringstream& stream_, const std::string& delim_, const int width_)
-              : _stream(stream_)
-              , _delim(delim_)
-              , _width(width_)
-              , _index(0)
-            {
-            }
-
-            template <typename L>
-            void operator()(const L& val_)
-            {
-                if (_index != 0)
-                {
-                    _stream << '\n';
-                }
-
-                _stream << str::to_string(val_, _width, "", _delim, "");
-
-                ++_index;
-            }
-        };
-
         template <typename... A>
         inline std::string rows(int width_, const std::string& delim_, A... args)
         {
@@ -135,31 +104,6 @@ namespace arc //! arctk namespace
             }
 
             std::stringstream stream;
-
-            for (size_t i = 0; i < row_stream.size(); ++i)
-            {
-                if (i != 0)
-                {
-                    stream << '\n';
-                }
-
-                stream << row_stream[i].str();
-            }
-
-            /*            std::vector<size_t> rows;
-                        ((rows.emplace_back(args.size()), 0), ...);
-
-                        RowsHelper rh(stream, delim_, width_);
-
-
-
-                        int dummy[] = {0, ((void)rh(std::forward<A>(args)), 0)...};
-
-
-                        for (size_t i = rows[i]; i < search::max(rows); ++i)
-                        {
-                            stream << delim_ << std::setw(width_) << ' ';
-                        }*/
 
             return (stream.str());
         }
