@@ -60,6 +60,10 @@ namespace arc //! arctk namespace
 
             //  -- Collection --
             virtual inline void collect(double val_, double weight_) noexcept = 0;
+
+          private:
+            //  -- Placement --
+            inline size_t index(double val_) const noexcept;
         };
 
 
@@ -74,6 +78,25 @@ namespace arc //! arctk namespace
         inline const std::vector<double>& Bin::counts() const noexcept
         {
             return (_counts);
+        }
+
+
+        //  -- Placement --
+        /**
+         *  Determine the index which a value would be placed.
+         *
+         *  @param  val_    Value to place.
+         *
+         *  @return Index where value would be placed.
+         */
+        inline size_t Bin::index(const double val_) const noexcept
+        {
+            assert(val_ >= min());
+            assert(val_ <= max());
+
+            const auto index = static_cast<size_t>((val_ - min()) / width());
+
+            return ((index == _counts.size()) ? (index - 1) : index);
         }
 
 
