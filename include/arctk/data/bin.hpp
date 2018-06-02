@@ -24,6 +24,9 @@
 #include <cassert>
 #include <vector>
 
+//  -- Arctk --
+#include <arctk/format/table.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -56,6 +59,18 @@ namespace arc //! arctk namespace
 
             //  -- Destructors --
             virtual inline ~Bin() noexcept = default;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Stream --
+            template <typename S>
+            friend inline S& operator<<(S& stream_, const Bin<T>& bin_) noexcept
+            {
+                //                stream_ << format::col_table(std::vector<);
+
+                return (stream_);
+            }
 
 
             //  == METHODS ==

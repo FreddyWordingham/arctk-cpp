@@ -37,6 +37,10 @@ namespace arc //! arctk namespace
 
         //  == FUNCTION PROTOTYPES ==
         //  -- Table --
+        template <typename A0, typename A1>
+        inline std::string row_table(const std::pair<A0, A1>& pair_, int width_ = 0, const std::string& delim_ = ", ") noexcept;
+
+
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline std::string row_table(const C& cont_, int width_ = 0, const std::string& delim_ = ", ") noexcept;
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
@@ -46,6 +50,34 @@ namespace arc //! arctk namespace
 
         //  == FUNCTIONS ==
         //  -- Table --
+        template <typename A0, typename A1>
+        inline std::string row_table(const std::pair<A0, A1>& pair_, int width_, const std::string& delim_) noexcept
+        {
+            std::stringstream stream;
+
+            if constexpr (std::is_fundamental<A0>::value)
+            {
+                stream << std::setw(width_) << std::get<0>(pair_);
+            }
+            else
+            {
+                stream << str::to_string(std::get<0>(pair_), width_, "", delim_, "");
+            }
+
+            stream << '\n';
+
+            if constexpr (std::is_fundamental<A1>::value)
+            {
+                stream << std::setw(width_) << std::get<1>(pair_);
+            }
+            else
+            {
+                stream << str::to_string(std::get<1>(pair_), width_, "", delim_, "");
+            }
+
+            return (stream.str());
+        }
+
         /**
          *  Format a given container into a row focused table.
          *
