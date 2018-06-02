@@ -20,6 +20,10 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
+//  -- Arctk --
 #include <arctk/data/bin.hpp>
 
 
