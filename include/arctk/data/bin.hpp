@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
             template <typename S>
             friend inline S& operator<<(S& stream_, const Bin<T>& bin_) noexcept
             {
-                //                stream_ << format::col_table(std::vector<);
+                stream_ << format::cols(10, ", ", bin_.centres(), bin_._counts);
 
                 return (stream_);
             }
