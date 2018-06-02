@@ -56,6 +56,10 @@ namespace arc //! arctk namespace
 
                 //  == INSTANTIATION ==
               public:
+                //  -- Constructors --
+                inline Fixed(double min_, double max_, size_t res_) noexcept;
+
+
                 //  == METHODS ==
               public:
                 //  -- Getters --
@@ -69,7 +73,17 @@ namespace arc //! arctk namespace
 
 
 
-            //  == METHODS ==
+            //  == INSTANTIATION ==
+            //  -- Constructors --
+            template <typename T>
+            inline Fixed::Fixed<T>(const double min_, const double max_, const size_t res_) noexcept
+              : _min(min_)
+              , _max(max_)
+              , _width((max_ - min_) / res_)
+              , _miss({})
+            {
+                assert(min_ < max_);
+            }
 
 
 
