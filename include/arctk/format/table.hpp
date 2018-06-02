@@ -89,7 +89,41 @@ namespace arc //! arctk namespace
 
             const size_t max_rows = search::max(rows);
 
-            return (str::to_string(rows));
+            for (size_t i = 0; i < max_rows; ++i)
+            {
+                if (i != 0)
+                {
+                    stream << '\n';
+                }
+
+                for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+                {
+                    const size_t col = std::distance(std::begin(cont_), it);
+
+                    if (it != std::begin(cont_))
+                    {
+                        if (i < rows[col - 1])
+                        {
+                            stream << delim_;
+                        }
+                        else
+                        {
+                            stream << std::string(delim_.size(), ' ');
+                        }
+                    }
+
+                    if (i < rows[col])
+                    {
+                        stream << std::setw(width_) << *std::next(std::begin(*it), i);
+                    }
+                    else
+                    {
+                        stream << std::setw(width_) << ' ';
+                    }
+                }
+            }
+
+            return (stream.str());
         }
 
 
