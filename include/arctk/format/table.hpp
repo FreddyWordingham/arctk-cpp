@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/print.hpp>
+#include <arctk/search.hpp>
 #include <arctk/str.hpp>
 
 
@@ -37,7 +38,9 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         //  -- Table --
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
-        inline std::string table(const C& cont_, size_t width_ = 0, const std::string& delim_ = ", ") noexcept;
+        inline std::string row_table(const C& cont_, size_t width_ = 0, const std::string& delim_ = ", ") noexcept;
+        template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator, typename J = typename T::const_iterator>
+        inline std::string col_table(const C& cont_, size_t width_ = 0, const std::string& delim_ = ", ") noexcept;
 
 
 
@@ -53,7 +56,7 @@ namespace arc //! arctk namespace
          *  @return Formatted data table string.
          */
         template <typename C, typename T, typename I>
-        inline std::string table(const C& cont_, const size_t width_, const std::string& delim_) noexcept
+        inline std::string row_table(const C& cont_, const size_t width_, const std::string& delim_) noexcept
         {
             std::stringstream stream;
 
@@ -70,6 +73,23 @@ namespace arc //! arctk namespace
             }
 
             return (stream.str());
+        }
+
+        template <typename C, typename T, typename I, typename J>
+        inline std::string col_table(const C& cont_, const size_t width_, const std::string& delim_) noexcept
+        {
+            std::stringstream stream;
+
+            std::vector<size_t> rows;
+
+            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+            {
+                rows.emplace_back(std::distance(std::begin(*it), std::end(*it)));
+            }
+
+            const size_t max_rows = search::max(rows);
+
+            return (str::to_string(rows));
         }
 
 
