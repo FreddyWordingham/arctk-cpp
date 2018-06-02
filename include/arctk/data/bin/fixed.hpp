@@ -158,12 +158,12 @@ namespace arc //! arctk namespace
             {
                 if ((pos_ < _min) || (pos_ > _max))
                 {
-                    _miss += weight_;
+                    _misses += weight_;
 
                     return;
                 }
 
-                _counts[index(val_)] += weight_;
+                _counts[index(pos_)] += weight_;
             }
 
 
