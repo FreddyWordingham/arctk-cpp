@@ -49,6 +49,9 @@ namespace arc //! arctk namespace
                 const double _min; //!< Minimum bound of the bin range.
                 const double _max; //!< Maximum bound of the bin range.
 
+                //  -- Data --
+                const double _width; //!< Bin bag width.
+
 
                 //  == INSTANTIATION ==
               public:
