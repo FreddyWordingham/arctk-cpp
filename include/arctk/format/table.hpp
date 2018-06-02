@@ -203,21 +203,33 @@ namespace arc //! arctk namespace
             }
 
             std::vector<std::stringstream> row_stream(search::max(rows));
-            size_t                         row = 0;
             for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
             {
-                row_stream[row] << delim_;
+                size_t row = 0;
 
-                if ((*it).size() < rows[row])
+                for (J jt = std::begin(*it); jt != std::end(*it); std::advance(jt, 1))
                 {
-                    row_stream[row] << std::setw(width_) << (*it)[row];
+                    if (it != std::begin(cont_))
+                    {
+                        row_stream[row] << delim_;
+                    }
+
+                    row_stream[row] << std::setw(width_) << *jt;
+
+                    ++row;
                 }
-                else
+
+                for (size_t i = row; i < search::max(rows); ++i)
                 {
+                    if (it != std::begin(cont_))
+                    {
+                        row_stream[row] << delim_;
+                    }
+
                     row_stream[row] << std::setw(width_) << "";
-                }
 
-                ++row;
+                    ++row;
+                }
             }
 
             std::stringstream stream;
