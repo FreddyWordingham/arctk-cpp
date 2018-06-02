@@ -130,6 +130,18 @@ namespace arc //! arctk namespace
             return (stream.str());
         }
 
+        /**
+         *  Form a pack of container objects into a table.
+         *  Containers are formatted as columns.
+         *
+         *  @tparam Container type pack.
+         *
+         *  @param  width_  Width allocated to each container element print.
+         *  @param  delim_  Delimiter used to separate container elements.
+         *  @param  args    Container pack to form table columns.
+         *
+         *  @return String of table of columns.
+         */
         template <typename... A>
         inline std::string cols(int width_, const std::string& delim_, A... args)
         {
