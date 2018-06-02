@@ -117,6 +117,13 @@ namespace arc //! arctk namespace
                 return (_min);
             }
 
+            /**
+             *  Get the maximum of the range.
+             *
+             *  @tparam T   Type of value to be counted.
+             *
+             *  @return Range maximum.
+             */
             template <typename T>
             inline double Fixed<T>::max() const noexcept override
             {
