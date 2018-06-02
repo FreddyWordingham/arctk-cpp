@@ -113,6 +113,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline double Fixed<T>::max() const noexcept override
             {
+                return (_max);
             }
 
             template <typename T>
