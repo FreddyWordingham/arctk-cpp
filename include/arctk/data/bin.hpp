@@ -104,7 +104,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        inline const double Bin<T>::centre(size_t index_) const noexcept
+        inline double Bin<T>::centre(size_t index_) const noexcept
         {
             assert(index_ < _counts.size());
 
