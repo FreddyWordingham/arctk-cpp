@@ -45,7 +45,9 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
           public:
-            //  -- Constructors --
+            //  -- Destructors --
+            virtual inline ~Bin() noexcept = default;
+
 
             //  == METHODS ==
           public:
