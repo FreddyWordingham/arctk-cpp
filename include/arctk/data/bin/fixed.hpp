@@ -104,6 +104,13 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the minimum of the range.
+             *
+             *  @tparam T   Type of value to be counted.
+             *
+             *  @return Range minimum.
+             */
             template <typename T>
             inline double Fixed<T>::min() const noexcept override
             {
