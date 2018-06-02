@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            std::vector<double> _counts; //!< Hit count of each bin.
+            std::vector<T> _counts; //!< Hit count of each bin.
 
 
             //  == INSTANTIATION ==
@@ -56,17 +56,17 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            virtual inline double             min() const noexcept   = 0;
-            virtual inline double             max() const noexcept   = 0;
-            virtual inline double             width() const noexcept = 0;
-            inline const std::vector<double>& counts() const noexcept;
+            virtual inline double        min() const noexcept   = 0;
+            virtual inline double        max() const noexcept   = 0;
+            virtual inline double        width() const noexcept = 0;
+            inline const std::vector<T>& counts() const noexcept;
 
             //  -- Collection --
-            virtual inline void collect(double val_, double weight_) noexcept = 0;
+            virtual inline void collect(double pos_, T weight_) noexcept = 0;
 
           private:
             //  -- Placement --
-            inline size_t index(double val_) const noexcept;
+            inline size_t index(double pos_) const noexcept;
         };
 
 
@@ -76,9 +76,12 @@ namespace arc //! arctk namespace
         /**
          *  Get the bin counts vector.
          *
+         *  @tparam T   Type of value to be counted.
+         *
          *  @return Bin counts vector.
          */
-        inline const std::vector<double>& Bin::counts() const noexcept
+        template <typename T>
+        inline const std::vector<T>& Bin::counts() const noexcept
         {
             return (_counts);
         }
