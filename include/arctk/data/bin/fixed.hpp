@@ -20,7 +20,7 @@
 
 
 //  == IMPORTS ==
-#include <arctk/bin/fixed.hpp>
+#include <arctk/data/bin.hpp>
 
 
 
