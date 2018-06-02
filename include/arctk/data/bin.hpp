@@ -35,7 +35,10 @@ namespace arc //! arctk namespace
         //  == CLASS ==
         /**
          *  Histogram class which bins values into a data vector.
+         *
+         *  @tparam T   Type of value to be counted.
          */
+        template <typename T>
         class Bin
         {
             //  == FIELDS ==
