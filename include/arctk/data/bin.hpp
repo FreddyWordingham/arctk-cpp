@@ -78,6 +78,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        template <typename T>
         inline Bin<T>::Bin(const size_t res_) noexcept
           : _counts(res_)
         {
