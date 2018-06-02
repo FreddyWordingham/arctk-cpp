@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
          *  Form a pack of container objects into a table.
          *  Containers are formatted as rows.
          *
-         *  @tparam Container type pack.
+         *  @tparam A   Container type pack.
          *
          *  @param  width_  Width allocated to each container element print.
          *  @param  delim_  Delimiter used to separate container elements.
@@ -98,11 +98,15 @@ namespace arc //! arctk namespace
          *  Form a container into a human reader table.
          *  Each element of the container is treated as a row.
          *
-         *  @param cont_ [description]
-         *  @param width_ [description]
-         *  @param delim_ [description]
+         *  @tparam C   Type of container.
+         *  @tparam T   Type stored by C.
+         *  @tparam I   Type of const iterator of C.
          *
-         *  @return [description]
+         *  @param  cont_   Container to form into a table.
+         *  @param  width_  Width allocated to each container element print.
+         *  @param  delim_  Delimiter used to separate container elements.
+         *
+         *  @return String of table of rows.
          */
         template <typename C, typename T, typename I>
         inline std::string rows(const C& cont_, int width_, const std::string& delim_) noexcept
