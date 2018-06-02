@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
         class Bin
         {
             //  == FIELDS ==
-          private:
+          protected:
             //  -- Data --
             std::vector<T> _counts; //!< Hit count of each bin.
 
