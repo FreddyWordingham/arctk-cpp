@@ -62,13 +62,18 @@ namespace arc //! arctk namespace
 
             for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
             {
+                if (it != std::begin(cont_))
+                {
+                    stream << '\n';
+                }
+
                 if constexpr (std::is_fundamental<T>::value || std::is_same<T, std::string>::value)
                 {
-                    stream << std::setw(width_) << *it << '\n';
+                    stream << std::setw(width_) << *it;
                 }
                 else
                 {
-                    stream << str::to_string(*it, width_, "", delim_, "") << '\n';
+                    stream << str::to_string(*it, width_, "", delim_, "");
                 }
             }
 
