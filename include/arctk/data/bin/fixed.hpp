@@ -41,7 +41,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type of value to be counted.
              */
             template <typename T>
-            class Fixed : public Bin
+            class Fixed : public Bin<T>
             {
                 //  == FIELDS ==
               private:
