@@ -82,6 +82,8 @@ namespace arc //! arctk namespace
             /**
              *  Construct a fixed range bin object.
              *
+             *  @tparam T   Type of value to be counted.
+             *
              *  @param  min_    Minimum range bound of the bin.
              *  @param  max_    Maximum range bound of the bin.
              *  @param  res_    Resolution of the bin.
