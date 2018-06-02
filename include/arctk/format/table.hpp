@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
         //  == FUNCTIONS ==
         //  -- Table --
         /**
-         *  Format a given container into a table.
+         *  Format a given container into a row focused table.
          *
          *  @tparam C   Type of container.
          *  @tparam T   Type stored by C.
@@ -84,6 +84,19 @@ namespace arc //! arctk namespace
             return (stream.str());
         }
 
+        /**
+         *  Format a given container into a column focused table.
+         *
+         *  @tparam C   Type of container.
+         *  @tparam T   Type stored by C.
+         *  @tparam I   Type of const iterator of C.
+         *
+         *  @param  cont_   Container to form into table.
+         *  @param  width_  Print width allocated to each element.
+         *  @param  delim_  Table delimiter string.
+         *
+         *  @return Formatted data table string.
+         */
         template <typename C, typename T, typename I>
         inline std::string col_table(const C& cont_, const int width_, const std::string& delim_) noexcept
         {
