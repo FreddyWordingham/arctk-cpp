@@ -46,11 +46,14 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Data --
-            std::vector<T> _counts; //!< Hit count of each bin.
+            std::vector<T> _counts{}; //!< Hit count of each bin.
 
 
             //  == INSTANTIATION ==
           public:
+            //  -- Constructors --
+            inline Bin() noexcept = default;
+
             //  -- Destructors --
             virtual inline ~Bin() noexcept = default;
 
