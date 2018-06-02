@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
             virtual inline double            max() const noexcept   = 0;
             virtual inline double            width() const noexcept = 0;
             inline const std::vector<T>&     counts() const noexcept;
-            inline const double              center(size_t index_) const noexcept;
+            inline double                    center(size_t index_) const noexcept;
             inline const std::vector<double> centers() const noexcept;
 
             //  -- Collection --
