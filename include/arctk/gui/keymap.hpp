@@ -111,22 +111,22 @@ namespace arc //! arctk namespace
             {
                 return (false);
             }
-            /*
-                        for (auto& [key, keybind] : _map)
-                        {
-                            const int state = glfwGetKey(win_.handle(), key);
 
-                            if (state == GLFW_PRESS)
-                            {
-                                if (keybind._sticky || (keybind._state == GLFW_RELEASE))
-                                {
-                                    keybind._func();
-                                }
-                            }
+            for (auto& [key, keybind] : _map)
+            {
+                const int state = glfwGetKey(win_.handle(), key);
 
-                            keybind._state = state;
-                        }
-            */
+                if (state == GLFW_PRESS)
+                {
+                    if (keybind._sticky || (keybind._state == GLFW_RELEASE))
+                    {
+                        keybind._func();
+                    }
+                }
+
+                keybind._state = state;
+            }
+
             return (true);
         }
 
