@@ -59,9 +59,11 @@ namespace arc //! arctk namespace
                 inline std::ofstream init_handle() noexcept;
 
 
-                //  == METHODS ==
+                //  == OPERATORS ==
               public:
-                //  -- Getters --
+                //  -- Stream --
+                template <class T>
+                inline Out& operator<<(const T& val_) noexcept;
             };
 
 
@@ -107,8 +109,15 @@ namespace arc //! arctk namespace
 
 
 
-            //  == METHODS ==
-            //  -- Getters --
+            //  == OPERATORS ==
+            //  -- Stream --
+            template <class T>
+            inline Out& Out::operator<<(const T& val_) noexcept
+            {
+                _handle << val_;
+
+                return (*this);
+            }
 
 
 
