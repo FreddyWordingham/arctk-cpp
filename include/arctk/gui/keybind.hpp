@@ -37,7 +37,7 @@ namespace arc //! arctk namespace
         /**
          *  Keybinding class mapping a key to a function call.
          */
-        class Keymap
+        class Keybind
         {
             //  == FIELDS ==
           private:
@@ -46,6 +46,7 @@ namespace arc //! arctk namespace
 
             //  -- Press --
             const bool _sticky; //!< True if held key causes repeat function calling.
+            int        _state;  //!< Current press state of key.
 
 
             //  == INSTANTIATION ==
