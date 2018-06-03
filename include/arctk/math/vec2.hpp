@@ -560,7 +560,6 @@ namespace arc //! arctk namespace
 
             x *= m;
             y *= m;
-            z *= m;
         }
 
 
