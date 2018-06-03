@@ -72,6 +72,10 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Destructors --
+        inline File::~File() noexcept = default;
+
+
 
         //  == METHODS ==
         //  -- Getters --
