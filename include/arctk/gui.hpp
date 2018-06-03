@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/gui/keybind.hpp>
 #include <arctk/gui/keymap.hpp>
 #include <arctk/gui/window.hpp>
 
