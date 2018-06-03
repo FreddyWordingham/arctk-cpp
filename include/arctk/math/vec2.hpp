@@ -498,7 +498,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Vec2<T> Vec2<T>::operator/(T val_) const noexcept
         {
-            return (Vec2(x / val_, y / val_, z / val_));
+            return (Vec2(x / val_, y / val_));
         }
 
 
