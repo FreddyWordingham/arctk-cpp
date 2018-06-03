@@ -233,6 +233,7 @@ namespace arc //! arctk namespace
             x += vec_.x;
             y += vec_.y;
             z += vec_.z;
+            w += vec_.w;
 
             return (*this);
         }
