@@ -70,6 +70,9 @@ namespace arc //! arctk namespace
 
             //  -- Setters --
             inline void set_clear_col(const math::Vec4& col_) noexcept;
+
+            //  -- Rendering --
+            inline void clear_buffer() const noexcept;
         };
 
 
@@ -145,6 +148,13 @@ namespace arc //! arctk namespace
         inline void Window::set_clear_col(const math::Vec4& col_) noexcept
         {
             glClearColor(col_.r, col_.g, col_.b, col_.a);
+        }
+
+
+        //  -- Rendering --
+        inline void Window::clear_buffer() const noexcept
+        {
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         }
 
 
