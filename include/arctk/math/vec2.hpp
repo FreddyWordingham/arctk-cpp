@@ -206,7 +206,6 @@ namespace arc //! arctk namespace
         {
             x += val_;
             y += val_;
-            z += val_;
 
             return (*this);
         }
