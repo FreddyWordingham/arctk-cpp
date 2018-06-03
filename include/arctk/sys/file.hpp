@@ -77,14 +77,14 @@ namespace arc //! arctk namespace
             return (_path);
         }
 
-        inlinestd::string ile::filename() const noexcept
+        inlinestd::string File::filename() const noexcept
         {
             size_t slash_pos = _path.find_last_of('/');
 
             return ((slash_pos == std::string::npos) ? _path : _path.substr(slash_pos + 1, std::string::npos));
         }
 
-        inlinestd::string ile::extension() const noexcept
+        inlinestd::string File::extension() const noexcept
         {
             size_t dot_pos = _path.find_last_of('.');
 
