@@ -24,7 +24,7 @@
 #include <cmath>
 
 //  -- Graphical --
-#ifdef ARCTK_MOD_CORE
+#ifdef ARCTK_MOD_GUI
 #include <glm/glm.hpp>
 #endif
 
@@ -91,7 +91,7 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Conversion --
-#ifdef ARCTK_MOD_CORE
+#ifdef ARCTK_MOD_GUI
             constexpr inline operator glm::vec3() const noexcept; // NOLINT
 #endif
 
