@@ -18,9 +18,9 @@ arctk_clean()
 #   -- Build --
 arctk_build()
 {
-    if [ "$#" != "6" ]; then
+    if [ "$#" != "7" ]; then
         printf "Error! Incorrect number of arguments.\n";
-        printf "arctk_build <build_type> <c_compiler> <cxx_compiler> <clang-tidy> <document> <core>\n";
+        printf "arctk_build <build_type> <c_compiler> <cxx_compiler> <clang-tidy> <document> <core> <gui>\n";
 
         return;
     fi
@@ -38,6 +38,7 @@ arctk_build()
         -DCLANG_TIDY=$4                             \
         -DDOCUMENT=$5                               \
         -DARCTK_MOD_CORE=$6                         \
+        -DARCTK_MOD_CORE=$7                         \
         ..
 
     local cmake_build_status=$?;
