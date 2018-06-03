@@ -36,10 +36,28 @@ namespace arc //! arctk namespace
          */
         class Uniform
         {
+            //  == ENUMERATION ==
+          public:
+            //  -- Type --
+            enum class type
+            {
+                INT,
+                FLOAT,
+                VEC2,
+                VEC3,
+                VEC4,
+                MAT2,
+                MAT3,
+                MAT4
+            };
+
+
             //  == FIELDS ==
           private:
             //  -- Handle --
             const GLint _handle; //!< Uniform handle.
+
+            //  -- Information --
 
 
             //  == INSTANTIATION ==
