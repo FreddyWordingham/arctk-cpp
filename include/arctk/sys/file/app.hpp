@@ -95,11 +95,11 @@ namespace arc //! arctk namespace
                 assert(!_path.empty());
 
                 std::ofstream handle;
-                handle.open(_path);
+                handle.open(_path, std::fstream::app);
 
                 if (!handle.is_open())
                 {
-                    ERROR(42) << "Out file: '" << _path << "' could not be opened.";
+                    ERROR(42) << "Append file: '" << _path << "' could not be opened.";
                 }
 
                 assert(handle.is_open());
