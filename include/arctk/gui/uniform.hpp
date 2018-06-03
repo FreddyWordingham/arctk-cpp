@@ -40,6 +40,9 @@ namespace arc //! arctk namespace
             //  == ENUMERATION ==
           public:
             //  -- Type --
+            /**
+             *  Enumeration of possible types to be handled by the uniform.
+             */
             enum class type
             {
                 INT,
