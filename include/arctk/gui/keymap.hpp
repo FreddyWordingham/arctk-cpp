@@ -61,6 +61,34 @@ namespace arc //! arctk namespace
         //  == METHODS ==
         //  -- Getters --
 
+        //  -- Operation --
+        inline bool Keymap::poll(const Window& win_) noexcept
+        {
+            glfwPollEvents();
+
+            if ((glfwGetKey(win_.handle(), QUIT_KEY) == GL_TRUE) || (glfwWindowShouldClose(win_.handle()) == GL_TRUE))
+            {
+                return (false);
+            }
+            /*
+                        for (auto& [key, keybind] : _map)
+                        {
+                            const int state = glfwGetKey(win_.handle(), key);
+
+                            if (state == GLFW_PRESS)
+                            {
+                                if (keybind._sticky || (keybind._state == GLFW_RELEASE))
+                                {
+                                    keybind._func();
+                                }
+                            }
+
+                            keybind._state = state;
+                        }
+            */
+            return (true);
+        }
+
 
 
     } // namespace gui
