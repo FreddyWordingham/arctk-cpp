@@ -55,8 +55,8 @@ namespace arc //! arctk namespace
              */
             union
             {
-                T x,  //!< Cartesian x-dimension.
-                  rho //!< Polar radial-dimension.
+                T x,   //!< Cartesian x-dimension.
+                  rho; //!< Polar radial-dimension.
             };
 
             /**
@@ -64,8 +64,8 @@ namespace arc //! arctk namespace
              */
             union
             {
-                T y,    //!< Cartesian y-dimension.
-                  theta //!< Polar inclination-dimension.
+                T y,     //!< Cartesian y-dimension.
+                  theta; //!< Polar inclination-dimension.
             };
 
 
