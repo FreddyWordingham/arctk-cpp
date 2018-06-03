@@ -79,7 +79,7 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Conversion --
-#ifdef ARCTK_MOD_CORE
+#ifdef ARCTK_MOD_GUI
             constexpr inline operator glm::vec2() const noexcept; // NOLINT
 #endif
 
@@ -160,7 +160,7 @@ namespace arc //! arctk namespace
 
         //  == OPERATORS ==
         //  -- Conversion --
-#ifdef ARCTK_MOD_CORE
+#ifdef ARCTK_MOD_GUI
         template <typename T>
         constexpr inline Vec2<T>::operator glm::vec2() const noexcept
         {
