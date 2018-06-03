@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
             class Uniform : public Distribution<T>
             {
                 //  == FIELDS ==
-              public:
+              private:
                 //  -- Range --
                 const T _min;   //!< Minimum bound of the distribution.
                 const T _max;   //!< Maximum bound of the distribution.
