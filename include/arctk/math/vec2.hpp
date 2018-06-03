@@ -260,7 +260,6 @@ namespace arc //! arctk namespace
         {
             x -= vec_.x;
             y -= vec_.y;
-            z -= vec_.z;
 
             return (*this);
         }
