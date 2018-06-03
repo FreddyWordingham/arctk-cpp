@@ -380,7 +380,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Vec2<T> Vec2<T>::operator+() const noexcept
         {
-            return (Vec2(+x, +y, +z));
+            return (Vec2(+x, +y));
         }
 
         /**
