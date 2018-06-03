@@ -61,6 +61,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline bool sticky() const noexcept;
         };
 
 
@@ -77,6 +79,11 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Getters --
+        inline bool Keybind::sticky() const noexcept
+        {
+            return (_sticky);
+        }
 
 
 
