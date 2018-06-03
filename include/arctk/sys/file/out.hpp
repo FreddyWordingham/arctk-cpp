@@ -128,6 +128,15 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
             //  -- Stream --
+            /**
+             *  Add a value to the file.
+             *
+             *  @tparam T   Type of value to add.
+             *
+             *  @param  val_ value to add.
+             *
+             *  @return Reference to stream_ post-write.
+             */
             template <class T>
             inline Out& Out::operator<<(const T& val_) noexcept
             {
