@@ -123,6 +123,14 @@ namespace arc //! arctk namespace
             //  -- Access --
             constexpr inline T&       operator[](size_t index_) noexcept;
             constexpr inline const T& operator[](size_t index_) const noexcept;
+
+
+            //  == METHODS ==
+          public:
+            //  -- Getters --
+            constexpr inline T      sum() const noexcept;
+            constexpr inline double mag() const noexcept;
+            constexpr inline void   normalise() const noexcept;
         };
 
 
@@ -552,6 +560,32 @@ namespace arc //! arctk namespace
             assert(index_ < 4);
 
             return ((&x)[index_]);
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Mathematical --
+        template <typename T>
+        constexpr inline T Vec4<T>::sum() const noexcept
+        {
+            return (x + y + z + w);
+        }
+
+        template <typename T>
+        constexpr inline double Vec4<T>::mag() const noexcept
+        {
+            return (std::sqrt(static_cast<double>((x * x) + (y * y) + (z * z))));
+        }
+
+        template <typename T>
+        constexpr inline void Vec4<T>::normalise() const noexcept
+        {
+            const double m = 1.0 / mag();
+
+            x *= m;
+            y *= m;
+            z *= m;
         }
 
 
