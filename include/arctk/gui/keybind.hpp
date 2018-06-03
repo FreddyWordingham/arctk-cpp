@@ -133,6 +133,8 @@ namespace arc //! arctk namespace
         //  -- Setters --
         /**
          *  Set the key press state of the keybinding.
+         *
+         *  @param  state_  State to set the keybinding to.
          */
         inline void Keybind::set_state(const int state_) noexcept
         {
