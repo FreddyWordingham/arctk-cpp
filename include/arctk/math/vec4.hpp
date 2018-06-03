@@ -127,17 +127,6 @@ namespace arc //! arctk namespace
 
 
 
-        //  == FUNCTION PROTOTYPES ==
-        //  -- Mathematical --
-        template <typename T>
-        inline T sum(const Vec4<T>& vec_) noexcept;
-        template <typename T>
-        inline double mag(const Vec4<T>& vec_) noexcept;
-        template <typename T>
-        inline void normalise(Vec4<T>& vec_) noexcept;
-
-
-
         //  == INSTANTIATION --
         //  -- Constructors --
         /**
@@ -563,57 +552,6 @@ namespace arc //! arctk namespace
             assert(index_ < 4);
 
             return ((&x)[index_]);
-        }
-
-
-
-        //  == FUNCTIONS ==
-        //  -- Mathematical --
-        /**
-         *  Determine the sum of a vec's elements.
-         *
-         *  @tparam T   Type stored by the vec.
-         *
-         *  @param  vec_    Vector to find the sum of.
-         *
-         *  @return Sum of vec's elements.
-         */
-        template <typename T>
-        inline T sum(const Vec4<T>& vec_) noexcept
-        {
-            return (vec_.x + vec_.y + vec_.z);
-        }
-
-        /**
-         *  Determine the magnitude of a vec.
-         *
-         *  @tparam T   Type stored by the vec.
-         *
-         *  @param  vec_    Vector to find the magnitude of.
-         *
-         *  @return Magnitude of vec's elements.
-         */
-        template <typename T>
-        inline double mag(const Vec4<T>& vec_) noexcept
-        {
-            return (std::sqrt(static_cast<double>(vec_.x * vec_.x) + static_cast<double>(vec_.y * vec_.y) + static_cast<double>(vec_.z * vec_.z)));
-        }
-
-        /**
-         *  Normalise a vec.
-         *
-         *  @tparam T   Type stored by the vec.
-         *
-         *  @param  vec_    Vector to normalise.
-         */
-        template <typename T>
-        inline void normalise(Vec4<T>& vec_) noexcept
-        {
-            const double m = 1.0 / mag(vec_);
-
-            vec_.x *= m;
-            vec_.y *= m;
-            vec_.z *= m;
         }
 
 
