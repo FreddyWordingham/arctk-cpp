@@ -178,6 +178,14 @@ namespace arc //! arctk namespace
         //  == OPERATORS ==
         //  -- Conversion --
 #ifdef ARCTK_MOD_GUI
+        /**
+         *  Convert the vec3 to a glm::vec3.
+         *  Elements are converted to float type.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return Converted glm::vec3 object.
+         */
         template <typename T>
         constexpr inline Vec3<T>::operator glm::vec3() const noexcept
         {
