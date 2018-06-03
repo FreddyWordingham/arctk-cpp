@@ -98,7 +98,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Conversion --
 #ifdef ARCTK_MOD_CORE
-            constexpr inline operator glm::vec4() const noexcept;
+            constexpr inline operator glm::vec4() const noexcept; // NOLINT
 #endif
 
             //  -- Stream --
