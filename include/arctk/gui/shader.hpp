@@ -69,6 +69,8 @@ namespace arc //! arctk namespace
             inline GLuint init_handle(const std::string& vert_code_, const std::string& frag_code_) const noexcept;
             inline GLuint init_handle(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) const noexcept;
             inline GLuint init_sub_shader(const std::string& code_, GLenum type_) const noexcept;
+            inline GLint  init_mvp() const noexcept;
+            inline GLint  init_model() const noexcept;
 
 
             //  == METHODS ==
@@ -186,6 +188,19 @@ namespace arc //! arctk namespace
             assert(sub_shader != 0);
 
             return (sub_shader);
+        }
+
+        inline GLint Shader::init_mvp() const noexcept
+        {
+            GLint mvp = glGetUniformLocation(_handle, "mvp");
+
+            if (mvp < 0)
+            {
+                ERROR(42) << "Unable to construct gui Shader.\n"
+                          << "Failed to determine the uniform location of: mvp within the shader.";
+            }
+
+            return (mvp);
         }
 
 
