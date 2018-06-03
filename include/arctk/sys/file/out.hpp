@@ -55,6 +55,9 @@ namespace arc //! arctk namespace
                 //  -- Destructors --
                 inline ~Out() noexcept override;
 
+                //  -- Initialisation --
+                inline std::ofstream init_handle() noexcept;
+
 
                 //  == METHODS ==
               public:
@@ -81,6 +84,25 @@ namespace arc //! arctk namespace
                 _handle.close();
 
                 assert(!_handle.is_open());
+            }
+
+
+            //  -- Initialisation --
+            inline std::ofstream Out::init_handle() noexcept
+            {
+                assert(!_path.empty());
+
+                std::ofstream handle;
+                handle.open(_path);
+
+                if (!handle.is_open())
+                {
+                    ERROR(42) << "Out file: '" << _path << "' could not be opened.";
+                }
+
+                assert(handle.is_open());
+
+                return (handle);
             }
 
 
