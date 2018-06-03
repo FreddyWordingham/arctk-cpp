@@ -88,6 +88,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline GLint handle() const noexcept;
         };
 
 
@@ -115,6 +117,10 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        inline GLint Uniform::handle() const noexcept
+        {
+            return (_handle);
+        }
 
 
 
