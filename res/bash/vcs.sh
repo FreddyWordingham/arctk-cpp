@@ -57,6 +57,19 @@ arctk_push()
     cd - > /dev/null;
 }
 
+arctk_update()
+{
+    cd $ARCTK_DIR > /dev/null;
+
+    git pull origin master;
+
+    arctk_build_default;
+
+    arctk_install;
+
+    cd - > /dev/null;
+}
+
 
 
 printf "arctk vcs bash functions loaded.\n";
