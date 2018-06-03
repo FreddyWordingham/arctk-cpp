@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Handle --
-                std::ofstream _handle; //!< Handle to the output file.
+                std::ofstream _handle; //!< Handle to the appending file.
 
 
                 //  == INSTANTIATION ==
