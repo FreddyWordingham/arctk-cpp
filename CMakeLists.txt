@@ -17,6 +17,14 @@ if (ARCTK_MOD_CORE)
     set(ARCTK_MOD_DEFS "${ARCTK_MOD_DEFS} ARCTK_MOD_CORE")
 endif ()
 
+if (NOT DEFINED ARCTK_MOD_GUI)
+    set(ARCTK_MOD_GUI OFF)
+endif ()
+message("Module core: ${ARCTK_MOD_GUI}")
+if (ARCTK_MOD_GUI)
+    set(ARCTK_MOD_DEFS "${ARCTK_MOD_DEFS} ARCTK_MOD_GUI")
+endif ()
+
 
 
 #   == VERSION ==
