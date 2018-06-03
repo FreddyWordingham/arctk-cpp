@@ -43,6 +43,9 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Window(const std::string& title_, int width_, int height_, int aa_samples_) noexcept;
 
+            //  -- Destructors --
+            inline ~Window() noexcept;
+
 
             //  == METHODS ==
           public:
@@ -55,6 +58,13 @@ namespace arc //! arctk namespace
         inline Window::Window(const std::string& title_, const int width_, const int height_, const int aa_samples_) noexcept
           : _handle(init_handle(title_, width_, height_, aa_samples_))
         {
+        }
+
+
+        //  -- Destructors --
+        inline Window::~Window() noexcept
+        {
+            glfwTerminate();
         }
 
 
