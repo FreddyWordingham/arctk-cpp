@@ -21,7 +21,7 @@ var searchData=
   ['output',['Output',['../classarc_1_1log_1_1_output.html',1,'arc::log::Output'],['../classarc_1_1log_1_1_output.html#a28dcae6412e4a903afea0fcaf7c011a2',1,'arc::log::Output::Output() noexcept'],['../classarc_1_1log_1_1_output.html#a2fad99406453103057dbdd7b3954bd4f',1,'arc::log::Output::Output(const std::string &amp;file_, const std::string &amp;func_, int line_) noexcept'],['../classarc_1_1log_1_1_output.html#a0a1b3278ed5583fc978a8c21af936830',1,'arc::log::Output::Output(const Output &amp;) noexcept=delete'],['../classarc_1_1log_1_1_output.html#aa7db2ce8cd7e448932fac6902f49cbdf',1,'arc::log::Output::Output(Output &amp;&amp;) noexcept=delete']]],
   ['output_2ehpp',['output.hpp',['../output_8hpp.html',1,'']]],
   ['overwrite',['overwrite',['../classarc_1_1log_1_1_term.html#a08f73ee2db26423779f9992c4f002341',1,'arc::log::Term::overwrite()'],['../namespacearc_1_1ansi.html#af66d083e1eb322ff4e5a6bfec338f66c',1,'arc::ansi::OVERWRITE()']]],
-  ['vec2',['vec2',['../classarc_1_1math_1_1_vec2.html#a9e19d7ca34020f7eb8d9b12e411f9d8c',1,'arc::math::Vec2']]],
-  ['vec3',['vec3',['../classarc_1_1math_1_1_vec3.html#a6abb65e6452e6206299ea4a729f3c643',1,'arc::math::Vec3']]],
-  ['vec4',['vec4',['../classarc_1_1math_1_1_vec4.html#a86ed9eda48b530add80c451e775ab200',1,'arc::math::Vec4']]]
+  ['vec2',['vec2',['../classarc_1_1math_1_1_vec2.html#abfb671760e5ac398398e791de59d1576',1,'arc::math::Vec2']]],
+  ['vec3',['vec3',['../classarc_1_1math_1_1_vec3.html#a1e59df3756c280896f7e708e81dbb43b',1,'arc::math::Vec3']]],
+  ['vec4',['vec4',['../classarc_1_1math_1_1_vec4.html#abe0897a8b10906089cc2fbe09c37e49e',1,'arc::math::Vec4']]]
 ];
