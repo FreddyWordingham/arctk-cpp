@@ -39,9 +39,6 @@ namespace arc //! arctk namespace
          */
         class Keymap
         {
-            //  == FRIENDS ==
-            //  -- Keymap --
-            friend class keymap;
 
 
             //  == FIELDS ==
