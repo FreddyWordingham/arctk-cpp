@@ -91,11 +91,21 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        /**
+         *  Construct an object to handle a shader uniform of a type to be controlled by agiven type.
+         *
+         *  @param  handle_     Uniform handle.
+         *  @param  type_       Type to be controlled by uniform.
+         *  @param  control_    Handler of uniform.
+         *
+         *  @pre    handle_ must be positive.
+         */
         inline Uniform::Uniform(const GLint handle_, const type type_, const control control_) noexcept
           : _handle(handle_)
           , _type(type_)
           , _control(control_)
         {
+            assert(handle_ > 0);
         }
 
 
