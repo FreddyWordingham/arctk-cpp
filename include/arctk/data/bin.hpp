@@ -56,8 +56,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline explicit Bin(size_t res_) noexcept;
-            inline Output(const Output&) = delete; //!< Deleted copy constructor.
-            inline Output(Output&&)      = delete; //!< Deleted move constructor.
+            inline Bin(const Bin&) = delete; //!< Deleted copy constructor.
+            inline Bin(Bin&&)      = delete; //!< Deleted move constructor.
 
             //  -- Destructors --
             virtual inline ~Bin() noexcept = default;
