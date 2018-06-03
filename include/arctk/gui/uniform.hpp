@@ -38,6 +38,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Handle --
+            const GLint _handle; //!< Uniform handle.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
