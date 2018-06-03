@@ -305,7 +305,7 @@ namespace arc //! arctk namespace
          *
          *  @tparam T   Type stored by the vec.
          *
-         *  @return A reference to this vec post-increment.
+         *  @return A reference to this vec pre-increment.
          */
         template <typename T>
         constexpr inline Vec2<T>& Vec2<T>::operator++() noexcept
@@ -321,7 +321,7 @@ namespace arc //! arctk namespace
          *
          *  @tparam T   Type stored by the vec.
          *
-         *  @return A copy of this vec pre-increment.
+         *  @return A copy of this vec post-increment.
          */
         template <typename T>
         constexpr inline const Vec2<T> Vec2<T>::operator++(int) noexcept
@@ -339,7 +339,7 @@ namespace arc //! arctk namespace
          *
          *  @tparam T   Type stored by the vec.
          *
-         *  @return A reference to this vec post-decrement.
+         *  @return A reference to this vec pre-decrement.
          */
         template <typename T>
         constexpr inline Vec2<T>& Vec2<T>::operator--() noexcept
@@ -356,7 +356,7 @@ namespace arc //! arctk namespace
          *
          *  @tparam T   Type stored by the vec.
          *
-         *  @return A copy of this vec pre-decrement.
+         *  @return A copy of this vec post-decrement.
          */
         template <typename T>
         constexpr inline const Vec2<T> Vec2<T>::operator--(int) noexcept
