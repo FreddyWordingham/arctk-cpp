@@ -66,7 +66,8 @@ namespace arc //! arctk namespace
             const GLint _handle; //!< Uniform handle.
 
             //  -- Information --
-            type _type; //!< Object controlling the uniform.
+            type _type;    //!< Type handled by the uniform.
+            type _control; //!< Object controlling the uniform.
 
 
             //  == INSTANTIATION ==
