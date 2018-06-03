@@ -85,8 +85,7 @@ namespace arc //! arctk namespace
             inline const std::vector<double> centres() const noexcept;
 
             //  -- Collection --
-            virtual inline void collect(double pos_, T weight_) noexcept = 0; //!< Collect a weight, at a position, into the bin array.
-
+            virtual inline void collect(double pos_, T weight_) noexcept = 0; //!< Collect a weight, at a position, into the bin array. @param  pos_    Position of the weight. @param  weight_ Weight of value to be binned.
           protected:
             //  -- Placement --
             inline size_t index(double pos_) const noexcept;
