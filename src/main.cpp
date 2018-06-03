@@ -47,6 +47,7 @@
 #include <arctk/search/container.hpp>
 #include <arctk/str.hpp>
 #include <arctk/str/convert.hpp>
+#include <arctk/sys.hpp>
 #include <arctk/utl.hpp>
 #include <arctk/utl/container.hpp>
 #include <arctk/utl/pair.hpp>
