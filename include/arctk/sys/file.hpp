@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline File(const std::string& path_) noexcept;
+            inline explicit File(const std::string& path_) noexcept;
 
 
             //  == METHODS ==
