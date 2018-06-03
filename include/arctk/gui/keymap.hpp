@@ -33,6 +33,12 @@ namespace arc //! arctk namespace
 
 
 
+        //  == CONSTANTS ==
+        //  -- Keys --
+        constexpr const int QUIT_KEY = GLFW_KEY_ESCAPE;
+
+
+
         //  == CLASS ==
         /**
          */
