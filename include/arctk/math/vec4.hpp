@@ -421,7 +421,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Vec4<T> Vec4<T>::operator-() const noexcept
         {
-            return (Vec4(-x, -y, -z));
+            return (Vec4(-x, -y, -z, -w));
         }
 
         /**
