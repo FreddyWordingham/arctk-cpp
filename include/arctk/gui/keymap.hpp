@@ -78,6 +78,14 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Setters --
+        /**
+         *  Bind a new keybinding to the keymap.
+         *
+         *  @param  key_    Key to bind to.
+         *  @param  func_   Function to bind.
+         *  @param  sticky_ Sticky status of the keybinding.
+         *  @param  state_  Initial state of the keybinding.
+         */
         inline void Keymap::bind(int key_, const std::function<void()>& func_, const bool sticky_, const int state_) noexcept
         {
             assert(key_ != QUIT_KEY);
