@@ -153,6 +153,13 @@ namespace arc //! arctk namespace
             return (min() + (width() * (index_ * 0.5)));
         }
 
+        /**
+         *  Get a vector of all bin central positions.
+         *
+         *  @tparam T   Type of value to be counted.
+         *
+         *  @return Vector of bin centre positions.
+         */
         template <typename T>
         inline const std::vector<double> Bin<T>::centres() const noexcept
         {
