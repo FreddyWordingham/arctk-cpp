@@ -41,6 +41,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Window(const std::string& title_, int width_, int height_, int aa_samples_) noexcept;
 
 
             //  == METHODS ==
@@ -49,7 +50,12 @@ namespace arc //! arctk namespace
 
 
 
-        //  == INSTANTIATION ==
+        //  == INSTANTIATION --
+        //  -- Constructors --
+        inline Window::Window(const std::string& title_, const int width_, const int height_, const int aa_samples_) noexcept
+          : _handle(init_handle(title_, width_, height_, aa_samples_))
+        {
+        }
 
 
 
