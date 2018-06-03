@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['version_5fmajor',['VERSION_MAJOR',['../namespacearc_1_1config.html#a2d17637229eb1a5c1cd130d0945a5308',1,'arc::config']]],
-  ['version_5fminor',['VERSION_MINOR',['../namespacearc_1_1config.html#ad647132a40a28b2241f0406b168c1874',1,'arc::config']]],
-  ['version_5fpatch',['VERSION_PATCH',['../namespacearc_1_1config.html#afc8283f15f7b5502fe48b6616a5d1207',1,'arc::config']]]
+  ['speed_5fof_5flight',['SPEED_OF_LIGHT',['../namespacearc_1_1constant.html#a7380a245f82a0bc10f7cc9b7140d4e14',1,'arc::constant']]]
 ];

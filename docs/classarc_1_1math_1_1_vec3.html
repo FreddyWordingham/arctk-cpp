@@ -86,6 +86,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a80bd6e5e1b23bd5fc9d2ef2029b0ff75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cfaf2ec386b769ab4a355ff0339448a"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec3.html#a7cfaf2ec386b769ab4a355ff0339448a">Vec3</a> (T x_, T y_, T z_) noexcept</td></tr>
 <tr class="separator:a7cfaf2ec386b769ab4a355ff0339448a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6abb65e6452e6206299ea4a729f3c643"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec3.html#a6abb65e6452e6206299ea4a729f3c643">operator glm::vec3</a> () const noexcept</td></tr>
+<tr class="separator:a6abb65e6452e6206299ea4a729f3c643"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9254de9deacf6a96a3806418b3362ed"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classarc_1_1math_1_1_vec3.html">Vec3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec3.html#ad9254de9deacf6a96a3806418b3362ed">operator+=</a> (T val_) noexcept</td></tr>
 <tr class="separator:ad9254de9deacf6a96a3806418b3362ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d98a9bd3facdb6b8f4a50a192868080"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classarc_1_1math_1_1_vec3.html">Vec3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec3.html#a4d98a9bd3facdb6b8f4a50a192868080">operator+=</a> (const <a class="el" href="classarc_1_1math_1_1_vec3.html">Vec3</a>&lt; T &gt; &amp;vec_) noexcept</td></tr>
@@ -132,45 +134,51 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5392b931f6f12aea388035a968190148"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03f615d640bebc9aa1f3386ab0df0157"><td class="memItemLeft" align="right" valign="top">constexpr const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec3.html#a03f615d640bebc9aa1f3386ab0df0157">operator[]</a> (size_t index_) const noexcept</td></tr>
 <tr class="separator:a03f615d640bebc9aa1f3386ab0df0157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3851ae27c5dc283d70dd6a26835e3ecb"><td class="memItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec3.html#a3851ae27c5dc283d70dd6a26835e3ecb">sum</a> () const noexcept</td></tr>
+<tr class="separator:a3851ae27c5dc283d70dd6a26835e3ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cd67e015ebc714a7a57b2345ff3d5ba"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec3.html#a0cd67e015ebc714a7a57b2345ff3d5ba">mag</a> () const noexcept</td></tr>
+<tr class="separator:a0cd67e015ebc714a7a57b2345ff3d5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a29916db35de3dfd804ada1f2a28599"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec3.html#a6a29916db35de3dfd804ada1f2a28599">normalise</a> () const noexcept</td></tr>
+<tr class="separator:a6a29916db35de3dfd804ada1f2a28599"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a5e3552b645d76aa123835e4e4feb2a90"><td class="memItemLeft" >union {</td></tr>
-<tr class="memitem:aded8417ef8452d39a2a5c96eb462f7fc"><td class="memItemLeft" >&#160;&#160;&#160;T&#160;&#160;&#160;<a class="el" href="classarc_1_1math_1_1_vec3.html#a783733f14882bd389780ce9d59c02c7f">x</a></td></tr>
-<tr class="memdesc:aded8417ef8452d39a2a5c96eb462f7fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cartesian x-dimension.  <a href="#aded8417ef8452d39a2a5c96eb462f7fc">More...</a><br /></td></tr>
-<tr class="separator:aded8417ef8452d39a2a5c96eb462f7fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea897e07eb41d9c083a27c0d614921bb"><td class="memItemLeft" >&#160;&#160;&#160;T&#160;&#160;&#160;<a class="el" href="classarc_1_1math_1_1_vec3.html#a2bf72104e2198382dcb819265e46a4a2">rho</a></td></tr>
-<tr class="memdesc:aea897e07eb41d9c083a27c0d614921bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polar radial-dimension.  <a href="#aea897e07eb41d9c083a27c0d614921bb">More...</a><br /></td></tr>
-<tr class="separator:aea897e07eb41d9c083a27c0d614921bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2836a486e381c25e71754d746652e077"><td class="memItemLeft" >&#160;&#160;&#160;T&#160;&#160;&#160;<a class="el" href="classarc_1_1math_1_1_vec3.html#a073439571a7df022c59393ac4a3f10ff">r</a></td></tr>
-<tr class="memdesc:a2836a486e381c25e71754d746652e077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colour red-dimension.  <a href="#a2836a486e381c25e71754d746652e077">More...</a><br /></td></tr>
-<tr class="separator:a2836a486e381c25e71754d746652e077"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e3552b645d76aa123835e4e4feb2a90"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a5e3552b645d76aa123835e4e4feb2a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a808f67ac5a615e9fa7307f0c894519"><td class="memItemLeft" >union {</td></tr>
-<tr class="memitem:a1f238976c826ce32e5a7ca0d1641054f"><td class="memItemLeft" >&#160;&#160;&#160;T&#160;&#160;&#160;<a class="el" href="classarc_1_1math_1_1_vec3.html#a9bcc28ea5d4061c4c0f3433116d58c0f">y</a></td></tr>
-<tr class="memdesc:a1f238976c826ce32e5a7ca0d1641054f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cartesian y-dimension.  <a href="#a1f238976c826ce32e5a7ca0d1641054f">More...</a><br /></td></tr>
-<tr class="separator:a1f238976c826ce32e5a7ca0d1641054f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95da8226ab6574d7fb7717b12990e400"><td class="memItemLeft" >&#160;&#160;&#160;T&#160;&#160;&#160;<a class="el" href="classarc_1_1math_1_1_vec3.html#ac4a2e007f86b40682d0d6ad52dfacae3">theta</a></td></tr>
-<tr class="memdesc:a95da8226ab6574d7fb7717b12990e400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polar inclination-dimension.  <a href="#a95da8226ab6574d7fb7717b12990e400">More...</a><br /></td></tr>
-<tr class="separator:a95da8226ab6574d7fb7717b12990e400"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c91198cebd9de123da9aad5f3617b12"><td class="memItemLeft" >&#160;&#160;&#160;T&#160;&#160;&#160;<a class="el" href="classarc_1_1math_1_1_vec3.html#a1358573a4b4bdef619f7fb965f686ec7">g</a></td></tr>
-<tr class="memdesc:a6c91198cebd9de123da9aad5f3617b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colour green-dimension.  <a href="#a6c91198cebd9de123da9aad5f3617b12">More...</a><br /></td></tr>
-<tr class="separator:a6c91198cebd9de123da9aad5f3617b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a808f67ac5a615e9fa7307f0c894519"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a5a808f67ac5a615e9fa7307f0c894519"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afea789328239bb5567f941ff43666845"><td class="memItemLeft" >union {</td></tr>
-<tr class="memitem:ac9110fcf32327ae2779e2aef1a89f0d4"><td class="memItemLeft" >&#160;&#160;&#160;T&#160;&#160;&#160;<a class="el" href="classarc_1_1math_1_1_vec3.html#af9df23c66e93d01ffefb00fab105d6f9">z</a></td></tr>
-<tr class="memdesc:ac9110fcf32327ae2779e2aef1a89f0d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cartesian z-dimension.  <a href="#ac9110fcf32327ae2779e2aef1a89f0d4">More...</a><br /></td></tr>
-<tr class="separator:ac9110fcf32327ae2779e2aef1a89f0d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa96efb9f40304e6f8a9c9292cf9a15e4"><td class="memItemLeft" >&#160;&#160;&#160;T&#160;&#160;&#160;<a class="el" href="classarc_1_1math_1_1_vec3.html#a363f86b226241ce24ba832bc47a378f0">phi</a></td></tr>
-<tr class="memdesc:aa96efb9f40304e6f8a9c9292cf9a15e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polar azimuthal-dimension.  <a href="#aa96efb9f40304e6f8a9c9292cf9a15e4">More...</a><br /></td></tr>
-<tr class="separator:aa96efb9f40304e6f8a9c9292cf9a15e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34b067f161c9d4b568822a55050274e1"><td class="memItemLeft" >&#160;&#160;&#160;T&#160;&#160;&#160;<a class="el" href="classarc_1_1math_1_1_vec3.html#ac9119a129518dde1112bfd494f429e30">b</a></td></tr>
-<tr class="memdesc:a34b067f161c9d4b568822a55050274e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colour blue-dimension.  <a href="#a34b067f161c9d4b568822a55050274e1">More...</a><br /></td></tr>
-<tr class="separator:a34b067f161c9d4b568822a55050274e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5239d6adbcca25e92e701fa6136fcedf"><td class="memItemLeft" >&#160;&#160;&#160;T&#160;&#160;&#160;<a class="el" href="classarc_1_1math_1_1_vec3.html#a783733f14882bd389780ce9d59c02c7f">x</a></td></tr>
+<tr class="memdesc:a5239d6adbcca25e92e701fa6136fcedf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cartesian x-dimension.  <a href="#a5239d6adbcca25e92e701fa6136fcedf">More...</a><br /></td></tr>
+<tr class="separator:a5239d6adbcca25e92e701fa6136fcedf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfedb1cdc4bdf3c77219b5ab8824f232"><td class="memItemLeft" >&#160;&#160;&#160;T&#160;&#160;&#160;<a class="el" href="classarc_1_1math_1_1_vec3.html#a2bf72104e2198382dcb819265e46a4a2">rho</a></td></tr>
+<tr class="memdesc:acfedb1cdc4bdf3c77219b5ab8824f232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polar radial-dimension.  <a href="#acfedb1cdc4bdf3c77219b5ab8824f232">More...</a><br /></td></tr>
+<tr class="separator:acfedb1cdc4bdf3c77219b5ab8824f232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad500cd52aab6d94152eb0bbfbbb19300"><td class="memItemLeft" >&#160;&#160;&#160;T&#160;&#160;&#160;<a class="el" href="classarc_1_1math_1_1_vec3.html#a073439571a7df022c59393ac4a3f10ff">r</a></td></tr>
+<tr class="memdesc:ad500cd52aab6d94152eb0bbfbbb19300"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colour red-dimension.  <a href="#ad500cd52aab6d94152eb0bbfbbb19300">More...</a><br /></td></tr>
+<tr class="separator:ad500cd52aab6d94152eb0bbfbbb19300"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afea789328239bb5567f941ff43666845"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:afea789328239bb5567f941ff43666845"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a13d382297423c617d46e616ea29510"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:af9b7804198ee0f09c90c6a6c63a783b5"><td class="memItemLeft" >&#160;&#160;&#160;T&#160;&#160;&#160;<a class="el" href="classarc_1_1math_1_1_vec3.html#a9bcc28ea5d4061c4c0f3433116d58c0f">y</a></td></tr>
+<tr class="memdesc:af9b7804198ee0f09c90c6a6c63a783b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cartesian y-dimension.  <a href="#af9b7804198ee0f09c90c6a6c63a783b5">More...</a><br /></td></tr>
+<tr class="separator:af9b7804198ee0f09c90c6a6c63a783b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50a390971e1e80df14d0cb3419ae3dff"><td class="memItemLeft" >&#160;&#160;&#160;T&#160;&#160;&#160;<a class="el" href="classarc_1_1math_1_1_vec3.html#ac4a2e007f86b40682d0d6ad52dfacae3">theta</a></td></tr>
+<tr class="memdesc:a50a390971e1e80df14d0cb3419ae3dff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polar inclination-dimension.  <a href="#a50a390971e1e80df14d0cb3419ae3dff">More...</a><br /></td></tr>
+<tr class="separator:a50a390971e1e80df14d0cb3419ae3dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c0cc2b5f139a57bcef012510ab25ae3"><td class="memItemLeft" >&#160;&#160;&#160;T&#160;&#160;&#160;<a class="el" href="classarc_1_1math_1_1_vec3.html#a1358573a4b4bdef619f7fb965f686ec7">g</a></td></tr>
+<tr class="memdesc:a9c0cc2b5f139a57bcef012510ab25ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colour green-dimension.  <a href="#a9c0cc2b5f139a57bcef012510ab25ae3">More...</a><br /></td></tr>
+<tr class="separator:a9c0cc2b5f139a57bcef012510ab25ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a13d382297423c617d46e616ea29510"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a0a13d382297423c617d46e616ea29510"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07589a6518ebf580fcb9c5aebbb735c8"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:ac2e66f56f611b83d44f7c4e97a9fc75d"><td class="memItemLeft" >&#160;&#160;&#160;T&#160;&#160;&#160;<a class="el" href="classarc_1_1math_1_1_vec3.html#af9df23c66e93d01ffefb00fab105d6f9">z</a></td></tr>
+<tr class="memdesc:ac2e66f56f611b83d44f7c4e97a9fc75d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cartesian z-dimension.  <a href="#ac2e66f56f611b83d44f7c4e97a9fc75d">More...</a><br /></td></tr>
+<tr class="separator:ac2e66f56f611b83d44f7c4e97a9fc75d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad409d5d09a6c78a959fc6731ddbd0b5b"><td class="memItemLeft" >&#160;&#160;&#160;T&#160;&#160;&#160;<a class="el" href="classarc_1_1math_1_1_vec3.html#a363f86b226241ce24ba832bc47a378f0">phi</a></td></tr>
+<tr class="memdesc:ad409d5d09a6c78a959fc6731ddbd0b5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polar azimuthal-dimension.  <a href="#ad409d5d09a6c78a959fc6731ddbd0b5b">More...</a><br /></td></tr>
+<tr class="separator:ad409d5d09a6c78a959fc6731ddbd0b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a613dcd43f5a422c88c084e6dfb2034b5"><td class="memItemLeft" >&#160;&#160;&#160;T&#160;&#160;&#160;<a class="el" href="classarc_1_1math_1_1_vec3.html#ac9119a129518dde1112bfd494f429e30">b</a></td></tr>
+<tr class="memdesc:a613dcd43f5a422c88c084e6dfb2034b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colour blue-dimension.  <a href="#a613dcd43f5a422c88c084e6dfb2034b5">More...</a><br /></td></tr>
+<tr class="separator:a613dcd43f5a422c88c084e6dfb2034b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07589a6518ebf580fcb9c5aebbb735c8"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a07589a6518ebf580fcb9c5aebbb735c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -298,6 +306,130 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0cd67e015ebc714a7a57b2345ff3d5ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cd67e015ebc714a7a57b2345ff3d5ba">&#9670;&nbsp;</a></span>mag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr double <a class="el" href="classarc_1_1math_1_1_vec3.html">arc::math::Vec3</a>&lt; T &gt;::mag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculate the magnitude of the vec.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type stored by the vec.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Magnitude of the vec. </dd></dl>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1math_1_1_vec3_a0cd67e015ebc714a7a57b2345ff3d5ba_icgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec3_a0cd67e015ebc714a7a57b2345ff3d5ba_icgraph" alt=""/></div>
+<map name="classarc_1_1math_1_1_vec3_a0cd67e015ebc714a7a57b2345ff3d5ba_icgraph" id="classarc_1_1math_1_1_vec3_a0cd67e015ebc714a7a57b2345ff3d5ba_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1math_1_1_vec3.html#a6a29916db35de3dfd804ada1f2a28599" title="arc::math::Vec3::normalise" alt="" coords="201,5,380,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6a29916db35de3dfd804ada1f2a28599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a29916db35de3dfd804ada1f2a28599">&#9670;&nbsp;</a></span>normalise()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr void <a class="el" href="classarc_1_1math_1_1_vec3.html">arc::math::Vec3</a>&lt; T &gt;::normalise </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Normalise the vec.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type stored by the vec. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1math_1_1_vec3_a6a29916db35de3dfd804ada1f2a28599_cgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec3_a6a29916db35de3dfd804ada1f2a28599_cgraph" alt=""/></div>
+<map name="classarc_1_1math_1_1_vec3_a6a29916db35de3dfd804ada1f2a28599_cgraph" id="classarc_1_1math_1_1_vec3_a6a29916db35de3dfd804ada1f2a28599_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1math_1_1_vec3.html#a0cd67e015ebc714a7a57b2345ff3d5ba" title="arc::math::Vec3::mag" alt="" coords="233,5,380,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6abb65e6452e6206299ea4a729f3c643"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6abb65e6452e6206299ea4a729f3c643">&#9670;&nbsp;</a></span>operator glm::vec3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classarc_1_1math_1_1_vec3.html">arc::math::Vec3</a>&lt; T &gt;::operator glm::vec3 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Convert the vec3 to a glm::vec3. Elements are converted to float type.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type stored by the vec.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Converted glm::vec3 object. </dd></dl>
+
+</div>
+</div>
 <a id="a6df04f6c6b6ce6ea2d6d52b045c81711"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6df04f6c6b6ce6ea2d6d52b045c81711">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/2]</span></h2>
 
@@ -337,11 +469,11 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Vec formed by multiplying the vec elements by the value. </dd></dl>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1math_1_1_vec3_a6df04f6c6b6ce6ea2d6d52b045c81711_cgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec3_a6df04f6c6b6ce6ea2d6d52b045c81711_cgraph" alt=""/></div>
 <map name="classarc_1_1math_1_1_vec3_a6df04f6c6b6ce6ea2d6d52b045c81711_cgraph" id="classarc_1_1math_1_1_vec3_a6df04f6c6b6ce6ea2d6d52b045c81711_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1math_1_1_vec3.html#a80bd6e5e1b23bd5fc9d2ef2029b0ff75" title="arc::math::Vec3::Vec3" alt="" coords="230,5,381,31"/>
@@ -466,11 +598,11 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Positive copy of the vec. </dd></dl>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1math_1_1_vec3_a2c094727fc05ca34474564f9927fba7b_cgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec3_a2c094727fc05ca34474564f9927fba7b_cgraph" alt=""/></div>
 <map name="classarc_1_1math_1_1_vec3_a2c094727fc05ca34474564f9927fba7b_cgraph" id="classarc_1_1math_1_1_vec3_a2c094727fc05ca34474564f9927fba7b_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1math_1_1_vec3.html#a80bd6e5e1b23bd5fc9d2ef2029b0ff75" title="arc::math::Vec3::Vec3" alt="" coords="232,5,383,31"/>
@@ -518,11 +650,11 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Vec formed by adding the value to the vec. </dd></dl>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1math_1_1_vec3_acec89074a7c405b24c3ea7efcb7df1c8_cgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec3_acec89074a7c405b24c3ea7efcb7df1c8_cgraph" alt=""/></div>
 <map name="classarc_1_1math_1_1_vec3_acec89074a7c405b24c3ea7efcb7df1c8_cgraph" id="classarc_1_1math_1_1_vec3_acec89074a7c405b24c3ea7efcb7df1c8_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1math_1_1_vec3.html#a80bd6e5e1b23bd5fc9d2ef2029b0ff75" title="arc::math::Vec3::Vec3" alt="" coords="232,5,383,31"/>
@@ -570,11 +702,11 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Vec formed by adding the vec to the vec. </dd></dl>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1math_1_1_vec3_a717b31ae4448e340be149cbef83e5f95_cgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec3_a717b31ae4448e340be149cbef83e5f95_cgraph" alt=""/></div>
 <map name="classarc_1_1math_1_1_vec3_a717b31ae4448e340be149cbef83e5f95_cgraph" id="classarc_1_1math_1_1_vec3_a717b31ae4448e340be149cbef83e5f95_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1math_1_1_vec3.html#a80bd6e5e1b23bd5fc9d2ef2029b0ff75" title="arc::math::Vec3::Vec3" alt="" coords="232,5,383,31"/>
@@ -614,7 +746,7 @@ template&lt;typename T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to this vec post-increment. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to this vec pre-increment. </dd></dl>
 
 </div>
 </div>
@@ -650,7 +782,7 @@ template&lt;typename T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A copy of this vec pre-increment. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A copy of this vec post-increment. </dd></dl>
 
 </div>
 </div>
@@ -770,11 +902,11 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Negative copy of the vec. </dd></dl>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1math_1_1_vec3_a89b4b2e42c5cdd627e0b21d5769ecda9_cgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec3_a89b4b2e42c5cdd627e0b21d5769ecda9_cgraph" alt=""/></div>
 <map name="classarc_1_1math_1_1_vec3_a89b4b2e42c5cdd627e0b21d5769ecda9_cgraph" id="classarc_1_1math_1_1_vec3_a89b4b2e42c5cdd627e0b21d5769ecda9_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1math_1_1_vec3.html#a80bd6e5e1b23bd5fc9d2ef2029b0ff75" title="arc::math::Vec3::Vec3" alt="" coords="229,5,380,31"/>
@@ -822,11 +954,11 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Vec formed by subtracting the value from the vec. </dd></dl>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1math_1_1_vec3_a3e18943f641650f73eb9a0f6300fb27a_cgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec3_a3e18943f641650f73eb9a0f6300fb27a_cgraph" alt=""/></div>
 <map name="classarc_1_1math_1_1_vec3_a3e18943f641650f73eb9a0f6300fb27a_cgraph" id="classarc_1_1math_1_1_vec3_a3e18943f641650f73eb9a0f6300fb27a_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1math_1_1_vec3.html#a80bd6e5e1b23bd5fc9d2ef2029b0ff75" title="arc::math::Vec3::Vec3" alt="" coords="229,5,380,31"/>
@@ -874,11 +1006,11 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Vec formed by subtracting the vec from the vec. </dd></dl>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1math_1_1_vec3_a5a66d5e2fcdc0ad52d9a4cd704ae5fdd_cgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec3_a5a66d5e2fcdc0ad52d9a4cd704ae5fdd_cgraph" alt=""/></div>
 <map name="classarc_1_1math_1_1_vec3_a5a66d5e2fcdc0ad52d9a4cd704ae5fdd_cgraph" id="classarc_1_1math_1_1_vec3_a5a66d5e2fcdc0ad52d9a4cd704ae5fdd_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1math_1_1_vec3.html#a80bd6e5e1b23bd5fc9d2ef2029b0ff75" title="arc::math::Vec3::Vec3" alt="" coords="229,5,380,31"/>
@@ -918,7 +1050,7 @@ template&lt;typename T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to this vec post-decrement. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to this vec pre-decrement. </dd></dl>
 
 </div>
 </div>
@@ -954,7 +1086,7 @@ template&lt;typename T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A copy of this vec pre-decrement. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A copy of this vec post-decrement. </dd></dl>
 
 </div>
 </div>
@@ -1081,11 +1213,11 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Vec formed by dividing the vec elements by the value. </dd></dl>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1math_1_1_vec3_af6474b9f942f5ff79017dc8fec86794d_cgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec3_af6474b9f942f5ff79017dc8fec86794d_cgraph" alt=""/></div>
 <map name="classarc_1_1math_1_1_vec3_af6474b9f942f5ff79017dc8fec86794d_cgraph" id="classarc_1_1math_1_1_vec3_af6474b9f942f5ff79017dc8fec86794d_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1math_1_1_vec3.html#a80bd6e5e1b23bd5fc9d2ef2029b0ff75" title="arc::math::Vec3::Vec3" alt="" coords="228,5,379,31"/>
@@ -1249,11 +1381,11 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Cross-product of the vecs. </dd></dl>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1math_1_1_vec3_aa33bbe08c1766b72f8ace587a74d2d50_cgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec3_aa33bbe08c1766b72f8ace587a74d2d50_cgraph" alt=""/></div>
 <map name="classarc_1_1math_1_1_vec3_aa33bbe08c1766b72f8ace587a74d2d50_cgraph" id="classarc_1_1math_1_1_vec3_aa33bbe08c1766b72f8ace587a74d2d50_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1math_1_1_vec3.html#a80bd6e5e1b23bd5fc9d2ef2029b0ff75" title="arc::math::Vec3::Vec3" alt="" coords="231,5,382,31"/>
@@ -1301,6 +1433,41 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Reference to this vec post-operation. </dd></dl>
+
+</div>
+</div>
+<a id="a3851ae27c5dc283d70dd6a26835e3ecb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3851ae27c5dc283d70dd6a26835e3ecb">&#9670;&nbsp;</a></span>sum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr T <a class="el" href="classarc_1_1math_1_1_vec3.html">arc::math::Vec3</a>&lt; T &gt;::sum </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculate the sum of the vec elements.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type stored by the vec.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Sum of the vec elements. </dd></dl>
 
 </div>
 </div>
@@ -1362,8 +1529,8 @@ template&lt;typename S , typename L &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a5e3552b645d76aa123835e4e4feb2a90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e3552b645d76aa123835e4e4feb2a90">&#9670;&nbsp;</a></span>@1</h2>
+<a id="afea789328239bb5567f941ff43666845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afea789328239bb5567f941ff43666845">&#9670;&nbsp;</a></span>@5</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1377,8 +1544,8 @@ template&lt;typename S , typename L &gt; </div>
 
 </div>
 </div>
-<a id="a5a808f67ac5a615e9fa7307f0c894519"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a808f67ac5a615e9fa7307f0c894519">&#9670;&nbsp;</a></span>@3</h2>
+<a id="a0a13d382297423c617d46e616ea29510"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a13d382297423c617d46e616ea29510">&#9670;&nbsp;</a></span>@7</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1392,8 +1559,8 @@ template&lt;typename S , typename L &gt; </div>
 
 </div>
 </div>
-<a id="afea789328239bb5567f941ff43666845"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afea789328239bb5567f941ff43666845">&#9670;&nbsp;</a></span>@5</h2>
+<a id="a07589a6518ebf580fcb9c5aebbb735c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07589a6518ebf580fcb9c5aebbb735c8">&#9670;&nbsp;</a></span>@9</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1575,7 +1742,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 1 2018 00:11:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 3 2018 20:14:14 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

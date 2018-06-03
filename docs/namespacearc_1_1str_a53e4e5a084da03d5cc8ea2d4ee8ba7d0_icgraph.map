@@ -1,4 +1,7 @@
 <map id="arc::str::to_string" name="arc::str::to_string">
-<area shape="rect" id="node2" href="$namespacearc_1_1format.html#a0c2871882ac6679e40c71a2176ddd529" title="arc::format::table" alt="" coords="174,5,295,31"/>
-<area shape="rect" id="node3" href="$namespacearc.html#af1dbfe8cd5fb9a3a09bfe75114f9057b" title="arc::operator\&lt;\&lt;" alt="" coords="178,55,291,80"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1format.html#a9d71aca4944b5beef1da1c6a6c5bc2cc" title="arc::format::rows" alt="" coords="174,5,295,31"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1format.html#acbe307a976e3844ae92ef64a1abe385e" title="arc::format::cols" alt="" coords="343,31,459,56"/>
+<area shape="rect" id="node6" href="$namespacearc.html#af1dbfe8cd5fb9a3a09bfe75114f9057b" title="arc::operator\&lt;\&lt;" alt="" coords="178,107,291,132"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1data.html#a09074b500bd1154ddc3895cd320e4276" title="arc::data::operator\&lt;\&lt;" alt="" coords="507,5,653,31"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1format.html#a4e78356644f1d9021a7e1133475ef645" title="arc::format::rows" alt="" coords="519,55,640,80"/>
 </map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['error',['Error',['../classarc_1_1log_1_1output_1_1_error.html',1,'arc::log::output']]]
+  ['app',['App',['../classarc_1_1sys_1_1file_1_1_app.html',1,'arc::sys::file']]]
 ];

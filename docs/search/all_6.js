@@ -16,6 +16,11 @@ var searchData=
   ['fg_5fred',['FG_RED',['../namespacearc_1_1ansi.html#a9e1508c27462183a72e42199349cfe9b',1,'arc::ansi']]],
   ['fg_5fwhite',['FG_WHITE',['../namespacearc_1_1ansi.html#af494011bc92bbe6d25b6dc2f8fe24b80',1,'arc::ansi']]],
   ['fg_5fyellow',['FG_YELLOW',['../namespacearc_1_1ansi.html#a0a78195873d901ed7f63b648a6ffe9dc',1,'arc::ansi']]],
+  ['file',['File',['../classarc_1_1sys_1_1_file.html',1,'arc::sys::File'],['../classarc_1_1sys_1_1_file.html#a5aa1d8f9b4ed576a0339cb98d0e2e80d',1,'arc::sys::File::File(const std::string &amp;path_) noexcept'],['../classarc_1_1sys_1_1_file.html#a3937b959c7db730ab21ad7f5bfd47182',1,'arc::sys::File::File(const File &amp;)=default'],['../classarc_1_1sys_1_1_file.html#a903dd16d66abd9128d835e23efc15616',1,'arc::sys::File::File(File &amp;&amp;)=default']]],
+  ['file_2ehpp',['file.hpp',['../file_8hpp.html',1,'']]],
+  ['filename',['filename',['../classarc_1_1sys_1_1_file.html#ab1f4a81e76b3aa0ff5bfaec23a11339f',1,'arc::sys::File']]],
+  ['fixed',['Fixed',['../classarc_1_1data_1_1bin_1_1_fixed.html',1,'arc::data::bin::Fixed&lt; T &gt;'],['../classarc_1_1data_1_1bin_1_1_fixed.html#a28880c0332eb10efe51be7fae92d260c',1,'arc::data::bin::Fixed::Fixed()']]],
+  ['fixed_2ehpp',['fixed.hpp',['../fixed_8hpp.html',1,'']]],
   ['foreground_2ehpp',['foreground.hpp',['../foreground_8hpp.html',1,'']]],
   ['format_2ehpp',['format.hpp',['../format_8hpp.html',1,'']]]
 ];

@@ -1,9 +1,10 @@
 <map id="include/arctk/math.hpp" name="include/arctk/math.hpp">
-<area shape="rect" id="node2" href="$conversion_8hpp.html" title="arctk/math/conversion.hpp" alt="" coords="5,79,183,104"/>
-<area shape="rect" id="node6" href="$power_8hpp.html" title="arctk/math/power.hpp" alt="" coords="206,79,355,104"/>
-<area shape="rect" id="node7" href="$vec_8hpp.html" title="arctk/math/vec.hpp" alt="" coords="379,79,513,104"/>
-<area shape="rect" id="node8" href="$vec3_8hpp.html" title="arctk/math/vec3.hpp" alt="" coords="537,79,678,104"/>
-<area shape="rect" id="node3" href="$constant_8hpp.html" title="arctk/constant.hpp" alt="" coords="122,152,253,177"/>
-<area shape="rect" id="node4" href="$constant_2math_8hpp.html" title="arctk/constant/math.hpp" alt="" coords="12,225,176,251"/>
-<area shape="rect" id="node5" href="$phys_8hpp.html" title="arctk/constant/phys.hpp" alt="" coords="200,225,362,251"/>
+<area shape="rect" id="node2" href="$conversion_8hpp.html" title="arctk/math/conversion.hpp" alt="" coords="185,79,363,104"/>
+<area shape="rect" id="node6" href="$power_8hpp.html" title="arctk/math/power.hpp" alt="" coords="13,79,162,104"/>
+<area shape="rect" id="node7" href="$vec2_8hpp.html" title="arctk/math/vec2.hpp" alt="" coords="387,79,529,104"/>
+<area shape="rect" id="node10" href="$vec3_8hpp.html" title="arctk/math/vec3.hpp" alt="" coords="552,79,694,104"/>
+<area shape="rect" id="node11" href="$vec4_8hpp.html" title="arctk/math/vec4.hpp" alt="" coords="718,79,859,104"/>
+<area shape="rect" id="node3" href="$constant_8hpp.html" title="arctk/constant.hpp" alt="" coords="115,152,246,177"/>
+<area shape="rect" id="node4" href="$constant_2math_8hpp.html" title="arctk/constant/math.hpp" alt="" coords="5,225,169,251"/>
+<area shape="rect" id="node5" href="$phys_8hpp.html" title="arctk/constant/phys.hpp" alt="" coords="193,225,355,251"/>
 </map>

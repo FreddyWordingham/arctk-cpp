@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['phi',['phi',['../classarc_1_1math_1_1_vec3.html#a363f86b226241ce24ba832bc47a378f0',1,'arc::math::Vec3']]],
-  ['pi',['PI',['../namespacearc_1_1constant.html#a3eccb0dc76feae32072ab77709824a47',1,'arc::constant']]]
+  ['next_5fseed',['next_seed',['../classarc_1_1rng_1_1_generator.html#a618407e3f623cbb84e2f5e8ec03f7714',1,'arc::rng::Generator']]]
 ];

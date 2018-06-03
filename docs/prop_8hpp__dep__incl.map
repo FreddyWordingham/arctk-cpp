@@ -1,5 +1,10 @@
 <map id="include/arctk/prop.hpp" name="include/arctk/prop.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="30,239,127,264"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="157,572,254,597"/>
 <area shape="rect" id="node3" href="$search_2container_8hpp.html" title="include/arctk/search\l/container.hpp" alt="" coords="65,79,205,117"/>
 <area shape="rect" id="node4" href="$search_8hpp.html" title="include/arctk/search.hpp" alt="" coords="116,165,282,191"/>
+<area shape="rect" id="node5" href="$table_8hpp.html" title="include/arctk/format\l/table.hpp" alt="" coords="189,239,326,277"/>
+<area shape="rect" id="node6" href="$bin_8hpp.html" title="include/arctk/data\l/bin.hpp" alt="" coords="243,325,369,364"/>
+<area shape="rect" id="node9" href="$format_8hpp.html" title="include/arctk/format.hpp" alt="" coords="468,419,631,444"/>
+<area shape="rect" id="node7" href="$fixed_8hpp.html" title="include/arctk/data\l/bin/fixed.hpp" alt="" coords="268,412,394,451"/>
+<area shape="rect" id="node8" href="$data_8hpp.html" title="include/arctk/data.hpp" alt="" coords="319,499,471,524"/>
 </map>

@@ -1,4 +1,6 @@
 <map id="include/arctk/math/vec3.hpp" name="include/arctk/math/vec3.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="22,165,119,191"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="40,312,137,337"/>
 <area shape="rect" id="node3" href="$math_8hpp.html" title="include/arctk/math.hpp" alt="" coords="50,92,205,117"/>
+<area shape="rect" id="node4" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="101,165,292,191"/>
+<area shape="rect" id="node5" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="152,239,295,264"/>
 </map>

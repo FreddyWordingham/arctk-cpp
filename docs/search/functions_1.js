@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['cerr',['cerr',['../classarc_1_1log_1_1_term.html#a5518740e962d66515062b31803bc296a',1,'arc::log::Term']]],
-  ['contains',['contains',['../namespacearc_1_1prop.html#a54974d0d56ee90909eac6cdd1b94cff5',1,'arc::prop']]],
-  ['cout',['cout',['../classarc_1_1log_1_1_term.html#a1270f5437a7a81008c020f1716a19326',1,'arc::log::Term']]],
-  ['cube',['cube',['../namespacearc_1_1math.html#a9d4f7bb2246b959e8745cb8b60a98f70',1,'arc::math']]]
+  ['bin',['Bin',['../classarc_1_1data_1_1_bin.html#ad6c6c31ee250b2471f3ae136c3911572',1,'arc::data::Bin::Bin(size_t res_) noexcept'],['../classarc_1_1data_1_1_bin.html#a251acd19ed5253054328da81e6304438',1,'arc::data::Bin::Bin(const Bin &amp;) noexcept=default'],['../classarc_1_1data_1_1_bin.html#af3a3cb70d4a2cdb7896be1e95413a07d',1,'arc::data::Bin::Bin(Bin &amp;&amp;) noexcept=default']]]
 ];

@@ -1,9 +1,14 @@
 var searchData=
 [
-  ['_7eerror',['~Error',['../classarc_1_1log_1_1output_1_1_error.html#a36416f6a5de400456a91505c127d6973',1,'arc::log::output::Error']]],
-  ['_7emessage',['~Message',['../classarc_1_1log_1_1output_1_1_message.html#a56c430e02ae18342714652cf9ff957c0',1,'arc::log::output::Message']]],
-  ['_7eoutput',['~Output',['../classarc_1_1log_1_1_output.html#a85530d6f818b77efdda3c8ec79b43ede',1,'arc::log::Output']]],
-  ['_7eprogress',['~Progress',['../classarc_1_1log_1_1output_1_1_progress.html#a21dc7938d0bbca49fa5e29e82354fda1',1,'arc::log::output::Progress']]],
-  ['_7estopwatch',['~Stopwatch',['../classarc_1_1log_1_1output_1_1_stopwatch.html#a31bf1b247e47e909f4b5284fdcc6d09d',1,'arc::log::output::Stopwatch']]],
-  ['_7ewarning',['~Warning',['../classarc_1_1log_1_1output_1_1_warning.html#a2bcb577e371bc80a7b8d72d163ea84b8',1,'arc::log::output::Warning']]]
+  ['sample',['sample',['../classarc_1_1rng_1_1distribution_1_1_uniform.html#a316487105389068590f99d743375338f',1,'arc::rng::distribution::Uniform::sample()'],['../classarc_1_1rng_1_1_distribution.html#a9c6caef65bded0535024af6dfc0f3cd9',1,'arc::rng::Distribution::sample()']]],
+  ['seed',['seed',['../classarc_1_1rng_1_1_generator.html#a922333c0cb6210131de7a31b1cf11e19',1,'arc::rng::Generator']]],
+  ['set_5fclear_5fcol',['set_clear_col',['../classarc_1_1gui_1_1_window.html#a1af40e8879d7e50f5b9802814f331f61',1,'arc::gui::Window']]],
+  ['set_5fcol',['set_col',['../classarc_1_1log_1_1output_1_1_error.html#ab0add577826d88539bb15f4c35659626',1,'arc::log::output::Error::set_col()'],['../classarc_1_1log_1_1output_1_1_message.html#a08617c5f3d09eeb964b6559c64b8ead9',1,'arc::log::output::Message::set_col()'],['../classarc_1_1log_1_1output_1_1_progress.html#a23ea60be1f6d68411eb0ae4b130f89c3',1,'arc::log::output::Progress::set_col()'],['../classarc_1_1log_1_1output_1_1_stopwatch.html#a817a831b7b8faf28c593369ca18ab0b9',1,'arc::log::output::Stopwatch::set_col()'],['../classarc_1_1log_1_1output_1_1_warning.html#a221c68df7217a6c063937d4a867704fc',1,'arc::log::output::Warning::set_col()']]],
+  ['set_5flocation_5fcol',['set_location_col',['../classarc_1_1log_1_1_term.html#a86a8762023add5d93695bf0039051927',1,'arc::log::Term']]],
+  ['set_5fnext_5fseed',['set_next_seed',['../classarc_1_1rng_1_1_generator.html#aa42736377c4eaa9e306358fab6d7f7dd',1,'arc::rng::Generator']]],
+  ['set_5fupdate_5fdelta',['set_update_delta',['../classarc_1_1log_1_1output_1_1_progress.html#a6c100ac27e6068630e85ae8576e47aa2',1,'arc::log::output::Progress']]],
+  ['sq',['sq',['../namespacearc_1_1math.html#a95cadfea8bcd5d8ec23e0dabbaf6dda6',1,'arc::math']]],
+  ['stopwatch',['Stopwatch',['../classarc_1_1log_1_1output_1_1_stopwatch.html#a83348b9117e92b18801b32eaf2c9d3c9',1,'arc::log::output::Stopwatch::Stopwatch(const std::string &amp;str_) noexcept'],['../classarc_1_1log_1_1output_1_1_stopwatch.html#a83a5526d730b31f03374e755c8a1eb2d',1,'arc::log::output::Stopwatch::Stopwatch(const std::string &amp;file_, const std::string &amp;func_, int line_, const std::string &amp;str_) noexcept'],['../classarc_1_1log_1_1output_1_1_stopwatch.html#ac703c3ddef27fbf367c370eaaecf4232',1,'arc::log::output::Stopwatch::Stopwatch(const Stopwatch &amp;)=delete'],['../classarc_1_1log_1_1output_1_1_stopwatch.html#af68befcf007e815d0a60d7863a7c3408',1,'arc::log::output::Stopwatch::Stopwatch(Stopwatch &amp;&amp;)=delete']]],
+  ['sum',['sum',['../classarc_1_1math_1_1_vec2.html#aab5774fe5ded5d451397d41224c23999',1,'arc::math::Vec2::sum()'],['../classarc_1_1math_1_1_vec3.html#a3851ae27c5dc283d70dd6a26835e3ecb',1,'arc::math::Vec3::sum()'],['../classarc_1_1math_1_1_vec4.html#abf863b138826858ebc14434fa7c0b693',1,'arc::math::Vec4::sum()']]],
+  ['swap_5fbuffer',['swap_buffer',['../classarc_1_1gui_1_1_window.html#a8bafc6647a4c4b37047de985d9e961f2',1,'arc::gui::Window']]]
 ];

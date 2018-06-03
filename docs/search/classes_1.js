@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['message',['Message',['../classarc_1_1log_1_1output_1_1_message.html',1,'arc::log::output']]]
+  ['bin',['Bin',['../classarc_1_1data_1_1_bin.html',1,'arc::data']]]
 ];

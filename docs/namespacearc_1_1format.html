@@ -80,41 +80,134 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0c2871882ac6679e40c71a2176ddd529"><td class="memTemplParams" colspan="2">template&lt;typename C , typename T  = typename C::value_type, typename I  = typename C::const_iterator&gt; </td></tr>
-<tr class="memitem:a0c2871882ac6679e40c71a2176ddd529"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1format.html#a0c2871882ac6679e40c71a2176ddd529">table</a> (const C &amp;cont_, size_t width_=0, const std::string &amp;delim_=&quot;, &quot;) noexcept</td></tr>
-<tr class="separator:a0c2871882ac6679e40c71a2176ddd529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d71aca4944b5beef1da1c6a6c5bc2cc"><td class="memTemplParams" colspan="2">template&lt;typename... A&gt; </td></tr>
+<tr class="memitem:a9d71aca4944b5beef1da1c6a6c5bc2cc"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1format.html#a9d71aca4944b5beef1da1c6a6c5bc2cc">rows</a> (int width_, const std::string &amp;delim_, A... args_)</td></tr>
+<tr class="separator:a9d71aca4944b5beef1da1c6a6c5bc2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e78356644f1d9021a7e1133475ef645"><td class="memTemplParams" colspan="2">template&lt;typename C , typename T  = typename C::value_type, typename I  = typename C::const_iterator&gt; </td></tr>
+<tr class="memitem:a4e78356644f1d9021a7e1133475ef645"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1format.html#a4e78356644f1d9021a7e1133475ef645">rows</a> (int width_, const std::string &amp;delim_, const C &amp;cont_) noexcept</td></tr>
+<tr class="separator:a4e78356644f1d9021a7e1133475ef645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbe307a976e3844ae92ef64a1abe385e"><td class="memTemplParams" colspan="2">template&lt;typename... A&gt; </td></tr>
+<tr class="memitem:acbe307a976e3844ae92ef64a1abe385e"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1format.html#acbe307a976e3844ae92ef64a1abe385e">cols</a> (int width_, const std::string &amp;delim_, A... args_)</td></tr>
+<tr class="separator:acbe307a976e3844ae92ef64a1abe385e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10b3d59ac23b49660cf824c8f95b5a5e"><td class="memTemplParams" colspan="2">template&lt;typename C , typename T  = typename C::value_type, typename I  = typename C::const_iterator, typename J  = typename T::const_iterator&gt; </td></tr>
+<tr class="memitem:a10b3d59ac23b49660cf824c8f95b5a5e"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1format.html#a10b3d59ac23b49660cf824c8f95b5a5e">cols</a> (int width_, const std::string &amp;delim_, const C &amp;cont_) noexcept</td></tr>
+<tr class="separator:a10b3d59ac23b49660cf824c8f95b5a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>format namespace </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a0c2871882ac6679e40c71a2176ddd529"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c2871882ac6679e40c71a2176ddd529">&#9670;&nbsp;</a></span>table()</h2>
+<a id="acbe307a976e3844ae92ef64a1abe385e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbe307a976e3844ae92ef64a1abe385e">&#9670;&nbsp;</a></span>cols() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename C , typename T  = typename C::value_type, typename I  = typename C::const_iterator&gt; </div>
+template&lt;typename... A&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string arc::format::table </td>
+          <td class="memname">std::string arc::format::cols </td>
           <td>(</td>
-          <td class="paramtype">const C &amp;&#160;</td>
-          <td class="paramname"><em>cont_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>width_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>delim_</em>&#160;</td>
+          <td class="paramname"><em>delim_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">A...&#160;</td>
+          <td class="paramname"><em>args_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Form a pack of container objects into a table. Containers are formatted as columns.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">A</td><td>Container type pack.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width_</td><td>Width allocated to each container element print. </td></tr>
+    <tr><td class="paramname">delim_</td><td>Delimiter used to separate container elements. </td></tr>
+    <tr><td class="paramname">args_</td><td>Container pack to form table columns.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String of table of columns. </dd></dl>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespacearc_1_1format_acbe307a976e3844ae92ef64a1abe385e_cgraph.png" border="0" usemap="#namespacearc_1_1format_acbe307a976e3844ae92ef64a1abe385e_cgraph" alt=""/></div>
+<map name="namespacearc_1_1format_acbe307a976e3844ae92ef64a1abe385e_cgraph" id="namespacearc_1_1format_acbe307a976e3844ae92ef64a1abe385e_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1format.html#a9d71aca4944b5beef1da1c6a6c5bc2cc" title="arc::format::rows" alt="" coords="170,29,290,55"/>
+<area shape="rect" id="node3" href="namespacearc_1_1str.html#a53e4e5a084da03d5cc8ea2d4ee8ba7d0" title="arc::str::to_string" alt="" coords="338,5,459,31"/>
+<area shape="rect" id="node4" href="namespacearc_1_1search.html#ab5608d27962c637137d2c243213fa366" title="arc::search::max" alt="" coords="338,55,458,80"/>
+<area shape="rect" id="node5" href="namespacearc_1_1search.html#aac33af22b716309501eaa7f5a10cc1d0" title="arc::search::max_index" alt="" coords="507,55,666,80"/>
+</map>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespacearc_1_1format_acbe307a976e3844ae92ef64a1abe385e_icgraph.png" border="0" usemap="#namespacearc_1_1format_acbe307a976e3844ae92ef64a1abe385e_icgraph" alt=""/></div>
+<map name="namespacearc_1_1format_acbe307a976e3844ae92ef64a1abe385e_icgraph" id="namespacearc_1_1format_acbe307a976e3844ae92ef64a1abe385e_icgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1data.html#a09074b500bd1154ddc3895cd320e4276" title="arc::data::operator\&lt;\&lt;" alt="" coords="170,5,315,31"/>
+<area shape="rect" id="node3" href="namespacearc_1_1format.html#a4e78356644f1d9021a7e1133475ef645" title="arc::format::rows" alt="" coords="182,55,303,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a10b3d59ac23b49660cf824c8f95b5a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10b3d59ac23b49660cf824c8f95b5a5e">&#9670;&nbsp;</a></span>cols() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename C , typename T  = typename C::value_type, typename I  = typename C::const_iterator, typename J  = typename T::const_iterator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string arc::format::cols </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>delim_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const C &amp;&#160;</td>
+          <td class="paramname"><em>cont_</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -128,24 +221,196 @@ template&lt;typename C , typename T  = typename C::value_type, typename I  = typ
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Format a given container into a table.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">cont_</td><td>Container to form into table. </td></tr>
-    <tr><td class="paramname">width_</td><td>Print width allocated to each element. </td></tr>
-    <tr><td class="paramname">delim_</td><td>Table delimiter string.</td></tr>
+<p>Form a container into a human reader table. Each element of the container is treated as a column.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">C</td><td>Type of container. </td></tr>
+    <tr><td class="paramname">T</td><td>Type stored by C. </td></tr>
+    <tr><td class="paramname">I</td><td>Type of const iterator of C. </td></tr>
+    <tr><td class="paramname">J</td><td>Type of const iterator of T.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Formatted data table string. </dd></dl>
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width_</td><td>Width allocated to each container element print. </td></tr>
+    <tr><td class="paramname">delim_</td><td>Delimiter used to separate container elements. </td></tr>
+    <tr><td class="paramname">cont_</td><td>Container to form into a table.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String of table of columns. </dd></dl>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="namespacearc_1_1format_a0c2871882ac6679e40c71a2176ddd529_cgraph.png" border="0" usemap="#namespacearc_1_1format_a0c2871882ac6679e40c71a2176ddd529_cgraph" alt=""/></div>
-<map name="namespacearc_1_1format_a0c2871882ac6679e40c71a2176ddd529_cgraph" id="namespacearc_1_1format_a0c2871882ac6679e40c71a2176ddd529_cgraph">
-<area shape="rect" id="node2" href="namespacearc_1_1str.html#a53e4e5a084da03d5cc8ea2d4ee8ba7d0" title="arc::str::to_string" alt="" coords="175,5,295,31"/>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespacearc_1_1format_a10b3d59ac23b49660cf824c8f95b5a5e_cgraph.png" border="0" usemap="#namespacearc_1_1format_a10b3d59ac23b49660cf824c8f95b5a5e_cgraph" alt=""/></div>
+<map name="namespacearc_1_1format_a10b3d59ac23b49660cf824c8f95b5a5e_cgraph" id="namespacearc_1_1format_a10b3d59ac23b49660cf824c8f95b5a5e_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1format.html#a9d71aca4944b5beef1da1c6a6c5bc2cc" title="arc::format::rows" alt="" coords="170,5,290,31"/>
+<area shape="rect" id="node4" href="namespacearc_1_1search.html#ab5608d27962c637137d2c243213fa366" title="arc::search::max" alt="" coords="338,55,458,80"/>
+<area shape="rect" id="node3" href="namespacearc_1_1str.html#a53e4e5a084da03d5cc8ea2d4ee8ba7d0" title="arc::str::to_string" alt="" coords="338,5,459,31"/>
+<area shape="rect" id="node5" href="namespacearc_1_1search.html#aac33af22b716309501eaa7f5a10cc1d0" title="arc::search::max_index" alt="" coords="507,55,666,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9d71aca4944b5beef1da1c6a6c5bc2cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d71aca4944b5beef1da1c6a6c5bc2cc">&#9670;&nbsp;</a></span>rows() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... A&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string arc::format::rows </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>delim_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">A...&#160;</td>
+          <td class="paramname"><em>args_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Form a pack of container objects into a table. Containers are formatted as rows.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">A</td><td>Container type pack.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width_</td><td>Width allocated to each container element print. </td></tr>
+    <tr><td class="paramname">delim_</td><td>Delimiter used to separate container elements. </td></tr>
+    <tr><td class="paramname">args_</td><td>Container pack to form table rows.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String of table of rows. </dd></dl>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespacearc_1_1format_a9d71aca4944b5beef1da1c6a6c5bc2cc_cgraph.png" border="0" usemap="#namespacearc_1_1format_a9d71aca4944b5beef1da1c6a6c5bc2cc_cgraph" alt=""/></div>
+<map name="namespacearc_1_1format_a9d71aca4944b5beef1da1c6a6c5bc2cc_cgraph" id="namespacearc_1_1format_a9d71aca4944b5beef1da1c6a6c5bc2cc_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1str.html#a53e4e5a084da03d5cc8ea2d4ee8ba7d0" title="arc::str::to_string" alt="" coords="174,5,295,31"/>
+<area shape="rect" id="node3" href="namespacearc_1_1search.html#ab5608d27962c637137d2c243213fa366" title="arc::search::max" alt="" coords="174,55,294,80"/>
+<area shape="rect" id="node4" href="namespacearc_1_1search.html#aac33af22b716309501eaa7f5a10cc1d0" title="arc::search::max_index" alt="" coords="343,55,502,80"/>
+</map>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespacearc_1_1format_a9d71aca4944b5beef1da1c6a6c5bc2cc_icgraph.png" border="0" usemap="#namespacearc_1_1format_a9d71aca4944b5beef1da1c6a6c5bc2cc_icgraph" alt=""/></div>
+<map name="namespacearc_1_1format_a9d71aca4944b5beef1da1c6a6c5bc2cc_icgraph" id="namespacearc_1_1format_a9d71aca4944b5beef1da1c6a6c5bc2cc_icgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1format.html#acbe307a976e3844ae92ef64a1abe385e" title="arc::format::cols" alt="" coords="174,31,290,56"/>
+<area shape="rect" id="node3" href="namespacearc_1_1data.html#a09074b500bd1154ddc3895cd320e4276" title="arc::data::operator\&lt;\&lt;" alt="" coords="338,5,484,31"/>
+<area shape="rect" id="node4" href="namespacearc_1_1format.html#a4e78356644f1d9021a7e1133475ef645" title="arc::format::rows" alt="" coords="351,55,471,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4e78356644f1d9021a7e1133475ef645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e78356644f1d9021a7e1133475ef645">&#9670;&nbsp;</a></span>rows() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename C , typename T  = typename C::value_type, typename I  = typename C::const_iterator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string arc::format::rows </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>delim_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const C &amp;&#160;</td>
+          <td class="paramname"><em>cont_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Form a container into a human reader table. Each element of the container is treated as a row.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">C</td><td>Type of container. </td></tr>
+    <tr><td class="paramname">T</td><td>Type stored by C. </td></tr>
+    <tr><td class="paramname">I</td><td>Type of const iterator of C.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width_</td><td>Width allocated to each container element print. </td></tr>
+    <tr><td class="paramname">delim_</td><td>Delimiter used to separate container elements. </td></tr>
+    <tr><td class="paramname">cont_</td><td>Container to form into a table.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String of table of rows. </dd></dl>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespacearc_1_1format_a4e78356644f1d9021a7e1133475ef645_cgraph.png" border="0" usemap="#namespacearc_1_1format_a4e78356644f1d9021a7e1133475ef645_cgraph" alt=""/></div>
+<map name="namespacearc_1_1format_a4e78356644f1d9021a7e1133475ef645_cgraph" id="namespacearc_1_1format_a4e78356644f1d9021a7e1133475ef645_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1format.html#acbe307a976e3844ae92ef64a1abe385e" title="arc::format::cols" alt="" coords="174,56,290,81"/>
+<area shape="rect" id="node4" href="namespacearc_1_1str.html#a53e4e5a084da03d5cc8ea2d4ee8ba7d0" title="arc::str::to_string" alt="" coords="507,107,627,132"/>
+<area shape="rect" id="node5" href="namespacearc_1_1search.html#ab5608d27962c637137d2c243213fa366" title="arc::search::max" alt="" coords="507,5,627,31"/>
+<area shape="rect" id="node3" href="namespacearc_1_1format.html#a9d71aca4944b5beef1da1c6a6c5bc2cc" title="arc::format::rows" alt="" coords="338,56,459,81"/>
+<area shape="rect" id="node6" href="namespacearc_1_1search.html#aac33af22b716309501eaa7f5a10cc1d0" title="arc::search::max_index" alt="" coords="675,5,835,31"/>
 </map>
 </div>
 
@@ -154,7 +419,7 @@ template&lt;typename C , typename T  = typename C::value_type, typename I  = typ
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 1 2018 00:11:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 3 2018 20:14:14 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

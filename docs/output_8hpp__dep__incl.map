@@ -1,8 +1,10 @@
 <map id="include/arctk/log/output.hpp" name="include/arctk/log/output.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="304,239,401,264"/>
-<area shape="rect" id="node3" href="$error_8hpp.html" title="include/arctk/log/output\l/error.hpp" alt="" coords="34,79,192,117"/>
-<area shape="rect" id="node4" href="$log_8hpp.html" title="include/arctk/log.hpp" alt="" coords="337,165,481,191"/>
-<area shape="rect" id="node5" href="$message_8hpp.html" title="include/arctk/log/output\l/message.hpp" alt="" coords="216,79,375,117"/>
-<area shape="rect" id="node6" href="$progress_8hpp.html" title="include/arctk/log/output\l/progress.hpp" alt="" coords="448,79,607,117"/>
-<area shape="rect" id="node7" href="$warning_8hpp.html" title="include/arctk/log/output\l/warning.hpp" alt="" coords="631,79,789,117"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="305,385,402,411"/>
+<area shape="rect" id="node3" href="$error_8hpp.html" title="include/arctk/log/output\l/error.hpp" alt="" coords="44,79,202,117"/>
+<area shape="rect" id="node4" href="$log_8hpp.html" title="include/arctk/log.hpp" alt="" coords="278,165,422,191"/>
+<area shape="rect" id="node7" href="$message_8hpp.html" title="include/arctk/log/output\l/message.hpp" alt="" coords="276,79,434,117"/>
+<area shape="rect" id="node8" href="$progress_8hpp.html" title="include/arctk/log/output\l/progress.hpp" alt="" coords="459,79,617,117"/>
+<area shape="rect" id="node9" href="$warning_8hpp.html" title="include/arctk/log/output\l/warning.hpp" alt="" coords="641,79,800,117"/>
+<area shape="rect" id="node5" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="180,239,371,264"/>
+<area shape="rect" id="node6" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="227,312,371,337"/>
 </map>
