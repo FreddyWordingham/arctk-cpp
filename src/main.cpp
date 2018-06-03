@@ -23,6 +23,7 @@
 #include <arctk/format.hpp>
 #include <arctk/format/table.hpp>
 #include <arctk/gui.hpp>
+#include <arctk/gui/keymap.hpp>
 #include <arctk/gui/window.hpp>
 #include <arctk/log.hpp>
 #include <arctk/log/output.hpp>
