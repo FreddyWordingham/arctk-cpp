@@ -118,13 +118,13 @@ namespace arc //! arctk namespace
 
                 if (state == GLFW_PRESS)
                 {
-                    if (keybind._sticky || (keybind._state == GLFW_RELEASE))
+                    if (keybind.sticky() || (keybind.state() == GLFW_RELEASE))
                     {
-                        keybind._func();
+                        keybind();
                     }
                 }
 
-                keybind._state = state;
+                keybind.set_state(state);
             }
 
             return (true);
