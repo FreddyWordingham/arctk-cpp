@@ -24,7 +24,7 @@
 #include <cmath>
 
 //  -- Graphical --
-#ifdef ARCTK_MOD_CORE
+#ifdef ARCTK_MOD_GUI
 #include <glm/glm.hpp>
 #endif
 
