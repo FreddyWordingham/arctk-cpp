@@ -59,6 +59,12 @@ namespace arc //! arctk namespace
             inline explicit Keybind(const std::function<void()>& func_, bool sticky_ = false, int state_ = GLFW_RELEASE) noexcept;
 
 
+            //  == OPERATORS ==
+          public:
+            //  -- Call --
+            inline void operator()() const noexcept;
+
+
             //  == METHODS ==
           public:
             //  -- Getters --
@@ -75,6 +81,15 @@ namespace arc //! arctk namespace
           , _sticky(sticky_)
           , _state(state_)
         {
+        }
+
+
+
+        //  == OPERATORS ==
+        //  -- Call --
+        inline void Keybind::operator()() const noexcept
+        {
+            _func();
         }
 
 
