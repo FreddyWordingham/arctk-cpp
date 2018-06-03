@@ -20,12 +20,15 @@
 
 
 //  == IMPORTS ==
-//  -- Arctk --
-#include <arctk/gui/window.hpp>
+//  -- Std --
+#include <map>
 
 //  -- Graphical --
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+
+//  -- Arctk --
+#include <arctk/gui/window.hpp>
 
 
 
