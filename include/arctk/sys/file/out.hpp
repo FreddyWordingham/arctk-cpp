@@ -52,6 +52,9 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline explicit Out(const std::string& path_) noexcept;
 
+                //  -- Destructors --
+                inline ~Out() noexcept override;
+
 
                 //  == METHODS ==
               public:
@@ -67,6 +70,17 @@ namespace arc //! arctk namespace
               , _handle(init_handle())
             {
                 assert(!path_.empty());
+            }
+
+
+            //  -- Destructors --
+            inline Out::~Out() noexcept
+            {
+                assert(_handle.is_open());
+
+                _handle.close();
+
+                assert(!_handle.is_open());
             }
 
 
