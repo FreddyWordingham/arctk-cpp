@@ -344,10 +344,11 @@ add_library(arctk STATIC ${SOURCE_FILES} ${HEADER_FILES})
 
 
 #   == DEFINITIONS ==
+string(REPLACE " " ";" ARCTK_MOD_DEFS ${ARCTK_MOD_DEFS})
 foreach (i ${ARCTK_MOD_DEFS})
     target_compile_definitions(arctk PRIVATE ${i})
     message("Pre-defined: ${i}")
-endforeach (i)
+endforeach ()
 
 
 
