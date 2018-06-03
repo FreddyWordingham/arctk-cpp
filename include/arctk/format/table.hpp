@@ -207,7 +207,7 @@ namespace arc //! arctk namespace
          *  @return String of table of columns.
          */
         template <typename C, typename T, typename I, typename J>
-        inline std::string cols(int width_, const std::string& delim_, const C& cont_) noexcept
+        inline std::string cols(int width_, const std::string& delim_, const C& cont_) noexcept // NOLINT
         {
             std::vector<size_t> rows;
             rows.reserve(cont_.size());
