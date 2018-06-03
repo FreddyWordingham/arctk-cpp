@@ -80,7 +80,7 @@ namespace arc //! arctk namespace
         //  -- Seed --
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wglobal-constructors"
-        uint64_t Generator::next_seed = static_cast<uint64_t>(std::time(nullptr));
+        uint64_t Generator::next_seed = static_cast<uint64_t>(std::time(nullptr)); // NOLINT
 #pragma clang diagnostic pop
 
 
