@@ -150,13 +150,11 @@ namespace arc //! arctk namespace
          *
          *  @param  x_  Initial value of the x component.
          *  @param  y_  Initial value of the y component.
-         *  @param  z_  Initial value of the z component.
          */
         template <typename T>
-        constexpr inline Vec2<T>::Vec2(const T x_, const T y_, const T z_) noexcept
+        constexpr inline Vec2<T>::Vec2(const T x_, const T y_) noexcept
           : x(x_)
           , y(y_)
-          , z(z_)
         {
         }
 
