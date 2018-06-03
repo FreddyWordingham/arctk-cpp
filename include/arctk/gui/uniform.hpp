@@ -33,6 +33,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
+         *  Shader uniform object.
          */
         class Uniform
         {
