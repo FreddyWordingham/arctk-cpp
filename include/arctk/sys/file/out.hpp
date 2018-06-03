@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Constructors --
                 inline explicit Out(const std::string& path_) noexcept;
-                inline Out(const Out&) = default; //!< Defaulted copy constructor.
+                inline Out(const Out&) = delete;  //!< Deleted copy constructor.
                 inline Out(Out&&)      = default; //!< Defaulted move constructor.
 
                 //  -- Destructors --
