@@ -109,6 +109,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the sticky status of the keybinding.
+         *
+         *  @return Keybinging sticky status.
+         */
         inline bool Keybind::sticky() const noexcept
         {
             return (_sticky);
