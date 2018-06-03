@@ -38,7 +38,7 @@ arctk_build()
         -DCLANG_TIDY=$4                             \
         -DDOCUMENT=$5                               \
         -DARCTK_MOD_CORE=$6                         \
-        -DARCTK_MOD_CORE=$7                         \
+        -DARCTK_MOD_GUI=$7                          \
         ..
 
     local cmake_build_status=$?;
