@@ -73,6 +73,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Uniform(GLint handle_, type type_, control control_) noexcept;
 
 
             //  == METHODS ==
@@ -83,6 +84,12 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        inline Uniform::Uniform(const GLint handle_, const type type_, const control control_) noexcept
+          : _handle(handle_)
+          , _type(type_)
+          , _control(control_)
+        {
+        }
 
 
 
