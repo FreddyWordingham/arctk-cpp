@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Handle --
-                std::ofstream _handle; //!< Handle to the input file.
+                std::ifstream _handle; //!< Handle to the input file.
 
 
                 //  == INSTANTIATION ==
@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
                 inline ~In() noexcept override;
 
                 //  -- Initialisation --
-                inline std::ofstream init_handle() noexcept;
+                inline std::ifstream init_handle() noexcept;
 
 
                 //  == OPERATORS ==
@@ -93,11 +93,11 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
-            inline std::ofstream In::init_handle() noexcept
+            inline std::ifstream In::init_handle() noexcept
             {
                 assert(!_path.empty());
 
-                std::ofstream handle;
+                std::ifstream handle;
                 handle.open(_path, std::fstream::app);
 
                 if (!handle.is_open())
