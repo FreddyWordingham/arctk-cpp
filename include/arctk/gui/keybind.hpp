@@ -20,7 +20,8 @@
 
 
 //  == IMPORTS ==
-//  -- Arctk --
+//  -- Std --
+#include <functional>
 
 
 
@@ -45,6 +46,10 @@ namespace arc //! arctk namespace
 
             //  == FIELDS ==
           private:
+            //  -- Operation --
+            const std::function<void()> _func; //!< Function to call upon keypress.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
