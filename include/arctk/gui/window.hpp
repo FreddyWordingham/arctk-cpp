@@ -41,6 +41,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
+         *  Graphical window rendering class.
          */
         class Window
         {
