@@ -63,7 +63,7 @@ arctk_update()
 
     git pull origin master;
 
-    arctk_build_default;
+    arctk_build $ARCTK_BUILD_ARGS;
 
     arctk_install;
 
