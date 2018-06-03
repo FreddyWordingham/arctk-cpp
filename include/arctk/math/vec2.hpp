@@ -94,7 +94,6 @@ namespace arc //! arctk namespace
             constexpr inline Vec2<T>& operator-=(const Vec2<T>& vec_) noexcept;
             constexpr inline Vec2<T>& operator*=(T val_) noexcept;
             constexpr inline Vec2<T>& operator/=(T val_) noexcept;
-            constexpr inline Vec2<T>& operator^=(const Vec2<T>& vec_) noexcept;
 
             //  -- Increment / Decrement --
             constexpr inline Vec2<T>&      operator++() noexcept;
@@ -296,30 +295,6 @@ namespace arc //! arctk namespace
         {
             x /= val_;
             y /= val_;
-
-            return (*this);
-        }
-
-        /**
-         *  Perform the cross product using another vec.
-         *  This vec forms the left-hand-side of the cross operator.
-         *
-         *  @tparam T   Type stored by the vec.
-         *
-         *  @param  vec_    Vec used to perform the cross product with.
-         *
-         *  @return Reference to this vec post-operation.
-         */
-        template <typename T>
-        constexpr inline Vec2<T>& Vec2<T>::operator^=(const Vec2<T>& vec_) noexcept
-        {
-            const T pre_x{x};
-            const T pre_y{y};
-            const T pre_z{z};
-
-            x = (pre_y * vec_.z) - (pre_z * vec_.y);
-            y = (pre_z * vec_.x) - (pre_x * vec_.z);
-            z = (pre_x * vec_.y) - (pre_y * vec_.x);
 
             return (*this);
         }
