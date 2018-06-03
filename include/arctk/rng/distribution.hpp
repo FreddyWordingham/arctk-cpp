@@ -43,8 +43,19 @@ namespace arc //! arctk namespace
         {
             //  == INSTANTIATION ==
           public:
+            //  -- Constructors --
+            inline Distribution(const Distribution&) noexcept = default; //!< Defaulted copy constructor.
+            inline Distribution(Distribution&&) noexcept      = default; //!< Defaulted move constructor.
+
             //  -- Destructors --
             virtual inline ~Distribution() noexcept = default;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Distribution& operator=(const Distribution&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Distribution& operator=(Distribution&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
