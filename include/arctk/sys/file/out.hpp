@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <fstream>
 
 
 
@@ -42,7 +43,8 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
-                //  -- Path --
+                //  -- Handle --
+                std::ofstream _handle; //!< Handle to the output file.
 
 
                 //  == INSTANTIATION ==
