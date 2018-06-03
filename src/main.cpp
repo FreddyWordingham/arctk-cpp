@@ -22,6 +22,7 @@
 #include <arctk/data/bin/fixed.hpp>
 #include <arctk/format.hpp>
 #include <arctk/format/table.hpp>
+#include <arctk/gui.hpp>
 #include <arctk/log.hpp>
 #include <arctk/log/output.hpp>
 #include <arctk/log/output/error.hpp>
