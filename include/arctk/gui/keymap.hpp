@@ -93,6 +93,12 @@ namespace arc //! arctk namespace
             _map.emplace(std::make_pair(key_, Keybind(func_, sticky_, state_)));
         }
 
+        /**
+         *  Unbind a currently set keybinding.
+         *
+         *  @pre    key_ must not be reserved quit key.
+         *  @pre    key_ must not be already found within _map.
+         */
         inline void Keymap::unbind(const int key_) noexcept
         {
             assert(key_ != QUIT_KEY);
