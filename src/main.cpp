@@ -25,6 +25,7 @@
 #include <arctk/gui.hpp>
 #include <arctk/gui/keybind.hpp>
 #include <arctk/gui/keymap.hpp>
+#include <arctk/gui/uniform.hpp>
 #include <arctk/gui/window.hpp>
 #include <arctk/log.hpp>
 #include <arctk/log/output.hpp>
