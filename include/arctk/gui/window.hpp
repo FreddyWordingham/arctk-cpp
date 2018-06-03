@@ -193,6 +193,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the handle of the window.
+         *
+         *  @return Window handle.
+         */
         inline GLFWwindow* Window::handle() const noexcept
         {
             return (_handle);
