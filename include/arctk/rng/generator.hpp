@@ -35,7 +35,7 @@ namespace arc //! arctk namespace
         class Generator
         {
             //  == FIELDS ==
-          public:
+          private:
             //  -- Seed --
             static uint64_t next_seed; //!< Value of the next seed to be used.
             const uint64_t  _seed;     //!< Value used to initialise the generator.
