@@ -65,8 +65,6 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
-            //  == OPERATORS ==
-          public:
             //  -- Assignment --
             inline Bin& operator=(const Bin&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
             inline Bin& operator=(Bin&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
