@@ -58,8 +58,8 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            inline Generator& operator=(const Generator&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
-            inline Generator& operator=(Generator&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
+            inline Generator& operator=(const Generator&) noexcept = delete; //!< Deleted copy operator. @return Reference to copied object.
+            inline Generator& operator=(Generator&&) noexcept = delete;      //!< Deleted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
