@@ -101,10 +101,20 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a bin with a given resolution.
+         *
+         *  @tparam T   Type of value to be counted.
+         *
+         *  @param  res_    Resolution of the bin.
+         *
+         *  @pre    res_ must be positive.
+         */
         template <typename T>
         inline Bin<T>::Bin(const size_t res_) noexcept
           : _counts(res_)
         {
+            assert(res_ > 0);
         }
 
 
