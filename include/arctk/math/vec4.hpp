@@ -96,6 +96,11 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
+            //  -- Conversion --
+#ifdef ARCTK_MOD_CORE
+            constexpr inline operator glm::vec4() const noexcept;
+#endif
+
             //  -- Stream --
             template <typename S, typename L>
             friend inline S& operator<<(S& stream_, const Vec4<T>& vec_) noexcept;
@@ -178,6 +183,15 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
+        //  -- Conversion --
+#ifdef ARCTK_MOD_CORE
+        template <typename T>
+        constexpr inline Vec4<T>::operator glm::vec4() const noexcept
+        {
+            return (glm::vec4(static_cast<float>(x), static_cast<float>(y), static_cast<float>(z), static_cast<float>(w)));
+        }
+#endif
+
         //  -- Stream --
         /**
          *  Print a vec4 as a human-readable string.
