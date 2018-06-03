@@ -277,7 +277,7 @@ namespace arc //! arctk namespace
 
             glUseProgram(_handle);
 
-            glUniform1i(_uniform.find(name_)->second._handle, int_);
+            glUniform1i(_uniform.find(name_)->second.handle(), int_);
         }
 
         inline void Shader::set_uniform(const std::string& name_, const float float_) noexcept
@@ -286,7 +286,7 @@ namespace arc //! arctk namespace
 
             glUseProgram(_handle);
 
-            glUniform1f(_uniform.find(name_)->second._handle, float_);
+            glUniform1f(_uniform.find(name_)->second.handle(), float_);
         }
 
         inline void Shader::set_uniform(const std::string& name_, const glm::vec2& vec2_) noexcept
@@ -295,7 +295,7 @@ namespace arc //! arctk namespace
 
             glUseProgram(_handle);
 
-            glUniform2fv(_uniform.find(name_)->second._handle, 1, &vec2_[0]);
+            glUniform2fv(_uniform.find(name_)->second.handle(), 1, &vec2_[0]);
         }
 
         inline void Shader::set_uniform(const std::string& name_, const glm::vec3& vec3_) noexcept
@@ -304,7 +304,7 @@ namespace arc //! arctk namespace
 
             glUseProgram(_handle);
 
-            glUniform3fv(_uniform.find(name_)->second._handle, 1, &vec3_[0]);
+            glUniform3fv(_uniform.find(name_)->second.handle(), 1, &vec3_[0]);
         }
 
         inline void Shader::set_uniform(const std::string& name_, const glm::vec4& vec4_) noexcept
@@ -313,7 +313,7 @@ namespace arc //! arctk namespace
 
             glUseProgram(_handle);
 
-            glUniform4fv(_uniform.find(name_)->second._handle, 1, &vec4_[0]);
+            glUniform4fv(_uniform.find(name_)->second.handle(), 1, &vec4_[0]);
         }
 
         inline void Shader::set_uniform(const std::string& name_, const glm::mat2& mat2_) noexcept
@@ -322,7 +322,7 @@ namespace arc //! arctk namespace
 
             glUseProgram(_handle);
 
-            glUniformMatrix2fv(_uniform.find(name_)->second._handle, 1, GL_FALSE, &mat2_[0][0]);
+            glUniformMatrix2fv(_uniform.find(name_)->second.handle(), 1, GL_FALSE, &mat2_[0][0]);
         }
 
         inline void Shader::set_uniform(const std::string& name_, const glm::mat3& mat3_) noexcept
@@ -331,7 +331,7 @@ namespace arc //! arctk namespace
 
             glUseProgram(_handle);
 
-            glUniformMatrix3fv(_uniform.find(name_)->second._handle, 1, GL_FALSE, &mat3_[0][0]);
+            glUniformMatrix3fv(_uniform.find(name_)->second.handle(), 1, GL_FALSE, &mat3_[0][0]);
         }
 
         inline void Shader::set_uniform(const std::string& name_, const glm::mat4& mat4_) noexcept
@@ -340,7 +340,7 @@ namespace arc //! arctk namespace
 
             glUseProgram(_handle);
 
-            glUniformMatrix4fv(_uniform.find(name_)->second._handle, 1, GL_FALSE, &mat4_[0][0]);
+            glUniformMatrix4fv(_uniform.find(name_)->second.handle(), 1, GL_FALSE, &mat4_[0][0]);
         }
 
 
