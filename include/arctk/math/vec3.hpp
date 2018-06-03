@@ -136,6 +136,7 @@ namespace arc //! arctk namespace
             //  -- Getters --
             constexpr inline T      sum() const noexcept;
             constexpr inline double mag() const noexcept;
+            constexpr inline void   normalise() const noexcept;
         };
 
 
@@ -617,17 +618,27 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
-        //  -- Getters --
+        //  -- Mathematical --
         template <typename T>
         constexpr inline T Vec3<T>::sum() const noexcept
         {
-            return (vec_.x + vec_.y + vec_.z);
+            return (x + y + z);
         }
 
         template <typename T>
         constexpr inline double Vec3<T>::mag() const noexcept
         {
-            return (std::sqrt(static_cast<double>((vec_.x * vec_.x) + (vec_.y * vec_.y) + (vec_.z * vec_.z))));
+            return (std::sqrt(static_cast<double>((x * x) + (y * y) + (z * z))));
+        }
+
+        template <typename T>
+        constexpr inline void Vec3<T>::normalise() const noexcept
+        {
+            const double m = 1.0 / mag();
+
+            x *= m;
+            y *= m;
+            z *= m;
         }
 
 
