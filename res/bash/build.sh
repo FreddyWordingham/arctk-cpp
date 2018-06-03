@@ -63,11 +63,6 @@ arctk_build()
     return $cmake_build_status;
 }
 
-arctk_build_default()
-{
-    arctk_build debug gcc g++ false false true true;
-}
-
 
 #   -- Make --
 arctk_make()
