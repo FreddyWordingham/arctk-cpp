@@ -19,6 +19,13 @@
 
 
 
+//  == IMPORTS ==
+
+//  -- Arctk --
+#include <arctk/log.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
