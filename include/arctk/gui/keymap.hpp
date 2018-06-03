@@ -69,6 +69,14 @@ namespace arc //! arctk namespace
         //  -- Getters --
 
         //  -- Operation --
+        /**
+         *  Poll through key press events from the given window and call corresponding functions.
+         *  Determine if the given window should remain open.
+         *
+         *  @param  win_    Window to poll events from.
+         *
+         *  @return True if the window should remain open.
+         */
         inline bool Keymap::poll(const Window& win_) noexcept
         {
             glfwPollEvents();
