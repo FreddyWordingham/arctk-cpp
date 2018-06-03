@@ -70,6 +70,9 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline bool sticky() const noexcept;
             inline int  state() const noexcept;
+
+            //  -- Setters --
+            inline void set_state(int state_) noexcept;
         };
 
 
@@ -104,6 +107,13 @@ namespace arc //! arctk namespace
         inline int Keybind::state() const noexcept
         {
             return (_state);
+        }
+
+
+        //  -- Setters --
+        inline void Keybind::set_state(const int state_) noexcept
+        {
+            _state = state_;
         }
 
 
