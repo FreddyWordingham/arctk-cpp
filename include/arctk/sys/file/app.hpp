@@ -80,6 +80,13 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION --
             //  -- Constructors --
+            /**
+             *  Construct a handle to an appending file at a given path.
+             *
+             *  @param  path_   Path to file.
+             *
+             *  @pre    path_ may not be empty.
+             */
             inline App::App(const std::string& path_) noexcept
               : File(path_)
               , _handle(init_handle())
