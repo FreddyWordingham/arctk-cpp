@@ -575,6 +575,11 @@ namespace arc //! arctk namespace
             return (std::sqrt(static_cast<double>((x * x) + (y * y))));
         }
 
+        /**
+         *  Normalise the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         */
         template <typename T>
         constexpr inline void Vec2<T>::normalise() const noexcept
         {
