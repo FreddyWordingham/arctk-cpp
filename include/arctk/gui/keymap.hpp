@@ -66,6 +66,9 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Setters --
+            inline void bind(int key_, const std::function<void()>& func_, bool sticky_ = false, int state_ = GLFW_RELEASE) noexcept;
+
             //  -- Operation --
             inline bool poll(const Window& win_) noexcept;
         };
@@ -78,7 +81,14 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
-        //  -- Getters --
+        //  -- Setters --
+        inline void Keymap::bind(int key_, const std::function<void()>& func_, const bool sticky_, const int state_) noexcept
+        {
+            assert(key_ != QUIT_KEY);
+
+            _map.emplace(std::make_pair(key_, Keybind(func_, sticky_, state_)));
+        }
+
 
         //  -- Operation --
         /**
