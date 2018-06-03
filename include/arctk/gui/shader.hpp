@@ -33,7 +33,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
-         *  Graphial shader class used for rendering actors.
+         *  Graphical shader class used for rendering actors.
          */
         class Shader
         {
