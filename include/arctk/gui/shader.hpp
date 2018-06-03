@@ -80,6 +80,17 @@ namespace arc //! arctk namespace
             inline GLint                                 mvp() const noexcept;
             inline GLint                                 model() const noexcept;
             inline const std::map<std::string, Uniform>& uniform() const noexcept;
+
+            //  -- Setters --
+            inline void add_uniform(const std::string& name_, Uniform::type type_, Uniform::control control_) noexcept;
+            inline void set_uniform(const std::string& name_, int int_) noexcept;
+            inline void set_uniform(const std::string& name_, float float_) noexcept;
+            inline void set_uniform(const std::string& name_, const glm::vec2& vec2_) noexcept;
+            inline void set_uniform(const std::string& name_, const glm::vec3& vec3_) noexcept;
+            inline void set_uniform(const std::string& name_, const glm::vec4& vec4_) noexcept;
+            inline void set_uniform(const std::string& name_, const glm::mat2& mat2_) noexcept;
+            inline void set_uniform(const std::string& name_, const glm::mat3& mat3_) noexcept;
+            inline void set_uniform(const std::string& name_, const glm::mat4& mat4_) noexcept;
         };
 
 
@@ -243,6 +254,93 @@ namespace arc //! arctk namespace
         inline const std::map<std::string, Uniform>& Shader::uniform() const noexcept
         {
             return (_uniform);
+        }
+
+
+        //  -- Setters --
+        inline void Shader::add_uniform(const std::string& name_, const Uniform::type type_, Uniform::control control_) noexcept
+        {
+            GLint id = glGetUniformLocation(_handle, name_.c_str());
+
+            if (id < 0)
+            {
+                ERROR(42) << "Unable to add uniform to gui Shader.\n"
+                          << "Failed to determine the uniform location of: '" << name_ << "' within the shader.";
+            }
+
+            _uniform.emplace(std::make_pair(name_, Uniform(id, type_, control_)));
+        }
+
+        inline void Shader::set_uniform(const std::string& name_, const int int_) noexcept
+        {
+            assert(_uniform.find(name_) != _uniform.end());
+
+            glUseProgram(_handle);
+
+            glUniform1i(_uniform.find(name_)->second._handle, int_);
+        }
+
+        inline void Shader::set_uniform(const std::string& name_, const float float_) noexcept
+        {
+            assert(_uniform.find(name_) != _uniform.end());
+
+            glUseProgram(_handle);
+
+            glUniform1f(_uniform.find(name_)->second._handle, float_);
+        }
+
+        inline void Shader::set_uniform(const std::string& name_, const glm::vec2& vec2_) noexcept
+        {
+            assert(_uniform.find(name_) != _uniform.end());
+
+            glUseProgram(_handle);
+
+            glUniform2fv(_uniform.find(name_)->second._handle, 1, &vec2_[0]);
+        }
+
+        inline void Shader::set_uniform(const std::string& name_, const glm::vec3& vec3_) noexcept
+        {
+            assert(_uniform.find(name_) != _uniform.end());
+
+            glUseProgram(_handle);
+
+            glUniform3fv(_uniform.find(name_)->second._handle, 1, &vec3_[0]);
+        }
+
+        inline void Shader::set_uniform(const std::string& name_, const glm::vec4& vec4_) noexcept
+        {
+            assert(_uniform.find(name_) != _uniform.end());
+
+            glUseProgram(_handle);
+
+            glUniform4fv(_uniform.find(name_)->second._handle, 1, &vec4_[0]);
+        }
+
+        inline void Shader::set_uniform(const std::string& name_, const glm::mat2& mat2_) noexcept
+        {
+            assert(_uniform.find(name_) != _uniform.end());
+
+            glUseProgram(_handle);
+
+            glUniformMatrix2fv(_uniform.find(name_)->second._handle, 1, GL_FALSE, &mat2_[0][0]);
+        }
+
+        inline void Shader::set_uniform(const std::string& name_, const glm::mat3& mat3_) noexcept
+        {
+            assert(_uniform.find(name_) != _uniform.end());
+
+            glUseProgram(_handle);
+
+            glUniformMatrix3fv(_uniform.find(name_)->second._handle, 1, GL_FALSE, &mat3_[0][0]);
+        }
+
+        inline void Shader::set_uniform(const std::string& name_, const glm::mat4& mat4_) noexcept
+        {
+            assert(_uniform.find(name_) != _uniform.end());
+
+            glUseProgram(_handle);
+
+            glUniformMatrix4fv(_uniform.find(name_)->second._handle, 1, GL_FALSE, &mat4_[0][0]);
         }
 
 
