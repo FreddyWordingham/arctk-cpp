@@ -152,6 +152,7 @@ namespace arc //! arctk namespace
           : x({})
           , y({})
           , z({})
+          , w({})
         {
         }
 
