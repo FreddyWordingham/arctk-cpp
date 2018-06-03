@@ -35,6 +35,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
+         *  File handling base class.
          */
         class File
         {
