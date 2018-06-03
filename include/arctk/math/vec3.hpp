@@ -92,7 +92,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Conversion --
 #ifdef ARCTK_MOD_GUI
-            constexpr inline operator glm::vec3() const noexcept; // NOLINT
+            inline operator glm::vec3() const noexcept; // NOLINT
 #endif
 
             //  -- Stream --
@@ -187,7 +187,7 @@ namespace arc //! arctk namespace
          *  @return Converted glm::vec3 object.
          */
         template <typename T>
-        constexpr inline Vec3<T>::operator glm::vec3() const noexcept
+        inline Vec3<T>::operator glm::vec3() const noexcept
         {
             return (glm::vec3(static_cast<float>(x), static_cast<float>(y), static_cast<float>(z)));
         }
