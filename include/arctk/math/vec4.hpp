@@ -193,7 +193,7 @@ namespace arc //! arctk namespace
         template <typename S, typename T>
         inline S& operator<<(S& stream_, const Vec4<T>& vec_) noexcept
         {
-            stream_ << '{' << vec_.x << ", " << vec_.y << ", " << vec_.z << '}';
+            stream_ << '{' << vec_.x << ", " << vec_.y << ", " << vec_.z << ", " << vec_.w << '}';
 
             return (stream_);
         }
