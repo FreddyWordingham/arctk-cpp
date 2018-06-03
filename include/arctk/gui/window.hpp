@@ -90,9 +90,26 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        /**
+         *  Construct a graphical window object.
+         *
+         *  @param  title_      Title of window.
+         *  @param  width_      Width of window in pixels.
+         *  @param  height_     Height of window in pixels.
+         *  @param  aa_samples_ Number of anti-aliasing samples.
+         *
+         *  @pre    title_ must not be empty.
+         *  @pre    width_ must be positive.
+         *  @pre    height_ must be positive.
+         *  @pre    aa_samples_ must be positive.
+         */
         inline Window::Window(const std::string& title_, const int width_, const int height_, const int aa_samples_) noexcept
           : _handle(init_handle(title_, width_, height_, aa_samples_))
         {
+            assert(!title_.empty());
+            assert(width_ > 0);
+            assert(height_ > 0);
+            assert(aa_samples_ > 0);
         }
 
 
