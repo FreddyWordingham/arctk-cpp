@@ -88,7 +88,7 @@ namespace arc //! arctk namespace
         {
             size_t dot_pos = _path.find_last_of('.');
 
-            return ((slash_pos == std::string::npos) ? _path : _path.substr(dot_pos + 1, std::string::npos));
+            return ((dot_pos == std::string::npos) ? _path : _path.substr(dot_pos + 1, std::string::npos));
         }
 
 
