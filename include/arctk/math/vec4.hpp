@@ -293,6 +293,7 @@ namespace arc //! arctk namespace
             x *= val_;
             y *= val_;
             z *= val_;
+            w *= val_;
 
             return (*this);
         }
