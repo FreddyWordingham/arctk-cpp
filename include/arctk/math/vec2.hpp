@@ -549,6 +549,13 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Mathematical --
+        /**
+         *  Calculate the sum of the vec elements.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return Sum of the vec elements.
+         */
         template <typename T>
         constexpr inline T Vec2<T>::sum() const noexcept
         {
