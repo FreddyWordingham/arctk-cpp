@@ -56,6 +56,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline explicit Bin(size_t res_) noexcept;
+            inline Output(const Output&) = delete; //!< Deleted copy constructor.
+            inline Output(Output&&)      = delete; //!< Deleted move constructor.
 
             //  -- Destructors --
             virtual inline ~Bin() noexcept = default;
@@ -63,6 +65,12 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Bin& operator=(const Bin&) = delete; //!< Deleted copy operator. @return Reference to copied object.
+            inline Bin& operator=(Bin&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
+
             //  -- Stream --
             template <typename S>
             friend inline S& operator<<(S& stream_, const Bin<T>& bin_) noexcept
