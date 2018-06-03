@@ -312,7 +312,6 @@ namespace arc //! arctk namespace
         {
             ++x;
             ++y;
-            ++z;
 
             return (*this);
         }
