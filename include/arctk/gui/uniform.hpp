@@ -51,6 +51,14 @@ namespace arc //! arctk namespace
                 MAT4
             };
 
+            //  -- Controller --
+            enum class control
+            {
+                CAMERA,
+                ACTOR,
+                USER
+            };
+
 
             //  == FIELDS ==
           private:
