@@ -82,8 +82,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            virtual inline double            min() const noexcept   = 0;
-            virtual inline double            max() const noexcept   = 0;
+            virtual inline double            min() const noexcept   = 0; //!< Get the minimum of the range.
+            virtual inline double            max() const noexcept   = 0; //!< Get the maximum of the range.
             virtual inline double            width() const noexcept = 0;
             inline const std::vector<T>&     counts() const noexcept;
             inline double                    centre(size_t index_) const noexcept;
