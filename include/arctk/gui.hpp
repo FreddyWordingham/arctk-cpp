@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_MATH_HPP
-#define ARCTK_MATH_HPP
+#ifndef ARCTK_GUI_HPP
+#define ARCTK_GUI_HPP
 
 
 
@@ -31,4 +31,4 @@
 
 
 //  == GUARD END ==
-#endif // ARCTK_MATH_HPP
+#endif // ARCTK_GUI_HPP
