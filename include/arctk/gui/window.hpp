@@ -66,6 +66,9 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline GLFWwindow* handle() const noexcept;
+
+            //  -- Setters --
+            inline void set_clear_col(const math::Vec4& col_) noexcept;
         };
 
 
@@ -134,6 +137,13 @@ namespace arc //! arctk namespace
         inline GLFWwindow* Window::handle() const noexcept
         {
             return (_handle);
+        }
+
+
+        //  -- Setters --
+        inline void Window::set_clear_col(const math::Vec4& col_) noexcept
+        {
+            glClearColor(col_.r, col_.g, col_.b, col_.a);
         }
 
 
