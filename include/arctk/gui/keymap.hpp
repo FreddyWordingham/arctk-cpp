@@ -85,6 +85,8 @@ namespace arc //! arctk namespace
          *  @param  func_   Function to bind.
          *  @param  sticky_ Sticky status of the keybinding.
          *  @param  state_  Initial state of the keybinding.
+         *
+         *  @pre    key_ must not be reserved quit key.
          */
         inline void Keymap::bind(int key_, const std::function<void()>& func_, const bool sticky_, const int state_) noexcept
         {
