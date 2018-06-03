@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             constexpr inline Vec2() noexcept;
-            constexpr inline Vec2(T x_, T y_, T z_) noexcept;
+            constexpr inline Vec2(T x_, T y_) noexcept;
 
 
             //  == OPERATORS ==
@@ -140,7 +140,6 @@ namespace arc //! arctk namespace
         constexpr inline Vec2<T>::Vec2() noexcept
           : x({})
           , y({})
-          , z({})
         {
         }
 
