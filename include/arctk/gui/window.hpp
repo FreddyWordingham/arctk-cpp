@@ -205,6 +205,11 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
+        /**
+         *  Set the clear colour of the window.
+         *
+         *  @param  col_    Colour used to clear the window.
+         */
         inline void Window::set_clear_col(const math::Vec4<float>& col_) noexcept
         {
             glClearColor(col_.r, col_.g, col_.b, col_.a);
