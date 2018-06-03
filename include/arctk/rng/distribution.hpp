@@ -61,7 +61,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Sampling --
-            virtual inline T sample(Generator& gen_) noexcept = 0; // NOLINT
+            virtual inline T sample(
+              Generator& gen_) noexcept = 0; //!< Sample a value from the distribution. @tparam T   Type to be generated. @param  gen_    Generator used to create the uniform deviates. @return Sampled value from the distribution. // NOLINT
         };
 
 
