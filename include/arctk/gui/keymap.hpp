@@ -58,6 +58,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Keymap() noexcept = default;
 
 
             //  == METHODS ==
