@@ -75,6 +75,11 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        /**
+         *  Construct a handle to a file at a given path.
+         *
+         *  @param  path_   Path to file.
+         */
         inline File::File(const std::string& path_) noexcept
           : _path(path_)
         {
