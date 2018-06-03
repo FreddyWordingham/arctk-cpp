@@ -63,6 +63,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline bool sticky() const noexcept;
+            inline int  state() const noexcept;
         };
 
 
@@ -83,6 +84,11 @@ namespace arc //! arctk namespace
         inline bool Keybind::sticky() const noexcept
         {
             return (_sticky);
+        }
+
+        inline int Keybind::state() const noexcept
+        {
+            return (_state);
         }
 
 
