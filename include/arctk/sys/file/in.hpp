@@ -121,6 +121,16 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
             //  -- Stream --
+            /**
+             *  Stream the entire contents of the file to a stream.
+             *
+             *  @tparam S   Type of stream.
+             *
+             *  @param  stream_ Stream to write to.
+             *  @param  file_   File to be read.
+             *
+             *  @return Reference to stream_ post-write.
+             */
             template <typename S>
             inline S& operator<<(S& stream_, const In& file_) noexcept
             {
