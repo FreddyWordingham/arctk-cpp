@@ -90,13 +90,13 @@ namespace arc //! arctk namespace
             inline uint64_t Quality::gen_base() noexcept
             {
                 _u = _u * static_cast<uint64_t>(2862933555777941757) + static_cast<uint64_t>(7046029254386353087);
-                _v ^= _v >> 17;
-                _v ^= _v << 31;
-                _v ^= _v >> 8;
-                _w         = static_cast<uint64_t>(4294957665) * (_w & 0xffffffff) + (_w >> 32);
-                uint64_t x = _u ^ (_u << 21);
-                x ^= x >> 35;
-                x ^= x << 4;
+                _v ^= _v >> 17;                                                                  // NOLINT
+                _v ^= _v << 31;                                                                  // NOLINT
+                _v ^= _v >> 8;                                                                   // NOLINT
+                _w         = static_cast<uint64_t>(4294957665) * (_w & 0xffffffff) + (_w >> 32); // NOLINT
+                uint64_t x = _u ^ (_u << 21);                                                    // NOLINT
+                x ^= x >> 35;                                                                    // NOLINT
+                x ^= x << 4;                                                                     // NOLINT
 
                 return ((x + _v) ^ _w);
             }
