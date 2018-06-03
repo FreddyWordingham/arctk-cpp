@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Sampling --
-            virtual inline T sample(Generator& gen_) noexcept = 0;
+            virtual inline T sample(Generator& gen_) noexcept = 0; // NOLINT
         };
 
 
