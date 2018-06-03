@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
             /**
              *  Output file class.
              */
-            class Out
+            class Out : public File
             {
                 //  == FIELDS ==
               private:
