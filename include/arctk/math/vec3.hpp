@@ -629,6 +629,13 @@ namespace arc //! arctk namespace
             return (x + y + z);
         }
 
+        /**
+         *  Calculate the magnitude of the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return Magnitude of the vec.
+         */
         template <typename T>
         constexpr inline double Vec3<T>::mag() const noexcept
         {
