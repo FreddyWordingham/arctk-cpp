@@ -129,6 +129,12 @@ namespace arc //! arctk namespace
             //  -- Access --
             constexpr inline T&       operator[](size_t index_) noexcept;
             constexpr inline const T& operator[](size_t index_) const noexcept;
+
+
+            //  == METHODS ==
+          public:
+            //  -- Getters --
+            inline T sum() const noexcept;
         };
 
 
@@ -605,6 +611,16 @@ namespace arc //! arctk namespace
             assert(index_ < 3);
 
             return ((&x)[index_]);
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        template <typename T>
+        constexpr inline T Vec3<T>::sum() const noexcept
+        {
+            return (vec_.x + vec_.y + vec_.z);
         }
 
 
