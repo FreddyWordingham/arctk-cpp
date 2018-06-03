@@ -98,7 +98,7 @@ namespace arc //! arctk namespace
                 assert(!_path.empty());
 
                 std::ifstream handle;
-                handle.open(_path, std::fstream::app);
+                handle.open(_path, std::fstream::in);
 
                 if (!handle.is_open())
                 {
