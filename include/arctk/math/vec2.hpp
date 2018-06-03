@@ -80,7 +80,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Conversion --
 #ifdef ARCTK_MOD_GUI
-            constexpr inline operator glm::vec2() const noexcept; // NOLINT
+            inline operator glm::vec2() const noexcept; // NOLINT
 #endif
 
             //  -- Stream --
@@ -170,7 +170,7 @@ namespace arc //! arctk namespace
          *  @return Converted glm::vec2 object.
          */
         template <typename T>
-        constexpr inline Vec2<T>::operator glm::vec2() const noexcept
+        inline Vec2<T>::operator glm::vec2() const noexcept
         {
             return (glm::vec2(static_cast<float>(x), static_cast<float>(y)));
         }
