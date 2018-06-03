@@ -119,7 +119,6 @@ namespace arc //! arctk namespace
             constexpr inline Vec4<T> operator*(T val_) const noexcept;
             constexpr inline T       operator*(const Vec4<T>& vec_) const noexcept;
             constexpr inline Vec4<T> operator/(T val_) const noexcept;
-            constexpr inline Vec4<T> operator^(const Vec4<T>& vec_) const noexcept;
 
             //  -- Access --
             constexpr inline T&       operator[](size_t index_) noexcept;
@@ -519,22 +518,6 @@ namespace arc //! arctk namespace
         {
             return (Vec4(x / val_, y / val_, z / val_));
         }
-
-        /**
-         *  Calculate the cross-product of two vecs.
-         *
-         *  @tparam T   Type stored by the vecs.
-         *
-         *  @param  vec_    Vec to perform the cross-product with.
-         *
-         *  @return Cross-product of the vecs.
-         */
-        template <typename T>
-        constexpr inline Vec4<T> Vec4<T>::operator^(const Vec4<T>& vec_) const noexcept
-        {
-            return (Vec4((y * vec_.z) - (z * vec_.y), (z * vec_.x) - (x * vec_.z), (x * vec_.y) - (y * vec_.x)));
-        }
-
 
 
         //  -- Access --
