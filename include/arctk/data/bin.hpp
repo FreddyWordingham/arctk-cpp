@@ -79,7 +79,7 @@ namespace arc //! arctk namespace
             //  -- Getters --
             virtual inline double            min() const noexcept   = 0; //!< Get the minimum of the range. @return Range minimum.
             virtual inline double            max() const noexcept   = 0; //!< Get the maximum of the range. @return Range maximum.
-            virtual inline double            width() const noexcept = 0; //!< Get the inter bin width.
+            virtual inline double            width() const noexcept = 0; //!< Get the inter bin width. @return Inter bin width.
             inline const std::vector<T>&     counts() const noexcept;
             inline double                    centre(size_t index_) const noexcept;
             inline const std::vector<double> centres() const noexcept;
