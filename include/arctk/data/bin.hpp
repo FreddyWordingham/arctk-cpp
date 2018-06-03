@@ -71,12 +71,7 @@ namespace arc //! arctk namespace
 
             //  -- Stream --
             template <typename S>
-            friend inline S& operator<<(S& stream_, const Bin<T>& bin_) noexcept
-            {
-                stream_ << format::cols(10, ", ", bin_.centres(), bin_._counts);
-
-                return (stream_);
-            }
+            friend inline S& operator<<(S& stream_, const Bin<T>& bin_) noexcept;
 
 
             //  == METHODS ==
@@ -115,6 +110,18 @@ namespace arc //! arctk namespace
           : _counts(res_)
         {
             assert(res_ > 0);
+        }
+
+
+
+        //  == OPERATORS ==
+        //  -- Stream --
+        template <typename S, typename T>
+        inline S& operator<<(S& stream_, const Bin<T>& bin_) noexcept
+        {
+            stream_ << format::cols(10, ", ", bin_.centres(), bin_._counts);
+
+            return (stream_);
         }
 
 
