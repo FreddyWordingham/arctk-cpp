@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
             class Quality : public Generator
             {
                 //  == FIELDS ==
-              public:
+              private:
                 //  -- Generation --
                 uint64_t _u; //!< First generation variable.
                 uint64_t _v; //!< Second generation variable.
