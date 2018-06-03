@@ -43,8 +43,9 @@ namespace arc //! arctk namespace
             const GLuint _handle; //!< Handle of the shader.
 
             //  -- Uniforms --
-            const GLint _mvp;   //!< Model-view-projection uniform handle.
-            const GLint _model; //!< Model uniform handle.
+            const GLint                    _mvp;     //!< Model-view-projection uniform handle.
+            const GLint                    _model;   //!< Model uniform handle.
+            std::map<std::string, Uniform> _uniform; //!< Uniform mappings.
 
 
             //  == INSTANTIATION ==
