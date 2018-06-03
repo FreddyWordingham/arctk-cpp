@@ -23,6 +23,11 @@
 //  -- Std --
 #include <cmath>
 
+//  -- Graphical --
+#ifdef ARCTK_MOD_CORE
+#include <glm/glm.hpp>
+#endif
+
 
 
 //  == NAMESPACE ==
