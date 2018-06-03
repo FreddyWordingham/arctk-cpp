@@ -57,7 +57,6 @@ namespace arc //! arctk namespace
             {
                 T x,   //!< Cartesian x-dimension.
                   rho, //!< Polar radial-dimension.
-                  r;   //!< Colour red-dimension.
             };
 
             /**
@@ -67,17 +66,6 @@ namespace arc //! arctk namespace
             {
                 T y,     //!< Cartesian y-dimension.
                   theta, //!< Polar inclination-dimension.
-                  g;     //!< Colour green-dimension.
-            };
-
-            /**
-             *  Third vec element.
-             */
-            union
-            {
-                T z,   //!< Cartesian z-dimension.
-                  phi, //!< Polar azimuthal-dimension.
-                  b;   //!< Colour blue-dimension.
             };
 
 
