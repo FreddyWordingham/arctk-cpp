@@ -134,6 +134,17 @@ namespace arc //! arctk namespace
             return (_counts);
         }
 
+        /**
+         *  Get a central position of a bin.
+         *
+         *  @tparam T   Type of value to be counted.
+         *
+         *  @param  index_  Index of the bin to determine the centre of.
+         *
+         *  @pre    index_ must be less than the size of counts.
+         *
+         *  @return Centre position of the bin.
+         */
         template <typename T>
         inline double Bin<T>::centre(size_t index_) const noexcept
         {
