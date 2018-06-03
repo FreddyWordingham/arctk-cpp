@@ -67,6 +67,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Initialisation --
             inline GLuint init_handle(const std::string& vert_code_, const std::string& frag_code_) const noexcept;
+            inline GLuint init_handle(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) const noexcept;
 
 
 
@@ -120,6 +121,40 @@ namespace arc //! arctk namespace
             }
 
             glDeleteShader(vert_shader);
+            glDeleteShader(frag_shader);
+
+            return (handle);
+        }
+
+        inline GLuint Shader::init_handle(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) const noexcept
+        {
+            const GLuint vert_shader = init_sub_shader(vert_code_, GL_VERTEX_SHADER);
+            const GLuint geom_shader = init_sub_shader(geom_code_, GL_GEOMETRY_SHADER);
+            const GLuint frag_shader = init_sub_shader(frag_code_, GL_FRAGMENT_SHADER);
+
+            const GLuint handle = glCreateProgram();
+            glAttachShader(handle, vert_shader);
+            glAttachShader(handle, geom_shader);
+            glAttachShader(handle, frag_shader);
+            glLinkProgram(handle);
+
+            GLint success;
+            glGetProgramiv(handle, GL_LINK_STATUS, &success);
+            if (success == GL_FALSE)
+            {
+                GLint log_length;
+                glGetProgramiv(handle, GL_INFO_LOG_LENGTH, &log_length);
+                std::vector<char> error_log(static_cast<size_t>(log_length));
+
+                glGetProgramInfoLog(handle, log_length, nullptr, error_log.data());
+                std::string error_text(begin(error_log), end(error_log));
+
+                ERROR(42) << "Unable to construct gui Shader.\n"
+                          << "Shader linking failed with error: '" << error_text << "'.";
+            }
+
+            glDeleteShader(vert_shader);
+            glDeleteShader(geom_shader);
             glDeleteShader(frag_shader);
 
             return (handle);
