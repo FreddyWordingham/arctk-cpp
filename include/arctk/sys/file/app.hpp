@@ -54,6 +54,8 @@ namespace arc //! arctk namespace
               public:
                 //  -- Constructors --
                 inline explicit App(const std::string& path_) noexcept;
+                inline App(const App&) noexcept = delete;  //!< Deleted copy constructor.
+                inline App(App&&)               = default; //!< Defaulted move constructor.
 
                 //  -- Destructors --
                 inline ~App() noexcept override;
@@ -65,6 +67,10 @@ namespace arc //! arctk namespace
 
                 //  == OPERATORS ==
               public:
+                //  -- Assignment --
+                inline App& operator=(const App&) noexcept = delete; //!< Deleted copy operator. @return Reference to copied object.
+                inline App& operator=(App&&) noexcept = delete;      //!< Deleted move operator. @return Reference to moved object.
+
                 //  -- Stream --
                 template <class T>
                 inline App& operator<<(const T& val_) noexcept;
