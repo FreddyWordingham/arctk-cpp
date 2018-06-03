@@ -1,8 +1,9 @@
 <map id="include/arctk/constant.hpp" name="include/arctk/constant.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="84,385,180,411"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="109,459,206,484"/>
 <area shape="rect" id="node3" href="$conversion_8hpp.html" title="include/arctk/math\l/conversion.hpp" alt="" coords="43,79,173,117"/>
-<area shape="rect" id="node7" href="$power_8hpp.html" title="include/arctk/math\l/power.hpp" alt="" coords="197,79,326,117"/>
-<area shape="rect" id="node4" href="$math_8hpp.html" title="include/arctk/math.hpp" alt="" coords="128,165,283,191"/>
-<area shape="rect" id="node5" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="144,239,336,264"/>
-<area shape="rect" id="node6" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="195,312,338,337"/>
+<area shape="rect" id="node8" href="$power_8hpp.html" title="include/arctk/math\l/power.hpp" alt="" coords="197,79,326,117"/>
+<area shape="rect" id="node4" href="$math_8hpp.html" title="include/arctk/math.hpp" alt="" coords="138,165,294,191"/>
+<area shape="rect" id="node5" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="182,239,373,264"/>
+<area shape="rect" id="node6" href="$keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="195,312,389,337"/>
+<area shape="rect" id="node7" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="246,385,389,411"/>
 </map>

@@ -1,5 +1,6 @@
 <map id="include/arctk/math.hpp" name="include/arctk/math.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="19,225,116,251"/>
-<area shape="rect" id="node3" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="54,79,245,104"/>
-<area shape="rect" id="node4" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="105,152,248,177"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="44,299,141,324"/>
+<area shape="rect" id="node3" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="80,79,271,104"/>
+<area shape="rect" id="node4" href="$keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="105,152,299,177"/>
+<area shape="rect" id="node5" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="155,225,299,251"/>
 </map>

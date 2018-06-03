@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['version_5fmajor',['VERSION_MAJOR',['../namespacearc_1_1config.html#a2d17637229eb1a5c1cd130d0945a5308',1,'arc::config']]],
-  ['version_5fminor',['VERSION_MINOR',['../namespacearc_1_1config.html#ad647132a40a28b2241f0406b168c1874',1,'arc::config']]],
-  ['version_5fpatch',['VERSION_PATCH',['../namespacearc_1_1config.html#afc8283f15f7b5502fe48b6616a5d1207',1,'arc::config']]]
+  ['theta',['theta',['../classarc_1_1math_1_1_vec2.html#a13bbe52fc882bd0d56c21c237b73ee17',1,'arc::math::Vec2::theta()'],['../classarc_1_1math_1_1_vec3.html#ac4a2e007f86b40682d0d6ad52dfacae3',1,'arc::math::Vec3::theta()']]],
+  ['type',['TYPE',['../namespacearc_1_1config.html#ad6eeea3db680c98dc954b7951924fb0b',1,'arc::config']]]
 ];
