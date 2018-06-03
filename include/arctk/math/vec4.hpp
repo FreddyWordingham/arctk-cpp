@@ -526,14 +526,14 @@ namespace arc //! arctk namespace
          *
          *  @param  index_  Index of the element to access.
          *
-         *  @pre    index_ must be less than three.
+         *  @pre    index_ must be less than four.
          *
          *  @return A reference to the element requested.
          */
         template <typename T>
         constexpr inline T& Vec4<T>::operator[](const size_t index_) noexcept
         {
-            assert(index_ < 3);
+            assert(index_ < 4);
 
             return ((&x)[index_]);
         }
@@ -543,14 +543,14 @@ namespace arc //! arctk namespace
          *
          *  @param  index_  Index of the element to access.
          *
-         *  @pre    index_ must be less than three.
+         *  @pre    index_ must be less than four.
          *
          *  @return A const reference to the element requested.
          */
         template <typename T>
         constexpr inline const T& Vec4<T>::operator[](const size_t index_) const noexcept
         {
-            assert(index_ < 3);
+            assert(index_ < 4);
 
             return ((&x)[index_]);
         }
