@@ -114,6 +114,15 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
+            /**
+             *  Initialise the handle to the file.
+             *
+             *  @pre    _path may not be empty.
+             *
+             *  @post   handle must be open.
+             *
+             *  @return Handle to filestream.
+             */
             inline std::ofstream App::init_handle() noexcept
             {
                 assert(!_path.empty());
