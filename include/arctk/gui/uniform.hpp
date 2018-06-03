@@ -56,6 +56,9 @@ namespace arc //! arctk namespace
             };
 
             //  -- Controller --
+            /**
+             *  Enumeration of possible handlers of the uniform.
+             */
             enum class control
             {
                 CAMERA,
