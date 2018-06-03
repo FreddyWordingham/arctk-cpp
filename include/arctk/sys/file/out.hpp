@@ -68,8 +68,8 @@ namespace arc //! arctk namespace
                 //  == OPERATORS ==
               public:
                 //  -- Assignment --
-                inline Out& operator=(const Out&) noexcept = delete; //!< Deleted copy operator. @return Reference to copied object.
-                inline Out& operator=(Out&&) noexcept = delete;      //!< Deleted move operator. @return Reference to moved object.
+                inline Out& operator=(const Out&) noexcept = default; //!< Deleted copy operator. @return Reference to copied object.
+                inline Out& operator=(Out&&) noexcept = default;      //!< Deleted move operator. @return Reference to moved object.
 
                 //  -- Stream --
                 template <class T>
