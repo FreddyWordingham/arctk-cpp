@@ -50,10 +50,10 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline explicit Out(const std::string& path_) noexcept;
+                inline explicit App(const std::string& path_) noexcept;
 
                 //  -- Destructors --
-                inline ~Out() noexcept override;
+                inline ~App() noexcept override;
 
                 //  -- Initialisation --
                 inline std::ofstream init_handle() noexcept;
@@ -63,14 +63,14 @@ namespace arc //! arctk namespace
               public:
                 //  -- Stream --
                 template <class T>
-                inline Out& operator<<(const T& val_) noexcept;
+                inline App& operator<<(const T& val_) noexcept;
             };
 
 
 
             //  == INSTANTIATION --
             //  -- Constructors --
-            inline Out::Out(const std::string& path_) noexcept
+            inline App::App(const std::string& path_) noexcept
               : File(path_)
               , _handle(init_handle())
             {
@@ -79,7 +79,7 @@ namespace arc //! arctk namespace
 
 
             //  -- Destructors --
-            inline Out::~Out() noexcept
+            inline App::~App() noexcept
             {
                 assert(_handle.is_open());
 
@@ -90,7 +90,7 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
-            inline std::ofstream Out::init_handle() noexcept
+            inline std::ofstream App::init_handle() noexcept
             {
                 assert(!_path.empty());
 
@@ -112,7 +112,7 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
             //  -- Stream --
             template <class T>
-            inline Out& Out::operator<<(const T& val_) noexcept
+            inline App& App::operator<<(const T& val_) noexcept
             {
                 _handle << val_;
 
