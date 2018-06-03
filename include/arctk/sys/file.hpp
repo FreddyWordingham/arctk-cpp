@@ -47,6 +47,9 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline explicit File(const std::string& path_) noexcept;
 
+            //  -- Destructors --
+            virtual inline ~File() noexcept = 0;
+
 
             //  == METHODS ==
           public:
