@@ -98,6 +98,8 @@ namespace arc //! arctk namespace
         /**
          *  Unbind a currently set keybinding.
          *
+         *  @param  key_    Key to unbind.
+         *
          *  @pre    key_ must not be reserved quit key.
          *  @pre    key_ must not be already found within _map.
          */
