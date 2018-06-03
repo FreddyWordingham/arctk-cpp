@@ -58,6 +58,7 @@ namespace arc //! arctk namespace
                 //  -- Destructors --
                 inline ~In() noexcept override;
 
+              private:
                 //  -- Initialisation --
                 inline std::ifstream init_handle() noexcept;
 
