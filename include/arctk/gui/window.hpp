@@ -225,6 +225,9 @@ namespace arc //! arctk namespace
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // NOLINT
         }
 
+        /**
+         *  Swap the window buffer.
+         */
         inline void Window::swap_buffer() const noexcept
         {
             glfwSwapBuffers(_handle);
