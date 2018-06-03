@@ -65,8 +65,8 @@ namespace arc //! arctk namespace
                 //  == OPERATORS ==
               public:
                 //  -- Stream --
-                template <class T>
-                inline In& operator<<(const T& val_) noexcept;
+                template <typename S, typename L>
+                friend inline S& operator<<(S& stream_, const T& val_) noexcept;
             };
 
 
@@ -114,12 +114,12 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
             //  -- Stream --
-            template <class T>
-            inline In& In::operator<<(const T& val_) noexcept
+            template <typename S, typename L>
+            inline S& operator<<(S& stream_, const T& val_) noexcept
             {
-                _handle << val_;
+                stream_ << file_._handle.rdbuf();
 
-                return (*this);
+                return (stream_);
             }
 
 
