@@ -23,6 +23,9 @@
 //  -- Std --
 #include <fstream>
 
+//  -- Arctk --
+#include <arctk/sys/file.hpp>
+
 
 
 //  == NAMESPACE ==
