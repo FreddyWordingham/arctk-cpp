@@ -575,7 +575,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline double Vec4<T>::mag() const noexcept
         {
-            return (std::sqrt(static_cast<double>((x * x) + (y * y) + (z * z))));
+            return (std::sqrt(static_cast<double>((x * x) + (y * y) + (z * z) + (w * w))));
         }
 
         template <typename T>
