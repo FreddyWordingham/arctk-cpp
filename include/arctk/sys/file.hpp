@@ -49,8 +49,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline explicit File(const std::string& path_) noexcept;
-            inline File(const File&) noexcept = default; //!< Defaulted copy constructor.
-            inline File(File&&) noexcept      = default; //!< Defaulted move constructor.
+            inline File(const File&) = default; //!< Defaulted copy constructor.
+            inline File(File&&)      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
             virtual inline ~File() noexcept = 0;
