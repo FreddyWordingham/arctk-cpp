@@ -86,7 +86,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             constexpr inline Vec4() noexcept;
-            constexpr inline Vec4(T x_, T y_, T z_) noexcept;
+            constexpr inline Vec4(T x_, T y_, T z_, T w_) noexcept;
 
 
             //  == OPERATORS ==
@@ -143,7 +143,7 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION --
         //  -- Constructors --
         /**
-         *  Construct a vec3 with initial element values of zero.
+         *  Construct a vec4 with initial element values of zero.
          *
          *  @tparam T   Type stored by the vec.
          */
@@ -156,19 +156,21 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Construct a vec3 with initial element values.
+         *  Construct a vec4 with initial element values.
          *
          *  @tparam T   Type stored by the vec.
          *
          *  @param  x_  Initial value of the x component.
          *  @param  y_  Initial value of the y component.
          *  @param  z_  Initial value of the z component.
+         *  @param  w_  Initial value of the w component.
          */
         template <typename T>
-        constexpr inline Vec4<T>::Vec4(const T x_, const T y_, const T z_) noexcept
+        constexpr inline Vec4<T>::Vec4(const T x_, const T y_, const T z_, const T w_) noexcept
           : x(x_)
           , y(y_)
           , z(z_)
+          , w(w_)
         {
         }
 
@@ -177,7 +179,7 @@ namespace arc //! arctk namespace
         //  == OPERATORS ==
         //  -- Stream --
         /**
-         *  Print a vec3 as a human-readable string.
+         *  Print a vec4 as a human-readable string.
          *
          *  @tparam S   Type of stream to print to.
          *  @tparam T   Type stored by the vec.
