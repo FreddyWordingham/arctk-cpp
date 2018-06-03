@@ -181,7 +181,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Vec2<T>::operator glm::vec2() const noexcept
         {
-            return (glm::vec2(static_cast<float>(x), static_cast<float>(y), static_cast<float>(z)));
+            return (glm::vec2(static_cast<float>(x), static_cast<float>(y)));
         }
 #endif
 
