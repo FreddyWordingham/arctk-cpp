@@ -163,9 +163,9 @@ namespace arc //! arctk namespace
 
             std::vector<std::stringstream> row_stream(search::max(rows));
 
-            auto to_string = [](auto x) {
+            auto to_string = [](auto val_) {
                 std::stringstream val_stream;
-                val_stream << x;
+                val_stream << val_;
                 return (val_stream.str());
             };
 
