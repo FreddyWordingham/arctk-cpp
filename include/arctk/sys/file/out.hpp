@@ -54,6 +54,8 @@ namespace arc //! arctk namespace
               public:
                 //  -- Constructors --
                 inline explicit Out(const std::string& path_) noexcept;
+                inline Out(const Out&) = default; //!< Defaulted copy constructor.
+                inline Out(Out&&)      = default; //!< Defaulted move constructor.
 
                 //  -- Destructors --
                 inline ~Out() noexcept override;
@@ -65,6 +67,10 @@ namespace arc //! arctk namespace
 
                 //  == OPERATORS ==
               public:
+                //  -- Assignment --
+                inline Out& operator=(const Out&) noexcept = delete; //!< Deleted copy operator. @return Reference to copied object.
+                inline Out& operator=(Out&&) noexcept = delete;      //!< Deleted move operator. @return Reference to moved object.
+
                 //  -- Stream --
                 template <class T>
                 inline Out& operator<<(const T& val_) noexcept;
