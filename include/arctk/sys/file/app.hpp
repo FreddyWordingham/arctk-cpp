@@ -96,6 +96,13 @@ namespace arc //! arctk namespace
 
 
             //  -- Destructors --
+            /**
+             *  Close the open file.
+             *
+             *  @pre    _handle must be open.
+             *
+             *  @post   _handle must be closed.
+             */
             inline App::~App() noexcept
             {
                 assert(_handle.is_open());
