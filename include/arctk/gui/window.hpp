@@ -128,8 +128,28 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
+        /**
+         *  Initialise a window handle.
+         *
+         *  @param  title_      Title of window.
+         *  @param  width_      Width of window in pixels.
+         *  @param  height_     Height of window in pixels.
+         *  @param  aa_samples_ Number of anti-aliasing samples.
+         *
+         *  @pre    title_ must not be empty.
+         *  @pre    width_ must be positive.
+         *  @pre    height_ must be positive.
+         *  @pre    aa_samples_ must be positive.
+         *
+         *  @return Initialised window handle.
+         */
         inline GLFWwindow* Window::init_handle(const std::string& title_, const int width_, const int height_, const int aa_samples_) noexcept
         {
+            assert(!title_.empty());
+            assert(width_ > 0);
+            assert(height_ > 0);
+            assert(aa_samples_ > 0);
+
             if (glfwInit() == 0)
             {
                 ERROR(42) << "Unable to construct graphical Window.\n"
