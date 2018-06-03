@@ -41,6 +41,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
+         *  Keymap class providing function bindings to keypresses.
          */
         class Keymap
         {
