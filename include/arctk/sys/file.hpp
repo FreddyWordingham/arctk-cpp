@@ -115,6 +115,11 @@ namespace arc //! arctk namespace
             return ((slash_pos == std::string::npos) ? _path : _path.substr(slash_pos + 1, std::string::npos));
         }
 
+        /**
+         *  Get the file extension.
+         *
+         *  @return File extension.
+         */
         inline std::string File::extension() const noexcept
         {
             size_t dot_pos = _path.find_last_of('.');
