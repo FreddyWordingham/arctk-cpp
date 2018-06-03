@@ -177,7 +177,7 @@ namespace arc //! arctk namespace
 
         //  == OPERATORS ==
         //  -- Conversion --
-#ifdef ARCTK_MOD_CORE
+#ifdef ARCTK_MOD_GUI
         template <typename T>
         constexpr inline Vec3<T>::operator glm::vec3() const noexcept
         {
