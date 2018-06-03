@@ -75,6 +75,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline GLuint                                handle() const noexcept;
+            inline GLint                                 mvp() const noexcept;
+            inline GLint                                 model() const noexcept;
+            inline const std::map<std::string, Uniform>& uniform() const noexcept;
         };
 
 
@@ -220,6 +225,25 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        inline GLuint Shader::handle() const noexcept
+        {
+            return (_handle);
+        }
+
+        inline GLint Shader::mvp() const noexcept
+        {
+            return (_mvp);
+        }
+
+        inline GLint Shader::model() const noexcept
+        {
+            return (_model);
+        }
+
+        inline const std::map<std::string, Uniform>& Shader::uniform() const noexcept
+        {
+            return (_uniform);
+        }
 
 
 
