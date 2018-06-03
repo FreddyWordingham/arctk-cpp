@@ -217,6 +217,9 @@ namespace arc //! arctk namespace
 
 
         //  -- Rendering --
+        /**
+         *  Clear the window buffer.
+         */
         inline void Window::clear_buffer() const noexcept
         {
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // NOLINT
