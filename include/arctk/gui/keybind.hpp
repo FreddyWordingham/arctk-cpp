@@ -112,13 +112,18 @@ namespace arc //! arctk namespace
         /**
          *  Get the sticky status of the keybinding.
          *
-         *  @return Keybinging sticky status.
+         *  @return Keybinding sticky status.
          */
         inline bool Keybind::sticky() const noexcept
         {
             return (_sticky);
         }
 
+        /**
+         *  Get the current key press status state of the keybinding.
+         *
+         *  @return Current press status of the keybinding.
+         */
         inline int Keybind::state() const noexcept
         {
             return (_state);
