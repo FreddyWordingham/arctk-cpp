@@ -38,12 +38,12 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         //  -- Table --
         template <typename... A>
-        inline std::string rows(int width_, const std::string& delim_, A... args);
+        inline std::string rows(int width_, const std::string& delim_, A... args_);
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline std::string rows(int width_, const std::string& delim_, const C& cont_) noexcept;
 
         template <typename... A>
-        inline std::string cols(int width, const std::string& delim_, A... args);
+        inline std::string cols(int width_, const std::string& delim_, A... args_);
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator, typename J = typename T::const_iterator>
         inline std::string cols(int width_, const std::string& delim_, const C& cont_) noexcept;
 
@@ -59,19 +59,19 @@ namespace arc //! arctk namespace
          *
          *  @param  width_  Width allocated to each container element print.
          *  @param  delim_  Delimiter used to separate container elements.
-         *  @param  args    Container pack to form table rows.
+         *  @param  args_   Container pack to form table rows.
          *
          *  @return String of table of rows.
          */
         template <typename... A>
-        inline std::string rows(int width_, const std::string& delim_, A... args)
+        inline std::string rows(int width_, const std::string& delim_, A... args_)
         {
             std::vector<std::stringstream> row_stream(sizeof...(A));
             size_t                         row = 0;
-            ((row_stream[row] << str::to_string(args, width_, "", delim_, ""), ++row), ...);
+            ((row_stream[row] << str::to_string(args_, width_, "", delim_, ""), ++row), ...);
 
             std::vector<size_t> rows;
-            (rows.emplace_back(args.size()), ...);
+            (rows.emplace_back(args_.size()), ...);
 
             for (size_t i = 0; i < rows.size(); ++i)
             {
@@ -151,15 +151,15 @@ namespace arc //! arctk namespace
          *
          *  @param  width_  Width allocated to each container element print.
          *  @param  delim_  Delimiter used to separate container elements.
-         *  @param  args    Container pack to form table columns.
+         *  @param  args_   Container pack to form table columns.
          *
          *  @return String of table of columns.
          */
         template <typename... A>
-        inline std::string cols(int width_, const std::string& delim_, A... args)
+        inline std::string cols(int width_, const std::string& delim_, A... args_)
         {
             std::vector<size_t> rows;
-            (rows.emplace_back(args.size()), ...);
+            (rows.emplace_back(args_.size()), ...);
 
             std::vector<std::stringstream> row_stream(search::max(rows));
 
@@ -173,7 +173,7 @@ namespace arc //! arctk namespace
             {
                 size_t col = 0;
 
-                ((row_stream[i] << ((col != 0) ? delim_ : "") << std::setw(width_) << ((i < rows[col]) ? to_string(args[i]) : ""), ++col), ...);
+                ((row_stream[i] << ((col != 0) ? delim_ : "") << std::setw(width_) << ((i < rows[col]) ? to_string(args_[i]) : ""), ++col), ...);
             }
 
             std::stringstream stream;
