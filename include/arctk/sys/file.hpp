@@ -49,6 +49,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline const std::string& path() const noexcept;
         };
 
 
@@ -59,6 +61,11 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Getters --
+        inline const std::string& File::path() const noexcept
+        {
+            return (_path);
+        }
 
 
 
