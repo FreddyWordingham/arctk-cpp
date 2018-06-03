@@ -18,12 +18,27 @@ arctk_clean()
 #   -- Build --
 arctk_build()
 {
+    if [ "$#" == "0" ]; then
+        if [ -z "$ARCTK_BUILD_ARGS" ]; then
+            printf "Error! ARCTK_BUILD_ARGS are not set!\n";
+
+            return;
+        fi
+
+        arctk_build $ARCTK_BUILD_ARGS;
+
+        return;
+    fi
+
     if [ "$#" != "7" ]; then
-        printf "Error! Incorrect number of arguments.\n";
+        printf "Error! Incorrect number of arguments. ($#)\n";
         printf "arctk_build <build_type> <c_compiler> <cxx_compiler> <clang-tidy> <document> <core> <gui>\n";
 
         return;
     fi
+
+    ARCTK_BUILD_ARGS="$1 $2 $3 $4 $5 $6 $7";
+    echo "export ARCTK_BUILD_ARGS='$ARCTK_BUILD_ARGS'" > ~/.arctk_build_args
 
     arctk_clean;
 
