@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/sys/file.hpp>
+#include <arctk/sys/file/app.hpp>
 #include <arctk/sys/file/out.hpp>
 
 
