@@ -93,6 +93,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the file path.
+         *
+         *  @return File path.
+         */
         inline const std::string& File::path() const noexcept
         {
             return (_path);
