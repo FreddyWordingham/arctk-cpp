@@ -27,6 +27,7 @@
 
 //  -- Arctk --
 #include <arctk/log.hpp>
+#include <arctk/math.hpp>
 
 
 
