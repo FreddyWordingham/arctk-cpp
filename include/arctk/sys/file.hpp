@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
         class File
         {
             //  == FIELDS ==
-          private:
+          protected:
             //  -- Path --
             const std::string _path; //!< Full path to the file.
 
