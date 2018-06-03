@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
             //  -- Initialisation --
             inline GLuint init_handle(const std::string& vert_code_, const std::string& frag_code_) const noexcept;
             inline GLuint init_handle(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) const noexcept;
-
+            inline GLuint init_sub_shader(const std::string& code_, GLenum type_) const noexcept;
 
 
             //  == METHODS ==
@@ -158,6 +158,34 @@ namespace arc //! arctk namespace
             glDeleteShader(frag_shader);
 
             return (handle);
+        }
+
+        inline GLuint Shader::init_sub_shader(const std::string& code_, const GLenum type_) const noexcept
+        {
+            const char* code = code_.c_str();
+
+            const GLuint sub_shader = glCreateShader(type_);
+            glShaderSource(sub_shader, 1, &code, nullptr);
+            glCompileShader(sub_shader);
+
+            GLint success;
+            glGetShaderiv(sub_shader, GL_COMPILE_STATUS, &success);
+            if (success == GL_FALSE)
+            {
+                GLint log_length;
+                glGetShaderiv(sub_shader, GL_INFO_LOG_LENGTH, &log_length);
+                std::vector<char> error_log(static_cast<size_t>(log_length));
+
+                glGetShaderInfoLog(sub_shader, log_length, nullptr, error_log.data());
+                const std::string error_text(begin(error_log), end(error_log));
+
+                ERROR(42) << "Unable to construct gui Shader.\n"
+                          << "Shader compilation failed with error: '" << error_text << "'.";
+            }
+
+            assert(sub_shader != 0);
+
+            return (sub_shader);
         }
 
 
