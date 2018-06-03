@@ -20,6 +20,8 @@
 
 
 //  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/gui/window.hpp>
 
 
 
@@ -45,6 +47,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Operation --
+            inline bool poll(const Window& win_) noexcept;
         };
 
 
