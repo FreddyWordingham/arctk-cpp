@@ -133,7 +133,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
-            //  -- Getters --
+            //  -- Mathematical --
             constexpr inline T      sum() const noexcept;
             constexpr inline double mag() const noexcept;
             constexpr inline void   normalise() const noexcept;
