@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
-        inline explicit Keybind::Keybind(const std::function<void()>& func_, bool sticky_, int state_) noexcept
+        inline Keybind::Keybind(const std::function<void()>& func_, bool sticky_, int state_) noexcept
           : _func(func_)
           , _sticky(sticky_)
           , _state(state_)
