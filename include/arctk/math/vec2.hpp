@@ -544,7 +544,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline T Vec2<T>::sum() const noexcept
         {
-            return (x + y + z);
+            return (x + y);
         }
 
         template <typename T>
