@@ -76,11 +76,6 @@ namespace arc //! arctk namespace
 
 
 
-        //  == INSTANTIATION --
-        //  -- Constructors --
-
-
-
         //  == METHODS ==
         //  -- Setters --
         inline void Keymap::bind(int key_, const std::function<void()>& func_, const bool sticky_, const int state_) noexcept
