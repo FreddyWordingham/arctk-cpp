@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
                 inline T range() noexcept;
 
                 //  -- Sampling --
-                inline T sample(Generator& gen_) noexcept;
+                inline T sample(Generator& gen_) noexcept; // NOLINT
             };
 
 
