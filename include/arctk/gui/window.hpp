@@ -117,6 +117,10 @@ namespace arc //! arctk namespace
 
 
         //  -- Destructors --
+        /**
+         *  Destruct the window object.
+         *  Terminate all glfw operations.
+         */
         inline Window::~Window() noexcept
         {
             glfwTerminate();
