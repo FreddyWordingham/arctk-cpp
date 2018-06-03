@@ -61,6 +61,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Shader(const std::string& vert_code_, const std::string& frag_code_) noexcept;
+            inline Shader(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) noexcept;
 
 
             //  == METHODS ==
@@ -73,6 +74,13 @@ namespace arc //! arctk namespace
         //  -- Constructors --
         inline Shader::Shader(const std::string& vert_code_, const std::string& frag_code_) noexcept
           : _handle(init_handle(vert_code_, frag_code_))
+          , _mvp(init_mvp())
+          , _model(init_model())
+        {
+        }
+
+        inline Shader::Shader(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) noexcept
+          : _handle(init_handle(vert_code_, geom_code_, frag_code_))
           , _mvp(init_mvp())
           , _model(init_model())
         {
