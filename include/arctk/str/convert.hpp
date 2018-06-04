@@ -30,7 +30,6 @@
 #include <utility>
 
 //  -- Arctk --
-#include <arctk/log.hpp>
 #include <arctk/utl.hpp>
 
 
