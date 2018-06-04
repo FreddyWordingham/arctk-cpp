@@ -272,6 +272,11 @@ namespace arc //! arctk namespace
             return (_trans);
         }
 
+        /**
+         *  Get the rotate transformation matrix.
+         *
+         *  @return Rotate transformation matrix.
+         */
         inline const glm::vec3& Actor::rotate() const noexcept
         {
             return (_rotate);
