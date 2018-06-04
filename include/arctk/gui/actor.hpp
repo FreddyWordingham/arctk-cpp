@@ -322,6 +322,8 @@ namespace arc //! arctk namespace
 
         inline void Actor::set_int_uniform(const std::string& name_, const int int_) noexcept
         {
+            assert(_int_uniform.find(name_) != _int_uniform.end());
+
             _int_uniform.emplace(std::make_pair(name_, int_));
         }
 
