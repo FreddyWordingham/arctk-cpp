@@ -29,6 +29,7 @@
 #include <glm/glm.hpp>
 
 //  -- Arctk --
+#include <arctk/gui/shader.hpp>
 #include <arctk/log.hpp>
 #include <arctk/math.hpp>
 
