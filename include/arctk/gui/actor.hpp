@@ -124,7 +124,7 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Updating --
-            inline void Actor::update_model() noexcept;
+            inline void update_model() noexcept;
         };
 
 
