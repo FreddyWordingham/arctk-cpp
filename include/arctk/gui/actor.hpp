@@ -242,6 +242,11 @@ namespace arc //! arctk namespace
             return (_vbo);
         }
 
+        /**
+         *  Get the primitive type used to render the actor.
+         *
+         *  @return Primitive type used to render the actor.
+         */
         inline GLenum Actor::primitive_type() const noexcept
         {
             return (_primitive_type);
