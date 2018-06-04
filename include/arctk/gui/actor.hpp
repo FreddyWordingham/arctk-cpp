@@ -77,6 +77,10 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Actor(const std::vector<GLfloat>& verts_, const std::vector<size_t>& layout_, GLenum primitive_type_ = GL_TRIANGLES, GLenum fill_mode_ = GL_FILL) noexcept;
 
+          private:
+            //  -- Initialisation --
+            inline GLuint init_vao() const noexcept;
+
 
             //  == METHODS ==
           public:
@@ -119,6 +123,17 @@ namespace arc //! arctk namespace
             glBindVertexArray(0);
 
             update_model();
+        }
+
+
+        //  -- Initialisation --
+        inline GLuint Actor::init_vao() const noexcept
+        {
+            GLuint vao;
+
+            glGenVertexArrays(1, &vao);
+
+            return (vao);
         }
 
 
