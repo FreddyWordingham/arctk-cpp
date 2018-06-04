@@ -59,8 +59,8 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline explicit Error(int exit_val_) noexcept;
                 inline Error(const std::string& file_, const std::string& func_, int line_, int exit_val_) noexcept;
-                inline Error(const Error&) = delete; //!< Deleted copy constructor.
-                inline Error(Error&&)      = delete; //!< Deleted move constructor.
+                inline Error(const Error&) = default; //!< Defaulted copy constructor.
+                inline Error(Error&&)      = default; //!< Defaulted move constructor.
 
                 //  -- Destructors --
                 [[noreturn]] inline ~Error() noexcept override;
@@ -69,8 +69,8 @@ namespace arc //! arctk namespace
                 //  == OPERATORS ==
               public:
                 //  -- Assignment --
-                inline Error& operator=(const Error&) = delete; //!< Deleted copy operator. @return Reference to copied object.
-                inline Error& operator=(Error&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
+                inline Error& operator=(const Error&) = default; //!< Defaulted copy operator. @return Reference to copied object.
+                inline Error& operator=(Error&&) = default;      //!< Defaulted move operator. @return Reference to moved object.
 
 
                 //  == METHODS ==
