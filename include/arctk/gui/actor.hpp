@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
             glm::vec3 _scale;  //!< Model scaling vector.
 
             //  -- Uniforms --
-            glm::mat4                        _model;
+            glm::mat4                        _model; //!< Model transformation matrix.
             std::map<std::string, int>       _int_uniform;
             std::map<std::string, float>     _float_uniform;
             std::map<std::string, glm::vec2> _vec2_uniform;
