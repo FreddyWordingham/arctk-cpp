@@ -21,8 +21,8 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <sstream>
 #include <string>
-#include <stringstream>
 
 
 
@@ -34,12 +34,38 @@ namespace arc //! arctk namespace
 
 
 
-        //  == FUNCTORS ==
-
-
-
         //  == FUNCTION PROTOTYPES ==
-        //  -- Conversion --
+        //  -- Parsing --
+        template <typename T>
+        inline T string(const std::string& str_) noexcept;
+
+
+
+        //  == FUNCTIONS ==
+        //  -- Parsing --
+        template <typename T>
+        inline T string(const std::string& str_) noexcept
+        {
+            std::stringstream stream;
+            stream << str_;
+
+            T x{};
+            stream >> x;
+
+            if (stream.fail())
+            {
+                ERROR(42) << "Unable to parse string: '" << str_ << "' to type.\n"
+                          << "String: '" << str_ << "' can not be parsed to type: '" << typeid(T).name() << "'.";
+            }
+
+            if (stream.rdbuf()->in_avail() != 0)
+            {
+                ERROR(42) << "Unable to parse string to type.\n"
+                          << "String: '" << str_ << "' contains leftover characters after parsing to type: '" << typeid(T).name() << "'.";
+            }
+
+            return (x);
+        }
 
 
 
