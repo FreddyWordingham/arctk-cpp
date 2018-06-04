@@ -118,6 +118,10 @@ namespace arc //! arctk namespace
             inline void set_mat2_uniform(const std::string& name_, const glm::mat2& mat2_) noexcept;
             inline void set_mat3_uniform(const std::string& name_, const glm::mat3& mat3_) noexcept;
             inline void set_mat4_uniform(const std::string& name_, const glm::mat4& mat4_) noexcept;
+
+          private:
+            //  -- Updating --
+            inline void Actor::update_model() noexcept;
         };
 
 
@@ -354,6 +358,21 @@ namespace arc //! arctk namespace
         inline void Actor::set_mat4_uniform(const std::string& name_, const glm::mat4& mat4_) noexcept
         {
             _mat4_uniform.emplace(std::make_pair(name_, mat4_));
+        }
+
+
+        //  -- Updating --
+        inline void Actor::update_model() noexcept
+        {
+            glm::mat4 model;
+
+            model = glm::translate(model, _trans);
+            model = glm::rotate(model, math::rad_to_deg(_rotate.x), glm::vec3(1.0f, 0.0f, 0.0f));
+            model = glm::rotate(model, math::rad_to_deg(_rotate.y), glm::vec3(0.0f, 1.0f, 0.0f));
+            model = glm::rotate(model, math::rad_to_deg(_rotate.z), glm::vec3(0.0f, 0.0f, 1.0f));
+            model = glm::scale(model, _scale);
+
+            _model = model;
         }
 
 
