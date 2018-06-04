@@ -124,6 +124,11 @@ namespace arc //! arctk namespace
             return (_handle);
         }
 
+        inline Uniform::stored Uniform::type() const noexcept
+        {
+            return (_type);
+        }
+
         inline Uniform::controller Uniform::control() const noexcept
         {
             return (_control);
