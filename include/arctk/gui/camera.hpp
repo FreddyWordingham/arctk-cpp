@@ -81,17 +81,21 @@ namespace arc //! arctk namespace
             inline const glm::mat4& mat4_uniform(const std::string& name_) const noexcept;
 
             //  -- Setters --
-            inline void set_pos(const glm::vec3& pos_) noexcept override;
-            inline void set_dir(const glm::vec3& dir_) noexcept override;
-            inline void set_up(const glm::vec3& up_) noexcept override;
-            inline void set_int_uniform(const std::string& name_, int int_) noexcept override;
-            inline void set_float_uniform(const std::string& name_, float float_) noexcept override;
-            inline void set_vec2_uniform(const std::string& name_, const glm::vec2& vec2_) noexcept override;
-            inline void set_vec3_uniform(const std::string& name_, const glm::vec3& vec3_) noexcept override;
-            inline void set_vec4_uniform(const std::string& name_, const glm::vec4& vec4_) noexcept override;
-            inline void set_mat2_uniform(const std::string& name_, const glm::mat2& mat2_) noexcept override;
-            inline void set_mat3_uniform(const std::string& name_, const glm::mat3& mat3_) noexcept override;
-            inline void set_mat4_uniform(const std::string& name_, const glm::mat4& mat4_) noexcept override;
+            inline void set_pos(const glm::vec3& pos_) noexcept;
+            inline void set_dir(const glm::vec3& dir_) noexcept;
+            inline void set_up(const glm::vec3& up_) noexcept;
+            inline void set_int_uniform(const std::string& name_, int int_) noexcept;
+            inline void set_float_uniform(const std::string& name_, float float_) noexcept;
+            inline void set_vec2_uniform(const std::string& name_, const glm::vec2& vec2_) noexcept;
+            inline void set_vec3_uniform(const std::string& name_, const glm::vec3& vec3_) noexcept;
+            inline void set_vec4_uniform(const std::string& name_, const glm::vec4& vec4_) noexcept;
+            inline void set_mat2_uniform(const std::string& name_, const glm::mat2& mat2_) noexcept;
+            inline void set_mat3_uniform(const std::string& name_, const glm::mat3& mat3_) noexcept;
+            inline void set_mat4_uniform(const std::string& name_, const glm::mat4& mat4_) noexcept;
+
+            //  -- Control --
+            inline void move(const glm::vec3& vec_) noexcept;
+            inline void rotate(const glm::vec2& vec_) noexcept;
 
           private:
             //  -- Updating --
