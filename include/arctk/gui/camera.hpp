@@ -42,12 +42,13 @@ namespace arc //! arctk namespace
         class Camera
         {
             //  == FIELDS ==
-          private:
+          protected:
             //  -- Positioning --
             glm::vec3 _pos;
             glm::vec3 _dir;
             glm::vec3 _up;
 
+          private:
             //  -- Uniform --
             glm::mat4                        _mvp;
             std::map<std::string, int>       _int_uniform;
