@@ -59,8 +59,8 @@ namespace arc //! arctk namespace
             const GLuint _vbo; //!< Vertex buffer object handle.
 
             //  -- Rendering --
-            GLenum _primitive_type;
-            GLenum _fill_mode;
+            GLenum _primitive_type; //!< Primitive type used to render actor.
+            GLenum _fill_mode;      //!< Fill mode used to render actor.
 
             //  -- Transform --
             glm::vec3 _trans;
