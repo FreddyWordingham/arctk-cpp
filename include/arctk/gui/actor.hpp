@@ -75,6 +75,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Actor(const std::vector<GLfloat>& verts_, const std::vector<size_t>& layout_, GLenum primitive_type_ = GL_TRIANGLES, GLenum fill_mode_ = GL_FILL) noexcept;
 
 
             //  == METHODS ==
@@ -86,6 +87,39 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        inline Actor::Actor(const std::vector<GLfloat>& verts_, const std::vector<size_t>& layout_, const GLenum primitive_type_, const GLenum fill_mode_) noexcept
+          : _num_vert(static_cast<GLsizei>(verts_.size() / utl::sum(layout_)))
+          , _vao(init_vao())
+          , _vbo(init_vbo())
+          , _primitive_type(primitive_type_)
+          , _fill_mode(fill_mode_)
+          , _trans(glm::vec3(0.0f, 0.0f, 0.0f))
+          , _rotate(glm::vec3(0.0f, 0.0f, 0.0f))
+          , _scale(glm::vec3(1.0f, 1.0f, 1.0f))
+        {
+            assert((verts_.size() % utl::sum(layout_)) == 0);
+
+            glBindVertexArray(_vao);
+            glBindBuffer(GL_ARRAY_BUFFER, _vbo);
+            glBufferData(GL_ARRAY_BUFFER, verts_.size() * sizeof(GLfloat), &verts_.front(), GL_STATIC_DRAW);
+
+            const size_t chunk_size = utl::sum(layout_) * sizeof(GLfloat);
+            size_t       start      = 0;
+            for (size_t i = 0; i < layout_.size(); ++i)
+            {
+                glVertexAttribPointer(i, layout_[i], GL_FLOAT, GL_FALSE, chunk_size,
+                                      reinterpret_cast<GLvoid*>(start * sizeof(GLfloat))); // NOLINT
+                glEnableVertexAttribArray(i);
+
+                start += layout_[i];
+            }
+
+            glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+            glBindVertexArray(0);
+
+            update_model();
+        }
 
 
 
