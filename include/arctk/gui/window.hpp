@@ -276,6 +276,54 @@ namespace arc //! arctk namespace
             }
         }
 
+        inline void Window::render_actor(const Actor& act_, const Shader& shad_) const noexcept
+        {
+            glUseProgram(shad_.handle());
+
+            glPolygonMode(GL_FRONT_AND_BACK, act_.fill_mode());
+
+            glUniformMatrix4fv(shad_.model(), 1, GL_FALSE, &act_.model()[0][0]);
+
+            for (auto& [key, uni] : shad_.uniform())
+            {
+                if (uni._control == Uniform::control::ACTOR)
+                {
+                    switch (uni._type)
+                    {
+                        case Uniform::type::INT:
+                            glUniform1i(uni._handle, act_.int_uniform(key));
+                            break;
+                        case Uniform::type::FLOAT:
+                            glUniform1f(uni._handle, act_.float_uniform(key));
+                            break;
+                        case Uniform::type::VEC2:
+                            glUniform2fv(uni._handle, 1, &act_.vec2_uniform(key)[0]);
+                            break;
+                        case Uniform::type::VEC3:
+                            glUniform3fv(uni._handle, 1, &act_.vec3_uniform(key)[0]);
+                            break;
+                        case Uniform::type::VEC4:
+                            glUniform4fv(uni._handle, 1, &act_.vec4_uniform(key)[0]);
+                            break;
+                        case Uniform::type::MAT2:
+                            glUniformMatrix2fv(uni._handle, 1, GL_FALSE, &act_.mat2_uniform(key)[0][0]);
+                            break;
+                        case Uniform::type::MAT3:
+                            glUniformMatrix3fv(uni._handle, 1, GL_FALSE, &act_.mat3_uniform(key)[0][0]);
+                            break;
+                        case Uniform::type::MAT4:
+                            glUniformMatrix4fv(uni._handle, 1, GL_FALSE, &act_.mat4_uniform(key)[0][0]);
+                            break;
+                    }
+                }
+            }
+
+            glEnableVertexAttribArray(0);
+            glBindVertexArray(act_.vao());
+            glDrawArrays(act_.primitive_type(), 0, act_.num_vert());
+            glBindVertexArray(0);
+        }
+
 
 
     } // namespace gui
