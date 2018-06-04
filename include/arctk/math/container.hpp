@@ -34,10 +34,25 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
-
+        //  -- Mathematical --
+        template <typename C, typename T = typename C::value_type, typename I = typename C::iterator>
+        inline T sum(C& cont_) noexcept;
 
 
         //  == FUNCTIONS ==
+        //  -- Mathematical --
+        template <typename C, typename T, typename I>
+        inline T sum(C& cont_) noexcept
+        {
+            T total{};
+
+            for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+            {
+                total += *it;
+            }
+
+            return (total);
+        }
 
 
 
