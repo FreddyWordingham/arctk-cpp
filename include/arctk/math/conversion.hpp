@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
         template <typename T>
         inline T rad_to_deg(const T val_) noexcept
         {
-            return ((180.0 / constant::PI) * val_);
+            return (static_cast<T>(180.0 / constant::PI) * val_);
         }
 
         /**
@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
         template <typename T>
         inline T deg_to_rad(const T val_) noexcept
         {
-            return ((constant::PI / 180.0) * val_);
+            return (static_cast<T>(constant::PI / 180.0) * val_);
         }
 
 
