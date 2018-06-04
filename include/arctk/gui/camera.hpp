@@ -41,6 +41,12 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Positioning --
+            glm::vec3 _pos;
+            glm::vec3 _dir;
+            glm::vec3 _up;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
