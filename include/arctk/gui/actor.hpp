@@ -63,9 +63,9 @@ namespace arc //! arctk namespace
             GLenum _fill_mode;      //!< Fill mode used to render actor.
 
             //  -- Transform --
-            glm::vec3 _trans;
-            glm::vec3 _rotate;
-            glm::vec3 _scale;
+            glm::vec3 _trans;  //!< Model translation vector.
+            glm::vec3 _rotate; //!< Model rotation vector.
+            glm::vec3 _scale;  //!< Model scaling vector.
 
             //  -- Uniforms --
             glm::mat4                        _model;
