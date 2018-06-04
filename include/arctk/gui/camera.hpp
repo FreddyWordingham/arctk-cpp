@@ -63,6 +63,9 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Camera(const glm::vec3& pos_, const glm::vec3& dir_, const glm::vec3& up_) noexcept;
 
+            //  -- Destructors --
+            virtual inline ~Camera() noexcept = 0;
+
 
             //  == METHODS ==
           public:
@@ -113,6 +116,10 @@ namespace arc //! arctk namespace
         {
             update_mvp();
         }
+
+
+        //  -- Destructors --
+        inline Camera::~Camera() noexcept = default;
 
 
 
