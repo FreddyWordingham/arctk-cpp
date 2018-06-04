@@ -56,6 +56,8 @@ namespace arc //! arctk namespace
          *  Function will call error on failed parsing.
          *  Function will call error if characters remain after parsing.
          *
+         *  @tparam T   Type to parse.
+         *
          *  @param  str_    String to parse.
          *
          *  @return Parsed value.
@@ -84,8 +86,8 @@ namespace arc //! arctk namespace
             return (x);
         }
 
-        template <typename... A>
-        inline std::tuple<A...> string(const std::vector<std::string>& str_) noexcept
+        / template <typename... A>
+          inline std::tuple<A...> string(const std::vector<std::string>& str_) noexcept
         {
             assert(str_.size() == sizeof...(A));
 
