@@ -77,6 +77,10 @@ namespace arc //! arctk namespace
             inline const glm::mat2& mat2_uniform(const std::string& name_) const noexcept;
             inline const glm::mat3& mat3_uniform(const std::string& name_) const noexcept;
             inline const glm::mat4& mat4_uniform(const std::string& name_) const noexcept;
+
+          private:
+            //  -- Updating --
+            virtual inline void update_mvp() noexcept = 0;
         };
 
 
