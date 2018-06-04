@@ -44,6 +44,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Distribution() noexcept                    = default;
             inline Distribution(const Distribution&) noexcept = default; //!< Defaulted copy constructor.
             inline Distribution(Distribution&&) noexcept      = default; //!< Defaulted move constructor.
 
