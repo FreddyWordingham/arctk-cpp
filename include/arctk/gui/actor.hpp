@@ -86,6 +86,23 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline GLsizei          num_vert() const noexcept;
+            inline GLuint           vao() const noexcept;
+            inline GLuint           vbo() const noexcept;
+            inline GLenum           primitive_type() const noexcept;
+            inline GLenum           fill_mode() const noexcept;
+            inline const glm::vec3& trans() const noexcept;
+            inline const glm::vec3& rotate() const noexcept;
+            inline const glm::vec3& scale() const noexcept;
+            inline const glm::mat4& model() const noexcept;
+            inline int              int_uniform(const std::string& name_) const noexcept;
+            inline float            float_uniform(const std::string& name_) const noexcept;
+            inline const glm::vec2& vec2_uniform(const std::string& name_) const noexcept;
+            inline const glm::vec3& vec3_uniform(const std::string& name_) const noexcept;
+            inline const glm::vec4& vec4_uniform(const std::string& name_) const noexcept;
+            inline const glm::mat2& mat2_uniform(const std::string& name_) const noexcept;
+            inline const glm::mat3& mat3_uniform(const std::string& name_) const noexcept;
+            inline const glm::mat4& mat4_uniform(const std::string& name_) const noexcept;
         };
 
 
@@ -149,6 +166,107 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Getters --
+        inline GLsizei Actor::num_vert() const noexcept
+        {
+            return (_num_vert);
+        }
+
+        inline GLuint Actor::vao() const noexcept
+        {
+            return (_vao);
+        }
+
+        inline GLuint Actor::vbo() const noexcept
+        {
+            return (_vbo);
+        }
+
+        inline GLenum Actor::primitive_type() const noexcept
+        {
+            return (_primitive_type);
+        }
+
+        inline GLenum Actor::fill_mode() const noexcept
+        {
+            return (_fill_mode);
+        }
+
+        inline const glm::vec3& Actor::trans() const noexcept
+        {
+            return (_trans);
+        }
+
+        inline const glm::vec3& Actor::rotate() const noexcept
+        {
+            return (_rotate);
+        }
+
+        inline const glm::vec3& Actor::scale() const noexcept
+        {
+            return (_scale);
+        }
+
+        inline const glm::mat4& Actor::model() const noexcept
+        {
+            return (_model);
+        }
+
+        inline int Actor::int_uniform(const std::string& name_) const noexcept
+        {
+            assert(_int_uniform.find(name_) != _int_uniform.end());
+
+            return (_int_uniform.find(name_)->second);
+        }
+
+        inline float Actor::float_uniform(const std::string& name_) const noexcept
+        {
+            assert(_float_uniform.find(name_) != _float_uniform.end());
+
+            return (_float_uniform.find(name_)->second);
+        }
+
+        inline const glm::vec2& Actor::vec2_uniform(const std::string& name_) const noexcept
+        {
+            assert(_vec2_uniform.find(name_) != _vec2_uniform.end());
+
+            return (_vec2_uniform.find(name_)->second);
+        }
+
+        inline const glm::vec3& Actor::vec3_uniform(const std::string& name_) const noexcept
+        {
+            assert(_vec3_uniform.find(name_) != _vec3_uniform.end());
+
+            return (_vec3_uniform.find(name_)->second);
+        }
+
+        inline const glm::vec4& Actor::vec4_uniform(const std::string& name_) const noexcept
+        {
+            assert(_vec4_uniform.find(name_) != _vec4_uniform.end());
+
+            return (_vec4_uniform.find(name_)->second);
+        }
+
+        inline const glm::mat2& Actor::mat2_uniform(const std::string& name_) const noexcept
+        {
+            assert(_mat2_uniform.find(name_) != _mat2_uniform.end());
+
+            return (_mat2_uniform.find(name_)->second);
+        }
+
+        inline const glm::mat3& Actor::mat3_uniform(const std::string& name_) const noexcept
+        {
+            assert(_mat3_uniform.find(name_) != _mat3_uniform.end());
+
+            return (_mat3_uniform.find(name_)->second);
+        }
+
+        inline const glm::mat4& Actor::mat4_uniform(const std::string& name_) const noexcept
+        {
+            assert(_mat4_uniform.find(name_) != _mat4_uniform.end());
+
+            return (_mat4_uniform.find(name_)->second);
+        }
 
 
 
