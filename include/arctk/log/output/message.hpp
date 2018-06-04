@@ -55,8 +55,8 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline Message() noexcept;
                 inline Message(const std::string& file_, const std::string& func_, int line_) noexcept;
-                inline Message(const Message&) = default; //!< Defaulted copy constructor.
-                inline Message(Message&&)      = default; //!< Defaulted move constructor.
+                inline Message(const Message&) = delete; //!< Deleted copy constructor.
+                inline Message(Message&&)      = delete; //!< Deleted move constructor.
 
                 //  -- Destructors --
                 inline ~Message() noexcept override;
@@ -65,8 +65,8 @@ namespace arc //! arctk namespace
                 //  == OPERATORS ==
               public:
                 //  -- Assignment --
-                inline Message& operator=(const Message&) = default; //!< Defaulted copy operator. @return Reference to copied object.
-                inline Message& operator=(Message&&) = default;      //!< Defaulted move operator. @return Reference to moved object.
+                inline Message& operator=(const Message&) = delete; //!< Deleted copy operator. @return Reference to copied object.
+                inline Message& operator=(Message&&) = default;     //!< Defaulted move operator. @return Reference to moved object.
 
 
                 //  == METHODS ==
