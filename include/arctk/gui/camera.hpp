@@ -46,6 +46,17 @@ namespace arc //! arctk namespace
             glm::vec3 _dir;
             glm::vec3 _up;
 
+            //  -- Uniform --
+            glm::mat4                        _mvp;
+            std::map<std::string, int>       _int_uniform;
+            std::map<std::string, float>     _float_uniform;
+            std::map<std::string, glm::vec2> _vec2_uniform;
+            std::map<std::string, glm::vec3> _vec3_uniform;
+            std::map<std::string, glm::vec4> _vec4_uniform;
+            std::map<std::string, glm::mat2> _mat2_uniform;
+            std::map<std::string, glm::mat3> _mat3_uniform;
+            std::map<std::string, glm::mat4> _mat4_uniform;
+
 
             //  == INSTANTIATION ==
           public:
