@@ -123,6 +123,10 @@ namespace arc //! arctk namespace
             constexpr inline T      sum() const noexcept;
             constexpr inline double mag() const noexcept;
             constexpr inline void   normalise() const noexcept;
+
+            //  -- Co-ordinate --
+            constexpr inline void to_polar() const noexcept;
+            constexpr inline void to_cart() const noexcept;
         };
 
 
