@@ -678,8 +678,9 @@ namespace arc //! arctk namespace
         {
             const Vec3<T> polar = *this;
 
-            x = polar.rho * std::cos(polar.theta);
-            y = polar.rho * std::sin(polar.theta);
+            x = polar.rho * std::sin(polar.theta) * std::cos(polar.phi);
+            y = polar.rho * std::sin(polar.theta) * std::sin(polar.phi);
+            z = polar.rho * std::cos(polar.theta);
         }
 
 
