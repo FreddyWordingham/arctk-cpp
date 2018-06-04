@@ -246,7 +246,7 @@ namespace arc //! arctk namespace
             {
                 if (uni.control() == Uniform::controller::CAMERA)
                 {
-                    switch (uni._type)
+                    switch (uni.type())
                     {
                         case Uniform::type::INT:
                             glUniform1i(uni.handle(), cam_.int_uniform(key));
@@ -289,7 +289,7 @@ namespace arc //! arctk namespace
             {
                 if (uni.control() == Uniform::controller::ACTOR)
                 {
-                    switch (uni._type)
+                    switch (uni.type())
                     {
                         case Uniform::type::INT:
                             glUniform1i(uni.handle(), act_.int_uniform(key));
