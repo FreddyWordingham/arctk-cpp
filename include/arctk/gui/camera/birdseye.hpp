@@ -35,6 +35,13 @@ namespace arc //! arctk namespace
 
 
 
+            //  == CONSTANTS ==
+            //  -- View Distance --
+            constexpr const float BIRDSEYE_NEAR_CULL_DIST = 1e-3f;
+            constexpr const float BIRDSEYE_FAR_CULL_DIST  = 1e+3f;
+
+
+
             //  == CLASS ==
             /**
              *  Birdseye camera class.
