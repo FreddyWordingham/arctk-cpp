@@ -135,6 +135,17 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        /**
+         *  Construct an actor using a vector of floats in a given layout.
+         *  Actor is rendered as the given primitive type.
+         *
+         *  @param verts_ [description]
+         *  @param layout_ [description]
+         *  @param primitive_type_ [description]
+         *  @param fill_mode_ [description]
+         *
+         *  @return [description]
+         */
         inline Actor::Actor(const std::vector<GLfloat>& verts_, const std::vector<size_t>& layout_, const GLenum primitive_type_, const GLenum fill_mode_) noexcept
           : _num_vert(static_cast<GLsizei>(verts_.size() / math::sum(layout_)))
           , _vao(init_vao())
