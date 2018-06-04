@@ -232,6 +232,11 @@ namespace arc //! arctk namespace
             return (_vao);
         }
 
+        /**
+         *  Get the vertex buffer object handle.
+         *
+         *  @return Vertex buffer object handle.
+         */
         inline GLuint Actor::vbo() const noexcept
         {
             return (_vbo);
