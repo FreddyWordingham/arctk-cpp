@@ -41,6 +41,17 @@ namespace arc //! arctk namespace
 
         //  == FUNCTIONS ==
         //  -- Mathematical --
+        /**
+         *  Determine the sum of all elements within a container.
+         *
+         *  @tparam C   Type of container.
+         *  @tparam T   Type stored by C.
+         *  @tparam I   Type of const iterator used by C.
+         *
+         *  @param  cont_   Container to sum.
+         *
+         *  @return Sum of all elements.
+         */
         template <typename C, typename T, typename I>
         inline T sum(C& cont_) noexcept
         {
