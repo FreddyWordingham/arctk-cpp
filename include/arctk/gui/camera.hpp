@@ -202,16 +202,6 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
-        inline void Camera::set_fov(const float fov_) noexcept
-        {
-            _fov = fov_;
-        }
-
-        inline void Camera::set_aspect_ratio(const float aspect_ratio_) noexcept
-        {
-            _aspect_ratio = aspect_ratio_;
-        }
-
         inline void Camera::set_pos(const glm::vec3& pos_) noexcept
         {
             _pos = pos_;
