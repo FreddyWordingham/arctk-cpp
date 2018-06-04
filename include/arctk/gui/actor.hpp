@@ -44,6 +44,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Properties --
+            const GLsizei _num_vert;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
