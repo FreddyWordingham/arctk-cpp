@@ -137,6 +137,10 @@ namespace arc //! arctk namespace
             constexpr inline T      sum() const noexcept;
             constexpr inline double mag() const noexcept;
             constexpr inline void   normalise() const noexcept;
+
+            //  -- Co-ordinate --
+            constexpr inline void to_polar() const noexcept;
+            constexpr inline void to_cart() const noexcept;
         };
 
 
@@ -655,6 +659,27 @@ namespace arc //! arctk namespace
             x *= m;
             y *= m;
             z *= m;
+        }
+
+
+        //  -- Co-ordinate --
+        template <typename T>
+        constexpr inline void Vec3<T>::to_polar() const noexcept
+        {
+            const Vec3<T> cart = *this;
+
+            rho   = std::sqrt((cart.x * cart.x) + (cart.y * cart.y) + (cart.z * cart.z));
+            theta = std::acos(cart.z / rho);
+            phi   = std::atan2(cart.y, cart.x);
+        }
+
+        template <typename T>
+        constexpr inline void Vec3<T>::to_cart() const noexcept
+        {
+            const Vec3<T> polar = *this;
+
+            x = polar.rho * std::cos(polar.theta);
+            y = polar.rho * std::sin(polar.theta);
         }
 
 
