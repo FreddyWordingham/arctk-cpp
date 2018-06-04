@@ -123,7 +123,7 @@ namespace arc //! arctk namespace
             return (_handle);
         }
 
-        inline control control() const noexcept
+        inline control Uniform::control() const noexcept
         {
             return (_control);
         }
