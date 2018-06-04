@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Output() noexcept;
             inline Output(const std::string& file_, const std::string& func_, int line_) noexcept;
-            inline Output(const Output&) = default; //!< Defaulted copy constructor.
+            inline Output(const Output&) = delete;  //!< Deleted copy constructor.
             inline Output(Output&&)      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
