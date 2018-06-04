@@ -449,7 +449,7 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Set the model translation matrix used to render the actor.
+         *  Set the model translation vector used to render the actor.
          */
         inline void Actor::set_trans(const glm::vec3& trans_) noexcept
         {
@@ -459,7 +459,7 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Set the model rotation matrix used to render the actor.
+         *  Set the model rotation vector used to render the actor.
          */
         inline void Actor::set_rotate(const glm::vec3& rotate_) noexcept
         {
@@ -469,7 +469,7 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Set the model scale matrix used to render the actor.
+         *  Set the model scale vector used to render the actor.
          */
         inline void Actor::set_scale(const glm::vec3& scale_) noexcept
         {
