@@ -252,6 +252,11 @@ namespace arc //! arctk namespace
             return (_primitive_type);
         }
 
+        /**
+         *  Get the fill mode used to render the actor.
+         *
+         *  @return fill mode used to render the actor.
+         */
         inline GLenum Actor::fill_mode() const noexcept
         {
             return (_fill_mode);
