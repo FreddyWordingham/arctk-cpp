@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
             /**
              *  Birdseye camera class.
              */
-            class Birdseye
+            class Birdseye : public Camera
             {
                 //  == FIELDS ==
               private:
