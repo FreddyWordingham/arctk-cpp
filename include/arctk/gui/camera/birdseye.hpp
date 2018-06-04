@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               private:
                 //  -- Updating --
-                inline void update_mvp() noexcept;
+                inline void update_mvp() noexcept override;
             };
 
 
