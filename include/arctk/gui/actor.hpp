@@ -180,6 +180,11 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
+        /**
+         *  Initialise the vertex array object.
+         *
+         *  @return Handle to the initialised vertex array object.
+         */
         inline GLuint Actor::init_vao() const noexcept
         {
             GLuint vao;
