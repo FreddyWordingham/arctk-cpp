@@ -478,6 +478,9 @@ namespace arc //! arctk namespace
             update_model();
         }
 
+        /**
+         *  Set the value of an integer uniform.
+         */
         inline void Actor::set_int_uniform(const std::string& name_, const int int_) noexcept
         {
             assert(_int_uniform.find(name_) != _int_uniform.end());
@@ -485,6 +488,9 @@ namespace arc //! arctk namespace
             _int_uniform.emplace(std::make_pair(name_, int_));
         }
 
+        /**
+         *  Set the value of a float uniform.
+         */
         inline void Actor::set_float_uniform(const std::string& name_, const float float_) noexcept
         {
             assert(_float_uniform.find(name_) != _float_uniform.end());
@@ -492,6 +498,9 @@ namespace arc //! arctk namespace
             _float_uniform.emplace(std::make_pair(name_, float_));
         }
 
+        /**
+         *  Set the value of a vec3 uniform.
+         */
         inline void Actor::set_vec2_uniform(const std::string& name_, const glm::vec2& vec2_) noexcept
         {
             assert(_vec2_uniform.find(name_) != _vec2_uniform.end());
@@ -499,6 +508,9 @@ namespace arc //! arctk namespace
             _vec2_uniform.emplace(std::make_pair(name_, vec2_));
         }
 
+        /**
+         *  Set the value of a vec3 uniform.
+         */
         inline void Actor::set_vec3_uniform(const std::string& name_, const glm::vec3& vec3_) noexcept
         {
             assert(_vec3_uniform.find(name_) != _vec3_uniform.end());
@@ -506,6 +518,9 @@ namespace arc //! arctk namespace
             _vec3_uniform.emplace(std::make_pair(name_, vec3_));
         }
 
+        /**
+         *  Set the value of a vec4 uniform.
+         */
         inline void Actor::set_vec4_uniform(const std::string& name_, const glm::vec4& vec4_) noexcept
         {
             assert(_vec4_uniform.find(name_) != _vec4_uniform.end());
@@ -513,6 +528,9 @@ namespace arc //! arctk namespace
             _vec4_uniform.emplace(std::make_pair(name_, vec4_));
         }
 
+        /**
+         *  Set the value of a mat2 uniform.
+         */
         inline void Actor::set_mat2_uniform(const std::string& name_, const glm::mat2& mat2_) noexcept
         {
             assert(_mat2_uniform.find(name_) != _mat2_uniform.end());
@@ -520,6 +538,9 @@ namespace arc //! arctk namespace
             _mat2_uniform.emplace(std::make_pair(name_, mat2_));
         }
 
+        /**
+         *  Set the value of a mat3 uniform.
+         */
         inline void Actor::set_mat3_uniform(const std::string& name_, const glm::mat3& mat3_) noexcept
         {
             assert(_mat3_uniform.find(name_) != _mat3_uniform.end());
@@ -527,6 +548,9 @@ namespace arc //! arctk namespace
             _mat3_uniform.emplace(std::make_pair(name_, mat3_));
         }
 
+        /**
+         *  Set the value of a mat4 uniform.
+         */
         inline void Actor::set_mat4_uniform(const std::string& name_, const glm::mat4& mat4_) noexcept
         {
             assert(_mat4_uniform.find(name_) != _mat4_uniform.end());
