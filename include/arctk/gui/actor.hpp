@@ -222,6 +222,11 @@ namespace arc //! arctk namespace
             return (_num_vert);
         }
 
+        /**
+         *  Get the vertex array object handle.
+         *
+         *  @return Vertex array object handle.
+         */
         inline GLuint Actor::vao() const noexcept
         {
             return (_vao);
