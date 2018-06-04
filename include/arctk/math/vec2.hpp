@@ -607,6 +607,10 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline void Vec2<T>::to_cart() const noexcept
         {
+            const Vec2<T> polar = *this;
+
+            x = polar.rho * std::cos(polar.theta);
+            y = polar.rho * std::sin(polar.theta);
         }
 
 
