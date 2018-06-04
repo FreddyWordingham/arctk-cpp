@@ -23,6 +23,7 @@
 //  -- Std --
 #include <sstream>
 #include <string>
+#include <vector>
 
 //  -- Arctk --
 #include <arctk/log.hpp>
@@ -41,6 +42,10 @@ namespace arc //! arctk namespace
         //  -- Parsing --
         template <typename T>
         inline T string(const std::string& str_) noexcept;
+        template <typename... A>
+        inline std::tuple<A...> string(const std::vector<std::string>& str_) noexcept;
+        template <typename... A, size_t... I>
+        inline std::tuple<A...> string_helper(const std::vector<std::string>& str_, std::tuple<A...>& tup_, std::index_sequence<I...>) noexcept;
 
 
 
@@ -68,6 +73,26 @@ namespace arc //! arctk namespace
             }
 
             return (x);
+        }
+
+        template <typename... A>
+        inline std::tuple<A...> string(const std::vector<std::string>& str_) noexcept
+        {
+            assert(str_.size() == sizeof...(A));
+
+
+            std::tuple<A...> tup;
+            string_helper(str_, tup, std::index_sequence_for<A...>());
+
+            return (tup);
+        }
+
+        template <typename... A, size_t... I>
+        inline std::tuple<A...> string_helper(const std::vector<std::string>& str_, std::tuple<A...>& tup_, std::index_sequence<I...>) noexcept
+        {
+            ((std::get<I>(tup_) = string<A>(str_[I])), ...);
+
+            return (tup_);
         }
 
 
