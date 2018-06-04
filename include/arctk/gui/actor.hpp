@@ -80,6 +80,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Initialisation --
             inline GLuint init_vao() const noexcept;
+            inline GLuint init_vbo() const noexcept;
 
 
             //  == METHODS ==
@@ -134,6 +135,15 @@ namespace arc //! arctk namespace
             glGenVertexArrays(1, &vao);
 
             return (vao);
+        }
+
+        inline GLuint Actor::init_vbo() const noexcept
+        {
+            GLuint vbo;
+
+            glGenBuffers(1, &vbo);
+
+            return (vbo);
         }
 
 
