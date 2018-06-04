@@ -29,6 +29,9 @@
 #include <glm/glm.hpp>
 #include <glm/gtx/transform.hpp>
 
+//  -- Arctk --
+#include <arctk/math.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -132,7 +135,7 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION --
         //  -- Constructors --
         inline Actor::Actor(const std::vector<GLfloat>& verts_, const std::vector<size_t>& layout_, const GLenum primitive_type_, const GLenum fill_mode_) noexcept
-          : _num_vert(static_cast<GLsizei>(verts_.size() / utl::sum(layout_)))
+          : _num_vert(static_cast<GLsizei>(verts_.size() / math::sum(layout_)))
           , _vao(init_vao())
           , _vbo(init_vbo())
           , _primitive_type(primitive_type_)
@@ -141,13 +144,13 @@ namespace arc //! arctk namespace
           , _rotate(glm::vec3(0.0f, 0.0f, 0.0f))
           , _scale(glm::vec3(1.0f, 1.0f, 1.0f))
         {
-            assert((verts_.size() % utl::sum(layout_)) == 0);
+            assert((verts_.size() % math::sum(layout_)) == 0);
 
             glBindVertexArray(_vao);
             glBindBuffer(GL_ARRAY_BUFFER, _vbo);
             glBufferData(GL_ARRAY_BUFFER, verts_.size() * sizeof(GLfloat), &verts_.front(), GL_STATIC_DRAW);
 
-            const size_t chunk_size = utl::sum(layout_) * sizeof(GLfloat);
+            const size_t chunk_size = math::sum(layout_) * sizeof(GLfloat);
             size_t       start      = 0;
             for (size_t i = 0; i < layout_.size(); ++i)
             {
