@@ -43,6 +43,13 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- View --
+                float _width_start;
+                float _width_end;
+                float _height_start;
+                float _height_end;
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
