@@ -87,7 +87,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
-        inline Fly::Fly(const glm::vec3& pos_, const glm::vec3& dir_, const glm::vec3& up_) noexcept
+        inline Camera::Camera(const glm::vec3& pos_, const glm::vec3& dir_, const glm::vec3& up_) noexcept
           : _pos(pos_)
           , _dir(dir_)
           , _up(up_)
