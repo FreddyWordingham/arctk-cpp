@@ -212,6 +212,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the number of vertices used by the actor.
+         *
+         *  @return Number of vertices.
+         */
         inline GLsizei Actor::num_vert() const noexcept
         {
             return (_num_vert);
