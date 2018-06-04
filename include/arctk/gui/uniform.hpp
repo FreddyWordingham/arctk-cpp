@@ -105,14 +105,14 @@ namespace arc //! arctk namespace
          *  @param  type_       Type to be controlled by uniform.
          *  @param  control_    Handler of uniform.
          *
-         *  @pre    handle_ must be positive.
+         *  @pre    handle_ must be non-negative.
          */
         inline Uniform::Uniform(const GLint handle_, const stored type_, const controller control_) noexcept
           : _handle(handle_)
           , _type(type_)
           , _control(control_)
         {
-            assert(handle_ > 0);
+            assert(handle_ >= 0);
         }
 
 
