@@ -248,28 +248,28 @@ namespace arc //! arctk namespace
                 {
                     switch (uni.type())
                     {
-                        case Uniform::type::INT:
+                        case Uniform::stored::INT:
                             glUniform1i(uni.handle(), cam_.int_uniform(key));
                             break;
-                        case Uniform::type::FLOAT:
+                        case Uniform::stored::FLOAT:
                             glUniform1f(uni.handle(), cam_.float_uniform(key));
                             break;
-                        case Uniform::type::VEC2:
+                        case Uniform::stored::VEC2:
                             glUniform2fv(uni.handle(), 1, &cam_.vec2_uniform(key)[0]);
                             break;
-                        case Uniform::type::VEC3:
+                        case Uniform::stored::VEC3:
                             glUniform3fv(uni.handle(), 1, &cam_.vec3_uniform(key)[0]);
                             break;
-                        case Uniform::type::VEC4:
+                        case Uniform::stored::VEC4:
                             glUniform4fv(uni.handle(), 1, &cam_.vec4_uniform(key)[0]);
                             break;
-                        case Uniform::type::MAT2:
+                        case Uniform::stored::MAT2:
                             glUniformMatrix2fv(uni.handle(), 1, GL_FALSE, &cam_.mat2_uniform(key)[0][0]);
                             break;
-                        case Uniform::type::MAT3:
+                        case Uniform::stored::MAT3:
                             glUniformMatrix3fv(uni.handle(), 1, GL_FALSE, &cam_.mat3_uniform(key)[0][0]);
                             break;
-                        case Uniform::type::MAT4:
+                        case Uniform::stored::MAT4:
                             glUniformMatrix4fv(uni.handle(), 1, GL_FALSE, &cam_.mat4_uniform(key)[0][0]);
                             break;
                     }
@@ -291,28 +291,28 @@ namespace arc //! arctk namespace
                 {
                     switch (uni.type())
                     {
-                        case Uniform::type::INT:
+                        case Uniform::stored::INT:
                             glUniform1i(uni.handle(), act_.int_uniform(key));
                             break;
-                        case Uniform::type::FLOAT:
+                        case Uniform::stored::FLOAT:
                             glUniform1f(uni.handle(), act_.float_uniform(key));
                             break;
-                        case Uniform::type::VEC2:
+                        case Uniform::stored::VEC2:
                             glUniform2fv(uni.handle(), 1, &act_.vec2_uniform(key)[0]);
                             break;
-                        case Uniform::type::VEC3:
+                        case Uniform::stored::VEC3:
                             glUniform3fv(uni.handle(), 1, &act_.vec3_uniform(key)[0]);
                             break;
-                        case Uniform::type::VEC4:
+                        case Uniform::stored::VEC4:
                             glUniform4fv(uni.handle(), 1, &act_.vec4_uniform(key)[0]);
                             break;
-                        case Uniform::type::MAT2:
+                        case Uniform::stored::MAT2:
                             glUniformMatrix2fv(uni.handle(), 1, GL_FALSE, &act_.mat2_uniform(key)[0][0]);
                             break;
-                        case Uniform::type::MAT3:
+                        case Uniform::stored::MAT3:
                             glUniformMatrix3fv(uni.handle(), 1, GL_FALSE, &act_.mat3_uniform(key)[0][0]);
                             break;
-                        case Uniform::type::MAT4:
+                        case Uniform::stored::MAT4:
                             glUniformMatrix4fv(uni.handle(), 1, GL_FALSE, &act_.mat4_uniform(key)[0][0]);
                             break;
                     }
