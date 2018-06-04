@@ -55,8 +55,8 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline Warning() noexcept;
                 inline Warning(const std::string& file_, const std::string& func_, int line_) noexcept;
-                inline Warning(const Warning&) = default; //!< Defaulted copy constructor.
-                inline Warning(Warning&&)      = default; //!< Defaulted move constructor.
+                inline Warning(const Warning&) noexcept = delete; //!< Deleted copy constructor.
+                inline Warning(Warning&&) noexcept      = delete; //!< Deleted move constructor.
 
                 //  -- Destructors --
                 inline ~Warning() noexcept override;
@@ -65,8 +65,8 @@ namespace arc //! arctk namespace
                 //  == OPERATORS ==
               public:
                 //  -- Assignment --
-                inline Warning& operator=(const Warning&) = default; //!< Defaulted copy operator. @return Reference to copied object.
-                inline Warning& operator=(Warning&&) = default;      //!< Defaulted move operator. @return Reference to moved object.
+                inline Warning& operator=(const Warning&) noexcept = delete; //!< Deleted copy operator. @return Reference to copied object.
+                inline Warning& operator=(Warning&&) = default;              //!< Defaulted move operator. @return Reference to moved object.
 
 
                 //  == METHODS ==
