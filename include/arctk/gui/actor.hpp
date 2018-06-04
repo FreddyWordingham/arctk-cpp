@@ -194,6 +194,11 @@ namespace arc //! arctk namespace
             return (vao);
         }
 
+        /**
+         *  Initialise the vertex buffer object.
+         *
+         *  @return Handle to the initialised vertex buffer object.
+         */
         inline GLuint Actor::init_vbo() const noexcept
         {
             GLuint vbo;
