@@ -35,7 +35,7 @@ namespace arc //! arctk namespace
 
         //  == FUNCTION PROTOTYPES ==
         //  -- Mathematical --
-        template <typename C, typename T = typename C::value_type, typename I = typename C::iterator>
+        template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline T sum(C& cont_) noexcept;
 
 
