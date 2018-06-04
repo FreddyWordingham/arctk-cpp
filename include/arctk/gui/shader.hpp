@@ -258,7 +258,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
-        inline void Shader::add_uniform(const std::string& name_, const Uniform::type type_, Uniform::controller control_) noexcept
+        inline void Shader::add_uniform(const std::string& name_, const Uniform::controller type_, Uniform::controller control_) noexcept
         {
             GLint id = glGetUniformLocation(_handle, name_.c_str());
 
