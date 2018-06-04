@@ -449,6 +449,9 @@ namespace arc //! arctk namespace
 
 
         //  -- Updating --
+        /**
+         *  Update the model matrix.
+         */
         inline void Actor::update_model() noexcept
         {
             glm::mat4 model;
