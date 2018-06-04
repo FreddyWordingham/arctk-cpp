@@ -61,8 +61,8 @@ namespace arc //! arctk namespace
               public:
                 //  -- Constructors --
                 inline Progress(const std::string& str_, double frac_) noexcept;
-                inline Progress(const Progress&) = default; //!< Defaulted copy constructor.
-                inline Progress(Progress&&)      = default; //!< Defaulted move constructor.
+                inline Progress(const Progress&) noexcept = delete; //!< Deleted copy constructor.
+                inline Progress(Progress&&) noexcept      = delete; //!< Deleted move constructor.
 
                 //  -- Destructors --
                 inline ~Progress() noexcept override;
@@ -71,8 +71,8 @@ namespace arc //! arctk namespace
                 //  == OPERATORS ==
               public:
                 //  -- Assignment --
-                inline Progress& operator=(const Progress&) = default; //!< Defaulted copy operator. @return Reference to copied object.
-                inline Progress& operator=(Progress&&) = default;      //!< Defaulted move operator. @return Reference to moved object.
+                inline Progress& operator=(const Progress&) noexcept = delete; //!< Deleted copy operator. @return Reference to copied object.
+                inline Progress& operator=(Progress&&) noexcept = delete;      //!< Deleted move operator. @return Reference to moved object.
 
 
                 //  == METHODS ==
