@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
             /**
              *  Enumeration of possible types to be handled by the uniform.
              */
-            enum class type
+            enum class stored
             {
                 INT,
                 FLOAT,
@@ -76,20 +76,21 @@ namespace arc //! arctk namespace
             const GLint _handle; //!< Uniform handle.
 
             //  -- Information --
-            type       _type;    //!< Type handled by the uniform.
+            stored     _type;    //!< Type handled by the uniform.
             controller _control; //!< Object controlling the uniform.
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Uniform(GLint handle_, type type_, controller control_) noexcept;
+            inline Uniform(GLint handle_, stored type_, controller control_) noexcept;
 
 
             //  == METHODS ==
           public:
             //  -- Getters --
             inline GLint      handle() const noexcept;
+            inline stored     type() const noexcept;
             inline controller control() const noexcept;
         };
 
@@ -106,7 +107,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    handle_ must be positive.
          */
-        inline Uniform::Uniform(const GLint handle_, const type type_, const controller control_) noexcept
+        inline Uniform::Uniform(const GLint handle_, const stored type_, const controller control_) noexcept
           : _handle(handle_)
           , _type(type_)
           , _control(control_)
