@@ -107,6 +107,15 @@ namespace arc //! arctk namespace
             return (tup);
         }
 
+        /**
+         *  String tuple helper function.
+         *  Required for constexpr index sequence generation.
+         *
+         *  @param  str_    Vector of strings to parse into tuple types.
+         *  @param  tup_    Tuple to initialise.
+         *
+         *  @return Tuple of initialised values.
+         */
         template <typename... A, size_t... I>
         inline std::tuple<A...> string_helper(const std::vector<std::string>& str_, std::tuple<A...>& tup_, std::index_sequence<I...>) noexcept
         {
