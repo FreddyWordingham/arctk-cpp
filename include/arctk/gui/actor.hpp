@@ -47,6 +47,10 @@ namespace arc //! arctk namespace
             //  -- Properties --
             const GLsizei _num_vert;
 
+            //  -- Vertices --
+            const GLuint _vao;
+            const GLuint _vbo;
+
 
             //  == INSTANTIATION ==
           public:
