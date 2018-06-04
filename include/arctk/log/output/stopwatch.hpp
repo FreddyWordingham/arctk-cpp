@@ -59,8 +59,8 @@ namespace arc //! arc namespace
                 //  -- Constructors --
                 inline explicit Stopwatch(const std::string& str_) noexcept;
                 inline Stopwatch(const std::string& file_, const std::string& func_, int line_, const std::string& str_) noexcept;
-                inline Stopwatch(const Stopwatch&) = delete; //!< Deleted copy constructor.
-                inline Stopwatch(Stopwatch&&)      = delete; //!< Deleted move constructor.
+                inline Stopwatch(const Stopwatch&) = default; //!< Defaulted copy constructor.
+                inline Stopwatch(Stopwatch&&)      = default; //!< Defaulted move constructor.
 
                 //  -- Destructors --
                 inline ~Stopwatch() noexcept override;
@@ -69,8 +69,8 @@ namespace arc //! arc namespace
                 //  == OPERATORS ==
               public:
                 //  -- Assignment --
-                inline Stopwatch& operator=(const Stopwatch&) = delete; //!< Deleted copy operator. @return Reference to copied object.
-                inline Stopwatch& operator=(Stopwatch&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
+                inline Stopwatch& operator=(const Stopwatch&) = default; //!< Defaulted copy operator. @return Reference to copied object.
+                inline Stopwatch& operator=(Stopwatch&&) = default;      //!< Defaulted move operator. @return Reference to moved object.
 
 
                 //  == METHODS ==
