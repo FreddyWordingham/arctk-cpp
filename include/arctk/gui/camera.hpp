@@ -80,6 +80,19 @@ namespace arc //! arctk namespace
             inline const glm::mat3& mat3_uniform(const std::string& name_) const noexcept;
             inline const glm::mat4& mat4_uniform(const std::string& name_) const noexcept;
 
+            //  -- Setters --
+            inline void set_pos(const glm::vec3& pos_) noexcept override;
+            inline void set_dir(const glm::vec3& dir_) noexcept override;
+            inline void set_up(const glm::vec3& up_) noexcept override;
+            inline void set_int_uniform(const std::string& name_, int int_) noexcept override;
+            inline void set_float_uniform(const std::string& name_, float float_) noexcept override;
+            inline void set_vec2_uniform(const std::string& name_, const glm::vec2& vec2_) noexcept override;
+            inline void set_vec3_uniform(const std::string& name_, const glm::vec3& vec3_) noexcept override;
+            inline void set_vec4_uniform(const std::string& name_, const glm::vec4& vec4_) noexcept override;
+            inline void set_mat2_uniform(const std::string& name_, const glm::mat2& mat2_) noexcept override;
+            inline void set_mat3_uniform(const std::string& name_, const glm::mat3& mat3_) noexcept override;
+            inline void set_mat4_uniform(const std::string& name_, const glm::mat4& mat4_) noexcept override;
+
           private:
             //  -- Updating --
             virtual inline void update_mvp() noexcept = 0;
@@ -175,6 +188,118 @@ namespace arc //! arctk namespace
             assert(_mat4_uniform.find(name_) != _mat4_uniform.end());
 
             return (_mat4_uniform.find(name_)->second);
+        }
+
+
+        //  -- Setters --
+        inline void Camera::set_fov(const float fov_) noexcept
+        {
+            _fov = fov_;
+        }
+
+        inline void Camera::set_aspect_ratio(const float aspect_ratio_) noexcept
+        {
+            _aspect_ratio = aspect_ratio_;
+        }
+
+        inline void Camera::set_pos(const glm::vec3& pos_) noexcept
+        {
+            _pos = pos_;
+
+            update_mvp();
+        }
+
+        inline void Camera::set_dir(const glm::vec3& dir_) noexcept
+        {
+            _dir = dir_;
+
+            _up = glm::normalize(glm::cross(glm::normalize(glm::cross(_dir, _up)), _dir));
+
+            update_mvp();
+        }
+
+        inline void Camera::set_up(const glm::vec3& up_) noexcept
+        {
+            _up = up_;
+
+            update_mvp();
+        }
+
+        inline void Camera::set_int_uniform(const std::string& name_, const int int_) noexcept
+        {
+            assert(_int_uniform.find(name_) != _int_uniform.end());
+
+            _int_uniform.emplace(std::make_pair(name_, int_));
+        }
+
+        inline void Camera::set_float_uniform(const std::string& name_, const float float_) noexcept
+        {
+            assert(_float_uniform.find(name_) != _float_uniform.end());
+
+            _float_uniform.emplace(std::make_pair(name_, float_));
+        }
+
+        inline void Camera::set_vec2_uniform(const std::string& name_, const glm::vec2& vec2_) noexcept
+        {
+            assert(_vec2_uniform.find(name_) != _vec2_uniform.end());
+
+            _vec2_uniform.emplace(std::make_pair(name_, vec2_));
+        }
+
+        inline void Camera::set_vec3_uniform(const std::string& name_, const glm::vec3& vec3_) noexcept
+        {
+            assert(_vec3_uniform.find(name_) != _vec3_uniform.end());
+
+            _vec3_uniform.emplace(std::make_pair(name_, vec3_));
+        }
+
+        inline void Camera::set_vec4_uniform(const std::string& name_, const glm::vec4& vec4_) noexcept
+        {
+            assert(_vec4_uniform.find(name_) != _vec4_uniform.end());
+
+            _vec4_uniform.emplace(std::make_pair(name_, vec4_));
+        }
+
+        inline void Camera::set_mat2_uniform(const std::string& name_, const glm::mat2& mat2_) noexcept
+        {
+            assert(_mat2_uniform.find(name_) != _mat2_uniform.end());
+
+            _mat2_uniform.emplace(std::make_pair(name_, mat2_));
+        }
+
+        inline void Camera::set_mat3_uniform(const std::string& name_, const glm::mat3& mat3_) noexcept
+        {
+            assert(_mat3_uniform.find(name_) != _mat3_uniform.end());
+
+            _mat3_uniform.emplace(std::make_pair(name_, mat3_));
+        }
+
+        inline void Camera::set_mat4_uniform(const std::string& name_, const glm::mat4& mat4_) noexcept
+        {
+            assert(_mat4_uniform.find(name_) != _mat4_uniform.end());
+
+            _mat4_uniform.emplace(std::make_pair(name_, mat4_));
+        }
+
+
+        //  -- Control --
+        inline void Camera::move(const glm::vec3& vec_) noexcept
+        {
+            _pos += vec_;
+
+            update_mvp();
+        }
+
+        inline void Camera::rotate(const glm::vec2& vec_) noexcept
+        {
+            _dir = glm::rotate(_dir, vec_.x, _up);
+
+            const glm::vec3 right = glm::normalize(glm::cross(_dir, _up));
+            _dir                  = glm::rotate(_dir, vec_.y, right);
+
+            _up = glm::normalize(glm::cross(right, _dir));
+
+            update_mvp();
         }
 
 
