@@ -282,6 +282,11 @@ namespace arc //! arctk namespace
             return (_rotate);
         }
 
+        /**
+         *  Get the scale transformation matrix.
+         *
+         *  @return Scale transformation matrix.
+         */
         inline const glm::vec3& Actor::scale() const noexcept
         {
             return (_scale);
