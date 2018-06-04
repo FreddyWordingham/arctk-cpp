@@ -263,9 +263,9 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Get the model translation matrix.
+         *  Get the model translation vector.
          *
-         *  @return Model translation matrix.
+         *  @return Model translation vector.
          */
         inline const glm::vec3& Actor::trans() const noexcept
         {
@@ -273,9 +273,9 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Get the model rotate matrix.
+         *  Get the model rotate vector.
          *
-         *  @return Model rotate matrix.
+         *  @return Model rotate vector.
          */
         inline const glm::vec3& Actor::rotate() const noexcept
         {
@@ -283,9 +283,9 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Get the model scale matrix.
+         *  Get the model scale vector.
          *
-         *  @return Model scale matrix.
+         *  @return Model scale vector.
          */
         inline const glm::vec3& Actor::scale() const noexcept
         {
