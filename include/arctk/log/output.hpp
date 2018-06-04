@@ -49,8 +49,8 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Output() noexcept;
             inline Output(const std::string& file_, const std::string& func_, int line_) noexcept;
-            inline Output(const Output&) noexcept = delete; //!< Deleted copy constructor.
-            inline Output(Output&&) noexcept      = delete; //!< Deleted move constructor.
+            inline Output(const Output&) noexcept = default; //!< Defaulted copy constructor.
+            inline Output(Output&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
             inline ~Output() noexcept override;
@@ -59,8 +59,8 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            inline Output& operator=(const Output&) noexcept = delete; //!< Deleted copy operator. @return Reference to copied object.
-            inline Output& operator=(Output&&) noexcept = delete;      //!< Deleted move operator. @return Reference to moved object.
+            inline Output& operator=(const Output&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Output& operator=(Output&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
         };
 
 
