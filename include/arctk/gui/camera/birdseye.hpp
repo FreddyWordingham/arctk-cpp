@@ -53,6 +53,8 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline explicit Birdseye(float width_start_ = 0.0f, float width_end_ = 1.0f, float height_start_ = 0.0f, float height_end_ = 1.0f, const glm::vec3& pos_ = {0.0f, 0.0f, 1.0f}, const glm::vec3& dir_ = {0.0f, 0.0f, -1.0f},
+                                         const glm::vec3& up_ = {0.0f, 1.0f, 0.0f}) noexcept;
 
 
                 //  == METHODS ==
@@ -63,6 +65,15 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION --
             //  -- Constructors --
+            inline Birdseye::Birdseye(const float width_start_, const float width_end_, const float height_start_, const float height_end_, const glm::vec3& pos_, const glm::vec3& dir_, const glm::vec3& up_) noexcept
+              : Camera(pos_, dir_, up_)
+              , _width_start(width_start_)
+              , _width_end(width_end_)
+              , _height_start(height_start_)
+              , _height_end(height_end_)
+            {
+                update_mvp();
+            }
 
 
 
