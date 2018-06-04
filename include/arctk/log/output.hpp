@@ -26,6 +26,7 @@
 
 //  -- Arctk --
 #include <arctk/log/term.hpp>
+#include <arctk/str.hpp>
 
 
 
