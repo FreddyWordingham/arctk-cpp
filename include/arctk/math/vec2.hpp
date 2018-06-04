@@ -594,6 +594,22 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Co-ordinate --
+        template <typename T>
+        constexpr inline void Vec2<T>::to_polar() const noexcept
+        {
+            const Vec2<T> cart = *this;
+
+            rho   = std::sqrt((cart.x * cart.x) + (cart.y * cart.y));
+            theta = std::atan2(cart.y, cart.x);
+        }
+
+        template <typename T>
+        constexpr inline void Vec2<T>::to_cart() const noexcept
+        {
+        }
+
+
 
     } // namespace math
 } // namespace arc
