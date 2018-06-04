@@ -244,7 +244,7 @@ namespace arc //! arctk namespace
 
             for (auto& [key, uni] : shad_.uniform())
             {
-                if (uni._control == Uniform::control::CAMERA)
+                if (uni.control() == Uniform::control::CAMERA)
                 {
                     switch (uni._type)
                     {
@@ -287,7 +287,7 @@ namespace arc //! arctk namespace
 
             for (auto& [key, uni] : shad_.uniform())
             {
-                if (uni._control == Uniform::control::ACTOR)
+                if (uni.control() == Uniform::control::ACTOR)
                 {
                     switch (uni._type)
                     {
