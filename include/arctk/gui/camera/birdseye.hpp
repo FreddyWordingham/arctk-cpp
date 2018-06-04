@@ -58,7 +58,9 @@ namespace arc //! arctk namespace
 
 
                 //  == METHODS ==
-              public:
+              private:
+                //  -- Updating --
+                inline void update_mvp() noexcept;
             };
 
 
@@ -78,6 +80,15 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Updating --
+            inline void Birdseye::update_mvp() noexcept
+            {
+                const glm::mat4 model = glm::mat4(1.0f);
+                const glm::mat4 view  = glm::lookAt(_pos, _pos + _dir, _up);
+                const glm::mat4 proj  = glm::ortho(_width_start, _width_end, _height_start, _height_end, BIRDSEYE_NEAR_CULL_DIST, BIRDSEYE_FAR_CULL_DIST);
+
+                _mvp = proj * view * model;
+            }
 
 
 
