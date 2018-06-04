@@ -20,6 +20,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cmath>
+
 //  -- Arctk --
 #include <arctk/constant.hpp>
 
@@ -39,6 +42,10 @@ namespace arc //! arctk namespace
         inline T rad_to_deg(T val_) noexcept;
         template <typename T>
         inline T deg_to_rad(T val_) noexcept;
+
+        //  -- Co-ordinate --
+        template <typename T>
+        inline T polar_to_cart(const Vec2<T>& polar_) noexcept;
 
 
 
@@ -68,6 +75,14 @@ namespace arc //! arctk namespace
         inline T deg_to_rad(const T val_) noexcept
         {
             return (static_cast<T>(constant::PI / 180.0) * val_);
+        }
+
+
+        //  -- Co-ordinate --
+        template <typename T>
+        inline T polar_to_cart(const Vec2<T>& polar_) noexcept
+        {
+            return (Vec2<T>(polar_.rho * std::cos(polar_.theta), polar_.rho * std::sin(polar_.theta)));
         }
 
 
