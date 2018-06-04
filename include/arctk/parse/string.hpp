@@ -51,6 +51,15 @@ namespace arc //! arctk namespace
 
         //  == FUNCTIONS ==
         //  -- Parsing --
+        /**
+         *  Parse a value from a string.
+         *  Function will call error on failed parsing.
+         *  Function will call error if characters remain after parsing.
+         *
+         *  @param  str_    String to parse.
+         *
+         *  @return Parsed value.
+         */
         template <typename T>
         inline T string(const std::string& str_) noexcept
         {
