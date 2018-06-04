@@ -82,7 +82,7 @@ namespace arc //! arctk namespace
             inline const std::map<std::string, Uniform>& uniform() const noexcept;
 
             //  -- Setters --
-            inline void add_uniform(const std::string& name_, Uniform::type type_, Uniform::control control_) noexcept;
+            inline void add_uniform(const std::string& name_, Uniform::type type_, Uniform::controller control_) noexcept;
             inline void set_uniform(const std::string& name_, int int_) noexcept;
             inline void set_uniform(const std::string& name_, float float_) noexcept;
             inline void set_uniform(const std::string& name_, const glm::vec2& vec2_) noexcept;
@@ -258,7 +258,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
-        inline void Shader::add_uniform(const std::string& name_, const Uniform::type type_, Uniform::control control_) noexcept
+        inline void Shader::add_uniform(const std::string& name_, const Uniform::type type_, Uniform::controller control_) noexcept
         {
             GLint id = glGetUniformLocation(_handle, name_.c_str());
 
