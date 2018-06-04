@@ -51,6 +51,15 @@ namespace arc //! arctk namespace
             const GLuint _vao;
             const GLuint _vbo;
 
+            //  -- Rendering --
+            GLenum _primitive_type;
+            GLenum _fill_mode;
+
+            //  -- Transform --
+            glm::vec3 _trans;
+            glm::vec3 _rotate;
+            glm::vec3 _scale;
+
 
             //  == INSTANTIATION ==
           public:
