@@ -255,13 +255,18 @@ namespace arc //! arctk namespace
         /**
          *  Get the fill mode used to render the actor.
          *
-         *  @return fill mode used to render the actor.
+         *  @return Fill mode used to render the actor.
          */
         inline GLenum Actor::fill_mode() const noexcept
         {
             return (_fill_mode);
         }
 
+        /**
+         *  Get the model transformation matrix.
+         *
+         *  @return Model transformation matrix.
+         */
         inline const glm::vec3& Actor::trans() const noexcept
         {
             return (_trans);
