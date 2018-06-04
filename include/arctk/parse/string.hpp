@@ -86,8 +86,17 @@ namespace arc //! arctk namespace
             return (x);
         }
 
-        / template <typename... A>
-          inline std::tuple<A...> string(const std::vector<std::string>& str_) noexcept
+        /**
+         *  Parse a vector of strings into a tuple.
+         *
+         *  @tparam A   Types to parse.
+         *
+         *  @param  str_    Vector of strings to parse into tuple types.
+         *
+         *  @return Parsed tuple of values.
+         */
+        template <typename... A>
+        inline std::tuple<A...> string(const std::vector<std::string>& str_) noexcept
         {
             assert(str_.size() == sizeof...(A));
 
