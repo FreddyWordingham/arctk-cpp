@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <map>
+#include <vector>
 
 //  -- Graphical --
 #include <GL/glew.h>
