@@ -55,8 +55,8 @@ namespace arc //! arctk namespace
             const GLsizei _num_vert; //!< Number of actor vertices.
 
             //  -- Vertices --
-            const GLuint _vao;
-            const GLuint _vbo;
+            const GLuint _vao; //!< Vertex array object handle.
+            const GLuint _vbo; //!< Vertex buffer object handle.
 
             //  -- Rendering --
             GLenum _primitive_type;
