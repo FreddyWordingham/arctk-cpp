@@ -440,6 +440,9 @@ namespace arc //! arctk namespace
             _primitive_type = primitive_type_;
         }
 
+        /**
+         *  Set the fill mode used to render the actor.
+         */
         inline void Actor::set_fill_mode(const GLenum fill_mode_) noexcept
         {
             _fill_mode = fill_mode_;
