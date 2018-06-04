@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <string>
+#include <stringstream>
 
 
 
