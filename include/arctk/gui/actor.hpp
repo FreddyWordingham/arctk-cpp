@@ -448,6 +448,9 @@ namespace arc //! arctk namespace
             _fill_mode = fill_mode_;
         }
 
+        /**
+         *  Set the model translation matrix used to render the actor.
+         */
         inline void Actor::set_trans(const glm::vec3& trans_) noexcept
         {
             _trans = trans_;
@@ -455,6 +458,9 @@ namespace arc //! arctk namespace
             update_model();
         }
 
+        /**
+         *  Set the model rotation matrix used to render the actor.
+         */
         inline void Actor::set_rotate(const glm::vec3& rotate_) noexcept
         {
             _rotate = rotate_;
@@ -462,6 +468,9 @@ namespace arc //! arctk namespace
             update_model();
         }
 
+        /**
+         *  Set the model scale matrix used to render the actor.
+         */
         inline void Actor::set_scale(const glm::vec3& scale_) noexcept
         {
             _scale = scale_;
