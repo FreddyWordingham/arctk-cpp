@@ -52,7 +52,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Properties --
-            const GLsizei _num_vert;
+            const GLsizei _num_vert; //!< Number of actor vertices.
 
             //  -- Vertices --
             const GLuint _vao;
