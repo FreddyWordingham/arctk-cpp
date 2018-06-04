@@ -82,7 +82,7 @@ namespace arc //! arctk namespace
             inline const std::map<std::string, Uniform>& uniform() const noexcept;
 
             //  -- Setters --
-            inline void add_uniform(const std::string& name_, const Uniform::stored type_, const Uniform::controller control_) noexcept;
+            inline void add_uniform(const std::string& name_, Uniform::stored type_, Uniform::controller control_) noexcept;
             inline void set_uniform(const std::string& name_, int int_) noexcept;
             inline void set_uniform(const std::string& name_, float float_) noexcept;
             inline void set_uniform(const std::string& name_, const glm::vec2& vec2_) noexcept;
