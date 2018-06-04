@@ -30,6 +30,7 @@
 #include <utility>
 
 //  -- Arctk --
+#include <arctk/log.hpp>
 #include <arctk/utl.hpp>
 
 
@@ -104,6 +105,8 @@ namespace arc //! arctk namespace
         inline std::string to_string(const std::pair<A0, A1>& pair_, size_t width_ = 0, const std::string& pre_ = "(", const std::string& delim_ = ", ", const std::string& post_ = ")");
         template <typename... A>
         inline std::string to_string(const std::tuple<A...>& tup_, size_t width_ = 0, const std::string& pre_ = "(", const std::string& delim_ = ", ", const std::string& post_ = ")");
+        template <typename T>
+        inline T from_str(const std::string& str_) noexcept;
 
         //  -- Time --
         inline std::string time(uint64_t us_) noexcept;
@@ -197,6 +200,31 @@ namespace arc //! arctk namespace
 
             return (stream.str());
         }
+
+        template <typename T>
+        inline T from_str(const std::string& str_) noexcept
+        {
+            std::stringstream stream;
+            stream << str_;
+
+            T x{};
+            stream >> x;
+
+            if (stream.fail())
+            {
+                ERROR(42) << "Unable to parse string: '" << str_ << "' to type.\n"
+                          << "String: '" << str_ << "' can not be parsed to type: '" << typeid(T).name() << "'.";
+            }
+
+            if (stream.rdbuf()->in_avail() != 0)
+            {
+                ERROR(42) << "Unable to parse string to type.\n"
+                          << "String: '" << str_ << "' contains leftover characters after parsing to type: '" << typeid(T).name() << "'.";
+            }
+
+            return (x);
+        }
+
 
 
         //  -- Time --
