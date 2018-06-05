@@ -340,6 +340,11 @@ namespace arc //! arctk namespace
             return (_model);
         }
 
+        /**
+         *  Get the uniform map.
+         *
+         *  @return Uniform map.
+         */
         inline const std::map<std::string, Uniform>& Shader::uniform() const noexcept
         {
             return (_uniform);
