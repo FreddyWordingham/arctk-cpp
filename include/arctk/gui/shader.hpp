@@ -352,8 +352,19 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
+        /**
+         *  Add a uniform to the shader.
+         *
+         *  @param  name_       Name of the uniform.
+         *  @param  type_       Type stored by the uniform.
+         *  @param  control_    Controller of the uniform.
+         *
+         *  @pre    name_ must not be empty.
+         */
         inline void Shader::add_uniform(const std::string& name_, const Uniform::stored type_, const Uniform::controller control_) noexcept
         {
+            assert(!name_.empty());
+
             GLint id = glGetUniformLocation(_handle, name_.c_str());
 
             if (id < 0)
