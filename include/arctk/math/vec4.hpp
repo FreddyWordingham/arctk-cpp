@@ -596,6 +596,13 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Properties --
+        /**
+         *  Determine if a vec is normalised to within a given tolerance.
+         *
+         *  @param  tol_    Maximum tolerance of normalisation value.
+         *
+         *  @return True if the vec is normalised.
+         */
         template <typename T>
         constexpr inline bool Vec4<T>::normalised(const double tol_) const noexcept
         {
