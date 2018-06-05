@@ -178,6 +178,11 @@ namespace arc //! arctk namespace
             return (_up);
         }
 
+        /**
+         *  Get the model-view-projection matrix.
+         *
+         *  @return Model-view-projection matrix.
+         */
         inline const glm::mat4& Camera::mvp() const noexcept
         {
             return (_mvp);
