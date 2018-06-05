@@ -105,6 +105,9 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Updating --
+            /**
+             *  Update the model-view-projection matrix of the camera.
+             */
             inline void Birdseye::update_mvp() noexcept
             {
                 const glm::mat4 model = glm::mat4(1.0f);
