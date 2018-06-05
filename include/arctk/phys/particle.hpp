@@ -58,6 +58,9 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline const math::Vec3<double>& pos() noexcept;
             inline const math::Vec3<double>& dir() noexcept;
+
+            //  -- Setters --
+            inline void move(double dist_) noexcept;
         };
 
 
@@ -83,6 +86,13 @@ namespace arc //! arctk namespace
         inline const math::Vec3<double>& Particle::dir() noexcept
         {
             return (_dir);
+        }
+
+
+        //  -- Setters --
+        inline void Particle::move(double dist_) noexcept
+        {
+            _pos += _dir * dist_;
         }
 
 
