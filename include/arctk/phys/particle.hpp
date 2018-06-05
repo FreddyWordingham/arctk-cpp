@@ -50,6 +50,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            Particle(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_);
 
 
             //  == METHODS ==
@@ -59,6 +60,13 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
+        //  -- Constructors --
+        Particle::Particle(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_)
+          : _pos(pos_)
+          , _dir(dir_)
+        {
+            assert(dir_.normalised());
+        }
 
 
 
