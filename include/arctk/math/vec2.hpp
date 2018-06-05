@@ -557,7 +557,7 @@ namespace arc //! arctk namespace
         //  == METHODS ==
         //  -- Properties --
         template <typename T>
-        constexpr inline bool Vec3<T>::normalised(const double tol_) const noexcept
+        constexpr inline bool Vec2<T>::normalised(const double tol_) const noexcept
         {
             return (std::fabs(1.0 - mag()) <= tol_);
         }
