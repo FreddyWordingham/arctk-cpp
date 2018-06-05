@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            Particle(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_);
+            inline Particle(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) noexcept;
 
 
             //  == METHODS ==
@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        Particle::Particle(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_)
+        inline Particle::Particle(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) noexcept
           : _pos(pos_)
           , _dir(dir_)
         {
