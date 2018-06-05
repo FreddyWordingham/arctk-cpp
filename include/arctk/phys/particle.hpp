@@ -109,8 +109,17 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
+        /**
+         *  Move the particle along it's current direction by a given distance.
+         *
+         *  @param  dist_   Distance to travel.
+         *
+         *  @pre    dist_ must be positive.
+         */
         inline void Particle::move(const double dist_) noexcept
         {
+            assert(dist_ > 0.0);
+
             _pos += _dir * dist_;
         }
 
