@@ -137,6 +137,7 @@ namespace arc //! arctk namespace
             constexpr inline T      sum() const noexcept;
             constexpr inline double mag() const noexcept;
             constexpr inline void   normalise() const noexcept;
+            constexpr inline void   rotate(const math::Vec3& axis_, double ang_) const noexcept;
 
             //  -- Co-ordinate --
             constexpr inline void to_polar() const noexcept;
@@ -659,6 +660,14 @@ namespace arc //! arctk namespace
             x *= m;
             y *= m;
             z *= m;
+        }
+
+        template <typename T>
+        constexpr inline void Vec3<T>::rotate(const math::Vec3& axis_, const double ang_) const noexcept
+        {
+            const Vec3<T>& in = *this;
+
+            *this = (in * std::cos(ang_)) + ((axis_ ^ in) * std::sin(ang_)) + (axis_ * (axis_ * in) * (1.0 - std::cos(ang_)));
         }
 
 
