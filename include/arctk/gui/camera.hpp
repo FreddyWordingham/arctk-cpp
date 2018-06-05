@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
             glm::vec3 _up;  //!< Up direction of the camera.
 
             //  -- Uniform --
-            glm::mat4 _mvp;
+            glm::mat4 _mvp; //!< Model-view-projection matrix.
 
           private:
             //  -- Uniform --
