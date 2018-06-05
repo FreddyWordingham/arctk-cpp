@@ -12,6 +12,6 @@ var searchData=
   ['min_5findex',['min_index',['../namespacearc_1_1search.html#ae457da2cc210e1edfaf811bc83154f4b',1,'arc::search']]],
   ['model',['model',['../classarc_1_1gui_1_1_actor.html#a5251ce8de3e14f4b3daf9e2a7b771eee',1,'arc::gui::Actor::model()'],['../classarc_1_1gui_1_1_shader.html#ac043735258198f21ab9dd8e89e5fe8b1',1,'arc::gui::Shader::model()']]],
   ['monotonic',['monotonic',['../namespacearc_1_1prop.html#a0b6cfeae4fa16eddbb6b7f1e9c355258',1,'arc::prop']]],
-  ['move',['move',['../classarc_1_1gui_1_1_camera.html#a9bf5022360839cca2cad22464e703a3f',1,'arc::gui::Camera']]],
+  ['move',['move',['../classarc_1_1gui_1_1_camera.html#a9bf5022360839cca2cad22464e703a3f',1,'arc::gui::Camera::move()'],['../classarc_1_1phys_1_1_particle.html#af8f49990794bcba81da34c33053ec338',1,'arc::phys::Particle::move()']]],
   ['mvp',['mvp',['../classarc_1_1gui_1_1_camera.html#a4dbfbc1f9c62fb8e0180744612903b2c',1,'arc::gui::Camera::mvp()'],['../classarc_1_1gui_1_1_shader.html#a9fcf430721e1f93be62d20021b89456c',1,'arc::gui::Shader::mvp()']]]
 ];

@@ -1,7 +1,9 @@
 <map id="include/arctk/math.hpp" name="include/arctk/math.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="190,299,287,324"/>
-<area shape="rect" id="node3" href="$actor_8hpp.html" title="include/arctk/gui/actor.hpp" alt="" coords="25,152,201,177"/>
-<area shape="rect" id="node5" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="214,79,405,104"/>
-<area shape="rect" id="node4" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="167,225,310,251"/>
-<area shape="rect" id="node6" href="$keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="276,152,470,177"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="326,312,423,337"/>
+<area shape="rect" id="node3" href="$actor_8hpp.html" title="include/arctk/gui/actor.hpp" alt="" coords="26,159,203,184"/>
+<area shape="rect" id="node5" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="247,79,438,104"/>
+<area shape="rect" id="node7" href="$particle_8hpp.html" title="include/arctk/phys\l/particle.hpp" alt="" coords="553,152,681,191"/>
+<area shape="rect" id="node4" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="183,239,326,264"/>
+<area shape="rect" id="node6" href="$keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="278,159,472,184"/>
+<area shape="rect" id="node8" href="$phys_8hpp.html" title="include/arctk/phys.hpp" alt="" coords="540,239,694,264"/>
 </map>

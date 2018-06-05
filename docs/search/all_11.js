@@ -8,6 +8,6 @@ var searchData=
   ['reset',['reset',['../classarc_1_1log_1_1_term.html#aadc8fe8f0e05c6b283e27bbd125ed835',1,'arc::log::Term::reset()'],['../namespacearc_1_1ansi.html#a9333e6e6135b8f0287770ed0bf290e53',1,'arc::ansi::RESET()']]],
   ['rho',['rho',['../classarc_1_1math_1_1_vec2.html#a53d91c9500d6b447ab0b65099b24ec38',1,'arc::math::Vec2::rho()'],['../classarc_1_1math_1_1_vec3.html#a2bf72104e2198382dcb819265e46a4a2',1,'arc::math::Vec3::rho()']]],
   ['rng_2ehpp',['rng.hpp',['../rng_8hpp.html',1,'']]],
-  ['rotate',['rotate',['../classarc_1_1gui_1_1_actor.html#a3c9c92491a6bfe068ea7c8c8560f2165',1,'arc::gui::Actor::rotate()'],['../classarc_1_1gui_1_1_camera.html#a2e0bfab02032a9bef2c7230be22baedc',1,'arc::gui::Camera::rotate()']]],
+  ['rotate',['rotate',['../classarc_1_1gui_1_1_actor.html#a3c9c92491a6bfe068ea7c8c8560f2165',1,'arc::gui::Actor::rotate()'],['../classarc_1_1gui_1_1_camera.html#a2e0bfab02032a9bef2c7230be22baedc',1,'arc::gui::Camera::rotate()'],['../classarc_1_1math_1_1_vec3.html#a1518fffbbee93d5ca0c30446e75d487d',1,'arc::math::Vec3::rotate()'],['../classarc_1_1phys_1_1_particle.html#ab46d3245680b0cac02e15de315327773',1,'arc::phys::Particle::rotate()']]],
   ['rows',['rows',['../namespacearc_1_1format.html#a9d71aca4944b5beef1da1c6a6c5bc2cc',1,'arc::format::rows(int width_, const std::string &amp;delim_, A... args_)'],['../namespacearc_1_1format.html#a4e78356644f1d9021a7e1133475ef645',1,'arc::format::rows(int width_, const std::string &amp;delim_, const C &amp;cont_) noexcept']]]
 ];

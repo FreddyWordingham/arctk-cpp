@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structarc_1_1str_1_1_tuple_to_string.html" title="arc::str::TupleToString" alt="" coords="5,5,157,31"/>
+<area shape="rect" id="node1" href="$classarc_1_1rng_1_1_distribution.html" title="arc::rng::Distribution\&lt; T \&gt;" alt="" coords="5,12,177,37"/>
+<area shape="rect" id="node2" href="$classarc_1_1rng_1_1distribution_1_1_uniform.html" title="arc::rng::distribution\l::Uniform\&lt; T \&gt;" alt="" coords="225,5,363,44"/>
 </map>
