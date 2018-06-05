@@ -330,6 +330,11 @@ namespace arc //! arctk namespace
             return (_mvp);
         }
 
+        /**
+         *  Get the Model matrix uniform handle.
+         *
+         *  @return Model matrix uniform handle.
+         */
         inline GLint Shader::model() const noexcept
         {
             return (_model);
