@@ -678,9 +678,20 @@ namespace arc //! arctk namespace
             z *= m;
         }
 
+        /**
+         *  Rotate the vec around a given axis by a given angle.
+         *  Right hand rule applies.
+         *
+         *  @param  axis_   Axis to rotate around.
+         *  @param  ang_    Angle to rotate by.
+         *
+         *  @pre    axis_ must be normalised.
+         */
         template <typename T>
         constexpr inline void Vec3<T>::rotate(const math::Vec3<T>& axis_, const double ang_) noexcept
         {
+            assert(axis_.normalised());
+
             const Vec3<T> in = *this;
 
             *this = (in * std::cos(ang_)) + ((axis_ ^ in) * std::sin(ang_)) + (axis_ * (axis_ * in) * (1.0 - std::cos(ang_)));
