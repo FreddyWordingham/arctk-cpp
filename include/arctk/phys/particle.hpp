@@ -87,6 +87,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the position of the particle.
+         *
+         *  @return Position of the particle.
+         */
         inline const math::Vec3<double>& Particle::pos() noexcept
         {
             return (_pos);
