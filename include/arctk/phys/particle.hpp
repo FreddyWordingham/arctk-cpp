@@ -98,11 +98,11 @@ namespace arc //! arctk namespace
 
         inline void Particle::rotate(const double theta_, const double phi_) noexcept
         {
-            math::Vec3<double> front = dir_;
-            math::Vec3<double> right = dir_ ^ math::Vec3<double>(0.0, 0.0, 1.0);
+            math::Vec3<double> front = _dir;
+            math::Vec3<double> right = _dir ^ math::Vec3<double>(0.0, 0.0, 1.0);
 
-            dir_.rotate(right, theta_);
-            dir_.rotate(front, phi_);
+            _dir.rotate(right, theta_);
+            _dir.rotate(front, phi_);
         }
 
 
