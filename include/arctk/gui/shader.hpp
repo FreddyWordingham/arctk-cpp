@@ -270,6 +270,11 @@ namespace arc //! arctk namespace
             return (sub_shader);
         }
 
+        /**
+         *  Initialise handle the the shader's mvp handle.
+         *
+         *  @return Initialised mvp uniform handle.
+         */
         inline GLint Shader::init_mvp() const noexcept
         {
             GLint mvp = glGetUniformLocation(_handle, "mvp");
