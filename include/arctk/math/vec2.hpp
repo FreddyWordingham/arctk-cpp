@@ -595,6 +595,9 @@ namespace arc //! arctk namespace
 
 
         //  -- Co-ordinate --
+        /**
+         *  Convert the cartesian vector to a polar vector.
+         */
         template <typename T>
         constexpr inline void Vec2<T>::to_polar() const noexcept
         {
@@ -604,6 +607,9 @@ namespace arc //! arctk namespace
             theta = std::atan2(cart.y, cart.x);
         }
 
+        /**
+         *  Convert the polar vector to a cartesian vector.
+         */
         template <typename T>
         constexpr inline void Vec2<T>::to_cart() const noexcept
         {
