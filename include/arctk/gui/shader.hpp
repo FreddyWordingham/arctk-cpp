@@ -376,6 +376,14 @@ namespace arc //! arctk namespace
             _uniform.emplace(std::make_pair(name_, Uniform(id, type_, control_)));
         }
 
+        /**
+         *  Set the value of an integer uniform.
+         *
+         *  @param  name_   Name of uniform.
+         *  @param  int_    Value of uniform.
+         *
+         *  @pre    name_ must exist within the integer uniform map.
+         */
         inline void Shader::set_uniform(const std::string& name_, const int int_) noexcept
         {
             assert(_uniform.find(name_) != _uniform.end());
@@ -385,6 +393,14 @@ namespace arc //! arctk namespace
             glUniform1i(_uniform.find(name_)->second.handle(), int_);
         }
 
+        /**
+         *  Set the value of a float uniform.
+         *
+         *  @param  name_   Name of uniform.
+         *  @param  float_  Value of uniform.
+         *
+         *  @pre    name_ must exist within the float uniform map.
+         */
         inline void Shader::set_uniform(const std::string& name_, const float float_) noexcept
         {
             assert(_uniform.find(name_) != _uniform.end());
@@ -394,6 +410,14 @@ namespace arc //! arctk namespace
             glUniform1f(_uniform.find(name_)->second.handle(), float_);
         }
 
+        /**
+         *  Set the value of a vec2 uniform.
+         *
+         *  @param  name_   Name of uniform.
+         *  @param  vec2_   Value of uniform.
+         *
+         *  @pre    name_ must exist within the vec2 uniform map.
+         */
         inline void Shader::set_uniform(const std::string& name_, const glm::vec2& vec2_) noexcept
         {
             assert(_uniform.find(name_) != _uniform.end());
@@ -403,6 +427,14 @@ namespace arc //! arctk namespace
             glUniform2fv(_uniform.find(name_)->second.handle(), 1, &vec2_[0]);
         }
 
+        /**
+         *  Set the value of a vec3 uniform.
+         *
+         *  @param  name_   Name of uniform.
+         *  @param  vec3_   Value of uniform.
+         *
+         *  @pre    name_ must exist within the vec3 uniform map.
+         */
         inline void Shader::set_uniform(const std::string& name_, const glm::vec3& vec3_) noexcept
         {
             assert(_uniform.find(name_) != _uniform.end());
@@ -412,6 +444,14 @@ namespace arc //! arctk namespace
             glUniform3fv(_uniform.find(name_)->second.handle(), 1, &vec3_[0]);
         }
 
+        /**
+         *  Set the value of a vec4 uniform.
+         *
+         *  @param  name_   Name of uniform.
+         *  @param  vec4_   Value of uniform.
+         *
+         *  @pre    name_ must exist within the vec4 uniform map.
+         */
         inline void Shader::set_uniform(const std::string& name_, const glm::vec4& vec4_) noexcept
         {
             assert(_uniform.find(name_) != _uniform.end());
@@ -421,6 +461,14 @@ namespace arc //! arctk namespace
             glUniform4fv(_uniform.find(name_)->second.handle(), 1, &vec4_[0]);
         }
 
+        /**
+         *  Set the value of a mat2 uniform.
+         *
+         *  @param  name_   Name of uniform.
+         *  @param  mat2_   Value of uniform.
+         *
+         *  @pre    name_ must exist within the mat2 uniform map.
+         */
         inline void Shader::set_uniform(const std::string& name_, const glm::mat2& mat2_) noexcept
         {
             assert(_uniform.find(name_) != _uniform.end());
@@ -430,6 +478,14 @@ namespace arc //! arctk namespace
             glUniformMatrix2fv(_uniform.find(name_)->second.handle(), 1, GL_FALSE, &mat2_[0][0]);
         }
 
+        /**
+         *  Set the value of a mat3 uniform.
+         *
+         *  @param  name_   Name of uniform.
+         *  @param  mat3_   Value of uniform.
+         *
+         *  @pre    name_ must exist within the mat3 uniform map.
+         */
         inline void Shader::set_uniform(const std::string& name_, const glm::mat3& mat3_) noexcept
         {
             assert(_uniform.find(name_) != _uniform.end());
@@ -439,6 +495,14 @@ namespace arc //! arctk namespace
             glUniformMatrix3fv(_uniform.find(name_)->second.handle(), 1, GL_FALSE, &mat3_[0][0]);
         }
 
+        /**
+         *  Set the value of a mat4 uniform.
+         *
+         *  @param  name_   Name of uniform.
+         *  @param  mat4_   Value of uniform.
+         *
+         *  @pre    name_ must exist within the mat4 uniform map.
+         */
         inline void Shader::set_uniform(const std::string& name_, const glm::mat4& mat4_) noexcept
         {
             assert(_uniform.find(name_) != _uniform.end());
