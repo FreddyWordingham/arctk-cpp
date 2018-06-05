@@ -288,6 +288,11 @@ namespace arc //! arctk namespace
             return (mvp);
         }
 
+        /**
+         *  Initialise handle the the shader's model matrix handle.
+         *
+         *  @return Initialised model matrix uniform handle.
+         */
         inline GLint Shader::init_model() const noexcept
         {
             GLint model = glGetUniformLocation(_handle, "model");
