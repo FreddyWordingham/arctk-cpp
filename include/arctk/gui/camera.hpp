@@ -486,6 +486,11 @@ namespace arc //! arctk namespace
             update_mvp();
         }
 
+        /**
+         *  Rotate the camera using a given vector.
+         *
+         *  @param  vec_    Vector to rotate the camera with.
+         */
         inline void Camera::rotate(const glm::vec2& vec_) noexcept
         {
             _dir = glm::rotate(_dir, vec_.x, _up);
