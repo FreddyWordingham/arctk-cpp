@@ -123,6 +123,13 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        /**
+         *  Construct a camera at a position, facing a direction.
+         *
+         *  @param  pos_    Initial position of the camera.
+         *  @param  dir_    Direction for the camera to face.
+         *  @param  up_     Up direction of the camera.
+         */
         inline Camera::Camera(const glm::vec3& pos_, const glm::vec3& dir_, const glm::vec3& up_) noexcept
           : _pos(pos_)
           , _dir(dir_)
