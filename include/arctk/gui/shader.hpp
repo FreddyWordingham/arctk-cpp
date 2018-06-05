@@ -310,6 +310,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the shader program handle.
+         *
+         *  @return Shader program handle.
+         */
         inline GLuint Shader::handle() const noexcept
         {
             return (_handle);
