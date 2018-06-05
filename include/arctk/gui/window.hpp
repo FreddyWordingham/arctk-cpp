@@ -237,7 +237,7 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Render a using a camera.
+         *  Render using a camera using a shader.
          *
          *  @param  cam_    Camera used to render.
          *  @param  shad_   Shader to render with.
@@ -283,6 +283,12 @@ namespace arc //! arctk namespace
             }
         }
 
+        /**
+         *  Render an actor using a shader.
+         *
+         *  @param  act_    Actor to render.
+         *  @param  shad_   Shader to render with.
+         */
         inline void Window::render_actor(const Actor& act_, const Shader& shad_) const noexcept
         {
             glUseProgram(shad_.handle());
