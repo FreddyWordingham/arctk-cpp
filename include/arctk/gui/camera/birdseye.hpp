@@ -74,6 +74,20 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION --
             //  -- Constructors --
+            /**
+             *  Construct a birdseye camera.
+             *
+             *  @param  width_start_    Start rendering width of the window.
+             *  @param  width_end_      End rendering width of the window.
+             *  @param  height_start_   Start rendering height of the window.
+             *  @param  height_end_     End rendering height of the window.
+             *  @param  pos_            Initial position of the camera.
+             *  @param  dir_            Direction for the camera to face.
+             *  @param  up_             Up direction of the camera.
+             *
+             *  @pre    width_start_ must be less than width_end_.
+             *  @pre    height_start_ must be less than height_end_.
+             */
             inline Birdseye::Birdseye(const float width_start_, const float width_end_, const float height_start_, const float height_end_, const glm::vec3& pos_, const glm::vec3& dir_, const glm::vec3& up_) noexcept
               : Camera(pos_, dir_, up_)
               , _width_start(width_start_)
@@ -81,6 +95,9 @@ namespace arc //! arctk namespace
               , _height_start(height_start_)
               , _height_end(height_end_)
             {
+                assert(width_start_ < width_end_);
+                assert(height_start_ < height_end_);
+
                 update_mvp();
             }
 
