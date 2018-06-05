@@ -434,6 +434,8 @@ namespace arc //! arctk namespace
         //  -- Setters --
         /**
          *  Set the primitive type used to render the actor.
+         *
+         *  @param  primitive_type_ Primitive type to render actor with.
          */
         inline void Actor::set_primitive_type(const GLenum primitive_type_) noexcept
         {
@@ -442,6 +444,8 @@ namespace arc //! arctk namespace
 
         /**
          *  Set the fill mode used to render the actor.
+         *
+         *  @param  fill_mode_  Fill mode to render actor with.
          */
         inline void Actor::set_fill_mode(const GLenum fill_mode_) noexcept
         {
@@ -450,6 +454,8 @@ namespace arc //! arctk namespace
 
         /**
          *  Set the model translation vector used to render the actor.
+         *
+         *  @param  trans_  Translation of model matrix.
          */
         inline void Actor::set_trans(const glm::vec3& trans_) noexcept
         {
@@ -460,6 +466,8 @@ namespace arc //! arctk namespace
 
         /**
          *  Set the model rotation vector used to render the actor.
+         *
+         *  @param  rotate_ Rotation of model matrix.
          */
         inline void Actor::set_rotate(const glm::vec3& rotate_) noexcept
         {
@@ -470,6 +478,8 @@ namespace arc //! arctk namespace
 
         /**
          *  Set the model scale vector used to render the actor.
+         *
+         *  @param  scale_  Scale of model matrix.
          */
         inline void Actor::set_scale(const glm::vec3& scale_) noexcept
         {
