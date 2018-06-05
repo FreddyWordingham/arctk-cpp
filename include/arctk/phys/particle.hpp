@@ -123,6 +123,12 @@ namespace arc //! arctk namespace
             _pos += _dir * dist_;
         }
 
+        /**
+         *  Rotate the particle such that it faces a new direction.
+         *
+         *  @param  theta_  Angle to rotate back on itself.
+         *  @param  phi_    Angle to rotate around previous axis of travel.
+         */
         inline void Particle::rotate(const double theta_, const double phi_) noexcept
         {
             math::Vec3<double> front = _dir;
