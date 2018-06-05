@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
 
             //  -- Setters --
             inline void move(double dist_) noexcept;
-            inline void rotate(double azi_, double dec_) noexcept;
+            inline void rotate(double theta_, double phi_) noexcept;
         };
 
 
@@ -96,8 +96,13 @@ namespace arc //! arctk namespace
             _pos += _dir * dist_;
         }
 
-        inline void Particle::rotate(const double azi_, const double dec_) noexcept
+        inline void Particle::rotate(const double theta_, const double phi_) noexcept
         {
+            math::Vec3<double> front = dir_;
+            math::Vec3<double> right = dir_ ^ math::Vec3<double>(0.0, 0.0, 1.0);
+
+            dir_.rotate(right, theta_);
+            dir_.rotate(front, phi_);
         }
 
 
