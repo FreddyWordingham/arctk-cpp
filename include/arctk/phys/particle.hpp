@@ -97,6 +97,11 @@ namespace arc //! arctk namespace
             return (_pos);
         }
 
+        /**
+         *  Get the direction of the particle.
+         *
+         *  @return Direction of the particle.
+         */
         inline const math::Vec3<double>& Particle::dir() noexcept
         {
             return (_dir);
