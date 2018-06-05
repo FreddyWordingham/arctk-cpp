@@ -119,6 +119,9 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Properties --
+            constexpr inline bool normalised(double tol_ = std::numeric_limits<double>::epsilon()) const noexcept;
+
             //  -- Mathematical --
             constexpr inline T      sum() const noexcept;
             constexpr inline double mag() const noexcept;
@@ -552,6 +555,14 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Properties --
+        template <typename T>
+        constexpr inline bool Vec3<T>::normalised(const double tol_) const noexcept
+        {
+            return (std::fabs(1.0 - mag()) <= tol_);
+        }
+
+
         //  -- Mathematical --
         /**
          *  Calculate the sum of the vec elements.
