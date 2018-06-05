@@ -137,7 +137,7 @@ namespace arc //! arctk namespace
             constexpr inline T      sum() const noexcept;
             constexpr inline double mag() const noexcept;
             constexpr inline void   normalise() const noexcept;
-            constexpr inline void   rotate(const math::Vec3& axis_, double ang_) const noexcept;
+            constexpr inline void   rotate(const math::Vec3<T>& axis_, double ang_) const noexcept;
 
             //  -- Co-ordinate --
             constexpr inline void to_polar() const noexcept;
