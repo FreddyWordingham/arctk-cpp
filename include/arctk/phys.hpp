@@ -1,6 +1,6 @@
 /**
  *  @file   arctk/phys.hpp
- *  @date   05/05/2018
+ *  @date   05/06/2018
  *  @author Freddy Wordingham
  *
  *  Collection of physics functions and classes.
