@@ -320,6 +320,11 @@ namespace arc //! arctk namespace
             return (_handle);
         }
 
+        /**
+         *  Get the Model-view-projection matrix uniform handle.
+         *
+         *  @return Model-view-projection matrix uniform handle.
+         */
         inline GLint Shader::mvp() const noexcept
         {
             return (_mvp);
