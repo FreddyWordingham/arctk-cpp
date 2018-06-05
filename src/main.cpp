@@ -49,6 +49,7 @@
 #include <arctk/math/vec4.hpp>
 #include <arctk/parse.hpp>
 #include <arctk/parse/string.hpp>
+#include <arctk/phys.hpp>
 #include <arctk/print.hpp>
 #include <arctk/prop.hpp>
 #include <arctk/prop/container.hpp>
