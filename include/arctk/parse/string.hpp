@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
         template <typename... A>
         inline std::tuple<A...> string(const std::vector<std::string>& str_) noexcept;
         template <typename... A, size_t... I>
-        inline std::tuple<A...> string_helper(const std::vector<std::string>& str_, std::tuple<A...>& tup_, std::index_sequence<I...>) noexcept;
+        inline std::tuple<A...> string_helper(const std::vector<std::string>& str_, std::tuple<A...>& tup_, std::index_sequence<I...> /*unused*/) noexcept;
 
 
 
@@ -117,7 +117,7 @@ namespace arc //! arctk namespace
          *  @return Tuple of initialised values.
          */
         template <typename... A, size_t... I>
-        inline std::tuple<A...> string_helper(const std::vector<std::string>& str_, std::tuple<A...>& tup_, std::index_sequence<I...>) noexcept
+        inline std::tuple<A...> string_helper(const std::vector<std::string>& str_, std::tuple<A...>& tup_, std::index_sequence<I...> /*unused*/) noexcept
         {
             ((std::get<I>(tup_) = string<A>(str_[I])), ...);
 
