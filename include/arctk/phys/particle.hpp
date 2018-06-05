@@ -57,6 +57,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline const math::Vec3<double>& pos() noexcept;
+            inline const math::Vec3<double>& dir() noexcept;
         };
 
 
@@ -77,6 +78,11 @@ namespace arc //! arctk namespace
         inline const math::Vec3<double>& Particle::pos() noexcept
         {
             return (_pos);
+        }
+
+        inline const math::Vec3<double>& Particle::dir() noexcept
+        {
+            return (_dir);
         }
 
 
