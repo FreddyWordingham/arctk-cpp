@@ -132,14 +132,28 @@ namespace arc //! arctk namespace
           , _model(init_model())
         {
             assert(!vert_code_.empty());
-            assert(!geom_code_.empty()
-            assert(!frag_code_.empty()
+            assert(!geom_code_.empty());
+            assert(!frag_code_.empty());
         }
 
 
         //  -- Initialisation --
+        /**
+         *  Initialise a complete shader program.
+         *
+         *  @param  vert_code_  Vertex sub-shader code.
+         *  @param  frag_code_  Fragment sub-shader code.
+         *
+         *  @pre    vert_code_ must not be empty.
+         *  @pre    frag_code_ must not be empty.
+         *
+         *  @return Handle to a complete shader program.
+         */
         inline GLuint Shader::init_handle(const std::string& vert_code_, const std::string& frag_code_) const noexcept
         {
+            assert(!vert_code_.empty());
+            assert(!frag_code_.empty());
+
             const GLuint vert_shader = init_sub_shader(vert_code_, GL_VERTEX_SHADER);
             const GLuint frag_shader = init_sub_shader(frag_code_, GL_FRAGMENT_SHADER);
 
@@ -169,8 +183,25 @@ namespace arc //! arctk namespace
             return (handle);
         }
 
+        /**
+         *  Initialise a complete shader program.
+         *
+         *  @param  vert_code_  Vertex sub-shader code.
+         *  @param  geom_code_  Geometry sub-shader code.
+         *  @param  frag_code_  Fragment sub-shader code.
+         *
+         *  @pre    vert_code_ must not be empty.
+         *  @pre    geom_code_ must not be empty.
+         *  @pre    frag_code_ must not be empty.
+         *
+         *  @return Handle to a complete shader program.
+         */
         inline GLuint Shader::init_handle(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) const noexcept
         {
+            assert(!vert_code_.empty());
+            assert(!geom_code_.empty());
+            assert(!frag_code_.empty());
+
             const GLuint vert_shader = init_sub_shader(vert_code_, GL_VERTEX_SHADER);
             const GLuint geom_shader = init_sub_shader(geom_code_, GL_GEOMETRY_SHADER);
             const GLuint frag_shader = init_sub_shader(frag_code_, GL_FRAGMENT_SHADER);
