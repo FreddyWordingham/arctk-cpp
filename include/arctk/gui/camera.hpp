@@ -343,7 +343,7 @@ namespace arc //! arctk namespace
         /**
          *  Set the up direction of the camera.
          *
-         *  @param  dir_    Direction to face the camera.
+         *  @param  up_ Up direction of the camera.
          */
         inline void Camera::set_up(const glm::vec3& up_) noexcept
         {
