@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stopwatch',['Stopwatch',['../classarc_1_1log_1_1output_1_1_stopwatch.html',1,'arc::log::output']]]
+  ['quality',['Quality',['../classarc_1_1rng_1_1generator_1_1_quality.html',1,'arc::rng::generator']]]
 ];

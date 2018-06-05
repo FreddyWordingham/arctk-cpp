@@ -1,10 +1,11 @@
 <map id="include/arctk/constant/math.hpp" name="include/arctk/constant/math.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="147,545,244,571"/>
-<area shape="rect" id="node3" href="$constant_8hpp.html" title="include/arctk/constant.hpp" alt="" coords="68,92,245,117"/>
-<area shape="rect" id="node4" href="$conversion_8hpp.html" title="include/arctk/math\l/conversion.hpp" alt="" coords="106,165,236,204"/>
-<area shape="rect" id="node9" href="$power_8hpp.html" title="include/arctk/math\l/power.hpp" alt="" coords="260,165,389,204"/>
-<area shape="rect" id="node5" href="$math_8hpp.html" title="include/arctk/math.hpp" alt="" coords="201,252,357,277"/>
-<area shape="rect" id="node6" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="245,325,436,351"/>
-<area shape="rect" id="node7" href="$keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="258,399,452,424"/>
-<area shape="rect" id="node8" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="309,472,452,497"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="309,545,406,571"/>
+<area shape="rect" id="node3" href="$constant_8hpp.html" title="include/arctk/constant.hpp" alt="" coords="169,92,345,117"/>
+<area shape="rect" id="node4" href="$conversion_8hpp.html" title="include/arctk/math\l/conversion.hpp" alt="" coords="117,165,246,204"/>
+<area shape="rect" id="node10" href="$power_8hpp.html" title="include/arctk/math\l/power.hpp" alt="" coords="270,165,399,204"/>
+<area shape="rect" id="node5" href="$math_8hpp.html" title="include/arctk/math.hpp" alt="" coords="154,252,310,277"/>
+<area shape="rect" id="node6" href="$actor_8hpp.html" title="include/arctk/gui/actor.hpp" alt="" coords="144,399,320,424"/>
+<area shape="rect" id="node8" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="334,325,525,351"/>
+<area shape="rect" id="node7" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="286,472,429,497"/>
+<area shape="rect" id="node9" href="$keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="395,399,589,424"/>
 </map>

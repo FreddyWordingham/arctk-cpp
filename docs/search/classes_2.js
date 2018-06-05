@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['distribution',['Distribution',['../classarc_1_1rng_1_1_distribution.html',1,'arc::rng']]]
+  ['camera',['Camera',['../classarc_1_1gui_1_1_camera.html',1,'arc::gui']]]
 ];

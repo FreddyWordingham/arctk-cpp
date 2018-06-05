@@ -90,10 +90,15 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9cd22faf607296130546a3c8c98cf941"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math.html#a9cd22faf607296130546a3c8c98cf941">rad_to_deg</a> (double val_) noexcept</td></tr>
-<tr class="separator:a9cd22faf607296130546a3c8c98cf941"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5dde586c2a4de48efe46823d7b5c90e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math.html#aa5dde586c2a4de48efe46823d7b5c90e">deg_to_rad</a> (double val_) noexcept</td></tr>
-<tr class="separator:aa5dde586c2a4de48efe46823d7b5c90e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b44e4472b89ce6feffff1b914ad0064"><td class="memTemplParams" colspan="2">template&lt;typename C , typename T  = typename C::value_type, typename I  = typename C::const_iterator&gt; </td></tr>
+<tr class="memitem:a4b44e4472b89ce6feffff1b914ad0064"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math.html#a4b44e4472b89ce6feffff1b914ad0064">sum</a> (C &amp;cont_) noexcept</td></tr>
+<tr class="separator:a4b44e4472b89ce6feffff1b914ad0064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f59a34b4a40b69a830d694f080e8da"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a31f59a34b4a40b69a830d694f080e8da"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math.html#a31f59a34b4a40b69a830d694f080e8da">rad_to_deg</a> (T val_) noexcept</td></tr>
+<tr class="separator:a31f59a34b4a40b69a830d694f080e8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7589fe05f2a7596992242dc2671c7892"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7589fe05f2a7596992242dc2671c7892"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math.html#a7589fe05f2a7596992242dc2671c7892">deg_to_rad</a> (T val_) noexcept</td></tr>
+<tr class="separator:a7589fe05f2a7596992242dc2671c7892"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95cadfea8bcd5d8ec23e0dabbaf6dda6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a95cadfea8bcd5d8ec23e0dabbaf6dda6"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math.html#a95cadfea8bcd5d8ec23e0dabbaf6dda6">sq</a> (T val_) noexcept</td></tr>
 <tr class="separator:a95cadfea8bcd5d8ec23e0dabbaf6dda6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,19 +160,21 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="aa5dde586c2a4de48efe46823d7b5c90e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5dde586c2a4de48efe46823d7b5c90e">&#9670;&nbsp;</a></span>deg_to_rad()</h2>
+<a id="a7589fe05f2a7596992242dc2671c7892"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7589fe05f2a7596992242dc2671c7892">&#9670;&nbsp;</a></span>deg_to_rad()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double arc::math::deg_to_rad </td>
+          <td class="memname">T arc::math::deg_to_rad </td>
           <td>(</td>
-          <td class="paramtype">const double&#160;</td>
+          <td class="paramtype">const T&#160;</td>
           <td class="paramname"><em>val_</em></td><td>)</td>
           <td></td>
         </tr>
@@ -351,19 +358,21 @@ template&lt;typename S , typename T &gt; </div>
 
 </div>
 </div>
-<a id="a9cd22faf607296130546a3c8c98cf941"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cd22faf607296130546a3c8c98cf941">&#9670;&nbsp;</a></span>rad_to_deg()</h2>
+<a id="a31f59a34b4a40b69a830d694f080e8da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31f59a34b4a40b69a830d694f080e8da">&#9670;&nbsp;</a></span>rad_to_deg()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double arc::math::rad_to_deg </td>
+          <td class="memname">T arc::math::rad_to_deg </td>
           <td>(</td>
-          <td class="paramtype">const double&#160;</td>
+          <td class="paramtype">const T&#160;</td>
           <td class="paramname"><em>val_</em></td><td>)</td>
           <td></td>
         </tr>
@@ -382,6 +391,20 @@ template&lt;typename S , typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Value in degrees. </dd></dl>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespacearc_1_1math_a31f59a34b4a40b69a830d694f080e8da_icgraph.png" border="0" usemap="#namespacearc_1_1math_a31f59a34b4a40b69a830d694f080e8da_icgraph" alt=""/></div>
+<map name="namespacearc_1_1math_a31f59a34b4a40b69a830d694f080e8da_icgraph" id="namespacearc_1_1math_a31f59a34b4a40b69a830d694f080e8da_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="205,87,357,125"/>
+<area shape="rect" id="node3" href="classarc_1_1gui_1_1_actor.html#a40f09555772506846f42e2bdf60d83de" title="arc::gui::Actor::Actor" alt="" coords="405,5,547,31"/>
+<area shape="rect" id="node4" href="classarc_1_1gui_1_1_actor.html#afc79da85b50b071f11607a3005d749ce" title="arc::gui::Actor::set\l_trans" alt="" coords="412,55,540,93"/>
+<area shape="rect" id="node5" href="classarc_1_1gui_1_1_actor.html#a5611c2154f0adf378030654c59965ad7" title="arc::gui::Actor::set\l_rotate" alt="" coords="412,117,540,156"/>
+<area shape="rect" id="node6" href="classarc_1_1gui_1_1_actor.html#a57f693c131d86b674b248a9917e43e91" title="arc::gui::Actor::set\l_scale" alt="" coords="412,180,540,219"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -427,10 +450,64 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a4b44e4472b89ce6feffff1b914ad0064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b44e4472b89ce6feffff1b914ad0064">&#9670;&nbsp;</a></span>sum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename C , typename T  = typename C::value_type, typename I  = typename C::const_iterator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T arc::math::sum </td>
+          <td>(</td>
+          <td class="paramtype">C &amp;&#160;</td>
+          <td class="paramname"><em>cont_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determine the sum of all elements within a container.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">C</td><td>Type of container. </td></tr>
+    <tr><td class="paramname">T</td><td>Type stored by C. </td></tr>
+    <tr><td class="paramname">I</td><td>Type of const iterator used by C.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cont_</td><td>Container to sum.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Sum of all elements. </dd></dl>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespacearc_1_1math_a4b44e4472b89ce6feffff1b914ad0064_icgraph.png" border="0" usemap="#namespacearc_1_1math_a4b44e4472b89ce6feffff1b914ad0064_icgraph" alt=""/></div>
+<map name="namespacearc_1_1math_a4b44e4472b89ce6feffff1b914ad0064_icgraph" id="namespacearc_1_1math_a4b44e4472b89ce6feffff1b914ad0064_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1gui_1_1_actor.html#a40f09555772506846f42e2bdf60d83de" title="arc::gui::Actor::Actor" alt="" coords="163,5,305,31"/>
+</map>
+</div>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 3 2018 22:11:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 5 2018 01:49:13 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

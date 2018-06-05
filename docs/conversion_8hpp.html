@@ -75,7 +75,8 @@ $(function() {
 <div class="title">conversion.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="constant_8hpp_source.html">arctk/constant.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;<a class="el" href="constant_8hpp_source.html">arctk/constant.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for conversion.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -83,9 +84,9 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="conversion_8hpp__incl.png" border="0" usemap="#include_2arctk_2math_2conversion_8hpp" alt=""/></div>
 <map name="include_2arctk_2math_2conversion_8hpp" id="include_2arctk_2math_2conversion_8hpp">
-<area shape="rect" id="node2" href="constant_8hpp.html" title="arctk/constant.hpp" alt="" coords="115,92,246,117"/>
-<area shape="rect" id="node3" href="constant_2math_8hpp.html" title="arctk/constant/math.hpp" alt="" coords="5,165,169,191"/>
-<area shape="rect" id="node4" href="phys_8hpp.html" title="arctk/constant/phys.hpp" alt="" coords="193,165,355,191"/>
+<area shape="rect" id="node3" href="constant_8hpp.html" title="arctk/constant.hpp" alt="" coords="115,92,246,117"/>
+<area shape="rect" id="node4" href="constant_2math_8hpp.html" title="arctk/constant/math.hpp" alt="" coords="5,165,169,191"/>
+<area shape="rect" id="node5" href="phys_8hpp.html" title="arctk/constant/phys.hpp" alt="" coords="193,165,355,191"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -95,11 +96,12 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="conversion_8hpp__dep__incl.png" border="0" usemap="#include_2arctk_2math_2conversion_8hppdep" alt=""/></div>
 <map name="include_2arctk_2math_2conversion_8hppdep" id="include_2arctk_2math_2conversion_8hppdep">
-<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="66,385,163,411"/>
-<area shape="rect" id="node3" href="math_8hpp.html" title="include/arctk/math.hpp" alt="" coords="50,92,205,117"/>
-<area shape="rect" id="node4" href="window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="127,165,318,191"/>
-<area shape="rect" id="node5" href="keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="152,239,346,264"/>
-<area shape="rect" id="node6" href="gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="202,312,346,337"/>
+<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="278,385,375,411"/>
+<area shape="rect" id="node3" href="math_8hpp.html" title="include/arctk/math.hpp" alt="" coords="216,92,372,117"/>
+<area shape="rect" id="node4" href="actor_8hpp.html" title="include/arctk/gui/actor.hpp" alt="" coords="45,239,221,264"/>
+<area shape="rect" id="node6" href="window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="235,165,426,191"/>
+<area shape="rect" id="node5" href="gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="193,312,337,337"/>
+<area shape="rect" id="node7" href="keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="296,239,490,264"/>
 </map>
 </div>
 </div>
@@ -116,10 +118,12 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9cd22faf607296130546a3c8c98cf941"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math.html#a9cd22faf607296130546a3c8c98cf941">arc::math::rad_to_deg</a> (double val_) noexcept</td></tr>
-<tr class="separator:a9cd22faf607296130546a3c8c98cf941"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5dde586c2a4de48efe46823d7b5c90e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math.html#aa5dde586c2a4de48efe46823d7b5c90e">arc::math::deg_to_rad</a> (double val_) noexcept</td></tr>
-<tr class="separator:aa5dde586c2a4de48efe46823d7b5c90e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f59a34b4a40b69a830d694f080e8da"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a31f59a34b4a40b69a830d694f080e8da"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math.html#a31f59a34b4a40b69a830d694f080e8da">arc::math::rad_to_deg</a> (T val_) noexcept</td></tr>
+<tr class="separator:a31f59a34b4a40b69a830d694f080e8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7589fe05f2a7596992242dc2671c7892"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7589fe05f2a7596992242dc2671c7892"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math.html#a7589fe05f2a7596992242dc2671c7892">arc::math::deg_to_rad</a> (T val_) noexcept</td></tr>
+<tr class="separator:a7589fe05f2a7596992242dc2671c7892"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section date"><dt>Date</dt><dd>31/05/2018 </dd></dl>
@@ -128,7 +132,7 @@ Functions</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 3 2018 22:11:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 5 2018 01:49:13 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

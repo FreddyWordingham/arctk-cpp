@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['actor',['Actor',['../classarc_1_1gui_1_1_actor.html#a40f09555772506846f42e2bdf60d83de',1,'arc::gui::Actor']]],
+  ['add_5funiform',['add_uniform',['../classarc_1_1gui_1_1_shader.html#ab53ca8cc16ce04a9f9be2c49161de64b',1,'arc::gui::Shader']]],
   ['always_5fgreater_5fthan',['always_greater_than',['../namespacearc_1_1prop.html#a0786e461abacc64a0479a9c29cebcfa9',1,'arc::prop']]],
   ['always_5fgreater_5fthan_5for_5fequal_5fto',['always_greater_than_or_equal_to',['../namespacearc_1_1prop.html#a858cf86c6dc1c5ad0a337ac8adc7a787',1,'arc::prop']]],
   ['always_5fless_5fthan',['always_less_than',['../namespacearc_1_1prop.html#a965c4011bd27be186a9b63d69f27c4e4',1,'arc::prop']]],

@@ -1,13 +1,7 @@
 var searchData=
 [
-  ['_7eapp',['~App',['../classarc_1_1sys_1_1file_1_1_app.html#a715d7d0d777c4dcda4c81187e977a1a5',1,'arc::sys::file::App']]],
-  ['_7eerror',['~Error',['../classarc_1_1log_1_1output_1_1_error.html#a36416f6a5de400456a91505c127d6973',1,'arc::log::output::Error']]],
-  ['_7ein',['~In',['../classarc_1_1sys_1_1file_1_1_in.html#a9e58b7a810b569a9922d9845acec4e50',1,'arc::sys::file::In']]],
-  ['_7emessage',['~Message',['../classarc_1_1log_1_1output_1_1_message.html#a56c430e02ae18342714652cf9ff957c0',1,'arc::log::output::Message']]],
-  ['_7eout',['~Out',['../classarc_1_1sys_1_1file_1_1_out.html#af48a37c8dbca7812c6592782cb9b9429',1,'arc::sys::file::Out']]],
-  ['_7eoutput',['~Output',['../classarc_1_1log_1_1_output.html#a85530d6f818b77efdda3c8ec79b43ede',1,'arc::log::Output']]],
-  ['_7eprogress',['~Progress',['../classarc_1_1log_1_1output_1_1_progress.html#a21dc7938d0bbca49fa5e29e82354fda1',1,'arc::log::output::Progress']]],
-  ['_7estopwatch',['~Stopwatch',['../classarc_1_1log_1_1output_1_1_stopwatch.html#a31bf1b247e47e909f4b5284fdcc6d09d',1,'arc::log::output::Stopwatch']]],
-  ['_7ewarning',['~Warning',['../classarc_1_1log_1_1output_1_1_warning.html#a2bcb577e371bc80a7b8d72d163ea84b8',1,'arc::log::output::Warning']]],
-  ['_7ewindow',['~Window',['../classarc_1_1gui_1_1_window.html#abfaeba794e1fc5182d3ef70174148fd1',1,'arc::gui::Window']]]
+  ['warning',['Warning',['../classarc_1_1log_1_1output_1_1_warning.html#a204c631c75a6886b4e5a9e7dd33ff7f1',1,'arc::log::output::Warning::Warning() noexcept'],['../classarc_1_1log_1_1output_1_1_warning.html#a0ca3b775999c739c327cb04927aa6894',1,'arc::log::output::Warning::Warning(const std::string &amp;file_, const std::string &amp;func_, int line_) noexcept'],['../classarc_1_1log_1_1output_1_1_warning.html#adaed221f3c060fa45b8a5a881053e6b7',1,'arc::log::output::Warning::Warning(const Warning &amp;) noexcept=delete'],['../classarc_1_1log_1_1output_1_1_warning.html#a2d282cf9c595d3d10f2f7dd75c287271',1,'arc::log::output::Warning::Warning(Warning &amp;&amp;) noexcept=delete']]],
+  ['width',['width',['../classarc_1_1data_1_1bin_1_1_fixed.html#a6bccc7d7e5ead1650863c6bb075b22eb',1,'arc::data::bin::Fixed::width()'],['../classarc_1_1data_1_1_bin.html#a8dfac4b18c26b17970347ff34cde69b8',1,'arc::data::Bin::width()']]],
+  ['window',['Window',['../classarc_1_1gui_1_1_window.html#ada8818e50380e3fece4a1c4cdca8ec58',1,'arc::gui::Window::Window(const std::string &amp;title_, int width_, int height_, int aa_samples_) noexcept'],['../classarc_1_1gui_1_1_window.html#a8a396f0bb9659e6c89f851454b8e401f',1,'arc::gui::Window::Window(const Window &amp;) noexcept=default'],['../classarc_1_1gui_1_1_window.html#a00529f1ad78017ab72ce3d7b42ebdfd5',1,'arc::gui::Window::Window(Window &amp;&amp;) noexcept=default']]],
+  ['within',['within',['../namespacearc_1_1prop.html#a160eaff41b7223c20c03ca76ee4e1fb9',1,'arc::prop']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['uniform',['Uniform',['../classarc_1_1rng_1_1distribution_1_1_uniform.html',1,'arc::rng::distribution']]]
+  ['term',['Term',['../classarc_1_1log_1_1_term.html',1,'arc::log']]],
+  ['tupletostring',['TupleToString',['../structarc_1_1str_1_1_tuple_to_string.html',1,'arc::str']]]
 ];
