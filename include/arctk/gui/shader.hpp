@@ -234,6 +234,14 @@ namespace arc //! arctk namespace
             return (handle);
         }
 
+        /**
+         *  Initialise a sub-shader program.
+         *
+         *  @param  code_   Sub-shader program code.
+         *  @param  type_   Type of sub-shader to initialise.
+         *
+         *  @return Handle to the initialised sub-shader program.
+         */
         inline GLuint Shader::init_sub_shader(const std::string& code_, const GLenum type_) const noexcept
         {
             const char* code = code_.c_str();
