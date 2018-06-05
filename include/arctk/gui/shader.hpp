@@ -97,11 +97,22 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        /**
+         *  Construct a shader program from vertex and fragment sub-shader programs.
+         *
+         *  @param  vert_code_  Vertex sub-shader code.
+         *  @param  frag_code_  Fragment sub-shader code.
+         *
+         *  @pre    vert_code_ must not be empty.
+         *  @pre    frag_code_ must not be empty.
+         */
         inline Shader::Shader(const std::string& vert_code_, const std::string& frag_code_) noexcept
           : _handle(init_handle(vert_code_, frag_code_))
           , _mvp(init_mvp())
           , _model(init_model())
         {
+            assert(!vert_code_.empty());
+            assert(!frag_code_.empty());
         }
 
         inline Shader::Shader(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) noexcept
