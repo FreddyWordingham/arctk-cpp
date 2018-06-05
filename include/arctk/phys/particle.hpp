@@ -35,6 +35,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
+         *  Physical particle class.
          */
         class Particle
         {
