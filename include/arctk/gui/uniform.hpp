@@ -119,6 +119,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the uniform handle.
+         *
+         *  @return Uniform handle.
+         */
         inline GLint Uniform::handle() const noexcept
         {
             return (_handle);
