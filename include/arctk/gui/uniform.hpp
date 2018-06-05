@@ -129,6 +129,11 @@ namespace arc //! arctk namespace
             return (_handle);
         }
 
+        /**
+         *  Get the uniform stored type.
+         *
+         *  @return Uniform stored type.
+         */
         inline Uniform::stored Uniform::type() const noexcept
         {
             return (_type);
