@@ -474,6 +474,11 @@ namespace arc //! arctk namespace
 
 
         //  -- Control --
+        /**
+         *  Mode the camera along a given vector.
+         *
+         *  @param  vec_    Vector to move the camera along.
+         */
         inline void Camera::move(const glm::vec3& vec_) noexcept
         {
             _pos += vec_;
