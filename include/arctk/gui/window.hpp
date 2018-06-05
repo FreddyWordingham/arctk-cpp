@@ -236,6 +236,12 @@ namespace arc //! arctk namespace
             glfwSwapBuffers(_handle);
         }
 
+        /**
+         *  Render a using a camera.
+         *
+         *  @param  cam_    Camera used to render.
+         *  @param  shad_   Shader to render with.
+         */
         inline void Window::render_camera(const Camera& cam_, const Shader& shad_) const noexcept
         {
             glUseProgram(shad_.handle());
