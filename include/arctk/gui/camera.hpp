@@ -188,55 +188,120 @@ namespace arc //! arctk namespace
             return (_mvp);
         }
 
+        /**
+         *  Get the value of an integer uniform variable.
+         *
+         *  @param  name_   Of the uniform.
+         *
+         *  @pre    name_ must exist within the integer uniform map.
+         *
+         *  @return Value of the uniform.
+         */
         inline int Camera::int_uniform(const std::string& name_) const noexcept
         {
             assert(_int_uniform.find(name_) != _int_uniform.end());
 
             return (_int_uniform.find(name_)->second);
         }
-
+        /**
+         *  Get the value of an float uniform variable.
+         *
+         *  @param  name_   Of the uniform.
+         *
+         *  @pre    name_ must exist within the float uniform map.
+         *
+         *  @return Value of the uniform.
+         */
         inline float Camera::float_uniform(const std::string& name_) const noexcept
         {
             assert(_float_uniform.find(name_) != _float_uniform.end());
 
             return (_float_uniform.find(name_)->second);
         }
-
+        /**
+         *  Get the value of an vec2 uniform variable.
+         *
+         *  @param  name_   Of the uniform.
+         *
+         *  @pre    name_ must exist within the vec2 uniform map.
+         *
+         *  @return Value of the uniform.
+         */
         inline const glm::vec2& Camera::vec2_uniform(const std::string& name_) const noexcept
         {
             assert(_vec2_uniform.find(name_) != _vec2_uniform.end());
 
             return (_vec2_uniform.find(name_)->second);
         }
-
+        /**
+         *  Get the value of an vec3 uniform variable.
+         *
+         *  @param  name_   Of the uniform.
+         *
+         *  @pre    name_ must exist within the vec3 uniform map.
+         *
+         *  @return Value of the uniform.
+         */
         inline const glm::vec3& Camera::vec3_uniform(const std::string& name_) const noexcept
         {
             assert(_vec3_uniform.find(name_) != _vec3_uniform.end());
 
             return (_vec3_uniform.find(name_)->second);
         }
-
+        /**
+         *  Get the value of an vec4 uniform variable.
+         *
+         *  @param  name_   Of the uniform.
+         *
+         *  @pre    name_ must exist within the vec4 uniform map.
+         *
+         *  @return Value of the uniform.
+         */
         inline const glm::vec4& Camera::vec4_uniform(const std::string& name_) const noexcept
         {
             assert(_vec4_uniform.find(name_) != _vec4_uniform.end());
 
             return (_vec4_uniform.find(name_)->second);
         }
-
+        /**
+         *  Get the value of an mat2 uniform variable.
+         *
+         *  @param  name_   Of the uniform.
+         *
+         *  @pre    name_ must exist within the mat2 uniform map.
+         *
+         *  @return Value of the uniform.
+         */
         inline const glm::mat2& Camera::mat2_uniform(const std::string& name_) const noexcept
         {
             assert(_mat2_uniform.find(name_) != _mat2_uniform.end());
 
             return (_mat2_uniform.find(name_)->second);
         }
-
+        /**
+         *  Get the value of an mat3 uniform variable.
+         *
+         *  @param  name_   Of the uniform.
+         *
+         *  @pre    name_ must exist within the mat3 uniform map.
+         *
+         *  @return Value of the uniform.
+         */
         inline const glm::mat3& Camera::mat3_uniform(const std::string& name_) const noexcept
         {
             assert(_mat3_uniform.find(name_) != _mat3_uniform.end());
 
             return (_mat3_uniform.find(name_)->second);
         }
-
+        /**
+         *  Get the value of an mat4 uniform variable.
+         *
+         *  @param  name_   Of the uniform.
+         *
+         *  @pre    name_ must exist within the mat4 uniform map.
+         *
+         *  @return Value of the uniform.
+         */
         inline const glm::mat4& Camera::mat4_uniform(const std::string& name_) const noexcept
         {
             assert(_mat4_uniform.find(name_) != _mat4_uniform.end());
