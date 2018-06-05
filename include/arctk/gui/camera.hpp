@@ -148,16 +148,31 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the position of the camera.
+         *
+         *  @return Position of the camera.
+         */
         inline const glm::vec3& Camera::pos() const noexcept
         {
             return (_pos);
         }
 
+        /**
+         *  Get the facing direction of the camera.
+         *
+         *  @return Facing direction of the camera.
+         */
         inline const glm::vec3& Camera::dir() const noexcept
         {
             return (_dir);
         }
 
+        /**
+         *  Get the up direction of the camera.
+         *
+         *  @return Up direction of the camera.
+         */
         inline const glm::vec3& Camera::up() const noexcept
         {
             return (_up);
