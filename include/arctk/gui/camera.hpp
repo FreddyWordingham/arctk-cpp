@@ -44,9 +44,9 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Positioning --
-            glm::vec3 _pos;
-            glm::vec3 _dir;
-            glm::vec3 _up;
+            glm::vec3 _pos; //!< Position of the camera.
+            glm::vec3 _dir; //!< Direction the camera is facing.
+            glm::vec3 _up;  //!< Up direction of the camera.
 
             //  -- Uniform --
             glm::mat4 _mvp;
