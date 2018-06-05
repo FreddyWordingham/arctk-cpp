@@ -134,7 +134,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Properties --
-            constexpr inline bool normalised(double tol_) const noexcept;
+            constexpr inline bool normalised(double tol_ = std::numeric_limits<double>::epsilon()) const noexcept;
 
             //  -- Mathematical --
             constexpr inline T      sum() const noexcept;
