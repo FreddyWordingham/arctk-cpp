@@ -68,6 +68,14 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a particle at a given position travelling in a given direction.
+         *
+         *  @param  pos_    Position to start at.
+         *  @param  dir_    Direction of travel.
+         *
+         *  @pre    dir_ must be normalised.
+         */
         inline Particle::Particle(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) noexcept
           : _pos(pos_)
           , _dir(dir_)
