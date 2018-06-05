@@ -42,6 +42,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Spatial --
+            math::Vec3<double> _pos; //!< Position of the particle.
 
 
 
