@@ -43,6 +43,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Spatial --
             math::Vec3<double> _pos; //!< Position of the particle.
+            math::Vec3<double> _dir; //!< Direction of travel.
 
 
 
