@@ -663,7 +663,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        constexpr inline void Vec3<T>::rotate(const math::Vec3& axis_, const double ang_) const noexcept
+        constexpr inline void Vec3<T>::rotate(const math::Vec3<T>& axis_, const double ang_) const noexcept
         {
             const Vec3<T>& in = *this;
 
