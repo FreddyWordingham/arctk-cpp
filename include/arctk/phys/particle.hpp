@@ -19,6 +19,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/math.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -34,6 +40,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Spatial --
+
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
