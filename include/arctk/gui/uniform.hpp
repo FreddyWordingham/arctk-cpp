@@ -139,6 +139,11 @@ namespace arc //! arctk namespace
             return (_type);
         }
 
+        /**
+         *  Get the uniform control type.
+         *
+         *  @return Uniform control type.
+         */
         inline Uniform::controller Uniform::control() const noexcept
         {
             return (_control);
