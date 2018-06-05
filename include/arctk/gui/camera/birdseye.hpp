@@ -51,10 +51,10 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- View --
-                float _width_start;
-                float _width_end;
-                float _height_start;
-                float _height_end;
+                float _width_start;  //!< Start rendering width of the window.
+                float _width_end;    //!< End rendering width of the window.
+                float _height_start; //!< Start rendering height of the window.
+                float _height_end;   //!< End rendering height of the window.
 
 
                 //  == INSTANTIATION ==
