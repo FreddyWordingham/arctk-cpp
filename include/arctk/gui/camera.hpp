@@ -311,6 +311,12 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
+        /**
+         *  Set the camera position.
+         *  Update the model-view-projection matrix.
+         *
+         *  @param  pos_    Position to move the camera to.
+         */
         inline void Camera::set_pos(const glm::vec3& pos_) noexcept
         {
             _pos = pos_;
@@ -318,6 +324,13 @@ namespace arc //! arctk namespace
             update_mvp();
         }
 
+        /**
+         *  Set the camera facing direction.
+         *  Update the up direction of the camera.
+         *  Update the model-view-projection matrix.
+         *
+         *  @param  dir_    Direction to face the camera.
+         */
         inline void Camera::set_dir(const glm::vec3& dir_) noexcept
         {
             _dir = dir_;
@@ -327,6 +340,11 @@ namespace arc //! arctk namespace
             update_mvp();
         }
 
+        /**
+         *  Set the up direction of the camera.
+         *
+         *  @param  dir_    Direction to face the camera.
+         */
         inline void Camera::set_up(const glm::vec3& up_) noexcept
         {
             _up = up_;
