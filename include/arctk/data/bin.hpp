@@ -218,7 +218,7 @@ namespace arc //! arctk namespace
         {
             assert(index_ < _counts.size());
 
-            return (min() + (width() * (index_ + 0.5)));
+            return (_min + (_width * (index_ + 0.5)));
         }
 
         /**
@@ -255,10 +255,10 @@ namespace arc //! arctk namespace
         template <typename T>
         inline size_t Bin<T>::index(const double pos_) const noexcept
         {
-            assert(pos_ >= min());
-            assert(pos_ <= max());
+            assert(pos_ >= _min);
+            assert(pos_ <= _max);
 
-            const auto index = static_cast<size_t>((pos_ - min()) / width());
+            const auto index = static_cast<size_t>((pos_ - _min) / _width);
 
             return ((index == _counts.size()) ? (index - 1) : index);
         }
