@@ -55,7 +55,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline explicit Sphere(double radius_, const math::Vec3<double>& centre_ = {0.0, 0.0, 0.0}) noexcept;
+                inline explicit Sphere(double radius_, const math::Vec3<double>& pos_ = {0.0, 0.0, 0.0}) noexcept;
 
 
                 //  == METHODS ==
@@ -75,12 +75,12 @@ namespace arc //! arctk namespace
              *  Construct a sphere with a radius at a location.
              *
              *  @param  radius_ Radius of the sphere.
-             *  @param  centre_ Centre of the sphere.
+             *  @param  pos_    Position of the sphere.
              *
              *  @pre    radius_ must be positive.
              */
-            inline Sphere::Sphere(const double radius_, const math::Vec3<double>& centre_) noexcept
-              : Shape(centre_)
+            inline Sphere::Sphere(const double radius_, const math::Vec3<double>& pos_) noexcept
+              : Shape(pos_)
               , _radius(radius_)
             {
                 assert(radius_ > 0.0);
@@ -106,8 +106,8 @@ namespace arc //! arctk namespace
             {
                 assert(dir_.normalised());
 
-                const double b = 2.0 * (dir_ * (pos_ - _centre));
-                const double c = (pos_ - _centre).mag_sq() - math::sq(_radius);
+                const double b = 2.0 * (dir_ * (pos_ - _pos));
+                const double c = (pos_ - _pos).mag_sq() - math::sq(_radius);
 
                 const double delta = math::sq(b) - (4.0 * c);
 
