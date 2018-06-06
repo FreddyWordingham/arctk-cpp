@@ -39,6 +39,12 @@ namespace arc //! arctk namespace
 
 
 
+        //  == CONSTANTS ==
+        //  -- Output --
+        const bool ANSI_SUPPORT = (isatty(fileno(stdout)) == 1); //!< True if output supports ansi escape codes.
+
+
+
         //  == CLASS ==
         /**
          *  Terminal access class.
