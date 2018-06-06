@@ -89,9 +89,6 @@ namespace arc //! arctk namespace
 
 
         //  -- Destructors --
-        /**
-         *  Destruct the shape.
-         */
         inline Shape::~Shape() noexcept = default;
 
 
