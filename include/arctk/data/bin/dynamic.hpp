@@ -104,24 +104,24 @@ namespace arc //! arctk namespace
              *  @param  pos_    Position of the weight.
              *  @param  weight_ Weight of value to be binned.
              *
-             *  @post   val_ must be greater than, or equal to, _min.
-             *  @post   val_ must be less than, or equal to, _max.
+             *  @post   pos_ must be greater than, or equal to, _min.
+             *  @post   pos_ must be less than, or equal to, _max.
              */
             template <typename T>
             inline void Dynamic<T>::collect(const double pos_, const T weight_) noexcept
             {
-                while (val_ < Bin<T>::_min)
+                while (pos_ < Bin<T>::_min)
                 {
                     descend();
                 }
 
-                while (val_ > Bin<T>::_max)
+                while (pos_ > Bin<T>::_max)
                 {
                     ascend();
                 }
 
-                assert(val_ >= Bin<T>::_min);
-                assert(val_ <= Bin<T>::_max);
+                assert(pos_ >= Bin<T>::_min);
+                assert(pos_ <= Bin<T>::_max);
 
                 Bin<T>::_counts[Bin<T>::index(pos_)] += weight_;
             }
