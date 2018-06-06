@@ -161,7 +161,7 @@ namespace arc //! arctk namespace
  *  @return Reference to stream_ post-write.
  */
 template <typename S>
-inline S& operator<<(S& stream_, const In& file_) noexcept
+inline S& operator<<(S& stream_, const arc::sys::file::In& file_) noexcept
 {
     stream_ << file_._handle.rdbuf();
 
