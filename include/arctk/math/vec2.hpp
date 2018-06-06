@@ -125,6 +125,7 @@ namespace arc //! arctk namespace
             //  -- Mathematical --
             constexpr inline T      sum() const noexcept;
             constexpr inline double mag() const noexcept;
+            constexpr inline double mag_sq() const noexcept;
             constexpr inline void   normalise() const noexcept;
 
             //  -- Co-ordinate --
@@ -594,7 +595,20 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline double Vec2<T>::mag() const noexcept
         {
-            return (std::sqrt(static_cast<double>((x * x) + (y * y))));
+            return (std::sqrt(mag_sq()));
+        }
+
+        /**
+         *  Calculate the magnitude-squared of the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return Magnitude-squared of the vec.
+         */
+        template <typename T>
+        constexpr inline double Vec2<T>::mag_sq() const noexcept
+        {
+            return (static_cast<double>((x * x) + (y * y)));
         }
 
         /**
