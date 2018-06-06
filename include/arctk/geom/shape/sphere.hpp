@@ -20,8 +20,13 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cmath>
+#include <limits>
+
 //  -- Arctk --
 #include <arctk/geom/shape.hpp>
+#include <arctk/math.hpp>
 
 
 
@@ -92,6 +97,54 @@ namespace arc //! arctk namespace
             inline double Sphere::radius() const noexcept
             {
                 return (_radius);
+            }
+
+
+            //  -- Collision --
+            inline double Sphere::distance(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept
+            {
+                const double b = 2.0 * (dir_ * (pos_ - centre_));
+                const double c = (pos_ - centre_).mag_sq() - math::sq(radius_);
+
+                const double delta = math::sq(b) - (4.0 * c);
+
+                if (delta < 0.0)
+                {
+                    return (std::numeric_limits<double>::infinity());
+                }
+
+                if (delta == 0.0)
+                {
+                    const double dist = -b / 2.0;
+
+                    if (dist >= 0.0)
+                    {
+                        return (dist);
+                    }
+
+                    return (std::numeric_limits<double>::infinity());
+                }
+
+                const double sqrt_delta = std::sqrt(delta);
+
+                const double dist_0 = (-b + sqrt_delta) / 2.0;
+                const double dist_1 = (-b - sqrt_delta) / 2.0;
+
+                if ((dist_0 < 0.0) && (dist_1 < 0.0))
+                {
+                    return (std::numeric_limits<double>::infinity());
+                }
+
+                if (dist_0 < 0.0)
+                {
+                    dist_0 = std::numeric_limits<double>::infinity();
+                }
+                if (dist_1 < 0.0)
+                {
+                    dist_1 = std::numeric_limits<double>::infinity();
+                }
+
+                return (std::min(dist_0, dist_1));
             }
 
 
