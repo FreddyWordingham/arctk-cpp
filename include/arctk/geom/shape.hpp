@@ -80,7 +80,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Destructors --
-        inline Shape::~Shape() = default;
+        inline Shape::~Shape() noexcept = default;
 
 
         //  == METHODS ==
