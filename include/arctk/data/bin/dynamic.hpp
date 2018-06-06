@@ -136,8 +136,8 @@ namespace arc //! arctk namespace
             template <typename T>
             inline void Dynamic<T>::ascend() noexcept
             {
-                _max += (_max - _min);
-                _width *= 2.0;
+                Bin<T>::_max += (Bin<T>::_max - Bin<T>::_min);
+                Bin<T>::_width *= 2.0;
 
                 for (size_t i = 0; i < (_counts.size() / 2); ++i)
                 {
