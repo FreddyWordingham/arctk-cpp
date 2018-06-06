@@ -48,6 +48,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline explicit Shape(const math::Vec3<double>& centre_) noexcept;
 
             //  == OPERATORS ==
           public:
@@ -58,6 +59,11 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
+        //  -- Constructors --
+        inline Shape::Shape(const math::Vec3<double>& centre_) noexcept
+          : _centre(centre_)
+        {
+        }
 
 
 
