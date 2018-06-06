@@ -43,6 +43,7 @@ namespace arc //! arctk namespace
           protected:
             //  -- Positioning --
             math::Vec3<double> _centre; //!< Centre of the shape.
+            math::Vec3<double> _dir;    //!< Direction of the shape.
 
 
             //  == INSTANTIATION ==
