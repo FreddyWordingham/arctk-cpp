@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
             /**
              *  Geometric sphere shape.
              */
-            class Sphere
+            class Sphere : public Shape
             {
                 //  == FIELDS ==
               protected:
