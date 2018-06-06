@@ -82,7 +82,7 @@ namespace arc //! arctk namespace
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wexit-time-destructors"
 #pragma clang diagnostic ignored "-Wglobal-constructors"
-            std::string Warning::_col = ansi::FG_YELLOW; // NOLINT
+            std::string Warning::_col = ANSI_SUPPORT ? ansi::FG_YELLOW : ""; // NOLINT
 #pragma clang diagnostic pop
 
 
