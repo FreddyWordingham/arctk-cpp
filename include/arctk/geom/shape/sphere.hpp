@@ -79,7 +79,7 @@ namespace arc //! arctk namespace
              *  @pre    radius_ must be positive.
              */
             inline Sphere::Sphere(const double radius_, const math::Vec3<double>& centre_) noexcept
-              : _shape(centre_)
+              : Shape(centre_)
               , _radius(radius_)
             {
                 assert(radius_ > 0.0);
