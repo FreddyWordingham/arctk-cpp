@@ -113,6 +113,10 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Destructors --
+        inline Bin::~Bin() noexcept = default;
+
+
 
         //  == OPERATORS ==
         //  -- Stream --
