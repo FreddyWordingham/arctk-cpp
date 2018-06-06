@@ -50,8 +50,10 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline explicit Shape(const math::Vec3<double>& centre_) noexcept;
 
-            //  == OPERATORS ==
-          public:
+            //  -- Destructors --
+            virtual inline ~Shape() noexcept = 0;
+
+
             //  == METHODS ==
           public:
             //  -- Collision --
