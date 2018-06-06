@@ -51,6 +51,14 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a collision event object for a miss.
+         *  This constructor should only be called when a collision did not occure.
+         *
+         *  @param  hit_    Hit status. Should be false.
+         *
+         *  @pre    hit_ must be false.
+         */
         inline explicit Collision::Collision(const bool hit_) noexcept
           : hit(hit_)
           , dist(std::numeric_limits<double>::signaling_NaN())
