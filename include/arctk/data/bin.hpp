@@ -114,7 +114,8 @@ namespace arc //! arctk namespace
 
 
         //  -- Destructors --
-        inline Bin::~Bin() noexcept = default;
+        template <typename T>
+        inline Bin<T>::~Bin() noexcept = default;
 
 
 
