@@ -68,6 +68,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline const math::Vec3<double>& centre() const noexcept;
+            inline const math::Vec3<double>& dir() const noexcept;
 
             //  -- Collision --
             virtual inline double distance(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const
@@ -104,6 +105,16 @@ namespace arc //! arctk namespace
         inline const math::Vec3<double>& Shape::centre() const noexcept
         {
             return (_centre);
+        }
+
+        /**
+         *  Get the direction of the shape.
+         *
+         *  @return Direction of the shape.
+         */
+        inline const math::Vec3<double>& Shape::dir() const noexcept
+        {
+            return (_dir);
         }
 
 
