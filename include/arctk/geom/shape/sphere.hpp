@@ -133,7 +133,7 @@ namespace arc //! arctk namespace
 
                     if (dist >= 0.0)
                     {
-                        return (dist);
+                        return (Collision(dist));
                     }
 
                     return (Collision(false));
