@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/geom/collision.hpp>
 #include <arctk/math.hpp>
 
 
