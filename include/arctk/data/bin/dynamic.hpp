@@ -58,6 +58,9 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Collection --
+                inline void collect(double pos_, T weight_) noexcept override;
+
               private:
                 //  -- Growth --
                 inline void ascend() noexcept;
@@ -94,6 +97,35 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Collect a weight, at a position, into the bin array.
+             *  Grow the bin range to accommodate out of range values.
+             *
+             *  @param  pos_    Position of the weight.
+             *  @param  weight_ Weight of value to be binned.
+             *
+             *  @post   val_ must be greater than, or equal to, _min.
+             *  @post   val_ must be less than, or equal to, _max.
+             */
+            template <typename T>
+            inline void Dynamic<T>::collect(const double pos_, const T weight_) noexcept
+            {
+                while (val_ < _min)
+                {
+                    descend();
+                }
+
+                while (val_ > max_)
+                {
+                    ascend();
+                }
+
+                assert(val_ >= _min);
+                assert(val_ <= _max);
+
+                Bin<T>::_counts[Bin<T>::index(pos_)] += weight_;
+            }
+
 
             //  -- Growth --
             /**
