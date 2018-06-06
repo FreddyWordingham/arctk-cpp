@@ -43,6 +43,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline explicit Plane(const math::Vec3<double>& centre_ = {0.0, 0.0, 0.0}, const math::Vec3<double>& dir_ = {0.0, 0.0, 1.0}) noexcept;
 
 
                 //  == METHODS ==
@@ -53,6 +54,10 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Plane::Plane(const math::Vec3<double>& centre_, const math::Vec3<double>& dir_) noexcept
+              : Shape(centre_, dir_)
+            {
+            }
 
 
 
