@@ -151,12 +151,12 @@ namespace arc //! arctk namespace
 
                 if ((dist_0 >= 0.0) && (dist_1 < 0.0))
                 {
-                    return (dist_0);
+                    return (Collision(dist_0));
                 }
 
                 if ((dist_1 >= 0.0) && (dist_0 < 0.0))
                 {
-                    return (dist_1);
+                    return (Collision(dist_1));
                 }
 
                 return (Collision(std::min(dist_0, dist_1)));
