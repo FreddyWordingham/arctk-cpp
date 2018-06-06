@@ -64,7 +64,7 @@ namespace arc //! arctk namespace
                 inline double radius() const noexcept;
 
                 //  -- Collision --
-                inline double distance(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept override;
+                inline double collision(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept override;
             };
 
 
@@ -102,7 +102,7 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
-            inline double Sphere::distance(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept
+            inline double Sphere::collision(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept
             {
                 assert(dir_.normalised());
 
