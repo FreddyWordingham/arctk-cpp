@@ -51,6 +51,8 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- View --
+                float _fov;          //!< Field-of-view of the camera.
+                float _aspect_ratio; //!< Aspect ratio of the camera.
 
 
                 //  == INSTANTIATION ==
