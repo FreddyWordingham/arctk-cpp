@@ -58,6 +58,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline explicit Birdseye(float fov_, float aspect_ratio_, const glm::vec3& pos_ = {0.0f, 0.0f, 1.0f}, const glm::vec3& dir_ = {0.0f, 0.0f, -1.0f}, const glm::vec3& up_ = {0.0f, 1.0f, 0.0f}) noexcept;
 
 
                 //  == METHODS ==
@@ -69,6 +70,16 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION --
             //  -- Constructors --
+            inline Birdseye::Birdseye(float fov_, float aspect_ratio_, const glm::vec3& pos_, const glm::vec3& dir_, const glm::vec3& up_) noexcept
+              : Camera(pos_, dir_, up_)
+              , _fov(fov_)
+              , _aspect_ratio(aspect_ratio_)
+            {
+                assert(fov_ > 0.0f);
+                assert(aspect_ratio_ > 0.0f);
+
+                update_mvp();
+            }
 
 
 
