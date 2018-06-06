@@ -49,6 +49,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Sphere(double radius_, const math::Vec3<double>& centre_) noexcept;
 
 
                 //  == METHODS ==
@@ -59,6 +60,11 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Sphere::Sphere(const double radius_, const math::Vec3<double>& centre_) noexcept
+              : _shape(centre_)
+              , _radius(radius_)
+            {
+            }
 
 
 
