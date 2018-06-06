@@ -54,9 +54,18 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a plane at a location with a normal direction.
+             *
+             *  @param  centre_ Centre of the plane.
+             *  @param  dir_    Direction of the plane's normal.
+             *
+             *  @pre    dir_ must be normalised.
+             */
             inline Plane::Plane(const math::Vec3<double>& centre_, const math::Vec3<double>& dir_) noexcept
               : Shape(centre_, dir_)
             {
+                assert(dir_.normalised());
             }
 
 
