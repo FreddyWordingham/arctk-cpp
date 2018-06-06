@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline explicit Shape(const math::Vec3<double>& centre_{0.0, 0.0, 0.0}, const math::Vec3<double>& centre_{0.0, 0.0, 1.0}) noexcept;
+            inline explicit Shape(const math::Vec3<double>& centre_ = {0.0, 0.0, 0.0}, const math::Vec3<double>& centre_ = {0.0, 0.0, 1.0}) noexcept;
             inline Shape(const Shape&) noexcept = default; //!< Defaulted copy constructor.
             inline Shape(Shape&&) noexcept      = default; //!< Defaulted move constructor.
 
