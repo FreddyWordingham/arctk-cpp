@@ -58,12 +58,13 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline explicit Birdseye(float fov_, float aspect_ratio_, const glm::vec3& pos_ = {0.0f, 0.0f, 1.0f}, const glm::vec3& dir_ = {0.0f, 0.0f, -1.0f}, const glm::vec3& up_ = {0.0f, 1.0f, 0.0f}) noexcept;
+                inline explicit Fly(float fov_, float aspect_ratio_, const glm::vec3& pos_ = {0.0f, 0.0f, 1.0f}, const glm::vec3& dir_ = {0.0f, 0.0f, -1.0f}, const glm::vec3& up_ = {0.0f, 1.0f, 0.0f}) noexcept;
 
 
                 //  == METHODS ==
               private:
                 //  -- Updating --
+                inline void update_mvp() noexcept override;
             };
 
 
@@ -82,7 +83,7 @@ namespace arc //! arctk namespace
              *  @pre    fov_ must be positive.
              *  @pre    aspect_ratio_ must be positive.
              */
-            inline Birdseye::Birdseye(float fov_, float aspect_ratio_, const glm::vec3& pos_, const glm::vec3& dir_, const glm::vec3& up_) noexcept
+            inline Fly::Fly(float fov_, float aspect_ratio_, const glm::vec3& pos_, const glm::vec3& dir_, const glm::vec3& up_) noexcept
               : Camera(pos_, dir_, up_)
               , _fov(fov_)
               , _aspect_ratio(aspect_ratio_)
@@ -97,6 +98,16 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Updating --
+            /**
+             *  Update the model-view-projection matrix of the camera.
+             */
+            inline void Fly::update_mvp() noexcept
+            {
+                const glm::mat4 view = glm::lookAt(_pos, _pos + _dir, _up);
+                const glm::mat4 proj = glm::perspective(_fov, _aspect_ratio, FLY_NEAR_CULL_DIST, FLY_FAR_CULL_DIST);
+
+                _mvp = proj * view;
+            }
 
 
 
