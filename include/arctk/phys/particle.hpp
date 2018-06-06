@@ -63,8 +63,8 @@ namespace arc //! arctk namespace
             inline const math::Vec3<double>& dir() noexcept;
 
             //  -- Setters --
-            inline void move(double dist_) noexcept;
-            inline void rotate(double theta_, double phi_) noexcept;
+            virtual inline void move(double dist_) noexcept;
+            virtual inline void rotate(double theta_, double phi_) noexcept;
         };
 
 
