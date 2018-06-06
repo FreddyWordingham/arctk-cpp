@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    hit_ must be false.
          */
-        inline explicit Collision::Collision(const bool hit_) noexcept
+        inline Collision::Collision(const bool hit_) noexcept
           : hit(hit_)
           , dist(std::numeric_limits<double>::signaling_NaN())
         {
@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    dist_ must be non-negative.
          */
-        inline explicit Collision::Collision(const double dist_) noexcept
+        inline Collision::Collision(const double dist_) noexcept
           : hit(true)
           , dist(dist_)
         {
