@@ -49,13 +49,8 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
-                //  -- Bounds --
-                const double _min; //!< Minimum bound of the bin range.
-                const double _max; //!< Maximum bound of the bin range.
-
-                //  -- Data --
-                const double _width;  //!< Bin bag width.
-                T            _misses; //!< Sum of total range misses.
+                //  -- Counts --
+                T _misses; //!< Sum of total range misses.
 
 
                 //  == INSTANTIATION ==
