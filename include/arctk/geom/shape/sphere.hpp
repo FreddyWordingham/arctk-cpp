@@ -57,6 +57,13 @@ namespace arc //! arctk namespace
                 inline Sphere(double radius_, const math::Vec3<double>& centre_) noexcept;
 
 
+                //  == OPERATORS ==
+              public:
+                //  -- Assignment --
+                inline Bin& operator=(const Bin&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
+                inline Bin& operator=(Bin&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
+
+
                 //  == METHODS ==
               public:
                 //  -- Getters --

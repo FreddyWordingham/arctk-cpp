@@ -49,9 +49,18 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline explicit Shape(const math::Vec3<double>& centre_) noexcept;
+            inline Shape(const Shape&) noexcept = default; //!< Defaulted copy constructor.
+            inline Shape(Shape&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
             virtual inline ~Shape() noexcept = 0;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Shape& operator=(const Shape&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Shape& operator=(Shape&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
