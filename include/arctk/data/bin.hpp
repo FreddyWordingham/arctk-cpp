@@ -114,11 +114,6 @@ namespace arc //! arctk namespace
 
 
         //  -- Destructors --
-        /**
-         *  Destruct the bin.
-         *
-         *  @tparam T   Type of value to be counted.
-         */
         template <typename T>
         inline Bin<T>::~Bin() noexcept = default;
 
