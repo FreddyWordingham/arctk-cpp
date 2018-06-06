@@ -94,6 +94,10 @@ namespace arc //! arctk namespace
                 {
                     return (Collision(false));
                 }
+
+                const double dist = ((_pos - pos_) * _dir) / denom;
+
+                return ((dist < 0.0) ? Collision(false) : Collision(dist));
             }
 
 
