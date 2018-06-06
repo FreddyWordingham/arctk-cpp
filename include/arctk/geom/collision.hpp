@@ -34,15 +34,27 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           public:
+            //  -- Properties --
+            const bool   hit;  //!< True if there was a collision.
+            const double dist; //!< Distance to the collision. NaN if hit is false.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline explicit Collision(double dist_) noexcept;
         };
 
 
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline explicit Collision::Collision(const double dist_) noexcept
+          : hit(true)
+          , dist(dist_)
+        {
+            assert(dist_ >= 0.0);
+        }
 
 
 
