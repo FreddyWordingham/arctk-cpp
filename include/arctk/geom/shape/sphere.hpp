@@ -104,6 +104,8 @@ namespace arc //! arctk namespace
             //  -- Collision --
             inline double Sphere::distance(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept
             {
+                assert(dir_.normalised());
+
                 const double b = 2.0 * (dir_ * (pos_ - _centre));
                 const double c = (pos_ - _centre).mag_sq() - math::sq(_radius);
 
