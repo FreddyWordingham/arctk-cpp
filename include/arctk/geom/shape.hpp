@@ -34,6 +34,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
+         *  Geometric shape.
          */
         class Shape
         {
