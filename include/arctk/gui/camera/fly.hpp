@@ -70,6 +70,18 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION --
             //  -- Constructors --
+            /**
+             *  Construct a fly camera.
+             *
+             *  @param  fov_            Field-of-view of the camera.
+             *  @param  aspect_ratio_   Aspect ratio of the camera.
+             *  @param  pos_            Initial position of the camera.
+             *  @param  dir_            Direction for the camera to face.
+             *  @param  up_             Up direction of the camera.
+             *
+             *  @pre    fov_ must be positive.
+             *  @pre    aspect_ratio_ must be positive.
+             */
             inline Birdseye::Birdseye(float fov_, float aspect_ratio_, const glm::vec3& pos_, const glm::vec3& dir_, const glm::vec3& up_) noexcept
               : Camera(pos_, dir_, up_)
               , _fov(fov_)
