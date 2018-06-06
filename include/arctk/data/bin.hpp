@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
             inline Bin(Bin&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
-            virtual inline ~Bin() noexcept = default;
+            virtual inline ~Bin() noexcept = 0;
 
 
             //  == OPERATORS ==
