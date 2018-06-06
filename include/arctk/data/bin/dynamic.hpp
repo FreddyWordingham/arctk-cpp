@@ -61,6 +61,7 @@ namespace arc //! arctk namespace
               private:
                 //  -- Growth --
                 inline void ascend() noexcept;
+                inline void descend() noexcept;
             };
 
 
@@ -108,7 +109,24 @@ namespace arc //! arctk namespace
                 }
                 for (size_t i = (_counts.size() / 2); i < _counts.size(); ++i)
                 {
-                    _counts[i] = 0.0;
+                    _counts[i] = {};
+                }
+            }
+
+            template <typename T>
+            inline void Dynamic<T>::descend() noexcept
+            {
+                _min -= (_max - _min);
+                _width *= 2.0;
+
+                for (size_t i = (_counts.size() - 1); i >= (_counts.size() / 2); --i)
+                {
+                    const size_t index = (2 * i) - _counts.size();
+                    _counts[i]         = _counts[index] + _counts[index + 1];
+                }
+                for (size_t i = 0; i < (_counts.size() / 2); ++i)
+                {
+                    _counts[i] = {};
                 }
             }
 
