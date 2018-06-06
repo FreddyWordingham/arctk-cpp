@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline explicit Bin(size_t res_) noexcept;
+            inline explicit Bin(const double min_, const double max_, size_t res_) noexcept;
             inline Bin(const Bin&) noexcept = default; //!< Defaulted copy constructor.
             inline Bin(Bin&&) noexcept      = default; //!< Defaulted move constructor.
 
@@ -108,17 +108,21 @@ namespace arc //! arctk namespace
          *
          *  @tparam T   Type of value to be counted.
          *
+         *  @param  min_    Minimum range bound of the bin.
+         *  @param  max_    Maximum range bound of the bin.
          *  @param  res_    Resolution of the bin.
          *
+         *  @pre    min_ must me less than max_.
          *  @pre    res_ must be positive.
          */
         template <typename T>
-        inline Bin<T>::Bin(const size_t res_) noexcept
+        inline Bin<T>::Bin(const double min_, const double max_, const size_t res_) noexcept
           : _min(min_)
           , _max(max_)
           , _width((max_ - min_) / res_)
           , _counts(res_)
         {
+            assert(min_ < max_);
             assert(res_ > 0);
         }
 
