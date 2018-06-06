@@ -81,6 +81,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the centre of the shape.
+         *
+         *  @return Centre of the shape.
+         */
         inline math::Vec3<double>& Shape::centre() const noexcept
         {
             return (_centre);
