@@ -70,8 +70,8 @@ namespace arc //! arctk namespace
             inline Bin& operator=(Bin&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
 
             //  -- Stream --
-            template <typename S>
-            friend inline S& operator<<(S& stream_, const Bin<T>& bin_) noexcept;
+            template <typename S, typename L>
+            friend inline S& operator<<(S& stream_, const Bin<L>& bin_) noexcept;
 
 
             //  == METHODS ==
@@ -111,6 +111,28 @@ namespace arc //! arctk namespace
             assert(res_ > 0);
         }
 
+
+
+        //  == OPERATORS ==
+        //  -- Stream --
+        /**
+         *  Print a bin as a human-readable string.
+         *
+         *  @tparam S   Type of stream to print to.
+         *  @tparam T   Type of value to be counted.
+         *
+         *  @param  stream_ Stream to print to.
+         *  @param  bin_    Bin to print.
+         *
+         *  @return A reference to the stream post-print.
+         */
+        template <typename S, typename T>
+        inline S& operator<<(S& stream_, const Bin<T>& bin_) noexcept
+        {
+            stream_ << format::cols(10, ", ", bin_.centres(), bin_._counts);
+
+            return (stream_);
+        }
 
 
         //  == METHODS ==
@@ -193,29 +215,6 @@ namespace arc //! arctk namespace
 
     } // namespace data
 } // namespace arc
-
-
-
-//  == OPERATORS ==
-//  -- Stream --
-/**
- *  Print a bin as a human-readable string.
- *
- *  @tparam S   Type of stream to print to.
- *  @tparam T   Type of value to be counted.
- *
- *  @param  stream_ Stream to print to.
- *  @param  bin_    Bin to print.
- *
- *  @return A reference to the stream post-print.
- */
-template <typename S, typename T>
-inline S& operator<<(S& stream_, const arc::data::Bin<T>& bin_) noexcept
-{
-    stream_ << arc::format::cols(10, ", ", bin_.centres(), bin_._counts);
-
-    return (stream_);
-}
 
 
 
