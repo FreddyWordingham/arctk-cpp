@@ -78,6 +78,7 @@ namespace arc //! arctk namespace
              *
              *  @pre    min_ must me less than max_.
              *  @pre    res_ must be positive.
+             *  @pre    res_ must be even.
              */
             template <typename T>
             inline Dynamic<T>::Dynamic(const double min_, const double max_, const size_t res_) noexcept
@@ -85,6 +86,7 @@ namespace arc //! arctk namespace
             {
                 assert(min_ < max_);
                 assert(res_ > 0);
+                assert((res_ % 2) == 0);
             }
 
 
