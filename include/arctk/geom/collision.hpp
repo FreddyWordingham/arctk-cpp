@@ -42,6 +42,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline explicit Collision(bool hit_) noexcept;
             inline explicit Collision(double dist_) noexcept;
         };
 
@@ -49,6 +50,13 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline explicit Collision::Collision(const bool hit_) noexcept
+          : hit(hit_)
+          , dist(std::numeric_limits<double>::signaling_NaN())
+        {
+            assert(!hit_);
+        }
+
         inline explicit Collision::Collision(const double dist_) noexcept
           : hit(true)
           , dist(dist_)
