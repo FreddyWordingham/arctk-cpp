@@ -79,6 +79,9 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Destructors --
+        inline Shape::~Shape() = default;
+
 
         //  == METHODS ==
         //  -- Getters --
