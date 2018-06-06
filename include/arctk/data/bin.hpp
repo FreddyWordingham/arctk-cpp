@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline explicit Bin(const double min_, const double max_, size_t res_) noexcept;
+            inline Bin(double min_, double max_, size_t res_) noexcept;
             inline Bin(const Bin&) noexcept = default; //!< Defaulted copy constructor.
             inline Bin(Bin&&) noexcept      = default; //!< Defaulted move constructor.
 
