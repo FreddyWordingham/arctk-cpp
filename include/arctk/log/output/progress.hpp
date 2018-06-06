@@ -89,7 +89,7 @@ namespace arc //! arctk namespace
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wexit-time-destructors"
 #pragma clang diagnostic ignored "-Wglobal-constructors"
-            std::string Progress::_col = ansi::FG_BLUE; // NOLINT
+            std::string Progress::_col = ANSI_SUPPORT : ansi::FG_BLUE ? ""; // NOLINT
 #pragma clang diagnostic pop
 
 
