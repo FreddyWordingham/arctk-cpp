@@ -114,7 +114,7 @@ namespace arc //! arctk namespace
 
                 if (delta < 0.0)
                 {
-                    return (std::numeric_limits<double>::infinity());
+                    return (Collision(false));
                 }
 
                 if (delta == 0.0)
@@ -126,7 +126,7 @@ namespace arc //! arctk namespace
                         return (dist);
                     }
 
-                    return (std::numeric_limits<double>::infinity());
+                    return (Collision(false));
                 }
 
                 const double sqrt_delta = std::sqrt(delta);
@@ -136,7 +136,7 @@ namespace arc //! arctk namespace
 
                 if ((dist_0 < 0.0) && (dist_1 < 0.0))
                 {
-                    return (std::numeric_limits<double>::infinity());
+                    return (Collision(false));
                 }
 
                 if ((dist_0 >= 0.0) && (dist_1 < 0.0))
@@ -149,7 +149,7 @@ namespace arc //! arctk namespace
                     return (dist_1);
                 }
 
-                return (std::min(dist_0, dist_1));
+                return (Collision(std::min(dist_0, dist_1)));
             }
 
 
