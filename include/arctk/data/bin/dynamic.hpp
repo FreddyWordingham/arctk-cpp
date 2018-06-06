@@ -58,6 +58,9 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+              private:
+                //  -- Growth --
+                inline void ascend() noexcept;
             };
 
 
@@ -88,6 +91,24 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+
+            //  -- Growth --
+            template <typename T>
+            inline void Dynamic<T>::ascend() noexcept
+            {
+                _max += (_max - _min);
+                _width *= 2.0;
+
+                for (size_t i = 0; i < (_counts.size() / 2); ++i)
+                {
+                    const size_t index = (2 * i);
+                    _counts[i]         = _counts[index] + _counts[index + 1];
+                }
+                for (size_t i = (_counts.size() / 2); i < _counts.size(); ++i)
+                {
+                    _counts[i] = 0.0;
+                }
+            }
 
 
 
