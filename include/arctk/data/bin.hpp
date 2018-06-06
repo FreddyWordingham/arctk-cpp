@@ -114,7 +114,10 @@ namespace arc //! arctk namespace
          */
         template <typename T>
         inline Bin<T>::Bin(const size_t res_) noexcept
-          : _counts(res_)
+          : _min(min_)
+          , _max(max_)
+          , _width((max_ - min_) / res_)
+          , _counts(res_)
         {
             assert(res_ > 0);
         }
