@@ -60,6 +60,11 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a shape centred on a given position.
+         *
+         *  @param  centre_ Centre of the shape.
+         */
         inline Shape::Shape(const math::Vec3<double>& centre_) noexcept
           : _centre(centre_)
         {
