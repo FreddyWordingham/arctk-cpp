@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
         //  -- Constructors --
         /**
          *  Construct a collision event object for a miss.
-         *  This constructor should only be called when a collision did not occure.
+         *  This constructor should only be called when a collision did not occur.
          *
          *  @param  hit_    Hit status. Should be false.
          *
@@ -66,6 +66,14 @@ namespace arc //! arctk namespace
             assert(!hit_);
         }
 
+        /**
+         *  Construct a collision event object for a hit.
+         *  This constructor should only be called when a collision did occur.
+         *
+         *  @param  dist_   Distance to the collision.
+         *
+         *  @pre    dist_ must be non-negative.
+         */
         inline explicit Collision::Collision(const double dist_) noexcept
           : hit(true)
           , dist(dist_)
