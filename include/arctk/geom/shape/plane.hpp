@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/geom/collision.hpp>
 #include <arctk/geom/shape.hpp>
 
 
@@ -49,6 +50,8 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Collision --
+                inline Collision collision(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept override;
             };
 
 
@@ -72,6 +75,26 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Collision --
+            /**
+             *  Determine if a collision event occurs between the plane and a ray.
+             *
+             *  @param  pos_    Position of the ray.
+             *  @param  dir_    Direction of the ray.
+             *
+             *  @pre    dir_ must be normalised.
+             *
+             *  @return Collision information.
+             */
+            inline Collision Sphere::collision(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept
+            {
+                const double denom = _dir * dir_;
+
+                if (denom == 0.0)
+                {
+                    return (Collision(false));
+                }
+            }
 
 
 
