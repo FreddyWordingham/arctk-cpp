@@ -103,6 +103,16 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
+            /**
+             *  Determine if a collision event occurs between the sphere and a ray.
+             *
+             *  @param  pos_    Position of the ray.
+             *  @param  dir_    Direction of the ray.
+             *
+             *  @pre    dir_ must be normalised.
+             *
+             *  @return Collision information.
+             */
             inline Collision Sphere::collision(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept
             {
                 assert(dir_.normalised());
