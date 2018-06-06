@@ -83,10 +83,7 @@ namespace arc //! arctk namespace
              */
             template <typename T>
             inline Fixed<T>::Fixed(const double min_, const double max_, const size_t res_) noexcept
-              : Bin<T>(res_)
-              , _min(min_)
-              , _max(max_)
-              , _width((max_ - min_) / res_)
+              : Bin<T>(min_, max_, res_)
               , _misses({})
             {
                 assert(min_ < max_);
