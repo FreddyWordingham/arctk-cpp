@@ -92,6 +92,7 @@ namespace arc //! arctk namespace
         inline Shape::~Shape() noexcept = default;
 
 
+
         //  == METHODS ==
         //  -- Getters --
         /**
