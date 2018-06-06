@@ -139,14 +139,14 @@ namespace arc //! arctk namespace
                 Bin<T>::_max += (Bin<T>::_max - Bin<T>::_min);
                 Bin<T>::_width *= 2.0;
 
-                for (size_t i = 0; i < (_counts.size() / 2); ++i)
+                for (size_t i = 0; i < (Bin<T>::_counts.size() / 2); ++i)
                 {
                     const size_t index = (2 * i);
-                    _counts[i]         = _counts[index] + _counts[index + 1];
+                    Bin<T>::_counts[i] = Bin<T>::_counts[index] + Bin<T>::_counts[index + 1];
                 }
-                for (size_t i = (_counts.size() / 2); i < _counts.size(); ++i)
+                for (size_t i = (Bin<T>::_counts.size() / 2); i < Bin<T>::_counts.size(); ++i)
                 {
-                    _counts[i] = {};
+                    Bin<T>::_counts[i] = {};
                 }
             }
 
