@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
             class Sphere : public Shape
             {
                 //  == FIELDS ==
-              protected:
+              private:
                 //  -- Bounds --
                 const double _radius; //!< Radius of the sphere.
 
