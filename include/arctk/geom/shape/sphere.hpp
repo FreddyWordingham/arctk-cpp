@@ -25,6 +25,7 @@
 #include <limits>
 
 //  -- Arctk --
+#include <arctk/geom/collision.hpp>
 #include <arctk/geom/shape.hpp>
 #include <arctk/math.hpp>
 
@@ -64,7 +65,7 @@ namespace arc //! arctk namespace
                 inline double radius() const noexcept;
 
                 //  -- Collision --
-                inline double collision(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept override;
+                inline Collision collision(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept override;
             };
 
 
@@ -102,7 +103,7 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
-            inline double Sphere::collision(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept
+            inline Collision Sphere::collision(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept
             {
                 assert(dir_.normalised());
 
