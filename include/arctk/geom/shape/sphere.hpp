@@ -54,6 +54,11 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline double radius() const noexcept;
+
+                //  -- Collision --
+                inline double distance(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept override;
             };
 
 
@@ -78,6 +83,16 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Getters --
+            /**
+             *  Get the radius of the sphere.
+             *
+             *  @return Radius of the sphere.
+             */
+            inline double Sphere::radius() const noexcept
+            {
+                return (_radius);
+            }
 
 
 
