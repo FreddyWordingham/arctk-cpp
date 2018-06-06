@@ -51,9 +51,18 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Particle(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) noexcept;
+            inline Particle(const Particle&) noexcept = default; //!< Defaulted copy constructor.
+            inline Particle(Particle&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
             virtual inline ~Particle() noexcept = default;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Particle& operator=(const Particle&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Particle& operator=(Particle&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
