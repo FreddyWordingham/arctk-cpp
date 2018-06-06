@@ -53,6 +53,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Dynamic(double min_, double max_, size_t res_) noexcept;
 
 
                 //  == METHODS ==
@@ -63,6 +64,25 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a dynamic range bin object.
+             *
+             *  @tparam T   Type of value to be counted.
+             *
+             *  @param  min_    Initial minimum range bound of the bin.
+             *  @param  max_    Initial maximum range bound of the bin.
+             *  @param  res_    Resolution of the bin.
+             *
+             *  @pre    min_ must me less than max_.
+             *  @pre    res_ must be positive.
+             */
+            template <typename T>
+            inline Dynamic<T>::Dynamic(const double min_, const double max_, const size_t res_) noexcept
+              : Bin<T>(min_, max_, res_)
+            {
+                assert(min_ < max_);
+                assert(res_ > 0);
+            }
 
 
 
