@@ -52,6 +52,9 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Particle(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) noexcept;
 
+            //  -- Destructors --
+            virtual inline ~Particle() noexcept = default;
+
 
             //  == METHODS ==
           public:
