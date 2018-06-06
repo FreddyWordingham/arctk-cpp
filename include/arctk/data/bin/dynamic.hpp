@@ -96,6 +96,11 @@ namespace arc //! arctk namespace
             //  -- Getters --
 
             //  -- Growth --
+            /**
+             *  Double the range of the bin by increasing the maximum bound.
+             *
+             *  @tparam T   Type of value to be counted.
+             */
             template <typename T>
             inline void Dynamic<T>::ascend() noexcept
             {
