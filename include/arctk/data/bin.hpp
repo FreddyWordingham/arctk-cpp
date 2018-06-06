@@ -210,9 +210,9 @@ namespace arc //! arctk namespace
  *  @return A reference to the stream post-print.
  */
 template <typename S, typename T>
-inline S& operator<<(S& stream_, const Bin<T>& bin_) noexcept
+inline S& operator<<(S& stream_, const arc::data::Bin<T>& bin_) noexcept
 {
-    stream_ << format::cols(10, ", ", bin_.centres(), bin_._counts);
+    stream_ << arc::format::cols(10, ", ", bin_.centres(), bin_._counts);
 
     return (stream_);
 }
