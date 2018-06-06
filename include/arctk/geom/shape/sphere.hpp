@@ -103,8 +103,8 @@ namespace arc //! arctk namespace
             //  -- Collision --
             inline double Sphere::distance(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept
             {
-                const double b = 2.0 * (dir_ * (pos_ - centre_));
-                const double c = (pos_ - centre_).mag_sq() - math::sq(radius_);
+                const double b = 2.0 * (dir_ * (pos_ - _centre));
+                const double c = (pos_ - _centre).mag_sq() - math::sq(_radius);
 
                 const double delta = math::sq(b) - (4.0 * c);
 
@@ -135,13 +135,14 @@ namespace arc //! arctk namespace
                     return (std::numeric_limits<double>::infinity());
                 }
 
-                if (dist_0 < 0.0)
+                if ((dist_0 >= 0.0) && (dist_1 < 0.0))
                 {
-                    dist_0 = std::numeric_limits<double>::infinity();
+                    return (dist_0);
                 }
-                if (dist_1 < 0.0)
+
+                if ((dist_1 >= 0.0) && (dist_0 < 0.0))
                 {
-                    dist_1 = std::numeric_limits<double>::infinity();
+                    return (dist_1);
                 }
 
                 return (std::min(dist_0, dist_1));
