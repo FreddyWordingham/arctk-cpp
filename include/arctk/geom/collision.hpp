@@ -29,6 +29,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
+         *  Stores information about a collision event.
          */
         class Collision
         {
