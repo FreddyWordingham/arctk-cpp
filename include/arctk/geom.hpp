@@ -1,9 +1,9 @@
 /**
- *  @file   arctk/gui.hpp
- *  @date   03/06/2018
+ *  @file   arctk/geom.hpp
+ *  @date   06/06/2018
  *  @author Freddy Wordingham
  *
- *  Collection of graphical classes.
+ *  Collection of geometry functions and classes.
  */
 
 
