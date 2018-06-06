@@ -110,18 +110,18 @@ namespace arc //! arctk namespace
             template <typename T>
             inline void Dynamic<T>::collect(const double pos_, const T weight_) noexcept
             {
-                while (val_ < _min)
+                while (val_ < Bin<T>::_min)
                 {
                     descend();
                 }
 
-                while (val_ > max_)
+                while (val_ > Bin<T>::_max)
                 {
                     ascend();
                 }
 
-                assert(val_ >= _min);
-                assert(val_ <= _max);
+                assert(val_ >= Bin<T>::_min);
+                assert(val_ <= Bin<T>::_max);
 
                 Bin<T>::_counts[Bin<T>::index(pos_)] += weight_;
             }
