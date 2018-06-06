@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline explicit Shape(const math::Vec3<double>& centre_) noexcept;
+            inline explicit Shape(const math::Vec3<double>& centre_{0.0, 0.0, 0.0}, const math::Vec3<double>& centre_{0.0, 0.0, 1.0}) noexcept;
             inline Shape(const Shape&) noexcept = default; //!< Defaulted copy constructor.
             inline Shape(Shape&&) noexcept      = default; //!< Defaulted move constructor.
 
@@ -83,10 +83,15 @@ namespace arc //! arctk namespace
          *  Construct a shape centred on a given position.
          *
          *  @param  centre_ Centre of the shape.
+         *  @param  dir_    Direction of the shape.
+         *
+         *  @pre    dir_ must be normalised.
          */
-        inline Shape::Shape(const math::Vec3<double>& centre_) noexcept
+        inline Shape::Shape(const math::Vec3<double>& centre_, const math::Vec3<double>& dir_) noexcept
           : _centre(centre_)
+          , _dir(dir_)
         {
+            assert(dir_.normalised());
         }
 
 
