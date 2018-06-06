@@ -1,4 +1,5 @@
 <map id="arc::search::min" name="arc::search::min">
-<area shape="rect" id="node2" href="$namespacearc_1_1str.html#ad6081efe8de10551964cc4d1c5dd2170" title="arc::str::time" alt="" coords="170,12,264,37"/>
-<area shape="rect" id="node3" href="$classarc_1_1log_1_1output_1_1_stopwatch.html#a31bf1b247e47e909f4b5284fdcc6d09d" title="arc::log::output::Stopwatch\l::~Stopwatch" alt="" coords="312,5,491,44"/>
+<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_sphere.html#a089aed1c7adb5eb233ea0d73877f45b8" title="arc::geom::shape::Sphere\l::collision" alt="" coords="170,5,344,44"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1str.html#ad6081efe8de10551964cc4d1c5dd2170" title="arc::str::time" alt="" coords="210,68,304,93"/>
+<area shape="rect" id="node4" href="$classarc_1_1log_1_1output_1_1_stopwatch.html#a31bf1b247e47e909f4b5284fdcc6d09d" title="arc::log::output::Stopwatch\l::~Stopwatch" alt="" coords="392,61,571,100"/>
 </map>

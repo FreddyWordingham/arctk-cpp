@@ -157,6 +157,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3851ae27c5dc283d70dd6a26835e3ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cd67e015ebc714a7a57b2345ff3d5ba"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec3.html#a0cd67e015ebc714a7a57b2345ff3d5ba">mag</a> () const noexcept</td></tr>
 <tr class="separator:a0cd67e015ebc714a7a57b2345ff3d5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c27107dd62ff0e686c38f696563f90"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec3.html#a05c27107dd62ff0e686c38f696563f90">mag_sq</a> () const noexcept</td></tr>
+<tr class="separator:a05c27107dd62ff0e686c38f696563f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a29916db35de3dfd804ada1f2a28599"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec3.html#a6a29916db35de3dfd804ada1f2a28599">normalise</a> () const noexcept</td></tr>
 <tr class="separator:a6a29916db35de3dfd804ada1f2a28599"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1518fffbbee93d5ca0c30446e75d487d"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec3.html#a1518fffbbee93d5ca0c30446e75d487d">rotate</a> (const <a class="el" href="classarc_1_1math_1_1_vec3.html">math::Vec3</a>&lt; T &gt; &amp;axis_, double ang_) noexcept</td></tr>
@@ -372,6 +374,51 @@ template&lt;typename T &gt; </div>
 <map name="classarc_1_1math_1_1_vec3_a0cd67e015ebc714a7a57b2345ff3d5ba_icgraph" id="classarc_1_1math_1_1_vec3_a0cd67e015ebc714a7a57b2345ff3d5ba_icgraph">
 <area shape="rect" id="node2" href="classarc_1_1math_1_1_vec3.html#a804cd0338c5be3bd6c37937ee8abf538" title="arc::math::Vec3\&lt; double\l \&gt;::normalised" alt="" coords="201,5,366,44"/>
 <area shape="rect" id="node3" href="classarc_1_1math_1_1_vec3.html#a6a29916db35de3dfd804ada1f2a28599" title="arc::math::Vec3\&lt; double\l \&gt;::normalise" alt="" coords="201,68,366,107"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a05c27107dd62ff0e686c38f696563f90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c27107dd62ff0e686c38f696563f90">&#9670;&nbsp;</a></span>mag_sq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr double <a class="el" href="classarc_1_1math_1_1_vec3.html">arc::math::Vec3</a>&lt; T &gt;::mag_sq </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculate the magnitude-squared of the vec.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type stored by the vec.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Magnitude-squared of the vec. </dd></dl>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1math_1_1_vec3_a05c27107dd62ff0e686c38f696563f90_icgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec3_a05c27107dd62ff0e686c38f696563f90_icgraph" alt=""/></div>
+<map name="classarc_1_1math_1_1_vec3_a05c27107dd62ff0e686c38f696563f90_icgraph" id="classarc_1_1math_1_1_vec3_a05c27107dd62ff0e686c38f696563f90_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1math_1_1_vec3.html#a0cd67e015ebc714a7a57b2345ff3d5ba" title="arc::math::Vec3\&lt; double\l \&gt;::mag" alt="" coords="222,5,388,44"/>
 </map>
 </div>
 
@@ -1442,11 +1489,11 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>axis_ must be normalised. </dd></dl>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1math_1_1_vec3_a1518fffbbee93d5ca0c30446e75d487d_icgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec3_a1518fffbbee93d5ca0c30446e75d487d_icgraph" alt=""/></div>
 <map name="classarc_1_1math_1_1_vec3_a1518fffbbee93d5ca0c30446e75d487d_icgraph" id="classarc_1_1math_1_1_vec3_a1518fffbbee93d5ca0c30446e75d487d_icgraph">
 <area shape="rect" id="node2" href="classarc_1_1phys_1_1_particle.html#ab46d3245680b0cac02e15de315327773" title="arc::phys::Particle\l::rotate" alt="" coords="209,5,336,44"/>
@@ -1817,7 +1864,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 5 2018 02:47:54 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 7 2018 00:35:48 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

@@ -69,7 +69,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">print.hpp File Reference</div>  </div>
@@ -100,43 +99,234 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="print_8hpp__dep__incl.png" border="0" usemap="#include_2arctk_2print_8hppdep" alt=""/></div>
 <map name="include_2arctk_2print_8hppdep" id="include_2arctk_2print_8hppdep">
-<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="106,412,203,437"/>
-<area shape="rect" id="node3" href="table_8hpp.html" title="include/arctk/format\l/table.hpp" alt="" coords="87,79,225,117"/>
-<area shape="rect" id="node4" href="bin_8hpp.html" title="include/arctk/data\l/bin.hpp" alt="" coords="141,165,267,204"/>
-<area shape="rect" id="node7" href="format_8hpp.html" title="include/arctk/format.hpp" alt="" coords="366,259,530,284"/>
-<area shape="rect" id="node5" href="fixed_8hpp.html" title="include/arctk/data\l/bin/fixed.hpp" alt="" coords="166,252,292,291"/>
-<area shape="rect" id="node6" href="data_8hpp.html" title="include/arctk/data.hpp" alt="" coords="217,339,369,364"/>
+<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="135,412,232,437"/>
+<area shape="rect" id="node3" href="table_8hpp.html" title="include/arctk/format\l/table.hpp" alt="" coords="112,79,250,117"/>
+<area shape="rect" id="node4" href="bin_8hpp.html" title="include/arctk/data\l/bin.hpp" alt="" coords="166,165,292,204"/>
+<area shape="rect" id="node8" href="format_8hpp.html" title="include/arctk/format.hpp" alt="" coords="447,339,611,364"/>
+<area shape="rect" id="node5" href="dynamic_8hpp.html" title="include/arctk/data\l/bin/dynamic.hpp" alt="" coords="166,252,292,291"/>
+<area shape="rect" id="node6" href="data_8hpp.html" title="include/arctk/data.hpp" alt="" coords="221,339,373,364"/>
+<area shape="rect" id="node7" href="fixed_8hpp.html" title="include/arctk/data\l/bin/fixed.hpp" alt="" coords="366,252,492,291"/>
 </map>
 </div>
 </div>
 <p><a href="print_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacearc"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc.html">arc</a></td></tr>
-<tr class="memdesc:namespacearc"><td class="mdescLeft">&#160;</td><td class="mdescRight">arctk namespace <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af1dbfe8cd5fb9a3a09bfe75114f9057b"><td class="memTemplParams" colspan="2">template&lt;typename S , typename C , typename T  = typename C::value_type, typename I  = typename C::const_iterator, typename  = typename std::enable_if&lt;!std::is_same&lt;C, std::string&gt;::value&gt;::type&gt; </td></tr>
-<tr class="memitem:af1dbfe8cd5fb9a3a09bfe75114f9057b"><td class="memTemplItemLeft" align="right" valign="top">S &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc.html#af1dbfe8cd5fb9a3a09bfe75114f9057b">arc::operator&lt;&lt;</a> (S &amp;stream_, const C &amp;cont_)</td></tr>
-<tr class="separator:af1dbfe8cd5fb9a3a09bfe75114f9057b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2d7de3bec14ccfaf44ea00f134895f9"><td class="memTemplParams" colspan="2">template&lt;typename S , typename A0 , typename A1 &gt; </td></tr>
-<tr class="memitem:ae2d7de3bec14ccfaf44ea00f134895f9"><td class="memTemplItemLeft" align="right" valign="top">S &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc.html#ae2d7de3bec14ccfaf44ea00f134895f9">arc::operator&lt;&lt;</a> (S &amp;stream_, const std::pair&lt; A0, A1 &gt; &amp;pair_)</td></tr>
-<tr class="separator:ae2d7de3bec14ccfaf44ea00f134895f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50e1f816ae8c0b1a32e9adabbe66579a"><td class="memTemplParams" colspan="2">template&lt;typename S , typename... A&gt; </td></tr>
-<tr class="memitem:a50e1f816ae8c0b1a32e9adabbe66579a"><td class="memTemplItemLeft" align="right" valign="top">S &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc.html#a50e1f816ae8c0b1a32e9adabbe66579a">arc::operator&lt;&lt;</a> (S &amp;stream_, const std::tuple&lt; A... &gt; &amp;tup_)</td></tr>
-<tr class="separator:a50e1f816ae8c0b1a32e9adabbe66579a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1706b7883f3c5ed30ad40dc60a4df533"><td class="memTemplParams" colspan="2">template&lt;typename S , typename C , typename T  = typename C::value_type, typename I  = typename C::const_iterator, typename  = typename std::enable_if&lt;!std::is_same&lt;C, std::string&gt;::value&gt;::type&gt; </td></tr>
+<tr class="memitem:a1706b7883f3c5ed30ad40dc60a4df533"><td class="memTemplItemLeft" align="right" valign="top">S &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print_8hpp.html#a1706b7883f3c5ed30ad40dc60a4df533">operator&lt;&lt;</a> (S &amp;stream_, const C &amp;cont_)</td></tr>
+<tr class="separator:a1706b7883f3c5ed30ad40dc60a4df533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93c5522e2bfe6a0af0a19fd50aea8b59"><td class="memTemplParams" colspan="2">template&lt;typename S , typename A0 , typename A1 &gt; </td></tr>
+<tr class="memitem:a93c5522e2bfe6a0af0a19fd50aea8b59"><td class="memTemplItemLeft" align="right" valign="top">S &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print_8hpp.html#a93c5522e2bfe6a0af0a19fd50aea8b59">operator&lt;&lt;</a> (S &amp;stream_, const std::pair&lt; A0, A1 &gt; &amp;pair_)</td></tr>
+<tr class="separator:a93c5522e2bfe6a0af0a19fd50aea8b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26983d9935cd761c5fb43fbee5951baa"><td class="memTemplParams" colspan="2">template&lt;typename S , typename... A&gt; </td></tr>
+<tr class="memitem:a26983d9935cd761c5fb43fbee5951baa"><td class="memTemplItemLeft" align="right" valign="top">S &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print_8hpp.html#a26983d9935cd761c5fb43fbee5951baa">operator&lt;&lt;</a> (S &amp;stream_, const std::tuple&lt; A... &gt; &amp;tup_)</td></tr>
+<tr class="separator:a26983d9935cd761c5fb43fbee5951baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section date"><dt>Date</dt><dd>28/05/2018 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Freddy Wordingham</dd></dl>
 <p>Collection of print functions. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a1706b7883f3c5ed30ad40dc60a4df533"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1706b7883f3c5ed30ad40dc60a4df533">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename S , typename C , typename T  = typename C::value_type, typename I  = typename C::const_iterator, typename  = typename std::enable_if&lt;!std::is_same&lt;C, std::string&gt;::value&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">S &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">S &amp;&#160;</td>
+          <td class="paramname"><em>stream_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const C &amp;&#160;</td>
+          <td class="paramname"><em>cont_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print a container as a human-readable string. This function is disabled for the std::string container type.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">S</td><td>Type of stream to print to. </td></tr>
+    <tr><td class="paramname">C</td><td>Type of container to print. </td></tr>
+    <tr><td class="paramname">T</td><td>Type stored by C. </td></tr>
+    <tr><td class="paramname">I</td><td>Type of const iterator of C.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream_</td><td>Stream to print to. </td></tr>
+    <tr><td class="paramname">cont_</td><td>Container to print.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the stream post-print. </dd></dl>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="print_8hpp_a1706b7883f3c5ed30ad40dc60a4df533_cgraph.png" border="0" usemap="#print_8hpp_a1706b7883f3c5ed30ad40dc60a4df533_cgraph" alt=""/></div>
+<map name="print_8hpp_a1706b7883f3c5ed30ad40dc60a4df533_cgraph" id="print_8hpp_a1706b7883f3c5ed30ad40dc60a4df533_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1str.html#a53e4e5a084da03d5cc8ea2d4ee8ba7d0" title="arc::str::to_string" alt="" coords="140,5,261,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a93c5522e2bfe6a0af0a19fd50aea8b59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93c5522e2bfe6a0af0a19fd50aea8b59">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename S , typename A0 , typename A1 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">S &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">S &amp;&#160;</td>
+          <td class="paramname"><em>stream_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::pair&lt; A0, A1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pair_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print a pair as a human-readable string.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">S</td><td>Type of stream to print to. </td></tr>
+    <tr><td class="paramname">A0</td><td>First type stored by pair. </td></tr>
+    <tr><td class="paramname">A1</td><td>Second type stored by pair.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream_</td><td>Stream to print to. </td></tr>
+    <tr><td class="paramname">pair_</td><td>pair to print.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the stream post-print. </dd></dl>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="print_8hpp_a93c5522e2bfe6a0af0a19fd50aea8b59_cgraph.png" border="0" usemap="#print_8hpp_a93c5522e2bfe6a0af0a19fd50aea8b59_cgraph" alt=""/></div>
+<map name="print_8hpp_a93c5522e2bfe6a0af0a19fd50aea8b59_cgraph" id="print_8hpp_a93c5522e2bfe6a0af0a19fd50aea8b59_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1str.html#a53e4e5a084da03d5cc8ea2d4ee8ba7d0" title="arc::str::to_string" alt="" coords="140,5,261,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a26983d9935cd761c5fb43fbee5951baa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26983d9935cd761c5fb43fbee5951baa">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename S , typename... A&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">S &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">S &amp;&#160;</td>
+          <td class="paramname"><em>stream_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::tuple&lt; A... &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tup_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print a tuple as a human-readable string.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">S</td><td>Type of stream to print to. </td></tr>
+    <tr><td class="paramname">A</td><td>Types stored by the tuple.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream_</td><td>Stream to print to. </td></tr>
+    <tr><td class="paramname">tup_</td><td>Tuple to print.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the stream post-print. </dd></dl>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="print_8hpp_a26983d9935cd761c5fb43fbee5951baa_cgraph.png" border="0" usemap="#print_8hpp_a26983d9935cd761c5fb43fbee5951baa_cgraph" alt=""/></div>
+<map name="print_8hpp_a26983d9935cd761c5fb43fbee5951baa_cgraph" id="print_8hpp_a26983d9935cd761c5fb43fbee5951baa_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1str.html#a53e4e5a084da03d5cc8ea2d4ee8ba7d0" title="arc::str::to_string" alt="" coords="140,5,261,31"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 5 2018 02:47:53 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 7 2018 00:35:47 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

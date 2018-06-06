@@ -1,6 +1,7 @@
 var searchData=
 [
   ['rad_5fto_5fdeg',['rad_to_deg',['../namespacearc_1_1math.html#a31f59a34b4a40b69a830d694f080e8da',1,'arc::math']]],
+  ['radius',['radius',['../classarc_1_1geom_1_1shape_1_1_sphere.html#addc8e46996c252d3a03e037d0611c8a9',1,'arc::geom::shape::Sphere']]],
   ['range',['range',['../classarc_1_1rng_1_1distribution_1_1_uniform.html#a25a8ced2e2a5daf8f8323037f7fe3ab6',1,'arc::rng::distribution::Uniform']]],
   ['render_5factor',['render_actor',['../classarc_1_1gui_1_1_window.html#ace3435b04da4f8ff461f6762d1af7d6c',1,'arc::gui::Window']]],
   ['render_5fcamera',['render_camera',['../classarc_1_1gui_1_1_window.html#a1ebd07acce38787dd94aaefbf931747a',1,'arc::gui::Window']]],
