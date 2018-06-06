@@ -86,7 +86,7 @@ namespace arc //! arc namespace
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wexit-time-destructors"
 #pragma clang diagnostic ignored "-Wglobal-constructors"
-            std::string Stopwatch::_col = ansi::FG_MAGENTA; // NOLINT
+            std::string Stopwatch::_col = ANSI_SUPPORT ? ansi::FG_MAGENTA : ""; // NOLINT
 #pragma clang diagnostic pop
 
 
