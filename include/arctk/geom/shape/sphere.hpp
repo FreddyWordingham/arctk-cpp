@@ -43,6 +43,9 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               protected:
+                //  -- Bounds --
+                const double _radius; //!< Radius of the sphere.
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
