@@ -20,7 +20,8 @@
 
 
 //  == IMPORTS ==
-//  -- Std --
+//  -- Arctk --
+#include <arctk/math.hpp>
 
 
 
@@ -40,7 +41,9 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           protected:
-            //  -- Data --
+            //  -- Positioning --
+            math::Vec3<double> _centre;
+
 
             //  == INSTANTIATION ==
           public:
