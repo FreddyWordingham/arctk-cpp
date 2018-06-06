@@ -60,7 +60,8 @@ namespace arc //! arctk namespace
             inline const math::Vec3<double>& centre() const noexcept;
 
             //  -- Collision --
-            virtual inline double distance(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept = 0;
+            virtual inline double distance(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const
+              noexcept = 0; //!< Determine the distance along a ray to the shape's boundaries. @param pos_ Initial position of the ray. @param dir_ Direction of ray. @return Distance to surface. Inf if no collision.
         };
 
 
