@@ -84,9 +84,9 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            virtual inline double            min() const noexcept   = 0; //!< Get the minimum of the range. @return Range minimum.
-            virtual inline double            max() const noexcept   = 0; //!< Get the maximum of the range. @return Range maximum.
-            virtual inline double            width() const noexcept = 0; //!< Get the inter bin width. @return Inter bin width.
+            inline double                    min() const noexcept;
+            inline double                    max() const noexcept;
+            inline double                    width() const noexcept;
             inline const std::vector<T>&     counts() const noexcept;
             inline double                    centre(size_t index_) const noexcept;
             inline const std::vector<double> centres() const noexcept;
@@ -150,6 +150,45 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the minimum of the range.
+         *
+         *  @tparam T   Type of value to be counted.
+         *
+         *  @return Range minimum.
+         */
+        template <typename T>
+        inline double Bin<T>::min() const noexcept
+        {
+            return (_min);
+        }
+
+        /**
+         *  Get the maximum of the range.
+         *
+         *  @tparam T   Type of value to be counted.
+         *
+         *  @return Range maximum.
+         */
+        template <typename T>
+        inline double Bin<T>::max() const noexcept
+        {
+            return (_max);
+        }
+
+        /**
+         *  Get the inter bin width.
+         *
+         *  @tparam T   Type of value to be counted.
+         *
+         *  @return Inter bin width.
+         */
+        template <typename T>
+        inline double Bin<T>::width() const noexcept
+        {
+            return (_width);
+        }
+
         /**
          *  Get the bin counts vector.
          *

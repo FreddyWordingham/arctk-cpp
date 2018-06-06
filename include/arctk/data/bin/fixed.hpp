@@ -61,11 +61,6 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
-                //  -- Getters --
-                inline double min() const noexcept override;
-                inline double max() const noexcept override;
-                inline double width() const noexcept override;
-
                 //  -- Collection --
                 inline void collect(double pos_, T weight_) noexcept override;
             };
@@ -101,47 +96,6 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
-            //  -- Getters --
-            /**
-             *  Get the minimum of the range.
-             *
-             *  @tparam T   Type of value to be counted.
-             *
-             *  @return Range minimum.
-             */
-            template <typename T>
-            inline double Fixed<T>::min() const noexcept
-            {
-                return (_min);
-            }
-
-            /**
-             *  Get the maximum of the range.
-             *
-             *  @tparam T   Type of value to be counted.
-             *
-             *  @return Range maximum.
-             */
-            template <typename T>
-            inline double Fixed<T>::max() const noexcept
-            {
-                return (_max);
-            }
-
-            /**
-             *  Get the inter bin width.
-             *
-             *  @tparam T   Type of value to be counted.
-             *
-             *  @return Inter bin width.
-             */
-            template <typename T>
-            inline double Fixed<T>::width() const noexcept
-            {
-                return (_width);
-            }
-
-
             //  -- Collection --
             /**
              *  Collect a weight, at a position, into the bin array.
