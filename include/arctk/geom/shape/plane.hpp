@@ -86,7 +86,7 @@ namespace arc //! arctk namespace
              *
              *  @return Collision information.
              */
-            inline Collision Sphere::collision(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept
+            inline Collision Plane::collision(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept
             {
                 const double denom = _dir * dir_;
 
