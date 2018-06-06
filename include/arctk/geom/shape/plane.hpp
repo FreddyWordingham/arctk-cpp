@@ -37,6 +37,7 @@ namespace arc //! arctk namespace
 
             //  == CLASS ==
             /**
+             *  Geometric plane shape.
              */
             class Plane
             {
