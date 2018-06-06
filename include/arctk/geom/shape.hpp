@@ -54,6 +54,8 @@ namespace arc //! arctk namespace
           public:
             //  == METHODS ==
           public:
+            //  -- Collision --
+            virtual inline double distance(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept = 0;
         };
 
 
