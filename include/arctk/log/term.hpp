@@ -117,9 +117,9 @@ namespace arc //! arctk namespace
          *  Should only be called via the instance method.
          */
         inline Term::Term() noexcept
-          : _location_col{(isatty(fileno(stdout)) == 1) ? ansi::FG_WHITE : ""}
-          , _reset{(isatty(fileno(stdout)) == 1) ? ansi::RESET : ""}
-          , _overwrite{(isatty(fileno(stdout)) == 1) ? ansi::OVERWRITE : "\n"}
+          : _location_col{ANSI_SUPPORT ? ansi::FG_WHITE : ""}
+          , _reset{ANSI_SUPPORT ? ansi::RESET : ""}
+          , _overwrite{ANSI_SUPPORT ? ansi::OVERWRITE : "\n"}
         {
         }
 
