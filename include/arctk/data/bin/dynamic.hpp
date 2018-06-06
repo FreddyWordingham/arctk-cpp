@@ -118,6 +118,11 @@ namespace arc //! arctk namespace
                 }
             }
 
+            /**
+             *  Double the range of the bin by decreasing the minimum bound.
+             *
+             *  @tparam T   Type of value to be counted.
+             */
             template <typename T>
             inline void Dynamic<T>::descend() noexcept
             {
