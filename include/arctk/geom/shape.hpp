@@ -42,14 +42,14 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Positioning --
-            math::Vec3<double> _centre; //!< Centre of the shape.
-            math::Vec3<double> _dir;    //!< Direction of the shape.
+            math::Vec3<double> _pos; //!< Position of the shape.
+            math::Vec3<double> _dir; //!< Direction of the shape.
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline explicit Shape(const math::Vec3<double>& centre_ = {0.0, 0.0, 0.0}, const math::Vec3<double>& dir_ = {0.0, 0.0, 1.0}) noexcept;
+            inline explicit Shape(const math::Vec3<double>& pos_ = {0.0, 0.0, 0.0}, const math::Vec3<double>& dir_ = {0.0, 0.0, 1.0}) noexcept;
             inline Shape(const Shape&) noexcept = default; //!< Defaulted copy constructor.
             inline Shape(Shape&&) noexcept      = default; //!< Defaulted move constructor.
 
@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const math::Vec3<double>& centre() const noexcept;
+            inline const math::Vec3<double>& position() const noexcept;
             inline const math::Vec3<double>& dir() const noexcept;
 
             //  -- Collision --
@@ -80,15 +80,15 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         /**
-         *  Construct a shape centred on a given position.
+         *  Construct a shape positioned on a given position.
          *
-         *  @param  centre_ Centre of the shape.
+         *  @param  pos_    Position of the shape.
          *  @param  dir_    Direction of the shape.
          *
          *  @pre    dir_ must be normalised.
          */
-        inline Shape::Shape(const math::Vec3<double>& centre_, const math::Vec3<double>& dir_) noexcept
-          : _centre(centre_)
+        inline Shape::Shape(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) noexcept
+          : _pos(pos_)
           , _dir(dir_)
         {
             assert(dir_.normalised());
@@ -103,13 +103,13 @@ namespace arc //! arctk namespace
         //  == METHODS ==
         //  -- Getters --
         /**
-         *  Get the centre of the shape.
+         *  Get the position of the shape.
          *
-         *  @return Centre of the shape.
+         *  @return Position of the shape.
          */
-        inline const math::Vec3<double>& Shape::centre() const noexcept
+        inline const math::Vec3<double>& Shape::position() const noexcept
         {
-            return (_centre);
+            return (_pos);
         }
 
         /**
