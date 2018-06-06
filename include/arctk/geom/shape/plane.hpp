@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
             /**
              *  Geometric plane shape.
              */
-            class Plane
+            class Plane : public Shape
             {
                 //  == INSTANTIATION ==
               public:
