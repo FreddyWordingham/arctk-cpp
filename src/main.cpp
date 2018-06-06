@@ -22,6 +22,7 @@
 #include <arctk/data/bin/fixed.hpp>
 #include <arctk/format.hpp>
 #include <arctk/format/table.hpp>
+#include <arctk/geom.hpp>
 #include <arctk/gui.hpp>
 #include <arctk/gui/actor.hpp>
 #include <arctk/gui/camera.hpp>
