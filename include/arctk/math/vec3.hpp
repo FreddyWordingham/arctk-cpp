@@ -201,26 +201,6 @@ namespace arc //! arctk namespace
         }
 #endif
 
-        //  -- Stream --
-        /**
-         *  Print a vec3 as a human-readable string.
-         *
-         *  @tparam S   Type of stream to print to.
-         *  @tparam T   Type stored by the vec.
-         *
-         *  @param  stream_ Stream to print to.
-         *  @param  vec_    Vector to print.
-         *
-         *  @return A reference to the stream post-print.
-         */
-        template <typename S, typename T>
-        inline S& operator<<(S& stream_, const Vec3<T>& vec_) noexcept
-        {
-            stream_ << '{' << vec_.x << ", " << vec_.y << ", " << vec_.z << '}';
-
-            return (stream_);
-        }
-
 
         //  -- Assignment --
         /**
@@ -731,6 +711,29 @@ namespace arc //! arctk namespace
 
     } // namespace math
 } // namespace arc
+
+
+
+//  == OPERATORS ==
+//  -- Stream --
+/**
+ *  Print a vec3 as a human-readable string.
+ *
+ *  @tparam S   Type of stream to print to.
+ *  @tparam T   Type stored by the vec.
+ *
+ *  @param  stream_ Stream to print to.
+ *  @param  vec_    Vector to print.
+ *
+ *  @return A reference to the stream post-print.
+ */
+template <typename S, typename T>
+inline S& operator<<(S& stream_, const Vec3<T>& vec_) noexcept
+{
+    stream_ << '{' << vec_.x << ", " << vec_.y << ", " << vec_.z << '}';
+
+    return (stream_);
+}
 
 
 
