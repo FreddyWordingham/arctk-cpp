@@ -728,7 +728,7 @@ namespace arc //! arctk namespace
  *  @return A reference to the stream post-print.
  */
 template <typename S, typename T>
-inline S& operator<<(S& stream_, const Vec3<T>& vec_) noexcept
+inline S& operator<<(S& stream_, const arc::math::Vec3<T>& vec_) noexcept
 {
     stream_ << '{' << vec_.x << ", " << vec_.y << ", " << vec_.z << '}';
 
