@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
         class Shape
         {
             //  == FIELDS ==
-          private:
+          protected:
             //  -- Positioning --
             const math::Vec3<double> _centre; //!< Centre of the shape.
 
