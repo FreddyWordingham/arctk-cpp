@@ -129,8 +129,8 @@ namespace arc //! arctk namespace
             constexpr inline void   normalise() const noexcept;
 
             //  -- Co-ordinate --
-            constexpr inline void to_polar() const noexcept;
-            constexpr inline void to_cart() const noexcept;
+            constexpr inline void to_polar() noexcept;
+            constexpr inline void to_cart() noexcept;
         };
 
 
@@ -631,7 +631,7 @@ namespace arc //! arctk namespace
          *  Convert the cartesian vector to a polar vector.
          */
         template <typename T>
-        constexpr inline void Vec2<T>::to_polar() const noexcept
+        constexpr inline void Vec2<T>::to_polar() noexcept
         {
             const Vec2<T> cart = *this;
 
@@ -643,7 +643,7 @@ namespace arc //! arctk namespace
          *  Convert the polar vector to a cartesian vector.
          */
         template <typename T>
-        constexpr inline void Vec2<T>::to_cart() const noexcept
+        constexpr inline void Vec2<T>::to_cart() noexcept
         {
             const Vec2<T> polar = *this;
 
