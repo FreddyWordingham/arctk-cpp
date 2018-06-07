@@ -161,7 +161,6 @@ namespace arc //! arctk namespace
          *  Retrieve the value of a command line argument.
          *
          *  @tparam A   Types stored by the tuple.
-         *
          *  @tparam I   Index of the command line argument to retrieve.
          *  @tparam T   Type of Ith type of A.
          *
