@@ -1,7 +1,9 @@
 var searchData=
 [
+  ['_5fargv',['_argv',['../classarc_1_1sys_1_1_args.html#a8347075c84ef34938bd1d012f9426274',1,'arc::sys::Args']]],
   ['_5faspect_5fratio',['_aspect_ratio',['../classarc_1_1gui_1_1camera_1_1_fly.html#a7fcfa719fca6099351c96b922ab614d3',1,'arc::gui::camera::Fly']]],
   ['_5fbuff',['_buff',['../classarc_1_1log_1_1output_1_1_progress.html#adfce45f1de5ab40ada487709167d4a94',1,'arc::log::output::Progress']]],
+  ['_5fcall_5fstr',['_call_str',['../classarc_1_1sys_1_1_args.html#aca02746b0680ebe61a5075702569a3c2',1,'arc::sys::Args']]],
   ['_5fcol',['_col',['../classarc_1_1log_1_1output_1_1_error.html#a805c610033207f673a033655b418a4f0',1,'arc::log::output::Error::_col()'],['../classarc_1_1log_1_1output_1_1_message.html#a20b83768380174849f7efedcb597813f',1,'arc::log::output::Message::_col()'],['../classarc_1_1log_1_1output_1_1_progress.html#a198abda6bfa9952598a5cc10ab7d5abd',1,'arc::log::output::Progress::_col()'],['../classarc_1_1log_1_1output_1_1_stopwatch.html#aee69beff8ed834aaba59987cb6c32e70',1,'arc::log::output::Stopwatch::_col()'],['../classarc_1_1log_1_1output_1_1_warning.html#ade78ec1beafa0f426b2e7016564392c5',1,'arc::log::output::Warning::_col()']]],
   ['_5fconstruct_5ftime',['_construct_time',['../classarc_1_1log_1_1output_1_1_stopwatch.html#aea18b26748db9ac9ae5d0a46bb9e0446',1,'arc::log::output::Stopwatch']]],
   ['_5fcontrol',['_control',['../classarc_1_1gui_1_1_uniform.html#afe7f53cb9a12472bd03e5e02a1fcc5b5',1,'arc::gui::Uniform']]],
@@ -33,6 +35,7 @@ var searchData=
   ['_5fpath',['_path',['../classarc_1_1sys_1_1_file.html#a36d34d12b653e3c6df991c2a0d67a0ac',1,'arc::sys::File']]],
   ['_5fpos',['_pos',['../classarc_1_1geom_1_1_shape.html#ae5a779a18592c5652ffd99adc978b06e',1,'arc::geom::Shape::_pos()'],['../classarc_1_1gui_1_1_camera.html#aab4f5dea22e2518c862575760dc89a93',1,'arc::gui::Camera::_pos()'],['../classarc_1_1phys_1_1_particle.html#a6ceacb67ec7ea80fadcd98f4ee1785cf',1,'arc::phys::Particle::_pos()']]],
   ['_5fprimitive_5ftype',['_primitive_type',['../classarc_1_1gui_1_1_actor.html#aa2f24e3a54c8aeae4d22f48bcbd426eb',1,'arc::gui::Actor']]],
+  ['_5fprog_5fname',['_prog_name',['../classarc_1_1sys_1_1_args.html#ad29d8d283f0fd67e9304d9d6e2e5c2bc',1,'arc::sys::Args']]],
   ['_5fradius',['_radius',['../classarc_1_1geom_1_1shape_1_1_sphere.html#ac8fa2a7e55689b651097e4403ff1698a',1,'arc::geom::shape::Sphere']]],
   ['_5frange',['_range',['../classarc_1_1rng_1_1distribution_1_1_uniform.html#aebf5c4ca141ff674a5155367277aee41',1,'arc::rng::distribution::Uniform']]],
   ['_5freset',['_reset',['../classarc_1_1log_1_1_term.html#a90cdf202f9494384405e3a5eb7909ae1',1,'arc::log::Term']]],

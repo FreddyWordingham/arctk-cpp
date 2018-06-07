@@ -1,10 +1,12 @@
 <map id="include/arctk/log/output/error.hpp" name="include/arctk/log/output/error.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="324,472,420,497"/>
-<area shape="rect" id="node3" href="$log_8hpp.html" title="include/arctk/log.hpp" alt="" coords="275,92,418,117"/>
-<area shape="rect" id="node4" href="$shader_8hpp.html" title="include/arctk/gui/shader.hpp" alt="" coords="253,165,440,191"/>
-<area shape="rect" id="node5" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="120,239,312,264"/>
-<area shape="rect" id="node8" href="$string_8hpp.html" title="include/arctk/parse\l/string.hpp" alt="" coords="528,312,661,351"/>
-<area shape="rect" id="node7" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="246,399,389,424"/>
-<area shape="rect" id="node6" href="$keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="94,319,288,344"/>
-<area shape="rect" id="node9" href="$parse_8hpp.html" title="include/arctk/parse.hpp" alt="" coords="515,399,674,424"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="274,472,371,497"/>
+<area shape="rect" id="node3" href="$log_8hpp.html" title="include/arctk/log.hpp" alt="" coords="427,92,570,117"/>
+<area shape="rect" id="node4" href="$shader_8hpp.html" title="include/arctk/gui/shader.hpp" alt="" coords="548,172,735,197"/>
+<area shape="rect" id="node5" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="403,252,594,277"/>
+<area shape="rect" id="node8" href="$string_8hpp.html" title="include/arctk/parse\l/string.hpp" alt="" coords="136,165,269,204"/>
+<area shape="rect" id="node7" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="523,399,666,424"/>
+<area shape="rect" id="node6" href="$keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="395,325,589,351"/>
+<area shape="rect" id="node9" href="$parse_8hpp.html" title="include/arctk/parse.hpp" alt="" coords="123,252,282,277"/>
+<area shape="rect" id="node10" href="$args_8hpp.html" title="include/arctk/sys/args.hpp" alt="" coords="144,325,320,351"/>
+<area shape="rect" id="node11" href="$sys_8hpp.html" title="include/arctk/sys.hpp" alt="" coords="195,399,341,424"/>
 </map>

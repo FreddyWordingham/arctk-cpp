@@ -41,9 +41,7 @@ var searchData=
   ['stopwatch_2ehpp',['stopwatch.hpp',['../stopwatch_8hpp.html',1,'']]],
   ['stored',['stored',['../classarc_1_1gui_1_1_uniform.html#a297e1ff82e010e5a11f264fbc8ba9553',1,'arc::gui::Uniform']]],
   ['str_2ehpp',['str.hpp',['../str_8hpp.html',1,'']]],
-  ['string',['string',['../namespacearc_1_1parse.html#a6c8a78a617d996f95d03743212f0a845',1,'arc::parse::string(const std::string &amp;str_) noexcept'],['../namespacearc_1_1parse.html#aadbc845e731869ef6edaf1119634e3e6',1,'arc::parse::string(const std::vector&lt; std::string &gt; &amp;str_) noexcept']]],
   ['string_2ehpp',['string.hpp',['../string_8hpp.html',1,'']]],
-  ['string_5fhelper',['string_helper',['../namespacearc_1_1parse.html#a2b8d6589d884910eb90cfd979eb6e586',1,'arc::parse']]],
   ['sum',['sum',['../classarc_1_1math_1_1_vec2.html#aab5774fe5ded5d451397d41224c23999',1,'arc::math::Vec2::sum()'],['../classarc_1_1math_1_1_vec3.html#a3851ae27c5dc283d70dd6a26835e3ecb',1,'arc::math::Vec3::sum()'],['../classarc_1_1math_1_1_vec4.html#abf863b138826858ebc14434fa7c0b693',1,'arc::math::Vec4::sum()'],['../namespacearc_1_1math.html#a4b44e4472b89ce6feffff1b914ad0064',1,'arc::math::sum()']]],
   ['swap_5fbuffer',['swap_buffer',['../classarc_1_1gui_1_1_window.html#a8bafc6647a4c4b37047de985d9e961f2',1,'arc::gui::Window']]],
   ['sys_2ehpp',['sys.hpp',['../sys_8hpp.html',1,'']]]
