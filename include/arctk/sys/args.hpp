@@ -112,6 +112,8 @@ namespace arc //! arctk namespace
          *  @param  argv_   Argument values.
          *
          *  @pre    argc_ must be positive.
+         *
+         *  @return Initialised tuple of argument values.
          */
         template <typename... A>
         inline std::tuple<A...> Args<A...>::init_argv(const int argc_, const char** argv_) noexcept
