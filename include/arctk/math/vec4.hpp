@@ -158,10 +158,10 @@ namespace arc //! arctk namespace
          */
         template <typename T>
         constexpr inline Vec4<T>::Vec4() noexcept
-          : x({})
-          , y({})
-          , z({})
-          , w({})
+          : x(0)
+          , y(0)
+          , z(0)
+          , w(0)
         {
         }
 
