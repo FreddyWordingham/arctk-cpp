@@ -129,8 +129,8 @@ namespace arc //! arctk namespace
             constexpr inline void   normalise() const noexcept;
 
             //  -- Co-ordinate --
-            constexpr inline void to_polar() noexcept;
-            constexpr inline void to_cart() noexcept;
+            constexpr inline Vec2<T> to_polar() const noexcept;
+            constexpr inline Vec2<T> to_cart() const noexcept;
         };
 
 
@@ -629,26 +629,34 @@ namespace arc //! arctk namespace
         //  -- Co-ordinate --
         /**
          *  Convert the cartesian vector to a polar vector.
+         *
+         *  @return Vec in polar co-ordinate form.
          */
         template <typename T>
-        constexpr inline void Vec2<T>::to_polar() noexcept
+        constexpr Vec2<T> void Vec2<T>::to_polar() const noexcept
         {
-            const Vec2<T> cart = *this;
+            const Vec2<T> polar;
 
-            rho   = std::sqrt((cart.x * cart.x) + (cart.y * cart.y));
-            theta = std::atan2(cart.y, cart.x);
+            polar.rho   = std::sqrt((x * x) + (y * y));
+            polar.theta = std::atan2(y, x);
+
+            return (polar);
         }
 
         /**
          *  Convert the polar vector to a cartesian vector.
+         *
+         *  @return Vec in cartesian co-ordinate form.
          */
         template <typename T>
-        constexpr inline void Vec2<T>::to_cart() noexcept
+        constexpr Vec2<T> void Vec2<T>::to_cart() const noexcept
         {
-            const Vec2<T> polar = *this;
+            const Vec2<T> cart;
 
-            x = polar.rho * std::cos(polar.theta);
-            y = polar.rho * std::sin(polar.theta);
+            cart.x = rho * std::cos(theta);
+            cart.y = rho * std::sin(theta);
+
+            return (cart);
         }
 
 
