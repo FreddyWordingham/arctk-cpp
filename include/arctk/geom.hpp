@@ -15,7 +15,7 @@
 
 
 //  == MODULE ==
-#ifdef ARCTK_MOD_GUI
+#ifdef ARCTK_MOD_CORE
 
 
 
@@ -29,7 +29,7 @@
 
 
 //  == MODULE END ==
-#endif // ARCTK_MOD_GUI
+#endif // ARCTK_MOD_CORE
 
 
 
