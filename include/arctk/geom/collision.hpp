@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <limits>
 
 
 
