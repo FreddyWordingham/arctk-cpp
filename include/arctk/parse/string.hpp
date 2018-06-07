@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <algorithm>
 #include <sstream>
 #include <string>
 #include <vector>
@@ -84,6 +85,26 @@ namespace arc //! arctk namespace
             }
 
             return (x);
+        }
+
+        template <>
+        inline bool string(const std::string& str_) noexcept
+        {
+            std::string str = str_;
+            std::transform(str.begin(), str.end(), str.begin(), [](unsigned char c) { return std::tolower(c); });
+
+            if (str == "false")
+            {
+                return (false);
+            }
+
+            if (str == "true")
+            {
+                return (true);
+            }
+
+            ERROR(42) << "Unable to parse string to type.\n"
+                      << "String: '" << str << "' contains leftover characters after parsing to type: '" << typeid(bool).name() << "'.";
         }
 
         /**
