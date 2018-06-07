@@ -144,8 +144,8 @@ namespace arc //! arctk namespace
          */
         template <typename T>
         constexpr inline Vec2<T>::Vec2() noexcept
-          : x({})
-          , y({})
+          : x(0)
+          , y(0)
         {
         }
 
