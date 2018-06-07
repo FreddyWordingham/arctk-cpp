@@ -19,6 +19,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
