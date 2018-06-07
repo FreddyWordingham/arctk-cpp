@@ -43,6 +43,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Data --
+            std::vector<std::vector<math::Vec3<double>>> _pixels; //!< Pixel image data.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
