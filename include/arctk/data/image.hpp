@@ -43,6 +43,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Information --
+            const size_t _width;  //!< Width of the image in pixels.
+            const size_t _height; //!< Height of the image in pixels.
+
             //  -- Data --
             std::vector<std::vector<math::Vec3<double>>> _pixels; //!< Pixel image data.
 
