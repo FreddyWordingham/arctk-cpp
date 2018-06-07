@@ -58,6 +58,10 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Args(const int argc_, const char** argv_, const std::string& call_str_) noexcept;
 
+            //  -- Initialisation --
+            inline std::tuple<A...> init_elements(const int argc_, const char** argv_) noexcept;
+            template <typename T>
+            inline void unparsable(const std::string& str_) noexcept;
 
 
             //  == METHODS ==
@@ -75,8 +79,38 @@ namespace arc //! arctk namespace
         inline Args<A...>::Args(const int argc_, const char** argv_, const std::string& call_str_) noexcept
           : _prog_name(argv_[0])
           , _call_str(call_str_)
-          , _element(init_elements(argc_, argv_))
+          , _argv(init_argv(argc_, argv_))
         {
+        }
+
+
+        //  -- Initialisation --
+        template <typename... A>
+        inline std::tuple<A...> Args<A...>::init_argv(const int argc_, const char** argv_) noexcept
+        {
+            const std::vector<std::string> argv(argv_ + 1, argv_ + argc_);
+
+            if (argv.size() != sizeof...(A))
+            {
+                LOG << "Correct call: ./exe " << _call_str;
+                ERROR(42) << "Incorrect number of command line arguments.\n"
+                          << "Expected " << sizeof...(A) << ", received " << argv.size() << ".";
+            }
+
+            size_t i = 0;
+            ((unparsable<A>(argv[i]), ++i), ...);
+
+            return (arc::parse::string<A...>(argv));
+        }
+
+        template <typename T>
+        inline void Args<A...>::unparsable(const std::string& str_) noexcept
+        {
+            if (!arc::parse::parsable<T>(str_))
+            {
+                LOG << "Correct call: ./exe " << _call_str;
+                ERROR(42) << "Argument string: '" << str_ << "' is not parsable as type: '" << typeid(T).name() << "'.";
+            }
         }
 
 
