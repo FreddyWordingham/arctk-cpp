@@ -157,6 +157,15 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Retrieve the value of a command line argument.
+         *
+         *  @tparam A   Types stored by the tuple.
+         *  @tparam I   Index of the command line argument to retrieve.
+         *  @tparam T   Type of Ith type of A.
+         *
+         *  @return Value of the command line argument.
+         */
         template <typename... A>
         template <size_t I, typename T>
         inline T Args<A...>::get() noexcept
