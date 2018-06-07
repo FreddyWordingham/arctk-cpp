@@ -63,6 +63,9 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline size_t width() noexcept;
             inline size_t height() noexcept;
+
+            //  -- Setters --
+            inline void collect(size_t row_, size_t col_, const math::Vec3<double>& val_) noexcept;
         };
 
 
@@ -100,6 +103,32 @@ namespace arc //! arctk namespace
         inline size_t Image::height() noexcept
         {
             return (_height);
+        }
+
+
+        //  -- Setters --
+        /**
+         *  Collect a pixel value into the image.
+         *
+         *  @param  row_    Row of the pixel to add to.
+         *  @param  col_    Column of the pixel to add to,
+         *  @param  val_    RGB value to add to the pixel.
+         *
+         *  @pre    row_ must be less than _width.
+         *  @pre    col_ must be less than _height.
+         *  @pre    val_.r must be non-negative.
+         *  @pre    val_.g must be non-negative.
+         *  @pre    val_.b must be non-negative.
+         */
+        inline void collect(const size_t row_, const size_t col_, const math::Vec3<double>& val_) noexcept
+        {
+            assert(row_ < _width);
+            assert(col_ < _height);
+            assert(val_.r >= 0.0);
+            assert(val_.g >= 0.0);
+            assert(val_.b >= 0.0);
+
+            _pixels[row_][col_] += val_;
         }
 
 
