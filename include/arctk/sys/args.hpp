@@ -103,6 +103,7 @@ namespace arc //! arctk namespace
             return (arc::parse::string<A...>(argv));
         }
 
+        template <typename... A>
         template <typename T>
         inline void Args<A...>::unparsable(const std::string& str_) noexcept
         {
