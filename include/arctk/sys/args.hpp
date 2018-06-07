@@ -36,7 +36,11 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
+         *  Initialise and store the command line arguments.
+         *
+         *  @tparam A   Types stored by the tuple.
          */
+        template <typename... A>
         class Args
         {
             //  == FIELDS ==
