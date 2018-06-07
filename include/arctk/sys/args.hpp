@@ -56,6 +56,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Args(const int argc_, const char** argv_, const std::string& call_str_) noexcept;
 
 
 
@@ -70,6 +71,12 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        inline Args<A...>::Args(const int argc_, const char** argv_, const std::string& call_str_) noexcept
+          : _prog_name(argv_[0])
+          , _call_str(call_str_)
+          , _element(init_elements(argc_, argv_))
+        {
+        }
 
 
 
