@@ -63,8 +63,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Bin(double min_, double max_, size_t res_) noexcept;
-            inline Bin(const Bin&) noexcept = default; //!< Defaulted copy constructor.
-            inline Bin(Bin&&) noexcept      = default; //!< Defaulted move constructor.
+            inline Bin(const Bin&)     = default; //!< Defaulted copy constructor.
+            inline Bin(Bin&&) noexcept = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
             virtual inline ~Bin() noexcept = 0;
@@ -73,8 +73,8 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            inline Bin& operator=(const Bin&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
-            inline Bin& operator=(Bin&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
+            inline Bin& operator=(const Bin&) = default;     //!< Defaulted copy operator. @return Reference to copied object.
+            inline Bin& operator=(Bin&&) noexcept = default; //!< Defaulted move operator. @return Reference to moved object.
 
             //  -- Stream --
             template <typename S, typename L>
