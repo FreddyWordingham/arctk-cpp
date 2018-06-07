@@ -144,8 +144,8 @@ namespace arc //! arctk namespace
             constexpr inline void   rotate(const math::Vec3<T>& axis_, double ang_) noexcept;
 
             //  -- Co-ordinate --
-            constexpr inline void to_polar() const noexcept;
-            constexpr inline void to_cart() const noexcept;
+            constexpr inline void to_polar() noexcept;
+            constexpr inline void to_cart() noexcept;
         };
 
 
@@ -719,7 +719,7 @@ namespace arc //! arctk namespace
          *  Convert the cartesian vector to a polar vector.
          */
         template <typename T>
-        constexpr inline void Vec3<T>::to_polar() const noexcept
+        constexpr inline void Vec3<T>::to_polar() noexcept
         {
             const Vec3<T> cart = *this;
 
@@ -732,7 +732,7 @@ namespace arc //! arctk namespace
          *  Convert the polar vector to a cartesian vector.
          */
         template <typename T>
-        constexpr inline void Vec3<T>::to_cart() const noexcept
+        constexpr inline void Vec3<T>::to_cart() noexcept
         {
             const Vec3<T> polar = *this;
 
