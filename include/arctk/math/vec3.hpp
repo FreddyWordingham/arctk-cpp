@@ -144,8 +144,8 @@ namespace arc //! arctk namespace
             constexpr inline void   rotate(const math::Vec3<T>& axis_, double ang_) noexcept;
 
             //  -- Co-ordinate --
-            constexpr inline void to_polar() noexcept;
-            constexpr inline void to_cart() noexcept;
+            constexpr inline Vec3<T> to_polar() const noexcept;
+            constexpr inline Vec3<T> to_cart() const noexcept;
         };
 
 
@@ -698,6 +698,8 @@ namespace arc //! arctk namespace
          *  Rotate the vec around a given axis by a given angle.
          *  Right hand rule applies.
          *
+         *  @tparam T   Type stored by the vec.
+         *
          *  @param  axis_   Axis to rotate around.
          *  @param  ang_    Angle to rotate by.
          *
@@ -717,28 +719,40 @@ namespace arc //! arctk namespace
         //  -- Co-ordinate --
         /**
          *  Convert the cartesian vector to a polar vector.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return Vec in polar co-ordinate form.
          */
         template <typename T>
-        constexpr inline void Vec3<T>::to_polar() noexcept
+        constexpr inline Vec3<T> Vec3<T>::to_polar() const noexcept
         {
-            const Vec3<T> cart = *this;
+            const Vec3<T> polar;
 
-            rho   = std::sqrt((cart.x * cart.x) + (cart.y * cart.y) + (cart.z * cart.z));
-            theta = std::acos(cart.z / rho);
-            phi   = std::atan2(cart.y, cart.x);
+            polar.rho   = std::sqrt((x * x) + (y * y) + (z * z));
+            polar.theta = std::acos(z / polar.rho);
+            polar.phi   = std::atan2(y, x);
+
+            return (polar);
         }
 
         /**
          *  Convert the polar vector to a cartesian vector.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return Vec in cartesian co-ordinate form.
          */
         template <typename T>
-        constexpr inline void Vec3<T>::to_cart() noexcept
+        constexpr inline Vec3<T> Vec3<T>::to_cart() const noexcept
         {
-            const Vec3<T> polar = *this;
+            const Vec3<T> cart;
 
-            x = polar.rho * std::sin(polar.theta) * std::cos(polar.phi);
-            y = polar.rho * std::sin(polar.theta) * std::sin(polar.phi);
-            z = polar.rho * std::cos(polar.theta);
+            cart.x = rho * std::sin(theta) * std::cos(phi);
+            cart.y = rho * std::sin(theta) * std::sin(phi);
+            cart.z = rho * std::cos(theta);
+
+            return (cart);
         }
 
 
