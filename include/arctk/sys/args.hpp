@@ -44,7 +44,13 @@ namespace arc //! arctk namespace
         class Args
         {
             //  == FIELDS ==
-          protected:
+          private:
+            //  -- Information --
+
+            //  -- Arguments --
+            std::tuple<A...> _argv; //!< Tuple of program arguments.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
