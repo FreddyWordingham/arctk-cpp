@@ -92,7 +92,7 @@ namespace arc //! arctk namespace
 
             if (argv.size() != sizeof...(A))
             {
-                LOG << "Correct call: ./" << _prog_name << " " << _call_str;
+                LOG << "Correct call: " << _prog_name << " " << _call_str;
                 ERROR(42) << "Incorrect number of command line arguments.\n"
                           << "Expected " << sizeof...(A) << ", received " << argv.size() << ".";
             }
@@ -109,7 +109,7 @@ namespace arc //! arctk namespace
         {
             if (!arc::parse::parsable<T>(str_))
             {
-                LOG << "Correct call: ./" << _prog_name << " " << _call_str;
+                LOG << "Correct call: " << _prog_name << " " << _call_str;
                 ERROR(42) << "Argument string: '" << str_ << "' is not parsable as type: '" << typeid(T).name() << "'.";
             }
         }
