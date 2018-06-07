@@ -159,9 +159,9 @@ namespace arc //! arctk namespace
          */
         template <typename T>
         constexpr inline Vec3<T>::Vec3() noexcept
-          : x({})
-          , y({})
-          , z({})
+          : x(0)
+          , y(0)
+          , z(0)
         {
         }
 
