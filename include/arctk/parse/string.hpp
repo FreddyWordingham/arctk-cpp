@@ -45,11 +45,11 @@ namespace arc //! arctk namespace
         inline bool parsable_from_str(const std::string& str_) noexcept;
 
         template <typename T>
-        inline T from_string(const std::string& str_) noexcept;
+        inline T from_str(const std::string& str_) noexcept;
         template <typename... A>
-        inline std::tuple<A...> from_string(const std::vector<std::string>& str_) noexcept;
+        inline std::tuple<A...> from_str(const std::vector<std::string>& str_) noexcept;
         template <typename... A, size_t... I>
-        inline std::tuple<A...> from_string_helper(const std::vector<std::string>& str_, std::tuple<A...>& tup_, std::index_sequence<I...> /*unused*/) noexcept;
+        inline std::tuple<A...> from_str_helper(const std::vector<std::string>& str_, std::tuple<A...>& tup_, std::index_sequence<I...> /*unused*/) noexcept;
 
 
 
@@ -124,7 +124,7 @@ namespace arc //! arctk namespace
          *  @return Parsed value.
          */
         template <typename T>
-        inline T from_string(const std::string& str_) noexcept
+        inline T from_str(const std::string& str_) noexcept
         {
             std::stringstream stream;
             stream << str_;
@@ -157,7 +157,7 @@ namespace arc //! arctk namespace
          *  @return Parsed boolean value.
          */
         template <>
-        inline bool from_string(const std::string& str_) noexcept
+        inline bool from_str(const std::string& str_) noexcept
         {
             std::string str = str_;
             std::transform(str.begin(), str.end(), str.begin(), [](unsigned char c) { return std::tolower(c); });
@@ -186,7 +186,7 @@ namespace arc //! arctk namespace
          *  @return Parsed tuple of values.
          */
         template <typename... A>
-        inline std::tuple<A...> from_string(const std::vector<std::string>& str_) noexcept
+        inline std::tuple<A...> from_str(const std::vector<std::string>& str_) noexcept
         {
             assert(str_.size() == sizeof...(A));
 
@@ -206,9 +206,9 @@ namespace arc //! arctk namespace
          *  @return Tuple of initialised values.
          */
         template <typename... A, size_t... I>
-        inline std::tuple<A...> from_string_helper(const std::vector<std::string>& str_, std::tuple<A...>& tup_, std::index_sequence<I...> /*unused*/) noexcept
+        inline std::tuple<A...> from_str_helper(const std::vector<std::string>& str_, std::tuple<A...>& tup_, std::index_sequence<I...> /*unused*/) noexcept
         {
-            ((std::get<I>(tup_) = from_string<A>(str_[I])), ...);
+            ((std::get<I>(tup_) = from_str<A>(str_[I])), ...);
 
             return (tup_);
         }
