@@ -77,6 +77,25 @@ namespace arc //! arctk namespace
             return (true);
         }
 
+        template <>
+        inline bool parsable<bool>(const std::string& str_) noexcept
+        {
+            std::string str = str_;
+            std::transform(str.begin(), str.end(), str.begin(), [](unsigned char c) { return std::tolower(c); });
+
+            if (str == "false")
+            {
+                return (true);
+            }
+
+            if (str == "true")
+            {
+                return (true);
+            }
+
+            return (false);
+        }
+
         /**
          *  Parse a value from a string.
          *  Function will call error on failed parsing.
