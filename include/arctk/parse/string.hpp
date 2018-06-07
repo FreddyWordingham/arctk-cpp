@@ -55,6 +55,15 @@ namespace arc //! arctk namespace
 
         //  == FUNCTIONS ==
         //  -- Parsing --
+        /**
+         *  Determine if a string is parsable into a type.
+         *
+         *  @tparam T   Type to parse into.
+         *
+         *  @param  str_    String to parse.
+         *
+         *  @return True if the string is parsable into the type.
+         */
         template <typename T>
         inline bool parsable(const std::string& str_) noexcept
         {
