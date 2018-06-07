@@ -86,6 +86,13 @@ namespace arc //! arctk namespace
             return (true);
         }
 
+        /**
+         *  Determine if a string is parsable into a boolean type.
+         *
+         *  @param  str_    String to parse.
+         *
+         *  @return True if the string is parsable into the boolean type.
+         */
         template <>
         inline bool parsable<bool>(const std::string& str_) noexcept
         {
