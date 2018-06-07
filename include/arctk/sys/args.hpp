@@ -71,6 +71,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        template <typename... A>
         inline Args<A...>::Args(const int argc_, const char** argv_, const std::string& call_str_) noexcept
           : _prog_name(argv_[0])
           , _call_str(call_str_)
