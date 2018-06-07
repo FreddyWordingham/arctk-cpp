@@ -42,6 +42,9 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         //  -- Parsing --
         template <typename T>
+        inline bool parsable(const std::string& str_) noexcept;
+
+        template <typename T>
         inline T string(const std::string& str_) noexcept;
         template <typename... A>
         inline std::tuple<A...> string(const std::vector<std::string>& str_) noexcept;
@@ -52,6 +55,28 @@ namespace arc //! arctk namespace
 
         //  == FUNCTIONS ==
         //  -- Parsing --
+        template <typename T>
+        inline bool parsable(const std::string& str_) noexcept
+        {
+            std::stringstream stream;
+            stream << str_;
+
+            T x{};
+            stream >> x;
+
+            if (stream.fail())
+            {
+                return (false);
+            }
+
+            if (stream.rdbuf()->in_avail() != 0)
+            {
+                return (false);
+            }
+
+            return (true);
+        }
+
         /**
          *  Parse a value from a string.
          *  Function will call error on failed parsing.
