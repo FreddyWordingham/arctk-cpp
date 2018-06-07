@@ -138,6 +138,7 @@ namespace arc //! arctk namespace
          *  If it is not, report an error.
          *
          *  @tparam A   Types stored by the tuple.
+         *
          *  @tparam T   Type to parse string into.
          *
          *  @param  str_    String to parse into value.
@@ -161,6 +162,7 @@ namespace arc //! arctk namespace
          *  Retrieve the value of a command line argument.
          *
          *  @tparam A   Types stored by the tuple.
+         *
          *  @tparam I   Index of the command line argument to retrieve.
          *  @tparam T   Type of Ith type of A.
          *
