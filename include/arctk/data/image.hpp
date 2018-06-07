@@ -92,8 +92,14 @@ namespace arc //! arctk namespace
             return (_width);
         }
 
+        /**
+         *  Get the pixel height of the image.
+         *
+         *  @return Pixel height of the image.
+         */
         inline size_t Image::height() noexcept
         {
+            return (_height);
         }
 
 
