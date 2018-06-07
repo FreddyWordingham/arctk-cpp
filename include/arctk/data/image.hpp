@@ -55,6 +55,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Image(size_t width_, size_t height_) noexcept;
 
             //  == METHODS ==
           public:
@@ -64,6 +65,14 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline Image::Image(const size_t width_, const size_t height_) noexcept
+          : _width(width_)
+          , _height(height_)
+          , _pixels(std::vector<std::vector<math::math::Vec3<double>>>(width_, std::vector<math::Vec3<double>>(height_)))
+        {
+            assert(width_ > 0);
+            assert(height_ > 0);
+        }
 
 
 
