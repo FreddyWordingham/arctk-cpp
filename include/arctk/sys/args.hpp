@@ -47,6 +47,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Information --
             const std::string _prog_name; //!< Name of the program.
+            const std::string _call_str;  //!< Correct program call string.
 
             //  -- Arguments --
             std::tuple<A...> _argv; //!< Tuple of program arguments.
