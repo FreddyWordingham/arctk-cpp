@@ -147,6 +147,15 @@ namespace arc //! arctk namespace
             return (x);
         }
 
+        /**
+         *  Parse a boolean value from a string.
+         *  Function will call error on failed parsing.
+         *  Function will call error if characters remain after parsing.
+         *
+         *  @param  str_    String to parse.
+         *
+         *  @return Parsed boolean value.
+         */
         template <>
         inline bool string(const std::string& str_) noexcept
         {
