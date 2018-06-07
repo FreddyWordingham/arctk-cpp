@@ -103,13 +103,20 @@ namespace arc //! arctk namespace
         //  -- Initialisation --
         /**
          *  Initialise the tuple of argument values.
+         *  Check that each string is parsable to it's required type.
          *
-         *  @param argc_ [description]
-         *  @param argv_ [description]
+         *  @tparam A   Types stored by the tuple.
+         *
+         *  @param  argc_   Argument count.
+         *  @param  argv_   Argument values.
+         *
+         *  @pre    argc_ must be positive.
          */
         template <typename... A>
         inline std::tuple<A...> Args<A...>::init_argv(const int argc_, const char** argv_) noexcept
         {
+            assert(argc_ > 0);
+
             const std::vector<std::string> argv(argv_ + 1, argv_ + argc_);
 
             if (argv.size() != sizeof...(A))
