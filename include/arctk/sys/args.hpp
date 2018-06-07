@@ -130,7 +130,7 @@ namespace arc //! arctk namespace
             size_t i = 0;
             ((check_parsable<A>(argv[i]), ++i), ...);
 
-            return (parse::string<A...>(argv));
+            return (parse::from_str<A...>(argv));
         }
 
         /**
@@ -147,7 +147,7 @@ namespace arc //! arctk namespace
         template <typename T>
         inline void Args<A...>::check_parsable(const std::string& str_) noexcept
         {
-            if (!parse::parsable<T>(str_))
+            if (!parse::parsable_from_str<T>(str_))
             {
                 LOG << "Correct call: " << _prog_name << " " << _call_str;
                 ERROR(42) << "Argument string: '" << str_ << "' is not parsable as type: '" << typeid(T).name() << "'.";
