@@ -38,6 +38,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
+         *  Image data writer.
          */
         class Image
         {
