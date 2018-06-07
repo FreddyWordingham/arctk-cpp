@@ -79,6 +79,15 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        /**
+         *  Construct the command line arguments object.
+         *
+         *  @tparam A   Types stored by the tuple.
+         *
+         *  @param  argc_       Argument count.
+         *  @param  argv_       Argument values.
+         *  @param  call_str_   Correct call string for the program.
+         */
         template <typename... A>
         inline Args<A...>::Args(const int argc_, const char** argv_, const std::string& call_str_) noexcept
           : _prog_name(argv_[0])
