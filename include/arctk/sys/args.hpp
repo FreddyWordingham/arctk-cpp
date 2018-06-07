@@ -87,6 +87,8 @@ namespace arc //! arctk namespace
          *  @param  argc_       Argument count.
          *  @param  argv_       Argument values.
          *  @param  call_str_   Correct call string for the program.
+         *
+         *  @pre    argc_ must be positive.
          */
         template <typename... A>
         inline Args<A...>::Args(const int argc_, const char** argv_, const std::string& call_str_) noexcept
@@ -94,10 +96,17 @@ namespace arc //! arctk namespace
           , _call_str(call_str_)
           , _argv(init_argv(argc_, argv_))
         {
+            assert(argc_ > 0);
         }
 
 
         //  -- Initialisation --
+        /**
+         *  Initialise the tuple of argument values.
+         *
+         *  @param argc_ [description]
+         *  @param argv_ [description]
+         */
         template <typename... A>
         inline std::tuple<A...> Args<A...>::init_argv(const int argc_, const char** argv_) noexcept
         {
