@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         //  -- Parsing --
         template <typename T>
-        inline bool parsable(const std::string& str_) noexcept;
+        inline bool parsable_from_str(const std::string& str_) noexcept;
 
         template <typename T>
         inline T from_string(const std::string& str_) noexcept;
@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
          *  @return True if the string is parsable into the type.
          */
         template <typename T>
-        inline bool parsable(const std::string& str_) noexcept
+        inline bool parsable_from_str(const std::string& str_) noexcept
         {
             std::stringstream stream;
             stream << str_;
@@ -94,7 +94,7 @@ namespace arc //! arctk namespace
          *  @return True if the string is parsable into the boolean type.
          */
         template <>
-        inline bool parsable<bool>(const std::string& str_) noexcept
+        inline bool parsable_from_str<bool>(const std::string& str_) noexcept
         {
             std::string str = str_;
             std::transform(str.begin(), str.end(), str.begin(), [](unsigned char c) { return std::tolower(c); });
