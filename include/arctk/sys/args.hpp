@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
             //  -- Initialisation --
             inline std::tuple<A...> init_argv(const int argc_, const char** argv_) noexcept;
             template <typename T>
-            inline void unparsable(const std::string& str_) noexcept;
+            inline void check_parsable(const std::string& str_) noexcept;
 
 
             //  == METHODS ==
@@ -128,7 +128,7 @@ namespace arc //! arctk namespace
             }
 
             size_t i = 0;
-            ((unparsable<A>(argv[i]), ++i), ...);
+            ((check_parsable<A>(argv[i]), ++i), ...);
 
             return (parse::string<A...>(argv));
         }
@@ -144,7 +144,7 @@ namespace arc //! arctk namespace
          */
         template <typename... A>
         template <typename T>
-        inline void Args<A...>::unparsable(const std::string& str_) noexcept
+        inline void Args<A...>::check_parsable(const std::string& str_) noexcept
         {
             if (!parse::parsable<T>(str_))
             {
