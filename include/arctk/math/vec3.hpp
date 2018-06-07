@@ -727,7 +727,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Vec3<T> Vec3<T>::to_polar() const noexcept
         {
-            const Vec3<T> polar;
+            Vec3<T> polar;
 
             polar.rho   = std::sqrt((x * x) + (y * y) + (z * z));
             polar.theta = std::acos(z / polar.rho);
@@ -746,7 +746,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Vec3<T> Vec3<T>::to_cart() const noexcept
         {
-            const Vec3<T> cart;
+            Vec3<T> cart;
 
             cart.x = rho * std::sin(theta) * std::cos(phi);
             cart.y = rho * std::sin(theta) * std::sin(phi);
