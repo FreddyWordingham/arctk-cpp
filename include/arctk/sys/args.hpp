@@ -46,6 +46,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Information --
+            const std::string _prog_name; //!< Name of the program.
 
             //  -- Arguments --
             std::tuple<A...> _argv; //!< Tuple of program arguments.
