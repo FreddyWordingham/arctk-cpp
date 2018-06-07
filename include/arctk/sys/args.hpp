@@ -103,6 +103,7 @@ namespace arc //! arctk namespace
         //  -- Initialisation --
         /**
          *  Initialise the tuple of argument values.
+         *  Check that the required number of command line arguments are given, if not, report an error.
          *  Check that each string is parsable to it's required type.
          *
          *  @tparam A   Types stored by the tuple.
@@ -132,6 +133,15 @@ namespace arc //! arctk namespace
             return (parse::string<A...>(argv));
         }
 
+        /**
+         *  Check that a string is parsable into its required type.
+         *  If it is not, report an error.
+         *
+         *  @tparam A   Types stored by the tuple.
+         *  @tparam T   Type to parse string into.
+         *
+         *  @param  str_    String to parse into value.
+         */
         template <typename... A>
         template <typename T>
         inline void Args<A...>::unparsable(const std::string& str_) noexcept
