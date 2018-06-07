@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
             inline Args(const int argc_, const char** argv_, const std::string& call_str_) noexcept;
 
             //  -- Initialisation --
-            inline std::tuple<A...> init_elements(const int argc_, const char** argv_) noexcept;
+            inline std::tuple<A...> init_argv(const int argc_, const char** argv_) noexcept;
             template <typename T>
             inline void unparsable(const std::string& str_) noexcept;
 
