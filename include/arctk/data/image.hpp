@@ -64,7 +64,7 @@ namespace arc //! arctk namespace
             inline size_t width() noexcept;
             inline size_t height() noexcept;
 
-            //  -- Setters --
+            //  -- Collection --
             inline void collect(size_t row_, size_t col_, const math::Vec3<double>& val_) noexcept;
         };
 
@@ -106,7 +106,7 @@ namespace arc //! arctk namespace
         }
 
 
-        //  -- Setters --
+        //  -- Collection --
         /**
          *  Collect a pixel value into the image.
          *
