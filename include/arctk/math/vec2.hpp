@@ -633,7 +633,7 @@ namespace arc //! arctk namespace
          *  @return Vec in polar co-ordinate form.
          */
         template <typename T>
-        constexpr Vec2<T> void Vec2<T>::to_polar() const noexcept
+        constexpr inline Vec2<T> Vec2<T>::to_polar() const noexcept
         {
             const Vec2<T> polar;
 
@@ -649,7 +649,7 @@ namespace arc //! arctk namespace
          *  @return Vec in cartesian co-ordinate form.
          */
         template <typename T>
-        constexpr Vec2<T> void Vec2<T>::to_cart() const noexcept
+        constexpr inline Vec2<T> Vec2<T>::to_cart() const noexcept
         {
             const Vec2<T> cart;
 
