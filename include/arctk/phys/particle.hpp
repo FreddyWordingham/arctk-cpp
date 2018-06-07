@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
         class Particle
         {
             //  == FIELDS ==
-          private:
+          protected:
             //  -- Spatial --
             math::Vec3<double> _pos; //!< Position of the particle.
             math::Vec3<double> _dir; //!< Direction of travel.
