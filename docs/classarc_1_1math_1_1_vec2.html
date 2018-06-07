@@ -140,10 +140,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0460cbcdb20eadaba9ea090e954d4c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a003bad2a188d1852d01c8d1835b309bc"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec2.html#a003bad2a188d1852d01c8d1835b309bc">normalise</a> () const noexcept</td></tr>
 <tr class="separator:a003bad2a188d1852d01c8d1835b309bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae616e790bcbb6c15c9e513400b36accf"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec2.html#ae616e790bcbb6c15c9e513400b36accf">to_polar</a> () const noexcept</td></tr>
-<tr class="separator:ae616e790bcbb6c15c9e513400b36accf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6118e22c88e660a2dbdfae9769f6ef87"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec2.html#a6118e22c88e660a2dbdfae9769f6ef87">to_cart</a> () const noexcept</td></tr>
-<tr class="separator:a6118e22c88e660a2dbdfae9769f6ef87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c9b91c371810198099475da7ca5e388"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classarc_1_1math_1_1_vec2.html">Vec2</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec2.html#a5c9b91c371810198099475da7ca5e388">to_polar</a> () const noexcept</td></tr>
+<tr class="separator:a5c9b91c371810198099475da7ca5e388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f2ab8794a0b814193af8456f93c553b"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classarc_1_1math_1_1_vec2.html">Vec2</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec2.html#a3f2ab8794a0b814193af8456f93c553b">to_cart</a> () const noexcept</td></tr>
+<tr class="separator:a3f2ab8794a0b814193af8456f93c553b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -1461,8 +1461,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a6118e22c88e660a2dbdfae9769f6ef87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6118e22c88e660a2dbdfae9769f6ef87">&#9670;&nbsp;</a></span>to_cart()</h2>
+<a id="a3f2ab8794a0b814193af8456f93c553b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f2ab8794a0b814193af8456f93c553b">&#9670;&nbsp;</a></span>to_cart()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1473,7 +1473,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr void <a class="el" href="classarc_1_1math_1_1_vec2.html">arc::math::Vec2</a>&lt; T &gt;::to_cart </td>
+          <td class="memname">constexpr <a class="el" href="classarc_1_1math_1_1_vec2.html">Vec2</a>&lt; T &gt; <a class="el" href="classarc_1_1math_1_1_vec2.html">arc::math::Vec2</a>&lt; T &gt;::to_cart </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1485,12 +1485,13 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Convert the polar vector to a cartesian vector. </p>
+<p>Convert the polar vector to a cartesian vector.</p>
+<dl class="section return"><dt>Returns</dt><dd>Vec in cartesian co-ordinate form. </dd></dl>
 
 </div>
 </div>
-<a id="ae616e790bcbb6c15c9e513400b36accf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae616e790bcbb6c15c9e513400b36accf">&#9670;&nbsp;</a></span>to_polar()</h2>
+<a id="a5c9b91c371810198099475da7ca5e388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c9b91c371810198099475da7ca5e388">&#9670;&nbsp;</a></span>to_polar()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1501,7 +1502,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr void <a class="el" href="classarc_1_1math_1_1_vec2.html">arc::math::Vec2</a>&lt; T &gt;::to_polar </td>
+          <td class="memname">constexpr <a class="el" href="classarc_1_1math_1_1_vec2.html">Vec2</a>&lt; T &gt; <a class="el" href="classarc_1_1math_1_1_vec2.html">arc::math::Vec2</a>&lt; T &gt;::to_polar </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1513,7 +1514,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Convert the cartesian vector to a polar vector. </p>
+<p>Convert the cartesian vector to a polar vector.</p>
+<dl class="section return"><dt>Returns</dt><dd>Vec in polar co-ordinate form. </dd></dl>
 
 </div>
 </div>
@@ -1683,7 +1685,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 7 2018 00:35:48 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 7 2018 11:30:24 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

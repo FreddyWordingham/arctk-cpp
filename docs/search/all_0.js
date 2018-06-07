@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['_5faspect_5fratio',['_aspect_ratio',['../classarc_1_1gui_1_1camera_1_1_fly.html#a7fcfa719fca6099351c96b922ab614d3',1,'arc::gui::camera::Fly']]],
   ['_5fbuff',['_buff',['../classarc_1_1log_1_1output_1_1_progress.html#adfce45f1de5ab40ada487709167d4a94',1,'arc::log::output::Progress']]],
   ['_5fcol',['_col',['../classarc_1_1log_1_1output_1_1_error.html#a805c610033207f673a033655b418a4f0',1,'arc::log::output::Error::_col()'],['../classarc_1_1log_1_1output_1_1_message.html#a20b83768380174849f7efedcb597813f',1,'arc::log::output::Message::_col()'],['../classarc_1_1log_1_1output_1_1_progress.html#a198abda6bfa9952598a5cc10ab7d5abd',1,'arc::log::output::Progress::_col()'],['../classarc_1_1log_1_1output_1_1_stopwatch.html#aee69beff8ed834aaba59987cb6c32e70',1,'arc::log::output::Stopwatch::_col()'],['../classarc_1_1log_1_1output_1_1_warning.html#ade78ec1beafa0f426b2e7016564392c5',1,'arc::log::output::Warning::_col()']]],
   ['_5fconstruct_5ftime',['_construct_time',['../classarc_1_1log_1_1output_1_1_stopwatch.html#aea18b26748db9ac9ae5d0a46bb9e0446',1,'arc::log::output::Stopwatch']]],
@@ -10,6 +11,7 @@ var searchData=
   ['_5fexit_5fval',['_exit_val',['../classarc_1_1log_1_1output_1_1_error.html#a487fd88128837612921fca7aa663f5e7',1,'arc::log::output::Error']]],
   ['_5ffill_5fmode',['_fill_mode',['../classarc_1_1gui_1_1_actor.html#a2fd27000064f44fe6e91e0c94bb3b8ee',1,'arc::gui::Actor']]],
   ['_5ffloat_5funiform',['_float_uniform',['../classarc_1_1gui_1_1_actor.html#aa430925f043dab7813e77da5e2801fd2',1,'arc::gui::Actor::_float_uniform()'],['../classarc_1_1gui_1_1_camera.html#a0d8d055b1d57521f8c399072174efe0a',1,'arc::gui::Camera::_float_uniform()']]],
+  ['_5ffov',['_fov',['../classarc_1_1gui_1_1camera_1_1_fly.html#a1e51cd53ebcd225ad839d25019c1e7c0',1,'arc::gui::camera::Fly']]],
   ['_5ffrac',['_frac',['../classarc_1_1log_1_1output_1_1_progress.html#a6e047fbc2c1931a771914073a0415982',1,'arc::log::output::Progress']]],
   ['_5ffunc',['_func',['../classarc_1_1gui_1_1_keybind.html#a16e1cb9d5c2f4f1d507e102f12df66b9',1,'arc::gui::Keybind']]],
   ['_5fhandle',['_handle',['../classarc_1_1gui_1_1_shader.html#a5de0c33ff93b27ccc9b8387ab3c78df9',1,'arc::gui::Shader::_handle()'],['../classarc_1_1gui_1_1_uniform.html#a420cd3f7c6b1af1ed62737b1819fc6dc',1,'arc::gui::Uniform::_handle()'],['../classarc_1_1gui_1_1_window.html#ae64db24c1d33f4530044023f25fa1814',1,'arc::gui::Window::_handle()'],['../classarc_1_1sys_1_1file_1_1_app.html#a401dd68fabc938326fa80817ce6f3144',1,'arc::sys::file::App::_handle()'],['../classarc_1_1sys_1_1file_1_1_in.html#a373312194f762e11054567548efe9b22',1,'arc::sys::file::In::_handle()'],['../classarc_1_1sys_1_1file_1_1_out.html#a3c45c4ab9373e9daf420b183cb1e4ea5',1,'arc::sys::file::Out::_handle()']]],

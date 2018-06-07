@@ -5,7 +5,7 @@ var searchData=
   ['uniform_2ehpp',['uniform.hpp',['../gui_2uniform_8hpp.html',1,'(Global Namespace)'],['../rng_2distribution_2uniform_8hpp.html',1,'(Global Namespace)']]],
   ['up',['up',['../classarc_1_1gui_1_1_camera.html#a88bcaea6c8968c85d2e3e3eec353f867',1,'arc::gui::Camera']]],
   ['update_5fmodel',['update_model',['../classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f',1,'arc::gui::Actor']]],
-  ['update_5fmvp',['update_mvp',['../classarc_1_1gui_1_1camera_1_1_birdseye.html#a56bba4da1d82719fe7782c26627e4ca4',1,'arc::gui::camera::Birdseye::update_mvp()'],['../classarc_1_1gui_1_1_camera.html#a1926ea80c783c3ab8c37d0ce5f15e003',1,'arc::gui::Camera::update_mvp()']]],
+  ['update_5fmvp',['update_mvp',['../classarc_1_1gui_1_1camera_1_1_birdseye.html#a56bba4da1d82719fe7782c26627e4ca4',1,'arc::gui::camera::Birdseye::update_mvp()'],['../classarc_1_1gui_1_1camera_1_1_fly.html#af8c62a866114f2855dcb966cf45fccc2',1,'arc::gui::camera::Fly::update_mvp()'],['../classarc_1_1gui_1_1_camera.html#a1926ea80c783c3ab8c37d0ce5f15e003',1,'arc::gui::Camera::update_mvp()']]],
   ['upper',['upper',['../namespacearc_1_1search.html#a66f5d701ff409cb5e2673a4d5864cd11',1,'arc::search']]],
   ['utl_2ehpp',['utl.hpp',['../ansi_2utl_8hpp.html',1,'(Global Namespace)'],['../utl_8hpp.html',1,'(Global Namespace)']]]
 ];

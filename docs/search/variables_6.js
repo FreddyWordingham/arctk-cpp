@@ -15,5 +15,7 @@ var searchData=
   ['fg_5fmagenta',['FG_MAGENTA',['../namespacearc_1_1ansi.html#afafad539efff0d375dd76ae7f3545f7a',1,'arc::ansi']]],
   ['fg_5fred',['FG_RED',['../namespacearc_1_1ansi.html#a9e1508c27462183a72e42199349cfe9b',1,'arc::ansi']]],
   ['fg_5fwhite',['FG_WHITE',['../namespacearc_1_1ansi.html#af494011bc92bbe6d25b6dc2f8fe24b80',1,'arc::ansi']]],
-  ['fg_5fyellow',['FG_YELLOW',['../namespacearc_1_1ansi.html#a0a78195873d901ed7f63b648a6ffe9dc',1,'arc::ansi']]]
+  ['fg_5fyellow',['FG_YELLOW',['../namespacearc_1_1ansi.html#a0a78195873d901ed7f63b648a6ffe9dc',1,'arc::ansi']]],
+  ['fly_5ffar_5fcull_5fdist',['FLY_FAR_CULL_DIST',['../namespacearc_1_1gui_1_1camera.html#a1ed33b40f2596a9a604758d95d75059f',1,'arc::gui::camera']]],
+  ['fly_5fnear_5fcull_5fdist',['FLY_NEAR_CULL_DIST',['../namespacearc_1_1gui_1_1camera.html#afc4e12abedcafadaac17a3ca12621130',1,'arc::gui::camera']]]
 ];

@@ -83,15 +83,23 @@ $(function() {
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1camera_1_1_birdseye.html">Birdseye</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1camera_1_1_fly.html">Fly</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ab6cd1e066bc5831421c9f8633ae4b9f6"><td class="memItemLeft" align="right" valign="top">constexpr const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1camera.html#ab6cd1e066bc5831421c9f8633ae4b9f6">BIRDSEYE_NEAR_CULL_DIST</a> = 1e-3f</td></tr>
+<tr class="memitem:ab6cd1e066bc5831421c9f8633ae4b9f6"><td class="memItemLeft" align="right" valign="top">constexpr const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1camera.html#ab6cd1e066bc5831421c9f8633ae4b9f6">BIRDSEYE_NEAR_CULL_DIST</a> = -1e+3f</td></tr>
 <tr class="memdesc:ab6cd1e066bc5831421c9f8633ae4b9f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Far culling distance for the birdseye camera.  <a href="#ab6cd1e066bc5831421c9f8633ae4b9f6">More...</a><br /></td></tr>
 <tr class="separator:ab6cd1e066bc5831421c9f8633ae4b9f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24191a0c0a99f2a4963f2fed6163168a"><td class="memItemLeft" align="right" valign="top">constexpr const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1camera.html#a24191a0c0a99f2a4963f2fed6163168a">BIRDSEYE_FAR_CULL_DIST</a> = 1e+3f</td></tr>
 <tr class="memdesc:a24191a0c0a99f2a4963f2fed6163168a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Near culling distance for the birdseye camera.  <a href="#a24191a0c0a99f2a4963f2fed6163168a">More...</a><br /></td></tr>
 <tr class="separator:a24191a0c0a99f2a4963f2fed6163168a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc4e12abedcafadaac17a3ca12621130"><td class="memItemLeft" align="right" valign="top">constexpr const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1camera.html#afc4e12abedcafadaac17a3ca12621130">FLY_NEAR_CULL_DIST</a> = 1e-3f</td></tr>
+<tr class="memdesc:afc4e12abedcafadaac17a3ca12621130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Far culling distance for the fly camera.  <a href="#afc4e12abedcafadaac17a3ca12621130">More...</a><br /></td></tr>
+<tr class="separator:afc4e12abedcafadaac17a3ca12621130"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ed33b40f2596a9a604758d95d75059f"><td class="memItemLeft" align="right" valign="top">constexpr const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1camera.html#a1ed33b40f2596a9a604758d95d75059f">FLY_FAR_CULL_DIST</a> = 1e+3f</td></tr>
+<tr class="memdesc:a1ed33b40f2596a9a604758d95d75059f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Near culling distance for the fly camera.  <a href="#a1ed33b40f2596a9a604758d95d75059f">More...</a><br /></td></tr>
+<tr class="separator:a1ed33b40f2596a9a604758d95d75059f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>camera namespace </p>
@@ -119,7 +127,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr const float arc::gui::camera::BIRDSEYE_NEAR_CULL_DIST = 1e-3f</td>
+          <td class="memname">constexpr const float arc::gui::camera::BIRDSEYE_NEAR_CULL_DIST = -1e+3f</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -128,10 +136,42 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a1ed33b40f2596a9a604758d95d75059f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ed33b40f2596a9a604758d95d75059f">&#9670;&nbsp;</a></span>FLY_FAR_CULL_DIST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const float arc::gui::camera::FLY_FAR_CULL_DIST = 1e+3f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Near culling distance for the fly camera. </p>
+
+</div>
+</div>
+<a id="afc4e12abedcafadaac17a3ca12621130"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc4e12abedcafadaac17a3ca12621130">&#9670;&nbsp;</a></span>FLY_NEAR_CULL_DIST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const float arc::gui::camera::FLY_NEAR_CULL_DIST = 1e-3f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Far culling distance for the fly camera. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 7 2018 00:35:48 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 7 2018 11:30:24 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
