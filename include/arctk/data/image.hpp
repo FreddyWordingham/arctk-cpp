@@ -70,6 +70,8 @@ namespace arc //! arctk namespace
             inline void collect(size_t row_, size_t col_, const math::Vec3<double>& val_) noexcept;
 
             //  -- Saving --
+            inline void save(const std::string& path_) const noexcept;
+            inline void save(const std::string& path_, double norm_) const noexcept;
             inline void save(const std::string& path_, const math::Vec3<double>& norm_) const noexcept;
         };
 
@@ -158,6 +160,41 @@ namespace arc //! arctk namespace
 
 
         //  -- Saving --
+        /**
+         *  Save the image to a file.
+         *  Normalise the values of the image using maximum pixel component value within the image.
+         *
+         *  @param  path_   Path to the save file.
+         *
+         *  @pre    path_ must not be empty;
+         */
+        inline void Image::save(const std::string& path_) const noexcept
+        {
+            assert(!path_.empty());
+
+            const double max = 0.0;
+            for (size_t i = 0; i < _height; ++i)
+            {
+                for (size_t j = 0; j < _width; ++j)
+                {
+                    for (size_t k = 0; k < 3; ++k)
+                    {
+                        if (_pixels[i][j][k] > max)
+                        {
+                            max = _pixels[i][j][k];
+                        }
+                    }
+                }
+            }
+
+            if (max == 0.0)
+            {
+                max = 1.0;
+            }
+
+            save(path_, max);
+        }
+
         /**
          *  Save the image to a file.
          *  Normalise the values of the image using the normalisation value given.
