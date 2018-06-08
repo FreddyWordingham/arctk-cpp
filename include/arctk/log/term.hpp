@@ -41,10 +41,18 @@ namespace arc //! arctk namespace
 
         //  == CONSTANTS ==
         //  -- Output --
+#ifdef __APPLE__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wglobal-constructors"
         const bool ANSI_SUPPORT = (isatty(fileno(stdout)) == 1); //!< True if output supports ansi escape codes.
 #pragma clang diagnostic pop
+#elif __linux__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wglobal-constructors"
+        const bool ANSI_SUPPORT = (isatty(fileno(stdout)) == 1); //!< True if output supports ansi escape codes.
+#pragma clang diagnostic pop #else
+        const bool ANSI_SUPPORT = false;                         //!< True if output supports ansi escape codes.
+#endif
 
 
 
