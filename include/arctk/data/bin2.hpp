@@ -84,12 +84,12 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const math::Vec2<double>& min() const noexcept;
-            inline const math::Vec2<double>& max() const noexcept;
-            inline const math::Vec2<double>& width() const noexcept;
-            inline const std::vector<T>&     counts() const noexcept;
-            inline double                    centre(size_t index_) const noexcept;
-            inline const std::vector<double> centres() const noexcept;
+            inline const math::Vec2<double>&          min() const noexcept;
+            inline const math::Vec2<double>&          max() const noexcept;
+            inline const math::Vec2<double>&          width() const noexcept;
+            inline const std::vector<std::vector<T>>& counts() const noexcept;
+            inline double                             centre(size_t index_) const noexcept;
+            inline const std::vector<double>          centres() const noexcept;
 
             //  -- Collection --
             virtual inline void collect(double pos_, T weight_) noexcept = 0; //!< Collect a weight, at a position, into the bin array. @param  pos_    Position of the weight. @param  weight_ Weight of value to be binned.
@@ -209,7 +209,7 @@ namespace arc //! arctk namespace
          *  @return Bin counts vector.
          */
         template <typename T>
-        inline const std::vector<T>& Bin2<T>::counts() const noexcept
+        inline const std::vector<std::vector<T>>& Bin2<T>::counts() const noexcept
         {
             return (_counts);
         }
