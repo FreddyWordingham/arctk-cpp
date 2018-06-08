@@ -49,11 +49,11 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Bounds --
-            double _min; //!< Minimum bound of the bin range.
-            double _max; //!< Maximum bound of the bin range.
+            math::Vec2<double> _min; //!< Minimum bound of the bin range.
+            math::Vec2<double> _max; //!< Maximum bound of the bin range.
 
             //  -- Properties --
-            double _width; //!< Bin bag width.
+            math::Vec2<double> _width; //!< Bin bag width.
 
             //  -- Counts --
             std::vector<T> _counts; //!< Hit count of each bin.
