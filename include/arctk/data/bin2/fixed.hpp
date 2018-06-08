@@ -63,7 +63,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Collection --
-                inline void collect(double pos_, T weight_) noexcept override;
+                inline void collect(const math::Vec2<double>& pos_, T weight_) noexcept override;
             };
 
 
@@ -106,16 +106,18 @@ namespace arc //! arctk namespace
              *  @param  weight_ Weight of value to be binned.
              */
             template <typename T>
-            inline void Fixed<T>::collect(const double pos_, const T weight_) noexcept
+            inline void Fixed<T>::collect(const math::Vec2<double>& pos_, const T weight_) noexcept
             {
-                if ((pos_ < Bin<T>::_min) || (pos_ > Bin<T>::_max))
+                if ((pos_.x < Bin2<T>::_min.x) || (pos_.y < Bin2<T>::_min.y) || (pos_.x > Bin2<T>::_max.x) || (pos_.y > Bin2<T>::_max.y))
                 {
                     _misses += weight_;
 
                     return;
                 }
 
-                Bin<T>::_counts[Bin<T>::index(pos_)] += weight_;
+                const math::Vec2<size_t> index = Bin2<T>::index(pos_);
+
+                Bin2<T>::_counts[index.x][index.y] += weight_;
             }
 
 
