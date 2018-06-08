@@ -1,8 +1,10 @@
 <map id="arc::search::max_index" name="arc::search::max_index">
-<area shape="rect" id="node2" href="$namespacearc_1_1search.html#ab5608d27962c637137d2c243213fa366" title="arc::search::max" alt="" coords="213,56,332,81"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1format.html#a9d71aca4944b5beef1da1c6a6c5bc2cc" title="arc::format::rows" alt="" coords="386,5,506,31"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1format.html#acbe307a976e3844ae92ef64a1abe385e" title="arc::format::cols" alt="" coords="559,31,676,56"/>
-<area shape="rect" id="node7" href="$classarc_1_1rng_1_1generator_1_1_quality.html#aaef2693502284423f7e47edc025bfd7f" title="arc::rng::generator\l::Quality::gen" alt="" coords="380,107,511,145"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1data.html#a903b365f7af0c485fa4af9da9ca82c16" title="arc::data::operator\&lt;\&lt;" alt="" coords="724,5,869,31"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1format.html#a4e78356644f1d9021a7e1133475ef645" title="arc::format::rows" alt="" coords="736,55,857,80"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1search.html#ab5608d27962c637137d2c243213fa366" title="arc::search::max" alt="" coords="213,80,332,105"/>
+<area shape="rect" id="node3" href="$classarc_1_1data_1_1_image.html#a52337aaf464658b348e58809b0ecade6" title="arc::data::Image::save" alt="" coords="380,5,534,31"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1format.html#a9d71aca4944b5beef1da1c6a6c5bc2cc" title="arc::format::rows" alt="" coords="397,55,517,80"/>
+<area shape="rect" id="node6" href="$namespacearc_1_1format.html#acbe307a976e3844ae92ef64a1abe385e" title="arc::format::cols" alt="" coords="600,80,716,105"/>
+<area shape="rect" id="node9" href="$classarc_1_1rng_1_1generator_1_1_quality.html#aaef2693502284423f7e47edc025bfd7f" title="arc::rng::generator\l::Quality::gen" alt="" coords="392,156,523,195"/>
+<area shape="rect" id="node4" href="$classarc_1_1data_1_1_image.html#adb53142496fc553ec4688afe06b6e73d" title="arc::data::Image::save" alt="" coords="582,5,735,31"/>
+<area shape="rect" id="node7" href="$namespacearc_1_1data.html#a903b365f7af0c485fa4af9da9ca82c16" title="arc::data::operator\&lt;\&lt;" alt="" coords="783,55,929,80"/>
+<area shape="rect" id="node8" href="$namespacearc_1_1format.html#a4e78356644f1d9021a7e1133475ef645" title="arc::format::rows" alt="" coords="796,104,916,129"/>
 </map>

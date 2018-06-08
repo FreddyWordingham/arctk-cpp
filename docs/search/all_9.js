@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['image',['Image',['../classarc_1_1data_1_1_image.html',1,'arc::data::Image'],['../classarc_1_1data_1_1_image.html#a1dbb1342049675cd7a0aaad91144d022',1,'arc::data::Image::Image()']]],
+  ['image_2ehpp',['image.hpp',['../image_8hpp.html',1,'']]],
   ['in',['In',['../classarc_1_1sys_1_1file_1_1_in.html',1,'arc::sys::file::In'],['../classarc_1_1sys_1_1file_1_1_in.html#af9375cec1162866401b7272c000a2feb',1,'arc::sys::file::In::In(const std::string &amp;path_) noexcept'],['../classarc_1_1sys_1_1file_1_1_in.html#aeedeb6817f818ffd350957dc4e0a105a',1,'arc::sys::file::In::In(const In &amp;) noexcept=delete'],['../classarc_1_1sys_1_1file_1_1_in.html#a7be7e2f1ddfbd6aec62be0fbbbc47a5c',1,'arc::sys::file::In::In(In &amp;&amp;)=default']]],
   ['in_2ehpp',['in.hpp',['../in_8hpp.html',1,'']]],
   ['index',['index',['../classarc_1_1data_1_1_bin.html#a875a60ccae5a48a08ab0c13f9507c849',1,'arc::data::Bin']]],
