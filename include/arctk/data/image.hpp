@@ -25,6 +25,7 @@
 
 //  -- Arctk --
 #include <arctk/math.hpp>
+#include <arctk/sys.hpp>
 
 
 
@@ -67,6 +68,9 @@ namespace arc //! arctk namespace
             //  -- Collection --
             inline void collect(size_t row_, size_t col_, double val_) noexcept;
             inline void collect(size_t row_, size_t col_, const math::Vec3<double>& val_) noexcept;
+
+            //  -- Saving --
+            inline void save(const std::string& path_, const math::Vec3<double>& norm_) const noexcept;
         };
 
 
@@ -119,7 +123,7 @@ namespace arc //! arctk namespace
          *  @pre    col_ must be less than _height.
          *  @pre    val_ must be non-negative.
          */
-        inline void collect(const size_t row_, const size_t col_, const double val_) noexcept
+        inline void Image::collect(const size_t row_, const size_t col_, const double val_) noexcept
         {
             assert(row_ < _width);
             assert(col_ < _height);
@@ -141,7 +145,7 @@ namespace arc //! arctk namespace
          *  @pre    val_.g must be non-negative.
          *  @pre    val_.b must be non-negative.
          */
-        inline void collect(const size_t row_, const size_t col_, const math::Vec3<double>& val_) noexcept
+        inline void Image::collect(const size_t row_, const size_t col_, const math::Vec3<double>& val_) noexcept
         {
             assert(row_ < _width);
             assert(col_ < _height);
@@ -150,6 +154,45 @@ namespace arc //! arctk namespace
             assert(val_.b >= 0.0);
 
             _pixels[row_][col_] += val_;
+        }
+
+
+        //  -- Saving --
+        /**
+         *  Save the image to a file.
+         *  Normalise the values of the image using the normalisation vector given.
+         *
+         *  @param  path_   Path to the save file.
+         *  @param  norm_   Normalisation values to be applied.
+         *
+         *  @pre    norm.r must be non-negative.
+         *  @pre    norm.g must be non-negative.
+         *  @pre    norm.b must be non-negative.
+         */
+        inline void Image::save(const std::string& path_, const math::Vec3<double>& norm_) const noexcept
+        {
+            assert(norm_.r > 0.0);
+            assert(norm_.g > 0.0);
+            assert(norm_.b > 0.0);
+
+            sys::file::Out file(path_);
+
+            file << "P3\n"
+                 << _width << " " << _height << "\n"
+                 << "255\n";
+
+            for (size_t i = 0; i < _height; ++i)
+            {
+                for (size_t j = 0; j < _width; ++j)
+                {
+                    for (size_t k = 0; k < 3; ++k)
+                    {
+                        file << std::min(255, static_cast<int>(255 * (_pixels[i][j][k] / norm_[k]))) << "\t";
+                    }
+                    file << "\t";
+                }
+                file << "\n";
+            }
         }
 
 
