@@ -153,7 +153,7 @@ namespace arc //! arctk namespace
         template <typename S, typename L>
         inline S& operator<<(S& stream_, const Bin2<L>& bin_) noexcept
         {
-            stream_ << format::cols(10, ", ", bin_.centres(), bin_._counts);
+            stream_ << format::cols(10, ", ", bin_._counts);
 
             return (stream_);
         }
