@@ -233,7 +233,7 @@ namespace arc //! arctk namespace
             assert(index_.x < _counts.size());
             assert(index_.y < _counts.front().size());
 
-            return (_min + (_width * (index_ + 0.5)));
+            return (_min + (_width * (static_cast<double>(index_) + 0.5)));
         }
 
         /**
