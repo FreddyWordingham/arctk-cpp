@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Bin2(double min_, double max_, size_t res_) noexcept;
+            inline Bin2(const math::Vec2<double>& min_, const math::Vec2<double>& max_, const math::Vec2<size_t>& res_) noexcept;
             inline Bin2(const Bin2&)     = default; //!< Defaulted copy constructor.
             inline Bin2(Bin2&&) noexcept = default; //!< Defaulted move constructor.
 
@@ -116,7 +116,7 @@ namespace arc //! arctk namespace
          *  @pre    res_ must be positive.
          */
         template <typename T>
-        inline Bin2<T>::Bin2(const double min_, const double max_, const size_t res_) noexcept
+        inline Bin2<T>::Bin2(const math::Vec2<double>& min_, const math::Vec2<double>& max_, const math::Vec2<size_t>& res_) noexcept
           : _min(min_)
           , _max(max_)
           , _width((max_ - min_) / res_)
