@@ -84,12 +84,12 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double                    min() const noexcept;
-            inline double                    max() const noexcept;
-            inline double                    width() const noexcept;
-            inline const std::vector<T>&     counts() const noexcept;
-            inline double                    centre(size_t index_) const noexcept;
-            inline const std::vector<double> centres() const noexcept;
+            inline double                min() const noexcept;
+            inline double                max() const noexcept;
+            inline double                width() const noexcept;
+            inline const std::vector<T>& counts() const noexcept;
+            inline double                centre(size_t index_) const noexcept;
+            inline std::vector<double>   centres() const noexcept;
 
             //  -- Collection --
             virtual inline void collect(double pos_, T weight_) noexcept = 0; //!< Collect a weight, at a position, into the bin array. @param  pos_    Position of the weight. @param  weight_ Weight of value to be binned.
@@ -237,7 +237,7 @@ namespace arc //! arctk namespace
          *  @return Vector of bin centre positions.
          */
         template <typename T>
-        inline const std::vector<double> Bin<T>::centres() const noexcept
+        inline std::vector<double> Bin<T>::centres() const noexcept
         {
             std::vector<double> centres(_counts.size());
 
