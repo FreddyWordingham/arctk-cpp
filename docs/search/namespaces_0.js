@@ -3,6 +3,7 @@ var searchData=
   ['ansi',['ansi',['../namespacearc_1_1ansi.html',1,'arc']]],
   ['arc',['arc',['../namespacearc.html',1,'']]],
   ['bin',['bin',['../namespacearc_1_1data_1_1bin.html',1,'arc::data']]],
+  ['bin2',['bin2',['../namespacearc_1_1data_1_1bin2.html',1,'arc::data']]],
   ['camera',['camera',['../namespacearc_1_1gui_1_1camera.html',1,'arc::gui']]],
   ['config',['config',['../namespacearc_1_1config.html',1,'arc']]],
   ['constant',['constant',['../namespacearc_1_1constant.html',1,'arc']]],

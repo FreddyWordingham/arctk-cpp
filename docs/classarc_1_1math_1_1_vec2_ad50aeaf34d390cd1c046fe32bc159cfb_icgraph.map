@@ -1,6 +1,6 @@
 <map id="arc::math::Vec2::Vec2" name="arc::math::Vec2::Vec2">
-<area shape="rect" id="node2" href="$classarc_1_1math_1_1_vec2.html#ada3266af5dea992bcc0a1e0b4fd7e5ca" title="arc::math::Vec2::operator+" alt="" coords="204,5,383,31"/>
-<area shape="rect" id="node3" href="$classarc_1_1math_1_1_vec2.html#a412d217cc965d1e386a25ce76caa5905" title="arc::math::Vec2::operator&#45;" alt="" coords="206,55,382,80"/>
-<area shape="rect" id="node4" href="$classarc_1_1math_1_1_vec2.html#a0c1196cda153bce2755404e474b4ede9" title="arc::math::Vec2::operator*" alt="" coords="206,104,382,129"/>
-<area shape="rect" id="node5" href="$classarc_1_1math_1_1_vec2.html#ae211265b6c464ad5655b09e257f31943" title="arc::math::Vec2::operator/" alt="" coords="206,153,381,179"/>
+<area shape="rect" id="node2" href="$classarc_1_1math_1_1_vec2.html#ada3266af5dea992bcc0a1e0b4fd7e5ca" title="arc::math::Vec2\&lt; double\l \&gt;::operator+" alt="" coords="204,5,370,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1math_1_1_vec2.html#a412d217cc965d1e386a25ce76caa5905" title="arc::math::Vec2\&lt; double\l \&gt;::operator&#45;" alt="" coords="204,68,370,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1math_1_1_vec2.html#a0c1196cda153bce2755404e474b4ede9" title="arc::math::Vec2\&lt; double\l \&gt;::operator*" alt="" coords="204,131,370,169"/>
+<area shape="rect" id="node5" href="$classarc_1_1math_1_1_vec2.html#ae211265b6c464ad5655b09e257f31943" title="arc::math::Vec2\&lt; double\l \&gt;::operator/" alt="" coords="204,193,370,232"/>
 </map>

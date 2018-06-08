@@ -4,6 +4,7 @@ var searchData=
   ['vbo',['vbo',['../classarc_1_1gui_1_1_actor.html#a4d68b03713fdf7856e441d06b03cffd2',1,'arc::gui::Actor']]],
   ['vec2',['Vec2',['../classarc_1_1math_1_1_vec2.html',1,'arc::math::Vec2&lt; T &gt;'],['../classarc_1_1math_1_1_vec2.html#ad50aeaf34d390cd1c046fe32bc159cfb',1,'arc::math::Vec2::Vec2() noexcept'],['../classarc_1_1math_1_1_vec2.html#af62e90e9cd9b383acd6c75a22fc5e82e',1,'arc::math::Vec2::Vec2(T x_, T y_) noexcept']]],
   ['vec2_2ehpp',['vec2.hpp',['../vec2_8hpp.html',1,'']]],
+  ['vec2_3c_20double_20_3e',['Vec2&lt; double &gt;',['../classarc_1_1math_1_1_vec2.html',1,'arc::math']]],
   ['vec2_5funiform',['vec2_uniform',['../classarc_1_1gui_1_1_actor.html#a0704ea8a2f0617f7782af60b1ab8a8c9',1,'arc::gui::Actor::vec2_uniform()'],['../classarc_1_1gui_1_1_camera.html#ae695b2e62615b76dcc240aa76c493e7e',1,'arc::gui::Camera::vec2_uniform()']]],
   ['vec3',['Vec3',['../classarc_1_1math_1_1_vec3.html',1,'arc::math::Vec3&lt; T &gt;'],['../classarc_1_1math_1_1_vec3.html#a80bd6e5e1b23bd5fc9d2ef2029b0ff75',1,'arc::math::Vec3::Vec3() noexcept'],['../classarc_1_1math_1_1_vec3.html#a7cfaf2ec386b769ab4a355ff0339448a',1,'arc::math::Vec3::Vec3(T x_, T y_, T z_) noexcept']]],
   ['vec3_2ehpp',['vec3.hpp',['../vec3_8hpp.html',1,'']]],
