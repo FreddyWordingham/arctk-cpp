@@ -88,7 +88,7 @@ namespace arc //! arctk namespace
             inline const math::Vec2<double>&          max() const noexcept;
             inline const math::Vec2<double>&          width() const noexcept;
             inline const std::vector<std::vector<T>>& counts() const noexcept;
-            inline double                             centre(size_t index_) const noexcept;
+            inline math::Vec2<double>                 centre(const math::Vec2<size_t>& index_) const noexcept;
             inline const std::vector<double>          centres() const noexcept;
 
             //  -- Collection --
@@ -221,14 +221,16 @@ namespace arc //! arctk namespace
          *
          *  @param  index_  Index of the bin to determine the centre of.
          *
-         *  @pre    index_ must be less than the size of counts.
+         *  @pre    index_.x must be less than the size of counts.
+         *  @pre    index_.y must be less than the size of the first vector stored by counts.
          *
          *  @return Centre position of the bin.
          */
         template <typename T>
-        inline double Bin2<T>::centre(size_t index_) const noexcept
+        inline math::Vec2<double> Bin2<T>::centre(const math::Vec2<size_t>& index_) const noexcept
         {
-            assert(index_ < _counts.size());
+            assert(index_.x < _counts.size());
+            assert(index_.y < _counts.front().size());
 
             return (_min + (_width * (index_ + 0.5)));
         }
