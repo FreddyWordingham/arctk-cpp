@@ -26,6 +26,7 @@
 
 //  -- Arctk --
 #include <arctk/format/table.hpp>
+#include <arctk/math.hpp>
 
 
 
