@@ -84,9 +84,9 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double                    min() const noexcept;
-            inline double                    max() const noexcept;
-            inline double                    width() const noexcept;
+            inline const math::Vec2<double>& min() const noexcept;
+            inline const math::Vec2<double>& max() const noexcept;
+            inline const math::Vec2<double>& width() const noexcept;
             inline const std::vector<T>&     counts() const noexcept;
             inline double                    centre(size_t index_) const noexcept;
             inline const std::vector<double> centres() const noexcept;
@@ -170,7 +170,7 @@ namespace arc //! arctk namespace
          *  @return Range minimum.
          */
         template <typename T>
-        inline double Bin2<T>::min() const noexcept
+        inline const math::Vec2<double>& Bin2<T>::min() const noexcept
         {
             return (_min);
         }
@@ -183,7 +183,7 @@ namespace arc //! arctk namespace
          *  @return Range maximum.
          */
         template <typename T>
-        inline double Bin2<T>::max() const noexcept
+        inline const math::Vec2<double>& Bin2<T>::max() const noexcept
         {
             return (_max);
         }
@@ -196,7 +196,7 @@ namespace arc //! arctk namespace
          *  @return Inter bin width.
          */
         template <typename T>
-        inline double Bin2<T>::width() const noexcept
+        inline const math::Vec2<double>& Bin2<T>::width() const noexcept
         {
             return (_width);
         }
