@@ -65,6 +65,7 @@ namespace arc //! arctk namespace
             inline size_t height() noexcept;
 
             //  -- Collection --
+            inline void collect(size_t row_, size_t col_, double val_) noexcept;
             inline void collect(size_t row_, size_t col_, const math::Vec3<double>& val_) noexcept;
         };
 
@@ -107,6 +108,26 @@ namespace arc //! arctk namespace
 
 
         //  -- Collection --
+        /**
+         *  Collect a uniform value into the image.
+         *
+         *  @param  row_    Row of the pixel to add to.
+         *  @param  col_    Column of the pixel to add to,
+         *  @param  val_    Value to add uniformly to the pixel.
+         *
+         *  @pre    row_ must be less than _width.
+         *  @pre    col_ must be less than _height.
+         *  @pre    val_ must be non-negative.
+         */
+        inline void collect(const size_t row_, const size_t col_, const double val_) noexcept
+        {
+            assert(row_ < _width);
+            assert(col_ < _height);
+            assert(val_ >= 0.0);
+
+            _pixels[row_][col_] += val_;
+        }
+
         /**
          *  Collect a pixel value into the image.
          *
