@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_BIN2_FIXED2_HPP
-#define ARCTK_DATA_BIN2_FIXED2_HPP
+#ifndef ARCTK_DATA_BIN2_FIXED_HPP
+#define ARCTK_DATA_BIN2_FIXED_HPP
 
 
 
@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type of value to be counted.
              */
             template <typename T>
-            class Fixed2 : public Bin2<T>
+            class Fixed : public Bin2<T>
             {
                 //  == FIELDS ==
               private:
@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Fixed2(const math::Vec2<double>& min_, const math::Vec2<double>& max_, const math::Vec2<size_t>& res_) noexcept;
+                inline Fixed(const math::Vec2<double>& min_, const math::Vec2<double>& max_, const math::Vec2<size_t>& res_) noexcept;
 
 
                 //  == METHODS ==
@@ -85,7 +85,7 @@ namespace arc //! arctk namespace
              *  @pre    res_.y must be positive.
              */
             template <typename T>
-            inline Fixed2<T>::Fixed2(const math::Vec2<double>& min_, const math::Vec2<double>& max_, const math::Vec2<size_t>& res_) noexcept
+            inline Fixed<T>::Fixed(const math::Vec2<double>& min_, const math::Vec2<double>& max_, const math::Vec2<size_t>& res_) noexcept
               : Bin2<T>(min_, max_, res_)
               , _misses({})
             {
@@ -106,7 +106,7 @@ namespace arc //! arctk namespace
              *  @param  weight_ Weight of value to be binned.
              */
             template <typename T>
-            inline void Fixed2<T>::collect(const math::Vec2<double>& pos_, const T weight_) noexcept
+            inline void Fixed<T>::collect(const math::Vec2<double>& pos_, const T weight_) noexcept
             {
                 if ((pos_.x < Bin2<T>::_min.x) || (pos_.y < Bin2<T>::_min.y) || (pos_.x > Bin2<T>::_max.x) || (pos_.y > Bin2<T>::_max.y))
                 {
@@ -134,4 +134,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_DATA_BIN2_FIXED2_HPP
+#endif // ARCTK_DATA_BIN2_FIXED_HPP
