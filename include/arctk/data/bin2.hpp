@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
-         *  Histogram class which bins values into a data vector.
+         *  Histogram class which bins values into a two-dimensional data vector.
          *
          *  @tparam T   Type of value to be counted.
          */
