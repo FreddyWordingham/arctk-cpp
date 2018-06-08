@@ -96,7 +96,7 @@ namespace arc //! arctk namespace
 
           protected:
             //  -- Placement --
-            inline size_t index(double pos_) const noexcept;
+            inline math::Vec2<size_t> index(const math::Vec2<double>& pos_) const noexcept;
         };
 
 
@@ -270,14 +270,28 @@ namespace arc //! arctk namespace
          *  @return Index where the position count would be placed.
          */
         template <typename T>
-        inline size_t Bin2<T>::index(const double pos_) const noexcept
+        inline math::Vec2<size_t> Bin2<T>::index(const math::Vec2<double>& pos_) const noexcept
         {
-            assert(pos_ >= _min);
-            assert(pos_ <= _max);
+            assert(pos_.x >= _min.x);
+            assert(pos_.y >= _min.y);
+            assert(pos_.x <= _max.x);
+            assert(pos_.y <= _max.y);
 
-            const auto index = static_cast<size_t>((pos_ - _min) / _width);
+            math::Vec2<size_t> index;
 
-            return ((index == _counts.size()) ? (index - 1) : index);
+            index.x = static_cast<size_t>((pos_.x - _min.x) / _width.x);
+            if (index.x == _counts.size())
+            {
+                --index.x;
+            }
+
+            index.y = static_cast<size_t>((pos_.y - _min.y) / _width.y);
+            if (index.y == _counts.front().size())
+            {
+                --index.y;
+            }
+
+            return (index);
         }
 
 
