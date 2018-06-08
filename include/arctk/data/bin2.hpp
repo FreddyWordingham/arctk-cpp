@@ -112,18 +112,22 @@ namespace arc //! arctk namespace
          *  @param  max_    Maximum range bound of the bin.
          *  @param  res_    Resolution of the bin.
          *
-         *  @pre    min_ must me less than max_.
-         *  @pre    res_ must be positive.
+         *  @pre    min_.x must me less than max_.x.
+         *  @pre    min_.y must me less than max_.y.
+         *  @pre    res_.x must be positive.
+         *  @pre    res_.y must be positive.
          */
         template <typename T>
         inline Bin2<T>::Bin2(const math::Vec2<double>& min_, const math::Vec2<double>& max_, const math::Vec2<size_t>& res_) noexcept
           : _min(min_)
           , _max(max_)
-          , _width((max_ - min_) / res_)
-          , _counts(res_)
+          , _width({(max_.x - min_.x) / res_.x}, {(max_.y - min_.y) / res_.y})
+          , _counts(std::vector<std::vector<T>>(res_.x, std::vector<T>(res_.y)))
         {
-            assert(min_ < max_);
-            assert(res_ > 0);
+            assert(min_.x < max_.x);
+            assert(min_.y < max_.y);
+            assert(res_.x > 0);
+            assert(res_.y > 0);
         }
 
 
