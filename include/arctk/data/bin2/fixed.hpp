@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/data/bin/fixed.hpp
- *  @date   02/06/2018
+ *  @file   arctk/data/bin2/fixed.hpp
+ *  @date   08/06/2018
  *  @author Freddy Wordingham
  *
- *  Fixed range data binning base class.
+ *  Fixed range two-dimensional data binning base class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_BIN_FIXED_HPP
-#define ARCTK_DATA_BIN_FIXED_HPP
+#ifndef ARCTK_DATA_BIN2_FIXED_HPP
+#define ARCTK_DATA_BIN2_FIXED_HPP
 
 
 
@@ -24,7 +24,7 @@
 #include <cassert>
 
 //  -- Arctk --
-#include <arctk/data/bin.hpp>
+#include <arctk/data/bin2.hpp>
 
 
 
@@ -40,12 +40,12 @@ namespace arc //! arctk namespace
 
             //  == CLASS ==
             /**
-             *  Fixed range histogram class which bins values into a data vector.
+             *  Fixed range two-dimensional histogram class which bins values into a data vector.
              *
              *  @tparam T   Type of value to be counted.
              */
             template <typename T>
-            class Fixed : public Bin<T>
+            class Fixed : public Bin2<T>
             {
                 //  == FIELDS ==
               private:
@@ -127,4 +127,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_DATA_BIN_FIXED_HPP
+#endif // ARCTK_DATA_BIN2_FIXED_HPP
