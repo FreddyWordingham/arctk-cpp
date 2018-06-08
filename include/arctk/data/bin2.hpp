@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/data/bin.hpp
- *  @date   02/06/2018
+ *  @file   arctk/data/bin2.hpp
+ *  @date   08/06/2018
  *  @author Freddy Wordingham
  *
- *  Data binning base class.
+ *  Two-dimensional data binning base class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_BIN_HPP
-#define ARCTK_DATA_BIN_HPP
+#ifndef ARCTK_DATA_BIN2_HPP
+#define ARCTK_DATA_BIN2_HPP
 
 
 
@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type of value to be counted.
          */
         template <typename T>
-        class Bin
+        class Bin2
         {
             //  == FIELDS ==
           protected:
@@ -62,23 +62,23 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Bin(double min_, double max_, size_t res_) noexcept;
-            inline Bin(const Bin&)     = default; //!< Defaulted copy constructor.
-            inline Bin(Bin&&) noexcept = default; //!< Defaulted move constructor.
+            inline Bin2(double min_, double max_, size_t res_) noexcept;
+            inline Bin2(const Bin2&)     = default; //!< Defaulted copy constructor.
+            inline Bin2(Bin2&&) noexcept = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
-            virtual inline ~Bin() noexcept = 0;
+            virtual inline ~Bin2() noexcept = 0;
 
 
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            inline Bin& operator=(const Bin&) = default;     //!< Defaulted copy operator. @return Reference to copied object.
-            inline Bin& operator=(Bin&&) noexcept = default; //!< Defaulted move operator. @return Reference to moved object.
+            inline Bin2& operator=(const Bin2&) = default;     //!< Defaulted copy operator. @return Reference to copied object.
+            inline Bin2& operator=(Bin2&&) noexcept = default; //!< Defaulted move operator. @return Reference to moved object.
 
             //  -- Stream --
             template <typename S, typename L>
-            friend inline S& operator<<(S& stream_, const Bin<L>& bin_) noexcept;
+            friend inline S& operator<<(S& stream_, const Bin2<L>& bin_) noexcept;
 
 
             //  == METHODS ==
@@ -116,7 +116,7 @@ namespace arc //! arctk namespace
          *  @pre    res_ must be positive.
          */
         template <typename T>
-        inline Bin<T>::Bin(const double min_, const double max_, const size_t res_) noexcept
+        inline Bin2<T>::Bin2(const double min_, const double max_, const size_t res_) noexcept
           : _min(min_)
           , _max(max_)
           , _width((max_ - min_) / res_)
@@ -129,7 +129,7 @@ namespace arc //! arctk namespace
 
         //  -- Destructors --
         template <typename T>
-        inline Bin<T>::~Bin() noexcept = default;
+        inline Bin2<T>::~Bin2() noexcept = default;
 
 
 
@@ -147,7 +147,7 @@ namespace arc //! arctk namespace
          *  @return A reference to the stream post-print.
          */
         template <typename S, typename L>
-        inline S& operator<<(S& stream_, const Bin<L>& bin_) noexcept
+        inline S& operator<<(S& stream_, const Bin2<L>& bin_) noexcept
         {
             stream_ << format::cols(10, ", ", bin_.centres(), bin_._counts);
 
@@ -166,7 +166,7 @@ namespace arc //! arctk namespace
          *  @return Range minimum.
          */
         template <typename T>
-        inline double Bin<T>::min() const noexcept
+        inline double Bin2<T>::min() const noexcept
         {
             return (_min);
         }
@@ -179,7 +179,7 @@ namespace arc //! arctk namespace
          *  @return Range maximum.
          */
         template <typename T>
-        inline double Bin<T>::max() const noexcept
+        inline double Bin2<T>::max() const noexcept
         {
             return (_max);
         }
@@ -192,7 +192,7 @@ namespace arc //! arctk namespace
          *  @return Inter bin width.
          */
         template <typename T>
-        inline double Bin<T>::width() const noexcept
+        inline double Bin2<T>::width() const noexcept
         {
             return (_width);
         }
@@ -205,7 +205,7 @@ namespace arc //! arctk namespace
          *  @return Bin counts vector.
          */
         template <typename T>
-        inline const std::vector<T>& Bin<T>::counts() const noexcept
+        inline const std::vector<T>& Bin2<T>::counts() const noexcept
         {
             return (_counts);
         }
@@ -222,7 +222,7 @@ namespace arc //! arctk namespace
          *  @return Centre position of the bin.
          */
         template <typename T>
-        inline double Bin<T>::centre(size_t index_) const noexcept
+        inline double Bin2<T>::centre(size_t index_) const noexcept
         {
             assert(index_ < _counts.size());
 
@@ -237,7 +237,7 @@ namespace arc //! arctk namespace
          *  @return Vector of bin centre positions.
          */
         template <typename T>
-        inline const std::vector<double> Bin<T>::centres() const noexcept
+        inline const std::vector<double> Bin2<T>::centres() const noexcept
         {
             std::vector<double> centres(_counts.size());
 
@@ -261,7 +261,7 @@ namespace arc //! arctk namespace
          *  @return Index where the position count would be placed.
          */
         template <typename T>
-        inline size_t Bin<T>::index(const double pos_) const noexcept
+        inline size_t Bin2<T>::index(const double pos_) const noexcept
         {
             assert(pos_ >= _min);
             assert(pos_ <= _max);
@@ -284,4 +284,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_DATA_BIN_HPP
+#endif // ARCTK_DATA_BIN2_HPP
