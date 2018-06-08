@@ -25,7 +25,7 @@
 #include <arctk/data/bin/dynamic.hpp>
 #include <arctk/data/bin/fixed.hpp>
 #include <arctk/data/bin2.hpp>
-#include <arctk/data/bin2/fixed.hpp>
+#include <arctk/data/bin2/fixed2.hpp>
 #include <arctk/data/image.hpp>
 
 
