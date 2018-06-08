@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
             math::Vec2<double> _width; //!< Bin bag width.
 
             //  -- Counts --
-            std::vector<T> _counts; //!< Hit count of each bin.
+            std::vector<std::vector<T>> _counts; //!< Hit count of each bin.
 
 
             //  == INSTANTIATION ==
