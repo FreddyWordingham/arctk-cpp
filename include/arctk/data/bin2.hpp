@@ -122,7 +122,7 @@ namespace arc //! arctk namespace
         inline Bin2<T>::Bin2(const math::Vec2<double>& min_, const math::Vec2<double>& max_, const math::Vec2<size_t>& res_) noexcept
           : _min(min_)
           , _max(max_)
-          , _width({(max_.x - min_.x) / res_.x, (max_.y - min_.y) / res_.y})
+          , _width((max_.x - min_.x) / res_.x, (max_.y - min_.y) / res_.y)
           , _counts(std::vector<std::vector<T>>(res_.x, std::vector<T>(res_.y)))
         {
             assert(min_.x < max_.x);
