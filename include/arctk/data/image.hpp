@@ -160,17 +160,37 @@ namespace arc //! arctk namespace
         //  -- Saving --
         /**
          *  Save the image to a file.
+         *  Normalise the values of the image using the normalisation value given.
+         *
+         *  @param  path_   Path to the save file.
+         *  @param  norm_   Normalisation value.
+         *
+         *  @pre    path_ must not be empty;
+         *  @pre    norm must be non-negative.
+         */
+        inline void Image::save(const std::string& path_, const double norm_) const noexcept
+        {
+            assert(!path_.empty());
+            assert(norm_ > 0.0);
+
+            save(path_, {norm_, norm_, norm_});
+        }
+
+        /**
+         *  Save the image to a file.
          *  Normalise the values of the image using the normalisation vector given.
          *
          *  @param  path_   Path to the save file.
          *  @param  norm_   Normalisation values to be applied.
          *
+         *  @pre    path_ must not be empty;
          *  @pre    norm.r must be non-negative.
          *  @pre    norm.g must be non-negative.
          *  @pre    norm.b must be non-negative.
          */
         inline void Image::save(const std::string& path_, const math::Vec3<double>& norm_) const noexcept
         {
+            assert(!path_.empty());
             assert(norm_.r > 0.0);
             assert(norm_.g > 0.0);
             assert(norm_.b > 0.0);
