@@ -25,6 +25,7 @@
 
 //  -- Arctk --
 #include <arctk/data/bin2.hpp>
+#include <arctk/math.hpp>
 
 
 
@@ -56,7 +57,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Fixed(double min_, double max_, size_t res_) noexcept;
+                inline Fixed(const math::Vec2<double>& min_, const math::Vec2<double>& max_, const math::Vec2<size_t>& res_) noexcept;
 
 
                 //  == METHODS ==
@@ -78,16 +79,20 @@ namespace arc //! arctk namespace
              *  @param  max_    Maximum range bound of the bin.
              *  @param  res_    Resolution of the bin.
              *
-             *  @pre    min_ must me less than max_.
-             *  @pre    res_ must be positive.
+             *  @pre    min_.x must me less than max_.x.
+             *  @pre    min_.y must me less than max_.y.
+             *  @pre    res_.x must be positive.
+             *  @pre    res_.y must be positive.
              */
             template <typename T>
-            inline Fixed<T>::Fixed(const double min_, const double max_, const size_t res_) noexcept
-              : Bin<T>(min_, max_, res_)
+            inline Fixed<T>::Fixed(const math::Vec2<double>& min_, const math::Vec2<double>& max_, const math::Vec2<size_t>& res_) noexcept
+              : Bin2<T>(min_, max_, res_)
               , _misses({})
             {
-                assert(min_ < max_);
-                assert(res_ > 0);
+                assert(min_.x < max_.x);
+                assert(min_.y < max_.y);
+                assert(res_.x > 0);
+                assert(res_.y > 0);
             }
 
 
