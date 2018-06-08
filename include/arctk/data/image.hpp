@@ -82,7 +82,7 @@ namespace arc //! arctk namespace
         inline Image::Image(const size_t width_, const size_t height_) noexcept
           : _width(width_)
           , _height(height_)
-          , _pixels(std::vector<std::vector<math::math::Vec3<double>>>(width_, std::vector<math::Vec3<double>>(height_)))
+          , _pixels(std::vector<std::vector<math::Vec3<double>>>(width_, std::vector<math::Vec3<double>>(height_)))
         {
             assert(width_ > 0);
             assert(height_ > 0);
@@ -172,7 +172,7 @@ namespace arc //! arctk namespace
         {
             assert(!path_.empty());
 
-            const double max = 0.0;
+            double max = 0.0;
             for (size_t i = 0; i < _height; ++i)
             {
                 for (size_t j = 0; j < _width; ++j)
