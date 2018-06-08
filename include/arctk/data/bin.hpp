@@ -226,7 +226,7 @@ namespace arc //! arctk namespace
         {
             assert(index_ < _counts.size());
 
-            return (_min + (_width * (index_ + 0.5)));
+            return (_min + (_width * (static_cast<double>(index_) + 0.5)));
         }
 
         /**
