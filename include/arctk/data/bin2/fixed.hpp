@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Counts --
-                T _misses; //!< Sum of total range misses.
+                T _misses{}; //!< Sum of total range misses.
 
 
                 //  == INSTANTIATION ==
@@ -87,7 +87,6 @@ namespace arc //! arctk namespace
             template <typename T>
             inline Fixed<T>::Fixed(const math::Vec2<double>& min_, const math::Vec2<double>& max_, const math::Vec2<size_t>& res_) noexcept
               : Bin2<T>(min_, max_, res_)
-              , _misses({})
             {
                 assert(min_.x < max_.x);
                 assert(min_.y < max_.y);
