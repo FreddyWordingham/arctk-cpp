@@ -34,7 +34,7 @@ namespace arc //! arctk namespace
 {
     namespace data //! data namespace
     {
-        namespace bin //! binning namespace
+        namespace bin2 //! binning namespace
         {
 
 
@@ -122,7 +122,7 @@ namespace arc //! arctk namespace
 
 
 
-        } // namespace bin
+        } // namespace bin2
     }     // namespace data
 } // namespace arc
 
