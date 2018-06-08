@@ -245,11 +245,14 @@ namespace arc //! arctk namespace
         template <typename T>
         inline std::vector<std::vector<double>> Bin2<T>::centres() const noexcept
         {
-            std::vector<double> centres(_counts.size());
+            std::vector<std::vector<math::Vec2<double>>> centres(counts.size(), std::vector<math::Vec2<double>>(counts.front().size()));
 
             for (size_t i = 0; i < centres.size(); ++i)
             {
-                centres[i] = centre(i);
+                for (size_t j = 0; j < centres.front().size(); ++j)
+                {
+                    centres[i][j] = centre({i, j});
+                }
             }
 
             return (centres);
