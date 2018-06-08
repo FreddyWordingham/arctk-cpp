@@ -191,7 +191,7 @@ namespace arc //! arctk namespace
             assert(str_.size() == sizeof...(A));
 
             std::tuple<A...> tup;
-            string_helper(str_, tup, std::index_sequence_for<A...>());
+            from_str_helper(str_, tup, std::index_sequence_for<A...>());
 
             return (tup);
         }
