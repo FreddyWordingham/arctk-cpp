@@ -97,25 +97,25 @@ namespace arc //! arctk namespace
         //  == METHODS ==
         //  -- Getters --
         template <typename T>
-        inline double Bin<T>::min() const noexcept
+        inline double Bucket<T>::min() const noexcept
         {
             return (_min);
         }
 
         template <typename T>
-        inline double Bin<T>::max() const noexcept
+        inline double Bucket<T>::max() const noexcept
         {
             return (_max);
         }
 
         template <typename T>
-        inline double Bin<T>::width() const noexcept
+        inline double Bucket<T>::width() const noexcept
         {
             return (_width);
         }
 
         template <typename T>
-        inline const std::vector<T>& Bin<T>::bins() const noexcept
+        inline const std::vector<T>& Bucket<T>::bins() const noexcept
         {
             return (_bins);
         }
@@ -123,7 +123,7 @@ namespace arc //! arctk namespace
 
         //  -- Placement --
         template <typename T>
-        inline size_t Bin<T>::find_index(double pos_) const noexcept
+        inline size_t Bucket<T>::find_index(double pos_) const noexcept
         {
             assert(pos_ >= _min);
             assert(pos_ <= _max);
