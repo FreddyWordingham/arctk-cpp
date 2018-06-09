@@ -63,6 +63,9 @@ namespace arc //! arctk namespace
               public:
                 //  -- Getters --
                 inline unsigned int misses() noexcept;
+
+                //  -- Collection --
+                inline void collect(const std::vector<double>& pos_, T val_) noexcept override;
             };
 
 
@@ -86,6 +89,25 @@ namespace arc //! arctk namespace
             inline unsigned int Fixed<T>::misses() noexcept
             {
                 return (_misses);
+            }
+
+
+            //  -- Collection --
+            template <typename T>
+            inline void Fixed<T>::collect(const std::vector<double>& pos_, T val_) noexcept override
+            {
+                assert(pos_.size() == 1);
+
+                if ((pos_.back() < Bin<T>::_min) || (pos_.back() > Bin<T>::_max))
+                {
+                    ++_misses;
+
+                    return;
+                }
+
+                const size_t index = Bin<T>::find_index(pos_.back());
+
+                Bin<T>::_bins[Bin<T>::find_index(pos_.back())] += val_;
             }
 
 
