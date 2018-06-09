@@ -45,6 +45,11 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Bounds --
+            double _min; //!< Minimum bound of the bin range.
+            double _max; //!< Maximum bound of the bin range.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
