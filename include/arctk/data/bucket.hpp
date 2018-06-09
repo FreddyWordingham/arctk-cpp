@@ -130,7 +130,7 @@ namespace arc //! arctk namespace
 
             const auto index = static_cast<size_t>((pos_ - _min) / _width);
 
-            return ((index == _counts.size()) ? (index - 1) : index);
+            return ((index == _bins.size()) ? (index - 1) : index);
         }
 
 
