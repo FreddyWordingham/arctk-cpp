@@ -18,6 +18,7 @@
 #include <arctk/constant/math.hpp>
 #include <arctk/constant/phys.hpp>
 #include <arctk/data.hpp>
+#include <arctk/data/bin.hpp>
 #include <arctk/format.hpp>
 #include <arctk/format/table.hpp>
 #include <arctk/geom.hpp>
