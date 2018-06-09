@@ -68,6 +68,9 @@ namespace arc //! arctk namespace
             inline double                width() const noexcept;
             inline const std::vector<T>& bins() const noexcept;
 
+            //  -- Collection --
+            virtual inline void collect(const std::vector<double>& pos_, T val_) noexcept = 0;
+
           private:
             //  -- Placement --
             inline size_t find_index(double pos_) const noexcept;
