@@ -121,6 +121,7 @@ namespace arc //! arctk namespace
           : _min(min_)
           , _max(max_)
           , _width((max_ - min_) / res_)
+          , _size(res_)
           , _counts(res_)
         {
             assert(min_ < max_);
