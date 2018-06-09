@@ -59,6 +59,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Bin(double min_, double max_, size_t res_) noexcept;
 
             //  == METHODS ==
           public:
@@ -80,11 +81,16 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-
-
-
-        //  == OPERATORS ==
-        //  -- Stream --
+        template <typename T>
+        inline Bin<T>::Bin(const double min_, const double max_, const size_t res_) noexcept
+          : _min(min_)
+          , _max(max_)
+          , _width((max_ - min_) / res_)
+          , _bins(res_)
+        {
+            assert(min_ < max_);
+            assert(res_ > 0);
+        }
 
 
 
