@@ -89,7 +89,7 @@ namespace arc //! arctk namespace
             inline const std::vector<T>& bins() const noexcept;
 
             //  -- Collection --
-            virtual inline void collect(const std::vector<double>& pos_, T val_) noexcept = 0;
+            virtual inline void collect(std::vector<double>& pos_, T val_) noexcept = 0;
 
           private:
             //  -- Placement --
