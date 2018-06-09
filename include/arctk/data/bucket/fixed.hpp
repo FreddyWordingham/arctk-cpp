@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             template <typename T>
             inline Fixed<T>::Fixed(const double min_, const double max_, const size_t res_) noexcept
-              : Bin<T>(min_, max_, res_)
+              : Bucket<T>(min_, max_, res_)
               , _misses(0)
             {
                 assert(min_ < max_);
@@ -98,16 +98,16 @@ namespace arc //! arctk namespace
             {
                 assert(pos_.size() == 1);
 
-                if ((pos_.back() < Bin<T>::_min) || (pos_.back() > Bin<T>::_max))
+                if ((pos_.back() < Bucket<T>::_min) || (pos_.back() > Bucket<T>::_max))
                 {
                     ++_misses;
 
                     return;
                 }
 
-                const size_t index = Bin<T>::find_index(pos_.back());
+                const size_t index = Bucket<T>::find_index(pos_.back());
 
-                Bin<T>::_bins[Bin<T>::find_index(pos_.back())] += val_;
+                Bucket<T>::_bins[Bucket<T>::find_index(pos_.back())] += val_;
             }
 
 
