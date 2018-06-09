@@ -46,8 +46,8 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Bounds --
-            double _min; //!< Minimum bound of the bin range.
-            double _max; //!< Maximum bound of the bin range.
+            double _min; //!< Minimum bound of the bucket range.
+            double _max; //!< Maximum bound of the bucket range.
 
             //  -- Data --
             std::vector<T> _bins; //!< Individual bin data.
