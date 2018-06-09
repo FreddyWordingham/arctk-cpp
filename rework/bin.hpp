@@ -54,7 +54,6 @@ namespace arc //! arctk namespace
 
             //  -- Properties --
             double _width; //!< Bin bag width.
-            size_t _size;  //!< Number of bins.
 
             //  -- Counts --
             std::vector<T> _counts; //!< Hit count of each bin.
@@ -121,7 +120,6 @@ namespace arc //! arctk namespace
           : _min(min_)
           , _max(max_)
           , _width((max_ - min_) / res_)
-          , _size(res_)
           , _counts(res_)
         {
             assert(min_ < max_);
