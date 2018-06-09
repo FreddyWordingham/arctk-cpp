@@ -60,6 +60,9 @@ namespace arc //! arctk namespace
 
 
                 //  == METHODS ==
+              public:
+                //  -- Getters --
+                inline unsigned int misses() noexcept;
             };
 
 
@@ -73,6 +76,16 @@ namespace arc //! arctk namespace
             {
                 assert(min_ < max_);
                 assert(res_ > 0);
+            }
+
+
+
+            //  == METHODS ==
+            //  -- Getters --
+            template <typename T>
+            inline unsigned int Fixed<T>::misses() noexcept
+            {
+                return (_misses);
             }
 
 
