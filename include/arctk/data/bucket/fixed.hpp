@@ -94,7 +94,7 @@ namespace arc //! arctk namespace
 
             //  -- Collection --
             template <typename T>
-            inline void Fixed<T>::collect(const std::vector<double>& pos_, T val_) noexcept override
+            inline void Fixed<T>::collect(const std::vector<double>& pos_, T val_) noexcept
             {
                 assert(pos_.size() == 1);
 
