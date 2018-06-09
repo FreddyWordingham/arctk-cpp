@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/data/bin.hpp
+ *  @file   arctk/data/bucket.hpp
  *  @date   09/06/2018
  *  @author Freddy Wordingham
  *
