@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
                 inline unsigned int misses() noexcept;
 
                 //  -- Collection --
-                inline void collect(const std::vector<double>& pos_, T val_) noexcept;
+                inline void collect(std::vector<double>& pos_, T val_) noexcept override;
             };
 
 
