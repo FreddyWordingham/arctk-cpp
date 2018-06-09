@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
              *  Fixed range histogram class which bins values into a data vector.
              *
              *  @tparam T   Type of value to be counted.
-             */
+             *//*
             template <typename T>
             class Fixed : public Bucket<T>
             {
@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Fixed(double min_, double max_, size_t res_) noexcept;
+                inline Fixed(std::vector<double> min_, std::vector<double> max_, std::vector<size_t> res_) noexcept;
 
 
                 //  == METHODS ==
@@ -73,12 +73,12 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename T>
-            inline Fixed<T>::Fixed(const double min_, const double max_, const size_t res_) noexcept
+            inline Fixed<T>::Fixed(std::vector<double> min_, std::vector<double> max_, std::vector<size_t> res_) noexcept
               : Bucket<T>(min_, max_, res_)
               , _misses(0)
             {
-                assert(min_ < max_);
-                assert(res_ > 0);
+                assert(min_.back() < max_.back());
+                assert(res_.back() > 0);
             }
 
 
@@ -107,7 +107,7 @@ namespace arc //! arctk namespace
 
                 const size_t index = Bucket<T>::find_index(pos_.back());
 
-                if constexpr (is_bucket<T>::type)
+                if constexpr (is_bucket<T>::value)
                 {
                     pos_.pop_back();
                     collect(pos_, val_);
@@ -116,7 +116,7 @@ namespace arc //! arctk namespace
                 {
                     Bucket<T>::_bins[index] += val_;
                 }
-            }
+            }*/
 
 
 

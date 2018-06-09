@@ -80,7 +80,11 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Bucket(double min_, double max_, size_t res_) noexcept;
+            inline Bucket(std::vector<double> min_, std::vector<double> max_, std::vector<size_t> res_) noexcept;
+
+            //  -- Initialisation --
+            inline std::vector<T> init_bins(std::vector<double> min_, std::vector<double> max_, std::vector<size_t> res_) noexcept;
+
 
             //  == METHODS ==
           public:
@@ -91,7 +95,33 @@ namespace arc //! arctk namespace
             inline const std::vector<T>& bins() const noexcept;
 
             //  -- Collection --
-            virtual inline void collect(std::vector<double>& pos_, T val_) noexcept = 0;
+            template <typename S>
+            inline void collect(std::vector<double> pos_, const S& val_) noexcept
+            {
+                if constexpr (!is_bucket<T>::value)
+                {
+                    assert(pos_.size() == 1);
+                }
+
+                const double pos = pos_.back();
+                pos_.pop_back();
+
+                if ((pos < _min) || (pos > _max))
+                {
+                    return;
+                }
+
+                const size_t index = find_index(pos);
+
+                if constexpr (is_bucket<T>::value)
+                {
+                    _bins[index].collect(pos_, val_);
+                }
+                else
+                {
+                    _bins[index] += val_;
+                }
+            }
 
           protected:
             //  -- Placement --
@@ -103,14 +133,37 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <typename T>
-        inline Bucket<T>::Bucket(const double min_, const double max_, const size_t res_) noexcept
-          : _min(min_)
-          , _max(max_)
-          , _width((max_ - min_) / res_)
-          , _bins(res_)
+        inline Bucket<T>::Bucket(std::vector<double> min_, std::vector<double> max_, std::vector<size_t> res_) noexcept
+          : _min(min_.back())
+          , _max(max_.back())
+          , _width((max_.back() - min_.back()) / res_.back())
+          , _bins(init_bins(min_, max_, res_))
         {
-            assert(min_ < max_);
-            assert(res_ > 0);
+        }
+
+        //  -- Initialisation --
+        template <typename T>
+        inline std::vector<T> Bucket<T>::init_bins(std::vector<double> min_, std::vector<double> max_, std::vector<size_t> res_) noexcept
+        {
+            const double min = min_.back();
+            const double max = max_.back();
+            const double res = res_.back();
+
+            min_.pop_back();
+            max_.pop_back();
+            res_.pop_back();
+
+            assert(min < max);
+            assert(res > 0);
+
+            if constexpr (is_bucket<T>::value)
+            {
+                return (std::vector<T>(res, T(min_, max_, res_)));
+            }
+            else
+            {
+                return (std::vector<T>(res));
+            }
         }
 
 
