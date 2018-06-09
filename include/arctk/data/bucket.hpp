@@ -92,7 +92,7 @@ namespace arc //! arctk namespace
             //  -- Collection --
             virtual inline void collect(std::vector<double>& pos_, T val_) noexcept = 0;
 
-          private:
+          protected:
             //  -- Placement --
             inline size_t find_index(double pos_) const noexcept;
         };
