@@ -18,12 +18,6 @@
 #include <arctk/constant/math.hpp>
 #include <arctk/constant/phys.hpp>
 #include <arctk/data.hpp>
-#include <arctk/data/bin.hpp>
-#include <arctk/data/bin/dynamic.hpp>
-#include <arctk/data/bin/fixed.hpp>
-#include <arctk/data/bin2.hpp>
-#include <arctk/data/bin2/fixed.hpp>
-#include <arctk/data/image.hpp>
 #include <arctk/format.hpp>
 #include <arctk/format/table.hpp>
 #include <arctk/geom.hpp>
