@@ -67,6 +67,11 @@ namespace arc //! arctk namespace
             inline double                max() const noexcept;
             inline double                width() const noexcept;
             inline const std::vector<T>& bins() const noexcept;
+
+
+          private:
+            //  -- Placement --
+            inline size_t find_index(double pos_) const noexcept;
         };
 
 
@@ -105,6 +110,19 @@ namespace arc //! arctk namespace
         inline const std::vector<T>& Bin<T>::bins() const noexcept
         {
             return (_bins);
+        }
+
+
+        //  -- Placement --
+        template <typename T>
+        inline size_t Bin<T>::find_index(double pos_) const noexcept
+        {
+            assert(pos_ >= _min);
+            assert(pos_ <= _max);
+
+            const auto index = static_cast<size_t>((pos_ - _min) / _width);
+
+            return ((index == _counts.size()) ? (index - 1) : index);
         }
 
 
