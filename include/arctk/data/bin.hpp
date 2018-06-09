@@ -41,7 +41,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type of value to be counted.
          */
         template <typename T>
-        class Bin
+        class Bucket
         {
             //  == FIELDS ==
           private:
