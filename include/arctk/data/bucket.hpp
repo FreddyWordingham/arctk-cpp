@@ -34,6 +34,12 @@ namespace arc //! arctk namespace
 
 
 
+        //  == CLASS PROTOTYPES ==
+        template <typename T>
+        class Bucket;
+
+
+
         //  == STRUCTS ==
         template <typename>
         struct is_bucket : std::false_type
