@@ -49,6 +49,9 @@ namespace arc //! arctk namespace
             double _min; //!< Minimum bound of the bucket range.
             double _max; //!< Maximum bound of the bucket range.
 
+            //  -- Properties --
+            double _width; //!< Bin width.
+
             //  -- Data --
             std::vector<T> _bins; //!< Individual bin data.
 
