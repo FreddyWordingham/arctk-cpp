@@ -64,6 +64,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline double min() const noexcept;
+            inline double max() const noexcept;
         };
 
 
@@ -84,6 +85,12 @@ namespace arc //! arctk namespace
         inline double Bin<T>::min() const noexcept
         {
             return (_min);
+        }
+
+        template <typename T>
+        inline double Bin<T>::max() const noexcept
+        {
+            return (_max);
         }
 
 
