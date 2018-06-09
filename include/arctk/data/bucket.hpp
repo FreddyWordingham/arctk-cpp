@@ -106,7 +106,7 @@ namespace arc //! arctk namespace
             return (_width);
         }
 
-        template <Typename T>
+        template <typename T>
         inline const std::vector<T>& Bin<T>::bins() const noexcept
         {
             return (_bins);
