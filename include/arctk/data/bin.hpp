@@ -49,6 +49,9 @@ namespace arc //! arctk namespace
             double _min; //!< Minimum bound of the bin range.
             double _max; //!< Maximum bound of the bin range.
 
+            //  -- Data --
+            std::vector<T> _bins; //!< Individual bin data.
+
 
             //  == INSTANTIATION ==
           public:
