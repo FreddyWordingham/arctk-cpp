@@ -50,12 +50,13 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Counts --
-                unsigned int _missed; //!< Number of range misses.
+                unsigned int _misses; //!< Number of range misses.
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Fixed(double min_, double max_, size_t res_) noexcept;
 
 
                 //  == METHODS ==
@@ -64,6 +65,15 @@ namespace arc //! arctk namespace
 
 
             //  == INSTANTIATION ==
+            //  -- Constructors --
+            template <typename T>
+            inline Fixed<T>::Fixed(const double min_, const double max_, const size_t res_) noexcept
+              : Bin<T>(min_, max_, res_)
+              , _misses(0)
+            {
+                assert(min_ < max_);
+                assert(res_ > 0);
+            }
 
 
 
