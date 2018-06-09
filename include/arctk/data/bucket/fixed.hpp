@@ -106,11 +106,11 @@ namespace arc //! arctk namespace
                 }
 
                 const size_t index = Bucket<T>::find_index(pos_.back());
-                pos_.pop_back();
 
                 if constexpr (is_bucket<T>::type)
                 {
-                    Bucket<T>::_bins[index].collect(pos_, val_);
+                    pos_.pop_back();
+                    collect(pos_, val_);
                 }
                 else
                 {
