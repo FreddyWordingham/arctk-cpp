@@ -34,6 +34,14 @@ namespace arc //! arctk namespace
 
 
 
+        //  == STRUCTS ==
+        template <typename>
+        struct is_bucket : std::false_type
+        {
+        };
+
+
+
         //  == CLASS ==
         /**
          *  Histogram class which bins values into a data vector.
