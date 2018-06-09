@@ -46,6 +46,10 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Counts --
+                unsigned int _missed; //!< Number of range misses.
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
