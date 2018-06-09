@@ -40,6 +40,11 @@ namespace arc //! arctk namespace
         {
         };
 
+        template <typename T>
+        struct is_bucket<Bucket<T>> : std::true_type
+        {
+        };
+
 
 
         //  == CLASS ==
