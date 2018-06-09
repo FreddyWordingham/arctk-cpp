@@ -107,7 +107,7 @@ namespace arc //! arctk namespace
 
                 const size_t index = Bucket<T>::find_index(pos_.back());
 
-                Bucket<T>::_bins[Bucket<T>::find_index(pos_.back())] += val_;
+                Bucket<T>::_bins[index] += val_;
             }
 
 
