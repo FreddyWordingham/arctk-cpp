@@ -63,11 +63,12 @@ namespace arc //! arctk namespace
         class Bucket
         {
             //  == FIELDS ==
-          private:
+          protected:
             //  -- Bounds --
             double _min; //!< Minimum bound of the bucket range.
             double _max; //!< Maximum bound of the bucket range.
 
+          private:
             //  -- Properties --
             double _width; //!< Bin width.
 
