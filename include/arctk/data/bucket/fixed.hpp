@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
                 inline unsigned int misses() noexcept;
 
                 //  -- Collection --
-                inline void collect(const std::vector<double>& pos_, T val_) noexcept override;
+                inline void collect(const std::vector<double>& pos_, T val_) noexcept;
             };
 
 
@@ -94,7 +94,7 @@ namespace arc //! arctk namespace
 
             //  -- Collection --
             template <typename T>
-            inline void Fixed<T>::collect(const std::vector<double>& pos_, T val_) noexcept
+            inline void Fixed<T>::collect(std::vector<double>& pos_, T val_) noexcept
             {
                 assert(pos_.size() == 1);
 
@@ -106,8 +106,16 @@ namespace arc //! arctk namespace
                 }
 
                 const size_t index = Bucket<T>::find_index(pos_.back());
+                pos_.pop_back();
 
-                Bucket<T>::_bins[index] += val_;
+                if constexpr (is_bucket<T>::type)
+                {
+                    Bucket<T>::_bins[index].collect(pos_, val_);
+                }
+                else
+                {
+                    Bucket<T>::_bins[index] += val_;
+                }
             }
 
 
