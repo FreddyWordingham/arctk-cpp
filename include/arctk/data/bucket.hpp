@@ -62,6 +62,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline double min() const noexcept;
         };
 
 
@@ -78,6 +80,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        template <typename T>
+        inline double Bin<T>::min() const noexcept
+        {
+            return (_min);
+        }
 
 
 
