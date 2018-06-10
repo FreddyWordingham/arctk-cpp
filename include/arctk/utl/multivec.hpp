@@ -28,7 +28,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace std //! standard library expansion namespace
+    namespace utl //! utility namespace
     {
 
 
@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace std
+    } // namespace utl
 } // namespace arc
 
 
