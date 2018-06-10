@@ -74,8 +74,8 @@ namespace arc //! arctk namespace
 
         //  == ALIASES ==
         //  -- MultiArr --
-        template <typename T, size_t N>
-        using MultiArr = typename MultiArrHelper<T, N>::type;
+        template <typename T, size_t... M>
+        using MultiArr = typename MultiArrHelper<T, M...>::type;
 
 
 
