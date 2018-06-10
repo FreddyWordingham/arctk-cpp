@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_STD_MULTIVEC_HPP
-#define ARCTK_STD_MULTIVEC_HPP
+#ifndef ARCTK_UTL_MULTIVEC_HPP
+#define ARCTK_UTL_MULTIVEC_HPP
 
 
 
@@ -84,4 +84,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_STD_MULTIVEC_HPP
+#endif // ARCTK_UTL_MULTIVEC_HPP
