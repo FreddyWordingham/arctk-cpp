@@ -49,6 +49,20 @@ namespace arc //! arctk namespace
             //  -- Data --
             using S    = typename MultiVecHelper<T, N - 1>::type; //!< Type stored by this vector.
             using type = std::vector<S>;                          //!< Type of this class.
+
+
+            //  == INSTANTIATION ==
+          public:
+            //  -- Methods --
+            static type create(const std::array<size_t, N>& dim_)
+            {
+                std::array<size_t, N - 1> dim;
+                std::copy(std::next(std::begin(dim_)), std::end(dim_), std::begin(dim));
+
+                type vec(dim_.front(), MultiVecHelper<T, N - 1>::create(dim));
+
+                return (vec);
+            }
         };
 
 
@@ -66,6 +80,17 @@ namespace arc //! arctk namespace
           public:
             //  -- Data --
             using type = std::vector<T>; //!< Type of this class.
+
+
+            //  == INSTANTIATION ==
+          public:
+            //  -- Methods --
+            static type create(const std::array<size_t, 1>& dim_)
+            {
+                type vec(dim_.front());
+
+                return (vec);
+            }
         };
 
 
