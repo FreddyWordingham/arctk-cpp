@@ -36,19 +36,20 @@ namespace arc //! arctk namespace
         //  == CLASSES ==
         //  -- N-Dimensional --
         /**
-         *  N-Dimensional storage vector class.
+         *  N-Dimensional storage array class.
          *
          *  @tparam T   Type stored.
-         *  @tparam N   Dimensionality of the vector.
+         *  @tparam N   Dimensionality of the array.
+         *  @tparam M   Pack of lower dimensionalities.
          */
-        template <typename T, size_t N>
-        class MultiVecHelper
+        template <typename T, size_t N, size_t... M>
+        class MultiArrHelper
         {
             //  == TYPES ==
           public:
             //  -- Data --
-            using S    = typename MultiVecHelper<T, N - 1>::type;
-            using type = std::vector<S>;
+            using S    = typename MultiArrHelper<T, M...>::type;
+            using type = std::array<S, N>;
         };
 
 
@@ -60,7 +61,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type storef.
          */
         template <typename T>
-        class MultiVecHelper<T, 1>
+        class MultiArrHelper<T, 1>
         {
             //  == TYPES ==
           public:
@@ -71,9 +72,9 @@ namespace arc //! arctk namespace
 
 
         //  == ALIASES ==
-        //  -- MultiVec --
+        //  -- MultiArr --
         template <typename T, size_t N>
-        using MultiVec = typename MultiVecHelper<T, N>::type;
+        using MultiArr = typename MultiArrHelper<T, N>::type;
 
 
 
