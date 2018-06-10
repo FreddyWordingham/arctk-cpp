@@ -67,7 +67,6 @@
 #include <arctk/rng/generator/quality.hpp>
 #include <arctk/search.hpp>
 #include <arctk/search/container.hpp>
-#include <arctk/std/multivec.hpp>
 #include <arctk/str.hpp>
 #include <arctk/str/convert.hpp>
 #include <arctk/sys.hpp>
@@ -78,6 +77,7 @@
 #include <arctk/sys/file/out.hpp>
 #include <arctk/utl.hpp>
 #include <arctk/utl/container.hpp>
+#include <arctk/utl/multivec.hpp>
 #include <arctk/utl/pair.hpp>
 #include <arctk/utl/tuple.hpp>
 
