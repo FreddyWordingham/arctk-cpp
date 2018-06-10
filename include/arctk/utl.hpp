@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/utl/container.hpp>
+#include <arctk/utl/multiarr.hpp>
 #include <arctk/utl/multivec.hpp>
 #include <arctk/utl/pair.hpp>
 #include <arctk/utl/tuple.hpp>
