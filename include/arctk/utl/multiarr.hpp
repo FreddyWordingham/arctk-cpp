@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
             //  == TYPES ==
           public:
             //  -- Data --
-            using type = std::array<T, N>;
+            using type = std::array<T, N>; //!< Type of this class.
         };
 
 
