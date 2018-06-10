@@ -56,17 +56,18 @@ namespace arc //! arctk namespace
 
         //  -- One-Dimensional --
         /**
-         *  One-dimensional storage vector class.
+         *  One-dimensional storage array class.
          *
-         *  @tparam T   Type storef.
+         *  @tparam T   Type stored.
+         *  @tparam N   Dimensionality of the array.
          */
-        template <typename T>
-        class MultiArrHelper<T, 1>
+        template <typename T, size_t N>
+        class MultiArrHelper<T, N>
         {
             //  == TYPES ==
           public:
             //  -- Data --
-            using type = std::vector<T>;
+            using type = std::array<T, N>;
         };
 
 
