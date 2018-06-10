@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Data --
             using S    = typename MultiVecHelper<T, N - 1>::type; //!< Type stored by this vector.
-            using type = std::vector<S>;
+            using type = std::vector<S>;                          //!< Type of this class.
         };
 
 
