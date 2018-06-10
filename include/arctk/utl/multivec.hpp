@@ -72,6 +72,12 @@ namespace arc //! arctk namespace
 
         //  == ALIASES ==
         //  -- MultiVec --
+        /**
+         *  Multi-vector alias.
+         *
+         *  @tparam T   Type stored.
+         *  @tparam N   Dimensionality.
+         */
         template <typename T, size_t N>
         using MultiVec = typename MultiVecHelper<T, N>::type;
 
