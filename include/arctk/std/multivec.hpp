@@ -53,6 +53,16 @@ namespace arc //! arctk namespace
 
 
         //  -- One-Dimensional --
+        /**
+         *  One-dimensional storage vector class.
+         *
+         *  @tparam T   Type storef.
+         */
+        template <typename T>
+        class MultiVec<T, 1>
+        {
+            using type = std::vector<T>;
+        };
 
 
 
