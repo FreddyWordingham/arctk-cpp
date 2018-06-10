@@ -74,6 +74,12 @@ namespace arc //! arctk namespace
 
         //  == ALIASES ==
         //  -- MultiArr --
+        /**
+         *  Multi-array alias.
+         *
+         *  @tparam T   Type stored.
+         *  @tparam M   Pack of dimensionalities.
+         */
         template <typename T, size_t... M>
         using MultiArr = typename MultiArrHelper<T, M...>::type;
 
