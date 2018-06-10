@@ -19,6 +19,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Std --
+#include <vector>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
