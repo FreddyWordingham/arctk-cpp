@@ -63,6 +63,16 @@ namespace arc //! arctk namespace
 
                 return (vec);
             }
+
+            static type create(const size_t size_)
+            {
+                return (type(size_));
+            }
+
+            static type create(const std::initializer_list<T>& list_)
+            {
+                return (type(list_));
+            }
         };
 
 
@@ -90,6 +100,16 @@ namespace arc //! arctk namespace
                 type vec(dim_.front(), val_);
 
                 return (vec);
+            }
+
+            static type create(const size_t size_)
+            {
+                return (type(size_));
+            }
+
+            static type create(const std::initializer_list<T>& list_)
+            {
+                return (type(list_));
             }
         };
 
