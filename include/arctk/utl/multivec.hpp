@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
             //  == TYPES ==
           public:
             //  -- Data --
-            using type = std::vector<T>;
+            using type = std::vector<T>; //!< Type of this class.
         };
 
 
