@@ -1,7 +1,6 @@
 var searchData=
 [
   ['sample',['sample',['../classarc_1_1rng_1_1distribution_1_1_uniform.html#a316487105389068590f99d743375338f',1,'arc::rng::distribution::Uniform::sample()'],['../classarc_1_1rng_1_1_distribution.html#a9c6caef65bded0535024af6dfc0f3cd9',1,'arc::rng::Distribution::sample()']]],
-  ['save',['save',['../classarc_1_1data_1_1_image.html#a52337aaf464658b348e58809b0ecade6',1,'arc::data::Image::save(const std::string &amp;path_) const noexcept'],['../classarc_1_1data_1_1_image.html#adb53142496fc553ec4688afe06b6e73d',1,'arc::data::Image::save(const std::string &amp;path_, double norm_) const noexcept'],['../classarc_1_1data_1_1_image.html#a52f1f0a99dc54720ac655799fb6a1026',1,'arc::data::Image::save(const std::string &amp;path_, const math::Vec3&lt; double &gt; &amp;norm_) const noexcept']]],
   ['scale',['scale',['../classarc_1_1gui_1_1_actor.html#ad00d42b370da289dbae9b4902676617c',1,'arc::gui::Actor']]],
   ['seed',['seed',['../classarc_1_1rng_1_1_generator.html#a922333c0cb6210131de7a31b1cf11e19',1,'arc::rng::Generator']]],
   ['set_5fclear_5fcol',['set_clear_col',['../classarc_1_1gui_1_1_window.html#a1af40e8879d7e50f5b9802814f331f61',1,'arc::gui::Window']]],

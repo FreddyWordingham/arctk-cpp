@@ -1,9 +1,6 @@
 <map id="arc::search::max" name="arc::search::max">
-<area shape="rect" id="node2" href="$classarc_1_1data_1_1_image.html#a52337aaf464658b348e58809b0ecade6" title="arc::data::Image::save" alt="" coords="173,5,326,31"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1format.html#a9d71aca4944b5beef1da1c6a6c5bc2cc" title="arc::format::rows" alt="" coords="190,55,310,80"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1format.html#acbe307a976e3844ae92ef64a1abe385e" title="arc::format::cols" alt="" coords="393,80,509,105"/>
-<area shape="rect" id="node8" href="$classarc_1_1rng_1_1generator_1_1_quality.html#aaef2693502284423f7e47edc025bfd7f" title="arc::rng::generator\l::Quality::gen" alt="" coords="184,156,315,195"/>
-<area shape="rect" id="node3" href="$classarc_1_1data_1_1_image.html#adb53142496fc553ec4688afe06b6e73d" title="arc::data::Image::save" alt="" coords="374,5,528,31"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1data.html#a903b365f7af0c485fa4af9da9ca82c16" title="arc::data::operator\&lt;\&lt;" alt="" coords="576,55,722,80"/>
-<area shape="rect" id="node7" href="$namespacearc_1_1format.html#a4e78356644f1d9021a7e1133475ef645" title="arc::format::rows" alt="" coords="588,104,709,129"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1format.html#a9d71aca4944b5beef1da1c6a6c5bc2cc" title="arc::format::rows" alt="" coords="178,5,299,31"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1format.html#acbe307a976e3844ae92ef64a1abe385e" title="arc::format::cols" alt="" coords="352,31,468,56"/>
+<area shape="rect" id="node5" href="$classarc_1_1rng_1_1generator_1_1_quality.html#aaef2693502284423f7e47edc025bfd7f" title="arc::rng::generator\l::Quality::gen" alt="" coords="173,107,304,145"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1format.html#a4e78356644f1d9021a7e1133475ef645" title="arc::format::rows" alt="" coords="516,31,637,56"/>
 </map>

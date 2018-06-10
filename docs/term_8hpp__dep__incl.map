@@ -1,19 +1,17 @@
 <map id="include/arctk/log/term.hpp" name="include/arctk/log/term.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="629,779,726,804"/>
-<area shape="rect" id="node3" href="$output_8hpp.html" title="include/arctk/log/output.hpp" alt="" coords="525,79,710,104"/>
-<area shape="rect" id="node5" href="$log_8hpp.html" title="include/arctk/log.hpp" alt="" coords="488,239,632,264"/>
-<area shape="rect" id="node4" href="$error_8hpp.html" title="include/arctk/log/output\l/error.hpp" alt="" coords="306,152,465,191"/>
-<area shape="rect" id="node16" href="$message_8hpp.html" title="include/arctk/log/output\l/message.hpp" alt="" coords="538,152,697,191"/>
-<area shape="rect" id="node17" href="$progress_8hpp.html" title="include/arctk/log/output\l/progress.hpp" alt="" coords="721,152,879,191"/>
-<area shape="rect" id="node18" href="$warning_8hpp.html" title="include/arctk/log/output\l/warning.hpp" alt="" coords="903,152,1062,191"/>
-<area shape="rect" id="node6" href="$shader_8hpp.html" title="include/arctk/gui/shader.hpp" alt="" coords="145,472,332,497"/>
-<area shape="rect" id="node7" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="195,545,386,571"/>
-<area shape="rect" id="node10" href="$string_8hpp.html" title="include/arctk/parse\l/string.hpp" alt="" coords="561,312,695,351"/>
-<area shape="rect" id="node9" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="219,705,362,731"/>
-<area shape="rect" id="node8" href="$keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="296,625,490,651"/>
-<area shape="rect" id="node11" href="$parse_8hpp.html" title="include/arctk/parse.hpp" alt="" coords="548,399,708,424"/>
-<area shape="rect" id="node12" href="$args_8hpp.html" title="include/arctk/sys/args.hpp" alt="" coords="574,472,749,497"/>
-<area shape="rect" id="node13" href="$sys_8hpp.html" title="include/arctk/sys.hpp" alt="" coords="588,545,734,571"/>
-<area shape="rect" id="node14" href="$image_8hpp.html" title="include/arctk/data\l/image.hpp" alt="" coords="565,619,691,657"/>
-<area shape="rect" id="node15" href="$data_8hpp.html" title="include/arctk/data.hpp" alt="" coords="488,705,640,731"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="569,619,666,644"/>
+<area shape="rect" id="node3" href="$output_8hpp.html" title="include/arctk/log/output.hpp" alt="" coords="490,79,675,104"/>
+<area shape="rect" id="node5" href="$log_8hpp.html" title="include/arctk/log.hpp" alt="" coords="426,239,569,264"/>
+<area shape="rect" id="node4" href="$error_8hpp.html" title="include/arctk/log/output\l/error.hpp" alt="" coords="271,152,430,191"/>
+<area shape="rect" id="node14" href="$message_8hpp.html" title="include/arctk/log/output\l/message.hpp" alt="" coords="503,152,662,191"/>
+<area shape="rect" id="node15" href="$progress_8hpp.html" title="include/arctk/log/output\l/progress.hpp" alt="" coords="686,152,845,191"/>
+<area shape="rect" id="node16" href="$warning_8hpp.html" title="include/arctk/log/output\l/warning.hpp" alt="" coords="869,152,1027,191"/>
+<area shape="rect" id="node6" href="$shader_8hpp.html" title="include/arctk/gui/shader.hpp" alt="" coords="120,319,307,344"/>
+<area shape="rect" id="node7" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="247,399,438,424"/>
+<area shape="rect" id="node10" href="$string_8hpp.html" title="include/arctk/parse\l/string.hpp" alt="" coords="461,312,595,351"/>
+<area shape="rect" id="node9" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="152,545,296,571"/>
+<area shape="rect" id="node8" href="$keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="246,472,440,497"/>
+<area shape="rect" id="node11" href="$parse_8hpp.html" title="include/arctk/parse.hpp" alt="" coords="574,399,733,424"/>
+<area shape="rect" id="node12" href="$args_8hpp.html" title="include/arctk/sys/args.hpp" alt="" coords="566,472,741,497"/>
+<area shape="rect" id="node13" href="$sys_8hpp.html" title="include/arctk/sys.hpp" alt="" coords="544,545,690,571"/>
 </map>

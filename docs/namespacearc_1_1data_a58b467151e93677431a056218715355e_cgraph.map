@@ -1,7 +1,0 @@
-<map id="arc::data::operator&lt;&lt;" name="arc::data::operator&lt;&lt;">
-<area shape="rect" id="node2" href="$namespacearc_1_1format.html#acbe307a976e3844ae92ef64a1abe385e" title="arc::format::cols" alt="" coords="199,29,315,55"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1format.html#a9d71aca4944b5beef1da1c6a6c5bc2cc" title="arc::format::rows" alt="" coords="363,29,484,55"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1str.html#a53e4e5a084da03d5cc8ea2d4ee8ba7d0" title="arc::str::to_string" alt="" coords="532,5,653,31"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1search.html#ab5608d27962c637137d2c243213fa366" title="arc::search::max" alt="" coords="532,55,652,80"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1search.html#aac33af22b716309501eaa7f5a10cc1d0" title="arc::search::max_index" alt="" coords="701,55,860,80"/>
-</map>
