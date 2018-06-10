@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Data --
             using S    = typename MultiArrHelper<T, M...>::type; //!< Type stored by this array.
-            using type = std::array<S, N>;
+            using type = std::array<S, N>;                       //!< Type of this class.
         };
 
 
