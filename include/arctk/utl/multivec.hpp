@@ -54,12 +54,12 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Methods --
-            static type size(const std::array<size_t, N>& dim_, const T& val_ = {})
+            static type create(const std::array<size_t, N>& dim_, const T& val_ = {})
             {
                 std::array<size_t, N - 1> dim;
                 std::copy(std::next(std::begin(dim_)), std::end(dim_), std::begin(dim));
 
-                type vec(dim_.front(), MultiVecHelper<T, N - 1>::size(dim, val_));
+                type vec(dim_.front(), MultiVecHelper<T, N - 1>::create(dim, val_));
 
                 return (vec);
             }
@@ -85,7 +85,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Methods --
-            static type size(const std::array<size_t, 1>& dim_, const T& val_ = {})
+            static type create(const std::array<size_t, 1>& dim_, const T& val_ = {})
             {
                 type vec(dim_.front(), val_);
 
@@ -114,7 +114,7 @@ namespace arc //! arctk namespace
          *  @tparam N   Dimensionality.
          */
         template <typename T, size_t N>
-        constexpr auto MultiVecSize = MultiVecHelper<T, N>::size;
+        constexpr auto create_multi_vec = MultiVecHelper<T, N>::create;
 
 
 
