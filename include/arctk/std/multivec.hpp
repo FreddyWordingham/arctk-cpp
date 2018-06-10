@@ -33,6 +33,29 @@ namespace arc //! arctk namespace
 
 
 
+        //  == CLASSES ==
+        //  -- N-Dimensional --
+        /**
+         *  N-Dimensional storage vector class.
+         *
+         *  @tparam T   Type stored.
+         *  @tparam N   Dimensionality of the vector.
+         */
+        template <typename T, size_t N>
+        class MulitVec
+        {
+            //  == TYPES ==
+            //  -- Data --
+            using S    = typename MulitVec<T, N - 1>::type;
+            using type = std::vector<S>;
+        };
+
+
+
+        //  -- One-Dimensional --
+
+
+
     } // namespace std
 } // namespace arc
 
