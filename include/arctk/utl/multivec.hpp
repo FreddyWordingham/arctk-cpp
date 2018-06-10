@@ -42,12 +42,12 @@ namespace arc //! arctk namespace
          *  @tparam N   Dimensionality of the vector.
          */
         template <typename T, size_t N>
-        class MultiVec
+        class MultiVecHelper
         {
             //  == TYPES ==
             //  -- Data --
             using S    = typename MultiVec<T, N - 1>::type;
-            using type = ::std::vector<S>;
+            using type = std::vector<S>;
         };
 
 
@@ -59,9 +59,9 @@ namespace arc //! arctk namespace
          *  @tparam T   Type storef.
          */
         template <typename T>
-        class MultiVec<T, 1>
+        class MultiVecHelper<T, 1>
         {
-            using type = ::std::vector<T>;
+            using type = std::vector<T>;
         };
 
 
@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
         //  == ALIASES ==
         //  -- MultiVec --
         template <typename T, size_t N>
-        using MultiVecN = typename MultiVec<T, N>::type;
+        using MultiVec = typename MultiVecHelper<T, N>::type;
 
 
 
