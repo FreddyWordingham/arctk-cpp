@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
         /**
          *  One-dimensional storage vector class.
          *
-         *  @tparam T   Type storef.
+         *  @tparam T   Type stored.
          */
         template <typename T>
         class MultiVecHelper<T, 1>
