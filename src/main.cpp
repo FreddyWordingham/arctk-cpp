@@ -67,6 +67,7 @@
 #include <arctk/rng/generator/quality.hpp>
 #include <arctk/search.hpp>
 #include <arctk/search/container.hpp>
+#include <arctk/std.hpp>
 #include <arctk/str.hpp>
 #include <arctk/str/convert.hpp>
 #include <arctk/sys.hpp>
