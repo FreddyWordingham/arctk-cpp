@@ -77,6 +77,7 @@
 #include <arctk/sys/file/out.hpp>
 #include <arctk/utl.hpp>
 #include <arctk/utl/container.hpp>
+#include <arctk/utl/multiarr.hpp>
 #include <arctk/utl/multivec.hpp>
 #include <arctk/utl/pair.hpp>
 #include <arctk/utl/tuple.hpp>
