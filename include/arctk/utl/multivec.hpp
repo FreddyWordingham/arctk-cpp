@@ -107,6 +107,16 @@ namespace arc //! arctk namespace
         using MultiVec = typename MultiVecHelper<T, N>::type;
 
 
+        /**
+         *  Multi-vector size initialisation alias.
+         *
+         *  @tparam T   Type stored.
+         *  @tparam N   Dimensionality.
+         */
+        template <typename T, size_t N>
+        constexpr auto MultiVecSize = MultiVecHelper<T, N>::create;
+
+
 
     } // namespace utl
 } // namespace arc
