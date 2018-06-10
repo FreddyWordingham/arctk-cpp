@@ -1,6 +1,6 @@
 /**
- *  @file   arctk/multi_vec.hpp
- *  @date   01/06/2018
+ *  @file   arctk/multivec.hpp
+ *  @date   10/06/2018
  *  @author Freddy Wordingham
  *
  *  Mulit-dimensional vector class.
