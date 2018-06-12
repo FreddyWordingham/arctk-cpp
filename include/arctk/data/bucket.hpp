@@ -58,6 +58,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline const utl::MultiVec<T, N>& bins() noexcept;
         };
 
 
@@ -70,6 +72,16 @@ namespace arc //! arctk namespace
           , _max(max_)
           , _bins(utl::make_MultiVec<T, N>(res_))
         {
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        template <typename T, size_t N>
+        inline const utl::MultiVec<T, N>& Bucket<T, N>::bins() noexcept
+        {
+            return (_bins);
         }
 
 
