@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/prop.hpp>
 #include <arctk/utl.hpp>
 
 
@@ -48,7 +49,7 @@ namespace arc //! arctk namespace
 
             //  -- Bin Metadata --
             std::array<size_t, N> _res;
-            std::array<size_t, N> _width;
+            std::array<double, N> _width;
 
             //  -- Data --
             utl::MultiVec<T, N> _bins;
@@ -58,6 +59,9 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Bucket(const std::array<double, N>& min_, const std::array<double, N>& max_, const std::array<size_t, N>& res_) noexcept;
+
+            //  -- Initialisation --
+            inline std::array<double, N> init_width(const std::array<double, N>& min_, const std::array<double, N>& max_, const std::array<size_t, N>& res_) noexcept;
 
 
             //  == METHODS ==
@@ -111,8 +115,35 @@ namespace arc //! arctk namespace
           : _min(min_)
           , _max(max_)
           , _res(res_)
+          , _width(init_width(min_, max_, res_))
           , _bins(utl::make_MultiVec<T, N>(res_))
         {
+            for (size_t i = 0; i < N; ++i)
+            {
+                assert(min_[i] < max_[i]);
+            }
+            assert(prop::always_greater_than(res_, 0));
+        }
+
+
+        //  -- Initialisation --
+        template <typename T, size_t N>
+        inline std::array<double, N> Bucket<T, N>::init_width(const std::array<double, N>& min_, const std::array<double, N>& max_, const std::array<size_t, N>& res_) noexcept
+        {
+            for (size_t i = 0; i < N; ++i)
+            {
+                assert(min_[i] < max_[i]);
+            }
+            assert(prop::always_greater_than(res_, 0));
+
+            std::array<double, N> width;
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                width[i] = (max_[i] - min[i]) / res_[i];
+            }
+
+            return (width);
         }
 
 
