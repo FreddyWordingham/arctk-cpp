@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/utl.hpp>
 
 
 
@@ -44,6 +45,9 @@ namespace arc //! arctk namespace
             //  -- Bounds --
             std::array<double, N> _min;
             std::array<double, N> _max;
+
+            //  -- Data --
+            utl::MultiVec<double, N> _bins;
 
 
             //  == INSTANTIATION ==
