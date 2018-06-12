@@ -76,12 +76,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Factories --
-            static inline type make(const std::array<size_t, 1>& dim_, const T& val_ = {}) noexcept
-            {
-                type vec(dim_.front(), val_);
-
-                return (vec);
-            }
+            static inline type make(const std::array<size_t, 1>& dim_, const T& val_ = {}) noexcept;
         };
 
 
@@ -95,6 +90,14 @@ namespace arc //! arctk namespace
             std::copy(std::next(std::begin(dim_)), std::end(dim_), std::begin(dim));
 
             type vec(dim_.front(), _MultiVec<T, N - 1>::make(dim, val_));
+
+            return (vec);
+        }
+
+        template <typename T, size_t N>
+        inline typename _MultiVec<T, N>::type make(const std::array<size_t, 1>& dim_, const T& val_ = {}) noexcept
+        {
+            type vec(dim_.front(), val_);
 
             return (vec);
         }
