@@ -36,6 +36,7 @@ namespace arc //! arctk namespace
         /**
          *  Data binning class.
          */
+        template <size_t N>
         class Bucket
         {
             //  == FIELDS ==
