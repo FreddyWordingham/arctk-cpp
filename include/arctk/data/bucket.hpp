@@ -46,6 +46,10 @@ namespace arc //! arctk namespace
             std::array<double, N> _min;
             std::array<double, N> _max;
 
+            //  -- Bin Metadata --
+            std::array<size_t, N> _res;
+            std::array<size_t, N> _width;
+
             //  -- Data --
             utl::MultiVec<T, N> _bins;
 
@@ -92,7 +96,7 @@ namespace arc //! arctk namespace
                 assert(pos_ >= _min[I]);
                 assert(pos_ <= _max[I]);
 
-                const auto index = static_cast<size_t>((pos_ - _min[I]) / _width);
+                const auto index = static_cast<size_t>((pos_ - _min[I]) / _width[i]);
 
                 return ((index == _res[I]) ? (index - 1) : index);
             }
