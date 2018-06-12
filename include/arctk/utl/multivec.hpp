@@ -53,18 +53,9 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
           public:
-            //  -- Methods --
-            static inline type make(const std::array<size_t, N>& dim_, const T& val_ = {}) noexcept
-            {
-                std::array<size_t, N - 1> dim;
-                std::copy(std::next(std::begin(dim_)), std::end(dim_), std::begin(dim));
-
-                type vec(dim_.front(), _MultiVec<T, N - 1>::make(dim, val_));
-
-                return (vec);
-            }
+            //  -- Factories --
+            static inline type make(const std::array<size_t, N>& dim_, const T& val_ = {}) noexcept;
         };
-
 
 
         //  -- One-Dimensional --
@@ -84,7 +75,7 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
           public:
-            //  -- Methods --
+            //  -- Factories --
             static inline type make(const std::array<size_t, 1>& dim_, const T& val_ = {}) noexcept
             {
                 type vec(dim_.front(), val_);
@@ -92,6 +83,21 @@ namespace arc //! arctk namespace
                 return (vec);
             }
         };
+
+
+
+        //  == INSTANTIATION ==
+        //  -- Factories --
+        template <typename T, size_t N>
+        inline typename _MultiVec<T, N>::type _MultiVec<T, N>::make(const std::array<size_t, N>& dim_, const T& val_) noexcept
+        {
+            std::array<size_t, N - 1> dim;
+            std::copy(std::next(std::begin(dim_)), std::end(dim_), std::begin(dim));
+
+            type vec(dim_.front(), _MultiVec<T, N - 1>::make(dim, val_));
+
+            return (vec);
+        }
 
 
 
