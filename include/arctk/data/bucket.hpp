@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
             inline const utl::MultiVec<T, N>& bins() noexcept;
 
             //  -- Collection --
-            void store(const std::array<double, N>& pos_, const T& val_)
+            void collect(const std::array<double, N>& pos_, const T& val_)
             {
                 collect(_bins, pos_, val_);
             }
@@ -84,6 +84,10 @@ namespace arc //! arctk namespace
                 const size_t index = 0;
 
                 bins_[index] += val_;
+            }
+
+            size_t find_index()
+            {
             }
         };
 
