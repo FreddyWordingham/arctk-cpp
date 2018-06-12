@@ -60,6 +60,31 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline const utl::MultiVec<T, N>& bins() noexcept;
+
+            //  -- Collection --
+            void collect(const std::array<double, N>& pos_, const T& val_)
+            {
+                collect(_bins, pos_, val_);
+            }
+
+          private:
+            template <size_t I>
+            void collect(utl::MultiVec<T, I>& bins_, const std::array<double, N>& pos_, const T& val_)
+            {
+                std::array<size_t, I - 1> pos;
+                std::copy(std::next(std::begin(pos_)), std::end(pos_), std::begin(pos));
+
+                const size_t index = 0;
+
+                collect(bins_[index], pos, val_);
+            }
+
+            void collect(utl::MultiVec<T, 1>& bins_, const std::array<double, 1>& pos_, const T& val_)
+            {
+                const size_t index = 0;
+
+                bins_[index] += val_;
+            }
         };
 
 
