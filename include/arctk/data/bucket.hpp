@@ -140,7 +140,7 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i < N; ++i)
             {
-                width[i] = (max_[i] - min[i]) / res_[i];
+                width[i] = (max_[i] - min_[i]) / res_[i];
             }
 
             return (width);
