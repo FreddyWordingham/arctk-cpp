@@ -70,6 +70,7 @@ namespace arc //! arctk namespace
             inline const utl::MultiVec<T, N>&   bins() noexcept;
             inline const std::array<double, N>& min() noexcept;
             inline const std::array<double, N>& max() noexcept;
+            inline const std::array<size_t, N>& res() noexcept;
 
             //  -- Collection --
             void collect(const std::array<double, N>& pos_, const T& val_)
