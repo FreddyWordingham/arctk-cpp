@@ -37,7 +37,7 @@ namespace arc //! arctk namespace
         /**
          *  Data binning class.
          */
-        template <size_t N, typename T>
+        template <typename T, size_t N>
         class Bucket
         {
             //  == FIELDS ==
@@ -64,8 +64,8 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        template <size_t N, typename T>
-        inline Bucket<N, T>::Bucket(const std::array<double, N>& min_, const std::array<double, N>& max_, const std::array<size_t, N>& res_) noexcept
+        template <typename T, size_t N>
+        inline Bucket<T, N>::Bucket(const std::array<double, N>& min_, const std::array<double, N>& max_, const std::array<size_t, N>& res_) noexcept
           : _min(min_)
           , _max(max_)
           , _bins(utl::make_MultiVec<T, N>(res_))
