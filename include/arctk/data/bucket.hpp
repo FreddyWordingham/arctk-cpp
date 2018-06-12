@@ -82,14 +82,14 @@ namespace arc //! arctk namespace
                 std::array<double, I - 1> pos;
                 std::copy(std::next(std::begin(pos_)), std::end(pos_), std::begin(pos));
 
-                const size_t index = 0;
+                const size_t index = find_index<I - 1>(pos_.front());
 
                 collect(bins_[index], pos, val_);
             }
 
             void collect(utl::MultiVec<T, 1>& bins_, const std::array<double, 1>& pos_, const T& val_)
             {
-                const size_t index = 0;
+                const size_t index = find_index<0>(pos_.front());
 
                 bins_[index] += val_;
             }
