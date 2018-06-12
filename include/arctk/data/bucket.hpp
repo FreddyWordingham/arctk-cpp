@@ -86,8 +86,15 @@ namespace arc //! arctk namespace
                 bins_[index] += val_;
             }
 
-            size_t find_index()
+            template <size_t I>
+            size_t find_index(const double pos_)
             {
+                assert(pos_ >= _min[I]);
+                assert(pos_ <= _max[I]);
+
+                const auto index = static_cast<size_t>((pos_ - _min[I]) / _width);
+
+                return ((index == _res[I]) ? (index - 1) : index);
             }
         };
 
