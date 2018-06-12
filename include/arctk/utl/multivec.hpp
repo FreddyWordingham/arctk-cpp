@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Methods --
-            static type make(const std::array<size_t, N>& dim_, const T& val_ = {})
+            static inline type make(const std::array<size_t, N>& dim_, const T& val_ = {}) noexcept
             {
                 std::array<size_t, N - 1> dim;
                 std::copy(std::next(std::begin(dim_)), std::end(dim_), std::begin(dim));
@@ -85,7 +85,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Methods --
-            static type make(const std::array<size_t, 1>& dim_, const T& val_ = {})
+            static inline type make(const std::array<size_t, 1>& dim_, const T& val_ = {}) noexcept
             {
                 type vec(dim_.front(), val_);
 
