@@ -114,7 +114,7 @@ namespace arc //! arctk namespace
          *  @tparam N   Dimensionality.
          */
         template <typename T, size_t N>
-        constexpr auto create_multi_vec = MultiVecHelper<T, N>::create;
+        constexpr auto make_MultiVec = MultiVecHelper<T, N>::make;
 
 
 
