@@ -62,16 +62,16 @@ namespace arc //! arctk namespace
             inline const utl::MultiVec<T, N>& bins() noexcept;
 
             //  -- Collection --
-            void collect(const std::array<double, N>& pos_, const T& val_)
+            void store(const std::array<double, N>& pos_, const T& val_)
             {
                 collect(_bins, pos_, val_);
             }
 
           private:
             template <size_t I>
-            void collect(utl::MultiVec<T, I>& bins_, const std::array<double, N>& pos_, const T& val_)
+            void collect(utl::MultiVec<T, I>& bins_, const std::array<double, I>& pos_, const T& val_)
             {
-                std::array<size_t, I - 1> pos;
+                std::array<double, I - 1> pos;
                 std::copy(std::next(std::begin(pos_)), std::end(pos_), std::begin(pos));
 
                 const size_t index = 0;
