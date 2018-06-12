@@ -83,6 +83,15 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Factories --
+        /**
+         *  Create a N-dimensional multi-vec object.
+         *  Elements of the vec are initialised to the given value.
+         *
+         *  @param  dim_    Dimensionality.
+         *  @param  val_    Initial value.
+         *
+         *  @return Created N-dimensional multi-vec object.
+         */
         template <typename T, size_t N>
         inline typename _MultiVec<T, N>::type _MultiVec<T, N>::make(const std::array<size_t, N>& dim_, const T& val_) noexcept
         {
