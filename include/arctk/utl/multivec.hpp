@@ -94,6 +94,15 @@ namespace arc //! arctk namespace
             return (vec);
         }
 
+        /**
+         *  Create a one-dimensional multi-vec object.
+         *  Elements of the vec are initialised to the given value.
+         *
+         *  @param  dim_    Dimensionality.
+         *  @param  val_    Initial value.
+         *
+         *  @return Created one-dimensional multi-vec object.
+         */
         template <typename T>
         inline typename _MultiVec<T, 1>::type _MultiVec<T, 1>::make(const std::array<size_t, 1>& dim_, const T& val_) noexcept
         {
