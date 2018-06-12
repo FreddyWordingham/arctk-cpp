@@ -40,7 +40,12 @@ namespace arc //! arctk namespace
         class Bucket
         {
             //  == FIELDS ==
-          protected:
+          private:
+            //  -- Bounds --
+            std::array<double, N> _min;
+            std::array<double, N> _max;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
