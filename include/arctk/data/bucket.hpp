@@ -71,6 +71,7 @@ namespace arc //! arctk namespace
             inline const std::array<double, N>& min() noexcept;
             inline const std::array<double, N>& max() noexcept;
             inline const std::array<size_t, N>& res() noexcept;
+            inline const std::array<double, N>& width() noexcept;
 
             //  -- Collection --
             void collect(const std::array<double, N>& pos_, const T& val_)
