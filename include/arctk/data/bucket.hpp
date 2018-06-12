@@ -69,6 +69,7 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline const utl::MultiVec<T, N>&   bins() noexcept;
             inline const std::array<double, N>& min() noexcept;
+            inline const std::array<double, N>& max() noexcept;
 
             //  -- Collection --
             void collect(const std::array<double, N>& pos_, const T& val_)
@@ -161,6 +162,24 @@ namespace arc //! arctk namespace
         inline const std::array<double, N>& Bucket<T, N>::min() noexcept
         {
             return (_min);
+        }
+
+        template <typename T, size_t N>
+        inline const std::array<double, N>& Bucket<T, N>::max() noexcept
+        {
+            return (_max);
+        }
+
+        template <typename T, size_t N>
+        inline const std::array<size_t, N>& Bucket<T, N>::res() noexcept
+        {
+            return (_res);
+        }
+
+        template <typename T, size_t N>
+        inline const std::array<double, N>& Bucket<T, N>::width() noexcept
+        {
+            return (_width);
         }
 
 
