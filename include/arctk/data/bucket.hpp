@@ -110,6 +110,7 @@ namespace arc //! arctk namespace
         inline Bucket<T, N>::Bucket(const std::array<double, N>& min_, const std::array<double, N>& max_, const std::array<size_t, N>& res_) noexcept
           : _min(min_)
           , _max(max_)
+          , _res(res_)
           , _bins(utl::make_MultiVec<T, N>(res_))
         {
         }
