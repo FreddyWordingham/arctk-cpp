@@ -43,13 +43,13 @@ namespace arc //! arctk namespace
          *  @tparam M   Pack of lower dimensionalities.
          */
         template <typename T, size_t N, size_t... M>
-        class MultiArrHelper
+        class _MultiArr
         {
             //  == TYPES ==
           public:
             //  -- Data --
-            using S    = typename MultiArrHelper<T, M...>::type; //!< Type stored by this array.
-            using type = std::array<S, N>;                       //!< Type of this class.
+            using S    = typename _MultiArr<T, M...>::type; //!< Type stored by this array.
+            using type = std::array<S, N>;                  //!< Type of this class.
         };
 
 
@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
          *  @tparam N   Dimensionality of the array.
          */
         template <typename T, size_t N>
-        class MultiArrHelper<T, N>
+        class _MultiArr<T, N>
         {
             //  == TYPES ==
           public:
@@ -81,7 +81,7 @@ namespace arc //! arctk namespace
          *  @tparam M   Pack of dimensionalities.
          */
         template <typename T, size_t... M>
-        using MultiArr = typename MultiArrHelper<T, M...>::type;
+        using MultiArr = typename _MultiArr<T, M...>::type;
 
 
 
