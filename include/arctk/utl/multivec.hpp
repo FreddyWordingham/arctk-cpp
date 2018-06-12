@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Factories --
-            static inline type make(const std::array<size_t, N>& dim_, const T& val_ = {}) noexcept;
+            static inline type make(const std::array<size_t, N>& dim_) noexcept;
         };
 
 
@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Factories --
-            static inline type make(const std::array<size_t, 1>& dim_, const T& val_ = {}) noexcept;
+            static inline type make(const std::array<size_t, 1>& dim_) noexcept;
         };
 
 
@@ -85,37 +85,33 @@ namespace arc //! arctk namespace
         //  -- Factories --
         /**
          *  Create a N-dimensional multi-vec object.
-         *  Elements of the vec are initialised to the given value.
          *
          *  @param  dim_    Dimensionality.
-         *  @param  val_    Initial value.
          *
          *  @return Created N-dimensional multi-vec object.
          */
         template <typename T, size_t N>
-        inline typename _MultiVec<T, N>::type _MultiVec<T, N>::make(const std::array<size_t, N>& dim_, const T& val_) noexcept
+        inline typename _MultiVec<T, N>::type _MultiVec<T, N>::make(const std::array<size_t, N>& dim_) noexcept
         {
             std::array<size_t, N - 1> dim;
             std::copy(std::next(std::begin(dim_)), std::end(dim_), std::begin(dim));
 
-            type vec(dim_.front(), _MultiVec<T, N - 1>::make(dim, val_));
+            type vec(dim_.front(), _MultiVec<T, N - 1>::make(dim));
 
             return (vec);
         }
 
         /**
          *  Create a one-dimensional multi-vec object.
-         *  Elements of the vec are initialised to the given value.
          *
          *  @param  dim_    Dimensionality.
-         *  @param  val_    Initial value.
          *
          *  @return Created one-dimensional multi-vec object.
          */
         template <typename T>
-        inline typename _MultiVec<T, 1>::type _MultiVec<T, 1>::make(const std::array<size_t, 1>& dim_, const T& val_) noexcept
+        inline typename _MultiVec<T, 1>::type _MultiVec<T, 1>::make(const std::array<size_t, 1>& dim_) noexcept
         {
-            type vec(dim_.front(), val_);
+            type vec(dim_.front());
 
             return (vec);
         }
