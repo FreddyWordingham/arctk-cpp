@@ -63,7 +63,6 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
-      public:
         //  -- Constructors --
         template <size_t N, typename T>
         inline Bucket<N, T>::Bucket(const std::array<double, N>& min_, const std::array<double, N>& max_, const std::array<size_t, N>& res_) noexcept
