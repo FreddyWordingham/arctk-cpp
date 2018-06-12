@@ -42,13 +42,13 @@ namespace arc //! arctk namespace
          *  @tparam N   Dimensionality of the vector.
          */
         template <typename T, size_t N>
-        class MultiVecHelper
+        class _MultiVec
         {
             //  == TYPES ==
           public:
             //  -- Data --
-            using S    = typename MultiVecHelper<T, N - 1>::type; //!< Type stored by this vector.
-            using type = std::vector<S>;                          //!< Type of this class.
+            using S    = typename _MultiVec<T, N - 1>::type; //!< Type stored by this vector.
+            using type = std::vector<S>;                     //!< Type of this class.
 
 
             //  == INSTANTIATION ==
@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
                 std::array<size_t, N - 1> dim;
                 std::copy(std::next(std::begin(dim_)), std::end(dim_), std::begin(dim));
 
-                type vec(dim_.front(), MultiVecHelper<T, N - 1>::make(dim, val_));
+                type vec(dim_.front(), _MultiVec<T, N - 1>::make(dim, val_));
 
                 return (vec);
             }
@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored.
          */
         template <typename T>
-        class MultiVecHelper<T, 1>
+        class _MultiVec<T, 1>
         {
             //  == TYPES ==
           public:
@@ -104,7 +104,7 @@ namespace arc //! arctk namespace
          *  @tparam N   Dimensionality.
          */
         template <typename T, size_t N>
-        using MultiVec = typename MultiVecHelper<T, N>::type;
+        using MultiVec = typename _MultiVec<T, N>::type;
 
 
         /**
@@ -114,7 +114,7 @@ namespace arc //! arctk namespace
          *  @tparam N   Dimensionality.
          */
         template <typename T, size_t N>
-        constexpr auto make_MultiVec = MultiVecHelper<T, N>::make;
+        constexpr auto make_MultiVec = _MultiVec<T, N>::make;
 
 
 
