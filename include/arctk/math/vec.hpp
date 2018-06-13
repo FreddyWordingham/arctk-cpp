@@ -679,6 +679,12 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline void normalise() const noexcept
         {
+            const double m = 1.0 / mag();
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                sq_sum *= m;
+            }
         }
 
 
