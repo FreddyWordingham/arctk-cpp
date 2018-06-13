@@ -87,6 +87,12 @@ namespace arc //! arctk namespace
             constexpr inline Vec<T, N>& operator*=(T val_) noexcept;
             constexpr inline Vec<T, N>& operator/=(T val_) noexcept;
 
+            //  -- Increment / Decrement --
+            constexpr inline Vec<T, N>&      operator++() noexcept;
+            constexpr inline const Vec<T, N> operator++(int) noexcept;
+            constexpr inline Vec<T, N>&      operator--() noexcept;
+            constexpr inline const Vec<T, N> operator--(int) noexcept;
+
 
             //  == METHODS ==
           public:
@@ -287,6 +293,84 @@ namespace arc //! arctk namespace
             }
 
             return (*this);
+        }
+
+
+        //  -- Increment / Decrement --
+        /**
+         *  Increment each element of the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return A reference to this vec pre-increment.
+         */
+        template <typename T>
+        constexpr inline Vec<T, N>& Vec<T, N>::operator++() noexcept
+        {
+            for (size_t i = 0; i < N; ++i)
+            {
+                ++_data[i];
+            }
+
+            return (*this);
+        }
+
+        /**
+         *  Increment each element of the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return A copy of this vec post-increment.
+         */
+        template <typename T>
+        constexpr inline const Vec<T, N> Vec<T, N>::operator++(int) noexcept
+        {
+            const Vec4 vec = *this;
+
+            ++x;
+            ++y;
+            ++z;
+            ++w;
+
+            return (vec);
+        }
+
+        /**
+         *  Decrement each element of the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return A reference to this vec pre-decrement.
+         */
+        template <typename T>
+        constexpr inline Vec<T, N>& Vec<T, N>::operator--() noexcept
+        {
+            --x;
+            --y;
+            --z;
+            --w;
+
+            return (*this);
+        }
+
+        /**
+         *  Decrement each element of the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return A copy of this vec post-decrement.
+         */
+        template <typename T>
+        constexpr inline const Vec<T, N> Vec<T, N>::operator--(int) noexcept
+        {
+            const Vec4 vec = *this;
+
+            --x;
+            --y;
+            --z;
+            --w;
+
+            return (vec);
         }
 
 
