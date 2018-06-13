@@ -639,7 +639,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline bool Vec<T, N>::normalised(const T tol_) const noexcept
         {
-            return (std::fabs(1.0 - mag()) <= tol_);
+            return (std::fabs(T{1.0} - mag()) <= tol_);
         }
 
 
