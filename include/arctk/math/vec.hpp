@@ -115,13 +115,13 @@ namespace arc //! arctk namespace
             inline const std::array<T, N>& data() const noexcept;
 
             //  -- Properties --
-            constexpr inline bool normalised(double tol_ = std::numeric_limits<double>::epsilon()) const noexcept;
+            constexpr inline bool normalised(T tol_ = std::numeric_limits<T>::epsilon()) const noexcept;
 
             //  -- Mathematical --
-            constexpr inline T      sum() const noexcept;
-            constexpr inline double mag() const noexcept;
-            constexpr inline double mag_sq() const noexcept;
-            constexpr inline void   normalise() const noexcept;
+            constexpr inline T    sum() const noexcept;
+            constexpr inline T    mag() const noexcept;
+            constexpr inline T    mag_sq() const noexcept;
+            constexpr inline void normalise() const noexcept;
         };
 
 
@@ -637,7 +637,7 @@ namespace arc //! arctk namespace
 
         //  -- Properties --
         template <typename T, size_t N>
-        constexpr inline bool normalised(double tol_ = std::numeric_limits<double>::epsilon()) const noexcept
+        constexpr inline bool normalised(T tol_ = std::numeric_limits<T>::epsilon()) const noexcept
         {
             return (std::fabs(1.0 - mag()) <= tol_);
         }
