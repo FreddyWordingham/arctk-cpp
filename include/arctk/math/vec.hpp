@@ -112,7 +112,16 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const std::array<T, N>& data() noexcept;
+            inline const std::array<T, N>& data() const noexcept;
+
+            //  -- Properties --
+            constexpr inline bool normalised(double tol_ = std::numeric_limits<double>::epsilon()) const noexcept;
+
+            //  -- Mathematical --
+            constexpr inline T      sum() const noexcept;
+            constexpr inline double mag() const noexcept;
+            constexpr inline double mag_sq() const noexcept;
+            constexpr inline void   normalise() const noexcept;
         };
 
 
@@ -620,7 +629,7 @@ namespace arc //! arctk namespace
         //  == METHODS ==
         //  -- Getters --
         template <typename T, size_t N>
-        inline const std::array<T, N>& Vec<T, N>::data() noexcept
+        inline const std::array<T, N>& Vec<T, N>::data() const noexcept
         {
             return (_data);
         }
