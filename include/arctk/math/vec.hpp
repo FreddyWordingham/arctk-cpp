@@ -637,7 +637,7 @@ namespace arc //! arctk namespace
 
         //  -- Properties --
         template <typename T, size_t N>
-        constexpr inline bool Vec<T, N>::normalised(T tol_ = std::numeric_limits<T>::epsilon()) const noexcept
+        constexpr inline bool Vec<T, N>::normalised(const T tol_) const noexcept
         {
             return (std::fabs(1.0 - mag()) <= tol_);
         }
