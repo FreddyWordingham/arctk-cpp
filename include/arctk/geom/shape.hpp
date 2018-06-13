@@ -43,14 +43,14 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Positioning --
-            math::Vec3<double> _pos; //!< Position of the shape.
-            math::Vec3<double> _dir; //!< Direction of the shape.
+            vec3 _pos; //!< Position of the shape.
+            vec3 _dir; //!< Direction of the shape.
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline explicit Shape(const math::Vec3<double>& pos_ = {0.0, 0.0, 0.0}, const math::Vec3<double>& dir_ = {0.0, 0.0, 1.0}) noexcept;
+            inline explicit Shape(const vec3& pos_ = {0.0, 0.0, 0.0}, const vec3& dir_ = {0.0, 0.0, 1.0}) noexcept;
             inline Shape(const Shape&) noexcept = default; //!< Defaulted copy constructor.
             inline Shape(Shape&&) noexcept      = default; //!< Defaulted move constructor.
 
@@ -68,11 +68,11 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const math::Vec3<double>& position() const noexcept;
-            inline const math::Vec3<double>& dir() const noexcept;
+            inline const vec3& position() const noexcept;
+            inline const vec3& dir() const noexcept;
 
             //  -- Collision --
-            virtual inline Collision collision(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const
+            virtual inline Collision collision(const vec3& pos_, const vec3& dir_) const
               noexcept = 0; //!< Determine the distance along a ray to the shape's boundaries. @param pos_ Initial position of the ray. @param dir_ Direction of ray. @return Collision properties.
         };
 
@@ -88,7 +88,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    dir_ must be normalised.
          */
-        inline Shape::Shape(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) noexcept
+        inline Shape::Shape(const vec3& pos_, const vec3& dir_) noexcept
           : _pos(pos_)
           , _dir(dir_)
         {
@@ -108,7 +108,7 @@ namespace arc //! arctk namespace
          *
          *  @return Position of the shape.
          */
-        inline const math::Vec3<double>& Shape::position() const noexcept
+        inline const vec3& Shape::position() const noexcept
         {
             return (_pos);
         }
@@ -118,7 +118,7 @@ namespace arc //! arctk namespace
          *
          *  @return Direction of the shape.
          */
-        inline const math::Vec3<double>& Shape::dir() const noexcept
+        inline const vec3& Shape::dir() const noexcept
         {
             return (_dir);
         }
