@@ -658,11 +658,20 @@ namespace arc //! arctk namespace
         }
 
         template <typename T, size_t N>
-        constexpr inline double mag() const noexcept
+        constexpr inline T mag() const noexcept
         {
+            T sq_sum{};
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                sq_sum += _data[i] * _data[i];
+            }
+
+            return (std::sqrt(sq_sum));
         }
+
         template <typename T, size_t N>
-        constexpr inline double mag_sq() const noexcept
+        constexpr inline T mag_sq() const noexcept
         {
         }
         template <typename T, size_t N>
