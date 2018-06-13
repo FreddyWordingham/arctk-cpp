@@ -19,12 +19,15 @@
 
 
 
+//  == BASE ==
+//  -- Arctk --
+#include <arctk/log/output.hpp>
+
+
+
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
-
-//  -- Arctk --
-#include <arctk/log/output.hpp>
 
 
 
