@@ -24,7 +24,7 @@
 #include <cmath>
 
 //  -- Arctk --
-#include <arctk/print.hpp>
+#include <arctk/str.hpp>
 
 
 
@@ -117,7 +117,7 @@ namespace arc //! arctk namespace
         template <typename S, typename T, size_t N>
         inline S& operator<<(S& stream_, const Vec<T, N>& vec_) noexcept
         {
-            stream_ << vec_._data;
+            stream_ << str::to_string(vec_._data);
 
             return (stream_);
         }
