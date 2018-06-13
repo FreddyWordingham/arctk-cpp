@@ -74,10 +74,7 @@ namespace arc //! arctk namespace
             inline const std::array<double, N>& width() noexcept;
 
             //  -- Collection --
-            void collect(const std::array<double, N>& pos_, const T& val_)
-            {
-                collect(_bins, pos_, val_);
-            }
+            inline void collect(const std::array<double, N>& pos_, const T& val_) noexcept;
 
           private:
             template <size_t I>
@@ -182,6 +179,13 @@ namespace arc //! arctk namespace
         inline const std::array<double, N>& Bucket<T, N>::width() noexcept
         {
             return (_width);
+        }
+
+
+        //  -- Collection --
+        inline void Bucket<T, N>::collect(const std::array<double, N>& pos_, const T& val_) noexcept
+        {
+            collect(_bins, pos_, val_);
         }
 
 
