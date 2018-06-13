@@ -49,6 +49,8 @@ namespace arc //! arctk namespace
             //  == ASSERTIONS ==
             //  -- Size --
             static_assert(N > 4);
+
+            //  -- Type --
             static_assert(std::is_floating_point<T>::value);
 
 
