@@ -69,6 +69,8 @@ namespace arc //! arctk namespace
             //  -- Initialisation --
             template <typename... A>
             inline std::array<T, N> init_data(const A... a) noexcept;
+            template <size_t M, typename... A>
+            inline std::array<T, N> init_data(const Vec<T, M>& vec_, const A... a) noexcept;
 
 
             //  == OPERATORS ==
@@ -115,6 +117,25 @@ namespace arc //! arctk namespace
             std::array<T, N> data;
 
             size_t i = 0;
+            ((data[i] = a, ++i), ...);
+
+            return (data);
+        }
+
+        template <typename T, size_t N>
+        template <size_t M, typename... A>
+        inline std::array<T, N> Vec<T, N>::init_data(const Vec<T, M>& vec_, A... a) noexcept
+        {
+            static_assert((sizeof...(A) + M) == N);
+
+            std::array<T, N> data;
+
+            size_t i;
+            for (i = 0; i < M; ++i)
+            {
+                data[i] = vec_._data[i];
+            }
+
             ((data[i] = a, ++i), ...);
 
             return (data);
