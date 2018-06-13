@@ -635,6 +635,33 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Properties --
+        template <typename T, size_t N>
+        constexpr inline bool normalised(double tol_ = std::numeric_limits<double>::epsilon()) const noexcept
+        {
+            return (std::fabs(1.0 - mag()) <= tol_);
+        }
+
+
+        //  -- Mathematical --
+        template <typename T, size_t N>
+        constexpr inline T sum() const noexcept
+        {
+        }
+        template <typename T, size_t N>
+        constexpr inline double mag() const noexcept
+        {
+        }
+        template <typename T, size_t N>
+        constexpr inline double mag_sq() const noexcept
+        {
+        }
+        template <typename T, size_t N>
+        constexpr inline void normalise() const noexcept
+        {
+        }
+
+
 
     } // namespace math
 } // namespace arc
