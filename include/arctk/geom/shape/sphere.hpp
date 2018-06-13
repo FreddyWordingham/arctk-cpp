@@ -19,6 +19,12 @@
 
 
 
+//  == BASE ==
+//  -- Arctk --
+#include <arctk/geom/shape.hpp>
+
+
+
 //  == IMPORTS ==
 //  -- Std --
 #include <cmath>
@@ -26,7 +32,6 @@
 
 //  -- Arctk --
 #include <arctk/geom/collision.hpp>
-#include <arctk/geom/shape.hpp>
 #include <arctk/math.hpp>
 
 
