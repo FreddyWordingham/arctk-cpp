@@ -78,6 +78,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline const std::array<T, N>& data() noexcept;
         };
 
 
@@ -118,6 +120,16 @@ namespace arc //! arctk namespace
             stream_ << vec_._data;
 
             return (stream_);
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        template <typename T, size_t N>
+        inline const std::array<T, N>& Vec<T, N>::data() noexcept
+        {
+            return (_data);
         }
 
 
