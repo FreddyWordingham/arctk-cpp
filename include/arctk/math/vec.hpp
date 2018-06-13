@@ -637,7 +637,7 @@ namespace arc //! arctk namespace
 
         //  -- Properties --
         template <typename T, size_t N>
-        constexpr inline bool normalised(T tol_ = std::numeric_limits<T>::epsilon()) const noexcept
+        constexpr inline bool Vec<T, N>::normalised(T tol_ = std::numeric_limits<T>::epsilon()) const noexcept
         {
             return (std::fabs(1.0 - mag()) <= tol_);
         }
@@ -645,7 +645,7 @@ namespace arc //! arctk namespace
 
         //  -- Mathematical --
         template <typename T, size_t N>
-        constexpr inline T sum() const noexcept
+        constexpr inline T Vec<T, N>::sum() const noexcept
         {
             T sum{};
 
@@ -658,13 +658,13 @@ namespace arc //! arctk namespace
         }
 
         template <typename T, size_t N>
-        constexpr inline T mag() const noexcept
+        constexpr inline T Vec<T, N>::mag() const noexcept
         {
             return (std::sqrt(mag_sq()));
         }
 
         template <typename T, size_t N>
-        constexpr inline T mag_sq() const noexcept
+        constexpr inline T Vec<T, N>::mag_sq() const noexcept
         {
             T sq_sum{};
 
@@ -677,7 +677,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T, size_t N>
-        constexpr inline void normalise() const noexcept
+        constexpr inline void Vec<T, N>::normalise() const noexcept
         {
             const T m = T{1.0} / mag();
 
