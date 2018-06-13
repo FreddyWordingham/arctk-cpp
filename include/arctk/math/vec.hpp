@@ -660,6 +660,8 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline T Vec<T, N>::mag() const noexcept
         {
+            static_assert(std::is_floating_point<T>::value);
+
             return (std::sqrt(mag_sq()));
         }
 
