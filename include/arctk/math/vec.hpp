@@ -312,6 +312,7 @@ namespace arc //! arctk namespace
          *  Increment each element of the vec.
          *
          *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
          *
          *  @return A reference to this vec pre-increment.
          */
@@ -330,6 +331,7 @@ namespace arc //! arctk namespace
          *  Increment each element of the vec.
          *
          *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
          *
          *  @return A copy of this vec post-increment.
          */
@@ -350,6 +352,7 @@ namespace arc //! arctk namespace
          *  Decrement each element of the vec.
          *
          *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
          *
          *  @return A reference to this vec pre-decrement.
          */
@@ -368,6 +371,7 @@ namespace arc //! arctk namespace
          *  Decrement each element of the vec.
          *
          *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
          *
          *  @return A copy of this vec post-decrement.
          */
@@ -390,6 +394,7 @@ namespace arc //! arctk namespace
          *  Positive copy the vec.
          *
          *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
          *
          *  @return Positive copy of the vec.
          */
@@ -410,6 +415,7 @@ namespace arc //! arctk namespace
          *  Negative copy the vec.
          *
          *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
          *
          *  @return Negative copy of the vec.
          */
@@ -430,6 +436,7 @@ namespace arc //! arctk namespace
          *  Add a value to a vec.
          *
          *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
          *
          *  @param  val_    Value to add to the vec.
          *
@@ -452,6 +459,7 @@ namespace arc //! arctk namespace
          *  Add a vec to a vec.
          *
          *  @tparam T   Type stored by the vecs.
+         *  @tparam N   Size of the vec.
          *
          *  @param  vec_    Vec to add to the vec.
          *
@@ -474,6 +482,7 @@ namespace arc //! arctk namespace
          *  Subtract a value from a vec.
          *
          *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
          *
          *  @param  val_    Value to subtract from the vec.
          *
@@ -496,6 +505,7 @@ namespace arc //! arctk namespace
          *  Subtract a vec from a vec.
          *
          *  @tparam T   Type stored by the vecs.
+         *  @tparam N   Size of the vec.
          *
          *  @param  vec_    Vec to subtract from the vec.
          *
@@ -518,6 +528,7 @@ namespace arc //! arctk namespace
          *  Multiply a vecs elements by a value.
          *
          *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
          *
          *  @param  val_    Value used to multiply the vec elements.
          *
@@ -540,6 +551,7 @@ namespace arc //! arctk namespace
          *  Calculate the dot-product of two vecs.
          *
          *  @tparam T   Type stored by the vecs.
+         *  @tparam N   Size of the vec.
          *
          *  @param  vec_    Vec to perform the dot-product with.
          *
@@ -562,6 +574,7 @@ namespace arc //! arctk namespace
          *  Divide a vecs elements by a value.
          *
          *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
          *
          *  @param  val_    Value used to divide the vec elements.
          *
