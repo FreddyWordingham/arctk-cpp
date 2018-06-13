@@ -50,13 +50,13 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline explicit Plane(const math::Vec3<double>& pos_ = {0.0, 0.0, 0.0}, const math::Vec3<double>& dir_ = {0.0, 0.0, 1.0}) noexcept;
+                inline explicit Plane(const vec3& pos_ = {0.0, 0.0, 0.0}, const vec3& dir_ = {0.0, 0.0, 1.0}) noexcept;
 
 
                 //  == METHODS ==
               public:
                 //  -- Collision --
-                inline Collision collision(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept override;
+                inline Collision collision(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
 
 
@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
              *
              *  @pre    dir_ must be normalised.
              */
-            inline Plane::Plane(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) noexcept
+            inline Plane::Plane(const vec3& pos_, const vec3& dir_) noexcept
               : Shape(pos_, dir_)
             {
                 assert(dir_.normalised());
@@ -91,7 +91,7 @@ namespace arc //! arctk namespace
              *
              *  @return Collision information.
              */
-            inline Collision Plane::collision(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept
+            inline Collision Plane::collision(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 const double denom = _dir * dir_;
 
