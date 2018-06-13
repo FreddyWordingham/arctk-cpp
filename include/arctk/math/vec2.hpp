@@ -592,6 +592,8 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline void Vec<T, 2>::normalise() const noexcept
         {
+            static_assert(std::is_floating_point<T>::value);
+
             const T m = T{1.0} / mag();
 
             x *= m;
