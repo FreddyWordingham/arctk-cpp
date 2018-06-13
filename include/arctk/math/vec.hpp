@@ -60,6 +60,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            constexpr inline Vec() noexcept = default;
 
 
             //  == OPERATORS ==
