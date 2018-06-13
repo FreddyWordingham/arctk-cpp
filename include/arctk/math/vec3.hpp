@@ -97,6 +97,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             constexpr inline Vec() noexcept = default;
             constexpr inline Vec(T x_, T y_, T z_) noexcept;
+            constexpr inline Vec(const Vec<T, 2>& vec_, T z_) noexcept;
 
 
             //  == OPERATORS ==
@@ -176,6 +177,14 @@ namespace arc //! arctk namespace
         constexpr inline Vec<T, 3>::Vec(const T x_, const T y_, const T z_) noexcept
           : x(x_)
           , y(y_)
+          , z(z_)
+        {
+        }
+
+        template <typename T>
+        constexpr inline Vec<T, 3>::Vec(const Vec<T, 2>& vec_, T z_) noexcept
+          : x(vec_.x)
+          , y(vec_.y)
           , z(z_)
         {
         }
