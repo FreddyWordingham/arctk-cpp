@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored by the vec.
          */
         template <typename T>
-        class Vec2
+        class Vec<T, 2>
         {
             //  == FIELDS ==
           public:
@@ -70,45 +70,42 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            constexpr inline Vec2() noexcept;
-            constexpr inline Vec2(T x_, T y_) noexcept;
+            constexpr inline Vec() noexcept;
+            constexpr inline Vec(T x_, T y_) noexcept;
 
 
             //  == OPERATORS ==
           public:
             //  -- Conversion --
-#ifdef ARCTK_MOD_GUI
-            inline operator glm::vec2() const noexcept; // NOLINT
-#endif
 
             //  -- Stream --
             template <typename S, typename L>
-            friend inline S& operator<<(S& stream_, const Vec2<T>& vec_) noexcept;
+            friend inline S& operator<<(S& stream_, const Vec<T, 2>& vec_) noexcept;
 
             //  -- Assignment --
-            constexpr inline Vec2<T>& operator+=(T val_) noexcept;
-            constexpr inline Vec2<T>& operator+=(const Vec2<T>& vec_) noexcept;
-            constexpr inline Vec2<T>& operator-=(T val_) noexcept;
-            constexpr inline Vec2<T>& operator-=(const Vec2<T>& vec_) noexcept;
-            constexpr inline Vec2<T>& operator*=(T val_) noexcept;
-            constexpr inline Vec2<T>& operator/=(T val_) noexcept;
+            constexpr inline Vec<T, 2>& operator+=(T val_) noexcept;
+            constexpr inline Vec<T, 2>& operator+=(const Vec<T, 2>& vec_) noexcept;
+            constexpr inline Vec<T, 2>& operator-=(T val_) noexcept;
+            constexpr inline Vec<T, 2>& operator-=(const Vec<T, 2>& vec_) noexcept;
+            constexpr inline Vec<T, 2>& operator*=(T val_) noexcept;
+            constexpr inline Vec<T, 2>& operator/=(T val_) noexcept;
 
             //  -- Increment / Decrement --
-            constexpr inline Vec2<T>&      operator++() noexcept;
-            constexpr inline const Vec2<T> operator++(int) noexcept;
-            constexpr inline Vec2<T>&      operator--() noexcept;
-            constexpr inline const Vec2<T> operator--(int) noexcept;
+            constexpr inline Vec<T, 2>&      operator++() noexcept;
+            constexpr inline const Vec<T, 2> operator++(int) noexcept;
+            constexpr inline Vec<T, 2>&      operator--() noexcept;
+            constexpr inline const Vec<T, 2> operator--(int) noexcept;
 
             //  -- Arithmetic --
-            constexpr inline Vec2<T> operator+() const noexcept;
-            constexpr inline Vec2<T> operator-() const noexcept;
-            constexpr inline Vec2<T> operator+(T val_) const noexcept;
-            constexpr inline Vec2<T> operator+(const Vec2<T>& vec_) const noexcept;
-            constexpr inline Vec2<T> operator-(T val_) const noexcept;
-            constexpr inline Vec2<T> operator-(const Vec2<T>& vec_) const noexcept;
-            constexpr inline Vec2<T> operator*(T val_) const noexcept;
-            constexpr inline T       operator*(const Vec2<T>& vec_) const noexcept;
-            constexpr inline Vec2<T> operator/(T val_) const noexcept;
+            constexpr inline Vec<T, 2> operator+() const noexcept;
+            constexpr inline Vec<T, 2> operator-() const noexcept;
+            constexpr inline Vec<T, 2> operator+(T val_) const noexcept;
+            constexpr inline Vec<T, 2> operator+(const Vec<T, 2>& vec_) const noexcept;
+            constexpr inline Vec<T, 2> operator-(T val_) const noexcept;
+            constexpr inline Vec<T, 2> operator-(const Vec<T, 2>& vec_) const noexcept;
+            constexpr inline Vec<T, 2> operator*(T val_) const noexcept;
+            constexpr inline T         operator*(const Vec<T, 2>& vec_) const noexcept;
+            constexpr inline Vec<T, 2> operator/(T val_) const noexcept;
 
             //  -- Access --
             constexpr inline T&       operator[](size_t index_) noexcept;
@@ -127,8 +124,8 @@ namespace arc //! arctk namespace
             constexpr inline void   normalise() const noexcept;
 
             //  -- Co-ordinate --
-            constexpr inline Vec2<T> to_polar() const noexcept;
-            constexpr inline Vec2<T> to_cart() const noexcept;
+            constexpr inline Vec<T, 2> to_polar() const noexcept;
+            constexpr inline Vec<T, 2> to_cart() const noexcept;
         };
 
 
@@ -141,7 +138,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored by the vec.
          */
         template <typename T>
-        constexpr inline Vec2<T>::Vec2() noexcept
+        constexpr inline Vec<T, 2>::Vec() noexcept
           : x(0)
           , y(0)
         {
@@ -156,7 +153,7 @@ namespace arc //! arctk namespace
          *  @param  y_  Initial value of the y component.
          */
         template <typename T>
-        constexpr inline Vec2<T>::Vec2(const T x_, const T y_) noexcept
+        constexpr inline Vec<T, 2>::Vec(const T x_, const T y_) noexcept
           : x(x_)
           , y(y_)
         {
@@ -166,21 +163,6 @@ namespace arc //! arctk namespace
 
         //  == OPERATORS ==
         //  -- Conversion --
-#ifdef ARCTK_MOD_GUI
-        /**
-         *  Convert the vec2 to a glm::vec2.
-         *  Elements are converted to float type.
-         *
-         *  @tparam T   Type stored by the vec.
-         *
-         *  @return Converted glm::vec2 object.
-         */
-        template <typename T>
-        inline Vec2<T>::operator glm::vec2() const noexcept
-        {
-            return (glm::vec2(static_cast<float>(x), static_cast<float>(y)));
-        }
-#endif
 
         //  -- Stream --
         /**
@@ -195,7 +177,7 @@ namespace arc //! arctk namespace
          *  @return A reference to the stream post-print.
          */
         template <typename S, typename T>
-        inline S& operator<<(S& stream_, const Vec2<T>& vec_) noexcept
+        inline S& operator<<(S& stream_, const Vec<T, 2>& vec_) noexcept
         {
             stream_ << '{' << vec_.x << ", " << vec_.y << '}';
 
@@ -214,7 +196,7 @@ namespace arc //! arctk namespace
          *  @return Reference to this vec post-operation.
          */
         template <typename T>
-        constexpr inline Vec2<T>& Vec2<T>::operator+=(const T val_) noexcept
+        constexpr inline Vec<T, 2>& Vec<T, 2>::operator+=(const T val_) noexcept
         {
             x += val_;
             y += val_;
@@ -232,7 +214,7 @@ namespace arc //! arctk namespace
          *  @return Reference to this vec post-operation.
          */
         template <typename T>
-        constexpr inline Vec2<T>& Vec2<T>::operator+=(const Vec2<T>& vec_) noexcept
+        constexpr inline Vec<T, 2>& Vec<T, 2>::operator+=(const Vec<T, 2>& vec_) noexcept
         {
             x += vec_.x;
             y += vec_.y;
@@ -250,7 +232,7 @@ namespace arc //! arctk namespace
          *  @return Reference to this vec post-operation.
          */
         template <typename T>
-        constexpr inline Vec2<T>& Vec2<T>::operator-=(const T val_) noexcept
+        constexpr inline Vec<T, 2>& Vec<T, 2>::operator-=(const T val_) noexcept
         {
             x -= val_;
             y -= val_;
@@ -268,7 +250,7 @@ namespace arc //! arctk namespace
          *  @return Reference to this vec post-operation.
          */
         template <typename T>
-        constexpr inline Vec2<T>& Vec2<T>::operator-=(const Vec2<T>& vec_) noexcept
+        constexpr inline Vec<T, 2>& Vec<T, 2>::operator-=(const Vec<T, 2>& vec_) noexcept
         {
             x -= vec_.x;
             y -= vec_.y;
@@ -286,7 +268,7 @@ namespace arc //! arctk namespace
          *  @return Reference to this vec post-operation.
          */
         template <typename T>
-        constexpr inline Vec2<T>& Vec2<T>::operator*=(const T val_) noexcept
+        constexpr inline Vec<T, 2>& Vec<T, 2>::operator*=(const T val_) noexcept
         {
             x *= val_;
             y *= val_;
@@ -304,7 +286,7 @@ namespace arc //! arctk namespace
          *  @return Reference to this vec post-operation.
          */
         template <typename T>
-        constexpr inline Vec2<T>& Vec2<T>::operator/=(const T val_) noexcept
+        constexpr inline Vec<T, 2>& Vec<T, 2>::operator/=(const T val_) noexcept
         {
             x /= val_;
             y /= val_;
@@ -322,7 +304,7 @@ namespace arc //! arctk namespace
          *  @return A reference to this vec pre-increment.
          */
         template <typename T>
-        constexpr inline Vec2<T>& Vec2<T>::operator++() noexcept
+        constexpr inline Vec<T, 2>& Vec<T, 2>::operator++() noexcept
         {
             ++x;
             ++y;
@@ -338,9 +320,9 @@ namespace arc //! arctk namespace
          *  @return A copy of this vec post-increment.
          */
         template <typename T>
-        constexpr inline const Vec2<T> Vec2<T>::operator++(int) noexcept
+        constexpr inline const Vec<T, 2> Vec<T, 2>::operator++(int) noexcept
         {
-            const Vec2 vec = *this;
+            const Vec vec = *this;
 
             ++x;
             ++y;
@@ -356,7 +338,7 @@ namespace arc //! arctk namespace
          *  @return A reference to this vec pre-decrement.
          */
         template <typename T>
-        constexpr inline Vec2<T>& Vec2<T>::operator--() noexcept
+        constexpr inline Vec<T, 2>& Vec<T, 2>::operator--() noexcept
         {
             --x;
             --y;
@@ -372,9 +354,9 @@ namespace arc //! arctk namespace
          *  @return A copy of this vec post-decrement.
          */
         template <typename T>
-        constexpr inline const Vec2<T> Vec2<T>::operator--(int) noexcept
+        constexpr inline const Vec<T, 2> Vec<T, 2>::operator--(int) noexcept
         {
-            const Vec2 vec = *this;
+            const Vec vec = *this;
 
             --x;
             --y;
@@ -392,9 +374,9 @@ namespace arc //! arctk namespace
          *  @return Positive copy of the vec.
          */
         template <typename T>
-        constexpr inline Vec2<T> Vec2<T>::operator+() const noexcept
+        constexpr inline Vec<T, 2> Vec<T, 2>::operator+() const noexcept
         {
-            return (Vec2(+x, +y));
+            return (Vec(+x, +y));
         }
 
         /**
@@ -405,9 +387,9 @@ namespace arc //! arctk namespace
          *  @return Negative copy of the vec.
          */
         template <typename T>
-        constexpr inline Vec2<T> Vec2<T>::operator-() const noexcept
+        constexpr inline Vec<T, 2> Vec<T, 2>::operator-() const noexcept
         {
-            return (Vec2(-x, -y));
+            return (Vec(-x, -y));
         }
 
         /**
@@ -420,9 +402,9 @@ namespace arc //! arctk namespace
          *  @return Vec formed by adding the value to the vec.
          */
         template <typename T>
-        constexpr inline Vec2<T> Vec2<T>::operator+(T val_) const noexcept
+        constexpr inline Vec<T, 2> Vec<T, 2>::operator+(T val_) const noexcept
         {
-            return (Vec2(x + val_, y + val_));
+            return (Vec(x + val_, y + val_));
         }
 
         /**
@@ -435,9 +417,9 @@ namespace arc //! arctk namespace
          *  @return Vec formed by adding the vec to the vec.
          */
         template <typename T>
-        constexpr inline Vec2<T> Vec2<T>::operator+(const Vec2<T>& vec_) const noexcept
+        constexpr inline Vec<T, 2> Vec<T, 2>::operator+(const Vec<T, 2>& vec_) const noexcept
         {
-            return (Vec2(x + vec_.x, y + vec_.y));
+            return (Vec(x + vec_.x, y + vec_.y));
         }
 
         /**
@@ -450,9 +432,9 @@ namespace arc //! arctk namespace
          *  @return Vec formed by subtracting the value from the vec.
          */
         template <typename T>
-        constexpr inline Vec2<T> Vec2<T>::operator-(T val_) const noexcept
+        constexpr inline Vec<T, 2> Vec<T, 2>::operator-(T val_) const noexcept
         {
-            return (Vec2(x - val_, y - val_));
+            return (Vec(x - val_, y - val_));
         }
 
         /**
@@ -465,9 +447,9 @@ namespace arc //! arctk namespace
          *  @return Vec formed by subtracting the vec from the vec.
          */
         template <typename T>
-        constexpr inline Vec2<T> Vec2<T>::operator-(const Vec2<T>& vec_) const noexcept
+        constexpr inline Vec<T, 2> Vec<T, 2>::operator-(const Vec<T, 2>& vec_) const noexcept
         {
-            return (Vec2(x - vec_.x, y - vec_.y));
+            return (Vec(x - vec_.x, y - vec_.y));
         }
 
         /**
@@ -480,9 +462,9 @@ namespace arc //! arctk namespace
          *  @return Vec formed by multiplying the vec elements by the value.
          */
         template <typename T>
-        constexpr inline Vec2<T> Vec2<T>::operator*(T val_) const noexcept
+        constexpr inline Vec<T, 2> Vec<T, 2>::operator*(T val_) const noexcept
         {
-            return (Vec2(x * val_, y * val_));
+            return (Vec(x * val_, y * val_));
         }
 
         /**
@@ -495,7 +477,7 @@ namespace arc //! arctk namespace
          *  @return Dot-product of the vecs.
          */
         template <typename T>
-        constexpr inline T Vec2<T>::operator*(const Vec2<T>& vec_) const noexcept
+        constexpr inline T Vec<T, 2>::operator*(const Vec<T, 2>& vec_) const noexcept
         {
             return ((x * vec_.x) + (y * vec_.y));
         }
@@ -510,9 +492,9 @@ namespace arc //! arctk namespace
          *  @return Vec formed by dividing the vec elements by the value.
          */
         template <typename T>
-        constexpr inline Vec2<T> Vec2<T>::operator/(T val_) const noexcept
+        constexpr inline Vec<T, 2> Vec<T, 2>::operator/(T val_) const noexcept
         {
-            return (Vec2(x / val_, y / val_));
+            return (Vec(x / val_, y / val_));
         }
 
 
@@ -527,7 +509,7 @@ namespace arc //! arctk namespace
          *  @return A reference to the element requested.
          */
         template <typename T>
-        constexpr inline T& Vec2<T>::operator[](const size_t index_) noexcept
+        constexpr inline T& Vec<T, 2>::operator[](const size_t index_) noexcept
         {
             assert(index_ < 2);
 
@@ -544,7 +526,7 @@ namespace arc //! arctk namespace
          *  @return A const reference to the element requested.
          */
         template <typename T>
-        constexpr inline const T& Vec2<T>::operator[](const size_t index_) const noexcept
+        constexpr inline const T& Vec<T, 2>::operator[](const size_t index_) const noexcept
         {
             assert(index_ < 2);
 
@@ -563,7 +545,7 @@ namespace arc //! arctk namespace
          *  @return True if the vec is normalised.
          */
         template <typename T>
-        constexpr inline bool Vec2<T>::normalised(const double tol_) const noexcept
+        constexpr inline bool Vec<T, 2>::normalised(const double tol_) const noexcept
         {
             return (std::fabs(1.0 - mag()) <= tol_);
         }
@@ -578,7 +560,7 @@ namespace arc //! arctk namespace
          *  @return Sum of the vec elements.
          */
         template <typename T>
-        constexpr inline T Vec2<T>::sum() const noexcept
+        constexpr inline T Vec<T, 2>::sum() const noexcept
         {
             return (x + y);
         }
@@ -591,7 +573,7 @@ namespace arc //! arctk namespace
          *  @return Magnitude of the vec.
          */
         template <typename T>
-        constexpr inline double Vec2<T>::mag() const noexcept
+        constexpr inline double Vec<T, 2>::mag() const noexcept
         {
             return (std::sqrt(mag_sq()));
         }
@@ -604,7 +586,7 @@ namespace arc //! arctk namespace
          *  @return Magnitude-squared of the vec.
          */
         template <typename T>
-        constexpr inline double Vec2<T>::mag_sq() const noexcept
+        constexpr inline double Vec<T, 2>::mag_sq() const noexcept
         {
             return (static_cast<double>((x * x) + (y * y)));
         }
@@ -615,7 +597,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored by the vec.
          */
         template <typename T>
-        constexpr inline void Vec2<T>::normalise() const noexcept
+        constexpr inline void Vec<T, 2>::normalise() const noexcept
         {
             const double m = 1.0 / mag();
 
@@ -631,9 +613,9 @@ namespace arc //! arctk namespace
          *  @return Vec in polar co-ordinate form.
          */
         template <typename T>
-        constexpr inline Vec2<T> Vec2<T>::to_polar() const noexcept
+        constexpr inline Vec<T, 2> Vec<T, 2>::to_polar() const noexcept
         {
-            Vec2<T> polar;
+            Vec<T, 2> polar;
 
             polar.rho   = std::sqrt((x * x) + (y * y));
             polar.theta = std::atan2(y, x);
@@ -647,9 +629,9 @@ namespace arc //! arctk namespace
          *  @return Vec in cartesian co-ordinate form.
          */
         template <typename T>
-        constexpr inline Vec2<T> Vec2<T>::to_cart() const noexcept
+        constexpr inline Vec<T, 2> Vec<T, 2>::to_cart() const noexcept
         {
-            Vec2<T> cart;
+            Vec<T, 2> cart;
 
             cart.x = rho * std::cos(theta);
             cart.y = rho * std::sin(theta);
