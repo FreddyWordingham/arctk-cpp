@@ -199,7 +199,7 @@ namespace arc //! arctk namespace
         {
             for (size_t i = 0; i < N; ++i)
             {
-                _data[i] += val_;
+                _data[i] += val_._data[i];
             }
 
             return (*this);
