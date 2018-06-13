@@ -548,7 +548,14 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline T Vec<T, N>::operator*(const Vec<T, N>& vec_) const noexcept
         {
-            return ((x * vec_.x) + (y * vec_.y) + (z * vec_.z) + (w * vec_.w));
+            T dot_prod{};
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                dot_prod += _data[i] * vec_._data[i];
+            }
+
+            return (dot_prod);
         }
 
         /**
