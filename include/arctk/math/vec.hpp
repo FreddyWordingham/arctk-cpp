@@ -80,7 +80,7 @@ namespace arc //! arctk namespace
             friend inline S& operator<<(S& stream_, const Vec<T, N>& vec_) noexcept;
 
             //  -- Conversion --
-            inline operator std::array<T, N>() const noexcept;
+            constexpr inline operator std::array<T, N>() const noexcept;
 
             //  -- Assignment --
             constexpr inline Vec<T, N>& operator+=(T val_) noexcept;
@@ -195,6 +195,7 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Conversion --
         /**
          *  Convert the vec to a std::array.
          *
@@ -204,7 +205,7 @@ namespace arc //! arctk namespace
          *  @return Converted std::array object.
          */
         template <typename T, size_t N>
-        inline Vec<T, N>::operator std::array<T, N>() const noexcept
+        constexpr inline Vec<T, N>::operator std::array<T, N>() const noexcept
         {
             return (_data);
         }
