@@ -647,7 +647,16 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline T sum() const noexcept
         {
+            T sum{};
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                sum += _data[i];
+            }
+
+            return (sum);
         }
+
         template <typename T, size_t N>
         constexpr inline double mag() const noexcept
         {
