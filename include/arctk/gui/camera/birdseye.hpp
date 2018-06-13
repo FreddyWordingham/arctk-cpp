@@ -19,7 +19,7 @@
 
 
 
-//  == IMPORTS ==
+//  == BASE ==
 //  -- Arctk --
 #include <arctk/gui/camera.hpp>
 
