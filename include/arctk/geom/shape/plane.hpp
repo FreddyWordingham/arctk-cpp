@@ -19,10 +19,15 @@
 
 
 
+//  == BASE ==
+//  -- Arctk --
+#include <arctk/geom/shape.hpp>
+
+
+
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/geom/collision.hpp>
-#include <arctk/geom/shape.hpp>
 
 
 
