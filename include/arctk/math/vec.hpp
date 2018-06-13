@@ -281,10 +281,10 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Vec<T, N>& Vec<T, N>::operator/=(const T val_) noexcept
         {
-            x /= val_;
-            y /= val_;
-            z /= val_;
-            w /= val_;
+            for (size_t i = 0; i < N; ++i)
+            {
+                _data[i] /= val_;
+            }
 
             return (*this);
         }
