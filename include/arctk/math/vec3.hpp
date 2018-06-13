@@ -182,7 +182,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        constexpr inline Vec<T, 3>::Vec(const Vec<T, 2>& vec_, T z_) noexcept
+        constexpr inline Vec<T, 3>::Vec(const Vec<T, 2>& vec_, const T z_) noexcept
           : x(vec_.x)
           , y(vec_.y)
           , z(z_)
