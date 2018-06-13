@@ -19,12 +19,15 @@
 
 
 
+//  == BASE ==
+//  -- Arctk --
+#include <arctk/math/vec.hpp>
+
+
+
 //  == IMPORTS ==
 //  -- Std --
 #include <cmath>
-
-//  -- Arctk --
-#include <arctk/math/vec.hpp>
 
 
 
