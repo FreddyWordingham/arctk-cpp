@@ -29,11 +29,6 @@
 //  -- Std --
 #include <cmath>
 
-//  -- Graphical --
-#ifdef ARCTK_MOD_GUI
-#include <glm/glm.hpp>
-#endif
-
 
 
 //  == NAMESPACE ==
@@ -97,11 +92,6 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
-            //  -- Conversion --
-#ifdef ARCTK_MOD_GUI
-            inline operator glm::vec3() const noexcept; // NOLINT
-#endif
-
             //  -- Stream --
             template <typename S, typename L>
             friend inline S& operator<<(S& stream_, const Vec<T, 3>& vec_) noexcept;
@@ -187,23 +177,6 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
-        //  -- Conversion --
-#ifdef ARCTK_MOD_GUI
-        /**
-         *  Convert the vec3 to a glm::vec3.
-         *  Elements are converted to float type.
-         *
-         *  @tparam T   Type stored by the vec.
-         *
-         *  @return Converted glm::vec3 object.
-         */
-        template <typename T>
-        inline Vec<T, 3>::operator glm::vec3() const noexcept
-        {
-            return (glm::vec3(static_cast<float>(x), static_cast<float>(y), static_cast<float>(z)));
-        }
-#endif
-
         //  -- Stream --
         /**
          *  Print a vec3 as a human-readable string.
