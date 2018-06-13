@@ -53,11 +53,6 @@ namespace arc //! arctk namespace
         template <typename T>
         class Vec<T, 4>
         {
-            //  == ASSERTIONS ==
-            //  -- Type --
-            static_assert(std::is_floating_point<T>::value);
-
-
             //  == FIELDS ==
           public:
             //  -- Data --
