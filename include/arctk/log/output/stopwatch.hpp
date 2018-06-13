@@ -18,6 +18,12 @@
 
 
 
+//  == BASE ==
+//  -- Arctk --
+#include <arctk/log/output.hpp>
+
+
+
 //  == INCLUDES ==
 //  -- Std --
 #include <cassert>
