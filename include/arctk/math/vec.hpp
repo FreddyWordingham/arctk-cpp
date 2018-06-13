@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             constexpr inline Vec() noexcept = default;
             template <typename... A>
-            constexpr inline Vec(const A... a) noexcept;
+            constexpr inline explicit Vec(const A... a) noexcept;
             template <size_t M, typename... A>
             constexpr inline Vec(const Vec<T, M>& vec_, const A... a) noexcept;
 
