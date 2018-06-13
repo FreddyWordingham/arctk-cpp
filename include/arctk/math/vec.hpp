@@ -365,10 +365,10 @@ namespace arc //! arctk namespace
         {
             const Vec vec = *this;
 
-            --x;
-            --y;
-            --z;
-            --w;
+            for (size_t i = 0; i < N; ++i)
+            {
+                --_data[i];
+            }
 
             return (vec);
         }
