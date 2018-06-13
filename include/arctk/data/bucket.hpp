@@ -79,13 +79,7 @@ namespace arc //! arctk namespace
           private:
             template <size_t I>
             inline void collect(utl::MultiVec<T, I>& bins_, const std::array<double, I>& pos_, const T& val_) noexcept;
-
-            void collect(utl::MultiVec<T, 1>& bins_, const std::array<double, 1>& pos_, const T& val_)
-            {
-                const size_t index = find_index<N - 1>(pos_.front());
-
-                bins_[index] += val_;
-            }
+            inline void collect(utl::MultiVec<T, 1>& bins_, const std::array<double, 1>& pos_, const T& val_) noexcept;
 
             template <size_t I>
             size_t find_index(const double pos_)
@@ -191,6 +185,14 @@ namespace arc //! arctk namespace
             const size_t index = find_index<N - I>(pos_.front());
 
             collect(bins_[index], pos, val_);
+        }
+
+        template <typename T, size_t N>
+        inline void collect(utl::MultiVec<T, 1>& bins_, const std::array<double, 1>& pos_, const T& val_) noexcept
+        {
+            const size_t index = find_index<N - 1>(pos_.front());
+
+            bins_[index] += val_;
         }
 
 
