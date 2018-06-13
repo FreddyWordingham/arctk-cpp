@@ -304,7 +304,7 @@ namespace arc //! arctk namespace
          *
          *  @return A reference to this vec pre-increment.
          */
-        template <typename T>
+        template <typename T, size_t N>
         constexpr inline Vec<T, N>& Vec<T, N>::operator++() noexcept
         {
             for (size_t i = 0; i < N; ++i)
@@ -322,15 +322,15 @@ namespace arc //! arctk namespace
          *
          *  @return A copy of this vec post-increment.
          */
-        template <typename T>
+        template <typename T, size_t N>
         constexpr inline const Vec<T, N> Vec<T, N>::operator++(int) noexcept
         {
-            const Vec4 vec = *this;
+            const Vec vec = *this;
 
-            ++x;
-            ++y;
-            ++z;
-            ++w;
+            for (size_t i = 0; i < N; ++i)
+            {
+                ++_data[i];
+            }
 
             return (vec);
         }
@@ -342,7 +342,7 @@ namespace arc //! arctk namespace
          *
          *  @return A reference to this vec pre-decrement.
          */
-        template <typename T>
+        template <typename T, size_t N>
         constexpr inline Vec<T, N>& Vec<T, N>::operator--() noexcept
         {
             --x;
@@ -360,10 +360,10 @@ namespace arc //! arctk namespace
          *
          *  @return A copy of this vec post-decrement.
          */
-        template <typename T>
+        template <typename T, size_t N>
         constexpr inline const Vec<T, N> Vec<T, N>::operator--(int) noexcept
         {
-            const Vec4 vec = *this;
+            const Vec vec = *this;
 
             --x;
             --y;
