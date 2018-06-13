@@ -188,7 +188,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T, size_t N>
-        inline void collect(utl::MultiVec<T, 1>& bins_, const std::array<double, 1>& pos_, const T& val_) noexcept
+        inline void Bucket<T, N>::collect(utl::MultiVec<T, 1>& bins_, const std::array<double, 1>& pos_, const T& val_) noexcept
         {
             const size_t index = find_index<N - 1>(pos_.front());
 
