@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline explicit Sphere(double radius_, const math::Vec3<double>& pos_ = {0.0, 0.0, 0.0}) noexcept;
+                inline explicit Sphere(double radius_, const vec3& pos_ = {0.0, 0.0, 0.0}) noexcept;
 
 
                 //  == METHODS ==
@@ -70,7 +70,7 @@ namespace arc //! arctk namespace
                 inline double radius() const noexcept;
 
                 //  -- Collision --
-                inline Collision collision(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept override;
+                inline Collision collision(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
 
 
@@ -85,7 +85,7 @@ namespace arc //! arctk namespace
              *
              *  @pre    radius_ must be positive.
              */
-            inline Sphere::Sphere(const double radius_, const math::Vec3<double>& pos_) noexcept
+            inline Sphere::Sphere(const double radius_, const vec3& pos_) noexcept
               : Shape(pos_)
               , _radius(radius_)
             {
@@ -118,7 +118,7 @@ namespace arc //! arctk namespace
              *
              *  @return Collision information.
              */
-            inline Collision Sphere::collision(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) const noexcept
+            inline Collision Sphere::collision(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 assert(dir_.normalised());
 
