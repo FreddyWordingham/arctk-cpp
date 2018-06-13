@@ -79,11 +79,12 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
-            //  -- Conversion --
-
             //  -- Stream --
             template <typename S, typename L>
             friend inline S& operator<<(S& stream_, const Vec<T, 2>& vec_) noexcept;
+
+            //  -- Conversion --
+            constexpr inline operator std::array<T, 2>() const noexcept;
 
             //  -- Assignment --
             constexpr inline Vec<T, 2>& operator+=(T val_) noexcept;
@@ -153,8 +154,6 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
-        //  -- Conversion --
-
         //  -- Stream --
         /**
          *  Print a vec2 as a human-readable string.
@@ -173,6 +172,21 @@ namespace arc //! arctk namespace
             stream_ << '{' << vec_.x << ", " << vec_.y << '}';
 
             return (stream_);
+        }
+
+
+        //  -- Conversion --
+        /**
+         *  Convert the vec to a std::array.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return Converted std::array object.
+         */
+        template <typename T>
+        constexpr inline Vec<T, 2>::operator std::array<T, 2>() const noexcept
+        {
+            return (std::array<T, 2>({{x, y}}));
         }
 
 
