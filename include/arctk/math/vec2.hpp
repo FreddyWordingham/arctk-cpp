@@ -78,7 +78,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            constexpr inline Vec() noexcept;
+            constexpr inline Vec() noexcept = default;
             constexpr inline Vec(T x_, T y_) noexcept;
 
 
@@ -140,18 +140,6 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
-        /**
-         *  Construct a vec2 with initial element values of zero.
-         *
-         *  @tparam T   Type stored by the vec.
-         */
-        template <typename T>
-        constexpr inline Vec<T, 2>::Vec() noexcept
-          : x(0)
-          , y(0)
-        {
-        }
-
         /**
          *  Construct a vec2 with initial element values.
          *
