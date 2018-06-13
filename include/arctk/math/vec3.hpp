@@ -23,6 +23,9 @@
 //  -- Std --
 #include <cmath>
 
+//  -- Arctk --
+#include <arctk/math/vec2.hpp>
+
 //  -- Graphical --
 #ifdef ARCTK_MOD_GUI
 #include <glm/glm.hpp>
@@ -45,7 +48,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored by the vec.
          */
         template <typename T>
-        class Vec3
+        class Vec<T, 3>
         {
             //  == FIELDS ==
           public:
@@ -84,8 +87,8 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            constexpr inline Vec3() noexcept;
-            constexpr inline Vec3(T x_, T y_, T z_) noexcept;
+            constexpr inline Vec() noexcept;
+            constexpr inline Vec(T x_, T y_, T z_) noexcept;
 
 
             //  == OPERATORS ==
@@ -97,34 +100,34 @@ namespace arc //! arctk namespace
 
             //  -- Stream --
             template <typename S, typename L>
-            friend inline S& operator<<(S& stream_, const Vec3<T>& vec_) noexcept;
+            friend inline S& operator<<(S& stream_, const Vec<T, 3>& vec_) noexcept;
 
             //  -- Assignment --
-            constexpr inline Vec3<T>& operator+=(T val_) noexcept;
-            constexpr inline Vec3<T>& operator+=(const Vec3<T>& vec_) noexcept;
-            constexpr inline Vec3<T>& operator-=(T val_) noexcept;
-            constexpr inline Vec3<T>& operator-=(const Vec3<T>& vec_) noexcept;
-            constexpr inline Vec3<T>& operator*=(T val_) noexcept;
-            constexpr inline Vec3<T>& operator/=(T val_) noexcept;
-            constexpr inline Vec3<T>& operator^=(const Vec3<T>& vec_) noexcept;
+            constexpr inline Vec<T, 3>& operator+=(T val_) noexcept;
+            constexpr inline Vec<T, 3>& operator+=(const Vec<T, 3>& vec_) noexcept;
+            constexpr inline Vec<T, 3>& operator-=(T val_) noexcept;
+            constexpr inline Vec<T, 3>& operator-=(const Vec<T, 3>& vec_) noexcept;
+            constexpr inline Vec<T, 3>& operator*=(T val_) noexcept;
+            constexpr inline Vec<T, 3>& operator/=(T val_) noexcept;
+            constexpr inline Vec<T, 3>& operator^=(const Vec<T, 3>& vec_) noexcept;
 
             //  -- Increment / Decrement --
-            constexpr inline Vec3<T>&      operator++() noexcept;
-            constexpr inline const Vec3<T> operator++(int) noexcept;
-            constexpr inline Vec3<T>&      operator--() noexcept;
-            constexpr inline const Vec3<T> operator--(int) noexcept;
+            constexpr inline Vec<T, 3>&      operator++() noexcept;
+            constexpr inline const Vec<T, 3> operator++(int) noexcept;
+            constexpr inline Vec<T, 3>&      operator--() noexcept;
+            constexpr inline const Vec<T, 3> operator--(int) noexcept;
 
             //  -- Arithmetic --
-            constexpr inline Vec3<T> operator+() const noexcept;
-            constexpr inline Vec3<T> operator-() const noexcept;
-            constexpr inline Vec3<T> operator+(T val_) const noexcept;
-            constexpr inline Vec3<T> operator+(const Vec3<T>& vec_) const noexcept;
-            constexpr inline Vec3<T> operator-(T val_) const noexcept;
-            constexpr inline Vec3<T> operator-(const Vec3<T>& vec_) const noexcept;
-            constexpr inline Vec3<T> operator*(T val_) const noexcept;
-            constexpr inline T       operator*(const Vec3<T>& vec_) const noexcept;
-            constexpr inline Vec3<T> operator/(T val_) const noexcept;
-            constexpr inline Vec3<T> operator^(const Vec3<T>& vec_) const noexcept;
+            constexpr inline Vec<T, 3> operator+() const noexcept;
+            constexpr inline Vec<T, 3> operator-() const noexcept;
+            constexpr inline Vec<T, 3> operator+(T val_) const noexcept;
+            constexpr inline Vec<T, 3> operator+(const Vec<T, 3>& vec_) const noexcept;
+            constexpr inline Vec<T, 3> operator-(T val_) const noexcept;
+            constexpr inline Vec<T, 3> operator-(const Vec<T, 3>& vec_) const noexcept;
+            constexpr inline Vec<T, 3> operator*(T val_) const noexcept;
+            constexpr inline T         operator*(const Vec<T, 3>& vec_) const noexcept;
+            constexpr inline Vec<T, 3> operator/(T val_) const noexcept;
+            constexpr inline Vec<T, 3> operator^(const Vec<T, 3>& vec_) const noexcept;
 
             //  -- Access --
             constexpr inline T&       operator[](size_t index_) noexcept;
@@ -141,11 +144,11 @@ namespace arc //! arctk namespace
             constexpr inline double mag() const noexcept;
             constexpr inline double mag_sq() const noexcept;
             constexpr inline void   normalise() const noexcept;
-            constexpr inline void   rotate(const math::Vec3<T>& axis_, double ang_) noexcept;
+            constexpr inline void   rotate(const math::Vec<T, 3>& axis_, double ang_) noexcept;
 
             //  -- Co-ordinate --
-            constexpr inline Vec3<T> to_polar() const noexcept;
-            constexpr inline Vec3<T> to_cart() const noexcept;
+            constexpr inline Vec<T, 3> to_polar() const noexcept;
+            constexpr inline Vec<T, 3> to_cart() const noexcept;
         };
 
 
@@ -158,7 +161,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored by the vec.
          */
         template <typename T>
-        constexpr inline Vec3<T>::Vec3() noexcept
+        constexpr inline Vec<T, 3>::Vec() noexcept
           : x(0)
           , y(0)
           , z(0)
@@ -175,7 +178,7 @@ namespace arc //! arctk namespace
          *  @param  z_  Initial value of the z component.
          */
         template <typename T>
-        constexpr inline Vec3<T>::Vec3(const T x_, const T y_, const T z_) noexcept
+        constexpr inline Vec<T, 3>::Vec(const T x_, const T y_, const T z_) noexcept
           : x(x_)
           , y(y_)
           , z(z_)
@@ -196,7 +199,7 @@ namespace arc //! arctk namespace
          *  @return Converted glm::vec3 object.
          */
         template <typename T>
-        inline Vec3<T>::operator glm::vec3() const noexcept
+        inline Vec<T, 3>::operator glm::vec3() const noexcept
         {
             return (glm::vec3(static_cast<float>(x), static_cast<float>(y), static_cast<float>(z)));
         }
@@ -215,7 +218,7 @@ namespace arc //! arctk namespace
          *  @return A reference to the stream post-print.
          */
         template <typename S, typename T>
-        inline S& operator<<(S& stream_, const Vec3<T>& vec_) noexcept
+        inline S& operator<<(S& stream_, const Vec<T, 3>& vec_) noexcept
         {
             stream_ << '{' << vec_.x << ", " << vec_.y << ", " << vec_.z << '}';
 
@@ -234,7 +237,7 @@ namespace arc //! arctk namespace
          *  @return Reference to this vec post-operation.
          */
         template <typename T>
-        constexpr inline Vec3<T>& Vec3<T>::operator+=(const T val_) noexcept
+        constexpr inline Vec<T, 3>& Vec<T, 3>::operator+=(const T val_) noexcept
         {
             x += val_;
             y += val_;
@@ -253,7 +256,7 @@ namespace arc //! arctk namespace
          *  @return Reference to this vec post-operation.
          */
         template <typename T>
-        constexpr inline Vec3<T>& Vec3<T>::operator+=(const Vec3<T>& vec_) noexcept
+        constexpr inline Vec<T, 3>& Vec<T, 3>::operator+=(const Vec<T, 3>& vec_) noexcept
         {
             x += vec_.x;
             y += vec_.y;
@@ -272,7 +275,7 @@ namespace arc //! arctk namespace
          *  @return Reference to this vec post-operation.
          */
         template <typename T>
-        constexpr inline Vec3<T>& Vec3<T>::operator-=(const T val_) noexcept
+        constexpr inline Vec<T, 3>& Vec<T, 3>::operator-=(const T val_) noexcept
         {
             x -= val_;
             y -= val_;
@@ -291,7 +294,7 @@ namespace arc //! arctk namespace
          *  @return Reference to this vec post-operation.
          */
         template <typename T>
-        constexpr inline Vec3<T>& Vec3<T>::operator-=(const Vec3<T>& vec_) noexcept
+        constexpr inline Vec<T, 3>& Vec<T, 3>::operator-=(const Vec<T, 3>& vec_) noexcept
         {
             x -= vec_.x;
             y -= vec_.y;
@@ -310,7 +313,7 @@ namespace arc //! arctk namespace
          *  @return Reference to this vec post-operation.
          */
         template <typename T>
-        constexpr inline Vec3<T>& Vec3<T>::operator*=(const T val_) noexcept
+        constexpr inline Vec<T, 3>& Vec<T, 3>::operator*=(const T val_) noexcept
         {
             x *= val_;
             y *= val_;
@@ -329,7 +332,7 @@ namespace arc //! arctk namespace
          *  @return Reference to this vec post-operation.
          */
         template <typename T>
-        constexpr inline Vec3<T>& Vec3<T>::operator/=(const T val_) noexcept
+        constexpr inline Vec<T, 3>& Vec<T, 3>::operator/=(const T val_) noexcept
         {
             x /= val_;
             y /= val_;
@@ -349,7 +352,7 @@ namespace arc //! arctk namespace
          *  @return Reference to this vec post-operation.
          */
         template <typename T>
-        constexpr inline Vec3<T>& Vec3<T>::operator^=(const Vec3<T>& vec_) noexcept
+        constexpr inline Vec<T, 3>& Vec<T, 3>::operator^=(const Vec<T, 3>& vec_) noexcept
         {
             const T pre_x{x};
             const T pre_y{y};
@@ -372,7 +375,7 @@ namespace arc //! arctk namespace
          *  @return A reference to this vec pre-increment.
          */
         template <typename T>
-        constexpr inline Vec3<T>& Vec3<T>::operator++() noexcept
+        constexpr inline Vec<T, 3>& Vec<T, 3>::operator++() noexcept
         {
             ++x;
             ++y;
@@ -389,9 +392,9 @@ namespace arc //! arctk namespace
          *  @return A copy of this vec post-increment.
          */
         template <typename T>
-        constexpr inline const Vec3<T> Vec3<T>::operator++(int) noexcept
+        constexpr inline const Vec<T, 3> Vec<T, 3>::operator++(int) noexcept
         {
-            const Vec3 vec = *this;
+            const Vec vec = *this;
 
             ++x;
             ++y;
@@ -408,7 +411,7 @@ namespace arc //! arctk namespace
          *  @return A reference to this vec pre-decrement.
          */
         template <typename T>
-        constexpr inline Vec3<T>& Vec3<T>::operator--() noexcept
+        constexpr inline Vec<T, 3>& Vec<T, 3>::operator--() noexcept
         {
             --x;
             --y;
@@ -425,9 +428,9 @@ namespace arc //! arctk namespace
          *  @return A copy of this vec post-decrement.
          */
         template <typename T>
-        constexpr inline const Vec3<T> Vec3<T>::operator--(int) noexcept
+        constexpr inline const Vec<T, 3> Vec<T, 3>::operator--(int) noexcept
         {
-            const Vec3 vec = *this;
+            const Vec vec = *this;
 
             --x;
             --y;
@@ -446,9 +449,9 @@ namespace arc //! arctk namespace
          *  @return Positive copy of the vec.
          */
         template <typename T>
-        constexpr inline Vec3<T> Vec3<T>::operator+() const noexcept
+        constexpr inline Vec<T, 3> Vec<T, 3>::operator+() const noexcept
         {
-            return (Vec3(+x, +y, +z));
+            return (Vec(+x, +y, +z));
         }
 
         /**
@@ -459,9 +462,9 @@ namespace arc //! arctk namespace
          *  @return Negative copy of the vec.
          */
         template <typename T>
-        constexpr inline Vec3<T> Vec3<T>::operator-() const noexcept
+        constexpr inline Vec<T, 3> Vec<T, 3>::operator-() const noexcept
         {
-            return (Vec3(-x, -y, -z));
+            return (Vec(-x, -y, -z));
         }
 
         /**
@@ -474,9 +477,9 @@ namespace arc //! arctk namespace
          *  @return Vec formed by adding the value to the vec.
          */
         template <typename T>
-        constexpr inline Vec3<T> Vec3<T>::operator+(T val_) const noexcept
+        constexpr inline Vec<T, 3> Vec<T, 3>::operator+(T val_) const noexcept
         {
-            return (Vec3(x + val_, y + val_, z + val_));
+            return (Vec(x + val_, y + val_, z + val_));
         }
 
         /**
@@ -489,9 +492,9 @@ namespace arc //! arctk namespace
          *  @return Vec formed by adding the vec to the vec.
          */
         template <typename T>
-        constexpr inline Vec3<T> Vec3<T>::operator+(const Vec3<T>& vec_) const noexcept
+        constexpr inline Vec<T, 3> Vec<T, 3>::operator+(const Vec<T, 3>& vec_) const noexcept
         {
-            return (Vec3(x + vec_.x, y + vec_.y, z + vec_.z));
+            return (Vec(x + vec_.x, y + vec_.y, z + vec_.z));
         }
 
         /**
@@ -504,9 +507,9 @@ namespace arc //! arctk namespace
          *  @return Vec formed by subtracting the value from the vec.
          */
         template <typename T>
-        constexpr inline Vec3<T> Vec3<T>::operator-(T val_) const noexcept
+        constexpr inline Vec<T, 3> Vec<T, 3>::operator-(T val_) const noexcept
         {
-            return (Vec3(x - val_, y - val_, z - val_));
+            return (Vec(x - val_, y - val_, z - val_));
         }
 
         /**
@@ -519,9 +522,9 @@ namespace arc //! arctk namespace
          *  @return Vec formed by subtracting the vec from the vec.
          */
         template <typename T>
-        constexpr inline Vec3<T> Vec3<T>::operator-(const Vec3<T>& vec_) const noexcept
+        constexpr inline Vec<T, 3> Vec<T, 3>::operator-(const Vec<T, 3>& vec_) const noexcept
         {
-            return (Vec3(x - vec_.x, y - vec_.y, z - vec_.z));
+            return (Vec(x - vec_.x, y - vec_.y, z - vec_.z));
         }
 
         /**
@@ -534,9 +537,9 @@ namespace arc //! arctk namespace
          *  @return Vec formed by multiplying the vec elements by the value.
          */
         template <typename T>
-        constexpr inline Vec3<T> Vec3<T>::operator*(T val_) const noexcept
+        constexpr inline Vec<T, 3> Vec<T, 3>::operator*(T val_) const noexcept
         {
-            return (Vec3(x * val_, y * val_, z * val_));
+            return (Vec(x * val_, y * val_, z * val_));
         }
 
         /**
@@ -549,7 +552,7 @@ namespace arc //! arctk namespace
          *  @return Dot-product of the vecs.
          */
         template <typename T>
-        constexpr inline T Vec3<T>::operator*(const Vec3<T>& vec_) const noexcept
+        constexpr inline T Vec<T, 3>::operator*(const Vec<T, 3>& vec_) const noexcept
         {
             return ((x * vec_.x) + (y * vec_.y) + (z * vec_.z));
         }
@@ -564,9 +567,9 @@ namespace arc //! arctk namespace
          *  @return Vec formed by dividing the vec elements by the value.
          */
         template <typename T>
-        constexpr inline Vec3<T> Vec3<T>::operator/(T val_) const noexcept
+        constexpr inline Vec<T, 3> Vec<T, 3>::operator/(T val_) const noexcept
         {
-            return (Vec3(x / val_, y / val_, z / val_));
+            return (Vec(x / val_, y / val_, z / val_));
         }
 
         /**
@@ -579,9 +582,9 @@ namespace arc //! arctk namespace
          *  @return Cross-product of the vecs.
          */
         template <typename T>
-        constexpr inline Vec3<T> Vec3<T>::operator^(const Vec3<T>& vec_) const noexcept
+        constexpr inline Vec<T, 3> Vec<T, 3>::operator^(const Vec<T, 3>& vec_) const noexcept
         {
-            return (Vec3((y * vec_.z) - (z * vec_.y), (z * vec_.x) - (x * vec_.z), (x * vec_.y) - (y * vec_.x)));
+            return (Vec((y * vec_.z) - (z * vec_.y), (z * vec_.x) - (x * vec_.z), (x * vec_.y) - (y * vec_.x)));
         }
 
 
@@ -597,7 +600,7 @@ namespace arc //! arctk namespace
          *  @return A reference to the element requested.
          */
         template <typename T>
-        constexpr inline T& Vec3<T>::operator[](const size_t index_) noexcept
+        constexpr inline T& Vec<T, 3>::operator[](const size_t index_) noexcept
         {
             assert(index_ < 3);
 
@@ -614,7 +617,7 @@ namespace arc //! arctk namespace
          *  @return A const reference to the element requested.
          */
         template <typename T>
-        constexpr inline const T& Vec3<T>::operator[](const size_t index_) const noexcept
+        constexpr inline const T& Vec<T, 3>::operator[](const size_t index_) const noexcept
         {
             assert(index_ < 3);
 
@@ -633,7 +636,7 @@ namespace arc //! arctk namespace
          *  @return True if the vec is normalised.
          */
         template <typename T>
-        constexpr inline bool Vec3<T>::normalised(const double tol_) const noexcept
+        constexpr inline bool Vec<T, 3>::normalised(const double tol_) const noexcept
         {
             return (std::fabs(1.0 - mag()) <= tol_);
         }
@@ -648,7 +651,7 @@ namespace arc //! arctk namespace
          *  @return Sum of the vec elements.
          */
         template <typename T>
-        constexpr inline T Vec3<T>::sum() const noexcept
+        constexpr inline T Vec<T, 3>::sum() const noexcept
         {
             return (x + y + z);
         }
@@ -661,7 +664,7 @@ namespace arc //! arctk namespace
          *  @return Magnitude of the vec.
          */
         template <typename T>
-        constexpr inline double Vec3<T>::mag() const noexcept
+        constexpr inline double Vec<T, 3>::mag() const noexcept
         {
             return (std::sqrt(mag_sq()));
         }
@@ -674,7 +677,7 @@ namespace arc //! arctk namespace
          *  @return Magnitude-squared of the vec.
          */
         template <typename T>
-        constexpr inline double Vec3<T>::mag_sq() const noexcept
+        constexpr inline double Vec<T, 3>::mag_sq() const noexcept
         {
             return (static_cast<double>((x * x) + (y * y) + (z * z)));
         }
@@ -685,7 +688,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored by the vec.
          */
         template <typename T>
-        constexpr inline void Vec3<T>::normalise() const noexcept
+        constexpr inline void Vec<T, 3>::normalise() const noexcept
         {
             const double m = 1.0 / mag();
 
@@ -706,11 +709,11 @@ namespace arc //! arctk namespace
          *  @pre    axis_ must be normalised.
          */
         template <typename T>
-        constexpr inline void Vec3<T>::rotate(const math::Vec3<T>& axis_, const double ang_) noexcept
+        constexpr inline void Vec<T, 3>::rotate(const math::Vec<T, 3>& axis_, const double ang_) noexcept
         {
             assert(axis_.normalised());
 
-            const Vec3<T> in = *this;
+            const Vec<T, 3> in = *this;
 
             *this = (in * std::cos(ang_)) + ((axis_ ^ in) * std::sin(ang_)) + (axis_ * (axis_ * in) * (1.0 - std::cos(ang_)));
         }
@@ -725,9 +728,9 @@ namespace arc //! arctk namespace
          *  @return Vec in polar co-ordinate form.
          */
         template <typename T>
-        constexpr inline Vec3<T> Vec3<T>::to_polar() const noexcept
+        constexpr inline Vec<T, 3> Vec<T, 3>::to_polar() const noexcept
         {
-            Vec3<T> polar;
+            Vec<T, 3> polar;
 
             polar.rho   = std::sqrt((x * x) + (y * y) + (z * z));
             polar.theta = std::acos(z / polar.rho);
@@ -744,9 +747,9 @@ namespace arc //! arctk namespace
          *  @return Vec in cartesian co-ordinate form.
          */
         template <typename T>
-        constexpr inline Vec3<T> Vec3<T>::to_cart() const noexcept
+        constexpr inline Vec<T, 3> Vec<T, 3>::to_cart() const noexcept
         {
-            Vec3<T> cart;
+            Vec<T, 3> cart;
 
             cart.x = rho * std::sin(theta) * std::cos(phi);
             cart.y = rho * std::sin(theta) * std::sin(phi);
