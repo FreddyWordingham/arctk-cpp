@@ -23,6 +23,9 @@
 //  -- Std --
 #include <cmath>
 
+//  -- Arctk --
+#include <arctk/math/vec.hpp>
+
 //  -- Graphical --
 #ifdef ARCTK_MOD_GUI
 #include <glm/glm.hpp>

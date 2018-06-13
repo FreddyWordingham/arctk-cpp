@@ -24,7 +24,7 @@
 #include <cmath>
 
 //  -- Arctk --
-#include <arctk/math/vec2.hpp>
+#include <arctk/math/vec.hpp>
 
 
 
