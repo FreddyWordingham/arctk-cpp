@@ -334,7 +334,7 @@ namespace arc //! arctk namespace
          *  @return A copy of this vec post-increment.
          */
         template <typename T, size_t N>
-        constexpr inline const Vec<T, N> Vec<T, N>::operator++(int) noexcept
+        constexpr inline const Vec<T, N> Vec<T, N>::operator++(const int) noexcept
         {
             const Vec vec = *this;
 
@@ -372,7 +372,7 @@ namespace arc //! arctk namespace
          *  @return A copy of this vec post-decrement.
          */
         template <typename T, size_t N>
-        constexpr inline const Vec<T, N> Vec<T, N>::operator--(int) noexcept
+        constexpr inline const Vec<T, N> Vec<T, N>::operator--(const int) noexcept
         {
             const Vec vec = *this;
 
@@ -436,7 +436,7 @@ namespace arc //! arctk namespace
          *  @return Vec formed by adding the value to the vec.
          */
         template <typename T, size_t N>
-        constexpr inline Vec<T, N> Vec<T, N>::operator+(T val_) const noexcept
+        constexpr inline Vec<T, N> Vec<T, N>::operator+(const T val_) const noexcept
         {
             Vec vec;
 
@@ -480,7 +480,7 @@ namespace arc //! arctk namespace
          *  @return Vec formed by subtracting the value from the vec.
          */
         template <typename T, size_t N>
-        constexpr inline Vec<T, N> Vec<T, N>::operator-(T val_) const noexcept
+        constexpr inline Vec<T, N> Vec<T, N>::operator-(const T val_) const noexcept
         {
             Vec vec;
 
@@ -524,7 +524,7 @@ namespace arc //! arctk namespace
          *  @return Vec formed by multiplying the vec elements by the value.
          */
         template <typename T, size_t N>
-        constexpr inline Vec<T, N> Vec<T, N>::operator*(T val_) const noexcept
+        constexpr inline Vec<T, N> Vec<T, N>::operator*(const T val_) const noexcept
         {
             VecN vec;
 
@@ -568,7 +568,7 @@ namespace arc //! arctk namespace
          *  @return Vec formed by dividing the vec elements by the value.
          */
         template <typename T, size_t N>
-        constexpr inline Vec<T, N> Vec<T, N>::operator/(T val_) const noexcept
+        constexpr inline Vec<T, N> Vec<T, N>::operator/(const T val_) const noexcept
         {
             VecN vec;
 
