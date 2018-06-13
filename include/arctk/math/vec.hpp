@@ -34,8 +34,6 @@ namespace arc //! arctk namespace
     namespace math //! mathematical namespace
     {
 
-
-
         //  == CLASS ==
         /**
          *  Mathematical vector class.
