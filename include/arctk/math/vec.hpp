@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Stream --
-            template <typename S, typename _T, typename _N>
+            template <typename S, typename _T, size_t _N>
             friend inline S& operator<<(S& stream_, const Vec<T, N>& vec_) noexcept;
 
 
@@ -71,6 +71,18 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+
+
+
+        //  == OPERATORS ==
+        //  -- Stream --
+        template <typename S, typename T, size_t N>
+        inline S& operator<<(S& stream_, const Vec<T, N>& vec_) noexcept
+        {
+            stream_ << _data;
+
+            return (stream_);
+        }
 
 
 
