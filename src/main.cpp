@@ -49,6 +49,7 @@
 #include <arctk/math/container.hpp>
 #include <arctk/math/conversion.hpp>
 #include <arctk/math/power.hpp>
+#include <arctk/math/vec.hpp>
 #include <arctk/math/vec2.hpp>
 #include <arctk/math/vec3.hpp>
 #include <arctk/math/vec4.hpp>
