@@ -393,8 +393,8 @@ namespace arc //! arctk namespace
          *
          *  @return Positive copy of the vec.
          */
-        template <typename T>
-        constexpr inline Vec4<T> Vec4<T>::operator+() const noexcept
+        template <typename T, size_t N>
+        constexpr inline Vec<T, N> Vec<T, N>::operator+() const noexcept
         {
             VecN vec;
 
@@ -413,10 +413,17 @@ namespace arc //! arctk namespace
          *
          *  @return Negative copy of the vec.
          */
-        template <typename T>
-        constexpr inline Vec4<T> Vec4<T>::operator-() const noexcept
+        template <typename T, size_t N>
+        constexpr inline Vec<T, N> Vec<T, N>::operator-() const noexcept
         {
-            return (Vec4(-x, -y, -z, -w));
+            VecN vec;
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                vec[i] = -_data[i];
+            }
+
+            return (vec);
         }
 
         /**
@@ -428,8 +435,8 @@ namespace arc //! arctk namespace
          *
          *  @return Vec formed by adding the value to the vec.
          */
-        template <typename T>
-        constexpr inline Vec4<T> Vec4<T>::operator+(T val_) const noexcept
+        template <typename T, size_t N>
+        constexpr inline Vec<T, N> Vec<T, N>::operator+(T val_) const noexcept
         {
             return (Vec4(x + val_, y + val_, z + val_, w + val_));
         }
@@ -443,8 +450,8 @@ namespace arc //! arctk namespace
          *
          *  @return Vec formed by adding the vec to the vec.
          */
-        template <typename T>
-        constexpr inline Vec4<T> Vec4<T>::operator+(const Vec4<T>& vec_) const noexcept
+        template <typename T, size_t N>
+        constexpr inline Vec<T, N> Vec<T, N>::operator+(const Vec<T, N>& vec_) const noexcept
         {
             return (Vec4(x + vec_.x, y + vec_.y, z + vec_.z, w + vec_.w));
         }
@@ -458,8 +465,8 @@ namespace arc //! arctk namespace
          *
          *  @return Vec formed by subtracting the value from the vec.
          */
-        template <typename T>
-        constexpr inline Vec4<T> Vec4<T>::operator-(T val_) const noexcept
+        template <typename T, size_t N>
+        constexpr inline Vec<T, N> Vec<T, N>::operator-(T val_) const noexcept
         {
             return (Vec4(x - val_, y - val_, z - val_, w - val_));
         }
@@ -473,8 +480,8 @@ namespace arc //! arctk namespace
          *
          *  @return Vec formed by subtracting the vec from the vec.
          */
-        template <typename T>
-        constexpr inline Vec4<T> Vec4<T>::operator-(const Vec4<T>& vec_) const noexcept
+        template <typename T, size_t N>
+        constexpr inline Vec<T, N> Vec<T, N>::operator-(const Vec<T, N>& vec_) const noexcept
         {
             return (Vec4(x - vec_.x, y - vec_.y, z - vec_.z, w - vec_.w));
         }
@@ -488,8 +495,8 @@ namespace arc //! arctk namespace
          *
          *  @return Vec formed by multiplying the vec elements by the value.
          */
-        template <typename T>
-        constexpr inline Vec4<T> Vec4<T>::operator*(T val_) const noexcept
+        template <typename T, size_t N>
+        constexpr inline Vec<T, N> Vec<T, N>::operator*(T val_) const noexcept
         {
             return (Vec4(x * val_, y * val_, z * val_, w * val_));
         }
@@ -503,8 +510,8 @@ namespace arc //! arctk namespace
          *
          *  @return Dot-product of the vecs.
          */
-        template <typename T>
-        constexpr inline T Vec4<T>::operator*(const Vec4<T>& vec_) const noexcept
+        template <typename T, size_t N>
+        constexpr inline T Vec<T, N>::operator*(const Vec<T, N>& vec_) const noexcept
         {
             return ((x * vec_.x) + (y * vec_.y) + (z * vec_.z) + (w * vec_.w));
         }
@@ -518,8 +525,8 @@ namespace arc //! arctk namespace
          *
          *  @return Vec formed by dividing the vec elements by the value.
          */
-        template <typename T>
-        constexpr inline Vec4<T> Vec4<T>::operator/(T val_) const noexcept
+        template <typename T, size_t N>
+        constexpr inline Vec<T, N> Vec<T, N>::operator/(T val_) const noexcept
         {
             return (Vec4(x / val_, y / val_, z / val_, w / val_));
         }
