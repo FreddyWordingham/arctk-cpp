@@ -190,6 +190,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Searching --
+        template <typename T, size_t N>
         template <size_t I>
         inline size_t Bucket<T, N>::find_index(const double pos_) noexcept
         {
