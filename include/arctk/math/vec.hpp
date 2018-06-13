@@ -396,7 +396,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline Vec<T, N> Vec<T, N>::operator+() const noexcept
         {
-            VecN vec;
+            Vec vec;
 
             for (size_t i = 0; i < N; ++i)
             {
@@ -416,7 +416,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline Vec<T, N> Vec<T, N>::operator-() const noexcept
         {
-            VecN vec;
+            Vec vec;
 
             for (size_t i = 0; i < N; ++i)
             {
@@ -438,7 +438,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline Vec<T, N> Vec<T, N>::operator+(T val_) const noexcept
         {
-            VecN vec;
+            Vec vec;
 
             for (size_t i = 0; i < N; ++i)
             {
@@ -460,7 +460,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline Vec<T, N> Vec<T, N>::operator+(const Vec<T, N>& vec_) const noexcept
         {
-            VecN vec;
+            Vec vec;
 
             for (size_t i = 0; i < N; ++i)
             {
@@ -482,7 +482,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline Vec<T, N> Vec<T, N>::operator-(T val_) const noexcept
         {
-            VecN vec;
+            Vec vec;
 
             for (size_t i = 0; i < N; ++i)
             {
@@ -504,7 +504,14 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline Vec<T, N> Vec<T, N>::operator-(const Vec<T, N>& vec_) const noexcept
         {
-            return (Vec4(x - vec_.x, y - vec_.y, z - vec_.z, w - vec_.w));
+            Vec vec;
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                vec[i] = _data[i] - vec_[i];
+            }
+
+            return (vec);
         }
 
         /**
