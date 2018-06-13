@@ -42,15 +42,15 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Spatial --
-            math::Vec3<double> _pos; //!< Position of the particle.
-            math::Vec3<double> _dir; //!< Direction of travel.
+            vec3 _pos; //!< Position of the particle.
+            vec3 _dir; //!< Direction of travel.
 
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Particle(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) noexcept;
+            inline Particle(const vec3& pos_, const vec3& dir_) noexcept;
             inline Particle(const Particle&) noexcept = default; //!< Defaulted copy constructor.
             inline Particle(Particle&&) noexcept      = default; //!< Defaulted move constructor.
 
@@ -68,8 +68,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const math::Vec3<double>& pos() noexcept;
-            inline const math::Vec3<double>& dir() noexcept;
+            inline const vec3& pos() noexcept;
+            inline const vec3& dir() noexcept;
 
             //  -- Setters --
             virtual inline void move(double dist_) noexcept;
@@ -88,7 +88,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    dir_ must be normalised.
          */
-        inline Particle::Particle(const math::Vec3<double>& pos_, const math::Vec3<double>& dir_) noexcept
+        inline Particle::Particle(const vec3& pos_, const vec3& dir_) noexcept
           : _pos(pos_)
           , _dir(dir_)
         {
@@ -104,7 +104,7 @@ namespace arc //! arctk namespace
          *
          *  @return Position of the particle.
          */
-        inline const math::Vec3<double>& Particle::pos() noexcept
+        inline const vec3& Particle::pos() noexcept
         {
             return (_pos);
         }
@@ -114,7 +114,7 @@ namespace arc //! arctk namespace
          *
          *  @return Direction of the particle.
          */
-        inline const math::Vec3<double>& Particle::dir() noexcept
+        inline const vec3& Particle::dir() noexcept
         {
             return (_dir);
         }
@@ -143,8 +143,8 @@ namespace arc //! arctk namespace
          */
         inline void Particle::rotate(const double theta_, const double phi_) noexcept
         {
-            math::Vec3<double> front = _dir;
-            math::Vec3<double> right = _dir ^ math::Vec3<double>(0.0, 0.0, 1.0);
+            vec3 front = _dir;
+            vec3 right = _dir ^ vec3(0.0, 0.0, 1.0);
 
             _dir.rotate(right, theta_);
             _dir.rotate(front, phi_);
