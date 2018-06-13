@@ -104,6 +104,10 @@ namespace arc //! arctk namespace
             constexpr inline T         operator*(const Vec<T, N>& vec_) const noexcept;
             constexpr inline Vec<T, N> operator/(T val_) const noexcept;
 
+            //  -- Access --
+            inline T&       operator[](size_t index_) noexcept;
+            inline const T& operator[](size_t index_) const noexcept;
+
 
             //  == METHODS ==
           public:
@@ -537,7 +541,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline Vec<T, N> Vec<T, N>::operator*(const T val_) const noexcept
         {
-            VecN vec;
+            Vec vec;
 
             for (size_t i = 0; i < N; ++i)
             {
@@ -583,7 +587,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline Vec<T, N> Vec<T, N>::operator/(const T val_) const noexcept
         {
-            VecN vec;
+            Vec vec;
 
             for (size_t i = 0; i < N; ++i)
             {
@@ -591,6 +595,24 @@ namespace arc //! arctk namespace
             }
 
             return (vec);
+        }
+
+
+        //  -- Access --
+        template <typename T, size_t N>
+        inline double& Vec<T, N>::operator[](const size_t index_) noexcept
+        {
+            assert(index_ < N);
+
+            return (_data[index_]);
+        }
+
+        template <typename T, size_t N>
+        inline const double& Vec<T, N>::operator[](const size_t index_) const noexcept
+        {
+            assert(index_ < N);
+
+            return (_data[index_]);
         }
 
 
