@@ -79,6 +79,14 @@ namespace arc //! arctk namespace
             template <typename S, typename _T, size_t _N>
             friend inline S& operator<<(S& stream_, const Vec<T, N>& vec_) noexcept;
 
+            //  -- Assignment --
+            constexpr inline Vec<T, N>& operator+=(T val_) noexcept;
+            constexpr inline Vec<T, N>& operator+=(const Vec<T, N>& vec_) noexcept;
+            constexpr inline Vec<T, N>& operator-=(T val_) noexcept;
+            constexpr inline Vec<T, N>& operator-=(const Vec<T, N>& vec_) noexcept;
+            constexpr inline Vec<T, N>& operator*=(T val_) noexcept;
+            constexpr inline Vec<T, N>& operator/=(T val_) noexcept;
+
 
             //  == METHODS ==
           public:
@@ -151,6 +159,134 @@ namespace arc //! arctk namespace
             stream_ << str::to_string(vec_._data);
 
             return (stream_);
+        }
+
+
+        //  -- Assignment --
+        /**
+         *  Add a value to all elements of the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
+         *
+         *  @param  val_    Value to add to each vec element.
+         *
+         *  @return Reference to this vec post-operation.
+         */
+        template <typename T, size_t N>
+        constexpr inline Vec<T, N>& Vec<T, N>::operator+=(const T val_) noexcept
+        {
+            for (size_t i = 0; i < N; ++i)
+            {
+                _data[i] *= val_;
+            }
+
+            return (*this);
+        }
+
+        /**
+         *  Add another vec's elements to each corresponding element of the vec.
+         *
+         *  @tparam T   Type stored by the vecs.
+         *  @tparam N   Size of the vec.
+         *
+         *  @param  vec_    Vec to add to this vec.
+         *
+         *  @return Reference to this vec post-operation.
+         */
+        template <typename T, size_t N>
+        constexpr inline Vec<T, N>& Vec<T, N>::operator+=(const Vec<T, N>& vec_) noexcept
+        {
+            x += vec_.x;
+            y += vec_.y;
+            z += vec_.z;
+            w += vec_.w;
+
+            return (*this);
+        }
+
+        /**
+         *  Subtract a value from all elements of the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
+         *
+         *  @param  val_    Value to subtract from each vec element.
+         *
+         *  @return Reference to this vec post-operation.
+         */
+        template <typename T, size_t N>
+        constexpr inline Vec<T, N>& Vec<T, N>::operator-=(const T val_) noexcept
+        {
+            x -= val_;
+            y -= val_;
+            z -= val_;
+            w -= val_;
+
+            return (*this);
+        }
+
+        /**
+         *  Subtract another vec's elements from each corresponding element of the vec.
+         *
+         *  @tparam T   Type stored by the vecs.
+         *  @tparam N   Size of the vec.
+         *
+         *  @param  vec_    Vec to subtract from this vec.
+         *
+         *  @return Reference to this vec post-operation.
+         */
+        template <typename T, size_t N>
+        constexpr inline Vec<T, N>& Vec<T, N>::operator-=(const Vec<T, N>& vec_) noexcept
+        {
+            x -= vec_.x;
+            y -= vec_.y;
+            z -= vec_.z;
+            w -= vec_.w;
+
+            return (*this);
+        }
+
+        /**
+         *  Multiply all elements of the vec by a value.
+         *
+         *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
+         *
+         *  @param  val_    Value used to multiply each vec element by.
+         *
+         *  @return Reference to this vec post-operation.
+         */
+        template <typename T, size_t N>
+        constexpr inline Vec<T, N>& Vec<T, N>::operator*=(const T val_) noexcept
+        {
+            x *= val_;
+            y *= val_;
+            z *= val_;
+            w *= val_;
+
+            return (*this);
+        }
+
+        /**
+         *  Divide all elements of the vec by a value.
+         *
+         *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
+         *
+         *  @param  val_    Value used to divide each vec element by.
+         *
+         *  @return Reference to this vec post-operation.
+         */
+        template <typename T>
+        constexpr inline Vec<T, N>& Vec<T, N>::operator/=(const T val_) noexcept
+        {
+            x /= val_;
+            y /= val_;
+            z /= val_;
+            w /= val_;
+
+            return (*this);
         }
 
 
