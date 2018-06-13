@@ -31,6 +31,26 @@
 
 
 
+//  == NAMESPACE ==
+namespace arc //! arctk namespace
+{
+
+
+
+    //  == ALIASES ==
+    //  -- Double Vec --
+    using vec2 = math::Vec<double, 2>;
+    using vec3 = math::Vec<double, 3>;
+    using vec4 = math::Vec<double, 4>;
+    template <size_t N>
+    using vecN = math::Vec<double, N>;
+
+
+
+} // namespace arc
+
+
+
 //  == MODULE END ==
 #endif // ARCTK_MOD_CORE
 
