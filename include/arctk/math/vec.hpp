@@ -660,6 +660,12 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline T mag() const noexcept
         {
+            return (std::sqrt(mag_sq()));
+        }
+
+        template <typename T, size_t N>
+        constexpr inline T mag_sq() const noexcept
+        {
             T sq_sum{};
 
             for (size_t i = 0; i < N; ++i)
@@ -667,13 +673,9 @@ namespace arc //! arctk namespace
                 sq_sum += _data[i] * _data[i];
             }
 
-            return (std::sqrt(sq_sum));
+            return (sq_sum);
         }
 
-        template <typename T, size_t N>
-        constexpr inline T mag_sq() const noexcept
-        {
-        }
         template <typename T, size_t N>
         constexpr inline void normalise() const noexcept
         {
