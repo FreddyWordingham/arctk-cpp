@@ -54,6 +54,14 @@ namespace arc //! arctk namespace
     using vecN = math::Vec<double, N>;
 
 
+    //  -- Long Double Vec --
+    using vec2l = math::Vec<long double, 2>;
+    using vec3l = math::Vec<long double, 3>;
+    using vec4l = math::Vec<long double, 4>;
+    template <size_t N>
+    using vecNl = math::Vec<long double, N>;
+
+
 
 } // namespace arc
 
