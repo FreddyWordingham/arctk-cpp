@@ -19,6 +19,12 @@
 
 
 
+//  == BASE ==
+//  -- Arctk --
+#include <arctk/rng/distribution.hpp>
+
+
+
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
