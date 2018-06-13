@@ -19,6 +19,12 @@
 
 
 
+//  == BASE ==
+//  -- Arctk --
+#include <arctk/rng/generator.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
