@@ -278,7 +278,7 @@ namespace arc //! arctk namespace
          *
          *  @return Reference to this vec post-operation.
          */
-        template <typename T>
+        template <typename T, size_t N>
         constexpr inline Vec<T, N>& Vec<T, N>::operator/=(const T val_) noexcept
         {
             for (size_t i = 0; i < N; ++i)
