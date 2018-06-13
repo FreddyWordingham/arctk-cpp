@@ -438,7 +438,14 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline Vec<T, N> Vec<T, N>::operator+(T val_) const noexcept
         {
-            return (Vec4(x + val_, y + val_, z + val_, w + val_));
+            VecN vec;
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                vec[i] = _data[i] + val_;
+            }
+
+            return (vec);
         }
 
         /**
