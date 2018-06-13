@@ -46,46 +46,29 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         class Vec
         {
+            //  == ASSERTIONS ==
+            //  -- Size --
+            static_assert(N > 4);
+
+
             //  == FIELDS ==
           public:
             //  -- Data --
-            std::array<T, N> _data{};
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            constexpr inline Vec() noexcept = default;
-            //            constexpr inline Vec(const std::array<double, N>& data_) noexcept;
 
 
             //  == OPERATORS ==
           public:
             //  -- Stream --
-            template <typename S, typename _T, size_t _N>
-            friend inline S& operator<<(S& stream_, const Vec<T, N>& vec_) noexcept;
 
 
             //  == METHODS ==
           public:
         };
-
-
-
-        //  == INSTANTIATION --
-        //  -- Constructors --
-
-
-
-        //  == OPERATORS ==
-        //  -- Stream --
-        template <typename S, typename T, size_t N>
-        inline S& operator<<(S& stream_, const Vec<T, N>& vec_) noexcept
-        {
-            stream_ << str::to_string(vec_._data);
-
-            return (stream_);
-        }
 
 
 
