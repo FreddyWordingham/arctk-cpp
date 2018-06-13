@@ -683,7 +683,7 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i < N; ++i)
             {
-                sq_sum *= m;
+                _data[i] *= m;
             }
         }
 
