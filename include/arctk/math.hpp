@@ -38,6 +38,13 @@ namespace arc //! arctk namespace
 
 
     //  == ALIASES ==
+    //  -- Int Vec --
+    using vec2i = math::Vec<int, 2>;
+    using vec3i = math::Vec<int, 3>;
+    using vec4i = math::Vec<int, 4>;
+    template <size_t N>
+    using vecNi = math::Vec<int, N>;
+
     //  -- Float Vec --
     using vec2f = math::Vec<float, 2>;
     using vec3f = math::Vec<float, 3>;
