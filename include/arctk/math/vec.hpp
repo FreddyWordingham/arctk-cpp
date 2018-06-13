@@ -124,7 +124,7 @@ namespace arc //! arctk namespace
 
         template <typename T, size_t N>
         template <size_t M, typename... A>
-        inline std::array<T, N> Vec<T, N>::init_data(const Vec<T, M>& vec_, A... a) noexcept
+        inline std::array<T, N> Vec<T, N>::init_data(const Vec<T, M>& vec_, const A... a) noexcept
         {
             static_assert((sizeof...(A) + M) == N);
 
