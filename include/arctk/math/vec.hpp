@@ -79,7 +79,7 @@ namespace arc //! arctk namespace
         template <typename S, typename T, size_t N>
         inline S& operator<<(S& stream_, const Vec<T, N>& vec_) noexcept
         {
-            stream_ << _data;
+            stream_ << vec_._data;
 
             return (stream_);
         }
