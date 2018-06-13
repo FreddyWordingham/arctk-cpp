@@ -78,15 +78,7 @@ namespace arc //! arctk namespace
 
           private:
             template <size_t I>
-            void collect(utl::MultiVec<T, I>& bins_, const std::array<double, I>& pos_, const T& val_)
-            {
-                std::array<double, I - 1> pos;
-                std::copy(std::next(std::begin(pos_)), std::end(pos_), std::begin(pos));
-
-                const size_t index = find_index<N - I>(pos_.front());
-
-                collect(bins_[index], pos, val_);
-            }
+            inline void collect(utl::MultiVec<T, I>& bins_, const std::array<double, I>& pos_, const T& val_) noexcept;
 
             void collect(utl::MultiVec<T, 1>& bins_, const std::array<double, 1>& pos_, const T& val_)
             {
@@ -183,9 +175,22 @@ namespace arc //! arctk namespace
 
 
         //  -- Collection --
+        template <typename T, size_t N>
         inline void Bucket<T, N>::collect(const std::array<double, N>& pos_, const T& val_) noexcept
         {
             collect(_bins, pos_, val_);
+        }
+
+        template <typename T, size_t N>
+        template <size_t I>
+        inline void Bucket<T, N>::collect(utl::MultiVec<T, I>& bins_, const std::array<double, I>& pos_, const T& val_) noexcept
+        {
+            std::array<double, I - 1> pos;
+            std::copy(std::next(std::begin(pos_)), std::end(pos_), std::begin(pos));
+
+            const size_t index = find_index<N - I>(pos_.front());
+
+            collect(bins_[index], pos, val_);
         }
 
 
