@@ -142,14 +142,14 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Properties --
-            constexpr inline bool normalised(double tol_ = std::numeric_limits<double>::epsilon()) const noexcept;
+            constexpr inline bool normalised(T tol_ = std::numeric_limits<T>::epsilon()) const noexcept;
 
             //  -- Mathematical --
-            constexpr inline T      sum() const noexcept;
-            constexpr inline double mag() const noexcept;
-            constexpr inline double mag_sq() const noexcept;
-            constexpr inline void   normalise() const noexcept;
-            constexpr inline void   rotate(const math::Vec<T, 3>& axis_, double ang_) noexcept;
+            constexpr inline T    sum() const noexcept;
+            constexpr inline T    mag() const noexcept;
+            constexpr inline T    mag_sq() const noexcept;
+            constexpr inline void normalise() const noexcept;
+            constexpr inline void rotate(const math::Vec<T, 3>& axis_, T ang_) noexcept;
 
             //  -- Co-ordinate --
             constexpr inline Vec<T, 3> to_polar() const noexcept;
@@ -641,7 +641,7 @@ namespace arc //! arctk namespace
          *  @return True if the vec is normalised.
          */
         template <typename T>
-        constexpr inline bool Vec<T, 3>::normalised(const double tol_) const noexcept
+        constexpr inline bool Vec<T, 3>::normalised(const T tol_) const noexcept
         {
             return (std::fabs(1.0 - mag()) <= tol_);
         }
@@ -669,7 +669,7 @@ namespace arc //! arctk namespace
          *  @return Magnitude of the vec.
          */
         template <typename T>
-        constexpr inline double Vec<T, 3>::mag() const noexcept
+        constexpr inline T Vec<T, 3>::mag() const noexcept
         {
             return (std::sqrt(mag_sq()));
         }
@@ -682,9 +682,9 @@ namespace arc //! arctk namespace
          *  @return Magnitude-squared of the vec.
          */
         template <typename T>
-        constexpr inline double Vec<T, 3>::mag_sq() const noexcept
+        constexpr inline T Vec<T, 3>::mag_sq() const noexcept
         {
-            return (static_cast<double>((x * x) + (y * y) + (z * z)));
+            return ((x * x) + (y * y) + (z * z));
         }
 
         /**
@@ -695,7 +695,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline void Vec<T, 3>::normalise() const noexcept
         {
-            const double m = 1.0 / mag();
+            const T m = T{1.0} / mag();
 
             x *= m;
             y *= m;
@@ -714,7 +714,7 @@ namespace arc //! arctk namespace
          *  @pre    axis_ must be normalised.
          */
         template <typename T>
-        constexpr inline void Vec<T, 3>::rotate(const math::Vec<T, 3>& axis_, const double ang_) noexcept
+        constexpr inline void Vec<T, 3>::rotate(const math::Vec<T, 3>& axis_, const T ang_) noexcept
         {
             assert(axis_.normalised());
 
