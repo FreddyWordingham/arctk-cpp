@@ -93,6 +93,17 @@ namespace arc //! arctk namespace
             constexpr inline Vec<T, N>&      operator--() noexcept;
             constexpr inline const Vec<T, N> operator--(int) noexcept;
 
+            //  -- Arithmetic --
+            constexpr inline Vec<T, N> operator+() const noexcept;
+            constexpr inline Vec<T, N> operator-() const noexcept;
+            constexpr inline Vec<T, N> operator+(T val_) const noexcept;
+            constexpr inline Vec<T, N> operator+(const Vec<T, N>& vec_) const noexcept;
+            constexpr inline Vec<T, N> operator-(T val_) const noexcept;
+            constexpr inline Vec<T, N> operator-(const Vec<T, N>& vec_) const noexcept;
+            constexpr inline Vec<T, N> operator*(T val_) const noexcept;
+            constexpr inline T         operator*(const Vec<T, N>& vec_) const noexcept;
+            constexpr inline Vec<T, N> operator/(T val_) const noexcept;
+
 
             //  == METHODS ==
           public:
@@ -371,6 +382,146 @@ namespace arc //! arctk namespace
             }
 
             return (vec);
+        }
+
+
+        //  -- Arithmetic --
+        /**
+         *  Positive copy the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return Positive copy of the vec.
+         */
+        template <typename T>
+        constexpr inline Vec4<T> Vec4<T>::operator+() const noexcept
+        {
+            VecN vec;
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                vec[i] = +_data[i];
+            }
+
+            return (vec);
+        }
+
+        /**
+         *  Negative copy the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @return Negative copy of the vec.
+         */
+        template <typename T>
+        constexpr inline Vec4<T> Vec4<T>::operator-() const noexcept
+        {
+            return (Vec4(-x, -y, -z, -w));
+        }
+
+        /**
+         *  Add a value to a vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @param  val_    Value to add to the vec.
+         *
+         *  @return Vec formed by adding the value to the vec.
+         */
+        template <typename T>
+        constexpr inline Vec4<T> Vec4<T>::operator+(T val_) const noexcept
+        {
+            return (Vec4(x + val_, y + val_, z + val_, w + val_));
+        }
+
+        /**
+         *  Add a vec to a vec.
+         *
+         *  @tparam T   Type stored by the vecs.
+         *
+         *  @param  vec_    Vec to add to the vec.
+         *
+         *  @return Vec formed by adding the vec to the vec.
+         */
+        template <typename T>
+        constexpr inline Vec4<T> Vec4<T>::operator+(const Vec4<T>& vec_) const noexcept
+        {
+            return (Vec4(x + vec_.x, y + vec_.y, z + vec_.z, w + vec_.w));
+        }
+
+        /**
+         *  Subtract a value from a vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @param  val_    Value to subtract from the vec.
+         *
+         *  @return Vec formed by subtracting the value from the vec.
+         */
+        template <typename T>
+        constexpr inline Vec4<T> Vec4<T>::operator-(T val_) const noexcept
+        {
+            return (Vec4(x - val_, y - val_, z - val_, w - val_));
+        }
+
+        /**
+         *  Subtract a vec from a vec.
+         *
+         *  @tparam T   Type stored by the vecs.
+         *
+         *  @param  vec_    Vec to subtract from the vec.
+         *
+         *  @return Vec formed by subtracting the vec from the vec.
+         */
+        template <typename T>
+        constexpr inline Vec4<T> Vec4<T>::operator-(const Vec4<T>& vec_) const noexcept
+        {
+            return (Vec4(x - vec_.x, y - vec_.y, z - vec_.z, w - vec_.w));
+        }
+
+        /**
+         *  Multiply a vecs elements by a value.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @param  val_    Value used to multiply the vec elements.
+         *
+         *  @return Vec formed by multiplying the vec elements by the value.
+         */
+        template <typename T>
+        constexpr inline Vec4<T> Vec4<T>::operator*(T val_) const noexcept
+        {
+            return (Vec4(x * val_, y * val_, z * val_, w * val_));
+        }
+
+        /**
+         *  Calculate the dot-product of two vecs.
+         *
+         *  @tparam T   Type stored by the vecs.
+         *
+         *  @param  vec_    Vec to perform the dot-product with.
+         *
+         *  @return Dot-product of the vecs.
+         */
+        template <typename T>
+        constexpr inline T Vec4<T>::operator*(const Vec4<T>& vec_) const noexcept
+        {
+            return ((x * vec_.x) + (y * vec_.y) + (z * vec_.z) + (w * vec_.w));
+        }
+
+        /**
+         *  Divide a vecs elements by a value.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @param  val_    Value used to divide the vec elements.
+         *
+         *  @return Vec formed by dividing the vec elements by the value.
+         */
+        template <typename T>
+        constexpr inline Vec4<T> Vec4<T>::operator/(T val_) const noexcept
+        {
+            return (Vec4(x / val_, y / val_, z / val_, w / val_));
         }
 
 
