@@ -66,17 +66,7 @@ namespace arc //! arctk namespace
 
             //  -- Initialisation --
             template <typename... A>
-            inline std::array<T, N> init_data(A... a) noexcept
-            {
-                static_assert(sizeof...(A) == N);
-
-                std::array<T, N> data;
-
-                size_t i = 0;
-                ((data[i] = a, ++i), ...);
-
-                return (data);
-            }
+            inline std::array<T, N> init_data(A... a) noexcept;
 
 
             //  == OPERATORS ==
