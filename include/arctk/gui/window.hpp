@@ -83,7 +83,7 @@ namespace arc //! arctk namespace
             inline GLFWwindow* handle() const noexcept;
 
             //  -- Setters --
-            inline void set_clear_col(const math::Vec4<float>& col_) noexcept;
+            inline void set_clear_col(const vec4f& col_) noexcept;
 
             //  -- Rendering --
             inline void clear_buffer() const noexcept;
@@ -213,7 +213,7 @@ namespace arc //! arctk namespace
          *
          *  @param  col_    Colour used to clear the window.
          */
-        inline void Window::set_clear_col(const math::Vec4<float>& col_) noexcept
+        inline void Window::set_clear_col(const vec4f& col_) noexcept
         {
             glClearColor(col_.r, col_.g, col_.b, col_.a);
         }
