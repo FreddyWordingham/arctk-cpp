@@ -50,6 +50,7 @@
 #include <arctk/math.hpp>
 #include <arctk/math/container.hpp>
 #include <arctk/math/conversion.hpp>
+#include <arctk/math/multivec.hpp>
 #include <arctk/math/power.hpp>
 #include <arctk/math/vec.hpp>
 #include <arctk/math/vec2.hpp>
