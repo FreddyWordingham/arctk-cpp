@@ -188,7 +188,7 @@ namespace arc //! arctk namespace
         {
             const size_t index = find_index(I, pos_[I]);
 
-            store(bins_[index], pos_, val_);
+            store<I - 1>(bins_[index], pos_, val_);
         }
 
         template <typename T, size_t N>

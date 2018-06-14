@@ -106,8 +106,7 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                utl::MultiVec<T, N> bins = Bucket<T, N>::_bins;
-                Bucket<T, N>::template store<N>(bins, pos_, val_);
+                Bucket<T, N>::template store<N>(Bucket<T, N>::bins_, pos_, val_);
             }
 
 
