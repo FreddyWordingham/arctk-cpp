@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
                 inline const T& misses() noexcept;
 
                 //  -- Collection --
-                inline void collect(const vecN<N>& pos_, const T& val_) noexcept;
+                inline void collect(const vecN<N>& pos_, const T& val_) noexcept override;
             };
 
 
