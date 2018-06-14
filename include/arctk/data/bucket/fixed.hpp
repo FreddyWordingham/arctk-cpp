@@ -1,0 +1,85 @@
+/**
+ *  @file   arctk/data/bucket/fixed.hpp
+ *  @date   14/06/2018
+ *  @author Freddy Wordingham
+ *
+ *  Fixed range data binning class.
+ */
+
+
+
+//  == GUARD ==
+#ifndef ARCTK_DATA_BUCKET_FIXED_HPP
+#define ARCTK_DATA_BUCKET_FIXED_HPP
+
+
+
+//  == MODULE ==
+#ifdef ARCTK_MOD_CORE
+
+
+
+//  == BASE ==
+//  -- Arctk --
+#include <arctk/data/bucket.hpp>
+
+
+
+//  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
+
+
+//  == NAMESPACE ==
+namespace arc //! arctk namespace
+{
+    namespace data //! data namespace
+    {
+        namespace bucket //! bucketing namespace
+        {
+
+
+
+            //  == CLASS ==
+            /**
+             *  Fixed range binning class.
+             *
+             *  @tparam T   Type stored by the bucket.
+             *  @tparam N   Dimensionality of the bucket.
+             */
+            template <typename T, size_t N>
+            class Fixed : public Bucket<T, N>
+            {
+                //  == INSTANTIATION ==
+              public:
+                //  -- Constructors --
+                inline Bucket(const vecN<N> min_, const vecN<N> max_, const std::array<size_t, N>& res_) noexcept;
+
+
+                //  == METHODS ==
+              public:
+                //  -- Collection --
+                virtual inline void collect(const vecN<N>& pos_, const T& val_) noexcept = 0;
+            };
+
+
+
+            //  == INSTANTIATION ==
+            //  -- Constructors --
+
+
+
+        } // namespace bucket
+    }     // namespace data
+} // namespace arc
+
+
+
+//  == MODULE END ==
+#endif // ARCTK_MOD_CORE
+
+
+
+//  == GUARD END ==
+#endif // ARCTK_DATA_BUCKET_FIXED_HPP
