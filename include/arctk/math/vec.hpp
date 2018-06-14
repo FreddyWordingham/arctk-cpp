@@ -176,7 +176,7 @@ namespace arc //! arctk namespace
 
         //  -- Initialisation --
         /**
-         *  Initialise the data array using a pack of values.
+         *  Initialise the element data array using a pack of values.
          *
          *  @tparam T   Type stored by the vec.
          *  @tparam N   Size of the vec.
@@ -186,6 +186,8 @@ namespace arc //! arctk namespace
          *  @param  data_   Values used to initialise data elements.
          *
          *  @pre    Size of A must equal N.
+         *
+         *  @return Initialised element data array.
          */
         template <typename T, size_t N>
         template <typename... A>
@@ -202,7 +204,7 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Initialise the data array using a smaller vec and a pack of values.
+         *  Initialise the element data array using a smaller vec and a pack of values.
          *
          *  @tparam T   Type stored by the vec.
          *  @tparam N   Size of the vec.
@@ -214,6 +216,8 @@ namespace arc //! arctk namespace
          *  @param  data_   Values used to initialise data elements.
          *
          *  @pre    Size of A plus M must equal N.
+         *
+         *  @return Initialised element data array.
          */
         template <typename T, size_t N>
         template <size_t M, typename... A>
