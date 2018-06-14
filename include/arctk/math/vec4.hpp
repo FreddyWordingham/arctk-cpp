@@ -171,6 +171,15 @@ namespace arc //! arctk namespace
         {
         }
 
+        /**
+         *  Construct a vec using a smaller vec and given values.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @param  vec_    Vec of values to initialise vec elements.
+         *  @param  z_      Initial value of the z component.
+         *  @param  w_      Initial value of the w component.
+         */
         template <typename T>
         constexpr inline Vec<T, 4>::Vec(const Vec<T, 2>& vec_, const T z_, const T w_) noexcept
           : x(vec_.x)
@@ -180,6 +189,14 @@ namespace arc //! arctk namespace
         {
         }
 
+        /**
+         *  Construct a vec using a smaller vec and given values.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @param  vec_    Vec of values to initialise vec elements.
+         *  @param  w_      Initial value of the w component.
+         */
         template <typename T>
         constexpr inline Vec<T, 4>::Vec(const Vec<T, 3>& vec_, const T w_) noexcept
           : x(vec_.x)
