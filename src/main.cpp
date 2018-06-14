@@ -19,6 +19,7 @@
 #include <arctk/constant/phys.hpp>
 #include <arctk/data.hpp>
 #include <arctk/data/bucket.hpp>
+#include <arctk/data/bucket/fixed.hpp>
 #include <arctk/format.hpp>
 #include <arctk/format/table.hpp>
 #include <arctk/geom.hpp>
