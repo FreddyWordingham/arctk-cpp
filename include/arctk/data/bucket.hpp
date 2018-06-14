@@ -85,7 +85,9 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Storing --
-            inline void store() noexcept;
+            template <size_t I>
+            inline void store(utl::MultiVec<T, I>& bins_, const vecN<N>& pos_, const T& val_) noexcept;
+            inline void store(utl::MultiVec<T, 1>& bins_, const vecN<N>& pos_, const T& val_) noexcept;
         };
 
 
@@ -174,6 +176,19 @@ namespace arc //! arctk namespace
             const auto index = static_cast<size_t>((pos_ - _min[dim_]) / _width[dim_]);
 
             return ((index == _res[dim_]) ? (index - 1) : index);
+        }
+
+
+        //  -- Storing --
+        template <typename T, size_t N>
+        template <size_t I>
+        inline void Bucket<T, N>::store(utl::MultiVec<T, I>& bins_, const vecN<N>& pos_, const T& val_) noexcept
+        {
+        }
+
+        template <typename T, size_t N>
+        inline void Bucket<T, N>::store(utl::MultiVec<T, 1>& bins_, const vecN<N>& pos_, const T& val_) noexcept
+        {
         }
 
 

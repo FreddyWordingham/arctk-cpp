@@ -94,7 +94,7 @@ namespace arc //! arctk namespace
 
             //  -- Collection --
             template <typename T, size_t N>
-            inline void collect(const vecN<N>& pos_, const T& val_) noexcept
+            inline void Fixed<T, N>::collect(const vecN<N>& pos_, const T& val_) noexcept
             {
                 for (size_t i = 0; i < N; ++i)
                 {
