@@ -85,7 +85,7 @@ namespace arc //! arctk namespace
             //  -- Collection --
             virtual inline void collect(const vecN<N>& pos_, const T& val_) noexcept = 0;
 
-          private:
+          protected:
             //  -- Storing --
             template <size_t I>
             inline void store(utl::MultiVec<T, I>& bins_, const vecN<N>& pos_, const T& val_) noexcept;
