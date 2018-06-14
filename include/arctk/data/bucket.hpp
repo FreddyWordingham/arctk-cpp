@@ -37,6 +37,9 @@ namespace arc //! arctk namespace
         //  == CLASS ==
         /**
          *  Data binning class.
+         *
+         *  @tparam T   Type stored by the bucket.
+         *  @tparam N   Dimensionality of the bucket.
          */
         template <typename T, size_t N>
         class Bucket
@@ -58,12 +61,22 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Bucket(const vecN<N> min_, const vecN<N> max_, const std::array<size_t, N>& res_) noexcept;
 
 
             //  == METHODS ==
           public:
             //  -- Getters --
         };
+
+
+
+        //  == INSTANTIATION ==
+        //  -- Constructors --
+        template <typename T, size_t N>
+        inline Bucket<T, N>::Bucket(const vecN<N> min_, const vecN<N> max_, const std::array<size_t, N>& res_) noexcept
+        {
+        }
 
 
 
