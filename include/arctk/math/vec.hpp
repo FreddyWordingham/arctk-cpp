@@ -175,6 +175,18 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
+        /**
+         *  Initialise the data array using a pack of values.
+         *
+         *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
+         *
+         *  @tparam A   Pack of initialisation values.
+         *
+         *  @param  data_   Values used to initialise data elements.
+         *
+         *  @pre    Size of A must equal N.
+         */
         template <typename T, size_t N>
         template <typename... A>
         inline std::array<T, N> Vec<T, N>::init_data(const A... data_) noexcept
