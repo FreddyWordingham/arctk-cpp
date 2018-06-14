@@ -151,6 +151,20 @@ namespace arc //! arctk namespace
             static_assert(sizeof...(A) == N);
         }
 
+        /**
+         *  Construct a vec using a smaller vec and given values.
+         *
+         *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
+         *
+         *  @tparam M   Size of smaller vec.
+         *  @tparam A   Pack of initialisation values.
+         *
+         *  @param  vec_    Vec of values to initialise vec elements.
+         *  @param  data_   Values used to initialise data elements.
+         *
+         *  @pre    Size of A plus M must equal N.
+         */
         template <typename T, size_t N>
         template <size_t M, typename... A>
         constexpr inline Vec<T, N>::Vec(const Vec<T, M>& vec_, const A... data_) noexcept
