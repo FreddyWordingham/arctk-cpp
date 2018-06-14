@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
                 inline const T& misses() noexcept;
 
                 //  -- Collection --
-                virtual inline void collect(const vecN<N>& pos_, const T& val_) noexcept = 0;
+                inline void collect(const vecN<N>& pos_, const T& val_) noexcept;
             };
 
 
@@ -89,6 +89,24 @@ namespace arc //! arctk namespace
             inline const T& Fixed<T, N>::misses() noexcept
             {
                 return (_misses);
+            }
+
+
+            //  -- Collection --
+            template <typename T, size_t N>
+            inline void collect(const vecN<N>& pos_, const T& val_) noexcept
+            {
+                for (size_t i = 0; i < N; ++i)
+                {
+                    if ((pos_[i] < _min[i]) || (pos_[i] > _max[i]))
+                    {
+                        _misses += val_;
+
+                        return;
+                    }
+                }
+
+                store(_bins, pos_, val_);
             }
 
 
