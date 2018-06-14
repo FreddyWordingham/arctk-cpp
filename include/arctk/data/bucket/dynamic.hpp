@@ -65,6 +65,11 @@ namespace arc //! arctk namespace
 
                 //  -- Collection --
                 inline void collect(const vecN<N>& pos_, const T& val_) noexcept override;
+
+              private:
+                //  -- Re-organisation --
+                inline void descend(size_t dim_) noexcept;
+                inline void ascend(size_t dim_) noexcept;
             };
 
 
@@ -75,6 +80,12 @@ namespace arc //! arctk namespace
             inline Dynamic<T, N>::Dynamic(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept
               : Bucket<T, N>(min_, max_, res_)
             {
+                for (size_t i = 0; i < N; ++i)
+                {
+                    assert(min_[i] < max_[i]);
+                    assert((res_[i] % 2) == 0);
+                }
+                assert(prop::always_greater_than(res_, 0));
             }
 
 
@@ -97,6 +108,18 @@ namespace arc //! arctk namespace
                 }
 
                 Bucket<T, N>::template store<N>(Bucket<T, N>::_bins, static_cast<std::array<double, N>>(pos_), val_);
+            }
+
+
+            //  -- Re-organisation --
+            template <typename T, size_t N>
+            inline void Dynamic<T, N>::descend(const size_t dim_) noexcept
+            {
+            }
+
+            template <typename T, size_t N>
+            inline void Dynamic<T, N>::ascend(const size_t dim_) noexcept
+            {
             }
 
 
