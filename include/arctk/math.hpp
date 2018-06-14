@@ -58,7 +58,7 @@ namespace arc //! arctk namespace
     using vec3 = math::Vec<double, 3>; //!< Three-dimensional double precision vec.
     using vec4 = math::Vec<double, 4>; //!< Four-dimensional double precision vec.
     template <size_t N>
-    using vecN = math::Vec<double, N>;
+    using vecN = math::Vec<double, N>; //!< N-dimensional double precision vec.
 
 
     //  -- Long Double Vec --
