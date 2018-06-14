@@ -47,8 +47,8 @@ namespace arc //! arctk namespace
 
     //  -- Float Vec --
     using vec2f = math::Vec<float, 2>; //!< Two-dimensional float precision vec.
-    using vec3f = math::Vec<float, 3>; //!< Three-dimensional integer precision vec.
-    using vec4f = math::Vec<float, 4>;
+    using vec3f = math::Vec<float, 3>; //!< Three-dimensional float precision vec.
+    using vec4f = math::Vec<float, 4>; //!< Four-dimensional float precision vec.
     template <size_t N>
     using vecNf = math::Vec<float, N>;
 
