@@ -123,13 +123,13 @@ namespace arc //! arctk namespace
         //  == METHODS ==
         //  -- Getters --
         template <typename T, size_t N>
-        inline const std::array<double, N>& Bucket<T, N>::min() noexcept
+        inline const vecN<N>& Bucket<T, N>::min() noexcept
         {
             return (_min);
         }
 
         template <typename T, size_t N>
-        inline const std::array<double, N>& Bucket<T, N>::max() noexcept
+        inline const vecN<N>& Bucket<T, N>::max() noexcept
         {
             return (_max);
         }
