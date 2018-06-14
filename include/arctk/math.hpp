@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
 
     //  == ALIASES ==
     //  -- Int Vec --
-    using vec2i = math::Vec<int, 2>;
+    using vec2i = math::Vec<int, 2>; //!< Two-dimensional integer precision vec.
     using vec3i = math::Vec<int, 3>;
     using vec4i = math::Vec<int, 4>;
     template <size_t N>
