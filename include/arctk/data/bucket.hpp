@@ -74,17 +74,19 @@ namespace arc //! arctk namespace
             inline const std::array<double, N>& width() noexcept;
             inline const utl::MultiVec<T, N>&   bins() noexcept;
 
-            //  -- Collection --
-            inline void collect(const vecN<N>& pos_, const T& val_) noexcept;
-
-          private:
-            template <size_t I>
-            inline void store(utl::MultiVec<T, I>& bins_, const std::array<double, I>& pos_, const T& val_) noexcept;
-            inline void store(utl::MultiVec<T, 1>& bins_, const std::array<double, 1>& pos_, const T& val_) noexcept;
-
             //  -- Searching --
             template <size_t I>
             inline size_t find_index(double pos_) noexcept;
+
+
+
+            inline void collect(const vecN<N>& pos_, const T& val_) noexcept;
+
+          private:
+            //  -- Collection --
+            template <size_t I>
+            inline void store(utl::MultiVec<T, I>& bins_, const std::array<double, I>& pos_, const T& val_) noexcept;
+            inline void store(utl::MultiVec<T, 1>& bins_, const std::array<double, 1>& pos_, const T& val_) noexcept;
         };
 
 
@@ -162,6 +164,20 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Searching --
+        template <typename T, size_t N>
+        template <size_t I>
+        inline size_t Bucket<T, N>::find_index(const double pos_) noexcept
+        {
+            assert(pos_ >= _min[I]);
+            assert(pos_ <= _max[I]);
+
+            const auto index = static_cast<size_t>((pos_ - _min[I]) / _width[I]);
+
+            return ((index == _res[I]) ? (index - 1) : index);
+        }
+
+
         //  -- Collection --
         template <typename T, size_t N>
         inline void Bucket<T, N>::collect(const vecN<N>& pos_, const T& val_) noexcept
@@ -187,20 +203,6 @@ namespace arc //! arctk namespace
             const size_t index = find_index<N - 1>(pos_.front());
 
             bins_[index] += val_;
-        }
-
-
-        //  -- Searching --
-        template <typename T, size_t N>
-        template <size_t I>
-        inline size_t Bucket<T, N>::find_index(const double pos_) noexcept
-        {
-            assert(pos_ >= _min[I]);
-            assert(pos_ <= _max[I]);
-
-            const auto index = static_cast<size_t>((pos_ - _min[I]) / _width[I]);
-
-            return ((index == _res[I]) ? (index - 1) : index);
         }
 
 
