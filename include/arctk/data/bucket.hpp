@@ -46,11 +46,12 @@ namespace arc //! arctk namespace
         class Bucket
         {
             //  == FIELDS ==
-          private:
+          protected:
             //  -- Bounds --
             vecN<N> _min;
             vecN<N> _max;
 
+          private:
             //  -- Bin Information --
             std::array<size_t, N> _res;
             std::array<double, N> _width;
