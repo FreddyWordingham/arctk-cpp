@@ -138,39 +138,6 @@ namespace arc //! arctk namespace
 
 
 
-        //  == FUNCTION PROTOTYPES ==
-        //  -- Mathematical --
-        template <typename T, size_t N>
-        inline arc::utl::MultiVec<T, N> add(const arc::utl::MultiVec<T, N>& lhs_, const arc::utl::MultiVec<T, N>& rhs_) noexcept;
-
-
-
-        //  == FUNCTIONS ==
-        //  -- Mathematical --
-        template <typename T, size_t N>
-        inline arc::utl::MultiVec<T, N> add(const arc::utl::MultiVec<T, N>& lhs_, const arc::utl::MultiVec<T, N>& rhs_) noexcept
-        {
-            assert(lhs_.size() == rhs_.size());
-
-            arc::utl::MultiVec<T, N> vec(lhs_.size());
-
-            for (size_t i = 0; i < lhs_.size(); ++i)
-            {
-                if constexpr (N == 1)
-                {
-                    vec[i] = lhs_[i] + rhs_[i];
-                }
-                else
-                {
-                    vec[i] = add<T, N - 1>(lhs_[i], rhs_[i]);
-                }
-            }
-
-            return (vec);
-        }
-
-
-
     } // namespace utl
 } // namespace arc
 
