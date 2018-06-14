@@ -697,11 +697,11 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored by the vec.
          *  @tparam N   Size of the vec.
          *
-         *  @param  index_  Index of the vec to access.
+         *  @param  index_  Index of the element to access.
          *
          *  @pre    index_ must be less than N.
          *
-         *  @return Reference to the requested element.
+         *  @return A reference to the element requested.
          */
         template <typename T, size_t N>
         constexpr inline T& Vec<T, N>::operator[](const size_t index_) noexcept
