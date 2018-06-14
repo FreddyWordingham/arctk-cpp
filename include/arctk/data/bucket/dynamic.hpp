@@ -71,8 +71,10 @@ namespace arc //! arctk namespace
 
               private:
                 //  -- Re-organisation --
-                inline void descend(size_t dim_) noexcept;
-                inline void ascend(size_t dim_) noexcept;
+                // template <size_t I>
+                // inline void descend() noexcept;
+                template <size_t I>
+                inline void ascend(utl::MultiVec<T, I>& vec_, const vecN<N>& pos_) noexcept;
             };
 
 
@@ -97,25 +99,14 @@ namespace arc //! arctk namespace
             template <typename T, size_t N>
             inline void Dynamic<T, N>::collect(const vecN<N>& pos_, const T& val_) noexcept
             {
-                for (size_t i = 0; i < N; ++i)
-                {
-                    while (pos_[i] < Bucket<T, N>::_min[i])
-                    {
-                        descend(i);
-                    }
-
-                    while (pos_[i] > Bucket<T, N>::_max[i])
-                    {
-                        ascend(i);
-                    }
-                }
+                ascend(bins_, pos_);
 
                 Bucket<T, N>::template store<N>(Bucket<T, N>::_bins, static_cast<std::array<double, N>>(pos_), val_);
             }
 
 
             //  -- Re-organisation --
-            template <typename T, size_t N>
+            /*template <typename T, size_t N>
             inline void Dynamic<T, N>::descend(const size_t dim_) noexcept
             {
                 assert(dim_ < N);
@@ -133,25 +124,33 @@ namespace arc //! arctk namespace
                 {
                     Bucket<T, N>::_bins[dim_][i] = {};
                 }
-            }
+            }*/
 
             template <typename T, size_t N>
-            inline void Dynamic<T, N>::ascend(const size_t dim_) noexcept
+            template <size_t I>
+            inline void Dynamic<T, N>::ascend(utl::MultiVec<T, I>& vec_, const vecN<N>& pos_) noexcept
             {
-                assert(dim_ < N);
-
-                Bucket<T, N>::_max[dim_] += (Bucket<T, N>::_max[dim_] - Bucket<T, N>::_min[dim_]);
-                Bucket<T, N>::_width[dim_] *= 2.0;
-
-                for (size_t i = 0; i < (Bucket<T, N>::_res[dim_] / 2); ++i)
+                while (pos_[I] > _max[I])
                 {
-                    const size_t index           = 2 * i;
-                    Bucket<T, N>::_bins[dim_][i] = math::add<T, N>(Bucket<T, N>::_bins[dim_][index], Bucket<T, N>::_bins[dim_][index + 1]);
+
+                    Bucket<T, N>::_max[dim_] += (Bucket<T, N>::_max[dim_] - Bucket<T, N>::_min[dim_]);
+                    Bucket<T, N>::_width[dim_] *= 2.0;
+
+                    for (size_t i = 0; i < (Bucket<T, N>::_res[dim_] / 2); ++i)
+                    {
+                        const size_t index           = 2 * i;
+                        Bucket<T, N>::_bins[dim_][i] = math::add<T, N>(Bucket<T, N>::_bins[dim_][index], Bucket<T, N>::_bins[dim_][index + 1]);
+                    }
+
+                    for (size_t i = (Bucket<T, N>::_res[dim_] / 2); i < Bucket<T, N>::_res[dim_]; ++i)
+                    {
+                        Bucket<T, N>::_bins[dim_][i] = {};
+                    }
                 }
 
-                for (size_t i = (Bucket<T, N>::_res[dim_] / 2); i < Bucket<T, N>::_res[dim_]; ++i)
+                for (size_t i = 0; i < vec_.size(); ++i)
                 {
-                    Bucket<T, N>::_bins[dim_][i] = {};
+                    ascend<I - 1>(vec_[i], pos_);
                 }
             }
 
