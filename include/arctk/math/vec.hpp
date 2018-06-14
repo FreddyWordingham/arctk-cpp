@@ -752,14 +752,14 @@ namespace arc //! arctk namespace
 
         //  -- Properties --
         /**
-         *  Determine if the vec is normalised.
+         *  Determine if a vec is normalised to within a given tolerance.
          *
          *  @tparam T   Type stored by the vec.
          *  @tparam N   Size of the vec.
          *
-         *  @param  tol_    Maximum that magnitude can deviate from unity and still be considered normalised.
+         *  @param  tol_    Maximum tolerance of normalisation value.
          *
-         *  @return True if vec is normalised to within tol_.
+         *  @return True if the vec is normalised.
          */
         template <typename T, size_t N>
         constexpr inline bool Vec<T, N>::normalised(const T tol_) const noexcept
@@ -769,6 +769,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Mathematical --
+
         template <typename T, size_t N>
         constexpr inline T Vec<T, N>::sum() const noexcept
         {
