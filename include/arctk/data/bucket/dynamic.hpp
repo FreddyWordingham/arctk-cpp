@@ -99,7 +99,7 @@ namespace arc //! arctk namespace
             template <typename T, size_t N>
             inline void Dynamic<T, N>::collect(const vecN<N>& pos_, const T& val_) noexcept
             {
-                ascend(bins_, pos_);
+                ascend<N>(Bucket<T, N>::_bins, pos_);
 
                 Bucket<T, N>::template store<N>(Bucket<T, N>::_bins, static_cast<std::array<double, N>>(pos_), val_);
             }
@@ -130,21 +130,24 @@ namespace arc //! arctk namespace
             template <size_t I>
             inline void Dynamic<T, N>::ascend(utl::MultiVec<T, I>& vec_, const vecN<N>& pos_) noexcept
             {
-                while (pos_[I] > _max[I])
+                while (pos_[I] > Bucket<T, N>::_max[I])
                 {
 
-                    Bucket<T, N>::_max[dim_] += (Bucket<T, N>::_max[dim_] - Bucket<T, N>::_min[dim_]);
-                    Bucket<T, N>::_width[dim_] *= 2.0;
+                    Bucket<T, N>::_max[I] += (Bucket<T, N>::_max[I] - Bucket<T, N>::_min[I]);
+                    Bucket<T, N>::_width[I] *= 2.0;
 
-                    for (size_t i = 0; i < (Bucket<T, N>::_res[dim_] / 2); ++i)
+                    //    if constexpr (I > 1)
                     {
-                        const size_t index           = 2 * i;
-                        Bucket<T, N>::_bins[dim_][i] = math::add<T, N>(Bucket<T, N>::_bins[dim_][index], Bucket<T, N>::_bins[dim_][index + 1]);
-                    }
+                        for (size_t i = 0; i < (Bucket<T, N>::_res[I] / 2); ++i)
+                        {
+                            const size_t index     = 2 * i;
+                            Bucket<T, N>::_bins[i] = math::add<T, I - 1>(Bucket<T, N>::_bins[index], Bucket<T, N>::_bins[index + 1]);
+                        }
 
-                    for (size_t i = (Bucket<T, N>::_res[dim_] / 2); i < Bucket<T, N>::_res[dim_]; ++i)
-                    {
-                        Bucket<T, N>::_bins[dim_][i] = {};
+                        for (size_t i = (Bucket<T, N>::_res[I] / 2); i < Bucket<T, N>::_res[I]; ++i)
+                        {
+                            Bucket<T, N>::_bins[i] = {};
+                        }
                     }
                 }
 
