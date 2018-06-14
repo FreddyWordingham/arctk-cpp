@@ -79,6 +79,9 @@ namespace arc //! arctk namespace
 
             //  -- Searching --
             inline size_t find_index(size_t dim_, double pos_) noexcept;
+
+            //  -- Collection --
+            virtual inline void collect(const vecN<N>& pos_, const T& val_) noexcept = 0;
         };
 
 
