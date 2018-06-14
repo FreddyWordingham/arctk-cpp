@@ -43,6 +43,11 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Bounds --
+            vecN<N> _min;
+            vecN<N> _max;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
