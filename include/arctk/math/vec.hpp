@@ -804,6 +804,14 @@ namespace arc //! arctk namespace
             return (std::sqrt(mag_sq()));
         }
 
+        /**
+         *  Calculate the magnitude-squared of the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
+         *
+         *  @return Magnitude-squared of the vec.
+         */
         template <typename T, size_t N>
         constexpr inline T Vec<T, N>::mag_sq() const noexcept
         {
