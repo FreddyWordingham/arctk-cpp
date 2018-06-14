@@ -18,7 +18,7 @@
 #ifdef ARCTK_MOD_CORE
 
 
-
+/*
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/prop.hpp>
@@ -37,7 +37,7 @@ namespace arc //! arctk namespace
         //  == CLASS ==
         /**
          *  Data binning class.
-         */
+         *//*
         template <typename T, size_t N>
         class Bucket
         {
@@ -208,7 +208,7 @@ namespace arc //! arctk namespace
 } // namespace arc
 
 
-
+*/
 //  == MODULE END ==
 #endif // ARCTK_MOD_CORE
 
