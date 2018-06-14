@@ -735,6 +735,14 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the data array.
+         *
+         *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
+         *
+         *  @return Data array.
+         */
         template <typename T, size_t N>
         constexpr inline const std::array<T, N>& Vec<T, N>::data() const noexcept
         {
