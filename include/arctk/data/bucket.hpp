@@ -47,6 +47,10 @@ namespace arc //! arctk namespace
             vecN<N> _min;
             vecN<N> _max;
 
+            //  -- Bin Information --
+            std::array<size_t, N> _res;
+            std::array<double, N> _width;
+
 
             //  == INSTANTIATION ==
           public:
