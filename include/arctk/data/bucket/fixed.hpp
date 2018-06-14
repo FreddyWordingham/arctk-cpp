@@ -65,6 +65,9 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline const T& misses() noexcept;
+
                 //  -- Collection --
                 virtual inline void collect(const vecN<N>& pos_, const T& val_) noexcept = 0;
             };
@@ -73,6 +76,16 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+
+
+
+            //  == METHODS ==
+            //  -- Getters --
+            template <typename T, size_t N>
+            inline const T& Fixed<T, N>::misses() noexcept
+            {
+                return (_misses);
+            }
 
 
 
