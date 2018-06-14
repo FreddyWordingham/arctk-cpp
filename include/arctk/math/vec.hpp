@@ -238,6 +238,18 @@ namespace arc //! arctk namespace
 
         //  == OPERATORS ==
         //  -- Stream --
+        /**
+         *  Print a vec as a human-readable string.
+         *
+         *  @tparam S   Type of stream to print to.
+         *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of vec to print.
+         *
+         *  @param  stream_ Stream to print to.
+         *  @param  vec_    Vec to print.
+         *
+         *  @return A reference to the stream post-print.
+         */
         template <typename S, typename T, size_t N>
         inline S& operator<<(S& stream_, const Vec<T, N>& vec_) noexcept
         {
