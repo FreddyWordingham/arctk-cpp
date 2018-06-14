@@ -106,7 +106,7 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                Bucket<T, N>::store(Bucket<T, N>::_bins, static_cast<std::array<double, N>>(pos_), val_);
+                Bucket<T, N>::template store<N>(Bucket<T, N>::_bins, static_cast<std::array<double, N>>(pos_), val_);
             }
 
 

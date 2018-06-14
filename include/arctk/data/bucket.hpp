@@ -85,8 +85,7 @@ namespace arc //! arctk namespace
           protected:
             //  -- Storage --
             template <size_t I>
-            inline void store(utl::MultiVec<T, I>& bins_, const std::array<double, I>& pos_, const T& val_) noexcept;
-            inline void store(utl::MultiVec<T, 1>& bins_, const std::array<double, 1>& pos_, const T& val_) noexcept;
+            inline void store(utl::MultiVec<T, I>& bins_, const std::array<double, N>& pos_, const T& val_) noexcept;
         };
 
 
@@ -180,22 +179,18 @@ namespace arc //! arctk namespace
         //  -- Storage --
         template <typename T, size_t N>
         template <size_t I>
-        inline void Bucket<T, N>::store(utl::MultiVec<T, I>& bins_, const std::array<double, I>& pos_, const T& val_) noexcept
+        inline void Bucket<T, N>::store(utl::MultiVec<T, I>& bins_, const std::array<double, N>& pos_, const T& val_) noexcept
         {
-            std::array<double, I - 1> pos;
-            std::copy(std::next(std::begin(pos_)), std::end(pos_), std::begin(pos));
+            const size_t index = find_index(N - I, pos_[N - I]);
 
-            const size_t index = find_index(N - I, pos_.front());
-
-            store(bins_[index], pos, val_);
-        }
-
-        template <typename T, size_t N>
-        inline void Bucket<T, N>::store(utl::MultiVec<T, 1>& bins_, const std::array<double, 1>& pos_, const T& val_) noexcept
-        {
-            const size_t index = find_index(N - 1, pos_.front());
-
-            bins_[index] += val_;
+            if constexpr (I == 1)
+            {
+                bins_[index] += val_;
+            }
+            else
+            {
+                store<I - 1>(bins_[index], pos_, val_);
+            }
         }
 
 
