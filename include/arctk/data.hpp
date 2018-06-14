@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/data/bucket.hpp>
+#include <arctk/data/bucket/dynamic.hpp>
 #include <arctk/data/bucket/fixed.hpp>
 
 
