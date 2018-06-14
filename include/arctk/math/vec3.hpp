@@ -625,6 +625,8 @@ namespace arc //! arctk namespace
         /**
          *  Determine if a vec is normalised to within a given tolerance.
          *
+         *  @tparam T   Type stored by the vec.
+         *
          *  @param  tol_    Maximum tolerance of normalisation value.
          *
          *  @return True if the vec is normalised.
