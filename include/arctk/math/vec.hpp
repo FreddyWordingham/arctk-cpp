@@ -700,6 +700,8 @@ namespace arc //! arctk namespace
          *  @param  index_  Index of the vec to access.
          *
          *  @pre    index_ must be less than N.
+         *
+         *  @return Reference to the requested element.
          */
         template <typename T, size_t N>
         constexpr inline T& Vec<T, N>::operator[](const size_t index_) noexcept
@@ -709,6 +711,18 @@ namespace arc //! arctk namespace
             return (_data[index_]);
         }
 
+        /**
+         *  Access a const element of the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
+         *
+         *  @param  index_  Index of the vec to access.
+         *
+         *  @pre    index_ must be less than N.
+         *
+         *  @return Const reference to the requested element.
+         */
         template <typename T, size_t N>
         constexpr inline const T& Vec<T, N>::operator[](const size_t index_) const noexcept
         {
