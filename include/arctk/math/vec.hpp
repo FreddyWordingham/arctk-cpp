@@ -62,15 +62,15 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             constexpr inline Vec() noexcept = default;
             template <typename... A>
-            constexpr inline explicit Vec(const A... a) noexcept;
+            constexpr inline explicit Vec(const A... data_) noexcept;
             template <size_t M, typename... A>
-            constexpr inline Vec(const Vec<T, M>& vec_, const A... a) noexcept;
+            constexpr inline Vec(const Vec<T, M>& vec_, const A... data_) noexcept;
 
             //  -- Initialisation --
             template <typename... A>
-            inline std::array<T, N> init_data(const A... a) noexcept;
+            inline std::array<T, N> init_data(const A... data_) noexcept;
             template <size_t M, typename... A>
-            inline std::array<T, N> init_data(const Vec<T, M>& vec_, const A... a) noexcept;
+            inline std::array<T, N> init_data(const Vec<T, M>& vec_, const A... data_) noexcept;
 
 
             //  == OPERATORS ==
@@ -131,18 +131,30 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a vec using given values.
+         *
+         *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
+         *
+         *  @tparam A   Pack of initialisation values.
+         *
+         *  @param  data_   Values used to initialise data elements.
+         *
+         *  @pre    Size of A must equal N.
+         */
         template <typename T, size_t N>
         template <typename... A>
-        constexpr inline Vec<T, N>::Vec(const A... a) noexcept
-          : _data(init_data(a...))
+        constexpr inline Vec<T, N>::Vec(const A... data_) noexcept
+          : _data(init_data(data_...))
         {
             static_assert(sizeof...(A) == N);
         }
 
         template <typename T, size_t N>
         template <size_t M, typename... A>
-        constexpr inline Vec<T, N>::Vec(const Vec<T, M>& vec_, const A... a) noexcept
-          : _data(init_data(vec_, a...))
+        constexpr inline Vec<T, N>::Vec(const Vec<T, M>& vec_, const A... data_) noexcept
+          : _data(init_data(vec_, data_...))
         {
             static_assert((sizeof...(A) + M) == N);
         }
@@ -151,21 +163,21 @@ namespace arc //! arctk namespace
         //  -- Initialisation --
         template <typename T, size_t N>
         template <typename... A>
-        inline std::array<T, N> Vec<T, N>::init_data(const A... a) noexcept
+        inline std::array<T, N> Vec<T, N>::init_data(const A... data_) noexcept
         {
             static_assert(sizeof...(A) == N);
 
             std::array<T, N> data;
 
             size_t i = 0;
-            ((data[i] = a, ++i), ...);
+            ((data[i] = data_, ++i), ...);
 
             return (data);
         }
 
         template <typename T, size_t N>
         template <size_t M, typename... A>
-        inline std::array<T, N> Vec<T, N>::init_data(const Vec<T, M>& vec_, const A... a) noexcept
+        inline std::array<T, N> Vec<T, N>::init_data(const Vec<T, M>& vec_, const A... data_) noexcept
         {
             static_assert((sizeof...(A) + M) == N);
 
@@ -177,7 +189,7 @@ namespace arc //! arctk namespace
                 data[i] = vec_._data[i];
             }
 
-            ((data[i] = a, ++i), ...);
+            ((data[i] = data_, ++i), ...);
 
             return (data);
         }
