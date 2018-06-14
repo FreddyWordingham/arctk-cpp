@@ -184,11 +184,17 @@ namespace arc //! arctk namespace
         template <size_t I>
         inline void Bucket<T, N>::store(utl::MultiVec<T, I>& bins_, const vecN<N>& pos_, const T& val_) noexcept
         {
+            const size_t index = find_index(I, pos_[I]);
+
+            store(bins_[index], pos_, val_);
         }
 
         template <typename T, size_t N>
         inline void Bucket<T, N>::store(utl::MultiVec<T, 1>& bins_, const vecN<N>& pos_, const T& val_) noexcept
         {
+            const size_t index = find_index(0, pos_[0]);
+
+            bins_[index] += val_;
         }
 
 
