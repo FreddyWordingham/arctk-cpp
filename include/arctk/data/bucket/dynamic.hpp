@@ -115,11 +115,41 @@ namespace arc //! arctk namespace
             template <typename T, size_t N>
             inline void Dynamic<T, N>::descend(const size_t dim_) noexcept
             {
+                assert(dim_ < N);
+
+                Bucket<T, N>::_min[dim_] -= (Bucket<T, N>::_max[dim_] - Bucket<T, N>::_min[dim_]);
+                Bucket<T, N>::_width[dim_] *= 2.0;
+
+                for (size_t i = (Bucket<T, N>::_res[dim_] - 1); i >= (Bucket<T, N>::_res[dim_] / 2); --i)
+                {
+                    const size_t index           = (2 * i) - Bucket<T, N>::_res[dim_];
+                    Bucket<T, N>::_bins[dim_][i] = Bucket<T, N>::_bins[dim_][index] + Bucket<T, N>::_bins[dim_][index + 1];
+                }
+
+                for (size_t i = 0; i < (Bucket<T, N>::_res[dim_] / 2); ++i)
+                {
+                    Bucket<T, N>::_bins[dim_][i] = {};
+                }
             }
 
             template <typename T, size_t N>
             inline void Dynamic<T, N>::ascend(const size_t dim_) noexcept
             {
+                assert(dim_ < N);
+
+                Bucket<T, N>::_max[dim_] += (Bucket<T, N>::_max[dim_] - Bucket<T, N>::_min[dim_]);
+                Bucket<T, N>::_width[dim_] *= 2.0;
+
+                for (size_t i = 0; i < (Bucket<T, N>::_res[dim_] / 2); ++i)
+                {
+                    const size_t index           = 2 * i;
+                    Bucket<T, N>::_bins[dim_][i] = Bucket<T, N>::_bins[dim_][index] + Bucket<T, N>::_bins[dim_][index + 1];
+                }
+
+                for (size_t i = (Bucket<T, N>::_res[dim_] / 2); i < Bucket<T, N>::_res[dim_]; ++i)
+                {
+                    Bucket<T, N>::_bins[dim_][i] = {};
+                }
             }
 
 
