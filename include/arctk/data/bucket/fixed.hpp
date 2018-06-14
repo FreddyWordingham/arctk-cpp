@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Bucket(const vecN<N> min_, const vecN<N> max_, const std::array<size_t, N>& res_) noexcept;
+                inline Fixed(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept;
 
 
                 //  == METHODS ==
@@ -76,7 +76,11 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-
+            template <typename T, size_t N>
+            inline Fixed<T, N>::Fixed(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept
+              : Bucket<T, N>(min_, max_, res_)
+            {
+            }
 
 
             //  == METHODS ==
