@@ -96,8 +96,14 @@ namespace arc //! arctk namespace
             template <typename T, size_t N>
             inline void Fixed<T, N>::collect(const vecN<N>& pos_, const T& val_) noexcept
             {
-                if (false)
+                for (size_t i = 0; i < N; ++i)
                 {
+                    if ((pos_[i] < _min[i]) || (pos_[i] > _max[i]))
+                    {
+                        _misses += val_;
+
+                        return;
+                    }
                 }
 
                 Bucket<T, N>::store(Bucket<T, N>::_bins, static_cast<std::array<double, N>>(pos_), val_);
