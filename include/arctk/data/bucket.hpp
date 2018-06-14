@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Bucket(const vecN<N> min_, const vecN<N> max_, const std::array<size_t, N>& res_) noexcept;
+            inline Bucket(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept;
 
             //  -- Initialisation --
             inline std::array<double, N> init_width(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept;
@@ -89,7 +89,7 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <typename T, size_t N>
-        inline Bucket<T, N>::Bucket(const vecN<N> min_, const vecN<N> max_, const std::array<size_t, N>& res_) noexcept
+        inline Bucket<T, N>::Bucket(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept
           : _min(min_)
           , _max(max_)
           , _res(res_)
