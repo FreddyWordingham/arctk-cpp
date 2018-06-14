@@ -825,6 +825,12 @@ namespace arc //! arctk namespace
             return (sq_sum);
         }
 
+        /**
+         *  Normalise the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
+         */
         template <typename T, size_t N>
         constexpr inline void Vec<T, N>::normalise() const noexcept
         {
