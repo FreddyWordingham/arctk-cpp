@@ -51,6 +51,9 @@ namespace arc //! arctk namespace
             std::array<size_t, N> _res;
             std::array<double, N> _width;
 
+            //  -- Data --
+            utl::MultiVec<T, N> _bins;
+
 
             //  == INSTANTIATION ==
           public:
