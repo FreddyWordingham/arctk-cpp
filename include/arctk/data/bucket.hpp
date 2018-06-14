@@ -71,17 +71,21 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const vecN<N>&               min() noexcept;
-            inline const vecN<N>&               max() noexcept;
-            inline const std::array<size_t, N>& res() noexcept;
-            inline const std::array<double, N>& width() noexcept;
-            inline const utl::MultiVec<T, N>&   bins() noexcept;
+            inline const vecN<N>&               min() const noexcept;
+            inline const vecN<N>&               max() const noexcept;
+            inline const std::array<size_t, N>& res() const noexcept;
+            inline const std::array<double, N>& width() const noexcept;
+            inline const utl::MultiVec<T, N>&   bins() const noexcept;
 
             //  -- Searching --
-            inline size_t find_index(size_t dim_, double pos_) noexcept;
+            inline size_t find_index(size_t dim_, double pos_) const noexcept;
 
             //  -- Collection --
             virtual inline void collect(const vecN<N>& pos_, const T& val_) noexcept = 0;
+
+          private:
+            //  -- Storing --
+            inline void store() noexcept;
         };
 
 
@@ -129,31 +133,31 @@ namespace arc //! arctk namespace
         //  == METHODS ==
         //  -- Getters --
         template <typename T, size_t N>
-        inline const vecN<N>& Bucket<T, N>::min() noexcept
+        inline const vecN<N>& Bucket<T, N>::min() const noexcept
         {
             return (_min);
         }
 
         template <typename T, size_t N>
-        inline const vecN<N>& Bucket<T, N>::max() noexcept
+        inline const vecN<N>& Bucket<T, N>::max() const noexcept
         {
             return (_max);
         }
 
         template <typename T, size_t N>
-        inline const std::array<size_t, N>& Bucket<T, N>::res() noexcept
+        inline const std::array<size_t, N>& Bucket<T, N>::res() const noexcept
         {
             return (_res);
         }
 
         template <typename T, size_t N>
-        inline const std::array<double, N>& Bucket<T, N>::width() noexcept
+        inline const std::array<double, N>& Bucket<T, N>::width() const noexcept
         {
             return (_width);
         }
 
         template <typename T, size_t N>
-        inline const utl::MultiVec<T, N>& Bucket<T, N>::bins() noexcept
+        inline const utl::MultiVec<T, N>& Bucket<T, N>::bins() const noexcept
         {
             return (_bins);
         }
@@ -161,7 +165,7 @@ namespace arc //! arctk namespace
 
         //  -- Searching --
         template <typename T, size_t N>
-        inline size_t Bucket<T, N>::find_index(const size_t dim_, const double pos_) noexcept
+        inline size_t Bucket<T, N>::find_index(const size_t dim_, const double pos_) const noexcept
         {
             assert(dim_ < N);
             assert(pos_ >= _min[dim_]);
