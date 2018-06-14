@@ -106,7 +106,7 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                Bucket<T, N>::template store<N>(Bucket<T, N>::bins_, pos_, val_);
+                Bucket<T, N>::template store<N>(Bucket<T, N>::_bins, pos_, val_);
             }
 
 
