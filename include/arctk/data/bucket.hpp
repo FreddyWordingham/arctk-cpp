@@ -52,6 +52,7 @@ namespace arc //! arctk namespace
             std::array<size_t, N> _res;
             std::array<double, N> _width;
 
+          protected:
             //  -- Data --
             utl::MultiVec<T, N> _bins;
 
