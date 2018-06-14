@@ -38,25 +38,20 @@ namespace arc //! arctk namespace
         //  == CLASS ==
         /**
          *  Data binning class.
-         *
-         *  @tparam T   Type stored by the bucket.
-         *  @tparam N   Dimensionality of the bucket.
          */
         template <typename T, size_t N>
         class Bucket
         {
             //  == FIELDS ==
-          protected:
+          private:
             //  -- Bounds --
             vecN<N> _min;
             vecN<N> _max;
 
-          private:
-            //  -- Bin Information --
+            //  -- Bin Metadata --
             std::array<size_t, N> _res;
             std::array<double, N> _width;
 
-          protected:
             //  -- Data --
             utl::MultiVec<T, N> _bins;
 
@@ -73,20 +68,23 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const vecN<N>&               min() const noexcept;
-            inline const vecN<N>&               max() const noexcept;
-            inline const std::array<size_t, N>& res() const noexcept;
-            inline const std::array<double, N>& width() const noexcept;
-            inline const utl::MultiVec<T, N>&   bins() const noexcept;
+            inline const std::array<double, N>& min() noexcept;
+            inline const std::array<double, N>& max() noexcept;
+            inline const std::array<size_t, N>& res() noexcept;
+            inline const std::array<double, N>& width() noexcept;
+            inline const utl::MultiVec<T, N>&   bins() noexcept;
+
+            //  -- Collection --
+            inline void collect(const vecN<N>& pos_, const T& val_) noexcept;
+
+          private:
+            template <size_t I>
+            inline void store(utl::MultiVec<T, I>& bins_, const std::array<double, I>& pos_, const T& val_) noexcept;
+            inline void store(utl::MultiVec<T, 1>& bins_, const std::array<double, 1>& pos_, const T& val_) noexcept;
 
             //  -- Searching --
-            inline size_t find_index(size_t dim_, double pos_) const noexcept;
-
-          protected:
-            //  -- Storing --
             template <size_t I>
-            inline void store(utl::MultiVec<T, I>& bins_, const vecN<N>& pos_, const T& val_) noexcept;
-            inline void store(utl::MultiVec<T, 1>& bins_, const vecN<N>& pos_, const T& val_) noexcept;
+            inline size_t find_index(double pos_) noexcept;
         };
 
 
@@ -134,66 +132,75 @@ namespace arc //! arctk namespace
         //  == METHODS ==
         //  -- Getters --
         template <typename T, size_t N>
-        inline const vecN<N>& Bucket<T, N>::min() const noexcept
+        inline const std::array<double, N>& Bucket<T, N>::min() noexcept
         {
             return (_min);
         }
 
         template <typename T, size_t N>
-        inline const vecN<N>& Bucket<T, N>::max() const noexcept
+        inline const std::array<double, N>& Bucket<T, N>::max() noexcept
         {
             return (_max);
         }
 
         template <typename T, size_t N>
-        inline const std::array<size_t, N>& Bucket<T, N>::res() const noexcept
+        inline const std::array<size_t, N>& Bucket<T, N>::res() noexcept
         {
             return (_res);
         }
 
         template <typename T, size_t N>
-        inline const std::array<double, N>& Bucket<T, N>::width() const noexcept
+        inline const std::array<double, N>& Bucket<T, N>::width() noexcept
         {
             return (_width);
         }
 
         template <typename T, size_t N>
-        inline const utl::MultiVec<T, N>& Bucket<T, N>::bins() const noexcept
+        inline const utl::MultiVec<T, N>& Bucket<T, N>::bins() noexcept
         {
             return (_bins);
         }
 
 
-        //  -- Searching --
+        //  -- Collection --
         template <typename T, size_t N>
-        inline size_t Bucket<T, N>::find_index(const size_t dim_, const double pos_) const noexcept
+        inline void Bucket<T, N>::collect(const vecN<N>& pos_, const T& val_) noexcept
         {
-            assert(dim_ < N);
-            assert(pos_ >= _min[dim_]);
-            assert(pos_ <= _max[dim_]);
-
-            const auto index = static_cast<size_t>((pos_ - _min[dim_]) / _width[dim_]);
-
-            return ((index == _res[dim_]) ? (index - 1) : index);
+            store(_bins, static_cast<std::array<double, N>>(pos_), val_);
         }
 
-
-        //  -- Storing --
         template <typename T, size_t N>
         template <size_t I>
-        inline void Bucket<T, N>::store(utl::MultiVec<T, I>& bins_, const vecN<N>& pos_, const T& val_) noexcept
+        inline void Bucket<T, N>::store(utl::MultiVec<T, I>& bins_, const std::array<double, I>& pos_, const T& val_) noexcept
         {
-            const size_t index = find_index(I, pos_[I]);
+            std::array<double, I - 1> pos;
+            std::copy(std::next(std::begin(pos_)), std::end(pos_), std::begin(pos));
 
-            store<I - 1>(bins_[index], pos_, val_);
+            const size_t index = find_index<N - I>(pos_.front());
+
+            store(bins_[index], pos, val_);
         }
 
         template <typename T, size_t N>
-        inline void Bucket<T, N>::store(utl::MultiVec<T, 1>& bins_, const vecN<N>& pos_, const T& val_) noexcept
+        inline void Bucket<T, N>::store(utl::MultiVec<T, 1>& bins_, const std::array<double, 1>& pos_, const T& val_) noexcept
         {
-            const size_t index = find_index(0, pos_[0]);
+            const size_t index = find_index<N - 1>(pos_.front());
 
             bins_[index] += val_;
+        }
+
+
+        //  -- Searching --
+        template <typename T, size_t N>
+        template <size_t I>
+        inline size_t Bucket<T, N>::find_index(const double pos_) noexcept
+        {
+            assert(pos_ >= _min[I]);
+            assert(pos_ <= _max[I]);
+
+            const auto index = static_cast<size_t>((pos_ - _min[I]) / _width[I]);
+
+            return ((index == _res[I]) ? (index - 1) : index);
         }
 
 
