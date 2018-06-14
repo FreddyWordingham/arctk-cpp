@@ -85,11 +85,14 @@ namespace arc //! arctk namespace
             {
                 for (size_t i = 0; i < N; ++i)
                 {
-                    if ((pos_[i] < Bucket<T, N>::_min[i]) || (pos_[i] > Bucket<T, N>::_max[i]))
+                    while (pos_[i] < Bucket<T, N>::_min[i])
                     {
-                        _misses += val_;
+                        descend(i);
+                    }
 
-                        return;
+                    while (pos_[i] > Bucket<T, N>::_max[i])
+                    {
+                        ascend(i);
                     }
                 }
 
