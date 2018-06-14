@@ -16,7 +16,7 @@
 
 //  == MODULE ==
 #ifdef ARCTK_MOD_CORE
-/*
+
 
 
 //  == BASE ==
@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
              *
              *  @tparam T   Type stored by the bucket.
              *  @tparam N   Dimensionality of the bucket.
-             *//*
+             */
             template <typename T, size_t N>
             class Fixed : public Bucket<T, N>
             {
@@ -67,6 +67,9 @@ namespace arc //! arctk namespace
               public:
                 //  -- Getters --
                 inline const T& misses() noexcept;
+
+                //  -- Collection --
+                inline void collect(const vecN<N>& pos_, const T& val_) noexcept override;
             };
 
 
@@ -90,6 +93,15 @@ namespace arc //! arctk namespace
 
 
             //  -- Collection --
+            template <typename T, size_t N>
+            inline void Fixed<T, N>::collect(const vecN<N>& pos_, const T& val_) noexcept
+            {
+                if (false)
+                {
+                }
+
+                store(Bucket<T, N>::_bins, static_cast<std::array<double, N>>(pos_), val_);
+            }
 
 
 
@@ -97,7 +109,7 @@ namespace arc //! arctk namespace
     }     // namespace data
 } // namespace arc
 
-*/
+
 
 //  == MODULE END ==
 #endif // ARCTK_MOD_CORE

@@ -78,7 +78,7 @@ namespace arc //! arctk namespace
             inline size_t find_index(size_t dim_, double pos_) noexcept;
 
             //  -- Collection --
-            inline void collect(const vecN<N>& pos_, const T& val_) noexcept;
+            virtual inline void collect(const vecN<N>& pos_, const T& val_) noexcept = 0;
 
           private:
             //  -- Storage --
@@ -172,14 +172,6 @@ namespace arc //! arctk namespace
             const auto index = static_cast<size_t>((pos_ - _min[dim_]) / _width[dim_]);
 
             return ((index == _res[dim_]) ? (index - 1) : index);
-        }
-
-
-        //  -- Collection --
-        template <typename T, size_t N>
-        inline void Bucket<T, N>::collect(const vecN<N>& pos_, const T& val_) noexcept
-        {
-            store(_bins, static_cast<std::array<double, N>>(pos_), val_);
         }
 
 
