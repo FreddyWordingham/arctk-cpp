@@ -507,6 +507,8 @@ namespace arc //! arctk namespace
         /**
          *  Access an element of the vec.
          *
+         *  @tparam T   Type stored by the vec.
+         *
          *  @param  index_  Index of the element to access.
          *
          *  @pre    index_ must be less than two.
@@ -523,6 +525,8 @@ namespace arc //! arctk namespace
 
         /**
          *  Access an element of the vec.
+         *
+         *  @tparam T   Type stored by the vec.
          *
          *  @param  index_  Index of the element to access.
          *
