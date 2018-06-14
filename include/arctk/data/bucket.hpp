@@ -64,6 +64,9 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Bucket(const vecN<N> min_, const vecN<N> max_, const std::array<size_t, N>& res_) noexcept;
 
+            //  -- Initialisation --
+            inline std::array<double, N> init_width(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept;
+
 
             //  == METHODS ==
           public:
@@ -87,6 +90,27 @@ namespace arc //! arctk namespace
                 assert(min_[i] < max_[i]);
             }
             assert(prop::always_greater_than(res_, 0));
+        }
+
+
+        //  -- Initialisation --
+        template <typename T, size_t N>
+        inline std::array<double, N> Bucket<T, N>::init_width(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept
+        {
+            for (size_t i = 0; i < N; ++i)
+            {
+                assert(min_[i] < max_[i]);
+            }
+            assert(prop::always_greater_than(res_, 0));
+
+            std::array<double, N> width;
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                width[i] = (max_[i] - min_[i]) / res_[i];
+            }
+
+            return (width);
         }
 
 
