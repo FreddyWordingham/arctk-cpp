@@ -108,14 +108,14 @@ namespace arc //! arctk namespace
             constexpr inline Vec<T, N> operator/(T val_) const noexcept;
 
             //  -- Access --
-            inline T&       operator[](size_t index_) noexcept;
-            inline const T& operator[](size_t index_) const noexcept;
+            constexpr inline T&       operator[](size_t index_) noexcept;
+            constexpr inline const T& operator[](size_t index_) const noexcept;
 
 
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const std::array<T, N>& data() const noexcept;
+            constexpr inline const std::array<T, N>& data() const noexcept;
 
             //  -- Properties --
             constexpr inline bool normalised(T tol_ = std::numeric_limits<T>::epsilon()) const noexcept;
@@ -691,8 +691,17 @@ namespace arc //! arctk namespace
 
 
         //  -- Access --
+        /**
+         *  Access an element of the vec.
+         *
+         *  @pre
+         *
+         *  @post
+         *
+         *  @param index_ [description]
+         */
         template <typename T, size_t N>
-        inline T& Vec<T, N>::operator[](const size_t index_) noexcept
+        constexpr inline T& Vec<T, N>::operator[](const size_t index_) noexcept
         {
             assert(index_ < N);
 
@@ -700,7 +709,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T, size_t N>
-        inline const T& Vec<T, N>::operator[](const size_t index_) const noexcept
+        constexpr inline const T& Vec<T, N>::operator[](const size_t index_) const noexcept
         {
             assert(index_ < N);
 
@@ -712,7 +721,7 @@ namespace arc //! arctk namespace
         //  == METHODS ==
         //  -- Getters --
         template <typename T, size_t N>
-        inline const std::array<T, N>& Vec<T, N>::data() const noexcept
+        constexpr inline const std::array<T, N>& Vec<T, N>::data() const noexcept
         {
             return (_data);
         }
