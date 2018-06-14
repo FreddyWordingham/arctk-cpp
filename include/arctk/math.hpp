@@ -41,7 +41,7 @@ namespace arc //! arctk namespace
     //  -- Int Vec --
     using vec2i = math::Vec<int, 2>; //!< Two-dimensional integer precision vec.
     using vec3i = math::Vec<int, 3>; //!< Three-dimensional integer precision vec.
-    using vec4i = math::Vec<int, 4>;
+    using vec4i = math::Vec<int, 4>; //!< Four-dimensional integer precision vec.
     template <size_t N>
     using vecNi = math::Vec<int, N>;
 
