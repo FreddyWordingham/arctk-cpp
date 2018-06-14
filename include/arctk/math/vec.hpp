@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           public:
             //  -- Data --
-            std::array<T, N> _data{};
+            std::array<T, N> _data{}; //!< Array of element data.
 
 
             //  == INSTANTIATION ==
