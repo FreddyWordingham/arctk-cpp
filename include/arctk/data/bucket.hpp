@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/math.hpp>
+#include <arctk/prop.hpp>
 #include <arctk/utl.hpp>
 
 
@@ -75,7 +76,17 @@ namespace arc //! arctk namespace
         //  -- Constructors --
         template <typename T, size_t N>
         inline Bucket<T, N>::Bucket(const vecN<N> min_, const vecN<N> max_, const std::array<size_t, N>& res_) noexcept
+          : _min(min_)
+          , _max(max_)
+          , _res(res_)
+          , _width(init_width(min_, max_, res_))
+          , _bins(utl::make_MultiVec<T, N>(res_))
         {
+            for (size_t i = 0; i < N; ++i)
+            {
+                assert(min_[i] < max_[i]);
+            }
+            assert(prop::always_greater_than(res_, 0));
         }
 
 
