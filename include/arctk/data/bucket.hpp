@@ -75,8 +75,7 @@ namespace arc //! arctk namespace
             inline const utl::MultiVec<T, N>&   bins() noexcept;
 
             //  -- Searching --
-            template <size_t I>
-            inline size_t find_index(double pos_) noexcept;
+            inline size_t find_index(size_t dim_, double pos_) noexcept;
 
 
 
@@ -166,15 +165,14 @@ namespace arc //! arctk namespace
 
         //  -- Searching --
         template <typename T, size_t N>
-        template <size_t I>
-        inline size_t Bucket<T, N>::find_index(const double pos_) noexcept
+        inline size_t Bucket<T, N>::find_index(const size_t dim_, const double pos_) noexcept
         {
-            assert(pos_ >= _min[I]);
-            assert(pos_ <= _max[I]);
+            assert(pos_ >= _min[dim_]);
+            assert(pos_ <= _max[dim_]);
 
-            const auto index = static_cast<size_t>((pos_ - _min[I]) / _width[I]);
+            const auto index = static_cast<size_t>((pos_ - _min[dim_]) / _width[dim_]);
 
-            return ((index == _res[I]) ? (index - 1) : index);
+            return ((index == _res[dim_]) ? (index - 1) : index);
         }
 
 
@@ -192,7 +190,7 @@ namespace arc //! arctk namespace
             std::array<double, I - 1> pos;
             std::copy(std::next(std::begin(pos_)), std::end(pos_), std::begin(pos));
 
-            const size_t index = find_index<N - I>(pos_.front());
+            const size_t index = find_index(N - 1, pos_.front());
 
             store(bins_[index], pos, val_);
         }
@@ -200,7 +198,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         inline void Bucket<T, N>::store(utl::MultiVec<T, 1>& bins_, const std::array<double, 1>& pos_, const T& val_) noexcept
         {
-            const size_t index = find_index<N - 1>(pos_.front());
+            const size_t index = find_index(N - 1, pos_.front());
 
             bins_[index] += val_;
         }
