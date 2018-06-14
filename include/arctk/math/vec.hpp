@@ -751,6 +751,16 @@ namespace arc //! arctk namespace
 
 
         //  -- Properties --
+        /**
+         *  Determine if the vec is normalised.
+         *
+         *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
+         *
+         *  @param  tol_    Maximum that magnitude can deviate from unity and still be considered normalised.
+         *
+         *  @return True if vec is normalised to within tol_.
+         */
         template <typename T, size_t N>
         constexpr inline bool Vec<T, N>::normalised(const T tol_) const noexcept
         {
