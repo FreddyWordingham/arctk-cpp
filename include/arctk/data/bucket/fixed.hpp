@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Counts --
-                unsigned int _misses; //!< Number of range misses.
+                T _misses{}; //!< Number of range misses.
 
 
                 //  == INSTANTIATION ==
