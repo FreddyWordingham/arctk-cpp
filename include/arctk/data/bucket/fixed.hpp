@@ -98,7 +98,7 @@ namespace arc //! arctk namespace
             {
                 for (size_t i = 0; i < N; ++i)
                 {
-                    if ((pos_[i] < _min[i]) || (pos_[i] > _max[i]))
+                    if ((pos_[i] < Bucket<T, N>::_min[i]) || (pos_[i] > Bucket<T, N>::_max[i]))
                     {
                         _misses += val_;
 
