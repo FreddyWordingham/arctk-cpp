@@ -51,6 +51,12 @@ namespace arc //! arctk namespace
             template <typename T, size_t N>
             class Fixed : public Bucket<T, N>
             {
+                //  == FIELDS ==
+              private:
+                //  -- Counts --
+                unsigned int _misses; //!< Number of range misses.
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
