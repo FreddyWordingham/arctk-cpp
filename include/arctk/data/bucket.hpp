@@ -77,12 +77,11 @@ namespace arc //! arctk namespace
             //  -- Searching --
             inline size_t find_index(size_t dim_, double pos_) noexcept;
 
-
-
+            //  -- Collection --
             inline void collect(const vecN<N>& pos_, const T& val_) noexcept;
 
           private:
-            //  -- Collection --
+            //  -- Storage --
             template <size_t I>
             inline void store(utl::MultiVec<T, I>& bins_, const std::array<double, I>& pos_, const T& val_) noexcept;
             inline void store(utl::MultiVec<T, 1>& bins_, const std::array<double, 1>& pos_, const T& val_) noexcept;
@@ -183,6 +182,8 @@ namespace arc //! arctk namespace
             store(_bins, static_cast<std::array<double, N>>(pos_), val_);
         }
 
+
+        //  -- Storage --
         template <typename T, size_t N>
         template <size_t I>
         inline void Bucket<T, N>::store(utl::MultiVec<T, I>& bins_, const std::array<double, I>& pos_, const T& val_) noexcept
