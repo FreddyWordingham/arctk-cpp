@@ -76,6 +76,9 @@ namespace arc //! arctk namespace
             inline const std::array<size_t, N>& res() noexcept;
             inline const std::array<double, N>& width() noexcept;
             inline const utl::MultiVec<T, N>&   bins() noexcept;
+
+            //  -- Searching --
+            inline size_t find_index(size_t dim_, double pos_) noexcept;
         };
 
 
@@ -150,6 +153,20 @@ namespace arc //! arctk namespace
         inline const utl::MultiVec<T, N>& Bucket<T, N>::bins() noexcept
         {
             return (_bins);
+        }
+
+
+        //  -- Searching --
+        template <typename T, size_t N>
+        inline size_t Bucket<T, N>::find_index(const size_t dim_, const double pos_) noexcept
+        {
+            assert(dim_ < N);
+            assert(pos_ >= _min[dim_]);
+            assert(pos_ <= _max[dim_]);
+
+            const auto index = static_cast<size_t>((pos_ - _min[dim_]) / _width[dim_]);
+
+            return ((index == _res[dim_]) ? (index - 1) : index);
         }
 
 
