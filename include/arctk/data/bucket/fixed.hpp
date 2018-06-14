@@ -80,6 +80,11 @@ namespace arc //! arctk namespace
             inline Fixed<T, N>::Fixed(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept
               : Bucket<T, N>(min_, max_, res_)
             {
+                for (size_t i = 0; i < N; ++i)
+                {
+                    assert(min_[i] < max_[i]);
+                }
+                assert(prop::always_greater_than(res_, 0));
             }
 
 
