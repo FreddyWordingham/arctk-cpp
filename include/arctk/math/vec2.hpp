@@ -617,6 +617,8 @@ namespace arc //! arctk namespace
         /**
          *  Convert the cartesian vector to a polar vector.
          *
+         *  @tparam T   Type stored by the vec.
+         *
          *  @return Vec in polar co-ordinate form.
          */
         template <typename T>
@@ -632,6 +634,8 @@ namespace arc //! arctk namespace
 
         /**
          *  Convert the polar vector to a cartesian vector.
+         *
+         *  @tparam T   Type stored by the vec.
          *
          *  @return Vec in cartesian co-ordinate form.
          */
