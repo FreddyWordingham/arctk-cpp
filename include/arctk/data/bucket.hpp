@@ -179,6 +179,11 @@ namespace arc //! arctk namespace
         template <size_t I>
         inline void Bucket<T, N>::store(utl::MultiVec<T, I>& bins_, const std::array<double, N>& pos_, const T& val_) noexcept
         {
+            for (size_t i = 0; i < N; ++i)
+            {
+                assert((pos_[i] > _min[i]) && (pos_[i] < _max[i]));
+            }
+
             const size_t index = find_index(N - I, pos_[N - I]);
 
             if constexpr (I == 1)

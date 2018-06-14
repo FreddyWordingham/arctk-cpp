@@ -29,6 +29,9 @@
 //  -- Std --
 #include <cassert>
 
+//  -- Arctk --
+#include <arctk/math.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -123,7 +126,7 @@ namespace arc //! arctk namespace
                 for (size_t i = (Bucket<T, N>::_res[dim_] - 1); i >= (Bucket<T, N>::_res[dim_] / 2); --i)
                 {
                     const size_t index           = (2 * i) - Bucket<T, N>::_res[dim_];
-                    Bucket<T, N>::_bins[dim_][i] = Bucket<T, N>::_bins[dim_][index] + Bucket<T, N>::_bins[dim_][index + 1];
+                    Bucket<T, N>::_bins[dim_][i] = math::add<T, N>(Bucket<T, N>::_bins[dim_][index], Bucket<T, N>::_bins[dim_][index + 1]);
                 }
 
                 for (size_t i = 0; i < (Bucket<T, N>::_res[dim_] / 2); ++i)
@@ -143,7 +146,7 @@ namespace arc //! arctk namespace
                 for (size_t i = 0; i < (Bucket<T, N>::_res[dim_] / 2); ++i)
                 {
                     const size_t index           = 2 * i;
-                    Bucket<T, N>::_bins[dim_][i] = Bucket<T, N>::_bins[dim_][index] + Bucket<T, N>::_bins[dim_][index + 1];
+                    Bucket<T, N>::_bins[dim_][i] = math::add<T, N>(Bucket<T, N>::_bins[dim_][index], Bucket<T, N>::_bins[dim_][index + 1]);
                 }
 
                 for (size_t i = (Bucket<T, N>::_res[dim_] / 2); i < Bucket<T, N>::_res[dim_]; ++i)
