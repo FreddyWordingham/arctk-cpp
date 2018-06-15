@@ -217,6 +217,14 @@ namespace arc //! arctk namespace
             return (_width);
         }
 
+        /**
+         *  Get the bin data.
+         *
+         *  @tparam T   Type binned.
+         *  @tparam N   Dimensionality.
+         *
+         *  @return Bin data.
+         */
         template <typename T, size_t N>
         inline const utl::MultiVec<T, N>& Bucket<T, N>::bins() noexcept
         {
