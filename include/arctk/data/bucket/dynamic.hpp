@@ -102,8 +102,17 @@ namespace arc //! arctk namespace
             template <typename T, size_t N>
             inline void Dynamic<T, N>::collect(const vecN<N>& pos_, const T& val_) noexcept
             {
-                ascend<N>(Bucket<T, N>::_bins, pos_, plan_ascend(pos_));
-                descend<N>(Bucket<T, N>::_bins, pos_, plan_descend(pos_));
+                std::array<size_t, N> asc_plan = plan_ascend(pos_);
+                if (math::sum(asc_plan) > 0)
+                {
+                    ascend<N>(Bucket<T, N>::_bins, pos_, asc_plan);
+                }
+
+                std::array<size_t, N> dsc_plan = plan_descend(pos_);
+                if (math::sum(dsc_plan) > 0)
+                {
+                    descend<N>(Bucket<T, N>::_bins, pos_, dsc_plan);
+                }
 
                 Bucket<T, N>::template store<N>(Bucket<T, N>::_bins, static_cast<std::array<double, N>>(pos_), val_);
             }
