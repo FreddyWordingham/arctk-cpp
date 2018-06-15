@@ -127,6 +127,8 @@ namespace arc //! arctk namespace
                     }
                 }
 
+                std::cout << "ascention plan: " << plan_ << "\n";
+
                 return (plan);
             }
 
@@ -145,6 +147,8 @@ namespace arc //! arctk namespace
                         ++plan[i];
                     }
                 }
+
+                std::cout << "descention plan: " << plan_ << "\n";
 
                 return (plan);
             }
