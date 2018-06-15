@@ -32,6 +32,7 @@
 
 //  -- Arctk --
 #include <arctk/math.hpp>
+#include <arctk/utl.hpp>
 
 
 
@@ -101,6 +102,7 @@ namespace arc //! arctk namespace
             inline void Dynamic<T, N>::collect(const vecN<N>& pos_, const T& val_) noexcept
             {
                 ascend<N>(Bucket<T, N>::_bins, pos_);
+                std::cout << "Check!\n";
 
                 // Bucket<T, N>::template store<N>(Bucket<T, N>::_bins, static_cast<std::array<double, N>>(pos_), val_);
             }
@@ -143,13 +145,20 @@ namespace arc //! arctk namespace
                         for (size_t i = 0; i < (Bucket<T, N>::_res[I - 1] / 2); ++i)
                         {
                             const size_t index = 2 * i;
-                            std::cout << bins_[index] << "\t:\t" << bins_[index + 1] << "\t:\t" << Bucket<T, N>::_res[I - 1] << "\t:\t" << index << "\n";
+                            std::cout << bins_[index].size() << "\t:\t" << bins_[index + 1].size() << "\t:\t" << Bucket<T, N>::_res[I - 1] << "\t:\t" << index << "\n";
                             bins_[i] = math::add<T, I - 1>(bins_[index], bins_[index + 1]);
                         }
 
                         for (size_t i = (Bucket<T, N>::_res[I - 1] / 2); i < Bucket<T, N>::_res[I - 1]; ++i)
                         {
-                            //                            Bucket<T, N>::_bins[i] = {};
+                            if constexpr (I > 2)
+                            {
+                                utl::reset_MultiVec<T, I - 1>(Bucket<T, N>::_bins[i]);
+                            }
+                            else
+                            {
+                                Bucket<T, N>::_bins[i] = {};
+                            }
                         }
                     }
                     else

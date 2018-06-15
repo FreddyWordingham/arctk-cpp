@@ -55,6 +55,15 @@ namespace arc //! arctk namespace
           public:
             //  -- Factories --
             static inline type make(const std::array<size_t, N>& dim_) noexcept;
+
+
+            static inline void reset(type& vec_) noexcept
+            {
+                for (size_t i = 0; i < vec_.size(); ++i)
+                {
+                    _MultiVec<T, N - 1>::reset(vec_[i]);
+                }
+            }
         };
 
 
@@ -77,6 +86,14 @@ namespace arc //! arctk namespace
           public:
             //  -- Factories --
             static inline type make(const std::array<size_t, 1>& dim_) noexcept;
+
+            static inline void reset(type& vec_) noexcept
+            {
+                for (size_t i = 0; i < vec_.size(); ++i)
+                {
+                    vec_[i] = {};
+                }
+            }
         };
 
 
@@ -137,33 +154,20 @@ namespace arc //! arctk namespace
         constexpr auto make_MultiVec = _MultiVec<T, N>::make;
 
 
+        template <typename T, size_t N>
+        constexpr auto reset_MultiVec = _MultiVec<T, N>::reset;
+
+
 
         //  == FUNCTION PROTOTYPES ==
         //  -- Setting --
-        template <typename T, size_t N>
-        inline void reset(MultiVec<T, N>& vec_) noexcept;
+        //        template <typename T, size_t N>
+        //        inline void reset(MultiVec<T, N>& vec_) noexcept;
 
 
 
         //  == FUNCTIONS ==
         //  -- Setting --
-        template <typename T, size_t N>
-        inline void reset(MultiVec<T, N>& vec_) noexcept
-        {
-            for (size_t i = 0; i < vec_.size(); ++i)
-            {
-                reset(vec_[i]);
-            }
-        }
-
-        template <typename T>
-        inline void reset(MultiVec<T, 1>& vec_) noexcept
-        {
-            for (size_t i = 0; i < vec_.size(); ++i)
-            {
-                vec_[i] = {};
-            }
-        }
 
 
 
