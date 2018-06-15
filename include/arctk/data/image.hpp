@@ -115,7 +115,7 @@ namespace arc //! arctk namespace
             assert(row_ < _height);
             assert(val_ >= 0);
 
-            _pixels[row_][col_] += val_;
+            _pixels[col_][row_] += val_;
         }
 
         inline void Image::collect(const size_t col_, const size_t row_, const vec3i& val_) noexcept
@@ -126,7 +126,7 @@ namespace arc //! arctk namespace
             assert(val_.g >= 0);
             assert(val_.b >= 0);
 
-            _pixels[row_][col_] += val_;
+            _pixels[col_][row_] += val_;
         }
 
 
@@ -151,7 +151,7 @@ namespace arc //! arctk namespace
                     for (size_t k = 0; k < 3; ++k)
                     {
                         // file << std::min(255, static_cast<int>((255 * i) / _width)) << "\t";
-                        file << std::min(255, (255 * _pixels[_height - i - 1][j][k]) / norm_[k]) << "\t";
+                        file << std::min(255, (255 * _pixels[j][i][k]) / norm_[k]) << "\t";
                     }
                     file << "\t";
                 }
