@@ -103,6 +103,14 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the total value of all misses..
+             *
+             *  @tparam T   Type binned.
+             *  @tparam N   Dimensionality.
+             *
+             *  @return Total value of all misses.
+             */
             template <typename T, size_t N>
             inline const T& Fixed<T, N>::misses() noexcept
             {
