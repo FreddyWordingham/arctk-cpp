@@ -28,7 +28,6 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
-#include <iostream>
 
 //  -- Arctk --
 #include <arctk/math.hpp>
@@ -155,9 +154,6 @@ namespace arc //! arctk namespace
             {
                 for (size_t expansions = 0; expansions < plan_[N - I]; ++expansions)
                 {
-                    Bucket<T, N>::_max[N - I] += (Bucket<T, N>::_max[N - I] - Bucket<T, N>::_min[N - I]);
-                    Bucket<T, N>::_width[N - I] *= 2.0;
-
                     for (size_t i = 0; i < (Bucket<T, N>::_res[N - I] / 2); ++i)
                     {
                         const size_t index = (2 * i);
@@ -199,9 +195,6 @@ namespace arc //! arctk namespace
             {
                 for (size_t expansions = 0; expansions < plan_[N - I]; ++expansions)
                 {
-                    Bucket<T, N>::_min[N - I] -= (Bucket<T, N>::_max[N - I] - Bucket<T, N>::_min[N - I]);
-                    Bucket<T, N>::_width[N - I] *= 2.0;
-
                     for (size_t i = (Bucket<T, N>::_res[N - I] - 1); i >= (Bucket<T, N>::_res[N - I] / 2); --i)
                     {
                         const size_t index = (2 * i);
