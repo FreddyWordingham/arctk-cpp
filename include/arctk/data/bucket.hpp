@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
             std::array<double, N> _width; //!< Width of bins in each dimension.
 
             //  -- Data --
-            utl::MultiVec<T, N> _bins;
+            utl::MultiVec<T, N> _bins; //!< Bin data.
 
 
             //  == INSTANTIATION ==
