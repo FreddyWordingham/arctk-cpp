@@ -1,135 +1,54 @@
-/**
- *  @file   arctk/data/bucket/fixed.hpp
- *  @date   09/06/2018
- *  @author Freddy Wordingham
- *
- *  Fixed range data binning class.
- */
-
-
-
-//  == GUARD ==
-#ifndef ARCTK_DATA_BUCKET_FIXED_HPP
-#define ARCTK_DATA_BUCKET_FIXED_HPP
-
-
-
-//  == MODULE ==
-#ifdef ARCTK_MOD_CORE
-
-
-
-//  == IMPORTS ==
-//  -- Std --
-#include <cassert>
-
-//  -- Arctk --
-#include <arctk/data/bucket.hpp>
-
-
-
-//  == NAMESPACE ==
-namespace arc //! arctk namespace
 {
-    namespace data //! data namespace
+    std::cout << "I is : " << I << "\n";
+
+    while (pos_[I - 1] > Bucket<T, N>::_max[I - 1])
     {
-        namespace bucket //! bucketing namespace
+        Bucket<T, N>::_max[I - 1] += (Bucket<T, N>::_max[I - 1] - Bucket<T, N>::_min[I - 1]);
+        Bucket<T, N>::_width[I - 1] *= 2.0;
+
+        if constexpr (I > 1)
         {
-
-
-
-            //  == CLASS ==
-            /**
-             *  Fixed range histogram class which bins values into a data vector.
-             *
-             *  @tparam T   Type of value to be counted.
-             *//*
-            template <typename T>
-            class Fixed : public Bucket<T>
+            for (size_t i = 0; i < (Bucket<T, N>::_res[I - 1] / 2); ++i)
             {
-                //  == FIELDS ==
-              private:
-                //  -- Counts --
-                unsigned int _misses; //!< Number of range misses.
-
-
-                //  == INSTANTIATION ==
-              public:
-                //  -- Constructors --
-                inline Fixed(std::vector<double> min_, std::vector<double> max_, std::vector<size_t> res_) noexcept;
-
-
-                //  == METHODS ==
-              public:
-                //  -- Getters --
-                inline unsigned int misses() noexcept;
-
-                //  -- Collection --
-                inline void collect(std::vector<double>& pos_, T val_) noexcept override;
-            };
-
-
-
-            //  == INSTANTIATION ==
-            //  -- Constructors --
-            template <typename T>
-            inline Fixed<T>::Fixed(std::vector<double> min_, std::vector<double> max_, std::vector<size_t> res_) noexcept
-              : Bucket<T>(min_, max_, res_)
-              , _misses(0)
-            {
-                assert(min_.back() < max_.back());
-                assert(res_.back() > 0);
+                const size_t index = 2 * i;
+                std::cout << bins_[index].size() << "\t:\t" << bins_[index + 1].size() << "\t:\t" << Bucket<T, N>::_res[I - 1]
+                          << "\t:\t" << index << "\n";
+                bins_[i] = math::add<T, I - 1>(bins_[index], bins_[index + 1]);
             }
 
-
-
-            //  == METHODS ==
-            //  -- Getters --
-            template <typename T>
-            inline unsigned int Fixed<T>::misses() noexcept
+            for (size_t i = (Bucket<T, N>::_res[I - 1] / 2); i < Bucket<T, N>::_res[I - 1]; ++i)
             {
-                return (_misses);
-            }
-
-
-            //  -- Collection --
-            template <typename T>
-            inline void Fixed<T>::collect(std::vector<double>& pos_, T val_) noexcept
-            {
-                assert(pos_.size() == 1);
-
-                if ((pos_.back() < Bucket<T>::_min) || (pos_.back() > Bucket<T>::_max))
+                if constexpr (I > 2)
                 {
-                    ++_misses;
-
-                    return;
-                }
-
-                const size_t index = Bucket<T>::find_index(pos_.back());
-
-                if constexpr (is_bucket<T>::value)
-                {
-                    pos_.pop_back();
-                    collect(pos_, val_);
+                    utl::reset_MultiVec<T, I - 1>(Bucket<T, N>::_bins[i]);
                 }
                 else
                 {
-                    Bucket<T>::_bins[index] += val_;
+                    Bucket<T, N>::_bins[i] = {};
                 }
-            }*/
+            }
+        }
+        else
+        {
 
+            for (size_t i = 0; i < (Bucket<T, N>::_res[I - 1] / 2); ++i)
+            {
+                const size_t index = 2 * i;
+                bins_[i]           = bins_[index] + bins_[index + 1];
+            }
 
+            for (size_t i = (Bucket<T, N>::_res[I - 1] / 2); i < Bucket<T, N>::_res[I - 1]; ++i)
+            {
+                bins_[i] = 0.0;
+            }
+        }
+    }
 
-        } // namespace bucket
-    }     // namespace data
-} // namespace arc
-
-
-
-//  == MODULE END ==
-#endif // ARCTK_MOD_CORE
-
-
-
-//  == GUARD END ==
-#endif // ARCTK_DATA_BUCKET_FIXED_HPP
+    if constexpr (I > 1)
+    {
+        for (size_t i = 0; i < bins_.size(); ++i)
+        {
+            ascend<I - 1>(bins_[i], pos_);
+        }
+    }
+}
