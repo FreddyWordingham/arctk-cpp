@@ -46,6 +46,8 @@ namespace arc //! arctk namespace
         //  -- Matlab --
         inline vec3 jet(const double x_) noexcept
         {
+            assert((x_ > 0.0) && (x_ < 1.0));
+
             vec3 col;
 
             if (x_ < 0.7)
