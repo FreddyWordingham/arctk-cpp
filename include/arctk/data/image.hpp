@@ -114,7 +114,7 @@ namespace arc //! arctk namespace
             _pixels[row_][col_] += val_;
         }
 
-        inline void Image::collect(const size_t row_, const size_t col_, const int vec3i& val_) noexcept
+        inline void Image::collect(const size_t row_, const size_t col_, const vec3i& val_) noexcept
         {
             assert(row_ < _width);
             assert(col_ < _height);
