@@ -175,6 +175,14 @@ namespace arc //! arctk namespace
             return (_min);
         }
 
+        /**
+         *  Get the maximum bound of the bucket.
+         *
+         *  @tparam T   Type binned.
+         *  @tparam N   Dimensionality.
+         *
+         *  @return Maximum bound of the bucket.
+         */
         template <typename T, size_t N>
         inline const vecN<N>& Bucket<T, N>::max() noexcept
         {
