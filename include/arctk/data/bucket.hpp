@@ -233,6 +233,18 @@ namespace arc //! arctk namespace
 
 
         //  -- Searching --
+        /**
+         *  Determine the index of the bin a position belongs in.
+         *
+         *  @tparam T   Type binned.
+         *  @tparam N   Dimensionality.
+         *
+         *  @param  dim_    Dimension to find index for.
+         *  @param  pos_    Position to place within the bin.
+         *
+         *  @pre    pos_ must be greater than, or equal to, the minimum bound of the bucket.
+         *  @pre    pos_ must be less than, or equal to, the maximum bound of the bucket.
+         */
         template <typename T, size_t N>
         inline size_t Bucket<T, N>::find_index(const size_t dim_, const double pos_) noexcept
         {
