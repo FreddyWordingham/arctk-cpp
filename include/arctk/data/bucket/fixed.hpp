@@ -121,13 +121,13 @@ namespace arc //! arctk namespace
             //  -- Collection --
             /**
              *  Collect a value into the bucket at a given position.
+             *  If the position is outside the bounds of the bucket then it is counted as a miss.
              *
-             *  @pre
+             *  @tparam T   Type binned.
+             *  @tparam N   Dimensionality.
              *
-             *  @post
-             *
-             *  @param pos_ [description]
-             *  @param val_ [description]
+             *  @param  pos_    Position of the value to place.
+             *  @param  val_    Value to place within the bins.
              */
             template <typename T, size_t N>
             inline void Fixed<T, N>::collect(const vecN<N>& pos_, const T& val_) noexcept
