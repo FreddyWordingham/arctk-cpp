@@ -55,12 +55,6 @@ namespace arc //! arctk namespace
           public:
             //  -- Factories --
             static inline type make(const std::array<size_t, N>& dim_) noexcept;
-
-
-            //  == METHODS ==
-          public:
-            //  -- Setters --
-            static inline void reset(type& vec_) noexcept;
         };
 
 
@@ -83,12 +77,6 @@ namespace arc //! arctk namespace
           public:
             //  -- Factories --
             static inline type make(const std::array<size_t, 1>& dim_) noexcept;
-
-
-            //  == METHODS ==
-          public:
-            //  -- Setters --
-            static inline void reset(type& vec_) noexcept;
         };
 
 
@@ -135,43 +123,6 @@ namespace arc //! arctk namespace
 
 
 
-        //  == METHODS ==
-        //  -- Setters --
-        /**
-         *  Reset all end values stored by a multi-dimensional MultiVec to their defaults.
-         *
-         *  @tparam T   Type stored.
-         *  @tparam N   Dimensionality of the vector.
-         *
-         *  @param  vec_    MultiVec to be reset.
-         */
-        template <typename T, size_t N>
-        inline void _MultiVec<T, N>::reset(type& vec_) noexcept
-        {
-            for (size_t i = 0; i < vec_.size(); ++i)
-            {
-                _MultiVec<T, N - 1>::reset(vec_[i]);
-            }
-        }
-
-        /**
-         *  Reset all end values stored by a one-dimensional MultiVec to their defaults.
-         *
-         *  @tparam T   Type stored.
-         *
-         *  @param  vec_    MultiVec to be reset.
-         */
-        template <typename T>
-        inline void _MultiVec<T, 1>::reset(type& vec_) noexcept
-        {
-            for (size_t i = 0; i < vec_.size(); ++i)
-            {
-                vec_[i] = {};
-            }
-        }
-
-
-
         //  == ALIASES ==
         //  -- MultiVec --
         /**
@@ -192,16 +143,6 @@ namespace arc //! arctk namespace
          */
         template <typename T, size_t N>
         constexpr auto make_MultiVec = _MultiVec<T, N>::make;
-
-
-        /**
-         *  Multi-vector reset initialisation alias.
-         *
-         *  @tparam T   Type stored.
-         *  @tparam N   Dimensionality.
-         */
-        template <typename T, size_t N>
-        constexpr auto reset_MultiVec = _MultiVec<T, N>::reset;
 
 
 
