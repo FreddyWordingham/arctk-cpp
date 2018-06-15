@@ -245,6 +245,8 @@ namespace arc //! arctk namespace
          *
          *  @pre    pos_ must be greater than, or equal to, the minimum bound of the bucket.
          *  @pre    pos_ must be less than, or equal to, the maximum bound of the bucket.
+         *
+         *  @return Index of the bin to corresponding to the given position.
          */
         template <typename T, size_t N>
         inline size_t Bucket<T, N>::find_index(const size_t dim_, const double pos_) noexcept
