@@ -109,7 +109,7 @@ namespace arc //! arctk namespace
         {
             assert(row_ < _width);
             assert(col_ < _height);
-            assert(val_ >= 0.0);
+            assert(val_ >= 0);
 
             _pixels[row_][col_] += val_;
         }
@@ -118,7 +118,9 @@ namespace arc //! arctk namespace
         {
             assert(row_ < _width);
             assert(col_ < _height);
-            assert(val_ >= 0.0);
+            assert(val_.r >= 0);
+            assert(val_.g >= 0);
+            assert(val_.b >= 0);
 
             _pixels[row_][col_] += val_;
         }
