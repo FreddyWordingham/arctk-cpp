@@ -45,6 +45,15 @@ namespace arc //! arctk namespace
 
         //  == FUNCTIONS ==
         //  -- Arithmetic --
+        /**
+         *  Add all elements of two MultiVecs together.
+         *
+         *  @tparam T   Type stored.
+         *  @tparam N   Dimensionality of the vector.
+         *
+         *  @param  lhs_    Left hand size MultiVec to add.
+         *  @param  rhs_    Right hand size MultiVec to add.
+         */
         template <typename T, size_t N>
         inline arc::utl::MultiVec<T, N> add(const arc::utl::MultiVec<T, N>& lhs_, const arc::utl::MultiVec<T, N>& rhs_) noexcept
         {
