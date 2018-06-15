@@ -81,7 +81,8 @@ namespace arc //! arctk namespace
             inline size_t find_index(size_t dim_, double pos_) noexcept;
 
             //  -- Collection --
-            virtual inline void collect(const vecN<N>& pos_, const T& val_) noexcept = 0;
+            virtual inline void collect(const vecN<N>& pos_, const T& val_) noexcept = 0; //!<  Collect a value into the bucket at a given position.  If the position is outside the bounds of the bucket then it is counted as a miss.  @tparam T   Type
+                                                                                          //!<  binned.  @tparam N   Dimensionality.  @param  pos_    Position of the value to place.  @param  val_    Value to place within the bins.
 
           protected:
             //  -- Storage --
