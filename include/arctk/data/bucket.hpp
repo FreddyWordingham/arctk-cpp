@@ -52,8 +52,8 @@ namespace arc //! arctk namespace
             vecN<N> _max; //!< Maximum bound of the bucket.
 
             //  -- Bin Metadata --
-            std::array<size_t, N> _res; //!< Number of buckets in each dimension.
-            std::array<double, N> _width;
+            std::array<size_t, N> _res;   //!< Number of bins in each dimension.
+            std::array<double, N> _width; //!< Width of bins in each dimension.
 
             //  -- Data --
             utl::MultiVec<T, N> _bins;
