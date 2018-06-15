@@ -57,13 +57,10 @@ namespace arc //! arctk namespace
             static inline type make(const std::array<size_t, N>& dim_) noexcept;
 
 
-            static inline void reset(type& vec_) noexcept
-            {
-                for (size_t i = 0; i < vec_.size(); ++i)
-                {
-                    _MultiVec<T, N - 1>::reset(vec_[i]);
-                }
-            }
+            //  == METHODS ==
+          public:
+            //  -- Setters --
+            static inline void reset(type& vec_) noexcept;
         };
 
 
@@ -87,13 +84,11 @@ namespace arc //! arctk namespace
             //  -- Factories --
             static inline type make(const std::array<size_t, 1>& dim_) noexcept;
 
-            static inline void reset(type& vec_) noexcept
-            {
-                for (size_t i = 0; i < vec_.size(); ++i)
-                {
-                    vec_[i] = {};
-                }
-            }
+
+            //  == METHODS ==
+          public:
+            //  -- Setters --
+            static inline void reset(type& vec_) noexcept;
         };
 
 
@@ -102,6 +97,9 @@ namespace arc //! arctk namespace
         //  -- Factories --
         /**
          *  Create a N-dimensional multi-vec object.
+         *
+         *  @tparam T   Type stored.
+         *  @tparam N   Dimensionality of the vector.
          *
          *  @param  dim_    Dimensionality.
          *
@@ -121,6 +119,8 @@ namespace arc //! arctk namespace
         /**
          *  Create a one-dimensional multi-vec object.
          *
+         *  @tparam T   Type stored.
+         *
          *  @param  dim_    Dimensionality.
          *
          *  @return Created one-dimensional multi-vec object.
@@ -131,6 +131,43 @@ namespace arc //! arctk namespace
             type vec(dim_.front());
 
             return (vec);
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Setters --
+        /**
+         *  Reset all end values stored by a multi-dimensional MultiVec to their defaults.
+         *
+         *  @tparam T   Type stored.
+         *  @tparam N   Dimensionality of the vector.
+         *
+         *  @param  vec_    MultiVec to be reset.
+         */
+        template <typename T, size_t N>
+        inline void _MultiVec<T, N>::reset(type& vec_) noexcept
+        {
+            for (size_t i = 0; i < vec_.size(); ++i)
+            {
+                _MultiVec<T, N - 1>::reset(vec_[i]);
+            }
+        }
+
+        /**
+         *  Reset all end values stored by a one-dimensional MultiVec to their defaults.
+         *
+         *  @tparam T   Type stored.
+         *
+         *  @param  vec_    MultiVec to be reset.
+         */
+        template <typename T>
+        inline void _MultiVec<T, 1>::reset(type& vec_) noexcept
+        {
+            for (size_t i = 0; i < vec_.size(); ++i)
+            {
+                vec_[i] = {};
+            }
         }
 
 
