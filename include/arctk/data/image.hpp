@@ -217,6 +217,15 @@ namespace arc //! arctk namespace
             save(path_, {norm_, norm_, norm_});
         }
 
+        /**
+         *  Save the image as a ppm file.
+         *  Pixel data is normalised using a given value.
+         *
+         *  @param  path_   Path to save file.
+         *
+         *  @pre    path_ may not be empty.
+         *  @pre    norm_ components must all be positive.
+         */
         inline void Image::save(const std::string& path_, const vec3i& norm_) const noexcept
         {
             assert(!path_.empty());
