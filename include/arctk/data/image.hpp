@@ -61,6 +61,9 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline size_t width() noexcept;
             inline size_t height() noexcept;
+
+            //  -- Collection --
+            inline void collect(size_t row_, size_t col_, int val_) noexcept;
         };
 
 
@@ -97,6 +100,17 @@ namespace arc //! arctk namespace
         inline size_t Image::height() noexcept
         {
             return (_height);
+        }
+
+
+        //  -- Collection --
+        inline void collect(size_t row_, size_t col_, int val_) noexcept
+        {
+            assert(row_ < _width);
+            assert(col_ < _height);
+            assert(val_ >= 0.0);
+
+            _pixels[row_][col_] += val_;
         }
 
 
