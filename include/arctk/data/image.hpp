@@ -137,7 +137,7 @@ namespace arc //! arctk namespace
         {
             assert(!path_.empty());
 
-            double max = 0.0;
+            int max = 0;
             for (size_t i = 0; i < _height; ++i)
             {
                 for (size_t j = 0; j < _width; ++j)
@@ -152,9 +152,9 @@ namespace arc //! arctk namespace
                 }
             }
 
-            if (max == 0.0)
+            if (max == 0)
             {
-                max = 1.0;
+                max = 1;
             }
 
             save(path_, max);
