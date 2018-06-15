@@ -93,6 +93,19 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a multi-dimensional bucket object with given bounds and a resolution in each dimension.
+         *
+         *  @tparam T   Type binned.
+         *  @tparam N   Dimensionality.
+         *
+         *  @param  min_    Minimum bound of the bucket.
+         *  @param  max_    Maximum bound of the bucket.
+         *  @param  res_    Number of bins in each dimension.
+         *
+         *  @pre    All values of min_ must be less than each corresponding value of max_.
+         *  @pre    All values of res_ must be positive.
+         */
         template <typename T, size_t N>
         inline Bucket<T, N>::Bucket(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept
           : _min(min_)
