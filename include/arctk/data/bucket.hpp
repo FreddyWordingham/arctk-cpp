@@ -164,8 +164,8 @@ namespace arc //! arctk namespace
         /**
          *  Get the minimum bound of the bucket.
          *
-         *  @tparam T   Type stored by the vec.
-         *  @tparam N   Size of the vec.
+         *  @tparam T   Type binned.
+         *  @tparam N   Dimensionality.
          *
          *  @return Minimum bound of the bucket.
          */
