@@ -258,6 +258,18 @@ namespace arc //! arctk namespace
 
 
         //  -- Storage --
+        /**
+         *  Store a value within the bins.
+         *
+         *  @tparam T   Type binned.
+         *  @tparam N   Dimensionality.
+         *
+         *  @tparam I   Dimension of the slice.
+         *
+         *  @param  bins_   Slice of the bucket bins.
+         *  @param  pos_    Position of the value to place.
+         *  @param  val_    Value to place within the bins.
+         */
         template <typename T, size_t N>
         template <size_t I>
         inline void Bucket<T, N>::store(utl::MultiVec<T, I>& bins_, const std::array<double, N>& pos_, const T& val_) noexcept
