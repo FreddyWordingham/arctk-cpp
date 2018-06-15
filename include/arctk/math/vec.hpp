@@ -61,6 +61,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            constexpr inline Vec() noexcept = default;
             template <typename... A>
             constexpr inline explicit Vec(const A... data_) noexcept;
             template <size_t M, typename... A>
