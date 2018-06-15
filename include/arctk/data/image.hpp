@@ -223,6 +223,7 @@ namespace arc //! arctk namespace
          *  Pixel data is normalised using a given value.
          *
          *  @param  path_   Path to save file.
+         *  @param  norm_   Colour used to normalise the pixel channels prior to saving.
          *
          *  @pre    path_ may not be empty.
          *  @pre    norm_ components must all be positive.
