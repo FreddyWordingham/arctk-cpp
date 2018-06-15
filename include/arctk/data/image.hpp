@@ -205,6 +205,7 @@ namespace arc //! arctk namespace
          *  Pixel data is normalised using a given value.
          *
          *  @param  path_   Path to save file.
+         *  @param  norm_   Scalar used to normalise the pixels prior to saving.
          *
          *  @pre    path_ may not be empty.
          *  @pre    norm_ must be positive.
