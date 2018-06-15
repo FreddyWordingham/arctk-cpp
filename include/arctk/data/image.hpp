@@ -105,7 +105,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Collection --
-        inline void collect(const size_t row_, const size_t col_, const int val_) noexcept
+        inline void Image::collect(const size_t row_, const size_t col_, const int val_) noexcept
         {
             assert(row_ < _width);
             assert(col_ < _height);
@@ -114,15 +114,14 @@ namespace arc //! arctk namespace
             _pixels[row_][col_] += val_;
         }
 
-        inline void collect(const size_t row_, const size_t col_, const int vec3i& val_) noexcept
+        inline void Image::collect(const size_t row_, const size_t col_, const int vec3i& val_) noexcept
         {
             assert(row_ < _width);
             assert(col_ < _height);
             assert(val_.r >= 0);
             assert(val_.g >= 0);
             assert(val_.b >= 0);
-
-            _pixels[row_][col_] += val_;
+            a _pixels[row_][col_] += val_;
         }
 
 
