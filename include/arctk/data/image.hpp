@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-
+            inline Image(size_t width_, size_t height_) noexcept;
 
 
             //  == METHODS ==
@@ -65,7 +65,14 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-
+        inline Image::Image(size_t width_, size_t height_) noexcept
+          : _width(width_)
+          , _height(height_)
+          , _pixels(utl::make_MultiVec({{width_, height_}}))
+        {
+            assert(width_ > 0);
+            assert(height_ > 0);
+        }
 
 
         //  == METHODS ==
