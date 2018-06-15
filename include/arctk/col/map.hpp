@@ -44,6 +44,15 @@ namespace arc //! arctk namespace
 
         //  == FUNCTIONS ==
         //  -- Matlab --
+        /**
+         *  Convert a scalar value between zero and one to a Matlab jet colour.
+         *
+         *  @param  x_  Scalar value to convert to a colour.
+         *
+         *  @pre    x_ must be between zero and one.
+         *
+         *  @return Colour vec.
+         */
         inline vec3 jet(const double x_) noexcept
         {
             assert((x_ >= 0.0) && (x_ <= 1.0));
