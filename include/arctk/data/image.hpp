@@ -150,8 +150,7 @@ namespace arc //! arctk namespace
                 {
                     for (size_t k = 0; k < 3; ++k)
                     {
-                        // file << std::min(255, static_cast<int>((255 * i) / _width)) << "\t";
-                        file << std::min(255, (255 * _pixels[j][i][k]) / norm_[k]) << "\t";
+                        file << std::min(255, (255 * _pixels[j][_height - i - 1][k]) / norm_[k]) << "\t";
                     }
                     file << "\t";
                 }
