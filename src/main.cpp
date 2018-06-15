@@ -14,6 +14,7 @@
 #include <arctk/ansi/foreground.hpp>
 #include <arctk/ansi/utl.hpp>
 #include <arctk/col.hpp>
+#include <arctk/col/map.hpp>
 #include <arctk/config.hpp>
 #include <arctk/constant.hpp>
 #include <arctk/constant/math.hpp>
