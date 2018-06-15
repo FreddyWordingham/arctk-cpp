@@ -73,10 +73,10 @@ namespace arc //! arctk namespace
 
               private:
                 //  -- Re-organisation --
-                // template <size_t I>
-                // inline void descend() noexcept;
                 template <size_t I>
                 inline void ascend(utl::MultiVec<T, I>& bins_, const vecN<N>& pos_) noexcept;
+                template <size_t I>
+                inline void descend(utl::MultiVec<T, I>& bins_, const vecN<N>& pos_) noexcept;
             };
 
 
@@ -102,77 +102,44 @@ namespace arc //! arctk namespace
             inline void Dynamic<T, N>::collect(const vecN<N>& pos_, const T& val_) noexcept
             {
                 ascend<N>(Bucket<T, N>::_bins, pos_);
-                std::cout << "Check!\n";
+                descend<N>(Bucket<T, N>::_bins, pos_);
 
-                // Bucket<T, N>::template store<N>(Bucket<T, N>::_bins, static_cast<std::array<double, N>>(pos_), val_);
+                Bucket<T, N>::template store<N>(Bucket<T, N>::_bins, static_cast<std::array<double, N>>(pos_), val_);
             }
 
 
             //  -- Re-organisation --
-            /*template <typename T, size_t N>
-            inline void Dynamic<T, N>::descend(const size_t dim_) noexcept
-            {
-                assert(dim_ < N);
-
-                Bucket<T, N>::_min[dim_] -= (Bucket<T, N>::_max[dim_] - Bucket<T, N>::_min[dim_]);
-                Bucket<T, N>::_width[dim_] *= 2.0;
-
-                for (size_t i = (Bucket<T, N>::_res[dim_] - 1); i >= (Bucket<T, N>::_res[dim_] / 2); --i)
-                {
-                    const size_t index           = (2 * i) - Bucket<T, N>::_res[dim_];
-                    Bucket<T, N>::_bins[dim_][i] = math::add<T, N>(Bucket<T, N>::_bins[dim_][index], Bucket<T, N>::_bins[dim_][index + 1]);
-                }
-
-                for (size_t i = 0; i < (Bucket<T, N>::_res[dim_] / 2); ++i)
-                {
-                    Bucket<T, N>::_bins[dim_][i] = {};
-                }
-            }*/
-
             template <typename T, size_t N>
             template <size_t I>
             inline void Dynamic<T, N>::ascend(utl::MultiVec<T, I>& bins_, const vecN<N>& pos_) noexcept
             {
-                std::cout << "I is : " << I << "\n";
-
-                while (pos_[I - 1] > Bucket<T, N>::_max[I - 1])
+                while (pos_[N - I] > Bucket<T, N>::_max[N - I])
                 {
-                    Bucket<T, N>::_max[I - 1] += (Bucket<T, N>::_max[I - 1] - Bucket<T, N>::_min[I - 1]);
-                    Bucket<T, N>::_width[I - 1] *= 2.0;
+                    Bucket<T, N>::_max[N - I] += (Bucket<T, N>::_max[N - I] - Bucket<T, N>::_min[N - I]);
+                    Bucket<T, N>::_width[N - I] *= 2.0;
 
-                    if constexpr (I > 1)
+                    for (size_t i = 0; i < (Bucket<T, N>::_res[N - I] / 2); ++i)
                     {
-                        for (size_t i = 0; i < (Bucket<T, N>::_res[I - 1] / 2); ++i)
+                        const size_t index = (2 * i);
+
+                        if constexpr (I > 1)
                         {
-                            const size_t index = 2 * i;
-                            std::cout << bins_[index].size() << "\t:\t" << bins_[index + 1].size() << "\t:\t" << Bucket<T, N>::_res[I - 1] << "\t:\t" << index << "\n";
                             bins_[i] = math::add<T, I - 1>(bins_[index], bins_[index + 1]);
                         }
-
-                        for (size_t i = (Bucket<T, N>::_res[I - 1] / 2); i < Bucket<T, N>::_res[I - 1]; ++i)
+                        else
                         {
-                            if constexpr (I > 2)
-                            {
-                                utl::reset_MultiVec<T, I - 1>(Bucket<T, N>::_bins[i]);
-                            }
-                            else
-                            {
-                                Bucket<T, N>::_bins[i] = {};
-                            }
+                            bins_[i] = bins_[index] + bins_[index + 1];
                         }
                     }
-                    else
+                    for (size_t i = (Bucket<T, N>::_res[N - I] / 2); i < Bucket<T, N>::_res[N - I]; ++i)
                     {
-
-                        for (size_t i = 0; i < (Bucket<T, N>::_res[I - 1] / 2); ++i)
+                        if constexpr (I > 1)
                         {
-                            const size_t index = 2 * i;
-                            bins_[i]           = bins_[index] + bins_[index + 1];
+                            utl::reset_MultiVec<T, I - 1>(bins_[i]);
                         }
-
-                        for (size_t i = (Bucket<T, N>::_res[I - 1] / 2); i < Bucket<T, N>::_res[I - 1]; ++i)
+                        else
                         {
-                            bins_[i] = 0.0;
+                            bins_[i] = {};
                         }
                     }
                 }
@@ -182,6 +149,50 @@ namespace arc //! arctk namespace
                     for (size_t i = 0; i < bins_.size(); ++i)
                     {
                         ascend<I - 1>(bins_[i], pos_);
+                    }
+                }
+            }
+
+            template <typename T, size_t N>
+            template <size_t I>
+            inline void Dynamic<T, N>::descend(utl::MultiVec<T, I>& bins_, const vecN<N>& pos_) noexcept
+            {
+                while (pos_[N - I] < Bucket<T, N>::_min[N - I])
+                {
+                    Bucket<T, N>::_min[N - I] -= (Bucket<T, N>::_max[N - I] - Bucket<T, N>::_min[N - I]);
+                    Bucket<T, N>::_width[N - I] *= 2.0;
+
+                    for (size_t i = (Bucket<T, N>::_res[N - I] - 1); i >= (Bucket<T, N>::_res[N - I] / 2); --i)
+                    {
+                        const size_t index = (2 * i);
+
+                        if constexpr (I > 1)
+                        {
+                            bins_[i] = math::add<T, I - 1>(bins_[index], bins_[index + 1]);
+                        }
+                        else
+                        {
+                            bins_[i] = bins_[index] + bins_[index + 1];
+                        }
+                    }
+                    for (size_t i = 0; i < (Bucket<T, N>::_res[N - I] / 2); ++i)
+                    {
+                        if constexpr (I > 1)
+                        {
+                            utl::reset_MultiVec<T, I - 1>(bins_[i]);
+                        }
+                        else
+                        {
+                            bins_[i] = {};
+                        }
+                    }
+                }
+
+                if constexpr (I > 1)
+                {
+                    for (size_t i = 0; i < bins_.size(); ++i)
+                    {
+                        descend<I - 1>(bins_[i], pos_);
                     }
                 }
             }
