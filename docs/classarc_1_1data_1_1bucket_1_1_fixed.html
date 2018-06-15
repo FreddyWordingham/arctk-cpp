@@ -136,9 +136,12 @@ Private Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classarc_1_1data_1_1_bucket"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classarc_1_1data_1_1_bucket')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket&lt; T, N &gt;</a></td></tr>
-<tr class="memitem:a800eaf5a1e18f11c1ae20c8340678d0a inherit pro_methods_classarc_1_1data_1_1_bucket"><td class="memTemplParams" colspan="2">template&lt;size_t I&gt; </td></tr>
-<tr class="memitem:a800eaf5a1e18f11c1ae20c8340678d0a inherit pro_methods_classarc_1_1data_1_1_bucket"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a800eaf5a1e18f11c1ae20c8340678d0a">store</a> (<a class="el" href="namespacearc_1_1utl.html#a7c064ecf6b3c78a832bb07385512982d">utl::MultiVec</a>&lt; T, I &gt; &amp;bins_, const std::array&lt; double, N &gt; &amp;pos_, const T &amp;val_) noexcept</td></tr>
-<tr class="separator:a800eaf5a1e18f11c1ae20c8340678d0a inherit pro_methods_classarc_1_1data_1_1_bucket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a742409935fcd884371c4ac2a1e44da3e inherit pro_methods_classarc_1_1data_1_1_bucket"><td class="memTemplParams" colspan="2">template&lt;size_t I, typename  = typename std::enable_if&lt;!(I == 1)&gt;::type&gt; </td></tr>
+<tr class="memitem:a742409935fcd884371c4ac2a1e44da3e inherit pro_methods_classarc_1_1data_1_1_bucket"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a742409935fcd884371c4ac2a1e44da3e">store</a> (<a class="el" href="namespacearc_1_1utl.html#a7c064ecf6b3c78a832bb07385512982d">utl::MultiVec</a>&lt; T, I &gt; &amp;bins_, const std::array&lt; double, N &gt; &amp;pos_, const T &amp;val_) noexcept</td></tr>
+<tr class="separator:a742409935fcd884371c4ac2a1e44da3e inherit pro_methods_classarc_1_1data_1_1_bucket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10c92441d56fb62dfade984c2203cd7a inherit pro_methods_classarc_1_1data_1_1_bucket"><td class="memTemplParams" colspan="2">template&lt;size_t I, typename  = typename std::enable_if&lt;(I == 1)&gt;::type&gt; </td></tr>
+<tr class="memitem:a10c92441d56fb62dfade984c2203cd7a inherit pro_methods_classarc_1_1data_1_1_bucket"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a10c92441d56fb62dfade984c2203cd7a">store</a> (<a class="el" href="namespacearc_1_1utl.html#a7c064ecf6b3c78a832bb07385512982d">utl::MultiVec</a>&lt; T, 1 &gt; &amp;bins_, const std::array&lt; double, N &gt; &amp;pos_, const T &amp;val_) noexcept</td></tr>
+<tr class="separator:a10c92441d56fb62dfade984c2203cd7a inherit pro_methods_classarc_1_1data_1_1_bucket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classarc_1_1data_1_1_bucket"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classarc_1_1data_1_1_bucket')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket&lt; T, N &gt;</a></td></tr>
 <tr class="memitem:af4246439e818b17f3ca6b1064f2000ae inherit pro_attribs_classarc_1_1data_1_1_bucket"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt; N &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#af4246439e818b17f3ca6b1064f2000ae">_min</a></td></tr>
 <tr class="memdesc:af4246439e818b17f3ca6b1064f2000ae inherit pro_attribs_classarc_1_1data_1_1_bucket"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum bound of the bucket.  <a href="classarc_1_1data_1_1_bucket.html#af4246439e818b17f3ca6b1064f2000ae">More...</a><br /></td></tr>
@@ -367,7 +370,7 @@ template&lt;typename T , size_t N&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 16 2018 00:37:45 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 16 2018 01:10:08 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

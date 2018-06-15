@@ -124,9 +124,12 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a800eaf5a1e18f11c1ae20c8340678d0a"><td class="memTemplParams" colspan="2">template&lt;size_t I&gt; </td></tr>
-<tr class="memitem:a800eaf5a1e18f11c1ae20c8340678d0a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a800eaf5a1e18f11c1ae20c8340678d0a">store</a> (<a class="el" href="namespacearc_1_1utl.html#a7c064ecf6b3c78a832bb07385512982d">utl::MultiVec</a>&lt; T, I &gt; &amp;bins_, const std::array&lt; double, N &gt; &amp;pos_, const T &amp;val_) noexcept</td></tr>
-<tr class="separator:a800eaf5a1e18f11c1ae20c8340678d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a742409935fcd884371c4ac2a1e44da3e"><td class="memTemplParams" colspan="2">template&lt;size_t I, typename  = typename std::enable_if&lt;!(I == 1)&gt;::type&gt; </td></tr>
+<tr class="memitem:a742409935fcd884371c4ac2a1e44da3e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a742409935fcd884371c4ac2a1e44da3e">store</a> (<a class="el" href="namespacearc_1_1utl.html#a7c064ecf6b3c78a832bb07385512982d">utl::MultiVec</a>&lt; T, I &gt; &amp;bins_, const std::array&lt; double, N &gt; &amp;pos_, const T &amp;val_) noexcept</td></tr>
+<tr class="separator:a742409935fcd884371c4ac2a1e44da3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10c92441d56fb62dfade984c2203cd7a"><td class="memTemplParams" colspan="2">template&lt;size_t I, typename  = typename std::enable_if&lt;(I == 1)&gt;::type&gt; </td></tr>
+<tr class="memitem:a10c92441d56fb62dfade984c2203cd7a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a10c92441d56fb62dfade984c2203cd7a">store</a> (<a class="el" href="namespacearc_1_1utl.html#a7c064ecf6b3c78a832bb07385512982d">utl::MultiVec</a>&lt; T, 1 &gt; &amp;bins_, const std::array&lt; double, N &gt; &amp;pos_, const T &amp;val_) noexcept</td></tr>
+<tr class="separator:a10c92441d56fb62dfade984c2203cd7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -384,7 +387,7 @@ pos_ must be less than, or equal to, the maximum bound of the bucket.</dd></dl>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1data_1_1_bucket_a1fcf7be3568fbc0ce78e2320738dfc27_icgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a1fcf7be3568fbc0ce78e2320738dfc27_icgraph" alt=""/></div>
 <map name="classarc_1_1data_1_1_bucket_a1fcf7be3568fbc0ce78e2320738dfc27_icgraph" id="classarc_1_1data_1_1_bucket_a1fcf7be3568fbc0ce78e2320738dfc27_icgraph">
-<area shape="rect" id="node2" href="classarc_1_1data_1_1_bucket.html#a800eaf5a1e18f11c1ae20c8340678d0a" title="arc::data::Bucket::\lstore" alt="" coords="182,5,311,44"/>
+<area shape="rect" id="node2" href="classarc_1_1data_1_1_bucket.html#a742409935fcd884371c4ac2a1e44da3e" title="arc::data::Bucket::\lstore" alt="" coords="182,5,311,44"/>
 </map>
 </div>
 
@@ -458,8 +461,7 @@ All values of res_ must be positive.</dd></dl>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1data_1_1_bucket_a18ed93a7fe4c085bbe409a2191092799_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a18ed93a7fe4c085bbe409a2191092799_cgraph" alt=""/></div>
 <map name="classarc_1_1data_1_1_bucket_a18ed93a7fe4c085bbe409a2191092799_cgraph" id="classarc_1_1data_1_1_bucket_a18ed93a7fe4c085bbe409a2191092799_cgraph">
-<area shape="rect" id="node2" href="namespacearc_1_1prop.html#a0786e461abacc64a0479a9c29cebcfa9" title="arc::prop::always_greater_than" alt="" coords="182,5,387,31"/>
-<area shape="rect" id="node3" href="classarc_1_1data_1_1_bucket.html#a3f384a3bc5e7f0e459a71f1cd25db47a" title="arc::data::Bucket::\lwidth" alt="" coords="220,55,349,93"/>
+<area shape="rect" id="node2" href="namespacearc_1_1prop.html#a0786e461abacc64a0479a9c29cebcfa9" title="arc::prop::always_greater_than" alt="" coords="182,12,387,37"/>
 </map>
 </div>
 
@@ -573,15 +575,15 @@ template&lt;typename T , size_t N&gt; </div>
 
 </div>
 </div>
-<a id="a800eaf5a1e18f11c1ae20c8340678d0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a800eaf5a1e18f11c1ae20c8340678d0a">&#9670;&nbsp;</a></span>store()</h2>
+<a id="a742409935fcd884371c4ac2a1e44da3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a742409935fcd884371c4ac2a1e44da3e">&#9670;&nbsp;</a></span>store() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , size_t N&gt; </div>
+template&lt;typename T, size_t N&gt; </div>
 <div class="memtemplate">
-template&lt;size_t I&gt; </div>
+template&lt;size_t I, typename  = typename std::enable_if&lt;!(I == 1)&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -639,8 +641,82 @@ template&lt;size_t I&gt; </div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1data_1_1_bucket_a800eaf5a1e18f11c1ae20c8340678d0a_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a800eaf5a1e18f11c1ae20c8340678d0a_cgraph" alt=""/></div>
-<map name="classarc_1_1data_1_1_bucket_a800eaf5a1e18f11c1ae20c8340678d0a_cgraph" id="classarc_1_1data_1_1_bucket_a800eaf5a1e18f11c1ae20c8340678d0a_cgraph">
+<div class="center"><img src="classarc_1_1data_1_1_bucket_a742409935fcd884371c4ac2a1e44da3e_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a742409935fcd884371c4ac2a1e44da3e_cgraph" alt=""/></div>
+<map name="classarc_1_1data_1_1_bucket_a742409935fcd884371c4ac2a1e44da3e_cgraph" id="classarc_1_1data_1_1_bucket_a742409935fcd884371c4ac2a1e44da3e_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1data_1_1_bucket.html#a1fcf7be3568fbc0ce78e2320738dfc27" title="arc::data::Bucket::\lfind_index" alt="" coords="182,5,311,44"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a10c92441d56fb62dfade984c2203cd7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10c92441d56fb62dfade984c2203cd7a">&#9670;&nbsp;</a></span>store() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, size_t N&gt; </div>
+<div class="memtemplate">
+template&lt;size_t I, typename  = typename std::enable_if&lt;(I == 1)&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T, N &gt;::store </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacearc_1_1utl.html#a7c064ecf6b3c78a832bb07385512982d">utl::MultiVec</a>&lt; T, 1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bins_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::array&lt; double, N &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pos_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>val_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Store a value within the bins.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type binned. </td></tr>
+    <tr><td class="paramname">N</td><td>Dimensionality.</td></tr>
+    <tr><td class="paramname">I</td><td>Dimension of the slice.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bins_</td><td>Slice of the bucket bins. </td></tr>
+    <tr><td class="paramname">pos_</td><td>Position of the value to place. </td></tr>
+    <tr><td class="paramname">val_</td><td>Value to place within the bins.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>pos_ must fall within the bounds of the bucket. </dd></dl>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1data_1_1_bucket_a10c92441d56fb62dfade984c2203cd7a_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a10c92441d56fb62dfade984c2203cd7a_cgraph" alt=""/></div>
+<map name="classarc_1_1data_1_1_bucket_a10c92441d56fb62dfade984c2203cd7a_cgraph" id="classarc_1_1data_1_1_bucket_a10c92441d56fb62dfade984c2203cd7a_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1data_1_1_bucket.html#a1fcf7be3568fbc0ce78e2320738dfc27" title="arc::data::Bucket::\lfind_index" alt="" coords="182,5,311,44"/>
 </map>
 </div>
@@ -680,16 +756,6 @@ template&lt;typename T , size_t N&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Width of the bins of each dimension. </dd></dl>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1data_1_1_bucket_a3f384a3bc5e7f0e459a71f1cd25db47a_icgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a3f384a3bc5e7f0e459a71f1cd25db47a_icgraph" alt=""/></div>
-<map name="classarc_1_1data_1_1_bucket_a3f384a3bc5e7f0e459a71f1cd25db47a_icgraph" id="classarc_1_1data_1_1_bucket_a3f384a3bc5e7f0e459a71f1cd25db47a_icgraph">
-<area shape="rect" id="node2" href="classarc_1_1data_1_1_bucket.html#a18ed93a7fe4c085bbe409a2191092799" title="arc::data::Bucket::\linit_width" alt="" coords="182,5,311,44"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -830,7 +896,7 @@ template&lt;typename T, size_t N&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 16 2018 00:37:45 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 16 2018 01:10:08 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
