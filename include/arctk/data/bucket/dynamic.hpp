@@ -123,11 +123,9 @@ namespace arc //! arctk namespace
                         Bucket<T, N>::_max[N - i] += (Bucket<T, N>::_max[N - i] - Bucket<T, N>::_min[N - i]);
                         Bucket<T, N>::_width[N - i] *= 2.0;
 
-                        ++plan[i];
+                        ++plan[N - i];
                     }
                 }
-
-                std::cout << "ascention plan: " << plan_ << "\n";
 
                 return (plan);
             }
@@ -148,8 +146,6 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                std::cout << "descention plan: " << plan_ << "\n";
-
                 return (plan);
             }
 
@@ -159,7 +155,6 @@ namespace arc //! arctk namespace
             {
                 for (size_t expansions = 0; expansions < plan_[N - I]; ++expansions)
                 {
-                    std::cout << "Ascending...\n";
                     Bucket<T, N>::_max[N - I] += (Bucket<T, N>::_max[N - I] - Bucket<T, N>::_min[N - I]);
                     Bucket<T, N>::_width[N - I] *= 2.0;
 
@@ -204,7 +199,6 @@ namespace arc //! arctk namespace
             {
                 for (size_t expansions = 0; expansions < plan_[N - I]; ++expansions)
                 {
-                    std::cout << "Descending...\n";
                     Bucket<T, N>::_min[N - I] -= (Bucket<T, N>::_max[N - I] - Bucket<T, N>::_min[N - I]);
                     Bucket<T, N>::_width[N - I] *= 2.0;
 
