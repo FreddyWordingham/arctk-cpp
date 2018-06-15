@@ -126,6 +126,9 @@ namespace arc //! arctk namespace
         /**
          *  Initialise the width of bins in each dimension.
          *
+         *  @tparam T   Type binned.
+         *  @tparam N   Dimensionality.
+         *
          *  @param  min_    Minimum bound of the bucket.
          *  @param  max_    Maximum bound of the bucket.
          *  @param  res_    Number of bins in each dimension.
@@ -158,6 +161,14 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the minimum bound of the bucket.
+         *
+         *  @tparam T   Type stored by the vec.
+         *  @tparam N   Size of the vec.
+         *
+         *  @return Minimum bound of the bucket.
+         */
         template <typename T, size_t N>
         inline const vecN<N>& Bucket<T, N>::min() noexcept
         {
