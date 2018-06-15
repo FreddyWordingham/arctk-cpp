@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/math.hpp>
+#include <arctk/sys.hpp>
 #include <arctk/utl.hpp>
 
 
@@ -65,6 +66,9 @@ namespace arc //! arctk namespace
             //  -- Collection --
             inline void collect(size_t row_, size_t col_, int val_) noexcept;
             inline void collect(size_t row_, size_t col_, const vec3i& val_) noexcept;
+
+            //  -- Saving --
+            inline void save(const std::string& path_, const vec3i& norm_) const noexcept;
         };
 
 
@@ -123,6 +127,35 @@ namespace arc //! arctk namespace
             assert(val_.b >= 0);
 
             _pixels[row_][col_] += val_;
+        }
+
+
+        //  -- Saving --
+        inline void Image::save(const std::string& path_, const vec3i& norm_) const noexcept
+        {
+            assert(!path_.empty());
+            assert(norm_.r > 0);
+            assert(norm_.g > 0);
+            assert(norm_.b > 0);
+
+            sys::file::Out file(path_);
+
+            file << "P3\n"
+                 << _width << " " << _height << "\n"
+                 << "255\n";
+
+            for (size_t i = 0; i < _height; ++i)
+            {
+                for (size_t j = 0; j < _width; ++j)
+                {
+                    for (size_t k = 0; k < 3; ++k)
+                    {
+                        file << std::min(255, (255 * _pixels[i][j][k]) / norm_[k]) << "\t";
+                    }
+                    file << "\t";
+                }
+                file << "\n";
+            }
         }
 
 
