@@ -64,8 +64,8 @@ namespace arc //! arctk namespace
             inline size_t height() noexcept;
 
             //  -- Collection --
-            inline void collect(size_t row_, size_t col_, int val_) noexcept;
-            inline void collect(size_t row_, size_t col_, const vec3i& val_) noexcept;
+            inline void collect(size_t col_, size_t row_, int val_) noexcept;
+            inline void collect(size_t col_, size_t row_, const vec3i& val_) noexcept;
 
             //  -- Saving --
             inline void save(const std::string& path_, const vec3i& norm_) const noexcept;
@@ -109,19 +109,19 @@ namespace arc //! arctk namespace
 
 
         //  -- Collection --
-        inline void Image::collect(const size_t row_, const size_t col_, const int val_) noexcept
+        inline void Image::collect(const size_t col_, const size_t row_, const int val_) noexcept
         {
-            assert(row_ < _width);
-            assert(col_ < _height);
+            assert(col_ < _width);
+            assert(row_ < _height);
             assert(val_ >= 0);
 
             _pixels[row_][col_] += val_;
         }
 
-        inline void Image::collect(const size_t row_, const size_t col_, const vec3i& val_) noexcept
+        inline void Image::collect(const size_t col_, const size_t row_, const vec3i& val_) noexcept
         {
-            assert(row_ < _width);
-            assert(col_ < _height);
+            assert(col_ < _width);
+            assert(row_ < _height);
             assert(val_.r >= 0);
             assert(val_.g >= 0);
             assert(val_.b >= 0);
@@ -150,7 +150,8 @@ namespace arc //! arctk namespace
                 {
                     for (size_t k = 0; k < 3; ++k)
                     {
-                        file << std::min(255, (255 * _pixels[i][j][k]) / norm_[k]) << "\t";
+                        // file << std::min(255, static_cast<int>((255 * i) / _width)) << "\t";
+                        file << std::min(255, (255 * _pixels[_height - i - 1][j][k]) / norm_[k]) << "\t";
                     }
                     file << "\t";
                 }
