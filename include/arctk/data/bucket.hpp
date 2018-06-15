@@ -123,6 +123,18 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
+        /**
+         *  Initialise the width of bins in each dimension.
+         *
+         *  @param  min_    Minimum bound of the bucket.
+         *  @param  max_    Maximum bound of the bucket.
+         *  @param  res_    Number of bins in each dimension.
+         *
+         *  @pre    All values of min_ must be less than each corresponding value of max_.
+         *  @pre    All values of res_ must be positive.
+         *
+         *  @return Initialised array of bin widths.
+         */
         template <typename T, size_t N>
         inline std::array<double, N> Bucket<T, N>::init_width(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept
         {
