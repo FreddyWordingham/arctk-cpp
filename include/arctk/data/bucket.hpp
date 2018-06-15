@@ -38,6 +38,9 @@ namespace arc //! arctk namespace
         //  == CLASS ==
         /**
          *  Data binning class.
+         *
+         *  @tparam T   Type binned.
+         *  @tparam N   Dimensionality.
          */
         template <typename T, size_t N>
         class Bucket
