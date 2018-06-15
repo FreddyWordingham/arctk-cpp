@@ -44,8 +44,8 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Information --
-            const size_t _width;
-            const size_t _height;
+            const size_t _width;  //!< Width of the image in pixels.
+            const size_t _height; //!< Height of the image in pixels.
 
             //  -- Data --
             utl::MultiVec<vec3i, 2> _pixels;
