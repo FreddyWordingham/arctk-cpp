@@ -40,6 +40,16 @@ namespace arc //! arctk namespace
          */
         class Image
         {
+            //  == FIELDS ==
+          private:
+            //  -- Information --
+            const size_t _width;
+            const size_t _height;
+
+            //  -- Data --
+            utl::MultiVec<vec3i, 2> _pixels;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
