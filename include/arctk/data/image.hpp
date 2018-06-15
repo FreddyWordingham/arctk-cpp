@@ -121,7 +121,8 @@ namespace arc //! arctk namespace
             assert(val_.r >= 0);
             assert(val_.g >= 0);
             assert(val_.b >= 0);
-            a _pixels[row_][col_] += val_;
+
+            _pixels[row_][col_] += val_;
         }
 
 
