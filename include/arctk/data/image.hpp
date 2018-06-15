@@ -167,11 +167,11 @@ namespace arc //! arctk namespace
         //  -- Saving --
         /**
          *  Save the image as a ppm file.
-         *  Pixel data is normalised.
+         *  Pixel data is normalised using the maximum value of the pixels.
          *
          *  @param  path_   Path to save file.
          *
-         *  @pre    patk_ may not be empty.
+         *  @pre    path_ may not be empty.
          */
         inline void Image::save(const std::string& path_) const noexcept
         {
@@ -200,6 +200,14 @@ namespace arc //! arctk namespace
             save(path_, max);
         }
 
+        /**
+         *  Save the image as a ppm file.
+         *  Pixel data is normalised using a given value.
+         *
+         *  @param  path_   Path to save file.
+         *
+         *  @pre    path_ may not be empty.
+         */
         inline void Image::save(const std::string& path_, const int norm_) const noexcept
         {
             assert(!path_.empty());
