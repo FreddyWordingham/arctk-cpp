@@ -181,7 +181,7 @@ namespace arc //! arctk namespace
         {
             for (size_t i = 0; i < N; ++i)
             {
-                assert((pos_[i] > _min[i]) && (pos_[i] < _max[i]));
+                assert((pos_[i] >= _min[i]) && (pos_[i] <= _max[i]));
             }
 
             const size_t index = find_index(N - I, pos_[N - I]);

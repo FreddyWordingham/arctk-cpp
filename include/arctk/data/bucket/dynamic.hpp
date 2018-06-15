@@ -115,6 +115,7 @@ namespace arc //! arctk namespace
             {
                 while (pos_[N - I] > Bucket<T, N>::_max[N - I])
                 {
+                    std::cout << "Ascending...\n";
                     Bucket<T, N>::_max[N - I] += (Bucket<T, N>::_max[N - I] - Bucket<T, N>::_min[N - I]);
                     Bucket<T, N>::_width[N - I] *= 2.0;
 
@@ -159,6 +160,7 @@ namespace arc //! arctk namespace
             {
                 while (pos_[N - I] < Bucket<T, N>::_min[N - I])
                 {
+                    std::cout << "Descending...\n";
                     Bucket<T, N>::_min[N - I] -= (Bucket<T, N>::_max[N - I] - Bucket<T, N>::_min[N - I]);
                     Bucket<T, N>::_width[N - I] *= 2.0;
 
