@@ -21,7 +21,6 @@
 #include <arctk/constant/phys.hpp>
 #include <arctk/data.hpp>
 #include <arctk/data/bucket.hpp>
-#include <arctk/data/bucket/dynamic.hpp>
 #include <arctk/data/bucket/fixed.hpp>
 #include <arctk/data/image.hpp>
 #include <arctk/format.hpp>
