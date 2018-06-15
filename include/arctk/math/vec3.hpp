@@ -86,7 +86,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            constexpr inline Vec() noexcept = default;
+            constexpr inline Vec() noexcept;
             constexpr inline Vec(T x_, T y_, T z_) noexcept;
             constexpr inline Vec(const Vec<T, 2>& vec_, T z_) noexcept;
 
@@ -153,6 +153,14 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        template <typename T>
+        constexpr inline Vec<T, 3>::Vec() noexcept
+          : x(0)
+          , y(0)
+          , z(0)
+        {
+        }
+
         /**
          *  Construct a vec3 with initial element values.
          *
