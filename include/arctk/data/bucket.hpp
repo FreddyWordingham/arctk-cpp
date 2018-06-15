@@ -203,6 +203,14 @@ namespace arc //! arctk namespace
             return (_res);
         }
 
+        /**
+         *  Get the width of the bins of each dimension.
+         *
+         *  @tparam T   Type binned.
+         *  @tparam N   Dimensionality.
+         *
+         *  @return Width of the bins of each dimension.
+         */
         template <typename T, size_t N>
         inline const std::array<double, N>& Bucket<T, N>::width() noexcept
         {
