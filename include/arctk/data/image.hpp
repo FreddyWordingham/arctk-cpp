@@ -207,6 +207,7 @@ namespace arc //! arctk namespace
          *  @param  path_   Path to save file.
          *
          *  @pre    path_ may not be empty.
+         *  @pre    norm_ must be positive.
          */
         inline void Image::save(const std::string& path_, const int norm_) const noexcept
         {
