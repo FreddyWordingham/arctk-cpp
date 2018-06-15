@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
             const size_t _height; //!< Height of the image in pixels.
 
             //  -- Data --
-            utl::MultiVec<vec3i, 2> _pixels;
+            utl::MultiVec<vec3i, 2> _pixels; //!< Pixel data of the image.
 
 
             //  == INSTANTIATION ==
