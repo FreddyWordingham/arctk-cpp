@@ -68,6 +68,9 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">math.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -75,6 +78,7 @@ $(function() {
 <div class="textblock"><code>#include &lt;<a class="el" href="math_2container_8hpp_source.html">arctk/math/container.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="conversion_8hpp_source.html">arctk/math/conversion.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="power_8hpp_source.html">arctk/math/power.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="vec_8hpp_source.html">arctk/math/vec.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="vec2_8hpp_source.html">arctk/math/vec2.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="vec3_8hpp_source.html">arctk/math/vec3.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="vec4_8hpp_source.html">arctk/math/vec4.hpp</a>&gt;</code><br />
@@ -85,15 +89,24 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="math_8hpp__incl.png" border="0" usemap="#include_2arctk_2math_8hpp" alt=""/></div>
 <map name="include_2arctk_2math_8hpp" id="include_2arctk_2math_8hpp">
-<area shape="rect" id="node2" href="math_2container_8hpp.html" title="arctk/math/container.hpp" alt="" coords="5,79,173,104"/>
-<area shape="rect" id="node4" href="conversion_8hpp.html" title="arctk/math/conversion.hpp" alt="" coords="693,79,871,104"/>
-<area shape="rect" id="node9" href="power_8hpp.html" title="arctk/math/power.hpp" alt="" coords="895,79,1043,104"/>
-<area shape="rect" id="node10" href="vec2_8hpp.html" title="arctk/math/vec2.hpp" alt="" coords="197,79,338,104"/>
-<area shape="rect" id="node12" href="vec3_8hpp.html" title="arctk/math/vec3.hpp" alt="" coords="362,79,504,104"/>
-<area shape="rect" id="node13" href="vec4_8hpp.html" title="arctk/math/vec4.hpp" alt="" coords="528,79,669,104"/>
-<area shape="rect" id="node6" href="constant_8hpp.html" title="arctk/constant.hpp" alt="" coords="811,152,941,177"/>
-<area shape="rect" id="node7" href="constant_2math_8hpp.html" title="arctk/constant/math.hpp" alt="" coords="701,225,864,251"/>
-<area shape="rect" id="node8" href="constant_2phys_8hpp.html" title="arctk/constant/phys.hpp" alt="" coords="888,225,1050,251"/>
+<area shape="rect" id="node2" href="math_2container_8hpp.html" title="arctk/math/container.hpp" alt="" coords="5,299,173,324"/>
+<area shape="rect" id="node4" href="conversion_8hpp.html" title="arctk/math/conversion.hpp" alt="" coords="732,79,910,104"/>
+<area shape="rect" id="node9" href="power_8hpp.html" title="arctk/math/power.hpp" alt="" coords="933,79,1082,104"/>
+<area shape="rect" id="node10" href="vec_8hpp.html" title="arctk/math/vec.hpp" alt="" coords="319,152,453,177"/>
+<area shape="rect" id="node28" href="vec2_8hpp.html" title="arctk/math/vec2.hpp" alt="" coords="401,79,542,104"/>
+<area shape="rect" id="node29" href="vec3_8hpp.html" title="arctk/math/vec3.hpp" alt="" coords="185,79,326,104"/>
+<area shape="rect" id="node30" href="vec4_8hpp.html" title="arctk/math/vec4.hpp" alt="" coords="566,79,708,104"/>
+<area shape="rect" id="node6" href="constant_8hpp.html" title="arctk/constant.hpp" alt="" coords="827,152,957,177"/>
+<area shape="rect" id="node7" href="constant_2math_8hpp.html" title="arctk/constant/math.hpp" alt="" coords="669,225,832,251"/>
+<area shape="rect" id="node8" href="constant_2phys_8hpp.html" title="arctk/constant/phys.hpp" alt="" coords="856,225,1018,251"/>
+<area shape="rect" id="node12" href="str_8hpp.html" title="arctk/str.hpp" alt="" coords="339,225,433,251"/>
+<area shape="rect" id="node13" href="convert_8hpp.html" title="arctk/str/convert.hpp" alt="" coords="325,299,467,324"/>
+<area shape="rect" id="node21" href="utl_8hpp.html" title="arctk/utl.hpp" alt="" coords="531,372,625,397"/>
+<area shape="rect" id="node22" href="utl_2container_8hpp.html" title="arctk/utl/container.hpp" alt="" coords="172,445,324,471"/>
+<area shape="rect" id="node23" href="multiarr_8hpp.html" title="arctk/utl/multiarr.hpp" alt="" coords="812,445,953,471"/>
+<area shape="rect" id="node24" href="multivec_8hpp.html" title="arctk/utl/multivec.hpp" alt="" coords="641,445,788,471"/>
+<area shape="rect" id="node26" href="pair_8hpp.html" title="arctk/utl/pair.hpp" alt="" coords="348,445,467,471"/>
+<area shape="rect" id="node27" href="tuple_8hpp.html" title="arctk/utl/tuple.hpp" alt="" coords="491,445,618,471"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -103,21 +116,89 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="math_8hpp__dep__incl.png" border="0" usemap="#include_2arctk_2math_8hppdep" alt=""/></div>
 <map name="include_2arctk_2math_8hppdep" id="include_2arctk_2math_8hppdep">
-<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="483,325,580,351"/>
-<area shape="rect" id="node3" href="sphere_8hpp.html" title="include/arctk/geom\l/shape/sphere.hpp" alt="" coords="27,165,160,204"/>
-<area shape="rect" id="node5" href="shape_8hpp.html" title="include/arctk/geom\l/shape.hpp" alt="" coords="235,79,368,117"/>
-<area shape="rect" id="node7" href="actor_8hpp.html" title="include/arctk/gui/actor.hpp" alt="" coords="443,172,619,197"/>
-<area shape="rect" id="node9" href="window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="592,85,783,111"/>
-<area shape="rect" id="node11" href="particle_8hpp.html" title="include/arctk/phys\l/particle.hpp" alt="" coords="963,165,1091,204"/>
-<area shape="rect" id="node4" href="geom_8hpp.html" title="include/arctk/geom.hpp" alt="" coords="138,252,297,277"/>
-<area shape="rect" id="node6" href="plane_8hpp.html" title="include/arctk/geom\l/shape/plane.hpp" alt="" coords="235,165,368,204"/>
-<area shape="rect" id="node8" href="gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="577,252,720,277"/>
-<area shape="rect" id="node10" href="keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="694,172,888,197"/>
-<area shape="rect" id="node12" href="phys_8hpp.html" title="include/arctk/phys.hpp" alt="" coords="1014,252,1168,277"/>
+<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="772,325,869,351"/>
+<area shape="rect" id="node3" href="map_8hpp.html" title="include/arctk/col/map.hpp" alt="" coords="53,172,225,197"/>
+<area shape="rect" id="node5" href="bucket_8hpp.html" title="include/arctk/data\l/bucket.hpp" alt="" coords="349,79,475,117"/>
+<area shape="rect" id="node8" href="image_8hpp.html" title="include/arctk/data\l/image.hpp" alt="" coords="500,165,626,204"/>
+<area shape="rect" id="node9" href="sphere_8hpp.html" title="include/arctk/geom\l/shape/sphere.hpp" alt="" coords="650,165,783,204"/>
+<area shape="rect" id="node11" href="shape_8hpp.html" title="include/arctk/geom\l/shape.hpp" alt="" coords="754,79,887,117"/>
+<area shape="rect" id="node13" href="actor_8hpp.html" title="include/arctk/gui/actor.hpp" alt="" coords="1066,172,1242,197"/>
+<area shape="rect" id="node15" href="window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="1242,85,1433,111"/>
+<area shape="rect" id="node17" href="particle_8hpp.html" title="include/arctk/phys\l/particle.hpp" alt="" coords="1592,165,1720,204"/>
+<area shape="rect" id="node4" href="col_8hpp.html" title="include/arctk/col.hpp" alt="" coords="53,252,196,277"/>
+<area shape="rect" id="node6" href="fixed_8hpp.html" title="include/arctk/data\l/bucket/fixed.hpp" alt="" coords="300,165,426,204"/>
+<area shape="rect" id="node7" href="data_8hpp.html" title="include/arctk/data.hpp" alt="" coords="416,252,568,277"/>
+<area shape="rect" id="node10" href="geom_8hpp.html" title="include/arctk/geom.hpp" alt="" coords="741,252,900,277"/>
+<area shape="rect" id="node12" href="plane_8hpp.html" title="include/arctk/geom\l/shape/plane.hpp" alt="" coords="858,165,991,204"/>
+<area shape="rect" id="node14" href="gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="1199,252,1343,277"/>
+<area shape="rect" id="node16" href="keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="1317,172,1511,197"/>
+<area shape="rect" id="node18" href="phys_8hpp.html" title="include/arctk/phys.hpp" alt="" coords="1579,252,1733,277"/>
 </map>
 </div>
 </div>
 <p><a href="math_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacearc"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc.html">arc</a></td></tr>
+<tr class="memdesc:namespacearc"><td class="mdescLeft">&#160;</td><td class="mdescRight">arctk namespace <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a0ee3ed1fd63c536f6be7d146a40d2879"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc.html#a0ee3ed1fd63c536f6be7d146a40d2879">arc::vec2i</a> = math::Vec&lt; int, 2 &gt;</td></tr>
+<tr class="memdesc:a0ee3ed1fd63c536f6be7d146a40d2879"><td class="mdescLeft">&#160;</td><td class="mdescRight">Two-dimensional integer precision vec.  <a href="namespacearc.html#a0ee3ed1fd63c536f6be7d146a40d2879">More...</a><br /></td></tr>
+<tr class="separator:a0ee3ed1fd63c536f6be7d146a40d2879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d2a635fa7c2ba84daa81877a2070e8c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc.html#a2d2a635fa7c2ba84daa81877a2070e8c">arc::vec3i</a> = math::Vec&lt; int, 3 &gt;</td></tr>
+<tr class="memdesc:a2d2a635fa7c2ba84daa81877a2070e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Three-dimensional integer precision vec.  <a href="namespacearc.html#a2d2a635fa7c2ba84daa81877a2070e8c">More...</a><br /></td></tr>
+<tr class="separator:a2d2a635fa7c2ba84daa81877a2070e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa67a520dd3043ea0ee8fd250df7d68e7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc.html#aa67a520dd3043ea0ee8fd250df7d68e7">arc::vec4i</a> = math::Vec&lt; int, 4 &gt;</td></tr>
+<tr class="memdesc:aa67a520dd3043ea0ee8fd250df7d68e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Four-dimensional integer precision vec.  <a href="namespacearc.html#aa67a520dd3043ea0ee8fd250df7d68e7">More...</a><br /></td></tr>
+<tr class="separator:aa67a520dd3043ea0ee8fd250df7d68e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af55940a3f42c375ce383ab6fdfe02201"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
+<tr class="memitem:af55940a3f42c375ce383ab6fdfe02201"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc.html#af55940a3f42c375ce383ab6fdfe02201">arc::vecNi</a> = math::Vec&lt; int, N &gt;</td></tr>
+<tr class="memdesc:af55940a3f42c375ce383ab6fdfe02201"><td class="mdescLeft">&#160;</td><td class="mdescRight">N-dimensional integer precision vec.  <a href="namespacearc.html#af55940a3f42c375ce383ab6fdfe02201">More...</a><br /></td></tr>
+<tr class="separator:af55940a3f42c375ce383ab6fdfe02201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0438e23cf4b7494c3637e4a84fda0e2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc.html#aa0438e23cf4b7494c3637e4a84fda0e2">arc::vec2f</a> = math::Vec&lt; float, 2 &gt;</td></tr>
+<tr class="memdesc:aa0438e23cf4b7494c3637e4a84fda0e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Two-dimensional float precision vec.  <a href="namespacearc.html#aa0438e23cf4b7494c3637e4a84fda0e2">More...</a><br /></td></tr>
+<tr class="separator:aa0438e23cf4b7494c3637e4a84fda0e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a72d1cbcdc02ae6a99e1a442e0475b7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc.html#a4a72d1cbcdc02ae6a99e1a442e0475b7">arc::vec3f</a> = math::Vec&lt; float, 3 &gt;</td></tr>
+<tr class="memdesc:a4a72d1cbcdc02ae6a99e1a442e0475b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Three-dimensional float precision vec.  <a href="namespacearc.html#a4a72d1cbcdc02ae6a99e1a442e0475b7">More...</a><br /></td></tr>
+<tr class="separator:a4a72d1cbcdc02ae6a99e1a442e0475b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb3211d2522b67c3448d2e5738d69c39"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc.html#acb3211d2522b67c3448d2e5738d69c39">arc::vec4f</a> = math::Vec&lt; float, 4 &gt;</td></tr>
+<tr class="memdesc:acb3211d2522b67c3448d2e5738d69c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Four-dimensional float precision vec.  <a href="namespacearc.html#acb3211d2522b67c3448d2e5738d69c39">More...</a><br /></td></tr>
+<tr class="separator:acb3211d2522b67c3448d2e5738d69c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a263f7fcb6fc180a1c28bb496c8edb102"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
+<tr class="memitem:a263f7fcb6fc180a1c28bb496c8edb102"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc.html#a263f7fcb6fc180a1c28bb496c8edb102">arc::vecNf</a> = math::Vec&lt; float, N &gt;</td></tr>
+<tr class="memdesc:a263f7fcb6fc180a1c28bb496c8edb102"><td class="mdescLeft">&#160;</td><td class="mdescRight">N-dimensional float precision vec.  <a href="namespacearc.html#a263f7fcb6fc180a1c28bb496c8edb102">More...</a><br /></td></tr>
+<tr class="separator:a263f7fcb6fc180a1c28bb496c8edb102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eb99660a4000265093cfe51201e32f3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc.html#a8eb99660a4000265093cfe51201e32f3">arc::vec2</a> = math::Vec&lt; double, 2 &gt;</td></tr>
+<tr class="memdesc:a8eb99660a4000265093cfe51201e32f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Two-dimensional double precision vec.  <a href="namespacearc.html#a8eb99660a4000265093cfe51201e32f3">More...</a><br /></td></tr>
+<tr class="separator:a8eb99660a4000265093cfe51201e32f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad775440c0194b95d118a1c537aa58885"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">arc::vec3</a> = math::Vec&lt; double, 3 &gt;</td></tr>
+<tr class="memdesc:ad775440c0194b95d118a1c537aa58885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Three-dimensional double precision vec.  <a href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">More...</a><br /></td></tr>
+<tr class="separator:ad775440c0194b95d118a1c537aa58885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed9f68c777410b2fc16c6d9774da4d0a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc.html#aed9f68c777410b2fc16c6d9774da4d0a">arc::vec4</a> = math::Vec&lt; double, 4 &gt;</td></tr>
+<tr class="memdesc:aed9f68c777410b2fc16c6d9774da4d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Four-dimensional double precision vec.  <a href="namespacearc.html#aed9f68c777410b2fc16c6d9774da4d0a">More...</a><br /></td></tr>
+<tr class="separator:aed9f68c777410b2fc16c6d9774da4d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca49b0c81e4606851a4cd97a251d42a6"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
+<tr class="memitem:aca49b0c81e4606851a4cd97a251d42a6"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">arc::vecN</a> = math::Vec&lt; double, N &gt;</td></tr>
+<tr class="memdesc:aca49b0c81e4606851a4cd97a251d42a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">N-dimensional double precision vec.  <a href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">More...</a><br /></td></tr>
+<tr class="separator:aca49b0c81e4606851a4cd97a251d42a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a42aab77a8084a505a3ef2439ac798f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc.html#a9a42aab77a8084a505a3ef2439ac798f">arc::vec2l</a> = math::Vec&lt; long double, 2 &gt;</td></tr>
+<tr class="memdesc:a9a42aab77a8084a505a3ef2439ac798f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Two-dimensional long double precision vec.  <a href="namespacearc.html#a9a42aab77a8084a505a3ef2439ac798f">More...</a><br /></td></tr>
+<tr class="separator:a9a42aab77a8084a505a3ef2439ac798f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9a546ff929d32928c86220cf77447e7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc.html#aa9a546ff929d32928c86220cf77447e7">arc::vec3l</a> = math::Vec&lt; long double, 3 &gt;</td></tr>
+<tr class="memdesc:aa9a546ff929d32928c86220cf77447e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Three-dimensional long double precision vec.  <a href="namespacearc.html#aa9a546ff929d32928c86220cf77447e7">More...</a><br /></td></tr>
+<tr class="separator:aa9a546ff929d32928c86220cf77447e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fda8cfaaec7dcce3c035894f932d2db"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc.html#a8fda8cfaaec7dcce3c035894f932d2db">arc::vec4l</a> = math::Vec&lt; long double, 4 &gt;</td></tr>
+<tr class="memdesc:a8fda8cfaaec7dcce3c035894f932d2db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Four-dimensional long double precision vec.  <a href="namespacearc.html#a8fda8cfaaec7dcce3c035894f932d2db">More...</a><br /></td></tr>
+<tr class="separator:a8fda8cfaaec7dcce3c035894f932d2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6a4b8a87622d422725dbebf2a568aa1"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
+<tr class="memitem:ab6a4b8a87622d422725dbebf2a568aa1"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc.html#ab6a4b8a87622d422725dbebf2a568aa1">arc::vecNl</a> = math::Vec&lt; long double, N &gt;</td></tr>
+<tr class="memdesc:ab6a4b8a87622d422725dbebf2a568aa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">N-dimensional long double precision vec.  <a href="namespacearc.html#ab6a4b8a87622d422725dbebf2a568aa1">More...</a><br /></td></tr>
+<tr class="separator:ab6a4b8a87622d422725dbebf2a568aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section date"><dt>Date</dt><dd>31/05/2018 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Freddy Wordingham</dd></dl>
@@ -125,7 +206,7 @@ $(function() {
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 10 2018 03:49:35 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 16 2018 00:37:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

@@ -1,4 +1,6 @@
 <map id="include/arctk/sys/file/app.hpp" name="include/arctk/sys/file/app.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="27,165,124,191"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="49,325,145,351"/>
 <area shape="rect" id="node3" href="$sys_8hpp.html" title="include/arctk/sys.hpp" alt="" coords="59,92,205,117"/>
+<area shape="rect" id="node4" href="$image_8hpp.html" title="include/arctk/data\l/image.hpp" alt="" coords="109,165,235,204"/>
+<area shape="rect" id="node5" href="$data_8hpp.html" title="include/arctk/data.hpp" alt="" coords="160,252,312,277"/>
 </map>

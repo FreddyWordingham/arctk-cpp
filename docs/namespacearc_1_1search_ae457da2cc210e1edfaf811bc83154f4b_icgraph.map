@@ -1,6 +1,7 @@
 <map id="arc::search::min_index" name="arc::search::min_index">
-<area shape="rect" id="node2" href="$namespacearc_1_1search.html#a1cf0173ae1f8475d3b1652c006d5649d" title="arc::search::min" alt="" coords="209,40,325,65"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_sphere.html#a089aed1c7adb5eb233ea0d73877f45b8" title="arc::geom::shape::Sphere\l::collision" alt="" coords="373,5,548,44"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1str.html#ad6081efe8de10551964cc4d1c5dd2170" title="arc::str::time" alt="" coords="413,68,508,93"/>
-<area shape="rect" id="node5" href="$classarc_1_1log_1_1output_1_1_stopwatch.html#a31bf1b247e47e909f4b5284fdcc6d09d" title="arc::log::output::Stopwatch\l::~Stopwatch" alt="" coords="596,61,775,100"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1search.html#a1cf0173ae1f8475d3b1652c006d5649d" title="arc::search::min" alt="" coords="209,61,325,87"/>
+<area shape="rect" id="node3" href="$classarc_1_1data_1_1_image.html#af6085596bb100a110c8d118f25f7ddaf" title="arc::data::Image::save" alt="" coords="384,5,537,31"/>
+<area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_sphere.html#af736c4c197ccfafabe06e9d22a1b9427" title="arc::geom::shape::Sphere\l::collision" alt="" coords="373,55,548,93"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1str.html#ad6081efe8de10551964cc4d1c5dd2170" title="arc::str::time" alt="" coords="413,117,508,143"/>
+<area shape="rect" id="node6" href="$classarc_1_1log_1_1output_1_1_stopwatch.html#a31bf1b247e47e909f4b5284fdcc6d09d" title="arc::log::output::Stopwatch\l::~Stopwatch" alt="" coords="596,111,775,149"/>
 </map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['g',['g',['../classarc_1_1math_1_1_vec3.html#a1358573a4b4bdef619f7fb965f686ec7',1,'arc::math::Vec3::g()'],['../classarc_1_1math_1_1_vec4.html#a10214c517514c0ca2554c7e7b375afb5',1,'arc::math::Vec4::g()']]]
+  ['g',['g',['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#abe6e4678f3cee77f59cb548bb5d94b40',1,'arc::math::Vec&lt; T, 3 &gt;::g()'],['../classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a03901b89831c9270ad60bf1934ddf087',1,'arc::math::Vec&lt; T, 4 &gt;::g()']]]
 ];

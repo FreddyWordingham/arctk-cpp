@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['term',['Term',['../classarc_1_1log_1_1_term.html',1,'arc::log']]],
-  ['tupletostring',['TupleToString',['../structarc_1_1str_1_1_tuple_to_string.html',1,'arc::str']]]
+  ['shader',['Shader',['../classarc_1_1gui_1_1_shader.html',1,'arc::gui']]],
+  ['shape',['Shape',['../classarc_1_1geom_1_1_shape.html',1,'arc::geom']]],
+  ['sphere',['Sphere',['../classarc_1_1geom_1_1shape_1_1_sphere.html',1,'arc::geom::shape']]],
+  ['stopwatch',['Stopwatch',['../classarc_1_1log_1_1output_1_1_stopwatch.html',1,'arc::log::output']]]
 ];

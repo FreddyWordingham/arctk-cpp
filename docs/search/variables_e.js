@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['r',['r',['../classarc_1_1math_1_1_vec3.html#a073439571a7df022c59393ac4a3f10ff',1,'arc::math::Vec3::r()'],['../classarc_1_1math_1_1_vec4.html#a0bc74d5afd692b0af8b6252af2abd425',1,'arc::math::Vec4::r()']]],
+  ['r',['r',['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#afd853a4a9e7930de9c4dccde66e26f83',1,'arc::math::Vec&lt; T, 3 &gt;::r()'],['../classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a573f34e173fea2024086c7f6c63f95eb',1,'arc::math::Vec&lt; T, 4 &gt;::r()']]],
   ['reset',['RESET',['../namespacearc_1_1ansi.html#a9333e6e6135b8f0287770ed0bf290e53',1,'arc::ansi']]],
-  ['rho',['rho',['../classarc_1_1math_1_1_vec2.html#a53d91c9500d6b447ab0b65099b24ec38',1,'arc::math::Vec2::rho()'],['../classarc_1_1math_1_1_vec3.html#a2bf72104e2198382dcb819265e46a4a2',1,'arc::math::Vec3::rho()']]]
+  ['rho',['rho',['../classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#a88027759e9e0e2191517ffaa6c7ea49b',1,'arc::math::Vec&lt; T, 2 &gt;::rho()'],['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#abb5508b715b4588acbdd048663f61f9c',1,'arc::math::Vec&lt; T, 3 &gt;::rho()']]]
 ];

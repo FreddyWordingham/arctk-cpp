@@ -1,6 +1,6 @@
 <map id="include/arctk/rng.hpp" name="include/arctk/rng.hpp">
-<area shape="rect" id="node2" href="$distribution_8hpp_source.html" title="arctk/rng/distribution.hpp" alt="" coords="5,85,173,111"/>
-<area shape="rect" id="node3" href="$generator_8hpp.html" title="arctk/rng/generator.hpp" alt="" coords="116,165,275,191"/>
-<area shape="rect" id="node4" href="$rng_2distribution_2uniform_8hpp.html" title="arctk/rng/distribution\l/uniform.hpp" alt="" coords="248,79,389,117"/>
-<area shape="rect" id="node6" href="$quality_8hpp.html" title="arctk/rng/generator\l/quality.hpp" alt="" coords="413,79,547,117"/>
+<area shape="rect" id="node2" href="$distribution_8hpp_source.html" title="arctk/rng/distribution.hpp" alt="" coords="29,165,197,191"/>
+<area shape="rect" id="node3" href="$generator_8hpp.html" title="arctk/rng/generator.hpp" alt="" coords="137,239,297,264"/>
+<area shape="rect" id="node4" href="$rng_2distribution_2uniform_8hpp.html" title="arctk/rng/distribution\l/uniform.hpp" alt="" coords="148,79,289,117"/>
+<area shape="rect" id="node6" href="$quality_8hpp.html" title="arctk/rng/generator\l/quality.hpp" alt="" coords="313,79,447,117"/>
 </map>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['a',['a',['../classarc_1_1math_1_1_vec4.html#aa4cfe0579b24fe973d6f73f2fbc42695',1,'arc::math::Vec4']]],
+  ['a',['a',['../classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a6ba9864698d49b99bae4003ecd8dbcd9',1,'arc::math::Vec&lt; T, 4 &gt;']]],
   ['actor',['Actor',['../classarc_1_1gui_1_1_actor.html',1,'arc::gui::Actor'],['../classarc_1_1gui_1_1_actor.html#a40f09555772506846f42e2bdf60d83de',1,'arc::gui::Actor::Actor()']]],
   ['actor_2ehpp',['actor.hpp',['../actor_8hpp.html',1,'']]],
   ['add_5funiform',['add_uniform',['../classarc_1_1gui_1_1_shader.html#ab53ca8cc16ce04a9f9be2c49161de64b',1,'arc::gui::Shader']]],
@@ -20,9 +20,12 @@ var searchData=
   ['args',['Args',['../classarc_1_1sys_1_1_args.html',1,'arc::sys::Args&lt; A &gt;'],['../classarc_1_1sys_1_1_args.html#ae983cebe7f0027a2d5b0a6bccbee7337',1,'arc::sys::Args::Args()']]],
   ['args_2ehpp',['args.hpp',['../args_8hpp.html',1,'']]],
   ['ascending',['ascending',['../namespacearc_1_1prop.html#a026d439c76bdafd78b68875044d7b087',1,'arc::prop']]],
+  ['bucket',['bucket',['../namespacearc_1_1data_1_1bucket.html',1,'arc::data']]],
   ['camera',['camera',['../namespacearc_1_1gui_1_1camera.html',1,'arc::gui']]],
+  ['col',['col',['../namespacearc_1_1col.html',1,'arc']]],
   ['config',['config',['../namespacearc_1_1config.html',1,'arc']]],
   ['constant',['constant',['../namespacearc_1_1constant.html',1,'arc']]],
+  ['data',['data',['../namespacearc_1_1data.html',1,'arc']]],
   ['distribution',['distribution',['../namespacearc_1_1rng_1_1distribution.html',1,'arc::rng']]],
   ['file',['file',['../namespacearc_1_1sys_1_1file.html',1,'arc::sys']]],
   ['format',['format',['../namespacearc_1_1format.html',1,'arc']]],

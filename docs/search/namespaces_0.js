@@ -2,9 +2,12 @@ var searchData=
 [
   ['ansi',['ansi',['../namespacearc_1_1ansi.html',1,'arc']]],
   ['arc',['arc',['../namespacearc.html',1,'']]],
+  ['bucket',['bucket',['../namespacearc_1_1data_1_1bucket.html',1,'arc::data']]],
   ['camera',['camera',['../namespacearc_1_1gui_1_1camera.html',1,'arc::gui']]],
+  ['col',['col',['../namespacearc_1_1col.html',1,'arc']]],
   ['config',['config',['../namespacearc_1_1config.html',1,'arc']]],
   ['constant',['constant',['../namespacearc_1_1constant.html',1,'arc']]],
+  ['data',['data',['../namespacearc_1_1data.html',1,'arc']]],
   ['distribution',['distribution',['../namespacearc_1_1rng_1_1distribution.html',1,'arc::rng']]],
   ['file',['file',['../namespacearc_1_1sys_1_1file.html',1,'arc::sys']]],
   ['format',['format',['../namespacearc_1_1format.html',1,'arc']]],
