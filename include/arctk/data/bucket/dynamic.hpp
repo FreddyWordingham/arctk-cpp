@@ -78,7 +78,7 @@ namespace arc //! arctk namespace
                 template <size_t I>
                 inline void ascend(utl::MultiVec<T, I>& bins_, const vecN<N>& pos_, const std::array<size_t, N>& plan_) noexcept;
                 template <size_t I>
-                inline void descend(utl::MultiVec<T, I>& bins_, const vecN<N>& pos_) noexcept;
+                inline void descend(utl::MultiVec<T, I>& bins_, const vecN<N>& pos_, const std::array<size_t, N>& plan_) noexcept;
             };
 
 
@@ -196,9 +196,9 @@ namespace arc //! arctk namespace
 
             template <typename T, size_t N>
             template <size_t I>
-            inline void Dynamic<T, N>::descend(utl::MultiVec<T, I>& bins_, const vecN<N>& pos_) noexcept
+            inline void Dynamic<T, N>::descend(utl::MultiVec<T, I>& bins_, const vecN<N>& pos_, const std::array<size_t, N>& plan_) noexcept
             {
-                while (pos_[N - I] < Bucket<T, N>::_min[N - I])
+                for (size_t expansions = 0; expansions < plan_[N - I]; ++expansions)
                 {
                     std::cout << "Descending...\n";
                     Bucket<T, N>::_min[N - I] -= (Bucket<T, N>::_max[N - I] - Bucket<T, N>::_min[N - I]);
@@ -234,7 +234,7 @@ namespace arc //! arctk namespace
                 {
                     for (size_t i = 0; i < bins_.size(); ++i)
                     {
-                        descend<I - 1>(bins_[i], pos_);
+                        descend<I - 1>(bins_[i], pos_, plan_);
                     }
                 }
             }
