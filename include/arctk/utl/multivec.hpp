@@ -138,6 +138,35 @@ namespace arc //! arctk namespace
 
 
 
+        //  == FUNCTION PROTOTYPES ==
+        //  -- Setting --
+        template <typename T, size_t N>
+        inline void reset(MultiVec<T, N>& vec_) noexcept;
+
+
+
+        //  == FUNCTIONS ==
+        //  -- Setting --
+        template <typename T, size_t N>
+        inline void reset(MultiVec<T, N>& vec_) noexcept
+        {
+            for (size_t i = 0; i < vec_.size(); ++i)
+            {
+                reset(vec_[i]);
+            }
+        }
+
+        template <typename T>
+        inline void reset(MultiVec<T, 1>& vec_) noexcept
+        {
+            for (size_t i = 0; i < vec_.size(); ++i)
+            {
+                vec_[i] = {};
+            }
+        }
+
+
+
     } // namespace utl
 } // namespace arc
 

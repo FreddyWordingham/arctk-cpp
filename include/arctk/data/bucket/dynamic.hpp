@@ -28,6 +28,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <iostream>
 
 //  -- Arctk --
 #include <arctk/math.hpp>
@@ -74,7 +75,7 @@ namespace arc //! arctk namespace
                 // template <size_t I>
                 // inline void descend() noexcept;
                 template <size_t I>
-                inline void ascend(utl::MultiVec<T, I>& vec_, const vecN<N>& pos_) noexcept;
+                inline void ascend(utl::MultiVec<T, I>& bins_, const vecN<N>& pos_) noexcept;
             };
 
 
@@ -101,7 +102,7 @@ namespace arc //! arctk namespace
             {
                 ascend<N>(Bucket<T, N>::_bins, pos_);
 
-                Bucket<T, N>::template store<N>(Bucket<T, N>::_bins, static_cast<std::array<double, N>>(pos_), val_);
+                // Bucket<T, N>::template store<N>(Bucket<T, N>::_bins, static_cast<std::array<double, N>>(pos_), val_);
             }
 
 
@@ -128,32 +129,51 @@ namespace arc //! arctk namespace
 
             template <typename T, size_t N>
             template <size_t I>
-            inline void Dynamic<T, N>::ascend(utl::MultiVec<T, I>& vec_, const vecN<N>& pos_) noexcept
+            inline void Dynamic<T, N>::ascend(utl::MultiVec<T, I>& bins_, const vecN<N>& pos_) noexcept
             {
-                while (pos_[I] > Bucket<T, N>::_max[I])
+                std::cout << "I is : " << I << "\n";
+
+                while (pos_[I - 1] > Bucket<T, N>::_max[I - 1])
                 {
+                    Bucket<T, N>::_max[I - 1] += (Bucket<T, N>::_max[I - 1] - Bucket<T, N>::_min[I - 1]);
+                    Bucket<T, N>::_width[I - 1] *= 2.0;
 
-                    Bucket<T, N>::_max[I] += (Bucket<T, N>::_max[I] - Bucket<T, N>::_min[I]);
-                    Bucket<T, N>::_width[I] *= 2.0;
-
-                    //    if constexpr (I > 1)
+                    if constexpr (I > 1)
                     {
-                        for (size_t i = 0; i < (Bucket<T, N>::_res[I] / 2); ++i)
+                        for (size_t i = 0; i < (Bucket<T, N>::_res[I - 1] / 2); ++i)
                         {
-                            const size_t index     = 2 * i;
-                            Bucket<T, N>::_bins[i] = math::add<T, I - 1>(Bucket<T, N>::_bins[index], Bucket<T, N>::_bins[index + 1]);
+                            const size_t index = 2 * i;
+                            std::cout << bins_[index] << "\t:\t" << bins_[index + 1] << "\t:\t" << Bucket<T, N>::_res[I - 1] << "\t:\t" << index << "\n";
+                            bins_[i] = math::add<T, I - 1>(bins_[index], bins_[index + 1]);
                         }
 
-                        for (size_t i = (Bucket<T, N>::_res[I] / 2); i < Bucket<T, N>::_res[I]; ++i)
+                        for (size_t i = (Bucket<T, N>::_res[I - 1] / 2); i < Bucket<T, N>::_res[I - 1]; ++i)
                         {
-                            Bucket<T, N>::_bins[i] = {};
+                            //                            Bucket<T, N>::_bins[i] = {};
+                        }
+                    }
+                    else
+                    {
+
+                        for (size_t i = 0; i < (Bucket<T, N>::_res[I - 1] / 2); ++i)
+                        {
+                            const size_t index = 2 * i;
+                            bins_[i]           = bins_[index] + bins_[index + 1];
+                        }
+
+                        for (size_t i = (Bucket<T, N>::_res[I - 1] / 2); i < Bucket<T, N>::_res[I - 1]; ++i)
+                        {
+                            bins_[i] = 0.0;
                         }
                     }
                 }
 
-                for (size_t i = 0; i < vec_.size(); ++i)
+                if constexpr (I > 1)
                 {
-                    ascend<I - 1>(vec_[i], pos_);
+                    for (size_t i = 0; i < bins_.size(); ++i)
+                    {
+                        ascend<I - 1>(bins_[i], pos_);
+                    }
                 }
             }
 
