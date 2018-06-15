@@ -48,8 +48,8 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Bounds --
-            vecN<N> _min;
-            vecN<N> _max;
+            vecN<N> _min; //!< Minimum bound of the bucket.
+            vecN<N> _max; //!< Maximum bound of the bucket.
 
             //  -- Bin Metadata --
             std::array<size_t, N> _res;
