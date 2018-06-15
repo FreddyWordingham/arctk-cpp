@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
         inline Image::Image(size_t width_, size_t height_) noexcept
           : _width(width_)
           , _height(height_)
-          , _pixels(utl::make_MultiVec({{width_, height_}}))
+          , _pixels(utl::make_MultiVec<vec3i, 2>({{width_, height_}}))
         {
             assert(width_ > 0);
             assert(height_ > 0);
