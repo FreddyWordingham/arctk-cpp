@@ -269,6 +269,8 @@ namespace arc //! arctk namespace
          *  @param  bins_   Slice of the bucket bins.
          *  @param  pos_    Position of the value to place.
          *  @param  val_    Value to place within the bins.
+         *
+         *  @pre    pos_ must fall within the bounds of the bucket.
          */
         template <typename T, size_t N>
         template <size_t I>

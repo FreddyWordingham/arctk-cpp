@@ -119,6 +119,16 @@ namespace arc //! arctk namespace
 
 
             //  -- Collection --
+            /**
+             *  Collect a value into the bucket at a given position.
+             *
+             *  @pre
+             *
+             *  @post
+             *
+             *  @param pos_ [description]
+             *  @param val_ [description]
+             */
             template <typename T, size_t N>
             inline void Fixed<T, N>::collect(const vecN<N>& pos_, const T& val_) noexcept
             {
