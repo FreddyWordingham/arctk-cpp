@@ -120,6 +120,18 @@ namespace arc //! arctk namespace
 
 
         //  -- Collection --
+        /**
+         *  Collect an integer value into the pixel array.
+         *  All channels are increased uniformly.
+         *
+         *  @param  col_    Column of pixel to add value to.
+         *  @param  row_    Row of pixel to add value to.
+         *  @param  val_    Value to add to pixel.
+         *
+         *  @pre    col_ must be less than _width;
+         *  @pre    row_ must be less than _height;
+         *  @pre    val_ must be non-negative.
+         */
         inline void Image::collect(const size_t col_, const size_t row_, const int val_) noexcept
         {
             assert(col_ < _width);
