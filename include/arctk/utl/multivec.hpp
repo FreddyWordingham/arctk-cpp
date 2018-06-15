@@ -159,18 +159,6 @@ namespace arc //! arctk namespace
 
 
 
-        //  == FUNCTION PROTOTYPES ==
-        //  -- Setting --
-        //        template <typename T, size_t N>
-        //        inline void reset(MultiVec<T, N>& vec_) noexcept;
-
-
-
-        //  == FUNCTIONS ==
-        //  -- Setting --
-
-
-
     } // namespace utl
 } // namespace arc
 
