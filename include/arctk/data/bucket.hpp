@@ -189,6 +189,14 @@ namespace arc //! arctk namespace
             return (_max);
         }
 
+        /**
+         *  Get the resolution of each dimension.
+         *
+         *  @tparam T   Type binned.
+         *  @tparam N   Dimensionality.
+         *
+         *  @return Resolution of each dimension.
+         */
         template <typename T, size_t N>
         inline const std::array<size_t, N>& Bucket<T, N>::res() noexcept
         {
