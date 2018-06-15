@@ -68,6 +68,7 @@ namespace arc //! arctk namespace
             inline void collect(size_t col_, size_t row_, const vec3i& val_) noexcept;
 
             //  -- Saving --
+            inline void save(const std::string& path_) const noexcept;
             inline void save(const std::string& path_, int norm_) const noexcept;
             inline void save(const std::string& path_, const vec3i& norm_) const noexcept;
         };
@@ -132,6 +133,33 @@ namespace arc //! arctk namespace
 
 
         //  -- Saving --
+        inline void Image::save(const std::string& path_) const noexcept
+        {
+            assert(!path_.empty());
+
+            double max = 0.0;
+            for (size_t i = 0; i < _height; ++i)
+            {
+                for (size_t j = 0; j < _width; ++j)
+                {
+                    for (size_t k = 0; k < 3; ++k)
+                    {
+                        if (_pixels[j][i][k] > max)
+                        {
+                            max = _pixels[j][i][k];
+                        }
+                    }
+                }
+            }
+
+            if (max == 0.0)
+            {
+                max = 1.0;
+            }
+
+            save(path_, max);
+        }
+
         inline void Image::save(const std::string& path_, const int norm_) const noexcept
         {
             assert(!path_.empty());
