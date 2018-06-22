@@ -26,6 +26,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <optional>
+
 //  -- Arctk --
 #include <arctk/geom/collision.hpp>
 
@@ -56,7 +59,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Collision --
-                inline Collision collision(const vec3& pos_, const vec3& dir_) const noexcept override;
+                inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
 
 
@@ -89,20 +92,20 @@ namespace arc //! arctk namespace
              *
              *  @pre    dir_ must be normalised.
              *
-             *  @return Collision information.
+             *  @return Optional collision distance.
              */
-            inline Collision Plane::collision(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<double> Plane::collision(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 const double denom = _dir * dir_;
 
                 if (denom == 0.0)
                 {
-                    return (Collision(false));
+                    return (std::nullopt);
                 }
 
                 const double dist = ((_pos - pos_) * _dir) / denom;
 
-                return ((dist < 0.0) ? Collision(false) : Collision(dist));
+                return ((dist < 0.0) ? std::nullopt : std::optional<double>(dist));
             }
 
 
