@@ -135,7 +135,7 @@ namespace arc //! arctk namespace
                 assert(!path_.empty());
                 assert(norm_ > 0.0);
 
-                utl::MultiVec<vec3, 2> pixels = utl::make_MultiVec<vec3, 2>({{width_, height_}});
+                utl::MultiVec<vec3, 2> pixels = utl::make_MultiVec<vec3, 2>({{_width, _height}});
                 for (size_t i = 0; i < _height; ++i)
                 {
                     for (size_t j = 0; j < _width; ++j)
