@@ -77,7 +77,7 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Stream --
-            template <typename S, typename _T, size_t _N>
+            template <typename S, typename _T, size_t _N> // NOLINT
             friend inline S& operator<<(S& stream_, const Vec<T, N>& vec_) noexcept;
 
             //  -- Conversion --
