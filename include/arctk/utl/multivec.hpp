@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored.
          */
         template <typename T>
-        class _MultiVec<T, 1>
+        class _MultiVec<T, 1> // NOLINT
         {
             //  == TYPES ==
           public:
