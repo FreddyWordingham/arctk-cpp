@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Writing --
-            std::mutex _write_guard; //!< Terminal write guard.
+            std::mutex _write_guard{}; //!< Terminal write guard.
 
             //  -- Colouring --
             std::string _location_col; //!< String used to colour location text.
