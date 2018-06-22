@@ -114,7 +114,7 @@ namespace arc //! arctk namespace
              */
             inline double Quality::gen() noexcept
             {
-                return (gen_base() * (1.0 / static_cast<double>(std::numeric_limits<uint64_t>::max())));
+                return (static_cast<double>(gen_base()) * (1.0 / static_cast<double>(std::numeric_limits<uint64_t>::max())));
             }
 
 
