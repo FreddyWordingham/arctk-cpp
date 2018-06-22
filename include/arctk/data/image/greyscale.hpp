@@ -131,7 +131,7 @@ namespace arc //! arctk namespace
                 {
                     for (size_t j = 0; j < _width; ++j)
                     {
-                        const double intensity = scale(_pixels[i][j] / max);
+                        const double intensity = scale_(_pixels[i][j] / max);
 
                         for (size_t k = 0; k < 3; ++k)
                         {
