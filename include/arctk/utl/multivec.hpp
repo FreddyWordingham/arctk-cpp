@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
          *  @tparam N   Dimensionality of the vector.
          */
         template <typename T, size_t N>
-        class _MultiVec
+        class _MultiVec // NOLINT
         {
             //  == TYPES ==
           public:
