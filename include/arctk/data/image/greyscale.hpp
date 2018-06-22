@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
             /**
              *  Greyscale data writer.
              */
-            class Greyscale
+            class Greyscale : public Image
             {
                 //  == FIELDS ==
               private:
