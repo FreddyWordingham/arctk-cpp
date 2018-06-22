@@ -98,7 +98,7 @@ namespace arc //! arctk namespace
             friend inline S& operator<<(S& stream_, const Vec<T, 3>& vec_) noexcept;
 
             //  -- Conversion --
-            constexpr inline operator std::array<T, 3>() const noexcept;
+            constexpr inline explicit operator std::array<T, 3>() const noexcept;
 
             //  -- Assignment --
             constexpr inline Vec<T, 3>& operator+=(T val_) noexcept;
