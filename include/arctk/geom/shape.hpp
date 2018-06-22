@@ -20,8 +20,10 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <optional>
+
 //  -- Arctk --
-#include <arctk/geom/collision.hpp>
 #include <arctk/math.hpp>
 
 
@@ -72,8 +74,8 @@ namespace arc //! arctk namespace
             inline const vec3& dir() const noexcept;
 
             //  -- Collision --
-            virtual inline Collision collision(const vec3& pos_, const vec3& dir_) const
-              noexcept = 0; //!< Determine the distance along a ray to the shape's boundaries. @param pos_ Initial position of the ray. @param dir_ Direction of ray. @return Collision properties.
+            virtual inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const
+              noexcept = 0; //!< Determine the distance along a ray to the shape's boundaries. @param pos_ Initial position of the ray. @param dir_ Direction of ray. @return Optional collision distance.
         };
 
 
