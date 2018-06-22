@@ -37,9 +37,31 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
+        //  -- Layout --
+        inline bool rectangular(const utl::MultiVec<vec3, 2>& pixels) noexcept;
+
 
 
         //  == FUNCTIONS ==
+        //  -- Layout --
+        inline bool rectangular(const utl::MultiVec<vec3, 2>& pixels) noexcept
+        {
+            if (pixels.empty())
+            {
+                return (true);
+            }
+
+            const size_t size = pixels.front().size();
+            for (size_t i = 1; i < pixels.size(); ++i)
+            {
+                if (pixels[i].size() != size)
+                {
+                    return (false);
+                }
+            }
+
+            return (true);
+        }
 
 
 
