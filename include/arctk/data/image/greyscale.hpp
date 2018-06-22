@@ -113,8 +113,9 @@ namespace arc //! arctk namespace
                 save(path_, [](const double x_) { return (x_); }, [](const double x_) { return (vec3(x_, x_, x_)); });
             }
 
-            inline void save(const std::string& path_, double (*const scale)(const double)) const noexcept
+            inline void save(const std::string& path_, double (*const scale_)(const double)) const noexcept
             {
+                save(path_, scale_, [](const double x_) { return (vec3(x_, x_, x_)); });
             }
 
             inline void save(const std::string& path_, vec3 (*const scale)(const double)) const noexcept
