@@ -34,7 +34,7 @@ namespace arc //! arctk namespace
         class Image
         {
             //  == FIELDS ==
-          private:
+          protected:
             //  -- Information --
             const size_t _width;  //!< Width of the image in pixels.
             const size_t _height; //!< Height of the image in pixels.
