@@ -56,14 +56,14 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Uniform --
-            std::map<std::string, int>       _int_uniform;   //!< Integer uniform map.
-            std::map<std::string, float>     _float_uniform; //!< Float uniform map.
-            std::map<std::string, glm::vec2> _vec2_uniform;  //!< Vec2 uniform map.
-            std::map<std::string, glm::vec3> _vec3_uniform;  //!< Vec3 uniform map.
-            std::map<std::string, glm::vec4> _vec4_uniform;  //!< Vec4 uniform map.
-            std::map<std::string, glm::mat2> _mat2_uniform;  //!< Mat2 uniform map.
-            std::map<std::string, glm::mat3> _mat3_uniform;  //!< Mat3 uniform map.
-            std::map<std::string, glm::mat4> _mat4_uniform;  //!< Mat4 uniform map.
+            std::map<std::string, int>       _int_uniform{};   //!< Integer uniform map.
+            std::map<std::string, float>     _float_uniform{}; //!< Float uniform map.
+            std::map<std::string, glm::vec2> _vec2_uniform{};  //!< Vec2 uniform map.
+            std::map<std::string, glm::vec3> _vec3_uniform{};  //!< Vec3 uniform map.
+            std::map<std::string, glm::vec4> _vec4_uniform{};  //!< Vec4 uniform map.
+            std::map<std::string, glm::mat2> _mat2_uniform{};  //!< Mat2 uniform map.
+            std::map<std::string, glm::mat3> _mat3_uniform{};  //!< Mat3 uniform map.
+            std::map<std::string, glm::mat4> _mat4_uniform{};  //!< Mat4 uniform map.
 
 
             //  == INSTANTIATION ==
