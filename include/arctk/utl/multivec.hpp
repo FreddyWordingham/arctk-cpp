@@ -47,8 +47,8 @@ namespace arc //! arctk namespace
             //  == TYPES ==
           public:
             //  -- Data --
-            using S    = typename _MultiVec<T, N - 1>::type; //!< Type stored by this vector.
-            using type = std::vector<S>;                     //!< Type of this class.
+            using stored = typename _MultiVec<T, N - 1>::type; //!< Type stored by this vector.
+            using type   = std::vector<stored>;                //!< Type of this class.
 
 
             //  == INSTANTIATION ==
