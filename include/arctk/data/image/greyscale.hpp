@@ -153,7 +153,7 @@ namespace arc //! arctk namespace
 
                         for (size_t k = 0; k < 3; ++k)
                         {
-                            pixels[i][j][k] = vec3[k];
+                            pixels[i][j][k] = col[k];
                         }
                     }
                 }
