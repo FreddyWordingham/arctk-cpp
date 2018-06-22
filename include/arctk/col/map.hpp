@@ -39,6 +39,7 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         //  -- Matlab --
         inline vec3 jet(double x_) noexcept;
+        inline vec3 jet_line(double x_) noexcept;
 
 
 
@@ -87,6 +88,18 @@ namespace arc //! arctk namespace
             }
 
             return (col);
+        }
+
+        inline vec3 jet_line(const double x_) noexcept
+        {
+            assert((x_ >= 0.0) && (x_ <= 1.0));
+
+            if (static_cast<int>(x_ * 100) % 10 == 0)
+            {
+                return (vec3(0.0, 0.0, 0.0));
+            }
+
+            return (jet(x_));
         }
 
 
