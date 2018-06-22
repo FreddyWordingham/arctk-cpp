@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/prop/container.hpp>
+#include <arctk/prop/multivec.hpp>
 
 
 
