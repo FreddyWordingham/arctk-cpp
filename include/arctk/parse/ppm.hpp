@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
             assert(!path_.empty());
             assert(pixels.size() > 0);
             assert(pixels.front().size() > 0);
-            assert(prop::is_rectangular(pixels));
+            assert(prop::rectangular(pixels));
 
             const size_t height = pixels.size();
             const size_t width  = pixels.front().size();
