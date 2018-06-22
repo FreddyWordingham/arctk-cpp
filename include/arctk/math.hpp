@@ -43,14 +43,14 @@ namespace arc //! arctk namespace
     using vec3i = math::Vec<int, 3>; //!< Three-dimensional integer precision vec.
     using vec4i = math::Vec<int, 4>; //!< Four-dimensional integer precision vec.
     template <size_t N>
-    using vecNi = math::Vec<int, N>; //!< N-dimensional integer precision vec.
+    using vecNi = math::Vec<int, N>; //!< N-dimensional integer precision vec. // NOLINT
 
     //  -- Float Vec --
     using vec2f = math::Vec<float, 2>; //!< Two-dimensional float precision vec.
     using vec3f = math::Vec<float, 3>; //!< Three-dimensional float precision vec.
     using vec4f = math::Vec<float, 4>; //!< Four-dimensional float precision vec.
     template <size_t N>
-    using vecNf = math::Vec<float, N>; //!< N-dimensional float precision vec.
+    using vecNf = math::Vec<float, N>; //!< N-dimensional float precision vec. // NOLINT
 
 
     //  -- Double Vec --
@@ -58,7 +58,7 @@ namespace arc //! arctk namespace
     using vec3 = math::Vec<double, 3>; //!< Three-dimensional double precision vec.
     using vec4 = math::Vec<double, 4>; //!< Four-dimensional double precision vec.
     template <size_t N>
-    using vecN = math::Vec<double, N>; //!< N-dimensional double precision vec.
+    using vecN = math::Vec<double, N>; //!< N-dimensional double precision vec. // NOLINT
 
 
     //  -- Long Double Vec --
@@ -66,7 +66,7 @@ namespace arc //! arctk namespace
     using vec3l = math::Vec<long double, 3>; //!< Three-dimensional long double precision vec.
     using vec4l = math::Vec<long double, 4>; //!< Four-dimensional long double precision vec.
     template <size_t N>
-    using vecNl = math::Vec<long double, N>; //!< N-dimensional long double precision vec.
+    using vecNl = math::Vec<long double, N>; //!< N-dimensional long double precision vec. // NOLINT
 
 
 
