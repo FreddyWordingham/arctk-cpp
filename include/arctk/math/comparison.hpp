@@ -21,7 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
-#include <cmath>
+#include <limits>
 
 
 
@@ -35,10 +35,28 @@ namespace arc //! arctk namespace
 
         //  == FUNCTION PROTOTYPES ==
         //  -- Mathematical --
+        template <typename T>
+        inline bool is_zero(T x_) noexcept;
+
 
 
         //  == FUNCTIONS ==
         //  -- Mathematical --
+        /**
+         *  Test if a value can be considered equal to zero.
+         *  Value is considered equal to zero if it is within epsilon of zero.
+         *
+         *  @tparam T   Type of value to test.
+         *
+         *  @param  x_  Value to test.
+         *
+         *  @return true if the value can be considered equal to zero.
+         */
+        template <typename T>
+        inline bool is_zero(T x_) noexcept
+        {
+            return ((x_ > -std::numeric_limits<double>::epsilon()) && (x_ < std::numeric_limits<double>::epsilon()));
+        }
 
 
 
