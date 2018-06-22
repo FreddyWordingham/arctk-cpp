@@ -67,9 +67,9 @@ namespace arc //! arctk namespace
 
                 //  -- Saving --
                 inline void save(const std::string& path_) const noexcept override;
-                inline void save(const std::string& path_, double (*const scale)(const double)) const noexcept override;
-                inline void save(const std::string& path_, vec3 (*const scale)(const double)) const noexcept override;
-                inline void save(const std::string& path_, double (*const scale)(const double), vec3 (*const scale)(const double)) const noexcept override;
+                inline void save(const std::string& path_, double (*const scale_)(const double)) const noexcept override;
+                inline void save(const std::string& path_, vec3 (*const map_)(const double)) const noexcept override;
+                inline void save(const std::string& path_, double (*const scale_)(const double), vec3 (*const map_)(const double)) const noexcept override;
             };
 
 
@@ -118,11 +118,12 @@ namespace arc //! arctk namespace
                 save(path_, scale_, [](const double x_) { return (vec3(x_, x_, x_)); });
             }
 
-            inline void save(const std::string& path_, vec3 (*const scale)(const double)) const noexcept
+            inline void save(const std::string& path_, vec3 (*const map_)(const double)) const noexcept
             {
+                save(path_, [](const double x_) { return (x_); }, map_);
             }
 
-            inline void Greyscale::save(const std::string& path_, vec3 (*const scale)(const double), double (*const scale)(const double)) const noexcept override
+            inline void Greyscale::save(const std::string& path_, vec3 (*const scale_)(const double), double (*const map_)(const double)) const noexcept override
             {
                 assert(!path_.empty());
 
