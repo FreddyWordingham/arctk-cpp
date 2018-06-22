@@ -50,6 +50,7 @@
 #include <arctk/log/output/warning.hpp>
 #include <arctk/log/term.hpp>
 #include <arctk/math.hpp>
+#include <arctk/math/comparison.hpp>
 #include <arctk/math/container.hpp>
 #include <arctk/math/conversion.hpp>
 #include <arctk/math/power.hpp>
