@@ -132,7 +132,7 @@ namespace arc //! arctk namespace
          *  @tparam N   Dimensionality.
          */
         template <typename T, size_t N>
-        using MultiVec = typename _MultiVec<T, N>::type;
+        using MultiVec = typename _MultiVec<T, N>::type; // NOLINT
 
 
         /**
