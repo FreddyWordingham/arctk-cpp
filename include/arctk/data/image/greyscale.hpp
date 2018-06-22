@@ -108,8 +108,6 @@ namespace arc //! arctk namespace
             inline void Greyscale::save(const std::string& path_, double (*const scale_)(const double)) const noexcept
             {
                 assert(!path_.empty());
-                assert((scale_(0.0) >= 0.0) && (scale_(0.0) <= 1.0));
-                assert((scale_(1.0) >= 0.0) && (scale_(1.0) <= 1.0));
 
                 double max = 0.0;
                 for (size_t i = 0; i < _height; ++i)
