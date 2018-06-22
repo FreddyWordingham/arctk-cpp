@@ -61,6 +61,8 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Collection --
+                inline void collect(size_t col_, size_t row_, double val_) noexcept;
             };
 
 
@@ -82,6 +84,18 @@ namespace arc //! arctk namespace
             {
                 assert(width_ > 0);
                 assert(height_ > 0);
+            }
+
+
+            //  == METHODS ==
+            //  -- Collection --
+            inline void Greyscale::collect(const size_t col_, const size_t row_, const double val_) noexcept
+            {
+                assert(col_ < _width);
+                assert(row_ < _height);
+                assert(val_ >= 0.0);
+
+                _pixels[col_][row_] += val_;
             }
 
 
