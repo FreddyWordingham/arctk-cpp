@@ -52,8 +52,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline size_t width() noexcept;
-            inline size_t height() noexcept;
+            inline size_t width() const noexcept;
+            inline size_t height() const noexcept;
 
             //  -- Collection --
             virtual inline void collect(size_t col_, size_t row_, double val_) noexcept = 0;
@@ -93,7 +93,7 @@ namespace arc //! arctk namespace
          *
          *  @return Pixel width of the image.
          */
-        inline size_t Image::width() noexcept
+        inline size_t Image::width() const noexcept
         {
             return (_width);
         }
@@ -103,7 +103,7 @@ namespace arc //! arctk namespace
          *
          *  @return Pixel height of the image.
          */
-        inline size_t Image::height() noexcept
+        inline size_t Image::height() const noexcept
         {
             return (_height);
         }
