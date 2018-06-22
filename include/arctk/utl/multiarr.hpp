@@ -48,8 +48,8 @@ namespace arc //! arctk namespace
             //  == TYPES ==
           public:
             //  -- Data --
-            using stored    = typename _MultiArr<T, M...>::type; //!< Type stored by this array.
-            using type = std::array<stored, N>;                  //!< Type of this class.
+            using stored = typename _MultiArr<T, M...>::type; //!< Type stored by this array.
+            using type   = std::array<stored, N>;             //!< Type of this class.
         };
 
 
