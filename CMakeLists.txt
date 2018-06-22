@@ -359,4 +359,4 @@ target_include_directories(arctk PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
 #   == INSTALLATION ==
 install(DIRECTORY ./include/arctk/ DESTINATION include/arctk FILES_MATCHING PATTERN "*.hpp")
-install(TARGETS arctk EXPORT arctk LIBRARY DESTINATION lib ARCHIVE DESTINATION lib INCLUDES DESTINATION include)
+#install(TARGETS arctk EXPORT arctk LIBRARY DESTINATION lib ARCHIVE DESTINATION lib INCLUDES DESTINATION include)
