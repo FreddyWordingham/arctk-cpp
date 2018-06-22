@@ -158,7 +158,7 @@ namespace arc //! arctk namespace
 
             glBindVertexArray(_vao);
             glBindBuffer(GL_ARRAY_BUFFER, _vbo);
-            glBufferData(GL_ARRAY_BUFFER, verts_.size() * sizeof(GLfloat), &verts_.front(), GL_STATIC_DRAW);
+            glBufferData(GL_ARRAY_BUFFER, static_cast<GLsizeiptr>(verts_.size() * sizeof(GLfloat)), &verts_.front(), GL_STATIC_DRAW);
 
             const size_t chunk_size = math::sum(layout_) * sizeof(GLfloat);
             size_t       start      = 0;
