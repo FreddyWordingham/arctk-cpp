@@ -43,6 +43,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Image(size_t width_, size_t height_) noexcept;
 
 
             //  == METHODS ==
@@ -56,6 +57,23 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct an image with given dimensions in pixels.
+         *
+         *  @param  width_  Width of the image in pixels.
+         *  @param  height_ Height of the image in pixels.
+         *
+         *  @pre    width_ must be positive.
+         *  @pre    height_ must be positive.
+         */
+        inline Image::Image(const size_t width_, const size_t height_) noexcept
+          : _width(width_)
+          , _height(height_)
+        {
+            assert(width_ > 0);
+            assert(height_ > 0);
+        }
+
 
 
         //  == METHODS ==
