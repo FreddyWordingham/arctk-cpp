@@ -96,7 +96,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         inline typename _MultiVec<T, N>::type _MultiVec<T, N>::make(const std::array<size_t, N>& dim_) noexcept
         {
-            std::array<size_t, N - 1> dim;
+            std::array<size_t, N - 1> dim{};
             std::copy(std::next(std::begin(dim_)), std::end(dim_), std::begin(dim));
 
             type vec(dim_.front(), _MultiVec<T, N - 1>::make(dim));
