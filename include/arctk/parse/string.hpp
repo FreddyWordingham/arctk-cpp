@@ -97,7 +97,7 @@ namespace arc //! arctk namespace
         inline bool parsable_from_str<bool>(const std::string& str_) noexcept
         {
             std::string str = str_;
-            std::transform(str.begin(), str.end(), str.begin(), [](unsigned char c) { return std::tolower(c); });
+            std::transform(str.begin(), str.end(), str.begin(), [](unsigned char c_) { return std::tolower(c_); });
 
             if (str == "false")
             {
