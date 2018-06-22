@@ -89,9 +89,6 @@ namespace arc //! arctk namespace
             /**
              *  Store a value within the bins.
              *
-             *  @tparam T   Type binned.
-             *  @tparam N   Dimensionality.
-             *
              *  @tparam I   Dimension of the slice.
              *
              *  @param  bins_   Slice of the bucket bins.
@@ -115,9 +112,6 @@ namespace arc //! arctk namespace
 
             /**
              *  Store a value within the bins.
-             *
-             *  @tparam T   Type binned.
-             *  @tparam N   Dimensionality.
              *
              *  @tparam I   Dimension of the slice.
              *
