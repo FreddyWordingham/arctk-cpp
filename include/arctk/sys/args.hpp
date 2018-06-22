@@ -60,10 +60,10 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Args(const int argc_, const char** argv_, const std::string& call_str_) noexcept;
+            inline Args(int argc_, const char** argv_, const std::string& call_str_) noexcept;
 
             //  -- Initialisation --
-            inline std::tuple<A...> init_argv(const int argc_, const char** argv_) noexcept;
+            inline std::tuple<A...> init_argv(int argc_, const char** argv_) noexcept;
             template <typename T>
             inline void check_parsable(const std::string& str_) noexcept;
 
