@@ -137,9 +137,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Multi-vector size initialisation alias.
-         *
-         *  @tparam T   Type stored.
-         *  @tparam N   Dimensionality.
          */
         template <typename T, size_t N>
         constexpr auto make_MultiVec = _MultiVec<T, N>::make;
