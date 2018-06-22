@@ -21,7 +21,6 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
-#include <arctk/parse/ppm.hpp>
 #include <arctk/parse/string.hpp>
 
 
