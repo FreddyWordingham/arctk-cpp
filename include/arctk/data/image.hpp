@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
             inline Image(size_t width_, size_t height_) noexcept;
 
             //  -- Destructors --
-            virtual inline ~Generator() noexcept = default;
+            virtual inline ~Image() noexcept = default;
 
 
             //  == METHODS ==
