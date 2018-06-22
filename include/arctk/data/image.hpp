@@ -20,6 +20,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <algorithm>
+
 //  -- Arctk --
 #include <arctk/sys.hpp>
 
@@ -140,7 +143,7 @@ namespace arc //! arctk namespace
                 {
                     for (size_t k = 0; k < 3; ++k)
                     {
-                        file << static_cast<int>(255 * pixels[j][_height - i - 1][k]) << "\t";
+                        file << std::clamp(static_cast<int>(255 * pixels[j][_height - i - 1][k]), 0, 255) << "\t";
                     }
                     file << "\t";
                 }
