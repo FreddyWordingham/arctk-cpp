@@ -164,7 +164,7 @@ namespace arc //! arctk namespace
             size_t       start      = 0;
             for (size_t i = 0; i < layout_.size(); ++i)
             {
-                glVertexAttribPointer(i, layout_[i], GL_FLOAT, GL_FALSE, chunk_size,
+                glVertexAttribPointer(static_cast<GLuint>(i), layout_[i], GL_FLOAT, GL_FALSE, chunk_size,
                                       reinterpret_cast<GLvoid*>(start * sizeof(GLfloat))); // NOLINT
                 glEnableVertexAttribArray(i);
 
