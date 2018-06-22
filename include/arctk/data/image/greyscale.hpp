@@ -66,7 +66,7 @@ namespace arc //! arctk namespace
                 inline void collect(size_t col_, size_t row_, double val_) noexcept override;
 
                 //  -- Saving --
-                inline void save(const std::string& path_, double (*const scale)(const double)) const noexcept override;
+                inline void save(const std::string& path_, double (*const scale)(const double) = [](const double x_) { return (x_); }) const noexcept override;
             };
 
 
