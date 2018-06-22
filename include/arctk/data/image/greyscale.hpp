@@ -108,17 +108,17 @@ namespace arc //! arctk namespace
 
 
             //  -- Saving --
-            inline void save(const std::string& path_) const noexcept
+            inline void Greyscale::save(const std::string& path_) const noexcept
             {
                 save(path_, [](const double x_) { return (x_); }, [](const double x_) { return (vec3(x_, x_, x_)); });
             }
 
-            inline void save(const std::string& path_, double (*const scale_)(const double)) const noexcept
+            inline void Greyscale::save(const std::string& path_, double (*const scale_)(const double)) const noexcept
             {
                 save(path_, scale_, [](const double x_) { return (vec3(x_, x_, x_)); });
             }
 
-            inline void save(const std::string& path_, vec3 (*const map_)(const double)) const noexcept
+            inline void Greyscale::save(const std::string& path_, vec3 (*const map_)(const double)) const noexcept
             {
                 save(path_, [](const double x_) { return (x_); }, map_);
             }
