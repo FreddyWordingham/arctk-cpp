@@ -66,7 +66,10 @@ namespace arc //! arctk namespace
                 inline void collect(size_t col_, size_t row_, double val_) noexcept override;
 
                 //  -- Saving --
-                inline void save(const std::string& path_, double (*const scale)(const double) = [](const double x_) { return (x_); }) const noexcept override;
+                inline void save(const std::string& path_) const noexcept override;
+                inline void save(const std::string& path_, double (*const scale)(const double)) const noexcept override;
+                inline void save(const std::string& path_, vec3 (*const scale)(const double)) const noexcept override;
+                inline void save(const std::string& path_, double (*const scale)(const double), vec3 (*const scale)(const double)) const noexcept override;
             };
 
 
@@ -105,7 +108,20 @@ namespace arc //! arctk namespace
 
 
             //  -- Saving --
-            inline void Greyscale::save(const std::string& path_, double (*const scale_)(const double)) const noexcept
+            inline void save(const std::string& path_) const noexcept
+            {
+                save(path_, [](const double x_) { return (x_); }, [](const double x_) { return (vec3(x_, x_, x_)); });
+            }
+
+            inline void save(const std::string& path_, double (*const scale)(const double)) const noexcept
+            {
+            }
+
+            inline void save(const std::string& path_, vec3 (*const scale)(const double)) const noexcept
+            {
+            }
+
+            inline void Greyscale::save(const std::string& path_, vec3 (*const scale)(const double), double (*const scale)(const double)) const noexcept override
             {
                 assert(!path_.empty());
 
@@ -131,11 +147,11 @@ namespace arc //! arctk namespace
                 {
                     for (size_t j = 0; j < _width; ++j)
                     {
-                        const double intensity = scale_(_pixels[i][j] / max);
+                        const vec3 col = map_(scale_(_pixels[i][j] / max));
 
                         for (size_t k = 0; k < 3; ++k)
                         {
-                            pixels[i][j][k] = intensity;
+                            pixels[i][j][k] = vec3[k];
                         }
                     }
                 }
