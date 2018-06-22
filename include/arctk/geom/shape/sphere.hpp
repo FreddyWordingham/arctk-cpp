@@ -20,6 +20,9 @@
 
 
 //  == BASE ==
+//  -- Std --
+#include <optional>
+
 //  -- Arctk --
 #include <arctk/geom/shape.hpp>
 
@@ -70,7 +73,7 @@ namespace arc //! arctk namespace
                 inline double radius() const noexcept;
 
                 //  -- Collision --
-                inline Collision collision(const vec3& pos_, const vec3& dir_) const noexcept override;
+                inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
 
 
@@ -116,9 +119,9 @@ namespace arc //! arctk namespace
              *
              *  @pre    dir_ must be normalised.
              *
-             *  @return Collision information.
+             *  @return Optional collision distance.
              */
-            inline Collision Sphere::collision(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<double> Sphere::collision(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 assert(dir_.normalised());
 
@@ -129,7 +132,7 @@ namespace arc //! arctk namespace
 
                 if (delta < 0.0)
                 {
-                    return (Collision(false));
+                    return (std::nullopt);
                 }
 
                 if (delta == 0.0)
@@ -138,10 +141,10 @@ namespace arc //! arctk namespace
 
                     if (dist >= 0.0)
                     {
-                        return (Collision(dist));
+                        return (std::optional<double>(dist));
                     }
 
-                    return (Collision(false));
+                    return (std::nullopt);
                 }
 
                 const double sqrt_delta = std::sqrt(delta);
@@ -151,20 +154,20 @@ namespace arc //! arctk namespace
 
                 if ((dist_0 < 0.0) && (dist_1 < 0.0))
                 {
-                    return (Collision(false));
+                    return (std::nullopt);
                 }
 
                 if ((dist_0 >= 0.0) && (dist_1 < 0.0))
                 {
-                    return (Collision(dist_0));
+                    return (std::optional<double>(dist_0));
                 }
 
                 if ((dist_1 >= 0.0) && (dist_0 < 0.0))
                 {
-                    return (Collision(dist_1));
+                    return (std::optional<double>(dist_1));
                 }
 
-                return (Collision(std::min(dist_0, dist_1)));
+                return (std::optional<double>(std::min(dist_0, dist_1)));
             }
 
 
