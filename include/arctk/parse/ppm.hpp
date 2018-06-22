@@ -50,20 +50,24 @@ namespace arc //! arctk namespace
             assert(!path_.empty());
             assert(pixels.size() > 0);
             assert(pixels.front().size() > 0);
+            assert(prop::is_rectangular(pixels));
+
+            const size_t height = pixels.size();
+            const size_t width  = pixels.front().size();
 
             sys::file::Out file(path_);
 
             file << "P3\n"
-                 << _width << " " << _height << "\n"
+                 << width << " " << height << "\n"
                  << "255\n";
 
-            for (size_t i = 0; i < _height; ++i)
+            for (size_t i = 0; i < height; ++i)
             {
-                for (size_t j = 0; j < _width; ++j)
+                for (size_t j = 0; j < width; ++j)
                 {
                     for (size_t k = 0; k < 3; ++k)
                     {
-                        file << std::clamp(static_cast<int>(255 * pixels[j][_height - i - 1][k]), 0, 255) << "\t";
+                        file << std::clamp(static_cast<int>(255 * pixels[j][height - i - 1][k]), 0, 255) << "\t";
                     }
                     file << "\t";
                 }
