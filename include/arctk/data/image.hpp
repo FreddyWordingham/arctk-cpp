@@ -51,6 +51,9 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline size_t width() noexcept;
             inline size_t height() noexcept;
+
+            //  -- Collection --
+            virtual inline void collect(size_t col_, size_t row_, double val_) noexcept = 0;
         };
 
 
