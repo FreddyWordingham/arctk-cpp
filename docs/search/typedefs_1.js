@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['s',['S',['../classarc_1_1utl_1_1___multi_arr.html#ac343e0c6dff33b85e552d09e1f6bd9e2',1,'arc::utl::_MultiArr::S()'],['../classarc_1_1utl_1_1___multi_vec.html#ac52b5ec3272693ae76e62ab3eeb3b678',1,'arc::utl::_MultiVec::S()']]]
+  ['stored',['stored',['../classarc_1_1utl_1_1___multi_arr.html#ab735b23b7868639b6148c744fa9db572',1,'arc::utl::_MultiArr::stored()'],['../classarc_1_1utl_1_1___multi_vec.html#af5cca6226789f7cdf95e1681c86f686e',1,'arc::utl::_MultiVec::stored()']]]
 ];
