@@ -87,6 +87,7 @@ namespace arc //! arctk namespace
             }
 
 
+
             //  == METHODS ==
             //  -- Collection --
             inline void Greyscale::collect(const size_t col_, const size_t row_, const double val_) noexcept
