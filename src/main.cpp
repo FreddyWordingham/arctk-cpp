@@ -60,7 +60,6 @@
 #include <arctk/math/vec3.hpp>
 #include <arctk/math/vec4.hpp>
 #include <arctk/parse.hpp>
-#include <arctk/parse/ppm.hpp>
 #include <arctk/parse/string.hpp>
 #include <arctk/phys.hpp>
 #include <arctk/phys/particle.hpp>
