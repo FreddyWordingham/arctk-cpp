@@ -27,6 +27,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/math.hpp>
 #include <arctk/utl.hpp>
 
 
@@ -101,6 +102,32 @@ namespace arc //! arctk namespace
                 assert(val_ >= 0.0);
 
                 _pixels[col_][row_] += val_;
+            }
+
+
+            //  -- Saving --
+            inline void Greyscale::save(const std::string& path_) const noexcept
+            {
+                assert(!path_.empty());
+
+                double max = 0.0;
+                for (size_t i = 0; i < _height; ++i)
+                {
+                    for (size_t j = 0; j < _width; ++j)
+                    {
+                        if (_pixels[j][i] > max)
+                        {
+                            max = _pixels[j][i];
+                        }
+                    }
+                }
+
+                if (math::is_zero(max))
+                {
+                    max = 1.0;
+                }
+
+                save(path_, max);
             }
 
 
