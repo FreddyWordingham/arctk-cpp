@@ -4,7 +4,11 @@ cmake_minimum_required(VERSION 3.5.1)
 
 
 #   == PROJECTS ==
-project(arctk)
+#   -- Name --
+set(PROJECT_NAME "@NAME@")
+
+#   -- Creation --
+project(${PROJECT_NAME})
 
 
 
