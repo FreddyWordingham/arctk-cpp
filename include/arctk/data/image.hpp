@@ -57,6 +57,10 @@ namespace arc //! arctk namespace
 
             //  -- Collection --
             virtual inline void collect(size_t col_, size_t row_, double val_) noexcept = 0;
+
+            //  -- Saving --
+            virtual inline void save(const std::string& path_) const noexcept               = 0;
+            virtual inline void save(const std::string& path_, double norm_) const noexcept = 0;
         };
 
 
