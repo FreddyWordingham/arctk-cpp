@@ -60,6 +60,10 @@ namespace arc //! arctk namespace
 
             //  -- Saving --
             virtual inline void save(const std::string& path_, double (*const scale_)(const double) = [](const double x_) { return (x_); }) const noexcept = 0;
+
+          protected:
+            //  -- Saving --
+            inline void write_ppm(const std::string& path_, const utl::MultiVec<vec3, 2>& pixels) const noexcept;
         };
 
 
@@ -105,6 +109,13 @@ namespace arc //! arctk namespace
         inline size_t Image::height() const noexcept
         {
             return (_height);
+        }
+
+
+        //  -- Saving --
+        inline void Image::write_ppm(const std::string& path_, const utl::MultiVec<vec3, 2>& pixels) const noexcept
+        {
+            assert(!path_.empty());
         }
 
 
