@@ -25,6 +25,7 @@
 
 //  -- Arctk --
 #include <arctk/geom/shape.hpp>
+#include <arctk/math.hpp>
 
 
 
@@ -135,7 +136,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                if (delta == 0.0)
+                if (math::is_zero(delta))
                 {
                     const double dist = -b / 2.0;
 
