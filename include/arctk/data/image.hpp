@@ -19,6 +19,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/sys.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -118,6 +124,25 @@ namespace arc //! arctk namespace
             assert(!path_.empty());
             assert(pixels.size() == _width);
             assert(pixels.front().size() == _height);
+
+            sys::file::Out file(path_);
+
+            file << "P3\n"
+                 << _width << " " << _height << "\n"
+                 << "255\n";
+
+            for (size_t i = 0; i < _height; ++i)
+            {
+                for (size_t j = 0; j < _width; ++j)
+                {
+                    for (size_t k = 0; k < 3; ++k)
+                    {
+                        file << static_cast<int>(255 * pixels[j][_height - i - 1][k]) << "\t";
+                    }
+                    file << "\t";
+                }
+                file << "\n";
+            }
         }
 
 
