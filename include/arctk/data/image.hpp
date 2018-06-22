@@ -48,6 +48,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline size_t width() noexcept;
+            inline size_t height() noexcept;
         };
 
 
@@ -58,6 +60,25 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the pixel width of the image.
+         *
+         *  @return Pixel width of the image.
+         */
+        inline size_t Image::width() noexcept
+        {
+            return (_width);
+        }
+
+        /**
+         *  Get the pixel height of the image.
+         *
+         *  @return Pixel height of the image.
+         */
+        inline size_t Image::height() noexcept
+        {
+            return (_height);
+        }
 
 
 
