@@ -43,13 +43,13 @@ namespace arc //! arctk namespace
          *  @tparam M   Pack of lower dimensionalities.
          */
         template <typename T, size_t N, size_t... M>
-        class _MultiArr
+        class _MultiArr // NOLINT
         {
             //  == TYPES ==
           public:
             //  -- Data --
-            using S    = typename _MultiArr<T, M...>::type; //!< Type stored by this array.
-            using type = std::array<S, N>;                  //!< Type of this class.
+            using stored    = typename _MultiArr<T, M...>::type; //!< Type stored by this array.
+            using type = std::array<stored, N>;                  //!< Type of this class.
         };
 
 
