@@ -130,6 +130,28 @@ namespace arc //! arctk namespace
                 save(path_, max);
             }
 
+            inline void Greyscale::save(const std::string& path_, const double norm_) const noexcept
+            {
+                assert(!path_.empty());
+                assert(norm_ > 0.0);
+
+                utl::MultiVec<vec3, 2> pixels = utl::make_MultiVec<vec3, 2>({{width_, height_}});
+                for (size_t i = 0; i < _height; ++i)
+                {
+                    for (size_t j = 0; j < _width; ++j)
+                    {
+                        const double intensity = _pixels[i][j] / norm_;
+
+                        for (size_t k = 0; k < 3; ++k)
+                        {
+                            pixels[i][j][k] = intensity;
+                        }
+                    }
+                }
+
+                write_ppm(path_, pixels);
+            }
+
 
 
         } // namespace image
