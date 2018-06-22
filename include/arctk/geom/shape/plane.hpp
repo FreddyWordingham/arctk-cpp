@@ -31,6 +31,7 @@
 
 //  -- Arctk --
 #include <arctk/geom/collision.hpp>
+#include <arctk/math.hpp>
 
 
 
@@ -98,7 +99,7 @@ namespace arc //! arctk namespace
             {
                 const double denom = _dir * dir_;
 
-                if (denom == 0.0)
+                if (math::is_zero(denom))
                 {
                     return (std::nullopt);
                 }
