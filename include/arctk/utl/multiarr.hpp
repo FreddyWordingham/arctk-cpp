@@ -81,7 +81,7 @@ namespace arc //! arctk namespace
          *  @tparam M   Pack of dimensionalities.
          */
         template <typename T, size_t... M>
-        using MultiArr = typename _MultiArr<T, M...>::type;
+        using MultiArr = typename _MultiArr<T, M...>::type; // NOLINT
 
 
 
