@@ -67,7 +67,6 @@ namespace arc //! arctk namespace
 
                 //  -- Saving --
                 inline void save(const std::string& path_) const noexcept override;
-                inline void save(const std::string& path_, double norm_) const noexcept override;
             };
 
 
@@ -126,14 +125,6 @@ namespace arc //! arctk namespace
                 {
                     max = 1.0;
                 }
-
-                save(path_, max);
-            }
-
-            inline void Greyscale::save(const std::string& path_, const double norm_) const noexcept
-            {
-                assert(!path_.empty());
-                assert(norm_ > 0.0);
 
                 utl::MultiVec<vec3, 2> pixels = utl::make_MultiVec<vec3, 2>({{_width, _height}});
                 for (size_t i = 0; i < _height; ++i)
