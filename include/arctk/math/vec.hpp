@@ -135,9 +135,6 @@ namespace arc //! arctk namespace
         /**
          *  Construct a vec using given values.
          *
-         *  @tparam T   Type stored by the vec.
-         *  @tparam N   Size of the vec.
-         *
          *  @tparam A   Pack of initialisation values.
          *
          *  @param  data_   Values used to initialise vec elements.
