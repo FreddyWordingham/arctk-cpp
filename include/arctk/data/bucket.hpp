@@ -137,6 +137,13 @@ namespace arc //! arctk namespace
             return (_bin_width);
         }
 
+        /**
+         *  Get the bin data of the bucket.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @return Bin data of the bucket.
+         */
         template <typename T>
         inline const std::vector<T>& bins() const noexcept
         {
