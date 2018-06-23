@@ -60,9 +60,10 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double min() const noexcept;
-            inline double max() const noexcept;
-            inline double bin_width() const noexcept;
+            inline double                min() const noexcept;
+            inline double                max() const noexcept;
+            inline double                bin_width() const noexcept;
+            inline const std::vector<T>& bins() const noexcept;
         };
 
 
@@ -90,6 +91,12 @@ namespace arc //! arctk namespace
         inline double Bucket<T>::bin_width() const noexcept
         {
             return (_bin_width);
+        }
+
+        template <typename T>
+        inline const std::vector<T>& bins() const noexcept;
+        {
+            return (_bins);
         }
 
 
