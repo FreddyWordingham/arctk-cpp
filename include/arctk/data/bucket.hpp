@@ -111,6 +111,13 @@ namespace arc //! arctk namespace
             return (_min);
         }
 
+        /**
+         *  Get the maximum bound of the bucket.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @return Maximum bound of the bucket.
+         */
         template <typename T>
         inline double Bucket<T>::max() const noexcept
         {
