@@ -124,6 +124,13 @@ namespace arc //! arctk namespace
             return (_max);
         }
 
+        /**
+         *  Get the width of the bucket's bins.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @return Width of the bucket's bins.
+         */
         template <typename T>
         inline double Bucket<T>::bin_width() const noexcept
         {
