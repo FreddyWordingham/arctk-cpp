@@ -51,6 +51,9 @@ namespace arc //! arctk namespace
             //  -- Bin --
             double _bin_width; //!< Width of the bins.
 
+            //  -- Data --
+            std::vector<T> _bins; //!< Bin data.
+
 
             //  == INSTANTIATION ==
           public:
