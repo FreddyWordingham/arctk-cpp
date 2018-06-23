@@ -80,12 +80,71 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a96133204be71665dd318a6d85536547f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1col.html#a96133204be71665dd318a6d85536547f">hsv_to_rgb</a> (double hue_, double sat_, double val_) noexcept</td></tr>
+<tr class="separator:a96133204be71665dd318a6d85536547f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a7c2595ce1e4d09556cff1acccfe6a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1col.html#a8a7c2595ce1e4d09556cff1acccfe6a0">jet</a> (double x_) noexcept</td></tr>
 <tr class="separator:a8a7c2595ce1e4d09556cff1acccfe6a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2647fad6bd09267f57c2c522365d71e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1col.html#a2647fad6bd09267f57c2c522365d71e0">jet_line</a> (double x_) noexcept</td></tr>
+<tr class="separator:a2647fad6bd09267f57c2c522365d71e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>colour namespace </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a96133204be71665dd318a6d85536547f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96133204be71665dd318a6d85536547f">&#9670;&nbsp;</a></span>hsv_to_rgb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::col::hsv_to_rgb </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>hue_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>sat_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>val_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Convert a HSV colour to its RGB equivalent. Hue values are modulated to fall between zero and 360.0 degrees.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hue_</td><td>Colour hue. </td></tr>
+    <tr><td class="paramname">sat_</td><td>Colour saturation. </td></tr>
+    <tr><td class="paramname">val_</td><td>Colour value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>sat_ must be between zero and one. </dd>
+<dd>
+val_ must be between zero and one.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>RGB equivalent of the HSV value. </dd></dl>
+
+</div>
+</div>
 <a id="a8a7c2595ce1e4d09556cff1acccfe6a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8a7c2595ce1e4d09556cff1acccfe6a0">&#9670;&nbsp;</a></span>jet()</h2>
 
@@ -118,13 +177,68 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>x_ must be between zero and one.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Colour vec. </dd></dl>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespacearc_1_1col_a8a7c2595ce1e4d09556cff1acccfe6a0_icgraph.png" border="0" usemap="#namespacearc_1_1col_a8a7c2595ce1e4d09556cff1acccfe6a0_icgraph" alt=""/></div>
+<map name="namespacearc_1_1col_a8a7c2595ce1e4d09556cff1acccfe6a0_icgraph" id="namespacearc_1_1col_a8a7c2595ce1e4d09556cff1acccfe6a0_icgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1col.html#a2647fad6bd09267f57c2c522365d71e0" title="arc::col::jet_line" alt="" coords="139,5,253,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2647fad6bd09267f57c2c522365d71e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2647fad6bd09267f57c2c522365d71e0">&#9670;&nbsp;</a></span>jet_line()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::col::jet_line </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>x_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Convert a scalar value between zero and one to a Matlab jet colour. Colour will be set to black when x_ % 0.1 &lt; 0.01.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x_</td><td>Scalar value to convert to a colour.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>x_ must be between zero and one.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Colour vec. </dd></dl>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespacearc_1_1col_a2647fad6bd09267f57c2c522365d71e0_cgraph.png" border="0" usemap="#namespacearc_1_1col_a2647fad6bd09267f57c2c522365d71e0_cgraph" alt=""/></div>
+<map name="namespacearc_1_1col_a2647fad6bd09267f57c2c522365d71e0_cgraph" id="namespacearc_1_1col_a2647fad6bd09267f57c2c522365d71e0_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1col.html#a8a7c2595ce1e4d09556cff1acccfe6a0" title="arc::col::jet" alt="" coords="167,5,253,31"/>
+</map>
+</div>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 22 2018 19:15:01 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 23 2018 22:04:20 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

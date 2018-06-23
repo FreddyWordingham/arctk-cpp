@@ -39,7 +39,7 @@ var searchData=
   ['_5fnum_5fvert',['_num_vert',['../classarc_1_1gui_1_1_actor.html#ab76c2799d8258b67edf0c130566dc496',1,'arc::gui::Actor']]],
   ['_5foverwrite',['_overwrite',['../classarc_1_1log_1_1_term.html#abe8acd7240d2db44cc43d340ddbb982a',1,'arc::log::Term']]],
   ['_5fpath',['_path',['../classarc_1_1sys_1_1_file.html#a36d34d12b653e3c6df991c2a0d67a0ac',1,'arc::sys::File']]],
-  ['_5fpixels',['_pixels',['../classarc_1_1data_1_1_image.html#aec533988db9f682d92b280453693c8f9',1,'arc::data::Image']]],
+  ['_5fpixels',['_pixels',['../classarc_1_1data_1_1image_1_1_greyscale.html#ab38fa57984262276cfc4189614072ba7',1,'arc::data::image::Greyscale']]],
   ['_5fpos',['_pos',['../classarc_1_1geom_1_1_shape.html#ad0ecb7705141c2976c4aa7cd3236cc40',1,'arc::geom::Shape::_pos()'],['../classarc_1_1gui_1_1_camera.html#aab4f5dea22e2518c862575760dc89a93',1,'arc::gui::Camera::_pos()'],['../classarc_1_1phys_1_1_particle.html#ad96264059302e6c60c98c6a2d13888f3',1,'arc::phys::Particle::_pos()']]],
   ['_5fprimitive_5ftype',['_primitive_type',['../classarc_1_1gui_1_1_actor.html#aa2f24e3a54c8aeae4d22f48bcbd426eb',1,'arc::gui::Actor']]],
   ['_5fprog_5fname',['_prog_name',['../classarc_1_1sys_1_1_args.html#ad29d8d283f0fd67e9304d9d6e2e5c2bc',1,'arc::sys::Args']]],

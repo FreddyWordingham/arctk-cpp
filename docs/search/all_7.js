@@ -7,5 +7,7 @@ var searchData=
   ['generator_2ehpp',['generator.hpp',['../generator_8hpp.html',1,'']]],
   ['geom_2ehpp',['geom.hpp',['../geom_8hpp.html',1,'']]],
   ['get',['get',['../classarc_1_1sys_1_1_args.html#a4b4acca77441736c096a5cf86cf07b76',1,'arc::sys::Args']]],
+  ['greyscale',['Greyscale',['../classarc_1_1data_1_1image_1_1_greyscale.html',1,'arc::data::image::Greyscale'],['../classarc_1_1data_1_1image_1_1_greyscale.html#a1578266734d8ff6873a2e71e89c8bfe1',1,'arc::data::image::Greyscale::Greyscale()']]],
+  ['greyscale_2ehpp',['greyscale.hpp',['../greyscale_8hpp.html',1,'']]],
   ['gui_2ehpp',['gui.hpp',['../gui_8hpp.html',1,'']]]
 ];

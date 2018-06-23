@@ -110,6 +110,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a858cf86c6dc1c5ad0a337ac8adc7a787"><td class="memTemplParams" colspan="2">template&lt;typename C , typename T  = typename C::value_type, typename I  = typename C::const_iterator&gt; </td></tr>
 <tr class="memitem:a858cf86c6dc1c5ad0a337ac8adc7a787"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1prop.html#a858cf86c6dc1c5ad0a337ac8adc7a787">always_greater_than_or_equal_to</a> (const C &amp;cont_, const T &amp;limit_) noexcept</td></tr>
 <tr class="separator:a858cf86c6dc1c5ad0a337ac8adc7a787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ccd0de94cd448327a74d759f9871c0d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8ccd0de94cd448327a74d759f9871c0d"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1prop.html#a8ccd0de94cd448327a74d759f9871c0d">rectangular</a> (const <a class="el" href="namespacearc_1_1utl.html#a7c064ecf6b3c78a832bb07385512982d">utl::MultiVec</a>&lt; T, 2 &gt; &amp;pixels) noexcept</td></tr>
+<tr class="separator:a8ccd0de94cd448327a74d759f9871c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>properties namespace </p>
@@ -585,6 +588,48 @@ template&lt;typename C , typename T  = typename C::value_type, typename I  = typ
 
 </div>
 </div>
+<a id="a8ccd0de94cd448327a74d759f9871c0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ccd0de94cd448327a74d759f9871c0d">&#9670;&nbsp;</a></span>rectangular()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool arc::prop::rectangular </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacearc_1_1utl.html#a7c064ecf6b3c78a832bb07385512982d">utl::MultiVec</a>&lt; T, 2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check if a two dimensional vector may be considered rectangular. Check if each vector stored within a vector are of the same length.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Base type stored by the multi-vec.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>MulitVec to test.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if all vectors stored by the vector are of the same length. </dd></dl>
+
+</div>
+</div>
 <a id="aa5ffd8e519bbfe13d8b6c9b9ebf81855"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa5ffd8e519bbfe13d8b6c9b9ebf81855">&#9670;&nbsp;</a></span>uniform()</h2>
 
@@ -712,7 +757,7 @@ template&lt;typename C , typename T  = typename C::value_type, typename I  = typ
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 22 2018 19:15:02 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 23 2018 22:04:20 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

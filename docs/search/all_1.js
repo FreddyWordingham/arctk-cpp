@@ -32,6 +32,7 @@ var searchData=
   ['generator',['generator',['../namespacearc_1_1rng_1_1generator.html',1,'arc::rng']]],
   ['geom',['geom',['../namespacearc_1_1geom.html',1,'arc']]],
   ['gui',['gui',['../namespacearc_1_1gui.html',1,'arc']]],
+  ['image',['image',['../namespacearc_1_1data_1_1image.html',1,'arc::data']]],
   ['log',['log',['../namespacearc_1_1log.html',1,'arc']]],
   ['math',['math',['../namespacearc_1_1math.html',1,'arc']]],
   ['output',['output',['../namespacearc_1_1log_1_1output.html',1,'arc::log']]],

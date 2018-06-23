@@ -14,5 +14,6 @@ var searchData=
   ['init_5fvbo',['init_vbo',['../classarc_1_1gui_1_1_actor.html#a9ca837d824a70fd9c9077f932bea79e7',1,'arc::gui::Actor']]],
   ['init_5fwidth',['init_width',['../classarc_1_1data_1_1_bucket.html#a18ed93a7fe4c085bbe409a2191092799',1,'arc::data::Bucket']]],
   ['instance',['instance',['../classarc_1_1log_1_1_term.html#aebeecbc3cf22b9b629838443228ea920',1,'arc::log::Term']]],
-  ['int_5funiform',['int_uniform',['../classarc_1_1gui_1_1_actor.html#a417e7ac9d0888810187e3ea8481c149b',1,'arc::gui::Actor::int_uniform()'],['../classarc_1_1gui_1_1_camera.html#ae0c451904a857d40678df538b8023e14',1,'arc::gui::Camera::int_uniform()']]]
+  ['int_5funiform',['int_uniform',['../classarc_1_1gui_1_1_actor.html#a417e7ac9d0888810187e3ea8481c149b',1,'arc::gui::Actor::int_uniform()'],['../classarc_1_1gui_1_1_camera.html#ae0c451904a857d40678df538b8023e14',1,'arc::gui::Camera::int_uniform()']]],
+  ['is_5fzero',['is_zero',['../namespacearc_1_1math.html#ae16636b5ed4b0dd955e463d7f64c5615',1,'arc::math']]]
 ];

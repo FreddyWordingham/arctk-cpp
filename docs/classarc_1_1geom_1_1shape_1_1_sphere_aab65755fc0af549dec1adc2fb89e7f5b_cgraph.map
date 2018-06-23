@@ -1,5 +1,6 @@
 <map id="arc::geom::shape::Sphere::collision" name="arc::geom::shape::Sphere::collision">
-<area shape="rect" id="node2" href="$namespacearc_1_1math.html#a95cadfea8bcd5d8ec23e0dabbaf6dda6" title="arc::math::sq" alt="" coords="237,5,335,31"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1search.html#a1cf0173ae1f8475d3b1652c006d5649d" title="arc::search::min" alt="" coords="228,55,344,80"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1search.html#ae457da2cc210e1edfaf811bc83154f4b" title="arc::search::min_index" alt="" coords="392,55,548,80"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1math.html#a95cadfea8bcd5d8ec23e0dabbaf6dda6" title="arc::math::sq" alt="" coords="243,5,341,31"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1math.html#ae16636b5ed4b0dd955e463d7f64c5615" title="arc::math::is_zero" alt="" coords="228,55,355,80"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1search.html#a1cf0173ae1f8475d3b1652c006d5649d" title="arc::search::min" alt="" coords="234,104,350,129"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1search.html#ae457da2cc210e1edfaf811bc83154f4b" title="arc::search::min_index" alt="" coords="403,104,559,129"/>
 </map>

@@ -92,6 +92,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ae16636b5ed4b0dd955e463d7f64c5615"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae16636b5ed4b0dd955e463d7f64c5615"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math.html#ae16636b5ed4b0dd955e463d7f64c5615">is_zero</a> (T x_) noexcept</td></tr>
+<tr class="separator:ae16636b5ed4b0dd955e463d7f64c5615"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b44e4472b89ce6feffff1b914ad0064"><td class="memTemplParams" colspan="2">template&lt;typename C , typename T  = typename C::value_type, typename I  = typename C::const_iterator&gt; </td></tr>
 <tr class="memitem:a4b44e4472b89ce6feffff1b914ad0064"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math.html#a4b44e4472b89ce6feffff1b914ad0064">sum</a> (C &amp;cont_) noexcept</td></tr>
 <tr class="separator:a4b44e4472b89ce6feffff1b914ad0064"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,6 +201,60 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Value in radians. </dd></dl>
+
+</div>
+</div>
+<a id="ae16636b5ed4b0dd955e463d7f64c5615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae16636b5ed4b0dd955e463d7f64c5615">&#9670;&nbsp;</a></span>is_zero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool arc::math::is_zero </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Test if a value can be considered equal to zero. Value is considered equal to zero if it is within epsilon of zero.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of value to test.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x_</td><td>Value to test.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the value can be considered equal to zero. </dd></dl>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespacearc_1_1math_ae16636b5ed4b0dd955e463d7f64c5615_icgraph.png" border="0" usemap="#namespacearc_1_1math_ae16636b5ed4b0dd955e463d7f64c5615_icgraph" alt=""/></div>
+<map name="namespacearc_1_1math_ae16636b5ed4b0dd955e463d7f64c5615_icgraph" id="namespacearc_1_1math_ae16636b5ed4b0dd955e463d7f64c5615_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1data_1_1image_1_1_greyscale.html#aeee90b255bee7f0549dba6f01a79814d" title="arc::data::image::Greyscale\l::save" alt="" coords="181,5,365,44"/>
+<area shape="rect" id="node3" href="classarc_1_1geom_1_1shape_1_1_plane.html#a4109040e404b72535d2f40b3eef29e04" title="arc::geom::shape::Plane\l::collision" alt="" coords="190,68,356,107"/>
+<area shape="rect" id="node4" href="classarc_1_1geom_1_1shape_1_1_sphere.html#aab65755fc0af549dec1adc2fb89e7f5b" title="arc::geom::shape::Sphere\l::collision" alt="" coords="185,131,360,169"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -415,11 +472,11 @@ template&lt;typename S , typename T , size_t N&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A reference to the stream post-print. </dd></dl>
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="namespacearc_1_1math_a6b549419e3b093d653731d98ec4a6235_cgraph.png" border="0" usemap="#namespacearc_1_1math_a6b549419e3b093d653731d98ec4a6235_cgraph" alt=""/></div>
 <map name="namespacearc_1_1math_a6b549419e3b093d653731d98ec4a6235_cgraph" id="namespacearc_1_1math_a6b549419e3b093d653731d98ec4a6235_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1str.html#a53e4e5a084da03d5cc8ea2d4ee8ba7d0" title="arc::str::to_string" alt="" coords="203,5,324,31"/>
@@ -461,11 +518,11 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Value in degrees. </dd></dl>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="namespacearc_1_1math_a31f59a34b4a40b69a830d694f080e8da_icgraph.png" border="0" usemap="#namespacearc_1_1math_a31f59a34b4a40b69a830d694f080e8da_icgraph" alt=""/></div>
 <map name="namespacearc_1_1math_a31f59a34b4a40b69a830d694f080e8da_icgraph" id="namespacearc_1_1math_a31f59a34b4a40b69a830d694f080e8da_icgraph">
 <area shape="rect" id="node2" href="classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="205,87,357,125"/>
@@ -517,11 +574,11 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Square of the value. </dd></dl>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="namespacearc_1_1math_a95cadfea8bcd5d8ec23e0dabbaf6dda6_icgraph.png" border="0" usemap="#namespacearc_1_1math_a95cadfea8bcd5d8ec23e0dabbaf6dda6_icgraph" alt=""/></div>
 <map name="namespacearc_1_1math_a95cadfea8bcd5d8ec23e0dabbaf6dda6_icgraph" id="namespacearc_1_1math_a95cadfea8bcd5d8ec23e0dabbaf6dda6_icgraph">
 <area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_sphere.html#aab65755fc0af549dec1adc2fb89e7f5b" title="arc::geom::shape::Sphere\l::collision" alt="" coords="152,5,326,44"/>
@@ -571,11 +628,11 @@ template&lt;typename C , typename T  = typename C::value_type, typename I  = typ
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Sum of all elements. </dd></dl>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="namespacearc_1_1math_a4b44e4472b89ce6feffff1b914ad0064_icgraph.png" border="0" usemap="#namespacearc_1_1math_a4b44e4472b89ce6feffff1b914ad0064_icgraph" alt=""/></div>
 <map name="namespacearc_1_1math_a4b44e4472b89ce6feffff1b914ad0064_icgraph" id="namespacearc_1_1math_a4b44e4472b89ce6feffff1b914ad0064_icgraph">
 <area shape="rect" id="node2" href="classarc_1_1gui_1_1_actor.html#a40f09555772506846f42e2bdf60d83de" title="arc::gui::Actor::Actor" alt="" coords="163,5,305,31"/>
@@ -587,7 +644,7 @@ template&lt;typename C , typename T  = typename C::value_type, typename I  = typ
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 22 2018 19:15:02 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 23 2018 22:04:20 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
