@@ -63,7 +63,26 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline const T& misses() noexcept;
             };
+
+
+
+            //  == METHODS ==
+            //  -- Getters --
+            /**
+             *  Get the total number of misses.
+             *
+             *  @tparam T   Type binned.
+             *
+             *  @return Total number of misses.
+             */
+            template <typename T>
+            inline const T& Fixed<T>::misses() const noexcept
+            {
+                return (_misses);
+            }
 
 
 
