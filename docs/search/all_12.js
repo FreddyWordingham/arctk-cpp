@@ -7,7 +7,6 @@ var searchData=
   ['rectangular',['rectangular',['../namespacearc_1_1prop.html#a8ccd0de94cd448327a74d759f9871c0d',1,'arc::prop']]],
   ['render_5factor',['render_actor',['../classarc_1_1gui_1_1_window.html#ace3435b04da4f8ff461f6762d1af7d6c',1,'arc::gui::Window']]],
   ['render_5fcamera',['render_camera',['../classarc_1_1gui_1_1_window.html#a1ebd07acce38787dd94aaefbf931747a',1,'arc::gui::Window']]],
-  ['res',['res',['../classarc_1_1data_1_1_bucket.html#a9304e3d7a34e525a52bdacd5b1802fb4',1,'arc::data::Bucket']]],
   ['reset',['reset',['../classarc_1_1log_1_1_term.html#aadc8fe8f0e05c6b283e27bbd125ed835',1,'arc::log::Term::reset()'],['../namespacearc_1_1ansi.html#a9333e6e6135b8f0287770ed0bf290e53',1,'arc::ansi::RESET()']]],
   ['rho',['rho',['../classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#a88027759e9e0e2191517ffaa6c7ea49b',1,'arc::math::Vec&lt; T, 2 &gt;::rho()'],['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#abb5508b715b4588acbdd048663f61f9c',1,'arc::math::Vec&lt; T, 3 &gt;::rho()']]],
   ['rng_2ehpp',['rng.hpp',['../rng_8hpp.html',1,'']]],

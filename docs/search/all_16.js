@@ -23,7 +23,6 @@ var searchData=
   ['vec4i',['vec4i',['../namespacearc.html#aa67a520dd3043ea0ee8fd250df7d68e7',1,'arc']]],
   ['vec4l',['vec4l',['../namespacearc.html#a8fda8cfaaec7dcce3c035894f932d2db',1,'arc']]],
   ['vec_3c_20double_2c_203_20_3e',['Vec&lt; double, 3 &gt;',['../classarc_1_1math_1_1_vec.html',1,'arc::math']]],
-  ['vec_3c_20n_20_3e',['Vec&lt; N &gt;',['../classarc_1_1math_1_1_vec.html',1,'arc::math']]],
   ['vec_3c_20t_2c_202_20_3e',['Vec&lt; T, 2 &gt;',['../classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html',1,'arc::math']]],
   ['vec_3c_20t_2c_203_20_3e',['Vec&lt; T, 3 &gt;',['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html',1,'arc::math']]],
   ['vec_3c_20t_2c_204_20_3e',['Vec&lt; T, 4 &gt;',['../classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html',1,'arc::math']]],

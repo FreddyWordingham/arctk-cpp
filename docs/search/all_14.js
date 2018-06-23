@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['table_2ehpp',['table.hpp',['../table_8hpp.html',1,'']]],
+  ['table',['Table',['../classarc_1_1data_1_1_table.html',1,'arc::data']]],
+  ['table_2ehpp',['table.hpp',['../data_2table_8hpp.html',1,'(Global Namespace)'],['../format_2table_8hpp.html',1,'(Global Namespace)']]],
   ['term',['Term',['../classarc_1_1log_1_1_term.html',1,'arc::log::Term'],['../classarc_1_1log_1_1_term.html#a4e5e4861430f42e458c70fadb0d18449',1,'arc::log::Term::Term()']]],
   ['term_2ehpp',['term.hpp',['../term_8hpp.html',1,'']]],
   ['theta',['theta',['../classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#a357fe02d643ac29446ed8b546ca2a9b4',1,'arc::math::Vec&lt; T, 2 &gt;::theta()'],['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#a88061d3cd409f42814718c7d255eb293',1,'arc::math::Vec&lt; T, 3 &gt;::theta()']]],

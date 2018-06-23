@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arctk: arc::data::Bucket&lt; T, N &gt; Class Template Reference</title>
+<title>arctk: arc::data::Bucket&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,126 +70,104 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classarc_1_1data_1_1_bucket-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">arc::data::Bucket&lt; T, N &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">arc::data::Bucket&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="bucket_8hpp_source.html">bucket.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for arc::data::Bucket&lt; T, N &gt;:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for arc::data::Bucket&lt; T &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1data_1_1_bucket__inherit__graph.png" border="0" usemap="#arc_1_1data_1_1_bucket_3_01_t_00_01_n_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="arc_1_1data_1_1_bucket_3_01_t_00_01_n_01_4_inherit__map" id="arc_1_1data_1_1_bucket_3_01_t_00_01_n_01_4_inherit__map">
-<area shape="rect" id="node2" href="classarc_1_1data_1_1bucket_1_1_fixed.html" title="arc::data::bucket::\lFixed\&lt; T, N \&gt;" alt="" coords="6,92,134,131"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for arc::data::Bucket&lt; T, N &gt;:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1data_1_1_bucket__coll__graph.png" border="0" usemap="#arc_1_1data_1_1_bucket_3_01_t_00_01_n_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="arc_1_1data_1_1_bucket_3_01_t_00_01_n_01_4_coll__map" id="arc_1_1data_1_1_bucket_3_01_t_00_01_n_01_4_coll__map">
-<area shape="rect" id="node2" href="classarc_1_1math_1_1_vec.html" title="arc::math::Vec\&lt; N \&gt;" alt="" coords="12,92,151,117"/>
-<area shape="rect" id="node3" href="classarc_1_1math_1_1_vec.html" title="arc::math::Vec\&lt; T, N \&gt;" alt="" coords="5,5,158,31"/>
+<div class="center"><img src="classarc_1_1data_1_1_bucket__inherit__graph.png" border="0" usemap="#arc_1_1data_1_1_bucket_3_01_t_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="arc_1_1data_1_1_bucket_3_01_t_01_4_inherit__map" id="arc_1_1data_1_1_bucket_3_01_t_01_4_inherit__map">
+<area shape="rect" id="node2" href="classarc_1_1data_1_1bucket_1_1_fixed.html" title="arc::data::bucket::\lFixed\&lt; T \&gt;" alt="" coords="18,79,145,117"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a853cc5c7db5ad6feac279c3fd5560966"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a853cc5c7db5ad6feac279c3fd5560966">Bucket</a> (const <a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt; N &gt; &amp;min_, const <a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt; N &gt; &amp;max_, const std::array&lt; size_t, N &gt; &amp;res_) noexcept</td></tr>
-<tr class="separator:a853cc5c7db5ad6feac279c3fd5560966"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18ed93a7fe4c085bbe409a2191092799"><td class="memItemLeft" align="right" valign="top">std::array&lt; double, N &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a18ed93a7fe4c085bbe409a2191092799">init_width</a> (const <a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt; N &gt; &amp;min_, const <a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt; N &gt; &amp;max_, const std::array&lt; size_t, N &gt; &amp;res_) noexcept</td></tr>
-<tr class="separator:a18ed93a7fe4c085bbe409a2191092799"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae29ae688b7d61d096b868f570529ff55"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt; N &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#ae29ae688b7d61d096b868f570529ff55">min</a> () noexcept</td></tr>
-<tr class="separator:ae29ae688b7d61d096b868f570529ff55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a085b6787d4d306d36f9187c928b79d5a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt; N &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a085b6787d4d306d36f9187c928b79d5a">max</a> () noexcept</td></tr>
-<tr class="separator:a085b6787d4d306d36f9187c928b79d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9304e3d7a34e525a52bdacd5b1802fb4"><td class="memItemLeft" align="right" valign="top">const std::array&lt; size_t, N &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a9304e3d7a34e525a52bdacd5b1802fb4">res</a> () noexcept</td></tr>
-<tr class="separator:a9304e3d7a34e525a52bdacd5b1802fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f384a3bc5e7f0e459a71f1cd25db47a"><td class="memItemLeft" align="right" valign="top">const std::array&lt; double, N &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a3f384a3bc5e7f0e459a71f1cd25db47a">width</a> () noexcept</td></tr>
-<tr class="separator:a3f384a3bc5e7f0e459a71f1cd25db47a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e4d493925501f151dd8228b100799cd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacearc_1_1utl.html#a7c064ecf6b3c78a832bb07385512982d">utl::MultiVec</a>&lt; T, N &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a6e4d493925501f151dd8228b100799cd">bins</a> () noexcept</td></tr>
-<tr class="separator:a6e4d493925501f151dd8228b100799cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fcf7be3568fbc0ce78e2320738dfc27"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a1fcf7be3568fbc0ce78e2320738dfc27">find_index</a> (size_t dim_, double pos_) noexcept</td></tr>
-<tr class="separator:a1fcf7be3568fbc0ce78e2320738dfc27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac06dd85c1e6f5bc77a3ad941908f839e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#ac06dd85c1e6f5bc77a3ad941908f839e">collect</a> (const <a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt; N &gt; &amp;pos_, const T &amp;val_) noexcept=0</td></tr>
-<tr class="separator:ac06dd85c1e6f5bc77a3ad941908f839e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a742409935fcd884371c4ac2a1e44da3e"><td class="memTemplParams" colspan="2">template&lt;size_t I, typename  = typename std::enable_if&lt;!(I == 1)&gt;::type&gt; </td></tr>
-<tr class="memitem:a742409935fcd884371c4ac2a1e44da3e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a742409935fcd884371c4ac2a1e44da3e">store</a> (<a class="el" href="namespacearc_1_1utl.html#a7c064ecf6b3c78a832bb07385512982d">utl::MultiVec</a>&lt; T, I &gt; &amp;bins_, const std::array&lt; double, N &gt; &amp;pos_, const T &amp;val_) noexcept</td></tr>
-<tr class="separator:a742409935fcd884371c4ac2a1e44da3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10c92441d56fb62dfade984c2203cd7a"><td class="memTemplParams" colspan="2">template&lt;size_t I, typename  = typename std::enable_if&lt;(I == 1)&gt;::type&gt; </td></tr>
-<tr class="memitem:a10c92441d56fb62dfade984c2203cd7a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a10c92441d56fb62dfade984c2203cd7a">store</a> (<a class="el" href="namespacearc_1_1utl.html#a7c064ecf6b3c78a832bb07385512982d">utl::MultiVec</a>&lt; T, 1 &gt; &amp;bins_, const std::array&lt; double, N &gt; &amp;pos_, const T &amp;val_) noexcept</td></tr>
-<tr class="separator:a10c92441d56fb62dfade984c2203cd7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1de0bffd4be3b0cebaca665db3b8379"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#ac1de0bffd4be3b0cebaca665db3b8379">Bucket</a> (double min_, double max_, size_t size_) noexcept</td></tr>
+<tr class="separator:ac1de0bffd4be3b0cebaca665db3b8379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa30b330b51838baff882ef9727501979"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#aa30b330b51838baff882ef9727501979">min</a> () const noexcept</td></tr>
+<tr class="separator:aa30b330b51838baff882ef9727501979"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a83e62accddc78c4286c6b32e674c31"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a4a83e62accddc78c4286c6b32e674c31">max</a> () const noexcept</td></tr>
+<tr class="separator:a4a83e62accddc78c4286c6b32e674c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae32e7b14b7444a51860c630aaf1cd51b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#ae32e7b14b7444a51860c630aaf1cd51b">bin_width</a> () const noexcept</td></tr>
+<tr class="separator:ae32e7b14b7444a51860c630aaf1cd51b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18238ca56b506f5a9380a29250b6d794"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a18238ca56b506f5a9380a29250b6d794">bins</a> () const noexcept</td></tr>
+<tr class="separator:a18238ca56b506f5a9380a29250b6d794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bc36c6ebd81e8310c0fd937c64087ce"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a9bc36c6ebd81e8310c0fd937c64087ce">size</a> () const noexcept</td></tr>
+<tr class="separator:a9bc36c6ebd81e8310c0fd937c64087ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b26a455e44538067c4cf740dffdf0c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a18b26a455e44538067c4cf740dffdf0c">find_index</a> (double pos_) noexcept</td></tr>
+<tr class="separator:a18b26a455e44538067c4cf740dffdf0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac87a878bdba7aaee9ea782dc13afc9f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#ac87a878bdba7aaee9ea782dc13afc9f8">collect</a> (double pos_, const T &amp;val_) noexcept=0</td></tr>
+<tr class="memdesc:ac87a878bdba7aaee9ea782dc13afc9f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collect a value into the bucket at a given position.  <a href="#ac87a878bdba7aaee9ea782dc13afc9f8">More...</a><br /></td></tr>
+<tr class="separator:ac87a878bdba7aaee9ea782dc13afc9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:af4246439e818b17f3ca6b1064f2000ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt; N &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#af4246439e818b17f3ca6b1064f2000ae">_min</a></td></tr>
-<tr class="memdesc:af4246439e818b17f3ca6b1064f2000ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum bound of the bucket.  <a href="#af4246439e818b17f3ca6b1064f2000ae">More...</a><br /></td></tr>
-<tr class="separator:af4246439e818b17f3ca6b1064f2000ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38b6965c59f05c8a02353367dc5669b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt; N &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a38b6965c59f05c8a02353367dc5669b9">_max</a></td></tr>
-<tr class="memdesc:a38b6965c59f05c8a02353367dc5669b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum bound of the bucket.  <a href="#a38b6965c59f05c8a02353367dc5669b9">More...</a><br /></td></tr>
-<tr class="separator:a38b6965c59f05c8a02353367dc5669b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba220d4f49b475d042610326dc3bcd5e"><td class="memItemLeft" align="right" valign="top">std::array&lt; size_t, N &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#aba220d4f49b475d042610326dc3bcd5e">_res</a></td></tr>
-<tr class="memdesc:aba220d4f49b475d042610326dc3bcd5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of bins in each dimension.  <a href="#aba220d4f49b475d042610326dc3bcd5e">More...</a><br /></td></tr>
-<tr class="separator:aba220d4f49b475d042610326dc3bcd5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeef692e04b1a942771385f4ddeb64a50"><td class="memItemLeft" align="right" valign="top">std::array&lt; double, N &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#aeef692e04b1a942771385f4ddeb64a50">_width</a></td></tr>
-<tr class="memdesc:aeef692e04b1a942771385f4ddeb64a50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width of bins in each dimension.  <a href="#aeef692e04b1a942771385f4ddeb64a50">More...</a><br /></td></tr>
-<tr class="separator:aeef692e04b1a942771385f4ddeb64a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afabbe8e7339bd02a8dbf507cc8e200c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc_1_1utl.html#a7c064ecf6b3c78a832bb07385512982d">utl::MultiVec</a>&lt; T, N &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#afabbe8e7339bd02a8dbf507cc8e200c0">_bins</a></td></tr>
-<tr class="memdesc:afabbe8e7339bd02a8dbf507cc8e200c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bin data.  <a href="#afabbe8e7339bd02a8dbf507cc8e200c0">More...</a><br /></td></tr>
-<tr class="separator:afabbe8e7339bd02a8dbf507cc8e200c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6e9d8d79349d993721125cbbf5f98b0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#ad6e9d8d79349d993721125cbbf5f98b0">_min</a></td></tr>
+<tr class="memdesc:ad6e9d8d79349d993721125cbbf5f98b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum bound of the bucket.  <a href="#ad6e9d8d79349d993721125cbbf5f98b0">More...</a><br /></td></tr>
+<tr class="separator:ad6e9d8d79349d993721125cbbf5f98b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a748ff19ea95db2db3dcd9709f78c8647"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a748ff19ea95db2db3dcd9709f78c8647">_max</a></td></tr>
+<tr class="memdesc:a748ff19ea95db2db3dcd9709f78c8647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum bound of the bucket.  <a href="#a748ff19ea95db2db3dcd9709f78c8647">More...</a><br /></td></tr>
+<tr class="separator:a748ff19ea95db2db3dcd9709f78c8647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefca782d5f38910eb4bb0dd7b3df3efd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#aefca782d5f38910eb4bb0dd7b3df3efd">_bins</a></td></tr>
+<tr class="memdesc:aefca782d5f38910eb4bb0dd7b3df3efd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bin data.  <a href="#aefca782d5f38910eb4bb0dd7b3df3efd">More...</a><br /></td></tr>
+<tr class="separator:aefca782d5f38910eb4bb0dd7b3df3efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aaa5f3f359f10c181c102972cd8859bfa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#aaa5f3f359f10c181c102972cd8859bfa">_bin_width</a></td></tr>
+<tr class="memdesc:aaa5f3f359f10c181c102972cd8859bfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width of the bins.  <a href="#aaa5f3f359f10c181c102972cd8859bfa">More...</a><br /></td></tr>
+<tr class="separator:aaa5f3f359f10c181c102972cd8859bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T, size_t N&gt;<br />
-class arc::data::Bucket&lt; T, N &gt;</h3>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class arc::data::Bucket&lt; T &gt;</h3>
 
 <p>Data binning class.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>Type binned. </td></tr>
-    <tr><td class="paramname">N</td><td>Dimensionality. </td></tr>
   </table>
   </dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a853cc5c7db5ad6feac279c3fd5560966"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a853cc5c7db5ad6feac279c3fd5560966">&#9670;&nbsp;</a></span>Bucket()</h2>
+<a id="ac1de0bffd4be3b0cebaca665db3b8379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1de0bffd4be3b0cebaca665db3b8379">&#9670;&nbsp;</a></span>Bucket()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , size_t N&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T, N &gt;::<a class="el" href="classarc_1_1data_1_1_bucket.html">Bucket</a> </td>
+          <td class="memname"><a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T &gt;::<a class="el" href="classarc_1_1data_1_1_bucket.html">Bucket</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt; N &gt; &amp;&#160;</td>
+          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>min_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt; N &gt; &amp;&#160;</td>
+          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>max_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::array&lt; size_t, N &gt; &amp;&#160;</td>
-          <td class="paramname"><em>res_</em>&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size_</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -203,11 +181,10 @@ template&lt;typename T , size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Construct a multi-dimensional bucket object with given bounds and a resolution in each dimension.</p>
+<p>Construct a one-dimensional bucket object with given bounds and size.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type binned. </td></tr>
-    <tr><td class="paramname">N</td><td>Dimensionality.</td></tr>
+    <tr><td class="paramname">T</td><td>Type binned.</td></tr>
   </table>
   </dd>
 </dl>
@@ -215,43 +192,33 @@ template&lt;typename T , size_t N&gt; </div>
   <table class="params">
     <tr><td class="paramname">min_</td><td>Minimum bound of the bucket. </td></tr>
     <tr><td class="paramname">max_</td><td>Maximum bound of the bucket. </td></tr>
-    <tr><td class="paramname">res_</td><td>Number of bins in each dimension.</td></tr>
+    <tr><td class="paramname">size_</td><td>Number of bins.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>All values of min_ must be less than each corresponding value of max_. </dd>
+<dl class="section pre"><dt>Precondition</dt><dd>min_ must be less than max_. </dd>
 <dd>
-All values of res_ must be positive. </dd></dl>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1data_1_1_bucket_a853cc5c7db5ad6feac279c3fd5560966_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a853cc5c7db5ad6feac279c3fd5560966_cgraph" alt=""/></div>
-<map name="classarc_1_1data_1_1_bucket_a853cc5c7db5ad6feac279c3fd5560966_cgraph" id="classarc_1_1data_1_1_bucket_a853cc5c7db5ad6feac279c3fd5560966_cgraph">
-<area shape="rect" id="node2" href="namespacearc_1_1prop.html#a0786e461abacc64a0479a9c29cebcfa9" title="arc::prop::always_greater_than" alt="" coords="182,12,387,37"/>
-</map>
-</div>
+Size_ must be positive. </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6e4d493925501f151dd8228b100799cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e4d493925501f151dd8228b100799cd">&#9670;&nbsp;</a></span>bins()</h2>
+<a id="ae32e7b14b7444a51860c630aaf1cd51b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae32e7b14b7444a51860c630aaf1cd51b">&#9670;&nbsp;</a></span>bin_width()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , size_t N&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacearc_1_1utl.html#a7c064ecf6b3c78a832bb07385512982d">utl::MultiVec</a>&lt; T, N &gt; &amp; <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T, N &gt;::bins </td>
+          <td class="memname">double <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T &gt;::bin_width </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -260,33 +227,67 @@ template&lt;typename T , size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the bin data.</p>
+<p>Get the width of the bucket's bins.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type binned. </td></tr>
-    <tr><td class="paramname">N</td><td>Dimensionality.</td></tr>
+    <tr><td class="paramname">T</td><td>Type binned.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Bin data. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Width of the bucket's bins. </dd></dl>
 
 </div>
 </div>
-<a id="ac06dd85c1e6f5bc77a3ad941908f839e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac06dd85c1e6f5bc77a3ad941908f839e">&#9670;&nbsp;</a></span>collect()</h2>
+<a id="a18238ca56b506f5a9380a29250b6d794"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18238ca56b506f5a9380a29250b6d794">&#9670;&nbsp;</a></span>bins()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, size_t N&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T, N &gt;::collect </td>
+          <td class="memname">const std::vector&lt; T &gt; &amp; <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T &gt;::bins </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt; N &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the bin data of the bucket.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type binned.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Bin data of the bucket. </dd></dl>
+
+</div>
+</div>
+<a id="ac87a878bdba7aaee9ea782dc13afc9f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac87a878bdba7aaee9ea782dc13afc9f8">&#9670;&nbsp;</a></span>collect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T &gt;::collect </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>pos_</em>, </td>
         </tr>
         <tr>
@@ -307,10 +308,11 @@ template&lt;typename T, size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Collect a value into the bucket at a given position. If the position is outside the bounds of the bucket then it is counted as a miss. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+
+<p>Collect a value into the bucket at a given position. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type binned. </td></tr>
-    <tr><td class="paramname">N</td><td>Dimensionality.</td></tr>
+    <tr><td class="paramname">T</td><td>Type binned.</td></tr>
   </table>
   </dd>
 </dl>
@@ -322,37 +324,27 @@ template&lt;typename T, size_t N&gt; </div>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classarc_1_1data_1_1bucket_1_1_fixed.html#a2f9032fba27ae49f537fdf0a490b0ee3">arc::data::bucket::Fixed&lt; T, N &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classarc_1_1data_1_1bucket_1_1_fixed.html#a4764402cd26c1f64622e6bf431ac7116">arc::data::bucket::Fixed&lt; T &gt;</a>.</p>
 
 </div>
 </div>
-<a id="a1fcf7be3568fbc0ce78e2320738dfc27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fcf7be3568fbc0ce78e2320738dfc27">&#9670;&nbsp;</a></span>find_index()</h2>
+<a id="a18b26a455e44538067c4cf740dffdf0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18b26a455e44538067c4cf740dffdf0c">&#9670;&nbsp;</a></span>find_index()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , size_t N&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T, N &gt;::find_index </td>
+          <td class="memname">size_t <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T &gt;::find_index </td>
           <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>dim_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>pos_</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>pos_</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -364,14 +356,12 @@ template&lt;typename T , size_t N&gt; </div>
 <p>Determine the index of the bin a position belongs in.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type binned. </td></tr>
-    <tr><td class="paramname">N</td><td>Dimensionality.</td></tr>
+    <tr><td class="paramname">T</td><td>Type binned.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dim_</td><td>Dimension to find index for. </td></tr>
     <tr><td class="paramname">pos_</td><td>Position to place within the bin.</td></tr>
   </table>
   </dd>
@@ -380,109 +370,35 @@ template&lt;typename T , size_t N&gt; </div>
 <dd>
 pos_ must be less than, or equal to, the maximum bound of the bucket.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Index of the bin to corresponding to the given position. </dd></dl>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1data_1_1_bucket_a1fcf7be3568fbc0ce78e2320738dfc27_icgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a1fcf7be3568fbc0ce78e2320738dfc27_icgraph" alt=""/></div>
-<map name="classarc_1_1data_1_1_bucket_a1fcf7be3568fbc0ce78e2320738dfc27_icgraph" id="classarc_1_1data_1_1_bucket_a1fcf7be3568fbc0ce78e2320738dfc27_icgraph">
-<area shape="rect" id="node2" href="classarc_1_1data_1_1_bucket.html#a742409935fcd884371c4ac2a1e44da3e" title="arc::data::Bucket::\lstore" alt="" coords="182,5,311,44"/>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1data_1_1_bucket_a18b26a455e44538067c4cf740dffdf0c_icgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a18b26a455e44538067c4cf740dffdf0c_icgraph" alt=""/></div>
+<map name="classarc_1_1data_1_1_bucket_a18b26a455e44538067c4cf740dffdf0c_icgraph" id="classarc_1_1data_1_1_bucket_a18b26a455e44538067c4cf740dffdf0c_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1data_1_1bucket_1_1_fixed.html#a4764402cd26c1f64622e6bf431ac7116" title="arc::data::bucket::\lFixed::collect" alt="" coords="182,5,309,44"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a18ed93a7fe4c085bbe409a2191092799"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18ed93a7fe4c085bbe409a2191092799">&#9670;&nbsp;</a></span>init_width()</h2>
+<a id="a4a83e62accddc78c4286c6b32e674c31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a83e62accddc78c4286c6b32e674c31">&#9670;&nbsp;</a></span>max()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , size_t N&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt; double, N &gt; <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T, N &gt;::init_width </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt; N &gt; &amp;&#160;</td>
-          <td class="paramname"><em>min_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt; N &gt; &amp;&#160;</td>
-          <td class="paramname"><em>max_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::array&lt; size_t, N &gt; &amp;&#160;</td>
-          <td class="paramname"><em>res_</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Initialise the width of bins in each dimension.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type binned. </td></tr>
-    <tr><td class="paramname">N</td><td>Dimensionality.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">min_</td><td>Minimum bound of the bucket. </td></tr>
-    <tr><td class="paramname">max_</td><td>Maximum bound of the bucket. </td></tr>
-    <tr><td class="paramname">res_</td><td>Number of bins in each dimension.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section pre"><dt>Precondition</dt><dd>All values of min_ must be less than each corresponding value of max_. </dd>
-<dd>
-All values of res_ must be positive.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Initialised array of bin widths. </dd></dl>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1data_1_1_bucket_a18ed93a7fe4c085bbe409a2191092799_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a18ed93a7fe4c085bbe409a2191092799_cgraph" alt=""/></div>
-<map name="classarc_1_1data_1_1_bucket_a18ed93a7fe4c085bbe409a2191092799_cgraph" id="classarc_1_1data_1_1_bucket_a18ed93a7fe4c085bbe409a2191092799_cgraph">
-<area shape="rect" id="node2" href="namespacearc_1_1prop.html#a0786e461abacc64a0479a9c29cebcfa9" title="arc::prop::always_greater_than" alt="" coords="182,12,387,37"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a085b6787d4d306d36f9187c928b79d5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a085b6787d4d306d36f9187c928b79d5a">&#9670;&nbsp;</a></span>max()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , size_t N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt; N &gt; &amp; <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T, N &gt;::max </td>
+          <td class="memname">double <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T &gt;::max </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -494,8 +410,7 @@ template&lt;typename T , size_t N&gt; </div>
 <p>Get the maximum bound of the bucket.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type binned. </td></tr>
-    <tr><td class="paramname">N</td><td>Dimensionality.</td></tr>
+    <tr><td class="paramname">T</td><td>Type binned.</td></tr>
   </table>
   </dd>
 </dl>
@@ -503,22 +418,22 @@ template&lt;typename T , size_t N&gt; </div>
 
 </div>
 </div>
-<a id="ae29ae688b7d61d096b868f570529ff55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae29ae688b7d61d096b868f570529ff55">&#9670;&nbsp;</a></span>min()</h2>
+<a id="aa30b330b51838baff882ef9727501979"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa30b330b51838baff882ef9727501979">&#9670;&nbsp;</a></span>min()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , size_t N&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt; N &gt; &amp; <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T, N &gt;::min </td>
+          <td class="memname">double <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T &gt;::min </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -530,8 +445,7 @@ template&lt;typename T , size_t N&gt; </div>
 <p>Get the minimum bound of the bucket.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type binned. </td></tr>
-    <tr><td class="paramname">N</td><td>Dimensionality.</td></tr>
+    <tr><td class="paramname">T</td><td>Type binned.</td></tr>
   </table>
   </dd>
 </dl>
@@ -539,22 +453,22 @@ template&lt;typename T , size_t N&gt; </div>
 
 </div>
 </div>
-<a id="a9304e3d7a34e525a52bdacd5b1802fb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9304e3d7a34e525a52bdacd5b1802fb4">&#9670;&nbsp;</a></span>res()</h2>
+<a id="a9bc36c6ebd81e8310c0fd937c64087ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bc36c6ebd81e8310c0fd937c64087ce">&#9670;&nbsp;</a></span>size()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , size_t N&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::array&lt; size_t, N &gt; &amp; <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T, N &gt;::res </td>
+          <td class="memname">size_t <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T &gt;::size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -563,212 +477,57 @@ template&lt;typename T , size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the resolution of each dimension.</p>
+<p>Get the size of the bin data bins vector.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type binned. </td></tr>
-    <tr><td class="paramname">N</td><td>Dimensionality.</td></tr>
+    <tr><td class="paramname">T</td><td>Type binned.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Resolution of each dimension. </dd></dl>
-
-</div>
-</div>
-<a id="a742409935fcd884371c4ac2a1e44da3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a742409935fcd884371c4ac2a1e44da3e">&#9670;&nbsp;</a></span>store() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, size_t N&gt; </div>
-<div class="memtemplate">
-template&lt;size_t I, typename  = typename std::enable_if&lt;!(I == 1)&gt;::type&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T, N &gt;::store </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacearc_1_1utl.html#a7c064ecf6b3c78a832bb07385512982d">utl::MultiVec</a>&lt; T, I &gt; &amp;&#160;</td>
-          <td class="paramname"><em>bins_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::array&lt; double, N &gt; &amp;&#160;</td>
-          <td class="paramname"><em>pos_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>val_</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Store a value within the bins.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">I</td><td>Dimension of the slice.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bins_</td><td>Slice of the bucket bins. </td></tr>
-    <tr><td class="paramname">pos_</td><td>Position of the value to place. </td></tr>
-    <tr><td class="paramname">val_</td><td>Value to place within the bins.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section pre"><dt>Precondition</dt><dd>pos_ must fall within the bounds of the bucket. </dd></dl>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1data_1_1_bucket_a742409935fcd884371c4ac2a1e44da3e_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a742409935fcd884371c4ac2a1e44da3e_cgraph" alt=""/></div>
-<map name="classarc_1_1data_1_1_bucket_a742409935fcd884371c4ac2a1e44da3e_cgraph" id="classarc_1_1data_1_1_bucket_a742409935fcd884371c4ac2a1e44da3e_cgraph">
-<area shape="rect" id="node2" href="classarc_1_1data_1_1_bucket.html#a1fcf7be3568fbc0ce78e2320738dfc27" title="arc::data::Bucket::\lfind_index" alt="" coords="182,5,311,44"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a10c92441d56fb62dfade984c2203cd7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10c92441d56fb62dfade984c2203cd7a">&#9670;&nbsp;</a></span>store() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, size_t N&gt; </div>
-<div class="memtemplate">
-template&lt;size_t I, typename  = typename std::enable_if&lt;(I == 1)&gt;::type&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T, N &gt;::store </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacearc_1_1utl.html#a7c064ecf6b3c78a832bb07385512982d">utl::MultiVec</a>&lt; T, 1 &gt; &amp;&#160;</td>
-          <td class="paramname"><em>bins_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::array&lt; double, N &gt; &amp;&#160;</td>
-          <td class="paramname"><em>pos_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>val_</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Store a value within the bins.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">I</td><td>Dimension of the slice.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bins_</td><td>Slice of the bucket bins. </td></tr>
-    <tr><td class="paramname">pos_</td><td>Position of the value to place. </td></tr>
-    <tr><td class="paramname">val_</td><td>Value to place within the bins.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section pre"><dt>Precondition</dt><dd>pos_ must fall within the bounds of the bucket. </dd></dl>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1data_1_1_bucket_a10c92441d56fb62dfade984c2203cd7a_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a10c92441d56fb62dfade984c2203cd7a_cgraph" alt=""/></div>
-<map name="classarc_1_1data_1_1_bucket_a10c92441d56fb62dfade984c2203cd7a_cgraph" id="classarc_1_1data_1_1_bucket_a10c92441d56fb62dfade984c2203cd7a_cgraph">
-<area shape="rect" id="node2" href="classarc_1_1data_1_1_bucket.html#a1fcf7be3568fbc0ce78e2320738dfc27" title="arc::data::Bucket::\lfind_index" alt="" coords="182,5,311,44"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a3f384a3bc5e7f0e459a71f1cd25db47a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f384a3bc5e7f0e459a71f1cd25db47a">&#9670;&nbsp;</a></span>width()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , size_t N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::array&lt; double, N &gt; &amp; <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T, N &gt;::width </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Get the width of the bins of each dimension.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type binned. </td></tr>
-    <tr><td class="paramname">N</td><td>Dimensionality.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Width of the bins of each dimension. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Size of the bin data bins vector. </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="afabbe8e7339bd02a8dbf507cc8e200c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afabbe8e7339bd02a8dbf507cc8e200c0">&#9670;&nbsp;</a></span>_bins</h2>
+<a id="aaa5f3f359f10c181c102972cd8859bfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa5f3f359f10c181c102972cd8859bfa">&#9670;&nbsp;</a></span>_bin_width</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, size_t N&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacearc_1_1utl.html#a7c064ecf6b3c78a832bb07385512982d">utl::MultiVec</a>&lt;T, N&gt; <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T, N &gt;::_bins</td>
+          <td class="memname">double <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T &gt;::_bin_width</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Width of the bins. </p>
+
+</div>
+</div>
+<a id="aefca782d5f38910eb4bb0dd7b3df3efd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefca782d5f38910eb4bb0dd7b3df3efd">&#9670;&nbsp;</a></span>_bins</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;T&gt; <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T &gt;::_bins</td>
         </tr>
       </table>
   </td>
@@ -782,19 +541,19 @@ template&lt;typename T, size_t N&gt; </div>
 
 </div>
 </div>
-<a id="a38b6965c59f05c8a02353367dc5669b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38b6965c59f05c8a02353367dc5669b9">&#9670;&nbsp;</a></span>_max</h2>
+<a id="a748ff19ea95db2db3dcd9709f78c8647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a748ff19ea95db2db3dcd9709f78c8647">&#9670;&nbsp;</a></span>_max</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, size_t N&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt;N&gt; <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T, N &gt;::_max</td>
+          <td class="memname">double <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T &gt;::_max</td>
         </tr>
       </table>
   </td>
@@ -808,19 +567,19 @@ template&lt;typename T, size_t N&gt; </div>
 
 </div>
 </div>
-<a id="af4246439e818b17f3ca6b1064f2000ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4246439e818b17f3ca6b1064f2000ae">&#9670;&nbsp;</a></span>_min</h2>
+<a id="ad6e9d8d79349d993721125cbbf5f98b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6e9d8d79349d993721125cbbf5f98b0">&#9670;&nbsp;</a></span>_min</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, size_t N&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6">vecN</a>&lt;N&gt; <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T, N &gt;::_min</td>
+          <td class="memname">double <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T &gt;::_min</td>
         </tr>
       </table>
   </td>
@@ -834,65 +593,13 @@ template&lt;typename T, size_t N&gt; </div>
 
 </div>
 </div>
-<a id="aba220d4f49b475d042610326dc3bcd5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba220d4f49b475d042610326dc3bcd5e">&#9670;&nbsp;</a></span>_res</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, size_t N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::array&lt;size_t, N&gt; <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T, N &gt;::_res</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Number of bins in each dimension. </p>
-
-</div>
-</div>
-<a id="aeef692e04b1a942771385f4ddeb64a50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeef692e04b1a942771385f4ddeb64a50">&#9670;&nbsp;</a></span>_width</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, size_t N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::array&lt;double, N&gt; <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T, N &gt;::_width</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Width of bins in each dimension. </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/arctk/data/<a class="el" href="bucket_8hpp_source.html">bucket.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 23 2018 22:04:20 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 24 2018 00:22:27 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
