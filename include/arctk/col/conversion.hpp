@@ -50,11 +50,11 @@ namespace arc //! arctk namespace
             assert((sat_ >= 0.0) && (sat_ <= 1.0));
             assert((val_ >= 0.0) && (val_ <= 1.0));
 
-            hue_ = std::modf(hue_, 360.0);
+            hue_ = std::fmod(hue_, 360.0);
 
             const double c = val_ * sat_;
             const double h = hue_ / 60.0;
-            const double x = c * (1.0 - std::abs(std::modf(h, 2.0) - 1.0));
+            const double x = c * (1.0 - std::abs(std::fmod(h, 2.0) - 1.0));
 
             vec3 col;
 
