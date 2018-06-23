@@ -125,14 +125,14 @@ namespace arc //! arctk namespace
             template <typename T>
             inline void Fixed<T>::collect(const double pos_, const T& val_) noexcept
             {
-                if ((pos_ < _min) || (pos_ > _max))
+                if ((pos_ < Bucket<T>::_min) || (pos_ > Bucket<T>::_max))
                 {
                     _misses += val_;
 
                     return;
                 }
 
-                _bins[find_index(pos_)] += val_;
+                Bucket<T>::_bins[Bucket<T>::find_index(pos_)] += val_;
             }
 
 

@@ -44,14 +44,16 @@ namespace arc //! arctk namespace
         class Bucket
         {
             //  == FIELDS ==
-          private:
+          protected:
             //  -- Bounds --
             double _min; //!< Minimum bound of the bucket.
             double _max; //!< Maximum bound of the bucket.
 
+          private:
             //  -- Bin --
             double _bin_width; //!< Width of the bins.
 
+          protected:
             //  -- Data --
             std::vector<T> _bins; //!< Bin data.
 
