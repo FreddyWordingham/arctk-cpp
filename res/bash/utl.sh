@@ -1,31 +1,27 @@
 #   == UTILITY ==
 #   -- List --
-arctk_list_source()
-{
-    cd $ARCTK_DIR > /dev/null;
+arctk_list_source() {
+    cd $ARCTK_DIR >/dev/null
 
     find . -name "*.cpp"
     find . -name "*.hpp"
 
-    cd - > /dev/null;
+    cd - >/dev/null
 }
 
-arctk_search()
-{
+arctk_search() {
     if [ "$#" != "1" ]; then
-        printf "Error! Unable to search arctk files.\n";
-        printf "Search requires a single regex string.\n";
+        printf "Error! Unable to search arctk files.\n"
+        printf "Search requires a single regex string.\n"
 
-        return;
+        return
     fi
 
-    cd $ARCTK_DIR > /dev/null;
+    cd $ARCTK_DIR >/dev/null
 
-    grep -r $1 .;
+    grep -r $1 .
 
-    cd - > /dev/null;
+    cd - >/dev/null
 }
 
-
-
-printf "arctk utility bash functions loaded.\n";
+printf "arctk utility bash functions loaded.\n"
