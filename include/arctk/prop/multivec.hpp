@@ -38,23 +38,35 @@ namespace arc //! arctk namespace
 
         //  == FUNCTION PROTOTYPES ==
         //  -- Layout --
-        inline bool rectangular(const utl::MultiVec<vec3, 2>& pixels) noexcept;
+        template <typename T>
+        inline bool rectangular(const utl::MultiVec<T, 2>& pixels) noexcept;
 
 
 
         //  == FUNCTIONS ==
         //  -- Layout --
-        inline bool rectangular(const utl::MultiVec<vec3, 2>& pixels) noexcept
+        /**
+         *  Check if a two dimensional vector may be considered rectangular.
+         *  Check if each vector stored within a vector are of the same length.
+         *
+         *  @tparam T   Base type stored by the multi-vec.
+         *
+         *  @param  vec MulitVec to test.
+         *
+         *  @return True if all vectors stored by the vector are of the same length.
+         */
+        template <typename T>
+        inline bool rectangular(const utl::MultiVec<T, 2>& vec) noexcept
         {
-            if (pixels.empty())
+            if (vec.empty())
             {
                 return (true);
             }
 
-            const size_t size = pixels.front().size();
-            for (size_t i = 1; i < pixels.size(); ++i)
+            const size_t size = vec.front().size();
+            for (size_t i = 1; i < vec.size(); ++i)
             {
-                if (pixels[i].size() != size)
+                if (vec[i].size() != size)
                 {
                     return (false);
                 }
