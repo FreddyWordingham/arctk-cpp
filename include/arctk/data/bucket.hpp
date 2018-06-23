@@ -94,7 +94,8 @@ namespace arc //! arctk namespace
          *  @pre    min_ must be less than max_.
          *  @pre    Size_ must be positive.
          */
-        inline Bucket::Bucket(const double min_, const double max_, const size_t size_) noexcept
+        template <typename T>
+        inline Bucket<T>::Bucket(const double min_, const double max_, const size_t size_) noexcept
           : _min(min_)
           , _max(max_)
           , _bin_width((max_ - min_) / size_)
