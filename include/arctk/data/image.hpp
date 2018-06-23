@@ -74,7 +74,9 @@ namespace arc //! arctk namespace
             virtual inline void save(const std::string& path_, double (*const scale_)(const double)) const
               noexcept = 0; //!< Save the image data using a value scaling function. Pixel values are normalised then scaled using the given scaling function. Pixel values are converted to a greyscale colour. @param  path_   Path to the output file. @param
                             //!< scale_  Function used to scale the normalised values.
-            virtual inline void save(const std::string& path_, vec3 (*const map_)(const double)) const noexcept                                       = 0;
+            virtual inline void save(const std::string& path_, vec3 (*const map_)(const double)) const
+              noexcept = 0; //!< Save the image data using a colour mapping function. Pixel values are normalised but not scaled. Pixel values are converted to a colour using the given mapping function. @param  path_   Path to the output file. @param  map_
+                            //!< Function used to map scaled values to a colour.
             virtual inline void save(const std::string& path_, double (*const scale_)(const double), vec3 (*const map_)(const double)) const noexcept = 0;
 
           protected:
