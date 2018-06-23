@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline const T& misses() noexcept;
+                inline const T& misses() const noexcept;
 
                 //  -- Collection --
                 inline void collect(double pos_, const T& val_) noexcept override;
