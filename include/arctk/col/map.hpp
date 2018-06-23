@@ -90,11 +90,21 @@ namespace arc //! arctk namespace
             return (col);
         }
 
+        /**
+         *  Convert a scalar value between zero and one to a Matlab jet colour.
+         *  Colour will be set to black when x_ % 0.1 < 0.01.
+         *
+         *  @param  x_  Scalar value to convert to a colour.
+         *
+         *  @pre    x_ must be between zero and one.
+         *
+         *  @return Colour vec.
+         */
         inline vec3 jet_line(const double x_) noexcept
         {
             assert((x_ >= 0.0) && (x_ <= 1.0));
 
-            if (static_cast<int>(x_ * 100) % 10 == 0)
+            if (std::fmod(x_, 0.1) < 0.01)
             {
                 return (vec3(0.0, 0.0, 0.0));
             }
