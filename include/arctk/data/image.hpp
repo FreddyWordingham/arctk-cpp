@@ -66,7 +66,8 @@ namespace arc //! arctk namespace
             inline size_t height() const noexcept;
 
             //  -- Collection --
-            virtual inline void collect(size_t col_, size_t row_, double val_) noexcept = 0;
+            virtual inline void collect(size_t col_, size_t row_,
+                                        double val_) noexcept = 0; //!< Collect a value into the pixel data array. @param  col_    Column of the pixel to add to. @param  row_    Row of the pixel to add to. @param  val_    Value to add the pixel.
 
             //  -- Saving --
             virtual inline void save(const std::string& path_) const noexcept                                                                         = 0;
