@@ -68,6 +68,7 @@ namespace arc //! arctk namespace
             inline double                max() const noexcept;
             inline double                bin_width() const noexcept;
             inline const std::vector<T>& bins() const noexcept;
+            inline size_t                size() const noexcept;
         };
 
 
@@ -145,9 +146,22 @@ namespace arc //! arctk namespace
          *  @return Bin data of the bucket.
          */
         template <typename T>
-        inline const std::vector<T>& bins() const noexcept
+        inline const std::vector<T>& Bucket<T>::bins() const noexcept
         {
             return (_bins);
+        }
+
+        /**
+         *  Get the bin data of the bucket.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @return Bin data of the bucket.
+         */
+        template <typename T>
+        inline size_t Bucket<T>::size() const noexcept
+        {
+            return (_bins.size());
         }
 
 
