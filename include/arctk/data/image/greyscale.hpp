@@ -108,6 +108,13 @@ namespace arc //! arctk namespace
 
 
             //  -- Saving --
+            /**
+             *  Save the image data.
+             *  Pixel values are normalised but not scaled.
+             *  Pixel values are converted to a greyscale colour.
+             *
+             *  @param  path_   Path to the output file.
+             */
             inline void Greyscale::save(const std::string& path_) const noexcept
             {
                 save(path_, [](const double x_) { return (x_); }, [](const double x_) { return (vec3(x_, x_, x_)); });
