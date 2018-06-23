@@ -98,6 +98,13 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the minimum bound of the bucket.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @return Minimum bound of the bucket.
+         */
         template <typename T>
         inline double Bucket<T>::min() const noexcept
         {
