@@ -53,6 +53,9 @@ namespace arc //! arctk namespace
          *  @param  sat_    Colour saturation.
          *  @param  val_    Colour value.
          *
+         *  @pre    sat_ must be between zero and one.
+         *  @pre    val_ must be between zero and one.
+         *
          *  @return RGB equivalent of the HSV value.
          */
         inline vec3 hsv_to_rgb(double hue_, const double sat_, const double val_) noexcept
