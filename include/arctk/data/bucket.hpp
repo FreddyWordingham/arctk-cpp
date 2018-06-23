@@ -69,6 +69,9 @@ namespace arc //! arctk namespace
             inline double                bin_width() const noexcept;
             inline const std::vector<T>& bins() const noexcept;
             inline size_t                size() const noexcept;
+
+            //  -- Searching --
+            inline size_t find_index(double pos_) noexcept;
         };
 
 
@@ -162,6 +165,33 @@ namespace arc //! arctk namespace
         inline size_t Bucket<T>::size() const noexcept
         {
             return (_bins.size());
+        }
+
+
+        //  -- Searching --
+        /**
+         *  Determine the index of the bin a position belongs in.
+         *
+         *  @tparam T   Type binned.
+         *  @tparam N   Dimensionality.
+         *
+         *  @param  dim_    Dimension to find index for.
+         *  @param  pos_    Position to place within the bin.
+         *
+         *  @pre    pos_ must be greater than, or equal to, the minimum bound of the bucket.
+         *  @pre    pos_ must be less than, or equal to, the maximum bound of the bucket.
+         *
+         *  @return Index of the bin to corresponding to the given position.
+         */
+        template <typename T>
+        inline size_t Bucket<T>::find_index(const double pos_) noexcept
+        {
+            assert(pos_ >= _min);
+            assert(pos_ <= _max);
+
+            const auto index = static_cast<size_t>((pos_ - _min) / _width);
+
+            return ((index == _res) ? (index - 1) : index);
         }
 
 
