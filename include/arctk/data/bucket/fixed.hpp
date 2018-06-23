@@ -53,6 +53,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Counts --
+                T _misses{}; //!< Number of range misses.
 
 
                 //  == INSTANTIATION ==
