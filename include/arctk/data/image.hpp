@@ -75,7 +75,7 @@ namespace arc //! arctk namespace
 
           protected:
             //  -- Saving --
-            inline void write_ppm(const std::string& path_, const utl::MultiVec<vec3, 2>& pixels) const noexcept;
+            inline void write_ppm(const std::string& path_, const utl::MultiVec<vec3, 2>& pixels_) const noexcept;
         };
 
 
@@ -125,11 +125,21 @@ namespace arc //! arctk namespace
 
 
         //  -- Saving --
-        inline void Image::write_ppm(const std::string& path_, const utl::MultiVec<vec3, 2>& pixels) const noexcept
+        /**
+         *  Save the pixel data of the image in ppm format.
+         *
+         *  @param  path_   Path to the output file.
+         *  @param  pixels  Pixel data to save as a ppm image.
+         *
+         *  @pre    path_ may not be empty.
+         *  @pre    pixels_ size must match _width.
+         *  @pre    pixels_ first stored vector size must match _height.
+         */
+        inline void Image::write_ppm(const std::string& path_, const utl::MultiVec<vec3, 2>& pixels_) const noexcept
         {
             assert(!path_.empty());
-            assert(pixels.size() == _width);
-            assert(pixels.front().size() == _height);
+            assert(pixels_.size() == _width);
+            assert(pixels_.front().size() == _height);
 
             sys::file::Out file(path_);
 
@@ -143,7 +153,7 @@ namespace arc //! arctk namespace
                 {
                     for (size_t k = 0; k < 3; ++k)
                     {
-                        file << std::clamp(static_cast<int>(255 * pixels[j][_height - i - 1][k]), 0, 255) << "\t";
+                        file << std::clamp(static_cast<int>(255 * pixels_[j][_height - i - 1][k]), 0, 255) << "\t";
                     }
                     file << "\t";
                 }
