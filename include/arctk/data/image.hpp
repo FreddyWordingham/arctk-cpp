@@ -137,7 +137,7 @@ namespace arc //! arctk namespace
          *  Save the pixel data of the image in ppm format.
          *
          *  @param  path_   Path to the output file.
-         *  @param  pixels  Pixel data to save as a ppm image.
+         *  @param  pixels_ Pixel data to save as a ppm image.
          *
          *  @pre    path_ may not be empty.
          *  @pre    pixels_ size must match _width.
