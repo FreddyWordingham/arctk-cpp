@@ -45,6 +45,16 @@ namespace arc //! arctk namespace
 
         //  == FUNCTIONS ==
         //  -- HSV --
+        /**
+         *  Convert a HSV colour to its RGB equivalent.
+         *  Hue values are modulated to fall between zero and 360.0 degrees.
+         *
+         *  @param  hue_    Colour hue.
+         *  @param  sat_    Colour saturation.
+         *  @param  val_    Colour value.
+         *
+         *  @return RGB equivalent of the HSV value.
+         */
         inline vec3 hsv_to_rgb(double hue_, const double sat_, const double val_) noexcept
         {
             assert((sat_ >= 0.0) && (sat_ <= 1.0));
