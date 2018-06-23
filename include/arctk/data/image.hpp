@@ -24,6 +24,7 @@
 #include <algorithm>
 
 //  -- Arctk --
+#include <arctk/math.hpp>
 #include <arctk/sys.hpp>
 
 
