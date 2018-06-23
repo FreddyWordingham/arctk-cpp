@@ -195,7 +195,7 @@ namespace arc //! arctk namespace
             assert(pos_ >= _min);
             assert(pos_ <= _max);
 
-            const auto index = static_cast<size_t>((pos_ - _min) / _width);
+            const auto index = static_cast<size_t>((pos_ - _min) / _bin_width);
 
             return ((index == _res) ? (index - 1) : index);
         }
