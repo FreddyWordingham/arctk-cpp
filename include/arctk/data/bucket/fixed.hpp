@@ -66,6 +66,9 @@ namespace arc //! arctk namespace
               public:
                 //  -- Getters --
                 inline const T& misses() noexcept;
+
+                //  -- Collection --
+                inline void collect(double pos_, const T& val_) noexcept override;
             };
 
 
@@ -105,6 +108,21 @@ namespace arc //! arctk namespace
             inline const T& Fixed<T>::misses() const noexcept
             {
                 return (_misses);
+            }
+
+
+            //  -- Collection --
+            template <typename T>
+            inline void Fixed<T>::collect(const double pos_, const T& val_) noexcept
+            {
+                if ((pos_ < _min) || (pos_ > _max))
+                {
+                    _misses += val_;
+
+                    return;
+                }
+
+                _bins[find_index(pos_)] += val_;
             }
 
 
