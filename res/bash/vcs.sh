@@ -1,43 +1,40 @@
 #   == VERSION CONTROL ==
 #   -- Git --
-arctk_commit()
-{
+arctk_commit() {
     if [ "$#" != "1" ]; then
-        printf "Error! Unable to commit files.\n";
-        printf "Commit requires a single commit message string.\n";
+        printf "Error! Unable to commit files.\n"
+        printf "Commit requires a single commit message string.\n"
 
-        return;
+        return
     fi
 
-    cd $ARCTK_DIR > /dev/null;
+    cd $ARCTK_DIR >/dev/null
 
-    git add .;
-    git commit -m "$1";
+    git add .
+    git commit -m "$1"
 
-    cd - > /dev/null;
+    cd - >/dev/null
 }
 
-arctk_ammend()
-{
+arctk_ammend() {
     if [ "$#" != "1" ]; then
-        printf "Error! Unable to ammend commit.\n";
-        printf "Ammend requires a single commit message string.\n";
+        printf "Error! Unable to ammend commit.\n"
+        printf "Ammend requires a single commit message string.\n"
 
-        return;
+        return
     fi
 
-    cd $ARCTK_DIR > /dev/null;
+    cd $ARCTK_DIR >/dev/null
 
-    git commit --amend -m "$1";
+    git commit --amend -m "$1"
 
-    cd - > /dev/null;
+    cd - >/dev/null
 }
 
-arctk_push()
-{
-    cd $ARCTK_DIR > /dev/null;
+arctk_push() {
+    cd $ARCTK_DIR >/dev/null
 
-    arctk_make_doc;
+    arctk_make_doc
     if [ "$?" != "0" ]; then
         printf "Error! Unable to push.\n"
         printf "Failed to generate documentation.\n"
@@ -45,31 +42,28 @@ arctk_push()
         return
     fi
 
-    rm -r $ARCTK_DIR/docs;
-    mv $ARCTK_DIR/build/docs/html $ARCTK_DIR/docs;
+    rm -r $ARCTK_DIR/docs
+    mv $ARCTK_DIR/build/docs/html $ARCTK_DIR/docs
 
-    arctk_clean;
+    arctk_clean
 
-    arctk_commit "Cleaned build files and updated documentation.";
+    arctk_commit "Cleaned build files and updated documentation."
 
-    git push;
+    git push
 
-    cd - > /dev/null;
+    cd - >/dev/null
 }
 
-arctk_update()
-{
-    cd $ARCTK_DIR > /dev/null;
+arctk_update() {
+    cd $ARCTK_DIR >/dev/null
 
-    git pull origin master;
+    git pull origin master
 
-    arctk_build $ARCTK_BUILD_ARGS;
+    arctk_build $ARCTK_BUILD_ARGS
 
-    arctk_install;
+    arctk_install
 
-    cd - > /dev/null;
+    cd - >/dev/null
 }
 
-
-
-printf "arctk vcs bash functions loaded.\n";
+printf "arctk vcs bash functions loaded.\n"
