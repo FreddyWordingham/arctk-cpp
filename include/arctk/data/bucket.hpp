@@ -57,6 +57,10 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
           public:
+            //  -- Constructors --
+            inline Bucket(double min_, double max_, size_t size_) noexcept;
+
+
             //  == METHODS ==
           public:
             //  -- Getters --
@@ -70,6 +74,13 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline Bucket::Bucket(const double min_, const double max_, const size_t size_) noexcept
+          : _min(min_)
+          , _max(max_)
+          , _bin_width((max_ - min_) / size_)
+          , _bins(size_)
+        {
+        }
 
 
 

@@ -140,31 +140,27 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         /**
-         *  Construct a multi-dimensional bucket object with given bounds and a resolution in each dimension.
+         *  Construct a one-dimensional bucket object with given bounds and size.
          *
          *  @tparam T   Type binned.
-         *  @tparam N   Dimensionality.
          *
          *  @param  min_    Minimum bound of the bucket.
          *  @param  max_    Maximum bound of the bucket.
-         *  @param  res_    Number of bins in each dimension.
+         *  @param  size_   Number of bins.
          *
-         *  @pre    All values of min_ must be less than each corresponding value of max_.
-         *  @pre    All values of res_ must be positive.
+         *  @pre    min_ must be less than max_.
+         *  @pre    Size_ must be positive.
          */
-        template <typename T, size_t N>
-        inline Bucket<T, N>::Bucket(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept
+        template <typename T>
+        inline Bucket<T>::Bucket(const double min_, const double max_, const size_t size_) noexcept
           : _min(min_)
           , _max(max_)
           , _res(res_)
           , _width(init_width(min_, max_, res_))
           , _bins(utl::make_MultiVec<T, N>(res_))
         {
-            for (size_t i = 0; i < N; ++i)
-            {
-                assert(min_[i] < max_[i]);
-            }
-            assert(prop::always_greater_than(res_, 0));
+            assert(min_ < max_);
+            assert(size_ > 0);
         }
 
 
