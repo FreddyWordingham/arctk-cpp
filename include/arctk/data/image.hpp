@@ -70,7 +70,7 @@ namespace arc //! arctk namespace
                                         double val_) noexcept = 0; //!< Collect a value into the pixel data array. @param  col_    Column of the pixel to add to. @param  row_    Row of the pixel to add to. @param  val_    Value to add the pixel.
 
             //  -- Saving --
-            virtual inline void save(const std::string& path_) const noexcept                                                                         = 0;
+            virtual inline void save(const std::string& path_) const noexcept = 0; //!< Save the image data. Pixel values are normalised but not scaled. Pixel values are converted to a greyscale colour. @param  path_   Path to the output file.
             virtual inline void save(const std::string& path_, double (*const scale_)(const double)) const noexcept                                   = 0;
             virtual inline void save(const std::string& path_, vec3 (*const map_)(const double)) const noexcept                                       = 0;
             virtual inline void save(const std::string& path_, double (*const scale_)(const double), vec3 (*const map_)(const double)) const noexcept = 0;
