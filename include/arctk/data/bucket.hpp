@@ -45,6 +45,9 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Bounds --
+            double _min; //!< Minimum bound of the bucket.
+            double _max; //!< Maximum bound of the bucket.
+
 
             //  == INSTANTIATION ==
           public:
