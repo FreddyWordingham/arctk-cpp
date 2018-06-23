@@ -72,6 +72,10 @@ namespace arc //! arctk namespace
 
             //  -- Searching --
             inline size_t find_index(double pos_) noexcept;
+
+            //  -- Collection --
+            virtual inline void collect(double   pos_,
+                                        const T& val_) noexcept = 0; //!<  Collect a value into the bucket at a given position.  @tparam T   Type binned. @param  pos_    Position of the value to place.  @param  val_    Value to place within the bins.
         };
 
 
