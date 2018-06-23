@@ -97,6 +97,17 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Collection --
+            /**
+             *  Collect a value into the pixel data array.
+             *
+             *  @param  col_    Column of the pixel to add to.
+             *  @param  row_    Row of the pixel to add to.
+             *  @param  val_    Value to add the pixel.
+             *
+             *  @pre    col_ must be less than _width.
+             *  @pre    row_ must be less than _height.
+             *  @pre    val_ must be non-negative.
+             */
             inline void Greyscale::collect(const size_t col_, const size_t row_, const double val_) noexcept
             {
                 assert(col_ < _width);
