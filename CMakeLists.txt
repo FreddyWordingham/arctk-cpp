@@ -4,11 +4,8 @@ cmake_minimum_required(VERSION 3.5.1)
 
 
 #   == PROJECTS ==
-#   -- Name --
-set(PROJECT_NAME "arctk")
-
-#   -- Creation --
-project(${PROJECT_NAME})
+#   -- Project --
+project(arctk)
 
 
 
@@ -366,4 +363,4 @@ target_include_directories(arctk PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
 #   == INSTALLATION ==
 install(DIRECTORY ./include/arctk/ DESTINATION include/arctk FILES_MATCHING PATTERN "*.hpp")
-#install(TARGETS arctk EXPORT arctk LIBRARY DESTINATION lib ARCHIVE DESTINATION lib INCLUDES DESTINATION include)
+install(TARGETS arctk EXPORT arctk LIBRARY DESTINATION lib ARCHIVE DESTINATION lib INCLUDES DESTINATION include)
