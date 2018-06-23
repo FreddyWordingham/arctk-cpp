@@ -74,6 +74,18 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a one-dimensional bucket object with given bounds and size.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @param  min_    Minimum bound of the bucket.
+         *  @param  max_    Maximum bound of the bucket.
+         *  @param  size_   Number of bins.
+         *
+         *  @pre    min_ must be less than max_.
+         *  @pre    Size_ must be positive.
+         */
         inline Bucket::Bucket(const double min_, const double max_, const size_t size_) noexcept
           : _min(min_)
           , _max(max_)
