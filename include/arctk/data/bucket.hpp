@@ -102,6 +102,8 @@ namespace arc //! arctk namespace
           , _bin_width((max_ - min_) / size_)
           , _bins(size_)
         {
+            assert(min_ < max_);
+            assert(size_ > 0);
         }
 
 
