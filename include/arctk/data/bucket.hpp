@@ -48,6 +48,9 @@ namespace arc //! arctk namespace
             double _min; //!< Minimum bound of the bucket.
             double _max; //!< Maximum bound of the bucket.
 
+            //  -- Bin --
+            double _bin_width; //!< Width of the bins.
+
 
             //  == INSTANTIATION ==
           public:
