@@ -86,7 +86,8 @@ namespace arc //! arctk namespace
              *  @pre    min_ must be less than max_.
              *  @pre    Size_ must be positive.
              */
-            inline Fixed(const double min_, const double max_, const double size_) noexcept
+            template <typename T>
+            inline Fixed<T>::Fixed(const double min_, const double max_, const double size_) noexcept
               : Bucket(min_, max_, size_)
             {
                 assert(min_ < max_);
