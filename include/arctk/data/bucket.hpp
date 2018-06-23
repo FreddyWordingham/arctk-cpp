@@ -152,11 +152,11 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Get the bin data of the bucket.
+         *  Get the size of the bin data bins vector.
          *
          *  @tparam T   Type binned.
          *
-         *  @return Bin data of the bucket.
+         *  @return Size of the bin data bins vector.
          */
         template <typename T>
         inline size_t Bucket<T>::size() const noexcept
