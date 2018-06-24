@@ -38,18 +38,23 @@ namespace arc //! arctk namespace
         /**
          *  Data table class.
          */
-        template <typename... T>
+        template <typename... A>
         class Table
         {
             //  == FIELDS ==
           private:
             //  -- Data --
-            std::vector<std::tuple<T...>> _rows; //!< Table row data.
+            std::vector<std::tuple<A...>> _rows; //!< Table row data.
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            template <typename T, typename... A>
+            Table(const std::vector<T>& first_, const S&... vecs_)
+            {
+                ((assert(first_.size() = vecs_.size())), ...);
+            }
 
 
             //  == METHODS ==
