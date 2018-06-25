@@ -85,7 +85,7 @@ namespace arc //! arctk namespace
             template <>
             inline double guassian(Generator& rng_, const double mu_, const double sigma_) noexcept
             {
-                assert(sigma_ >= 0.0);
+                assert(sigma_ > 0.0);
 
                 static bool   generate = false;
                 static double z1;
