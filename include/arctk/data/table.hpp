@@ -50,13 +50,10 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Table(const std::string& path_) noexcept;
+            inline Table(const std::string& serial_, char delim_) noexcept;
 
-            /*            template <typename T, typename... _A>
-                        Table(const std::vector<T>& first_, const _A&... vecs_)
-                        {
-                            ((assert(first_.size() = vecs_.size())), ...);
-                        }*/
+            //  -- Initialisation --
+            inline std::vector<std::tuple<A...>> init_rows(const std::string& serial_, char delim_ = ',') noexcept;
 
 
             //  == METHODS ==
@@ -69,9 +66,42 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <typename... A>
-        inline Table<A...>::Table(const std::string& path_) noexcept
-          : init_rows(path_)
+        inline Table<A...>::Table(const std::string& serial_, const char delim_) noexcept
+          : _rows(init_rows(serial_, delim_))
         {
+        }
+
+
+        //  -- Initialisation --
+        template <typename... A>
+        inline std::vector<std::tuple<A...>> Table<A...>::init_rows(const std::string& serial_, const char delim_) noexcept
+        {
+            std::vector<std::tuple<A...>> rows;
+
+            std::stringstream serial_stream(serial_);
+            std::string       line;
+            while (std::getline(serial_stream, line))
+            {
+                std::vector<std::string> strs;
+                strs.reserve(sizeof...(A));
+
+                std::stringstream line_stream(line);
+                std::string       word;
+                while (std::getline(line_stream, word, delim_))
+                {
+                    strs.push_back(word);
+                }
+
+                if (strs.size() != sizeof...(A))
+                {
+                    ERROR(42) << "Unable to construct data table.\n"
+                              << "Line: `" << line << "`, does not contain " << sizeof...(A) << " elements as required.";
+                }
+
+                rows.emplace_back(parse::from_str<A...>(strs));
+            }
+
+            return (rows);
         }
 
 
