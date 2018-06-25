@@ -84,6 +84,10 @@ namespace arc //! arctk namespace
             inline char   delim() const noexcept;
             inline size_t width() const noexcept;
 
+            //  -- Setters --
+            inline void set_delim(char delim_) noexcept;
+            inline void set_width() noexcept;
+
             //  -- Printing --
             inline std::string str() const noexcept;
         };
@@ -202,6 +206,19 @@ namespace arc //! arctk namespace
         inline size_t Table<A...>::width() const noexcept
         {
             return (_width);
+        }
+
+
+        //  -- Setters --
+        template <typename... A>
+        inline void Table<A...>::set_delim(const char delim_) noexcept
+        {
+            _delim = delim_;
+        }
+
+        template <typename... A>
+        inline void Table<A...>::set_width() noexcept
+        {
         }
 
 
