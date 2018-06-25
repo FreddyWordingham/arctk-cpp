@@ -66,16 +66,10 @@ namespace arc //! arctk namespace
             inline std::vector<std::tuple<A...>> init_rows(const std::string& serial_, char delim_) noexcept;
             template <typename T, typename... B>
             inline std::vector<std::tuple<A...>> init_rows(const std::vector<T>& first_, const B&... vecs_) noexcept;
-
-
             template <typename... B>
-            inline std::tuple<A...> create_tuple(const size_t index_, const B&... vecs_) noexcept
-            {
-                return (create_tuple_helper(index_, std::make_index_sequence<sizeof...(B)>{}, vecs_...));
-            }
-
+            inline std::tuple<A...> init_row(const size_t index_, const B&... vecs_) noexcept;
             template <size_t... I, typename... B>
-            inline std::tuple<A...> create_tuple_helper(const size_t index_, std::index_sequence<I...> seq_, const B&... vecs_) noexcept
+            inline std::tuple<A...> init_row_helper(const size_t index_, std::index_sequence<I...> seq_, const B&... vecs_) noexcept
             {
                 std::tuple<A...> tup;
 
@@ -166,10 +160,17 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i < first_.size(); ++i)
             {
-                rows.emplace_back(create_tuple(i, first_, vecs_...));
+                rows.emplace_back(init_row(i, first_, vecs_...));
             }
 
             return (rows);
+        }
+
+        template <typename... A>
+        template <typename... B>
+        inline std::tuple<A...> Table<A...>::init_row(const size_t index_, const B&... vecs_) noexcept
+        {
+            return (init_row_helper(index_, std::make_index_sequence<sizeof...(B)>{}, vecs_...));
         }
 
 
