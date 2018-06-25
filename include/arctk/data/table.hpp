@@ -106,7 +106,7 @@ namespace arc //! arctk namespace
         inline Table<A...>::Table(const std::vector<T>& first_, const B&... vecs_) noexcept
           : _rows(init_rows(first_, vecs_...))
         {
-            static_assert(sizeof...(A) == sizeof...(B));
+            static_assert(sizeof...(A) == (1 + sizeof...(B)));
         }
 
 
