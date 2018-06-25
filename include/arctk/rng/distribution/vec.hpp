@@ -41,6 +41,7 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Two-Dimensional --
             inline vec2 uniform_vec2(Generator& rng_) noexcept;
+            inline vec2 uniform_vec3(Generator& rng_) noexcept;
 
 
             //  == FUNCTIONS ==
@@ -50,6 +51,14 @@ namespace arc //! arctk namespace
                 const double theta = uniform_floating<double>(rng_, 0.0, 2.0 * constant::PI);
 
                 return (vec2(std::sin(theta), std::cos(theta)));
+            }
+
+            inline vec3 uniform_vec3(Generator& rng_) noexcept
+            {
+                const double phi   = uniform_floating<double>(rng_, 0.0, 2.0 * constant::PI);
+                const double theta = std::acos(uniform_floating<double>(rng_, -1.0, 1.0));
+
+                return (vec3(std::sin(theta) * std::cos(phi), std::sin(theta) * std::sin(phi), std::cos(theta)));
             }
 
 
