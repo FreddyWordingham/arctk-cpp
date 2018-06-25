@@ -73,6 +73,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline char   delim() const noexcept;
+            inline size_t width() const noexcept;
 
             //  -- Printing --
             inline std::string str() const noexcept;
@@ -139,6 +141,17 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        template <typename... A>
+        inline char Table<A...>::delim() const noexcept
+        {
+            return (_delim);
+        }
+
+        template <typename... A>
+        inline size_t Table<A...>::width() const noexcept
+        {
+        }
+
 
         //  -- Printing --
         template <typename... A>
