@@ -52,6 +52,14 @@ namespace arc //! arctk namespace
                 return (static_cast<int>(rng_.gen() * (max_ - min_ + 1)) + min_);
             }
 
+            template <>
+            inline double uniform(Generator& rng_, const double min_, const double max_) noexcept
+            {
+                assert(min_ < max_);
+
+                return ((rng_.gen() * (max_ - min_)) + min_);
+            }
+
 
 
         } // namespace distribution
