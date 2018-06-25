@@ -78,7 +78,7 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < first_.size(); ++i)
                 {
-                    rows.push_back(create_tuple(i, first_, vecs_...));
+                    rows.push_back(create_tuple_helper(i, std::make_index_sequence<sizeof...(B)>{}, first_, vecs_...));
                 }
 
                 return (rows);
