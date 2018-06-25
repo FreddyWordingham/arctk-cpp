@@ -76,11 +76,13 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Generate a random number drawn from the normal distribution.
+             *  Generate a random number drawn from a gaussian distribution.
              *
              *  @param  rng_    Generator used to draw base values from.
+             *  @param  mu_     Average value of the gaussian distribution.
+             *  @param  sigma_  Variance of the gaussian distribution.
              *
-             *  @return Value randomly drawn from normal distribution.
+             *  @return Value randomly drawn from the gaussian distribution.
              */
             template <>
             inline double guassian(Generator& rng_, const double mu_, const double sigma_) noexcept
