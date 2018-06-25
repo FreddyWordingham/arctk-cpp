@@ -38,7 +38,8 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Uniform --
             template <typename T>
-            inline T uniform(Generator& rng_, const T min_, const T max_) noexcept;
+            inline T uniform(Generator& rng_, const T min_, const T max_) noexcept; //!< Generate a random value between given limits. @tparam T   Type of value to generate. @param  rng_    Generator used to draw base values from. @param  min_    Lower
+                                                                                    //!< bound of the genration range. @param  max_    Upper bound of the genration range. @pre    min_ must be less than max_. @return Random uniform value.
 
 
 
