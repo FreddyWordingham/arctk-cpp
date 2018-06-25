@@ -44,6 +44,17 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Uniform --
+            /**
+             *  Generate a random value between given limits.
+             *
+             *  @param  rng_    Generator used to draw base values from.
+             *  @param  min_    Lower bound of the genration range.
+             *  @param  max_    Upper bound of the genration range.
+             *
+             *  @pre    min_ must be less than max_.
+             *
+             *  @return Random uniform value.
+             */
             template <>
             inline size_t uniform(Generator& rng_, const size_t min_, const size_t max_) noexcept
             {
