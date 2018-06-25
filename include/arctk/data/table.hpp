@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
             inline Table(const std::string& serial_, char delim_ = ',') noexcept;
 
             //  -- Initialisation --
-            inline std::vector<std::tuple<A...>> init_rows(const std::string& serial_, char delim_ = ',') noexcept;
+            inline std::vector<std::tuple<A...>> init_rows(const std::string& serial_, char delim_) noexcept;
 
 
             //  == OPERATORS ==
