@@ -85,6 +85,8 @@ namespace arc //! arctk namespace
              *  @param  mu_     Average value of the gaussian distribution.
              *  @param  sigma_  Variance of the gaussian distribution.
              *
+             *  @pre    sigma_ must be positive.
+             *
              *  @return Value randomly drawn from the gaussian distribution.
              */
             template <>
