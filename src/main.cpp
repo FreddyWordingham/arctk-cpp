@@ -70,6 +70,7 @@
 #include <arctk/prop/container.hpp>
 #include <arctk/prop/multivec.hpp>
 #include <arctk/rng.hpp>
+#include <arctk/rng/distribution.hpp>
 #include <arctk/rng/generator.hpp>
 #include <arctk/rng/generator/quality.hpp>
 #include <arctk/search.hpp>
