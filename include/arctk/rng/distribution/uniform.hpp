@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
             {
                 assert(min_ < max_);
 
-                return (static_cast<size_t>(rng_.gen() * (max_ - min_ + 1)) + min_);
+                return (static_cast<size_t>(rng_.gen() * static_cast<double>(max_ - min_ + 1)) + min_);
             }
 
             template <>
@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
             {
                 assert(min_ < max_);
 
-                return (static_cast<int>(rng_.gen() * (max_ - min_ + 1)) + min_);
+                return (static_cast<int>(rng_.gen() * static_cast<double>(max_ - min_ + 1)) + min_);
             }
 
             template <>
