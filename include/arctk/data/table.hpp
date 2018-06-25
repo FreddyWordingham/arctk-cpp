@@ -50,8 +50,8 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            template <typename T, typename... A>
-            Table(const std::vector<T>& first_, const S&... vecs_)
+            template <typename T, typename... _A>
+            Table(const std::vector<T>& first_, const _A&... vecs_)
             {
                 ((assert(first_.size() = vecs_.size())), ...);
             }
