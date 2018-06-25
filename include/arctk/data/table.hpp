@@ -61,7 +61,6 @@ namespace arc //! arctk namespace
             template <typename T, typename... B>
             inline Table(const std::vector<T>& first_, const B&... vecs_) noexcept;
 
-
             //  -- Initialisation --
             inline std::vector<std::tuple<A...>> init_rows(const std::string& serial_, char delim_) noexcept;
             template <typename T, typename... B>
