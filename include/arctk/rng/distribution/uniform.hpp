@@ -45,6 +45,14 @@ namespace arc //! arctk namespace
             //  == FUNCTIONS ==
             //  -- Uniform --
             template <>
+            inline size_t uniform(Generator& rng_, const size_t min_, const size_t max_) noexcept
+            {
+                assert(min_ < max_);
+
+                return (static_cast<size_t>(rng_.gen() * (max_ - min_ + 1)) + min_);
+            }
+
+            template <>
             inline int uniform(Generator& rng_, const int min_, const int max_) noexcept
             {
                 assert(min_ < max_);
