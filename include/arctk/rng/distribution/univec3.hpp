@@ -47,25 +47,20 @@ namespace arc //! arctk namespace
             //  == CLASS ==
             /**
              */
-            template <typename T>
-            class Univec3 : public Distribution<T>
+            class Univec3 : public Distribution<double>
             {
                 //  == FIELDS ==
               private:
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Univec3() noexcept = default;
 
 
                 //  == METHODS ==
               public:
                 //  -- Getters --
             };
-
-
-
-            //  == INSTANTIATION ==
-            //  -- Constructors --
 
 
 
