@@ -37,14 +37,14 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Floating Point --
-            template <typename T, typename>
+            template <typename T, typename = std::enable_if_t<std::is_floating_point<T>::value>>
             inline T uniform(Generator& rng_, const T min_, const T max_) noexcept;
 
 
 
             //  == FUNCTIONS ==
             //  -- Floating Point --
-            template <typename T, typename = typename std::enable_if<std::is_floating_point<T>::value>>
+            template <typename T, typename>
             inline T uniform(Generator& rng_, const T min_, const T max_) noexcept
             {
                 return ((static_cast<T>(rng_.gen()) * (max_ - min_)) + min_);
