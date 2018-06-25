@@ -24,6 +24,9 @@
 #include <tuple>
 #include <vector>
 
+//  -- Arctk --
+#include <arctk/str.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -54,6 +57,13 @@ namespace arc //! arctk namespace
 
             //  -- Initialisation --
             inline std::vector<std::tuple<A...>> init_rows(const std::string& serial_, char delim_ = ',') noexcept;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Stream --
+            template <typename S, typename... _A>
+            friend inline S& operator<<(S& stream_, const Table<_A...>& tab_) noexcept;
 
 
             //  == METHODS ==
@@ -102,6 +112,28 @@ namespace arc //! arctk namespace
             }
 
             return (rows);
+        }
+
+
+
+        //  == OPERATORS ==
+        //  -- Stream --
+        template <typename S, typename... A>
+        inline S& operator<<(S& stream_, const Table<A...>& tab_) noexcept
+        {
+            if (tab_._rows.empty())
+            {
+                return (stream_);
+            }
+
+            stream_ << str::to_string(tab_._rows.front(), 10, "", ",", "");
+
+            for (size_t i = 1; i < tab_._rows.size(); ++i)
+            {
+                stream_ << "\n" << str::to_string(tab_._rows[i], 10, "", ",", "");
+            }
+
+            return (stream_);
         }
 
 
