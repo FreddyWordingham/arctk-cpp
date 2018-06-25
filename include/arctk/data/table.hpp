@@ -50,6 +50,8 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Table(const std::string& path_) noexcept;
+
             /*            template <typename T, typename... _A>
                         Table(const std::vector<T>& first_, const _A&... vecs_)
                         {
@@ -66,6 +68,11 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        template <typename... A>
+        inline Table<A...>::Table(const std::string& path_) noexcept
+          : init_rows(path_)
+        {
+        }
 
 
 
