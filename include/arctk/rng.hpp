@@ -23,6 +23,7 @@
 //  -- Arctk --
 #include <arctk/rng/distribution.hpp>
 #include <arctk/rng/distribution/float.hpp>
+#include <arctk/rng/distribution/integer.hpp>
 #include <arctk/rng/generator.hpp>
 #include <arctk/rng/generator/quality.hpp>
 
