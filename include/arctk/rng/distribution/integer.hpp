@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
             template <typename T, typename>
             inline T uniform_integral(Generator& rng_, const T min_, const T max_) noexcept
             {
-                return static_cast<T>((rng_.gen() * (max_ - min_ + 1)) + min_);
+                return (static_cast<T>(rng_.gen() * (max_ - min_ + 1)) + min_);
             }
 
 
