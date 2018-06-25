@@ -59,10 +59,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Table(const std::string& serial_, char delim_ = ',', size_t width_ = 16) noexcept;
             template <typename T, typename... B>
-            inline Table(const std::vector<T>& first_, const B&... vecs_) noexcept
-              : _rows(init_rows(first_, vecs_...))
-            {
-            }
+            inline Table(const std::vector<T>& first_, const B&... vecs_) noexcept;
 
 
             //  -- Initialisation --
@@ -78,7 +75,7 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < first_.size(); ++i)
                 {
-                    rows.push_back(create_tuple_helper(i, std::make_index_sequence<sizeof...(B)>{}, first_, vecs_...));
+                    rows.push_back(create_tuple(i, first_, vecs_...));
                 }
 
                 return (rows);
@@ -128,6 +125,14 @@ namespace arc //! arctk namespace
           , _delim(delim_)
           , _width(width_)
         {
+        }
+
+        template <typename... A>
+        template <typename T, typename... B>
+        inline Table<A...>::Table(const std::vector<T>& first_, const B&... vecs_) noexcept
+          : _rows(init_rows(first_, vecs_...))
+        {
+            static_assert(sizeof...(A) == sizeof...(B));
         }
 
 
