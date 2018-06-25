@@ -44,6 +44,17 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Henyey-Greenstein --
+            /**
+             *  Draw a value from the Henyey-Greenstein phase function.
+             *  Function description can be found at: https://www.astro.umd.edu/~jph/HG_note.pdf
+             *
+             *  @param  rng_    Generator used to draw base values from.
+             *  @param  g_      Asymmetry-parameter.
+             *
+             *  @pre    g_ must be between -1.0 and +1.0 inclusively.
+             *
+             *  @return Angle drawn from Henyey-Greenstein phase function.
+             */
             inline double henyey_greenstein(Generator& rng_, const double g_) noexcept
             {
                 assert((g_ >= -1.0) && (g_ <= 1.0));
