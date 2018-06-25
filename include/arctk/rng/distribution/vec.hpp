@@ -21,6 +21,9 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/constant.hpp>
+#include <arctk/math.hpp>
+#include <arctk/rng/distribution/floating.hpp>
 #include <arctk/rng/generator.hpp>
 
 
@@ -36,10 +39,18 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTION PROTOTYPES ==
-
+            //  -- Two-Dimensional --
+            inline vec2 uniform_vec2(Generator& rng_) noexcept;
 
 
             //  == FUNCTIONS ==
+            //  -- Two-Dimensional --
+            inline vec2 uniform_vec2(Generator& rng_) noexcept
+            {
+                const double theta = uniform_floating<double>(rng_, 0.0, 2.0 * constant::PI);
+
+                return (vec2(std::sin(theta), std::cos(theta)));
+            }
 
 
 
