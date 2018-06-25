@@ -21,10 +21,6 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
-#include <arctk/rng/distribution.hpp>
-#include <arctk/rng/distribution/uniform.hpp>
-#include <arctk/rng/distribution/univec3.hpp>
-#include <arctk/rng/distribution/vec.hpp>
 #include <arctk/rng/generator.hpp>
 #include <arctk/rng/generator/quality.hpp>
 
