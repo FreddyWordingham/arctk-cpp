@@ -1,9 +1,9 @@
 /**
- *  @file   arctk/rng/distribution/scientific.hpp
+ *  @file   arctk/rng/distribution/phys.hpp
  *  @date   25/06/2018
  *  @author Freddy Wordingham
  *
- *  Scientific transformation distribution functions.
+ *  Physics transformation distribution functions.
  */
 
 
