@@ -21,7 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
-#include <arctk/rng/distribution/float.hpp>
+#include <arctk/rng/distribution/floating.hpp>
 
 
 
