@@ -36,14 +36,14 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTION PROTOTYPES ==
-            //  -- Floating Point --
+            //  -- Integral --
             template <typename T, typename = std::enable_if_t<std::is_integral<T>::value>>
             inline T uniform_integral(Generator& rng_, const T min_, const T max_) noexcept;
 
 
 
             //  == FUNCTIONS ==
-            //  -- Floating Point --
+            //  -- Integral --
             template <typename T, typename>
             inline T uniform_integral(Generator& rng_, const T min_, const T max_) noexcept
             {
