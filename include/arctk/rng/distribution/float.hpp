@@ -38,14 +38,14 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Floating Point --
             template <typename T>
-            inline uniform(Generator& rng_, const T min_, const T max_) noexcept;
+            inline T uniform(Generator& rng_, const T min_, const T max_) noexcept;
 
 
 
             //  == FUNCTIONS ==
             //  -- Floating Point --
             template <typename T>
-            inline uniform(Generator& rng_, const T min_, const T max_) noexcept
+            inline T uniform(Generator& rng_, const T min_, const T max_) noexcept
             {
                 return ((static_cast<T>(rng_.gen()) * (max_ - min_)) + min_);
             }
