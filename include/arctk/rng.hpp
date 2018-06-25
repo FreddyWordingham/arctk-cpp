@@ -24,6 +24,7 @@
 #include <arctk/rng/distribution.hpp>
 #include <arctk/rng/distribution/floating.hpp>
 #include <arctk/rng/distribution/integer.hpp>
+#include <arctk/rng/distribution/vec.hpp>
 #include <arctk/rng/generator.hpp>
 #include <arctk/rng/generator/quality.hpp>
 
