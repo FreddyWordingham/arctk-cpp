@@ -1,5 +1,6 @@
 <map id="arc::math::is_zero" name="arc::math::is_zero">
-<area shape="rect" id="node2" href="$classarc_1_1data_1_1image_1_1_greyscale.html#aeee90b255bee7f0549dba6f01a79814d" title="arc::data::image::Greyscale\l::save" alt="" coords="181,5,365,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_plane.html#a4109040e404b72535d2f40b3eef29e04" title="arc::geom::shape::Plane\l::collision" alt="" coords="190,68,356,107"/>
-<area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_sphere.html#aab65755fc0af549dec1adc2fb89e7f5b" title="arc::geom::shape::Sphere\l::collision" alt="" coords="185,131,360,169"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1rng_1_1distribution.html#a3b72f08fe8181f1882ed937e1819d6bb" title="arc::rng::distribution\l::henyey_greenstein" alt="" coords="202,5,344,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1data_1_1image_1_1_greyscale.html#aeee90b255bee7f0549dba6f01a79814d" title="arc::data::image::Greyscale\l::save" alt="" coords="181,68,365,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_plane.html#a4109040e404b72535d2f40b3eef29e04" title="arc::geom::shape::Plane\l::collision" alt="" coords="190,131,356,169"/>
+<area shape="rect" id="node5" href="$classarc_1_1geom_1_1shape_1_1_sphere.html#aab65755fc0af549dec1adc2fb89e7f5b" title="arc::geom::shape::Sphere\l::collision" alt="" coords="185,193,360,232"/>
 </map>

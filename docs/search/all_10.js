@@ -8,7 +8,7 @@ var searchData=
   ['particle_2ehpp',['particle.hpp',['../particle_8hpp.html',1,'']]],
   ['path',['path',['../classarc_1_1sys_1_1_file.html#af1748fa1ad16283a82d15f183e8c24a8',1,'arc::sys::File']]],
   ['phi',['phi',['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#a3dd81c819a705cebb25e1095ed346f72',1,'arc::math::Vec&lt; T, 3 &gt;']]],
-  ['phys_2ehpp',['phys.hpp',['../constant_2phys_8hpp.html',1,'(Global Namespace)'],['../phys_8hpp.html',1,'(Global Namespace)']]],
+  ['phys_2ehpp',['phys.hpp',['../constant_2phys_8hpp.html',1,'(Global Namespace)'],['../phys_8hpp.html',1,'(Global Namespace)'],['../rng_2distribution_2phys_8hpp.html',1,'(Global Namespace)']]],
   ['pi',['PI',['../namespacearc_1_1constant.html#a3eccb0dc76feae32072ab77709824a47',1,'arc::constant']]],
   ['plane',['Plane',['../classarc_1_1geom_1_1shape_1_1_plane.html',1,'arc::geom::shape::Plane'],['../classarc_1_1geom_1_1shape_1_1_plane.html#abe8ee71b6b13024821e4553af5125d89',1,'arc::geom::shape::Plane::Plane()']]],
   ['plane_2ehpp',['plane.hpp',['../plane_8hpp.html',1,'']]],

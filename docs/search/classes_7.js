@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['generator',['Generator',['../classarc_1_1rng_1_1_generator.html',1,'arc::rng']]],
-  ['greyscale',['Greyscale',['../classarc_1_1data_1_1image_1_1_greyscale.html',1,'arc::data::image']]]
+  ['image',['Image',['../classarc_1_1data_1_1_image.html',1,'arc::data']]],
+  ['in',['In',['../classarc_1_1sys_1_1file_1_1_in.html',1,'arc::sys::file']]]
 ];
