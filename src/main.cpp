@@ -72,7 +72,7 @@
 #include <arctk/rng.hpp>
 #include <arctk/rng/distribution.hpp>
 #include <arctk/rng/distribution/math.hpp>
-#include <arctk/rng/distribution/scientific.hpp>
+#include <arctk/rng/distribution/phys.hpp>
 #include <arctk/rng/distribution/uniform.hpp>
 #include <arctk/rng/generator.hpp>
 #include <arctk/rng/generator/quality.hpp>
