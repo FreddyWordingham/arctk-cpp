@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/rng/distribution/float.hpp
+ *  @file   arctk/rng/distribution/floating.hpp
  *  @date   25/06/2018
  *  @author Freddy Wordingham
  *
