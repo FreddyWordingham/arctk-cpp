@@ -82,6 +82,7 @@ namespace arc //! arctk namespace
         template <typename... A>
         inline Table<A...>::Table(const std::string& serial_, const char delim_) noexcept
           : _rows(init_rows(serial_, delim_))
+          , _delim(delim_)
         {
         }
 
