@@ -64,22 +64,9 @@ namespace arc //! arctk namespace
 
             //  -- Initialisation --
             inline std::vector<std::tuple<A...>> init_rows(const std::string& serial_, char delim_) noexcept;
-
             template <typename T, typename... B>
-            inline std::vector<std::tuple<A...>> init_rows(const std::vector<T>& first_, const B&... vecs_) noexcept
-            {
-                (assert(first_.size() == vecs_.size()), ...);
+            inline std::vector<std::tuple<A...>> init_rows(const std::vector<T>& first_, const B&... vecs_) noexcept;
 
-                std::vector<std::tuple<A...>> rows;
-                rows.reserve(first_.size());
-
-                for (size_t i = 0; i < first_.size(); ++i)
-                {
-                    rows.push_back(create_tuple(i, first_, vecs_...));
-                }
-
-                return (rows);
-            }
 
             template <typename... B>
             inline std::tuple<A...> create_tuple(const size_t index_, const B&... vecs_) noexcept
@@ -163,6 +150,23 @@ namespace arc //! arctk namespace
                 }
 
                 rows.emplace_back(parse::from_str<A...>(strs));
+            }
+
+            return (rows);
+        }
+
+        template <typename... A>
+        template <typename T, typename... B>
+        inline std::vector<std::tuple<A...>> Table<A...>::init_rows(const std::vector<T>& first_, const B&... vecs_) noexcept
+        {
+            (assert(first_.size() == vecs_.size()), ...);
+
+            std::vector<std::tuple<A...>> rows;
+            rows.reserve(first_.size());
+
+            for (size_t i = 0; i < first_.size(); ++i)
+            {
+                rows.emplace_back(create_tuple(i, first_, vecs_...));
             }
 
             return (rows);
