@@ -38,10 +38,12 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Guassian --
             template <typename T>
-            inline T normal(Generator& rng_) noexcept;
+            inline T normal(Generator& rng_) noexcept; //!< Generate a random number drawn from the normal distribution. @tparam T Type to draw from normal distribution. @param  rng_    Generator used to draw base values from. @return Value randomly drawn
+                                                       //!< from normal distribution.
             template <typename T>
-            inline T guassian(Generator& rng_, const T mu_, const T sigma_) noexcept; //!< Generate a random number drawn from a gaussian distribution. @param  rng_    Generator used to draw base values from. @param  mu_     Average value of the gaussian
-                                                                                      //!< distribution. @param  sigma_  Variance of the gaussian distribution. @return Value randomly drawn from the gaussian distribution.
+            inline T guassian(Generator& rng_, const T mu_,
+                              const T sigma_) noexcept; //!< Generate a random number drawn from a gaussian distribution.  @tparam T Type to draw from guassian distribution. @param  rng_    Generator used to draw base values from. @param  mu_     Average
+                                                        //!< value of the gaussian distribution. @param  sigma_  Variance of the gaussian distribution. @return Value randomly drawn from the gaussian distribution.
 
 
 
