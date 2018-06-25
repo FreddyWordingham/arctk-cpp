@@ -71,7 +71,7 @@
 #include <arctk/prop/multivec.hpp>
 #include <arctk/rng.hpp>
 #include <arctk/rng/distribution.hpp>
-#include <arctk/rng/distribution/mathematical.hpp>
+#include <arctk/rng/distribution/math.hpp>
 #include <arctk/rng/distribution/scientific.hpp>
 #include <arctk/rng/distribution/uniform.hpp>
 #include <arctk/rng/generator.hpp>
