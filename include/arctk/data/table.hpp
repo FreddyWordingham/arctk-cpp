@@ -47,8 +47,8 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Formatting --
-            char   _delim{','};
-            size_t _width{16};
+            char   _delim;
+            size_t _width;
 
             //  -- Data --
             std::vector<std::tuple<A...>> _rows; //!< Table row data.
@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Table(const std::string& serial_, char delim_ = ',') noexcept;
+            inline Table(const std::string& serial_, char delim_ = ',', size_t width_ = 16) noexcept;
 
             //  -- Initialisation --
             inline std::vector<std::tuple<A...>> init_rows(const std::string& serial_, char delim_) noexcept;
@@ -80,9 +80,10 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <typename... A>
-        inline Table<A...>::Table(const std::string& serial_, const char delim_) noexcept
+        inline Table<A...>::Table(const std::string& serial_, const char delim_, const size_t width_) noexcept
           : _rows(init_rows(serial_, delim_))
           , _delim(delim_)
+          , _width(width_)
         {
         }
 
