@@ -49,8 +49,6 @@ namespace arc //! arctk namespace
              */
             class Univec3 : public Distribution<double>
             {
-                //  == FIELDS ==
-              private:
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
