@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/rng/distribution/mathematical.hpp>
 #include <arctk/rng/distribution/scientific.hpp>
 #include <arctk/rng/distribution/uniform.hpp>
 
