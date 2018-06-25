@@ -73,6 +73,9 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+
+            //  -- Printing --
+            inline std::string str() const noexcept;
         };
 
 
@@ -127,17 +130,7 @@ namespace arc //! arctk namespace
         template <typename S, typename... A>
         inline S& operator<<(S& stream_, const Table<A...>& tab_) noexcept
         {
-            if (tab_._rows.empty())
-            {
-                return (stream_);
-            }
-
-            stream_ << str::to_string(tab_._rows.front(), 10, "", ",", "");
-
-            for (size_t i = 1; i < tab_._rows.size(); ++i)
-            {
-                stream_ << "\n" << str::to_string(tab_._rows[i], 10, "", ",", "");
-            }
+            stream_ << tab_.str();
 
             return (stream_);
         }
@@ -146,6 +139,26 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+
+        //  -- Printing --
+        template <typename... A>
+        inline std::string Table<A...>::str() const noexcept
+        {
+            if (_rows.empty())
+            {
+                return ("");
+            }
+
+            std::stringstream stream;
+            stream << str::to_string(_rows.front(), 10, "", ",", "");
+
+            for (size_t i = 1; i < _rows.size(); ++i)
+            {
+                stream << "\n" << str::to_string(_rows[i], 10, "", ",", "");
+            }
+
+            return (stream.str());
+        }
 
 
 
