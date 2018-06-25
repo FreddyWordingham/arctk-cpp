@@ -119,7 +119,7 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Updating --
-            virtual inline void update_mvp() noexcept = 0; //!< Update the model-view-projection matrix.
+            virtual void update_mvp() noexcept = 0; //!< Update the model-view-projection matrix.
         };
 
 
