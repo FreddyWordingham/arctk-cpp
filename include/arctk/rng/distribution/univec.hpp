@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
             /**
              */
             template <typename T>
-            class Vec : public Distribution<T>
+            class Univec3 : public Distribution<T>
             {
                 //  == FIELDS ==
               private:
