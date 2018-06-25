@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/rng/distribution/mathematical.hpp
+ *  @file   arctk/rng/distribution/math.hpp
  *  @date   25/06/2018
  *  @author Freddy Wordingham
  *
