@@ -1,9 +1,9 @@
 /**
- *  @file   arctk/rng/distribution/henyey-greenstein.hpp
+ *  @file   arctk/rng/distribution/scientific.hpp
  *  @date   25/06/2018
  *  @author Freddy Wordingham
  *
- *  Henyey-greenstein transformation distribution functions.
+ *  Scientific transformation distribution functions.
  */
 
 
