@@ -148,7 +148,6 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}     \
         -Wabi                                   \
         -Waddress                               \
-        -Waggregate-return                      \
         -Waggressive-loop-optimizations         \
         -Wall                                   \
         -Walloc-zero                            \
