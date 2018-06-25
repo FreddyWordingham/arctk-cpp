@@ -47,6 +47,8 @@ namespace arc //! arctk namespace
             template <typename T, typename>
             inline T uniform_floating(Generator& rng_, const T min_, const T max_) noexcept
             {
+                assert(min_ < max_);
+
                 return ((static_cast<T>(rng_.gen()) * (max_ - min_)) + min_);
             }
 
