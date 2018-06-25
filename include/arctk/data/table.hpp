@@ -150,6 +150,7 @@ namespace arc //! arctk namespace
         template <typename... A>
         inline size_t Table<A...>::width() const noexcept
         {
+            return (_width);
         }
 
 
