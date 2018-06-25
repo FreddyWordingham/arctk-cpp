@@ -75,9 +75,18 @@ namespace arc //! arctk namespace
                 return (z0);
             }
 
+            /**
+             *  Generate a random number drawn from the normal distribution.
+             *
+             *  @param  rng_    Generator used to draw base values from.
+             *
+             *  @return Value randomly drawn from normal distribution.
+             */
             template <>
             inline double guassian(Generator& rng_, const double mu_, const double sigma_) noexcept
             {
+                assert(sigma_ > 0.0);
+
                 static bool   generate = false;
                 static double z1;
 
