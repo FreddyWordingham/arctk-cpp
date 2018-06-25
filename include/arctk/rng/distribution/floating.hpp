@@ -21,6 +21,8 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/constant.hpp>
+#include <arctk/math.hpp>
 #include <arctk/rng/generator.hpp>
 
 
@@ -38,8 +40,8 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Floating Point --
             template <typename T, typename = std::enable_if_t<std::is_floating_point<T>::value>>
-            inline T uniform_floating(Generator& rng_, const T min_, const T max_) noexcept;
-
+            inline T      uniform_floating(Generator& rng_, const T min_, const T max_) noexcept;
+            inline double henyey_greenstein(Generator& rng_, double g_) noexcept;
 
 
             //  == FUNCTIONS ==
@@ -50,6 +52,19 @@ namespace arc //! arctk namespace
                 assert(min_ < max_);
 
                 return ((static_cast<T>(rng_.gen()) * (max_ - min_)) + min_);
+            }
+
+            inline double henyey_greenstein(Generator& rng_, const double g_) noexcept
+            {
+                assert((g_ >= -1.0) && (g_ <= 1.0));
+
+                if (math::is_zero(g_))
+                {
+                    return (uniform_floating<double>(rng_, 0.0, constant::PI));
+                }
+
+                const double s = uniform_floating<double>(rng_, -1.0, 1.0);
+                return ((1.0 + math::sq(g_) - math::sq((1.0 - math::sq(g_)) / (1.0 + (g_ * s)))) / (2.0 * g_));
             }
 
 

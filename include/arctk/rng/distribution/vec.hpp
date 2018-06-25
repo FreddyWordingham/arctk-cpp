@@ -44,6 +44,7 @@ namespace arc //! arctk namespace
             inline vec3 uniform_vec3(Generator& rng_) noexcept;
 
 
+
             //  == FUNCTIONS ==
             //  -- Two-Dimensional --
             inline vec2 uniform_vec2(Generator& rng_) noexcept
