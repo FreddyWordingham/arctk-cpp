@@ -69,14 +69,7 @@ namespace arc //! arctk namespace
             template <typename... B>
             inline std::tuple<A...> init_row(const size_t index_, const B&... vecs_) noexcept;
             template <size_t... I, typename... B>
-            inline std::tuple<A...> init_row_helper(const size_t index_, std::index_sequence<I...> seq_, const B&... vecs_) noexcept
-            {
-                std::tuple<A...> tup;
-
-                ((std::get<I>(tup) = vecs_[index_]), ...);
-
-                return (tup);
-            }
+            inline std::tuple<A...> init_row_helper(const size_t index_, std::index_sequence<I...> seq_, const B&... vecs_) noexcept;
 
 
             //  == OPERATORS ==
@@ -171,6 +164,17 @@ namespace arc //! arctk namespace
         inline std::tuple<A...> Table<A...>::init_row(const size_t index_, const B&... vecs_) noexcept
         {
             return (init_row_helper(index_, std::make_index_sequence<sizeof...(B)>{}, vecs_...));
+        }
+
+        template <typename... A>
+        template <size_t... I, typename... B>
+        inline std::tuple<A...> Table<A...>::init_row_helper(const size_t index_, std::index_sequence<I...> seq_, const B&... vecs_) noexcept
+        {
+            std::tuple<A...> tup;
+
+            ((std::get<I>(tup) = vecs_[index_]), ...);
+
+            return (tup);
         }
 
 
