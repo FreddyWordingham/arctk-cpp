@@ -144,7 +144,12 @@ namespace arc //! arctk namespace
         inline void Particle::rotate(const double theta_, const double phi_) noexcept
         {
             vec3 front = _dir;
-            vec3 right = _dir ^ vec3(1.0, 0.0, 0.0);
+            vec3 right = _dir ^ vec3(0.0, 0.0, 1.0);
+
+            if (math::is_zero(std::fabs(_dir.z) - 1.0))
+            {
+                right = _dir ^ vec3(1.0, 0.0, 0.0);
+            }
 
             _dir.rotate(right, theta_);
             _dir.rotate(front, phi_);
