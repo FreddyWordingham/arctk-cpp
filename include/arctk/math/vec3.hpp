@@ -651,7 +651,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline bool Vec<T, 3>::normalised(const T tol_) const noexcept
         {
-            return (std::fabs(T{1.0} - mag()) <= tol_);
+            return (std::fabs(T{1.0} - mag_sq()) <= tol_);
         }
 
 
@@ -726,7 +726,7 @@ namespace arc //! arctk namespace
         {
             assert(axis_.normalised());
 
-            const Vec<T, 3> in = *this;
+            const Vec<T, 3> in(x, y, z);
 
             *this = (in * std::cos(ang_)) + ((axis_ ^ in) * std::sin(ang_)) + (axis_ * (axis_ * in) * (T{1.0} - std::cos(ang_)));
         }
