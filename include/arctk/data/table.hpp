@@ -278,7 +278,7 @@ namespace arc //! arctk namespace
          *  Get a copy of a data column.
          *
          *  @tparam A   Types stored in data columns.
-
+         *
          *  @tparam I   Index of the column to copy.
          *
          *  @return Copy of a data column.
@@ -300,6 +300,16 @@ namespace arc //! arctk namespace
 
 
         //  -- Printing --
+        /**
+         *  Form the data table into a human readable string.
+         *
+         *  @tparam A   Types stored in data columns.
+         *
+         *  @param  delim_  Delimiter character used to seperate consecutive values.
+         *  @param  width_  Print width allocated to each value.
+         *
+         *  @return Human readable string of the data table.
+         */
         template <typename... A>
         inline std::string Table<A...>::str(const char delim_, const size_t width_) const noexcept
         {
