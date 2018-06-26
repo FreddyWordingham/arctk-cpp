@@ -94,7 +94,7 @@ namespace arc //! arctk namespace
             inline void set_width(size_t width_) noexcept;
 
             //  -- Printing --
-            inline std::string str() const noexcept;
+            inline std::string str(const char delim_, const size_t width_) const noexcept;
 
             //  -- Saving --
             inline void save(const std::string& path_, const char delim_, const size_t width_) const noexcept;
@@ -239,7 +239,7 @@ namespace arc //! arctk namespace
 
         //  -- Printing --
         template <typename... A>
-        inline std::string Table<A...>::str() const noexcept
+        inline std::string Table<A...>::str(const char delim_, const size_t width_) const noexcept
         {
             if (_rows.empty())
             {
@@ -247,11 +247,11 @@ namespace arc //! arctk namespace
             }
 
             std::stringstream stream;
-            stream << str::to_string(_rows.front(), 10, "", ',', "");
+            stream << str::to_string(_rows.front(), width_, "", delim_, "");
 
             for (size_t i = 1; i < _rows.size(); ++i)
             {
-                stream << "\n" << str::to_string(_rows[i], 10, "", ',', "");
+                stream << "\n" << str::to_string(_rows[i], width_, "", delim_, "");
             }
 
             return (stream.str());
