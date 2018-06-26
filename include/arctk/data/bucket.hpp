@@ -24,6 +24,9 @@
 #include <cassert>
 #include <vector>
 
+//  -- Arctk --
+#include <arctk/data/table.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -79,6 +82,14 @@ namespace arc //! arctk namespace
             //  -- Collection --
             virtual inline void collect(double   pos_,
                                         const T& val_) noexcept = 0; //!<  Collect a value into the bucket at a given position.  @tparam T   Type binned. @param  pos_    Position of the value to place.  @param  val_    Value to place within the bins.
+
+            //  -- Printing --
+            inline std::string str(const char delim_ = ',', const size_t width_ = 8) const noexcept
+            {
+                std::vector<double> pos(_bins.size());
+
+                return (arc::data::Table<double, T>(pos, _bins).str());
+            }
         };
 
 
