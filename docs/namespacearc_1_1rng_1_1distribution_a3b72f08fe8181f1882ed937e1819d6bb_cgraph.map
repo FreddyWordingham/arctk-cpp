@@ -1,4 +1,4 @@
 <map id="arc::rng::distribution::henyey_greenstein" name="arc::rng::distribution::henyey_greenstein">
-<area shape="rect" id="node2" href="$namespacearc_1_1math.html#ae16636b5ed4b0dd955e463d7f64c5615" title="arc::math::is_zero" alt="" coords="195,5,322,31"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1math.html#a95cadfea8bcd5d8ec23e0dabbaf6dda6" title="arc::math::sq" alt="" coords="209,55,308,80"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1math.html#a6cd86be75c4e0854e21b200f3f78145f" title="arc::math::zero" alt="" coords="195,5,305,31"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1math.html#a95cadfea8bcd5d8ec23e0dabbaf6dda6" title="arc::math::sq" alt="" coords="201,55,299,80"/>
 </map>

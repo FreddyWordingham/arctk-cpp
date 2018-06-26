@@ -1,5 +1,5 @@
 <map id="arc::data::image::Greyscale::save" name="arc::data::image::Greyscale::save">
-<area shape="rect" id="node2" href="$namespacearc_1_1search.html#ab5608d27962c637137d2c243213fa366" title="arc::search::max" alt="" coords="241,5,361,31"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1math.html#ae16636b5ed4b0dd955e463d7f64c5615" title="arc::math::is_zero" alt="" coords="238,55,365,80"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1search.html#aac33af22b716309501eaa7f5a10cc1d0" title="arc::search::max_index" alt="" coords="413,5,572,31"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1search.html#ab5608d27962c637137d2c243213fa366" title="arc::search::max" alt="" coords="238,5,358,31"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1math.html#a6cd86be75c4e0854e21b200f3f78145f" title="arc::math::zero" alt="" coords="243,55,353,80"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1search.html#aac33af22b716309501eaa7f5a10cc1d0" title="arc::search::max_index" alt="" coords="406,5,565,31"/>
 </map>

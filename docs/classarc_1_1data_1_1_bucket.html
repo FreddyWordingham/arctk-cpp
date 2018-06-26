@@ -72,6 +72,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classarc_1_1data_1_1_bucket-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">arc::data::Bucket&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -109,6 +110,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac87a878bdba7aaee9ea782dc13afc9f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#ac87a878bdba7aaee9ea782dc13afc9f8">collect</a> (double pos_, const T &amp;val_) noexcept=0</td></tr>
 <tr class="memdesc:ac87a878bdba7aaee9ea782dc13afc9f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collect a value into the bucket at a given position.  <a href="#ac87a878bdba7aaee9ea782dc13afc9f8">More...</a><br /></td></tr>
 <tr class="separator:ac87a878bdba7aaee9ea782dc13afc9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d4744c4a0042b1b9cd6de6a6483e38f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a1d4744c4a0042b1b9cd6de6a6483e38f">str</a> (const char delim_=<a class="el" href="namespacearc_1_1settings.html#a52f2ad537a8453b532dbb433cda04a41">settings::DEFAULT_DELIM</a>, const size_t width_=<a class="el" href="namespacearc_1_1settings.html#aa92142ae95e53c91bff170793146441a">settings::DEFAULT_PRINT_WIDTH</a>) const noexcept</td></tr>
+<tr class="separator:a1d4744c4a0042b1b9cd6de6a6483e38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a880dfda25e21196c15d8aecd48f3821f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a880dfda25e21196c15d8aecd48f3821f">save</a> (const std::string &amp;path_, const char delim_=<a class="el" href="namespacearc_1_1settings.html#a52f2ad537a8453b532dbb433cda04a41">settings::DEFAULT_DELIM</a>, const size_t width_=<a class="el" href="namespacearc_1_1settings.html#aa92142ae95e53c91bff170793146441a">settings::DEFAULT_PRINT_WIDTH</a>) const noexcept</td></tr>
+<tr class="separator:a880dfda25e21196c15d8aecd48f3821f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -127,6 +132,12 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:aaa5f3f359f10c181c102972cd8859bfa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#aaa5f3f359f10c181c102972cd8859bfa">_bin_width</a></td></tr>
 <tr class="memdesc:aaa5f3f359f10c181c102972cd8859bfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width of the bins.  <a href="#aaa5f3f359f10c181c102972cd8859bfa">More...</a><br /></td></tr>
 <tr class="separator:aaa5f3f359f10c181c102972cd8859bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:aa294d0c03b7cd57cdea56397f008c110"><td class="memTemplParams" colspan="2">template&lt;typename S , typename _T &gt; </td></tr>
+<tr class="memitem:aa294d0c03b7cd57cdea56397f008c110"><td class="memTemplItemLeft" align="right" valign="top">S &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#aa294d0c03b7cd57cdea56397f008c110">operator&lt;&lt;</a> (S &amp;stream_, const <a class="el" href="classarc_1_1data_1_1_bucket.html">Bucket</a>&lt; _T &gt; &amp;buck_) noexcept</td></tr>
+<tr class="separator:aa294d0c03b7cd57cdea56397f008c110"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
@@ -453,6 +464,78 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a880dfda25e21196c15d8aecd48f3821f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a880dfda25e21196c15d8aecd48f3821f">&#9670;&nbsp;</a></span>save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T &gt;::save </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>delim_</em> = <code><a class="el" href="namespacearc_1_1settings.html#a52f2ad537a8453b532dbb433cda04a41">settings::DEFAULT_DELIM</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>width_</em> = <code><a class="el" href="namespacearc_1_1settings.html#aa92142ae95e53c91bff170793146441a">settings::DEFAULT_PRINT_WIDTH</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Save bucket data as a csv file.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type binned.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path_</td><td>Path to the output file. </td></tr>
+    <tr><td class="paramname">delim_</td><td>Delimiter character used to seperate consecutive values. </td></tr>
+    <tr><td class="paramname">width_</td><td>Print width allocated to each value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>path_ may not be empty. </dd></dl>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1data_1_1_bucket_a880dfda25e21196c15d8aecd48f3821f_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a880dfda25e21196c15d8aecd48f3821f_cgraph" alt=""/></div>
+<map name="classarc_1_1data_1_1_bucket_a880dfda25e21196c15d8aecd48f3821f_cgraph" id="classarc_1_1data_1_1_bucket_a880dfda25e21196c15d8aecd48f3821f_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1data_1_1_bucket.html#a1d4744c4a0042b1b9cd6de6a6483e38f" title="arc::data::Bucket::str" alt="" coords="210,5,354,31"/>
+<area shape="rect" id="node3" href="classarc_1_1data_1_1_table.html#ac3582a89bd20c73e64e1fd268dc910c7" title="arc::data::Table::str" alt="" coords="402,5,537,31"/>
+<area shape="rect" id="node4" href="namespacearc_1_1str.html#a704dbd1c43e0dc1c1305e4897248ccce" title="arc::str::to_string" alt="" coords="585,5,705,31"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a9bc36c6ebd81e8310c0fd937c64087ce"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9bc36c6ebd81e8310c0fd937c64087ce">&#9670;&nbsp;</a></span>size()</h2>
 
@@ -485,6 +568,136 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Size of the bin data bins vector. </dd></dl>
+
+</div>
+</div>
+<a id="a1d4744c4a0042b1b9cd6de6a6483e38f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d4744c4a0042b1b9cd6de6a6483e38f">&#9670;&nbsp;</a></span>str()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T &gt;::str </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>delim_</em> = <code><a class="el" href="namespacearc_1_1settings.html#a52f2ad537a8453b532dbb433cda04a41">settings::DEFAULT_DELIM</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>width_</em> = <code><a class="el" href="namespacearc_1_1settings.html#aa92142ae95e53c91bff170793146441a">settings::DEFAULT_PRINT_WIDTH</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Form the bucket data into a human readable string.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type binned.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delim_</td><td>Delimiter character used to seperate consecutive values. </td></tr>
+    <tr><td class="paramname">width_</td><td>Print width allocated to each value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Human readable string of the bucket data. </dd></dl>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1data_1_1_bucket_a1d4744c4a0042b1b9cd6de6a6483e38f_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a1d4744c4a0042b1b9cd6de6a6483e38f_cgraph" alt=""/></div>
+<map name="classarc_1_1data_1_1_bucket_a1d4744c4a0042b1b9cd6de6a6483e38f_cgraph" id="classarc_1_1data_1_1_bucket_a1d4744c4a0042b1b9cd6de6a6483e38f_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1data_1_1_table.html#ac3582a89bd20c73e64e1fd268dc910c7" title="arc::data::Table::str" alt="" coords="197,5,332,31"/>
+<area shape="rect" id="node3" href="namespacearc_1_1str.html#a704dbd1c43e0dc1c1305e4897248ccce" title="arc::str::to_string" alt="" coords="380,5,500,31"/>
+</map>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1data_1_1_bucket_a1d4744c4a0042b1b9cd6de6a6483e38f_icgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a1d4744c4a0042b1b9cd6de6a6483e38f_icgraph" alt=""/></div>
+<map name="classarc_1_1data_1_1_bucket_a1d4744c4a0042b1b9cd6de6a6483e38f_icgraph" id="classarc_1_1data_1_1_bucket_a1d4744c4a0042b1b9cd6de6a6483e38f_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1data_1_1_bucket.html#a880dfda25e21196c15d8aecd48f3821f" title="arc::data::Bucket::save" alt="" coords="197,5,354,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="aa294d0c03b7cd57cdea56397f008c110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa294d0c03b7cd57cdea56397f008c110">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename S , typename _T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">S&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">S &amp;&#160;</td>
+          <td class="paramname"><em>stream_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1data_1_1_bucket.html">Bucket</a>&lt; _T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>buck_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Write the bucket data in a human-readable format. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">S</td><td>Stream type to write to. </td></tr>
+    <tr><td class="paramname">_T</td><td>Type binned.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream_</td><td>Stream to write to.</td></tr>
+    <tr><td class="paramname">buck_</td><td><a class="el" href="classarc_1_1data_1_1_bucket.html">Bucket</a> to be printed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the stream post-print. </dd></dl>
 
 </div>
 </div>
@@ -599,7 +812,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 26 2018 02:34:36 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 27 2018 00:49:40 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

@@ -1,10 +1,12 @@
 <map id="include/arctk/parse/string.hpp" name="include/arctk/parse/string.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="142,559,239,584"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="207,645,304,671"/>
 <area shape="rect" id="node3" href="$parse_8hpp.html" title="include/arctk/parse.hpp" alt="" coords="51,92,210,117"/>
 <area shape="rect" id="node4" href="$args_8hpp.html" title="include/arctk/sys/args.hpp" alt="" coords="102,165,277,191"/>
-<area shape="rect" id="node5" href="$sys_8hpp.html" title="include/arctk/sys.hpp" alt="" coords="172,239,318,264"/>
-<area shape="rect" id="node6" href="$image_8hpp.html" title="include/arctk/data\l/image.hpp" alt="" coords="233,312,359,351"/>
-<area shape="rect" id="node9" href="$data_2table_8hpp.html" title="include/arctk/data\l/table.hpp" alt="" coords="477,399,603,437"/>
-<area shape="rect" id="node7" href="$greyscale_8hpp.html" title="include/arctk/data\l/image/greyscale.hpp" alt="" coords="254,399,402,437"/>
-<area shape="rect" id="node8" href="$data_8hpp.html" title="include/arctk/data.hpp" alt="" coords="339,485,491,511"/>
+<area shape="rect" id="node5" href="$sys_8hpp.html" title="include/arctk/sys.hpp" alt="" coords="166,239,312,264"/>
+<area shape="rect" id="node6" href="$image_8hpp.html" title="include/arctk/data\l/image.hpp" alt="" coords="240,399,366,437"/>
+<area shape="rect" id="node9" href="$table_8hpp.html" title="include/arctk/data\l/table.hpp" alt="" coords="490,312,616,351"/>
+<area shape="rect" id="node7" href="$greyscale_8hpp.html" title="include/arctk/data\l/image/greyscale.hpp" alt="" coords="254,485,402,524"/>
+<area shape="rect" id="node8" href="$data_8hpp.html" title="include/arctk/data.hpp" alt="" coords="379,572,531,597"/>
+<area shape="rect" id="node10" href="$bucket_8hpp.html" title="include/arctk/data\l/bucket.hpp" alt="" coords="553,399,679,437"/>
+<area shape="rect" id="node11" href="$fixed_8hpp.html" title="include/arctk/data\l/bucket/fixed.hpp" alt="" coords="578,485,704,524"/>
 </map>

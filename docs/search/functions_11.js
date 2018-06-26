@@ -7,5 +7,5 @@ var searchData=
   ['render_5fcamera',['render_camera',['../classarc_1_1gui_1_1_window.html#a1ebd07acce38787dd94aaefbf931747a',1,'arc::gui::Window']]],
   ['reset',['reset',['../classarc_1_1log_1_1_term.html#aadc8fe8f0e05c6b283e27bbd125ed835',1,'arc::log::Term']]],
   ['rotate',['rotate',['../classarc_1_1gui_1_1_actor.html#a3c9c92491a6bfe068ea7c8c8560f2165',1,'arc::gui::Actor::rotate()'],['../classarc_1_1gui_1_1_camera.html#a2e0bfab02032a9bef2c7230be22baedc',1,'arc::gui::Camera::rotate()'],['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#ad742cfbbb4e58d69cc10add15f074f25',1,'arc::math::Vec&lt; T, 3 &gt;::rotate()'],['../classarc_1_1phys_1_1_particle.html#ab46d3245680b0cac02e15de315327773',1,'arc::phys::Particle::rotate()']]],
-  ['rows',['rows',['../classarc_1_1data_1_1_table.html#aed31796666ea7cef1995c6e63ce226dd',1,'arc::data::Table::rows()'],['../namespacearc_1_1format.html#a9d71aca4944b5beef1da1c6a6c5bc2cc',1,'arc::format::rows(int width_, const std::string &amp;delim_, A... args_)'],['../namespacearc_1_1format.html#a4e78356644f1d9021a7e1133475ef645',1,'arc::format::rows(int width_, const std::string &amp;delim_, const C &amp;cont_) noexcept']]]
+  ['rows',['rows',['../classarc_1_1data_1_1_table.html#aed31796666ea7cef1995c6e63ce226dd',1,'arc::data::Table']]]
 ];
