@@ -77,7 +77,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Stream --
             template <typename S, typename... _A>
-            friend inline S& operator<<(S& stream_, const Table<_A...>& tab_) noexcept;
+            friend inline S& operator<<(S& stream_, const Table<_A...>& tab_) noexcept; //!< Write the data table in a human-readable format. @tparam S   Stream type to write to. @tparam A   Types stored in data columns. @param  stream_ Stream to write to.
+                                                                                        //!< @param  tab_    Table to be printed. @return Reference to the stream post-print.
 
             //  -- Access --
             std::tuple<A...>&       operator[](const size_t index_) noexcept;
