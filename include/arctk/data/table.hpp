@@ -89,10 +89,6 @@ namespace arc //! arctk namespace
             inline size_t                               width() const noexcept;
             inline const std::vector<std::tuple<A...>>& rows() const noexcept;
 
-            //  -- Setters --
-            inline void set_delim(char delim_) noexcept;
-            inline void set_width(size_t width_) noexcept;
-
             //  -- Printing --
             inline std::string str(const char delim_ = ',', const size_t width_ = 8) const noexcept;
 
@@ -220,20 +216,6 @@ namespace arc //! arctk namespace
         inline const std::vector<std::tuple<A...>>& Table<A...>::rows() const noexcept
         {
             return (rows);
-        }
-
-
-        //  -- Setters --
-        template <typename... A>
-        inline void Table<A...>::set_delim(const char delim_) noexcept
-        {
-            _delim = delim_;
-        }
-
-        template <typename... A>
-        inline void Table<A...>::set_width(const size_t width_) noexcept
-        {
-            _width = width_;
         }
 
 
