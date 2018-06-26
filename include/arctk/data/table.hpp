@@ -81,8 +81,9 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline char   delim() const noexcept;
-            inline size_t width() const noexcept;
+            inline char                                 delim() const noexcept;
+            inline size_t                               width() const noexcept;
+            inline const std::vector<std::tuple<A...>>& rows() const noexcept;
 
             //  -- Setters --
             inline void set_delim(char delim_) noexcept;
@@ -206,6 +207,12 @@ namespace arc //! arctk namespace
         inline size_t Table<A...>::width() const noexcept
         {
             return (_width);
+        }
+
+        template <typename... A>
+        inline const std::vector<std::tuple<A...>>& Table<A...>::rows() const noexcept
+        {
+            return (rows);
         }
 
 
