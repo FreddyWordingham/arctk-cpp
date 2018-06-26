@@ -21,6 +21,8 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <sstream>
+#include <string>
 #include <tuple>
 #include <vector>
 
@@ -91,6 +93,9 @@ namespace arc //! arctk namespace
 
             //  -- Printing --
             inline std::string str() const noexcept;
+
+            //  -- Saving --
+            inline void save(const std::string& path_) const noexcept;
         };
 
 
