@@ -389,6 +389,8 @@ namespace arc //! arctk namespace
          *
          *  @param  delim_  Delimiter character used to seperate consecutive values.
          *  @param  width_  Print width allocated to each value.
+         *
+         *  @pre    path_ may not be empty.
          */
         template <typename... A>
         inline void Table<A...>::save(const std::string& path_, const char delim_, const size_t width_) const noexcept
