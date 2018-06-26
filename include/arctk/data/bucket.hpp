@@ -88,6 +88,11 @@ namespace arc //! arctk namespace
             {
                 std::vector<double> pos(_bins.size());
 
+                for (size_t i = 0; i < pos.size(); ++i)
+                {
+                    pos[i] = _min + ((i + 0.5) * _bin_width);
+                }
+
                 return (arc::data::Table<double, T>(pos, _bins).str());
             }
         };
