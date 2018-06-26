@@ -36,7 +36,7 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         //  -- Mathematical --
         template <typename T>
-        inline bool is_zero(T x_) noexcept;
+        inline bool zero(T x_) noexcept;
         template <typename T>
         inline bool equal(const T x_, const T y_) noexcept;
 
@@ -55,7 +55,7 @@ namespace arc //! arctk namespace
          *  @return true if the value can be considered equal to zero.
          */
         template <typename T>
-        inline bool is_zero(T x_) noexcept
+        inline bool zero(T x_) noexcept
         {
             return ((x_ > -std::numeric_limits<double>::epsilon()) && (x_ < std::numeric_limits<double>::epsilon()));
         }
