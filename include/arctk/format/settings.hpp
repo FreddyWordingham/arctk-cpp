@@ -29,6 +29,7 @@ namespace arc //! arctk namespace
 
         //  == CONSTANTS ==
         //  -- Formatting --
+        constexpr const char DEFAULT_DELIM = ',';
 
 
 
