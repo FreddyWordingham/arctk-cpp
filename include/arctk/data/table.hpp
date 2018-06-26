@@ -233,11 +233,11 @@ namespace arc //! arctk namespace
             }
 
             std::stringstream stream;
-            stream << str::to_string(_rows.front(), 10, "", ",", "");
+            stream << str::to_string(_rows.front(), 10, "", ',', "");
 
             for (size_t i = 1; i < _rows.size(); ++i)
             {
-                stream << "\n" << str::to_string(_rows[i], 10, "", ",", "");
+                stream << "\n" << str::to_string(_rows[i], 10, "", ',', "");
             }
 
             return (stream.str());
