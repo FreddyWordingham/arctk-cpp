@@ -122,13 +122,13 @@ namespace arc //! arctk namespace
          *  @param  cont_   Container to print.
          *  @param  width_  Print width allocated to each element.
          *  @param  pre_    String prepended before the element data.
-         *  @param  delim_  Delimiter added between elements.
+         *  @param  delim_  Delimiter character added between elements.
          *  @param  post_   String appended after the element data.
          *
          *  @return A human-readable string of the container.
          */
         template <typename C, typename T, typename I>
-        inline std::string to_string(const C& cont_, const size_t width_, const std::string& pre_, const std::string& delim_, const std::string& post_)
+        inline std::string to_string(const C& cont_, const size_t width_, const std::string& pre_, const char delim_, const std::string& post_)
         {
             std::stringstream stream;
 
@@ -155,13 +155,13 @@ namespace arc //! arctk namespace
          *  @param  pair_   Pair to print.
          *  @param  width_  Print width allocated to each element.
          *  @param  pre_    String prepended before the element data.
-         *  @param  delim_  Delimiter added between elements.
+         *  @param  delim_  Delimiter character added between elements.
          *  @param  post_   String appended after the element data.
          *
          *  @return A human-readable string of the pair.
          */
         template <typename A0, typename A1>
-        inline std::string to_string(const std::pair<A0, A1>& pair_, const size_t width_, const std::string& pre_, const std::string& delim_, const std::string& post_)
+        inline std::string to_string(const std::pair<A0, A1>& pair_, const size_t width_, const std::string& pre_, const char delim_, const std::string& post_)
         {
             std::stringstream stream;
 
@@ -180,13 +180,13 @@ namespace arc //! arctk namespace
          *  @param  tup_    Tuple to print.
          *  @param  width_  Print width allocated to each element.
          *  @param  pre_    String prepended before the element data.
-         *  @param  delim_  Delimiter added between elements.
+         *  @param  delim_  Delimiter character added between elements.
          *  @param  post_   String appended after the element data.
          *
          *  @return A human-readable string of the tuple.
          */
         template <typename... A>
-        inline std::string to_string(const std::tuple<A...>& tup_, const size_t width_, const std::string& pre_, const std::string& delim_, const std::string& post_)
+        inline std::string to_string(const std::tuple<A...>& tup_, const size_t width_, const std::string& pre_, const char delim_, const std::string& post_)
         {
             std::stringstream stream;
 
