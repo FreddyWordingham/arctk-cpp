@@ -97,7 +97,7 @@ namespace arc //! arctk namespace
             inline std::string str() const noexcept;
 
             //  -- Saving --
-            inline void save(const std::string& path_) const noexcept;
+            inline void save(const std::string& path_, const char delim_, const size_t width_) const noexcept;
         };
 
 
@@ -260,13 +260,13 @@ namespace arc //! arctk namespace
 
         //  -- Saving --
         template <typename... A>
-        inline void Table<A...>::save(const std::string& path_, const size_t width_, const char delim_) const noexcept
+        inline void Table<A...>::save(const std::string& path_, const char delim_, const size_t width_) const noexcept
         {
             assert(!path_.empty());
 
             sys::file::Out file(path_);
 
-            file << str(width_, delim_);
+            file << str(delim_, width_);
         }
 
 
