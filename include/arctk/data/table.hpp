@@ -78,6 +78,7 @@ namespace arc //! arctk namespace
             friend inline S& operator<<(S& stream_, const Table<_A...>& tab_) noexcept;
 
             //  -- Access --
+            std::tuple<A...>&       operator[](const size_t index_) noexcept;
             const std::tuple<A...>& operator[](const size_t index_) const noexcept;
 
 
@@ -193,6 +194,12 @@ namespace arc //! arctk namespace
 
 
         //  -- Access --
+        template <typename... A>
+        std::tuple<A...>& Table<A...>::operator[](const size_t index_) noexcept
+        {
+            return (_rows[index_]);
+        }
+
         template <typename... A>
         const std::tuple<A...>& Table<A...>::operator[](const size_t index_) const noexcept
         {
