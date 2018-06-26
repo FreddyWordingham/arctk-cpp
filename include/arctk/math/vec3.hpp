@@ -141,7 +141,7 @@ namespace arc //! arctk namespace
             constexpr inline T    sum() const noexcept;
             constexpr inline T    mag() const noexcept;
             constexpr inline T    mag_sq() const noexcept;
-            constexpr inline void normalise() const noexcept;
+            constexpr inline void normalise() noexcept;
             constexpr inline void rotate(const math::Vec<T, 3>& axis_, T ang_) noexcept;
 
             //  -- Co-ordinate --
@@ -701,7 +701,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored by the vec.
          */
         template <typename T>
-        constexpr inline void Vec<T, 3>::normalise() const noexcept
+        constexpr inline void Vec<T, 3>::normalise() noexcept
         {
             const T m = T{1.0} / mag();
 
@@ -724,12 +724,14 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline void Vec<T, 3>::rotate(const math::Vec<T, 3>& axis_, const T ang_) noexcept
         {
-            assert(axis_.normalised());
+            math::Vec<T, 3> axis = axis_;
+            axis.normalise();
+            assert(axis.normalised());
 
             const double cos_theta = std::cos(ang_);
             const double sin_theta = std::sin(ang_);
 
-            *this = (*this * cos_theta) + ((axis_ ^ *this) * sin_theta) + ((axis_ * (axis_ * *this)) * (1.0 - cos_theta));
+            *this = (*this * cos_theta) + ((axis ^ *this) * sin_theta) + ((axis * (axis * *this)) * (1.0 - cos_theta));
         }
 
 
