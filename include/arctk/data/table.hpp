@@ -213,7 +213,7 @@ namespace arc //! arctk namespace
          *
          *  @tparam A   Types stored in data columns.
          *
-         *  @tparam A   Types stored in vectors.
+         *  @tparam B   Types stored in vectors.
          *
          *  @param  index_  Index of the vectors to read form.
          *  @param  vecs_   Vectors used to construct table.
@@ -227,6 +227,20 @@ namespace arc //! arctk namespace
             return (init_row_helper(index_, std::make_index_sequence<sizeof...(B)>{}, vecs_...));
         }
 
+        /**
+         *  Initialise a row of the table helper method.
+         *
+         *  @tparam A   Types stored in data columns.
+         *
+         *  @tparam I   Index sequence of B.
+         *  @tparam B   Types stored in vectors.
+         *
+         *  @param  index_  Index of the vectors to read form.
+         *  @param  seq_    Index sequence of B.
+         *  @param  vecs_   Vectors used to construct table.
+         *
+         *  @return Initialised data row.
+         */
         template <typename... A>
         template <size_t... I, typename... B>
         inline std::tuple<A...> Table<A...>::init_row_helper(const size_t index_, std::index_sequence<I...> seq_, const B&... vecs_) noexcept
