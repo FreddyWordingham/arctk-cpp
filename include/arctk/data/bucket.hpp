@@ -129,6 +129,17 @@ namespace arc //! arctk namespace
 
         //  == OPERATORS ==
         //  -- Stream --
+        /**
+         *  Write the bucket data in a human-readable format.
+         *
+         *  @tparam S   Stream type to write to.
+         *  @tparam T   Type binned.
+         *
+         *  @param  stream_ Stream to write to.
+         *  @param  buck_   Bucket to be printed.
+         *
+         *  @return Reference to the stream post-print.
+         */
         template <typename S, typename T>
         inline S& operator<<(S& stream_, const Bucket<T>& buck_) noexcept
         {
