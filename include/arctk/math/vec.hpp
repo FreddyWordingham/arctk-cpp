@@ -125,7 +125,7 @@ namespace arc //! arctk namespace
             constexpr inline T    sum() const noexcept;
             constexpr inline T    mag() const noexcept;
             constexpr inline T    mag_sq() const noexcept;
-            constexpr inline void normalise() const noexcept;
+            constexpr inline void normalise() noexcept;
         };
 
 
@@ -825,7 +825,7 @@ namespace arc //! arctk namespace
          *  @tparam N   Size of the vec.
          */
         template <typename T, size_t N>
-        constexpr inline void Vec<T, N>::normalise() const noexcept
+        constexpr inline void Vec<T, N>::normalise() noexcept
         {
             const T m = T{1.0} / mag();
 
