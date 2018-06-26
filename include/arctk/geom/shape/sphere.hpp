@@ -136,7 +136,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                if (math::is_zero(delta))
+                if (math::zero(delta))
                 {
                     const double dist = -b / 2.0;
 
