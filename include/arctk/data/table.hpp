@@ -274,6 +274,15 @@ namespace arc //! arctk namespace
             return (rows);
         }
 
+        /**
+         *  Get a copy of a data column.
+         *
+         *  @tparam A   Types stored in data columns.
+
+         *  @tparam I   Index of the column to copy.
+         *
+         *  @return Copy of a data column.
+         */
         template <typename... A>
         template <size_t I>
         inline std::vector<typename std::tuple_element<I, std::tuple<A...>>::type> Table<A...>::col() const noexcept
