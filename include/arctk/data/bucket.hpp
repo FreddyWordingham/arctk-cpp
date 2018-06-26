@@ -84,17 +84,7 @@ namespace arc //! arctk namespace
                                         const T& val_) noexcept = 0; //!<  Collect a value into the bucket at a given position.  @tparam T   Type binned. @param  pos_    Position of the value to place.  @param  val_    Value to place within the bins.
 
             //  -- Printing --
-            inline std::string str(const char delim_ = ',', const size_t width_ = 8) const noexcept
-            {
-                std::vector<double> pos(_bins.size());
-
-                for (size_t i = 0; i < pos.size(); ++i)
-                {
-                    pos[i] = _min + ((i + 0.5) * _bin_width);
-                }
-
-                return (arc::data::Table<double, T>(pos, _bins).str());
-            }
+            inline std::string str(const char delim_ = ',', const size_t width_ = 8) const noexcept;
         };
 
 
@@ -216,6 +206,21 @@ namespace arc //! arctk namespace
             const auto index = static_cast<size_t>((pos_ - _min) / _bin_width);
 
             return ((index == _bins.size()) ? (index - 1) : index);
+        }
+
+
+        //  -- Printing --
+        template <typename T>
+        inline std::string Bucket<T>::str(const char delim_, const size_t width_) const noexcept
+        {
+            std::vector<double> pos(_bins.size());
+
+            for (size_t i = 0; i < pos.size(); ++i)
+            {
+                pos[i] = _min + ((i + 0.5) * _bin_width);
+            }
+
+            return (arc::data::Table<double, T>(pos, _bins).str());
         }
 
 
