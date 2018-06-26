@@ -261,6 +261,13 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the row data of the table.
+         *
+         *  @tparam A   Types stored in data columns.
+         *
+         *  @return Row data of the table.
+         */
         template <typename... A>
         inline const std::vector<std::tuple<A...>>& Table<A...>::rows() const noexcept
         {
