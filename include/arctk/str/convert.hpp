@@ -56,8 +56,8 @@ namespace arc //! arctk namespace
             std::stringstream& _stream; //!< Stream to write to.
 
             //  -- Formatting --
-            const std::string _delim; //!< Delimiter added between elements.
-            const size_t      _width; //!< Print width allocated to each element.
+            const char   _delim; //!< Delimiter character added between elements.
+            const size_t _width; //!< Print width allocated to each element.
 
 
             //  == INSTANTIATION ==
@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
              *
              *  @param  stream_ Stream to write to.
              *  @param  width_  Print width allocated to each element.
-             *  @param  delim_  Delimiter added between elements.
+             *  @param  delim_  Delimiter character added between elements.
              */
             TupleToString(std::stringstream& stream_, const std::string& delim_, const size_t width_)
               : _stream(stream_)
@@ -99,11 +99,11 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         //  -- Conversion --
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
-        inline std::string to_string(const C& cont_, size_t width_ = 0, const std::string& pre_ = "{", const std::string& delim_ = ", ", const std::string& post_ = "}");
+        inline std::string to_string(const C& cont_, size_t width_ = 8, const std::string& pre_ = "{", const char delim_ = ',', const std::string& post_ = "}");
         template <typename A0, typename A1>
-        inline std::string to_string(const std::pair<A0, A1>& pair_, size_t width_ = 0, const std::string& pre_ = "(", const std::string& delim_ = ", ", const std::string& post_ = ")");
+        inline std::string to_string(const std::pair<A0, A1>& pair_, size_t width_ = 8, const std::string& pre_ = "(", const char delim_ = ',', const std::string& post_ = ")");
         template <typename... A>
-        inline std::string to_string(const std::tuple<A...>& tup_, size_t width_ = 0, const std::string& pre_ = "(", const std::string& delim_ = ", ", const std::string& post_ = ")");
+        inline std::string to_string(const std::tuple<A...>& tup_, size_t width_ = 8, const std::string& pre_ = "(", const char delim_ = ',', const std::string& post_ = ")");
 
         //  -- Time --
         inline std::string time(uint64_t us_) noexcept;
