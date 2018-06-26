@@ -146,7 +146,7 @@ namespace arc //! arctk namespace
             vec3 front = _dir;
             vec3 right = _dir ^ vec3(0.0, 0.0, 1.0);
 
-            if (math::is_zero(std::fabs(_dir.z) - 1.0))
+            if (math::zero(std::fabs(_dir.z) - 1.0))
             {
                 right = _dir ^ vec3(1.0, 0.0, 0.0);
             }
