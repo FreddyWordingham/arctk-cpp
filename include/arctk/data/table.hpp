@@ -217,6 +217,17 @@ namespace arc //! arctk namespace
 
         //  == OPERATORS ==
         //  -- Stream --
+        /**
+         *  Write the data table in a human-readable format.
+         *
+         *  @tparam S   Stream type to write to.
+         *  @tparam A   Types stored in data columns.
+         *
+         *  @param  stream_ Stream to write to.
+         *  @param  tab_    Table to be printed.
+         *
+         *  @return Reference to the stream post-print.
+         */
         template <typename S, typename... A>
         inline S& operator<<(S& stream_, const Table<A...>& tab_) noexcept
         {
