@@ -182,7 +182,7 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                if (math::is_zero(max))
+                if (math::zero(max))
                 {
                     max = 1.0;
                 }
