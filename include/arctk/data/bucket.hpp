@@ -92,10 +92,10 @@ namespace arc //! arctk namespace
                                         const T& val_) noexcept = 0; //!<  Collect a value into the bucket at a given position.  @tparam T   Type binned. @param  pos_    Position of the value to place.  @param  val_    Value to place within the bins.
 
             //  -- Printing --
-            inline std::string str(const char delim_ = format::DEFAULT_DELIM, const size_t width_ = 8) const noexcept;
+            inline std::string str(const char delim_ = format::DEFAULT_DELIM, const size_t width_ = format::DEFAULT_PRINT_WIDTH) const noexcept;
 
             //  -- Saving --
-            inline void save(const std::string& path_, const char delim_ = format::DEFAULT_DELIM, const size_t width_ = 8) const noexcept;
+            inline void save(const std::string& path_, const char delim_ = format::DEFAULT_DELIM, const size_t width_ = format::DEFAULT_PRINT_WIDTH) const noexcept;
         };
 
 
