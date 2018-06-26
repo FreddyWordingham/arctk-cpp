@@ -269,6 +269,17 @@ namespace arc //! arctk namespace
 
 
         //  -- Saving --
+        /**
+         *  Save bucket data as a csv file.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @param  path_   Path to the output file.
+         *  @param  delim_  Delimiter character used to seperate consecutive values.
+         *  @param  width_  Print width allocated to each value.
+         *
+         *  @pre    path_ may not be empty.
+         */
         template <typename T>
         inline void Bucket<T>::save(const std::string& path_, const char delim_, const size_t width_) const noexcept
         {
