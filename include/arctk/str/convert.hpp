@@ -70,7 +70,7 @@ namespace arc //! arctk namespace
              *  @param  width_  Print width allocated to each element.
              *  @param  delim_  Delimiter character added between elements.
              */
-            TupleToString(std::stringstream& stream_, const std::string& delim_, const size_t width_)
+            TupleToString(std::stringstream& stream_, const char delim_, const size_t width_)
               : _stream(stream_)
               , _delim(delim_)
               , _width(width_)
