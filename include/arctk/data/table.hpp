@@ -208,6 +208,18 @@ namespace arc //! arctk namespace
             return (rows);
         }
 
+        /**
+         *  Initialise a row of the table.
+         *
+         *  @tparam A   Types stored in data columns.
+         *
+         *  @tparam A   Types stored in vectors.
+         *
+         *  @param  index_  Index of the vectors to read form.
+         *  @param  vecs_   Vectors used to construct table.
+         *
+         *  @return Initialised data row.
+         */
         template <typename... A>
         template <typename... B>
         inline std::tuple<A...> Table<A...>::init_row(const size_t index_, const B&... vecs_) noexcept
