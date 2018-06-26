@@ -100,11 +100,11 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         //  -- Conversion --
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
-        inline std::string to_string(const C& cont_, size_t width_ = 8, const std::string& pre_ = "{", const char delim_ = format::DEFAULT_DELIM, const std::string& post_ = "}");
+        inline std::string to_string(const C& cont_, size_t width_ = format::DEFAULT_PRINT_WIDTH, const std::string& pre_ = "{", const char delim_ = format::DEFAULT_DELIM, const std::string& post_ = "}");
         template <typename A0, typename A1>
-        inline std::string to_string(const std::pair<A0, A1>& pair_, size_t width_ = 8, const std::string& pre_ = "(", const char delim_ = format::DEFAULT_DELIM, const std::string& post_ = ")");
+        inline std::string to_string(const std::pair<A0, A1>& pair_, size_t width_ = format::DEFAULT_PRINT_WIDTH, const std::string& pre_ = "(", const char delim_ = format::DEFAULT_DELIM, const std::string& post_ = ")");
         template <typename... A>
-        inline std::string to_string(const std::tuple<A...>& tup_, size_t width_ = 8, const std::string& pre_ = "(", const char delim_ = format::DEFAULT_DELIM, const std::string& post_ = ")");
+        inline std::string to_string(const std::tuple<A...>& tup_, size_t width_ = format::DEFAULT_PRINT_WIDTH, const std::string& pre_ = "(", const char delim_ = format::DEFAULT_DELIM, const std::string& post_ = ")");
 
         //  -- Time --
         inline std::string time(uint64_t us_) noexcept;
