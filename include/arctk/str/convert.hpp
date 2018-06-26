@@ -90,7 +90,7 @@ namespace arc //! arctk namespace
             template <typename L>
             void operator()(const L& val_, const size_t i_, const size_t /*unused*/)
             {
-                _stream << ((i_ == 0) ? '' : _delim) << std::setw(_width) << val_;
+                _stream << ((i_ == 0) ? ' ' : _delim) << std::setw(_width) << val_;
             }
         };
 
