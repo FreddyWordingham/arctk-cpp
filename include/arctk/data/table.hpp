@@ -29,6 +29,7 @@
 
 //  -- Arctk --
 #include <arctk/str.hpp>
+#include <arctk/sys.hpp>
 
 
 
@@ -254,6 +255,18 @@ namespace arc //! arctk namespace
             }
 
             return (stream.str());
+        }
+
+
+        //  -- Saving --
+        template <typename... A>
+        inline void Table<A...>::save(const std::string& path_, const size_t width_, const char delim_) const noexcept
+        {
+            assert(!path_.empty());
+
+            sys::file::Out file(path_);
+
+            file << str(width_, delim_);
         }
 
 
