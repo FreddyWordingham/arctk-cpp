@@ -30,7 +30,7 @@ namespace arc //! arctk namespace
         //  == CONSTANTS ==
         //  -- Formatting --
         constexpr const char DEFAULT_DELIM       = ','; //!< Default character used to delimit printed values.
-        constexpr const char DEFAULT_PRINT_WIDTH = 16;
+        constexpr const char DEFAULT_PRINT_WIDTH = 16;  //!< Default width allocated to each value print.
 
 
 
