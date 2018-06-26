@@ -726,7 +726,7 @@ namespace arc //! arctk namespace
         {
             math::Vec<T, 3> axis = axis_;
             axis.normalise();
-            assert(axis.normalised());
+            //            assert(axis.normalised());
 
             const double cos_theta = std::cos(ang_);
             const double sin_theta = std::sin(ang_);
