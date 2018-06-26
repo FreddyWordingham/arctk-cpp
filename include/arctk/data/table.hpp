@@ -77,6 +77,9 @@ namespace arc //! arctk namespace
             template <typename S, typename... _A>
             friend inline S& operator<<(S& stream_, const Table<_A...>& tab_) noexcept;
 
+            //  -- Access --
+            const std::tuple<A...>& operator[](const size_t index_) const noexcept;
+
 
             //  == METHODS ==
           public:
@@ -186,6 +189,14 @@ namespace arc //! arctk namespace
             stream_ << tab_.str();
 
             return (stream_);
+        }
+
+
+        //  -- Access --
+        template <typename... A>
+        const std::tuple<A...>& Table<A...>::operator[](const size_t index_) const noexcept
+        {
+            return (_rows[index_]);
         }
 
 
