@@ -26,6 +26,7 @@
 
 //  -- Arctk --
 #include <arctk/data/table.hpp>
+#include <arctk/format.hpp>
 
 
 
