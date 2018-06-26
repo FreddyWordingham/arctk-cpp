@@ -242,6 +242,15 @@ namespace arc //! arctk namespace
             return (_rows[index_]);
         }
 
+        /**
+         *  Access a row of the table.
+         *
+         *  @tparam A   Types stored in data columns.
+         *
+         *  @param  index_  Index of the row to access.
+         *
+         *  @return Reference to the requested row.
+         */
         template <typename... A>
         const std::tuple<A...>& Table<A...>::operator[](const size_t index_) const noexcept
         {
