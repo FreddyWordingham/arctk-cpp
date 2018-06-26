@@ -331,6 +331,14 @@ namespace arc //! arctk namespace
 
 
         //  -- Saving --
+        /**
+         *  Save data table as a csv file.
+         *
+         *  @tparam A   Types stored in data columns.
+         *
+         *  @param  delim_  Delimiter character used to seperate consecutive values.
+         *  @param  width_  Print width allocated to each value.
+         */
         template <typename... A>
         inline void Table<A...>::save(const std::string& path_, const char delim_, const size_t width_) const noexcept
         {
