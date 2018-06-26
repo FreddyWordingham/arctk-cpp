@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
             {
                 assert((g_ >= -1.0) && (g_ <= 1.0));
 
-                if (math::is_zero(g_))
+                if (math::zero(g_))
                 {
                     return (uniform<double>(rng_, 0.0, constant::PI));
                 }
