@@ -50,10 +50,6 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
-            //  -- Formatting --
-            char   _delim{','};
-            size_t _width{16};
-
             //  -- Data --
             std::vector<std::tuple<A...>> _rows; //!< Table row data.
 
