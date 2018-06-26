@@ -85,6 +85,9 @@ namespace arc //! arctk namespace
 
             //  -- Printing --
             inline std::string str(const char delim_ = ',', const size_t width_ = 8) const noexcept;
+
+            //  -- Saving --
+            inline void save(const std::string& path_, const char delim_ = ',', const size_t width_ = 8) const noexcept;
         };
 
 
@@ -221,6 +224,18 @@ namespace arc //! arctk namespace
             }
 
             return (arc::data::Table<double, T>(pos, _bins).str());
+        }
+
+
+        //  -- Saving --
+        template <typename T>
+        inline void Bucket<T>::save(const std::string& path_, const char delim_, const size_t width_) const noexcept
+        {
+            assert(!path_.empty());
+
+            sys::file::Out file(path_);
+
+            file << str(delim_, width_);
         }
 
 
