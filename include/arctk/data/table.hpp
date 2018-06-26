@@ -28,7 +28,7 @@
 #include <vector>
 
 //  -- Arctk --
-#include <arctk/format.hpp>
+#include <arctk/settings.hpp>
 #include <arctk/str.hpp>
 #include <arctk/sys.hpp>
 
