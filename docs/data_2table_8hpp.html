@@ -70,13 +70,19 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">table.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;tuple&gt;</code><br />
+<div class="textblock"><code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;<a class="el" href="str_8hpp_source.html">arctk/str.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="sys_8hpp_source.html">arctk/sys.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for table.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -84,6 +90,34 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="data_2table_8hpp__incl.png" border="0" usemap="#include_2arctk_2data_2table_8hpp" alt=""/></div>
 <map name="include_2arctk_2data_2table_8hpp" id="include_2arctk_2data_2table_8hpp">
+<area shape="rect" id="node7" href="str_8hpp.html" title="arctk/str.hpp" alt="" coords="2013,532,2107,557"/>
+<area shape="rect" id="node20" href="sys_8hpp.html" title="arctk/sys.hpp" alt="" coords="447,92,547,117"/>
+<area shape="rect" id="node8" href="convert_8hpp.html" title="arctk/str/convert.hpp" alt="" coords="1962,605,2104,631"/>
+<area shape="rect" id="node13" href="utl_8hpp.html" title="arctk/utl.hpp" alt="" coords="1682,679,1776,704"/>
+<area shape="rect" id="node14" href="utl_2container_8hpp.html" title="arctk/utl/container.hpp" alt="" coords="1733,752,1885,777"/>
+<area shape="rect" id="node16" href="multiarr_8hpp.html" title="arctk/utl/multiarr.hpp" alt="" coords="1275,752,1416,777"/>
+<area shape="rect" id="node17" href="utl_2multivec_8hpp.html" title="arctk/utl/multivec.hpp" alt="" coords="1909,752,2056,777"/>
+<area shape="rect" id="node18" href="pair_8hpp.html" title="arctk/utl/pair.hpp" alt="" coords="1590,752,1709,777"/>
+<area shape="rect" id="node19" href="tuple_8hpp.html" title="arctk/utl/tuple.hpp" alt="" coords="1439,752,1566,777"/>
+<area shape="rect" id="node21" href="args_8hpp.html" title="arctk/sys/args.hpp" alt="" coords="590,165,719,191"/>
+<area shape="rect" id="node41" href="file_8hpp.html" title="arctk/sys/file.hpp" alt="" coords="196,239,316,264"/>
+<area shape="rect" id="node42" href="app_8hpp.html" title="arctk/sys/file/app.hpp" alt="" coords="43,165,189,191"/>
+<area shape="rect" id="node44" href="in_8hpp.html" title="arctk/sys/file/in.hpp" alt="" coords="213,165,347,191"/>
+<area shape="rect" id="node45" href="out_8hpp.html" title="arctk/sys/file/out.hpp" alt="" coords="371,165,514,191"/>
+<area shape="rect" id="node22" href="parse_8hpp.html" title="arctk/parse.hpp" alt="" coords="713,239,826,264"/>
+<area shape="rect" id="node23" href="string_8hpp.html" title="arctk/parse/string.hpp" alt="" coords="953,312,1103,337"/>
+<area shape="rect" id="node25" href="log_8hpp.html" title="arctk/log.hpp" alt="" coords="1035,385,1133,411"/>
+<area shape="rect" id="node26" href="output_8hpp.html" title="arctk/log/output.hpp" alt="" coords="1045,532,1184,557"/>
+<area shape="rect" id="node27" href="term_8hpp.html" title="arctk/log/term.hpp" alt="" coords="639,605,767,631"/>
+<area shape="rect" id="node33" href="error_8hpp.html" title="arctk/log/output/error.hpp" alt="" coords="594,459,763,484"/>
+<area shape="rect" id="node35" href="message_8hpp.html" title="arctk/log/output/message.hpp" alt="" coords="1482,459,1678,484"/>
+<area shape="rect" id="node36" href="progress_8hpp.html" title="arctk/log/output/progress.hpp" alt="" coords="787,459,981,484"/>
+<area shape="rect" id="node37" href="stopwatch_8hpp.html" title="arctk/log/output/stopwatch.hpp" alt="" coords="1702,459,1904,484"/>
+<area shape="rect" id="node39" href="verbose_8hpp.html" title="arctk/log/output/verbose.hpp" alt="" coords="1056,459,1245,484"/>
+<area shape="rect" id="node40" href="warning_8hpp.html" title="arctk/log/output/warning.hpp" alt="" coords="1270,459,1458,484"/>
+<area shape="rect" id="node30" href="ansi_8hpp_source.html" title="arctk/ansi.hpp" alt="" coords="545,679,650,704"/>
+<area shape="rect" id="node31" href="foreground_8hpp.html" title="arctk/ansi/foreground.hpp" alt="" coords="526,752,698,777"/>
+<area shape="rect" id="node32" href="ansi_2utl_8hpp.html" title="arctk/ansi/utl.hpp" alt="" coords="380,752,502,777"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -113,6 +147,12 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacearc_1_1data"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1data.html">arc::data</a></td></tr>
 <tr class="memdesc:namespacearc_1_1data"><td class="mdescLeft">&#160;</td><td class="mdescRight">data namespace <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a941d55b6cb3ef7a616001b142615bf60"><td class="memTemplParams" colspan="2">template&lt;typename S , typename... A&gt; </td></tr>
+<tr class="memitem:a941d55b6cb3ef7a616001b142615bf60"><td class="memTemplItemLeft" align="right" valign="top">S &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1data.html#a941d55b6cb3ef7a616001b142615bf60">arc::data::operator&lt;&lt;</a> (S &amp;stream_, const Table&lt; A... &gt; &amp;tab_) noexcept</td></tr>
+<tr class="separator:a941d55b6cb3ef7a616001b142615bf60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section date"><dt>Date</dt><dd>24/06/2018 </dd></dl>
@@ -121,7 +161,7 @@ Namespaces</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 25 2018 15:05:55 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 26 2018 02:34:36 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
