@@ -30,6 +30,7 @@
 #include <utility>
 
 //  -- Arctk --
+#include <arctk/format.hpp>
 #include <arctk/utl.hpp>
 
 
