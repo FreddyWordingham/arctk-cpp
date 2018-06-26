@@ -94,10 +94,10 @@ namespace arc //! arctk namespace
             inline void set_width(size_t width_) noexcept;
 
             //  -- Printing --
-            inline std::string str(const char delim_, const size_t width_) const noexcept;
+            inline std::string str(const char delim_ = ',', const size_t width_ = 8) const noexcept;
 
             //  -- Saving --
-            inline void save(const std::string& path_, const char delim_, const size_t width_) const noexcept;
+            inline void save(const std::string& path_, const char delim_ = ',', const size_t width_ = 8) const noexcept;
         };
 
 
