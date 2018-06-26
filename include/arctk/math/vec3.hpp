@@ -726,9 +726,10 @@ namespace arc //! arctk namespace
         {
             assert(axis_.normalised());
 
-            const Vec<T, 3> in(x, y, z);
+            const double cos_theta = std::cos(ang_);
+            const double sin_theta = std::sin(ang_);
 
-            *this = (in * std::cos(ang_)) + ((axis_ ^ in) * std::sin(ang_)) + (axis_ * (axis_ * in) * (T{1.0} - std::cos(ang_)));
+            *this = (*this * cos_theta) + ((axis_ ^ *this) * sin_theta) + ((axis_ * (axis_ * *this)) * (1.0 - cos_theta));
         }
 
 
