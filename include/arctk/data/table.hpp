@@ -28,6 +28,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/format.hpp>
 #include <arctk/str.hpp>
 #include <arctk/sys.hpp>
 
@@ -59,7 +60,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Table(const std::string& serial_, char delim_ = ',') noexcept;
+            inline Table(const std::string& serial_, char delim_ = format::DEFAULT_DELIM) noexcept;
             template <typename T, typename... B>
             inline Table(const std::vector<T>& first_, const B&... vecs_) noexcept;
 
