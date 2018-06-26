@@ -116,6 +116,17 @@ namespace arc //! arctk namespace
         {
         }
 
+        /**
+         *  Construct a table from data vector columns.
+         *
+         *  @tparam A   Types stored in data columns.
+         *
+         *  @tparam T   First vector type.
+         *  @tparam B   Remaining types stored in vectors.
+         *
+         *  @param  first_  First vector used to construct table.
+         *  @param  vecs_   Remaining vectors used to construct table.
+         */
         template <typename... A>
         template <typename T, typename... B>
         inline Table<A...>::Table(const std::vector<T>& first_, const B&... vecs_) noexcept
