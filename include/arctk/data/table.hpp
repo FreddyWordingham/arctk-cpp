@@ -44,6 +44,8 @@ namespace arc //! arctk namespace
         //  == CLASS ==
         /**
          *  Data table class.
+         *
+         *  @tparam A   Types stored in data columns.
          */
         template <typename... A>
         class Table
