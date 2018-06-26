@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Table(const std::string& serial_, char delim_ = ',', size_t width_ = 16) noexcept;
+            inline Table(const std::string& serial_, char delim_ = ',') noexcept;
             template <typename T, typename... B>
             inline Table(const std::vector<T>& first_, const B&... vecs_) noexcept;
 
@@ -97,10 +97,8 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <typename... A>
-        inline Table<A...>::Table(const std::string& serial_, const char delim_, const size_t width_) noexcept
+        inline Table<A...>::Table(const std::string& serial_, const char delim_) noexcept
           : _rows(init_rows(serial_, delim_))
-          , _delim(delim_)
-          , _width(width_)
         {
         }
 
