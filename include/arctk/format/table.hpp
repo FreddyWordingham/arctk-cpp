@@ -41,7 +41,6 @@ namespace arc //! arctk namespace
         inline std::string rows(int width_, const std::string& delim_, A... args_);
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
         inline std::string rows(int width_, const std::string& delim_, const C& cont_) noexcept;
-
         template <typename... A>
         inline std::string cols(int width_, const std::string& delim_, A... args_);
         template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator, typename J = typename T::const_iterator>
