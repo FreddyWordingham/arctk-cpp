@@ -26,8 +26,6 @@
 #include <arctk/data/image.hpp>
 #include <arctk/data/image/greyscale.hpp>
 #include <arctk/data/table.hpp>
-#include <arctk/format.hpp>
-#include <arctk/format/settings.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/geom/collision.hpp>
 #include <arctk/geom/shape.hpp>
