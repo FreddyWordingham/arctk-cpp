@@ -67,6 +67,13 @@ namespace arc //! arctk namespace
             inline Bucket(double min_, double max_, size_t size_) noexcept;
 
 
+            //  == OPERATORS ==
+          public:
+            //  -- Stream --
+            template <typename S, typename _T>
+            friend inline S& operator<<(S& stream_, const Bucket<_T>& buck_) noexcept;
+
+
             //  == METHODS ==
           public:
             //  -- Getters --
@@ -115,6 +122,18 @@ namespace arc //! arctk namespace
         {
             assert(min_ < max_);
             assert(size_ > 0);
+        }
+
+
+
+        //  == OPERATORS ==
+        //  -- Stream --
+        template <typename S, typename T>
+        inline S& operator<<(S& stream_, const Bucket<T>& buck_) noexcept
+        {
+            stream_ << buck_.str();
+
+            return (stream_);
         }
 
 
