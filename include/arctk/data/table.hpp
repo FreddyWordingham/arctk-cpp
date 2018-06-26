@@ -387,6 +387,7 @@ namespace arc //! arctk namespace
          *
          *  @tparam A   Types stored in data columns.
          *
+         *  @param  path_   Path to the output file.
          *  @param  delim_  Delimiter character used to seperate consecutive values.
          *  @param  width_  Print width allocated to each value.
          *
