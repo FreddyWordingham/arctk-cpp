@@ -72,8 +72,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Stream --
             template <typename S, typename _T>
-            friend inline S& operator<<(S& stream_, const Bucket<_T>& buck_) noexcept; //<! Write the bucket data in a human-readable format. @tparam S   Stream type to write to. @tparam T   Type binned. @param  stream_ Stream to write to. @param  buck_
-                                                                                       //Bucket to be printed. @return Reference to the stream post-print.
+            friend inline S& operator<<(S& stream_, const Bucket<_T>& buck_) noexcept; //<! Write the bucket data in a human-readable format. @tparam S   Stream type to write to. @tparam _T  Type binned. @param  stream_ Stream to write to. @param  buck_
+                                                                                       // Bucket to be printed. @return Reference to the stream post-print.
 
             //  == METHODS ==
           public:
