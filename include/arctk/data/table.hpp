@@ -87,6 +87,20 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline const std::vector<std::tuple<A...>>& rows() const noexcept;
 
+            template <size_t I>
+            inline std::vector<typename std::tuple_element<I, std::tuple<A...>>::type> col() const noexcept
+            {
+                std::vector<typename std::tuple_element<I, std::tuple<A...>>::type> vec;
+
+                vec.reserve(_rows.size());
+                for (size_t i = 0; i < _rows.size(); ++i)
+                {
+                    vec.push_back(std::get<I>(_rows[i]));
+                }
+
+                return (vec);
+            }
+
             //  -- Printing --
             inline std::string str(const char delim_ = ',', const size_t width_ = 8) const noexcept;
 
