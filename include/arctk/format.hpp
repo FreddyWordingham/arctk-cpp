@@ -22,7 +22,6 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/format/settings.hpp>
-#include <arctk/format/table.hpp>
 
 
 
