@@ -64,6 +64,10 @@ namespace arc //! arctk namespace
             template <typename... A>
             constexpr inline explicit Mat(const A&... data_) noexcept;
 
+            //  -- Initialisation --
+            template <typename... A>
+            inline std::array<Vec<T, N>, N> init_data(const A&... data_) noexcept;
+
 
             //  == OPERATORS ==
           public:
@@ -83,6 +87,22 @@ namespace arc //! arctk namespace
           : _init_data(data_...)
         {
             static_assert(sizeof...(A) == N);
+        }
+
+
+        //  -- Initialisation --
+        template <typename T, size_t N>
+        template <typename... A>
+        inline std::array<Vec<T, N>, N>::init_data(const A... data_) noexcept
+        {
+            static_assert(sizeof...(A) == N);
+
+            std::array<Vec<T, N>, N> data;
+
+            size_t i = 0;
+            ((data[i] = data_, ++i), ...);
+
+            return (data);
         }
 
 
