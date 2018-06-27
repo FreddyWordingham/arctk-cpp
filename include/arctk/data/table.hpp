@@ -94,10 +94,10 @@ namespace arc //! arctk namespace
             inline std::vector<typename std::tuple_element<I, std::tuple<A...>>::type> col() const noexcept;
 
             //  -- Printing --
-            inline std::string str(const char delim_ = settings::DEFAULT_DELIM, const size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
+            inline std::string str(char delim_ = settings::DEFAULT_DELIM, size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
 
             //  -- Saving --
-            inline void save(const std::string& path_, const char delim_ = settings::DEFAULT_DELIM, const size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
+            inline void save(const std::string& path_, char delim_ = settings::DEFAULT_DELIM, size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
         };
 
 
