@@ -98,6 +98,10 @@ namespace arc //! arctk namespace
             constexpr inline Mat<T, N> operator*(const Mat<T, N>& mat_) const noexcept;
             constexpr inline Mat<T, N> operator/(T val_) const noexcept;
 
+            //  -- Access --
+            constexpr inline Vec<T, N>&       operator[](size_t index_) noexcept;
+            constexpr inline const Vec<T, N>& operator[](size_t index_) const noexcept;
+
 
             //  == METHODS ==
           public:
@@ -621,7 +625,7 @@ namespace arc //! arctk namespace
          *  @return A reference to the row requested.
          */
         template <typename T, size_t N>
-        constexpr inline T& Mat<T, N>::operator[](const size_t index_) noexcept
+        constexpr inline Vec<T, N>& Mat<T, N>::operator[](const size_t index_) noexcept
         {
             assert(index_ < N);
 
@@ -641,7 +645,7 @@ namespace arc //! arctk namespace
          *  @return A const reference to the row requested.
          */
         template <typename T, size_t N>
-        constexpr inline const T& Mat<T, N>::operator[](const size_t index_) const noexcept
+        constexpr inline const Vec<T, N>& Mat<T, N>::operator[](const size_t index_) const noexcept
         {
             assert(index_ < N);
 
