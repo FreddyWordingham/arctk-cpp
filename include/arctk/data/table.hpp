@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Table(const std::string& serial_, char delim_ = settings::DEFAULT_DELIM) noexcept;
+            inline explicit Table(const std::string& serial_, char delim_ = settings::DEFAULT_DELIM) noexcept;
             template <typename T, typename... B>
             inline Table(const std::vector<T>& first_, const B&... vecs_) noexcept;
 
