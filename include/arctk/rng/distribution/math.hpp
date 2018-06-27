@@ -58,13 +58,13 @@ namespace arc //! arctk namespace
             template <>
             inline double normal(Generator* rng_) noexcept
             {
-                static bool   generate = false;
-                static double z1;
+                static bool   static_generate = false;
+                static double static_z1;
 
-                generate = !generate;
-                if (!generate)
+                static_generate = !static_generate;
+                if (!static_generate)
                 {
-                    return (z1);
+                    return (static_z1);
                 }
 
                 const double u0 = rng_->gen();
@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
 
                 const double m  = std::sqrt(-2.0 * std::log(u0));
                 const double z0 = m * std::cos(2.0 * constant::PI * u1);
-                z1              = m * std::sin(2.0 * constant::PI * u1);
+                static_z1       = m * std::sin(2.0 * constant::PI * u1);
 
                 return (z0);
             }
