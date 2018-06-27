@@ -559,29 +559,6 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Calculate the dot-product of two mats.
-         *
-         *  @tparam T   Type stored by the mats.
-         *  @tparam N   Size of the mat.
-         *
-         *  @param  mat_    Mat to perform the dot-product with.
-         *
-         *  @return Dot-product of the mats.
-         */
-        template <typename T, size_t N>
-        constexpr inline T Mat<T, N>::operator*(const Mat<T, N>& mat_) const noexcept
-        {
-            T dot_prod{};
-
-            for (size_t i = 0; i < N; ++i)
-            {
-                dot_prod += _data[i] * mat_._data[i];
-            }
-
-            return (dot_prod);
-        }
-
-        /**
          *  Divide a mats elements by a value.
          *
          *  @tparam T   Type stored by the mat.
