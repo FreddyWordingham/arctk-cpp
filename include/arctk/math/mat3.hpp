@@ -40,6 +40,9 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
+         *  Thee by three mathematical square matrix class.
+         *
+         *  @tparam T   Type stored by the mat.
          */
         template <typename T>
         class Mat<T, 3>
