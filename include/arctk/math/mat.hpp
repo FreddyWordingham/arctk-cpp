@@ -291,7 +291,7 @@ namespace arc //! arctk namespace
                 {
                     if (j != 0)
                     {
-                        stream << delim_,
+                        stream << delim_;
                     }
 
                     stream << std::setw(width_) << _data[i][j];
