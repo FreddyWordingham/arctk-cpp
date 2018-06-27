@@ -58,15 +58,15 @@ namespace arc //! arctk namespace
         template <typename T>
         inline bool rectangular(const utl::MultiVec<T, 2>& vec_) noexcept
         {
-            if (vec.empty())
+            if (vec_.empty())
             {
                 return (true);
             }
 
-            const size_t size = vec.front().size();
-            for (size_t i = 1; i < vec.size(); ++i)
+            const size_t size = vec_.front().size();
+            for (size_t i = 1; i < vec_.size(); ++i)
             {
-                if (vec[i].size() != size)
+                if (vec_[i].size() != size)
                 {
                     return (false);
                 }
