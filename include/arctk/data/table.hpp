@@ -228,8 +228,6 @@ namespace arc //! arctk namespace
         /**
          *  Initialise a row of the table helper method.
          *
-         *  @tparam A   Types stored in data columns.
-         *
          *  @tparam I   Index sequence of B.
          *  @tparam B   Types stored in vectors.
          *
