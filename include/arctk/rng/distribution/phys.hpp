@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Henyey-Greenstein --
-            inline double henyey_greenstein(Generator& rng_, double g_) noexcept;
+            inline double henyey_greenstein(Generator* rng_, double g_) noexcept;
 
 
 
@@ -55,16 +55,16 @@ namespace arc //! arctk namespace
              *
              *  @return Angle drawn from Henyey-Greenstein phase function.
              */
-            inline double henyey_greenstein(Generator& rng_, const double g_) noexcept
+            inline double henyey_greenstein(Generator* rng_, const double g_) noexcept
             {
                 assert((g_ >= -1.0) && (g_ <= 1.0));
 
                 if (math::zero(g_))
                 {
-                    return (uniform<double>(rng_, 0.0, constant::PI));
+                    return (uniform<double>(&rng_, 0.0, constant::PI));
                 }
 
-                const double s = uniform<double>(rng_, -1.0, 1.0);
+                const double s = uniform<double>(&rng_, -1.0, 1.0);
                 return ((1.0 + math::sq(g_) - math::sq((1.0 - math::sq(g_)) / (1.0 + (g_ * s)))) / (2.0 * g_));
             }
 
