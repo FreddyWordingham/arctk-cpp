@@ -61,6 +61,13 @@ namespace arc //! arctk namespace
             virtual inline ~Image() noexcept = default;
 
 
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Image& operator=(const Image&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Image& operator=(Image&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
+
+
             //  == METHODS ==
           public:
             //  -- Getters --
