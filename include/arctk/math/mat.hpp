@@ -81,6 +81,12 @@ namespace arc //! arctk namespace
             constexpr inline Mat<T, N>& operator*=(T val_) noexcept;
             constexpr inline Mat<T, N>& operator/=(T val_) noexcept;
 
+            //  -- Increment / Decrement --
+            constexpr inline Mat<T, N>&      operator++() noexcept;
+            constexpr inline const Mat<T, N> operator++(int) noexcept;
+            constexpr inline Mat<T, N>&      operator--() noexcept;
+            constexpr inline const Mat<T, N> operator--(int) noexcept;
+
 
             //  == METHODS ==
           public:
@@ -247,6 +253,88 @@ namespace arc //! arctk namespace
             }
 
             return (*this);
+        }
+
+
+        //  -- Increment / Decrement --
+        /**
+         *  Increment each element of the mat.
+         *
+         *  @tparam T   Type stored by the mat.
+         *  @tparam N   Size of the mat.
+         *
+         *  @return A reference to this mat pre-increment.
+         */
+        template <typename T, size_t N>
+        constexpr inline Mat<T, N>& Mat<T, N>::operator++() noexcept
+        {
+            for (size_t i = 0; i < N; ++i)
+            {
+                ++_data[i];
+            }
+
+            return (*this);
+        }
+
+        /**
+         *  Increment each element of the mat.
+         *
+         *  @tparam T   Type stored by the mat.
+         *  @tparam N   Size of the mat.
+         *
+         *  @return A copy of this mat post-increment.
+         */
+        template <typename T, size_t N>
+        constexpr inline const Mat<T, N> Mat<T, N>::operator++(const int) noexcept
+        {
+            const Mat mat = *this;
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                ++_data[i];
+            }
+
+            return (mat);
+        }
+
+        /**
+         *  Decrement each element of the mat.
+         *
+         *  @tparam T   Type stored by the mat.
+         *  @tparam N   Size of the mat.
+         *
+         *  @return A reference to this mat pre-decrement.
+         */
+        template <typename T, size_t N>
+        constexpr inline Mat<T, N>& Mat<T, N>::operator--() noexcept
+        {
+            for (size_t i = 0; i < N; ++i)
+            {
+                --_data[i];
+            }
+
+            return (*this);
+        }
+
+        /**
+         *  Decrement each element of the mat.
+         *
+         *  @tparam T   Type stored by the mat.
+         *  @tparam N   Size of the mat.
+         *
+         *  @return A copy of this mat post-decrement.
+         */
+        template <typename T, size_t N>
+        constexpr inline const Mat<T, N> Mat<T, N>::operator--(const int) noexcept
+        {
+            const Mat mat = *this;
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                --_data[i];
+            }
+
+            return (mat);
         }
 
 
