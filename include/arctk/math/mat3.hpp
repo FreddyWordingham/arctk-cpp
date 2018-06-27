@@ -335,13 +335,17 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline Mat<T, N>& Mat<T, N>::operator--() noexcept
         {
-            for (size_t i = 0; i < N; ++i)
-            {
-                for (size_t j = 0; j < N; ++j)
-                {
-                    --_data[i][j];
-                }
-            }
+            --x.x;
+            --x.y;
+            --x.z;
+
+            --y.x;
+            --y.y;
+            --y.z;
+
+            --z.x;
+            --z.y;
+            --z.z;
 
             return (*this);
         }
