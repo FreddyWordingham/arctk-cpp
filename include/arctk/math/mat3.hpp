@@ -60,6 +60,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Mat3() noexcept = default;
+            inline Mat3(const Vec<T, 3>& x_, const Vec<T, 3>& y_, const Vec<T, 3>& z_) noexcept;
 
 
             //  == OPERATORS ==
@@ -72,6 +73,13 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        template <typename T>
+        inline Mat3<T, 3>::Mat3(const Vec<T, 3>& x_, const Vec<T, 3>& y_, const Vec<T, 3>& z_) noexcept
+          : x(x_)
+          , y(y_)
+          , z(z_)
+        {
+        }
 
 
 
