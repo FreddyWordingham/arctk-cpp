@@ -79,7 +79,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Stream --
             template <typename S, typename _T, size_t _N> // NOLINT
-            friend inline S& operator<<(S& stream_, const Vec<T, N>& vec_) noexcept;
+            friend inline S& operator<<(S& stream_, const Vec<_T, _N>& vec_) noexcept;
 
             //  -- Conversion --
             constexpr inline explicit operator std::array<T, N>() const noexcept;
