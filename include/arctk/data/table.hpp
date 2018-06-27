@@ -82,8 +82,8 @@ namespace arc //! arctk namespace
                                                                                         //!< @param  tab_    Table to be printed. @return Reference to the stream post-print.
 
             //  -- Access --
-            std::tuple<A...>&       operator[](const size_t index_) noexcept;
-            const std::tuple<A...>& operator[](const size_t index_) const noexcept;
+            std::tuple<A...>&       operator[](size_t index_) noexcept;
+            const std::tuple<A...>& operator[](size_t index_) const noexcept;
 
 
             //  == METHODS ==
