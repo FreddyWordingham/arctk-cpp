@@ -29,7 +29,10 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
-         *  Mathematical  class.
+         *  Mathematical square matrix class.
+         *
+         *  @tparam T   Type stored by the mat.
+         *  @tparam N   Size of the mat.
          */
         template <typename T, size_t N>
         class Mat
