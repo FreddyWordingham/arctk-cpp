@@ -124,14 +124,14 @@ namespace arc //! arctk namespace
         //  == OPERATORS ==
         //  -- Assignment --
         /**
-         *  Add a value to all elements of the vec.
+         *  Add a value to all elements of the mat.
          *
-         *  @tparam T   Type stored by the vec.
-         *  @tparam N   Size of the vec.
+         *  @tparam T   Type stored by the mat.
+         *  @tparam N   Size of the mat.
          *
-         *  @param  val_    Value to add to each vec element.
+         *  @param  val_    Value to add to each mat element.
          *
-         *  @return Reference to this vec post-operation.
+         *  @return Reference to this mat post-operation.
          */
         template <typename T, size_t N>
         constexpr inline Mat<T, N>& Mat<T, N>::operator+=(const T val_) noexcept
@@ -145,35 +145,35 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Add another vec's elements to each corresponding element of the vec.
+         *  Add another mat's elements to each corresponding element of the mat.
          *
-         *  @tparam T   Type stored by the vecs.
-         *  @tparam N   Size of the vec.
+         *  @tparam T   Type stored by the mats.
+         *  @tparam N   Size of the mat.
          *
-         *  @param  vec_    Vec to add to this vec.
+         *  @param  mat_    mat to add to this mat.
          *
-         *  @return Reference to this vec post-operation.
+         *  @return Reference to this mat post-operation.
          */
         template <typename T, size_t N>
-        constexpr inline Mat<T, N>& Mat<T, N>::operator+=(const Mat<T, N>& vec_) noexcept
+        constexpr inline Mat<T, N>& Mat<T, N>::operator+=(const Mat<T, N>& mat_) noexcept
         {
             for (size_t i = 0; i < N; ++i)
             {
-                _data[i] += vec_._data[i];
+                _data[i] += mat_._data[i];
             }
 
             return (*this);
         }
 
         /**
-         *  Subtract a value from all elements of the vec.
+         *  Subtract a value from all elements of the mat.
          *
-         *  @tparam T   Type stored by the vec.
-         *  @tparam N   Size of the vec.
+         *  @tparam T   Type stored by the mat.
+         *  @tparam N   Size of the mat.
          *
-         *  @param  val_    Value to subtract from each vec element.
+         *  @param  val_    Value to subtract from each mat element.
          *
-         *  @return Reference to this vec post-operation.
+         *  @return Reference to this mat post-operation.
          */
         template <typename T, size_t N>
         constexpr inline Mat<T, N>& Mat<T, N>::operator-=(const T val_) noexcept
@@ -187,35 +187,35 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Subtract another vec's elements from each corresponding element of the vec.
+         *  Subtract another mat's elements from each corresponding element of the mat.
          *
-         *  @tparam T   Type stored by the vecs.
-         *  @tparam N   Size of the vec.
+         *  @tparam T   Type stored by the mats.
+         *  @tparam N   Size of the mat.
          *
-         *  @param  vec_    Vec to subtract from this vec.
+         *  @param  mat_    mat to subtract from this mat.
          *
-         *  @return Reference to this vec post-operation.
+         *  @return Reference to this mat post-operation.
          */
         template <typename T, size_t N>
-        constexpr inline Mat<T, N>& Mat<T, N>::operator-=(const Mat<T, N>& vec_) noexcept
+        constexpr inline Mat<T, N>& Mat<T, N>::operator-=(const Mat<T, N>& mat_) noexcept
         {
             for (size_t i = 0; i < N; ++i)
             {
-                _data[i] -= vec_._data[i];
+                _data[i] -= mat_._data[i];
             }
 
             return (*this);
         }
 
         /**
-         *  Multiply all elements of the vec by a value.
+         *  Multiply all elements of the mat by a value.
          *
-         *  @tparam T   Type stored by the vec.
-         *  @tparam N   Size of the vec.
+         *  @tparam T   Type stored by the mat.
+         *  @tparam N   Size of the mat.
          *
-         *  @param  val_    Value used to multiply each vec element by.
+         *  @param  val_    Value used to multiply each mat element by.
          *
-         *  @return Reference to this vec post-operation.
+         *  @return Reference to this mat post-operation.
          */
         template <typename T, size_t N>
         constexpr inline Mat<T, N>& Mat<T, N>::operator*=(const T val_) noexcept
@@ -229,14 +229,14 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Divide all elements of the vec by a value.
+         *  Divide all elements of the mat by a value.
          *
-         *  @tparam T   Type stored by the vec.
-         *  @tparam N   Size of the vec.
+         *  @tparam T   Type stored by the mat.
+         *  @tparam N   Size of the mat.
          *
-         *  @param  val_    Value used to divide each vec element by.
+         *  @param  val_    Value used to divide each mat element by.
          *
-         *  @return Reference to this vec post-operation.
+         *  @return Reference to this mat post-operation.
          */
         template <typename T, size_t N>
         constexpr inline Mat<T, N>& Mat<T, N>::operator/=(const T val_) noexcept
