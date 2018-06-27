@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Mat3() noexcept = default;
+            constexpr inline Mat3() noexcept = default;
             inline Mat3(const Vec<T, 3>& x_, const Vec<T, 3>& y_, const Vec<T, 3>& z_) noexcept;
 
 
