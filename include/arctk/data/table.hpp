@@ -232,7 +232,6 @@ namespace arc //! arctk namespace
          *  @tparam B   Types stored in vectors.
          *
          *  @param  index_  Index of the vectors to read form.
-         *  @param  seq_    Index sequence of B.
          *  @param  vecs_   Vectors used to construct table.
          *
          *  @return Initialised data row.
