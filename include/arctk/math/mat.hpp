@@ -106,6 +106,9 @@ namespace arc //! arctk namespace
 
             //  -- Printing --
             inline std::string str(const char delim_ = settings::DEFAULT_DELIM, const size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
+
+            //  -- Mathematical --
+            constexpr inline T sum() const noexcept;
         };
 
 
@@ -662,6 +665,24 @@ namespace arc //! arctk namespace
             }
 
             return (stream.str());
+        }
+
+
+        //  -- Mathematical --
+        template <typename T, size_t N>
+        constexpr inline T Mat<T, N>::sum() const noexcept
+        {
+            T sum{};
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                for (size_t j = 0; j < N; ++j)
+                {
+                    sum += _data[i][j];
+                }
+            }
+
+            return (sum);
         }
 
 
