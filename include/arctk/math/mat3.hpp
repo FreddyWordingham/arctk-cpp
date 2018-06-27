@@ -50,9 +50,9 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           public:
             //  -- Data --
-            Vec<T, 3> x;
-            Vec<T, 3> y;
-            Vec<T, 3> z;
+            Vec<T, 3> x{};
+            Vec<T, 3> y{};
+            Vec<T, 3> z{};
 
 
             //  == INSTANTIATION ==
