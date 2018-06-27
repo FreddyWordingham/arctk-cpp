@@ -264,7 +264,7 @@ namespace arc //! arctk namespace
                 pos[i] = _min + ((i + 0.5) * _bin_width);
             }
 
-            return (arc::data::Table<double, T>(pos, _bins).str());
+            return (arc::data::Table<double, T>(pos, _bins).str(delim_, width_));
         }
 
 
