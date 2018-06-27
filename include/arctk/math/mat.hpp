@@ -69,8 +69,14 @@ namespace arc //! arctk namespace
             inline std::array<Vec<T, N>, N> init_data(const A&... data_) noexcept;
 
 
+
             //  == OPERATORS ==
           public:
+            //  -- Stream --
+            template <typename S, typename _T, size_t _N> // NOLINT
+            friend inline S& operator<<(S& stream_, const Mat<_T, _N>& mat_) noexcept;
+
+
             //  == METHODS ==
           public:
             //  -- Getters --
@@ -108,6 +114,14 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
+        //  -- Stream --
+        template <typename S, typename T, size_t N>
+        inline S& operator<<(S& stream_, const Mat<T, N>& mat_) noexcept
+        {
+            stream_ << str::to_string(mat_._data);
+
+            return (stream_);
+        }
 
 
 
