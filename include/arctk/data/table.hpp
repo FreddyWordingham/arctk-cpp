@@ -69,9 +69,9 @@ namespace arc //! arctk namespace
             template <typename T, typename... B>
             inline std::vector<std::tuple<A...>> init_rows(const std::vector<T>& first_, const B&... vecs_) noexcept;
             template <typename... B>
-            inline std::tuple<A...> init_row(const size_t index_, const B&... vecs_) noexcept;
+            inline std::tuple<A...> init_row(size_t index_, const B&... vecs_) noexcept;
             template <size_t... I, typename... B>
-            inline std::tuple<A...> init_row_helper(const size_t index_, std::index_sequence<I...> /*unused*/, const B&... vecs_) noexcept;
+            inline std::tuple<A...> init_row_helper(size_t index_, std::index_sequence<I...> /*unused*/, const B&... vecs_) noexcept;
 
 
             //  == OPERATORS ==
