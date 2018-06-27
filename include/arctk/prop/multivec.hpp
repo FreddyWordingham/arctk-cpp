@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
          *
          *  @tparam T   Base type stored by the multi-vec.
          *
-         *  @param  vec MulitVec to test.
+         *  @param  vec_    MulitVec to test.
          *
          *  @return True if all vectors stored by the vector are of the same length.
          */
