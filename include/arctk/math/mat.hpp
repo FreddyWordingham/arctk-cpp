@@ -168,7 +168,10 @@ namespace arc //! arctk namespace
         {
             for (size_t i = 0; i < N; ++i)
             {
-                _data[i] += mat_._data[i];
+                for (size_t j = 0; j < N; ++j)
+                {
+                    _data[i][j] += mat_._data[i][j];
+                }
             }
 
             return (*this);
