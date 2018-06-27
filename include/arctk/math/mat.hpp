@@ -83,8 +83,8 @@ namespace arc //! arctk namespace
         //  -- Constructors --
         template <typename T, size_t N>
         template <typename... A>
-        constexpr inline explicit Mat(const A&... data_) noexcept
-          : _init_data(data_...)
+        constexpr inline Mat<T, N>::Mat(const A&... data_) noexcept
+          : _data(init_data(data_...))
         {
             static_assert(sizeof...(A) == N);
         }
@@ -93,7 +93,7 @@ namespace arc //! arctk namespace
         //  -- Initialisation --
         template <typename T, size_t N>
         template <typename... A>
-        inline std::array<Vec<T, N>, N>::init_data(const A... data_) noexcept
+        inline std::array<Vec<T, N>, N> Mat<T, N>::init_data(const A&... data_) noexcept
         {
             static_assert(sizeof...(A) == N);
 
