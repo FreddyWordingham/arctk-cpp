@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
         template <typename T>
         inline bool zero(T x_) noexcept;
         template <typename T>
-        inline bool equal(const T x_, const T y_) noexcept;
+        inline bool equal(T x_, T y_) noexcept;
 
 
 
