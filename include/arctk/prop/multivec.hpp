@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         //  -- Layout --
         template <typename T>
-        inline bool rectangular(const utl::MultiVec<T, 2>& pixels) noexcept;
+        inline bool rectangular(const utl::MultiVec<T, 2>& vec_) noexcept;
 
 
 
@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
          *  @return True if all vectors stored by the vector are of the same length.
          */
         template <typename T>
-        inline bool rectangular(const utl::MultiVec<T, 2>& vec) noexcept
+        inline bool rectangular(const utl::MultiVec<T, 2>& vec_) noexcept
         {
             if (vec.empty())
             {
