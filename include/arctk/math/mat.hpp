@@ -575,7 +575,7 @@ namespace arc //! arctk namespace
                 {
                     for (size_t k = 0; k < N; ++k)
                     {
-                        mat._data[i][j] += _data[i][k] * mat_.data[k][j];
+                        mat._data[i][j] += _data[i][k] * mat_._data[k][j];
                     }
                 }
             }
