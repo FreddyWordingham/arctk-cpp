@@ -19,8 +19,8 @@
 
 
 
-asda            //  == NAMESPACE ==
-  namespace arc //! arctk namespace
+//  == NAMESPACE ==
+namespace arc //! arctk namespace
 {
     namespace math //! mathematical namespace
     {
