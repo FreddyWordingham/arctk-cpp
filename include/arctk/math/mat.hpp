@@ -108,7 +108,7 @@ namespace arc //! arctk namespace
             constexpr inline const std::array<Vec<T, N>, N>& data() const noexcept;
 
             //  -- Printing --
-            inline std::string str(const char delim_ = settings::DEFAULT_DELIM, const size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
+            inline std::string str(char delim_ = settings::DEFAULT_DELIM, size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
 
             //  -- Mathematical --
             constexpr inline T sum() const noexcept;
