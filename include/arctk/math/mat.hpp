@@ -61,6 +61,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             constexpr inline Mat() noexcept = default;
+            template <typename... A>
+            constexpr inline explicit Mat(const A&... data_) noexcept;
 
 
             //  == OPERATORS ==
@@ -75,6 +77,13 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        template <typename T, size_t N>
+        template <typename... A>
+        constexpr inline explicit Mat(const A&... data_) noexcept
+          : _init_data(data_...)
+        {
+            static_assert(sizeof...(A) == N);
+        }
 
 
 
