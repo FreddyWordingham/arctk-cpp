@@ -287,7 +287,7 @@ namespace arc //! arctk namespace
                     stream << '\n';
                 }
 
-                for (size_t j = 1; j < N; ++j)
+                for (size_t j = 0; j < N; ++j)
                 {
                     if (j != 0)
                     {
