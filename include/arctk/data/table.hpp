@@ -325,8 +325,6 @@ namespace arc //! arctk namespace
         /**
          *  Get a copy of a data column.
          *
-         *  @tparam A   Types stored in data columns.
-         *
          *  @tparam I   Index of the column to copy.
          *
          *  @return Copy of a data column.
