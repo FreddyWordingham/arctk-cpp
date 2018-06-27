@@ -61,10 +61,10 @@ namespace arc //! arctk namespace
 
                 if (math::zero(g_))
                 {
-                    return (uniform<double>(&rng_, 0.0, constant::PI));
+                    return (uniform<double>(rng_, 0.0, constant::PI));
                 }
 
-                const double s = uniform<double>(&rng_, -1.0, 1.0);
+                const double s = uniform<double>(rng_, -1.0, 1.0);
                 return ((1.0 + math::sq(g_) - math::sq((1.0 - math::sq(g_)) / (1.0 + (g_ * s)))) / (2.0 * g_));
             }
 
