@@ -23,6 +23,9 @@
 //  -- Std --
 #include <array>
 
+//  -- Arctk --
+#include <arctk/math/vec.hpp>
+
 
 
 //  == NAMESPACE ==
