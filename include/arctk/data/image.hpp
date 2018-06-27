@@ -54,6 +54,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Image(size_t width_, size_t height_) noexcept;
+            inline Image(const Image&) noexcept = default; //!< Defaulted copy constructor.
+            inline Image(Image&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
             virtual inline ~Image() noexcept = default;
