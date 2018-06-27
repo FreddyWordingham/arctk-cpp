@@ -60,6 +60,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            constexpr inline Mat() noexcept = default;
 
 
             //  == OPERATORS ==
