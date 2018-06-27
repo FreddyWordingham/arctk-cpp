@@ -65,6 +65,15 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
+            //  -- Assignment --
+            constexpr inline Mat<T, 3>& operator+=(T val_) noexcept;
+            constexpr inline Mat<T, 3>& operator+=(const Mat<T, 3>& mat_) noexcept;
+            constexpr inline Mat<T, 3>& operator-=(T val_) noexcept;
+            constexpr inline Mat<T, 3>& operator-=(const Mat<T, 3>& mat_) noexcept;
+            constexpr inline Mat<T, 3>& operator*=(T val_) noexcept;
+            constexpr inline Mat<T, 3>& operator/=(T val_) noexcept;
+
+
             //  == METHODS ==
           public:
         };
@@ -84,6 +93,154 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
+        //  -- Assignment --
+        /**
+         *  Add a value to all elements of the mat.
+         *
+         *  @tparam T   Type stored by the mat.
+         *  @tparam N   Size of the mat.
+         *
+         *  @param  val_    Value to add to each mat element.
+         *
+         *  @return Reference to this mat post-operation.
+         */
+        template <typename T, size_t N>
+        constexpr inline Mat<T, N>& Mat<T, N>::operator+=(const T val_) noexcept
+        {
+            x.x += val_;
+            x.y += val_;
+            x.z += val_;
+
+            y.x += val_;
+            y.y += val_;
+            y.z += val_;
+
+            z.x += val_;
+            z.y += val_;
+            z.z += val_;
+
+            return (*this);
+        }
+
+        /**
+         *  Add another mat's elements to each corresponding element of the mat.
+         *
+         *  @tparam T   Type stored by the mats.
+         *  @tparam N   Size of the mat.
+         *
+         *  @param  mat_    mat to add to this mat.
+         *
+         *  @return Reference to this mat post-operation.
+         */
+        template <typename T, size_t N>
+        constexpr inline Mat<T, N>& Mat<T, N>::operator+=(const Mat<T, N>& mat_) noexcept
+        {
+            for (size_t i = 0; i < N; ++i)
+            {
+                for (size_t j = 0; j < N; ++j)
+                {
+                    _data[i][j] += mat_._data[i][j];
+                }
+            }
+
+            return (*this);
+        }
+
+        /**
+         *  Subtract a value from all elements of the mat.
+         *
+         *  @tparam T   Type stored by the mat.
+         *  @tparam N   Size of the mat.
+         *
+         *  @param  val_    Value to subtract from each mat element.
+         *
+         *  @return Reference to this mat post-operation.
+         */
+        template <typename T, size_t N>
+        constexpr inline Mat<T, N>& Mat<T, N>::operator-=(const T val_) noexcept
+        {
+            for (size_t i = 0; i < N; ++i)
+            {
+                for (size_t j = 0; j < N; ++j)
+                {
+                    _data[i][j] -= val_;
+                }
+            }
+
+            return (*this);
+        }
+
+        /**
+         *  Subtract another mat's elements from each corresponding element of the mat.
+         *
+         *  @tparam T   Type stored by the mats.
+         *  @tparam N   Size of the mat.
+         *
+         *  @param  mat_    mat to subtract from this mat.
+         *
+         *  @return Reference to this mat post-operation.
+         */
+        template <typename T, size_t N>
+        constexpr inline Mat<T, N>& Mat<T, N>::operator-=(const Mat<T, N>& mat_) noexcept
+        {
+            for (size_t i = 0; i < N; ++i)
+            {
+                for (size_t j = 0; j < N; ++j)
+                {
+                    _data[i][j] -= mat_._data[i][j];
+                }
+            }
+
+            return (*this);
+        }
+
+        /**
+         *  Multiply all elements of the mat by a value.
+         *
+         *  @tparam T   Type stored by the mat.
+         *  @tparam N   Size of the mat.
+         *
+         *  @param  val_    Value used to multiply each mat element by.
+         *
+         *  @return Reference to this mat post-operation.
+         */
+        template <typename T, size_t N>
+        constexpr inline Mat<T, N>& Mat<T, N>::operator*=(const T val_) noexcept
+        {
+            for (size_t i = 0; i < N; ++i)
+            {
+                for (size_t j = 0; j < N; ++j)
+                {
+                    _data[i][j] *= val_;
+                }
+            }
+
+            return (*this);
+        }
+
+        /**
+         *  Divide all elements of the mat by a value.
+         *
+         *  @tparam T   Type stored by the mat.
+         *  @tparam N   Size of the mat.
+         *
+         *  @param  val_    Value used to divide each mat element by.
+         *
+         *  @return Reference to this mat post-operation.
+         */
+        template <typename T, size_t N>
+        constexpr inline Mat<T, N>& Mat<T, N>::operator/=(const T val_) noexcept
+        {
+            for (size_t i = 0; i < N; ++i)
+            {
+                for (size_t j = 0; j < N; ++j)
+                {
+                    _data[i][j] /= val_;
+                }
+            }
+
+            return (*this);
+        }
 
 
 
