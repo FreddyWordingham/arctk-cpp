@@ -239,7 +239,7 @@ namespace arc //! arctk namespace
          */
         template <typename... A>
         template <size_t... I, typename... B>
-        inline std::tuple<A...> Table<A...>::init_row_helper(const size_t index_, std::index_sequence<I...> seq_, const B&... vecs_) noexcept
+        inline std::tuple<A...> Table<A...>::init_row_helper(const size_t index_, std::index_sequence<I...> /*unused*/, const B&... vecs_) noexcept
         {
             std::tuple<A...> tup;
 
