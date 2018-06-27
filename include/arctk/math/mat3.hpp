@@ -135,13 +135,17 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline Mat<T, N>& Mat<T, N>::operator+=(const Mat<T, N>& mat_) noexcept
         {
-            for (size_t i = 0; i < N; ++i)
-            {
-                for (size_t j = 0; j < N; ++j)
-                {
-                    _data[i][j] += mat_._data[i][j];
-                }
-            }
+            x.x += mat_.x.x;
+            x.y += mat_.x.y;
+            x.z += mat_.x.z;
+
+            y.x += mat_.y.x;
+            y.y += mat_.y.y;
+            y.z += mat_.y.z;
+
+            z.x += mat_.z.x;
+            z.y += mat_.z.y;
+            z.z += mat_.z.z;
 
             return (*this);
         }
