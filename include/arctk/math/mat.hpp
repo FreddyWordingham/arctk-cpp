@@ -282,10 +282,19 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i < N; ++i)
             {
-                stream << _data[i][0];
+                if (i != 0)
+                {
+                    stream << '\n';
+                }
+
                 for (size_t j = 1; j < N; ++j)
                 {
-                    stream << delim_ << std::setw(width_) << _data[i][j];
+                    if (j != 0)
+                    {
+                        stream << delim_,
+                    }
+
+                    stream << std::setw(width_) << _data[i][j];
                 }
             }
 
