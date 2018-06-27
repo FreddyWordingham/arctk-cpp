@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Henyey-Greenstein --
-            inline double henyey_greenstein(Generator* const rng_, double g_) noexcept;
+            inline double henyey_greenstein(Generator* rng_, double g_) noexcept;
 
 
 
