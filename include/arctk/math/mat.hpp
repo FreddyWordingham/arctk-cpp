@@ -25,6 +25,7 @@
 
 //  -- Arctk --
 #include <arctk/math/vec.hpp>
+#include <arctk/settings.hpp>
 
 
 
@@ -89,6 +90,9 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             constexpr inline const std::array<Vec<T, N>, N>& data() const noexcept;
+
+            //  -- Printing --
+            inline std::string str(const char delim_ = settings::DEFAULT_DELIM, const size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
         };
 
 
@@ -267,6 +271,25 @@ namespace arc //! arctk namespace
         constexpr inline const std::array<Vec<T, N>, N>& Mat<T, N>::data() const noexcept
         {
             return (_data);
+        }
+
+
+        //  -- Printing --
+        template <typename T, size_t N>
+        inline std::string Mat<T, N>::str(const char delim_, const size_t width_) const noexcept
+        {
+            std::stringstream stream;
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                stream << _data[i][0];
+                for (size_t j = 1; j < N; ++j)
+                {
+                    stream << delim_ << std::setw(width_) << _data[i][j];
+                }
+            }
+
+            return (stream.str());
         }
 
 
