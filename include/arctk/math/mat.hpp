@@ -73,10 +73,6 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
-            //  -- Stream --
-            template <typename S, typename _T, size_t _N> // NOLINT
-            friend inline S& operator<<(S& stream_, const Mat<_T, _N>& mat_) noexcept;
-
             //  -- Assignment --
             constexpr inline Mat<T, N>& operator+=(T val_) noexcept;
             constexpr inline Mat<T, N>& operator+=(const Mat<T, N>& mat_) noexcept;
@@ -126,16 +122,6 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
-        //  -- Stream --
-        template <typename S, typename T, size_t N>
-        inline S& operator<<(S& stream_, const Mat<T, N>& mat_) noexcept
-        {
-            stream_ << str::to_string(mat_._data);
-
-            return (stream_);
-        }
-
-
         //  -- Assignment --
         /**
          *  Add a value to all elements of the vec.
