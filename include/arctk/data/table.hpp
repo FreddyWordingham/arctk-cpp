@@ -77,7 +77,7 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Stream --
-            template <typename S, typename... _A>
+            template <typename S, typename... _A>                                       // NOLINT
             friend inline S& operator<<(S& stream_, const Table<_A...>& tab_) noexcept; //!< Write the data table in a human-readable format. @tparam S   Stream type to write to. @tparam A   Types stored in data columns. @param  stream_ Stream to write to.
                                                                                         //!< @param  tab_    Table to be printed. @return Reference to the stream post-print.
 
