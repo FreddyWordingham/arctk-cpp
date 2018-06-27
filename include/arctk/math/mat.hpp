@@ -67,6 +67,8 @@ namespace arc //! arctk namespace
           public:
             //  == METHODS ==
           public:
+            //  -- Getters --
+            constexpr inline const std::array<Vec<T, N>, N>& data() const noexcept;
         };
 
 
@@ -77,6 +79,16 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        template <typename T, size_t N>
+        constexpr inline const std::array<Vec<T, N>, N>& Mat<T, N>::data() const noexcept
+        {
+            return (_data);
+        }
 
 
 
