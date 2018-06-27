@@ -298,7 +298,6 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
         -Wsuggest-override                      \
         -Wswitch                                \
         -Wswitch-bool                           \
-        -Wswitch-default                        \
         -Wswitch-enum                           \
         -Wswitch-unreachable                    \
         -Wsync-nand                             \
