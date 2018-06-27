@@ -70,7 +70,6 @@ namespace arc //! arctk namespace
             inline std::array<Vec<T, N>, N> init_data(const A&... data_) noexcept;
 
 
-
             //  == OPERATORS ==
           public:
             //  -- Assignment --
