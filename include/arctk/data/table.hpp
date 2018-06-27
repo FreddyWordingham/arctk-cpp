@@ -181,8 +181,6 @@ namespace arc //! arctk namespace
         /**
          *  Initialise the vector of data rows.
          *
-         *  @tparam A   Types stored in data columns.
-         *
          *  @tparam T   First vector type.
          *  @tparam B   Remaining types stored in vectors.
          *
