@@ -587,16 +587,16 @@ namespace arc //! arctk namespace
 
         //  -- Access --
         /**
-         *  Access an element of the mat.
+         *  Access a row of the mat.
          *
          *  @tparam T   Type stored by the mat.
          *  @tparam N   Size of the mat.
          *
-         *  @param  index_  Index of the element to access.
+         *  @param  index_  Index of the row to access.
          *
          *  @pre    index_ must be less than N.
          *
-         *  @return A reference to the element requested.
+         *  @return A reference to the row requested.
          */
         template <typename T, size_t N>
         constexpr inline T& Mat<T, N>::operator[](const size_t index_) noexcept
@@ -607,16 +607,16 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Access an element of the mat.
+         *  Access a row of the mat.
          *
          *  @tparam T   Type stored by the mat.
          *  @tparam N   Size of the mat.
          *
-         *  @param  index_  Index of the element to access.
+         *  @param  index_  Index of the row to access.
          *
          *  @pre    index_ must be less than N.
          *
-         *  @return A const reference to the element requested.
+         *  @return A const reference to the row requested.
          */
         template <typename T, size_t N>
         constexpr inline const T& Mat<T, N>::operator[](const size_t index_) const noexcept
