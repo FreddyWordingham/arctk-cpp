@@ -95,7 +95,7 @@ namespace arc //! arctk namespace
             constexpr inline Mat<T, N> operator-(T val_) const noexcept;
             constexpr inline Mat<T, N> operator-(const Mat<T, N>& mat_) const noexcept;
             constexpr inline Mat<T, N> operator*(T val_) const noexcept;
-
+            constexpr inline Mat<T, N> operator*(const Mat<T, N>& mat_) const noexcept;
             constexpr inline Mat<T, N> operator/(T val_) const noexcept;
 
 
@@ -555,6 +555,25 @@ namespace arc //! arctk namespace
                 for (size_t j = 0; j < N; ++j)
                 {
                     mat._data[i][j] = _data[i][j] * val_;
+                }
+            }
+
+            return (mat);
+        }
+
+        template <typename T, size_t N>
+        constexpr inline Mat<T, N> Mat<T, N>::operator*(const Mat<T, N>& mat_) const noexcept
+        {
+            Mat mat;
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                for (size_t j = 0; j < N; ++j)
+                {
+                    for (size_t k = 0; k < N; ++k)
+                    {
+                        mat._data[i][j] += _data[i][k] * mat_.data[k][j];
+                    }
                 }
             }
 
