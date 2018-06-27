@@ -327,8 +327,6 @@ namespace arc //! arctk namespace
                         case Uniform::stored::MAT4:
                             glUniformMatrix4fv(uni.handle(), 1, GL_FALSE, &act_.mat4_uniform(key)[0][0]);
                             break;
-                        default:
-                            ERROR(42) << "Unreachable code reached.";
                     }
                 }
             }
