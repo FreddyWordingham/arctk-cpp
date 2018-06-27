@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <array>
 #include <cassert>
 #include <cmath>
 
