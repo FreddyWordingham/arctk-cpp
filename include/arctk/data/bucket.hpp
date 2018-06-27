@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Stream --
-            template <typename S, typename _T>
+            template <typename S, typename _T>                                         // NOLINT
             friend inline S& operator<<(S& stream_, const Bucket<_T>& buck_) noexcept; //!< Write the bucket data in a human-readable format. @tparam S   Stream type to write to. @tparam _T  Type binned. @param  stream_ Stream to write to. @param  buck_
                                                                                        //!< Bucket to be printed. @return Reference to the stream post-print.
 
