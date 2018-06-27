@@ -38,11 +38,12 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Guassian --
             template <typename T>
-            inline T normal(Generator* rng_) noexcept; //!< Generate a random number drawn from the normal distribution. @tparam T Type to draw from normal distribution. @param  rng_    Generator used to draw base values from. @return Value randomly drawn
-                                                       //!< from normal distribution.
+            inline T normal(Generator* const rng_) noexcept; //!< Generate a random number drawn from the normal distribution. @tparam T Type to draw from normal distribution. @param  rng_    Generator used to draw base values from. @return Value randomly
+                                                             //!< drawn from normal distribution.
             template <typename T>
-            inline T guassian(Generator* rng_, T mu_, T sigma_) noexcept; //!< Generate a random number drawn from a gaussian distribution.  @tparam T Type to draw from guassian distribution. @param  rng_    Generator used to draw base values from. @param
-                                                                          //!< mu_     Average value of the gaussian distribution. @param  sigma_  Variance of the gaussian distribution. @return Value randomly drawn from the gaussian distribution.
+            inline T guassian(Generator* const rng_, T mu_,
+                              T sigma_) noexcept; //!< Generate a random number drawn from a gaussian distribution.  @tparam T Type to draw from guassian distribution. @param  rng_    Generator used to draw base values from. @param mu_     Average value of
+                                                  //!< the gaussian distribution. @param  sigma_  Variance of the gaussian distribution. @return Value randomly drawn from the gaussian distribution.
 
 
 
@@ -56,7 +57,7 @@ namespace arc //! arctk namespace
              *  @return Value randomly drawn from normal distribution.
              */
             template <>
-            inline double normal(Generator* rng_) noexcept
+            inline double normal(Generator* const rng_) noexcept
             {
                 static bool   static_generate = false;
                 static double static_z1;
@@ -89,7 +90,7 @@ namespace arc //! arctk namespace
              *  @return Value randomly drawn from the gaussian distribution.
              */
             template <>
-            inline double guassian(Generator* rng_, const double mu_, const double sigma_) noexcept
+            inline double guassian(Generator* const rng_, const double mu_, const double sigma_) noexcept
             {
                 assert(sigma_ > 0.0);
 
