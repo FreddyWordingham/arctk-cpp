@@ -211,8 +211,6 @@ namespace arc //! arctk namespace
         /**
          *  Initialise a row of the table.
          *
-         *  @tparam A   Types stored in data columns.
-         *
          *  @tparam B   Types stored in vectors.
          *
          *  @param  index_  Index of the vectors to read form.
