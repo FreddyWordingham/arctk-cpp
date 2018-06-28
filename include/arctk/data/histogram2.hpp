@@ -85,7 +85,7 @@ namespace arc //! arctk namespace
             inline const vec2&                        max() const noexcept;
             inline const vec2&                        bin_width() const noexcept;
             inline const std::vector<std::vector<T>>& bins() const noexcept;
-            inline size_t                             size() const noexcept;
+            inline const vec2s&                       size() const noexcept;
             inline double                             centre(size_t index_) const noexcept;
             inline std::vector<double>                centres() const noexcept;
 
@@ -196,7 +196,7 @@ namespace arc //! arctk namespace
          *  @return Size of the bin data bins vector.
          */
         template <typename T>
-        inline size_t Histogram<T, 2>::size() const noexcept
+        inline const vec2s& Histogram<T, 2>::size() const noexcept
         {
             return (_bins.size());
         }
