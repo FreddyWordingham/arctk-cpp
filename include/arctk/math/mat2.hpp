@@ -515,7 +515,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline T Mat<T, 2>::sum() const noexcept
         {
-            return (x.x + x.y + x.z + y.x + y.y + y.z + z.x + z.y + z.z);
+            return (x.x + x.y + y.x + y.y);
         }
 
 
