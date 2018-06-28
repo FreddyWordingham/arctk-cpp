@@ -111,7 +111,7 @@ namespace arc //! arctk namespace
          *  @pre    Size_ must be positive.
          */
         template <typename T>
-        inline Histogram<T>::Histogram(const double min_, const double max_, const size_t size_) noexcept
+        inline Histogram<T, 1>::Histogram(const double min_, const double max_, const size_t size_) noexcept
           : _min(min_)
           , _max(max_)
           , _bin_width((max_ - min_) / size_)
