@@ -129,7 +129,6 @@ namespace arc //! arctk namespace
          *  Add a value to all elements of the mat.
          *
          *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
          *
          *  @param  val_    Value to add to each mat element.
          *
