@@ -118,7 +118,7 @@ namespace arc //! arctk namespace
              *  @param  val_    Value to place within the bins.
              */
             template <typename T>
-            inline void Fixed<T>::collect(const double pos_, const T& val_) noexcept
+            inline void Fixed<T, 1>::collect(const double pos_, const T& val_) noexcept
             {
                 if ((pos_ < Bucket<T>::_min) || (pos_ > Bucket<T>::_max))
                 {
