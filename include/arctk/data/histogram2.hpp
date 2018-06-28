@@ -87,7 +87,7 @@ namespace arc //! arctk namespace
             inline const std::vector<std::vector<T>>& bins() const noexcept;
             inline const vec2s&                       size() const noexcept;
             inline vec2                               centre(const vec2s& index_) const noexcept;
-            inline std::vector<double>                centres() const noexcept;
+            inline std::vector<std::vector<double>>   centres() const noexcept;
 
             //  -- Searching --
             inline size_t find_index(double pos_) noexcept;
@@ -211,13 +211,16 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        inline std::vector<double> Histogram<T, 2>::centres() const noexcept
+        inline std::vector<std::vector<double>> Histogram<T, 2>::centres() const noexcept
         {
-            std::vector<double> centres(_bins.size());
+            std::vector<double> centres(std::vector<double>(_bins.front().size()), _bins.size());
 
             for (size_t i = 0; i < centres.size(); ++i)
             {
-                centres[i] = centre(i);
+                for (size_t j = 0; j < centres.size(); ++j)
+                {
+                    centres[i][j] = centre(vec2s(i, j));
+                }
             }
 
             return (centres);
