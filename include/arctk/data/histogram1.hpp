@@ -33,6 +33,9 @@
 #include <string>
 #include <vector>
 
+//  -- Arctk --
+#include <arctk/settings.hpp>
+
 
 
 //  == NAMESPACE ==
