@@ -71,6 +71,9 @@ namespace arc //! arctk namespace
             inline double                bin_width() const noexcept;
             inline const std::vector<T>& bins() const noexcept;
             inline size_t                size() const noexcept;
+
+            //  -- Searching --
+            inline size_t find_index(double pos_) noexcept;
         };
 
 
@@ -167,6 +170,31 @@ namespace arc //! arctk namespace
         inline size_t Histogram<T, 1>::size() const noexcept
         {
             return (_bins.size());
+        }
+
+
+        //  -- Searching --
+        /**
+         *  Determine the index of the bin a position belongs in.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @param  pos_    Position to place within the bin.
+         *
+         *  @pre    pos_ must be greater than, or equal to, the minimum bound of the histogram.
+         *  @pre    pos_ must be less than, or equal to, the maximum bound of the histogram.
+         *
+         *  @return Index of the bin to corresponding to the given position.
+         */
+        template <typename T>
+        inline size_t Histogram<T, 1>::find_index(const double pos_) noexcept
+        {
+            assert(pos_ >= _min);
+            assert(pos_ <= _max);
+
+            const auto index = static_cast<size_t>((pos_ - _min) / _bin_width);
+
+            return ((index == _bins.size()) ? (index - 1) : index);
         }
 
 
