@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/data/histogram1.hpp
+ *  @file   arctk/data/histogram2.hpp
  *  @date   28/06/2018
  *  @author Freddy Wordingham
  *
- *  One-dimensional data binning class.
+ *  Two-dimensional data binning class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_HISTOGRAM1_HPP
-#define ARCTK_DATA_HISTOGRAM1_HPP
+#ifndef ARCTK_DATA_HISTOGRAM2_HPP
+#define ARCTK_DATA_HISTOGRAM2_HPP
 
 
 
@@ -34,6 +34,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/math.hpp>
 #include <arctk/settings.hpp>
 #include <arctk/sys.hpp>
 
@@ -49,12 +50,12 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
-         *  One-dimensional data binning class.
+         *  Two-dimensional data binning class.
          *
          *  @tparam T   Type binned.
          */
         template <typename T>
-        class Histogram<T, 1>
+        class Histogram<T, 2>
         {
             //  == FIELDS ==
           protected:
@@ -119,7 +120,7 @@ namespace arc //! arctk namespace
          *  @pre    Size_ must be positive.
          */
         template <typename T>
-        inline Histogram<T, 1>::Histogram(const double min_, const double max_, const size_t size_) noexcept
+        inline Histogram<T, 2>::Histogram(const double min_, const double max_, const size_t size_) noexcept
           : _min(min_)
           , _max(max_)
           , _bin_width((max_ - min_) / size_)
@@ -141,7 +142,7 @@ namespace arc //! arctk namespace
          *  @return Minimum bound of the histogram.
          */
         template <typename T>
-        inline double Histogram<T, 1>::min() const noexcept
+        inline double Histogram<T, 2>::min() const noexcept
         {
             return (_min);
         }
@@ -154,7 +155,7 @@ namespace arc //! arctk namespace
          *  @return Maximum bound of the histogram.
          */
         template <typename T>
-        inline double Histogram<T, 1>::max() const noexcept
+        inline double Histogram<T, 2>::max() const noexcept
         {
             return (_max);
         }
@@ -167,7 +168,7 @@ namespace arc //! arctk namespace
          *  @return Width of the histogram's bins.
          */
         template <typename T>
-        inline double Histogram<T, 1>::bin_width() const noexcept
+        inline double Histogram<T, 2>::bin_width() const noexcept
         {
             return (_bin_width);
         }
@@ -180,7 +181,7 @@ namespace arc //! arctk namespace
          *  @return Bin data of the histogram.
          */
         template <typename T>
-        inline const std::vector<T>& Histogram<T, 1>::bins() const noexcept
+        inline const std::vector<T>& Histogram<T, 2>::bins() const noexcept
         {
             return (_bins);
         }
@@ -193,13 +194,13 @@ namespace arc //! arctk namespace
          *  @return Size of the bin data bins vector.
          */
         template <typename T>
-        inline size_t Histogram<T, 1>::size() const noexcept
+        inline size_t Histogram<T, 2>::size() const noexcept
         {
             return (_bins.size());
         }
 
         template <typename T>
-        inline double Histogram<T, 1>::centre(const size_t index_) const noexcept
+        inline double Histogram<T, 2>::centre(const size_t index_) const noexcept
         {
             assert(index_ < _bins.size());
 
@@ -207,7 +208,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        inline std::vector<double> Histogram<T, 1>::centres() const noexcept
+        inline std::vector<double> Histogram<T, 2>::centres() const noexcept
         {
             std::vector<double> centres(_bins.size());
 
@@ -234,7 +235,7 @@ namespace arc //! arctk namespace
          *  @return Index of the bin to corresponding to the given position.
          */
         template <typename T>
-        inline size_t Histogram<T, 1>::find_index(const double pos_) noexcept
+        inline size_t Histogram<T, 2>::find_index(const double pos_) noexcept
         {
             assert(pos_ >= _min);
             assert(pos_ <= _max);
@@ -257,9 +258,9 @@ namespace arc //! arctk namespace
          *  @return Human readable string of the histogram data.
          */
         template <typename T>
-        inline std::string Histogram<T, 1>::str(const char delim_, const size_t width_) const noexcept
+        inline std::string Histogram<T, 2>::str(const char delim_, const size_t width_) const noexcept
         {
-            const std::vector<double> centres = Histogram<T, 1>::centres();
+            const std::vector<double> centres = Histogram<T, 2>::centres();
 
             std::stringstream stream;
 
@@ -290,7 +291,7 @@ namespace arc //! arctk namespace
          *  @pre    path_ may not be empty.
          */
         template <typename T>
-        inline void Histogram<T, 1>::save(const std::string& path_, const char delim_, const size_t width_) const noexcept
+        inline void Histogram<T, 2>::save(const std::string& path_, const char delim_, const size_t width_) const noexcept
         {
             assert(!path_.empty());
 
@@ -312,4 +313,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_DATA_HISTOGRAM1_HPP
+#endif // ARCTK_DATA_HISTOGRAM2_HPP
