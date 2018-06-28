@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/data/hist.hpp
+ *  @file   arctk/data/histogram.hpp
  *  @date   28/06/2018
  *  @author Freddy Wordingham
  *
