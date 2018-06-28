@@ -213,7 +213,7 @@ namespace arc //! arctk namespace
         template <typename T>
         inline std::vector<std::vector<double>> Histogram<T, 2>::centres() const noexcept
         {
-            std::vector<double> centres(std::vector<double>(_bins.front().size()), _bins.size());
+            std::vector<std::vector<double>> centres(std::vector<double>(_bins.front().size()), _bins.size());
 
             for (size_t i = 0; i < centres.size(); ++i)
             {
