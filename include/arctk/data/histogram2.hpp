@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Bin --
-            double _bin_width; //!< Width of the bins.
+            vec2 _bin_width; //!< Width of the bins.
 
           protected:
             //  -- Data --
