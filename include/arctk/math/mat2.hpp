@@ -161,15 +161,9 @@ namespace arc //! arctk namespace
         {
             x.x += mat_.x.x;
             x.y += mat_.x.y;
-            x.z += mat_.x.z;
 
             y.x += mat_.y.x;
             y.y += mat_.y.y;
-            y.z += mat_.y.z;
-
-            z.x += mat_.z.x;
-            z.y += mat_.z.y;
-            z.z += mat_.z.z;
 
             return (*this);
         }
