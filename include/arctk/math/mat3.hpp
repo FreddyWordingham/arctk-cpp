@@ -113,6 +113,15 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        /**
+         *  Construct a three by three mat with initial element values.
+         *
+         *  @tparam T   Type stored by the mat.
+         *
+         *  @param  x_  Initial values of the x row.
+         *  @param  y_  Initial values of the y row.
+         *  @param  z_  Initial values of the z row.
+         */
         template <typename T>
         constexpr inline Mat<T, 3>::Mat(const Vec<T, 3>& x_, const Vec<T, 3>& y_, const Vec<T, 3>& z_) noexcept
           : x(x_)
