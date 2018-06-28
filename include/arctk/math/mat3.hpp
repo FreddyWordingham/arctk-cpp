@@ -103,7 +103,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Printing --
-            inline std::string str(char delim_ = settings::DEFAULT_DELIM, size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
+            constexpr inline std::string str(char delim_ = settings::DEFAULT_DELIM, size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
 
             //  -- Mathematical --
             constexpr inline T sum() const noexcept;
@@ -680,7 +680,7 @@ namespace arc //! arctk namespace
         //  == METHODS ==
         //  -- Printing --
         template <typename T>
-        inline std::string Mat<T, 3>::str(const char delim_, const size_t width_) const noexcept
+        constexpr inline std::string Mat<T, 3>::str(const char delim_, const size_t width_) const noexcept
         {
             std::stringstream stream;
 
