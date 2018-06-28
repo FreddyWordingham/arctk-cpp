@@ -24,6 +24,7 @@
 #include <cmath>
 
 //  -- Arctk --
+#include <arctk/constant.hpp>
 #include <arctk/rng/generator.hpp>
 
 
