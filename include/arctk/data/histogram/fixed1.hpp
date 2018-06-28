@@ -44,6 +44,10 @@ namespace arc //! arctk namespace
             template <typename T>
             class Fixed<T, 1>
             {
+                //  == FIELDS ==
+              private:
+                //  -- Counts --
+                T _misses{}; //!< Number of range misses.
             };
 
 
