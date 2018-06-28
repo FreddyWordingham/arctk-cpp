@@ -116,7 +116,7 @@ namespace arc //! arctk namespace
          *  @param  size_   Number of bins.
          *
          *  @pre    min_ must be less than max_.
-         *  @pre    Size_ must be positive.
+         *  @pre    size_ must be positive.
          */
         template <typename T>
         inline Histogram<T, 1>::Histogram(const double min_, const double max_, const size_t size_) noexcept
