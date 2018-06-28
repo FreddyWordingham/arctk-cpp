@@ -552,13 +552,17 @@ namespace arc //! arctk namespace
         {
             Mat mat;
 
-            for (size_t i = 0; i < N; ++i)
-            {
-                for (size_t j = 0; j < N; ++j)
-                {
-                    mat._data[i][j] = _data[i][j] - mat_._data[i][j];
-                }
-            }
+            mat.x.x = x.x - mat_.x.x;
+            mat.x.y = x.y - mat_.x.y;
+            mat.x.z = x.z - mat_.x.z;
+
+            mat.y.x = y.x - mat_.y.x;
+            mat.y.y = y.y - mat_.y.y;
+            mat.y.z = y.z - mat_.y.z;
+
+            mat.z.x = z.x - mat_.z.x;
+            mat.z.y = z.y - mat_.z.y;
+            mat.z.z = z.z - mat_.z.z;
 
             return (mat);
         }
