@@ -251,7 +251,7 @@ namespace arc //! arctk namespace
         template <typename T>
         inline std::string Histogram<T, 1>::str(const char delim_, const size_t width_) const noexcept
         {
-            const std::vector<double> centres = centres();
+            const std::vector<double> centres = Histogram<T, 1>::centres();
 
             std::stringstream stream;
 
