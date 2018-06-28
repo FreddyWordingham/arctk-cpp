@@ -150,7 +150,7 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Construct a vec2 with initial element values.
+         *  Construct a two-dimensional vec with initial element values.
          *
          *  @tparam T   Type stored by the vec.
          *
