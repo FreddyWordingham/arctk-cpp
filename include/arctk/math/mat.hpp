@@ -586,6 +586,16 @@ namespace arc //! arctk namespace
             return (mat);
         }
 
+        /**
+         *  Multiply two mats together.
+         *
+         *  @tparam T   Type stored by the mat.
+         *  @tparam N   Size of the mat.
+         *
+         *  @param  mat_    Right hand side mat of the operation.
+         *
+         *  @return Mat formed by multiplying the two mats together.
+         */
         template <typename T, size_t N>
         constexpr inline Mat<T, N> Mat<T, N>::operator*(const Mat<T, N>& mat_) const noexcept
         {
