@@ -203,7 +203,7 @@ namespace arc //! arctk namespace
         {
             assert(index_ < _bins.size());
 
-            return (_min + ((static_cast<double>(index_) + 0.5) * (_max - _min)));
+            return (_min + ((static_cast<double>(index_) + 0.5) * _bin_width));
         }
 
         template <typename T>
