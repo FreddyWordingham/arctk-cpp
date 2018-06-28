@@ -41,6 +41,10 @@ namespace arc //! arctk namespace
             //  -- Bounds --
             double _min; //!< Minimum bound of the histogram range.
             double _max; //!< Maximum bound of the histogram range.
+
+          private:
+            //  -- Bin --
+            double _bin_width; //!< Width of the bins.
         };
 
 
