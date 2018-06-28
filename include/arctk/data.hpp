@@ -24,6 +24,7 @@
 #include <arctk/data/histogram.hpp>
 #include <arctk/data/histogram/fixed.hpp>
 #include <arctk/data/histogram/fixed1.hpp>
+#include <arctk/data/histogram/fixed2.hpp>
 #include <arctk/data/histogram1.hpp>
 #include <arctk/data/histogram2.hpp>
 #include <arctk/data/image.hpp>
