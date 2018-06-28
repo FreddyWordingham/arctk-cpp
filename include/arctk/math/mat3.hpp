@@ -675,28 +675,14 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Printing --
-        template <typename T, size_t N>
-        inline std::string Mat<T, N>::str(const char delim_, const size_t width_) const noexcept
+        template <typename T>
+        inline std::string Mat<T, 3>::str(const char delim_, const size_t width_) const noexcept
         {
             std::stringstream stream;
 
-            for (size_t i = 0; i < N; ++i)
-            {
-                if (i != 0)
-                {
-                    stream << '\n';
-                }
-
-                for (size_t j = 0; j < N; ++j)
-                {
-                    if (j != 0)
-                    {
-                        stream << delim_;
-                    }
-
-                    stream << std::setw(width_) << _data[i][j];
-                }
-            }
+            stream << std::setw(width_) << x.x << delim_ << std::setw(width_) << x.y << delim_ << std::setw(width_) << x.z << "\n";
+            stream << std::setw(width_) << y.x << delim_ << std::setw(width_) << y.y << delim_ << std::setw(width_) << y.z << "\n";
+            stream << std::setw(width_) << z.x << delim_ << std::setw(width_) << z.y << delim_ << std::setw(width_) << z.z << "\n";
 
             return (stream.str());
         }
