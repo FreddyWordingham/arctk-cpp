@@ -60,8 +60,8 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Bounds --
-            double _min; //!< Minimum bound of the histogram range.
-            double _max; //!< Maximum bound of the histogram range.
+            vec2 _min; //!< Minimum bound of the histogram range.
+            vec2 _max; //!< Maximum bound of the histogram range.
 
           private:
             //  -- Bin --
