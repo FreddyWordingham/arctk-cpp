@@ -329,8 +329,8 @@ namespace arc //! arctk namespace
          *
          *  @return A copy of this mat post-increment.
          */
-        template <typename T, size_t N>
-        constexpr inline const Mat<T, N> Mat<T, N>::operator++(const int) noexcept
+        template <typename T>
+        constexpr inline const Mat<T, 3> Mat<T, 3>::operator++(const int) noexcept
         {
             const Mat mat = *this;
 
