@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
 
           protected:
             //  -- Data --
-            std::vector<T> _bins; //!< Bin data.
+            std::vector<std::vector<T>> _bins; //!< Bin data.
 
 
             //  == INSTANTIATION ==
