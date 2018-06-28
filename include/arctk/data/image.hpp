@@ -22,6 +22,9 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <algorithm>
+#include <iomanip>
+#include <string>
+#include <stringstream>
 
 //  -- Arctk --
 #include <arctk/math.hpp>
