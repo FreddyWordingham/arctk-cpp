@@ -168,7 +168,7 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Construct a vec4 with initial element values.
+         *  Construct a four-dimensional vec with initial element values.
          *
          *  @tparam T   Type stored by the vec.
          *
