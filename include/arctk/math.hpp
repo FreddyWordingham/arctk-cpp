@@ -50,6 +50,13 @@ namespace arc //! arctk namespace
     template <size_t N>
     using vecNi = math::Vec<int, N>; //!< N-dimensional integer precision vec. // NOLINT
 
+    //  -- Size Vec --
+    using vec2s = math::Vec<size_t, 2>; //!< Two-dimensional size precision vec.
+    using vec3s = math::Vec<size_t, 3>; //!< Three-dimensional size precision vec.
+    using vec4s = math::Vec<size_t, 4>; //!< Four-dimensional size precision vec.
+    template <size_t N>
+    using vecNs = math::Vec<size_t, N>; //!< N-dimensional size precision vec. // NOLINT
+
     //  -- Float Vec --
     using vec2f = math::Vec<float, 2>; //!< Two-dimensional float precision vec.
     using vec3f = math::Vec<float, 3>; //!< Three-dimensional float precision vec.
