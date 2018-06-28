@@ -93,8 +93,8 @@ namespace arc //! arctk namespace
             inline vec2s find_index(const vec2& pos_) noexcept;
 
             //  -- Collection --
-            virtual inline void collect(double   pos_,
-                                        const T& val_) noexcept = 0; //!<  Collect a value into the histogram at a given position.  @tparam T   Type binned. @param  pos_    Position of the value to place.  @param  val_    Value to place within the bins.
+            virtual inline void collect(const vec2& pos_,
+                                        const T&    val_) noexcept = 0; //!<  Collect a value into the histogram at a given position.  @tparam T   Type binned. @param  pos_    Position of the value to place.  @param  val_    Value to place within the bins.
 
             //  -- Printing --
             inline std::string str(char delim_ = settings::DEFAULT_DELIM, size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
