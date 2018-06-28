@@ -324,15 +324,9 @@ namespace arc //! arctk namespace
 
             --x.x;
             --x.y;
-            --x.z;
 
             --y.x;
             --y.y;
-            --y.z;
-
-            --z.x;
-            --z.y;
-            --z.z;
 
             return (mat);
         }
