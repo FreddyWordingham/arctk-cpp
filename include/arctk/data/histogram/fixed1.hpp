@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type binned.
              */
             template <typename T>
-            class Fixed1<T> : public Histogram<T, 1>
+            class Fixed1<T> : public Fixed<T, 1>
             {
             };
 
