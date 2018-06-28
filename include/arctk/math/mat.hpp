@@ -120,6 +120,15 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a mat using given vecs of values.
+         *
+         *  @tparam A   Pack of initialisation vecs.
+         *
+         *  @param  data_   Vecs used to initialise mat elements.
+         *
+         *  @pre    Size of A must equal N.
+         */
         template <typename T, size_t N>
         template <typename... A>
         constexpr inline Mat<T, N>::Mat(const A&... data_) noexcept
