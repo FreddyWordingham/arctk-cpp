@@ -142,7 +142,10 @@ namespace arc //! arctk namespace
                     return;
                 }
 
-                Histogram<T, 1>::_bins[Histogram<T, 1>::find_index(pos_)] += val_;
+                const size_t index = Histogram<T, 1>::find_index(pos_);
+
+                ++_counts[index];
+                Histogram<T, 1>::_bins[index] += val_;
             }
 
 
