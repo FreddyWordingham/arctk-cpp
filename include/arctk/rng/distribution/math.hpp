@@ -20,6 +20,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cmath>
+
 //  -- Arctk --
 #include <arctk/rng/generator.hpp>
 
