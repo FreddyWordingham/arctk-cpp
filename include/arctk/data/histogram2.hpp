@@ -34,6 +34,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/data/image/greyscale.hpp>
 #include <arctk/math.hpp>
 #include <arctk/settings.hpp>
 #include <arctk/sys.hpp>
@@ -101,6 +102,9 @@ namespace arc //! arctk namespace
 
             //  -- Saving --
             inline void save(const std::string& path_, char delim_ = settings::DEFAULT_DELIM, size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
+
+            //  -- Imaging --
+            inline image::Greyscale img() const noexcept;
         };
 
 
@@ -295,6 +299,23 @@ namespace arc //! arctk namespace
             sys::file::Out file(path_);
 
             file << str(delim_, width_);
+        }
+
+        //  -- Imaging --
+        template <typename T>
+        inline image::Greyscale Histogram<T, 2>::img() const noexcept
+        {
+            image::Greyscale img(_bins.size(), _bins.front().size());
+
+            for (size_t i = 0; i < _bins.size(); ++i)
+            {
+                for (size_t j = 0; j < _bins.front().size(); ++j)
+                {
+                    img.collect(i, j, _bins[i][j]);
+                }
+            }
+
+            return (img);
         }
 
 
