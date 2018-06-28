@@ -36,6 +36,11 @@ namespace arc //! arctk namespace
         template <typename T>
         class Histogram<T, 1>
         {
+            //  == FIELDS ==
+          protected:
+            //  -- Bounds --
+            double _min; //!< Minimum bound of the histogram range.
+            double _max; //!< Maximum bound of the histogram range.
         };
 
 
