@@ -200,6 +200,14 @@ namespace arc //! arctk namespace
         template <typename T>
         inline std::vector<T> Histogram<T, 1>::centres() const noexcept
         {
+            std::vector<double> centres(_bins.size());
+
+            for (size_t i = 0; i < centres.size(); ++i)
+            {
+                centres[i] = centre(i);
+            }
+
+            return (centres);
         }
 
 
