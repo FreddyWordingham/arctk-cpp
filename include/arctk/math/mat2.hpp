@@ -137,15 +137,12 @@ namespace arc //! arctk namespace
         {
             x.x += val_;
             x.y += val_;
-            x.z += val_;
 
             y.x += val_;
             y.y += val_;
-            y.z += val_;
 
             z.x += val_;
             z.y += val_;
-            z.z += val_;
 
             return (*this);
         }
