@@ -156,6 +156,19 @@ namespace arc //! arctk namespace
             return (_bins);
         }
 
+        /**
+         *  Get the size of the bin data bins vector.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @return Size of the bin data bins vector.
+         */
+        template <typename T>
+        inline size_t Histogram<T, 1>::size() const noexcept
+        {
+            return (_bins.size());
+        }
+
 
 
     } // namespace data
