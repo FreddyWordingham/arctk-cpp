@@ -58,7 +58,6 @@ namespace arc //! arctk namespace
             //  -- Data --
             Vec<T, 2> x{};
             Vec<T, 2> y{};
-            Vec<T, 2> z{};
 
 
             //  == INSTANTIATION ==
