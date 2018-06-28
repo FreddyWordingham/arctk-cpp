@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_HIST_HPP
-#define ARCTK_DATA_HIST_HPP
+#ifndef ARCTK_DATA_HISTOGRAM_HPP
+#define ARCTK_DATA_HISTOGRAM_HPP
 
 
 
@@ -52,4 +52,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_DATA_HIST_HPP
+#endif // ARCTK_DATA_HISTOGRAM_HPP
