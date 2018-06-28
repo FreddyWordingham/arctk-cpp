@@ -516,6 +516,16 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Printing --
+        /**
+         *  Form the matrix into a human readable string.
+         *
+         *  @tparam T   Type stored by the mat.
+         *
+         *  @param  delim_  Delimiter character used to seperate consecutive values.
+         *  @param  width_  Print width allocated to each value.
+         *
+         *  @return Human readable string of the matrix.
+         */
         template <typename T>
         constexpr inline std::string Mat<T, 2>::str(const char delim_, const size_t width_) const noexcept
         {
