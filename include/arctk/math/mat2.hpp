@@ -442,6 +442,15 @@ namespace arc //! arctk namespace
             return (Mat(Vec<T, 2>(x.x * val_, x.y * val_), Vec<T, 2>(y.x * val_, y.y * val_)));
         }
 
+        /**
+         *  Multiply two mats together.
+         *
+         *  @tparam T   Type stored by the mat.
+         *
+         *  @param  mat_    Right hand side mat of the operation.
+         *
+         *  @return Mat formed by multiplying the two mats together.
+         */
         template <typename T>
         constexpr inline Mat<T, 2> Mat<T, 2>::operator*(const Mat<T, 2>& mat_) const noexcept
         {
