@@ -71,7 +71,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">arc::math::Vec&lt; T, 4 &gt; Class Template Reference</div>  </div>
@@ -91,6 +90,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a73f642060a3ba405cf8117e3783e0ad6"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a73f642060a3ba405cf8117e3783e0ad6">Vec</a> () noexcept</td></tr>
+<tr class="separator:a73f642060a3ba405cf8117e3783e0ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae86a6f8eac1089530d3f4a620a84d4a5"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#ae86a6f8eac1089530d3f4a620a84d4a5">Vec</a> (T x_, T y_, T z_, T w_) noexcept</td></tr>
 <tr class="separator:ae86a6f8eac1089530d3f4a620a84d4a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae68ce295d17d3160a4522edd624f2eec"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#ae68ce295d17d3160a4522edd624f2eec">Vec</a> (const <a class="el" href="classarc_1_1math_1_1_vec.html">Vec</a>&lt; T, 2 &gt; &amp;vec_, T z_, T w_) noexcept</td></tr>
@@ -186,12 +187,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a6ba9864698d49b99bae4003ecd8dbcd9"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a6ba9864698d49b99bae4003ecd8dbcd9">a</a></td></tr>
 <tr class="memdesc:a6ba9864698d49b99bae4003ecd8dbcd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colour alpha-dimension.  <a href="#a6ba9864698d49b99bae4003ecd8dbcd9">More...</a><br /></td></tr>
 <tr class="separator:a6ba9864698d49b99bae4003ecd8dbcd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a5930e0a8a1bf3280d68a140c608b964f"><td class="memTemplParams" colspan="2">template&lt;typename S , typename L &gt; </td></tr>
-<tr class="memitem:a5930e0a8a1bf3280d68a140c608b964f"><td class="memTemplItemLeft" align="right" valign="top">S &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a5930e0a8a1bf3280d68a140c608b964f">operator&lt;&lt;</a> (S &amp;stream_, const <a class="el" href="classarc_1_1math_1_1_vec.html">Vec</a>&lt; T, 4 &gt; &amp;vec_) noexcept</td></tr>
-<tr class="separator:a5930e0a8a1bf3280d68a140c608b964f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
@@ -205,8 +200,42 @@ class arc::math::Vec&lt; T, 4 &gt;</h3>
   </dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a73f642060a3ba405cf8117e3783e0ad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73f642060a3ba405cf8117e3783e0ad6">&#9670;&nbsp;</a></span>Vec() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classarc_1_1math_1_1_vec.html">arc::math::Vec</a>&lt; T, 4 &gt;::<a class="el" href="classarc_1_1math_1_1_vec.html">Vec</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Construct a four-dimensional vec with elements of zero.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type stored by the vec. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ae86a6f8eac1089530d3f4a620a84d4a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae86a6f8eac1089530d3f4a620a84d4a5">&#9670;&nbsp;</a></span>Vec() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae86a6f8eac1089530d3f4a620a84d4a5">&#9670;&nbsp;</a></span>Vec() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -252,7 +281,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Construct a vec4 with initial element values.</p>
+<p>Construct a four-dimensional vec with initial element values.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>Type stored by the vec.</td></tr>
@@ -272,7 +301,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="ae68ce295d17d3160a4522edd624f2eec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae68ce295d17d3160a4522edd624f2eec">&#9670;&nbsp;</a></span>Vec() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae68ce295d17d3160a4522edd624f2eec">&#9670;&nbsp;</a></span>Vec() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -331,7 +360,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="abec2f23862b487a21bab74d8d3c3b8c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abec2f23862b487a21bab74d8d3c3b8c3">&#9670;&nbsp;</a></span>Vec() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abec2f23862b487a21bab74d8d3c3b8c3">&#9670;&nbsp;</a></span>Vec() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1473,63 +1502,6 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="a5930e0a8a1bf3280d68a140c608b964f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5930e0a8a1bf3280d68a140c608b964f">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<div class="memtemplate">
-template&lt;typename S , typename L &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">S&amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">S &amp;&#160;</td>
-          <td class="paramname"><em>stream_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classarc_1_1math_1_1_vec.html">Vec</a>&lt; T, 4 &gt; &amp;&#160;</td>
-          <td class="paramname"><em>vec_</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Print a vec4 as a human-readable string.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">S</td><td>Type of stream to print to. </td></tr>
-    <tr><td class="paramname">T</td><td>Type stored by the vec.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stream_</td><td>Stream to print to. </td></tr>
-    <tr><td class="paramname">vec_</td><td>Vector to print.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to the stream post-print. </dd></dl>
-
-</div>
-</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="abd9fcf06122454ab933c84d0b4c538a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abd9fcf06122454ab933c84d0b4c538a0">&#9670;&nbsp;</a></span>@11</h2>
@@ -1741,7 +1713,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 27 2018 00:49:40 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 28 2018 02:18:39 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

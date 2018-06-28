@@ -110,10 +110,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac87a878bdba7aaee9ea782dc13afc9f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#ac87a878bdba7aaee9ea782dc13afc9f8">collect</a> (double pos_, const T &amp;val_) noexcept=0</td></tr>
 <tr class="memdesc:ac87a878bdba7aaee9ea782dc13afc9f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collect a value into the bucket at a given position.  <a href="#ac87a878bdba7aaee9ea782dc13afc9f8">More...</a><br /></td></tr>
 <tr class="separator:ac87a878bdba7aaee9ea782dc13afc9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d4744c4a0042b1b9cd6de6a6483e38f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a1d4744c4a0042b1b9cd6de6a6483e38f">str</a> (const char delim_=<a class="el" href="namespacearc_1_1settings.html#a52f2ad537a8453b532dbb433cda04a41">settings::DEFAULT_DELIM</a>, const size_t width_=<a class="el" href="namespacearc_1_1settings.html#aa92142ae95e53c91bff170793146441a">settings::DEFAULT_PRINT_WIDTH</a>) const noexcept</td></tr>
-<tr class="separator:a1d4744c4a0042b1b9cd6de6a6483e38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a880dfda25e21196c15d8aecd48f3821f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a880dfda25e21196c15d8aecd48f3821f">save</a> (const std::string &amp;path_, const char delim_=<a class="el" href="namespacearc_1_1settings.html#a52f2ad537a8453b532dbb433cda04a41">settings::DEFAULT_DELIM</a>, const size_t width_=<a class="el" href="namespacearc_1_1settings.html#aa92142ae95e53c91bff170793146441a">settings::DEFAULT_PRINT_WIDTH</a>) const noexcept</td></tr>
-<tr class="separator:a880dfda25e21196c15d8aecd48f3821f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a532d64b6b9b3aaeaa77a1e7a994a6f80"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a532d64b6b9b3aaeaa77a1e7a994a6f80">str</a> (char delim_=<a class="el" href="namespacearc_1_1settings.html#a52f2ad537a8453b532dbb433cda04a41">settings::DEFAULT_DELIM</a>, size_t width_=<a class="el" href="namespacearc_1_1settings.html#aa92142ae95e53c91bff170793146441a">settings::DEFAULT_PRINT_WIDTH</a>) const noexcept</td></tr>
+<tr class="separator:a532d64b6b9b3aaeaa77a1e7a994a6f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29f00976057a07aa033ce959584ed50b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html#a29f00976057a07aa033ce959584ed50b">save</a> (const std::string &amp;path_, char delim_=<a class="el" href="namespacearc_1_1settings.html#a52f2ad537a8453b532dbb433cda04a41">settings::DEFAULT_DELIM</a>, size_t width_=<a class="el" href="namespacearc_1_1settings.html#aa92142ae95e53c91bff170793146441a">settings::DEFAULT_PRINT_WIDTH</a>) const noexcept</td></tr>
+<tr class="separator:a29f00976057a07aa033ce959584ed50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -464,8 +464,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a880dfda25e21196c15d8aecd48f3821f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a880dfda25e21196c15d8aecd48f3821f">&#9670;&nbsp;</a></span>save()</h2>
+<a id="a29f00976057a07aa033ce959584ed50b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29f00976057a07aa033ce959584ed50b">&#9670;&nbsp;</a></span>save()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -484,13 +484,13 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char&#160;</td>
+          <td class="paramtype">char&#160;</td>
           <td class="paramname"><em>delim_</em> = <code><a class="el" href="namespacearc_1_1settings.html#a52f2ad537a8453b532dbb433cda04a41">settings::DEFAULT_DELIM</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>width_</em> = <code><a class="el" href="namespacearc_1_1settings.html#aa92142ae95e53c91bff170793146441a">settings::DEFAULT_PRINT_WIDTH</a></code>&#160;</td>
         </tr>
         <tr>
@@ -526,11 +526,11 @@ template&lt;typename T &gt; </div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1data_1_1_bucket_a880dfda25e21196c15d8aecd48f3821f_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a880dfda25e21196c15d8aecd48f3821f_cgraph" alt=""/></div>
-<map name="classarc_1_1data_1_1_bucket_a880dfda25e21196c15d8aecd48f3821f_cgraph" id="classarc_1_1data_1_1_bucket_a880dfda25e21196c15d8aecd48f3821f_cgraph">
-<area shape="rect" id="node2" href="classarc_1_1data_1_1_bucket.html#a1d4744c4a0042b1b9cd6de6a6483e38f" title="arc::data::Bucket::str" alt="" coords="210,5,354,31"/>
-<area shape="rect" id="node3" href="classarc_1_1data_1_1_table.html#ac3582a89bd20c73e64e1fd268dc910c7" title="arc::data::Table::str" alt="" coords="402,5,537,31"/>
-<area shape="rect" id="node4" href="namespacearc_1_1str.html#a704dbd1c43e0dc1c1305e4897248ccce" title="arc::str::to_string" alt="" coords="585,5,705,31"/>
+<div class="center"><img src="classarc_1_1data_1_1_bucket_a29f00976057a07aa033ce959584ed50b_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a29f00976057a07aa033ce959584ed50b_cgraph" alt=""/></div>
+<map name="classarc_1_1data_1_1_bucket_a29f00976057a07aa033ce959584ed50b_cgraph" id="classarc_1_1data_1_1_bucket_a29f00976057a07aa033ce959584ed50b_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1data_1_1_bucket.html#a532d64b6b9b3aaeaa77a1e7a994a6f80" title="arc::data::Bucket::str" alt="" coords="210,5,354,31"/>
+<area shape="rect" id="node3" href="classarc_1_1data_1_1_table.html#a1761b2756113e9d655f53fff0ded4c27" title="arc::data::Table::str" alt="" coords="402,5,537,31"/>
+<area shape="rect" id="node4" href="namespacearc_1_1str.html#a955916a372a71c5b742d0e86fde80741" title="arc::str::to_string" alt="" coords="585,5,705,31"/>
 </map>
 </div>
 
@@ -571,8 +571,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a1d4744c4a0042b1b9cd6de6a6483e38f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d4744c4a0042b1b9cd6de6a6483e38f">&#9670;&nbsp;</a></span>str()</h2>
+<a id="a532d64b6b9b3aaeaa77a1e7a994a6f80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a532d64b6b9b3aaeaa77a1e7a994a6f80">&#9670;&nbsp;</a></span>str()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -585,13 +585,13 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">std::string <a class="el" href="classarc_1_1data_1_1_bucket.html">arc::data::Bucket</a>&lt; T &gt;::str </td>
           <td>(</td>
-          <td class="paramtype">const char&#160;</td>
+          <td class="paramtype">char&#160;</td>
           <td class="paramname"><em>delim_</em> = <code><a class="el" href="namespacearc_1_1settings.html#a52f2ad537a8453b532dbb433cda04a41">settings::DEFAULT_DELIM</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>width_</em> = <code><a class="el" href="namespacearc_1_1settings.html#aa92142ae95e53c91bff170793146441a">settings::DEFAULT_PRINT_WIDTH</a></code>&#160;</td>
         </tr>
         <tr>
@@ -626,10 +626,10 @@ template&lt;typename T &gt; </div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1data_1_1_bucket_a1d4744c4a0042b1b9cd6de6a6483e38f_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a1d4744c4a0042b1b9cd6de6a6483e38f_cgraph" alt=""/></div>
-<map name="classarc_1_1data_1_1_bucket_a1d4744c4a0042b1b9cd6de6a6483e38f_cgraph" id="classarc_1_1data_1_1_bucket_a1d4744c4a0042b1b9cd6de6a6483e38f_cgraph">
-<area shape="rect" id="node2" href="classarc_1_1data_1_1_table.html#ac3582a89bd20c73e64e1fd268dc910c7" title="arc::data::Table::str" alt="" coords="197,5,332,31"/>
-<area shape="rect" id="node3" href="namespacearc_1_1str.html#a704dbd1c43e0dc1c1305e4897248ccce" title="arc::str::to_string" alt="" coords="380,5,500,31"/>
+<div class="center"><img src="classarc_1_1data_1_1_bucket_a532d64b6b9b3aaeaa77a1e7a994a6f80_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a532d64b6b9b3aaeaa77a1e7a994a6f80_cgraph" alt=""/></div>
+<map name="classarc_1_1data_1_1_bucket_a532d64b6b9b3aaeaa77a1e7a994a6f80_cgraph" id="classarc_1_1data_1_1_bucket_a532d64b6b9b3aaeaa77a1e7a994a6f80_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1data_1_1_table.html#a1761b2756113e9d655f53fff0ded4c27" title="arc::data::Table::str" alt="" coords="197,5,332,31"/>
+<area shape="rect" id="node3" href="namespacearc_1_1str.html#a955916a372a71c5b742d0e86fde80741" title="arc::str::to_string" alt="" coords="380,5,500,31"/>
 </map>
 </div>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -637,9 +637,9 @@ template&lt;typename T &gt; </div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1data_1_1_bucket_a1d4744c4a0042b1b9cd6de6a6483e38f_icgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a1d4744c4a0042b1b9cd6de6a6483e38f_icgraph" alt=""/></div>
-<map name="classarc_1_1data_1_1_bucket_a1d4744c4a0042b1b9cd6de6a6483e38f_icgraph" id="classarc_1_1data_1_1_bucket_a1d4744c4a0042b1b9cd6de6a6483e38f_icgraph">
-<area shape="rect" id="node2" href="classarc_1_1data_1_1_bucket.html#a880dfda25e21196c15d8aecd48f3821f" title="arc::data::Bucket::save" alt="" coords="197,5,354,31"/>
+<div class="center"><img src="classarc_1_1data_1_1_bucket_a532d64b6b9b3aaeaa77a1e7a994a6f80_icgraph.png" border="0" usemap="#classarc_1_1data_1_1_bucket_a532d64b6b9b3aaeaa77a1e7a994a6f80_icgraph" alt=""/></div>
+<map name="classarc_1_1data_1_1_bucket_a532d64b6b9b3aaeaa77a1e7a994a6f80_icgraph" id="classarc_1_1data_1_1_bucket_a532d64b6b9b3aaeaa77a1e7a994a6f80_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1data_1_1_bucket.html#a29f00976057a07aa033ce959584ed50b" title="arc::data::Bucket::save" alt="" coords="197,5,354,31"/>
 </map>
 </div>
 
@@ -812,7 +812,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 27 2018 00:49:40 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 28 2018 02:18:39 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

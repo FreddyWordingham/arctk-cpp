@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['data',['data',['../classarc_1_1math_1_1_vec.html#ac45e0cd9e0baff7f275a3501c5d9c132',1,'arc::math::Vec']]],
+  ['data',['data',['../classarc_1_1math_1_1_mat.html#af396d79f2d44c34c68beeadc419964e3',1,'arc::math::Mat::data()'],['../classarc_1_1math_1_1_vec.html#ac45e0cd9e0baff7f275a3501c5d9c132',1,'arc::math::Vec::data()']]],
   ['data_2ehpp',['data.hpp',['../data_8hpp.html',1,'']]],
   ['date',['DATE',['../namespacearc_1_1config.html#aa60520859e13bbee2fb47d352d337c87',1,'arc::config']]],
   ['default_5fdelim',['DEFAULT_DELIM',['../namespacearc_1_1settings.html#a52f2ad537a8453b532dbb433cda04a41',1,'arc::settings']]],

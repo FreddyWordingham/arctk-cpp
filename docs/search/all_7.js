@@ -9,6 +9,6 @@ var searchData=
   ['get',['get',['../classarc_1_1sys_1_1_args.html#a4b4acca77441736c096a5cf86cf07b76',1,'arc::sys::Args']]],
   ['greyscale',['Greyscale',['../classarc_1_1data_1_1image_1_1_greyscale.html',1,'arc::data::image::Greyscale'],['../classarc_1_1data_1_1image_1_1_greyscale.html#a1578266734d8ff6873a2e71e89c8bfe1',1,'arc::data::image::Greyscale::Greyscale()']]],
   ['greyscale_2ehpp',['greyscale.hpp',['../greyscale_8hpp.html',1,'']]],
-  ['guassian',['guassian',['../namespacearc_1_1rng_1_1distribution.html#ad6615bdc272fb3131e70ed2c13cf8ad4',1,'arc::rng::distribution::guassian(Generator &amp;rng_, const T mu_, const T sigma_) noexcept'],['../namespacearc_1_1rng_1_1distribution.html#a5c23ec5c89ecd1283dd14cf789ddf3a4',1,'arc::rng::distribution::guassian(Generator &amp;rng_, const double mu_, const double sigma_) noexcept']]],
+  ['guassian',['guassian',['../namespacearc_1_1rng_1_1distribution.html#aeee3fc6bbe245437bfcbfb12fe36e7de',1,'arc::rng::distribution::guassian(Generator *rng_, T mu_, T sigma_) noexcept'],['../namespacearc_1_1rng_1_1distribution.html#a19c3ceda35ec2e938fbbe0fd5f5d0117',1,'arc::rng::distribution::guassian(Generator *const rng_, const double mu_, const double sigma_) noexcept']]],
   ['gui_2ehpp',['gui.hpp',['../gui_8hpp.html',1,'']]]
 ];
