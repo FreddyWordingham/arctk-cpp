@@ -90,9 +90,15 @@ namespace arc //! arctk namespace
             constexpr inline Mat<T, 3> operator*(const Mat<T, 3>& mat_) const noexcept;
             constexpr inline Mat<T, 3> operator/(T val_) const noexcept;
 
+            //  -- Access --
+            constexpr inline Vec<T, 3>&       operator[](size_t index_) noexcept;
+            constexpr inline const Vec<T, 3>& operator[](size_t index_) const noexcept;
+
 
             //  == METHODS ==
           public:
+            //  -- Mathematical --
+            constexpr inline T sum() const noexcept;
         };
 
 
@@ -619,6 +625,46 @@ namespace arc //! arctk namespace
         constexpr inline Mat<T, N> Mat<T, N>::operator/(const T val_) const noexcept
         {
             return (Mat<T, 3>(Vec<T, 3>(x.x / val_, x.y / val_, x.z / val_), Vec<T, 3>(y.x / val_, y.y / val_, y.z / val_), Vec<T, 3>(z.x / val_, z.y / val_, z.z / val_)));
+        }
+
+
+        //  -- Access --
+        /**
+         *  Access an element of the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @param  index_  Index of the element to access.
+         *
+         *  @pre    index_ must be less than three.
+         *
+         *  @return A reference to the element requested.
+         */
+        template <typename T>
+        constexpr inline Vec<T, 3>& Mat<T, 3>::operator[](const size_t index_) noexcept
+        {
+            assert(index_ < 3);
+
+            return ((&x)[index_]);
+        }
+
+        /**
+         *  Access an element of the vec.
+         *
+         *  @tparam T   Type stored by the vec.
+         *
+         *  @param  index_  Index of the element to access.
+         *
+         *  @pre    index_ must be less than three.
+         *
+         *  @return A const reference to the element requested.
+         */
+        template <typename T>
+        constexpr inline const Vec<T, 3>& Mat<T, 3>::operator[](const size_t index_) const noexcept
+        {
+            assert(index_ < 3);
+
+            return ((&x)[index_]);
         }
 
 
