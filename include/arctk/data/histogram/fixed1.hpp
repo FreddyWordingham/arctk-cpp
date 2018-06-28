@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
              *  @pre    Size_ must be positive.
              */
             template <typename T>
-            inline Fixed<T>::Fixed(const double min_, const double max_, const double size_) noexcept
+            inline Fixed<T, 1>::Fixed(const double min_, const double max_, const double size_) noexcept
               : Histogram<T, 1>(min_, max_, size_)
             {
                 assert(min_ < max_);
