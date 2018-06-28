@@ -504,9 +504,8 @@ namespace arc //! arctk namespace
         {
             std::stringstream stream;
 
-            stream << std::setw(width_) << x.x << delim_ << std::setw(width_) << x.y << delim_ << std::setw(width_) << x.z << "\n";
-            stream << std::setw(width_) << y.x << delim_ << std::setw(width_) << y.y << delim_ << std::setw(width_) << y.z << "\n";
-            stream << std::setw(width_) << z.x << delim_ << std::setw(width_) << z.y << delim_ << std::setw(width_) << z.z << "\n";
+            stream << std::setw(width_) << x.x << delim_ << std::setw(width_) << x.y << "\n";
+            stream << std::setw(width_) << y.x << delim_ << std::setw(width_) << y.y << "\n";
 
             return (stream.str());
         }
