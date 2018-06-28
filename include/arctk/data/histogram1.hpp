@@ -138,9 +138,22 @@ namespace arc //! arctk namespace
          *  @return Width of the histogram's bins.
          */
         template <typename T>
-        inline double Histogram<T>::bin_width() const noexcept
+        inline double Histogram<T, 1>::bin_width() const noexcept
         {
             return (_bin_width);
+        }
+
+        /**
+         *  Get the bin data of the histogram.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @return Bin data of the histogram.
+         */
+        template <typename T>
+        inline const std::vector<T>& Histogram<T, 1>::bins() const noexcept
+        {
+            return (_bins);
         }
 
 
