@@ -658,9 +658,10 @@ namespace arc //! arctk namespace
         {
             std::stringstream stream;
 
-            stream << std::setw(width_) << x.x << delim_ << std::setw(width_) << x.y << delim_ << std::setw(width_) << x.z << "\n";
-            stream << std::setw(width_) << y.x << delim_ << std::setw(width_) << y.y << delim_ << std::setw(width_) << y.z << "\n";
-            stream << std::setw(width_) << z.x << delim_ << std::setw(width_) << z.y << delim_ << std::setw(width_) << z.z << "\n";
+            stream << std::setw(width_) << x.x << delim_ << std::setw(width_) << x.y << delim_ << std::setw(width_) << x.z << delim_ << std::setw(width_) << x.w << "\n";
+            stream << std::setw(width_) << y.x << delim_ << std::setw(width_) << y.y << delim_ << std::setw(width_) << y.z << delim_ << std::setw(width_) << y.w << "\n";
+            stream << std::setw(width_) << z.x << delim_ << std::setw(width_) << z.y << delim_ << std::setw(width_) << z.z << delim_ << std::setw(width_) << z.w << "\n";
+            stream << std::setw(width_) << w.x << delim_ << std::setw(width_) << w.y << delim_ << std::setw(width_) << w.z << delim_ << std::setw(width_) << w.w << "\n";
 
             return (stream.str());
         }
