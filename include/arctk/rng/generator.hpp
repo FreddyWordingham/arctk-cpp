@@ -19,6 +19,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Std --
+#include <cstdint>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
