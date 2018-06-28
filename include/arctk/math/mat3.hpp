@@ -413,8 +413,8 @@ namespace arc //! arctk namespace
          *
          *  @return Positive copy of the mat.
          */
-        template <typename T, size_t N>
-        constexpr inline Mat<T, N> Mat<T, N>::operator+() const noexcept
+        template <typename T>
+        constexpr inline Mat<T, 3> Mat<T, 3>::operator+() const noexcept
         {
             Mat mat;
 
