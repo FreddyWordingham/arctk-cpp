@@ -595,7 +595,6 @@ namespace arc //! arctk namespace
         }
 
 
-
         //  -- Access --
         /**
          *  Access an element of the vec.
