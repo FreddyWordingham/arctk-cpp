@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
-             *  Construct a fixed one-dimensional histogram object with given bounds and size.
+             *  Construct an averaging one-dimensional histogram object with given bounds and size.
              *
              *  @tparam T   Type binned.
              *
