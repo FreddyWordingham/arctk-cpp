@@ -629,8 +629,8 @@ namespace arc //! arctk namespace
          *
          *  @return Mat formed by dividing the mat elements by the value.
          */
-        template <typename T, size_t N>
-        constexpr inline Mat<T, N> Mat<T, N>::operator/(const T val_) const noexcept
+        template <typename T>
+        constexpr inline Mat<T, 3> Mat<T, 3>::operator/(const T val_) const noexcept
         {
             return (Mat<T, 3>(Vec<T, 3>(x.x / val_, x.y / val_, x.z / val_), Vec<T, 3>(y.x / val_, y.y / val_, y.z / val_), Vec<T, 3>(z.x / val_, z.y / val_, z.z / val_)));
         }
