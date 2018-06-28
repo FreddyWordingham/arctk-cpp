@@ -585,7 +585,6 @@ namespace arc //! arctk namespace
          *  Form the matrix into a human readable string.
          *
          *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
          *
          *  @param  delim_  Delimiter character used to seperate consecutive values.
          *  @param  width_  Print width allocated to each value.
