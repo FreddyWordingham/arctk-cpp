@@ -23,6 +23,7 @@
 //  -- Arctk --
 #include <arctk/data/bucket.hpp>
 #include <arctk/data/bucket/fixed.hpp>
+#include <arctk/data/histogram.hpp>
 #include <arctk/data/image.hpp>
 #include <arctk/data/image/greyscale.hpp>
 #include <arctk/data/table.hpp>
