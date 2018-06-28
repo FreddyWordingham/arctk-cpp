@@ -61,6 +61,13 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Histogram(double min_, double max_, size_t size_) noexcept;
+
+
+            //  == METHODS ==
+          public:
+            //  -- Getters --
+            inline double min() const noexcept;
+            inline double max() const noexcept;
         };
 
 
@@ -88,6 +95,36 @@ namespace arc //! arctk namespace
         {
             assert(min_ < max_);
             assert(size_ > 0);
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        /**
+         *  Get the minimum bound of the bucket.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @return Minimum bound of the bucket.
+         */
+        template <typename T>
+        inline double Histogram<T, 1>::min() const noexcept
+        {
+            return (_min);
+        }
+
+        /**
+         *  Get the maximum bound of the bucket.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @return Maximum bound of the bucket.
+         */
+        template <typename T>
+        inline double Histogram<T, 1>::max() const noexcept
+        {
+            return (_max);
         }
 
 
