@@ -26,6 +26,10 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <sstream>
+#include <string>
+
 //  -- Arctk --
 #include <arctk/math/vec3.hpp>
 #include <arctk/settings.hpp>
