@@ -167,7 +167,7 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Construct a vec3 with initial element values.
+         *  Construct a three-dimensional with initial element values.
          *
          *  @tparam T   Type stored by the vec.
          *
