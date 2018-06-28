@@ -561,8 +561,8 @@ namespace arc //! arctk namespace
          *
          *  @return Mat formed by subtracting the mat from the mat.
          */
-        template <typename T, size_t N>
-        constexpr inline Mat<T, N> Mat<T, N>::operator-(const Mat<T, N>& mat_) const noexcept
+        template <typename T>
+        constexpr inline Mat<T, 3> Mat<T, 3>::operator-(const Mat<T, 3>& mat_) const noexcept
         {
             Mat mat;
 
