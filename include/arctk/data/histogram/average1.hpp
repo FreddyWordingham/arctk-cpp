@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
               private:
                 //  -- Counts --
                 T                   _misses{}; //!< Number of range misses.
-                std::vector<size_t> _counts;   //!< Bin counts.
+                std::vector<size_t> _counts{}; //!< Bin counts.
 
 
                 //  == INSTANTIATION ==
@@ -91,6 +91,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline Average<T, 1>::Average(const double min_, const double max_, const double size_) noexcept
               : Histogram<T, 1>(min_, max_, size_)
+              , _counts(size_)
             {
                 assert(min_ < max_);
                 assert(size_ > 0);
