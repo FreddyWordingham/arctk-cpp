@@ -249,7 +249,7 @@ namespace arc //! arctk namespace
          *  @return Human readable string of the histogram data.
          */
         template <typename T>
-        inline std::string Histogram<T>::str(const char delim_, const size_t width_) const noexcept
+        inline std::string Histogram<T, 1>::str(const char delim_, const size_t width_) const noexcept
         {
             const std::vector<double> centres = centres();
 
