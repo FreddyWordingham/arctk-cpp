@@ -49,7 +49,40 @@ namespace arc //! arctk namespace
           protected:
             //  -- Data --
             std::vector<T> _bins; //!< Bin data.
+
+
+            //  == INSTANTIATION ==
+          public:
+            //  -- Constructors --
+            inline Histogram(double min_, double max_, size_t size_) noexcept;
         };
+
+
+
+        //  == INSTANTIATION ==
+        //  -- Constructors --
+        /**
+         *  Construct a one-dimensional histogram object with given bounds and size.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @param  min_    Minimum bound of the histogram range.
+         *  @param  max_    Maximum bound of the histogram range.
+         *  @param  size_   Number of bins.
+         *
+         *  @pre    min_ must be less than max_.
+         *  @pre    Size_ must be positive.
+         */
+        template <typename T>
+        inline Histogram<T>::Histogram(const double min_, const double max_, const size_t size_) noexcept
+          : _min(min_)
+          , _max(max_)
+          , _bin_width((max_ - min_) / size_)
+          , _bins(size_)
+        {
+            assert(min_ < max_);
+            assert(size_ > 0);
+        }
 
 
 
