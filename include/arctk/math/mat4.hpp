@@ -352,14 +352,22 @@ namespace arc //! arctk namespace
             ++x.x;
             ++x.y;
             ++x.z;
+            ++x.w;
 
             ++y.x;
             ++y.y;
             ++y.z;
+            ++y.w;
 
             ++z.x;
             ++z.y;
             ++z.z;
+            ++z.w;
+
+            ++w.x;
+            ++w.y;
+            ++w.z;
+            ++w.w;
 
             return (*this);
         }
