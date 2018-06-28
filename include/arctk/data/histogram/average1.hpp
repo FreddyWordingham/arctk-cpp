@@ -144,8 +144,8 @@ namespace arc //! arctk namespace
 
                 const size_t index = Histogram<T, 1>::find_index(pos_);
 
+                Histogram<T, 1>::_bins[index] = ((Histogram<T, 1>::_bins[index] * _counts[index]) + val_) / (_counts[index] + 1);
                 ++_counts[index];
-                Histogram<T, 1>::_bins[index] += val_;
             }
 
 
