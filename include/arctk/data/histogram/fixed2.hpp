@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
                 inline const T& misses() const noexcept;
 
                 //  -- Collection --
-                inline void collect(double pos_, const T& val_) noexcept override;
+                inline void collect(const vec2& pos_, const T& val_) noexcept override;
             };
 
 
@@ -129,16 +129,17 @@ namespace arc //! arctk namespace
              *  @param  val_    Value to place within the bins.
              */
             template <typename T>
-            inline void Fixed<T, 2>::collect(const double pos_, const T& val_) noexcept
+            inline void Fixed<T, 2>::collect(const vec2& pos_, const T& val_) noexcept
             {
-                if ((pos_ < Histogram<T, 2>::_min) || (pos_ > Histogram<T, 2>::_max))
+                if ((pos_.x < Histogram<T, 2>::_min.x) || (pos_.x > Histogram<T, 2>::_max.x) || (pos_.y < Histogram<T, 2>::_min.y) || (pos_.y > Histogram<T, 2>::_max.y))
                 {
                     _misses += val_;
 
                     return;
                 }
 
-                Histogram<T, 2>::_bins[Histogram<T, 2>::find_index(pos_)] += val_;
+                const vec2s index = Histogram<T, 2>::find_index(pos_);
+                Histogram<T, 2>::_bins[index.x][index.y] += val_;
             }
 
 
