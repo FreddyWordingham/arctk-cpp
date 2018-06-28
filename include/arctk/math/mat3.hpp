@@ -303,8 +303,8 @@ namespace arc //! arctk namespace
          *
          *  @return A reference to this mat pre-increment.
          */
-        template <typename T, size_t N>
-        constexpr inline Mat<T, N>& Mat<T, N>::operator++() noexcept
+        template <typename T>
+        constexpr inline Mat<T, 3>& Mat<T, 3>::operator++() noexcept
         {
             ++x.x;
             ++x.y;
