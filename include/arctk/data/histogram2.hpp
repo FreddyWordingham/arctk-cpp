@@ -81,13 +81,13 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const vec2&           min() const noexcept;
-            inline const vec2&           max() const noexcept;
-            inline const vec2&           bin_width() const noexcept;
-            inline const std::vector<T>& bins() const noexcept;
-            inline size_t                size() const noexcept;
-            inline double                centre(size_t index_) const noexcept;
-            inline std::vector<double>   centres() const noexcept;
+            inline const vec2&                        min() const noexcept;
+            inline const vec2&                        max() const noexcept;
+            inline const vec2&                        bin_width() const noexcept;
+            inline const std::vector<std::vector<T>>& bins() const noexcept;
+            inline size_t                             size() const noexcept;
+            inline double                             centre(size_t index_) const noexcept;
+            inline std::vector<double>                centres() const noexcept;
 
             //  -- Searching --
             inline size_t find_index(double pos_) noexcept;
@@ -183,7 +183,7 @@ namespace arc //! arctk namespace
          *  @return Bin data of the histogram.
          */
         template <typename T>
-        inline const std::vector<T>& Histogram<T, 2>::bins() const noexcept
+        inline const std::vector<std::vector<T>>& Histogram<T, 2>::bins() const noexcept
         {
             return (_bins);
         }
