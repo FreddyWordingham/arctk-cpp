@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
              */
             template <typename T>
             inline Fixed<T>::Fixed(const double min_, const double max_, const double size_) noexcept
-              : Bucket<T>(min_, max_, size_)
+              : Histogram<T, 1>(min_, max_, size_)
             {
                 assert(min_ < max_);
                 assert(size_ > 0);
