@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type binned.
              */
             template <typename T>
-            class Fixed<T, 1>
+            class Fixed<T, 1> : public Histogram<T, 1>
             {
                 //  == FIELDS ==
               private:
