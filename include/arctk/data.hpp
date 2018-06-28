@@ -21,8 +21,6 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
-#include <arctk/data/bucket.hpp>
-#include <arctk/data/bucket/fixed.hpp>
 #include <arctk/data/histogram.hpp>
 #include <arctk/data/histogram/fixed.hpp>
 #include <arctk/data/histogram/fixed1.hpp>
