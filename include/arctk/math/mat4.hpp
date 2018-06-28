@@ -487,7 +487,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Mat<T, 4> Mat<T, 4>::operator+() const noexcept
         {
-            return (Mat(Vec<T, 4>(+x.x, +x.y, +x.z), Vec<T, 4>(+y.x, +y.y, +y.z), Vec<T, 4>(+z.x, +z.y, +z.z)));
+            return (Mat(Vec<T, 4>(+x.x, +x.y, +x.z, +x.w), Vec<T, 4>(+y.x, +y.y, +y.z, +y.w), Vec<T, 4>(+z.x, +z.y, +z.z, +z.w), Vec<T, 4>(+w.x, +w.y, +w.z, +w.w)));
         }
 
         /**
