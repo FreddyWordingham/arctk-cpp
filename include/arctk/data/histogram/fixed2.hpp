@@ -29,6 +29,9 @@
 //  -- Std --
 #include <cassert>
 
+//  -- Arctk --
+#include <arctk/math.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -59,7 +62,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Fixed(double min_, double max_, double size_) noexcept;
+                inline Fixed(const vec2& min_, const vec2& max_, const vec2s& size_) noexcept;
 
 
                 //  == METHODS ==
@@ -76,7 +79,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
-             *  Construct a fixed one-dimensional histogram object with given bounds and size.
+             *  Construct a fixed two-dimensional histogram object with given bounds and size.
              *
              *  @tparam T   Type binned.
              *
@@ -85,14 +88,16 @@ namespace arc //! arctk namespace
              *  @param  size_   Number of bins.
              *
              *  @pre    min_ must be less than max_.
-             *  @pre    Size_ must be positive.
+             *  @pre    size_ must be positive.
              */
             template <typename T>
-            inline Fixed<T, 2>::Fixed(const double min_, const double max_, const double size_) noexcept
+            inline Fixed<T, 2>::Fixed(const vec2& min_, const vec2& max_, const vec2s& size_) noexcept
               : Histogram<T, 2>(min_, max_, size_)
             {
-                assert(min_ < max_);
-                assert(size_ > 0);
+                assert(min_.x < max_.x);
+                assert(min_.y < max_.y);
+                assert(size_.x > 0);
+                assert(size_.y > 0);
             }
 
 
