@@ -90,7 +90,7 @@ namespace arc //! arctk namespace
             inline std::vector<std::vector<double>>   centres() const noexcept;
 
             //  -- Searching --
-            inline size_t find_index(double pos_) noexcept;
+            inline vec2s find_index(const vec2& pos_) noexcept;
 
             //  -- Collection --
             virtual inline void collect(double   pos_,
@@ -241,14 +241,17 @@ namespace arc //! arctk namespace
          *  @return Index of the bin to corresponding to the given position.
          */
         template <typename T>
-        inline size_t Histogram<T, 2>::find_index(const double pos_) noexcept
+        inline vec2s Histogram<T, 2>::find_index(const vec2& pos_) noexcept
         {
-            assert(pos_ >= _min);
-            assert(pos_ <= _max);
+            assert(pos_.x >= _min.x);
+            assert(pos_.y >= _min.y);
+            assert(pos_.x <= _max.x);
+            assert(pos_.y <= _max.y);
 
-            const auto index = static_cast<size_t>((pos_ - _min) / _bin_width);
+            const auto index_x = static_cast<size_t>((pos_.x - _min.x) / _bin_width.x);
+            const auto index_y = static_cast<size_t>((pos_.y - _min.y) / _bin_width.y);
 
-            return ((index == _bins.size()) ? (index - 1) : index);
+            return vec2s((index_x == _bins.size()) ? (index_x - 1) : index_x, (index_y == _bins.front().size()) ? (index_y - 1) : index_y);
         }
 
 
