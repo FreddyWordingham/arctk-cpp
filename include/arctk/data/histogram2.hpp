@@ -123,7 +123,7 @@ namespace arc //! arctk namespace
         inline Histogram<T, 2>::Histogram(const vec2& min_, const vec2& max_, const vec2s& size_) noexcept
           : _min(min_)
           , _max(max_)
-          , _bin_width((max_ - min_) / size_)
+          , _bin_width((max_.x - min_.x) / size_.x, (max_.y - min_.y) / size_.y)
           , _bins(std::vector<double>(size_.y), size_.x)
         {
             assert(min_.x < max_.x);
