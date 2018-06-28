@@ -53,7 +53,8 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Counts --
-                T _misses{}; //!< Number of range misses.
+                T                   _misses{}; //!< Number of range misses.
+                std::vector<size_t> _counts;   //!< Bin counts.
 
 
                 //  == INSTANTIATION ==
