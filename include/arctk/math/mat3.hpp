@@ -275,8 +275,8 @@ namespace arc //! arctk namespace
          *
          *  @return Reference to this mat post-operation.
          */
-        template <typename T, size_t N>
-        constexpr inline Mat<T, N>& Mat<T, N>::operator/=(const T val_) noexcept
+        template <typename T>
+        constexpr inline Mat<T, 3>& Mat<T, 3>::operator/=(const T val_) noexcept
         {
             x.x /= val_;
             x.y /= val_;
