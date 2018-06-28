@@ -54,6 +54,12 @@ namespace arc //! arctk namespace
               public:
                 //  -- Constructors --
                 inline Fixed(double min_, double max_, double size_) noexcept;
+
+
+                //  == METHODS ==
+              public:
+                //  -- Getters --
+                inline const T& misses() const noexcept;
             };
 
 
@@ -78,6 +84,23 @@ namespace arc //! arctk namespace
             {
                 assert(min_ < max_);
                 assert(size_ > 0);
+            }
+
+
+
+            //  == METHODS ==
+            //  -- Getters --
+            /**
+             *  Get the total number of misses.
+             *
+             *  @tparam T   Type binned.
+             *
+             *  @return Total number of misses.
+             */
+            template <typename T>
+            inline const T& Fixed<T, 1>::misses() const noexcept
+            {
+                return (_misses);
             }
 
 
