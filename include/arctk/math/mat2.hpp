@@ -112,6 +112,14 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        /**
+         *  Construct a two by two mat with initial element values.
+         *
+         *  @tparam T   Type stored by the mat.
+         *
+         *  @param  x_  Initial values of the x row.
+         *  @param  y_  Initial values of the y row.
+         */
         template <typename T>
         constexpr inline Mat<T, 2>::Mat(const Vec<T, 2>& x_, const Vec<T, 2>& y_) noexcept
           : x(x_)
