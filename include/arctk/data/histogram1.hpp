@@ -250,6 +250,21 @@ namespace arc //! arctk namespace
         template <typename T>
         inline std::string Bucket<T>::str(const char delim_, const size_t width_) const noexcept
         {
+            const std::vector<double> centres = centres();
+
+            std::stringstream stream;
+
+            for (size_t i = 0; i < centres.size(); ++i)
+            {
+                if (i != 0)
+                {
+                    stream << "\n";
+                }
+
+                stream << std::setw(width_) << centres[i] << delim_ << std::setw(width_) << _bins[i];
+            }
+
+            return (stream.str());
         }
 
 
