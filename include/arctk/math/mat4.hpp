@@ -59,13 +59,14 @@ namespace arc //! arctk namespace
             Vec<T, 4> x{};
             Vec<T, 4> y{};
             Vec<T, 4> z{};
+            Vec<T, 4> w{};
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
             constexpr inline Mat() noexcept = default;
-            constexpr inline Mat(const Vec<T, 4>& x_, const Vec<T, 4>& y_, const Vec<T, 4>& z_) noexcept;
+            constexpr inline Mat(const Vec<T, 4>& x_, const Vec<T, 4>& y_, const Vec<T, 4>& z_, const Vec<T, 4>& w_) noexcept;
 
 
             //  == OPERATORS ==
@@ -114,10 +115,11 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION --
         //  -- Constructors --
         template <typename T>
-        constexpr inline Mat<T, 4>::Mat(const Vec<T, 4>& x_, const Vec<T, 4>& y_, const Vec<T, 4>& z_) noexcept
+        constexpr inline Mat<T, 4>::Mat(const Vec<T, 4>& x_, const Vec<T, 4>& y_, const Vec<T, 4>& z_, const Vec<T, 4>& w_) noexcept
           : x(x_)
           , y(y_)
           , z(z_)
+          , w(w_)
         {
         }
 
