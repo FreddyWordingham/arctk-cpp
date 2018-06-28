@@ -23,8 +23,8 @@
 //  -- Std --
 #include <algorithm>
 #include <iomanip>
+#include <sstream>
 #include <string>
-#include <stringstream>
 
 //  -- Arctk --
 #include <arctk/math.hpp>
