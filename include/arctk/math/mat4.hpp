@@ -177,14 +177,22 @@ namespace arc //! arctk namespace
             x.x += mat_.x.x;
             x.y += mat_.x.y;
             x.z += mat_.x.z;
+            x.w += mat_.x.w;
 
             y.x += mat_.y.x;
             y.y += mat_.y.y;
             y.z += mat_.y.z;
+            y.w += mat_.y.w;
 
             z.x += mat_.z.x;
             z.y += mat_.z.y;
             z.z += mat_.z.z;
+            z.w += mat_.z.w;
+
+            w.x += mat_.w.x;
+            w.y += mat_.w.y;
+            w.z += mat_.w.z;
+            w.w += mat_.w.w;
 
             return (*this);
         }
