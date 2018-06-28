@@ -66,7 +66,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline const T& misses() const noexcept;
+                inline const T&                   misses() const noexcept;
+                inline const std::vector<size_t>& counts() const noexcept;
 
                 //  -- Collection --
                 inline void collect(double pos_, const T& val_) noexcept override;
@@ -112,6 +113,12 @@ namespace arc //! arctk namespace
             inline const T& Average<T, 1>::misses() const noexcept
             {
                 return (_misses);
+            }
+
+            template <typename T>
+            inline const std::vector<size_t>& Average<T, 1>::counts() const noexcept
+            {
+                return (_counts);
             }
 
 
