@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            std::array<Vec<T, N>, N> _data{};
+            std::array<Vec<T, N>, N> _data{}; //!< Array of matrix rows.
 
 
             //  == INSTANTIATION ==
