@@ -153,6 +153,11 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        /**
+         *  Construct a four-dimensional vec with elements of zero.
+         *
+         *  @tparam T   Type stored by the vec.
+         */
         template <typename T>
         constexpr inline Vec<T, 4>::Vec() noexcept
           : x(0)
