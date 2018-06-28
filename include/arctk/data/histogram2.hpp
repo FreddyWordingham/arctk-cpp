@@ -81,8 +81,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double                min() const noexcept;
-            inline double                max() const noexcept;
+            inline const vec2&           min() const noexcept;
+            inline const vec2&           max() const noexcept;
             inline double                bin_width() const noexcept;
             inline const std::vector<T>& bins() const noexcept;
             inline size_t                size() const noexcept;
@@ -144,7 +144,7 @@ namespace arc //! arctk namespace
          *  @return Minimum bound of the histogram.
          */
         template <typename T>
-        inline double Histogram<T, 2>::min() const noexcept
+        inline const vec2& Histogram<T, 2>::min() const noexcept
         {
             return (_min);
         }
@@ -157,7 +157,7 @@ namespace arc //! arctk namespace
          *  @return Maximum bound of the histogram.
          */
         template <typename T>
-        inline double Histogram<T, 2>::max() const noexcept
+        inline const vec2& Histogram<T, 2>::max() const noexcept
         {
             return (_max);
         }
