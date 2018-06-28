@@ -1,6 +1,6 @@
 /**
  *  @file   arctk/data/bucket.hpp
- *  @date   12/06/2018
+ *  @date   23/06/2018
  *  @author Freddy Wordingham
  *
  *  Data binning class.
@@ -20,10 +20,13 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+#include <vector>
+
 //  -- Arctk --
-#include <arctk/math.hpp>
-#include <arctk/prop.hpp>
-#include <arctk/utl.hpp>
+#include <arctk/data/table.hpp>
+#include <arctk/settings.hpp>
 
 
 
@@ -40,99 +43,59 @@ namespace arc //! arctk namespace
          *  Data binning class.
          *
          *  @tparam T   Type binned.
-         *  @tparam N   Dimensionality.
          */
-        template <typename T, size_t N>
+        template <typename T>
         class Bucket
         {
             //  == FIELDS ==
           protected:
             //  -- Bounds --
-            vecN<N> _min; //!< Minimum bound of the bucket.
-            vecN<N> _max; //!< Maximum bound of the bucket.
+            double _min; //!< Minimum bound of the bucket.
+            double _max; //!< Maximum bound of the bucket.
 
-            //  -- Bin Metadata --
-            std::array<size_t, N> _res;   //!< Number of bins in each dimension.
-            std::array<double, N> _width; //!< Width of bins in each dimension.
+          private:
+            //  -- Bin --
+            double _bin_width; //!< Width of the bins.
 
+          protected:
             //  -- Data --
-            utl::MultiVec<T, N> _bins; //!< Bin data.
+            std::vector<T> _bins; //!< Bin data.
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Bucket(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept;
+            inline Bucket(double min_, double max_, size_t size_) noexcept;
 
-            //  -- Initialisation --
-            inline std::array<double, N> init_width(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept;
 
+            //  == OPERATORS ==
+          public:
+            //  -- Stream --
+            template <typename S, typename _T>                                         // NOLINT
+            friend inline S& operator<<(S& stream_, const Bucket<_T>& buck_) noexcept; //!< Write the bucket data in a human-readable format. @tparam S   Stream type to write to. @tparam _T  Type binned. @param  stream_ Stream to write to. @param  buck_
+                                                                                       //!< Bucket to be printed. @return Reference to the stream post-print.
 
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const vecN<N>&               min() noexcept;
-            inline const vecN<N>&               max() noexcept;
-            inline const std::array<size_t, N>& res() noexcept;
-            inline const std::array<double, N>& width() noexcept;
-            inline const utl::MultiVec<T, N>&   bins() noexcept;
+            inline double                min() const noexcept;
+            inline double                max() const noexcept;
+            inline double                bin_width() const noexcept;
+            inline const std::vector<T>& bins() const noexcept;
+            inline size_t                size() const noexcept;
 
             //  -- Searching --
-            inline size_t find_index(size_t dim_, double pos_) noexcept;
+            inline size_t find_index(double pos_) noexcept;
 
             //  -- Collection --
-            virtual inline void collect(const vecN<N>& pos_, const T& val_) noexcept = 0; //!<  Collect a value into the bucket at a given position.  If the position is outside the bounds of the bucket then it is counted as a miss.  @tparam T   Type
-                                                                                          //!<  binned.  @tparam N   Dimensionality.  @param  pos_    Position of the value to place.  @param  val_    Value to place within the bins.
+            virtual inline void collect(double   pos_,
+                                        const T& val_) noexcept = 0; //!<  Collect a value into the bucket at a given position.  @tparam T   Type binned. @param  pos_    Position of the value to place.  @param  val_    Value to place within the bins.
 
-          protected:
-            //  -- Storage --
-            /**
-             *  Store a value within the bins.
-             *
-             *  @tparam I   Dimension of the slice.
-             *
-             *  @param  bins_   Slice of the bucket bins.
-             *  @param  pos_    Position of the value to place.
-             *  @param  val_    Value to place within the bins.
-             *
-             *  @pre    pos_ must fall within the bounds of the bucket.
-             */
-            template <size_t I, typename = typename std::enable_if<!(I == 1)>::type>
-            inline void store(utl::MultiVec<T, I>& bins_, const std::array<double, N>& pos_, const T& val_) noexcept
-            {
-                for (size_t i = 0; i < N; ++i)
-                {
-                    assert((pos_[i] >= _min[i]) && (pos_[i] <= _max[i]));
-                }
+            //  -- Printing --
+            inline std::string str(char delim_ = settings::DEFAULT_DELIM, size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
 
-                const size_t index = find_index(N - I, pos_[N - I]);
-
-                store<I - 1>(bins_[index], pos_, val_);
-            }
-
-            /**
-             *  Store a value within the bins.
-             *
-             *  @tparam I   Dimension of the slice.
-             *
-             *  @param  bins_   Slice of the bucket bins.
-             *  @param  pos_    Position of the value to place.
-             *  @param  val_    Value to place within the bins.
-             *
-             *  @pre    pos_ must fall within the bounds of the bucket.
-             */
-            template <size_t I, typename = typename std::enable_if<(I == 1)>::type>
-            inline void store(utl::MultiVec<T, 1>& bins_, const std::array<double, N>& pos_, const T& val_) noexcept
-            {
-                for (size_t i = 0; i < N; ++i)
-                {
-                    assert((pos_[i] >= _min[i]) && (pos_[i] <= _max[i]));
-                }
-
-                const size_t index = find_index(N - I, pos_[N - I]);
-
-                bins_[index] += val_;
-            }
+            //  -- Saving --
+            inline void save(const std::string& path_, char delim_ = settings::DEFAULT_DELIM, size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
         };
 
 
@@ -155,48 +118,34 @@ namespace arc //! arctk namespace
         inline Bucket<T>::Bucket(const double min_, const double max_, const size_t size_) noexcept
           : _min(min_)
           , _max(max_)
-          , _res(res_)
-          , _width(init_width(min_, max_, res_))
-          , _bins(utl::make_MultiVec<T, N>(res_))
+          , _bin_width((max_ - min_) / size_)
+          , _bins(size_)
         {
             assert(min_ < max_);
             assert(size_ > 0);
         }
 
 
-        //  -- Initialisation --
+
+        //  == OPERATORS ==
+        //  -- Stream --
         /**
-         *  Initialise the width of bins in each dimension.
+         *  Write the bucket data in a human-readable format.
          *
+         *  @tparam S   Stream type to write to.
          *  @tparam T   Type binned.
-         *  @tparam N   Dimensionality.
          *
-         *  @param  min_    Minimum bound of the bucket.
-         *  @param  max_    Maximum bound of the bucket.
-         *  @param  res_    Number of bins in each dimension.
+         *  @param  stream_ Stream to write to.
+         *  @param  buck_   Bucket to be printed.
          *
-         *  @pre    All values of min_ must be less than each corresponding value of max_.
-         *  @pre    All values of res_ must be positive.
-         *
-         *  @return Initialised array of bin widths.
+         *  @return Reference to the stream post-print.
          */
-        template <typename T, size_t N>
-        inline std::array<double, N> Bucket<T, N>::init_width(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept
+        template <typename S, typename T>
+        inline S& operator<<(S& stream_, const Bucket<T>& buck_) noexcept
         {
-            for (size_t i = 0; i < N; ++i)
-            {
-                assert(min_[i] < max_[i]);
-            }
-            assert(prop::always_greater_than(res_, 0));
+            stream_ << buck_.str();
 
-            std::array<double, N> width;
-
-            for (size_t i = 0; i < N; ++i)
-            {
-                width[i] = (max_[i] - min_[i]) / res_[i];
-            }
-
-            return (width);
+            return (stream_);
         }
 
 
@@ -207,12 +156,11 @@ namespace arc //! arctk namespace
          *  Get the minimum bound of the bucket.
          *
          *  @tparam T   Type binned.
-         *  @tparam N   Dimensionality.
          *
          *  @return Minimum bound of the bucket.
          */
-        template <typename T, size_t N>
-        inline const vecN<N>& Bucket<T, N>::min() noexcept
+        template <typename T>
+        inline double Bucket<T>::min() const noexcept
         {
             return (_min);
         }
@@ -221,56 +169,52 @@ namespace arc //! arctk namespace
          *  Get the maximum bound of the bucket.
          *
          *  @tparam T   Type binned.
-         *  @tparam N   Dimensionality.
          *
          *  @return Maximum bound of the bucket.
          */
-        template <typename T, size_t N>
-        inline const vecN<N>& Bucket<T, N>::max() noexcept
+        template <typename T>
+        inline double Bucket<T>::max() const noexcept
         {
             return (_max);
         }
 
         /**
-         *  Get the resolution of each dimension.
+         *  Get the width of the bucket's bins.
          *
          *  @tparam T   Type binned.
-         *  @tparam N   Dimensionality.
          *
-         *  @return Resolution of each dimension.
+         *  @return Width of the bucket's bins.
          */
-        template <typename T, size_t N>
-        inline const std::array<size_t, N>& Bucket<T, N>::res() noexcept
+        template <typename T>
+        inline double Bucket<T>::bin_width() const noexcept
         {
-            return (_res);
+            return (_bin_width);
         }
 
         /**
-         *  Get the width of the bins of each dimension.
+         *  Get the bin data of the bucket.
          *
          *  @tparam T   Type binned.
-         *  @tparam N   Dimensionality.
          *
-         *  @return Width of the bins of each dimension.
+         *  @return Bin data of the bucket.
          */
-        template <typename T, size_t N>
-        inline const std::array<double, N>& Bucket<T, N>::width() noexcept
-        {
-            return (_width);
-        }
-
-        /**
-         *  Get the bin data.
-         *
-         *  @tparam T   Type binned.
-         *  @tparam N   Dimensionality.
-         *
-         *  @return Bin data.
-         */
-        template <typename T, size_t N>
-        inline const utl::MultiVec<T, N>& Bucket<T, N>::bins() noexcept
+        template <typename T>
+        inline const std::vector<T>& Bucket<T>::bins() const noexcept
         {
             return (_bins);
+        }
+
+        /**
+         *  Get the size of the bin data bins vector.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @return Size of the bin data bins vector.
+         */
+        template <typename T>
+        inline size_t Bucket<T>::size() const noexcept
+        {
+            return (_bins.size());
         }
 
 
@@ -279,9 +223,7 @@ namespace arc //! arctk namespace
          *  Determine the index of the bin a position belongs in.
          *
          *  @tparam T   Type binned.
-         *  @tparam N   Dimensionality.
          *
-         *  @param  dim_    Dimension to find index for.
          *  @param  pos_    Position to place within the bin.
          *
          *  @pre    pos_ must be greater than, or equal to, the minimum bound of the bucket.
@@ -289,19 +231,64 @@ namespace arc //! arctk namespace
          *
          *  @return Index of the bin to corresponding to the given position.
          */
-        template <typename T, size_t N>
-        inline size_t Bucket<T, N>::find_index(const size_t dim_, const double pos_) noexcept
+        template <typename T>
+        inline size_t Bucket<T>::find_index(const double pos_) noexcept
         {
-            assert(pos_ >= _min[dim_]);
-            assert(pos_ <= _max[dim_]);
+            assert(pos_ >= _min);
+            assert(pos_ <= _max);
 
-            const auto index = static_cast<size_t>((pos_ - _min[dim_]) / _width[dim_]);
+            const auto index = static_cast<size_t>((pos_ - _min) / _bin_width);
 
-            return ((index == _res[dim_]) ? (index - 1) : index);
+            return ((index == _bins.size()) ? (index - 1) : index);
         }
 
 
-        //  -- Storage --
+        //  -- Printing --
+        /**
+         *  Form the bucket data into a human readable string.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @param  delim_  Delimiter character used to seperate consecutive values.
+         *  @param  width_  Print width allocated to each value.
+         *
+         *  @return Human readable string of the bucket data.
+         */
+        template <typename T>
+        inline std::string Bucket<T>::str(const char delim_, const size_t width_) const noexcept
+        {
+            std::vector<double> pos(_bins.size());
+
+            for (size_t i = 0; i < pos.size(); ++i)
+            {
+                pos[i] = _min + ((i + 0.5) * _bin_width);
+            }
+
+            return (arc::data::Table<double, T>(pos, _bins).str(delim_, width_));
+        }
+
+
+        //  -- Saving --
+        /**
+         *  Save bucket data as a csv file.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @param  path_   Path to the output file.
+         *  @param  delim_  Delimiter character used to seperate consecutive values.
+         *  @param  width_  Print width allocated to each value.
+         *
+         *  @pre    path_ may not be empty.
+         */
+        template <typename T>
+        inline void Bucket<T>::save(const std::string& path_, const char delim_, const size_t width_) const noexcept
+        {
+            assert(!path_.empty());
+
+            sys::file::Out file(path_);
+
+            file << str(delim_, width_);
+        }
 
 
 

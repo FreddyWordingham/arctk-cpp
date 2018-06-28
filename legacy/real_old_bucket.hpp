@@ -86,53 +86,8 @@ namespace arc //! arctk namespace
 
           protected:
             //  -- Storage --
-            /**
-             *  Store a value within the bins.
-             *
-             *  @tparam I   Dimension of the slice.
-             *
-             *  @param  bins_   Slice of the bucket bins.
-             *  @param  pos_    Position of the value to place.
-             *  @param  val_    Value to place within the bins.
-             *
-             *  @pre    pos_ must fall within the bounds of the bucket.
-             */
-            template <size_t I, typename = typename std::enable_if<!(I == 1)>::type>
-            inline void store(utl::MultiVec<T, I>& bins_, const std::array<double, N>& pos_, const T& val_) noexcept
-            {
-                for (size_t i = 0; i < N; ++i)
-                {
-                    assert((pos_[i] >= _min[i]) && (pos_[i] <= _max[i]));
-                }
-
-                const size_t index = find_index(N - I, pos_[N - I]);
-
-                store<I - 1>(bins_[index], pos_, val_);
-            }
-
-            /**
-             *  Store a value within the bins.
-             *
-             *  @tparam I   Dimension of the slice.
-             *
-             *  @param  bins_   Slice of the bucket bins.
-             *  @param  pos_    Position of the value to place.
-             *  @param  val_    Value to place within the bins.
-             *
-             *  @pre    pos_ must fall within the bounds of the bucket.
-             */
-            template <size_t I, typename = typename std::enable_if<(I == 1)>::type>
-            inline void store(utl::MultiVec<T, 1>& bins_, const std::array<double, N>& pos_, const T& val_) noexcept
-            {
-                for (size_t i = 0; i < N; ++i)
-                {
-                    assert((pos_[i] >= _min[i]) && (pos_[i] <= _max[i]));
-                }
-
-                const size_t index = find_index(N - I, pos_[N - I]);
-
-                bins_[index] += val_;
-            }
+            template <size_t I>
+            inline void store(utl::MultiVec<T, I>& bins_, const std::array<double, N>& pos_, const T& val_) noexcept;
         };
 
 
@@ -140,27 +95,31 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         /**
-         *  Construct a one-dimensional bucket object with given bounds and size.
+         *  Construct a multi-dimensional bucket object with given bounds and a resolution in each dimension.
          *
          *  @tparam T   Type binned.
+         *  @tparam N   Dimensionality.
          *
          *  @param  min_    Minimum bound of the bucket.
          *  @param  max_    Maximum bound of the bucket.
-         *  @param  size_   Number of bins.
+         *  @param  res_    Number of bins in each dimension.
          *
-         *  @pre    min_ must be less than max_.
-         *  @pre    Size_ must be positive.
+         *  @pre    All values of min_ must be less than each corresponding value of max_.
+         *  @pre    All values of res_ must be positive.
          */
-        template <typename T>
-        inline Bucket<T>::Bucket(const double min_, const double max_, const size_t size_) noexcept
+        template <typename T, size_t N>
+        inline Bucket<T, N>::Bucket(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept
           : _min(min_)
           , _max(max_)
           , _res(res_)
           , _width(init_width(min_, max_, res_))
           , _bins(utl::make_MultiVec<T, N>(res_))
         {
-            assert(min_ < max_);
-            assert(size_ > 0);
+            for (size_t i = 0; i < N; ++i)
+            {
+                assert(min_[i] < max_[i]);
+            }
+            assert(prop::always_greater_than(res_, 0));
         }
 
 
@@ -302,6 +261,40 @@ namespace arc //! arctk namespace
 
 
         //  -- Storage --
+        /**
+         *  Store a value within the bins.
+         *
+         *  @tparam T   Type binned.
+         *  @tparam N   Dimensionality.
+         *
+         *  @tparam I   Dimension of the slice.
+         *
+         *  @param  bins_   Slice of the bucket bins.
+         *  @param  pos_    Position of the value to place.
+         *  @param  val_    Value to place within the bins.
+         *
+         *  @pre    pos_ must fall within the bounds of the bucket.
+         */
+        template <typename T, size_t N>
+        template <size_t I>
+        inline void Bucket<T, N>::store(utl::MultiVec<T, I>& bins_, const std::array<double, N>& pos_, const T& val_) noexcept
+        {
+            for (size_t i = 0; i < N; ++i)
+            {
+                assert((pos_[i] >= _min[i]) && (pos_[i] <= _max[i]));
+            }
+
+            const size_t index = find_index(N - I, pos_[N - I]);
+
+            if constexpr (I == 1)
+            {
+                bins_[index] += val_;
+            }
+            else
+            {
+                store<I - 1>(bins_[index], pos_, val_);
+            }
+        }
 
 
 

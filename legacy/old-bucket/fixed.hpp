@@ -1,6 +1,6 @@
 /**
  *  @file   arctk/data/bucket/fixed.hpp
- *  @date   23/06/2018
+ *  @date   14/06/2018
  *  @author Freddy Wordingham
  *
  *  Fixed range data binning class.
@@ -46,9 +46,10 @@ namespace arc //! arctk namespace
              *  Fixed range binning class.
              *
              *  @tparam T   Type stored by the bucket.
+             *  @tparam N   Dimensionality of the bucket.
              */
-            template <typename T>
-            class Fixed : public Bucket<T>
+            template <typename T, size_t N>
+            class Fixed : public Bucket<T, N>
             {
                 //  == FIELDS ==
               private:
@@ -59,16 +60,16 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Fixed(double min_, double max_, double size_) noexcept;
+                inline Fixed(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept;
 
 
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline const T& misses() const noexcept;
+                inline const T& misses() noexcept;
 
                 //  -- Collection --
-                inline void collect(double pos_, const T& val_) noexcept override;
+                inline void collect(const vecN<N>& pos_, const T& val_) noexcept override;
             };
 
 
@@ -76,38 +77,42 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
-             *  Construct a fixed one-dimensional bucket object with given bounds and size.
+             *  Construct a multi-dimensional bucket object with given fixed bounds and a resolution in each dimension.
              *
              *  @tparam T   Type binned.
+             *  @tparam N   Dimensionality.
              *
              *  @param  min_    Minimum bound of the bucket.
              *  @param  max_    Maximum bound of the bucket.
-             *  @param  size_   Number of bins.
+             *  @param  res_    Number of bins in each dimension.
              *
-             *  @pre    min_ must be less than max_.
-             *  @pre    Size_ must be positive.
+             *  @pre    All values of min_ must be less than each corresponding value of max_.
+             *  @pre    All values of res_ must be positive.
              */
-            template <typename T>
-            inline Fixed<T>::Fixed(const double min_, const double max_, const double size_) noexcept
-              : Bucket<T>(min_, max_, size_)
+            template <typename T, size_t N>
+            inline Fixed<T, N>::Fixed(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept
+              : Bucket<T, N>(min_, max_, res_)
             {
-                assert(min_ < max_);
-                assert(size_ > 0);
+                for (size_t i = 0; i < N; ++i)
+                {
+                    assert(min_[i] < max_[i]);
+                }
+                assert(prop::always_greater_than(res_, 0));
             }
-
 
 
             //  == METHODS ==
             //  -- Getters --
             /**
-             *  Get the total number of misses.
+             *  Get the total value of all misses..
              *
              *  @tparam T   Type binned.
+             *  @tparam N   Dimensionality.
              *
-             *  @return Total number of misses.
+             *  @return Total value of all misses.
              */
-            template <typename T>
-            inline const T& Fixed<T>::misses() const noexcept
+            template <typename T, size_t N>
+            inline const T& Fixed<T, N>::misses() noexcept
             {
                 return (_misses);
             }
@@ -119,21 +124,25 @@ namespace arc //! arctk namespace
              *  If the position is outside the bounds of the bucket then it is counted as a miss.
              *
              *  @tparam T   Type binned.
+             *  @tparam N   Dimensionality.
              *
              *  @param  pos_    Position of the value to place.
              *  @param  val_    Value to place within the bins.
              */
-            template <typename T>
-            inline void Fixed<T>::collect(const double pos_, const T& val_) noexcept
+            template <typename T, size_t N>
+            inline void Fixed<T, N>::collect(const vecN<N>& pos_, const T& val_) noexcept
             {
-                if ((pos_ < Bucket<T>::_min) || (pos_ > Bucket<T>::_max))
+                for (size_t i = 0; i < N; ++i)
                 {
-                    _misses += val_;
+                    if ((pos_[i] < Bucket<T, N>::_min[i]) || (pos_[i] > Bucket<T, N>::_max[i]))
+                    {
+                        _misses += val_;
 
-                    return;
+                        return;
+                    }
                 }
 
-                Bucket<T>::_bins[Bucket<T>::find_index(pos_)] += val_;
+                Bucket<T, N>::template store<N>(Bucket<T, N>::_bins, static_cast<std::array<double, N>>(pos_), val_);
             }
 
 
