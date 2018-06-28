@@ -731,6 +731,14 @@ namespace arc //! arctk namespace
 
 
         //  -- Mathematical --
+        /**
+         *  Calculate the sum of the mat elements.
+         *
+         *  @tparam T   Type stored by the mat.
+         *  @tparam N   Size of the mat.
+         *
+         *  @return Sum of the mat elements.
+         */
         template <typename T, size_t N>
         constexpr inline T Mat<T, N>::sum() const noexcept
         {
