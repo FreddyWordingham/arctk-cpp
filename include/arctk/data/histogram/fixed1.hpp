@@ -60,6 +60,9 @@ namespace arc //! arctk namespace
               public:
                 //  -- Getters --
                 inline const T& misses() const noexcept;
+
+                //  -- Collection --
+                inline void collect(double pos_, const T& val_) noexcept override;
             };
 
 
@@ -101,6 +104,30 @@ namespace arc //! arctk namespace
             inline const T& Fixed<T, 1>::misses() const noexcept
             {
                 return (_misses);
+            }
+
+
+            //  -- Collection --
+            /**
+             *  Collect a value into the histogram at a given position.
+             *  If the position is outside the bounds of the histogram then it is counted as a miss.
+             *
+             *  @tparam T   Type binned.
+             *
+             *  @param  pos_    Position of the value to place.
+             *  @param  val_    Value to place within the bins.
+             */
+            template <typename T>
+            inline void Fixed<T>::collect(const double pos_, const T& val_) noexcept
+            {
+                if ((pos_ < Bucket<T>::_min) || (pos_ > Bucket<T>::_max))
+                {
+                    _misses += val_;
+
+                    return;
+                }
+
+                Bucket<T>::_bins[Bucket<T>::find_index(pos_)] += val_;
             }
 
 
