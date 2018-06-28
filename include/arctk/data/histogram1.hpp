@@ -45,6 +45,10 @@ namespace arc //! arctk namespace
           private:
             //  -- Bin --
             double _bin_width; //!< Width of the bins.
+
+          protected:
+            //  -- Data --
+            std::vector<T> _bins; //!< Bin data.
         };
 
 
