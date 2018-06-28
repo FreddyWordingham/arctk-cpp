@@ -22,6 +22,7 @@
 #include <arctk/constant/phys.hpp>
 #include <arctk/data.hpp>
 #include <arctk/data/histogram.hpp>
+#include <arctk/data/histogram/average.hpp>
 #include <arctk/data/histogram/fixed.hpp>
 #include <arctk/data/histogram/fixed1.hpp>
 #include <arctk/data/histogram/fixed2.hpp>
