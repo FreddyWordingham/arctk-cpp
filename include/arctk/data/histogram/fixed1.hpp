@@ -48,7 +48,37 @@ namespace arc //! arctk namespace
               private:
                 //  -- Counts --
                 T _misses{}; //!< Number of range misses.
+
+
+                //  == INSTANTIATION ==
+              public:
+                //  -- Constructors --
+                inline Fixed(double min_, double max_, double size_) noexcept;
             };
+
+
+
+            //  == INSTANTIATION ==
+            //  -- Constructors --
+            /**
+             *  Construct a fixed one-dimensional histogram object with given bounds and size.
+             *
+             *  @tparam T   Type binned.
+             *
+             *  @param  min_    Minimum bound of the histogram range.
+             *  @param  max_    Maximum bound of the histogram range.
+             *  @param  size_   Number of bins.
+             *
+             *  @pre    min_ must be less than max_.
+             *  @pre    Size_ must be positive.
+             */
+            template <typename T>
+            inline Fixed<T>::Fixed(const double min_, const double max_, const double size_) noexcept
+              : Bucket<T>(min_, max_, size_)
+            {
+                assert(min_ < max_);
+                assert(size_ > 0);
+            }
 
 
 
