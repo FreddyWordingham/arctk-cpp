@@ -19,6 +19,12 @@
 
 
 
+//  == BASE ==
+//  -- Arctk --
+#include <arctk/data/histogram.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
