@@ -75,7 +75,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Histogram(double min_, double max_, size_t size_) noexcept;
+            inline Histogram(const vec2& min_, const vec2& max_, const vec2s& size_) noexcept;
 
 
             //  == METHODS ==
@@ -108,7 +108,7 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         /**
-         *  Construct a one-dimensional histogram object with given bounds and size.
+         *  Construct a two-dimensional histogram object with given bounds and size.
          *
          *  @tparam T   Type binned.
          *
@@ -117,17 +117,19 @@ namespace arc //! arctk namespace
          *  @param  size_   Number of bins.
          *
          *  @pre    min_ must be less than max_.
-         *  @pre    Size_ must be positive.
+         *  @pre    size_ must be positive.
          */
         template <typename T>
-        inline Histogram<T, 2>::Histogram(const double min_, const double max_, const size_t size_) noexcept
+        inline Histogram<T, 2>::Histogram(const vec2& min_, const vec2& max_, const vec2s& size_) noexcept
           : _min(min_)
           , _max(max_)
           , _bin_width((max_ - min_) / size_)
           , _bins(size_)
         {
-            assert(min_ < max_);
-            assert(size_ > 0);
+            assert(min_.x < max_.x);
+            assert(min_.y < max_.y);
+            assert(size_.x > 0);
+            assert(size_.y > 0);
         }
 
 
