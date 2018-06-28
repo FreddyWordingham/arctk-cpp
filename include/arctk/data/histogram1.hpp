@@ -96,6 +96,9 @@ namespace arc //! arctk namespace
 
             //  -- Printing --
             inline std::string str(char delim_ = settings::DEFAULT_DELIM, size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
+
+            //  -- Saving --
+            inline void save(const std::string& path_, char delim_ = settings::DEFAULT_DELIM, size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
         };
 
 
@@ -270,6 +273,29 @@ namespace arc //! arctk namespace
             }
 
             return (stream.str());
+        }
+
+
+        //  -- Saving --
+        /**
+         *  Save data table as a csv file.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @param  path_   Path to the output file.
+         *  @param  delim_  Delimiter character used to seperate consecutive values.
+         *  @param  width_  Print width allocated to each value.
+         *
+         *  @pre    path_ may not be empty.
+         */
+        template <typename T>
+        inline void Histogram<T, 1>::save(const std::string& path_, const char delim_, const size_t width_) const noexcept
+        {
+            assert(!path_.empty());
+
+            sys::file::Out file(path_);
+
+            file << str(delim_, width_);
         }
 
 
