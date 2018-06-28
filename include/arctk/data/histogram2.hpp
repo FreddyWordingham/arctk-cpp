@@ -124,7 +124,7 @@ namespace arc //! arctk namespace
           : _min(min_)
           , _max(max_)
           , _bin_width((max_ - min_) / size_)
-          , _bins(size_)
+          , _bins(std::vector<double>(size_.y), size_.x)
         {
             assert(min_.x < max_.x);
             assert(min_.y < max_.y);
