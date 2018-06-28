@@ -141,9 +141,6 @@ namespace arc //! arctk namespace
             y.x += val_;
             y.y += val_;
 
-            z.x += val_;
-            z.y += val_;
-
             return (*this);
         }
 
