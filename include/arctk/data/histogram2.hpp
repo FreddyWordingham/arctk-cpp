@@ -83,7 +83,7 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline const vec2&           min() const noexcept;
             inline const vec2&           max() const noexcept;
-            inline double                bin_width() const noexcept;
+            inline const vec2&           bin_width() const noexcept;
             inline const std::vector<T>& bins() const noexcept;
             inline size_t                size() const noexcept;
             inline double                centre(size_t index_) const noexcept;
@@ -170,7 +170,7 @@ namespace arc //! arctk namespace
          *  @return Width of the histogram's bins.
          */
         template <typename T>
-        inline double Histogram<T, 2>::bin_width() const noexcept
+        inline const vec2& Histogram<T, 2>::bin_width() const noexcept
         {
             return (_bin_width);
         }
