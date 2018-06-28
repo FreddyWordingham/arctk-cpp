@@ -77,10 +77,6 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
-            //  -- Stream --
-            template <typename S, typename _T, size_t _N> // NOLINT
-            friend inline S& operator<<(S& stream_, const Vec<_T, _N>& vec_) noexcept;
-
             //  -- Conversion --
             constexpr inline explicit operator std::array<T, N>() const noexcept;
 
@@ -231,28 +227,6 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
-        //  -- Stream --
-        /**
-         *  Print a vec as a human-readable string.
-         *
-         *  @tparam S   Type of stream to print to.
-         *  @tparam T   Type stored by the vec.
-         *  @tparam N   Size of vec to print.
-         *
-         *  @param  stream_ Stream to print to.
-         *  @param  vec_    Vec to print.
-         *
-         *  @return A reference to the stream post-print.
-         */
-        template <typename S, typename T, size_t N>
-        inline S& operator<<(S& stream_, const Vec<T, N>& vec_) noexcept
-        {
-            stream_ << str::to_string(vec_._data);
-
-            return (stream_);
-        }
-
-
         //  -- Conversion --
         /**
          *  Convert the vec to a std::array.
