@@ -22,6 +22,8 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
+#include <sstream>
+#include <string>
 
 //  -- Arctk --
 #include <arctk/math/vec.hpp>
