@@ -600,20 +600,9 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline Mat<T, N> Mat<T, N>::operator*(const Mat<T, N>& mat_) const noexcept
         {
-            Mat mat;
-
-            for (size_t i = 0; i < N; ++i)
-            {
-                for (size_t j = 0; j < N; ++j)
-                {
-                    for (size_t k = 0; k < N; ++k)
-                    {
-                        mat._data[i][j] += _data[i][k] * mat_._data[k][j];
-                    }
-                }
-            }
-
-            return (mat);
+            return (Mat3(Vec<T, 3>(x * Vec<T, 3>(mat_.x.x, mat_.y.x, mat_.z.x), x * Vec<T, 3>(mat_.x.y, mat_.y.y, mat_.z.y), x * Vec<T, 3>(mat_.x.z, mat_.y.z, mat_.z.z)),
+                         Vec<T, 3>(y * Vec<T, 3>(mat_.x.x, mat_.y.x, mat_.z.x), y * Vec<T, 3>(mat_.x.y, mat_.y.y, mat_.z.y), y * Vec<T, 3>(mat_.x.z, mat_.y.z, mat_.z.z)),
+                         Vec<T, 3>(z * Vec<T, 3>(mat_.x.x, mat_.y.x, mat_.z.x), z * Vec<T, 3>(mat_.x.y, mat_.y.y, mat_.z.y), z * Vec<T, 3>(mat_.x.z, mat_.y.z, mat_.z.z))));
         }
 
         /**
