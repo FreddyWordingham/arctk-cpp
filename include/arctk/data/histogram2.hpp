@@ -124,7 +124,7 @@ namespace arc //! arctk namespace
           : _min(min_)
           , _max(max_)
           , _bin_width((max_.x - min_.x) / size_.x, (max_.y - min_.y) / size_.y)
-          , _bins(std::vector<double>(size_.y), size_.x)
+          , _bins(size_.x, std::vector<double>(size_.y))
         {
             assert(min_.x < max_.x);
             assert(min_.y < max_.y);
@@ -213,7 +213,7 @@ namespace arc //! arctk namespace
         template <typename T>
         inline std::vector<std::vector<double>> Histogram<T, 2>::centres() const noexcept
         {
-            std::vector<std::vector<double>> centres(std::vector<double>(_bins.front().size()), _bins.size());
+            std::vector<std::vector<double>> centres(_bins.size(), std::vector<double>(_bins.front().size()));
 
             for (size_t i = 0; i < centres.size(); ++i)
             {
