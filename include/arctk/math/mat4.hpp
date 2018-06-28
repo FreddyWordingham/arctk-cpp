@@ -56,10 +56,10 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           public:
             //  -- Data --
-            Vec<T, 4> x{};
-            Vec<T, 4> y{};
-            Vec<T, 4> z{};
-            Vec<T, 4> w{};
+            Vec<T, 4> x{}; //!< X-row of matrix.
+            Vec<T, 4> y{}; //!< Y-row of matrix.
+            Vec<T, 4> z{}; //!< Z-row of matrix.
+            Vec<T, 4> w{}; //!< W-row of matrix.
 
 
             //  == INSTANTIATION ==
