@@ -618,7 +618,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline Mat<T, N> Mat<T, N>::operator/(const T val_) const noexcept
         {
-            return (Mat3(vec::Vec3(x.x / val_, x.y / val_, x.z / val_), vec::Vec3(y.x / val_, y.y / val_, y.z / val_), vec::Vec3(z.x / val_, z.y / val_, z.z / val_)));
+            return (Mat<T, 3>(Vec<T, 3>(x.x / val_, x.y / val_, x.z / val_), Vec<T, 3>(y.x / val_, y.y / val_, y.z / val_), Vec<T, 3>(z.x / val_, z.y / val_, z.z / val_)));
         }
 
 
