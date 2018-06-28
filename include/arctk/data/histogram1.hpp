@@ -66,8 +66,11 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double min() const noexcept;
-            inline double max() const noexcept;
+            inline double                min() const noexcept;
+            inline double                max() const noexcept;
+            inline double                bin_width() const noexcept;
+            inline const std::vector<T>& bins() const noexcept;
+            inline size_t                size() const noexcept;
         };
 
 
@@ -102,11 +105,11 @@ namespace arc //! arctk namespace
         //  == METHODS ==
         //  -- Getters --
         /**
-         *  Get the minimum bound of the bucket.
+         *  Get the minimum bound of the histogram.
          *
          *  @tparam T   Type binned.
          *
-         *  @return Minimum bound of the bucket.
+         *  @return Minimum bound of the histogram.
          */
         template <typename T>
         inline double Histogram<T, 1>::min() const noexcept
@@ -115,16 +118,29 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Get the maximum bound of the bucket.
+         *  Get the maximum bound of the histogram.
          *
          *  @tparam T   Type binned.
          *
-         *  @return Maximum bound of the bucket.
+         *  @return Maximum bound of the histogram.
          */
         template <typename T>
         inline double Histogram<T, 1>::max() const noexcept
         {
             return (_max);
+        }
+
+        /**
+         *  Get the width of the histogram's bins.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @return Width of the histogram's bins.
+         */
+        template <typename T>
+        inline double Histogram<T>::bin_width() const noexcept
+        {
+            return (_bin_width);
         }
 
 
