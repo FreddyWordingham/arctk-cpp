@@ -39,7 +39,6 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Scattering --
-            template <typename T>
             inline vec3   isotropic(Generator* const rng_) noexcept;
             inline double henyey_greenstein(Generator* rng_, double g_) noexcept;
 
@@ -47,7 +46,6 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Scattering --
-            template <typename T>
             inline vec3 isotropic(Generator* const rng_) noexcept
             {
                 const double theta = arc::rng::distribution::uniform<double>(rng_, 0.0, 2.0 * arc::constant::PI);
