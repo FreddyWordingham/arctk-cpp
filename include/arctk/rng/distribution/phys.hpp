@@ -38,13 +38,24 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTION PROTOTYPES ==
-            //  -- Henyey-Greenstein --
-            inline double henyey_greenstein(Generator* rng_, double g_) noexcept;
+            //  -- Scattering --
+            template <typename T>
+            inline math::Vec<T, 3> isotropic() noexcept;
+            inline double          henyey_greenstein(Generator* rng_, double g_) noexcept;
 
 
 
             //  == FUNCTIONS ==
-            //  -- Henyey-Greenstein --
+            //  -- Scattering --
+            template <typename T>
+            inline vec3 isotropic() noexcept
+            {
+                const double theta = arc::rng::distribution::uniform<double>(&_rng, 0.0, 2.0 * arc::constant::PI);
+                const double z     = arc::rng::distribution::uniform<double>(&_rng, -1.0, 1.0);
+
+                return (vec3(std::sqrt(1.0 - arc::math::sq(z)) * std::cos(theta), std::sqrt(1.0 - arc::math::sq(z)) * std::sin(theta), z));
+            }
+
             /**
              *  Draw a value from the Henyey-Greenstein phase function.
              *  Function description can be found at: https://www.astro.umd.edu/~jph/HG_note.pdf
