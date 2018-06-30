@@ -46,6 +46,13 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Scattering --
+            /**
+             *  Generate a random isotropic unit vector.
+             *
+             *  @param  rng_    Generator used to draw base values from.
+             *
+             *  @return Random isotropic unit vector.
+             */
             inline vec3 isotropic(Generator* const rng_) noexcept
             {
                 const double theta = arc::rng::distribution::uniform<double>(rng_, 0.0, 2.0 * arc::constant::PI);
