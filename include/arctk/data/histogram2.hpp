@@ -321,6 +321,13 @@ namespace arc //! arctk namespace
         }
 
         //  -- Imaging --
+        /**
+         *  Form the bin data of the histogram into a greyscale image.
+         *
+         *  @tparam T   Type binned.
+         *
+         *   @return    A greyscale image of the bin data.
+         */
         template <typename T>
         inline image::Greyscale Histogram<T, 2>::img() const noexcept
         {
