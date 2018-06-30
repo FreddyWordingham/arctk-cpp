@@ -1,9 +1,9 @@
 <map id="include/arctk/sys.hpp" name="include/arctk/sys.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="282,412,379,437"/>
-<area shape="rect" id="node3" href="$image_8hpp.html" title="include/arctk/data\l/image.hpp" alt="" coords="105,165,231,204"/>
-<area shape="rect" id="node6" href="$table_8hpp.html" title="include/arctk/data\l/table.hpp" alt="" coords="330,79,456,117"/>
-<area shape="rect" id="node4" href="$greyscale_8hpp.html" title="include/arctk/data\l/image/greyscale.hpp" alt="" coords="94,252,242,291"/>
-<area shape="rect" id="node5" href="$data_8hpp.html" title="include/arctk/data.hpp" alt="" coords="255,339,407,364"/>
-<area shape="rect" id="node7" href="$bucket_8hpp.html" title="include/arctk/data\l/bucket.hpp" alt="" coords="393,165,519,204"/>
-<area shape="rect" id="node8" href="$fixed_8hpp.html" title="include/arctk/data\l/bucket/fixed.hpp" alt="" coords="418,252,544,291"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="294,412,391,437"/>
+<area shape="rect" id="node3" href="$histogram1_8hpp.html" title="include/arctk/data\l/histogram1.hpp" alt="" coords="42,252,168,291"/>
+<area shape="rect" id="node5" href="$histogram2_8hpp.html" title="include/arctk/data\l/histogram2.hpp" alt="" coords="192,252,318,291"/>
+<area shape="rect" id="node6" href="$image_8hpp.html" title="include/arctk/data\l/image.hpp" alt="" coords="286,79,412,117"/>
+<area shape="rect" id="node8" href="$table_8hpp.html" title="include/arctk/data\l/table.hpp" alt="" coords="544,252,670,291"/>
+<area shape="rect" id="node4" href="$data_8hpp.html" title="include/arctk/data.hpp" alt="" coords="267,339,419,364"/>
+<area shape="rect" id="node7" href="$greyscale_8hpp.html" title="include/arctk/data\l/image/greyscale.hpp" alt="" coords="219,165,367,204"/>
 </map>

@@ -115,6 +115,13 @@ namespace arc //! arctk namespace
                 return (_misses);
             }
 
+            /**
+             *  Get the total number of counts collected into each bin.
+             *
+             *  @tparam T   Type binned.
+             *
+             *  @return Total number of counts collected into each bin.
+             */
             template <typename T>
             inline const std::vector<size_t>& Average<T, 1>::counts() const noexcept
             {

@@ -92,6 +92,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a19c3ceda35ec2e938fbbe0fd5f5d0117"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
 <tr class="memitem:a19c3ceda35ec2e938fbbe0fd5f5d0117"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1rng_1_1distribution.html#a19c3ceda35ec2e938fbbe0fd5f5d0117">guassian</a> (<a class="el" href="classarc_1_1rng_1_1_generator.html">Generator</a> *const rng_, const double mu_, const double sigma_) noexcept</td></tr>
 <tr class="separator:a19c3ceda35ec2e938fbbe0fd5f5d0117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ae9ab9dcdfe4a9df463b59a30e52d2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1rng_1_1distribution.html#a3ae9ab9dcdfe4a9df463b59a30e52d2c">isotropic</a> (<a class="el" href="classarc_1_1rng_1_1_generator.html">Generator</a> *const rng_) noexcept</td></tr>
+<tr class="separator:a3ae9ab9dcdfe4a9df463b59a30e52d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adec970f86ea9a749d2df9153e4bce769"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1rng_1_1distribution.html#adec970f86ea9a749d2df9153e4bce769">henyey_greenstein</a> (<a class="el" href="classarc_1_1rng_1_1_generator.html">Generator</a> *rng_, double g_) noexcept</td></tr>
 <tr class="separator:adec970f86ea9a749d2df9153e4bce769"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a371cccd56b9f51dced0a37cdb4d40728"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
@@ -291,6 +293,50 @@ template&lt;&gt; </div>
 
 </div>
 </div>
+<a id="a3ae9ab9dcdfe4a9df463b59a30e52d2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ae9ab9dcdfe4a9df463b59a30e52d2c">&#9670;&nbsp;</a></span>isotropic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::rng::distribution::isotropic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarc_1_1rng_1_1_generator.html">Generator</a> *const&#160;</td>
+          <td class="paramname"><em>rng_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Generate a random isotropic unit vector.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rng_</td><td><a class="el" href="classarc_1_1rng_1_1_generator.html">Generator</a> used to draw base values from.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Random isotropic unit vector. </dd></dl>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespacearc_1_1rng_1_1distribution_a3ae9ab9dcdfe4a9df463b59a30e52d2c_cgraph.png" border="0" usemap="#namespacearc_1_1rng_1_1distribution_a3ae9ab9dcdfe4a9df463b59a30e52d2c_cgraph" alt=""/></div>
+<map name="namespacearc_1_1rng_1_1distribution_a3ae9ab9dcdfe4a9df463b59a30e52d2c_cgraph" id="namespacearc_1_1rng_1_1distribution_a3ae9ab9dcdfe4a9df463b59a30e52d2c_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1math.html#a95cadfea8bcd5d8ec23e0dabbaf6dda6" title="arc::math::sq" alt="" coords="192,12,290,37"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a83ebb5c961ac2f2553f1481fc990cd9c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a83ebb5c961ac2f2553f1481fc990cd9c">&#9670;&nbsp;</a></span>normal() <span class="overload">[1/2]</span></h2>
 
@@ -337,11 +383,11 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Value randomly drawn from normal distribution. </dd></dl>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="namespacearc_1_1rng_1_1distribution_a83ebb5c961ac2f2553f1481fc990cd9c_cgraph.png" border="0" usemap="#namespacearc_1_1rng_1_1distribution_a83ebb5c961ac2f2553f1481fc990cd9c_cgraph" alt=""/></div>
 <map name="namespacearc_1_1rng_1_1distribution_a83ebb5c961ac2f2553f1481fc990cd9c_cgraph" id="namespacearc_1_1rng_1_1distribution_a83ebb5c961ac2f2553f1481fc990cd9c_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1rng_1_1_generator.html#a23490bd4063ecbaa4ca53a294d4c5d5b" title="Generate a random double between zero and unity. " alt="" coords="192,12,355,37"/>
@@ -383,11 +429,11 @@ template&lt;&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Value randomly drawn from normal distribution. </dd></dl>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="namespacearc_1_1rng_1_1distribution_ac6e44fb7421cde0baa2044c7567889c5_cgraph.png" border="0" usemap="#namespacearc_1_1rng_1_1distribution_ac6e44fb7421cde0baa2044c7567889c5_cgraph" alt=""/></div>
 <map name="namespacearc_1_1rng_1_1distribution_ac6e44fb7421cde0baa2044c7567889c5_cgraph" id="namespacearc_1_1rng_1_1distribution_ac6e44fb7421cde0baa2044c7567889c5_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1rng_1_1_generator.html#a23490bd4063ecbaa4ca53a294d4c5d5b" title="Generate a random double between zero and unity. " alt="" coords="192,12,355,37"/>
@@ -624,7 +670,7 @@ template&lt;&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 28 2018 02:18:39 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 1 2018 00:52:02 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

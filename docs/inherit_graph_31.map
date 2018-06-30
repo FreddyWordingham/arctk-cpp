@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classarc_1_1utl_1_1___multi_vec_3_01_t_00_011_01_4.html" title="arc::utl::_MultiVec\l\&lt; T, 1 \&gt;" alt="" coords="5,5,132,44"/>
+<area shape="rect" id="node1" href="$classarc_1_1sys_1_1_file.html" title="arc::sys::File" alt="" coords="5,55,101,80"/>
+<area shape="rect" id="node2" href="$classarc_1_1sys_1_1file_1_1_app.html" title="arc::sys::file::App" alt="" coords="149,5,272,31"/>
+<area shape="rect" id="node3" href="$classarc_1_1sys_1_1file_1_1_in.html" title="arc::sys::file::In" alt="" coords="156,55,266,80"/>
+<area shape="rect" id="node4" href="$classarc_1_1sys_1_1file_1_1_out.html" title="arc::sys::file::Out" alt="" coords="151,104,271,129"/>
 </map>

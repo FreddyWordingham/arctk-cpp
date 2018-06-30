@@ -2,6 +2,7 @@ var searchData=
 [
   ['image',['Image',['../classarc_1_1data_1_1_image.html',1,'arc::data::Image'],['../classarc_1_1data_1_1_image.html#a1dbb1342049675cd7a0aaad91144d022',1,'arc::data::Image::Image(size_t width_, size_t height_) noexcept'],['../classarc_1_1data_1_1_image.html#ac2496aca6963d26b21607e2cc8896b19',1,'arc::data::Image::Image(const Image &amp;) noexcept=default'],['../classarc_1_1data_1_1_image.html#a23cf538ae4b6a40880a83a19f7c85e0d',1,'arc::data::Image::Image(Image &amp;&amp;) noexcept=default']]],
   ['image_2ehpp',['image.hpp',['../image_8hpp.html',1,'']]],
+  ['img',['img',['../classarc_1_1data_1_1_histogram_3_01_t_00_012_01_4.html#ae2fefa8c5b4501e5e1ea6f1f1e25de5a',1,'arc::data::Histogram&lt; T, 2 &gt;']]],
   ['in',['In',['../classarc_1_1sys_1_1file_1_1_in.html',1,'arc::sys::file::In'],['../classarc_1_1sys_1_1file_1_1_in.html#af9375cec1162866401b7272c000a2feb',1,'arc::sys::file::In::In(const std::string &amp;path_) noexcept'],['../classarc_1_1sys_1_1file_1_1_in.html#aeedeb6817f818ffd350957dc4e0a105a',1,'arc::sys::file::In::In(const In &amp;) noexcept=delete'],['../classarc_1_1sys_1_1file_1_1_in.html#a7be7e2f1ddfbd6aec62be0fbbbc47a5c',1,'arc::sys::file::In::In(In &amp;&amp;)=default']]],
   ['in_2ehpp',['in.hpp',['../in_8hpp.html',1,'']]],
   ['init_5fargv',['init_argv',['../classarc_1_1sys_1_1_args.html#a18cbb62fbc71def78864a18030c7fab4',1,'arc::sys::Args']]],
@@ -16,5 +17,6 @@ var searchData=
   ['init_5fvao',['init_vao',['../classarc_1_1gui_1_1_actor.html#aec224c5b4347c8ecefe2ef56370e7fc5',1,'arc::gui::Actor']]],
   ['init_5fvbo',['init_vbo',['../classarc_1_1gui_1_1_actor.html#a9ca837d824a70fd9c9077f932bea79e7',1,'arc::gui::Actor']]],
   ['instance',['instance',['../classarc_1_1log_1_1_term.html#aebeecbc3cf22b9b629838443228ea920',1,'arc::log::Term']]],
-  ['int_5funiform',['int_uniform',['../classarc_1_1gui_1_1_actor.html#a417e7ac9d0888810187e3ea8481c149b',1,'arc::gui::Actor::int_uniform()'],['../classarc_1_1gui_1_1_camera.html#ae0c451904a857d40678df538b8023e14',1,'arc::gui::Camera::int_uniform()']]]
+  ['int_5funiform',['int_uniform',['../classarc_1_1gui_1_1_actor.html#a417e7ac9d0888810187e3ea8481c149b',1,'arc::gui::Actor::int_uniform()'],['../classarc_1_1gui_1_1_camera.html#ae0c451904a857d40678df538b8023e14',1,'arc::gui::Camera::int_uniform()']]],
+  ['isotropic',['isotropic',['../namespacearc_1_1rng_1_1distribution.html#a3ae9ab9dcdfe4a9df463b59a30e52d2c',1,'arc::rng::distribution']]]
 ];

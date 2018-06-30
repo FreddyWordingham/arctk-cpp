@@ -82,8 +82,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespacearc_1_1data_1_1bucket"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1data_1_1bucket.html">bucket</a></td></tr>
-<tr class="memdesc:namespacearc_1_1data_1_1bucket"><td class="mdescLeft">&#160;</td><td class="mdescRight">bucketing namespace <br /></td></tr>
+<tr class="memitem:namespacearc_1_1data_1_1histogram"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1data_1_1histogram.html">histogram</a></td></tr>
+<tr class="memdesc:namespacearc_1_1data_1_1histogram"><td class="mdescLeft">&#160;</td><td class="mdescRight">histogram namespace <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacearc_1_1data_1_1image"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1data_1_1image.html">image</a></td></tr>
 <tr class="memdesc:namespacearc_1_1data_1_1image"><td class="mdescLeft">&#160;</td><td class="mdescRight">image namespace <br /></td></tr>
@@ -91,7 +91,11 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_bucket.html">Bucket</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_histogram.html">Histogram</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_histogram_3_01_t_00_011_01_4.html">Histogram&lt; T, 1 &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_histogram_3_01_t_00_012_01_4.html">Histogram&lt; T, 2 &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_image.html">Image</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -100,9 +104,6 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a191c78bcddff5a8d712bec5e35c7e72f"><td class="memTemplParams" colspan="2">template&lt;typename S , typename T &gt; </td></tr>
-<tr class="memitem:a191c78bcddff5a8d712bec5e35c7e72f"><td class="memTemplItemLeft" align="right" valign="top">S &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1data.html#a191c78bcddff5a8d712bec5e35c7e72f">operator&lt;&lt;</a> (S &amp;stream_, const <a class="el" href="classarc_1_1data_1_1_bucket.html">Bucket</a>&lt; T &gt; &amp;buck_) noexcept</td></tr>
-<tr class="separator:a191c78bcddff5a8d712bec5e35c7e72f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a941d55b6cb3ef7a616001b142615bf60"><td class="memTemplParams" colspan="2">template&lt;typename S , typename... A&gt; </td></tr>
 <tr class="memitem:a941d55b6cb3ef7a616001b142615bf60"><td class="memTemplItemLeft" align="right" valign="top">S &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1data.html#a941d55b6cb3ef7a616001b142615bf60">operator&lt;&lt;</a> (S &amp;stream_, const <a class="el" href="classarc_1_1data_1_1_table.html">Table</a>&lt; A... &gt; &amp;tab_) noexcept</td></tr>
 <tr class="separator:a941d55b6cb3ef7a616001b142615bf60"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,62 +111,8 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>data namespace </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a191c78bcddff5a8d712bec5e35c7e72f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a191c78bcddff5a8d712bec5e35c7e72f">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename S , typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">S&amp; arc::data::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">S &amp;&#160;</td>
-          <td class="paramname"><em>stream_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classarc_1_1data_1_1_bucket.html">Bucket</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>buck_</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Write the bucket data in a human-readable format.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">S</td><td>Stream type to write to. </td></tr>
-    <tr><td class="paramname">T</td><td>Type binned.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stream_</td><td>Stream to write to. </td></tr>
-    <tr><td class="paramname">buck_</td><td><a class="el" href="classarc_1_1data_1_1_bucket.html">Bucket</a> to be printed.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Reference to the stream post-print. </dd></dl>
-
-</div>
-</div>
 <a id="a941d55b6cb3ef7a616001b142615bf60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a941d55b6cb3ef7a616001b142615bf60">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a941d55b6cb3ef7a616001b142615bf60">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -221,7 +168,7 @@ template&lt;typename S , typename... A&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 28 2018 02:18:39 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 1 2018 00:52:02 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
