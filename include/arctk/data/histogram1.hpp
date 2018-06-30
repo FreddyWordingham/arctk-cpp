@@ -217,6 +217,13 @@ namespace arc //! arctk namespace
             return (_min + ((static_cast<double>(index_) + 0.5) * _bin_width));
         }
 
+        /**
+         *  Construct a vector of all bin centres.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @return Vector of all bin centres.
+         */
         template <typename T>
         inline std::vector<double> Histogram<T, 1>::centres() const noexcept
         {
