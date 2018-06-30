@@ -226,6 +226,13 @@ namespace arc //! arctk namespace
             return (vec2(_min.x + ((static_cast<double>(index_.x) + 0.5) * (_max.x - _min.x)), _min.y + ((static_cast<double>(index_.y) + 0.5) * (_max.y - _min.y))));
         }
 
+        /**
+         *  Construct a two-dimensional vector of all bin centres.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @return Two-dimensional vector of all bin centres.
+         */
         template <typename T>
         inline std::vector<std::vector<double>> Histogram<T, 2>::centres() const noexcept
         {
