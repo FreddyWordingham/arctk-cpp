@@ -198,6 +198,17 @@ namespace arc //! arctk namespace
             return (_bins.size());
         }
 
+        /**
+         *  Determine the centre position of a given bin index.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @param  index_  Index of the bin to find the centre of.
+         *
+         *  @pre    index_ must be less than _bins size.
+         *
+         *  @return Centre of the bin requested.
+         */
         template <typename T>
         inline double Histogram<T, 1>::centre(const size_t index_) const noexcept
         {
