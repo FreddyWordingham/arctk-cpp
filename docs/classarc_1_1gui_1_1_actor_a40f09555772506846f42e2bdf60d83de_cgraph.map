@@ -1,6 +1,0 @@
-<map id="arc::gui::Actor::Actor" name="arc::gui::Actor::Actor">
-<area shape="rect" id="node2" href="$namespacearc_1_1math.html#a4b44e4472b89ce6feffff1b914ad0064" title="arc::math::sum" alt="" coords="217,5,326,31"/>
-<area shape="rect" id="node3" href="$classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="195,55,347,93"/>
-<area shape="rect" id="node4" href="$classarc_1_1gui_1_1_actor.html#a5251ce8de3e14f4b3daf9e2a7b771eee" title="arc::gui::Actor::model" alt="" coords="397,36,545,61"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1math.html#a31f59a34b4a40b69a830d694f080e8da" title="arc::math::rad_to_deg" alt="" coords="395,85,547,111"/>
-</map>

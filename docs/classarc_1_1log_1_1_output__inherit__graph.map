@@ -1,7 +1,0 @@
-<map id="arc::log::Output" name="arc::log::Output">
-<area shape="rect" id="node3" href="$classarc_1_1log_1_1output_1_1_error.html" title="arc::log::output::Error" alt="" coords="350,5,497,31"/>
-<area shape="rect" id="node4" href="$classarc_1_1log_1_1output_1_1_message.html" title="arc::log::output::Message" alt="" coords="338,55,509,80"/>
-<area shape="rect" id="node5" href="$classarc_1_1log_1_1output_1_1_progress.html" title="arc::log::output::Progress" alt="" coords="338,104,508,129"/>
-<area shape="rect" id="node6" href="$classarc_1_1log_1_1output_1_1_stopwatch.html" title="arc::log::output::Stopwatch" alt="" coords="334,153,513,179"/>
-<area shape="rect" id="node7" href="$classarc_1_1log_1_1output_1_1_warning.html" title="arc::log::output::Warning" alt="" coords="340,203,506,228"/>
-</map>

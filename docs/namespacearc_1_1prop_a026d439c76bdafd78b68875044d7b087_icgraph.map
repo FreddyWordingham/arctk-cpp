@@ -1,6 +1,0 @@
-<map id="arc::prop::ascending" name="arc::prop::ascending">
-<area shape="rect" id="node2" href="$namespacearc_1_1prop.html#a0b6cfeae4fa16eddbb6b7f1e9c355258" title="arc::prop::monotonic" alt="" coords="195,29,338,55"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1search.html#ab5171637f0c917d6f387cb619a319ab5" title="arc::search::lower" alt="" coords="551,5,677,31"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1search.html#a66f5d701ff409cb5e2673a4d5864cd11" title="arc::search::upper" alt="" coords="550,55,679,80"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1prop.html#a160eaff41b7223c20c03ca76ee4e1fb9" title="arc::prop::within" alt="" coords="386,29,502,55"/>
-</map>

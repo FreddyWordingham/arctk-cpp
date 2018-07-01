@@ -1,30 +1,5 @@
 var searchData=
 [
-  ['ansi',['ansi',['../namespacearc_1_1ansi.html',1,'arc']]],
   ['arc',['arc',['../namespacearc.html',1,'']]],
-  ['camera',['camera',['../namespacearc_1_1gui_1_1camera.html',1,'arc::gui']]],
-  ['col',['col',['../namespacearc_1_1col.html',1,'arc']]],
-  ['config',['config',['../namespacearc_1_1config.html',1,'arc']]],
-  ['constant',['constant',['../namespacearc_1_1constant.html',1,'arc']]],
-  ['data',['data',['../namespacearc_1_1data.html',1,'arc']]],
-  ['distribution',['distribution',['../namespacearc_1_1rng_1_1distribution.html',1,'arc::rng']]],
-  ['file',['file',['../namespacearc_1_1sys_1_1file.html',1,'arc::sys']]],
-  ['generator',['generator',['../namespacearc_1_1rng_1_1generator.html',1,'arc::rng']]],
-  ['geom',['geom',['../namespacearc_1_1geom.html',1,'arc']]],
-  ['gui',['gui',['../namespacearc_1_1gui.html',1,'arc']]],
-  ['histogram',['histogram',['../namespacearc_1_1data_1_1histogram.html',1,'arc::data']]],
-  ['image',['image',['../namespacearc_1_1data_1_1image.html',1,'arc::data']]],
-  ['log',['log',['../namespacearc_1_1log.html',1,'arc']]],
-  ['math',['math',['../namespacearc_1_1math.html',1,'arc']]],
-  ['output',['output',['../namespacearc_1_1log_1_1output.html',1,'arc::log']]],
-  ['parse',['parse',['../namespacearc_1_1parse.html',1,'arc']]],
-  ['phys',['phys',['../namespacearc_1_1phys.html',1,'arc']]],
-  ['prop',['prop',['../namespacearc_1_1prop.html',1,'arc']]],
-  ['rng',['rng',['../namespacearc_1_1rng.html',1,'arc']]],
-  ['search',['search',['../namespacearc_1_1search.html',1,'arc']]],
-  ['settings',['settings',['../namespacearc_1_1settings.html',1,'arc']]],
-  ['shape',['shape',['../namespacearc_1_1geom_1_1shape.html',1,'arc::geom']]],
-  ['str',['str',['../namespacearc_1_1str.html',1,'arc']]],
-  ['sys',['sys',['../namespacearc_1_1sys.html',1,'arc']]],
-  ['utl',['utl',['../namespacearc_1_1utl.html',1,'arc']]]
+  ['config',['config',['../namespacearc_1_1config.html',1,'arc']]]
 ];
