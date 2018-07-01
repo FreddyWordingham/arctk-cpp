@@ -13,6 +13,7 @@
 //  -- Arctk --
 #include <arctk/config.hpp>
 #include <arctk/contracts.hpp>
+#include <arctk/contracts/stacktrace.hpp>
 #include <arctk/settings.hpp>
 
 
