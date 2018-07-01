@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
                 Dl_info info;
                 if (dladdr(callstack[i], &info) && info.dli_sname)
                 {
-                    char* demangled = NULL;
+                    char* demangled = nullptr;
                     int   status    = -1;
 
                     if (info.dli_sname[0] == '_')
