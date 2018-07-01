@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Average(double min_, double max_, double size_) noexcept;
+                inline Average(double min_, double max_, size_t size_) noexcept;
 
 
                 //  == METHODS ==
