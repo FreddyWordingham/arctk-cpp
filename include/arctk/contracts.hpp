@@ -23,6 +23,9 @@
 //  -- Std --
 #include <iostream>
 
+//  -- Arctk --
+#include <arctk/contracts/stacktrace.hpp>
+
 
 
 //  == MACROS ==
