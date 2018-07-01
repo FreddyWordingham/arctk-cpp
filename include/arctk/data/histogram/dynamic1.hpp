@@ -58,9 +58,6 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
-                //  -- Getters --
-                inline const T& misses() const noexcept;
-
                 //  -- Collection --
                 inline void collect(double pos_, const T& val_) noexcept override;
             };
@@ -92,21 +89,6 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
-            //  -- Getters --
-            /**
-             *  Get the total number of misses.
-             *
-             *  @tparam T   Type binned.
-             *
-             *  @return Total number of misses.
-             */
-            template <typename T>
-            inline const T& Dynamic<T, 1>::misses() const noexcept
-            {
-                return (_misses);
-            }
-
-
             //  -- Collection --
             /**
              *  Collect a value into the histogram at a given position.
