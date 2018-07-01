@@ -20,7 +20,26 @@
 
 
 //  == IMPORTS ==
-//  -- Arctk --
+//  -- Std --
+#include <iostream>
+
+
+
+//  == MACROS ==
+//  -- Contracts --
+#ifdef NDEBUG
+#define PRE(condition_) ((void)0)
+#else
+#define PRE(condition_)                                                     \
+    if (!(condition_))                                                      \
+    {                                                                       \
+        std::cout << "Pre-condition : `" << (#condition_) << "` failed.\n"; \
+        std::cout << "File          : " << __FILE__ << '\n';                \
+        std::cout << "Line          : " << __LINE__ << '\n';                \
+        std::cout << "Function      : " << __func__ << '\n';                \
+        std::cout << "Stacktrace ---- \n" << stacktrace();                  \
+    }
+#endif
 
 
 
