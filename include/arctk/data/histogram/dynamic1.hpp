@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Dynamic(double min_, double max_, double size_) noexcept;
+                inline Dynamic(double min_, double max_, size_t size_) noexcept;
 
 
                 //  == METHODS ==
