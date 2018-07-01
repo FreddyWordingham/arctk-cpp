@@ -97,7 +97,7 @@ namespace arc //! arctk namespace
             //  -- Collection --
             /**
              *  Collect a value into the histogram at a given position.
-             *  If the position is outside the bounds of the histogram then it is counted as a miss.
+             *  If the position is outside the bounds of the histogram then expand the histogram range to accommodate it.
              *
              *  @tparam T   Type binned.
              *
@@ -107,11 +107,13 @@ namespace arc //! arctk namespace
             template <typename T>
             inline void Dynamic<T, 1>::collect(const double pos_, const T& val_) noexcept
             {
-                if ((pos_ < Histogram<T, 1>::_min) || (pos_ > Histogram<T, 1>::_max))
+                while (pos_ < Histogram<T, 1>::_min)
                 {
-                    _misses += val_;
-
-                    return;
+                    descend();
+                }
+                while (pos_ > Histogram<T, 1>::_max)
+                {
+                    ascend();
                 }
 
                 Histogram<T, 1>::_bins[Histogram<T, 1>::find_index(pos_)] += val_;
