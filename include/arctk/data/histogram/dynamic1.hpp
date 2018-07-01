@@ -60,6 +60,11 @@ namespace arc //! arctk namespace
               public:
                 //  -- Collection --
                 inline void collect(double pos_, const T& val_) noexcept override;
+
+              private:
+                //  -- Growth --
+                inline void ascend() noexcept;
+                inline void descend() noexcept;
             };
 
 
@@ -67,12 +72,12 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
-             *  Construct a fixed one-dimensional histogram object with given bounds and size.
+             *  Construct a dynamic one-dimensional histogram object with given initial bounds and size.
              *
              *  @tparam T   Type binned.
              *
-             *  @param  min_    Minimum bound of the histogram range.
-             *  @param  max_    Maximum bound of the histogram range.
+             *  @param  min_    Initial minimum bound of the histogram range.
+             *  @param  max_    Initial maximum bound of the histogram range.
              *  @param  size_   Number of bins.
              *
              *  @pre    min_ must be less than max_.
