@@ -704,8 +704,7 @@ namespace arc //! arctk namespace
         constexpr inline void Vec<T, 3>::rotate(const math::Vec<T, 3>& axis_, const T ang_) noexcept
         {
             math::Vec<T, 3> axis = axis_;
-            axis.normalise();
-            //            assert(axis.normalised());
+            assert(axis.normalised());
 
             const double cos_theta = std::cos(ang_);
             const double sin_theta = std::sin(ang_);
