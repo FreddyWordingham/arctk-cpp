@@ -12,6 +12,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/config.hpp>
+#include <arctk/contracts.hpp>
 #include <arctk/settings.hpp>
 
 
