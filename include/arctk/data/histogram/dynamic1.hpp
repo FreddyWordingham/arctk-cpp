@@ -85,7 +85,7 @@ namespace arc //! arctk namespace
              *  @pre    Size_ must be even.
              */
             template <typename T>
-            inline Dynamic<T, 1>::Dynamic(const double min_, const double max_, const double size_) noexcept
+            inline Dynamic<T, 1>::Dynamic(const double min_, const double max_, const size_t size_) noexcept
               : Histogram<T, 1>(min_, max_, size_)
             {
                 assert(min_ < max_);
