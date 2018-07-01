@@ -124,34 +124,34 @@ namespace arc //! arctk namespace
             template <typename T>
             inline void Dynamic<T, 1>::ascend() noexcept
             {
-                _max += (_max - _min);
-                _width *= 2.0;
+                Histogram<T, 1>::_max += (Histogram<T, 1>::_max - Histogram<T, 1>::_min);
+                Histogram<T, 1>::_width *= 2.0;
 
-                for (size_t i = 0; i < (_bins.size() / 2); ++i)
+                for (size_t i = 0; i < (Histogram<T, 1>::_bins.size() / 2); ++i)
                 {
-                    const size_t index = (2 * i);
-                    _bins[i]           = _bins[index] + _bins[index + 1];
+                    const size_t index        = (2 * i);
+                    Histogram<T, 1>::_bins[i] = Histogram<T, 1>::_bins[index] + Histogram<T, 1>::_bins[index + 1];
                 }
-                for (size_t i = (_bins.size() / 2); i < _bins.size(); ++i)
+                for (size_t i = (Histogram<T, 1>::_bins.size() / 2); i < Histogram<T, 1>::_bins.size(); ++i)
                 {
-                    _bins[i] = 0.0;
+                    Histogram<T, 1>::_bins[i] = 0.0;
                 }
             }
 
             template <typename T>
             inline void Dynamic<T, 1>::descend() noexcept
             {
-                _min -= (_max - _min);
-                _width *= 2.0;
+                Histogram<T, 1>::_min -= (Histogram<T, 1>::_max - Histogram<T, 1>::_min);
+                Histogram<T, 1>::_width *= 2.0;
 
-                for (size_t i = (_bins.size() - 1); i >= (_bins.size() / 2); --i)
+                for (size_t i = (Histogram<T, 1>::_bins.size() - 1); i >= (Histogram<T, 1>::_bins.size() / 2); --i)
                 {
-                    const size_t index = (2 * i) - _bins.size();
-                    _bins[i]           = _bins[index] + _bins[index + 1];
+                    const size_t index        = (2 * i) - Histogram<T, 1>::_bins.size();
+                    Histogram<T, 1>::_bins[i] = Histogram<T, 1>::_bins[index] + Histogram<T, 1>::_bins[index + 1];
                 }
-                for (size_t i = 0; i < (_bins.size() / 2); ++i)
+                for (size_t i = 0; i < (Histogram<T, 1>::_bins.size() / 2); ++i)
                 {
-                    _bins[i] = 0.0;
+                    Histogram<T, 1>::_bins[i] = 0.0;
                 }
             }
 
