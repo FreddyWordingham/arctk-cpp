@@ -40,7 +40,7 @@
         std::cout << "File          : " << __FILE__ << '\n';                \
         std::cout << "Line          : " << __LINE__ << '\n';                \
         std::cout << "Function      : " << __func__ << '\n';                \
-        std::cout << "Stacktrace ---- \n" << stacktrace();                  \
+        std::cout << "Stacktrace ---- \n" << contracts::stacktrace();       \
     }
 #endif
 
