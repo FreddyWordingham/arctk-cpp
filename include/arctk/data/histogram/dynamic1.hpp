@@ -50,12 +50,6 @@ namespace arc //! arctk namespace
             template <typename T>
             class Dynamic<T, 1> : public Histogram<T, 1>
             {
-                //  == FIELDS ==
-              private:
-                //  -- Counts --
-                T _misses{}; //!< Number of range misses.
-
-
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
