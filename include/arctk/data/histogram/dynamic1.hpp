@@ -146,6 +146,12 @@ namespace arc //! arctk namespace
                 }
             }
 
+            /**
+             *  Decrease the minimum bound of the histogram while maintaining the total number of bins.
+             *  Values are re-binned in the process.
+             *
+             *  @tparam T   Type binned.
+             */
             template <typename T>
             inline void Dynamic<T, 1>::descend() noexcept
             {
