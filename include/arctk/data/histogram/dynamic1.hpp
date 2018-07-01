@@ -141,6 +141,18 @@ namespace arc //! arctk namespace
             template <typename T>
             inline void Dynamic<T, 1>::descend() noexcept
             {
+                _min -= (_max - _min);
+                _width *= 2.0;
+
+                for (size_t i = (_bins.size() - 1); i >= (_bins.size() / 2); --i)
+                {
+                    const size_t index = (2 * i) - _bins.size();
+                    _bins[i]           = _bins[index] + _bins[index + 1];
+                }
+                for (size_t i = 0; i < (_bins.size() / 2); ++i)
+                {
+                    _bins[i] = 0.0;
+                }
             }
 
 
