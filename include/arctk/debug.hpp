@@ -39,7 +39,7 @@
         std::cout << "Pre-condition  : `" << (#condition_) << "` failed.\n";                             \
         std::cout << "Located at     :\n" << arc::debug::location(__FILE__, __LINE__, __func__) << '\n'; \
     }
-#define POST(condition_) arc::debug::PostCondition UNIQUE_NAME(postcondition) = arc::debug::PostCondition(__FILE__, __LINE__, __FUNCTION__, "Post-condition failure:" #condition_, [&]() { return (condition_); });
+#define POST(condition_) arc::debug::PostCondition UNIQUE_NAME(postcondition) = arc::debug::PostCondition(__FILE__, __LINE__, __FUNCTION__, #condition_, [&]() { return (condition_); });
 #endif
 
 
