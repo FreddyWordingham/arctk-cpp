@@ -32,14 +32,24 @@
 //  -- Contracts --
 #ifdef NDEBUG
 #define PRE(condition_) ((void)0)
+#define POST(condition_) ((void)0)
 #else
 #define PRE(condition_)                                                            \
     if (!(condition_))                                                             \
     {                                                                              \
-        std::cout << "Pre-condition : `" << (#condition_) << "` failed.\n";        \
-        std::cout << "File          : " << __FILE__ << '\n';                       \
-        std::cout << "Line          : " << __LINE__ << '\n';                       \
-        std::cout << "Function      : " << __func__ << '\n';                       \
+        std::cout << "Pre-condition  : `" << (#condition_) << "` failed.\n";       \
+        std::cout << "File           : " << __FILE__ << '\n';                      \
+        std::cout << "Line           : " << __LINE__ << '\n';                      \
+        std::cout << "Function       : " << __func__ << '\n';                      \
+        std::cout << "Stacktrace ---- \n" << arc::contracts::stacktrace() << '\n'; \
+    }
+#define POST(condition_)                                                           \
+    if (!(condition_))                                                             \
+    {                                                                              \
+        std::cout << "Post-condition : `" << (#condition_) << "` failed.\n";       \
+        std::cout << "File           : " << __FILE__ << '\n';                      \
+        std::cout << "Line           : " << __LINE__ << '\n';                      \
+        std::cout << "Function       : " << __func__ << '\n';                      \
         std::cout << "Stacktrace ---- \n" << arc::contracts::stacktrace() << '\n'; \
     }
 #endif
