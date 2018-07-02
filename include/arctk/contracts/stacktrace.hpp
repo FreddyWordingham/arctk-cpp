@@ -58,6 +58,11 @@ namespace arc //! arctk namespace
             std::ostringstream trace_stream;
             for (int i = skip; i < num_frames; i++)
             {
+                if (i != skip)
+                {
+                    trace_stream << '\n';
+                }
+
                 Dl_info info;
                 if (dladdr(callstack[i], &info) && info.dli_sname)
                 {
@@ -69,24 +74,35 @@ namespace arc //! arctk namespace
                         demangled = abi::__cxa_demangle(info.dli_sname, nullptr, nullptr, &status);
                     }
 
-                    snprintf(buffer, sizeof(buffer), "%-3d %*p %s + %zd\n", i, static_cast<int>(2 + sizeof(void*) * 2), callstack[i], status == 0 ? demangled : info.dli_sname == nullptr ? symbols[i] : info.dli_sname,
-                             static_cast<char*>(callstack[i]) - static_cast<char*>(info.dli_saddr));
+                    if (status == 0)
+                    {
+                        trace_stream << demangled;
+                    }
+                    else
+                    {
+                        if (info.dli_sname == nullptr)
+                        {
+                            trace_stream << symbols[i];
+                        }
+                        else
+                        {
+                            trace_stream << info.dli_sname;
+                        }
+                    }
 
                     free(demangled);
                 }
                 else
                 {
-                    snprintf(buffer, sizeof(buffer), "%-3d %*p %s\n", i, int(2 + sizeof(void*) * 2), callstack[i], symbols[i]);
+                    trace_stream << symbols[i];
                 }
-
-                trace_stream << buffer;
             }
 
             free(symbols);
 
             if (num_frames == max_num_frames)
             {
-                trace_stream << "[truncated]\n";
+                trace_stream << "\n[truncated]";
             }
 
             return (trace_stream.str());
