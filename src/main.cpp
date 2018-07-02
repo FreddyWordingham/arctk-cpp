@@ -15,6 +15,7 @@
 #include <arctk/contracts.hpp>
 #include <arctk/contracts/stacktrace.hpp>
 #include <arctk/debug.hpp>
+#include <arctk/debug/location.hpp>
 #include <arctk/settings.hpp>
 
 
