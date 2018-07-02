@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/debug/location.hpp>
+#include <arctk/debug/postcondition.hpp>
 #include <arctk/macro.hpp>
 
 
