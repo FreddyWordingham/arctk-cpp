@@ -15,6 +15,7 @@
 #include <arctk/debug.hpp>
 #include <arctk/debug/location.hpp>
 #include <arctk/macro.hpp>
+#include <arctk/macro/utility.hpp>
 #include <arctk/settings.hpp>
 
 
