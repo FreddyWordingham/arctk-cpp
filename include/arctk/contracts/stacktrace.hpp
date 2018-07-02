@@ -51,9 +51,8 @@ namespace arc //! arctk namespace
         {
             void*     callstack[128];
             const int max_num_frames = sizeof(callstack) / sizeof(callstack[0]);
-            char      buffer[1024];
-            int       num_frames = backtrace(callstack, max_num_frames);
-            char**    symbols    = backtrace_symbols(callstack, num_frames);
+            int       num_frames     = backtrace(callstack, max_num_frames);
+            char**    symbols        = backtrace_symbols(callstack, num_frames);
 
             std::ostringstream trace_stream;
             for (int i = skip; i < num_frames; i++)
