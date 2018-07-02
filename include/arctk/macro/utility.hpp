@@ -19,6 +19,13 @@
 
 
 
+//  == MACROS ==
+//  -- Manipulation --
+#define CONCAT(x_, y_) CONCAT_HELPER(x_, y_)
+#define CONCAT_HELPER(x_, y_) x_##y_
+
+
+
 //  == MODULE END ==
 #endif // ARCTK_MOD_CORE
 
