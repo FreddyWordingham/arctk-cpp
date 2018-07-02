@@ -55,7 +55,7 @@ namespace arc //! arctk namespace
             char**    symbols        = backtrace_symbols(callstack, num_frames);
 
             std::ostringstream trace_stream;
-            for (int i = skip; i < num_frames; i++)
+            for (int i = skip; i < (num_frames - 1); i++)
             {
                 if (i != skip)
                 {
