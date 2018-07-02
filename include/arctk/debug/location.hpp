@@ -115,12 +115,17 @@ namespace arc //! arctk namespace
             location << "File : " << file_ << '\n';
             location << "Line : " << line_ << '\n';
             location << "Func : " << func_ << '\n';
-            location << "Stack:";
+            location << "Stack: ";
 
             const std::vector<std::string> stack = stacktrace();
             for (size_t i = 0; i < stack.size(); ++i)
             {
-                location << "\n       " << stack[i];
+                if (i != 0)
+                {
+                    location << "\n       ";
+                }
+
+                location << stack[i];
             }
 
             return (location.str());
