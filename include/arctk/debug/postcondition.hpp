@@ -77,7 +77,7 @@ namespace arc //! arctk namespace
         {
             if (!_expr())
             {
-                std::cout << "Post-condition : `expr_str_` failed.\n";
+                std::cout << "Post-condition : `" << expr_str_ << "` failed.\n";
                 exit(43);
             }
         }
