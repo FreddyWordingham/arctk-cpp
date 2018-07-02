@@ -33,6 +33,19 @@ namespace arc //! arctk namespace
 
 
         //  == CLASS ==
+        /**
+         *  Geometric shape.
+         */
+        class PostCondition
+        {
+            //  == FIELDS ==
+          protected:
+            //  == INSTANTIATION ==
+          public:
+            //  -- Constructors --
+
+            //  -- Destructors --
+        };
 
 
 
