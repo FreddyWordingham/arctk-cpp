@@ -44,6 +44,9 @@ namespace arc //! arctk namespace
         //  -- Stacktracing --
         std::vector<std::string> stacktrace(const int skip = 1);
 
+        //  -- Location --
+        inline std::string location(const std::string& file_ = __FILE__, const int line_ = __LINE__, const std::string& func_ = __func__) noexcept;
+
 
 
         //  == FUNCTIONS ==
@@ -101,6 +104,26 @@ namespace arc //! arctk namespace
             }
 
             return (trace);
+        }
+
+
+        //  -- Location --
+        inline std::string location(const std::string& file_, const int line_, const std::string& func_) noexcept
+        {
+            std::stringstream location;
+
+            location << "File : " << file_ << '\n';
+            location << "Line : " << line_ << '\n';
+            location << "Func : " << func_ << '\n';
+            location << "Stack:";
+
+            const std::vector<std::string> stack = stacktrace();
+            for (size_t i = 0; i < stack.size(); ++i)
+            {
+                location << "\n       " << stack[i];
+            }
+
+            return (location.str());
         }
 
 
