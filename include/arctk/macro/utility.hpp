@@ -24,6 +24,9 @@
 #define CONCAT(x_, y_) CONCAT_HELPER(x_, y_)
 #define CONCAT_HELPER(x_, y_) x_##y_
 
+//  -- Naming --
+#define UNIQUE_NAME(prefix_) JOIN(prefix_, __LINE__)
+
 
 
 //  == MODULE END ==
