@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
 
         //  == FUNCTION PROTOTYPES ==
         //  -- Stacktracing --
-        std::vector<std::string> stacktrace(const int skip 2);
+        std::vector<std::string> stacktrace(const int skip_ = 1);
 
         //  -- Location --
         inline std::string location(const std::string& file_, const long int line_, const std::string& func_, const int skip_ = 1) noexcept;
@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
 
         //  == FUNCTIONS ==
         //  -- Stacktracing --
-        std::vector<std::string> stacktrace(const int skip)
+        std::vector<std::string> stacktrace(const int skip_)
         {
             void*     callstack[128];
             const int max_num_frames = sizeof(callstack) / sizeof(callstack[0]);
@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
             char**    symbols        = backtrace_symbols(callstack, num_frames);
 
             std::vector<std::string> trace;
-            for (int i = skip; i < (num_frames - 1); i++)
+            for (int i = skip_; i < (num_frames - 1); i++)
             {
                 Dl_info info;
                 if (dladdr(callstack[i], &info) && info.dli_sname)
