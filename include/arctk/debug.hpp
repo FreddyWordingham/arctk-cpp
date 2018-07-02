@@ -33,11 +33,11 @@
 #define PRE(condition_) ((void)0)
 #define POST(condition_) ((void)0)
 #else
-#define PRE(condition_)                                                                                  \
-    if (!(condition_))                                                                                   \
-    {                                                                                                    \
-        std::cout << "Pre-condition  : `" << (#condition_) << "` failed.\n";                             \
-        std::cout << "Located at     :\n" << arc::debug::location(__FILE__, __LINE__, __func__) << '\n'; \
+#define PRE(condition_)                                                                                     \
+    if (!(condition_))                                                                                      \
+    {                                                                                                       \
+        std::cout << "Pre-condition  : `" << (#condition_) << "` failed.\n";                                \
+        std::cout << "Located at     :\n" << arc::debug::location(__FILE__, __LINE__, __func__, 2) << '\n'; \
     }
 #define POST(condition_) arc::debug::PostCondition UNIQUE_NAME(postcondition) = arc::debug::PostCondition(__FILE__, __LINE__, __FUNCTION__, #condition_, [&]() { return (condition_); });
 #endif
