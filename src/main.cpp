@@ -14,6 +14,7 @@
 #include <arctk/config.hpp>
 #include <arctk/contracts.hpp>
 #include <arctk/contracts/stacktrace.hpp>
+#include <arctk/debug.hpp>
 #include <arctk/settings.hpp>
 
 
