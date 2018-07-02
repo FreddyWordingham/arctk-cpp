@@ -39,7 +39,14 @@ namespace arc //! arctk namespace
         class PostCondition
         {
             //  == FIELDS ==
-          protected:
+          private:
+            const std::string           _file;
+            const long int              _line;
+            const std::string           _func;
+            const std::string           _expr_str;
+            const std::function<bool()> _expr;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
