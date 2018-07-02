@@ -50,9 +50,23 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            PostCondition(const std::string& file_, const long int line_, const std::string& func_, const std::string& expr_str_, const std::function<bool()>& expr_);
 
             //  -- Destructors --
         };
+
+
+
+        //  == INSTANTIATION ==
+        //  -- Constructors --
+        PostCondition::PostCondition(const std::string& file_, const long int line_, const std::string& func_, const std::string& expr_str_, const std::function<bool()>& expr_)
+          : _file(file_)
+          , _line(line_)
+          , _func(func_)
+          , _expr_str(expr_str_)
+          , _expr(expr_)
+        {
+        }
 
 
 
