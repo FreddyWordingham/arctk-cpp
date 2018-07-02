@@ -53,6 +53,7 @@ namespace arc //! arctk namespace
             PostCondition(const std::string& file_, const long int line_, const std::string& func_, const std::string& expr_str_, const std::function<bool()>& expr_);
 
             //  -- Destructors --
+            ~PostCondition();
         };
 
 
@@ -66,6 +67,17 @@ namespace arc //! arctk namespace
           , _expr_str(expr_str_)
           , _expr(expr_)
         {
+        }
+
+
+        //  -- Destructors --
+        PostCondition::~PostCondition()
+        {
+            if (!_expr())
+            {
+                std::cout << "Post-condition : `expr_str_` failed.\n";
+                exit(43);
+            }
         }
 
 
