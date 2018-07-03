@@ -68,6 +68,15 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct an post-condition test object.
+         *
+         *  @param  file_       File name of the invocation location.
+         *  @param  line_       File line number of the invocation location.
+         *  @param  func_       Function name of the invocation location.
+         *  @param  expr_str_   String form of the post-condition expression.
+         *  @param  expr_       Expression to be tested at object destruction.
+         */
         PostCondition::PostCondition(const std::string& file_, const long int line_, const std::string& func_, const std::string& expr_str_, const std::function<bool()>& expr_)
           : _file(file_)
           , _line(line_)
