@@ -31,7 +31,7 @@ namespace arc //! arctk namespace
 
             //  == ENUMERATIONS ==
             //  -- Error Indices --
-            enum class type
+            enum index
             {
                 PRE_CONDITION_CONTRACT_FAILURE = 1,
                 POST_CONDITION_CONTRACT_FAILURE,
