@@ -29,7 +29,14 @@ namespace arc //! arctk namespace
 
 
 
-            //  == FUNCTION PROTOTYPES ==
+            //  == ENUMERATIONS ==
+            //  -- Error Indices --
+            enum class type
+            {
+                PRE_CONDITION_CONTRACT_FAILURE = 1,
+                POST_CONDITION_CONTRACT_FAILURE,
+                INVARIANT_CONTRACT_FAILURE
+            }
 
 
 
