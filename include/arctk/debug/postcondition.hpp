@@ -26,7 +26,7 @@
 
 //  -- Arctk --
 #include <arctk/debug/location.hpp>
-#include <arctk/exitcode.hpp>
+#include <arctk/exit.hpp>
 
 
 
