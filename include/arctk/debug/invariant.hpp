@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
           , _func(func_)
           , _expr_str(expr_str_)
           , _expr(expr_)
-          , _expr_pre(expr())
+          , _expr_pre(expr_())
         {
         }
 
