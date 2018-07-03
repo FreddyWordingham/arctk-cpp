@@ -31,6 +31,7 @@ namespace arc //! arctk namespace
         //  -- Contracts --
         constexpr const int PRE_CONDITION_FAILURE  = 110; //!< Pre-condition assertion failed.
         constexpr const int POST_CONDITION_FAILURE = 111; //!< Post-condition assertion failed.
+        constexpr const int INVARIANT_FAILURE      = 112; //!< Invariant assertion failed.
 
 
 
