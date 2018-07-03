@@ -24,6 +24,9 @@
 #include <functional>
 #include <iostream>
 
+//  -- Arctk --
+#include <arctk/debug/location.hpp>
+
 
 
 //  == NAMESPACE ==
