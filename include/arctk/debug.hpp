@@ -52,6 +52,8 @@
 
 /**
  *  Define a post-condition to be checked at function exit.
+ *  If condition evaluates to false then program is aborted.
+ *  Macro does nothing when NDEBUG is defined.
  *
  *  @param  condition_  Condition to be checked.
  */
