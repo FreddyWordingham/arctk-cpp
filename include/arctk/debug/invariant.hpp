@@ -40,6 +40,8 @@ namespace arc //! arctk namespace
         //  == CLASS ==
         /**
          *  Invariant contract.
+         *
+         *  @tparam T   Resultant type of invariant expression.
          */
         template <typename T>
         class Invariant
