@@ -85,8 +85,8 @@ namespace arc //! arctk namespace
         {
             if (_expr_pre != _expr())
             {
-                std::cout << "Invariance     : `" << _expr_str << "` failed.\n";
-                std::cout << "Located at     :\n" << location(_file, _line, _func, 4) << '\n';
+                std::cerr << "Invariance     : `" << _expr_str << "` failed.\n";
+                std::cerr << "Located at     :\n" << location(_file, _line, _func, 4) << '\n';
 
                 exit(43);
             }
