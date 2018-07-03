@@ -55,6 +55,12 @@
  */
 #define POST(condition_) arc::debug::PostCondition LINE_NAME(post) = arc::debug::PostCondition(__FILE__, __LINE__, __FUNCTION__, #condition_, [&]() { return (condition_); });
 
+/**
+ *  Define an invariant to be checked at function exit.
+ *  Value of condition must be the same at function exit as it was at entrace.
+ *
+ *  @param  condition_  Condition to be checked.
+ */
 #define INVAR(condition_) arc::debug::Invariant LINE_NAME(invar) = arc::debug::Invariant<decltype(condition_)>(__FILE__, __LINE__, __FUNCTION__, #condition_, [&]() { return (condition_); });
 
 #endif
