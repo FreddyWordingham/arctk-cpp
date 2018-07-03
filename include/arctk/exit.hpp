@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/exitcode.hpp
+ *  @file   arctk/exit.hpp
  *  @date   03/07/2018
  *  @author Freddy Wordingham
  *
@@ -21,8 +21,8 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
-#include <arctk/exitcode/error.hpp>
-#include <arctk/exitcode/success.hpp>
+#include <arctk/exit/error.hpp>
+#include <arctk/exit/success.hpp>
 
 
 
