@@ -72,6 +72,15 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct an invariant test object.
+         *
+         *  @param  file_       File name of the invocation location.
+         *  @param  line_       File line number of the invocation location.
+         *  @param  func_       Function name of the invocation location.
+         *  @param  expr_str_   String form of the invariant expression.
+         *  @param  expr_       Expression to be tested for invariance.
+         */
         template <typename T>
         Invariant<T>::Invariant(const std::string& file_, const long int line_, const std::string& func_, const std::string& expr_str_, const std::function<T()>& expr_)
           : _file(file_)
