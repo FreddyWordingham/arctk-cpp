@@ -88,6 +88,9 @@ namespace arc //! arctk namespace
 
 
         //  -- Destructors --
+        /**
+         *  Destruct the post-condition object and check that the result of the expression is true.
+         */
         PostCondition::~PostCondition()
         {
             if (!_expr())
