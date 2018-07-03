@@ -46,12 +46,15 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
-            const std::string        _file;
-            const long int           _line;
-            const std::string        _func;
-            const std::string        _expr_str;
-            const std::function<T()> _expr;
-            const T                  _expr_pre;
+            //  -- Location --
+            const std::string _file; //!< File name of the invocation location.
+            const long int    _line; //!< File line number of the invocation location.
+            const std::string _func; //!< Function name of the invocation location.
+
+            //  -- Expression --
+            const std::string        _expr_str; //!< String form of the invariant expression.
+            const std::function<T()> _expr;     //!< Expression to be tested for invariance.
+            const T                  _expr_pre; //!< Result of invariant expression at construction time.
 
 
             //  == INSTANTIATION ==
