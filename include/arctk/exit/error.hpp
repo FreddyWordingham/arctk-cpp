@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_EXITCODE_ERROR_HPP
-#define ARCTK_EXITCODE_ERROR_HPP
+#ifndef ARCTK_EXIT_ERROR_HPP
+#define ARCTK_EXIT_ERROR_HPP
 
 
 
@@ -49,4 +49,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_EXITCODE_ERROR_HPP
+#endif // ARCTK_EXIT_ERROR_HPP
