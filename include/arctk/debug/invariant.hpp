@@ -46,8 +46,8 @@ namespace arc //! arctk namespace
             const long int           _line;
             const std::string        _func;
             const std::string        _expr_str;
-            const T                  _expr_pre;
             const std::function<T()> _expr;
+            const T                  _expr_pre;
 
 
             //  == INSTANTIATION ==
@@ -69,6 +69,7 @@ namespace arc //! arctk namespace
           , _func(func_)
           , _expr_str(expr_str_)
           , _expr(expr_)
+          , _expr_pre(expr())
         {
         }
 
