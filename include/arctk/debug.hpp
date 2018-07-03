@@ -35,11 +35,11 @@
 #define POST(condition_) ((void)0)
 #define INVAR(condition_) ((void)0)
 #else
-#define PRE(condition_)                                                                                     \
-    if (!(condition_))                                                                                      \
-    {                                                                                                       \
-        std::cerr << "Pre-condition  : `" << (#condition_) << "` failed.\n";                                \
-        std::cerr << "Located at     :\n" << arc::debug::location(__FILE__, __LINE__, __func__, 2) << '\n'; \
+#define PRE(condition_)                                                                                           \
+    if (!(condition_))                                                                                            \
+    {                                                                                                             \
+        std::cerr << "Pre-condition  : `" << (#condition_) << "` failed.\n";                                      \
+        std::cerr << "Located at     :\n" << arc::debug::location::info(__FILE__, __LINE__, __func__, 2) << '\n'; \
     }
 #define POST(condition_) arc::debug::PostCondition LINE_NAME(post) = arc::debug::PostCondition(__FILE__, __LINE__, __FUNCTION__, #condition_, [&]() { return (condition_); });
 #define INVAR(condition_) arc::debug::Invariant LINE_NAME(invar) = arc::debug::Invariant<decltype(condition_)>(__FILE__, __LINE__, __FUNCTION__, #condition_, [&]() { return (condition_); });
