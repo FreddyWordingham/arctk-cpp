@@ -22,7 +22,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace exitcode //! exit codes namespace
+    namespace exit //! exit codes namespace
     {
         namespace error //! error namespace
         {
@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
 
 
         } // namespace error
-    }     // namespace exitcode
+    }     // namespace exit
 } // namespace arc
 
 
