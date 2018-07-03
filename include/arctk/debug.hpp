@@ -25,6 +25,7 @@
 #include <arctk/debug/location.hpp>
 #include <arctk/debug/postcondition.hpp>
 #include <arctk/macro.hpp>
+#include <arctk/settings.hpp>
 
 
 
