@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_EXITCODE_HPP
-#define ARCTK_EXITCODE_HPP
+#ifndef ARCTK_EXIT_HPP
+#define ARCTK_EXIT_HPP
 
 
 
@@ -32,4 +32,4 @@
 
 
 //  == GUARD END ==
-#endif // ARCTK_EXITCODE_HPP
+#endif // ARCTK_EXIT_HPP
