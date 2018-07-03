@@ -24,8 +24,8 @@
 #include <arctk/debug/invariant.hpp>
 #include <arctk/debug/location.hpp>
 #include <arctk/debug/postcondition.hpp>
+#include <arctk/errno.hpp>
 #include <arctk/macro.hpp>
-#include <arctk/settings.hpp>
 
 
 
@@ -75,7 +75,7 @@
         std::cerr << "Pre-condition  : `" << (#condition_) << "` failed.\n";                                      \
         std::cerr << "Located at     :\n" << arc::debug::location::info(__FILE__, __LINE__, __func__, 2) << '\n'; \
                                                                                                                   \
-        exit(arc::settings::error::PRE_CONDITION_CONTRACT_FAILURE);                                               \
+        exit(arc::errno::PRE_CONDITION_FAILURE);                                                                  \
     }
 
 /**
