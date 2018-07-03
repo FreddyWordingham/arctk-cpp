@@ -16,6 +16,7 @@
 #include <arctk/debug/invariant.hpp>
 #include <arctk/debug/location.hpp>
 #include <arctk/debug/postcondition.hpp>
+#include <arctk/errno.hpp>
 #include <arctk/macro.hpp>
 #include <arctk/macro/utility.hpp>
 #include <arctk/settings.hpp>
