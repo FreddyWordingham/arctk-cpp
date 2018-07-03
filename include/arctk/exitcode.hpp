@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/errno.hpp
+ *  @file   arctk/exitcode.hpp
  *  @date   03/07/2018
  *  @author Freddy Wordingham
  *
- *  Enumeration of all error exit values.
+ *  Enumeration of all exit code values.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_ERRNO_HPP
-#define ARCTK_ERRNO_HPP
+#ifndef ARCTK_EXITCODE_HPP
+#define ARCTK_EXITCODE_HPP
 
 
 
@@ -22,7 +22,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace errno //! error enumeration namespace
+    namespace exitcode //! exit codes namespace
     {
 
 
@@ -35,7 +35,7 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace errno
+    } // namespace exitcode
 } // namespace arc
 
 
@@ -46,4 +46,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_ERRNO_HPP
+#endif // ARCTK_EXITCODE_HPP
