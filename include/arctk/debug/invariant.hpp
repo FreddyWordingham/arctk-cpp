@@ -26,6 +26,7 @@
 
 //  -- Arctk --
 #include <arctk/debug/location.hpp>
+#include <arctk/settings.hpp>
 
 
 
