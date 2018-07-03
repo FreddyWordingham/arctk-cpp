@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
-         *  Geometric shape.
+         *  Post-condition contract.
          */
         class PostCondition
         {
