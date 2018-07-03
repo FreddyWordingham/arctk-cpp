@@ -31,6 +31,9 @@ namespace arc //! arctk namespace
 
             //  == ENUMERATIONS ==
             //  -- Error Indices --
+            /**
+             *  Complete list of all possible error indices which make be returned after program failure.
+             */
             enum index
             {
                 PRE_CONDITION_CONTRACT_FAILURE = 1,
