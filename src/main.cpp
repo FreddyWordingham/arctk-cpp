@@ -16,9 +16,9 @@
 #include <arctk/debug/invariant.hpp>
 #include <arctk/debug/location.hpp>
 #include <arctk/debug/postcondition.hpp>
-#include <arctk/exitcode.hpp>
-#include <arctk/exitcode/error.hpp>
-#include <arctk/exitcode/success.hpp>
+#include <arctk/exit.hpp>
+#include <arctk/exit/error.hpp>
+#include <arctk/exit/success.hpp>
 #include <arctk/macro.hpp>
 #include <arctk/macro/utility.hpp>
 #include <arctk/settings.hpp>
