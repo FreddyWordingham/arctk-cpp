@@ -61,7 +61,8 @@
 
 /**
  *  Define an invariant to be checked at function exit.
- *  Value of condition must be the same at function exit as it was at entrace.
+ *  If value of condition at function exit differs to that at entrance then program is aborted.
+ *  Macro does nothing when NDEBUG is defined.
  *
  *  @param  condition_  Condition to be checked.
  */
