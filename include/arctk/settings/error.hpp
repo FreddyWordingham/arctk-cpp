@@ -36,9 +36,9 @@ namespace arc //! arctk namespace
              */
             enum index
             {
-                PRE_CONDITION_CONTRACT_FAILURE = 1,
-                POST_CONDITION_CONTRACT_FAILURE,
-                INVARIANT_CONTRACT_FAILURE
+                PRE_CONDITION_CONTRACT_FAILURE = 1, //!< Pre-condition contract check failed.
+                POST_CONDITION_CONTRACT_FAILURE,    //!< Post-condition contract check failed.
+                INVARIANT_CONTRACT_FAILURE          //!< Invariance contract check failed.
             };
 
 
