@@ -38,6 +38,8 @@
 
 /**
  *  Define a pre-condition to be checked at function entrace.
+ *  If condition evaluates to false then program is aborted.
+ *  Macro does nothing when NDEBUG is defined.
  *
  *  @param  condition_  Condition to be checked.
  */
@@ -53,7 +55,7 @@
  *
  *  @param  condition_  Condition to be checked.
  */
-#define POST(condition_) arc::debug::PostCondition LINE_NAME(post) = arc::debug::PostCondition(__FILE__, __LINE__, __FUNCTION__, #condition_, [&]() { return (condition_); });
+#define POST(condition_) arc::debug::PostCondition LINE_NAME(post) = arc::debug::PostCondition(__FILE__, __LINE__, __func__, #condition_, [&]() { return (condition_); });
 
 /**
  *  Define an invariant to be checked at function exit.
@@ -61,7 +63,7 @@
  *
  *  @param  condition_  Condition to be checked.
  */
-#define INVAR(condition_) arc::debug::Invariant LINE_NAME(invar) = arc::debug::Invariant<decltype(condition_)>(__FILE__, __LINE__, __FUNCTION__, #condition_, [&]() { return (condition_); });
+#define INVAR(condition_) arc::debug::Invariant LINE_NAME(invar) = arc::debug::Invariant<decltype(condition_)>(__FILE__, __LINE__, __func__, #condition_, [&]() { return (condition_); });
 
 #endif
 
