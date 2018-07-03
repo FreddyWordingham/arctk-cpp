@@ -99,7 +99,7 @@ namespace arc //! arctk namespace
                 std::cerr << "Post-condition : `" << _expr_str << "` failed.\n";
                 std::cerr << "Located at     :\n" << location::info(_file, _line, _func, 4) << '\n';
 
-                exit(arc::exit::error::POST_CONDITION_FAILURE);
+                std::exit(arc::exit::error::POST_CONDITION_FAILURE);
             }
         }
 
