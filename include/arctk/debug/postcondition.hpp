@@ -80,8 +80,8 @@ namespace arc //! arctk namespace
         {
             if (!_expr())
             {
-                std::cout << "Post-condition : `" << _expr_str << "` failed.\n";
-                std::cout << "Located at     :\n" << location(_file, _line, _func, 4) << '\n';
+                std::cerr << "Post-condition : `" << _expr_str << "` failed.\n";
+                std::cerr << "Located at     :\n" << location(_file, _line, _func, 4) << '\n';
 
                 exit(43);
             }
