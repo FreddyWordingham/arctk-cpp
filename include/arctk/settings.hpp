@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/settings/error.hpp>
 
 
 
