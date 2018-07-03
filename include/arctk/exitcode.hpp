@@ -19,6 +19,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/exitcode/error.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
