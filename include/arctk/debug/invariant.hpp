@@ -94,6 +94,10 @@ namespace arc //! arctk namespace
 
 
         //  -- Destructors --
+        /**
+         *  Destruct the invariant object and check that the result of the invariant expression is equal to the value at construction.
+         *  If the expression no longer equals its previous value then report an error and exit.
+         */
         template <typename T>
         Invariant<T>::~Invariant()
         {
