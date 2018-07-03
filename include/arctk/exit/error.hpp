@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/exitcode/error.hpp
+ *  @file   arctk/exit/error.hpp
  *  @date   03/07/2018
  *  @author Freddy Wordingham
  *
