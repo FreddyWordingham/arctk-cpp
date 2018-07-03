@@ -18,6 +18,7 @@
 #include <arctk/debug/postcondition.hpp>
 #include <arctk/exitcode.hpp>
 #include <arctk/exitcode/error.hpp>
+#include <arctk/exitcode/success.hpp>
 #include <arctk/macro.hpp>
 #include <arctk/macro/utility.hpp>
 #include <arctk/settings.hpp>
