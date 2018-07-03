@@ -38,8 +38,8 @@
 #define PRE(condition_)                                                                                     \
     if (!(condition_))                                                                                      \
     {                                                                                                       \
-        std::cout << "Pre-condition  : `" << (#condition_) << "` failed.\n";                                \
-        std::cout << "Located at     :\n" << arc::debug::location(__FILE__, __LINE__, __func__, 2) << '\n'; \
+        std::cerr << "Pre-condition  : `" << (#condition_) << "` failed.\n";                                \
+        std::cerr << "Located at     :\n" << arc::debug::location(__FILE__, __LINE__, __func__, 2) << '\n'; \
     }
 #define POST(condition_) arc::debug::PostCondition UNIQUE_NAME(post) = arc::debug::PostCondition(__FILE__, __LINE__, __FUNCTION__, #condition_, [&]() { return (condition_); });
 #define INVAR(condition_) arc::debug::Invariant UNIQUE_NAME(invar) = arc::debug::Invariant<decltype(condition_)>(__FILE__, __LINE__, __FUNCTION__, #condition_, [&]() { return (condition_); });
