@@ -77,8 +77,8 @@ $(function() {
 <div class="textblock"><code>#include &lt;<a class="el" href="invariant_8hpp_source.html">arctk/debug/invariant.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="location_8hpp_source.html">arctk/debug/location.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="postcondition_8hpp_source.html">arctk/debug/postcondition.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="exit_8hpp_source.html">arctk/exit.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="macro_8hpp_source.html">arctk/macro.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="settings_8hpp_source.html">arctk/settings.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for debug.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -86,13 +86,14 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="debug_8hpp__incl.png" border="0" usemap="#include_2arctk_2debug_8hpp" alt=""/></div>
 <map name="include_2arctk_2debug_8hpp" id="include_2arctk_2debug_8hpp">
-<area shape="rect" id="node2" href="invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="250,79,421,104"/>
-<area shape="rect" id="node5" href="location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="423,152,590,177"/>
-<area shape="rect" id="node14" href="settings_8hpp.html" title="arctk/settings.hpp" alt="" coords="273,152,399,177"/>
-<area shape="rect" id="node16" href="postcondition_8hpp.html" title="arctk/debug/postcondition.hpp" alt="" coords="27,79,226,104"/>
-<area shape="rect" id="node17" href="macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="588,79,705,104"/>
-<area shape="rect" id="node15" href="error_8hpp.html" title="arctk/settings/error.hpp" alt="" coords="5,225,162,251"/>
-<area shape="rect" id="node18" href="utility_8hpp.html" title="arctk/macro/utility.hpp" alt="" coords="614,152,764,177"/>
+<area shape="rect" id="node2" href="invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="354,79,525,104"/>
+<area shape="rect" id="node5" href="location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="521,152,688,177"/>
+<area shape="rect" id="node14" href="exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="389,152,490,177"/>
+<area shape="rect" id="node17" href="postcondition_8hpp.html" title="arctk/debug/postcondition.hpp" alt="" coords="130,79,329,104"/>
+<area shape="rect" id="node18" href="macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="689,79,806,104"/>
+<area shape="rect" id="node15" href="error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="5,225,137,251"/>
+<area shape="rect" id="node16" href="success_8hpp.html" title="arctk/exit/success.hpp" alt="" coords="162,225,314,251"/>
+<area shape="rect" id="node19" href="utility_8hpp.html" title="arctk/macro/utility.hpp" alt="" coords="712,152,862,177"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -187,8 +188,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span> (!(condition_))                                                                                            \</div><div class="line">    {                                                                                                             \</div><div class="line">        std::cerr &lt;&lt; <span class="stringliteral">&quot;Pre-condition  : `&quot;</span> &lt;&lt; (#condition_) &lt;&lt; <span class="stringliteral">&quot;` failed.\n&quot;</span>;                                      \</div><div class="line">        std::cerr &lt;&lt; <span class="stringliteral">&quot;Located at     :\n&quot;</span> &lt;&lt; <a class="code" href="namespacearc_1_1debug_1_1location.html#a3b2fa4c4170d0a6578c44cb1c8c9be9d">arc::debug::location::info</a>(__FILE__, __LINE__, __func__, 2) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>; \</div><div class="line">                                                                                                                  \</div><div class="line">        exit(<a class="code" href="namespacearc_1_1settings_1_1error.html#a96aa3f0db276c8bff5b77633dbb5ab04a3978d686a57461825985141e4a87e692">arc::settings::error::PRE_CONDITION_CONTRACT_FAILURE</a>);                                               \</div><div class="line">    }</div><div class="ttc" id="namespacearc_1_1debug_1_1location_html_a3b2fa4c4170d0a6578c44cb1c8c9be9d"><div class="ttname"><a href="namespacearc_1_1debug_1_1location.html#a3b2fa4c4170d0a6578c44cb1c8c9be9d">arc::debug::location::info</a></div><div class="ttdeci">std::string info(const std::string &amp;file_, const long int line_, const std::string &amp;func_, const int skip_=1) noexcept</div><div class="ttdef"><b>Definition:</b> location.hpp:130</div></div>
-<div class="ttc" id="namespacearc_1_1settings_1_1error_html_a96aa3f0db276c8bff5b77633dbb5ab04a3978d686a57461825985141e4a87e692"><div class="ttname"><a href="namespacearc_1_1settings_1_1error.html#a96aa3f0db276c8bff5b77633dbb5ab04a3978d686a57461825985141e4a87e692">arc::settings::error::PRE_CONDITION_CONTRACT_FAILURE</a></div><div class="ttdoc">Pre-condition contract check failed. </div><div class="ttdef"><b>Definition:</b> error.hpp:39</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span> (!(condition_))                                                                                            \</div><div class="line">    {                                                                                                             \</div><div class="line">        std::cerr &lt;&lt; <span class="stringliteral">&quot;Pre-condition  : `&quot;</span> &lt;&lt; (#condition_) &lt;&lt; <span class="stringliteral">&quot;` failed.\n&quot;</span>;                                      \</div><div class="line">        std::cerr &lt;&lt; <span class="stringliteral">&quot;Located at     :\n&quot;</span> &lt;&lt; <a class="code" href="namespacearc_1_1debug_1_1location.html#a3b2fa4c4170d0a6578c44cb1c8c9be9d">arc::debug::location::info</a>(__FILE__, __LINE__, __func__, 2) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>; \</div><div class="line">                                                                                                                  \</div><div class="line">        exit(<a class="code" href="namespacearc_1_1exit_1_1error.html#a2ad2f9a0ce5cd17333a3ba403683d664">arc::exit::error::PRE_CONDITION_FAILURE</a>);                                                            \</div><div class="line">    }</div><div class="ttc" id="namespacearc_1_1debug_1_1location_html_a3b2fa4c4170d0a6578c44cb1c8c9be9d"><div class="ttname"><a href="namespacearc_1_1debug_1_1location.html#a3b2fa4c4170d0a6578c44cb1c8c9be9d">arc::debug::location::info</a></div><div class="ttdeci">std::string info(const std::string &amp;file_, const long int line_, const std::string &amp;func_, const int skip_=1) noexcept</div><div class="ttdef"><b>Definition:</b> location.hpp:130</div></div>
+<div class="ttc" id="namespacearc_1_1exit_1_1error_html_a2ad2f9a0ce5cd17333a3ba403683d664"><div class="ttname"><a href="namespacearc_1_1exit_1_1error.html#a2ad2f9a0ce5cd17333a3ba403683d664">arc::exit::error::PRE_CONDITION_FAILURE</a></div><div class="ttdeci">constexpr const int PRE_CONDITION_FAILURE</div><div class="ttdoc">Pre-condition assertion failed. </div><div class="ttdef"><b>Definition:</b> error.hpp:34</div></div>
 </div><!-- fragment --><p>Define a pre-condition to be checked at function entrace. If condition evaluates to false then program is aborted. Macro does nothing when NDEBUG is defined.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -202,7 +203,7 @@ Macros</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 3 2018 22:12:39 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 3 2018 23:37:09 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

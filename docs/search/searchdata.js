@@ -5,10 +5,8 @@ var indexSectionsWithContent =
   2: "a",
   3: "cdeilmpsu",
   4: "imps~",
-  5: "_bcdhmtv",
-  6: "i",
-  7: "ip",
-  8: "cilp"
+  5: "_bcdhimptv",
+  6: "cilp"
 };
 
 var indexSectionNames =
@@ -19,9 +17,7 @@ var indexSectionNames =
   3: "files",
   4: "functions",
   5: "variables",
-  6: "enums",
-  7: "enumvalues",
-  8: "defines"
+  6: "defines"
 };
 
 var indexSectionLabels =
@@ -32,8 +28,6 @@ var indexSectionLabels =
   3: "Files",
   4: "Functions",
   5: "Variables",
-  6: "Enumerations",
-  7: "Enumerator",
-  8: "Macros"
+  6: "Macros"
 };
 
