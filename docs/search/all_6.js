@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['type',['TYPE',['../namespacearc_1_1config.html#ad6eeea3db680c98dc954b7951924fb0b',1,'arc::config']]]
+  ['hash',['HASH',['../namespacearc_1_1config.html#acba74c1165508123cf039684296dd007',1,'arc::config']]]
 ];
