@@ -117,6 +117,16 @@ namespace arc //! arctk namespace
 
 
             //  -- Location --
+            /**
+             *  Create an information print of the current location.
+             *
+             *  @param  file_   File string of the call location.
+             *  @param  line_   Line of the call location.
+             *  @param  func_   Function string of the call location.
+             *  @param  skip_   Number of stacks to skip before creating the location stacktrace.
+             *
+             *  @return Information print of the current location.
+             */
             inline std::string info(const std::string& file_, const long int line_, const std::string& func_, const int skip_) noexcept
             {
                 std::stringstream location;
