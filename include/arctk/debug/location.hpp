@@ -37,103 +37,106 @@ namespace arc //! arctk namespace
 {
     namespace debug //! debugging namespace
     {
-
-
-
-        //  == FUNCTION PROTOTYPES ==
-        //  -- Stacktracing --
-        std::vector<std::string> stacktrace(const int skip_ = 1);
-
-        //  -- Location --
-        inline std::string location(const std::string& file_, const long int line_, const std::string& func_, const int skip_ = 1) noexcept;
-
-
-
-        //  == FUNCTIONS ==
-        //  -- Stacktracing --
-        std::vector<std::string> stacktrace(const int skip_)
+        namespace location //! location namespace
         {
-            void*     callstack[128];
-            const int max_num_frames = sizeof(callstack) / sizeof(callstack[0]);
-            int       num_frames     = backtrace(callstack, max_num_frames);
-            char**    symbols        = backtrace_symbols(callstack, num_frames);
 
-            std::vector<std::string> trace;
-            for (int i = skip_; i < (num_frames - 1); i++)
+
+
+            //  == FUNCTION PROTOTYPES ==
+            //  -- Stacktracing --
+            std::vector<std::string> stacktrace(const int skip_ = 1);
+
+            //  -- Location --
+            inline std::string location(const std::string& file_, const long int line_, const std::string& func_, const int skip_ = 1) noexcept;
+
+
+
+            //  == FUNCTIONS ==
+            //  -- Stacktracing --
+            std::vector<std::string> stacktrace(const int skip_)
             {
-                Dl_info info;
-                if (dladdr(callstack[i], &info) && info.dli_sname)
+                void*     callstack[128];
+                const int max_num_frames = sizeof(callstack) / sizeof(callstack[0]);
+                int       num_frames     = backtrace(callstack, max_num_frames);
+                char**    symbols        = backtrace_symbols(callstack, num_frames);
+
+                std::vector<std::string> trace;
+                for (int i = skip_; i < (num_frames - 1); i++)
                 {
-                    char* demangled = nullptr;
-                    int   status    = -1;
+                    Dl_info info;
+                    if (dladdr(callstack[i], &info) && info.dli_sname)
+                    {
+                        char* demangled = nullptr;
+                        int   status    = -1;
 
-                    if (info.dli_sname[0] == '_')
-                    {
-                        demangled = abi::__cxa_demangle(info.dli_sname, nullptr, nullptr, &status);
-                    }
-
-                    if (status == 0)
-                    {
-                        trace.emplace_back(demangled);
-                    }
-                    else
-                    {
-                        if (info.dli_sname == nullptr)
+                        if (info.dli_sname[0] == '_')
                         {
-                            trace.emplace_back(symbols[i]);
+                            demangled = abi::__cxa_demangle(info.dli_sname, nullptr, nullptr, &status);
+                        }
+
+                        if (status == 0)
+                        {
+                            trace.emplace_back(demangled);
                         }
                         else
                         {
-                            trace.emplace_back(info.dli_sname);
+                            if (info.dli_sname == nullptr)
+                            {
+                                trace.emplace_back(symbols[i]);
+                            }
+                            else
+                            {
+                                trace.emplace_back(info.dli_sname);
+                            }
                         }
+
+                        free(demangled);
+                    }
+                    else
+                    {
+                        trace.emplace_back(symbols[i]);
+                    }
+                }
+
+                free(symbols);
+
+                if (num_frames == max_num_frames)
+                {
+                    trace.emplace_back("\n[truncated]");
+                }
+
+                return (trace);
+            }
+
+
+            //  -- Location --
+            inline std::string location(const std::string& file_, const long int line_, const std::string& func_, const int skip_) noexcept
+            {
+                std::stringstream location;
+
+                location << "File : " << file_ << '\n';
+                location << "Line : " << line_ << '\n';
+                location << "Func : " << func_ << '\n';
+                location << "Stack: ";
+
+                const std::vector<std::string> stack = stacktrace(skip_);
+                for (size_t i = 0; i < stack.size(); ++i)
+                {
+                    if (i != 0)
+                    {
+                        location << "\n       ";
                     }
 
-                    free(demangled);
-                }
-                else
-                {
-                    trace.emplace_back(symbols[i]);
-                }
-            }
-
-            free(symbols);
-
-            if (num_frames == max_num_frames)
-            {
-                trace.emplace_back("\n[truncated]");
-            }
-
-            return (trace);
-        }
-
-
-        //  -- Location --
-        inline std::string location(const std::string& file_, const long int line_, const std::string& func_, const int skip_) noexcept
-        {
-            std::stringstream location;
-
-            location << "File : " << file_ << '\n';
-            location << "Line : " << line_ << '\n';
-            location << "Func : " << func_ << '\n';
-            location << "Stack: ";
-
-            const std::vector<std::string> stack = stacktrace(skip_);
-            for (size_t i = 0; i < stack.size(); ++i)
-            {
-                if (i != 0)
-                {
-                    location << "\n       ";
+                    location << stack[i];
                 }
 
-                location << stack[i];
+                return (location.str());
             }
 
-            return (location.str());
-        }
 
 
-
-    } // namespace debug
+        } // namespace location
+    }     // namespace debug
 } // namespace arc
 
 
