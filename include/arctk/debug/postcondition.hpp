@@ -51,8 +51,8 @@ namespace arc //! arctk namespace
             const std::string _func; //!< Function name of the invocation location.
 
             //  -- Expression --
-            const std::string           _expr_str;
-            const std::function<bool()> _expr;
+            const std::string        _expr_str; //!< String form of the invariant expression.
+            const std::function<T()> _expr;     //!< Expression to be tested at object destruction.
 
 
             //  == INSTANTIATION ==
