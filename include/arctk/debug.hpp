@@ -74,6 +74,8 @@
     {                                                                                                             \
         std::cerr << "Pre-condition  : `" << (#condition_) << "` failed.\n";                                      \
         std::cerr << "Located at     :\n" << arc::debug::location::info(__FILE__, __LINE__, __func__, 2) << '\n'; \
+                                                                                                                  \
+        exit(settings::error::PRE_CONDITION_CONTRACT_FAILURE);                                                    \
     }
 
 /**
