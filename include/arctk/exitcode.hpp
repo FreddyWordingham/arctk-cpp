@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/exitcode/error.hpp>
+#include <arctk/exitcode/success.hpp>
 
 
 
