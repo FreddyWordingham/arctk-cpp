@@ -37,21 +37,23 @@ namespace arc //! arctk namespace
         /**
          *  Invariant contract.
          */
+        template <typename T>
         class Invariant
         {
             //  == FIELDS ==
           private:
-            const std::string           _file;
-            const long int              _line;
-            const std::string           _func;
-            const std::string           _expr_str;
-            const std::function<bool()> _expr;
+            const std::string        _file;
+            const long int           _line;
+            const std::string        _func;
+            const std::string        _expr_str;
+            const T                  _expr_pre;
+            const std::function<T()> _expr;
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            Invariant(const std::string& file_, const long int line_, const std::string& func_, const std::string& expr_str_, const std::function<bool()>& expr_);
+            Invariant(const std::string& file_, const long int line_, const std::string& func_, const std::string& expr_str_, const std::function<T()>& expr_);
 
             //  -- Destructors --
             ~Invariant();
