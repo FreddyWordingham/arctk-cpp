@@ -45,9 +45,12 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
-            const std::string           _file;
-            const long int              _line;
-            const std::string           _func;
+            //  -- Location --
+            const std::string _file; //!< File name of the invocation location.
+            const long int    _line; //!< File line number of the invocation location.
+            const std::string _func; //!< Function name of the invocation location.
+
+            //  -- Expression --
             const std::string           _expr_str;
             const std::function<bool()> _expr;
 
