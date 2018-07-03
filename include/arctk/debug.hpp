@@ -31,9 +31,34 @@
 //  == MACROS ==
 //  -- Location --
 #ifdef NDEBUG
+
+/**
+ *  Define a pre-condition to be checked at function entrace.
+ *  If condition evaluates to false then program is aborted.
+ *  Macro does nothing when NDEBUG is defined.
+ *
+ *  @param  condition_  Condition to be checked.
+ */
 #define PRE(condition_) ((void)0)
+
+/**
+ *  Define a post-condition to be checked at function exit.
+ *  If condition evaluates to false then program is aborted.
+ *  Macro does nothing when NDEBUG is defined.
+ *
+ *  @param  condition_  Condition to be checked.
+ */
 #define POST(condition_) ((void)0)
+
+/**
+ *  Define an invariant to be checked at function exit.
+ *  If value of condition at function exit differs to that at entrance then program is aborted.
+ *  Macro does nothing when NDEBUG is defined.
+ *
+ *  @param  condition_  Condition to be checked.
+ */
 #define INVAR(condition_) ((void)0)
+
 #else
 
 /**
