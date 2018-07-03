@@ -106,7 +106,7 @@ namespace arc //! arctk namespace
                 std::cerr << "Invariance     : `" << _expr_str << "` failed.\n";
                 std::cerr << "Located at     :\n" << location::info(_file, _line, _func, 4) << '\n';
 
-                exit(43);
+                exit(settings::error::INVARIANT_CONTRACT_FAILURE);
             }
         }
 
