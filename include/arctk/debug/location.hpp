@@ -53,6 +53,13 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Stacktracing --
+            /**
+             *  Produce a stacktrace string for the current location.
+             *
+             *  @param  skip_   Number of stacks to skip before creating the location.
+             *
+             *  @return Vector of stack strings.
+             */
             std::vector<std::string> stacktrace(const int skip_)
             {
                 void*     callstack[128];
