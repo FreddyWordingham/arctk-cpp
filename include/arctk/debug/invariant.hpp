@@ -26,7 +26,7 @@
 
 //  -- Arctk --
 #include <arctk/debug/location.hpp>
-#include <arctk/settings.hpp>
+#include <arctk/errno.hpp>
 
 
 
@@ -107,7 +107,7 @@ namespace arc //! arctk namespace
                 std::cerr << "Invariance     : `" << _expr_str << "` failed.\n";
                 std::cerr << "Located at     :\n" << location::info(_file, _line, _func, 4) << '\n';
 
-                exit(settings::error::INVARIANT_CONTRACT_FAILURE);
+                exit(arc::errno::INVARIANT_FAILURE);
             }
         }
 
