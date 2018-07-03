@@ -64,7 +64,8 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        Invariant::Invariant(const std::string& file_, const long int line_, const std::string& func_, const std::string& expr_str_, const std::function<bool()>& expr_)
+        template <typename T>
+        Invariant<T>::Invariant(const std::string& file_, const long int line_, const std::string& func_, const std::string& expr_str_, const std::function<T()>& expr_)
           : _file(file_)
           , _line(line_)
           , _func(func_)
@@ -76,7 +77,8 @@ namespace arc //! arctk namespace
 
 
         //  -- Destructors --
-        Invariant::~Invariant()
+        template <typename T>
+        Invariant<T>::~Invariant()
         {
             if (_expr_pre != _expr())
             {
