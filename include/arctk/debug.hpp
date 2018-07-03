@@ -33,6 +33,7 @@
 #ifdef NDEBUG
 #define PRE(condition_) ((void)0)
 #define POST(condition_) ((void)0)
+#define INVAR(condition_) ((void)0)
 #else
 #define PRE(condition_)                                                                                     \
     if (!(condition_))                                                                                      \
