@@ -77,9 +77,9 @@ namespace arc //! arctk namespace
         //  -- Destructors --
         Invariant::~Invariant()
         {
-            if (!_expr())
+            if (_expr_pre != _expr())
             {
-                std::cout << "Post-condition : `" << _expr_str << "` failed.\n";
+                std::cout << "Invariance     : `" << _expr_str << "` failed.\n";
                 std::cout << "Located at     :\n" << location(_file, _line, _func, 4) << '\n';
 
                 exit(43);
