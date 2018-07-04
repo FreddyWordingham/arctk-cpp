@@ -46,9 +46,9 @@ namespace arc //! arctk namespace
             template <typename T>
             inline bool parsable(const std::string& str_) noexcept;
             template <typename T>
-            inline T from(const std::string& str_) noexcept;
+            inline T to(const std::string& str_) noexcept;
             template <typename... A, size_t... I>
-            inline std::tuple<A...> from(const std::vector<std::string>& strs_) noexcept
+            inline std::tuple<A...> to(const std::vector<std::string>& strs_) noexcept
             {
                 PRE(strs_.size() == sizeof...(A));
 
@@ -101,7 +101,7 @@ namespace arc //! arctk namespace
             }
 
             template <typename T>
-            inline T from(const std::string& str_) noexcept
+            inline T to(const std::string& str_) noexcept
             {
                 std::stringstream stream;
                 stream << str_;
