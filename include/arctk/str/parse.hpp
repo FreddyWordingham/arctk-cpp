@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
             inline std::tuple<A...> to_helper(const std::vector<std::string>& strs_, std::index_sequence<I...> /*unused*/) noexcept;
 
             //  -- From --
-            template <typename T>
+            template <typename T, typename>
             inline std::string from(const T val_) noexcept;
             template <typename T, typename S>
             inline std::string from(const std::pair<T, S>& pair_, const bool limiters_ = true) noexcept;
@@ -260,7 +260,7 @@ namespace arc //! arctk namespace
 
 
             //  -- From --
-            template <typename T>
+            template <typename T, typename std::enable_if_t<std::is_fundamental<T>::value>>
             inline std::string from(const T val_) noexcept
             {
                 std::stringstream stream;
