@@ -25,6 +25,9 @@
 #include <tuple>
 #include <vector>
 
+//  -- Arctk --
+#include <arctk/debug.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -78,8 +81,6 @@ namespace arc //! arctk namespace
         //  -- Constructors --
         /**
          *  Construct the command line arguments object.
-         *
-         *  @tparam A   Types stored by the tuple.
          *
          *  @param  argc_       Argument count.
          *  @param  argv_       Argument values.
