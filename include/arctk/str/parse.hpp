@@ -23,8 +23,10 @@
 //  -- Std --
 #include <iostream>
 #include <string>
+#include <vector>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/exit.hpp>
 
 
@@ -45,6 +47,8 @@ namespace arc //! arctk namespace
             inline bool parsable(const std::string& str_) noexcept;
             template <typename T>
             inline T from(const std::string& str_) noexcept;
+            template <typename... A>
+            inline std::tuple<... A> from(const std::vector<std::string>& strs_) noexcept;
 
 
 
@@ -112,6 +116,17 @@ namespace arc //! arctk namespace
                 }
 
                 return (val);
+            }
+
+            template <typename... A>
+            inline std::tuple<... A> from(const std::vector<std::string>& strs_) noexcept
+            {
+                PRE(strs_.size() == sizeof...(A));
+
+                std::tuple<A...> tup;
+                from_helper(strs_, tup, std::index_sequence_for<A...>());
+
+                return (tup);
             }
 
 
