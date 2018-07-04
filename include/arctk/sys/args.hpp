@@ -127,7 +127,7 @@ namespace arc //! arctk namespace
 
                 std::cerr << "Correct call: " << _prog_name << " " << _call_str;
 
-                std::exit();
+                std::exit(exit::error::INVALID_COMMAND_LINE_ARGUMENTS);
             }
 
             size_t i = 0;
