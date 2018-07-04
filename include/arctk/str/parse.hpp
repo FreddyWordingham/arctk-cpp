@@ -44,13 +44,17 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- To --
             template <typename T>
-            inline bool parsable(const std::string& str_) noexcept;
+            inline bool parsable_to(const std::string& str_) noexcept;
             template <typename T>
             inline T to(const std::string& str_) noexcept;
             template <typename... A>
             inline std::tuple<A...> to(const std::vector<std::string>& strs_) noexcept;
             template <typename... A, size_t... I>
             inline std::tuple<A...> to_helper(const std::vector<std::string>& strs_, std::index_sequence<I...> /*unused*/) noexcept;
+
+            //  -- From --
+            template <typename T>
+            inline std::string from(const T& val_) noexcept;
 
 
 
@@ -66,7 +70,7 @@ namespace arc //! arctk namespace
              *  @return True if the string is parsable into the type.
              */
             template <typename T>
-            inline bool parsable(const std::string& str_) noexcept
+            inline bool parsable_to(const std::string& str_) noexcept
             {
                 std::stringstream stream;
                 stream << str_;
