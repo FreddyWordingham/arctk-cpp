@@ -194,7 +194,7 @@ namespace arc //! arctk namespace
                 }
 
                 std::cerr << "Unable to parse string: '" << str_ << "' to type.\n"
-                          << "String: '" << str_ << "' can not be parsed to type: '" << typeid(bool).name() << "'.";
+                          << "String: '" << str_ << "' can not be parsed to type: '" << typeid(bool).name() << "'.\n";
 
                 std::exit(exit::error::FAILED_PARSE);
             }
