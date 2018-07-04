@@ -33,7 +33,7 @@
  *  Main function of Arctk.
  *  Serves only as a main entity.
  *
- *  @return Zero upon a successful run.
+ *  @return Zero upon a successful 0run.
  */
 int main(const int /*unused*/, char** /*unused*/)
 {
