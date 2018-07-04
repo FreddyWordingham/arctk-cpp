@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['_7einvariant',['~Invariant',['../classarc_1_1debug_1_1_invariant.html#a401a6aee72332d80d76df5c5e790e212',1,'arc::debug::Invariant']]],
-  ['_7epostcondition',['~PostCondition',['../classarc_1_1debug_1_1_post_condition.html#abf9f09f476beb6222ed8d7c9865a77e4',1,'arc::debug::PostCondition']]]
+  ['version_5fmajor',['VERSION_MAJOR',['../namespacearc_1_1config.html#a2d17637229eb1a5c1cd130d0945a5308',1,'arc::config']]],
+  ['version_5fminor',['VERSION_MINOR',['../namespacearc_1_1config.html#ad647132a40a28b2241f0406b168c1874',1,'arc::config']]],
+  ['version_5fpatch',['VERSION_PATCH',['../namespacearc_1_1config.html#afc8283f15f7b5502fe48b6616a5d1207',1,'arc::config']]]
 ];
