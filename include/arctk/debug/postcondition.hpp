@@ -65,6 +65,13 @@ namespace arc //! arctk namespace
 
             //  -- Destructors --
             inline ~PostCondition() noexcept;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline PostCondition& operator=(const PostCondition&) noexcept = delete; //!< Defaulted copy operator. @return Reference to copied object.
+            inline PostCondition& operator=(PostCondition&&) noexcept = delete;      //!< Defaulted move operator. @return Reference to moved object.
         };
 
 
