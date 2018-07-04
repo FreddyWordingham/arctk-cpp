@@ -29,6 +29,39 @@ namespace arc //! arctk namespace
 
 
 
+            //  == FUNCTION PROTOTYPES ==
+            //  -- Parsing --
+            template <typename T>
+            inline bool parsable(const std::string& str_) noexcept;
+
+
+
+            //  == FUNCTIONS ==
+            //  -- Parsing --
+            template <typename T>
+            inline bool parsable(const std::string& str_) noexcept
+            {
+                std::stringstream stream;
+                stream << str_;
+
+                T val{};
+                stream >> val;
+
+                if (stream.fail())
+                {
+                    return (false);
+                }
+
+                if (stream.rdbuf()->in_avail() != 0)
+                {
+                    return (false);
+                }
+
+                return (true);
+            }
+
+
+
         } // namespace parse
     }     // namespace str
 } // namespace arc
