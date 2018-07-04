@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            PostCondition(const std::string& file_, const long int line_, const std::string& func_, const std::string& expr_str_, const std::function<bool()>& expr_);
+            inline PostCondition(const std::string& file_, const long int line_, const std::string& func_, const std::string& expr_str_, const std::function<bool()>& expr_);
 
             //  -- Destructors --
             ~PostCondition();
@@ -78,7 +78,7 @@ namespace arc //! arctk namespace
          *  @param  expr_str_   String form of the post-condition expression.
          *  @param  expr_       Expression to be tested at object destruction.
          */
-        PostCondition::PostCondition(const std::string& file_, const long int line_, const std::string& func_, const std::string& expr_str_, const std::function<bool()>& expr_)
+        inline PostCondition::PostCondition(const std::string& file_, const long int line_, const std::string& func_, const std::string& expr_str_, const std::function<bool()>& expr_)
           : _file(file_)
           , _line(line_)
           , _func(func_)
