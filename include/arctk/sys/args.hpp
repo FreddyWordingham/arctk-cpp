@@ -21,12 +21,14 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <iostream>
 #include <string>
 #include <tuple>
 #include <vector>
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/exit.hpp>
 
 
 
@@ -104,8 +106,6 @@ namespace arc //! arctk namespace
          *  Check that the required number of command line arguments are given, if not, report an error.
          *  Check that each string is parsable to it's required type.
          *
-         *  @tparam A   Types stored by the tuple.
-         *
          *  @param  argc_   Argument count.
          *  @param  argv_   Argument values.
          *
@@ -116,15 +116,18 @@ namespace arc //! arctk namespace
         template <typename... A>
         inline std::tuple<A...> Args<A...>::init_argv(const int argc_, const char** argv_) noexcept
         {
-            assert(argc_ > 0);
+            PRE(argc_ > 0);
 
             const std::vector<std::string> argv(argv_ + 1, argv_ + argc_);
 
             if (argv.size() != sizeof...(A))
             {
-                LOG << "Correct call: " << _prog_name << " " << _call_str;
-                ERROR(42) << "Incorrect number of command line arguments.\n"
+                std::cerr << "Incorrect number of command line arguments.\n"
                           << "Expected " << sizeof...(A) << ", received " << argv.size() << ".";
+
+                std::cerr << "Correct call: " << _prog_name << " " << _call_str;
+
+                std::exit();
             }
 
             size_t i = 0;
