@@ -63,7 +63,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Invariant(const std::string& file_, const long int line_, const std::string& func_, const std::string& expr_str_, const std::function<T()>& expr_) noexcept;
+            inline Invariant(const std::string& file_, const int line_, const std::string& func_, const std::string& expr_str_, const std::function<T()>& expr_) noexcept;
             inline Invariant(const Invariant&) noexcept = default; //!< Defaulted copy constructor.
             inline Invariant(Invariant&&) noexcept      = default; //!< Defaulted move constructor.
 
@@ -92,7 +92,7 @@ namespace arc //! arctk namespace
          *  @param  expr_       Expression to be tested for invariance.
          */
         template <typename T>
-        inline Invariant<T>::Invariant(const std::string& file_, const long int line_, const std::string& func_, const std::string& expr_str_, const std::function<T()>& expr_) noexcept
+        inline Invariant<T>::Invariant(const std::string& file_, const int line_, const std::string& func_, const std::string& expr_str_, const std::function<T()>& expr_) noexcept
           : _file(file_)
           , _line(line_)
           , _func(func_)
