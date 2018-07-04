@@ -60,6 +60,19 @@ namespace arc //! arctk namespace
                 return (true);
             }
 
+            template <>
+            inline bool parsable<bool>(std::string str_) noexcept
+            {
+                std::transform(str_.begin(), str_.end(), str_.begin(), [](unsigned char c_) { return std::tolower(c_); });
+
+                if ((str == "false") || (str == "true"))
+                {
+                    return (true);
+                }
+
+                return (false);
+            }
+
 
 
         } // namespace parse
