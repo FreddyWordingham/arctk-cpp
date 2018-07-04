@@ -64,6 +64,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             Invariant(const std::string& file_, const long int line_, const std::string& func_, const std::string& expr_str_, const std::function<T()>& expr_);
+            inline Invariant(const Invariant&) noexcept = default; //!< Defaulted copy constructor.
+            inline Invariant(Invariant&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
             ~Invariant();
