@@ -55,7 +55,7 @@ namespace arc //! arctk namespace
                 std::tuple<A...>          tup;
                 std::index_sequence<I...> seq = std::index_sequence_for<A...>();
 
-                ((std::get<I>(tup) = from<A>(strs_[I])), ...);
+                ((std::get<I>(tup) = to<A>(strs_[I])), ...);
 
                 return (tup);
             }
