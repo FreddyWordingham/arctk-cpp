@@ -24,6 +24,7 @@
 #include <iostream>
 #include <string>
 #include <tuple>
+#include <utility>
 #include <vector>
 
 //  -- Arctk --
@@ -48,6 +49,8 @@ namespace arc //! arctk namespace
             inline bool parsable_to(const std::string& str_) noexcept;
             template <typename T>
             inline T to(const std::string& str_) noexcept;
+            template <typename T, typename S>
+            inline std::pair<T, S> to(const std::string& str_0_, const std::string& str_1_) noexcept;
             template <typename... A>
             inline std::tuple<A...> to(const std::vector<std::string>& strs_) noexcept;
             template <typename... A, size_t... I>
@@ -194,6 +197,12 @@ namespace arc //! arctk namespace
                           << "String: '" << str_ << "' can not be parsed to type: '" << typeid(bool).name() << "'.";
 
                 std::exit(exit::error::FAILED_PARSE);
+            }
+
+            template <typename T, typename S>
+            inline std::pair<T, S> to(const std::string& str_0_, const std::string& str_1_) noexcept
+            {
+                return (std::make_pair(to<T>(str_0_), to<S>(str_1_)));
             }
 
             /**
