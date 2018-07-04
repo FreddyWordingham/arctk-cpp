@@ -193,8 +193,6 @@ namespace arc //! arctk namespace
 
             /**
              *  Parse a string to a tuple of values.
-             *  Function will call error on failed parsing.
-             *  Function will call error if characters remain after parsing.
              *
              *  @tparam A   Types to parse.
              *
@@ -212,9 +210,24 @@ namespace arc //! arctk namespace
                 return (to_helper<A...>(strs_, std::index_sequence_for<A...>()));
             }
 
+            /**
+             *  Help parse a string to a tuple of values.
+             *  Values are parsed from vector of strings and packed into tuple.
+             *
+             *  @tparam A   Types to parse.
+             *  @tparam I   Index sequence of A.
+             *
+             *  @param  str_    String to parse.
+             *
+             *  @pre    size of A must equal the size of I.
+             *
+             *  @return Parsed tuple of values.
+             */
             template <typename... A, size_t... I>
             inline std::tuple<A...> to_helper(const std::vector<std::string>& strs_, std::index_sequence<I...> /*unused*/) noexcept
             {
+                PRE(sizeof...(A) == sizeof...(I));
+
                 std::tuple<A...> tup;
                 ((std::get<I>(tup) = to<A>(strs_[I])), ...);
 
