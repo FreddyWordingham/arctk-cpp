@@ -196,7 +196,7 @@ namespace arc //! arctk namespace
              *
              *  @tparam A   Types to parse.
              *
-             *  @param  str_    String to parse.
+             *  @param  strs_   Vector of string to parse.
              *
              *  @pre    strs_ size must equal the number of variadic types.
              *
@@ -217,7 +217,7 @@ namespace arc //! arctk namespace
              *  @tparam A   Types to parse.
              *  @tparam I   Index sequence of A.
              *
-             *  @param  str_    String to parse.
+             *  @param  strs_   Vector of string to parse.
              *
              *  @pre    size of A must equal the size of I.
              *
