@@ -60,8 +60,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline PostCondition(const std::string& file_, int line_, const std::string& func_, const std::string& expr_str_, const std::function<bool()>& expr_) noexcept;
-            inline PostCondition(const PostCondition&) noexcept = default; //!< Defaulted copy constructor.
-            inline PostCondition(PostCondition&&) noexcept      = default; //!< Defaulted move constructor.
+            inline PostCondition(const PostCondition&) = default; //!< Defaulted copy constructor.
+            inline PostCondition(PostCondition&&)      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
             inline ~PostCondition() noexcept;
