@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <array>
 #include <iomanip>
 #include <iostream>
 #include <sstream>
@@ -64,6 +65,8 @@ namespace arc //! arctk namespace
             inline std::string from(const std::pair<T, S>& pair_, const bool limiters_ = true) noexcept;
             template <typename T>
             inline std::string from(const std::vector<T>& vec_, const bool limiters_ = true) noexcept;
+            template <typename T, size_t N>
+            inline std::string from(const std::array<T, N>& arr_, const bool limiters_ = true) noexcept;
 
 
 
@@ -298,6 +301,34 @@ namespace arc //! arctk namespace
                 if (limiters_)
                 {
                     stream << settings::format::VECTOR_END;
+                }
+
+                return (stream.str());
+            }
+
+            template <typename T, size_t N>
+            inline std::string from(const std::array<T, N>& arr_, const bool limiters_) noexcept
+            {
+                std::stringstream stream;
+
+                if (limiters_)
+                {
+                    stream << settings::format::ARRAY_START;
+                }
+
+                for (size_t i = 0; i < N; ++i)
+                {
+                    if (i != 0)
+                    {
+                        stream << settings::format::DELIMITER;
+                    }
+
+                    stream << std::setw(settings::format::PRINT_WIDTH) << arr_[i];
+                }
+
+                if (limiters_)
+                {
+                    stream << settings::format::ARRAY_END;
                 }
 
                 return (stream.str());
