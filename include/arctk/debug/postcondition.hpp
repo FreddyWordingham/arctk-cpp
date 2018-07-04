@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
             inline PostCondition(const std::string& file_, const long int line_, const std::string& func_, const std::string& expr_str_, const std::function<bool()>& expr_) noexcept;
 
             //  -- Destructors --
-            inline ~PostCondition();
+            inline ~PostCondition() noexcept;
         };
 
 
@@ -92,7 +92,7 @@ namespace arc //! arctk namespace
         /**
          *  Destruct the post-condition object and check that the result of the expression is true.
          */
-        inline PostCondition::~PostCondition()
+        inline PostCondition::~PostCondition() noexcept
         {
             if (!_expr())
             {
