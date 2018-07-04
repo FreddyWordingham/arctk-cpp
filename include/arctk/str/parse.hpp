@@ -191,6 +191,19 @@ namespace arc //! arctk namespace
                 std::exit(exit::error::FAILED_PARSE);
             }
 
+            /**
+             *  Parse a string to a tuple of values.
+             *  Function will call error on failed parsing.
+             *  Function will call error if characters remain after parsing.
+             *
+             *  @tparam A   Types to parse.
+             *
+             *  @param  str_    String to parse.
+             *
+             *  @pre    strs_ size must equal the number of variadic types.
+             *
+             *  @return Parsed tuple of values.
+             */
             template <typename... A>
             inline std::tuple<A...> to(const std::vector<std::string>& strs_) noexcept
             {
