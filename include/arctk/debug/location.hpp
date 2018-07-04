@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
             inline std::vector<std::string> stacktrace(const int skip_ = 1) noexcept;
 
             //  -- Location --
-            inline std::string info(const std::string& file_, const long int line_, const std::string& func_, const int skip_ = 1) noexcept;
+            inline std::string info(const std::string& file_, const int line_, const std::string& func_, const int skip_ = 1) noexcept;
 
 
 
@@ -127,7 +127,7 @@ namespace arc //! arctk namespace
              *
              *  @return Information print of the current location.
              */
-            inline std::string info(const std::string& file_, const long int line_, const std::string& func_, const int skip_) noexcept
+            inline std::string info(const std::string& file_, const int line_, const std::string& func_, const int skip_) noexcept
             {
                 std::stringstream location;
 
