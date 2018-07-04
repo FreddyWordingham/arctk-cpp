@@ -1,5 +1,0 @@
-<map id="arc::debug::location::stacktrace" name="arc::debug::location::stacktrace">
-<area shape="rect" id="node2" href="$namespacearc_1_1debug_1_1location.html#a3b2fa4c4170d0a6578c44cb1c8c9be9d" title="arc::debug::location\l::info" alt="" coords="191,37,329,76"/>
-<area shape="rect" id="node3" href="$classarc_1_1debug_1_1_invariant.html#a401a6aee72332d80d76df5c5e790e212" title="arc::debug::Invariant\l::~Invariant" alt="" coords="393,5,536,44"/>
-<area shape="rect" id="node4" href="$classarc_1_1debug_1_1_post_condition.html#abf9f09f476beb6222ed8d7c9865a77e4" title="arc::debug::PostCondition\l::~PostCondition" alt="" coords="377,68,552,107"/>
-</map>
