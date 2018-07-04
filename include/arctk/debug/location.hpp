@@ -44,10 +44,10 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Stacktracing --
-            inline std::vector<std::string> stacktrace(const int skip_ = 1) noexcept;
+            inline std::vector<std::string> stacktrace(int skip_ = 1) noexcept;
 
             //  -- Location --
-            inline std::string info(const std::string& file_, const int line_, const std::string& func_, const int skip_ = 1) noexcept;
+            inline std::string info(const std::string& file_, int line_, const std::string& func_, int skip_ = 1) noexcept;
 
 
 
