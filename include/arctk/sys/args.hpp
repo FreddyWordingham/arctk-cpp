@@ -133,7 +133,7 @@ namespace arc //! arctk namespace
             size_t i = 0;
             ((check_parsable<A>(argv[i]), ++i), ...);
 
-            return (parse::from_str<A...>(argv));
+            return (str::parse::from<A...>(argv));
         }
 
         /**
