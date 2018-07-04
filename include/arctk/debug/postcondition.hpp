@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Location --
             const std::string _file; //!< File name of the invocation location.
-            const long int    _line; //!< File line number of the invocation location.
+            const int         _line; //!< File line number of the invocation location.
             const std::string _func; //!< Function name of the invocation location.
 
             //  -- Expression --
