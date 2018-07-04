@@ -22,15 +22,15 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace parse //! parsing namespace
+    namespace str //! string namespace
     {
-        namespace string //! string namespace
+        namespace parse //! parsing namespace
         {
 
 
 
-        } // namespace string
-    }     // namespace parse
+        } // namespace parse
+    }     // namespace str
 } // namespace arc
 
 
