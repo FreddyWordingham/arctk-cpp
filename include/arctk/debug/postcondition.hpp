@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline PostCondition(const std::string& file_, const int line_, const std::string& func_, const std::string& expr_str_, const std::function<bool()>& expr_) noexcept;
+            inline PostCondition(const std::string& file_, int line_, const std::string& func_, const std::string& expr_str_, const std::function<bool()>& expr_) noexcept;
 
             //  -- Destructors --
             inline ~PostCondition() noexcept;
