@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
 
             //  -- From --
             template <typename T, typename>
-            inline std::string from(const T val_) noexcept;
+            inline std::string from(const T val_, const bool /*unused*/) noexcept;
             template <typename T, typename S>
             inline std::string from(const std::pair<T, S>& pair_, const bool limiters_ = true) noexcept;
             template <typename T>
@@ -261,7 +261,7 @@ namespace arc //! arctk namespace
 
             //  -- From --
             template <typename T, typename std::enable_if_t<std::is_fundamental<T>::value>>
-            inline std::string from(const T val_) noexcept
+            inline std::string from(const T val_, const bool /*unused*/) noexcept
             {
                 std::stringstream stream;
 
