@@ -21,7 +21,9 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <iomanip>
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <tuple>
 #include <utility>
@@ -30,6 +32,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/exit.hpp>
+#include <arctk/settings.hpp>
 
 
 
@@ -57,8 +60,8 @@ namespace arc //! arctk namespace
             inline std::tuple<A...> to_helper(const std::vector<std::string>& strs_, std::index_sequence<I...> /*unused*/) noexcept;
 
             //  -- From --
-            template <typename T>
-            inline std::string from(const T& val_) noexcept;
+            template <typename T, typename S>
+            inline std::string from(const std::pair<T, S>& pair_) noexcept;
 
 
 
@@ -246,6 +249,18 @@ namespace arc //! arctk namespace
                 ((std::get<I>(tup) = to<A>(strs_[I])), ...);
 
                 return (tup);
+            }
+
+
+            //  -- From --
+            template <typename T, typename S>
+            inline std::string from(const std::pair<T, S>& pair_) noexcept
+            {
+                std::stringstream stream;
+
+                stream << std::setw(settings::format::PRINT_WIDTH) << pair_.first << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << pair_.second;
+
+                return (stream.str());
             }
 
 
