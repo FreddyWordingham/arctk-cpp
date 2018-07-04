@@ -105,7 +105,7 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                free(symbols);
+                free(symbols); // NOLINT
 
                 if (num_frames == max_num_frames)
                 {
