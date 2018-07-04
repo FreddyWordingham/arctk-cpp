@@ -260,7 +260,7 @@ namespace arc //! arctk namespace
 
 
             //  -- From --
-            template <typename T, typename std::enable_if_t<std::is_fundamental<T>::value>>
+            template <typename T, typename = std::enable_if_t<std::is_fundamental<T>::value>>
             inline std::string from(const T val_, const bool /*unused*/) noexcept
             {
                 std::stringstream stream;
