@@ -263,7 +263,11 @@ namespace arc //! arctk namespace
             template <typename T>
             inline std::string from(const T val_) noexcept
             {
-                return (std::to_string(val_));
+                std::stringstream stream;
+
+                stream << val_;
+
+                return (stream.str());
             }
 
             template <typename T, typename S>
