@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Stacktracing --
-            std::vector<std::string> stacktrace(const int skip_ = 1);
+            inline std::vector<std::string> stacktrace(const int skip_ = 1);
 
             //  -- Location --
             inline std::string info(const std::string& file_, const long int line_, const std::string& func_, const int skip_ = 1) noexcept;
@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
              *
              *  @return Vector of stack strings.
              */
-            std::vector<std::string> stacktrace(const int skip_)
+            inline std::vector<std::string> stacktrace(const int skip_)
             {
                 void*     callstack[128];
                 const int max_num_frames = sizeof(callstack) / sizeof(callstack[0]);
