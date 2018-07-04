@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mod_5fcore',['MOD_CORE',['../namespacearc_1_1config.html#a91b9e1afbcd188b61eb1430caeac30db',1,'arc::config']]]
+  ['invalid_5fcommand_5fline_5farguments',['INVALID_COMMAND_LINE_ARGUMENTS',['../namespacearc_1_1exit_1_1error.html#a4ce0ffad0e72e823fa3cccc62b525cac',1,'arc::exit::error']]],
+  ['invariant_5ffailure',['INVARIANT_FAILURE',['../namespacearc_1_1exit_1_1error.html#a9d9211de583bf15199f506e2944fdca2',1,'arc::exit::error']]]
 ];

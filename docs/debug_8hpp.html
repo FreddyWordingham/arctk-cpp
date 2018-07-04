@@ -103,7 +103,11 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="debug_8hpp__dep__incl.png" border="0" usemap="#include_2arctk_2debug_8hppdep" alt=""/></div>
 <map name="include_2arctk_2debug_8hppdep" id="include_2arctk_2debug_8hppdep">
-<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="38,79,135,104"/>
+<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="58,372,155,397"/>
+<area shape="rect" id="node3" href="parse_8hpp.html" title="include/arctk/str/parse.hpp" alt="" coords="48,79,226,104"/>
+<area shape="rect" id="node5" href="args_8hpp.html" title="include/arctk/sys/args.hpp" alt="" coords="162,225,337,251"/>
+<area shape="rect" id="node4" href="str_8hpp.html" title="include/arctk/str.hpp" alt="" coords="93,152,233,177"/>
+<area shape="rect" id="node6" href="sys_8hpp.html" title="include/arctk/sys.hpp" alt="" coords="195,299,341,324"/>
 </map>
 </div>
 </div>
@@ -188,7 +192,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span> (!(condition_))                                                                                            \</div><div class="line">    {                                                                                                             \</div><div class="line">        std::cerr &lt;&lt; <span class="stringliteral">&quot;Pre-condition  : `&quot;</span> &lt;&lt; (#condition_) &lt;&lt; <span class="stringliteral">&quot;` failed.\n&quot;</span>;                                      \</div><div class="line">        std::cerr &lt;&lt; <span class="stringliteral">&quot;Located at     :\n&quot;</span> &lt;&lt; <a class="code" href="namespacearc_1_1debug_1_1location.html#abde6a7b418cf81aa414df4df29346d7d">arc::debug::location::info</a>(__FILE__, __LINE__, __func__, 2) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>; \</div><div class="line">                                                                                                                  \</div><div class="line">        exit(<a class="code" href="namespacearc_1_1exit_1_1error.html#a2ad2f9a0ce5cd17333a3ba403683d664">arc::exit::error::PRE_CONDITION_FAILURE</a>);                                                            \</div><div class="line">    }</div><div class="ttc" id="namespacearc_1_1exit_1_1error_html_a2ad2f9a0ce5cd17333a3ba403683d664"><div class="ttname"><a href="namespacearc_1_1exit_1_1error.html#a2ad2f9a0ce5cd17333a3ba403683d664">arc::exit::error::PRE_CONDITION_FAILURE</a></div><div class="ttdeci">constexpr const int PRE_CONDITION_FAILURE</div><div class="ttdoc">Pre-condition assertion failed. </div><div class="ttdef"><b>Definition:</b> error.hpp:34</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span> (!(condition_))                                                                                            \</div><div class="line">    {                                                                                                             \</div><div class="line">        std::cerr &lt;&lt; <span class="stringliteral">&quot;Pre-condition  : `&quot;</span> &lt;&lt; (#condition_) &lt;&lt; <span class="stringliteral">&quot;` failed.\n&quot;</span>;                                      \</div><div class="line">        std::cerr &lt;&lt; <span class="stringliteral">&quot;Located at     :\n&quot;</span> &lt;&lt; <a class="code" href="namespacearc_1_1debug_1_1location.html#abde6a7b418cf81aa414df4df29346d7d">arc::debug::location::info</a>(__FILE__, __LINE__, __func__, 2) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>; \</div><div class="line">                                                                                                                  \</div><div class="line">        std::exit(<a class="code" href="namespacearc_1_1exit_1_1error.html#a2ad2f9a0ce5cd17333a3ba403683d664">arc::exit::error::PRE_CONDITION_FAILURE</a>);                                                       \</div><div class="line">    }</div><div class="ttc" id="namespacearc_1_1exit_1_1error_html_a2ad2f9a0ce5cd17333a3ba403683d664"><div class="ttname"><a href="namespacearc_1_1exit_1_1error.html#a2ad2f9a0ce5cd17333a3ba403683d664">arc::exit::error::PRE_CONDITION_FAILURE</a></div><div class="ttdeci">constexpr const int PRE_CONDITION_FAILURE</div><div class="ttdoc">Pre-condition assertion failed. </div><div class="ttdef"><b>Definition:</b> error.hpp:34</div></div>
 <div class="ttc" id="namespacearc_1_1debug_1_1location_html_abde6a7b418cf81aa414df4df29346d7d"><div class="ttname"><a href="namespacearc_1_1debug_1_1location.html#abde6a7b418cf81aa414df4df29346d7d">arc::debug::location::info</a></div><div class="ttdeci">std::string info(const std::string &amp;file_, int line_, const std::string &amp;func_, int skip_=1) noexcept</div><div class="ttdef"><b>Definition:</b> location.hpp:130</div></div>
 </div><!-- fragment --><p>Define a pre-condition to be checked at function entrace. If condition evaluates to false then program is aborted. Macro does nothing when NDEBUG is defined.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -203,7 +207,7 @@ Macros</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 4 2018 01:50:52 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 4 2018 15:35:19 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

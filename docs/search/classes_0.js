@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['invariant',['Invariant',['../classarc_1_1debug_1_1_invariant.html',1,'arc::debug']]]
+  ['args',['Args',['../classarc_1_1sys_1_1_args.html',1,'arc::sys']]]
 ];
