@@ -30,6 +30,8 @@ namespace arc //! arctk namespace
 
 
             //  == CONSTANTS ==
+            //  -- Files --
+            constexpr const char DELIMITER = ','; //!< Character used to delimit consecutive data.
 
 
 
