@@ -307,7 +307,7 @@ namespace arc //! arctk namespace
                         stream << settings::format::DELIMITER;
                     }
 
-                    stream << std::setw(settings::format::PRINT_WIDTH) << vec_[i];
+                    stream << std::setw(settings::format::PRINT_WIDTH) << from(vec_[i], limiters_);
                 }
 
                 if (limiters_)
