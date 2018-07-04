@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
             inline PostCondition(const std::string& file_, const long int line_, const std::string& func_, const std::string& expr_str_, const std::function<bool()>& expr_);
 
             //  -- Destructors --
-            ~PostCondition();
+            inline ~PostCondition();
         };
 
 
@@ -92,7 +92,7 @@ namespace arc //! arctk namespace
         /**
          *  Destruct the post-condition object and check that the result of the expression is true.
          */
-        PostCondition::~PostCondition()
+        inline PostCondition::~PostCondition()
         {
             if (!_expr())
             {
