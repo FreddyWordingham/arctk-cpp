@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTION PROTOTYPES ==
-            //  -- Parsing --
+            //  -- To --
             template <typename T>
             inline bool parsable(const std::string& str_) noexcept;
             template <typename T>
@@ -55,7 +55,7 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTIONS ==
-            //  -- Parsing --
+            //  -- To --
             /**
              *  Determine if a string is parsable into a type.
              *
