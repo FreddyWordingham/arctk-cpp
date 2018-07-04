@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
                 for (int i = skip_; i < (num_frames - 1); i++)
                 {
                     Dl_info info;
-                    if (dladdr(callstack[i], &info) && info.dli_sname)
+                    if ((dladdr(callstack[i], &info) != 0) && info.dli_sname)
                     {
                         char* demangled = nullptr;
                         int   status    = -1;
