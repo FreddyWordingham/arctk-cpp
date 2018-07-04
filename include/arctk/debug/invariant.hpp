@@ -69,6 +69,13 @@ namespace arc //! arctk namespace
 
             //  -- Destructors --
             ~Invariant();
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Invariant& operator=(const Invariant&) noexcept = delete; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Invariant& operator=(Invariant&&) noexcept = delete;      //!< Defaulted move operator. @return Reference to moved object.
         };
 
 
