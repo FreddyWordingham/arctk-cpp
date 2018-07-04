@@ -21,7 +21,11 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <iostream>
 #include <string>
+
+//  -- Arctk --
+#include <arctk/exit.hpp>
 
 
 
@@ -39,6 +43,8 @@ namespace arc //! arctk namespace
             //  -- Parsing --
             template <typename T>
             inline bool parsable(const std::string& str_) noexcept;
+            template <typename T>
+            inline T from(const std::string& str_) noexcept;
 
 
 
@@ -78,6 +84,34 @@ namespace arc //! arctk namespace
                 }
 
                 return (false);
+            }
+
+            template <typename T>
+            inline T from(const std::string& str_) noexcept
+            {
+                std::stringstream stream;
+                stream << str_;
+
+                T val{};
+                stream >> val;
+
+                if (stream.fail())
+                {
+                    std::cerr << "Unable to parse string: '" << str_ << "' to type.\n"
+                              << "String: '" << str_ << "' can not be parsed to type: '" << typeid(T).name() << "'.";
+
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+
+                if (stream.rdbuf()->in_avail() != 0)
+                {
+                    std::cerr << "Unable to parse string to type.\n"
+                              << "String: '" << str_ << "' contains leftover characters after parsing to type: '" << typeid(T).name() << "'.";
+
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+
+                return (val);
             }
 
 
