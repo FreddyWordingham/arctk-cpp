@@ -37,6 +37,7 @@ namespace arc //! arctk namespace
 
             //  -- Parsing --
             constexpr const int INVALID_COMMAND_LINE_ARGUMENTS = 120; //!< Invalid command line arguments.
+            constexpr const int FAILED_PARSE                   = 121; //!< Parse attempt failed or will fail.
 
 
 
