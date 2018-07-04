@@ -21,6 +21,7 @@
 #include <arctk/exit/success.hpp>
 #include <arctk/macro.hpp>
 #include <arctk/macro/utility.hpp>
+#include <arctk/parse.hpp>
 #include <arctk/settings.hpp>
 #include <arctk/settings/format.hpp>
 #include <arctk/sys.hpp>
