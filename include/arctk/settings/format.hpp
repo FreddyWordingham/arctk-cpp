@@ -31,8 +31,18 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Files --
-            constexpr const char DELIMITER   = ','; //!< Character used to delimit consecutive data.
-            constexpr const int  PRINT_WIDTH = 16;  //!< Width allocated to data prints.
+            constexpr const int PRINT_WIDTH = 16; //!< Width allocated to data prints.
+
+            //  -- Limiters --
+            constexpr const char DELIMITER    = ','; //!< Character used to delimit consecutive data.
+            constexpr const char PAIR_START   = '(';
+            constexpr const char PAIR_END     = ')';
+            constexpr const char TUPLE_START  = '(';
+            constexpr const char TUPLE_END    = ')';
+            constexpr const char VECTOR_START = '{';
+            constexpr const char VECTOR_END   = '}';
+            constexpr const char ARRAY_START  = '[';
+            constexpr const char ARRAY_END    = ']';
 
 
 
