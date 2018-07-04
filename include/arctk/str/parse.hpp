@@ -276,7 +276,7 @@ namespace arc //! arctk namespace
                     stream << settings::format::PAIR_START;
                 }
 
-                stream << std::setw(settings::format::PRINT_WIDTH) << pair_.first << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << pair_.second;
+                stream << std::setw(settings::format::PRINT_WIDTH) << from(pair_.first) << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << from(pair_.second);
 
                 if (limiters_)
                 {
