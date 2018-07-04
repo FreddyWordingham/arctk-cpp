@@ -1,5 +1,5 @@
 ---
-Checks:                '*,-cppcoreguidelines-pro-bounds-array-to-pointer-decay,-fuchsia-default-arguments'
+Checks:                '*,-cppcoreguidelines-pro-bounds-array-to-pointer-decay,-fuchsia-default-arguments,-hicpp-no-array-decay'
 WarningsAsErrors:      ''
 HeaderFilterRegex:     '.hpp'
 AnalyzeTemporaryDtors: true
