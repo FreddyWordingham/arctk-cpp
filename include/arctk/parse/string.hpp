@@ -24,12 +24,12 @@ namespace arc //! arctk namespace
 {
     namespace parse //! parsing namespace
     {
-        namespace format //! format namespace
+        namespace string //! string namespace
         {
 
 
 
-        } // namespace format
+        } // namespace string
     }     // namespace parse
 } // namespace arc
 
