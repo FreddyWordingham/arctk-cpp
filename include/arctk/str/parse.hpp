@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_PARSE_STRING_HPP
-#define ARCTK_PARSE_STRING_HPP
+#ifndef ARCTK_STR_PARSE_HPP
+#define ARCTK_STR_PARSE_HPP
 
 
 
@@ -41,4 +41,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_PARSE_STRING_HPP
+#endif // ARCTK_STR_PARSE_HPP
