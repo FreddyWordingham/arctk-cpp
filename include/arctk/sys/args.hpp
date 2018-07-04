@@ -94,7 +94,7 @@ namespace arc //! arctk namespace
           , _call_str(call_str_)
           , _argv(init_argv(argc_, argv_))
         {
-            assert(argc_ > 0);
+            PRE(argc_ > 0);
         }
 
 
