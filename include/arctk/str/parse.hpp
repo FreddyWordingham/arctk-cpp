@@ -47,18 +47,10 @@ namespace arc //! arctk namespace
             inline bool parsable(const std::string& str_) noexcept;
             template <typename T>
             inline T to(const std::string& str_) noexcept;
+            template <typename... A>
+            inline std::tuple<A...> to(const std::vector<std::string>& strs_) noexcept;
             template <typename... A, size_t... I>
-            inline std::tuple<A...> to(const std::vector<std::string>& strs_) noexcept
-            {
-                PRE(strs_.size() == sizeof...(A));
-
-                std::tuple<A...>          tup;
-                std::index_sequence<I...> seq = std::index_sequence_for<A...>();
-
-                ((std::get<I>(tup) = to<A>(strs_[I])), ...);
-
-                return (tup);
-            }
+            inline std::tuple<A...> to_helper(const std::vector<std::string>& strs_, std::index_sequence<I...> /*unused*/) noexcept;
 
 
 
@@ -126,6 +118,23 @@ namespace arc //! arctk namespace
                 }
 
                 return (val);
+            }
+
+            template <typename... A>
+            inline std::tuple<A...> to(const std::vector<std::string>& strs_) noexcept
+            {
+                PRE(strs_.size() == sizeof...(A));
+
+                return (to_helper<A...>(strs_, std::index_sequence_for<A...>()));
+            }
+
+            template <typename... A, size_t... I>
+            inline std::tuple<A...> to_helper(const std::vector<std::string>& strs_, std::index_sequence<I...> /*unused*/) noexcept
+            {
+                std::tuple<A...> tup;
+                ((std::get<I>(tup) = to<A>(strs_[I])), ...);
+
+                return (tup);
             }
 
 
