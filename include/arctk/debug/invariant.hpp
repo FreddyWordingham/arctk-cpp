@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
             inline Invariant(Invariant&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
-            ~Invariant();
+            inline ~Invariant();
 
 
             //  == OPERATORS ==
@@ -109,7 +109,7 @@ namespace arc //! arctk namespace
          *  If the expression no longer equals its previous value then report an error and exit.
          */
         template <typename T>
-        Invariant<T>::~Invariant()
+        inline Invariant<T>::~Invariant()
         {
             if (_expr_pre != _expr())
             {
