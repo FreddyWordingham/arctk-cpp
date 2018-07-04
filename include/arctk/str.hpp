@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/parse.hpp
+ *  @file   arctk/str.hpp
  *  @date   04/07/2018
  *  @author Freddy Wordingham
  *
- *  Collection of parsing functions.
+ *  Collection of string related functions.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_PARSE_HPP
-#define ARCTK_PARSE_HPP
+#ifndef ARCTK_STR_HPP
+#define ARCTK_STR_HPP
 
 
 
@@ -21,7 +21,6 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
-#include <arctk/parse/string.hpp>
 
 
 
@@ -31,4 +30,4 @@
 
 
 //  == GUARD END ==
-#endif // ARCTK_PARSE_HPP
+#endif // ARCTK_STR_HPP
