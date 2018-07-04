@@ -35,6 +35,9 @@ namespace arc //! arctk namespace
             constexpr const int POST_CONDITION_FAILURE = 111; //!< Post-condition assertion failed.
             constexpr const int INVARIANT_FAILURE      = 112; //!< Invariant assertion failed.
 
+            //  -- Parsing --
+            constexpr const int INVALID_COMMAND_LINE_ARGUMENTS = 120; //!< Invalid command line arguments.
+
 
 
         } // namespace error
