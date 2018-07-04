@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
 
             //  -- From --
             template <typename T, typename S>
-            inline std::string from(const std::pair<T, S>& pair_) noexcept;
+            inline std::string from(const std::pair<T, S>& pair_, const bool limiters_ = true) noexcept;
 
 
 
@@ -254,11 +254,21 @@ namespace arc //! arctk namespace
 
             //  -- From --
             template <typename T, typename S>
-            inline std::string from(const std::pair<T, S>& pair_) noexcept
+            inline std::string from(const std::pair<T, S>& pair_, const bool limiters_) noexcept
             {
                 std::stringstream stream;
 
+                if (limiters_)
+                {
+                    stream << settings::format::PAIR_START;
+                }
+
                 stream << std::setw(settings::format::PRINT_WIDTH) << pair_.first << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << pair_.second;
+
+                if (limiters_)
+                {
+                    stream << settings::format::PAIR_END;
+                }
 
                 return (stream.str());
             }
