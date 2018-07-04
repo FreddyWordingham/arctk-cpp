@@ -141,6 +141,36 @@ namespace arc //! arctk namespace
                 return (val);
             }
 
+            template <>
+            inline bool to<bool>(const std::string& str_) noexcept
+            {
+                if (str_ == "0")
+                {
+                    return (false);
+                }
+                else if (str_ == "1")
+                {
+                    return (true);
+                }
+
+                std::string str = str_;
+                std::transform(str.begin(), str.end(), str.begin(), [](unsigned char c_) { return std::tolower(c_); });
+
+                if (str == "false")
+                {
+                    return (false);
+                }
+                else if (str == "true")
+                {
+                    return (true);
+                }
+
+                std::cerr << "Unable to parse string: '" << str_ << "' to type.\n"
+                          << "String: '" << str_ << "' can not be parsed to type: '" << typeid(bool).name() << "'.";
+
+                std::exit(exit::error::FAILED_PARSE);
+            }
+
             template <typename... A>
             inline std::tuple<A...> to(const std::vector<std::string>& strs_) noexcept
             {
