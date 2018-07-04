@@ -124,8 +124,8 @@ namespace arc //! arctk namespace
             if (argv.size() != sizeof...(A))
             {
                 std::cerr << "Incorrect number of command line arguments.\n"
-                          << "Expected " << sizeof...(A) << ", received " << argv.size() << ".";
-                std::cerr << "Correct call: " << _prog_name << " " << _call_str;
+                          << "Expected " << sizeof...(A) << ", received " << argv.size() << ".\n";
+                std::cerr << "Correct call: " << _prog_name << " " << _call_str << '\n';
 
                 std::exit(exit::error::INVALID_COMMAND_LINE_ARGUMENTS);
             }
