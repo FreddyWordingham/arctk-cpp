@@ -61,9 +61,10 @@ namespace arc //! arctk namespace
             }
 
             template <>
-            inline bool parsable<bool>(std::string str_) noexcept
+            inline bool parsable<bool>(const std::string& str_) noexcept
             {
-                std::transform(str_.begin(), str_.end(), str_.begin(), [](unsigned char c_) { return std::tolower(c_); });
+                std::string str = str_;
+                std::transform(str.begin(), str.end(), str.begin(), [](unsigned char c_) { return std::tolower(c_); });
 
                 if ((str == "false") || (str == "true"))
                 {
