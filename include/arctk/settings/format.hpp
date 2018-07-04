@@ -31,7 +31,8 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Files --
-            constexpr const char DELIMITER = ','; //!< Character used to delimit consecutive data.
+            constexpr const char DELIMITER   = ','; //!< Character used to delimit consecutive data.
+            constexpr const int  PRINT_WIDTH = 16;  //!< Width allocated to data prints.
 
 
 
