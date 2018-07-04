@@ -97,7 +97,7 @@ namespace arc //! arctk namespace
                             }
                         }
 
-                        free(demangled);
+                        free(demangled); // NOLINT
                     }
                     else
                     {
