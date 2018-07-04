@@ -124,7 +124,6 @@ namespace arc //! arctk namespace
             {
                 std::cerr << "Incorrect number of command line arguments.\n"
                           << "Expected " << sizeof...(A) << ", received " << argv.size() << ".";
-
                 std::cerr << "Correct call: " << _prog_name << " " << _call_str;
 
                 std::exit(exit::error::INVALID_COMMAND_LINE_ARGUMENTS);
@@ -150,8 +149,10 @@ namespace arc //! arctk namespace
         {
             if (!parse::parsable_from_str<T>(str_))
             {
-                LOG << "Correct call: " << _prog_name << " " << _call_str;
-                ERROR(42) << "Argument string: '" << str_ << "' is not parsable as type: '" << typeid(T).name() << "'.";
+                std::cerr << "Argument string: '" << str_ << "' is not parsable as type: '" << typeid(T).name() << "'.";
+                std::cerr << "Correct call: " << _prog_name << " " << _call_str;
+
+                std::exit(exit::error::FAILED_PARSE);
             }
         }
 
