@@ -1,4 +1,5 @@
 <map id="arc::sys::File" name="arc::sys::File">
-<area shape="rect" id="node2" href="$classarc_1_1sys_1_1file_1_1_in.html" title="arc::sys::file::In" alt="" coords="5,79,116,104"/>
-<area shape="rect" id="node3" href="$classarc_1_1sys_1_1file_1_1_out.html" title="arc::sys::file::Out" alt="" coords="140,79,261,104"/>
+<area shape="rect" id="node2" href="$classarc_1_1sys_1_1file_1_1_app.html" title="arc::sys::file::App" alt="" coords="5,79,128,104"/>
+<area shape="rect" id="node3" href="$classarc_1_1sys_1_1file_1_1_in.html" title="arc::sys::file::In" alt="" coords="152,79,262,104"/>
+<area shape="rect" id="node4" href="$classarc_1_1sys_1_1file_1_1_out.html" title="arc::sys::file::Out" alt="" coords="286,79,407,104"/>
 </map>
