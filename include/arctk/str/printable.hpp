@@ -21,10 +21,8 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <fstream>
 #include <string>
-
-//  -- Arctk --
-#include <arctk/sys.hpp>
 
 
 
@@ -57,7 +55,7 @@ namespace arc //! arctk namespace
         //  -- Saving --
         inline void Printable::save(const std::string& path_) noexcept
         {
-            sys::file::Out file(path_);
+            std::ofstream file(path_);
 
             file << str() << '\n';
         }
