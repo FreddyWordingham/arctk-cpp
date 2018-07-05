@@ -217,6 +217,17 @@ namespace arc //! arctk namespace
                 std::exit(exit::error::FAILED_PARSE);
             }
 
+            /**
+             *  Parse a string to a pair of values.
+             *
+             *  @tparam T   First type of the pair.
+             *  @tparam S   Second type of the pair.
+             *
+             *  @param  str_0_  First string to parse.
+             *  @param  str_1_  Second string to parse.
+             *
+             *  @return Parsed pair of values.
+             */
             template <typename T, typename S>
             inline std::pair<T, S> to(const std::string& str_0_, const std::string& str_1_) noexcept
             {
