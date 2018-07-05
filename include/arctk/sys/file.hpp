@@ -48,6 +48,12 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline explicit File(const std::string& path_) noexcept;
+            inline File(const File&) = default; //!< Defaulted copy constructor.
+            inline File(File&&)      = default; //!< Defaulted move constructor.
+
+            //  -- Destructors --
+            virtual inline ~File() noexcept = 0;
 
 
             //  == METHODS ==
@@ -59,6 +65,19 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        /**
+         *  Construct a handle to a file at a given path.
+         *
+         *  @param  path_   Path to file.
+         */
+        inline File::File(const std::string& path_) noexcept
+          : _path(path_)
+        {
+        }
+
+
+        //  -- Destructors --
+        inline File::~File() noexcept = default;
 
 
 
