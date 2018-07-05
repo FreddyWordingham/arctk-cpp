@@ -43,8 +43,8 @@ namespace arc //! arctk namespace
             constexpr const char PAIR_END     = ')'; //!< Character used to indicate pair start point.
             constexpr const char TUPLE_START  = '('; //!< Character used to indicate tuple end point.
             constexpr const char TUPLE_END    = ')'; //!< Character used to indicate tuple start point.
-            constexpr const char VECTOR_START = '{';
-            constexpr const char VECTOR_END   = '}';
+            constexpr const char VECTOR_START = '{'; //!< Character used to indicate vector end point.
+            constexpr const char VECTOR_END   = '}'; //!< Character used to indicate vector start point.
 
 
 
