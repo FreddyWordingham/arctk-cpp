@@ -41,7 +41,8 @@ namespace arc //! arctk namespace
         {
             //  == METHODS ==
           public:
-            //  -- Getters --
+            //  -- Printing --
+            virtual inline std::string str() noexcept = 0;
         };
 
 
