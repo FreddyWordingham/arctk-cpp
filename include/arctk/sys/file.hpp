@@ -59,6 +59,9 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline const std::string& path() const noexcept;
+            inline std::string        filename() const noexcept;
+            inline std::string        extension() const noexcept;
         };
 
 
@@ -83,6 +86,39 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the file path.
+         *
+         *  @return File path.
+         */
+        inline const std::string& File::path() const noexcept
+        {
+            return (_path);
+        }
+
+        /**
+         *  Get the filename.
+         *
+         *  @return Filename.
+         */
+        inline std::string File::filename() const noexcept
+        {
+            size_t slash_pos = _path.find_last_of('/');
+
+            return ((slash_pos == std::string::npos) ? _path : _path.substr(slash_pos + 1, std::string::npos));
+        }
+
+        /**
+         *  Get the file extension.
+         *
+         *  @return File extension.
+         */
+        inline std::string File::extension() const noexcept
+        {
+            size_t dot_pos = _path.find_last_of('.');
+
+            return ((dot_pos == std::string::npos) ? _path : _path.substr(dot_pos + 1, std::string::npos));
+        }
 
 
 
