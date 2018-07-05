@@ -46,7 +46,6 @@ namespace arc //! arctk namespace
             virtual inline ~Printable() noexcept = 0;
 
 
-
             //  == METHODS ==
           public:
             //  -- Printing --
