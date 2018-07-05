@@ -111,9 +111,10 @@ namespace arc //! arctk namespace
             inline In::~In() noexcept
             {
                 PRE(_handle.is_open());
-                POST(!_handle.is_open());
 
                 _handle.close();
+
+                POST(!_handle.is_open());
             }
 
 
