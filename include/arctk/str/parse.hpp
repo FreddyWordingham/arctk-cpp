@@ -362,6 +362,16 @@ namespace arc //! arctk namespace
                 return (stream.str());
             }
 
+            /**
+             *  Parse an occupied tuple of values into a string object.
+             *
+             *  @tparam A   Types stored by the tuple.
+             *
+             *  @param  tuple_      Tuple to parse.
+             *  @param  limiters_   If true, print tuple limiters.
+             *
+             *  @return String parsed from the given value.
+             */
             template <typename... A>
             inline std::string from(const std::tuple<A...>& tup_, const bool limiters_) noexcept
             {
