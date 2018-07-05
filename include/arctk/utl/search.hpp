@@ -42,19 +42,19 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Limits --
-            template <typename C, typename T = typename C::value_type, typename IT = typename C::const_iterator>
+            template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
             inline size_t min_index(const C& cont_) noexcept;
-            template <typename C, typename T = typename C::value_type, typename IT = typename C::const_iterator>
+            template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
             inline size_t max_index(const C& cont_) noexcept;
-            template <typename C, typename T = typename C::value_type, typename IT = typename C::const_iterator>
+            template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
             inline T min(const C& cont_) noexcept;
-            template <typename C, typename T = typename C::value_type, typename IT = typename C::const_iterator>
+            template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
             inline T max(const C& cont_) noexcept;
 
             //  -- Placement --
-            template <typename C, typename T = typename C::value_type, typename IT = typename C::const_iterator>
+            template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
             inline size_t lower(const C& cont_, const T& val_) noexcept;
-            template <typename C, typename T = typename C::value_type, typename IT = typename C::const_iterator>
+            template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
             inline size_t upper(const C& cont_, const T& val_) noexcept;
 
 
@@ -66,7 +66,7 @@ namespace arc //! arctk namespace
              *
              *  @tparam C   Type of container.
              *  @tparam T   Type stored by C.
-             *  @tparam IT  Type of const iterator of C.
+             *  @tparam I   Type of const iterator of C.
              *
              *  @param  cont_   Container to determine the minimum element index of.
              *
@@ -74,14 +74,14 @@ namespace arc //! arctk namespace
              *
              *  @return Index of the minimum element within the container.
              */
-            template <typename C, typename T, typename IT>
+            template <typename C, typename T, typename I>
             inline size_t min_index(const C& cont_) noexcept
             {
                 PRE(!cont_.empty());
 
-                IT min_index = std::begin(cont_);
+                I min_index = std::begin(cont_);
 
-                for (IT it = std::next(std::begin(cont_)); it != std::end(cont_); std::advance(it, 1))
+                for (I it = std::next(std::begin(cont_)); it != std::end(cont_); std::advance(it, 1))
                 {
                     if (*it < *min_index)
                     {
@@ -97,7 +97,7 @@ namespace arc //! arctk namespace
              *
              *  @tparam C   Type of container.
              *  @tparam T   Type stored by C.
-             *  @tparam IT  Type of const iterator of C.
+             *  @tparam I   Type of const iterator of C.
              *
              *  @param  cont_   Container to determine the maximum element index of.
              *
@@ -105,14 +105,14 @@ namespace arc //! arctk namespace
              *
              *  @return Index of the maximum element within the container.
              */
-            template <typename C, typename T, typename IT>
+            template <typename C, typename T, typename I>
             inline size_t max_index(const C& cont_) noexcept
             {
                 PRE(!cont_.empty());
 
-                IT max_index = std::begin(cont_);
+                I max_index = std::begin(cont_);
 
-                for (IT it = std::next(std::begin(cont_)); it != std::end(cont_); std::advance(it, 1))
+                for (I it = std::next(std::begin(cont_)); it != std::end(cont_); std::advance(it, 1))
                 {
                     if (*it > *max_index)
                     {
@@ -128,7 +128,7 @@ namespace arc //! arctk namespace
              *
              *  @tparam C   Type of container.
              *  @tparam T   Type stored by C.
-             *  @tparam IT   Type of const iterator of C.
+             *  @tparam I   Type of const iterator of C.
              *
              *  @param  cont_   Container to determine the minimum element of.
              *
@@ -136,7 +136,7 @@ namespace arc //! arctk namespace
              *
              *  @return Value of the minimum element within the container.
              */
-            template <typename C, typename T, typename IT>
+            template <typename C, typename T, typename I>
             inline T min(const C& cont_) noexcept
             {
                 PRE(!cont_.empty());
@@ -149,7 +149,7 @@ namespace arc //! arctk namespace
              *
              *  @tparam C   Type of container.
              *  @tparam T   Type stored by C.
-             *  @tparam IT   Type of const iterator of C.
+             *  @tparam I   Type of const iterator of C.
              *
              *  @param  cont_   Container to determine the maximum element of.
              *
@@ -157,7 +157,7 @@ namespace arc //! arctk namespace
              *
              *  @return Value of the maximum element within the container.
              */
-            template <typename C, typename T, typename IT>
+            template <typename C, typename T, typename I>
             inline T max(const C& cont_) noexcept
             {
                 PRE(!cont_.empty());
@@ -172,7 +172,7 @@ namespace arc //! arctk namespace
              *
              *  @tparam C   Type of container.
              *  @tparam T   Type stored by C.
-             *  @tparam IT  Type of const iterator of C.
+             *  @tparam I   Type of const iterator of C.
              *
              *  @param  cont_   Container to search.
              *  @param  val_    Value to place.
@@ -183,7 +183,7 @@ namespace arc //! arctk namespace
              *
              *  @return Index of the first element of the container that is not greater than or equal to the value given.
              */
-            template <typename C, typename T, typename IT>
+            template <typename C, typename T, typename I>
             inline size_t lower(const C& cont_, const T& val_) noexcept
             {
                 PRE(!cont_.empty());
@@ -200,7 +200,7 @@ namespace arc //! arctk namespace
              *
              *  @tparam C   Type of container.
              *  @tparam T   Type stored by C.
-             *  @tparam IT   Type of const iterator of C.
+             *  @tparam I   Type of const iterator of C.
              *
              *  @param  cont_   Container to search.
              *  @param  val_    Value to place.
