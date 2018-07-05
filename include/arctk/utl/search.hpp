@@ -190,6 +190,34 @@ namespace arc //! arctk namespace
                 return (index == 0 ? index : (index - 1));
             }
 
+            /**
+             *  Find the index of the first element of the container that is greater than the value given.
+             *
+             *  @tparam C   Type of container.
+             *  @tparam T   Type stored by C.
+             *  @tparam IT   Type of const iterator of C.
+             *
+             *  @param  cont_   Container to search.
+             *  @param  val_    Value to place.
+             *
+             *  @pre    cont_ must not be empty.
+             *  @pre    cont_ must be sorted in ascending order.
+             *  @pre    val_ must be within the range of cont_.
+             *
+             *  @return Index of the first element of the container that is greater than the value given.
+             */
+            template <typename C, typename T, typename IT>
+            inline size_t upper(const C& cont_, const T& val_) noexcept
+            {
+                PRE(!cont_.empty());
+                PRE(prop::ascending(cont_));
+                PRE(prop::within(cont_, val_));
+
+                const size_t index = std::distance(std::begin(cont_), std::upper_bound(std::begin(cont_), std::end(cont_), val_));
+
+                return (index == cont_.size() ? (index - 1) : index);
+            }
+
 
 
         } // namespace search
