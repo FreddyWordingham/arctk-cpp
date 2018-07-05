@@ -23,6 +23,9 @@
 //  -- Std --
 #include <string>
 
+//  -- Arctk --
+#include <arctk/sys.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -43,17 +46,21 @@ namespace arc //! arctk namespace
           public:
             //  -- Printing --
             virtual inline std::string str() noexcept = 0;
+
+            //  -- Saving --
+            inline void save(const std::string& path_) noexcept;
         };
 
 
 
-        //  == INSTANTIATION --
-        //  -- Constructors --
-
-
-
         //  == METHODS ==
-        //  -- Getters --
+        //  -- Saving --
+        inline void Printable::save(const std::string& path_) noexcept
+        {
+            sys::file::Out file(path_);
+
+            file << str() << '\n';
+        }
 
 
 
