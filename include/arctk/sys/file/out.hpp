@@ -79,10 +79,6 @@ namespace arc //! arctk namespace
                 //  -- Assignment --
                 inline Out& operator=(const Out&) noexcept = delete; //!< Deleted copy operator. @return Reference to copied object.
                 inline Out& operator=(Out&&) noexcept = delete;      //!< Deleted move operator. @return Reference to moved object.
-
-                //  -- Stream --
-                template <class T>
-                inline Out& operator<<(const T& val_) noexcept;
             };
 
 
@@ -100,7 +96,7 @@ namespace arc //! arctk namespace
               : File(path_)
               , _handle(init_handle())
             {
-                assert(!path_.empty());
+                PRE(!path_.empty());
             }
 
 
@@ -114,11 +110,11 @@ namespace arc //! arctk namespace
              */
             inline Out::~Out() noexcept
             {
-                assert(_handle.is_open());
+                PRE(_handle.is_open());
 
                 _handle.close();
 
-                assert(!_handle.is_open());
+                POST(!_handle.is_open());
             }
 
 
@@ -134,7 +130,7 @@ namespace arc //! arctk namespace
              */
             inline std::ofstream Out::init_handle() noexcept
             {
-                assert(!_path.empty());
+                PRE(!_path.empty());
 
                 std::ofstream handle;
                 handle.open(_path, std::fstream::out);
@@ -144,30 +140,9 @@ namespace arc //! arctk namespace
                     ERROR(42) << "Out file: '" << _path << "' could not be opened.";
                 }
 
-                assert(handle.is_open());
+                POST(handle.is_open());
 
                 return (handle);
-            }
-
-
-
-            //  == OPERATORS ==
-            //  -- Stream --
-            /**
-             *  Add a value to the file.
-             *
-             *  @tparam T   Type of value to add.
-             *
-             *  @param  val_ value to add.
-             *
-             *  @return Reference to stream_ post-write.
-             */
-            template <class T>
-            inline Out& Out::operator<<(const T& val_) noexcept
-            {
-                _handle << val_;
-
-                return (*this);
             }
 
 
