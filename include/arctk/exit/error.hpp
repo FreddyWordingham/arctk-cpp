@@ -39,6 +39,9 @@ namespace arc //! arctk namespace
             constexpr const int INVALID_COMMAND_LINE_ARGUMENTS = 120; //!< Invalid command line arguments.
             constexpr const int FAILED_PARSE                   = 121; //!< Parse attempt failed or will fail.
 
+            //  -- File IO --
+            constexpr const int FILE_OPEN_FAILED = 130; //!< Unable to open a file.
+
 
 
         } // namespace error
