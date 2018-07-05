@@ -130,7 +130,6 @@ namespace arc //! arctk namespace
             inline std::ifstream In::init_handle() noexcept
             {
                 PRE(!_path.empty());
-                POST(handle.is_open());
 
                 std::ifstream handle;
                 handle.open(_path, std::fstream::in);
@@ -141,6 +140,8 @@ namespace arc //! arctk namespace
 
                     std::exit(exit::error::FILE_OPEN_FAILED);
                 }
+
+                POST(handle.is_open());
 
                 return (handle);
             }
