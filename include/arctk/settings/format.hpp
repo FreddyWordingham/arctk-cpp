@@ -35,8 +35,8 @@ namespace arc //! arctk namespace
 
             //  -- Limiters --
             constexpr const char DELIMITER    = ','; //!< Character used to delimit consecutive data.
-            constexpr const char ARRAY_START  = '[';
-            constexpr const char ARRAY_END    = ']';
+            constexpr const char ARRAY_START  = '['; //!< Character used to indicate array end point.
+            constexpr const char ARRAY_END    = ']'; //!< Character used to indicate array start point.
             constexpr const char MAP_START    = '<';
             constexpr const char MAP_END      = '>';
             constexpr const char PAIR_START   = '(';
