@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
             inline std::string from(const std::tuple<A...>& tup_, bool limiters_ = true) noexcept;
             template <typename... A, size_t... I>
             inline std::string from_helper(const std::tuple<A...>& tup_, bool limiters_, std::index_sequence<I...> /*unused*/) noexcept;
-            template <typename C, typename T = typename C::value_type, typename IT = typename C::const_iterator>
+            template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
             inline std::string from(const C& cont_, bool limiters_ = true) noexcept;
 
 
@@ -414,14 +414,14 @@ namespace arc //! arctk namespace
              *
              *  @tparam C   Type of container.
              *  @tparam T   Type stored by C.
-             *  @tparam IT  Type of const iterator of C.
+             *  @tparam I   Type of const iterator of C.
              *
              *  @param  cont_       Container to parse.
              *  @param  limiters_   If true, print limiters.
              *
              *  @return String parsed from the given container.
              */
-            template <typename C, typename T, typename IT>
+            template <typename C, typename T, typename I>
             inline std::string from(const C& cont_, bool limiters_) noexcept
             {
                 std::ostringstream stream;
@@ -434,7 +434,7 @@ namespace arc //! arctk namespace
                 if (!cont_.empty())
                 {
                     stream << std::setw(settings::format::PRINT_WIDTH) << from(*std::begin(cont_), limiters_);
-                    for (IT it = std::next(std::begin(cont_)); it != std::end(cont_); std::advance(it, 1))
+                    for (I it = std::next(std::begin(cont_)); it != std::end(cont_); std::advance(it, 1))
                     {
                         stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << from(*it, limiters_);
                     }
