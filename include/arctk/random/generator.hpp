@@ -46,7 +46,6 @@ namespace arc //! arctk namespace
             //  -- Seed --
             static uint64_t _next_seed; //!< Value of the next seed to be used.
 
-          protected:
             //  -- Seed --
             const uint64_t _seed; //!< Value used to initialise the generator.
 
