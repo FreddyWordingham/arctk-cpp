@@ -94,7 +94,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline bool parsable_to(const std::string& str_) noexcept
             {
-                std::stringstream stream;
+                std::ostringstream stream;
                 stream << str_;
 
                 T val{};
@@ -153,7 +153,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline T to(const std::string& str_) noexcept
             {
-                std::stringstream stream;
+                std::ostringstream stream;
                 stream << str_;
 
                 T val{};
@@ -304,7 +304,7 @@ namespace arc //! arctk namespace
             template <typename T, typename = std::enable_if_t<std::is_fundamental<T>::value>>
             inline std::string from(const T val_, const bool /*unused*/) noexcept
             {
-                std::stringstream stream;
+                std::ostringstream stream;
 
                 stream << val_;
 
@@ -325,7 +325,7 @@ namespace arc //! arctk namespace
             template <typename T, typename S>
             inline std::string from(const std::pair<T, S>& pair_, const bool limiters_) noexcept
             {
-                std::stringstream stream;
+                std::ostringstream stream;
 
                 if (limiters_)
                 {
@@ -352,7 +352,7 @@ namespace arc //! arctk namespace
             template <>
             inline std::string from(const std::tuple<>& /*unused*/, const bool limiters_) noexcept
             {
-                std::stringstream stream;
+                std::ostringstream stream;
 
                 if (limiters_)
                 {
@@ -394,7 +394,7 @@ namespace arc //! arctk namespace
             {
                 static_assert(sizeof...(A) > 0);
 
-                std::stringstream stream;
+                std::ostringstream stream;
 
                 if (limiters_)
                 {
@@ -425,7 +425,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline std::string from(const std::vector<T>& vec_, const bool limiters_) noexcept
             {
-                std::stringstream stream;
+                std::ostringstream stream;
 
                 if (limiters_)
                 {
@@ -464,7 +464,7 @@ namespace arc //! arctk namespace
             template <typename T, size_t N>
             inline std::string from(const std::array<T, N>& arr_, const bool limiters_) noexcept
             {
-                std::stringstream stream;
+                std::ostringstream stream;
 
                 if (limiters_)
                 {
@@ -504,7 +504,7 @@ namespace arc //! arctk namespace
             template <typename T, typename S, typename IT>
             inline std::string from(const std::map<T, S>& map_, const bool limiters_) noexcept
             {
-                std::stringstream stream;
+                std::ostringstream stream;
 
                 if (limiters_)
                 {
