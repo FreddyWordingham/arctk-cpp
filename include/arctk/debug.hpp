@@ -85,7 +85,14 @@
  *
  *  @param  condition_  Condition to be checked.
  */
-#define POST(condition_) arc::debug::PostCondition LINE_NAME(post) = arc::debug::PostCondition(__FILE__, __LINE__, __func__, #condition_, [&]() { return (condition_); });
+#define POST(condition_)                                                                                          \
+    if (!(condition_))                                                                                            \
+    {                                                                                                             \
+        std::cerr << "Post-condition : `" << (#condition_) << "` failed.\n";                                      \
+        std::cerr << "Located at     :\n" << arc::debug::location::info(__FILE__, __LINE__, __func__, 2) << '\n'; \
+                                                                                                                  \
+        std::exit(arc::exit::error::POST_CONDITION_FAILURE);                                                      \
+    }
 
 /**
  *  Define an invariant to be checked at function exit.
