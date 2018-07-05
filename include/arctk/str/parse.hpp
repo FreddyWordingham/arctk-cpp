@@ -279,6 +279,14 @@ namespace arc //! arctk namespace
 
 
             //  -- From --
+            /**
+             *  Parse a string into a string object.
+             *  This function is a passthrough and should only be used within template functions.
+             *
+             *  @param  str_    String to parse.
+             *
+             *  @return String parsed from the given string.
+             */
             inline std::string from(const std::string& str_, const bool /*unused*/) noexcept
             {
                 return (str_);
