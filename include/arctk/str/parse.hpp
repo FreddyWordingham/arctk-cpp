@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
             inline std::string from(const std::vector<T>& vec_, const bool limiters_ = true) noexcept;
             template <typename T, size_t N>
             inline std::string from(const std::array<T, N>& arr_, const bool limiters_ = true) noexcept;
-            template <typename T, typename S>
+            template <typename T, typename S, typename IT = typename std::map<T, S>::const_iterator>
             inline std::string from(const std::map<T, S>& map_, const bool limiters_ = true) noexcept;
 
 
@@ -355,7 +355,7 @@ namespace arc //! arctk namespace
                 return (stream.str());
             }
 
-            template <typename T, typename S>
+            template <typename T, typename S, typename IT>
             inline std::string from(const std::map<T, S>& map_, const bool limiters_) noexcept
             {
                 std::stringstream stream;
@@ -368,7 +368,7 @@ namespace arc //! arctk namespace
                 if (!map_.empty())
                 {
                     stream << std::setw(settings::format::PRINT_WIDTH) << *std::begin(map_);
-                    for (I it = std::next(std::begin(map_)); it != std::end(map_); std::advance(it, 1))
+                    for (IT it = std::next(std::begin(map_)); it != std::end(map_); std::advance(it, 1))
                     {
                         stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << *it;
                     }
