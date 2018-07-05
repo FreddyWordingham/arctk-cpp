@@ -362,7 +362,7 @@ namespace arc //! arctk namespace
 
                 if (limiters_)
                 {
-                    stream << settings::format::ARRAY_START;
+                    stream << settings::format::MAP_START;
                 }
 
                 if (!map_.empty())
@@ -376,7 +376,7 @@ namespace arc //! arctk namespace
 
                 if (limiters_)
                 {
-                    stream << settings::format::ARRAY_END;
+                    stream << settings::format::MAP_END;
                 }
 
                 return (stream.str());
