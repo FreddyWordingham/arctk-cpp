@@ -60,6 +60,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Saving --
+        /**
+         *  Save the output of str to a file.
+         *
+         *  @param  path_   Path to the output file.
+         */
         inline void Printable::save(const std::string& path_) noexcept
         {
             std::ofstream file(path_);
