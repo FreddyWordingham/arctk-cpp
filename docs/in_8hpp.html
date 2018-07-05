@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arctk: include/arctk/debug/postcondition.hpp File Reference</title>
+<title>arctk: include/arctk/sys/file/in.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_246d7703b1917d529f7795c1438d7849.html">arctk</a></li><li class="navelem"><a class="el" href="dir_9e72f4d8f4aa63fb92081557a57e4d56.html">debug</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_246d7703b1917d529f7795c1438d7849.html">arctk</a></li><li class="navelem"><a class="el" href="dir_8862866c3c45a3177f45bb7949152a2a.html">sys</a></li><li class="navelem"><a class="el" href="dir_0a18af227800b4be71feabf6b5deffe8.html">file</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -72,24 +72,31 @@ $(function() {
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">postcondition.hpp File Reference</div>  </div>
+<div class="title">in.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;functional&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="file_8hpp_source.html">arctk/sys/file.hpp</a>&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;<a class="el" href="location_8hpp_source.html">arctk/debug/location.hpp</a>&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;<a class="el" href="debug_8hpp_source.html">arctk/debug.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="exit_8hpp_source.html">arctk/exit.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for postcondition.hpp:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for in.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="postcondition_8hpp__incl.png" border="0" usemap="#include_2arctk_2debug_2postcondition_8hpp" alt=""/></div>
-<map name="include_2arctk_2debug_2postcondition_8hpp" id="include_2arctk_2debug_2postcondition_8hpp">
-<area shape="rect" id="node4" href="location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="306,92,473,117"/>
-<area shape="rect" id="node13" href="exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="723,92,824,117"/>
-<area shape="rect" id="node14" href="error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="708,165,839,191"/>
-<area shape="rect" id="node15" href="success_8hpp.html" title="arctk/exit/success.hpp" alt="" coords="864,165,1016,191"/>
+<div class="center"><img src="in_8hpp__incl.png" border="0" usemap="#include_2arctk_2sys_2file_2in_8hpp" alt=""/></div>
+<map name="include_2arctk_2sys_2file_2in_8hpp" id="include_2arctk_2sys_2file_2in_8hpp">
+<area shape="rect" id="node2" href="file_8hpp.html" title="arctk/sys/file.hpp" alt="" coords="463,92,583,117"/>
+<area shape="rect" id="node4" href="debug_8hpp.html" title="arctk/debug.hpp" alt="" coords="464,165,581,191"/>
+<area shape="rect" id="node16" href="exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="707,312,808,337"/>
+<area shape="rect" id="node5" href="invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="437,239,608,264"/>
+<area shape="rect" id="node8" href="location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="317,312,484,337"/>
+<area shape="rect" id="node19" href="macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="202,239,319,264"/>
+<area shape="rect" id="node17" href="error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="708,385,840,411"/>
+<area shape="rect" id="node18" href="success_8hpp.html" title="arctk/exit/success.hpp" alt="" coords="864,385,1017,411"/>
+<area shape="rect" id="node20" href="utility_8hpp.html" title="arctk/macro/utility.hpp" alt="" coords="143,312,293,337"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -97,23 +104,18 @@ $(function() {
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="postcondition_8hpp__dep__incl.png" border="0" usemap="#include_2arctk_2debug_2postcondition_8hppdep" alt=""/></div>
-<map name="include_2arctk_2debug_2postcondition_8hppdep" id="include_2arctk_2debug_2postcondition_8hppdep">
-<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="84,459,180,484"/>
-<area shape="rect" id="node3" href="debug_8hpp.html" title="include/arctk/debug.hpp" alt="" coords="107,92,269,117"/>
-<area shape="rect" id="node4" href="parse_8hpp.html" title="include/arctk/str/parse.hpp" alt="" coords="99,165,277,191"/>
-<area shape="rect" id="node6" href="args_8hpp.html" title="include/arctk/sys/args.hpp" alt="" coords="212,312,388,337"/>
-<area shape="rect" id="node8" href="file_8hpp.html" title="include/arctk/sys/file.hpp" alt="" coords="357,165,523,191"/>
-<area shape="rect" id="node5" href="str_8hpp.html" title="include/arctk/str.hpp" alt="" coords="143,239,283,264"/>
-<area shape="rect" id="node7" href="sys_8hpp.html" title="include/arctk/sys.hpp" alt="" coords="246,385,392,411"/>
+<div class="center"><img src="in_8hpp__dep__incl.png" border="0" usemap="#include_2arctk_2sys_2file_2in_8hppdep" alt=""/></div>
+<map name="include_2arctk_2sys_2file_2in_8hppdep" id="include_2arctk_2sys_2file_2in_8hppdep">
+<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="27,165,124,191"/>
+<area shape="rect" id="node3" href="sys_8hpp.html" title="include/arctk/sys.hpp" alt="" coords="59,92,205,117"/>
 </map>
 </div>
 </div>
-<p><a href="postcondition_8hpp_source.html">Go to the source code of this file.</a></p>
+<p><a href="in_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1debug_1_1_post_condition.html">arc::debug::PostCondition</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1sys_1_1file_1_1_in.html">arc::sys::file::In</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -121,18 +123,21 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacearc"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc.html">arc</a></td></tr>
 <tr class="memdesc:namespacearc"><td class="mdescLeft">&#160;</td><td class="mdescRight">arctk namespace <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacearc_1_1debug"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1debug.html">arc::debug</a></td></tr>
-<tr class="memdesc:namespacearc_1_1debug"><td class="mdescLeft">&#160;</td><td class="mdescRight">debugging namespace <br /></td></tr>
+<tr class="memitem:namespacearc_1_1sys"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1sys.html">arc::sys</a></td></tr>
+<tr class="memdesc:namespacearc_1_1sys"><td class="mdescLeft">&#160;</td><td class="mdescRight">system namespace <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacearc_1_1sys_1_1file"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1sys_1_1file.html">arc::sys::file</a></td></tr>
+<tr class="memdesc:namespacearc_1_1sys_1_1file"><td class="mdescLeft">&#160;</td><td class="mdescRight">file namespace <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section date"><dt>Date</dt><dd>03/07/2018 </dd></dl>
+<div class="textblock"><dl class="section date"><dt>Date</dt><dd>05/07/2018 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Freddy Wordingham</dd></dl>
-<p>Location postcondition debug class. </p>
+<p>Input file class. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 5 2018 15:40:31 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 5 2018 16:04:03 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

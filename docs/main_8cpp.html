@@ -78,7 +78,6 @@ $(function() {
 <code>#include &lt;<a class="el" href="debug_8hpp_source.html">arctk/debug.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="invariant_8hpp_source.html">arctk/debug/invariant.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="location_8hpp_source.html">arctk/debug/location.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="postcondition_8hpp_source.html">arctk/debug/postcondition.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="exit_8hpp_source.html">arctk/exit.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="error_8hpp_source.html">arctk/exit/error.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="success_8hpp_source.html">arctk/exit/success.hpp</a>&gt;</code><br />
@@ -90,6 +89,8 @@ $(function() {
 <code>#include &lt;<a class="el" href="parse_8hpp_source.html">arctk/str/parse.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="sys_8hpp_source.html">arctk/sys.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="args_8hpp_source.html">arctk/sys/args.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="file_8hpp_source.html">arctk/sys/file.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="in_8hpp_source.html">arctk/sys/file/in.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for main.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -97,22 +98,23 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#src_2main_8cpp" alt=""/></div>
 <map name="src_2main_8cpp" id="src_2main_8cpp">
-<area shape="rect" id="node2" href="config_8hpp.html" title="arctk/config.hpp" alt="" coords="5,79,121,104"/>
-<area shape="rect" id="node4" href="debug_8hpp.html" title="arctk/debug.hpp" alt="" coords="902,372,1019,397"/>
-<area shape="rect" id="node5" href="invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="1107,445,1278,471"/>
-<area shape="rect" id="node8" href="location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="1109,519,1276,544"/>
-<area shape="rect" id="node17" href="exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="669,519,769,544"/>
-<area shape="rect" id="node18" href="error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="201,592,333,617"/>
-<area shape="rect" id="node19" href="success_8hpp.html" title="arctk/exit/success.hpp" alt="" coords="567,592,719,617"/>
-<area shape="rect" id="node20" href="postcondition_8hpp.html" title="arctk/debug/postcondition.hpp" alt="" coords="833,445,1032,471"/>
-<area shape="rect" id="node21" href="macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="438,445,555,471"/>
-<area shape="rect" id="node22" href="utility_8hpp.html" title="arctk/macro/utility.hpp" alt="" coords="300,519,450,544"/>
-<area shape="rect" id="node23" href="settings_8hpp.html" title="arctk/settings.hpp" alt="" coords="429,372,555,397"/>
-<area shape="rect" id="node24" href="format_8hpp.html" title="arctk/settings/format.hpp" alt="" coords="246,445,413,471"/>
-<area shape="rect" id="node25" href="str_8hpp.html" title="arctk/str.hpp" alt="" coords="1385,225,1479,251"/>
-<area shape="rect" id="node26" href="parse_8hpp.html" title="arctk/str/parse.hpp" alt="" coords="1433,299,1565,324"/>
-<area shape="rect" id="node32" href="sys_8hpp.html" title="arctk/sys.hpp" alt="" coords="1134,79,1234,104"/>
-<area shape="rect" id="node33" href="args_8hpp.html" title="arctk/sys/args.hpp" alt="" coords="1125,152,1254,177"/>
+<area shape="rect" id="node2" href="config_8hpp.html" title="arctk/config.hpp" alt="" coords="174,79,290,104"/>
+<area shape="rect" id="node4" href="debug_8hpp.html" title="arctk/debug.hpp" alt="" coords="983,372,1100,397"/>
+<area shape="rect" id="node5" href="invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="956,445,1127,471"/>
+<area shape="rect" id="node8" href="location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="905,519,1071,544"/>
+<area shape="rect" id="node17" href="exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="1291,519,1392,544"/>
+<area shape="rect" id="node18" href="error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="1351,592,1483,617"/>
+<area shape="rect" id="node19" href="success_8hpp.html" title="arctk/exit/success.hpp" alt="" coords="1717,592,1869,617"/>
+<area shape="rect" id="node20" href="macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="1505,445,1622,471"/>
+<area shape="rect" id="node21" href="utility_8hpp.html" title="arctk/macro/utility.hpp" alt="" coords="1610,519,1760,544"/>
+<area shape="rect" id="node22" href="settings_8hpp.html" title="arctk/settings.hpp" alt="" coords="1505,372,1631,397"/>
+<area shape="rect" id="node23" href="format_8hpp.html" title="arctk/settings/format.hpp" alt="" coords="1647,445,1814,471"/>
+<area shape="rect" id="node24" href="str_8hpp.html" title="arctk/str.hpp" alt="" coords="444,225,538,251"/>
+<area shape="rect" id="node25" href="parse_8hpp.html" title="arctk/str/parse.hpp" alt="" coords="353,299,484,324"/>
+<area shape="rect" id="node31" href="sys_8hpp.html" title="arctk/sys.hpp" alt="" coords="933,79,1033,104"/>
+<area shape="rect" id="node32" href="args_8hpp.html" title="arctk/sys/args.hpp" alt="" coords="611,152,741,177"/>
+<area shape="rect" id="node33" href="file_8hpp.html" title="arctk/sys/file.hpp" alt="" coords="814,299,935,324"/>
+<area shape="rect" id="node34" href="in_8hpp.html" title="arctk/sys/file/in.hpp" alt="" coords="973,225,1107,251"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -159,7 +161,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 5 2018 15:40:31 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 5 2018 16:04:03 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
