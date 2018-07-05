@@ -237,7 +237,7 @@ namespace arc //! arctk namespace
             /**
              *  Parse a string to a tuple of values.
              *
-             *  @tparam A   Types to parse.
+             *  @tparam A   Types stored by the tuple.
              *
              *  @param  strs_   Vector of string to parse.
              *
