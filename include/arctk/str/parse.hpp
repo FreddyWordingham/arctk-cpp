@@ -71,12 +71,8 @@ namespace arc //! arctk namespace
             inline std::string from(const std::tuple<A...>& tup_, bool limiters_ = true) noexcept;
             template <typename... A, size_t... I>
             inline std::string from_helper(const std::tuple<A...>& tup_, bool limiters_, std::index_sequence<I...> /*unused*/) noexcept;
-            template <typename T>
-            inline std::string from(const std::vector<T>& vec_, bool limiters_ = true) noexcept;
-            template <typename T, size_t N>
-            inline std::string from(const std::array<T, N>& arr_, bool limiters_ = true) noexcept;
-            template <typename T, typename S, typename IT = typename std::map<T, S>::const_iterator>
-            inline std::string from(const std::map<T, S>& map_, bool limiters_ = true) noexcept;
+            template <typename C, typename T = typename C::value_type, typename IT = typename C::const_iterator>
+            inline std::string from(const C& cont_, bool limiters_ = true) noexcept;
 
 
 
@@ -413,96 +409,19 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Parse a vector of values into a string object.
+             *  Parse a container into a string object.
              *
-             *  @tparam T   Type stored by vector.
+             *  @tparam C   Type of container.
+             *  @tparam T   Type stored by C.
+             *  @tparam IT  Type of const iterator of C.
              *
-             *  @param  vec_        Vector to parse.
+             *  @param  cont_       Container to parse.
              *  @param  limiters_   If true, print limiters.
              *
-             *  @return String parsed from the given vector.
+             *  @return String parsed from the given container.
              */
-            template <typename T>
-            inline std::string from(const std::vector<T>& vec_, const bool limiters_) noexcept
-            {
-                std::ostringstream stream;
-
-                if (limiters_)
-                {
-                    stream << settings::format::VECTOR_START;
-                }
-
-                for (size_t i = 0; i < vec_.size(); ++i)
-                {
-                    if (i != 0)
-                    {
-                        stream << settings::format::DELIMITER;
-                    }
-
-                    stream << std::setw(settings::format::PRINT_WIDTH) << from(vec_[i], limiters_);
-                }
-
-                if (limiters_)
-                {
-                    stream << settings::format::VECTOR_END;
-                }
-
-                return (stream.str());
-            }
-
-            /**
-             *  Parse an array of values into a string object.
-             *
-             *  @tparam T   Type stored by array.
-             *  @tparam N   Size of the array.
-             *
-             *  @param  arr_        Array to parse.
-             *  @param  limiters_   If true, print limiters.
-             *
-             *  @return String parsed from the given array.
-             */
-            template <typename T, size_t N>
-            inline std::string from(const std::array<T, N>& arr_, const bool limiters_) noexcept
-            {
-                std::ostringstream stream;
-
-                if (limiters_)
-                {
-                    stream << settings::format::ARRAY_START;
-                }
-
-                for (size_t i = 0; i < N; ++i)
-                {
-                    if (i != 0)
-                    {
-                        stream << settings::format::DELIMITER;
-                    }
-
-                    stream << std::setw(settings::format::PRINT_WIDTH) << from(arr_[i], limiters_);
-                }
-
-                if (limiters_)
-                {
-                    stream << settings::format::ARRAY_END;
-                }
-
-                return (stream.str());
-            }
-
-            /**
-             *  Parse a map of pairs into a string object.
-             *
-             *  @tparam T   Type of map key.
-             *  @tparam S   Type of map value.
-             *  @tparam IT  Type of map constant iterator.
-             *
-             *  @param  map_        Map to parse.
-             *  @param  limiters_   If true, print limiters.
-             *
-             *  @return String parsed from the given map.
-             */
-            template <typename T, typename S, typename IT>
-            inline std::string from(const std::map<T, S>& map_, const bool limiters_) noexcept
+            template <typename C, typename T, typename IT>
+            inline std::string from(const C& cont_, bool limiters_) noexcept;
             {
                 std::ostringstream stream;
 
@@ -513,8 +432,8 @@ namespace arc //! arctk namespace
 
                 if (!map_.empty())
                 {
-                    stream << std::setw(settings::format::PRINT_WIDTH) << from(*std::begin(map_), limiters_);
-                    for (IT it = std::next(std::begin(map_)); it != std::end(map_); std::advance(it, 1))
+                    stream << std::setw(settings::format::PRINT_WIDTH) << from(*std::begin(cont_), limiters_);
+                    for (IT it = std::next(std::begin(cont_)); it != std::end(cont_); std::advance(it, 1))
                     {
                         stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << from(*it, limiters_);
                     }
