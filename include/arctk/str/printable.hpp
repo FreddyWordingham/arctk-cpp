@@ -3,7 +3,7 @@
  *  @date   05/07/2018
  *  @author Freddy Wordingham
  *
- *  Printable class.
+ *  Printable base class.
  */
 
 
