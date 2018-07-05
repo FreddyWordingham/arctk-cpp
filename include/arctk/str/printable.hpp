@@ -29,7 +29,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace sys //! system namespace
+    namespace str //! string namespace
     {
 
 
@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace sys
+    } // namespace str
 } // namespace arc
 
 
