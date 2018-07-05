@@ -28,6 +28,7 @@
 #include <arctk/sys.hpp>
 #include <arctk/sys/args.hpp>
 #include <arctk/utl.hpp>
+#include <arctk/utl/search.hpp>
 
 
 
