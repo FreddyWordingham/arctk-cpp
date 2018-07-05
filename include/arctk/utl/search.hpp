@@ -187,8 +187,8 @@ namespace arc //! arctk namespace
             inline size_t lower(const C& cont_, const T& val_) noexcept
             {
                 PRE(!cont_.empty());
-                PRE(utl::prop::ascending(cont_));
-                PRE(utl::prop::within(cont_, val_));
+                PRE(utl::properties::ascending(cont_));
+                PRE(utl::properties::within(cont_, val_));
 
                 const size_t index = std::distance(std::begin(cont_), std::lower_bound(std::begin(cont_), std::end(cont_), val_));
 
@@ -215,8 +215,8 @@ namespace arc //! arctk namespace
             inline size_t upper(const C& cont_, const T& val_) noexcept
             {
                 PRE(!cont_.empty());
-                PRE(prop::ascending(cont_));
-                PRE(prop::within(cont_, val_));
+                PRE(properties::ascending(cont_));
+                PRE(properties::within(cont_, val_));
 
                 const size_t index = std::distance(std::begin(cont_), std::upper_bound(std::begin(cont_), std::end(cont_), val_));
 
