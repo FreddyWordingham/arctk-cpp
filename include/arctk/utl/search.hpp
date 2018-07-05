@@ -191,7 +191,7 @@ namespace arc //! arctk namespace
 
                 const size_t index = std::distance(std::begin(cont_), std::lower_bound(std::begin(cont_), std::end(cont_), val_));
 
-                return (index == 0 ? index : (index - 1));
+                return ((index == 0) ? index : (index - 1));
             }
 
             /**
@@ -219,7 +219,7 @@ namespace arc //! arctk namespace
 
                 const size_t index = std::distance(std::begin(cont_), std::upper_bound(std::begin(cont_), std::end(cont_), val_));
 
-                return (index == cont_.size() ? (index - 1) : index);
+                return ((index == cont_.size()) ? (index - 1) : index);
             }
 
 
