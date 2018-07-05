@@ -40,6 +40,13 @@ namespace arc //! arctk namespace
          */
         class Printable
         {
+            //  == INSTANTIATION ==
+          public:
+            //  -- Destructors --
+            virtual inline ~Printable() noexcept = 0;
+
+
+
             //  == METHODS ==
           public:
             //  -- Printing --
