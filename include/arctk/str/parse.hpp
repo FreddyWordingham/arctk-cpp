@@ -67,6 +67,10 @@ namespace arc //! arctk namespace
             inline std::string from(const T val_, const bool /*unused*/ = false) noexcept;
             template <typename T, typename S>
             inline std::string from(const std::pair<T, S>& pair_, const bool limiters_ = true) noexcept;
+            template <typename... A>
+            inline std::string from(const std::tuple<A...>& tup_, const bool limiters_ = true) noexcept;
+            template <typename... A, size_t... I>
+            inline std::string from_helper(const std::tuple<A...>& tup_, const bool limiters_, std::index_sequence<I...> /*unused*/) noexcept;
             template <typename T>
             inline std::string from(const std::vector<T>& vec_, const bool limiters_ = true) noexcept;
             template <typename T, size_t N>
@@ -294,6 +298,50 @@ namespace arc //! arctk namespace
                 if (limiters_)
                 {
                     stream << settings::format::PAIR_END;
+                }
+
+                return (stream.str());
+            }
+
+            template <typename... A>
+            inline std::string from(const std::tuple<A...>& tup_, const bool limiters_) noexcept
+            {
+                if constexpr (sizeof...(A) == 0)
+                {
+                    if (limiters_)
+                    {
+                        std::stringstream stream;
+
+                        stream << settings::format::TUPLE_START << settings::format::TUPLE_END;
+
+                        return (stream.str());
+                    }
+
+                    return ("");
+                }
+                else
+                {
+                    return (from_helper(tup_, limiters_, std::make_index_sequence<sizeof...(A)>()));
+                }
+            }
+
+            template <typename... A, size_t... I>
+            inline std::string from_helper(const std::tuple<A...>& tup_, const bool limiters_, std::index_sequence<I...> /*unused*/) noexcept
+            {
+                static_assert(sizeof...(A) > 0);
+
+                std::stringstream stream;
+
+                if (limiters_)
+                {
+                    stream << settings::format::TUPLE_START;
+                }
+
+                ((stream << std::setw(settings::format::PRINT_WIDTH) << std::get<I>(tup_) << settings::format::DELIMITER), ...);
+
+                if (limiters_)
+                {
+                    stream << settings::format::TUPLE_END;
                 }
 
                 return (stream.str());
