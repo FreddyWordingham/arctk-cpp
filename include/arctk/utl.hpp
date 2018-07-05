@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/utl/properties.hpp>
 #include <arctk/utl/search.hpp>
 
 
