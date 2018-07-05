@@ -20,6 +20,10 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <algorithm>
+#include <iterator>
+
 //  -- Arctk --
 #include <arctk/debug.hpp>
 
