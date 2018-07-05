@@ -489,6 +489,18 @@ namespace arc //! arctk namespace
                 return (stream.str());
             }
 
+            /**
+             *  Parse a map of pairs into a string object.
+             *
+             *  @tparam T   Type of map key.
+             *  @tparam S   Type of map value.
+             *  @tparam IT  Type of map constant iterator.
+             *
+             *  @param  map_        Map to parse.
+             *  @param  limiters_   If true, print limiters.
+             *
+             *  @return String parsed from the given map.
+             */
             template <typename T, typename S, typename IT>
             inline std::string from(const std::map<T, S>& map_, const bool limiters_) noexcept
             {
