@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Printing --
-            virtual inline std::string str() noexcept = 0;
+            virtual std::string str() noexcept = 0;
 
             //  -- Saving --
             inline void save(const std::string& path_) noexcept;
