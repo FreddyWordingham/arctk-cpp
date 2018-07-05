@@ -41,6 +41,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Path --
+            const std::string _path; //!< Full path to the file.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
