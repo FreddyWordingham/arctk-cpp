@@ -23,6 +23,9 @@
 //  -- Std --
 #include <string>
 
+//  -- Arctk --
+#include <arctk/debug.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -93,6 +96,8 @@ namespace arc //! arctk namespace
          *  Get the file path.
          *
          *  @return File path.
+         *
+         *  @pre    path_ may not be empty.
          */
         inline const std::string& File::path() const noexcept
         {
