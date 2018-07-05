@@ -23,7 +23,6 @@
 //  -- Arctk --
 #include <arctk/debug/invariant.hpp>
 #include <arctk/debug/location.hpp>
-#include <arctk/debug/postcondition.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/macro.hpp>
 
