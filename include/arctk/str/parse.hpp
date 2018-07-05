@@ -412,6 +412,16 @@ namespace arc //! arctk namespace
                 return (stream.str());
             }
 
+            /**
+             *  Parse a vector of values into a string object.
+             *
+             *  @tparam T   Type stored by vector.
+             *
+             *  @param  vec_        Vector to parse.
+             *  @param  limiters_   If true, print tuple limiters.
+             *
+             *  @return String parsed from the given vector.
+             */
             template <typename T>
             inline std::string from(const std::vector<T>& vec_, const bool limiters_) noexcept
             {
