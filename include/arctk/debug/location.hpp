@@ -129,7 +129,7 @@ namespace arc //! arctk namespace
              */
             inline std::string info(const std::string& file_, const int line_, const std::string& func_, const int skip_) noexcept
             {
-                std::stringstream location;
+                std::ostringstream location;
 
                 location << "File : " << file_ << '\n';
                 location << "Line : " << line_ << '\n';
