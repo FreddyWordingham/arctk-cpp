@@ -1,7 +1,8 @@
 <map id="include/arctk/debug.hpp" name="include/arctk/debug.hpp">
 <area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="58,372,155,397"/>
-<area shape="rect" id="node3" href="$parse_8hpp.html" title="include/arctk/str/parse.hpp" alt="" coords="48,79,226,104"/>
+<area shape="rect" id="node3" href="$parse_8hpp.html" title="include/arctk/str/parse.hpp" alt="" coords="54,79,232,104"/>
 <area shape="rect" id="node5" href="$args_8hpp.html" title="include/arctk/sys/args.hpp" alt="" coords="162,225,337,251"/>
+<area shape="rect" id="node7" href="$file_8hpp.html" title="include/arctk/sys/file.hpp" alt="" coords="306,79,473,104"/>
 <area shape="rect" id="node4" href="$str_8hpp.html" title="include/arctk/str.hpp" alt="" coords="93,152,233,177"/>
 <area shape="rect" id="node6" href="$sys_8hpp.html" title="include/arctk/sys.hpp" alt="" coords="195,299,341,324"/>
 </map>

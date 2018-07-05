@@ -82,8 +82,12 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="format_8hpp__dep__incl.png" border="0" usemap="#include_2arctk_2settings_2format_8hppdep" alt=""/></div>
 <map name="include_2arctk_2settings_2format_8hppdep" id="include_2arctk_2settings_2format_8hppdep">
-<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="30,165,127,191"/>
+<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="95,459,192,484"/>
 <area shape="rect" id="node3" href="settings_8hpp.html" title="include/arctk/settings.hpp" alt="" coords="54,92,225,117"/>
+<area shape="rect" id="node4" href="parse_8hpp.html" title="include/arctk/str/parse.hpp" alt="" coords="105,165,283,191"/>
+<area shape="rect" id="node5" href="str_8hpp.html" title="include/arctk/str.hpp" alt="" coords="155,239,295,264"/>
+<area shape="rect" id="node6" href="args_8hpp.html" title="include/arctk/sys/args.hpp" alt="" coords="207,312,382,337"/>
+<area shape="rect" id="node7" href="sys_8hpp.html" title="include/arctk/sys.hpp" alt="" coords="257,385,403,411"/>
 </map>
 </div>
 </div>
@@ -103,12 +107,42 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:aad22a4ee2202efc76b831dca054d44b8"><td class="memItemLeft" align="right" valign="top">constexpr const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1settings_1_1format.html#aad22a4ee2202efc76b831dca054d44b8">arc::settings::format::PRINT_WIDTH</a> = 10</td></tr>
+<tr class="memdesc:aad22a4ee2202efc76b831dca054d44b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width allocated to data prints.  <a href="namespacearc_1_1settings_1_1format.html#aad22a4ee2202efc76b831dca054d44b8">More...</a><br /></td></tr>
+<tr class="separator:aad22a4ee2202efc76b831dca054d44b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba3285229ea0ec7faa0df5ca893b8ddf"><td class="memItemLeft" align="right" valign="top">constexpr const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1settings_1_1format.html#aba3285229ea0ec7faa0df5ca893b8ddf">arc::settings::format::DELIMITER</a> = ','</td></tr>
 <tr class="memdesc:aba3285229ea0ec7faa0df5ca893b8ddf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Character used to delimit consecutive data.  <a href="namespacearc_1_1settings_1_1format.html#aba3285229ea0ec7faa0df5ca893b8ddf">More...</a><br /></td></tr>
 <tr class="separator:aba3285229ea0ec7faa0df5ca893b8ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad22a4ee2202efc76b831dca054d44b8"><td class="memItemLeft" align="right" valign="top">constexpr const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1settings_1_1format.html#aad22a4ee2202efc76b831dca054d44b8">arc::settings::format::PRINT_WIDTH</a> = 16</td></tr>
-<tr class="memdesc:aad22a4ee2202efc76b831dca054d44b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width allocated to data prints.  <a href="namespacearc_1_1settings_1_1format.html#aad22a4ee2202efc76b831dca054d44b8">More...</a><br /></td></tr>
-<tr class="separator:aad22a4ee2202efc76b831dca054d44b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7cad1d4a29d514ad82414fdba0dd5ea"><td class="memItemLeft" align="right" valign="top">constexpr const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1settings_1_1format.html#aa7cad1d4a29d514ad82414fdba0dd5ea">arc::settings::format::ARRAY_START</a> = '['</td></tr>
+<tr class="memdesc:aa7cad1d4a29d514ad82414fdba0dd5ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Character used to indicate array end point.  <a href="namespacearc_1_1settings_1_1format.html#aa7cad1d4a29d514ad82414fdba0dd5ea">More...</a><br /></td></tr>
+<tr class="separator:aa7cad1d4a29d514ad82414fdba0dd5ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d7910ea7ba2479ea707734a00bf0797"><td class="memItemLeft" align="right" valign="top">constexpr const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1settings_1_1format.html#a2d7910ea7ba2479ea707734a00bf0797">arc::settings::format::ARRAY_END</a> = ']'</td></tr>
+<tr class="memdesc:a2d7910ea7ba2479ea707734a00bf0797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Character used to indicate array start point.  <a href="namespacearc_1_1settings_1_1format.html#a2d7910ea7ba2479ea707734a00bf0797">More...</a><br /></td></tr>
+<tr class="separator:a2d7910ea7ba2479ea707734a00bf0797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3957f249dd530ee559496867ff71b4c1"><td class="memItemLeft" align="right" valign="top">constexpr const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1settings_1_1format.html#a3957f249dd530ee559496867ff71b4c1">arc::settings::format::MAP_START</a> = '&lt;'</td></tr>
+<tr class="memdesc:a3957f249dd530ee559496867ff71b4c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Character used to indicate map end point.  <a href="namespacearc_1_1settings_1_1format.html#a3957f249dd530ee559496867ff71b4c1">More...</a><br /></td></tr>
+<tr class="separator:a3957f249dd530ee559496867ff71b4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa11292f4c414a01073983820334011aa"><td class="memItemLeft" align="right" valign="top">constexpr const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1settings_1_1format.html#aa11292f4c414a01073983820334011aa">arc::settings::format::MAP_END</a> = '&gt;'</td></tr>
+<tr class="memdesc:aa11292f4c414a01073983820334011aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Character used to indicate map start point.  <a href="namespacearc_1_1settings_1_1format.html#aa11292f4c414a01073983820334011aa">More...</a><br /></td></tr>
+<tr class="separator:aa11292f4c414a01073983820334011aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a202fe5f918c8fe2da275f987d7d3ae3d"><td class="memItemLeft" align="right" valign="top">constexpr const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1settings_1_1format.html#a202fe5f918c8fe2da275f987d7d3ae3d">arc::settings::format::PAIR_START</a> = '('</td></tr>
+<tr class="memdesc:a202fe5f918c8fe2da275f987d7d3ae3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Character used to indicate pair end point.  <a href="namespacearc_1_1settings_1_1format.html#a202fe5f918c8fe2da275f987d7d3ae3d">More...</a><br /></td></tr>
+<tr class="separator:a202fe5f918c8fe2da275f987d7d3ae3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a634795a50d37a83d270ce8f0f255d027"><td class="memItemLeft" align="right" valign="top">constexpr const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1settings_1_1format.html#a634795a50d37a83d270ce8f0f255d027">arc::settings::format::PAIR_END</a> = ')'</td></tr>
+<tr class="memdesc:a634795a50d37a83d270ce8f0f255d027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Character used to indicate pair start point.  <a href="namespacearc_1_1settings_1_1format.html#a634795a50d37a83d270ce8f0f255d027">More...</a><br /></td></tr>
+<tr class="separator:a634795a50d37a83d270ce8f0f255d027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8182e0787aab735cc91a2e3b2a13b44"><td class="memItemLeft" align="right" valign="top">constexpr const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1settings_1_1format.html#ad8182e0787aab735cc91a2e3b2a13b44">arc::settings::format::TUPLE_START</a> = '('</td></tr>
+<tr class="memdesc:ad8182e0787aab735cc91a2e3b2a13b44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Character used to indicate tuple end point.  <a href="namespacearc_1_1settings_1_1format.html#ad8182e0787aab735cc91a2e3b2a13b44">More...</a><br /></td></tr>
+<tr class="separator:ad8182e0787aab735cc91a2e3b2a13b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66a62b909b637e4cb02d616434184a77"><td class="memItemLeft" align="right" valign="top">constexpr const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1settings_1_1format.html#a66a62b909b637e4cb02d616434184a77">arc::settings::format::TUPLE_END</a> = ')'</td></tr>
+<tr class="memdesc:a66a62b909b637e4cb02d616434184a77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Character used to indicate tuple start point.  <a href="namespacearc_1_1settings_1_1format.html#a66a62b909b637e4cb02d616434184a77">More...</a><br /></td></tr>
+<tr class="separator:a66a62b909b637e4cb02d616434184a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f60588f5a04007e25f7c7716b543a04"><td class="memItemLeft" align="right" valign="top">constexpr const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1settings_1_1format.html#a8f60588f5a04007e25f7c7716b543a04">arc::settings::format::VECTOR_START</a> = '{'</td></tr>
+<tr class="memdesc:a8f60588f5a04007e25f7c7716b543a04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Character used to indicate vector end point.  <a href="namespacearc_1_1settings_1_1format.html#a8f60588f5a04007e25f7c7716b543a04">More...</a><br /></td></tr>
+<tr class="separator:a8f60588f5a04007e25f7c7716b543a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a21421a5cd8af28ba36c3891a1da89"><td class="memItemLeft" align="right" valign="top">constexpr const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1settings_1_1format.html#a58a21421a5cd8af28ba36c3891a1da89">arc::settings::format::VECTOR_END</a> = '}'</td></tr>
+<tr class="memdesc:a58a21421a5cd8af28ba36c3891a1da89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Character used to indicate vector start point.  <a href="namespacearc_1_1settings_1_1format.html#a58a21421a5cd8af28ba36c3891a1da89">More...</a><br /></td></tr>
+<tr class="separator:a58a21421a5cd8af28ba36c3891a1da89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section date"><dt>Date</dt><dd>04/07/2018 </dd></dl>
@@ -117,7 +151,7 @@ Variables</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 4 2018 15:35:19 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 5 2018 15:28:53 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../main_8cpp.html#a3718b1cdde8158b6d3991e85fd04d50d',1,'main.cpp']]]
+  ['get',['get',['../classarc_1_1sys_1_1_args.html#a4b4acca77441736c096a5cf86cf07b76',1,'arc::sys::Args']]]
 ];

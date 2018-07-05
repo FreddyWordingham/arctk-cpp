@@ -8,5 +8,6 @@ var searchData=
   ['_5ffile',['_file',['../classarc_1_1debug_1_1_invariant.html#a412ac4b36aabaf7dd773c29e8d2233a0',1,'arc::debug::Invariant::_file()'],['../classarc_1_1debug_1_1_post_condition.html#a7223fc44a6d2716de6545b4aa800c39c',1,'arc::debug::PostCondition::_file()']]],
   ['_5ffunc',['_func',['../classarc_1_1debug_1_1_invariant.html#af50503c2e13fe53363e96fce9295dfc1',1,'arc::debug::Invariant::_func()'],['../classarc_1_1debug_1_1_post_condition.html#a2c7b4a0b136e58b71a98aeb35a0d077a',1,'arc::debug::PostCondition::_func()']]],
   ['_5fline',['_line',['../classarc_1_1debug_1_1_invariant.html#a91f189b45c4ab03c9a4d38f17edf6ad7',1,'arc::debug::Invariant::_line()'],['../classarc_1_1debug_1_1_post_condition.html#a7f3d0db83c73c9d8e02c62e32dbf9c9b',1,'arc::debug::PostCondition::_line()']]],
+  ['_5fpath',['_path',['../classarc_1_1sys_1_1_file.html#a36d34d12b653e3c6df991c2a0d67a0ac',1,'arc::sys::File']]],
   ['_5fprog_5fname',['_prog_name',['../classarc_1_1sys_1_1_args.html#ad29d8d283f0fd67e9304d9d6e2e5c2bc',1,'arc::sys::Args']]]
 ];

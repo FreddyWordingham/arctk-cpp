@@ -3,6 +3,8 @@ var searchData=
   ['arc',['arc',['../namespacearc.html',1,'']]],
   ['args',['Args',['../classarc_1_1sys_1_1_args.html',1,'arc::sys::Args&lt; A &gt;'],['../classarc_1_1sys_1_1_args.html#a2bd0defa3860b1487b0187d2bca8120b',1,'arc::sys::Args::Args()']]],
   ['args_2ehpp',['args.hpp',['../args_8hpp.html',1,'']]],
+  ['array_5fend',['ARRAY_END',['../namespacearc_1_1settings_1_1format.html#a2d7910ea7ba2479ea707734a00bf0797',1,'arc::settings::format']]],
+  ['array_5fstart',['ARRAY_START',['../namespacearc_1_1settings_1_1format.html#aa7cad1d4a29d514ad82414fdba0dd5ea',1,'arc::settings::format']]],
   ['config',['config',['../namespacearc_1_1config.html',1,'arc']]],
   ['debug',['debug',['../namespacearc_1_1debug.html',1,'arc']]],
   ['error',['error',['../namespacearc_1_1exit_1_1error.html',1,'arc::exit']]],
