@@ -46,6 +46,12 @@ namespace arc //! arctk namespace
             template <typename C, typename T = typename C::value_type, typename IT = typename C::const_iterator>
             inline T max(const C& cont_) noexcept;
 
+            //  -- Placement --
+            template <typename C, typename T = typename C::value_type, typename IT = typename C::const_iterator>
+            inline size_t lower(const C& cont_, const T& val_) noexcept;
+            template <typename C, typename T = typename C::value_type, typename IT = typename C::const_iterator>
+            inline size_t upper(const C& cont_, const T& val_) noexcept;
+
 
 
             //  == FUNCTIONS ==
@@ -152,6 +158,36 @@ namespace arc //! arctk namespace
                 PRE(!cont_.empty());
 
                 return (cont_[max_index(cont_)]);
+            }
+
+
+            //  -- Placement --
+            /**
+             *  Find the index of the first element of the container that is not greater than or equal to the value given.
+             *
+             *  @tparam C   Type of container.
+             *  @tparam T   Type stored by C.
+             *  @tparam IT  Type of const iterator of C.
+             *
+             *  @param  cont_   Container to search.
+             *  @param  val_    Value to place.
+             *
+             *  @pre    cont_ must not be empty.
+             *  @pre    cont_ must be sorted in ascending order.
+             *  @pre    val_ must be within the range of cont_.
+             *
+             *  @return Index of the first element of the container that is not greater than or equal to the value given.
+             */
+            template <typename C, typename T, typename IT>
+            inline size_t lower(const C& cont_, const T& val_) noexcept
+            {
+                PRE(!cont_.empty());
+                PRE(utl::prop::ascending(cont_));
+                PRE(utl::prop::within(cont_, val_));
+
+                const size_t index = std::distance(std::begin(cont_), std::lower_bound(std::begin(cont_), std::end(cont_), val_));
+
+                return (index == 0 ? index : (index - 1));
             }
 
 
