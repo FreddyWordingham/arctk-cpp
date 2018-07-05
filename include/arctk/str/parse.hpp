@@ -24,6 +24,7 @@
 #include <array>
 #include <iomanip>
 #include <iostream>
+#include <iterator>
 #include <map>
 #include <sstream>
 #include <string>
