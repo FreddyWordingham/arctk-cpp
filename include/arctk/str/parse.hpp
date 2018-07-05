@@ -367,7 +367,7 @@ namespace arc //! arctk namespace
 
                 if (!map_.empty())
                 {
-                    stream << std::setw(settings::format::PRINT_WIDTH) << *std::begin(map_);
+                    stream << std::setw(settings::format::PRINT_WIDTH) << from(*std::begin(map_), limiters_);
                     for (IT it = std::next(std::begin(map_)); it != std::end(map_); std::advance(it, 1))
                     {
                         stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << from(*it, limiters_);
