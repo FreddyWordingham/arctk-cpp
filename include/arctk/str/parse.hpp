@@ -194,7 +194,7 @@ namespace arc //! arctk namespace
                 {
                     return (false);
                 }
-                else if (str_ == "1")
+                if (str_ == "1")
                 {
                     return (true);
                 }
@@ -206,7 +206,7 @@ namespace arc //! arctk namespace
                 {
                     return (false);
                 }
-                else if (str == "true")
+                if (str == "true")
                 {
                     return (true);
                 }
