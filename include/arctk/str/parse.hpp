@@ -367,7 +367,7 @@ namespace arc //! arctk namespace
              *
              *  @tparam A   Types stored by the tuple.
              *
-             *  @param  tuple_      Tuple to parse.
+             *  @param  tup_        Tuple to parse.
              *  @param  limiters_   If true, print tuple limiters.
              *
              *  @return String parsed from the given value.
@@ -378,6 +378,17 @@ namespace arc //! arctk namespace
                 return (from_helper(tup_, limiters_, std::make_index_sequence<sizeof...(A) - 1>()));
             }
 
+            /**
+             *  Parse an occupied tuple of values into a string object helper function.
+             *
+             *  @tparam A   Types stored by the tuple.
+             *  @tparam I   Index sequence of A.
+             *
+             *  @param  tup_        Tuple to parse.
+             *  @param  limiters_   If true, print tuple limiters.
+             *
+             *  @return String parsed from the given value.
+             */
             template <typename... A, size_t... I>
             inline std::string from_helper(const std::tuple<A...>& tup_, const bool limiters_, std::index_sequence<I...> /*unused*/) noexcept
             {
