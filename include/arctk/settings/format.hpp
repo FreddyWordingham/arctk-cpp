@@ -31,7 +31,7 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Files --
-            constexpr const int PRINT_WIDTH = 16; //!< Width allocated to data prints.
+            constexpr const int PRINT_WIDTH = 10; //!< Width allocated to data prints.
 
             //  -- Limiters --
             constexpr const char DELIMITER    = ','; //!< Character used to delimit consecutive data.
