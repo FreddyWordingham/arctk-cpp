@@ -421,7 +421,7 @@ namespace arc //! arctk namespace
              *  @return String parsed from the given container.
              */
             template <typename C, typename T, typename IT>
-            inline std::string from(const C& cont_, bool limiters_) noexcept;
+            inline std::string from(const C& cont_, bool limiters_) noexcept
             {
                 std::ostringstream stream;
 
