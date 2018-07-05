@@ -303,26 +303,23 @@ namespace arc //! arctk namespace
                 return (stream.str());
             }
 
+            template <>
+            inline std::string from(const std::tuple<>& tup_, const bool limiters_) noexcept
+            {
+                std::stringstream stream;
+
+                if (limiters_)
+                {
+                    stream << settings::format::TUPLE_START << settings::format::TUPLE_END;
+                }
+
+                return (stream.str());
+            }
+
             template <typename... A>
             inline std::string from(const std::tuple<A...>& tup_, const bool limiters_) noexcept
             {
-                if constexpr (sizeof...(A) == 0)
-                {
-                    if (limiters_)
-                    {
-                        std::stringstream stream;
-
-                        stream << settings::format::TUPLE_START << settings::format::TUPLE_END;
-
-                        return (stream.str());
-                    }
-
-                    return ("");
-                }
-                else
-                {
-                    return (from_helper(tup_, limiters_, std::make_index_sequence<sizeof...(A)>()));
-                }
+                return (from_helper(tup_, limiters_, std::make_index_sequence<sizeof...(A)>()));
             }
 
             template <typename... A, size_t... I>
