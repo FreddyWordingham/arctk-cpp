@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Seed --
-            static uint64_t next_seed; //!< Value of the next seed to be used.
+            static uint64_t _next_seed; //!< Value of the next seed to be used.
 
           protected:
             //  -- Seed --
@@ -85,10 +85,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Seed --
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wglobal-constructors"
-        uint64_t Generator::next_seed = static_cast<uint64_t>(std::time(nullptr)); // NOLINT
-#pragma clang diagnostic pop
+        uint64_t Generator::_next_seed = static_cast<uint64_t>(std::time(nullptr));
 
 
         //  -- Constructors --
@@ -96,7 +93,7 @@ namespace arc //! arctk namespace
          *  Initialise a generator using the next seed value.
          */
         inline Generator::Generator() noexcept
-          : _seed(next_seed++)
+          : _seed(_next_seed++)
         {
         }
 
@@ -123,7 +120,7 @@ namespace arc //! arctk namespace
          */
         inline void Generator::set_next_seed(const uint64_t next_seed_) noexcept
         {
-            next_seed = next_seed_;
+            _next_seed = next_seed_;
         }
 
 
