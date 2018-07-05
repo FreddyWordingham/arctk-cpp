@@ -62,21 +62,21 @@ namespace arc //! arctk namespace
             inline std::tuple<A...> to_helper(const std::vector<std::string>& strs_, std::index_sequence<I...> /*unused*/) noexcept;
 
             //  -- From --
-            inline std::string from(const std::string& str_, const bool /*unused*/ = false) noexcept;
+            inline std::string from(const std::string& str_, bool /*unused*/ = false) noexcept;
             template <typename T, typename>
-            inline std::string from(const T val_, const bool /*unused*/ = false) noexcept;
+            inline std::string from(const T val_, bool /*unused*/ = false) noexcept;
             template <typename T, typename S>
-            inline std::string from(const std::pair<T, S>& pair_, const bool limiters_ = true) noexcept;
+            inline std::string from(const std::pair<T, S>& pair_, bool limiters_ = true) noexcept;
             template <typename... A>
-            inline std::string from(const std::tuple<A...>& tup_, const bool limiters_ = true) noexcept;
+            inline std::string from(const std::tuple<A...>& tup_, bool limiters_ = true) noexcept;
             template <typename... A, size_t... I>
-            inline std::string from_helper(const std::tuple<A...>& tup_, const bool limiters_, std::index_sequence<I...> /*unused*/) noexcept;
+            inline std::string from_helper(const std::tuple<A...>& tup_, bool limiters_, std::index_sequence<I...> /*unused*/) noexcept;
             template <typename T>
-            inline std::string from(const std::vector<T>& vec_, const bool limiters_ = true) noexcept;
+            inline std::string from(const std::vector<T>& vec_, bool limiters_ = true) noexcept;
             template <typename T, size_t N>
-            inline std::string from(const std::array<T, N>& arr_, const bool limiters_ = true) noexcept;
+            inline std::string from(const std::array<T, N>& arr_, bool limiters_ = true) noexcept;
             template <typename T, typename S, typename IT = typename std::map<T, S>::const_iterator>
-            inline std::string from(const std::map<T, S>& map_, const bool limiters_ = true) noexcept;
+            inline std::string from(const std::map<T, S>& map_, bool limiters_ = true) noexcept;
 
 
 
