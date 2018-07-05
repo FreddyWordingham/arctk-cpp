@@ -17,7 +17,7 @@ arctk_search() {
         return
     fi
 
-    cd $ARCTK_DIR >/dev/null
+    cd $ARCTK_DIR/include/arctk >/dev/null
 
     grep -r $1 .
 
