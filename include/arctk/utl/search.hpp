@@ -41,6 +41,8 @@ namespace arc //! arctk namespace
             inline size_t min_index(const C& cont_) noexcept;
             template <typename C, typename T = typename C::value_type, typename IT = typename C::const_iterator>
             inline size_t max_index(const C& cont_) noexcept;
+            template <typename C, typename T = typename C::value_type, typename IT = typename C::const_iterator>
+            inline T min(const C& cont_) noexcept;
 
 
 
@@ -106,6 +108,27 @@ namespace arc //! arctk namespace
                 }
 
                 return (std::distance(std::begin(cont_), max_index));
+            }
+
+            /**
+             *  Find the minimum element within a container.
+             *
+             *  @tparam C   Type of container.
+             *  @tparam T   Type stored by C.
+             *  @tparam IT   Type of const iterator of C.
+             *
+             *  @param  cont_   Container to determine the minimum element of.
+             *
+             *  @pre    cont_ must not be empty.
+             *
+             *  @return Value of the minimum element within the container.
+             */
+            template <typename C, typename T, typename IT>
+            inline T min(const C& cont_) noexcept
+            {
+                PRE(!cont_.empty());
+
+                return (cont_[min_index(cont_)]);
             }
 
 
