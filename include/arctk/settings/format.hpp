@@ -39,8 +39,8 @@ namespace arc //! arctk namespace
             constexpr const char ARRAY_END    = ']'; //!< Character used to indicate array start point.
             constexpr const char MAP_START    = '<'; //!< Character used to indicate map end point.
             constexpr const char MAP_END      = '>'; //!< Character used to indicate map start point.
-            constexpr const char PAIR_START   = '(';
-            constexpr const char PAIR_END     = ')';
+            constexpr const char PAIR_START   = '('; //!< Character used to indicate pair end point.
+            constexpr const char PAIR_END     = ')'; //!< Character used to indicate pair start point.
             constexpr const char TUPLE_START  = '(';
             constexpr const char TUPLE_END    = ')';
             constexpr const char VECTOR_START = '{';
