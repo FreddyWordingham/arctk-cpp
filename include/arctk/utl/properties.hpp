@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <algorithm>
+#include <cmath>
 #include <iterator>
 
 
