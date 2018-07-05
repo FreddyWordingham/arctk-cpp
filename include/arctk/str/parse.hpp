@@ -304,7 +304,7 @@ namespace arc //! arctk namespace
             }
 
             template <>
-            inline std::string from(const std::tuple<>& tup_, const bool limiters_) noexcept
+            inline std::string from(const std::tuple<>& /*unused*/, const bool limiters_) noexcept
             {
                 std::stringstream stream;
 
@@ -319,7 +319,7 @@ namespace arc //! arctk namespace
             template <typename... A>
             inline std::string from(const std::tuple<A...>& tup_, const bool limiters_) noexcept
             {
-                return (from_helper(tup_, limiters_, std::make_index_sequence<sizeof...(A)>()));
+                return (from_helper(tup_, limiters_, std::make_index_sequence<sizeof...(A) - 1>()));
             }
 
             template <typename... A, size_t... I>
@@ -334,7 +334,8 @@ namespace arc //! arctk namespace
                     stream << settings::format::TUPLE_START;
                 }
 
-                ((stream << std::setw(settings::format::PRINT_WIDTH) << std::get<I>(tup_) << settings::format::DELIMITER), ...);
+                stream << std::setw(settings::format::PRINT_WIDTH) << std::get<0>(tup_);
+                ((stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << std::get<I>(tup_)), ...);
 
                 if (limiters_)
                 {
