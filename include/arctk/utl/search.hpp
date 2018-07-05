@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
              *
              *  @tparam C   Type of container.
              *  @tparam T   Type stored by C.
-             *  @tparam I   Type of const iterator of C.
+             *  @tparam IT  Type of const iterator of C.
              *
              *  @param  cont_   Container to determine the minimum element index of.
              *
