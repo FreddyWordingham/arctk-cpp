@@ -317,7 +317,8 @@ namespace arc //! arctk namespace
              *  @tparam T   First type of the pair.
              *  @tparam S   Second type of the pair.
              *
-             *  @param  pair_   Pair to parse.
+             *  @param  pair_       Pair to parse.
+             *  @param  limiters_   If true, print tuple limiters.
              *
              *  @return String parsed from the given value.
              */
