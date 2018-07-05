@@ -418,7 +418,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type stored by vector.
              *
              *  @param  vec_        Vector to parse.
-             *  @param  limiters_   If true, print tuple limiters.
+             *  @param  limiters_   If true, print vector limiters.
              *
              *  @return String parsed from the given vector.
              */
