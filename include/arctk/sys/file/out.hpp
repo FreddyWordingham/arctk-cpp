@@ -137,7 +137,9 @@ namespace arc //! arctk namespace
 
                 if (!handle.is_open())
                 {
-                    ERROR(42) << "Out file: '" << _path << "' could not be opened.";
+                    std::cerr << "Out file: '" << _path << "' could not be opened.";
+
+                    std::exit(exit::error::FILE_OPEN_FAILED);
                 }
 
                 POST(handle.is_open());
