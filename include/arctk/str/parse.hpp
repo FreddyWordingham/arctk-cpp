@@ -334,8 +334,8 @@ namespace arc //! arctk namespace
                     stream << settings::format::TUPLE_START;
                 }
 
-                stream << std::setw(settings::format::PRINT_WIDTH) << from(std::get<0>(tup_));
-                ((stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << from(std::get<I>(tup_))), ...);
+                stream << std::setw(settings::format::PRINT_WIDTH) << from(std::get<0>(tup_), limiters_);
+                ((stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << from(std::get<I>(tup_), limiters_)), ...);
 
                 if (limiters_)
                 {
