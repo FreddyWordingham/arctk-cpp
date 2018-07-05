@@ -79,6 +79,10 @@ namespace arc //! arctk namespace
                 //  -- Assignment --
                 inline Out& operator=(const Out&) noexcept = delete; //!< Deleted copy operator. @return Reference to copied object.
                 inline Out& operator=(Out&&) noexcept = delete;      //!< Deleted move operator. @return Reference to moved object.
+
+                //  -- Stream --
+                template <class T>
+                inline Out& operator<<(const T& val_) noexcept;
             };
 
 
@@ -145,6 +149,27 @@ namespace arc //! arctk namespace
                 POST(handle.is_open());
 
                 return (handle);
+            }
+
+
+
+            //  == OPERATORS ==
+            //  -- Stream --
+            /**
+             *  Add a value to the file.
+             *
+             *  @tparam T   Type of value to add.
+             *
+             *  @param  val_ value to add.
+             *
+             *  @return Reference to stream_ post-write.
+             */
+            template <class T>
+            inline Out& Out::operator<<(const T& val_) noexcept
+            {
+                _handle << val_;
+
+                return (*this);
             }
 
 
