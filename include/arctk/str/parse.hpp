@@ -320,7 +320,7 @@ namespace arc //! arctk namespace
              *  @param  pair_       Pair to parse.
              *  @param  limiters_   If true, print tuple limiters.
              *
-             *  @return String parsed from the given value.
+             *  @return String parsed from the given pair.
              */
             template <typename T, typename S>
             inline std::string from(const std::pair<T, S>& pair_, const bool limiters_) noexcept
@@ -347,7 +347,7 @@ namespace arc //! arctk namespace
              *
              *  @param  limiters_   If true, print tuple limiters.
              *
-             *  @return String parsed from the given value.
+             *  @return String parsed from the given tuple.
              */
             template <>
             inline std::string from(const std::tuple<>& /*unused*/, const bool limiters_) noexcept
@@ -370,7 +370,7 @@ namespace arc //! arctk namespace
              *  @param  tup_        Tuple to parse.
              *  @param  limiters_   If true, print tuple limiters.
              *
-             *  @return String parsed from the given value.
+             *  @return String parsed from the given tuple.
              */
             template <typename... A>
             inline std::string from(const std::tuple<A...>& tup_, const bool limiters_) noexcept
@@ -387,7 +387,7 @@ namespace arc //! arctk namespace
              *  @param  tup_        Tuple to parse.
              *  @param  limiters_   If true, print tuple limiters.
              *
-             *  @return String parsed from the given value.
+             *  @return String parsed from the given tuple.
              */
             template <typename... A, size_t... I>
             inline std::string from_helper(const std::tuple<A...>& tup_, const bool limiters_, std::index_sequence<I...> /*unused*/) noexcept
