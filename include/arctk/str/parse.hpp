@@ -311,6 +311,16 @@ namespace arc //! arctk namespace
                 return (stream.str());
             }
 
+            /**
+             *  Parse a pair of values into a string object.
+             *
+             *  @tparam T   First type of the pair.
+             *  @tparam S   Second type of the pair.
+             *
+             *  @param  pair_   Pair to parse.
+             *
+             *  @return String parsed from the given value.
+             */
             template <typename T, typename S>
             inline std::string from(const std::pair<T, S>& pair_, const bool limiters_) noexcept
             {
