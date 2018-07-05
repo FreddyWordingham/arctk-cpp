@@ -72,10 +72,13 @@ namespace arc //! arctk namespace
          *  Construct a handle to a file at a given path.
          *
          *  @param  path_   Path to file.
+         *
+         *  @pre    path_ may not be empty.
          */
         inline File::File(const std::string& path_) noexcept
           : _path(path_)
         {
+            PRE(!path_.empty());
         }
 
 
