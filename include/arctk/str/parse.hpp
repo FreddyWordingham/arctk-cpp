@@ -325,14 +325,14 @@ namespace arc //! arctk namespace
 
                 if (limiters_)
                 {
-                    stream << settings::format::PAIR_START;
+                    stream << settings::format::TUPLE_START;
                 }
 
                 stream << std::setw(settings::format::PRINT_WIDTH) << from(pair_.first, limiters_) << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << from(pair_.second, limiters_);
 
                 if (limiters_)
                 {
-                    stream << settings::format::PAIR_END;
+                    stream << settings::format::TUPLE_END;
                 }
 
                 return (stream.str());
@@ -427,10 +427,10 @@ namespace arc //! arctk namespace
 
                 if (limiters_)
                 {
-                    stream << settings::format::MAP_START;
+                    stream << settings::format::CONTAINER_START;
                 }
 
-                if (!map_.empty())
+                if (!cont_.empty())
                 {
                     stream << std::setw(settings::format::PRINT_WIDTH) << from(*std::begin(cont_), limiters_);
                     for (IT it = std::next(std::begin(cont_)); it != std::end(cont_); std::advance(it, 1))
@@ -441,7 +441,7 @@ namespace arc //! arctk namespace
 
                 if (limiters_)
                 {
-                    stream << settings::format::MAP_END;
+                    stream << settings::format::CONTAINER_END;
                 }
 
                 return (stream.str());
