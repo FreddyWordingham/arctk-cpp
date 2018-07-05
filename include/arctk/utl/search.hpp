@@ -39,6 +39,8 @@ namespace arc //! arctk namespace
             //  -- Limits --
             template <typename C, typename T = typename C::value_type, typename IT = typename C::const_iterator>
             inline size_t min_index(const C& cont_) noexcept;
+            template <typename C, typename T = typename C::value_type, typename IT = typename C::const_iterator>
+            inline size_t max_index(const C& cont_) noexcept;
 
 
 
@@ -73,6 +75,37 @@ namespace arc //! arctk namespace
                 }
 
                 return (std::distance(std::begin(cont_), min_index));
+            }
+
+            /**
+             *  Find the index of the maximum element within a container.
+             *
+             *  @tparam C   Type of container.
+             *  @tparam T   Type stored by C.
+             *  @tparam IT  Type of const iterator of C.
+             *
+             *  @param  cont_   Container to determine the maximum element index of.
+             *
+             *  @pre    cont_ must not be empty.
+             *
+             *  @return Index of the maximum element within the container.
+             */
+            template <typename C, typename T, typename I>
+            inline size_t max_index(const C& cont_) noexcept
+            {
+                PRE(!cont_.empty());
+
+                I max_index = std::begin(cont_);
+
+                for (I it = std::next(std::begin(cont_)); it != std::end(cont_); std::advance(it, 1))
+                {
+                    if (*it > *max_index)
+                    {
+                        max_index = it;
+                    }
+                }
+
+                return (std::distance(std::begin(cont_), max_index));
             }
 
 
