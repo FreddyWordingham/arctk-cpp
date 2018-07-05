@@ -64,7 +64,7 @@ namespace arc //! arctk namespace
             //  -- From --
             inline std::string from(const std::string& str_, bool /*unused*/ = false) noexcept;
             template <typename T, typename>
-            inline std::string from(const T val_, bool /*unused*/ = false) noexcept;
+            inline std::string from(T val_, bool /*unused*/ = false) noexcept;
             template <typename T, typename S>
             inline std::string from(const std::pair<T, S>& pair_, bool limiters_ = true) noexcept;
             template <typename... A>
