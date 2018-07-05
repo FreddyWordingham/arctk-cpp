@@ -341,6 +341,13 @@ namespace arc //! arctk namespace
                 return (stream.str());
             }
 
+            /**
+             *  Parse an empty tuple of values into a string object.
+             *
+             *  @param  limiters_   If true, print tuple limiters.
+             *
+             *  @return String parsed from the given value.
+             */
             template <>
             inline std::string from(const std::tuple<>& /*unused*/, const bool limiters_) noexcept
             {
