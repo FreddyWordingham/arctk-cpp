@@ -450,6 +450,17 @@ namespace arc //! arctk namespace
                 return (stream.str());
             }
 
+            /**
+             *  Parse an array of values into a string object.
+             *
+             *  @tparam T   Type stored by array.
+             *  @tparam N   Size of the array.
+             *
+             *  @param  arr_        Array to parse.
+             *  @param  limiters_   If true, print array limiters.
+             *
+             *  @return String parsed from the given array.
+             */
             template <typename T, size_t N>
             inline std::string from(const std::array<T, N>& arr_, const bool limiters_) noexcept
             {
