@@ -318,7 +318,7 @@ namespace arc //! arctk namespace
              *  @tparam S   Second type of the pair.
              *
              *  @param  pair_       Pair to parse.
-             *  @param  limiters_   If true, print pair limiters.
+             *  @param  limiters_   If true, print limiters.
              *
              *  @return String parsed from the given pair.
              */
@@ -345,7 +345,7 @@ namespace arc //! arctk namespace
             /**
              *  Parse an empty tuple of values into a string object.
              *
-             *  @param  limiters_   If true, print tuple limiters.
+             *  @param  limiters_   If true, print limiters.
              *
              *  @return String parsed from the given tuple.
              */
@@ -368,7 +368,7 @@ namespace arc //! arctk namespace
              *  @tparam A   Types stored by the tuple.
              *
              *  @param  tup_        Tuple to parse.
-             *  @param  limiters_   If true, print tuple limiters.
+             *  @param  limiters_   If true, print limiters.
              *
              *  @return String parsed from the given tuple.
              */
@@ -385,7 +385,7 @@ namespace arc //! arctk namespace
              *  @tparam I   Index sequence of A.
              *
              *  @param  tup_        Tuple to parse.
-             *  @param  limiters_   If true, print tuple limiters.
+             *  @param  limiters_   If true, print limiters.
              *
              *  @return String parsed from the given tuple.
              */
@@ -418,7 +418,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type stored by vector.
              *
              *  @param  vec_        Vector to parse.
-             *  @param  limiters_   If true, print vector limiters.
+             *  @param  limiters_   If true, print limiters.
              *
              *  @return String parsed from the given vector.
              */
@@ -457,7 +457,7 @@ namespace arc //! arctk namespace
              *  @tparam N   Size of the array.
              *
              *  @param  arr_        Array to parse.
-             *  @param  limiters_   If true, print array limiters.
+             *  @param  limiters_   If true, print limiters.
              *
              *  @return String parsed from the given array.
              */
