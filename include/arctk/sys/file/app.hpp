@@ -96,7 +96,7 @@ namespace arc //! arctk namespace
               : File(path_)
               , _handle(init_handle())
             {
-                assert(!path_.empty());
+                PRE(!path_.empty());
             }
 
 
@@ -110,11 +110,11 @@ namespace arc //! arctk namespace
              */
             inline App::~App() noexcept
             {
-                assert(_handle.is_open());
+                PRE(_handle.is_open());
 
                 _handle.close();
 
-                assert(!_handle.is_open());
+                POST(!_handle.is_open());
             }
 
 
@@ -130,17 +130,19 @@ namespace arc //! arctk namespace
              */
             inline std::ofstream App::init_handle() noexcept
             {
-                assert(!_path.empty());
+                PRE(!_path.empty());
 
                 std::ofstream handle;
                 handle.open(_path, std::fstream::app);
 
                 if (!handle.is_open())
                 {
-                    ERROR(42) << "Append file: '" << _path << "' could not be opened.";
+                    std::cerr << "Append file: '" << _path << "' could not be opened.";
+
+                    std::exit(exit::error::FILE_OPEN_FAILED);
                 }
 
-                assert(handle.is_open());
+                POST(handle.is_open());
 
                 return (handle);
             }
