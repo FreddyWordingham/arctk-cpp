@@ -24,6 +24,7 @@
 #include <cmath>
 
 //  -- Arctk --
+#include <arctk/consts.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/random/generator.hpp>
 
