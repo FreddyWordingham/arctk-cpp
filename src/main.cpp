@@ -24,6 +24,7 @@
 #include <arctk/macro.hpp>
 #include <arctk/macro/utility.hpp>
 #include <arctk/math.hpp>
+#include <arctk/math/compare.hpp>
 #include <arctk/phys.hpp>
 #include <arctk/phys/particle.hpp>
 #include <arctk/random.hpp>
