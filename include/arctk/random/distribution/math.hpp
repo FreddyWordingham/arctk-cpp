@@ -143,8 +143,8 @@ namespace arc //! arctk namespace
                     const double u1 = rng_->gen();
 
                     const double m  = std::sqrt(-2.0 * std::log(u0));
-                    const double z0 = m * std::cos(2.0 * constant::math::PI * u1);
-                    static_z1       = m * std::sin(2.0 * constant::math::PI * u1);
+                    const double z0 = m * std::cos(2.0 * consts::math::PI * u1);
+                    static_z1       = m * std::sin(2.0 * consts::math::PI * u1);
 
                     return (z0);
                 }
@@ -178,8 +178,8 @@ namespace arc //! arctk namespace
                     const double u1 = rng_->gen();
 
                     const double m  = std::sqrt(-2.0 * std::log(u0));
-                    const double z0 = m * std::cos(2.0 * constant::math::PI * u1);
-                    static_z1       = m * std::sin(2.0 * constant::math::PI * u1);
+                    const double z0 = m * std::cos(2.0 * consts::math::PI * u1);
+                    static_z1       = m * std::sin(2.0 * consts::math::PI * u1);
 
                     return ((z0 * sigma_) + mu_);
                 }
