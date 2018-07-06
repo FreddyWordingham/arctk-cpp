@@ -91,7 +91,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline bool parsable_to(const std::string& str_) noexcept
             {
-                std::ostringstream stream;
+                std::stringstream stream;
                 stream << str_;
 
                 T val{};
