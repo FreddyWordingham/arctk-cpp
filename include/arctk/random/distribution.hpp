@@ -21,7 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
-#include <arctk/random/distribution/uniform.hpp>
+#include <arctk/random/distribution/math.hpp>
 
 
 
