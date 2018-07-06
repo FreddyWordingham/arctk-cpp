@@ -1,9 +1,9 @@
 /**
- *  @file   arctk/random/distribution/uniform.hpp
+ *  @file   arctk/random/distribution/math.hpp
  *  @date   06/07/2018
  *  @author Freddy Wordingham
  *
- *  Uniform transformation distribution functions.
+ *  Mathematical distribution functions.
  */
 
 
