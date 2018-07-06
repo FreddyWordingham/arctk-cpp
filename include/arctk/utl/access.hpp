@@ -39,14 +39,14 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Tuple --
-            template <typename... A, size_t I, typename T = typename std::tuple_element<I, std::tuple<A...>>::type>
+            template <size_t I, typename... A, typename T = typename std::tuple_element<I, std::tuple<A...>>::type>
             inline T get(const sys::Args<A...>& args_) noexcept;
 
 
 
             //  == FUNCTIONS ==
             //  -- Tuple --
-            template <typename... A, size_t I, typename T>
+            template <size_t I, typename... A, typename T>
             inline T get(const sys::Args<A...>& args_) noexcept
             {
                 return (std::get<I>(args_.argv()));
