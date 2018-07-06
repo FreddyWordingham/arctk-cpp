@@ -45,6 +45,16 @@ namespace arc //! arctk namespace
                                                                             //!< the genration range. @param  max_    Upper bound of the genration range. @pre    min_ must be less than max_. @return Random uniform value.
 
 
+                //  -- Gaussian --
+                template <typename T>
+                inline T normal(Generator* rng_) noexcept; //!< Generate a random number drawn from the normal distribution. @tparam T Type to draw from normal distribution. @param  rng_    Generator used to draw base values from. @return Value randomly
+                                                           //!< drawn from normal distribution.
+                template <typename T>
+                inline T guassian(Generator* rng_, T mu_,
+                                  T sigma_) noexcept; //!< Generate a random number drawn from a gaussian distribution.  @tparam T Type to draw from guassian distribution. @param  rng_    Generator used to draw base values from. @param mu_     Average
+                                                      //!< value of the gaussian distribution. @param  sigma_  Variance of the gaussian distribution. @return Value randomly drawn from the gaussian distribution.
+
+
 
                 //  == FUNCTIONS ==
                 //  -- Uniform --
@@ -103,6 +113,72 @@ namespace arc //! arctk namespace
                     PRE(min_ < max_);
 
                     return ((rng_->gen() * (max_ - min_)) + min_);
+                }
+
+
+                //  -- Gaussian --
+                /**
+                 *  Generate a random number drawn from the normal distribution.
+                 *
+                 *  @param  rng_    Generator used to draw base values from.
+                 *
+                 *  @return Value randomly drawn from normal distribution.
+                 */
+                template <>
+                inline double normal(Generator* const rng_) noexcept
+                {
+                    static bool   static_generate = false;
+                    static double static_z1;
+
+                    static_generate = !static_generate;
+                    if (!static_generate)
+                    {
+                        return (static_z1);
+                    }
+
+                    const double u0 = rng_->gen();
+                    const double u1 = rng_->gen();
+
+                    const double m  = std::sqrt(-2.0 * std::log(u0));
+                    const double z0 = m * std::cos(2.0 * constant::math::PI * u1);
+                    static_z1       = m * std::sin(2.0 * constant::math::PI * u1);
+
+                    return (z0);
+                }
+
+                /**
+                 *  Generate a random number drawn from a gaussian distribution.
+                 *
+                 *  @param  rng_    Generator used to draw base values from.
+                 *  @param  mu_     Average value of the gaussian distribution.
+                 *  @param  sigma_  Variance of the gaussian distribution.
+                 *
+                 *  @pre    sigma_ must be positive.
+                 *
+                 *  @return Value randomly drawn from the gaussian distribution.
+                 */
+                template <>
+                inline double guassian(Generator* const rng_, const double mu_, const double sigma_) noexcept
+                {
+                    PRE(sigma_ > 0.0);
+
+                    static bool   static_generate = false;
+                    static double static_z1;
+
+                    static_generate = !static_generate;
+                    if (!static_generate)
+                    {
+                        return ((static_z1 * sigma_) + mu_);
+                    }
+
+                    const double u0 = rng_->gen();
+                    const double u1 = rng_->gen();
+
+                    const double m  = std::sqrt(-2.0 * std::log(u0));
+                    const double z0 = m * std::cos(2.0 * constant::math::PI * u1);
+                    static_z1       = m * std::sin(2.0 * constant::math::PI * u1);
+
+                    return ((z0 * sigma_) + mu_);
                 }
 
 
