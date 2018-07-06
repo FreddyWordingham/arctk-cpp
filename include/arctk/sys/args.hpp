@@ -75,7 +75,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             template <size_t I, typename T = typename std::tuple_element<I, std::tuple<A...>>::type>
-            inline T get() noexcept;
+            inline T                       get() noexcept;
+            inline const std::tuple<A...>& argv() noexcept;
         };
 
 
@@ -174,6 +175,12 @@ namespace arc //! arctk namespace
         inline T Args<A...>::get() noexcept
         {
             return (std::get<I>(_argv));
+        }
+
+        template <typename... A>
+        inline const std::tuple<A...>& Args<A...>::argv() noexcept
+        {
+            return (_argv);
         }
 
 
