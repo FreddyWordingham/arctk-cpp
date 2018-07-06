@@ -22,6 +22,7 @@
 #include <arctk/macro/utility.hpp>
 #include <arctk/random.hpp>
 #include <arctk/random/generator.hpp>
+#include <arctk/random/generator/quality.hpp>
 #include <arctk/settings.hpp>
 #include <arctk/settings/format.hpp>
 #include <arctk/str.hpp>
