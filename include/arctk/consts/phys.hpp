@@ -24,16 +24,19 @@ namespace arc //! arctk namespace
 {
     namespace consts //! constants namespace
     {
+        namespace phys //! physics namespace
+        {
 
 
 
-        //  == CONSTANTS ==
-        //  -- Derived --
-        constexpr const double SPEED_OF_LIGHT = 2.99792458e+8; //!< Speed of light in vacuum.
+            //  == CONSTANTS ==
+            //  -- Derived --
+            constexpr const double SPEED_OF_LIGHT = 2.99792458e+8; //!< Speed of light in vacuum.
 
 
 
-    } // namespace consts
+        } // namespace phys
+    }     // namespace consts
 } // namespace arc
 
 
