@@ -23,6 +23,7 @@
 #include <arctk/exit/success.hpp>
 #include <arctk/macro.hpp>
 #include <arctk/macro/utility.hpp>
+#include <arctk/main.hpp>
 #include <arctk/phys.hpp>
 #include <arctk/phys/particle.hpp>
 #include <arctk/random.hpp>
