@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/random/generator.hpp>
 
 
@@ -61,7 +62,7 @@ namespace arc //! arctk namespace
                 template <>
                 inline size_t uniform(Generator* const rng_, const size_t min_, const size_t max_) noexcept
                 {
-                    assert(min_ < max_);
+                    PRE(min_ < max_);
 
                     return (static_cast<size_t>(rng_->gen() * static_cast<double>(max_ - min_ + 1)) + min_);
                 }
@@ -80,7 +81,7 @@ namespace arc //! arctk namespace
                 template <>
                 inline int uniform(Generator* const rng_, const int min_, const int max_) noexcept
                 {
-                    assert(min_ < max_);
+                    PRE(min_ < max_);
 
                     return (static_cast<int>(rng_->gen() * static_cast<double>(max_ - min_ + 1)) + min_);
                 }
@@ -99,7 +100,7 @@ namespace arc //! arctk namespace
                 template <>
                 inline double uniform(Generator* const rng_, const double min_, const double max_) noexcept
                 {
-                    assert(min_ < max_);
+                    PRE(min_ < max_);
 
                     return ((rng_->gen() * (max_ - min_)) + min_);
                 }
