@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/random/distribution/math.hpp>
+#include <arctk/random/distribution/phys.hpp>
 
 
 
