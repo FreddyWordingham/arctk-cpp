@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/math/compare.hpp>
+#include <arctk/math/pow.hpp>
 
 
 
