@@ -19,12 +19,6 @@
 
 
 
-//  == IMPORTS ==
-//  -- Std --
-#include <cmath>
-
-
-
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
