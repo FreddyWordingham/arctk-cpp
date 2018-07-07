@@ -36,12 +36,45 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTION PROTOTYPES ==
-            //  -- Mathematical --
+            //  -- Power --
+            template <typename T>
+            inline T sq(T val_) noexcept;
+            template <typename T>
+            inline T cube(T val_) noexcept;
 
 
 
             //  == FUNCTIONS ==
-            //  -- Mathematical --
+            //  -- Power --
+            /**
+             *  Square a value.
+             *
+             *  @tparam T   Type to be squared.
+             *
+             *  @param  val_    Value to be squared.
+             *
+             *  @return Square of the value.
+             */
+            template <typename T>
+            inline T sq(const T val_) noexcept
+            {
+                return (val_ * val_);
+            }
+
+            /**
+             *  Cube a value.
+             *
+             *  @tparam T   Type to be cubed.
+             *
+             *  @param  val_    Value to be cubed.
+             *
+             *  @return Cube of the value.
+             */
+            template <typename T>
+            inline T cube(const T val_) noexcept
+            {
+                return (val_ * val_ * val_);
+            }
 
 
 
