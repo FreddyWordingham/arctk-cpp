@@ -20,7 +20,8 @@
 
 
 //  == IMPORTS ==
-//  -- Std --
+//  -- Arctk --
+#include <arctk/consts.hpp>
 
 
 
@@ -35,12 +36,41 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTION PROTOTYPES ==
-            //  -- Convertsion --
+            //  -- Angle --
+            template <typename T>
+            inline T rad_to_deg(T val_) noexcept;
+            template <typename T>
+            inline T deg_to_rad(T val_) noexcept;
 
 
 
             //  == FUNCTIONS ==
-            //  -- Convertsion --
+            //  -- Angle --
+            /**
+             *  Convert a value in radians to a value in degrees.
+             *
+             *  @param  val_  Value to convert to radians.
+             *
+             *  @return Value in degrees.
+             */
+            template <typename T>
+            inline T rad_to_deg(const T val_) noexcept
+            {
+                return (static_cast<T>(180.0 / constant::PI) * val_);
+            }
+
+            /**
+             *  Convert a value in degrees to a value in radians.
+             *
+             *  @param  val_  Value to convert to degrees.
+             *
+             *  @return Value in radians.
+             */
+            template <typename T>
+            inline T deg_to_rad(const T val_) noexcept
+            {
+                return (static_cast<T>(constant::PI / 180.0) * val_);
+            }
 
 
 
