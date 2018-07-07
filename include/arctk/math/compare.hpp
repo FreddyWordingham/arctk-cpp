@@ -36,7 +36,7 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTION PROTOTYPES ==
-            //  -- Mathematical --
+            //  -- Comparison --
             template <typename T>
             inline bool zero(T x_) noexcept;
             template <typename T>
@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTIONS ==
-            //  -- Mathematical --
+            //  -- Comparison --
             /**
              *  Test if a value can be considered equal to zero.
              *  Value is considered equal to zero if it is within epsilon of zero.
