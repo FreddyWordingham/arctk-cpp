@@ -177,6 +177,11 @@ namespace arc //! arctk namespace
             return (std::get<I>(_argv));
         }
 
+        /**
+         *  Get the tuple of parsed arguments.
+         *
+         *  @return Tuple of parsed arguments.
+         */
         template <typename... A>
         inline const std::tuple<A...>& Args<A...>::argv() const noexcept
         {
