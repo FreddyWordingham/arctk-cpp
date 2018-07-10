@@ -87,7 +87,7 @@ namespace arc //! arctk namespace
                         return (s);
                     }
 
-                    return ((1.0 + math::sq(g_) - math::sq((1.0 - math::sq(g_)) / (1.0 + (g_ * s)))) / (2.0 * g_));
+                    return ((1.0 + math::pow::sq(g_) - math::pow::sq((1.0 - math::pow::sq(g_)) / (1.0 + (g_ * s)))) / (2.0 * g_));
                 }
 
 
