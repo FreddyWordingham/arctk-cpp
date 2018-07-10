@@ -36,10 +36,37 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTION PROTOTYPES ==
+            //  -- Summation --
+            template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
+            inline T sum(const C& cont_) noexcept;
 
 
 
             //  == FUNCTIONS ==
+            //  -- Summation --
+            /**
+             *  Determine the sum of all elements within a container.
+             *
+             *  @tparam C   Type of container.
+             *  @tparam T   Type stored by C.
+             *  @tparam I   Type of const iterator used by C.
+             *
+             *  @param  cont_   Container to sum.
+             *
+             *  @return Sum of all elements.
+             */
+            template <typename C, typename T, typename I>
+            inline T sum(const C& cont_) noexcept
+            {
+                T total{};
+
+                for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+                {
+                    total += *it;
+                }
+
+                return (total);
+            }
 
 
 
