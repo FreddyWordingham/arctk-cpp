@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Printing --
-            virtual std::string str() noexcept = 0;
+            virtual std::string str() noexcept = 0; //!< Create a human readable string of the object.   @return Human readable string of the object.
 
             //  -- Saving --
             inline void save(const std::string& path_) noexcept;
