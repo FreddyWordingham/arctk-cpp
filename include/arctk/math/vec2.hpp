@@ -133,8 +133,6 @@ namespace arc //! arctk namespace
         //  -- Constructors --
         /**
          *  Construct a two-dimensional vec with elements of zero.
-         *
-         *  @tparam T   Type stored by the vec.
          */
         template <typename T>
         constexpr inline Vec<T, 2>::Vec() noexcept
@@ -145,8 +143,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Construct a two-dimensional vec with initial element values.
-         *
-         *  @tparam T   Type stored by the vec.
          *
          *  @param  x_  Initial value of the x component.
          *  @param  y_  Initial value of the y component.
@@ -165,8 +161,6 @@ namespace arc //! arctk namespace
         /**
          *  Convert the vec to a std::array.
          *
-         *  @tparam T   Type stored by the vec.
-         *
          *  @return Converted std::array object.
          */
         template <typename T>
@@ -179,8 +173,6 @@ namespace arc //! arctk namespace
         //  -- Assignment --
         /**
          *  Add a value to all elements of the vec.
-         *
-         *  @tparam T   Type stored by the vec.
          *
          *  @param  val_    Value to add to each vec element.
          *
@@ -198,8 +190,6 @@ namespace arc //! arctk namespace
         /**
          *  Add another vec's elements to each corresponding element of the vec.
          *
-         *  @tparam T   Type stored by the vecs.
-         *
          *  @param  vec_    Vec to add to this vec.
          *
          *  @return Reference to this vec post-operation.
@@ -215,8 +205,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Subtract a value from all elements of the vec.
-         *
-         *  @tparam T   Type stored by the vec.
          *
          *  @param  val_    Value to subtract from each vec element.
          *
@@ -234,8 +222,6 @@ namespace arc //! arctk namespace
         /**
          *  Subtract another vec's elements from each corresponding element of the vec.
          *
-         *  @tparam T   Type stored by the vecs.
-         *
          *  @param  vec_    Vec to subtract from this vec.
          *
          *  @return Reference to this vec post-operation.
@@ -252,8 +238,6 @@ namespace arc //! arctk namespace
         /**
          *  Multiply all elements of the vec by a value.
          *
-         *  @tparam T   Type stored by the vec.
-         *
          *  @param  val_    Value used to multiply each vec element by.
          *
          *  @return Reference to this vec post-operation.
@@ -269,8 +253,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Divide all elements of the vec by a value.
-         *
-         *  @tparam T   Type stored by the vec.
          *
          *  @param  val_    Value used to divide each vec element by.
          *
@@ -290,8 +272,6 @@ namespace arc //! arctk namespace
         /**
          *  Increment each element of the vec.
          *
-         *  @tparam T   Type stored by the vec.
-         *
          *  @return A reference to this vec pre-increment.
          */
         template <typename T>
@@ -305,8 +285,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Increment each element of the vec.
-         *
-         *  @tparam T   Type stored by the vec.
          *
          *  @return A copy of this vec post-increment.
          */
@@ -324,8 +302,6 @@ namespace arc //! arctk namespace
         /**
          *  Decrement each element of the vec.
          *
-         *  @tparam T   Type stored by the vec.
-         *
          *  @return A reference to this vec pre-decrement.
          */
         template <typename T>
@@ -339,8 +315,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Decrement each element of the vec.
-         *
-         *  @tparam T   Type stored by the vec.
          *
          *  @return A copy of this vec post-decrement.
          */
@@ -360,8 +334,6 @@ namespace arc //! arctk namespace
         /**
          *  Positive copy the vec.
          *
-         *  @tparam T   Type stored by the vec.
-         *
          *  @return Positive copy of the vec.
          */
         template <typename T>
@@ -373,8 +345,6 @@ namespace arc //! arctk namespace
         /**
          *  Negative copy the vec.
          *
-         *  @tparam T   Type stored by the vec.
-         *
          *  @return Negative copy of the vec.
          */
         template <typename T>
@@ -385,8 +355,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Add a value to a vec.
-         *
-         *  @tparam T   Type stored by the vec.
          *
          *  @param  val_    Value to add to the vec.
          *
@@ -401,8 +369,6 @@ namespace arc //! arctk namespace
         /**
          *  Add a vec to a vec.
          *
-         *  @tparam T   Type stored by the vecs.
-         *
          *  @param  vec_    Vec to add to the vec.
          *
          *  @return Vec formed by adding the vec to the vec.
@@ -415,8 +381,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Subtract a value from a vec.
-         *
-         *  @tparam T   Type stored by the vec.
          *
          *  @param  val_    Value to subtract from the vec.
          *
@@ -431,8 +395,6 @@ namespace arc //! arctk namespace
         /**
          *  Subtract a vec from a vec.
          *
-         *  @tparam T   Type stored by the vecs.
-         *
          *  @param  vec_    Vec to subtract from the vec.
          *
          *  @return Vec formed by subtracting the vec from the vec.
@@ -445,8 +407,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Multiply a vecs elements by a value.
-         *
-         *  @tparam T   Type stored by the vec.
          *
          *  @param  val_    Value used to multiply the vec elements.
          *
@@ -461,8 +421,6 @@ namespace arc //! arctk namespace
         /**
          *  Calculate the dot-product of two vecs.
          *
-         *  @tparam T   Type stored by the vecs.
-         *
          *  @param  vec_    Vec to perform the dot-product with.
          *
          *  @return Dot-product of the vecs.
@@ -475,8 +433,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Divide a vecs elements by a value.
-         *
-         *  @tparam T   Type stored by the vec.
          *
          *  @param  val_    Value used to divide the vec elements.
          *
@@ -492,8 +448,6 @@ namespace arc //! arctk namespace
         //  -- Access --
         /**
          *  Access an element of the vec.
-         *
-         *  @tparam T   Type stored by the vec.
          *
          *  @param  index_  Index of the element to access.
          *
@@ -511,8 +465,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Access an element of the vec.
-         *
-         *  @tparam T   Type stored by the vec.
          *
          *  @param  index_  Index of the element to access.
          *
@@ -535,8 +487,6 @@ namespace arc //! arctk namespace
         /**
          *  Determine if a vec is normalised to within a given tolerance.
          *
-         *  @tparam T   Type stored by the vec.
-         *
          *  @param  tol_    Maximum tolerance of normalisation value.
          *
          *  @pre    tol_ must be positive.
@@ -556,8 +506,6 @@ namespace arc //! arctk namespace
         /**
          *  Calculate the sum of the vec elements.
          *
-         *  @tparam T   Type stored by the vec.
-         *
          *  @return Sum of the vec elements.
          */
         template <typename T>
@@ -568,8 +516,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Calculate the magnitude of the vec.
-         *
-         *  @tparam T   Type stored by the vec.
          *
          *  @return Magnitude of the vec.
          */
@@ -582,8 +528,6 @@ namespace arc //! arctk namespace
         /**
          *  Calculate the magnitude-squared of the vec.
          *
-         *  @tparam T   Type stored by the vec.
-         *
          *  @return Magnitude-squared of the vec.
          */
         template <typename T>
@@ -594,8 +538,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Normalise the vec.
-         *
-         *  @tparam T   Type stored by the vec.
          *
          *  @post   Vec must be normalised.
          */
