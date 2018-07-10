@@ -79,7 +79,7 @@ namespace arc //! arctk namespace
                 {
                     PRE((g_ >= -1.0) && (g_ <= 1.0));
 
-                    const double s = uniform<double>(rng_, -1.0, 1.0);
+                    const double s = math::uniform<double>(rng_, -1.0, 1.0);
 
                     if (math::zero(g_))
                     {
