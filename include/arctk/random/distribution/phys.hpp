@@ -59,10 +59,10 @@ namespace arc //! arctk namespace
                  */
                 inline vec3 isotropic(Generator* const rng_) noexcept
                 {
-                    const double theta = arc::random::distribution::math::uniform<double>(rng_, 0.0, 2.0 * arc::constant::PI);
-                    const double z     = arc::random::distribution::math::uniform<double>(rng_, -1.0, 1.0);
+                    const double theta = random::distribution::math::uniform<double>(rng_, 0.0, 2.0 * consts::math::PI);
+                    const double z     = random::distribution::math::uniform<double>(rng_, -1.0, 1.0);
 
-                    return (vec3(std::sqrt(1.0 - arc::math::sq(z)) * std::cos(theta), std::sqrt(1.0 - arc::math::sq(z)) * std::sin(theta), z));
+                    return (vec3(std::sqrt(1.0 - math::sq(z)) * std::cos(theta), std::sqrt(1.0 - math::sq(z)) * std::sin(theta), z));
                 }
 
                 /**
