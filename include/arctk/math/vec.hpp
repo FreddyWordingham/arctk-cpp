@@ -230,9 +230,6 @@ namespace arc //! arctk namespace
         /**
          *  Convert the vec to a std::array.
          *
-         *  @tparam T   Type stored by the vec.
-         *  @tparam N   Size of the vec.
-         *
          *  @return Converted std::array object.
          */
         template <typename T, size_t N>
