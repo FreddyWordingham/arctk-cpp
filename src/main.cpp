@@ -25,6 +25,7 @@
 #include <arctk/macro/utility.hpp>
 #include <arctk/math.hpp>
 #include <arctk/math/compare.hpp>
+#include <arctk/math/container.hpp>
 #include <arctk/math/convert.hpp>
 #include <arctk/math/pow.hpp>
 #include <arctk/phys.hpp>
