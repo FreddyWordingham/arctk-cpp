@@ -25,6 +25,7 @@
 #include <arctk/math/container.hpp>
 #include <arctk/math/convert.hpp>
 #include <arctk/math/pow.hpp>
+#include <arctk/math/vec.hpp>
 
 
 
