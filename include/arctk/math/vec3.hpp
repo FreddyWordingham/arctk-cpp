@@ -676,6 +676,8 @@ namespace arc //! arctk namespace
          *  Normalise the vec.
          *
          *  @tparam T   Type stored by the vec.
+         *
+         *  @post   Vec must be normalised.
          */
         template <typename T>
         constexpr inline void Vec<T, 3>::normalise() noexcept
@@ -685,6 +687,8 @@ namespace arc //! arctk namespace
             x *= m;
             y *= m;
             z *= m;
+
+            POST(normalised());
         }
 
         /**
