@@ -539,11 +539,15 @@ namespace arc //! arctk namespace
          *
          *  @param  tol_    Maximum tolerance of normalisation value.
          *
+         *  @pre    tol_ must be positive.
+         *
          *  @return True if the vec is normalised.
          */
         template <typename T>
         constexpr inline bool Vec<T, 2>::normalised(const T tol_) const noexcept
         {
+            PRE(tol_ > 0);
+
             return (std::fabs(T{1.0} - mag()) <= tol_);
         }
 
