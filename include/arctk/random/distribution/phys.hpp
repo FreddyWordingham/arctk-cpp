@@ -25,6 +25,7 @@
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/math.hpp>
 #include <arctk/random/distribution/math.hpp>
 
 
