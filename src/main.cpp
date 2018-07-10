@@ -28,6 +28,7 @@
 #include <arctk/math/container.hpp>
 #include <arctk/math/convert.hpp>
 #include <arctk/math/pow.hpp>
+#include <arctk/math/vec.hpp>
 #include <arctk/phys.hpp>
 #include <arctk/phys/particle.hpp>
 #include <arctk/random.hpp>
