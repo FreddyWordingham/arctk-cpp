@@ -82,7 +82,7 @@ namespace arc //! arctk namespace
 
                     const double s = math::uniform<double>(rng_, -1.0, 1.0);
 
-                    if (math::zero(g_))
+                    if (math::compare::zero(g_))
                     {
                         return (s);
                     }
