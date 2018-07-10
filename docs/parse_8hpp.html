@@ -78,6 +78,7 @@ $(function() {
 <div class="textblock"><code>#include &lt;array&gt;</code><br />
 <code>#include &lt;iomanip&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;iterator&gt;</code><br />
 <code>#include &lt;map&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
@@ -94,16 +95,16 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="parse_8hpp__incl.png" border="0" usemap="#include_2arctk_2str_2parse_8hpp" alt=""/></div>
 <map name="include_2arctk_2str_2parse_8hpp" id="include_2arctk_2str_2parse_8hpp">
-<area shape="rect" id="node11" href="debug_8hpp.html" title="arctk/debug.hpp" alt="" coords="598,79,715,104"/>
-<area shape="rect" id="node20" href="exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="190,225,291,251"/>
-<area shape="rect" id="node25" href="settings_8hpp.html" title="arctk/settings.hpp" alt="" coords="1253,79,1379,104"/>
-<area shape="rect" id="node12" href="invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="448,152,619,177"/>
-<area shape="rect" id="node14" href="location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="514,225,681,251"/>
-<area shape="rect" id="node23" href="macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="712,152,829,177"/>
-<area shape="rect" id="node21" href="error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="182,299,314,324"/>
-<area shape="rect" id="node22" href="success_8hpp.html" title="arctk/exit/success.hpp" alt="" coords="5,299,158,324"/>
-<area shape="rect" id="node24" href="utility_8hpp.html" title="arctk/macro/utility.hpp" alt="" coords="705,225,855,251"/>
-<area shape="rect" id="node26" href="format_8hpp.html" title="arctk/settings/format.hpp" alt="" coords="1233,152,1400,177"/>
+<area shape="rect" id="node12" href="debug_8hpp.html" title="arctk/debug.hpp" alt="" coords="575,79,692,104"/>
+<area shape="rect" id="node21" href="exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="354,225,455,251"/>
+<area shape="rect" id="node26" href="settings_8hpp.html" title="arctk/settings.hpp" alt="" coords="1304,79,1430,104"/>
+<area shape="rect" id="node13" href="invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="324,152,495,177"/>
+<area shape="rect" id="node15" href="location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="478,225,645,251"/>
+<area shape="rect" id="node24" href="macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="676,152,793,177"/>
+<area shape="rect" id="node22" href="error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="182,299,314,324"/>
+<area shape="rect" id="node23" href="success_8hpp.html" title="arctk/exit/success.hpp" alt="" coords="5,299,158,324"/>
+<area shape="rect" id="node25" href="utility_8hpp.html" title="arctk/macro/utility.hpp" alt="" coords="669,225,819,251"/>
+<area shape="rect" id="node27" href="format_8hpp.html" title="arctk/settings/format.hpp" alt="" coords="1283,152,1451,177"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -165,15 +166,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a559c8c56c67f64c8e97ec3288ae44bd4"><td class="memTemplParams" colspan="2">template&lt;typename... A, size_t... I&gt; </td></tr>
 <tr class="memitem:a559c8c56c67f64c8e97ec3288ae44bd4"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1str_1_1parse.html#a559c8c56c67f64c8e97ec3288ae44bd4">arc::str::parse::from_helper</a> (const std::tuple&lt; A... &gt; &amp;tup_, bool limiters_, std::index_sequence&lt; I... &gt;) noexcept</td></tr>
 <tr class="separator:a559c8c56c67f64c8e97ec3288ae44bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f6f1131f1532d1e2ec099379077f444"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a9f6f1131f1532d1e2ec099379077f444"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1str_1_1parse.html#a9f6f1131f1532d1e2ec099379077f444">arc::str::parse::from</a> (const std::vector&lt; T &gt; &amp;vec_, bool limiters_=true) noexcept</td></tr>
-<tr class="separator:a9f6f1131f1532d1e2ec099379077f444"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac60ab17edf315c242cc51d040d2f1443"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t N&gt; </td></tr>
-<tr class="memitem:ac60ab17edf315c242cc51d040d2f1443"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1str_1_1parse.html#ac60ab17edf315c242cc51d040d2f1443">arc::str::parse::from</a> (const std::array&lt; T, N &gt; &amp;arr_, bool limiters_=true) noexcept</td></tr>
-<tr class="separator:ac60ab17edf315c242cc51d040d2f1443"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69cbee7572e11972135498b5c758c8be"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S , typename IT  = typename std::map&lt;T, S&gt;::const_iterator&gt; </td></tr>
-<tr class="memitem:a69cbee7572e11972135498b5c758c8be"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1str_1_1parse.html#a69cbee7572e11972135498b5c758c8be">arc::str::parse::from</a> (const std::map&lt; T, S &gt; &amp;map_, bool limiters_=true) noexcept</td></tr>
-<tr class="separator:a69cbee7572e11972135498b5c758c8be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90ea366c6e063443d0e5f884a936a389"><td class="memTemplParams" colspan="2">template&lt;typename C , typename T  = typename C::value_type, typename I  = typename C::const_iterator&gt; </td></tr>
+<tr class="memitem:a90ea366c6e063443d0e5f884a936a389"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1str_1_1parse.html#a90ea366c6e063443d0e5f884a936a389">arc::str::parse::from</a> (const C &amp;cont_, bool limiters_=true) noexcept</td></tr>
+<tr class="separator:a90ea366c6e063443d0e5f884a936a389"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58a373132eb04bcd4f94d61e47ef2204"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
 <tr class="memitem:a58a373132eb04bcd4f94d61e47ef2204"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1str_1_1parse.html#a58a373132eb04bcd4f94d61e47ef2204">arc::str::parse::parsable_to&lt; bool &gt;</a> (const std::string &amp;str_) noexcept</td></tr>
 <tr class="separator:a58a373132eb04bcd4f94d61e47ef2204"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,7 +186,7 @@ Functions</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 5 2018 16:34:10 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 10 2018 13:38:15 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

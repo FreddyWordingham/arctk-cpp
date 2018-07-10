@@ -91,6 +91,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4b4acca77441736c096a5cf86cf07b76"><td class="memTemplParams" colspan="2">template&lt;size_t I, typename T  = typename std::tuple_element&lt;I, std::tuple&lt;A...&gt;&gt;::type&gt; </td></tr>
 <tr class="memitem:a4b4acca77441736c096a5cf86cf07b76"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classarc_1_1sys_1_1_args.html#a4b4acca77441736c096a5cf86cf07b76">get</a> () noexcept</td></tr>
 <tr class="separator:a4b4acca77441736c096a5cf86cf07b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a078094567d6216d185adb85d5f7d3955"><td class="memItemLeft" align="right" valign="top">const std::tuple&lt; A... &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1sys_1_1_args.html#a078094567d6216d185adb85d5f7d3955">argv</a> () const noexcept</td></tr>
+<tr class="separator:a078094567d6216d185adb85d5f7d3955"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -171,6 +173,45 @@ template&lt;typename... A&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a078094567d6216d185adb85d5f7d3955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a078094567d6216d185adb85d5f7d3955">&#9670;&nbsp;</a></span>argv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... A&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::tuple&lt; A... &gt; &amp; <a class="el" href="classarc_1_1sys_1_1_args.html">arc::sys::Args</a>&lt; A &gt;::argv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the tuple of parsed arguments.</p>
+<dl class="section return"><dt>Returns</dt><dd>Tuple of parsed arguments. </dd></dl>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1sys_1_1_args_a078094567d6216d185adb85d5f7d3955_icgraph.png" border="0" usemap="#classarc_1_1sys_1_1_args_a078094567d6216d185adb85d5f7d3955_icgraph" alt=""/></div>
+<map name="classarc_1_1sys_1_1_args_a078094567d6216d185adb85d5f7d3955_icgraph" id="classarc_1_1sys_1_1_args_a078094567d6216d185adb85d5f7d3955_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1sys_1_1_args.html#a18cbb62fbc71def78864a18030c7fab4" title="arc::sys::Args::init_argv" alt="" coords="189,5,349,31"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a397b774de6aea815289d8ab9e58a009a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a397b774de6aea815289d8ab9e58a009a">&#9670;&nbsp;</a></span>check_parsable()</h2>
 
@@ -297,6 +338,16 @@ template&lt;typename... A&gt; </div>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>argc_ must be positive.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Initialised tuple of argument values. </dd></dl>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1sys_1_1_args_a18cbb62fbc71def78864a18030c7fab4_cgraph.png" border="0" usemap="#classarc_1_1sys_1_1_args_a18cbb62fbc71def78864a18030c7fab4_cgraph" alt=""/></div>
+<map name="classarc_1_1sys_1_1_args_a18cbb62fbc71def78864a18030c7fab4_cgraph" id="classarc_1_1sys_1_1_args_a18cbb62fbc71def78864a18030c7fab4_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1sys_1_1_args.html#a078094567d6216d185adb85d5f7d3955" title="arc::sys::Args::argv" alt="" coords="213,5,349,31"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -385,7 +436,7 @@ template&lt;typename... A&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 5 2018 16:34:10 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 10 2018 13:38:15 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['array_5fend',['ARRAY_END',['../namespacearc_1_1settings_1_1format.html#a2d7910ea7ba2479ea707734a00bf0797',1,'arc::settings::format']]],
-  ['array_5fstart',['ARRAY_START',['../namespacearc_1_1settings_1_1format.html#aa7cad1d4a29d514ad82414fdba0dd5ea',1,'arc::settings::format']]]
+  ['a',['a',['../classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a6ba9864698d49b99bae4003ecd8dbcd9',1,'arc::math::Vec&lt; T, 4 &gt;']]]
 ];

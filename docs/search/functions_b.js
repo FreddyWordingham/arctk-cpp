@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['_7eapp',['~App',['../classarc_1_1sys_1_1file_1_1_app.html#a715d7d0d777c4dcda4c81187e977a1a5',1,'arc::sys::file::App']]],
-  ['_7ein',['~In',['../classarc_1_1sys_1_1file_1_1_in.html#a9e58b7a810b569a9922d9845acec4e50',1,'arc::sys::file::In']]],
-  ['_7einvariant',['~Invariant',['../classarc_1_1debug_1_1_invariant.html#aeee6cceb3d45f6a596128c49cc48cb03',1,'arc::debug::Invariant']]],
-  ['_7eout',['~Out',['../classarc_1_1sys_1_1file_1_1_out.html#af48a37c8dbca7812c6592782cb9b9429',1,'arc::sys::file::Out']]]
+  ['parsable_5fto',['parsable_to',['../namespacearc_1_1str_1_1parse.html#a3780c748752825e6dd9589a4a41808c1',1,'arc::str::parse']]],
+  ['parsable_5fto_3c_20bool_20_3e',['parsable_to&lt; bool &gt;',['../namespacearc_1_1str_1_1parse.html#a58a373132eb04bcd4f94d61e47ef2204',1,'arc::str::parse']]],
+  ['particle',['Particle',['../classarc_1_1phys_1_1_particle.html#a5c5e9a1d254aed31e4c133e6dda072ea',1,'arc::phys::Particle::Particle(const vec3 &amp;pos_, const vec3 &amp;dir_) noexcept'],['../classarc_1_1phys_1_1_particle.html#a22051ec0f765c0f4268cab2f63681f8f',1,'arc::phys::Particle::Particle(const Particle &amp;) noexcept=default'],['../classarc_1_1phys_1_1_particle.html#a4c46c2763ecd0af975cdb2af7c66efff',1,'arc::phys::Particle::Particle(Particle &amp;&amp;) noexcept=default']]],
+  ['pos',['pos',['../classarc_1_1phys_1_1_particle.html#a3dd873ec2c055055433ee73a4d9f31bb',1,'arc::phys::Particle']]]
 ];

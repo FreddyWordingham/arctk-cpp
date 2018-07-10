@@ -75,6 +75,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="config_8hpp_source.html">arctk/config.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="consts_8hpp_source.html">arctk/consts.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="consts_2math_8hpp_source.html">arctk/consts/math.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="consts_2phys_8hpp_source.html">arctk/consts/phys.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="debug_8hpp_source.html">arctk/debug.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="invariant_8hpp_source.html">arctk/debug/invariant.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="location_8hpp_source.html">arctk/debug/location.hpp</a>&gt;</code><br />
@@ -83,16 +86,35 @@ $(function() {
 <code>#include &lt;<a class="el" href="success_8hpp_source.html">arctk/exit/success.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="macro_8hpp_source.html">arctk/macro.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="utility_8hpp_source.html">arctk/macro/utility.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="math_8hpp_source.html">arctk/math.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="compare_8hpp_source.html">arctk/math/compare.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="container_8hpp_source.html">arctk/math/container.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="convert_8hpp_source.html">arctk/math/convert.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="pow_8hpp_source.html">arctk/math/pow.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="vec_8hpp_source.html">arctk/math/vec.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="vec2_8hpp_source.html">arctk/math/vec2.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="vec3_8hpp_source.html">arctk/math/vec3.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="vec4_8hpp_source.html">arctk/math/vec4.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="phys_8hpp_source.html">arctk/phys.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="particle_8hpp_source.html">arctk/phys/particle.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="random_8hpp_source.html">arctk/random.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="distribution_8hpp_source.html">arctk/random/distribution.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="random_2distribution_2math_8hpp_source.html">arctk/random/distribution/math.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="random_2distribution_2phys_8hpp_source.html">arctk/random/distribution/phys.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="generator_8hpp_source.html">arctk/random/generator.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="quality_8hpp_source.html">arctk/random/generator/quality.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="settings_8hpp_source.html">arctk/settings.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="format_8hpp_source.html">arctk/settings/format.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="str_8hpp_source.html">arctk/str.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="parse_8hpp_source.html">arctk/str/parse.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="printable_8hpp_source.html">arctk/str/printable.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="sys_8hpp_source.html">arctk/sys.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="args_8hpp_source.html">arctk/sys/args.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="file_8hpp_source.html">arctk/sys/file.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="app_8hpp_source.html">arctk/sys/file/app.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="in_8hpp_source.html">arctk/sys/file/in.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="out_8hpp_source.html">arctk/sys/file/out.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="term_8hpp_source.html">arctk/term.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="ansi_8hpp_source.html">arctk/term/ansi.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="utl_8hpp_source.html">arctk/utl.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="properties_8hpp_source.html">arctk/utl/properties.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="search_8hpp_source.html">arctk/utl/search.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for main.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -100,25 +122,47 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#src_2main_8cpp" alt=""/></div>
 <map name="src_2main_8cpp" id="src_2main_8cpp">
-<area shape="rect" id="node2" href="config_8hpp.html" title="arctk/config.hpp" alt="" coords="5,79,121,104"/>
-<area shape="rect" id="node4" href="debug_8hpp.html" title="arctk/debug.hpp" alt="" coords="1093,372,1210,397"/>
-<area shape="rect" id="node5" href="invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="836,445,1007,471"/>
-<area shape="rect" id="node8" href="location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="494,519,661,544"/>
-<area shape="rect" id="node17" href="exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="1574,519,1675,544"/>
-<area shape="rect" id="node18" href="error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="1741,592,1873,617"/>
-<area shape="rect" id="node19" href="success_8hpp.html" title="arctk/exit/success.hpp" alt="" coords="2263,592,2415,617"/>
-<area shape="rect" id="node20" href="macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="1954,445,2071,471"/>
-<area shape="rect" id="node21" href="utility_8hpp.html" title="arctk/macro/utility.hpp" alt="" coords="2084,519,2234,544"/>
-<area shape="rect" id="node22" href="settings_8hpp.html" title="arctk/settings.hpp" alt="" coords="2033,372,2159,397"/>
-<area shape="rect" id="node23" href="format_8hpp.html" title="arctk/settings/format.hpp" alt="" coords="2095,445,2263,471"/>
-<area shape="rect" id="node24" href="str_8hpp.html" title="arctk/str.hpp" alt="" coords="617,225,711,251"/>
-<area shape="rect" id="node25" href="parse_8hpp.html" title="arctk/str/parse.hpp" alt="" coords="536,299,668,324"/>
-<area shape="rect" id="node31" href="sys_8hpp.html" title="arctk/sys.hpp" alt="" coords="1280,79,1380,104"/>
-<area shape="rect" id="node32" href="args_8hpp.html" title="arctk/sys/args.hpp" alt="" coords="886,152,1016,177"/>
-<area shape="rect" id="node33" href="file_8hpp.html" title="arctk/sys/file.hpp" alt="" coords="1191,299,1311,324"/>
-<area shape="rect" id="node34" href="app_8hpp.html" title="arctk/sys/file/app.hpp" alt="" coords="1492,225,1639,251"/>
-<area shape="rect" id="node36" href="in_8hpp.html" title="arctk/sys/file/in.hpp" alt="" coords="1332,225,1466,251"/>
-<area shape="rect" id="node37" href="out_8hpp.html" title="arctk/sys/file/out.hpp" alt="" coords="1664,225,1806,251"/>
+<area shape="rect" id="node2" href="config_8hpp.html" title="arctk/config.hpp" alt="" coords="93,245,208,271"/>
+<area shape="rect" id="node4" href="consts_8hpp.html" title="arctk/consts.hpp" alt="" coords="539,399,658,424"/>
+<area shape="rect" id="node5" href="consts_2math_8hpp.html" title="arctk/consts/math.hpp" alt="" coords="229,472,381,497"/>
+<area shape="rect" id="node6" href="consts_2phys_8hpp.html" title="arctk/consts/phys.hpp" alt="" coords="592,472,742,497"/>
+<area shape="rect" id="node7" href="debug_8hpp.html" title="arctk/debug.hpp" alt="" coords="1891,472,2008,497"/>
+<area shape="rect" id="node8" href="invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="1864,545,2035,571"/>
+<area shape="rect" id="node11" href="location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="729,619,895,644"/>
+<area shape="rect" id="node17" href="exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="2274,619,2374,644"/>
+<area shape="rect" id="node18" href="error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="1918,692,2050,717"/>
+<area shape="rect" id="node19" href="success_8hpp.html" title="arctk/exit/success.hpp" alt="" coords="2586,692,2739,717"/>
+<area shape="rect" id="node20" href="macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="2898,545,3014,571"/>
+<area shape="rect" id="node21" href="utility_8hpp.html" title="arctk/macro/utility.hpp" alt="" coords="2966,619,3116,644"/>
+<area shape="rect" id="node22" href="math_8hpp.html" title="arctk/math.hpp" alt="" coords="1619,245,1728,271"/>
+<area shape="rect" id="node23" href="compare_8hpp.html" title="arctk/math/compare.hpp" alt="" coords="1071,325,1236,351"/>
+<area shape="rect" id="node24" href="container_8hpp.html" title="arctk/math/container.hpp" alt="" coords="1362,325,1529,351"/>
+<area shape="rect" id="node25" href="convert_8hpp.html" title="arctk/math/convert.hpp" alt="" coords="687,325,844,351"/>
+<area shape="rect" id="node26" href="pow_8hpp.html" title="arctk/math/pow.hpp" alt="" coords="1553,325,1690,351"/>
+<area shape="rect" id="node27" href="vec_8hpp.html" title="arctk/math/vec.hpp" alt="" coords="1988,399,2122,424"/>
+<area shape="rect" id="node28" href="vec2_8hpp.html" title="arctk/math/vec2.hpp" alt="" coords="1879,325,2020,351"/>
+<area shape="rect" id="node29" href="vec3_8hpp.html" title="arctk/math/vec3.hpp" alt="" coords="2145,325,2287,351"/>
+<area shape="rect" id="node30" href="vec4_8hpp.html" title="arctk/math/vec4.hpp" alt="" coords="1713,325,1855,351"/>
+<area shape="rect" id="node31" href="phys_8hpp.html" title="arctk/phys.hpp" alt="" coords="1594,79,1702,104"/>
+<area shape="rect" id="node32" href="particle_8hpp.html" title="arctk/phys/particle.hpp" alt="" coords="1545,159,1700,184"/>
+<area shape="rect" id="node33" href="random_8hpp.html" title="arctk/random.hpp" alt="" coords="249,79,375,104"/>
+<area shape="rect" id="node34" href="distribution_8hpp.html" title="arctk/random/distribution.hpp" alt="" coords="499,159,693,184"/>
+<area shape="rect" id="node35" href="random_2distribution_2math_8hpp.html" title="arctk/random/distribution\l/math.hpp" alt="" coords="384,239,552,277"/>
+<area shape="rect" id="node36" href="generator_8hpp.html" title="arctk/random/generator.hpp" alt="" coords="203,325,389,351"/>
+<area shape="rect" id="node37" href="random_2distribution_2phys_8hpp.html" title="arctk/random/distribution\l/phys.hpp" alt="" coords="575,239,742,277"/>
+<area shape="rect" id="node38" href="quality_8hpp.html" title="arctk/random/generator\l/quality.hpp" alt="" coords="144,152,304,191"/>
+<area shape="rect" id="node39" href="settings_8hpp.html" title="arctk/settings.hpp" alt="" coords="2742,399,2868,424"/>
+<area shape="rect" id="node40" href="format_8hpp.html" title="arctk/settings/format.hpp" alt="" coords="2736,472,2904,497"/>
+<area shape="rect" id="node41" href="str_8hpp.html" title="arctk/str.hpp" alt="" coords="2628,245,2722,271"/>
+<area shape="rect" id="node42" href="parse_8hpp.html" title="arctk/str/parse.hpp" alt="" coords="2462,325,2594,351"/>
+<area shape="rect" id="node43" href="printable_8hpp.html" title="arctk/str/printable.hpp" alt="" coords="2668,325,2817,351"/>
+<area shape="rect" id="node44" href="sys_8hpp.html" title="arctk/sys.hpp" alt="" coords="2538,79,2638,104"/>
+<area shape="rect" id="node45" href="args_8hpp.html" title="arctk/sys/args.hpp" alt="" coords="2503,159,2633,184"/>
+<area shape="rect" id="node46" href="term_8hpp.html" title="arctk/term.hpp" alt="" coords="3044,79,3151,104"/>
+<area shape="rect" id="node47" href="ansi_8hpp.html" title="arctk/term/ansi.hpp" alt="" coords="3005,159,3139,184"/>
+<area shape="rect" id="node48" href="utl_8hpp.html" title="arctk/utl.hpp" alt="" coords="1324,79,1418,104"/>
+<area shape="rect" id="node49" href="properties_8hpp.html" title="arctk/utl/properties.hpp" alt="" coords="1311,245,1468,271"/>
+<area shape="rect" id="node50" href="search_8hpp.html" title="arctk/utl/search.hpp" alt="" coords="1228,159,1366,184"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -165,7 +209,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 5 2018 16:34:10 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 10 2018 13:38:15 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

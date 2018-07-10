@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['invalid_5fcommand_5fline_5farguments',['INVALID_COMMAND_LINE_ARGUMENTS',['../namespacearc_1_1exit_1_1error.html#a4ce0ffad0e72e823fa3cccc62b525cac',1,'arc::exit::error']]],
-  ['invariant_5ffailure',['INVARIANT_FAILURE',['../namespacearc_1_1exit_1_1error.html#a9d9211de583bf15199f506e2944fdca2',1,'arc::exit::error']]]
+  ['g',['g',['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#abe6e4678f3cee77f59cb548bb5d94b40',1,'arc::math::Vec&lt; T, 3 &gt;::g()'],['../classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a03901b89831c9270ad60bf1934ddf087',1,'arc::math::Vec&lt; T, 4 &gt;::g()']]]
 ];
