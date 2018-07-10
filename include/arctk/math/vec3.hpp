@@ -141,10 +141,6 @@ namespace arc //! arctk namespace
             constexpr inline T    mag_sq() const noexcept;
             constexpr inline void normalise() noexcept;
             constexpr inline void rotate(const math::Vec<T, 3>& axis_, T ang_) noexcept;
-
-            //  -- Co-ordinate --
-            constexpr inline Vec<T, 3> to_polar() const noexcept;
-            constexpr inline Vec<T, 3> to_cart() const noexcept;
         };
 
 
@@ -712,46 +708,6 @@ namespace arc //! arctk namespace
             const double sin_theta = std::sin(ang_);
 
             *this = (*this * cos_theta) + ((axis ^ *this) * sin_theta) + ((axis * (axis * *this)) * (1.0 - cos_theta));
-        }
-
-
-        //  -- Co-ordinate --
-        /**
-         *  Convert the cartesian vector to a polar vector.
-         *
-         *  @tparam T   Type stored by the vec.
-         *
-         *  @return Vec in polar co-ordinate form.
-         */
-        template <typename T>
-        constexpr inline Vec<T, 3> Vec<T, 3>::to_polar() const noexcept
-        {
-            Vec<T, 3> polar;
-
-            polar.rho   = std::sqrt((x * x) + (y * y) + (z * z));
-            polar.theta = std::acos(z / polar.rho);
-            polar.phi   = std::atan2(y, x);
-
-            return (polar);
-        }
-
-        /**
-         *  Convert the polar vector to a cartesian vector.
-         *
-         *  @tparam T   Type stored by the vec.
-         *
-         *  @return Vec in cartesian co-ordinate form.
-         */
-        template <typename T>
-        constexpr inline Vec<T, 3> Vec<T, 3>::to_cart() const noexcept
-        {
-            Vec<T, 3> cart;
-
-            cart.x = rho * std::sin(theta) * std::cos(phi);
-            cart.y = rho * std::sin(theta) * std::sin(phi);
-            cart.z = rho * std::cos(theta);
-
-            return (cart);
         }
 
 
