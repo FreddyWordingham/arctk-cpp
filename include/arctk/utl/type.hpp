@@ -35,6 +35,22 @@ namespace arc //! arctk namespace
 
 
 
+            //  == STRUCTURES ==
+            //  -- Vector --
+            template <class T>
+            struct is_vector
+            {
+                static const bool value = false;
+            };
+
+            template <class T>
+            struct is_vector<std::vector<T>>
+            {
+                static const bool value = true;
+            };
+
+
+
         } // namespace type
     }     // namespace utl
 } // namespace arc
