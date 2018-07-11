@@ -116,7 +116,6 @@ namespace arc //! arctk namespace
         inline Table<A...>::Table(const std::vector<A>&... cols_) noexcept
           : _rows(init_rows(cols_...))
         {
-            //            static_assert(utl::properties::all_true<(utl::type::is_vector<B>::value)...>::value);
         }
 
         template <typename... A>
