@@ -75,7 +75,7 @@ namespace arc //! arctk namespace
         //  -- Constructors --
         template <typename... A>
         template <typename... B>
-        inline Table(const B&... cols_) noexcept
+        inline Table<A...>::Table(const B&... cols_) noexcept
           : _rows(init_rows(cols_))
         {
             static_assert(sizeof...(A) == sizeof...(B));
@@ -83,7 +83,7 @@ namespace arc //! arctk namespace
 
         //  -- Initialisation --
         template <typename... B>
-        inline std::vector<std::tuple<A...>> init_rows(const B&... cols_) noexcept
+        inline std::vector<std::tuple<A...>> Table<A...>::init_rows(const B&... cols_) noexcept
         {
             std::vector<std::tuple<A...>> rows;
 
