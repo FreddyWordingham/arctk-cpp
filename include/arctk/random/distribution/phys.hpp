@@ -44,8 +44,8 @@ namespace arc //! arctk namespace
 
                 //  == FUNCTION PROTOTYPES ==
                 //  -- Scattering --
-                inline vec3   isotropic(Generator* const rng_) noexcept;
-                inline double henyey_greenstein(Generator* const rng_, double g_) noexcept;
+                inline vec3   isotropic(Generator* rng_) noexcept;
+                inline double henyey_greenstein(Generator* rng_, double g_) noexcept;
 
 
 
