@@ -83,11 +83,15 @@ namespace arc //! arctk namespace
             static_assert(utl::properties::all_true<(utl::type::is_vector<B>::value)...>::value);
         }
 
+
         //  -- Initialisation --
         template <typename... A>
         template <typename... B>
         inline std::vector<std::tuple<A...>> Table<A...>::init_rows(const B&... cols_) noexcept
         {
+            static_assert(sizeof...(A) == sizeof...(B));
+            static_assert(utl::properties::all_true<(utl::type::is_vector<B>::value)...>::value);
+
             std::vector<std::tuple<A...>> rows;
 
             return (rows);
