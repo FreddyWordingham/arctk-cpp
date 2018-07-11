@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
-         *  Three by three mathematical square matrix class.
+         *  Three-by-three mathematical square matrix class.
          *
          *  @tparam T   Type stored by the mat.
          */
