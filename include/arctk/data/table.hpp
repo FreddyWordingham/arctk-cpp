@@ -82,6 +82,7 @@ namespace arc //! arctk namespace
         }
 
         //  -- Initialisation --
+        template <typename... A>
         template <typename... B>
         inline std::vector<std::tuple<A...>> Table<A...>::init_rows(const B&... cols_) noexcept
         {
