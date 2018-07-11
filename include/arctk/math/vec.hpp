@@ -28,6 +28,7 @@
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/settings.hpp>
 #include <arctk/str.hpp>
 
 
@@ -750,6 +751,16 @@ namespace arc //! arctk namespace
         inline std::string Vec<T, N>::str() noexcept
         {
             std::stringstream stream;
+
+            stream << settings::format::VEC_START;
+
+            stream << std::setw(settings::format::PRINT_WIDTH) << _data[0];
+            for (size_t i = 1; i < N; ++i)
+            {
+                stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << _data[i];
+            }
+
+            stream << settings::format::VEC_END;
 
             return (stream.str());
         }
