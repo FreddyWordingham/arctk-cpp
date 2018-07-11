@@ -211,7 +211,7 @@ namespace arc //! arctk namespace
              *
              *  @return Index of the first element of the container that is greater than the value given.
              */
-            template <typename C, typename T, typename IT>
+            template <typename C, typename T, typename I>
             inline size_t upper(const C& cont_, const T& val_) noexcept
             {
                 PRE(!cont_.empty());
