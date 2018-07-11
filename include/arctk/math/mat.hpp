@@ -109,9 +109,6 @@ namespace arc //! arctk namespace
             //  -- Getters --
             constexpr inline const std::array<Vec<T, N>, N>& data() const noexcept;
 
-            //  -- Printing --
-            constexpr inline std::string str(char delim_ = settings::DEFAULT_DELIM, size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
-
             //  -- Mathematical --
             constexpr inline T sum() const noexcept;
         };
@@ -699,45 +696,6 @@ namespace arc //! arctk namespace
         constexpr inline const std::array<Vec<T, N>, N>& Mat<T, N>::data() const noexcept
         {
             return (_data);
-        }
-
-
-        //  -- Printing --
-        /**
-         *  Form the matrix into a human readable string.
-         *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
-         *
-         *  @param  delim_  Delimiter character used to seperate consecutive values.
-         *  @param  width_  Print width allocated to each value.
-         *
-         *  @return Human readable string of the matrix.
-         */
-        template <typename T, size_t N>
-        constexpr inline std::string Mat<T, N>::str(const char delim_, const size_t width_) const noexcept
-        {
-            std::stringstream stream;
-
-            for (size_t i = 0; i < N; ++i)
-            {
-                if (i != 0)
-                {
-                    stream << '\n';
-                }
-
-                for (size_t j = 0; j < N; ++j)
-                {
-                    if (j != 0)
-                    {
-                        stream << delim_;
-                    }
-
-                    stream << std::setw(width_) << _data[i][j];
-                }
-            }
-
-            return (stream.str());
         }
 
 
