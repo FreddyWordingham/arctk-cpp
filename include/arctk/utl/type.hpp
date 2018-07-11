@@ -37,6 +37,11 @@ namespace arc //! arctk namespace
 
             //  == STRUCTURES ==
             //  -- Vector --
+            /**
+             *  Structure used to determine if a type is a vector.
+             *
+             *  @tparam T   Type stored by vector.
+             */
             template <class T>
             struct is_vector
             {
