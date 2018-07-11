@@ -145,6 +145,9 @@ namespace arc //! arctk namespace
             constexpr inline T    mag_sq() const noexcept;
             constexpr inline void normalise() noexcept;
             constexpr inline void rotate(const math::Vec<T, 3>& axis_, T ang_) noexcept;
+
+            //  -- Printing --
+            inline std::string str() noexcept override;
         };
 
 
