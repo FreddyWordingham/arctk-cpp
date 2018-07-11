@@ -50,6 +50,13 @@ namespace arc //! arctk namespace
             virtual inline ~Printable() noexcept = 0;
 
 
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Printable& operator=(const Printable&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Printable& operator=(Printable&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
+
+
             //  == METHODS ==
           public:
             //  -- Printing --
