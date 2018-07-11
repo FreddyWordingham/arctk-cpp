@@ -27,6 +27,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/exit.hpp>
 #include <arctk/settings.hpp>
 #include <arctk/str.hpp>
 #include <arctk/utl.hpp>
@@ -67,6 +68,7 @@ namespace arc //! arctk namespace
             //  -- Initialisation --
             template <typename T, typename... B>
             inline std::vector<std::tuple<A...>> init_rows(const std::vector<T>& first_col_, const B&... cols_) noexcept;
+            inline std::vector<std::tuple<A...>> init_rows(const std::string& serial_, char delim_) noexcept;
             template <size_t... I, typename... B>
             inline std::tuple<A...> init_row(size_t index_, std::index_sequence<I...> /*unused*/, const B&... cols_) noexcept;
 
@@ -131,6 +133,40 @@ namespace arc //! arctk namespace
             for (size_t i = 0; i < first_col_.size(); ++i)
             {
                 rows.emplace_back(init_row(i, std::make_index_sequence<sizeof...(B) + 1>{}, first_col_, cols_...));
+            }
+
+            return (rows);
+        }
+
+        template <typename... A>
+        inline std::vector<std::tuple<A...>> Table<A...>::init_rows(const std::string& serial_, const char delim_) noexcept
+        {
+            std::vector<std::tuple<A...>> rows;
+
+            std::stringstream serial_stream(serial_);
+            std::string       line;
+            while (std::getline(serial_stream, line))
+            {
+                std::vector<std::string> strs;
+                strs.reserve(sizeof...(A));
+
+                std::stringstream line_stream(line);
+                std::string       word;
+                while (std::getline(line_stream, word, delim_))
+                {
+                    strs.push_back(word);
+                }
+
+                if (strs.size() != sizeof...(A))
+                {
+                    std::cerr << "Unable to construct data table.\n"
+                              << "Line: `" << line << "`, does not contain " << sizeof...(A) << " elements as required.";
+
+                    std::exit(exit::error::FAILED_PARSE););
+                }
+
+
+                rows.emplace_back(str::parse::to<A...>(strs));
             }
 
             return (rows);
