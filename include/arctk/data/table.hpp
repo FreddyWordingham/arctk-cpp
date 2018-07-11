@@ -66,10 +66,10 @@ namespace arc //! arctk namespace
 
             //  -- Initialisation --
             template <typename T, typename... B>
-            inline std::vector<std::tuple<A...>> init_rows(const std::vector<T>& first_col_, const B&... cols_) noexcept;
+            inline std::vector<std::tuple<A...>> init_rows(const std::vector<T>& first_col_, const std::vector<B>&... cols_) noexcept;
             inline std::vector<std::tuple<A...>> init_rows(const std::string& serial_, char delim_) noexcept;
-            template <size_t... I, typename... B>
-            inline std::tuple<A...> init_row(size_t index_, std::index_sequence<I...> /*unused*/, const B&... cols_) noexcept;
+            template <size_t... I>
+            inline std::tuple<A...> init_row(size_t index_, std::index_sequence<I...> /*unused*/, const std::vector<A>&... cols_) noexcept;
 
 
             //  == OPERATORS ==
@@ -129,10 +129,8 @@ namespace arc //! arctk namespace
         //  -- Initialisation --
         template <typename... A>
         template <typename T, typename... B>
-        inline std::vector<std::tuple<A...>> Table<A...>::init_rows(const std::vector<T>& first_col_, const B&... cols_) noexcept
+        inline std::vector<std::tuple<A...>> Table<A...>::init_rows(const std::vector<T>& first_col_, const std::vector<B>&... cols_) noexcept
         {
-            static_assert(sizeof...(A) == (sizeof...(B) + 1));
-            static_assert(utl::properties::all_true<(utl::type::is_vector<B>::value)...>::value);
             (PRE(first_col_.size() == cols_.size()), ...);
 
             std::vector<std::tuple<A...>> rows;
@@ -180,8 +178,8 @@ namespace arc //! arctk namespace
         }
 
         template <typename... A>
-        template <size_t... I, typename... B>
-        inline std::tuple<A...> Table<A...>::init_row(const size_t index_, std::index_sequence<I...> /*unused*/, const B&... cols_) noexcept
+        template <size_t... I>
+        inline std::tuple<A...> Table<A...>::init_row(const size_t index_, std::index_sequence<I...> /*unused*/, const std::vector<A>&... cols_) noexcept
         {
             std::tuple<A...> tup;
 
