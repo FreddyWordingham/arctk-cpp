@@ -61,6 +61,8 @@ namespace arc //! arctk namespace
             //  -- Initialisation --
             template <typename T, typename... B>
             inline std::vector<std::tuple<A...>> init_rows(const std::vector<T>& first_col_, const B&... cols_) noexcept;
+            template <size_t... I, typename... B>
+            inline std::tuple<A...> init_row(size_t index_, std::index_sequence<I...> /*unused*/, const B&... cols_) noexcept;
 
 
             //  == OPERATORS ==
@@ -79,8 +81,7 @@ namespace arc //! arctk namespace
         inline Table<A...>::Table(const std::vector<T>& first_col_, const B&... cols_) noexcept
           : _rows(init_rows(first_col_, cols_...))
         {
-            static_assert(sizeof...(A) > 0);
-            static_assert(sizeof...(A) == sizeof...(B));
+            static_assert(sizeof...(A) == (sizeof...(B) + 1));
             static_assert(utl::properties::all_true<(utl::type::is_vector<B>::value)...>::value);
             (PRE(first_col_.size() == cols_.size()), ...);
         }
@@ -91,16 +92,30 @@ namespace arc //! arctk namespace
         template <typename T, typename... B>
         inline std::vector<std::tuple<A...>> Table<A...>::init_rows(const std::vector<T>& first_col_, const B&... cols_) noexcept
         {
-            static_assert(sizeof...(A) > 0);
-            static_assert(sizeof...(A) == sizeof...(B));
+            static_assert(sizeof...(A) == (sizeof...(B) + 1));
             static_assert(utl::properties::all_true<(utl::type::is_vector<B>::value)...>::value);
             (PRE(first_col_.size() == cols_.size()), ...);
 
             std::vector<std::tuple<A...>> rows;
             rows.reserve(first_col_.size());
 
+            for (size_t i = 0; i < first_col_.size(); ++i)
+            {
+                rows.emplace_back(init_row(i, std::make_index_sequence<sizeof...(B) + 1>{}, first_col_, cols_...));
+            }
 
             return (rows);
+        }
+
+        template <typename... A>
+        template <size_t... I, typename... B>
+        inline std::tuple<A...> Table<A...>::init_row(const size_t index_, std::index_sequence<I...> /*unused*/, const B&... cols_) noexcept
+        {
+            std::tuple<A...> tup;
+
+            ((std::get<I>(tup) = cols_[index_]), ...);
+
+            return (tup);
         }
 
 
