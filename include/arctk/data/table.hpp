@@ -27,6 +27,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/settings.hpp>
 #include <arctk/str.hpp>
 #include <arctk/utl.hpp>
 
@@ -61,6 +62,7 @@ namespace arc //! arctk namespace
             inline explicit Table(const std::vector<std::tuple<A...>>& rows_) noexcept;
             template <typename T, typename... B>
             inline Table(const std::vector<T>& first_col_, const B&... cols_) noexcept;
+            inline explicit Table(const std::string& serial_, char delim_ = settings::format::DELIMITER) noexcept;
 
             //  -- Initialisation --
             template <typename T, typename... B>
@@ -105,6 +107,12 @@ namespace arc //! arctk namespace
             static_assert(sizeof...(A) == (sizeof...(B) + 1));
             static_assert(utl::properties::all_true<(utl::type::is_vector<B>::value)...>::value);
             (PRE(first_col_.size() == cols_.size()), ...);
+        }
+
+        template <typename... A>
+        inline Table<A...>::Table(const std::string& serial_, const char delim_) noexcept
+          : _rows(init_rows(serial_, delim_))
+        {
         }
 
 
