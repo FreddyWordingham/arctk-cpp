@@ -566,8 +566,8 @@ namespace arc //! arctk namespace
          *
          *  @return Human readable string of the vec.
          */
-        template <typename T, size_t N>
-        inline std::string Vec<T, N>::str() noexcept
+        template <typename T>
+        inline std::string Vec<T, 2>::str() noexcept
         {
             std::stringstream stream;
 
