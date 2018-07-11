@@ -49,6 +49,14 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Contracts --
+            /**
+             *  Report a pre-condition failure.
+             *
+             *  @param  condition_  String of the pre-condition that was tested.
+             *  @param  file_       File location of the pre-condition failure.
+             *  @param  line_       Line location of the pre-condition failure.
+             *  @param  func_       Function location of the pre-condition failure.
+             */
             inline void precondition(const std::string& condition_, const std::string& file_, int line_, const std::string& func_) noexcept
             {
                 std::cerr << "Pre-condition  : `" << condition_ << "` failed.\n";
