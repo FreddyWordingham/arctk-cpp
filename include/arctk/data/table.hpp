@@ -165,7 +165,6 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::FAILED_PARSE);
                 }
 
-
                 rows.emplace_back(str::parse::to<A...>(strs));
             }
 
