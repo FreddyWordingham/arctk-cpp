@@ -70,6 +70,11 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
+            //  -- Access --
+            std::tuple<A...>&       operator[](size_t index_) noexcept;
+            const std::tuple<A...>& operator[](size_t index_) const noexcept;
+
+
             //  == METHODS ==
           public:
             //  -- Printing --
@@ -120,6 +125,40 @@ namespace arc //! arctk namespace
             ((std::get<I>(tup) = cols_[index_]), ...);
 
             return (tup);
+        }
+
+
+
+        //  == OPERATORS ==
+        //  -- Access --
+        /**
+         *  Access a const row of the table.
+         *
+         *  @tparam A   Types stored in data columns.
+         *
+         *  @param  index_  Index of the row to access.
+         *
+         *  @return Const reference to the requested row.
+         */
+        template <typename... A>
+        std::tuple<A...>& Table<A...>::operator[](const size_t index_) noexcept
+        {
+            return (_rows[index_]);
+        }
+
+        /**
+         *  Access a row of the table.
+         *
+         *  @tparam A   Types stored in data columns.
+         *
+         *  @param  index_  Index of the row to access.
+         *
+         *  @return Reference to the requested row.
+         */
+        template <typename... A>
+        const std::tuple<A...>& Table<A...>::operator[](const size_t index_) const noexcept
+        {
+            return (_rows[index_]);
         }
 
 
