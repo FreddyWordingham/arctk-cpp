@@ -37,11 +37,19 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Contracts --
+            inline void precondition(const std::string& condition, const std::string& file_, int line_, const std::string& func_) noexcept;
 
 
 
             //  == FUNCTIONS ==
             //  -- Contracts --
+            inline void precondition(const std::string& condition, const std::string& file_, int line_, const std::string& func_) noexcept
+            {
+                std::cerr << "Pre-condition  : `" << (#condition_) << "` failed.\n";
+                std::cerr << "Located at     :\n" << arc::debug::location::info(file_, line_, func_, 3) << '\n';
+
+                std::exit(arc::exit::error::PRE_CONDITION_FAILURE);
+            }
 
 
 
