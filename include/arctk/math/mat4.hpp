@@ -31,6 +31,7 @@
 #include <string>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/math/vec4.hpp>
 #include <arctk/settings.hpp>
 
@@ -644,7 +645,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Vec<T, 4>& Mat<T, 4>::operator[](const size_t index_) noexcept
         {
-            assert(index_ < 4);
+            PRE(index_ < 4);
 
             return ((&x)[index_]);
         }
@@ -663,7 +664,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline const Vec<T, 4>& Mat<T, 4>::operator[](const size_t index_) const noexcept
         {
-            assert(index_ < 4);
+            PRE(index_ < 4);
 
             return ((&x)[index_]);
         }
