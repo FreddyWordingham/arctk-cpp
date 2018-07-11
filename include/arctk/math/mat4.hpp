@@ -108,6 +108,9 @@ namespace arc //! arctk namespace
           public:
             //  -- Mathematical --
             constexpr inline T sum() const noexcept;
+
+            //  -- Printing --
+            inline std::string str() noexcept override;
         };
 
 
@@ -683,6 +686,32 @@ namespace arc //! arctk namespace
         constexpr inline T Mat<T, 4>::sum() const noexcept
         {
             return (x.x + x.y + x.z + x.w + y.x + y.y + y.z + y.w + z.x + z.y + z.z + z.w + w.x + w.y + w.z + w.w);
+        }
+
+
+        //  -- Printing --
+        /**
+         *  Create a human readable string of the mat.
+         *
+         *  @return Human readable string of the mat.
+         */
+        template <typename T>
+        inline std::string Mat<T, 4>::str() noexcept
+        {
+            std::stringstream stream;
+
+            stream << settings::format::VEC_START;
+            stream << settings::format::VEC_START << std::setw(settings::format::PRINT_WIDTH) << x.x << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << x.y << settings::format::DELIMITER
+                   << std::setw(settings::format::PRINT_WIDTH) << x.z << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << x.w << settings::format::VEC_END << '\n';
+            stream << settings::format::DELIMITER << settings::format::VEC_START << std::setw(settings::format::PRINT_WIDTH) << y.x << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << y.y << settings::format::DELIMITER
+                   << std::setw(settings::format::PRINT_WIDTH) << y.z << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << y.w << settings::format::VEC_END << '\n';
+            stream << settings::format::DELIMITER << settings::format::VEC_START << std::setw(settings::format::PRINT_WIDTH) << z.x << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << z.y << settings::format::DELIMITER
+                   << std::setw(settings::format::PRINT_WIDTH) << z.z << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << z.w << settings::format::VEC_END << '\n';
+            stream << settings::format::DELIMITER << settings::format::VEC_START << std::setw(settings::format::PRINT_WIDTH) << w.x << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << w.y << settings::format::DELIMITER
+                   << std::setw(settings::format::PRINT_WIDTH) << w.z << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << w.w << settings::format::VEC_END;
+            stream << settings::format::VEC_END;
+
+            return (stream.str());
         }
 
 
