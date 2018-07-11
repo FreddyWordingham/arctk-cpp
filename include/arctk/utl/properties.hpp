@@ -45,6 +45,15 @@ namespace arc //! arctk namespace
             template <bool...>
             struct bool_pack;
 
+
+
+            //  == ALIASES ==
+            //  -- Bool-Pack --
+            /**
+             *  Alias used to determine if all values of a bool_pack are true.
+             *
+             *  @tparam A   Pack of boolean values.
+             */
             template <bool... A>
             using all_true = std::is_same<bool_pack<A..., true>, bool_pack<true, A...>>;
 
