@@ -45,7 +45,9 @@ namespace arc //! arctk namespace
             template <class T>
             struct is_vector
             {
+                //  == FIELDS ==
               public:
+                //  -- Properties --
                 static const bool value = false; //!< True if T is a vector.
             };
 
@@ -57,7 +59,9 @@ namespace arc //! arctk namespace
             template <class T>
             struct is_vector<std::vector<T>>
             {
+                //  == FIELDS ==
               public:
+                //  -- Properties --
                 static const bool value = true; //!< True if T is a vector.
             };
 
