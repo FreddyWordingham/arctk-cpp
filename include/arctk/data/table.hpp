@@ -21,6 +21,8 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <tuple>
+
 //  -- Arctk --
 
 
@@ -45,6 +47,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
+            std::vector<std::tuple<A...>> _rows; //!< Table row data.
 
 
             //  == INSTANTIATION ==
