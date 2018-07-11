@@ -23,6 +23,7 @@
 //  -- Arctk --
 #include <arctk/utl/properties.hpp>
 #include <arctk/utl/search.hpp>
+#include <arctk/utl/type.hpp>
 
 
 
