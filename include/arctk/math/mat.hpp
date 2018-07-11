@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
+#include <iomanip>
 #include <sstream>
 #include <string>
 
