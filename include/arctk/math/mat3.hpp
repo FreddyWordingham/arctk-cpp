@@ -27,6 +27,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <iomanip>
 #include <sstream>
 #include <string>
 
@@ -34,6 +35,7 @@
 #include <arctk/debug.hpp>
 #include <arctk/math/vec3.hpp>
 #include <arctk/settings.hpp>
+#include <arctk/str.hpp>
 
 
 
