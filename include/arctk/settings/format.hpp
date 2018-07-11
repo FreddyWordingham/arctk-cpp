@@ -39,6 +39,8 @@ namespace arc //! arctk namespace
             constexpr const char CONTAINER_END   = ']'; //!< Character used to indicate container start point.
             constexpr const char TUPLE_START     = '('; //!< Character used to indicate tuple end point.
             constexpr const char TUPLE_END       = ')'; //!< Character used to indicate tuple start point.
+            constexpr const char VEC_START       = '{'; //!< Character used to indicate vec end point.
+            constexpr const char VEC_END         = '}'; //!< Character used to indicate vec start point.
 
 
 
