@@ -65,6 +65,14 @@ namespace arc //! arctk namespace
                 std::exit(exit::error::PRE_CONDITION_FAILURE);
             }
 
+            /**
+             *  Report a post-condition failure.
+             *
+             *  @param  condition_  String of the post-condition that was tested.
+             *  @param  file_       File location of the post-condition failure.
+             *  @param  line_       Line location of the post-condition failure.
+             *  @param  func_       Function location of the post-condition failure.
+             */
             inline void postcondition(const std::string& condition_, const std::string& file_, int line_, const std::string& func_) noexcept
             {
                 std::cerr << "Post-condition : `" << condition_ << "` failed.\n";
