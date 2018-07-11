@@ -79,6 +79,7 @@ namespace arc //! arctk namespace
         inline Table<A...>::Table(const B&... cols_) noexcept
           : _rows(init_rows(cols_...))
         {
+            static_assert(sizeof...(A) > 0);
             static_assert(sizeof...(A) == sizeof...(B));
             static_assert(utl::properties::all_true<(utl::type::is_vector<B>::value)...>::value);
         }
@@ -93,6 +94,7 @@ namespace arc //! arctk namespace
             static_assert(utl::properties::all_true<(utl::type::is_vector<B>::value)...>::value);
 
             std::vector<std::tuple<A...>> rows;
+            rows.reserve();
 
             return (rows);
         }
