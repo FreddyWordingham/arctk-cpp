@@ -130,6 +130,17 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
+        /**
+         *  Initialise the vector of data rows.
+         *
+         *  @tparam T   Type stored by first vector.
+         *  @tparam B   Types stored by remaining vectors.
+         *
+         *  @param  first_col_  First vector used to form the first column.
+         *  @param  cols_       Remaining vectors used to form remaining columns.
+         *
+         *  @return Initialised vector of table rows.
+         */
         template <typename... A>
         template <typename T, typename... B>
         inline std::vector<std::tuple<A...>> Table<A...>::init_rows(const std::vector<T>& first_col_, const std::vector<B>&... cols_) noexcept
