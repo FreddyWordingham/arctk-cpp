@@ -69,14 +69,7 @@
  *
  *  @param  condition_  Condition to be checked.
  */
-#define PRE(condition_)                                                                                           \
-    if (!(condition_))                                                                                            \
-    {                                                                                                             \
-        std::cerr << "Pre-condition  : `" << (#condition_) << "` failed.\n";                                      \
-        std::cerr << "Located at     :\n" << arc::debug::location::info(__FILE__, __LINE__, __func__, 2) << '\n'; \
-                                                                                                                  \
-        std::exit(arc::exit::error::PRE_CONDITION_FAILURE);                                                       \
-    }
+#define PRE(condition_) (void)((EX) || (contract::precondition(#condition, __FILE__, __LINE__), 0))
 
 /**
  *  Define a post-condition to be checked at function exit.
@@ -85,14 +78,7 @@
  *
  *  @param  condition_  Condition to be checked.
  */
-#define POST(condition_)                                                                                          \
-    if (!(condition_))                                                                                            \
-    {                                                                                                             \
-        std::cerr << "Post-condition : `" << (#condition_) << "` failed.\n";                                      \
-        std::cerr << "Located at     :\n" << arc::debug::location::info(__FILE__, __LINE__, __func__, 2) << '\n'; \
-                                                                                                                  \
-        std::exit(arc::exit::error::POST_CONDITION_FAILURE);                                                      \
-    }
+#define POST(condition_) (void)((EX) || (contract::postcondition(#condition, __FILE__, __LINE__), 0))
 
 /**
  *  Define an invariant to be checked at function exit.
