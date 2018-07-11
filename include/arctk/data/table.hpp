@@ -109,11 +109,9 @@ namespace arc //! arctk namespace
         /**
          *  Construct a table from data vector columns.
          *
-         *  @tparam T   Type stored by first vector.
-         *  @tparam B   Remaining types stored in vectors.
+         *  @tparam B   Types stored in data vector columns.
          *
-         *  @param  first_  First vector used to construct table.
-         *  @param  vecs_   Remaining vectors used to construct table.
+         *  @param  cols_   Vector columns used to construct table.
          */
         template <typename... A>
         template <typename... B>
