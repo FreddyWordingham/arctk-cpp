@@ -23,6 +23,8 @@
 //  -- Std --
 #include <array>
 #include <cmath>
+#include <sstream>
+#include <string>
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
@@ -123,6 +125,9 @@ namespace arc //! arctk namespace
             constexpr inline T    mag() const noexcept;
             constexpr inline T    mag_sq() const noexcept;
             constexpr inline void normalise() noexcept;
+
+            //  -- Printing --
+            inline std::string str() noexcept override;
         };
 
 
@@ -732,6 +737,21 @@ namespace arc //! arctk namespace
             }
 
             POST(normalised());
+        }
+
+
+        //  -- Printing --
+        /**
+         *  Create a human readable string of the vec.
+         *
+         *  @return Human readable string of the vec.
+         */
+        template <typename T, size_t N>
+        inline std::string Vec<T, N>::str() noexcept
+        {
+            std::stringstream stream;
+
+            return (stream.str());
         }
 
 
