@@ -28,9 +28,13 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cmath>
+#include <sstream>
+#include <string>
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/settings.hpp>
+#include <arctk/str.hpp>
 
 
 
@@ -49,7 +53,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored by the vec.
          */
         template <typename T>
-        class Vec<T, 4>
+        class Vec<T, 4> : public str::Printable
         {
             //  == FIELDS ==
           public:
