@@ -95,6 +95,11 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a vector of tuples.
+         *
+         *  @param  rows_   Vector of tuples to form rows.
+         */
         template <typename... A>
         inline Table<A...>::Table(const std::vector<std::tuple<A...>>& rows_) noexcept
           : _rows(rows_)
