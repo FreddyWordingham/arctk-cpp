@@ -26,6 +26,7 @@
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/str.hpp>
 
 
 
@@ -45,7 +46,7 @@ namespace arc //! arctk namespace
          *  @tparam N   Size of the vec.
          */
         template <typename T, size_t N>
-        class Vec
+        class Vec : public str::Printable
         {
             //  == ASSERTIONS ==
             //  -- Size --
