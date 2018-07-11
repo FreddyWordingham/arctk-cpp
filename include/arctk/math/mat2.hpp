@@ -34,6 +34,7 @@
 #include <arctk/debug.hpp>
 #include <arctk/math/vec2.hpp>
 #include <arctk/settings.hpp>
+#include <arctk/str.hpp>
 
 
 
@@ -52,7 +53,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored by the mat.
          */
         template <typename T>
-        class Mat<T, 2>
+        class Mat<T, 2> : public str::Printable
         {
             //  == FIELDS ==
           public:
