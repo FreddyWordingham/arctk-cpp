@@ -2,7 +2,7 @@ var searchData=
 [
   ['_5fargv',['_argv',['../classarc_1_1sys_1_1_args.html#a8347075c84ef34938bd1d012f9426274',1,'arc::sys::Args']]],
   ['_5fcall_5fstr',['_call_str',['../classarc_1_1sys_1_1_args.html#aca02746b0680ebe61a5075702569a3c2',1,'arc::sys::Args']]],
-  ['_5fdata',['_data',['../classarc_1_1math_1_1_vec.html#ae7efd1981f42e1d32f5c61beef055d7c',1,'arc::math::Vec']]],
+  ['_5fdata',['_data',['../classarc_1_1math_1_1_mat.html#a45938c6cb757a44a7391d5c7314c25a8',1,'arc::math::Mat::_data()'],['../classarc_1_1math_1_1_vec.html#ae7efd1981f42e1d32f5c61beef055d7c',1,'arc::math::Vec::_data()']]],
   ['_5fdir',['_dir',['../classarc_1_1phys_1_1_particle.html#aae8caa3df02cce90d2892628e8f28d64',1,'arc::phys::Particle']]],
   ['_5fexpr',['_expr',['../classarc_1_1debug_1_1_invariant.html#a659cdb2b5f3a10daf60514264c8827ed',1,'arc::debug::Invariant']]],
   ['_5fexpr_5fpre',['_expr_pre',['../classarc_1_1debug_1_1_invariant.html#a8685fecb8518ecad4c4881e12c322def',1,'arc::debug::Invariant']]],

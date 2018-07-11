@@ -1,5 +1,8 @@
 <map id="include/arctk/math.hpp" name="include/arctk/math.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="35,239,132,264"/>
-<area shape="rect" id="node3" href="$particle_8hpp.html" title="include/arctk/phys\l/particle.hpp" alt="" coords="70,79,198,117"/>
-<area shape="rect" id="node4" href="$phys_8hpp.html" title="include/arctk/phys.hpp" alt="" coords="121,165,275,191"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="134,325,231,351"/>
+<area shape="rect" id="node3" href="$particle_8hpp.html" title="include/arctk/phys\l/particle.hpp" alt="" coords="30,165,158,204"/>
+<area shape="rect" id="node5" href="$random_2distribution_2phys_8hpp.html" title="include/arctk/random\l/distribution/phys.hpp" alt="" coords="167,79,314,117"/>
+<area shape="rect" id="node4" href="$phys_8hpp.html" title="include/arctk/phys.hpp" alt="" coords="49,252,203,277"/>
+<area shape="rect" id="node6" href="$distribution_8hpp.html" title="include/arctk/random\l/distribution.hpp" alt="" coords="277,165,422,204"/>
+<area shape="rect" id="node7" href="$random_8hpp.html" title="include/arctk/random.hpp" alt="" coords="328,252,499,277"/>
 </map>

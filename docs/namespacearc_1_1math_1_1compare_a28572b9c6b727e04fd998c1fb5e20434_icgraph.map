@@ -1,4 +1,5 @@
 <map id="arc::math::compare::zero" name="arc::math::compare::zero">
-<area shape="rect" id="node2" href="$namespacearc_1_1math_1_1compare.html#a928238089f4f18be7e7409feb9a74cde" title="arc::math::compare\l::equal" alt="" coords="190,5,326,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1phys_1_1_particle.html#ab46d3245680b0cac02e15de315327773" title="arc::phys::Particle\l::rotate" alt="" coords="194,68,321,107"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1random_1_1distribution_1_1phys.html#af94175611e15d358c482129d72b57529" title="arc::random::distribution\l::phys::henyey_greenstein" alt="" coords="190,5,367,44"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1compare.html#a928238089f4f18be7e7409feb9a74cde" title="arc::math::compare\l::equal" alt="" coords="210,68,346,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1phys_1_1_particle.html#ab46d3245680b0cac02e15de315327773" title="arc::phys::Particle\l::rotate" alt="" coords="214,131,342,169"/>
 </map>

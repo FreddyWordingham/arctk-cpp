@@ -68,6 +68,8 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">arc::random::distribution::phys Namespace Reference</div>  </div>
 </div><!--header-->
@@ -75,12 +77,122 @@ $(function() {
 
 <p>physics namespace  
 <a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a3439e18b3d024642ca8a2f2190a9fdbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1random_1_1distribution_1_1phys.html#a3439e18b3d024642ca8a2f2190a9fdbc">isotropic</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">Generator</a> *rng_) noexcept</td></tr>
+<tr class="separator:a3439e18b3d024642ca8a2f2190a9fdbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af94175611e15d358c482129d72b57529"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1random_1_1distribution_1_1phys.html#af94175611e15d358c482129d72b57529">henyey_greenstein</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">Generator</a> *rng_, double g_) noexcept</td></tr>
+<tr class="separator:af94175611e15d358c482129d72b57529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>physics namespace </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="af94175611e15d358c482129d72b57529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af94175611e15d358c482129d72b57529">&#9670;&nbsp;</a></span>henyey_greenstein()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double arc::random::distribution::phys::henyey_greenstein </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarc_1_1random_1_1_generator.html">Generator</a> *const&#160;</td>
+          <td class="paramname"><em>rng_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>g_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draw a value from the Henyey-Greenstein phase function. Function description can be found at: <a href="https://www.astro.umd.edu/~jph/HG_note.pdf">https://www.astro.umd.edu/~jph/HG_note.pdf</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rng_</td><td><a class="el" href="classarc_1_1random_1_1_generator.html">Generator</a> used to draw base values from. </td></tr>
+    <tr><td class="paramname">g_</td><td>Asymmetry-parameter.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>g_ must be between -1.0 and +1.0 inclusively.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Angle drawn from Henyey-Greenstein phase function. </dd></dl>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespacearc_1_1random_1_1distribution_1_1phys_af94175611e15d358c482129d72b57529_cgraph.png" border="0" usemap="#namespacearc_1_1random_1_1distribution_1_1phys_af94175611e15d358c482129d72b57529_cgraph" alt=""/></div>
+<map name="namespacearc_1_1random_1_1distribution_1_1phys_af94175611e15d358c482129d72b57529_cgraph" id="namespacearc_1_1random_1_1distribution_1_1phys_af94175611e15d358c482129d72b57529_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="230,5,367,44"/>
+<area shape="rect" id="node3" href="namespacearc_1_1math_1_1pow.html#a673982111327d6a2597e9a381009ce4d" title="arc::math::pow::sq" alt="" coords="233,68,364,93"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3439e18b3d024642ca8a2f2190a9fdbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3439e18b3d024642ca8a2f2190a9fdbc">&#9670;&nbsp;</a></span>isotropic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::random::distribution::phys::isotropic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarc_1_1random_1_1_generator.html">Generator</a> *const&#160;</td>
+          <td class="paramname"><em>rng_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Generate a random isotropic unit vector.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rng_</td><td><a class="el" href="classarc_1_1random_1_1_generator.html">Generator</a> used to draw base values from.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Random isotropic unit vector. </dd></dl>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespacearc_1_1random_1_1distribution_1_1phys_a3439e18b3d024642ca8a2f2190a9fdbc_cgraph.png" border="0" usemap="#namespacearc_1_1random_1_1distribution_1_1phys_a3439e18b3d024642ca8a2f2190a9fdbc_cgraph" alt=""/></div>
+<map name="namespacearc_1_1random_1_1distribution_1_1phys_a3439e18b3d024642ca8a2f2190a9fdbc_cgraph" id="namespacearc_1_1random_1_1distribution_1_1phys_a3439e18b3d024642ca8a2f2190a9fdbc_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1math_1_1pow.html#a673982111327d6a2597e9a381009ce4d" title="arc::math::pow::sq" alt="" coords="218,12,348,37"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 10 2018 13:38:15 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 11 2018 15:58:57 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

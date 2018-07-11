@@ -1,3 +1,12 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html" title="arc::math::Vec\&lt; T, 3 \&gt;" alt="" coords="5,5,156,31"/>
+<area shape="rect" id="node1" href="$classarc_1_1str_1_1_printable.html" title="arc::str::Printable" alt="" coords="5,203,127,228"/>
+<area shape="rect" id="node2" href="$classarc_1_1math_1_1_mat.html" title="arc::math::Mat\&lt; T, N \&gt;" alt="" coords="191,5,344,31"/>
+<area shape="rect" id="node3" href="$classarc_1_1math_1_1_mat_3_01_t_00_012_01_4.html" title="arc::math::Mat\&lt; T, 2 \&gt;" alt="" coords="192,55,343,80"/>
+<area shape="rect" id="node4" href="$classarc_1_1math_1_1_mat_3_01_t_00_013_01_4.html" title="arc::math::Mat\&lt; T, 3 \&gt;" alt="" coords="192,104,343,129"/>
+<area shape="rect" id="node5" href="$classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html" title="arc::math::Mat\&lt; T, 4 \&gt;" alt="" coords="192,153,343,179"/>
+<area shape="rect" id="node6" href="$classarc_1_1math_1_1_vec.html" title="arc::math::Vec\&lt; T, N \&gt;" alt="" coords="191,203,344,228"/>
+<area shape="rect" id="node7" href="$classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html" title="arc::math::Vec\&lt; T, 2 \&gt;" alt="" coords="192,252,343,277"/>
+<area shape="rect" id="node8" href="$classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html" title="arc::math::Vec\&lt; T, 3 \&gt;" alt="" coords="192,301,343,327"/>
+<area shape="rect" id="node9" href="$classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html" title="arc::math::Vec\&lt; T, 4 \&gt;" alt="" coords="192,351,343,376"/>
+<area shape="rect" id="node10" href="$classarc_1_1math_1_1_vec.html" title="arc::math::Vec\&lt; double, 3 \&gt;" alt="" coords="175,400,360,425"/>
 </map>
