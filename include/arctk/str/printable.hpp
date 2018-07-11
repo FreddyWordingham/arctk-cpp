@@ -69,6 +69,12 @@ namespace arc //! arctk namespace
 
 
 
+        //  == INSTANTIATION ==
+        //  -- Destructors --
+        inline Printable::~Printable() noexcept = default;
+
+
+
         //  == METHODS ==
         //  -- Saving --
         /**
