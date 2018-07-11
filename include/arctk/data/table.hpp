@@ -58,6 +58,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline explicit Table(const std::vector<std::tuple<A...>>& rows_) noexcept;
             template <typename T, typename... B>
             inline explicit Table(const std::vector<T>& first_col_, const B&... cols_) noexcept;
 
@@ -90,6 +91,12 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        template <typename... A>
+        inline Table<A...>::Table(const std::vector<std::tuple<A...>>& rows_) noexcept
+          : _rows(rows_)
+        {
+        }
+
         template <typename... A>
         template <typename T, typename... B>
         inline Table<A...>::Table(const std::vector<T>& first_col_, const B&... cols_) noexcept
