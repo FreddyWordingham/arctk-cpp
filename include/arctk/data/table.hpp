@@ -21,6 +21,8 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <sstream>
+#include <string>
 #include <tuple>
 #include <vector>
 
@@ -70,7 +72,8 @@ namespace arc //! arctk namespace
           public:
             //  == METHODS ==
           public:
-            //  -- Getters --
+            //  -- Printing --
+            inline std::string str() noexcept override;
         };
 
 
@@ -117,6 +120,28 @@ namespace arc //! arctk namespace
             ((std::get<I>(tup) = cols_[index_]), ...);
 
             return (tup);
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Printing --
+        template <typename... A>
+        inline std::string Table<A...>::str() noexcept
+        {
+            std::stringstream stream;
+
+            for (size_t i = 0; i < _rows.size(); ++i)
+            {
+                if (i != 0)
+                {
+                    stream << '\n';
+                }
+
+                stream << str::parse::from(_rows[i], false);
+            }
+
+            return (stream.str());
         }
 
 
