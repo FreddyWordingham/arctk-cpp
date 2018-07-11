@@ -37,6 +37,16 @@ namespace arc //! arctk namespace
 
 
 
+            //  == STRUCTURES ==
+            //  -- Properties --
+            template <bool...>
+            struct bool_pack;
+
+            template <bool... A>
+            using all_true = std::is_same<bool_pack<A..., true>, bool_pack<true, A...>>;
+
+
+
             //  == FUNCTION PROTOTYPES ==
             //  -- Contents --
             template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
