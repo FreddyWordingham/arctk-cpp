@@ -1,6 +1,6 @@
 /**
  *  @file   arctk/math/mat2.hpp
- *  @date   10/07/2018
+ *  @date   11/07/2018
  *  @author Freddy Wordingham
  *
  *  Mathematical two-by-two matrix class.
