@@ -39,6 +39,9 @@ namespace arc //! arctk namespace
 
             //  == STRUCTURES ==
             //  -- Properties --
+            /**
+             *  Structure used to store a pack of boolean values.
+             */
             template <bool...>
             struct bool_pack;
 
