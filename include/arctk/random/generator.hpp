@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Seed --
-            static uint64_t _next_seed; //!< Value of the next seed to be used.
+            static uint64_t _next_seed; //!< Value of the next seed to be used. // NOLINT
 
           protected:
             //  -- Seed --
