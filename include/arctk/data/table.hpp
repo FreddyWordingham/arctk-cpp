@@ -56,6 +56,10 @@ namespace arc //! arctk namespace
             template <typename... B>
             inline explicit Table(const B&... cols_) noexcept;
 
+            //  -- Initialisation --
+            template <typename... B>
+            inline std::vector<std::tuple<A...>> init_rows(const B&... cols_) noexcept;
+
 
             //  == OPERATORS ==
           public:
@@ -74,6 +78,15 @@ namespace arc //! arctk namespace
           : _rows(init_rows(cols_))
         {
             static_assert(sizeof...(A) == sizeof...(B));
+        }
+
+        //  -- Initialisation --
+        template <typename... B>
+        inline std::vector<std::tuple<A...>> init_rows(const B&... cols_) noexcept
+        {
+            std::vector<std::tuple<A...>> rows;
+
+            return (rows);
         }
 
 
