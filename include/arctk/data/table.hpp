@@ -61,8 +61,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline explicit Table(const std::vector<std::tuple<A...>>& rows_) noexcept;
-            template <typename T, typename... B>
-            inline Table(const std::vector<T>& first_col_, const B&... cols_) noexcept;
+            template <typename... B>
+            inline Table(const B&... cols_) noexcept;
             inline explicit Table(const std::string& serial_, char delim_ = settings::format::DELIMITER) noexcept;
 
             //  -- Initialisation --
@@ -106,14 +106,22 @@ namespace arc //! arctk namespace
         {
         }
 
+        /**
+         *  Construct a table from data vector columns.
+         *
+         *  @tparam T   Type stored by first vector.
+         *  @tparam B   Remaining types stored in vectors.
+         *
+         *  @param  first_  First vector used to construct table.
+         *  @param  vecs_   Remaining vectors used to construct table.
+         */
         template <typename... A>
-        template <typename T, typename... B>
-        inline Table<A...>::Table(const std::vector<T>& first_col_, const B&... cols_) noexcept
-          : _rows(init_rows(first_col_, cols_...))
+        template <typename... B>
+        inline Table<A...>::Table(const B&... cols_) noexcept
+          : _rows(init_rows(cols_...))
         {
-            static_assert(sizeof...(A) == (sizeof...(B) + 1));
+            static_assert(sizeof...(A) == sizeof...(B));
             static_assert(utl::properties::all_true<(utl::type::is_vector<B>::value)...>::value);
-            (PRE(first_col_.size() == cols_.size()), ...);
         }
 
         template <typename... A>
