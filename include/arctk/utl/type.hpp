@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
             template <class T>
             struct is_vector
             {
-                static const bool value = false;
+                static const bool value = false; //!< True if T is a vector.
             };
 
             /**
