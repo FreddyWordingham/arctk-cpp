@@ -18,6 +18,7 @@
 #include <arctk/data.hpp>
 #include <arctk/data/table.hpp>
 #include <arctk/debug.hpp>
+#include <arctk/debug/contract.hpp>
 #include <arctk/debug/invariant.hpp>
 #include <arctk/debug/location.hpp>
 #include <arctk/exit.hpp>
