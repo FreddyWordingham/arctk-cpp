@@ -39,7 +39,7 @@
  *
  *  @param  condition_  Condition to be checked.
  */
-#define PRE(condition_) ((void)0)
+#define PRE(condition_)
 
 /**
  *  Define a post-condition to be checked at function exit.
@@ -48,7 +48,7 @@
  *
  *  @param  condition_  Condition to be checked.
  */
-#define POST(condition_) ((void)0)
+#define POST(condition_)
 
 /**
  *  Define an invariant to be checked at function exit.
@@ -57,7 +57,7 @@
  *
  *  @param  condition_  Condition to be checked.
  */
-#define INVAR(condition_) ((void)0)
+#define INVAR(condition_)
 
 #else
 

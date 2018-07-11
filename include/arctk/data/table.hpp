@@ -55,12 +55,12 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            template <typename... B>
-            inline explicit Table(const B&... cols_) noexcept;
+            template <typename T, typename... B>
+            inline explicit Table(const std::vector<T>& first_col_, const B&... cols_) noexcept;
 
             //  -- Initialisation --
-            template <typename... B>
-            inline std::vector<std::tuple<A...>> init_rows(const B&... cols_) noexcept;
+            template <typename T, typename... B>
+            inline std::vector<std::tuple<A...>> init_rows(const std::vector<T>& first_col_, const B&... cols_) noexcept;
 
 
             //  == OPERATORS ==
@@ -75,9 +75,9 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <typename... A>
-        template <typename... B>
-        inline Table<A...>::Table(const B&... cols_) noexcept
-          : _rows(init_rows(cols_...))
+        template <typename T, typename... B>
+        inline Table<A...>::Table(const std::vector<T>& first_col_, const B&... cols_) noexcept
+          : _rows(init_rows(first_col_, cols_...))
         {
             static_assert(sizeof...(A) > 0);
             static_assert(sizeof...(A) == sizeof...(B));
@@ -87,14 +87,15 @@ namespace arc //! arctk namespace
 
         //  -- Initialisation --
         template <typename... A>
-        template <typename... B>
-        inline std::vector<std::tuple<A...>> Table<A...>::init_rows(const B&... cols_) noexcept
+        template <typename T, typename... B>
+        inline std::vector<std::tuple<A...>> Table<A...>::init_rows(const std::vector<T>& first_col_, const B&... cols_) noexcept
         {
             static_assert(sizeof...(A) == sizeof...(B));
             static_assert(utl::properties::all_true<(utl::type::is_vector<B>::value)...>::value);
 
+            (PRE(first_col_.size() == cols_.size()), ...);
+
             std::vector<std::tuple<A...>> rows;
-            rows.reserve();
 
             return (rows);
         }
