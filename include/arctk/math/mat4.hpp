@@ -27,6 +27,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <iomanip>
 #include <sstream>
 #include <string>
 
@@ -34,6 +35,7 @@
 #include <arctk/debug.hpp>
 #include <arctk/math/vec4.hpp>
 #include <arctk/settings.hpp>
+#include <arctk/str.hpp>
 
 
 
@@ -52,7 +54,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored by the mat.
          */
         template <typename T>
-        class Mat<T, 4>
+        class Mat<T, 4> : public str::Printable
         {
             //  == FIELDS ==
           public:
