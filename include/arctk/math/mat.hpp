@@ -655,7 +655,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline Vec<T, N>& Mat<T, N>::operator[](const size_t index_) noexcept
         {
-            assert(index_ < N);
+            PRE(index_ < N);
 
             return (_data[index_]);
         }
@@ -675,7 +675,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline const Vec<T, N>& Mat<T, N>::operator[](const size_t index_) const noexcept
         {
-            assert(index_ < N);
+            PRE(index_ < N);
 
             return (_data[index_]);
         }
