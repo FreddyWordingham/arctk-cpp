@@ -25,6 +25,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/utl.hpp>
 
 
 
@@ -79,6 +80,7 @@ namespace arc //! arctk namespace
           : _rows(init_rows(cols_...))
         {
             static_assert(sizeof...(A) == sizeof...(B));
+            static_assert(utl::properties::all_true<(utl::type::is_vector<B>::value)...>::value);
         }
 
         //  -- Initialisation --
