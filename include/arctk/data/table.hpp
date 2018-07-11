@@ -77,6 +77,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline const std::vector<std::tuple<A...>>& rows() const noexcept;
+            template <size_t I>
+            inline std::vector<typename std::tuple_element<I, std::tuple<A...>>::type> col() const noexcept;
+
             //  -- Printing --
             inline std::string str() noexcept override;
         };
@@ -164,6 +169,41 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Getters --
+        /**
+         *  Get the row data of the table.
+         *
+         *  @return Row data of the table.
+         */
+        template <typename... A>
+        inline const std::vector<std::tuple<A...>>& Table<A...>::rows() const noexcept
+        {
+            return (_rows);
+        }
+
+        /**
+         *  Get a copy of a data column.
+         *
+         *  @tparam I   Index of the column to copy.
+         *
+         *  @return Copy of a data column.
+         */
+        template <typename... A>
+        template <size_t I>
+        inline std::vector<typename std::tuple_element<I, std::tuple<A...>>::type> Table<A...>::col() const noexcept
+        {
+            std::vector<typename std::tuple_element<I, std::tuple<A...>>::type> col;
+
+            col.reserve(_rows.size());
+            for (size_t i = 0; i < _rows.size(); ++i)
+            {
+                col.push_back(std::get<I>(_rows[i]));
+            }
+
+            return (col);
+        }
+
+
         //  -- Printing --
         template <typename... A>
         inline std::string Table<A...>::str() noexcept
