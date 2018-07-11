@@ -264,6 +264,11 @@ namespace arc //! arctk namespace
 
 
         //  -- Printing --
+        /**
+         *  Create a human readable string of the table.
+         *
+         *  @return Human readable string of the table.
+         */
         template <typename... A>
         inline std::string Table<A...>::str() noexcept
         {
