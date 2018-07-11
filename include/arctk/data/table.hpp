@@ -116,6 +116,12 @@ namespace arc //! arctk namespace
         {
         }
 
+        /**
+         *  Construct a table from a serialisation.
+         *
+         *  @param  serial_ Serialised table data.
+         *  @param  delim_  Delimiter character.
+         */
         template <typename... A>
         inline Table<A...>::Table(const std::string& serial_, const char delim_) noexcept
           : _rows(init_rows(serial_, delim_))
