@@ -102,9 +102,6 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
-            //  -- Printing --
-            constexpr inline std::string str(char delim_ = settings::DEFAULT_DELIM, size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
-
             //  -- Mathematical --
             constexpr inline T sum() const noexcept;
         };
@@ -580,30 +577,6 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
-        //  -- Printing --
-        /**
-         *  Form the matrix into a human readable string.
-         *
-         *  @tparam T   Type stored by the mat.
-         *
-         *  @param  delim_  Delimiter character used to seperate consecutive values.
-         *  @param  width_  Print width allocated to each value.
-         *
-         *  @return Human readable string of the matrix.
-         */
-        template <typename T>
-        constexpr inline std::string Mat<T, 3>::str(const char delim_, const size_t width_) const noexcept
-        {
-            std::stringstream stream;
-
-            stream << std::setw(width_) << x.x << delim_ << std::setw(width_) << x.y << delim_ << std::setw(width_) << x.z << "\n";
-            stream << std::setw(width_) << y.x << delim_ << std::setw(width_) << y.y << delim_ << std::setw(width_) << y.z << "\n";
-            stream << std::setw(width_) << z.x << delim_ << std::setw(width_) << z.y << delim_ << std::setw(width_) << z.z << "\n";
-
-            return (stream.str());
-        }
-
-
         //  -- Mathematical --
         /**
          *  Calculate the sum of the mat elements.
