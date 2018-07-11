@@ -53,6 +53,8 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            template <typename... B>
+            inline explicit Table(const B&... cols_) noexcept;
 
 
             //  == OPERATORS ==
@@ -66,6 +68,13 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        template <typename... A>
+        template <typename... B>
+        inline Table(const B&... cols_) noexcept
+          : _rows(init_rows(cols_))
+        {
+            static_assert(sizeof...(A) == sizeof...(B));
+        }
 
 
 
