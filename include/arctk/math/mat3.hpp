@@ -107,6 +107,9 @@ namespace arc //! arctk namespace
           public:
             //  -- Mathematical --
             constexpr inline T sum() const noexcept;
+
+            //  -- Printing --
+            inline std::string str() noexcept override;
         };
 
 
@@ -592,6 +595,30 @@ namespace arc //! arctk namespace
         constexpr inline T Mat<T, 3>::sum() const noexcept
         {
             return (x.x + x.y + x.z + y.x + y.y + y.z + z.x + z.y + z.z);
+        }
+
+
+        //  -- Printing --
+        /**
+         *  Create a human readable string of the mat.
+         *
+         *  @return Human readable string of the mat.
+         */
+        template <typename T>
+        inline std::string Mat<T, 3>::str() noexcept
+        {
+            std::stringstream stream;
+
+            stream << settings::format::VEC_START;
+            stream << settings::format::VEC_START << std::setw(settings::format::PRINT_WIDTH) << x.x << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << x.y << settings::format::DELIMITER
+                   << std::setw(settings::format::PRINT_WIDTH) << x.z << settings::format::VEC_END << '\n';
+            stream << settings::format::DELIMITER << settings::format::VEC_START << std::setw(settings::format::PRINT_WIDTH) << y.x << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << y.y << settings::format::DELIMITER
+                   << std::setw(settings::format::PRINT_WIDTH) << y.z << settings::format::VEC_END << '\n';
+            stream << settings::format::DELIMITER << settings::format::VEC_START << std::setw(settings::format::PRINT_WIDTH) << z.x << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << z.y << settings::format::DELIMITER
+                   << std::setw(settings::format::PRINT_WIDTH) << z.z << settings::format::VEC_END;
+            stream << settings::format::VEC_END;
+
+            return (stream.str());
         }
 
 
