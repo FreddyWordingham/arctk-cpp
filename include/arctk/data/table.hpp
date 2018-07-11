@@ -93,7 +93,6 @@ namespace arc //! arctk namespace
             static_assert(sizeof...(A) > 0);
             static_assert(sizeof...(A) == sizeof...(B));
             static_assert(utl::properties::all_true<(utl::type::is_vector<B>::value)...>::value);
-
             (PRE(first_col_.size() == cols_.size()), ...);
 
             std::vector<std::tuple<A...>> rows;
