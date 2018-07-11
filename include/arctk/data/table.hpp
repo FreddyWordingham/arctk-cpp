@@ -25,6 +25,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/str.hpp>
 #include <arctk/utl.hpp>
 
 
@@ -44,7 +45,7 @@ namespace arc //! arctk namespace
          *  @tparam A   Types stored in data columns.
          */
         template <typename... A>
-        class Table
+        class Table : str::Printable
         {
             //  == FIELDS ==
           private:
