@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
         template <typename... A>
         template <typename... B>
         inline Table<A...>::Table(const B&... cols_) noexcept
-          : _rows(init_rows(cols_))
+          : _rows(init_rows(cols_...))
         {
             static_assert(sizeof...(A) == sizeof...(B));
         }
