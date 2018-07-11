@@ -748,7 +748,7 @@ namespace arc //! arctk namespace
             {
                 if (i != 0)
                 {
-                    stream << settings::format::DELIMITER;
+                    stream << '\n' << settings::format::DELIMITER;
                 }
 
                 stream << settings::format::VEC_START;
