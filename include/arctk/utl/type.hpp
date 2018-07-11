@@ -43,6 +43,11 @@ namespace arc //! arctk namespace
                 static const bool value = false;
             };
 
+            /**
+             *  Specialisation for vector types.
+             *
+             *  @tparam T   Type stored by vector.
+             */
             template <class T>
             struct is_vector<std::vector<T>>
             {
