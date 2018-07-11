@@ -113,6 +113,9 @@ namespace arc //! arctk namespace
 
             //  -- Mathematical --
             constexpr inline T sum() const noexcept;
+
+            //  -- Printing --
+            inline std::string str() noexcept override;
         };
 
 
@@ -724,6 +727,47 @@ namespace arc //! arctk namespace
             }
 
             return (sum);
+        }
+
+
+        //  -- Printing --
+        /**
+         *  Create a human readable string of the mat.
+         *
+         *  @return Human readable string of the mat.
+         */
+        template <typename T, size_t N>
+        inline std::string Mat<T, N>::str() noexcept
+        {
+            std::stringstream stream;
+
+            stream << settings::format::VEC_START;
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                if (i != 0)
+                {
+                    stream << settings::format::DELIMITER;
+                }
+
+                stream << settings::format::VEC_START;
+
+                for (size_t j = 0; j < N; ++j)
+                {
+                    if (j != 0)
+                    {
+                        stream << settings::format::DELIMITER;
+                    }
+
+                    stream << std::setw(settings::format::PRINT_WIDTH) << _data[i][j];
+                }
+
+                stream << settings::format::VEC_END;
+            }
+
+            stream << settings::format::VEC_END;
+
+            return (stream.str());
         }
 
 
