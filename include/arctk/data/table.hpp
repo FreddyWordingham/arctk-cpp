@@ -158,6 +158,14 @@ namespace arc //! arctk namespace
             return (rows);
         }
 
+        /**
+         *  Initialise the vector of data rows from a serialisation.
+         *
+         *  @param  serial_ Serialised table data.
+         *  @param  delim_  Delimiter character.
+         *
+         *  @return Initialised vector of table rows.
+         */
         template <typename... A>
         inline std::vector<std::tuple<A...>> Table<A...>::init_rows(const std::string& serial_, const char delim_) noexcept
         {
