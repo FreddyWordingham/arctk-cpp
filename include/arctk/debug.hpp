@@ -69,7 +69,7 @@
  *
  *  @param  condition_  Condition to be checked.
  */
-#define PRE(condition_) (void)((condition_) || (contract::precondition(#condition_, __FILE__, __LINE__, __func__), 0))
+#define PRE(condition_) (void)((condition_) || (arc::debug::contract::precondition(#condition_, __FILE__, __LINE__, __func__), 0))
 
 /**
  *  Define a post-condition to be checked at function exit.
@@ -78,7 +78,7 @@
  *
  *  @param  condition_  Condition to be checked.
  */
-#define POST(condition_) (void)((condition_) || (contract::postcondition(#condition_, __FILE__, __LINE__, __func__), 0))
+#define POST(condition_) (void)((condition_) || (arc::debug::contract::postcondition(#condition_, __FILE__, __LINE__, __func__), 0))
 
 /**
  *  Define an invariant to be checked at function exit.
