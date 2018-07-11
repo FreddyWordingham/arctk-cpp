@@ -43,6 +43,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Printable() noexcept                 = default;
             inline Printable(const Printable&) noexcept = default; //!< Defaulted copy constructor.
             inline Printable(Printable&&) noexcept      = default; //!< Defaulted move constructor.
 
