@@ -90,8 +90,8 @@ namespace arc //! arctk namespace
               : Histogram<T, 1>(min_, max_, size_)
               , _counts(size_)
             {
-                assert(min_ < max_);
-                assert(size_ > 0);
+                PRE(min_ < max_);
+                PRE(size_ > 0);
             }
 
 
