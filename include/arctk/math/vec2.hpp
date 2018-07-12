@@ -19,12 +19,6 @@
 
 
 
-//  == BASE ==
-//  -- Arctk --
-#include <arctk/math/vec.hpp>
-
-
-
 //  == IMPORTS ==
 //  -- Std --
 #include <cmath>
@@ -34,6 +28,7 @@
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/math/vec.hpp>
 #include <arctk/settings.hpp>
 #include <arctk/str.hpp>
 
