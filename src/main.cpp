@@ -20,6 +20,7 @@
 #include <arctk/consts/phys.hpp>
 #include <arctk/data.hpp>
 #include <arctk/data/histogram.hpp>
+#include <arctk/data/histogram/dynamic1.hpp>
 #include <arctk/data/histogram/fixed.hpp>
 #include <arctk/data/histogram/fixed1.hpp>
 #include <arctk/data/histogram1.hpp>
