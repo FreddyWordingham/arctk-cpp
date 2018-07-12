@@ -19,15 +19,10 @@
 
 
 
-//  == BASE ==
+//  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/data/histogram/fixed.hpp>
 #include <arctk/data/histogram1.hpp>
-
-
-
-//  == IMPORTS ==
-//  -- Arctk --
 #include <arctk/debug.hpp>
 
 
