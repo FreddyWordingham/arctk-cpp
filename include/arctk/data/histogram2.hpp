@@ -273,15 +273,25 @@ namespace arc //! arctk namespace
          *  @return Human readable string of the histogram.
          */
         template <typename T>
-        inline std::string Histogram<T, 1>::str() noexcept
+        inline std::string Histogram<T, 2>::str() noexcept
         {
             std::stringstream stream;
 
             for (size_t i = 0; i < centres.size(); ++i)
             {
+                if (i != 0)
+                {
+                    stream << '\n';
+                }
+
                 for (size_t j = 0; j < centres.size(); ++j)
                 {
-                    stream << std::setw()
+                    if (j != 0)
+                    {
+                        stream << settings::format::DELIMITER;
+                    }
+
+                    stream << std::setw(settings::format::PRINT_WIDTH) << _bins[i][j];
                 }
             }
 
