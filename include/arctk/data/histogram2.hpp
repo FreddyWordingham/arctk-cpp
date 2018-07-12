@@ -91,12 +91,6 @@ namespace arc //! arctk namespace
             virtual inline void collect(const vec2& pos_,
                                         const T&    val_) noexcept = 0; //!<  Collect a value into the histogram at a given position.  @tparam T   Type binned. @param  pos_    Position of the value to place.  @param  val_    Value to place within the bins.
 
-            //  -- Printing --
-            inline std::string str(char delim_ = settings::DEFAULT_DELIM, size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
-
-            //  -- Saving --
-            inline void save(const std::string& path_, char delim_ = settings::DEFAULT_DELIM, size_t width_ = settings::DEFAULT_PRINT_WIDTH) const noexcept;
-
             //  -- Imaging --
             inline image::Greyscale img() const noexcept;
         };
@@ -271,48 +265,6 @@ namespace arc //! arctk namespace
             return vec2s((index_x == _bins.size()) ? (index_x - 1) : index_x, (index_y == _bins.front().size()) ? (index_y - 1) : index_y);
         }
 
-
-        //  -- Printing --
-        /**
-         *  Form the histogram data into a human readable string.
-         *
-         *  @tparam T   Type binned.
-         *
-         *  @param  delim_  Delimiter character used to seperate consecutive values.
-         *  @param  width_  Print width allocated to each value.
-         *
-         *  @return Human readable string of the histogram data.
-         */
-        template <typename T>
-        inline std::string Histogram<T, 2>::str(const char delim_, const size_t width_) const noexcept
-        {
-            std::stringstream stream;
-
-            return (stream.str());
-        }
-
-
-        //  -- Saving --
-        /**
-         *  Save data table as a csv file.
-         *
-         *  @tparam T   Type binned.
-         *
-         *  @param  path_   Path to the output file.
-         *  @param  delim_  Delimiter character used to seperate consecutive values.
-         *  @param  width_  Print width allocated to each value.
-         *
-         *  @pre    path_ may not be empty.
-         */
-        template <typename T>
-        inline void Histogram<T, 2>::save(const std::string& path_, const char delim_, const size_t width_) const noexcept
-        {
-            assert(!path_.empty());
-
-            sys::file::Out file(path_);
-
-            file << str(delim_, width_);
-        }
 
         //  -- Imaging --
         /**
