@@ -90,7 +90,7 @@ namespace arc //! arctk namespace
              */
             inline Greyscale::Greyscale(const size_t width_, const size_t height_) noexcept
               : Image(width_, height_)
-              , _pixels(utl::make_MultiVec<double, 2>({{width_, height_}}))
+              , _pixels(std::vector<std::vector<double>>(width_, std::vector<double>(height_)))
             {
                 PRE(width_ > 0);
                 PRE(height_ > 0);
