@@ -90,9 +90,6 @@ namespace arc //! arctk namespace
             //  -- Collection --
             virtual inline void collect(const vec2& pos_,
                                         const T&    val_) noexcept = 0; //!<  Collect a value into the histogram at a given position.  @tparam T   Type binned. @param  pos_    Position of the value to place.  @param  val_    Value to place within the bins.
-
-            //  -- Imaging --
-            inline image::Greyscale img() const noexcept;
         };
 
 
@@ -263,21 +260,6 @@ namespace arc //! arctk namespace
             const auto index_y = static_cast<size_t>((pos_.y - _min.y) / _bin_width.y);
 
             return vec2s((index_x == _bins.size()) ? (index_x - 1) : index_x, (index_y == _bins.front().size()) ? (index_y - 1) : index_y);
-        }
-
-
-        //  -- Imaging --
-        /**
-         *  Form the bin data of the histogram into a greyscale image.
-         *
-         *  @tparam T   Type binned.
-         *
-         *   @return    A greyscale image of the bin data.
-         */
-        template <typename T>
-        inline image::Greyscale Histogram<T, 2>::img() const noexcept
-        {
-            return (image::Greyscale(_bins[i][j]));
         }
 
 
