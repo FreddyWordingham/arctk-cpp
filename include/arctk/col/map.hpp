@@ -24,6 +24,7 @@
 #include <algorithm>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/math.hpp>
 
 
@@ -58,7 +59,7 @@ namespace arc //! arctk namespace
              */
             inline vec3 jet(const double x_) noexcept
             {
-                assert((x_ >= 0.0) && (x_ <= 1.0));
+                PRE((x_ >= 0.0) && (x_ <= 1.0));
 
                 vec3 col;
 
@@ -104,7 +105,7 @@ namespace arc //! arctk namespace
              */
             inline vec3 jet_line(const double x_) noexcept
             {
-                assert((x_ >= 0.0) && (x_ <= 1.0));
+                PRE((x_ >= 0.0) && (x_ <= 1.0));
 
                 if (std::fmod(x_, 0.1) < 0.01)
                 {
