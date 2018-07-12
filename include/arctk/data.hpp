@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/data/histogram.hpp>
 #include <arctk/data/image.hpp>
 #include <arctk/data/image/greyscale.hpp>
 #include <arctk/data/table.hpp>
