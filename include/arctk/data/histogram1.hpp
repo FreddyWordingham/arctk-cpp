@@ -27,6 +27,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <fstream>
 #include <iomanip>
 #include <sstream>
 #include <string>
@@ -289,7 +290,7 @@ namespace arc //! arctk namespace
         {
             PRE(!path_.empty());
 
-            sys::file::Out file(path_);
+            std::ofstream file(path_);
 
             file << str(delim_, width_);
         }
