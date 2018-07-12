@@ -23,9 +23,6 @@
 //  -- Std --
 #include <cstddef>
 
-//  -- Arctk --
-#include <arctk/str.hpp>
-
 
 
 //  == NAMESPACE ==
@@ -44,7 +41,7 @@ namespace arc //! arctk namespace
          *  @tparam N   Dimensionality of the histogram.
          */
         template <typename T, size_t N>
-        class Histogram : public str::Printable
+        class Histogram
         {
         };
 
