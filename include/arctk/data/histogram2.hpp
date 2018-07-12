@@ -29,7 +29,6 @@
 
 //  -- Arctk --
 #include <arctk/data/histogram.hpp>
-#include <arctk/data/image/greyscale.hpp>
 #include <arctk/math.hpp>
 #include <arctk/settings.hpp>
 
