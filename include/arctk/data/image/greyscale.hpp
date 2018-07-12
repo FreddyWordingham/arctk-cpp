@@ -92,8 +92,8 @@ namespace arc //! arctk namespace
               : Image(width_, height_)
               , _pixels(utl::make_MultiVec<double, 2>({{width_, height_}}))
             {
-                assert(width_ > 0);
-                assert(height_ > 0);
+                PRE(width_ > 0);
+                PRE(height_ > 0);
             }
 
 
@@ -113,9 +113,9 @@ namespace arc //! arctk namespace
              */
             inline void Greyscale::collect(const size_t col_, const size_t row_, const double val_) noexcept
             {
-                assert(col_ < _width);
-                assert(row_ < _height);
-                assert(val_ >= 0.0);
+                PRE(col_ < _width);
+                PRE(row_ < _height);
+                PRE(val_ >= 0.0);
 
                 _pixels[col_][row_] += val_;
             }
@@ -171,7 +171,7 @@ namespace arc //! arctk namespace
              */
             inline void Greyscale::save(const std::string& path_, double (*const scale_)(const double), vec3 (*const map_)(const double)) const noexcept
             {
-                assert(!path_.empty());
+                PRE(!path_.empty());
 
                 double max = 0.0;
                 for (size_t i = 0; i < _height; ++i)
