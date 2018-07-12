@@ -277,14 +277,14 @@ namespace arc //! arctk namespace
         {
             std::stringstream stream;
 
-            for (size_t i = 0; i < centres.size(); ++i)
+            for (size_t i = 0; i < _bins.size(); ++i)
             {
                 if (i != 0)
                 {
                     stream << '\n';
                 }
 
-                for (size_t j = 0; j < centres.size(); ++j)
+                for (size_t j = 0; j < _bins.front().size(); ++j)
                 {
                     if (j != 0)
                     {
