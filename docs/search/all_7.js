@@ -6,5 +6,7 @@ var searchData=
   ['gen_5fbase',['gen_base',['../classarc_1_1random_1_1generator_1_1_quality.html#ae462b3d2ad0323e5952fa109a79b18f8',1,'arc::random::generator::Quality']]],
   ['generator',['Generator',['../classarc_1_1random_1_1_generator.html',1,'arc::random::Generator'],['../classarc_1_1random_1_1_generator.html#a25c469bc95c02a222f51b0888640121b',1,'arc::random::Generator::Generator() noexcept'],['../classarc_1_1random_1_1_generator.html#a6760a940471a6fddddad3b4123a22e2e',1,'arc::random::Generator::Generator(const Generator &amp;) noexcept=default'],['../classarc_1_1random_1_1_generator.html#a3014e80e54730a59a9b3f2d6d2860168',1,'arc::random::Generator::Generator(Generator &amp;&amp;) noexcept=default']]],
   ['generator_2ehpp',['generator.hpp',['../generator_8hpp.html',1,'']]],
-  ['get',['get',['../classarc_1_1sys_1_1_args.html#a4b4acca77441736c096a5cf86cf07b76',1,'arc::sys::Args']]]
+  ['get',['get',['../classarc_1_1sys_1_1_args.html#a4b4acca77441736c096a5cf86cf07b76',1,'arc::sys::Args']]],
+  ['greyscale',['Greyscale',['../classarc_1_1data_1_1image_1_1_greyscale.html',1,'arc::data::image::Greyscale'],['../classarc_1_1data_1_1image_1_1_greyscale.html#a1578266734d8ff6873a2e71e89c8bfe1',1,'arc::data::image::Greyscale::Greyscale()']]],
+  ['greyscale_2ehpp',['greyscale.hpp',['../greyscale_8hpp.html',1,'']]]
 ];

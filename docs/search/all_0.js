@@ -9,13 +9,16 @@ var searchData=
   ['_5fexpr_5fstr',['_expr_str',['../classarc_1_1debug_1_1_invariant.html#aa549c56ca506c27144c38f1eaa38a21f',1,'arc::debug::Invariant']]],
   ['_5ffile',['_file',['../classarc_1_1debug_1_1_invariant.html#a412ac4b36aabaf7dd773c29e8d2233a0',1,'arc::debug::Invariant']]],
   ['_5ffunc',['_func',['../classarc_1_1debug_1_1_invariant.html#af50503c2e13fe53363e96fce9295dfc1',1,'arc::debug::Invariant']]],
+  ['_5fheight',['_height',['../classarc_1_1data_1_1_image.html#ac00f7d7c2d91cbecb4a3efffa0767da3',1,'arc::data::Image']]],
   ['_5fline',['_line',['../classarc_1_1debug_1_1_invariant.html#a91f189b45c4ab03c9a4d38f17edf6ad7',1,'arc::debug::Invariant']]],
   ['_5fnext_5fseed',['_next_seed',['../classarc_1_1random_1_1_generator.html#a08ef7eadad8b178e2d05cdad396056cb',1,'arc::random::Generator']]],
+  ['_5fpixels',['_pixels',['../classarc_1_1data_1_1image_1_1_greyscale.html#aa265595e8aed7215ed10b1f8a78e2c1c',1,'arc::data::image::Greyscale']]],
   ['_5fpos',['_pos',['../classarc_1_1phys_1_1_particle.html#ad96264059302e6c60c98c6a2d13888f3',1,'arc::phys::Particle']]],
   ['_5fprog_5fname',['_prog_name',['../classarc_1_1sys_1_1_args.html#ad29d8d283f0fd67e9304d9d6e2e5c2bc',1,'arc::sys::Args']]],
   ['_5frows',['_rows',['../classarc_1_1data_1_1_table.html#a69244731bad2949b4c54e67da94aa70b',1,'arc::data::Table']]],
   ['_5fseed',['_seed',['../classarc_1_1random_1_1_generator.html#afb04ebf2d18783b15e32c06bfe06249f',1,'arc::random::Generator']]],
   ['_5fu',['_u',['../classarc_1_1random_1_1generator_1_1_quality.html#aa5d0d7a356aed77e4b0e6ad8603c0416',1,'arc::random::generator::Quality']]],
   ['_5fv',['_v',['../classarc_1_1random_1_1generator_1_1_quality.html#a9c59b127ba7bd6f9c6f08d3c1b1df503',1,'arc::random::generator::Quality']]],
-  ['_5fw',['_w',['../classarc_1_1random_1_1generator_1_1_quality.html#a0d9473e510d145fdaff009547a4608f7',1,'arc::random::generator::Quality']]]
+  ['_5fw',['_w',['../classarc_1_1random_1_1generator_1_1_quality.html#a0d9473e510d145fdaff009547a4608f7',1,'arc::random::generator::Quality']]],
+  ['_5fwidth',['_width',['../classarc_1_1data_1_1_image.html#ad6487a8a1f0c24e32dc2b5cc42b3b1a4',1,'arc::data::Image']]]
 ];

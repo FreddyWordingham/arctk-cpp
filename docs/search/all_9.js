@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['image',['Image',['../classarc_1_1data_1_1_image.html',1,'arc::data::Image'],['../classarc_1_1data_1_1_image.html#a1dbb1342049675cd7a0aaad91144d022',1,'arc::data::Image::Image(size_t width_, size_t height_) noexcept'],['../classarc_1_1data_1_1_image.html#ac2496aca6963d26b21607e2cc8896b19',1,'arc::data::Image::Image(const Image &amp;) noexcept=default'],['../classarc_1_1data_1_1_image.html#a23cf538ae4b6a40880a83a19f7c85e0d',1,'arc::data::Image::Image(Image &amp;&amp;) noexcept=default']]],
+  ['image_2ehpp',['image.hpp',['../image_8hpp.html',1,'']]],
   ['info',['info',['../namespacearc_1_1debug_1_1location.html#abde6a7b418cf81aa414df4df29346d7d',1,'arc::debug::location']]],
   ['init_5fargv',['init_argv',['../classarc_1_1sys_1_1_args.html#a18cbb62fbc71def78864a18030c7fab4',1,'arc::sys::Args']]],
   ['init_5fdata',['init_data',['../classarc_1_1math_1_1_mat.html#a6c03f7bd05bdd78f3eaa204bcb197f3d',1,'arc::math::Mat::init_data()'],['../classarc_1_1math_1_1_vec.html#abdea18ce3b88eea55e9035ade1c69c2a',1,'arc::math::Vec::init_data(const A... data_) noexcept'],['../classarc_1_1math_1_1_vec.html#ad1eaab951437827a47144cf4fea9f97f',1,'arc::math::Vec::init_data(const Vec&lt; T, M &gt; &amp;vec_, const A... data_) noexcept']]],

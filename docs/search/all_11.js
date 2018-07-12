@@ -1,16 +1,10 @@
 var searchData=
 [
-  ['save',['save',['../classarc_1_1str_1_1_printable.html#abb3d11e1d6d05e434ca3d384f97c64b8',1,'arc::str::Printable']]],
-  ['search_2ehpp',['search.hpp',['../search_8hpp.html',1,'']]],
-  ['seed',['seed',['../classarc_1_1random_1_1_generator.html#a5fc7cf9f0613c58fcfbe20910c42a8f4',1,'arc::random::Generator']]],
-  ['set_5fnext_5fseed',['set_next_seed',['../classarc_1_1random_1_1_generator.html#a63c797cd1f24f809ac78222c11e0c14e',1,'arc::random::Generator']]],
-  ['settings_2ehpp',['settings.hpp',['../settings_8hpp.html',1,'']]],
-  ['speed_5fof_5flight',['SPEED_OF_LIGHT',['../namespacearc_1_1consts_1_1phys.html#a890931739999d1d4bbcaf3d9b48a6177',1,'arc::consts::phys']]],
-  ['sq',['sq',['../namespacearc_1_1math_1_1pow.html#a673982111327d6a2597e9a381009ce4d',1,'arc::math::pow']]],
-  ['stacktrace',['stacktrace',['../namespacearc_1_1debug_1_1location.html#aa71065bc85b9120fe913f5f301745acb',1,'arc::debug::location']]],
-  ['str',['str',['../classarc_1_1data_1_1_table.html#ac464439c0fb58cc9389fc60bac69cea6',1,'arc::data::Table::str()'],['../classarc_1_1math_1_1_mat.html#afb731bd66bbc0b124b644a0c04899160',1,'arc::math::Mat::str()'],['../classarc_1_1math_1_1_mat_3_01_t_00_012_01_4.html#a70a60c14699ccf79ed9bcb6234662103',1,'arc::math::Mat&lt; T, 2 &gt;::str()'],['../classarc_1_1math_1_1_mat_3_01_t_00_013_01_4.html#a2ca2cd63fb014915a4d4f0cf11954b92',1,'arc::math::Mat&lt; T, 3 &gt;::str()'],['../classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#a362a9ce52bcfde91c055ba1b90c925c6',1,'arc::math::Mat&lt; T, 4 &gt;::str()'],['../classarc_1_1math_1_1_vec.html#a10bbb79365426bc6ca5dcd2dde99853a',1,'arc::math::Vec::str()'],['../classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#ab2137e906ff302835c43225370c217a0',1,'arc::math::Vec&lt; T, 2 &gt;::str()'],['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#a414564419a90640a9e710c1def69cd33',1,'arc::math::Vec&lt; T, 3 &gt;::str()'],['../classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a5e1fac09e432d2e5c6bd75524f466e14',1,'arc::math::Vec&lt; T, 4 &gt;::str()'],['../classarc_1_1str_1_1_printable.html#ab75a52df8c2609ccf47b896fa3b6c560',1,'arc::str::Printable::str()']]],
-  ['str_2ehpp',['str.hpp',['../str_8hpp.html',1,'']]],
-  ['success_2ehpp',['success.hpp',['../success_8hpp.html',1,'']]],
-  ['sum',['sum',['../classarc_1_1math_1_1_mat.html#a582b7b2bd3f03bd41d997e3989fadd83',1,'arc::math::Mat::sum()'],['../classarc_1_1math_1_1_mat_3_01_t_00_012_01_4.html#af4db81aece675dc8f6933ed022747008',1,'arc::math::Mat&lt; T, 2 &gt;::sum()'],['../classarc_1_1math_1_1_mat_3_01_t_00_013_01_4.html#a40ec09c4f33722a694148adba8bc749d',1,'arc::math::Mat&lt; T, 3 &gt;::sum()'],['../classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#a82b155d26de20af1bc16ee7164ee2dd3',1,'arc::math::Mat&lt; T, 4 &gt;::sum()'],['../classarc_1_1math_1_1_vec.html#a54cfd272959ca5d20452a38ee028df65',1,'arc::math::Vec::sum()'],['../classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#a33eb0853339a08f111e07544d00943e4',1,'arc::math::Vec&lt; T, 2 &gt;::sum()'],['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#abbc9f5ce39b8a2d0704067677563c406',1,'arc::math::Vec&lt; T, 3 &gt;::sum()'],['../classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#ab68552d0d22d64f0845815e2a69a37d5',1,'arc::math::Vec&lt; T, 4 &gt;::sum()'],['../namespacearc_1_1math_1_1container.html#af7a7e70fec2026804d07178e063a2236',1,'arc::math::container::sum()']]],
-  ['sys_2ehpp',['sys.hpp',['../sys_8hpp.html',1,'']]]
+  ['r',['r',['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#afd853a4a9e7930de9c4dccde66e26f83',1,'arc::math::Vec&lt; T, 3 &gt;::r()'],['../classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a573f34e173fea2024086c7f6c63f95eb',1,'arc::math::Vec&lt; T, 4 &gt;::r()']]],
+  ['rad_5fto_5fdeg',['rad_to_deg',['../namespacearc_1_1math_1_1convert.html#a50422c57700cd263a956ee9d438d32e7',1,'arc::math::convert']]],
+  ['random_2ehpp',['random.hpp',['../random_8hpp.html',1,'']]],
+  ['reset',['RESET',['../namespacearc_1_1term_1_1ansi.html#a4d9b3960e7c026deb58c73ada6ca7c08',1,'arc::term::ansi']]],
+  ['rho',['rho',['../classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#a88027759e9e0e2191517ffaa6c7ea49b',1,'arc::math::Vec&lt; T, 2 &gt;::rho()'],['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#abb5508b715b4588acbdd048663f61f9c',1,'arc::math::Vec&lt; T, 3 &gt;::rho()']]],
+  ['rotate',['rotate',['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#ad742cfbbb4e58d69cc10add15f074f25',1,'arc::math::Vec&lt; T, 3 &gt;::rotate()'],['../classarc_1_1phys_1_1_particle.html#ab46d3245680b0cac02e15de315327773',1,'arc::phys::Particle::rotate()']]],
+  ['rows',['rows',['../classarc_1_1data_1_1_table.html#aed31796666ea7cef1995c6e63ce226dd',1,'arc::data::Table']]]
 ];
