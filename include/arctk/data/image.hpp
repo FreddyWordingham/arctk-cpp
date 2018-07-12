@@ -153,7 +153,7 @@ namespace arc //! arctk namespace
          *  @pre    pixels_ size must match _width.
          *  @pre    pixels_ first stored vector size must match _height.
          */
-        inline void Image::write_ppm(const std::string& path_, const utl::MultiVec<vec3, 2>& pixels_) const noexcept
+        inline void Image::write_ppm(const std::string& path_, const std::vector<std::vector<vec3>>& pixels_) const noexcept
         {
             PRE(!path_.empty());
             PRE(pixels_.size() == _width);
