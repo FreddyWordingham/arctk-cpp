@@ -263,7 +263,7 @@ namespace arc //! arctk namespace
                     stream << '\n';
                 }
 
-                stream << str::setw(settings::format::PRINT_WIDTH) << centres[i] << settings::format::DELIMITER << str::setw(settings::format::PRINT_WIDTH) << _bins[i];
+                stream << std::setw(settings::format::PRINT_WIDTH) << centres[i] << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << _bins[i];
             }
 
             return (stream.str());
