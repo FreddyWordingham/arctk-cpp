@@ -155,9 +155,9 @@ namespace arc //! arctk namespace
          */
         inline void Image::write_ppm(const std::string& path_, const utl::MultiVec<vec3, 2>& pixels_) const noexcept
         {
-            assert(!path_.empty());
-            assert(pixels_.size() == _width);
-            assert(pixels_.front().size() == _height);
+            PRE(!path_.empty());
+            PRE(pixels_.size() == _width);
+            PRE(pixels_.front().size() == _height);
 
             sys::file::Out file(path_);
 
