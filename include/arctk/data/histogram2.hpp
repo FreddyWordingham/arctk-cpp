@@ -21,7 +21,6 @@
 
 //  == IMPORTS ==
 //  -- Std --
-#include <cassert>
 #include <iomanip>
 #include <sstream>
 #include <string>
@@ -29,6 +28,7 @@
 
 //  -- Arctk --
 #include <arctk/data/histogram.hpp>
+#include <arctk/debug.hpp>
 #include <arctk/math.hpp>
 #include <arctk/settings.hpp>
 #include <arctk/str.hpp>
@@ -90,6 +90,9 @@ namespace arc //! arctk namespace
             //  -- Collection --
             virtual inline void collect(const vec2& pos_,
                                         const T&    val_) noexcept = 0; //!<  Collect a value into the histogram at a given position.  @tparam T   Type binned. @param  pos_    Position of the value to place.  @param  val_    Value to place within the bins.
+
+            //  -- Printing --
+            inline std::string str() noexcept override;
         };
 
 
@@ -260,6 +263,29 @@ namespace arc //! arctk namespace
             const auto index_y = static_cast<size_t>((pos_.y - _min.y) / _bin_width.y);
 
             return (vec2s((index_x == _bins.size()) ? (index_x - 1) : index_x, (index_y == _bins.front().size()) ? (index_y - 1) : index_y));
+        }
+
+
+        //  -- Printing --
+        /**
+         *  Create a human readable string of the histogram.
+         *
+         *  @return Human readable string of the histogram.
+         */
+        template <typename T>
+        inline std::string Histogram<T, 1>::str() noexcept
+        {
+            std::stringstream stream;
+
+            for (size_t i = 0; i < centres.size(); ++i)
+            {
+                for (size_t j = 0; j < centres.size(); ++j)
+                {
+                    stream << std::setw()
+                }
+            }
+
+            return (stream.str());
         }
 
 
