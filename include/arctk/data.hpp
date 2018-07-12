@@ -23,6 +23,7 @@
 //  -- Arctk --
 #include <arctk/data/histogram.hpp>
 #include <arctk/data/histogram/average.hpp>
+#include <arctk/data/histogram/average1.hpp>
 #include <arctk/data/histogram/dynamic.hpp>
 #include <arctk/data/histogram/dynamic1.hpp>
 #include <arctk/data/histogram/fixed.hpp>
