@@ -93,7 +93,7 @@ namespace arc //! arctk namespace
 
           protected:
             //  -- Saving --
-            inline void write_ppm(const std::string& path_, const utl::MultiVec<vec3, 2>& pixels_) const noexcept;
+            inline void write_ppm(const std::string& path_, const std::vector<std::vector<vec3, 2>>& pixels_) const noexcept;
         };
 
 
@@ -159,7 +159,7 @@ namespace arc //! arctk namespace
             PRE(pixels_.size() == _width);
             PRE(pixels_.front().size() == _height);
 
-            sys::file::Out file(path_);
+            std::ofstream file(path_);
 
             file << "P3\n"
                  << _width << " " << _height << "\n"
