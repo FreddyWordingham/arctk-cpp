@@ -108,8 +108,6 @@ namespace arc //! arctk namespace
         /**
          *  Construct a one-dimensional histogram object with given bounds and size.
          *
-         *  @tparam T   Type binned.
-         *
          *  @param  min_    Minimum bound of the histogram range.
          *  @param  max_    Maximum bound of the histogram range.
          *  @param  size_   Number of bins.
@@ -135,8 +133,6 @@ namespace arc //! arctk namespace
         /**
          *  Get the minimum bound of the histogram.
          *
-         *  @tparam T   Type binned.
-         *
          *  @return Minimum bound of the histogram.
          */
         template <typename T>
@@ -147,8 +143,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Get the maximum bound of the histogram.
-         *
-         *  @tparam T   Type binned.
          *
          *  @return Maximum bound of the histogram.
          */
@@ -161,8 +155,6 @@ namespace arc //! arctk namespace
         /**
          *  Get the width of the histogram's bins.
          *
-         *  @tparam T   Type binned.
-         *
          *  @return Width of the histogram's bins.
          */
         template <typename T>
@@ -173,8 +165,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Get the bin data of the histogram.
-         *
-         *  @tparam T   Type binned.
          *
          *  @return Bin data of the histogram.
          */
@@ -187,8 +177,6 @@ namespace arc //! arctk namespace
         /**
          *  Get the size of the bin data bins vector.
          *
-         *  @tparam T   Type binned.
-         *
          *  @return Size of the bin data bins vector.
          */
         template <typename T>
@@ -199,8 +187,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Determine the centre position of a given bin index.
-         *
-         *  @tparam T   Type binned.
          *
          *  @param  index_  Index of the bin to find the centre of.
          *
@@ -218,8 +204,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Construct a vector of all bin centres.
-         *
-         *  @tparam T   Type binned.
          *
          *  @return Vector of all bin centres.
          */
@@ -240,8 +224,6 @@ namespace arc //! arctk namespace
         //  -- Searching --
         /**
          *  Determine the index of the bin a position belongs in.
-         *
-         *  @tparam T   Type binned.
          *
          *  @param  pos_    Position to place within the bin.
          *
@@ -265,8 +247,6 @@ namespace arc //! arctk namespace
         //  -- Printing --
         /**
          *  Form the histogram data into a human readable string.
-         *
-         *  @tparam T   Type binned.
          *
          *  @param  delim_  Delimiter character used to seperate consecutive values.
          *  @param  width_  Print width allocated to each value.
@@ -297,8 +277,6 @@ namespace arc //! arctk namespace
         //  -- Saving --
         /**
          *  Save data table as a csv file.
-         *
-         *  @tparam T   Type binned.
          *
          *  @param  path_   Path to the output file.
          *  @param  delim_  Delimiter character used to seperate consecutive values.
