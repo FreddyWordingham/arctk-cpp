@@ -117,6 +117,16 @@ namespace arc //! arctk namespace
                 return (jet(x_));
             }
 
+            /**
+             *  Convert a scalar value between zero and one to a Matlab jet colour scale with discrete steps.
+             *
+             *  @param  x_      Scalar value to convert to a colour.
+             *  @param  num_    Number of colour steps.
+             *
+             *  @pre    x_ must be between zero and one.
+             *
+             *  @return Colour vec.
+             */
             inline vec3 jet_block(const double x_, const int num_) noexcept
             {
                 PRE((x_ >= 0.0) && (x_ <= 1.0));
