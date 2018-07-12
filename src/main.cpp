@@ -20,6 +20,7 @@
 #include <arctk/consts/phys.hpp>
 #include <arctk/data.hpp>
 #include <arctk/data/histogram.hpp>
+#include <arctk/data/histogram1.hpp>
 #include <arctk/data/image.hpp>
 #include <arctk/data/image/greyscale.hpp>
 #include <arctk/data/table.hpp>
