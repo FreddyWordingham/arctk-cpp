@@ -26,8 +26,8 @@
 
 
 //  == IMPORTS ==
-//  -- Std --
-#include <cassert>
+//  -- Arctk --
+#include <arctk/debug.hpp>
 
 
 
@@ -91,8 +91,8 @@ namespace arc //! arctk namespace
             inline Fixed<T, 1>::Fixed(const double min_, const double max_, const size_t size_) noexcept
               : Histogram<T, 1>(min_, max_, size_)
             {
-                assert(min_ < max_);
-                assert(size_ > 0);
+                PRE(min_ < max_);
+                PRE(size_ > 0);
             }
 
 
