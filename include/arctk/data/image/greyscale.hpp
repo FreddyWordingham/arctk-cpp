@@ -19,17 +19,12 @@
 
 
 
-//  == BASE ==
-//  -- Arctk --
-#include <arctk/data/image.hpp>
-
-
-
 //  == IMPORTS ==
 //  -- Std --
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/data/image.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
 
