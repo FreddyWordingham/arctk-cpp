@@ -25,6 +25,7 @@
 #include <iomanip>
 #include <sstream>
 #include <string>
+#include <vector>
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
