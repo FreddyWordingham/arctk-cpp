@@ -22,6 +22,7 @@
 //  == BASE ==
 //  -- Arctk --
 #include <arctk/data/histogram/fixed.hpp>
+#include <arctk/data/histogram1.hpp>
 
 
 
