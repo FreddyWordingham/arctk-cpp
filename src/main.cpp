@@ -16,6 +16,7 @@
 #include <arctk/consts/math.hpp>
 #include <arctk/consts/phys.hpp>
 #include <arctk/data.hpp>
+#include <arctk/data/image.hpp>
 #include <arctk/data/table.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/debug/contract.hpp>
