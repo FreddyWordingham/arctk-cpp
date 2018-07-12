@@ -27,15 +27,14 @@
 
 //  == IMPORTS ==
 //  -- Std --
-#include <cassert>
 #include <iomanip>
 #include <sstream>
 #include <string>
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/settings.hpp>
-#include <arctk/sys.hpp>
 
 
 
@@ -125,8 +124,8 @@ namespace arc //! arctk namespace
           , _bin_width((max_ - min_) / size_)
           , _bins(size_)
         {
-            assert(min_ < max_);
-            assert(size_ > 0);
+            PRE(min_ < max_);
+            PRE(size_ > 0);
         }
 
 
@@ -212,7 +211,7 @@ namespace arc //! arctk namespace
         template <typename T>
         inline double Histogram<T, 1>::centre(const size_t index_) const noexcept
         {
-            assert(index_ < _bins.size());
+            PRE(index_ < _bins.size());
 
             return (_min + ((static_cast<double>(index_) + 0.5) * _bin_width));
         }
@@ -254,8 +253,8 @@ namespace arc //! arctk namespace
         template <typename T>
         inline size_t Histogram<T, 1>::find_index(const double pos_) noexcept
         {
-            assert(pos_ >= _min);
-            assert(pos_ <= _max);
+            PRE(pos_ >= _min);
+            PRE(pos_ <= _max);
 
             const auto index = static_cast<size_t>((pos_ - _min) / _bin_width);
 
@@ -310,7 +309,7 @@ namespace arc //! arctk namespace
         template <typename T>
         inline void Histogram<T, 1>::save(const std::string& path_, const char delim_, const size_t width_) const noexcept
         {
-            assert(!path_.empty());
+            PRE(!path_.empty());
 
             sys::file::Out file(path_);
 
