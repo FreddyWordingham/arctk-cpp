@@ -277,17 +277,7 @@ namespace arc //! arctk namespace
         template <typename T>
         inline image::Greyscale Histogram<T, 2>::img() const noexcept
         {
-            image::Greyscale img(_bins.size(), _bins.front().size());
-
-            for (size_t i = 0; i < _bins.size(); ++i)
-            {
-                for (size_t j = 0; j < _bins.front().size(); ++j)
-                {
-                    img.collect(i, j, _bins[i][j]);
-                }
-            }
-
-            return (img);
+            return (image::Greyscale(_bins[i][j]));
         }
 
 
