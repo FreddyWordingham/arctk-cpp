@@ -24,6 +24,7 @@
 #include <algorithm>
 
 //  -- Arctk --
+#include <arctk/col/convert.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
 
@@ -43,6 +44,7 @@ namespace arc //! arctk namespace
             //  -- Matlab --
             inline vec3 jet(double x_) noexcept;
             inline vec3 jet_line(double x_) noexcept;
+            inline vec3 contour(double x_, int num_ = 10) noexcept;
 
 
 
@@ -113,6 +115,14 @@ namespace arc //! arctk namespace
                 }
 
                 return (jet(x_));
+            }
+
+            inline vec3 contour(const double x_, const int num_) noexcept
+            {
+                PRE((x_ >= 0.0) && (x_ <= 1.0));
+                PRE(num_ > 0);
+
+                return (convert::hsv_to_rgb(360.0 * (x_ - std::fmod(x_, 1.0 / static_cast<double>(num_))), 1.0, 1.0));
             }
 
 
