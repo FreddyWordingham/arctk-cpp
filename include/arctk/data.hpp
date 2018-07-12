@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/data/image.hpp>
 #include <arctk/data/table.hpp>
 
 
