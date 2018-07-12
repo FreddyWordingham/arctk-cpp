@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Data --
-                utl::MultiVec<double, 2> _pixels; //!< Pixel data of the image.
+                std::vector<std::vector<double>> _pixels; //!< Pixel data of the image.
 
 
                 //  == INSTANTIATION ==
