@@ -118,10 +118,10 @@ namespace arc //! arctk namespace
           , _bin_width((max_.x - min_.x) / size_.x, (max_.y - min_.y) / size_.y)
           , _bins(size_.x, std::vector<double>(size_.y))
         {
-            assert(min_.x < max_.x);
-            assert(min_.y < max_.y);
-            assert(size_.x > 0);
-            assert(size_.y > 0);
+            PRE(min_.x < max_.x);
+            PRE(min_.y < max_.y);
+            PRE(size_.x > 0);
+            PRE(size_.y > 0);
         }
 
 
@@ -208,8 +208,8 @@ namespace arc //! arctk namespace
         template <typename T>
         inline vec2 Histogram<T, 2>::centre(const vec2s& index_) const noexcept
         {
-            assert(index_.x < _bins.size());
-            assert(index_.y < _bins.front().size());
+            PRE(index_.x < _bins.size());
+            PRE(index_.y < _bins.front().size());
 
             return (vec2(_min.x + ((static_cast<double>(index_.x) + 0.5) * (_max.x - _min.x)), _min.y + ((static_cast<double>(index_.y) + 0.5) * (_max.y - _min.y))));
         }
@@ -254,10 +254,10 @@ namespace arc //! arctk namespace
         template <typename T>
         inline vec2s Histogram<T, 2>::find_index(const vec2& pos_) noexcept
         {
-            assert(pos_.x >= _min.x);
-            assert(pos_.y >= _min.y);
-            assert(pos_.x <= _max.x);
-            assert(pos_.y <= _max.y);
+            PRE(pos_.x >= _min.x);
+            PRE(pos_.y >= _min.y);
+            PRE(pos_.x <= _max.x);
+            PRE(pos_.y <= _max.y);
 
             const auto index_x = static_cast<size_t>((pos_.x - _min.x) / _bin_width.x);
             const auto index_y = static_cast<size_t>((pos_.y - _min.y) / _bin_width.y);
