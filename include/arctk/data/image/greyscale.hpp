@@ -190,7 +190,7 @@ namespace arc //! arctk namespace
                     max = 1.0;
                 }
 
-                utl::MultiVec<vec3, 2> pixels = utl::make_MultiVec<vec3, 2>({{_width, _height}});
+                std::vector<std::vector<vec3>> pixels(_width, std::vector<vec3>(_height));
                 for (size_t i = 0; i < _height; ++i)
                 {
                     for (size_t j = 0; j < _width; ++j)
