@@ -27,6 +27,7 @@
 #include <string>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/math.hpp>
 
 
@@ -112,8 +113,8 @@ namespace arc //! arctk namespace
           : _width(width_)
           , _height(height_)
         {
-            assert(width_ > 0);
-            assert(height_ > 0);
+            PRE(width_ > 0);
+            PRE(height_ > 0);
         }
 
 
