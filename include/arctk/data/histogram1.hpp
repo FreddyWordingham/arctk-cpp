@@ -36,6 +36,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/settings.hpp>
+#include <arctk/str.hpp>
 
 
 
@@ -54,7 +55,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type binned.
          */
         template <typename T>
-        class Histogram<T, 1>
+        class Histogram<T, 1> : public str::Printable
         {
             //  == FIELDS ==
           protected:
