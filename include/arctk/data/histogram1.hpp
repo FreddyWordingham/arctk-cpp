@@ -19,12 +19,6 @@
 
 
 
-//  == BASE ==
-//  -- Arctk --
-#include <arctk/data/histogram.hpp>
-
-
-
 //  == IMPORTS ==
 //  -- Std --
 #include <fstream>
@@ -34,6 +28,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/data/histogram.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/settings.hpp>
 #include <arctk/str.hpp>
