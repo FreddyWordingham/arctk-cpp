@@ -56,6 +56,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Constructors --
                 inline Greyscale(size_t width_, size_t height_) noexcept;
+                inline Greyscale(const std::vector<std::vector<double>>& pixels_) noexcept;
 
 
                 //  == METHODS ==
@@ -89,6 +90,12 @@ namespace arc //! arctk namespace
             {
                 PRE(width_ > 0);
                 PRE(height_ > 0);
+            }
+
+            inline Greyscale::Greyscale(const std::vector<std::vector<double>>& pixels_) noexcept
+              : Image(pixels_.size(), pixels_.empty() ? 0 : pixels_.front().size())
+              , _pixels(pixels_)
+            {
             }
 
 
