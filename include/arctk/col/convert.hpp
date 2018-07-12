@@ -62,8 +62,8 @@ namespace arc //! arctk namespace
              */
             inline vec3 hsv_to_rgb(double hue_, const double sat_, const double val_) noexcept
             {
-                assert((sat_ >= 0.0) && (sat_ <= 1.0));
-                assert((val_ >= 0.0) && (val_ <= 1.0));
+                PRE((sat_ >= 0.0) && (sat_ <= 1.0));
+                PRE((val_ >= 0.0) && (val_ <= 1.0));
 
                 hue_ = std::fmod(hue_, 360.0);
 
