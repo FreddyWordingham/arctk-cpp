@@ -259,7 +259,7 @@ namespace arc //! arctk namespace
             const auto index_x = static_cast<size_t>((pos_.x - _min.x) / _bin_width.x);
             const auto index_y = static_cast<size_t>((pos_.y - _min.y) / _bin_width.y);
 
-            return vec2s((index_x == _bins.size()) ? (index_x - 1) : index_x, (index_y == _bins.front().size()) ? (index_y - 1) : index_y);
+            return (vec2s((index_x == _bins.size()) ? (index_x - 1) : index_x, (index_y == _bins.front().size()) ? (index_y - 1) : index_y));
         }
 
 
