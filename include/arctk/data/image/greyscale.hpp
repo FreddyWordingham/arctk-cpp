@@ -191,9 +191,9 @@ namespace arc //! arctk namespace
                 }
 
                 std::vector<std::vector<vec3>> pixels(_width, std::vector<vec3>(_height));
-                for (size_t i = 0; i < _height; ++i)
+                for (size_t i = 0; i < _width; ++i)
                 {
-                    for (size_t j = 0; j < _width; ++j)
+                    for (size_t j = 0; j < _height; ++j)
                     {
                         const vec3 col = map_(scale_(_pixels[i][j] / max));
 
