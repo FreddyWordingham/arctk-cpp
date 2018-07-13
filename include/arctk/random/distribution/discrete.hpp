@@ -99,7 +99,7 @@ namespace arc //! arctk namespace
                     cdfs[i] /= cdfs.back();
                 }
 
-                POST(math::compare::equal(cdfs.back()));
+                POST(math::compare::equal(cdfs.back(), 1.0));
 
                 return (cdfs);
             }
