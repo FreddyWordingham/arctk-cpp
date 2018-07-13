@@ -81,6 +81,7 @@ namespace arc //! arctk namespace
               , _vals(vals_)
               , _cdfs(init_cdfs(probs_))
             {
+                PRE(utl::properties::ascending(vals_));
                 PRE(utl::properties::always_greater_than_or_equal_to(vals_, 0.0));
             }
 
