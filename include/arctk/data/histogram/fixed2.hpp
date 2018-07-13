@@ -88,10 +88,10 @@ namespace arc //! arctk namespace
             inline Fixed<T, 2>::Fixed(const vec2& min_, const vec2& max_, const vec2s& size_) noexcept
               : Histogram<T, 2>(min_, max_, size_)
             {
-                assert(min_.x < max_.x);
-                assert(min_.y < max_.y);
-                assert(size_.x > 0);
-                assert(size_.y > 0);
+                PRE(min_.x < max_.x);
+                PRE(min_.y < max_.y);
+                PRE(size_.x > 0);
+                PRE(size_.y > 0);
             }
 
 
