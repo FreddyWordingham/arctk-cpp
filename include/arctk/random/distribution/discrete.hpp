@@ -36,6 +36,7 @@ namespace arc //! arctk namespace
 
             //  == CLASS ==
             /**
+             *  Discrete distribution class.
              */
             class Discrete
             {
