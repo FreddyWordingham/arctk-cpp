@@ -127,7 +127,7 @@ namespace arc //! arctk namespace
             {
                 PRE(monotonic(cont_));
 
-                return (((*std::begin(cont_) <= val_) && (val_ <= *std::end(cont_))) || ((*std::begin(cont_) >= val_) && (val_ >= *std::end(cont_))));
+                return (((*std::begin(cont_) <= val_) && (val_ <= *std::rbegin(cont_))) || ((*std::begin(cont_) >= val_) && (val_ >= *std::rbegin(cont_))));
             }
 
 
