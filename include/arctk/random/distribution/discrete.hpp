@@ -38,7 +38,10 @@ namespace arc //! arctk namespace
             //  == CLASS ==
             /**
              *  Discrete distribution class.
+             *
+             *  @tparam Type of value generated.
              */
+            template <typename T>
             class Discrete
             {
                 //  == FIELDS ==
@@ -64,6 +67,10 @@ namespace arc //! arctk namespace
 
 
             //  == INSTANTIATION ==
+            //  -- Constructors --
+            inline Discrete(const std::vector<double>& vals_, const std::vector<double>& probs_) noexcept
+            {
+            }
 
 
 
