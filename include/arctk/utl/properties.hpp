@@ -118,6 +118,7 @@ namespace arc //! arctk namespace
              *  @param  cont_   Container to test.
              *  @param  val_    Value to test.
              *
+             *  @pre    cont_ must not be empty.
              *  @pre    cont_ must be monotonic.
              *
              *  @return True if the value falls within the containers range.
@@ -125,6 +126,7 @@ namespace arc //! arctk namespace
             template <typename C, typename T, typename I>
             inline bool within(const C& cont_, const T& val_) noexcept
             {
+                PRE(!cont_.empty())
                 PRE(monotonic(cont_));
 
                 return (((*std::begin(cont_) <= val_) && (val_ <= *std::rbegin(cont_))) || ((*std::begin(cont_) >= val_) && (val_ >= *std::rbegin(cont_))));
