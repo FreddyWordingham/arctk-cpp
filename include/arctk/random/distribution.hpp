@@ -1,9 +1,9 @@
 /**
  *  @file   arctk/random/distribution.hpp
- *  @date   06/07/2018
+ *  @date   13/07/2018
  *  @author Freddy Wordingham
  *
- *  Collection of random number generator distribution transformation functions.
+ *  Probability distribution base class used to sample random numbers.
  */
 
 
@@ -20,9 +20,48 @@
 
 
 //  == IMPORTS ==
-//  -- Arctk --
-#include <arctk/random/distribution/math.hpp>
-#include <arctk/random/distribution/phys.hpp>
+//  -- Std --
+
+
+
+//  == NAMESPACE ==
+namespace arc //! arctk namespace
+{
+    namespace random //! random number namespace
+    {
+
+
+
+        //  == CLASS ==
+        /**
+         *  Probability distribution base class used to sample random numbers.
+         */
+        class Distribution
+        {
+            //  == FIELDS ==
+
+
+            //  == INSTANTIATION ==
+          public:
+            //  -- Constructors --
+
+
+            //  == METHODS ==
+          public:
+            //  -- Getters --
+        };
+
+
+
+        //  == INSTANTIATION ==
+        //  -- Constructors --
+
+
+        //  == METHODS ==
+
+
+    } // namespace random
+} // namespace arc
 
 
 
