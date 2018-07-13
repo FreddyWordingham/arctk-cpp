@@ -71,6 +71,17 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Getters --
+        inline T Distribution::min() noexcept
+        {
+            return (_min);
+        }
+
+        inline T Distribution::max() noexcept
+        {
+            return (_max);
+        }
+
 
 
     } // namespace random
