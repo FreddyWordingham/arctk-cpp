@@ -126,7 +126,7 @@ namespace arc //! arctk namespace
             template <typename C, typename T, typename I>
             inline bool within(const C& cont_, const T& val_) noexcept
             {
-                PRE(!cont_.empty())
+                PRE(!cont_.empty());
                 PRE(monotonic(cont_));
 
                 return (((*std::begin(cont_) <= val_) && (val_ <= *std::rbegin(cont_))) || ((*std::begin(cont_) >= val_) && (val_ >= *std::rbegin(cont_))));
