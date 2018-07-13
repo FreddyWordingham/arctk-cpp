@@ -116,6 +116,14 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Getters --
+            template <typename T>
+            inline const std::vector<double>& Discrete<T>::cdfs() const noexcept
+            {
+                return (_cdfs);
+            }
+
+
             //  -- Sampling --
             template <typename T>
             inline T Discrete<T>::sample(Generator* const rng_) const noexcept
