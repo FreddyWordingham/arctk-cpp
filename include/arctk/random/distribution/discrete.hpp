@@ -96,12 +96,12 @@ namespace arc //! arctk namespace
             {
                 PRE(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
 
-                std::vector<double> cdfs(probs_.size());
+                std::vector<double> cdfs(probs_.size() + 1);
 
-                cdfs[0] = probs_[0];
-                for (size_t i = 1; i < probs_.size(); ++i)
+                cdfs[0] = 0.0;
+                for (size_t i = 0; i < probs_.size(); ++i)
                 {
-                    cdfs[i] = cdfs[i - 1] + probs_[i];
+                    cdfs[i + 1] = cdfs[i] + probs_[i];
                 }
 
                 for (size_t i = 0; i < cdfs.size(); ++i)
