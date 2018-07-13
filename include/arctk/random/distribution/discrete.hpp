@@ -23,6 +23,10 @@
 //  -- Std --
 #include <vector>
 
+//  -- Arctk --
+#include <arctk/debug.hpp>
+#include <arctk/utl.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -69,7 +73,10 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             inline Discrete(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept
+              : _vals(vals_)
+              , _cums(init_cums(probs_))
             {
+                PRE(utl::properties::always_greater_than(probs, 0.0));
             }
 
 
