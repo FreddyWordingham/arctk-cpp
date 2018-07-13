@@ -42,7 +42,8 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Bounds --
-            const T _min;
+            const T _min; //!< Minimum value returned by the distribution.
+            const T _max; //!< Maximum value returned by the distribution.
 
 
             //  == INSTANTIATION ==
