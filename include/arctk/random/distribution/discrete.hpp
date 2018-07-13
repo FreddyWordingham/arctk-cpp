@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
             /**
              */
             template <typename T>
-            class Discrete : public Distribution
+            class Discrete : public Distribution<T>
             {
                 //  == FIELDS ==
               private:
