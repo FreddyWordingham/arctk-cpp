@@ -49,6 +49,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Distribution(const T& min_, const T& max_) noexcept;
 
 
             //  == METHODS ==
@@ -60,6 +61,11 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline Distribution::Distribution(const T& min_, const T& max_) noexcept
+          : _min(min_)
+          , _max(max_)
+        {
+        }
 
 
         //  == METHODS ==
