@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Values --
-                const std::vector<double> _vals; //!< Values which may be generated.
+                const std::vector<T> _vals; //!< Values which may be generated.
 
                 //  -- Probabilities --
                 const std::vector<double> _cums; //!< Cumulative probabilities of each value.
@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Discrete(const std::vector<double>& vals_, const std::vector<double>& probs_) noexcept;
+                inline Discrete(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept;
 
 
                 //  == METHODS ==
@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Discrete(const std::vector<double>& vals_, const std::vector<double>& probs_) noexcept
+            inline Discrete(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept
             {
             }
 
