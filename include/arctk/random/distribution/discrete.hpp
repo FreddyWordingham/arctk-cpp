@@ -41,6 +41,7 @@ namespace arc //! arctk namespace
             //  == CLASS ==
             /**
              */
+            template <typename T>
             class Discrete : public Distribution
             {
                 //  == FIELDS ==
