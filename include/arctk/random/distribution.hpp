@@ -36,9 +36,13 @@ namespace arc //! arctk namespace
         /**
          *  Probability distribution base class used to sample random numbers.
          */
+        template <typename T>
         class Distribution
         {
             //  == FIELDS ==
+          private:
+            //  -- Bounds --
+            const T _min;
 
 
             //  == INSTANTIATION ==
