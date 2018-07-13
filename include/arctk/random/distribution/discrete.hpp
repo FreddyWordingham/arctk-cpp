@@ -46,12 +46,13 @@ namespace arc //! arctk namespace
                 const std::vector<double> _vals; //!< Values which may be generated.
 
                 //  -- Probabilities --
-                const std::vector<double> _cumulatives; //!< Cumulative probabilities of each value.
+                const std::vector<double> _cums; //!< Cumulative probabilities of each value.
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Discrete(const std::vector<double>& vals_, const std::vector<double>& probs_) noexcept;
 
 
                 //  == METHODS ==
