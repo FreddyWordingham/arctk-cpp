@@ -59,11 +59,11 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline T min() noexcept;
-            inline T max() noexcept;
+            inline T min() const noexcept;
+            inline T max() const noexcept;
 
             //  -- Sampling --
-            virtual inline T sample(Generator* const rng_) noexcept = 0;
+            virtual inline T sample(Generator* const rng_) const noexcept = 0;
         };
 
 
@@ -82,13 +82,13 @@ namespace arc //! arctk namespace
         //  == METHODS ==
         //  -- Getters --
         template <typename T>
-        inline T Distribution<T>::min() noexcept
+        inline T Distribution<T>::min() const noexcept
         {
             return (_min);
         }
 
         template <typename T>
-        inline T Distribution<T>::max() noexcept
+        inline T Distribution<T>::max() const noexcept
         {
             return (_max);
         }
