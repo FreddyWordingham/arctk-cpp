@@ -23,6 +23,8 @@
 //  -- Arctk --
 #include <arctk/random/distribution.hpp>
 #include <arctk/random/distribution/discrete.hpp>
+#include <arctk/random/distribution/math.hpp>
+#include <arctk/random/distribution/phys.hpp>
 #include <arctk/random/generator.hpp>
 #include <arctk/random/generator/quality.hpp>
 
