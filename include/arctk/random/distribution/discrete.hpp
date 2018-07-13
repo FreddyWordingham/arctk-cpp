@@ -20,6 +20,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <vector>
+
 //  -- Arctk --
 #include <arctk/random/distribution.hpp>
 
@@ -42,6 +45,10 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Probabilities --
+                const std::vector<double> _cdfs; //!< Cumulative distribution frequencies.
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
