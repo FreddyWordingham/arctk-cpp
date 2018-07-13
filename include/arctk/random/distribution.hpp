@@ -64,7 +64,8 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Distribution::Distribution(T min_, T max_) noexcept
+        template <typename T>
+        inline Distribution<T>::Distribution(T min_, T max_) noexcept
           : _min(min_)
           , _max(max_)
         {
@@ -74,12 +75,14 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        inline T Distribution::min() noexcept
+        template <typename T>
+        inline T Distribution<T>::min() noexcept
         {
             return (_min);
         }
 
-        inline T Distribution::max() noexcept
+        template <typename T>
+        inline T Distribution<T>::max() noexcept
         {
             return (_max);
         }
