@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <arctk/debug.hpp>
 
 
 
@@ -67,6 +68,7 @@ namespace arc //! arctk namespace
           : _min(min_)
           , _max(max_)
         {
+            PRE(min_ < max_);
         }
 
 
