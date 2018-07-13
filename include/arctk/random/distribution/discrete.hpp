@@ -77,7 +77,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             template <typename T>
             inline Discrete<T>::Discrete(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept
-              : Distribution(vals_.front(), vals_.back())
+              : Distribution<T>(vals_.front(), vals_.back())
               , _vals(vals_)
               , _cdfs(init_cdfs(probs_))
             {
