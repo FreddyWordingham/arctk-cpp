@@ -68,6 +68,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
+                inline const std::vector<T>&      vals() const noexcept;
                 inline const std::vector<double>& cdfs() const noexcept;
 
                 //  -- Sampling --
@@ -117,6 +118,12 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            template <typename T>
+            inline const std::vector<T>& Discrete<T>::vals() const noexcept
+            {
+                return (_vals);
+            }
+
             template <typename T>
             inline const std::vector<double>& Discrete<T>::cdfs() const noexcept
             {
