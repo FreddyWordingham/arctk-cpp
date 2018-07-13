@@ -60,6 +60,9 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline T min() noexcept;
             inline T max() noexcept;
+
+            //  -- Sampling --
+            virtual inline T sample() noexcept = 0;
         };
 
 
