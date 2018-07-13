@@ -36,6 +36,8 @@ namespace arc //! arctk namespace
         //  == CLASS ==
         /**
          *  Probability distribution base class used to sample random numbers.
+         *
+         *  @tparam T   Type returned from sampling the distribution.
          */
         template <typename T>
         class Distribution
