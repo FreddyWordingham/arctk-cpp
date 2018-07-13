@@ -62,6 +62,9 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline Discrete(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept;
 
+                //  -- Initialisation --
+                inline std::vector<double> init_cums(const std::vector<double>& probs_) noexcept;
+
 
                 //  == METHODS ==
               public:
@@ -72,11 +75,22 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Discrete(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept
+            template <typename T>
+            inline Discrete<T>::Discrete(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept
               : _vals(vals_)
               , _cums(init_cums(probs_))
             {
                 PRE(utl::properties::always_greater_than_or_equal_to(probs, 0.0));
+            }
+
+
+            //  -- Initialisation --
+            template <typename T>
+            inline std::vector<double> Discrete<T>::init_cums(const std::vector<double>& probs_) noexcept
+            {
+                std::vector<double> cums(probs_.size());
+
+                return (cums);
             }
 
 
