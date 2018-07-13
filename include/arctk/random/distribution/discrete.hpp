@@ -77,7 +77,8 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             template <typename T>
             inline Discrete<T>::Discrete(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept
-              : _vals(vals_)
+              : Distribution(vals_.front(), vals_.back())
+              , _vals(vals_)
               , _cdfs(init_cdfs(probs_))
             {
                 PRE(utl::properties::always_greater_than_or_equal_to(vals_, 0.0));
