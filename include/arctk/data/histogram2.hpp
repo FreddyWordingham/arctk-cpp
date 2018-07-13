@@ -116,7 +116,7 @@ namespace arc //! arctk namespace
           : _min(min_)
           , _max(max_)
           , _bin_width((max_.x - min_.x) / size_.x, (max_.y - min_.y) / size_.y)
-          , _bins(size_.x, std::vector<double>(size_.y))
+          , _bins(size_.x, std::vector<T>(size_.y))
         {
             PRE(min_.x < max_.x);
             PRE(min_.y < max_.y);
