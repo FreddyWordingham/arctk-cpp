@@ -25,6 +25,7 @@
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/math.hpp>
 #include <arctk/random/distribution.hpp>
 #include <arctk/utl.hpp>
 
@@ -60,6 +61,9 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline Discrete(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept;
 
+                //  -- Initialisation --
+                inline std::vector<double> init_cdfs(const std::vector<double>& probs_) noexcept;
+
 
                 //  == METHODS ==
               public:
@@ -75,6 +79,29 @@ namespace arc //! arctk namespace
               , _cdfs(init_cdfs(probs_))
             {
                 PRE(utl::properties::always_greater_than_or_equal_to(vals_, 0.0));
+            }
+
+
+            //  -- Initialisation --
+            template <typename T>
+            inline std::vector<double> Discrete<T>::init_cdfs(const std::vector<double>& probs_) noexcept
+            {
+                std::vector<double> cdfs(probs_.size());
+
+                cdfs[0] = probs_[0];
+                for (size_t i = 1; i < probs_.size(); ++i)
+                {
+                    cdfs[i] = cdfs[i - 1] + probs_[i];
+                }
+
+                for (size_t i = 0; i < cdfs.size(); ++i)
+                {
+                    cdfs[i] /= cdfs.back();
+                }
+
+                POST(math::compare::equal(cdfs.back()));
+
+                return (cdfs);
             }
 
 
