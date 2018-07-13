@@ -111,9 +111,11 @@ namespace arc //! arctk namespace
             //  == METHODS ==
             //  -- Sampling --
             template <typename T>
-            inline T Discrete<T>::sample(Generator* const rng_) noexcept override
+            inline T Discrete<T>::sample(Generator* const rng_) noexcept
             {
-                return (0);
+                const double xi = rng_->gen();
+
+                return (_vals[utl::search::lower(_cdfs, xi)]);
             }
 
 
