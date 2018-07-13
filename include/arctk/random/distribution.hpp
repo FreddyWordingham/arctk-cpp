@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <arctk/debug.hpp>
+#include <arctk/random/generator.hpp>
 
 
 

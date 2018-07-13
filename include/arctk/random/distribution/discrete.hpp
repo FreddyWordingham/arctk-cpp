@@ -67,6 +67,8 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Sampling --
+                inline T sample(Generator* const rng_) noexcept override;
             };
 
 
@@ -107,6 +109,12 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Sampling --
+            template <typename T>
+            inline T Discrete<T>::sample(Generator* const rng_) noexcept override
+            {
+                return (0);
+            }
 
 
 
