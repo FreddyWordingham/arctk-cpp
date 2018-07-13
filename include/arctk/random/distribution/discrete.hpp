@@ -62,13 +62,16 @@ namespace arc //! arctk namespace
                 inline Discrete(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept;
 
                 //  -- Initialisation --
-                inline std::vector<double> init_cdfs(const std::vector<double>& probs_) noexcept;
+                inline std::vector<double> init_cdfs(const std::vector<double>& probs_) const noexcept;
 
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline const std::vector<double>& cdfs() const noexcept;
+
                 //  -- Sampling --
-                inline T sample(Generator* const rng_) noexcept override;
+                inline T sample(Generator* const rng_) const noexcept override;
             };
 
 
@@ -88,7 +91,7 @@ namespace arc //! arctk namespace
 
             //  -- Initialisation --
             template <typename T>
-            inline std::vector<double> Discrete<T>::init_cdfs(const std::vector<double>& probs_) noexcept
+            inline std::vector<double> Discrete<T>::init_cdfs(const std::vector<double>& probs_) const noexcept
             {
                 PRE(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
 
@@ -115,7 +118,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
             //  -- Sampling --
             template <typename T>
-            inline T Discrete<T>::sample(Generator* const rng_) noexcept
+            inline T Discrete<T>::sample(Generator* const rng_) const noexcept
             {
                 const double xi = rng_->gen();
 
