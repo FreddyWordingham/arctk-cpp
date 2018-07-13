@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
               : _vals(vals_)
               , _cums(init_cums(probs_))
             {
-                PRE(utl::properties::always_greater_than(probs, 0.0));
+                PRE(utl::properties::always_greater_than_or_equal_to(probs, 0.0));
             }
 
 
