@@ -42,8 +42,11 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Values --
+                const std::vector<double> _vals; //!< Values which may be generated.
+
                 //  -- Probabilities --
-                const std::vector<double> _cumulative; //!< Cumulative probabilities of each value.
+                const std::vector<double> _cumulatives; //!< Cumulative probabilities of each value.
 
 
                 //  == INSTANTIATION ==
