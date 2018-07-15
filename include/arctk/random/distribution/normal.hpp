@@ -69,14 +69,11 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename T>
-            inline Gaussian<T>::Gaussian(const T ave_, const T var_) noexcept
+            inline Normal<T>::Normal() noexcept
               : Distribution<T>(std::numeric_limits<T>::min(), std::numeric_limits<T>::max())
-              , _ave(ave_)
-              , _var(var_)
               , _gen(false)
               , _z1(std::numeric_limits<T>::signaling_NaN())
             {
-                PRE(var_ > 0);
             }
 
 
