@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Sampling --
-                inline T sample(Generator* const rng_) const noexcept override;
+                inline T sample(Generator* const rng_) noexcept override;
             };
 
 
