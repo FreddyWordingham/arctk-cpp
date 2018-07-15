@@ -44,10 +44,17 @@ namespace arc //! arctk namespace
             template <typename T>
             class Gaussian : public Distribution<T>
             {
+                //  == FIELDS ==
+              protected:
+                //  -- Bounds --
+                const T _ave; //!< Average of the distribution.
+                const T _var; //!< Variance of the distribution.
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Gaussian(const T min_, const T max_) noexcept;
+                inline Gaussian(const T ave_, const T var_) noexcept;
 
 
                 //  == METHODS ==
@@ -61,8 +68,10 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename T>
-            inline Gaussian<T>::Gaussian(const T min_, const T max_) noexcept
-              : Distribution<T>(min_, max_)
+            inline Gaussian<T>::Gaussian(const T ave_, const T var_) noexcept
+              : Distribution<T>(std::numeric_limits<T>::min(), std::numeric_limits<T>::max())
+              , _ave(ave_)
+              , _var(var_)
             {
             }
 
