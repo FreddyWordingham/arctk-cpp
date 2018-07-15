@@ -85,7 +85,7 @@ namespace arc //! arctk namespace
               : Distribution<T>(std::numeric_limits<T>::min(), std::numeric_limits<T>::max())
               , _ave(ave_)
               , _var(var_)
-              , _gen(true)
+              , _gen(false)
               , _z1(std::numeric_limits<T>::signaling_NaN())
             {
                 PRE(var_ > 0);
