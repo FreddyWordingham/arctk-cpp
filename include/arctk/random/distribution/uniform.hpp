@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Sampling --
-                inline T sample(Generator* const rng_) noexcept override;
+                inline T sample(Generator* const rng_) const noexcept override;
             };
 
 
@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
             //  -- Sampling --
             template <typename T>
-            inline T Uniform<T>::sample(Generator* const rng_) noexcept
+            inline T Uniform<T>::sample(Generator* const rng_) const noexcept
             {
                 return (Distribution<T>::_min + (rng_->gen() * (Distribution<T>::_max - Distribution<T>::_min)));
             }
