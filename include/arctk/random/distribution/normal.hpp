@@ -48,8 +48,8 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               protected:
                 //  -- Generation --
-                bool _gen; //!< If true, generate a new pair of values next time sample is called.
-                T    _z1;  //!< Stored unused generated pair value.
+                mutable bool _gen; //!< If true, generate a new pair of values next time sample is called.
+                mutable T    _z1;  //!< Stored unused generated pair value.
 
 
                 //  == INSTANTIATION ==
