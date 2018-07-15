@@ -41,8 +41,6 @@ namespace arc //! arctk namespace
             template <typename T>
             class Uniform : public Distribution<T>
             {
-                //  == FIELDS ==
-              private:
                 //  == INSTANTIATION ==
               public:
                 //  == METHODS ==
