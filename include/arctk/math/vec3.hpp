@@ -143,7 +143,7 @@ namespace arc //! arctk namespace
             constexpr inline void rotate(const math::Vec<T, 3>& axis_, T ang_) noexcept;
 
             //  -- Printing --
-            inline std::string str() noexcept override;
+            inline std::string str() const noexcept override;
         };
 
 
@@ -660,7 +660,7 @@ namespace arc //! arctk namespace
          *  @return Human readable string of the vec.
          */
         template <typename T>
-        inline std::string Vec<T, 3>::str() noexcept
+        inline std::string Vec<T, 3>::str() const noexcept
         {
             std::stringstream stream;
 
