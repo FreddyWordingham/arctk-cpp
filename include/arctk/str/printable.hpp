@@ -61,17 +61,17 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Printing --
-            virtual std::string str() noexcept = 0; //!< Create a human readable string of the object.   @return Human readable string of the object.
+            virtual std::string str() noexcept const = 0; //!< Create a human readable string of the object.   @return Human readable string of the object.
 
             //  -- Saving --
-            inline void save(const std::string& path_) noexcept;
+            inline void save(const std::string& path_) constnoexcept;
         };
 
 
 
         //  == INSTANTIATION ==
         //  -- Destructors --
-        inline Printable::~Printable() noexcept = default;
+        inline Printable::~Printable() const noexcept = default;
 
 
 
@@ -82,7 +82,7 @@ namespace arc //! arctk namespace
          *
          *  @param  path_   Path to the output file.
          */
-        inline void Printable::save(const std::string& path_) noexcept
+        inline void Printable::save(const std::string& path_) const noexcept
         {
             std::ofstream file(path_);
 
