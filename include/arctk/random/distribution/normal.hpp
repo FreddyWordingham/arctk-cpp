@@ -81,12 +81,12 @@ namespace arc //! arctk namespace
             //  == METHODS ==
             //  -- Sampling --
             template <typename T>
-            inline T Gaussian<T>::sample(Generator* const rng_) noexcept
+            inline T Normal<T>::sample(Generator* const rng_) noexcept
             {
                 _gen = !_gen;
                 if (!_gen)
                 {
-                    return ((_z1 * _var) + _ave);
+                    return (_z1);
                 }
 
                 const double xi_0 = rng_->gen();
@@ -96,7 +96,7 @@ namespace arc //! arctk namespace
                 const double z0 = m * std::cos(2.0 * consts::math::PI * xi_1);
                 _z1             = m * std::sin(2.0 * consts::math::PI * xi_1);
 
-                return ((z0 * _var) + _ave);
+                return (z0);
             }
 
 
