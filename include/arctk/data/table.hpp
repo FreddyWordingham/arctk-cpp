@@ -87,7 +87,7 @@ namespace arc //! arctk namespace
             inline std::vector<typename std::tuple_element<I, std::tuple<A...>>::type> col() const noexcept;
 
             //  -- Printing --
-            inline std::string str() noexcept override;
+            inline std::string str() const noexcept override;
         };
 
 
@@ -299,7 +299,7 @@ namespace arc //! arctk namespace
          *  @return Human readable string of the table.
          */
         template <typename... A>
-        inline std::string Table<A...>::str() noexcept
+        inline std::string Table<A...>::str() const noexcept
         {
             std::stringstream stream;
 
