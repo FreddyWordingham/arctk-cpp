@@ -24,6 +24,7 @@
 #include <arctk/random/distribution.hpp>
 #include <arctk/random/distribution/discrete.hpp>
 #include <arctk/random/distribution/gaussian.hpp>
+#include <arctk/random/distribution/normal.hpp>
 #include <arctk/random/distribution/uniform.hpp>
 #include <arctk/random/generator.hpp>
 #include <arctk/random/generator/quality.hpp>
