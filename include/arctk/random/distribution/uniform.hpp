@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             template <typename T>
             inline Uniform<T>::Uniform(const T min_, const T max_) noexcept
-              : Distribution(min_, max_)
+              : Distribution<T>(min_, max_)
             {
             }
 
