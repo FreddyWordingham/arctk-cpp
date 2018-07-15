@@ -147,7 +147,7 @@ namespace arc //! arctk namespace
             constexpr inline void normalise() noexcept;
 
             //  -- Printing --
-            inline std::string str() noexcept override;
+            inline std::string str() const noexcept override;
         };
 
 
@@ -638,7 +638,7 @@ namespace arc //! arctk namespace
          *  @return Human readable string of the vec.
          */
         template <typename T>
-        inline std::string Vec<T, 4>::str() noexcept
+        inline std::string Vec<T, 4>::str() const noexcept
         {
             std::stringstream stream;
 
