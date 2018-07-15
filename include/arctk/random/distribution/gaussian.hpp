@@ -20,6 +20,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <limits>
+
 //  -- Arctk --
 #include <arctk/debug.hpp>
 
