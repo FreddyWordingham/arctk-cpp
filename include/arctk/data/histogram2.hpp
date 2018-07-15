@@ -92,7 +92,7 @@ namespace arc //! arctk namespace
                                         const T&    val_) noexcept = 0; //!<  Collect a value into the histogram at a given position.  @tparam T   Type binned. @param  pos_    Position of the value to place.  @param  val_    Value to place within the bins.
 
             //  -- Printing --
-            inline std::string str() noexcept override;
+            inline std::string str() const noexcept override;
         };
 
 
@@ -273,7 +273,7 @@ namespace arc //! arctk namespace
          *  @return Human readable string of the histogram.
          */
         template <typename T>
-        inline std::string Histogram<T, 2>::str() noexcept
+        inline std::string Histogram<T, 2>::str() const noexcept
         {
             std::stringstream stream;
 
