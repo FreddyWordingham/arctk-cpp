@@ -25,7 +25,6 @@
 #include <limits>
 
 //  -- Arctk --
-#include <arctk/consts.hpp>
 #include <arctk/debug.hpp>
 
 
@@ -47,7 +46,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type returned from sampling the distribution.
              */
             template <typename T>
-            class Gaussian : public Distribution<T>
+            class Gaussian : public Normal<T>
             {
                 //  == FIELDS ==
               protected:
