@@ -86,6 +86,7 @@ namespace arc //! arctk namespace
               , _ave(ave_)
               , _var(var_)
               , _gen(true)
+              , _z1(std::numeric_limits<T>::signaling_NaN())
             {
             }
 
