@@ -75,7 +75,7 @@ namespace arc //! arctk namespace
                 inline const std::vector<double>& cdfs() const noexcept;
 
                 //  -- Sampling --
-                inline T sample(Generator* const rng_) noexcept override;
+                inline T sample(Generator* const rng_) const noexcept override;
             };
 
 
@@ -136,7 +136,7 @@ namespace arc //! arctk namespace
 
             //  -- Sampling --
             template <typename T>
-            inline T Discrete<T>::sample(Generator* const rng_) noexcept
+            inline T Discrete<T>::sample(Generator* const rng_) const noexcept
             {
                 return (_vals[utl::search::lower(_cdfs, rng_->gen())]);
             }
