@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
                 inline T var() const noexcept;
 
                 //  -- Sampling --
-                inline T sample(Generator* const rng_) const noexcept override;
+                inline T sample(Generator* const rng_) noexcept override;
             };
 
 
@@ -109,7 +109,7 @@ namespace arc //! arctk namespace
 
             //  -- Sampling --
             template <typename T>
-            inline T Gaussian<T>::sample(Generator* const rng_) const noexcept
+            inline T Gaussian<T>::sample(Generator* const rng_) noexcept
             {
                 _gen = !_gen;
                 if (!_gen)
