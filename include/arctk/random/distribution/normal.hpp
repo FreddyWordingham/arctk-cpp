@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Sampling --
-                inline T sample(Generator* const rng_) noexcept override;
+                inline T sample(Generator* const rng_) const noexcept override;
             };
 
 
@@ -81,7 +81,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
             //  -- Sampling --
             template <typename T>
-            inline T Normal<T>::sample(Generator* const rng_) noexcept
+            inline T Normal<T>::sample(Generator* const rng_) const noexcept
             {
                 _gen = !_gen;
                 if (!_gen)
