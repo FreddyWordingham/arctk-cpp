@@ -62,6 +62,10 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline T ave() const noexcept;
+                inline T var() const noexcept;
+
                 //  -- Sampling --
                 inline T sample(Generator* const rng_) const noexcept override;
             };
@@ -81,6 +85,20 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Getters --
+            template <typename T>
+            inline T Gaussian<T>::ave() const noexcept
+            {
+                return (_ave);
+            }
+
+            template <typename T>
+            inline T Gaussian<T>::var() const noexcept
+            {
+                return (_var);
+            }
+
+
             //  -- Sampling --
             template <typename T>
             inline T Gaussian<T>::Gaussian(Generator* const rng_) const noexcept
