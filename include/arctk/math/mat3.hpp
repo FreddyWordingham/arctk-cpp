@@ -104,7 +104,7 @@ namespace arc //! arctk namespace
             constexpr inline T sum() const noexcept;
 
             //  -- Printing --
-            inline std::string str() noexcept override;
+            inline std::string str() const noexcept override;
         };
 
 
@@ -554,7 +554,7 @@ namespace arc //! arctk namespace
          *  @return Human readable string of the mat.
          */
         template <typename T>
-        inline std::string Mat<T, 3>::str() noexcept
+        inline std::string Mat<T, 3>::str() const noexcept
         {
             std::stringstream stream;
 
