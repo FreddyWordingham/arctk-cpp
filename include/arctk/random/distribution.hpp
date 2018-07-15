@@ -63,7 +63,7 @@ namespace arc //! arctk namespace
             inline T max() const noexcept;
 
             //  -- Sampling --
-            virtual inline T sample(Generator* const rng_) noexcept = 0;
+            virtual inline T sample(Generator* const rng_) const noexcept = 0;
         };
 
 
