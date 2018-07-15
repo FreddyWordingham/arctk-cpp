@@ -53,6 +53,9 @@ namespace arc //! arctk namespace
                 const T _ave; //!< Average of the distribution.
                 const T _var; //!< Variance of the distribution.
 
+                //  -- Generation --
+                bool _gen; //!< If true, generate a new pair of values next time sample is called.
+
 
                 //  == INSTANTIATION ==
               public:
@@ -103,7 +106,23 @@ namespace arc //! arctk namespace
             template <typename T>
             inline T Gaussian<T>::Gaussian(Generator* const rng_) const noexcept
             {
-                return (Distribution<T>::_min + (rng_->gen() * (Distribution<T>::_max - Distribution<T>::_min)));
+                static bool   static_generate = false;
+                static double static_z1;
+
+                static_generate = !static_generate;
+                if (!static_generate)
+                {
+                    return ((static_z1 * sigma_) + mu_);
+                }
+
+                const double u0 = rng_->gen();
+                const double u1 = rng_->gen();
+
+                const double m  = std::sqrt(-2.0 * std::log(u0));
+                const double z0 = m * std::cos(2.0 * constant::PI * u1);
+                static_z1       = m * std::sin(2.0 * constant::PI * u1);
+
+                return ((z0 * sigma_) + mu_);
             }
 
 
