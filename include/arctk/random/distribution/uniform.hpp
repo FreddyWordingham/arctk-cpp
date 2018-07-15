@@ -64,6 +64,7 @@ namespace arc //! arctk namespace
             inline Uniform<T>::Uniform(const T min_, const T max_) noexcept
               : Distribution<T>(min_, max_)
             {
+                PRE(min_ < max_);
             }
 
 
