@@ -26,6 +26,7 @@
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/random/distribution/normal.hpp>
 
 
 
@@ -54,10 +55,6 @@ namespace arc //! arctk namespace
                 const T _ave; //!< Average of the distribution.
                 const T _var; //!< Variance of the distribution.
 
-                //  -- Generation --
-                bool _gen; //!< If true, generate a new pair of values next time sample is called.
-                T    _z1;  //!< Stored unused generated pair value.
-
 
                 //  == INSTANTIATION ==
               public:
@@ -81,11 +78,8 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             template <typename T>
             inline Gaussian<T>::Gaussian(const T ave_, const T var_) noexcept
-              : Distribution<T>(std::numeric_limits<T>::min(), std::numeric_limits<T>::max())
-              , _ave(ave_)
+              : _ave(ave_)
               , _var(var_)
-              , _gen(false)
-              , _z1(std::numeric_limits<T>::signaling_NaN())
             {
                 PRE(var_ > 0);
             }
@@ -111,20 +105,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline T Gaussian<T>::sample(Generator* const rng_) noexcept
             {
-                _gen = !_gen;
-                if (!_gen)
-                {
-                    return ((_z1 * _var) + _ave);
-                }
-
-                const double xi_0 = rng_->gen();
-                const double xi_1 = rng_->gen();
-
-                const double m  = std::sqrt(-2.0 * std::log(xi_0));
-                const double z0 = m * std::cos(2.0 * consts::math::PI * xi_1);
-                _z1             = m * std::sin(2.0 * consts::math::PI * xi_1);
-
-                return ((z0 * _var) + _ave);
+                return ((Normal<T>::sample(rng_) * _var) + _ave);
             }
 
 
