@@ -88,6 +88,7 @@ namespace arc //! arctk namespace
               , _gen(true)
               , _z1(std::numeric_limits<T>::signaling_NaN())
             {
+                PRE(var_ > 0);
             }
 
 
