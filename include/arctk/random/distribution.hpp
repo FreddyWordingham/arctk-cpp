@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
         class Distribution
         {
             //  == FIELDS ==
-          private:
+          protected:
             //  -- Bounds --
             const T _min; //!< Minimum value returned by the distribution.
             const T _max; //!< Maximum value returned by the distribution.
