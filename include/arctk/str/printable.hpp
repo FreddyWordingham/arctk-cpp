@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Destructors --
-        inline Printable::~Printable() const noexcept = default;
+        inline Printable::~Printable() noexcept = default;
 
 
 
