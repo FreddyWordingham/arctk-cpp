@@ -54,7 +54,8 @@ namespace arc //! arctk namespace
                 const T _var; //!< Variance of the distribution.
 
                 //  -- Generation --
-                bool _gen; //!< If true, generate a new pair of values next time sample is called.
+                bool    _gen; //!< If true, generate a new pair of values next time sample is called.
+                const T _z1;  //!< Stored unused generated pair value.
 
 
                 //  == INSTANTIATION ==
@@ -106,7 +107,6 @@ namespace arc //! arctk namespace
             template <typename T>
             inline T Gaussian<T>::Gaussian(Generator* const rng_) const noexcept
             {
-                static bool   static_generate = false;
                 static double static_z1;
 
                 static_generate = !static_generate;
