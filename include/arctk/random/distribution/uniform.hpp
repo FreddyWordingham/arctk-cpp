@@ -69,6 +69,12 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Sampling --
+            template <typename T>
+            inline T Uniform<T>::sample(Generator* const rng_) const noexcept
+            {
+                return (_min + (rng_->gen() * (_max - _min)));
+            }
 
 
 
