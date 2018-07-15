@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline T Uniform<T>::sample(Generator* const rng_) const noexcept
             {
-                return (_min + (rng_->gen() * (_max - _min)));
+                return (Distribution<T>::_min + (rng_->gen() * (Distribution<T>::_max - Distribution<T>::_min)));
             }
 
 
