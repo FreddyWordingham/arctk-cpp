@@ -21,9 +21,11 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cmath>
 #include <limits>
 
 //  -- Arctk --
+#include <arctk/consts.hpp>
 #include <arctk/debug.hpp>
 
 
@@ -106,24 +108,22 @@ namespace arc //! arctk namespace
 
             //  -- Sampling --
             template <typename T>
-            inline T Gaussian<T>::Gaussian(Generator* const rng_) const noexcept
+            inline T Gaussian<T>::sample(Generator* const rng_) const noexcept
             {
-                static double static_z1;
-
-                static_generate = !static_generate;
-                if (!static_generate)
+                _gen = !_gen;
+                if (!_gen)
                 {
-                    return ((static_z1 * sigma_) + mu_);
+                    return ((_z1 * _var) + _ave);
                 }
 
-                const double u0 = rng_->gen();
-                const double u1 = rng_->gen();
+                const double xi_0 = rng_->gen();
+                const double xi_1 = rng_->gen();
 
-                const double m  = std::sqrt(-2.0 * std::log(u0));
-                const double z0 = m * std::cos(2.0 * constant::PI * u1);
-                static_z1       = m * std::sin(2.0 * constant::PI * u1);
+                const double m  = std::sqrt(-2.0 * std::log(xi_0));
+                const double z0 = m * std::cos(2.0 * consts::math::PI * xi_1);
+                _z1             = m * std::sin(2.0 * consts::math::PI * xi_1);
 
-                return ((z0 * sigma_) + mu_);
+                return ((z0 * _var) + _ave);
             }
 
 
