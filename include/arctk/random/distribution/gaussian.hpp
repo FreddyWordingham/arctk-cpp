@@ -83,6 +83,7 @@ namespace arc //! arctk namespace
               : Distribution<T>(std::numeric_limits<T>::min(), std::numeric_limits<T>::max())
               , _ave(ave_)
               , _var(var_)
+              , _gen(true)
             {
             }
 
