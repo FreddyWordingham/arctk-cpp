@@ -43,6 +43,10 @@ namespace arc //! arctk namespace
             {
                 //  == INSTANTIATION ==
               public:
+                //  -- Constructors --
+                inline Uniform(const T min_, const T max_) noexcept;
+
+
                 //  == METHODS ==
               public:
                 //  -- Sampling --
@@ -53,6 +57,11 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            template <typename T>
+            inline Uniform<T>::Uniform(const T min_, const T max_) noexcept
+              : Distribution(min_, max_)
+            {
+            }
 
 
 
