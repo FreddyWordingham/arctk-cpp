@@ -138,9 +138,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline T Discrete<T>::sample(Generator* const rng_) const noexcept
             {
-                const double xi = rng_->gen();
-
-                return (_vals[utl::search::lower(_cdfs, xi)]);
+                return (_vals[utl::search::lower(_cdfs, rng_->gen())]);
             }
 
 
