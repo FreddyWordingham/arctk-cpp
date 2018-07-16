@@ -56,6 +56,7 @@ namespace arc //! arctk namespace
                 //  -- Probabilities --
                 const std::vector<double> _probs; //!< Probability distribution.
                 const std::vector<double> _cdfs;  //!< Cumulative distribution frequencies.
+                const std::vector<double> _fracs;
 
 
                 //  == INSTANTIATION ==
