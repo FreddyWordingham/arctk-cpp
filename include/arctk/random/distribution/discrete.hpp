@@ -144,6 +144,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the vector of values generated from the distribution.
+             *
+             *  @return Vector of values generated from the distribution.
+             */
             template <typename T>
             inline const std::vector<T>& Discrete<T>::vals() const noexcept
             {
