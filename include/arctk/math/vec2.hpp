@@ -501,7 +501,7 @@ namespace arc //! arctk namespace
         {
             PRE(tol_ > 0);
 
-            return (std::fabs(T{1.0} - mag()) <= tol_);
+            return (std::fabs(T{1.0} - mag_sq()) <= tol_);
         }
 
 
