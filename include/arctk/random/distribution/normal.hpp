@@ -24,6 +24,9 @@
 #include <cmath>
 #include <limits>
 
+//  -- Arctk --
+#include <arctk/random/distribution.hpp>
+
 
 
 //  == NAMESPACE ==
