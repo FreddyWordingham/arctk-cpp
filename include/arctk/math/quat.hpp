@@ -67,6 +67,11 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
+            //  -- Access --
+            constexpr inline T&       operator[](size_t index_) noexcept;
+            constexpr inline const T& operator[](size_t index_) const noexcept;
+
+
             //  == METHODS ==
           public:
             //  -- Printing --
@@ -154,6 +159,41 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
+        //  -- Access --
+        /**
+         *  Access an element of the quat.
+         *
+         *  @param  index_  Index of the element to access.
+         *
+         *  @pre    index_ must be less than four.
+         *
+         *  @return A reference to the element requested.
+         */
+        template <typename T>
+        constexpr inline T& Vec<T, 4>::operator[](const size_t index_) noexcept
+        {
+            PRE(index_ < 4);
+
+            return ((&x)[index_]);
+        }
+
+        /**
+         *  Access an element of the quat.
+         *
+         *  @param  index_  Index of the element to access.
+         *
+         *  @pre    index_ must be less than four.
+         *
+         *  @return A const reference to the element requested.
+         */
+        template <typename T>
+        constexpr inline const T& Vec<T, 4>::operator[](const size_t index_) const noexcept
+        {
+            PRE(index_ < 4);
+
+            return ((&x)[index_]);
+        }
+
 
 
         //  == METHODS ==
