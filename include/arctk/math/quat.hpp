@@ -22,8 +22,10 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cmath>
+#include <limits>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/math/vec3.hpp>
 #include <arctk/settings.hpp>
 #include <arctk/str.hpp>
@@ -83,7 +85,10 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
-            //  -- Getters --
+            //  -- Properties --
+            constexpr inline bool normalised(double tol_ = std::numeric_limits<double>::epsilon()) const noexcept;
+
+            //  -- Mathematical --
             constexpr inline double angle() const noexcept;
             inline Vec<double, 3>   axis() const noexcept;
             inline Quat             conj() const noexcept;
