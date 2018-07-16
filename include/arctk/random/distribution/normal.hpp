@@ -51,8 +51,8 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               protected:
                 //  -- Generation --
-                mutable bool _gen; //!< If true, generate a new pair of values next time sample is called.
-                mutable T    _z1;  //!< Stored unused generated pair value.
+                mutable bool _gen{false};                                  //!< If true, generate a new pair of values next time sample is called.
+                mutable T    _z1{std::numeric_limits<T>::signaling_NaN()}; //!< Stored unused generated pair value.
 
 
                 //  == INSTANTIATION ==
@@ -77,8 +77,6 @@ namespace arc //! arctk namespace
             template <typename T>
             inline Normal<T>::Normal() noexcept
               : Distribution<T>(std::numeric_limits<T>::min(), std::numeric_limits<T>::max())
-              , _gen(false)
-              , _z1(std::numeric_limits<T>::signaling_NaN())
             {
             }
 
