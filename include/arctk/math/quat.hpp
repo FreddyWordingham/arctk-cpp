@@ -200,6 +200,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the rotation angle of the quat.
+         *
+         *  @return Rotation angle of the quat.
+         */
         constexpr inline double Quat::angle() const noexcept
         {
             return (2.0 * std::acos(_w));
