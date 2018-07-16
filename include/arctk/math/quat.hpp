@@ -55,6 +55,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            constexpr inline Quat() noexcept;
 
 
             //  == OPERATORS ==
@@ -69,6 +70,16 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        /**
+         *  Construct a unit quaternion.
+         */
+        constexpr inline Quat::Quat() noexcept
+          : x(0.0)
+          , y(0.0)
+          , z(0.0)
+          , w(1.0)
+        {
+        }
 
 
 
