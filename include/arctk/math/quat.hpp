@@ -207,6 +207,9 @@ namespace arc //! arctk namespace
 
         constexpr Vec<double, 3> Quat::axis() const noexcept
         {
+            const double m = 1.0 / std::sqrt(1.0 - (_w * _w));
+
+            return (Vec<double, 3>(_x * m, _y * m, _z * m));
         }
 
 
