@@ -71,6 +71,9 @@ namespace arc //! arctk namespace
             constexpr inline double&       operator[](size_t index_) noexcept;
             constexpr inline const double& operator[](size_t index_) const noexcept;
 
+            //  -- Arithmetic --
+            constexpr inline Quat operator+(const Quat& quat_) const noexcept;
+
 
             //  == METHODS ==
           public:
@@ -194,6 +197,20 @@ namespace arc //! arctk namespace
             PRE(index_ < 4);
 
             return ((&_x)[index_]);
+        }
+
+
+        //  -- Arithmetic --
+        /**
+         *  Add a quat to a quat.
+         *
+         *  @param  quat_   Quat to add to the quat.
+         *
+         *  @return Quat formed by adding the vec to the quat.
+         */
+        constexpr inline Quat Quat::operator+(const Quat& quat_) const noexcept
+        {
+            return (Quat(_x + quat_._x, _y + quat_._y, _z + quat_._z, _w + quat_._w));
         }
 
 
