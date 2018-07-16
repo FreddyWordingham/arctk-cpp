@@ -303,7 +303,7 @@ namespace arc //! arctk namespace
         }
 
 
-        //  -- Getters --
+        //  -- Mathematical --
         /**
          *  Get the rotation angle of the quat.
          *
