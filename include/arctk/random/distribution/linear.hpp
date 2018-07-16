@@ -60,6 +60,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Linear(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept;
 
 
                 //  == METHODS ==
@@ -73,6 +74,18 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            template <typename T>
+            inline Linear<T>::Linear(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept
+              : Distribution<T>(vals_.front(), vals_.back())
+              , _vals(vals_)
+              , _cdfs(init_cdfs(vals_, probs_))
+            {
+                PRE(vals_.size() >= 2);
+                PRE(!probs_.empty());
+                PRE(vals_.size() == (probs_.size() + 1));
+                PRE(utl::properties::ascending(vals_));
+                PRE(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
+            }
 
 
 
