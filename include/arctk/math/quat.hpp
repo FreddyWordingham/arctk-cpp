@@ -104,7 +104,7 @@ namespace arc //! arctk namespace
         {
         }
 
-        constexpr inline Quat::Quat(const Vec3<double>& axis_, const double theta_) noexcept
+        constexpr inline Quat::Quat(const Vec<double, 3>& axis_, const double theta_) noexcept
           : x(axis_.x * std::sin(theta_ * 0.5))
           , y(axis_.y * std::sin(theta_ * 0.5))
           , z(axis_.z * std::sin(theta_ * 0.5))
