@@ -91,6 +91,9 @@ namespace arc //! arctk namespace
             //  -- Mathematical --
             constexpr inline double angle() const noexcept;
             inline Vec<double, 3>   axis() const noexcept;
+            constexpr inline double mag() const noexcept;
+            constexpr inline double mag_sq() const noexcept;
+            constexpr inline void   normalise() noexcept;
             inline Quat             conj() const noexcept;
 
             //  -- Printing --
@@ -324,6 +327,43 @@ namespace arc //! arctk namespace
             const double m = 1.0 / std::sqrt(1.0 - (_w * _w));
 
             return (Vec<double, 3>(_x * m, _y * m, _z * m));
+        }
+
+        /**
+         *  Calculate the magnitude of the quat.
+         *
+         *  @return Magnitude of the quat.
+         */
+        constexpr inline double Quat::mag() const noexcept
+        {
+            return (std::sqrt(mag_sq()));
+        }
+
+        /**
+         *  Calculate the magnitude-squared of the quat.
+         *
+         *  @return Magnitude-squared of the quat.
+         */
+        constexpr inline double Quat::mag_sq() const noexcept
+        {
+            return ((_x * _x) + (_y * _y) + (_z * _z) + (_w * _w));
+        }
+
+        /**
+         *  Normalise the quat.
+         *
+         *  @post   Quat must be normalised.
+         */
+        constexpr inline void Quat::normalise() noexcept
+        {
+            const double m = 1.0 / mag();
+
+            x *= m;
+            y *= m;
+            z *= m;
+            w *= m;
+
+            POST(normalised());
         }
 
         inline Quat Quat::conj() const noexcept
