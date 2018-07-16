@@ -98,6 +98,7 @@ namespace arc //! arctk namespace
               , _cdfs(init_cdfs(probs_))
             {
                 PRE(!vals_.empty());
+                PRE(!probs_.empty());
                 PRE(vals_.size() == probs_.size());
                 PRE(utl::properties::ascending(vals_));
                 PRE(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
