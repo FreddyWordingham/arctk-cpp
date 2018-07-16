@@ -40,6 +40,9 @@ namespace arc //! arctk namespace
 
             //  == CLASS ==
             /**
+             *  Constant (step) probability distribution class used to sample random numbers.
+             *
+             *  @tparam T   Type returned from sampling the distribution.
              */
             template <typename T>
             class Constant : public Distribution<T>
