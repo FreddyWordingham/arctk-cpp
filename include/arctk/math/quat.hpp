@@ -104,6 +104,14 @@ namespace arc //! arctk namespace
         {
         }
 
+        /**
+         *  Construct a quaternion from a rotation axis and a rotation angle.
+         *
+         *  @param  axis_   Axis of rotation.
+         *  @param  theta_  Angle of rotation.
+         *
+         *  @pre    axis_ must be normalised.
+         */
         constexpr inline Quat::Quat(const Vec<double, 3>& axis_, const double theta_) noexcept
           : x(axis_.x * std::sin(theta_ * 0.5))
           , y(axis_.y * std::sin(theta_ * 0.5))
