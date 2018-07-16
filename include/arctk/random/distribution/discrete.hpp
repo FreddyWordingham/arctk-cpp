@@ -109,6 +109,13 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
+            /**
+             *  Initialise the vector of cumulative distribution frequency values.
+             *
+             *  @param  probs_  Corresponding relative probabilities of the values.
+             *
+             *  @return Initialised vector of cumulative distribution frequency values.
+             */
             template <typename T>
             inline std::vector<double> Discrete<T>::init_cdfs(const std::vector<double>& probs_) const noexcept
             {
