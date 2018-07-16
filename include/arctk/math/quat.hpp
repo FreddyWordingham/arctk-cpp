@@ -299,7 +299,7 @@ namespace arc //! arctk namespace
          */
         constexpr inline bool Quat::normalised(const double tol_) const noexcept
         {
-            return (std::fabs(1.0 - mag()) <= tol_);
+            return (std::fabs(1.0 - mag_sq()) <= tol_);
         }
 
 
