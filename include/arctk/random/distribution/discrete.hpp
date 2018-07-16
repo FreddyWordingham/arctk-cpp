@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
 
             //  == CLASS ==
             /**
-             *  Discrete probability distribution base class used to sample random numbers.
+             *  Discrete probability distribution class used to sample random numbers.
              *
              *  @tparam T   Type returned from sampling the distribution.
              */
