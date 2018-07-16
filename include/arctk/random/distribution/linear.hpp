@@ -129,7 +129,7 @@ namespace arc //! arctk namespace
             }
 
             template <typename T>
-            inline std::vector<double> Linear<T>::init_cdfs(const std::vector<T>& vals_, const std::vector<double>& probs_) const noexcept
+            inline std::vector<double> Linear<T>::init_fracs(const std::vector<T>& vals_, const std::vector<double>& probs_) const noexcept
             {
                 PRE(vals_.size() >= 2);
                 PRE(!probs_.empty());
