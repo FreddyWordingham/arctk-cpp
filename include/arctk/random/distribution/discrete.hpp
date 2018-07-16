@@ -155,6 +155,11 @@ namespace arc //! arctk namespace
                 return (_vals);
             }
 
+            /**
+             *  Get the vector of cumulative distribution frequency values.
+             *
+             *  @return Vector of cumulative distribution frequency values.
+             */
             template <typename T>
             inline const std::vector<double>& Discrete<T>::cdfs() const noexcept
             {
