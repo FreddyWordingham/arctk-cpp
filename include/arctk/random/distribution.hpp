@@ -75,6 +75,8 @@ namespace arc //! arctk namespace
          *
          *  @param  min_    Minimum possible sampled value.
          *  @param  max_    Maximum possible sampled value.
+         *
+         *  @pre    min_ must be less than max_.
          */
         template <typename T>
         inline Distribution<T>::Distribution(T min_, T max_) noexcept
