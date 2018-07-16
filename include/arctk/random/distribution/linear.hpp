@@ -66,6 +66,7 @@ namespace arc //! arctk namespace
 
                 //  -- Initialisation --
                 inline std::vector<double> init_cdfs(const std::vector<T>& vals_, const std::vector<double>& probs_) const noexcept;
+                inline std::vector<double> init_fracs(const std::vector<T>& vals_, const std::vector<double>& probs_) const noexcept;
 
 
                 //  == METHODS ==
@@ -84,7 +85,9 @@ namespace arc //! arctk namespace
             inline Linear<T>::Linear(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept
               : Distribution<T>(vals_.front(), vals_.back())
               , _vals(vals_)
+              , _probs(probs_)
               , _cdfs(init_cdfs(vals_, probs_))
+              , _fracs(init_fracs(vals_, probs))
             {
                 PRE(vals_.size() >= 2);
                 PRE(!probs_.empty());
@@ -120,6 +123,28 @@ namespace arc //! arctk namespace
                 POST(math::compare::equal(cdfs.back(), 1.0));
 
                 return (cdfs);
+            }
+
+            template <typename T>
+            inline std::vector<double> Linear<T>::init_cdfs(const std::vector<T>& vals_, const std::vector<double>& probs_) const noexcept
+            {
+                PRE(vals_.size() >= 2);
+                PRE(!probs_.empty());
+                PRE(vals_.size() == (probs_.size() + 1));
+                PRE(utl::properties::ascending(vals_));
+                PRE(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
+
+                std::vector<double> fracs(probs_.size() - 1);
+
+                for (size_t i = 0; i < fracs.size(); ++i)
+                {
+                    const double above = (std::fabs(probs_[i + 1] - probs_[i]) * (vals_[i + 1] - vals_[i])) / 2.0;
+                    const double below = ((probs_[i] + probs_[i + 1]) / 2.0) * (vals_[i + 1] - vals_[i]);
+
+                    fracs[i] = above / below;
+                }
+
+                return (fracs);
             }
 
 
