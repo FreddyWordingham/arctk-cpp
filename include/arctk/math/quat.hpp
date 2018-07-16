@@ -133,6 +133,16 @@ namespace arc //! arctk namespace
         {
         }
 
+        /**
+         *  Construct a quaternion from Euler rotations helper method.
+         *
+         *  @param  sin_yaw_    Sine of the angle to rotate around the up direction.
+         *  @param  cos_yaw_    Cosine of the angle to rotate around the up direction.
+         *  @param  sin_pitch_  Sine of the angle to rotate around side direction.
+         *  @param  cos_pitch_  Cosine of the angle to rotate around side direction.
+         *  @param  sin_roll_   Sine of the angle to rotate around the forward direction.
+         *  @param  cos_roll_   Cosine of the angle to rotate around the forward direction.
+         */
         constexpr inline Quat::Quat(const double cos_yaw_, const double sin_yaw_, const double cos_pitch_, const double sin_pitch_, const double cos_roll_, const double sin_roll_) noexcept
           : x((((cos_yaw_ * cos_pitch_ * sin_roll_) - (sin_yaw_ * sin_pitch_ * cos_roll_))))
           , y((((cos_yaw_ * sin_pitch_ * cos_roll_) + (sin_yaw_ * cos_pitch_ * sin_roll_))))
