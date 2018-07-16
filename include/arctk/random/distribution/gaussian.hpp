@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Gaussian(const T ave_, const T var_) noexcept;
+                inline Gaussian(T ave_, T var_) noexcept;
 
 
                 //  == METHODS ==
