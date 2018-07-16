@@ -76,6 +76,14 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a gaussian distribution with a given average a variance.
+             *
+             *  @param  ave_    Average of the distribution.
+             *  @param  var_    Variance of the distribution.
+             *
+             *  @pre    var_ must be positive.
+             */
             template <typename T>
             inline Gaussian<T>::Gaussian(const T ave_, const T var_) noexcept
               : _ave(ave_)
