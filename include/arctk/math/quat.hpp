@@ -177,7 +177,7 @@ namespace arc //! arctk namespace
         {
             PRE(index_ < 4);
 
-            return ((&x)[index_]);
+            return ((&_x)[index_]);
         }
 
         /**
@@ -193,7 +193,7 @@ namespace arc //! arctk namespace
         {
             PRE(index_ < 4);
 
-            return ((&x)[index_]);
+            return ((&_x)[index_]);
         }
 
 
