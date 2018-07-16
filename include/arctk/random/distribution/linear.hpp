@@ -54,7 +54,8 @@ namespace arc //! arctk namespace
                 const std::vector<T> _vals; //!< Distribution values.
 
                 //  -- Probabilities --
-                const std::vector<double> _cdfs; //!< Cumulative distribution frequencies.
+                const std::vector<double> _probs; //!< Probability distribution.
+                const std::vector<double> _cdfs;  //!< Cumulative distribution frequencies.
 
 
                 //  == INSTANTIATION ==
