@@ -60,6 +60,9 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline const std::vector<T>&      vals() const noexcept;
+                inline const std::vector<double>& cdfs() const noexcept;
             };
 
 
@@ -70,6 +73,28 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Getters --
+            /**
+             *  Get the vector of values generated from the distribution.
+             *
+             *  @return Vector of values generated from the distribution.
+             */
+            template <typename T>
+            inline const std::vector<T>& Constant<T>::vals() const noexcept
+            {
+                return (_vals);
+            }
+
+            /**
+             *  Get the vector of cumulative distribution frequency values.
+             *
+             *  @return Vector of cumulative distribution frequency values.
+             */
+            template <typename T>
+            inline const std::vector<double>& Constant<T>::cdfs() const noexcept
+            {
+                return (_cdfs);
+            }
 
 
 
