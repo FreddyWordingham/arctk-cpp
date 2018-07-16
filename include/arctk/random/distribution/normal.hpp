@@ -80,6 +80,13 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Sampling --
+            /**
+             *  Sample a value from the distribution.
+             *
+             *  @param  rng_    Random number generator.
+             *
+             *  @return Value sampled from the distribution.
+             */
             template <typename T>
             inline T Normal<T>::sample(Generator* const rng_) const noexcept
             {
