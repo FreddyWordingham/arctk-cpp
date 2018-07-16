@@ -199,6 +199,17 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Getters --
+        constexpr double Quat::angle() const noexcept
+        {
+            return (2.0 * std::acos(w));
+        }
+
+        constexpr Vec<double, 3> Quat::axis() const noexcept
+        {
+        }
+
+
         //  -- Printing --
         /**
          *  Create a human readable string of the quat.
