@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Constructors --
                 inline Greyscale(size_t width_, size_t height_) noexcept;
-                inline Greyscale(const std::vector<std::vector<double>>& pixels_) noexcept;
+                inline explicit Greyscale(const std::vector<std::vector<double>>& pixels_) noexcept;
 
 
                 //  == METHODS ==
