@@ -81,12 +81,12 @@ namespace arc //! arctk namespace
             constexpr inline const double& operator[](size_t index_) const noexcept;
 
 
-
             //  == METHODS ==
           public:
             //  -- Getters --
             constexpr inline double angle() const noexcept;
             inline Vec<double, 3>   axis() const noexcept;
+            inline Quat             conj() const noexcept;
 
             //  -- Printing --
             inline std::string str() const noexcept override;
@@ -305,6 +305,13 @@ namespace arc //! arctk namespace
             const double m = 1.0 / std::sqrt(1.0 - (_w * _w));
 
             return (Vec<double, 3>(_x * m, _y * m, _z * m));
+        }
+
+        inline Quat Quat::conj() const noexcept
+        {
+            PRE(normalised());
+
+            return (Quat(-_x, -_y, -_z, _w));
         }
 
 
