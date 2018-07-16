@@ -24,6 +24,7 @@
 #include <cmath>
 
 //  -- Arctk --
+#include <arctk/math/vec3.hpp>
 #include <arctk/settings.hpp>
 #include <arctk/str.hpp>
 
@@ -57,6 +58,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             constexpr inline Quat() noexcept;
             constexpr inline Quat(double x_, double y_, double z_, double w_) noexcept;
+            constexpr inline Quat(const Vec3<double>& axis_, double theta_) noexcept;
 
 
             //  == OPERATORS ==
@@ -96,6 +98,15 @@ namespace arc //! arctk namespace
           , z(z_)
           , w(w_)
         {
+        }
+
+        constexpr inline Quat::Quat(const Vec3<double>& axis_, const double theta_) noexcept
+          : x(axis_.x * std::sin(theta_ / 2.0))
+          , y(axis_.y * std::sin(theta_ / 2.0))
+          , z(axis_.z * std::sin(theta_ / 2.0))
+          , w(std::cos(theta_ / 2.0))
+        {
+            PRE(axis_.normalised());
         }
 
 
