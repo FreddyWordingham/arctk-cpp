@@ -92,6 +92,11 @@ namespace arc //! arctk namespace
                 PRE(height_ > 0);
             }
 
+            /**
+             *  Construct a greyscale image from pixel of values.
+             *
+             *  @param  pixels_ Two-dimensional vector of pixel values.
+             */
             inline Greyscale::Greyscale(const std::vector<std::vector<double>>& pixels_) noexcept
               : Image(pixels_.size(), pixels_.empty() ? 0 : pixels_.front().size())
               , _pixels(pixels_)
