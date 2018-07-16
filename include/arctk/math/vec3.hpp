@@ -644,12 +644,10 @@ namespace arc //! arctk namespace
         {
             PRE(axis_.normalised());
 
-            math::Vec<T, 3> axis = axis_;
-
             const double cos_theta = std::cos(ang_);
             const double sin_theta = std::sin(ang_);
 
-            *this = (*this * cos_theta) + ((axis ^ *this) * sin_theta) + ((axis * (axis * *this)) * (1.0 - cos_theta));
+            *this = (*this * cos_theta) + ((axis_ ^ *this) * sin_theta) + ((axis_ * (axis_ * *this)) * (1.0 - cos_theta));
         }
 
 
