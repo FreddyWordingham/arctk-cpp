@@ -115,11 +115,11 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Mat<T, 4> translate(const Vec<T, 3>& trans_) noexcept;
         template <typename T>
-        constexpr inline Mat<T, 4> rotate_x(const double ang_) noexcept;
+        constexpr inline Mat<T, 4> rotate_x(const T ang_) noexcept;
         template <typename T>
-        constexpr inline Mat<T, 4> rotate_y(const double ang_) noexcept;
+        constexpr inline Mat<T, 4> rotate_y(const T ang_) noexcept;
         template <typename T>
-        constexpr inline Mat<T, 4> rotate_z(const double ang_) noexcept;
+        constexpr inline Mat<T, 4> rotate_z(const T ang_) noexcept;
         template <typename T>
         constexpr inline Mat<T, 4> rotate(const Vec<T, 3>& rot_) noexcept;
         template <typename T>
@@ -691,19 +691,19 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        constexpr inline Mat<T, 4> rotate_x(const double ang_) noexcept
+        constexpr inline Mat<T, 4> rotate_x(const T ang_) noexcept
         {
             return (Mat<T, 4>(Vec<T, 4>(1, 0, 0, 0), Vec<T, 4>(0, std::cos(ang_), -std::sin(ang_), 0), Vec<T, 4>(0, std::sin(ang_), std::cos(ang_), 0), Vec<T, 4>(0, 0, 0, 1)));
         }
 
         template <typename T>
-        constexpr inline Mat<T, 4> rotate_y(const double ang_) noexcept
+        constexpr inline Mat<T, 4> rotate_y(const T ang_) noexcept
         {
             return (Mat<T, 4>(Vec<T, 4>(std::cos(ang_), 0, std::sin(ang_), 0), Vec<T, 4>(0, 1, 0, 0), Vec<T, 4>(-std::sin(ang_), 0, std::cos(ang_), 0), Vec<T, 4>(0, 0, 0, 1)));
         }
 
         template <typename T>
-        constexpr inline Mat<T, 4> rotate_z(const double ang_) noexcept
+        constexpr inline Mat<T, 4> rotate_z(const T ang_) noexcept
         {
         }
 
