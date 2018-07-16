@@ -72,8 +72,8 @@ namespace arc //! arctk namespace
             constexpr inline Quat& operator-=(const Quat& quat_) noexcept;
 
             //  -- Arithmetic --
-            constexpr inline Quat operator+(const Quat& quat_) const noexcept;
-            constexpr inline Quat operator-(const Quat& quat_) const noexcept;
+            inline Quat operator+(const Quat& quat_) const noexcept;
+            inline Quat operator-(const Quat& quat_) const noexcept;
 
             //  -- Access --
             constexpr inline double&       operator[](size_t index_) noexcept;
@@ -216,7 +216,7 @@ namespace arc //! arctk namespace
          *
          *  @return Quat formed by adding the vec to the quat.
          */
-        constexpr inline Quat Quat::operator+(const Quat& quat_) const noexcept
+        inline Quat Quat::operator+(const Quat& quat_) const noexcept
         {
             return (Quat(_x + quat_._x, _y + quat_._y, _z + quat_._z, _w + quat_._w));
         }
@@ -228,7 +228,7 @@ namespace arc //! arctk namespace
          *
          *  @return Quat formed by subtracting the vec from the quat.
          */
-        constexpr inline Quat Quat::operator-(const Quat& quat_) const noexcept
+        inline Quat Quat::operator-(const Quat& quat_) const noexcept
         {
             return (Quat(_x - quat_._x, _y - quat_._y, _z - quat_._z, _w - quat_._w));
         }
