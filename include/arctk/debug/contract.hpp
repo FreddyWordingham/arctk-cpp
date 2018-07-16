@@ -42,8 +42,8 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Contracts --
-            [noreturn] inline void precondition(const std::string& condition_, const std::string& file_, int line_, const std::string& func_) noexcept;
-            [noreturn] inline void postcondition(const std::string& condition_, const std::string& file_, int line_, const std::string& func_) noexcept;
+            [[noreturn]] inline void precondition(const std::string& condition_, const std::string& file_, int line_, const std::string& func_) noexcept;
+            [[noreturn]] inline void postcondition(const std::string& condition_, const std::string& file_, int line_, const std::string& func_) noexcept;
 
 
 
@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
              *  @param  line_       Line location of the pre-condition failure.
              *  @param  func_       Function location of the pre-condition failure.
              */
-            [noreturn] inline void precondition(const std::string& condition_, const std::string& file_, int line_, const std::string& func_) noexcept
+            [[noreturn]] inline void precondition(const std::string& condition_, const std::string& file_, int line_, const std::string& func_) noexcept
             {
                 std::cerr << "Pre-condition  : `" << condition_ << "` failed.\n";
                 std::cerr << "Located at     :\n" << location::info(file_, line_, func_, 3) << '\n';
@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
              *  @param  line_       Line location of the post-condition failure.
              *  @param  func_       Function location of the post-condition failure.
              */
-            [noreturn] inline void postcondition(const std::string& condition_, const std::string& file_, int line_, const std::string& func_) noexcept
+            [[noreturn]] inline void postcondition(const std::string& condition_, const std::string& file_, int line_, const std::string& func_) noexcept
             {
                 std::cerr << "Post-condition : `" << condition_ << "` failed.\n";
                 std::cerr << "Located at     :\n" << location::info(file_, line_, func_, 3) << '\n';
