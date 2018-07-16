@@ -210,7 +210,7 @@ namespace arc //! arctk namespace
                 {
                     if (_probs[index] < _probs[index + 1])
                     {
-                        return (_vals[index] - (std::sqrt(rng_->gen()) * (_vals[index + 1] - _vals[index])));
+                        return (_vals[index] + (std::sqrt(rng_->gen()) * (_vals[index + 1] - _vals[index])));
                     }
 
                     return (_vals[index + 1] - (std::sqrt(rng_->gen()) * (_vals[index + 1] - _vals[index])));
