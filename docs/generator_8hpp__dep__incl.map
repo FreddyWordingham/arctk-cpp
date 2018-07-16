@@ -1,7 +1,12 @@
 <map id="include/arctk/random/generator.hpp" name="include/arctk/random/generator.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="72,339,169,364"/>
-<area shape="rect" id="node3" href="$distribution_8hpp.html" title="include/arctk/random\l/distribution.hpp" alt="" coords="80,92,225,131"/>
-<area shape="rect" id="node5" href="$random_8hpp.html" title="include/arctk/random.hpp" alt="" coords="157,265,328,291"/>
-<area shape="rect" id="node6" href="$quality_8hpp.html" title="include/arctk/random\l/generator/quality.hpp" alt="" coords="330,179,479,217"/>
-<area shape="rect" id="node4" href="$discrete_8hpp.html" title="include/arctk/random\l/distribution/discrete.hpp" alt="" coords="39,179,204,217"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="565,425,662,451"/>
+<area shape="rect" id="node3" href="$distribution_8hpp.html" title="include/arctk/random\l/distribution.hpp" alt="" coords="677,92,822,131"/>
+<area shape="rect" id="node5" href="$random_8hpp.html" title="include/arctk/random.hpp" alt="" coords="596,352,767,377"/>
+<area shape="rect" id="node11" href="$quality_8hpp.html" title="include/arctk/random\l/generator/quality.hpp" alt="" coords="1240,265,1389,304"/>
+<area shape="rect" id="node4" href="$constant_8hpp.html" title="include/arctk/random\l/distribution/constant.hpp" alt="" coords="995,265,1165,304"/>
+<area shape="rect" id="node6" href="$discrete_8hpp.html" title="include/arctk/random\l/distribution/discrete.hpp" alt="" coords="42,265,208,304"/>
+<area shape="rect" id="node7" href="$linear_8hpp.html" title="include/arctk/random\l/distribution/linear.hpp" alt="" coords="232,265,384,304"/>
+<area shape="rect" id="node8" href="$normal_8hpp.html" title="include/arctk/random\l/distribution/normal.hpp" alt="" coords="495,179,655,217"/>
+<area shape="rect" id="node10" href="$uniform_8hpp.html" title="include/arctk/random\l/distribution/uniform.hpp" alt="" coords="757,265,920,304"/>
+<area shape="rect" id="node9" href="$gaussian_8hpp.html" title="include/arctk/random\l/distribution/gaussian.hpp" alt="" coords="459,265,632,304"/>
 </map>

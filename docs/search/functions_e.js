@@ -6,5 +6,6 @@ var searchData=
   ['pos',['pos',['../classarc_1_1phys_1_1_particle.html#a3dd873ec2c055055433ee73a4d9f31bb',1,'arc::phys::Particle']]],
   ['postcondition',['postcondition',['../namespacearc_1_1debug_1_1contract.html#a4654862f4a46f4397dbe32713646c608',1,'arc::debug::contract']]],
   ['precondition',['precondition',['../namespacearc_1_1debug_1_1contract.html#ab8432795f13e5fd8ad286b138bca16df',1,'arc::debug::contract']]],
-  ['printable',['Printable',['../classarc_1_1str_1_1_printable.html#a388a4dfd802a140d4b474b3a36c39cca',1,'arc::str::Printable::Printable(const Printable &amp;) noexcept=default'],['../classarc_1_1str_1_1_printable.html#a1eec26fea57fcc4bd4aec1949c0ed5b2',1,'arc::str::Printable::Printable(Printable &amp;&amp;) noexcept=default']]]
+  ['printable',['Printable',['../classarc_1_1str_1_1_printable.html#a388a4dfd802a140d4b474b3a36c39cca',1,'arc::str::Printable::Printable(const Printable &amp;) noexcept=default'],['../classarc_1_1str_1_1_printable.html#a1eec26fea57fcc4bd4aec1949c0ed5b2',1,'arc::str::Printable::Printable(Printable &amp;&amp;) noexcept=default']]],
+  ['probs',['probs',['../classarc_1_1random_1_1distribution_1_1_linear.html#ac437bb5f1914f3e7ebe4ef096742be3e',1,'arc::random::distribution::Linear']]]
 ];

@@ -1,3 +1,5 @@
 <map id="arc::utl::search::lower" name="arc::utl::search::lower">
-<area shape="rect" id="node2" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#a197a3c9678e39e16d2b67c2765b52e2a" title="arc::random::distribution\l::Discrete::sample" alt="" coords="201,5,366,44"/>
+<area shape="rect" id="node2" href="$classarc_1_1random_1_1distribution_1_1_constant.html#a159b83b1064a1c2c6a27b76ad8e2ceb9" title="arc::random::distribution\l::Constant::sample" alt="" coords="201,5,366,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#a197a3c9678e39e16d2b67c2765b52e2a" title="arc::random::distribution\l::Discrete::sample" alt="" coords="201,68,366,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a77824dcb0bfc92621f5db1623bbca53e" title="arc::random::distribution\l::Linear::sample" alt="" coords="201,131,366,169"/>
 </map>

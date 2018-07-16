@@ -19,5 +19,6 @@ var searchData=
   ['print_5fwidth',['PRINT_WIDTH',['../namespacearc_1_1settings_1_1format.html#aad22a4ee2202efc76b831dca054d44b8',1,'arc::settings::format']]],
   ['printable',['Printable',['../classarc_1_1str_1_1_printable.html',1,'arc::str::Printable'],['../classarc_1_1str_1_1_printable.html#a388a4dfd802a140d4b474b3a36c39cca',1,'arc::str::Printable::Printable(const Printable &amp;) noexcept=default'],['../classarc_1_1str_1_1_printable.html#a1eec26fea57fcc4bd4aec1949c0ed5b2',1,'arc::str::Printable::Printable(Printable &amp;&amp;) noexcept=default']]],
   ['printable_2ehpp',['printable.hpp',['../printable_8hpp.html',1,'']]],
+  ['probs',['probs',['../classarc_1_1random_1_1distribution_1_1_linear.html#ac437bb5f1914f3e7ebe4ef096742be3e',1,'arc::random::distribution::Linear']]],
   ['properties_2ehpp',['properties.hpp',['../properties_8hpp.html',1,'']]]
 ];

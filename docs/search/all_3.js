@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cdfs',['cdfs',['../classarc_1_1random_1_1distribution_1_1_discrete.html#ad6af5fb76f15fc80a2aa5ffe59458a8e',1,'arc::random::distribution::Discrete']]],
+  ['cdfs',['cdfs',['../classarc_1_1random_1_1distribution_1_1_constant.html#acd1f5168849d7f57adbe12ca258a63c8',1,'arc::random::distribution::Constant::cdfs()'],['../classarc_1_1random_1_1distribution_1_1_discrete.html#ad6af5fb76f15fc80a2aa5ffe59458a8e',1,'arc::random::distribution::Discrete::cdfs()'],['../classarc_1_1random_1_1distribution_1_1_linear.html#a155d2144ad8ca03c4b8a5ede300b8d99',1,'arc::random::distribution::Linear::cdfs()']]],
   ['centre',['centre',['../classarc_1_1data_1_1_histogram_3_01_t_00_011_01_4.html#a8364261db1bb43ff92be2f4e33ad90c2',1,'arc::data::Histogram&lt; T, 1 &gt;::centre()'],['../classarc_1_1data_1_1_histogram_3_01_t_00_012_01_4.html#a3903022ba94a01dbb2bcf40a8e211725',1,'arc::data::Histogram&lt; T, 2 &gt;::centre()']]],
   ['centres',['centres',['../classarc_1_1data_1_1_histogram_3_01_t_00_011_01_4.html#a1638ea1096a7be772ca3c7e456713b6c',1,'arc::data::Histogram&lt; T, 1 &gt;::centres()'],['../classarc_1_1data_1_1_histogram_3_01_t_00_012_01_4.html#aef1e90f1d7295ddcc092c7e5dcc49b52',1,'arc::data::Histogram&lt; T, 2 &gt;::centres()']]],
   ['check_5fparsable',['check_parsable',['../classarc_1_1sys_1_1_args.html#a397b774de6aea815289d8ab9e58a009a',1,'arc::sys::Args']]],
@@ -13,6 +13,8 @@ var searchData=
   ['concat',['CONCAT',['../utility_8hpp.html#a87978b5d146774a9894f7aff1cbcca7c',1,'utility.hpp']]],
   ['concat_5fhelper',['CONCAT_HELPER',['../utility_8hpp.html#a8daee4eb859f0ccb35216e3952491024',1,'utility.hpp']]],
   ['config_2ehpp',['config.hpp',['../config_8hpp.html',1,'']]],
+  ['constant',['Constant',['../classarc_1_1random_1_1distribution_1_1_constant.html',1,'arc::random::distribution::Constant&lt; T &gt;'],['../classarc_1_1random_1_1distribution_1_1_constant.html#a3e47b1aab9ebca91a79b4ab56b2388b4',1,'arc::random::distribution::Constant::Constant()']]],
+  ['constant_2ehpp',['constant.hpp',['../constant_8hpp.html',1,'']]],
   ['consts_2ehpp',['consts.hpp',['../consts_8hpp.html',1,'']]],
   ['container_2ehpp',['container.hpp',['../container_8hpp.html',1,'']]],
   ['container_5fend',['CONTAINER_END',['../namespacearc_1_1settings_1_1format.html#a3585c5611dfc2009b7e50043b8f17c32',1,'arc::settings::format']]],
