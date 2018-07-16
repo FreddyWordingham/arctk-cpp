@@ -366,6 +366,11 @@ namespace arc //! arctk namespace
             POST(normalised());
         }
 
+        /**
+         *  Find the conjugate of the quat.
+         *
+         *   @return    Conjugate of the quat.
+         */
         inline Quat Quat::conj() const noexcept
         {
             PRE(normalised());
