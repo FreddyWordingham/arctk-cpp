@@ -699,6 +699,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Mat<T, 4> rotate_y(const double ang_) noexcept
         {
+            return (Mat<T, 4>(Vec<T, 4>(std::cos(ang_), 0, std::sin(ang_), 0), Vec<T, 4>(0, 1, 0, 0), Vec<T, 4>(-std::sin(ang_), 0, std::cos(ang_), 0), Vec<T, 4>(0, 0, 0, 1)));
         }
 
         template <typename T>
