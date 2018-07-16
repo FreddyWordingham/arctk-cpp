@@ -105,10 +105,10 @@ namespace arc //! arctk namespace
         }
 
         constexpr inline Quat::Quat(const Vec3<double>& axis_, const double theta_) noexcept
-          : x(axis_.x * std::sin(theta_ / 2.0))
-          , y(axis_.y * std::sin(theta_ / 2.0))
-          , z(axis_.z * std::sin(theta_ / 2.0))
-          , w(std::cos(theta_ / 2.0))
+          : x(axis_.x * std::sin(theta_ * 0.5))
+          , y(axis_.y * std::sin(theta_ * 0.5))
+          , z(axis_.z * std::sin(theta_ * 0.5))
+          , w(std::cos(theta_ * 0.5))
         {
             PRE(axis_.normalised());
         }
@@ -119,10 +119,10 @@ namespace arc //! arctk namespace
         }
 
         constexpr inline Quat::Quat(const double cos_yaw_, const double sin_yaw_, const double cos_pitch_, const double sin_pitch_, const double cos_roll_, const double sin_roll_) noexcept
-          : x(x_)
-          , y(y_)
-          , z(z_)
-          , w()
+          : x((((cos_yaw_ * cos_pitch_ * sin_roll_) - (sin_yaw_ * sin_pitch_ * cos_roll_))))
+          , y((((cos_yaw_ * sin_pitch_ * cos_roll_) + (sin_yaw_ * cos_pitch_ * sin_roll_))))
+          , z((((sin_yaw_ * cos_pitch_ * cos_roll_) - (cos_yaw_ * sin_pitch_ * sin_roll_))))
+          , w(((cos_yaw_ * cos_pitch_ * cos_roll_) + (sin_yaw_ * sin_pitch_ * sin_roll_)))
         {
         }
 
