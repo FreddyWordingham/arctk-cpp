@@ -101,7 +101,7 @@ namespace arc //! arctk namespace
               : Image(pixels_.size(), pixels_.empty() ? 0 : pixels_.front().size())
               , _pixels(pixels_)
             {
-                PRE(pixels_.size() > 0);
+                PRE(!pixels_.empty());
                 PRE(pixels_.front().size() > 0);
             }
 
