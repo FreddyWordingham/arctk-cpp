@@ -58,7 +58,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             constexpr inline Quat() noexcept;
             constexpr inline Quat(double x_, double y_, double z_, double w_) noexcept;
-            constexpr inline Quat(const Vec3<double>& axis_, double theta_) noexcept;
+            constexpr inline Quat(const Vec<double, 3>& axis_, double theta_) noexcept;
             constexpr inline Quat(double yaw_, double pitch_, double roll_) noexcept;
 
           private:
