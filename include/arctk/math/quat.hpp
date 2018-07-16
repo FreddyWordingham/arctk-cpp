@@ -75,8 +75,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            constexpr double         angle() const noexcept;
-            constexpr Vec<double, 3> axis() const noexcept;
+            constexpr inline double         angle() const noexcept;
+            constexpr inline Vec<double, 3> axis() const noexcept;
 
             //  -- Printing --
             inline std::string str() const noexcept override;
@@ -200,12 +200,12 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        constexpr double Quat::angle() const noexcept
+        constexpr inline double Quat::angle() const noexcept
         {
             return (2.0 * std::acos(_w));
         }
 
-        constexpr Vec<double, 3> Quat::axis() const noexcept
+        constexpr inline Vec<double, 3> Quat::axis() const noexcept
         {
             const double m = 1.0 / std::sqrt(1.0 - (_w * _w));
 
