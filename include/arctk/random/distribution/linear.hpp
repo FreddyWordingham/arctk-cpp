@@ -90,7 +90,7 @@ namespace arc //! arctk namespace
               , _vals(vals_)
               , _probs(probs_)
               , _cdfs(init_cdfs(vals_, probs_))
-              , _fracs(init_fracs(vals_, probs))
+              , _fracs(init_fracs(vals_, probs_))
             {
                 PRE(vals_.size() >= 2);
                 PRE(probs_.size() >= 2);
