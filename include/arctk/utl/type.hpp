@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type stored by vector.
              */
             template <class T>
-            struct is_vector
+            struct is_vector // NOLINT
             {
                 //  == FIELDS ==
               public:
