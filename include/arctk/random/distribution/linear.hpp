@@ -168,6 +168,11 @@ namespace arc //! arctk namespace
                 return (_vals);
             }
 
+            /**
+             *  Get the vector of probabilities of the distribution.
+             *
+             *  @return Vector of probabilities of the distribution.
+             */
             template <typename T>
             inline const std::vector<double>& Linear<T>::probs() const noexcept
             {
