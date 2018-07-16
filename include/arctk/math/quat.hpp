@@ -358,10 +358,10 @@ namespace arc //! arctk namespace
         {
             const double m = 1.0 / mag();
 
-            x *= m;
-            y *= m;
-            z *= m;
-            w *= m;
+            _x *= m;
+            _y *= m;
+            _z *= m;
+            _w *= m;
 
             POST(normalised());
         }
