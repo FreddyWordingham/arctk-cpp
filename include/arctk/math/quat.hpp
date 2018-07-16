@@ -58,7 +58,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             constexpr inline Quat() noexcept;
             constexpr inline Quat(double x_, double y_, double z_, double w_) noexcept;
-            constexpr inline Quat(const Vec<double, 3>& axis_, double theta_) noexcept;
+            constexpr inline Quat(const Vec<double, 3>& axis_, double angle_) noexcept;
             constexpr inline Quat(double yaw_, double pitch_, double roll_) noexcept;
 
           private:
@@ -74,6 +74,10 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            constexpr double         angle() const noexcept;
+            constexpr Vec<double, 3> axis() const noexcept;
+
             //  -- Printing --
             inline std::string str() const noexcept override;
         };
@@ -113,15 +117,15 @@ namespace arc //! arctk namespace
          *  Construct a quaternion from a rotation axis and a rotation angle.
          *
          *  @param  axis_   Axis of rotation.
-         *  @param  theta_  Angle of rotation.
+         *  @param  angle_  Angle of rotation.
          *
          *  @pre    axis_ must be normalised.
          */
-        constexpr inline Quat::Quat(const Vec<double, 3>& axis_, const double theta_) noexcept
-          : x(axis_.x * std::sin(theta_ * 0.5))
-          , y(axis_.y * std::sin(theta_ * 0.5))
-          , z(axis_.z * std::sin(theta_ * 0.5))
-          , w(std::cos(theta_ * 0.5))
+        constexpr inline Quat::Quat(const Vec<double, 3>& axis_, const double angle_) noexcept
+          : x(axis_.x * std::sin(angle_ * 0.5))
+          , y(axis_.y * std::sin(angle_ * 0.5))
+          , z(axis_.z * std::sin(angle_ * 0.5))
+          , w(std::cos(angle_ * 0.5))
         {
             PRE(axis_.normalised());
         }
