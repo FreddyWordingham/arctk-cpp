@@ -47,10 +47,10 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            double x; //!< Representation of rotation axis x-component.
-            double y; //!< Representation of rotation axis y-component.
-            double z; //!< Representation of rotation axis z-component.
-            double w; //!< Representation of rotation angle.
+            double _x; //!< Representation of rotation axis x-component.
+            double _y; //!< Representation of rotation axis y-component.
+            double _z; //!< Representation of rotation axis z-component.
+            double _w; //!< Representation of rotation angle.
 
 
             //  == INSTANTIATION ==
@@ -90,10 +90,10 @@ namespace arc //! arctk namespace
          *  Construct a unit quaternion.
          */
         constexpr inline Quat::Quat() noexcept
-          : x(0.0)
-          , y(0.0)
-          , z(0.0)
-          , w(1.0)
+          : _x(0.0)
+          , _y(0.0)
+          , _z(0.0)
+          , _w(1.0)
         {
         }
 
@@ -106,10 +106,10 @@ namespace arc //! arctk namespace
          *  @param  w_  Initial value of the w component.
          */
         constexpr inline Quat::Quat(const double x_, const double y_, const double z_, const double w_) noexcept
-          : x(x_)
-          , y(y_)
-          , z(z_)
-          , w(w_)
+          : _x(x_)
+          , _y(y_)
+          , _z(z_)
+          , _w(w_)
         {
         }
 
@@ -122,10 +122,10 @@ namespace arc //! arctk namespace
          *  @pre    axis_ must be normalised.
          */
         constexpr inline Quat::Quat(const Vec<double, 3>& axis_, const double angle_) noexcept
-          : x(axis_.x * std::sin(angle_ * 0.5))
-          , y(axis_.y * std::sin(angle_ * 0.5))
-          , z(axis_.z * std::sin(angle_ * 0.5))
-          , w(std::cos(angle_ * 0.5))
+          : _x(axis_.x * std::sin(angle_ * 0.5))
+          , _y(axis_.y * std::sin(angle_ * 0.5))
+          , _z(axis_.z * std::sin(angle_ * 0.5))
+          , _w(std::cos(angle_ * 0.5))
         {
             PRE(axis_.normalised());
         }
@@ -153,10 +153,10 @@ namespace arc //! arctk namespace
          *  @param  cos_roll_   Cosine of the angle to rotate around the forward direction.
          */
         constexpr inline Quat::Quat(const double cos_yaw_, const double sin_yaw_, const double cos_pitch_, const double sin_pitch_, const double cos_roll_, const double sin_roll_) noexcept
-          : x((((cos_yaw_ * cos_pitch_ * sin_roll_) - (sin_yaw_ * sin_pitch_ * cos_roll_))))
-          , y((((cos_yaw_ * sin_pitch_ * cos_roll_) + (sin_yaw_ * cos_pitch_ * sin_roll_))))
-          , z((((sin_yaw_ * cos_pitch_ * cos_roll_) - (cos_yaw_ * sin_pitch_ * sin_roll_))))
-          , w(((cos_yaw_ * cos_pitch_ * cos_roll_) + (sin_yaw_ * sin_pitch_ * sin_roll_)))
+          : _x((((cos_yaw_ * cos_pitch_ * sin_roll_) - (sin_yaw_ * sin_pitch_ * cos_roll_))))
+          , _y((((cos_yaw_ * sin_pitch_ * cos_roll_) + (sin_yaw_ * cos_pitch_ * sin_roll_))))
+          , _z((((sin_yaw_ * cos_pitch_ * cos_roll_) - (cos_yaw_ * sin_pitch_ * sin_roll_))))
+          , _w(((cos_yaw_ * cos_pitch_ * cos_roll_) + (sin_yaw_ * sin_pitch_ * sin_roll_)))
         {
         }
 
@@ -202,7 +202,7 @@ namespace arc //! arctk namespace
         //  -- Getters --
         constexpr double Quat::angle() const noexcept
         {
-            return (2.0 * std::acos(w));
+            return (2.0 * std::acos(_w));
         }
 
         constexpr Vec<double, 3> Quat::axis() const noexcept
@@ -222,10 +222,10 @@ namespace arc //! arctk namespace
 
             stream << settings::format::VEC_START;
 
-            stream << std::setw(settings::format::PRINT_WIDTH) << x;
-            stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << y;
-            stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << z;
-            stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << w;
+            stream << std::setw(settings::format::PRINT_WIDTH) << _x;
+            stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << _y;
+            stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << _z;
+            stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << _w;
 
             stream << settings::format::VEC_END;
 
