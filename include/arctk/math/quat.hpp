@@ -59,6 +59,10 @@ namespace arc //! arctk namespace
             constexpr inline Quat() noexcept;
             constexpr inline Quat(double x_, double y_, double z_, double w_) noexcept;
             constexpr inline Quat(const Vec3<double>& axis_, double theta_) noexcept;
+            constexpr inline Quat(double pitch_, double roll_, double yaw_) noexcept;
+
+          private:
+            constexpr inline Quat(double cos_yaw_, double sin_yaw_, double cos_roll_, double sin_roll_, double cos_pitch_, double sin_pitch_) noexcept;
 
 
             //  == OPERATORS ==
@@ -107,6 +111,15 @@ namespace arc //! arctk namespace
           , w(std::cos(theta_ / 2.0))
         {
             PRE(axis_.normalised());
+        }
+
+        constexpr inline Quat::Quat(const double yaw_, const double roll_, const double pitch_) noexcept
+          : Quat(std::cos(yaw_), std::sin(yaw_), std::cos(roll_), std::sin(roll_), std::cos(pitch_), std::sin(pitch_))
+        {
+        }
+
+        constexpr inline Quat::Quat(const double cos_yaw_, const double sin_yaw_, const double cos_roll_, const double sin_roll_, const double cos_pitch_, const double sin_pitch_) noexcept
+        {
         }
 
 
