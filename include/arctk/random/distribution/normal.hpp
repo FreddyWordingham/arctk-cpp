@@ -68,6 +68,9 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a normal distribution.
+             */
             template <typename T>
             inline Normal<T>::Normal() noexcept
               : Distribution<T>(std::numeric_limits<T>::min(), std::numeric_limits<T>::max())
