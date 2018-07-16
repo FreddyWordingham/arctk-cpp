@@ -61,6 +61,7 @@
 #include <arctk/random/distribution/constant.hpp>
 #include <arctk/random/distribution/discrete.hpp>
 #include <arctk/random/distribution/gaussian.hpp>
+#include <arctk/random/distribution/linear.hpp>
 #include <arctk/random/distribution/normal.hpp>
 #include <arctk/random/distribution/uniform.hpp>
 #include <arctk/random/generator.hpp>
