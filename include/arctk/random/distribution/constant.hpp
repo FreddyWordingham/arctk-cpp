@@ -153,7 +153,7 @@ namespace arc //! arctk namespace
              *  @return Value sampled from the distribution.
              */
             template <typename T>
-            inline T Discrete<T>::sample(Generator* const rng_) const noexcept
+            inline T Constant<T>::sample(Generator* const rng_) const noexcept
             {
                 const size_t index = utl::search::lower(_cdfs, rng_->gen());
 
