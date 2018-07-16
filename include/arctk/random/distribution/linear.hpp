@@ -75,6 +75,7 @@ namespace arc //! arctk namespace
                 inline const std::vector<T>&      vals() const noexcept;
                 inline const std::vector<double>& probs() const noexcept;
                 inline const std::vector<double>& cdfs() const noexcept;
+                inline const std::vector<double>& fracs() const noexcept;
 
                 //  -- Sampling --
                 inline T sample(Generator* const rng_) const noexcept override;
@@ -182,6 +183,12 @@ namespace arc //! arctk namespace
             inline const std::vector<double>& Linear<T>::cdfs() const noexcept
             {
                 return (_cdfs);
+            }
+
+            template <typename T>
+            inline const std::vector<double>& Linear<T>::fracs() const noexcept
+            {
+                return (_fracs);
             }
 
 
