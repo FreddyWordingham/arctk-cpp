@@ -89,7 +89,10 @@ namespace arc //! arctk namespace
              *  @param  probs_  Corresponding relative probabilities of the values.
              *
              *  @pre    vals_ may not be empty.
+             *  @pre    probs_ may not be empty.
              *  @pre    vals_ size must match probs_ size.
+             *  @pre    vals_ must be sorted in ascending order.
+             *  @pre    probs_ must always be greater than, or equal to, zero.
              */
             template <typename T>
             inline Discrete<T>::Discrete(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept
