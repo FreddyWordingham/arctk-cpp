@@ -113,6 +113,12 @@ namespace arc //! arctk namespace
              *  @param  vals_   Values generated from the distribution.
              *  @param  probs_  Corresponding relative probabilities of the values.
              *
+             *  @pre    vals_ must contain at least two values.
+             *  @pre    probs_ may not be empty.
+             *  @pre    vals_ size must match probs_ size plus one.
+             *  @pre    vals_ must be sorted in ascending order.
+             *  @pre    probs_ must always be greater than, or equal to, zero.
+             *
              *  @return Initialised vector of cumulative distribution frequency values.
              */
             template <typename T>
