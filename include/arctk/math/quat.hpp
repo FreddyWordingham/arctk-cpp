@@ -289,6 +289,20 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Properties --
+        /**
+         *  Determine if a quat is normalised to within a given tolerance.
+         *
+         *  @param  tol_    Maximum tolerance of normalisation value.
+         *
+         *  @return True if the quat is normalised.
+         */
+        constexpr inline bool Quat::normalised(const double tol_) const noexcept
+        {
+            return (std::fabs(1.0 - mag()) <= tol_);
+        }
+
+
         //  -- Getters --
         /**
          *  Get the rotation angle of the quat.
