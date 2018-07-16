@@ -24,6 +24,7 @@
 #include <cmath>
 
 //  -- Arctk --
+#include <arctk/settings.hpp>
 #include <arctk/str.hpp>
 
 
@@ -48,6 +49,7 @@ namespace arc //! arctk namespace
             double x; //!< Representation of rotation axis x-component.
             double y; //!< Representation of rotation axis y-component.
             double z; //!< Representation of rotation axis z-component.
+            double w; //!< Representation of rotation angle.
 
 
             //  == INSTANTIATION ==
@@ -59,6 +61,8 @@ namespace arc //! arctk namespace
           public:
             //  == METHODS ==
           public:
+            //  -- Printing --
+            inline std::string str() const noexcept override;
         };
 
 
@@ -69,6 +73,30 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
+
+
+        //  == METHODS ==
+        //  -- Printing --
+        /**
+         *  Create a human readable string of the quat.
+         *
+         *  @return Human readable string of the quat.
+         */
+        inline std::string Quat::str() const noexcept
+        {
+            std::stringstream stream;
+
+            stream << settings::format::VEC_START;
+
+            stream << std::setw(settings::format::PRINT_WIDTH) << x;
+            stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << y;
+            stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << z;
+            stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << w;
+
+            stream << settings::format::VEC_END;
+
+            return (stream.str());
+        }
 
 
 
