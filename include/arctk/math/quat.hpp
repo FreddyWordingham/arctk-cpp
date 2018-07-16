@@ -169,7 +169,7 @@ namespace arc //! arctk namespace
          *
          *  @return A reference to the element requested.
          */
-        constexpr inline double& Vec<T, 4>::operator[](const size_t index_) noexcept
+        constexpr inline double& Quat::operator[](const size_t index_) noexcept
         {
             PRE(index_ < 4);
 
@@ -185,7 +185,7 @@ namespace arc //! arctk namespace
          *
          *  @return A const reference to the element requested.
          */
-        constexpr inline const double& Vec<T, 4>::operator[](const size_t index_) const noexcept
+        constexpr inline const double& Quat::operator[](const size_t index_) const noexcept
         {
             PRE(index_ < 4);
 
