@@ -107,6 +107,11 @@ namespace arc //! arctk namespace
                 return (_ave);
             }
 
+            /**
+             *  Get the variance of the gaussian distribution.
+             *
+             *  @return Variance of the gaussian distribution.
+             */
             template <typename T>
             inline T Gaussian<T>::var() const noexcept
             {
