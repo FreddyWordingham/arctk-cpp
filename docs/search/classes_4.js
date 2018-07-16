@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['mat',['Mat',['../classarc_1_1math_1_1_mat.html',1,'arc::math']]],
-  ['mat_3c_20t_2c_202_20_3e',['Mat&lt; T, 2 &gt;',['../classarc_1_1math_1_1_mat_3_01_t_00_012_01_4.html',1,'arc::math']]],
-  ['mat_3c_20t_2c_203_20_3e',['Mat&lt; T, 3 &gt;',['../classarc_1_1math_1_1_mat_3_01_t_00_013_01_4.html',1,'arc::math']]],
-  ['mat_3c_20t_2c_204_20_3e',['Mat&lt; T, 4 &gt;',['../classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html',1,'arc::math']]]
+  ['gaussian',['Gaussian',['../classarc_1_1random_1_1distribution_1_1_gaussian.html',1,'arc::random::distribution']]],
+  ['generator',['Generator',['../classarc_1_1random_1_1_generator.html',1,'arc::random']]],
+  ['greyscale',['Greyscale',['../classarc_1_1data_1_1image_1_1_greyscale.html',1,'arc::data::image']]]
 ];

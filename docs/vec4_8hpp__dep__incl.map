@@ -1,16 +1,17 @@
 <map id="include/arctk/math/vec4.hpp" name="include/arctk/math/vec4.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="522,499,619,524"/>
-<area shape="rect" id="node3" href="$mat4_8hpp.html" title="include/arctk/math\l/mat4.hpp" alt="" coords="159,92,289,131"/>
-<area shape="rect" id="node4" href="$math_8hpp.html" title="include/arctk/math.hpp" alt="" coords="366,179,522,204"/>
-<area shape="rect" id="node5" href="$col_2convert_8hpp.html" title="include/arctk/col/convert.hpp" alt="" coords="144,345,334,371"/>
-<area shape="rect" id="node7" href="$map_8hpp.html" title="include/arctk/col/map.hpp" alt="" coords="358,345,530,371"/>
-<area shape="rect" id="node8" href="$greyscale_8hpp.html" title="include/arctk/data\l/image/greyscale.hpp" alt="" coords="554,339,702,377"/>
-<area shape="rect" id="node10" href="$image_8hpp.html" title="include/arctk/data\l/image.hpp" alt="" coords="606,252,732,291"/>
-<area shape="rect" id="node11" href="$particle_8hpp.html" title="include/arctk/phys\l/particle.hpp" alt="" coords="828,339,956,377"/>
-<area shape="rect" id="node13" href="$random_2distribution_2phys_8hpp.html" title="include/arctk/random\l/distribution/phys.hpp" alt="" coords="948,252,1095,291"/>
-<area shape="rect" id="node6" href="$col_8hpp.html" title="include/arctk/col.hpp" alt="" coords="283,425,426,451"/>
-<area shape="rect" id="node9" href="$data_8hpp.html" title="include/arctk/data.hpp" alt="" coords="552,425,704,451"/>
-<area shape="rect" id="node12" href="$phys_8hpp.html" title="include/arctk/phys.hpp" alt="" coords="830,425,984,451"/>
-<area shape="rect" id="node14" href="$distribution_8hpp.html" title="include/arctk/random\l/distribution.hpp" alt="" coords="1058,339,1203,377"/>
-<area shape="rect" id="node15" href="$random_8hpp.html" title="include/arctk/random.hpp" alt="" coords="1109,425,1280,451"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="504,499,600,524"/>
+<area shape="rect" id="node3" href="$mat4_8hpp.html" title="include/arctk/math\l/mat4.hpp" alt="" coords="210,92,339,131"/>
+<area shape="rect" id="node4" href="$math_8hpp.html" title="include/arctk/math.hpp" alt="" coords="466,179,622,204"/>
+<area shape="rect" id="node5" href="$col_2convert_8hpp.html" title="include/arctk/col/convert.hpp" alt="" coords="1022,259,1212,284"/>
+<area shape="rect" id="node6" href="$map_8hpp.html" title="include/arctk/col/map.hpp" alt="" coords="984,345,1157,371"/>
+<area shape="rect" id="node8" href="$fixed2_8hpp.html" title="include/arctk/data\l/histogram/fixed2.hpp" alt="" coords="94,339,242,377"/>
+<area shape="rect" id="node10" href="$histogram2_8hpp.html" title="include/arctk/data\l/histogram2.hpp" alt="" coords="222,252,348,291"/>
+<area shape="rect" id="node11" href="$greyscale_8hpp.html" title="include/arctk/data\l/image/greyscale.hpp" alt="" coords="470,339,618,377"/>
+<area shape="rect" id="node12" href="$image_8hpp.html" title="include/arctk/data\l/image.hpp" alt="" coords="378,252,504,291"/>
+<area shape="rect" id="node13" href="$particle_8hpp.html" title="include/arctk/phys\l/particle.hpp" alt="" coords="643,339,771,377"/>
+<area shape="rect" id="node15" href="$discrete_8hpp.html" title="include/arctk/random\l/distribution/discrete.hpp" alt="" coords="794,339,960,377"/>
+<area shape="rect" id="node7" href="$col_8hpp.html" title="include/arctk/col.hpp" alt="" coords="1065,425,1207,451"/>
+<area shape="rect" id="node9" href="$data_8hpp.html" title="include/arctk/data.hpp" alt="" coords="261,425,413,451"/>
+<area shape="rect" id="node14" href="$phys_8hpp.html" title="include/arctk/phys.hpp" alt="" coords="590,425,744,451"/>
+<area shape="rect" id="node16" href="$random_8hpp.html" title="include/arctk/random.hpp" alt="" coords="818,425,990,451"/>
 </map>

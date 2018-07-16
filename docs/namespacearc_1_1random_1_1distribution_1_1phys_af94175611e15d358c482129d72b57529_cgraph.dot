@@ -1,0 +1,12 @@
+digraph "arc::random::distribution::phys::henyey_greenstein"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="arc::random::distribution\l::phys::henyey_greenstein",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="arc::math::compare\l::zero",height=0.2,width=0.4,color="black",URL="$namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434"];
+  Node0 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="arc::math::pow::sq",height=0.2,width=0.4,color="black",URL="$namespacearc_1_1math_1_1pow.html#a673982111327d6a2597e9a381009ce4d"];
+}

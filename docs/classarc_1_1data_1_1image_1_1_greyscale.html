@@ -103,6 +103,8 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1578266734d8ff6873a2e71e89c8bfe1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#a1578266734d8ff6873a2e71e89c8bfe1">Greyscale</a> (size_t width_, size_t height_) noexcept</td></tr>
 <tr class="separator:a1578266734d8ff6873a2e71e89c8bfe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c03ff0b382dba5f238c8ab324770f34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#a4c03ff0b382dba5f238c8ab324770f34">Greyscale</a> (const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;pixels_) noexcept</td></tr>
+<tr class="separator:a4c03ff0b382dba5f238c8ab324770f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7584b1ba6227ddcd6a073f083f73cee9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#a7584b1ba6227ddcd6a073f083f73cee9">collect</a> (size_t col_, size_t row_, double val_) noexcept override</td></tr>
 <tr class="separator:a7584b1ba6227ddcd6a073f083f73cee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad4db76d33fc5c00f4c230b511aabb1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#aad4db76d33fc5c00f4c230b511aabb1c">save</a> (const std::string &amp;path_) const noexcept override</td></tr>
@@ -156,7 +158,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p><a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html">Greyscale</a> image. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1578266734d8ff6873a2e71e89c8bfe1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1578266734d8ff6873a2e71e89c8bfe1">&#9670;&nbsp;</a></span>Greyscale()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1578266734d8ff6873a2e71e89c8bfe1">&#9670;&nbsp;</a></span>Greyscale() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -199,6 +201,39 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>width_ must be positive. </dd>
 <dd>
 height_ must be positive. </dd></dl>
+
+</div>
+</div>
+<a id="a4c03ff0b382dba5f238c8ab324770f34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c03ff0b382dba5f238c8ab324770f34">&#9670;&nbsp;</a></span>Greyscale() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">arc::data::image::Greyscale::Greyscale </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>pixels_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Construct a greyscale image from pixel of values.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pixels_</td><td>Two-dimensional vector of pixel values. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -484,7 +519,7 @@ val_ must be non-negative. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 12 2018 02:19:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 16 2018 01:32:07 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

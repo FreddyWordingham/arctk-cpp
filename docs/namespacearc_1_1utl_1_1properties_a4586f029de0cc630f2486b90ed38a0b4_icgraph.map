@@ -1,4 +1,5 @@
 <map id="arc::utl::properties::within" name="arc::utl::properties::within">
-<area shape="rect" id="node2" href="$namespacearc_1_1utl_1_1search.html#a759ee83416f9fb620af459ecb00205f0" title="arc::utl::search::lower" alt="" coords="182,5,331,31"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1utl_1_1search.html#aaceae6e461089b2e63a30d9f035427d3" title="arc::utl::search::upper" alt="" coords="181,55,332,80"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1utl_1_1search.html#a759ee83416f9fb620af459ecb00205f0" title="arc::utl::search::lower" alt="" coords="182,12,331,37"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1utl_1_1search.html#aaceae6e461089b2e63a30d9f035427d3" title="arc::utl::search::upper" alt="" coords="181,61,332,87"/>
+<area shape="rect" id="node3" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#a197a3c9678e39e16d2b67c2765b52e2a" title="arc::random::distribution\l::Discrete::sample" alt="" coords="380,5,544,44"/>
 </map>

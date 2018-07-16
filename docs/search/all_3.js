@@ -1,9 +1,12 @@
 var searchData=
 [
+  ['cdfs',['cdfs',['../classarc_1_1random_1_1distribution_1_1_discrete.html#ad6af5fb76f15fc80a2aa5ffe59458a8e',1,'arc::random::distribution::Discrete']]],
+  ['centre',['centre',['../classarc_1_1data_1_1_histogram_3_01_t_00_011_01_4.html#a8364261db1bb43ff92be2f4e33ad90c2',1,'arc::data::Histogram&lt; T, 1 &gt;::centre()'],['../classarc_1_1data_1_1_histogram_3_01_t_00_012_01_4.html#a3903022ba94a01dbb2bcf40a8e211725',1,'arc::data::Histogram&lt; T, 2 &gt;::centre()']]],
+  ['centres',['centres',['../classarc_1_1data_1_1_histogram_3_01_t_00_011_01_4.html#a1638ea1096a7be772ca3c7e456713b6c',1,'arc::data::Histogram&lt; T, 1 &gt;::centres()'],['../classarc_1_1data_1_1_histogram_3_01_t_00_012_01_4.html#aef1e90f1d7295ddcc092c7e5dcc49b52',1,'arc::data::Histogram&lt; T, 2 &gt;::centres()']]],
   ['check_5fparsable',['check_parsable',['../classarc_1_1sys_1_1_args.html#a397b774de6aea815289d8ab9e58a009a',1,'arc::sys::Args']]],
   ['col',['col',['../classarc_1_1data_1_1_table.html#aa391b2680a0941e9ebf145371ff769f9',1,'arc::data::Table']]],
   ['col_2ehpp',['col.hpp',['../col_8hpp.html',1,'']]],
-  ['collect',['collect',['../classarc_1_1data_1_1image_1_1_greyscale.html#a7584b1ba6227ddcd6a073f083f73cee9',1,'arc::data::image::Greyscale::collect()'],['../classarc_1_1data_1_1_image.html#acbb7fce14c02a95323307242f70df828',1,'arc::data::Image::collect()']]],
+  ['collect',['collect',['../classarc_1_1data_1_1histogram_1_1_average_3_01_t_00_011_01_4.html#aef5b3bf7a45506c0ae99875d40cb38b6',1,'arc::data::histogram::Average&lt; T, 1 &gt;::collect()'],['../classarc_1_1data_1_1histogram_1_1_dynamic_3_01_t_00_011_01_4.html#ab9780588e0536430dc77db60538352bb',1,'arc::data::histogram::Dynamic&lt; T, 1 &gt;::collect()'],['../classarc_1_1data_1_1histogram_1_1_fixed_3_01_t_00_011_01_4.html#abcfaa2e9fbc6f1c7494308a5bb27ec47',1,'arc::data::histogram::Fixed&lt; T, 1 &gt;::collect()'],['../classarc_1_1data_1_1histogram_1_1_fixed_3_01_t_00_012_01_4.html#a98e2bafd47e4922abee832df4f5a8f99',1,'arc::data::histogram::Fixed&lt; T, 2 &gt;::collect()'],['../classarc_1_1data_1_1_histogram_3_01_t_00_011_01_4.html#a05980ba0c0f056da80e5305c070be7cf',1,'arc::data::Histogram&lt; T, 1 &gt;::collect()'],['../classarc_1_1data_1_1_histogram_3_01_t_00_012_01_4.html#ae46cf6b50e2c14530741ee4511efe81d',1,'arc::data::Histogram&lt; T, 2 &gt;::collect()'],['../classarc_1_1data_1_1image_1_1_greyscale.html#a7584b1ba6227ddcd6a073f083f73cee9',1,'arc::data::image::Greyscale::collect()'],['../classarc_1_1data_1_1_image.html#acbb7fce14c02a95323307242f70df828',1,'arc::data::Image::collect()']]],
   ['compare_2ehpp',['compare.hpp',['../compare_8hpp.html',1,'']]],
   ['compiler',['COMPILER',['../namespacearc_1_1config.html#abfeebd457f762473ba01e07e14c8d084',1,'arc::config']]],
   ['complete',['COMPLETE',['../namespacearc_1_1exit_1_1success.html#ae1ebb56a108671b3e8266454d8dc3713',1,'arc::exit::success']]],
@@ -17,5 +20,6 @@ var searchData=
   ['contains',['contains',['../namespacearc_1_1utl_1_1properties.html#a7c885f6e7d32d28c656b4b6514e645f8',1,'arc::utl::properties']]],
   ['contract_2ehpp',['contract.hpp',['../contract_8hpp.html',1,'']]],
   ['convert_2ehpp',['convert.hpp',['../col_2convert_8hpp.html',1,'(Global Namespace)'],['../math_2convert_8hpp.html',1,'(Global Namespace)']]],
+  ['counts',['counts',['../classarc_1_1data_1_1histogram_1_1_average_3_01_t_00_011_01_4.html#a90d9106af58e493d83123dbe468156e5',1,'arc::data::histogram::Average&lt; T, 1 &gt;']]],
   ['cube',['cube',['../namespacearc_1_1math_1_1pow.html#ab77b210403d45d56c61e61d44eccb710',1,'arc::math::pow']]]
 ];

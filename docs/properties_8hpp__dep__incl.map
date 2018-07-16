@@ -1,7 +1,9 @@
 <map id="include/arctk/utl/properties.hpp" name="include/arctk/utl/properties.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="97,385,194,411"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="136,385,232,411"/>
 <area shape="rect" id="node3" href="$search_8hpp.html" title="include/arctk/utl/search.hpp" alt="" coords="43,79,226,104"/>
-<area shape="rect" id="node4" href="$utl_8hpp.html" title="include/arctk/utl.hpp" alt="" coords="153,152,293,177"/>
-<area shape="rect" id="node5" href="$table_8hpp.html" title="include/arctk/data\l/table.hpp" alt="" coords="182,225,308,264"/>
-<area shape="rect" id="node6" href="$data_8hpp.html" title="include/arctk/data.hpp" alt="" coords="233,312,385,337"/>
+<area shape="rect" id="node4" href="$utl_8hpp.html" title="include/arctk/utl.hpp" alt="" coords="167,152,307,177"/>
+<area shape="rect" id="node5" href="$table_8hpp.html" title="include/arctk/data\l/table.hpp" alt="" coords="174,225,300,264"/>
+<area shape="rect" id="node7" href="$discrete_8hpp.html" title="include/arctk/random\l/distribution/discrete.hpp" alt="" coords="328,225,494,264"/>
+<area shape="rect" id="node6" href="$data_8hpp.html" title="include/arctk/data.hpp" alt="" coords="221,312,373,337"/>
+<area shape="rect" id="node8" href="$random_8hpp.html" title="include/arctk/random.hpp" alt="" coords="448,312,619,337"/>
 </map>

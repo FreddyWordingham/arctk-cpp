@@ -1,6 +1,7 @@
 <map id="arc::utl::properties::descending" name="arc::utl::properties::descending">
-<area shape="rect" id="node2" href="$namespacearc_1_1utl_1_1properties.html#ad688778f1731b099b418122f2e92ca0c" title="arc::utl::properties\l::monotonic" alt="" coords="181,24,309,63"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1utl_1_1properties.html#a4586f029de0cc630f2486b90ed38a0b4" title="arc::utl::properties\l::within" alt="" coords="357,24,485,63"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1utl_1_1search.html#a759ee83416f9fb620af459ecb00205f0" title="arc::utl::search::lower" alt="" coords="535,5,683,31"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1utl_1_1search.html#aaceae6e461089b2e63a30d9f035427d3" title="arc::utl::search::upper" alt="" coords="533,55,684,80"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1utl_1_1properties.html#ad688778f1731b099b418122f2e92ca0c" title="arc::utl::properties\l::monotonic" alt="" coords="181,31,309,69"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1utl_1_1properties.html#a4586f029de0cc630f2486b90ed38a0b4" title="arc::utl::properties\l::within" alt="" coords="357,31,485,69"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1utl_1_1search.html#a759ee83416f9fb620af459ecb00205f0" title="arc::utl::search::lower" alt="" coords="535,12,683,37"/>
+<area shape="rect" id="node6" href="$namespacearc_1_1utl_1_1search.html#aaceae6e461089b2e63a30d9f035427d3" title="arc::utl::search::upper" alt="" coords="533,61,684,87"/>
+<area shape="rect" id="node5" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#a197a3c9678e39e16d2b67c2765b52e2a" title="arc::random::distribution\l::Discrete::sample" alt="" coords="732,5,896,44"/>
 </map>

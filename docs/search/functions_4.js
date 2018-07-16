@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['from',['from',['../namespacearc_1_1str_1_1parse.html#a3f24aa3819164ee71d82edd27b44322f',1,'arc::str::parse::from(const std::string &amp;str_, bool=false) noexcept'],['../namespacearc_1_1str_1_1parse.html#afe3918c2dba6a2002f6b6286409eca09',1,'arc::str::parse::from(T val_, bool=false) noexcept'],['../namespacearc_1_1str_1_1parse.html#ae6fde6dd74e31f31d765e1fae6b2390e',1,'arc::str::parse::from(const std::pair&lt; T, S &gt; &amp;pair_, bool limiters_=true) noexcept'],['../namespacearc_1_1str_1_1parse.html#ab711eba28c2e1170a5eab0db57ad4796',1,'arc::str::parse::from(const std::tuple&lt; A... &gt; &amp;tup_, bool limiters_=true) noexcept'],['../namespacearc_1_1str_1_1parse.html#a90ea366c6e063443d0e5f884a936a389',1,'arc::str::parse::from(const C &amp;cont_, bool limiters_=true) noexcept'],['../namespacearc_1_1str_1_1parse.html#a5724122a7307d6d0bc1218f82294e877',1,'arc::str::parse::from(const std::tuple&lt;&gt; &amp;, const bool limiters_) noexcept']]],
-  ['from_5fhelper',['from_helper',['../namespacearc_1_1str_1_1parse.html#a559c8c56c67f64c8e97ec3288ae44bd4',1,'arc::str::parse']]]
+  ['equal',['equal',['../namespacearc_1_1math_1_1compare.html#a928238089f4f18be7e7409feb9a74cde',1,'arc::math::compare']]]
 ];
