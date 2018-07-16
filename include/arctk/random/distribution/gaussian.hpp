@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
 
             //  == CLASS ==
             /**
-             *  Gaussian probability distribution base class used to sample random numbers.
+             *  Gaussian probability distribution class used to sample random numbers.
              *
              *  @tparam T   Type returned from sampling the distribution.
              */
