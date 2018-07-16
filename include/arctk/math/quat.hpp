@@ -43,7 +43,11 @@ namespace arc //! arctk namespace
         class Quat : public str::Printable
         {
             //  == FIELDS ==
-          public:
+          private:
+            //  -- Data --
+            double x; //!< Representation of rotation axis x-component.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
