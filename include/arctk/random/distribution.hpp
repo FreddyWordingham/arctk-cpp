@@ -98,6 +98,11 @@ namespace arc //! arctk namespace
             return (_min);
         }
 
+        /**
+         *  Get the maximum bound of the distribution sampling range.
+         *
+         *  @return Maximum bound of the distribution sampling range.
+         */
         template <typename T>
         inline T Distribution<T>::max() const noexcept
         {
