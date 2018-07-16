@@ -22,6 +22,9 @@
 //  == IMPORTS ==
 //  -- Std --
 
+//  -- Arctk --
+#include <arctk/math.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -40,6 +43,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           protected:
+            //  -- Positioning --
+            vec3 _pos; //!< Position of the shape.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
