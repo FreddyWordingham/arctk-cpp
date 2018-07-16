@@ -68,8 +68,8 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Access --
-            constexpr inline T&       operator[](size_t index_) noexcept;
-            constexpr inline const T& operator[](size_t index_) const noexcept;
+            constexpr inline double&       operator[](size_t index_) noexcept;
+            constexpr inline const double& operator[](size_t index_) const noexcept;
 
 
             //  == METHODS ==
@@ -169,8 +169,7 @@ namespace arc //! arctk namespace
          *
          *  @return A reference to the element requested.
          */
-        template <typename T>
-        constexpr inline T& Vec<T, 4>::operator[](const size_t index_) noexcept
+        constexpr inline double& Vec<T, 4>::operator[](const size_t index_) noexcept
         {
             PRE(index_ < 4);
 
@@ -186,8 +185,7 @@ namespace arc //! arctk namespace
          *
          *  @return A const reference to the element requested.
          */
-        template <typename T>
-        constexpr inline const T& Vec<T, 4>::operator[](const size_t index_) const noexcept
+        constexpr inline const double& Vec<T, 4>::operator[](const size_t index_) const noexcept
         {
             PRE(index_ < 4);
 
