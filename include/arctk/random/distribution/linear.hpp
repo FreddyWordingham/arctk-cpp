@@ -62,6 +62,9 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline Linear(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept;
 
+                //  -- Initialisation --
+                inline std::vector<double> init_cdfs(const std::vector<T>& vals_, const std::vector<double>& probs_) const noexcept;
+
 
                 //  == METHODS ==
               public:
@@ -85,6 +88,35 @@ namespace arc //! arctk namespace
                 PRE(vals_.size() == (probs_.size() + 1));
                 PRE(utl::properties::ascending(vals_));
                 PRE(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
+            }
+
+
+            //  -- Initialisation --
+            template <typename T>
+            inline std::vector<double> Linear<T>::init_cdfs(const std::vector<T>& vals_, const std::vector<double>& probs_) const noexcept
+            {
+                PRE(vals_.size() >= 2);
+                PRE(!probs_.empty());
+                PRE(vals_.size() == (probs_.size() + 1));
+                PRE(utl::properties::ascending(vals_));
+                PRE(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
+
+                std::vector<double> cdfs(probs_.size() + 1);
+
+                cdfs[0] = 0.0;
+                for (size_t i = 0; i < probs_.size(); ++i)
+                {
+                    cdfs[i + 1] = cdfs[i] + ((probs_[i + 1] + probs_[i]) * (vals_[i + 1] - vals_[i]));
+                }
+
+                for (size_t i = 0; i < cdfs.size(); ++i)
+                {
+                    cdfs[i] /= cdfs.back();
+                }
+
+                POST(math::compare::equal(cdfs.back(), 1.0));
+
+                return (cdfs);
             }
 
 
