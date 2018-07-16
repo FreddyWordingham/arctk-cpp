@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
                 inline const std::vector<double>& cdfs() const noexcept;
 
                 //  -- Sampling --
-                inline T sample(Generator* const rng_) const noexcept override;
+                inline T sample(Generator* rng_) const noexcept override;
             };
 
 
