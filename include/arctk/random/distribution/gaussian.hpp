@@ -96,6 +96,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the average of the gaussian distribution.
+             *
+             *  @return Average of the gaussian distribution.
+             */
             template <typename T>
             inline T Gaussian<T>::ave() const noexcept
             {
