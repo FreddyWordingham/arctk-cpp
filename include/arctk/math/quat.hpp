@@ -121,6 +121,13 @@ namespace arc //! arctk namespace
             PRE(axis_.normalised());
         }
 
+        /**
+         *  Construct a quaternion from Euler rotations.
+         *
+         *  @param  yaw_    Angle to rotate around the up direction.
+         *  @param  pitch_  Angle to rotate around side direction.
+         *  @param  roll_   Angle to rotate around the forward direction.
+         */
         constexpr inline Quat::Quat(const double yaw_, const double pitch_, const double roll_) noexcept
           : Quat(std::cos(yaw_ * 0.5), std::sin(yaw_ * 0.5), std::cos(pitch_ * 0.5), std::sin(pitch_ * 0.5), std::cos(roll_ * 0.5), std::sin(roll_ * 0.5))
         {
