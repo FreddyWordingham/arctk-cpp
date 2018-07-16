@@ -1,0 +1,33 @@
+<map id="include/arctk/geom/shape.hpp" name="include/arctk/geom/shape.hpp">
+<area shape="rect" id="node2" href="$math_8hpp.html" title="arctk/math.hpp" alt="" coords="1696,92,1805,117"/>
+<area shape="rect" id="node3" href="$compare_8hpp.html" title="arctk/math/compare.hpp" alt="" coords="2527,165,2692,191"/>
+<area shape="rect" id="node5" href="$container_8hpp.html" title="arctk/math/container.hpp" alt="" coords="2582,385,2749,411"/>
+<area shape="rect" id="node7" href="$math_2convert_8hpp.html" title="arctk/math/convert.hpp" alt="" coords="2808,165,2965,191"/>
+<area shape="rect" id="node11" href="$mat_8hpp.html" title="arctk/math/mat.hpp" alt="" coords="495,239,630,264"/>
+<area shape="rect" id="node33" href="$vec_8hpp.html" title="arctk/math/vec.hpp" alt="" coords="1056,312,1190,337"/>
+<area shape="rect" id="node43" href="$mat2_8hpp.html" title="arctk/math/mat2.hpp" alt="" coords="1679,165,1822,191"/>
+<area shape="rect" id="node44" href="$vec2_8hpp.html" title="arctk/math/vec2.hpp" alt="" coords="1844,239,1985,264"/>
+<area shape="rect" id="node45" href="$mat3_8hpp.html" title="arctk/math/mat3.hpp" alt="" coords="489,165,631,191"/>
+<area shape="rect" id="node46" href="$vec3_8hpp.html" title="arctk/math/vec3.hpp" alt="" coords="1473,239,1615,264"/>
+<area shape="rect" id="node47" href="$mat4_8hpp.html" title="arctk/math/mat4.hpp" alt="" coords="707,165,850,191"/>
+<area shape="rect" id="node48" href="$vec4_8hpp.html" title="arctk/math/vec4.hpp" alt="" coords="1308,239,1449,264"/>
+<area shape="rect" id="node49" href="$pow_8hpp.html" title="arctk/math/pow.hpp" alt="" coords="2989,165,3126,191"/>
+<area shape="rect" id="node50" href="$quat_8hpp.html" title="arctk/math/quat.hpp" alt="" coords="2322,165,2462,191"/>
+<area shape="rect" id="node8" href="$consts_8hpp.html" title="arctk/consts.hpp" alt="" coords="2827,239,2946,264"/>
+<area shape="rect" id="node9" href="$consts_2math_8hpp.html" title="arctk/consts/math.hpp" alt="" coords="2809,312,2961,337"/>
+<area shape="rect" id="node10" href="$consts_2phys_8hpp.html" title="arctk/consts/phys.hpp" alt="" coords="2985,312,3135,337"/>
+<area shape="rect" id="node16" href="$debug_8hpp.html" title="arctk/debug.hpp" alt="" coords="2251,532,2368,557"/>
+<area shape="rect" id="node35" href="$settings_8hpp.html" title="arctk/settings.hpp" alt="" coords="1621,532,1747,557"/>
+<area shape="rect" id="node37" href="$str_8hpp.html" title="arctk/str.hpp" alt="" coords="1397,385,1491,411"/>
+<area shape="rect" id="node17" href="$contract_8hpp.html" title="arctk/debug/contract.hpp" alt="" coords="2345,605,2513,631"/>
+<area shape="rect" id="node19" href="$location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="2573,679,2739,704"/>
+<area shape="rect" id="node26" href="$exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="2398,679,2498,704"/>
+<area shape="rect" id="node29" href="$invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="2150,605,2322,631"/>
+<area shape="rect" id="node31" href="$macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="2004,605,2121,631"/>
+<area shape="rect" id="node27" href="$error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="2285,752,2417,777"/>
+<area shape="rect" id="node28" href="$success_8hpp.html" title="arctk/exit/success.hpp" alt="" coords="2108,752,2260,777"/>
+<area shape="rect" id="node32" href="$utility_8hpp.html" title="arctk/macro/utility.hpp" alt="" coords="1973,679,2123,704"/>
+<area shape="rect" id="node36" href="$format_8hpp.html" title="arctk/settings/format.hpp" alt="" coords="1579,605,1746,631"/>
+<area shape="rect" id="node38" href="$parse_8hpp.html" title="arctk/str/parse.hpp" alt="" coords="1157,459,1289,484"/>
+<area shape="rect" id="node42" href="$printable_8hpp.html" title="arctk/str/printable.hpp" alt="" coords="1616,459,1765,484"/>
+</map>

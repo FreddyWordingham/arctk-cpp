@@ -102,9 +102,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae98905d75cf91ea584a2541386519fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adce54f22994de0c0e5dcc2e0976dba82"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1random_1_1_distribution.html#adce54f22994de0c0e5dcc2e0976dba82">max</a> () const noexcept</td></tr>
 <tr class="separator:adce54f22994de0c0e5dcc2e0976dba82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8c2494f1c20b17fedafb589ab3faed5"><td class="memItemLeft" align="right" valign="top">virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1random_1_1_distribution.html#ac8c2494f1c20b17fedafb589ab3faed5">sample</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">Generator</a> *const rng_) const noexcept=0</td></tr>
-<tr class="memdesc:ac8c2494f1c20b17fedafb589ab3faed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample a value from the distribution.  <a href="#ac8c2494f1c20b17fedafb589ab3faed5">More...</a><br /></td></tr>
-<tr class="separator:ac8c2494f1c20b17fedafb589ab3faed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d96076a83ffa489c086a35d54ebeee1"><td class="memItemLeft" align="right" valign="top">virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1random_1_1_distribution.html#a2d96076a83ffa489c086a35d54ebeee1">sample</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">Generator</a> *rng_) const noexcept=0</td></tr>
+<tr class="memdesc:a2d96076a83ffa489c086a35d54ebeee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample a value from the distribution.  <a href="#a2d96076a83ffa489c086a35d54ebeee1">More...</a><br /></td></tr>
+<tr class="separator:a2d96076a83ffa489c086a35d54ebeee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -233,8 +233,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ac8c2494f1c20b17fedafb589ab3faed5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8c2494f1c20b17fedafb589ab3faed5">&#9670;&nbsp;</a></span>sample()</h2>
+<a id="a2d96076a83ffa489c086a35d54ebeee1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d96076a83ffa489c086a35d54ebeee1">&#9670;&nbsp;</a></span>sample()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +247,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">virtual T <a class="el" href="classarc_1_1random_1_1_distribution.html">arc::random::Distribution</a>&lt; T &gt;::sample </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classarc_1_1random_1_1_generator.html">Generator</a> *const&#160;</td>
+          <td class="paramtype"><a class="el" href="classarc_1_1random_1_1_generator.html">Generator</a> *&#160;</td>
           <td class="paramname"><em>rng_</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -268,7 +268,7 @@ template&lt;typename T&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Value sampled from the distribution. </dd></dl>
 
-<p>Implemented in <a class="el" href="classarc_1_1random_1_1distribution_1_1_linear.html#a77824dcb0bfc92621f5db1623bbca53e">arc::random::distribution::Linear&lt; T &gt;</a>, <a class="el" href="classarc_1_1random_1_1distribution_1_1_discrete.html#a197a3c9678e39e16d2b67c2765b52e2a">arc::random::distribution::Discrete&lt; T &gt;</a>, <a class="el" href="classarc_1_1random_1_1distribution_1_1_constant.html#a159b83b1064a1c2c6a27b76ad8e2ceb9">arc::random::distribution::Constant&lt; T &gt;</a>, <a class="el" href="classarc_1_1random_1_1distribution_1_1_gaussian.html#a478d90ba6082a001c0cf0379a8076306">arc::random::distribution::Gaussian&lt; T &gt;</a>, <a class="el" href="classarc_1_1random_1_1distribution_1_1_normal.html#aed5c0d5cac8510613eeed35d2d528963">arc::random::distribution::Normal&lt; T &gt;</a>, and <a class="el" href="classarc_1_1random_1_1distribution_1_1_uniform.html#a10972be07c9bf527e17b1e816ea251c1">arc::random::distribution::Uniform&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classarc_1_1random_1_1distribution_1_1_linear.html#a0fa6aa6641224238ac372116f1459944">arc::random::distribution::Linear&lt; T &gt;</a>, <a class="el" href="classarc_1_1random_1_1distribution_1_1_discrete.html#a8f239c70e4b6b1a4b6382eaa81dff27d">arc::random::distribution::Discrete&lt; T &gt;</a>, <a class="el" href="classarc_1_1random_1_1distribution_1_1_constant.html#aec071ab8271f465317f1112f8d4a2ccc">arc::random::distribution::Constant&lt; T &gt;</a>, <a class="el" href="classarc_1_1random_1_1distribution_1_1_gaussian.html#a447714e53fa1a3a3077c8cd7d5defaf7">arc::random::distribution::Gaussian&lt; T &gt;</a>, <a class="el" href="classarc_1_1random_1_1distribution_1_1_normal.html#a0fb276e696df77065e015d1174510860">arc::random::distribution::Normal&lt; T &gt;</a>, and <a class="el" href="classarc_1_1random_1_1distribution_1_1_uniform.html#aff07c6d06c99a572b7b224195a07aa30">arc::random::distribution::Uniform&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -331,7 +331,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 16 2018 03:57:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 16 2018 16:33:13 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

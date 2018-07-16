@@ -23,7 +23,7 @@ var searchData=
   ['_5fmisses',['_misses',['../classarc_1_1data_1_1histogram_1_1_average_3_01_t_00_011_01_4.html#a30104635f54045c52e08af2bf07a39c5',1,'arc::data::histogram::Average&lt; T, 1 &gt;::_misses()'],['../classarc_1_1data_1_1histogram_1_1_fixed_3_01_t_00_011_01_4.html#a95b5d88518a2eb2b1fcc705f3b8f9168',1,'arc::data::histogram::Fixed&lt; T, 1 &gt;::_misses()'],['../classarc_1_1data_1_1histogram_1_1_fixed_3_01_t_00_012_01_4.html#aeb7d0842ab28798aa21a5a73a8efa8a2',1,'arc::data::histogram::Fixed&lt; T, 2 &gt;::_misses()']]],
   ['_5fnext_5fseed',['_next_seed',['../classarc_1_1random_1_1_generator.html#a08ef7eadad8b178e2d05cdad396056cb',1,'arc::random::Generator']]],
   ['_5fpixels',['_pixels',['../classarc_1_1data_1_1image_1_1_greyscale.html#aa265595e8aed7215ed10b1f8a78e2c1c',1,'arc::data::image::Greyscale']]],
-  ['_5fpos',['_pos',['../classarc_1_1phys_1_1_particle.html#ad96264059302e6c60c98c6a2d13888f3',1,'arc::phys::Particle']]],
+  ['_5fpos',['_pos',['../classarc_1_1geom_1_1_shape.html#ad0ecb7705141c2976c4aa7cd3236cc40',1,'arc::geom::Shape::_pos()'],['../classarc_1_1phys_1_1_particle.html#ad96264059302e6c60c98c6a2d13888f3',1,'arc::phys::Particle::_pos()']]],
   ['_5fprobs',['_probs',['../classarc_1_1random_1_1distribution_1_1_linear.html#a96a8d01d651558b9b047c63610eb6903',1,'arc::random::distribution::Linear']]],
   ['_5fprog_5fname',['_prog_name',['../classarc_1_1sys_1_1_args.html#ad29d8d283f0fd67e9304d9d6e2e5c2bc',1,'arc::sys::Args']]],
   ['_5frows',['_rows',['../classarc_1_1data_1_1_table.html#a69244731bad2949b4c54e67da94aa70b',1,'arc::data::Table']]],
@@ -32,7 +32,10 @@ var searchData=
   ['_5fv',['_v',['../classarc_1_1random_1_1generator_1_1_quality.html#a9c59b127ba7bd6f9c6f08d3c1b1df503',1,'arc::random::generator::Quality']]],
   ['_5fvals',['_vals',['../classarc_1_1random_1_1distribution_1_1_constant.html#a6fb44ef3710879a8fc3536981fd732f9',1,'arc::random::distribution::Constant::_vals()'],['../classarc_1_1random_1_1distribution_1_1_discrete.html#ab1f35d1111654ffc2ab89fbea8c0c1e5',1,'arc::random::distribution::Discrete::_vals()'],['../classarc_1_1random_1_1distribution_1_1_linear.html#abe3aa892990e968260a6a97ac685118b',1,'arc::random::distribution::Linear::_vals()']]],
   ['_5fvar',['_var',['../classarc_1_1random_1_1distribution_1_1_gaussian.html#a3d42fdba9d305d31269e42c8eb214a1e',1,'arc::random::distribution::Gaussian']]],
-  ['_5fw',['_w',['../classarc_1_1random_1_1generator_1_1_quality.html#a0d9473e510d145fdaff009547a4608f7',1,'arc::random::generator::Quality']]],
+  ['_5fw',['_w',['../classarc_1_1math_1_1_quat.html#af59b280175719ab4347836b751633e47',1,'arc::math::Quat::_w()'],['../classarc_1_1random_1_1generator_1_1_quality.html#a0d9473e510d145fdaff009547a4608f7',1,'arc::random::generator::Quality::_w()']]],
   ['_5fwidth',['_width',['../classarc_1_1data_1_1_image.html#ad6487a8a1f0c24e32dc2b5cc42b3b1a4',1,'arc::data::Image']]],
+  ['_5fx',['_x',['../classarc_1_1math_1_1_quat.html#ab88753b7cd3c2f4f7155488586252d75',1,'arc::math::Quat']]],
+  ['_5fy',['_y',['../classarc_1_1math_1_1_quat.html#a40271d01b45291c53f31b61b0b43ed42',1,'arc::math::Quat']]],
+  ['_5fz',['_z',['../classarc_1_1math_1_1_quat.html#ab474075eb7ff13e8e9cb0b3c29085883',1,'arc::math::Quat']]],
   ['_5fz1',['_z1',['../classarc_1_1random_1_1distribution_1_1_normal.html#aa981b6e87bb5ed8af14658ed82f8b877',1,'arc::random::distribution::Normal']]]
 ];

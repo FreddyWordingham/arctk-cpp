@@ -223,17 +223,20 @@ height_ must be positive. </dd></dl>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Construct a greyscale image from pixel of values.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pixels_</td><td>Two-dimensional vector of pixel values. </td></tr>
+    <tr><td class="paramname">pixels_</td><td>Two-dimensional vector of pixel values.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section pre"><dt>Precondition</dt><dd>pixels_ may not be empty. </dd>
+<dd>
+pixels_ front element may not be empty. </dd></dl>
 
 </div>
 </div>
@@ -519,7 +522,7 @@ val_ must be non-negative. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 16 2018 03:57:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 16 2018 16:33:13 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

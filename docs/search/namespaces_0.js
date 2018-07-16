@@ -16,6 +16,7 @@ var searchData=
   ['exit',['exit',['../namespacearc_1_1exit.html',1,'arc']]],
   ['format',['format',['../namespacearc_1_1settings_1_1format.html',1,'arc::settings']]],
   ['generator',['generator',['../namespacearc_1_1random_1_1generator.html',1,'arc::random']]],
+  ['geom',['geom',['../namespacearc_1_1geom.html',1,'arc']]],
   ['histogram',['histogram',['../namespacearc_1_1data_1_1histogram.html',1,'arc::data']]],
   ['image',['image',['../namespacearc_1_1data_1_1image.html',1,'arc::data']]],
   ['location',['location',['../namespacearc_1_1debug_1_1location.html',1,'arc::debug']]],

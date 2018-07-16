@@ -13,6 +13,7 @@ var searchData=
   ['concat',['CONCAT',['../utility_8hpp.html#a87978b5d146774a9894f7aff1cbcca7c',1,'utility.hpp']]],
   ['concat_5fhelper',['CONCAT_HELPER',['../utility_8hpp.html#a8daee4eb859f0ccb35216e3952491024',1,'utility.hpp']]],
   ['config_2ehpp',['config.hpp',['../config_8hpp.html',1,'']]],
+  ['conj',['conj',['../classarc_1_1math_1_1_quat.html#a2f34992c02abedbb571775f10fa8e96b',1,'arc::math::Quat']]],
   ['constant',['Constant',['../classarc_1_1random_1_1distribution_1_1_constant.html',1,'arc::random::distribution::Constant&lt; T &gt;'],['../classarc_1_1random_1_1distribution_1_1_constant.html#a3e47b1aab9ebca91a79b4ab56b2388b4',1,'arc::random::distribution::Constant::Constant()']]],
   ['constant_2ehpp',['constant.hpp',['../constant_8hpp.html',1,'']]],
   ['consts_2ehpp',['consts.hpp',['../consts_8hpp.html',1,'']]],
