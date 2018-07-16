@@ -40,6 +40,7 @@
 #include <arctk/exit/error.hpp>
 #include <arctk/exit/success.hpp>
 #include <arctk/geom.hpp>
+#include <arctk/geom/shape.hpp>
 #include <arctk/macro.hpp>
 #include <arctk/macro/utility.hpp>
 #include <arctk/math.hpp>
