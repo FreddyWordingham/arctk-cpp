@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
 
             //  == CLASS ==
             /**
-             *  Normal probability distribution base class used to sample random numbers.
+             *  Normal probability distribution class used to sample random numbers.
              *
              *  @tparam T   Type returned from sampling the distribution.
              */
