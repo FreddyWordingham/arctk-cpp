@@ -190,6 +190,11 @@ namespace arc //! arctk namespace
                 return (_cdfs);
             }
 
+            /**
+             *  Get the vector of triangle fractions.
+             *
+             *  @return Vector of triangle fractions.
+             */
             template <typename T>
             inline const std::vector<double>& Linear<T>::fracs() const noexcept
             {
