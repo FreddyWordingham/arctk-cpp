@@ -47,6 +47,7 @@ namespace arc //! arctk namespace
             //  -- Data --
             double x; //!< Representation of rotation axis x-component.
             double y; //!< Representation of rotation axis y-component.
+            double z; //!< Representation of rotation axis z-component.
 
 
             //  == INSTANTIATION ==
