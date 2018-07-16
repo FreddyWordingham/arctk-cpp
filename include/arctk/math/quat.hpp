@@ -205,6 +205,11 @@ namespace arc //! arctk namespace
             return (2.0 * std::acos(_w));
         }
 
+        /**
+         *  Get the rotation axis of the quat.
+         *
+         *  @return Rotation axis of the quat.
+         */
         inline Vec<double, 3> Quat::axis() const noexcept
         {
             const double m = 1.0 / std::sqrt(1.0 - (_w * _w));
