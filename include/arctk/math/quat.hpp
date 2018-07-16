@@ -176,7 +176,7 @@ namespace arc //! arctk namespace
         /**
          *  Add another quat's elements to each corresponding element of the quat.
          *
-         *  @param  quat_    Quat to add to this quat.
+         *  @param  quat_   Quat to add to this quat.
          *
          *  @return Reference to this quat post-operation.
          */
@@ -186,6 +186,23 @@ namespace arc //! arctk namespace
             _y += quat_._y;
             _z += quat_._z;
             _w += quat_._w;
+
+            return (*this);
+        }
+
+        /**
+         *  Subtract another quat's elements from each corresponding element of the quat.
+         *
+         *  @param  quat_   Quat to subtract from this quat.
+         *
+         *  @return Reference to this quat post-operation.
+         */
+        constexpr inline Quat& Quat::operator-=(const Quat& quat_) noexcept
+        {
+            _x -= quat_._x;
+            _y -= quat_._y;
+            _z -= quat_._z;
+            _w -= quat_._w;
 
             return (*this);
         }
