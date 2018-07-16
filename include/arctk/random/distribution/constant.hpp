@@ -79,6 +79,18 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a constant (step) distribution from a vector of values and their corresponding relative intermediate probabilities.
+             *
+             *  @param  vals_   Values generated from the distribution.
+             *  @param  probs_  Corresponding relative intermediate probabilities of the values.
+             *
+             *  @pre    vals_ must contain at least two values.
+             *  @pre    probs_ may not be empty.
+             *  @pre    vals_ size must match probs_ size plus one.
+             *  @pre    vals_ must be sorted in ascending order.
+             *  @pre    probs_ must always be greater than, or equal to, zero.
+             */
             template <typename T>
             inline Constant<T>::Constant(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept
               : Distribution<T>(vals_.front(), vals_.back())
