@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
              *  @return true if the value can be considered equal to zero.
              */
             template <typename T>
-            inline bool zero(T x_) noexcept
+            inline bool zero(const T x_) noexcept
             {
                 return ((x_ > -std::numeric_limits<double>::epsilon()) && (x_ < std::numeric_limits<double>::epsilon()));
             }
