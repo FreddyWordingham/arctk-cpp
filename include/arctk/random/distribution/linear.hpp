@@ -110,17 +110,17 @@ namespace arc //! arctk namespace
                 PRE(utl::properties::ascending(vals_));
                 PRE(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
 
-                std::vector<double> cdfs(probs_.size() + 1);
-
-                cdfs[0] = 0.0;
-                for (size_t i = 0; i < probs_.size(); ++i)
+                std::vector<double> base(probs_.size() - 1);
+                for (size_t i = 0; i < base.size(); ++i)
                 {
-                    cdfs[i + 1] = cdfs[i] + ((probs_[i + 1] + probs_[i]) * (vals_[i + 1] - vals_[i]));
+                    base[i] = ((probs_[i] + probs_[i + 1]) * (vals_[i + 1] - vals_[i])) / 2.0;
                 }
 
-                for (size_t i = 0; i < cdfs.size(); ++i)
+                std::vector<double> cdfs(vals_.size());
+                cdfs[0] = 0.0;
+                for (size_t i = 1; i < cdfs.size(); ++i)
                 {
-                    cdfs[i] /= cdfs.back();
+                    cdfs[i] = cdfs[i - 1] + base[i - 1];
                 }
 
                 POST(math::compare::equal(cdfs.back(), 1.0));
