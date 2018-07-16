@@ -73,6 +73,7 @@ namespace arc //! arctk namespace
 
             //  -- Arithmetic --
             constexpr inline Quat operator+(const Quat& quat_) const noexcept;
+            constexpr inline Quat operator-(const Quat& quat_) const noexcept;
 
 
             //  == METHODS ==
@@ -211,6 +212,18 @@ namespace arc //! arctk namespace
         constexpr inline Quat Quat::operator+(const Quat& quat_) const noexcept
         {
             return (Quat(_x + quat_._x, _y + quat_._y, _z + quat_._z, _w + quat_._w));
+        }
+
+        /**
+         *  Subtract a quat from a quat.
+         *
+         *  @param  quat_   Quat to subtract from the quat.
+         *
+         *  @return Quat formed by subtracting the vec from the quat.
+         */
+        constexpr inline Quat Quat::operator-(const Quat& quat_) const noexcept
+        {
+            return (Quat(_x - quat_._x, _y - quat_._y, _z - quat_._z, _w - quat_._w));
         }
 
 
