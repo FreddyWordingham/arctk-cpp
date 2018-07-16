@@ -56,6 +56,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             constexpr inline Quat() noexcept;
+            constexpr inline Quat(double x_, double y_, double z_, double w_) noexcept;
 
 
             //  == OPERATORS ==
@@ -78,6 +79,22 @@ namespace arc //! arctk namespace
           , y(0.0)
           , z(0.0)
           , w(1.0)
+        {
+        }
+
+        /**
+         *  Construct a quaternion directly.
+         *
+         *  @param  x_  Initial value of the x component.
+         *  @param  y_  Initial value of the y component.
+         *  @param  z_  Initial value of the z component.
+         *  @param  w_  Initial value of the w component.
+         */
+        constexpr inline Quat::Quat(const double x_, const double y_, const double z_, const double w_) noexcept
+          : x(x_)
+          , y(y_)
+          , z(z_)
+          , w(w_)
         {
         }
 
