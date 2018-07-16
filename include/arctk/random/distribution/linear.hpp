@@ -71,6 +71,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Getters --
                 inline const std::vector<T>&      vals() const noexcept;
+                inline const std::vector<double>& probs() const noexcept;
                 inline const std::vector<double>& cdfs() const noexcept;
             };
 
@@ -133,6 +134,12 @@ namespace arc //! arctk namespace
             inline const std::vector<T>& Linear<T>::vals() const noexcept
             {
                 return (_vals);
+            }
+
+            template <typename T>
+            inline const std::vector<double>& Linear<T>::probs() const noexcept
+            {
+                return (_probs);
             }
 
             /**
