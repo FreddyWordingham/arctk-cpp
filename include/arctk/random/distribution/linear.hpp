@@ -93,8 +93,8 @@ namespace arc //! arctk namespace
               , _fracs(init_fracs(vals_, probs))
             {
                 PRE(vals_.size() >= 2);
-                PRE(!probs_.empty());
-                PRE(vals_.size() == (probs_.size() + 1));
+                PRE(probs_.size() >= 2);
+                PRE(vals_.size() == probs_.size());
                 PRE(utl::properties::ascending(vals_));
                 PRE(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
             }
