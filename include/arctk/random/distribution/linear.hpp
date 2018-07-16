@@ -50,6 +50,13 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Values --
+                const std::vector<T> _vals; //!< Distribution values.
+
+                //  -- Probabilities --
+                const std::vector<double> _cdfs; //!< Cumulative distribution frequencies.
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
