@@ -85,6 +85,18 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a linear distribution from a vector of values and their corresponding relative probabilities.
+             *
+             *  @param  vals_   Values generated from the distribution.
+             *  @param  probs_  Corresponding relative intermediate probabilities of the values.
+             *
+             *  @pre    vals_ must contain at least two values.
+             *  @pre    probs_ must contain at least two values.
+             *  @pre    vals_ size must match probs_ size.
+             *  @pre    vals_ must be sorted in ascending order.
+             *  @pre    probs_ must always be greater than, or equal to, zero.
+             */
             template <typename T>
             inline Linear<T>::Linear(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept
               : Distribution<T>(vals_.front(), vals_.back())
