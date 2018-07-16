@@ -75,6 +75,9 @@ namespace arc //! arctk namespace
                 inline const std::vector<T>&      vals() const noexcept;
                 inline const std::vector<double>& probs() const noexcept;
                 inline const std::vector<double>& cdfs() const noexcept;
+
+                //  -- Sampling --
+                inline T sample(Generator* const rng_) const noexcept override;
             };
 
 
@@ -177,6 +180,34 @@ namespace arc //! arctk namespace
             inline const std::vector<double>& Linear<T>::cdfs() const noexcept
             {
                 return (_cdfs);
+            }
+
+
+            //  -- Sampling --
+            /**
+             *  Sample a value from the distribution.
+             *
+             *  @param  rng_    Random number generator.
+             *
+             *  @return Value sampled from the distribution.
+             */
+            template <typename T>
+            inline T Linear<T>::sample(Generator* const rng_) const noexcept
+            {
+                const size_t index = utl::search::lower(_cdfs, rng_->gen());
+
+                const double xi = rng_->gen();
+                if (xi <= _fracs[index])
+                {
+                    if (_probs[index] < _probs[index + 1])
+                    {
+                        return (_vals[index] - (std::sqrt(rng_->gen()) * (_vals[index + 1] - _vals[index])));
+                    }
+
+                    return (_vals[index + 1] - (std::sqrt(rng_->gen()) * (_vals[index + 1] - _vals[index])));
+                }
+
+                return (_vals[index] + (rng_->gen() * (_vals[index + 1] - _vals[index])));
             }
 
 
