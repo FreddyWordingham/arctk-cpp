@@ -70,6 +70,12 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a distribution which will sample values between given bounds.
+         *
+         *  @param  min_    Minimum possible sampled value.
+         *  @param  max_    Maximum possible sampled value.
+         */
         template <typename T>
         inline Distribution<T>::Distribution(T min_, T max_) noexcept
           : _min(min_)
