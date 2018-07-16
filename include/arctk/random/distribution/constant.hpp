@@ -92,7 +92,7 @@ namespace arc //! arctk namespace
 
             //  -- Initialisation --
             template <typename T>
-            inline std::vector<double> Discrete<T>::init_cdfs(const std::vector<T>& vals_, const std::vector<double>& probs_) const noexcept
+            inline std::vector<double> Constant<T>::init_cdfs(const std::vector<T>& vals_, const std::vector<double>& probs_) const noexcept
             {
                 PRE(vals_.size() >= 2);
                 PRE(!probs_.empty());
