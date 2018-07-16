@@ -110,6 +110,14 @@ namespace arc //! arctk namespace
 
 
 
+        //  == FUNCTION PROTOTYPES ==
+        //  -- Transformation --
+        constexpr inline Mat<T, 4> translate(const Vec<T, 3>& trans_) noexcept;
+        constexpr inline Mat<T, 4> rotate(const Vec<T, 3>& rot_) noexcept;
+        constexpr inline Mat<T, 4> scale(const Vec<T, 3>& scale_) noexcept;
+
+
+
         //  == INSTANTIATION --
         //  -- Constructors --
         /**
