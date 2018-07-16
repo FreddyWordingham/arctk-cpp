@@ -37,7 +37,7 @@ namespace arc //! arctk namespace
 
             //  == CLASS ==
             /**
-             *  Uniform probability distribution base class used to sample random numbers.
+             *  Uniform probability distribution class used to sample random numbers.
              *
              *  @tparam T   Type returned from sampling the distribution.
              */
