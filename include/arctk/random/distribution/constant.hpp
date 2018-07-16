@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
                 inline Constant(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept;
 
                 //  -- Initialisation --
-                inline std::vector<double> init_cdfs(const std::vector<double>& probs_) const noexcept;
+                inline std::vector<double> init_cdfs(const std::vector<T>& vals_, const std::vector<double>& probs_) const noexcept;
 
 
                 //  == METHODS ==
@@ -77,7 +77,7 @@ namespace arc //! arctk namespace
             inline Constant<T>::Constant(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept
               : Distribution<T>(vals_.front(), vals_.back())
               , _vals(vals_)
-              , _cdfs(init_cdfs(probs_))
+              , _cdfs(init_cdfs(vals_, probs_))
             {
                 PRE(vals_.size() >= 2);
                 PRE(!probs_.empty());
@@ -89,9 +89,12 @@ namespace arc //! arctk namespace
 
             //  -- Initialisation --
             template <typename T>
-            inline std::vector<double> Discrete<T>::init_cdfs(const std::vector<double>& probs_) const noexcept
+            inline std::vector<double> Discrete<T>::init_cdfs(const std::vector<T>& vals_, const std::vector<double>& probs_) const noexcept
             {
+                PRE(vals_.size() >= 2);
                 PRE(!probs_.empty());
+                PRE((vals_.size() + 1) == probs_.size());
+                PRE(utl::properties::ascending(vals_));
                 PRE(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
 
                 std::vector<double> cdfs(probs_.size() + 1);
@@ -99,7 +102,7 @@ namespace arc //! arctk namespace
                 cdfs[0] = 0.0;
                 for (size_t i = 0; i < probs_.size(); ++i)
                 {
-                    cdfs[i + 1] = cdfs[i] + probs_[i];
+                    cdfs[i + 1] = cdfs[i] + (probs_[i] * (vals_[i + 1] - vals_[i]));
                 }
 
                 for (size_t i = 0; i < cdfs.size(); ++i)
