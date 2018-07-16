@@ -74,6 +74,7 @@ namespace arc //! arctk namespace
             //  -- Arithmetic --
             inline Quat operator+(const Quat& quat_) const noexcept;
             inline Quat operator-(const Quat& quat_) const noexcept;
+            inline Quat operator*(const Quat& quat_) const noexcept;
 
             //  -- Access --
             constexpr inline double&       operator[](size_t index_) noexcept;
@@ -231,6 +232,19 @@ namespace arc //! arctk namespace
         inline Quat Quat::operator-(const Quat& quat_) const noexcept
         {
             return (Quat(_x - quat_._x, _y - quat_._y, _z - quat_._z, _w - quat_._w));
+        }
+
+        /**
+         *  Multiply a quat by a quat.
+         *
+         *  @param  quat_   Quat to multiply the quat by.
+         *
+         *  @return Quat formed by multiplying the quat by the quat.
+         */
+        inline Quat Quat::operator*(const Quat& quat_) const noexcept
+        {
+            return (Quat((_w * quat_._w) - (_x * quat_._x) - (_y * quat_._y) - (_z * quat_._z), (_w * quat_._x) + (_x * quat_._w) - (_y * quat_._z) + (_z * quat_._y), (_w * quat_._y) + (_x * quat_._z) + (_y * quat_._w) - (_z * quat_._x),
+                         (_w * quat_._z) - (_x * quat_._y) + (_y * quat_._x) + (_z * quat_._w)));
         }
 
 
