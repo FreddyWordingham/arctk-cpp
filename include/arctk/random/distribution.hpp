@@ -87,6 +87,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the minimum bound of the distribution sampling range.
+         *
+         *  @return Minimum bound of the distribution sampling range.
+         */
         template <typename T>
         inline T Distribution<T>::min() const noexcept
         {
