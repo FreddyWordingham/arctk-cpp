@@ -775,7 +775,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Mat<T, 4> translate(const Vec<T, 3>& trans_) noexcept
         {
-            return (Mat<T, 4>(Vec<T, 4>(1, 0, 0, trans_.x), Vec<T, 4>(0, 1, 0, trans_.y), Vec<T, 4>(0, 0, 1, trans_.z), Vec<T, 4>(0, 0, 0, 1)));
+            return (Mat<T, 4>(Vec<T, 4>(T{1}, T{0}, T{0}, trans_.x), Vec<T, 4>(T{0}, T{1}, T{0}, trans_.y), Vec<T, 4>(T{0}, T{0}, T{1}, trans_.z), Vec<T, 4>(T{0}, T{0}, T{0}, T{1})));
         }
 
         template <typename T>
