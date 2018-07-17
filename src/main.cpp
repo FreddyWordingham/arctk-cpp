@@ -44,6 +44,7 @@
 #include <arctk/geom/shape/plane.hpp>
 #include <arctk/geom/shape/sphere.hpp>
 #include <arctk/gui.hpp>
+#include <arctk/gui/keybind.hpp>
 #include <arctk/gui/uniform.hpp>
 #include <arctk/gui/window.hpp>
 #include <arctk/macro.hpp>
