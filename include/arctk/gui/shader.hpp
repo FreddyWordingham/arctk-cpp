@@ -268,8 +268,10 @@ namespace arc //! arctk namespace
                 glGetShaderInfoLog(sub_shader, log_length, nullptr, error_log.data());
                 const std::string error_text(begin(error_log), end(error_log));
 
-                ERROR(42) << "Unable to construct gui Shader.\n"
+                std::cerr << "Unable to construct gui Shader.\n"
                           << "Shader compilation failed with error: '" << error_text << "'.";
+
+                std::exit(exit::error::SHADER_COMPILATION_FAILED);
             }
 
             PRE(sub_shader != 0);
