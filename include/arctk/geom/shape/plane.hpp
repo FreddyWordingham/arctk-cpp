@@ -101,7 +101,7 @@ namespace arc //! arctk namespace
             {
                 const double denom = _dir * dir_;
 
-                if (math::zero(denom))
+                if (math::compare::zero(denom))
                 {
                     return (std::nullopt);
                 }
