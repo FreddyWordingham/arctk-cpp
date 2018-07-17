@@ -49,16 +49,15 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            double _x; //!< Representation of rotation axis x-component.
-            double _y; //!< Representation of rotation axis y-component.
-            double _z; //!< Representation of rotation axis z-component.
-            double _w; //!< Representation of rotation angle.
+            double _x{0.0}; //!< Representation of rotation axis x-component.
+            double _y{0.0}; //!< Representation of rotation axis y-component.
+            double _z{0.0}; //!< Representation of rotation axis z-component.
+            double _w{1.0}; //!< Representation of rotation angle.
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Quat() noexcept;
             inline Quat(double x_, double y_, double z_, double w_) noexcept;
             inline Quat(const Vec<double, 3>& axis_, double angle_) noexcept;
             inline Quat(double yaw_, double pitch_, double roll_) noexcept;
@@ -104,17 +103,6 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
-        /**
-         *  Construct a unit quaternion.
-         */
-        inline Quat::Quat() noexcept
-          : _x(0.0)
-          , _y(0.0)
-          , _z(0.0)
-          , _w(1.0)
-        {
-        }
-
         /**
          *  Construct a quaternion directly.
          *
