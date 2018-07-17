@@ -625,6 +625,13 @@ namespace arc //! arctk namespace
 
         //  == FUNCTIONS ==
         //  -- Utility --
+        /**
+         *  Create an 3 by 3 identity matrix.
+         *
+         *  @tparam T   Type stored by the mat.
+         *
+         *  @return 3 by 3 identity matrix.
+         */
         template <typename T>
         constexpr inline Mat<T, 3> indentity() noexcept
         {
