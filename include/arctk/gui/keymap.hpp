@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <map>
 
 //  -- Graphical --
@@ -28,6 +29,7 @@
 #include <GLFW/glfw3.h>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/gui/window.hpp>
 
 
@@ -90,7 +92,7 @@ namespace arc //! arctk namespace
          */
         inline void Keymap::bind(int key_, const std::function<void()>& func_, const bool sticky_, const int state_) noexcept
         {
-            assert(key_ != QUIT_KEY);
+            PRE(key_ != QUIT_KEY);
 
             _map.emplace(std::make_pair(key_, Keybind(func_, sticky_, state_)));
         }
@@ -105,8 +107,8 @@ namespace arc //! arctk namespace
          */
         inline void Keymap::unbind(const int key_) noexcept
         {
-            assert(key_ != QUIT_KEY);
-            assert(_map.find(key_) != _map.end());
+            PRE(key_ != QUIT_KEY);
+            PRE(_map.find(key_) != _map.end());
 
             _map.erase(key_);
         }
