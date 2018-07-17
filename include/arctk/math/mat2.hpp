@@ -104,6 +104,9 @@ namespace arc //! arctk namespace
             constexpr inline T         det() const noexcept;
             constexpr inline Mat<T, 2> minor() const noexcept;
             constexpr inline Mat<T, 2> cofactor() const noexcept;
+            constexpr inline Mat<T, 2> trans() const noexcept;
+            constexpr inline Mat<T, 2> adj() const noexcept;
+            constexpr inline Mat<T, 2> inv() const noexcept;
 
             //  -- Printing --
             inline std::string str() const noexcept override;
@@ -507,6 +510,23 @@ namespace arc //! arctk namespace
             return (mat);
         }
 
+        template <typename T>
+        constexpr inline Mat<T, 2> Mat<T, 2>::trans() const noexcept
+        {
+            return (Mat<T, 2>(Vec<T, 2>(x.x, y.x), Vec<T, 2>(x.y, y.y)));
+        }
+
+        template <typename T>
+        constexpr inline Mat<T, 2> Mat<T, 2>::adj() const noexcept
+        {
+            return (Mat<T, 2>(Vec<T, 2>(y.y, -x.y), Vec<T, 2>(-y.x, x.x)));
+        }
+
+        template <typename T>
+        constexpr inline Mat<T, 2> Mat<T, 2>::inv() const noexcept
+        {
+            return (adj() /= det());
+        }
 
 
         //  -- Printing --
