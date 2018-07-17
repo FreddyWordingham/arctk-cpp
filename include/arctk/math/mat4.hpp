@@ -727,6 +727,11 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Mat<T, 4> rotate(const Vec<T, 3>& rot_) noexcept
         {
+            return (Mat<T, 4>(Vec<T, 4>(std::cos(rot_.z) * std::cos(rot_.y), (std::cos(rot_.z) * std::sin(rot_.y) * std::sin(rot_.x)) - (std::sin(rot_.z) * std::cos(rot_.x)),
+                                        (std::sin(rot_.z) * std::sin(rot_.x)) + (std::cos(rot_.z) * std::sin(rot_.y) * std::cos(rot_.x)), T{0}),
+                              Vec<T, 4>(std::sin(rot_.z) * std::cos(rot_.y), (std::cos(rot_.z) * std::cos(rot_.x)) + (std::sin(rot_.z) * std::sin(rot_.y) * std::sin(rot_.x)),
+                                        (std::sin(rot_.z) * std::sin(rot_.y) * std::cos(rot_.x)) - (std::cos(rot_.z) * std::sin(rot_.x)), T{0}),
+                              Vec<T, 4>(-std::sin(rot_.y), std::cos(rot_.y) * std::sin(rot_.x), std::cos(rot_.y) * std::cos(rot_.x), T{0}), Vec<T, 4>(T{0}, T{0}, T{0}, T{1})));
         }
 
         template <typename T>
