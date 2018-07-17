@@ -182,8 +182,10 @@ namespace arc //! arctk namespace
 
             if (glewInit() != GLEW_OK)
             {
-                ERROR(42) << "Unable to construct graphical Window.\n"
+                std::cerr << "Unable to construct graphical Window.\n"
                           << "Glew could not be initialised.";
+
+                std::exit(exit::error::GLEW_INIT_FAILED);
             }
 
             glfwSetInputMode(handle, GLFW_STICKY_KEYS, GL_FALSE);
