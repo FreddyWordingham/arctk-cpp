@@ -616,6 +616,11 @@ namespace arc //! arctk namespace
                               Vec<T, 3>((y.x * z.y) - (y.y * z.x), (x.y * z.x) - (x.x * z.y), (x.x * y.y) - (x.y * y.x))));
         }
 
+        /**
+         *  Calculate the inverse matrix of the matrix.
+         *
+         *  @return Inverse matrix of the matrix.
+         */
         template <typename T>
         constexpr inline Mat<T, 3> Mat<T, 3>::inv() const noexcept
         {
