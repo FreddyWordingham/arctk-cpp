@@ -55,7 +55,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline explicit Plane(const vec3& pos_, const vec3& dir_) noexcept;
+                inline explicit Sphere(const vec3& pos_, double rad_) noexcept;
 
 
                 //  == METHODS ==
@@ -69,18 +69,18 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
-             *  Construct a plane at a location with a normal direction.
+             *  Construct a sphere at a location with a radius.
              *
-             *  @param  pos_    Position of the plane.
-             *  @param  dir_    Direction of the plane's normal.
+             *  @param  pos_    Position of the sphere.
+             *  @param  rad_    Radius of the sphere.
              *
-             *  @pre    dir_ must be normalised.
+             *  @pre    rad_ must be positive.
              */
-            inline Plane::Plane(const vec3& pos_, const vec3& dir_) noexcept
+            inline Plane::Plane(const vec3& pos_, const double rad_) noexcept
               : _pos(pos_)
-              , _dir(dir_)
+              , _rad(rad_)
             {
-                PRE(dir_.normalised());
+                PRE(rad_ > 0.0);
             }
 
 
