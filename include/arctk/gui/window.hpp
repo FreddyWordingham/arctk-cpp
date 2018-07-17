@@ -30,6 +30,8 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/exit.hpp>
+#include <arctk/gui/actor.hpp>
+#include <arctk/gui/camera.hpp>
 #include <arctk/math.hpp>
 
 
@@ -87,8 +89,8 @@ namespace arc //! arctk namespace
             //  -- Rendering --
             inline void clear_buffer() const noexcept;
             inline void swap_buffer() const noexcept;
-            //            inline void render_camera(const Camera& cam_, const Shader& shad_) const noexcept;
-            //            inline void render_actor(const Actor& act_, const Shader& shad_) const noexcept;
+            inline void render_camera(const Camera& cam_, const Shader& shad_) const noexcept;
+            inline void render_actor(const Actor& act_, const Shader& shad_) const noexcept;
         };
 
 
@@ -247,7 +249,7 @@ namespace arc //! arctk namespace
          *  @param  cam_    Camera used to render.
          *  @param  shad_   Shader to render with.
          */
-        /*inline void Window::render_camera(const Camera& cam_, const Shader& shad_) const noexcept
+        inline void Window::render_camera(const Camera& cam_, const Shader& shad_) const noexcept
         {
             glUseProgram(shad_.handle());
 
@@ -286,7 +288,7 @@ namespace arc //! arctk namespace
                     }
                 }
             }
-        }*/
+        }
 
         /**
          *  Render an actor using a shader.
@@ -294,7 +296,7 @@ namespace arc //! arctk namespace
          *  @param  act_    Actor to render.
          *  @param  shad_   Shader to render with.
          */
-        /*inline void Window::render_actor(const Actor& act_, const Shader& shad_) const noexcept
+        inline void Window::render_actor(const Actor& act_, const Shader& shad_) const noexcept
         {
             glUseProgram(shad_.handle());
 
@@ -340,7 +342,7 @@ namespace arc //! arctk namespace
             glBindVertexArray(act_.vao());
             glDrawArrays(act_.primitive_type(), 0, act_.num_vert());
             glBindVertexArray(0);
-        }*/
+        }
 
 
 
