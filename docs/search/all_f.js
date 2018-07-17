@@ -8,6 +8,8 @@ var searchData=
   ['phi',['phi',['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#a3dd81c819a705cebb25e1095ed346f72',1,'arc::math::Vec&lt; T, 3 &gt;']]],
   ['phys_2ehpp',['phys.hpp',['../consts_2phys_8hpp.html',1,'(Global Namespace)'],['../phys_8hpp.html',1,'(Global Namespace)']]],
   ['pi',['PI',['../namespacearc_1_1consts_1_1math.html#a72f9bca0e430f3634683cf7db5e75818',1,'arc::consts::math']]],
+  ['plane',['Plane',['../classarc_1_1geom_1_1shape_1_1_plane.html',1,'arc::geom::shape::Plane'],['../classarc_1_1geom_1_1shape_1_1_plane.html#a212904cdf3d4533aa4472cf987cad5f0',1,'arc::geom::shape::Plane::Plane()']]],
+  ['plane_2ehpp',['plane.hpp',['../plane_8hpp.html',1,'']]],
   ['pos',['pos',['../classarc_1_1phys_1_1_particle.html#a3dd873ec2c055055433ee73a4d9f31bb',1,'arc::phys::Particle']]],
   ['post',['POST',['../debug_8hpp.html#a9302d06bf85836e2d719ec4d67fa1e05',1,'debug.hpp']]],
   ['post_5fcondition_5ffailure',['POST_CONDITION_FAILURE',['../namespacearc_1_1exit_1_1error.html#a2cc22e3c5178a1faf7f7b90875a76f4b',1,'arc::exit::error']]],

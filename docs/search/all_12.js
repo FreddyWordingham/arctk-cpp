@@ -7,7 +7,7 @@ var searchData=
   ['seed',['seed',['../classarc_1_1random_1_1_generator.html#a5fc7cf9f0613c58fcfbe20910c42a8f4',1,'arc::random::Generator']]],
   ['set_5fnext_5fseed',['set_next_seed',['../classarc_1_1random_1_1_generator.html#a63c797cd1f24f809ac78222c11e0c14e',1,'arc::random::Generator']]],
   ['settings_2ehpp',['settings.hpp',['../settings_8hpp.html',1,'']]],
-  ['shape',['Shape',['../classarc_1_1geom_1_1_shape.html',1,'arc::geom']]],
+  ['shape',['Shape',['../classarc_1_1geom_1_1_shape.html',1,'arc::geom::Shape'],['../classarc_1_1geom_1_1_shape.html#a8d674a484f1e5ab69a1d68828a8b35d4',1,'arc::geom::Shape::Shape(const Shape &amp;) noexcept=default'],['../classarc_1_1geom_1_1_shape.html#a247752e61516a2f0f2adac6aaf7e13e7',1,'arc::geom::Shape::Shape(Shape &amp;&amp;) noexcept=default']]],
   ['shape_2ehpp',['shape.hpp',['../shape_8hpp.html',1,'']]],
   ['size',['size',['../classarc_1_1data_1_1_histogram_3_01_t_00_011_01_4.html#a4273284647999934a0a5847f2b47468f',1,'arc::data::Histogram&lt; T, 1 &gt;::size()'],['../classarc_1_1data_1_1_histogram_3_01_t_00_012_01_4.html#a15d24df30fe26967797c146d65a88edb',1,'arc::data::Histogram&lt; T, 2 &gt;::size()']]],
   ['speed_5fof_5flight',['SPEED_OF_LIGHT',['../namespacearc_1_1consts_1_1phys.html#a890931739999d1d4bbcaf3d9b48a6177',1,'arc::consts::phys']]],
