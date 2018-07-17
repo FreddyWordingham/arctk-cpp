@@ -727,7 +727,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Mat<T, 4> scale(const Vec<T, 3>& scale_) noexcept
         {
-            return (Mat<T, 4>(Vec<T, 4>(scale_.x, 0, 0, 0), Vec<T, 4>(0, scale_.y, 0, 0), Vec<T, 4>(0, 0, scale_.z, 0), Vec<T, 4>(0, 0, 0, 1)));
+            return (Mat<T, 4>(Vec<T, 4>(scale_.x, T{0}, T{0}, T{0}), Vec<T, 4>(T{0}, scale_.y, T{0}, T{0}), Vec<T, 4>(T{0}, T{0}, scale_.z, T{0}), Vec<T, 4>(T{0}, T{0}, T{0}, T{1})));
         }
 
         template <typename T>
