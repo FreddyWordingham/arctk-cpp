@@ -42,6 +42,12 @@ namespace arc //! arctk namespace
          */
         class Shape
         {
+            //  == INSTANTIATION ==
+          public:
+            //  -- Destructors --
+            virtual inline ~Shape() noexcept = 0;
+
+
             //  == METHODS ==
           public:
             //  -- Collision --
@@ -51,11 +57,8 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
-        //  -- Constructors --
-
-
-
-        //  == METHODS ==
+        //  -- Destructors --
+        inline Shape::~Shape() noexcept = default;
 
 
 
