@@ -103,6 +103,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Mathematical --
             constexpr inline T sum() const noexcept;
+            constexpr inline T det() const noexcept;
 
             //  -- Printing --
             inline std::string str() const noexcept override;
@@ -656,6 +657,14 @@ namespace arc //! arctk namespace
         constexpr inline T Mat<T, 4>::sum() const noexcept
         {
             return (x.x + x.y + x.z + x.w + y.x + y.y + y.z + y.w + z.x + z.y + z.z + z.w + w.x + w.y + w.z + w.w);
+        }
+
+        template <typename T>
+        constexpr inline T Mat<T, 4>::det() const noexcept
+        {
+            return ((x.x * y.y * z.z * w.w) - (x.x * y.y * z.w * w.z) - (x.x * y.z * z.y * w.w) + (x.x * y.z * z.w * w.y) + (x.x * y.w * z.y * w.z) - (x.x * y.w * z.z * w.y) - (x.y * y.x * z.z * w.w) + (x.y * y.x * z.w * w.z) + (x.y * y.z * z.x * w.w)
+                    - (x.y * y.z * z.w * w.x) - (x.y * y.w * z.x * w.z) + (x.y * y.w * z.z * w.x) + (x.z * y.x * z.y * w.w) - (x.z * y.x * z.w * w.y) - (x.z * y.y * z.x * w.w) + (x.z * y.y * z.w * w.x) + (x.z * y.w * z.x * w.y) - (x.z * y.w * z.y * w.x)
+                    - (x.w * y.x * z.y * w.z) + (x.w * y.x * z.z * w.y) + (x.w * y.y * z.x * w.z) - (x.w * y.y * z.z * w.x) - (x.w * y.z * z.x * w.y) + (x.w * y.z * z.y * w.x));
         }
 
 
