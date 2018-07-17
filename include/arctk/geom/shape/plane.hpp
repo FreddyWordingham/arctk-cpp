@@ -78,9 +78,10 @@ namespace arc //! arctk namespace
              *  @pre    dir_ must be normalised.
              */
             inline Plane::Plane(const vec3& pos_, const vec3& dir_) noexcept
-              : Shape(pos_, dir_)
+              : _pos(pos_)
+              , _dir(dir_)
             {
-                assert(dir_.normalised());
+                PRE(dir_.normalised());
             }
 
 
