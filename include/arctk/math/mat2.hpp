@@ -547,6 +547,11 @@ namespace arc //! arctk namespace
             return (Mat<T, 2>(Vec<T, 2>(y.y, -x.y), Vec<T, 2>(-y.x, x.x)));
         }
 
+        /**
+         *  Calculate the inverse matrix of the matrix.
+         *
+         *  @return Inverse matrix of the matrix.
+         */
         template <typename T>
         constexpr inline Mat<T, 2> Mat<T, 2>::inv() const noexcept
         {
