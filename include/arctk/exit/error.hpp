@@ -46,7 +46,8 @@ namespace arc //! arctk namespace
             constexpr const int WINDOW_POINTER_INIT_FAILED = 140; //!< Unable initialise a glfw window pointer.
             constexpr const int GLFW_INIT_FAILED           = 141; //!< Unable initialise glfw.
             constexpr const int GLEW_INIT_FAILED           = 142; //!< Unable initialise glew.
-            constexpr const int SHADER_LINKING_FAILED      = 143; //!< Shader linking stage failed.
+            constexpr const int SHADER_LINKING_FAILED      = 143; //!< Shader linking failed.
+            constexpr const int SHADER_COMPILATION_FAILED  = 143; //!< Shader compilation failed.
 
 
 
