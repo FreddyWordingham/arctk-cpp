@@ -664,6 +664,11 @@ namespace arc //! arctk namespace
             return (x.x + x.y + x.z + x.w + y.x + y.y + y.z + y.w + z.x + z.y + z.z + z.w + w.x + w.y + w.z + w.w);
         }
 
+        /**
+         *  Calculate the determinant of the matrix.
+         *
+         *  @return Determinant of the matrix.
+         */
         template <typename T>
         constexpr inline T Mat<T, 4>::det() const noexcept
         {
