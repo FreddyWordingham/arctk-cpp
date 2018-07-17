@@ -41,12 +41,6 @@ namespace arc //! arctk namespace
          */
         class Shape
         {
-            //  == FIELDS ==
-          protected:
-            //  -- Positioning --
-            vec3 _pos; //!< Position of the shape.
-
-
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
