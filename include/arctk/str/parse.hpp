@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
+#include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <iterator>
@@ -74,6 +75,7 @@ namespace arc //! arctk namespace
             inline std::string from_helper(const std::tuple<A...>& tup_, bool limiters_, std::index_sequence<I...> /*unused*/) noexcept;
             template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
             inline std::string from(const C& cont_, bool limiters_ = true) noexcept;
+            inline std::string from(const std::ifstream& file_) noexcept;
 
 
 
@@ -446,6 +448,21 @@ namespace arc //! arctk namespace
                 }
 
                 return (stream.str());
+            }
+
+            inline std::string from(const std::string& path_) noexcept
+            {
+                std::ifstream file(path_);
+
+                std::string str;
+
+                file.seekg(0, std::ios::end);
+                str.reserve(file.tellg());
+                file.seekg(0, std::ios::beg);
+
+                str.assign((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+
+                return (str);
             }
 
 
