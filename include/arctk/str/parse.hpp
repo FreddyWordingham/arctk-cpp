@@ -75,7 +75,9 @@ namespace arc //! arctk namespace
             inline std::string from_helper(const std::tuple<A...>& tup_, bool limiters_, std::index_sequence<I...> /*unused*/) noexcept;
             template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
             inline std::string from(const C& cont_, bool limiters_ = true) noexcept;
-            inline std::string from(const std::ifstream& file_) noexcept;
+
+            //  -- File --
+            inline std::string file(const std::string& path_) noexcept;
 
 
 
@@ -450,14 +452,24 @@ namespace arc //! arctk namespace
                 return (stream.str());
             }
 
-            inline std::string from(const std::string& path_) noexcept
+
+            //  -- File --
+            inline std::string file(const std::string& path_) noexcept
             {
                 std::ifstream file(path_);
+
+                if (!file.is_open())
+                {
+                    std::cerr << "Unable to parse contents of file.\n"
+                              << "Unable to open file: `" << path_ << "`.\n";
+
+                    std::exit(exit::error::FILE_OPEN_FAILED);
+                }
 
                 std::string str;
 
                 file.seekg(0, std::ios::end);
-                str.reserve(file.tellg());
+                str.reserve(static_cast<size_t>(file.tellg()));
                 file.seekg(0, std::ios::beg);
 
                 str.assign((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
