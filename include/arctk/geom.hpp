@@ -23,6 +23,7 @@
 //  -- Arctk --
 #include <arctk/geom/shape.hpp>
 #include <arctk/geom/shape/plane.hpp>
+#include <arctk/geom/shape/sphere.hpp>
 
 
 
