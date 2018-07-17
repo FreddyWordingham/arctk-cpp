@@ -117,11 +117,11 @@ namespace arc //! arctk namespace
             constexpr inline T         det() const noexcept;
             constexpr inline T         minor(size_t row_, size_t col_) const noexcept;
             constexpr inline Mat<T, N> minor() const noexcept;
-            inline T                   cofactor(size_t row_, size_t col_) const noexcept;
-            inline Mat<T, N>           cofactor() const noexcept;
-            inline Mat<T, N>           trans() const noexcept;
-            inline Mat<T, N>           adj() const noexcept;
-            inline Mat<T, N>           inv() const noexcept;
+            constexpr inline T         cofactor(size_t row_, size_t col_) const noexcept;
+            constexpr inline Mat<T, N> cofactor() const noexcept;
+            constexpr inline Mat<T, N> trans() const noexcept;
+            constexpr inline Mat<T, N> adj() const noexcept;
+            constexpr inline Mat<T, N> inv() const noexcept;
 
             //  -- Printing --
             inline std::string str() const noexcept override;
