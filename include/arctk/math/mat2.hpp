@@ -498,6 +498,11 @@ namespace arc //! arctk namespace
             return ((x.x * y.y) - (x.y * y.x));
         }
 
+        /**
+         *  Calculate the matrix of minors of the matrix.
+         *
+         *  @return Matrix of minors of the matrix.
+         */
         template <typename T>
         constexpr inline Mat<T, 2> Mat<T, 2>::minor() const noexcept
         {
