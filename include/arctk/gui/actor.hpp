@@ -145,7 +145,7 @@ namespace arc //! arctk namespace
          *  @param  fill_mode_      Type of mode used to render the actor.
          */
         inline Actor::Actor(const std::vector<GLfloat>& verts_, const std::vector<size_t>& layout_, const GLenum primitive_type_, const GLenum fill_mode_) noexcept
-          : _num_vert(static_cast<GLsizei>(verts_.size() / math::sum(layout_)))
+          : _num_vert(static_cast<GLsizei>(verts_.size() / math::container::sum(layout_)))
           , _vao(init_vao())
           , _vbo(init_vbo())
           , _primitive_type(primitive_type_)
