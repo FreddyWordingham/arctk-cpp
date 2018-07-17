@@ -32,6 +32,7 @@
 #include <arctk/exit.hpp>
 #include <arctk/gui/actor.hpp>
 #include <arctk/gui/camera.hpp>
+#include <arctk/gui/shader.hpp>
 #include <arctk/math.hpp>
 
 
