@@ -148,6 +148,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad8f286d5fa9cc8ad42a0222367848726"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82b155d26de20af1bc16ee7164ee2dd3"><td class="memItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#a82b155d26de20af1bc16ee7164ee2dd3">sum</a> () const noexcept</td></tr>
 <tr class="separator:a82b155d26de20af1bc16ee7164ee2dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d94de6c765f1cf06e5e75e4366a3bc"><td class="memItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#ab7d94de6c765f1cf06e5e75e4366a3bc">det</a> () const noexcept</td></tr>
+<tr class="separator:ab7d94de6c765f1cf06e5e75e4366a3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f55d9c9b3b8bb702881d3dac42f7bb2"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classarc_1_1math_1_1_mat.html">Mat</a>&lt; T, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#a4f55d9c9b3b8bb702881d3dac42f7bb2">minor</a> () const noexcept</td></tr>
+<tr class="separator:a4f55d9c9b3b8bb702881d3dac42f7bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1006a6977ff60c35c423a2b0abb573a"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classarc_1_1math_1_1_mat.html">Mat</a>&lt; T, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#ac1006a6977ff60c35c423a2b0abb573a">cofactor</a> () const noexcept</td></tr>
+<tr class="separator:ac1006a6977ff60c35c423a2b0abb573a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a198fa763c098530d993b54daf00ed62e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classarc_1_1math_1_1_mat.html">Mat</a>&lt; T, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#a198fa763c098530d993b54daf00ed62e">trans</a> () const noexcept</td></tr>
+<tr class="separator:a198fa763c098530d993b54daf00ed62e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25478c0b1e8a10d4a099079bb00eb8e5"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classarc_1_1math_1_1_mat.html">Mat</a>&lt; T, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#a25478c0b1e8a10d4a099079bb00eb8e5">adj</a> () const noexcept</td></tr>
+<tr class="separator:a25478c0b1e8a10d4a099079bb00eb8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa0c845d4af7a20ed6fbf8b0d59d5cec"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classarc_1_1math_1_1_mat.html">Mat</a>&lt; T, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#afa0c845d4af7a20ed6fbf8b0d59d5cec">inv</a> () const noexcept</td></tr>
+<tr class="separator:afa0c845d4af7a20ed6fbf8b0d59d5cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeaa1b60e999006597173b2f561849b5f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#aeaa1b60e999006597173b2f561849b5f">str</a> () const noexcept override</td></tr>
 <tr class="separator:aeaa1b60e999006597173b2f561849b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classarc_1_1str_1_1_printable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classarc_1_1str_1_1_printable')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classarc_1_1str_1_1_printable.html">arc::str::Printable</a></td></tr>
@@ -254,6 +266,174 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a25478c0b1e8a10d4a099079bb00eb8e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25478c0b1e8a10d4a099079bb00eb8e5">&#9670;&nbsp;</a></span>adj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classarc_1_1math_1_1_mat.html">Mat</a>&lt; T, 4 &gt; <a class="el" href="classarc_1_1math_1_1_mat.html">arc::math::Mat</a>&lt; T, 4 &gt;::adj </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculate the adjoint matrix of the matrix.</p>
+<dl class="section return"><dt>Returns</dt><dd>Adjoint matrix of the matrix. </dd></dl>
+
+</div>
+</div>
+<a id="ac1006a6977ff60c35c423a2b0abb573a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1006a6977ff60c35c423a2b0abb573a">&#9670;&nbsp;</a></span>cofactor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classarc_1_1math_1_1_mat.html">Mat</a>&lt; T, 4 &gt; <a class="el" href="classarc_1_1math_1_1_mat.html">arc::math::Mat</a>&lt; T, 4 &gt;::cofactor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculate the matrix of cofactors of the matrix.</p>
+<dl class="section return"><dt>Returns</dt><dd>Matrix of cofactors of the matrix. </dd></dl>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1math_1_1_mat_3_01_t_00_014_01_4_ac1006a6977ff60c35c423a2b0abb573a_cgraph.png" border="0" usemap="#classarc_1_1math_1_1_mat_3_01_t_00_014_01_4_ac1006a6977ff60c35c423a2b0abb573a_cgraph" alt=""/></div>
+<map name="classarc_1_1math_1_1_mat_3_01_t_00_014_01_4_ac1006a6977ff60c35c423a2b0abb573a_cgraph" id="classarc_1_1math_1_1_mat_3_01_t_00_014_01_4_ac1006a6977ff60c35c423a2b0abb573a_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1math_1_1_mat.html#a9cedcf9dbeb3c9cf28a00ba0fc712e74" title="arc::math::Mat::minor" alt="" coords="182,12,329,37"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab7d94de6c765f1cf06e5e75e4366a3bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7d94de6c765f1cf06e5e75e4366a3bc">&#9670;&nbsp;</a></span>det()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr T <a class="el" href="classarc_1_1math_1_1_mat.html">arc::math::Mat</a>&lt; T, 4 &gt;::det </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculate the determinant of the matrix.</p>
+<dl class="section return"><dt>Returns</dt><dd>Determinant of the matrix. </dd></dl>
+
+</div>
+</div>
+<a id="afa0c845d4af7a20ed6fbf8b0d59d5cec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa0c845d4af7a20ed6fbf8b0d59d5cec">&#9670;&nbsp;</a></span>inv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classarc_1_1math_1_1_mat.html">Mat</a>&lt; T, 4 &gt; <a class="el" href="classarc_1_1math_1_1_mat.html">arc::math::Mat</a>&lt; T, 4 &gt;::inv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculate the inverse matrix of the matrix.</p>
+<dl class="section return"><dt>Returns</dt><dd>Inverse matrix of the matrix. </dd></dl>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1math_1_1_mat_3_01_t_00_014_01_4_afa0c845d4af7a20ed6fbf8b0d59d5cec_cgraph.png" border="0" usemap="#classarc_1_1math_1_1_mat_3_01_t_00_014_01_4_afa0c845d4af7a20ed6fbf8b0d59d5cec_cgraph" alt=""/></div>
+<map name="classarc_1_1math_1_1_mat_3_01_t_00_014_01_4_afa0c845d4af7a20ed6fbf8b0d59d5cec_cgraph" id="classarc_1_1math_1_1_mat_3_01_t_00_014_01_4_afa0c845d4af7a20ed6fbf8b0d59d5cec_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1math_1_1_mat.html#af656481a991b67a0d5c56dd3907b7872" title="arc::math::Mat::adj" alt="" coords="182,55,314,80"/>
+<area shape="rect" id="node5" href="classarc_1_1math_1_1_mat.html#a17ff38fa0f4b29f52711441b876d1118" title="arc::math::Mat::det" alt="" coords="182,5,314,31"/>
+<area shape="rect" id="node3" href="classarc_1_1math_1_1_mat.html#afe05be4f8638a489f18d153239c5f314" title="arc::math::Mat::cofactor" alt="" coords="362,5,523,31"/>
+<area shape="rect" id="node4" href="classarc_1_1math_1_1_mat.html#a28d8fb11c34fe8caa44bd22b5cc68bbf" title="arc::math::Mat::trans" alt="" coords="371,55,514,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4f55d9c9b3b8bb702881d3dac42f7bb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f55d9c9b3b8bb702881d3dac42f7bb2">&#9670;&nbsp;</a></span>minor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classarc_1_1math_1_1_mat.html">Mat</a>&lt; T, 4 &gt; <a class="el" href="classarc_1_1math_1_1_mat.html">arc::math::Mat</a>&lt; T, 4 &gt;::minor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculate the matrix of minors of the matrix.</p>
+<dl class="section return"><dt>Returns</dt><dd>Matrix of minors of the matrix. </dd></dl>
+
+</div>
+</div>
 <a id="a0d0c521c24149075f6999cb353f650c1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0d0c521c24149075f6999cb353f650c1">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/2]</span></h2>
 
@@ -1032,6 +1212,35 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a198fa763c098530d993b54daf00ed62e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a198fa763c098530d993b54daf00ed62e">&#9670;&nbsp;</a></span>trans()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classarc_1_1math_1_1_mat.html">Mat</a>&lt; T, 4 &gt; <a class="el" href="classarc_1_1math_1_1_mat.html">arc::math::Mat</a>&lt; T, 4 &gt;::trans </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculate the transpose matrix of the matrix.</p>
+<dl class="section return"><dt>Returns</dt><dd>Transpose matrix of the matrix. </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a4154f7bdf9df9021a4e930dd63661ab8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4154f7bdf9df9021a4e930dd63661ab8">&#9670;&nbsp;</a></span>w</h2>
@@ -1111,7 +1320,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 16 2018 16:33:13 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 17 2018 03:17:26 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
