@@ -509,6 +509,11 @@ namespace arc //! arctk namespace
             return (Mat<T, 2>(Vec<T, 2>(y.y, y.x), Vec<T, 2>(x.y, x.x)));
         }
 
+        /**
+         *  Calculate the matrix of cofactors of the matrix.
+         *
+         *  @return Matrix of cofactors of the matrix.
+         */
         template <typename T>
         constexpr inline Mat<T, 2> Mat<T, 2>::cofactor() const noexcept
         {
