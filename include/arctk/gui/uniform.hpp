@@ -105,7 +105,7 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION --
         //  -- Constructors --
         /**
-         *  Construct an object to handle a shader uniform of a type to be controlled by agiven type.
+         *  Construct an object to handle a shader uniform of a type to be controlled by a given type.
          *
          *  @param  handle_     Uniform handle.
          *  @param  type_       Type to be controlled by uniform.
