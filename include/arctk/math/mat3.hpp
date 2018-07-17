@@ -579,15 +579,16 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        constexpr inline Mat<T, 2> Mat<T, 2>::trans() const noexcept
+        constexpr inline Mat<T, 3> Mat<T, 3>::trans() const noexcept
         {
-            return (Mat<T, 2>(Vec<T, 2>(x.x, y.x), Vec<T, 2>(x.y, y.y)));
+            return (Mat<T, 3>(Vec<T, 3>(x.x, y.x, z.x), Vec<T, 3>(x.y, y.y, z.y), Vec<T, 3>(x.z, y.z, z.z)));
         }
 
         template <typename T>
-        constexpr inline Mat<T, 2> Mat<T, 2>::adj() const noexcept
+        constexpr inline Mat<T, 3> Mat<T, 3>::adj() const noexcept
         {
-            return (Mat<T, 2>(vec::Vec2(y.y, -x.y), vec::Vec2(-y.x, x.x)));
+            return (Mat<T, 3>(Vec<T, 3>((y.y * z.z) - (y.z * z.y), (x.z * z.y) - (x.y * z.z), (x.y * y.z) - (x.z * y.y)), Vec<T, 3>((y.z * z.x) - (y.x * z.z), (x.x * z.z) - (x.z * z.x), (x.z * y.x) - (x.x * y.z)),
+                              Vec<T, 3>((y.x * z.y) - (y.y * z.x), (x.y * z.x) - (x.x * z.y), (x.x * y.y) - (x.y * y.x))));
         }
 
         template <typename T>
