@@ -70,7 +70,7 @@ namespace arc //! arctk namespace
             glm::vec3 _scale;  //!< Model scaling vector.
 
             //  -- Uniforms --
-            glm::mat4                        _model{};         //!< Model transformation matrix.
+            glm::mat4                        _model;           //!< Model transformation matrix.
             std::map<std::string, int>       _int_uniform{};   //!< Integer uniform map.
             std::map<std::string, float>     _float_uniform{}; //!< Float uniform map.
             std::map<std::string, glm::vec2> _vec2_uniform{};  //!< Vec2 uniform map.
@@ -155,6 +155,7 @@ namespace arc //! arctk namespace
           , _trans(glm::vec3(0.0f, 0.0f, 0.0f))
           , _rotate(glm::vec3(0.0f, 0.0f, 0.0f))
           , _scale(glm::vec3(1.0f, 1.0f, 1.0f))
+          , _model(glm::mat4(1.0f))
         {
             PRE((verts_.size() % math::container::sum(layout_)) == 0);
 
