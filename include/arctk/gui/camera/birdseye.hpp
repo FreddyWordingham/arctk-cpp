@@ -19,8 +19,9 @@
 
 
 
-//  == BASE ==
+//  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/gui/camera.hpp>
 
 
@@ -95,8 +96,8 @@ namespace arc //! arctk namespace
               , _height_start(height_start_)
               , _height_end(height_end_)
             {
-                assert(width_start_ < width_end_);
-                assert(height_start_ < height_end_);
+                PRE(width_start_ < width_end_);
+                PRE(height_start_ < height_end_);
 
                 update_mvp();
             }
