@@ -854,6 +854,18 @@ namespace arc //! arctk namespace
             return (Mat<T, 4>(Vec<T, 4>(T{1}, T{0}, T{0}, trans_.x), Vec<T, 4>(T{0}, T{1}, T{0}, trans_.y), Vec<T, 4>(T{0}, T{0}, T{1}, trans_.z), Vec<T, 4>(T{0}, T{0}, T{0}, T{1})));
         }
 
+        /**
+         *  Create a transformation matrix which applies a scaling, followed by a rotation followed by a translation.
+         *  Rotations are performed in x-y-z order.
+         *
+         *  @tparam T   Type stored by the mat
+         *
+         *  @param  scale_  Vec of translations to be applied in each dimension.
+         *  @param  rot_    Vec of rotation angles to be applied in each dimension.
+         *  @param  trans_  Vec of translations to be applied in each dimension.
+         *
+         *  @return Transformation matrix.
+         */
         template <typename T>
         constexpr inline Mat<T, 4> transform(const Vec<T, 3>& scale_, const Vec<T, 3>& rot_, const Vec<T, 3>& trans_) noexcept
         {
