@@ -171,8 +171,10 @@ namespace arc //! arctk namespace
 
             if (handle == nullptr)
             {
-                ERROR(42) << "Unable to construct graphical Window.\n"
+                std::cerr << "Unable to construct graphical Window.\n"
                           << "Window pointer could not be created.";
+
+                std::exit(exit::error::WINDOW_POINTER_INIT_FAILED);
             }
 
             glfwMakeContextCurrent(handle);
