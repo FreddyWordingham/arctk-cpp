@@ -555,30 +555,6 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        constexpr inline Mat<T, 3> Mat<T, 3>::minor(const size_t row_, const size_t col_) const noexcept
-        {
-            PRE(row_ < 3);
-            PRE(col_ < 3);
-
-            if (row_ == 0)
-            {
-                if (col_ == 0)
-                {
-                    return (y.y0);
-                }
-
-                return (y.x);
-            }
-
-            if (col_ == 0)
-            {
-                return (x.y);
-            }
-
-            return (x.x);
-        }
-
-        template <typename T>
         constexpr inline Mat<T, 3> Mat<T, 3>::minor() const noexcept
         {
             return (Mat<T, 3>(Vec<T, 3>((y.y * z.z) - (y.z * z.y), (y.x * z.z) - (y.z * z.x), (y.x * z.y) - (y.y * z.x)), Vec<T, 3>((x.y * z.z) - (x.z * z.y), (x.x * z.z) - (x.z * z.x), (x.x * z.y) - (x.y * z.x)),
