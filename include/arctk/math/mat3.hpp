@@ -592,7 +592,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        constexpr inline Mat<T, 2> Mat<T, 2>::inv() const noexcept
+        constexpr inline Mat<T, 3> Mat<T, 3>::inv() const noexcept
         {
             return (adj() /= det());
         }
