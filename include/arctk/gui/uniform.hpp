@@ -20,9 +20,15 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
 //  -- Graphical --
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+
+//  -- Arctk --
+#include <arctk/debug.hpp>
 
 
 
@@ -112,7 +118,7 @@ namespace arc //! arctk namespace
           , _type(type_)
           , _control(control_)
         {
-            assert(handle_ >= 0);
+            PRE(handle_ >= 0);
         }
 
 
