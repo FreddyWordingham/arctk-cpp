@@ -767,6 +767,13 @@ namespace arc //! arctk namespace
 
         //  == FUNCTIONS ==
         //  -- Utility --
+        /**
+         *  Create an 4 by 4 identity matrix.
+         *
+         *  @tparam T   Type stored by the mat.
+         *
+         *  @return 4 by 4 identity matrix.
+         */
         template <typename T>
         constexpr inline Mat<T, 4> indentity() noexcept
         {
