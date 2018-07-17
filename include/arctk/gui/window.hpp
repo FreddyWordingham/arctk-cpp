@@ -26,7 +26,6 @@
 //  -- Graphical --
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include <glm/glm.hpp>
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
