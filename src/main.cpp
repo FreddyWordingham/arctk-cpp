@@ -41,6 +41,7 @@
 #include <arctk/exit/success.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/geom/shape.hpp>
+#include <arctk/geom/shape/plane.hpp>
 #include <arctk/macro.hpp>
 #include <arctk/macro/utility.hpp>
 #include <arctk/math.hpp>
