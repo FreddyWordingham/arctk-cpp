@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Uniform(const T min_, const T max_) noexcept;
+                inline Uniform(T min_, T max_) noexcept;
 
 
                 //  == METHODS ==
