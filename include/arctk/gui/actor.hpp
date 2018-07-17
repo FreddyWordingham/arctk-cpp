@@ -162,7 +162,7 @@ namespace arc //! arctk namespace
             glBindBuffer(GL_ARRAY_BUFFER, _vbo);
             glBufferData(GL_ARRAY_BUFFER, static_cast<GLsizeiptr>(verts_.size() * sizeof(GLfloat)), &verts_.front(), GL_STATIC_DRAW);
 
-            const size_t chunk_size = math::sum(layout_) * sizeof(GLfloat);
+            const size_t chunk_size = math::container::sum(layout_) * sizeof(GLfloat);
             size_t       start      = 0;
             for (size_t i = 0; i < layout_.size(); ++i)
             {
