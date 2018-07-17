@@ -847,6 +847,11 @@ namespace arc //! arctk namespace
             return (std::pow(-1, row_ + col_) * minor(row_, col_));
         }
 
+        /**
+         *  Calculate the matrix of cofactors of the matrix.
+         *
+         *  @return Matrix of cofactors of the matrix.
+         */
         template <typename T, size_t N>
         constexpr inline Mat<T, N> Mat<T, N>::cofactor() const noexcept
         {
