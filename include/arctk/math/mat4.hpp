@@ -102,8 +102,9 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Mathematical --
-            constexpr inline T sum() const noexcept;
-            constexpr inline T det() const noexcept;
+            constexpr inline T         sum() const noexcept;
+            constexpr inline T         det() const noexcept;
+            constexpr inline Mat<T, 4> minor() const noexcept;
 
             //  -- Printing --
             inline std::string str() const noexcept override;
@@ -665,6 +666,24 @@ namespace arc //! arctk namespace
             return ((x.x * y.y * z.z * w.w) - (x.x * y.y * z.w * w.z) - (x.x * y.z * z.y * w.w) + (x.x * y.z * z.w * w.y) + (x.x * y.w * z.y * w.z) - (x.x * y.w * z.z * w.y) - (x.y * y.x * z.z * w.w) + (x.y * y.x * z.w * w.z) + (x.y * y.z * z.x * w.w)
                     - (x.y * y.z * z.w * w.x) - (x.y * y.w * z.x * w.z) + (x.y * y.w * z.z * w.x) + (x.z * y.x * z.y * w.w) - (x.z * y.x * z.w * w.y) - (x.z * y.y * z.x * w.w) + (x.z * y.y * z.w * w.x) + (x.z * y.w * z.x * w.y) - (x.z * y.w * z.y * w.x)
                     - (x.w * y.x * z.y * w.z) + (x.w * y.x * z.z * w.y) + (x.w * y.y * z.x * w.z) - (x.w * y.y * z.z * w.x) - (x.w * y.z * z.x * w.y) + (x.w * y.z * z.y * w.x));
+        }
+
+        template <typename T>
+        constexpr inline Mat<T, 4> Mat<T, 4>::minor() const noexcept
+        {
+            return (Mat<T, 4>(
+              Vec<T, 4>(
+                (y.y * z.z * w.w) - (y.y * z.w * w.z) - (y.z * z.y * w.w) + (y.z * z.w * w.y) + (y.w * z.y * w.z) - (y.w * z.z * w.y), (y.x * z.z * w.w) - (y.x * z.w * w.z) - (y.z * z.x * w.w) + (y.z * z.w * w.x) + (y.w * z.x * w.z) - (y.w * z.z * w.x),
+                (y.x * z.y * w.w) - (y.x * z.w * w.y) - (y.y * z.x * w.w) + (y.y * z.w * w.x) + (y.w * z.x * w.y) - (y.w * z.y * w.x), (y.x * z.y * w.z) - (y.x * z.z * w.y) - (y.y * z.x * w.z) + (y.y * z.z * w.x) + (y.z * z.x * w.y) - (y.z * z.y * w.x)),
+              Vec<T, 4>(
+                (x.y * z.z * w.w) - (x.y * z.w * w.z) - (x.z * z.y * w.w) + (x.z * z.w * w.y) + (x.w * z.y * w.z) - (x.w * z.z * w.y), (x.x * z.z * w.w) - (x.x * z.w * w.z) - (x.z * z.x * w.w) + (x.z * z.w * w.x) + (x.w * z.x * w.z) - (x.w * z.z * w.x),
+                (x.x * z.y * w.w) - (x.x * z.w * w.y) - (x.y * z.x * w.w) + (x.y * z.w * w.x) + (x.w * z.x * w.y) - (x.w * z.y * w.x), (x.x * z.y * w.z) - (x.x * z.z * w.y) - (x.y * z.x * w.z) + (x.y * z.z * w.x) + (x.z * z.x * w.y) - (x.z * z.y * w.x)),
+              Vec<T, 4>(
+                (x.y * y.z * w.w) - (x.y * y.w * w.z) - (x.z * y.y * w.w) + (x.z * y.w * w.y) + (x.w * y.y * w.z) - (x.w * y.z * w.y), (x.x * y.z * w.w) - (x.x * y.w * w.z) - (x.z * y.x * w.w) + (x.z * y.w * w.x) + (x.w * y.x * w.z) - (x.w * y.z * w.x),
+                (x.x * y.y * w.w) - (x.x * y.w * w.y) - (x.y * y.x * w.w) + (x.y * y.w * w.x) + (x.w * y.x * w.y) - (x.w * y.y * w.x), (x.x * y.y * w.z) - (x.x * y.z * w.y) - (x.y * y.x * w.z) + (x.y * y.z * w.x) + (x.z * y.x * w.y) - (x.z * y.y * w.x)),
+              Vec<T, 4>(
+                (x.y * y.z * z.w) - (x.y * y.w * z.z) - (x.z * y.y * z.w) + (x.z * y.w * z.y) + (x.w * y.y * z.z) - (x.w * y.z * z.y), (x.x * y.z * z.w) - (x.x * y.w * z.z) - (x.z * y.x * z.w) + (x.z * y.w * z.x) + (x.w * y.x * z.z) - (x.w * y.z * z.x),
+                (x.x * y.y * z.w) - (x.x * y.w * z.y) - (x.y * y.x * z.w) + (x.y * y.w * z.x) + (x.w * y.x * z.y) - (x.w * y.y * z.x), (x.x * y.y * z.z) - (x.x * y.z * z.y) - (x.y * y.x * z.z) + (x.y * y.z * z.x) + (x.z * y.x * z.y) - (x.z * y.y * z.x))));
         }
 
 
