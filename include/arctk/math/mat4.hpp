@@ -782,6 +782,15 @@ namespace arc //! arctk namespace
 
 
         //  -- Transformation --
+        /**
+         *  Create a scale transformation matrix.
+         *
+         *  @tparam T   Type stored by the mat
+         *
+         *  @param  scale_  Vec of scaling to be applied in each dimension.
+         *
+         *  @return Scale transformation matrix.
+         */
         template <typename T>
         constexpr inline Mat<T, 4> scale(const Vec<T, 3>& scale_) noexcept
         {
