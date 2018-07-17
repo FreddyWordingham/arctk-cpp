@@ -1,6 +1,6 @@
 /**
  *  @file   arctk/gui/shader.hpp
- *  @date   04/06/2018
+ *  @date   17/07/2018
  *  @author Freddy Wordingham
  *
  *  Graphical shader class.
@@ -28,8 +28,8 @@
 #include <GLFW/glfw3.h>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/gui/uniform.hpp>
-#include <arctk/log.hpp>
 
 
 
