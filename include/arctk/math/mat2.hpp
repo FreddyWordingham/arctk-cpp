@@ -101,6 +101,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Mathematical --
             constexpr inline T sum() const noexcept;
+            constexpr inline T det() const noexcept;
 
             //  -- Printing --
             inline std::string str() const noexcept override;
@@ -479,6 +480,12 @@ namespace arc //! arctk namespace
         constexpr inline T Mat<T, 2>::sum() const noexcept
         {
             return (x.x + x.y + y.x + y.y);
+        }
+
+        template <typename T>
+        constexpr inline T Mat<T, 2>::det() const noexcept
+        {
+            return ((x.x * y.y) - (x.y * y.x));
         }
 
 
