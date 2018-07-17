@@ -43,6 +43,7 @@
 #include <arctk/geom/shape.hpp>
 #include <arctk/geom/shape/plane.hpp>
 #include <arctk/geom/shape/sphere.hpp>
+#include <arctk/gui.hpp>
 #include <arctk/macro.hpp>
 #include <arctk/macro/utility.hpp>
 #include <arctk/math.hpp>
