@@ -121,6 +121,13 @@ namespace arc //! arctk namespace
 
 
 
+        //  == FUNCTION PROTOTYPES ==
+        //  -- Utility --
+        template <typename T, size_t N>
+        constexpr inline Mat<T, N> indentity() noexcept;
+
+
+
         //  == INSTANTIATION ==
         //  -- Constructors --
         /**
@@ -769,6 +776,23 @@ namespace arc //! arctk namespace
             stream << settings::format::VEC_END;
 
             return (stream.str());
+        }
+
+
+
+        //  == FUNCTIONS ==
+        //  -- Utility --
+        template <typename T, size_t N>
+        constexpr inline Mat<T, N> indentity() noexcept
+        {
+            Mat<T, N> mat;
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                mat[i][i] = T{1};
+            }
+
+            return (mat);
         }
 
 
