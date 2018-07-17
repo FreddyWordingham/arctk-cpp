@@ -620,9 +620,9 @@ namespace arc //! arctk namespace
             glm::mat4 model;
 
             model = glm::translate(model, _trans);
-            model = glm::rotate(model, math::rad_to_deg(_rotate.x), glm::vec3(1.0f, 0.0f, 0.0f));
-            model = glm::rotate(model, math::rad_to_deg(_rotate.y), glm::vec3(0.0f, 1.0f, 0.0f));
-            model = glm::rotate(model, math::rad_to_deg(_rotate.z), glm::vec3(0.0f, 0.0f, 1.0f));
+            model = glm::rotate(model, math::convert::rad_to_deg(_rotate.x), glm::vec3(1.0f, 0.0f, 0.0f));
+            model = glm::rotate(model, math::convert::rad_to_deg(_rotate.y), glm::vec3(0.0f, 1.0f, 0.0f));
+            model = glm::rotate(model, math::convert::rad_to_deg(_rotate.z), glm::vec3(0.0f, 0.0f, 1.0f));
             model = glm::scale(model, _scale);
 
             _model = model;
