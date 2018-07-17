@@ -48,6 +48,7 @@ namespace arc //! arctk namespace
             constexpr const int GLEW_INIT_FAILED           = 142; //!< Unable initialise glew.
             constexpr const int SHADER_LINKING_FAILED      = 143; //!< Shader linking failed.
             constexpr const int SHADER_COMPILATION_FAILED  = 143; //!< Shader compilation failed.
+            constexpr const int SHADER_UNIFORM_NOT_FOUND   = 144; //!< Unable to find uniform within the shader.
 
 
 
