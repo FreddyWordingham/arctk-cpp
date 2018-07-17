@@ -456,6 +456,8 @@ namespace arc //! arctk namespace
             //  -- File --
             inline std::string file(const std::string& path_) noexcept
             {
+                PRE(!path_.empty());
+
                 std::ifstream file(path_);
 
                 if (!file.is_open())
