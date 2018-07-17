@@ -105,6 +105,7 @@ namespace arc //! arctk namespace
             constexpr inline T         sum() const noexcept;
             constexpr inline T         det() const noexcept;
             constexpr inline Mat<T, 4> minor() const noexcept;
+            constexpr inline Mat<T, 4> cofactor() const noexcept;
 
             //  -- Printing --
             inline std::string str() const noexcept override;
@@ -684,6 +685,23 @@ namespace arc //! arctk namespace
               Vec<T, 4>(
                 (x.y * y.z * z.w) - (x.y * y.w * z.z) - (x.z * y.y * z.w) + (x.z * y.w * z.y) + (x.w * y.y * z.z) - (x.w * y.z * z.y), (x.x * y.z * z.w) - (x.x * y.w * z.z) - (x.z * y.x * z.w) + (x.z * y.w * z.x) + (x.w * y.x * z.z) - (x.w * y.z * z.x),
                 (x.x * y.y * z.w) - (x.x * y.w * z.y) - (x.y * y.x * z.w) + (x.y * y.w * z.x) + (x.w * y.x * z.y) - (x.w * y.y * z.x), (x.x * y.y * z.z) - (x.x * y.z * z.y) - (x.y * y.x * z.z) + (x.y * y.z * z.x) + (x.z * y.x * z.y) - (x.z * y.y * z.x))));
+        }
+
+        template <typename T>
+        constexpr inline Mat<T, 4> Mat<T, 4>::cofactor() const noexcept
+        {
+            Mat<T, 4> mat = minor();
+
+            mat.x.y *= -1;
+            mat.x.w *= -1;
+            mat.y.x *= -1;
+            mat.y.z *= -1;
+            mat.z.y *= -1;
+            mat.z.w *= -1;
+            mat.w.x *= -1;
+            mat.w.y *= -1;
+
+            return (mat);
         }
 
 
