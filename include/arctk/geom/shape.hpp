@@ -45,6 +45,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Shape()                      = default;
             inline Shape(const Shape&) noexcept = default; //!< Defaulted copy constructor.
             inline Shape(Shape&&) noexcept      = default; //!< Defaulted move constructor.
 
