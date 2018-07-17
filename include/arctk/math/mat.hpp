@@ -889,6 +889,11 @@ namespace arc //! arctk namespace
             return (mat);
         }
 
+        /**
+         *  Calculate the adjoint matrix of the matrix.
+         *
+         *  @return Adjoint matrix of the matrix.
+         */
         template <typename T, size_t N>
         constexpr inline Mat<T, N> Mat<T, N>::adj() const noexcept
         {
