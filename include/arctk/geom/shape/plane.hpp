@@ -46,6 +46,13 @@ namespace arc //! arctk namespace
              */
             class Plane : public Shape
             {
+                //  == FIELDS ==
+              protected:
+                //  -- Positioning --
+                vec3 _pos; //!< Position of the plane.
+                vec3 _dir; //!< Direction of the plane.
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
