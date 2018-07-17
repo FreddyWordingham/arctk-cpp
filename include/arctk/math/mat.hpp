@@ -807,7 +807,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T, size_t N>
-        inline double Mat<T, N>::cofactor(const size_t row_, const size_t col_) const noexcept
+        constexpr inline T Mat<T, N>::cofactor(const size_t row_, const size_t col_) const noexcept
         {
             PRE(row_ < N);
             PRE(col_ < N);
@@ -816,7 +816,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T, size_t N>
-        inline Mat<T, N> Mat<T, N>::cofactor() const noexcept
+        constexpr inline Mat<T, N> Mat<T, N>::cofactor() const noexcept
         {
             Mat<T, N> mat;
 
@@ -832,7 +832,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T, size_t N>
-        inline Mat<T, N> Mat<T, N>::trans() const noexcept
+        constexpr inline Mat<T, N> Mat<T, N>::trans() const noexcept
         {
             Mat<T, N> mat;
 
@@ -848,13 +848,13 @@ namespace arc //! arctk namespace
         }
 
         template <typename T, size_t N>
-        inline Mat<T, N> Mat<T, N>::adj() const noexcept
+        constexpr inline Mat<T, N> Mat<T, N>::adj() const noexcept
         {
             return (cofactor().trans());
         }
 
         template <typename T, size_t N>
-        inline Mat<T, N> Mat<T, N>::inv() const noexcept
+        constexpr inline Mat<T, N> Mat<T, N>::inv() const noexcept
         {
             return (adj() /= det());
         }
