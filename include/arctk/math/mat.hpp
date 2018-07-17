@@ -117,6 +117,8 @@ namespace arc //! arctk namespace
             constexpr inline T         det() const noexcept;
             constexpr inline T         minor(size_t row_, size_t col_) const noexcept;
             constexpr inline Mat<T, N> minor() const noexcept;
+            inline T                   cofactor(size_t row_, size_t col_) const noexcept;
+            inline Mat<T, N>           cofactor() const noexcept;
 
             //  -- Printing --
             inline std::string str() const noexcept override;
@@ -795,6 +797,31 @@ namespace arc //! arctk namespace
                 for (size_t j = 0; j < N; ++j)
                 {
                     mat[i][j] = minor(i, j);
+                }
+            }
+
+            return (mat);
+        }
+
+        template <typename T, size_t N>
+        inline double Mat<T, N>::cofactor(const size_t row_, const size_t col_) const noexcept
+        {
+            PRE(row_ < N);
+            PRE(col_ < N);
+
+            return (std::pow(-1, row_ + col_) * minor(row_, col_));
+        }
+
+        template <typename T, size_t N>
+        inline Mat<T, N> Mat<T, N>::cofactor() const noexcept
+        {
+            Mat<T, N> mat;
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                for (size_t j = 0; j < N; ++j)
+                {
+                    mat[i][j] = cofactor(i, j);
                 }
             }
 
