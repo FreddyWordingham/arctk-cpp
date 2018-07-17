@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <optional>
 
 //  -- Arctk --
 #include <arctk/math.hpp>
@@ -41,13 +42,10 @@ namespace arc //! arctk namespace
          */
         class Shape
         {
-            //  == INSTANTIATION ==
-          public:
-            //  -- Constructors --
-
-
             //  == METHODS ==
           public:
+            //  -- Collision --
+            virtual inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const noexcept = 0;
         };
 
 
