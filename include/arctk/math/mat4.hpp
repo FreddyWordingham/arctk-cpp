@@ -862,6 +862,19 @@ namespace arc //! arctk namespace
                               Vec<T, 4>(-std::sin(rot_.y), std::cos(rot_.y) * std::sin(rot_.x), std::cos(rot_.y) * std::cos(rot_.x), T{0}), Vec<T, 4>(T{0}, T{0}, T{0}, T{1})));
         }
 
+        /**
+         *  Create a rotation transformation matrix.
+         *  Rotation is performed around a given axis through a given angle.
+         *
+         *  @tparam T   Type stored by the mat
+         *
+         *  @param  axis_   Axis around which to perform the rotation.
+         *  @param  ang_    Angle to rotate around the axis.
+         *
+         *  @pre    axis_ must be normalised.
+         *
+         *  @return Rotation transformation matrix.
+         */
         template <typename T>
         constexpr inline Mat<T, 4> rotate(const Vec<T, 3>& axis_, const T ang_) noexcept
         {
