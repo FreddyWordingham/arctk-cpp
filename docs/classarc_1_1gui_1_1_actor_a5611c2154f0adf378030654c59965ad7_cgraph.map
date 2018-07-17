@@ -1,0 +1,8 @@
+<map id="arc::gui::Actor::set_rotate" name="arc::gui::Actor::set_rotate">
+<area shape="rect" id="node2" href="$classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="182,97,334,136"/>
+<area shape="rect" id="node3" href="$classarc_1_1gui_1_1_actor.html#a5251ce8de3e14f4b3daf9e2a7b771eee" title="arc::gui::Actor::model" alt="" coords="382,5,529,31"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1math.html#a2884923d2d2be07c64b2c518b0d8b2d1" title="arc::math::translate" alt="" coords="388,55,523,80"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1math.html#ad152ff4098cdf8d1e7ddcda9ebffc770" title="arc::math::rotate" alt="" coords="396,104,515,129"/>
+<area shape="rect" id="node6" href="$namespacearc_1_1math_1_1convert.html#a50422c57700cd263a956ee9d438d32e7" title="arc::math::convert\l::rad_to_deg" alt="" coords="392,153,520,192"/>
+<area shape="rect" id="node7" href="$namespacearc_1_1math.html#a482ee0fb261288c111a8d9a39073b5de" title="arc::math::scale" alt="" coords="398,216,513,241"/>
+</map>

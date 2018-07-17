@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['speed_5fof_5flight',['SPEED_OF_LIGHT',['../namespacearc_1_1consts_1_1phys.html#a890931739999d1d4bbcaf3d9b48a6177',1,'arc::consts::phys']]]
+  ['r',['r',['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#afd853a4a9e7930de9c4dccde66e26f83',1,'arc::math::Vec&lt; T, 3 &gt;::r()'],['../classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a573f34e173fea2024086c7f6c63f95eb',1,'arc::math::Vec&lt; T, 4 &gt;::r()']]],
+  ['reset',['RESET',['../namespacearc_1_1term_1_1ansi.html#a4d9b3960e7c026deb58c73ada6ca7c08',1,'arc::term::ansi']]],
+  ['rho',['rho',['../classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#a88027759e9e0e2191517ffaa6c7ea49b',1,'arc::math::Vec&lt; T, 2 &gt;::rho()'],['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#abb5508b715b4588acbdd048663f61f9c',1,'arc::math::Vec&lt; T, 3 &gt;::rho()']]]
 ];

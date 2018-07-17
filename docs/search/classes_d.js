@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['shape',['Shape',['../classarc_1_1geom_1_1_shape.html',1,'arc::geom']]],
-  ['sphere',['Sphere',['../classarc_1_1geom_1_1shape_1_1_sphere.html',1,'arc::geom::shape']]]
+  ['quality',['Quality',['../classarc_1_1random_1_1generator_1_1_quality.html',1,'arc::random::generator']]],
+  ['quat',['Quat',['../classarc_1_1math_1_1_quat.html',1,'arc::math']]]
 ];

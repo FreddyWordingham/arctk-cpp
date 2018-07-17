@@ -2,6 +2,7 @@ var searchData=
 [
   ['ansi',['ansi',['../namespacearc_1_1term_1_1ansi.html',1,'arc::term']]],
   ['arc',['arc',['../namespacearc.html',1,'']]],
+  ['camera',['camera',['../namespacearc_1_1gui_1_1camera.html',1,'arc::gui']]],
   ['col',['col',['../namespacearc_1_1col.html',1,'arc']]],
   ['compare',['compare',['../namespacearc_1_1math_1_1compare.html',1,'arc::math']]],
   ['config',['config',['../namespacearc_1_1config.html',1,'arc']]],
@@ -17,6 +18,7 @@ var searchData=
   ['format',['format',['../namespacearc_1_1settings_1_1format.html',1,'arc::settings']]],
   ['generator',['generator',['../namespacearc_1_1random_1_1generator.html',1,'arc::random']]],
   ['geom',['geom',['../namespacearc_1_1geom.html',1,'arc']]],
+  ['gui',['gui',['../namespacearc_1_1gui.html',1,'arc']]],
   ['histogram',['histogram',['../namespacearc_1_1data_1_1histogram.html',1,'arc::data']]],
   ['image',['image',['../namespacearc_1_1data_1_1image.html',1,'arc::data']]],
   ['location',['location',['../namespacearc_1_1debug_1_1location.html',1,'arc::debug']]],

@@ -1,5 +1,10 @@
 <map id="arc::math::scale" name="arc::math::scale">
-<area shape="rect" id="node2" href="$namespacearc_1_1math.html#a0b7481184b796274643aa6d40ac94eff" title="arc::math::transform" alt="" coords="169,44,309,69"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1str_1_1parse.html#a58a373132eb04bcd4f94d61e47ef2204" title="arc::str::parse::parsable\l_to\&lt; bool \&gt;" alt="" coords="357,5,519,44"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1str_1_1parse.html#a0d90413f35d2cb9bcbccd3c57c3c0fe3" title="arc::str::parse::to\l\&lt; bool \&gt;" alt="" coords="377,68,499,107"/>
+<area shape="rect" id="node2" href="$classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="169,117,321,156"/>
+<area shape="rect" id="node7" href="$namespacearc_1_1math.html#a0b7481184b796274643aa6d40ac94eff" title="arc::math::transform" alt="" coords="174,249,315,275"/>
+<area shape="rect" id="node3" href="$classarc_1_1gui_1_1_actor.html#a40f09555772506846f42e2bdf60d83de" title="arc::gui::Actor::Actor" alt="" coords="378,5,520,31"/>
+<area shape="rect" id="node4" href="$classarc_1_1gui_1_1_actor.html#afc79da85b50b071f11607a3005d749ce" title="arc::gui::Actor::set\l_trans" alt="" coords="385,55,514,93"/>
+<area shape="rect" id="node5" href="$classarc_1_1gui_1_1_actor.html#a5611c2154f0adf378030654c59965ad7" title="arc::gui::Actor::set\l_rotate" alt="" coords="385,117,514,156"/>
+<area shape="rect" id="node6" href="$classarc_1_1gui_1_1_actor.html#a57f693c131d86b674b248a9917e43e91" title="arc::gui::Actor::set\l_scale" alt="" coords="385,180,514,219"/>
+<area shape="rect" id="node8" href="$namespacearc_1_1str_1_1parse.html#a58a373132eb04bcd4f94d61e47ef2204" title="arc::str::parse::parsable\l_to\&lt; bool \&gt;" alt="" coords="369,243,530,281"/>
+<area shape="rect" id="node9" href="$namespacearc_1_1str_1_1parse.html#a0d90413f35d2cb9bcbccd3c57c3c0fe3" title="arc::str::parse::to\l\&lt; bool \&gt;" alt="" coords="389,305,510,344"/>
 </map>

@@ -1,6 +1,9 @@
 var searchData=
 [
   ['a',['a',['../classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a6ba9864698d49b99bae4003ecd8dbcd9',1,'arc::math::Vec&lt; T, 4 &gt;']]],
+  ['actor',['Actor',['../classarc_1_1gui_1_1_actor.html',1,'arc::gui::Actor'],['../classarc_1_1gui_1_1_actor.html#a40f09555772506846f42e2bdf60d83de',1,'arc::gui::Actor::Actor()']]],
+  ['actor_2ehpp',['actor.hpp',['../actor_8hpp.html',1,'']]],
+  ['add_5funiform',['add_uniform',['../classarc_1_1gui_1_1_shader.html#ab53ca8cc16ce04a9f9be2c49161de64b',1,'arc::gui::Shader']]],
   ['adj',['adj',['../classarc_1_1math_1_1_mat.html#af656481a991b67a0d5c56dd3907b7872',1,'arc::math::Mat::adj()'],['../classarc_1_1math_1_1_mat_3_01_t_00_012_01_4.html#a3b517467e4817e72db1c3de1bd0b99a3',1,'arc::math::Mat&lt; T, 2 &gt;::adj()'],['../classarc_1_1math_1_1_mat_3_01_t_00_013_01_4.html#a63c4ec83d378b9b87e5867434a584b30',1,'arc::math::Mat&lt; T, 3 &gt;::adj()'],['../classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#a25478c0b1e8a10d4a099079bb00eb8e5',1,'arc::math::Mat&lt; T, 4 &gt;::adj()']]],
   ['all_5ftrue',['all_true',['../namespacearc_1_1utl_1_1properties.html#a3bcb4abb2bd2394d07615bf165bd985c',1,'arc::utl::properties']]],
   ['always_5fgreater_5fthan',['always_greater_than',['../namespacearc_1_1utl_1_1properties.html#a58449ca582adab53940f16a9f7cd79e6',1,'arc::utl::properties']]],
@@ -22,6 +25,7 @@ var searchData=
   ['average1_2ehpp',['average1.hpp',['../average1_8hpp.html',1,'']]],
   ['average_3c_20t_2c_201_20_3e',['Average&lt; T, 1 &gt;',['../classarc_1_1data_1_1histogram_1_1_average_3_01_t_00_011_01_4.html',1,'arc::data::histogram']]],
   ['axis',['axis',['../classarc_1_1math_1_1_quat.html#af7a4db87630d06e08713a0f2532f9fd6',1,'arc::math::Quat']]],
+  ['camera',['camera',['../namespacearc_1_1gui_1_1camera.html',1,'arc::gui']]],
   ['col',['col',['../namespacearc_1_1col.html',1,'arc']]],
   ['compare',['compare',['../namespacearc_1_1math_1_1compare.html',1,'arc::math']]],
   ['config',['config',['../namespacearc_1_1config.html',1,'arc']]],
@@ -37,6 +41,7 @@ var searchData=
   ['format',['format',['../namespacearc_1_1settings_1_1format.html',1,'arc::settings']]],
   ['generator',['generator',['../namespacearc_1_1random_1_1generator.html',1,'arc::random']]],
   ['geom',['geom',['../namespacearc_1_1geom.html',1,'arc']]],
+  ['gui',['gui',['../namespacearc_1_1gui.html',1,'arc']]],
   ['histogram',['histogram',['../namespacearc_1_1data_1_1histogram.html',1,'arc::data']]],
   ['image',['image',['../namespacearc_1_1data_1_1image.html',1,'arc::data']]],
   ['location',['location',['../namespacearc_1_1debug_1_1location.html',1,'arc::debug']]],
