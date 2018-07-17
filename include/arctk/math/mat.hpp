@@ -115,6 +115,7 @@ namespace arc //! arctk namespace
             //  -- Mathematical --
             constexpr inline T sum() const noexcept;
             constexpr inline T det() const noexcept;
+            constexpr inline T minor(size_t row_, size_t col_) const noexcept;
 
             //  -- Printing --
             inline std::string str() const noexcept override;
@@ -749,6 +750,38 @@ namespace arc //! arctk namespace
             }
 
             return (det);
+        }
+
+        template <typename T, size_t N>
+        constexpr inline T Mat<T, N>::minor(const size_t row_, const size_t col_) const noexcept
+        {
+            PRE(row_ < N);
+            PRE(col_ < N);
+
+            Mat<T, N - 1> sub;
+            size_t        n = 0;
+            for (size_t k = 0; k < N; ++k)
+            {
+                if (k == row_)
+                {
+                    continue;
+                }
+
+                size_t m = 0;
+                for (size_t l = 0; l < N; ++l)
+                {
+                    if (l == col_)
+                    {
+                        continue;
+                    }
+
+                    sub[n][m] = _data[k][l];
+                    ++m;
+                }
+                ++n;
+            }
+
+            return (sub.det());
         }
 
 
