@@ -593,6 +593,11 @@ namespace arc //! arctk namespace
             return (mat);
         }
 
+        /**
+         *  Calculate the transpose matrix of the matrix.
+         *
+         *  @return Transpose matrix of the matrix.
+         */
         template <typename T>
         constexpr inline Mat<T, 3> Mat<T, 3>::trans() const noexcept
         {
