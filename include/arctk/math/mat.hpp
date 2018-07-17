@@ -763,6 +763,17 @@ namespace arc //! arctk namespace
             return (det);
         }
 
+        /**
+         *  Calculate the minor of an element of the matrix.
+         *
+         *  @param  row_    Index of the matrix row element to calculate the minor of.
+         *  @param  col_    Index of the matrix column element to calculate the minor of.
+         *
+         *  @pre    row_ must be less than N.
+         *  @pre    col_ must be less than N.
+         *
+         *  @return Minor of an element of the matrix.
+         */
         template <typename T, size_t N>
         constexpr inline T Mat<T, N>::minor(const size_t row_, const size_t col_) const noexcept
         {
