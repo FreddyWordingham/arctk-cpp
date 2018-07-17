@@ -88,7 +88,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
             //  -- Collision --
             /**
-             *  Determine if a collision event occurs between the plane and a ray.
+             *  Determine if a collision event occurs between the sphere and a ray.
              *
              *  @param  pos_    Position of the ray.
              *  @param  dir_    Direction of the ray.
@@ -97,18 +97,53 @@ namespace arc //! arctk namespace
              *
              *  @return Optional collision distance.
              */
-            inline std::optional<double> Plane::collision(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<double> Sphere::collision(const vec3& pos_, const vec3& dir_) const noexcept
             {
-                const double denom = _dir * dir_;
+                PRE(dir_.normalised());
 
-                if (math::compare::zero(denom))
+                const double b = 2.0 * (dir_ * (pos_ - _pos));
+                const double c = (pos_ - _pos).mag_sq() - (_radius * _radius);
+
+                const double delta = (b * b) - (4.0 * c);
+
+                if (delta < 0.0)
                 {
                     return (std::nullopt);
                 }
 
-                const double dist = ((_pos - pos_) * _dir) / denom;
+                if (math::compare::zero(delta))
+                {
+                    const double dist = -b / 2.0;
 
-                return ((dist < 0.0) ? std::nullopt : std::optional<double>(dist));
+                    if (dist >= 0.0)
+                    {
+                        return (std::optional<double>(dist));
+                    }
+
+                    return (std::nullopt);
+                }
+
+                const double sqrt_delta = std::sqrt(delta);
+
+                const double dist_0 = (-b + sqrt_delta) / 2.0;
+                const double dist_1 = (-b - sqrt_delta) / 2.0;
+
+                if ((dist_0 < 0.0) && (dist_1 < 0.0))
+                {
+                    return (std::nullopt);
+                }
+
+                if ((dist_0 >= 0.0) && (dist_1 < 0.0))
+                {
+                    return (std::optional<double>(dist_0));
+                }
+
+                if ((dist_1 >= 0.0) && (dist_0 < 0.0))
+                {
+                    return (std::optional<double>(dist_1));
+                }
+
+                return (std::optional<double>(std::min(dist_0, dist_1)));
             }
 
 
