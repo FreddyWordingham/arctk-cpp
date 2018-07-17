@@ -100,10 +100,10 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Mathematical --
-            constexpr inline T sum() const noexcept;
-            constexpr inline T det() const noexcept;
-            constexpr inline T minor(size_t row_, size_t col_) const noexcept;
-            constexpr inline T minor() const noexcept;
+            constexpr inline T         sum() const noexcept;
+            constexpr inline T         det() const noexcept;
+            constexpr inline T         minor(size_t row_, size_t col_) const noexcept;
+            constexpr inline Mat<T, 2> minor() const noexcept;
 
             //  -- Printing --
             inline std::string str() const noexcept override;
