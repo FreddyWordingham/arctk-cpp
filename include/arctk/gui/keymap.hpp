@@ -21,7 +21,6 @@
 
 //  == IMPORTS ==
 //  -- Std --
-#include <cassert>
 #include <map>
 
 //  -- Graphical --
