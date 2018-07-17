@@ -113,7 +113,7 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         //  -- Transformation --
         template <typename T>
-        constexpr inline Mat<T, 4> translate(const Vec<T, 3>& trans_) noexcept;
+        constexpr inline Mat<T, 4> scale(const Vec<T, 3>& scale_) noexcept;
         template <typename T>
         constexpr inline Mat<T, 4> rotate_x(const T ang_) noexcept;
         template <typename T>
@@ -123,7 +123,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Mat<T, 4> rotate(const Vec<T, 3>& axis_, const T ang_) noexcept;
         template <typename T>
-        constexpr inline Mat<T, 4> scale(const Vec<T, 3>& scale_) noexcept;
+        constexpr inline Mat<T, 4> translate(const Vec<T, 3>& trans_) noexcept;
         template <typename T>
         constexpr inline Mat<T, 4> transform(const Vec<T, 3>& scale_, const Vec<T, 3>& rotate_, const Vec<T, 3>& trans_) noexcept;
 
@@ -687,9 +687,9 @@ namespace arc //! arctk namespace
         //  == FUNCTIONS ==
         //  -- Transformation --
         template <typename T>
-        constexpr inline Mat<T, 4> translate(const Vec<T, 3>& trans_) noexcept
+        constexpr inline Mat<T, 4> scale(const Vec<T, 3>& scale_) noexcept
         {
-            return (Mat<T, 4>(Vec<T, 4>(1, 0, 0, trans_.x), Vec<T, 4>(0, 1, 0, trans_.y), Vec<T, 4>(0, 0, 1, trans_.z), Vec<T, 4>(0, 0, 0, 1)));
+            return (Mat<T, 4>(Vec<T, 4>(scale_.x, 0, 0, 0), Vec<T, 4>(0, scale_.y, 0, 0), Vec<T, 4>(0, 0, scale_.z, 0), Vec<T, 4>(0, 0, 0, 1)));
         }
 
         template <typename T>
@@ -725,9 +725,9 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        constexpr inline Mat<T, 4> scale(const Vec<T, 3>& scale_) noexcept
+        constexpr inline Mat<T, 4> translate(const Vec<T, 3>& trans_) noexcept
         {
-            return (Mat<T, 4>(Vec<T, 4>(scale_.x, 0, 0, 0), Vec<T, 4>(0, scale_.y, 0, 0), Vec<T, 4>(0, 0, scale_.z, 0), Vec<T, 4>(0, 0, 0, 1)));
+            return (Mat<T, 4>(Vec<T, 4>(1, 0, 0, trans_.x), Vec<T, 4>(0, 1, 0, trans_.y), Vec<T, 4>(0, 0, 1, trans_.z), Vec<T, 4>(0, 0, 0, 1)));
         }
 
         template <typename T>
