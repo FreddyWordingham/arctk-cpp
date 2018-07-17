@@ -175,6 +175,8 @@ namespace arc //! arctk namespace
 
                 ERROR(42) << "Unable to construct gui Shader.\n"
                           << "Shader linking failed with error: '" << error_text << "'.";
+
+                std::exit();
             }
 
             glDeleteShader(vert_shader);
