@@ -29,6 +29,9 @@
 #include <glm/gtx/rotate_vector.hpp>
 #include <glm/gtx/transform.hpp>
 
+//  -- Arctk --
+#include <arctk/debug.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -203,7 +206,7 @@ namespace arc //! arctk namespace
          */
         inline int Camera::int_uniform(const std::string& name_) const noexcept
         {
-            assert(_int_uniform.find(name_) != _int_uniform.end());
+            PRE(_int_uniform.find(name_) != _int_uniform.end());
 
             return (_int_uniform.find(name_)->second);
         }
@@ -218,7 +221,7 @@ namespace arc //! arctk namespace
          */
         inline float Camera::float_uniform(const std::string& name_) const noexcept
         {
-            assert(_float_uniform.find(name_) != _float_uniform.end());
+            PRE(_float_uniform.find(name_) != _float_uniform.end());
 
             return (_float_uniform.find(name_)->second);
         }
@@ -233,7 +236,7 @@ namespace arc //! arctk namespace
          */
         inline const glm::vec2& Camera::vec2_uniform(const std::string& name_) const noexcept
         {
-            assert(_vec2_uniform.find(name_) != _vec2_uniform.end());
+            PRE(_vec2_uniform.find(name_) != _vec2_uniform.end());
 
             return (_vec2_uniform.find(name_)->second);
         }
@@ -248,7 +251,7 @@ namespace arc //! arctk namespace
          */
         inline const glm::vec3& Camera::vec3_uniform(const std::string& name_) const noexcept
         {
-            assert(_vec3_uniform.find(name_) != _vec3_uniform.end());
+            PRE(_vec3_uniform.find(name_) != _vec3_uniform.end());
 
             return (_vec3_uniform.find(name_)->second);
         }
@@ -263,7 +266,7 @@ namespace arc //! arctk namespace
          */
         inline const glm::vec4& Camera::vec4_uniform(const std::string& name_) const noexcept
         {
-            assert(_vec4_uniform.find(name_) != _vec4_uniform.end());
+            PRE(_vec4_uniform.find(name_) != _vec4_uniform.end());
 
             return (_vec4_uniform.find(name_)->second);
         }
@@ -278,7 +281,7 @@ namespace arc //! arctk namespace
          */
         inline const glm::mat2& Camera::mat2_uniform(const std::string& name_) const noexcept
         {
-            assert(_mat2_uniform.find(name_) != _mat2_uniform.end());
+            PRE(_mat2_uniform.find(name_) != _mat2_uniform.end());
 
             return (_mat2_uniform.find(name_)->second);
         }
@@ -293,7 +296,7 @@ namespace arc //! arctk namespace
          */
         inline const glm::mat3& Camera::mat3_uniform(const std::string& name_) const noexcept
         {
-            assert(_mat3_uniform.find(name_) != _mat3_uniform.end());
+            PRE(_mat3_uniform.find(name_) != _mat3_uniform.end());
 
             return (_mat3_uniform.find(name_)->second);
         }
@@ -308,7 +311,7 @@ namespace arc //! arctk namespace
          */
         inline const glm::mat4& Camera::mat4_uniform(const std::string& name_) const noexcept
         {
-            assert(_mat4_uniform.find(name_) != _mat4_uniform.end());
+            PRE(_mat4_uniform.find(name_) != _mat4_uniform.end());
 
             return (_mat4_uniform.find(name_)->second);
         }
@@ -366,7 +369,7 @@ namespace arc //! arctk namespace
          */
         inline void Camera::set_int_uniform(const std::string& name_, const int int_) noexcept
         {
-            assert(_int_uniform.find(name_) != _int_uniform.end());
+            PRE(_int_uniform.find(name_) != _int_uniform.end());
 
             _int_uniform.emplace(std::make_pair(name_, int_));
         }
@@ -381,7 +384,7 @@ namespace arc //! arctk namespace
          */
         inline void Camera::set_float_uniform(const std::string& name_, const float float_) noexcept
         {
-            assert(_float_uniform.find(name_) != _float_uniform.end());
+            PRE(_float_uniform.find(name_) != _float_uniform.end());
 
             _float_uniform.emplace(std::make_pair(name_, float_));
         }
@@ -396,7 +399,7 @@ namespace arc //! arctk namespace
          */
         inline void Camera::set_vec2_uniform(const std::string& name_, const glm::vec2& vec2_) noexcept
         {
-            assert(_vec2_uniform.find(name_) != _vec2_uniform.end());
+            PRE(_vec2_uniform.find(name_) != _vec2_uniform.end());
 
             _vec2_uniform.emplace(std::make_pair(name_, vec2_));
         }
@@ -411,7 +414,7 @@ namespace arc //! arctk namespace
          */
         inline void Camera::set_vec3_uniform(const std::string& name_, const glm::vec3& vec3_) noexcept
         {
-            assert(_vec3_uniform.find(name_) != _vec3_uniform.end());
+            PRE(_vec3_uniform.find(name_) != _vec3_uniform.end());
 
             _vec3_uniform.emplace(std::make_pair(name_, vec3_));
         }
@@ -426,7 +429,7 @@ namespace arc //! arctk namespace
          */
         inline void Camera::set_vec4_uniform(const std::string& name_, const glm::vec4& vec4_) noexcept
         {
-            assert(_vec4_uniform.find(name_) != _vec4_uniform.end());
+            PRE(_vec4_uniform.find(name_) != _vec4_uniform.end());
 
             _vec4_uniform.emplace(std::make_pair(name_, vec4_));
         }
@@ -441,7 +444,7 @@ namespace arc //! arctk namespace
          */
         inline void Camera::set_mat2_uniform(const std::string& name_, const glm::mat2& mat2_) noexcept
         {
-            assert(_mat2_uniform.find(name_) != _mat2_uniform.end());
+            PRE(_mat2_uniform.find(name_) != _mat2_uniform.end());
 
             _mat2_uniform.emplace(std::make_pair(name_, mat2_));
         }
@@ -456,7 +459,7 @@ namespace arc //! arctk namespace
          */
         inline void Camera::set_mat3_uniform(const std::string& name_, const glm::mat3& mat3_) noexcept
         {
-            assert(_mat3_uniform.find(name_) != _mat3_uniform.end());
+            PRE(_mat3_uniform.find(name_) != _mat3_uniform.end());
 
             _mat3_uniform.emplace(std::make_pair(name_, mat3_));
         }
@@ -471,7 +474,7 @@ namespace arc //! arctk namespace
          */
         inline void Camera::set_mat4_uniform(const std::string& name_, const glm::mat4& mat4_) noexcept
         {
-            assert(_mat4_uniform.find(name_) != _mat4_uniform.end());
+            PRE(_mat4_uniform.find(name_) != _mat4_uniform.end());
 
             _mat4_uniform.emplace(std::make_pair(name_, mat4_));
         }
