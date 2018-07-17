@@ -904,6 +904,14 @@ namespace arc //! arctk namespace
 
         //  == FUNCTIONS ==
         //  -- Utility --
+        /**
+         *  Create an N by N identity matrix.
+         *
+         *  @tparam T   Type stored by the mat.
+         *  @tparam N   Size of the mat.
+         *
+         *  @return N by N identity matrix.
+         */
         template <typename T, size_t N>
         constexpr inline Mat<T, N> indentity() noexcept
         {
