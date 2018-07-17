@@ -604,6 +604,11 @@ namespace arc //! arctk namespace
             return (Mat<T, 3>(Vec<T, 3>(x.x, y.x, z.x), Vec<T, 3>(x.y, y.y, z.y), Vec<T, 3>(x.z, y.z, z.z)));
         }
 
+        /**
+         *  Calculate the adjoint matrix of the matrix.
+         *
+         *  @return Adjoint matrix of the matrix.
+         */
         template <typename T>
         constexpr inline Mat<T, 3> Mat<T, 3>::adj() const noexcept
         {
