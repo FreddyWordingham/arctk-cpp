@@ -827,6 +827,17 @@ namespace arc //! arctk namespace
             return (mat);
         }
 
+        /**
+         *  Calculate the cofactor of an element of the matrix.
+         *
+         *  @param  row_    Index of the matrix row element to calculate the cofactor of.
+         *  @param  col_    Index of the matrix column element to calculate the cofactor of.
+         *
+         *  @pre    row_ must be less than N.
+         *  @pre    col_ must be less than N.
+         *
+         *  @return Cofactor of an element of the matrix.
+         */
         template <typename T, size_t N>
         constexpr inline T Mat<T, N>::cofactor(const size_t row_, const size_t col_) const noexcept
         {
