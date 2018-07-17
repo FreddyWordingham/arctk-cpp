@@ -102,7 +102,7 @@ namespace arc //! arctk namespace
                 PRE(dir_.normalised());
 
                 const double b = 2.0 * (dir_ * (pos_ - _pos));
-                const double c = (pos_ - _pos).mag_sq() - (_radius * _radius);
+                const double c = (pos_ - _pos).mag_sq() - (_rad * _rad);
 
                 const double delta = (b * b) - (4.0 * c);
 
