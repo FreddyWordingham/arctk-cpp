@@ -114,6 +114,7 @@ namespace arc //! arctk namespace
 
             //  -- Mathematical --
             constexpr inline T sum() const noexcept;
+            constexpr inline T det() const noexcept;
 
             //  -- Printing --
             inline std::string str() const noexcept override;
@@ -735,6 +736,19 @@ namespace arc //! arctk namespace
             }
 
             return (sum);
+        }
+
+        template <typename T, size_t N>
+        constexpr inline T Mat<T, N>::det() const noexcept
+        {
+            T det = T{0};
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                det += _data[0][i] * cofactor(0, i);
+            }
+
+            return (det);
         }
 
 
