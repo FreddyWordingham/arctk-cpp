@@ -806,6 +806,11 @@ namespace arc //! arctk namespace
             return (sub.det());
         }
 
+        /**
+         *  Calculate the matrix of minors of the matrix.
+         *
+         *  @return Matrix of minors of the matrix.
+         */
         template <typename T, size_t N>
         constexpr inline Mat<T, N> Mat<T, N>::minor() const noexcept
         {
