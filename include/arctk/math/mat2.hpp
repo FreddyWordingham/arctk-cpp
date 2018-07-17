@@ -108,13 +108,6 @@ namespace arc //! arctk namespace
 
 
 
-        //  == FUNCTION PROTOTYPES ==
-        //  -- Utility --
-        template <typename T>
-        constexpr inline Mat<T, 2> indentity() noexcept;
-
-
-
         //  == INSTANTIATION --
         //  -- Constructors --
         /**
