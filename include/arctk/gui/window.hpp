@@ -22,6 +22,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <iostream>
 
 //  -- Graphical --
 #include <GL/glew.h>
@@ -154,8 +155,10 @@ namespace arc //! arctk namespace
 
             if (glfwInit() == 0)
             {
-                ERROR(42) << "Unable to construct graphical Window.\n"
+                std::cerr << "Unable to construct graphical Window.\n"
                           << "Glfw could not be initialised.";
+
+                std::exit(exit::error::GLFW_INIT_FAILED);
             }
 
             glfwWindowHint(GLFW_SAMPLES, aa_samples_);
