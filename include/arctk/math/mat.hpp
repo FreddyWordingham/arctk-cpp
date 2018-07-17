@@ -900,6 +900,11 @@ namespace arc //! arctk namespace
             return (cofactor().trans());
         }
 
+        /**
+         *  Calculate the inverse matrix of the matrix.
+         *
+         *  @return Inverse matrix of the matrix.
+         */
         template <typename T, size_t N>
         constexpr inline Mat<T, N> Mat<T, N>::inv() const noexcept
         {
