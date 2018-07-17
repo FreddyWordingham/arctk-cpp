@@ -102,6 +102,8 @@ namespace arc //! arctk namespace
             //  -- Mathematical --
             constexpr inline T sum() const noexcept;
             constexpr inline T det() const noexcept;
+            constexpr inline T minor(size_t row_, size_t col_) const noexcept;
+            constexpr inline T minor() const noexcept;
 
             //  -- Printing --
             inline std::string str() const noexcept override;
@@ -486,6 +488,12 @@ namespace arc //! arctk namespace
         constexpr inline T Mat<T, 2>::det() const noexcept
         {
             return ((x.x * y.y) - (x.y * y.x));
+        }
+
+        template <typename T>
+        constexpr inline Mat<T, 2> Mat<T, 2>::minor() const noexcept
+        {
+            return (Mat<T, 2>(Vec<T, 2>(y.y, y.x), Vec<T, 2>(x.y, x.x)));
         }
 
 
