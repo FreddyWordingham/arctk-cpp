@@ -113,10 +113,10 @@ namespace arc //! arctk namespace
             constexpr inline const std::array<Vec<T, N>, N>& data() const noexcept;
 
             //  -- Mathematical --
-            constexpr inline T sum() const noexcept;
-            constexpr inline T det() const noexcept;
-            constexpr inline T minor(size_t row_, size_t col_) const noexcept;
-            constexpr inline T minor() const noexcept;
+            constexpr inline T         sum() const noexcept;
+            constexpr inline T         det() const noexcept;
+            constexpr inline T         minor(size_t row_, size_t col_) const noexcept;
+            constexpr inline Mat<T, N> minor() const noexcept;
 
             //  -- Printing --
             inline std::string str() const noexcept override;
