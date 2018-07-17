@@ -839,6 +839,15 @@ namespace arc //! arctk namespace
                               Vec<T, 4>(T{0}, T{0}, T{0}, T{1})));
         }
 
+        /**
+         *  Create a translation transformation matrix.
+         *
+         *  @tparam T   Type stored by the mat
+         *
+         *  @param  trans_  Vec of translations to be applied in each dimension.
+         *
+         *  @return Translation transformation matrix.
+         */
         template <typename T>
         constexpr inline Mat<T, 4> translate(const Vec<T, 3>& trans_) noexcept
         {
