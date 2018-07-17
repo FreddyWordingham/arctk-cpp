@@ -43,8 +43,9 @@ namespace arc //! arctk namespace
             constexpr const int FILE_OPEN_FAILED = 130; //!< Unable to open a file.
 
             //  -- GUI --
-            constexpr const int GLFW_INIT_FAILED           = 140; //!< Unable initialise glfw.
-            constexpr const int WINDOW_POINTER_INIT_FAILED = 141; //!< Unable initialise a glfw window pointer.
+            constexpr const int WINDOW_POINTER_INIT_FAILED = 140; //!< Unable initialise a glfw window pointer.
+            constexpr const int GLFW_INIT_FAILED           = 141; //!< Unable initialise glfw.
+            constexpr const int GLEW_INIT_FAILED           = 142; //!< Unable initialise glew.
 
 
 
