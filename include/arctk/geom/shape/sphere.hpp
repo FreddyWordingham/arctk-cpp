@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
              *
              *  @pre    rad_ must be positive.
              */
-            inline Plane::Plane(const vec3& pos_, const double rad_) noexcept
+            inline Sphere::Sphere(const vec3& pos_, const double rad_) noexcept
               : _pos(pos_)
               , _rad(rad_)
             {
