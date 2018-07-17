@@ -106,6 +106,9 @@ namespace arc //! arctk namespace
             constexpr inline T         det() const noexcept;
             constexpr inline Mat<T, 4> minor() const noexcept;
             constexpr inline Mat<T, 4> cofactor() const noexcept;
+            constexpr inline Mat<T, 4> trans() const noexcept;
+            constexpr inline Mat<T, 4> adj() const noexcept;
+            constexpr inline Mat<T, 4> inv() const noexcept;
 
             //  -- Printing --
             inline std::string str() const noexcept override;
@@ -702,6 +705,33 @@ namespace arc //! arctk namespace
             mat.w.y *= -1;
 
             return (mat);
+        }
+
+        constexpr inline Mat4 Mat<T, 4>::trans() const noexcept
+        {
+            return (Mat<T, 4>(Vec<T, 4>(x.x, y.x, z.x, w.x), Vec<T, 4>(x.y, y.y, z.y, w.y), Vec<T, 4>(x.z, y.z, z.z, w.z), Vec<T, 4>(x.w, y.w, z.w, w.w)));
+        }
+
+        constexpr inline Mat<T, 4> Mat<T, 4>::adj() const noexcept
+        {
+            return (Mat<T, 4>(
+              vec::Vec4(
+                (y.y * z.z * w.w) - (y.y * z.w * w.z) - (y.z * z.y * w.w) + (y.z * z.w * w.y) + (y.w * z.y * w.z) - (y.w * z.z * w.y), (x.y * z.w * w.z) + (x.z * z.y * w.w) - (x.z * z.w * w.y) - (x.w * z.y * w.z) + (x.w * z.z * w.y) - (x.y * z.z * w.w),
+                (x.y * y.z * w.w) - (x.y * y.w * w.z) - (x.z * y.y * w.w) + (x.z * y.w * w.y) + (x.w * y.y * w.z) - (x.w * y.z * w.y), (x.y * y.w * z.z) + (x.z * y.y * z.w) - (x.z * y.w * z.y) - (x.w * y.y * z.z) + (x.w * y.z * z.y) - (x.y * y.z * z.w)),
+              vec::Vec4(
+                (y.x * z.w * w.z) + (y.z * z.x * w.w) - (y.z * z.w * w.x) - (y.w * z.x * w.z) + (y.w * z.z * w.x) - (y.x * z.z * w.w), (x.x * z.z * w.w) - (x.x * z.w * w.z) - (x.z * z.x * w.w) + (x.z * z.w * w.x) + (x.w * z.x * w.z) - (x.w * z.z * w.x),
+                (x.x * y.w * w.z) + (x.z * y.x * w.w) - (x.z * y.w * w.x) - (x.w * y.x * w.z) + (x.w * y.z * w.x) - (x.x * y.z * w.w), (x.x * y.z * z.w) - (x.x * y.w * z.z) - (x.z * y.x * z.w) + (x.z * y.w * z.x) + (x.w * y.x * z.z) - (x.w * y.z * z.x)),
+              vec::Vec4(
+                (y.x * z.y * w.w) - (y.x * z.w * w.y) - (y.y * z.x * w.w) + (y.y * z.w * w.x) + (y.w * z.x * w.y) - (y.w * z.y * w.x), (x.x * z.w * w.y) + (x.y * z.x * w.w) - (x.y * z.w * w.x) - (x.w * z.x * w.y) + (x.w * z.y * w.x) - (x.x * z.y * w.w),
+                (x.x * y.y * w.w) - (x.x * y.w * w.y) - (x.y * y.x * w.w) + (x.y * y.w * w.x) + (x.w * y.x * w.y) - (x.w * y.y * w.x), (x.x * y.w * z.y) + (x.y * y.x * z.w) - (x.y * y.w * z.x) - (x.w * y.x * z.y) + (x.w * y.y * z.x) - (x.x * y.y * z.w)),
+              vec::Vec4(
+                (y.x * z.z * w.y) + (y.y * z.x * w.z) - (y.y * z.z * w.x) - (y.z * z.x * w.y) + (y.z * z.y * w.x) - (y.x * z.y * w.z), (x.x * z.y * w.z) - (x.x * z.z * w.y) - (x.y * z.x * w.z) + (x.y * z.z * w.x) + (x.z * z.x * w.y) - (x.z * z.y * w.x),
+                (x.x * y.z * w.y) + (x.y * y.x * w.z) - (x.y * y.z * w.x) - (x.z * y.x * w.y) + (x.z * y.y * w.x) - (x.x * y.y * w.z), (x.x * y.y * z.z) - (x.x * y.z * z.y) - (x.y * y.x * z.z) + (x.y * y.z * z.x) + (x.z * y.x * z.y) - (x.z * y.y * z.x))));
+        }
+
+        constexpr inline Mat<T, 4> Mat<T, 4>::inv() const noexcept
+        {
+            return (adj() /= det());
         }
 
 
