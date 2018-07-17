@@ -154,7 +154,7 @@ namespace arc //! arctk namespace
           , _rotate(glm::vec3(0.0f, 0.0f, 0.0f))
           , _scale(glm::vec3(1.0f, 1.0f, 1.0f))
         {
-            PRE((verts_.size() % math::sum(layout_)) == 0);
+            PRE((verts_.size() % math::container::sum(layout_)) == 0);
 
             glBindVertexArray(_vao);
             glBindBuffer(GL_ARRAY_BUFFER, _vbo);
