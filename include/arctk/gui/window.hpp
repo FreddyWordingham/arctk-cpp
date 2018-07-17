@@ -29,6 +29,7 @@
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/exit.hpp>
 #include <arctk/math.hpp>
 
 
