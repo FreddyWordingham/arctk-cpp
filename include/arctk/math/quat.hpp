@@ -58,20 +58,20 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            constexpr inline Quat() noexcept;
-            constexpr inline Quat(double x_, double y_, double z_, double w_) noexcept;
-            constexpr inline Quat(const Vec<double, 3>& axis_, double angle_) noexcept;
-            constexpr inline Quat(double yaw_, double pitch_, double roll_) noexcept;
+            inline Quat() noexcept;
+            inline Quat(double x_, double y_, double z_, double w_) noexcept;
+            inline Quat(const Vec<double, 3>& axis_, double angle_) noexcept;
+            inline Quat(double yaw_, double pitch_, double roll_) noexcept;
 
           private:
-            constexpr inline Quat(double cos_yaw_, double sin_yaw_, double cos_pitch_, double sin_pitch_, double cos_roll_, double sin_roll_) noexcept;
+            inline Quat(double cos_yaw_, double sin_yaw_, double cos_pitch_, double sin_pitch_, double cos_roll_, double sin_roll_) noexcept;
 
 
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            constexpr inline Quat& operator+=(const Quat& quat_) noexcept;
-            constexpr inline Quat& operator-=(const Quat& quat_) noexcept;
+            inline Quat& operator+=(const Quat& quat_) noexcept;
+            inline Quat& operator-=(const Quat& quat_) noexcept;
 
             //  -- Arithmetic --
             inline Quat operator+(const Quat& quat_) const noexcept;
@@ -79,22 +79,22 @@ namespace arc //! arctk namespace
             inline Quat operator*(const Quat& quat_) const noexcept;
 
             //  -- Access --
-            constexpr inline double&       operator[](size_t index_) noexcept;
-            constexpr inline const double& operator[](size_t index_) const noexcept;
+            inline double&       operator[](size_t index_) noexcept;
+            inline const double& operator[](size_t index_) const noexcept;
 
 
             //  == METHODS ==
           public:
             //  -- Properties --
-            constexpr inline bool normalised(double tol_ = std::numeric_limits<double>::epsilon()) const noexcept;
+            inline bool normalised(double tol_ = std::numeric_limits<double>::epsilon()) const noexcept;
 
             //  -- Mathematical --
-            constexpr inline double angle() const noexcept;
-            inline Vec<double, 3>   axis() const noexcept;
-            constexpr inline double mag() const noexcept;
-            constexpr inline double mag_sq() const noexcept;
-            constexpr inline void   normalise() noexcept;
-            inline Quat             conj() const noexcept;
+            inline double         angle() const noexcept;
+            inline Vec<double, 3> axis() const noexcept;
+            inline double         mag() const noexcept;
+            inline double         mag_sq() const noexcept;
+            inline void           normalise() noexcept;
+            inline Quat           conj() const noexcept;
 
             //  -- Printing --
             inline std::string str() const noexcept override;
@@ -107,7 +107,7 @@ namespace arc //! arctk namespace
         /**
          *  Construct a unit quaternion.
          */
-        constexpr inline Quat::Quat() noexcept
+        inline Quat::Quat() noexcept
           : _x(0.0)
           , _y(0.0)
           , _z(0.0)
@@ -123,7 +123,7 @@ namespace arc //! arctk namespace
          *  @param  z_  Initial value of the z component.
          *  @param  w_  Initial value of the w component.
          */
-        constexpr inline Quat::Quat(const double x_, const double y_, const double z_, const double w_) noexcept
+        inline Quat::Quat(const double x_, const double y_, const double z_, const double w_) noexcept
           : _x(x_)
           , _y(y_)
           , _z(z_)
@@ -139,7 +139,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    axis_ must be normalised.
          */
-        constexpr inline Quat::Quat(const Vec<double, 3>& axis_, const double angle_) noexcept
+        inline Quat::Quat(const Vec<double, 3>& axis_, const double angle_) noexcept
           : _x(axis_.x * std::sin(angle_ * 0.5))
           , _y(axis_.y * std::sin(angle_ * 0.5))
           , _z(axis_.z * std::sin(angle_ * 0.5))
@@ -155,7 +155,7 @@ namespace arc //! arctk namespace
          *  @param  pitch_  Angle to rotate around side direction.
          *  @param  roll_   Angle to rotate around the forward direction.
          */
-        constexpr inline Quat::Quat(const double yaw_, const double pitch_, const double roll_) noexcept
+        inline Quat::Quat(const double yaw_, const double pitch_, const double roll_) noexcept
           : Quat(std::cos(yaw_ * 0.5), std::sin(yaw_ * 0.5), std::cos(pitch_ * 0.5), std::sin(pitch_ * 0.5), std::cos(roll_ * 0.5), std::sin(roll_ * 0.5))
         {
         }
@@ -170,7 +170,7 @@ namespace arc //! arctk namespace
          *  @param  sin_roll_   Sine of the angle to rotate around the forward direction.
          *  @param  cos_roll_   Cosine of the angle to rotate around the forward direction.
          */
-        constexpr inline Quat::Quat(const double cos_yaw_, const double sin_yaw_, const double cos_pitch_, const double sin_pitch_, const double cos_roll_, const double sin_roll_) noexcept
+        inline Quat::Quat(const double cos_yaw_, const double sin_yaw_, const double cos_pitch_, const double sin_pitch_, const double cos_roll_, const double sin_roll_) noexcept
           : _x((((cos_yaw_ * cos_pitch_ * sin_roll_) - (sin_yaw_ * sin_pitch_ * cos_roll_))))
           , _y((((cos_yaw_ * sin_pitch_ * cos_roll_) + (sin_yaw_ * cos_pitch_ * sin_roll_))))
           , _z((((sin_yaw_ * cos_pitch_ * cos_roll_) - (cos_yaw_ * sin_pitch_ * sin_roll_))))
@@ -189,7 +189,7 @@ namespace arc //! arctk namespace
          *
          *  @return Reference to this quat post-operation.
          */
-        constexpr inline Quat& Quat::operator+=(const Quat& quat_) noexcept
+        inline Quat& Quat::operator+=(const Quat& quat_) noexcept
         {
             _x += quat_._x;
             _y += quat_._y;
@@ -206,7 +206,7 @@ namespace arc //! arctk namespace
          *
          *  @return Reference to this quat post-operation.
          */
-        constexpr inline Quat& Quat::operator-=(const Quat& quat_) noexcept
+        inline Quat& Quat::operator-=(const Quat& quat_) noexcept
         {
             _x -= quat_._x;
             _y -= quat_._y;
@@ -266,7 +266,7 @@ namespace arc //! arctk namespace
          *
          *  @return A reference to the element requested.
          */
-        constexpr inline double& Quat::operator[](const size_t index_) noexcept
+        inline double& Quat::operator[](const size_t index_) noexcept
         {
             PRE(index_ < 4);
 
@@ -282,7 +282,7 @@ namespace arc //! arctk namespace
          *
          *  @return A const reference to the element requested.
          */
-        constexpr inline const double& Quat::operator[](const size_t index_) const noexcept
+        inline const double& Quat::operator[](const size_t index_) const noexcept
         {
             PRE(index_ < 4);
 
@@ -300,7 +300,7 @@ namespace arc //! arctk namespace
          *
          *  @return True if the quat is normalised.
          */
-        constexpr inline bool Quat::normalised(const double tol_) const noexcept
+        inline bool Quat::normalised(const double tol_) const noexcept
         {
             return (std::fabs(1.0 - mag_sq()) <= tol_);
         }
@@ -312,7 +312,7 @@ namespace arc //! arctk namespace
          *
          *  @return Rotation angle of the quat.
          */
-        constexpr inline double Quat::angle() const noexcept
+        inline double Quat::angle() const noexcept
         {
             return (2.0 * std::acos(_w));
         }
@@ -334,7 +334,7 @@ namespace arc //! arctk namespace
          *
          *  @return Magnitude of the quat.
          */
-        constexpr inline double Quat::mag() const noexcept
+        inline double Quat::mag() const noexcept
         {
             return (std::sqrt(mag_sq()));
         }
@@ -344,7 +344,7 @@ namespace arc //! arctk namespace
          *
          *  @return Magnitude-squared of the quat.
          */
-        constexpr inline double Quat::mag_sq() const noexcept
+        inline double Quat::mag_sq() const noexcept
         {
             return ((_x * _x) + (_y * _y) + (_z * _z) + (_w * _w));
         }
@@ -354,7 +354,7 @@ namespace arc //! arctk namespace
          *
          *  @post   Quat must be normalised.
          */
-        constexpr inline void Quat::normalise() noexcept
+        inline void Quat::normalise() noexcept
         {
             const double m = 1.0 / mag();
 
