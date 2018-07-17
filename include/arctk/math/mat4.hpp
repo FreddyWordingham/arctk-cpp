@@ -124,6 +124,8 @@ namespace arc //! arctk namespace
         constexpr inline Mat<T, 4> rotate(const Vec<T, 3>& axis_, const T ang_) noexcept;
         template <typename T>
         constexpr inline Mat<T, 4> scale(const Vec<T, 3>& scale_) noexcept;
+        template <typename T>
+        constexpr inline Mat<T, 4> transform(const Vec<T, 3>& scale_, const Vec<T, 3>& rotate_, const Vec<T, 3>& trans_) noexcept;
 
 
 
@@ -726,6 +728,12 @@ namespace arc //! arctk namespace
         constexpr inline Mat<T, 4> scale(const Vec<T, 3>& scale_) noexcept
         {
             return (Mat<T, 4>(Vec<T, 4>(scale_.x, 0, 0, 0), Vec<T, 4>(0, scale_.y, 0, 0), Vec<T, 4>(0, 0, scale_.z, 0), Vec<T, 4>(0, 0, 0, 1)));
+        }
+
+        template <typename T>
+        constexpr inline Mat<T, 4> transform(const Vec<T, 3>& scale_, const Vec<T, 3>& rotate_, const Vec<T, 3>& trans_) noexcept
+        {
+            return (translate(trans_) * rotate(rotate_) * scale(scale_));
         }
 
 
