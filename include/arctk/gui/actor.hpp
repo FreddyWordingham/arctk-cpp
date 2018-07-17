@@ -617,7 +617,7 @@ namespace arc //! arctk namespace
          */
         inline void Actor::update_model() noexcept
         {
-            glm::mat4 model;
+            glm::mat4 model(1.0f);
 
             model = glm::translate(model, _trans);
             model = glm::rotate(model, math::convert::rad_to_deg(_rotate.x), glm::vec3(1.0f, 0.0f, 0.0f));
