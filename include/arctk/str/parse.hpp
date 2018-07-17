@@ -454,6 +454,15 @@ namespace arc //! arctk namespace
 
 
             //  -- File --
+            /**
+             *  Parse the contents of a file into a string.
+             *
+             *  @param  path_   Path to the file to parse.
+             *
+             *  @pre    path_ may not be empty.
+             *
+             *  @return String of the file's contents.
+             */
             inline std::string file(const std::string& path_) noexcept
             {
                 PRE(!path_.empty());
