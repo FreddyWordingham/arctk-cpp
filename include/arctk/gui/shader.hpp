@@ -310,8 +310,10 @@ namespace arc //! arctk namespace
 
             if (model < 0)
             {
-                ERROR(42) << "Unable to construct gui Shader.\n"
+                std::cerr << "Unable to construct gui Shader.\n"
                           << "Failed to determine the uniform location of: model within the shader.";
+
+                std::exit(exit::error::SHADER_UNIFORM_NOT_FOUND);
             }
 
             return (model);
