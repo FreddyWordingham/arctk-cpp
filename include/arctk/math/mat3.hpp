@@ -575,6 +575,11 @@ namespace arc //! arctk namespace
                               Vec<T, 3>((x.y * y.z) - (x.z * y.y), (x.x * y.z) - (x.z * y.x), (x.x * y.y) - (x.y * y.x))));
         }
 
+        /**
+         *  Calculate the matrix of cofactors of the matrix.
+         *
+         *  @return Matrix of cofactors of the matrix.
+         */
         template <typename T>
         constexpr inline Mat<T, 3> Mat<T, 3>::cofactor() const noexcept
         {
