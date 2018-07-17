@@ -382,8 +382,10 @@ namespace arc //! arctk namespace
 
             if (id < 0)
             {
-                ERROR(42) << "Unable to add uniform to gui Shader.\n"
+                std::cerr << "Unable to add uniform to gui Shader.\n"
                           << "Failed to determine the uniform location of: '" << name_ << "' within the shader.";
+
+                std::exit(exit::error::SHADER_UNIFORM_NOT_FOUND);
             }
 
             _uniform.emplace(std::make_pair(name_, Uniform(id, type_, control_)));
