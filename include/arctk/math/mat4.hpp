@@ -812,6 +812,15 @@ namespace arc //! arctk namespace
             return (Mat<T, 4>(Vec<T, 4>(T{1}, T{0}, T{0}, T{0}), Vec<T, 4>(T{0}, std::cos(ang_), -std::sin(ang_), T{0}), Vec<T, 4>(T{0}, std::sin(ang_), std::cos(ang_), T{0}), Vec<T, 4>(T{0}, T{0}, T{0}, T{1})));
         }
 
+        /**
+         *  Create a y-axis rotation transformation matrix.
+         *
+         *  @tparam T   Type stored by the mat
+         *
+         *  @param  ang_    Angle to rotate around the x-axis.
+         *
+         *  @return Y-axis rotation transformation matrix.
+         */
         template <typename T>
         constexpr inline Mat<T, 4> rotate_y(const T ang_) noexcept
         {
