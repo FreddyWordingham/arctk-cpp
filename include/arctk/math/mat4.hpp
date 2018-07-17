@@ -677,6 +677,11 @@ namespace arc //! arctk namespace
                     - (x.w * y.x * z.y * w.z) + (x.w * y.x * z.z * w.y) + (x.w * y.y * z.x * w.z) - (x.w * y.y * z.z * w.x) - (x.w * y.z * z.x * w.y) + (x.w * y.z * z.y * w.x));
         }
 
+        /**
+         *  Calculate the matrix of minors of the matrix.
+         *
+         *  @return Matrix of minors of the matrix.
+         */
         template <typename T>
         constexpr inline Mat<T, 4> Mat<T, 4>::minor() const noexcept
         {
