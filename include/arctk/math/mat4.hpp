@@ -843,7 +843,7 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Create a rotation transformation matrix.
+         *  Create a Euler rotation transformation matrix.
          *  Rotations are performed in x-y-z order.
          *
          *  @tparam T   Type stored by the mat
