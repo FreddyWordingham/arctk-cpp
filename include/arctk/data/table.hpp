@@ -188,7 +188,7 @@ namespace arc //! arctk namespace
                 if (strs.size() != sizeof...(A))
                 {
                     std::cerr << "Unable to construct data table.\n"
-                              << "Line: `" << line << "`, does not contain " << sizeof...(A) << " elements as required.";
+                              << "Line: `" << line << "`, does not contain " << sizeof...(A) << " elements as required.\n";
 
                     std::exit(exit::error::FAILED_PARSE);
                 }
