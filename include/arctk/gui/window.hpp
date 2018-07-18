@@ -159,7 +159,7 @@ namespace arc //! arctk namespace
             if (glfwInit() == 0)
             {
                 std::cerr << "Unable to construct graphical Window.\n"
-                          << "Glfw could not be initialised.";
+                          << "Glfw could not be initialised.\n";
 
                 std::exit(exit::error::GLFW_INIT_FAILED);
             }
@@ -175,7 +175,7 @@ namespace arc //! arctk namespace
             if (handle == nullptr)
             {
                 std::cerr << "Unable to construct graphical Window.\n"
-                          << "Window pointer could not be created.";
+                          << "Window pointer could not be created.\n";
 
                 std::exit(exit::error::WINDOW_POINTER_INIT_FAILED);
             }
@@ -186,7 +186,7 @@ namespace arc //! arctk namespace
             if (glewInit() != GLEW_OK)
             {
                 std::cerr << "Unable to construct graphical Window.\n"
-                          << "Glew could not be initialised.";
+                          << "Glew could not be initialised.\n";
 
                 std::exit(exit::error::GLEW_INIT_FAILED);
             }
