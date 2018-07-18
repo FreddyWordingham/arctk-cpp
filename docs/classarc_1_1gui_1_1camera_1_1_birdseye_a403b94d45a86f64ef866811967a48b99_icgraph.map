@@ -1,3 +1,3 @@
-<map id="arc::gui::camera::Birdseye::update_mvp" name="arc::gui::camera::Birdseye::update_mvp">
+<map id="arc::gui::camera::Birdseye::update_view_proj" name="arc::gui::camera::Birdseye::update_view_proj">
 <area shape="rect" id="node2" href="$classarc_1_1gui_1_1camera_1_1_birdseye.html#a311a72b1b6f88a44a3344ccc269e0fa0" title="arc::gui::camera::Birdseye\l::Birdseye" alt="" coords="230,5,406,44"/>
 </map>
