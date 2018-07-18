@@ -150,8 +150,6 @@ namespace arc //! arctk namespace
                     cdfs[i] /= cdfs.back();
                 }
 
-                std::cout << str::parse::from(cdfs) << '\n';
-
                 POST(math::compare::equal(cdfs.back(), 1.0));
 
                 return (cdfs);
