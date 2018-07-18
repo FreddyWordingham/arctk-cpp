@@ -177,7 +177,7 @@ namespace arc //! arctk namespace
                 std::string error_text(begin(error_log), end(error_log));
 
                 std::cerr << "Unable to construct gui Shader.\n"
-                          << "Shader linking failed with error: '" << error_text << "'.";
+                          << "Shader linking failed with error: '" << error_text << "'.\n";
 
                 std::exit(exit::error::SHADER_LINKING_FAILED);
             }
@@ -229,7 +229,7 @@ namespace arc //! arctk namespace
                 std::string error_text(begin(error_log), end(error_log));
 
                 std::cerr << "Unable to construct gui Shader.\n"
-                          << "Shader linking failed with error: '" << error_text << "'.";
+                          << "Shader linking failed with error: '" << error_text << "'.\n";
 
                 std::exit(exit::error::SHADER_LINKING_FAILED);
             }
@@ -269,7 +269,7 @@ namespace arc //! arctk namespace
                 const std::string error_text(begin(error_log), end(error_log));
 
                 std::cerr << "Unable to construct gui Shader.\n"
-                          << "Shader compilation failed with error: '" << error_text << "'.";
+                          << "Shader compilation failed with error: '" << error_text << "'.\n";
 
                 std::exit(exit::error::SHADER_COMPILATION_FAILED);
             }
@@ -291,7 +291,7 @@ namespace arc //! arctk namespace
             if (view_proj < 0)
             {
                 std::cerr << "Unable to construct gui Shader.\n"
-                          << "Failed to determine the uniform location of: view_proj within the shader.";
+                          << "Failed to determine the uniform location of: view_proj within the shader.\n";
 
                 std::exit(exit::error::SHADER_UNIFORM_NOT_FOUND);
             }
@@ -311,7 +311,7 @@ namespace arc //! arctk namespace
             if (model < 0)
             {
                 std::cerr << "Unable to construct gui Shader.\n"
-                          << "Failed to determine the uniform location of: model within the shader.";
+                          << "Failed to determine the uniform location of: model within the shader.\n";
 
                 std::exit(exit::error::SHADER_UNIFORM_NOT_FOUND);
             }
@@ -383,7 +383,7 @@ namespace arc //! arctk namespace
             if (id < 0)
             {
                 std::cerr << "Unable to add uniform to gui Shader.\n"
-                          << "Failed to determine the uniform location of: '" << name_ << "' within the shader.";
+                          << "Failed to determine the uniform location of: '" << name_ << "' within the shader.\n";
 
                 std::exit(exit::error::SHADER_UNIFORM_NOT_FOUND);
             }
