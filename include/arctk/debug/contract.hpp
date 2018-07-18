@@ -59,8 +59,9 @@ namespace arc //! arctk namespace
              */
             [[noreturn]] inline void precondition(const std::string& condition_, const std::string& file_, int line_, const std::string& func_) noexcept
             {
-                std::cerr << "Pre-condition  : `" << condition_ << "` failed.\n";
-                std::cerr << "Located at     :\n" << location::info(file_, line_, func_, 3) << '\n';
+                std::cerr << "Pre-condition  : `" << condition_ << "` failed.\n"
+                          << "Located at     :\n"
+                          << location::info(file_, line_, func_, 3) << '\n';
 
                 std::exit(exit::error::PRE_CONDITION_FAILURE);
             }
@@ -75,8 +76,9 @@ namespace arc //! arctk namespace
              */
             [[noreturn]] inline void postcondition(const std::string& condition_, const std::string& file_, int line_, const std::string& func_) noexcept
             {
-                std::cerr << "Post-condition : `" << condition_ << "` failed.\n";
-                std::cerr << "Located at     :\n" << location::info(file_, line_, func_, 3) << '\n';
+                std::cerr << "Post-condition : `" << condition_ << "` failed.\n"
+                          << "Located at     :\n"
+                          << location::info(file_, line_, func_, 3) << '\n';
 
                 std::exit(exit::error::POST_CONDITION_FAILURE);
             }
