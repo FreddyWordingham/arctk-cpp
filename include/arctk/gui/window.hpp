@@ -255,7 +255,7 @@ namespace arc //! arctk namespace
         {
             glUseProgram(shad_.handle());
 
-            glUniformMatrix4fv(shad_.mvp(), 1, GL_FALSE, &cam_.mvp()[0][0]);
+            glUniformMatrix4fv(shad_.view_proj(), 1, GL_FALSE, &cam_.view_proj()[0][0]);
 
             for (auto& [key, uni] : shad_.uniform())
             {
