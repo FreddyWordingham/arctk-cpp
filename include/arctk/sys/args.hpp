@@ -151,8 +151,8 @@ namespace arc //! arctk namespace
         {
             if (!str::parse::parsable_to<T>(str_))
             {
-                std::cerr << "Argument string: '" << str_ << "' is not parsable as type: '" << typeid(T).name() << "'.\n";
-                std::cerr << "Correct call: " << _prog_name << " " << _call_str << '\n';
+                std::cerr << "Argument string: '" << str_ << "' is not parsable as type: '" << typeid(T).name() << "'.\n"
+                          << "Correct call: " << _prog_name << " " << _call_str << '\n';
 
                 std::exit(exit::error::FAILED_PARSE);
             }
