@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
             inline GLuint init_handle(const std::string& vert_code_, const std::string& frag_code_) const noexcept;
             inline GLuint init_handle(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) const noexcept;
             inline GLuint init_sub_shader(const std::string& code_, GLenum type_) const noexcept;
-            inline GLint  init_mvp() const noexcept;
+            inline GLint  init_view_proj() const noexcept;
             inline GLint  init_model() const noexcept;
 
 
@@ -80,7 +80,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline GLuint                                handle() const noexcept;
-            inline GLint                                 mvp() const noexcept;
+            inline GLint                                 view_proj() const noexcept;
             inline GLint                                 model() const noexcept;
             inline const std::map<std::string, Uniform>& uniform() const noexcept;
 
@@ -111,7 +111,7 @@ namespace arc //! arctk namespace
          */
         inline Shader::Shader(const std::string& vert_code_, const std::string& frag_code_) noexcept
           : _handle(init_handle(vert_code_, frag_code_))
-          , _mvp(init_mvp())
+          , _view_proj(init_view_proj())
           , _model(init_model())
         {
             PRE(!vert_code_.empty());
@@ -131,7 +131,7 @@ namespace arc //! arctk namespace
          */
         inline Shader::Shader(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) noexcept
           : _handle(init_handle(vert_code_, geom_code_, frag_code_))
-          , _mvp(init_mvp())
+          , _view_proj(init_view_proj())
           , _model(init_model())
         {
             PRE(!vert_code_.empty());
@@ -280,23 +280,23 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Initialise handle the the shader's mvp handle.
+         *  Initialise handle the the shader's view-projection handle.
          *
-         *  @return Initialised mvp uniform handle.
+         *  @return Initialised view-projection uniform handle.
          */
-        inline GLint Shader::init_mvp() const noexcept
+        inline GLint Shader::init_view_proj() const noexcept
         {
-            GLint mvp = glGetUniformLocation(_handle, "mvp");
+            GLint view_proj = glGetUniformLocation(_handle, "view_proj");
 
-            if (mvp < 0)
+            if (view_proj < 0)
             {
                 std::cerr << "Unable to construct gui Shader.\n"
-                          << "Failed to determine the uniform location of: mvp within the shader.";
+                          << "Failed to determine the uniform location of: view_proj within the shader.";
 
                 std::exit(exit::error::SHADER_UNIFORM_NOT_FOUND);
             }
 
-            return (mvp);
+            return (view_proj);
         }
 
         /**
@@ -334,13 +334,13 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Get the Model-view-projection matrix uniform handle.
+         *  Get the view-projection matrix uniform handle.
          *
-         *  @return Model-view-projection matrix uniform handle.
+         *  @return View-projection matrix uniform handle.
          */
-        inline GLint Shader::mvp() const noexcept
+        inline GLint Shader::view_proj() const noexcept
         {
-            return (_mvp);
+            return (_view_proj);
         }
 
         /**
