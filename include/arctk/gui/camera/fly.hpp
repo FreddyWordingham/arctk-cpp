@@ -100,7 +100,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
             //  -- Updating --
             /**
-             *  Update the model-view-projection matrix of the camera.
+             *  Update the view-projection matrix of the camera.
              */
             inline void Fly::update_view_proj() noexcept
             {
