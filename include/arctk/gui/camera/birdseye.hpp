@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               private:
                 //  -- Updating --
-                inline void update_mvp() noexcept override;
+                inline void update_view_proj() noexcept override;
             };
 
 
@@ -99,7 +99,7 @@ namespace arc //! arctk namespace
                 PRE(width_start_ < width_end_);
                 PRE(height_start_ < height_end_);
 
-                update_mvp();
+                update_view_proj();
             }
 
 
@@ -107,14 +107,14 @@ namespace arc //! arctk namespace
             //  == METHODS ==
             //  -- Updating --
             /**
-             *  Update the model-view-projection matrix of the camera.
+             *  Update the view-projection matrix of the camera.
              */
-            inline void Birdseye::update_mvp() noexcept
+            inline void Birdseye::update_view_proj() noexcept
             {
                 const glm::mat4 view = glm::lookAt(_pos, _pos + _dir, _up);
                 const glm::mat4 proj = glm::ortho(_width_start, _width_end, _height_start, _height_end, BIRDSEYE_NEAR_CULL_DIST, BIRDSEYE_FAR_CULL_DIST);
 
-                _mvp = proj * view;
+                _view_proj = proj * view;
             }
 
 
