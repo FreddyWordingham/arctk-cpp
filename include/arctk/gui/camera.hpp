@@ -94,7 +94,7 @@ namespace arc //! arctk namespace
             inline const glm::vec3& pos() const noexcept;
             inline const glm::vec3& dir() const noexcept;
             inline const glm::vec3& up() const noexcept;
-            inline const glm::mat4& mvp() const noexcept;
+            inline const glm::mat4& view_proj() const noexcept;
             inline int              int_uniform(const std::string& name_) const noexcept;
             inline float            float_uniform(const std::string& name_) const noexcept;
             inline const glm::vec2& vec2_uniform(const std::string& name_) const noexcept;
@@ -123,7 +123,7 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Updating --
-            virtual void update_mvp() noexcept = 0; //!< Update the model-view-projection matrix.
+            virtual void update_view_proj() noexcept = 0; //!< Update the model-view-projection matrix.
         };
 
 
@@ -186,13 +186,13 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Get the model-view-projection matrix.
+         *  Get the view-projection matrix.
          *
-         *  @return Model-view-projection matrix.
+         *  @return View-projection matrix.
          */
-        inline const glm::mat4& Camera::mvp() const noexcept
+        inline const glm::mat4& Camera::view_proj() const noexcept
         {
-            return (_mvp);
+            return (_view_proj);
         }
 
         /**
@@ -328,7 +328,7 @@ namespace arc //! arctk namespace
         {
             _pos = pos_;
 
-            update_mvp();
+            update_view_proj();
         }
 
         /**
@@ -344,7 +344,7 @@ namespace arc //! arctk namespace
 
             _up = glm::normalize(glm::cross(glm::normalize(glm::cross(_dir, _up)), _dir));
 
-            update_mvp();
+            update_view_proj();
         }
 
         /**
@@ -356,7 +356,7 @@ namespace arc //! arctk namespace
         {
             _up = up_;
 
-            update_mvp();
+            update_view_proj();
         }
 
         /**
@@ -490,7 +490,7 @@ namespace arc //! arctk namespace
         {
             _pos += vec_;
 
-            update_mvp();
+            update_view_proj();
         }
 
         /**
@@ -507,7 +507,7 @@ namespace arc //! arctk namespace
 
             _up = glm::normalize(glm::cross(right, _dir));
 
-            update_mvp();
+            update_view_proj();
         }
 
 
