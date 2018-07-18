@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               private:
                 //  -- Updating --
-                inline void update_mvp() noexcept override;
+                inline void update_view_proj() noexcept override;
             };
 
 
@@ -92,7 +92,7 @@ namespace arc //! arctk namespace
                 PRE(fov_ > 0.0f);
                 PRE(aspect_ratio_ > 0.0f);
 
-                update_mvp();
+                update_view_proj();
             }
 
 
@@ -102,12 +102,12 @@ namespace arc //! arctk namespace
             /**
              *  Update the model-view-projection matrix of the camera.
              */
-            inline void Fly::update_mvp() noexcept
+            inline void Fly::update_view_proj() noexcept
             {
                 const glm::mat4 view = glm::lookAt(_pos, _pos + _dir, _up);
                 const glm::mat4 proj = glm::perspective(_fov, _aspect_ratio, FLY_NEAR_CULL_DIST, FLY_FAR_CULL_DIST);
 
-                _mvp = proj * view;
+                _view_proj = proj * view;
             }
 
 
