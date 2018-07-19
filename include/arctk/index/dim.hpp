@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_INDEX_DIMENSION_HPP
-#define ARCTK_INDEX_DIMENSION_HPP
+#ifndef ARCTK_INDEX_DIM_HPP
+#define ARCTK_INDEX_DIM_HPP
 
 
 
@@ -53,4 +53,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_INDEX_DIMENSION_HPP
+#endif // ARCTK_INDEX_DIM_HPP
