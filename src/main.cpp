@@ -54,6 +54,7 @@
 #include <arctk/gui/shader.hpp>
 #include <arctk/gui/uniform.hpp>
 #include <arctk/gui/window.hpp>
+#include <arctk/index.hpp>
 #include <arctk/macro.hpp>
 #include <arctk/macro/utility.hpp>
 #include <arctk/math.hpp>
