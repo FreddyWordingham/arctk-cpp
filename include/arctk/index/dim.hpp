@@ -3,7 +3,7 @@
  *  @date   20/07/2018
  *  @author Freddy Wordingham
  *
- *  Collection dimension focused enumerations.
+ *  Collection of dimension focused enumerations.
  */
 
 
