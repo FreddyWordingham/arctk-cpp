@@ -22,7 +22,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace gui //! graphical user interface namespace
+    namespace dim //! dimension namespace
     {
 
 
@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace gui
+    } // namespace dim
 } // namespace arc
 
 
