@@ -35,11 +35,24 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTION PROTOTYPES ==
+            //  -- Length --
+            template <typename T, size_t N>
+            inline T distance(const Vec<T, N>& start_, const Vec<T, N>& end_) noexcept;
+
+
             //  -- Area --
 
 
 
             //  == FUNCTIONS ==
+            //  -- Length --
+            template <typename T, size_t N>
+            inline T distance(const Vec<T, N>& start_, const Vec<T, N>& end_) noexcept
+            {
+                return ((end_ - start_).mag());
+            }
+
+
             //  -- Area --
 
 
