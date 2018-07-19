@@ -22,7 +22,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/index/col.hpp>
-#include <arctk/index/dimension.hpp>
+#include <arctk/index/dim.hpp>
 #include <arctk/index/vertex.hpp>
 
 
