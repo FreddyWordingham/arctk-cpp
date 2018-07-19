@@ -768,7 +768,34 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace math
+        namespace vec //! vector namespace
+        {
+
+
+
+            //  == FUNCTION PROTOTYPES ==
+            //  -- Utility --
+            template <typename T, size_t N>
+            inline Vec<T, N> normalise() noexcept;
+
+
+
+            //  == FUNCTIONS ==
+            //  -- Utility --
+            template <typename T, size_t N>
+            inline Vec<T, N> normalise() noexcept
+            {
+                Vec<T, N> vec = vec_;
+
+                vec.normalise();
+
+                return (vec);
+            }
+
+
+
+        } // namespace vec
+    }     // namespace math
 } // namespace arc
 
 
