@@ -51,6 +51,10 @@ namespace arc //! arctk namespace
                 const std::array<vec3, 3> _pos;  //!< Vertex positions.
                 const std::array<vec3, 3> _norm; //!< Vertex normals.
 
+                //  -- Properties --
+                const double _area;       //!< Area of the triangle.
+                const vec3   _plane_norm; //!< Normal of the triangle's plane.
+
 
                 //  == INSTANTIATION ==
               public:
