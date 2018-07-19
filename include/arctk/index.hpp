@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/index/colours.hpp>
 #include <arctk/index/dimension.hpp>
 
 
