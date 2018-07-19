@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/index/dimension.hpp
+ *  @file   arctk/index/dim.hpp
  *  @date   20/07/2018
  *  @author Freddy Wordingham
  *
