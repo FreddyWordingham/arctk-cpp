@@ -24,6 +24,7 @@
 #include <optional>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/geom/shape.hpp>
 #include <arctk/math.hpp>
 
@@ -59,6 +60,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Triangle(const std::array<vec3, 3> pos_, const std::array<vec3, 3> norm_) noexcept;
 
 
                 //  == METHODS ==
@@ -71,6 +73,19 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Triangle::Triangle(const std::array<vec3, 3> pos_, const std::array<vec3, 3> norm_) noexcept
+              : _pos(pos_)
+              , _norm(norm_)
+              , _plane_norm(init_plane_norm())
+              , _area(math::geom::area(pos_))
+            {
+                PRE(norm_[0].normalised());
+                PRE(norm_[1].normalised());
+                PRE(norm_[2].normalised());
+
+                POST(_area > 0.0);
+                POST(_plane_norm.normalised());
+            }
 
 
 
