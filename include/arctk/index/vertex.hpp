@@ -22,28 +22,31 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace vertex //! vertex namespace
+    namespace index //! indexing namespace
     {
-
-
-
-        //  == Enumerations ==
-        //  -- Vertices --
-        /**
-         *  Enumeration of the triangle vertices.
-         *  Used for index consistency.
-         *  Spatial ordering of vertices is not guaranteed.
-         */
-        enum vertices
+        namespace vertex //! vertex namespace
         {
-            ALPHA, //! First vertex.
-            BETA,  //! Second vertex.
-            GAMMA  //! Third vertex.
-        };
 
 
 
-    } // namespace vertex
+            //  == Enumerations ==
+            //  -- Vertices --
+            /**
+             *  Enumeration of the triangle vertices.
+             *  Used for index consistency.
+             *  Spatial ordering of vertices is not guaranteed.
+             */
+            enum vertices
+            {
+                ALPHA, //! First vertex.
+                BETA,  //! Second vertex.
+                GAMMA  //! Third vertex.
+            };
+
+
+
+        } // namespace vertex
+    }     // namespace index
 } // namespace arc
 
 
