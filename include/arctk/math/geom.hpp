@@ -39,8 +39,9 @@ namespace arc //! arctk namespace
             template <typename T, size_t N>
             inline T distance(const Vec<T, N>& start_, const Vec<T, N>& end_) noexcept;
 
-
             //  -- Area --
+            template <typename T>
+            inline T area(const std::array<Vec<T, 3>, 3>& pos_) noexcept;
 
 
 
@@ -54,6 +55,17 @@ namespace arc //! arctk namespace
 
 
             //  -- Area --
+            template <typename T>
+            inline T area(const std::array<Vec<T, 3>, 3>& pos_) noexcept
+            {
+                const T length_ab = distance(pos_[ALPHA], pos_[BETA]);
+                const T length_bc = distance(pos_[BETA], pos_[GAMMA]);
+                const T length_ca = distance(pos_[GAMMA], pos_[ALPHA]);
+
+                const T half_perim = (length_ab + length_bc + length_ca) * 0.5;
+
+                return (std::sqrt(half_perim * (half_perim - length_ab) * (half_perim - length_bc) * (half_perim - length_ca)));
+            }
 
 
 
