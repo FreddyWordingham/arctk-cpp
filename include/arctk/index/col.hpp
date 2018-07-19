@@ -22,28 +22,31 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace col //! colour namespace
+    namespace index //! indexing namespace
     {
-
-
-
-        //  == Enumerations ==
-        //  -- Colours --
-        /**
-         *  Enumeration of the colour channels.
-         *  Used for index consistency.
-         */
-        enum channels
+        namespace col //! colour namespace
         {
-            R, //! Red colour channel.
-            G, //! Green colour channel.
-            B, //! Blue colour channel.
-            A  //! Transparency colour channel.
-        };
 
 
 
-    } // namespace col
+            //  == Enumerations ==
+            //  -- Colours --
+            /**
+             *  Enumeration of the colour channels.
+             *  Used for index consistency.
+             */
+            enum channels
+            {
+                R, //! Red colour channel.
+                G, //! Green colour channel.
+                B, //! Blue colour channel.
+                A  //! Transparency colour channel.
+            };
+
+
+
+        } // namespace col
+    }     // namespace index
 } // namespace arc
 
 
