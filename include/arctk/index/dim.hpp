@@ -22,27 +22,30 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace dim //! dimension namespace
+    namespace index //! indexing namespace
     {
-
-
-
-        //  == Enumerations ==
-        //  -- Cartesian --
-        /**
-         *  Enumeration of the cartesian dimensions.
-         *  Used for index consistency.
-         */
-        enum cartesian
+        namespace dim //! dimension namespace
         {
-            X, //! X spatial dimension.
-            Y, //! Y spatial dimension.
-            Z  //! Z spatial dimension.
-        };
 
 
 
-    } // namespace dim
+            //  == Enumerations ==
+            //  -- Cartesian --
+            /**
+             *  Enumeration of the cartesian dimensions.
+             *  Used for index consistency.
+             */
+            enum cartesian
+            {
+                X, //! X spatial dimension.
+                Y, //! Y spatial dimension.
+                Z  //! Z spatial dimension.
+            };
+
+
+
+        } // namespace dim
+    }     // namespace index
 } // namespace arc
 
 
