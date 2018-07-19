@@ -21,6 +21,8 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/index/dimension.hpp>
+
 
 
 //  == MODULE END ==
