@@ -20,7 +20,12 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cmath>
+
 //  -- Arctk --
+#include <arctk/index.hpp>
+#include <arctk/math/vec.hpp>
 
 
 
