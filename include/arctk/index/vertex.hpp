@@ -28,6 +28,18 @@ namespace arc //! arctk namespace
 
 
         //  == Enumerations ==
+        //  -- Vertices --
+        /**
+         *  Enumeration of the triangle vertices.
+         *  Used for index consistency.
+         *  Spatial ordering of vertices is not guaranteed.
+         */
+        enum vertices
+        {
+            ALPHA, //! First vertex.
+            BETA,  //! Second vertex.
+            GAMMA  //! Third vertex.
+        };
 
 
 
