@@ -57,6 +57,7 @@
 #include <arctk/index.hpp>
 #include <arctk/index/col.hpp>
 #include <arctk/index/dimension.hpp>
+#include <arctk/index/vertex.hpp>
 #include <arctk/macro.hpp>
 #include <arctk/macro/utility.hpp>
 #include <arctk/math.hpp>
