@@ -55,6 +55,7 @@
 #include <arctk/gui/uniform.hpp>
 #include <arctk/gui/window.hpp>
 #include <arctk/index.hpp>
+#include <arctk/index/colours.hpp>
 #include <arctk/index/dimension.hpp>
 #include <arctk/macro.hpp>
 #include <arctk/macro/utility.hpp>
