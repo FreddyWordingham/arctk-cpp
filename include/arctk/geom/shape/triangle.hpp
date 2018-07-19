@@ -26,6 +26,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/geom/shape.hpp>
+#include <arctk/index.hpp>
 #include <arctk/math.hpp>
 
 
@@ -79,9 +80,9 @@ namespace arc //! arctk namespace
               , _plane_norm(init_plane_norm())
               , _area(math::geom::area(pos_))
             {
-                PRE(norm_[0].normalised());
-                PRE(norm_[1].normalised());
-                PRE(norm_[2].normalised());
+                PRE(norm_[ALPHA].normalised());
+                PRE(norm_[BETA].normalised());
+                PRE(norm_[GAMMA].normalised());
 
                 POST(_area > 0.0);
                 POST(_plane_norm.normalised());
