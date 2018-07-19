@@ -129,13 +129,6 @@ namespace arc //! arctk namespace
 
 
 
-        //  == FUNCTION PROTOTYPES ==
-        //  -- Utility --
-        template <typename T, size_t N>
-        constexpr inline Mat<T, N> indentity() noexcept;
-
-
-
         //  == INSTANTIATION ==
         //  -- Constructors --
         /**
@@ -954,32 +947,45 @@ namespace arc //! arctk namespace
 
 
 
-        //  == FUNCTIONS ==
-        //  -- Utility --
-        /**
-         *  Create an N by N identity matrix.
-         *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
-         *
-         *  @return N by N identity matrix.
-         */
-        template <typename T, size_t N>
-        constexpr inline Mat<T, N> indentity() noexcept
+        namespace mat //! matrix namespace
         {
-            Mat<T, N> mat;
 
-            for (size_t i = 0; i < N; ++i)
+
+
+            //  == FUNCTION PROTOTYPES ==
+            //  -- Utility --
+            template <typename T, size_t N>
+            constexpr inline Mat<T, N> indentity() noexcept;
+
+
+
+            //  == FUNCTIONS ==
+            //  -- Utility --
+            /**
+             *  Create an N by N identity matrix.
+             *
+             *  @tparam T   Type stored by the mat.
+             *  @tparam N   Size of the mat.
+             *
+             *  @return N by N identity matrix.
+             */
+            template <typename T, size_t N>
+            constexpr inline Mat<T, N> indentity() noexcept
             {
-                mat[i][i] = T{1};
+                Mat<T, N> mat;
+
+                for (size_t i = 0; i < N; ++i)
+                {
+                    mat[i][i] = T{1};
+                }
+
+                return (mat);
             }
 
-            return (mat);
-        }
 
 
-
-    } // namespace math
+        } // namespace mat
+    }     // namespace math
 } // namespace arc
 
 
