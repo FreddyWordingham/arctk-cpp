@@ -27,6 +27,22 @@ namespace arc //! arctk namespace
 
 
 
+        //  == Enumerations ==
+        //  -- Colours --
+        /**
+         *  Enumeration of the colour channels.
+         *  Used for index consistency.
+         */
+        enum channels
+        {
+            R, //! Red colour channel.
+            G, //! Green colour channel.
+            B, //! Blue colour channel.
+            A  //! Transparency colour channel.
+        };
+
+
+
     } // namespace col
 } // namespace arc
 
