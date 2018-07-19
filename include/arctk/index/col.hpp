@@ -3,7 +3,7 @@
  *  @date   20/07/2018
  *  @author Freddy Wordingham
  *
- *  Collection colour focused enumerations.
+ *  Collection of colour focused enumerations.
  */
 
 
