@@ -48,6 +48,8 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               protected:
                 //  -- Positioning --
+                const std::array<vec3, 3> _pos;  //!< Vertex positions.
+                const std::array<vec3, 3> _norm; //!< Vertex normals.
 
 
                 //  == INSTANTIATION ==
