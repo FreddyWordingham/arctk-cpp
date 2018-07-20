@@ -365,11 +365,11 @@ namespace arc //! arctk namespace
          *  @param  name_   Name of uniform.
          *  @param  int_    Value of uniform.
          *
-         *  @pre    name_ must exist within the integer uniform map.
+         *  @pre    name_ must not exist within the integer uniform map.
          */
         inline void Camera::set_int_uniform(const std::string& name_, const int int_) noexcept
         {
-            PRE(_int_uniform.find(name_) != _int_uniform.end());
+            PRE(_int_uniform.find(name_) == _int_uniform.end());
 
             _int_uniform.emplace(std::make_pair(name_, int_));
         }
@@ -380,11 +380,11 @@ namespace arc //! arctk namespace
          *  @param  name_   Name of uniform.
          *  @param  float_  Value of uniform.
          *
-         *  @pre    name_ must exist within the float uniform map.
+         *  @pre    name_ must not exist within the float uniform map.
          */
         inline void Camera::set_float_uniform(const std::string& name_, const float float_) noexcept
         {
-            PRE(_float_uniform.find(name_) != _float_uniform.end());
+            PRE(_float_uniform.find(name_) == _float_uniform.end());
 
             _float_uniform.emplace(std::make_pair(name_, float_));
         }
@@ -395,11 +395,11 @@ namespace arc //! arctk namespace
          *  @param  name_   Name of uniform.
          *  @param  vec2_   Value of uniform.
          *
-         *  @pre    name_ must exist within the vec2 uniform map.
+         *  @pre    name_ must not exist within the vec2 uniform map.
          */
         inline void Camera::set_vec2_uniform(const std::string& name_, const glm::vec2& vec2_) noexcept
         {
-            PRE(_vec2_uniform.find(name_) != _vec2_uniform.end());
+            PRE(_vec2_uniform.find(name_) == _vec2_uniform.end());
 
             _vec2_uniform.emplace(std::make_pair(name_, vec2_));
         }
@@ -410,11 +410,11 @@ namespace arc //! arctk namespace
          *  @param  name_   Name of uniform.
          *  @param  vec3_   Value of uniform.
          *
-         *  @pre    name_ must exist within the vec3 uniform map.
+         *  @pre    name_ must not exist within the vec3 uniform map.
          */
         inline void Camera::set_vec3_uniform(const std::string& name_, const glm::vec3& vec3_) noexcept
         {
-            PRE(_vec3_uniform.find(name_) != _vec3_uniform.end());
+            PRE(_vec3_uniform.find(name_) == _vec3_uniform.end());
 
             _vec3_uniform.emplace(std::make_pair(name_, vec3_));
         }
@@ -425,11 +425,11 @@ namespace arc //! arctk namespace
          *  @param  name_   Name of uniform.
          *  @param  vec4_   Value of uniform.
          *
-         *  @pre    name_ must exist within the vec4 uniform map.
+         *  @pre    name_ must not exist within the vec4 uniform map.
          */
         inline void Camera::set_vec4_uniform(const std::string& name_, const glm::vec4& vec4_) noexcept
         {
-            PRE(_vec4_uniform.find(name_) != _vec4_uniform.end());
+            PRE(_vec4_uniform.find(name_) == _vec4_uniform.end());
 
             _vec4_uniform.emplace(std::make_pair(name_, vec4_));
         }
@@ -440,11 +440,11 @@ namespace arc //! arctk namespace
          *  @param  name_   Name of uniform.
          *  @param  mat2_   Value of uniform.
          *
-         *  @pre    name_ must exist within the mat2 uniform map.
+         *  @pre    name_ must not exist within the mat2 uniform map.
          */
         inline void Camera::set_mat2_uniform(const std::string& name_, const glm::mat2& mat2_) noexcept
         {
-            PRE(_mat2_uniform.find(name_) != _mat2_uniform.end());
+            PRE(_mat2_uniform.find(name_) == _mat2_uniform.end());
 
             _mat2_uniform.emplace(std::make_pair(name_, mat2_));
         }
@@ -455,11 +455,11 @@ namespace arc //! arctk namespace
          *  @param  name_   Name of uniform.
          *  @param  mat3_   Value of uniform.
          *
-         *  @pre    name_ must exist within the mat3 uniform map.
+         *  @pre    name_ must not exist within the mat3 uniform map.
          */
         inline void Camera::set_mat3_uniform(const std::string& name_, const glm::mat3& mat3_) noexcept
         {
-            PRE(_mat3_uniform.find(name_) != _mat3_uniform.end());
+            PRE(_mat3_uniform.find(name_) == _mat3_uniform.end());
 
             _mat3_uniform.emplace(std::make_pair(name_, mat3_));
         }
@@ -470,11 +470,11 @@ namespace arc //! arctk namespace
          *  @param  name_   Name of uniform.
          *  @param  mat4_   Value of uniform.
          *
-         *  @pre    name_ must exist within the mat4 uniform map.
+         *  @pre    name_ must not exist within the mat4 uniform map.
          */
         inline void Camera::set_mat4_uniform(const std::string& name_, const glm::mat4& mat4_) noexcept
         {
-            PRE(_mat4_uniform.find(name_) != _mat4_uniform.end());
+            PRE(_mat4_uniform.find(name_) == _mat4_uniform.end());
 
             _mat4_uniform.emplace(std::make_pair(name_, mat4_));
         }
