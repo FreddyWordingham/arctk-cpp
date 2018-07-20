@@ -45,15 +45,6 @@
 #include <arctk/geom/shape/sphere.hpp>
 #include <arctk/geom/shape/triangle.hpp>
 #include <arctk/gui.hpp>
-#include <arctk/gui/actor.hpp>
-#include <arctk/gui/camera.hpp>
-#include <arctk/gui/camera/birdseye.hpp>
-#include <arctk/gui/camera/fly.hpp>
-#include <arctk/gui/keybind.hpp>
-#include <arctk/gui/keymap.hpp>
-#include <arctk/gui/shader.hpp>
-#include <arctk/gui/uniform.hpp>
-#include <arctk/gui/window.hpp>
 #include <arctk/index.hpp>
 #include <arctk/index/col.hpp>
 #include <arctk/index/dim.hpp>
