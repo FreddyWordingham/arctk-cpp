@@ -137,6 +137,14 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Collision --
+            /**
+             *  Determine the distance along a ray until collision within the plane the triangle rests within.
+             *
+             *  @param pos_
+             *  @param dir_
+             *
+             * @return
+             */
             inline std::optional<double> Triangle::plane_collision(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 const double denom = _plane_norm * dir_;
@@ -151,6 +159,16 @@ namespace arc //! arctk namespace
                 return ((dist < 0.0) ? std::nullopt : std::optional<double>(dist));
             }
 
+            /**
+             *  Determine if a collision event occurs between the triangle and a ray.
+             *
+             *  @param  pos_    Position of the ray.
+             *  @param  dir_    Direction of the ray.
+             *
+             *  @pre    dir_ must be normalised.
+             *
+             *  @return Optional collision distance.
+             */
             inline std::optional<double> Triangle::collision(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 PRE(dir_.normalised());
