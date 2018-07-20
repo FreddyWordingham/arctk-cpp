@@ -397,7 +397,7 @@ namespace arc //! arctk namespace
          *  @param  name_   Name of uniform.
          *  @param  int_    Value of uniform.
          *
-         *  @pre    name_ must exist within the integer uniform map.
+         *  @pre    name_ must exist within the uniform map.
          *  @pre    Uniform being modified must be controlled by the shader.
          *  @pre    Uniform being modified must be of int type.
          */
@@ -418,7 +418,7 @@ namespace arc //! arctk namespace
          *  @param  name_   Name of uniform.
          *  @param  float_  Value of uniform.
          *
-         *  @pre    name_ must exist within the float uniform map.
+         *  @pre    name_ must exist within the uniform map.
          *  @pre    Uniform being modified must be controlled by the shader.
          *  @pre    Uniform being modified must be of float type.
          */
@@ -439,7 +439,7 @@ namespace arc //! arctk namespace
          *  @param  name_   Name of uniform.
          *  @param  vec2_   Value of uniform.
          *
-         *  @pre    name_ must exist within the vec2 uniform map.
+         *  @pre    name_ must exist within the uniform map.
          *  @pre    Uniform being modified must be controlled by the shader.
          *  @pre    Uniform being modified must be of vec2 type.
          */
@@ -460,7 +460,7 @@ namespace arc //! arctk namespace
          *  @param  name_   Name of uniform.
          *  @param  vec3_   Value of uniform.
          *
-         *  @pre    name_ must exist within the vec3 uniform map.
+         *  @pre    name_ must exist within the uniform map.
          *  @pre    Uniform being modified must be controlled by the shader.
          *  @pre    Uniform being modified must be of vec3 type.
          */
@@ -481,7 +481,7 @@ namespace arc //! arctk namespace
          *  @param  name_   Name of uniform.
          *  @param  vec4_   Value of uniform.
          *
-         *  @pre    name_ must exist within the vec4 uniform map.
+         *  @pre    name_ must exist within the uniform map.
          *  @pre    Uniform being modified must be controlled by the shader.
          *  @pre    Uniform being modified must be of vec4 type.
          */
@@ -502,7 +502,7 @@ namespace arc //! arctk namespace
          *  @param  name_   Name of uniform.
          *  @param  mat2_   Value of uniform.
          *
-         *  @pre    name_ must exist within the mat2 uniform map.
+         *  @pre    name_ must exist within the uniform map.
          *  @pre    Uniform being modified must be controlled by the shader.
          *  @pre    Uniform being modified must be of mat2 type.
          */
@@ -523,7 +523,7 @@ namespace arc //! arctk namespace
          *  @param  name_   Name of uniform.
          *  @param  mat3_   Value of uniform.
          *
-         *  @pre    name_ must exist within the mat3 uniform map.
+         *  @pre    name_ must exist within the uniform map.
          *  @pre    Uniform being modified must be controlled by the shader.
          *  @pre    Uniform being modified must be of mat3 type.
          */
@@ -544,7 +544,7 @@ namespace arc //! arctk namespace
          *  @param  name_   Name of uniform.
          *  @param  mat4_   Value of uniform.
          *
-         *  @pre    name_ must exist within the mat4 uniform map.
+         *  @pre    name_ must exist within the uniform map.
          *  @pre    Uniform being modified must be controlled by the shader.
          *  @pre    Uniform being modified must be of mat4 type.
          */
