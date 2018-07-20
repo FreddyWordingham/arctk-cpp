@@ -111,9 +111,7 @@ namespace arc //! arctk namespace
              *  @param  norm_   Normals of the vertices.
              *
              *  @post   plane_norm must be normalised.
-             *  @post   plane_norm norm_[ALPHA] dot product must be greater than zero.
-             *  @post   plane_norm norm_[BETA] dot product must be greater than zero.
-             *  @post   plane_norm norm_[GAMMA] dot product must be greater than zero.
+             *  @post   plane_norm norm_ dot products must be greater than zero.
              *
              *  @return The normal vector of the triangle's plane.
              */
