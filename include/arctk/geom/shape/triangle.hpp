@@ -153,8 +153,14 @@ namespace arc //! arctk namespace
                 return (_norm);
             }
 
-            inline const double area() const noexcept;
-            inline const vec3&  plane_norm() const noexcept;
+            inline const double Triangle::area() const noexcept
+            {
+                return (_area);
+            }
+
+            inline const vec3& Triangle::plane_norm() const noexcept
+            {
+            }
 
 
             //  -- Collision --
