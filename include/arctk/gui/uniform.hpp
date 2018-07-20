@@ -96,6 +96,7 @@ namespace arc //! arctk namespace
         }
 
 
+
         //  == METHODS ==
         //  -- Getters --
         inline const GLint Uniform::handle() noexcept
