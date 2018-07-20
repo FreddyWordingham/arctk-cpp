@@ -119,6 +119,7 @@ namespace arc //! arctk namespace
             inline void set_trans(const glm::vec3& trans_) noexcept;
             inline void set_rotate(const glm::vec3& rotate_) noexcept;
             inline void set_scale(const glm::vec3& scale_) noexcept;
+            inline void add_uniform(std::string& name_, const Uniform::stored type_) noexcept;
             inline void set_int_uniform(const std::string& name_, int int_) noexcept;
             inline void set_float_uniform(const std::string& name_, float float_) noexcept;
             inline void set_vec2_uniform(const std::string& name_, const glm::vec2& vec2_) noexcept;
@@ -488,6 +489,27 @@ namespace arc //! arctk namespace
             _scale = scale_;
 
             update_model();
+        }
+
+        inline void Actor::add_uniform(std::string& name_, const Uniform::stored type_) noexcept
+        {
+            switch (type_)
+            {
+                case Uniform::stored::INT:
+                    PRE(_int_uniform.find(name_) == _int_uniform.end());
+                    _int_uniform.emplace(std::make_pair(name_, 0));
+                case Uniform::stored::FLOAT:
+                    PRE(_float_uniform.find(name_) == _float_uniform.end());
+                    _float_uniform.emplace(std::make_pair(name_, 0.0f));
+                case Uniform::stored::VEC2:
+                    PRE(_float_uniform.find(name_) == _float_uniform.end());
+                    _float_uniform.emplace(std::make_pair(name_, glm::vec2(0.0f, 0.0f)));
+                case Uniform::stored::VEC3:
+                case Uniform::stored::VEC4:
+                case Uniform::stored::MAT2:
+                case Uniform::stored::MAT3:
+                case Uniform::stored::MAT4:
+            }
         }
 
         /**
