@@ -70,7 +70,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const GLint handle() noexcept;
+            inline const GLint  handle() noexcept;
+            inline const size_t type_hash() noexcept;
         };
 
 
@@ -100,6 +101,11 @@ namespace arc //! arctk namespace
         inline const GLint Uniform::handle() noexcept
         {
             return (_handle);
+        }
+
+        inline const size_t Uniform::type_hash() noexcept
+        {
+            return (_type_hash);
         }
 
 
