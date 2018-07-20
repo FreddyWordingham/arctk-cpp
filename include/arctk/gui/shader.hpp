@@ -393,6 +393,8 @@ namespace arc //! arctk namespace
 
         /**
          *  Set the value of an integer uniform.
+         *  Uniform must have been added before it may be set.
+         *  Uniform must be shader controlled to be set using the shader directly.
          *
          *  @param  name_   Name of uniform.
          *  @param  int_    Value of uniform.
@@ -410,6 +412,8 @@ namespace arc //! arctk namespace
 
         /**
          *  Set the value of a float uniform.
+         *  Uniform must have been added before it may be set.
+         *  Uniform must be shader controlled to be set using the shader directly.
          *
          *  @param  name_   Name of uniform.
          *  @param  float_  Value of uniform.
@@ -427,6 +431,8 @@ namespace arc //! arctk namespace
 
         /**
          *  Set the value of a vec2 uniform.
+         *  Uniform must have been added before it may be set.
+         *  Uniform must be shader controlled to be set using the shader directly.
          *
          *  @param  name_   Name of uniform.
          *  @param  vec2_   Value of uniform.
@@ -444,6 +450,8 @@ namespace arc //! arctk namespace
 
         /**
          *  Set the value of a vec3 uniform.
+         *  Uniform must have been added before it may be set.
+         *  Uniform must be shader controlled to be set using the shader directly.
          *
          *  @param  name_   Name of uniform.
          *  @param  vec3_   Value of uniform.
@@ -461,6 +469,8 @@ namespace arc //! arctk namespace
 
         /**
          *  Set the value of a vec4 uniform.
+         *  Uniform must have been added before it may be set.
+         *  Uniform must be shader controlled to be set using the shader directly.
          *
          *  @param  name_   Name of uniform.
          *  @param  vec4_   Value of uniform.
@@ -478,6 +488,8 @@ namespace arc //! arctk namespace
 
         /**
          *  Set the value of a mat2 uniform.
+         *  Uniform must have been added before it may be set.
+         *  Uniform must be shader controlled to be set using the shader directly.
          *
          *  @param  name_   Name of uniform.
          *  @param  mat2_   Value of uniform.
@@ -495,6 +507,8 @@ namespace arc //! arctk namespace
 
         /**
          *  Set the value of a mat3 uniform.
+         *  Uniform must have been added before it may be set.
+         *  Uniform must be shader controlled to be set using the shader directly.
          *
          *  @param  name_   Name of uniform.
          *  @param  mat3_   Value of uniform.
@@ -512,6 +526,8 @@ namespace arc //! arctk namespace
 
         /**
          *  Set the value of a mat4 uniform.
+         *  Uniform must have been added before it may be set.
+         *  Uniform must be shader controlled to be set using the shader directly.
          *
          *  @param  name_   Name of uniform.
          *  @param  mat4_   Value of uniform.
