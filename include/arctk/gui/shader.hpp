@@ -404,6 +404,7 @@ namespace arc //! arctk namespace
         inline void Shader::set_uniform(const std::string& name_, const int int_) noexcept
         {
             PRE(_uniform.find(name_) != _uniform.end());
+            PRE(_uniform.find(name_).control() == Uniform::controller::SHADER);
 
             glUseProgram(_handle);
 
@@ -423,6 +424,7 @@ namespace arc //! arctk namespace
         inline void Shader::set_uniform(const std::string& name_, const float float_) noexcept
         {
             PRE(_uniform.find(name_) != _uniform.end());
+            PRE(_uniform.find(name_).control() == Uniform::controller::SHADER);
 
             glUseProgram(_handle);
 
@@ -442,6 +444,7 @@ namespace arc //! arctk namespace
         inline void Shader::set_uniform(const std::string& name_, const glm::vec2& vec2_) noexcept
         {
             PRE(_uniform.find(name_) != _uniform.end());
+            PRE(_uniform.find(name_).control() == Uniform::controller::SHADER);
 
             glUseProgram(_handle);
 
@@ -461,6 +464,7 @@ namespace arc //! arctk namespace
         inline void Shader::set_uniform(const std::string& name_, const glm::vec3& vec3_) noexcept
         {
             PRE(_uniform.find(name_) != _uniform.end());
+            PRE(_uniform.find(name_).control() == Uniform::controller::SHADER);
 
             glUseProgram(_handle);
 
@@ -480,6 +484,7 @@ namespace arc //! arctk namespace
         inline void Shader::set_uniform(const std::string& name_, const glm::vec4& vec4_) noexcept
         {
             PRE(_uniform.find(name_) != _uniform.end());
+            PRE(_uniform.find(name_).control() == Uniform::controller::SHADER);
 
             glUseProgram(_handle);
 
@@ -499,6 +504,7 @@ namespace arc //! arctk namespace
         inline void Shader::set_uniform(const std::string& name_, const glm::mat2& mat2_) noexcept
         {
             PRE(_uniform.find(name_) != _uniform.end());
+            PRE(_uniform.find(name_).control() == Uniform::controller::SHADER);
 
             glUseProgram(_handle);
 
@@ -518,6 +524,7 @@ namespace arc //! arctk namespace
         inline void Shader::set_uniform(const std::string& name_, const glm::mat3& mat3_) noexcept
         {
             PRE(_uniform.find(name_) != _uniform.end());
+            PRE(_uniform.find(name_).control() == Uniform::controller::SHADER);
 
             glUseProgram(_handle);
 
@@ -537,6 +544,7 @@ namespace arc //! arctk namespace
         inline void Shader::set_uniform(const std::string& name_, const glm::mat4& mat4_) noexcept
         {
             PRE(_uniform.find(name_) != _uniform.end());
+            PRE(_uniform.find(name_).control() == Uniform::controller::SHADER);
 
             glUseProgram(_handle);
 
