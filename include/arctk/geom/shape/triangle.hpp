@@ -161,7 +161,7 @@ namespace arc //! arctk namespace
                 const vec3   p   = dir_ ^ edge_ac;
                 const double det = edge_ab * p;
 
-                if (math::compare::zero(denom))
+                if (math::compare::zero(det))
                 {
                     return (std::nullopt);
                 }
