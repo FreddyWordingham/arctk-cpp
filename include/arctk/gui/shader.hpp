@@ -399,6 +399,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    name_ must exist within the integer uniform map.
          *  @pre    Uniform being modified must be controlled by the shader.
+         *  @pre    Uniform being modified must be of int type.
          */
         inline void Shader::set_uniform(const std::string& name_, const int int_) noexcept
         {
@@ -419,6 +420,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    name_ must exist within the float uniform map.
          *  @pre    Uniform being modified must be controlled by the shader.
+         *  @pre    Uniform being modified must be of float type.
          */
         inline void Shader::set_uniform(const std::string& name_, const float float_) noexcept
         {
@@ -439,6 +441,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    name_ must exist within the vec2 uniform map.
          *  @pre    Uniform being modified must be controlled by the shader.
+         *  @pre    Uniform being modified must be of vec2 type.
          */
         inline void Shader::set_uniform(const std::string& name_, const glm::vec2& vec2_) noexcept
         {
@@ -459,6 +462,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    name_ must exist within the vec3 uniform map.
          *  @pre    Uniform being modified must be controlled by the shader.
+         *  @pre    Uniform being modified must be of vec3 type.
          */
         inline void Shader::set_uniform(const std::string& name_, const glm::vec3& vec3_) noexcept
         {
@@ -479,6 +483,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    name_ must exist within the vec4 uniform map.
          *  @pre    Uniform being modified must be controlled by the shader.
+         *  @pre    Uniform being modified must be of vec4 type.
          */
         inline void Shader::set_uniform(const std::string& name_, const glm::vec4& vec4_) noexcept
         {
@@ -499,6 +504,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    name_ must exist within the mat2 uniform map.
          *  @pre    Uniform being modified must be controlled by the shader.
+         *  @pre    Uniform being modified must be of mat2 type.
          */
         inline void Shader::set_uniform(const std::string& name_, const glm::mat2& mat2_) noexcept
         {
@@ -519,6 +525,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    name_ must exist within the mat3 uniform map.
          *  @pre    Uniform being modified must be controlled by the shader.
+         *  @pre    Uniform being modified must be of mat3 type.
          */
         inline void Shader::set_uniform(const std::string& name_, const glm::mat3& mat3_) noexcept
         {
@@ -539,6 +546,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    name_ must exist within the mat4 uniform map.
          *  @pre    Uniform being modified must be controlled by the shader.
+         *  @pre    Uniform being modified must be of mat4 type.
          */
         inline void Shader::set_uniform(const std::string& name_, const glm::mat4& mat4_) noexcept
         {
