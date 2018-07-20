@@ -20,6 +20,10 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <typeid>
+#include <typeinfo>
+
 //  -- Graphical --
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -40,14 +44,18 @@ namespace arc //! arctk namespace
         //  == CLASS ==
         /**
          *  Shader uniform object.
-         *
-         *  @tparam T   Type controlled by the uniform.
          */
-        template <typename T>
         class Uniform
         {
             //  == FIELDS ==
           private:
+            //  -- Handle --
+            const GLint _handle; //!< Uniform handle.
+
+            //  -- Info --
+            const size_t type_hash; //!< Handled type hash.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
