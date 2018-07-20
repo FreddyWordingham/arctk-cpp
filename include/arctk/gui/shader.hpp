@@ -404,6 +404,7 @@ namespace arc //! arctk namespace
         {
             PRE(_uniform.find(name_) != _uniform.end());
             PRE(_uniform.find(name_).control() == Uniform::controller::SHADER);
+            PRE(_uniform.find(name_).type() == Uniform::controller::INT);
 
             glUseProgram(_handle);
 
@@ -423,6 +424,7 @@ namespace arc //! arctk namespace
         {
             PRE(_uniform.find(name_) != _uniform.end());
             PRE(_uniform.find(name_).control() == Uniform::controller::SHADER);
+            PRE(_uniform.find(name_).type() == Uniform::controller::FLOAT);
 
             glUseProgram(_handle);
 
@@ -442,6 +444,7 @@ namespace arc //! arctk namespace
         {
             PRE(_uniform.find(name_) != _uniform.end());
             PRE(_uniform.find(name_).control() == Uniform::controller::SHADER);
+            PRE(_uniform.find(name_).type() == Uniform::controller::VEC2);
 
             glUseProgram(_handle);
 
@@ -461,6 +464,7 @@ namespace arc //! arctk namespace
         {
             PRE(_uniform.find(name_) != _uniform.end());
             PRE(_uniform.find(name_).control() == Uniform::controller::SHADER);
+            PRE(_uniform.find(name_).type() == Uniform::controller::VEC3);
 
             glUseProgram(_handle);
 
@@ -480,6 +484,7 @@ namespace arc //! arctk namespace
         {
             PRE(_uniform.find(name_) != _uniform.end());
             PRE(_uniform.find(name_).control() == Uniform::controller::SHADER);
+            PRE(_uniform.find(name_).type() == Uniform::controller::VEC4);
 
             glUseProgram(_handle);
 
@@ -499,6 +504,7 @@ namespace arc //! arctk namespace
         {
             PRE(_uniform.find(name_) != _uniform.end());
             PRE(_uniform.find(name_).control() == Uniform::controller::SHADER);
+            PRE(_uniform.find(name_).type() == Uniform::controller::MAT2);
 
             glUseProgram(_handle);
 
@@ -518,6 +524,7 @@ namespace arc //! arctk namespace
         {
             PRE(_uniform.find(name_) != _uniform.end());
             PRE(_uniform.find(name_).control() == Uniform::controller::SHADER);
+            PRE(_uniform.find(name_).type() == Uniform::controller::MAT3);
 
             glUseProgram(_handle);
 
@@ -537,6 +544,7 @@ namespace arc //! arctk namespace
         {
             PRE(_uniform.find(name_) != _uniform.end());
             PRE(_uniform.find(name_).control() == Uniform::controller::SHADER);
+            PRE(_uniform.find(name_).type() == Uniform::controller::MAT4);
 
             glUseProgram(_handle);
 
