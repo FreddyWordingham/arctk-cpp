@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
                 //  -- Getters --
                 inline const std::array<vec3, 3>& pos() const noexcept;
                 inline const std::array<vec3, 3>& norm() const noexcept;
-                inline const double               area() const noexcept;
+                inline double                     area() const noexcept;
                 inline const vec3&                plane_norm() const noexcept;
 
                 //  -- Collision --
@@ -153,7 +153,7 @@ namespace arc //! arctk namespace
                 return (_norm);
             }
 
-            inline const double Triangle::area() const noexcept
+            inline double Triangle::area() const noexcept
             {
                 return (_area);
             }
