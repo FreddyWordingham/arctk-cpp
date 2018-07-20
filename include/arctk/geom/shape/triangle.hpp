@@ -146,7 +146,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                const double dist = ((_pos[index::vertex::ALPHA] - pos_) * _dir) / denom;
+                const double dist = ((_pos[index::vertex::ALPHA] - pos_) * _plane_norm) / denom;
 
                 return ((dist < 0.0) ? std::nullopt : std::optional<double>(dist));
             }
