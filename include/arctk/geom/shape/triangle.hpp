@@ -70,6 +70,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Collision --
+                inline std::optional<double> plane_collision(const vec3& pos_, const vec3& dir_) const noexcept;
                 inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
 
@@ -135,6 +136,24 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Collision --
+            inline std::optional<double> Triangle::plane_collision(const vec3& pos_, const vec3& dir_) const noexcept
+            {
+                const double denom = _dir * dir_;
+
+                if (math::compare::zero(denom))
+                {
+                    return (std::nullopt);
+                }
+
+                const double dist = ((_pos - pos_) * _dir) / denom;
+
+                return ((dist < 0.0) ? std::nullopt : std::optional<double>(dist));
+            }
+
+            inline std::optional<double> Triangle::collision(const vec3& pos_, const vec3& dir_) const noexcept
+            {
+            }
 
 
 
