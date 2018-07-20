@@ -58,6 +58,11 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
           public:
+            //  -- Factories --
+            template <typename T>
+            static inline create(const GLint handle_) noexcept;
+
+          private:
             //  -- Constructors --
             inline Uniform(const GLint handle_, const size_t type_hash_) noexcept;
 
@@ -70,6 +75,16 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION --
+        //  -- Factories --
+        template <typename T>
+        static inline create(const GLint handle_) noexcept
+        {
+            PRE(handle_ >= 0);
+
+            return (handle_, typeid(T).hash_code());
+        }
+
+
         //  -- Constructors --
         inline Uniform::Uniform(const GLint handle_, const size_t type_hash_) noexcept
           : _handle(handle_)
