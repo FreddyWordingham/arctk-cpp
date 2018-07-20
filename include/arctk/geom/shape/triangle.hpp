@@ -139,14 +139,14 @@ namespace arc //! arctk namespace
             //  -- Collision --
             inline std::optional<double> Triangle::plane_collision(const vec3& pos_, const vec3& dir_) const noexcept
             {
-                const double denom = _dir * dir_;
+                const double denom = _plane_norm * dir_;
 
                 if (math::compare::zero(denom))
                 {
                     return (std::nullopt);
                 }
 
-                const double dist = ((_pos - pos_) * _dir) / denom;
+                const double dist = ((_pos[index::vertex::ALPHA] - pos_) * _dir) / denom;
 
                 return ((dist < 0.0) ? std::nullopt : std::optional<double>(dist));
             }
