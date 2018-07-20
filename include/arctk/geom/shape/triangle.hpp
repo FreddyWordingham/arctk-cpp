@@ -83,9 +83,9 @@ namespace arc //! arctk namespace
               , _plane_norm(init_plane_norm(pos_, norm_))
               , _area(math::geom::area(pos_))
             {
-                PRE(norm_[ALPHA].normalised());
-                PRE(norm_[BETA].normalised());
-                PRE(norm_[GAMMA].normalised());
+                PRE(norm_[index::vertex::ALPHA].normalised());
+                PRE(norm_[index::vertex::BETA].normalised());
+                PRE(norm_[index::vertex::GAMMA].normalised());
 
                 POST(_area > 0.0);
                 POST(_plane_norm.normalised());
@@ -95,17 +95,17 @@ namespace arc //! arctk namespace
             //  -- Initialisation --
             inline vec3 Triangle::init_plane_norm(const std::array<vec3, 3> pos_, const std::array<vec3, 3> norm_) noexcept
             {
-                vec3 plane_norm = math::vec::normalise((pos_[BETA] - pos_[ALPHA]) ^ (pos_[GAMMA] - pos_[ALPHA]));
+                vec3 plane_norm = math::vec::normalise((pos_[index::vertex::BETA] - pos_[index::vertex::ALPHA]) ^ (pos_[index::vertex::GAMMA] - pos_[index::vertex::ALPHA]));
 
-                if ((plane_norm * (norm_[ALPHA] + norm_[BETA] + norm_[GAMMA])) < 0.0)
+                if ((plane_norm * (norm_[index::vertex::ALPHA] + norm_[index::vertex::BETA] + norm_[index::vertex::GAMMA])) < 0.0)
                 {
                     plane_norm *= -1.0;
                 }
 
                 PRE(plane_norm.normalised());
-                PRE((plane_norm * norm_[ALPHA]) > 0.0);
-                PRE((plane_norm * norm_[BETA]) > 0.0);
-                PRE((plane_norm * norm_[GAMMA]) > 0.0);
+                PRE((plane_norm * norm_[index::vertex::ALPHA]) > 0.0);
+                PRE((plane_norm * norm_[index::vertex::BETA]) > 0.0);
+                PRE((plane_norm * norm_[index::vertex::GAMMA]) > 0.0);
 
                 return (plane_norm);
             }
