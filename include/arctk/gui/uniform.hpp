@@ -67,9 +67,9 @@ namespace arc //! arctk namespace
              */
             enum class controller
             {
+                SHADER,
                 CAMERA,
-                ACTOR,
-                USER
+                ACTOR
             };
 
 
