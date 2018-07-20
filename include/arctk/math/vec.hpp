@@ -801,7 +801,7 @@ namespace arc //! arctk namespace
 
                 vec.normalise();
 
-                POST(vec.normalised);
+                POST(vec.normalised());
 
                 return (vec);
             }
