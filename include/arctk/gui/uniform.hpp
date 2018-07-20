@@ -99,11 +99,21 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the uniform handle.
+         *
+         *  @return Uniform handle.
+         */
         inline const GLint Uniform::handle() noexcept
         {
             return (_handle);
         }
 
+        /**
+         *  Get the uniform type hash.
+         *
+         *  @return Uniform type hash.
+         */
         inline const size_t Uniform::type_hash() noexcept
         {
             return (_type_hash);
