@@ -776,14 +776,14 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Utility --
             template <typename T, size_t N>
-            inline Vec<T, N> normalise() noexcept;
+            inline Vec<T, N> normalise(const Vec<T, N>& vec_) noexcept;
 
 
 
             //  == FUNCTIONS ==
             //  -- Utility --
             template <typename T, size_t N>
-            inline Vec<T, N> normalise() noexcept
+            inline Vec<T, N> normalise(const Vec<T, N>& vec_) noexcept
             {
                 Vec<T, N> vec = vec_;
 
