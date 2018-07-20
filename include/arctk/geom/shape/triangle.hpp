@@ -160,6 +160,7 @@ namespace arc //! arctk namespace
 
             inline const vec3& Triangle::plane_norm() const noexcept
             {
+                return (_plane_norm);
             }
 
 
