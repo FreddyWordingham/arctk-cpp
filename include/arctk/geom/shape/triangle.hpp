@@ -80,8 +80,8 @@ namespace arc //! arctk namespace
             inline Triangle::Triangle(const std::array<vec3, 3> pos_, const std::array<vec3, 3> norm_) noexcept
               : _pos(pos_)
               , _norm(norm_)
-              , _plane_norm(init_plane_norm(pos_, norm_))
               , _area(math::geom::area(pos_))
+              , _plane_norm(init_plane_norm(pos_, norm_))
             {
                 PRE(norm_[index::vertex::ALPHA].normalised());
                 PRE(norm_[index::vertex::BETA].normalised());
