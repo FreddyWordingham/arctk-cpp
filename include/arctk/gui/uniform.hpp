@@ -90,6 +90,7 @@ namespace arc //! arctk namespace
           : _handle(handle_)
           , _type_hash(type_hash_)
         {
+            PRE(handle_ >= 0);
         }
 
 
