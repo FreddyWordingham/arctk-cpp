@@ -166,7 +166,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                const vec3   t = pos_ - _pos[ALPHA];
+                const vec3   t = pos_ - _pos[index::vertex::ALPHA];
                 const double u = (t * p) / det;
 
                 if ((u < 0.0) || (u > 1.0))
