@@ -155,8 +155,8 @@ namespace arc //! arctk namespace
             {
                 PRE(dir_.normalised());
 
-                const vec3 edge_ab = _pos[BETA] - _pos[ALPHA];
-                const vec3 edge_ac = _pos[GAMMA] - _pos[ALPHA];
+                const vec3 edge_ab = _pos[index::vertex::BETA] - _pos[index::vertex::ALPHA];
+                const vec3 edge_ac = _pos[index::vertex::GAMMA] - _pos[index::vertex::ALPHA];
 
                 const vec3   p   = dir_ ^ edge_ac;
                 const double det = edge_ab * p;
