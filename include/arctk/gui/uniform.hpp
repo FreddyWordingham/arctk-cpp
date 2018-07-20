@@ -53,12 +53,14 @@ namespace arc //! arctk namespace
             const GLint _handle; //!< Uniform handle.
 
             //  -- Info --
-            const size_t type_hash; //!< Handled type hash.
+            const size_t _type_hash; //!< Handled type hash.
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            template <typename T>
+            inline Uniform(const GLint handle_) noexcept;
 
 
             //  == METHODS ==
@@ -70,6 +72,12 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        template <typename T>
+        inline Uniform::Uniform(const GLint handle_) noexcept
+          : _handle(handle_)
+          , _type_hash(typeid(T).hash_code())
+        {
+        }
 
 
 
