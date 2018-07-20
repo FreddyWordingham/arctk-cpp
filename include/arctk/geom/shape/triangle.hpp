@@ -69,6 +69,10 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline const std::array<vec3, 3>& pos() noexcept;
+                inline const std::array<vec3, 3>& norm() noexcept;
+
                 //  -- Collision --
                 inline std::optional<double> plane_collision(const vec3& pos_, const vec3& dir_) const noexcept;
                 inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -136,6 +140,17 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Getters --
+            inline const std::array<vec3, 3>& Triangle::pos() noexcept
+            {
+                return (_pos);
+            }
+
+            inline const std::array<vec3, 3>& Triangle::norm() noexcept
+            {
+            }
+
+
             //  -- Collision --
             /**
              *  Determine if a collision event occurs between the plane the triangle rests in and a ray.
