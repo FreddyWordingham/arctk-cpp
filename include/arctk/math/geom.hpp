@@ -52,6 +52,17 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Length --
+            /**
+             *  Determine the distance between two points.
+             *
+             *  @tparam T   Type stored by the vecs.
+             *  @tparam N   Dimension of the vecs.
+             *
+             *  @param  start_  Start position.
+             *  @param  end_    End position.
+             *
+             *  @return Distance between the points.
+             */
             template <typename T, size_t N>
             inline T distance(const Vec<T, N>& start_, const Vec<T, N>& end_) noexcept
             {
