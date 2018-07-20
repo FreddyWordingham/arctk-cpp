@@ -95,7 +95,7 @@ namespace arc //! arctk namespace
             //  -- Initialisation --
             inline vec3 Triangle::init_plane_norm(const std::array<vec3, 3> pos_, const std::array<vec3, 3> norm_) noexcept
             {
-                vec3 plane_norm = math::vec::normalise((pos_[BETA] - pos_[ALPHA]) ^ (pos_[GAMMA] - pos_[ALPHA]));
+                const vec3 plane_norm = math::vec::normalise((pos_[BETA] - pos_[ALPHA]) ^ (pos_[GAMMA] - pos_[ALPHA]));
 
                 if ((plane_norm * (norm_[ALPHA] + norm_[BETA] + norm_[GAMMA])) < 0.0)
                 {
