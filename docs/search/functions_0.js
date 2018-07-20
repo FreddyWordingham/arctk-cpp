@@ -8,6 +8,7 @@ var searchData=
   ['always_5fless_5fthan',['always_less_than',['../namespacearc_1_1utl_1_1properties.html#aaad8661a5245bd59fb0bca8aebf96546',1,'arc::utl::properties']]],
   ['always_5fless_5fthan_5for_5fequal_5fto',['always_less_than_or_equal_to',['../namespacearc_1_1utl_1_1properties.html#aad60e4b8e1b434450009e8fbce91f2fe',1,'arc::utl::properties']]],
   ['angle',['angle',['../classarc_1_1math_1_1_quat.html#a505102fa40d8bbbad8c7555092041e6b',1,'arc::math::Quat']]],
+  ['area',['area',['../namespacearc_1_1math_1_1geom.html#a475dc5533aec7b9caaa0a024f25f0689',1,'arc::math::geom']]],
   ['args',['Args',['../classarc_1_1sys_1_1_args.html#a2bd0defa3860b1487b0187d2bca8120b',1,'arc::sys::Args']]],
   ['argv',['argv',['../classarc_1_1sys_1_1_args.html#a078094567d6216d185adb85d5f7d3955',1,'arc::sys::Args']]],
   ['ascend',['ascend',['../classarc_1_1data_1_1histogram_1_1_dynamic_3_01_t_00_011_01_4.html#a29b696378d930a5b9a6f048bf31b7ce1',1,'arc::data::histogram::Dynamic&lt; T, 1 &gt;']]],

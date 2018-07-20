@@ -43,5 +43,7 @@ var searchData=
   ['version_5fmajor',['VERSION_MAJOR',['../namespacearc_1_1config.html#a2d17637229eb1a5c1cd130d0945a5308',1,'arc::config']]],
   ['version_5fminor',['VERSION_MINOR',['../namespacearc_1_1config.html#ad647132a40a28b2241f0406b168c1874',1,'arc::config']]],
   ['version_5fpatch',['VERSION_PATCH',['../namespacearc_1_1config.html#afc8283f15f7b5502fe48b6616a5d1207',1,'arc::config']]],
+  ['vertex_2ehpp',['vertex.hpp',['../vertex_8hpp.html',1,'']]],
+  ['vertices',['vertices',['../namespacearc_1_1index_1_1vertex.html#aa5123cac51381d20074da1770823be40',1,'arc::index::vertex']]],
   ['view_5fproj',['view_proj',['../classarc_1_1gui_1_1_camera.html#acfd4b22cdf9b457ca41cb3be217d1656',1,'arc::gui::Camera::view_proj()'],['../classarc_1_1gui_1_1_shader.html#a3e78a3471bf610d9fe56bb3722f94ea9',1,'arc::gui::Shader::view_proj()']]]
 ];

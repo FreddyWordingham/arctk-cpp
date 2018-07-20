@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['_5farea',['_area',['../classarc_1_1geom_1_1shape_1_1_triangle.html#a4da390e2002fa7b2d5cd1e41b3a4c287',1,'arc::geom::shape::Triangle']]],
   ['_5fargv',['_argv',['../classarc_1_1sys_1_1_args.html#a8347075c84ef34938bd1d012f9426274',1,'arc::sys::Args']]],
   ['_5faspect_5fratio',['_aspect_ratio',['../classarc_1_1gui_1_1camera_1_1_fly.html#a7fcfa719fca6099351c96b922ab614d3',1,'arc::gui::camera::Fly']]],
   ['_5fave',['_ave',['../classarc_1_1random_1_1distribution_1_1_gaussian.html#a81d62129ea957418faa994eb3f3a3233',1,'arc::random::distribution::Gaussian']]],
@@ -36,9 +37,11 @@ var searchData=
   ['_5fmisses',['_misses',['../classarc_1_1data_1_1histogram_1_1_average_3_01_t_00_011_01_4.html#a30104635f54045c52e08af2bf07a39c5',1,'arc::data::histogram::Average&lt; T, 1 &gt;::_misses()'],['../classarc_1_1data_1_1histogram_1_1_fixed_3_01_t_00_011_01_4.html#a95b5d88518a2eb2b1fcc705f3b8f9168',1,'arc::data::histogram::Fixed&lt; T, 1 &gt;::_misses()'],['../classarc_1_1data_1_1histogram_1_1_fixed_3_01_t_00_012_01_4.html#aeb7d0842ab28798aa21a5a73a8efa8a2',1,'arc::data::histogram::Fixed&lt; T, 2 &gt;::_misses()']]],
   ['_5fmodel',['_model',['../classarc_1_1gui_1_1_actor.html#a6ae4cb9573382ba616dd2dce41941876',1,'arc::gui::Actor::_model()'],['../classarc_1_1gui_1_1_shader.html#ab5137b8156c28956fa9e4bdf2b1a713b',1,'arc::gui::Shader::_model()']]],
   ['_5fnext_5fseed',['_next_seed',['../classarc_1_1random_1_1_generator.html#a08ef7eadad8b178e2d05cdad396056cb',1,'arc::random::Generator']]],
+  ['_5fnorm',['_norm',['../classarc_1_1geom_1_1shape_1_1_triangle.html#aadce2591d2e23dc475eee3062c69e668',1,'arc::geom::shape::Triangle']]],
   ['_5fnum_5fvert',['_num_vert',['../classarc_1_1gui_1_1_actor.html#ab76c2799d8258b67edf0c130566dc496',1,'arc::gui::Actor']]],
   ['_5fpixels',['_pixels',['../classarc_1_1data_1_1image_1_1_greyscale.html#aa265595e8aed7215ed10b1f8a78e2c1c',1,'arc::data::image::Greyscale']]],
-  ['_5fpos',['_pos',['../classarc_1_1geom_1_1shape_1_1_plane.html#a8a4416d053de432fa99062b5d361b46b',1,'arc::geom::shape::Plane::_pos()'],['../classarc_1_1geom_1_1shape_1_1_sphere.html#ad3afcc68f2d462f1d70e729979558fe5',1,'arc::geom::shape::Sphere::_pos()'],['../classarc_1_1gui_1_1_camera.html#aab4f5dea22e2518c862575760dc89a93',1,'arc::gui::Camera::_pos()'],['../classarc_1_1phys_1_1_particle.html#ad96264059302e6c60c98c6a2d13888f3',1,'arc::phys::Particle::_pos()']]],
+  ['_5fplane_5fnorm',['_plane_norm',['../classarc_1_1geom_1_1shape_1_1_triangle.html#a1aa75e6f1c42143299c908b272dc4d9c',1,'arc::geom::shape::Triangle']]],
+  ['_5fpos',['_pos',['../classarc_1_1geom_1_1shape_1_1_plane.html#a8a4416d053de432fa99062b5d361b46b',1,'arc::geom::shape::Plane::_pos()'],['../classarc_1_1geom_1_1shape_1_1_sphere.html#ad3afcc68f2d462f1d70e729979558fe5',1,'arc::geom::shape::Sphere::_pos()'],['../classarc_1_1geom_1_1shape_1_1_triangle.html#a3ecf2c82237d6d65e7c1f796cf878d22',1,'arc::geom::shape::Triangle::_pos()'],['../classarc_1_1gui_1_1_camera.html#aab4f5dea22e2518c862575760dc89a93',1,'arc::gui::Camera::_pos()'],['../classarc_1_1phys_1_1_particle.html#ad96264059302e6c60c98c6a2d13888f3',1,'arc::phys::Particle::_pos()']]],
   ['_5fprimitive_5ftype',['_primitive_type',['../classarc_1_1gui_1_1_actor.html#aa2f24e3a54c8aeae4d22f48bcbd426eb',1,'arc::gui::Actor']]],
   ['_5fprobs',['_probs',['../classarc_1_1random_1_1distribution_1_1_linear.html#a96a8d01d651558b9b047c63610eb6903',1,'arc::random::distribution::Linear']]],
   ['_5fprog_5fname',['_prog_name',['../classarc_1_1sys_1_1_args.html#ad29d8d283f0fd67e9304d9d6e2e5c2bc',1,'arc::sys::Args']]],

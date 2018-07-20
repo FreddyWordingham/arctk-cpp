@@ -1,5 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classarc_1_1geom_1_1_shape.html" title="arc::geom::Shape" alt="" coords="5,31,132,56"/>
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_plane.html" title="arc::geom::shape::Plane" alt="" coords="184,5,350,31"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_sphere.html" title="arc::geom::shape::Sphere" alt="" coords="180,55,355,80"/>
+<area shape="rect" id="node1" href="$classarc_1_1geom_1_1_shape.html" title="arc::geom::Shape" alt="" coords="5,55,132,80"/>
+<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_plane.html" title="arc::geom::shape::Plane" alt="" coords="187,5,353,31"/>
+<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_sphere.html" title="arc::geom::shape::Sphere" alt="" coords="182,55,357,80"/>
+<area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_triangle.html" title="arc::geom::shape::Triangle" alt="" coords="180,104,359,129"/>
 </map>

@@ -1,6 +1,8 @@
 <map id="arc::math::Vec::normalised" name="arc::math::Vec::normalised">
-<area shape="rect" id="node2" href="$classarc_1_1math_1_1_vec.html#abd22cbc8c212fac61b31df11cea46866" title="arc::math::Vec\&lt; double,\l 2 \&gt;::normalise" alt="" coords="233,5,394,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#ad6744754f694c1197db45d6d1e5b93f7" title="arc::math::Vec\&lt; T,\l 2 \&gt;::normalise" alt="" coords="249,68,378,107"/>
-<area shape="rect" id="node4" href="$classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#ac9bdcc68c5d12bd8e30ecf17767de5cf" title="arc::math::Vec\&lt; T,\l 3 \&gt;::normalise" alt="" coords="249,131,378,169"/>
-<area shape="rect" id="node5" href="$classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#af5671ad652f8df04ae02aaad65f552a0" title="arc::math::Vec\&lt; T,\l 4 \&gt;::normalise" alt="" coords="249,193,378,232"/>
+<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#a216e44f0b319e0b633e3b7924ebcca56" title="arc::geom::shape::Triangle\l::init_plane_norm" alt="" coords="451,34,630,72"/>
+<area shape="rect" id="node3" href="$classarc_1_1math_1_1_vec.html#abd22cbc8c212fac61b31df11cea46866" title="arc::math::Vec\&lt; double,\l 2 \&gt;::normalise" alt="" coords="237,34,399,72"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1math_1_1vec.html#af6b92b25d553e597bc9a3b396962306d" title="arc::math::vec::normalise" alt="" coords="233,96,403,122"/>
+<area shape="rect" id="node5" href="$classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#ad6744754f694c1197db45d6d1e5b93f7" title="arc::math::Vec\&lt; T,\l 2 \&gt;::normalise" alt="" coords="254,146,382,184"/>
+<area shape="rect" id="node6" href="$classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#ac9bdcc68c5d12bd8e30ecf17767de5cf" title="arc::math::Vec\&lt; T,\l 3 \&gt;::normalise" alt="" coords="254,208,382,247"/>
+<area shape="rect" id="node7" href="$classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#af5671ad652f8df04ae02aaad65f552a0" title="arc::math::Vec\&lt; T,\l 4 \&gt;::normalise" alt="" coords="254,271,382,310"/>
 </map>

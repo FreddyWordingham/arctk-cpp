@@ -5,7 +5,8 @@ var searchData=
   ['to_3c_20bool_20_3e',['to&lt; bool &gt;',['../namespacearc_1_1str_1_1parse.html#a0d90413f35d2cb9bcbccd3c57c3c0fe3',1,'arc::str::parse']]],
   ['to_5fhelper',['to_helper',['../namespacearc_1_1str_1_1parse.html#a78314ac0e715fd258402eeb2079952db',1,'arc::str::parse']]],
   ['trans',['trans',['../classarc_1_1gui_1_1_actor.html#a3b9b8caa4f0b57426597988f1b12b1ab',1,'arc::gui::Actor::trans()'],['../classarc_1_1math_1_1_mat.html#a28d8fb11c34fe8caa44bd22b5cc68bbf',1,'arc::math::Mat::trans()'],['../classarc_1_1math_1_1_mat_3_01_t_00_012_01_4.html#a10a3f0bc370eece185905a61e8b69ea6',1,'arc::math::Mat&lt; T, 2 &gt;::trans()'],['../classarc_1_1math_1_1_mat_3_01_t_00_013_01_4.html#aebff9bf6e0bbb660b62be377a2bdd522',1,'arc::math::Mat&lt; T, 3 &gt;::trans()'],['../classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#a198fa763c098530d993b54daf00ed62e',1,'arc::math::Mat&lt; T, 4 &gt;::trans()']]],
-  ['transform',['transform',['../namespacearc_1_1math.html#a0b7481184b796274643aa6d40ac94eff',1,'arc::math']]],
-  ['translate',['translate',['../namespacearc_1_1math.html#a2884923d2d2be07c64b2c518b0d8b2d1',1,'arc::math']]],
+  ['transform',['transform',['../namespacearc_1_1math_1_1mat.html#af39486147412a1d46985c59a96727834',1,'arc::math::mat']]],
+  ['translate',['translate',['../namespacearc_1_1math_1_1mat.html#a8df70b235035d723df62e4a418ac7e94',1,'arc::math::mat']]],
+  ['triangle',['Triangle',['../classarc_1_1geom_1_1shape_1_1_triangle.html#ab6661d0e03437ff2033d1fdf3b1ac9e8',1,'arc::geom::shape::Triangle']]],
   ['type',['type',['../classarc_1_1gui_1_1_uniform.html#a416757a0e6e0a7c519c71b7b2e7eb45d',1,'arc::gui::Uniform']]]
 ];

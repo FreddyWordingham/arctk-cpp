@@ -1,0 +1,5 @@
+<map id="arc::math::mat::transform" name="arc::math::mat::transform">
+<area shape="rect" id="node2" href="$namespacearc_1_1math_1_1mat.html#a8df70b235035d723df62e4a418ac7e94" title="arc::math::mat::translate" alt="" coords="224,5,389,31"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1mat.html#a385e614b5f842c50c2c6c49237b55d85" title="arc::math::mat::rotate" alt="" coords="232,55,380,80"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1math_1_1mat.html#a4aaba718d91ea015418b66dc4f7a7a48" title="arc::math::mat::scale" alt="" coords="234,104,379,129"/>
+</map>
