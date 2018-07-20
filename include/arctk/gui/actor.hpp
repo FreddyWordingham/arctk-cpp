@@ -545,7 +545,7 @@ namespace arc //! arctk namespace
          */
         inline void Actor::set_vec3_uniform(const std::string& name_, const glm::vec3& vec3_) noexcept
         {
-            PRE(_vec3_uniform.find(name_) != _vec3_uniform.end());
+            PRE(_vec3_uniform.find(name_) == _vec3_uniform.end());
 
             _vec3_uniform.emplace(std::make_pair(name_, vec3_));
         }
