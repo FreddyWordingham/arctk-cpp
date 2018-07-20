@@ -77,6 +77,16 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a triangle from three vertex positions and three corresponding vertex normals.
+             *
+             *  @param  pos_    Positions of the vertices.
+             *  @param  norm_   Normals of the vertices.
+             *
+             *  @pre    norm_ vecs must be normalised.
+             *  @post   _area must be positive.
+             *  @post   _plane_norm must be normalised.
+             */
             inline Triangle::Triangle(const std::array<vec3, 3> pos_, const std::array<vec3, 3> norm_) noexcept
               : _pos(pos_)
               , _norm(norm_)
