@@ -103,6 +103,20 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
+            /**
+             *  Initialise the normal vector of the triangle by determining the cross-product of two of the triangles edges.
+             *  Normal must be normalised after determining the cross-product.
+             *
+             *  @param  pos_    Positions of the vertices.
+             *  @param  norm_   Normals of the vertices.
+             *
+             *  @post   plane_norm must be normalised.
+             *  @post   plane_norm norm_[ALPHA] dot product must be greater than zero.
+             *  @post   plane_norm norm_[BETA] dot product must be greater than zero.
+             *  @post   plane_norm norm_[GAMMA] dot product must be greater than zero.
+             *
+             *  @return The normal vector of the triangle's plane.
+             */
             inline vec3 Triangle::init_plane_norm(const std::array<vec3, 3> pos_, const std::array<vec3, 3> norm_) noexcept
             {
                 vec3 plane_norm = math::vec::normalise((pos_[index::vertex::BETA] - pos_[index::vertex::ALPHA]) ^ (pos_[index::vertex::GAMMA] - pos_[index::vertex::ALPHA]));
@@ -112,10 +126,10 @@ namespace arc //! arctk namespace
                     plane_norm *= -1.0;
                 }
 
-                PRE(plane_norm.normalised());
-                PRE((plane_norm * norm_[index::vertex::ALPHA]) > 0.0);
-                PRE((plane_norm * norm_[index::vertex::BETA]) > 0.0);
-                PRE((plane_norm * norm_[index::vertex::GAMMA]) > 0.0);
+                POST(plane_norm.normalised());
+                POST((plane_norm * norm_[index::vertex::ALPHA]) > 0.0);
+                POST((plane_norm * norm_[index::vertex::BETA]) > 0.0);
+                POST((plane_norm * norm_[index::vertex::GAMMA]) > 0.0);
 
                 return (plane_norm);
             }
