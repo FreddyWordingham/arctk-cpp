@@ -71,6 +71,15 @@ namespace arc //! arctk namespace
 
 
             //  -- Area --
+            /**
+             *  Determine the area between three points.
+             *
+             *  @tparam T   Type stored by the vecs.
+             *
+             *  @param  pos_    Array of three vecs.
+             *
+             *  @return Area between the points.
+             */
             template <typename T>
             inline T area(const std::array<Vec<T, 3>, 3>& pos_) noexcept
             {
