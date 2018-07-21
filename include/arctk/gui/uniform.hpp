@@ -78,6 +78,16 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Factories --
+        /**
+         *  Create a shader uniform object using an existing handle.
+         *  Type hash number is created.
+         *
+         *  @tparam T   Type handled by the shader uniform.
+         *
+         *  @param  handle_ Pre-initialised shader uniform handle.
+         *
+         *  @return Uniform to handle given shader uniform handle.
+         */
         template <typename T>
         static inline create(const GLint handle_) noexcept
         {
@@ -89,9 +99,9 @@ namespace arc //! arctk namespace
 
         //  -- Constructors --
         /**
-         *  Construct a uniform using an existing handle and type hash number.
+         *  Construct a shader uniform using an existing handle and type hash number.
          *
-         *  @param  handle_     Pre-initialised uniform handle.
+         *  @param  handle_     Pre-initialised shader uniform handle.
          *  @param  type_hash_  Type hash number.
          *
          *  @pre    handle_ must be non-negative.
