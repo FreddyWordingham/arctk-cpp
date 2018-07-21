@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/gui/shader.hpp>
 #include <arctk/gui/uniform.hpp>
 
 
