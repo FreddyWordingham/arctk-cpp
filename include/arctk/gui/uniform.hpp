@@ -88,6 +88,14 @@ namespace arc //! arctk namespace
 
 
         //  -- Constructors --
+        /**
+         *  Construct a uniform using an existing handle and type hash number.
+         *
+         *  @param  handle_     Pre-initialised uniform handle.
+         *  @param  type_hash_  Type hash number.
+         *
+         *  @pre    handle_ must be non-negative.
+         */
         inline Uniform::Uniform(const GLint handle_, const size_t type_hash_) noexcept
           : _handle(handle_)
           , _type_hash(type_hash_)
