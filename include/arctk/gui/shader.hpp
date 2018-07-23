@@ -55,6 +55,11 @@ namespace arc //! arctk namespace
             //  -- Handle --
             const GLuint _handle; //!< Handle of the shader.
 
+            //  -- Uniforms --
+            const GLint _model; //!< Model matrix.
+            const GLint _view;  //!< View matrix.
+            const GLint _proj;  //!< Projection matrix.
+
 
             //  == INSTANTIATION ==
           public:
