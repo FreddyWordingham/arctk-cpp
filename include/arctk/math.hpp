@@ -25,7 +25,6 @@
 #include <arctk/math/mat3.hpp>
 #include <arctk/math/mat4.hpp>
 #include <arctk/math/pow.hpp>
-#include <arctk/math/quat.hpp>
 #include <arctk/math/vec.hpp>
 #include <arctk/math/vec2.hpp>
 #include <arctk/math/vec3.hpp>
