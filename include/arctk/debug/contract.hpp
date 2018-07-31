@@ -14,11 +14,6 @@
 
 
 
-//  == MODULE ==
-#ifdef ARCTK_MOD_CORE
-
-
-
 //  == IMPORTS ==
 //  -- Std --
 #include <iostream>
@@ -88,11 +83,6 @@ namespace arc //! arctk namespace
         } // namespace contract
     }     // namespace debug
 } // namespace arc
-
-
-
-//  == MODULE END ==
-#endif // ARCTK_MOD_CORE
 
 
 
