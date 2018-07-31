@@ -14,11 +14,6 @@
 
 
 
-//  == MODULE ==
-#ifdef ARCTK_MOD_CORE
-
-
-
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/debug/contract.hpp>
@@ -90,11 +85,6 @@
 #define INVAR(condition_) arc::debug::Invariant LINE_NAME(invar) = arc::debug::Invariant<decltype(condition_)>(__FILE__, __LINE__, __func__, #condition_, [&]() { return (condition_); });
 
 #endif
-
-
-
-//  == MODULE END ==
-#endif // ARCTK_MOD_CORE
 
 
 
