@@ -14,11 +14,6 @@
 
 
 
-//  == MODULE ==
-#ifdef ARCTK_MOD_CORE
-
-
-
 //  == IMPORTS ==
 //  -- Std --
 #include <limits>
@@ -125,11 +120,6 @@ namespace arc //! arctk namespace
         } // namespace generator
     }     // namespace random
 } // namespace arc
-
-
-
-//  == MODULE END ==
-#endif // ARCTK_MOD_CORE
 
 
 
