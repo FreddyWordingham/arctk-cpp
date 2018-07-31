@@ -9,25 +9,6 @@ project(arctk)
 
 
 
-#   == MODULES ==
-if (NOT DEFINED ARCTK_MOD_CORE)
-    set(ARCTK_MOD_CORE OFF)
-endif ()
-message("Module core: ${ARCTK_MOD_CORE}")
-if (ARCTK_MOD_CORE)
-    set(ARCTK_MOD_DEFS "${ARCTK_MOD_DEFS} ARCTK_MOD_CORE")
-endif ()
-
-if (NOT DEFINED ARCTK_MOD_GUI)
-    set(ARCTK_MOD_GUI OFF)
-endif ()
-message("Module core: ${ARCTK_MOD_GUI}")
-if (ARCTK_MOD_GUI)
-    set(ARCTK_MOD_DEFS "${ARCTK_MOD_DEFS} ARCTK_MOD_GUI")
-endif ()
-
-
-
 #   == VERSION ==
 set(ARCTK_VERSION_MAJOR 0)
 
@@ -342,15 +323,6 @@ endif ()
 
 #   == TARGETS ==
 add_library(arctk STATIC ${SOURCE_FILES} ${HEADER_FILES})
-
-
-
-#   == DEFINITIONS ==
-string(REPLACE " " ";" ARCTK_MOD_DEFS ${ARCTK_MOD_DEFS})
-foreach (i ${ARCTK_MOD_DEFS})
-    target_compile_definitions(arctk PRIVATE ${i})
-    message("Pre-defined: ${i}")
-endforeach ()
 
 
 
