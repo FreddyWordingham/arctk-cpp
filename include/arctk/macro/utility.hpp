@@ -14,11 +14,6 @@
 
 
 
-//  == MODULE ==
-#ifdef ARCTK_MOD_CORE
-
-
-
 //  == MACROS ==
 //  -- Manipulation --
 /**
@@ -45,11 +40,6 @@
  *  @param  prefix_ Prefix to attach line to.
  */
 #define LINE_NAME(prefix_) CONCAT(prefix_, __LINE__)
-
-
-
-//  == MODULE END ==
-#endif // ARCTK_MOD_CORE
 
 
 
