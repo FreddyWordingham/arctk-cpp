@@ -14,20 +14,10 @@
 
 
 
-//  == MODULE ==
-#ifdef ARCTK_MOD_CORE
-
-
-
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/str/parse.hpp>
 #include <arctk/str/printable.hpp>
-
-
-
-//  == MODULE END ==
-#endif // ARCTK_MOD_CORE
 
 
 
