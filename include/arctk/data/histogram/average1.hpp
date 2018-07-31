@@ -14,11 +14,6 @@
 
 
 
-//  == MODULE ==
-#ifdef ARCTK_MOD_CORE
-
-
-
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/data/histogram/average.hpp>
@@ -156,11 +151,6 @@ namespace arc //! arctk namespace
         } // namespace histogram
     }     // namespace data
 } // namespace arc
-
-
-
-//  == MODULE END ==
-#endif // ARCTK_MOD_CORE
 
 
 
