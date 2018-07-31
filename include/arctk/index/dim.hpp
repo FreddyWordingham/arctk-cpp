@@ -14,11 +14,6 @@
 
 
 
-//  == MODULE ==
-#ifdef ARCTK_MOD_CORE
-
-
-
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -47,11 +42,6 @@ namespace arc //! arctk namespace
         } // namespace dim
     }     // namespace index
 } // namespace arc
-
-
-
-//  == MODULE END ==
-#endif // ARCTK_MOD_CORE
 
 
 
