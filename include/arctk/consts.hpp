@@ -14,20 +14,10 @@
 
 
 
-//  == MODULE ==
-#ifdef ARCTK_MOD_CORE
-
-
-
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/consts/math.hpp>
 #include <arctk/consts/phys.hpp>
-
-
-
-//  == MODULE END ==
-#endif // ARCTK_MOD_CORE
 
 
 
