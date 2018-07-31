@@ -14,11 +14,6 @@
 
 
 
-//  == MODULE ==
-#ifdef ARCTK_MOD_CORE
-
-
-
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
@@ -811,11 +806,6 @@ namespace arc //! arctk namespace
         } // namespace vec
     }     // namespace math
 } // namespace arc
-
-
-
-//  == MODULE END ==
-#endif // ARCTK_MOD_CORE
 
 
 
