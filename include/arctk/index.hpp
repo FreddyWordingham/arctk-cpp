@@ -14,21 +14,11 @@
 
 
 
-//  == MODULE ==
-#ifdef ARCTK_MOD_GUI
-
-
-
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/index/col.hpp>
 #include <arctk/index/dim.hpp>
 #include <arctk/index/vertex.hpp>
-
-
-
-//  == MODULE END ==
-#endif // ARCTK_MOD_GUI
 
 
 
