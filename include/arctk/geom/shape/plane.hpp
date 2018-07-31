@@ -14,11 +14,6 @@
 
 
 
-//  == MODULE ==
-#ifdef ARCTK_MOD_CORE
-
-
-
 //  == IMPORTS ==
 //  -- Std --
 #include <optional>
@@ -116,11 +111,6 @@ namespace arc //! arctk namespace
         } // namespace shape
     }     // namespace geom
 } // namespace arc
-
-
-
-//  == MODULE END ==
-#endif // ARCTK_MOD_CORE
 
 
 
