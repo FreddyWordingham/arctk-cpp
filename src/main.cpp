@@ -44,9 +44,6 @@
 #include <arctk/geom/shape/plane.hpp>
 #include <arctk/geom/shape/sphere.hpp>
 #include <arctk/geom/shape/triangle.hpp>
-#include <arctk/gui.hpp>
-#include <arctk/gui/shader.hpp>
-#include <arctk/gui/uniform.hpp>
 #include <arctk/index.hpp>
 #include <arctk/index/col.hpp>
 #include <arctk/index/dim.hpp>
