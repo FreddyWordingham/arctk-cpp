@@ -14,21 +14,11 @@
 
 
 
-//  == MODULE ==
-#ifdef ARCTK_MOD_CORE
-
-
-
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/utl/properties.hpp>
 #include <arctk/utl/search.hpp>
 #include <arctk/utl/type.hpp>
-
-
-
-//  == MODULE END ==
-#endif // ARCTK_MOD_CORE
 
 
 
