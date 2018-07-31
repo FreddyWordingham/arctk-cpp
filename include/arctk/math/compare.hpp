@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
              *  @return true if the values can be considered equal.
              */
             template <typename T>
-            inline bool equal(const T x_, const T y_) noexcept
+            inline bool equal(const T x_, const T y_) noexcept // NOLINT
             {
                 return (zero(x_ - y_));
             }
