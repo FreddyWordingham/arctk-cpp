@@ -14,11 +14,6 @@
 
 
 
-//  == MODULE ==
-#ifdef ARCTK_MOD_CORE
-
-
-
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/random/distribution.hpp>
@@ -30,11 +25,6 @@
 #include <arctk/random/distribution/uniform.hpp>
 #include <arctk/random/generator.hpp>
 #include <arctk/random/generator/quality.hpp>
-
-
-
-//  == MODULE END ==
-#endif // ARCTK_MOD_CORE
 
 
 
