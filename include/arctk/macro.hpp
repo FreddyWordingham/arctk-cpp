@@ -14,19 +14,9 @@
 
 
 
-//  == MODULE ==
-#ifdef ARCTK_MOD_CORE
-
-
-
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/macro/utility.hpp>
-
-
-
-//  == MODULE END ==
-#endif // ARCTK_MOD_CORE
 
 
 
