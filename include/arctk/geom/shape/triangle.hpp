@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Triangle(const std::array<vec3, 3> pos_, const std::array<vec3, 3> norm_) noexcept;
+                inline Triangle(const std::array<vec3, 3>& pos_, const std::array<vec3, 3>& norm_) noexcept;
 
                 //  -- Initialisation --
                 inline vec3 init_plane_norm(const std::array<vec3, 3> pos_, const std::array<vec3, 3> norm_) const noexcept;
@@ -89,7 +89,7 @@ namespace arc //! arctk namespace
              *  @post   _area must be positive.
              *  @post   _plane_norm must be normalised.
              */
-            inline Triangle::Triangle(const std::array<vec3, 3> pos_, const std::array<vec3, 3> norm_) noexcept
+            inline Triangle::Triangle(const std::array<vec3, 3>& pos_, const std::array<vec3, 3>& norm_) noexcept
               : _pos(pos_)
               , _norm(norm_)
               , _area(math::geom::area(pos_))
