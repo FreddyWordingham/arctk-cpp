@@ -320,6 +320,16 @@ namespace arc //! arctk namespace
             return (_view);
         }
 
+        /**
+         *  Get the projection matrix uniform handle.
+         *
+         *  @return Projection matrix uniform handle.
+         */
+        inline GLint Shader::proj() const noexcept
+        {
+            return (_proj);
+        }
+
 
 
     } // namespace gui
