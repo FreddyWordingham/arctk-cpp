@@ -138,6 +138,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the array of triangle vertices.
+             *
+             *  @return Array of triangle vertices.
+             */
             inline const std::array<vec3, 3>& Triangle::pos() const noexcept
             {
                 return (_pos);
