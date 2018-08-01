@@ -158,6 +158,11 @@ namespace arc //! arctk namespace
                 return (_norm);
             }
 
+            /**
+             *  Get the area of the triangle.
+             *
+             *  @return Area of the triangle.
+             */
             inline double Triangle::area() const noexcept
             {
                 return (_area);
