@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/gui/uniform.hpp>
 
 
 
