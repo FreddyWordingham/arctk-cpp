@@ -60,6 +60,7 @@ namespace arc //! arctk namespace
             inline Shader(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_, const std::vector<std::string>& uniform_names_) noexcept;
 
             //  -- Initialisation --
+            inline GLuint                       init_sub_shader(const std::string& code_, const GLenum type_) const noexcept;
             inline GLuint                       init_handle(const std::string& vert_code_, const std::string& frag_code_) const noexcept;
             inline GLuint                       init_handle(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) const noexcept;
             inline GLuint                       init_sub_shader(const std::string& code_, GLenum type_) const noexcept;
@@ -131,6 +132,48 @@ namespace arc //! arctk namespace
             glDeleteShader(frag_shader);
 
             return (handle);
+        }
+
+        /**
+         *  Initialise a sub-shader program.
+         *
+         *  @param  code_   Sub-shader program code.
+         *  @param  type_   Type of sub-shader to initialise.
+         *
+         *  @pre    code_ must not be empty.
+         *
+         *  @return Handle to the initialised sub-shader program.
+         */
+        inline GLuint Shader::init_sub_shader(const std::string& code_, const GLenum type_) const noexcept
+        {
+            PRE(!code_.empty());
+
+            const char* code = code_.c_str();
+
+            const GLuint sub_shader = glCreateShader(type_);
+            glShaderSource(sub_shader, 1, &code, nullptr);
+            glCompileShader(sub_shader);
+
+            GLint success;
+            glGetShaderiv(sub_shader, GL_COMPILE_STATUS, &success);
+            if (success == GL_FALSE)
+            {
+                GLint log_length;
+                glGetShaderiv(sub_shader, GL_INFO_LOG_LENGTH, &log_length);
+                std::vector<char> error_log(static_cast<size_t>(log_length));
+
+                glGetShaderInfoLog(sub_shader, log_length, nullptr, error_log.data());
+                const std::string error_text(begin(error_log), end(error_log));
+
+                std::cerr << "Unable to construct gui Shader.\n"
+                          << "Shader compilation failed with error: `" << error_text << "`.";
+
+                std::exit(exit::error::SHADER_COMPILATION_FAILED);
+            }
+
+            POST(sub_shader != 0);
+
+            return (sub_shader);
         }
 
         inline GLint Shader::init_uniform(const std::string& name_) const noexcept
