@@ -32,6 +32,12 @@ namespace arc //! arctk namespace
          */
         class Shader
         {
+            //  == FIELDS ==
+          private:
+            //  -- Handle --
+            const GLuint _handle; //!< Handle of the shader.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
