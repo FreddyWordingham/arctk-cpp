@@ -301,13 +301,23 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Get the Model matrix uniform handle.
+         *  Get the model matrix uniform handle.
          *
          *  @return Model matrix uniform handle.
          */
         inline GLint Shader::model() const noexcept
         {
             return (_model);
+        }
+
+        /**
+         *  Get the view matrix uniform handle.
+         *
+         *  @return View matrix uniform handle.
+         */
+        inline GLint Shader::view() const noexcept
+        {
+            return (_view);
         }
 
 
