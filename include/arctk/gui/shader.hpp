@@ -69,6 +69,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline GLuint handle() const noexcept;
         };
 
 
@@ -279,6 +281,20 @@ namespace arc //! arctk namespace
             }
 
             return (uniforms);
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        /**
+         *  Get the shader program handle.
+         *
+         *  @return Shader program handle.
+         */
+        inline GLuint Shader::handle() const noexcept
+        {
+            return (_handle);
         }
 
 
