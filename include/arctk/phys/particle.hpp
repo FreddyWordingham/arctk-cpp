@@ -135,19 +135,21 @@ namespace arc //! arctk namespace
          *
          *  @param  theta_  Angle to rotate back on itself.
          *  @param  phi_    Angle to rotate around previous axis of travel.
+         *
+         *  @pre    _dir must be normalised.
+         *  @post   _dir must be normalised.
          */
         inline void Particle::rotate(const double theta_, const double phi_) noexcept
         {
-            vec3 front = _dir;
-            vec3 right = _dir ^ vec3(0.0, 0.0, 1.0);
+            PRE(_dir.normalised());
 
-            if (math::compare::zero(std::fabs(_dir.z) - 1.0))
-            {
-                right = _dir ^ vec3(1.0, 0.0, 0.0);
-            }
+            vec3 front = _dir;
+            vec3 right = math::compare::equal(std::fabs(_dir.z), 1.0) ? (_dir ^ vec3(1.0, 0.0, 0.0)) : (_dir ^ vec3(0.0, 0.0, 1.0));
 
             _dir.rotate(right, theta_);
             _dir.rotate(front, phi_);
+
+            POST(_dir.normalised());
         }
 
 
