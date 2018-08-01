@@ -47,10 +47,10 @@ namespace arc //! arctk namespace
             const GLuint _handle; //!< Handle of the shader.
 
             //  -- Uniforms Handles --
-            const GLint                        _model;   //!< Model matrix uniform handle.
-            const GLint                        _view;    //!< View matrix uniform handle.
-            const GLint                        _proj;    //!< Projection matrix uniform handle.
-            const std::map<std::string, GLint> _uniform; //!< Additional uniform mappings.
+            const GLint                        _model;    //!< Model matrix uniform handle.
+            const GLint                        _view;     //!< View matrix uniform handle.
+            const GLint                        _proj;     //!< Projection matrix uniform handle.
+            const std::map<std::string, GLint> _uniforms; //!< Additional uniform mappings.
 
 
             //  == INSTANTIATION ==
@@ -60,9 +60,10 @@ namespace arc //! arctk namespace
             inline Shader(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_, const std::vector<std::string>& uniform_names_) noexcept;
 
             //  -- Initialisation --
-            inline GLint init_model() const noexcept;
-            inline GLint init_view() const noexcept;
-            inline GLint init_proj() const noexcept;
+            inline GLint                        init_model() const noexcept;
+            inline GLint                        init_view() const noexcept;
+            inline GLint                        init_proj() const noexcept;
+            inline std::map<std::string, GLint> init_uniforms(const std::vector<std::string>& uniform_names_) const noexcept;
 
 
             //  == METHODS ==
@@ -86,7 +87,7 @@ namespace arc //! arctk namespace
           : _handle(init_handle(vert_code_, frag_code_))
           , _model(init_model())
           , _proj(init_proj())
-          , _uniform(init_uniform())
+          , _uniform(init_uniform(uniform_name_))
         {
             PRE(!vert_code_.empty());
             PRE(!frag_code_.empty());
@@ -137,6 +138,30 @@ namespace arc //! arctk namespace
             }
 
             return (proj);
+        }
+
+        inline std::map<std::string, GLint> Shader::init_uniforms(const std::vector<std::string>& uniform_names_) const noexcept
+        {
+            std::map<std::string, GLint> uniforms;
+
+            for (size_t i = 0; i < uniform_names_.size(); ++i)
+            {
+                PRE(uniform_names_[i] != "model");
+                PRE(uniform_names_[i] != "view");
+                PRE(uniform_names_[i] != "proj");
+
+                if (uniforms.find(uniform_name_[i]) != uniforms.end())
+                {
+                    std::cerr << "Unable to construct gui shader.\n"
+                              << "Uniform name: `" << uniform_name_[i] << "` may only have a single handle.\n";
+
+                    std::exit(exit::error::SHADER_UNIFORM_DUPLICATE);
+                }
+
+                uniforms.emplace(std::make_pair(uniform_name_[i], init_uniform(uniform_names_[i]));
+            }
+
+            return (uniforms);
         }
 
 
