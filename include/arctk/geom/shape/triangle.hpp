@@ -148,6 +148,11 @@ namespace arc //! arctk namespace
                 return (_pos);
             }
 
+            /**
+             *  Get the array of triangle normals.
+             *
+             *  @return Array of triangle normals.
+             */
             inline const std::array<vec3, 3>& Triangle::norm() const noexcept
             {
                 return (_norm);
