@@ -99,9 +99,10 @@ namespace arc //! arctk namespace
         /**
          *  Construct a shader program from vertex, geometry and fragment sub-shader programs.
          *
-         *  @param  vert_code_  Vertex sub-shader code.
-         *  @param  geom_code_  Geometry sub-shader code.
-         *  @param  frag_code_  Fragment sub-shader code.
+         *  @param  vert_code_      Vertex sub-shader code.
+         *  @param  geom_code_      Geometry sub-shader code.
+         *  @param  frag_code_      Fragment sub-shader code.
+         *  @param  uniform_names_  Vector of additional uniform names.
          *
          *  @pre    vert_code_ must not be empty.
          *  @pre    geom_code_ must not be empty.
