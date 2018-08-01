@@ -69,11 +69,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
-            //  -- Getters --
-            inline GLuint handle() const noexcept;
-            inline GLint  model() const noexcept;
-            inline GLint  view() const noexcept;
-            inline GLint  proj() const noexcept;
+            //  -- Setters --
+            inline void
         };
 
 
@@ -289,46 +286,7 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
-        //  -- Getters --
-        /**
-         *  Get the shader program handle.
-         *
-         *  @return Shader program handle.
-         */
-        inline GLuint Shader::handle() const noexcept
-        {
-            return (_handle);
-        }
-
-        /**
-         *  Get the model matrix uniform handle.
-         *
-         *  @return Model matrix uniform handle.
-         */
-        inline GLint Shader::model() const noexcept
-        {
-            return (_model);
-        }
-
-        /**
-         *  Get the view matrix uniform handle.
-         *
-         *  @return View matrix uniform handle.
-         */
-        inline GLint Shader::view() const noexcept
-        {
-            return (_view);
-        }
-
-        /**
-         *  Get the projection matrix uniform handle.
-         *
-         *  @return Projection matrix uniform handle.
-         */
-        inline GLint Shader::proj() const noexcept
-        {
-            return (_proj);
-        }
+        //  -- Setters --
 
 
 
