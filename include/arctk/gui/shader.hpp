@@ -99,6 +99,38 @@ namespace arc //! arctk namespace
         //  -- Initialisation --
         inline GLuint Shader::init_handle(const std::string& vert_code_, const std::string& frag_code_) const noexcept
         {
+            PRE(!vert_code_.empty());
+            PRE(!frag_code_.empty());
+
+            const GLuint vert_shader = init_sub_shader(vert_code_, GL_VERTEX_SHADER);
+            const GLuint frag_shader = init_sub_shader(frag_code_, GL_FRAGMENT_SHADER);
+
+            const GLuint handle = glCreateProgram();
+            glAttachShader(handle, vert_shader);
+            glAttachShader(handle, frag_shader);
+            glLinkProgram(handle);
+
+            GLint success;
+            glGetProgramiv(handle, GL_LINK_STATUS, &success);
+            if (success == GL_FALSE)
+            {
+                GLint log_length;
+                glGetProgramiv(handle, GL_INFO_LOG_LENGTH, &log_length);
+                std::vector<char> error_log(static_cast<size_t>(log_length));
+
+                glGetProgramInfoLog(handle, log_length, nullptr, error_log.data());
+                std::string error_text(begin(error_log), end(error_log));
+
+                std::cerr << "Unable to construct gui Shader.\n"
+                          << "Shader linking failed with error: `" << error_text << "`.";
+
+                std::exit(exit::error::SHADER_LINKING_FAILED);
+            }
+
+            glDeleteShader(vert_shader);
+            glDeleteShader(frag_shader);
+
+            return (handle);
         }
 
         inline GLint Shader::init_uniform(const std::string& name_) const noexcept
