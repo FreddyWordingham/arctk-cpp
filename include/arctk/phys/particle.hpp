@@ -145,6 +145,7 @@ namespace arc //! arctk namespace
 
             vec3 front = _dir;
             vec3 right = math::compare::equal(std::fabs(_dir.z), 1.0) ? (_dir ^ vec3(1.0, 0.0, 0.0)) : (_dir ^ vec3(0.0, 0.0, 1.0));
+            right.normalise();
 
             _dir.rotate(right, theta_);
             _dir.rotate(front, phi_);
