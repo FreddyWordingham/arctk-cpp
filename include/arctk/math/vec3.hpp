@@ -128,7 +128,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Properties --
-            constexpr inline bool normalised(T tol_ = (3 * std::numeric_limits<T>::epsilon())) const noexcept;
+            constexpr inline bool normalised(T tol_ = std::sqrt(std::numeric_limits<T>::epsilon())) const noexcept;
 
             //  -- Mathematical --
             constexpr inline T    sum() const noexcept;
@@ -563,7 +563,7 @@ namespace arc //! arctk namespace
         /**
          *  Determine if a vec is normalised to within a given tolerance.
          *
-         *  @param  tol_    Maximum tolerance of normalisation value.
+         *  @param  tol_    Square root of the maximum tolerance of normalisation value.
          *
          *  @return True if the vec is normalised.
          */

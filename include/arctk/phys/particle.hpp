@@ -150,6 +150,8 @@ namespace arc //! arctk namespace
             _dir.rotate(right, theta_);
             _dir.rotate(front, phi_);
 
+            _dir.normalise();
+
             POST(_dir.normalised());
         }
 
