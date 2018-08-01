@@ -111,6 +111,17 @@ namespace arc //! arctk namespace
 
         inline GLint Shader::init_view() const noexcept
         {
+            GLint view = glGetUniformLocation(_handle, "view");
+
+            if (view < 0)
+            {
+                std::cerr << "Unable to construct gui shader.\n"
+                          << "Failed to determine the view uniform location within the shader.\n";
+
+                std::exit(exit::error::SHADER_UNIFORM_NOT_FOUND);
+            }
+
+            return (view);
         }
 
         inline GLint Shader::init_proj() const noexcept
