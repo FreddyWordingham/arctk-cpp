@@ -126,6 +126,17 @@ namespace arc //! arctk namespace
 
         inline GLint Shader::init_proj() const noexcept
         {
+            GLint proj = glGetUniformLocation(_handle, "proj");
+
+            if (proj < 0)
+            {
+                std::cerr << "Unable to construct gui shader.\n"
+                          << "Failed to determine the proj uniform location within the shader.\n";
+
+                std::exit(exit::error::SHADER_UNIFORM_NOT_FOUND);
+            }
+
+            return (proj);
         }
 
 
