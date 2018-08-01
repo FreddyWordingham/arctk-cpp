@@ -86,7 +86,7 @@ namespace arc //! arctk namespace
           , _model(init_uniform("model"))
           , _view(init_uniform("view"))
           , _proj(init_uniform("proj"))
-          , _uniform(init_uniform(uniform_name_))
+          , _uniform(init_uniforms(uniform_name_))
         {
             PRE(!vert_code_.empty());
             PRE(!frag_code_.empty());
