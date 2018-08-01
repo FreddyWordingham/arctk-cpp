@@ -60,6 +60,7 @@ namespace arc //! arctk namespace
             inline Shader(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_, const std::vector<std::string>& uniform_names_) noexcept;
 
             //  -- Initialisation --
+            inline GLint                        init_uniform(const std::string& name_) const noexcept;
             inline GLint                        init_model() const noexcept;
             inline GLint                        init_view() const noexcept;
             inline GLint                        init_proj() const noexcept;
@@ -133,6 +134,21 @@ namespace arc //! arctk namespace
             {
                 std::cerr << "Unable to construct gui shader.\n"
                           << "Failed to determine the proj uniform location within the shader.\n";
+
+                std::exit(exit::error::SHADER_UNIFORM_NOT_FOUND);
+            }
+
+            return (proj);
+        }
+
+        inline GLint Shader::init_uniform(const std::string& name_) const noexcept
+        {
+            GLint proj = glGetUniformLocation(_handle, name_);
+
+            if (proj < 0)
+            {
+                std::cerr << "Unable to construct gui shader.\n"
+                          << "Failed to determine the location of the: `" << name_ << "` uniform within the shader.\n";
 
                 std::exit(exit::error::SHADER_UNIFORM_NOT_FOUND);
             }
