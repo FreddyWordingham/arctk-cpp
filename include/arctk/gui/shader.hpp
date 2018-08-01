@@ -96,6 +96,29 @@ namespace arc //! arctk namespace
             PRE(!frag_code_.empty());
         }
 
+        /**
+         *  Construct a shader program from vertex, geometry and fragment sub-shader programs.
+         *
+         *  @param  vert_code_  Vertex sub-shader code.
+         *  @param  geom_code_  Geometry sub-shader code.
+         *  @param  frag_code_  Fragment sub-shader code.
+         *
+         *  @pre    vert_code_ must not be empty.
+         *  @pre    geom_code_ must not be empty.
+         *  @pre    frag_code_ must not be empty.
+         */
+        inline Shader::Shader(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_, const std::vector<std::string>& uniform_names_) noexcept
+          : _handle(init_handle(vert_code_, geom_code_, frag_code_))
+          , _model(init_uniform("model"))
+          , _view(init_uniform("view"))
+          , _proj(init_uniform("proj"))
+          , _uniform(init_uniforms(uniform_name_))
+        {
+            PRE(!vert_code_.empty());
+            PRE(!geom_code_.empty());
+            PRE(!frag_code_.empty());
+        }
+
 
         //  -- Initialisation --
         inline GLuint Shader::init_handle(const std::string& vert_code_, const std::string& frag_code_) const noexcept
