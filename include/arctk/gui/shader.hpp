@@ -16,12 +16,14 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <iostream>
 #include <map>
 #include <string>
 #include <vector>
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/exit.hpp>
 
 
 
@@ -57,6 +59,11 @@ namespace arc //! arctk namespace
             inline Shader(const std::string& vert_code_, const std::string& frag_code_, const std::vector<std::string>& uniform_names_) noexcept;
             inline Shader(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_, const std::vector<std::string>& uniform_names_) noexcept;
 
+            //  -- Initialisation --
+            inline GLint init_model() const noexcept;
+            inline GLint init_view() const noexcept;
+            inline GLint init_proj() const noexcept;
+
 
             //  == METHODS ==
           public:
@@ -77,13 +84,37 @@ namespace arc //! arctk namespace
          */
         inline Shader::Shader(const std::string& vert_code_, const std::string& frag_code_, const std::vector<std::string>& uniform_names_) noexcept
           : _handle(init_handle(vert_code_, frag_code_))
-          , _mvp(init_mvp())
           , _model(init_model())
           , _proj(init_proj())
           , _uniform(init_uniform())
         {
             PRE(!vert_code_.empty());
             PRE(!frag_code_.empty());
+        }
+
+
+        //  -- Initialisation --
+        inline GLint Shader::init_model() const noexcept
+        {
+            GLint model = glGetUniformLocation(_handle, "model");
+
+            if (model < 0)
+            {
+                std::cerr << "Unable to construct gui shader.\n"
+                          << "Failed to determine the model uniform location within the shader.\n";
+
+                std::exit(exit::error::SHADER_UNIFORM_NOT_FOUND);
+            }
+
+            return (model);
+        }
+
+        inline GLint Shader::init_view() const noexcept
+        {
+        }
+
+        inline GLint Shader::init_proj() const noexcept
+        {
         }
 
 
