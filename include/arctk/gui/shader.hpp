@@ -61,9 +61,6 @@ namespace arc //! arctk namespace
 
             //  -- Initialisation --
             inline GLint                        init_uniform(const std::string& name_) const noexcept;
-            inline GLint                        init_model() const noexcept;
-            inline GLint                        init_view() const noexcept;
-            inline GLint                        init_proj() const noexcept;
             inline std::map<std::string, GLint> init_uniforms(const std::vector<std::string>& uniform_names_) const noexcept;
 
 
@@ -86,8 +83,9 @@ namespace arc //! arctk namespace
          */
         inline Shader::Shader(const std::string& vert_code_, const std::string& frag_code_, const std::vector<std::string>& uniform_names_) noexcept
           : _handle(init_handle(vert_code_, frag_code_))
-          , _model(init_model())
-          , _proj(init_proj())
+          , _model(init_uniform("model"))
+          , _view(init_uniform("view"))
+          , _proj(init_uniform("proj"))
           , _uniform(init_uniform(uniform_name_))
         {
             PRE(!vert_code_.empty());
@@ -96,51 +94,6 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
-        inline GLint Shader::init_model() const noexcept
-        {
-            GLint model = glGetUniformLocation(_handle, "model");
-
-            if (model < 0)
-            {
-                std::cerr << "Unable to construct gui shader.\n"
-                          << "Failed to determine the model uniform location within the shader.\n";
-
-                std::exit(exit::error::SHADER_UNIFORM_NOT_FOUND);
-            }
-
-            return (model);
-        }
-
-        inline GLint Shader::init_view() const noexcept
-        {
-            GLint view = glGetUniformLocation(_handle, "view");
-
-            if (view < 0)
-            {
-                std::cerr << "Unable to construct gui shader.\n"
-                          << "Failed to determine the view uniform location within the shader.\n";
-
-                std::exit(exit::error::SHADER_UNIFORM_NOT_FOUND);
-            }
-
-            return (view);
-        }
-
-        inline GLint Shader::init_proj() const noexcept
-        {
-            GLint proj = glGetUniformLocation(_handle, "proj");
-
-            if (proj < 0)
-            {
-                std::cerr << "Unable to construct gui shader.\n"
-                          << "Failed to determine the proj uniform location within the shader.\n";
-
-                std::exit(exit::error::SHADER_UNIFORM_NOT_FOUND);
-            }
-
-            return (proj);
-        }
-
         inline GLint Shader::init_uniform(const std::string& name_) const noexcept
         {
             GLint proj = glGetUniformLocation(_handle, name_);
