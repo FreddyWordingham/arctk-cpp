@@ -32,6 +32,25 @@ namespace arc //! arctk namespace
          */
         class Shader
         {
+            //  == ENUMERATION ==
+          public:
+            //  -- Type --
+            /**
+             *  Enumeration of possible types to be handled by the uniform.
+             */
+            enum class stored
+            {
+                INT,
+                FLOAT,
+                VEC2,
+                VEC3,
+                VEC4,
+                MAT2,
+                MAT3,
+                MAT4
+            };
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
