@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['gaussian_2ehpp',['gaussian.hpp',['../gaussian_8hpp.html',1,'']]],
-  ['generator_2ehpp',['generator.hpp',['../generator_8hpp.html',1,'']]],
-  ['geom_2ehpp',['geom.hpp',['../geom_8hpp.html',1,'(Global Namespace)'],['../math_2geom_8hpp.html',1,'(Global Namespace)']]],
-  ['greyscale_2ehpp',['greyscale.hpp',['../greyscale_8hpp.html',1,'']]],
-  ['gui_2ehpp',['gui.hpp',['../gui_8hpp.html',1,'']]]
+  ['histogram_2ehpp',['histogram.hpp',['../histogram_8hpp.html',1,'']]],
+  ['histogram1_2ehpp',['histogram1.hpp',['../histogram1_8hpp.html',1,'']]],
+  ['histogram2_2ehpp',['histogram2.hpp',['../histogram2_8hpp.html',1,'']]]
 ];

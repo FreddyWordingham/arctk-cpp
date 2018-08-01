@@ -1,7 +1,0 @@
-<map id="arc::gui::Camera::update_view_proj" name="arc::gui::Camera::update_view_proj">
-<area shape="rect" id="node2" href="$classarc_1_1gui_1_1_camera.html#aea4a05a8c6edad4816c124838a0b7d94" title="arc::gui::Camera::set_pos" alt="" coords="221,5,395,31"/>
-<area shape="rect" id="node3" href="$classarc_1_1gui_1_1_camera.html#aeb76bb286eee210b86a3603b943e4192" title="arc::gui::Camera::set_dir" alt="" coords="225,55,392,80"/>
-<area shape="rect" id="node4" href="$classarc_1_1gui_1_1_camera.html#aba7d21fbf5eaed58d4ca34bb47aee390" title="arc::gui::Camera::set_up" alt="" coords="225,104,392,129"/>
-<area shape="rect" id="node5" href="$classarc_1_1gui_1_1_camera.html#a9bf5022360839cca2cad22464e703a3f" title="arc::gui::Camera::move" alt="" coords="228,153,388,179"/>
-<area shape="rect" id="node6" href="$classarc_1_1gui_1_1_camera.html#a2e0bfab02032a9bef2c7230be22baedc" title="arc::gui::Camera::rotate" alt="" coords="228,203,389,228"/>
-</map>

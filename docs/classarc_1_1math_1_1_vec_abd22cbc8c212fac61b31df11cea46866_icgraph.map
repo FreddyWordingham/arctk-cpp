@@ -1,4 +1,5 @@
 <map id="arc::math::Vec::normalise" name="arc::math::Vec::normalise">
 <area shape="rect" id="node2" href="$namespacearc_1_1math_1_1vec.html#af6b92b25d553e597bc9a3b396962306d" title="arc::math::vec::normalise" alt="" coords="225,12,395,37"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#a216e44f0b319e0b633e3b7924ebcca56" title="arc::geom::shape::Triangle\l::init_plane_norm" alt="" coords="443,5,623,44"/>
+<area shape="rect" id="node4" href="$classarc_1_1phys_1_1_particle.html#ab46d3245680b0cac02e15de315327773" title="arc::phys::Particle\l::rotate" alt="" coords="247,61,374,100"/>
+<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#a06db0dc2b6b75109ee7e77b2341be299" title="arc::geom::shape::Triangle\l::init_plane_norm" alt="" coords="443,5,623,44"/>
 </map>

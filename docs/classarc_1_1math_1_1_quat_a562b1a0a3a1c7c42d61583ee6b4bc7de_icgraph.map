@@ -1,6 +1,0 @@
-<map id="arc::math::Quat::mag_sq" name="arc::math::Quat::mag_sq">
-<area shape="rect" id="node2" href="$classarc_1_1math_1_1_quat.html#a1b4931a7e2d479db2215cd434b395e4b" title="arc::math::Quat::normalised" alt="" coords="221,55,407,80"/>
-<area shape="rect" id="node5" href="$classarc_1_1math_1_1_quat.html#a572e56a6e3d09932b12791a768ac5eb1" title="arc::math::Quat::mag" alt="" coords="241,5,388,31"/>
-<area shape="rect" id="node3" href="$classarc_1_1math_1_1_quat.html#a92ff75db9a36e0cb5fb7431ac42d0a4a" title="arc::math::Quat::normalise" alt="" coords="455,5,634,31"/>
-<area shape="rect" id="node4" href="$classarc_1_1math_1_1_quat.html#a2f34992c02abedbb571775f10fa8e96b" title="arc::math::Quat::conj" alt="" coords="472,55,617,80"/>
-</map>

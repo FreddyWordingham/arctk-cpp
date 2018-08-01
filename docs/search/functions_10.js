@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['quality',['Quality',['../classarc_1_1random_1_1generator_1_1_quality.html#a7c9573cbce31fa810b35a5965c5fc98b',1,'arc::random::generator::Quality']]],
-  ['quat',['Quat',['../classarc_1_1math_1_1_quat.html#af5256f6a7f7b8ee47b1cd80c3cf1e405',1,'arc::math::Quat::Quat(double x_, double y_, double z_, double w_) noexcept'],['../classarc_1_1math_1_1_quat.html#ac094d29967123705a6e280293a0c6290',1,'arc::math::Quat::Quat(const Vec&lt; double, 3 &gt; &amp;axis_, double angle_) noexcept'],['../classarc_1_1math_1_1_quat.html#a9ac5adbc8aac0545fe607d5681bfc608',1,'arc::math::Quat::Quat(double yaw_, double pitch_, double roll_) noexcept'],['../classarc_1_1math_1_1_quat.html#a7b46b30c7961dcf087670b9c46130ddc',1,'arc::math::Quat::Quat(double cos_yaw_, double sin_yaw_, double cos_pitch_, double sin_pitch_, double cos_roll_, double sin_roll_) noexcept']]]
+  ['rad_5fto_5fdeg',['rad_to_deg',['../namespacearc_1_1math_1_1convert.html#a50422c57700cd263a956ee9d438d32e7',1,'arc::math::convert']]],
+  ['rotate',['rotate',['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#ad742cfbbb4e58d69cc10add15f074f25',1,'arc::math::Vec&lt; T, 3 &gt;::rotate()'],['../classarc_1_1phys_1_1_particle.html#ab46d3245680b0cac02e15de315327773',1,'arc::phys::Particle::rotate()'],['../namespacearc_1_1math_1_1mat.html#acc6349295b1604d5cafa857f97469ed4',1,'arc::math::mat::rotate(const Vec&lt; T, 3 &gt; &amp;rot_) noexcept'],['../namespacearc_1_1math_1_1mat.html#a385e614b5f842c50c2c6c49237b55d85',1,'arc::math::mat::rotate(const Vec&lt; T, 3 &gt; &amp;axis_, T ang_) noexcept']]],
+  ['rotate_5fx',['rotate_x',['../namespacearc_1_1math_1_1mat.html#a8fc9d46c655ab0c64e559567fc98f08a',1,'arc::math::mat']]],
+  ['rotate_5fy',['rotate_y',['../namespacearc_1_1math_1_1mat.html#a4a480ae687453a2bd459d4882878a35b',1,'arc::math::mat']]],
+  ['rotate_5fz',['rotate_z',['../namespacearc_1_1math_1_1mat.html#a6dd39e4a199c450e95c43590ee75baf4',1,'arc::math::mat']]],
+  ['rows',['rows',['../classarc_1_1data_1_1_table.html#aed31796666ea7cef1995c6e63ce226dd',1,'arc::data::Table']]]
 ];

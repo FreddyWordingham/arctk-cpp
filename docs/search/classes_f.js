@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['table',['Table',['../classarc_1_1data_1_1_table.html',1,'arc::data']]],
-  ['triangle',['Triangle',['../classarc_1_1geom_1_1shape_1_1_triangle.html',1,'arc::geom::shape']]]
+  ['uniform',['Uniform',['../classarc_1_1random_1_1distribution_1_1_uniform.html',1,'arc::random::distribution']]]
 ];

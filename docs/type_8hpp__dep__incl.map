@@ -1,8 +1,9 @@
 <map id="include/arctk/utl/type.hpp" name="include/arctk/utl/type.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="145,312,242,337"/>
-<area shape="rect" id="node3" href="$utl_8hpp.html" title="include/arctk/utl.hpp" alt="" coords="94,79,234,104"/>
-<area shape="rect" id="node4" href="$table_8hpp.html" title="include/arctk/data\l/table.hpp" alt="" coords="124,152,250,191"/>
-<area shape="rect" id="node6" href="$discrete_8hpp.html" title="include/arctk/random\l/distribution/discrete.hpp" alt="" coords="281,152,447,191"/>
-<area shape="rect" id="node5" href="$data_8hpp.html" title="include/arctk/data.hpp" alt="" coords="175,239,327,264"/>
-<area shape="rect" id="node7" href="$random_8hpp.html" title="include/arctk/random.hpp" alt="" coords="402,239,573,264"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="181,312,278,337"/>
+<area shape="rect" id="node3" href="$utl_8hpp.html" title="include/arctk/utl.hpp" alt="" coords="98,79,238,104"/>
+<area shape="rect" id="node4" href="$table_8hpp.html" title="include/arctk/data\l/table.hpp" alt="" coords="105,152,231,191"/>
+<area shape="rect" id="node6" href="$constant_8hpp.html" title="include/arctk/random\l/distribution/constant.hpp" alt="" coords="257,152,427,191"/>
+<area shape="rect" id="node8" href="$discrete_8hpp.html" title="include/arctk/random\l/distribution/discrete.hpp" alt="" coords="451,152,617,191"/>
+<area shape="rect" id="node5" href="$data_8hpp.html" title="include/arctk/data.hpp" alt="" coords="154,239,306,264"/>
+<area shape="rect" id="node7" href="$random_8hpp.html" title="include/arctk/random.hpp" alt="" coords="380,239,551,264"/>
 </map>

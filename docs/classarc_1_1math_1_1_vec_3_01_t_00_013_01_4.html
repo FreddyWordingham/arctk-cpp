@@ -155,8 +155,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a58c2e423420033ed0dd3039a6277785f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a400be8fac06b09501e30646095d444"><td class="memItemLeft" align="right" valign="top">constexpr const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#a9a400be8fac06b09501e30646095d444">operator[]</a> (size_t index_) const noexcept</td></tr>
 <tr class="separator:a9a400be8fac06b09501e30646095d444"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5d6e133b4819d6def20474c99b4c1d7"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#af5d6e133b4819d6def20474c99b4c1d7">normalised</a> (T tol_=std::numeric_limits&lt; T &gt;::epsilon()) const noexcept</td></tr>
-<tr class="separator:af5d6e133b4819d6def20474c99b4c1d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3783fdda139dd7ec36d48baea223003b"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#a3783fdda139dd7ec36d48baea223003b">normalised</a> (T tol_=std::sqrt(std::numeric_limits&lt; T &gt;::epsilon())) const noexcept</td></tr>
+<tr class="separator:a3783fdda139dd7ec36d48baea223003b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbc9f5ce39b8a2d0704067677563c406"><td class="memItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#abbc9f5ce39b8a2d0704067677563c406">sum</a> () const noexcept</td></tr>
 <tr class="separator:abbc9f5ce39b8a2d0704067677563c406"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef3c6fba0984ce91c881626902eb1d58"><td class="memItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#aef3c6fba0984ce91c881626902eb1d58">mag</a> () const noexcept</td></tr>
@@ -469,8 +469,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="af5d6e133b4819d6def20474c99b4c1d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5d6e133b4819d6def20474c99b4c1d7">&#9670;&nbsp;</a></span>normalised()</h2>
+<a id="a3783fdda139dd7ec36d48baea223003b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3783fdda139dd7ec36d48baea223003b">&#9670;&nbsp;</a></span>normalised()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -484,7 +484,7 @@ template&lt;typename T &gt; </div>
           <td class="memname">constexpr bool <a class="el" href="classarc_1_1math_1_1_vec.html">arc::math::Vec</a>&lt; T, 3 &gt;::normalised </td>
           <td>(</td>
           <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>tol_</em> = <code>std::numeric_limits&lt;T&gt;::epsilon()</code></td><td>)</td>
+          <td class="paramname"><em>tol_</em> = <code>std::sqrt(std::numeric_limits&lt;T&gt;::epsilon())</code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -497,7 +497,7 @@ template&lt;typename T &gt; </div>
 <p>Determine if a vec is normalised to within a given tolerance.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tol_</td><td>Maximum tolerance of normalisation value.</td></tr>
+    <tr><td class="paramname">tol_</td><td>Square root of the maximum tolerance of normalisation value.</td></tr>
   </table>
   </dd>
 </dl>
@@ -507,8 +507,8 @@ template&lt;typename T &gt; </div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1math_1_1_vec_3_01_t_00_013_01_4_af5d6e133b4819d6def20474c99b4c1d7_cgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec_3_01_t_00_013_01_4_af5d6e133b4819d6def20474c99b4c1d7_cgraph" alt=""/></div>
-<map name="classarc_1_1math_1_1_vec_3_01_t_00_013_01_4_af5d6e133b4819d6def20474c99b4c1d7_cgraph" id="classarc_1_1math_1_1_vec_3_01_t_00_013_01_4_af5d6e133b4819d6def20474c99b4c1d7_cgraph">
+<div class="center"><img src="classarc_1_1math_1_1_vec_3_01_t_00_013_01_4_a3783fdda139dd7ec36d48baea223003b_cgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec_3_01_t_00_013_01_4_a3783fdda139dd7ec36d48baea223003b_cgraph" alt=""/></div>
+<map name="classarc_1_1math_1_1_vec_3_01_t_00_013_01_4_a3783fdda139dd7ec36d48baea223003b_cgraph" id="classarc_1_1math_1_1_vec_3_01_t_00_013_01_4_a3783fdda139dd7ec36d48baea223003b_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1math_1_1_vec.html#a00bd5df29b26536d5f5a48e4ff765aef" title="arc::math::Vec::mag_sq" alt="" coords="182,12,343,37"/>
 </map>
 </div>
@@ -1655,7 +1655,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jul 20 2018 01:17:33 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 1 2018 21:03:39 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

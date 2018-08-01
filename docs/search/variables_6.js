@@ -17,7 +17,5 @@ var searchData=
   ['fg_5fred',['FG_RED',['../namespacearc_1_1term_1_1ansi.html#a98e4a613f9d841a16a96fb988a35a005',1,'arc::term::ansi']]],
   ['fg_5fwhite',['FG_WHITE',['../namespacearc_1_1term_1_1ansi.html#a68aac9f6493a3a7f3ea535163659fe4b',1,'arc::term::ansi']]],
   ['fg_5fyellow',['FG_YELLOW',['../namespacearc_1_1term_1_1ansi.html#a403b00bb346259861d57f65af8635f29',1,'arc::term::ansi']]],
-  ['file_5fopen_5ffailed',['FILE_OPEN_FAILED',['../namespacearc_1_1exit_1_1error.html#a2551e7b15a3ca1a65f0ba6f7bef39689',1,'arc::exit::error']]],
-  ['fly_5ffar_5fcull_5fdist',['FLY_FAR_CULL_DIST',['../namespacearc_1_1gui_1_1camera.html#a1ed33b40f2596a9a604758d95d75059f',1,'arc::gui::camera']]],
-  ['fly_5fnear_5fcull_5fdist',['FLY_NEAR_CULL_DIST',['../namespacearc_1_1gui_1_1camera.html#afc4e12abedcafadaac17a3ca12621130',1,'arc::gui::camera']]]
+  ['file_5fopen_5ffailed',['FILE_OPEN_FAILED',['../namespacearc_1_1exit_1_1error.html#a2551e7b15a3ca1a65f0ba6f7bef39689',1,'arc::exit::error']]]
 ];

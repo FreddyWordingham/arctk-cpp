@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normal_2ehpp',['normal.hpp',['../normal_8hpp.html',1,'']]]
+  ['quality_2ehpp',['quality.hpp',['../quality_8hpp.html',1,'']]]
 ];

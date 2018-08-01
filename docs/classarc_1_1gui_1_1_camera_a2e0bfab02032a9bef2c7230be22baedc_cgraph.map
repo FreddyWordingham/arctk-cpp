@@ -1,4 +1,0 @@
-<map id="arc::gui::Camera::rotate" name="arc::gui::Camera::rotate">
-<area shape="rect" id="node2" href="$namespacearc_1_1math_1_1mat.html#acc6349295b1604d5cafa857f97469ed4" title="arc::math::mat::rotate" alt="" coords="225,5,373,31"/>
-<area shape="rect" id="node3" href="$classarc_1_1gui_1_1_camera.html#a08623ab1a6da2946d76042b222d176ea" title="Update the model&#45;view&#45;projection matrix. " alt="" coords="215,55,383,93"/>
-</map>

@@ -2,7 +2,6 @@ var searchData=
 [
   ['ansi',['ansi',['../namespacearc_1_1term_1_1ansi.html',1,'arc::term']]],
   ['arc',['arc',['../namespacearc.html',1,'']]],
-  ['camera',['camera',['../namespacearc_1_1gui_1_1camera.html',1,'arc::gui']]],
   ['col',['col',['../namespacearc_1_1col.html',1,'arc::col'],['../namespacearc_1_1index_1_1col.html',1,'arc::index::col']]],
   ['compare',['compare',['../namespacearc_1_1math_1_1compare.html',1,'arc::math']]],
   ['config',['config',['../namespacearc_1_1config.html',1,'arc']]],

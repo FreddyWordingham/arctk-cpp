@@ -1,7 +1,4 @@
 <map id="include/arctk/gui/uniform.hpp" name="include/arctk/gui/uniform.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="58,372,155,397"/>
-<area shape="rect" id="node3" href="$shader_8hpp.html" title="include/arctk/gui/shader.hpp" alt="" coords="94,79,282,104"/>
-<area shape="rect" id="node4" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="146,152,337,177"/>
-<area shape="rect" id="node6" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="304,299,448,324"/>
-<area shape="rect" id="node5" href="$keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="144,225,338,251"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="53,152,150,177"/>
+<area shape="rect" id="node3" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="84,79,228,104"/>
 </map>

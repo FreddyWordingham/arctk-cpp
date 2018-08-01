@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['histogram_2ehpp',['histogram.hpp',['../histogram_8hpp.html',1,'']]],
-  ['histogram1_2ehpp',['histogram1.hpp',['../histogram1_8hpp.html',1,'']]],
-  ['histogram2_2ehpp',['histogram2.hpp',['../histogram2_8hpp.html',1,'']]]
+  ['image_2ehpp',['image.hpp',['../image_8hpp.html',1,'']]],
+  ['index_2ehpp',['index.hpp',['../index_8hpp.html',1,'']]],
+  ['invariant_2ehpp',['invariant.hpp',['../invariant_8hpp.html',1,'']]]
 ];
