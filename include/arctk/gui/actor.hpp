@@ -242,6 +242,12 @@ namespace arc //! arctk namespace
             _trans += trans_;
         }
 
+        /**
+         *  Rotate the actor using the given vector.
+         *  Rotations are performed in the order x, y, z.
+         *
+         *  @param  rot_    Vector by which to rotate the actor around each axis.
+         */
         inline void Actor::rotate(const glm::vec3& rot_) noexcept
         {
             _rot += rot_;
