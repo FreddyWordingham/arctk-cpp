@@ -90,6 +90,7 @@ namespace arc //! arctk namespace
             inline GLenum  fill_mode() const noexcept;
 
             //  -- Setters --
+            inline void set_col(const glm::vec3& col_) noexcept;
             inline void translate(const glm::vec3& trans_) noexcept;
             inline void rotate(const glm::vec3& rot_) noexcept;
             inline void scale(const glm::vec3& scale_) noexcept;
@@ -234,6 +235,24 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
+        /**
+         *  Set the rendering colour of the actor.
+         *
+         *  @param  col_    Colour to render the actor with.
+         *
+         *  @pre    col_.r must bet between zero and unity.
+         *  @pre    col_.g must bet between zero and unity.
+         *  @pre    col_.b must bet between zero and unity.
+         */
+        inline void Actor::set_col(const glm::vec3& col_) noexcept
+        {
+            PRE((col.r >= 0.0f) && (col.r <= 1.0f));
+            PRE((col.g >= 0.0f) && (col.r <= 1.0f));
+            PRE((col.b >= 0.0f) && (col.r <= 1.0f));
+
+            _col = col_;
+        }
+
         /**
          *  Translate the actor by the given vector.
          *
