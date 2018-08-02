@@ -43,6 +43,10 @@ namespace arc //! arctk namespace
             //  -- Operation --
             const std::function<void()> _func; //!< Function to call upon keypress.
 
+            //  -- Press --
+            const bool _sticky; //!< True if held key causes repeat function calling.
+            int        _state;  //!< Current press state of key.
+
 
             //  == INSTANTIATION ==
           public:
