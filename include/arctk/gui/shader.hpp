@@ -82,6 +82,7 @@ namespace arc //! arctk namespace
             inline void set_model(const glm::mat4& model_mat_) noexcept;
             inline void set_view(const glm::mat4& view_mat_) noexcept;
             inline void set_proj(const glm::mat4& proj_mat_) noexcept;
+            inline void set_col(const glm::vec3& col_) noexcept;
             inline void set_uniform(const std::string& name_, const int val_) noexcept;
             inline void set_uniform(const std::string& name_, const float val_) noexcept;
             inline void set_uniform(const std::string& name_, const glm::vec2& val_) noexcept;
@@ -402,6 +403,18 @@ namespace arc //! arctk namespace
             glUseProgram(_handle);
             glUniformMatrix4fv(_model, 1, GL_FALSE, &proj_mat_[0][0]);
         }
+
+        /**
+         *  Set the value for the projection matrix handle.
+         *
+         *  @param  proj_mat_  Value to set the projection matrix handle to.
+         */
+        inline void set_col(const glm::vec3& col_) noexcept
+        {
+            glUseProgram(_handle);
+            glUniform3fv(_col, 1, &col_[0]);
+        }
+
 
         /**
          *  Set the value for an int uniform.
