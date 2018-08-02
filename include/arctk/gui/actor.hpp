@@ -235,7 +235,7 @@ namespace arc //! arctk namespace
         /**
          *  Translate the actor by the given vector.
          *
-         *  @param  trans_  Vector by which to translate the actor.
+         *  @param  trans_  Vector by which to translate the actor along each dimension.
          */
         inline void Actor::translate(const glm::vec3& trans_) noexcept
         {
@@ -253,6 +253,11 @@ namespace arc //! arctk namespace
             _rot += rot_;
         }
 
+        /**
+         *  Scale the actor using the given vector.
+         *
+         *  @param  scale_  Vector by which to scale the actor in each dimension.
+         */
         inline void Actor::scale(const glm::vec3& scale_) noexcept
         {
             _scale.x *= scale_.x;
