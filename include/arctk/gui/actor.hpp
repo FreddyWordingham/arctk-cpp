@@ -239,7 +239,7 @@ namespace arc //! arctk namespace
 
         inline void Actor::rotate(const glm::vec3& rot_) noexcept
         {
-            _rot += rot_
+            _rot += rot_;
         }
 
         inline void Actor::scale(const glm::vec3& scale_) noexcept
