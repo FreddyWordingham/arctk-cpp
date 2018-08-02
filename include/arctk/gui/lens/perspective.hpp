@@ -41,6 +41,10 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- View --
+                const float _fov; //!< Field of view.
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
