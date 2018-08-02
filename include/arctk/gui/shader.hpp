@@ -290,7 +290,7 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::SHADER_UNIFORM_DUPLICATE);
                 }
 
-                uniforms.emplace(std::make_pair(uniform_name_[i], init_uniform(uniform_names_[i]));
+                uniforms.emplace(std::make_pair(uniform_name_[i], init_uniform(uniform_names_[i]))));
             }
 
             return (uniforms);
