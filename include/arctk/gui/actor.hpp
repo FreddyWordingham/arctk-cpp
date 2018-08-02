@@ -41,6 +41,10 @@ namespace arc //! arctk namespace
             const GLuint _vao; //!< Vertex array object handle.
             const GLuint _vbo; //!< Vertex buffer object handle.
 
+            //  -- Rendering --
+            GLenum _primitive_type; //!< Primitive type used to render the actor.
+            GLenum _fill_mode;      //!< Fill mode used to render the actor.
+
 
 
             //  == INSTANTIATION ==
