@@ -405,10 +405,15 @@ namespace arc //! arctk namespace
         /**
          *  Set the value for an int uniform.
          *
+         *  @param  name_   Name of the uniform to set.
          *  @param  val_    Value to set the uniform handle to.
+         *
+         *  @pre    name_ may not be empty.
+         *  @pre    name_ must be a key within the _uniforms map.
          */
         inline void Shader::set_uniform(const std::string& name_, const int val_) noexcept
         {
+            PRE(!name_.empty());
             PRE(_uniforms.find(name_) != _uniforms.end());
 
             glUseProgram(_handle);
@@ -418,10 +423,15 @@ namespace arc //! arctk namespace
         /**
          *  Set the value for a float uniform.
          *
+         *  @param  name_   Name of the uniform to set.
          *  @param  val_    Value to set the uniform handle to.
+         *
+         *  @pre    name_ may not be empty.
+         *  @pre    name_ must be a key within the _uniforms map.
          */
         inline void Shader::set_uniform(const std::string& name_, const float val_) noexcept
         {
+            PRE(!name_.empty());
             PRE(_uniforms.find(name_) != _uniforms.end());
 
             glUseProgram(_handle);
@@ -431,10 +441,15 @@ namespace arc //! arctk namespace
         /**
          *  Set the value for a vec2 uniform.
          *
+         *  @param  name_   Name of the uniform to set.
          *  @param  val_    Value to set the uniform handle to.
+         *
+         *  @pre    name_ may not be empty.
+         *  @pre    name_ must be a key within the _uniforms map.
          */
         inline void Shader::set_uniform(const std::string& name_, const glm::vec2& val_) noexcept
         {
+            PRE(!name_.empty());
             PRE(_uniforms.find(name_) != _uniforms.end());
 
             glUseProgram(_handle);
@@ -444,10 +459,15 @@ namespace arc //! arctk namespace
         /**
          *  Set the value for a vec3 uniform.
          *
+         *  @param  name_   Name of the uniform to set.
          *  @param  val_    Value to set the uniform handle to.
+         *
+         *  @pre    name_ may not be empty.
+         *  @pre    name_ must be a key within the _uniforms map.
          */
         inline void Shader::set_uniform(const std::string& name_, const glm::vec3& val_) noexcept
         {
+            PRE(!name_.empty());
             PRE(_uniforms.find(name_) != _uniforms.end());
 
             glUseProgram(_handle);
@@ -457,10 +477,15 @@ namespace arc //! arctk namespace
         /**
          *  Set the value for a vec4 uniform.
          *
+         *  @param  name_   Name of the uniform to set.
          *  @param  val_    Value to set the uniform handle to.
+         *
+         *  @pre    name_ may not be empty.
+         *  @pre    name_ must be a key within the _uniforms map.
          */
         inline void Shader::set_uniform(const std::string& name_, const glm::vec4& val_) noexcept
         {
+            PRE(!name_.empty());
             PRE(_uniforms.find(name_) != _uniforms.end());
 
             glUseProgram(_handle);
@@ -470,10 +495,15 @@ namespace arc //! arctk namespace
         /**
          *  Set the value for a mat2 uniform.
          *
+         *  @param  name_   Name of the uniform to set.
          *  @param  val_    Value to set the uniform handle to.
+         *
+         *  @pre    name_ may not be empty.
+         *  @pre    name_ must be a key within the _uniforms map.
          */
         inline void Shader::set_uniform(const std::string& name_, const glm::mat2& val_) noexcept
         {
+            PRE(!name_.empty());
             PRE(_uniforms.find(name_) != _uniforms.end());
 
             glUseProgram(_handle);
@@ -483,10 +513,15 @@ namespace arc //! arctk namespace
         /**
          *  Set the value for a mat3 uniform.
          *
+         *  @param  name_   Name of the uniform to set.
          *  @param  val_    Value to set the uniform handle to.
+         *
+         *  @pre    name_ may not be empty.
+         *  @pre    name_ must be a key within the _uniforms map.
          */
         inline void Shader::set_uniform(const std::string& name_, const glm::mat3& val_) noexcept
         {
+            PRE(!name_.empty());
             PRE(_uniforms.find(name_) != _uniforms.end());
 
             glUseProgram(_handle);
@@ -496,10 +531,15 @@ namespace arc //! arctk namespace
         /**
          *  Set the value for a mat4 uniform.
          *
+         *  @param  name_   Name of the uniform to set.
          *  @param  val_    Value to set the uniform handle to.
+         *
+         *  @pre    name_ may not be empty.
+         *  @pre    name_ must be a key within the _uniforms map.
          */
         inline void Shader::set_uniform(const std::string& name_, const glm::mat4& val_) noexcept
         {
+            PRE(!name_.empty());
             PRE(_uniforms.find(name_) != _uniforms.end());
 
             glUseProgram(_handle);
