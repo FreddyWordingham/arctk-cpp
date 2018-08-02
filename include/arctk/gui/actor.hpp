@@ -58,9 +58,9 @@ namespace arc //! arctk namespace
             GLenum _fill_mode;      //!< Fill mode used to render the actor.
 
             //  -- Transform --
-            glm::vec3 _trans;  //!< Model translation vector.
-            glm::vec3 _rotate; //!< Model rotation vector.
-            glm::vec3 _scale;  //!< Model scale vector.
+            glm::vec3 _trans; //!< Model translation vector.
+            glm::vec3 _rot;   //!< Model rotation vector.
+            glm::vec3 _scale; //!< Model scale vector.
 
             //  -- Uniforms --
             glm::mat4 _model{}; //!< Model transformation matrix.
@@ -87,6 +87,11 @@ namespace arc //! arctk namespace
             inline GLuint  vbo() const noexcept;
             inline GLenum  primitive_type() const noexcept;
             inline GLenum  fill_mode() const noexcept;
+
+            //  -- Setters --
+            inline void translate(const glm::vec3& trans_) noexcept;
+            inline void rotate(const glm::vec3& rot_) noexcept;
+            inline void scale(const glm::vec3& scale_) noexcept;
 
           private:
             //  -- Updating --
@@ -115,7 +120,7 @@ namespace arc //! arctk namespace
           , _primitive_type(primitive_type_)
           , _fill_mode(fill_mode_)
           , _trans(glm::vec3(0.0f, 0.0f, 0.0f))
-          , _rotate(glm::vec3(0.0f, 0.0f, 0.0f))
+          , _rot(glm::vec3(0.0f, 0.0f, 0.0f))
           , _scale(glm::vec3(1.0f, 1.0f, 1.0f))
         {
             PRE((verts_.size() % math::container::sum(layout_)) == 0);
@@ -226,6 +231,22 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Setters --
+        inline void Actor::translate(const glm::vec3& trans_) noexcept
+        {
+            _trans += trans_;
+        }
+
+        inline void Actor::rotate(const glm::vec3& rot_) noexcept
+        {
+            _rot += rot_
+        }
+
+        inline void Actor::scale(const glm::vec3& scale_) noexcept
+        {
+        }
+
+
         //  -- Updating --
         /**
          *  Update the model matrix.
@@ -235,9 +256,9 @@ namespace arc //! arctk namespace
             glm::mat4 model;
 
             model = glm::translate(model, _trans);
-            model = glm::rotate(model, math::convert::rad_to_deg(_rotate.x), glm::vec3(1.0f, 0.0f, 0.0f));
-            model = glm::rotate(model, math::convert::rad_to_deg(_rotate.y), glm::vec3(0.0f, 1.0f, 0.0f));
-            model = glm::rotate(model, math::convert::rad_to_deg(_rotate.z), glm::vec3(0.0f, 0.0f, 1.0f));
+            model = glm::rotate(model, math::convert::rad_to_deg(_rot.x), glm::vec3(1.0f, 0.0f, 0.0f));
+            model = glm::rotate(model, math::convert::rad_to_deg(_rot.y), glm::vec3(0.0f, 1.0f, 0.0f));
+            model = glm::rotate(model, math::convert::rad_to_deg(_rot.z), glm::vec3(0.0f, 0.0f, 1.0f));
             model = glm::scale(model, _scale);
 
             _model = model;
