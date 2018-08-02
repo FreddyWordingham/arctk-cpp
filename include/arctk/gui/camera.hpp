@@ -56,8 +56,8 @@ namespace arc //! arctk namespace
             inline const glm::mat4& view() const noexcept;
 
             //  -- Control --
-            inline void move(const glm::vec3& vec_) noexcept   = 0;
-            inline void rotate(const glm::vec3& vec_) noexcept = 0;
+            virtual inline void move(const glm::vec3& vec_) noexcept   = 0;
+            virtual inline void rotate(const glm::vec3& vec_) noexcept = 0;
 
           protected:
             //  -- Updating --
