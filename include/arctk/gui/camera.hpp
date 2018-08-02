@@ -35,9 +35,9 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Positioning --
-            glm::vec3 _pos; //!< Position of the camera.
-            glm::vec3 _dir; //!< Direction the camera is facing.
-            glm::vec3 _up;  //!< Up direction of the camera.
+            glm::vec3 _pos;   //!< Position of the camera.
+            glm::vec3 _focus; //!< Foxus position of the camera.
+            glm::vec3 _up;    //!< Up direction of the camera.
 
             //  -- Uniform --
             glm::mat4 _view{}; //!< View transformation matrix.
@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Camera(const glm::vec3& pos_, const glm::vec3& dir_, const glm::vec3& up_) noexcept;
+            inline Camera(const glm::vec3& pos_, const glm::vec3& focus_, const glm::vec3& up_) noexcept;
 
 
             //  == METHODS ==
@@ -64,12 +64,12 @@ namespace arc //! arctk namespace
          *  Construct a camera at a position, facing a direction.
          *
          *  @param  pos_    Initial position of the camera.
-         *  @param  dir_    Direction for the camera to face.
+         *  @param  focus_  Focus position of the camera.
          *  @param  up_     Up direction of the camera.
          */
-        inline Camera::Camera(const glm::vec3& pos_, const glm::vec3& dir_, const glm::vec3& up_) noexcept
+        inline Camera::Camera(const glm::vec3& pos_, const glm::vec3& focus_, const glm::vec3& up_) noexcept
           : _pos(pos_)
-          , _dir(dir_)
+          , _focus(focus_)
           , _up(up_)
         {
             update_view();
@@ -84,7 +84,7 @@ namespace arc //! arctk namespace
          */
         inline Camera::update_view() noexcept
         {
-            _view = glm::lookAt(_pos, _pos + _dir, _up);
+            _view = glm::lookAt(_pos, _focus, _up);
         }
 
 
