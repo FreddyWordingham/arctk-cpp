@@ -63,6 +63,11 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline bool sticky() const noexcept;
+            inline int  state() const noexcept;
+
+            //  -- Setters --
+            inline void set_state(int state_) noexcept;
         };
 
 
@@ -98,6 +103,37 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the sticky status of the keybinding.
+         *
+         *  @return Keybinding sticky status.
+         */
+        inline bool Keybind::sticky() const noexcept
+        {
+            return (_sticky);
+        }
+
+        /**
+         *  Get the current key press status state of the keybinding.
+         *
+         *  @return Current press status of the keybinding.
+         */
+        inline int Keybind::state() const noexcept
+        {
+            return (_state);
+        }
+
+
+        //  -- Setters --
+        /**
+         *  Set the key press state of the keybinding.
+         *
+         *  @param  state_  State to set the keybinding to.
+         */
+        inline void Keybind::set_state(const int state_) noexcept
+        {
+            _state = state_;
+        }
 
 
 
