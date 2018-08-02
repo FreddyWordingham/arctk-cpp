@@ -93,8 +93,18 @@ namespace arc //! arctk namespace
                 update_view();
             }
 
+            /**
+             *  Rotate the camera through roll, pitch and yaw.
+             *
+             *  @param  vec_    Vector specifying the amount to roll, pitch and yaw rotate.
+             */
             inline void Fly::rotate(const glm::vec3& vec_) noexcept
             {
+                _up  = glm::rotate(_up, vec_.x, _dir);
+                _up  = glm::rotate(_up, vec_.y, glm::normalise(glm::cross(dir_, up_)));
+                _dir = glm::rotate(_dir, vec_.z, _up);
+
+                update_view();
             }
 
 
