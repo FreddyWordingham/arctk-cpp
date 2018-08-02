@@ -33,12 +33,13 @@ namespace arc //! arctk namespace
         class Camera
         {
             //  == FIELDS ==
-          private:
+          protected:
             //  -- Positioning --
             glm::vec3 _pos;   //!< Position of the camera.
             glm::vec3 _focus; //!< Foxus position of the camera.
             glm::vec3 _up;    //!< Up direction of the camera.
 
+          private:
             //  -- Uniform --
             glm::mat4 _view{}; //!< View transformation matrix.
 
