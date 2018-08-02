@@ -92,6 +92,9 @@ $(function() {
 , <a class="el" href="classarc_1_1random_1_1distribution_1_1_discrete.html#aceab0806c7f6101774d060a2e82b1ad6">arc::random::distribution::Discrete&lt; T &gt;</a>
 , <a class="el" href="classarc_1_1random_1_1distribution_1_1_linear.html#ab907adf31f8645aed53557e5e1f83ccf">arc::random::distribution::Linear&lt; T &gt;</a>
 </li>
+<li>_col
+: <a class="el" href="classarc_1_1gui_1_1_actor.html#aca94465742e1d096e2ebd7baa60d4b5b">arc::gui::Actor</a>
+</li>
 <li>_counts
 : <a class="el" href="classarc_1_1data_1_1histogram_1_1_average_3_01_t_00_011_01_4.html#a6807adc793e5d79c04f2ef036f96475e">arc::data::histogram::Average&lt; T, 1 &gt;</a>
 </li>
@@ -114,6 +117,9 @@ $(function() {
 </li>
 <li>_file
 : <a class="el" href="classarc_1_1debug_1_1_invariant.html#a412ac4b36aabaf7dd773c29e8d2233a0">arc::debug::Invariant&lt; T &gt;</a>
+</li>
+<li>_fill_mode
+: <a class="el" href="classarc_1_1gui_1_1_actor.html#a2fd27000064f44fe6e91e0c94bb3b8ee">arc::gui::Actor</a>
 </li>
 <li>_fracs
 : <a class="el" href="classarc_1_1random_1_1distribution_1_1_linear.html#a21059f034abd36183fbd6e5989e7bec6">arc::random::distribution::Linear&lt; T &gt;</a>
@@ -149,13 +155,17 @@ $(function() {
 , <a class="el" href="classarc_1_1data_1_1histogram_1_1_fixed_3_01_t_00_012_01_4.html#aeb7d0842ab28798aa21a5a73a8efa8a2">arc::data::histogram::Fixed&lt; T, 2 &gt;</a>
 </li>
 <li>_model
-: <a class="el" href="classarc_1_1gui_1_1_shader.html#ab5137b8156c28956fa9e4bdf2b1a713b">arc::gui::Shader</a>
+: <a class="el" href="classarc_1_1gui_1_1_actor.html#a6ae4cb9573382ba616dd2dce41941876">arc::gui::Actor</a>
+, <a class="el" href="classarc_1_1gui_1_1_shader.html#ab5137b8156c28956fa9e4bdf2b1a713b">arc::gui::Shader</a>
 </li>
 <li>_next_seed
 : <a class="el" href="classarc_1_1random_1_1_generator.html#a08ef7eadad8b178e2d05cdad396056cb">arc::random::Generator</a>
 </li>
 <li>_norm
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#aadce2591d2e23dc475eee3062c69e668">arc::geom::shape::Triangle</a>
+</li>
+<li>_num_vert
+: <a class="el" href="classarc_1_1gui_1_1_actor.html#ab76c2799d8258b67edf0c130566dc496">arc::gui::Actor</a>
 </li>
 <li>_pixels
 : <a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#aa265595e8aed7215ed10b1f8a78e2c1c">arc::data::image::Greyscale</a>
@@ -169,6 +179,9 @@ $(function() {
 , <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a3ecf2c82237d6d65e7c1f796cf878d22">arc::geom::shape::Triangle</a>
 , <a class="el" href="classarc_1_1phys_1_1_particle.html#ad96264059302e6c60c98c6a2d13888f3">arc::phys::Particle</a>
 </li>
+<li>_primitive_type
+: <a class="el" href="classarc_1_1gui_1_1_actor.html#aa2f24e3a54c8aeae4d22f48bcbd426eb">arc::gui::Actor</a>
+</li>
 <li>_probs
 : <a class="el" href="classarc_1_1random_1_1distribution_1_1_linear.html#a96a8d01d651558b9b047c63610eb6903">arc::random::distribution::Linear&lt; T &gt;</a>
 </li>
@@ -181,11 +194,20 @@ $(function() {
 <li>_rad
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a3a4d1923b5a48105822d361f27168454">arc::geom::shape::Sphere</a>
 </li>
+<li>_rot
+: <a class="el" href="classarc_1_1gui_1_1_actor.html#a1e61195488381da299428004bae3266d">arc::gui::Actor</a>
+</li>
 <li>_rows
 : <a class="el" href="classarc_1_1data_1_1_table.html#a69244731bad2949b4c54e67da94aa70b">arc::data::Table&lt; A &gt;</a>
 </li>
+<li>_scale
+: <a class="el" href="classarc_1_1gui_1_1_actor.html#acdc74ada1ed26159754363d758e8b62f">arc::gui::Actor</a>
+</li>
 <li>_seed
 : <a class="el" href="classarc_1_1random_1_1_generator.html#afb04ebf2d18783b15e32c06bfe06249f">arc::random::Generator</a>
+</li>
+<li>_trans
+: <a class="el" href="classarc_1_1gui_1_1_actor.html#a49d360223eaf9ce7a7e8635a51f0a94e">arc::gui::Actor</a>
 </li>
 <li>_u
 : <a class="el" href="classarc_1_1random_1_1generator_1_1_quality.html#aa5d0d7a356aed77e4b0e6ad8603c0416">arc::random::generator::Quality</a>
@@ -201,8 +223,14 @@ $(function() {
 , <a class="el" href="classarc_1_1random_1_1distribution_1_1_discrete.html#ab1f35d1111654ffc2ab89fbea8c0c1e5">arc::random::distribution::Discrete&lt; T &gt;</a>
 , <a class="el" href="classarc_1_1random_1_1distribution_1_1_linear.html#abe3aa892990e968260a6a97ac685118b">arc::random::distribution::Linear&lt; T &gt;</a>
 </li>
+<li>_vao
+: <a class="el" href="classarc_1_1gui_1_1_actor.html#a86e362d7dd4a7a78489869d6da930f90">arc::gui::Actor</a>
+</li>
 <li>_var
 : <a class="el" href="classarc_1_1random_1_1distribution_1_1_gaussian.html#a3d42fdba9d305d31269e42c8eb214a1e">arc::random::distribution::Gaussian&lt; T &gt;</a>
+</li>
+<li>_vbo
+: <a class="el" href="classarc_1_1gui_1_1_actor.html#a79caed29df73a65be48dcad8b6626349">arc::gui::Actor</a>
 </li>
 <li>_view
 : <a class="el" href="classarc_1_1gui_1_1_shader.html#a990084e3e632c361ed9d3424d7db8742">arc::gui::Shader</a>
@@ -220,7 +248,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 2 2018 02:24:09 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 2 2018 12:33:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

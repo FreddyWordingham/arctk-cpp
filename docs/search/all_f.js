@@ -20,6 +20,7 @@ var searchData=
   ['pre',['PRE',['../debug_8hpp.html#a9caa5c0ef4e635573f083d58de065c1d',1,'debug.hpp']]],
   ['pre_5fcondition_5ffailure',['PRE_CONDITION_FAILURE',['../namespacearc_1_1exit_1_1error.html#a2ad2f9a0ce5cd17333a3ba403683d664',1,'arc::exit::error']]],
   ['precondition',['precondition',['../namespacearc_1_1debug_1_1contract.html#ab8432795f13e5fd8ad286b138bca16df',1,'arc::debug::contract']]],
+  ['primitive_5ftype',['primitive_type',['../classarc_1_1gui_1_1_actor.html#ae3fe93962c3f0eae157511fcfe1c3f17',1,'arc::gui::Actor']]],
   ['print_5fwidth',['PRINT_WIDTH',['../namespacearc_1_1settings_1_1format.html#aad22a4ee2202efc76b831dca054d44b8',1,'arc::settings::format']]],
   ['printable',['Printable',['../classarc_1_1str_1_1_printable.html',1,'arc::str::Printable'],['../classarc_1_1str_1_1_printable.html#a388a4dfd802a140d4b474b3a36c39cca',1,'arc::str::Printable::Printable(const Printable &amp;) noexcept=default'],['../classarc_1_1str_1_1_printable.html#a1eec26fea57fcc4bd4aec1949c0ed5b2',1,'arc::str::Printable::Printable(Printable &amp;&amp;) noexcept=default']]],
   ['printable_2ehpp',['printable.hpp',['../printable_8hpp.html',1,'']]],

@@ -16,6 +16,8 @@ var searchData=
   ['init_5fsub_5fshader',['init_sub_shader',['../classarc_1_1gui_1_1_shader.html#a6980a0f6a388ebf0c05730a88d6db80c',1,'arc::gui::Shader']]],
   ['init_5funiform',['init_uniform',['../classarc_1_1gui_1_1_shader.html#a9f7dd3c7adde40343c4e84b9191c1347',1,'arc::gui::Shader']]],
   ['init_5funiforms',['init_uniforms',['../classarc_1_1gui_1_1_shader.html#aaa070ce37766759a644228c675a0a519',1,'arc::gui::Shader']]],
+  ['init_5fvao',['init_vao',['../classarc_1_1gui_1_1_actor.html#aec224c5b4347c8ecefe2ef56370e7fc5',1,'arc::gui::Actor']]],
+  ['init_5fvbo',['init_vbo',['../classarc_1_1gui_1_1_actor.html#a9ca837d824a70fd9c9077f932bea79e7',1,'arc::gui::Actor']]],
   ['inv',['inv',['../classarc_1_1math_1_1_mat.html#ada19a34fc5169413915ca03d6d17c9f2',1,'arc::math::Mat::inv()'],['../classarc_1_1math_1_1_mat_3_01_t_00_012_01_4.html#ab1f0f496b6b81fcd65334e12f3bd6f93',1,'arc::math::Mat&lt; T, 2 &gt;::inv()'],['../classarc_1_1math_1_1_mat_3_01_t_00_013_01_4.html#a7d374849e7402999da09159003bc87b6',1,'arc::math::Mat&lt; T, 3 &gt;::inv()'],['../classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#afa0c845d4af7a20ed6fbf8b0d59d5cec',1,'arc::math::Mat&lt; T, 4 &gt;::inv()']]],
   ['invalid_5fcommand_5fline_5farguments',['INVALID_COMMAND_LINE_ARGUMENTS',['../namespacearc_1_1exit_1_1error.html#a4ce0ffad0e72e823fa3cccc62b525cac',1,'arc::exit::error']]],
   ['invar',['INVAR',['../debug_8hpp.html#a9f907037b2e0fdee3330033efc94eef4',1,'debug.hpp']]],
