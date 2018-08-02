@@ -51,6 +51,9 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+          private:
+            //  -- Updating --
+            inline update_view() noexcept;
         };
 
 
@@ -69,6 +72,15 @@ namespace arc //! arctk namespace
           , _dir(dir_)
           , _up(up_)
         {
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Updating --
+        inline Camera::update_view() noexcept
+        {
+            _view = glm::lookAt(_pos, _pos + _dir, _up);
         }
 
 
