@@ -411,7 +411,7 @@ namespace arc //! arctk namespace
          *
          *  @param  proj_mat_  Value to set the projection matrix handle to.
          */
-        inline void set_col(const glm::vec3& col_) noexcept
+        inline void Shader::set_col(const glm::vec3& col_) noexcept
         {
             glUseProgram(_handle);
             glUniform3fv(_col, 1, &col_[0]);
