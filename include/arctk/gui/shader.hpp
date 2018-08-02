@@ -351,8 +351,19 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Determine if the shader contains a handle for a given uniform name.
+         *
+         *  @param  name_   Name to search shader for.
+         *
+         *  @pre    name_ may not be empty.
+         *
+         *  @return True if the shader handle map has an entry for the given name.
+         */
         inline bool Shader::has_uniform(const std::string& name_) const noexcept
         {
+            PRE(!name_.empty());
+
             return (_uniforms.find(name_) != _uniforms.end());
         }
 
