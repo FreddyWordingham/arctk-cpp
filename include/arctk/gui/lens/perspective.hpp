@@ -53,7 +53,9 @@ namespace arc //! arctk namespace
 
 
                 //  == METHODS ==
-              public:
+              private:
+                //  -- Updating --
+                inline void update_view() noexcept override;
             };
 
 
@@ -64,12 +66,16 @@ namespace arc //! arctk namespace
               : _fov(fov_)
               , _aspect_ratio(aspect_ratio_)
             {
+                update_view();
             }
 
 
 
             //  == METHODS ==
-            //  -- Getters --
+            //  -- Updating --
+            inline void Perspective::update_view() noexcept
+            {
+            }
 
 
 
