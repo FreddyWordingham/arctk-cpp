@@ -51,6 +51,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline explicit Keybind(const std::function<void()>& func_, bool sticky_ = false, int state_ = GLFW_RELEASE) noexcept;
 
 
             //  == METHODS ==
@@ -60,7 +61,20 @@ namespace arc //! arctk namespace
 
 
 
-        //  == INSTANTIATION --
+        //  == INSTANTIATION ==
+        /**
+         *  Construct a keybind object using a function and a key status.
+         *
+         *  @param  func_   Function to bind.
+         *  @param  sticky_ Sticky status of the binding.
+         *  @param  state_  Current keybind state.
+         */
+        inline Keybind::Keybind(const std::function<void()>& func_, bool sticky_, int state_) noexcept
+          : _func(func_)
+          , _sticky(sticky_)
+          , _state(state_)
+        {
+        }
 
 
 
