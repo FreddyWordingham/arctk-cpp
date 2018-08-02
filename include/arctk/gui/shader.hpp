@@ -74,6 +74,13 @@ namespace arc //! arctk namespace
             inline void set_view(const glm::mat4& view_mat_) noexcept;
             inline void set_proj(const glm::mat4& proj_mat_) noexcept;
             inline void set_uniform(const std::string& name_, const int val_) noexcept;
+            inline void set_uniform(const std::string& name_, const float val_) noexcept;
+            inline void set_uniform(const std::string& name_, const glm::vec2& val_) noexcept;
+            inline void set_uniform(const std::string& name_, const glm::vec3& val_) noexcept;
+            inline void set_uniform(const std::string& name_, const glm::vec4& val_) noexcept;
+            inline void set_uniform(const std::string& name_, const glm::mat2& val_) noexcept;
+            inline void set_uniform(const std::string& name_, const glm::mat3& val_) noexcept;
+            inline void set_uniform(const std::string& name_, const glm::mat4& val_) noexcept;
         };
 
 
@@ -314,6 +321,14 @@ namespace arc //! arctk namespace
 
             glUseProgram(_handle);
             glUniform1i(_uniforms[name_], val_);
+        }
+
+        inline void Shader::set_uniform(const std::string& name_, const float val_) noexcept
+        {
+            PRE(_uniforms.find(name_) != _uniforms.end());
+
+            glUseProgram(_handle);
+            glUniform1f(_uniforms[name_], val_);
         }
 
 
