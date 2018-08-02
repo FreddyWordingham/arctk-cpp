@@ -244,6 +244,9 @@ namespace arc //! arctk namespace
 
         inline void Actor::scale(const glm::vec3& scale_) noexcept
         {
+            _scale.x *= scale_.x;
+            _scale.y *= scale_.y;
+            _scale.z *= scale_.z;
         }
 
 
