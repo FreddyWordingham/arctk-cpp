@@ -49,6 +49,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Perspective(float fov_, float aspect_ratio_) noexcept;
 
 
                 //  == METHODS ==
@@ -59,6 +60,11 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Perspective::Perspective(const float fov_, const float aspect_ratio_) noexcept
+              : _fov(fov_)
+              , _aspect_ratio(aspect_ratio_)
+            {
+            }
 
 
 
