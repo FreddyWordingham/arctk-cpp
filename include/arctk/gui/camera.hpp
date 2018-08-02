@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline glm::mat4& view() const noexcept;
+            inline const glm::mat4& view() const noexcept;
 
             //  -- Control --
             inline void move(const glm::vec3& vec_) noexcept   = 0;
@@ -92,7 +92,7 @@ namespace arc //! arctk namespace
          *
          *  @return View matrix of the camera.
          */
-        inline glm::mat4& Camera::view() const noexcept
+        inline const glm::mat4& Camera::view() const noexcept
         {
             return (_view);
         }
