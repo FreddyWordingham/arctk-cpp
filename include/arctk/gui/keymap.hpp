@@ -23,6 +23,7 @@
 #include <GLFW/glfw3.h>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/gui/keybind.hpp>
 
 
