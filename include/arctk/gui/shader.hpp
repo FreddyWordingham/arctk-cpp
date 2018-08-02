@@ -21,6 +21,9 @@
 #include <string>
 #include <vector>
 
+//  -- Graphical --
+#include <glm/glm.hpp>
+
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/exit.hpp>
