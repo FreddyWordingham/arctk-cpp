@@ -110,7 +110,7 @@ namespace arc //! arctk namespace
           , _model(init_uniform("model"))
           , _view(init_uniform("view"))
           , _proj(init_uniform("proj"))
-          , _uniform(init_uniforms(uniform_name_))
+          , _uniforms(init_uniforms(uniform_names_))
         {
             PRE(!vert_code_.empty());
             PRE(!frag_code_.empty());
@@ -133,7 +133,7 @@ namespace arc //! arctk namespace
           , _model(init_uniform("model"))
           , _view(init_uniform("view"))
           , _proj(init_uniform("proj"))
-          , _uniform(init_uniforms(uniform_name_))
+          , _uniforms(init_uniforms(uniform_names_))
         {
             PRE(!vert_code_.empty());
             PRE(!geom_code_.empty());
