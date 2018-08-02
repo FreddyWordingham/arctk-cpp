@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
 
           protected:
             //  -- Updating --
-            inline update_view() noexcept;
+            inline void update_view() noexcept;
         };
 
 
@@ -102,7 +102,7 @@ namespace arc //! arctk namespace
         /**
          *  Update the view matrix.
          */
-        inline Camera::update_view() noexcept
+        inline void Camera::update_view() noexcept
         {
             _view = glm::lookAt(_pos, _focus, _up);
         }
