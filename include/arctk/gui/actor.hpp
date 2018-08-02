@@ -90,6 +90,8 @@ namespace arc //! arctk namespace
             inline GLenum  fill_mode() const noexcept;
 
             //  -- Setters --
+            inline void set_primitive_type(const GLenum primitive_type_) noexcept;
+            inline void set_fill_mode(const GLenum fill_mode_) noexcept;
             inline void set_col(const glm::vec3& col_) noexcept;
             inline void translate(const glm::vec3& trans_) noexcept;
             inline void rotate(const glm::vec3& rot_) noexcept;
@@ -235,6 +237,15 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
+        inline void Actor::set_primitive_type(const GLenum primitive_type_) noexcept
+        {
+            _primitive_type = primitive_type_;
+        }
+
+        inline void Actor::set_fill_mode(const GLenum fill_mode_) noexcept
+        {
+        }
+
         /**
          *  Set the rendering colour of the actor.
          *
