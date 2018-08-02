@@ -480,6 +480,11 @@ namespace arc //! arctk namespace
             glUniformMatrix2fv(_uniforms.at(name_), 1, GL_FALSE, &val_[0][0]);
         }
 
+        /**
+         *  Set the value for a mat3 uniform.
+         *
+         *  @param  val_    Value to set the uniform handle to.
+         */
         inline void Shader::set_uniform(const std::string& name_, const glm::mat3& val_) noexcept
         {
             PRE(_uniforms.find(name_) != _uniforms.end());
