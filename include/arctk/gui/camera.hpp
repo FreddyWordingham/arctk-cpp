@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
           protected:
             //  -- Positioning --
             glm::vec3 _pos;   //!< Position of the camera.
-            glm::vec3 _focus; //!< Foxus position of the camera.
+            glm::vec3 _focus; //!< Focus position of the camera.
             glm::vec3 _up;    //!< Up direction of the camera.
 
           private:
