@@ -63,7 +63,7 @@ namespace arc //! arctk namespace
             glm::vec3 _scale;  //!< Model scale vector.
 
             //  -- Uniforms --
-            glm::mat4 _model; //!< Model transformation matrix.
+            glm::mat4 _model{}; //!< Model transformation matrix.
 
 
 
