@@ -380,6 +380,11 @@ namespace arc //! arctk namespace
             glUniformMatrix4fv(_model, 1, GL_FALSE, &model_mat_[0][0]);
         }
 
+        /**
+         *  Set the value for the view matrix handle.
+         *
+         *  @param  view_mat_  Value to set for the view matrix handle.
+         */
         inline void Shader::set_view(const glm::mat4& view_mat_) noexcept
         {
             glUseProgram(_handle);
