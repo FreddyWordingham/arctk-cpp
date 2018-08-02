@@ -47,6 +47,9 @@ namespace arc //! arctk namespace
             class Fly : public Camera
             {
                 //  == FIELDS ==
+              private:
+                //  -- View --
+                float _fov; //!< Field-of-view of the camera.
 
                 //  == INSTANTIATION ==
               public:
