@@ -391,6 +391,11 @@ namespace arc //! arctk namespace
             glUniformMatrix4fv(_model, 1, GL_FALSE, &view_mat_[0][0]);
         }
 
+        /**
+         *  Set the value for the projection matrix handle.
+         *
+         *  @param  proj_mat_  Value to set for the projection matrix handle.
+         */
         inline void Shader::set_proj(const glm::mat4& proj_mat_) noexcept
         {
             glUseProgram(_handle);
