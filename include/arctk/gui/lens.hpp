@@ -34,6 +34,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           protected:
+            //  -- Uniform --
+            glm::mat4 _proj{}; //!< Projection matrix.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
