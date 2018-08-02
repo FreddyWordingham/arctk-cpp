@@ -46,6 +46,7 @@
 #include <arctk/geom/shape/triangle.hpp>
 #include <arctk/gui.hpp>
 #include <arctk/gui/actor.hpp>
+#include <arctk/gui/camera.hpp>
 #include <arctk/gui/shader.hpp>
 #include <arctk/gui/uniform.hpp>
 #include <arctk/index.hpp>
