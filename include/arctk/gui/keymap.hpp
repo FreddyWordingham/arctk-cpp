@@ -46,6 +46,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Mapping --
+            std::map<int, Keybind> _map; //!< Map of keybindings.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
