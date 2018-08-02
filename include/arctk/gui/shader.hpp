@@ -70,9 +70,9 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Setters --
-            inline void set_model(const glm::mat4& model_) noexcept;
-            inline void set_view(const glm::mat4& view_) noexcept;
-            inline void set_proj(const glm::mat4& proj_) noexcept;
+            inline void set_model(const glm::mat4& model_mat_) noexcept;
+            inline void set_view(const glm::mat4& view_mat_) noexcept;
+            inline void set_proj(const glm::mat4& proj_mat_) noexcept;
         };
 
 
@@ -297,6 +297,8 @@ namespace arc //! arctk namespace
 
         inline void Shader::set_view(const glm::mat4& view_mat_) noexcept
         {
+            glUseProgram(_handle);
+            glUniformMatrix4fv(_model, 1, GL_FALSE, &view_mat_[0][0]);
         }
 
         inline void Shader::set_proj(const glm::mat4& proj_mat_) noexcept
