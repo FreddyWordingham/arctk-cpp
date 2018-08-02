@@ -287,7 +287,7 @@ namespace arc //! arctk namespace
                 PRE(uniform_names_[i] != "view");
                 PRE(uniform_names_[i] != "proj");
 
-                if (uniforms.find(uniform_name_[i]) != uniforms.end())
+                if (uniforms.find(uniform_names_[i]) != uniforms.end())
                 {
                     std::cerr << "Unable to construct gui shader.\n"
                               << "Uniform name: `" << uniform_name_[i] << "` may only have a single handle.\n";
