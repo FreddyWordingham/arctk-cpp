@@ -407,9 +407,9 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Set the value for the projection matrix handle.
+         *  Set the value for the colour uniform.
          *
-         *  @param  proj_mat_  Value to set the projection matrix handle to.
+         *  @param  col_  Value to set the colour uniform to.
          */
         inline void Shader::set_col(const glm::vec3& col_) noexcept
         {
