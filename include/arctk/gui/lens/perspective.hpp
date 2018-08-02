@@ -19,6 +19,7 @@
 #include <glm/glm.hpp>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/gui/lens.hpp>
 
 
@@ -73,6 +74,8 @@ namespace arc //! arctk namespace
               : _fov(fov_)
               , _aspect_ratio(aspect_ratio_)
             {
+                PRE(fov_ > 0.0);
+
                 update_view();
             }
 
