@@ -284,6 +284,15 @@ namespace arc //! arctk namespace
             return (sub_shader);
         }
 
+        /**
+         *  Initialise a handle to a uniform of the shader.
+         *
+         *  @param  name_   Name of the uniform.
+         *
+         *  @pre    name_ may not be empty.
+         *
+         *  @return Handle to the initialised uniform within the shader.
+         */
         inline GLint Shader::init_uniform(const std::string& name_) const noexcept
         {
             PRE(!name_.empty());
