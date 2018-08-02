@@ -55,6 +55,7 @@ namespace arc //! arctk namespace
             const GLint                        _model;    //!< Model matrix uniform handle.
             const GLint                        _view;     //!< View matrix uniform handle.
             const GLint                        _proj;     //!< Projection matrix uniform handle.
+            const GLint                        _col;      //!< Colour uniform handle.
             const std::map<std::string, GLint> _uniforms; //!< Additional uniform mappings.
 
 
