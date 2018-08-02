@@ -32,6 +32,15 @@ namespace arc //! arctk namespace
          */
         class Actor
         {
+            //  == FIELDS ==
+          private:
+            //  -- Properties --
+            const GLsizei _num_vert; //!< Number of actor vertices.
+
+            //  --
+
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
