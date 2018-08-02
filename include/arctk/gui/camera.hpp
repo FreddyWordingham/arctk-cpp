@@ -51,6 +51,10 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Control --
+            inline void move(const glm::vec3& vec_) noexcept   = 0;
+            inline void rotate(const glm::vec3& vec_) noexcept = 0;
+
           private:
             //  -- Updating --
             inline update_view() noexcept;
