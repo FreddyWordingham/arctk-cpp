@@ -237,6 +237,11 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
+        /**
+         *  Set the primitive rendering type of the actor.
+         *
+         *  @param  primitive_type_ Primitive type used to render the actor.
+         */
         inline void Actor::set_primitive_type(const GLenum primitive_type_) noexcept
         {
             _primitive_type = primitive_type_;
