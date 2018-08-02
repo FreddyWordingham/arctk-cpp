@@ -30,7 +30,7 @@ namespace arc //! arctk namespace
         /**
          *  Shader uniform class.
          */
-        class Shader
+        class Uniform
         {
             //  == ENUMERATION ==
           public:
