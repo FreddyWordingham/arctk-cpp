@@ -69,6 +69,9 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline bool has_uniform(const std::string& name_) const noexcept;
+
             //  -- Setters --
             inline void set_model(const glm::mat4& model_mat_) noexcept;
             inline void set_view(const glm::mat4& view_mat_) noexcept;
@@ -296,6 +299,13 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Getters --
+        inline bool Shader::has_uniform(const std::string& name_) const noexcept
+        {
+            return (_uniforms.find(name_) != _uniforms.end());
+        }
+
+
         //  -- Setters --
         inline void Shader::set_model(const glm::mat4& model_mat_) noexcept
         {
