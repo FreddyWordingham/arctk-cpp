@@ -264,7 +264,7 @@ namespace arc //! arctk namespace
         {
             PRE(!name_.empty());
 
-            GLint handle = glGetUniformLocation(_handle, name_);
+            GLint handle = glGetUniformLocation(_handle, name_.c_str());
 
             if (handle < 0)
             {
