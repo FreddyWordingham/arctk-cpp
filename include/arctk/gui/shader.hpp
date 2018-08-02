@@ -403,7 +403,7 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Set the value for a int uniform.
+         *  Set the value for an int uniform.
          *
          *  @param  val_    Value to set the uniform handle to.
          */
@@ -415,6 +415,11 @@ namespace arc //! arctk namespace
             glUniform1i(_uniforms.at(name_), val_);
         }
 
+        /**
+         *  Set the value for a float uniform.
+         *
+         *  @param  val_    Value to set the uniform handle to.
+         */
         inline void Shader::set_uniform(const std::string& name_, const float val_) noexcept
         {
             PRE(_uniforms.find(name_) != _uniforms.end());
