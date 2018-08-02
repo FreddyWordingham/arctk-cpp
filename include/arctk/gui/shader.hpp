@@ -369,6 +369,11 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
+        /**
+         *  Set the value for the model matrix handle.
+         *
+         *  @param  model_mat_  Value to set for the model matrix handle.
+         */
         inline void Shader::set_model(const glm::mat4& model_mat_) noexcept
         {
             glUseProgram(_handle);
