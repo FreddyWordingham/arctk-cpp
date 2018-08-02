@@ -45,6 +45,11 @@ namespace arc //! arctk namespace
             GLenum _primitive_type; //!< Primitive type used to render the actor.
             GLenum _fill_mode;      //!< Fill mode used to render the actor.
 
+            //  -- Transform --
+            glm::vec3 _trans;  //!< Model translation vector.
+            glm::vec3 _rotate; //!< Model rotation vector.
+            glm::vec3 _scale;  //!< Model scale vector.
+
 
 
             //  == INSTANTIATION ==
