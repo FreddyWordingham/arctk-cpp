@@ -73,6 +73,7 @@ namespace arc //! arctk namespace
             inline void set_model(const glm::mat4& model_mat_) noexcept;
             inline void set_view(const glm::mat4& view_mat_) noexcept;
             inline void set_proj(const glm::mat4& proj_mat_) noexcept;
+            inline void set_uniform(const std::string& name_, const int val_) noexcept;
         };
 
 
@@ -305,6 +306,14 @@ namespace arc //! arctk namespace
         {
             glUseProgram(_handle);
             glUniformMatrix4fv(_model, 1, GL_FALSE, &proj_mat_[0][0]);
+        }
+
+        inline void Shader::set_uniform(const std::string& name_, const int val_) noexcept
+        {
+            PRE(_uniforms.find(name_) != _uniforms.end());
+
+            glUseProgram(_handle);
+            glUniform1i(_uniforms[name_], val_);
         }
 
 
