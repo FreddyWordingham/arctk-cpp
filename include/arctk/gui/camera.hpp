@@ -32,6 +32,14 @@ namespace arc //! arctk namespace
          */
         class Camera
         {
+            //  == FIELDS ==
+          private:
+            //  -- Positioning --
+            glm::vec3 _pos; //!< Position of the camera.
+            glm::vec3 _dir; //!< Direction the camera is facing.
+            glm::vec3 _up;  //!< Up direction of the camera.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
