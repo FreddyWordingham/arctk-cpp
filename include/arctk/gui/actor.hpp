@@ -87,7 +87,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    verts_.size() must be exactly divisible by the sum of the layout patturn.
          */
-        inline Actor(const std::vector<GLfloat>& verts_, const std::vector<size_t>& layout_, GLenum primitive_type_, GLenum fill_mode_) noexcept
+        inline Actor::Actor(const std::vector<GLfloat>& verts_, const std::vector<size_t>& layout_, GLenum primitive_type_, GLenum fill_mode_) noexcept
           : _num_vert(static_cast<GLsizei>(verts_.size() / math::sum(layout)))
           , _vao(init_vao())
           , _vbo(init_vbo())
