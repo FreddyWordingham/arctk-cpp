@@ -422,7 +422,7 @@ namespace arc //! arctk namespace
          *  Set the value for an int uniform.
          *
          *  @param  name_   Name of the uniform to set.
-         *  @param  val_    Value to set the uniform handle to.
+         *  @param  val_    Value to set the uniform to.
          *
          *  @pre    name_ may not be empty.
          *  @pre    name_ must be a key within the _uniforms map.
@@ -440,7 +440,7 @@ namespace arc //! arctk namespace
          *  Set the value for a float uniform.
          *
          *  @param  name_   Name of the uniform to set.
-         *  @param  val_    Value to set the uniform handle to.
+         *  @param  val_    Value to set the uniform to.
          *
          *  @pre    name_ may not be empty.
          *  @pre    name_ must be a key within the _uniforms map.
@@ -458,7 +458,7 @@ namespace arc //! arctk namespace
          *  Set the value for a vec2 uniform.
          *
          *  @param  name_   Name of the uniform to set.
-         *  @param  val_    Value to set the uniform handle to.
+         *  @param  val_    Value to set the uniform to.
          *
          *  @pre    name_ may not be empty.
          *  @pre    name_ must be a key within the _uniforms map.
@@ -476,7 +476,7 @@ namespace arc //! arctk namespace
          *  Set the value for a vec3 uniform.
          *
          *  @param  name_   Name of the uniform to set.
-         *  @param  val_    Value to set the uniform handle to.
+         *  @param  val_    Value to set the uniform to.
          *
          *  @pre    name_ may not be empty.
          *  @pre    name_ must be a key within the _uniforms map.
@@ -494,7 +494,7 @@ namespace arc //! arctk namespace
          *  Set the value for a vec4 uniform.
          *
          *  @param  name_   Name of the uniform to set.
-         *  @param  val_    Value to set the uniform handle to.
+         *  @param  val_    Value to set the uniform to.
          *
          *  @pre    name_ may not be empty.
          *  @pre    name_ must be a key within the _uniforms map.
@@ -512,7 +512,7 @@ namespace arc //! arctk namespace
          *  Set the value for a mat2 uniform.
          *
          *  @param  name_   Name of the uniform to set.
-         *  @param  val_    Value to set the uniform handle to.
+         *  @param  val_    Value to set the uniform to.
          *
          *  @pre    name_ may not be empty.
          *  @pre    name_ must be a key within the _uniforms map.
@@ -530,7 +530,7 @@ namespace arc //! arctk namespace
          *  Set the value for a mat3 uniform.
          *
          *  @param  name_   Name of the uniform to set.
-         *  @param  val_    Value to set the uniform handle to.
+         *  @param  val_    Value to set the uniform to.
          *
          *  @pre    name_ may not be empty.
          *  @pre    name_ must be a key within the _uniforms map.
@@ -548,7 +548,7 @@ namespace arc //! arctk namespace
          *  Set the value for a mat4 uniform.
          *
          *  @param  name_   Name of the uniform to set.
-         *  @param  val_    Value to set the uniform handle to.
+         *  @param  val_    Value to set the uniform to.
          *
          *  @pre    name_ may not be empty.
          *  @pre    name_ must be a key within the _uniforms map.
