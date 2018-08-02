@@ -269,9 +269,9 @@ namespace arc //! arctk namespace
          */
         inline void Actor::set_col(const glm::vec3& col_) noexcept
         {
-            PRE((col.r >= 0.0f) && (col.r <= 1.0f));
-            PRE((col.g >= 0.0f) && (col.r <= 1.0f));
-            PRE((col.b >= 0.0f) && (col.r <= 1.0f));
+            PRE((col_.r >= 0.0f) && (col_.r <= 1.0f));
+            PRE((col_.g >= 0.0f) && (col_.r <= 1.0f));
+            PRE((col_.b >= 0.0f) && (col_.r <= 1.0f));
 
             _col = col_;
         }
