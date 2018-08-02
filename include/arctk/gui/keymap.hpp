@@ -22,6 +22,9 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
+//  -- Arctk --
+#include <arctk/gui/keybind.hpp>
+
 
 
 //  == NAMESPACE ==
