@@ -72,6 +72,7 @@ namespace arc //! arctk namespace
           , _dir(dir_)
           , _up(up_)
         {
+            update_view();
         }
 
 
