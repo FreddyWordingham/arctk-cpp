@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_GUI_CAMERA_HPP
-#define ARCTK_GUI_CAMERA_HPP
+#ifndef ARCTK_GUI_LENS_HPP
+#define ARCTK_GUI_LENS_HPP
 
 
 
@@ -56,4 +56,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_GUI_CAMERA_HPP
+#endif // ARCTK_GUI_LENS_HPP
