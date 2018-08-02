@@ -59,9 +59,10 @@ namespace arc //! arctk namespace
             inline Keymap() noexcept = default;
 
 
-
             //  == METHODS ==
           public:
+            //  -- Setters --
+            inline void bind(int key_, const std::function<void()>& func_, bool sticky_ = false, int state_ = GLFW_RELEASE) noexcept;
         };
 
 
@@ -83,19 +84,24 @@ namespace arc //! arctk namespace
 
 
 
-        //  == OPERATORS ==
-        //  -- Call --
-        /**
-         *  Call the bound function.
-         */
-        inline void Keybind::operator()() const noexcept
-        {
-            _func();
-        }
-
-
-
         //  == METHODS ==
+        //  -- Setters --
+        /**
+         *  Bind a new keybinding to the keymap.
+         *
+         *  @param  key_    Key to bind to.
+         *  @param  func_   Function to bind.
+         *  @param  sticky_ Sticky status of the keybinding.
+         *  @param  state_  Initial state of the keybinding.
+         *
+         *  @pre    key_ must not be reserved quit key.
+         */
+        inline void Keymap::bind(const int key_, const std::function<void()>& func_, const bool sticky_, const int state_) noexcept
+        {
+            PRE(key_ != QUIT_KEY);
+
+            _map.emplace(std::make_pair(key_, Keybind(func_, sticky_, state_)));
+        }
 
 
 
