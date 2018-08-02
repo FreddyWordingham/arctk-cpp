@@ -50,6 +50,13 @@ namespace arc //! arctk namespace
             virtual inline ~Lens() noexcept = 0;
 
 
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Lens& operator=(const Lens&) = default; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Lens& operator=(Lens&&) = default;      //!< Defaulted move operator. @return Reference to moved object.
+
+
             //  == METHODS ==
           public:
             //  -- Getters --
