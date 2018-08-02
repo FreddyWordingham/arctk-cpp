@@ -290,12 +290,12 @@ namespace arc //! arctk namespace
                 if (uniforms.find(uniform_names_[i]) != uniforms.end())
                 {
                     std::cerr << "Unable to construct gui shader.\n"
-                              << "Uniform name: `" << uniform_name_[i] << "` may only have a single handle.\n";
+                              << "Uniform name: `" << uniform_names_[i] << "` may only have a single handle.\n";
 
                     std::exit(exit::error::SHADER_UNIFORM_DUPLICATE);
                 }
 
-                uniforms.emplace(std::make_pair(uniform_name_[i], init_uniform(uniform_names_[i]))));
+                uniforms.emplace(std::make_pair(uniform_names_[i], init_uniform(uniform_names_[i]))));
             }
 
             return (uniforms);
