@@ -402,6 +402,11 @@ namespace arc //! arctk namespace
             glUniformMatrix4fv(_model, 1, GL_FALSE, &proj_mat_[0][0]);
         }
 
+        /**
+         *  Set the value for a int uniform.
+         *
+         *  @param  val_    Value to set the uniform handle to.
+         */
         inline void Shader::set_uniform(const std::string& name_, const int val_) noexcept
         {
             PRE(_uniforms.find(name_) != _uniforms.end());
