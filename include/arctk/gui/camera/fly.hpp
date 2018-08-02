@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
             /**
              *  Scene camera class with fly controls.
              */
-            class Fly
+            class Fly : public Camera
             {
                 //  == FIELDS ==
 
