@@ -43,6 +43,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Lens()            = default; //!< Defaulted constructor.
             inline Lens(const Lens&) = default; //!< Defaulted copy constructor.
             inline Lens(Lens&&)      = default; //!< Defaulted move constructor.
 
