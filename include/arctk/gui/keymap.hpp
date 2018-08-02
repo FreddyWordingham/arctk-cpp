@@ -64,6 +64,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Setters --
             inline void bind(int key_, const std::function<void()>& func_, bool sticky_ = false, int state_ = GLFW_RELEASE) noexcept;
+            inline void unbind(int key_) noexcept;
         };
 
 
@@ -102,6 +103,22 @@ namespace arc //! arctk namespace
             PRE(key_ != QUIT_KEY);
 
             _map.emplace(std::make_pair(key_, Keybind(func_, sticky_, state_)));
+        }
+
+        /**
+         *  Unbind a currently set keybinding.
+         *
+         *  @param  key_    Key to unbind.
+         *
+         *  @pre    key_ must not be reserved quit key.
+         *  @pre    key_ must not be already found within _map.
+         */
+        inline void Keymap::unbind(const int key_) noexcept
+        {
+            PRE(key_ != QUIT_KEY);
+            PRE(_map.find(key_) != _map.end());
+
+            _map.erase(key_);
         }
 
 
