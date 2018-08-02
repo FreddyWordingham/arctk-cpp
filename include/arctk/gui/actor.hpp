@@ -79,6 +79,13 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline GLsizei num_vert() const noexcept;
+            inline GLuint  vao() const noexcept;
+            inline GLuint  vbo() const noexcept;
+            inline GLenum  primitive_type() const noexcept;
+            inline GLenum  fill_mode() const noexcept;
+
           private:
             //  -- Updating --
             inline void update_model() noexcept;
@@ -160,6 +167,60 @@ namespace arc //! arctk namespace
             glGenBuffers(1, &vbo);
 
             return (vbo);
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        /**
+         *  Get the number of vertices used by the actor.
+         *
+         *  @return Number of vertices.
+         */
+        inline GLsizei Actor::num_vert() const noexcept
+        {
+            return (_num_vert);
+        }
+
+        /**
+         *  Get the vertex array object handle.
+         *
+         *  @return Vertex array object handle.
+         */
+        inline GLuint Actor::vao() const noexcept
+        {
+            return (_vao);
+        }
+
+        /**
+         *  Get the vertex buffer object handle.
+         *
+         *  @return Vertex buffer object handle.
+         */
+        inline GLuint Actor::vbo() const noexcept
+        {
+            return (_vbo);
+        }
+
+        /**
+         *  Get the primitive type used to render the actor.
+         *
+         *  @return Primitive type used to render the actor.
+         */
+        inline GLenum Actor::primitive_type() const noexcept
+        {
+            return (_primitive_type);
+        }
+
+        /**
+         *  Get the fill mode used to render the actor.
+         *
+         *  @return Fill mode used to render the actor.
+         */
+        inline GLenum Actor::fill_mode() const noexcept
+        {
+            return (_fill_mode);
         }
 
 
