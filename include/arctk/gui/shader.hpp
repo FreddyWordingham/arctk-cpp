@@ -303,6 +303,8 @@ namespace arc //! arctk namespace
 
         inline void Shader::set_proj(const glm::mat4& proj_mat_) noexcept
         {
+            glUseProgram(_handle);
+            glUniformMatrix4fv(_model, 1, GL_FALSE, &proj_mat_[0][0]);
         }
 
 
