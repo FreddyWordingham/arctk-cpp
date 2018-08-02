@@ -46,6 +46,12 @@ namespace arc //! arctk namespace
              */
             class Fly : public Camera
             {
+                //  == FIELDS ==
+              private:
+                //  -- Positioning --
+                glm::vec3 _dir; //!< Direction of the camera.
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
