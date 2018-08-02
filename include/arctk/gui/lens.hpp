@@ -38,19 +38,11 @@ namespace arc //! arctk namespace
             glm::mat4 _proj{}; //!< Projection matrix.
 
 
-            //  == INSTANTIATION ==
-          public:
-            //  -- Constructors --
-
-
             //  == METHODS ==
           public:
             //  -- Getters --
+            virtual inline const glm::mat4& proj() const noexcept = 0;
         };
-
-
-
-        //  == INSTANTIATION ==
 
 
 
