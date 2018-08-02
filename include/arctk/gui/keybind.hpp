@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
          *  @param  sticky_ Sticky status of the binding.
          *  @param  state_  Current keybind state.
          */
-        inline Keybind::Keybind(const std::function<void()>& func_, bool sticky_, int state_) noexcept
+        inline Keybind::Keybind(const std::function<void()>& func_, const bool sticky_, const int state_) noexcept
           : _func(func_)
           , _sticky(sticky_)
           , _state(state_)
