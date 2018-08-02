@@ -39,6 +39,9 @@ namespace arc //! arctk namespace
             glm::vec3 _dir; //!< Direction the camera is facing.
             glm::vec3 _up;  //!< Up direction of the camera.
 
+            //  -- Uniform --
+            glm::mat4 _view{}; //!< View transformation matrix.
+
 
             //  == INSTANTIATION ==
           public:
