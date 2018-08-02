@@ -335,7 +335,7 @@ namespace arc //! arctk namespace
             PRE(_uniforms.find(name_) != _uniforms.end());
 
             glUseProgram(_handle);
-            glUniform1i(_uniforms[name_], val_);
+            glUniform1i(_uniforms.at(name_), val_);
         }
 
         inline void Shader::set_uniform(const std::string& name_, const float val_) noexcept
@@ -343,7 +343,7 @@ namespace arc //! arctk namespace
             PRE(_uniforms.find(name_) != _uniforms.end());
 
             glUseProgram(_handle);
-            glUniform1f(_uniforms[name_], val_);
+            glUniform1f(_uniforms.at(name_), val_);
         }
 
         inline void Shader::set_uniform(const std::string& name_, const glm::vec2& val_) noexcept
@@ -351,7 +351,7 @@ namespace arc //! arctk namespace
             PRE(_uniforms.find(name_) != _uniforms.end());
 
             glUseProgram(_handle);
-            glUniform2fv(_uniforms[name_], 1, &val_[0]);
+            glUniform2fv(_uniforms.at(name_), 1, &val_[0]);
         }
 
         inline void Shader::set_uniform(const std::string& name_, const glm::vec3& val_) noexcept
@@ -359,7 +359,7 @@ namespace arc //! arctk namespace
             PRE(_uniforms.find(name_) != _uniforms.end());
 
             glUseProgram(_handle);
-            glUniform3fv(_uniforms[name_], 1, &val_[0]);
+            glUniform3fv(_uniforms.at(name_), 1, &val_[0]);
         }
 
         inline void Shader::set_uniform(const std::string& name_, const glm::vec4& val_) noexcept
@@ -367,7 +367,7 @@ namespace arc //! arctk namespace
             PRE(_uniforms.find(name_) != _uniforms.end());
 
             glUseProgram(_handle);
-            glUniform4fv(_uniforms[name_], 1, &val_[0]);
+            glUniform4fv(_uniforms.at(name_), 1, &val_[0]);
         }
 
         inline void Shader::set_uniform(const std::string& name_, const glm::mat2& val_) noexcept
@@ -375,7 +375,7 @@ namespace arc //! arctk namespace
             PRE(_uniforms.find(name_) != _uniforms.end());
 
             glUseProgram(_handle);
-            glUniformMatrix2fv(_uniforms[name_], 1, GL_FALSE, &val_[0][0]);
+            glUniformMatrix2fv(_uniforms.at(name_), 1, GL_FALSE, &val_[0][0]);
         }
 
         inline void Shader::set_uniform(const std::string& name_, const glm::mat3& val_) noexcept
@@ -383,7 +383,7 @@ namespace arc //! arctk namespace
             PRE(_uniforms.find(name_) != _uniforms.end());
 
             glUseProgram(_handle);
-            glUniformMatrix3fv(_uniforms[name_], 1, GL_FALSE, &val_[0][0]);
+            glUniformMatrix3fv(_uniforms.at(name_), 1, GL_FALSE, &val_[0][0]);
         }
 
         inline void Shader::set_uniform(const std::string& name_, const glm::mat4& val_) noexcept
@@ -391,7 +391,7 @@ namespace arc //! arctk namespace
             PRE(_uniforms.find(name_) != _uniforms.end());
 
             glUseProgram(_handle);
-            glUniformMatrix4fv(_uniforms[name_], 1, GL_FALSE, &val_[0][0]);
+            glUniformMatrix4fv(_uniforms.at(name_), 1, GL_FALSE, &val_[0][0]);
         }
 
 
