@@ -26,6 +26,7 @@
 #include <glm/gtx/transform.hpp>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/math.hpp>
 
 
