@@ -33,6 +33,13 @@ namespace arc //! arctk namespace
 
 
 
+            //  == CONSTANTS ==
+            //  -- Culling --
+            constexpr const float FLY_NEAR_CULL_DIST = 1e-3f; //!< Far culling distance for the fly camera.
+            constexpr const float FLY_FAR_CULL_DIST  = 1e+3f; //!< Near culling distance for the fly camera.
+
+
+
             //  == CLASS ==
             /**
              *  Scene camera class with fly controls.
