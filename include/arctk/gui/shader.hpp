@@ -310,12 +310,25 @@ namespace arc //! arctk namespace
             return (handle);
         }
 
+        /**
+         *  Initialise the map of handles to a list of uniforms within the shader.
+         *
+         *  @param  name_   Vector of uniform names.
+         *
+         *  @pre    uniform_names_ may not be empty.
+         *  @pre    uniform_names_ may not be "model".
+         *  @pre    uniform_names_ may not be "view".
+         *  @pre    uniform_names_ may not be "proj".
+         *
+         *  @return Initialised map of uniform names.
+         */
         inline std::map<std::string, GLint> Shader::init_uniforms(const std::vector<std::string>& uniform_names_) const noexcept
         {
             std::map<std::string, GLint> uniforms;
 
             for (size_t i = 0; i < uniform_names_.size(); ++i)
             {
+                PRE(!uniform_names_[i].empty());
                 PRE(uniform_names_[i] != "model");
                 PRE(uniform_names_[i] != "view");
                 PRE(uniform_names_[i] != "proj");
