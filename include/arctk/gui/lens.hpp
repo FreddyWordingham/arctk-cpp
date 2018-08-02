@@ -40,11 +40,26 @@ namespace arc //! arctk namespace
             glm::mat4 _proj{}; //!< Projection matrix.
 
 
+            //  == INSTANTIATION ==
+          public:
+            //  -- Destructors --
+            virtual inline ~Lens() noexcept = 0;
+
+
             //  == METHODS ==
           public:
             //  -- Getters --
             virtual inline const glm::mat4& proj() const noexcept = 0;
         };
+
+
+
+        //  == INSTANTIATION --
+        //  -- Destructors --
+        /**
+         *  Defaulted destructor method.
+         */
+        inline Lens::~Lens() noexcept = default;
 
 
 
