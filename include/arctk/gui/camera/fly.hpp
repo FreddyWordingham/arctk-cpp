@@ -19,7 +19,7 @@
 #include <glm/glm.hpp>
 
 //  -- Arctk --
-#include <arctk/camera/fly.hpp>
+#include <arctk/gui/camera.hpp>
 
 
 
