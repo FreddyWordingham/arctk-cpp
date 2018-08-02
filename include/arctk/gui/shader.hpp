@@ -339,6 +339,14 @@ namespace arc //! arctk namespace
             glUniform2fv(_uniforms[name_], 1, &val_[0]);
         }
 
+        inline void Shader::set_uniform(const std::string& name_, const glm::vec3& val_) noexcept
+        {
+            PRE(_uniforms.find(name_) != _uniforms.end());
+
+            glUseProgram(_handle);
+            glUniform3fv(_uniforms[name_], 1, &val_[0]);
+        }
+
 
 
     } // namespace gui
