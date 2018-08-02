@@ -32,6 +32,12 @@ namespace arc //! arctk namespace
 
 
 
+        //  == CONSTANTS ==
+        //  -- Keys --
+        constexpr const int QUIT_KEY = GLFW_KEY_ESCAPE; //!< Key used to close open window.
+
+
+
         //  == CLASS ==
         /**
          *  Keymap class providing function bindings to keypresses.
@@ -40,7 +46,6 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
-
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
