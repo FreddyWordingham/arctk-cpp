@@ -70,7 +70,7 @@ namespace arc //! arctk namespace
 
 
 
-        //  == INSTANTIATION --
+        //  == INSTANTIATION ==
         //  -- Destructors --
         /**
          *  Defaulted destructor method.
