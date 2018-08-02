@@ -41,7 +41,7 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Uniform --
-            glm::mat4 _view{}; //!< View transformation matrix.
+            glm::mat4 _view{}; //!< View matrix.
 
 
             //  == INSTANTIATION ==
