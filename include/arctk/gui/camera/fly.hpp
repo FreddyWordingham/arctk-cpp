@@ -60,6 +60,9 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Control --
+                inline void move(const glm::vec3& vec_) noexcept;
+                inline void rotate(const glm::vec3& vec_) noexcept;
             };
 
 
@@ -69,6 +72,24 @@ namespace arc //! arctk namespace
             inline Fly::Fly(const glm::vec3& pos_, const glm::vec3& dir_, const glm::vec3& up_) noexcept
               : Camera(pos_, pos_ + dir_, up_)
               , _dir(dir_)
+            {
+            }
+
+
+
+            //  == METHODS ==
+            //  -- Control --
+            /**
+             *  Move the camera forward, right and up.
+             *
+             *  @param  vec_    Vector specifying the amount to move in the forward, right and up directions.
+             */
+            inline void Fly::move(const glm::vec3& vec_) noexcept
+            {
+                _pos += (;
+            }
+
+            inline void Fly::rotate(const glm::vec3& vec_) noexcept
             {
             }
 
