@@ -61,6 +61,10 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline const glm::mat4& proj() const noexcept;
+
+          protected:
+            //  -- Updating --
+            virtual inline void update_view() noexcept = 0;
         };
 
 
