@@ -35,7 +35,7 @@ namespace arc //! arctk namespace
 
             //  == CLASS ==
             /**
-             *  Perspecive lens.
+             *  Perspective lens.
              */
             class Perspective : public Lens
             {
