@@ -372,7 +372,7 @@ namespace arc //! arctk namespace
         /**
          *  Set the value for the model matrix handle.
          *
-         *  @param  model_mat_  Value to set for the model matrix handle.
+         *  @param  model_mat_  Value to set the model matrix handle to.
          */
         inline void Shader::set_model(const glm::mat4& model_mat_) noexcept
         {
@@ -383,7 +383,7 @@ namespace arc //! arctk namespace
         /**
          *  Set the value for the view matrix handle.
          *
-         *  @param  view_mat_  Value to set for the view matrix handle.
+         *  @param  view_mat_  Value to set the view matrix handle to.
          */
         inline void Shader::set_view(const glm::mat4& view_mat_) noexcept
         {
@@ -394,7 +394,7 @@ namespace arc //! arctk namespace
         /**
          *  Set the value for the projection matrix handle.
          *
-         *  @param  proj_mat_  Value to set for the projection matrix handle.
+         *  @param  proj_mat_  Value to set the projection matrix handle to.
          */
         inline void Shader::set_proj(const glm::mat4& proj_mat_) noexcept
         {
