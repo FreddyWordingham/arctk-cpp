@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Graphical --
 #include <glm/glm.hpp>
+#include <glm/gtx/rotate_vector.hpp>
 
 //  -- Arctk --
 #include <arctk/gui/camera.hpp>
