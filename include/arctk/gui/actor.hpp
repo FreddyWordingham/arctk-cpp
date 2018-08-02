@@ -37,7 +37,9 @@ namespace arc //! arctk namespace
             //  -- Properties --
             const GLsizei _num_vert; //!< Number of actor vertices.
 
-            //  --
+            //  -- Vertices --
+            const GLuint _vao; //!< Vertex array object handle.
+            const GLuint _vbo; //!< Vertex buffer object handle.
 
 
 
