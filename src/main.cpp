@@ -47,6 +47,7 @@
 #include <arctk/gui.hpp>
 #include <arctk/gui/actor.hpp>
 #include <arctk/gui/camera.hpp>
+#include <arctk/gui/lens.hpp>
 #include <arctk/gui/shader.hpp>
 #include <arctk/index.hpp>
 #include <arctk/index/col.hpp>
