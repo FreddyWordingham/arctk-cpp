@@ -89,6 +89,8 @@ namespace arc //! arctk namespace
                 _pos += dir_ * vec_.x;
                 _pos += glm::normalise(glm::cross(dir_, vec_)) * vec_.y;
                 _pos += up_ * vec_.z;
+
+                update_view();
             }
 
             inline void Fly::rotate(const glm::vec3& vec_) noexcept
