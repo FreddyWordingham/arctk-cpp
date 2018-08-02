@@ -62,8 +62,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Control --
-                inline void move(const glm::vec3& vec_) noexcept;
-                inline void rotate(const glm::vec3& vec_) noexcept;
+                inline void move(const glm::vec3& vec_) noexcept override;
+                inline void rotate(const glm::vec3& vec_) noexcept override;
             };
 
 
