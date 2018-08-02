@@ -313,7 +313,7 @@ namespace arc //! arctk namespace
         /**
          *  Initialise the map of handles to a list of uniforms within the shader.
          *
-         *  @param  name_   Vector of uniform names.
+         *  @param  uniform_names_  Vector of uniform names.
          *
          *  @pre    uniform_names_ may not be empty.
          *  @pre    uniform_names_ may not be "model".
