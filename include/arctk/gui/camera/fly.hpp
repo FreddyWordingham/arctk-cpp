@@ -87,7 +87,7 @@ namespace arc //! arctk namespace
             inline void Fly::move(const glm::vec3& vec_) noexcept
             {
                 _pos += _dir * vec_.x;
-                _pos += glm::normalise(glm::cross(_dir, vec_)) * vec_.y;
+                _pos += glm::normalize(glm::cross(_dir, vec_)) * vec_.y;
                 _pos += _up * vec_.z;
 
                 update_view();
@@ -101,7 +101,7 @@ namespace arc //! arctk namespace
             inline void Fly::rotate(const glm::vec3& vec_) noexcept
             {
                 _up  = glm::rotate(_up, vec_.x, _dir);
-                _up  = glm::rotate(_up, vec_.y, glm::normalise(glm::cross(_dir, _up)));
+                _up  = glm::rotate(_up, vec_.y, glm::normalize(glm::cross(_dir, _up)));
                 _dir = glm::rotate(_dir, vec_.z, _up);
 
                 update_view();
