@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            virtual inline const glm::mat4& proj() const noexcept = 0;
+            inline const glm::mat4& proj() const noexcept;
         };
 
 
@@ -71,6 +71,15 @@ namespace arc //! arctk namespace
          *  Defaulted destructor method.
          */
         inline Lens::~Lens() noexcept = default;
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        inline const glm::mat4& Lens::proj() const noexcept
+        {
+            return (_proj);
+        }
 
 
 

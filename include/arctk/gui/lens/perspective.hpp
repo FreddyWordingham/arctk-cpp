@@ -69,6 +69,7 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Getters --
 
 
 
