@@ -232,6 +232,11 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
+        /**
+         *  Translate the actor by the given vector.
+         *
+         *  @param  trans_  Vector by which to translate the actor.
+         */
         inline void Actor::translate(const glm::vec3& trans_) noexcept
         {
             _trans += trans_;
