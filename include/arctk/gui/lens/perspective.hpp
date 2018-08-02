@@ -33,6 +33,13 @@ namespace arc //! arctk namespace
 
 
 
+            //  == CONSTANTS ==
+            //  -- Culling --
+            constexpr const float PERSPECTIVE_NEAR_CULL_DIST = 1e-3f; //!< Far culling distance for the perspective lens.
+            constexpr const float PERSPECTIVE_FAR_CULL_DIST  = 1e+3f; //!< Near culling distance for the perspective lens.
+
+
+
             //  == CLASS ==
             /**
              *  Perspective lens.
@@ -75,6 +82,7 @@ namespace arc //! arctk namespace
             //  -- Updating --
             inline void Perspective::update_view() noexcept
             {
+                _proj = glm::perspective(_fov, _aspect_ratio, PERSPECTIVE_NEAR_CULL_DIST, PERSPECTIVE_FAR_CULL_DIST);
             }
 
 
