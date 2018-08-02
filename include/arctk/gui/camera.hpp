@@ -52,6 +52,13 @@ namespace arc //! arctk namespace
             inline Camera(Camera&&)      = default; //!< Defaulted move constructor.
 
 
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Camera& operator=(const Camera&) = default; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Camera& operator=(Camera&&) = default;      //!< Defaulted move operator. @return Reference to moved object.
+
+
             //  == METHODS ==
           public:
             //  -- Getters --
