@@ -428,6 +428,11 @@ namespace arc //! arctk namespace
             glUniform1f(_uniforms.at(name_), val_);
         }
 
+        /**
+         *  Set the value for a vec2 uniform.
+         *
+         *  @param  val_    Value to set the uniform handle to.
+         */
         inline void Shader::set_uniform(const std::string& name_, const glm::vec2& val_) noexcept
         {
             PRE(_uniforms.find(name_) != _uniforms.end());
