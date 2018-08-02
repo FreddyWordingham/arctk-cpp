@@ -51,6 +51,9 @@ namespace arc //! arctk namespace
             inline Camera(const Camera&) = default; //!< Defaulted copy constructor.
             inline Camera(Camera&&)      = default; //!< Defaulted move constructor.
 
+            //  -- Destructors --
+            virtual inline ~Camera() noexcept = 0;
+
 
             //  == OPERATORS ==
           public:
@@ -91,6 +94,13 @@ namespace arc //! arctk namespace
         {
             update_view();
         }
+
+
+        //  -- Destructors --
+        /**
+         *  Defaulted destructor method.
+         */
+        inline Camera::~Camera() noexcept = default;
 
 
 
