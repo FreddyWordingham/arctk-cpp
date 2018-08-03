@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
               : _fov(fov_)
               , _aspect_ratio(aspect_ratio_)
             {
-                PRE(fov_ > 0.0);
+                PRE(fov_ > 0.0f);
 
                 update_view();
             }
