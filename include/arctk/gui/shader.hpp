@@ -372,6 +372,7 @@ namespace arc //! arctk namespace
 
         inline GLint Shader::col() const noexcept
         {
+            return (_col);
         }
 
         /**
