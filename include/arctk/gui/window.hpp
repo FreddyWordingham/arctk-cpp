@@ -50,6 +50,9 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Window(const std::string& title_, int width_, int height_, int aa_samples_ = 4) noexcept;
 
+            //  -- Destructors --
+            inline ~Window() noexcept;
+
 
             //  == METHODS ==
           public:
@@ -81,6 +84,17 @@ namespace arc //! arctk namespace
             PRE(width_ > 0);
             PRE(height_ > 0);
             PRE(aa_samples_ > 0);
+        }
+
+
+        //  -- Destructors --
+        /**
+         *  Destruct the window object.
+         *  Terminate all glfw operations.
+         */
+        inline Window::~Window() noexcept
+        {
+            glfwTerminate();
         }
 
 
