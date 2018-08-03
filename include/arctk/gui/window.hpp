@@ -75,6 +75,10 @@ namespace arc //! arctk namespace
 
             //  -- Setters --
             inline void set_clear_col(float red_, float green_, float blue_, float alpha_) noexcept;
+
+            //  -- Rendering --
+            inline void clear_buffer() const noexcept;
+            inline void swap_buffer() const noexcept;
         };
 
 
@@ -220,6 +224,24 @@ namespace arc //! arctk namespace
             PRE((alpha_ >= 0.0f) && (alpha_ <= 1.0f));
 
             glClearColor(red_, green_, blue_, alpha_);
+        }
+
+
+        //  -- Rendering --
+        /**
+         *  Clear the window buffer.
+         */
+        inline void Window::clear_buffer() const noexcept
+        {
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        }
+
+        /**
+         *  Swap the window buffer.
+         */
+        inline void Window::swap_buffer() const noexcept
+        {
+            glfwSwapBuffers(_handle);
         }
 
 
