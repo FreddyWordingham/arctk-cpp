@@ -34,7 +34,11 @@ namespace arc //! arctk namespace
         class Window
         {
             //  == FIELDS ==
-          protected:
+          private:
+            //  -- Handle --
+            GLFWwindow* _handle; //!< Handle to the graphical window.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
