@@ -53,6 +53,7 @@
 #include <arctk/gui/lens.hpp>
 #include <arctk/gui/lens/perspective.hpp>
 #include <arctk/gui/shader.hpp>
+#include <arctk/gui/window.hpp>
 #include <arctk/index.hpp>
 #include <arctk/index/col.hpp>
 #include <arctk/index/dim.hpp>
