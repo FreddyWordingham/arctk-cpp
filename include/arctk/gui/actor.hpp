@@ -68,7 +68,6 @@ namespace arc //! arctk namespace
             glm::mat4 _model{}; //!< Model transformation matrix.
 
 
-
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
@@ -78,7 +77,6 @@ namespace arc //! arctk namespace
             //  -- Initialisation --
             inline GLuint init_vao() const noexcept;
             inline GLuint init_vbo() const noexcept;
-
 
 
             //  == METHODS ==
