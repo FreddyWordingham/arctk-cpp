@@ -46,6 +46,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline GLFWwindow* handle() const noexcept;
         };
 
 
@@ -55,6 +57,16 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Getters --
+        /**
+         *  Get the handle of the window.
+         *
+         *  @return Window handle.
+         */
+        inline GLFWwindow* Window::handle() const noexcept
+        {
+            return (_handle);
+        }
 
 
 
