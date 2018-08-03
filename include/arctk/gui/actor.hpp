@@ -64,7 +64,7 @@ namespace arc //! arctk namespace
             glm::vec3 _scale; //!< Model scale vector.
 
             //  -- Uniforms --
-            glm::vec3 _col;     //!< Colour vector.
+            glm::vec4 _col;     //!< Colour vector.
             glm::mat4 _model{}; //!< Model transformation matrix.
 
 
@@ -82,16 +82,18 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline GLsizei num_vert() const noexcept;
-            inline GLuint  vao() const noexcept;
-            inline GLuint  vbo() const noexcept;
-            inline GLenum  primitive_type() const noexcept;
-            inline GLenum  fill_mode() const noexcept;
+            inline GLsizei          num_vert() const noexcept;
+            inline GLuint           vao() const noexcept;
+            inline GLuint           vbo() const noexcept;
+            inline GLenum           primitive_type() const noexcept;
+            inline GLenum           fill_mode() const noexcept;
+            inline const glm::vec4& col() const noexcept;
+            inline const glm::mat4& view() const noexcept;
 
             //  -- Setters --
             inline void set_primitive_type(GLenum primitive_type_) noexcept;
             inline void set_fill_mode(GLenum fill_mode_) noexcept;
-            inline void set_col(const glm::vec3& col_) noexcept;
+            inline void set_col(float red_, float green_, float blue_, float alpha_) noexcept;
             inline void translate(const glm::vec3& trans_) noexcept;
             inline void rotate(const glm::vec3& rot_) noexcept;
             inline void scale(const glm::vec3& scale_) noexcept;
@@ -125,7 +127,7 @@ namespace arc //! arctk namespace
           , _trans(glm::vec3(0.0f, 0.0f, 0.0f))
           , _rot(glm::vec3(0.0f, 0.0f, 0.0f))
           , _scale(glm::vec3(1.0f, 1.0f, 1.0f))
-          , _col(glm::vec3(1.0f, 0.0f, 1.0f))
+          , _col(glm::vec3(1.0f, 0.0f, 1.0f, 1.0f))
         {
             PRE((verts_.size() % math::container::sum(layout_)) == 0);
 
@@ -259,19 +261,24 @@ namespace arc //! arctk namespace
         /**
          *  Set the rendering colour of the actor.
          *
-         *  @param  col_    Colour to render the actor with.
+         *  @param  red_    Redness of colour used to render the actor.
+         *  @param  green_  Greenness of colour used to render the actor.
+         *  @param  blue_   Blueness of colour used to render the actor.
+         *  @param  alpha_  Alpha of colour used to render the actor.
          *
-         *  @pre    col_.r must bet between zero and unity.
-         *  @pre    col_.g must bet between zero and unity.
-         *  @pre    col_.b must bet between zero and unity.
+         *  @pre    red_ must be between zero and unity.
+         *  @pre    green_ must be between zero and unity.
+         *  @pre    blue_ must be between zero and unity.
+         *  @pre    alpha_ must be between zero and unity.
          */
-        inline void Actor::set_col(const glm::vec3& col_) noexcept
+        inline void Actor::set_col(const float red_, const float green_, const float blue_, const float alpha_) noexcept
         {
-            PRE((col_.r >= 0.0f) && (col_.r <= 1.0f));
-            PRE((col_.g >= 0.0f) && (col_.r <= 1.0f));
-            PRE((col_.b >= 0.0f) && (col_.r <= 1.0f));
+            PRE((red_ >= 0.0f) && (red_ <= 1.0f));
+            PRE((green_ >= 0.0f) && (green_ <= 1.0f));
+            PRE((blue_ >= 0.0f) && (blue_ <= 1.0f));
+            PRE((alpha_ >= 0.0f) && (alpha_ <= 1.0f));
 
-            _col = col_;
+            _col = glm::vec4(red_, green_, blue_, alpha_);
         }
 
         /**
