@@ -53,6 +53,10 @@ namespace arc //! arctk namespace
             //  -- Destructors --
             inline ~Window() noexcept;
 
+          private:
+            //  -- Initialisation --
+            inline GLFWwindow* init_handle(const std::string& title_, int width_, int height_, int aa_samples_) noexcept;
+
 
             //  == METHODS ==
           public:
@@ -95,6 +99,75 @@ namespace arc //! arctk namespace
         inline Window::~Window() noexcept
         {
             glfwTerminate();
+        }
+
+
+        //  -- Initialisation --
+        /**
+         *  Initialise a window handle.
+         *
+         *  @param  title_      Title of window.
+         *  @param  width_      Width of window in pixels.
+         *  @param  height_     Height of window in pixels.
+         *  @param  aa_samples_ Number of anti-aliasing samples.
+         *
+         *  @pre    title_ must not be empty.
+         *  @pre    width_ must be positive.
+         *  @pre    height_ must be positive.
+         *  @pre    aa_samples_ must be positive.
+         *
+         *  @return Initialised window handle.
+         */
+        inline GLFWwindow* Window::init_handle(const std::string& title_, const int width_, const int height_, const int aa_samples_) noexcept
+        {
+            PRE(!title_.empty());
+            PRE(width_ > 0);
+            PRE(height_ > 0);
+            PRE(aa_samples_ > 0);
+
+            if (glfwInit() == 0)
+            {
+                std::cerr << "Unable to construct graphical Window.\n"
+                          << "Glfw could not be initialised.\n";
+
+                std::exit();
+            }
+
+            glfwWindowHint(GLFW_SAMPLES, aa_samples_);
+            glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+            glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+            glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+            glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+            GLFWwindow* handle = glfwCreateWindow(width_, height_, title_.c_str(), nullptr, nullptr);
+
+            if (handle == nullptr)
+            {
+                std::cerr << "Unable to construct graphical Window.\n"
+                          << "Window pointer could not be created.\n";
+
+                std::exit();
+            }
+
+            glfwMakeContextCurrent(handle);
+            glewExperimental = GL_TRUE;
+
+            if (glewInit() != GLEW_OK)
+            {
+                std::cerr << "Unable to construct graphical Window.\n"
+                          << "Glew could not be initialised.\n";
+
+                std::exit();
+            }
+
+            glfwSetInputMode(handle, GLFW_STICKY_KEYS, GL_FALSE);
+
+            glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+
+            glEnable(GL_DEPTH_TEST);
+            glDepthFunc(GL_LEQUAL);
+
+            return (handle);
         }
 
 
