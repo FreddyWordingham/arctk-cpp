@@ -362,6 +362,7 @@ namespace arc //! arctk namespace
 
         inline GLint Shader::view() const noexcept
         {
+            return (_view);
         }
 
         inline GLint Shader::proj() const noexcept
