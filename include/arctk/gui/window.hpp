@@ -50,6 +50,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Window(const std::string& title_, int width_, int height_, int aa_samples_ = 4) noexcept;
+            inline Window(const Window&) noexcept = default; //!< Defaulted copy constructor.
+            inline Window(Window&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
             inline ~Window() noexcept;
@@ -57,6 +59,13 @@ namespace arc //! arctk namespace
           private:
             //  -- Initialisation --
             inline GLFWwindow* init_handle(const std::string& title_, int width_, int height_, int aa_samples_) noexcept;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Window& operator=(const Window&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Window& operator=(Window&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
