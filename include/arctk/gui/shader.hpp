@@ -76,11 +76,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline GLint model() const noexcept;
-            inline GLint view() const noexcept;
-            inline GLint proj() const noexcept;
-            inline GLint col() const noexcept;
-            inline bool  has_uniform(const std::string& name_) const noexcept;
+            inline bool has_uniform(const std::string& name_) const noexcept;
 
             //  -- Setters --
             inline void set_uniform(const std::string& name_, int val_) noexcept;
@@ -355,26 +351,6 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        inline GLint Shader::model() const noexcept
-        {
-            return (_model);
-        }
-
-        inline GLint Shader::view() const noexcept
-        {
-            return (_view);
-        }
-
-        inline GLint Shader::proj() const noexcept
-        {
-            return (_proj);
-        }
-
-        inline GLint Shader::col() const noexcept
-        {
-            return (_col);
-        }
-
         /**
          *  Determine if the shader contains a handle for a given uniform name.
          *
