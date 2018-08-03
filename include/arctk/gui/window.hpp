@@ -26,6 +26,9 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/exit.hpp>
+#include <arctk/gui/actor.hpp>
+#include <arctk/gui/camera.hpp>
+#include <arctk/gui/lens.hpp>
 
 
 
@@ -82,6 +85,9 @@ namespace arc //! arctk namespace
             //  -- Rendering --
             inline void clear_buffer() const noexcept;
             inline void swap_buffer() const noexcept;
+            inline void render_lens(const Lens& lens_, const Shader& shader_) const noexcept;
+            inline void render_camera(const Camera& cam_, const Shader& shader_) const noexcept;
+            inline void render_actor(const Actor& act_, const Shader& shader_) const noexcept;
         };
 
 
