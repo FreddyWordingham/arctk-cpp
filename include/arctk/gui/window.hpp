@@ -22,6 +22,7 @@
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/exit.hpp>
 
 
 
@@ -130,7 +131,7 @@ namespace arc //! arctk namespace
                 std::cerr << "Unable to construct graphical Window.\n"
                           << "Glfw could not be initialised.\n";
 
-                std::exit();
+                std::exit(exit::error::GLFW_INIT_FAILED);
             }
 
             glfwWindowHint(GLFW_SAMPLES, aa_samples_);
@@ -146,7 +147,7 @@ namespace arc //! arctk namespace
                 std::cerr << "Unable to construct graphical Window.\n"
                           << "Window pointer could not be created.\n";
 
-                std::exit();
+                std::exit(WINDOW_POINTER_INIT_FAILED);
             }
 
             glfwMakeContextCurrent(handle);
@@ -157,7 +158,7 @@ namespace arc //! arctk namespace
                 std::cerr << "Unable to construct graphical Window.\n"
                           << "Glew could not be initialised.\n";
 
-                std::exit();
+                std::exit(exit::error::GLEW_INIT_FAILED);
             }
 
             glfwSetInputMode(handle, GLFW_STICKY_KEYS, GL_FALSE);
