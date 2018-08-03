@@ -127,7 +127,7 @@ namespace arc //! arctk namespace
           , _trans(glm::vec3(0.0f, 0.0f, 0.0f))
           , _rot(glm::vec3(0.0f, 0.0f, 0.0f))
           , _scale(glm::vec3(1.0f, 1.0f, 1.0f))
-          , _col(glm::vec3(1.0f, 0.0f, 1.0f, 1.0f))
+          , _col(glm::vec4(1.0f, 0.0f, 1.0f, 1.0f))
         {
             PRE((verts_.size() % math::container::sum(layout_)) == 0);
 
