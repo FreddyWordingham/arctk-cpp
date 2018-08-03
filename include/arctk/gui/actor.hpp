@@ -88,7 +88,7 @@ namespace arc //! arctk namespace
             inline GLenum           primitive_type() const noexcept;
             inline GLenum           fill_mode() const noexcept;
             inline const glm::vec4& col() const noexcept;
-            inline const glm::mat4& view() const noexcept;
+            inline const glm::mat4& model() const noexcept;
 
             //  -- Setters --
             inline void set_primitive_type(GLenum primitive_type_) noexcept;
@@ -241,8 +241,9 @@ namespace arc //! arctk namespace
             return (_col);
         }
 
-        inline const glm::mat4& Actor::view() const noexcept
+        inline const glm::mat4& Actor::model() const noexcept
         {
+            return (_model);
         }
 
 
