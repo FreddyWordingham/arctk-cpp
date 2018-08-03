@@ -90,9 +90,9 @@ namespace arc //! arctk namespace
 
             //  -- Rendering --
             inline void activate() noexcept;
-            inline void render_lens() noexcept;
-            inline void render_camera() noexcept;
-            inline void render_actor() noexcept;
+            inline void render_lens(const Lens& lens_) noexcept;
+            inline void render_camera(const Camera& cam_) noexcept;
+            inline void render_actor(const Actor& act_) noexcept;
         };
 
 
@@ -526,15 +526,16 @@ namespace arc //! arctk namespace
             glUseProgram(_handle);
         }
 
-        inline void Shader::render_lens() noexcept
+        inline void Shader::render_lens(const Lens& lens_) noexcept
+        {
+            glUniformMatrix4fv(_proj, 1, GL_FALSE, &lens_.proj()[0][0]);
+        }
+
+        inline void Shader::render_camera(const Camera& cam_) noexcept
         {
         }
 
-        inline void Shader::render_camera() noexcept
-        {
-        }
-
-        inline void Shader::render_actor() noexcept
+        inline void Shader::render_actor(const Actor& act_) noexcept
         {
         }
 
