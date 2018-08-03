@@ -543,12 +543,6 @@ namespace arc //! arctk namespace
             glUniformMatrix4fv(_model, 1, GL_FALSE, &act_.model()[0][0]);
             glUniform4fv(_col, 1, &act_.col()[0]);
 
-            std::cout << act_.model()[0][0] << '\t' << act_.model()[0][1] << '\t' << act_.model()[0][2] << '\t' << act_.model()[0][3] << '\n';
-            std::cout << act_.model()[1][0] << '\t' << act_.model()[1][1] << '\t' << act_.model()[1][2] << '\t' << act_.model()[1][3] << '\n';
-            std::cout << act_.model()[2][0] << '\t' << act_.model()[2][1] << '\t' << act_.model()[2][2] << '\t' << act_.model()[2][3] << '\n';
-            std::cout << act_.model()[3][0] << '\t' << act_.model()[3][1] << '\t' << act_.model()[3][2] << '\t' << act_.model()[3][3] << '\n';
-            std::cout << '\n';
-
             glEnableVertexAttribArray(0);
             glBindVertexArray(act_.vao());
             glDrawArrays(act_.primitive_type(), 0, act_.num_vert());
