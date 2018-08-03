@@ -87,6 +87,12 @@ namespace arc //! arctk namespace
             inline void set_uniform(const std::string& name_, const glm::mat2& val_) noexcept;
             inline void set_uniform(const std::string& name_, const glm::mat3& val_) noexcept;
             inline void set_uniform(const std::string& name_, const glm::mat4& val_) noexcept;
+
+            //  -- Rendering --
+            inline void activate() noexcept;
+            inline void render_lens() noexcept;
+            inline void render_camera() noexcept;
+            inline void render_actor() noexcept;
         };
 
 
@@ -511,6 +517,25 @@ namespace arc //! arctk namespace
 
             glUseProgram(_handle);
             glUniformMatrix4fv(_uniforms.at(name_), 1, GL_FALSE, &val_[0][0]);
+        }
+
+
+        //  -- Rendering --
+        inline void Shader::activate() noexcept
+        {
+            glUseProgram(_handle);
+        }
+
+        inline void Shader::render_lens() noexcept
+        {
+        }
+
+        inline void Shader::render_camera() noexcept
+        {
+        }
+
+        inline void Shader::render_actor() noexcept
+        {
         }
 
 
