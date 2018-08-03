@@ -253,6 +253,18 @@ namespace arc //! arctk namespace
             glfwSwapBuffers(_handle);
         }
 
+        inline void Window::render_lens(const Lens& lens_, const Shader& shader_) const noexcept
+        {
+        }
+
+        inline void Window::render_camera(const Camera& cam_, const Shader& shader_) const noexcept
+        {
+        }
+
+        inline void Window::render_actor(const Actor& act_, const Shader& shader_) const noexcept
+        {
+        }
+
 
 
     } // namespace gui

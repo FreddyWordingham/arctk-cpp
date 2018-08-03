@@ -79,10 +79,6 @@ namespace arc //! arctk namespace
             inline bool has_uniform(const std::string& name_) const noexcept;
 
             //  -- Setters --
-            inline void set_model(const glm::mat4& model_mat_) noexcept;
-            inline void set_view(const glm::mat4& view_mat_) noexcept;
-            inline void set_proj(const glm::mat4& proj_mat_) noexcept;
-            inline void set_col(const glm::vec3& col_) noexcept;
             inline void set_uniform(const std::string& name_, int val_) noexcept;
             inline void set_uniform(const std::string& name_, float val_) noexcept;
             inline void set_uniform(const std::string& name_, const glm::vec2& val_) noexcept;
@@ -373,51 +369,6 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
-        /**
-         *  Set the value for the model matrix uniform.
-         *
-         *  @param  model_mat_  Value to set the model matrix uniform to.
-         */
-        inline void Shader::set_model(const glm::mat4& model_mat_) noexcept
-        {
-            glUseProgram(_handle);
-            glUniformMatrix4fv(_model, 1, GL_FALSE, &model_mat_[0][0]);
-        }
-
-        /**
-         *  Set the value for the view matrix uniform.
-         *
-         *  @param  view_mat_  Value to set the view matrix uniform to.
-         */
-        inline void Shader::set_view(const glm::mat4& view_mat_) noexcept
-        {
-            glUseProgram(_handle);
-            glUniformMatrix4fv(_model, 1, GL_FALSE, &view_mat_[0][0]);
-        }
-
-        /**
-         *  Set the value for the projection matrix uniform.
-         *
-         *  @param  proj_mat_  Value to set the projection matrix uniform to.
-         */
-        inline void Shader::set_proj(const glm::mat4& proj_mat_) noexcept
-        {
-            glUseProgram(_handle);
-            glUniformMatrix4fv(_model, 1, GL_FALSE, &proj_mat_[0][0]);
-        }
-
-        /**
-         *  Set the value for the colour uniform.
-         *
-         *  @param  col_  Value to set the colour uniform to.
-         */
-        inline void Shader::set_col(const glm::vec3& col_) noexcept
-        {
-            glUseProgram(_handle);
-            glUniform3fv(_col, 1, &col_[0]);
-        }
-
-
         /**
          *  Set the value for an int uniform.
          *
