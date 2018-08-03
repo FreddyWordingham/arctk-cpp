@@ -533,6 +533,7 @@ namespace arc //! arctk namespace
 
         inline void Shader::render_camera(const Camera& cam_) noexcept
         {
+            glUniformMatrix4fv(_view, 1, GL_FALSE, &cam_.view()[0][0]);
         }
 
         inline void Shader::render_actor(const Actor& act_) noexcept
