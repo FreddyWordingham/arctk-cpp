@@ -87,9 +87,16 @@ namespace arc //! arctk namespace
              */
             inline void Fly::move(const glm::vec3& vec_) noexcept
             {
+                const glm::vec3 right = glm::normalize(glm::cross(_dir, _up));
+                const glm::vec3 above = glm::normalize(glm::cross(right, _dir));
+
                 _pos += _dir * vec_.x;
-                _pos += glm::normalize(glm::cross(_dir, vec_)) * vec_.y;
-                _pos += _up * vec_.z;
+                _pos += right * vec_.y;
+                _pos += above * vec_.z;
+
+                _focus += _dir * vec_.x;
+                _focus += right * vec_.y;
+                _focus += above * vec_.z;
 
                 update_view();
             }
