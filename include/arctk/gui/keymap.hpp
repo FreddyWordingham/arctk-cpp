@@ -25,6 +25,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/gui/keybind.hpp>
+#include <arctk/gui/window.hpp>
 
 
 
