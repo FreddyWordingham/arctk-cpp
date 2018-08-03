@@ -282,6 +282,8 @@ namespace arc //! arctk namespace
         inline void Actor::translate(const glm::vec3& trans_) noexcept
         {
             _trans += trans_;
+
+            update_model();
         }
 
         /**
@@ -293,6 +295,8 @@ namespace arc //! arctk namespace
         inline void Actor::rotate(const glm::vec3& rot_) noexcept
         {
             _rot += rot_;
+
+            update_model();
         }
 
         /**
@@ -305,6 +309,8 @@ namespace arc //! arctk namespace
             _scale.x *= scale_.x;
             _scale.y *= scale_.y;
             _scale.z *= scale_.z;
+
+            update_model();
         }
 
 
