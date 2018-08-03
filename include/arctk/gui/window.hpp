@@ -85,9 +85,6 @@ namespace arc //! arctk namespace
             //  -- Rendering --
             inline void clear_buffer() const noexcept;
             inline void swap_buffer() const noexcept;
-            inline void render_lens(const Lens& lens_, const Shader& shader_) const noexcept;
-            inline void render_camera(const Camera& cam_, const Shader& shader_) const noexcept;
-            inline void render_actor(const Actor& act_, const Shader& shader_) const noexcept;
         };
 
 
@@ -251,18 +248,6 @@ namespace arc //! arctk namespace
         inline void Window::swap_buffer() const noexcept
         {
             glfwSwapBuffers(_handle);
-        }
-
-        inline void Window::render_lens(const Lens& lens_, const Shader& shader_) const noexcept
-        {
-        }
-
-        inline void Window::render_camera(const Camera& cam_, const Shader& shader_) const noexcept
-        {
-        }
-
-        inline void Window::render_actor(const Actor& act_, const Shader& shader_) const noexcept
-        {
         }
 
 
