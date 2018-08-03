@@ -533,6 +533,12 @@ namespace arc //! arctk namespace
 
         inline void Shader::render_camera(const Camera& cam_) noexcept
         {
+            std::cout << cam_.view()[0][0] << '\t' << cam_.view()[0][1] << '\t' << cam_.view()[0][2] << '\t' << cam_.view()[0][3] << '\n';
+            std::cout << cam_.view()[1][0] << '\t' << cam_.view()[1][1] << '\t' << cam_.view()[1][2] << '\t' << cam_.view()[1][3] << '\n';
+            std::cout << cam_.view()[2][0] << '\t' << cam_.view()[2][1] << '\t' << cam_.view()[2][2] << '\t' << cam_.view()[2][3] << '\n';
+            std::cout << cam_.view()[3][0] << '\t' << cam_.view()[3][1] << '\t' << cam_.view()[3][2] << '\t' << cam_.view()[3][3] << '\n';
+            std::cout << '\n';
+
             glUniformMatrix4fv(_view, 1, GL_FALSE, &cam_.view()[0][0]);
         }
 
