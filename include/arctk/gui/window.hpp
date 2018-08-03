@@ -16,6 +16,12 @@
 
 //  == IMPORTS ==
 //  -- Graphical --
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
+
+//  -- Arctk --
+#include <arctk/debug.hpp>
 
 
 
@@ -42,6 +48,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Window(const std::string& title_, int width_, int height_, int aa_samples_ = 4) noexcept;
 
 
             //  == METHODS ==
@@ -53,6 +60,28 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
+        //  -- Constructors --
+        /**
+         *  Construct a graphical window object.
+         *
+         *  @param  title_      Title of window.
+         *  @param  width_      Width of window in pixels.
+         *  @param  height_     Height of window in pixels.
+         *  @param  aa_samples_ Number of anti-aliasing samples.
+         *
+         *  @pre    title_ may not be empty.
+         *  @pre    width_ must be positive.
+         *  @pre    height_ must be positive.
+         *  @pre    aa_samples_ must be positive.
+         */
+        inline Window::Window(const std::string& title_, const int width_, const int height_, const int aa_samples_) noexcept
+          : _handle(init_handle(title_, width_, height_, aa_samples_))
+        {
+            PRE(!title_.empty());
+            PRE(width_ > 0);
+            PRE(height_ > 0);
+            PRE(aa_samples_ > 0);
+        }
 
 
 
