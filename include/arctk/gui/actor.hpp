@@ -236,6 +236,15 @@ namespace arc //! arctk namespace
             return (_fill_mode);
         }
 
+        inline const glm::vec4& Actor::col() const noexcept
+        {
+            return (_col);
+        }
+
+        inline const glm::mat4& Actor::view() const noexcept
+        {
+        }
+
 
         //  -- Setters --
         /**
