@@ -69,6 +69,11 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline const glm::mat4& view() const noexcept;
 
+            //  -- Control --
+            virtual inline void move_forward(const float dist_) noexcept = 0; //!< Move the camera forward. @param  dist_   Distance to move the camera forward.
+            virtual inline void move_right(const float dist_) noexcept   = 0; //!< Move the camera rightwards.  @param  dist_   Distance to move the camera right.
+            virtual inline void move_up(const float dist_) noexcept      = 0; //!< Move the camera upwards. @param  dist_   Distance to move the camera up.
+
           protected:
             //  -- Updating --
             inline void update_view() noexcept;
