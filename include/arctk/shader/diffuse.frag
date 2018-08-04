@@ -7,7 +7,7 @@
  */
 
 
-
+std::string diffuse = R"(
 //  == VERSION ==
 #version 330 core
 
@@ -42,3 +42,4 @@ void main()
 
     frag_col.xyz *= (amb_pow + ((light_pow * cos_theta) / (dist * dist)));
 }
+)";
