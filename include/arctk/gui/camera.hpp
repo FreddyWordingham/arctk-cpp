@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
 
             //  -- Control --
             virtual inline void move_forward(const float dist_) noexcept = 0; //!< Move the camera forward. @param  dist_   Distance to move the camera forward.
-            virtual inline void move_right(const float dist_) noexcept   = 0; //!< Move the camera rightwards.  @param  dist_   Distance to move the camera right.
+            virtual inline void move_right(const float dist_) noexcept   = 0; //!< Move the camera right.   @param  dist_   Distance to move the camera right.
             virtual inline void move_up(const float dist_) noexcept      = 0; //!< Move the camera upwards. @param  dist_   Distance to move the camera up.
             virtual inline void rotate_roll(const float ang_) noexcept   = 0; //!< Rotate through a roll.   @param  ang_    Angle to rotate.
             virtual inline void rotate_pitch(const float ang_) noexcept  = 0; //!< Rotate through a pitch.  @param  ang_    Angle to rotate.
