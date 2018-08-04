@@ -8,6 +8,12 @@
 
 
 
+//  == GUARD ==
+#ifndef ARCTK_SHADER_DIFFUSE_SOURCE_HPP
+#define ARCTK_SHADER_DIFFUSE_SOURCE_HPP
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -104,3 +110,8 @@ void main()
         } // namespace diffuse
     }     // namespace shader
 } // namespace arc
+
+
+
+//  == GUARD END ==
+#endif // ARCTK_SHADER_DIFFUSE_SOURCE_HPP
