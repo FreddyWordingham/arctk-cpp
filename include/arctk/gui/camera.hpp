@@ -129,9 +129,9 @@ namespace arc //! arctk namespace
         {
             _speed += delta_;
 
-            if (_speed < 0.0)
+            if (_speed < 0.0f)
             {
-                _speed = 0.0;
+                _speed = 0.0f;
             }
         }
 
