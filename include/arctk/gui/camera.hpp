@@ -73,6 +73,7 @@ namespace arc //! arctk namespace
             inline const glm::mat4& view() const noexcept;
 
             //  -- Control --
+            inline void         accelerate(const float delta_) noexcept;
             virtual inline void move(const float forward_, const float right_, const float up_) noexcept = 0;
             virtual inline void rotate(const float roll_, const float pitch_, const float yaw_) noexcept = 0;
 
@@ -120,6 +121,13 @@ namespace arc //! arctk namespace
         inline const glm::mat4& Camera::view() const noexcept
         {
             return (_view);
+        }
+
+
+        //  -- Control --
+        inline void Camera::accelerate(const float delta_) noexcept
+        {
+            _speed += delta_;
         }
 
 
