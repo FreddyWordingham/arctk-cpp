@@ -15,7 +15,8 @@
 
 
 //  == IMPORTS ==
-//  -- Graphical --
+//  -- Arctk --
+#include <arctk/gui/camera.hpp>
 
 
 
@@ -32,7 +33,7 @@ namespace arc //! arctk namespace
             //  == CLASS ==
             /**
              */
-            class Orbit
+            class Orbit : public Camera
             {
                 //  == FIELDS ==
 
