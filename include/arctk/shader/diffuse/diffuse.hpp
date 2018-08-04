@@ -8,7 +8,17 @@
 
 
 
-std::string vert = R"(
+//  == NAMESPACE ==
+namespace arc //! arctk namespace
+{
+    namespace shader //! shader namespace
+    {
+        namespace diffuse //! diffuse shader namespace
+        {
+
+
+
+            std::string vert = R"(
 //  == VERSION ==
 #version 330 core
 
@@ -52,7 +62,7 @@ void main()
 }
 )";
 
-std::string frag = R"(
+            std::string frag = R"(
 //  == VERSION ==
 #version 330 core
 
@@ -88,3 +98,9 @@ void main()
     frag_col.xyz *= (amb_pow + ((light_pow * cos_theta) / (dist * dist)));
 }
 )";
+
+
+
+        } // namespace diffuse
+    }     // namespace shader
+} // namespace arc
