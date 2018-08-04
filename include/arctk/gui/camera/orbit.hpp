@@ -35,13 +35,6 @@ namespace arc //! arctk namespace
              */
             class Orbit : public Camera
             {
-                //  == FIELDS ==
-              private:
-                //  -- Positioning --
-                glm::vec3 _spherical_pos; //!< Position of the camera in spherical coordinates.
-
-
-
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
