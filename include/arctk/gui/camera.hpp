@@ -97,7 +97,8 @@ namespace arc //! arctk namespace
          *  @param  up_     Up direction of the camera.
          */
         inline Camera::Camera(const glm::vec3& pos_, const glm::vec3& focus_, const glm::vec3& up_) noexcept
-          : _pos(pos_)
+          : _speed(1.0f)
+          , _pos(pos_)
           , _focus(focus_)
           , _up(up_)
         {
