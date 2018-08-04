@@ -69,9 +69,9 @@ namespace arc //! arctk namespace
             {
                 vec3f pos = math::convert::cart_to_polar(vec3f(_pos.x, _pos.y, _pos.z));
 
-                pos.rho += forward_;
-                pos.theta += right_;
-                pos.phi += up_;
+                pos.rho += forward_ * _speed;
+                pos.theta += right_ * _speed;
+                pos.phi += up_ * _speed;
 
                 pos = math::convert::polar_to_cart(pos);
 
