@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/shader/diffuse.vert
+ *  @file   arctk/shader/diffuse/vert.hpp
  *  @date   04/08/2018
  *  @author Freddy Wordingham
  *
