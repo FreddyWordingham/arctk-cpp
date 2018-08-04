@@ -72,6 +72,8 @@ namespace arc //! arctk namespace
                 pos.y += right_ * _speed;
                 pos.z += up_ * _speed;
 
+                _pos = glm::euclidean(pos);
+
                 update_view();
             }
 
