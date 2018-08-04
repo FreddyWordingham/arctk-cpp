@@ -30,6 +30,8 @@ namespace arc //! arctk namespace
 
 
 
+            //  == CONSTANTS ==
+            //  -- Source --
             std::string frag = R"(
 //  == VERSION ==
 #version 330 core
