@@ -89,6 +89,8 @@
 #include <arctk/settings.hpp>
 #include <arctk/settings/format.hpp>
 #include <arctk/shader.hpp>
+#include <arctk/shader/diffuse/frag.hpp>
+#include <arctk/shader/diffuse/vert.hpp>
 #include <arctk/str.hpp>
 #include <arctk/str/parse.hpp>
 #include <arctk/str/printable.hpp>
