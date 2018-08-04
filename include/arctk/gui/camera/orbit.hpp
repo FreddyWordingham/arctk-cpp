@@ -36,6 +36,10 @@ namespace arc //! arctk namespace
             class Orbit : public Camera
             {
                 //  == FIELDS ==
+              private:
+                //  -- Positioning --
+                glm::vec3 _spherical_pos; //!< Position of the camera in spherical coordinates.
+
 
 
                 //  == INSTANTIATION ==
@@ -67,6 +71,30 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Control --
+            inline void Orbit::move_forward(const float dist_) noexcept
+            {
+            }
+
+            inline void Orbit::move_right(const float dist_) noexcept
+            {
+            }
+
+            inline void Orbit::move_up(const float dist_) noexcept
+            {
+            }
+
+            inline void Orbit::rotate_roll(const float ang_) noexcept
+            {
+            }
+
+            inline void Orbit::rotate_pitch(const float ang_) noexcept
+            {
+            }
+
+            inline void Orbit::rotate_yaw(const float ang_) noexcept
+            {
+            }
 
 
 
