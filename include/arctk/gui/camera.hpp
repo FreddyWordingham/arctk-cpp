@@ -57,10 +57,6 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline const glm::mat4& view() const noexcept;
 
-            //  -- Control --
-            virtual inline void move(const glm::vec3& vec_) noexcept   = 0; //!< Move the camera about the scene.    @param  vec_    Movement vector.
-            virtual inline void rotate(const glm::vec3& vec_) noexcept = 0; //!< Rotate the camera around the scene.    @param  vec_    Rotation vector.
-
           protected:
             //  -- Updating --
             inline void update_view() noexcept;
