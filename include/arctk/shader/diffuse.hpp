@@ -7,7 +7,7 @@
  */
 
 
-std::string diffuse = R"(
+std::string frag = R"(
 //  == VERSION ==
 #version 330 core
 
