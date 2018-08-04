@@ -20,6 +20,7 @@
 
 //  -- Arctk --
 #include <arctk/gui/camera.hpp>
+#include <arctk/math.hpp>
 
 
 
@@ -66,11 +67,7 @@ namespace arc //! arctk namespace
             //  -- Control --
             inline void Orbit::move(const float forward_, const float right_, const float up_) noexcept
             {
-                glm::vec3 pos = glm::polar(_pos);
-
-                pos.x += forward_ * _speed;
-                pos.y += right_ * _speed;
-                pos.z += up_ * _speed;
+                vec3 pos(_pos.x, _pos.y, _pos.z);
 
                 _pos = glm::euclidean(pos);
 
