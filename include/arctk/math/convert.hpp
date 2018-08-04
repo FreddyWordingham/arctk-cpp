@@ -17,7 +17,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/consts.hpp>
-#include <arctk/math/convert.hpp>
+#include <arctk/math/vec3.hpp>
 
 
 
