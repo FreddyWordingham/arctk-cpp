@@ -88,6 +88,7 @@
 #include <arctk/random/generator/quality.hpp>
 #include <arctk/settings.hpp>
 #include <arctk/settings/format.hpp>
+#include <arctk/shader.hpp>
 #include <arctk/str.hpp>
 #include <arctk/str/parse.hpp>
 #include <arctk/str/printable.hpp>
