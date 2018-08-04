@@ -128,6 +128,11 @@ namespace arc //! arctk namespace
         inline void Camera::accelerate(const float delta_) noexcept
         {
             _speed += delta_;
+
+            if (_speed < 0.0)
+            {
+                _speed = 0.0;
+            }
         }
 
 
