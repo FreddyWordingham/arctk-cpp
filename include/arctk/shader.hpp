@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/shader/diffuse/frag.hpp>
 
 
 
