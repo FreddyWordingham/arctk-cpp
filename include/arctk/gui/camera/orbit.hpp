@@ -68,9 +68,9 @@ namespace arc //! arctk namespace
             {
                 glm::vec3 pos = glm::polar(_pos);
 
-                pos.x += forward_;
-                pos.y += right_;
-                pos.z += up_;
+                pos.x += forward_ * _speed;
+                pos.y += right_ * _speed;
+                pos.z += up_ * _speed;
 
                 update_view();
             }
