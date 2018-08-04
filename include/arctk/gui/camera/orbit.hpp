@@ -15,6 +15,9 @@
 
 
 //  == IMPORTS ==
+//  -- Graphical --
+#include <glm/gtx/polar_coordinates.hpp>
+
 //  -- Arctk --
 #include <arctk/gui/camera.hpp>
 
@@ -67,6 +70,7 @@ namespace arc //! arctk namespace
             //  -- Control --
             inline void Orbit::move_forward(const float dist_) noexcept
             {
+
 
                 update_view();
             }
