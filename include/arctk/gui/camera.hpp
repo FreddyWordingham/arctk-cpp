@@ -36,6 +36,9 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           protected:
+            //  -- Movement --
+            float _speed; //!< Movement speed.
+
             //  -- Positioning --
             glm::vec3 _pos;   //!< Position of the camera.
             glm::vec3 _focus; //!< Focus position of the camera.
