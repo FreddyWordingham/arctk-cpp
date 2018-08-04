@@ -95,6 +95,13 @@ namespace arc //! arctk namespace
                 return (polar);
             }
 
+            /**
+             *  Convert a three-dimensional spherical-polar vector to a three-dimensional cartesian vector.
+             *
+             *  @param  polar_  Spherical-polar vector to convert.
+             *
+             *  @return Cartesian vector.
+             */
             template <typename T>
             inline Vec<T, 3> polar_to_cart(const Vec<T, 3>& polar_) noexcept
             {
