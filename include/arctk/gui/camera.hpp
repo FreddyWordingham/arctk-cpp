@@ -50,6 +50,18 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Camera(const glm::vec3& pos_, const glm::vec3& focus_, const glm::vec3& up_) noexcept;
+            inline Camera(const Camera&) = default; //!< Defaulted copy constructor.
+            inline Camera(Camera&&)      = default; //!< Defaulted move constructor.
+
+            //  -- Destructors --
+            virtual inline ~Camera() noexcept = 0;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Camera& operator=(const Camera&) = default; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Camera& operator=(Camera&&) = default;      //!< Defaulted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
@@ -80,6 +92,13 @@ namespace arc //! arctk namespace
         {
             update_view();
         }
+
+
+        //  -- Destructors --
+        /**
+         *  Defaulted destructor method.
+         */
+        inline Camera::~Camera() noexcept = default;
 
 
 
