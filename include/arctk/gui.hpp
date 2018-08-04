@@ -19,6 +19,7 @@
 #include <arctk/gui/actor.hpp>
 #include <arctk/gui/camera.hpp>
 #include <arctk/gui/camera/fly.hpp>
+#include <arctk/gui/camera/orbit.hpp>
 #include <arctk/gui/keybind.hpp>
 #include <arctk/gui/keymap.hpp>
 #include <arctk/gui/lens.hpp>
