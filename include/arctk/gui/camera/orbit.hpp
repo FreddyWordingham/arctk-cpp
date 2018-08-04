@@ -67,9 +67,17 @@ namespace arc //! arctk namespace
             //  -- Control --
             inline void Orbit::move(const float forward_, const float right_, const float up_) noexcept
             {
-                vec3 pos(_pos.x, _pos.y, _pos.z);
+                vec3 pos = math::convert::cart_to_polar(vec3f(_pos.x, _pos.y, _pos.z));
 
-                _pos = glm::euclidean(pos);
+                pos.rho += forward_;
+                pos.theta += right_;
+                pos.phi += up_;
+
+                pos = math::convert::polar_to_cart(pos);
+
+                _pos.x = pos.x;
+                _pos.y = pos.y;
+                _pos.z = pos.z;
 
                 update_view();
             }
