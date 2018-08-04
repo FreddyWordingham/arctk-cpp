@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
                 //  -- Light Properties --
                 uniform float light_pow   = 5.0;
                 uniform float ambient_pow = 0.1;
-                uniform vec3  sun_pos;
+                uniform vec3  sun_pos     = vec3(6.0, 8.0, 10.0);
 
 
 
