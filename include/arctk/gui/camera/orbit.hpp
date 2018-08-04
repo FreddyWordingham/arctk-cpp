@@ -47,12 +47,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Control --
-                inline void move_forward(float dist_) noexcept override;
-                inline void move_right(float dist_) noexcept override;
-                inline void move_up(float dist_) noexcept override;
-                inline void rotate_roll(float ang_) noexcept override;
-                inline void rotate_pitch(float ang_) noexcept override;
-                inline void rotate_yaw(float ang_) noexcept override;
+                inline void move(const float forward_, const float right_, const float up_) noexcept override;
+                inline void rotate(const float roll_, const float pitch_, const float yaw_) noexcept override;
             };
 
 
@@ -68,41 +64,19 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Control --
-            inline void Orbit::move_forward(const float dist_) noexcept
+            inline void Orbit::move(const float forward_, const float right_, const float up_) noexcept
             {
+                glm::vec3 pos = glm::polar(_pos);
 
+                pos.x += forward_;
+                pos.y += right_;
+                pos.z += up_;
 
                 update_view();
             }
 
-            inline void Orbit::move_right(const float dist_) noexcept
+            inline void Orbit::rotate(const float roll_, const float pitch_, const float yaw_) noexcept
             {
-
-                update_view();
-            }
-
-            inline void Orbit::move_up(const float dist_) noexcept
-            {
-
-                update_view();
-            }
-
-            inline void Orbit::rotate_roll(const float ang_) noexcept
-            {
-
-                update_view();
-            }
-
-            inline void Orbit::rotate_pitch(const float ang_) noexcept
-            {
-
-                update_view();
-            }
-
-            inline void Orbit::rotate_yaw(const float ang_) noexcept
-            {
-
-                update_view();
             }
 
 
