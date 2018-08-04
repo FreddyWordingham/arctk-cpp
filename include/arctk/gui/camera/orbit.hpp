@@ -67,26 +67,38 @@ namespace arc //! arctk namespace
             //  -- Control --
             inline void Orbit::move_forward(const float dist_) noexcept
             {
+
+                update_view();
             }
 
             inline void Orbit::move_right(const float dist_) noexcept
             {
+
+                update_view();
             }
 
             inline void Orbit::move_up(const float dist_) noexcept
             {
+
+                update_view();
             }
 
             inline void Orbit::rotate_roll(const float ang_) noexcept
             {
+
+                update_view();
             }
 
             inline void Orbit::rotate_pitch(const float ang_) noexcept
             {
+
+                update_view();
             }
 
             inline void Orbit::rotate_yaw(const float ang_) noexcept
             {
+
+                update_view();
             }
 
 

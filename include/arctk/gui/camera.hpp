@@ -73,12 +73,8 @@ namespace arc //! arctk namespace
             inline const glm::mat4& view() const noexcept;
 
             //  -- Control --
-            virtual inline void move_forward(const float dist_) noexcept = 0; //!< Move the camera forward. @param  dist_   Distance to move the camera forward.
-            virtual inline void move_right(const float dist_) noexcept   = 0; //!< Move the camera right.   @param  dist_   Distance to move the camera right.
-            virtual inline void move_up(const float dist_) noexcept      = 0; //!< Move the camera upwards. @param  dist_   Distance to move the camera up.
-            virtual inline void rotate_roll(const float ang_) noexcept   = 0; //!< Rotate through a roll.   @param  ang_    Angle to rotate.
-            virtual inline void rotate_pitch(const float ang_) noexcept  = 0; //!< Rotate through a pitch.  @param  ang_    Angle to rotate.
-            virtual inline void rotate_yaw(const float ang_) noexcept    = 0; //!< Rotate through a yaw.    @param  ang_    Angle to rotate.
+            virtual inline void move(const float forward_, const float right_, const float up_) noexcept = 0;
+            virtual inline void rotate(const float roll_, const float pitch_, const float yaw_) noexcept = 0;
 
           protected:
             //  -- Updating --
