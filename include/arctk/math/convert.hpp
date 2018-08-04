@@ -91,6 +91,13 @@ namespace arc //! arctk namespace
             template <typename T>
             inline Vec<T, 3> polar_to_cart(const Vec<T, 3>& polar_) noexcept
             {
+                Vec<T, 3> cart;
+
+                cart.x = polar_.rho * std::cos(polar_.theta) * std::sin(polar_.phi);
+                cart.y = polar_.rho * std::sin(polar_.theta) * std::sin(polar_.phi);
+                cart.z = polar_.rho * std::cos(polar_.phi);
+
+                return (cart);
             }
 
 
