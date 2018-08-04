@@ -40,9 +40,9 @@ namespace arc //! arctk namespace
 
                 //  == SETTINGS ==
                 //  -- Light Properties --
-                const float light_pow = 5.0;
-                const float amb_pow   = 0.1;
-                uniform vec3 sun_pos;
+                uniform float light_pow   = 5.0;
+                uniform float ambient_pow = 0.1;
+                uniform vec3  sun_pos;
 
 
 
@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
 
                     frag_col = vert_col;
 
-                    frag_col.xyz *= (amb_pow + ((light_pow * cos_theta) / (dist * dist)));
+                    frag_col.xyz *= (ambient_pow + ((light_pow * cos_theta) / (dist * dist)));
                 }
             )";
 
