@@ -36,6 +36,7 @@ namespace arc //! arctk namespace
 
             //  == CLASS ==
             /**
+             *  Camera class with orbital controls.
              */
             class Orbit : public Camera
             {
