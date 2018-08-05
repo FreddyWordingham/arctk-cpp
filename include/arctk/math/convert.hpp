@@ -89,8 +89,8 @@ namespace arc //! arctk namespace
                 Vec<T, 3> polar;
 
                 polar.rho   = std::sqrt((cart_.x * cart_.x) + (cart_.y * cart_.y) + (cart_.z * cart_.z));
-                polar.theta = std::atan2(cart_.y, cart_.x);
-                polar.phi   = std::acos(cart_.z / polar.rho);
+                polar.theta = std::acos(cart_.z / polar.rho);
+                polar.phi   = std::atan2(cart_.y, cart_.x);
 
                 return (polar);
             }
