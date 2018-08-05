@@ -542,6 +542,9 @@ namespace arc //! arctk namespace
              */
             inline Actor axis_helper_y(const float length_, const float width_) noexcept
             {
+                PRE(length_ > 0.0f);
+                PRE(width_ > 0.0f);
+
                 std::vector<glm::vec3> verts;
                 verts.reserve(3 * 8);
 
