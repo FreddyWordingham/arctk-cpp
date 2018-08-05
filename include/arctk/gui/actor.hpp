@@ -380,11 +380,6 @@ namespace arc //! arctk namespace
                 const int y_start = static_cast<int>(std::trunc(min_.y / cell_size_.y));
                 const int y_end   = static_cast<int>(std::trunc(max_.y / cell_size_.y));
 
-                std::cout << "x_start: " << x_start << '\n';
-                std::cout << "x_end  : " << x_end << '\n';
-                std::cout << "y_start: " << y_start << '\n';
-                std::cout << "y_end  : " << y_end << '\n';
-
                 std::vector<GLfloat> verts(3 * 2 * static_cast<size_t>((x_end - x_start + 1) + (y_end - y_start + 1)));
 
                 size_t index = 0;
