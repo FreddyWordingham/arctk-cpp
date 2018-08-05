@@ -82,13 +82,13 @@ namespace arc //! arctk namespace
                     pos.rho = std::numeric_limits<float>::min();
                 }
 
-                if (pos.theta <= 0.0f)
+                if (pos.theta <= -1.57f)
                 {
-                    pos.theta = std::numeric_limits<float>::min();
+                    pos.theta = -1.57f + std::numeric_limits<float>::min();
                 }
-                else if (pos.theta >= 3.141f)
+                else if (pos.theta >= 1.57f)
                 {
-                    pos.theta = 3.141f - std::numeric_limits<float>::min();
+                    pos.theta = 1.57f - std::numeric_limits<float>::min();
                 }
 
                 pos = math::convert::polar_to_cart(pos);
