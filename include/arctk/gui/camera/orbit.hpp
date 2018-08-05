@@ -69,6 +69,13 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Control --
+            /**
+             *  Move the camera position.
+             *
+             *  @param  forward_    Distance to move the camera forward.
+             *  @param  right_      Distance to move the camera to the right.
+             *  @param  up_         Distance to move the camera upward.
+             */
             inline void Orbit::move(const float forward_, const float right_, const float up_) noexcept
             {
                 vec3f pos = math::convert::cart_to_polar(vec3f(_pos.x, _pos.y, _pos.z));
