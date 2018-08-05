@@ -472,6 +472,17 @@ namespace arc //! arctk namespace
                 return (grid);
             }
 
+            /**
+             *  Create a x-axis helper actor.
+             *
+             *  @param  length_ Length of the actor.
+             *  @param  width_  Width of the actor.
+             *
+             *  @pre    length_ must be positive.
+             *  @pre    width_ must be positive.
+             *
+             *  @return X-axis helper actor.
+             */
             inline Actor axis_helper_x(const float length_, const float width_) noexcept
             {
                 std::vector<glm::vec3> verts;
