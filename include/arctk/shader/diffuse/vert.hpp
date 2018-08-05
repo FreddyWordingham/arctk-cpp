@@ -26,7 +26,7 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Source --
-            const char* vert = R"(
+            static const char* vert = R"(
                 //  == VERSION ==
                 #version 330 core
 
