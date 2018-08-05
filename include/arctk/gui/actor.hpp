@@ -368,7 +368,7 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Designs --
             inline Actor grid(const glm::vec2& min_, const glm::vec2& max_, const glm::vec2& cell_size_) noexcept;
-            inline Actor axis_helper_x(float length_ = 1.0f, const glm::vec3& pos_ = glm::vec3(0.0f, 0.0f, 0.0f)) noexcept;
+            inline Actor axis_helper_x(float length_ = 1.0f, float width_ = 0.1f) noexcept;
             inline Actor axis_helper_y(float length_ = 1.0f, const glm::vec3& pos_ = glm::vec3(0.0f, 0.0f, 0.0f)) noexcept;
             inline Actor axis_helper_z(float length_ = 1.0f, const glm::vec3& pos_ = glm::vec3(0.0f, 0.0f, 0.0f)) noexcept;
 
@@ -418,19 +418,84 @@ namespace arc //! arctk namespace
                 return (grid);
             }
 
-            inline Actor axis_helper_x(const float length_, const glm::vec3& pos_) noexcept
+            inline Actor axis_helper_x(const float length_, const float width_) noexcept
             {
-                std::vector<GLfloat> verts(3 * 2);
+                std::vector<GLfloat> verts(3 * 3 * 6);
 
-                verts[0] = pos_.x;
-                verts[1] = pos_.y;
-                verts[2] = pos_.z;
+                verts[0] = 0.0f;
+                verts[1] = -width_;
+                verts[2] = -width_;
 
-                verts[3] = pos_.x + length_;
-                verts[4] = pos_.y;
-                verts[5] = pos_.z;
+                verts[3] = 0.0f;
+                verts[4] = +width_;
+                verts[5] = +width_;
 
-                Actor helper(verts, {3}, GL_LINES);
+                verts[6] = 0.0f;
+                verts[7] = -width_;
+                verts[8] = +width_;
+
+                verts[9]  = 0.0f;
+                verts[10] = +width_;
+                verts[11] = +width_;
+
+                verts[12] = 0.0f;
+                verts[13] = -width_;
+                verts[14] = -width_;
+
+                verts[15] = 0.0f;
+                verts[16] = +width_;
+                verts[17] = -width_;
+
+
+                verts[18] = 0.0f;
+                verts[19] = -width_;
+                verts[20] = -width_;
+
+                verts[21] = 0.0f;
+                verts[22] = -width_;
+                verts[23] = +width_;
+
+                verts[24] = length_;
+                verts[25] = 0.0f;
+                verts[26] = 0.0f;
+
+                verts[27] = 0.0f;
+                verts[28] = -width_;
+                verts[29] = +width_;
+
+                verts[30] = 0.0f;
+                verts[31] = +width_;
+                verts[32] = +width_;
+
+                verts[33] = length_;
+                verts[34] = 0.0f;
+                verts[35] = 0.0f;
+
+                verts[36] = 0.0f;
+                verts[37] = +width_;
+                verts[38] = +width_;
+
+                verts[39] = 0.0f;
+                verts[40] = +width_;
+                verts[41] = -width_;
+
+                verts[42] = length_;
+                verts[43] = 0.0f;
+                verts[44] = 0.0f;
+
+                verts[45] = 0.0f;
+                verts[46] = +width_;
+                verts[47] = -width_;
+
+                verts[48] = 0.0f;
+                verts[49] = -width_;
+                verts[50] = -width_;
+
+                verts[51] = length_;
+                verts[52] = 0.0f;
+                verts[53] = 0.0f;
+
+                Actor helper(verts);
                 helper.set_col(1.0f, 0.0f, 0.0f);
 
                 return (helper);
