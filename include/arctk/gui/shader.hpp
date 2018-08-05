@@ -539,6 +539,8 @@ namespace arc //! arctk namespace
 
         /**
          *  Render using a given camera's view matrix.
+         *
+         *  @param  cam_    Camera to render.
          */
         inline void Shader::render_camera(const Camera& cam_) noexcept
         {
