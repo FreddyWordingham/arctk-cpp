@@ -521,6 +521,9 @@ namespace arc //! arctk namespace
 
 
         //  -- Rendering --
+        /**
+         *  Make the this shader the active shader.
+         */
         inline void Shader::activate() noexcept
         {
             glUseProgram(_handle);
