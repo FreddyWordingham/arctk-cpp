@@ -531,6 +531,8 @@ namespace arc //! arctk namespace
 
         /**
          *  Render using a given lens' projection matrix..
+         *
+         *  @param  lens_   Lens to render.
          */
         inline void Shader::render_lens(const Lens& lens_) noexcept
         {
