@@ -107,9 +107,9 @@ namespace arc //! arctk namespace
             {
                 Vec<T, 3> cart;
 
-                cart.x = polar_.rho * std::cos(polar_.theta) * std::sin(polar_.phi);
+                cart.x = polar_.rho * std::sin(polar_.theta) * std::cos(polar_.phi);
                 cart.y = polar_.rho * std::sin(polar_.theta) * std::sin(polar_.phi);
-                cart.z = polar_.rho * std::cos(polar_.phi);
+                cart.z = polar_.rho * std::cos(polar_.theta);
 
                 return (cart);
             }
