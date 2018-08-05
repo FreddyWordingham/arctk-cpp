@@ -72,6 +72,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline explicit Actor(const std::vector<GLfloat>& verts_, const std::vector<size_t>& layout_ = {3}, GLenum primitive_type_ = GL_TRIANGLES, GLenum fill_mode_ = GL_FILL) noexcept;
+            inline explicit Actor(const std::vector<glm::vec3>& verts_, const std::vector<size_t>& layout_ = {1}, GLenum primitive_type_ = GL_TRIANGLES, GLenum fill_mode_ = GL_FILL) noexcept;
 
           private:
             //  -- Initialisation --
@@ -134,6 +135,40 @@ namespace arc //! arctk namespace
             glBindVertexArray(_vao);
             glBindBuffer(GL_ARRAY_BUFFER, _vbo);
             glBufferData(GL_ARRAY_BUFFER, static_cast<GLsizeiptr>(verts_.size() * sizeof(GLfloat)), &verts_.front(), GL_STATIC_DRAW);
+
+            const size_t chunk_size = math::container::sum(layout_) * sizeof(GLfloat);
+            size_t       start      = 0;
+            for (size_t i = 0; i < layout_.size(); ++i)
+            {
+                glVertexAttribPointer(static_cast<GLuint>(i), static_cast<GLint>(layout_[i]), GL_FLOAT, GL_FALSE, static_cast<GLsizei>(chunk_size), reinterpret_cast<GLvoid*>(start * sizeof(GLfloat))); // NOLINT
+                glEnableVertexAttribArray(static_cast<GLuint>(i));
+
+                start += layout_[i];
+            }
+
+            glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+            glBindVertexArray(0);
+
+            update_model();
+        }
+
+        inline Actor::Actor(const std::vector<glm::vec3>& verts_, const std::vector<size_t>& layout_, GLenum primitive_type_, GLenum fill_mode_) noexcept
+          : _num_vert(static_cast<GLsizei>(verts_.size() / math::container::sum(layout_)) * 3)
+          , _vao(init_vao())
+          , _vbo(init_vbo())
+          , _primitive_type(primitive_type_)
+          , _fill_mode(fill_mode_)
+          , _trans(glm::vec3(0.0f, 0.0f, 0.0f))
+          , _rot(glm::vec3(0.0f, 0.0f, 0.0f))
+          , _scale(glm::vec3(1.0f, 1.0f, 1.0f))
+          , _col(glm::vec4(1.0f, 0.0f, 1.0f, 1.0f))
+        {
+            PRE(((verts_.size() / 3) % math::container::sum(layout_)) == 0);
+
+            glBindVertexArray(_vao);
+            glBindBuffer(GL_ARRAY_BUFFER, _vbo);
+            glBufferData(GL_ARRAY_BUFFER, static_cast<GLsizeiptr>(verts_.size() * 3 * sizeof(GLfloat)), &verts_.front(), GL_STATIC_DRAW);
 
             const size_t chunk_size = math::container::sum(layout_) * sizeof(GLfloat);
             size_t       start      = 0;
