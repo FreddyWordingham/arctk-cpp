@@ -427,7 +427,10 @@ namespace arc //! arctk namespace
              */
             inline Actor grid(const glm::vec2& min_, const glm::vec2& max_, const glm::vec2& cell_size_) noexcept
             {
-
+                PRE(min_.x < max_.x);
+                PRE(min_.y < max_.y);
+                PRE(cell_size_.x > 0.0f);
+                PRE(cell_size_.y > 0.0f);
 
                 const int x_start = static_cast<int>(std::trunc(min_.x / cell_size_.x));
                 const int x_end   = static_cast<int>(std::trunc(max_.x / cell_size_.x));
