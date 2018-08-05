@@ -111,13 +111,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a491957b26c234c72499e78189847dcac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac039d151b9ec15d81f7d4d2285fb6962"><td class="memItemLeft" align="right" valign="top">const glm::mat4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_camera.html#ac039d151b9ec15d81f7d4d2285fb6962">view</a> () const noexcept</td></tr>
 <tr class="separator:ac039d151b9ec15d81f7d4d2285fb6962"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a3e54f54f86a5a1cb92951345b33cfa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_camera.html#a3a3e54f54f86a5a1cb92951345b33cfa">accelerate</a> (const float delta_) noexcept</td></tr>
-<tr class="separator:a3a3e54f54f86a5a1cb92951345b33cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62eb5efa1087759a356284041764e450"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_camera.html#a62eb5efa1087759a356284041764e450">move</a> (const float forward_, const float right_, const float up_) noexcept=0</td></tr>
-<tr class="separator:a62eb5efa1087759a356284041764e450"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5b31a84211435c96acc9eccb96a7905"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_camera.html#af5b31a84211435c96acc9eccb96a7905">rotate</a> (const float roll_, const float pitch_, const float yaw_) noexcept=0</td></tr>
-<tr class="memdesc:af5b31a84211435c96acc9eccb96a7905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate the camera's orientation.  <a href="#af5b31a84211435c96acc9eccb96a7905">More...</a><br /></td></tr>
-<tr class="separator:af5b31a84211435c96acc9eccb96a7905"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8549068b026334b122c56dfb4e3bd6d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_camera.html#a8549068b026334b122c56dfb4e3bd6d5">accelerate</a> (float delta_) noexcept</td></tr>
+<tr class="separator:a8549068b026334b122c56dfb4e3bd6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9feaa1d295033cb67912ad5c31ffad0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_camera.html#ac9feaa1d295033cb67912ad5c31ffad0">move</a> (float forward_, float right_, float up_) noexcept=0</td></tr>
+<tr class="memdesc:ac9feaa1d295033cb67912ad5c31ffad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the camera position.  <a href="#ac9feaa1d295033cb67912ad5c31ffad0">More...</a><br /></td></tr>
+<tr class="separator:ac9feaa1d295033cb67912ad5c31ffad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1de8248bc2d561704a29a18841ef525d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_camera.html#a1de8248bc2d561704a29a18841ef525d">rotate</a> (float roll_, float pitch_, float yaw_) noexcept=0</td></tr>
+<tr class="memdesc:a1de8248bc2d561704a29a18841ef525d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate the camera's orientation.  <a href="#a1de8248bc2d561704a29a18841ef525d">More...</a><br /></td></tr>
+<tr class="separator:a1de8248bc2d561704a29a18841ef525d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -292,8 +293,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3a3e54f54f86a5a1cb92951345b33cfa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a3e54f54f86a5a1cb92951345b33cfa">&#9670;&nbsp;</a></span>accelerate()</h2>
+<a id="a8549068b026334b122c56dfb4e3bd6d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8549068b026334b122c56dfb4e3bd6d5">&#9670;&nbsp;</a></span>accelerate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -304,7 +305,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void arc::gui::Camera::accelerate </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>delta_</em></td><td>)</td>
           <td></td>
         </tr>
@@ -325,8 +326,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a62eb5efa1087759a356284041764e450"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62eb5efa1087759a356284041764e450">&#9670;&nbsp;</a></span>move()</h2>
+<a id="ac9feaa1d295033cb67912ad5c31ffad0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9feaa1d295033cb67912ad5c31ffad0">&#9670;&nbsp;</a></span>move()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,19 +338,19 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void arc::gui::Camera::move </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>forward_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>right_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>up_</em>&#160;</td>
         </tr>
         <tr>
@@ -364,7 +365,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Move the camera position.</p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Move the camera position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">forward_</td><td>Distance to move the camera forward.</td></tr>
     <tr><td class="paramname">right_</td><td>Distance to move the camera to the right.</td></tr>
@@ -373,7 +376,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classarc_1_1gui_1_1camera_1_1_orbit.html#a35f5929378d5753291238a3d0a5dfbc4">arc::gui::camera::Orbit</a>.</p>
+<p>Implemented in <a class="el" href="classarc_1_1gui_1_1camera_1_1_orbit.html#ab0062f89065280998577ed4781a22fd8">arc::gui::camera::Orbit</a>.</p>
 
 </div>
 </div>
@@ -435,8 +438,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af5b31a84211435c96acc9eccb96a7905"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5b31a84211435c96acc9eccb96a7905">&#9670;&nbsp;</a></span>rotate()</h2>
+<a id="a1de8248bc2d561704a29a18841ef525d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1de8248bc2d561704a29a18841ef525d">&#9670;&nbsp;</a></span>rotate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -447,19 +450,19 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void arc::gui::Camera::rotate </td>
           <td>(</td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>roll_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>pitch_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>yaw_</em>&#160;</td>
         </tr>
         <tr>
@@ -485,7 +488,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classarc_1_1gui_1_1camera_1_1_orbit.html#a7e210183e6ed92f671b86269bc47d200">arc::gui::camera::Orbit</a>.</p>
+<p>Implemented in <a class="el" href="classarc_1_1gui_1_1camera_1_1_orbit.html#a44b8a327ef8e0a7a15b08ee50d23deb1">arc::gui::camera::Orbit</a>.</p>
 
 </div>
 </div>
@@ -679,7 +682,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Aug 5 2018 02:42:17 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Aug 5 2018 02:51:28 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
