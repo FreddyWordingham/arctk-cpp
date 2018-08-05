@@ -60,6 +60,13 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct an orbital camera at a given position with a given focus point and up direction.
+             *
+             *  @param  pos_    Position of the camera.
+             *  @param  focus_  Point to focus the camera on.
+             *  @param  up_     Up direction of the camera.
+             */
             inline Orbit::Orbit(const glm::vec3& pos_, const glm::vec3& focus_, const glm::vec3& up_) noexcept
               : Camera(pos_, focus_, up_)
             {
