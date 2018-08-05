@@ -403,9 +403,9 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Designs --
             inline Actor grid(const glm::vec2& min_, const glm::vec2& max_, const glm::vec2& cell_size_) noexcept;
-            inline Actor axis_helper_x(float length_ = 1.0f, float width_ = 0.1f) noexcept;
-            inline Actor axis_helper_y(float length_ = 1.0f, float width_ = 0.1f) noexcept;
-            inline Actor axis_helper_z(float length_ = 1.0f, float width_ = 0.1f) noexcept;
+            inline Actor axis_helper_x(float length_ = 1.0f, float width_ = 0.01f) noexcept;
+            inline Actor axis_helper_y(float length_ = 1.0f, float width_ = 0.01f) noexcept;
+            inline Actor axis_helper_z(float length_ = 1.0f, float width_ = 0.01f) noexcept;
 
 
 
