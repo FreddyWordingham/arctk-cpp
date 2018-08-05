@@ -125,6 +125,11 @@ namespace arc //! arctk namespace
 
 
         //  -- Control --
+        /**
+         *  Accelerate the camera's speed.
+         *
+         *  @param  delta_  Speed to accelerate the camera.
+         */
         inline void Camera::accelerate(const float delta_) noexcept
         {
             _speed += delta_;
