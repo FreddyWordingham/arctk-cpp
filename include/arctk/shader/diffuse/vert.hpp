@@ -32,7 +32,7 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Source --
-            const char* vert = R""(
+            const char* vert = R"(
                 //  == VERSION ==
                 #version 330 core
 
@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
 
                     dist = length(sun_pos - pos);
                 }
-            )"";
+            )";
 
 
 
