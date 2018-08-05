@@ -153,6 +153,17 @@ namespace arc //! arctk namespace
             update_model();
         }
 
+        /**
+         *  Construct an actor using a vector of three-dimensional positions in a given layout in terms of triplets.
+         *  Actor is rendered as the given primitive type with the given fill mode.
+         *
+         *  @param  verts_          Vector of vertex positions.
+         *  @param  layout_         Vertex layout patturn.
+         *  @param  primitive_type_ Primitive used to render the actor.
+         *  @param  fill_mode_      Fill mode used to render the actor.
+         *
+         *  @pre    verts_.size() must be exactly divisible by the sum of the layout patturn.
+         */
         inline Actor::Actor(const std::vector<glm::vec3>& verts_, const std::vector<size_t>& layout_, GLenum primitive_type_, GLenum fill_mode_) noexcept
           : _num_vert(static_cast<GLsizei>(verts_.size() / math::container::sum(layout_)) * 3)
           , _vao(init_vao())
