@@ -39,12 +39,27 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Grid(const glm::vec2& min_, const glm::vec2& max_, const glm::vec2& cell_size_) noexcept;
+
+              private:
+                //  -- Initialisation --
+                std::vector<GLfloat> init_verts(const glm::vec2& min_, const glm::vec2& max_, const glm::vec2& cell_size_) const noexcept;
             };
 
 
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Grid::Grid(const glm::vec2& min_, const glm::vec2& max_, const glm::vec2& cell_size_) noexcept
+              : Actor(init_verts(min_, max_, cell_size_), {3}, GL_LINES)
+            {
+            }
+
+
+            //  -- Initialisation --
+            std::vector<GLfloat> Grid::init_verts(const glm::vec2& min_, const glm::vec2& max_, const glm::vec2& cell_size_) const noexcept
+            {
+            }
 
 
 
