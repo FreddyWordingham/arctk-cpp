@@ -443,10 +443,10 @@ namespace arc //! arctk namespace
                 PRE(cell_size_.x > 0.0f);
                 PRE(cell_size_.y > 0.0f);
 
-                const int x_start = static_cast<int>(std::trunc(min_.x / cell_size_.x));
-                const int x_end   = static_cast<int>(std::trunc(max_.x / cell_size_.x));
-                const int y_start = static_cast<int>(std::trunc(min_.y / cell_size_.y));
-                const int y_end   = static_cast<int>(std::trunc(max_.y / cell_size_.y));
+                const auto x_start = static_cast<int>(std::trunc(min_.x / cell_size_.x));
+                const auto x_end   = static_cast<int>(std::trunc(max_.x / cell_size_.x));
+                const auto y_start = static_cast<int>(std::trunc(min_.y / cell_size_.y));
+                const auto y_end   = static_cast<int>(std::trunc(max_.y / cell_size_.y));
 
                 std::vector<GLfloat> verts(3 * 2 * static_cast<size_t>((x_end - x_start + 1) + (y_end - y_start + 1)));
 
