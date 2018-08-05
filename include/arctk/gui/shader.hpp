@@ -530,13 +530,16 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Render using a given lens.
+         *  Render using a given lens' projection matrix..
          */
         inline void Shader::render_lens(const Lens& lens_) noexcept
         {
             glUniformMatrix4fv(_proj, 1, GL_FALSE, &lens_.proj()[0][0]);
         }
 
+        /**
+         *  Render using a given camera's view matrix.
+         */
         inline void Shader::render_camera(const Camera& cam_) noexcept
         {
             glUniformMatrix4fv(_view, 1, GL_FALSE, &cam_.view()[0][0]);
