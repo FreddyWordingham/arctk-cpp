@@ -16,6 +16,8 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/shader/ambient/frag.hpp>
+#include <arctk/shader/ambient/vert.hpp>
 #include <arctk/shader/diffuse/frag.hpp>
 #include <arctk/shader/diffuse/vert.hpp>
 
