@@ -429,9 +429,9 @@ namespace arc //! arctk namespace
                 verts[5] = pos_.z;
 
                 Actor helper(verts, {3}, GL_LINES);
-                helper.set_col();
+                helper.set_col(1.0f, 0.0f, 0.0f);
 
-                return (Actor(verts, {3}, GL_LINES));
+                return (helper);
             }
 
 
