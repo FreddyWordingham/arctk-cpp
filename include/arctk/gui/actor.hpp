@@ -164,20 +164,20 @@ namespace arc //! arctk namespace
           , _scale(glm::vec3(1.0f, 1.0f, 1.0f))
           , _col(glm::vec4(1.0f, 0.0f, 1.0f, 1.0f))
         {
-            PRE(((verts_.size() / 3) % math::container::sum(layout_)) == 0);
+            PRE((verts_.size() % math::container::sum(layout_)) == 0);
 
             glBindVertexArray(_vao);
             glBindBuffer(GL_ARRAY_BUFFER, _vbo);
             glBufferData(GL_ARRAY_BUFFER, static_cast<GLsizeiptr>(verts_.size() * 3 * sizeof(GLfloat)), &verts_.front(), GL_STATIC_DRAW);
 
-            const size_t chunk_size = math::container::sum(layout_) * sizeof(GLfloat);
+            const size_t chunk_size = math::container::sum(layout_) * 3 * sizeof(GLfloat);
             size_t       start      = 0;
             for (size_t i = 0; i < layout_.size(); ++i)
             {
-                glVertexAttribPointer(static_cast<GLuint>(i), static_cast<GLint>(layout_[i]), GL_FLOAT, GL_FALSE, static_cast<GLsizei>(chunk_size), reinterpret_cast<GLvoid*>(start * sizeof(GLfloat))); // NOLINT
+                glVertexAttribPointer(static_cast<GLuint>(i), static_cast<GLint>(layout_[i] * 3), GL_FLOAT, GL_FALSE, static_cast<GLsizei>(chunk_size), reinterpret_cast<GLvoid*>(start * sizeof(GLfloat))); // NOLINT
                 glEnableVertexAttribArray(static_cast<GLuint>(i));
 
-                start += layout_[i];
+                start += layout_[i] * 3;
             }
 
             glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -455,80 +455,32 @@ namespace arc //! arctk namespace
 
             inline Actor axis_helper_x(const float length_, const float width_) noexcept
             {
-                std::vector<GLfloat> verts(3 * 3 * 6);
+                std::vector<glm::vec3> verts;
+                verts.reserve(3 * 6);
 
-                verts[0] = 0.0f;
-                verts[1] = -width_;
-                verts[2] = -width_;
-
-                verts[3] = 0.0f;
-                verts[4] = +width_;
-                verts[5] = +width_;
-
-                verts[6] = 0.0f;
-                verts[7] = -width_;
-                verts[8] = +width_;
-
-                verts[9]  = 0.0f;
-                verts[10] = +width_;
-                verts[11] = +width_;
-
-                verts[12] = 0.0f;
-                verts[13] = -width_;
-                verts[14] = -width_;
-
-                verts[15] = 0.0f;
-                verts[16] = +width_;
-                verts[17] = -width_;
+                verts.emplace_back(glm::vec3(0.0f, -width_, -width_));
+                verts.emplace_back(glm::vec3(0.0f, +width_, +width_));
+                verts.emplace_back(glm::vec3(0.0f, -width_, +width_));
+                verts.emplace_back(glm::vec3(0.0f, +width_, +width_));
+                verts.emplace_back(glm::vec3(0.0f, -width_, -width_));
+                verts.emplace_back(glm::vec3(0.0f, +width_, -width_));
 
 
-                verts[18] = 0.0f;
-                verts[19] = -width_;
-                verts[20] = -width_;
+                verts.emplace_back(glm::vec3(0.0f, -width_, -width_));
+                verts.emplace_back(glm::vec3(0.0f, -width_, +width_));
+                verts.emplace_back(glm::vec3(length_, 0.0f, 0.0f));
 
-                verts[21] = 0.0f;
-                verts[22] = -width_;
-                verts[23] = +width_;
+                verts.emplace_back(glm::vec3(0.0f, -width_, +width_));
+                verts.emplace_back(glm::vec3(0.0f, +width_, +width_));
+                verts.emplace_back(glm::vec3(length_, 0.0f, 0.0f));
 
-                verts[24] = length_;
-                verts[25] = 0.0f;
-                verts[26] = 0.0f;
+                verts.emplace_back(glm::vec3(0.0f, +width_, +width_));
+                verts.emplace_back(glm::vec3(0.0f, +width_, -width_));
+                verts.emplace_back(glm::vec3(length_, 0.0f, 0.0f));
 
-                verts[27] = 0.0f;
-                verts[28] = -width_;
-                verts[29] = +width_;
-
-                verts[30] = 0.0f;
-                verts[31] = +width_;
-                verts[32] = +width_;
-
-                verts[33] = length_;
-                verts[34] = 0.0f;
-                verts[35] = 0.0f;
-
-                verts[36] = 0.0f;
-                verts[37] = +width_;
-                verts[38] = +width_;
-
-                verts[39] = 0.0f;
-                verts[40] = +width_;
-                verts[41] = -width_;
-
-                verts[42] = length_;
-                verts[43] = 0.0f;
-                verts[44] = 0.0f;
-
-                verts[45] = 0.0f;
-                verts[46] = +width_;
-                verts[47] = -width_;
-
-                verts[48] = 0.0f;
-                verts[49] = -width_;
-                verts[50] = -width_;
-
-                verts[51] = length_;
-                verts[52] = 0.0f;
-                verts[53] = 0.0f;
+                verts.emplace_back(glm::vec3(0.0f, +width_, -width_));
+                verts.emplace_back(glm::vec3(0.0f, -width_, -width_));
+                verts.emplace_back(glm::vec3(length_, 0.0f, 0.0f));
 
                 Actor helper(verts);
                 helper.set_col(1.0f, 0.0f, 0.0f);
