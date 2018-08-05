@@ -92,9 +92,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
             //  -- Updating --
             /**
-             *  Get the view matrix used to render the actor.
-             *
-             *  @return View matrix used to render the actor.
+             *  Update the projection matrix of the lens.
              */
             inline void Perspective::update_view() noexcept
             {
