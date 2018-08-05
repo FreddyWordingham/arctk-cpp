@@ -369,6 +369,8 @@ namespace arc //! arctk namespace
             //  -- Designs --
             inline Actor grid(const glm::vec2& min_, const glm::vec2& max_, const glm::vec2& cell_size_) noexcept;
             inline Actor axis_helper_x(float length_ = 1.0f, const glm::vec3& pos_ = glm::vec3(0.0f, 0.0f, 0.0f)) noexcept;
+            inline Actor axis_helper_y(float length_ = 1.0f, const glm::vec3& pos_ = glm::vec3(0.0f, 0.0f, 0.0f)) noexcept;
+            inline Actor axis_helper_z(float length_ = 1.0f, const glm::vec3& pos_ = glm::vec3(0.0f, 0.0f, 0.0f)) noexcept;
 
 
 
@@ -430,6 +432,24 @@ namespace arc //! arctk namespace
 
                 Actor helper(verts, {3}, GL_LINES);
                 helper.set_col(1.0f, 0.0f, 0.0f);
+
+                return (helper);
+            }
+
+            inline Actor axis_helper_y(const float length_, const glm::vec3& pos_) noexcept
+            {
+                std::vector<GLfloat> verts(3 * 2);
+
+                verts[0] = pos_.x;
+                verts[1] = pos_.y;
+                verts[2] = pos_.z;
+
+                verts[3] = pos_.x;
+                verts[4] = pos_.y + length_;
+                verts[5] = pos_.z;
+
+                Actor helper(verts, {3}, GL_LINES);
+                helper.set_col(0.0f, 1.0f, 0.0f);
 
                 return (helper);
             }
