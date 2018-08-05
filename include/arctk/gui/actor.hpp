@@ -456,30 +456,38 @@ namespace arc //! arctk namespace
             inline Actor axis_helper_x(const float length_, const float width_) noexcept
             {
                 std::vector<glm::vec3> verts;
-                verts.reserve(3 * 6);
+                verts.reserve(3 * 8);
 
-                verts.emplace_back(glm::vec3(0.0f, -width_, -width_));
-                verts.emplace_back(glm::vec3(0.0f, +width_, +width_));
-                verts.emplace_back(glm::vec3(0.0f, -width_, +width_));
-                verts.emplace_back(glm::vec3(0.0f, +width_, +width_));
-                verts.emplace_back(glm::vec3(0.0f, -width_, -width_));
-                verts.emplace_back(glm::vec3(0.0f, +width_, -width_));
+                verts.emplace_back(glm::vec3(0.0f, 0.0f, 0.0f));
+                verts.emplace_back(glm::vec3(+width_, +width_, +width_));
+                verts.emplace_back(glm::vec3(+width_, -width_, +width_));
 
+                verts.emplace_back(glm::vec3(0.0f, 0.0f, 0.0f));
+                verts.emplace_back(glm::vec3(+width_, -width_, +width_));
+                verts.emplace_back(glm::vec3(+width_, -width_, -width_));
 
-                verts.emplace_back(glm::vec3(0.0f, -width_, -width_));
-                verts.emplace_back(glm::vec3(0.0f, -width_, +width_));
+                verts.emplace_back(glm::vec3(0.0f, 0.0f, 0.0f));
+                verts.emplace_back(glm::vec3(+width_, -width_, -width_));
+                verts.emplace_back(glm::vec3(+width_, +width_, -width_));
+
+                verts.emplace_back(glm::vec3(0.0f, 0.0f, 0.0f));
+                verts.emplace_back(glm::vec3(+width_, +width_, -width_));
+                verts.emplace_back(glm::vec3(+width_, +width_, +width_));
+
+                verts.emplace_back(glm::vec3(+width_, +width_, +width_));
+                verts.emplace_back(glm::vec3(+width_, -width_, +width_));
                 verts.emplace_back(glm::vec3(length_, 0.0f, 0.0f));
 
-                verts.emplace_back(glm::vec3(0.0f, -width_, +width_));
-                verts.emplace_back(glm::vec3(0.0f, +width_, +width_));
+                verts.emplace_back(glm::vec3(+width_, -width_, +width_));
+                verts.emplace_back(glm::vec3(+width_, -width_, -width_));
                 verts.emplace_back(glm::vec3(length_, 0.0f, 0.0f));
 
-                verts.emplace_back(glm::vec3(0.0f, +width_, +width_));
-                verts.emplace_back(glm::vec3(0.0f, +width_, -width_));
+                verts.emplace_back(glm::vec3(+width_, -width_, -width_));
+                verts.emplace_back(glm::vec3(+width_, +width_, -width_));
                 verts.emplace_back(glm::vec3(length_, 0.0f, 0.0f));
 
-                verts.emplace_back(glm::vec3(0.0f, +width_, -width_));
-                verts.emplace_back(glm::vec3(0.0f, -width_, -width_));
+                verts.emplace_back(glm::vec3(+width_, +width_, -width_));
+                verts.emplace_back(glm::vec3(+width_, +width_, +width_));
                 verts.emplace_back(glm::vec3(length_, 0.0f, 0.0f));
 
                 Actor helper(verts);
