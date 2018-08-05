@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
 
                     frag_col.xyz *= (ambient_pow + ((light_pow * cos_theta) / (dist * dist)));
                 }
-            )";
+            )"; //!< Diffuse fragment subshader source code.
 
 
 
