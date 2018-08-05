@@ -52,8 +52,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Control --
-                inline void move(const float forward_, const float right_, const float up_) noexcept override;
-                inline void rotate(const float /*unused*/, const float /*unused*/, const float /*unused*/) noexcept override;
+                inline void move(float forward_, float right_, float up_) noexcept override;
+                inline void rotate(float /*unused*/, float /*unused*/, float /*unused*/) noexcept override;
             };
 
 
