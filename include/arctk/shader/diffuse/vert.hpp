@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
                 uniform mat4 view;
                 uniform mat4 proj;
                 uniform vec4 col;
-                uniform vec3 sun_pos;
+                uniform vec3 sun_pos = vec3(2.0, 2.0, 2.0);
 
 
 
