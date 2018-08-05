@@ -545,6 +545,11 @@ namespace arc //! arctk namespace
             glUniformMatrix4fv(_view, 1, GL_FALSE, &cam_.view()[0][0]);
         }
 
+        /**
+         *  Render a given actor.
+         *
+         *  @param  act_    Actor to render.
+         */
         inline void Shader::render_actor(const Actor& act_) noexcept
         {
             glPolygonMode(GL_FRONT_AND_BACK, act_.fill_mode());
