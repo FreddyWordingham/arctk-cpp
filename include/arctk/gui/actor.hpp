@@ -529,6 +529,17 @@ namespace arc //! arctk namespace
                 return (helper);
             }
 
+            /**
+             *  Create a y-axis helper actor.
+             *
+             *  @param  length_ Length of the actor.
+             *  @param  width_  Width of the actor.
+             *
+             *  @pre    length_ must be positive.
+             *  @pre    width_ must be positive.
+             *
+             *  @return Y-axis helper actor.
+             */
             inline Actor axis_helper_y(const float length_, const float width_) noexcept
             {
                 std::vector<glm::vec3> verts;
