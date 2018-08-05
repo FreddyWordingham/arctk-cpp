@@ -15,6 +15,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <limits>
+
 //  -- Graphical --
 #include <glm/gtx/polar_coordinates.hpp>
 
@@ -73,6 +76,20 @@ namespace arc //! arctk namespace
                 pos.rho += forward_ * _speed;
                 pos.theta += right_ * _speed;
                 pos.phi += up_ * _speed;
+
+                if (pos.rho <= 0.0f)
+                {
+                    pos.rho = std::numeric_limits<float>::min();
+                }
+
+                if (pos.theta <= 0.0f)
+                {
+                    pos.theta = std::numeric_limits<float>::min();
+                }
+                else if (pos.theta >= 3.141f)
+                {
+                    pos.theta = 3.141f - std::numeric_limits<float>::min();
+                }
 
                 pos = math::convert::polar_to_cart(pos);
 
