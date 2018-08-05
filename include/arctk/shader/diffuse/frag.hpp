@@ -26,7 +26,7 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Source --
-            const char* frag = R"(
+            static const char* frag = R"(
                 //  == VERSION ==
                 #version 330 core
 
