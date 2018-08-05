@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['actor',['actor',['../namespacearc_1_1gui_1_1actor.html',1,'arc::gui']]],
+  ['ambient',['ambient',['../namespacearc_1_1shader_1_1ambient.html',1,'arc::shader']]],
   ['ansi',['ansi',['../namespacearc_1_1term_1_1ansi.html',1,'arc::term']]],
   ['arc',['arc',['../namespacearc.html',1,'']]],
   ['camera',['camera',['../namespacearc_1_1gui_1_1camera.html',1,'arc::gui']]],

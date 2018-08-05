@@ -5,7 +5,7 @@ var searchData=
   ['scale',['scale',['../classarc_1_1gui_1_1_actor.html#a99572fd0c56545b8512549e3b2d29a94',1,'arc::gui::Actor::scale()'],['../namespacearc_1_1math_1_1mat.html#a4aaba718d91ea015418b66dc4f7a7a48',1,'arc::math::mat::scale()']]],
   ['seed',['seed',['../classarc_1_1random_1_1_generator.html#a5fc7cf9f0613c58fcfbe20910c42a8f4',1,'arc::random::Generator']]],
   ['set_5fclear_5fcol',['set_clear_col',['../classarc_1_1gui_1_1_window.html#a52da225fa29fd35114ee8ddee5f08582',1,'arc::gui::Window']]],
-  ['set_5fcol',['set_col',['../classarc_1_1gui_1_1_actor.html#a76f7f6a21ce2b9251ce3d21569751ea6',1,'arc::gui::Actor']]],
+  ['set_5fcol',['set_col',['../classarc_1_1gui_1_1_actor.html#a8803aa055f2e5fb82d1a298809093e8a',1,'arc::gui::Actor']]],
   ['set_5ffill_5fmode',['set_fill_mode',['../classarc_1_1gui_1_1_actor.html#a14c070f0abcfbebb4630c2d4f10b5d13',1,'arc::gui::Actor']]],
   ['set_5fnext_5fseed',['set_next_seed',['../classarc_1_1random_1_1_generator.html#a63c797cd1f24f809ac78222c11e0c14e',1,'arc::random::Generator']]],
   ['set_5fprimitive_5ftype',['set_primitive_type',['../classarc_1_1gui_1_1_actor.html#a7e5368f64dabdc1ffd59c5fae1acb528',1,'arc::gui::Actor']]],

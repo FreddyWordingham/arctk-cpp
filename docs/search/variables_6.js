@@ -18,5 +18,5 @@ var searchData=
   ['fg_5fwhite',['FG_WHITE',['../namespacearc_1_1term_1_1ansi.html#a68aac9f6493a3a7f3ea535163659fe4b',1,'arc::term::ansi']]],
   ['fg_5fyellow',['FG_YELLOW',['../namespacearc_1_1term_1_1ansi.html#a403b00bb346259861d57f65af8635f29',1,'arc::term::ansi']]],
   ['file_5fopen_5ffailed',['FILE_OPEN_FAILED',['../namespacearc_1_1exit_1_1error.html#a2551e7b15a3ca1a65f0ba6f7bef39689',1,'arc::exit::error']]],
-  ['frag',['frag',['../namespacearc_1_1shader_1_1diffuse.html#af0c381a9999fc31a4eeb9b2843f58c3e',1,'arc::shader::diffuse']]]
+  ['frag',['frag',['../namespacearc_1_1shader_1_1ambient.html#ae3e020e580e5b9c830e512972cec59f9',1,'arc::shader::ambient::frag()'],['../namespacearc_1_1shader_1_1diffuse.html#af0c381a9999fc31a4eeb9b2843f58c3e',1,'arc::shader::diffuse::frag()']]]
 ];

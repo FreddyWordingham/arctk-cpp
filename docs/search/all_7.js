@@ -14,5 +14,6 @@ var searchData=
   ['glfw_5finit_5ffailed',['GLFW_INIT_FAILED',['../namespacearc_1_1exit_1_1error.html#a4b7e941ee2e373050a3de84bc9a9ac57',1,'arc::exit::error']]],
   ['greyscale',['Greyscale',['../classarc_1_1data_1_1image_1_1_greyscale.html',1,'arc::data::image::Greyscale'],['../classarc_1_1data_1_1image_1_1_greyscale.html#a1578266734d8ff6873a2e71e89c8bfe1',1,'arc::data::image::Greyscale::Greyscale(size_t width_, size_t height_) noexcept'],['../classarc_1_1data_1_1image_1_1_greyscale.html#a4c03ff0b382dba5f238c8ab324770f34',1,'arc::data::image::Greyscale::Greyscale(const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;pixels_) noexcept']]],
   ['greyscale_2ehpp',['greyscale.hpp',['../greyscale_8hpp.html',1,'']]],
+  ['grid',['grid',['../namespacearc_1_1gui_1_1actor.html#a9eee676f0d3f20a50312bd63dbda6419',1,'arc::gui::actor']]],
   ['gui_2ehpp',['gui.hpp',['../gui_8hpp.html',1,'']]]
 ];

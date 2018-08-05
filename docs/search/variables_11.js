@@ -6,5 +6,5 @@ var searchData=
   ['version_5fmajor',['VERSION_MAJOR',['../namespacearc_1_1config.html#a2d17637229eb1a5c1cd130d0945a5308',1,'arc::config']]],
   ['version_5fminor',['VERSION_MINOR',['../namespacearc_1_1config.html#ad647132a40a28b2241f0406b168c1874',1,'arc::config']]],
   ['version_5fpatch',['VERSION_PATCH',['../namespacearc_1_1config.html#afc8283f15f7b5502fe48b6616a5d1207',1,'arc::config']]],
-  ['vert',['vert',['../namespacearc_1_1shader_1_1diffuse.html#a965e51aab23f45d68b335cb5b4e26591',1,'arc::shader::diffuse']]]
+  ['vert',['vert',['../namespacearc_1_1shader_1_1ambient.html#af37ba61871051c7b969cff0ef95d7c60',1,'arc::shader::ambient::vert()'],['../namespacearc_1_1shader_1_1diffuse.html#a965e51aab23f45d68b335cb5b4e26591',1,'arc::shader::diffuse::vert()']]]
 ];

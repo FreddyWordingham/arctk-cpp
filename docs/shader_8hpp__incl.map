@@ -1,4 +1,6 @@
 <map id="include/arctk/shader.hpp" name="include/arctk/shader.hpp">
-<area shape="rect" id="node2" href="$frag_8hpp.html" title="arctk/shader/diffuse\l/frag.hpp" alt="" coords="5,79,143,117"/>
-<area shape="rect" id="node3" href="$vert_8hpp.html" title="arctk/shader/diffuse\l/vert.hpp" alt="" coords="167,79,304,117"/>
+<area shape="rect" id="node2" href="$ambient_2frag_8hpp.html" title="arctk/shader/ambient\l/frag.hpp" alt="" coords="5,79,151,117"/>
+<area shape="rect" id="node3" href="$ambient_2vert_8hpp.html" title="arctk/shader/ambient\l/vert.hpp" alt="" coords="175,79,321,117"/>
+<area shape="rect" id="node4" href="$diffuse_2frag_8hpp.html" title="arctk/shader/diffuse\l/frag.hpp" alt="" coords="344,79,482,117"/>
+<area shape="rect" id="node5" href="$diffuse_2vert_8hpp.html" title="arctk/shader/diffuse\l/vert.hpp" alt="" coords="506,79,643,117"/>
 </map>
