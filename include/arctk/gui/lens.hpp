@@ -81,6 +81,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the projection matrix used to render the actor.
+         *
+         *  @return Projection matrix used to render the actor.
+         */
         inline const glm::mat4& Lens::proj() const noexcept
         {
             return (_proj);
