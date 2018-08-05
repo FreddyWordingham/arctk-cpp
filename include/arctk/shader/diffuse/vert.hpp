@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
 
                     dist = length(sun_pos - pos);
                 }
-            )";
+            )"; //!< Diffuse vertex subshader source code.
 
 
 
