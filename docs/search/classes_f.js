@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['uniform',['Uniform',['../classarc_1_1gui_1_1_uniform.html',1,'arc::gui::Uniform'],['../classarc_1_1random_1_1distribution_1_1_uniform.html',1,'arc::random::distribution::Uniform&lt; T &gt;']]]
+  ['shader',['Shader',['../classarc_1_1gui_1_1_shader.html',1,'arc::gui']]],
+  ['shape',['Shape',['../classarc_1_1geom_1_1_shape.html',1,'arc::geom']]],
+  ['sphere',['Sphere',['../classarc_1_1geom_1_1shape_1_1_sphere.html',1,'arc::geom::shape']]]
 ];

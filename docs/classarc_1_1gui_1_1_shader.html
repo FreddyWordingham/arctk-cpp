@@ -77,14 +77,14 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="shader_8hpp_source.html">shader.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="gui_2shader_8hpp_source.html">shader.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9a6127edc0a711af2153a82a93f99320"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#a9a6127edc0a711af2153a82a93f99320">Shader</a> (const std::string &amp;vert_code_, const std::string &amp;frag_code_, const std::vector&lt; std::string &gt; &amp;uniform_names_) noexcept</td></tr>
-<tr class="separator:a9a6127edc0a711af2153a82a93f99320"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85cd22902d00409cbffb25f80d8a3bdc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#a85cd22902d00409cbffb25f80d8a3bdc">Shader</a> (const std::string &amp;vert_code_, const std::string &amp;geom_code_, const std::string &amp;frag_code_, const std::vector&lt; std::string &gt; &amp;uniform_names_) noexcept</td></tr>
-<tr class="separator:a85cd22902d00409cbffb25f80d8a3bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23be0062d9d4066c29797433a54eae96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#a23be0062d9d4066c29797433a54eae96">Shader</a> (const std::string &amp;vert_code_, const std::string &amp;frag_code_, const std::vector&lt; std::string &gt; &amp;uniform_names_={}) noexcept</td></tr>
+<tr class="separator:a23be0062d9d4066c29797433a54eae96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada025bfbc8d4cb30b79911b7f63c95d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#ada025bfbc8d4cb30b79911b7f63c95d6">Shader</a> (const std::string &amp;vert_code_, const std::string &amp;geom_code_, const std::string &amp;frag_code_, const std::vector&lt; std::string &gt; &amp;uniform_names_={}) noexcept</td></tr>
+<tr class="separator:ada025bfbc8d4cb30b79911b7f63c95d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb10d2b89a01c426c4f52af8670f596d"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#acb10d2b89a01c426c4f52af8670f596d">init_handle</a> (const std::string &amp;vert_code_, const std::string &amp;frag_code_) const noexcept</td></tr>
 <tr class="separator:acb10d2b89a01c426c4f52af8670f596d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58871b878a20aa9b63c259c38510e457"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#a58871b878a20aa9b63c259c38510e457">init_handle</a> (const std::string &amp;vert_code_, const std::string &amp;geom_code_, const std::string &amp;frag_code_) const noexcept</td></tr>
@@ -97,16 +97,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaa070ce37766759a644228c675a0a519"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0fd5b45c5f9b482dfd4ebd5bee0d9a5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#ad0fd5b45c5f9b482dfd4ebd5bee0d9a5">has_uniform</a> (const std::string &amp;name_) const noexcept</td></tr>
 <tr class="separator:ad0fd5b45c5f9b482dfd4ebd5bee0d9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55ff718737ed679d20d45209d55b4e14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#a55ff718737ed679d20d45209d55b4e14">set_model</a> (const glm::mat4 &amp;model_mat_) noexcept</td></tr>
-<tr class="separator:a55ff718737ed679d20d45209d55b4e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a723cf95e873e8365f6e81d05eed35c7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#a723cf95e873e8365f6e81d05eed35c7d">set_view</a> (const glm::mat4 &amp;view_mat_) noexcept</td></tr>
-<tr class="separator:a723cf95e873e8365f6e81d05eed35c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9f80d0a480e6098ad9b88885dd24122"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#ab9f80d0a480e6098ad9b88885dd24122">set_proj</a> (const glm::mat4 &amp;proj_mat_) noexcept</td></tr>
-<tr class="separator:ab9f80d0a480e6098ad9b88885dd24122"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cbf88a1710f7ecceb57fe1fddb0c9b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#a4cbf88a1710f7ecceb57fe1fddb0c9b6">set_uniform</a> (const std::string &amp;name_, const int val_) noexcept</td></tr>
-<tr class="separator:a4cbf88a1710f7ecceb57fe1fddb0c9b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad40310a517a717a8c44523aecf23a89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#aad40310a517a717a8c44523aecf23a89">set_uniform</a> (const std::string &amp;name_, const float val_) noexcept</td></tr>
-<tr class="separator:aad40310a517a717a8c44523aecf23a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bfddfd735a69d69921d61c5deab7c3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#a0bfddfd735a69d69921d61c5deab7c3e">set_uniform</a> (const std::string &amp;name_, int val_) noexcept</td></tr>
+<tr class="separator:a0bfddfd735a69d69921d61c5deab7c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b3cd04d56a0487acdf5bb9a060365ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#a6b3cd04d56a0487acdf5bb9a060365ec">set_uniform</a> (const std::string &amp;name_, float val_) noexcept</td></tr>
+<tr class="separator:a6b3cd04d56a0487acdf5bb9a060365ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2f98120970dd582b6e6a6648000d49b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#ae2f98120970dd582b6e6a6648000d49b">set_uniform</a> (const std::string &amp;name_, const glm::vec2 &amp;val_) noexcept</td></tr>
 <tr class="separator:ae2f98120970dd582b6e6a6648000d49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace3d075b71530a9574e620e968711497"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#ace3d075b71530a9574e620e968711497">set_uniform</a> (const std::string &amp;name_, const glm::vec3 &amp;val_) noexcept</td></tr>
@@ -119,6 +113,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1797b9bf1d88f1c8396b448878101231"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a921e8ee191cff08d0cee17a50b3cb664"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#a921e8ee191cff08d0cee17a50b3cb664">set_uniform</a> (const std::string &amp;name_, const glm::mat4 &amp;val_) noexcept</td></tr>
 <tr class="separator:a921e8ee191cff08d0cee17a50b3cb664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee8989e23f76febf77dcec9a2ce87c29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#aee8989e23f76febf77dcec9a2ce87c29">activate</a> () noexcept</td></tr>
+<tr class="separator:aee8989e23f76febf77dcec9a2ce87c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8fbea63b33fcbded52ed817a8a715f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#af8fbea63b33fcbded52ed817a8a715f3">render_lens</a> (const <a class="el" href="classarc_1_1gui_1_1_lens.html">Lens</a> &amp;lens_) noexcept</td></tr>
+<tr class="separator:af8fbea63b33fcbded52ed817a8a715f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6669fb4b23de060e99f375943c41bf70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#a6669fb4b23de060e99f375943c41bf70">render_camera</a> (const <a class="el" href="classarc_1_1gui_1_1_camera.html">Camera</a> &amp;cam_) noexcept</td></tr>
+<tr class="separator:a6669fb4b23de060e99f375943c41bf70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c5fd730c333a2a0ff56b020c0854b73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#a6c5fd730c333a2a0ff56b020c0854b73">render_actor</a> (const <a class="el" href="classarc_1_1gui_1_1_actor.html">Actor</a> &amp;act_) noexcept</td></tr>
+<tr class="separator:a6c5fd730c333a2a0ff56b020c0854b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -134,6 +136,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a20db438f3f273335b0786967fefc8974"><td class="memItemLeft" align="right" valign="top">const GLint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#a20db438f3f273335b0786967fefc8974">_proj</a></td></tr>
 <tr class="memdesc:a20db438f3f273335b0786967fefc8974"><td class="mdescLeft">&#160;</td><td class="mdescRight">Projection matrix uniform handle.  <a href="#a20db438f3f273335b0786967fefc8974">More...</a><br /></td></tr>
 <tr class="separator:a20db438f3f273335b0786967fefc8974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab47c3880acf7862d132ac5b32fc12006"><td class="memItemLeft" align="right" valign="top">const GLint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#ab47c3880acf7862d132ac5b32fc12006">_col</a></td></tr>
+<tr class="memdesc:ab47c3880acf7862d132ac5b32fc12006"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colour uniform handle.  <a href="#ab47c3880acf7862d132ac5b32fc12006">More...</a><br /></td></tr>
+<tr class="separator:ab47c3880acf7862d132ac5b32fc12006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbe1bcf618022063daec6422e21fb2d4"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, GLint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html#abbe1bcf618022063daec6422e21fb2d4">_uniforms</a></td></tr>
 <tr class="memdesc:abbe1bcf618022063daec6422e21fb2d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional uniform mappings.  <a href="#abbe1bcf618022063daec6422e21fb2d4">More...</a><br /></td></tr>
 <tr class="separator:abbe1bcf618022063daec6422e21fb2d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,8 +146,8 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classarc_1_1gui_1_1_shader.html">Shader</a> class. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9a6127edc0a711af2153a82a93f99320"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a6127edc0a711af2153a82a93f99320">&#9670;&nbsp;</a></span>Shader() <span class="overload">[1/2]</span></h2>
+<a id="a23be0062d9d4066c29797433a54eae96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23be0062d9d4066c29797433a54eae96">&#9670;&nbsp;</a></span>Shader() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,7 +171,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>uniform_names_</em>&#160;</td>
+          <td class="paramname"><em>uniform_names_</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -195,8 +200,8 @@ frag_code_ must not be empty. </dd></dl>
 
 </div>
 </div>
-<a id="a85cd22902d00409cbffb25f80d8a3bdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85cd22902d00409cbffb25f80d8a3bdc">&#9670;&nbsp;</a></span>Shader() <span class="overload">[2/2]</span></h2>
+<a id="ada025bfbc8d4cb30b79911b7f63c95d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada025bfbc8d4cb30b79911b7f63c95d6">&#9670;&nbsp;</a></span>Shader() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -226,7 +231,7 @@ frag_code_ must not be empty. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>uniform_names_</em>&#160;</td>
+          <td class="paramname"><em>uniform_names_</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -259,6 +264,32 @@ frag_code_ must not be empty. </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aee8989e23f76febf77dcec9a2ce87c29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee8989e23f76febf77dcec9a2ce87c29">&#9670;&nbsp;</a></span>activate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::gui::Shader::activate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Make the this shader the active shader. </p>
+
+</div>
+</div>
 <a id="ad0fd5b45c5f9b482dfd4ebd5bee0d9a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad0fd5b45c5f9b482dfd4ebd5bee0d9a5">&#9670;&nbsp;</a></span>has_uniform()</h2>
 
@@ -339,6 +370,16 @@ frag_code_ must not be empty. </dd></dl>
 <dd>
 frag_code_ must not be empty.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Handle to a shader program. </dd></dl>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1gui_1_1_shader_acb10d2b89a01c426c4f52af8670f596d_cgraph.png" border="0" usemap="#classarc_1_1gui_1_1_shader_acb10d2b89a01c426c4f52af8670f596d_cgraph" alt=""/></div>
+<map name="classarc_1_1gui_1_1_shader_acb10d2b89a01c426c4f52af8670f596d_cgraph" id="classarc_1_1gui_1_1_shader_acb10d2b89a01c426c4f52af8670f596d_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1gui_1_1_shader.html#a6980a0f6a388ebf0c05730a88d6db80c" title="arc::gui::Shader::init\l_sub_shader" alt="" coords="193,5,333,44"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -396,6 +437,16 @@ geom_code_ must not be empty. </dd>
 <dd>
 frag_code_ must not be empty.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Handle to a shader program. </dd></dl>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1gui_1_1_shader_a58871b878a20aa9b63c259c38510e457_cgraph.png" border="0" usemap="#classarc_1_1gui_1_1_shader_a58871b878a20aa9b63c259c38510e457_cgraph" alt=""/></div>
+<map name="classarc_1_1gui_1_1_shader_a58871b878a20aa9b63c259c38510e457_cgraph" id="classarc_1_1gui_1_1_shader_a58871b878a20aa9b63c259c38510e457_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1gui_1_1_shader.html#a6980a0f6a388ebf0c05730a88d6db80c" title="arc::gui::Shader::init\l_sub_shader" alt="" coords="193,5,333,44"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -442,6 +493,16 @@ frag_code_ must not be empty.</dd></dl>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>code_ must not be empty.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Handle to the initialised sub-shader program. </dd></dl>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1gui_1_1_shader_a6980a0f6a388ebf0c05730a88d6db80c_icgraph.png" border="0" usemap="#classarc_1_1gui_1_1_shader_a6980a0f6a388ebf0c05730a88d6db80c_icgraph" alt=""/></div>
+<map name="classarc_1_1gui_1_1_shader_a6980a0f6a388ebf0c05730a88d6db80c_icgraph" id="classarc_1_1gui_1_1_shader_a6980a0f6a388ebf0c05730a88d6db80c_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1gui_1_1_shader.html#acb10d2b89a01c426c4f52af8670f596d" title="arc::gui::Shader::init\l_handle" alt="" coords="193,5,333,44"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -477,6 +538,16 @@ frag_code_ must not be empty.</dd></dl>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>name_ may not be empty.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Handle to the initialised uniform within the shader. </dd></dl>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1gui_1_1_shader_a9f7dd3c7adde40343c4e84b9191c1347_icgraph.png" border="0" usemap="#classarc_1_1gui_1_1_shader_a9f7dd3c7adde40343c4e84b9191c1347_icgraph" alt=""/></div>
+<map name="classarc_1_1gui_1_1_shader_a9f7dd3c7adde40343c4e84b9191c1347_icgraph" id="classarc_1_1gui_1_1_shader_a9f7dd3c7adde40343c4e84b9191c1347_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1gui_1_1_shader.html#aaa070ce37766759a644228c675a0a519" title="arc::gui::Shader::init\l_uniforms" alt="" coords="193,5,333,44"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -518,11 +589,21 @@ uniform_names_ may not be "view". </dd>
 <dd>
 uniform_names_ may not be "proj".</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Initialised map of uniform names. </dd></dl>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1gui_1_1_shader_aaa070ce37766759a644228c675a0a519_cgraph.png" border="0" usemap="#classarc_1_1gui_1_1_shader_aaa070ce37766759a644228c675a0a519_cgraph" alt=""/></div>
+<map name="classarc_1_1gui_1_1_shader_aaa070ce37766759a644228c675a0a519_cgraph" id="classarc_1_1gui_1_1_shader_aaa070ce37766759a644228c675a0a519_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1gui_1_1_shader.html#a9f7dd3c7adde40343c4e84b9191c1347" title="arc::gui::Shader::init\l_uniform" alt="" coords="193,5,333,44"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a55ff718737ed679d20d45209d55b4e14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55ff718737ed679d20d45209d55b4e14">&#9670;&nbsp;</a></span>set_model()</h2>
+<a id="a6c5fd730c333a2a0ff56b020c0854b73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c5fd730c333a2a0ff56b020c0854b73">&#9670;&nbsp;</a></span>render_actor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -531,10 +612,10 @@ uniform_names_ may not be "proj".</dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void arc::gui::Shader::set_model </td>
+          <td class="memname">void arc::gui::Shader::render_actor </td>
           <td>(</td>
-          <td class="paramtype">const glm::mat4 &amp;&#160;</td>
-          <td class="paramname"><em>model_mat_</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1gui_1_1_actor.html">Actor</a> &amp;&#160;</td>
+          <td class="paramname"><em>act_</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -544,18 +625,18 @@ uniform_names_ may not be "proj".</dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set the value for the model matrix handle.</p>
+<p>Render a given actor.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">model_mat_</td><td>Value to set the model matrix handle to. </td></tr>
+    <tr><td class="paramname">act_</td><td><a class="el" href="classarc_1_1gui_1_1_actor.html">Actor</a> to render. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="ab9f80d0a480e6098ad9b88885dd24122"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9f80d0a480e6098ad9b88885dd24122">&#9670;&nbsp;</a></span>set_proj()</h2>
+<a id="a6669fb4b23de060e99f375943c41bf70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6669fb4b23de060e99f375943c41bf70">&#9670;&nbsp;</a></span>render_camera()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -564,10 +645,10 @@ uniform_names_ may not be "proj".</dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void arc::gui::Shader::set_proj </td>
+          <td class="memname">void arc::gui::Shader::render_camera </td>
           <td>(</td>
-          <td class="paramtype">const glm::mat4 &amp;&#160;</td>
-          <td class="paramname"><em>proj_mat_</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1gui_1_1_camera.html">Camera</a> &amp;&#160;</td>
+          <td class="paramname"><em>cam_</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -577,18 +658,51 @@ uniform_names_ may not be "proj".</dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set the value for the projection matrix handle.</p>
+<p>Render using a given camera's view matrix.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">proj_mat_</td><td>Value to set the projection matrix handle to. </td></tr>
+    <tr><td class="paramname">cam_</td><td><a class="el" href="classarc_1_1gui_1_1_camera.html">Camera</a> to render. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a4cbf88a1710f7ecceb57fe1fddb0c9b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cbf88a1710f7ecceb57fe1fddb0c9b6">&#9670;&nbsp;</a></span>set_uniform() <span class="overload">[1/8]</span></h2>
+<a id="af8fbea63b33fcbded52ed817a8a715f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8fbea63b33fcbded52ed817a8a715f3">&#9670;&nbsp;</a></span>render_lens()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::gui::Shader::render_lens </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1gui_1_1_lens.html">Lens</a> &amp;&#160;</td>
+          <td class="paramname"><em>lens_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Render using a given lens' projection matrix..</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lens_</td><td><a class="el" href="classarc_1_1gui_1_1_lens.html">Lens</a> to render. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0bfddfd735a69d69921d61c5deab7c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bfddfd735a69d69921d61c5deab7c3e">&#9670;&nbsp;</a></span>set_uniform() <span class="overload">[1/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -605,7 +719,7 @@ uniform_names_ may not be "proj".</dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>val_</em>&#160;</td>
         </tr>
         <tr>
@@ -624,7 +738,7 @@ uniform_names_ may not be "proj".</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name_</td><td>Name of the uniform to set. </td></tr>
-    <tr><td class="paramname">val_</td><td>Value to set the uniform handle to.</td></tr>
+    <tr><td class="paramname">val_</td><td>Value to set the uniform to.</td></tr>
   </table>
   </dd>
 </dl>
@@ -634,8 +748,8 @@ name_ must be a key within the _uniforms map. </dd></dl>
 
 </div>
 </div>
-<a id="aad40310a517a717a8c44523aecf23a89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad40310a517a717a8c44523aecf23a89">&#9670;&nbsp;</a></span>set_uniform() <span class="overload">[2/8]</span></h2>
+<a id="a6b3cd04d56a0487acdf5bb9a060365ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b3cd04d56a0487acdf5bb9a060365ec">&#9670;&nbsp;</a></span>set_uniform() <span class="overload">[2/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -652,7 +766,7 @@ name_ must be a key within the _uniforms map. </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>val_</em>&#160;</td>
         </tr>
         <tr>
@@ -671,7 +785,7 @@ name_ must be a key within the _uniforms map. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name_</td><td>Name of the uniform to set. </td></tr>
-    <tr><td class="paramname">val_</td><td>Value to set the uniform handle to.</td></tr>
+    <tr><td class="paramname">val_</td><td>Value to set the uniform to.</td></tr>
   </table>
   </dd>
 </dl>
@@ -718,7 +832,7 @@ name_ must be a key within the _uniforms map. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name_</td><td>Name of the uniform to set. </td></tr>
-    <tr><td class="paramname">val_</td><td>Value to set the uniform handle to.</td></tr>
+    <tr><td class="paramname">val_</td><td>Value to set the uniform to.</td></tr>
   </table>
   </dd>
 </dl>
@@ -765,7 +879,7 @@ name_ must be a key within the _uniforms map. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name_</td><td>Name of the uniform to set. </td></tr>
-    <tr><td class="paramname">val_</td><td>Value to set the uniform handle to.</td></tr>
+    <tr><td class="paramname">val_</td><td>Value to set the uniform to.</td></tr>
   </table>
   </dd>
 </dl>
@@ -812,7 +926,7 @@ name_ must be a key within the _uniforms map. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name_</td><td>Name of the uniform to set. </td></tr>
-    <tr><td class="paramname">val_</td><td>Value to set the uniform handle to.</td></tr>
+    <tr><td class="paramname">val_</td><td>Value to set the uniform to.</td></tr>
   </table>
   </dd>
 </dl>
@@ -859,7 +973,7 @@ name_ must be a key within the _uniforms map. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name_</td><td>Name of the uniform to set. </td></tr>
-    <tr><td class="paramname">val_</td><td>Value to set the uniform handle to.</td></tr>
+    <tr><td class="paramname">val_</td><td>Value to set the uniform to.</td></tr>
   </table>
   </dd>
 </dl>
@@ -906,7 +1020,7 @@ name_ must be a key within the _uniforms map. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name_</td><td>Name of the uniform to set. </td></tr>
-    <tr><td class="paramname">val_</td><td>Value to set the uniform handle to.</td></tr>
+    <tr><td class="paramname">val_</td><td>Value to set the uniform to.</td></tr>
   </table>
   </dd>
 </dl>
@@ -953,7 +1067,7 @@ name_ must be a key within the _uniforms map. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name_</td><td>Name of the uniform to set. </td></tr>
-    <tr><td class="paramname">val_</td><td>Value to set the uniform handle to.</td></tr>
+    <tr><td class="paramname">val_</td><td>Value to set the uniform to.</td></tr>
   </table>
   </dd>
 </dl>
@@ -963,8 +1077,9 @@ name_ must be a key within the _uniforms map. </dd></dl>
 
 </div>
 </div>
-<a id="a723cf95e873e8365f6e81d05eed35c7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a723cf95e873e8365f6e81d05eed35c7d">&#9670;&nbsp;</a></span>set_view()</h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab47c3880acf7862d132ac5b32fc12006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab47c3880acf7862d132ac5b32fc12006">&#9670;&nbsp;</a></span>_col</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -973,30 +1088,20 @@ name_ must be a key within the _uniforms map. </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void arc::gui::Shader::set_view </td>
-          <td>(</td>
-          <td class="paramtype">const glm::mat4 &amp;&#160;</td>
-          <td class="paramname"><em>view_mat_</em></td><td>)</td>
-          <td></td>
+          <td class="memname">const GLint arc::gui::Shader::_col</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set the value for the view matrix handle.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">view_mat_</td><td>Value to set the view matrix handle to. </td></tr>
-  </table>
-  </dd>
-</dl>
+
+<p>Colour uniform handle. </p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
 <a id="a5de0c33ff93b27ccc9b8387ab3c78df9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5de0c33ff93b27ccc9b8387ab3c78df9">&#9670;&nbsp;</a></span>_handle</h2>
 
@@ -1118,12 +1223,12 @@ name_ must be a key within the _uniforms map. </dd></dl>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/arctk/gui/<a class="el" href="shader_8hpp_source.html">shader.hpp</a></li>
+<li>include/arctk/gui/<a class="el" href="gui_2shader_8hpp_source.html">shader.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 2 2018 12:33:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Aug 5 2018 02:42:17 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

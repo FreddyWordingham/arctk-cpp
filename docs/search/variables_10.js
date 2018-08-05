@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['value',['value',['../structarc_1_1utl_1_1type_1_1is__vector.html#ae299cb38f285a02c6b06d52eeaf62eab',1,'arc::utl::type::is_vector::value()'],['../structarc_1_1utl_1_1type_1_1is__vector_3_01std_1_1vector_3_01_t_01_4_01_4.html#a4a92e59967b64531f8b3a3c4dbae6f21',1,'arc::utl::type::is_vector&lt; std::vector&lt; T &gt; &gt;::value()']]],
-  ['vec_5fend',['VEC_END',['../namespacearc_1_1settings_1_1format.html#a4bd8f17cba27dc4b32bdf24443f6fc6e',1,'arc::settings::format']]],
-  ['vec_5fstart',['VEC_START',['../namespacearc_1_1settings_1_1format.html#a7045280d11659dd83b4928737b2366ac',1,'arc::settings::format']]],
-  ['version_5fmajor',['VERSION_MAJOR',['../namespacearc_1_1config.html#a2d17637229eb1a5c1cd130d0945a5308',1,'arc::config']]],
-  ['version_5fminor',['VERSION_MINOR',['../namespacearc_1_1config.html#ad647132a40a28b2241f0406b168c1874',1,'arc::config']]],
-  ['version_5fpatch',['VERSION_PATCH',['../namespacearc_1_1config.html#afc8283f15f7b5502fe48b6616a5d1207',1,'arc::config']]]
+  ['theta',['theta',['../classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#a357fe02d643ac29446ed8b546ca2a9b4',1,'arc::math::Vec&lt; T, 2 &gt;::theta()'],['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#a88061d3cd409f42814718c7d255eb293',1,'arc::math::Vec&lt; T, 3 &gt;::theta()']]],
+  ['tuple_5fend',['TUPLE_END',['../namespacearc_1_1settings_1_1format.html#a66a62b909b637e4cb02d616434184a77',1,'arc::settings::format']]],
+  ['tuple_5fstart',['TUPLE_START',['../namespacearc_1_1settings_1_1format.html#ad8182e0787aab735cc91a2e3b2a13b44',1,'arc::settings::format']]],
+  ['type',['TYPE',['../namespacearc_1_1config.html#ad6eeea3db680c98dc954b7951924fb0b',1,'arc::config']]]
 ];

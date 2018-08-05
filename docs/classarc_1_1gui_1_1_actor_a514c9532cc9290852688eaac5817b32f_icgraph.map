@@ -1,3 +1,6 @@
 <map id="arc::gui::Actor::update_model" name="arc::gui::Actor::update_model">
-<area shape="rect" id="node2" href="$classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="205,12,347,37"/>
+<area shape="rect" id="node2" href="$classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="215,5,357,31"/>
+<area shape="rect" id="node3" href="$classarc_1_1gui_1_1_actor.html#afa7614a8eaf83751cf0b879934bf8388" title="arc::gui::Actor::translate" alt="" coords="205,55,367,80"/>
+<area shape="rect" id="node4" href="$classarc_1_1gui_1_1_actor.html#ae1bc2cdd561344c3568a41d920653308" title="arc::gui::Actor::rotate" alt="" coords="214,104,359,129"/>
+<area shape="rect" id="node5" href="$classarc_1_1gui_1_1_actor.html#a99572fd0c56545b8512549e3b2d29a94" title="arc::gui::Actor::scale" alt="" coords="215,153,357,179"/>
 </map>

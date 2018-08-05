@@ -1,0 +1,35 @@
+<map id="include/arctk/gui/camera/orbit.hpp" name="include/arctk/gui/camera/orbit.hpp">
+<area shape="rect" id="node4" href="$camera_8hpp.html" title="arctk/gui/camera.hpp" alt="" coords="911,92,1057,117"/>
+<area shape="rect" id="node6" href="$math_8hpp.html" title="arctk/math.hpp" alt="" coords="1609,92,1719,117"/>
+<area shape="rect" id="node7" href="$compare_8hpp.html" title="arctk/math/compare.hpp" alt="" coords="2843,165,3008,191"/>
+<area shape="rect" id="node9" href="$container_8hpp.html" title="arctk/math/container.hpp" alt="" coords="496,459,664,484"/>
+<area shape="rect" id="node11" href="$math_2convert_8hpp.html" title="arctk/math/convert.hpp" alt="" coords="1131,165,1288,191"/>
+<area shape="rect" id="node15" href="$vec3_8hpp.html" title="arctk/math/vec3.hpp" alt="" coords="1139,239,1280,264"/>
+<area shape="rect" id="node32" href="$vec_8hpp.html" title="arctk/math/vec.hpp" alt="" coords="1701,312,1835,337"/>
+<area shape="rect" id="node39" href="$math_2geom_8hpp.html" title="arctk/math/geom.hpp" alt="" coords="840,239,987,264"/>
+<area shape="rect" id="node44" href="$mat_8hpp.html" title="arctk/math/mat.hpp" alt="" coords="2315,239,2450,264"/>
+<area shape="rect" id="node45" href="$mat2_8hpp.html" title="arctk/math/mat2.hpp" alt="" coords="1727,165,1870,191"/>
+<area shape="rect" id="node46" href="$vec2_8hpp.html" title="arctk/math/vec2.hpp" alt="" coords="1464,239,1605,264"/>
+<area shape="rect" id="node47" href="$mat3_8hpp.html" title="arctk/math/mat3.hpp" alt="" coords="1458,165,1601,191"/>
+<area shape="rect" id="node48" href="$mat4_8hpp.html" title="arctk/math/mat4.hpp" alt="" coords="2258,165,2401,191"/>
+<area shape="rect" id="node49" href="$vec4_8hpp.html" title="arctk/math/vec4.hpp" alt="" coords="1731,239,1872,264"/>
+<area shape="rect" id="node50" href="$pow_8hpp.html" title="arctk/math/pow.hpp" alt="" coords="2425,165,2562,191"/>
+<area shape="rect" id="node12" href="$consts_8hpp.html" title="arctk/consts.hpp" alt="" coords="234,239,353,264"/>
+<area shape="rect" id="node13" href="$consts_2math_8hpp.html" title="arctk/consts/math.hpp" alt="" coords="43,312,195,337"/>
+<area shape="rect" id="node14" href="$consts_2phys_8hpp.html" title="arctk/consts/phys.hpp" alt="" coords="218,312,368,337"/>
+<area shape="rect" id="node20" href="$debug_8hpp.html" title="arctk/debug.hpp" alt="" coords="1536,532,1653,557"/>
+<area shape="rect" id="node34" href="$settings_8hpp.html" title="arctk/settings.hpp" alt="" coords="1162,532,1288,557"/>
+<area shape="rect" id="node36" href="$str_8hpp.html" title="arctk/str.hpp" alt="" coords="2349,385,2443,411"/>
+<area shape="rect" id="node21" href="$contract_8hpp.html" title="arctk/debug/contract.hpp" alt="" coords="1861,605,2029,631"/>
+<area shape="rect" id="node23" href="$location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="1499,679,1666,704"/>
+<area shape="rect" id="node28" href="$exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="2016,679,2117,704"/>
+<area shape="rect" id="node29" href="$invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="1525,605,1696,631"/>
+<area shape="rect" id="node31" href="$macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="1720,605,1837,631"/>
+<area shape="rect" id="node35" href="$format_8hpp.html" title="arctk/settings/format.hpp" alt="" coords="1131,605,1298,631"/>
+<area shape="rect" id="node37" href="$parse_8hpp.html" title="arctk/str/parse.hpp" alt="" coords="1935,459,2067,484"/>
+<area shape="rect" id="node38" href="$printable_8hpp.html" title="arctk/str/printable.hpp" alt="" coords="2293,459,2443,484"/>
+<area shape="rect" id="node40" href="$index_8hpp.html" title="arctk/index.hpp" alt="" coords="392,312,504,337"/>
+<area shape="rect" id="node41" href="$index_2col_8hpp.html" title="arctk/index/col.hpp" alt="" coords="219,385,352,411"/>
+<area shape="rect" id="node42" href="$dim_8hpp.html" title="arctk/index/dim.hpp" alt="" coords="376,385,512,411"/>
+<area shape="rect" id="node43" href="$vertex_8hpp.html" title="arctk/index/vertex.hpp" alt="" coords="43,385,195,411"/>
+</map>

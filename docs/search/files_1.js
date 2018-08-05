@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['camera_2ehpp',['camera.hpp',['../camera_8hpp.html',1,'']]],
   ['col_2ehpp',['col.hpp',['../col_8hpp.html',1,'(Global Namespace)'],['../index_2col_8hpp.html',1,'(Global Namespace)']]],
   ['compare_2ehpp',['compare.hpp',['../compare_8hpp.html',1,'']]],
   ['config_2ehpp',['config.hpp',['../config_8hpp.html',1,'']]],
