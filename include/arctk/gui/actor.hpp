@@ -360,7 +360,67 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace gui
+        namespace actor //! actor namespace
+        {
+
+
+
+            //  == FUNCTION PROTOTYPES ==
+            //  -- Designs --
+            inline Actor grid(const glm::vec2& min_, const glm::vec2& max_, const glm::vec2& cell_size_) noexcept;
+
+
+
+            //  == FUNCTIONS ==
+            //  -- Designs --
+            inline Actor grid(const glm::vec2& min_, const glm::vec2& max_, const glm::vec2& cell_size_) noexcept
+            {
+                const int x_start = static_cast<int>(std::trunc(min_.x / cell_size_.x));
+                const int x_end   = static_cast<int>(std::trunc(max_.x / cell_size_.x));
+                const int y_start = static_cast<int>(std::trunc(min_.y / cell_size_.y));
+                const int y_end   = static_cast<int>(std::trunc(max_.y / cell_size_.y));
+
+                std::cout << "x_start: " << x_start << '\n';
+                std::cout << "x_end  : " << x_end << '\n';
+                std::cout << "y_start: " << y_start << '\n';
+                std::cout << "y_end  : " << y_end << '\n';
+
+                std::vector<GLfloat> verts(3 * 2 * ((x_end - x_start + 1) + (y_end - y_start + 1)));
+
+                size_t index = 0;
+                for (int i = x_start; i <= x_end; ++i)
+                {
+                    verts[index]     = i * cell_size_.x;
+                    verts[index + 1] = min_.y;
+                    verts[index + 2] = 0.0f;
+
+                    verts[index + 3] = i * cell_size_.x;
+                    verts[index + 4] = max_.y;
+                    verts[index + 5] = 0.0f;
+
+                    index += 6;
+                }
+
+                for (int i = y_start; i <= y_end; ++i)
+                {
+                    verts[index]     = min_.x;
+                    verts[index + 1] = i * cell_size_.y;
+                    verts[index + 2] = 0.0f;
+
+                    verts[index + 3] = max_.x;
+                    verts[index + 4] = i * cell_size_.y;
+                    verts[index + 5] = 0.0f;
+
+                    index += 6;
+                }
+
+                return (Actor(verts, {3}, GL_LINES));
+            }
+
+
+
+        } // namespace actor
+    }     // namespace gui
 } // namespace arc
 
 
