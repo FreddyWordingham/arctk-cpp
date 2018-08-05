@@ -385,7 +385,7 @@ namespace arc //! arctk namespace
                 std::cout << "y_start: " << y_start << '\n';
                 std::cout << "y_end  : " << y_end << '\n';
 
-                std::vector<GLfloat> verts(3 * 2 * ((x_end - x_start + 1) + (y_end - y_start + 1)));
+                std::vector<GLfloat> verts(3 * 2 * static_cast<size_t>((x_end - x_start + 1) + (y_end - y_start + 1)));
 
                 size_t index = 0;
                 for (int i = x_start; i <= x_end; ++i)
