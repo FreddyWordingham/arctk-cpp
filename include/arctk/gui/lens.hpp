@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
 
           protected:
             //  -- Updating --
-            virtual inline void update_view() noexcept = 0;
+            virtual inline void update_view() noexcept = 0; //!< Get the view matrix used to render the actor.   @return View matrix used to render the actor.
         };
 
 
