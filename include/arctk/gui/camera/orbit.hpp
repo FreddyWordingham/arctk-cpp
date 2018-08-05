@@ -15,6 +15,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <algorithm>
+
 //  -- Graphical --
 #include <glm/gtx/polar_coordinates.hpp>
 
