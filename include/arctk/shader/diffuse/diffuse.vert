@@ -1,5 +1,4 @@
 R""(
-
 //  == VERSION ==
 #version 330 core
 
