@@ -113,7 +113,7 @@ namespace arc //! arctk namespace
          *  Actor is rendered as the given primitive type with the given fill mode.
          *
          *  @param  verts_          Vector of vertex dimensions.
-         *  @param  layout_         Vertex layout patturn.
+         *  @param  layout_         Dimension layout patturn.
          *  @param  primitive_type_ Primitive used to render the actor.
          *  @param  fill_mode_      Fill mode used to render the actor.
          *
