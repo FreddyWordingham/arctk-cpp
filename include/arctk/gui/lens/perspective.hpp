@@ -83,6 +83,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Updating --
+            /**
+             *  Get the view matrix used to render the actor.
+             *
+             *  @return View matrix used to render the actor.
+             */
             inline void Perspective::update_view() noexcept
             {
                 _proj = glm::perspective(_fov, _aspect_ratio, PERSPECTIVE_NEAR_CULL_DIST, PERSPECTIVE_FAR_CULL_DIST);
