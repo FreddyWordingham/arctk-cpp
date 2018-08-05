@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Control --
                 inline void move(const float forward_, const float right_, const float up_) noexcept override;
-                inline void rotate(const float roll_, const float pitch_, const float yaw_) noexcept override;
+                inline void rotate(const float /*unused*/, const float /*unused*/, const float /*unused*/) noexcept override;
             };
 
 
@@ -98,12 +98,8 @@ namespace arc //! arctk namespace
 
             /**
              *  Rotate the camera's orientation.
-             *
-             *  @param  roll_   Angle to roll the camera.
-             *  @param  pitch_  Angle to pitch the camera.
-             *  @param  yaw_    Angle to yaw the camera.
              */
-            inline void Orbit::rotate(const float roll_, const float pitch_, const float yaw_) noexcept
+            inline void Orbit::rotate(const float /*unused*/, const float /*unused*/, const float /*unused*/) noexcept
             {
             }
 
