@@ -16,7 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
-#include <limits>
+#include <algorithm>
 
 //  -- Graphical --
 #include <glm/gtx/polar_coordinates.hpp>
@@ -73,27 +73,7 @@ namespace arc //! arctk namespace
             {
                 vec3f pos = math::convert::cart_to_polar(vec3f(_pos.x, _pos.y, _pos.z));
 
-                pos.rho += forward_ * _speed;
-                pos.theta += right_ * _speed;
-                pos.phi += up_ * _speed;
-
-                if (pos.rho <= 0.001f)
-                {
-                    pos.rho = 0.001f;
-                }
-
-                if (pos.theta < 0.001f)
-                {
-                    pos.theta = 0.001f;
-                }
-                else if (pos.theta > 3.140f)
-                {
-                    pos.theta = 3.140f;
-                }
-
-                std::cout << pos.str() << "\n";
-
-                pos = math::convert::polar_to_cart(pos);
+                pos = math::convert::polar_to_cart(vec3f(std::max(pos.rho + (forward_ * _speed), 0.001f), std::clamp(pos.theta + (right_ * _speed), 0.001f, 3.140f), pos.phi + (up_ * _speed)));
 
                 _pos.x = pos.x;
                 _pos.y = pos.y;
