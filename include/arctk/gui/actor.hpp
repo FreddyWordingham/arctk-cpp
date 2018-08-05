@@ -411,8 +411,24 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Designs --
+            /**
+             *  Create a grid actor over a given area with a given cell size.
+             *
+             *  @param  min_        Minimum bound of the grid.
+             *  @param  max_        Maximum bound of the grid.
+             *  @param  cell_size_  Size of the grid's cells.
+             *
+             *  @pre    min_.x must be less than max_.x.
+             *  @pre    min_.y must be less than max_.y.
+             *  @pre    cell_size_.x must be positive.
+             *  @pre    cell_size_.y must be positive.
+             *
+             *  @return Grid actor.
+             */
             inline Actor grid(const glm::vec2& min_, const glm::vec2& max_, const glm::vec2& cell_size_) noexcept
             {
+
+
                 const int x_start = static_cast<int>(std::trunc(min_.x / cell_size_.x));
                 const int x_end   = static_cast<int>(std::trunc(max_.x / cell_size_.x));
                 const int y_start = static_cast<int>(std::trunc(min_.y / cell_size_.y));
