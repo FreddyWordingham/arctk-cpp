@@ -246,6 +246,11 @@ namespace arc //! arctk namespace
             return (_col);
         }
 
+        /**
+         *  Get the model matrix used to render the actor.
+         *
+         *  @return Model matrix used to render the actor.
+         */
         inline const glm::mat4& Actor::model() const noexcept
         {
             return (_model);
