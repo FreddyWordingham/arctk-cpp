@@ -74,22 +74,24 @@ namespace arc //! arctk namespace
                 vec3f pos = math::convert::cart_to_polar(vec3f(_pos.x, _pos.y, _pos.z));
 
                 pos.rho += forward_ * _speed;
-                pos.theta += up_ * _speed;
-                pos.phi += right_ * _speed;
+                pos.theta += right_ * _speed;
+                pos.phi += up_ * _speed;
 
-                if (pos.rho <= 0.0f)
+                if (pos.rho <= 0.001f)
                 {
-                    pos.rho = std::numeric_limits<float>::min();
+                    pos.rho = 0.001f;
                 }
 
-                if (pos.theta <= -1.57f)
+                if (pos.theta < 0.001f)
                 {
-                    pos.theta = -1.57f + std::numeric_limits<float>::min();
+                    pos.theta = 0.001f;
                 }
-                else if (pos.theta >= 1.57f)
+                else if (pos.theta > 3.140f)
                 {
-                    pos.theta = 1.57f - std::numeric_limits<float>::min();
+                    pos.theta = 3.140f;
                 }
+
+                std::cout << pos.str() << "\n";
 
                 pos = math::convert::polar_to_cart(pos);
 
