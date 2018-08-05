@@ -436,7 +436,7 @@ namespace arc //! arctk namespace
              *
              *  @return Grid actor.
              */
-            inline Actor grid(const glm::vec2& min_, const glm::vec2& max_, const glm::vec2& cell_size_) noexcept
+            inline Actor grid(const glm::vec2& min_, const glm::vec2& max_, const glm::vec2& cell_size_) noexcept // NOLINT
             {
                 PRE(min_.x < max_.x);
                 PRE(min_.y < max_.y);
