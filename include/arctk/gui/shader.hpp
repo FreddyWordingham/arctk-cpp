@@ -529,6 +529,9 @@ namespace arc //! arctk namespace
             glUseProgram(_handle);
         }
 
+        /**
+         *  Render using a given lens.
+         */
         inline void Shader::render_lens(const Lens& lens_) noexcept
         {
             glUniformMatrix4fv(_proj, 1, GL_FALSE, &lens_.proj()[0][0]);
