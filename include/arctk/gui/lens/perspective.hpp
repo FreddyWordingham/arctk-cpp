@@ -70,6 +70,14 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a perspective lens with a given field-of-view and aspect ratio.
+             *
+             *  @param  fov_            Field-of-view of the lens.
+             *  @param  aspect_ratio_   Aspect ratio of the lens.
+             *
+             *  @pre    fov_ must be positive.
+             */
             inline Perspective::Perspective(const float fov_, const float aspect_ratio_) noexcept
               : _fov(fov_)
               , _aspect_ratio(aspect_ratio_)
