@@ -454,6 +454,24 @@ namespace arc //! arctk namespace
                 return (helper);
             }
 
+            inline Actor axis_helper_z(const float length_, const glm::vec3& pos_) noexcept
+            {
+                std::vector<GLfloat> verts(3 * 2);
+
+                verts[0] = pos_.x;
+                verts[1] = pos_.y;
+                verts[2] = pos_.z;
+
+                verts[3] = pos_.x;
+                verts[4] = pos_.y;
+                verts[5] = pos_.z + length_;
+
+                Actor helper(verts, {3}, GL_LINES);
+                helper.set_col(0.0f, 0.0f, 1.0f);
+
+                return (helper);
+            }
+
 
 
         } // namespace actor
