@@ -236,6 +236,11 @@ namespace arc //! arctk namespace
             return (_fill_mode);
         }
 
+        /**
+         *  Get the colour used to render the actor.
+         *
+         *  @return Colour used to render the actor.
+         */
         inline const glm::vec4& Actor::col() const noexcept
         {
             return (_col);
