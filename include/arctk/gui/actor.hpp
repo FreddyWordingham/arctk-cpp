@@ -586,6 +586,17 @@ namespace arc //! arctk namespace
                 return (helper);
             }
 
+            /**
+             *  Create a z-axis helper actor.
+             *
+             *  @param  length_ Length of the actor.
+             *  @param  width_  Width of the actor.
+             *
+             *  @pre    length_ must be positive.
+             *  @pre    width_ must be positive.
+             *
+             *  @return Z-axis helper actor.
+             */
             inline Actor axis_helper_z(const float length_, const float width_) noexcept
             {
                 PRE(length_ > 0.0f);
