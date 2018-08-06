@@ -72,6 +72,11 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Specular::Specular() noexcept
               : Shader(SPECULAR_SOURCE_VERT, SPECULAR_SOURCE_FRAG)
+              , _model(init_uniform("model"))
+              , _model(init_uniform("view"))
+              , _model(init_uniform("proj"))
+              , _model(init_uniform("col"))
+              , _model(init_uniform("cam_pos"))
             {
             }
 
