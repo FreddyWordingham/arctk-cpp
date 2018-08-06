@@ -1,3 +1,4 @@
+R""(
 //  == VERSION ==
 #version 330 core
 
@@ -30,3 +31,4 @@ void main()
 
     gl_Position = proj * view * vec4(vert_pos, 1.0);
 }
+)""
