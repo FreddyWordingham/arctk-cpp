@@ -76,10 +76,10 @@ namespace arc //! arctk namespace
             inline Specular::Specular() noexcept
               : Shader(SPECULAR_SOURCE_VERT, SPECULAR_SOURCE_FRAG)
               , _model(init_uniform("model"))
-              , _model(init_uniform("view"))
-              , _model(init_uniform("proj"))
-              , _model(init_uniform("col"))
-              , _model(init_uniform("cam_pos"))
+              , _view(init_uniform("view"))
+              , _proj(init_uniform("proj"))
+              , _col(init_uniform("col"))
+              , _cam_pos(init_uniform("cam_pos"))
             {
             }
 
