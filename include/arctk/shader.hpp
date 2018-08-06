@@ -23,6 +23,8 @@
 #include <arctk/shader/normal/frag.hpp>
 #include <arctk/shader/normal/geom.hpp>
 #include <arctk/shader/normal/vert.hpp>
+#include <arctk/shader/specular/frag.hpp>
+#include <arctk/shader/specular/vert.hpp>
 
 
 
