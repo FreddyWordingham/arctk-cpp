@@ -437,7 +437,7 @@ namespace arc //! arctk namespace
              *
              *  @return Grid actor.
              */
-            inline Actor grid(const glm::vec2& min_, const glm::vec2& max_, const glm::vec2& cell_size_) noexcept // NOLINT
+            inline Actor grid(const glm::vec2& min_, const glm::vec2& max_, const glm::vec2& cell_size_) noexcept
             {
                 PRE(min_.x < max_.x);
                 PRE(min_.y < max_.y);
@@ -449,36 +449,22 @@ namespace arc //! arctk namespace
                 const auto y_start = static_cast<int>(std::trunc(min_.y / cell_size_.y));
                 const auto y_end   = static_cast<int>(std::trunc(max_.y / cell_size_.y));
 
-                std::vector<GLfloat> verts(3 * 2 * static_cast<size_t>((x_end - x_start + 1) + (y_end - y_start + 1)));
+                std::vector<glm::vec3> verts;
+                verts.reserve(2 * static_cast<size_t>((x_end - x_start + 1) + (y_end - y_start + 1)));
 
-                size_t index = 0;
                 for (int i = x_start; i <= x_end; ++i)
                 {
-                    verts[index]     = i * cell_size_.x;
-                    verts[index + 1] = min_.y;
-                    verts[index + 2] = 0.0f;
-
-                    verts[index + 3] = i * cell_size_.x;
-                    verts[index + 4] = max_.y;
-                    verts[index + 5] = 0.0f;
-
-                    index += 6;
+                    verts.emplace_back(glm::vec3(i * cell_size_.x, min_.y, 0.0f));
+                    verts.emplace_back(glm::vec3(i * cell_size_.x, max_.y, 0.0f));
                 }
 
                 for (int i = y_start; i <= y_end; ++i)
                 {
-                    verts[index]     = min_.x;
-                    verts[index + 1] = i * cell_size_.y;
-                    verts[index + 2] = 0.0f;
-
-                    verts[index + 3] = max_.x;
-                    verts[index + 4] = i * cell_size_.y;
-                    verts[index + 5] = 0.0f;
-
-                    index += 6;
+                    verts.emplace_back(glm::vec3(min_.x, , i * cell_size_.y, 0.0f));
+                    verts.emplace_back(glm::vec3(max_.x, , i * cell_size_.y, 0.0f));
                 }
 
-                Actor grid(verts, {3}, GL_LINES);
+                Actor grid(verts, {1}, GL_LINES);
                 grid.set_col(0.25f, 0.25f, 0.25f);
 
                 return (grid);
