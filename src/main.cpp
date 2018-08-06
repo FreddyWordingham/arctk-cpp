@@ -93,6 +93,9 @@
 #include <arctk/shader/ambient/vert.hpp>
 #include <arctk/shader/diffuse/frag.hpp>
 #include <arctk/shader/diffuse/vert.hpp>
+#include <arctk/shader/normal/frag.hpp>
+#include <arctk/shader/normal/geom.hpp>
+#include <arctk/shader/normal/vert.hpp>
 #include <arctk/str.hpp>
 #include <arctk/str/parse.hpp>
 #include <arctk/str/printable.hpp>
