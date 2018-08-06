@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
         class Shader
         {
             //  == FIELDS ==
-          private:
+          protected:
             //  -- Handle --
             const GLuint _handle; //!< Handle of the shader.
 
