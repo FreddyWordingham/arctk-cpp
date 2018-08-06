@@ -32,8 +32,8 @@ namespace arc //! arctk namespace
 
 
 
-                //  == SETTINGS ==
-                //  -- Light Properties --
+                //  == LINKING ==
+                //  -- Uniforms --
                 uniform float light_pow   = 10.0;
                 uniform float ambient_pow = 0.1;
                 uniform vec3  sun_pos     = vec3(6.0, 8.0, 10.0);
