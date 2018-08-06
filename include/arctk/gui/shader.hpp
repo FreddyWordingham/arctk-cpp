@@ -55,6 +55,8 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Shader(const std::string& vert_code_, const std::string& frag_code_) noexcept;
             inline Shader(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) noexcept;
+            inline Shader(const Shader&) = default; //!< Defaulted copy constructor.
+            inline Shader(Shader&&)      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
             virtual inline ~Shader() noexcept = 0;
