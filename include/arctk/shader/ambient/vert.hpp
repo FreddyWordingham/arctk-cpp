@@ -36,7 +36,6 @@ namespace arc //! arctk namespace
                 //  -- Layout --
                 layout(location = 0) in vec3 pos;
 
-
                 //  -- Uniforms --
                 uniform mat4 model;
                 uniform mat4 view;
