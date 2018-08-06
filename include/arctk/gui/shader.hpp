@@ -17,9 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <iostream>
-#include <map>
 #include <string>
-#include <vector>
 
 //  -- Graphical --
 #include <GL/glew.h>
@@ -51,102 +49,23 @@ namespace arc //! arctk namespace
             //  -- Handle --
             const GLuint _handle; //!< Handle of the shader.
 
-            //  -- Uniforms Handles --
-            const GLint                        _model;    //!< Model matrix uniform handle.
-            const GLint                        _view;     //!< View matrix uniform handle.
-            const GLint                        _proj;     //!< Projection matrix uniform handle.
-            const GLint                        _col;      //!< Colour uniform handle.
-            const std::map<std::string, GLint> _uniforms; //!< Additional uniform mappings.
-
 
             //  == INSTANTIATION ==
           public:
-            //  -- Constructors --
-            inline Shader(const std::string& vert_code_, const std::string& frag_code_, const std::vector<std::string>& uniform_names_ = {}) noexcept;
-            inline Shader(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_, const std::vector<std::string>& uniform_names_ = {}) noexcept;
-
             //  -- Initialisation --
-            inline GLuint                       init_handle(const std::string& vert_code_, const std::string& frag_code_) const noexcept;
-            inline GLuint                       init_handle(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) const noexcept;
-            inline GLuint                       init_sub_shader(const std::string& code_, GLenum type_) const noexcept;
-            inline GLint                        init_uniform(const std::string& name_) const noexcept;
-            inline std::map<std::string, GLint> init_uniforms(const std::vector<std::string>& uniform_names_) const noexcept;
+            inline GLuint init_handle(const std::string& vert_code_, const std::string& frag_code_) const noexcept;
+            inline GLuint init_handle(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) const noexcept;
+            inline GLuint init_sub_shader(const std::string& code_, GLenum type_) const noexcept;
+            inline GLint  init_uniform(const std::string& name_) const noexcept;
 
 
             //  == METHODS ==
           public:
-            //  -- Getters --
-            inline bool has_uniform(const std::string& name_) const noexcept;
-
-            //  -- Setters --
-            inline void set_uniform(const std::string& name_, int val_) noexcept;
-            inline void set_uniform(const std::string& name_, float val_) noexcept;
-            inline void set_uniform(const std::string& name_, const glm::vec2& val_) noexcept;
-            inline void set_uniform(const std::string& name_, const glm::vec3& val_) noexcept;
-            inline void set_uniform(const std::string& name_, const glm::vec4& val_) noexcept;
-            inline void set_uniform(const std::string& name_, const glm::mat2& val_) noexcept;
-            inline void set_uniform(const std::string& name_, const glm::mat3& val_) noexcept;
-            inline void set_uniform(const std::string& name_, const glm::mat4& val_) noexcept;
-
-            //  -- Rendering --
-            inline void activate() noexcept;
-            inline void render_lens(const Lens& lens_) noexcept;
-            inline void render_camera(const Camera& cam_) noexcept;
-            inline void render_actor(const Actor& act_) noexcept;
         };
 
 
 
         //  == INSTANTIATION ==
-        //  -- Constructors --
-        /**
-         *  Construct a shader program from vertex and fragment sub-shader programs.
-         *
-         *  @param  vert_code_      Vertex sub-shader code.
-         *  @param  frag_code_      Fragment sub-shader code.
-         *  @param  uniform_names_  Vector of additional uniform names.
-         *
-         *  @pre    vert_code_ must not be empty.
-         *  @pre    frag_code_ must not be empty.
-         */
-        inline Shader::Shader(const std::string& vert_code_, const std::string& frag_code_, const std::vector<std::string>& uniform_names_) noexcept
-          : _handle(init_handle(vert_code_, frag_code_))
-          , _model(init_uniform("model"))
-          , _view(init_uniform("view"))
-          , _proj(init_uniform("proj"))
-          , _col(init_uniform("col"))
-          , _uniforms(init_uniforms(uniform_names_))
-        {
-            PRE(!vert_code_.empty());
-            PRE(!frag_code_.empty());
-        }
-
-        /**
-         *  Construct a shader program from vertex, geometry and fragment sub-shader programs.
-         *
-         *  @param  vert_code_      Vertex sub-shader code.
-         *  @param  geom_code_      Geometry sub-shader code.
-         *  @param  frag_code_      Fragment sub-shader code.
-         *  @param  uniform_names_  Vector of additional uniform names.
-         *
-         *  @pre    vert_code_ must not be empty.
-         *  @pre    geom_code_ must not be empty.
-         *  @pre    frag_code_ must not be empty.
-         */
-        inline Shader::Shader(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_, const std::vector<std::string>& uniform_names_) noexcept
-          : _handle(init_handle(vert_code_, geom_code_, frag_code_))
-          , _model(init_uniform("model"))
-          , _view(init_uniform("view"))
-          , _proj(init_uniform("proj"))
-          , _col(init_uniform("col"))
-          , _uniforms(init_uniforms(uniform_names_))
-        {
-            PRE(!vert_code_.empty());
-            PRE(!geom_code_.empty());
-            PRE(!frag_code_.empty());
-        }
-
-
         //  -- Initialisation --
         /**
          *  Initialise a shader program consisting of a vertex and a fragment subshaders.
@@ -314,256 +233,6 @@ namespace arc //! arctk namespace
             }
 
             return (handle);
-        }
-
-        /**
-         *  Initialise the map of handles to a list of uniforms within the shader.
-         *
-         *  @param  uniform_names_  Vector of uniform names.
-         *
-         *  @pre    uniform_names_ may not be empty.
-         *  @pre    uniform_names_ may not be "model".
-         *  @pre    uniform_names_ may not be "view".
-         *  @pre    uniform_names_ may not be "proj".
-         *
-         *  @return Initialised map of uniform names.
-         */
-        inline std::map<std::string, GLint> Shader::init_uniforms(const std::vector<std::string>& uniform_names_) const noexcept
-        {
-            std::map<std::string, GLint> uniforms;
-
-            for (size_t i = 0; i < uniform_names_.size(); ++i)
-            {
-                PRE(!uniform_names_[i].empty());
-                PRE(uniform_names_[i] != "model");
-                PRE(uniform_names_[i] != "view");
-                PRE(uniform_names_[i] != "proj");
-
-                if (uniforms.find(uniform_names_[i]) != uniforms.end())
-                {
-                    std::cerr << "Unable to construct gui shader.\n"
-                              << "Uniform name: `" << uniform_names_[i] << "` may only have a single handle.\n";
-
-                    std::exit(exit::error::SHADER_UNIFORM_DUPLICATE);
-                }
-
-                uniforms.emplace(std::make_pair(uniform_names_[i], init_uniform(uniform_names_[i])));
-            }
-
-            return (uniforms);
-        }
-
-
-
-        //  == METHODS ==
-        //  -- Getters --
-        /**
-         *  Determine if the shader contains a handle for a given uniform name.
-         *
-         *  @param  name_   Name to search shader for.
-         *
-         *  @pre    name_ may not be empty.
-         *
-         *  @return True if the shader handle map has an entry for the given name.
-         */
-        inline bool Shader::has_uniform(const std::string& name_) const noexcept
-        {
-            PRE(!name_.empty());
-
-            return (_uniforms.find(name_) != _uniforms.end());
-        }
-
-
-        //  -- Setters --
-        /**
-         *  Set the value for an int uniform.
-         *
-         *  @param  name_   Name of the uniform to set.
-         *  @param  val_    Value to set the uniform to.
-         *
-         *  @pre    name_ may not be empty.
-         *  @pre    name_ must be a key within the _uniforms map.
-         */
-        inline void Shader::set_uniform(const std::string& name_, const int val_) noexcept
-        {
-            PRE(!name_.empty());
-            PRE(_uniforms.find(name_) != _uniforms.end());
-
-            glUseProgram(_handle);
-            glUniform1i(_uniforms.at(name_), val_);
-        }
-
-        /**
-         *  Set the value for a float uniform.
-         *
-         *  @param  name_   Name of the uniform to set.
-         *  @param  val_    Value to set the uniform to.
-         *
-         *  @pre    name_ may not be empty.
-         *  @pre    name_ must be a key within the _uniforms map.
-         */
-        inline void Shader::set_uniform(const std::string& name_, const float val_) noexcept
-        {
-            PRE(!name_.empty());
-            PRE(_uniforms.find(name_) != _uniforms.end());
-
-            glUseProgram(_handle);
-            glUniform1f(_uniforms.at(name_), val_);
-        }
-
-        /**
-         *  Set the value for a vec2 uniform.
-         *
-         *  @param  name_   Name of the uniform to set.
-         *  @param  val_    Value to set the uniform to.
-         *
-         *  @pre    name_ may not be empty.
-         *  @pre    name_ must be a key within the _uniforms map.
-         */
-        inline void Shader::set_uniform(const std::string& name_, const glm::vec2& val_) noexcept
-        {
-            PRE(!name_.empty());
-            PRE(_uniforms.find(name_) != _uniforms.end());
-
-            glUseProgram(_handle);
-            glUniform2fv(_uniforms.at(name_), 1, &val_[0]);
-        }
-
-        /**
-         *  Set the value for a vec3 uniform.
-         *
-         *  @param  name_   Name of the uniform to set.
-         *  @param  val_    Value to set the uniform to.
-         *
-         *  @pre    name_ may not be empty.
-         *  @pre    name_ must be a key within the _uniforms map.
-         */
-        inline void Shader::set_uniform(const std::string& name_, const glm::vec3& val_) noexcept
-        {
-            PRE(!name_.empty());
-            PRE(_uniforms.find(name_) != _uniforms.end());
-
-            glUseProgram(_handle);
-            glUniform3fv(_uniforms.at(name_), 1, &val_[0]);
-        }
-
-        /**
-         *  Set the value for a vec4 uniform.
-         *
-         *  @param  name_   Name of the uniform to set.
-         *  @param  val_    Value to set the uniform to.
-         *
-         *  @pre    name_ may not be empty.
-         *  @pre    name_ must be a key within the _uniforms map.
-         */
-        inline void Shader::set_uniform(const std::string& name_, const glm::vec4& val_) noexcept
-        {
-            PRE(!name_.empty());
-            PRE(_uniforms.find(name_) != _uniforms.end());
-
-            glUseProgram(_handle);
-            glUniform4fv(_uniforms.at(name_), 1, &val_[0]);
-        }
-
-        /**
-         *  Set the value for a mat2 uniform.
-         *
-         *  @param  name_   Name of the uniform to set.
-         *  @param  val_    Value to set the uniform to.
-         *
-         *  @pre    name_ may not be empty.
-         *  @pre    name_ must be a key within the _uniforms map.
-         */
-        inline void Shader::set_uniform(const std::string& name_, const glm::mat2& val_) noexcept
-        {
-            PRE(!name_.empty());
-            PRE(_uniforms.find(name_) != _uniforms.end());
-
-            glUseProgram(_handle);
-            glUniformMatrix2fv(_uniforms.at(name_), 1, GL_FALSE, &val_[0][0]);
-        }
-
-        /**
-         *  Set the value for a mat3 uniform.
-         *
-         *  @param  name_   Name of the uniform to set.
-         *  @param  val_    Value to set the uniform to.
-         *
-         *  @pre    name_ may not be empty.
-         *  @pre    name_ must be a key within the _uniforms map.
-         */
-        inline void Shader::set_uniform(const std::string& name_, const glm::mat3& val_) noexcept
-        {
-            PRE(!name_.empty());
-            PRE(_uniforms.find(name_) != _uniforms.end());
-
-            glUseProgram(_handle);
-            glUniformMatrix3fv(_uniforms.at(name_), 1, GL_FALSE, &val_[0][0]);
-        }
-
-        /**
-         *  Set the value for a mat4 uniform.
-         *
-         *  @param  name_   Name of the uniform to set.
-         *  @param  val_    Value to set the uniform to.
-         *
-         *  @pre    name_ may not be empty.
-         *  @pre    name_ must be a key within the _uniforms map.
-         */
-        inline void Shader::set_uniform(const std::string& name_, const glm::mat4& val_) noexcept
-        {
-            PRE(!name_.empty());
-            PRE(_uniforms.find(name_) != _uniforms.end());
-
-            glUseProgram(_handle);
-            glUniformMatrix4fv(_uniforms.at(name_), 1, GL_FALSE, &val_[0][0]);
-        }
-
-
-        //  -- Rendering --
-        /**
-         *  Make the this shader the active shader.
-         */
-        inline void Shader::activate() noexcept
-        {
-            glUseProgram(_handle);
-        }
-
-        /**
-         *  Render using a given lens' projection matrix..
-         *
-         *  @param  lens_   Lens to render.
-         */
-        inline void Shader::render_lens(const Lens& lens_) noexcept
-        {
-            glUniformMatrix4fv(_proj, 1, GL_FALSE, &lens_.proj()[0][0]);
-        }
-
-        /**
-         *  Render using a given camera's view matrix.
-         *
-         *  @param  cam_    Camera to render.
-         */
-        inline void Shader::render_camera(const Camera& cam_) noexcept
-        {
-            glUniformMatrix4fv(_view, 1, GL_FALSE, &cam_.view()[0][0]);
-        }
-
-        /**
-         *  Render a given actor.
-         *
-         *  @param  act_    Actor to render.
-         */
-        inline void Shader::render_actor(const Actor& act_) noexcept
-        {
-            glPolygonMode(GL_FRONT_AND_BACK, act_.fill_mode());
-
-            glUniformMatrix4fv(_model, 1, GL_FALSE, &act_.model()[0][0]);
-            glUniform4fv(_col, 1, &act_.col()[0]);
-
-            glEnableVertexAttribArray(0);
-            glBindVertexArray(act_.vao());
-            glDrawArrays(act_.primitive_type(), 0, act_.num_vert());
         }
 
 
