@@ -62,6 +62,13 @@ namespace arc //! arctk namespace
             virtual inline ~Shader() noexcept = 0;
 
 
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Shader& operator=(const Shader&) = default; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Shader& operator=(Shader&&) = default;      //!< Defaulted move operator. @return Reference to moved object.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Initialisation --
