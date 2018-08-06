@@ -15,9 +15,6 @@
 
 
 //  == IMPORTS ==
-//  -- Std --
-#include <string>
-
 //  -- Arctk --
 #include <arctk/gui/shader.hpp>
 
