@@ -27,6 +27,25 @@ namespace arc //! arctk namespace
             //  == CONSTANTS ==
             //  -- Source --
             static const char* frag = R"(
+                //  == VERSION ==
+                #version 330 core
+
+
+
+                //  == IN/OUTPUT ==
+                //  -- Input --
+                in vec4 geom_col;
+
+                //  -- Output --
+                out vec4 frag_col;
+
+
+
+                //  == MAIN ==
+                void main()
+                {
+                    frag_col = geom_col;
+                }
             )"; //!< Normal fragment subshader source code.
 
 
