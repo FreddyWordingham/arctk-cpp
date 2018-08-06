@@ -64,6 +64,9 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Rendering --
+                inline void activate(const Lens& lens_, const Camera& cam_) noexcept override;
+                inline void render(const Actor& act_) noexcept override;
             };
 
 
@@ -83,6 +86,20 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Rendering --
+            inline void Specular::activate(const Lens& lens_, const Camera& cam_) noexcept
+            {
+                glUseProgram(_handle);
+
+                glUniformMatrix4fv(_proj, 1, GL_FALSE, &lens_.proj()[0][0]);
+
+                glUniformMatrix4fv(_view, 1, GL_FALSE, &cam_.view()[0][0]);
+                glUniform3fv(_cam_pos, 1, &cam_.pos()[0]);
+            }
+
+            inline void Specular::render(const Actor& act_) noexcept
+            {
+            }
 
 
 
