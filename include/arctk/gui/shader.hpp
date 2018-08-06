@@ -61,6 +61,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline GLuint handle() const noexcept;
         };
 
 
@@ -233,6 +235,15 @@ namespace arc //! arctk namespace
             }
 
             return (handle);
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        inline GLuint Shader::handle() const noexcept
+        {
+            return (_handle);
         }
 
 
