@@ -56,6 +56,9 @@ namespace arc //! arctk namespace
             inline Shader(const std::string& vert_code_, const std::string& frag_code_) noexcept;
             inline Shader(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) noexcept;
 
+            //  -- Destructors --
+            virtual inline ~Shader() noexcept = 0;
+
 
             //  == INSTANTIATION ==
           public:
@@ -111,6 +114,13 @@ namespace arc //! arctk namespace
             PRE(!geom_code_.empty());
             PRE(!frag_code_.empty());
         }
+
+
+        //  -- Destructors --
+        /**
+         *  Defaulted destructor method.
+         */
+        inline Shader::~Shader() noexcept = default;
 
 
 
