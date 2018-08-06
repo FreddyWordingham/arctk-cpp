@@ -460,8 +460,8 @@ namespace arc //! arctk namespace
 
                 for (int i = y_start; i <= y_end; ++i)
                 {
-                    verts.emplace_back(glm::vec3(min_.x, , i * cell_size_.y, 0.0f));
-                    verts.emplace_back(glm::vec3(max_.x, , i * cell_size_.y, 0.0f));
+                    verts.emplace_back(glm::vec3(min_.x, i * cell_size_.y, 0.0f));
+                    verts.emplace_back(glm::vec3(max_.x, i * cell_size_.y, 0.0f));
                 }
 
                 Actor grid(verts, {1}, GL_LINES);
