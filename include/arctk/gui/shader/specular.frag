@@ -1,3 +1,4 @@
+R""(
 //  == VERSION ==
 #version 330 core
 
@@ -46,3 +47,4 @@ void main()
 
     frag_col = (ambient + diffuse + specular) * col;
 }
+)""
