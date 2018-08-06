@@ -70,6 +70,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline const glm::vec3& pos() const noexcept;
             inline const glm::mat4& view() const noexcept;
 
             //  -- Control --
@@ -116,6 +117,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        inline const glm::vec3& Camera::pos() const noexcept
+        {
+            return (_pos);
+        }
+
         /**
          *  Get the view matrix of the camera.
          *
