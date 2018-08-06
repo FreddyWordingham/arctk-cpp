@@ -31,12 +31,14 @@ namespace arc //! arctk namespace
 
             //  == CLASS ==
             /**
+             *  Shader using a specular lighting source.
              */
             class Specular : public Shader
             {
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Specular() noexcept;
 
 
                 //  == METHODS ==
@@ -47,6 +49,9 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Specular::Specular() noexcept
+            {
+            }
 
 
 
