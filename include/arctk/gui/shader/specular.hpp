@@ -46,6 +46,15 @@ namespace arc //! arctk namespace
              */
             class Specular : public Shader
             {
+                //  == FIELDS ==
+              private:
+                //  -- Uniforms Handles --
+                const GLint _model; //!< Model matrix uniform handle.
+                const GLint _view;  //!< View matrix uniform handle.
+                const GLint _proj;  //!< Projection matrix uniform handle.
+                const GLint _col;   //!< Colour uniform handle.
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
