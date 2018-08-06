@@ -418,6 +418,7 @@ namespace arc //! arctk namespace
             inline Actor axis_helper_y(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor axis_helper_z(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor box(const glm::vec3& min_, const glm::vec3& max_) noexcept;
+            inline Actor cube(const glm::vec3& min_, const glm::vec3& max_) noexcept;
 
 
 
@@ -648,7 +649,7 @@ namespace arc //! arctk namespace
                 PRE(min_.z < max_.z);
 
                 std::vector<glm::vec3> verts;
-                verts.reserve(3 * 2 * 12);
+                verts.reserve(2 * 4 * 3);
 
                 verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
                 verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
@@ -687,36 +688,10 @@ namespace arc //! arctk namespace
                 PRE(min_.z < max_.z);
 
                 std::vector<glm::vec3> verts;
-                verts.reserve(3 * 2 * 12);
+                verts.reserve(3 * 2 * 6);
 
-                verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
 
-                verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
-
-                verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
-
-                return (Actor(verts, {1}, GL_LINES));
+                return (Actor(verts));
             }
 
 
