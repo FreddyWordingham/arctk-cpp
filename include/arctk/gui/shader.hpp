@@ -68,6 +68,9 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Rendering --
+            virtual inline void activate(const Lens& lens_, const Camera& cam_) noexcept = 0;
+            virtual inline void render(const Actor& act_) noexcept                       = 0;
         };
 
 
