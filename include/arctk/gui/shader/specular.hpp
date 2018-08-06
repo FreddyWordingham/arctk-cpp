@@ -49,10 +49,11 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Uniforms Handles --
-                const GLint _model; //!< Model matrix uniform handle.
-                const GLint _view;  //!< View matrix uniform handle.
-                const GLint _proj;  //!< Projection matrix uniform handle.
-                const GLint _col;   //!< Colour uniform handle.
+                const GLint _model;   //!< Model matrix uniform handle.
+                const GLint _view;    //!< View matrix uniform handle.
+                const GLint _proj;    //!< Projection matrix uniform handle.
+                const GLint _col;     //!< Colour uniform handle.
+                const GLint _cam_pos; //!< Camera position uniform handle.
 
 
                 //  == INSTANTIATION ==
