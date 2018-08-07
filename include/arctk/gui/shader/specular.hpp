@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/gui/camera/orbit.hpp
+ *  @file   arctk/gui/shader/specular.hpp
  *  @date   06/08/2018
  *  @author Freddy Wordingham
  *
