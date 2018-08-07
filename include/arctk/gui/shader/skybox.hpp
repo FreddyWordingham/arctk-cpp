@@ -59,6 +59,7 @@ namespace arc //! arctk namespace
                 //  -- Uniforms --
                 const GLint _view; //!< View matrix uniform handle.
                 const GLint _proj; //!< Projection matrix uniform handle.
+                const GLint _skybox;
 
 
                 //  == INSTANTIATION ==
@@ -81,6 +82,7 @@ namespace arc //! arctk namespace
               , _cubemap(init_cubemap(images_))
               , _view(init_uniform("view"))
               , _proj(init_uniform("proj"))
+              , _skybox(init_uniform("skybox"))
             {
             }
 
