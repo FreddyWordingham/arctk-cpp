@@ -197,6 +197,11 @@ namespace arc //! arctk namespace
                 glUniform3fv(_sun_col, 1, &sun_col_[0]);
             }
 
+            /**
+             *  Set the position of the sun illuminator object.
+             *
+             *  @param  sun_pos_    Postion of the sun illuminator.
+             */
             inline void Specular::set_sun_pos(const glm::vec3& sun_pos_) noexcept
             {
                 glUniform3fv(_sun_pos, 1, &sun_pos_[0]);
