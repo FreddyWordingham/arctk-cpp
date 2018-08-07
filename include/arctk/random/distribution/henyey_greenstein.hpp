@@ -57,6 +57,11 @@ namespace arc //! arctk namespace
                 {
                     PRE((g_ >= -1.0) && (g_ <= 1.0));
 
+                    if (math::comparse::zero(g_))
+                    {
+                        return (std::acos((rng_->gen() * 2.0) - 1.0));
+                    }
+
                     return ((1.0 + (g_ * g_) - math::pow::sq((1.0 - (g_ * g_)) / (1.0 + (g_ * rng_->gen())))) / (2.0 * g_));
                 }
 
