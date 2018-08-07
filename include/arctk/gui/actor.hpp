@@ -417,8 +417,8 @@ namespace arc //! arctk namespace
             inline Actor axis_helper_x(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor axis_helper_y(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor axis_helper_z(float length_ = 1.0f, float width_ = 0.01f) noexcept;
-            inline Actor box(const glm::vec3& min_, const glm::vec3& max_) noexcept;
-            inline Actor aabb(const glm::vec3& min_, const glm::vec3& max_) noexcept;
+            inline Actor box(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
+            inline Actor aabb(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
 
 
 
