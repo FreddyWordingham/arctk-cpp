@@ -45,6 +45,7 @@ namespace arc //! arctk namespace
             constexpr const int SHADER_COMPILATION_FAILED  = 143; //!< Shader compilation failed.
             constexpr const int SHADER_UNIFORM_NOT_FOUND   = 144; //!< Unable to find uniform within the shader.
             constexpr const int SHADER_UNIFORM_DUPLICATE   = 145; //!< Attempt was made to initialise a shader twice.
+            constexpr const int TEXTURE_LOAD_FAILED        = 146; //!< Texture could not be loaded.
 
 
 
