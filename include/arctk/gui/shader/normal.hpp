@@ -57,11 +57,11 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Uniforms Handles --
-                const GLint _model;   //!< Model matrix uniform handle.
-                const GLint _view;    //!< View matrix uniform handle.
-                const GLint _proj;    //!< Projection matrix uniform handle.
-                const GLint _end_col; //!< Normal end colour uniform handle.
-                const GLint _length;  //!< Normal length uniform handle.
+                const GLint _model;    //!< Model matrix uniform handle.
+                const GLint _view;     //!< View matrix uniform handle.
+                const GLint _proj;     //!< Projection matrix uniform handle.
+                const GLint _vert_col; //!< Vertex colour uniform handle.
+                const GLint _length;   //!< Normal length uniform handle.
 
 
                 //  == INSTANTIATION ==
@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Setters --
-                inline void set_end_col(const glm::vec4& end_col_) noexcept;
+                inline void set_vert_col(const glm::vec4& vert_col_) noexcept;
                 inline void set_length(const float length_) noexcept;
 
                 //  -- Rendering --
@@ -90,7 +90,7 @@ namespace arc //! arctk namespace
               , _model(init_uniform("model"))
               , _view(init_uniform("view"))
               , _proj(init_uniform("proj"))
-              , _end_col(init_uniform("end_col"))
+              , _vert_col(init_uniform("vert_col"))
               , _length(init_uniform("length"))
             {
             }
@@ -99,9 +99,9 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Setters --
-            inline void Normal::set_end_col(const glm::vec4& end_col_) noexcept
+            inline void Normal::set_vert_col(const glm::vec4& vert_col_) noexcept
             {
-                glUniform3fv(_end_col, 1, &end_col_[0]);
+                glUniform3fv(_vert_col, 1, &vert_col_[0]);
             }
 
             inline void Normal::set_length(const float length_) noexcept
