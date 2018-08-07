@@ -62,7 +62,10 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Skybox() noexcept;
+                inline Skybox(const std::array<std::string, 6>& images_) noexcept;
+
+                //  -- Initialisation --
+                inline GLuint init_cubemap(const std::array<std::string, 6>& images_) const noexcept;
 
 
                 //  == METHODS ==
@@ -74,10 +77,14 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Skybox::Skybox() noexcept
+            inline Skybox::Skybox(const std::array<std::string, 6>& images_) noexcept
               : Shader(SKYBOX_SOURCE_VERT, SKYBOX_SOURCE_FRAG)
+              , _cubemap(init_cubemap(images_))
             {
             }
+
+
+            //  -- Initialisation --
 
 
 
