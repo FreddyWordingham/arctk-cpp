@@ -13,7 +13,6 @@ layout(line_strip, max_vertices = 8) out;
 uniform mat4  model;
 uniform mat4  view;
 uniform mat4  proj;
-uniform vec4  col;
 uniform vec4  end_col = vec4(0.0, 0.0, 0.0, 0.0);
 uniform float length  = 0.4;
 
