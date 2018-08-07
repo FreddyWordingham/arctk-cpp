@@ -244,6 +244,12 @@ namespace arc //! arctk namespace
 
 
             //  -- Rendering --
+            /**
+             *  Setup the shader to perform as the current active shader.
+             *
+             *  @param  lens_   Lens used to perform rendering.
+             *  @param  cam_    Camera used to perform rendering.
+             */
             inline void Normal::activate(const Lens& lens_, const Camera& cam_) noexcept
             {
                 glUseProgram(_handle);
