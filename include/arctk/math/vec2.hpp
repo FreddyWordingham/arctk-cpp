@@ -119,7 +119,7 @@ namespace arc //! arctk namespace
             constexpr inline T         sum() const noexcept;
             constexpr inline T         mag() const noexcept;
             constexpr inline T         mag_sq() const noexcept;
-            constexpr inline Vec<T, 2> normal() noexcept;
+            constexpr inline Vec<T, 2> normal() const noexcept;
             constexpr inline void      normalise() noexcept;
 
             //  -- Printing --
@@ -541,7 +541,7 @@ namespace arc //! arctk namespace
          *  @return Normalised form of the vec.
          */
         template <typename T>
-        constexpr inline Vec<T, 2> Vec<T, 2>::normal() noexcept
+        constexpr inline Vec<T, 2> Vec<T, 2>::normal() const noexcept
         {
             Vec<T, 2> normal(x, y);
 
