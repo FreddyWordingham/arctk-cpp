@@ -68,6 +68,10 @@ namespace arc //! arctk namespace
              *
              *  @param  min_    Vertex position of the aabb.
              *  @param  max_    Vertex position of the aabb.
+             *
+             *  @pre    min_.x must be less than max_.x.
+             *  @pre    min_.y must be less than max_.y.
+             *  @pre    min_.z must be less than max_.z.
              */
             inline Aabb::Aabb(const vec3& min_, const vec3& max_) noexcept
               : _min(min_)
