@@ -76,6 +76,10 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Collision --
+            inline std::optional<double> Aabb::collision(const vec3& pos_, const vec3& dir_) const noexcept
+            {
+                return (std::optional<double>(1.0));
+            }
 
 
 
