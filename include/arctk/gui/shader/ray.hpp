@@ -142,6 +142,22 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            /**
+             *  Render an actor using the ray shader.
+             *
+             *  @param  act_    Actor to render.
+             */
+            inline void Ambient::render(const Actor& act_) noexcept
+            {
+                glPolygonMode(GL_FRONT_AND_BACK, act_.fill_mode());
+
+                glUniformMatrix4fv(_model, 1, GL_FALSE, &act_.model()[0][0]);
+                glUniform4fv(_col, 1, &act_.col()[0]);
+
+                glEnableVertexAttribArray(0);
+                glBindVertexArray(act_.vao());
+                glDrawArrays(act_.primitive_type(), 0, act_.num_vert());
+            }
 
 
 
