@@ -1,3 +1,4 @@
+R""(
 //  == VERSION ==
 #version 330 core
 
@@ -23,3 +24,4 @@ void main()
 {
     frag_colour = texture(skybox, texture_coor);
 }
+)""

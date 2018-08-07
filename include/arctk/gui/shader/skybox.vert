@@ -1,3 +1,4 @@
+R""(
 //  == VERSION ==
 #version 330 core
 
@@ -27,3 +28,4 @@ void main()
 
     texture_coor = pos;
 }
+)""
