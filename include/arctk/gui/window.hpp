@@ -226,7 +226,7 @@ namespace arc //! arctk namespace
             PRE((col_.g >= 0.0f) && (col_.g <= 1.0f));
             PRE((col_.b >= 0.0f) && (col_.b <= 1.0f));
 
-            glClearColor(col_.r, col_.g, col_.b, 1.0f));
+            glClearColor(col_.r, col_.g, col_.b, 1.0f);
         }
 
         /**
