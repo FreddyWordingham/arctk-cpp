@@ -239,10 +239,10 @@ namespace arc //! arctk namespace
              */
             inline void Normal::set_vert_col(const glm::vec4& vert_col_) noexcept
             {
-                PRE((vert_col_.r >= 0.0) && (vert_col_.r <= 1.0));
-                PRE((vert_col_.g >= 0.0) && (vert_col_.g <= 1.0));
-                PRE((vert_col_.b >= 0.0) && (vert_col_.b <= 1.0));
-                PRE((vert_col_.a >= 0.0) && (vert_col_.a <= 1.0));
+                PRE((vert_col_.r >= 0.0f) && (vert_col_.r <= 1.0f));
+                PRE((vert_col_.g >= 0.0f) && (vert_col_.g <= 1.0f));
+                PRE((vert_col_.b >= 0.0f) && (vert_col_.b <= 1.0f));
+                PRE((vert_col_.a >= 0.0f) && (vert_col_.a <= 1.0f));
 
                 glUniform4fv(_vert_col, 1, &vert_col_[0]);
             }
@@ -259,10 +259,10 @@ namespace arc //! arctk namespace
              */
             inline void Normal::set_face_col(const glm::vec4& face_col_) noexcept
             {
-                PRE((face_col_.r >= 0.0) && (face_col_.r <= 1.0));
-                PRE((face_col_.g >= 0.0) && (face_col_.g <= 1.0));
-                PRE((face_col_.b >= 0.0) && (face_col_.b <= 1.0));
-                PRE((face_col_.a >= 0.0) && (face_col_.a <= 1.0));
+                PRE((face_col_.r >= 0.0f) && (face_col_.r <= 1.0f));
+                PRE((face_col_.g >= 0.0f) && (face_col_.g <= 1.0f));
+                PRE((face_col_.b >= 0.0f) && (face_col_.b <= 1.0f));
+                PRE((face_col_.a >= 0.0f) && (face_col_.a <= 1.0f));
 
                 glUniform4fv(_face_col, 1, &face_col_[0]);
             }
