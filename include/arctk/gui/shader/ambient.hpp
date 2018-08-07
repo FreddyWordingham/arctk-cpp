@@ -116,8 +116,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Rendering --
-                inline void activate(const Lens& lens_, const Camera& cam_) noexcept override;
-                inline void render(const Actor& act_) noexcept override;
+                inline void activate(const Lens& lens_, const Camera& cam_) noexcept;
+                inline void render(const Actor& act_) noexcept;
             };
 
 
