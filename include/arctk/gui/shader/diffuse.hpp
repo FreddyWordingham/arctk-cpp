@@ -177,6 +177,11 @@ namespace arc //! arctk namespace
                 glUniformMatrix4fv(_view, 1, GL_FALSE, &cam_.view()[0][0]);
             }
 
+            /**
+             *  Render an actor using the ambient shader.
+             *
+             *  @param  act_    Actor to render.
+             */
             inline void Diffuse::render(const Actor& act_) noexcept
             {
                 glPolygonMode(GL_FRONT_AND_BACK, act_.fill_mode());
