@@ -77,8 +77,8 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            inline Shader& operator=(const Shader&) = default; //!< Defaulted copy operator. @return Reference to copied object.
-            inline Shader& operator=(Shader&&) = default;      //!< Defaulted move operator. @return Reference to moved object.
+            inline Shader& operator=(const Shader&) = delete; //!< Deleted copy operator. @return Reference to copied object.
+            inline Shader& operator=(Shader&&) = delete;      //!< Deleted move operator. @return Reference to moved object.
         };
 
 
