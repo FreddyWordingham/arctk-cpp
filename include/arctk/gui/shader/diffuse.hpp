@@ -178,7 +178,7 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Render an actor using the ambient shader.
+             *  Render an actor using the diffuse shader.
              *
              *  @param  act_    Actor to render.
              */
