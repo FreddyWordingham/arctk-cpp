@@ -1,7 +1,13 @@
 <map id="include/arctk/gui/camera.hpp" name="include/arctk/gui/camera.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="199,312,296,337"/>
-<area shape="rect" id="node3" href="$orbit_8hpp.html" title="include/arctk/gui/camera\l/orbit.hpp" alt="" coords="26,152,192,191"/>
-<area shape="rect" id="node4" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="176,239,319,264"/>
-<area shape="rect" id="node5" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="292,79,483,104"/>
-<area shape="rect" id="node6" href="$keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="317,159,511,184"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="744,312,841,337"/>
+<area shape="rect" id="node3" href="$orbit_8hpp.html" title="include/arctk/gui/camera\l/orbit.hpp" alt="" coords="27,152,193,191"/>
+<area shape="rect" id="node4" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="721,239,865,264"/>
+<area shape="rect" id="node5" href="$ambient_8hpp.html" title="include/arctk/gui/shader\l/ambient.hpp" alt="" coords="217,152,379,191"/>
+<area shape="rect" id="node6" href="$diffuse_8hpp.html" title="include/arctk/gui/shader\l/diffuse.hpp" alt="" coords="404,152,566,191"/>
+<area shape="rect" id="node7" href="$gui_2shader_2normal_8hpp.html" title="include/arctk/gui/shader\l/normal.hpp" alt="" coords="590,152,752,191"/>
+<area shape="rect" id="node8" href="$ray_8hpp.html" title="include/arctk/gui/shader\l/ray.hpp" alt="" coords="828,152,990,191"/>
+<area shape="rect" id="node9" href="$skybox_8hpp.html" title="include/arctk/gui/shader\l/skybox.hpp" alt="" coords="1014,152,1176,191"/>
+<area shape="rect" id="node10" href="$specular_8hpp.html" title="include/arctk/gui/shader\l/specular.hpp" alt="" coords="1201,152,1363,191"/>
+<area shape="rect" id="node11" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="1364,79,1555,104"/>
+<area shape="rect" id="node12" href="$keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="1438,159,1632,184"/>
 </map>

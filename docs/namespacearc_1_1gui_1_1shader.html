@@ -87,6 +87,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1shader_1_1_normal.html">Normal</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1shader_1_1_ray.html">Ray</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1shader_1_1_skybox.html">Skybox</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1shader_1_1_specular.html">Specular</a></td></tr>
@@ -115,6 +117,12 @@ Variables</h2></td></tr>
 <tr class="memitem:a00315c5fc61721fbcb003a13aceb4d87"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1shader.html#a00315c5fc61721fbcb003a13aceb4d87">NORMAL_SOURCE_FRAG</a></td></tr>
 <tr class="memdesc:a00315c5fc61721fbcb003a13aceb4d87"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classarc_1_1gui_1_1shader_1_1_normal.html">Normal</a> fragment subshader source code.  <a href="#a00315c5fc61721fbcb003a13aceb4d87">More...</a><br /></td></tr>
 <tr class="separator:a00315c5fc61721fbcb003a13aceb4d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5882090533831e1b6726d1c815b6a6ef"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1shader.html#a5882090533831e1b6726d1c815b6a6ef">RAY_SOURCE_VERT</a></td></tr>
+<tr class="memdesc:a5882090533831e1b6726d1c815b6a6ef"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classarc_1_1gui_1_1shader_1_1_ray.html">Ray</a> vertex subshader source code.  <a href="#a5882090533831e1b6726d1c815b6a6ef">More...</a><br /></td></tr>
+<tr class="separator:a5882090533831e1b6726d1c815b6a6ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7163dbb6c96f70708156c4abf0c2829"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1shader.html#ae7163dbb6c96f70708156c4abf0c2829">RAY_SOURCE_FRAG</a></td></tr>
+<tr class="memdesc:ae7163dbb6c96f70708156c4abf0c2829"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classarc_1_1gui_1_1shader_1_1_ray.html">Ray</a> fragment subshader source code.  <a href="#ae7163dbb6c96f70708156c4abf0c2829">More...</a><br /></td></tr>
+<tr class="separator:ae7163dbb6c96f70708156c4abf0c2829"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77524740e59b3d98e1848bc157a5f8b6"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1shader.html#a77524740e59b3d98e1848bc157a5f8b6">SKYBOX_SOURCE_VERT</a></td></tr>
 <tr class="memdesc:a77524740e59b3d98e1848bc157a5f8b6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classarc_1_1gui_1_1shader_1_1_skybox.html">Skybox</a> vertex subshader source code.  <a href="#a77524740e59b3d98e1848bc157a5f8b6">More...</a><br /></td></tr>
 <tr class="separator:a77524740e59b3d98e1848bc157a5f8b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -243,6 +251,38 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ae7163dbb6c96f70708156c4abf0c2829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7163dbb6c96f70708156c4abf0c2829">&#9670;&nbsp;</a></span>RAY_SOURCE_FRAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char* arc::gui::shader::RAY_SOURCE_FRAG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= R<span class="stringliteral">&quot;&quot;(</span></div><div class="line"><span class="stringliteral">                //  == VERSION ==</span></div><div class="line"><span class="stringliteral"></span></div><div class="line"><span class="stringliteral"></span></div><div class="line"><span class="stringliteral"></span></div><div class="line"><span class="stringliteral"></span></div><div class="line"><span class="stringliteral">                //  == IN/OUTPUT ==</span></div><div class="line"><span class="stringliteral">                //  -- Input --</span></div><div class="line"><span class="stringliteral">                in vec4 vert_col;</span></div><div class="line"><span class="stringliteral"></span></div><div class="line"><span class="stringliteral">                //  -- Output --</span></div><div class="line"><span class="stringliteral">                out vec4 frag_col;</span></div><div class="line"><span class="stringliteral"></span></div><div class="line"><span class="stringliteral"></span></div><div class="line"><span class="stringliteral"></span></div><div class="line"><span class="stringliteral">                //  == MAIN ==</span></div><div class="line"><span class="stringliteral">                void main()</span></div><div class="line"><span class="stringliteral">                {</span></div><div class="line"><span class="stringliteral">                    frag_col = vert_col;</span></div><div class="line"><span class="stringliteral">                }</span></div><div class="line"><span class="stringliteral">            )&quot;&quot;</span></div></div><!-- fragment -->
+<p><a class="el" href="classarc_1_1gui_1_1shader_1_1_ray.html">Ray</a> fragment subshader source code. </p>
+
+</div>
+</div>
+<a id="a5882090533831e1b6726d1c815b6a6ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5882090533831e1b6726d1c815b6a6ef">&#9670;&nbsp;</a></span>RAY_SOURCE_VERT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char* arc::gui::shader::RAY_SOURCE_VERT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classarc_1_1gui_1_1shader_1_1_ray.html">Ray</a> vertex subshader source code. </p>
+
+</div>
+</div>
 <a id="af67fba01243ed5d7a3bd164667b637ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af67fba01243ed5d7a3bd164667b637ab">&#9670;&nbsp;</a></span>SKYBOX_SOURCE_FRAG</h2>
 
@@ -310,7 +350,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 7 2018 14:07:50 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 7 2018 17:21:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

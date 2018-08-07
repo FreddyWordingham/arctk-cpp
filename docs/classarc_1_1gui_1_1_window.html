@@ -100,8 +100,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a122b4d717585896001b725c9907a17ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0a644efc151d52ae3e200e2ef01d3c8"><td class="memItemLeft" align="right" valign="top">GLFWwindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_window.html#ac0a644efc151d52ae3e200e2ef01d3c8">handle</a> () const noexcept</td></tr>
 <tr class="separator:ac0a644efc151d52ae3e200e2ef01d3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52da225fa29fd35114ee8ddee5f08582"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_window.html#a52da225fa29fd35114ee8ddee5f08582">set_clear_col</a> (float red_, float green_, float blue_, float alpha_) noexcept</td></tr>
-<tr class="separator:a52da225fa29fd35114ee8ddee5f08582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19c3b00edced71c7f8beb119589b27e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_window.html#a19c3b00edced71c7f8beb119589b27e2">set_clear_col</a> (const glm::vec3 &amp;col_) noexcept</td></tr>
+<tr class="separator:a19c3b00edced71c7f8beb119589b27e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39c00f2bd643d4211f40dc5f45286361"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_window.html#a39c00f2bd643d4211f40dc5f45286361">set_clear_col</a> (const glm::vec4 &amp;col_) noexcept</td></tr>
+<tr class="separator:a39c00f2bd643d4211f40dc5f45286361"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bc0c28783bdcf107bc0d03a7f8582da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_window.html#a0bc0c28783bdcf107bc0d03a7f8582da">clear_buffer</a> () const noexcept</td></tr>
 <tr class="separator:a0bc0c28783bdcf107bc0d03a7f8582da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bafc6647a4c4b37047de985d9e961f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_window.html#a8bafc6647a4c4b37047de985d9e961f2">swap_buffer</a> () const noexcept</td></tr>
@@ -466,8 +468,8 @@ aa_samples_ must be positive.</dd></dl>
 
 </div>
 </div>
-<a id="a52da225fa29fd35114ee8ddee5f08582"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52da225fa29fd35114ee8ddee5f08582">&#9670;&nbsp;</a></span>set_clear_col()</h2>
+<a id="a19c3b00edced71c7f8beb119589b27e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19c3b00edced71c7f8beb119589b27e2">&#9670;&nbsp;</a></span>set_clear_col() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -478,31 +480,47 @@ aa_samples_ must be positive.</dd></dl>
         <tr>
           <td class="memname">void arc::gui::Window::set_clear_col </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>red_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const glm::vec3 &amp;&#160;</td>
+          <td class="paramname"><em>col_</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>green_</em>, </td>
         </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the clear colour of the window. Alpha value will be set to unity.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">col_</td><td>Colour used to clear the window.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>col_.r must be between zero and unity. </dd>
+<dd>
+col_.g must be between zero and unity. </dd>
+<dd>
+col_.b must be between zero and unity. </dd></dl>
+
+</div>
+</div>
+<a id="a39c00f2bd643d4211f40dc5f45286361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39c00f2bd643d4211f40dc5f45286361">&#9670;&nbsp;</a></span>set_clear_col() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
         <tr>
-          <td class="paramkey"></td>
+          <td class="memname">void arc::gui::Window::set_clear_col </td>
+          <td>(</td>
+          <td class="paramtype">const glm::vec4 &amp;&#160;</td>
+          <td class="paramname"><em>col_</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>blue_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>alpha_</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -514,20 +532,17 @@ aa_samples_ must be positive.</dd></dl>
 <p>Set the clear colour of the window.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">red_</td><td>Redness of colour used to clear the window. </td></tr>
-    <tr><td class="paramname">green_</td><td>Greenness of colour used to clear the window. </td></tr>
-    <tr><td class="paramname">blue_</td><td>Blueness of colour used to clear the window. </td></tr>
-    <tr><td class="paramname">alpha_</td><td>Alpha of colour used to clear the window.</td></tr>
+    <tr><td class="paramname">col_</td><td>Colour used to clear the window.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>red_ must be between zero and unity. </dd>
+<dl class="section pre"><dt>Precondition</dt><dd>col_.r must be between zero and unity. </dd>
 <dd>
-green_ must be between zero and unity. </dd>
+col_.g must be between zero and unity. </dd>
 <dd>
-blue_ must be between zero and unity. </dd>
+col_.b must be between zero and unity. </dd>
 <dd>
-alpha_ must be between zero and unity. </dd></dl>
+col_.a must be between zero and unity. </dd></dl>
 
 </div>
 </div>
@@ -588,7 +603,7 @@ alpha_ must be between zero and unity. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 7 2018 14:07:50 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 7 2018 17:21:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

@@ -1,5 +1,6 @@
 <map id="arc::geom::Shape" name="arc::geom::Shape">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_plane.html" title="arc::geom::shape::Plane" alt="" coords="5,79,171,104"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_sphere.html" title="arc::geom::shape::Sphere" alt="" coords="196,79,370,104"/>
-<area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_triangle.html" title="arc::geom::shape::Triangle" alt="" coords="395,79,574,104"/>
+<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_aabb.html" title="arc::geom::shape::Aabb" alt="" coords="188,5,351,31"/>
+<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_plane.html" title="arc::geom::shape::Plane" alt="" coords="187,55,353,80"/>
+<area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_sphere.html" title="arc::geom::shape::Sphere" alt="" coords="182,104,357,129"/>
+<area shape="rect" id="node5" href="$classarc_1_1geom_1_1shape_1_1_triangle.html" title="arc::geom::shape::Triangle" alt="" coords="180,153,359,179"/>
 </map>
