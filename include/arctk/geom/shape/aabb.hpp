@@ -63,6 +63,12 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct an axis-aligned bounding box with given minimum and maximum vertex positions.
+             *
+             *  @param  min_    Vertex position of the aabb.
+             *  @param  max_    Vertex position of the aabb.
+             */
             inline Aabb::Aabb(const vec3& min_, const vec3& max_) noexcept
               : _min(min_)
               , _max(max_)
