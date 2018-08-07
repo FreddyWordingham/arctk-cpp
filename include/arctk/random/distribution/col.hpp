@@ -29,11 +29,37 @@ namespace arc //! arctk namespace
     {
         namespace distribution //! probability distribution namespace
         {
+            namespace col //! colour namespace
+            {
 
 
 
-        } // namespace distribution
-    }     // namespace random
+                //  == FUNCTION PROTOTYPES ==
+                //  -- Distribution --
+                template <typename T>
+                inline T sample(Generator* rng_) noexcept;
+
+
+
+                //  == FUNCTIONS ==
+                //  -- Distribution --
+                template <typename T>
+                inline T sample(Generator* rng_) noexcept
+                {
+                    T col;
+
+                    col.r = rng_->gen();
+                    col.g = rng_->gen();
+                    col.b = rng_->gen();
+
+                    return (col);
+                }
+
+
+
+            } // namespace col
+        }     // namespace distribution
+    }         // namespace random
 } // namespace arc
 
 
