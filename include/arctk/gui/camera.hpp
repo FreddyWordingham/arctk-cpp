@@ -117,6 +117,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the position of the camera.
+         *
+         *  @return Position of the camera.
+         */
         inline const glm::vec3& Camera::pos() const noexcept
         {
             return (_pos);
