@@ -163,6 +163,9 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a specular shader.
+             */
             inline Specular::Specular() noexcept
               : Shader(SPECULAR_SOURCE_VERT, SPECULAR_SOURCE_FRAG)
               , _model(init_uniform("model"))
