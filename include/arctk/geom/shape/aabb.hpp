@@ -43,8 +43,8 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               protected:
                 //  -- Positioning --
-                vec3 _pos; //!< Position of the plane.
-                vec3 _dir; //!< Direction of the plane.
+                vec3 _min; //!< Minimum vertex of the aabb.
+                vec3 _max; //!< Direction of the plane.
 
 
                 //  == INSTANTIATION ==
