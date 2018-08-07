@@ -61,6 +61,7 @@ namespace arc //! arctk namespace
                 const GLint _view;     //!< View matrix uniform handle.
                 const GLint _proj;     //!< Projection matrix uniform handle.
                 const GLint _vert_col; //!< Vertex colour uniform handle.
+                const GLint _face_col; //!< Face colour uniform handle.
                 const GLint _length;   //!< Normal length uniform handle.
 
 
@@ -73,6 +74,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Setters --
+                inline void set_vert_col(const glm::vec4& vert_col_) noexcept;
                 inline void set_vert_col(const glm::vec4& vert_col_) noexcept;
                 inline void set_length(const float length_) noexcept;
 
@@ -91,6 +93,7 @@ namespace arc //! arctk namespace
               , _view(init_uniform("view"))
               , _proj(init_uniform("proj"))
               , _vert_col(init_uniform("vert_col"))
+              , _face_col(init_uniform("face_col"))
               , _length(init_uniform("length"))
             {
             }
