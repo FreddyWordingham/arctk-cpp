@@ -116,10 +116,11 @@ namespace arc //! arctk namespace
             constexpr inline bool normalised(T tol_ = std::numeric_limits<T>::epsilon()) const noexcept;
 
             //  -- Mathematical --
-            constexpr inline T    sum() const noexcept;
-            constexpr inline T    mag() const noexcept;
-            constexpr inline T    mag_sq() const noexcept;
-            constexpr inline void normalise() noexcept;
+            constexpr inline T         sum() const noexcept;
+            constexpr inline T         mag() const noexcept;
+            constexpr inline T         mag_sq() const noexcept;
+            constexpr inline Vec<T, 2> normal() noexcept;
+            constexpr inline void      normalise() noexcept;
 
             //  -- Printing --
             inline std::string str() const noexcept override;
@@ -532,6 +533,21 @@ namespace arc //! arctk namespace
         constexpr inline T Vec<T, 2>::mag_sq() const noexcept
         {
             return ((x * x) + (y * y));
+        }
+
+        /**
+         *  Get the normalised form of the vec.
+         *
+         *  @return Normalised form of the vec.
+         */
+        template <typename T>
+        constexpr inline Vec<T, 2> Vec<T, 2>::normal() noexcept
+        {
+            Vec<T, 2> normal(x, y);
+
+            normal.normalise();
+
+            return (normal);
         }
 
         /**
