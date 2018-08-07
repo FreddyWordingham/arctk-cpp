@@ -131,6 +131,13 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a skybox shader using a given set of images for the background.
+             *
+             *  @param  images_ Array of images used to build the cubemap.
+             *
+             *  @pre    images_ values may not be empty.
+             */
             inline Skybox::Skybox(const std::array<std::string, 6>& images_) noexcept
               : Shader(SKYBOX_SOURCE_VERT, SKYBOX_SOURCE_FRAG)
               , _cubemap(init_cubemap(images_))
