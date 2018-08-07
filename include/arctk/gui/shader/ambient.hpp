@@ -124,6 +124,9 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a ambient lighting shader.
+             */
             inline Ambient::Ambient() noexcept
               : Shader(AMBIENT_SOURCE_VERT, AMBIENT_SOURCE_FRAG)
               , _model(init_uniform("model"))
