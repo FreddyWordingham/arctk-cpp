@@ -145,6 +145,10 @@ namespace arc //! arctk namespace
               , _proj(init_uniform("proj"))
               , _skybox(init_uniform("skybox"))
             {
+                for (size_t i = 0; i < images_.size(); ++i)
+                {
+                    PRE(!images_[i].empty());
+                }
             }
 
 
