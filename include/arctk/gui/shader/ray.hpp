@@ -125,7 +125,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
-             *  Construct a specular shader.
+             *  Construct a ray shader.
              */
             inline Ray::Ray() noexcept
               : Shader(RAY_SOURCE_VERT, RAY_SOURCE_FRAG)
