@@ -136,6 +136,7 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Rendering --
             /**
              *  Setup the shader to perform as the current active shader.
              *
