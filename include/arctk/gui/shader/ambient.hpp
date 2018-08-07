@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
-                //  -- Uniforms Handles --
+                //  -- Uniforms --
                 const GLint _model; //!< Model matrix uniform handle.
                 const GLint _view;  //!< View matrix uniform handle.
                 const GLint _proj;  //!< Projection matrix uniform handle.
