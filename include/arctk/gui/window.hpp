@@ -222,11 +222,11 @@ namespace arc //! arctk namespace
         inline void Window::set_clear_col(const glm::vec4& col_) noexcept
         {
             PRE((col_.r >= 0.0f) && (col_.r <= 1.0f));
-            PRE((col_.g_ >= 0.0f) && (col_.g_ <= 1.0f));
-            PRE((col_.b_ >= 0.0f) && (col_.b_ <= 1.0f));
-            PRE((col_.a_ >= 0.0f) && (col_.a_ <= 1.0f));
+            PRE((col_.g >= 0.0f) && (col_.g <= 1.0f));
+            PRE((col_.b >= 0.0f) && (col_.b <= 1.0f));
+            PRE((col_.a >= 0.0f) && (col_.a <= 1.0f));
 
-            glClearColor(red_, green_, blue_, alpha_);
+            glClearColor(col_.r, col_.g, col_.b, col_.a);
         }
 
 
