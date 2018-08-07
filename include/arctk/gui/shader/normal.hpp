@@ -20,6 +20,9 @@
 #include <GLFW/glfw3.h>
 
 //  -- Arctk --
+#include <arctk/gui/actor.hpp>
+#include <arctk/gui/camera.hpp>
+#include <arctk/gui/lens.hpp>
 #include <arctk/gui/shader.hpp>
 
 
