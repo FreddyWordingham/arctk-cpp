@@ -62,6 +62,7 @@ namespace arc //! arctk namespace
                 const GLint _proj;    //!< Projection matrix uniform handle.
                 const GLint _col;     //!< Colour uniform handle.
                 const GLint _end_col; //!< Normal end colour uniform handle.
+                const GLint _length;  //!< Normal length uniform handle.
 
 
                 //  == INSTANTIATION ==
@@ -88,6 +89,7 @@ namespace arc //! arctk namespace
               , _proj(init_uniform("proj"))
               , _col(init_uniform("col"))
               , _end_col(init_uniform("end_col"))
+              , _length(init_uniform("length"))
             {
             }
 
