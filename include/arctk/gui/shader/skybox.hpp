@@ -109,9 +109,9 @@ namespace arc //! arctk namespace
                 const GLuint _cubemap; //!< Cubemap forming the background of the skybox.
 
                 //  -- Uniforms --
-                const GLint _view; //!< View matrix uniform handle.
-                const GLint _proj; //!< Projection matrix uniform handle.
-                const GLint _skybox;
+                const GLint _view;   //!< View matrix uniform handle.
+                const GLint _proj;   //!< Projection matrix uniform handle.
+                const GLint _skybox; //!< Skybox cubemap uniform handle.
 
 
                 //  == INSTANTIATION ==
