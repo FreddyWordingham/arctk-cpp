@@ -149,9 +149,27 @@ namespace arc //! arctk namespace
                     EndPrimitive();
                 }
             )""; //!< Normal geometry subshader source code.
-            constexpr const char* NORMAL_SOURCE_FRAG =
-#include <arctk/gui/shader/normal.frag>
-              ; //!< Normal fragment subshader source code.
+            constexpr const char* NORMAL_SOURCE_FRAG = R""(
+                //  == VERSION ==
+                #version 330 core
+
+
+
+                //  == IN/OUTPUT ==
+                //  -- Input --
+                in vec4 geom_col;
+
+                //  -- Output --
+                out vec4 frag_col;
+
+
+
+                //  == MAIN ==
+                void main()
+                {
+                    frag_col = geom_col;
+                }
+            )""; //!< Normal fragment subshader source code.
 
 
 
