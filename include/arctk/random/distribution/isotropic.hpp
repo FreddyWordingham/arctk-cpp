@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
                 inline vec3 sample(Generator* rng_) noexcept
                 {
                     const double phi   = rng_->gen() * 2.0 * consts::math::PI;
-                    const double theta = std::acos(rng_->gen());
+                    const double theta = std::acos((rng_->gen() * 2.0) - 1.0);
 
                     return (math::convert::polar_to_cart(vec3(1.0, theta, phi)));
                 }
