@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
             //  -- Sampling --
             template <typename T>
-            inline T Col::sample(Generator* const rng_) const noexcept
+            inline T Col<T>::sample(Generator* const rng_) const noexcept
             {
                 T col;
 
