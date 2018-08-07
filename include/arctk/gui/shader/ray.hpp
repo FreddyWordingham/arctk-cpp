@@ -124,6 +124,10 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+
+
+
+            //  == METHODS ==
             /**
              *  Setup the shader to perform as the current active shader.
              *
@@ -139,9 +143,6 @@ namespace arc //! arctk namespace
                 glUniformMatrix4fv(_view, 1, GL_FALSE, &cam_.view()[0][0]);
             }
 
-
-
-            //  == METHODS ==
             /**
              *  Render an actor using the ray shader.
              *
