@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
                 //  -- Textures --
                 const GLuint _cubemap;
 
-                //  -- Uniforms Handles --
+                //  -- Uniforms --
 
 
                 //  == INSTANTIATION ==
