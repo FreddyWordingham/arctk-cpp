@@ -43,6 +43,15 @@ namespace arc //! arctk namespace
 
                 //  == FUNCTIONS ==
                 //  -- Distribution --
+                /**
+                 *  Sample a colour.
+                 *
+                 *  @tparam T   Type of colour generated.
+                 *
+                 *  @param  rng_    Random number generator.
+                 *
+                 *  @return Sampled colour.
+                 */
                 template <typename T>
                 inline T sample(Generator* rng_) noexcept
                 {
