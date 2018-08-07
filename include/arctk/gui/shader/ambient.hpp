@@ -36,10 +36,10 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Shader Source Code --
-            static const char* AMBIENT_SOURCE_VERT =
+            constexpr const char* AMBIENT_SOURCE_VERT =
 #include <arctk/gui/shader/ambient.vert>
               ; //!< Ambient vertex subshader source code.
-            static const char* AMBIENT_SOURCE_FRAG =
+            constexpr const char* AMBIENT_SOURCE_FRAG =
 #include <arctk/gui/shader/ambient.frag>
               ; //!< Ambient fragment subshader source code.
 
