@@ -124,6 +124,20 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Setup the shader to perform as the current active shader.
+             *
+             *  @param  lens_   Lens used to perform rendering.
+             *  @param  cam_    Camera used to perform rendering.
+             */
+            inline void Ray::activate(const Lens& lens_, const Camera& cam_) noexcept
+            {
+                glUseProgram(_handle);
+
+                glUniformMatrix4fv(_proj, 1, GL_FALSE, &lens_.proj()[0][0]);
+
+                glUniformMatrix4fv(_view, 1, GL_FALSE, &cam_.view()[0][0]);
+            }
 
 
 
