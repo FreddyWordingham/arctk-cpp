@@ -64,9 +64,6 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline Skybox(const std::array<std::string, 6>& images_) noexcept;
 
-                //  -- Initialisation --
-                inline GLuint init_cubemap(const std::array<std::string, 6>& images_) const noexcept;
-
 
                 //  == METHODS ==
               public:

@@ -70,12 +70,15 @@ namespace arc //! arctk namespace
 
 
             //  == INSTANTIATION ==
-          public:
+          protected:
             //  -- Initialisation --
             inline GLuint init_handle(const std::string& vert_code_, const std::string& frag_code_) const noexcept;
             inline GLuint init_handle(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) const noexcept;
             inline GLuint init_sub_shader(const std::string& code_, GLenum type_) const noexcept;
             inline GLint  init_uniform(const std::string& name_) const noexcept;
+
+            //  -- Initialisation --
+            inline GLuint init_cubemap(const std::array<std::string, 6>& images_) const noexcept;
 
 
             //  == METHODS ==
