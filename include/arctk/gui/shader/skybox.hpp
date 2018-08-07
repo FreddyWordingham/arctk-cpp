@@ -92,9 +92,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Rendering --
-            inline void Skybox::activate(const Lens& /*unused*/, const Camera& cam_) noexcept
+            inline void Skybox::activate(const Lens& lens_, const Camera& cam_) noexcept
             {
                 glUseProgram(_handle);
+
+                glUniformMatrix4fv(_proj, 1, GL_FALSE, &lens_.proj()[0][0]);
 
                 glm::mat4 view = glm::mat4(glm::mat3(cam_.view()));
                 glUniformMatrix4fv(_view, 1, GL_FALSE, &view[0][0]);
