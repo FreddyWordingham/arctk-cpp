@@ -36,10 +36,10 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Shader Source Code --
-            static const char* DIFFUSE_SOURCE_VERT =
+            constexpr const char* DIFFUSE_SOURCE_VERT =
 #include <arctk/gui/shader/diffuse.vert>
               ; //!< Diffuse vertex subshader source code.
-            static const char* DIFFUSE_SOURCE_FRAG =
+            constexpr const char* DIFFUSE_SOURCE_FRAG =
 #include <arctk/gui/shader/diffuse.frag>
               ; //!< Diffuse fragment subshader source code.
 
