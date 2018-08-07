@@ -73,6 +73,10 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Setters --
+                inline void set_end_col(const glm::vec4& end_col_) noexcept;
+                inline void set_length(const float length_) noexcept;
+
                 //  -- Rendering --
                 inline void activate(const Lens& lens_, const Camera& cam_) noexcept override;
                 inline void render(const Actor& act_) noexcept override;
@@ -96,6 +100,17 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Setters --
+            inline void Normal::set_end_col(const glm::vec4& end_col_) noexcept
+            {
+                glUniform3fv(_end_col, 1, &end_col_[0]);
+            }
+
+            inline void Normal::set_length(const float length_) noexcept
+            {
+            }
+
+
             //  -- Rendering --
 
 
