@@ -1,6 +1,6 @@
 /**
  *  @file   arctk/gui/shader/ambient.hpp
- *  @date   06/08/2018
+ *  @date   07/08/2018
  *  @author Freddy Wordingham
  *
  *  Ambient lighting shader class.
