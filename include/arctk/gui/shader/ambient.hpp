@@ -75,6 +75,10 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Ambient::Ambient() noexcept
               : Shader(AMBIENT_SOURCE_VERT, AMBIENT_SOURCE_FRAG)
+              , _model(init_uniform("model"))
+              , _view(init_uniform("view"))
+              , _proj(init_uniform("proj"))
+              , _col(init_uniform("col"))
             {
             }
 
