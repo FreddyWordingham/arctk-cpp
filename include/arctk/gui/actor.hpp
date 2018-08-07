@@ -327,17 +327,14 @@ namespace arc //! arctk namespace
         /**
          *  Set the rendering colour of the actor.
          *
-         *  @param  red_    Redness of colour used to render the actor.
-         *  @param  green_  Greenness of colour used to render the actor.
-         *  @param  blue_   Blueness of colour used to render the actor.
-         *  @param  alpha_  Alpha of colour used to render the actor.
+         *  @param  col_    Colour used to render the actor.
          *
-         *  @pre    red_ must be between zero and unity.
-         *  @pre    green_ must be between zero and unity.
-         *  @pre    blue_ must be between zero and unity.
-         *  @pre    alpha_ must be between zero and unity.
+         *  @pre    col_.r must be between zero and unity.
+         *  @pre    col_.g must be between zero and unity.
+         *  @pre    col_.b must be between zero and unity.
+         *  @pre    col_.a must be between zero and unity.
          */
-        inline void Actor::set_col(const float red_, const float green_, const float blue_, const float alpha_) noexcept
+        inline void Actor::set_col(const glm::vec4& col_) noexcept
         {
             PRE((red_ >= 0.0f) && (red_ <= 1.0f));
             PRE((green_ >= 0.0f) && (green_ <= 1.0f));
