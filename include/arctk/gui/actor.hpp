@@ -336,12 +336,12 @@ namespace arc //! arctk namespace
          */
         inline void Actor::set_col(const glm::vec4& col_) noexcept
         {
-            PRE((red_ >= 0.0f) && (red_ <= 1.0f));
-            PRE((green_ >= 0.0f) && (green_ <= 1.0f));
-            PRE((blue_ >= 0.0f) && (blue_ <= 1.0f));
-            PRE((alpha_ >= 0.0f) && (alpha_ <= 1.0f));
+            PRE((col_.r >= 0.0f) && (col_.r <= 1.0f));
+            PRE((col_.g >= 0.0f) && (col_.g <= 1.0f));
+            PRE((col_.b >= 0.0f) && (col_.b <= 1.0f));
+            PRE((col_.a >= 0.0f) && (col_.a <= 1.0f));
 
-            _col = glm::vec4(red_, green_, blue_, alpha_);
+            _col = col_;
         }
 
         /**
