@@ -108,6 +108,7 @@ namespace arc //! arctk namespace
 
             inline void Normal::set_length(const float length_) noexcept
             {
+                glUniform1f(_length, length_);
             }
 
 
