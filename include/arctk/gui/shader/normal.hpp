@@ -36,9 +36,33 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Shader Source Code --
-            constexpr const char* NORMAL_SOURCE_VERT =
-#include <arctk/gui/shader/normal.vert>
-              ; //!< Normal vertex subshader source code.
+            constexpr const char* NORMAL_SOURCE_VERT = R""(
+                //  == VERSION ==
+                #version 330 core
+
+
+
+                //  == LINKING ==
+                //  -- Layout --
+                layout(location = 0) in vec3 pos;
+                layout(location = 1) in vec3 norm;
+
+
+
+                //  == IN/OUTPUT ==
+                //  -- Output --
+                out vec3 vert_pos;
+                out vec3 vert_norm;
+
+
+
+                //  == MAIN ==
+                void main()
+                {
+                    vert_pos  = pos;
+                    vert_norm = norm;
+                }
+            )""; //!< Normal vertex subshader source code.
             constexpr const char* NORMAL_SOURCE_GEOM =
 #include <arctk/gui/shader/normal.geom>
               ; //!< Normal geometry subshader source code.
