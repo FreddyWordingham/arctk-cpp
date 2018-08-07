@@ -227,6 +227,13 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Setters --
+            /**
+             *  Set the vertex normal colour uniform of the shader.
+             *
+             *  @param  vert_col_   Colour to draw the vertex normals.
+             *
+             *  @pre
+             */
             inline void Normal::set_vert_col(const glm::vec4& vert_col_) noexcept
             {
                 glUniform4fv(_vert_col, 1, &vert_col_[0]);
