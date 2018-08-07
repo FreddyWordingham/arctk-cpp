@@ -321,7 +321,7 @@ namespace arc //! arctk namespace
                     stbi_image_free(data);
 
                     std::cerr << "Shader cubemap initialisation failed.\n"
-                              << "Cubemap image: `" << images_[i] << "`, could not be loaded.";
+                              << "Cubemap image: `" << images_[i] << "`, could not be loaded.\n";
 
                     std::exit(exit::error::TEXTURE_LOAD_FAILED);
                 }
