@@ -67,9 +67,33 @@ namespace arc //! arctk namespace
                     texture_coor = pos;
                 }
             )""; //!< Skybox vertex subshader source code.
-            constexpr const char* SKYBOX_SOURCE_FRAG =
-#include <arctk/gui/shader/skybox.frag>
-              ; //!< Skybox fragment subshader source code.
+            constexpr const char* SKYBOX_SOURCE_FRAG = R""(
+                //  == VERSION ==
+                #version 330 core
+
+
+
+                //  == LINKING ==
+                //  -- Uniforms --
+                uniform samplerCube skybox;
+
+
+
+                //  == IN/OUTPUT ==
+                //  -- Input --
+                in vec3 texture_coor;
+
+                //  -- Output --
+                out vec4 frag_colour;
+
+
+
+                //  == MAIN ==
+                void main()
+                {
+                    frag_colour = texture(skybox, texture_coor);
+                }
+            )""; //!< Skybox fragment subshader source code.
 
 
 
