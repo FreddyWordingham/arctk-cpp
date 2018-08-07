@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
               protected:
                 //  -- Positioning --
                 vec3 _min; //!< Minimum vertex of the aabb.
-                vec3 _max; //!< Direction of the plane.
+                vec3 _max; //!< Maximum vertex of the aabb.
 
 
                 //  == INSTANTIATION ==
