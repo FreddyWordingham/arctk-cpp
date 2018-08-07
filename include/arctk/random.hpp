@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/random/distribution.hpp>
+#include <arctk/random/distribution/col.hpp>
 #include <arctk/random/distribution/constant.hpp>
 #include <arctk/random/distribution/discrete.hpp>
 #include <arctk/random/distribution/gaussian.hpp>
