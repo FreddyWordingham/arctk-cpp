@@ -642,6 +642,18 @@ namespace arc //! arctk namespace
                 return (helper);
             }
 
+            /**
+             *  Create a box actor.
+             *
+             *  @param  min_    Minimum vertex of the box.
+             *  @param  max_    Maximum vertex of the box.
+             *
+             *  @pre    min_.x must be less than max_.x.
+             *  @pre    min_.y must be less than max_.y.
+             *  @pre    min_.z must be less than max_.z.
+             *
+             *  @return Box actor.
+             */
             inline Actor box(const glm::vec3& min_, const glm::vec3& max_) noexcept
             {
                 PRE(min_.x < max_.x);
