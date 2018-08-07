@@ -14,7 +14,8 @@ uniform mat4  model;
 uniform mat4  view;
 uniform mat4  proj;
 uniform vec4  col;
-uniform float length = 0.4;
+uniform vec4  end_col = vec4(0.0, 0.0, 0.0, 0.0);
+uniform float length  = 0.4;
 
 
 
@@ -57,7 +58,7 @@ void create_normal(const mat4 mvp_, const vec3 pos_, const vec3 norm_)
 
     vec4 end    = start + vec4(norm_ * magnitude, 0.0);
     gl_Position = mvp_ * end;
-    geom_col    = vec4(0.0, 0.0, 0.0, 0.0);
+    geom_col    = end_col;
     EmitVertex();
 
     EndPrimitive();
