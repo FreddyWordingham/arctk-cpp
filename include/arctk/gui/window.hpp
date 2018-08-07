@@ -80,7 +80,7 @@ namespace arc //! arctk namespace
             inline GLFWwindow* handle() const noexcept;
 
             //  -- Setters --
-            inline void set_clear_col(float red_, float green_, float blue_, float alpha_) noexcept;
+            inline void set_clear_col(const glm::vec4& col_) noexcept;
 
             //  -- Rendering --
             inline void clear_buffer() const noexcept;
@@ -212,17 +212,14 @@ namespace arc //! arctk namespace
         /**
          *  Set the clear colour of the window.
          *
-         *  @param  red_    Redness of colour used to clear the window.
-         *  @param  green_  Greenness of colour used to clear the window.
-         *  @param  blue_   Blueness of colour used to clear the window.
-         *  @param  alpha_  Alpha of colour used to clear the window.
+         *  @param  col_    Colour used to clear the window.
          *
-         *  @pre    red_ must be between zero and unity.
-         *  @pre    green_ must be between zero and unity.
-         *  @pre    blue_ must be between zero and unity.
-         *  @pre    alpha_ must be between zero and unity.
+         *  @pre    col_.r must be between zero and unity.
+         *  @pre    col_.g must be between zero and unity.
+         *  @pre    col_.b must be between zero and unity.
+         *  @pre    col_.a must be between zero and unity.
          */
-        inline void Window::set_clear_col(const float red_, const float green_, const float blue_, const float alpha_) noexcept
+        inline void Window::set_clear_col(const glm::vec4& col_) noexcept
         {
             PRE((red_ >= 0.0f) && (red_ <= 1.0f));
             PRE((green_ >= 0.0f) && (green_ <= 1.0f));
