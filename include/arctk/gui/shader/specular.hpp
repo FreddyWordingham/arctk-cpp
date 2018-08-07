@@ -183,9 +183,17 @@ namespace arc //! arctk namespace
              *  Set the colour of the sun illuminator object.
              *
              *  @param  sun_col_    Colour to use for the sun illuminator.
+             *
+             *  @pre    sun_col_.r must be between zero and unity.
+             *  @pre    sun_col_.g must be between zero and unity.
+             *  @pre    sun_col_.b must be between zero and unity.
              */
             inline void Specular::set_sun_col(const glm::vec3& sun_col_) noexcept
             {
+                PRE((sun_col_.r >= 0.0) && (sun_col_.r <= 1.0));
+                PRE((sun_col_.g >= 0.0) && (sun_col_.g <= 1.0));
+                PRE((sun_col_.b >= 0.0) && (sun_col_.b <= 1.0));
+
                 glUniform3fv(_sun_col, 1, &sun_col_[0]);
             }
 
