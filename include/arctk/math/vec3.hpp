@@ -134,7 +134,7 @@ namespace arc //! arctk namespace
             constexpr inline T         sum() const noexcept;
             constexpr inline T         mag() const noexcept;
             constexpr inline T         mag_sq() const noexcept;
-            constexpr inline Vec<T, 3> normal() noexcept;
+            constexpr inline Vec<T, 3> normal() const noexcept;
             constexpr inline void      normalise() noexcept;
             constexpr inline void      rotate(const math::Vec<T, 3>& axis_, T ang_) noexcept;
 
@@ -615,7 +615,7 @@ namespace arc //! arctk namespace
          *  @return Normalised form of the vec.
          */
         template <typename T>
-        constexpr inline Vec<T, 3> Vec<T, 3>::normal() noexcept
+        constexpr inline Vec<T, 3> Vec<T, 3>::normal() const noexcept
         {
             Vec<T, 3> normal(x, y, z);
 
