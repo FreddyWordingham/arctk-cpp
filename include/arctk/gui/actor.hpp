@@ -94,6 +94,7 @@ namespace arc //! arctk namespace
             //  -- Setters --
             inline void set_primitive_type(GLenum primitive_type_) noexcept;
             inline void set_fill_mode(GLenum fill_mode_) noexcept;
+            inline void set_col(const glm::vec3& col_) noexcept;
             inline void set_col(const glm::vec4& col_) noexcept;
             inline void translate(const glm::vec3& trans_) noexcept;
             inline void rotate(const glm::vec3& rot_) noexcept;
@@ -322,6 +323,25 @@ namespace arc //! arctk namespace
         inline void Actor::set_fill_mode(const GLenum fill_mode_) noexcept
         {
             _fill_mode = fill_mode_;
+        }
+
+        /**
+         *  Set the rendering colour of the actor.
+         *  Alpha value will be set to unity.
+         *
+         *  @param  col_    Colour used to render the actor.
+         *
+         *  @pre    col_.r must be between zero and unity.
+         *  @pre    col_.g must be between zero and unity.
+         *  @pre    col_.b must be between zero and unity.
+         */
+        inline void Actor::set_col(const glm::vec3& col_) noexcept
+        {
+            PRE((col_.r >= 0.0f) && (col_.r <= 1.0f));
+            PRE((col_.g >= 0.0f) && (col_.g <= 1.0f));
+            PRE((col_.b >= 0.0f) && (col_.b <= 1.0f));
+
+            _col = glm::vec4(col_, 1.0f);
         }
 
         /**
