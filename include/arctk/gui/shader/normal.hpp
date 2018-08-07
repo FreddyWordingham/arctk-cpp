@@ -204,7 +204,7 @@ namespace arc //! arctk namespace
                 //  -- Setters --
                 inline void set_vert_col(const glm::vec4& vert_col_) noexcept;
                 inline void set_face_col(const glm::vec4& face_col_) noexcept;
-                inline void set_length(const float length_) noexcept;
+                inline void set_length(float length_) noexcept;
 
                 //  -- Rendering --
                 inline void activate(const Lens& lens_, const Camera& cam_) noexcept;
