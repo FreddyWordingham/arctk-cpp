@@ -483,7 +483,7 @@ namespace arc //! arctk namespace
                 }
 
                 Actor grid(verts, {1}, GL_LINES);
-                grid.set_col(0.25f, 0.25f, 0.25f);
+                grid.set_col(glm::vec3(0.25f, 0.25f, 0.25f));
 
                 return (grid);
             }
