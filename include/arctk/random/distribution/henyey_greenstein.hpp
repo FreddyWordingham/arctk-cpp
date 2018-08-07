@@ -36,13 +36,13 @@ namespace arc //! arctk namespace
 
                 //  == FUNCTION PROTOTYPES ==
                 //  -- Distribution --
-                inline double phase(Generator* rng_, double g_) noexcept;
+                inline double sample(Generator* rng_, double g_) noexcept;
 
 
 
                 //  == FUNCTIONS ==
                 //  -- Distribution --
-                inline double phase(Generator* rng_, const double g_) noexcept
+                inline double sample(Generator* rng_, const double g_) noexcept
                 {
                     return ((1.0 + (g_ * g_) - math::pow::sq((1.0 - (g_ * g_)) / (1.0 + (g_ * rng->gen())))) / (2.0 * g_));
                 }
