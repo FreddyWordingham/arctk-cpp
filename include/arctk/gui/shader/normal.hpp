@@ -213,7 +213,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
-             *  Construct a normal shader.
+             *  Construct a normal drawing shader.
              */
             inline Normal::Normal() noexcept
               : Shader(NORMAL_SOURCE_VERT, NORMAL_SOURCE_GEOM, NORMAL_SOURCE_FRAG)
