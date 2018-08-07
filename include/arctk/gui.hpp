@@ -24,6 +24,7 @@
 #include <arctk/gui/lens.hpp>
 #include <arctk/gui/lens/perspective.hpp>
 #include <arctk/gui/shader.hpp>
+#include <arctk/gui/shader/ambient.hpp>
 #include <arctk/gui/shader/specular.hpp>
 #include <arctk/gui/window.hpp>
 
