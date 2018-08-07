@@ -67,6 +67,10 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Setters --
+                inline void set_sun_col(const glm::vec3& sun_col_) noexcept;
+                inline void set_sun_pos(const glm::vec3& sun_pos_) noexcept;
+
                 //  -- Rendering --
                 inline void activate(const Lens& lens_, const Camera& cam_) noexcept override;
                 inline void render(const Actor& act_) noexcept override;
@@ -89,6 +93,17 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Setters --
+            inline void Specular::set_sun_col(const glm::vec3& sun_col_) noexcept
+            {
+                glUniform3fv(_sun_col, 1, &sun_col_[0]);
+            }
+
+            inline void Specular::set_sun_pos(const glm::vec3& sun_pos_) noexcept
+            {
+            }
+
+
             //  -- Rendering --
             inline void Specular::activate(const Lens& lens_, const Camera& cam_) noexcept
             {
