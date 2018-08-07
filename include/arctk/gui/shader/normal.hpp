@@ -247,6 +247,11 @@ namespace arc //! arctk namespace
                 glUniform4fv(_vert_col, 1, &vert_col_[0]);
             }
 
+            /**
+             *  Set the face normal colour uniform of the shader.
+             *
+             *  @param  face_col_   Colour to draw the face normals.
+             */
             inline void Normal::set_face_col(const glm::vec4& face_col_) noexcept
             {
                 glUniform4fv(_face_col, 1, &face_col_[0]);
