@@ -56,7 +56,7 @@ void create_normal(const mat4 mvp_, const vec3 pos_, const vec3 norm_)
     geom_col    = col;
     EmitVertex();
 
-    vec4 end    = start + vec4(norm_ * magnitude, 0.0);
+    vec4 end    = start + vec4(norm_ * length, 0.0);
     gl_Position = mvp_ * end;
     geom_col    = end_col;
     EmitVertex();
