@@ -57,10 +57,11 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Uniforms Handles --
-                const GLint _model; //!< Model matrix uniform handle.
-                const GLint _view;  //!< View matrix uniform handle.
-                const GLint _proj;  //!< Projection matrix uniform handle.
-                const GLint _col;   //!< Colour uniform handle.
+                const GLint _model;   //!< Model matrix uniform handle.
+                const GLint _view;    //!< View matrix uniform handle.
+                const GLint _proj;    //!< Projection matrix uniform handle.
+                const GLint _col;     //!< Colour uniform handle.
+                const GLint _end_col; //!< Normal end colour uniform handle.
 
 
                 //  == INSTANTIATION ==
@@ -86,6 +87,7 @@ namespace arc //! arctk namespace
               , _view(init_uniform("view"))
               , _proj(init_uniform("proj"))
               , _col(init_uniform("col"))
+              , _end_col(init_uniform("end_col"))
             {
             }
 
