@@ -90,6 +90,9 @@ $(function() {
 <li>_call_str
 : <a class="el" href="classarc_1_1sys_1_1_args.html#aca02746b0680ebe61a5075702569a3c2">arc::sys::Args&lt; A &gt;</a>
 </li>
+<li>_cam_pos
+: <a class="el" href="classarc_1_1gui_1_1shader_1_1_specular.html#a660597c20ba56cec19e0281eedc86f5c">arc::gui::shader::Specular</a>
+</li>
 <li>_cdfs
 : <a class="el" href="classarc_1_1random_1_1distribution_1_1_constant.html#a602b687f76f6808e4658e8e13013fb4f">arc::random::distribution::Constant&lt; T &gt;</a>
 , <a class="el" href="classarc_1_1random_1_1distribution_1_1_discrete.html#aceab0806c7f6101774d060a2e82b1ad6">arc::random::distribution::Discrete&lt; T &gt;</a>
@@ -97,10 +100,15 @@ $(function() {
 </li>
 <li>_col
 : <a class="el" href="classarc_1_1gui_1_1_actor.html#a559d11ec7e75c1c62ab30b6243e917bc">arc::gui::Actor</a>
-, <a class="el" href="classarc_1_1gui_1_1_shader.html#ab47c3880acf7862d132ac5b32fc12006">arc::gui::Shader</a>
+, <a class="el" href="classarc_1_1gui_1_1shader_1_1_ambient.html#a8def6a68de37f8178f3b96f90e0b1cea">arc::gui::shader::Ambient</a>
+, <a class="el" href="classarc_1_1gui_1_1shader_1_1_diffuse.html#a4402fed1925d87d4fd01d30b004a63a1">arc::gui::shader::Diffuse</a>
+, <a class="el" href="classarc_1_1gui_1_1shader_1_1_specular.html#aa05213df2676d142bf9a955934260448">arc::gui::shader::Specular</a>
 </li>
 <li>_counts
 : <a class="el" href="classarc_1_1data_1_1histogram_1_1_average_3_01_t_00_011_01_4.html#a6807adc793e5d79c04f2ef036f96475e">arc::data::histogram::Average&lt; T, 1 &gt;</a>
+</li>
+<li>_cubemap
+: <a class="el" href="classarc_1_1gui_1_1shader_1_1_skybox.html#a94e16b52e6853386e0d0fc62e6b1da79">arc::gui::shader::Skybox</a>
 </li>
 <li>_data
 : <a class="el" href="classarc_1_1math_1_1_mat.html#a45938c6cb757a44a7391d5c7314c25a8">arc::math::Mat&lt; T, N &gt;</a>
@@ -118,6 +126,9 @@ $(function() {
 </li>
 <li>_expr_str
 : <a class="el" href="classarc_1_1debug_1_1_invariant.html#aa549c56ca506c27144c38f1eaa38a21f">arc::debug::Invariant&lt; T &gt;</a>
+</li>
+<li>_face_col
+: <a class="el" href="classarc_1_1gui_1_1shader_1_1_normal.html#a2a86350009521553a288d3eced634ba0">arc::gui::shader::Normal</a>
 </li>
 <li>_file
 : <a class="el" href="classarc_1_1debug_1_1_invariant.html#a412ac4b36aabaf7dd773c29e8d2233a0">arc::debug::Invariant&lt; T &gt;</a>
@@ -148,6 +159,9 @@ $(function() {
 <li>_height
 : <a class="el" href="classarc_1_1data_1_1_image.html#ac00f7d7c2d91cbecb4a3efffa0767da3">arc::data::Image</a>
 </li>
+<li>_length
+: <a class="el" href="classarc_1_1gui_1_1shader_1_1_normal.html#a1c4a4e39b30add8d5acdd97ef137c54c">arc::gui::shader::Normal</a>
+</li>
 <li>_line
 : <a class="el" href="classarc_1_1debug_1_1_invariant.html#a91f189b45c4ab03c9a4d38f17edf6ad7">arc::debug::Invariant&lt; T &gt;</a>
 </li>
@@ -171,7 +185,10 @@ $(function() {
 </li>
 <li>_model
 : <a class="el" href="classarc_1_1gui_1_1_actor.html#a6ae4cb9573382ba616dd2dce41941876">arc::gui::Actor</a>
-, <a class="el" href="classarc_1_1gui_1_1_shader.html#ab5137b8156c28956fa9e4bdf2b1a713b">arc::gui::Shader</a>
+, <a class="el" href="classarc_1_1gui_1_1shader_1_1_ambient.html#ae65ad5968ebebe5388ee2984d5bb1ea2">arc::gui::shader::Ambient</a>
+, <a class="el" href="classarc_1_1gui_1_1shader_1_1_diffuse.html#a066463bf1027faf7ef4c9ac1ae1609d2">arc::gui::shader::Diffuse</a>
+, <a class="el" href="classarc_1_1gui_1_1shader_1_1_normal.html#aa058e28e7f755d6749c711c800a109d1">arc::gui::shader::Normal</a>
+, <a class="el" href="classarc_1_1gui_1_1shader_1_1_specular.html#af732062a43c4175c56230fc5df30f3da">arc::gui::shader::Specular</a>
 </li>
 <li>_next_seed
 : <a class="el" href="classarc_1_1random_1_1_generator.html#a08ef7eadad8b178e2d05cdad396056cb">arc::random::Generator</a>
@@ -206,7 +223,11 @@ $(function() {
 </li>
 <li>_proj
 : <a class="el" href="classarc_1_1gui_1_1_lens.html#a133c2569d56a58c7f8bba774efb7f95d">arc::gui::Lens</a>
-, <a class="el" href="classarc_1_1gui_1_1_shader.html#a20db438f3f273335b0786967fefc8974">arc::gui::Shader</a>
+, <a class="el" href="classarc_1_1gui_1_1shader_1_1_ambient.html#a7021430a4dd1c8f8c3e96df0db07fa72">arc::gui::shader::Ambient</a>
+, <a class="el" href="classarc_1_1gui_1_1shader_1_1_diffuse.html#a52d3dba499743eaf723311314359013b">arc::gui::shader::Diffuse</a>
+, <a class="el" href="classarc_1_1gui_1_1shader_1_1_normal.html#a70404ca407e115d805ab0c295761ae13">arc::gui::shader::Normal</a>
+, <a class="el" href="classarc_1_1gui_1_1shader_1_1_skybox.html#a105cb0c87e35effe7f0c2a267fc137de">arc::gui::shader::Skybox</a>
+, <a class="el" href="classarc_1_1gui_1_1shader_1_1_specular.html#a8a42254e9e00f5e2ffe46cca5f55938b">arc::gui::shader::Specular</a>
 </li>
 <li>_rad
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a3a4d1923b5a48105822d361f27168454">arc::geom::shape::Sphere</a>
@@ -223,6 +244,9 @@ $(function() {
 <li>_seed
 : <a class="el" href="classarc_1_1random_1_1_generator.html#afb04ebf2d18783b15e32c06bfe06249f">arc::random::Generator</a>
 </li>
+<li>_skybox
+: <a class="el" href="classarc_1_1gui_1_1shader_1_1_skybox.html#ad0a747b2ff442eb0052c9a06773187ab">arc::gui::shader::Skybox</a>
+</li>
 <li>_speed
 : <a class="el" href="classarc_1_1gui_1_1_camera.html#a5b0e3058cebbd9e510c7c863a0f1491b">arc::gui::Camera</a>
 </li>
@@ -232,14 +256,17 @@ $(function() {
 <li>_sticky
 : <a class="el" href="classarc_1_1gui_1_1_keybind.html#a707d6a9721be36598d97147815c0bf1b">arc::gui::Keybind</a>
 </li>
+<li>_sun_col
+: <a class="el" href="classarc_1_1gui_1_1shader_1_1_specular.html#a6fb636c6f5be12cf7db10405566854d7">arc::gui::shader::Specular</a>
+</li>
+<li>_sun_pos
+: <a class="el" href="classarc_1_1gui_1_1shader_1_1_specular.html#a22df5f710d01d72e58e6757ad2510577">arc::gui::shader::Specular</a>
+</li>
 <li>_trans
 : <a class="el" href="classarc_1_1gui_1_1_actor.html#a49d360223eaf9ce7a7e8635a51f0a94e">arc::gui::Actor</a>
 </li>
 <li>_u
 : <a class="el" href="classarc_1_1random_1_1generator_1_1_quality.html#aa5d0d7a356aed77e4b0e6ad8603c0416">arc::random::generator::Quality</a>
-</li>
-<li>_uniforms
-: <a class="el" href="classarc_1_1gui_1_1_shader.html#abbe1bcf618022063daec6422e21fb2d4">arc::gui::Shader</a>
 </li>
 <li>_up
 : <a class="el" href="classarc_1_1gui_1_1_camera.html#a16bbe0d82a79bd609a1202c8ba7f2c37">arc::gui::Camera</a>
@@ -261,9 +288,16 @@ $(function() {
 <li>_vbo
 : <a class="el" href="classarc_1_1gui_1_1_actor.html#a79caed29df73a65be48dcad8b6626349">arc::gui::Actor</a>
 </li>
+<li>_vert_col
+: <a class="el" href="classarc_1_1gui_1_1shader_1_1_normal.html#a9364959ad9ad65b3b93438d19794c5d8">arc::gui::shader::Normal</a>
+</li>
 <li>_view
 : <a class="el" href="classarc_1_1gui_1_1_camera.html#aef4f16f62979fd670f9111421f304340">arc::gui::Camera</a>
-, <a class="el" href="classarc_1_1gui_1_1_shader.html#a990084e3e632c361ed9d3424d7db8742">arc::gui::Shader</a>
+, <a class="el" href="classarc_1_1gui_1_1shader_1_1_ambient.html#a27e2ebab529fc767a6ff2d03b5592a8c">arc::gui::shader::Ambient</a>
+, <a class="el" href="classarc_1_1gui_1_1shader_1_1_diffuse.html#adca52a2f91a28a194b60d47b7cd3649d">arc::gui::shader::Diffuse</a>
+, <a class="el" href="classarc_1_1gui_1_1shader_1_1_normal.html#a33584d06224486eaad5434dfa5be6865">arc::gui::shader::Normal</a>
+, <a class="el" href="classarc_1_1gui_1_1shader_1_1_skybox.html#a84c3fb393f7276d1f312efb1fdb39438">arc::gui::shader::Skybox</a>
+, <a class="el" href="classarc_1_1gui_1_1shader_1_1_specular.html#ace8e41dd871bba0161b9627cecb86ff8">arc::gui::shader::Specular</a>
 </li>
 <li>_w
 : <a class="el" href="classarc_1_1random_1_1generator_1_1_quality.html#a0d9473e510d145fdaff009547a4608f7">arc::random::generator::Quality</a>
@@ -378,7 +412,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Aug 5 2018 22:39:51 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 7 2018 14:07:51 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

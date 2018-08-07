@@ -88,6 +88,10 @@ Functions</h2></td></tr>
 <tr class="separator:ab01f626a818923366521b28eeef26b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af27ba3b5ff5632c95c6bc8a9ec2b3725"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarc_1_1gui_1_1_actor.html">Actor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1actor.html#af27ba3b5ff5632c95c6bc8a9ec2b3725">axis_helper_z</a> (float length_=1.0f, float width_=0.01f) noexcept</td></tr>
 <tr class="separator:af27ba3b5ff5632c95c6bc8a9ec2b3725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fa860e3e1a3ad3cb2552c3f4c72929a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarc_1_1gui_1_1_actor.html">Actor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1actor.html#a9fa860e3e1a3ad3cb2552c3f4c72929a">box</a> (const glm::vec3 &amp;min_, const glm::vec3 &amp;max_) noexcept</td></tr>
+<tr class="separator:a9fa860e3e1a3ad3cb2552c3f4c72929a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49cf9c63d93163f8c3917dddd450e9fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarc_1_1gui_1_1_actor.html">Actor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1actor.html#a49cf9c63d93163f8c3917dddd450e9fa">cube</a> (const glm::vec3 &amp;min_, const glm::vec3 &amp;max_) noexcept</td></tr>
+<tr class="separator:a49cf9c63d93163f8c3917dddd450e9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>actor namespace </p>
@@ -266,6 +270,140 @@ width_ must be positive.</dd></dl>
 
 </div>
 </div>
+<a id="a9fa860e3e1a3ad3cb2552c3f4c72929a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fa860e3e1a3ad3cb2552c3f4c72929a">&#9670;&nbsp;</a></span>box()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classarc_1_1gui_1_1_actor.html">Actor</a> arc::gui::actor::box </td>
+          <td>(</td>
+          <td class="paramtype">const glm::vec3 &amp;&#160;</td>
+          <td class="paramname"><em>min_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;&#160;</td>
+          <td class="paramname"><em>max_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create a box actor. This is only the frame of the box.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min_</td><td>Minimum vertex of the box. </td></tr>
+    <tr><td class="paramname">max_</td><td>Maximum vertex of the box.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>min_.x must be less than max_.x. </dd>
+<dd>
+min_.y must be less than max_.y. </dd>
+<dd>
+min_.z must be less than max_.z.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Box actor. </dd></dl>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespacearc_1_1gui_1_1actor_a9fa860e3e1a3ad3cb2552c3f4c72929a_cgraph.png" border="0" usemap="#namespacearc_1_1gui_1_1actor_a9fa860e3e1a3ad3cb2552c3f4c72929a_cgraph" alt=""/></div>
+<map name="namespacearc_1_1gui_1_1actor_a9fa860e3e1a3ad3cb2552c3f4c72929a_cgraph" id="namespacearc_1_1gui_1_1actor_a9fa860e3e1a3ad3cb2552c3f4c72929a_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="184,76,326,101"/>
+<area shape="rect" id="node3" href="namespacearc_1_1math_1_1container.html#af7a7e70fec2026804d07178e063a2236" title="arc::math::container::sum" alt="" coords="374,48,546,73"/>
+<area shape="rect" id="node4" href="classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="384,97,536,136"/>
+<area shape="rect" id="node5" href="classarc_1_1gui_1_1_actor.html#a5251ce8de3e14f4b3daf9e2a7b771eee" title="arc::gui::Actor::model" alt="" coords="603,5,750,31"/>
+<area shape="rect" id="node6" href="namespacearc_1_1math_1_1mat.html#a8df70b235035d723df62e4a418ac7e94" title="arc::math::mat::translate" alt="" coords="594,55,759,80"/>
+<area shape="rect" id="node7" href="namespacearc_1_1math_1_1mat.html#acc6349295b1604d5cafa857f97469ed4" title="arc::math::mat::rotate" alt="" coords="603,104,751,129"/>
+<area shape="rect" id="node8" href="namespacearc_1_1math_1_1convert.html#a50422c57700cd263a956ee9d438d32e7" title="arc::math::convert\l::rad_to_deg" alt="" coords="613,153,741,192"/>
+<area shape="rect" id="node9" href="namespacearc_1_1math_1_1mat.html#a4aaba718d91ea015418b66dc4f7a7a48" title="arc::math::mat::scale" alt="" coords="604,216,749,241"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a49cf9c63d93163f8c3917dddd450e9fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49cf9c63d93163f8c3917dddd450e9fa">&#9670;&nbsp;</a></span>cube()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classarc_1_1gui_1_1_actor.html">Actor</a> arc::gui::actor::cube </td>
+          <td>(</td>
+          <td class="paramtype">const glm::vec3 &amp;&#160;</td>
+          <td class="paramname"><em>min_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;&#160;</td>
+          <td class="paramname"><em>max_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create a cube actor. This is a solid cube with faces.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min_</td><td>Minimum vertex of the box. </td></tr>
+    <tr><td class="paramname">max_</td><td>Maximum vertex of the box.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>min_.x must be less than max_.x. </dd>
+<dd>
+min_.y must be less than max_.y. </dd>
+<dd>
+min_.z must be less than max_.z.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>cube actor. </dd></dl>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespacearc_1_1gui_1_1actor_a49cf9c63d93163f8c3917dddd450e9fa_cgraph.png" border="0" usemap="#namespacearc_1_1gui_1_1actor_a49cf9c63d93163f8c3917dddd450e9fa_cgraph" alt=""/></div>
+<map name="namespacearc_1_1gui_1_1actor_a49cf9c63d93163f8c3917dddd450e9fa_cgraph" id="namespacearc_1_1gui_1_1actor_a49cf9c63d93163f8c3917dddd450e9fa_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="192,76,334,101"/>
+<area shape="rect" id="node3" href="namespacearc_1_1math_1_1container.html#af7a7e70fec2026804d07178e063a2236" title="arc::math::container::sum" alt="" coords="382,48,554,73"/>
+<area shape="rect" id="node4" href="classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="392,97,544,136"/>
+<area shape="rect" id="node5" href="classarc_1_1gui_1_1_actor.html#a5251ce8de3e14f4b3daf9e2a7b771eee" title="arc::gui::Actor::model" alt="" coords="611,5,758,31"/>
+<area shape="rect" id="node6" href="namespacearc_1_1math_1_1mat.html#a8df70b235035d723df62e4a418ac7e94" title="arc::math::mat::translate" alt="" coords="602,55,767,80"/>
+<area shape="rect" id="node7" href="namespacearc_1_1math_1_1mat.html#acc6349295b1604d5cafa857f97469ed4" title="arc::math::mat::rotate" alt="" coords="610,104,758,129"/>
+<area shape="rect" id="node8" href="namespacearc_1_1math_1_1convert.html#a50422c57700cd263a956ee9d438d32e7" title="arc::math::convert\l::rad_to_deg" alt="" coords="620,153,748,192"/>
+<area shape="rect" id="node9" href="namespacearc_1_1math_1_1mat.html#a4aaba718d91ea015418b66dc4f7a7a48" title="arc::math::mat::scale" alt="" coords="612,216,757,241"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a9eee676f0d3f20a50312bd63dbda6419"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9eee676f0d3f20a50312bd63dbda6419">&#9670;&nbsp;</a></span>grid()</h2>
 
@@ -322,11 +460,11 @@ cell_size_.x must be positive. </dd>
 <dd>
 cell_size_.y must be positive.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Grid actor. </dd></dl>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="namespacearc_1_1gui_1_1actor_a9eee676f0d3f20a50312bd63dbda6419_cgraph.png" border="0" usemap="#namespacearc_1_1gui_1_1actor_a9eee676f0d3f20a50312bd63dbda6419_cgraph" alt=""/></div>
 <map name="namespacearc_1_1gui_1_1actor_a9eee676f0d3f20a50312bd63dbda6419_cgraph" id="namespacearc_1_1gui_1_1actor_a9eee676f0d3f20a50312bd63dbda6419_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1gui_1_1_actor.html#a8803aa055f2e5fb82d1a298809093e8a" title="arc::gui::Actor::set_col" alt="" coords="185,5,338,31"/>
@@ -338,7 +476,7 @@ cell_size_.y must be positive.</dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Aug 5 2018 22:39:50 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 7 2018 14:07:50 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

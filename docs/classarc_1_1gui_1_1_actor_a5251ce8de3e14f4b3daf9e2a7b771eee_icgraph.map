@@ -1,7 +1,9 @@
 <map id="arc::gui::Actor::model" name="arc::gui::Actor::model">
-<area shape="rect" id="node2" href="$classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="201,73,352,112"/>
-<area shape="rect" id="node3" href="$classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="410,5,553,31"/>
-<area shape="rect" id="node4" href="$classarc_1_1gui_1_1_actor.html#afa7614a8eaf83751cf0b879934bf8388" title="arc::gui::Actor::translate" alt="" coords="400,55,563,80"/>
-<area shape="rect" id="node5" href="$classarc_1_1gui_1_1_actor.html#ae1bc2cdd561344c3568a41d920653308" title="arc::gui::Actor::rotate" alt="" coords="409,104,554,129"/>
-<area shape="rect" id="node6" href="$classarc_1_1gui_1_1_actor.html#a99572fd0c56545b8512549e3b2d29a94" title="arc::gui::Actor::scale" alt="" coords="410,153,553,179"/>
+<area shape="rect" id="node2" href="$classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="201,97,352,136"/>
+<area shape="rect" id="node3" href="$classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="410,29,553,55"/>
+<area shape="rect" id="node6" href="$classarc_1_1gui_1_1_actor.html#afa7614a8eaf83751cf0b879934bf8388" title="arc::gui::Actor::translate" alt="" coords="400,79,563,104"/>
+<area shape="rect" id="node7" href="$classarc_1_1gui_1_1_actor.html#ae1bc2cdd561344c3568a41d920653308" title="arc::gui::Actor::rotate" alt="" coords="409,128,554,153"/>
+<area shape="rect" id="node8" href="$classarc_1_1gui_1_1_actor.html#a99572fd0c56545b8512549e3b2d29a94" title="arc::gui::Actor::scale" alt="" coords="410,177,553,203"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1gui_1_1actor.html#a9fa860e3e1a3ad3cb2552c3f4c72929a" title="arc::gui::actor::box" alt="" coords="614,5,745,31"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1gui_1_1actor.html#a49cf9c63d93163f8c3917dddd450e9fa" title="arc::gui::actor::cube" alt="" coords="611,55,749,80"/>
 </map>

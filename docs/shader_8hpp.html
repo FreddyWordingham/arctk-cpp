@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>arctk: include/arctk/shader.hpp File Reference</title>
+<title>arctk: include/arctk/gui/shader.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,29 +64,42 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_246d7703b1917d529f7795c1438d7849.html">arctk</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_246d7703b1917d529f7795c1438d7849.html">arctk</a></li><li class="navelem"><a class="el" href="dir_c496be191b2836f1b35a40d3c457fa49.html">gui</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">shader.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="ambient_2frag_8hpp_source.html">arctk/shader/ambient/frag.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="ambient_2vert_8hpp_source.html">arctk/shader/ambient/vert.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="diffuse_2frag_8hpp_source.html">arctk/shader/diffuse/frag.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="diffuse_2vert_8hpp_source.html">arctk/shader/diffuse/vert.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;GL/glew.h&gt;</code><br />
+<code>#include &lt;GLFW/glfw3.h&gt;</code><br />
+<code>#include &lt;glm/glm.hpp&gt;</code><br />
+<code>#include &lt;<a class="el" href="debug_8hpp_source.html">arctk/debug.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="exit_8hpp_source.html">arctk/exit.hpp</a>&gt;</code><br />
+<code>#include &lt;arctk/lib/stb_image.h&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for shader.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="shader_8hpp__incl.png" border="0" usemap="#include_2arctk_2shader_8hpp" alt=""/></div>
-<map name="include_2arctk_2shader_8hpp" id="include_2arctk_2shader_8hpp">
-<area shape="rect" id="node2" href="ambient_2frag_8hpp.html" title="arctk/shader/ambient\l/frag.hpp" alt="" coords="5,79,151,117"/>
-<area shape="rect" id="node3" href="ambient_2vert_8hpp.html" title="arctk/shader/ambient\l/vert.hpp" alt="" coords="175,79,321,117"/>
-<area shape="rect" id="node4" href="diffuse_2frag_8hpp.html" title="arctk/shader/diffuse\l/frag.hpp" alt="" coords="344,79,482,117"/>
-<area shape="rect" id="node5" href="diffuse_2vert_8hpp.html" title="arctk/shader/diffuse\l/vert.hpp" alt="" coords="506,79,643,117"/>
+<div class="center"><img src="shader_8hpp__incl.png" border="0" usemap="#include_2arctk_2gui_2shader_8hpp" alt=""/></div>
+<map name="include_2arctk_2gui_2shader_8hpp" id="include_2arctk_2gui_2shader_8hpp">
+<area shape="rect" id="node7" href="debug_8hpp.html" title="arctk/debug.hpp" alt="" coords="417,79,534,104"/>
+<area shape="rect" id="node17" href="exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="337,225,438,251"/>
+<area shape="rect" id="node8" href="contract_8hpp.html" title="arctk/debug/contract.hpp" alt="" coords="676,152,845,177"/>
+<area shape="rect" id="node9" href="location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="564,225,731,251"/>
+<area shape="rect" id="node20" href="invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="431,152,602,177"/>
+<area shape="rect" id="node22" href="macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="239,152,356,177"/>
+<area shape="rect" id="node18" href="error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="5,299,137,324"/>
+<area shape="rect" id="node19" href="success_8hpp.html" title="arctk/exit/success.hpp" alt="" coords="162,299,314,324"/>
+<area shape="rect" id="node23" href="utility_8hpp.html" title="arctk/macro/utility.hpp" alt="" coords="163,225,313,251"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -94,21 +107,42 @@ $(function() {
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="shader_8hpp__dep__incl.png" border="0" usemap="#include_2arctk_2shader_8hppdep" alt=""/></div>
-<map name="include_2arctk_2shader_8hppdep" id="include_2arctk_2shader_8hppdep">
-<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="40,79,137,104"/>
+<div class="center"><img src="shader_8hpp__dep__incl.png" border="0" usemap="#include_2arctk_2gui_2shader_8hppdep" alt=""/></div>
+<map name="include_2arctk_2gui_2shader_8hppdep" id="include_2arctk_2gui_2shader_8hppdep">
+<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="378,239,475,264"/>
+<area shape="rect" id="node3" href="ambient_8hpp.html" title="include/arctk/gui/shader\l/ambient.hpp" alt="" coords="37,79,200,117"/>
+<area shape="rect" id="node4" href="gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="355,165,498,191"/>
+<area shape="rect" id="node5" href="diffuse_8hpp.html" title="include/arctk/gui/shader\l/diffuse.hpp" alt="" coords="224,79,386,117"/>
+<area shape="rect" id="node6" href="gui_2shader_2normal_8hpp.html" title="include/arctk/gui/shader\l/normal.hpp" alt="" coords="461,79,624,117"/>
+<area shape="rect" id="node7" href="skybox_8hpp.html" title="include/arctk/gui/shader\l/skybox.hpp" alt="" coords="648,79,810,117"/>
+<area shape="rect" id="node8" href="specular_8hpp.html" title="include/arctk/gui/shader\l/specular.hpp" alt="" coords="835,79,997,117"/>
 </map>
 </div>
 </div>
 <p><a href="shader_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_shader.html">arc::gui::Shader</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacearc"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc.html">arc</a></td></tr>
+<tr class="memdesc:namespacearc"><td class="mdescLeft">&#160;</td><td class="mdescRight">arctk namespace <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacearc_1_1gui"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui.html">arc::gui</a></td></tr>
+<tr class="memdesc:namespacearc_1_1gui"><td class="mdescLeft">&#160;</td><td class="mdescRight">graphical-user-interface namespace <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section date"><dt>Date</dt><dd>04/08/2018 </dd></dl>
+<div class="textblock"><dl class="section date"><dt>Date</dt><dd>01/08/2018 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Freddy Wordingham</dd></dl>
-<p>Collection of shaders. </p>
+<p>Shader class. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Aug 5 2018 22:39:50 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 7 2018 14:07:50 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

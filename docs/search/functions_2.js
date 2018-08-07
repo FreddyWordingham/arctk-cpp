@@ -14,5 +14,5 @@ var searchData=
   ['constant',['Constant',['../classarc_1_1random_1_1distribution_1_1_constant.html#a3e47b1aab9ebca91a79b4ab56b2388b4',1,'arc::random::distribution::Constant']]],
   ['contains',['contains',['../namespacearc_1_1utl_1_1properties.html#a7c885f6e7d32d28c656b4b6514e645f8',1,'arc::utl::properties']]],
   ['counts',['counts',['../classarc_1_1data_1_1histogram_1_1_average_3_01_t_00_011_01_4.html#a90d9106af58e493d83123dbe468156e5',1,'arc::data::histogram::Average&lt; T, 1 &gt;']]],
-  ['cube',['cube',['../namespacearc_1_1math_1_1pow.html#ab77b210403d45d56c61e61d44eccb710',1,'arc::math::pow']]]
+  ['cube',['cube',['../namespacearc_1_1gui_1_1actor.html#a49cf9c63d93163f8c3917dddd450e9fa',1,'arc::gui::actor::cube()'],['../namespacearc_1_1math_1_1pow.html#ab77b210403d45d56c61e61d44eccb710',1,'arc::math::pow::cube()']]]
 ];

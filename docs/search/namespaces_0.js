@@ -1,7 +1,6 @@
 var searchData=
 [
   ['actor',['actor',['../namespacearc_1_1gui_1_1actor.html',1,'arc::gui']]],
-  ['ambient',['ambient',['../namespacearc_1_1shader_1_1ambient.html',1,'arc::shader']]],
   ['ansi',['ansi',['../namespacearc_1_1term_1_1ansi.html',1,'arc::term']]],
   ['arc',['arc',['../namespacearc.html',1,'']]],
   ['camera',['camera',['../namespacearc_1_1gui_1_1camera.html',1,'arc::gui']]],
@@ -14,7 +13,6 @@ var searchData=
   ['convert',['convert',['../namespacearc_1_1col_1_1convert.html',1,'arc::col::convert'],['../namespacearc_1_1math_1_1convert.html',1,'arc::math::convert']]],
   ['data',['data',['../namespacearc_1_1data.html',1,'arc']]],
   ['debug',['debug',['../namespacearc_1_1debug.html',1,'arc']]],
-  ['diffuse',['diffuse',['../namespacearc_1_1shader_1_1diffuse.html',1,'arc::shader']]],
   ['dim',['dim',['../namespacearc_1_1index_1_1dim.html',1,'arc::index']]],
   ['distribution',['distribution',['../namespacearc_1_1random_1_1distribution.html',1,'arc::random']]],
   ['error',['error',['../namespacearc_1_1exit_1_1error.html',1,'arc::exit']]],
@@ -38,7 +36,7 @@ var searchData=
   ['random',['random',['../namespacearc_1_1random.html',1,'arc']]],
   ['search',['search',['../namespacearc_1_1utl_1_1search.html',1,'arc::utl']]],
   ['settings',['settings',['../namespacearc_1_1settings.html',1,'arc']]],
-  ['shader',['shader',['../namespacearc_1_1shader.html',1,'arc']]],
+  ['shader',['shader',['../namespacearc_1_1gui_1_1shader.html',1,'arc::gui']]],
   ['shape',['shape',['../namespacearc_1_1geom_1_1shape.html',1,'arc::geom']]],
   ['str',['str',['../namespacearc_1_1str.html',1,'arc']]],
   ['success',['success',['../namespacearc_1_1exit_1_1success.html',1,'arc::exit']]],

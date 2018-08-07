@@ -18,7 +18,7 @@ var searchData=
   ['plane_5fnorm',['plane_norm',['../classarc_1_1geom_1_1shape_1_1_triangle.html#a5e6273eac5f6dcf71ca9312bc895775f',1,'arc::geom::shape::Triangle']]],
   ['polar_5fto_5fcart',['polar_to_cart',['../namespacearc_1_1math_1_1convert.html#adc9151d5ba0dcf2846c64d1c1386c191',1,'arc::math::convert']]],
   ['poll',['poll',['../classarc_1_1gui_1_1_keymap.html#a5454aeffeb8918d01628da42a265b632',1,'arc::gui::Keymap']]],
-  ['pos',['pos',['../classarc_1_1geom_1_1shape_1_1_triangle.html#a7d44c895892dcc7da831a2e999f17318',1,'arc::geom::shape::Triangle::pos()'],['../classarc_1_1phys_1_1_particle.html#a3dd873ec2c055055433ee73a4d9f31bb',1,'arc::phys::Particle::pos()']]],
+  ['pos',['pos',['../classarc_1_1geom_1_1shape_1_1_triangle.html#a7d44c895892dcc7da831a2e999f17318',1,'arc::geom::shape::Triangle::pos()'],['../classarc_1_1gui_1_1_camera.html#a84b35ed211ee06b0eeba0fb7732766bf',1,'arc::gui::Camera::pos()'],['../classarc_1_1phys_1_1_particle.html#a3dd873ec2c055055433ee73a4d9f31bb',1,'arc::phys::Particle::pos()']]],
   ['post',['POST',['../debug_8hpp.html#a9302d06bf85836e2d719ec4d67fa1e05',1,'debug.hpp']]],
   ['post_5fcondition_5ffailure',['POST_CONDITION_FAILURE',['../namespacearc_1_1exit_1_1error.html#a2cc22e3c5178a1faf7f7b90875a76f4b',1,'arc::exit::error']]],
   ['postcondition',['postcondition',['../namespacearc_1_1debug_1_1contract.html#a4654862f4a46f4397dbe32713646c608',1,'arc::debug::contract']]],
