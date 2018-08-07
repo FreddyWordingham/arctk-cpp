@@ -27,6 +27,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/exit.hpp>
+#define STB_IMAGE_IMPLEMENTATION
 #include <arctk/lib/stb_image.h>
 
 
