@@ -149,6 +149,9 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a diffuse shader.
+             */
             inline Diffuse::Diffuse() noexcept
               : Shader(DIFFUSE_SOURCE_VERT, DIFFUSE_SOURCE_FRAG)
               , _model(init_uniform("model"))
