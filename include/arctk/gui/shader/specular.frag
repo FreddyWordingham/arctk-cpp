@@ -15,7 +15,7 @@ const float spec_pow = 0.5;
 //  -- Uniforms --
 uniform vec3 cam_pos;
 uniform vec4 col;
-uniform vec4 sun_col = vec3(1.0, 1.0, 1.0);
+uniform vec3 sun_col = vec3(1.0, 1.0, 1.0);
 uniform vec3 sun_pos = vec3(3.0, 4.0, 5.0);
 
 
