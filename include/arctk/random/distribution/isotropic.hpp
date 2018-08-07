@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/consts.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
 #include <arctk/random/generator.hpp>
@@ -36,15 +37,18 @@ namespace arc //! arctk namespace
 
                 //  == FUNCTION PROTOTYPES ==
                 //  -- Distribution --
-                inline double sample(Generator* rng_) noexcept;
+                inline vec3 sample(Generator* rng_) noexcept;
 
 
 
                 //  == FUNCTIONS ==
                 //  -- Distribution --
-                inline double sample(Generator* rng_) noexcept
+                inline vec3 sample(Generator* rng_) noexcept
                 {
-                    return ((1.0 + (g_ * g_) - math::pow::sq((1.0 - (g_ * g_)) / (1.0 + (g_ * rng->gen())))) / (2.0 * g_));
+                    const double phi   = rng_->gen() * 2.0 * consts::math::PI;
+                    const double theta = std::acos(rng_->gen());
+
+                    return (vec3(1.0, theta, phi).cart());
                 }
 
 
