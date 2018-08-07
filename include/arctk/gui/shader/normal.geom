@@ -1,3 +1,4 @@
+R""(
 //  == VERSION ==
 #version 330 core
 
@@ -61,3 +62,4 @@ void create_normal(const mat4 mvp_, const vec3 pos_, const vec3 norm_)
 
     EndPrimitive();
 }
+)""
