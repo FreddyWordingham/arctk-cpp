@@ -58,7 +58,7 @@ void main()
     EmitVertex();
 
     vec4 end    = start + vec4(plane_norm * length, 0.0);
-    gl_Position = mvp_ * end;
+    gl_Position = mvp * end;
     geom_col    = end_col;
     EmitVertex();
 
