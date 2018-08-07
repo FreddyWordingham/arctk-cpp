@@ -57,6 +57,8 @@ namespace arc //! arctk namespace
                 const GLuint _cubemap;
 
                 //  -- Uniforms --
+                const GLint _view; //!< View matrix uniform handle.
+                const GLint _proj; //!< Projection matrix uniform handle.
 
 
                 //  == INSTANTIATION ==
@@ -77,6 +79,8 @@ namespace arc //! arctk namespace
             inline Skybox::Skybox(const std::array<std::string, 6>& images_) noexcept
               : Shader(SKYBOX_SOURCE_VERT, SKYBOX_SOURCE_FRAG)
               , _cubemap(init_cubemap(images_))
+              , _view(init_uniform("view"))
+              , _proj(init_uniform("proj"))
             {
             }
 
