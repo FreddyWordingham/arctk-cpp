@@ -103,8 +103,6 @@ namespace arc //! arctk namespace
             {
                 glPolygonMode(GL_FRONT_AND_BACK, act_.fill_mode());
 
-                glUniformMatrix4fv(_model, 1, GL_FALSE, &act_.model()[0][0]);
-
                 glEnableVertexAttribArray(0);
                 glBindVertexArray(act_.vao());
                 glBindTexture(GL_TEXTURE_CUBE_MAP, _cubemap);
