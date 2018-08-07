@@ -67,6 +67,9 @@ namespace arc //! arctk namespace
               : _min(min_)
               , _max(max_)
             {
+                PRE(min_.x < max_.x);
+                PRE(min_.y < max_.y);
+                PRE(min_.z < max_.z);
             }
 
 
