@@ -207,6 +207,11 @@ namespace arc //! arctk namespace
                 glUniform3fv(_cam_pos, 1, &cam_.pos()[0]);
             }
 
+            /**
+             *  Render an actor using the ambient shader.
+             *
+             *  @param  act_    Actor to render.
+             */
             inline void Specular::render(const Actor& act_) noexcept
             {
                 glPolygonMode(GL_FRONT_AND_BACK, act_.fill_mode());
