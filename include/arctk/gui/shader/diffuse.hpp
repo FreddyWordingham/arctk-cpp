@@ -90,7 +90,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Rendering --
-            inline void Ambient::activate(const Lens& lens_, const Camera& cam_) noexcept
+            inline void Diffuse::activate(const Lens& lens_, const Camera& cam_) noexcept
             {
                 glUseProgram(_handle);
 
@@ -99,7 +99,7 @@ namespace arc //! arctk namespace
                 glUniformMatrix4fv(_view, 1, GL_FALSE, &cam_.view()[0][0]);
             }
 
-            inline void Ambient::render(const Actor& act_) noexcept
+            inline void Diffuse::render(const Actor& act_) noexcept
             {
                 glPolygonMode(GL_FRONT_AND_BACK, act_.fill_mode());
 
