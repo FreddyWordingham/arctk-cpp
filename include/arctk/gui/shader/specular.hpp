@@ -21,6 +21,9 @@
 #include <glm/glm.hpp>
 
 //  -- Arctk --
+#include <arctk/gui/actor.hpp>
+#include <arctk/gui/camera.hpp>
+#include <arctk/gui/lens.hpp>
 #include <arctk/gui/shader.hpp>
 
 
