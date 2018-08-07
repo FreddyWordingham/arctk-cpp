@@ -36,8 +36,11 @@ namespace arc //! arctk namespace
             //  == CLASS ==
             /**
              *  Random colour distribution.
+             *
+             *  @tparam T   Type returned from sampling the distribution.
              */
-            class Col : public Distribution<vec3>
+            template <typename T>
+            class Col : public Distribution<T>
             {
                 //  == INSTANTIATION ==
               public:
@@ -48,24 +51,23 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Sampling --
-                inline vec3 sample(Generator* rng_) const noexcept override;
+                inline T sample(Generator* rng_) const noexcept override;
             };
 
 
 
             //  == METHODS ==
             //  -- Sampling --
-            /**
-             *  Sample a value from the distribution.
-             *
-             *  @param  rng_    Random number generator.
-             *
-             *  @return Value sampled from the distribution.
-             */
             template <typename T>
-            inline T Uniform<T>::sample(Generator* const rng_) const noexcept
+            inline T Col::sample(Generator* const rng_) const noexcept
             {
-                return (Distribution<T>::_min + (rng_->gen() * (Distribution<T>::_max - Distribution<T>::_min)));
+                T col;
+
+                col.r = rng_->gen();
+                col.g = rng_->gen();
+                col.b = rng_->gen();
+
+                return (col);
             }
 
 
