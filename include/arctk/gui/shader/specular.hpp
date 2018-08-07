@@ -87,6 +87,8 @@ namespace arc //! arctk namespace
               , _proj(init_uniform("proj"))
               , _col(init_uniform("col"))
               , _cam_pos(init_uniform("cam_pos"))
+              , _sun_col(init_uniform("sun_col"))
+              , _sun_pos(init_uniform("sun_pos"))
             {
             }
 
