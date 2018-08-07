@@ -42,6 +42,17 @@ namespace arc //! arctk namespace
 
                 //  == FUNCTIONS ==
                 //  -- Distribution --
+                /**
+                 *  Sample the Henyey-Greenstein phase function.
+                 *
+                 *  @param  rng_    Random number generator.
+                 *
+                 *  @param  g_  Anisotropy value.
+                 *
+                 *
+                 *
+                 *  @return Sampled phase angle.
+                 */
                 inline double sample(Generator* rng_, const double g_) noexcept
                 {
                     return ((1.0 + (g_ * g_) - math::pow::sq((1.0 - (g_ * g_)) / (1.0 + (g_ * rng_->gen())))) / (2.0 * g_));
