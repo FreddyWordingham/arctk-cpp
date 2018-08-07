@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Col() noexcept;
+                inline Col() noexcept = default;
 
 
                 //  == METHODS ==
@@ -50,25 +50,6 @@ namespace arc //! arctk namespace
                 //  -- Sampling --
                 inline vec3 sample(Generator* rng_) const noexcept override;
             };
-
-
-
-            //  == INSTANTIATION ==
-            //  -- Constructors --
-            /**
-             *  Construct a uniform distribution with given bounds.
-             *
-             *  @param  min_    Minimum bound of the uniform distribution.
-             *  @param  max_    Maximum bound of the uniform distribution.
-             *
-             *  @pre    min_ must be less than max_.
-             */
-            template <typename T>
-            inline Uniform<T>::Uniform(const T min_, const T max_) noexcept
-              : Distribution<T>(min_, max_)
-            {
-                PRE(min_ < max_);
-            }
 
 
 
