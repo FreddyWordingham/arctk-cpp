@@ -96,7 +96,8 @@ namespace arc //! arctk namespace
             {
                 glUseProgram(_handle);
 
-                glUniformMatrix4fv(_view, 1, GL_FALSE, &cam_.view()[0][0]);
+                glm::mat4 view = glm::mat4(glm::mat3(cam_.view()));
+                glUniformMatrix4fv(_view, 1, GL_FALSE, &view[0][0]);
             }
 
             inline void Skybox::render(const Actor& act_) noexcept
