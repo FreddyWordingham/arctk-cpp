@@ -85,7 +85,7 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
-            //  -- Rendering --            }
+            //  -- Rendering --
 
 
 
