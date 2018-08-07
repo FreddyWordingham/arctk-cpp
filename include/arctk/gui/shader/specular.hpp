@@ -55,6 +55,8 @@ namespace arc //! arctk namespace
                 const GLint _proj;    //!< Projection matrix uniform handle.
                 const GLint _col;     //!< Colour uniform handle.
                 const GLint _cam_pos; //!< Camera position uniform handle.
+                const GLint _sun_col; //!< Colour of the sun illuminator.
+                const GLint _sun_pos; //!< Position of the sun illuminator.
 
 
                 //  == INSTANTIATION ==
