@@ -105,6 +105,9 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Actor --
+                const Actor _cube; //!< Cube actor.
+
                 //  -- Textures --
                 const GLuint _cubemap; //!< Cubemap forming the background of the skybox.
 
