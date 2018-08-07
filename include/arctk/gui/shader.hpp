@@ -306,6 +306,13 @@ namespace arc //! arctk namespace
             return (handle);
         }
 
+        /**
+         *  Initialise a cubemap texture.
+         *
+         *  @param  images_ Array of image paths to form cubemap.
+         *
+         *  @return Handle to the initialised cubemap texture.
+         */
         inline GLuint Shader::init_cubemap(const std::array<std::string, 6>& images_) const noexcept
         {
             GLuint cubemap;
