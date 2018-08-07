@@ -53,6 +53,9 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Textures --
+                const GLuint _cubemap;
+
                 //  -- Uniforms Handles --
 
 
