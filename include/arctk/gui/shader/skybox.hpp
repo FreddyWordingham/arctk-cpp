@@ -106,7 +106,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Textures --
-                const GLuint _cubemap;
+                const GLuint _cubemap; //!< Cubemap forming the background of the skybox.
 
                 //  -- Uniforms --
                 const GLint _view; //!< View matrix uniform handle.
