@@ -60,7 +60,6 @@ namespace arc //! arctk namespace
                 const GLint _model;   //!< Model matrix uniform handle.
                 const GLint _view;    //!< View matrix uniform handle.
                 const GLint _proj;    //!< Projection matrix uniform handle.
-                const GLint _col;     //!< Colour uniform handle.
                 const GLint _end_col; //!< Normal end colour uniform handle.
                 const GLint _length;  //!< Normal length uniform handle.
 
@@ -91,7 +90,6 @@ namespace arc //! arctk namespace
               , _model(init_uniform("model"))
               , _view(init_uniform("view"))
               , _proj(init_uniform("proj"))
-              , _col(init_uniform("col"))
               , _end_col(init_uniform("end_col"))
               , _length(init_uniform("length"))
             {
@@ -127,7 +125,6 @@ namespace arc //! arctk namespace
                 glPolygonMode(GL_FRONT_AND_BACK, act_.fill_mode());
 
                 glUniformMatrix4fv(_model, 1, GL_FALSE, &act_.model()[0][0]);
-                glUniform4fv(_col, 1, &act_.col()[0]);
 
                 glEnableVertexAttribArray(0);
                 glBindVertexArray(act_.vao());
