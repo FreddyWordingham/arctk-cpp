@@ -101,6 +101,7 @@ namespace arc //! arctk namespace
 
             inline void Specular::set_sun_pos(const glm::vec3& sun_pos_) noexcept
             {
+                glUniform3fv(_sun_pos, 1, &sun_pos_[0]);
             }
 
 
