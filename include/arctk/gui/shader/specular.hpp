@@ -164,7 +164,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
-             *  Construct a specular shader.
+             *  Construct a specular lighting shader.
              */
             inline Specular::Specular() noexcept
               : Shader(SPECULAR_SOURCE_VERT, SPECULAR_SOURCE_FRAG)
