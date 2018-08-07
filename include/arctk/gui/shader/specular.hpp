@@ -190,9 +190,9 @@ namespace arc //! arctk namespace
              */
             inline void Specular::set_sun_col(const glm::vec3& sun_col_) noexcept
             {
-                PRE((sun_col_.r >= 0.0) && (sun_col_.r <= 1.0));
-                PRE((sun_col_.g >= 0.0) && (sun_col_.g <= 1.0));
-                PRE((sun_col_.b >= 0.0) && (sun_col_.b <= 1.0));
+                PRE((sun_col_.r >= 0.0f) && (sun_col_.r <= 1.0f));
+                PRE((sun_col_.g >= 0.0f) && (sun_col_.g <= 1.0f));
+                PRE((sun_col_.b >= 0.0f) && (sun_col_.b <= 1.0f));
 
                 glUniform3fv(_sun_col, 1, &sun_col_[0]);
             }
