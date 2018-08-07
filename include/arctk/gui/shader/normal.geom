@@ -14,6 +14,7 @@ uniform mat4  model;
 uniform mat4  view;
 uniform mat4  proj;
 uniform vec4  vert_col = vec4(1.0, 0.0, 0.0, 0.0);
+uniform vec4  face_col = vec4(1.0, 1.0, 0.0, 0.0);
 uniform float length  = 0.4;
 
 
@@ -51,14 +52,14 @@ void main()
         plane_norm *= -1.0;
     }
 
-    vec4 start = vec4(center, 1.0);
+    vec4 start  = vec4(center, 1.0);
     gl_Position = mvp * start;
-    geom_col = col;
+    geom_col    = face_col;
     EmitVertex();
 
     vec4 end    = start + vec4(plane_norm * length, 0.0);
     gl_Position = mvp * end;
-    geom_col    = end_col;
+    geom_col    = face_col;
     EmitVertex();
 
     EndPrimitive();
@@ -72,7 +73,7 @@ void create_normal(const mat4 mvp_, const vec3 pos_, const vec3 norm_)
 {
     vec4 start  = vec4(pos_, 1.0);
     gl_Position = mvp_ * start;
-    geom_col    = col;
+    geom_col    = vert_col;
     EmitVertex();
 
     vec4 end    = start + vec4(norm_ * length, 0.0);
