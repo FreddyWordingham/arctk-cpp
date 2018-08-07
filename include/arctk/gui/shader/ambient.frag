@@ -1,3 +1,4 @@
+R""(
 //  == VERSION ==
 #version 330 core
 
@@ -17,3 +18,4 @@ void main()
 {
     frag_col = vert_col;
 }
+)""

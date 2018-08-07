@@ -1,3 +1,4 @@
+R""(
 //  == VERSION ==
 #version 330 core
 
@@ -28,3 +29,4 @@ void main()
 
     vert_col = col;
 }
+)""
