@@ -540,7 +540,7 @@ namespace arc //! arctk namespace
                 verts.emplace_back(glm::vec3(length_, 0.0f, 0.0f));
 
                 Actor helper(verts);
-                helper.set_col(1.0f, 0.0f, 0.0f);
+                helper.set_col(glm::vec3(1.0f, 0.0f, 0.0f));
 
                 return (helper);
             }
@@ -597,7 +597,7 @@ namespace arc //! arctk namespace
                 verts.emplace_back(glm::vec3(0.0f, length_, 0.0f));
 
                 Actor helper(verts);
-                helper.set_col(0.0f, 1.0f, 0.0f);
+                helper.set_col(glm::vec3(0.0f, 1.0f, 0.0f));
 
                 return (helper);
             }
@@ -654,7 +654,7 @@ namespace arc //! arctk namespace
                 verts.emplace_back(glm::vec3(0.0f, 0.0f, length_));
 
                 Actor helper(verts);
-                helper.set_col(0.0f, 0.0f, 1.0f);
+                helper.set_col(glm::vec3(0.0f, 0.0f, 1.0f));
 
                 return (helper);
             }
