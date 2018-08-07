@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
                     const double phi   = rng_->gen() * 2.0 * consts::math::PI;
                     const double theta = std::acos(rng_->gen());
 
-                    return (convert::polar_to_cart(vec3(1.0, theta, phi)));
+                    return (math::convert::polar_to_cart(vec3(1.0, theta, phi)));
                 }
 
 
