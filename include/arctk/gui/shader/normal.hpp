@@ -271,10 +271,12 @@ namespace arc //! arctk namespace
              *  Set the normal length uniform of the shader.
              *
              *  @param  length_ Length to draw the normals.
+             *
+             *  @pre    length_ must be positive.
              */
             inline void Normal::set_length(const float length_) noexcept
             {
-                PRE(length > 0.0);
+                PRE(length_ > 0.0);
 
                 glUniform1f(_length, length_);
             }
