@@ -644,6 +644,7 @@ namespace arc //! arctk namespace
 
             /**
              *  Create a box actor.
+             *  This is only the frame of the box.
              *
              *  @param  min_    Minimum vertex of the box.
              *  @param  max_    Maximum vertex of the box.
