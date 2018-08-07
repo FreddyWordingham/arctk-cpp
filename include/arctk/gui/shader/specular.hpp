@@ -37,10 +37,10 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Shader Source Code --
-            static const char* SPECULAR_SOURCE_VERT =
+            constexpr const char* SPECULAR_SOURCE_VERT =
 #include <arctk/gui/shader/specular.vert>
               ; //!< Specular vertex subshader source code.
-            static const char* SPECULAR_SOURCE_FRAG =
+            constexpr const char* SPECULAR_SOURCE_FRAG =
 #include <arctk/gui/shader/specular.frag>
               ; //!< Specular fragment subshader source code.
 
