@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
                  *
                  *  @param  g_  Anisotropy value.
                  *
-                 *
+                 *  @pre    g_ must bet between negative one, and one.
                  *
                  *  @return Sampled phase angle.
                  */
