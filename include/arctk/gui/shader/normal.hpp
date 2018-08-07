@@ -39,6 +39,9 @@ namespace arc //! arctk namespace
             static const char* NORMAL_SOURCE_VERT =
 #include <arctk/gui/shader/normal.vert>
               ; //!< Normal vertex subshader source code.
+            static const char* NORMAL_SOURCE_GEOM =
+#include <arctk/gui/shader/normal.geom>
+              ; //!< Normal geometry subshader source code.
             static const char* NORMAL_SOURCE_FRAG =
 #include <arctk/gui/shader/normal.frag>
               ; //!< Normal fragment subshader source code.
