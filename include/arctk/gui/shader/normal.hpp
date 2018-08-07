@@ -81,7 +81,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             inline Normal::Normal() noexcept
-              : Shader(AMBIENT_SOURCE_VERT, AMBIENT_SOURCE_FRAG)
+              : Shader(AMBIENT_SOURCE_VERT, AMBIENT_SOURCE_GEOM, AMBIENT_SOURCE_FRAG)
               , _model(init_uniform("model"))
               , _view(init_uniform("view"))
               , _proj(init_uniform("proj"))
