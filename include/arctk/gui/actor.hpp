@@ -693,6 +693,19 @@ namespace arc //! arctk namespace
                 return (Actor(verts, {1}, GL_LINES));
             }
 
+            /**
+             *  Create a cube actor.
+             *  This is a solid cube with faces.
+             *
+             *  @param  min_    Minimum vertex of the box.
+             *  @param  max_    Maximum vertex of the box.
+             *
+             *  @pre    min_.x must be less than max_.x.
+             *  @pre    min_.y must be less than max_.y.
+             *  @pre    min_.z must be less than max_.z.
+             *
+             *  @return cube actor.
+             */
             inline Actor cube(const glm::vec3& min_, const glm::vec3& max_) noexcept
             {
                 PRE(min_.x < max_.x);
