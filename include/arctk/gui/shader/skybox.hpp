@@ -127,7 +127,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Rendering --
                 inline void activate(const Lens& lens_, const Camera& cam_) noexcept;
-                inline void render(const Actor& act_) noexcept;
+                inline void render() noexcept;
             };
 
 
@@ -176,18 +176,16 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Render an actor using the ambient shader.
-             *
-             *  @param  act_    Actor to render.
+             *  Render the skybox.
              */
-            inline void Skybox::render(const Actor& act_) noexcept
+            inline void Skybox::render() noexcept
             {
-                glPolygonMode(GL_FRONT_AND_BACK, act_.fill_mode());
+                glPolygonMode(GL_FRONT_AND_BACK, _cube.fill_mode());
 
                 glEnableVertexAttribArray(0);
-                glBindVertexArray(act_.vao());
+                glBindVertexArray(_cube.vao());
                 glBindTexture(GL_TEXTURE_CUBE_MAP, _cubemap);
-                glDrawArrays(act_.primitive_type(), 0, act_.num_vert());
+                glDrawArrays(_cube.primitive_type(), 0, _cube.num_vert());
             }
 
 
