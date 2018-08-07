@@ -143,6 +143,7 @@ namespace arc //! arctk namespace
              */
             inline Skybox::Skybox(const std::array<std::string, 6>& images_) noexcept
               : Shader(SKYBOX_SOURCE_VERT, SKYBOX_SOURCE_FRAG)
+              , _cube(actor::aabb())
               , _cubemap(init_cubemap(images_))
               , _view(init_uniform("view"))
               , _proj(init_uniform("proj"))
