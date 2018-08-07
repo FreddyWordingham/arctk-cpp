@@ -147,7 +147,7 @@ namespace arc //! arctk namespace
              *
              *  @param  act_    Actor to render.
              */
-            inline void Ambient::render(const Actor& act_) noexcept
+            inline void Ray::render(const Actor& act_) noexcept
             {
                 glPolygonMode(GL_FRONT_AND_BACK, act_.fill_mode());
 
