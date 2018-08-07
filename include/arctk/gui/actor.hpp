@@ -724,7 +724,7 @@ namespace arc //! arctk namespace
              *
              *  @return aabb actor.
              */
-            inline Actor aabb(const glm::vec3& min_, const glm::vec3& max_) noexcept
+            inline Actor aabb(const glm::vec3& min_, const glm::vec3& max_) noexcept // NOLINT
             {
                 PRE(min_.x < max_.x);
                 PRE(min_.y < max_.y);
