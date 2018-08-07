@@ -232,10 +232,18 @@ namespace arc //! arctk namespace
              *
              *  @param  vert_col_   Colour to draw the vertex normals.
              *
-             *  @pre
+             *  @pre    vert_col_.r must be between zero and unity.
+             *  @pre    vert_col_.g must be between zero and unity.
+             *  @pre    vert_col_.b must be between zero and unity.
+             *  @pre    vert_col_.a must be between zero and unity.
              */
             inline void Normal::set_vert_col(const glm::vec4& vert_col_) noexcept
             {
+                PRE((vert_col_.r >= 0.0) && (vert_col_.r <= 1.0));
+                PRE((vert_col_.g >= 0.0) && (vert_col_.g <= 1.0));
+                PRE((vert_col_.b >= 0.0) && (vert_col_.b <= 1.0));
+                PRE((vert_col_.a >= 0.0) && (vert_col_.a <= 1.0));
+
                 glUniform4fv(_vert_col, 1, &vert_col_[0]);
             }
 
