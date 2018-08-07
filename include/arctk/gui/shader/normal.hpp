@@ -75,7 +75,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Setters --
                 inline void set_vert_col(const glm::vec4& vert_col_) noexcept;
-                inline void set_vert_col(const glm::vec4& vert_col_) noexcept;
+                inline void set_face_col(const glm::vec4& face_col_) noexcept;
                 inline void set_length(const float length_) noexcept;
 
                 //  -- Rendering --
@@ -105,6 +105,11 @@ namespace arc //! arctk namespace
             inline void Normal::set_vert_col(const glm::vec4& vert_col_) noexcept
             {
                 glUniform3fv(_vert_col, 1, &vert_col_[0]);
+            }
+
+            inline void Normal::set_face_col(const glm::vec4& face_col_) noexcept
+            {
+                glUniform4fv(_face_col, 1, &face_col_[0]);
             }
 
             inline void Normal::set_length(const float length_) noexcept
