@@ -10,11 +10,11 @@ layout(triangles) in;
 layout(line_strip, max_vertices = 6) out;
 
 //  -- Uniforms --
-uniform float magnitude = 0.4;
-uniform mat4 proj;
-uniform mat4 view;
-uniform mat4 model;
-uniform vec4 col;
+uniform mat4  model;
+uniform mat4  view;
+uniform mat4  proj;
+uniform vec4  col;
+uniform float length = 0.4;
 
 
 
