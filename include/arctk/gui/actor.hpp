@@ -94,7 +94,7 @@ namespace arc //! arctk namespace
             //  -- Setters --
             inline void set_primitive_type(GLenum primitive_type_) noexcept;
             inline void set_fill_mode(GLenum fill_mode_) noexcept;
-            inline void set_col(float red_, float green_, float blue_, float alpha_ = 1.0f) noexcept;
+            inline void set_col(const glm::vec4& col_) noexcept;
             inline void translate(const glm::vec3& trans_) noexcept;
             inline void rotate(const glm::vec3& rot_) noexcept;
             inline void scale(const glm::vec3& scale_) noexcept;
