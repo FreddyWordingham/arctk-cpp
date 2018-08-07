@@ -79,13 +79,6 @@ namespace arc //! arctk namespace
             //  -- Assignment --
             inline Shader& operator=(const Shader&) = default; //!< Defaulted copy operator. @return Reference to copied object.
             inline Shader& operator=(Shader&&) = default;      //!< Defaulted move operator. @return Reference to moved object.
-
-
-            //  == METHODS ==
-          public:
-            //  -- Rendering --
-            virtual inline void activate(const Lens& lens_, const Camera& cam_) noexcept = 0;
-            virtual inline void render(const Actor& act_) noexcept                       = 0;
         };
 
 
