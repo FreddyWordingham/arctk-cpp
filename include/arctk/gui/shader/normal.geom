@@ -7,7 +7,7 @@ R""(
 //  == LINKING ==
 //  -- Layout --
 layout(triangles) in;
-layout(line_strip, max_vertices = 6) out;
+layout(line_strip, max_vertices = 8) out;
 
 //  -- Uniforms --
 uniform mat4  model;
@@ -43,6 +43,26 @@ void main()
     create_normal(mvp, vert_pos[0], vert_norm[0]);
     create_normal(mvp, vert_pos[1], vert_norm[1]);
     create_normal(mvp, vert_pos[2], vert_norm[2]);
+
+    vec3 center = (vert_pos[0] + vert_pos[1] + vert_pos[2]) / 3.0;
+
+    vec3 plane_norm = normalize(cross(vert_pos[1] - vert_pos[0], vert_pos[2] - vert_pos[0]));
+    if (dot(plane_norm, vert_pos[0] + vert_pos[1] + vert_pos[2]) < 0.0)
+    {
+        plane_norm *= -1.0;
+    }
+
+    vec4 start = vec4(center, 1.0);
+    gl_Position = mvp * start;
+    geom_col = col;
+    EmitVertex();
+
+    vec4 end    = start + vec4(plane_norm * length, 0.0);
+    gl_Position = mvp_ * end;
+    geom_col    = end_col;
+    EmitVertex();
+
+    EndPrimitive();
 }
 
 
