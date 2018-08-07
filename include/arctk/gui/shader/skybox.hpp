@@ -36,10 +36,10 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Shader Source Code --
-            static const char* SKYBOX_SOURCE_VERT =
+            constexpr const char* SKYBOX_SOURCE_VERT =
 #include <arctk/gui/shader/skybox.vert>
               ; //!< Skybox vertex subshader source code.
-            static const char* SKYBOX_SOURCE_FRAG =
+            constexpr const char* SKYBOX_SOURCE_FRAG =
 #include <arctk/gui/shader/skybox.frag>
               ; //!< Skybox fragment subshader source code.
 
