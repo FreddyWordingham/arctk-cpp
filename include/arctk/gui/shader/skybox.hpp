@@ -71,6 +71,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Rendering --
+                inline void activate(const Lens& lens_, const Camera& cam_) noexcept override;
+                inline void render(const Actor& act_) noexcept override;
             };
 
 
@@ -87,12 +89,27 @@ namespace arc //! arctk namespace
             }
 
 
-            //  -- Initialisation --
-
-
 
             //  == METHODS ==
             //  -- Rendering --
+            inline void Skybox::activate(const Lens& /*unused*/, const Camera& cam_) noexcept
+            {
+                glUseProgram(_handle);
+
+                glUniformMatrix4fv(_view, 1, GL_FALSE, &cam_.view()[0][0]);
+            }
+
+            inline void Skybox::render(const Actor& act_) noexcept
+            {
+                glPolygonMode(GL_FRONT_AND_BACK, act_.fill_mode());
+
+                glUniformMatrix4fv(_model, 1, GL_FALSE, &act_.model()[0][0]);
+
+                glEnableVertexAttribArray(0);
+                glBindVertexArray(act_.vao());
+                glBindTexture(GL_TEXTURE_CUBE_MAP, _cubemap);
+                glDrawArrays(act_.primitive_type(), 0, act_.num_vert());
+            }
 
 
 
