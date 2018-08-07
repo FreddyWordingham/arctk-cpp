@@ -418,7 +418,7 @@ namespace arc //! arctk namespace
             inline Actor axis_helper_y(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor axis_helper_z(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor box(const glm::vec3& min_, const glm::vec3& max_) noexcept;
-            inline Actor cube(const glm::vec3& min_, const glm::vec3& max_) noexcept;
+            inline Actor aabb(const glm::vec3& min_, const glm::vec3& max_) noexcept;
 
 
 
@@ -695,8 +695,8 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Create a cube actor.
-             *  This is a solid cube with faces.
+             *  Create a axis-aligned bounding box actor.
+             *  This is a solid cuboid with faces.
              *
              *  @param  min_    Minimum vertex of the box.
              *  @param  max_    Maximum vertex of the box.
@@ -705,9 +705,9 @@ namespace arc //! arctk namespace
              *  @pre    min_.y must be less than max_.y.
              *  @pre    min_.z must be less than max_.z.
              *
-             *  @return cube actor.
+             *  @return aabb actor.
              */
-            inline Actor cube(const glm::vec3& min_, const glm::vec3& max_) noexcept
+            inline Actor aabb(const glm::vec3& min_, const glm::vec3& max_) noexcept
             {
                 PRE(min_.x < max_.x);
                 PRE(min_.y < max_.y);
