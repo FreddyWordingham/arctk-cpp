@@ -70,9 +70,50 @@ namespace arc //! arctk namespace
                     gl_Position = proj * view * vec4(vert_pos, 1.0);
                 }
             )""; //!< Diffuse vertex subshader source code.
-            constexpr const char* DIFFUSE_SOURCE_FRAG =
-#include <arctk/gui/shader/diffuse.frag>
-              ; //!< Diffuse fragment subshader source code.
+            constexpr const char* DIFFUSE_SOURCE_FRAG = R""(
+                //  == VERSION ==
+                #version 330 core
+
+
+
+                //  == CONSTANTS ==
+                //  -- Lighting --
+                const float amb_pow  = 0.1;
+
+
+
+                //  == LINKING ==
+                //  -- Uniforms --
+                uniform vec4 col;
+                uniform vec3 cam_pos;
+                uniform vec3 sun_col = vec3(1.0, 1.0, 1.0);
+                uniform vec3 sun_pos = vec3(3.0, 4.0, 5.0);
+
+
+
+                //  == IN/OUTPUT ==
+                //  -- Input --
+                in vec3 vert_norm;
+                in vec3 vert_pos;
+
+                //  -- Output --
+                out vec4 frag_col;
+
+
+
+                //  == MAIN ==
+                void main()
+                {
+                    vec4 ambient = amb_pow * vec4(sun_col, 1.0);
+
+                    vec3  vert_norm = normalize(vert_norm);
+                    vec3  light_dir = normalize(sun_pos - vert_pos);
+                    float diff      = max(dot(vert_norm, light_dir), 0.0);
+                    vec4  diffuse   = diff * vec4(sun_col, 1.0);
+
+                    frag_col = (ambient + diffuse) * col;
+                }
+            )""; //!< Diffuse fragment subshader source code.
 
 
 
