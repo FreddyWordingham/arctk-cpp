@@ -123,7 +123,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Skybox(const std::array<std::string, 6>& images_) noexcept;
+                inline explicit Skybox(const std::array<std::string, 6>& images_) noexcept;
 
 
                 //  == METHODS ==
