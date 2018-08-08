@@ -141,10 +141,12 @@ namespace arc //! arctk namespace
          *  @param  dist_   Distance to travel.
          *
          *  @pre    dist_ must be positive.
+         *  @pre    _dir must be normalised.
          */
         inline void Particle::move(const double dist_) noexcept
         {
             PRE(dist_ > 0.0);
+            PRE(_dir.normalised());
 
             _pos += _dir * dist_;
 
