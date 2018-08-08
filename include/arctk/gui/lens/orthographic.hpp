@@ -34,13 +34,6 @@ namespace arc //! arctk namespace
 
 
 
-            //  == CONSTANTS ==
-            //  -- Culling --
-            constexpr const float ORTHOGRAPHIC_NEAR_CULL_DIST = 1e-3f; //!< Far culling distance for the orthographic lens.
-            constexpr const float ORTHOGRAPHIC_FAR_CULL_DIST  = 1e+3f; //!< Near culling distance for the orthographic lens.
-
-
-
             //  == CLASS ==
             /**
              *  Orthographic lens.
@@ -50,14 +43,14 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- View --
-                const unsigned int _width;
-                const unsigned int _height;
+                const int _width;
+                const int _height;
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Orthographic(unsigned int width_, unsigned int float_) noexcept;
+                inline Orthographic(int width_, int float_) noexcept;
 
 
                 //  == METHODS ==
@@ -79,7 +72,7 @@ namespace arc //! arctk namespace
              *  @pre    width_ must be positive.
              *  @pre    height_ must be positive.
              */
-            inline Orthographic::Orthographic(const unsigned int width_, const unsigned int height_) noexcept
+            inline Orthographic::Orthographic(const int width_, const int height_) noexcept
               : _width(width_)
               , _height(height_)
             {
@@ -90,7 +83,6 @@ namespace arc //! arctk namespace
             }
 
 
-
             //  == METHODS ==
             //  -- Updating --
             /**
@@ -98,7 +90,7 @@ namespace arc //! arctk namespace
              */
             inline void Orthographic::update_view() noexcept
             {
-                _proj = glm::ortho(0, _width, _height, 0, ORTHOGRAPHIC_NEAR_CULL_DIST, ORTHOGRAPHIC_FAR_CULL_DIST);
+                _proj = glm::ortho(0, _width, _height, 0);
             }
 
 
