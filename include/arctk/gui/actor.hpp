@@ -29,6 +29,7 @@
 #include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
+#include <arctk/phys.hpp>
 
 
 
@@ -438,6 +439,7 @@ namespace arc //! arctk namespace
             inline Actor box(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor aabb(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor aabb(const geom::shape::Aabb& aabb_) noexcept;
+            inline Actor path(const phys::Particle& part_) noexcept;
 
 
 
@@ -819,6 +821,19 @@ namespace arc //! arctk namespace
             inline Actor aabb(const geom::shape::Aabb& aabb_) noexcept
             {
                 return (aabb(glm::vec3(aabb_.min().x, aabb_.min().y, aabb_.min().z), glm::vec3(aabb_.max().x, aabb_.max().y, aabb_.max().z)));
+            }
+
+            inline Actor path(const phys::Particle& part_) noexcept
+            {
+                std::vector<glm::vec3> verts;
+                verts.reserve(part_.path().size());
+
+                for (size_t i = 0; i < part_.path().size(); ++i)
+                {
+                    verts.emplace_back(glm::vec3(static_cast<float>(part_.path()[i].x), static_cast<float>(part_.path()[i].y), static_cast<float>(part_.path()[i].z)));
+                }
+
+                return (Actor(verts));
             }
 
 
