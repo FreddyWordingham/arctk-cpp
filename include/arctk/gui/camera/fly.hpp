@@ -18,8 +18,8 @@
 //  -- Std --
 #include <algorithm>
 
-//  -- Graphical --
-#include <glm/gtx/polar_coordinates.hpp>
+//  -- Graphical -
+#include <glm/gtx/rotate_vector.hpp>
 
 //  -- Arctk --
 #include <arctk/gui/camera.hpp>
@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Control --
                 inline void move(float forward_, float right_, float up_) noexcept override;
-                inline void rotate(float /*unused*/, float /*unused*/, float /*unused*/) noexcept override;
+                inline void rotate(float roll_, float pitch_, float yaw_) noexcept override;
             };
 
 
@@ -99,14 +99,26 @@ namespace arc //! arctk namespace
                 _pos += right * (right_ * _speed);
                 _pos += top * (up_ * _speed);
 
+                _focus = _pos + _dir;
+
                 update_view();
             }
 
             /**
              *  Rotate the camera's orientation.
              */
-            inline void Fly::rotate(const float /*unused*/, const float /*unused*/, const float /*unused*/) noexcept
+            inline void Fly::rotate(const float roll_, const float pitch_, const float yaw_) noexcept
             {
+                const glm::vec3 right = glm::normalize(glm::cross(_dir, _up));
+                const glm::vec3 top   = glm::normalize(glm::cross(right, _dir));
+
+                _dir = glm::rotate(_dir, roll_, _dir);
+                _dir = glm::rotate(_dir, pitch_, right);
+                _dir = glm::rotate(_dir, yaw_, top);
+
+                _focus = _pos + _dir;
+
+                update_view();
             }
 
 
