@@ -27,6 +27,7 @@
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/geom.hpp>
 #include <arctk/math.hpp>
 
 
@@ -436,6 +437,7 @@ namespace arc //! arctk namespace
             inline Actor axis_helper_z(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor box(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor aabb(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
+            inline Actor aabb(const geom::shape::Aabb& aabb_) noexcept;
 
 
 
@@ -812,6 +814,11 @@ namespace arc //! arctk namespace
                 verts.emplace_back(glm::vec3(0.0f, +1.0f, 0.0f));
 
                 return (Actor(verts, {1, 1}));
+            }
+
+            inline Actor aabb(const geom::shape::Aabb& aabb_) noexcept
+            {
+                return (aabb(aabb_.min(), aabb_.max()));
             }
 
 
