@@ -62,8 +62,8 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            inline Particle& operator=(const Particle&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
-            inline Particle& operator=(Particle&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
+            inline Particle& operator=(const Particle&) = default;     //!< Defaulted copy operator. @return Reference to copied object.
+            inline Particle& operator=(Particle&&) noexcept = default; //!< Defaulted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
