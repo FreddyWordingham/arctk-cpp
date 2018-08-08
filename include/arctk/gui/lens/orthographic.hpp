@@ -60,6 +60,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               private:
                 //  -- Updating --
+                inline void update_view() noexcept override;
             };
 
 
@@ -71,6 +72,13 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Updating --
+            /**
+             *  Update the orthographic matrix of the lens.
+             */
+            inline void Orthographic::update_view() noexcept
+            {
+                _proj = glm::ortho(0, _width, _height, 0, ORTHOGRAPHIC_NEAR_CULL_DIST, ORTHOGRAPHIC_FAR_CULL_DIST);
+            }
 
 
 
