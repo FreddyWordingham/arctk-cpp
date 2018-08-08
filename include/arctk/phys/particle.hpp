@@ -69,8 +69,9 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const vec3& pos() noexcept;
-            inline const vec3& dir() noexcept;
+            inline const vec3&              pos() const noexcept;
+            inline const vec3&              dir() const noexcept;
+            inline const std::vector<vec3>& path() const noexcept;
 
             //  -- Setters --
             virtual inline void move(double dist_) noexcept;
@@ -105,7 +106,7 @@ namespace arc //! arctk namespace
          *
          *  @return Position of the particle.
          */
-        inline const vec3& Particle::pos() noexcept
+        inline const vec3& Particle::pos() const noexcept
         {
             return (_pos);
         }
@@ -115,7 +116,7 @@ namespace arc //! arctk namespace
          *
          *  @return Direction of the particle.
          */
-        inline const vec3& Particle::dir() noexcept
+        inline const vec3& Particle::dir() const noexcept
         {
             return (_dir);
         }
