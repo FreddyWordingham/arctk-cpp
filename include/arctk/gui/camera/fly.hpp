@@ -92,8 +92,14 @@ namespace arc //! arctk namespace
              */
             inline void Fly::move(const float forward_, const float right_, const float up_) noexcept
             {
-                _pos += _dir * (forward_ * _speed);
+                const glm::vec3 right = glm::normalize(glm::cross(_dir, _up));
+                const glm::vec3 top   = glm::normalize(glm::cross(right, _dir));
 
+                _pos += _dir * (forward_ * _speed);
+                _pos += right * (right_ * _speed);
+                _pos += top * (up_ * _speed);
+
+                update_view();
             }
 
             /**
