@@ -50,13 +50,14 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- View --
-                const int _width;
-                const int _height;
+                const unsigned int _width;
+                const unsigned int _height;
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Orthographic(unsigned int width_, unsigned int float_) noexcept;
 
 
                 //  == METHODS ==
@@ -69,6 +70,24 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct an orthographic lens with a given view width and height.
+             *
+             *  @param  width_  Width of the viewport.
+             *  @param  height_ Height of the viewport.
+             *
+             *  @pre    width_ must be positive.
+             *  @pre    height_ must be positive.
+             */
+            inline Orthographic::Orthographic(const unsigned int width_, const unsigned int height_) noexcept
+              : _width(width_)
+              , _height(height_)
+            {
+                PRE(width_ > 0);
+                PRE(height_ > 0);
+
+                update_view();
+            }
 
 
 
