@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
             //  -- Setters --
             virtual inline void move(double dist_) noexcept;
 
-          private:
+          protected:
             //  -- Setters --
             virtual inline void rotate(double theta_, double phi_) noexcept;
         };
