@@ -121,6 +121,16 @@ namespace arc //! arctk namespace
             return (_dir);
         }
 
+        /**
+         *  Get the path of the particle.
+         *
+         *  @return Path of the particle.
+         */
+        inline const std::vector<vec3>& Particle::path() const noexcept
+        {
+            return (_path);
+        }
+
 
         //  -- Setters --
         /**
