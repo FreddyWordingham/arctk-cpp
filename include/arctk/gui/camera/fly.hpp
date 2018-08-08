@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
-             *  Construct an orbital camera at a given position with a given focus point and up direction.
+             *  Construct an fly camera at a given position with a given focus point and up direction.
              *
              *  @param  pos_    Position of the camera.
              *  @param  focus_  Point to focus the camera on.
