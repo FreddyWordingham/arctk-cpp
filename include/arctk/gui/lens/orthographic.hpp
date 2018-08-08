@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Orthographic(float width_, float float_) noexcept;
+                inline Orthographic(const glm::vec3& min_, const glm::vec3& max_) noexcept;
 
 
                 //  == METHODS ==
@@ -64,20 +64,22 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
-             *  Construct an orthographic lens with a given view width and height.
+             *  Construct an orthographic lens with a given view viewport.
              *
-             *  @param  width_  Width of the viewport.
-             *  @param  height_ Height of the viewport.
+             *  @param  min_    Minimum vertex of the viewport.
+             *  @param  max_    Maximum vertex of the viewport.
              *
-             *  @pre    width_ must be positive.
-             *  @pre    height_ must be positive.
+             *  @pre    min_.x must be less than max_.x.
+             *  @pre    min_.y must be less than max_.y.
+             *  @pre    min_.z must be less than max_.z.
              */
-            inline Orthographic::Orthographic(const float width_, const float height_) noexcept
-              : _width(width_)
-              , _height(height_)
+            inline Orthographic::Orthographic(const glm::vec3& min_, const glm::vec3& max_) noexcept
+              : _min(min_)
+              , _max(max_)
             {
-                PRE(width_ > 0);
-                PRE(height_ > 0);
+                PRE(min_.x < max_.x);
+                PRE(min_.y < max_.y);
+                PRE(min_.z < max_.z);
 
                 update_view();
             }
@@ -90,8 +92,7 @@ namespace arc //! arctk namespace
              */
             inline void Orthographic::update_view() noexcept
             {
-                //                _proj = glm::ortho(0.0f, _width, 0.0f, _height);
-                _proj = glm::ortho(-10.0f, +10.0f, +10.0f, -10.0f, -10.0f, 20.0f);
+                _proj = glm::ortho(_min.x, _max.x, _min.y, _max.y, _min.z, _max.z);
             }
 
 
