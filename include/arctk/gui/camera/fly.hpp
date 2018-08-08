@@ -75,6 +75,7 @@ namespace arc //! arctk namespace
              */
             inline Fly::Fly(const glm::vec3& pos_, const glm::vec3& dir_, const glm::vec3& up_) noexcept
               : Camera(pos_, pos_ + dir_, up_)
+              , _dir(dir_)
             {
             }
 
