@@ -52,8 +52,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Particle(const vec3& pos_, const vec3& dir_) noexcept;
-            inline Particle(const Particle&) noexcept = default; //!< Defaulted copy constructor.
-            inline Particle(Particle&&) noexcept      = default; //!< Defaulted move constructor.
+            inline Particle(const Particle&) = default; //!< Defaulted copy constructor.
+            inline Particle(Particle&&)      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
             virtual inline ~Particle() noexcept = default;
