@@ -833,7 +833,7 @@ namespace arc //! arctk namespace
                     verts.emplace_back(glm::vec3(static_cast<float>(part_.path()[i].x), static_cast<float>(part_.path()[i].y), static_cast<float>(part_.path()[i].z)));
                 }
 
-                return (Actor(verts));
+                return (Actor(verts, {1}, GL_LINE_STRIP));
             }
 
 
