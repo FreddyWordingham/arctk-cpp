@@ -96,7 +96,7 @@ namespace arc //! arctk namespace
              *
              *  @return Optional collision distance.
              */
-            inline std::optional<double> Aabb::collision(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<double> Aabb::collision(const vec3& pos_, const vec3& dir_) const noexcept // NOLINT
             {
                 PRE(dir_.normalised());
 
