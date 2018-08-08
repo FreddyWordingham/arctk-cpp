@@ -100,7 +100,63 @@ namespace arc //! arctk namespace
             {
                 PRE(dir_.normalised());
 
-                return (std::optional<double>(1.0));
+                std::array<vec3, 2> bounds({{_min, _max}});
+                std::array<bool, 3> sign;
+                sign[0] = dir_.x < 0.0;
+                sign[1] = dir_.y < 0.0;
+                sign[2] = dir_.z < 0.0;
+
+                double min_x = (bounds[sign[0]].x - pos_.x) / dir_.x;
+                double max_x = (bounds[1 - sign[0]].x - pos_.x) / dir_.x;
+                double min_y = (bounds[sign[1]].y - pos_.y) / dir_.y;
+                double max_y = (bounds[1 - sign[1]].y - pos_.y) / dir_.y;
+
+                if ((min_x > max_y) || (min_y > max_x))
+                {
+                    return false;
+                }
+
+                if (min_y > min_x)
+                {
+                    min_x = min_y;
+                }
+
+                if (max_y < max_x)
+                {
+                    max_x = max_y;
+                }
+
+                double min_z = (bounds[sign[2]].z - pos_.z) / dir_.z;
+                double max_z = (bounds[1 - sign[2]].z - pos_.z) / dir_.z;
+
+                if ((min_x > max_z) || (min_z > max_x))
+                {
+                    return (std::optional<double>(std::nullopt));
+                }
+
+                if (min_z > min_x)
+                {
+                    min_x = min_z;
+                }
+
+                if (max_z < max_x)
+                {
+                    max_x = max_z;
+                }
+
+                double t = min_x;
+
+                if (t < 0)
+                {
+                    t = max_x;
+                }
+
+                if (t < 0)
+                {
+                    return (std::optional<double>(std::nullopt));
+                }
+
+                return (std::optional<double>(t));
             }
 
 
