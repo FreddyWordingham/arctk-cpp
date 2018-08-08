@@ -97,6 +97,7 @@ namespace arc //! arctk namespace
 
             inline const vec3& Aabb::max() const noexcept
             {
+                return (_max);
             }
 
 
