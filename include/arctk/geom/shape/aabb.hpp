@@ -107,7 +107,7 @@ namespace arc //! arctk namespace
 
                 if ((min_x > max_y) || (min_y > max_x))
                 {
-                    return false;
+                    return (std::optional<double>(std::nullopt));
                 }
 
                 if (min_y > min_x)
@@ -140,12 +140,12 @@ namespace arc //! arctk namespace
 
                 double t = min_x;
 
-                if (t < 0)
+                if (t < 0.0)
                 {
                     t = max_x;
                 }
 
-                if (t < 0)
+                if (t < 0.0)
                 {
                     return (std::optional<double>(std::nullopt));
                 }
