@@ -55,6 +55,10 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline const vec3& min() const noexcept;
+                inline const vec3& max() const noexcept;
+
                 //  -- Collision --
                 inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
@@ -85,6 +89,17 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Getters --
+            inline const vec3& Aabb::min() const noexcept
+            {
+                return (_min);
+            }
+
+            inline const vec3& Aabb::max() const noexcept
+            {
+            }
+
+
             //  -- Collision --
             /**
              *  Determine if a collision event occurs between the aabb and a ray.
