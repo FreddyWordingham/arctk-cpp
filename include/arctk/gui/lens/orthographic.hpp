@@ -50,6 +50,8 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- View --
+                const int _width;
+                const int _height;
 
 
                 //  == INSTANTIATION ==
