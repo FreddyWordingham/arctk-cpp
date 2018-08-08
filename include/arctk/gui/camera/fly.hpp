@@ -67,13 +67,13 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
-             *  Construct an fly camera at a given position with a given focus point and up direction.
+             *  Construct an fly camera at a given position with a given view direction and up direction.
              *
              *  @param  pos_    Position of the camera.
-             *  @param  focus_  Point to focus the camera on.
+             *  @param  dir_    Direction to point the camera.
              *  @param  up_     Up direction of the camera.
              */
-            inline Fly::Fly(const glm::vec3& pos_, const glm::vec3& focus_, const glm::vec3& up_) noexcept
+            inline Fly::Fly(const glm::vec3& pos_, const glm::vec3& dir_, const glm::vec3& up_) noexcept
               : Camera(pos_, focus_, up_)
             {
             }
