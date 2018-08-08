@@ -95,6 +95,8 @@ namespace arc //! arctk namespace
           , _dir(dir_)
         {
             PRE(dir_.normalised());
+
+            _path.emplace_back(pos_);
         }
 
 
