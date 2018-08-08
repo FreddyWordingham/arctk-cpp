@@ -43,14 +43,14 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- View --
-                const int _width;
-                const int _height;
+                const glm::vec3 _min;
+                const glm::vec3 _max;
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Orthographic(int width_, int float_) noexcept;
+                inline Orthographic(float width_, float float_) noexcept;
 
 
                 //  == METHODS ==
@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
              *  @pre    width_ must be positive.
              *  @pre    height_ must be positive.
              */
-            inline Orthographic::Orthographic(const int width_, const int height_) noexcept
+            inline Orthographic::Orthographic(const float width_, const float height_) noexcept
               : _width(width_)
               , _height(height_)
             {
@@ -90,7 +90,8 @@ namespace arc //! arctk namespace
              */
             inline void Orthographic::update_view() noexcept
             {
-                _proj = glm::ortho(0, _width, _height, 0);
+                //                _proj = glm::ortho(0.0f, _width, 0.0f, _height);
+                _proj = glm::ortho(-10.0f, +10.0f, +10.0f, -10.0f, -10.0f, 20.0f);
             }
 
 
