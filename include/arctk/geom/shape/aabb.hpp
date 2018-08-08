@@ -100,16 +100,10 @@ namespace arc //! arctk namespace
             {
                 PRE(dir_.normalised());
 
-                std::array<vec3, 2> bounds({{_min, _max}});
-                std::array<bool, 3> sign;
-                sign[0] = dir_.x < 0.0;
-                sign[1] = dir_.y < 0.0;
-                sign[2] = dir_.z < 0.0;
-
-                double min_x = (bounds[sign[0]].x - pos_.x) / dir_.x;
-                double max_x = (bounds[1 - sign[0]].x - pos_.x) / dir_.x;
-                double min_y = (bounds[sign[1]].y - pos_.y) / dir_.y;
-                double max_y = (bounds[1 - sign[1]].y - pos_.y) / dir_.y;
+                double min_x = ((dir_.x < 0.0 ? _max.x : _min.x) - pos_.x) / dir_.x;
+                double max_x = ((dir_.x < 0.0 ? _min.x : _max.x) - pos_.x) / dir_.x;
+                double min_y = ((dir_.y < 0.0 ? _max.y : _min.y) - pos_.y) / dir_.y;
+                double max_y = ((dir_.y < 0.0 ? _min.y : _max.y) - pos_.y) / dir_.y;
 
                 if ((min_x > max_y) || (min_y > max_x))
                 {
@@ -126,8 +120,8 @@ namespace arc //! arctk namespace
                     max_x = max_y;
                 }
 
-                double min_z = (bounds[sign[2]].z - pos_.z) / dir_.z;
-                double max_z = (bounds[1 - sign[2]].z - pos_.z) / dir_.z;
+                double min_z = ((dir_.z < 0.0 ? _max.z : _min.z) - pos_.z) / dir_.z;
+                double max_z = ((dir_.z < 0.0 ? _min.z : _max.z) - pos_.z) / dir_.z;
 
                 if ((min_x > max_z) || (min_z > max_x))
                 {
