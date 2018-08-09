@@ -85,6 +85,7 @@ namespace arc //! arctk namespace
             constexpr inline Vec<T, N>& operator-=(T val_) noexcept;
             constexpr inline Vec<T, N>& operator-=(const Vec<T, N>& vec_) noexcept;
             constexpr inline Vec<T, N>& operator*=(T val_) noexcept;
+            constexpr inline Vec<T, N>& operator*=(const Mat<T, N>& mat_) noexcept;
             constexpr inline Vec<T, N>& operator/=(T val_) noexcept;
 
             //  -- Increment / Decrement --
@@ -328,6 +329,24 @@ namespace arc //! arctk namespace
             for (size_t i = 0; i < N; ++i)
             {
                 _data[i] *= val_;
+            }
+
+            return (*this);
+        }
+
+        template <typename T, size_t N>
+        constexpr inline Vec<T, N>& Vec<T, N>::operator*=(const Mat<T, N>& mat_) noexcept
+        {
+            const std::array<T, N> pre = _data;
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                _data[i] = {};
+
+                for (size_t j = 0; j < N; ++j)
+                {
+                    _data[i] += pre[j] * mat_[j][i];
+                }
             }
 
             return (*this);
