@@ -70,6 +70,7 @@ namespace arc //! arctk namespace
             constexpr inline Mat<T, 4>& operator-=(T val_) noexcept;
             constexpr inline Mat<T, 4>& operator-=(const Mat<T, 4>& mat_) noexcept;
             constexpr inline Mat<T, 4>& operator*=(T val_) noexcept;
+            constexpr inline Mat<T, 4>& operator*=(const Mat<T, 4>& mat_) noexcept;
             constexpr inline Mat<T, 4>& operator/=(T val_) noexcept;
 
             //  -- Increment / Decrement --
@@ -297,6 +298,32 @@ namespace arc //! arctk namespace
             w.w *= val_;
 
             return (*this);
+        }
+
+        template <typename T>
+        constexpr inline Mat<T, 4>& Mat<T, 4>::operator*=(const Mat<T, 4>& mat_) noexcept
+        {
+            const Mat<T, 4> pre = *this;
+
+            x.x = (pre.x.x * mat_.x.x) + (pre.x.y * mat_.y.x) + (pre.x.z * mat_.z.x) + (pre.x.w * mat_.w.x);
+            x.y = (pre.x.x * mat_.x.y) + (pre.x.y * mat_.y.y) + (pre.x.z * mat_.z.y) + (pre.x.w * mat_.w.y);
+            x.z = (pre.x.x * mat_.x.z) + (pre.x.y * mat_.y.z) + (pre.x.z * mat_.z.z) + (pre.x.w * mat_.w.z);
+            x.w = (pre.x.x * mat_.x.w) + (pre.x.y * mat_.y.w) + (pre.x.z * mat_.z.w) + (pre.x.w * mat_.w.w);
+
+            y.x = (pre.y.x * mat_.x.x) + (pre.y.y * mat_.y.x) + (pre.y.z * mat_.z.x) + (pre.y.w * mat_.w.x);
+            y.y = (pre.y.x * mat_.x.y) + (pre.y.y * mat_.y.y) + (pre.y.z * mat_.z.y) + (pre.y.w * mat_.w.y);
+            y.z = (pre.y.x * mat_.x.z) + (pre.y.y * mat_.y.z) + (pre.y.z * mat_.z.z) + (pre.y.w * mat_.w.z);
+            y.w = (pre.y.x * mat_.x.w) + (pre.y.y * mat_.y.w) + (pre.y.z * mat_.z.w) + (pre.y.w * mat_.w.w);
+
+            z.x = (pre.z.x * mat_.x.x) + (pre.z.y * mat_.y.x) + (pre.z.z * mat_.z.x) + (pre.z.w * mat_.w.x);
+            z.y = (pre.z.x * mat_.x.y) + (pre.z.y * mat_.y.y) + (pre.z.z * mat_.z.y) + (pre.z.w * mat_.w.y);
+            z.z = (pre.z.x * mat_.x.z) + (pre.z.y * mat_.y.z) + (pre.z.z * mat_.z.z) + (pre.z.w * mat_.w.z);
+            z.w = (pre.z.x * mat_.x.w) + (pre.z.y * mat_.y.w) + (pre.z.z * mat_.z.w) + (pre.z.w * mat_.w.w);
+
+            w.x = (pre.w.x * mat_.x.x) + (pre.w.y * mat_.y.x) + (pre.w.z * mat_.z.x) + (pre.w.w * mat_.w.x);
+            w.y = (pre.w.x * mat_.x.y) + (pre.w.y * mat_.y.y) + (pre.w.z * mat_.z.y) + (pre.w.w * mat_.w.y);
+            w.z = (pre.w.x * mat_.x.z) + (pre.w.y * mat_.y.z) + (pre.w.z * mat_.z.z) + (pre.w.w * mat_.w.z);
+            w.w = (pre.w.x * mat_.x.w) + (pre.w.y * mat_.y.w) + (pre.w.z * mat_.z.w) + (pre.w.w * mat_.w.w);
         }
 
         /**
