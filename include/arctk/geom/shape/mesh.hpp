@@ -99,6 +99,44 @@ namespace arc //! arctk namespace
 
                 std::stringstream serial_stream(serial_);
                 std::string       line;
+
+                std::vector<vec3> vert_pos, vert_norm;
+                mat4              inv_transform_ = math::mat::transpose(math::mat::inverse(transform_));
+                while (std::getline(serial_stream, line))
+                {
+                    std::stringstream line_stream(line);
+                    std::string       word;
+                    line_stream >> word;
+
+                    if (word == POS_KEYWORD)
+                    {
+                        vec4 pos;
+                        line_stream >> pos.x >> pos.y >> pos.z;
+                        pos.w = 1.0;
+
+                        pos = transform_ * pos;
+
+                        vert_pos.emplace_back(pos.x, pos.y, pos.z);
+                    }
+                    else if (word == NORM_KEYWORD)
+                    {
+                        vec4 norm;
+                        line_stream >> norm.x >> norm.y >> norm.z;
+                        norm.w = 1.0;
+
+                        norm = inv_transform_ * norm;
+
+                        vert_norm.emplace_back(vec3(norm.x, norm.y, norm.z).normal()));
+                    }
+
+                    if (line_stream.fail())
+                    {
+                        std::cerr << "Unable to construct mesh object.\n"
+                                  << "Unable to parse line: `" << line << "`.\n";
+                    }
+                }
+
+                utl::stream::rewind(serial_stream);
                 while (std::getline(serial_stream, line))
                 {
                     std::stringstream line_stream(line);
@@ -135,7 +173,7 @@ namespace arc //! arctk namespace
                             if (pos.fail() || norm.fail())
                             {
                                 std::cerr << "Unable to construct mesh object.\n"
-                                          << "Unable to parse serialised wavefront object line: `" << line << "`.\n";
+                                          << "Unable to parse line: `" << line << "`.\n";
 
                                 std::exit(exit::error::FAILED_PARSE);
                             }
@@ -147,7 +185,7 @@ namespace arc //! arctk namespace
                     if (line_stream.fail())
                     {
                         std::cerr << "Unable to construct mesh object.\n"
-                                  << "Unable to parse serial line: `" << line << "`.\n";
+                                  << "Unable to parse line: `" << line << "`.\n";
 
                         std::exit(exit::error::FAILED_PARSE);
                     }
