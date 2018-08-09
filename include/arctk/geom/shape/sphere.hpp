@@ -41,7 +41,7 @@ namespace arc //! arctk namespace
             class Sphere : public Shape
             {
                 //  == FIELDS ==
-              protected:
+              private:
                 //  -- Positioning --
                 const vec3   _pos; //!< Position of the sphere.
                 const double _rad; //!< Radius of the sphere.
