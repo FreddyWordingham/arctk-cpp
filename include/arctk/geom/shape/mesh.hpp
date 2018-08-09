@@ -64,6 +64,8 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline const Triangle& tri(const size_t index_) const noexcept;
             };
 
 
@@ -74,6 +76,13 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Getters --
+            inline const Triangle& Mesh::tri(const size_t index_) const noexcept
+            {
+                PRE(index_ < _tris.size());
+
+                return (_tris[index_]);
+            }
 
 
 
