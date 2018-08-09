@@ -116,7 +116,7 @@ namespace arc //! arctk namespace
                 const glm::vec3 right = glm::normalize(glm::cross(_dir, _up));
                 const glm::vec3 top   = glm::normalize(glm::cross(right, _dir));
 
-                _dir = glm::rotate(_dir, roll_, _dir);
+                _up  = glm::rotate(_up, roll_, _dir);
                 _dir = glm::rotate(_dir, pitch_, right);
                 _dir = glm::rotate(_dir, yaw_, top);
 
