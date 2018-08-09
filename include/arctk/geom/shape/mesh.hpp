@@ -126,7 +126,7 @@ namespace arc //! arctk namespace
 
                         norm = inv_transform_ * norm;
 
-                        vert_norm.emplace_back(vec3(norm.x, norm.y, norm.z).normal()));
+                        vert_norm.emplace_back(vec3(norm.x, norm.y, norm.z).normal());
                     }
 
                     if (line_stream.fail())
