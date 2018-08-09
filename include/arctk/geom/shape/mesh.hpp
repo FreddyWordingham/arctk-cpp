@@ -66,7 +66,7 @@ namespace arc //! arctk namespace
 
               private:
                 //  -- Initialisation --
-                inline std::vector<Triangle> init_tris() const noexcept;
+                inline std::vector<Triangle> init_tris(const std::string& serial_, const mat4& transform_) const noexcept;
 
 
                 //  == METHODS ==
@@ -87,7 +87,7 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
-            inline std::vector<Triangle> init_tris(const std::string& serial_, const mat4& transform_) const noexcept
+            inline std::vector<Triangle> Mesh::init_tris(const std::string& serial_, const mat4& transform_) const noexcept
             {
                 std::vector<Triangle> tris;
 
