@@ -62,6 +62,10 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline explicit Mesh(const std::string& serial_, const vec3& scale_ = vec3(1.0, 1.0, 1.0), const vec3& rot_ = vec3(0.0, 0.0, 0.0), const vec3& scale_ = vec3(0.0, 0.0, 0.0)) noexcept;
 
+              private:
+                //  -- Initialisation --
+                inline std::vector<Triangle> init_tris() const noexcept;
+
 
                 //  == METHODS ==
               public:
@@ -74,9 +78,15 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             inline Mesh::Mesh(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
-              : _tris(init_tris(serial_, math::mat::transform(const vec3& scale_, const vec3& rot_, const vec3& trans_))
+              : _tris(init_tris(serial_, math::mat::transform(const vec3& scale_, const vec3& rot_, const vec3& trans_)))
             {
                 PRE(!serial_.empty());
+            }
+
+
+            //  -- Initialisation --
+            inline std::vector<Triangle> init_tris() const noexcept
+            {
             }
 
 
