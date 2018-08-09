@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
             class Triangle : public Shape
             {
                 //  == FIELDS ==
-              protected:
+              private:
                 //  -- Positioning --
                 const std::array<vec3, 3> _pos;  //!< Vertex positions.
                 const std::array<vec3, 3> _norm; //!< Vertex normals.
