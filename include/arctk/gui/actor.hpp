@@ -818,6 +818,13 @@ namespace arc //! arctk namespace
                 return (Actor(verts, {1, 1}));
             }
 
+            /**
+             *  Create an axis-aligned bounding box from an aabb shape.
+             *
+             *  @param  aabb_   Axis-aligned bounding box shape to create an actor of.
+             *
+             *  @return Aabb actor.
+             */
             inline Actor aabb(const geom::shape::Aabb& aabb_) noexcept
             {
                 return (aabb(glm::vec3(aabb_.min().x, aabb_.min().y, aabb_.min().z), glm::vec3(aabb_.max().x, aabb_.max().y, aabb_.max().z)));
