@@ -712,7 +712,7 @@ namespace arc //! arctk namespace
                 verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
                 verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
 
-                return (Actor(verts, {1}, GL_LINES));
+                return (Actor(verts, {3}, GL_LINES));
             }
 
             /**
