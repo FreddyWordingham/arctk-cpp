@@ -200,7 +200,7 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline size_t Mesh::num_tri() const noexcept
             {
-                return (tris.size());
+                return (_tris.size());
             }
 
             inline const Triangle& Mesh::tri(const size_t index_) const noexcept
