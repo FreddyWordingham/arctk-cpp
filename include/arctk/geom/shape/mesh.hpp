@@ -73,6 +73,9 @@ namespace arc //! arctk namespace
               public:
                 //  -- Getters --
                 inline const Triangle& tri(const size_t index_) const noexcept;
+
+                //  -- Collision --
+                inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
 
 
@@ -114,6 +117,13 @@ namespace arc //! arctk namespace
                 PRE(index_ < _tris.size());
 
                 return (_tris[index_]);
+            }
+
+
+            //  -- Collision --
+            inline std::optional<double> Mesh::collision(const vec3& pos_, const vec3& dir_) const noexcept
+            {
+                return (std::optional<double>(std::nullopt));
             }
 
 
