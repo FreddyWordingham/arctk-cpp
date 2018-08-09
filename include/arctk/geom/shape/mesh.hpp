@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline explicit Mesh(const std::string& serial_) noexcept;
+                inline explicit Mesh(const std::string& serial_, const vec3& trans_ = vec3(0.0, 0.0, 0.0), const vec3& rot_ = vec3(0.0, 0.0, 0.0), const vec3& scale_ = vec3(1.0, 1.0, 1.0)) noexcept;
 
 
                 //  == METHODS ==
@@ -73,8 +73,8 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Mesh::Mesh(const std::string& serial_) noexcept
-              : _tris(init_tris(serial_))
+            inline Mesh::Mesh(const std::string& serial_, const vec3& trans_, const vec3& rot_, const vec3& scale_) noexcept
+              : _tris(init_tris(serial_), const vec3& trans_, const vec3& rot_, const vec3& scale_)
             {
                 PRE(!serial_.empty());
             }
