@@ -234,6 +234,8 @@ namespace arc //! arctk namespace
 
             y.x = (pre.y.x * mat_.x.x) + (pre.y.y * mat_.y.x);
             y.y = (pre.y.x * mat_.x.y) + (pre.y.y * mat_.y.y);
+
+            return (*this);
         }
 
         /**
