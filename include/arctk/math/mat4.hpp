@@ -586,6 +586,13 @@ namespace arc //! arctk namespace
               Mat(Vec<T, 4>(x.x * val_, x.y * val_, x.z * val_, x.w * val_), Vec<T, 4>(y.x * val_, y.y * val_, y.z * val_, y.w * val_), Vec<T, 4>(z.x * val_, z.y * val_, z.z * val_, z.w * val_), Vec<T, 4>(w.x * val_, w.y * val_, w.z * val_, w.w * val_)));
         }
 
+        template <typename T>
+        constexpr inline Vec<T, 4> Mat<T, 4>::operator*(const Vec<T, 4>& vec_) const noexcept
+        {
+            return (Vec<T, 4>((x.x * _vec.x) + (x.y * _vec.y) + (x.z * _vec.z) + (x.w * _vec.w), (y.x * _vec.x) + (y.y * _vec.y) + (y.z * _vec.z) + (y.w * _vec.w), (z.x * _vec.x) + (z.y * _vec.y) + (z.z * _vec.z) + (z.w * _vec.w),
+                              (w.x * _vec.x) + (w.y * _vec.y) + (w.z * _vec.z) + (w.w * _vec.w), ));
+        }
+
         /**
          *  Multiply two mats together.
          *
