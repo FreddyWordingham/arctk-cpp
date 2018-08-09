@@ -96,8 +96,6 @@ namespace arc //! arctk namespace
             {
                 std::vector<Triangle> tris;
 
-
-
                 std::stringstream serial_stream(serial_);
                 std::string       line;
                 while (std::getline(serial_stream, line))
@@ -135,20 +133,24 @@ namespace arc //! arctk namespace
 
                             if (pos.fail() || norm.fail())
                             {
-                                ERROR("Unable to construct geom::Mesh object.", "Unable to parse serialised wavefront object line: '" << line << "'.");
+                                std::cerr << "Unable to construct mesh object.\n"
+                                          << "Unable to parse serialised wavefront object line: `" << line << "`.\n";
+
+                                std::exit(exit::error::FAILED_PARSE);
                             }
                         }
 
-                        r_tri.push_back(Triangle({{vert_pos[pos_index[ALPHA]], vert_pos[pos_index[BETA]], vert_pos[pos_index[GAMMA]]}}, {{vert_norm[norm_index[ALPHA]], vert_norm[norm_index[BETA]], vert_norm[norm_index[GAMMA]]}}));
+                        tris.push_back(Triangle(vec3(vert_pos[pos_index[ALPHA]], vert_pos[pos_index[BETA]], vert_pos[pos_index[GAMMA]]), vec3(vert_norm[norm_index[ALPHA]], vert_norm[norm_index[BETA]], vert_norm[norm_index[GAMMA]])));
                     }
 
                     if (line_stream.fail())
                     {
-                        ERROR("Unable to construct geom::Mesh object.", "Unable to parse serial line: '" << line << "'.");
+                        std::cerr << "Unable to construct mesh object.\n"
+                                  << "Unable to parse serial line: `" << line << "`.\n";
+
+                        std::exit(exit::error::FAILED_PARSE);
                     }
                 }
-
-
 
                 return (tris);
             }
