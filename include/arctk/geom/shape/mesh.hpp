@@ -60,6 +60,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline explicit Mesh(const std::string& serial_) noexcept;
 
 
                 //  == METHODS ==
@@ -72,6 +73,11 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Mesh::Mesh(const std::string& serial_) noexcept
+              : _tris(init_tris(serial_))
+            {
+                PRE(!serial_.empty());
+            }
 
 
 
