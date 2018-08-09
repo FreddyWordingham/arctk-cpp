@@ -90,6 +90,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the minimum bound of the aabb.
+             *
+             *  @return Minimum bound of the aabb.
+             */
             inline const vec3& Aabb::min() const noexcept
             {
                 return (_min);
