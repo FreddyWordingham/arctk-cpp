@@ -69,6 +69,7 @@ namespace arc //! arctk namespace
             constexpr inline Mat<T, 3>& operator-=(T val_) noexcept;
             constexpr inline Mat<T, 3>& operator-=(const Mat<T, 3>& mat_) noexcept;
             constexpr inline Mat<T, 3>& operator*=(T val_) noexcept;
+            constexpr inline Mat<T, 3>& operator*=(const Mat<T, 3>& mat_) noexcept;
             constexpr inline Mat<T, 3>& operator/=(T val_) noexcept;
 
             //  -- Increment / Decrement --
@@ -254,6 +255,24 @@ namespace arc //! arctk namespace
             z.z *= val_;
 
             return (*this);
+        }
+
+        template <typename T>
+        constexpr inline Mat<T, 3>& Mat<T, 3>::operator*=(const Mat<T, 3>& mat_) noexcept
+        {
+            const Mat<T, 3> pre = *this;
+
+            x.x = (pre.x.x * mat_.x.x) + (pre.x.y * mat_.y.x) + (pre.x.z * mat_.z.x);
+            x.y = (pre.x.x * mat_.x.y) + (pre.x.y * mat_.y.y) + (pre.x.z * mat_.z.y);
+            x.z = (pre.x.x * mat_.x.z) + (pre.x.y * mat_.y.z) + (pre.x.z * mat_.z.z);
+
+            y.x = (pre.y.x * mat_.x.x) + (pre.y.y * mat_.y.x) + (pre.y.z * mat_.z.x);
+            y.y = (pre.y.x * mat_.x.y) + (pre.y.y * mat_.y.y) + (pre.y.z * mat_.z.y);
+            y.z = (pre.y.x * mat_.x.z) + (pre.y.y * mat_.y.z) + (pre.y.z * mat_.z.z);
+
+            z.x = (pre.z.x * mat_.x.x) + (pre.z.y * mat_.y.x) + (pre.z.z * mat_.z.x);
+            z.y = (pre.z.x * mat_.x.y) + (pre.z.y * mat_.y.y) + (pre.z.z * mat_.z.y);
+            z.z = (pre.z.x * mat_.x.z) + (pre.z.y * mat_.y.z) + (pre.z.z * mat_.z.z);
         }
 
         /**
