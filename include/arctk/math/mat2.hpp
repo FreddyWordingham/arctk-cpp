@@ -68,6 +68,7 @@ namespace arc //! arctk namespace
             constexpr inline Mat<T, 2>& operator-=(T val_) noexcept;
             constexpr inline Mat<T, 2>& operator-=(const Mat<T, 2>& mat_) noexcept;
             constexpr inline Mat<T, 2>& operator*=(T val_) noexcept;
+            constexpr inline Mat<T, 2>& operator*=(const Mat<T, 2>& mat_) noexcept;
             constexpr inline Mat<T, 2>& operator/=(T val_) noexcept;
 
             //  -- Increment / Decrement --
@@ -221,6 +222,18 @@ namespace arc //! arctk namespace
             y.y *= val_;
 
             return (*this);
+        }
+
+        template <typename T>
+        constexpr inline Mat<T, 2>& Mat<T, 2>::operator*=(const Mat<T, 2>& mat_) noexcept
+        {
+            const Mat<T, 2> pre = *this;
+
+            x.x = (pre.x.x * mat_.x.x) + (pre.x.y * mat_.y.x);
+            x.y = (pre.x.x * mat_.x.y) + (pre.x.y * mat_.y.y);
+
+            y.x = (pre.y.x * mat_.x.x) + (pre.y.y * mat_.y.x);
+            y.y = (pre.y.x * mat_.x.y) + (pre.y.y * mat_.y.y);
         }
 
         /**
