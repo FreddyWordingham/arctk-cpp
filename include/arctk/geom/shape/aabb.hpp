@@ -100,6 +100,11 @@ namespace arc //! arctk namespace
                 return (_min);
             }
 
+            /**
+             *  Get the maximum bound of the aabb.
+             *
+             *  @return Maximum bound of the aabb.
+             */
             inline const vec3& Aabb::max() const noexcept
             {
                 return (_max);
