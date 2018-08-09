@@ -21,6 +21,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/geom/shape.hpp>
+#include <arctk/geom/shape/triangle.hpp>
 #include <arctk/index.hpp>
 #include <arctk/math.hpp>
 
@@ -51,8 +52,9 @@ namespace arc //! arctk namespace
             class Mesh : public Shape
             {
                 //  == FIELDS ==
-              protected:
-                //  -- Positioning --
+              private:
+                //  -- Triangle Data --
+                const std::vector<Triangle> _tris; //! List of triangles forming the mesh.
 
 
                 //  == INSTANTIATION ==
