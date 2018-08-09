@@ -106,6 +106,10 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a611308dbbdad4c74feac3985ae0cc1a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a611308dbbdad4c74feac3985ae0cc1a1">Aabb</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;min_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;max_) noexcept</td></tr>
 <tr class="separator:a611308dbbdad4c74feac3985ae0cc1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addf2ffa86e739d26418b156b59f30865"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#addf2ffa86e739d26418b156b59f30865">min</a> () const noexcept</td></tr>
+<tr class="separator:addf2ffa86e739d26418b156b59f30865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae28056b2fea66475b95e9f2ea5bbf092"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#ae28056b2fea66475b95e9f2ea5bbf092">max</a> () const noexcept</td></tr>
+<tr class="separator:ae28056b2fea66475b95e9f2ea5bbf092"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eb52cf315b517ce2392ef463530d1da"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a3eb52cf315b517ce2392ef463530d1da">collision</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
 <tr class="separator:a3eb52cf315b517ce2392ef463530d1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classarc_1_1geom_1_1_shape"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classarc_1_1geom_1_1_shape')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classarc_1_1geom_1_1_shape.html">arc::geom::Shape</a></td></tr>
@@ -232,6 +236,80 @@ min_.z must be less than max_.z. </dd></dl>
 
 </div>
 </div>
+<a id="ae28056b2fea66475b95e9f2ea5bbf092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae28056b2fea66475b95e9f2ea5bbf092">&#9670;&nbsp;</a></span>max()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp; arc::geom::shape::Aabb::max </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the maximum bound of the aabb.</p>
+<dl class="section return"><dt>Returns</dt><dd>Maximum bound of the aabb. </dd></dl>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_aabb_ae28056b2fea66475b95e9f2ea5bbf092_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_aabb_ae28056b2fea66475b95e9f2ea5bbf092_icgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_aabb_ae28056b2fea66475b95e9f2ea5bbf092_icgraph" id="classarc_1_1geom_1_1shape_1_1_aabb_ae28056b2fea66475b95e9f2ea5bbf092_icgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#a736f0803bd699a43765867fede6a7e9c" title="arc::gui::actor::aabb" alt="" coords="249,5,388,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="addf2ffa86e739d26418b156b59f30865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addf2ffa86e739d26418b156b59f30865">&#9670;&nbsp;</a></span>min()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp; arc::geom::shape::Aabb::min </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the minimum bound of the aabb.</p>
+<dl class="section return"><dt>Returns</dt><dd>Minimum bound of the aabb. </dd></dl>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_aabb_addf2ffa86e739d26418b156b59f30865_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_aabb_addf2ffa86e739d26418b156b59f30865_icgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_aabb_addf2ffa86e739d26418b156b59f30865_icgraph" id="classarc_1_1geom_1_1shape_1_1_aabb_addf2ffa86e739d26418b156b59f30865_icgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#a736f0803bd699a43765867fede6a7e9c" title="arc::gui::actor::aabb" alt="" coords="245,5,384,31"/>
+</map>
+</div>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="abbbd2ade54a871e6de28c4d8dd8573a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abbbd2ade54a871e6de28c4d8dd8573a7">&#9670;&nbsp;</a></span>_max</h2>
@@ -287,7 +365,7 @@ min_.z must be less than max_.z. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 7 2018 17:21:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 9 2018 01:46:20 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

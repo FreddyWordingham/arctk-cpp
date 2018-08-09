@@ -14,7 +14,7 @@ var searchData=
   ['diffuse_5fsource_5ffrag',['DIFFUSE_SOURCE_FRAG',['../namespacearc_1_1gui_1_1shader.html#aa49b37a6a3ea0a7549b7af7bfd82fb9d',1,'arc::gui::shader']]],
   ['diffuse_5fsource_5fvert',['DIFFUSE_SOURCE_VERT',['../namespacearc_1_1gui_1_1shader.html#a835e1e12bd78186f5cf782f1697f2bc2',1,'arc::gui::shader']]],
   ['dim_2ehpp',['dim.hpp',['../dim_8hpp.html',1,'']]],
-  ['dir',['dir',['../classarc_1_1phys_1_1_particle.html#a089cfe5992a0c9e2880ef1df5521c74c',1,'arc::phys::Particle::dir()'],['../namespacearc_1_1config.html#a07a575e6c44170c6f629402c89f0a044',1,'arc::config::DIR()']]],
+  ['dir',['dir',['../classarc_1_1phys_1_1_particle.html#a9caf5d0d87ebc7779efc294fe3f4a0f3',1,'arc::phys::Particle::dir()'],['../namespacearc_1_1config.html#a07a575e6c44170c6f629402c89f0a044',1,'arc::config::DIR()']]],
   ['discrete',['Discrete',['../classarc_1_1random_1_1distribution_1_1_discrete.html',1,'arc::random::distribution::Discrete&lt; T &gt;'],['../classarc_1_1random_1_1distribution_1_1_discrete.html#a0643b275df486dc6b8590259629ed91c',1,'arc::random::distribution::Discrete::Discrete()']]],
   ['discrete_2ehpp',['discrete.hpp',['../discrete_8hpp.html',1,'']]],
   ['distance',['distance',['../namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d',1,'arc::math::geom']]],

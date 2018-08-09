@@ -1,12 +1,13 @@
 <map id="arc::math::mat::translate" name="arc::math::mat::translate">
-<area shape="rect" id="node2" href="$classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="228,121,379,160"/>
-<area shape="rect" id="node9" href="$namespacearc_1_1math_1_1mat.html#af39486147412a1d46985c59a96727834" title="arc::math::mat::transform" alt="" coords="218,233,389,259"/>
-<area shape="rect" id="node3" href="$classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="447,29,589,55"/>
-<area shape="rect" id="node6" href="$classarc_1_1gui_1_1_actor.html#afa7614a8eaf83751cf0b879934bf8388" title="arc::gui::Actor::translate" alt="" coords="437,79,599,104"/>
-<area shape="rect" id="node7" href="$classarc_1_1gui_1_1_actor.html#ae1bc2cdd561344c3568a41d920653308" title="arc::gui::Actor::rotate" alt="" coords="445,128,590,153"/>
-<area shape="rect" id="node8" href="$classarc_1_1gui_1_1_actor.html#a99572fd0c56545b8512549e3b2d29a94" title="arc::gui::Actor::scale" alt="" coords="447,177,589,203"/>
+<area shape="rect" id="node2" href="$classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="228,147,379,185"/>
+<area shape="rect" id="node10" href="$namespacearc_1_1math_1_1mat.html#af39486147412a1d46985c59a96727834" title="arc::math::mat::transform" alt="" coords="218,259,389,284"/>
+<area shape="rect" id="node3" href="$classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="447,55,589,80"/>
+<area shape="rect" id="node7" href="$classarc_1_1gui_1_1_actor.html#afa7614a8eaf83751cf0b879934bf8388" title="arc::gui::Actor::translate" alt="" coords="437,104,599,129"/>
+<area shape="rect" id="node8" href="$classarc_1_1gui_1_1_actor.html#ae1bc2cdd561344c3568a41d920653308" title="arc::gui::Actor::rotate" alt="" coords="445,153,590,179"/>
+<area shape="rect" id="node9" href="$classarc_1_1gui_1_1_actor.html#a99572fd0c56545b8512549e3b2d29a94" title="arc::gui::Actor::scale" alt="" coords="447,203,589,228"/>
 <area shape="rect" id="node4" href="$namespacearc_1_1gui_1_1actor.html#a3714767847a4ef34b00d69e3308cd14b" title="arc::gui::actor::box" alt="" coords="651,5,782,31"/>
 <area shape="rect" id="node5" href="$namespacearc_1_1gui_1_1actor.html#a39bd4bd30cb2b2a0ab7ba0fc958c95e2" title="arc::gui::actor::aabb" alt="" coords="647,55,786,80"/>
-<area shape="rect" id="node10" href="$namespacearc_1_1str_1_1parse.html#a58a373132eb04bcd4f94d61e47ef2204" title="arc::str::parse::parsable\l_to\&lt; bool \&gt;" alt="" coords="437,227,598,265"/>
-<area shape="rect" id="node11" href="$namespacearc_1_1str_1_1parse.html#a0d90413f35d2cb9bcbccd3c57c3c0fe3" title="arc::str::parse::to\l\&lt; bool \&gt;" alt="" coords="457,289,578,328"/>
+<area shape="rect" id="node6" href="$namespacearc_1_1gui_1_1actor.html#a5cadfa1d769d995b24e7d1a0c41b236f" title="arc::gui::actor::path" alt="" coords="649,104,784,129"/>
+<area shape="rect" id="node11" href="$namespacearc_1_1str_1_1parse.html#a58a373132eb04bcd4f94d61e47ef2204" title="arc::str::parse::parsable\l_to\&lt; bool \&gt;" alt="" coords="437,252,598,291"/>
+<area shape="rect" id="node12" href="$namespacearc_1_1str_1_1parse.html#a0d90413f35d2cb9bcbccd3c57c3c0fe3" title="arc::str::parse::to\l\&lt; bool \&gt;" alt="" coords="457,315,578,353"/>
 </map>

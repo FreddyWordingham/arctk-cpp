@@ -84,8 +84,8 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abbf65e45ffdaed893b610c1a19a075e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2">Actor</a> (const std::vector&lt; GLfloat &gt; &amp;verts_, const std::vector&lt; size_t &gt; &amp;layout_={3}, GLenum primitive_type_=GL_TRIANGLES, GLenum fill_mode_=GL_FILL) noexcept</td></tr>
 <tr class="separator:abbf65e45ffdaed893b610c1a19a075e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78951c0613411df9bedb927c9807bffc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_actor.html#a78951c0613411df9bedb927c9807bffc">Actor</a> (const std::vector&lt; glm::vec3 &gt; &amp;verts_, const std::vector&lt; size_t &gt; &amp;layout_={1}, GLenum primitive_type_=GL_TRIANGLES, GLenum fill_mode_=GL_FILL) noexcept</td></tr>
-<tr class="separator:a78951c0613411df9bedb927c9807bffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16d60ee441d8ecfbcbc1e788a63b0c3c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_actor.html#a16d60ee441d8ecfbcbc1e788a63b0c3c">Actor</a> (const std::vector&lt; glm::vec3 &gt; &amp;verts_, const std::vector&lt; size_t &gt; &amp;layout_={3}, GLenum primitive_type_=GL_TRIANGLES, GLenum fill_mode_=GL_FILL) noexcept</td></tr>
+<tr class="separator:a16d60ee441d8ecfbcbc1e788a63b0c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b457c2ac5cae4710152632d36144e86"><td class="memItemLeft" align="right" valign="top">GLsizei&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_actor.html#a8b457c2ac5cae4710152632d36144e86">num_vert</a> () const noexcept</td></tr>
 <tr class="separator:a8b457c2ac5cae4710152632d36144e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5fa2a4873e426314fd4ec7690e4b931"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_actor.html#af5fa2a4873e426314fd4ec7690e4b931">vao</a> () const noexcept</td></tr>
@@ -241,13 +241,14 @@ Private Attributes</h2></td></tr>
 <map name="classarc_1_1gui_1_1_actor_abbf65e45ffdaed893b610c1a19a075e2_icgraph" id="classarc_1_1gui_1_1_actor_abbf65e45ffdaed893b610c1a19a075e2_icgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#a3714767847a4ef34b00d69e3308cd14b" title="arc::gui::actor::box" alt="" coords="200,5,331,31"/>
 <area shape="rect" id="node3" href="namespacearc_1_1gui_1_1actor.html#a39bd4bd30cb2b2a0ab7ba0fc958c95e2" title="arc::gui::actor::aabb" alt="" coords="195,55,335,80"/>
+<area shape="rect" id="node4" href="namespacearc_1_1gui_1_1actor.html#a5cadfa1d769d995b24e7d1a0c41b236f" title="arc::gui::actor::path" alt="" coords="197,104,333,129"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a78951c0613411df9bedb927c9807bffc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78951c0613411df9bedb927c9807bffc">&#9670;&nbsp;</a></span>Actor() <span class="overload">[2/2]</span></h2>
+<a id="a16d60ee441d8ecfbcbc1e788a63b0c3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16d60ee441d8ecfbcbc1e788a63b0c3c">&#9670;&nbsp;</a></span>Actor() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,7 +266,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; size_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>layout_</em> = <code>{1}</code>, </td>
+          <td class="paramname"><em>layout_</em> = <code>{3}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -301,14 +302,14 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>verts_.size() must be exactly divisible by the sum of the layout patturn. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>verts_.size() * 3 must be exactly divisible by the sum of the layout patturn. </dd></dl>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1gui_1_1_actor_a78951c0613411df9bedb927c9807bffc_cgraph.png" border="0" usemap="#classarc_1_1gui_1_1_actor_a78951c0613411df9bedb927c9807bffc_cgraph" alt=""/></div>
-<map name="classarc_1_1gui_1_1_actor_a78951c0613411df9bedb927c9807bffc_cgraph" id="classarc_1_1gui_1_1_actor_a78951c0613411df9bedb927c9807bffc_cgraph">
+<div class="center"><img src="classarc_1_1gui_1_1_actor_a16d60ee441d8ecfbcbc1e788a63b0c3c_cgraph.png" border="0" usemap="#classarc_1_1gui_1_1_actor_a16d60ee441d8ecfbcbc1e788a63b0c3c_cgraph" alt=""/></div>
+<map name="classarc_1_1gui_1_1_actor_a16d60ee441d8ecfbcbc1e788a63b0c3c_cgraph" id="classarc_1_1gui_1_1_actor_a16d60ee441d8ecfbcbc1e788a63b0c3c_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1math_1_1container.html#af7a7e70fec2026804d07178e063a2236" title="arc::math::container::sum" alt="" coords="195,48,367,73"/>
 <area shape="rect" id="node3" href="classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="205,97,357,136"/>
 <area shape="rect" id="node4" href="classarc_1_1gui_1_1_actor.html#a5251ce8de3e14f4b3daf9e2a7b771eee" title="arc::gui::Actor::model" alt="" coords="424,5,571,31"/>
@@ -491,13 +492,14 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1gui_1_1_actor_a5251ce8de3e14f4b3daf9e2a7b771eee_icgraph.png" border="0" usemap="#classarc_1_1gui_1_1_actor_a5251ce8de3e14f4b3daf9e2a7b771eee_icgraph" alt=""/></div>
 <map name="classarc_1_1gui_1_1_actor_a5251ce8de3e14f4b3daf9e2a7b771eee_icgraph" id="classarc_1_1gui_1_1_actor_a5251ce8de3e14f4b3daf9e2a7b771eee_icgraph">
-<area shape="rect" id="node2" href="classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="201,97,352,136"/>
-<area shape="rect" id="node3" href="classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="410,29,553,55"/>
-<area shape="rect" id="node6" href="classarc_1_1gui_1_1_actor.html#afa7614a8eaf83751cf0b879934bf8388" title="arc::gui::Actor::translate" alt="" coords="400,79,563,104"/>
-<area shape="rect" id="node7" href="classarc_1_1gui_1_1_actor.html#ae1bc2cdd561344c3568a41d920653308" title="arc::gui::Actor::rotate" alt="" coords="409,128,554,153"/>
-<area shape="rect" id="node8" href="classarc_1_1gui_1_1_actor.html#a99572fd0c56545b8512549e3b2d29a94" title="arc::gui::Actor::scale" alt="" coords="410,177,553,203"/>
+<area shape="rect" id="node2" href="classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="201,123,352,161"/>
+<area shape="rect" id="node3" href="classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="410,55,553,80"/>
+<area shape="rect" id="node7" href="classarc_1_1gui_1_1_actor.html#afa7614a8eaf83751cf0b879934bf8388" title="arc::gui::Actor::translate" alt="" coords="400,104,563,129"/>
+<area shape="rect" id="node8" href="classarc_1_1gui_1_1_actor.html#ae1bc2cdd561344c3568a41d920653308" title="arc::gui::Actor::rotate" alt="" coords="409,153,554,179"/>
+<area shape="rect" id="node9" href="classarc_1_1gui_1_1_actor.html#a99572fd0c56545b8512549e3b2d29a94" title="arc::gui::Actor::scale" alt="" coords="410,203,553,228"/>
 <area shape="rect" id="node4" href="namespacearc_1_1gui_1_1actor.html#a3714767847a4ef34b00d69e3308cd14b" title="arc::gui::actor::box" alt="" coords="615,5,746,31"/>
 <area shape="rect" id="node5" href="namespacearc_1_1gui_1_1actor.html#a39bd4bd30cb2b2a0ab7ba0fc958c95e2" title="arc::gui::actor::aabb" alt="" coords="611,55,750,80"/>
+<area shape="rect" id="node6" href="namespacearc_1_1gui_1_1actor.html#a5cadfa1d769d995b24e7d1a0c41b236f" title="arc::gui::actor::path" alt="" coords="612,104,748,129"/>
 </map>
 </div>
 
@@ -922,12 +924,13 @@ col_.a must be between zero and unity. </dd></dl>
 <div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1gui_1_1_actor_a514c9532cc9290852688eaac5817b32f_icgraph.png" border="0" usemap="#classarc_1_1gui_1_1_actor_a514c9532cc9290852688eaac5817b32f_icgraph" alt=""/></div>
 <map name="classarc_1_1gui_1_1_actor_a514c9532cc9290852688eaac5817b32f_icgraph" id="classarc_1_1gui_1_1_actor_a514c9532cc9290852688eaac5817b32f_icgraph">
-<area shape="rect" id="node2" href="classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="215,29,357,55"/>
-<area shape="rect" id="node5" href="classarc_1_1gui_1_1_actor.html#afa7614a8eaf83751cf0b879934bf8388" title="arc::gui::Actor::translate" alt="" coords="205,79,367,104"/>
-<area shape="rect" id="node6" href="classarc_1_1gui_1_1_actor.html#ae1bc2cdd561344c3568a41d920653308" title="arc::gui::Actor::rotate" alt="" coords="214,128,359,153"/>
-<area shape="rect" id="node7" href="classarc_1_1gui_1_1_actor.html#a99572fd0c56545b8512549e3b2d29a94" title="arc::gui::Actor::scale" alt="" coords="215,177,357,203"/>
+<area shape="rect" id="node2" href="classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="215,55,357,80"/>
+<area shape="rect" id="node6" href="classarc_1_1gui_1_1_actor.html#afa7614a8eaf83751cf0b879934bf8388" title="arc::gui::Actor::translate" alt="" coords="205,104,367,129"/>
+<area shape="rect" id="node7" href="classarc_1_1gui_1_1_actor.html#ae1bc2cdd561344c3568a41d920653308" title="arc::gui::Actor::rotate" alt="" coords="214,153,359,179"/>
+<area shape="rect" id="node8" href="classarc_1_1gui_1_1_actor.html#a99572fd0c56545b8512549e3b2d29a94" title="arc::gui::Actor::scale" alt="" coords="215,203,357,228"/>
 <area shape="rect" id="node3" href="namespacearc_1_1gui_1_1actor.html#a3714767847a4ef34b00d69e3308cd14b" title="arc::gui::actor::box" alt="" coords="419,5,550,31"/>
 <area shape="rect" id="node4" href="namespacearc_1_1gui_1_1actor.html#a39bd4bd30cb2b2a0ab7ba0fc958c95e2" title="arc::gui::actor::aabb" alt="" coords="415,55,554,80"/>
+<area shape="rect" id="node5" href="namespacearc_1_1gui_1_1actor.html#a5cadfa1d769d995b24e7d1a0c41b236f" title="arc::gui::actor::path" alt="" coords="417,104,553,129"/>
 </map>
 </div>
 
@@ -1255,7 +1258,7 @@ col_.a must be between zero and unity. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 7 2018 17:21:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 9 2018 01:46:20 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

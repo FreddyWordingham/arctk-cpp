@@ -161,6 +161,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a385a713cb090aec43ef1b9698303c9a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0b8c4715931a91ff3897860ce761d7c"><td class="memItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#ab0b8c4715931a91ff3897860ce761d7c">mag_sq</a> () const noexcept</td></tr>
 <tr class="separator:ab0b8c4715931a91ff3897860ce761d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad653cb031e505d7d91529842eae49a5c"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classarc_1_1math_1_1_vec.html">Vec</a>&lt; T, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#ad653cb031e505d7d91529842eae49a5c">normal</a> () const noexcept</td></tr>
+<tr class="separator:ad653cb031e505d7d91529842eae49a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5671ad652f8df04ae02aaad65f552a0"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#af5671ad652f8df04ae02aaad65f552a0">normalise</a> () noexcept</td></tr>
 <tr class="separator:af5671ad652f8df04ae02aaad65f552a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a989fcf094471d17edee984629ad103b4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a989fcf094471d17edee984629ad103b4">str</a> () const noexcept override</td></tr>
@@ -484,6 +486,47 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="ad653cb031e505d7d91529842eae49a5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad653cb031e505d7d91529842eae49a5c">&#9670;&nbsp;</a></span>normal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classarc_1_1math_1_1_vec.html">Vec</a>&lt; T, 4 &gt; <a class="el" href="classarc_1_1math_1_1_vec.html">arc::math::Vec</a>&lt; T, 4 &gt;::normal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the normalised form of the vec.</p>
+<dl class="section return"><dt>Returns</dt><dd>Normalised form of the vec. </dd></dl>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4_ad653cb031e505d7d91529842eae49a5c_cgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec_3_01_t_00_014_01_4_ad653cb031e505d7d91529842eae49a5c_cgraph" alt=""/></div>
+<map name="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4_ad653cb031e505d7d91529842eae49a5c_cgraph" id="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4_ad653cb031e505d7d91529842eae49a5c_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#af5671ad652f8df04ae02aaad65f552a0" title="arc::math::Vec\&lt; T,\l 4 \&gt;::normalise" alt="" coords="182,24,310,63"/>
+<area shape="rect" id="node3" href="classarc_1_1math_1_1_vec.html#a79bac662cf84d86c539cf2497654e048" title="arc::math::Vec::mag" alt="" coords="377,5,517,31"/>
+<area shape="rect" id="node4" href="classarc_1_1math_1_1_vec.html#aa6d4a0162dccc9fc08cb51111aa44825" title="arc::math::Vec::normalised" alt="" coords="358,55,537,80"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="af5671ad652f8df04ae02aaad65f552a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af5671ad652f8df04ae02aaad65f552a0">&#9670;&nbsp;</a></span>normalise()</h2>
 
@@ -510,15 +553,25 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Normalise the vec.</p>
 <dl class="section post"><dt>Postcondition</dt><dd><a class="el" href="classarc_1_1math_1_1_vec.html">Vec</a> must be normalised. </dd></dl>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4_af5671ad652f8df04ae02aaad65f552a0_cgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec_3_01_t_00_014_01_4_af5671ad652f8df04ae02aaad65f552a0_cgraph" alt=""/></div>
 <map name="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4_af5671ad652f8df04ae02aaad65f552a0_cgraph" id="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4_af5671ad652f8df04ae02aaad65f552a0_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1math_1_1_vec.html#a79bac662cf84d86c539cf2497654e048" title="arc::math::Vec::mag" alt="" coords="201,5,341,31"/>
 <area shape="rect" id="node3" href="classarc_1_1math_1_1_vec.html#aa6d4a0162dccc9fc08cb51111aa44825" title="arc::math::Vec::normalised" alt="" coords="182,55,361,80"/>
+</map>
+</div>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4_af5671ad652f8df04ae02aaad65f552a0_icgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec_3_01_t_00_014_01_4_af5671ad652f8df04ae02aaad65f552a0_icgraph" alt=""/></div>
+<map name="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4_af5671ad652f8df04ae02aaad65f552a0_icgraph" id="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4_af5671ad652f8df04ae02aaad65f552a0_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#ad653cb031e505d7d91529842eae49a5c" title="arc::math::Vec\&lt; T,\l 4 \&gt;::normal" alt="" coords="182,5,310,44"/>
 </map>
 </div>
 
@@ -557,11 +610,11 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the vec is normalised. </dd></dl>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4_a6c7827315ad639489c2fd6f9335fe79b_cgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec_3_01_t_00_014_01_4_a6c7827315ad639489c2fd6f9335fe79b_cgraph" alt=""/></div>
 <map name="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4_a6c7827315ad639489c2fd6f9335fe79b_cgraph" id="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4_a6c7827315ad639489c2fd6f9335fe79b_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1math_1_1_vec.html#a00bd5df29b26536d5f5a48e4ff765aef" title="arc::math::Vec::mag_sq" alt="" coords="182,12,343,37"/>
@@ -1588,7 +1641,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 7 2018 17:21:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 9 2018 01:46:21 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
