@@ -36,6 +36,14 @@ namespace arc //! arctk namespace
 
 
 
+            //  == SETTINGS ==
+            //  -- Wavefront Keywords --
+            constexpr const char* POS_KEYWORD  = "v";  //! Wavefront file keyword identifying vertex positions.
+            constexpr const char* NORM_KEYWORD = "vn"; //! Wavefront file keyword identifying vertex normals.
+            constexpr const char* FACE_KEYWORD = "f";  //! Wavefront file keyword identifying a face.
+
+
+
             //  == CLASS ==
             /**
              *  Geometric triangle mesh shape.
