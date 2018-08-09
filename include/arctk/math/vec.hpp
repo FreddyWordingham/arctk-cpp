@@ -37,12 +37,6 @@ namespace arc //! arctk namespace
 
 
 
-        //  == CLASS PROTOTYPES ==
-        template <typename T, size_t N>
-        class Mat;
-
-
-
         //  == CLASS ==
         /**
          *  Mathematical vector class.
