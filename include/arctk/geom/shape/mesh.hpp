@@ -16,12 +16,14 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <iostream>
 #include <optional>
 #include <sstream>
 #include <string>
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/exit.hpp>
 #include <arctk/geom/shape.hpp>
 #include <arctk/geom/shape/triangle.hpp>
 #include <arctk/index.hpp>
@@ -100,7 +102,50 @@ namespace arc //! arctk namespace
                 std::string       line;
                 while (std::getline(serial_stream, line))
                 {
-                    std::cout << line << '\n';
+                    std::stringstream line_stream(line);
+                    std::string       word;
+                    line_stream >> word;
+
+                    if (word == FACE_KEYWORD)
+                    {
+                        std::array<std::string, 3> face;
+                        line_stream >> face[ALPHA] >> face[BETA] >> face[GAMMA];
+
+                        if (line_stream.rdbuf()->in_avail() != 0)
+                        {
+                            std::cerr << "Unable to construct mesh object.\n"
+                                      << "Non-triangular face located at line: `" << line << "`.\n";
+
+                            std::exit(exit::error::FAILED_PARSE);
+                        }
+
+                        std::array<size_t, 3> pos_index{}, norm_index{};
+                        for (size_t i = 0; i < 3; ++i)
+                        {
+                            const size_t first_slash = face[i].find_first_of('/');
+                            const size_t last_slash  = face[i].find_last_of('/');
+
+                            std::stringstream pos(face[i].substr(0, first_slash));
+                            pos >> pos_index[i];
+                            --pos_index[i];
+
+                            std::stringstream norm(face[i].substr(last_slash + 1));
+                            norm >> norm_index[i];
+                            --norm_index[i];
+
+                            if (pos.fail() || norm.fail())
+                            {
+                                ERROR("Unable to construct geom::Mesh object.", "Unable to parse serialised wavefront object line: '" << line << "'.");
+                            }
+                        }
+
+                        r_tri.push_back(Triangle({{vert_pos[pos_index[ALPHA]], vert_pos[pos_index[BETA]], vert_pos[pos_index[GAMMA]]}}, {{vert_norm[norm_index[ALPHA]], vert_norm[norm_index[BETA]], vert_norm[norm_index[GAMMA]]}}));
+                    }
+
+                    if (line_stream.fail())
+                    {
+                        ERROR("Unable to construct geom::Mesh object.", "Unable to parse serial line: '" << line << "'.");
+                    }
                 }
 
 
