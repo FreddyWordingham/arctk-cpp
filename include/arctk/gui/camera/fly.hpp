@@ -106,6 +106,10 @@ namespace arc //! arctk namespace
 
             /**
              *  Rotate the camera's orientation.
+             *
+             *  @param  roll_   Angle to roll the camera.
+             *  @param  pitch_  Angle to pitch the camera.
+             *  @param  yaw_    Angle to yaw the camera.
              */
             inline void Fly::rotate(const float roll_, const float pitch_, const float yaw_) noexcept
             {
