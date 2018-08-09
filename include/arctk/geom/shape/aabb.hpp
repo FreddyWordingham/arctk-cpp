@@ -41,7 +41,7 @@ namespace arc //! arctk namespace
             class Aabb : public Shape
             {
                 //  == FIELDS ==
-              protected:
+              private:
                 //  -- Positioning --
                 vec3 _min; //!< Minimum vertex of the aabb.
                 vec3 _max; //!< Maximum vertex of the aabb.
