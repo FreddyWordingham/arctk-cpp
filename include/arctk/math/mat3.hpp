@@ -86,6 +86,7 @@ namespace arc //! arctk namespace
             constexpr inline Mat<T, 3> operator-(T val_) const noexcept;
             constexpr inline Mat<T, 3> operator-(const Mat<T, 3>& mat_) const noexcept;
             constexpr inline Mat<T, 3> operator*(T val_) const noexcept;
+            constexpr inline Vec<T, 3> operator*(const Vec<T, 3>& mat_) const noexcept;
             constexpr inline Mat<T, 3> operator*(const Mat<T, 3>& mat_) const noexcept;
             constexpr inline Mat<T, 3> operator/(T val_) const noexcept;
 
@@ -488,6 +489,13 @@ namespace arc //! arctk namespace
         {
             return (Mat(Vec<T, 3>(x.x * val_, x.y * val_, x.z * val_), Vec<T, 3>(y.x * val_, y.y * val_, y.z * val_), Vec<T, 3>(z.x * val_, z.y * val_, z.z * val_)));
         }
+
+        template <typename T>
+        constexpr inline Vec<T, 3> Mat<T, 3>::operator*(const Vec<T, 3>& vec_) const noexcept
+        {
+            return (Vec<T, 3>((x.x * _vec.x) + (x.y * _vec.y) + (x.z * _vec.z), (y.x * _vec.x) + (y.y * _vec.y) + (y.z * _vec.z), (z.x * _vec.x) + (z.y * _vec.y) + (z.z * _vec.z)));
+        }
+
 
         /**
          *  Multiply two mats together.
