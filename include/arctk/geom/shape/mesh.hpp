@@ -17,6 +17,8 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <optional>
+#include <sstream>
+#include <string>
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
@@ -60,7 +62,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline explicit Mesh(const std::string& serial_, const vec3& scale_ = vec3(1.0, 1.0, 1.0), const vec3& rot_ = vec3(0.0, 0.0, 0.0), const vec3& scale_ = vec3(0.0, 0.0, 0.0)) noexcept;
+                inline explicit Mesh(const std::string& serial_, const vec3& scale_ = vec3(1.0, 1.0, 1.0), const vec3& rot_ = vec3(0.0, 0.0, 0.0), const vec3& trans_ = vec3(0.0, 0.0, 0.0)) noexcept;
 
               private:
                 //  -- Initialisation --
@@ -78,15 +80,29 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             inline Mesh::Mesh(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
-              : _tris(init_tris(serial_, math::mat::transform(const vec3& scale_, const vec3& rot_, const vec3& trans_)))
+              : _tris(init_tris(serial_, math::mat::transform(scale_, rot_, trans_)))
             {
                 PRE(!serial_.empty());
             }
 
 
             //  -- Initialisation --
-            inline std::vector<Triangle> init_tris() const noexcept
+            inline std::vector<Triangle> init_tris(const std::string& serial_, const mat4& transform_) const noexcept
             {
+                std::vector<Triangle> tris;
+
+
+
+                std::stringstream serial_stream(serial_);
+                std::string       line;
+                while (std::getline(serial_stream, line))
+                {
+                    std::cout << line << '\n';
+                }
+
+
+
+                return (tris);
             }
 
 
