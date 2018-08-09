@@ -589,22 +589,6 @@ namespace arc //! arctk namespace
             return (mat);
         }
 
-        template <typename T, size_t N>
-        constexpr inline Vec<T, N> Mat<T, N>::operator*(const Vec<T, N>& vec_) const noexcept
-        {
-            Vec<T, N> vec;
-
-            for (size_t i = 0; i < N; ++i)
-            {
-                for (size_t j = 0; j < N; ++j)
-                {
-                    vec[i] += vec_[j] * _data[i][j];
-                }
-            }
-
-            return (vec);
-        }
-
         /**
          *  Multiply a mats elements by a value.
          *
@@ -629,6 +613,22 @@ namespace arc //! arctk namespace
             }
 
             return (mat);
+        }
+
+        template <typename T, size_t N>
+        constexpr inline Vec<T, N> Mat<T, N>::operator*(const Vec<T, N>& vec_) const noexcept
+        {
+            Vec<T, N> vec;
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                for (size_t j = 0; j < N; ++j)
+                {
+                    vec[i] += vec_[j] * _data[i][j];
+                }
+            }
+
+            return (vec);
         }
 
         /**
