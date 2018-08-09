@@ -830,6 +830,13 @@ namespace arc //! arctk namespace
                 return (aabb(glm::vec3(aabb_.min().x, aabb_.min().y, aabb_.min().z), glm::vec3(aabb_.max().x, aabb_.max().y, aabb_.max().z)));
             }
 
+            /**
+             *  Create path actor from a particles path.
+             *
+             *  @param  part_   Particle to create a path actor of.
+             *
+             *  @return Path actor.
+             */
             inline Actor path(const phys::Particle& part_) noexcept
             {
                 std::vector<glm::vec3> verts;
