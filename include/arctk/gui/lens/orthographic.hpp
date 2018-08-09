@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- View --
-                const glm::vec3 _min;
+                const glm::vec3 _min; //!< Minimum bound of the viewport.
                 const glm::vec3 _max;
 
 
