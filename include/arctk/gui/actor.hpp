@@ -486,7 +486,7 @@ namespace arc //! arctk namespace
                     verts.emplace_back(glm::vec3(max_.x, i * cell_size_.y, 0.0f));
                 }
 
-                Actor grid(verts, {1}, GL_LINES);
+                Actor grid(verts, {3}, GL_LINES);
                 grid.set_col(glm::vec3(0.25f, 0.25f, 0.25f));
 
                 return (grid);
