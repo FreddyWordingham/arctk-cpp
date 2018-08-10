@@ -39,6 +39,13 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Interaction --
+
+                //  -- Scattering --
+                const double _g;
+
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
