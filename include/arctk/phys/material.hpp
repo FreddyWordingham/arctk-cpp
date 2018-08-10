@@ -19,6 +19,7 @@
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
 #include <arctk/phys/particle/photon.hpp>
+#include <arctk/random.hpp>
 
 
 
@@ -56,8 +57,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            virtual inline double interaction_dist(const particle::Photon& phot_) const noexcept = 0;
-            virtual inline void   interact(particle::Photon& phot_) const noexcept               = 0;
+            virtual inline double interaction_dist(const particle::Photon& phot_) const noexcept    = 0;
+            virtual inline void   interact(Generator* rng_, particle::Photon& phot_) const noexcept = 0;
         };
 
 
