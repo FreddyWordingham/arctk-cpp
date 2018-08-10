@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/phys/material.hpp>
 #include <arctk/phys/particle.hpp>
 #include <arctk/phys/particle/photon.hpp>
 
