@@ -123,6 +123,7 @@ namespace arc //! arctk namespace
             constexpr inline Vec<T, 4> operator-(const Vec<T, 4>& vec_) const noexcept;
             constexpr inline Vec<T, 4> operator*(T val_) const noexcept;
             constexpr inline T         operator*(const Vec<T, 4>& vec_) const noexcept;
+            constexpr inline Vec<T, 4> operator*(const Mat<T, 4>& mat_) const noexcept;
             constexpr inline Vec<T, 4> operator/(T val_) const noexcept;
 
             //  -- Access --
@@ -505,6 +506,17 @@ namespace arc //! arctk namespace
         constexpr inline T Vec<T, 4>::operator*(const Vec<T, 4>& vec_) const noexcept
         {
             return ((x * vec_.x) + (y * vec_.y) + (z * vec_.z) + (w * vec_.w));
+        }
+
+        template <typename T>
+        constexpr inline Vec<T, 4> Vec<T, 4>::operator*(const Mat<T, 4>& mat_) const noexcept
+        {
+            return (Vec(
+                (x*mat_.x.x) + (y * mat_.y.x) + (z * mat_.z.x) + (w + mat_.w.x),
+                (x*mat_.x.y) + (y * mat_.y.y) + (z * mat_.z.y) + (w + mat_.w.y),
+                (x*mat_.x.z) + (y * mat_.y.z) + (z * mat_.z.z) + (w + mat_.w.z),
+                (x*mat_.x.w) + (y * mat_.y.w) + (z * mat_.z.w) + (w + mat_.w.w)
+            );
         }
 
         /**
