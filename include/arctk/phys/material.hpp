@@ -35,12 +35,9 @@ namespace arc //! arctk namespace
          */
         class Material
         {
-            //  == FIELDS ==
-          protected:
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Material(const vec3& pos_, const vec3& dir_) noexcept;
             inline Material(const Material&) = default; //!< Defaulted copy constructor.
             inline Material(Material&&)      = default; //!< Defaulted move constructor.
 
@@ -57,6 +54,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            virtual inline double interaction_dist(const particle::Photon& phot_) const noexcept = 0;
         };
 
 
