@@ -514,6 +514,13 @@ namespace arc //! arctk namespace
             return ((x * vec_.x) + (y * vec_.y) + (z * vec_.z) + (w * vec_.w));
         }
 
+        /**
+         *  Multiply the vec by a mat.
+         *
+         *  @param  mat_    Mat to multiply this vec by.
+         *
+         *  @return Vec formed by multiplying the vec by the mat.
+         */
         template <typename T>
         constexpr inline Vec<T, 4> Vec<T, 4>::operator*(const Mat<T, 4>& mat_) const noexcept
         {
