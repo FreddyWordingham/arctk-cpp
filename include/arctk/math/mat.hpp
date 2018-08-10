@@ -578,7 +578,7 @@ namespace arc //! arctk namespace
         /**
          *  Multiply the mat by a vec.
          *
-         *  @param  vec_    Vec to multiply this mat by,
+         *  @param  vec_    Vec to multiply this mat by.
          *
          *  @return Vec formed by multiplying the mat by the vec.
          */
