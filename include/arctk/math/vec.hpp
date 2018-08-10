@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS PROTOTYPES ==
         template <typename T, size_t N>
-        class Mat<T, N>;
+        class Mat;
 
 
 
@@ -586,7 +586,7 @@ namespace arc //! arctk namespace
             return (dot_prod);
         }
 
-        template <typename T>
+        template <typename T, size_t N>
         constexpr inline Vec<T, N> Vec<T, N>::operator*(const Mat<T, N>& mat_) const noexcept
         {
             Vec vec;
