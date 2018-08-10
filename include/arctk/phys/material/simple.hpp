@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
               : _dist(dist_)
               , _g(g_)
             {
-                PRE(dist > 0.0);
+                PRE(dist_ > 0.0);
                 PRE((g_ >= -1.0) && (g_ <= 1.0));
             }
 
