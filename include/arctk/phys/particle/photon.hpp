@@ -43,11 +43,13 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Optical --
+                double _wavelength;
+
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Photon(const vec3& pos_, const vec3& dir_) noexcept;
+                inline Photon(const vec3& pos_, const vec3& dir_, double wavelength_) noexcept;
 
 
                 //  == METHODS ==
@@ -59,6 +61,12 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Photon::Photon(const vec3& pos_, const vec3& dir_, const double wavelength_) noexcept
+              : Particle(pos_, dir_)
+              , _wavelength(wavelength_)
+            {
+                PRE(wavelength_ > 0.0);
+            }
 
 
 
