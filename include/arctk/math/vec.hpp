@@ -108,7 +108,7 @@ namespace arc //! arctk namespace
             constexpr inline Vec<T, N> operator-(const Vec<T, N>& vec_) const noexcept;
             constexpr inline Vec<T, N> operator*(T val_) const noexcept;
             constexpr inline T         operator*(const Vec<T, N>& vec_) const noexcept;
-            constexpr inline Vec<T, N> operator*(const Mat<T, N>& vec_) const noexcept;
+            constexpr inline Vec<T, N> operator*(const Mat<T, N>& mat_) const noexcept;
             constexpr inline Vec<T, N> operator/(T val_) const noexcept;
 
             //  -- Access --
