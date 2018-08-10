@@ -301,6 +301,13 @@ namespace arc //! arctk namespace
             return (*this);
         }
 
+        /**
+         *  Multiply the mat by another mat.
+         *
+         *  @param  mat_    Matrix to multiply this matrix by.
+         *
+         *  @return Reference to this mat post-operation.
+         */
         template <typename T>
         constexpr inline Mat<T, 4>& Mat<T, 4>::operator*=(const Mat<T, 4>& mat_) noexcept
         {
