@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Interaction --
-                inline double interaction_dist(const particle::Photon& phot_) const noexcept override;
+                inline double interaction_dist(random::Generator* rng_, const particle::Photon& phot_) const noexcept override;
                 inline void   interact(random::Generator* rng_, particle::Photon& phot_) const noexcept override;
             };
 
@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            inline double Simple::interaction_dist(const particle::Photon& /*unused*/) const noexcept
+            inline double Simple::interaction_dist(random::Generator* rng_ /*unused*/, const particle::Photon& /*unused*/) const noexcept
             {
                 return (_dist);
             }
