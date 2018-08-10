@@ -40,6 +40,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Interaction --
+                const double _dist;
 
                 //  -- Scattering --
                 const double _g;
