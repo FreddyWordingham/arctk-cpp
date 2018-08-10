@@ -62,15 +62,6 @@ namespace arc //! arctk namespace
 
 
 
-        //  == INSTANTIATION ==
-        //  -- Constructors --
-
-
-
-        //  == METHODS ==
-
-
-
     } // namespace phys
 } // namespace arc
 
