@@ -40,19 +40,19 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Particle(const vec3& pos_, const vec3& dir_) noexcept;
-            inline Particle(const Particle&) = default; //!< Defaulted copy constructor.
-            inline Particle(Particle&&)      = default; //!< Defaulted move constructor.
+            inline Material(const vec3& pos_, const vec3& dir_) noexcept;
+            inline Material(const Material&) = default; //!< Defaulted copy constructor.
+            inline Material(Material&&)      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
-            virtual inline ~Particle() noexcept = default;
+            virtual inline ~Material() noexcept = default;
 
 
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            inline Particle& operator=(const Particle&) = default;     //!< Defaulted copy operator. @return Reference to copied object.
-            inline Particle& operator=(Particle&&) noexcept = default; //!< Defaulted move operator. @return Reference to moved object.
+            inline Material& operator=(const Material&) = default;     //!< Defaulted copy operator. @return Reference to copied object.
+            inline Material& operator=(Material&&) noexcept = default; //!< Defaulted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
