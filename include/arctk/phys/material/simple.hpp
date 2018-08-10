@@ -58,7 +58,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Getters --
                 inline double interaction_dist(const particle::Photon& phot_) const noexcept override;
-                inline void   interact(Generator* rng_, particle::Photon& phot_) const noexcept override;
+                inline void   interact(random::Generator* rng_, particle::Photon& phot_) const noexcept override;
             };
 
 
@@ -82,8 +82,9 @@ namespace arc //! arctk namespace
                 return (_dist);
             }
 
-            inline void Simple::interact(Generator* rng_, particle::Photon& phot_) const noexcept
+            inline void Simple::interact(random::Generator* rng_, particle::Photon& phot_) const noexcept
             {
+                phot_.rotate(random::distribution::henyey_greenstein::sample(rng_, _g), rng_->gen() * 2.0 * consts::math::PI);
             }
 
 
