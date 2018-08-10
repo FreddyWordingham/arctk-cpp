@@ -37,6 +37,12 @@ namespace arc //! arctk namespace
 
 
 
+        //  == CLASS PROTOTYPES ==
+        template <typename T>
+        class Mat<T, 4>;
+
+
+
         //  == CLASS ==
         /**
          *  Four-dimensional mathematical vector class.
