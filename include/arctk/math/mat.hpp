@@ -52,6 +52,10 @@ namespace arc //! arctk namespace
             static_assert(N > 4);
 
 
+            //  == FRIENDS ==
+            friend Vec<T, N>;
+
+
             //  == FIELDS ==
           private:
             //  -- Data --
