@@ -18,6 +18,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
+#include <arctk/random.hpp>
 
 
 
@@ -57,7 +58,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Getters --
                 inline double interaction_dist(const particle::Photon& phot_) const noexcept override;
-                inline void   interact(particle::Photon& phot_) const noexcept override;
+                inline void   interact(Generator* rng_, particle::Photon& phot_) const noexcept override;
             };
 
 
@@ -81,7 +82,7 @@ namespace arc //! arctk namespace
                 return (_dist);
             }
 
-            inline void Simple::interact(particle::Photon& phot_) const noexcept
+            inline void Simple::interact(Generator* rng_, particle::Photon& phot_) const noexcept
             {
             }
 
