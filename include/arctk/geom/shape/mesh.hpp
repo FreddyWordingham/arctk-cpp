@@ -199,6 +199,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the number of triangles within the mesh.
+             *
+             *  @return Number of triangles within the mesh.
+             */
             inline size_t Mesh::num_tri() const noexcept
             {
                 return (_tris.size());
