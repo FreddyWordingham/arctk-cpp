@@ -832,7 +832,7 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Create an axis-aligned bounding box from an aabb shape.
+             *  Create an axis-aligned bounding box actor from an aabb shape.
              *
              *  @param  aabb_   Axis-aligned bounding box shape to create an actor of.
              *
