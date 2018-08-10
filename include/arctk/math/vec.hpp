@@ -102,6 +102,7 @@ namespace arc //! arctk namespace
             constexpr inline Vec<T, N> operator-(const Vec<T, N>& vec_) const noexcept;
             constexpr inline Vec<T, N> operator*(T val_) const noexcept;
             constexpr inline T         operator*(const Vec<T, N>& vec_) const noexcept;
+            constexpr inline Vec<T, N> operator*(const Mat<T, N>& vec_) const noexcept;
             constexpr inline Vec<T, N> operator/(T val_) const noexcept;
 
             //  -- Access --
@@ -577,6 +578,22 @@ namespace arc //! arctk namespace
             }
 
             return (dot_prod);
+        }
+
+        template <typename T>
+        constexpr inline Vec<T, N> Vec<T, N>::operator*(const Mat<T, N>& mat_) const noexcept
+        {
+            Vec vec;
+
+            for (size_t i = 0; i < N; ++i)
+            {
+                for (size_t j = 0; j < N; ++j)
+                {
+                    vec._data[i] += _data[j] * mat_._data[i][j];
+                }
+            }
+
+            return (vec);
         }
 
         /**
