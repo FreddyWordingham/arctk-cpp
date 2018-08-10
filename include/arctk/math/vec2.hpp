@@ -440,7 +440,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Vec<T, 2> Vec<T, 2>::operator*(const Mat<T, 2>& mat_) const noexcept
         {
-            return (Vec((x*mat_.x.x) + (y * mat_.y.x), (x*mat_.x.y) + (y * mat_.y.y));
+            return (Vec((x * mat_.x.x) + (y * mat_.y.x), (x * mat_.x.y) + (y * mat_.y.y)));
         }
 
         /**
