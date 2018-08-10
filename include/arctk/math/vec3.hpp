@@ -37,6 +37,12 @@ namespace arc //! arctk namespace
 
 
 
+        //  == CLASS PROTOTYPES ==
+        template <typename T>
+        class Mat<T, 3>;
+
+
+
         //  == CLASS ==
         /**
          *  Three-dimensional mathematical vector class.
