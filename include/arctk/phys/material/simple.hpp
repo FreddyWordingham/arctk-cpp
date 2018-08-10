@@ -35,7 +35,7 @@ namespace arc //! arctk namespace
             /**
              *  Simple material class.
              */
-            class Simple
+            class Simple : public Material
             {
                 //  == FIELDS ==
               private:
