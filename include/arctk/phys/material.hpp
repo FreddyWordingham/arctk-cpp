@@ -18,6 +18,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
+#include <arctk/phys/particle/photon.hpp>
 
 
 
