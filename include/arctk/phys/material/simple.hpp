@@ -56,6 +56,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
+                inline double interaction_dist(const particle::Photon& phot_) const noexcept override;
+                inline void   interact(particle::Photon& phot_) const noexcept override;
             };
 
 
@@ -73,6 +75,15 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Getters --
+            inline double Simple::interaction_dist(const particle::Photon& /*unused*/) const noexcept
+            {
+                return (_dist);
+            }
+
+            inline void Simple::interact(particle::Photon& phot_) const noexcept
+            {
+            }
 
 
 
