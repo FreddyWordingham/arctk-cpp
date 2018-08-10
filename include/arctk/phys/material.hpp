@@ -57,6 +57,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             virtual inline double interaction_dist(const particle::Photon& phot_) const noexcept = 0;
+            virtual inline void   interact(particle::Photon& phot_) const noexcept               = 0;
         };
 
 
