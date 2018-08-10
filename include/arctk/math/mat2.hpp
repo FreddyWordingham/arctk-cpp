@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
 
 
             //  == FRIENDS ==
-            friend Vec<T, 2>;
+            friend Vec<T, 2>; //!< Vec friend used to directly access vec elements.
 
 
             //  == INSTANTIATION ==
