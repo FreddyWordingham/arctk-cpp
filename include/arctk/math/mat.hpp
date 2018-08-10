@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
 
 
             //  == FRIENDS ==
-            friend Vec<T, N>;
+            friend Vec<T, N>; //!< Vec friend used to directly access vec elements.
 
 
             //  == FIELDS ==
