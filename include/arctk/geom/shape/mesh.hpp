@@ -110,10 +110,14 @@ namespace arc //! arctk namespace
              *  @param  serial_ String of the serialised wavefront object.
              *  @param  transform_  Transformation matrix to apply to the base mesh.
              *
+             *  @pre    serial_ may not be empty.
+             *
              *  @return Initialised vector of triangles that will form the mesh.
              */
             inline std::vector<Triangle> Mesh::init_tris(const std::string& serial_, const mat4& transform_) const noexcept
             {
+                PRE(!serial_.empty());
+
                 /*                std::vector<Triangle> tris;
 
                                 std::stringstream serial_stream(serial_);
