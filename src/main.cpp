@@ -85,6 +85,7 @@
 #include <arctk/math/vec3.hpp>
 #include <arctk/math/vec4.hpp>
 #include <arctk/phys.hpp>
+#include <arctk/phys/material.hpp>
 #include <arctk/phys/particle.hpp>
 #include <arctk/phys/particle/photon.hpp>
 #include <arctk/random.hpp>
