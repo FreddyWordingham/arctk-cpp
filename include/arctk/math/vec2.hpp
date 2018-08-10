@@ -37,6 +37,12 @@ namespace arc //! arctk namespace
 
 
 
+        //  == CLASS PROTOTYPES ==
+        template <typename T>
+        class Mat<T, 2>;
+
+
+
         //  == CLASS ==
         /**
          *  Two-dimensional mathematical vector class.
@@ -103,6 +109,7 @@ namespace arc //! arctk namespace
             constexpr inline Vec<T, 2> operator-(const Vec<T, 2>& vec_) const noexcept;
             constexpr inline Vec<T, 2> operator*(T val_) const noexcept;
             constexpr inline T         operator*(const Vec<T, 2>& vec_) const noexcept;
+            constexpr inline Vec<T, 2> operator*(const Mat<T, 2>& mat_) const noexcept;
             constexpr inline Vec<T, 2> operator/(T val_) const noexcept;
 
             //  -- Access --
@@ -428,6 +435,12 @@ namespace arc //! arctk namespace
         constexpr inline T Vec<T, 2>::operator*(const Vec<T, 2>& vec_) const noexcept
         {
             return ((x * vec_.x) + (y * vec_.y));
+        }
+
+        template <typename T>
+        constexpr inline Vec<T, 2> Vec<T, 2>::operator*(const Mat<T, 2>& mat_) const noexcept
+        {
+            return (Vec((x*mat_.x.x) + (y * mat_.y.x), (x*mat_.x.y) + (y * mat_.y.y));
         }
 
         /**
