@@ -58,8 +58,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Interaction --
-            virtual inline double interaction_dist(const particle::Photon& phot_) const noexcept            = 0;
-            virtual inline void   interact(random::Generator* rng_, particle::Photon& phot_) const noexcept = 0;
+            virtual inline double interaction_dist(random::Generator* rng_, const particle::Photon& phot_) const noexcept = 0;
+            virtual inline void   interact(random::Generator* rng_, particle::Photon& phot_) const noexcept               = 0;
         };
 
 
