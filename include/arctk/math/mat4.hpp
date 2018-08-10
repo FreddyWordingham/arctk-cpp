@@ -586,6 +586,13 @@ namespace arc //! arctk namespace
               Mat(Vec<T, 4>(x.x * val_, x.y * val_, x.z * val_, x.w * val_), Vec<T, 4>(y.x * val_, y.y * val_, y.z * val_, y.w * val_), Vec<T, 4>(z.x * val_, z.y * val_, z.z * val_, z.w * val_), Vec<T, 4>(w.x * val_, w.y * val_, w.z * val_, w.w * val_)));
         }
 
+        /**
+         *  Multiply the mat by a vec.
+         *
+         *  @param  vec_    Vec to multiply this mat by,
+         *
+         *  @return Vec formed by multiplying the mat by the vec.
+         */
         template <typename T>
         constexpr inline Vec<T, 4> Mat<T, 4>::operator*(const Vec<T, 4>& vec_) const noexcept
         {
