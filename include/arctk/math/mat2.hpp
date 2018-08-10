@@ -53,6 +53,10 @@ namespace arc //! arctk namespace
             Vec<T, 2> y{}; //!< Y-row of matrix.
 
 
+            //  == FRIENDS ==
+            friend Vec<T, 2>;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
