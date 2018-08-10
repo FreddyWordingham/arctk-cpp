@@ -50,6 +50,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Simple(double dist_, double g_) noexcept;
 
 
                 //  == METHODS ==
@@ -61,6 +62,13 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Simple::Simple(const double dist_, const double g_) noexcept
+              : _dist(dist_)
+              , _g(g_)
+            {
+                PRE(dist > 0.0);
+                PRE((g_ >= -1.0) && (g_ <= 1.0));
+            }
 
 
 
