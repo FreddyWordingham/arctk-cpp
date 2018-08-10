@@ -40,6 +40,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Material()                = default; //!< Defaulted constructor.
             inline Material(const Material&) = default; //!< Defaulted copy constructor.
             inline Material(Material&&)      = default; //!< Defaulted move constructor.
 
