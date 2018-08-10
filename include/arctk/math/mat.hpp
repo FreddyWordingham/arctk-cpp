@@ -183,9 +183,6 @@ namespace arc //! arctk namespace
         /**
          *  Add a value to all elements of the mat.
          *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
-         *
          *  @param  val_    Value to add to each mat element.
          *
          *  @return Reference to this mat post-operation.
@@ -206,9 +203,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Add another mat's elements to each corresponding element of the mat.
-         *
-         *  @tparam T   Type stored by the mats.
-         *  @tparam N   Size of the mat.
          *
          *  @param  mat_    mat to add to this mat.
          *
@@ -231,9 +225,6 @@ namespace arc //! arctk namespace
         /**
          *  Subtract a value from all elements of the mat.
          *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
-         *
          *  @param  val_    Value to subtract from each mat element.
          *
          *  @return Reference to this mat post-operation.
@@ -254,9 +245,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Subtract another mat's elements from each corresponding element of the mat.
-         *
-         *  @tparam T   Type stored by the mats.
-         *  @tparam N   Size of the mat.
          *
          *  @param  mat_    mat to subtract from this mat.
          *
@@ -279,9 +267,6 @@ namespace arc //! arctk namespace
         /**
          *  Multiply all elements of the mat by a value.
          *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
-         *
          *  @param  val_    Value used to multiply each mat element by.
          *
          *  @return Reference to this mat post-operation.
@@ -302,9 +287,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Multiply the mat by another mat.
-         *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
          *
          *  @param  mat_    Matrix to multiply this matrix by.
          *
@@ -334,9 +316,6 @@ namespace arc //! arctk namespace
         /**
          *  Divide all elements of the mat by a value.
          *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
-         *
          *  @param  val_    Value used to divide each mat element by.
          *
          *  @return Reference to this mat post-operation.
@@ -360,9 +339,6 @@ namespace arc //! arctk namespace
         /**
          *  Increment each element of the mat.
          *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
-         *
          *  @return A reference to this mat pre-increment.
          */
         template <typename T, size_t N>
@@ -381,9 +357,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Increment each element of the mat.
-         *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
          *
          *  @return A copy of this mat post-increment.
          */
@@ -406,9 +379,6 @@ namespace arc //! arctk namespace
         /**
          *  Decrement each element of the mat.
          *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
-         *
          *  @return A reference to this mat pre-decrement.
          */
         template <typename T, size_t N>
@@ -427,9 +397,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Decrement each element of the mat.
-         *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
          *
          *  @return A copy of this mat post-decrement.
          */
@@ -454,9 +421,6 @@ namespace arc //! arctk namespace
         /**
          *  Positive copy the mat.
          *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
-         *
          *  @return Positive copy of the mat.
          */
         template <typename T, size_t N>
@@ -478,9 +442,6 @@ namespace arc //! arctk namespace
         /**
          *  Negative copy the mat.
          *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
-         *
          *  @return Negative copy of the mat.
          */
         template <typename T, size_t N>
@@ -501,9 +462,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Add a value to a mat.
-         *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
          *
          *  @param  val_    Value to add to the mat.
          *
@@ -528,9 +486,6 @@ namespace arc //! arctk namespace
         /**
          *  Add a mat to a mat.
          *
-         *  @tparam T   Type stored by the mats.
-         *  @tparam N   Size of the mat.
-         *
          *  @param  mat_    Mat to add to the mat.
          *
          *  @return Mat formed by adding the mat to the mat.
@@ -553,9 +508,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Subtract a value from a mat.
-         *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
          *
          *  @param  val_    Value to subtract from the mat.
          *
@@ -580,9 +532,6 @@ namespace arc //! arctk namespace
         /**
          *  Subtract a mat from a mat.
          *
-         *  @tparam T   Type stored by the mats.
-         *  @tparam N   Size of the mat.
-         *
          *  @param  mat_    Mat to subtract from the mat.
          *
          *  @return Mat formed by subtracting the mat from the mat.
@@ -605,9 +554,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Multiply a mats elements by a value.
-         *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
          *
          *  @param  val_    Value used to multiply the mat elements.
          *
@@ -648,9 +594,6 @@ namespace arc //! arctk namespace
         /**
          *  Multiply two mats together.
          *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
-         *
          *  @param  mat_    Right hand side mat of the operation.
          *
          *  @return Mat formed by multiplying the two mats together.
@@ -677,9 +620,6 @@ namespace arc //! arctk namespace
         /**
          *  Divide a mats elements by a value.
          *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
-         *
          *  @param  val_    Value used to divide the mat elements.
          *
          *  @return Mat formed by dividing the mat elements by the value.
@@ -705,9 +645,6 @@ namespace arc //! arctk namespace
         /**
          *  Access a row of the mat.
          *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
-         *
          *  @param  index_  Index of the row to access.
          *
          *  @pre    index_ must be less than N.
@@ -724,9 +661,6 @@ namespace arc //! arctk namespace
 
         /**
          *  Access a row of the mat.
-         *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
          *
          *  @param  index_  Index of the row to access.
          *
@@ -749,9 +683,6 @@ namespace arc //! arctk namespace
         /**
          *  Get the data array.
          *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
-         *
          *  @return Data array.
          */
         template <typename T, size_t N>
@@ -764,9 +695,6 @@ namespace arc //! arctk namespace
         //  -- Mathematical --
         /**
          *  Calculate the sum of the mat elements.
-         *
-         *  @tparam T   Type stored by the mat.
-         *  @tparam N   Size of the mat.
          *
          *  @return Sum of the mat elements.
          */
