@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Interaction --
             virtual inline double interaction_dist(random::Generator* rng_, const particle::Photon& phot_) const noexcept = 0;
-            virtual inline void   interact(random::Generator* rng_, particle::Photon& phot_) const noexcept               = 0;
+            virtual inline void   interact(random::Generator* rng_, particle::Photon& phot_) const noexcept               = 0; //!< Perform an interaction on a given photon.   @param  rng_    Random number generator.    @param  phot_   Photon to interact with.
         };
 
 
