@@ -39,6 +39,7 @@
 #include <arctk/exit.hpp>
 #include <arctk/exit/error.hpp>
 #include <arctk/exit/success.hpp>
+#include <arctk/func.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/geom/shape.hpp>
 #include <arctk/geom/shape/aabb.hpp>
