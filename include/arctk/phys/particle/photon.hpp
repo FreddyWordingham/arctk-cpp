@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Optical --
-                double _wavelength;
+                double _wavelength; //!< Optical wavelength.
 
 
                 //  == INSTANTIATION ==
