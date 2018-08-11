@@ -77,6 +77,7 @@ namespace arc //! arctk namespace
               : Particle(pos_, dir_)
               , _wavelength(wavelength_)
             {
+                PRE(dir_.normalised());
                 PRE(wavelength_ > 0.0);
             }
 
