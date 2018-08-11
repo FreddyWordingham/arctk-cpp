@@ -268,6 +268,16 @@ namespace arc //! arctk namespace
             {
                 PRE(dir_.normalised());
 
+                std::optional<double> dist(std::nullopt);
+                for (size_t i = 0; i < _tris.size(); ++i)
+                {
+                    const std::optional<double> tri_dist = _tris[i].collision(pos_, dir_);
+                    if (tri_dist && (!dist || (tri_dist.value() < dist.value())))
+                    {
+                        dist = tri_dist;
+                    }
+                }
+
                 return (std::optional<double>(std::nullopt));
             }
 
