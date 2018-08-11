@@ -56,6 +56,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
+                inline double wavelength() const noexcept;
             };
 
 
@@ -82,6 +83,11 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Getters --
+            inline double Photon::wavelength() const noexcept
+            {
+                return (_wavelength);
+            }
 
 
 
