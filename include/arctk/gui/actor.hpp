@@ -441,6 +441,7 @@ namespace arc //! arctk namespace
             inline Actor aabb(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor aabb(const geom::shape::Aabb& aabb_) noexcept;
             inline Actor path(const phys::Particle& part_) noexcept;
+            inline Actor mesh(const geom::shape::Mesh& mesh_) noexcept;
 
 
 
@@ -861,6 +862,25 @@ namespace arc //! arctk namespace
                 }
 
                 return (Actor(verts, {3}, GL_LINE_STRIP));
+            }
+
+            inline Actor mesh(const geom::shape::Mesh& mesh_) noexcept
+            {
+                std::vector<glm::vec3> verts;
+                verts.reserve(mesh_.num_tri() * 3 * 2);
+
+                for (size_t i = 0; i < mesh_.num_tri(); ++i)
+                {
+                    const geom::shape::Triangle& tri = mesh_.tri(i);
+
+                    for (size_t i = 0; i < 3; ++i)
+                    {
+                        verts.emplace_back(glm::vec3(static_cast<float>(tri.pos()[i].x), static_cast<float>(tri.pos()[i].y), static_cast<float>(tri.pos()[i].z)));
+                        verts.emplace_back(glm::vec3(static_cast<float>(tri.norm()[i].x), static_cast<float>(tri.norm()[i].y), static_cast<float>(tri.norm()[i].z)));
+                    }
+                }
+
+                return (Actor(verts, {3, 3}));
             }
 
 
