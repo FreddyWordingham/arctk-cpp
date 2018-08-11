@@ -62,6 +62,16 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a photon with an initial position, direction and wavelength.
+             *
+             *  @param  pos_        Position of the photon.
+             *  @param  dir_        Direction of the photon.
+             *  @param  wavelength_ Wavelength of the photon.
+             *
+             *  @pre    dir_ must be normalised.
+             *  @pre    wavelength_ must be positive.
+             */
             inline Photon::Photon(const vec3& pos_, const vec3& dir_, const double wavelength_) noexcept
               : Particle(pos_, dir_)
               , _wavelength(wavelength_)
