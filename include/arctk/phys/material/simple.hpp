@@ -89,9 +89,8 @@ namespace arc //! arctk namespace
             /**
              *  Perform an interaction on a given photon.
              *
-             * @param rng_
-             * @param phot_
-             * @return
+             *  @param  rng_    Random number generator.
+             *  @param  phot_   Photon to interact with.
              */
             inline void Simple::interact(random::Generator* rng_, particle::Photon& phot_) const noexcept
             {
