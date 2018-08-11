@@ -28,6 +28,7 @@
 #include <arctk/geom/shape/triangle.hpp>
 #include <arctk/index.hpp>
 #include <arctk/math.hpp>
+#include <arctk/utl.hpp>
 
 
 
