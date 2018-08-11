@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Interaction --
-                inline double interaction_dist(random::Generator* rng_, const particle::Photon& phot_) const noexcept override;
+                inline double interaction_dist(random::Generator* /*unused*/, const particle::Photon& /*unused*/) const noexcept override;
                 inline void   interact(random::Generator* rng_, particle::Photon& phot_) const noexcept override;
             };
 
