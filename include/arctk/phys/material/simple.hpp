@@ -76,6 +76,13 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Determine the distance until a material interaction occurs.
+             *
+             *  @param  rng_    Random number generator.
+             *
+             *  @return Distance to interaction.
+             */
             inline double Simple::interaction_dist(random::Generator* rng_ /*unused*/, const particle::Photon& /*unused*/) const noexcept
             {
                 return (_dist);
@@ -83,6 +90,7 @@ namespace arc //! arctk namespace
 
             inline void Simple::interact(random::Generator* rng_, particle::Photon& phot_) const noexcept
             {
+                phot_.wavelength();
                 phot_.rotate(random::distribution::henyey_greenstein::sample(rng_, _g), rng_->gen() * 2.0 * consts::math::PI);
             }
 
