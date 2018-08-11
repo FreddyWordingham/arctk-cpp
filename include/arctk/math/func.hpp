@@ -32,17 +32,10 @@ namespace arc //! arctk namespace
         template <typename T, typename S>
         class Func
         {
-            //  == FIELDS ==
-          private:
-            //  == INSTANTIATION ==
-          public:
-            //  -- Constructors --
-
-
             //  == OPERATORS ==
           public:
-            //  == METHODS ==
-          public:
+            //  -- Call --
+            virtual S operator()(const S val_) noexcept = 0;
         };
 
 
