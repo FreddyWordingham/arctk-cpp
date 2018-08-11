@@ -1,3 +1,4 @@
 <map id="arc::geom::shape::Aabb::max" name="arc::geom::shape::Aabb::max">
-<area shape="rect" id="node2" href="$namespacearc_1_1gui_1_1actor.html#a736f0803bd699a43765867fede6a7e9c" title="arc::gui::actor::aabb" alt="" coords="249,5,388,31"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1gui_1_1actor.html#acd78e5d68cf326e5a2e31bb9d0d1b232" title="arc::gui::actor::box" alt="" coords="253,5,384,31"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1gui_1_1actor.html#a736f0803bd699a43765867fede6a7e9c" title="arc::gui::actor::aabb" alt="" coords="249,55,388,80"/>
 </map>

@@ -147,6 +147,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaa3da629d98ce59e712c0b85fffabda0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a664c2c7f47413efc52a610d59ca434c1"><td class="memItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a664c2c7f47413efc52a610d59ca434c1">operator*</a> (const <a class="el" href="classarc_1_1math_1_1_vec.html">Vec</a>&lt; T, 4 &gt; &amp;vec_) const noexcept</td></tr>
 <tr class="separator:a664c2c7f47413efc52a610d59ca434c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a0efbf4fd08fd957b59ea5f60c54582"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classarc_1_1math_1_1_vec.html">Vec</a>&lt; T, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a4a0efbf4fd08fd957b59ea5f60c54582">operator*</a> (const <a class="el" href="classarc_1_1math_1_1_mat.html">Mat</a>&lt; T, 4 &gt; &amp;mat_) const noexcept</td></tr>
+<tr class="separator:a4a0efbf4fd08fd957b59ea5f60c54582"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ba4877361b5599a6e733d7f3a730ede"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classarc_1_1math_1_1_vec.html">Vec</a>&lt; T, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a9ba4877361b5599a6e733d7f3a730ede">operator/</a> (T val_) const noexcept</td></tr>
 <tr class="separator:a9ba4877361b5599a6e733d7f3a730ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48bc0d41cf0bad5e7c0a65fc72802fdf"><td class="memItemLeft" align="right" valign="top">constexpr T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a48bc0d41cf0bad5e7c0a65fc72802fdf">operator[]</a> (size_t index_) noexcept</td></tr>
@@ -653,7 +655,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="aaa3da629d98ce59e712c0b85fffabda0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa3da629d98ce59e712c0b85fffabda0">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa3da629d98ce59e712c0b85fffabda0">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -689,7 +691,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="a664c2c7f47413efc52a610d59ca434c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a664c2c7f47413efc52a610d59ca434c1">&#9670;&nbsp;</a></span>operator*() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a664c2c7f47413efc52a610d59ca434c1">&#9670;&nbsp;</a></span>operator*() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -721,6 +723,42 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Dot-product of the vecs. </dd></dl>
+
+</div>
+</div>
+<a id="a4a0efbf4fd08fd957b59ea5f60c54582"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a0efbf4fd08fd957b59ea5f60c54582">&#9670;&nbsp;</a></span>operator*() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classarc_1_1math_1_1_vec.html">Vec</a>&lt; T, 4 &gt; <a class="el" href="classarc_1_1math_1_1_vec.html">arc::math::Vec</a>&lt; T, 4 &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1math_1_1_mat.html">Mat</a>&lt; T, 4 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mat_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Multiply the vec by a mat.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mat_</td><td><a class="el" href="classarc_1_1math_1_1_mat.html">Mat</a> to multiply this vec by.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classarc_1_1math_1_1_vec.html">Vec</a> formed by multiplying the vec by the mat. </dd></dl>
 
 </div>
 </div>
@@ -1641,7 +1679,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 9 2018 01:46:21 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Aug 11 2018 01:35:19 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['face_5fkeyword',['FACE_KEYWORD',['../namespacearc_1_1geom_1_1shape.html#a1466cbf1dbc85fd6e7d0f742d6b2e583',1,'arc::geom::shape']]],
   ['failed_5fparse',['FAILED_PARSE',['../namespacearc_1_1exit_1_1error.html#a34a5ce75d5cc8ba4fabf9c2b6949fc04',1,'arc::exit::error']]],
   ['fg_5fblack',['FG_BLACK',['../namespacearc_1_1term_1_1ansi.html#ac6a62cdf67b169fc69ba42185e063563',1,'arc::term::ansi']]],
   ['fg_5fblue',['FG_BLUE',['../namespacearc_1_1term_1_1ansi.html#a0d73af3f51de5e734c8c6e416438f761',1,'arc::term::ansi']]],

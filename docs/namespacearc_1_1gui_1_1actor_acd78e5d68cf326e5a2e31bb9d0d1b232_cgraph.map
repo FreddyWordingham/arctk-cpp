@@ -1,0 +1,4 @@
+<map id="arc::gui::actor::box" name="arc::gui::actor::box">
+<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_aabb.html#addf2ffa86e739d26418b156b59f30865" title="arc::geom::shape::Aabb::min" alt="" coords="186,5,378,31"/>
+<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_aabb.html#ae28056b2fea66475b95e9f2ea5bbf092" title="arc::geom::shape::Aabb::max" alt="" coords="184,55,380,80"/>
+</map>

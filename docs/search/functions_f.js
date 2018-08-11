@@ -5,6 +5,7 @@ var searchData=
   ['particle',['Particle',['../classarc_1_1phys_1_1_particle.html#a5c5e9a1d254aed31e4c133e6dda072ea',1,'arc::phys::Particle::Particle(const vec3 &amp;pos_, const vec3 &amp;dir_) noexcept'],['../classarc_1_1phys_1_1_particle.html#aca34bb601b5754e5133d7f6957a0c896',1,'arc::phys::Particle::Particle(const Particle &amp;)=default'],['../classarc_1_1phys_1_1_particle.html#a746961bfc64349291dc3864dd1426dd7',1,'arc::phys::Particle::Particle(Particle &amp;&amp;)=default']]],
   ['path',['path',['../classarc_1_1phys_1_1_particle.html#ab6d64bad4cc46690dde1585e8f27851c',1,'arc::phys::Particle::path()'],['../namespacearc_1_1gui_1_1actor.html#a5cadfa1d769d995b24e7d1a0c41b236f',1,'arc::gui::actor::path()']]],
   ['perspective',['Perspective',['../classarc_1_1gui_1_1lens_1_1_perspective.html#a4024939be58a97497cc01b7cb61cc658',1,'arc::gui::lens::Perspective']]],
+  ['photon',['Photon',['../classarc_1_1phys_1_1particle_1_1_photon.html#a00f6432511b72e5d2b3c8436be2a071a',1,'arc::phys::particle::Photon']]],
   ['plane',['Plane',['../classarc_1_1geom_1_1shape_1_1_plane.html#a212904cdf3d4533aa4472cf987cad5f0',1,'arc::geom::shape::Plane']]],
   ['plane_5fcollision',['plane_collision',['../classarc_1_1geom_1_1shape_1_1_triangle.html#abe258581ad067c650f2f9a5cbebd4021',1,'arc::geom::shape::Triangle']]],
   ['plane_5fnorm',['plane_norm',['../classarc_1_1geom_1_1shape_1_1_triangle.html#a5e6273eac5f6dcf71ca9312bc895775f',1,'arc::geom::shape::Triangle']]],

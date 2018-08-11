@@ -15,6 +15,7 @@ var searchData=
   ['_5fcubemap',['_cubemap',['../classarc_1_1gui_1_1shader_1_1_skybox.html#a94e16b52e6853386e0d0fc62e6b1da79',1,'arc::gui::shader::Skybox']]],
   ['_5fdata',['_data',['../classarc_1_1math_1_1_mat.html#a45938c6cb757a44a7391d5c7314c25a8',1,'arc::math::Mat::_data()'],['../classarc_1_1math_1_1_vec.html#ae7efd1981f42e1d32f5c61beef055d7c',1,'arc::math::Vec::_data()']]],
   ['_5fdir',['_dir',['../classarc_1_1geom_1_1shape_1_1_plane.html#a3af06d7589346fe6b8290bcda72255a2',1,'arc::geom::shape::Plane::_dir()'],['../classarc_1_1gui_1_1camera_1_1_fly.html#a79ff586a7c9d9c418c201c4f6d699eb1',1,'arc::gui::camera::Fly::_dir()'],['../classarc_1_1phys_1_1_particle.html#aae8caa3df02cce90d2892628e8f28d64',1,'arc::phys::Particle::_dir()']]],
+  ['_5fdist',['_dist',['../classarc_1_1phys_1_1material_1_1_simple.html#ad6ec3f1d2503e2626c90f9bebd546d3e',1,'arc::phys::material::Simple']]],
   ['_5fexpr',['_expr',['../classarc_1_1debug_1_1_invariant.html#a659cdb2b5f3a10daf60514264c8827ed',1,'arc::debug::Invariant']]],
   ['_5fexpr_5fpre',['_expr_pre',['../classarc_1_1debug_1_1_invariant.html#a8685fecb8518ecad4c4881e12c322def',1,'arc::debug::Invariant']]],
   ['_5fexpr_5fstr',['_expr_str',['../classarc_1_1debug_1_1_invariant.html#aa549c56ca506c27144c38f1eaa38a21f',1,'arc::debug::Invariant']]],
@@ -25,6 +26,7 @@ var searchData=
   ['_5ffov',['_fov',['../classarc_1_1gui_1_1lens_1_1_perspective.html#a49d7bda2f7d739d709a8e8f83bfde8fe',1,'arc::gui::lens::Perspective']]],
   ['_5ffracs',['_fracs',['../classarc_1_1random_1_1distribution_1_1_linear.html#a21059f034abd36183fbd6e5989e7bec6',1,'arc::random::distribution::Linear']]],
   ['_5ffunc',['_func',['../classarc_1_1debug_1_1_invariant.html#af50503c2e13fe53363e96fce9295dfc1',1,'arc::debug::Invariant::_func()'],['../classarc_1_1gui_1_1_keybind.html#a16e1cb9d5c2f4f1d507e102f12df66b9',1,'arc::gui::Keybind::_func()']]],
+  ['_5fg',['_g',['../classarc_1_1phys_1_1material_1_1_simple.html#aca75623b3bad42aa1eb25a77683ab0c9',1,'arc::phys::material::Simple']]],
   ['_5fgen',['_gen',['../classarc_1_1random_1_1distribution_1_1_normal.html#a256ab0bd5fd20eae929a43f4436a8c0f',1,'arc::random::distribution::Normal']]],
   ['_5fhandle',['_handle',['../classarc_1_1gui_1_1_shader.html#a5de0c33ff93b27ccc9b8387ab3c78df9',1,'arc::gui::Shader::_handle()'],['../classarc_1_1gui_1_1_window.html#ae64db24c1d33f4530044023f25fa1814',1,'arc::gui::Window::_handle()']]],
   ['_5fheight',['_height',['../classarc_1_1data_1_1_image.html#ac00f7d7c2d91cbecb4a3efffa0767da3',1,'arc::data::Image']]],
@@ -58,6 +60,7 @@ var searchData=
   ['_5fsun_5fcol',['_sun_col',['../classarc_1_1gui_1_1shader_1_1_specular.html#a6fb636c6f5be12cf7db10405566854d7',1,'arc::gui::shader::Specular']]],
   ['_5fsun_5fpos',['_sun_pos',['../classarc_1_1gui_1_1shader_1_1_specular.html#a22df5f710d01d72e58e6757ad2510577',1,'arc::gui::shader::Specular']]],
   ['_5ftrans',['_trans',['../classarc_1_1gui_1_1_actor.html#a49d360223eaf9ce7a7e8635a51f0a94e',1,'arc::gui::Actor']]],
+  ['_5ftris',['_tris',['../classarc_1_1geom_1_1shape_1_1_mesh.html#a856717860fe6638d8937af7b8d72584d',1,'arc::geom::shape::Mesh']]],
   ['_5fu',['_u',['../classarc_1_1random_1_1generator_1_1_quality.html#aa5d0d7a356aed77e4b0e6ad8603c0416',1,'arc::random::generator::Quality']]],
   ['_5fup',['_up',['../classarc_1_1gui_1_1_camera.html#a16bbe0d82a79bd609a1202c8ba7f2c37',1,'arc::gui::Camera']]],
   ['_5fv',['_v',['../classarc_1_1random_1_1generator_1_1_quality.html#a9c59b127ba7bd6f9c6f08d3c1b1df503',1,'arc::random::generator::Quality']]],
@@ -68,6 +71,7 @@ var searchData=
   ['_5fvert_5fcol',['_vert_col',['../classarc_1_1gui_1_1shader_1_1_normal.html#a9364959ad9ad65b3b93438d19794c5d8',1,'arc::gui::shader::Normal']]],
   ['_5fview',['_view',['../classarc_1_1gui_1_1_camera.html#aef4f16f62979fd670f9111421f304340',1,'arc::gui::Camera::_view()'],['../classarc_1_1gui_1_1shader_1_1_ambient.html#a27e2ebab529fc767a6ff2d03b5592a8c',1,'arc::gui::shader::Ambient::_view()'],['../classarc_1_1gui_1_1shader_1_1_diffuse.html#adca52a2f91a28a194b60d47b7cd3649d',1,'arc::gui::shader::Diffuse::_view()'],['../classarc_1_1gui_1_1shader_1_1_normal.html#a33584d06224486eaad5434dfa5be6865',1,'arc::gui::shader::Normal::_view()'],['../classarc_1_1gui_1_1shader_1_1_ray.html#a8248aabacd134de27a6475087a92cd3f',1,'arc::gui::shader::Ray::_view()'],['../classarc_1_1gui_1_1shader_1_1_skybox.html#a84c3fb393f7276d1f312efb1fdb39438',1,'arc::gui::shader::Skybox::_view()'],['../classarc_1_1gui_1_1shader_1_1_specular.html#ace8e41dd871bba0161b9627cecb86ff8',1,'arc::gui::shader::Specular::_view()']]],
   ['_5fw',['_w',['../classarc_1_1random_1_1generator_1_1_quality.html#a0d9473e510d145fdaff009547a4608f7',1,'arc::random::generator::Quality']]],
+  ['_5fwavelength',['_wavelength',['../classarc_1_1phys_1_1particle_1_1_photon.html#a340c1b883e5be8ecf5b380f751d8400e',1,'arc::phys::particle::Photon']]],
   ['_5fwidth',['_width',['../classarc_1_1data_1_1_image.html#ad6487a8a1f0c24e32dc2b5cc42b3b1a4',1,'arc::data::Image']]],
   ['_5fz1',['_z1',['../classarc_1_1random_1_1distribution_1_1_normal.html#aa981b6e87bb5ed8af14658ed82f8b877',1,'arc::random::distribution::Normal']]]
 ];

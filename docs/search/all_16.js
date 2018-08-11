@@ -30,6 +30,7 @@ var searchData=
   ['vec_3c_20t_2c_202_20_3e',['Vec&lt; T, 2 &gt;',['../classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html',1,'arc::math']]],
   ['vec_3c_20t_2c_203_20_3e',['Vec&lt; T, 3 &gt;',['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html',1,'arc::math']]],
   ['vec_3c_20t_2c_204_20_3e',['Vec&lt; T, 4 &gt;',['../classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html',1,'arc::math']]],
+  ['vec_3c_20t_2c_20n_20_3e',['Vec&lt; T, N &gt;',['../classarc_1_1math_1_1_mat.html#abdb902c2a912ae7a2c9bf55df28a48e6',1,'arc::math::Mat']]],
   ['vec_5fend',['VEC_END',['../namespacearc_1_1settings_1_1format.html#a4bd8f17cba27dc4b32bdf24443f6fc6e',1,'arc::settings::format']]],
   ['vec_5fstart',['VEC_START',['../namespacearc_1_1settings_1_1format.html#a7045280d11659dd83b4928737b2366ac',1,'arc::settings::format']]],
   ['vecn',['vecN',['../namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6',1,'arc']]],
