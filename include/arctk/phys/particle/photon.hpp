@@ -85,6 +85,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the wavelength of the photon.
+             *
+             *  @return Wavelength of the photon.
+             */
             inline double Photon::wavelength() const noexcept
             {
                 return (_wavelength);
