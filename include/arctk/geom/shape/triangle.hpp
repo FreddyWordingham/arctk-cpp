@@ -113,7 +113,6 @@ namespace arc //! arctk namespace
              *  @param  norm_   Normals of the vertices.
              *
              *  @post   plane_norm must be normalised.
-             *  @post   plane_norm norm_ dot products must be greater than zero.
              *
              *  @return The normal vector of the triangle's plane.
              */
@@ -127,9 +126,6 @@ namespace arc //! arctk namespace
                 }
 
                 POST(plane_norm.normalised());
-                POST((plane_norm * norm_[index::vertex::ALPHA]) > 0.0);
-                POST((plane_norm * norm_[index::vertex::BETA]) > 0.0);
-                POST((plane_norm * norm_[index::vertex::GAMMA]) > 0.0);
 
                 return (plane_norm);
             }
