@@ -64,6 +64,15 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a simple material with a set interaction distance and asymmetry factor.
+             *
+             *  @param  dist_   Interaction distance.
+             *  @param  g_      Asymmetry factor.
+             *
+             *  @pre    dist_   Must be positive.
+             *  @pre    g_      Must between minus one and plus one.
+             */
             inline Simple::Simple(const double dist_, const double g_) noexcept
               : _dist(dist_)
               , _g(g_)
