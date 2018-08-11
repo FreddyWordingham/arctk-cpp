@@ -873,10 +873,10 @@ namespace arc //! arctk namespace
                 {
                     const geom::shape::Triangle& tri = mesh_.tri(i);
 
-                    for (size_t i = 0; i < 3; ++i)
+                    for (size_t j = 0; j < 3; ++j)
                     {
-                        verts.emplace_back(glm::vec3(static_cast<float>(tri.pos()[i].x), static_cast<float>(tri.pos()[i].y), static_cast<float>(tri.pos()[i].z)));
-                        verts.emplace_back(glm::vec3(static_cast<float>(tri.norm()[i].x), static_cast<float>(tri.norm()[i].y), static_cast<float>(tri.norm()[i].z)));
+                        verts.emplace_back(glm::vec3(static_cast<float>(tri.pos()[j].x), static_cast<float>(tri.pos()[j].y), static_cast<float>(tri.pos()[j].z)));
+                        verts.emplace_back(glm::vec3(static_cast<float>(tri.norm()[j].x), static_cast<float>(tri.norm()[j].y), static_cast<float>(tri.norm()[j].z)));
                     }
                 }
 
