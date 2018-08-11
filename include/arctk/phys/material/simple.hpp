@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
                 const double _dist; //!< Interaction distance.
 
                 //  -- Scattering --
-                const double _g;
+                const double _g; //!< Asymmetry scattering factor.
 
 
                 //  == INSTANTIATION ==
