@@ -79,15 +79,20 @@ namespace arc //! arctk namespace
             /**
              *  Determine the distance until a material interaction occurs.
              *
-             *  @param  rng_    Random number generator.
-             *
              *  @return Distance to interaction.
              */
-            inline double Simple::interaction_dist(random::Generator* rng_ /*unused*/, const particle::Photon& /*unused*/) const noexcept
+            inline double Simple::interaction_dist(random::Generator* /*unused*/, const particle::Photon& /*unused*/) const noexcept
             {
                 return (_dist);
             }
 
+            /**
+             *  Perform an interaction on a given photon.
+             *
+             * @param rng_
+             * @param phot_
+             * @return
+             */
             inline void Simple::interact(random::Generator* rng_, particle::Photon& phot_) const noexcept
             {
                 phot_.wavelength();
