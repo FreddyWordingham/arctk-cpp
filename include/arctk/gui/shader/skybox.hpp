@@ -109,12 +109,13 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Actor --
-                const Actor _cube; //!< Cube actor.
+                Actor _cube; //!< Cube actor.
 
                 //  -- Textures --
                 const GLuint _cubemap; //!< Cubemap forming the background of the skybox.
 
                 //  -- Uniforms --
+                const GLint _model;  //!< Model matrix uniform handle.
                 const GLint _view;   //!< View matrix uniform handle.
                 const GLint _proj;   //!< Projection matrix uniform handle.
                 const GLint _skybox; //!< Skybox cubemap uniform handle.
@@ -183,6 +184,8 @@ namespace arc //! arctk namespace
              */
             inline void Skybox::render() noexcept
             {
+                _cube.rotate(glm::vec3(0.00001f, 0.0f, 0.0f));
+
                 glPolygonMode(GL_FRONT_AND_BACK, _cube.fill_mode());
 
                 glEnableVertexAttribArray(0);
