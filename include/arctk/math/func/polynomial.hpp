@@ -50,17 +50,24 @@ namespace arc //! arctk namespace
                 //  == OPERATORS ==
               public:
                 //  -- Call --
-                virtual S operator()(const T val_) noexcept = 0;
+                S operator()(const T val_) noexcept override;
             };
 
 
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Polynomial::Polynomial(const std::array<double, N>& coefs_) noexcept
+            template <typename T, typename S, size_t N>
+            inline Polynomial<T, S, N>::Polynomial(const std::array<double, N>& coefs_) noexcept
               : _coefs(coefs_)
             {
             }
+
+
+
+            //  == OPERATORS ==
+            //  -- Call --
+            S operator()(const T val_) noexcept override;
 
 
 
