@@ -149,6 +149,7 @@ namespace arc //! arctk namespace
               : Shader(SKYBOX_SOURCE_VERT, SKYBOX_SOURCE_FRAG)
               , _cube(actor::aabb())
               , _cubemap(init_cubemap(images_))
+              , _model(init_uniform("model"))
               , _view(init_uniform("view"))
               , _proj(init_uniform("proj"))
               , _skybox(init_uniform("skybox"))
