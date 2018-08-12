@@ -57,6 +57,11 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a nth-order polynomial function.
+             *
+             *  @param  coefs_  Array of polynomial coefficents.
+             */
             template <typename T, typename S, size_t N>
             inline Polynomial<T, S, N>::Polynomial(const std::array<double, N + 1>& coefs_) noexcept
               : _coefs(coefs_)
