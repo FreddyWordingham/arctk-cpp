@@ -70,6 +70,14 @@ namespace arc //! arctk namespace
             template <typename T, typename S, size_t N>
             S Polynomial<T, S, N>::operator()(const T val_) noexcept
             {
+                S result{};
+
+                for (size_t i = 0; i < coefs_.size(); ++i)
+                {
+                    result += _coefs[i] * std::pow(val_, i);
+                }
+
+                return (result);
             }
 
 
