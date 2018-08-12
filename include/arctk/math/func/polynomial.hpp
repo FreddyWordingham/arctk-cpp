@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Polynomial() noexcept;
+                inline Polynomial(const std::array<double, N>& coefs_) noexcept;
 
 
                 //  == OPERATORS ==
@@ -52,6 +52,15 @@ namespace arc //! arctk namespace
                 //  -- Call --
                 virtual S operator()(const T val_) noexcept = 0;
             };
+
+
+
+            //  == INSTANTIATION ==
+            //  -- Constructors --
+            inline Polynomial::Polynomial(const std::array<double, N>& coefs_) noexcept
+              : _coefs(coefs_)
+            {
+            }
 
 
 
