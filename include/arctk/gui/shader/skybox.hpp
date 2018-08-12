@@ -183,6 +183,9 @@ namespace arc //! arctk namespace
              */
             inline void Skybox::render() noexcept
             {
+                static float rot = 0.0f;
+                _cube.rotate(glm::vec3(rot, 0.0f, 0.0f));
+
                 glPolygonMode(GL_FRONT_AND_BACK, _cube.fill_mode());
 
                 glEnableVertexAttribArray(0);
