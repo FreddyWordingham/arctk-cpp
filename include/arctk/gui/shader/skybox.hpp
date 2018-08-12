@@ -20,6 +20,7 @@
 #include <GLFW/glfw3.h>
 
 //  -- Arctk --
+#include <arctk/consts.hpp>
 #include <arctk/gui/actor.hpp>
 #include <arctk/gui/camera.hpp>
 #include <arctk/gui/lens.hpp>
@@ -66,7 +67,7 @@ namespace arc //! arctk namespace
                 //  == MAIN ==
                 void main()
                 {
-                    gl_Position = (model * proj * view * vec4(pos, 1.0)).xyww;
+                    gl_Position = (proj * view * model * vec4(pos, 1.0)).xyww;
 
                     texture_coor = pos;
                 }
@@ -110,7 +111,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Actor --
-                Actor _cube; //!< Cube actor.
+                const Actor _cube; //!< Cube actor.
 
                 //  -- Textures --
                 const GLuint _cubemap; //!< Cubemap forming the background of the skybox.
@@ -159,6 +160,8 @@ namespace arc //! arctk namespace
                 {
                     PRE(!images_[i].empty());
                 }
+
+                _cube.rotate(glm::vec3(static_cast<float>(consts::math::PI) / 2.0f, 0.0f, 0.0f));
             }
 
 
@@ -186,9 +189,9 @@ namespace arc //! arctk namespace
              */
             inline void Skybox::render() noexcept
             {
-                _cube.rotate(glm::vec3(0.00001f, 0.0f, 0.0f));
-
                 glPolygonMode(GL_FRONT_AND_BACK, _cube.fill_mode());
+
+                glUniformMatrix4fv(_model, 1, GL_FALSE, &_cube.model()[0][0]);
 
                 glEnableVertexAttribArray(0);
                 glBindVertexArray(_cube.vao());
