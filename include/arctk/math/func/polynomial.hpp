@@ -72,6 +72,13 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
             //  -- Call --
+            /**
+             *  Determine the result of the function for a given value.
+             *
+             *  @param  val_    Domain value of the function.
+             *
+             *  @return Result of the func for the given value.
+             */
             template <typename T, typename S, size_t N>
             S Polynomial<T, S, N>::operator()(const T val_) noexcept
             {
