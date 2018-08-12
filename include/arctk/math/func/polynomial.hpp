@@ -38,13 +38,13 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Coefficients --
-                const std::array<double, N> _coefs; //!< Array of polynomial coefficients.
+                const std::array<double, N + 1> _coefs; //!< Array of polynomial coefficients.
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Polynomial(const std::array<double, N>& coefs_) noexcept;
+                inline Polynomial(const std::array<double, N + 1>& coefs_) noexcept;
 
 
                 //  == OPERATORS ==
@@ -58,7 +58,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename T, typename S, size_t N>
-            inline Polynomial<T, S, N>::Polynomial(const std::array<double, N>& coefs_) noexcept
+            inline Polynomial<T, S, N>::Polynomial(const std::array<double, N + 1>& coefs_) noexcept
               : _coefs(coefs_)
             {
             }
@@ -67,7 +67,10 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
             //  -- Call --
-            S operator()(const T val_) noexcept override;
+            template <typename T, typename S, size_t N>
+            S Polynomial<T, S, N>::operator()(const T val_) noexcept
+            {
+            }
 
 
 
