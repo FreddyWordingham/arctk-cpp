@@ -35,7 +35,7 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Call --
-            virtual S operator()(const S val_) noexcept = 0;
+            virtual S operator()(const T val_) noexcept = 0;
         };
 
 
