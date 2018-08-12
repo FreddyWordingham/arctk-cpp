@@ -864,6 +864,13 @@ namespace arc //! arctk namespace
                 return (Actor(verts, {3}, GL_LINE_STRIP));
             }
 
+            /**
+             *  Create a mesh actor from a geometry mesh.
+             *
+             *  @param  mesh_   Mesh to create an actor of.
+             *
+             *  @return Mesh actor.
+             */
             inline Actor mesh(const geom::shape::Mesh& mesh_) noexcept
             {
                 std::vector<glm::vec3> verts;
