@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
                 //  == MAIN ==
                 void main()
                 {
-                    gl_Position = (proj * view * vec4(pos, 1.0)).xyww;
+                    gl_Position = (proj * view * vec4(pos, 1.0)).xyzw;
 
                     texture_coor = pos;
                 }
