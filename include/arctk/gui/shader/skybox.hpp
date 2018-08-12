@@ -51,6 +51,7 @@ namespace arc //! arctk namespace
                 layout(location = 1) in vec3 norm;
 
                 //  -- Uniforms --
+                uniform mat4 model;
                 uniform mat4 proj;
                 uniform mat4 view;
 
@@ -65,7 +66,7 @@ namespace arc //! arctk namespace
                 //  == MAIN ==
                 void main()
                 {
-                    gl_Position = (proj * view * vec4(pos, 1.0)).xyww;
+                    gl_Position = (model * proj * view * vec4(pos, 1.0)).xyww;
 
                     texture_coor = pos;
                 }
