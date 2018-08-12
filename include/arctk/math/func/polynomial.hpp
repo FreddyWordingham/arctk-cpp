@@ -35,6 +35,18 @@ namespace arc //! arctk namespace
             template <typename T, typename S, size_t N>
             class Polynomial : public Func<T, S>
             {
+                //  == FIELDS ==
+              private:
+                //  -- Coefficients --
+                const std::array<double, N> _coefs; //!< Array of polynomial coefficients.
+
+
+                //  == INSTANTIATION ==
+              public:
+                //  -- Constructors --
+                inline Polynomial() noexcept;
+
+
                 //  == OPERATORS ==
               public:
                 //  -- Call --
