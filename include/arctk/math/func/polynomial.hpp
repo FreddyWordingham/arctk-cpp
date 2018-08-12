@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
             {
                 S result{};
 
-                for (size_t i = 0; i < coefs_.size(); ++i)
+                for (size_t i = 0; i < _coefs.size(); ++i)
                 {
                     result += _coefs[i] * std::pow(val_, i);
                 }
