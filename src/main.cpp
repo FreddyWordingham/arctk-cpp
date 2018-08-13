@@ -75,7 +75,7 @@
 #include <arctk/math/container.hpp>
 #include <arctk/math/convert.hpp>
 #include <arctk/math/formula.hpp>
-#include <arctk/math/func/polynomial.hpp>
+#include <arctk/math/formula/polynomial.hpp>
 #include <arctk/math/geom.hpp>
 #include <arctk/math/mat.hpp>
 #include <arctk/math/mat2.hpp>
