@@ -63,6 +63,7 @@ namespace arc //! arctk namespace
 
         inline T Func::max() const noexcept
         {
+            return (_max);
         }
 
 
