@@ -43,7 +43,27 @@ namespace arc //! arctk namespace
           public:
             //  -- Call --
             virtual S operator()(const T val_) noexcept = 0; //!< Determine the result of the function for a given value. @param  val_    Domain value of the function.   @return Result of the func for the given value.
+
+
+            //  == METHODS ==
+          public:
+            //  -- Getters --
+            inline T min() const noexcept;
+            inline T max() const noexcept;
         };
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        inline T Func::min() const noexcept
+        {
+            return (_min);
+        }
+
+        inline T Func::max() const noexcept
+        {
+        }
 
 
 
