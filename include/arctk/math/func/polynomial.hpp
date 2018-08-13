@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Polynomial(const std::array<double, N + 1>& coefs_) noexcept;
+                inline explicit Polynomial(const std::array<double, N + 1>& coefs_) noexcept;
 
 
                 //  == OPERATORS ==
