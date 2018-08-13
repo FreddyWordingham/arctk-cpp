@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Interaction --
                 inline double interaction_dist(random::Generator* /*unused*/, const particle::Photon& /*unused*/) const noexcept override;
-                inline void   interact(random::Generator* rng_, particle::Photon& phot_) const noexcept override;
+                inline void   interact(random::Generator* rng_, particle::Photon* phot_) const noexcept override;
             };
 
 
@@ -101,10 +101,10 @@ namespace arc //! arctk namespace
              *  @param  rng_    Random number generator.
              *  @param  phot_   Photon to interact with.
              */
-            inline void Simple::interact(random::Generator* rng_, particle::Photon& phot_) const noexcept
+            inline void Simple::interact(random::Generator* rng_, particle::Photon* const phot_) const noexcept
             {
-                phot_.wavelength();
-                phot_.rotate(random::distribution::henyey_greenstein::sample(rng_, _g), rng_->gen() * 2.0 * consts::math::PI);
+                phot_->wavelength();
+                phot_->rotate(random::distribution::henyey_greenstein::sample(rng_, _g), rng_->gen() * 2.0 * consts::math::PI);
             }
 
 
