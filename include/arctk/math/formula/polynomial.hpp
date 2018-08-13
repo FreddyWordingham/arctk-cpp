@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_MATH_FUNC_POLYNOMIAL_HPP
-#define ARCTK_MATH_FUNC_POLYNOMIAL_HPP
+#ifndef ARCTK_MATH_FORMULA_POLYNOMIAL_HPP
+#define ARCTK_MATH_FORMULA_POLYNOMIAL_HPP
 
 
 
@@ -19,7 +19,7 @@ namespace arc //! arctk namespace
 {
     namespace math //! mathematical namespace
     {
-        namespace func //! function namespace
+        namespace formula //! function namespace
         {
 
 
@@ -33,7 +33,7 @@ namespace arc //! arctk namespace
              *  @tparam N   Order of the polynomial.
              */
             template <typename T, typename S, size_t N>
-            class Polynomial : public Func<T, S>
+            class Polynomial : public formula<T, S>
             {
                 //  == FIELDS ==
               private:
@@ -94,11 +94,11 @@ namespace arc //! arctk namespace
 
 
 
-        } // namespace func
+        } // namespace formula
     }     // namespace math
 } // namespace arc
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_MATH_FUNC_POLYNOMIAL_HPP
+#endif // ARCTK_MATH_FORMULA_POLYNOMIAL_HPP
