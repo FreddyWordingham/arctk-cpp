@@ -44,10 +44,19 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Func(T min_, T max_) noexcept;
+            inline Func(const Func&) noexcept = default;
+            inline Func(Func&&) noexcept      = default;
+
+            //  -- Destructors --
+            virtual inline ~Func() noexcept = 0;
 
 
             //  == OPERATORS ==
           public:
+            //  -- Assignment --
+            inline Func& operator=(const Func&) noexcept = default;
+            inline Func& operator=(Func&&) noexcept = default;
+
             //  -- Call --
             virtual S operator()(T val_) noexcept = 0; //!< Determine the result of the function for a given value. @param  val_    Domain value of the function.   @return Result of the func for the given value.
 
@@ -70,6 +79,10 @@ namespace arc //! arctk namespace
         {
             PRE(min_ < max_);
         }
+
+
+        //  -- Destructors --
+        inline Func::~Func() noexcept = default;
 
 
 
