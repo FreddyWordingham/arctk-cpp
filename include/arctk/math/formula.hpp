@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/math/func.hpp
+ *  @file   arctk/math/formula.hpp
  *  @date   11/08/2018
  *  @author Freddy Wordingham
  *
@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_MATH_FUNC_HPP
-#define ARCTK_MATH_FUNC_HPP
+#ifndef ARCTK_MATH_FORMULA_HPP
+#define ARCTK_MATH_FORMULA_HPP
 
 
 
@@ -30,7 +30,7 @@ namespace arc //! arctk namespace
          *  @tparam S   Type returned from the func.
          */
         template <typename T, typename S>
-        class Func
+        class Formula
         {
             //  == FIELDS ==
           private:
@@ -43,19 +43,19 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Func(T min_, T max_) noexcept;
-            inline Func(const Func&) noexcept = default;
-            inline Func(Func&&) noexcept      = default;
+            inline Formula(T min_, T max_) noexcept;
+            inline Formula(const Formula&) noexcept = default;
+            inline Formula(Formula&&) noexcept      = default;
 
             //  -- Destructors --
-            virtual inline ~Func() noexcept = 0;
+            virtual inline ~Formula() noexcept = 0;
 
 
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            inline Func& operator=(const Func&) noexcept = default;
-            inline Func& operator=(Func&&) noexcept = default;
+            inline Formula& operator=(const Formula&) noexcept = default;
+            inline Formula& operator=(Formula&&) noexcept = default;
 
             //  -- Call --
             virtual S operator()(T val_) noexcept = 0; //!< Determine the result of the function for a given value. @param  val_    Domain value of the function.   @return Result of the func for the given value.
@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <typename T, typename S>
-        inline Func<T, S>::Func(const T min_, const T max_) noexcept
+        inline Formula<T, S>::Formula(const T min_, const T max_) noexcept
           : _min(min_)
           , _max(max_)
         {
@@ -82,20 +82,20 @@ namespace arc //! arctk namespace
 
 
         //  -- Destructors --
-        inline Func::~Func() noexcept = default;
+        inline Formula::~Formula() noexcept = default;
 
 
 
         //  == METHODS ==
         //  -- Getters --
         template <typename T, typename S>
-        inline T Func<T, S>::min() const noexcept
+        inline T Formula<T, S>::min() const noexcept
         {
             return (_min);
         }
 
         template <typename T, typename S>
-        inline T Func<T, S>::max() const noexcept
+        inline T Formula<T, S>::max() const noexcept
         {
             return (_max);
         }
@@ -108,4 +108,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_MATH_FUNC_HPP
+#endif // ARCTK_MATH_FORMULA_HPP
