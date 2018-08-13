@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
                 //  == OPERATORS ==
               public:
                 //  -- Call --
-                S operator()(const T val_) noexcept override;
+                S operator()(T val_) noexcept override;
             };
 
 
