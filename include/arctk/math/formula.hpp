@@ -81,7 +81,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Destructors --
-        inline Formula::~Formula() noexcept = default;
+        inline Formula<T, S>::~Formula() noexcept = default;
 
 
 
