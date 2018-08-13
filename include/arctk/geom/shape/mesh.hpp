@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Getters --
                 inline size_t          num_tri() const noexcept;
-                inline const Triangle& tri(const size_t index_) const noexcept;
+                inline const Triangle& tri(size_t index_) const noexcept;
 
                 //  -- Collision --
                 inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const noexcept override;
