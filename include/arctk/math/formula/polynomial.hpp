@@ -33,7 +33,7 @@ namespace arc //! arctk namespace
              *  @tparam N   Order of the polynomial.
              */
             template <typename T, typename S, size_t N>
-            class Polynomial : public formula<T, S>
+            class Polynomial : public Formula<T, S>
             {
                 //  == FIELDS ==
               private:
