@@ -127,7 +127,7 @@ namespace arc //! arctk namespace
                 std::string       line;
 
                 std::vector<vec3> vert_pos, vert_norm;
-                const mat4        inv_transform_ = transform_.inv().trans();
+                const mat4        inv_transform = transform_.inv().trans();
                 while (std::getline(serial_stream, line))
                 {
                     std::stringstream line_stream(line);
@@ -150,7 +150,7 @@ namespace arc //! arctk namespace
                         line_stream >> norm.x >> norm.y >> norm.z;
                         norm.w = 1.0;
 
-                        norm = inv_transform_ * norm;
+                        norm = inv_transform * norm;
 
                         vert_norm.emplace_back(vec3(norm.x, norm.y, norm.z).normal());
                     }
