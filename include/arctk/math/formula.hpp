@@ -39,7 +39,6 @@ namespace arc //! arctk namespace
             const T _max; //!< Maximum valid bound of the funcs domain.
 
 
-
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
