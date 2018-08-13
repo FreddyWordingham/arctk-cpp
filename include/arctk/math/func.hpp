@@ -32,6 +32,13 @@ namespace arc //! arctk namespace
         template <typename T, typename S>
         class Func
         {
+            //  == FIELDS ==
+          private:
+            //  -- Bounds --
+            const T _min;
+            const T _max;
+
+
             //  == OPERATORS ==
           public:
             //  -- Call --
