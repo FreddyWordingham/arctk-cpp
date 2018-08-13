@@ -35,7 +35,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Bounds --
-            const T _min;
+            const T _min; //!< Minimum valid bound of the funcs domain.
             const T _max;
 
 
