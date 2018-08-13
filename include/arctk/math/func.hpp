@@ -63,7 +63,8 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Func::Func(const T min_, const T max_) noexcept
+        template <typename T, typename S>
+        inline Func<T, S>::Func(const T min_, const T max_) noexcept
           : _min(min_)
           , _max(max_)
         {
@@ -74,12 +75,14 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        inline T Func::min() const noexcept
+        template <typename T, typename S>
+        inline T Func<T, S>::min() const noexcept
         {
             return (_min);
         }
 
-        inline T Func::max() const noexcept
+        template <typename T, typename S>
+        inline T Func<T, S>::max() const noexcept
         {
             return (_max);
         }
