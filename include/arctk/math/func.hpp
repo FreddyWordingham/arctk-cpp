@@ -39,6 +39,13 @@ namespace arc //! arctk namespace
             const T _max; //!< Maximum valid bound of the funcs domain.
 
 
+
+            //  == INSTANTIATION ==
+          public:
+            //  -- Constructors --
+            inline Func(const T min_, const T max_) noexcept;
+
+
             //  == OPERATORS ==
           public:
             //  -- Call --
@@ -51,6 +58,17 @@ namespace arc //! arctk namespace
             inline T min() const noexcept;
             inline T max() const noexcept;
         };
+
+
+
+        //  == INSTANTIATION ==
+        //  -- Constructors --
+        inline Func::Func(const T min_, const T max_) noexcept
+          : _min(min_)
+          , _max(max_)
+        {
+            PRE(min_ < max_);
+        }
 
 
 
