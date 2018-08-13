@@ -36,7 +36,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Bounds --
             const T _min; //!< Minimum valid bound of the funcs domain.
-            const T _max;
+            const T _max; //!< Maximum valid bound of the funcs domain.
 
 
             //  == OPERATORS ==
