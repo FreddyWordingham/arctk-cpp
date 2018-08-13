@@ -117,7 +117,7 @@ namespace arc //! arctk namespace
              *
              *  @return Initialised vector of triangles that will form the mesh.
              */
-            inline std::vector<Triangle> Mesh::init_tris(const std::string& serial_, const mat4& transform_) const noexcept
+            inline std::vector<Triangle> Mesh::init_tris(const std::string& serial_, const mat4& transform_) const noexcept // NOLINT
             {
                 PRE(!serial_.empty());
 
