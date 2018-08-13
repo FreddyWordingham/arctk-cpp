@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Call --
-            virtual S operator()(const T val_) noexcept = 0; //!< Determine the result of the function for a given value. @param  val_    Domain value of the function.   @return Result of the func for the given value.
+            virtual S operator()(T val_) noexcept = 0; //!< Determine the result of the function for a given value. @param  val_    Domain value of the function.   @return Result of the func for the given value.
 
 
             //  == METHODS ==
