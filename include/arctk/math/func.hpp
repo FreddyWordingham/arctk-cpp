@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Func(const T min_, const T max_) noexcept;
+            inline Func(T min_, T max_) noexcept;
 
 
             //  == OPERATORS ==
