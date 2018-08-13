@@ -138,7 +138,7 @@ namespace arc //! arctk namespace
                     {
                         vec4 pos;
                         line_stream >> pos.x >> pos.y >> pos.z;
-                        pos.w = 1.0;
+                        pos.w = 0.0;
 
                         pos = transform_ * pos;
 
