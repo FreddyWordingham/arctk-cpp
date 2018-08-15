@@ -71,6 +71,14 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a formula with given domain bounds.
+         *
+         *  @param  min_    Minimum domain bound of the formula.
+         *  @param  max_    Maximum domain bound of the formula.
+         *
+         *  @pre    min_ must be less than max_.
+         */
         template <typename T, typename S>
         inline Formula<T, S>::Formula(const T min_, const T max_) noexcept
           : _min(min_)
