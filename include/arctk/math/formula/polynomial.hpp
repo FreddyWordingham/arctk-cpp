@@ -90,7 +90,7 @@ namespace arc //! arctk namespace
              *  @return Result of the func for the given value.
              */
             template <size_t N>
-            double Polynomial<N>::operator()(const double val_) noexcept
+            inline double Polynomial<N>::operator()(const double val_) noexcept
             {
                 double result{};
 
