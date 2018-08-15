@@ -90,9 +90,9 @@ namespace arc //! arctk namespace
              *
              *  @return Distance to interaction.
              */
-            inline double Basic::interaction_dist(random::Generator* /*unused*/, const particle::Photon& /*unused*/) const noexcept
+            inline double Basic::interaction_dist(random::Generator* rng_, const particle::Photon& /*unused*/) const noexcept
             {
-                return (_dist);
+                return (-std::log(rng_->gen()) / _interaction_coef);
             }
 
             /**
