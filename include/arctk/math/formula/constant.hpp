@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
                 //  == OPERATORS ==
               public:
                 //  -- Call --
-                double operator()(double val_) noexcept override;
+                inline double operator()(double val_) noexcept override;
             };
 
 
