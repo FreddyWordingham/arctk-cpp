@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/math/func/polynomial.hpp
+ *  @file   arctk/math/formula/polynomial.hpp
  *  @date   12/08/2018
  *  @author Freddy Wordingham
  *
