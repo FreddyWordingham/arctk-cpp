@@ -14,6 +14,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/math/formula.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
