@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
             inline Formula(Formula&&) noexcept      = default;
 
             //  -- Destructors --
-            virtual inline ~Formula() noexcept = 0;
+            virtual inline ~Formula() noexcept = default;
 
 
             //  == OPERATORS ==
@@ -86,11 +86,6 @@ namespace arc //! arctk namespace
         {
             PRE(min_ < max_);
         }
-
-
-        //  -- Destructors --
-        template <typename T, typename S>
-        inline Formula<T, S>::~Formula() noexcept = default;
 
 
 
