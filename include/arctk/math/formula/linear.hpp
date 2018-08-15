@@ -126,6 +126,13 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
             //  -- Call --
+            /**
+             *  Determine the result of the function for a given value.
+             *
+             *  @param  val_    Domain value of the function.
+             *
+             *  @return Result of the func for the given value.
+             */
             double Linear::operator()(const double val_) noexcept
             {
                 PRE((val_ >= _min) && (val_ <= _max));
