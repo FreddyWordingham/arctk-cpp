@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classarc_1_1phys_1_1_material.html" title="arc::phys::Material" alt="" coords="5,12,136,37"/>
-<area shape="rect" id="node2" href="$classarc_1_1phys_1_1material_1_1_simple.html" title="arc::phys::material\l::Simple" alt="" coords="184,5,314,44"/>
+<area shape="rect" id="node1" href="$classarc_1_1math_1_1_formula.html" title="arc::math::Formula\l\&lt; T, S \&gt;" alt="" coords="5,5,139,44"/>
+<area shape="rect" id="node2" href="$classarc_1_1math_1_1formula_1_1_polynomial.html" title="arc::math::formula\l::Polynomial\&lt; T, S, N \&gt;" alt="" coords="187,5,343,44"/>
 </map>

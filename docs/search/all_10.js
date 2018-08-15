@@ -21,6 +21,8 @@ var searchData=
   ['plane_5fnorm',['plane_norm',['../classarc_1_1geom_1_1shape_1_1_triangle.html#a5e6273eac5f6dcf71ca9312bc895775f',1,'arc::geom::shape::Triangle']]],
   ['polar_5fto_5fcart',['polar_to_cart',['../namespacearc_1_1math_1_1convert.html#adc9151d5ba0dcf2846c64d1c1386c191',1,'arc::math::convert']]],
   ['poll',['poll',['../classarc_1_1gui_1_1_keymap.html#a5454aeffeb8918d01628da42a265b632',1,'arc::gui::Keymap']]],
+  ['polynomial',['Polynomial',['../classarc_1_1math_1_1formula_1_1_polynomial.html',1,'arc::math::formula::Polynomial&lt; T, S, N &gt;'],['../classarc_1_1math_1_1formula_1_1_polynomial.html#a0e27d848524469a9bb57e1784407f98e',1,'arc::math::formula::Polynomial::Polynomial()']]],
+  ['polynomial_2ehpp',['polynomial.hpp',['../polynomial_8hpp.html',1,'']]],
   ['pos',['pos',['../classarc_1_1geom_1_1shape_1_1_triangle.html#a7d44c895892dcc7da831a2e999f17318',1,'arc::geom::shape::Triangle::pos()'],['../classarc_1_1gui_1_1_camera.html#a84b35ed211ee06b0eeba0fb7732766bf',1,'arc::gui::Camera::pos()'],['../classarc_1_1phys_1_1_particle.html#ab43bb6f582a0a011a91db601f7982787',1,'arc::phys::Particle::pos()']]],
   ['pos_5fkeyword',['POS_KEYWORD',['../namespacearc_1_1geom_1_1shape.html#a17241ff4b6ed8e60ed66791fc8bc66e4',1,'arc::geom::shape']]],
   ['post',['POST',['../debug_8hpp.html#a9302d06bf85836e2d719ec4d67fa1e05',1,'debug.hpp']]],

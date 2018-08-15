@@ -1,11 +1,10 @@
 <map id="arc::gui::actor::path" name="arc::gui::actor::path">
-<area shape="rect" id="node2" href="$classarc_1_1phys_1_1_particle.html#ab6d64bad4cc46690dde1585e8f27851c" title="arc::phys::Particle\l::path" alt="" coords="196,13,324,52"/>
-<area shape="rect" id="node3" href="$classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="189,76,331,101"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1math_1_1container.html#af7a7e70fec2026804d07178e063a2236" title="arc::math::container::sum" alt="" coords="379,48,551,73"/>
-<area shape="rect" id="node5" href="$classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="389,97,541,136"/>
-<area shape="rect" id="node6" href="$classarc_1_1gui_1_1_actor.html#a5251ce8de3e14f4b3daf9e2a7b771eee" title="arc::gui::Actor::model" alt="" coords="608,5,755,31"/>
-<area shape="rect" id="node7" href="$namespacearc_1_1math_1_1mat.html#a8df70b235035d723df62e4a418ac7e94" title="arc::math::mat::translate" alt="" coords="599,55,764,80"/>
-<area shape="rect" id="node8" href="$namespacearc_1_1math_1_1mat.html#acc6349295b1604d5cafa857f97469ed4" title="arc::math::mat::rotate" alt="" coords="607,104,755,129"/>
-<area shape="rect" id="node9" href="$namespacearc_1_1math_1_1convert.html#a50422c57700cd263a956ee9d438d32e7" title="arc::math::convert\l::rad_to_deg" alt="" coords="617,153,745,192"/>
-<area shape="rect" id="node10" href="$namespacearc_1_1math_1_1mat.html#a4aaba718d91ea015418b66dc4f7a7a48" title="arc::math::mat::scale" alt="" coords="609,216,754,241"/>
+<area shape="rect" id="node2" href="$classarc_1_1phys_1_1_particle.html#ab6d64bad4cc46690dde1585e8f27851c" title="arc::phys::Particle\l::path" alt="" coords="196,5,324,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="189,68,331,93"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1math_1_1container.html#af7a7e70fec2026804d07178e063a2236" title="arc::math::container::sum" alt="" coords="379,40,551,65"/>
+<area shape="rect" id="node5" href="$classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="389,89,541,128"/>
+<area shape="rect" id="node6" href="$classarc_1_1gui_1_1_actor.html#a5251ce8de3e14f4b3daf9e2a7b771eee" title="arc::gui::Actor::model" alt="" coords="608,21,755,47"/>
+<area shape="rect" id="node7" href="$namespacearc_1_1math_1_1mat.html#a8df70b235035d723df62e4a418ac7e94" title="arc::math::mat::translate" alt="" coords="599,71,764,96"/>
+<area shape="rect" id="node8" href="$namespacearc_1_1math_1_1mat.html#acc6349295b1604d5cafa857f97469ed4" title="arc::math::mat::rotate" alt="" coords="607,120,755,145"/>
+<area shape="rect" id="node9" href="$namespacearc_1_1math_1_1mat.html#a4aaba718d91ea015418b66dc4f7a7a48" title="arc::math::mat::scale" alt="" coords="609,169,754,195"/>
 </map>

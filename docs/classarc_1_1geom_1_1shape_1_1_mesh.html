@@ -106,8 +106,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9cf85436a93ef12128687b19f2dbf932"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a791e68553dbf8c2d2fb9c00ee98782aa"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a791e68553dbf8c2d2fb9c00ee98782aa">num_tri</a> () const noexcept</td></tr>
 <tr class="separator:a791e68553dbf8c2d2fb9c00ee98782aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f1ad14e1991a8f3d1a35c47674630d9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html">Triangle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a1f1ad14e1991a8f3d1a35c47674630d9">tri</a> (const size_t index_) const noexcept</td></tr>
-<tr class="separator:a1f1ad14e1991a8f3d1a35c47674630d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2be8cb96279daeff009744a8b70ddb82"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html">Triangle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a2be8cb96279daeff009744a8b70ddb82">tri</a> (size_t index_) const noexcept</td></tr>
+<tr class="separator:a2be8cb96279daeff009744a8b70ddb82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30578bd21f0fa9d050cd1879ccae02ab"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a30578bd21f0fa9d050cd1879ccae02ab">collision</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
 <tr class="separator:a30578bd21f0fa9d050cd1879ccae02ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classarc_1_1geom_1_1_shape"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classarc_1_1geom_1_1_shape')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classarc_1_1geom_1_1_shape.html">arc::geom::Shape</a></td></tr>
@@ -290,6 +290,21 @@ Private Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>serial_ may not be empty.</dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>tris_ may not be empty.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Initialised vector of triangles that will form the mesh. </dd></dl>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_aae7413807c30d4d5820ec9278c4b7675_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_aae7413807c30d4d5820ec9278c4b7675_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_mesh_aae7413807c30d4d5820ec9278c4b7675_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_aae7413807c30d4d5820ec9278c4b7675_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1math_1_1_mat.html#ada19a34fc5169413915ca03d6d17c9f2" title="arc::math::Mat::inv" alt="" coords="230,29,361,55"/>
+<area shape="rect" id="node7" href="namespacearc_1_1utl_1_1stream.html#aa70112a62ebd9415f42043a6372f9c9d" title="arc::utl::stream::rewind" alt="" coords="218,79,374,104"/>
+<area shape="rect" id="node3" href="classarc_1_1math_1_1_mat.html#af656481a991b67a0d5c56dd3907b7872" title="arc::math::Mat::adj" alt="" coords="422,55,554,80"/>
+<area shape="rect" id="node6" href="classarc_1_1math_1_1_mat.html#a17ff38fa0f4b29f52711441b876d1118" title="arc::math::Mat::det" alt="" coords="422,5,554,31"/>
+<area shape="rect" id="node4" href="classarc_1_1math_1_1_mat.html#afe05be4f8638a489f18d153239c5f314" title="arc::math::Mat::cofactor" alt="" coords="602,5,764,31"/>
+<area shape="rect" id="node5" href="classarc_1_1math_1_1_mat.html#a28d8fb11c34fe8caa44bd22b5cc68bbf" title="arc::math::Mat::trans" alt="" coords="611,55,755,80"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -317,11 +332,21 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the number of triangles within the mesh.</p>
 <dl class="section return"><dt>Returns</dt><dd>Number of triangles within the mesh. </dd></dl>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a791e68553dbf8c2d2fb9c00ee98782aa_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a791e68553dbf8c2d2fb9c00ee98782aa_icgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_mesh_a791e68553dbf8c2d2fb9c00ee98782aa_icgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a791e68553dbf8c2d2fb9c00ee98782aa_icgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#ae9ba63f25c1fbf73b47446fe9969245d" title="arc::gui::actor::mesh" alt="" coords="218,12,360,37"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a1f1ad14e1991a8f3d1a35c47674630d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f1ad14e1991a8f3d1a35c47674630d9">&#9670;&nbsp;</a></span>tri()</h2>
+<a id="a2be8cb96279daeff009744a8b70ddb82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2be8cb96279daeff009744a8b70ddb82">&#9670;&nbsp;</a></span>tri()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -332,7 +357,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html">Triangle</a> &amp; arc::geom::shape::Mesh::tri </td>
           <td>(</td>
-          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>index_</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -352,6 +377,16 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>index_ must be less than _tris.size.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Const reference to a triangle within the mesh. </dd></dl>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a2be8cb96279daeff009744a8b70ddb82_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a2be8cb96279daeff009744a8b70ddb82_icgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_mesh_a2be8cb96279daeff009744a8b70ddb82_icgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a2be8cb96279daeff009744a8b70ddb82_icgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#ae9ba63f25c1fbf73b47446fe9969245d" title="arc::gui::actor::mesh" alt="" coords="236,5,378,31"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -386,7 +421,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Aug 11 2018 01:35:19 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 15 2018 11:09:39 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

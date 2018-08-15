@@ -108,9 +108,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1c09fd8365a61fe35a26961e35bcab7a"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_material.html#a1c09fd8365a61fe35a26961e35bcab7a">interaction_dist</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_, const <a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html">particle::Photon</a> &amp;phot_) const noexcept=0</td></tr>
 <tr class="memdesc:a1c09fd8365a61fe35a26961e35bcab7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine the distance until a material interaction occurs.  <a href="#a1c09fd8365a61fe35a26961e35bcab7a">More...</a><br /></td></tr>
 <tr class="separator:a1c09fd8365a61fe35a26961e35bcab7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad73f10e3a3db2fbc880c486911b49e2e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_material.html#ad73f10e3a3db2fbc880c486911b49e2e">interact</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_, <a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html">particle::Photon</a> &amp;phot_) const noexcept=0</td></tr>
-<tr class="memdesc:ad73f10e3a3db2fbc880c486911b49e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform an interaction on a given photon.  <a href="#ad73f10e3a3db2fbc880c486911b49e2e">More...</a><br /></td></tr>
-<tr class="separator:ad73f10e3a3db2fbc880c486911b49e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d530817733f48bffa2f74d40e36fc9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_material.html#a98d530817733f48bffa2f74d40e36fc9">interact</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_, <a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html">particle::Photon</a> *phot_) const noexcept=0</td></tr>
+<tr class="memdesc:a98d530817733f48bffa2f74d40e36fc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform an interaction on a given photon.  <a href="#a98d530817733f48bffa2f74d40e36fc9">More...</a><br /></td></tr>
+<tr class="separator:a98d530817733f48bffa2f74d40e36fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Physical material class. </p>
@@ -199,8 +199,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad73f10e3a3db2fbc880c486911b49e2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad73f10e3a3db2fbc880c486911b49e2e">&#9670;&nbsp;</a></span>interact()</h2>
+<a id="a98d530817733f48bffa2f74d40e36fc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d530817733f48bffa2f74d40e36fc9">&#9670;&nbsp;</a></span>interact()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -217,7 +217,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html">particle::Photon</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html">particle::Photon</a> *&#160;</td>
           <td class="paramname"><em>phot_</em>&#160;</td>
         </tr>
         <tr>
@@ -242,7 +242,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classarc_1_1phys_1_1material_1_1_simple.html#a905e54836aee900231d8e18589e35017">arc::phys::material::Simple</a>.</p>
+<p>Implemented in <a class="el" href="classarc_1_1phys_1_1material_1_1_simple.html#a2f0d8cd46a4fe6fcc749db9f00c0ba91">arc::phys::material::Simple</a>.</p>
 
 </div>
 </div>
@@ -358,7 +358,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Aug 11 2018 01:35:19 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 15 2018 11:09:39 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

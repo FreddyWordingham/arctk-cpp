@@ -7,6 +7,6 @@ var searchData=
   ['trans',['trans',['../classarc_1_1math_1_1_mat.html#a28d8fb11c34fe8caa44bd22b5cc68bbf',1,'arc::math::Mat::trans()'],['../classarc_1_1math_1_1_mat_3_01_t_00_012_01_4.html#a10a3f0bc370eece185905a61e8b69ea6',1,'arc::math::Mat&lt; T, 2 &gt;::trans()'],['../classarc_1_1math_1_1_mat_3_01_t_00_013_01_4.html#aebff9bf6e0bbb660b62be377a2bdd522',1,'arc::math::Mat&lt; T, 3 &gt;::trans()'],['../classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#a198fa763c098530d993b54daf00ed62e',1,'arc::math::Mat&lt; T, 4 &gt;::trans()']]],
   ['transform',['transform',['../namespacearc_1_1math_1_1mat.html#af39486147412a1d46985c59a96727834',1,'arc::math::mat']]],
   ['translate',['translate',['../classarc_1_1gui_1_1_actor.html#afa7614a8eaf83751cf0b879934bf8388',1,'arc::gui::Actor::translate()'],['../namespacearc_1_1math_1_1mat.html#a8df70b235035d723df62e4a418ac7e94',1,'arc::math::mat::translate()']]],
-  ['tri',['tri',['../classarc_1_1geom_1_1shape_1_1_mesh.html#a1f1ad14e1991a8f3d1a35c47674630d9',1,'arc::geom::shape::Mesh']]],
+  ['tri',['tri',['../classarc_1_1geom_1_1shape_1_1_mesh.html#a2be8cb96279daeff009744a8b70ddb82',1,'arc::geom::shape::Mesh']]],
   ['triangle',['Triangle',['../classarc_1_1geom_1_1shape_1_1_triangle.html#ada273019b1aad721dddf49379616c007',1,'arc::geom::shape::Triangle']]]
 ];
