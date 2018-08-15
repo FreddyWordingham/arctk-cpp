@@ -29,7 +29,7 @@ namespace arc //! arctk namespace
         class Formula
         {
             //  == FIELDS ==
-          private:
+          protected:
             //  -- Bounds --
             const double _min; //!< Minimum valid bound of the funcs domain.
             const double _max; //!< Maximum valid bound of the funcs domain.
