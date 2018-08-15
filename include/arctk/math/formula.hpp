@@ -25,24 +25,20 @@ namespace arc //! arctk namespace
         //  == CLASS ==
         /**
          *  Mathematical function class.
-         *
-         *  @tparam T   Type of func domain.
-         *  @tparam S   Type returned from the func.
          */
-        template <typename T, typename S>
         class Formula
         {
             //  == FIELDS ==
           private:
             //  -- Bounds --
-            const T _min; //!< Minimum valid bound of the funcs domain.
-            const T _max; //!< Maximum valid bound of the funcs domain.
+            const double _min; //!< Minimum valid bound of the funcs domain.
+            const double _max; //!< Maximum valid bound of the funcs domain.
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Formula(T min_, T max_) noexcept;
+            inline Formula(double min_, double max_) noexcept;
             inline Formula(const Formula&) noexcept = default; //!< Defaulted copy constructor.
             inline Formula(Formula&&) noexcept      = default; //!< Defaulted move constructor.
 
@@ -57,14 +53,14 @@ namespace arc //! arctk namespace
             inline Formula& operator=(Formula&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
 
             //  -- Call --
-            virtual S operator()(T val_) noexcept = 0; //!< Determine the result of the function for a given value. @param  val_    Domain value of the function.   @return Result of the func for the given value.
+            virtual double operator()(double val_) noexcept = 0; //!< Determine the result of the function for a given value. @param  val_    Domain value of the function.   @return Result of the func for the given value.
 
 
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline T min() const noexcept;
-            inline T max() const noexcept;
+            inline double min() const noexcept;
+            inline double max() const noexcept;
         };
 
 
@@ -79,8 +75,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    min_ must be less than max_.
          */
-        template <typename T, typename S>
-        inline Formula<T, S>::Formula(const T min_, const T max_) noexcept
+        inline Formula::Formula(const double min_, const double max_) noexcept
           : _min(min_)
           , _max(max_)
         {
@@ -96,8 +91,7 @@ namespace arc //! arctk namespace
          *
          *  @return Minimum bound of the formula.
          */
-        template <typename T, typename S>
-        inline T Formula<T, S>::min() const noexcept
+        inline double Formula::min() const noexcept
         {
             return (_min);
         }
@@ -107,8 +101,7 @@ namespace arc //! arctk namespace
          *
          *  @return Maximum bound of the formula.
          */
-        template <typename T, typename S>
-        inline T Formula<T, S>::max() const noexcept
+        inline double Formula::max() const noexcept
         {
             return (_max);
         }
