@@ -18,6 +18,7 @@
 //  -- Std --
 #include <array>
 #include <cstddef>
+#include <limits>
 
 //  -- Arctk --
 #include <arctk/math/formula.hpp>
