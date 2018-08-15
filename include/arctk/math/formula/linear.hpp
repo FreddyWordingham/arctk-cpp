@@ -88,6 +88,14 @@ namespace arc //! arctk namespace
                 PRE(ys_.size() > 1);
                 PRE(xs_.size() == ys_.size());
                 PRE(utl::properties::ascending(xs_));
+
+                std::vector<double> grads(xs_.size() - 1);
+                for (size_t i = 0; i < grads.size(); ++i)
+                {
+                    grads[i] = (_ys[i + 1] - _ys[i]) / (_xs[i + 1] - _xs[i]);
+                }
+
+                return (grads);
             }
 
 
