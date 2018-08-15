@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
              */
             template <typename T, typename S, size_t N>
             inline Polynomial<T, S, N>::Polynomial(const std::array<double, N + 1>& coefs_) noexcept
-              : Formula(std::numeric_limits<T>::lowest(), -std::numeric_limits<T>::max())
+              : Formula(std::numeric_limits<T>::lowest(), std::numeric_limits<T>::max())
               , _coefs(coefs_)
             {
             }
