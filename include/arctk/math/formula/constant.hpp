@@ -53,9 +53,6 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline Constant(const std::vector<double>& xs_, const std::vector<double>& ys_) noexcept;
 
-                //  -- Initialisation --
-                inline std::vector<double> init_grads(const std::vector<double>& xs_, const std::vector<double>& ys_) noexcept;
-
 
                 //  == OPERATORS ==
               public:
