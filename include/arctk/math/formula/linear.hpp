@@ -42,8 +42,9 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Coefficients --
-                const std::vector<double> _x; //!< Vector of x-positions of the nodes.
-                const std::vector<double> _y; //!< Vector of y-positions of the nodes.
+                const std::vector<double> _xs;    //!< Vector of x-positions of the nodes.
+                const std::vector<double> _ys;    //!< Vector of y-positions of the nodes.
+                const std::vector<double> _grads; //!< Vector of intermediate gradients.
 
 
                 //  == INSTANTIATION ==
