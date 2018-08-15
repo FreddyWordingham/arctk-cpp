@@ -213,7 +213,7 @@ namespace arc //! arctk namespace
                 PRE(properties::ascending(cont_));
                 PRE(properties::within(cont_, val_));
 
-                const size_t index = std::distance(std::begin(cont_), std::upper_bound(std::begin(cont_), std::end(cont_), val_));
+                const size_t index = static_cast<size_t>(std::distance(std::begin(cont_), std::upper_bound(std::begin(cont_), std::end(cont_), val_)));
 
                 return ((index == cont_.size()) ? (index - 1) : index);
             }
