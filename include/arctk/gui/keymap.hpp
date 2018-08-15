@@ -110,6 +110,11 @@ namespace arc //! arctk namespace
             _map.erase(key_);
         }
 
+        /**
+         *  Setup the keymap to apply an orbit control
+         *
+         *  @param  cam_    Camera to apply orbit controls to.
+         */
         inline void Keymap::use_orbit_controls(Camera* const cam_) noexcept
         {
             bind(GLFW_KEY_LEFT_SHIFT, [cam_]() { cam_->accelerate(0.01f); }, true);
