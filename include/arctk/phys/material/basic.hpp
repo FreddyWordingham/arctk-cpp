@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Basic(double dist_, double g_) noexcept;
+                inline Basic(double interaction_coef_, double g_) noexcept;
 
 
                 //  == METHODS ==
@@ -65,19 +65,19 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
-             *  Construct a basic material with a set interaction distance and asymmetry factor.
+             *  Construct a basic material with a set interaction coefficient and asymmetry factor.
              *
-             *  @param  dist_   Interaction distance.
-             *  @param  g_      Asymmetry factor.
+             *  @param  interaction_coef_   Interaction coefficient.
+             *  @param  g_                  Asymmetry factor.
              *
-             *  @pre    dist_   Must be positive.
-             *  @pre    g_      Must between minus one and plus one.
+             *  @pre    interaction_coef_   Must be positive.
+             *  @pre    g_                  Must between minus one and plus one.
              */
-            inline Basic::Basic(const double dist_, const double g_) noexcept
-              : _dist(dist_)
+            inline Basic::Basic(const double interaction_coef_, const double g_) noexcept
+              : _interaction_coef(interaction_coef_)
               , _g(g_)
             {
-                PRE(dist_ > 0.0);
+                PRE(interaction_coef_ > 0.0);
                 PRE((g_ >= -1.0) && (g_ <= 1.0));
             }
 
