@@ -52,6 +52,9 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline Linear(const std::vector<double>& xs_, const std::vector<double>& ys_) noexcept;
 
+                //  -- Initialisation --
+                inline std::vector<double> init_grads(const std::vector<double>& xs_, const std::vector<double>& ys_) noexcept;
+
 
                 //  == OPERATORS ==
               public:
@@ -71,6 +74,17 @@ namespace arc //! arctk namespace
                 PRE(xs_.size() > 1);
                 PRE(ys_.size() > 1);
                 PRE(xs_.size() == ys_.size());
+                PRE(utl::properties::ascending(xs_));
+            }
+
+
+            //  -- Initialisation --
+            inline std::vector<double> Linear::init_grads(const std::vector<double>& xs_, const std::vector<double>& ys_) noexcept
+            {
+                PRE(xs_.size() > 1);
+                PRE(ys_.size() > 1);
+                PRE(xs_.size() == ys_.size());
+                PRE(utl::properties::ascending(xs_));
             }
 
 
