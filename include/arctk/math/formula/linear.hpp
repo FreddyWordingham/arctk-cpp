@@ -37,7 +37,7 @@ namespace arc //! arctk namespace
 
             //  == CLASS ==
             /**
-             *  Polynomial function class.
+             *  Linear interpolation function class.
              */
             class Linear : public Formula
             {
