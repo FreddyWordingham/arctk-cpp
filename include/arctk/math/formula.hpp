@@ -43,8 +43,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Formula(T min_, T max_) noexcept;
-            inline Formula(const Formula&) noexcept = default;
-            inline Formula(Formula&&) noexcept      = default;
+            inline Formula(const Formula&) noexcept = default; //!< Defaulted copy constructor.
+            inline Formula(Formula&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
             virtual inline ~Formula() noexcept = default;
