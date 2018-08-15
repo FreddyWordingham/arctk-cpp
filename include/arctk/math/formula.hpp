@@ -99,6 +99,11 @@ namespace arc //! arctk namespace
             return (_min);
         }
 
+        /**
+         *  Get the maximum bound of the formula.
+         *
+         *  @return Maximum bound of the formula.
+         */
         template <typename T, typename S>
         inline T Formula<T, S>::max() const noexcept
         {
