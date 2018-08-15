@@ -90,6 +90,21 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
             //  -- Call --
+            /**
+             *  Determine the result of the function for a given value.
+             *
+             *  @param  val_    Domain value of the function.
+             *
+             *  @return Result of the func for the given value.
+             */
+            double Constant::operator()(const double val_) noexcept
+            {
+                PRE((val_ >= _min) && (val_ <= _max));
+
+                const size_t index = utl::search::lower(_xs, val_);
+
+                return (_ys[index]);
+            }
 
 
 
