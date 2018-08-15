@@ -43,6 +43,7 @@ namespace arc //! arctk namespace
               private:
                 //  -- Coefficients --
                 const std::vector<double> _x; //!< Vector of x-positions of the nodes.
+                const std::vector<double> _y; //!< Vector of y-positions of the nodes.
 
 
                 //  == INSTANTIATION ==
