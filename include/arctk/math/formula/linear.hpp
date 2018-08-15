@@ -108,7 +108,7 @@ namespace arc //! arctk namespace
 
                 const size_t index = utl::search::lower(_xs, val_);
 
-                return (_ys[index] + ((_val - _xs[index]) * _grads[index]));
+                return (_ys[index] + ((val_ - _xs[index]) * _grads[index]));
             }
 
 
