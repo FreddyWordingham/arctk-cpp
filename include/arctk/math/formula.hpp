@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
             inline Formula& operator=(Formula&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
 
             //  -- Call --
-            virtual double operator()(double val_) noexcept = 0; //!< Determine the result of the function for a given value. @param  val_    Domain value of the function.   @return Result of the func for the given value.
+            virtual inline double operator()(double val_) noexcept = 0; //!< Determine the result of the function for a given value. @param  val_    Domain value of the function.   @return Result of the func for the given value.
 
 
             //  == METHODS ==
