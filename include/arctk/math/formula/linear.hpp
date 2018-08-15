@@ -36,12 +36,8 @@ namespace arc //! arctk namespace
             //  == CLASS ==
             /**
              *  Polynomial function class.
-             *
-             *  @tparam T   Type of func domain.
-             *  @tparam S   Type returned from the func.
              */
-            template <typename T, typename S>
-            class Linear : public Formula<T, S>
+            class Linear : public Formula
             {
                 //  == FIELDS ==
               private:
