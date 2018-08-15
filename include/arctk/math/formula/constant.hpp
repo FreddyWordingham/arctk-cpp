@@ -97,7 +97,7 @@ namespace arc //! arctk namespace
              *
              *  @return Result of the func for the given value.
              */
-            double Constant::operator()(const double val_) noexcept
+            inline double Constant::operator()(const double val_) noexcept
             {
                 PRE((val_ >= _min) && (val_ <= _max));
 
