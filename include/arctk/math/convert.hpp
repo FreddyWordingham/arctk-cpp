@@ -26,7 +26,7 @@ namespace arc //! arctk namespace
 {
     namespace math //! mathematical namespace
     {
-        namespace convert //! convertion namespace
+        namespace convert //! conversion namespace
         {
 
 
