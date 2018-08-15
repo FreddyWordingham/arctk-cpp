@@ -19,6 +19,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/math/formula.hpp>
 
 
