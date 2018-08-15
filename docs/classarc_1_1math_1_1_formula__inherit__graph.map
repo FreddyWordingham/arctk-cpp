@@ -1,3 +1,4 @@
-<map id="arc::math::Formula&lt; T, S &gt;" name="arc::math::Formula&lt; T, S &gt;">
-<area shape="rect" id="node2" href="$classarc_1_1math_1_1formula_1_1_polynomial.html" title="arc::math::formula\l::Polynomial\&lt; T, S \&gt;" alt="" coords="5,92,145,131"/>
+<map id="arc::math::Formula" name="arc::math::Formula">
+<area shape="rect" id="node2" href="$classarc_1_1math_1_1formula_1_1_linear.html" title="arc::math::formula\l::Linear" alt="" coords="5,79,134,117"/>
+<area shape="rect" id="node3" href="$classarc_1_1math_1_1formula_1_1_polynomial.html" title="arc::math::formula\l::Polynomial\&lt; N \&gt;" alt="" coords="159,79,287,117"/>
 </map>
