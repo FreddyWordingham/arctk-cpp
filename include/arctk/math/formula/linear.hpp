@@ -69,7 +69,8 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             inline Linear::Linear(const std::vector<double>& xs_, const std::vector<double>& ys_) noexcept
-              : _xs(xs_)
+              : Formula(xs_.front(), xs_.back())
+              , _xs(xs_)
               , _ys(ys_)
               , _grads(init_grads(xs_, ys_))
             {
