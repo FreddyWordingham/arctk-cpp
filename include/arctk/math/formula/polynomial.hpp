@@ -39,12 +39,10 @@ namespace arc //! arctk namespace
             /**
              *  Polynomial function class.
              *
-             *  @tparam T   Type of func domain.
-             *  @tparam S   Type returned from the func.
              *  @tparam N   Order of the polynomial.
              */
-            template <typename T, typename S, size_t N>
-            class Polynomial : public Formula<T, S>
+            template <size_t N>
+            class Polynomial : public Formula
             {
                 //  == FIELDS ==
               private:
@@ -61,7 +59,7 @@ namespace arc //! arctk namespace
                 //  == OPERATORS ==
               public:
                 //  -- Call --
-                S operator()(T val_) noexcept override;
+                double operator()(double val_) noexcept override;
             };
 
 
@@ -73,9 +71,9 @@ namespace arc //! arctk namespace
              *
              *  @param  coefs_  Array of polynomial coefficents.
              */
-            template <typename T, typename S, size_t N>
-            inline Polynomial<T, S, N>::Polynomial(const std::array<double, N + 1>& coefs_) noexcept
-              : Formula<T, S>(std::numeric_limits<T>::lowest(), std::numeric_limits<T>::max())
+            template <size_t N>
+            inline Polynomial<N>::Polynomial(const std::array<double, N + 1>& coefs_) noexcept
+              : Formula(std::numeric_limits<double>::lowest(), std::numeric_limits<double>::max())
               , _coefs(coefs_)
             {
             }
@@ -91,10 +89,10 @@ namespace arc //! arctk namespace
              *
              *  @return Result of the func for the given value.
              */
-            template <typename T, typename S, size_t N>
-            S Polynomial<T, S, N>::operator()(const T val_) noexcept
+            template <size_t N>
+            double Polynomial<N>::operator()(const double val_) noexcept
             {
-                S result{};
+                double result{};
 
                 for (size_t i = 0; i < _coefs.size(); ++i)
                 {
