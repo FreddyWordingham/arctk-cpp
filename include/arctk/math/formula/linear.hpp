@@ -50,6 +50,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Linear(const std::vector<double>& xs_, const std::vector<double>& ys_) noexcept;
 
 
                 //  == OPERATORS ==
@@ -62,6 +63,15 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Linear::Linear(const std::vector<double>& xs_, const std::vector<double>& ys_) noexcept
+              : _xs(xs_)
+              , _ys(ys_)
+              , _grads(init_grads(xs_, ys_))
+            {
+                PRE(xs_.size() > 1);
+                PRE(ys_.size() > 1);
+                PRE(xs_.size() == ys_.size());
+            }
 
 
 
