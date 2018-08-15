@@ -93,6 +93,19 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
+            /**
+             *  Initialise the vector of intermediate node gradients.
+             *
+             *  @param  xs_ Vector of x-positions of the nodes.
+             *  @param  ys_ Vector of y-positions of the nodes.
+             *
+             *  @pre    xs_ must contain multiple values.
+             *  @pre    ys_ must contain multiple values.
+             *  @pre    xs_ size must equal the size of ys_.
+             *  @pre    xs_ must be sorted in ascending order.
+             *
+             *  @return Vector of intermediate node gradients.
+             */
             inline std::vector<double> Linear::init_grads(const std::vector<double>& xs_, const std::vector<double>& ys_) noexcept
             {
                 PRE(xs_.size() > 1);
