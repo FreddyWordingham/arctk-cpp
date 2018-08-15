@@ -41,7 +41,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Interaction --
-                const double _dist; //!< Interaction distance.
+                const double _interaction_coef; //!< Interaction coefficient.
 
                 //  -- Scattering --
                 const double _g; //!< Asymmetry scattering factor.
