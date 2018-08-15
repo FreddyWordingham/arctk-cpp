@@ -88,6 +88,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the minimum bound of the formula.
+         *
+         *  @return Minimum bound of the formula.
+         */
         template <typename T, typename S>
         inline T Formula<T, S>::min() const noexcept
         {
