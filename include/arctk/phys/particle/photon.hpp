@@ -62,6 +62,7 @@ namespace arc //! arctk namespace
                 inline const Optical& opt() const noexcept;
 
                 //  -- Setters --
+                inline void move(double dist_) noexcept override;
                 inline void set_optical_props(const Optical& opt_) noexcept;
             };
 
@@ -108,6 +109,23 @@ namespace arc //! arctk namespace
 
 
             //  -- Setters --
+            /**
+             *  Move the photon along it's current direction by a given distance.
+             *
+             *  @param  dist_   Distance to travel.
+             *
+             *  @pre    dist_ must be positive.
+             *  @pre    _dir must be normalised.
+             */
+            inline void Photon::move(const double dist_) noexcept
+            {
+                PRE(dist_ > 0.0);
+                PRE(_dir.normalised());
+
+                _pos += _dir * dist_;
+                _time += 0.0;
+            }
+
             inline void Photon::set_optical_props(const Optical& opt_) noexcept
             {
                 _opt = opt_;

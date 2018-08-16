@@ -38,6 +38,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Properties --
+            double _ref_index{};     //!< Refractive index.
             double _interact_coef{}; //!< Interaction coefficient.
             double _albedo{};        //!< Single scattering albedo.
             double _asym{};          //!< Asymmetry parameter.
