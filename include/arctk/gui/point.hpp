@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
         class Point
         {
             //  == FIELDS ==
-          private:
+          public:
             //  -- Spatial --
             const glm::vec3 pos;
 
