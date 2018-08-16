@@ -54,6 +54,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Basic(std::vector<double>& wavelength_, std::vector<double>& ref_index_, std::vector<double>& scat_coef_, std::vector<double>& abs_coef, std::vector<double>& asym_) noexcept;
 
 
                 //  == METHODS ==
@@ -65,6 +66,19 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Basic::Basic(std::vector<double>& wavelength_, std::vector<double>& ref_index_, std::vector<double>& scat_coef_, std::vector<double>& abs_coef, std::vector<double>& asym_) noexcept
+            {
+                PRE(wavelength_.size() > 1);
+                PRE(ref_index_.size() > 1);
+                PRE(scat_coef_.size() > 1);
+                PRE(abs_coef.size() > 1);
+                PRE(asym_.size() > 1);
+                PRE(wavelength_.size() == ref_index_.size());
+                PRE(wavelength_.size() == scat_coef_.size());
+                PRE(wavelength_.size() == abs_coef.size());
+                PRE(wavelength_.size() == asym_.size());
+                PRE(utl::properties::ascending(wavelength_));
+            }
 
 
 
