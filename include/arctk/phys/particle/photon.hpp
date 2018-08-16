@@ -80,6 +80,7 @@ namespace arc //! arctk namespace
              *
              *  @pre    dir_ must be normalised.
              *  @pre    wavelength_ must be positive.
+             *  @pre    time_ must be non-negative.
              */
             inline Photon::Photon(const vec3& pos_, const vec3& dir_, const double wavelength_, const double time_) noexcept
               : Particle(pos_, dir_, time_)
