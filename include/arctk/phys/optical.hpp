@@ -46,6 +46,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Optical() noexcept = default;
             inline Optical(double interact_coef_, double albedo_, double asym_) noexcept;
 
 
