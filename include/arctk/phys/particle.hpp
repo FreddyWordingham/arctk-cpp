@@ -73,9 +73,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const vec3&              pos() const noexcept;
-            inline const vec3&              dir() const noexcept;
-            inline const std::vector<vec3>& path() const noexcept;
+            inline const vec3& pos() const noexcept;
+            inline const vec3& dir() const noexcept;
 
             //  -- Setters --
             inline void multiply_weight(double m_) noexcept;
