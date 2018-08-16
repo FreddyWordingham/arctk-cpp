@@ -50,6 +50,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline interact_coef() const noexcept;
+            inline g() const noexcept;
         };
 
 
@@ -61,6 +63,14 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        inline Optical::interact_coef() const noexcept
+        {
+            return (_interact_coef);
+        }
+
+        inline Optical::g() const noexcept
+        {
+        }
 
 
 
