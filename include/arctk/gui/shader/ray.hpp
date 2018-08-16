@@ -139,8 +139,8 @@ namespace arc //! arctk namespace
 
                 //  == LINKING ==
                 //  -- Uniforms --
-                uniform float render_time       = 0.0;
-                uniform float render_time_delta = 1000.0;
+                uniform float time_start = 0.0;
+                uniform float time_end   = 1000.0;
 
 
 
@@ -157,10 +157,14 @@ namespace arc //! arctk namespace
                 //  == MAIN ==
                 void main()
                 {
-                    if (abs(vert_time - render_time) > render_time_delta)
+                    if (vert_time > render_time_delta)
                     {
                         discard;
                     }
+                    /*if (abs(vert_time - render_time) > render_time_delta)
+                    {
+                        discard;
+                    }*/
 
                     frag_col = vert_col;
                 }
