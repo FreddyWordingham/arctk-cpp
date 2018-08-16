@@ -52,9 +52,11 @@ namespace arc //! arctk namespace
                 layout(location = 2) in float wavelength;
 
                 //  -- Uniforms --
-                uniform mat4 model;
-                uniform mat4 view;
-                uniform mat4 proj;
+                uniform mat4  model;
+                uniform mat4  view;
+                uniform mat4  proj;
+                uniform float render_time       = 0.0;
+                uniform float render_time_delta = 1000.0;
 
 
 
