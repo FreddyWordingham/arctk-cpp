@@ -70,6 +70,7 @@ namespace arc //! arctk namespace
 
         inline Optical::g() const noexcept
         {
+            return (_g);
         }
 
 
