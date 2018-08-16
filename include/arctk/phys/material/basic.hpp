@@ -110,6 +110,25 @@ namespace arc //! arctk namespace
                 return (math::formula::Linear(wavelength_, interact_coef));
             }
 
+            inline math::formula::Linear Basic::init_albedo(std::vector<double>& wavelength_, std::vector<double>& scat_coef_, std::vector<double>& abs_coef_) const noexcept
+            {
+                PRE(wavelength_.size() > 1);
+                PRE(scat_coef_.size() > 1);
+                PRE(abs_coef_.size() > 1);
+                PRE(wavelength_.size() == scat_coef_.size());
+                PRE(wavelength_.size() == abs_coef_.size());
+                PRE(utl::properties::ascending(wavelength_));
+
+                std::vector<double> albedo(scat_coef_.size());
+
+                for (size_t i = 0; i < albedo.size(); ++i)
+                {
+                    albedo[i] = 1.0 - (abs_coef_[i] / (scat_coef_[i] + abs_coef_[i]));
+                }
+
+                return (math::formula::Linear(wavelength_, albedo));
+            }
+
 
 
             //  == METHODS ==
