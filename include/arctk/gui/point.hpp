@@ -42,25 +42,29 @@ namespace arc //! arctk namespace
             //  -- Spatial --
             const glm::vec3 pos;
 
+            //  -- Temporal --
+            const float time;
+
             //  -- Optical --
             const float wavelength;
-
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Point(const glm::vec3& pos_, const float wavelength_) noexcept;
+            inline Point(const glm::vec3& pos_, const float time_, const float wavelength_) noexcept;
         };
 
 
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Point::Point(const glm::vec3& pos_, const float wavelength_) noexcept
+        inline Point::Point(const glm::vec3& pos_, const float time_, const float wavelength_) noexcept
           : pos(pos_)
+          , time(time_)
           , wavelength(wavelength_)
         {
+            PRE(time_ > 0.0f);
             PRE(wavelength_ > 0.0f);
         }
 
