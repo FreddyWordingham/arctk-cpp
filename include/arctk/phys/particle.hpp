@@ -145,8 +145,6 @@ namespace arc //! arctk namespace
             PRE(_dir.normalised());
 
             _pos += _dir * dist_;
-
-            _path.emplace_back(_pos);
         }
 
         /**
