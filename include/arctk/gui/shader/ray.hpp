@@ -222,12 +222,12 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Setters --
-            inline void set_render_time(const float render_time_) noexcept
+            inline void Ray::set_render_time(const float render_time_) noexcept
             {
                 glUniform1f(_render_time, render_time_);
             }
 
-            inline void set_render_time_delta(const float render_time_delta_) noexcept
+            inline void Ray::set_render_time_delta(const float render_time_delta_) noexcept
             {
                 glUniform1f(_render_time_delta, render_time_delta_);
             }
