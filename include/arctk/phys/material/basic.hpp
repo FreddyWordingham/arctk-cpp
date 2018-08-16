@@ -64,7 +64,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Properties --
-                virtual inline Optical optical_props() const noexcept = 0;
+                virtual inline Optical optical_props(const particle::Photon& phot_) const noexcept = 0;
             };
 
 
@@ -91,6 +91,8 @@ namespace arc //! arctk namespace
                 PRE(utl::properties::always_greater_than_or_equal_to(wavelength_, 0.0));
                 PRE(utl::properties::always_greater_than_or_equal_to(scat_coef_, 0.0));
                 PRE(utl::properties::always_greater_than_or_equal_to(abs_coef_, 0.0));
+                PRE(utl::properties::always_greater_than_or_equal_to(asym_, 0.0));
+                PRE(utl::properties::always_less_than_or_equal_to(asym_, 1.0));
             }
 
 
@@ -143,8 +145,9 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Properties --
-            inline Optical Basic::optical_props() const noexcept
+            inline Optical Basic::optical_props(const particle::Photon& phot_) const noexcept
             {
+                return (Optical(phot.wavelength(), ));
             }
 
 

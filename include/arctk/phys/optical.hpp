@@ -45,6 +45,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Optical(double interact_coef, double asym_) noexcept;
 
 
             //  == METHODS ==
@@ -58,6 +59,9 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline Optical::Optical(double interact_coef, double asym_) noexcept
+        {
+                }
 
 
 
