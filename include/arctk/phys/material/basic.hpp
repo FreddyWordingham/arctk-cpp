@@ -46,8 +46,9 @@ namespace arc //! arctk namespace
                 //  -- Optical --
                 const math::formula::Linear _wavelength;
                 const math::formula::Linear _ref_index;
-                const math::formula::Linear _scat_coef;
-                const math::formula::Linear _abs_coef;
+                const math::formula::Linear _interact_coef;
+                const math::formula::Linear _albedo;
+                const math::formula::Linear _asym;
 
 
                 //  == INSTANTIATION ==
