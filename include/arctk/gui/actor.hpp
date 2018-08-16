@@ -862,10 +862,11 @@ namespace arc //! arctk namespace
                     verts.emplace_back(points_[i].pos.x);
                     verts.emplace_back(points_[i].pos.y);
                     verts.emplace_back(points_[i].pos.z);
+                    verts.emplace_back(points_[i].time);
                     verts.emplace_back(points_[i].wavelength);
                 }
 
-                return (Actor(verts, {3, 1}, GL_LINE_STRIP));
+                return (Actor(verts, {3, 1, 1}, GL_LINE_STRIP));
             }
 
             /**
