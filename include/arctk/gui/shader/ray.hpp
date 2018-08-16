@@ -192,6 +192,10 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Setters --
+                inline void set_render_time(const float render_time_) noexcept;
+                inline void set_render_time_delta(const float render_time_delta_) noexcept;
+
                 //  -- Rendering --
                 inline void activate(const Lens& lens_, const Camera& cam_) noexcept;
                 inline void render(const Actor& act_) noexcept;
@@ -217,6 +221,17 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Setters --
+            inline void set_render_time(const float render_time_) noexcept
+            {
+                glUniform1f(_render_time, render_time_);
+            }
+
+            inline void set_render_time_delta(const float render_time_delta_) noexcept
+            {
+            }
+
+
             //  -- Rendering --
             /**
              *  Setup the shader to perform as the current active shader.
