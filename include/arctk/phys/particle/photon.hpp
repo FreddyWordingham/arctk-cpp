@@ -19,6 +19,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/consts.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
 #include <arctk/phys/optical.hpp>
@@ -123,7 +124,7 @@ namespace arc //! arctk namespace
                 PRE(_dir.normalised());
 
                 _pos += _dir * dist_;
-                _time += 0.0;
+                _time += (dist_ * _opt.ref_index()) / consts::phys::SPEED_OF_LIGHT;
             }
 
             inline void Photon::set_optical_props(const Optical& opt_) noexcept
