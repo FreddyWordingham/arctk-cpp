@@ -147,6 +147,7 @@ namespace arc //! arctk namespace
                 //  == IN/OUTPUT ==
                 //  -- Input --
                 in vec4 vert_col;
+                in vec4 vert_time;
 
                 //  -- Output --
                 out vec4 frag_col;
