@@ -55,8 +55,6 @@ namespace arc //! arctk namespace
                 uniform mat4  model;
                 uniform mat4  view;
                 uniform mat4  proj;
-                uniform float render_time       = 0.0;
-                uniform float render_time_delta = 1000.0;
 
 
 
@@ -134,6 +132,13 @@ namespace arc //! arctk namespace
             constexpr const char* RAY_SOURCE_FRAG = R""(
                 //  == VERSION ==
                 #version 330 core
+
+
+
+                //  == LINKING ==
+                //  -- Uniforms --
+                uniform float render_time       = 0.0;
+                uniform float render_time_delta = 1000.0;
 
 
 
