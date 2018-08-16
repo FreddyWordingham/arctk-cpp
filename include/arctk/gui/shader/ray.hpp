@@ -60,8 +60,8 @@ namespace arc //! arctk namespace
 
                 //  == IN/OUTPUT ==
                 //  -- Output --
-                out vec4 vert_col;
-                out vec4 vert_time;
+                out vec4  vert_col;
+                out float vert_time;
 
 
 
@@ -146,8 +146,8 @@ namespace arc //! arctk namespace
 
                 //  == IN/OUTPUT ==
                 //  -- Input --
-                in vec4 vert_col;
-                in vec4 vert_time;
+                in vec4  vert_col;
+                in float vert_time;
 
                 //  -- Output --
                 out vec4 frag_col;
