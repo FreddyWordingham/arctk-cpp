@@ -65,7 +65,11 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Properties --
-                virtual inline Optical optical_props(const particle::Photon& phot_) const noexcept = 0;
+                inline Optical optical_props(const particle::Photon& phot_) const noexcept override;
+
+                //  -- Interaction --
+                inline double interaction_dist(random::Generator* rng_, const particle::Photon& phot_, const Optical& opt_) const noexcept override;
+                inline void   interact(random::Generator* rng_, particle::Photon* phot_, const Optical& opt_) const noexcept override;
             };
 
 
