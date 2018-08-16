@@ -47,6 +47,7 @@ namespace arc //! arctk namespace
                 const math::formula::Linear _wavelength;
                 const math::formula::Linear _ref_index;
                 const math::formula::Linear _scat_coef;
+                const math::formula::Linear _abs_coef;
 
 
                 //  == INSTANTIATION ==
