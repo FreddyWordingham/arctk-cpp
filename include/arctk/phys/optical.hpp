@@ -36,6 +36,9 @@ namespace arc //! arctk namespace
         class Optical
         {
             //  == FIELDS ==
+          private:
+            //  -- Properties --
+            const double _interaction_coef; //!< Interaction coefficient.
 
 
             //  == INSTANTIATION ==
