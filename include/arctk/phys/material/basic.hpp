@@ -66,6 +66,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             inline Basic::Basic(std::vector<double>& wavelength_, std::vector<double>& ref_index_, std::vector<double>& scat_coef_, std::vector<double>& abs_coef, std::vector<double>& asym_) noexcept
+              : _Material(wavelength_.front(), wavelength_.back())
             {
                 PRE(wavelength_.size() > 1);
                 PRE(ref_index_.size() > 1);
