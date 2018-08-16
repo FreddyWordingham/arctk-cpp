@@ -38,6 +38,13 @@ namespace arc //! arctk namespace
          */
         class Material
         {
+            //  == FIELDS ==
+          private:
+            //  -- Bounds --
+            const double _min; //!< Minimum valid wavelength of the material.
+            const double _max; //!< Maximum valid wavelength of the material.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
