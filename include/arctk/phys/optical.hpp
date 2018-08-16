@@ -61,6 +61,9 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         inline Optical::Optical(const double interact_coef_, const double albedo_, const double asym_) noexcept
+          : _interact_coef(interact_coef_)
+          , _albedo(albedo_)
+          , _asym(asym_)
         {
             PRE(interact_coef_ > 0.0);
             PRE((albedo >= 0.0) && (albedo <= 1.0))
