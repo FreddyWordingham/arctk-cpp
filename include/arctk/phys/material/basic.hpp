@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
                 inline Optical optical_props(const particle::Photon& phot_) const noexcept override;
 
                 //  -- Interaction --
-                inline double interaction_dist(random::Generator* rng_, const particle::Photon& phot_, const Optical& opt_) const noexcept override;
+                inline double interaction_dist(random::Generator* rng_, const Optical& opt_) const noexcept override;
                 inline void   interact(random::Generator* rng_, particle::Photon* phot_, const Optical& opt_) const noexcept override;
             };
 
@@ -153,6 +153,17 @@ namespace arc //! arctk namespace
             inline Optical Basic::optical_props(const particle::Photon& phot_) const noexcept
             {
                 return (Optical(_interact_coef(phot_.wavelength()), _asym(phot_.wavelength())));
+            }
+
+
+            //  -- Interaction --
+            inline double Basic::interaction_dist(random::Generator* rng_, const Optical& opt_) const noexcept
+            {
+                return ();
+            }
+
+            inline void Basic::interact(random::Generator* rng_, particle::Photon* phot_, const Optical& opt_) const noexcept
+            {
             }
 
 
