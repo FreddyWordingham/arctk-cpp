@@ -90,8 +90,6 @@
 #include <arctk/math/vec4.hpp>
 #include <arctk/phys.hpp>
 #include <arctk/phys/material.hpp>
-#include <arctk/phys/material/basic.hpp>
-#include <arctk/phys/material/simple.hpp>
 #include <arctk/phys/optical.hpp>
 #include <arctk/phys/particle.hpp>
 #include <arctk/phys/particle/photon.hpp>
