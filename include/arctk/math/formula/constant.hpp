@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
                 //  == OPERATORS ==
               public:
                 //  -- Call --
-                inline double operator()(double val_) noexcept override;
+                inline double operator()(double val_) const noexcept override;
             };
 
 
@@ -97,7 +97,7 @@ namespace arc //! arctk namespace
              *
              *  @return Result of the func for the given value.
              */
-            inline double Constant::operator()(const double val_) noexcept
+            inline double Constant::operator()(const double val_) const noexcept
             {
                 PRE((val_ >= _min) && (val_ <= _max));
 
