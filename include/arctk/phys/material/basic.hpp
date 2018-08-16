@@ -44,7 +44,6 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Optical --
-                const math::formula::Linear _wavelength;
                 const math::formula::Linear _ref_index;
                 const math::formula::Linear _interact_coef;
                 const math::formula::Linear _albedo;
