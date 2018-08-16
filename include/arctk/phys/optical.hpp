@@ -38,9 +38,9 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Properties --
-            const double _interact_coef{}; //!< Interaction coefficient.
-            const double _albedo{};        //!< Single scattering albedo.
-            const double _asym{};          //!< Asymmetry parameter.
+            double _interact_coef{}; //!< Interaction coefficient.
+            double _albedo{};        //!< Single scattering albedo.
+            double _asym{};          //!< Asymmetry parameter.
 
 
             //  == INSTANTIATION ==
