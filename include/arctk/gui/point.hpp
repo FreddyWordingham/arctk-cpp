@@ -36,6 +36,9 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Spatial --
+            const glm::vec3 pos;
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
