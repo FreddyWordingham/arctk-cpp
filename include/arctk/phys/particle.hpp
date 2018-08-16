@@ -78,6 +78,7 @@ namespace arc //! arctk namespace
             inline const std::vector<vec3>& path() const noexcept;
 
             //  -- Setters --
+            inline void         multiply_weight(double m_) noexcept;
             virtual inline void move(double dist_) noexcept;
             virtual inline void rotate(double theta_, double phi_) noexcept;
         };
@@ -140,6 +141,11 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
+        inline void Particle::multiply_weight(const double m_) noexcept
+        {
+            _weight *= m_;
+        }
+
         /**
          *  Move the particle along it's current direction by a given distance.
          *
