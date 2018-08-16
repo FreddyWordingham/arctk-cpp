@@ -440,7 +440,7 @@ namespace arc //! arctk namespace
             inline Actor box(const geom::shape::Aabb& aabb_) noexcept;
             inline Actor aabb(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor aabb(const geom::shape::Aabb& aabb_) noexcept;
-            inline Actor path(const phys::Particle& part_) noexcept;
+            inline Actor path(const std::vector<Point>& points_) noexcept;
             inline Actor mesh(const geom::shape::Mesh& mesh_) noexcept;
 
 
@@ -845,23 +845,26 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Create path actor from a particles path.
+             *  Create path actor from a vector of points.
              *
-             *  @param  part_   Particle to create a path actor of.
+             *  @param  points_ Vector of point data to create a path actor of.
              *
              *  @return Path actor.
              */
-            inline Actor path(const phys::Particle& part_) noexcept
+            inline Actor path(const std::vector<Point>& points_) noexcept
             {
-                std::vector<glm::vec3> verts;
-                verts.reserve(part_.path().size());
+                std::vector<float> verts;
+                verts.reserve(points_.size() * (sizeof(Point) / sizeof(GL_FLOAT)));
 
-                for (size_t i = 0; i < part_.path().size(); ++i)
+                for (size_t i = 0; i < points_.size(); ++i)
                 {
-                    verts.emplace_back(glm::vec3(static_cast<float>(part_.path()[i].x), static_cast<float>(part_.path()[i].y), static_cast<float>(part_.path()[i].z)));
+                    verts.emplace_back(points_.pos.x);
+                    verts.emplace_back(points_.pos.y);
+                    verts.emplace_back(points_.pos.z);
+                    verts.emplace_back(points_.wavelength);
                 }
 
-                return (Actor(verts, {3}, GL_LINE_STRIP));
+                return (Actor(verts, {3, 1}, GL_LINE_STRIP));
             }
 
             /**
