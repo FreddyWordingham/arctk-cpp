@@ -18,6 +18,9 @@
 //  -- Graphical --
 #include <glm/glm.hpp>
 
+//  -- Arctk --
+#include <arctk/debug.hpp>
+
 
 
 //  == NAMESPACE ==
