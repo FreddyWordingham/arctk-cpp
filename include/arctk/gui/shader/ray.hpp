@@ -181,11 +181,11 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Uniforms --
-                const GLint _model;             //!< Model matrix uniform handle.
-                const GLint _view;              //!< View matrix uniform handle.
-                const GLint _proj;              //!< Projection matrix uniform handle.
-                const GLint _render_time;       //!< Render time uniform handle.
-                const GLint _render_time_delta; //!< Render time delta uniform handle.
+                const GLint _model;      //!< Model matrix uniform handle.
+                const GLint _view;       //!< View matrix uniform handle.
+                const GLint _proj;       //!< Projection matrix uniform handle.
+                const GLint _time_start; //!< Render time start uniform handle.
+                const GLint _time_end;   //!< Render time end uniform handle.
 
 
                 //  == INSTANTIATION ==
@@ -197,8 +197,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Setters --
-                inline void set_render_time(const float render_time_) noexcept;
-                inline void set_render_time_delta(const float render_time_delta_) noexcept;
+                inline void set_time_start(const float time_start_) noexcept;
+                inline void set_time_end(const float time_end_) noexcept;
 
                 //  -- Rendering --
                 inline void activate(const Lens& lens_, const Camera& cam_) noexcept;
@@ -217,8 +217,8 @@ namespace arc //! arctk namespace
               , _model(init_uniform("model"))
               , _view(init_uniform("view"))
               , _proj(init_uniform("proj"))
-              , _render_time(init_uniform("render_time"))
-              , _render_time_delta(init_uniform("render_time_delta"))
+              , _time_start(init_uniform("time_start"))
+              , _time_end(init_uniform("time_end"))
             {
             }
 
@@ -226,14 +226,14 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Setters --
-            inline void Ray::set_render_time(const float render_time_) noexcept
+            inline void Ray::set_time_start(const float time_start_) noexcept
             {
-                glUniform1f(_render_time, render_time_);
+                glUniform1f(_time_start, time_start_);
             }
 
-            inline void Ray::set_render_time_delta(const float render_time_delta_) noexcept
+            inline void Ray::set_time_end(const float time_end_) noexcept
             {
-                glUniform1f(_render_time_delta, render_time_delta_);
+                glUniform1f(_time_end, time_end_);
             }
 
 
