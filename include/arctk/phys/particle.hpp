@@ -48,9 +48,6 @@ namespace arc //! arctk namespace
             vec3 _pos; //!< Position of the particle.
             vec3 _dir; //!< Direction of travel.
 
-            //  -- Data --
-            std::vector<vec3> _path; //!< Recorded path data.
-
 
             //  == INSTANTIATION ==
           public:
