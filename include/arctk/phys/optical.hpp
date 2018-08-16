@@ -53,6 +53,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline double interact_coef() const noexcept;
+            inline double albedo() const noexcept;
             inline double asym() const noexcept;
         };
 
@@ -77,6 +78,11 @@ namespace arc //! arctk namespace
         inline double Optical::interact_coef() const noexcept
         {
             return (_interact_coef);
+        }
+
+        inline double Optical::albedo() const noexcept
+        {
+            return (_albedo);
         }
 
         inline double Optical::asym() const noexcept
