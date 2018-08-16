@@ -177,9 +177,11 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Uniforms --
-                const GLint _model; //!< Model matrix uniform handle.
-                const GLint _view;  //!< View matrix uniform handle.
-                const GLint _proj;  //!< Projection matrix uniform handle.
+                const GLint _model;             //!< Model matrix uniform handle.
+                const GLint _view;              //!< View matrix uniform handle.
+                const GLint _proj;              //!< Projection matrix uniform handle.
+                const GLint _render_time;       //!< Render time uniform handle.
+                const GLint _render_time_delta; //!< Render time delta uniform handle.
 
 
                 //  == INSTANTIATION ==
@@ -207,6 +209,8 @@ namespace arc //! arctk namespace
               , _model(init_uniform("model"))
               , _view(init_uniform("view"))
               , _proj(init_uniform("proj"))
+              , _render_time(init_uniform("render_time"))
+              , _render_time_delta(init_uniform("render_time_delta"))
             {
             }
 
