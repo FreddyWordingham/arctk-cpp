@@ -58,7 +58,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline double wavelength() const noexcept;
+                inline double         wavelength() const noexcept;
+                inline const Optical& opt() const noexcept;
             };
 
 
@@ -95,6 +96,11 @@ namespace arc //! arctk namespace
             inline double Photon::wavelength() const noexcept
             {
                 return (_wavelength);
+            }
+
+            inline const Optical& Photon::opt() const noexcept
+            {
+                return (_opt);
             }
 
 
