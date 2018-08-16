@@ -22,6 +22,7 @@
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
 #include <arctk/phys/material.hpp>
+#include <arctk/phys/optical.hpp>
 
 
 
