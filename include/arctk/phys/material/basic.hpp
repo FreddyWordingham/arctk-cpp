@@ -54,12 +54,12 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Basic(std::vector<double>& wavelength_, std::vector<double>& ref_index_, std::vector<double>& scat_coef_, std::vector<double>& abs_coef_, std::vector<double>& asym_) noexcept;
+                inline Basic(const std::vector<double>& wavelength_, const std::vector<double>& ref_index_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& asym_) noexcept;
 
               private:
                 //  -- Initialisation --
-                inline math::formula::Linear init_interact_coef(std::vector<double>& wavelength_, std::vector<double>& scat_coef_, std::vector<double>& abs_coef_) const noexcept;
-                inline math::formula::Linear init_albedo(std::vector<double>& wavelength_, std::vector<double>& scat_coef_, std::vector<double>& abs_coef_) const noexcept;
+                inline math::formula::Linear init_interact_coef(const std::vector<double>& wavelength_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_) const noexcept;
+                inline math::formula::Linear init_albedo(const std::vector<double>& wavelength_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_) const noexcept;
 
 
                 //  == METHODS ==
@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Basic::Basic(std::vector<double>& wavelength_, std::vector<double>& ref_index_, std::vector<double>& scat_coef_, std::vector<double>& abs_coef_, std::vector<double>& asym_) noexcept
+            inline Basic::Basic(const std::vector<double>& wavelength_, const std::vector<double>& ref_index_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& asym_) noexcept
               : Material(wavelength_.front(), wavelength_.back())
               , _ref_index(math::formula::Linear(wavelength_, ref_index_))
               , _interact_coef(init_interact_coef(wavelength_, scat_coef_, abs_coef_))
@@ -102,7 +102,7 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
-            inline math::formula::Linear Basic::init_interact_coef(std::vector<double>& wavelength_, std::vector<double>& scat_coef_, std::vector<double>& abs_coef_) const noexcept
+            inline math::formula::Linear Basic::init_interact_coef(const std::vector<double>& wavelength_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_) const noexcept
             {
                 PRE(wavelength_.size() > 1);
                 PRE(scat_coef_.size() > 1);
@@ -124,7 +124,7 @@ namespace arc //! arctk namespace
                 return (math::formula::Linear(wavelength_, interact_coef));
             }
 
-            inline math::formula::Linear Basic::init_albedo(std::vector<double>& wavelength_, std::vector<double>& scat_coef_, std::vector<double>& abs_coef_) const noexcept
+            inline math::formula::Linear Basic::init_albedo(const std::vector<double>& wavelength_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_) const noexcept
             {
                 PRE(wavelength_.size() > 1);
                 PRE(scat_coef_.size() > 1);
