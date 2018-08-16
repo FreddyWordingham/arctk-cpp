@@ -95,6 +95,7 @@ namespace arc //! arctk namespace
          *  @param  time_   Time of emission.
          *
          *  @pre    dir_ must be normalised.
+         *  @pre    time_ must be non-negative.
          */
         inline Particle::Particle(const vec3& pos_, const vec3& dir_, const double time_) noexcept
           : _weight(1.0)
