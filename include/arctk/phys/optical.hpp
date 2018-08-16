@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
           , _asym(asym_)
         {
             PRE(interact_coef_ > 0.0);
-            PRE((albedo >= 0.0) && (albedo <= 1.0))
+            PRE((albedo_ >= 0.0) && (albedo_ <= 1.0))
             PRE((asym_ >= -1.0) && (asym_ <= 1.0));
         }
 
