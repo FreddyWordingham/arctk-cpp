@@ -95,7 +95,8 @@ namespace arc //! arctk namespace
          *  @pre    dir_ must be normalised.
          */
         inline Particle::Particle(const vec3& pos_, const vec3& dir_) noexcept
-          : _pos(pos_)
+          : _weight(1.0)
+          , _pos(pos_)
           , _dir(dir_)
         {
             PRE(dir_.normalised());
