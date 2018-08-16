@@ -54,6 +54,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline double ref_index() const noexcept;
             inline double interact_coef() const noexcept;
             inline double albedo() const noexcept;
             inline double asym() const noexcept;
@@ -79,6 +80,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        inline double Optical::ref_index() const noexcept
+        {
+            return (_ref_index);
+        }
+
         inline double Optical::interact_coef() const noexcept
         {
             return (_interact_coef);
