@@ -21,6 +21,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
+#include <arctk/phys/optical.hpp>
 #include <arctk/phys/particle.hpp>
 
 
@@ -44,7 +45,8 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Optical --
-                double _wavelength; //!< Optical wavelength.
+                double  _wavelength; //!< Optical wavelength.
+                Optical _opt;        //!< Optical properties.
 
 
                 //  == INSTANTIATION ==
