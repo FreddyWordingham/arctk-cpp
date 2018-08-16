@@ -81,6 +81,17 @@ namespace arc //! arctk namespace
 
 
 
+        //  == INSTANTIATION ==
+        //  -- Constructors --
+        inline Material::Material(const double min_, const double max_) noexcept
+          : _min(min_)
+          , _max(max_)
+        {
+            PRE(min_ <= max_);
+        }
+
+
+
         //  == METHODS ==
         //  -- Getters --
         /**
