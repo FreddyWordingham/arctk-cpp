@@ -157,6 +157,11 @@ namespace arc //! arctk namespace
                 //  == MAIN ==
                 void main()
                 {
+                    if (abs(vert_time - render_time) > render_time_delta)
+                    {
+                        discard;
+                    }
+
                     frag_col = vert_col;
                 }
             )""; //!< Ray fragment subshader source code.
