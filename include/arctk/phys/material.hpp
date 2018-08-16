@@ -18,6 +18,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
+#include <arctk/phys/optical.hpp>
 #include <arctk/phys/particle/photon.hpp>
 #include <arctk/random.hpp>
 
@@ -57,6 +58,9 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Properties --
+            virtual inline Optical optical_props() const noexcept = 0;
+
             //  -- Interaction --
             virtual inline double interaction_dist(random::Generator* rng_, const particle::Photon& phot_) const
               noexcept = 0; //!< Determine the distance until a material interaction occurs. @param  rng_    Random number generator.    @param  phot_   Photon to interact with.    @return Distance to interaction.
