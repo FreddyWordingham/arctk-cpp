@@ -229,6 +229,7 @@ namespace arc //! arctk namespace
 
             inline void set_render_time_delta(const float render_time_delta_) noexcept
             {
+                glUniform1f(_render_time_delta, render_time_delta_);
             }
 
 
