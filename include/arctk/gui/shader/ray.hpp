@@ -157,14 +157,10 @@ namespace arc //! arctk namespace
                 //  == MAIN ==
                 void main()
                 {
-                    if (vert_time > render_time_delta)
+                    if ((vert_time < time_start) || (vert_time > time_end))
                     {
                         discard;
                     }
-                    /*if (abs(vert_time - render_time) > render_time_delta)
-                    {
-                        discard;
-                    }*/
 
                     frag_col = vert_col;
                 }
