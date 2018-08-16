@@ -28,6 +28,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
+#include <arctk/gui/point.hpp>
 #include <arctk/math.hpp>
 #include <arctk/phys.hpp>
 
