@@ -47,7 +47,19 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Point(const glm::vec3& pos_, const float wavelength_) noexcept;
         };
+
+
+
+        //  == INSTANTIATION ==
+        //  -- Constructors --
+        inline Point::Point(const glm::vec3& pos_, const float wavelength_) noexcept
+          : pos(pos_)
+          , wavelength(wavelength_)
+        {
+            PRE(wavelength_ > 0.0f);
+        }
 
 
 
