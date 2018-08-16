@@ -60,6 +60,9 @@ namespace arc //! arctk namespace
                 //  -- Getters --
                 inline double         wavelength() const noexcept;
                 inline const Optical& opt() const noexcept;
+
+                //  -- Setters --
+                inline void set_optical_props(const Optical& opt_) noexcept;
             };
 
 
@@ -101,6 +104,13 @@ namespace arc //! arctk namespace
             inline const Optical& Photon::opt() const noexcept
             {
                 return (_opt);
+            }
+
+
+            //  -- Setters --
+            inline void Photon::set_optical_props(const Optical& opt_) noexcept
+            {
+                _opt = opt_;
             }
 
 
