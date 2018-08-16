@@ -64,7 +64,7 @@ namespace arc //! arctk namespace
           , time(time_)
           , wavelength(wavelength_)
         {
-            PRE(time_ > 0.0f);
+            PRE(time_ >= 0.0f);
             PRE(wavelength_ > 0.0f);
         }
 
