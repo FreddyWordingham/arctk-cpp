@@ -38,8 +38,8 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Properties --
-            const double _interact_coef; //!< Interaction coefficient.
-            const double _g{};           //!< Asymmetry parameter.
+            const double _interact_coef{}; //!< Interaction coefficient.
+            const double _g{};             //!< Asymmetry parameter.
 
 
             //  == INSTANTIATION ==
