@@ -67,6 +67,10 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Basic::Basic(std::vector<double>& wavelength_, std::vector<double>& ref_index_, std::vector<double>& scat_coef_, std::vector<double>& abs_coef, std::vector<double>& asym_) noexcept
               : _Material(wavelength_.front(), wavelength_.back())
+              , _ref_index(math::formula::Linear(wavelength_, ref_index_))
+              , _interact_coef(init_coef(wavelength_, scat_coef_, abs_coef))
+              , _albedo(init_albedo(wavelength_, scat_coef_, abs_coef))
+              , _asym(math::formula::Linear(wavelength_, asym_))
             {
                 PRE(wavelength_.size() > 1);
                 PRE(ref_index_.size() > 1);
