@@ -47,13 +47,13 @@ namespace arc //! arctk namespace
 
                 //  == LINKING ==
                 //  -- Layout --
-                layout(location = 0) in vec3 pos;
+                layout(location = 0) in vec3  pos;
+                layout(location = 1) in float wavelength;
 
                 //  -- Uniforms --
                 uniform mat4 model;
                 uniform mat4 view;
                 uniform mat4 proj;
-                uniform vec4 col;
 
 
 
@@ -68,7 +68,14 @@ namespace arc //! arctk namespace
                 {
                     gl_Position = proj * view * model * vec4(pos, 1.0);
 
-                    vert_col = col;
+                    if (wavelength < 600e-9)
+                    {
+                        vert_col = vec4(1.0, 0.0, 0.0, 1.0);
+                    }
+                    else
+                    {
+                        vert_col = vec4(0.0, 0.0, 1.0, 1.0);
+                    }
                 }
             )""; //!< Ray vertex subshader source code.
             constexpr const char* RAY_SOURCE_FRAG = R""(
