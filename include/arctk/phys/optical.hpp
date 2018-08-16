@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Properties --
             const double _interact_coef{}; //!< Interaction coefficient.
-            const double _g{};             //!< Asymmetry parameter.
+            const double _asym{};          //!< Asymmetry parameter.
 
 
             //  == INSTANTIATION ==
@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline double interact_coef() const noexcept;
-            inline double g() const noexcept;
+            inline double asym() const noexcept;
         };
 
 
@@ -68,9 +68,9 @@ namespace arc //! arctk namespace
             return (_interact_coef);
         }
 
-        inline double Optical::g() const noexcept
+        inline double Optical::asym() const noexcept
         {
-            return (_g);
+            return (_asym);
         }
 
 
