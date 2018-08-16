@@ -78,9 +78,9 @@ namespace arc //! arctk namespace
             inline double      time() const noexcept;
 
             //  -- Setters --
-            inline void multiply_weight(double m_) noexcept;
-            inline void move(double dist_) noexcept;
-            inline void rotate(double theta_, double phi_) noexcept;
+            inline void         multiply_weight(double m_) noexcept;
+            virtual inline void move(double dist_) noexcept;
+            inline void         rotate(double theta_, double phi_) noexcept;
         };
 
 
