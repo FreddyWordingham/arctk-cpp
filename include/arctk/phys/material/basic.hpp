@@ -148,7 +148,7 @@ namespace arc //! arctk namespace
             //  -- Properties --
             inline Optical Basic::optical_props(const particle::Photon& phot_) const noexcept
             {
-                return (Optical(_interact_coef(phot.wavelength()), _asym(phot.wavelength())));
+                return (Optical(_interact_coef(phot_.wavelength()), _asym(phot_.wavelength())));
             }
 
 
