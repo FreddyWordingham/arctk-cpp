@@ -96,7 +96,7 @@ namespace arc //! arctk namespace
                 PRE(utl::properties::always_greater_than_or_equal_to(wavelength_, 0.0));
                 PRE(utl::properties::always_greater_than_or_equal_to(scat_coef_, 0.0));
                 PRE(utl::properties::always_greater_than_or_equal_to(abs_coef_, 0.0));
-                PRE(utl::properties::always_greater_than_or_equal_to(asym_, 0.0));
+                PRE(utl::properties::always_greater_than_or_equal_to(asym_, -1.0));
                 PRE(utl::properties::always_less_than_or_equal_to(asym_, 1.0));
             }
 
