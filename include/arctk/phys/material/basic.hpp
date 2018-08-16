@@ -44,6 +44,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Optical --
+                const math::formula::Linear _wavelength;
 
 
                 //  == INSTANTIATION ==
