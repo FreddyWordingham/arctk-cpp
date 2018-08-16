@@ -87,6 +87,9 @@ namespace arc //! arctk namespace
                 PRE(wavelength_.size() == abs_coef_.size());
                 PRE(wavelength_.size() == asym_.size());
                 PRE(utl::properties::ascending(wavelength_));
+                PRE(utl::properties::always_greater_than_or_equal_to(wavelength_, 0.0));
+                PRE(utl::properties::always_greater_than_or_equal_to(scat_coef_, 0.0));
+                PRE(utl::properties::always_greater_than_or_equal_to(abs_coef_, 0.0));
             }
 
 
@@ -99,6 +102,9 @@ namespace arc //! arctk namespace
                 PRE(wavelength_.size() == scat_coef_.size());
                 PRE(wavelength_.size() == abs_coef_.size());
                 PRE(utl::properties::ascending(wavelength_));
+                PRE(utl::properties::always_greater_than_or_equal_to(wavelength_, 0.0));
+                PRE(utl::properties::always_greater_than_or_equal_to(scat_coef_, 0.0));
+                PRE(utl::properties::always_greater_than_or_equal_to(abs_coef_, 0.0));
 
                 std::vector<double> interact_coef(scat_coef_.size());
 
@@ -118,6 +124,9 @@ namespace arc //! arctk namespace
                 PRE(wavelength_.size() == scat_coef_.size());
                 PRE(wavelength_.size() == abs_coef_.size());
                 PRE(utl::properties::ascending(wavelength_));
+                PRE(utl::properties::always_greater_than_or_equal_to(wavelength_, 0.0));
+                PRE(utl::properties::always_greater_than_or_equal_to(scat_coef_, 0.0));
+                PRE(utl::properties::always_greater_than_or_equal_to(abs_coef_, 0.0));
 
                 std::vector<double> albedo(scat_coef_.size());
 
