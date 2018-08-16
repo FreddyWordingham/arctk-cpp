@@ -152,7 +152,7 @@ namespace arc //! arctk namespace
             //  -- Properties --
             inline void Basic::set_optical_props(particle::Photon* const phot_) const noexcept
             {
-                phot_->set_optical_props(Optical(_interact_coef(phot_->wavelength()), _asym(phot_->wavelength()));
+                phot_->set_optical_props(Optical(_interact_coef(phot_->wavelength()), _albedo(phot_->wavelength()), _asym(phot_->wavelength()));
             }
 
 
