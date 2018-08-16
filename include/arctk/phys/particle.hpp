@@ -55,7 +55,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Particle(const vec3& pos_, const vec3& dir_) noexcept;
+            inline Particle(const vec3& pos_, const vec3& dir_, const double time_) noexcept;
             inline Particle(const Particle&) = default; //!< Defaulted copy constructor.
             inline Particle(Particle&&)      = default; //!< Defaulted move constructor.
 
@@ -92,15 +92,18 @@ namespace arc //! arctk namespace
          *
          *  @param  pos_    Position to start at.
          *  @param  dir_    Direction of travel.
+         *  @param  time_   Time of emission.
          *
          *  @pre    dir_ must be normalised.
          */
-        inline Particle::Particle(const vec3& pos_, const vec3& dir_) noexcept
+        inline Particle::Particle(const vec3& pos_, const vec3& dir_, const double time_) noexcept
           : _weight(1.0)
           , _pos(pos_)
           , _dir(dir_)
+          , _time(time_)
         {
             PRE(dir_.normalised());
+            PRE(time_ >= 0.0);
         }
 
 
