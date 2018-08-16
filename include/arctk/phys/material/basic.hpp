@@ -159,7 +159,7 @@ namespace arc //! arctk namespace
             //  -- Interaction --
             inline double Basic::interaction_dist(random::Generator* rng_, const Optical& opt_) const noexcept
             {
-                return ();
+                return (-std::log(rng_->gen()) / opt_.interact_coef());
             }
 
             inline void Basic::interact(random::Generator* rng_, particle::Photon* phot_, const Optical& opt_) const noexcept
