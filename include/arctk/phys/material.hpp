@@ -49,8 +49,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Material(double min_, double max_) noexcept;
-            noexcept inline Material(const Material&) noexcept = default; //!< Defaulted copy constructor.
-            inline Material(Material&&) noexcept               = default; //!< Defaulted move constructor.
+            inline Material(const Material&) noexcept = default; //!< Defaulted copy constructor.
+            inline Material(Material&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
             virtual inline ~Material() noexcept = default;
