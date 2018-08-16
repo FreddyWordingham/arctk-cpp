@@ -48,6 +48,9 @@ namespace arc //! arctk namespace
             vec3 _pos; //!< Position of the particle.
             vec3 _dir; //!< Direction of travel.
 
+            //  -- Temporal --
+            double _time; //!< Current timestamp.
+
 
             //  == INSTANTIATION ==
           public:
