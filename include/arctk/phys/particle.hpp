@@ -39,6 +39,10 @@ namespace arc //! arctk namespace
         class Particle
         {
             //  == FIELDS ==
+          private:
+            //  -- Statistical --
+            double _weight; //!< Statistical weight of the photon.
+
           protected:
             //  -- Spatial --
             vec3 _pos; //!< Position of the particle.
