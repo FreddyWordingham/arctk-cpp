@@ -65,6 +65,10 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline double min() const noexcept;
+            inline double max() const noexcept;
+
             //  -- Properties --
             virtual inline Optical optical_props() const noexcept = 0;
 
@@ -74,6 +78,30 @@ namespace arc //! arctk namespace
             virtual inline void interact(random::Generator* rng_, particle::Photon* phot_, const Optical& opt_) const
               noexcept = 0; //!< Perform an interaction on a given photon.   @param  rng_    Random number generator.    @param  phot_   Photon to interact with.
         };
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        /**
+         *  Get the minimum wavelength bound of the material.
+         *
+         *  @return Minimum wavelength bound of the material.
+         */
+        inline double Material::min() const noexcept
+        {
+            return (_min);
+        }
+
+        /**
+         *  Get the maximum wavelength bound of the material.
+         *
+         *  @return Maximum wavelength bound of the material.
+         */
+        inline double Material::max() const noexcept
+        {
+            return (_max);
+        }
 
 
 
