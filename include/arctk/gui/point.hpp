@@ -39,6 +39,11 @@ namespace arc //! arctk namespace
             //  -- Spatial --
             const glm::vec3 pos;
 
+            //  -- Optical --
+            const float wavelength;
+
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
