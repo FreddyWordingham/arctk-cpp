@@ -75,6 +75,7 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline const vec3& pos() const noexcept;
             inline const vec3& dir() const noexcept;
+            inline double      time() const noexcept;
 
             //  -- Setters --
             inline void multiply_weight(double m_) noexcept;
@@ -128,6 +129,11 @@ namespace arc //! arctk namespace
         inline const vec3& Particle::dir() const noexcept
         {
             return (_dir);
+        }
+
+        inline double Particle::time() const noexcept
+        {
+            return (_time);
         }
 
 
