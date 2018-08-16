@@ -63,7 +63,8 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
-                //  -- Getters --
+                //  -- Properties --
+                virtual inline Optical optical_props() const noexcept = 0;
             };
 
 
@@ -141,7 +142,10 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
-            //  -- Getters --
+            //  -- Properties --
+            inline Optical Basic::optical_props() const noexcept
+            {
+            }
 
 
 

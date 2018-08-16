@@ -70,7 +70,7 @@ namespace arc //! arctk namespace
             inline double max() const noexcept;
 
             //  -- Properties --
-            virtual inline Optical optical_props() const noexcept = 0;
+            virtual inline Optical optical_props(const particle::Photon& phot_) const noexcept = 0;
 
             //  -- Interaction --
             virtual inline double interaction_dist(random::Generator* rng_, const particle::Photon& phot_, const Optical& opt_) const
