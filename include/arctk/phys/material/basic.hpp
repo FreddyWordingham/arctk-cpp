@@ -76,6 +76,31 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a basic material.
+             *
+             *  @param  wavelength_ Vector of wavelengths.
+             *  @param  ref_index_  Vector of corresponding refractive indices.
+             *  @param  scat_coef_  Vector of corresponding scattering coefficients.
+             *  @param  abs_coef_   Vector of corresponding absorption coefficients.
+             *  @param  asym_       Vector of corresponding asymmetry parameters.
+             *
+             *  @pre    wavelength_ must contain multiple values.
+             *  @pre    ref_index_ must contain multiple values.
+             *  @pre    scat_coef_ must contain multiple values.
+             *  @pre    abs_coef_ must contain multiple values.
+             *  @pre    asym_ must contain multiple values.
+             *  @pre    wavelength_ size must match ref_index_ size.
+             *  @pre    wavelength_ size must match scat_coef_ size.
+             *  @pre    wavelength_ size must match abs_coef_ size.
+             *  @pre    wavelength_ size must match asym_ size.
+             *  @pre    wavelength_ values must be in ascending order.
+             *  @pre    wavelength_ values must all be non-negative.
+             *  @pre    scat_coef_ values must all be non-negative.
+             *  @pre    abs_coef_ values must all be non-negative.
+             *  @pre    asym_ values must all be greater than, or equal to, minus one.
+             *  @pre    asym_ values must all be less than, or equal to, unity.
+             */
             inline Basic::Basic(const std::vector<double>& wavelength_, const std::vector<double>& ref_index_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& asym_) noexcept
               : Material(wavelength_.front(), wavelength_.back())
               , _ref_index(math::formula::Linear(wavelength_, ref_index_))
