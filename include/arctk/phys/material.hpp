@@ -70,7 +70,7 @@ namespace arc //! arctk namespace
             inline double max() const noexcept;
 
             //  -- Properties --
-            virtual inline void set_optical_props(particle::Photon* phot_) const noexcept = 0;
+            virtual inline void set_optical_props(particle::Photon* phot_) const noexcept = 0; //!< Set the optical properties of a photon. @param  phot_   Photon to set the optical properties of.
 
             //  -- Interaction --
             virtual inline double interaction_dist(random::Generator* rng_, const particle::Photon& phot_) const
