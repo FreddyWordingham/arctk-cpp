@@ -80,7 +80,7 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Flourescent::Flourescent(const std::vector<double>& wavelength_, const std::vector<double>& ref_index_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& asym_,
+            inline Fluorescent::Fluorescent(const std::vector<double>& wavelength_, const std::vector<double>& ref_index_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& asym_,
                                             const std::vector<double>& flu_coef_, const std::vector<double>& delta_wavelength_) noexcept
               : Material(wavelength_.front(), wavelength_.back())
               , _ref_index(math::formula::Linear(wavelength_, ref_index_))
