@@ -45,12 +45,12 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Optical --
-                const math::formula::Linear _ref_index;     //!< Refractive index as a function of wavelength.
-                const math::formula::Linear _interact_coef; //!< Interaction coefficient albedo as a function of wavelength.
-                const math::formula::Linear _albedo;        //!< Single scattering albedo as a function of wavelength.
-                const math::formula::Linear _asym;          //!< Asymmetry parameter as a function of wavelength.
-                const math::formula::Linear _flu_prob;      //!< Fluorescence probability as a function of wavelength.
-                const math::formula::Linear _delta_wavelength;
+                const math::formula::Linear _ref_index;        //!< Refractive index as a function of wavelength.
+                const math::formula::Linear _interact_coef;    //!< Interaction coefficient albedo as a function of wavelength.
+                const math::formula::Linear _albedo;           //!< Single scattering albedo as a function of wavelength.
+                const math::formula::Linear _asym;             //!< Asymmetry parameter as a function of wavelength.
+                const math::formula::Linear _flu_prob;         //!< Fluorescence probability as a function of wavelength.
+                const math::formula::Linear _delta_wavelength; //!< Wavelength delta as a function of wavelength.
 
 
                 //  == INSTANTIATION ==
