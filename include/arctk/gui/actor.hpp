@@ -855,7 +855,7 @@ namespace arc //! arctk namespace
             inline Actor path(const std::vector<Point>& points_) noexcept
             {
                 std::vector<float> verts;
-                verts.reserve(points_.size() * (sizeof(Point) / sizeof(GL_FLOAT)));
+                verts.reserve(points_.size() * (sizeof(Point) / sizeof(float)));
 
                 for (size_t i = 0; i < points_.size(); ++i)
                 {
