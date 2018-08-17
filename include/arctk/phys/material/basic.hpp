@@ -121,6 +121,8 @@ namespace arc //! arctk namespace
                     interact_coef[i] = scat_coef_[i] + abs_coef_[i];
                 }
 
+                POST(utl::properties::always_greater_than(interact_coef, 0.0));
+
                 return (math::formula::Linear(wavelength_, interact_coef));
             }
 
