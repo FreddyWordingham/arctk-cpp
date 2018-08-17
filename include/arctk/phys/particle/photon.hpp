@@ -106,6 +106,11 @@ namespace arc //! arctk namespace
                 return (_wavelength);
             }
 
+            /**
+             *  Get the optical properties of the photon.
+             *
+             *  @return Optical properties of the photon.
+             */
             inline const Optical& Photon::opt() const noexcept
             {
                 return (_opt);
