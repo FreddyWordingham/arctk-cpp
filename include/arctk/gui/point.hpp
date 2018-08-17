@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           public:
             //  -- Spatial --
-            const glm::vec3 pos;
+            const glm::vec3 pos; //!< Position of the data point.
 
             //  -- Temporal --
             const float time;
