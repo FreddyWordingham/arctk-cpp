@@ -50,6 +50,7 @@ namespace arc //! arctk namespace
                 const math::formula::Linear _albedo;
                 const math::formula::Linear _asym;
                 const math::formula::Linear _flu_prob;
+                const math::formula::Linear _delta_wavelength;
 
 
                 //  == INSTANTIATION ==
