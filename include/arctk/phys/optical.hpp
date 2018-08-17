@@ -42,6 +42,7 @@ namespace arc //! arctk namespace
             double _interact_coef{}; //!< Interaction coefficient.
             double _albedo{};        //!< Single scattering albedo.
             double _asym{};          //!< Asymmetry parameter.
+            double _change_prob{};   //!< Probability of changing state.
 
 
             //  == INSTANTIATION ==
