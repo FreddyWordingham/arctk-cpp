@@ -225,6 +225,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Properties --
+            /**
+             *  Set the optical properties of a photon.
+             *
+             *  @param  phot_   Photon to set the optical properties of.
+             */
             inline void Basic::set_optical_props(particle::Photon* const phot_) const noexcept
             {
                 phot_->set_optical_props(Optical(_ref_index(phot_->wavelength()), _interact_coef(phot_->wavelength()), _albedo(phot_->wavelength()), _asym(phot_->wavelength())));
@@ -232,6 +237,14 @@ namespace arc //! arctk namespace
 
 
             //  -- Interaction --
+            /**
+             *  Determine the distance until a material interaction occurs.
+             *
+             *  @param  rng_    Random number generator.
+             *  @param  phot_   Photon to interact with.
+             *
+             *  @return Distance to interaction.
+             */
             inline double Basic::interaction_dist(random::Generator* rng_, const particle::Photon& phot_) const noexcept
             {
                 return (-std::log(rng_->gen()) / phot_.opt().interact_coef());
