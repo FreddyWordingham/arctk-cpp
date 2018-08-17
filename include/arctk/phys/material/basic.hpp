@@ -145,6 +145,9 @@ namespace arc //! arctk namespace
                     albedo[i] = 1.0 - (abs_coef_[i] / (scat_coef_[i] + abs_coef_[i]));
                 }
 
+                POST(utl::properties::always_greater_than_or_equal_to(albedo, 0.0));
+                POST(utl::properties::always_less_than_or_equal_to(albedo, 1.0));
+
                 return (math::formula::Linear(wavelength_, albedo));
             }
 
