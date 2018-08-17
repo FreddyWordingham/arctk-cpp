@@ -135,6 +135,11 @@ namespace arc //! arctk namespace
                 _time += (dist_ * _opt.ref_index()) / consts::phys::SPEED_OF_LIGHT;
             }
 
+            /**
+             *  Set the optical properties of the photon.
+             *
+             *  @param  opt_    Optical properties to set for the photon.
+             */
             inline void Photon::set_optical_props(const Optical& opt_) noexcept
             {
                 _opt = opt_;
