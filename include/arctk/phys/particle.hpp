@@ -147,9 +147,13 @@ namespace arc //! arctk namespace
          *  Multiply the weight of the photon.
          *
          *  @param  m_  Multiplier.
+         *
+         *  @pre    m_ must be non-negative.
          */
         inline void Particle::multiply_weight(const double m_) noexcept
         {
+            PRE(m_ >= 0.0);
+
             _weight *= m_;
         }
 
