@@ -110,6 +110,12 @@ namespace arc //! arctk namespace
                 PRE(utl::properties::always_greater_than_or_equal_to(asym_, -1.0));
                 PRE(utl::properties::always_less_than_or_equal_to(asym_, 1.0));
                 PRE(utl::properties::always_greater_than_or_equal_to(flu_coef_, 0.0));
+
+                for (size_t i = 0; i < wavelength_.size(); ++i)
+                {
+                    PRE((wavelength_[i] + delta_wavelength_[i]) >= wavelength_.front());
+                    PRE((wavelength_[i] + delta_wavelength_[i]) <= wavelength_.back());
+                }
             }
 
 
