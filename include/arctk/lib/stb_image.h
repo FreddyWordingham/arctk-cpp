@@ -1,3 +1,5 @@
+#if defined(__clang__)
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wcast-align"
 #pragma clang diagnostic ignored "-Wcast-qual"
@@ -11,7 +13,7 @@
 #pragma clang diagnostic ignored "-Wunused-parameter"
 #pragma clang diagnostic ignored "-Wzero-as-null-pointer-constant"
 
-
+#elif defined(__GNUC__) || defined(__GNUG__)
 
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wcast-qual"
@@ -24,6 +26,8 @@
 #pragma GCC diagnostic ignored "-Wunused-parameter"
 #pragma GCC diagnostic ignored "-Wuseless-cast"
 #pragma GCC diagnostic ignored "-Wzero-as-null-pointer-constant"
+
+#endif
 
 
 
@@ -9753,8 +9757,12 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 
+#if defined(__clang__)
+
 #pragma GCC diagnostic pop
 
-
+#elif defined(__GNUC__) || defined(__GNUG__)
 
 #pragma clang diagnostic pop
+
+#endif
