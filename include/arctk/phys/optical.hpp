@@ -74,6 +74,11 @@ namespace arc //! arctk namespace
          *  @param  interact_coef_  Interaction coefficient.
          *  @param  albedo_         Single scattering albedo.
          *  @param  asym_           Asymmetry parameter.
+         *
+         *  @pre    ref_index_ must be positive.
+         *  @pre    interact_coef_ must be positive.
+         *  @pre    albedo_ must be between zero and unity.
+         *  @pre    albedo_ must be between minus one and and one.
          */
         inline Optical::Optical(const double ref_index_, const double interact_coef_, const double albedo_, const double asym_) noexcept
           : _ref_index(ref_index_)
