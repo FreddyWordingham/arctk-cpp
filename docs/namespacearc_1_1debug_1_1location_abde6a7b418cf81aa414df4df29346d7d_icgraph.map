@@ -1,6 +1,0 @@
-<map id="arc::debug::location::info" name="arc::debug::location::info">
-<area shape="rect" id="node2" href="$namespacearc_1_1debug_1_1contract.html#ab8432795f13e5fd8ad286b138bca16df" title="arc::debug::contract\l::precondition" alt="" coords="193,5,332,44"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1debug_1_1contract.html#a4654862f4a46f4397dbe32713646c608" title="arc::debug::contract\l::postcondition" alt="" coords="193,68,332,107"/>
-<area shape="rect" id="node4" href="$classarc_1_1debug_1_1_invariant.html#aeee6cceb3d45f6a596128c49cc48cb03" title="arc::debug::Invariant\l::~Invariant" alt="" coords="191,131,334,169"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1debug_1_1location.html#aa71065bc85b9120fe913f5f301745acb" title="arc::debug::location\l::stacktrace" alt="" coords="194,193,331,232"/>
-</map>

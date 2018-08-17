@@ -1,7 +1,0 @@
-<map id="arc::geom::Shape" name="arc::geom::Shape">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_aabb.html" title="arc::geom::shape::Aabb" alt="" coords="188,5,351,31"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_mesh.html" title="arc::geom::shape::Mesh" alt="" coords="187,55,352,80"/>
-<area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_plane.html" title="arc::geom::shape::Plane" alt="" coords="187,104,353,129"/>
-<area shape="rect" id="node5" href="$classarc_1_1geom_1_1shape_1_1_sphere.html" title="arc::geom::shape::Sphere" alt="" coords="182,153,357,179"/>
-<area shape="rect" id="node6" href="$classarc_1_1geom_1_1shape_1_1_triangle.html" title="arc::geom::shape::Triangle" alt="" coords="180,203,359,228"/>
-</map>

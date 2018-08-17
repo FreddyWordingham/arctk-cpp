@@ -1,7 +1,0 @@
-<map id="arc::gui::shader::Skybox::render" name="arc::gui::shader::Skybox::render">
-<area shape="rect" id="node2" href="$classarc_1_1gui_1_1_actor.html#a9bcaee8d7f91d373e707b76b9396f8a4" title="arc::gui::Actor::fill_mode" alt="" coords="232,5,397,31"/>
-<area shape="rect" id="node3" href="$classarc_1_1gui_1_1_actor.html#a5251ce8de3e14f4b3daf9e2a7b771eee" title="arc::gui::Actor::model" alt="" coords="241,55,388,80"/>
-<area shape="rect" id="node4" href="$classarc_1_1gui_1_1_actor.html#af5fa2a4873e426314fd4ec7690e4b931" title="arc::gui::Actor::vao" alt="" coords="248,104,381,129"/>
-<area shape="rect" id="node5" href="$classarc_1_1gui_1_1_actor.html#ae3fe93962c3f0eae157511fcfe1c3f17" title="arc::gui::Actor::primitive_type" alt="" coords="218,153,411,179"/>
-<area shape="rect" id="node6" href="$classarc_1_1gui_1_1_actor.html#a8b457c2ac5cae4710152632d36144e86" title="arc::gui::Actor::num_vert" alt="" coords="231,203,398,228"/>
-</map>

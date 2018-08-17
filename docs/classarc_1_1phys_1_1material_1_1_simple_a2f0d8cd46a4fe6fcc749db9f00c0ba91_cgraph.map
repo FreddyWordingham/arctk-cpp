@@ -1,6 +1,0 @@
-<map id="arc::phys::material::Simple::interact" name="arc::phys::material::Simple::interact">
-<area shape="rect" id="node2" href="$namespacearc_1_1random_1_1distribution_1_1henyey__greenstein.html#a92449e5656405256a5eed9f90a844a8d" title="arc::random::distribution\l::henyey_greenstein::sample" alt="" coords="184,61,375,100"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="450,5,586,44"/>
-<area shape="rect" id="node4" href="$classarc_1_1random_1_1_generator.html#a97bd3a4fd637ff97659ab94af9307ca8" title="Generate a random double between zero and unity. " alt="" coords="423,68,613,93"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1math_1_1pow.html#a673982111327d6a2597e9a381009ce4d" title="arc::math::pow::sq" alt="" coords="453,117,583,143"/>
-</map>
