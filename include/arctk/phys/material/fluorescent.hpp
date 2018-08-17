@@ -45,8 +45,8 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Optical --
-                const math::formula::Linear _ref_index; //!< Refractive index as a function of wavelength.
-                const math::formula::Linear _interact_coef;
+                const math::formula::Linear _ref_index;     //!< Refractive index as a function of wavelength.
+                const math::formula::Linear _interact_coef; //!< Interaction coefficient albedo as a function of wavelength.
                 const math::formula::Linear _albedo;
                 const math::formula::Linear _asym;
                 const math::formula::Linear _flu_prob;
