@@ -2,7 +2,7 @@ var searchData=
 [
   ['parsable_5fto',['parsable_to',['../namespacearc_1_1str_1_1parse.html#a3780c748752825e6dd9589a4a41808c1',1,'arc::str::parse']]],
   ['parsable_5fto_3c_20bool_20_3e',['parsable_to&lt; bool &gt;',['../namespacearc_1_1str_1_1parse.html#a58a373132eb04bcd4f94d61e47ef2204',1,'arc::str::parse']]],
-  ['particle',['Particle',['../classarc_1_1phys_1_1_particle.html#a1cf14f35e17ed9cd25af13788b48eaf1',1,'arc::phys::Particle::Particle(const vec3 &amp;pos_, const vec3 &amp;dir_, double time_) noexcept'],['../classarc_1_1phys_1_1_particle.html#aca34bb601b5754e5133d7f6957a0c896',1,'arc::phys::Particle::Particle(const Particle &amp;)=default'],['../classarc_1_1phys_1_1_particle.html#a746961bfc64349291dc3864dd1426dd7',1,'arc::phys::Particle::Particle(Particle &amp;&amp;)=default']]],
+  ['particle',['Particle',['../classarc_1_1phys_1_1_particle.html#a6f888159c125d08650346184dff6ed1d',1,'arc::phys::Particle::Particle(const vec3 &amp;pos_, const vec3 &amp;dir_, double time_=0.0) noexcept'],['../classarc_1_1phys_1_1_particle.html#aca34bb601b5754e5133d7f6957a0c896',1,'arc::phys::Particle::Particle(const Particle &amp;)=default'],['../classarc_1_1phys_1_1_particle.html#a746961bfc64349291dc3864dd1426dd7',1,'arc::phys::Particle::Particle(Particle &amp;&amp;)=default']]],
   ['path',['path',['../namespacearc_1_1gui_1_1actor.html#a70cd46f071386ec37cd9a7c957b70bd1',1,'arc::gui::actor']]],
   ['perspective',['Perspective',['../classarc_1_1gui_1_1lens_1_1_perspective.html#a4024939be58a97497cc01b7cb61cc658',1,'arc::gui::lens::Perspective']]],
   ['photon',['Photon',['../classarc_1_1phys_1_1particle_1_1_photon.html#a131c409576763970f9dfba027b05f710',1,'arc::phys::particle::Photon']]],
@@ -10,7 +10,7 @@ var searchData=
   ['plane_5fcollision',['plane_collision',['../classarc_1_1geom_1_1shape_1_1_triangle.html#abe258581ad067c650f2f9a5cbebd4021',1,'arc::geom::shape::Triangle']]],
   ['plane_5fnorm',['plane_norm',['../classarc_1_1geom_1_1shape_1_1_triangle.html#a5e6273eac5f6dcf71ca9312bc895775f',1,'arc::geom::shape::Triangle']]],
   ['point',['Point',['../classarc_1_1gui_1_1_point.html#adc6e6cdf5412b13d1d3067e4368a3d19',1,'arc::gui::Point']]],
-  ['polar_5fto_5fcart',['polar_to_cart',['../namespacearc_1_1math_1_1convert.html#adc9151d5ba0dcf2846c64d1c1386c191',1,'arc::math::convert']]],
+  ['polar_5fto_5fcart',['polar_to_cart',['../namespacearc_1_1math_1_1convert.html#ac0b319816d18eb6a572ecb9abd2af70d',1,'arc::math::convert::polar_to_cart(const Vec&lt; T, 2 &gt; &amp;polar_) noexcept'],['../namespacearc_1_1math_1_1convert.html#adc9151d5ba0dcf2846c64d1c1386c191',1,'arc::math::convert::polar_to_cart(const Vec&lt; T, 3 &gt; &amp;polar_) noexcept']]],
   ['poll',['poll',['../classarc_1_1gui_1_1_keymap.html#a5454aeffeb8918d01628da42a265b632',1,'arc::gui::Keymap']]],
   ['polynomial',['Polynomial',['../classarc_1_1math_1_1formula_1_1_polynomial.html#a2e543c68660fe5f1019346425b438475',1,'arc::math::formula::Polynomial']]],
   ['pos',['pos',['../classarc_1_1geom_1_1shape_1_1_triangle.html#a7d44c895892dcc7da831a2e999f17318',1,'arc::geom::shape::Triangle::pos()'],['../classarc_1_1gui_1_1_camera.html#a84b35ed211ee06b0eeba0fb7732766bf',1,'arc::gui::Camera::pos()'],['../classarc_1_1phys_1_1_particle.html#ab43bb6f582a0a011a91db601f7982787',1,'arc::phys::Particle::pos()']]],
