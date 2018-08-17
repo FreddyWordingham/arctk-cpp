@@ -59,8 +59,8 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            inline Material& operator=(const Material&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
-            inline Material& operator=(Material&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
+            inline Material& operator=(const Material&) noexcept = delete; //!< Deleted copy operator. @return Reference to copied object.
+            inline Material& operator=(Material&&) noexcept = delete;      //!< Deleted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
