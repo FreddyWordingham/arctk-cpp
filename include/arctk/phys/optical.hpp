@@ -155,6 +155,11 @@ namespace arc //! arctk namespace
             return (_albedo);
         }
 
+        /**
+         *  Get the asymmetry parameter of the optical property.
+         *
+         *  @return Asymmetry parameter of the optical property.
+         */
         inline double Optical::asym() const noexcept
         {
             return (_asym);
