@@ -219,6 +219,12 @@ namespace arc //! arctk namespace
                 return (-std::log(rng_->gen()) / phot_.opt().interact_coef());
             }
 
+            /**
+             *  Perform an interaction on a given photon.
+             *
+             *  @param  rng_    Random number generator.
+             *  @param  phot_   Photon to interact with.
+             */
             inline void Fluorescent::interact(random::Generator* rng_, particle::Photon* phot_) const noexcept
             {
                 phot_->multiply_weight(phot_->opt().albedo());
