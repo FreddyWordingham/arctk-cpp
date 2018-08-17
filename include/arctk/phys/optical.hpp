@@ -145,6 +145,11 @@ namespace arc //! arctk namespace
             return (_interact_coef);
         }
 
+        /**
+         *  Get the single scattering albedo of the optical property.
+         *
+         *  @return Single scattering albedo of the optical property.
+         */
         inline double Optical::albedo() const noexcept
         {
             return (_albedo);
