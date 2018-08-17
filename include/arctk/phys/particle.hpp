@@ -55,7 +55,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Particle(const vec3& pos_, const vec3& dir_, const double time_) noexcept;
+            inline Particle(const vec3& pos_, const vec3& dir_, double time_) noexcept;
             inline Particle(const Particle&) = default; //!< Defaulted copy constructor.
             inline Particle(Particle&&)      = default; //!< Defaulted move constructor.
 
