@@ -82,6 +82,14 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a material valid for wavelengths between the given bounds.
+         *
+         *  @param  min_    Minimum wavelength bound of the material.
+         *  @param  max_    Maximum wavelength bound of the material.
+         *
+         *  @pre    min_ must be less than, or equal to, max.
+         */
         inline Material::Material(const double min_, const double max_) noexcept
           : _min(min_)
           , _max(max_)
