@@ -50,6 +50,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Optical() noexcept = default;
             inline Optical(double ref_index_, double interact_coef_, double albedo_, double asym_) noexcept;
+            inline Optical(double ref_index_, double interact_coef_, double albedo_, double asym_, double change_prob_) noexcept;
 
 
             //  == METHODS ==
@@ -59,6 +60,7 @@ namespace arc //! arctk namespace
             inline double interact_coef() const noexcept;
             inline double albedo() const noexcept;
             inline double asym() const noexcept;
+            inline double change_prob() const noexcept;
         };
 
 
@@ -75,6 +77,20 @@ namespace arc //! arctk namespace
             PRE(interact_coef_ > 0.0);
             PRE((albedo_ >= 0.0) && (albedo_ <= 1.0));
             PRE((asym_ >= -1.0) && (asym_ <= 1.0));
+        }
+
+        inline Optical::Optical(const double ref_index_, const double interact_coef_, const double albedo_, const double asym_, const double change_prob_) noexcept
+          : _ref_index(ref_index_)
+          , _interact_coef(interact_coef_)
+          , _albedo(albedo_)
+          , _asym(asym_)
+          , _change_prob(change_prob_)
+        {
+            PRE(ref_index_ > 0.0);
+            PRE(interact_coef_ > 0.0);
+            PRE((albedo_ >= 0.0) && (albedo_ <= 1.0));
+            PRE((asym_ >= -1.0) && (asym_ <= 1.0));
+            PRE((change_prob_ >= 0.0) && (change_prob_ <= 1.0));
         }
 
 
@@ -99,6 +115,11 @@ namespace arc //! arctk namespace
         inline double Optical::asym() const noexcept
         {
             return (_asym);
+        }
+
+        inline double Optical::change_prob() const noexcept
+        {
+            return (_change_prob);
         }
 
 
