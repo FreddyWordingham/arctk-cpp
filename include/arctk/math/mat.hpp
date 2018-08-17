@@ -116,8 +116,8 @@ namespace arc //! arctk namespace
             //  -- Mathematical --
             constexpr inline T         sum() const noexcept;
             constexpr inline T         det() const noexcept;
-            constexpr inline T         minor(size_t row_, size_t col_) const noexcept;
-            constexpr inline Mat<T, N> minor() const noexcept;
+            constexpr inline T         minors(size_t row_, size_t col_) const noexcept;
+            constexpr inline Mat<T, N> minors() const noexcept;
             constexpr inline T         cofactor(size_t row_, size_t col_) const noexcept;
             constexpr inline Mat<T, N> cofactor() const noexcept;
             constexpr inline Mat<T, N> trans() const noexcept;
@@ -751,7 +751,7 @@ namespace arc //! arctk namespace
          *  @return Minor of an element of the matrix.
          */
         template <typename T, size_t N>
-        constexpr inline T Mat<T, N>::minor(const size_t row_, const size_t col_) const noexcept
+        constexpr inline T Mat<T, N>::minors(const size_t row_, const size_t col_) const noexcept
         {
             PRE(row_ < N);
             PRE(col_ < N);
@@ -788,7 +788,7 @@ namespace arc //! arctk namespace
          *  @return Matrix of minors of the matrix.
          */
         template <typename T, size_t N>
-        constexpr inline Mat<T, N> Mat<T, N>::minor() const noexcept
+        constexpr inline Mat<T, N> Mat<T, N>::minors() const noexcept
         {
             Mat<T, N> mat;
 
@@ -796,7 +796,7 @@ namespace arc //! arctk namespace
             {
                 for (size_t j = 0; j < N; ++j)
                 {
-                    mat[i][j] = minor(i, j);
+                    mat[i][j] = minors(i, j);
                 }
             }
 
@@ -820,7 +820,7 @@ namespace arc //! arctk namespace
             PRE(row_ < N);
             PRE(col_ < N);
 
-            return (std::pow(-1, row_ + col_) * minor(row_, col_));
+            return (std::pow(-1, row_ + col_) * minors(row_, col_));
         }
 
         /**
