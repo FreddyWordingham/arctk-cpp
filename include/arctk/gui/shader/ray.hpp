@@ -193,8 +193,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Setters --
-                inline void set_time_start(const float time_start_) noexcept;
-                inline void set_time_end(const float time_end_) noexcept;
+                inline void set_time_start(float time_start_) noexcept;
+                inline void set_time_end(float time_end_) noexcept;
 
                 //  -- Rendering --
                 inline void activate(const Lens& lens_, const Camera& cam_) noexcept;
