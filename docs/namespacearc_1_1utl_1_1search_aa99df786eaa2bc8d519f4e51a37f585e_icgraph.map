@@ -1,0 +1,5 @@
+<map id="arc::utl::search::max" name="arc::utl::search::max">
+<area shape="rect" id="node2" href="$classarc_1_1data_1_1image_1_1_greyscale.html#ac26247cecfa9c6a44672c4d84a4dfc2b" title="arc::data::image::Greyscale\l::save" alt="" coords="195,5,379,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1gui_1_1camera_1_1_orbit.html#ab0062f89065280998577ed4781a22fd8" title="arc::gui::camera::Orbit\l::move" alt="" coords="210,68,364,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1random_1_1generator_1_1_quality.html#a62c1690d7eb9dd323ffe92051fca040c" title="arc::random::generator\l::Quality::gen" alt="" coords="208,131,365,169"/>
+</map>
