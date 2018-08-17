@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
             const float time; //!< Time of the data point.
 
             //  -- Optical --
-            const float wavelength;
+            const float wavelength; //!< Wavelength of the data point.
 
 
             //  == INSTANTIATION ==
