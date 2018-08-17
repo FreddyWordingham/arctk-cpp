@@ -201,17 +201,17 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Properties --
-            inline void Flourescent::set_optical_props(particle::Photon* const phot_) const noexcept
+            inline void Fluorescent::set_optical_props(particle::Photon* const phot_) const noexcept
             {
             }
 
 
             //  -- Interaction --
-            inline double Flourescent::interaction_dist(random::Generator* rng_, const particle::Photon& phot_) const noexcept
+            inline double Fluorescent::interaction_dist(random::Generator* rng_, const particle::Photon& phot_) const noexcept
             {
             }
 
-            inline void Flourescent::interact(random::Generator* rng_, particle::Photon* phot_) const noexcept
+            inline void Fluorescent::interact(random::Generator* rng_, particle::Photon* phot_) const noexcept
             {
             }
 
