@@ -220,7 +220,7 @@ namespace arc //! arctk namespace
 
                 if (rng_->gen() <= phot_->opt().change_prob())
                 {
-                    phot_->wavelength += _delta_wavelength(phot_->wavelength());
+                    phot_->shift_wavelength(_delta_wavelength(phot_->wavelength()));
 
                     set_optical_props(phot_);
                 }
