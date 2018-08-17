@@ -67,6 +67,14 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct an optical properties object with the basic optical properties.
+         *
+         *  @param  ref_index_      Refractive index.
+         *  @param  interact_coef_  Interaction coefficient.
+         *  @param  albedo_         Single scattering albedo.
+         *  @param  asym_           Asymmetry parameter.
+         */
         inline Optical::Optical(const double ref_index_, const double interact_coef_, const double albedo_, const double asym_) noexcept
           : _ref_index(ref_index_)
           , _interact_coef(interact_coef_)
