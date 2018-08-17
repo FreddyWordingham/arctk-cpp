@@ -59,6 +59,16 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a data point recording the time and wavelength at a given position.
+         *
+         *  @param  pos_        Position of the data point.
+         *  @param  time_       Time of the data point.
+         *  @param  wavelength_ Wavelength of the data point.
+         *
+         *  @pre    time_ must be non-negative.
+         *  @pre    wavelength_ must be positive.
+         */
         inline Point::Point(const glm::vec3& pos_, const float time_, const float wavelength_) noexcept
           : pos(pos_)
           , time(time_)
