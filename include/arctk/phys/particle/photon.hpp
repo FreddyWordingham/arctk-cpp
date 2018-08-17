@@ -145,9 +145,18 @@ namespace arc //! arctk namespace
                 _opt = opt_;
             }
 
+            /**
+             *  Shift the wavelength of the photon.
+             *
+             *  @param  delta_wavelength_   Value to shift the wavelength.
+             *
+             *  @post   _wavelength must be positive.
+             */
             inline void Photon::shift_wavelength(const double delta_wavelength_) noexcept
             {
                 _wavelength += delta_wavelength_;
+
+                POST(_wavelength > 0.0);
             }
 
 
