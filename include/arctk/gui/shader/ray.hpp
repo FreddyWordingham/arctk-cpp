@@ -232,6 +232,11 @@ namespace arc //! arctk namespace
                 glUniform1f(_time_start, time_start_);
             }
 
+            /**
+             *  Set the end rendering time uniform value.
+             *
+             *  @param  time_end_   Value to set the time uniform value to.
+             */
             inline void Ray::set_time_end(const float time_end_) noexcept
             {
                 glUniform1f(_time_end, time_end_);
