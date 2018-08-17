@@ -92,6 +92,7 @@
 #include <arctk/phys.hpp>
 #include <arctk/phys/material.hpp>
 #include <arctk/phys/material/basic.hpp>
+#include <arctk/phys/material/fluorescent.hpp>
 #include <arctk/phys/optical.hpp>
 #include <arctk/phys/particle.hpp>
 #include <arctk/phys/particle/photon.hpp>
