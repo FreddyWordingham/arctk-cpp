@@ -214,6 +214,14 @@ namespace arc //! arctk namespace
 
 
             //  -- Interaction --
+            /**
+             *  Determine the distance until a material interaction occurs.
+             *
+             *  @param  rng_    Random number generator.
+             *  @param  phot_   Photon to interact with.
+             *
+             *  @return Distance to interaction.
+             */
             inline double Fluorescent::interaction_dist(random::Generator* rng_, const particle::Photon& phot_) const noexcept
             {
                 return (-std::log(rng_->gen()) / phot_.opt().interact_coef());
