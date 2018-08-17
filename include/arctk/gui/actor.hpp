@@ -479,14 +479,14 @@ namespace arc //! arctk namespace
 
                 for (int i = x_start; i <= x_end; ++i)
                 {
-                    verts.emplace_back(glm::vec3(i * cell_size_.x, min_.y, 0.0f));
-                    verts.emplace_back(glm::vec3(i * cell_size_.x, max_.y, 0.0f));
+                    verts.emplace_back(glm::vec3(static_cast<float>(i) * cell_size_.x, min_.y, 0.0f));
+                    verts.emplace_back(glm::vec3(static_cast<float>(i) * cell_size_.x, max_.y, 0.0f));
                 }
 
                 for (int i = y_start; i <= y_end; ++i)
                 {
-                    verts.emplace_back(glm::vec3(min_.x, i * cell_size_.y, 0.0f));
-                    verts.emplace_back(glm::vec3(max_.x, i * cell_size_.y, 0.0f));
+                    verts.emplace_back(glm::vec3(min_.x, static_cast<float>(i) * cell_size_.y, 0.0f));
+                    verts.emplace_back(glm::vec3(max_.x, static_cast<float>(i) * cell_size_.y, 0.0f));
                 }
 
                 Actor grid(verts, {3}, GL_LINES);
