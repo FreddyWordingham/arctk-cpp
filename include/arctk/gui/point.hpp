@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
             const glm::vec3 pos; //!< Position of the data point.
 
             //  -- Temporal --
-            const float time;
+            const float time; //!< Time of the data point.
 
             //  -- Optical --
             const float wavelength;
