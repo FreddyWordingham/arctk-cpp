@@ -114,7 +114,7 @@ namespace arc //! arctk namespace
                 PRE(utl::properties::always_greater_than_or_equal_to(scat_coef_, 0.0));
                 PRE(utl::properties::always_greater_than_or_equal_to(abs_coef_, 0.0));
 
-                std::vector<double> interact_coef(scat_coef_.size());
+                std::vector<double> interact_coef(wavelength_.size());
 
                 for (size_t i = 0; i < interact_coef.size(); ++i)
                 {
@@ -138,7 +138,7 @@ namespace arc //! arctk namespace
                 PRE(utl::properties::always_greater_than_or_equal_to(scat_coef_, 0.0));
                 PRE(utl::properties::always_greater_than_or_equal_to(abs_coef_, 0.0));
 
-                std::vector<double> albedo(scat_coef_.size());
+                std::vector<double> albedo(wavelength_.size());
 
                 for (size_t i = 0; i < albedo.size(); ++i)
                 {
