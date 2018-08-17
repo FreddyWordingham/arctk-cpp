@@ -118,6 +118,24 @@ namespace arc //! arctk namespace
             }
 
             /**
+             *  Convert a two-dimensional spherical-polar vector to a two-dimensional cartesian vector.
+             *
+             *  @param  polar_  Spherical-polar vector to convert.
+             *
+             *  @return Cartesian vector.
+             */
+            template <typename T>
+            inline Vec<T, 2> polar_to_cart(const Vec<T, 2>& polar_) noexcept
+            {
+                Vec<T, 2> cart;
+
+                cart.x = polar_.rho * std::sin(polar_.theta);
+                cart.y = polar_.rho * std::cos(polar_.theta);
+
+                return (cart);
+            }
+
+            /**
              *  Convert a three-dimensional spherical-polar vector to a three-dimensional cartesian vector.
              *
              *  @param  polar_  Spherical-polar vector to convert.
