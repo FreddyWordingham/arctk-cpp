@@ -120,6 +120,32 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
+            /**
+             *  Initialise the interaction coefficient formula.
+             *  Interaction coefficient values are calculated from the sum of coefficient values.
+             *
+             *  @param  wavelength_ Vector of wavelengths.
+             *  @param  scat_coef_  Vector of corresponding scattering coefficients.
+             *  @param  abs_coef_   Vector of corresponding absorption coefficients.
+             *  @param  flu_coef_   Vector of corresponding fluence coefficients.
+             *
+             *  @pre    wavelength_ must contain multiple values.
+             *  @pre    scat_coef_ must contain multiple values.
+             *  @pre    abs_coef_ must contain multiple values.
+             *  @pre    flu_coef_ must contain multiple values.
+             *  @pre    wavelength_ size must match scat_coef_ size.
+             *  @pre    wavelength_ size must match abs_coef_ size.
+             *  @pre    wavelength_ size must match flu_coef_ size.
+             *  @pre    wavelength_ values must be in ascending order.
+             *  @pre    wavelength_ values must all be non-negative.
+             *  @pre    scat_coef_ values must all be non-negative.
+             *  @pre    abs_coef_ values must all be non-negative.
+             *  @pre    flu_coef_ values must all be non-negative.
+             *
+             *  @post   interact_coef values must all be positive.
+             *
+             *  @return Interaction coefficient formula.
+             */
             inline math::formula::Linear Fluorescent::init_interact_coef(const std::vector<double>& wavelength_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& flu_coef_) const noexcept
             {
                 PRE(wavelength_.size() > 1);
