@@ -143,6 +143,11 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
+        /**
+         *  Multiply the weight of the photon.
+         *
+         *  @param  m_  Multiplier.
+         */
         inline void Particle::multiply_weight(const double m_) noexcept
         {
             _weight *= m_;
