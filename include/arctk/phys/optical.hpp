@@ -125,6 +125,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the refractive index of the optical property.
+         *
+         *  @return Refractive index of the optical property.
+         */
         inline double Optical::ref_index() const noexcept
         {
             return (_ref_index);
