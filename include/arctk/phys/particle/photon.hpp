@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
               private:
                 //  -- Optical --
                 double  _wavelength; //!< Optical wavelength.
-                Optical _opt;        //!< Optical properties.
+                Optical _opt{};      //!< Optical properties.
 
 
                 //  == INSTANTIATION ==
