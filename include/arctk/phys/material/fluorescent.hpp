@@ -210,6 +210,7 @@ namespace arc //! arctk namespace
             //  -- Interaction --
             inline double Fluorescent::interaction_dist(random::Generator* rng_, const particle::Photon& phot_) const noexcept
             {
+                return (-std::log(rng_->gen()) / phot_.opt().interact_coef());
             }
 
             inline void Fluorescent::interact(random::Generator* rng_, particle::Photon* phot_) const noexcept
