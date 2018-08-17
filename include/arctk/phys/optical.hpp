@@ -165,6 +165,11 @@ namespace arc //! arctk namespace
             return (_asym);
         }
 
+        /**
+         *  Get the state change probability of the optical property.
+         *
+         *  @return State change probability of the optical property.
+         */
         inline double Optical::change_prob() const noexcept
         {
             return (_change_prob);
