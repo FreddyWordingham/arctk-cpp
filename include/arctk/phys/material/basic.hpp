@@ -175,7 +175,7 @@ namespace arc //! arctk namespace
 
             /**
              *  Initialise the singled scattering albedo formula.
-             *  Interaction coefficient values are calculated from the sum of coefficient values.
+             *  Single scattering albedo is calculated by one minus the ratio of the absorption coefficient to the sum of all of the coefficients.
              *
              *  @param  wavelength_ Vector of wavelengths.
              *  @param  scat_coef_  Vector of corresponding scattering coefficients.
