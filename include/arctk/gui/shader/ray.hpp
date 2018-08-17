@@ -222,6 +222,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Setters --
+            /**
+             *  Set the start rendering time uniform value.
+             *
+             *  @param  time_start_ Value to set the time uniform value to.
+             */
             inline void Ray::set_time_start(const float time_start_) noexcept
             {
                 glUniform1f(_time_start, time_start_);
