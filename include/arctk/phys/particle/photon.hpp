@@ -78,6 +78,7 @@ namespace arc //! arctk namespace
              *  @param  pos_        Position of the photon.
              *  @param  dir_        Direction of the photon.
              *  @param  wavelength_ Wavelength of the photon.
+             *  @param  time_       Initial time value of the photon.
              *
              *  @pre    dir_ must be normalised.
              *  @pre    wavelength_ must be positive.
