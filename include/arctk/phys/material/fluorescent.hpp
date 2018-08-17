@@ -171,6 +171,30 @@ namespace arc //! arctk namespace
 
             inline math::formula::Linear Fluorescent::init_flu_prob(const std::vector<double>& wavelength_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& flu_coef_) const noexcept
             {
+                PRE(wavelength_.size() > 1);
+                PRE(scat_coef_.size() > 1);
+                PRE(abs_coef_.size() > 1);
+                PRE(flu_coef_.size() > 1);
+                PRE(wavelength_.size() == scat_coef_.size());
+                PRE(wavelength_.size() == abs_coef_.size());
+                PRE(wavelength_.size() == flu_coef_.size());
+                PRE(utl::properties::ascending(wavelength_));
+                PRE(utl::properties::always_greater_than_or_equal_to(wavelength_, 0.0));
+                PRE(utl::properties::always_greater_than_or_equal_to(scat_coef_, 0.0));
+                PRE(utl::properties::always_greater_than_or_equal_to(abs_coef_, 0.0));
+                PRE(utl::properties::always_greater_than_or_equal_to(flu_coef_, 0.0));
+
+                std::vector<double> fluence(wavelength_.size());
+
+                for (size_t i = 0; i < fluence.size(); ++i)
+                {
+                    fluence[i] = flu_coef_[i] / (scat_coef_[i] + abs_coef_[i] + flu_coef_[i]);
+                }
+
+                POST(utl::properties::always_greater_than_or_equal_to(fluence, 0.0));
+                POST(utl::properties::always_less_than_or_equal_to(fluence, 1.0));
+
+                return (math::formula::Linear(wavelength_, fluence));
             }
 
 
