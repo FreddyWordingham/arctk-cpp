@@ -87,7 +87,7 @@ namespace arc //! arctk namespace
               , _interact_coef(init_interact_coef(wavelength_, scat_coef_, abs_coef_, flu_coef_))
               , _albedo(init_albedo(wavelength_, scat_coef_, abs_coef_, flu_coef_))
               , _asym(math::formula::Linear(wavelength_, asym_))
-              , _flu_prob(init_albedo(wavelength_, scat_coef_, abs_coef_, flu_coef_))
+              , _flu_prob(init_flu_prob(wavelength_, scat_coef_, abs_coef_, flu_coef_))
               , _delta_wavelength(math::formula::Linear(wavelength_, delta_wavelength_))
             {
                 PRE(wavelength_.size() > 1);
