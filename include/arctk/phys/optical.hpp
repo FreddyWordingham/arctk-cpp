@@ -92,6 +92,21 @@ namespace arc //! arctk namespace
             PRE((asym_ >= -1.0) && (asym_ <= 1.0));
         }
 
+        /**
+         *  Construct an optical properties object with the basic optical properties.
+         *
+         *  @param  ref_index_      Refractive index.
+         *  @param  interact_coef_  Interaction coefficient.
+         *  @param  albedo_         Single scattering albedo.
+         *  @param  asym_           Asymmetry parameter.
+         *  @param  change_prob_    Probability of changing state.
+         *
+         *  @pre    ref_index_ must be positive.
+         *  @pre    interact_coef_ must be positive.
+         *  @pre    albedo_ must be between zero and unity.
+         *  @pre    albedo_ must be between minus one and and one.
+         *  @pre    change_prob_ must be between zero and unity.
+         */
         inline Optical::Optical(const double ref_index_, const double interact_coef_, const double albedo_, const double asym_, const double change_prob_) noexcept
           : _ref_index(ref_index_)
           , _interact_coef(interact_coef_)
