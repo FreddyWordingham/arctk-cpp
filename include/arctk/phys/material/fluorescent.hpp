@@ -80,6 +80,40 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a flourcent material.
+             *
+             *  @param  wavelength_         Vector of wavelengths.
+             *  @param  ref_index_          Vector of corresponding refractive indices.
+             *  @param  scat_coef_          Vector of corresponding scattering coefficients.
+             *  @param  abs_coef_           Vector of corresponding absorption coefficients.
+             *  @param  asym_               Vector of corresponding asymmetry parameters.
+             *  @param  flu_coef_           Vector of corresponding fluence coefficients.
+             *  @param  delta_wavelength_   Vector of corresponding wavelength deltas.
+             *
+             *  @pre    wavelength_ must contain multiple values.
+             *  @pre    ref_index_ must contain multiple values.
+             *  @pre    scat_coef_ must contain multiple values.
+             *  @pre    abs_coef_ must contain multiple values.
+             *  @pre    asym_ must contain multiple values.
+             *  @pre    flu_coef_ must contain multiple values.
+             *  @pre    delta_wavelength_ must contain multiple values.
+             *  @pre    wavelength_ size must match ref_index_ size.
+             *  @pre    wavelength_ size must match scat_coef_ size.
+             *  @pre    wavelength_ size must match abs_coef_ size.
+             *  @pre    wavelength_ size must match asym_ size.
+             *  @pre    wavelength_ size must match flu_coef_ size.
+             *  @pre    wavelength_ size must match delta_wavelength_ size.
+             *  @pre    wavelength_ values must be in ascending order.
+             *  @pre    wavelength_ values must all be non-negative.
+             *  @pre    scat_coef_ values must all be non-negative.
+             *  @pre    abs_coef_ values must all be non-negative.
+             *  @pre    asym_ values must all be greater than, or equal to, minus one.
+             *  @pre    asym_ values must all be less than, or equal to, unity.
+             *  @pre    asym_ flu_coef_ must all be non-negative.
+             *  @pre    wavelength_ values plus the corresponding delta_wavelength_ value must not be less than the front wavelength_ value.
+             *  @pre    wavelength_ values plus the corresponding delta_wavelength_ value must not be more than the back wavelength_ value.
+             */
             inline Fluorescent::Fluorescent(const std::vector<double>& wavelength_, const std::vector<double>& ref_index_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& asym_,
                                             const std::vector<double>& flu_coef_, const std::vector<double>& delta_wavelength_) noexcept
               : Material(wavelength_.front(), wavelength_.back())
