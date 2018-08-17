@@ -135,6 +135,11 @@ namespace arc //! arctk namespace
             return (_ref_index);
         }
 
+        /**
+         *  Get the interaction coefficient of the optical property.
+         *
+         *  @return Interaction coefficient of the optical property.
+         */
         inline double Optical::interact_coef() const noexcept
         {
             return (_interact_coef);
