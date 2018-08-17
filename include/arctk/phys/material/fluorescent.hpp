@@ -147,6 +147,33 @@ namespace arc //! arctk namespace
                 return (math::formula::Linear(wavelength_, interact_coef));
             }
 
+            /**
+             *  Initialise the singled scattering albedo formula.
+             *  Single scattering albedo is calculated by one minus the ratio of the absorption coefficient to the sum of all of the coefficients.
+             *
+             *  @param  wavelength_ Vector of wavelengths.
+             *  @param  scat_coef_  Vector of corresponding scattering coefficients.
+             *  @param  abs_coef_   Vector of corresponding absorption coefficients.
+             *  @param  flu_coef_   Vector of corresponding fluence coefficients.
+             *
+             *  @pre    wavelength_ must contain multiple values.
+             *  @pre    scat_coef_ must contain multiple values.
+             *  @pre    abs_coef_ must contain multiple values.
+             *  @pre    flu_coef_ must contain multiple values.
+             *  @pre    wavelength_ size must match scat_coef_ size.
+             *  @pre    wavelength_ size must match abs_coef_ size.
+             *  @pre    wavelength_ size must match flu_coef_ size.
+             *  @pre    wavelength_ values must be in ascending order.
+             *  @pre    wavelength_ values must all be non-negative.
+             *  @pre    scat_coef_ values must all be non-negative.
+             *  @pre    abs_coef_ values must all be non-negative.
+             *  @pre    flu_coef_ values must all be non-negative.
+             *
+             *  @post   albedo values must all be non-negative.
+             *  @post   albedo values must all be less than, or equal to, unity.
+             *
+             *  @return Singled scattering albedo formula.
+             */
             inline math::formula::Linear Fluorescent::init_albedo(const std::vector<double>& wavelength_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& flu_coef_) const noexcept
             {
                 PRE(wavelength_.size() > 1);
