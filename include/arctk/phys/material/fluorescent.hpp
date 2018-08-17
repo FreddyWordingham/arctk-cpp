@@ -215,6 +215,15 @@ namespace arc //! arctk namespace
 
             inline void Fluorescent::interact(random::Generator* rng_, particle::Photon* phot_) const noexcept
             {
+                phot_->multiply_weight(phot_->opt().albedo());
+                phot_->rotate(random::distribution::henyey_greenstein::sample(rng_, phot_->opt().asym()), rng_->gen() * 2.0 * consts::math::PI);
+
+                if (rng_->gen() <= phot_->opt().change_prob())
+                {
+                    phot_->wavelength += _delta_wavelength(phot_->wavelength());
+
+                    set_optical_props(phot_);
+                }
             }
 
 

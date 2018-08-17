@@ -65,6 +65,7 @@ namespace arc //! arctk namespace
                 //  -- Setters --
                 inline void move(double dist_) noexcept override;
                 inline void set_optical_props(const Optical& opt_) noexcept;
+                inline void shift_wavelength(double delta_wavelength_) noexcept;
             };
 
 
@@ -132,6 +133,11 @@ namespace arc //! arctk namespace
             inline void Photon::set_optical_props(const Optical& opt_) noexcept
             {
                 _opt = opt_;
+            }
+
+            inline void Photon::shift_wavelength(const double delta_wavelength_) noexcept
+            {
+                _wavelength += delta_wavelength_;
             }
 
 
