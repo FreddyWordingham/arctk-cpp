@@ -99,7 +99,7 @@ namespace arc //! arctk namespace
             //  -- Mathematical --
             constexpr inline T         sum() const noexcept;
             constexpr inline T         det() const noexcept;
-            constexpr inline Mat<T, 2> minor() const noexcept;
+            constexpr inline Mat<T, 2> minors() const noexcept;
             constexpr inline Mat<T, 2> cofactor() const noexcept;
             constexpr inline Mat<T, 2> trans() const noexcept;
             constexpr inline Mat<T, 2> adj() const noexcept;
@@ -535,7 +535,7 @@ namespace arc //! arctk namespace
          *  @return Matrix of minors of the matrix.
          */
         template <typename T>
-        constexpr inline Mat<T, 2> Mat<T, 2>::minor() const noexcept
+        constexpr inline Mat<T, 2> Mat<T, 2>::minors() const noexcept
         {
             return (Mat<T, 2>(Vec<T, 2>(y.y, y.x), Vec<T, 2>(x.y, x.x)));
         }
@@ -548,7 +548,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Mat<T, 2> Mat<T, 2>::cofactor() const noexcept
         {
-            Mat<T, 2> mat = minor();
+            Mat<T, 2> mat = minors();
 
             mat.x.y *= -1;
             mat.y.x *= -1;
