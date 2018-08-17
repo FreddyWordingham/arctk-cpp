@@ -131,6 +131,11 @@ namespace arc //! arctk namespace
             return (_dir);
         }
 
+        /**
+         *  Get the time of the particle.
+         *
+         *  @return Time of the particle.
+         */
         inline double Particle::time() const noexcept
         {
             return (_time);
