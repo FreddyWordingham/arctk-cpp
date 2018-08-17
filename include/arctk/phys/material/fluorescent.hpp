@@ -49,6 +49,7 @@ namespace arc //! arctk namespace
                 const math::formula::Linear _interact_coef;
                 const math::formula::Linear _albedo;
                 const math::formula::Linear _asym;
+                const math::formula::Linear _flu_prob;
 
 
                 //  == INSTANTIATION ==
