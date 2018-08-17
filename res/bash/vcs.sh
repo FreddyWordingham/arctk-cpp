@@ -16,10 +16,10 @@ arctk_commit() {
     cd - >/dev/null
 }
 
-arctk_ammend() {
+arctk_amend() {
     if [ "$#" != "1" ]; then
-        printf "Error! Unable to ammend commit.\n"
-        printf "Ammend requires a single commit message string.\n"
+        printf "Error! Unable to amend commit.\n"
+        printf "Amend requires a single commit message string.\n"
 
         return
     fi
