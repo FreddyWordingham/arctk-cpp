@@ -116,6 +116,29 @@ namespace arc //! arctk namespace
             //  -- Initialisation --
             inline math::formula::Linear Fluorescent::init_interact_coef(const std::vector<double>& wavelength_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& flu_coef_) const noexcept
             {
+                PRE(wavelength_.size() > 1);
+                PRE(scat_coef_.size() > 1);
+                PRE(abs_coef_.size() > 1);
+                PRE(flu_coef_.size() > 1);
+                PRE(wavelength_.size() == scat_coef_.size());
+                PRE(wavelength_.size() == abs_coef_.size());
+                PRE(wavelength_.size() == flu_coef_.size());
+                PRE(utl::properties::ascending(wavelength_));
+                PRE(utl::properties::always_greater_than_or_equal_to(wavelength_, 0.0));
+                PRE(utl::properties::always_greater_than_or_equal_to(scat_coef_, 0.0));
+                PRE(utl::properties::always_greater_than_or_equal_to(abs_coef_, 0.0));
+                PRE(utl::properties::always_greater_than_or_equal_to(flu_coef_, 0.0));
+
+                std::vector<double> interact_coef(scat_coef_.size());
+
+                for (size_t i = 0; i < interact_coef.size(); ++i)
+                {
+                    interact_coef[i] = scat_coef_[i] + abs_coef_[i] + flu_coef_[i];
+                }
+
+                POST(utl::properties::always_greater_than(interact_coef, 0.0));
+
+                return (math::formula::Linear(wavelength_, interact_coef));
             }
 
             inline math::formula::Linear Fluorescent::init_albedo(const std::vector<double>& wavelength_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& flu_coef_) const noexcept
