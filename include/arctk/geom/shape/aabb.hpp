@@ -19,6 +19,7 @@
 #include <optional>
 
 //  -- Arctk --
+#include <arctk/exit.hpp>
 #include <arctk/geom/shape.hpp>
 #include <arctk/math.hpp>
 
@@ -60,7 +61,8 @@ namespace arc //! arctk namespace
                 inline const vec3& max() const noexcept;
 
                 //  -- Collision --
-                inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const noexcept override;
+                inline std::optional<double>                       collision(const vec3& pos_, const vec3& dir_) const noexcept override;
+                inline std::optional<std::pair<double, arc::vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
 
 
@@ -177,6 +179,47 @@ namespace arc //! arctk namespace
                 }
 
                 return (std::optional<double>(t));
+            }
+
+            inline std::optional<std::pair<double, arc::vec3>> Aabb::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
+            {
+                std::optional<double> dist = collision(pos_, dir_);
+
+                if (!dist)
+                {
+                    return (std::nullopt);
+                }
+
+                const arc::vec3 hit = pos_ + (dir_ * dist.value());
+
+                if (math::compare::equal(hit.x, _min.x))
+                {
+                    return (std::pair<double, arc::vec3>(dist.value(), arc::vec3(-1.0, 0.0, 0.0)));
+                }
+                if (math::compare::equal(hit.x, _max.x))
+                {
+                    return (std::pair<double, arc::vec3>(dist.value(), arc::vec3(1.0, 0.0, 0.0)));
+                }
+
+                if (math::compare::equal(hit.y, _min.y))
+                {
+                    return (std::pair<double, arc::vec3>(dist.value(), arc::vec3(0.0, -1.0, 0.0)));
+                }
+                if (math::compare::equal(hit.y, _max.y))
+                {
+                    return (std::pair<double, arc::vec3>(dist.value(), arc::vec3(0.0, 1.0, 0.0)));
+                }
+
+                if (math::compare::equal(hit.z, _min.z))
+                {
+                    return (std::pair<double, arc::vec3>(dist.value(), arc::vec3(0.0, 0.0, -1.0)));
+                }
+                if (math::compare::equal(hit.z, _max.z))
+                {
+                    return (std::pair<double, arc::vec3>(dist.value(), arc::vec3(0.0, 0.0, 1.0)));
+                }
+
+                std::exit(exit::error::UNREACHABLE_CODE);
             }
 
 
