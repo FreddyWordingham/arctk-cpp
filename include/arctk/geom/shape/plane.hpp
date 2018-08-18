@@ -109,7 +109,7 @@ namespace arc //! arctk namespace
 
             inline std::optional<std::pair<double, arc::vec3>> Plane::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
             {
-                const std::optional<double> dist = collision(pos_, dir_);
+                std::optional<double> dist = collision(pos_, dir_);
 
                 if (!dist)
                 {
