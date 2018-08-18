@@ -183,43 +183,72 @@ namespace arc //! arctk namespace
 
             inline std::optional<std::pair<double, arc::vec3>> Aabb::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
             {
-                std::optional<double> dist = collision(pos_, dir_);
+                PRE(dir_.normalised());
 
-                if (!dist)
-                {
-                    return (std::nullopt);
-                }
+                double min_x = ((dir_.x < 0.0 ? _max.x : _min.x) - pos_.x) / dir_.x;
+                double max_x = ((dir_.x < 0.0 ? _min.x : _max.x) - pos_.x) / dir_.x;
+                double min_y = ((dir_.y < 0.0 ? _max.y : _min.y) - pos_.y) / dir_.y;
+                double max_y = ((dir_.y < 0.0 ? _min.y : _max.y) - pos_.y) / dir_.y;
 
-                const arc::vec3 hit = pos_ + (dir_ * dist.value());
+                size_t min_index = 0;
+                size_t max_index = 0;
 
-                if (math::compare::equal(hit.x, _min.x))
+                if ((min_x > max_y) || (min_y > max_x))
                 {
-                    return (std::pair<double, arc::vec3>(dist.value(), arc::vec3(-1.0, 0.0, 0.0)));
-                }
-                if (math::compare::equal(hit.x, _max.x))
-                {
-                    return (std::pair<double, arc::vec3>(dist.value(), arc::vec3(1.0, 0.0, 0.0)));
+                    return (std::optional<std::pair<double, arc::vec3>>(std::nullopt));
                 }
 
-                if (math::compare::equal(hit.y, _min.y))
+                if (min_y > min_x)
                 {
-                    return (std::pair<double, arc::vec3>(dist.value(), arc::vec3(0.0, -1.0, 0.0)));
-                }
-                if (math::compare::equal(hit.y, _max.y))
-                {
-                    return (std::pair<double, arc::vec3>(dist.value(), arc::vec3(0.0, 1.0, 0.0)));
+                    min_x     = min_y;
+                    min_index = 1;
                 }
 
-                if (math::compare::equal(hit.z, _min.z))
+                if (max_y < max_x)
                 {
-                    return (std::pair<double, arc::vec3>(dist.value(), arc::vec3(0.0, 0.0, -1.0)));
-                }
-                if (math::compare::equal(hit.z, _max.z))
-                {
-                    return (std::pair<double, arc::vec3>(dist.value(), arc::vec3(0.0, 0.0, 1.0)));
+                    max_x     = max_y;
+                    max_index = 1;
                 }
 
-                std::exit(exit::error::UNREACHABLE_CODE);
+                double min_z = ((dir_.z < 0.0 ? _max.z : _min.z) - pos_.z) / dir_.z;
+                double max_z = ((dir_.z < 0.0 ? _min.z : _max.z) - pos_.z) / dir_.z;
+
+                if ((min_x > max_z) || (min_z > max_x))
+                {
+                    return (std::optional<std::pair<double, arc::vec3>>(std::nullopt));
+                }
+
+                if (min_z > min_x)
+                {
+                    min_x     = min_z;
+                    min_index = 2;
+                }
+
+                if (max_z < max_x)
+                {
+                    max_x     = max_z;
+                    max_index = 2;
+                }
+
+                double    t = min_x;
+                arc::vec3 norm;
+
+                if (t < 0.0)
+                {
+                    t               = max_x;
+                    norm[max_index] = 1.0;
+                }
+                else
+                {
+                    norm[min_index] = -1.0;
+                }
+
+                if (t < 0.0)
+                {
+                    return (std::optional<std::pair<double, arc::vec3>>(std::nullopt));
+                }
+
+                return (std::optional<std::pair<double, arc::vec3>>(std::pair<double, arc::vec3>(t, norm)));
             }
 
 
