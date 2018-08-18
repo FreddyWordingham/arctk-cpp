@@ -283,7 +283,7 @@ namespace arc //! arctk namespace
                 return (std::optional<double>(std::nullopt));
             }
 
-            inline std::optional<std::pair<double, arc::vec3>> Triangle::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<std::pair<double, arc::vec3>> Mesh::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 PRE(dir_.normalised());
 
