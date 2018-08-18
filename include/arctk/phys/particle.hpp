@@ -78,7 +78,7 @@ namespace arc //! arctk namespace
             inline double      time() const noexcept;
 
             //  -- Setters --
-            inline void         set_dir(const vec3& dir_) const noexcept;
+            inline void         set_dir(const vec3& dir_) noexcept;
             inline void         multiply_weight(double m_) noexcept;
             virtual inline void move(double dist_) noexcept;
             inline void         rotate(double theta_, double phi_) noexcept;
@@ -144,7 +144,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
-        inline void Particle::set_dir(const vec3& dir_) const noexcept
+        inline void Particle::set_dir(const vec3& dir_) noexcept
         {
             PRE(dir_.normalised());
 
