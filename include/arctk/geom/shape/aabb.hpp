@@ -233,14 +233,11 @@ namespace arc //! arctk namespace
                 double t = min_x;
                 vec3   norm;
 
+                norm[min_index] = -1.0;
                 if (t < 0.0)
                 {
                     t               = max_x;
                     norm[max_index] = 1.0;
-                }
-                else
-                {
-                    norm[min_index] = -1.0;
                 }
 
                 if (t < 0.0)
