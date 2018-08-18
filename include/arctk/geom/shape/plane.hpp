@@ -107,7 +107,7 @@ namespace arc //! arctk namespace
                 return ((dist < 0.0) ? std::nullopt : std::optional<double>(dist));
             }
 
-            inline std::optional<std::pair<double, arc::vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<std::pair<double, arc::vec3>> Plane::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 const std::optional<double> dist = collision(pos_, dir_);
 
