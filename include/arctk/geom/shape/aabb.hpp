@@ -190,8 +190,7 @@ namespace arc //! arctk namespace
                 double min_y = ((dir_.y < 0.0 ? _max.y : _min.y) - pos_.y) / dir_.y;
                 double max_y = ((dir_.y < 0.0 ? _min.y : _max.y) - pos_.y) / dir_.y;
 
-                size_t min_index = 0;
-                size_t max_index = 0;
+                size_t index = 0;
 
                 if ((min_x > max_y) || (min_y > max_x))
                 {
@@ -200,14 +199,13 @@ namespace arc //! arctk namespace
 
                 if (min_y > min_x)
                 {
-                    min_x     = min_y;
-                    min_index = 1;
+                    min_x = min_y;
+                    index = 1;
                 }
 
                 if (max_y < max_x)
                 {
-                    max_x     = max_y;
-                    max_index = 1;
+                    max_x = max_y;
                 }
 
                 double min_z = ((dir_.z < 0.0 ? _max.z : _min.z) - pos_.z) / dir_.z;
@@ -220,24 +218,24 @@ namespace arc //! arctk namespace
 
                 if (min_z > min_x)
                 {
-                    min_x     = min_z;
-                    min_index = 2;
+                    min_x = min_z;
+                    index = 2;
                 }
 
                 if (max_z < max_x)
                 {
-                    max_x     = max_z;
-                    max_index = 2;
+                    max_x = max_z;
                 }
 
-                double t = min_x;
-                vec3   norm;
+                vec3 norm;
+                norm[index] = (dir_[index] < 0.0) ? 1.0 : -1.0;
 
-                norm[min_index] = -1.0;
+                double t = min_x;
+
                 if (t < 0.0)
                 {
-                    t               = max_x;
-                    norm[max_index] = 1.0;
+                    t = max_x;
+                    norm[index] *= -1.0;
                 }
 
                 if (t < 0.0)
