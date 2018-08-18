@@ -61,8 +61,8 @@ namespace arc //! arctk namespace
                 inline const vec3& max() const noexcept;
 
                 //  -- Collision --
-                inline std::optional<double>                       collision(const vec3& pos_, const vec3& dir_) const noexcept override;
-                inline std::optional<std::pair<double, arc::vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
+                inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
+                inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
 
 
@@ -181,7 +181,7 @@ namespace arc //! arctk namespace
                 return (std::optional<double>(t));
             }
 
-            inline std::optional<std::pair<double, arc::vec3>> Aabb::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<std::pair<double, vec3>> Aabb::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 PRE(dir_.normalised());
 
@@ -195,7 +195,7 @@ namespace arc //! arctk namespace
 
                 if ((min_x > max_y) || (min_y > max_x))
                 {
-                    return (std::optional<std::pair<double, arc::vec3>>(std::nullopt));
+                    return (std::optional<std::pair<double, vec3>>(std::nullopt));
                 }
 
                 if (min_y > min_x)
@@ -215,7 +215,7 @@ namespace arc //! arctk namespace
 
                 if ((min_x > max_z) || (min_z > max_x))
                 {
-                    return (std::optional<std::pair<double, arc::vec3>>(std::nullopt));
+                    return (std::optional<std::pair<double, vec3>>(std::nullopt));
                 }
 
                 if (min_z > min_x)
@@ -230,8 +230,8 @@ namespace arc //! arctk namespace
                     max_index = 2;
                 }
 
-                double    t = min_x;
-                arc::vec3 norm;
+                double t = min_x;
+                vec3   norm;
 
                 if (t < 0.0)
                 {
@@ -245,10 +245,10 @@ namespace arc //! arctk namespace
 
                 if (t < 0.0)
                 {
-                    return (std::optional<std::pair<double, arc::vec3>>(std::nullopt));
+                    return (std::optional<std::pair<double, vec3>>(std::nullopt));
                 }
 
-                return (std::optional<std::pair<double, arc::vec3>>(std::pair<double, arc::vec3>(t, norm)));
+                return (std::optional<std::pair<double, vec3>>(std::pair<double, vec3>(t, norm)));
             }
 
 
