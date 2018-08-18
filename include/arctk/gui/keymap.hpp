@@ -67,6 +67,7 @@ namespace arc //! arctk namespace
             //  -- Setters --
             inline void bind(int key_, const std::function<void()>& func_, bool sticky_ = false, int state_ = GLFW_RELEASE) noexcept;
             inline void unbind(int key_) noexcept;
+            inline void use_fly_controls(Camera* cam_) noexcept;
             inline void use_orbit_controls(Camera* cam_) noexcept;
 
             //  -- Operation --
@@ -108,6 +109,31 @@ namespace arc //! arctk namespace
             PRE(_map.find(key_) != _map.end());
 
             _map.erase(key_);
+        }
+
+        /**
+         *  Setup the keymap to apply an fly control scheme.
+         *
+         *  @param  cam_    Camera to apply fly controls to.
+         */
+        inline void Keymap::use_fly_controls(Camera* const cam_) noexcept
+        {
+            bind(GLFW_KEY_LEFT_SHIFT, [cam_]() { cam_->accelerate(0.01f); }, true);
+            bind(GLFW_KEY_LEFT_CONTROL, [cam_]() { cam_->accelerate(-0.01f); }, true);
+
+            bind(GLFW_KEY_W, [cam_]() { cam_->move(+0.10f, +0.00f, +0.00f); }, true);
+            bind(GLFW_KEY_S, [cam_]() { cam_->move(-0.10f, +0.00f, +0.00f); }, true);
+            bind(GLFW_KEY_D, [cam_]() { cam_->move(+0.00f, +0.10f, +0.00f); }, true);
+            bind(GLFW_KEY_A, [cam_]() { cam_->move(+0.00f, -0.10f, +0.00f); }, true);
+            bind(GLFW_KEY_E, [cam_]() { cam_->move(+0.00f, +0.00f, +0.10f); }, true);
+            bind(GLFW_KEY_Q, [cam_]() { cam_->move(+0.00f, +0.00f, -0.10f); }, true);
+
+            bind(GLFW_KEY_O, [cam_]() { cam_->rotate(+0.02f, +0.00f, +0.00f); }, true);
+            bind(GLFW_KEY_U, [cam_]() { cam_->rotate(-0.02f, +0.00f, +0.00f); }, true);
+            bind(GLFW_KEY_I, [cam_]() { cam_->rotate(+0.00f, +0.02f, +0.00f); }, true);
+            bind(GLFW_KEY_K, [cam_]() { cam_->rotate(+0.00f, -0.02f, +0.00f); }, true);
+            bind(GLFW_KEY_J, [cam_]() { cam_->rotate(+0.00f, +0.00f, +0.02f); }, true);
+            bind(GLFW_KEY_L, [cam_]() { cam_->rotate(+0.00f, +0.00f, -0.02f); }, true);
         }
 
         /**
