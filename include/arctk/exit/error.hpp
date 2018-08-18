@@ -25,6 +25,9 @@ namespace arc //! arctk namespace
 
 
             //  == CONSTANTS ==
+            //  -- Bugs --
+            constexpr const int UNREACHABLE_CODE = 100; //!< Unreachable code location reached.
+
             //  -- Contracts --
             constexpr const int PRE_CONDITION_FAILURE  = 110; //!< Pre-condition assertion failed.
             constexpr const int POST_CONDITION_FAILURE = 111; //!< Post-condition assertion failed.
