@@ -43,14 +43,14 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Positioning --
-                vec3 _pos; //!< Position of the plane.
-                vec3 _dir; //!< Direction of the plane.
+                vec3 _pos;  //!< Position of the plane.
+                vec3 _norm; //!< Normal of the plane.
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline explicit Plane(const vec3& pos_, const vec3& dir_) noexcept;
+                inline explicit Plane(const vec3& pos_, const vec3& norm_) noexcept;
 
 
                 //  == METHODS ==
@@ -68,15 +68,15 @@ namespace arc //! arctk namespace
              *  Construct a plane at a location with a normal direction.
              *
              *  @param  pos_    Position of the plane.
-             *  @param  dir_    Direction of the plane's normal.
+             *  @param  norm_   Normal of the plane.
              *
-             *  @pre    dir_ must be normalised.
+             *  @pre    norm_ must be normalised.
              */
-            inline Plane::Plane(const vec3& pos_, const vec3& dir_) noexcept
+            inline Plane::Plane(const vec3& pos_, const vec3& norm_) noexcept
               : _pos(pos_)
-              , _dir(dir_)
+              , _norm(norm_)
             {
-                PRE(dir_.normalised());
+                PRE(norm_.normalised());
             }
 
 
@@ -95,14 +95,14 @@ namespace arc //! arctk namespace
              */
             inline std::optional<double> Plane::collision(const vec3& pos_, const vec3& dir_) const noexcept
             {
-                const double denom = _dir * dir_;
+                const double denom = _norm * dir_;
 
                 if (math::compare::zero(denom))
                 {
                     return (std::nullopt);
                 }
 
-                const double dist = ((_pos - pos_) * _dir) / denom;
+                const double dist = ((_pos - pos_) * _norm) / denom;
 
                 return ((dist < 0.0) ? std::nullopt : std::optional<double>(dist));
             }
@@ -116,7 +116,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                return (std::make_pair<double, arc::vec3>(dist.value(), _dir));
+                return (std::make_pair<double, arc::vec3>(dist.value(), _norm));
             }
 
 
