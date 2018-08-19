@@ -198,7 +198,7 @@ namespace arc //! arctk namespace
 
                 const double dist = ((_pos[index::vertex::ALPHA] - pos_) * _plane_norm) / denom;
 
-                return ((dist < 0.0) ? std::nullopt : std::optional<double>(dist));
+                return ((dist < 0.0) ? std::nullopt : dist);
             }
 
             /**
@@ -249,7 +249,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                return (std::optional<double>(dist));
+                return (dist);
             }
 
             inline std::optional<std::pair<double, vec3>> Triangle::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
