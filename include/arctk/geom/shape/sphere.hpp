@@ -151,7 +151,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                return (std::pair<double, arc::vec3>(dist.value(), ((dir_ * dist.value()) - pos_).normal()));
+                return (std::pair<double, arc::vec3>(dist.value(), ((pos_ + dir_) - _pos).normal()));
             }
 
 
