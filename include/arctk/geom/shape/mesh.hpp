@@ -273,7 +273,7 @@ namespace arc //! arctk namespace
                 std::optional<double> dist(std::nullopt);
                 for (size_t i = 0; i < _tris.size(); ++i)
                 {
-                    const std::optional<double> tri_dist = _tris[i].collision(pos_, dir_);
+                    const std::optional<double> tri_dist(_tris[i].collision(pos_, dir_));
                     if (tri_dist && (!dist || (tri_dist.value() < dist.value())))
                     {
                         dist = tri_dist;
@@ -290,7 +290,7 @@ namespace arc //! arctk namespace
                 std::optional<std::pair<double, vec3>> dist(std::nullopt);
                 for (size_t i = 0; i < _tris.size(); ++i)
                 {
-                    const std::optional<std::pair<double, vec3>> tri_dist = _tris[i].collision_norm(pos_, dir_);
+                    const std::optional<std::pair<double, vec3>> tri_dist(_tris[i].collision_norm(pos_, dir_));
                     if (tri_dist && (!dist || (tri_dist.value().first < dist.value().first)))
                     {
                         dist = tri_dist;
