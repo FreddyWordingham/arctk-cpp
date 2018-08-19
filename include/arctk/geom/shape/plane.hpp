@@ -56,8 +56,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Collision --
-                inline std::optional<double>                       collision(const vec3& pos_, const vec3& dir_) const noexcept override;
-                inline std::optional<std::pair<double, arc::vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
+                inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
+                inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
 
 
@@ -107,7 +107,7 @@ namespace arc //! arctk namespace
                 return ((dist < 0.0) ? std::nullopt : std::optional<double>(dist));
             }
 
-            inline std::optional<std::pair<double, arc::vec3>> Plane::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<std::pair<double, vec3>> Plane::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 std::optional<double> dist = collision(pos_, dir_);
 
@@ -116,7 +116,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                return (std::pair<double, arc::vec3>(dist.value(), _norm));
+                return (std::pair<double, vec3>(dist.value(), _norm));
             }
 
 
