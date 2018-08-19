@@ -135,7 +135,7 @@ namespace arc //! arctk namespace
 
                 if ((min_x > max_y) || (min_y > max_x))
                 {
-                    return (std::optional<double>(std::nullopt));
+                    return (std::nullopt);
                 }
 
                 if (min_y > min_x)
@@ -153,7 +153,7 @@ namespace arc //! arctk namespace
 
                 if ((min_x > max_z) || (min_z > max_x))
                 {
-                    return (std::optional<double>(std::nullopt));
+                    return (std::nullopt);
                 }
 
                 if (min_z > min_x)
@@ -175,7 +175,7 @@ namespace arc //! arctk namespace
 
                 if (t < 0.0)
                 {
-                    return (std::optional<double>(std::nullopt));
+                    return (std::nullopt);
                 }
 
                 return (std::optional<double>(t));
@@ -194,7 +194,7 @@ namespace arc //! arctk namespace
 
                 if ((min_x > max_y) || (min_y > max_x))
                 {
-                    return (std::optional<std::pair<double, vec3>>(std::nullopt));
+                    return (std::nullopt);
                 }
 
                 if (min_y > min_x)
@@ -213,7 +213,7 @@ namespace arc //! arctk namespace
 
                 if ((min_x > max_z) || (min_z > max_x))
                 {
-                    return (std::optional<std::pair<double, vec3>>(std::nullopt));
+                    return (std::nullopt);
                 }
 
                 if (min_z > min_x)
@@ -240,7 +240,7 @@ namespace arc //! arctk namespace
 
                 if (t < 0.0)
                 {
-                    return (std::optional<std::pair<double, vec3>>(std::nullopt));
+                    return (std::nullopt);
                 }
 
                 return (std::optional<std::pair<double, vec3>>(std::pair<double, vec3>(t, norm)));
