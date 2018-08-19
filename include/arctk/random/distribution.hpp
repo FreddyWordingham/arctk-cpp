@@ -116,18 +116,32 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Sampling --
             template <typename T>
-            inline T uniform(Generator* const rng_, const T min_, const T max_) noexcept;
-
+            typename std::enable_if<!std::is_integral<T>::value, T>::type uniform(Generator* rng_, const T min_, const T max_);
+            template <typename T>
+            typename std::enable_if<std::is_integral<T>::value, T>::type uniform(Generator* rng_, const T min_, const T max_);
 
 
             //  == FUNCTIONS ==
             //  -- Sampling --
             template <typename T>
-            inline T uniform(Generator* const rng_, const T min_, const T max_) noexcept
+            typename std::enable_if<!std::is_integral<T>::value, T>::type uniform(Generator* rng_, const T min_, const T max_)
             {
+                static_assert(std::is_arithmetic<T>::value);
+
+                PRE(min_ <= max_);
+
                 return ((rng_->gen() * (max_ - min_)) + min_);
             }
 
+            template <typename T>
+            typename std::enable_if<std::is_integral<T>::value, T>::type uniform(Generator* rng_, const T min_, const T max_)
+            {
+                static_assert(std::is_arithmetic<T>::value);
+
+                PRE(min_ <= max_);
+
+                return (std::floor((rng_->gen() * (max_ - min_ + 1)) + min_));
+            }
 
 
         } // namespace distribution
