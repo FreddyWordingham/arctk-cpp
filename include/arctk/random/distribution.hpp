@@ -116,15 +116,16 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Sampling --
             template <typename T>
-            typename std::enable_if<!std::is_integral<T>::value, T>::type uniform(Generator* rng_, const T min_, const T max_);
+            inline typename std::enable_if<!std::is_integral<T>::value, T>::type uniform(Generator* rng_, const T min_, const T max_);
             template <typename T>
-            typename std::enable_if<std::is_integral<T>::value, T>::type uniform(Generator* rng_, const T min_, const T max_);
+            inline typename std::enable_if<std::is_integral<T>::value, T>::type uniform(Generator* rng_, const T min_, const T max_);
+
 
 
             //  == FUNCTIONS ==
             //  -- Sampling --
             template <typename T>
-            typename std::enable_if<!std::is_integral<T>::value, T>::type uniform(Generator* rng_, const T min_, const T max_)
+            inline typename std::enable_if<!std::is_integral<T>::value, T>::type uniform(Generator* rng_, const T min_, const T max_)
             {
                 static_assert(std::is_arithmetic<T>::value);
 
@@ -134,7 +135,7 @@ namespace arc //! arctk namespace
             }
 
             template <typename T>
-            typename std::enable_if<std::is_integral<T>::value, T>::type uniform(Generator* rng_, const T min_, const T max_)
+            inline typename std::enable_if<std::is_integral<T>::value, T>::type uniform(Generator* rng_, const T min_, const T max_)
             {
                 static_assert(std::is_arithmetic<T>::value);
 
