@@ -108,7 +108,13 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace random
+        namespace distribution //! distribution namespace
+        {
+
+
+
+        } // namespace distribution
+    }     // namespace random
 } // namespace arc
 
 
