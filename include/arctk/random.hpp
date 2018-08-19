@@ -22,7 +22,6 @@
 #include <arctk/random/distribution/discrete.hpp>
 #include <arctk/random/distribution/gaussian.hpp>
 #include <arctk/random/distribution/henyey_greenstein.hpp>
-#include <arctk/random/distribution/isotropic.hpp>
 #include <arctk/random/distribution/linear.hpp>
 #include <arctk/random/distribution/normal.hpp>
 #include <arctk/random/generator.hpp>
