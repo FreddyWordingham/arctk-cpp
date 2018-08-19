@@ -290,7 +290,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                return (std::pair(dist, vec3(0.0, 0.0, 1.0));
+                return (std::pair(dist, vec3(0.0, 0.0, 1.0)));
             }
 
 
