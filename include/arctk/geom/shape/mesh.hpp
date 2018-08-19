@@ -297,7 +297,7 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                return (std::optional<std::pair<double, vec3>>(std::nullopt));
+                return (std::nullopt);
             }
 
 
