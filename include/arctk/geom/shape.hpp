@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
             //  -- Collision --
             virtual inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const
               noexcept = 0; //!< Get the collision distance (if one occurs) of a ray.    @param  pos_    Initial position of the ray.    @param  dir_    Direction of ray travel.    @return Optional distance to collision event
-            virtual inline std::optional<std::pair<double, arc::vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept = 0;
+            virtual inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept = 0;
         };
 
 
