@@ -119,6 +119,7 @@ namespace arc //! arctk namespace
             inline typename std::enable_if<!std::is_integral<T>::value, T>::type uniform(Generator* rng_, const T min_, const T max_);
             template <typename T>
             inline typename std::enable_if<std::is_integral<T>::value, T>::type uniform(Generator* rng_, const T min_, const T max_);
+            inline vec3                                                         isotropic(Generator* rng_) noexcept;
 
 
 
@@ -142,6 +143,14 @@ namespace arc //! arctk namespace
                 PRE(min_ <= max_);
 
                 return (std::floor((rng_->gen() * (max_ - min_ + 1)) + min_));
+            }
+
+            inline vec3 isotropic(Generator* rng_) noexcept
+            {
+                const double phi   = rng_->gen() * 2.0 * consts::math::PI;
+                const double theta = std::acos((rng_->gen() * 2.0) - 1.0);
+
+                return (math::convert::polar_to_cart(vec3(1.0, theta, phi)));
             }
 
 
