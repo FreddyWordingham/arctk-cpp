@@ -113,6 +113,23 @@ namespace arc //! arctk namespace
 
 
 
+            //  == FUNCTION PROTOTYPES ==
+            //  -- Sampling --
+            template <typename T>
+            inline T uniform(Generator* const rng_, const T min_, const T max_) const noexcept;
+
+
+
+            //  == FUNCTIONS ==
+            //  -- Sampling --
+            template <typename T>
+            inline T uniform(Generator* const rng_, const T min_, const T max_) const noexcept
+            {
+                return ((rng_->gen() * (max_ - min_)) + min_);
+            }
+
+
+
         } // namespace distribution
     }     // namespace random
 } // namespace arc
