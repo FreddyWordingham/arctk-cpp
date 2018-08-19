@@ -178,7 +178,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                return (std::optional<double>(t));
+                return (t);
             }
 
             inline std::optional<std::pair<double, vec3>> Aabb::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
@@ -243,7 +243,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                return (std::optional<std::pair<double, vec3>>(std::pair<double, vec3>(t, norm)));
+                return (std::pair<double, vec3>(t, norm));
             }
 
 
