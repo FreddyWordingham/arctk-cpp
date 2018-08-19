@@ -113,7 +113,7 @@ namespace arc //! arctk namespace
 
                     if (dist >= 0.0)
                     {
-                        return (std::optional<double>(dist));
+                        return (dist);
                     }
 
                     return (std::nullopt);
@@ -131,20 +131,20 @@ namespace arc //! arctk namespace
 
                 if ((dist_0 >= 0.0) && (dist_1 < 0.0))
                 {
-                    return (std::optional<double>(dist_0));
+                    return (dist_0);
                 }
 
                 if ((dist_1 >= 0.0) && (dist_0 < 0.0))
                 {
-                    return (std::optional<double>(dist_1));
+                    return (dist_1);
                 }
 
-                return (std::optional<double>(std::min(dist_0, dist_1)));
+                return (std::min(dist_0, dist_1));
             }
 
             inline std::optional<std::pair<double, vec3>> Sphere::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
             {
-                std::optional<double> dist = collision(pos_, dir_);
+                std::optional<double> dist(collision(pos_, dir_));
 
                 if (!dist)
                 {
