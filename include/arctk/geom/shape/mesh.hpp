@@ -280,7 +280,7 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                return (std::optional<double>(std::nullopt));
+                return (dist);
             }
 
             inline std::optional<std::pair<double, arc::vec3>> Mesh::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
