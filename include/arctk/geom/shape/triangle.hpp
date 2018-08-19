@@ -290,8 +290,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                //                return (std::pair(dist, ((_norm[index::vertex::ALPHA] * u) + (_norm[index::vertex::BETA] * v) + (_norm[index::vertex::GAMMA] * (1.0 - u - v))).normal()));
-                return (std::pair(dist, vec3(0.0, 0.0, 1.0)));
+                return (std::pair(dist, ((_norm[index::vertex::ALPHA] * (1.0 - u - v)) + (_norm[index::vertex::BETA] * u) + (_norm[index::vertex::GAMMA] * v)).normal()));
             }
 
 
