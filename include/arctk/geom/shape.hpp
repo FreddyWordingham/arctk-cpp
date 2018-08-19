@@ -57,6 +57,9 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Emission --
+            virtual inline vec3 random_pos() const noexcept = 0;
+
             //  -- Collision --
             virtual inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const
               noexcept = 0; //!< Get the collision distance (if one occurs) of a ray.    @param  pos_    Initial position of the ray.    @param  dir_    Direction of ray travel.    @return Optional distance to collision event
