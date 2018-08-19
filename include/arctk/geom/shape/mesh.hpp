@@ -79,8 +79,8 @@ namespace arc //! arctk namespace
                 inline const Triangle& tri(size_t index_) const noexcept;
 
                 //  -- Collision --
-                inline std::optional<double>                       collision(const vec3& pos_, const vec3& dir_) const noexcept override;
-                inline std::optional<std::pair<double, arc::vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
+                inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
+                inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
 
 
@@ -283,21 +283,21 @@ namespace arc //! arctk namespace
                 return (dist);
             }
 
-            inline std::optional<std::pair<double, arc::vec3>> Mesh::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<std::pair<double, vec3>> Mesh::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 PRE(dir_.normalised());
 
-                std::optional<std::pair<double, arc::vec3>> dist(std::nullopt);
+                std::optional<std::pair<double, vec3>> dist(std::nullopt);
                 for (size_t i = 0; i < _tris.size(); ++i)
                 {
-                    const std::optional<std::pair<double, arc::vec3>> tri_dist = _tris[i].collision_norm(pos_, dir_);
+                    const std::optional<std::pair<double, vec3>> tri_dist = _tris[i].collision_norm(pos_, dir_);
                     if (tri_dist && (!dist || (tri_dist.value().first < dist.value().first)))
                     {
                         dist = tri_dist;
                     }
                 }
 
-                return (std::optional<std::pair<double, arc::vec3>>(std::nullopt));
+                return (std::optional<std::pair<double, vec3>>(std::nullopt));
             }
 
 
