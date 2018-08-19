@@ -297,7 +297,7 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                return (std::nullopt);
+                return (dist);
             }
 
 
