@@ -254,14 +254,43 @@ namespace arc //! arctk namespace
 
             inline std::optional<std::pair<double, vec3>> Triangle::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
             {
-                std::optional<double> dist = collision(pos_, dir_);
+                PRE(dir_.normalised());
 
-                if (!dist)
+                const vec3 edge_ab = _pos[index::vertex::BETA] - _pos[index::vertex::ALPHA];
+                const vec3 edge_ac = _pos[index::vertex::GAMMA] - _pos[index::vertex::ALPHA];
+
+                const vec3   p   = dir_ ^ edge_ac;
+                const double det = edge_ab * p;
+
+                if (math::compare::zero(det))
                 {
                     return (std::nullopt);
                 }
 
-                return (std::pair<double, vec3>(dist.value(), vec3(0.0, 0.0, 1.0)));
+                const vec3   t = pos_ - _pos[index::vertex::ALPHA];
+                const double u = (t * p) / det;
+
+                if ((u < 0.0) || (u > 1.0))
+                {
+                    return (std::nullopt);
+                }
+
+                const vec3   q = t ^ edge_ab;
+                const double v = (dir_ * q) / det;
+
+                if ((v < 0.0) || ((u + v) > 1.0))
+                {
+                    return (std::nullopt);
+                }
+
+                const double dist = (edge_ac * q) / det;
+
+                if (dist < 0.0)
+                {
+                    return (std::nullopt);
+                }
+
+                return (std::pair(dist, vec3(0.0, 0.0, 1.0));
             }
 
 
