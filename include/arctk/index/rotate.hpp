@@ -32,7 +32,7 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Rotate --
-            inline size_t next(const size_t cur_, const size_t size_, const size_t step_ = 1) noexcept
+            inline size_t next(const size_t cur_, const size_t size_, const size_t step_) noexcept
             {
                 PRE(step_ < size_);
 
