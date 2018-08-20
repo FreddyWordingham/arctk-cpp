@@ -101,7 +101,6 @@
 #include <arctk/random/distribution/col.hpp>
 #include <arctk/random/distribution/constant.hpp>
 #include <arctk/random/distribution/discrete.hpp>
-#include <arctk/random/distribution/henyey_greenstein.hpp>
 #include <arctk/random/distribution/linear.hpp>
 #include <arctk/random/generator.hpp>
 #include <arctk/random/generator/quality.hpp>
