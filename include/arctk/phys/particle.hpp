@@ -144,6 +144,13 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
+        /**
+         *  Set the direction of the particle.
+         *
+         *  @param  dir_    Direction to set for particle.
+         *
+         *  @pre    dir_ must be normalised.
+         */
         inline void Particle::set_dir(const vec3& dir_) noexcept
         {
             PRE(dir_.normalised());
