@@ -89,7 +89,7 @@ namespace arc //! arctk namespace
             //  -- Emission --
             inline vec3 Sphere::random_pos(random::Generator* const rng_) const noexcept
             {
-                return (_pos + (random::distribution::isotropic(rng_) * rad_));
+                return (_pos + (random::distribution::isotropic(rng_) * _rad));
             }
 
 
