@@ -1,5 +1,0 @@
-<map id="arc::random::distribution::henyey_greenstein::sample" name="arc::random::distribution::henyey_greenstein::sample">
-<area shape="rect" id="node2" href="$namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="272,5,408,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1random_1_1_generator.html#a97bd3a4fd637ff97659ab94af9307ca8" title="Generate a random double between zero and unity. " alt="" coords="245,68,435,93"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1math_1_1pow.html#a673982111327d6a2597e9a381009ce4d" title="arc::math::pow::sq" alt="" coords="275,117,405,143"/>
-</map>

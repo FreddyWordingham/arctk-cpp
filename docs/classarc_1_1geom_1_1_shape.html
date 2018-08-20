@@ -109,6 +109,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5add15ceb58f262b472cc6a756d2a3f4"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#a5add15ceb58f262b472cc6a756d2a3f4">collision</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept=0</td></tr>
 <tr class="memdesc:a5add15ceb58f262b472cc6a756d2a3f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the collision distance (if one occurs) of a ray.  <a href="#a5add15ceb58f262b472cc6a756d2a3f4">More...</a><br /></td></tr>
 <tr class="separator:a5add15ceb58f262b472cc6a756d2a3f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac920d4f48aa9788f7596b4e97ee37140"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; std::pair&lt; double, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#ac920d4f48aa9788f7596b4e97ee37140">collision_norm</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept=0</td></tr>
+<tr class="separator:ac920d4f48aa9788f7596b4e97ee37140"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Geometric shape. </p>
@@ -218,6 +220,52 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac920d4f48aa9788f7596b4e97ee37140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac920d4f48aa9788f7596b4e97ee37140">&#9670;&nbsp;</a></span>collision_norm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::optional&lt;std::pair&lt;double, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&gt; &gt; arc::geom::Shape::collision_norm </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>dir_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the collision distance (if one occurs) and the normal of the intersection point of a ray.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos_</td><td>Initial position of the ray.</td></tr>
+    <tr><td class="paramname">dir_</td><td>Direction of ray travel. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Optional distance and normal pair to collision event. </dd></dl>
+
+<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#add182c6ba48e9d2fc73f156a56bfa628">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a7c54d66e2b78105efa9d891f8a153707">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a167f9254248915c4abd7252af2d73d55">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a5047292b8b189a2b73046727238a7b3a">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a9af901ab71725fdacfefccbcce9e09cb">arc::geom::shape::Sphere</a>.</p>
+
+</div>
+</div>
 <a id="a5f091ddd5aa0471e47bd9efb9eae0f8e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5f091ddd5aa0471e47bd9efb9eae0f8e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
@@ -282,7 +330,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Aug 18 2018 20:15:38 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 20 2018 13:29:16 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

@@ -1,6 +1,5 @@
 <map id="arc::phys::material::Fluorescent::interact" name="arc::phys::material::Fluorescent::interact">
-<area shape="rect" id="node2" href="$namespacearc_1_1random_1_1distribution_1_1henyey__greenstein.html#a92449e5656405256a5eed9f90a844a8d" title="arc::random::distribution\l::henyey_greenstein::sample" alt="" coords="203,61,395,100"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="469,5,606,44"/>
-<area shape="rect" id="node4" href="$classarc_1_1random_1_1_generator.html#a97bd3a4fd637ff97659ab94af9307ca8" title="Generate a random double between zero and unity. " alt="" coords="443,68,632,93"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1math_1_1pow.html#a673982111327d6a2597e9a381009ce4d" title="arc::math::pow::sq" alt="" coords="472,117,603,143"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1random_1_1distribution.html#a188626f1bd7d2ab576399690589b9b7f" title="arc::random::distribution\l::henyey_greenstein" alt="" coords="203,33,367,72"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="415,5,551,44"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1math_1_1pow.html#a673982111327d6a2597e9a381009ce4d" title="arc::math::pow::sq" alt="" coords="418,68,548,93"/>
 </map>

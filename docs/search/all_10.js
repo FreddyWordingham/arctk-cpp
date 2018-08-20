@@ -15,7 +15,7 @@ var searchData=
   ['photon_2ehpp',['photon.hpp',['../photon_8hpp.html',1,'']]],
   ['phys_2ehpp',['phys.hpp',['../consts_2phys_8hpp.html',1,'(Global Namespace)'],['../phys_8hpp.html',1,'(Global Namespace)']]],
   ['pi',['PI',['../namespacearc_1_1consts_1_1math.html#a72f9bca0e430f3634683cf7db5e75818',1,'arc::consts::math']]],
-  ['plane',['Plane',['../classarc_1_1geom_1_1shape_1_1_plane.html',1,'arc::geom::shape::Plane'],['../classarc_1_1geom_1_1shape_1_1_plane.html#a212904cdf3d4533aa4472cf987cad5f0',1,'arc::geom::shape::Plane::Plane()']]],
+  ['plane',['Plane',['../classarc_1_1geom_1_1shape_1_1_plane.html',1,'arc::geom::shape::Plane'],['../classarc_1_1geom_1_1shape_1_1_plane.html#a9d186df97b468e2336e19e75704c3ca8',1,'arc::geom::shape::Plane::Plane()']]],
   ['plane_2ehpp',['plane.hpp',['../plane_8hpp.html',1,'']]],
   ['plane_5fcollision',['plane_collision',['../classarc_1_1geom_1_1shape_1_1_triangle.html#abe258581ad067c650f2f9a5cbebd4021',1,'arc::geom::shape::Triangle']]],
   ['plane_5fnorm',['plane_norm',['../classarc_1_1geom_1_1shape_1_1_triangle.html#a5e6273eac5f6dcf71ca9312bc895775f',1,'arc::geom::shape::Triangle']]],

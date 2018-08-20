@@ -17,7 +17,7 @@ var searchData=
   ['ascend',['ascend',['../classarc_1_1data_1_1histogram_1_1_dynamic_3_01_t_00_011_01_4.html#a29b696378d930a5b9a6f048bf31b7ce1',1,'arc::data::histogram::Dynamic&lt; T, 1 &gt;']]],
   ['ascending',['ascending',['../namespacearc_1_1utl_1_1properties.html#a4df19ef005359af15befe0493e491a2d',1,'arc::utl::properties']]],
   ['asym',['asym',['../classarc_1_1phys_1_1_optical.html#ab724c02f85ed5d6bbeb171942f0cf6ae',1,'arc::phys::Optical']]],
-  ['ave',['ave',['../classarc_1_1random_1_1distribution_1_1_gaussian.html#ab15d2a4d30d4e9b69e973a111699f3ce',1,'arc::random::distribution::Gaussian::ave()'],['../namespacearc_1_1math_1_1container.html#a43eb40b29b4991c7c10c692ed0f34f0e',1,'arc::math::container::ave()']]],
+  ['ave',['ave',['../namespacearc_1_1math_1_1container.html#a43eb40b29b4991c7c10c692ed0f34f0e',1,'arc::math::container']]],
   ['average',['Average',['../classarc_1_1data_1_1histogram_1_1_average_3_01_t_00_011_01_4.html#a2f4534b4f96fa3f77fd9b402fbe83a2f',1,'arc::data::histogram::Average&lt; T, 1 &gt;']]],
   ['axis_5fhelper_5fx',['axis_helper_x',['../namespacearc_1_1gui_1_1actor.html#aa12d3fb0657b2792bd3ba876ce4907a5',1,'arc::gui::actor']]],
   ['axis_5fhelper_5fy',['axis_helper_y',['../namespacearc_1_1gui_1_1actor.html#ab01f626a818923366521b28eeef26b54',1,'arc::gui::actor']]],

@@ -1,7 +1,0 @@
-<map id="arc::random::Generator::gen" name="arc::random::Generator::gen">
-<area shape="rect" id="node2" href="$namespacearc_1_1random_1_1distribution_1_1col.html#a33972fa95de8c574b327033b3f5f3157" title="arc::random::distribution\l::col::sample" alt="" coords="257,5,421,44"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1random_1_1distribution_1_1henyey__greenstein.html#a92449e5656405256a5eed9f90a844a8d" title="arc::random::distribution\l::henyey_greenstein::sample" alt="" coords="243,68,435,107"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1random_1_1distribution_1_1isotropic.html#a1041e60f8d45bebd5956eab9f4def1b3" title="arc::random::distribution\l::isotropic::sample" alt="" coords="257,131,421,169"/>
-<area shape="rect" id="node4" href="$classarc_1_1phys_1_1material_1_1_basic.html#a7f10f42335082fd5b31b96ed0c9a44ae" title="arc::phys::material\l::Basic::interact" alt="" coords="492,37,623,76"/>
-<area shape="rect" id="node5" href="$classarc_1_1phys_1_1material_1_1_fluorescent.html#abc5121a596fdbb3603aff64e53e476f8" title="arc::phys::material\l::Fluorescent::interact" alt="" coords="483,100,632,139"/>
-</map>

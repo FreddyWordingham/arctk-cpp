@@ -124,6 +124,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9caf5d0d87ebc7779efc294fe3f4a0f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5e4403b2a237c8b363efc552ace9709"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_particle.html#af5e4403b2a237c8b363efc552ace9709">time</a> () const noexcept</td></tr>
 <tr class="separator:af5e4403b2a237c8b363efc552ace9709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2c2dc70c0ed4de3ed2365f312c88b06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_particle.html#af2c2dc70c0ed4de3ed2365f312c88b06">set_dir</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) noexcept</td></tr>
+<tr class="separator:af2c2dc70c0ed4de3ed2365f312c88b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a497cd09535502f2f300e503a99d31890"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_particle.html#a497cd09535502f2f300e503a99d31890">multiply_weight</a> (double m_) noexcept</td></tr>
 <tr class="separator:a497cd09535502f2f300e503a99d31890"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8f49990794bcba81da34c33053ec338"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_particle.html#af8f49990794bcba81da34c33053ec338">move</a> (double dist_) noexcept</td></tr>
@@ -516,6 +518,40 @@ _dir must be normalised. </dd></dl>
 
 </div>
 </div>
+<a id="af2c2dc70c0ed4de3ed2365f312c88b06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2c2dc70c0ed4de3ed2365f312c88b06">&#9670;&nbsp;</a></span>set_dir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::phys::Particle::set_dir </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>dir_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the direction of the particle.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir_</td><td>Direction to set for particle.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>dir_ must be normalised. </dd></dl>
+
+</div>
+</div>
 <a id="af5e4403b2a237c8b363efc552ace9709"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af5e4403b2a237c8b363efc552ace9709">&#9670;&nbsp;</a></span>time()</h2>
 
@@ -646,7 +682,7 @@ _dir must be normalised. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Aug 18 2018 20:15:38 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 20 2018 13:29:17 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
