@@ -165,6 +165,18 @@ namespace arc //! arctk namespace
                 }
             }
 
+            /**
+             *  Generate a random number sampled from a uniform normal distribution.
+             *
+             *  @tparam T   Type to be uniformly generated.
+             *
+             *  @param  rng_    Random number generator.
+             *
+             *  @pre    T   Must be an arithmetic type.
+             *  @pre    T   May not be an integral type.
+             *
+             *  @return Random number sampled from a uniform normal distribution.
+             */
             template <typename T>
             inline T normal(Generator* rng_) noexcept
             {
