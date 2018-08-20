@@ -58,7 +58,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Emission --
-            virtual inline vec3 random_pos(Generator* const rng_) const noexcept = 0;
+            virtual inline vec3 random_pos(random::Generator* const rng_) const noexcept = 0;
 
             //  -- Collision --
             virtual inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const
