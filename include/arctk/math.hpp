@@ -15,6 +15,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <type_traits>
+
 //  -- Arctk --
 #include <arctk/math/compare.hpp>
 #include <arctk/math/container.hpp>
@@ -115,6 +118,26 @@ namespace arc //! arctk namespace
 
 
 
+    namespace math //! mathematical namespace
+    {
+
+
+
+        //  == STRUCTURES ==
+        //  -- Sfinae --
+        template <typename T>
+        struct is_vec : std::false_type
+        {
+        };
+
+        template <typename T, size_t N>
+        struct is_vec<math::Vec<T, N>> : std::true_type
+        {
+        };
+
+
+
+    } // namespace math
 } // namespace arc
 
 
