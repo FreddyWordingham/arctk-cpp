@@ -181,6 +181,17 @@ namespace arc //! arctk namespace
                 return (t);
             }
 
+            /**
+             *  Determine if a collision event occurs between the axis-aligned bounding box and a ray.
+             *  If a collision does occur, return the distance to the collision point and the normal of the axis-aligned bounding box at the collision point.
+             *
+             *  @param  pos_    Position of the ray.
+             *  @param  dir_    Direction of the ray.
+             *
+             *  @pre    dir_ must be normalised.
+             *
+             *  @return Optional collision distance and intersection normal.
+             */
             inline std::optional<std::pair<double, vec3>> Aabb::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 PRE(dir_.normalised());
