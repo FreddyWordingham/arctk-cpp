@@ -117,6 +117,8 @@ namespace arc //! arctk namespace
                 areas[index::dim::cartesian::Y] /= areas[index::dim::cartesian::Z];
                 areas[index::dim::cartesian::Z] /= areas[index::dim::cartesian::Z];
 
+                POST(math::compare::equal(areas[index::dim::cartesian::Z], 1.0));
+
                 return (areas);
             }
 
