@@ -130,6 +130,20 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Sampling --
+            /**
+             *  Generate a uniform random number between given minimum and maximum bounds.
+             *
+             *  @tparam T
+             *
+             *  @param  rng_    Random number generator.
+             *  @param  min_    Minimum bound of the generated value.
+             *  @param  max_    Maximum bound of the generated value.
+             *
+             *  @pre    T   Must be an arithmetic type.
+             *  @pre    min_ must be less than, or equal to, max_.
+             *
+             *  @return Uniform random number.
+             */
             template <typename T>
             inline T uniform(Generator* rng_, const T min_, const T max_) noexcept
             {
