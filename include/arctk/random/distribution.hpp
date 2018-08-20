@@ -135,7 +135,7 @@ namespace arc //! arctk namespace
             //  == FUNCTIONS ==
             //  -- Sampling --
             /**
-             *  Generate a uniform random number between given minimum and maximum bounds.
+             *  Generate a random number sampled from a uniform distribution between given minimum and maximum bounds.
              *
              *  @tparam T   Type to be uniformly generated.
              *
@@ -146,7 +146,7 @@ namespace arc //! arctk namespace
              *  @pre    T   Must be an arithmetic type.
              *  @pre    min_ must be less than, or equal to, max_.
              *
-             *  @return Uniform random number.
+             *  @return Random number sampled from a uniform distribution.
              */
             template <typename T>
             inline T uniform(Generator* rng_, const T min_, const T max_) noexcept
