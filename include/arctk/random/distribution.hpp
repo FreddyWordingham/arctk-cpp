@@ -137,7 +137,7 @@ namespace arc //! arctk namespace
             /**
              *  Generate a uniform random number between given minimum and maximum bounds.
              *
-             *  @tparam T
+             *  @tparam T   Type to be uniformly generated.
              *
              *  @param  rng_    Random number generator.
              *  @param  min_    Minimum bound of the generated value.
