@@ -26,11 +26,20 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Rotate --
+            inline size_t next(const size_t cur_, const size_t size_, const size_t step_ = 1) noexcept;
 
 
 
             //  == FUNCTIONS ==
             //  -- Rotate --
+            inline size_t next(const size_t cur_, const size_t size_, const size_t step_ = 1) noexcept
+            {
+                PRE(step_ < size_);
+
+                const size_t next = cur_ + step_;
+
+                return ((next < size_) ? next : (next - size_));
+            }
 
 
 
