@@ -116,7 +116,9 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Sampling --
             template <typename T>
-            inline T    uniform(Generator* rng_, const T min_, const T max_);
+            inline T uniform(Generator* rng_, const T min_, const T max_);
+            template <typename T>
+            inline T    normal(Generator* rng_);
             inline vec3 isotropic(Generator* rng_) noexcept;
 
 
@@ -138,6 +140,32 @@ namespace arc //! arctk namespace
                 {
                     return ((rng_->gen() * (max_ - min_)) + min_);
                 }
+            }
+
+            template <typename T>
+            inline T normal(Generator* rng_)
+            {
+                static_assert(std::is_arithmetic<T>::value);
+                static_assert(!std::is_integral<T>::value);
+
+                static bool _gen = false;
+                _gen             = !_gen;
+
+                static double _z1;
+
+                if (!_gen)
+                {
+                    return (_z1);
+                }
+
+                const double xi_0 = rng_->gen();
+                const double xi_1 = rng_->gen();
+
+                const double m  = std::sqrt(-2.0 * std::log(xi_0));
+                const double z0 = m * std::cos(2.0 * consts::math::PI * xi_1);
+                _z1             = m * std::sin(2.0 * consts::math::PI * xi_1);
+
+                return (z0);
             }
 
             inline vec3 isotropic(Generator* rng_) noexcept
