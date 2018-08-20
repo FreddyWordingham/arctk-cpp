@@ -80,6 +80,7 @@ namespace arc //! arctk namespace
             //  -- Setters --
             inline void         set_pos(const vec3& pos_) noexcept;
             inline void         set_dir(const vec3& dir_) noexcept;
+            inline void         set_time(double time_) noexcept;
             inline void         multiply_weight(double m_) noexcept;
             virtual inline void move(double dist_) noexcept;
             inline void         rotate(double theta_, double phi_) noexcept;
@@ -167,6 +168,20 @@ namespace arc //! arctk namespace
             PRE(dir_.normalised());
 
             _dir = dir_;
+        }
+
+        /**
+         *  Set the time of the particle.
+         *
+         *  @param  time_   Value to set the time to.
+         *
+         *  @pre    time_ must be greater than _time.
+         */
+        inline void Particle::set_time(const double time_) noexcept
+        {
+            PRE(time_ > _time);
+
+            _time = time_;
         }
 
         /**
