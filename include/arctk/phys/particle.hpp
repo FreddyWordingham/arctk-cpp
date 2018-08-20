@@ -78,6 +78,7 @@ namespace arc //! arctk namespace
             inline double      time() const noexcept;
 
             //  -- Setters --
+            inline void         set_pos(const vec3& pos_) noexcept;
             inline void         set_dir(const vec3& dir_) noexcept;
             inline void         multiply_weight(double m_) noexcept;
             virtual inline void move(double dist_) noexcept;
@@ -144,6 +145,16 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
+        /**
+         *  Set the position of the particle.
+         *
+         *  @param  pos_    Position to set for particle.
+         */
+        inline void Particle::set_pos(const vec3& pos_) noexcept
+        {
+            _pos = pos_;
+        }
+
         /**
          *  Set the direction of the particle.
          *
