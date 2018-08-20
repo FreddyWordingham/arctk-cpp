@@ -16,6 +16,9 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cmath>
+
+//  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
 #include <arctk/random/generator.hpp>
