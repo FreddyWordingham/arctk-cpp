@@ -123,8 +123,8 @@ namespace arc //! arctk namespace
             inline T gaussian(Generator* rng_, const T ave_, const T var_) noexcept;
             template <typename T = double>
             inline T henyey_greenstein(Generator* rng_, const T g_) noexcept;
-            template <typename T = double>
-            inline math::Vec<T, 3> isotropic(Generator* rng_) noexcept;
+            template <typename T = vec3>
+            inline T isotropic(Generator* rng_) noexcept;
 
 
 
@@ -199,12 +199,12 @@ namespace arc //! arctk namespace
             }
 
             template <typename T>
-            inline math::Vec<T, 3> isotropic(Generator* rng_) noexcept
+            inline T isotropic(Generator* rng_) noexcept
             {
                 const double phi   = rng_->gen() * 2.0 * consts::math::PI;
                 const double theta = std::acos((rng_->gen() * 2.0) - 1.0);
 
-                return (math::convert::polar_to_cart(vec3(1.0, theta, phi)));
+                return (math::convert::polar_to_cart(T(1.0, theta, phi)));
             }
 
 
