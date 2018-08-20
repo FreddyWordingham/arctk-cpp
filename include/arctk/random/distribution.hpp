@@ -116,33 +116,28 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Sampling --
             template <typename T>
-            inline typename std::enable_if<!std::is_integral<T>::value, T>::type uniform(Generator* rng_, const T min_, const T max_);
-            template <typename T>
-            inline typename std::enable_if<std::is_integral<T>::value, T>::type uniform(Generator* rng_, const T min_, const T max_);
-            inline vec3                                                         isotropic(Generator* rng_) noexcept;
+            inline T    uniform(Generator* rng_, const T min_, const T max_);
+            inline vec3 isotropic(Generator* rng_) noexcept;
 
 
 
             //  == FUNCTIONS ==
             //  -- Sampling --
             template <typename T>
-            inline typename std::enable_if<!std::is_integral<T>::value, T>::type uniform(Generator* rng_, const T min_, const T max_)
+            inline T uniform(Generator* rng_, const T min_, const T max_)
             {
                 static_assert(std::is_arithmetic<T>::value);
 
                 PRE(min_ <= max_);
 
-                return ((rng_->gen() * (max_ - min_)) + min_);
-            }
-
-            template <typename T>
-            inline typename std::enable_if<std::is_integral<T>::value, T>::type uniform(Generator* rng_, const T min_, const T max_)
-            {
-                static_assert(std::is_arithmetic<T>::value);
-
-                PRE(min_ <= max_);
-
-                return (std::floor((rng_->gen() * (max_ - min_ + 1)) + min_));
+                if constexpr (std::is_integral<T>::value)
+                {
+                    return (std::floor((rng_->gen() * (max_ - min_ + 1)) + min_));
+                }
+                else
+                {
+                    return ((rng_->gen() * (max_ - min_)) + min_);
+                }
             }
 
             inline vec3 isotropic(Generator* rng_) noexcept
