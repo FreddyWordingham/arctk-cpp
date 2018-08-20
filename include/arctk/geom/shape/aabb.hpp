@@ -115,7 +115,8 @@ namespace arc //! arctk namespace
 
             //  -- Collision --
             /**
-             *  Determine if a collision event occurs between the aabb and a ray.
+             *  Determine if a collision event occurs between the axis-aligned bounding box and a ray.
+             *  If a collision does occur, return the distance to the collision point.
              *
              *  @param  pos_    Position of the ray.
              *  @param  dir_    Direction of the ray.
@@ -124,7 +125,7 @@ namespace arc //! arctk namespace
              *
              *  @return Optional collision distance.
              */
-            inline std::optional<double> Aabb::collision(const vec3& pos_, const vec3& dir_) const noexcept // NOLINT
+            inline std::optional<double> Aabb::collision(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 PRE(dir_.normalised());
 
