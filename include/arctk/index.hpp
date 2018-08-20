@@ -18,6 +18,7 @@
 //  -- Arctk --
 #include <arctk/index/col.hpp>
 #include <arctk/index/dim.hpp>
+#include <arctk/index/rotate.hpp>
 #include <arctk/index/vertex.hpp>
 
 
