@@ -195,6 +195,7 @@ namespace arc //! arctk namespace
          *  @param  phi_    Angle to rotate around previous axis of travel.
          *
          *  @pre    _dir must be normalised.
+         *
          *  @post   _dir must be normalised.
          */
         inline void Particle::rotate(const double theta_, const double phi_) noexcept
