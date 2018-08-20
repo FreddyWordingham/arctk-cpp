@@ -122,7 +122,7 @@ namespace arc //! arctk namespace
             template <typename T = double>
             inline T gaussian(Generator* rng_, const T ave_, const T var_) noexcept;
             template <typename T = double>
-            inline T    henyey_greenstein() noexcept;
+            inline T    henyey_greenstein(const T g_) noexcept;
             inline vec3 isotropic(Generator* rng_) noexcept;
 
 
@@ -179,6 +179,22 @@ namespace arc //! arctk namespace
                 static_assert(!std::is_integral<T>::value);
 
                 return ((normal<T>(rng_) * var_) + ave_);
+            }
+
+            template <typename T>
+            inline T henyey_greenstein(const T g_) noexcept
+            {
+                static_assert(std::is_arithmetic<T>::value);
+                static_assert(!std::is_integral<T>::value);
+
+                PRE((g_ >= -1.0) && (g_ <= 1.0));
+
+                if (math::compare::zero(g_))
+                {
+                    return (std::acos((rng_->gen() * 2.0) - 1.0));
+                }
+
+                return (std::acos((1.0 + (g_ * g_) - math::pow::sq((1.0 - (g_ * g_)) / (1.0 + (g_ * ((2.0 * rng_->gen()) - 1.0))))) / (2.0 * g_)));
             }
 
             inline vec3 isotropic(Generator* rng_) noexcept
