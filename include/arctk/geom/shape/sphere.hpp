@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Emission --
-                inline vec3 random_pos(Generator* const rng_) const noexcept override;
+                inline vec3 random_pos(random::Generator* const rng_) const noexcept override;
 
                 //  -- Collision --
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -87,7 +87,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Emission --
-            inline vec3 Sphere::random_pos(Generator* const rng_) const noexcept
+            inline vec3 Sphere::random_pos(random::Generator* const rng_) const noexcept
             {
                 return (_pos + (random::distribution::isotropic(rng_) * rad_));
             }
