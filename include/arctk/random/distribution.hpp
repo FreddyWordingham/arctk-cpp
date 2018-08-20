@@ -149,7 +149,7 @@ namespace arc //! arctk namespace
              *  @return Random number sampled from a uniform distribution.
              */
             template <typename T>
-            inline T uniform(Generator* rng_, const T min_, const T max_) noexcept
+            inline T uniform(Generator* const rng_, const T min_, const T max_) noexcept
             {
                 static_assert(std::is_arithmetic<T>::value);
 
@@ -178,7 +178,7 @@ namespace arc //! arctk namespace
              *  @return Random number sampled from a uniform normal distribution.
              */
             template <typename T>
-            inline T normal(Generator* rng_) noexcept
+            inline T normal(Generator* const rng_) noexcept
             {
                 static_assert(std::is_arithmetic<T>::value);
                 static_assert(!std::is_integral<T>::value);
@@ -219,7 +219,7 @@ namespace arc //! arctk namespace
              *  @return Random number sampled from a gaussian distribution.
              */
             template <typename T>
-            inline T gaussian(Generator* rng_, const T ave_, const T var_) noexcept
+            inline T gaussian(Generator* const rng_, const T ave_, const T var_) noexcept
             {
                 static_assert(std::is_arithmetic<T>::value);
                 static_assert(!std::is_integral<T>::value);
@@ -245,7 +245,7 @@ namespace arc //! arctk namespace
              *  @return Random number sampled from a Henyey-Greenstein distribution.
              */
             template <typename T>
-            inline T henyey_greenstein(Generator* rng_, const T g_) noexcept
+            inline T henyey_greenstein(Generator* const rng_, const T g_) noexcept
             {
                 static_assert(std::is_arithmetic<T>::value);
                 static_assert(!std::is_integral<T>::value);
@@ -272,7 +272,7 @@ namespace arc //! arctk namespace
              *  @return Random isotropic direction vec.
              */
             template <typename T>
-            inline T isotropic(Generator* rng_) noexcept
+            inline T isotropic(Generator* const rng_) noexcept
             {
                 static_assert(math::is_vec<T>::value);
 

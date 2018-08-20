@@ -55,6 +55,9 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Emission --
+                inline vec3 random_pos() const noexcept override;
+
                 //  -- Collision --
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
                 inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -82,6 +85,12 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Emission --
+            inline vec3 Sphere::random_pos() const noexcept
+            {
+            }
+
+
             //  -- Collision --
             /**
              *  Determine if a collision event occurs between the sphere and a ray.
