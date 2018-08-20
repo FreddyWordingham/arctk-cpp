@@ -126,7 +126,7 @@ namespace arc //! arctk namespace
                     std::cout << i << '\t' << areas[i] << '\n';
                 }
 
-                POST(math::compare::equal(areas[index::dim::cartesian::Z], 1.0));
+                POST(math::compare::equal(areas.back(), 1.0));
 
                 return (areas);
             }
