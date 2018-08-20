@@ -257,7 +257,8 @@ namespace arc //! arctk namespace
 
             //  -- Collision --
             /**
-             *  Determine if a collision event occurs between the mesh and a ray.
+             *  Determine if a collision event occurs between the axis-aligned bounding box and a ray.
+             *  If a collision does occur, return the distance to the collision point.
              *
              *  @param  pos_    Position of the ray.
              *  @param  dir_    Direction of the ray.
