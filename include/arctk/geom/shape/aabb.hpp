@@ -58,6 +58,7 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline explicit Aabb(const vec3& min_, const vec3& max_) noexcept;
 
+              private:
                 //  -- Initialisation --
                 inline std::array<double, 4> init_areas(const vec3& min_, const vec3& max_) const noexcept;
 
