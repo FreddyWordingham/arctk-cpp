@@ -110,8 +110,8 @@ namespace arc //! arctk namespace
                 std::array<double, 3> areas;
 
                 areas[index::dim::cartesian::X] = (max_.y - min_.y) * (max_.z - min_.z);
-                areas[index::dim::cartesian::Y] = areas[index::dim::cartesian::X] + ((max_.z - min.z) * (max_.x - min_.x));
-                areas[index::dim::cartesian::Z] = areas[index::dim::cartesian::Y] + ((max_.x - min.x) * (max_.y - min_.y));
+                areas[index::dim::cartesian::Y] = areas[index::dim::cartesian::X] + ((max_.z - min_.z) * (max_.x - min_.x));
+                areas[index::dim::cartesian::Z] = areas[index::dim::cartesian::Y] + ((max_.x - min_.x) * (max_.y - min_.y));
 
                 areas[index::dim::cartesian::X] /= areas[index::dim::cartesian::Z];
                 areas[index::dim::cartesian::Y] /= areas[index::dim::cartesian::Z];
