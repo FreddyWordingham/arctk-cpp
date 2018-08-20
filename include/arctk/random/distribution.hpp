@@ -229,6 +229,21 @@ namespace arc //! arctk namespace
                 return ((normal<T>(rng_) * var_) + ave_);
             }
 
+            /**
+             *  Generate a random number sampled from the Henyey-Greenstein phase function with a given asymmetry factor.
+             *  Mathematics adapted from https://www.astro.umd.edu/~jph/HG_note.pdf.
+             *
+             *  @tparam T   Type to be uniformly generated.
+             *
+             *  @param  rng_    Random number generator.
+             *  @param  g_      Asymmetry parameter.
+             *
+             *  @pre    T   Must be an arithmetic type.
+             *  @pre    T   May not be an integral type.
+             *  @pre    g_ must be between minus one and one.
+             *
+             *  @return Random number sampled from a Henyey-Greenstein distribution.
+             */
             template <typename T>
             inline T henyey_greenstein(Generator* rng_, const T g_) noexcept
             {
