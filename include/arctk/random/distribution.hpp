@@ -119,7 +119,7 @@ namespace arc //! arctk namespace
             inline T uniform(Generator* rng_, const T min_, const T max_);
             template <typename T = double>
             inline T normal(Generator* rng_);
-            template <typename T>
+            template <typename T = double>
             inline T    gaussian(Generator* rng_, const T ave_, const T var_);
             inline vec3 isotropic(Generator* rng_) noexcept;
 
