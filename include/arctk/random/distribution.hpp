@@ -260,6 +260,17 @@ namespace arc //! arctk namespace
                 return (std::acos((1.0 + (g_ * g_) - math::pow::sq((1.0 - (g_ * g_)) / (1.0 + (g_ * ((2.0 * rng_->gen()) - 1.0))))) / (2.0 * g_)));
             }
 
+            /**
+             *  Generate a random isotropic direction vec.
+             *
+             *  @tparam T   Type to be uniformly generated.
+             *
+             *  @param  rng_    Random number generator.
+             *
+             *  @pre    T   Must be a vec type.
+             *
+             *  @return Random isotropic direction vec.
+             */
             template <typename T>
             inline T isotropic(Generator* rng_) noexcept
             {
