@@ -135,6 +135,16 @@ namespace arc //! arctk namespace
         {
         };
 
+        template <typename T>
+        struct is_mat : std::false_type
+        {
+        };
+
+        template <typename T, size_t N>
+        struct is_mat<math::Mat<T, N>> : std::true_type
+        {
+        };
+
 
 
     } // namespace math
