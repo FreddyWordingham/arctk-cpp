@@ -203,6 +203,20 @@ namespace arc //! arctk namespace
                 return (z0);
             }
 
+            /**
+             *  Generate a random number sampled from a gaussian distribution with a given mean and variance.
+             *
+             *  @tparam T   Type to be uniformly generated.
+             *
+             *  @param  rng_    Random number generator.
+             *  @param  ave_    Average of the gaussian distribution.
+             *  @param  var_    Variance of the gaussian distribution.
+             *
+             *  @pre    T   Must be an arithmetic type.
+             *  @pre    T   May not be an integral type.
+             *
+             *  @return Random number sampled from a gaussian distribution.
+             */
             template <typename T>
             inline T gaussian(Generator* rng_, const T ave_, const T var_) noexcept
             {
