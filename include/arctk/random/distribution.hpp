@@ -214,6 +214,7 @@ namespace arc //! arctk namespace
              *
              *  @pre    T   Must be an arithmetic type.
              *  @pre    T   May not be an integral type.
+             *  @pre    var_ must be positive.
              *
              *  @return Random number sampled from a gaussian distribution.
              */
@@ -222,6 +223,8 @@ namespace arc //! arctk namespace
             {
                 static_assert(std::is_arithmetic<T>::value);
                 static_assert(!std::is_integral<T>::value);
+
+                PRE(var_ > 0.0);
 
                 return ((normal<T>(rng_) * var_) + ave_);
             }
