@@ -116,11 +116,13 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Sampling --
             template <typename T>
-            inline T uniform(Generator* rng_, const T min_, const T max_);
+            inline T uniform(Generator* rng_, const T min_, const T max_) noexcept;
             template <typename T = double>
-            inline T normal(Generator* rng_);
+            inline T normal(Generator* rng_) noexcept;
             template <typename T = double>
-            inline T    gaussian(Generator* rng_, const T ave_, const T var_);
+            inline T gaussian(Generator* rng_, const T ave_, const T var_) noexcept;
+            template <typename T = double>
+            inline T    henyey_greenstein() noexcept;
             inline vec3 isotropic(Generator* rng_) noexcept;
 
 
@@ -128,7 +130,7 @@ namespace arc //! arctk namespace
             //  == FUNCTIONS ==
             //  -- Sampling --
             template <typename T>
-            inline T uniform(Generator* rng_, const T min_, const T max_)
+            inline T uniform(Generator* rng_, const T min_, const T max_) noexcept
             {
                 static_assert(std::is_arithmetic<T>::value);
 
@@ -145,7 +147,7 @@ namespace arc //! arctk namespace
             }
 
             template <typename T>
-            inline T normal(Generator* rng_)
+            inline T normal(Generator* rng_) noexcept
             {
                 static_assert(std::is_arithmetic<T>::value);
                 static_assert(!std::is_integral<T>::value);
@@ -171,7 +173,7 @@ namespace arc //! arctk namespace
             }
 
             template <typename T>
-            inline T gaussian(Generator* rng_, const T ave_, const T var_)
+            inline T gaussian(Generator* rng_, const T ave_, const T var_) noexcept
             {
                 static_assert(std::is_arithmetic<T>::value);
                 static_assert(!std::is_integral<T>::value);
