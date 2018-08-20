@@ -176,7 +176,7 @@ namespace arc //! arctk namespace
                 static_assert(std::is_arithmetic<T>::value);
                 static_assert(!std::is_integral<T>::value);
 
-                return ((normal(rng_) * var_) _ ave_);
+                return ((normal<T>(rng_) * var_) + ave_);
             }
 
             inline vec3 isotropic(Generator* rng_) noexcept
