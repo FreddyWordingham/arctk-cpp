@@ -219,6 +219,8 @@ namespace arc //! arctk namespace
             template <typename T>
             inline T isotropic(Generator* rng_) noexcept
             {
+                static_assert(math::is_vec<T>::value);
+
                 const double phi   = rng_->gen() * 2.0 * consts::math::PI;
                 const double theta = std::acos((rng_->gen() * 2.0) - 1.0);
 
