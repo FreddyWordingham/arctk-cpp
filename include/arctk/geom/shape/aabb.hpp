@@ -115,7 +115,6 @@ namespace arc //! arctk namespace
                 {
                     const size_t dim_0 = index::rotate::next(i - 1, 3, 1);
                     const size_t dim_1 = index::rotate::next(i - 1, 3, 2);
-                    std::cout << i << "\t:\t" << dim_0 << "\t:\t" << dim_1 << '\n';
 
                     areas[i] = areas[i - 1] + ((max_[dim_0] - min_[dim_0]) * (max_[dim_1] - min_[dim_1]));
                 }
@@ -123,7 +122,6 @@ namespace arc //! arctk namespace
                 for (size_t i = 0; i < 4; ++i)
                 {
                     areas[i] /= areas.back();
-                    std::cout << i << '\t' << areas[i] << '\n';
                 }
 
                 POST(math::compare::equal(areas.back(), 1.0));
