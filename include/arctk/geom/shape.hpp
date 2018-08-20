@@ -19,6 +19,7 @@
 #include <optional>
 
 //  -- Arctk --
+#include <arctk/random.hpp>
 #include <arctk/math.hpp>
 
 
