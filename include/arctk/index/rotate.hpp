@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
             {
                 PRE(step_ < size_);
 
-                return (step_ <= cur_) ? (cur_ - step_) : (size_ + cur_ - step_));
+                return ((step_ <= cur_) ? (cur_ - step_) : (size_ + cur_ - step_));
             }
 
 
