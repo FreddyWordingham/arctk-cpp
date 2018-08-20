@@ -61,6 +61,9 @@ namespace arc //! arctk namespace
                 //  -- Triangle Data --
                 const std::vector<Triangle> _tris; //!< List of triangles forming the mesh.
 
+                //  -- Areas --
+                std::vector<double> _areas; //!< Normalised relative area of each triangle forming the mesh.
+
 
                 //  == INSTANTIATION ==
               public:
@@ -257,7 +260,7 @@ namespace arc //! arctk namespace
 
             //  -- Collision --
             /**
-             *  Determine if a collision event occurs between the axis-aligned bounding box and a ray.
+             *  Determine if a collision event occurs between the mesh and a ray.
              *  If a collision does occur, return the distance to the collision point.
              *
              *  @param  pos_    Position of the ray.
