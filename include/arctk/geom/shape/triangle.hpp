@@ -70,6 +70,9 @@ namespace arc //! arctk namespace
                 inline double                     area() const noexcept;
                 inline const vec3&                plane_norm() const noexcept;
 
+                //  -- Emission --
+                inline vec3 random_pos(random::Generator* const rng_) const noexcept override;
+
                 //  -- Collision --
                 inline std::optional<double>                  plane_collision(const vec3& pos_, const vec3& dir_) const noexcept;
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -173,6 +176,22 @@ namespace arc //! arctk namespace
             inline const vec3& Triangle::plane_norm() const noexcept
             {
                 return (_plane_norm);
+            }
+
+
+            //  -- Emission --
+            inline vec3 Triangle::random_pos(random::Generator* const rng_) const noexcept
+            {
+                double a = rng_->gen();
+                double b = rng_->gen();
+
+                if ((a + b) > 1.0)
+                {
+                    a = 1.0 - a;
+                    b = 1.0 - b;
+                }
+
+                return (_pos[index::vertex::GAMMA] + ((_pos[index::vertex::ALPHA] - _pos[index::vertex::GAMMA]) * a) + ((_pos[index::vertex::BETA] - _pos[index::vertex::GAMMA]) * b));
             }
 
 
