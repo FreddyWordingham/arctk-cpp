@@ -107,6 +107,17 @@ namespace arc //! arctk namespace
                 return ((dist < 0.0) ? std::nullopt : std::optional<double>(dist));
             }
 
+            /**
+             *  Determine if a collision event occurs between the plane and a ray.
+             *  If a collision does occur, return the distance to the collision point and the normal of the plane at the collision point.
+             *
+             *  @param  pos_    Position of the ray.
+             *  @param  dir_    Direction of the ray.
+             *
+             *  @pre    dir_ must be normalised.
+             *
+             *  @return Optional collision distance and intersection normal.
+             */
             inline std::optional<std::pair<double, vec3>> Plane::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 std::optional<double> dist(collision(pos_, dir_));
