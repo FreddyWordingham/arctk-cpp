@@ -119,6 +119,7 @@ namespace arc //! arctk namespace
             inline T uniform(Generator* rng_, const T min_, const T max_);
             template <typename T>
             inline T    normal(Generator* rng_);
+            inline T    gaussian(Generator* rng_, const T ave_, const T var_);
             inline vec3 isotropic(Generator* rng_) noexcept;
 
 
@@ -166,6 +167,15 @@ namespace arc //! arctk namespace
                 _z1             = m * std::sin(2.0 * consts::math::PI * xi_1);
 
                 return (z0);
+            }
+
+            template <typename T>
+            inline T gaussian(Generator* rng_, const T ave_, const T var_)
+            {
+                static_assert(std::is_arithmetic<T>::value);
+                static_assert(!std::is_integral<T>::value);
+
+                return ((normal(rng_) * var_) _ ave_);
             }
 
             inline vec3 isotropic(Generator* rng_) noexcept
