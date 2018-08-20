@@ -142,8 +142,21 @@ namespace arc //! arctk namespace
                 return (std::min(dist_0, dist_1));
             }
 
+            /**
+             *  Determine if a collision event occurs between the sphere and a ray.
+             *  If a collision does occur, return the distance to the collision point and the normal of the sphere at the collision point.
+             *
+             *  @param  pos_    Position of the ray.
+             *  @param  dir_    Direction of the ray.
+             *
+             *  @pre    dir_ must be normalised.
+             *
+             *  @return Optional collision distance and intersection normal.
+             */
             inline std::optional<std::pair<double, vec3>> Sphere::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
             {
+                PRE(dir_.normalised());
+
                 std::optional<double> dist(collision(pos_, dir_));
 
                 if (!dist)
