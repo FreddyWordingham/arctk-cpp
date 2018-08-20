@@ -18,6 +18,9 @@
 //  -- Std --
 #include <cstddef>
 
+//  -- Arctk --
+#include <arctk/debug.hpp>
+
 
 
 //  == NAMESPACE ==
