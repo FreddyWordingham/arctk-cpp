@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
                 vec3 _max; //!< Maximum vertex of the aabb.
 
                 //  -- Areas --
-                std::array<double, 3> _areas; //!< Normalised relative area of each pair of faces.
+                std::array<double, 4> _areas; //!< Normalised relative area of each pair of faces.
 
 
                 //  == INSTANTIATION ==
@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
                 inline explicit Aabb(const vec3& min_, const vec3& max_) noexcept;
 
                 //  -- Initialisation --
-                inline std::array<double, 3> init_areas(const vec3& min_, const vec3& max_) const noexcept;
+                inline std::array<double, 4> init_areas(const vec3& min_, const vec3& max_) const noexcept;
 
 
                 //  == METHODS ==
@@ -93,6 +93,7 @@ namespace arc //! arctk namespace
             inline Aabb::Aabb(const vec3& min_, const vec3& max_) noexcept
               : _min(min_)
               , _max(max_)
+              , _areas(init_areas(min_, max_))
             {
                 PRE(min_.x < max_.x);
                 PRE(min_.y < max_.y);
@@ -101,21 +102,29 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
-            inline std::array<double, 3> Aabb::init_areas(const vec3& min_, const vec3& max_) const noexcept
+            inline std::array<double, 4> Aabb::init_areas(const vec3& min_, const vec3& max_) const noexcept
             {
                 PRE(min_.x < max_.x);
                 PRE(min_.y < max_.y);
                 PRE(min_.z < max_.z);
 
-                std::array<double, 3> areas;
+                std::array<double, 4> areas;
 
-                areas[index::dim::cartesian::X] = (max_.y - min_.y) * (max_.z - min_.z);
-                areas[index::dim::cartesian::Y] = areas[index::dim::cartesian::X] + ((max_.z - min_.z) * (max_.x - min_.x));
-                areas[index::dim::cartesian::Z] = areas[index::dim::cartesian::Y] + ((max_.x - min_.x) * (max_.y - min_.y));
+                areas[0] = 0.0;
+                for (size_t i = 1; i < 4; ++i)
+                {
+                    const size_t dim_0 = index::rotate::next(i - 1, 3, 1);
+                    const size_t dim_1 = index::rotate::next(i - 1, 3, 2);
+                    std::cout << i << "\t:\t" << dim_0 << "\t:\t" << dim_1 << '\n';
 
-                areas[index::dim::cartesian::X] /= areas[index::dim::cartesian::Z];
-                areas[index::dim::cartesian::Y] /= areas[index::dim::cartesian::Z];
-                areas[index::dim::cartesian::Z] /= areas[index::dim::cartesian::Z];
+                    areas[i] = areas[i - 1] + ((max_[dim_0] - min_[dim_0]) * (max_[dim_1] - min_[dim_1]));
+                }
+
+                for (size_t i = 0; i < 4; ++i)
+                {
+                    areas[i] /= areas.back();
+                    std::cout << i << '\t' << areas[i] << '\n';
+                }
 
                 POST(math::compare::equal(areas[index::dim::cartesian::Z], 1.0));
 
