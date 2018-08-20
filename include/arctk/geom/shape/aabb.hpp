@@ -150,9 +150,11 @@ namespace arc //! arctk namespace
             //  -- Emission --
             inline vec3 Aabb::random_pos(random::Generator* const rng_) const noexcept
             {
-                if (rng_->gen() < 0.5)
-                {
-                }
+                const size_t face  = utl::search::lower(_areas, rng_->gen());
+                const size_t dim_0 = ((face + 1) < 3) ? (face + 1) : (face - 2);
+                const size_t dim_1 = ((dim_0 + 1) < 3) ? (dim_0 + 1) : (dim_0 - 2);
+
+                +((rng_->gen() < 0.5) ? 0 : 3);
             }
 
 
