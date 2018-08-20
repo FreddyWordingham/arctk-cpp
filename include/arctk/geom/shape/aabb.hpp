@@ -22,6 +22,7 @@
 //  -- Arctk --
 #include <arctk/exit.hpp>
 #include <arctk/geom/shape.hpp>
+#include <arctk/index.hpp>
 #include <arctk/math.hpp>
 
 
@@ -49,13 +50,16 @@ namespace arc //! arctk namespace
                 vec3 _max; //!< Maximum vertex of the aabb.
 
                 //  -- Areas --
-                std::array<double, 3> _area; //!< Areas of each pair of faces.
+                std::array<double, 3> _areas; //!< Normalised relative area of each pair of faces.
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
                 inline explicit Aabb(const vec3& min_, const vec3& max_) noexcept;
+
+                //  -- Initialisation --
+                inline std::array<double, 3> init_areas(const vec3& min_, const vec3& max_) const noexcept;
 
 
                 //  == METHODS ==
@@ -93,6 +97,29 @@ namespace arc //! arctk namespace
                 PRE(min_.x < max_.x);
                 PRE(min_.y < max_.y);
                 PRE(min_.z < max_.z);
+            }
+
+
+            //  -- Initialisation --
+            inline std::array<double, 3> Aabb::init_areas(const vec3& min_, const vec3& max_) const noexcept
+            {
+                PRE(min_.x < max_.x);
+                PRE(min_.y < max_.y);
+                PRE(min_.z < max_.z);
+
+                std::array<double, 3> areas;
+
+                areas[index::dim::cartesian::X] = (max_.y - min.y) * (max_.z - min_.z);
+                areas[index::dim::cartesian::Y] = (max_.z - min.z) * (max_.x - min_.x);
+                areas[index::dim::cartesian::Z] = (max_.x - min.x) * (max_.y - min_.y);
+
+                const double total = areas[index::dim::cartesian::X] + areas[index::dim::cartesian::Y] + areas[index::dim::cartesian::Z];
+
+                areas[index::dim::cartesian::X] /= total;
+                areas[index::dim::cartesian::Y] /= total;
+                areas[index::dim::cartesian::Z] /= total;
+
+                return (areas);
             }
 
 
