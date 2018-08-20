@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <array>
 #include <optional>
 
 //  -- Arctk --
@@ -47,6 +48,9 @@ namespace arc //! arctk namespace
                 vec3 _min; //!< Minimum vertex of the aabb.
                 vec3 _max; //!< Maximum vertex of the aabb.
 
+                //  -- Areas --
+                std::array<double, 3> _area; //!< Areas of each pair of faces.
+
 
                 //  == INSTANTIATION ==
               public:
@@ -59,6 +63,9 @@ namespace arc //! arctk namespace
                 //  -- Getters --
                 inline const vec3& min() const noexcept;
                 inline const vec3& max() const noexcept;
+
+                //  -- Emission --
+                inline vec3 random_pos(random::Generator* const rng_) const noexcept override;
 
                 //  -- Collision --
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -110,6 +117,15 @@ namespace arc //! arctk namespace
             inline const vec3& Aabb::max() const noexcept
             {
                 return (_max);
+            }
+
+
+            //  -- Emission --
+            inline vec3 Aabb::random_pos(random::Generator* const rng_) const noexcept
+            {
+                if (rng_->gen() < 0.5)
+                {
+                }
             }
 
 
