@@ -156,9 +156,9 @@ namespace arc //! arctk namespace
             }
 
             template <typename T>
-            inline Vec<T, 2> polar_to_cart(const T theta_, const T phi_) noexcept
+            inline Vec<T, 2> polar_to_cart(const T rho_, const T theta_) noexcept
             {
-                return (polar_to_cart(Vec<T, 2>(theta_, phi_)));
+                return (polar_to_cart(Vec<T, 2>(rho_, theta_)));
             }
 
             /**
