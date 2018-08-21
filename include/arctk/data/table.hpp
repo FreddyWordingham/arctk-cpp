@@ -199,7 +199,7 @@ namespace arc //! arctk namespace
                     std::cerr << "Unable to construct data table.\n"
                               << "Line: `" << line << "`, does not contain " << sizeof...(A) << " elements as required.\n";
 
-                    std::exit(exit::error::FAILED_PARSE);
+                    std::exit(exit::error::FAILED_INITIALISATION);
                 }
 
                 rows.emplace_back(str::parse::to<A...>(strs));
