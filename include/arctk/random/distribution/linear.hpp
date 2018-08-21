@@ -260,7 +260,7 @@ namespace arc //! arctk namespace
                     return (_vals[index + 1] - (std::sqrt(rng_->gen()) * (_vals[index + 1] - _vals[index])));
                 }
 
-                return (_vals[index] + (rng_->gen() * (_vals[index + 1] - _vals[index])));
+                return (random::distribution::uniform(rng_, _vals[index], _vals[index + 1]));
             }
 
 
