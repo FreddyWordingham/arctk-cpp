@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Data --
-                std::vector<std::vector<double>> _pixels; //!< Pixel data of the image.
+                std::vector<std::vector<arc::vec3>> _pixels; //!< Pixel data of the image.
 
 
                 //  == INSTANTIATION ==
