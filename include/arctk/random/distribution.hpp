@@ -276,7 +276,7 @@ namespace arc //! arctk namespace
             {
                 static_assert(math::is_vec<T>::value);
 
-                const double phi   = uniform(rng_, consts::math::TWO_PI);
+                const double phi   = uniform(rng_, 0.0, consts::math::TWO_PI);
                 const double theta = std::acos(uniform(rng_, -1.0, 1.0));
 
                 return (math::convert::polar_to_cart(T(1.0, theta, phi)));
