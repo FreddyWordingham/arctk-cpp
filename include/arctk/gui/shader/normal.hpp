@@ -115,10 +115,6 @@ namespace arc //! arctk namespace
                     vec3 center = (vert_pos[0] + vert_pos[1] + vert_pos[2]) / 3.0;
 
                     vec3 plane_norm = normalize(cross(vert_pos[1] - vert_pos[0], vert_pos[2] - vert_pos[0]));
-                    if (dot(plane_norm, vert_pos[0] + vert_pos[1] + vert_pos[2]) < 0.0)
-                    {
-                        plane_norm *= -1.0;
-                    }
 
                     vec4 start  = vec4(center, 1.0);
                     gl_Position = mvp * start;
