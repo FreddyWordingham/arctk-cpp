@@ -61,7 +61,6 @@ namespace arc //! arctk namespace
               public:
                 //  -- Emission --
                 inline vec3 random_pos(random::Generator* const rng_) const noexcept override;
-                inline vec3 random_pos(random::Generator* const rng_, double rad_) const noexcept;
 
                 //  -- Collision --
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -97,6 +96,21 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Emission --
+            inline vec3 Circle::random_pos(random::Generator* const rng_) const noexcept
+            {
+                vec3 pos(std::sqrt(random::distribution::uniform(rng_, _rad * _rad)), arc::consts::math::HALF_PI, random::distribution::uniform(rng_, consts::math::TWO_PI));
+                pos = math::convert::polar_to_cart(pos);
+
+                const size_t axis  = !math::compare::unity(_norm.z) ? index::dim::cartesian::Z : index::dim::cartesian::X;
+                const double theta = std::acos(_norm[axis]);
+
+                pos.rotate((math::vec::axis<double, 3>(axis) ^ _norm).normal(), theta);
+
+                return (pos + _pos);
+            }
+
+
             //  -- Collision --
             /**
              *  Determine if a collision event occurs between the circle and a ray.
@@ -156,26 +170,6 @@ namespace arc //! arctk namespace
                 }
 
                 return (std::optional<std::pair<double, vec3>>(dist, _norm));
-            }
-
-
-            //  -- Emission --
-            inline vec3 Plane::random_pos(random::Generator* const rng_) const noexcept
-            {
-                return (random_pos(rng_, 1.0));
-            }
-
-            inline vec3 Plane::random_pos(random::Generator* const rng_, const double rad_) const noexcept
-            {
-                vec3 pos(std::sqrt(random::distribution::uniform(rng_, rad_ * rad_)), arc::consts::math::HALF_PI, random::distribution::uniform(rng_, consts::math::TWO_PI));
-                pos = math::convert::polar_to_cart(pos);
-
-                const size_t axis  = !math::compare::unity(_norm.z) ? index::dim::cartesian::Z : index::dim::cartesian::X;
-                const double theta = std::acos(_norm[axis]);
-
-                pos.rotate((math::vec::axis<double, 3>(axis) ^ _norm).normal(), theta);
-
-                return (pos + _pos);
             }
 
 
