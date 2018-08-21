@@ -122,7 +122,7 @@ namespace arc //! arctk namespace
              */
             inline vec3 Triangle::init_plane_norm(const std::array<vec3, 3>& pos_, const std::array<vec3, 3>& norm_) const noexcept
             {
-                vec3 plane_norm = math::vec::normalise((pos_[index::vertex::BETA] - pos_[index::vertex::ALPHA]) ^ (pos_[index::vertex::GAMMA] - pos_[index::vertex::ALPHA]));
+                vec3 plane_norm = ((pos_[index::vertex::BETA] - pos_[index::vertex::ALPHA]) ^ (pos_[index::vertex::GAMMA] - pos_[index::vertex::ALPHA])).normal();
 
                 if ((plane_norm * (norm_[index::vertex::ALPHA] + norm_[index::vertex::BETA] + norm_[index::vertex::GAMMA])) < 0.0)
                 {
