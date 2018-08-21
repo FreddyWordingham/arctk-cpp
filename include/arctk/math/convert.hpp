@@ -50,7 +50,11 @@ namespace arc //! arctk namespace
             template <typename T>
             inline Vec<T, 2> polar_to_cart(const Vec<T, 2>& polar_) noexcept;
             template <typename T>
+            inline Vec<T, 2> polar_to_cart(const T rho_, const T theta_) noexcept;
+            template <typename T>
             inline Vec<T, 3> polar_to_cart(const Vec<T, 3>& polar_) noexcept;
+            template <typename T>
+            inline Vec<T, 3> polar_to_cart(const T rho_, const T theta_, const T phi_) noexcept;
 
 
 
@@ -149,6 +153,12 @@ namespace arc //! arctk namespace
                 cart.y = polar_.rho * std::cos(polar_.theta);
 
                 return (cart);
+            }
+
+            template <typename T>
+            inline Vec<T, 2> polar_to_cart(const T theta_, const T phi_) noexcept
+            {
+                return (polar_to_cart(Vec<T, 2>(theta_, phi_)));
             }
 
             /**
