@@ -144,7 +144,7 @@ namespace arc //! arctk namespace
 
             inline vec3 Plane::random_pos(random::Generator* const rng_, const double rad_) const noexcept
             {
-                vec3 pos(std::sqrt(random::distribution::uniform(rng_, 0.0, rad_ * rad_)), random::distribution::uniform(rng_, 0.0, 2.0 * consts::math::PI), 0.0);
+                vec3 pos(std::sqrt(random::distribution::uniform(rng_, 0.0, rad_ * rad_)), arc::consts::math::HALF_PI, random::distribution::uniform(rng_, 0.0, 2.0 * consts::math::PI));
                 pos = math::convert::polar_to_cart(pos);
 
                 const size_t axis  = !math::compare::unity(_norm.z) ? index::dim::cartesian::Z : index::dim::cartesian::X;
