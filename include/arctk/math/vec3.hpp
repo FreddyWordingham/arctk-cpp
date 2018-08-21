@@ -712,11 +712,23 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTION PROTOTYPES ==
-            //  -- Transformation --
+            //  -- Utility --
+            template <typename T>
+            constexpr inline Vec<T, 3>::axis(size_t dim_) noexcept;
+
 
 
             //  == FUNCTIONS ==
             //  -- Utility --
+            template <typename T>
+            constexpr inline Vec<T, 3>::axis(const size_t dim_) noexcept
+            {
+                Vec<T, 3> vec;
+
+                vec[dim_] = 1.0;
+
+                return (vec);
+            }
 
 
 
