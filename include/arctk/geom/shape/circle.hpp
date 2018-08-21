@@ -1,0 +1,169 @@
+/**
+ *  @file   arctk/geom/shape/circle.hpp
+ *  @date   22/08/2018
+ *  @author Freddy Wordingham
+ *
+ *  Geometric circle shape class.
+ */
+
+
+
+//  == GUARD ==
+#ifndef ARCTK_GEOM_SHAPE_CIRCLE_HPP
+#define ARCTK_GEOM_SHAPE_CIRCLE_HPP
+
+
+
+//  == IMPORTS ==
+//  -- Std --
+#include <optional>
+
+//  -- Arctk --
+#include <arctk/geom/shape.hpp>
+#include <arctk/math.hpp>
+
+
+
+//  == NAMESPACE ==
+namespace arc //! arctk namespace
+{
+    namespace geom //! geometry namespace
+    {
+        namespace shape //! shape namespace
+        {
+
+
+
+            //  == CLASS ==
+            /**
+             *  Geometric circle shape.
+             */
+            class Circle : public Shape
+            {
+                //  == FIELDS ==
+              private:
+                //  -- Positioning --
+                vec3 _pos;  //!< Position of the plane.
+                vec3 _norm; //!< Normal of the plane.
+
+                //  -- Properties --
+
+
+                //  == INSTANTIATION ==
+              public:
+                //  -- Constructors --
+                inline explicit Circle(const vec3& pos_, const vec3& norm_, double rad_) noexcept;
+
+
+                //  == METHODS ==
+              public:
+                //  -- Emission --
+                inline vec3 random_pos(random::Generator* const rng_) const noexcept override;
+                inline vec3 random_pos(random::Generator* const rng_, double rad_) const noexcept;
+
+                //  -- Collision --
+                inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
+                inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
+            };
+
+
+
+            //  == INSTANTIATION ==
+            //  -- Constructors --
+            /**
+             *  Construct a plane at a location with a normal direction.
+             *
+             *  @param  pos_    Position of the plane.
+             *  @param  norm_   Normal of the plane.
+             *
+             *  @pre    norm_ must be normalised.
+             */
+            inline Plane::Plane(const vec3& pos_, const vec3& norm_) noexcept
+              : _pos(pos_)
+              , _norm(norm_)
+            {
+                PRE(norm_.normalised());
+            }
+
+
+
+            //  == METHODS ==
+            //  -- Collision --
+            /**
+             *  Determine if a collision event occurs between the plane and a ray.
+             *  If a collision does occur, return the distance to the collision point.
+             *
+             *  @param  pos_    Position of the ray.
+             *  @param  dir_    Direction of the ray.
+             *
+             *  @pre    dir_ must be normalised.
+             *
+             *  @return Optional collision distance.
+             */
+            inline std::optional<double> Plane::collision(const vec3& pos_, const vec3& dir_) const noexcept
+            {
+                const double denom = _norm * dir_;
+
+                if (math::compare::zero(denom))
+                {
+                    return (std::nullopt);
+                }
+
+                const double dist = ((_pos - pos_) * _norm) / denom;
+
+                return ((dist < 0.0) ? std::nullopt : std::optional<double>(dist));
+            }
+
+            /**
+             *  Determine if a collision event occurs between the plane and a ray.
+             *  If a collision does occur, return the distance to the collision point and the normal of the plane at the collision point.
+             *
+             *  @param  pos_    Position of the ray.
+             *  @param  dir_    Direction of the ray.
+             *
+             *  @pre    dir_ must be normalised.
+             *
+             *  @return Optional collision distance and intersection normal.
+             */
+            inline std::optional<std::pair<double, vec3>> Plane::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
+            {
+                std::optional<double> dist(collision(pos_, dir_));
+
+                if (!dist)
+                {
+                    return (std::nullopt);
+                }
+
+                return (std::pair<double, vec3>(dist.value(), _norm));
+            }
+
+
+            //  -- Emission --
+            inline vec3 Plane::random_pos(random::Generator* const rng_) const noexcept
+            {
+                return (random_pos(rng_, 1.0));
+            }
+
+            inline vec3 Plane::random_pos(random::Generator* const rng_, const double rad_) const noexcept
+            {
+                vec3 pos(std::sqrt(random::distribution::uniform(rng_, rad_ * rad_)), arc::consts::math::HALF_PI, random::distribution::uniform(rng_, consts::math::TWO_PI));
+                pos = math::convert::polar_to_cart(pos);
+
+                const size_t axis  = !math::compare::unity(_norm.z) ? index::dim::cartesian::Z : index::dim::cartesian::X;
+                const double theta = std::acos(_norm[axis]);
+
+                pos.rotate((math::vec::axis<double, 3>(axis) ^ _norm).normal(), theta);
+
+                return (pos + _pos);
+            }
+
+
+
+        } // namespace shape
+    }     // namespace geom
+} // namespace arc
+
+
+
+//  == GUARD END ==
+#endif // ARCTK_GEOM_SHAPE_CIRCLE_HPP
