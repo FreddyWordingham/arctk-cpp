@@ -35,6 +35,8 @@ namespace arc //! arctk namespace
             template <typename T>
             inline bool zero(T x_) noexcept;
             template <typename T>
+            inline bool unity(T x_) noexcept;
+            template <typename T>
             inline bool equal(T x_, T y_) noexcept;
 
 
@@ -55,6 +57,12 @@ namespace arc //! arctk namespace
             inline bool zero(const T x_) noexcept
             {
                 return ((x_ > -std::numeric_limits<double>::epsilon()) && (x_ < std::numeric_limits<double>::epsilon()));
+            }
+
+            template <typename T>
+            inline bool unity(const T x_) noexcept
+            {
+                return (zero(x_ - T{1.0}));
             }
 
             /**
