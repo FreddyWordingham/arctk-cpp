@@ -140,7 +140,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                return (std::optional<double>(dist));
+                return (dist);
             }
 
             /**
