@@ -28,6 +28,7 @@ namespace arc //! arctk namespace
             //  -- Fundamental --
             constexpr const double HALF_PI = 1.570796326794896619231321691639751442098584699687552910487; //!<  Archimedes' Constant divided by two.
             constexpr const double PI      = 3.141592653589793238462643383279502884197169399375105820974; //!<  Archimedes' Constant.
+            constexpr const double TWO_PI  = 6.283185307179586476925286766559005768394338798750211641949; //!<  Archimedes' Constant timesed by two.
             constexpr const double EXP     = 2.718281828459045235360287471352662497757247093699959574966; //!< Euler's Number.
 
 
