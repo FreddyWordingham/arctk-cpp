@@ -44,14 +44,14 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Data --
-                std::vector<std::vector<arc::vec3>> _pixels; //!< Pixel data of the image.
+                std::vector<std::vector<vec3>> _pixels; //!< Pixel data of the image.
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
                 inline Colour(size_t width_, size_t height_) noexcept;
-                inline explicit Colour(const std::vector<std::vector<arc::vec3>>& pixels_) noexcept;
+                inline explicit Colour(const std::vector<std::vector<vec3>>& pixels_) noexcept;
 
 
                 //  == METHODS ==
@@ -62,8 +62,6 @@ namespace arc //! arctk namespace
                 //  -- Saving --
                 inline void save(const std::string& path_) const noexcept override;
                 inline void save(const std::string& path_, double (*scale_)(double)) const noexcept override;
-                inline void save(const std::string& path_, vec3 (*map_)(double)) const noexcept override;
-                inline void save(const std::string& path_, double (*scale_)(double), vec3 (*map_)(double)) const noexcept override;
             };
 
 
@@ -81,7 +79,7 @@ namespace arc //! arctk namespace
              */
             inline Colour::Colour(const size_t width_, const size_t height_) noexcept
               : Image(width_, height_)
-              , _pixels(std::vector<std::vector<arc::vec3>>(width_, std::vector<arc::vec3>(height_)))
+              , _pixels(std::vector<std::vector<vec3>>(width_, std::vector<vec3>(height_)))
             {
                 PRE(width_ > 0);
                 PRE(height_ > 0);
@@ -95,7 +93,7 @@ namespace arc //! arctk namespace
              *  @pre    pixels_ may not be empty.
              *  @pre    pixels_ front element may not be empty.
              */
-            inline Colour::Colour(const std::vector<std::vector<arc::vec3>>& pixels_) noexcept
+            inline Colour::Colour(const std::vector<std::vector<vec3>>& pixels_) noexcept
               : Image(pixels_.size(), pixels_.empty() ? 0 : pixels_.front().size())
               , _pixels(pixels_)
             {
@@ -120,7 +118,7 @@ namespace arc //! arctk namespace
              *  @pre    val_.g must be non-negative.
              *  @pre    val_.b must be non-negative.
              */
-            inline void Colour::collect(const size_t col_, const size_t row_, const arc::vec3& val_) noexcept
+            inline void Colour::collect(const size_t col_, const size_t row_, const vec3& val_) noexcept
             {
                 PRE(col_ < _width);
                 PRE(row_ < _height);
@@ -142,45 +140,10 @@ namespace arc //! arctk namespace
              */
             inline void Colour::save(const std::string& path_) const noexcept
             {
-                save(path_, [](const double x_) { return (x_); }, [](const double x_) { return (vec3(x_, x_, x_)); });
+                save(path_, [](const double x_) { return (x_); });
             }
 
-            /**
-             *  Save the image data using a value scaling function.
-             *  Pixel values are normalised then scaled using the given scaling function.
-             *  Pixel values are converted to a greyscale colour.
-             *
-             *  @param  path_   Path to the output file.
-             *  @param  scale_  Function used to scale the normalised values.
-             */
-            inline void Greyscale::save(const std::string& path_, double (*const scale_)(const double)) const noexcept
-            {
-                save(path_, scale_, [](const double x_) { return (vec3(x_, x_, x_)); });
-            }
-
-            /**
-             *  Save the image data using a colour mapping function.
-             *  Pixel values are normalised but not scaled.
-             *  Pixel values are converted to a colour using the given mapping function.
-             *
-             *  @param  path_   Path to the output file.
-             *  @param  map_    Function used to map scaled values to a colour.
-             */
-            inline void Greyscale::save(const std::string& path_, vec3 (*const map_)(const double)) const noexcept
-            {
-                save(path_, [](const double x_) { return (x_); }, map_);
-            }
-
-            /**
-             *  Save the image data using value scaling and colour mapping functions.
-             *  Pixel values are normalised then scaled using the given scaling function.
-             *  Pixel values are converted to a colour using the given mapping function.
-             *
-             *  @param  path_   Path to the output file.
-             *  @param  scale_  Function used to scale the normalised values.
-             *  @param  map_    Function used to map scaled values to a colour.
-             */
-            inline void Greyscale::save(const std::string& path_, double (*const scale_)(const double), vec3 (*const map_)(const double)) const noexcept
+            inline void Colour::save(const std::string& path_, double (*const scale_)(const double)) const noexcept
             {
                 PRE(!path_.empty());
 
@@ -189,9 +152,12 @@ namespace arc //! arctk namespace
                 {
                     for (size_t j = 0; j < _width; ++j)
                     {
-                        if (_pixels[j][i] > max)
+                        for (size_t k = 0; k < _width; ++k)
                         {
-                            max = _pixels[j][i];
+                            if (_pixels[j][i][k] > max)
+                            {
+                                max = _pixels[j][i][k];
+                            }
                         }
                     }
                 }
@@ -206,11 +172,9 @@ namespace arc //! arctk namespace
                 {
                     for (size_t j = 0; j < _height; ++j)
                     {
-                        const vec3 col = map_(scale_(_pixels[i][j] / max));
-
                         for (size_t k = 0; k < 3; ++k)
                         {
-                            pixels[i][j][k] = col[k];
+                            pixels[i][j][k] = scale_(_pixels[i][j][k] / max);
                         }
                     }
                 }
