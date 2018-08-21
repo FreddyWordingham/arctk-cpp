@@ -87,6 +87,7 @@ namespace arc //! arctk namespace
               : _pos(pos_)
               , _norm(norm_)
               , _rad(rad_)
+              , _aperture(aperture_)
             {
                 PRE(norm_.normalised());
                 PRE(rad_ > 0.0);
