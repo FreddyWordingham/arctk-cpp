@@ -138,7 +138,7 @@ namespace arc //! arctk namespace
             //  -- Emission --
             inline vec3 Plane::random_pos(random::Generator* const rng_, const double rad_) const noexcept
             {
-                vec3 pos = math::convert::polar_to_cart(vec3(random::distribution::uniform(rng_, 0.0, rad_), 0.0, random::distribution::uniform(rng_, 0.0, 2.0 * consts::math::PI)));
+                vec3 pos = math::convert::polar_to_cart(random::distribution::uniform(rng_, 0.0, rad_), 0.0, random::distribution::uniform(rng_, 0.0, 2.0 * consts::math::PI));
 
                 const double theta = std::acos(_norm.z);
                 pos.rotate((vec3(0.0, 0.0, 1.0) ^ _norm).normal(), theta);
