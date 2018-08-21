@@ -60,7 +60,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Emission --
-                inline vec3 random_pos(random::Generator* const rng_) const noexcept override;
+                inline vec3                  random_pos(random::Generator* const rng_) const noexcept override;
+                inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* const rng_) const noexcept override;
 
                 //  -- Collision --
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -109,6 +110,19 @@ namespace arc //! arctk namespace
                 pos.rotate((math::vec::axis<double, 3>(axis) ^ _norm).normal(), theta);
 
                 return (pos + _pos);
+            }
+
+            inline std::pair<vec3, vec3> Circle::random_pos_and_norm(random::Generator* const rng_) const noexcept
+            {
+                vec3 pos(std::sqrt(random::distribution::uniform(rng_, _rad * _rad)), arc::consts::math::HALF_PI, random::distribution::uniform(rng_, consts::math::TWO_PI));
+                pos = math::convert::polar_to_cart(pos);
+
+                const size_t axis  = !math::compare::unity(_norm.z) ? index::dim::cartesian::Z : index::dim::cartesian::X;
+                const double theta = std::acos(_norm[axis]);
+
+                pos.rotate((math::vec::axis<double, 3>(axis) ^ _norm).normal(), theta);
+
+                return (std::pair<vec3, vec3>(pos + _pos, _norm));
             }
 
 
