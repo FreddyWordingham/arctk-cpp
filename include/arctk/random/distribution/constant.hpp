@@ -183,7 +183,7 @@ namespace arc //! arctk namespace
             {
                 const size_t index = utl::search::lower(_cdfs, rng_->gen());
 
-                return (_vals[index] + (rng_->gen() * (_vals[index + 1] - _vals[index])));
+                return (random::distribution::uniform(rng_, _vals[index], _vals[index + 1]));
             }
 
 
