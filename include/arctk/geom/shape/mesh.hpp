@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
 
               private:
                 //  -- Initialisation --
-                inline std::vector<Triangle> init_tris() const noexcept;
+                inline std::vector<Triangle> init_tris(const std::string& serial_, const mat4& transform_) const noexcept;
                 inline std::vector<double>   init_areas() const noexcept;
 
 
