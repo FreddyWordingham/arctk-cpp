@@ -152,7 +152,7 @@ namespace arc //! arctk namespace
                     std::cerr << "Unable to initialise rows of data table.\n"
                               << "Column: `" << i << "` contains: `" << col_length[i] << "` elements, but the first column contains: `" << first_col_.size() << "` elements.\n";
 
-                    std::exit(exit::error::FAILED_CONSTRUCT);
+                    std::exit(exit::error::FAILED_INITIALISATION);
                 }
             }
 
