@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
-             *  Construct a greyscale image with given dimensions in pixels.
+             *  Construct a colour image with given dimensions in pixels.
              *
              *  @param  width_  Width of the image in pixels.
              *  @param  height_ Height of the image in pixels.
