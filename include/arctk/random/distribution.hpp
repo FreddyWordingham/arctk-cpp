@@ -254,7 +254,7 @@ namespace arc //! arctk namespace
 
                 if (math::compare::zero(g_))
                 {
-                    return (std::acos((rng_->gen() * 2.0) - 1.0));
+                    return (std::acos(uniform(rng_, -1.0, 1.0));
                 }
 
                 return (std::acos((1.0 + (g_ * g_) - math::pow::sq((1.0 - (g_ * g_)) / (1.0 + (g_ * uniform(rng_, -1.0, 1.0))))) / (2.0 * g_)));
