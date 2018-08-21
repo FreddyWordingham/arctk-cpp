@@ -73,6 +73,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline double      weight() const noexcept;
             inline const vec3& pos() const noexcept;
             inline const vec3& dir() const noexcept;
             inline double      time() const noexcept;
@@ -114,6 +115,16 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the statistical weight of the particle.
+         *
+         *  @return Statistical weight of the particle.
+         */
+        inline double Particle::weight() const noexcept
+        {
+            return (_weight);
+        }
+
         /**
          *  Get the position of the particle.
          *
