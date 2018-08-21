@@ -47,13 +47,14 @@ namespace arc //! arctk namespace
                 const vec3 _norm; //!< Normal of the plane.
 
                 //  -- Properties --
-                const double _rad; //!< Radius of the circle.
+                const double _rad;      //!< Radius of the circle.
+                const double _aperture; //!< Numerical aperture of the circle.
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline explicit Circle(const vec3& pos_, const vec3& norm_, double rad_) noexcept;
+                inline explicit Circle(const vec3& pos_, const vec3& norm_, double rad_ = 1.0, double aperture_ = 0.0) noexcept;
 
 
                 //  == METHODS ==
@@ -125,8 +126,8 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Determine if a collision event occurs between the plane and a ray.
-             *  If a collision does occur, return the distance to the collision point and the normal of the plane at the collision point.
+             *  Determine if a collision event occurs between the circle and a ray.
+             *  If a collision does occur, return the distance to the collision point and the normal of the circle at the collision point.
              *
              *  @param  pos_    Position of the ray.
              *  @param  dir_    Direction of the ray.
