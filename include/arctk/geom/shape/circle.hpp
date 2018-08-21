@@ -165,7 +165,7 @@ namespace arc //! arctk namespace
 
                 const double dist = ((_pos - pos_) * _norm) / denom;
 
-                if (dist_ < 0.0)
+                if (dist < 0.0)
                 {
                     return (std::nullopt);
                 }
