@@ -47,6 +47,7 @@ namespace arc //! arctk namespace
                 vec3 _norm; //!< Normal of the plane.
 
                 //  -- Properties --
+                const double _rad; //!< Radius of the circle.
 
 
                 //  == INSTANTIATION ==
