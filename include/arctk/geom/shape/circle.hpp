@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
-             *  Construct a circle at a location with a normal direction and given radius.
+             *  Construct a circle at a given location with a normal direction, radius and numerical aperture.
              *
              *  @param  pos_        Position of the circle.
              *  @param  norm_       Normal of the circle.
