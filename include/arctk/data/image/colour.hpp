@@ -116,13 +116,17 @@ namespace arc //! arctk namespace
              *
              *  @pre    col_ must be less than _width.
              *  @pre    row_ must be less than _height.
-             *  @pre    val_ must be non-negative.
+             *  @pre    val_.r must be non-negative.
+             *  @pre    val_.g must be non-negative.
+             *  @pre    val_.b must be non-negative.
              */
-            inline void Greyscale::collect(const size_t col_, const size_t row_, const double val_) noexcept
+            inline void Colour::collect(const size_t col_, const size_t row_, const arc::vec3& val_) noexcept
             {
                 PRE(col_ < _width);
                 PRE(row_ < _height);
-                PRE(val_ >= 0.0);
+                PRE(val_.r >= 0.0);
+                PRE(val_.g >= 0.0);
+                PRE(val_.b >= 0.0);
 
                 _pixels[col_][row_] += val_;
             }
@@ -136,7 +140,7 @@ namespace arc //! arctk namespace
              *
              *  @param  path_   Path to the output file.
              */
-            inline void Greyscale::save(const std::string& path_) const noexcept
+            inline void Colour::save(const std::string& path_) const noexcept
             {
                 save(path_, [](const double x_) { return (x_); }, [](const double x_) { return (vec3(x_, x_, x_)); });
             }
