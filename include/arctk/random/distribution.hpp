@@ -120,6 +120,8 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Sampling --
             template <typename T>
+            inline T uniform(Generator* rng_, const T max_) noexcept;
+            template <typename T>
             inline T uniform(Generator* rng_, const T min_, const T max_) noexcept;
             template <typename T = double>
             inline T normal(Generator* rng_) noexcept;
@@ -134,6 +136,21 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Sampling --
+            template <typename T>
+            inline T uniform(Generator* const rng_, const T max_) noexcept
+            {
+                static_assert(std::is_arithmetic<T>::value);
+
+                if constexpr (std::is_integral<T>::value)
+                {
+                    return (std::floor(rng_->gen() * (max_ + 1)));
+                }
+                else
+                {
+                    return (rng_->gen() * max_);
+                }
+            }
+
             /**
              *  Generate a random number sampled from a uniform distribution between given minimum and maximum bounds.
              *
