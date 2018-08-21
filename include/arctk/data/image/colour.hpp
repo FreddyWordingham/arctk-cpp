@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Collection --
-                inline void collect(size_t col_, size_t row_, const vec3& val_) noexcept override;
+                inline void collect(size_t col_, size_t row_, const vec3& val_) noexcept;
 
                 //  -- Saving --
                 inline void save(const std::string& path_) const noexcept override;
