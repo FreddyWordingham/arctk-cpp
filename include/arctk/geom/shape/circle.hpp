@@ -154,7 +154,7 @@ namespace arc //! arctk namespace
              *
              *  @return Optional collision distance and intersection normal.
              */
-            inline std::optional<std::pair<double, vec3>> Plane::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<std::pair<double, vec3>> Circle::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 const double denom = _norm * dir_;
 
