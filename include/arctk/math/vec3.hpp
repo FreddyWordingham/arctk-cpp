@@ -723,6 +723,8 @@ namespace arc //! arctk namespace
             template <typename T>
             constexpr inline Vec<T, 3>::axis(const size_t dim_) noexcept
             {
+                PRE(dim_ < 3);
+
                 Vec<T, 3> vec;
 
                 vec[dim_] = 1.0;
