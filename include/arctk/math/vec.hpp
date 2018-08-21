@@ -793,48 +793,8 @@ namespace arc //! arctk namespace
 
 
 
-        namespace vec //! vector namespace
-        {
-
-
-
-            //  == FUNCTION PROTOTYPES ==
-            //  -- Utility --
-            template <typename T, size_t N>
-            inline Vec<T, N> normalise(const Vec<T, N>& vec_) noexcept;
-
-
-
-            //  == FUNCTIONS ==
-            //  -- Utility --
-            /**
-             *  Return a normalised vec.
-             *
-             *  @tparam T   Type stored by the vec.
-             *  @tparam N   Size of the vec.
-             *
-             *  @param  vec_    Vec to find the normalisation of.
-             *
-             *  @post   vec must be normalised.
-             *
-             *  @return Normalied vec.
-             */
-            template <typename T, size_t N>
-            inline Vec<T, N> normalise(const Vec<T, N>& vec_) noexcept
-            {
-                Vec<T, N> vec = vec_;
-
-                vec.normalise();
-
-                POST(vec.normalised());
-
-                return (vec);
-            }
-
-
-
-        } // namespace vec
-    }     // namespace math
+    } // namespace math
+} // namespace arc
 } // namespace arc
 
 
