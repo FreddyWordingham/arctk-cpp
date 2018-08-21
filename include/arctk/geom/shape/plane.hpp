@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Emission --
-                inline vec3 random_pos(random::Generator* const rng_, double rad_ = 1.0) const noexcept override;
+                inline vec3 random_pos(random::Generator* const rng_) const noexcept override;
 
                 //  -- Collision --
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -136,9 +136,9 @@ namespace arc //! arctk namespace
 
 
             //  -- Emission --
-            inline vec3 Plane::random_pos(random::Generator* const rng_, const double rad_) const noexcept
+            inline vec3 Plane::random_pos(random::Generator* const rng_) const noexcept
             {
-                vec3 pos = math::convert::polar_to_cart(random::distribution::uniform(rng_, 0.0, rad_), 0.0, random::distribution::uniform(rng_, 0.0, 2.0 * consts::math::PI));
+                vec3 pos = math::convert::polar_to_cart(rng_->gen(), 0.0, random::distribution::uniform(rng_, 0.0, 2.0 * consts::math::PI));
 
                 const double theta = std::acos(_norm.z);
                 pos.rotate((vec3(0.0, 0.0, 1.0) ^ _norm).normal(), theta);
