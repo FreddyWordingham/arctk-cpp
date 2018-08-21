@@ -57,6 +57,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Collection --
+                inline void collect(size_t col_, size_t row_, double val_) noexcept override;
                 inline void collect(size_t col_, size_t row_, const vec3& val_) noexcept;
 
                 //  -- Saving --
@@ -105,6 +106,26 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Collection --
+            /**
+             *  Collect a value into the pixel data array.
+             *
+             *  @param  col_    Column of the pixel to add to.
+             *  @param  row_    Row of the pixel to add to.
+             *  @param  val_    Value to add the pixel.
+             *
+             *  @pre    col_ must be less than _width.
+             *  @pre    row_ must be less than _height.
+             *  @pre    val_ must be non-negative.
+             */
+            inline void Colour::collect(const size_t col_, const size_t row_, const double val_) noexcept
+            {
+                PRE(col_ < _width);
+                PRE(row_ < _height);
+                PRE(val_ >= 0.0);
+
+                collect(vec3(val_, val_, val_));
+            }
+
             /**
              *  Collect a value into the pixel data array.
              *
