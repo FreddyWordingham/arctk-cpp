@@ -43,8 +43,8 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Positioning --
-                vec3 _pos;  //!< Position of the plane.
-                vec3 _norm; //!< Normal of the plane.
+                const vec3 _pos;  //!< Position of the plane.
+                const vec3 _norm; //!< Normal of the plane.
 
 
                 //  == INSTANTIATION ==
