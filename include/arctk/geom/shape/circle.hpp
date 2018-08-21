@@ -134,7 +134,7 @@ namespace arc //! arctk namespace
 
                 const double dist = ((_pos - pos_) * _norm) / denom;
 
-                if ((dist_ < 0.0) || (math::geom::distance(_pos, pos_ + (dir_ * dist)) > _rad))
+                if ((dist < 0.0) || (math::geom::distance(_pos, pos_ + (dir_ * dist)) > _rad))
                 {
                     return (std::nullopt);
                 }
