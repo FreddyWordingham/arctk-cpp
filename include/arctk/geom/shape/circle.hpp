@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline explicit Circle(const vec3& pos_, const vec3& norm_, double rad_ = 1.0, double aperture_ = 0.0) noexcept;
+                inline explicit Circle(const vec3& pos_ = arc::vec3(0.0, 0.0, 0.0), const vec3& norm_ = arc::vec3(0.0, 0.0, 1.0), double rad_ = 1.0, double aperture_ = 0.0) noexcept;
 
 
                 //  == METHODS ==
