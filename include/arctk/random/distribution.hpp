@@ -197,8 +197,8 @@ namespace arc //! arctk namespace
                 const double xi_1 = rng_->gen();
 
                 const double m  = std::sqrt(-2.0 * std::log(xi_0));
-                const double z0 = m * std::cos(2.0 * consts::math::PI * xi_1);
-                _z1             = m * std::sin(2.0 * consts::math::PI * xi_1);
+                const double z0 = m * std::cos(consts::math::TWO_PI * xi_1);
+                _z1             = m * std::sin(consts::math::TWO_PI * xi_1);
 
                 return (z0);
             }
@@ -276,7 +276,7 @@ namespace arc //! arctk namespace
             {
                 static_assert(math::is_vec<T>::value);
 
-                const double phi   = rng_->gen() * 2.0 * consts::math::PI;
+                const double phi   = rng_->gen() * consts::math::TWO_PI;
                 const double theta = std::acos((rng_->gen() * 2.0) - 1.0);
 
                 return (math::convert::polar_to_cart(T(1.0, theta, phi)));
