@@ -259,7 +259,7 @@ namespace arc //! arctk namespace
             inline void Basic::interact(random::Generator* rng_, particle::Photon* phot_) const noexcept
             {
                 phot_->multiply_weight(phot_->opt().albedo());
-                phot_->rotate(random::distribution::henyey_greenstein(rng_, phot_->opt().asym()), random::distribution::uniform(rng_, 0.0, consts::math::TWO_PI));
+                phot_->rotate(random::distribution::henyey_greenstein(rng_, phot_->opt().asym()), random::distribution::uniform(rng_, consts::math::TWO_PI));
             }
 
 
