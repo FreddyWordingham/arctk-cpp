@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cstdlib>
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -141,7 +142,19 @@ namespace arc //! arctk namespace
         template <typename T, typename... B>
         inline std::vector<std::tuple<A...>> Table<A...>::init_rows(const std::vector<T>& first_col_, const std::vector<B>&... cols_) noexcept
         {
-            (assert(first_col_.size() == cols_.size()), ...); // TODO: Change to use pre-condition.
+            std::vector<size_t> col_length;
+            (col_length.emplace_back(cols_.size()), ...);
+
+            for (size_t i = 0; i < col_length.size(); ++i)
+            {
+                if (col_length[i] != first_col_.size())
+                {
+                    std::cerr << "Unable to initialise rows of data table.\n"
+                              << "Column: `" << i << "` contains: `" << col_length[i] "` elements, but the first column contains: `" << first_col_.size() << "` elements.\n";
+
+                    std::exit(exit::error::FAILED_CONSTRUCT);
+                }
+            }
 
             std::vector<std::tuple<A...>> rows;
             rows.reserve(first_col_.size());
