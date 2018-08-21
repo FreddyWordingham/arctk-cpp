@@ -55,6 +55,9 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Emission --
+                inline vec3 random_pos(random::Generator* const rng_, double rad_ = 1.0) const noexcept override;
+
                 //  -- Collision --
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
                 inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -129,6 +132,18 @@ namespace arc //! arctk namespace
                 }
 
                 return (std::pair<double, vec3>(dist.value(), _norm));
+            }
+
+
+            //  -- Emission --
+            inline vec3 Plane::random_pos(random::Generator* const rng_, const double rad_) const noexcept
+            {
+                vec3 pos(rng_->gen(), rng_->gen(), 0.0);
+
+                const double theta = std::acos(_norm.z);
+                pos.rotate((vec3(0.0, 0.0, 1.0) ^ _norm).normal(), theta);
+
+                return (pos + _pos);
             }
 
 
