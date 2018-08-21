@@ -46,8 +46,8 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Positioning --
-                vec3 _min; //!< Minimum vertex of the aabb.
-                vec3 _max; //!< Maximum vertex of the aabb.
+                const vec3 _min; //!< Minimum vertex of the aabb.
+                const vec3 _max; //!< Maximum vertex of the aabb.
 
                 //  -- Areas --
                 std::array<double, 4> _areas; //!< Normalised relative area of each pair of faces.
