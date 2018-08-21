@@ -170,7 +170,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                return (std::optional<std::pair<double, vec3>>(dist, _norm));
+                return (std::pair<double, vec3>(dist, _norm));
             }
 
 
