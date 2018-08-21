@@ -50,8 +50,8 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Greyscale(size_t width_, size_t height_) noexcept;
-                inline explicit Greyscale(const std::vector<std::vector<double>>& pixels_) noexcept;
+                inline Colour(size_t width_, size_t height_) noexcept;
+                inline explicit Colour(const std::vector<std::vector<arc::vec3>>& pixels_) noexcept;
 
 
                 //  == METHODS ==
@@ -79,9 +79,9 @@ namespace arc //! arctk namespace
              *  @pre    width_ must be positive.
              *  @pre    height_ must be positive.
              */
-            inline Greyscale::Greyscale(const size_t width_, const size_t height_) noexcept
+            inline Colour::Colour(const size_t width_, const size_t height_) noexcept
               : Image(width_, height_)
-              , _pixels(std::vector<std::vector<double>>(width_, std::vector<double>(height_)))
+              , _pixels(std::vector<std::vector<arc::vec3>>(width_, std::vector<arc::vec3>(height_)))
             {
                 PRE(width_ > 0);
                 PRE(height_ > 0);
@@ -95,7 +95,7 @@ namespace arc //! arctk namespace
              *  @pre    pixels_ may not be empty.
              *  @pre    pixels_ front element may not be empty.
              */
-            inline Greyscale::Greyscale(const std::vector<std::vector<double>>& pixels_) noexcept
+            inline Colour::Colour(const std::vector<std::vector<double>>& pixels_) noexcept
               : Image(pixels_.size(), pixels_.empty() ? 0 : pixels_.front().size())
               , _pixels(pixels_)
             {
