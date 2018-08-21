@@ -123,7 +123,7 @@ namespace arc //! arctk namespace
                 PRE(row_ < _height);
                 PRE(val_ >= 0.0);
 
-                collect(vec3(val_, val_, val_));
+                collect(col_, row_, vec3(val_, val_, val_));
             }
 
             /**
