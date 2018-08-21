@@ -83,7 +83,7 @@ namespace arc //! arctk namespace
              *  @pre    rad_ must be positive.
              *  @pre    aperture_ must be between zero and half-Pi.
              */
-            inline Plane::Plane(const vec3& pos_, const vec3& norm_, const double rad_, const double aperture_) noexcept
+            inline Circle::Circle(const vec3& pos_, const vec3& norm_, const double rad_, const double aperture_) noexcept
               : _pos(pos_)
               , _norm(norm_)
               , _rad(rad_)
