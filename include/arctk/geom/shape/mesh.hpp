@@ -286,7 +286,7 @@ namespace arc //! arctk namespace
             //  -- Emission --
             inline vec3 Mesh::random_pos(random::Generator* const rng_) const noexcept
             {
-                return (_tris[utl::search::lower(_areas, rng_->gen())].random_pos());
+                return (_tris[utl::search::lower(_areas, rng_->gen())].random_pos(rng_));
             }
 
 
