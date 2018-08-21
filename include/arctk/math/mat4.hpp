@@ -826,6 +826,10 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTION PROTOTYPES ==
+            //  -- Utility --
+            template <typename T>
+            constexpr inline Mat<T, 4> indentity() noexcept;
+
             //  -- Transformation --
             template <typename T>
             constexpr inline Mat<T, 4> scale(const Vec<T, 3>& scale_) noexcept;

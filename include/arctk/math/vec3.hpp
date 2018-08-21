@@ -706,7 +706,22 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace math
+        namespace vec //! vector namespace
+        {
+
+
+
+            //  == FUNCTION PROTOTYPES ==
+            //  -- Transformation --
+
+
+            //  == FUNCTIONS ==
+            //  -- Utility --
+
+
+
+        } // namespace vec
+    }     // namespace math
 } // namespace arc
 
 
