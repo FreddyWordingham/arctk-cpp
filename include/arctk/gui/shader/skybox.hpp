@@ -161,7 +161,7 @@ namespace arc //! arctk namespace
                     PRE(!images_[i].empty());
                 }
 
-                _cube.rotate(glm::vec3(static_cast<float>(consts::math::PI) / 2.0f, 0.0f, 0.0f));
+                _cube.rotate(glm::vec3(static_cast<float>(consts::math::HALF_PI), 0.0f, 0.0f));
             }
 
 
