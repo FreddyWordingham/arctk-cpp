@@ -793,8 +793,36 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace math
-} // namespace arc
+        namespace vec //! vector namespace
+        {
+
+
+
+            //  == FUNCTION PROTOTYPES ==
+            //  -- Utility --
+            template <typename T, size_t N>
+            constexpr inline Vec<T, N>::axis(size_t dim_) noexcept;
+
+
+
+            //  == FUNCTIONS ==
+            //  -- Utility --
+            template <typename T>
+            constexpr inline Vec<T, N>::axis(const size_t dim_) noexcept
+            {
+                PRE(dim_ < N);
+
+                Vec<T, N> vec;
+
+                vec[dim_] = 1.0;
+
+                return (vec);
+            }
+
+
+
+        } // namespace vec
+    }     // namespace math
 } // namespace arc
 
 
