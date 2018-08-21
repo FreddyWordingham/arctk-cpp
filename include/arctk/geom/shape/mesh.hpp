@@ -128,6 +128,8 @@ namespace arc //! arctk namespace
              */
             inline std::vector<Triangle> Mesh::init_tris(const std::string& serial_, const mat4& transform_) const noexcept // NOLINT
             {
+                std::cout << transform_.str() << '\n';
+
                 PRE(!serial_.empty());
 
                 std::vector<Triangle> tris;
@@ -147,7 +149,7 @@ namespace arc //! arctk namespace
                     {
                         vec4 pos;
                         line_stream >> pos.x >> pos.y >> pos.z;
-                        pos.w = 0.0;
+                        pos.w = 1.0;
 
                         pos = transform_ * pos;
 
@@ -157,7 +159,7 @@ namespace arc //! arctk namespace
                     {
                         vec4 norm;
                         line_stream >> norm.x >> norm.y >> norm.z;
-                        norm.w = 1.0;
+                        norm.w = 0.0;
 
                         norm = inv_transform * norm;
 
