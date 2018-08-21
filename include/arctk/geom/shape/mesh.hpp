@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
                 const std::vector<Triangle> _tris; //!< List of triangles forming the mesh.
 
                 //  -- Areas --
-                std::vector<double> _areas; //!< Normalised relative area of each triangle forming the mesh.
+                const std::vector<double> _areas; //!< Normalised relative area of each triangle forming the mesh.
 
 
                 //  == INSTANTIATION ==
