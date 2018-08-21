@@ -173,7 +173,7 @@ namespace arc //! arctk namespace
                 {
                     for (size_t j = 0; j < _width; ++j)
                     {
-                        for (size_t k = 0; k < _width; ++k)
+                        for (size_t k = 0; k < 3; ++k)
                         {
                             if (_pixels[j][i][k] > max)
                             {
