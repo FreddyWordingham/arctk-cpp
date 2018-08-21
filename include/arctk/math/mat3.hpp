@@ -691,24 +691,36 @@ namespace arc //! arctk namespace
 
 
 
-        //  == FUNCTIONS ==
-        //  -- Utility --
-        /**
-         *  Create an 3 by 3 identity matrix.
-         *
-         *  @tparam T   Type stored by the mat.
-         *
-         *  @return 3 by 3 identity matrix.
-         */
-        template <typename T>
-        constexpr inline Mat<T, 3> indentity() noexcept
+        namespace mat //! matrix namespace
         {
-            return (Mat<T, 3>(Vec<T, 3>(T{1}, T{0}, T{0}), Vec<T, 3>(T{0}, T{1}, T{0}), Vec<T, 3>(T{0}, T{0}, T{1})));
-        }
 
 
 
-    } // namespace math
+            //  == FUNCTION PROTOTYPES ==
+            //  -- Utility --
+            template <typename T>
+            constexpr inline Mat<T, 4> indentity() noexcept;
+
+
+            //  == FUNCTIONS ==
+            //  -- Utility --
+            /**
+             *  Create an 3 by 3 identity matrix.
+             *
+             *  @tparam T   Type stored by the mat.
+             *
+             *  @return 3 by 3 identity matrix.
+             */
+            template <typename T>
+            constexpr inline Mat<T, 3> indentity() noexcept
+            {
+                return (Mat<T, 3>(Vec<T, 3>(T{1}, T{0}, T{0}), Vec<T, 3>(T{0}, T{1}, T{0}), Vec<T, 3>(T{0}, T{0}, T{1})));
+            }
+
+
+
+        } // namespace mat
+    }     // namespace math
 } // namespace arc
 
 
