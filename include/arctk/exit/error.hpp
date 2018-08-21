@@ -50,6 +50,9 @@ namespace arc //! arctk namespace
             constexpr const int SHADER_UNIFORM_DUPLICATE   = 145; //!< Attempt was made to initialise a shader twice.
             constexpr const int TEXTURE_LOAD_FAILED        = 146; //!< Texture could not be loaded.
 
+            //  -- Construction --
+            constexpr const int FAILED_INITIALISATION = 150; //!< Failed to construct an object during initialisation.
+
 
 
         } // namespace error
