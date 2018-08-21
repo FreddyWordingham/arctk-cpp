@@ -62,8 +62,8 @@ namespace arc //! arctk namespace
                 //  -- Saving --
                 inline void save(const std::string& path_) const noexcept override;
                 inline void save(const std::string& path_, double (*scale_)(double)) const noexcept override;
-                inline void save(const std::string& path_, vec3 (*map_)(double)) const noexcept override;
-                inline void save(const std::string& path_, double (*scale_)(double), vec3 (*map_)(double)) const noexcept override;
+                inline void save(const std::string& path_, vec3 (*map_)(double)) const noexcept;
+                inline void save(const std::string& path_, double (*scale_)(double), vec3 (*map_)(double)) const noexcept;
             };
 
 
