@@ -180,6 +180,12 @@ namespace arc //! arctk namespace
                 return (cart);
             }
 
+            template <typename T>
+            inline Vec<T, 3> polar_to_cart(const T rho_, const T theta_, const T phi_) noexcept
+            {
+                return (polar_to_cart(Vec<T, 3>(rho_, theta_, phi_)));
+            }
+
 
 
         } // namespace convert
