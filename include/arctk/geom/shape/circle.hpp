@@ -75,20 +75,23 @@ namespace arc //! arctk namespace
             /**
              *  Construct a circle at a location with a normal direction and given radius.
              *
-             *  @param  pos_    Position of the circle.
-             *  @param  norm_   Normal of the circle.
-             *  @param  rad_    Radius of the circle.
+             *  @param  pos_        Position of the circle.
+             *  @param  norm_       Normal of the circle.
+             *  @param  rad_        Radius of the circle.
+             *  @param  aperture_   Numerical aperture of the circle.
              *
              *  @pre    norm_ must be normalised.
              *  @pre    rad_ must be positive.
+             *  @pre    aperture_ must be non-negative.
              */
-            inline Plane::Plane(const vec3& pos_, const vec3& norm_, const double rad_) noexcept
+            inline Plane::Plane(const vec3& pos_, const vec3& norm_, const double rad_, const double aperture_) noexcept
               : _pos(pos_)
               , _norm(norm_)
               , _rad(rad_)
             {
                 PRE(norm_.normalised());
-                PRE(rad_ >= 0.0);
+                PRE(rad_ > 0.0);
+                PRE(aperture_ >= 0.0);
             }
 
 
