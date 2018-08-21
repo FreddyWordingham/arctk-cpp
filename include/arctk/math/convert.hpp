@@ -42,7 +42,11 @@ namespace arc //! arctk namespace
             template <typename T>
             inline Vec<T, 2> cart_to_polar(const Vec<T, 2>& cart_) noexcept;
             template <typename T>
+            inline Vec<T, 2> cart_to_polar(const T x_, const T y_) noexcept;
+            template <typename T>
             inline Vec<T, 3> cart_to_polar(const Vec<T, 3>& cart_) noexcept;
+            template <typename T>
+            inline Vec<T, 3> cart_to_polar(const T x_, const T y_, const T z_) noexcept;
             template <typename T>
             inline Vec<T, 2> polar_to_cart(const Vec<T, 2>& polar_) noexcept;
             template <typename T>
@@ -96,6 +100,12 @@ namespace arc //! arctk namespace
                 polar.theta = std::atan2(cart_.y, cart_.x);
 
                 return (polar);
+            }
+
+            template <typename T>
+            inline Vec<T, 2> cart_to_polar(const T x_, const T y_) noexcept
+            {
+                return (cart_to_polar(Vec<T, 2>(x_, y_)));
             }
 
             /**
