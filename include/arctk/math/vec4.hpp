@@ -696,14 +696,14 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Utility --
             template <typename T>
-            constexpr inline Vec<T, 4>::axis(size_t dim_) noexcept;
+            constexpr inline Vec<T, 4> axis(size_t dim_) noexcept;
 
 
 
             //  == FUNCTIONS ==
             //  -- Utility --
             template <typename T>
-            constexpr inline Vec<T, 4>::axis(const size_t dim_) noexcept
+            constexpr inline Vec<T, 4> axis(const size_t dim_) noexcept
             {
                 PRE(dim_ < 4);
 
