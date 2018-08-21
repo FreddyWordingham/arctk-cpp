@@ -141,7 +141,7 @@ namespace arc //! arctk namespace
         template <typename T, typename... B>
         inline std::vector<std::tuple<A...>> Table<A...>::init_rows(const std::vector<T>& first_col_, const std::vector<B>&... cols_) noexcept
         {
-            ((PRE(first_col_.size() == cols_.size()), cols_.size()), ...);
+            (PRE(first_col_.size() == cols_.size()), ...);
 
             std::vector<std::tuple<A...>> rows;
             rows.reserve(first_col_.size());
