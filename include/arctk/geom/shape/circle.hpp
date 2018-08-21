@@ -82,7 +82,7 @@ namespace arc //! arctk namespace
              *
              *  @pre    norm_ must be normalised.
              *  @pre    rad_ must be positive.
-             *  @pre    aperture_ must be non-negative.
+             *  @pre    aperture_ must be between zero and half-Pi.
              */
             inline Plane::Plane(const vec3& pos_, const vec3& norm_, const double rad_, const double aperture_) noexcept
               : _pos(pos_)
@@ -91,7 +91,7 @@ namespace arc //! arctk namespace
             {
                 PRE(norm_.normalised());
                 PRE(rad_ > 0.0);
-                PRE(aperture_ >= 0.0);
+                PRE((aperture_ >= 0.0) && (aperture_ <= consts::math::HALF_PI));
             }
 
 
