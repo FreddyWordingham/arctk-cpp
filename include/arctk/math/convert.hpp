@@ -127,6 +127,12 @@ namespace arc //! arctk namespace
                 return (polar);
             }
 
+            template <typename T>
+            inline Vec<T, 3> cart_to_polar(const T x_, const T y_, const T z_) noexcept
+            {
+                return (cart_to_polar(Vec<T, 3>(x_, y_, z_)));
+            }
+
             /**
              *  Convert a two-dimensional spherical-polar vector to a two-dimensional cartesian vector.
              *
