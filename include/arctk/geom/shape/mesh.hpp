@@ -104,6 +104,7 @@ namespace arc //! arctk namespace
              */
             inline Mesh::Mesh(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
               : _tris(init_tris(serial_, math::mat::transform(scale_, rot_, trans_)))
+              , _areas(init_areas())
             {
                 PRE(!serial_.empty());
             }
