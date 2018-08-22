@@ -42,19 +42,19 @@ namespace arc //! arctk namespace
             template <typename T>
             inline Vec<T, 2> cart_to_polar(const Vec<T, 2>& cart_) noexcept;
             template <typename T>
-            inline Vec<T, 2> cart_to_polar(const T x_, const T y_) noexcept;
+            inline Vec<T, 2> cart_to_polar(T x_, T y_) noexcept;
             template <typename T>
             inline Vec<T, 3> cart_to_polar(const Vec<T, 3>& cart_) noexcept;
             template <typename T>
-            inline Vec<T, 3> cart_to_polar(const T x_, const T y_, const T z_) noexcept;
+            inline Vec<T, 3> cart_to_polar(T x_, T y_, T z_) noexcept;
             template <typename T>
             inline Vec<T, 2> polar_to_cart(const Vec<T, 2>& polar_) noexcept;
             template <typename T>
-            inline Vec<T, 2> polar_to_cart(const T rho_, const T theta_) noexcept;
+            inline Vec<T, 2> polar_to_cart(T rho_, T theta_) noexcept;
             template <typename T>
             inline Vec<T, 3> polar_to_cart(const Vec<T, 3>& polar_) noexcept;
             template <typename T>
-            inline Vec<T, 3> polar_to_cart(const T rho_, const T theta_, const T phi_) noexcept;
+            inline Vec<T, 3> polar_to_cart(T rho_, T theta_, T phi_) noexcept;
 
 
 
