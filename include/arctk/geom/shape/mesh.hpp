@@ -128,8 +128,6 @@ namespace arc //! arctk namespace
              */
             inline std::vector<Triangle> Mesh::init_tris(const std::string& serial_, const mat4& transform_) const noexcept // NOLINT
             {
-                std::cout << transform_.str() << '\n';
-
                 PRE(!serial_.empty());
 
                 std::vector<Triangle> tris;
