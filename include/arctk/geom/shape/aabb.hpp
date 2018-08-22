@@ -121,7 +121,7 @@ namespace arc //! arctk namespace
                 PRE(min_.y < max_.y);
                 PRE(min_.z < max_.z);
 
-                std::array<double, 4> areas;
+                std::array<double, 4> areas{};
 
                 areas[0] = 0.0;
                 for (size_t i = 1; i < 4; ++i)
