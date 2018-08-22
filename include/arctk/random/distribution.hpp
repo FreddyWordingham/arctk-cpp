@@ -156,12 +156,12 @@ namespace arc //! arctk namespace
 
                 PRE(max_ > 0.0);
 
-                if constexpr (std::is_integral<T>::value)          // NOLINT
-                {                                                  // NOLINT
-                    return (std::floor(rng_->gen() * (max_ + 1))); // NOLINT
+                if constexpr (std::is_integral<T>::value) // NOLINT
+                {                                         // NOLINT
+                    return (std::floor(rng_->gen() * (max_ + 1)));
                 }
 
-                return (rng_->gen() * max_);
+                return (rng_->gen() * max_); // NOLINT
             }
 
             /**
@@ -185,12 +185,12 @@ namespace arc //! arctk namespace
 
                 PRE(min_ < max_);
 
-                if constexpr (std::is_integral<T>::value)                          // NOLINT
-                {                                                                  // NOLINT
-                    return (std::floor((rng_->gen() * (max_ - min_ + 1)) + min_)); // NOLINT
+                if constexpr (std::is_integral<T>::value) // NOLINT
+                {                                         // NOLINT
+                    return (std::floor((rng_->gen() * (max_ - min_ + 1)) + min_));
                 }
 
-                return ((rng_->gen() * (max_ - min_)) + min_);
+                return ((rng_->gen() * (max_ - min_)) + min_); // NOLINT
             }
 
             /**
