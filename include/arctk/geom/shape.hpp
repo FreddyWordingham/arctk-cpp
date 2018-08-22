@@ -59,8 +59,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Emission --
-            virtual inline vec3 random_pos(random::Generator* const rng_) const
-              noexcept = 0; //!< Generate a random position on the surface of the shape. @param  rng_    Random number generator.    @return Randomly generated point on the surface of the shape.
+            virtual inline vec3 random_pos(random::Generator* rng_) const noexcept = 0; //!< Generate a random position on the surface of the shape. @param  rng_    Random number generator.    @return Randomly generated point on the surface of the shape.
 
             //  -- Collision --
             virtual inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const
