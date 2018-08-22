@@ -56,6 +56,9 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline const std::vector<std::vector<double>>& pixels() const noexcept;
+
                 //  -- Collection --
                 inline void collect(size_t col_, size_t row_, double val_) noexcept override;
                 inline void collect(size_t col_, size_t row_, const vec3& val_) noexcept;
@@ -105,6 +108,18 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Getters --
+            /**
+             *  Get the array of pixel data.
+             *
+             *  @return Array of pixel data.
+             */
+            inline const std::vector<std::vector<vec3>>& Colour::pixels() const noexcept
+            {
+                return (_pixels);
+            }
+
+
             //  -- Collection --
             /**
              *  Collect a value into the pixel data array.
