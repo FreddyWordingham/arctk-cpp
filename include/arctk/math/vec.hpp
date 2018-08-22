@@ -823,6 +823,16 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Utility --
+            /**
+             *  Construct a unit-axis for a given dimension.
+             *
+             *  @tparam T   Type stored by the vec.
+             *  @tparam N   Size of the vec.
+             *
+             *  @param  dim_    Dimension to create a unit-axis for.
+             *
+             *  @return Unit-axis for a given dimension.
+             */
             template <typename T, size_t N>
             constexpr inline Vec<T, N> axis(const size_t dim_) noexcept
             {
