@@ -105,6 +105,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1578266734d8ff6873a2e71e89c8bfe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c03ff0b382dba5f238c8ab324770f34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#a4c03ff0b382dba5f238c8ab324770f34">Greyscale</a> (const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;pixels_) noexcept</td></tr>
 <tr class="separator:a4c03ff0b382dba5f238c8ab324770f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb4c865a821b3ba0980b82c97f409aa5"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#adb4c865a821b3ba0980b82c97f409aa5">pixels</a> () const noexcept</td></tr>
+<tr class="separator:adb4c865a821b3ba0980b82c97f409aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7584b1ba6227ddcd6a073f083f73cee9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#a7584b1ba6227ddcd6a073f083f73cee9">collect</a> (size_t col_, size_t row_, double val_) noexcept override</td></tr>
 <tr class="separator:a7584b1ba6227ddcd6a073f083f73cee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad4db76d33fc5c00f4c230b511aabb1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#aad4db76d33fc5c00f4c230b511aabb1c">save</a> (const std::string &amp;path_) const noexcept override</td></tr>
@@ -299,6 +301,43 @@ val_ must be non-negative. </dd></dl>
 
 </div>
 </div>
+<a id="adb4c865a821b3ba0980b82c97f409aa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb4c865a821b3ba0980b82c97f409aa5">&#9670;&nbsp;</a></span>pixels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; std::vector&lt; double &gt; &gt; &amp; arc::data::image::Greyscale::pixels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the array of pixel data.</p>
+<dl class="section return"><dt>Returns</dt><dd>Array of pixel data. </dd></dl>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1data_1_1image_1_1_greyscale_adb4c865a821b3ba0980b82c97f409aa5_icgraph.png" border="0" usemap="#classarc_1_1data_1_1image_1_1_greyscale_adb4c865a821b3ba0980b82c97f409aa5_icgraph" alt=""/></div>
+<map name="classarc_1_1data_1_1image_1_1_greyscale_adb4c865a821b3ba0980b82c97f409aa5_icgraph" id="classarc_1_1data_1_1image_1_1_greyscale_adb4c865a821b3ba0980b82c97f409aa5_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1data_1_1image_1_1_greyscale.html#af139686e330738ed6a644ad3bef54122" title="arc::data::image::Greyscale\l::save" alt="" coords="238,5,422,44"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="aad4db76d33fc5c00f4c230b511aabb1c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aad4db76d33fc5c00f4c230b511aabb1c">&#9670;&nbsp;</a></span>save() <span class="overload">[1/4]</span></h2>
 
@@ -331,6 +370,16 @@ val_ must be non-negative. </dd></dl>
 </dl>
 
 <p>Implements <a class="el" href="classarc_1_1data_1_1_image.html#ab4fb40ae785db15062e42c9c93d4254f">arc::data::Image</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1data_1_1image_1_1_greyscale_aad4db76d33fc5c00f4c230b511aabb1c_icgraph.png" border="0" usemap="#classarc_1_1data_1_1image_1_1_greyscale_aad4db76d33fc5c00f4c230b511aabb1c_icgraph" alt=""/></div>
+<map name="classarc_1_1data_1_1image_1_1_greyscale_aad4db76d33fc5c00f4c230b511aabb1c_icgraph" id="classarc_1_1data_1_1image_1_1_greyscale_aad4db76d33fc5c00f4c230b511aabb1c_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1data_1_1image_1_1_greyscale.html#ac63222b63b09a850b263cf53a7444974" title="arc::data::image::Greyscale\l::save" alt="" coords="238,5,422,44"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -377,6 +426,16 @@ val_ must be non-negative. </dd></dl>
 </dl>
 
 <p>Implements <a class="el" href="classarc_1_1data_1_1_image.html#a43646c424bf9046a3df08272f3386f67">arc::data::Image</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1data_1_1image_1_1_greyscale_ac63222b63b09a850b263cf53a7444974_cgraph.png" border="0" usemap="#classarc_1_1data_1_1image_1_1_greyscale_ac63222b63b09a850b263cf53a7444974_cgraph" alt=""/></div>
+<map name="classarc_1_1data_1_1image_1_1_greyscale_ac63222b63b09a850b263cf53a7444974_cgraph" id="classarc_1_1data_1_1image_1_1_greyscale_ac63222b63b09a850b263cf53a7444974_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1data_1_1image_1_1_greyscale.html#aad4db76d33fc5c00f4c230b511aabb1c" title="arc::data::image::Greyscale\l::save" alt="" coords="238,5,422,44"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -421,6 +480,16 @@ val_ must be non-negative. </dd></dl>
   </table>
   </dd>
 </dl>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1data_1_1image_1_1_greyscale_a2e955de728fde846a0c5c030cd425a22_cgraph.png" border="0" usemap="#classarc_1_1data_1_1image_1_1_greyscale_a2e955de728fde846a0c5c030cd425a22_cgraph" alt=""/></div>
+<map name="classarc_1_1data_1_1image_1_1_greyscale_a2e955de728fde846a0c5c030cd425a22_cgraph" id="classarc_1_1data_1_1image_1_1_greyscale_a2e955de728fde846a0c5c030cd425a22_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1data_1_1image_1_1_greyscale.html#aad4db76d33fc5c00f4c230b511aabb1c" title="arc::data::image::Greyscale\l::save" alt="" coords="238,5,422,44"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -472,18 +541,21 @@ val_ must be non-negative. </dd></dl>
   </table>
   </dd>
 </dl>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1data_1_1image_1_1_greyscale_af139686e330738ed6a644ad3bef54122_cgraph.png" border="0" usemap="#classarc_1_1data_1_1image_1_1_greyscale_af139686e330738ed6a644ad3bef54122_cgraph" alt=""/></div>
 <map name="classarc_1_1data_1_1image_1_1_greyscale_af139686e330738ed6a644ad3bef54122_cgraph" id="classarc_1_1data_1_1image_1_1_greyscale_af139686e330738ed6a644ad3bef54122_cgraph">
-<area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="238,40,379,65"/>
-<area shape="rect" id="node6" href="namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="240,89,376,128"/>
-<area shape="rect" id="node3" href="namespacearc_1_1utl_1_1search.html#a83ff5408af0ccc99c51d3dabf4f4562b" title="arc::utl::search::max\l_index" alt="" coords="427,33,568,72"/>
-<area shape="rect" id="node4" href="namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="643,5,764,44"/>
-<area shape="rect" id="node5" href="namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="616,68,791,93"/>
+<area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="260,40,402,65"/>
+<area shape="rect" id="node6" href="namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="263,89,399,128"/>
+<area shape="rect" id="node7" href="classarc_1_1data_1_1image_1_1_greyscale.html#adb4c865a821b3ba0980b82c97f409aa5" title="arc::data::image::Greyscale\l::pixels" alt="" coords="239,152,423,191"/>
+<area shape="rect" id="node8" href="classarc_1_1data_1_1_image.html#a079a037c5919a1dffe4d6c6b4883f48a" title="arc::data::Image::write_ppm" alt="" coords="238,215,424,240"/>
+<area shape="rect" id="node3" href="namespacearc_1_1utl_1_1search.html#a83ff5408af0ccc99c51d3dabf4f4562b" title="arc::utl::search::max\l_index" alt="" coords="472,33,614,72"/>
+<area shape="rect" id="node4" href="namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="689,5,809,44"/>
+<area shape="rect" id="node5" href="namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="662,68,836,93"/>
+<area shape="rect" id="node9" href="namespacearc_1_1str_1_1parse.html#adde18b05b865d3dcae2cccfec5f7e6d8" title="arc::str::parse::file" alt="" coords="479,215,607,240"/>
 </map>
 </div>
 
@@ -520,7 +592,7 @@ val_ must be non-negative. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 22 2018 02:13:08 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 22 2018 13:42:42 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

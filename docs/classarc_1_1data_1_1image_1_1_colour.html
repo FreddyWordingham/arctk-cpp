@@ -105,6 +105,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4e4a5f5cb567732e147e88619df47ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d345185b0b7ecb471539c57756d051d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1image_1_1_colour.html#a6d345185b0b7ecb471539c57756d051d">Colour</a> (const std::vector&lt; std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt;&gt; &amp;pixels_) noexcept</td></tr>
 <tr class="separator:a6d345185b0b7ecb471539c57756d051d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac82bde2b6c02cdd3a174f5719645bad5"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1image_1_1_colour.html#ac82bde2b6c02cdd3a174f5719645bad5">pixels</a> () const noexcept</td></tr>
+<tr class="separator:ac82bde2b6c02cdd3a174f5719645bad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37afacc729c8072b3615e9b2542596d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1image_1_1_colour.html#a37afacc729c8072b3615e9b2542596d6">collect</a> (size_t col_, size_t row_, double val_) noexcept override</td></tr>
 <tr class="separator:a37afacc729c8072b3615e9b2542596d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4d89b95a8e67f811020e9adae2a6660"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1image_1_1_colour.html#ad4d89b95a8e67f811020e9adae2a6660">collect</a> (size_t col_, size_t row_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;val_) noexcept</td></tr>
@@ -357,6 +359,43 @@ val_.b must be non-negative. </dd></dl>
 
 </div>
 </div>
+<a id="ac82bde2b6c02cdd3a174f5719645bad5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac82bde2b6c02cdd3a174f5719645bad5">&#9670;&nbsp;</a></span>pixels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &gt; &amp; arc::data::image::Colour::pixels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the array of pixel data.</p>
+<dl class="section return"><dt>Returns</dt><dd>Array of pixel data. </dd></dl>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1data_1_1image_1_1_colour_ac82bde2b6c02cdd3a174f5719645bad5_icgraph.png" border="0" usemap="#classarc_1_1data_1_1image_1_1_colour_ac82bde2b6c02cdd3a174f5719645bad5_icgraph" alt=""/></div>
+<map name="classarc_1_1data_1_1image_1_1_colour_ac82bde2b6c02cdd3a174f5719645bad5_icgraph" id="classarc_1_1data_1_1image_1_1_colour_ac82bde2b6c02cdd3a174f5719645bad5_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1data_1_1image_1_1_colour.html#a1961f383de6c27c8768e4edf3b00927c" title="arc::data::image::Colour\l::save" alt="" coords="217,5,381,44"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a52815786c1f40e3d35339cfdab11a65d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a52815786c1f40e3d35339cfdab11a65d">&#9670;&nbsp;</a></span>save() <span class="overload">[1/2]</span></h2>
 
@@ -434,18 +473,21 @@ val_.b must be non-negative. </dd></dl>
 </dl>
 
 <p>Implements <a class="el" href="classarc_1_1data_1_1_image.html#a43646c424bf9046a3df08272f3386f67">arc::data::Image</a>.</p>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1data_1_1image_1_1_colour_a1961f383de6c27c8768e4edf3b00927c_cgraph.png" border="0" usemap="#classarc_1_1data_1_1image_1_1_colour_a1961f383de6c27c8768e4edf3b00927c_cgraph" alt=""/></div>
 <map name="classarc_1_1data_1_1image_1_1_colour_a1961f383de6c27c8768e4edf3b00927c_cgraph" id="classarc_1_1data_1_1image_1_1_colour_a1961f383de6c27c8768e4edf3b00927c_cgraph">
-<area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="217,40,358,65"/>
-<area shape="rect" id="node6" href="namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="220,89,356,128"/>
-<area shape="rect" id="node3" href="namespacearc_1_1utl_1_1search.html#a83ff5408af0ccc99c51d3dabf4f4562b" title="arc::utl::search::max\l_index" alt="" coords="406,33,548,72"/>
-<area shape="rect" id="node4" href="namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="623,5,743,44"/>
-<area shape="rect" id="node5" href="namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="596,68,770,93"/>
+<area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="240,40,381,65"/>
+<area shape="rect" id="node6" href="namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="242,89,378,128"/>
+<area shape="rect" id="node7" href="classarc_1_1data_1_1image_1_1_colour.html#ac82bde2b6c02cdd3a174f5719645bad5" title="arc::data::image::Colour\l::pixels" alt="" coords="228,152,392,191"/>
+<area shape="rect" id="node8" href="classarc_1_1data_1_1_image.html#a079a037c5919a1dffe4d6c6b4883f48a" title="arc::data::Image::write_ppm" alt="" coords="217,215,404,240"/>
+<area shape="rect" id="node3" href="namespacearc_1_1utl_1_1search.html#a83ff5408af0ccc99c51d3dabf4f4562b" title="arc::utl::search::max\l_index" alt="" coords="452,33,593,72"/>
+<area shape="rect" id="node4" href="namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="668,5,789,44"/>
+<area shape="rect" id="node5" href="namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="641,68,816,93"/>
+<area shape="rect" id="node9" href="namespacearc_1_1str_1_1parse.html#adde18b05b865d3dcae2cccfec5f7e6d8" title="arc::str::parse::file" alt="" coords="459,215,586,240"/>
 </map>
 </div>
 
@@ -482,7 +524,7 @@ val_.b must be non-negative. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 22 2018 02:13:08 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 22 2018 13:42:42 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

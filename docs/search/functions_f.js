@@ -6,6 +6,7 @@ var searchData=
   ['path',['path',['../namespacearc_1_1gui_1_1actor.html#a70cd46f071386ec37cd9a7c957b70bd1',1,'arc::gui::actor']]],
   ['perspective',['Perspective',['../classarc_1_1gui_1_1lens_1_1_perspective.html#a4024939be58a97497cc01b7cb61cc658',1,'arc::gui::lens::Perspective']]],
   ['photon',['Photon',['../classarc_1_1phys_1_1particle_1_1_photon.html#a131c409576763970f9dfba027b05f710',1,'arc::phys::particle::Photon']]],
+  ['pixels',['pixels',['../classarc_1_1data_1_1image_1_1_colour.html#ac82bde2b6c02cdd3a174f5719645bad5',1,'arc::data::image::Colour::pixels()'],['../classarc_1_1data_1_1image_1_1_greyscale.html#adb4c865a821b3ba0980b82c97f409aa5',1,'arc::data::image::Greyscale::pixels()']]],
   ['plane',['Plane',['../classarc_1_1geom_1_1shape_1_1_plane.html#a9d186df97b468e2336e19e75704c3ca8',1,'arc::geom::shape::Plane']]],
   ['plane_5fcollision',['plane_collision',['../classarc_1_1geom_1_1shape_1_1_triangle.html#abe258581ad067c650f2f9a5cbebd4021',1,'arc::geom::shape::Triangle']]],
   ['plane_5fnorm',['plane_norm',['../classarc_1_1geom_1_1shape_1_1_triangle.html#a5e6273eac5f6dcf71ca9312bc895775f',1,'arc::geom::shape::Triangle']]],
