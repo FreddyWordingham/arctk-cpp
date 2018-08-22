@@ -136,10 +136,26 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Sampling --
+            /**
+             *  Generate a random number sampled from a uniform distribution between zero and a maximum bound.
+             *
+             *  @tparam T   Type to be uniformly generated.
+             *
+             *  @param  rng_    Random number generator.
+             *  @param  min_    Minimum bound of the generated value.
+             *  @param  max_    Maximum bound of the generated value.
+             *
+             *  @pre    T   Must be an arithmetic type.
+             *  @pre    min_ must be less than, or equal to, max_.
+             *
+             *  @return Random number sampled from a uniform distribution.
+             */
             template <typename T>
             inline T uniform(Generator* const rng_, const T max_) noexcept
             {
                 static_assert(std::is_arithmetic<T>::value);
+
+                PRE(max_ > 0.0);
 
                 if constexpr (std::is_integral<T>::value)
                 {
@@ -161,7 +177,7 @@ namespace arc //! arctk namespace
              *  @param  max_    Maximum bound of the generated value.
              *
              *  @pre    T   Must be an arithmetic type.
-             *  @pre    min_ must be less than, or equal to, max_.
+             *  @pre    min_ must be less than max_.
              *
              *  @return Random number sampled from a uniform distribution.
              */
@@ -170,7 +186,7 @@ namespace arc //! arctk namespace
             {
                 static_assert(std::is_arithmetic<T>::value);
 
-                PRE(min_ <= max_);
+                PRE(min_ < max_);
 
                 if constexpr (std::is_integral<T>::value)
                 {
