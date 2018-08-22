@@ -109,7 +109,8 @@ namespace arc //! arctk namespace
             /**
              *  Construct and convert a two-dimensional cartesian vector to a two-dimensional spherical-polar vector.
              *
-             *  @param  cart_   Cartesian vector to convert.
+             *  @param  x_  Value of the x-component.
+             *  @param  y_  Value of the y-component.
              *
              *  @return Spherical-polar vector.
              */
