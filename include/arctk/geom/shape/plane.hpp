@@ -99,8 +99,20 @@ namespace arc //! arctk namespace
                 return (random_pos(rng_, 1.0));
             }
 
+            /**
+             *  Generate a random position, and corresponding normal, on the surface of the plane within a radius from its centre.
+             *
+             *  @param  rng_    Random number generator.
+             *  @param  rad_    Radius of point generation.
+             *
+             *  @pre    rad_ must be positive.
+             *
+             *  @return Random position, and corresponding normal, on the surface of the plane.
+             */
             inline vec3 Plane::random_pos(random::Generator* const rng_, const double rad_) const noexcept
             {
+                PRE(rad_ > 0.0);
+
                 vec3 pos(std::sqrt(random::distribution::uniform(rng_, rad_ * rad_)), arc::consts::math::HALF_PI, random::distribution::uniform(rng_, consts::math::TWO_PI));
                 pos = math::convert::polar_to_cart(pos);
 
