@@ -160,10 +160,8 @@ namespace arc //! arctk namespace
                 {
                     return (std::floor(rng_->gen() * (max_ + 1)));
                 }
-                else
-                {
-                    return (rng_->gen() * max_);
-                }
+
+                return (rng_->gen() * max_);
             }
 
             /**
