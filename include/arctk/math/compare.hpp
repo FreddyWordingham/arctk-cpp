@@ -59,6 +59,16 @@ namespace arc //! arctk namespace
                 return ((x_ > -std::numeric_limits<double>::epsilon()) && (x_ < std::numeric_limits<double>::epsilon()));
             }
 
+            /**
+             *  Test if a value can be considered equal to unity.
+             *  Value is considered equal to unity if it is within epsilon of one.
+             *
+             *  @tparam T   Type of value to test.
+             *
+             *  @param  x_  Value to test.
+             *
+             *  @return true if the value can be considered equal to unity.
+             */
             template <typename T>
             inline bool unity(const T x_) noexcept
             {
