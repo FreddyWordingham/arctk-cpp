@@ -42,6 +42,17 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Rotate --
+            /**
+             *  Step forward in a index rotation of a given size.
+             *
+             *  @param  cur_    Current index value.
+             *  @param  size_   Size of the index roll.
+             *  @param  step_   Step size.
+             *
+             *  @pre    step_ must be less than size_.
+             *
+             *  @return Next index after stepping forward.
+             */
             inline size_t next(const size_t cur_, const size_t size_, const size_t step_) noexcept
             {
                 PRE(step_ < size_);
