@@ -264,7 +264,7 @@ namespace arc //! arctk namespace
              *
              *  @return Optional collision distance and intersection normal.
              */
-            inline std::optional<std::pair<double, vec3>> Aabb::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<std::pair<double, vec3>> Aabb::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept // NOLINT
             {
                 PRE(dir_.normalised());
 
