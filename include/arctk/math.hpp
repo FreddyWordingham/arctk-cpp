@@ -126,22 +126,22 @@ namespace arc //! arctk namespace
         //  == STRUCTURES ==
         //  -- Sfinae --
         template <typename T>
-        struct is_vec : std::false_type
+        struct is_vec : std::false_type // NOLINT
         {
         };
 
         template <typename T, size_t N>
-        struct is_vec<math::Vec<T, N>> : std::true_type
+        struct is_vec<math::Vec<T, N>> : std::true_type // NOLINT
         {
         };
 
         template <typename T>
-        struct is_mat : std::false_type
+        struct is_mat : std::false_type // NOLINT
         {
         };
 
         template <typename T, size_t N>
-        struct is_mat<math::Mat<T, N>> : std::true_type
+        struct is_mat<math::Mat<T, N>> : std::true_type // NOLINT
         {
         };
 
