@@ -164,7 +164,7 @@ namespace arc //! arctk namespace
                 save(path_, [](const double x_) { return (x_); });
             }
 
-            inline void Colour::save(const std::string& path_, double (*const scale_)(const double)) const noexcept
+            inline void Colour::save(const std::string& path_, double (*const scale_)(const double)) const noexcept // NOLINT
             {
                 PRE(!path_.empty());
 
