@@ -120,15 +120,15 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Sampling --
             template <typename T>
-            inline T uniform(Generator* rng_, const T max_) noexcept;
+            inline T uniform(Generator* rng_, T max_) noexcept;
             template <typename T>
-            inline T uniform(Generator* rng_, const T min_, const T max_) noexcept;
+            inline T uniform(Generator* rng_, T min_, T max_) noexcept;
             template <typename T = double>
             inline T normal(Generator* rng_) noexcept;
             template <typename T = double>
-            inline T gaussian(Generator* rng_, const T ave_, const T var_) noexcept;
+            inline T gaussian(Generator* rng_, T ave_, T var_) noexcept;
             template <typename T = double>
-            inline T henyey_greenstein(Generator* rng_, const T g_) noexcept;
+            inline T henyey_greenstein(Generator* rng_, T g_) noexcept;
             template <typename T = vec3>
             inline T isotropic(Generator* rng_) noexcept;
 
