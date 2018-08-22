@@ -631,6 +631,8 @@ namespace arc //! arctk namespace
              *
              *  @param  dim_    Dimension to create a unit-axis for.
              *
+             *  @pre    dim_ must be less than 2.
+             *
              *  @return Unit-axis for a given dimension.
              */
             template <typename T>
