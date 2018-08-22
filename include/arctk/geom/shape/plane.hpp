@@ -87,6 +87,13 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Emission --
+            /**
+             *  Generate a random position on the surface of the plane within a radius of one from its centre.
+             *
+             *  @param  rng_    Random number generator.
+             *
+             *  @return Random position on the surface of the plane.
+             */
             inline vec3 Plane::random_pos(random::Generator* const rng_) const noexcept
             {
                 return (random_pos(rng_, 1.0));
