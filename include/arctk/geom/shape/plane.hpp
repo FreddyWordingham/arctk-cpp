@@ -86,6 +86,28 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Emission --
+            inline vec3 Plane::random_pos(random::Generator* const rng_) const noexcept
+            {
+                return (random_pos(rng_, 1.0));
+            }
+
+            inline vec3 Plane::random_pos(random::Generator* const rng_, const double rad_) const noexcept
+            {
+                vec3 pos(std::sqrt(random::distribution::uniform(rng_, rad_ * rad_)), arc::consts::math::HALF_PI, random::distribution::uniform(rng_, consts::math::TWO_PI));
+                pos = math::convert::polar_to_cart(pos);
+
+                if (!math::compare::unity(std::fabs(_norm.z)))
+                {
+                    const double theta = std::acos(_norm[index::dim::cartesian::Z]);
+
+                    pos.rotate((math::vec::axis<double, 3>(index::dim::cartesian::Z) ^ _norm).normal(), theta);
+                }
+
+                return (pos + _pos);
+            }
+
+
             //  -- Collision --
             /**
              *  Determine if a collision event occurs between the plane and a ray.
@@ -133,28 +155,6 @@ namespace arc //! arctk namespace
                 }
 
                 return (std::pair<double, vec3>(dist.value(), _norm));
-            }
-
-
-            //  -- Emission --
-            inline vec3 Plane::random_pos(random::Generator* const rng_) const noexcept
-            {
-                return (random_pos(rng_, 1.0));
-            }
-
-            inline vec3 Plane::random_pos(random::Generator* const rng_, const double rad_) const noexcept
-            {
-                vec3 pos(std::sqrt(random::distribution::uniform(rng_, rad_ * rad_)), arc::consts::math::HALF_PI, random::distribution::uniform(rng_, consts::math::TWO_PI));
-                pos = math::convert::polar_to_cart(pos);
-
-                if (!math::compare::unity(std::fabs(_norm.z)))
-                {
-                    const double theta = std::acos(_norm[index::dim::cartesian::Z]);
-
-                    pos.rotate((math::vec::axis<double, 3>(index::dim::cartesian::Z) ^ _norm).normal(), theta);
-                }
-
-                return (pos + _pos);
             }
 
 
