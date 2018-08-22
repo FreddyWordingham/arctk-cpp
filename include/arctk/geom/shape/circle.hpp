@@ -99,6 +99,13 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Emission --
+            /**
+             *  Generate a random position on the surface of the circle.
+             *
+             *  @param  rng_    Random number generator.
+             *
+             *  @return Random position on the surface of the circle.
+             */
             inline vec3 Circle::random_pos(random::Generator* const rng_) const noexcept
             {
                 vec3 pos(std::sqrt(random::distribution::uniform(rng_, _rad * _rad)), arc::consts::math::HALF_PI, random::distribution::uniform(rng_, consts::math::TWO_PI));
