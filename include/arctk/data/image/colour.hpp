@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline const std::vector<std::vector<double>>& pixels() const noexcept;
+                inline const std::vector<std::vector<vec3>>& pixels() const noexcept;
 
                 //  -- Collection --
                 inline void collect(size_t col_, size_t row_, double val_) noexcept override;
