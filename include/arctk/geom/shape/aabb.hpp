@@ -103,6 +103,18 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
+            /**
+             *  Initialise the vector of normalised relative area of each pair of faces.
+             *
+             *  @param  min_    Vertex position of the aabb.
+             *  @param  max_    Vertex position of the aabb.
+             *
+             *  @pre    min_.x must be less than max_.x.
+             *  @pre    min_.y must be less than max_.y.
+             *  @pre    min_.z must be less than max_.z.
+             *
+             *  @return Initialise vector of normalised relative area of each pair of faces.
+             */
             inline std::array<double, 4> Aabb::init_areas(const vec3& min_, const vec3& max_) const noexcept
             {
                 PRE(min_.x < max_.x);
