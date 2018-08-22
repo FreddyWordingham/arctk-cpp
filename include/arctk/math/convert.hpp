@@ -209,6 +209,17 @@ namespace arc //! arctk namespace
                 return (cart);
             }
 
+            /**
+             *  Construct and convert a three-dimensional spherical-polar vector to a three-dimensional cartesian vector.
+             *
+             *  @param  rho_    Value of the rho-component.
+             *  @param  theta_  Value of the theta-component.
+             *  @param  phi_    Value of the phi-component.
+             *
+             *  @pre    rho_ must be non-negative.
+             *
+             *  @return Cartesian vector.
+             */
             template <typename T>
             inline Vec<T, 3> polar_to_cart(const T rho_, const T theta_, const T phi_) noexcept
             {
