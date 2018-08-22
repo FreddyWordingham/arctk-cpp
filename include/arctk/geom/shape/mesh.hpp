@@ -234,6 +234,11 @@ namespace arc //! arctk namespace
                 return (tris);
             }
 
+            /**
+             *  Initialise the vector of normalised relative area of each triangle.
+             *
+             *  @return Initialise vector of normalised relative area of each triangle.
+             */
             inline std::vector<double> Mesh::init_areas() const noexcept
             {
                 std::vector<double> areas(_tris.size() + 1);
