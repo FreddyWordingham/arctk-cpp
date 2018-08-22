@@ -121,6 +121,13 @@ namespace arc //! arctk namespace
                 return (pos + _pos);
             }
 
+            /**
+             *  Generate a random position, and corresponding normal, on the surface of the circle.
+             *
+             *  @param  rng_    Random number generator.
+             *
+             *  @return Random position, and corresponding normal, on the surface of the circle.
+             */
             inline std::pair<vec3, vec3> Circle::random_pos_and_norm(random::Generator* const rng_) const noexcept
             {
                 vec3 pos(std::sqrt(random::distribution::uniform(rng_, _rad * _rad)), arc::consts::math::HALF_PI, random::distribution::uniform(rng_, consts::math::TWO_PI));
