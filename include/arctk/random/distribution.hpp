@@ -142,11 +142,10 @@ namespace arc //! arctk namespace
              *  @tparam T   Type to be uniformly generated.
              *
              *  @param  rng_    Random number generator.
-             *  @param  min_    Minimum bound of the generated value.
              *  @param  max_    Maximum bound of the generated value.
              *
              *  @pre    T   Must be an arithmetic type.
-             *  @pre    min_ must be less than, or equal to, max_.
+             *  @pre    max_ must be positive.
              *
              *  @return Random number sampled from a uniform distribution.
              */
