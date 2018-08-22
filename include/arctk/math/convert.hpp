@@ -178,11 +178,15 @@ namespace arc //! arctk namespace
              *  @param  rho_    Value of the rho-component.
              *  @param  theta_  Value of the theta-component.
              *
+             *  @pre    rho_ must be non-negative.
+             *
              *  @return Cartesian vector.
              */
             template <typename T>
             inline Vec<T, 2> polar_to_cart(const T rho_, const T theta_) noexcept
             {
+                PRE(rho_ > 0.0);
+
                 return (polar_to_cart(Vec<T, 2>(rho_, theta_)));
             }
 
