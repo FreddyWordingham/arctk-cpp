@@ -215,14 +215,14 @@ namespace arc //! arctk namespace
                 static_assert(std::is_arithmetic<T>::value);
                 static_assert(!std::is_integral<T>::value);
 
-                static bool _gen = false;
-                _gen             = !_gen;
+                static bool static_gen = false;
+                static_gen             = !static_gen;
 
-                static double _z1;
+                static double static_z1;
 
-                if (!_gen)
+                if (!static_gen)
                 {
-                    return (_z1);
+                    return (static_z1);
                 }
 
                 const double xi_0 = rng_->gen();
@@ -230,7 +230,7 @@ namespace arc //! arctk namespace
 
                 const double m  = std::sqrt(-2.0 * std::log(xi_0));
                 const double z0 = m * std::cos(consts::math::TWO_PI * xi_1);
-                _z1             = m * std::sin(consts::math::TWO_PI * xi_1);
+                static_z1       = m * std::sin(consts::math::TWO_PI * xi_1);
 
                 return (z0);
             }
