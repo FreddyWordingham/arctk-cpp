@@ -117,6 +117,11 @@ namespace arc //! arctk namespace
             inline std::pair<vec3, vec3> Circle::random_pos_and_norm(random::Generator* const rng_) const noexcept
             {
                 vec3 pos(std::sqrt(random::distribution::uniform(rng_, _rad * _rad)), arc::consts::math::HALF_PI, random::distribution::uniform(rng_, consts::math::TWO_PI));
+
+                const double alpha = _aperture * (pos.rho / _rad);
+                vec3         norm  = vec3(std::sin(alpha), 0.0, std::cos(alpha));
+                norm.rotate(math::vec::axis<double, 3>(index::dim::cartesian::Z), pos.phi);
+
                 pos = math::convert::polar_to_cart(pos);
 
                 if (!math::compare::unity(std::fabs(_norm.z)))
@@ -124,9 +129,10 @@ namespace arc //! arctk namespace
                     const double theta = std::acos(_norm[index::dim::cartesian::Z]);
 
                     pos.rotate((math::vec::axis<double, 3>(index::dim::cartesian::Z) ^ _norm).normal(), theta);
+                    norm.rotate((math::vec::axis<double, 3>(index::dim::cartesian::Z) ^ _norm).normal(), theta);
                 }
 
-                return (std::pair<vec3, vec3>(pos + _pos, _norm));
+                return (std::pair<vec3, vec3>(pos + _pos, norm));
             }
 
 
