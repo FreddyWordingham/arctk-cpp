@@ -147,10 +147,12 @@ namespace arc //! arctk namespace
                 vec3 pos(std::sqrt(random::distribution::uniform(rng_, rad_ * rad_)), arc::consts::math::HALF_PI, random::distribution::uniform(rng_, consts::math::TWO_PI));
                 pos = math::convert::polar_to_cart(pos);
 
-                const size_t axis  = !math::compare::unity(std::fabs(_norm.z)) ? index::dim::cartesian::Z : index::dim::cartesian::X;
-                const double theta = std::acos(_norm[axis]);
+                if (!math::compare::unity(std::fabs(_norm.z)))
+                {
+                    const double theta = std::acos(_norm[index::dim::cartesian::Z]);
 
-                pos.rotate((math::vec::axis<double, 3>(axis) ^ _norm).normal(), theta);
+                    pos.rotate((math::vec::axis<double, 3>(index::dim::cartesian::Z) ^ _norm).normal(), theta);
+                }
 
                 return (pos + _pos);
             }
