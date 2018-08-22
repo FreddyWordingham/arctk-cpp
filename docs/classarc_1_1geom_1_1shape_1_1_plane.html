@@ -95,10 +95,9 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_plane__coll__graph.png" border="0" usemap="#arc_1_1geom_1_1shape_1_1_plane_coll__map" alt="Collaboration graph"/></div>
 <map name="arc_1_1geom_1_1shape_1_1_plane_coll__map" id="arc_1_1geom_1_1shape_1_1_plane_coll__map">
-<area shape="rect" id="node2" href="classarc_1_1geom_1_1_shape.html" title="arc::geom::Shape" alt="" coords="5,167,132,192"/>
-<area shape="rect" id="node3" href="classarc_1_1math_1_1_vec.html" title="arc::math::Vec\&lt; double, 3 \&gt;" alt="" coords="156,167,341,192"/>
-<area shape="rect" id="node4" href="classarc_1_1str_1_1_printable.html" title="arc::str::Printable" alt="" coords="164,5,286,31"/>
-<area shape="rect" id="node5" href="classarc_1_1math_1_1_vec.html" title="arc::math::Vec\&lt; T, N \&gt;" alt="" coords="245,80,398,105"/>
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1_shape.html" title="arc::geom::Shape" alt="" coords="5,80,132,105"/>
+<area shape="rect" id="node3" href="classarc_1_1math_1_1_vec.html" title="arc::math::Vec\&lt; T, N \&gt;" alt="" coords="156,80,309,105"/>
+<area shape="rect" id="node4" href="classarc_1_1str_1_1_printable.html" title="arc::str::Printable" alt="" coords="172,5,294,31"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -106,6 +105,10 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9d186df97b468e2336e19e75704c3ca8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a9d186df97b468e2336e19e75704c3ca8">Plane</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;norm_) noexcept</td></tr>
 <tr class="separator:a9d186df97b468e2336e19e75704c3ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a061627b97c54b06a7647061ffb6b22d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a061627b97c54b06a7647061ffb6b22d2">random_pos</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept override</td></tr>
+<tr class="separator:a061627b97c54b06a7647061ffb6b22d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcea9197dfa64a43a3db5fac63fcff4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#afcea9197dfa64a43a3db5fac63fcff4a">random_pos</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_, double rad_) const noexcept</td></tr>
+<tr class="separator:afcea9197dfa64a43a3db5fac63fcff4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4109040e404b72535d2f40b3eef29e04"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a4109040e404b72535d2f40b3eef29e04">collision</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
 <tr class="separator:a4109040e404b72535d2f40b3eef29e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5047292b8b189a2b73046727238a7b3a"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::pair&lt; double, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a5047292b8b189a2b73046727238a7b3a">collision_norm</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
@@ -126,12 +129,12 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a8a4416d053de432fa99062b5d361b46b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a8a4416d053de432fa99062b5d361b46b">_pos</a></td></tr>
-<tr class="memdesc:a8a4416d053de432fa99062b5d361b46b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position of the plane.  <a href="#a8a4416d053de432fa99062b5d361b46b">More...</a><br /></td></tr>
-<tr class="separator:a8a4416d053de432fa99062b5d361b46b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad41ed5bd4ad39001c9414c618c001e72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#ad41ed5bd4ad39001c9414c618c001e72">_norm</a></td></tr>
-<tr class="memdesc:ad41ed5bd4ad39001c9414c618c001e72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normal of the plane.  <a href="#ad41ed5bd4ad39001c9414c618c001e72">More...</a><br /></td></tr>
-<tr class="separator:ad41ed5bd4ad39001c9414c618c001e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2925ed1d50874b87a69a6adf58ad6d08"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a2925ed1d50874b87a69a6adf58ad6d08">_pos</a></td></tr>
+<tr class="memdesc:a2925ed1d50874b87a69a6adf58ad6d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position of the plane.  <a href="#a2925ed1d50874b87a69a6adf58ad6d08">More...</a><br /></td></tr>
+<tr class="separator:a2925ed1d50874b87a69a6adf58ad6d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81e54d0e01858e15f06b58a146353268"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a81e54d0e01858e15f06b58a146353268">_norm</a></td></tr>
+<tr class="memdesc:a81e54d0e01858e15f06b58a146353268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normal of the plane.  <a href="#a81e54d0e01858e15f06b58a146353268">More...</a><br /></td></tr>
+<tr class="separator:a81e54d0e01858e15f06b58a146353268"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Geometric plane shape. </p>
@@ -288,9 +291,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="ad41ed5bd4ad39001c9414c618c001e72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad41ed5bd4ad39001c9414c618c001e72">&#9670;&nbsp;</a></span>_norm</h2>
+<a id="a061627b97c54b06a7647061ffb6b22d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a061627b97c54b06a7647061ffb6b22d2">&#9670;&nbsp;</a></span>random_pos() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -299,7 +301,104 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::geom::shape::Plane::_norm</td>
+          <td class="memname"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::geom::shape::Plane::random_pos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *&#160;</td>
+          <td class="paramname"><em>rng_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Generate a random position on the surface of the plane within a radius of one from its centre.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rng_</td><td>Random number generator.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Random position on the surface of the plane. </dd></dl>
+
+<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#adb4a5453dfb63827f5f3323e60204040">arc::geom::Shape</a>.</p>
+
+</div>
+</div>
+<a id="afcea9197dfa64a43a3db5fac63fcff4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcea9197dfa64a43a3db5fac63fcff4a">&#9670;&nbsp;</a></span>random_pos() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::geom::shape::Plane::random_pos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *&#160;</td>
+          <td class="paramname"><em>rng_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rad_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Generate a random position, and corresponding normal, on the surface of the plane within a radius from its centre.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rng_</td><td>Random number generator. </td></tr>
+    <tr><td class="paramname">rad_</td><td>Radius of point generation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>rad_ must be positive.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Random position, and corresponding normal, on the surface of the plane. </dd></dl>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_plane_afcea9197dfa64a43a3db5fac63fcff4a_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_plane_afcea9197dfa64a43a3db5fac63fcff4a_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_plane_afcea9197dfa64a43a3db5fac63fcff4a_cgraph" id="classarc_1_1geom_1_1shape_1_1_plane_afcea9197dfa64a43a3db5fac63fcff4a_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1random_1_1distribution.html#a619762488a9e9eedd75f89aea28b4ebe" title="arc::random::distribution\l::uniform" alt="" coords="219,5,384,44"/>
+<area shape="rect" id="node3" href="namespacearc_1_1math_1_1convert.html#ac0b319816d18eb6a572ecb9abd2af70d" title="arc::math::convert\l::polar_to_cart" alt="" coords="237,68,365,107"/>
+<area shape="rect" id="node4" href="namespacearc_1_1math_1_1compare.html#abaf895f8a2b87e8e16e7f7397d2cf0f1" title="arc::math::compare\l::unity" alt="" coords="233,131,369,169"/>
+<area shape="rect" id="node6" href="namespacearc_1_1random_1_1distribution.html#af0181d183542f6401028a77795026f90" title="arc::random::distribution\l::normal" alt="" coords="219,193,384,232"/>
+<area shape="rect" id="node5" href="namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="432,131,568,169"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a81e54d0e01858e15f06b58a146353268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e54d0e01858e15f06b58a146353268">&#9670;&nbsp;</a></span>_norm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::geom::shape::Plane::_norm</td>
         </tr>
       </table>
   </td>
@@ -313,8 +412,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8a4416d053de432fa99062b5d361b46b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a4416d053de432fa99062b5d361b46b">&#9670;&nbsp;</a></span>_pos</h2>
+<a id="a2925ed1d50874b87a69a6adf58ad6d08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2925ed1d50874b87a69a6adf58ad6d08">&#9670;&nbsp;</a></span>_pos</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -323,7 +422,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::geom::shape::Plane::_pos</td>
+          <td class="memname">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::geom::shape::Plane::_pos</td>
         </tr>
       </table>
   </td>
@@ -343,7 +442,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 20 2018 13:29:16 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 22 2018 02:13:08 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

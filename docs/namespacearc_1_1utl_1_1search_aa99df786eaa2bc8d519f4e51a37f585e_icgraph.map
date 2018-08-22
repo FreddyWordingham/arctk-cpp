@@ -1,5 +1,6 @@
 <map id="arc::utl::search::max" name="arc::utl::search::max">
-<area shape="rect" id="node2" href="$classarc_1_1data_1_1image_1_1_greyscale.html#ac26247cecfa9c6a44672c4d84a4dfc2b" title="arc::data::image::Greyscale\l::save" alt="" coords="195,5,379,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1gui_1_1camera_1_1_orbit.html#ab0062f89065280998577ed4781a22fd8" title="arc::gui::camera::Orbit\l::move" alt="" coords="210,68,364,107"/>
-<area shape="rect" id="node4" href="$classarc_1_1random_1_1generator_1_1_quality.html#a62c1690d7eb9dd323ffe92051fca040c" title="arc::random::generator\l::Quality::gen" alt="" coords="208,131,365,169"/>
+<area shape="rect" id="node2" href="$classarc_1_1data_1_1image_1_1_colour.html#a1961f383de6c27c8768e4edf3b00927c" title="arc::data::image::Colour\l::save" alt="" coords="205,5,369,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1data_1_1image_1_1_greyscale.html#af139686e330738ed6a644ad3bef54122" title="arc::data::image::Greyscale\l::save" alt="" coords="195,68,379,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1gui_1_1camera_1_1_orbit.html#ab0062f89065280998577ed4781a22fd8" title="arc::gui::camera::Orbit\l::move" alt="" coords="210,131,364,169"/>
+<area shape="rect" id="node5" href="$classarc_1_1random_1_1generator_1_1_quality.html#a62c1690d7eb9dd323ffe92051fca040c" title="arc::random::generator\l::Quality::gen" alt="" coords="208,193,365,232"/>
 </map>

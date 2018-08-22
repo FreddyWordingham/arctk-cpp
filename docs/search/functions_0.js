@@ -19,6 +19,7 @@ var searchData=
   ['asym',['asym',['../classarc_1_1phys_1_1_optical.html#ab724c02f85ed5d6bbeb171942f0cf6ae',1,'arc::phys::Optical']]],
   ['ave',['ave',['../namespacearc_1_1math_1_1container.html#a43eb40b29b4991c7c10c692ed0f34f0e',1,'arc::math::container']]],
   ['average',['Average',['../classarc_1_1data_1_1histogram_1_1_average_3_01_t_00_011_01_4.html#a2f4534b4f96fa3f77fd9b402fbe83a2f',1,'arc::data::histogram::Average&lt; T, 1 &gt;']]],
+  ['axis',['axis',['../namespacearc_1_1math_1_1vec.html#aac2f268a88bb0d0908ab2a0fcd8faabe',1,'arc::math::vec::axis(size_t dim_) noexcept'],['../namespacearc_1_1math_1_1vec.html#ad9dcf95e7b611f24655a07f6d030f897',1,'arc::math::vec::axis(size_t dim_) noexcept'],['../namespacearc_1_1math_1_1vec.html#af7f2ed6c09f9e4bc4e18b321d7912d9f',1,'arc::math::vec::axis(size_t dim_) noexcept'],['../namespacearc_1_1math_1_1vec.html#ab3f95c835ad4ffc129e9eb0a156289d2',1,'arc::math::vec::axis(size_t dim_) noexcept']]],
   ['axis_5fhelper_5fx',['axis_helper_x',['../namespacearc_1_1gui_1_1actor.html#aa12d3fb0657b2792bd3ba876ce4907a5',1,'arc::gui::actor']]],
   ['axis_5fhelper_5fy',['axis_helper_y',['../namespacearc_1_1gui_1_1actor.html#ab01f626a818923366521b28eeef26b54',1,'arc::gui::actor']]],
   ['axis_5fhelper_5fz',['axis_helper_z',['../namespacearc_1_1gui_1_1actor.html#af27ba3b5ff5632c95c6bc8a9ec2b3725',1,'arc::gui::actor']]]

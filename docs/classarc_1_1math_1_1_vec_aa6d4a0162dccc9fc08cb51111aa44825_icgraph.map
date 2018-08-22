@@ -1,12 +1,11 @@
 <map id="arc::math::Vec::normalised" name="arc::math::Vec::normalised">
 <area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#ada273019b1aad721dddf49379616c007" title="arc::geom::shape::Triangle\l::Triangle" alt="" coords="233,5,412,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#a06db0dc2b6b75109ee7e77b2341be299" title="arc::geom::shape::Triangle\l::init_plane_norm" alt="" coords="460,120,639,159"/>
-<area shape="rect" id="node4" href="$classarc_1_1math_1_1_vec.html#abd22cbc8c212fac61b31df11cea46866" title="arc::math::Vec\&lt; double,\l 2 \&gt;::normalise" alt="" coords="241,120,403,159"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1math_1_1vec.html#af6b92b25d553e597bc9a3b396962306d" title="arc::math::vec::normalise" alt="" coords="237,183,407,208"/>
-<area shape="rect" id="node6" href="$classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#ad6744754f694c1197db45d6d1e5b93f7" title="arc::math::Vec\&lt; T,\l 2 \&gt;::normalise" alt="" coords="258,232,386,271"/>
-<area shape="rect" id="node7" href="$classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#ac9bdcc68c5d12bd8e30ecf17767de5cf" title="arc::math::Vec\&lt; T,\l 3 \&gt;::normalise" alt="" coords="258,295,386,333"/>
-<area shape="rect" id="node8" href="$classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#af5671ad652f8df04ae02aaad65f552a0" title="arc::math::Vec\&lt; T,\l 4 \&gt;::normalise" alt="" coords="258,357,386,396"/>
-<area shape="rect" id="node9" href="$classarc_1_1phys_1_1_particle.html#af8f49990794bcba81da34c33053ec338" title="arc::phys::Particle\l::move" alt="" coords="259,420,386,459"/>
-<area shape="rect" id="node10" href="$classarc_1_1phys_1_1_particle.html#ab46d3245680b0cac02e15de315327773" title="arc::phys::Particle\l::rotate" alt="" coords="259,483,386,521"/>
-<area shape="rect" id="node11" href="$classarc_1_1phys_1_1particle_1_1_photon.html#a6bce17fad29f33e46a6a42b847258fc4" title="arc::phys::particle\l::Photon::move" alt="" coords="259,545,385,584"/>
+<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#a06db0dc2b6b75109ee7e77b2341be299" title="arc::geom::shape::Triangle\l::init_plane_norm" alt="" coords="233,68,412,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1math_1_1_vec.html#abd22cbc8c212fac61b31df11cea46866" title="arc::math::Vec\&lt; double,\l 2 \&gt;::normalise" alt="" coords="241,131,403,169"/>
+<area shape="rect" id="node5" href="$classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#ad6744754f694c1197db45d6d1e5b93f7" title="arc::math::Vec\&lt; T,\l 2 \&gt;::normalise" alt="" coords="258,193,386,232"/>
+<area shape="rect" id="node6" href="$classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#ac9bdcc68c5d12bd8e30ecf17767de5cf" title="arc::math::Vec\&lt; T,\l 3 \&gt;::normalise" alt="" coords="258,256,386,295"/>
+<area shape="rect" id="node7" href="$classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#af5671ad652f8df04ae02aaad65f552a0" title="arc::math::Vec\&lt; T,\l 4 \&gt;::normalise" alt="" coords="258,319,386,357"/>
+<area shape="rect" id="node8" href="$classarc_1_1phys_1_1_particle.html#af8f49990794bcba81da34c33053ec338" title="arc::phys::Particle\l::move" alt="" coords="259,381,386,420"/>
+<area shape="rect" id="node9" href="$classarc_1_1phys_1_1_particle.html#ab46d3245680b0cac02e15de315327773" title="arc::phys::Particle\l::rotate" alt="" coords="259,444,386,483"/>
+<area shape="rect" id="node10" href="$classarc_1_1phys_1_1particle_1_1_photon.html#a6bce17fad29f33e46a6a42b847258fc4" title="arc::phys::particle\l::Photon::move" alt="" coords="259,507,385,545"/>
 </map>

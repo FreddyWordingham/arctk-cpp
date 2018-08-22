@@ -17,6 +17,7 @@ var searchData=
   ['triangle_2ehpp',['triangle.hpp',['../triangle_8hpp.html',1,'']]],
   ['tuple_5fend',['TUPLE_END',['../namespacearc_1_1settings_1_1format.html#a66a62b909b637e4cb02d616434184a77',1,'arc::settings::format']]],
   ['tuple_5fstart',['TUPLE_START',['../namespacearc_1_1settings_1_1format.html#ad8182e0787aab735cc91a2e3b2a13b44',1,'arc::settings::format']]],
+  ['two_5fpi',['TWO_PI',['../namespacearc_1_1consts_1_1math.html#a1832a23aeb648a8c587118f0c034812e',1,'arc::consts::math']]],
   ['type',['TYPE',['../namespacearc_1_1config.html#ad6eeea3db680c98dc954b7951924fb0b',1,'arc::config']]],
   ['type_2ehpp',['type.hpp',['../type_8hpp.html',1,'']]]
 ];

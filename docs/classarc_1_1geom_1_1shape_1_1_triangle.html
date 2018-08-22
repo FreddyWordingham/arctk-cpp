@@ -115,6 +115,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8be439a9da593541ad062115bf6c4fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e6273eac5f6dcf71ca9312bc895775f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a5e6273eac5f6dcf71ca9312bc895775f">plane_norm</a> () const noexcept</td></tr>
 <tr class="separator:a5e6273eac5f6dcf71ca9312bc895775f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accc984547dc8af83525cd471119adf5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#accc984547dc8af83525cd471119adf5f">random_pos</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept override</td></tr>
+<tr class="memdesc:accc984547dc8af83525cd471119adf5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a random position on the surface of the shape.  <a href="#accc984547dc8af83525cd471119adf5f">More...</a><br /></td></tr>
+<tr class="separator:accc984547dc8af83525cd471119adf5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe258581ad067c650f2f9a5cbebd4021"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#abe258581ad067c650f2f9a5cbebd4021">plane_collision</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept</td></tr>
 <tr class="separator:abe258581ad067c650f2f9a5cbebd4021"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8ea8b794628a362acb74a5830ebc1b1"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#ad8ea8b794628a362acb74a5830ebc1b1">collision</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
@@ -406,9 +409,8 @@ _plane_norm must be normalised. </dd></dl>
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_triangle_a06db0dc2b6b75109ee7e77b2341be299_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_triangle_a06db0dc2b6b75109ee7e77b2341be299_cgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_triangle_a06db0dc2b6b75109ee7e77b2341be299_cgraph" id="classarc_1_1geom_1_1shape_1_1_triangle_a06db0dc2b6b75109ee7e77b2341be299_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a5e6273eac5f6dcf71ca9312bc895775f" title="arc::geom::shape::Triangle\l::plane_norm" alt="" coords="233,5,412,44"/>
-<area shape="rect" id="node3" href="namespacearc_1_1math_1_1vec.html#af6b92b25d553e597bc9a3b396962306d" title="arc::math::vec::normalise" alt="" coords="237,68,408,93"/>
-<area shape="rect" id="node5" href="classarc_1_1math_1_1_vec.html#aa6d4a0162dccc9fc08cb51111aa44825" title="arc::math::Vec::normalised" alt="" coords="460,117,639,143"/>
-<area shape="rect" id="node4" href="classarc_1_1math_1_1_vec.html#abd22cbc8c212fac61b31df11cea46866" title="arc::math::Vec::normalise" alt="" coords="464,68,636,93"/>
+<area shape="rect" id="node3" href="namespacearc_1_1random_1_1distribution.html#af0181d183542f6401028a77795026f90" title="arc::random::distribution\l::normal" alt="" coords="240,68,405,107"/>
+<area shape="rect" id="node4" href="classarc_1_1math_1_1_vec.html#aa6d4a0162dccc9fc08cb51111aa44825" title="arc::math::Vec::normalised" alt="" coords="233,131,412,156"/>
 </map>
 </div>
 
@@ -581,6 +583,43 @@ _plane_norm must be normalised. </dd></dl>
 
 </div>
 </div>
+<a id="accc984547dc8af83525cd471119adf5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accc984547dc8af83525cd471119adf5f">&#9670;&nbsp;</a></span>random_pos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::geom::shape::Triangle::random_pos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *&#160;</td>
+          <td class="paramname"><em>rng_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate a random position on the surface of the shape. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rng_</td><td>Random number generator. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Randomly generated point on the surface of the shape. </dd></dl>
+
+<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#adb4a5453dfb63827f5f3323e60204040">arc::geom::Shape</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a4da390e2002fa7b2d5cd1e41b3a4c287"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4da390e2002fa7b2d5cd1e41b3a4c287">&#9670;&nbsp;</a></span>_area</h2>
@@ -684,7 +723,7 @@ _plane_norm must be normalised. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 20 2018 13:29:16 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 22 2018 02:13:08 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

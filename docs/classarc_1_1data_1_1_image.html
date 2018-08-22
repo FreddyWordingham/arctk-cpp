@@ -86,7 +86,8 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1data_1_1_image__inherit__graph.png" border="0" usemap="#arc_1_1data_1_1_image_inherit__map" alt="Inheritance graph"/></div>
 <map name="arc_1_1data_1_1_image_inherit__map" id="arc_1_1data_1_1_image_inherit__map">
-<area shape="rect" id="node2" href="classarc_1_1data_1_1image_1_1_greyscale.html" title="arc::data::image::Greyscale" alt="" coords="5,79,190,104"/>
+<area shape="rect" id="node2" href="classarc_1_1data_1_1image_1_1_colour.html" title="arc::data::image::Colour" alt="" coords="5,79,169,104"/>
+<area shape="rect" id="node3" href="classarc_1_1data_1_1image_1_1_greyscale.html" title="arc::data::image::Greyscale" alt="" coords="192,79,377,104"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -118,10 +119,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab4fb40ae785db15062e42c9c93d4254f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43646c424bf9046a3df08272f3386f67"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_image.html#a43646c424bf9046a3df08272f3386f67">save</a> (const std::string &amp;path_, double(*scale_)(double)) const noexcept=0</td></tr>
 <tr class="separator:a43646c424bf9046a3df08272f3386f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af86055b444e129d6fda89ec2cfa4aabf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_image.html#af86055b444e129d6fda89ec2cfa4aabf">save</a> (const std::string &amp;path_, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>(*map_)(double)) const noexcept=0</td></tr>
-<tr class="separator:af86055b444e129d6fda89ec2cfa4aabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ec9339d4e370b87235281cc46d2a7a8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_image.html#a6ec9339d4e370b87235281cc46d2a7a8">save</a> (const std::string &amp;path_, double(*scale_)(double), <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>(*map_)(double)) const noexcept=0</td></tr>
-<tr class="separator:a6ec9339d4e370b87235281cc46d2a7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -294,7 +291,7 @@ height_ must be positive. </dd></dl>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#a7584b1ba6227ddcd6a073f083f73cee9">arc::data::image::Greyscale</a>.</p>
+<p>Implemented in <a class="el" href="classarc_1_1data_1_1image_1_1_colour.html#a37afacc729c8072b3615e9b2542596d6">arc::data::image::Colour</a>, and <a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#a7584b1ba6227ddcd6a073f083f73cee9">arc::data::image::Greyscale</a>.</p>
 
 </div>
 </div>
@@ -384,7 +381,7 @@ height_ must be positive. </dd></dl>
 </div>
 </div>
 <a id="ab4fb40ae785db15062e42c9c93d4254f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4fb40ae785db15062e42c9c93d4254f">&#9670;&nbsp;</a></span>save() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4fb40ae785db15062e42c9c93d4254f">&#9670;&nbsp;</a></span>save() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -415,12 +412,12 @@ height_ must be positive. </dd></dl>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#aad4db76d33fc5c00f4c230b511aabb1c">arc::data::image::Greyscale</a>.</p>
+<p>Implemented in <a class="el" href="classarc_1_1data_1_1image_1_1_colour.html#a52815786c1f40e3d35339cfdab11a65d">arc::data::image::Colour</a>, and <a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#aad4db76d33fc5c00f4c230b511aabb1c">arc::data::image::Greyscale</a>.</p>
 
 </div>
 </div>
 <a id="a43646c424bf9046a3df08272f3386f67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43646c424bf9046a3df08272f3386f67">&#9670;&nbsp;</a></span>save() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a43646c424bf9046a3df08272f3386f67">&#9670;&nbsp;</a></span>save() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -460,104 +457,7 @@ height_ must be positive. </dd></dl>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#ac63222b63b09a850b263cf53a7444974">arc::data::image::Greyscale</a>.</p>
-
-</div>
-</div>
-<a id="af86055b444e129d6fda89ec2cfa4aabf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af86055b444e129d6fda89ec2cfa4aabf">&#9670;&nbsp;</a></span>save() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void arc::data::Image::save </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>(*)(double)&#160;</td>
-          <td class="paramname"><em>map_</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Save the image data using a colour mapping function. Pixel values are normalised but not scaled. Pixel values are converted to a colour using the given mapping function.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path_</td><td>Path to the output file.</td></tr>
-    <tr><td class="paramname">map_</td><td>Function used to map scaled values to a colour. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implemented in <a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#af76ccc9c5321b48bf96d791e62ea2d2d">arc::data::image::Greyscale</a>.</p>
-
-</div>
-</div>
-<a id="a6ec9339d4e370b87235281cc46d2a7a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ec9339d4e370b87235281cc46d2a7a8">&#9670;&nbsp;</a></span>save() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void arc::data::Image::save </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double(*)(double)&#160;</td>
-          <td class="paramname"><em>scale_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>(*)(double)&#160;</td>
-          <td class="paramname"><em>map_</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Save the image data using value scaling and colour mapping functions. Pixel values are normalised then scaled using the given scaling function. Pixel values are converted to a colour using the given mapping function.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path_</td><td>Path to the output file.</td></tr>
-    <tr><td class="paramname">scale_</td><td>Function used to scale the normalised values.</td></tr>
-    <tr><td class="paramname">map_</td><td>Function used to map scaled values to a colour. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implemented in <a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#ac26247cecfa9c6a44672c4d84a4dfc2b">arc::data::image::Greyscale</a>.</p>
+<p>Implemented in <a class="el" href="classarc_1_1data_1_1image_1_1_colour.html#a1961f383de6c27c8768e4edf3b00927c">arc::data::image::Colour</a>, and <a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#ac63222b63b09a850b263cf53a7444974">arc::data::image::Greyscale</a>.</p>
 
 </div>
 </div>
@@ -702,7 +602,7 @@ pixels_ first stored vector size must match _height. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 20 2018 13:29:16 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 22 2018 02:13:08 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

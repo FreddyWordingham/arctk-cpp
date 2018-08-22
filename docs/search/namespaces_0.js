@@ -37,6 +37,7 @@ var searchData=
   ['pow',['pow',['../namespacearc_1_1math_1_1pow.html',1,'arc::math']]],
   ['properties',['properties',['../namespacearc_1_1utl_1_1properties.html',1,'arc::utl']]],
   ['random',['random',['../namespacearc_1_1random.html',1,'arc']]],
+  ['rotate',['rotate',['../namespacearc_1_1index_1_1rotate.html',1,'arc::index']]],
   ['search',['search',['../namespacearc_1_1utl_1_1search.html',1,'arc::utl']]],
   ['settings',['settings',['../namespacearc_1_1settings.html',1,'arc']]],
   ['shader',['shader',['../namespacearc_1_1gui_1_1shader.html',1,'arc::gui']]],

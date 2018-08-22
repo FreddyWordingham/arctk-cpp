@@ -72,8 +72,15 @@ $(function() {
 , <a class="el" href="classarc_1_1phys_1_1material_1_1_fluorescent.html#a42709d936864238bb5822fd9de9c8d12">arc::phys::material::Fluorescent</a>
 , <a class="el" href="classarc_1_1phys_1_1_optical.html#af64a9e147df45fd99c23e38280a359ee">arc::phys::Optical</a>
 </li>
+<li>_aperture
+: <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a4717a29b088cf60426593245b1c16ef5">arc::geom::shape::Circle</a>
+</li>
 <li>_area
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a4da390e2002fa7b2d5cd1e41b3a4c287">arc::geom::shape::Triangle</a>
+</li>
+<li>_areas
+: <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a70519a1ef339b4eff696df0dba2b3d28">arc::geom::shape::Aabb</a>
+, <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#acc6b22575e06f9238f4713a58ad0206e">arc::geom::shape::Mesh</a>
 </li>
 <li>_argv
 : <a class="el" href="classarc_1_1sys_1_1_args.html#a8347075c84ef34938bd1d012f9426274">arc::sys::Args&lt; A &gt;</a>
@@ -198,7 +205,7 @@ $(function() {
 <li>_max
 : <a class="el" href="classarc_1_1data_1_1_histogram_3_01_t_00_011_01_4.html#a707551019cf2db9dea9ac9952a245d3b">arc::data::Histogram&lt; T, 1 &gt;</a>
 , <a class="el" href="classarc_1_1data_1_1_histogram_3_01_t_00_012_01_4.html#af1997beb26866817b9d95aba5236df68">arc::data::Histogram&lt; T, 2 &gt;</a>
-, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#abbbd2ade54a871e6de28c4d8dd8573a7">arc::geom::shape::Aabb</a>
+, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a3923e6bd0c80d07107c68d1e5331e160">arc::geom::shape::Aabb</a>
 , <a class="el" href="classarc_1_1gui_1_1lens_1_1_orthographic.html#a9c42c93850c8d0c112bb1726073ec8c2">arc::gui::lens::Orthographic</a>
 , <a class="el" href="classarc_1_1math_1_1_formula.html#a2ed005d77aadd41c68789c1cf9bedab6">arc::math::Formula</a>
 , <a class="el" href="classarc_1_1phys_1_1_material.html#a4fa8a6f850e962aede84f877257361ff">arc::phys::Material</a>
@@ -207,7 +214,7 @@ $(function() {
 <li>_min
 : <a class="el" href="classarc_1_1data_1_1_histogram_3_01_t_00_011_01_4.html#ac8bdd8bcc6019e351e5a62065fdc4f8b">arc::data::Histogram&lt; T, 1 &gt;</a>
 , <a class="el" href="classarc_1_1data_1_1_histogram_3_01_t_00_012_01_4.html#a4f1f18fc959353d7c78fba57a3feb1e5">arc::data::Histogram&lt; T, 2 &gt;</a>
-, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a973569888ca13f1caa43439be47199d4">arc::geom::shape::Aabb</a>
+, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a4e89b02e44ee267f25b136ebd1506367">arc::geom::shape::Aabb</a>
 , <a class="el" href="classarc_1_1gui_1_1lens_1_1_orthographic.html#ae3cee26eb6ef082a172b02e94c9e6682">arc::gui::lens::Orthographic</a>
 , <a class="el" href="classarc_1_1math_1_1_formula.html#a8457b443d036f0fd0d2321cc9fb04eef">arc::math::Formula</a>
 , <a class="el" href="classarc_1_1phys_1_1_material.html#abc0512eb9f263ed35cafdb5813fcee90">arc::phys::Material</a>
@@ -231,7 +238,8 @@ $(function() {
 : <a class="el" href="classarc_1_1random_1_1_generator.html#a08ef7eadad8b178e2d05cdad396056cb">arc::random::Generator</a>
 </li>
 <li>_norm
-: <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#ad41ed5bd4ad39001c9414c618c001e72">arc::geom::shape::Plane</a>
+: <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#ad0a251cad435d2c8a36986c6ed945ec3">arc::geom::shape::Circle</a>
+, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a81e54d0e01858e15f06b58a146353268">arc::geom::shape::Plane</a>
 , <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#aadce2591d2e23dc475eee3062c69e668">arc::geom::shape::Triangle</a>
 </li>
 <li>_num_vert
@@ -241,13 +249,15 @@ $(function() {
 : <a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html#a37fd56f6cb84f734bf50e53637460651">arc::phys::particle::Photon</a>
 </li>
 <li>_pixels
-: <a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#aa265595e8aed7215ed10b1f8a78e2c1c">arc::data::image::Greyscale</a>
+: <a class="el" href="classarc_1_1data_1_1image_1_1_colour.html#aa05e01f40bfc3b21852f7edc394301d2">arc::data::image::Colour</a>
+, <a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#aa265595e8aed7215ed10b1f8a78e2c1c">arc::data::image::Greyscale</a>
 </li>
 <li>_plane_norm
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a1aa75e6f1c42143299c908b272dc4d9c">arc::geom::shape::Triangle</a>
 </li>
 <li>_pos
-: <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a8a4416d053de432fa99062b5d361b46b">arc::geom::shape::Plane</a>
+: <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a2b873a99b0133dacb76bfc1eb1ffd5d4">arc::geom::shape::Circle</a>
+, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a2925ed1d50874b87a69a6adf58ad6d08">arc::geom::shape::Plane</a>
 , <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#ad3afcc68f2d462f1d70e729979558fe5">arc::geom::shape::Sphere</a>
 , <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a3ecf2c82237d6d65e7c1f796cf878d22">arc::geom::shape::Triangle</a>
 , <a class="el" href="classarc_1_1gui_1_1_camera.html#aab4f5dea22e2518c862575760dc89a93">arc::gui::Camera</a>
@@ -272,7 +282,8 @@ $(function() {
 , <a class="el" href="classarc_1_1gui_1_1shader_1_1_specular.html#a8a42254e9e00f5e2ffe46cca5f55938b">arc::gui::shader::Specular</a>
 </li>
 <li>_rad
-: <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a3a4d1923b5a48105822d361f27168454">arc::geom::shape::Sphere</a>
+: <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#abb5b06a43daa8c1667f9c2c8617c1ff9">arc::geom::shape::Circle</a>
+, <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a3a4d1923b5a48105822d361f27168454">arc::geom::shape::Sphere</a>
 </li>
 <li>_ref_index
 : <a class="el" href="classarc_1_1phys_1_1material_1_1_basic.html#ab50617cca40c05b5db9c19e723aeaaf6">arc::phys::material::Basic</a>
@@ -380,7 +391,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 20 2018 13:29:17 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 22 2018 02:13:09 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

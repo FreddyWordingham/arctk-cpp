@@ -1,18 +1,23 @@
 <map id="arc::math::geom::distance" name="arc::math::geom::distance">
-<area shape="rect" id="node2" href="$namespacearc_1_1math_1_1geom.html#a475dc5533aec7b9caaa0a024f25f0689" title="arc::math::geom::area" alt="" coords="228,19,380,44"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1utl_1_1search.html#ab0aae86f6b98b4746101dd60c00514ca" title="arc::utl::search::min\l_index" alt="" coords="235,68,373,107"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1utl_1_1search.html#a83ff5408af0ccc99c51d3dabf4f4562b" title="arc::utl::search::max\l_index" alt="" coords="233,131,375,169"/>
-<area shape="rect" id="node11" href="$namespacearc_1_1utl_1_1search.html#a759ee83416f9fb620af459ecb00205f0" title="arc::utl::search::lower" alt="" coords="230,224,378,249"/>
-<area shape="rect" id="node17" href="$namespacearc_1_1utl_1_1search.html#aaceae6e461089b2e63a30d9f035427d3" title="arc::utl::search::upper" alt="" coords="229,273,379,299"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1utl_1_1search.html#a7dedb03499315275304d2ee539dbbf81" title="arc::utl::search::min" alt="" coords="441,33,579,59"/>
-<area shape="rect" id="node5" href="$classarc_1_1geom_1_1shape_1_1_sphere.html#aab65755fc0af549dec1adc2fb89e7f5b" title="arc::geom::shape::Sphere\l::collision" alt="" coords="645,5,820,44"/>
-<area shape="rect" id="node7" href="$namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="439,105,581,131"/>
-<area shape="rect" id="node8" href="$classarc_1_1data_1_1image_1_1_greyscale.html#ac26247cecfa9c6a44672c4d84a4dfc2b" title="arc::data::image::Greyscale\l::save" alt="" coords="640,68,825,107"/>
-<area shape="rect" id="node9" href="$classarc_1_1gui_1_1camera_1_1_orbit.html#ab0062f89065280998577ed4781a22fd8" title="arc::gui::camera::Orbit\l::move" alt="" coords="656,131,809,169"/>
-<area shape="rect" id="node10" href="$classarc_1_1random_1_1generator_1_1_quality.html#a62c1690d7eb9dd323ffe92051fca040c" title="arc::random::generator\l::Quality::gen" alt="" coords="654,193,811,232"/>
-<area shape="rect" id="node12" href="$classarc_1_1math_1_1formula_1_1_constant.html#a81be9442c2aaec2b322bda1b185b8085" title="arc::math::formula\l::Constant::operator()" alt="" coords="436,155,584,193"/>
-<area shape="rect" id="node13" href="$classarc_1_1random_1_1distribution_1_1_constant.html#aec071ab8271f465317f1112f8d4a2ccc" title="arc::random::distribution\l::Constant::sample" alt="" coords="428,217,592,256"/>
-<area shape="rect" id="node14" href="$classarc_1_1math_1_1formula_1_1_linear.html#a0b5fbd46e17ebd4737b924210676c9ca" title="arc::math::formula\l::Linear::operator()" alt="" coords="444,280,576,319"/>
-<area shape="rect" id="node15" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a0fa6aa6641224238ac372116f1459944" title="arc::random::distribution\l::Linear::sample" alt="" coords="428,343,592,381"/>
-<area shape="rect" id="node16" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#a8f239c70e4b6b1a4b6382eaa81dff27d" title="arc::random::distribution\l::Discrete::sample" alt="" coords="428,405,592,444"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1math_1_1geom.html#a475dc5533aec7b9caaa0a024f25f0689" title="arc::math::geom::area" alt="" coords="235,5,387,31"/>
+<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_circle.html#a4b6012d6e42d5b4fa8e35e3732864ce2" title="arc::geom::shape::Circle\l::collision" alt="" coords="228,55,394,93"/>
+<area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_circle.html#a441a85781105739919238ff1e903794e" title="arc::geom::shape::Circle\l::collision_norm" alt="" coords="228,117,394,156"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1utl_1_1search.html#ab0aae86f6b98b4746101dd60c00514ca" title="arc::utl::search::min\l_index" alt="" coords="242,180,380,219"/>
+<area shape="rect" id="node8" href="$namespacearc_1_1utl_1_1search.html#a83ff5408af0ccc99c51d3dabf4f4562b" title="arc::utl::search::max\l_index" alt="" coords="240,243,382,281"/>
+<area shape="rect" id="node14" href="$namespacearc_1_1utl_1_1search.html#a759ee83416f9fb620af459ecb00205f0" title="arc::utl::search::lower" alt="" coords="237,368,385,393"/>
+<area shape="rect" id="node22" href="$namespacearc_1_1utl_1_1search.html#aaceae6e461089b2e63a30d9f035427d3" title="arc::utl::search::upper" alt="" coords="236,417,386,443"/>
+<area shape="rect" id="node6" href="$namespacearc_1_1utl_1_1search.html#a7dedb03499315275304d2ee539dbbf81" title="arc::utl::search::min" alt="" coords="455,99,593,124"/>
+<area shape="rect" id="node7" href="$classarc_1_1geom_1_1shape_1_1_sphere.html#aab65755fc0af549dec1adc2fb89e7f5b" title="arc::geom::shape::Sphere\l::collision" alt="" coords="659,55,834,93"/>
+<area shape="rect" id="node9" href="$namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="453,187,595,212"/>
+<area shape="rect" id="node10" href="$classarc_1_1data_1_1image_1_1_colour.html#a1961f383de6c27c8768e4edf3b00927c" title="arc::data::image::Colour\l::save" alt="" coords="665,117,828,156"/>
+<area shape="rect" id="node11" href="$classarc_1_1data_1_1image_1_1_greyscale.html#af139686e330738ed6a644ad3bef54122" title="arc::data::image::Greyscale\l::save" alt="" coords="654,180,839,219"/>
+<area shape="rect" id="node12" href="$classarc_1_1gui_1_1camera_1_1_orbit.html#ab0062f89065280998577ed4781a22fd8" title="arc::gui::camera::Orbit\l::move" alt="" coords="670,243,823,281"/>
+<area shape="rect" id="node13" href="$classarc_1_1random_1_1generator_1_1_quality.html#a62c1690d7eb9dd323ffe92051fca040c" title="arc::random::generator\l::Quality::gen" alt="" coords="668,305,825,344"/>
+<area shape="rect" id="node15" href="$classarc_1_1geom_1_1shape_1_1_aabb.html#a24cdba18a2104159d68430e418806344" title="Generate a random position on the surface of the shape. " alt="" coords="443,236,606,275"/>
+<area shape="rect" id="node16" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a6676e63c672f481110026eabdb666ba2" title="Generate a random position on the surface of the shape. " alt="" coords="442,299,606,337"/>
+<area shape="rect" id="node17" href="$classarc_1_1math_1_1formula_1_1_constant.html#a81be9442c2aaec2b322bda1b185b8085" title="arc::math::formula\l::Constant::operator()" alt="" coords="450,361,598,400"/>
+<area shape="rect" id="node18" href="$classarc_1_1random_1_1distribution_1_1_constant.html#aec071ab8271f465317f1112f8d4a2ccc" title="arc::random::distribution\l::Constant::sample" alt="" coords="442,424,606,463"/>
+<area shape="rect" id="node19" href="$classarc_1_1math_1_1formula_1_1_linear.html#a0b5fbd46e17ebd4737b924210676c9ca" title="arc::math::formula\l::Linear::operator()" alt="" coords="458,487,590,525"/>
+<area shape="rect" id="node20" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a0fa6aa6641224238ac372116f1459944" title="arc::random::distribution\l::Linear::sample" alt="" coords="442,549,606,588"/>
+<area shape="rect" id="node21" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#a8f239c70e4b6b1a4b6382eaa81dff27d" title="arc::random::distribution\l::Discrete::sample" alt="" coords="442,612,606,651"/>
 </map>

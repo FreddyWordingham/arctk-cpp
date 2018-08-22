@@ -108,6 +108,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a791e68553dbf8c2d2fb9c00ee98782aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2be8cb96279daeff009744a8b70ddb82"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html">Triangle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a2be8cb96279daeff009744a8b70ddb82">tri</a> (size_t index_) const noexcept</td></tr>
 <tr class="separator:a2be8cb96279daeff009744a8b70ddb82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6676e63c672f481110026eabdb666ba2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a6676e63c672f481110026eabdb666ba2">random_pos</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept override</td></tr>
+<tr class="memdesc:a6676e63c672f481110026eabdb666ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a random position on the surface of the shape.  <a href="#a6676e63c672f481110026eabdb666ba2">More...</a><br /></td></tr>
+<tr class="separator:a6676e63c672f481110026eabdb666ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30578bd21f0fa9d050cd1879ccae02ab"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a30578bd21f0fa9d050cd1879ccae02ab">collision</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
 <tr class="separator:a30578bd21f0fa9d050cd1879ccae02ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add182c6ba48e9d2fc73f156a56bfa628"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::pair&lt; double, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#add182c6ba48e9d2fc73f156a56bfa628">collision_norm</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
@@ -130,12 +133,17 @@ Public Member Functions</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:aae7413807c30d4d5820ec9278c4b7675"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html">Triangle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#aae7413807c30d4d5820ec9278c4b7675">init_tris</a> (const std::string &amp;serial_, const <a class="el" href="namespacearc.html#a10678f936e6e0dc6f3ada62d03d315bb">mat4</a> &amp;transform_) const noexcept</td></tr>
 <tr class="separator:aae7413807c30d4d5820ec9278c4b7675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51623506d468518fe712e25f051ea3c4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a51623506d468518fe712e25f051ea3c4">init_areas</a> () const noexcept</td></tr>
+<tr class="separator:a51623506d468518fe712e25f051ea3c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a856717860fe6638d8937af7b8d72584d"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html">Triangle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a856717860fe6638d8937af7b8d72584d">_tris</a></td></tr>
 <tr class="memdesc:a856717860fe6638d8937af7b8d72584d"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of triangles forming the mesh.  <a href="#a856717860fe6638d8937af7b8d72584d">More...</a><br /></td></tr>
 <tr class="separator:a856717860fe6638d8937af7b8d72584d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc6b22575e06f9238f4713a58ad0206e"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#acc6b22575e06f9238f4713a58ad0206e">_areas</a></td></tr>
+<tr class="memdesc:acc6b22575e06f9238f4713a58ad0206e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalised relative area of each triangle forming the mesh.  <a href="#acc6b22575e06f9238f4713a58ad0206e">More...</a><br /></td></tr>
+<tr class="separator:acc6b22575e06f9238f4713a58ad0206e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Geometric triangle mesh shape. </p>
@@ -233,7 +241,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Determine if a collision event occurs between the axis-aligned bounding box and a ray. If a collision does occur, return the distance to the collision point.</p>
+<p>Determine if a collision event occurs between the mesh and a ray. If a collision does occur, return the distance to the collision point.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pos_</td><td>Position of the ray. </td></tr>
@@ -296,6 +304,44 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a51623506d468518fe712e25f051ea3c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51623506d468518fe712e25f051ea3c4">&#9670;&nbsp;</a></span>init_areas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; double &gt; arc::geom::shape::Mesh::init_areas </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initialise the vector of normalised relative area of each triangle.</p>
+<dl class="section return"><dt>Returns</dt><dd>Initialise vector of normalised relative area of each triangle. </dd></dl>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a51623506d468518fe712e25f051ea3c4_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a51623506d468518fe712e25f051ea3c4_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_mesh_a51623506d468518fe712e25f051ea3c4_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a51623506d468518fe712e25f051ea3c4_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1math_1_1compare.html#a928238089f4f18be7e7409feb9a74cde" title="arc::math::compare\l::equal" alt="" coords="218,5,354,44"/>
+<area shape="rect" id="node3" href="namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="402,5,538,44"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="aae7413807c30d4d5820ec9278c4b7675"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae7413807c30d4d5820ec9278c4b7675">&#9670;&nbsp;</a></span>init_tris()</h2>
 
@@ -340,15 +386,16 @@ Private Attributes</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>serial_ may not be empty.</dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>tris_ may not be empty.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Initialised vector of triangles that will form the mesh. </dd></dl>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_aae7413807c30d4d5820ec9278c4b7675_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_aae7413807c30d4d5820ec9278c4b7675_cgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_mesh_aae7413807c30d4d5820ec9278c4b7675_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_aae7413807c30d4d5820ec9278c4b7675_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1math_1_1_mat.html#ada19a34fc5169413915ca03d6d17c9f2" title="arc::math::Mat::inv" alt="" coords="230,29,361,55"/>
-<area shape="rect" id="node7" href="namespacearc_1_1utl_1_1stream.html#aa70112a62ebd9415f42043a6372f9c9d" title="arc::utl::stream::rewind" alt="" coords="218,79,374,104"/>
+<area shape="rect" id="node7" href="classarc_1_1math_1_1_vec.html#ad76dddf5863281c38659f69cf9d7ec36" title="arc::math::Vec::normal" alt="" coords="218,79,373,104"/>
+<area shape="rect" id="node8" href="namespacearc_1_1utl_1_1stream.html#aa70112a62ebd9415f42043a6372f9c9d" title="arc::utl::stream::rewind" alt="" coords="218,128,374,153"/>
 <area shape="rect" id="node3" href="classarc_1_1math_1_1_mat.html#af656481a991b67a0d5c56dd3907b7872" title="arc::math::Mat::adj" alt="" coords="422,55,554,80"/>
 <area shape="rect" id="node6" href="classarc_1_1math_1_1_mat.html#a17ff38fa0f4b29f52711441b876d1118" title="arc::math::Mat::det" alt="" coords="422,5,554,31"/>
 <area shape="rect" id="node4" href="classarc_1_1math_1_1_mat.html#afe05be4f8638a489f18d153239c5f314" title="arc::math::Mat::cofactor" alt="" coords="602,5,764,31"/>
@@ -382,14 +429,68 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the number of triangles within the mesh.</p>
 <dl class="section return"><dt>Returns</dt><dd>Number of triangles within the mesh. </dd></dl>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a791e68553dbf8c2d2fb9c00ee98782aa_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a791e68553dbf8c2d2fb9c00ee98782aa_icgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_mesh_a791e68553dbf8c2d2fb9c00ee98782aa_icgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a791e68553dbf8c2d2fb9c00ee98782aa_icgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#ae9ba63f25c1fbf73b47446fe9969245d" title="arc::gui::actor::mesh" alt="" coords="218,12,360,37"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6676e63c672f481110026eabdb666ba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6676e63c672f481110026eabdb666ba2">&#9670;&nbsp;</a></span>random_pos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::geom::shape::Mesh::random_pos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *&#160;</td>
+          <td class="paramname"><em>rng_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate a random position on the surface of the shape. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rng_</td><td>Random number generator. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Randomly generated point on the surface of the shape. </dd></dl>
+
+<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#adb4a5453dfb63827f5f3323e60204040">arc::geom::Shape</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a6676e63c672f481110026eabdb666ba2_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a6676e63c672f481110026eabdb666ba2_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_mesh_a6676e63c672f481110026eabdb666ba2_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a6676e63c672f481110026eabdb666ba2_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#a759ee83416f9fb620af459ecb00205f0" title="arc::utl::search::lower" alt="" coords="218,69,366,95"/>
+<area shape="rect" id="node3" href="namespacearc_1_1utl_1_1properties.html#a4df19ef005359af15befe0493e491a2d" title="arc::utl::properties\l::ascending" alt="" coords="813,5,941,44"/>
+<area shape="rect" id="node6" href="namespacearc_1_1utl_1_1properties.html#a4586f029de0cc630f2486b90ed38a0b4" title="arc::utl::properties\l::within" alt="" coords="437,63,565,101"/>
+<area shape="rect" id="node9" href="namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="414,125,588,151"/>
+<area shape="rect" id="node4" href="namespacearc_1_1index_1_1rotate.html#a7f591e13cc190f28640512d8d8339fb6" title="arc::index::rotate\l::prev" alt="" coords="989,5,1109,44"/>
+<area shape="rect" id="node5" href="namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="989,68,1109,107"/>
+<area shape="rect" id="node7" href="namespacearc_1_1utl_1_1properties.html#ad688778f1731b099b418122f2e92ca0c" title="arc::utl::properties\l::monotonic" alt="" coords="636,63,765,101"/>
+<area shape="rect" id="node8" href="namespacearc_1_1utl_1_1properties.html#a16db97d0483cb56664c5cc2fbadf04c0" title="arc::utl::properties\l::descending" alt="" coords="813,68,941,107"/>
 </map>
 </div>
 
@@ -427,11 +528,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>index_ must be less than _tris.size.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Const reference to a triangle within the mesh. </dd></dl>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a2be8cb96279daeff009744a8b70ddb82_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a2be8cb96279daeff009744a8b70ddb82_icgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_mesh_a2be8cb96279daeff009744a8b70ddb82_icgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a2be8cb96279daeff009744a8b70ddb82_icgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#ae9ba63f25c1fbf73b47446fe9969245d" title="arc::gui::actor::mesh" alt="" coords="236,5,378,31"/>
@@ -441,6 +542,30 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="acc6b22575e06f9238f4713a58ad0206e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc6b22575e06f9238f4713a58ad0206e">&#9670;&nbsp;</a></span>_areas</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;double&gt; arc::geom::shape::Mesh::_areas</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Normalised relative area of each triangle forming the mesh. </p>
+
+</div>
+</div>
 <a id="a856717860fe6638d8937af7b8d72584d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a856717860fe6638d8937af7b8d72584d">&#9670;&nbsp;</a></span>_tris</h2>
 
@@ -471,7 +596,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 20 2018 13:29:16 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 22 2018 02:13:08 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
