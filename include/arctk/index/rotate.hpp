@@ -35,8 +35,8 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Rotate --
-            inline size_t next(const size_t cur_, const size_t size_, const size_t step_ = 1) noexcept;
-            inline size_t prev(const size_t cur_, const size_t size_, const size_t step_ = 1) noexcept;
+            inline size_t next(size_t cur_, size_t size_, size_t step_ = 1) noexcept;
+            inline size_t prev(size_t cur_, size_t size_, size_t step_ = 1) noexcept;
 
 
 
