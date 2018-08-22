@@ -62,6 +62,17 @@ namespace arc //! arctk namespace
                 return ((next < size_) ? next : (next - size_));
             }
 
+            /**
+             *  Step backward in a index rotation of a given size.
+             *
+             *  @param  cur_    Current index value.
+             *  @param  size_   Size of the index roll.
+             *  @param  step_   Step size.
+             *
+             *  @pre    step_ must be less than size_.
+             *
+             *  @return Previous index after stepping backward.
+             */
             inline size_t prev(const size_t cur_, const size_t size_, const size_t step_) noexcept
             {
                 PRE(step_ < size_);
