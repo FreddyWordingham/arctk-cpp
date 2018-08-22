@@ -172,6 +172,14 @@ namespace arc //! arctk namespace
                 return (cart);
             }
 
+            /**
+             *  Construct and convert a two-dimensional spherical-polar vector to a two-dimensional cartesian vector.
+             *
+             *  @param  rho_    Value of the rho-component.
+             *  @param  theta_  Value of the theta-component.
+             *
+             *  @return Cartesian vector.
+             */
             template <typename T>
             inline Vec<T, 2> polar_to_cart(const T rho_, const T theta_) noexcept
             {
