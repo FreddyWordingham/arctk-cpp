@@ -194,6 +194,11 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
+                const vec3 hit  = pos_ + (dir_ * dist);
+                const vec3 axis = (_norm ^ (hit - _pos)).normal();
+                vec3       norm = _norm;
+                norm.rotate(axis, _aperture * (math::geom::distance(_pos, hit) / _rad));
+
                 return (std::pair<double, vec3>(dist, _norm));
             }
 
