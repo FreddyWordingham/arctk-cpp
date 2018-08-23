@@ -29,7 +29,10 @@ namespace arc //! arctk namespace
         class Stamp
         {
             //  == FIELDS ==
-          public:
+          private:
+            //  -- Counts --
+            const unsigned int _days; //!< Number of days.
+
 
             //  == INSTANTIATION ==
           public:
