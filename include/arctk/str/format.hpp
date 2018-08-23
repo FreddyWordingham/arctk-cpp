@@ -32,11 +32,22 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Time --
+            inline std::string time(unsigned long int sec_) noexcept;
 
 
 
             //  == FUNCTIONS ==
             //  -- Time --
+            inline std::string time(unsigned long int sec_) noexcept
+            {
+                const unsigned long int hr = sec_ / 3600;
+                sec_ %= 3600;
+
+                const unsigned long int min = sec_ / 60;
+                sec_ %= 60;
+
+                return (std::to_string(hr) + " : " + std::to_string(min) + " : " + std::to_string(sec_));
+            }
 
 
 
