@@ -40,10 +40,10 @@ namespace arc //! arctk namespace
             //  -- Time --
             inline std::string time(unsigned long int sec_) noexcept
             {
-                const unsigned int hr = sec_ / 3600;
+                const unsigned long int hr = sec_ / 3600;
                 sec_ %= 3600;
 
-                const unsigned int min = sec_ / 60;
+                const unsigned long int min = sec_ / 60;
                 sec_ %= 60;
 
                 return (std::to_string(hr) + "hr " + std::to_string(min) + "min " + std::to_string(sec_) + "s");
