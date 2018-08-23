@@ -116,6 +116,7 @@
 #include <arctk/sys/args.hpp>
 #include <arctk/term.hpp>
 #include <arctk/term/ansi.hpp>
+#include <arctk/time.hpp>
 #include <arctk/utl.hpp>
 #include <arctk/utl/properties.hpp>
 #include <arctk/utl/search.hpp>
