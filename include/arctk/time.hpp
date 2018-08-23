@@ -15,6 +15,8 @@
 
 
 //  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/time/stamp.hpp>
 
 
 
