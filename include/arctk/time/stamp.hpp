@@ -33,6 +33,7 @@ namespace arc //! arctk namespace
             //  -- Counts --
             const unsigned int _days; //!< Number of days.
             const unsigned int _hrs;  //!< Number of hours.
+            const unsigned int _min;  //!< Number of hours.
 
 
             //  == INSTANTIATION ==
