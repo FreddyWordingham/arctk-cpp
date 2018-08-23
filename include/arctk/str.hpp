@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/str/format.hpp>
 #include <arctk/str/parse.hpp>
 #include <arctk/str/printable.hpp>
 
