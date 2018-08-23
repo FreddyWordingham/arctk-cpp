@@ -31,9 +31,10 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Counts --
-            const unsigned int _days; //!< Number of days.
-            const unsigned int _hrs;  //!< Number of hours.
-            const unsigned int _min;  //!< Number of hours.
+            const unsigned int _day; //!< Number of days.
+            const unsigned int _hr;  //!< Number of hours.
+            const unsigned int _min; //!< Number of minutes.
+            const unsigned int _sec; //!< Number of seconds.
 
 
             //  == INSTANTIATION ==
