@@ -137,6 +137,12 @@ namespace arc //! arctk namespace
                 std::this_thread::sleep_for(std::chrono::milliseconds(_update_delta));
             }
 
+            unsigned long int total = 0;
+            for (size_t i = 0; i < _counts.size(); ++i)
+            {
+                total += _counts[i];
+            }
+
             std::cout << "Target aborted: " << std::setw(12) << total << "/" << _target << '\n';
 
             return (false);
