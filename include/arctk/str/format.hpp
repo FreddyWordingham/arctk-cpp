@@ -80,7 +80,7 @@ namespace arc //! arctk namespace
 
                 std::string bar(length_, ' ');
 
-                const size_t ticks = static_cast<size_t>(length_ * frac_);
+                const auto ticks = static_cast<size_t>(length_ * frac_);
                 for (size_t i = 0; i < ticks; ++i)
                 {
                     bar[i] = fill_;
