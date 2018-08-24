@@ -84,6 +84,10 @@ namespace arc //! arctk namespace
          *  @param  target_         Target to reach.
          *  @param  num_threads_    Number of threads to track.
          *  @param  update_delta_   Update time delta in milliseconds.
+         *
+         *  @pre    target_ must be positive.
+         *  @pre    num_threads_ must be positive.
+         *  @pre    update_delta_ must be positive.
          */
         inline Balancer::Balancer(const unsigned long int target_, const size_t num_threads_, const unsigned int update_delta_) noexcept
           : _finished(false)
