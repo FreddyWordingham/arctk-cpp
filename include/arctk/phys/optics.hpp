@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/math.hpp>
 
 
 
@@ -26,6 +27,11 @@ namespace arc //! arctk namespace
     {
         namespace optics //! optical namespace
         {
+
+
+
+            //  == FUNCTION PROTOTYPES ==
+            //  -- Reflection and Refraction --
 
 
 
