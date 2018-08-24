@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
                 const unsigned long int min = sec_ / 60;
                 sec_ %= 60;
 
-                return (std::to_string(hr) + "hr " + std::to_string(min) + "min " + std::to_string(sec_) + "s");
+                return (((hr < 10) ? "0" : "") + std::to_string(hr) + ((min < 10) ? ":0" : ":") + std::to_string(min) + ((sec_ < 10) ? ":0" : ":") + std::to_string(sec_));
             }
 
 
