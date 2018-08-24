@@ -61,6 +61,9 @@ namespace arc //! arctk namespace
 
             //  -- Setters --
             inline bool kill() noexcept;
+
+            //  -- Updating --
+            inline bool tick(size_t thread_index_) noexcept;
         };
 
 
@@ -93,6 +96,18 @@ namespace arc //! arctk namespace
         inline bool Balancer::kill() noexcept
         {
             _finished = true;
+        }
+
+
+        //  -- Updating --
+        inline bool Balancer::tick(const size_t thread_index_) noexcept
+        {
+            if (!_finished)
+            {
+                ++_counts[thread_index_]
+            }
+
+            return (_finished);
         }
 
 
