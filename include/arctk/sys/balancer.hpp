@@ -143,18 +143,19 @@ namespace arc //! arctk namespace
                           << "Percent complete : " << (frac * 100.0) << "%\n"
                           << "Current/target   : " << total << "/" << _target << '\n'
                           << "Ave rate (/s)    : " << (static_cast<double>(total) / static_cast<double>(elapsed_time)) << '\n'
-                          << "Estimated time   : " << str::format::time(static_cast<long int>(elapsed_time / frac) - elapsed_time) << '\n';
+                          << "Estimated time   : " << str::format::time(static_cast<long int>(elapsed_time / frac) - elapsed_time) << '\n'
+                          << '[' << str::format::bar(58, frac) << "]\n";
 
                 const double max = std::max(1.0, static_cast<double>(*std::max_element(_counts.begin(), _counts.end())));
                 for (size_t i = 0; i < _counts.size(); ++i)
                 {
-                    if ((i % 4) == 0)
+                    if (((i % 4) == 0) && (i != 0))
                     {
                         std::cout << '\n';
                     }
 
                     const double winner = _counts[i] / max;
-                    std::cout << std::setw(2) << i;
+                    std::cout << std::setw(2) << i << " [";
 
                     if (winner > 0.9)
                     {
@@ -168,7 +169,7 @@ namespace arc //! arctk namespace
                     {
                         std::cout << term::ansi::FG_RED;
                     }
-                    std::cout << str::format::bar(10, winner) << term::ansi::RESET << ' ';
+                    std::cout << str::format::bar(10, winner) << term::ansi::RESET << "]   ";
                 }
                 std::cout << '\n';
 
