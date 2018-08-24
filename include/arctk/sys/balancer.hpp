@@ -53,11 +53,11 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Balancer(const unsigned long int target_, const size_t num_threads_, const unsigned int update_delta_ = 1000) noexcept;
 
-            //  -- Initialisation --
-
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline bool finished() const noexcept;
         };
 
 
@@ -77,11 +77,13 @@ namespace arc //! arctk namespace
         }
 
 
-        //  -- Initialisation --
-
-
 
         //  == METHODS ==
+        //  -- Getters --
+        inline bool Balancer::finished() const noexcept
+        {
+            return (_finished);
+        }
 
 
 
