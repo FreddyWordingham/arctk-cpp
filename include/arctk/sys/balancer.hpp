@@ -17,7 +17,6 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <chrono>
-#include <mutex>
 #include <thread>
 
 
@@ -64,6 +63,7 @@ namespace arc //! arctk namespace
 
             //  -- Updating --
             inline bool tick(size_t thread_index_) noexcept;
+            inline bool update() noexcept;
         };
 
 
@@ -108,6 +108,14 @@ namespace arc //! arctk namespace
             }
 
             return (_finished);
+        }
+
+        inline bool Balancer::update() noexcept
+        {
+            while (!_finished)
+            {
+                std::this_thread::sleep_for(std::chrono::milliseconds(_delta));
+            }
         }
 
 
