@@ -137,8 +137,6 @@ namespace arc //! arctk namespace
                 }
 
                 const long int elapsed_time = (std::chrono::system_clock::now() - _start_time).count() / 1000000;
-                //                std::cout << "\033[2J" << std::fixed << std::setw(6) << std::setprecision(2) << (frac * 100.0) << "%\t" << std::setw(12) << total << "/" << _target << "\tETC:\t"
-                //                          << str::format::time(static_cast<long int>(elapsed_time / frac) - elapsed_time) << '\n';
 
                 std::cout << "\033[2J" << '[' << str::format::bar(78, frac) << "]\n\n"
                           << "Percent complete : " << (frac * 100.0) << "%\n"
