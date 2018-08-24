@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
                 const long int min = sec_ / 60;
                 sec_ %= 60;
 
-                return ((negative ? std::string("-") : std::string(" ")) + ((hr < 10) ? "0" : "") + std::to_string(hr) + ((min < 10) ? ":0" : ":") + std::to_string(min) + ((sec_ < 10) ? ":0" : ":") + std::to_string(sec_));
+                return ((negative ? std::string("-") : std::string("")) + ((hr < 10) ? "0" : "") + std::to_string(hr) + ((min < 10) ? ":0" : ":") + std::to_string(min) + ((sec_ < 10) ? ":0" : ":") + std::to_string(sec_));
             }
 
             inline std::string bar(const unsigned int length_, const double frac_, char fill_) noexcept
