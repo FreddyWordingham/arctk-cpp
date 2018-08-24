@@ -96,6 +96,7 @@ namespace arc //! arctk namespace
           , _counts(num_threads_)
           , _update_delta(update_delta_)
           , _start_time(std::chrono::system_clock::now())
+          , _updating(false)
         {
             PRE(target_ > 0);
             PRE(num_threads_ > 0);
