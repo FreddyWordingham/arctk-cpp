@@ -138,7 +138,7 @@ namespace arc //! arctk namespace
                 std::cout << "\033[2J"
                           << "Percent complete : " << (frac * 100.0) << "%\n"
                           << "Current/target   : " << total << "/" << _target << '\n'
-                          << "Rate (/s)        : " << (total / elapsed_time) << '\n'
+                          << "Ave rate (/s)    : " << (static_cast<double>(total) / static_cast<double>(elapsed_time)) << '\n'
                           << "Estimated time   : " << str::format::time(static_cast<long int>(elapsed_time / frac) - elapsed_time) << '\n';
 
                 std::this_thread::sleep_for(std::chrono::milliseconds(_update_delta));
