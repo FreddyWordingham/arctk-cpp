@@ -51,6 +51,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Balancer(const unsigned long int target_, const size_t num_threads_, const unsigned int update_delta_ = 1000) noexcept;
 
             //  -- Initialisation --
 
@@ -63,6 +64,18 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        inline Balancer::Balancer(const unsigned long int target_, const size_t num_threads_, const unsigned int update_delta_) noexcept
+          : _finished(false)
+          , _target(target_)
+          , _counts(num_threads_)
+          , _update_delta(update_delta_)
+          , _start_time(std::chrono::system_clock::now())
+        {
+            PRE(target_ > 0);
+            PRE(num_threads_ > 0);
+            PRE(update_delta_ > 0);
+        }
+
 
         //  -- Initialisation --
 
