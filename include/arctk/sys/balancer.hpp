@@ -157,7 +157,7 @@ namespace arc //! arctk namespace
                         std::cout << "    ";
                     }
 
-                    const double winner = _counts[i] / max;
+                    const double winner = std::min(1.0, _counts[i] / max);
                     std::cout << std::setw(4) << i << " [";
 
                     if (winner > 0.9)
