@@ -16,6 +16,9 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <chrono>
+#include <mutex>
+#include <thread>
 
 
 
@@ -35,7 +38,6 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
-
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
