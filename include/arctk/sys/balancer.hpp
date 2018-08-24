@@ -18,6 +18,7 @@
 //  -- Std --
 #include <algorithm>
 #include <chrono>
+#include <iostream>
 #include <thread>
 
 //  -- Arctk --
