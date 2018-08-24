@@ -38,6 +38,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Timing --
+            const unsigned int _update_delta; //!< Minimum number of milliseconds required to pass before balancing.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
