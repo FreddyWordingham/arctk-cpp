@@ -39,7 +39,8 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Timing --
-            const unsigned int _update_delta; //!< Minimum number of milliseconds required to pass before balancing.
+            const unsigned int                                       _update_delta; //!< Minimum number of milliseconds required to pass before balancing.
+            const std::chrono::time_point<std::chrono::system_clock> _start_time;   //!< Time of construction.
 
 
             //  == INSTANTIATION ==
