@@ -173,7 +173,7 @@ namespace arc //! arctk namespace
                 std::cerr << "Unable to start update loop.\n"
                           << "Only one update loop may be active at once.\n";
 
-                std::exit();
+                std::exit(exit::error::SINGLETON_VIOLATION);
             }
 
             _updating = true;
