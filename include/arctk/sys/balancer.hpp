@@ -215,7 +215,7 @@ namespace arc //! arctk namespace
             const double   frac         = static_cast<double>(total_) / static_cast<double>(_target);
             const long int elapsed_time = (std::chrono::system_clock::now() - _start_time).count() / 1000000;
 
-            std::cout << "\033[2J" << '[' << str::format::bar(78, frac) << "]\n\n"
+            std::cout << term::ansi::CLEAR << '[' << str::format::bar(78, frac) << "]\n\n"
                       << "Percent complete : " << (frac * 100.0) << "%\n"
                       << "Current/target   : " << total_ << "/" << _target << '\n'
                       << "Ave rate (/s)    : " << (static_cast<double>(total_) / static_cast<double>(elapsed_time)) << '\n'
