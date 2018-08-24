@@ -78,6 +78,13 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION --
         //  -- Constructors --
+        /**
+         *  Construct a balancer to reach a given target with a given number of threads and update delta.
+         *
+         *  @param  target_         Target to reach.
+         *  @param  num_threads_    Number of threads to track.
+         *  @param  update_delta_   Update time delta in milliseconds.
+         */
         inline Balancer::Balancer(const unsigned long int target_, const size_t num_threads_, const unsigned int update_delta_) noexcept
           : _finished(false)
           , _target(target_)
