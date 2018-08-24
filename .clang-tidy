@@ -1,5 +1,5 @@
 ---
-Checks:                '*,-cppcoreguidelines-pro-bounds-array-to-pointer-decay,-cppcoreguidelines-pro-bounds-constant-array-index,-cppcoreguidelines-pro-bounds-pointer-arithmetic,-cppcoreguidelines-pro-type-union-access,-fuchsia-default-arguments,-fuchsia-overloaded-operator,-hicpp-no-array-decay,-modernize-loop-convert'
+Checks:                '*,-cppcoreguidelines-pro-bounds-array-to-pointer-decay,-cppcoreguidelines-pro-bounds-constant-array-index,-cppcoreguidelines-pro-bounds-pointer-arithmetic,-cppcoreguidelines-pro-type-union-access,-fuchsia-default-arguments,-fuchsia-overloaded-operator,-google-runtime-int,-hicpp-no-array-decay,-modernize-loop-convert'
 WarningsAsErrors:      ''
 HeaderFilterRegex:     '.hpp'
 AnalyzeTemporaryDtors: true
