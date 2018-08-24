@@ -130,7 +130,7 @@ namespace arc //! arctk namespace
                 {
                     _finished = true;
 
-                    std::cout << "Target reached   : " << std::setw(12) << total << "/" << _target << '\n';
+                    std::cout << "Target reached   : " << std::setw(12) << total << '/' << _target << '\n';
                     std::cout << "Time taken       : " << str::format::time((std::chrono::system_clock::now() - _start_time).count() / 1000000) << '\n';
 
                     return (true);
