@@ -32,7 +32,7 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Time --
-            inline std::string time(unsigned long int sec_) noexcept;
+            inline std::string time(long int sec_) noexcept;
 
 
 
@@ -45,15 +45,21 @@ namespace arc //! arctk namespace
              *
              *  @return Formatted time string.
              */
-            inline std::string time(unsigned long int sec_) noexcept
+            inline std::string time(long int sec_) noexcept
             {
-                const unsigned long int hr = sec_ / 3600;
+                const bool negative = sec_ < 0;
+                if (negative)
+                {
+                    sec_ *= -1;
+                }
+
+                const long int hr = sec_ / 3600;
                 sec_ %= 3600;
 
-                const unsigned long int min = sec_ / 60;
+                const long int min = sec_ / 60;
                 sec_ %= 60;
 
-                return (((hr < 10) ? "0" : "") + std::to_string(hr) + ((min < 10) ? ":0" : ":") + std::to_string(min) + ((sec_ < 10) ? ":0" : ":") + std::to_string(sec_));
+                return ((negative ? std::string("-") : std::string(" ")) + ((hr < 10) ? "0" : "") + std::to_string(hr) + ((min < 10) ? ":0" : ":") + std::to_string(min) + ((sec_ < 10) ? ":0" : ":") + std::to_string(sec_));
             }
 
 
