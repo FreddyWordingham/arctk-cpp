@@ -133,8 +133,19 @@ namespace arc //! arctk namespace
 
 
         //  -- Updating --
+        /**
+         *  Tick one thread of the balancer if the balancer is not finished.
+         *
+         *  @param  thread_index_   Index of the thread to tick.
+         *
+         *  @pre    thread_index_ must be less than the size of _counts.
+         *
+         *  @return Balancer finished status.
+         */
         inline bool Balancer::tick(const size_t thread_index_) noexcept
         {
+            PRE(thread_index_ < _counts.size());
+
             if (!_finished)
             {
                 ++_counts[thread_index_];
