@@ -40,6 +40,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Counts --
             bool                           _finished; //!< False until balancer is finished with.
+            const unsigned long int        _target;   //!< Target number of counts to achieve.
             std::vector<unsigned long int> _counts;   //!< Count of loops made by each thread.
 
             //  -- Timing --
