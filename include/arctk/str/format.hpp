@@ -33,7 +33,7 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Time --
             inline std::string time(long int sec_) noexcept;
-            inline std::string bar(unsigned int length_, double frac_) noexcept;
+            inline std::string bar(unsigned int length_, double frac_, char fill_ = '|') noexcept;
 
 
 
@@ -63,22 +63,17 @@ namespace arc //! arctk namespace
                 return ((negative ? std::string("-") : std::string(" ")) + ((hr < 10) ? "0" : "") + std::to_string(hr) + ((min < 10) ? ":0" : ":") + std::to_string(min) + ((sec_ < 10) ? ":0" : ":") + std::to_string(sec_));
             }
 
-            inline std::string bar(const unsigned int length_, const double frac_) noexcept
+            inline std::string bar(const unsigned int length_, const double frac_, char fill_) noexcept
             {
-                PRE(length_ >= 12);
                 PRE((frac_ >= 0.0) && (frac_ <= 1.0));
 
                 std::string bar(length_, ' ');
-                bar.front() = '[';
 
-                const size_t fill = (length_ - 2) * frac_;
-                for (size_t i = 1; i < (fill + 1); ++i)
+                const size_t ticks = static_cast<size_t>(length_ * frac_);
+                for (size_t i = 0; i < ticks; ++i)
                 {
-                    std::cout << i << '\n';
-                    bar[i] = '|';
+                    bar[i] = fill_;
                 }
-
-                bar.back() = ']';
 
                 return (bar);
             }
