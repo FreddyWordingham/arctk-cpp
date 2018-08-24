@@ -144,7 +144,7 @@ namespace arc //! arctk namespace
                           << "Current/target   : " << total << "/" << _target << '\n'
                           << "Ave rate (/s)    : " << (static_cast<double>(total) / static_cast<double>(elapsed_time)) << '\n'
                           << "Estimated time   : " << str::format::time(static_cast<long int>(elapsed_time / frac) - elapsed_time) << '\n'
-                          << '[' << str::format::bar(58, frac) << "]\n";
+                          << '[' << str::format::bar(78, frac) << "]\n";
 
                 const double max = std::max(1.0, static_cast<double>(*std::max_element(_counts.begin(), _counts.end())));
                 for (size_t i = 0; i < _counts.size(); ++i)
