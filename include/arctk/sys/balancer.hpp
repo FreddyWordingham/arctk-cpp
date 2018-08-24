@@ -165,6 +165,16 @@ namespace arc //! arctk namespace
          */
         inline bool Balancer::update() noexcept
         {
+            if (_updating)
+            {
+                std::cerr << "Unable to start update loop.\n"
+                          << "Only one update loop may be active at once.\n";
+
+                std::exit();
+            }
+
+            _updating = true;
+
             while (!_finished)
             {
                 unsigned long int total = math::container::sum(_counts);
@@ -175,6 +185,8 @@ namespace arc //! arctk namespace
                     std::cout << "Target reached   : " << total << "/" << _target << '\n';
                     std::cout << "Time taken       : " << str::format::time((std::chrono::system_clock::now() - _start_time).count() / 1000000) << '\n';
 
+                    _updating = false;
+
                     return (true);
                 }
 
@@ -184,6 +196,8 @@ namespace arc //! arctk namespace
             }
 
             std::cout << "Target aborted   : " << std::setw(12) << math::container::sum(_counts) << "/" << _target << '\n';
+
+            _updating = false;
 
             return (false);
         }
