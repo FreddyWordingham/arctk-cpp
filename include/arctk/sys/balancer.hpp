@@ -160,9 +160,7 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Update the status of the balancer.
-         *
-         *
+         *  Routinely update the status of the balancer then sleep until at least the update delta period has passed.
          *
          *  @return True if the balancer completed. False if the balancer was killed pre-maturely.
          */
@@ -207,6 +205,11 @@ namespace arc //! arctk namespace
 
 
         //  -- Printing --
+        /**
+         *  Print balancer information.
+         *
+         *  @param  total_  Current total of the _counts vector.
+         */
         inline void Balancer::print_info(const unsigned long int total_) const noexcept
         {
             const double   frac         = static_cast<double>(total_) / static_cast<double>(_target);
