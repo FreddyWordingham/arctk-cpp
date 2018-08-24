@@ -63,7 +63,18 @@ namespace arc //! arctk namespace
                 return ((negative ? std::string("-") : std::string("")) + ((hr < 10) ? "0" : "") + std::to_string(hr) + ((min < 10) ? ":0" : ":") + std::to_string(min) + ((sec_ < 10) ? ":0" : ":") + std::to_string(sec_));
             }
 
-            inline std::string bar(const unsigned int length_, const double frac_, char fill_) noexcept
+            /**
+             *  Format the given fraction into a progress bar of a given length using the fill character.
+             *
+             *  @param  length_ Length of the progress bar.
+             *  @param  frac_   Fraction of the bar to fill.
+             *  @param  fill_   Character used to fill the bar.
+             *
+             *  @pre    frac_ must bet between zero and unity.
+             *
+             *  @return Formatted bar string.
+             */
+            inline std::string bar(const unsigned int length_, const double frac_, const char fill_) noexcept
             {
                 PRE((frac_ >= 0.0) && (frac_ <= 1.0));
 
