@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
                 const bool negative = sec_ < 0;
                 if (negative)
                 {
-                    sec_ *= -1;
+                    sec_ = -sec_;
                 }
 
                 const long int hr = sec_ / 3600;
