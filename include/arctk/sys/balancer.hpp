@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
             inline bool finished() const noexcept;
 
             //  -- Setters --
-            inline bool kill() noexcept;
+            inline void kill() noexcept;
 
             //  -- Updating --
             inline bool tick(size_t thread_index_) noexcept;
@@ -93,7 +93,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
-        inline bool Balancer::kill() noexcept
+        inline void Balancer::kill() noexcept
         {
             _finished = true;
         }
@@ -120,8 +120,10 @@ namespace arc //! arctk namespace
                     total += _counts[i];
                 }
 
-                std::this_thread::sleep_for(std::chrono::milliseconds(_delta));
+                std::this_thread::sleep_for(std::chrono::milliseconds(_update_delta));
             }
+
+            return (false);
         }
 
 
