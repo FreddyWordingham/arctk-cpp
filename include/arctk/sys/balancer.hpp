@@ -58,7 +58,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Balancer(const unsigned long int target_, const size_t num_threads_, const unsigned int update_delta_ = 1000) noexcept;
+            inline Balancer(unsigned long int target_, size_t num_threads_, unsigned int update_delta_ = 1000) noexcept;
 
 
             //  == METHODS ==
