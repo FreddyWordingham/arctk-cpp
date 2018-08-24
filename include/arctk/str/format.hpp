@@ -33,6 +33,7 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Time --
             inline std::string time(long int sec_) noexcept;
+            inline std::string bar(unsigned int length_, double frac_) noexcept;
 
 
 
@@ -60,6 +61,17 @@ namespace arc //! arctk namespace
                 sec_ %= 60;
 
                 return ((negative ? std::string("-") : std::string(" ")) + ((hr < 10) ? "0" : "") + std::to_string(hr) + ((min < 10) ? ":0" : ":") + std::to_string(min) + ((sec_ < 10) ? ":0" : ":") + std::to_string(sec_));
+            }
+
+            inline std::string bar(const unsigned int length_, const double frac_) noexcept
+            {
+                PRE(length_ > 12);
+
+                std::string bar(length, ' ');
+                bar.front() = '[';
+                bar.back()  = ']';
+
+                return (bar);
             }
 
 
