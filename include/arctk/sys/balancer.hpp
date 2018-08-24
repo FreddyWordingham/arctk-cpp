@@ -68,6 +68,10 @@ namespace arc //! arctk namespace
             //  -- Updating --
             inline bool tick(size_t thread_index_) noexcept;
             inline bool update() noexcept;
+
+          private:
+            //  -- Printing --
+            inline void print_info(const unsigned long int total_) const noexcept;
         };
 
 
@@ -118,15 +122,8 @@ namespace arc //! arctk namespace
         {
             while (!_finished)
             {
-                unsigned long int total = 0;
-                for (size_t i = 0; i < _counts.size(); ++i)
-                {
-                    total += _counts[i];
-                }
-
-                const double frac = static_cast<double>(total) / static_cast<double>(_target);
-
-                if (frac >= 1.0)
+                unsigned long int total = math::container::sum(_counts);
+                if (total >= _target)
                 {
                     _finished = true;
 
@@ -136,57 +133,59 @@ namespace arc //! arctk namespace
                     return (true);
                 }
 
-                const long int elapsed_time = (std::chrono::system_clock::now() - _start_time).count() / 1000000;
-
-                std::cout << "\033[2J" << '[' << str::format::bar(78, frac) << "]\n\n"
-                          << "Percent complete : " << (frac * 100.0) << "%\n"
-                          << "Current/target   : " << total << "/" << _target << '\n'
-                          << "Ave rate (/s)    : " << (static_cast<double>(total) / static_cast<double>(elapsed_time)) << '\n'
-                          << "Estimated time   : " << str::format::time(static_cast<long int>(elapsed_time / frac) - elapsed_time) << '\n';
-
-                const double max = std::max(1.0, static_cast<double>(*std::max_element(_counts.begin(), _counts.end())));
-                for (size_t i = 0; i < _counts.size(); ++i)
-                {
-                    if ((i % 4) == 0)
-                    {
-                        std::cout << '\n';
-                    }
-                    else
-                    {
-                        std::cout << "    ";
-                    }
-
-                    const double winner = std::min(1.0, _counts[i] / max);
-                    std::cout << std::setw(4) << i << " [";
-
-                    if (winner > 0.9)
-                    {
-                        std::cout << term::ansi::FG_GREEN;
-                    }
-                    else if (winner > 0.75)
-                    {
-                        std::cout << term::ansi::FG_YELLOW;
-                    }
-                    else
-                    {
-                        std::cout << term::ansi::FG_RED;
-                    }
-                    std::cout << str::format::bar(10, winner) << term::ansi::RESET << "]";
-                }
-                std::cout << '\n';
+                print_info(total);
 
                 std::this_thread::sleep_for(std::chrono::milliseconds(_update_delta));
             }
 
-            unsigned long int total = 0;
-            for (size_t i = 0; i < _counts.size(); ++i)
-            {
-                total += _counts[i];
-            }
-
-            std::cout << "Target aborted: " << std::setw(12) << total << "/" << _target << '\n';
+            std::cout << "Target aborted   : " << std::setw(12) << math::container::sum(_counts) << "/" << _target << '\n';
 
             return (false);
+        }
+
+
+        //  -- Printing --
+        inline void Balancer::print_info(const unsigned long int total_) const noexcept
+        {
+            const double   frac         = static_cast<double>(total_) / static_cast<double>(_target);
+            const long int elapsed_time = (std::chrono::system_clock::now() - _start_time).count() / 1000000;
+
+            std::cout << "\033[2J" << '[' << str::format::bar(78, frac) << "]\n\n"
+                      << "Percent complete : " << (frac * 100.0) << "%\n"
+                      << "Current/target   : " << total_ << "/" << _target << '\n'
+                      << "Ave rate (/s)    : " << (static_cast<double>(total_) / static_cast<double>(elapsed_time)) << '\n'
+                      << "Estimated time   : " << str::format::time(static_cast<long int>(elapsed_time / frac) - elapsed_time) << '\n';
+
+            const double max = std::max(1.0, static_cast<double>(*std::max_element(_counts.begin(), _counts.end())));
+            for (size_t i = 0; i < _counts.size(); ++i)
+            {
+                if ((i % 4) == 0)
+                {
+                    std::cout << '\n';
+                }
+                else
+                {
+                    std::cout << "    ";
+                }
+
+                const double winner = std::min(1.0, _counts[i] / max);
+                std::cout << std::setw(4) << i << " [";
+
+                if (winner > 0.9)
+                {
+                    std::cout << term::ansi::FG_GREEN;
+                }
+                else if (winner > 0.75)
+                {
+                    std::cout << term::ansi::FG_YELLOW;
+                }
+                else
+                {
+                    std::cout << term::ansi::FG_RED;
+                }
+                std::cout << str::format::bar(10, winner) << term::ansi::RESET << "]";
+            }
+            std::cout << '\n';
         }
 
 
