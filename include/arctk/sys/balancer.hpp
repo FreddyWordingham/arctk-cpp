@@ -49,6 +49,7 @@ namespace arc //! arctk namespace
             //  -- Timing --
             const unsigned int                                       _update_delta; //!< Minimum number of milliseconds required to pass before balancing.
             const std::chrono::time_point<std::chrono::system_clock> _start_time;   //!< Time of construction.
+            bool                                                     _updating;     //!< Updating status.
 
 
             //  == INSTANTIATION ==
@@ -154,6 +155,13 @@ namespace arc //! arctk namespace
             return (!_finished);
         }
 
+        /**
+         *  Update the status of the balancer.
+         *
+         *
+         *
+         *  @return True if the balancer completed. False if the balancer was killed pre-maturely.
+         */
         inline bool Balancer::update() noexcept
         {
             while (!_finished)
