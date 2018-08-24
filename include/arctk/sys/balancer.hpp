@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_SYS_BALANCE_HPP
-#define ARCTK_SYS_BALANCE_HPP
+#ifndef ARCTK_SYS_BALANCER_HPP
+#define ARCTK_SYS_BALANCER_HPP
 
 
 
@@ -262,4 +262,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_SYS_BALANCE_HPP
+#endif // ARCTK_SYS_BALANCER_HPP
