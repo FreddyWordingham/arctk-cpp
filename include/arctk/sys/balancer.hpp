@@ -16,8 +16,12 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <algorithm>
 #include <chrono>
 #include <thread>
+
+//  -- Arctk --
+#include <arctk/term.hpp>
 
 
 
@@ -140,6 +144,33 @@ namespace arc //! arctk namespace
                           << "Current/target   : " << total << "/" << _target << '\n'
                           << "Ave rate (/s)    : " << (static_cast<double>(total) / static_cast<double>(elapsed_time)) << '\n'
                           << "Estimated time   : " << str::format::time(static_cast<long int>(elapsed_time / frac) - elapsed_time) << '\n';
+
+                const double max = static_cast<double>(*std::max_element(_counts.begin(), _counts.end()));
+                for (size_t i = 0; i < _counts.size(); ++i)
+                {
+                    if ((i % 4) == 0)
+                    {
+                        std::cout << '\n';
+                    }
+
+                    const double winner = _counts[i] / max;
+
+                    if (winner > 0.99)
+                    {
+                        std::cout << term::ansi::FG_GREEN;
+                    }
+                    else if (winner > 0.75)
+                    {
+                        std::cout << term::ansi::FG_YELLOW;
+                    }
+                    else
+                    {
+                        std::cout << term::ansi::FG_RED;
+                    }
+
+                    std::cout << std::setw(8) << (_counts[i] / max) << ' ';
+                }
+                std::cout << term::ansi::RESET << '\n';
 
                 std::this_thread::sleep_for(std::chrono::milliseconds(_update_delta));
             }
