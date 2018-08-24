@@ -58,6 +58,9 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline bool finished() const noexcept;
+
+            //  -- Setters --
+            inline bool kill() noexcept;
         };
 
 
@@ -83,6 +86,13 @@ namespace arc //! arctk namespace
         inline bool Balancer::finished() const noexcept
         {
             return (_finished);
+        }
+
+
+        //  -- Setters --
+        inline bool Balancer::kill() noexcept
+        {
+            _finished = true;
         }
 
 
