@@ -137,6 +137,8 @@ namespace arc //! arctk namespace
                 std::this_thread::sleep_for(std::chrono::milliseconds(_update_delta));
             }
 
+            std::cout << "Target aborted: " << std::setw(12) << total << "/" << _target << '\n';
+
             return (false);
         }
 
