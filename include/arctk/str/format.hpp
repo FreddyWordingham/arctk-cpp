@@ -38,6 +38,13 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Time --
+            /**
+             *  Format a given number of seconds into a hr:min:sec string.
+             *
+             *  @param  sec_    Total number of seconds.
+             *
+             *  @return Formatted time string.
+             */
             inline std::string time(unsigned long int sec_) noexcept
             {
                 const unsigned long int hr = sec_ / 3600;
