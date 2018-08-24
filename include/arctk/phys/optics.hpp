@@ -15,6 +15,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cmath>
+
 //  -- Arctk --
 #include <arctk/math.hpp>
 
