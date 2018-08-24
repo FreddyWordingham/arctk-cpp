@@ -104,7 +104,7 @@ namespace arc //! arctk namespace
         {
             if (!_finished)
             {
-                ++_counts[thread_index_]
+                ++_counts[thread_index_];
             }
 
             return (_finished);
@@ -114,6 +114,12 @@ namespace arc //! arctk namespace
         {
             while (!_finished)
             {
+                unsigned long int total = 0;
+                for (size_t i = 0; i < _counts.size(); ++i)
+                {
+                    total += _counts[i];
+                }
+
                 std::this_thread::sleep_for(std::chrono::milliseconds(_delta));
             }
         }
