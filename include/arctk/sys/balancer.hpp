@@ -154,7 +154,21 @@ namespace arc //! arctk namespace
                     }
 
                     const double winner = _counts[i] / max;
-                    std::cout << str::format::bar(12, winner);
+                    std::cout << std::setw(2) << i;
+
+                    if (winner > 0.9)
+                    {
+                        std::cout << term::ansi::FG_GREEN;
+                    }
+                    else if (winner > 0.75)
+                    {
+                        std::cout << term::ansi::FG_YELLOW;
+                    }
+                    else
+                    {
+                        std::cout << term::ansi::FG_RED;
+                    }
+                    std::cout << str::format::bar(10, winner) << ' ';
                 }
                 std::cout << '\n';
 
