@@ -37,6 +37,7 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Reflection and Refraction --
             inline double reflection_prob(double ang_in_, double ref_index_in_, double ref_index_out_) noexcept;
+            inline double refraction_prob(double ang_in_, double ref_index_in_, double ref_index_out_) noexcept;
 
 
 
@@ -57,6 +58,14 @@ namespace arc //! arctk namespace
                 return (0.5 * (ref_prob_s + ref_prob_p));
             }
 
+            inline double refraction_prob(const double ang_in_, const double ref_index_in_, const double ref_index_out_) noexcept
+            {
+                PRE((ang_in_ >= 0.0) && (ang_in_ < consts::math::HALF_PI));
+                PRE(ref_index_in_ >= 1.0);
+                PRE(ref_index_out_ >= 1.0);
+
+                return (1.0 - reflection_prob(ang_in_, ref_index_in_, ref_index_out_));
+            }
 
 
         } // namespace optics
