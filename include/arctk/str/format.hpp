@@ -66,9 +66,19 @@ namespace arc //! arctk namespace
             inline std::string bar(const unsigned int length_, const double frac_) noexcept
             {
                 PRE(length_ >= 12);
+                PRE((frac_ >= 0.0) && (frac_ <= 1.0));
+
                 std::string bar(length_, ' ');
                 bar.front() = '[';
-                bar.back()  = ']';
+
+                const size_t fill = (length_ - 2) * frac_;
+                for (size_t i = 1; i < (fill + 1); ++i)
+                {
+                    std::cout << i << '\n';
+                    bar[i] = '|';
+                }
+
+                bar.back() = ']';
 
                 return (bar);
             }
