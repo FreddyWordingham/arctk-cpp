@@ -105,6 +105,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Query if the balancer is finished with.
+         *
+         *  @return Finished status.
+         */
         inline bool Balancer::finished() const noexcept
         {
             return (_finished);
