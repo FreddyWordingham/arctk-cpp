@@ -107,7 +107,7 @@ namespace arc //! arctk namespace
                 ++_counts[thread_index_];
             }
 
-            return (_finished);
+            return (!_finished);
         }
 
         inline bool Balancer::update() noexcept
