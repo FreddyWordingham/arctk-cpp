@@ -168,7 +168,7 @@ namespace arc //! arctk namespace
                     {
                         std::cout << term::ansi::FG_RED;
                     }
-                    std::cout << str::format::bar(10, winner) << ' ';
+                    std::cout << str::format::bar(10, winner) << term::ansi::RESET << ' ';
                 }
                 std::cout << '\n';
 
