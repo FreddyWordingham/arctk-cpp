@@ -117,8 +117,17 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
+        /**
+         *  Kill the balancer.
+         *  Set finished status to true.
+         *  Next (final) update loop will still occur.
+         *
+         *  @pre    _finished must be false.
+         */
         inline void Balancer::kill() noexcept
         {
+            PRE(!_finished);
+
             _finished = true;
         }
 
