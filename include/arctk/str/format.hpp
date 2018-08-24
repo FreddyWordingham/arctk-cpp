@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
             {
                 PRE(length_ > 12);
 
-                std::string bar(length, ' ');
+                std::string bar(length_, ' ');
                 bar.front() = '[';
                 bar.back()  = ']';
 
