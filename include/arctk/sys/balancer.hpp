@@ -120,6 +120,20 @@ namespace arc //! arctk namespace
                     total += _counts[i];
                 }
 
+                const double frac = static_cast<double>(total) / static_cast<double>(_target);
+
+                if (frac >= 1.0)
+                {
+                    _finished = true;
+
+                    std::cout << "Target reached: " << std::setw(12) << total << "/" << _target << '\n';
+
+                    return (true);
+                }
+
+                const long int ms_elapsed = (std::chrono::system_clock::now() - _start_time).count();
+                std::cout << std::setw(12) << total << "/" << _target << "\tETC:\t" << str::format::time(static_cast<long int>(ms_elapsed / frac) - ms_elapsed) << '\n';
+
                 std::this_thread::sleep_for(std::chrono::milliseconds(_update_delta));
             }
 
