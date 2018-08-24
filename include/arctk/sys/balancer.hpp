@@ -75,7 +75,7 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Printing --
-            inline void print_info(const unsigned long int total_) const noexcept;
+            inline void print_info(unsigned long int total_) const noexcept;
         };
 
 
