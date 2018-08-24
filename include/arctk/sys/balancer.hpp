@@ -131,8 +131,7 @@ namespace arc //! arctk namespace
                     return (true);
                 }
 
-                const long int ms_elapsed = (std::chrono::system_clock::now() - _start_time).count();
-                std::cout << ms_elapsed << '\n;';
+                const long int ms_elapsed = (std::chrono::system_clock::now() - _start_time).count() / 1000;
                 std::cout << std::setw(12) << total << "/" << _target << "\tETC:\t" << str::format::time(static_cast<long int>(ms_elapsed / frac) - ms_elapsed) << '\n';
 
                 std::this_thread::sleep_for(std::chrono::milliseconds(_update_delta));
