@@ -1,17 +1,21 @@
 <map id="include/arctk/sys.hpp" name="include/arctk/sys.hpp">
-<area shape="rect" id="node2" href="$args_8hpp.html" title="arctk/sys/args.hpp" alt="" coords="1249,79,1378,104"/>
-<area shape="rect" id="node7" href="$debug_8hpp.html" title="arctk/debug.hpp" alt="" coords="470,299,587,324"/>
-<area shape="rect" id="node16" href="$exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="215,445,316,471"/>
-<area shape="rect" id="node23" href="$str_8hpp.html" title="arctk/str.hpp" alt="" coords="1267,152,1361,177"/>
-<area shape="rect" id="node8" href="$contract_8hpp.html" title="arctk/debug/contract.hpp" alt="" coords="566,372,734,397"/>
-<area shape="rect" id="node9" href="$location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="472,445,638,471"/>
-<area shape="rect" id="node19" href="$invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="320,372,491,397"/>
-<area shape="rect" id="node21" href="$macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="128,372,245,397"/>
-<area shape="rect" id="node17" href="$error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="182,519,314,544"/>
-<area shape="rect" id="node18" href="$success_8hpp.html" title="arctk/exit/success.hpp" alt="" coords="5,519,158,544"/>
-<area shape="rect" id="node22" href="$utility_8hpp.html" title="arctk/macro/utility.hpp" alt="" coords="41,445,191,471"/>
-<area shape="rect" id="node24" href="$parse_8hpp.html" title="arctk/str/parse.hpp" alt="" coords="1070,225,1202,251"/>
-<area shape="rect" id="node33" href="$printable_8hpp.html" title="arctk/str/printable.hpp" alt="" coords="1416,225,1566,251"/>
-<area shape="rect" id="node31" href="$settings_8hpp.html" title="arctk/settings.hpp" alt="" coords="1236,299,1362,324"/>
-<area shape="rect" id="node32" href="$format_8hpp.html" title="arctk/settings/format.hpp" alt="" coords="1194,372,1361,397"/>
+<area shape="rect" id="node2" href="$args_8hpp.html" title="arctk/sys/args.hpp" alt="" coords="1002,79,1131,104"/>
+<area shape="rect" id="node35" href="$balancer_8hpp.html" title="arctk/sys/balancer.hpp" alt="" coords="1882,225,2036,251"/>
+<area shape="rect" id="node7" href="$debug_8hpp.html" title="arctk/debug.hpp" alt="" coords="1352,299,1469,324"/>
+<area shape="rect" id="node16" href="$exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="1707,445,1808,471"/>
+<area shape="rect" id="node23" href="$str_8hpp.html" title="arctk/str.hpp" alt="" coords="830,152,924,177"/>
+<area shape="rect" id="node8" href="$contract_8hpp.html" title="arctk/debug/contract.hpp" alt="" coords="1265,372,1433,397"/>
+<area shape="rect" id="node9" href="$location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="1325,445,1491,471"/>
+<area shape="rect" id="node19" href="$invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="1508,372,1679,397"/>
+<area shape="rect" id="node21" href="$macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="1124,372,1241,397"/>
+<area shape="rect" id="node17" href="$error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="1682,519,1814,544"/>
+<area shape="rect" id="node18" href="$success_8hpp.html" title="arctk/exit/success.hpp" alt="" coords="1838,519,1991,544"/>
+<area shape="rect" id="node22" href="$utility_8hpp.html" title="arctk/macro/utility.hpp" alt="" coords="1101,445,1251,471"/>
+<area shape="rect" id="node24" href="$str_2format_8hpp.html" title="arctk/str/format.hpp" alt="" coords="431,225,567,251"/>
+<area shape="rect" id="node25" href="$parse_8hpp.html" title="arctk/str/parse.hpp" alt="" coords="682,225,814,251"/>
+<area shape="rect" id="node34" href="$printable_8hpp.html" title="arctk/str/printable.hpp" alt="" coords="931,225,1080,251"/>
+<area shape="rect" id="node32" href="$settings_8hpp.html" title="arctk/settings.hpp" alt="" coords="320,299,446,324"/>
+<area shape="rect" id="node33" href="$settings_2format_8hpp.html" title="arctk/settings/format.hpp" alt="" coords="320,372,488,397"/>
+<area shape="rect" id="node39" href="$term_8hpp.html" title="arctk/term.hpp" alt="" coords="2124,299,2231,324"/>
+<area shape="rect" id="node40" href="$ansi_8hpp.html" title="arctk/term/ansi.hpp" alt="" coords="2095,372,2230,397"/>
 </map>

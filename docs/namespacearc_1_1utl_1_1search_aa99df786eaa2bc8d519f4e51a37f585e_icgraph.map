@@ -3,4 +3,6 @@
 <area shape="rect" id="node3" href="$classarc_1_1data_1_1image_1_1_greyscale.html#af139686e330738ed6a644ad3bef54122" title="arc::data::image::Greyscale\l::save" alt="" coords="195,68,379,107"/>
 <area shape="rect" id="node4" href="$classarc_1_1gui_1_1camera_1_1_orbit.html#ab0062f89065280998577ed4781a22fd8" title="arc::gui::camera::Orbit\l::move" alt="" coords="210,131,364,169"/>
 <area shape="rect" id="node5" href="$classarc_1_1random_1_1generator_1_1_quality.html#a62c1690d7eb9dd323ffe92051fca040c" title="arc::random::generator\l::Quality::gen" alt="" coords="208,193,365,232"/>
+<area shape="rect" id="node6" href="$classarc_1_1sys_1_1_balancer.html#ad9892e6ebb8eed6424aad8ae9d3d0c0e" title="arc::sys::Balancer\l::print_info" alt="" coords="223,256,351,295"/>
+<area shape="rect" id="node7" href="$classarc_1_1sys_1_1_balancer.html#ad71629ec9e2276d04f58551c1fdc57f1" title="arc::sys::Balancer\l::update" alt="" coords="427,256,554,295"/>
 </map>

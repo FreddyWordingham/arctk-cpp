@@ -1,7 +1,9 @@
 <map id="arc::utl::search::max_index" name="arc::utl::search::max_index">
-<area shape="rect" id="node2" href="$namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="195,107,336,132"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="195,137,336,163"/>
 <area shape="rect" id="node3" href="$classarc_1_1data_1_1image_1_1_colour.html#a1961f383de6c27c8768e4edf3b00927c" title="arc::data::image::Colour\l::save" alt="" coords="394,5,558,44"/>
 <area shape="rect" id="node4" href="$classarc_1_1data_1_1image_1_1_greyscale.html#af139686e330738ed6a644ad3bef54122" title="arc::data::image::Greyscale\l::save" alt="" coords="384,68,568,107"/>
 <area shape="rect" id="node5" href="$classarc_1_1gui_1_1camera_1_1_orbit.html#ab0062f89065280998577ed4781a22fd8" title="arc::gui::camera::Orbit\l::move" alt="" coords="400,131,553,169"/>
 <area shape="rect" id="node6" href="$classarc_1_1random_1_1generator_1_1_quality.html#a62c1690d7eb9dd323ffe92051fca040c" title="arc::random::generator\l::Quality::gen" alt="" coords="398,193,555,232"/>
+<area shape="rect" id="node7" href="$classarc_1_1sys_1_1_balancer.html#ad9892e6ebb8eed6424aad8ae9d3d0c0e" title="arc::sys::Balancer\l::print_info" alt="" coords="413,256,540,295"/>
+<area shape="rect" id="node8" href="$classarc_1_1sys_1_1_balancer.html#ad71629ec9e2276d04f58551c1fdc57f1" title="arc::sys::Balancer\l::update" alt="" coords="616,256,744,295"/>
 </map>

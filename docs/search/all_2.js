@@ -1,6 +1,9 @@
 var searchData=
 [
   ['b',['b',['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#af24a6e4e9b786172acd12ff8f3572628',1,'arc::math::Vec&lt; T, 3 &gt;::b()'],['../classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a87a2636f506f186a3473f995886ca0f4',1,'arc::math::Vec&lt; T, 4 &gt;::b()'],['../namespacearc_1_1index_1_1col.html#a9900ae7a0448a055a3ed314d6521d577a09f9b917a1108e26987264e31a6b2eb3',1,'arc::index::col::B()']]],
+  ['balancer',['Balancer',['../classarc_1_1sys_1_1_balancer.html',1,'arc::sys::Balancer'],['../classarc_1_1sys_1_1_balancer.html#ab3c1a45ac864217ca1a396968140fc1f',1,'arc::sys::Balancer::Balancer()']]],
+  ['balancer_2ehpp',['balancer.hpp',['../balancer_8hpp.html',1,'']]],
+  ['bar',['bar',['../namespacearc_1_1str_1_1format.html#a3f18fbe1a9f77def2402434a974a1aec',1,'arc::str::format']]],
   ['basic',['Basic',['../classarc_1_1phys_1_1material_1_1_basic.html',1,'arc::phys::material::Basic'],['../classarc_1_1phys_1_1material_1_1_basic.html#a12ea3cb0d1a3fa67debe88115604f9e8',1,'arc::phys::material::Basic::Basic()']]],
   ['basic_2ehpp',['basic.hpp',['../basic_8hpp.html',1,'']]],
   ['beta',['BETA',['../namespacearc_1_1index_1_1vertex.html#aa5123cac51381d20074da1770823be40a3496aa5a63f5966a26b802d8b98d3a07',1,'arc::index::vertex']]],

@@ -32,6 +32,7 @@ var searchData=
   ['shape',['Shape',['../classarc_1_1geom_1_1_shape.html',1,'arc::geom::Shape'],['../classarc_1_1geom_1_1_shape.html#a8d674a484f1e5ab69a1d68828a8b35d4',1,'arc::geom::Shape::Shape(const Shape &amp;) noexcept=default'],['../classarc_1_1geom_1_1_shape.html#a247752e61516a2f0f2adac6aaf7e13e7',1,'arc::geom::Shape::Shape(Shape &amp;&amp;) noexcept=default']]],
   ['shape_2ehpp',['shape.hpp',['../shape_8hpp.html',1,'']]],
   ['shift_5fwavelength',['shift_wavelength',['../classarc_1_1phys_1_1particle_1_1_photon.html#a5dbcd29a8168d0b7db1b7973d7174713',1,'arc::phys::particle::Photon']]],
+  ['singleton_5fviolation',['SINGLETON_VIOLATION',['../namespacearc_1_1exit_1_1error.html#a5a6749486b28cbc4c62d80794d66a815',1,'arc::exit::error']]],
   ['size',['size',['../classarc_1_1data_1_1_histogram_3_01_t_00_011_01_4.html#a4273284647999934a0a5847f2b47468f',1,'arc::data::Histogram&lt; T, 1 &gt;::size()'],['../classarc_1_1data_1_1_histogram_3_01_t_00_012_01_4.html#a15d24df30fe26967797c146d65a88edb',1,'arc::data::Histogram&lt; T, 2 &gt;::size()']]],
   ['skybox',['Skybox',['../classarc_1_1gui_1_1shader_1_1_skybox.html',1,'arc::gui::shader::Skybox'],['../classarc_1_1gui_1_1shader_1_1_skybox.html#af9acffd73ac06a798b1f9ecd4ee35320',1,'arc::gui::shader::Skybox::Skybox()']]],
   ['skybox_2ehpp',['skybox.hpp',['../skybox_8hpp.html',1,'']]],
