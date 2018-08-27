@@ -181,6 +181,13 @@ namespace arc //! arctk namespace
 
 
             //  -- Emission --
+            /**
+             *  Generate a random position on the surface of the triangle.
+             *
+             *  @param  rng_    Random number generator.
+             *
+             *  @return Random position on the surface of the triangle.
+             */
             inline vec3 Triangle::random_pos(random::Generator* const rng_) const noexcept
             {
                 double a = rng_->gen();
