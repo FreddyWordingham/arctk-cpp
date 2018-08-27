@@ -93,6 +93,13 @@ namespace arc //! arctk namespace
                 return (_pos + (random::distribution::isotropic(rng_) * _rad));
             }
 
+            /**
+             *  Generate a random position, and corresponding normal, on the surface of the sphere.
+             *
+             *  @param  rng_    Random number generator.
+             *
+             *  @return Random position, and corresponding normal, on the surface of the sphere.
+             */
             inline std::pair<vec3, vec3> Sphere::random_pos_and_norm(random::Generator* rng_) const noexcept
             {
                 const vec3 unit = random::distribution::isotropic(rng_);
