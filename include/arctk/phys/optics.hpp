@@ -111,6 +111,20 @@ namespace arc //! arctk namespace
 
 
             //  -- Directions --
+            /**
+             *  Determine the direction of reflection.
+             *
+             *  @param  in_     Incident direction.
+             *  @param  norm_   Surface normal.
+             *
+             *  @pre    in_ must be normalised.
+             *  @pre    norm_ must be normalised.
+             *  @pre    Dot product of in_ and norm_ must be negative.
+             *
+             *  @post   out must be normalised.
+             *
+             *  @return Reflection direction.
+             */
             inline vec3 reflection_dir(const vec3& in_, const vec3& norm_) noexcept
             {
                 PRE(in_.normalised());
