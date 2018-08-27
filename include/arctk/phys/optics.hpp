@@ -39,7 +39,6 @@ namespace arc //! arctk namespace
             inline double reflection_prob(double ang_in_, double ref_index_in_, double ref_index_out_) noexcept;
             inline double refraction_prob(double ang_in_, double ref_index_in_, double ref_index_out_) noexcept;
 
-
             //  -- Directions --
             inline vec3 reflection_dir(const vec3& in_, const vec3& norm_) noexcept;
             inline vec3 refraction_dir(const vec3& in_, const vec3& norm_, double ref_index_in_, double ref_index_out_) noexcept;
