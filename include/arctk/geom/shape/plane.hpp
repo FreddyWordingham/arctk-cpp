@@ -133,6 +133,16 @@ namespace arc //! arctk namespace
                 return (std::pair<vec3, vec3>(random_pos(rng_), _norm));
             }
 
+            /**
+             *  Generate a random position, and corresponding normal, on the surface of the plane within a radius from its centre.
+             *
+             *  @param  rng_    Random number generator.
+             *  @param  rad_    Radius of point generation.
+             *
+             *  @pre    rad_ must be positive.
+             *
+             *  @return Random position, and corresponding normal, on the surface of the plane.
+             */
             inline std::pair<vec3, vec3> Plane::random_pos_and_norm(random::Generator* const rng_, const double rad_) const noexcept
             {
                 return (std::pair<vec3, vec3>(random_pos(rng_, rad_), _norm));
