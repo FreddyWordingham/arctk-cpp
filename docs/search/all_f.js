@@ -22,6 +22,7 @@ var searchData=
   ['opt',['opt',['../classarc_1_1phys_1_1particle_1_1_photon.html#afa68990885638f6f236ae97f1ae11e5b',1,'arc::phys::particle::Photon']]],
   ['optical',['Optical',['../classarc_1_1phys_1_1_optical.html',1,'arc::phys::Optical'],['../classarc_1_1phys_1_1_optical.html#ab470ec56296cdd9d6b57d64327c7c2a3',1,'arc::phys::Optical::Optical(double ref_index_, double interact_coef_, double albedo_, double asym_) noexcept'],['../classarc_1_1phys_1_1_optical.html#ac9f3f7af6fe5db6f930075025a175409',1,'arc::phys::Optical::Optical(double ref_index_, double interact_coef_, double albedo_, double asym_, double change_prob_) noexcept']]],
   ['optical_2ehpp',['optical.hpp',['../optical_8hpp.html',1,'']]],
+  ['optics_2ehpp',['optics.hpp',['../optics_8hpp.html',1,'']]],
   ['orbit',['Orbit',['../classarc_1_1gui_1_1camera_1_1_orbit.html',1,'arc::gui::camera::Orbit'],['../classarc_1_1gui_1_1camera_1_1_orbit.html#ac3771f94369ff93d5dc0e0ff8c8d805e',1,'arc::gui::camera::Orbit::Orbit()']]],
   ['orbit_2ehpp',['orbit.hpp',['../orbit_8hpp.html',1,'']]],
   ['orthographic',['Orthographic',['../classarc_1_1gui_1_1lens_1_1_orthographic.html',1,'arc::gui::lens::Orthographic'],['../classarc_1_1gui_1_1lens_1_1_orthographic.html#a5457bbcfbf84c2a3e69b4128ef490391',1,'arc::gui::lens::Orthographic::Orthographic()']]],

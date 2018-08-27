@@ -31,6 +31,7 @@ var searchData=
   ['mat',['mat',['../namespacearc_1_1math_1_1mat.html',1,'arc::math']]],
   ['material',['material',['../namespacearc_1_1phys_1_1material.html',1,'arc::phys']]],
   ['math',['math',['../namespacearc_1_1consts_1_1math.html',1,'arc::consts::math'],['../namespacearc_1_1math.html',1,'arc::math']]],
+  ['optics',['optics',['../namespacearc_1_1phys_1_1optics.html',1,'arc::phys']]],
   ['parse',['parse',['../namespacearc_1_1str_1_1parse.html',1,'arc::str']]],
   ['particle',['particle',['../namespacearc_1_1phys_1_1particle.html',1,'arc::phys']]],
   ['phys',['phys',['../namespacearc_1_1consts_1_1phys.html',1,'arc::consts::phys'],['../namespacearc_1_1phys.html',1,'arc::phys']]],
