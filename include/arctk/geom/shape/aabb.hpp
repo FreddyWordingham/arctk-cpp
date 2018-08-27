@@ -70,7 +70,8 @@ namespace arc //! arctk namespace
                 inline const vec3& max() const noexcept;
 
                 //  -- Emission --
-                inline vec3 random_pos(random::Generator* rng_) const noexcept override;
+                inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
+                inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept;
 
                 //  -- Collision --
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -181,6 +182,23 @@ namespace arc //! arctk namespace
                 pos[dim_1] = random::distribution::uniform(rng_, _min[dim_1], _max[dim_1]);
 
                 return (pos);
+            }
+
+            inline std::pair<vec3, vec3> Aabb::random_pos_and_norm(random::Generator* rng_) const noexcept
+            {
+                const size_t face  = utl::search::lower(_areas, rng_->gen());
+                const size_t dim_0 = index::rotate::next(face, 3, 1);
+                const size_t dim_1 = index::rotate::next(face, 3, 2);
+
+                vec3 pos;
+
+                pos[face]  = (rng_->gen() < 0.5) ? _min[face] : _max[face];
+                pos[dim_0] = random::distribution::uniform(rng_, _min[dim_0], _max[dim_0]);
+                pos[dim_1] = random::distribution::uniform(rng_, _min[dim_1], _max[dim_1]);
+
+                const vec3 norm = (face < 3) ? math::vec::axis<double, 3>(face) : -math::vec::axis<double, 3>(face % 3);
+
+                return (std::pair<vec3, vec3>(pos, norm));
             }
 
 
