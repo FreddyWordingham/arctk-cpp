@@ -170,11 +170,11 @@ namespace arc //! arctk namespace
 
             //  -- Emission --
             /**
-             *  Generate a random position, and corresponding normal, on the surface of the axis-aligned bounding box.
+             *  Generate a random position on the surface of the axis-aligned bounding box.
              *
              *  @param  rng_    Random number generator.
              *
-             *  @return Random position, and corresponding normal, on the surface of the axis-aligned bounding box.
+             *  @return Random position on the surface of the axis-aligned bounding box.
              */
             inline vec3 Aabb::random_pos(random::Generator* const rng_) const noexcept
             {
