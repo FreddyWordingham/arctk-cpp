@@ -129,7 +129,7 @@ namespace arc //! arctk namespace
 
             inline std::pair<vec3, vec3> Plane::random_pos_and_norm(random::Generator* const rng_) const noexcept
             {
-                return (std::pair<vec3, vec3>(random_pos(), _norm);
+                return (std::pair<vec3, vec3>(random_pos(), _norm));
             }
 
 
