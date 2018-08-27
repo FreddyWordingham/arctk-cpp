@@ -71,7 +71,8 @@ namespace arc //! arctk namespace
                 inline const vec3&                plane_norm() const noexcept;
 
                 //  -- Emission --
-                inline vec3 random_pos(random::Generator* rng_) const noexcept override;
+                inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
+                inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept;
 
                 //  -- Collision --
                 inline std::optional<double>                  plane_collision(const vec3& pos_, const vec3& dir_) const noexcept;
@@ -192,6 +193,23 @@ namespace arc //! arctk namespace
                 }
 
                 return (_pos[index::vertex::GAMMA] + ((_pos[index::vertex::ALPHA] - _pos[index::vertex::GAMMA]) * a) + ((_pos[index::vertex::BETA] - _pos[index::vertex::GAMMA]) * b));
+            }
+
+            inline std::pair<vec3, vec3> Triangle::random_pos_and_norm(random::Generator* rng_) const noexcept
+            {
+                double a = rng_->gen();
+                double b = rng_->gen();
+
+                if ((a + b) > 1.0)
+                {
+                    a = 1.0 - a;
+                    b = 1.0 - b;
+                }
+
+                const vec3 pos  = _pos[index::vertex::GAMMA] + ((_pos[index::vertex::ALPHA] - _pos[index::vertex::GAMMA]) * a) + ((_pos[index::vertex::BETA] - _pos[index::vertex::GAMMA]) * b);
+                const vec3 norm = ((_norm[index::vertex::ALPHA] * a) + (_norm[index::vertex::BETA] * b) + (_norm[index::vertex::GAMMA] * (1.0 - a - b))).normal();
+
+                return (std::pair<vec3, vec3>(pos, norm));
             }
 
 
