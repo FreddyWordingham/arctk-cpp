@@ -83,7 +83,8 @@ namespace arc //! arctk namespace
                 inline const Triangle& tri(size_t index_) const noexcept;
 
                 //  -- Emission --
-                inline vec3 random_pos(random::Generator* rng_) const noexcept override;
+                inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
+                inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept;
 
                 //  -- Collision --
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -292,6 +293,11 @@ namespace arc //! arctk namespace
             inline vec3 Mesh::random_pos(random::Generator* const rng_) const noexcept
             {
                 return (_tris[utl::search::lower(_areas, rng_->gen())].random_pos(rng_));
+            }
+
+            inline std::pair<vec3, vec3> Mesh::random_pos_and_norm(random::Generator* rng_) const noexcept
+            {
+                return (_tris[utl::search::lower(_areas, rng_->gen())].random_pos_and_norm(rng_));
             }
 
 
