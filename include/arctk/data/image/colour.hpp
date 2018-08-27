@@ -179,6 +179,14 @@ namespace arc //! arctk namespace
                 save(path_, [](const double x_) { return (x_); });
             }
 
+            /**
+             *  Save the image data using a scaling function.
+             *  Pixel values are normalised and scaled.
+             *  Pixel values are converted to a greyscale colour.
+             *
+             *  @param  path_   Path to the output file.
+             *  @param  scale_  Scaling function.
+             */
             inline void Colour::save(const std::string& path_, double (*const scale_)(const double)) const noexcept // NOLINT
             {
                 PRE(!path_.empty());
