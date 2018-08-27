@@ -88,6 +88,13 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Emission --
+            /**
+             *  Generate a random position on the surface of the sphere.
+             *
+             *  @param  rng_    Random number generator.
+             *
+             *  @return Random position on the surface of the sphere.
+             */
             inline vec3 Sphere::random_pos(random::Generator* const rng_) const noexcept
             {
                 return (_pos + (random::distribution::isotropic(rng_) * _rad));
