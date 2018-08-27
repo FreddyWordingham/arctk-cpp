@@ -169,6 +169,13 @@ namespace arc //! arctk namespace
 
 
             //  -- Emission --
+            /**
+             *  Generate a random position, and corresponding normal, on the surface of the axis-aligned bounding box.
+             *
+             *  @param  rng_    Random number generator.
+             *
+             *  @return Random position, and corresponding normal, on the surface of the axis-aligned bounding box.
+             */
             inline vec3 Aabb::random_pos(random::Generator* const rng_) const noexcept
             {
                 const size_t face  = utl::search::lower(_areas, rng_->gen());
