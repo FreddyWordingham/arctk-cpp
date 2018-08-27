@@ -81,13 +81,32 @@ namespace arc //! arctk namespace
                 return (ref_prob);
             }
 
+            /**
+             *  Determine the probability of a refraction occuring.
+             *
+             *  @param  ang_in_         Angle of incidence.
+             *  @param  ref_index_in_   Refractive index of inbound material.
+             *  @param  ref_index_out_  Refractive index of outbound material.
+             *
+             *  @pre    ang_in_ must between zero and half Pi.
+             *  @pre    ref_index_in_ must be greater than, or equal to, unity.
+             *  @pre    ref_index_out_ must be greater than, or equal to, unity.
+             *
+             *  @post   ref_prob must be between zero and unity.
+             *
+             *  @return Probability of refraction.
+             */
             inline double refraction_prob(const double ang_in_, const double ref_index_in_, const double ref_index_out_) noexcept
             {
                 PRE((ang_in_ >= 0.0) && (ang_in_ < consts::math::HALF_PI));
                 PRE(ref_index_in_ >= 1.0);
                 PRE(ref_index_out_ >= 1.0);
 
-                return (1.0 - reflection_prob(ang_in_, ref_index_in_, ref_index_out_));
+                const double ref_prob = 1.0 - reflection_prob(ang_in_, ref_index_in_, ref_index_out_);
+
+                POST((ref_prob >= 0.0) && (ref_prob <= 1.0));
+
+                return (ref_prob);
             }
 
 
