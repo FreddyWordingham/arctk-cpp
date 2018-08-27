@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
                 PRE(ref_index_in_ >= 1.0);
                 PRE(ref_index_out_ >= 1.0);
 
-                const double cos_ang_in  = std::cos(ang_in);
+                const double cos_ang_in  = std::cos(ang_in_);
                 const double cos_ang_out = std::cos(std::asin(std::sin(ang_in_) * (ref_index_in_ / ref_index_out_)));
 
                 const double ref_prob_s = math::pow::sq(((ref_index_in_ * cos_ang_in) - (ref_index_out_ * cos_ang_out)) / ((ref_index_in_ * cos_ang_in) + (ref_index_out_ * cos_ang_out)));
