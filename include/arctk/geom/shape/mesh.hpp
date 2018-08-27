@@ -84,7 +84,7 @@ namespace arc //! arctk namespace
 
                 //  -- Emission --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
-                inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept;
+                inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept override;
 
                 //  -- Collision --
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
