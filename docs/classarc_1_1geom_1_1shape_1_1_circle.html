@@ -107,8 +107,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a68d374e2a0e875200d9d1ea98258ae0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a4446fa9d8be9e25ed4fde7fb8817ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a4a4446fa9d8be9e25ed4fde7fb8817ad">random_pos</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept override</td></tr>
 <tr class="separator:a4a4446fa9d8be9e25ed4fde7fb8817ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a804aee9c41b9da80528910268830a097"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a804aee9c41b9da80528910268830a097">random_pos_and_norm</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept</td></tr>
-<tr class="separator:a804aee9c41b9da80528910268830a097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5a306fcc9cad7eca7a534a825ca0a0a"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#ae5a306fcc9cad7eca7a534a825ca0a0a">random_pos_and_norm</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept override</td></tr>
+<tr class="separator:ae5a306fcc9cad7eca7a534a825ca0a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b6012d6e42d5b4fa8e35e3732864ce2"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a4b6012d6e42d5b4fa8e35e3732864ce2">collision</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
 <tr class="separator:a4b6012d6e42d5b4fa8e35e3732864ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a441a85781105739919238ff1e903794e"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::pair&lt; double, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a441a85781105739919238ff1e903794e">collision_norm</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
@@ -378,8 +378,8 @@ aperture_ must be between zero and half-Pi. </dd></dl>
 
 </div>
 </div>
-<a id="a804aee9c41b9da80528910268830a097"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a804aee9c41b9da80528910268830a097">&#9670;&nbsp;</a></span>random_pos_and_norm()</h2>
+<a id="ae5a306fcc9cad7eca7a534a825ca0a0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5a306fcc9cad7eca7a534a825ca0a0a">&#9670;&nbsp;</a></span>random_pos_and_norm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -397,7 +397,7 @@ aperture_ must be between zero and half-Pi. </dd></dl>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -409,13 +409,15 @@ aperture_ must be between zero and half-Pi. </dd></dl>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Random position, and corresponding normal, on the surface of the circle. </dd></dl>
+
+<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#acb1c509590fe57967d10c7110504035b">arc::geom::Shape</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_circle_a804aee9c41b9da80528910268830a097_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_circle_a804aee9c41b9da80528910268830a097_cgraph" alt=""/></div>
-<map name="classarc_1_1geom_1_1shape_1_1_circle_a804aee9c41b9da80528910268830a097_cgraph" id="classarc_1_1geom_1_1shape_1_1_circle_a804aee9c41b9da80528910268830a097_cgraph">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_circle_ae5a306fcc9cad7eca7a534a825ca0a0a_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_circle_ae5a306fcc9cad7eca7a534a825ca0a0a_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_circle_ae5a306fcc9cad7eca7a534a825ca0a0a_cgraph" id="classarc_1_1geom_1_1shape_1_1_circle_ae5a306fcc9cad7eca7a534a825ca0a0a_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1random_1_1distribution.html#a619762488a9e9eedd75f89aea28b4ebe" title="arc::random::distribution\l::uniform" alt="" coords="224,5,388,44"/>
 <area shape="rect" id="node3" href="namespacearc_1_1math_1_1convert.html#ac0b319816d18eb6a572ecb9abd2af70d" title="arc::math::convert\l::polar_to_cart" alt="" coords="242,68,370,107"/>
 <area shape="rect" id="node4" href="namespacearc_1_1math_1_1compare.html#abaf895f8a2b87e8e16e7f7397d2cf0f1" title="arc::math::compare\l::unity" alt="" coords="238,131,374,169"/>
@@ -529,7 +531,7 @@ aperture_ must be between zero and half-Pi. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 27 2018 02:32:11 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 27 2018 03:41:19 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

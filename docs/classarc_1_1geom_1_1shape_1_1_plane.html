@@ -109,6 +109,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a061627b97c54b06a7647061ffb6b22d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcea9197dfa64a43a3db5fac63fcff4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#afcea9197dfa64a43a3db5fac63fcff4a">random_pos</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_, double rad_) const noexcept</td></tr>
 <tr class="separator:afcea9197dfa64a43a3db5fac63fcff4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42aff69e75f95f1384540a7ce9758fff"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a42aff69e75f95f1384540a7ce9758fff">random_pos_and_norm</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept override</td></tr>
+<tr class="separator:a42aff69e75f95f1384540a7ce9758fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06e3f46f9bc85e3ac7b5069aab6974c1"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a06e3f46f9bc85e3ac7b5069aab6974c1">random_pos_and_norm</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_, double rad_) const noexcept</td></tr>
+<tr class="separator:a06e3f46f9bc85e3ac7b5069aab6974c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4109040e404b72535d2f40b3eef29e04"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a4109040e404b72535d2f40b3eef29e04">collision</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
 <tr class="separator:a4109040e404b72535d2f40b3eef29e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5047292b8b189a2b73046727238a7b3a"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::pair&lt; double, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a5047292b8b189a2b73046727238a7b3a">collision_norm</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
@@ -360,7 +364,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Generate a random position, and corresponding normal, on the surface of the plane within a radius from its centre.</p>
+<p>Generate a random position on the surface of the plane within a radius from its centre.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rng_</td><td>Random number generator. </td></tr>
@@ -369,7 +373,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>rad_ must be positive.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Random position, and corresponding normal, on the surface of the plane. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Random position on the surface of the plane. </dd></dl>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -384,6 +388,88 @@ Private Attributes</h2></td></tr>
 <area shape="rect" id="node5" href="namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="432,131,568,169"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a42aff69e75f95f1384540a7ce9758fff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42aff69e75f95f1384540a7ce9758fff">&#9670;&nbsp;</a></span>random_pos_and_norm() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; arc::geom::shape::Plane::random_pos_and_norm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *&#160;</td>
+          <td class="paramname"><em>rng_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Generate a random position, and corresponding normal, on the surface of the plane within a radius of one from its centre.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rng_</td><td>Random number generator.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Random position, and corresponding normal, on the surface of the plane. </dd></dl>
+
+<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#acb1c509590fe57967d10c7110504035b">arc::geom::Shape</a>.</p>
+
+</div>
+</div>
+<a id="a06e3f46f9bc85e3ac7b5069aab6974c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06e3f46f9bc85e3ac7b5069aab6974c1">&#9670;&nbsp;</a></span>random_pos_and_norm() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; arc::geom::shape::Plane::random_pos_and_norm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *&#160;</td>
+          <td class="paramname"><em>rng_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rad_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Generate a random position, and corresponding normal, on the surface of the plane within a radius from its centre.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rng_</td><td>Random number generator. </td></tr>
+    <tr><td class="paramname">rad_</td><td>Radius of point generation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>rad_ must be positive.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Random position, and corresponding normal, on the surface of the plane. </dd></dl>
 
 </div>
 </div>
@@ -442,7 +528,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 27 2018 02:32:11 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 27 2018 03:41:19 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

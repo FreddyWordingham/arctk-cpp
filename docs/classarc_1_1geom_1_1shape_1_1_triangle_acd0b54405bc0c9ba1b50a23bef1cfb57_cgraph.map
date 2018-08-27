@@ -1,0 +1,5 @@
+<map id="arc::geom::shape::Triangle::random_pos_and_norm" name="arc::geom::shape::Triangle::random_pos_and_norm">
+<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#a7d44c895892dcc7da831a2e999f17318" title="arc::geom::shape::Triangle::pos" alt="" coords="233,5,441,31"/>
+<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#a3e4c6dc85512b32733e0f7c6f94881c1" title="arc::geom::shape::Triangle\l::norm" alt="" coords="247,55,427,93"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1random_1_1distribution.html#af0181d183542f6401028a77795026f90" title="arc::random::distribution\l::normal" alt="" coords="255,117,419,156"/>
+</map>

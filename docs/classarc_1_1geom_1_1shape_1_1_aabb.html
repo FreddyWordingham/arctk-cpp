@@ -111,8 +111,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae28056b2fea66475b95e9f2ea5bbf092"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#ae28056b2fea66475b95e9f2ea5bbf092">max</a> () const noexcept</td></tr>
 <tr class="separator:ae28056b2fea66475b95e9f2ea5bbf092"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24cdba18a2104159d68430e418806344"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a24cdba18a2104159d68430e418806344">random_pos</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept override</td></tr>
-<tr class="memdesc:a24cdba18a2104159d68430e418806344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a random position on the surface of the shape.  <a href="#a24cdba18a2104159d68430e418806344">More...</a><br /></td></tr>
 <tr class="separator:a24cdba18a2104159d68430e418806344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa1b228682440cfb07ccd640f4e36082"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#aaa1b228682440cfb07ccd640f4e36082">random_pos_and_norm</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept override</td></tr>
+<tr class="separator:aaa1b228682440cfb07ccd640f4e36082"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eb52cf315b517ce2392ef463530d1da"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a3eb52cf315b517ce2392ef463530d1da">collision</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
 <tr class="separator:a3eb52cf315b517ce2392ef463530d1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a167f9254248915c4abd7252af2d73d55"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::pair&lt; double, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a167f9254248915c4abd7252af2d73d55">collision_norm</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
@@ -458,15 +459,14 @@ min_.z must be less than max_.z.</dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Generate a random position on the surface of the shape. </p>
+<p>Generate a random position on the surface of the axis-aligned bounding box.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rng_</td><td>Random number generator. </td></tr>
+    <tr><td class="paramname">rng_</td><td>Random number generator.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Randomly generated point on the surface of the shape. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Random position on the surface of the axis-aligned bounding box. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#adb4a5453dfb63827f5f3323e60204040">arc::geom::Shape</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -485,6 +485,60 @@ min_.z must be less than max_.z.</dd></dl>
 <area shape="rect" id="node4" href="namespacearc_1_1index_1_1rotate.html#a7f591e13cc190f28640512d8d8339fb6" title="arc::index::rotate\l::prev" alt="" coords="1003,5,1124,44"/>
 <area shape="rect" id="node7" href="namespacearc_1_1utl_1_1properties.html#ad688778f1731b099b418122f2e92ca0c" title="arc::utl::properties\l::monotonic" alt="" coords="651,8,779,47"/>
 <area shape="rect" id="node8" href="namespacearc_1_1utl_1_1properties.html#a16db97d0483cb56664c5cc2fbadf04c0" title="arc::utl::properties\l::descending" alt="" coords="827,5,955,44"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaa1b228682440cfb07ccd640f4e36082"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa1b228682440cfb07ccd640f4e36082">&#9670;&nbsp;</a></span>random_pos_and_norm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; arc::geom::shape::Aabb::random_pos_and_norm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *&#160;</td>
+          <td class="paramname"><em>rng_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Generate a random position, and corresponding normal, on the surface of the axis-aligned bounding box.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rng_</td><td>Random number generator.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Random position, and corresponding normal, on the surface of the axis-aligned bounding box. </dd></dl>
+
+<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#acb1c509590fe57967d10c7110504035b">arc::geom::Shape</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_aabb_aaa1b228682440cfb07ccd640f4e36082_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_aabb_aaa1b228682440cfb07ccd640f4e36082_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_aabb_aaa1b228682440cfb07ccd640f4e36082_cgraph" id="classarc_1_1geom_1_1shape_1_1_aabb_aaa1b228682440cfb07ccd640f4e36082_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#a759ee83416f9fb620af459ecb00205f0" title="arc::utl::search::lower" alt="" coords="232,97,380,123"/>
+<area shape="rect" id="node5" href="namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="1011,68,1131,107"/>
+<area shape="rect" id="node10" href="namespacearc_1_1random_1_1distribution.html#a619762488a9e9eedd75f89aea28b4ebe" title="arc::random::distribution\l::uniform" alt="" coords="224,224,388,263"/>
+<area shape="rect" id="node3" href="namespacearc_1_1utl_1_1properties.html#a4df19ef005359af15befe0493e491a2d" title="arc::utl::properties\l::ascending" alt="" coords="835,68,963,107"/>
+<area shape="rect" id="node6" href="namespacearc_1_1utl_1_1properties.html#a4586f029de0cc630f2486b90ed38a0b4" title="arc::utl::properties\l::within" alt="" coords="459,8,587,47"/>
+<area shape="rect" id="node9" href="namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="436,123,611,148"/>
+<area shape="rect" id="node4" href="namespacearc_1_1index_1_1rotate.html#a7f591e13cc190f28640512d8d8339fb6" title="arc::index::rotate\l::prev" alt="" coords="1011,5,1131,44"/>
+<area shape="rect" id="node7" href="namespacearc_1_1utl_1_1properties.html#ad688778f1731b099b418122f2e92ca0c" title="arc::utl::properties\l::monotonic" alt="" coords="659,8,787,47"/>
+<area shape="rect" id="node8" href="namespacearc_1_1utl_1_1properties.html#a16db97d0483cb56664c5cc2fbadf04c0" title="arc::utl::properties\l::descending" alt="" coords="835,5,963,44"/>
 </map>
 </div>
 
@@ -569,7 +623,7 @@ min_.z must be less than max_.z.</dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 27 2018 02:32:11 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 27 2018 03:41:19 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
