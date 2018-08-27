@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
 
             //  -- Directions --
             inline vec3 reflection_dir(const vec3& in_, const vec3& norm_) noexcept;
-            inline vec3 refraction_dir(const vec3& in_, const vec3& norm_) noexcept;
+            inline vec3 refraction_dir(const vec3& in_, const vec3& norm_, double ref_index_in_, double ref_index_out_) noexcept;
 
 
 
@@ -78,13 +78,22 @@ namespace arc //! arctk namespace
             {
             }
 
-            inline vec3 refraction_dir(const vec3& in_, const vec3& norm_) noexcept
+            inline vec3 refraction_dir(const vec3& in_, const vec3& norm_, const double ref_index_in_, const double ref_index_out_) noexcept
             {
                 PRE(in_.normalised());
                 PRE(norm_.normalised());
                 PRE((in_ * norm_) < 0.0);
 
-                const double cos_ang_in = -(in_ * norm_);
+                const double ref_index_ratio = ref_index_in_ / ref_index_out_;
+
+                const double cos_ang_in     = -(in_ * norm_);
+                const double sin_ang_out_sq = math::pow::sq(ref_index_ratio) * (1.0 - math::pow::sq(cos_ang_in));
+
+                const vec3 out = (in_ * ref_index_ratio) + (norm_ * ((ref_index_ratio * cos_ang_in) - std::sqrt(1.0 - sin_ang_out_sq)));
+
+                POST(out_.normalised());
+
+                return (out);
             }
 
 
