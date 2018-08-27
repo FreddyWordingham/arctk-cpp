@@ -102,14 +102,14 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Generate a random position, and corresponding normal, on the surface of the plane within a radius from its centre.
+             *  Generate a random position on the surface of the plane within a radius from its centre.
              *
              *  @param  rng_    Random number generator.
              *  @param  rad_    Radius of point generation.
              *
              *  @pre    rad_ must be positive.
              *
-             *  @return Random position, and corresponding normal, on the surface of the plane.
+             *  @return Random position on the surface of the plane.
              */
             inline vec3 Plane::random_pos(random::Generator* const rng_, const double rad_) const noexcept
             {
