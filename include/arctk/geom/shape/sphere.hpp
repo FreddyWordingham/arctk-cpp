@@ -93,7 +93,7 @@ namespace arc //! arctk namespace
                 return (_pos + (random::distribution::isotropic(rng_) * _rad));
             }
 
-            inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept
+            inline std::pair<vec3, vec3> Sphere::random_pos_and_norm(random::Generator* rng_) const noexcept
             {
                 const vec3 unit = random::distribution::isotropic(rng_);
 
