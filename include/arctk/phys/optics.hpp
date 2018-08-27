@@ -76,6 +76,15 @@ namespace arc //! arctk namespace
             //  -- Directions --
             inline vec3 reflection_dir(const vec3& in_, const vec3& norm_) noexcept
             {
+                PRE(in_.normalised());
+                PRE(norm_.normalised());
+                PRE((in_ * norm_) < 0.0);
+
+                const vec3 out = (in_ - (norm_ * (2.0 * (in_ * norm_)))).normal();
+
+                POST(out.normalised());
+
+                return (out);
             }
 
             inline vec3 refraction_dir(const vec3& in_, const vec3& norm_, const double ref_index_in_, const double ref_index_out_) noexcept
