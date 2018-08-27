@@ -91,7 +91,7 @@ namespace arc //! arctk namespace
 
                 const vec3 out = (in_ * ref_index_ratio) + (norm_ * ((ref_index_ratio * cos_ang_in) - std::sqrt(1.0 - sin_ang_out_sq)));
 
-                POST(out_.normalised());
+                POST(out.normalised());
 
                 return (out);
             }
