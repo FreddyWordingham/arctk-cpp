@@ -202,6 +202,13 @@ namespace arc //! arctk namespace
                 return (_pos[index::vertex::GAMMA] + ((_pos[index::vertex::ALPHA] - _pos[index::vertex::GAMMA]) * a) + ((_pos[index::vertex::BETA] - _pos[index::vertex::GAMMA]) * b));
             }
 
+            /**
+             *  Generate a random position, and corresponding normal, on the surface of the triangle.
+             *
+             *  @param  rng_    Random number generator.
+             *
+             *  @return Random position, and corresponding normal, on the surface of the triangle.
+             */
             inline std::pair<vec3, vec3> Triangle::random_pos_and_norm(random::Generator* rng_) const noexcept
             {
                 double a = rng_->gen();
