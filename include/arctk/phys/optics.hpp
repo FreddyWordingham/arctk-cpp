@@ -138,6 +138,22 @@ namespace arc //! arctk namespace
                 return (out);
             }
 
+            /**
+             *  Determine the direction of refraction.
+             *
+             *  @param  in_             Incident direction.
+             *  @param  norm_           Surface normal.
+             *  @param  ref_index_in_   Refractive index of inbound material.
+             *  @param  ref_index_out_  Refractive index of outbound material.
+             *
+             *  @pre    in_ must be normalised.
+             *  @pre    norm_ must be normalised.
+             *  @pre    Dot product of in_ and norm_ must be negative.
+             *
+             *  @post   out must be normalised.
+             *
+             *  @return Refraction direction.
+             */
             inline vec3 refraction_dir(const vec3& in_, const vec3& norm_, const double ref_index_in_, const double ref_index_out_) noexcept
             {
                 PRE(in_.normalised());
