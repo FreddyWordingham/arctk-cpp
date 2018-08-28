@@ -213,7 +213,7 @@ namespace arc //! arctk namespace
         inline void Balancer::print_info(const unsigned long int total_) const noexcept
         {
             const double   frac         = static_cast<double>(total_) / static_cast<double>(_target);
-            const long int elapsed_time = (std::chrono::steady_clock::now() - _start_time).count() / 1000000;
+            const long int elapsed_time = (std::chrono::steady_clock::now() - _start_time).count() / 1000000000;
 
             std::cout << term::ansi::CLEAR << '[' << str::format::bar(78, frac) << "]\n\n"
                       << "Percent complete : " << (frac * 100.0) << "%\n"
