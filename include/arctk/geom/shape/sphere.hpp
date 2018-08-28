@@ -56,6 +56,10 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline double area() const noexcept override;
+                inline double vol() const noexcept override;
+
                 //  -- Emission --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
                 inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept override;
@@ -87,6 +91,17 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Getters --
+            inline double Sphere::area() const noexcept
+            {
+                return (4.0 * consts::math::PI * _rad * _rad);
+            }
+
+            inline double Sphere::vol() const noexcept
+            {
+            }
+
+
             //  -- Emission --
             /**
              *  Generate a random position on the surface of the sphere.
