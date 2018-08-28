@@ -437,8 +437,8 @@ namespace arc //! arctk namespace
             inline Actor axis_helper_x(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor axis_helper_y(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor axis_helper_z(float length_ = 1.0f, float width_ = 0.01f) noexcept;
-            inline Actor box(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
-            inline Actor box(const geom::shape::Aabb& aabb_) noexcept;
+            inline Actor aabb(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
+            inline Actor aabb(const geom::shape::Aabb& aabb_) noexcept;
             inline Actor aabb(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor aabb(const geom::shape::Aabb& aabb_) noexcept;
             inline Actor path(const std::vector<Point>& points_) noexcept;
@@ -667,7 +667,7 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Create a box actor.
+             *  Create a axis-aligned bounding box actor.
              *  This is only the frame of the box.
              *
              *  @param  min_    Minimum vertex of the box.
@@ -677,9 +677,9 @@ namespace arc //! arctk namespace
              *  @pre    min_.y must be less than max_.y.
              *  @pre    min_.z must be less than max_.z.
              *
-             *  @return Box actor.
+             *  @return Axis aligned bounding box actor.
              */
-            inline Actor box(const glm::vec3& min_, const glm::vec3& max_) noexcept
+            inline Actor aabb(const glm::vec3& min_, const glm::vec3& max_) noexcept
             {
                 PRE(min_.x < max_.x);
                 PRE(min_.y < max_.y);
@@ -719,15 +719,15 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Create an box actor from an aabb shape.
+             *  Create an axis-aligned bounding box actor from an aabb shape.
              *
              *  @param  aabb_   Axis-aligned bounding box shape to create an actor of.
              *
-             *  @return Box actor.
+             *  @return Axis aligned bounding box actor.
              */
-            inline Actor box(const geom::shape::Aabb& aabb_) noexcept
+            inline Actor aabb(const geom::shape::Aabb& aabb_) noexcept
             {
-                return (box(glm::vec3(aabb_.min().x, aabb_.min().y, aabb_.min().z), glm::vec3(aabb_.max().x, aabb_.max().y, aabb_.max().z)));
+                return (aabb(glm::vec3(aabb_.min().x, aabb_.min().y, aabb_.min().z), glm::vec3(aabb_.max().x, aabb_.max().y, aabb_.max().z)));
             }
 
             /**
