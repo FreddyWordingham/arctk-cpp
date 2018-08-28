@@ -99,6 +99,7 @@ namespace arc //! arctk namespace
 
             inline double Sphere::vol() const noexcept
             {
+                return ((4.0 * consts::math::PI * _rad * _rad * _rad) / 3.0);
             }
 
 
