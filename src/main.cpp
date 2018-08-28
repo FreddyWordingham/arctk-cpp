@@ -41,6 +41,7 @@
 #include <arctk/exit/error.hpp>
 #include <arctk/exit/success.hpp>
 #include <arctk/geom.hpp>
+#include <arctk/geom/aabb.hpp>
 #include <arctk/gui.hpp>
 #include <arctk/gui/actor.hpp>
 #include <arctk/gui/camera.hpp>
