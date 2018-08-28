@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
 
             //  -- Timing --
             const unsigned int                                       _update_delta; //!< Minimum number of milliseconds required to pass before balancing.
-            const std::chrono::time_point<std::chrono::system_clock> _start_time;   //!< Time of construction.
+            const std::chrono::time_point<std::chrono::steady_clock> _start_time;   //!< Time of construction.
             bool                                                     _updating;     //!< Updating status.
 
 
@@ -98,7 +98,7 @@ namespace arc //! arctk namespace
           , _target(target_)
           , _counts(num_threads_)
           , _update_delta(update_delta_)
-          , _start_time(std::chrono::system_clock::now())
+          , _start_time(std::chrono::steady_clock::now())
           , _updating(false)
         {
             PRE(target_ > 0);
@@ -184,7 +184,7 @@ namespace arc //! arctk namespace
                     _finished = true;
 
                     std::cout << "Target reached   : " << total << "/" << _target << '\n';
-                    std::cout << "Time taken       : " << str::format::time((std::chrono::system_clock::now() - _start_time).count() / 1000000) << '\n';
+                    std::cout << "Time taken       : " << str::format::time((std::chrono::steady_clock::now() - _start_time).count() / 1000000) << '\n';
 
                     _updating = false;
 
@@ -213,7 +213,7 @@ namespace arc //! arctk namespace
         inline void Balancer::print_info(const unsigned long int total_) const noexcept
         {
             const double   frac         = static_cast<double>(total_) / static_cast<double>(_target);
-            const long int elapsed_time = (std::chrono::system_clock::now() - _start_time).count() / 1000000;
+            const long int elapsed_time = (std::chrono::steady_clock::now() - _start_time).count() / 1000000;
 
             std::cout << term::ansi::CLEAR << '[' << str::format::bar(78, frac) << "]\n\n"
                       << "Percent complete : " << (frac * 100.0) << "%\n"
