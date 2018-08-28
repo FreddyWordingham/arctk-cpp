@@ -204,13 +204,15 @@ namespace arc //! arctk namespace
                 const size_t dim_0 = index::rotate::next(face, 3, 1);
                 const size_t dim_1 = index::rotate::next(face, 3, 2);
 
+                const bool min = rng_->gen() < 0.5;
+
                 vec3 pos;
 
-                pos[face]  = (rng_->gen() < 0.5) ? _min[face] : _max[face];
+                pos[face]  = min ? _min[face] : _max[face];
                 pos[dim_0] = random::distribution::uniform(rng_, _min[dim_0], _max[dim_0]);
                 pos[dim_1] = random::distribution::uniform(rng_, _min[dim_1], _max[dim_1]);
 
-                const vec3 norm = (face < 3) ? math::vec::axis<double, 3>(face) : -math::vec::axis<double, 3>(face % 3);
+                const vec3 norm = min ? -math::vec::axis<double, 3>(face) : math::vec::axis<double, 3>(face % 3);
 
                 return (std::pair<vec3, vec3>(pos, norm));
             }
