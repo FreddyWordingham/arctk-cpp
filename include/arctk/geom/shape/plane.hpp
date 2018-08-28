@@ -55,6 +55,10 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline double area() const noexcept override;
+                inline double vol() const noexcept override;
+
                 //  -- Emission --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
                 inline vec3                  random_pos(random::Generator* rng_, double rad_) const noexcept;
@@ -88,6 +92,18 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Getters --
+            inline double Plane::area() const noexcept
+            {
+                return (std::numeric_limits<double>::infinity());
+            }
+
+            inline double Plane::vol() const noexcept
+            {
+                return (0.0);
+            }
+
+
             //  -- Emission --
             /**
              *  Generate a random position on the surface of the plane within a radius of one from its centre.
