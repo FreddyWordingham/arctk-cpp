@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
                 //  -- Getters --
                 inline const std::array<vec3, 3>& pos() const noexcept;
                 inline const std::array<vec3, 3>& norm() const noexcept;
-                inline double                     area() const noexcept;
+                inline double                     area() const noexcept override;
                 inline const vec3&                plane_norm() const noexcept;
 
                 //  -- Emission --
