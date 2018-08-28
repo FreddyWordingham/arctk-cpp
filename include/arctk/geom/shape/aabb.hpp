@@ -176,6 +176,13 @@ namespace arc //! arctk namespace
                 return (2.0 * ((lengths.x * lengths.y) + (lengths.y * lengths.z) + (lengths.z * lengths.x)));
             }
 
+            inline double Aabb::vol() const noexcept
+            {
+                const vec3 lengths = _max - _min;
+
+                return (lengths.x * lengths.y * lengths.z);
+            }
+
 
             //  -- Emission --
             /**
