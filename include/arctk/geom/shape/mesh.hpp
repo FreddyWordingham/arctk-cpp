@@ -81,6 +81,8 @@ namespace arc //! arctk namespace
                 //  -- Getters --
                 inline size_t          num_tri() const noexcept;
                 inline const Triangle& tri(size_t index_) const noexcept;
+                inline double          area() const noexcept override;
+                inline double          vol() const noexcept override;
 
                 //  -- Emission --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
@@ -262,6 +264,23 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            //  -- Getters --
+            inline double Mesh::area() const noexcept
+            {
+                const double area = 0.0;
+                for (size_t i = 0; i < _tris.size(); ++i)
+                {
+                    area += _tris[i].area();
+                }
+
+                return (area);
+            }
+
+            inline double Mesh::vol() const noexcept
+            {
+                return (0.0);
+            }
+
             /**
              *  Get the number of triangles within the mesh.
              *
