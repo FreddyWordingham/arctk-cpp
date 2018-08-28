@@ -67,9 +67,9 @@ namespace arc //! arctk namespace
                 //  -- Getters --
                 inline const std::array<vec3, 3>& pos() const noexcept;
                 inline const std::array<vec3, 3>& norm() const noexcept;
+                inline const vec3&                plane_norm() const noexcept;
                 inline double                     area() const noexcept override;
                 inline double                     vol() const noexcept override;
-                inline const vec3&                plane_norm() const noexcept;
 
                 //  -- Emission --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
@@ -161,6 +161,16 @@ namespace arc //! arctk namespace
             }
 
             /**
+             *  Get the normal of triangles plane.
+             *
+             *  @return Normal of triangles plane.
+             */
+            inline const vec3& Triangle::plane_norm() const noexcept
+            {
+                return (_plane_norm);
+            }
+
+            /**
              *  Get the area of the triangle.
              *
              *  @return Area of the triangle.
@@ -173,16 +183,6 @@ namespace arc //! arctk namespace
             inline double Triangle::vol() const noexcept
             {
                 return (0.0);
-            }
-
-            /**
-             *  Get the normal of triangles plane.
-             *
-             *  @return Normal of triangles plane.
-             */
-            inline const vec3& Triangle::plane_norm() const noexcept
-            {
-                return (_plane_norm);
             }
 
 
