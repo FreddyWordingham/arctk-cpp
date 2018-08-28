@@ -68,6 +68,7 @@ namespace arc //! arctk namespace
                 inline const std::array<vec3, 3>& pos() const noexcept;
                 inline const std::array<vec3, 3>& norm() const noexcept;
                 inline double                     area() const noexcept override;
+                inline double                     vol() const noexcept override;
                 inline const vec3&                plane_norm() const noexcept;
 
                 //  -- Emission --
@@ -167,6 +168,11 @@ namespace arc //! arctk namespace
             inline double Triangle::area() const noexcept
             {
                 return (_area);
+            }
+
+            inline double Triangle::vol() const noexcept
+            {
+                return (0.0);
             }
 
             /**
