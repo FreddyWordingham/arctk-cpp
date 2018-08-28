@@ -36,6 +36,11 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Positioning --
+            const vec3 _min; //!< Minimum vertex of the aabb.
+            const vec3 _max; //!< Maximum vertex of the aabb.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
