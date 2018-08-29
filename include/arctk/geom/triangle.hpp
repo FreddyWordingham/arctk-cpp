@@ -182,7 +182,7 @@ namespace arc //! arctk namespace
 
         inline const vec3& Triangle::norm() const noexcept
         {
-            return (_poss);
+            return (_norm);
         }
 
 
