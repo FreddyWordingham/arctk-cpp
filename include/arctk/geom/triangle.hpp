@@ -86,9 +86,9 @@ namespace arc //! arctk namespace
           , _norms(norms_)
           , _norm(init_norm(poss_, norms_))
         {
-            PRE(norm_[index::vertex::ALPHA].normalised());
-            PRE(norm_[index::vertex::BETA].normalised());
-            PRE(norm_[index::vertex::GAMMA].normalised());
+            PRE(norms_[index::vertex::ALPHA].normalised());
+            PRE(norms_[index::vertex::BETA].normalised());
+            PRE(norms_[index::vertex::GAMMA].normalised());
 
             POST(_norm.normalised());
             POST((_norm * norms_[index::vertex::ALPHA]) >= 0.0);
