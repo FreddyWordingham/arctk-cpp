@@ -21,6 +21,7 @@
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/geom/aabb.hpp>
 #include <arctk/geom/triangle.hpp>
 #include <arctk/index.hpp>
 #include <arctk/math.hpp>
@@ -50,6 +51,10 @@ namespace arc //! arctk namespace
 
             //  -- Areas --
             const std::vector<double> _areas; //!< Normalised relative area of each triangle.
+
+            //  -- Bounding --
+            const Aabb _box; //!< Bounding box of the mesh.
+
 
 
             //  == INSTANTIATION ==
