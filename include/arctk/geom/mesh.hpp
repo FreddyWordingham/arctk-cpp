@@ -16,11 +16,13 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cstdlib>
 #include <optional>
 #include <vector>
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/exit.hpp>
 #include <arctk/geom/aabb.hpp>
 #include <arctk/geom/triangle.hpp>
 #include <arctk/index.hpp>
