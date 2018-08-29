@@ -345,6 +345,11 @@ namespace arc //! arctk namespace
             return (area);
         }
 
+        /**
+         *  Get the volume of the mesh.
+         *
+         *  @return Volume of the mesh.
+         */
         inline double Mesh::vol() const noexcept
         {
             double vol = 0.0;
