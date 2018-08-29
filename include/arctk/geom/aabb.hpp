@@ -93,6 +93,14 @@ namespace arc //! arctk namespace
             return (_max);
         }
 
+        inline const double Aabb::area() const noexcept
+        {
+            const vec3 lengths = _max - _min;
+
+            return (2.0 * ((lengths.x * lengths.y) + (lengths.y * lengths.z) + (lengths.z * lengths.x)));
+        }
+
+        inline const
 
 
     } // namespace geom
