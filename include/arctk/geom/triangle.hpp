@@ -18,6 +18,7 @@
 //  -- Std --
 #include <array>
 #include <cstdlib>
+#include <iostream>
 #include <optional>
 
 //  -- Arctk --
@@ -131,10 +132,15 @@ namespace arc //! arctk namespace
                 norm = -norm;
             }
 
+            if (((norm * norms_[index::vertex::ALPHA]) < 0.0) || ((norm * norms_[index::vertex::BETA]) < 0.0) || ((norm * norms_[index::vertex::GAMMA]) < 0.0))
+            {
+                std::cerr << "Unable to construct triangle object.\n"
+                          << "Normals of triangle vertices must all point one side of the triangle's surface.\n";
+
+                std::exit(exit::error::FAILED_INITIALISATION);
+            }
+
             POST(_norm.normalised());
-            POST((norm * norms_[index::vertex::ALPHA]) >= 0.0);
-            POST((norm * norms_[index::vertex::BETA]) >= 0.0);
-            POST((norm * norms_[index::vertex::GAMMA]) >= 0.0);
         }
 
 
