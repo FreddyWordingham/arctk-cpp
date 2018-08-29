@@ -88,6 +88,11 @@ namespace arc //! arctk namespace
             return (_min);
         }
 
+        inline const vec3& Aabb::max() const noexcept
+        {
+            return (_max);
+        }
+
 
 
     } // namespace geom
