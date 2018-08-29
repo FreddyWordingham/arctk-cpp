@@ -89,7 +89,7 @@ namespace arc //! arctk namespace
             PRE(norm_[index::vertex::BETA].normalised());
             PRE(norm_[index::vertex::GAMMA].normalised());
 
-            POST(_plane_norm.normalised());
+            POST(_norm.normalised());
         }
 
 
@@ -98,7 +98,15 @@ namespace arc //! arctk namespace
         {
             vec3 norm = ((poss_[index::vertex::BETA] - poss_[index::vertex::ALPHA]) ^ (poss_[index::vertex::GAMMA] - poss_[index::vertex::ALPHA])).normal();
 
-            if ((norm*))
+            if ((norm * norms_[index::vertex::ALPHA]) < 0.0)
+            {
+                norm = -norm;
+            }
+
+            POST(_norm.normalised());
+            POST((norm * norms_[index::vertex::ALPHA]) >= 0.0);
+            POST((norm * norms_[index::vertex::BETA]) >= 0.0);
+            POST((norm * norms_[index::vertex::GAMMA]) >= 0.0);
         }
 
 
