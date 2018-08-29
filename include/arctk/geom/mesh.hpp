@@ -306,6 +306,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the minimum bound of the axis-aligned bounding box of the mesh.
+         *
+         *  @return Minimum bound of the axis-aligned bounding box of the mesh.
+         */
         inline vec3 Mesh::min() const noexcept
         {
             return (_aabb.min());
