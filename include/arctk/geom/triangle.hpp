@@ -90,6 +90,9 @@ namespace arc //! arctk namespace
             PRE(norm_[index::vertex::GAMMA].normalised());
 
             POST(_norm.normalised());
+            POST((norm * norms_[index::vertex::ALPHA]) >= 0.0);
+            POST((norm * norms_[index::vertex::BETA]) >= 0.0);
+            POST((norm * norms_[index::vertex::GAMMA]) >= 0.0);
         }
 
 
