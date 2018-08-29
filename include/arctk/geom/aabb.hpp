@@ -116,6 +116,152 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Collision --
+        /**
+         *  Determine if a collision event occurs between the axis-aligned bounding box and a ray.
+         *  If a collision does occur, return the distance to the collision point.
+         *
+         *  @param  pos_    Position of the ray.
+         *  @param  dir_    Direction of the ray.
+         *
+         *  @pre    dir_ must be normalised.
+         *
+         *  @return Optional collision distance.
+         */
+        inline std::optional<double> Aabb::collision(const vec3& pos_, const vec3& dir_) const noexcept // NOLINT
+        {
+            PRE(dir_.normalised());
+
+            double min_x = ((dir_.x < 0.0 ? _max.x : _min.x) - pos_.x) / dir_.x;
+            double max_x = ((dir_.x < 0.0 ? _min.x : _max.x) - pos_.x) / dir_.x;
+            double min_y = ((dir_.y < 0.0 ? _max.y : _min.y) - pos_.y) / dir_.y;
+            double max_y = ((dir_.y < 0.0 ? _min.y : _max.y) - pos_.y) / dir_.y;
+
+            if ((min_x > max_y) || (min_y > max_x))
+            {
+                return (std::nullopt);
+            }
+
+            if (min_y > min_x)
+            {
+                min_x = min_y;
+            }
+
+            if (max_y < max_x)
+            {
+                max_x = max_y;
+            }
+
+            double min_z = ((dir_.z < 0.0 ? _max.z : _min.z) - pos_.z) / dir_.z;
+            double max_z = ((dir_.z < 0.0 ? _min.z : _max.z) - pos_.z) / dir_.z;
+
+            if ((min_x > max_z) || (min_z > max_x))
+            {
+                return (std::nullopt);
+            }
+
+            if (min_z > min_x)
+            {
+                min_x = min_z;
+            }
+
+            if (max_z < max_x)
+            {
+                max_x = max_z;
+            }
+
+            double t = min_x;
+
+            if (t < 0.0)
+            {
+                t = max_x;
+            }
+
+            if (t < 0.0)
+            {
+                return (std::nullopt);
+            }
+
+            return (t);
+        }
+
+        /**
+         *  Determine if a collision event occurs between the axis-aligned bounding box and a ray.
+         *  If a collision does occur, return the distance to the collision point and the normal of the axis-aligned bounding box at the collision point.
+         *
+         *  @param  pos_    Position of the ray.
+         *  @param  dir_    Direction of the ray.
+         *
+         *  @pre    dir_ must be normalised.
+         *
+         *  @return Optional collision distance and intersection normal.
+         */
+        inline std::optional<std::pair<double, vec3>> Aabb::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept // NOLINT
+        {
+            PRE(dir_.normalised());
+
+            double min_x = ((dir_.x < 0.0 ? _max.x : _min.x) - pos_.x) / dir_.x;
+            double max_x = ((dir_.x < 0.0 ? _min.x : _max.x) - pos_.x) / dir_.x;
+            double min_y = ((dir_.y < 0.0 ? _max.y : _min.y) - pos_.y) / dir_.y;
+            double max_y = ((dir_.y < 0.0 ? _min.y : _max.y) - pos_.y) / dir_.y;
+
+            size_t index = 0;
+
+            if ((min_x > max_y) || (min_y > max_x))
+            {
+                return (std::nullopt);
+            }
+
+            if (min_y > min_x)
+            {
+                min_x = min_y;
+                index = 1;
+            }
+
+            if (max_y < max_x)
+            {
+                max_x = max_y;
+            }
+
+            double min_z = ((dir_.z < 0.0 ? _max.z : _min.z) - pos_.z) / dir_.z;
+            double max_z = ((dir_.z < 0.0 ? _min.z : _max.z) - pos_.z) / dir_.z;
+
+            if ((min_x > max_z) || (min_z > max_x))
+            {
+                return (std::nullopt);
+            }
+
+            if (min_z > min_x)
+            {
+                min_x = min_z;
+                index = 2;
+            }
+
+            if (max_z < max_x)
+            {
+                max_x = max_z;
+            }
+
+            vec3 norm;
+            norm[index] = (dir_[index] < 0.0) ? 1.0 : -1.0;
+
+            double t = min_x;
+
+            if (t < 0.0)
+            {
+                t = max_x;
+                norm[index] *= -1.0;
+            }
+
+            if (t < 0.0)
+            {
+                return (std::nullopt);
+            }
+
+            return (std::pair<double, vec3>(t, norm));
+        }
+
+
     } // namespace geom
 } // namespace arc
 
