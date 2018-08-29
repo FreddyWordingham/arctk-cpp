@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
             //  -- Initialisation --
             inline std::vector<Triangle> init_tris(const std::string& serial_, const mat4& transform_) const noexcept;
             inline std::vector<double>   init_areas() const noexcept;
-            inline Aabb                  init_box() const noexcept;
+            inline Aabb                  init_aabb() const noexcept;
 
 
             //  == METHODS ==
@@ -100,7 +100,7 @@ namespace arc //! arctk namespace
         inline Mesh::Mesh(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
           : _tris(init_tris(serial_, math::mat::transform(scale_, rot_, trans_)))
           , _areas(init_areas())
-          , _box(init_box())
+          , _aabb(init_aabb())
         {
             PRE(!serial_.empty());
         }
@@ -265,7 +265,7 @@ namespace arc //! arctk namespace
             return (areas);
         }
 
-        inline Aabb Mesh::init_box() const noexcept
+        inline Aabb Mesh::init_aabb() const noexcept
         {
             vec3 min(std::numeric_limits<double>::max(), std::numeric_limits<double>::max(), std::numeric_limits<double>::max());
             vec3 max(std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest());
@@ -302,12 +302,12 @@ namespace arc //! arctk namespace
         //  -- Getters --
         inline vec3 Mesh::min() const noexcept
         {
-            return (_box.min());
+            return (_aabb.min());
         }
 
         inline vec3 Mesh::max() const noexcept
         {
-            return (_box.max());
+            return (_aabb.max());
         }
 
         inline double Mesh::area() const noexcept
