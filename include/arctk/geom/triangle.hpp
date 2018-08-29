@@ -79,6 +79,7 @@ namespace arc //! arctk namespace
             inline const std::array<vec3, 3>& poss() const noexcept;
             inline const std::array<vec3, 3>& norms() const noexcept;
             inline const vec3&                norm() const noexcept;
+            inline size_t                     num_tri() const noexcept;
 
             //  -- Collision --
             inline std::optional<double>                  plane_collision(const vec3& pos_, const vec3& dir_) const noexcept;
@@ -199,6 +200,11 @@ namespace arc //! arctk namespace
         inline const vec3& Triangle::norm() const noexcept
         {
             return (_norm);
+        }
+
+        inline size_t Triangle::num_tri() const noexcept
+        {
+            return (_tris.size());
         }
 
 
