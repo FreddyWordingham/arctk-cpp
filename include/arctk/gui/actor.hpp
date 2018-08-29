@@ -439,6 +439,7 @@ namespace arc //! arctk namespace
             inline Actor axis_helper_z(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor aabb(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor aabb(const geom::Aabb& aabb_) noexcept;
+            inline Actor aabb(const geom::Mesh& mesh_) noexcept;
             inline Actor skybox(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor path(const std::vector<Point>& points_) noexcept;
             inline Actor mesh(const geom::Mesh& mesh_) noexcept;
@@ -727,6 +728,11 @@ namespace arc //! arctk namespace
             inline Actor aabb(const geom::Aabb& aabb_) noexcept
             {
                 return (aabb(glm::vec3(aabb_.min().x, aabb_.min().y, aabb_.min().z), glm::vec3(aabb_.max().x, aabb_.max().y, aabb_.max().z)));
+            }
+
+            inline Actor aabb(const geom::Mesh& mesh_) noexcept
+            {
+                return (aabb(mesh_.aabb()));
             }
 
             /**
