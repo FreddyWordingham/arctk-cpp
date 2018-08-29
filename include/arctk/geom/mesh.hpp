@@ -334,7 +334,7 @@ namespace arc //! arctk namespace
 
                 const vec3 centre = (_tris.poss()[index::vertices::ALPHA] + _tris.poss()[index::vertices::BETA] + _tris.poss()[index::vertices::GAMMA]) / 3.0;
 
-                if ((center * _tris.norm()) < 0.0)
+                if ((centre * _tris.norm()) < 0.0)
                 {
                     vol -= tri_vol;
                 }
