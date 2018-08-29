@@ -66,6 +66,7 @@ namespace arc //! arctk namespace
             //  -- Initialisation --
             inline std::vector<Triangle> init_tris(const std::string& serial_, const mat4& transform_) const noexcept;
             inline std::vector<double>   init_areas() const noexcept;
+            inline Aabb                  init_box() const noexcept;
 
 
             //  == METHODS ==
@@ -97,6 +98,7 @@ namespace arc //! arctk namespace
         inline Mesh::Mesh(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
           : _tris(init_tris(serial_, math::mat::transform(scale_, rot_, trans_)))
           , _areas(init_areas())
+          , _box(init_box())
         {
             PRE(!serial_.empty());
         }
@@ -244,6 +246,30 @@ namespace arc //! arctk namespace
             POST(math::compare::equal(areas.back(), 1.0));
 
             return (areas);
+        }
+
+        inline Aabb Mesh::init_box() const noexcept
+        {
+            vec3 min(std::numeric_limits<double>::max(), std::numeric_limits<double>::max(), std::numeric_limits<double>::max());
+            vec3 max(std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest());
+
+            for (size_t i = 0; i < _tris.size(); ++i)
+            {
+                for (size_t j = 0; j < 3; ++j)
+                {
+                    if (_tris[i].poss()[j] < min[j])
+                    {
+                        min[j] = _tris[i].poss()[j];
+                    }
+
+                    if (_tris[i].poss()[j] < max[j])
+                    {
+                        max[j] = _tris[i].poss()[j];
+                    }
+                }
+            }
+
+            return (Aabb(min, max));
         }
 
 
