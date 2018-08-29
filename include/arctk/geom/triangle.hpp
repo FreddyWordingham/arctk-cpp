@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
             inline const vec3&                norm() const noexcept;
 
             //  -- Collision --
-            inline std::optional<double>                  plane_collision(const vec3& pos_, const vec3& dir_) const;
+            inline std::optional<double>                  plane_collision(const vec3& pos_, const vec3& dir_) const noexcept;
             inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept;
             inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept;
 
