@@ -177,7 +177,7 @@ namespace arc //! arctk namespace
 
         inline const std::array<vec3, 3>& Triangle::norms() const noexcept
         {
-            return (_poss);
+            return (_norms);
         }
 
         inline const vec3& Triangle::norm() const noexcept
