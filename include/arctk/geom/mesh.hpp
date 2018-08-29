@@ -326,6 +326,11 @@ namespace arc //! arctk namespace
             return (_aabb.max());
         }
 
+        /**
+         *  Get the total surface area of the mesh.
+         *
+         *  @return Total surface area of the mesh.
+         */
         inline double Mesh::area() const noexcept
         {
             double area = 0.0;
