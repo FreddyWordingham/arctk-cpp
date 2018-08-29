@@ -66,6 +66,10 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline vec3            min() const noexcept;
+            inline vec3            max() const noexcept;
+            inline double          area() const noexcept;
+            inline double          vol() const noexcept;
             inline const Triangle& tri(size_t index_) const noexcept;
             inline size_t          num_tri() const noexcept;
         };
@@ -241,6 +245,32 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        inline vec3 Mesh::min() const noexcept
+        {
+        }
+
+        inline vec3 Mesh::max() const noexcept
+        {
+        }
+
+        inline double Mesh::area() const noexcept
+        {
+            double area = 0.0;
+
+            for (size_t i = 0; i < _tris.size(); ++i)
+            {
+                area += _tris[i].area();
+            }
+
+            POST(area > 0.0);
+
+            return (area);
+        }
+
+        inline double Mesh::vol() const noexcept
+        {
+        }
+
         inline const Triangle& Mesh::tri(const size_t index_) const noexcept
         {
             PRE(index_ < _tris.size());
