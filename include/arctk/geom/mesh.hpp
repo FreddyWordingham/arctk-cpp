@@ -80,6 +80,7 @@ namespace arc //! arctk namespace
             inline double          vol() const noexcept;
             inline const Triangle& tri(size_t index_) const noexcept;
             inline size_t          num_tri() const noexcept;
+            inline const Aabb&     aabb() const noexcept;
         };
 
 
@@ -360,6 +361,12 @@ namespace arc //! arctk namespace
         {
             return (_tris.size());
         }
+
+        inline const Aabb& Mesh::aabb() const noexcept
+        {
+            return (_aabb);
+        }
+
 
 
     } // namespace geom
