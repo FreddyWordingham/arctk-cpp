@@ -316,6 +316,11 @@ namespace arc //! arctk namespace
             return (_aabb.min());
         }
 
+        /**
+         *  Get the maximum bound of the axis-aligned bounding box of the mesh.
+         *
+         *  @return Maximum bound of the axis-aligned bounding box of the mesh.
+         */
         inline vec3 Mesh::max() const noexcept
         {
             return (_aabb.max());
