@@ -326,6 +326,23 @@ namespace arc //! arctk namespace
 
         inline double Mesh::vol() const noexcept
         {
+            double vol = 0.0;
+
+            for (size_t i = 0; i < _tris.size(); ++i)
+            {
+                const double tri_vol = std::fabd(((_tris.poss()[index::vertices::ALPHA] ^ _tris.poss()[index::vertices::BETA]) * _tris.poss()[index::vertices::GAMMA]) / 6.0);
+
+                const vec3 centre = (_tris.poss()[index::vertices::ALPHA] + _tris.poss()[index::vertices::BETA] + _tris.poss()[index::vertices::GAMMA]) / 3.0;
+
+                if ((center * _tris.norm()) < 0.0)
+                {
+                    vol -= tri_vol;
+                }
+            }
+
+            POST(vol > 0.0);
+
+            return (vol);
         }
 
         inline const Triangle& Mesh::tri(const size_t index_) const noexcept
