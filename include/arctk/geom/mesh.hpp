@@ -227,7 +227,7 @@ namespace arc //! arctk namespace
             }
 
             unsigned int num_edges = (num_faces * 3) / 2;
-            if (((num_faces % 2) != 0) || (((num_vert + num_faces) - num_edges) != 2))
+            if (((num_faces % 2) != 0) || (((num_verts + num_faces) - num_edges) != 2))
             {
                 std::cerr << "Unable to construct mesh object.\n"
                           << "Triangles of mesh must form a closed surface.\n";
