@@ -79,6 +79,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    norms_ vecs must be normalised.
          *  @post   _norm must be normalised.
+         *  @post   _norm dot product with each norms_ vec must be non-negative.
          */
         inline Triangle::Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) noexcept
           : _poss(poss_)
@@ -90,9 +91,9 @@ namespace arc //! arctk namespace
             PRE(norm_[index::vertex::GAMMA].normalised());
 
             POST(_norm.normalised());
-            POST((norm * norms_[index::vertex::ALPHA]) >= 0.0);
-            POST((norm * norms_[index::vertex::BETA]) >= 0.0);
-            POST((norm * norms_[index::vertex::GAMMA]) >= 0.0);
+            POST((_norm * norms_[index::vertex::ALPHA]) >= 0.0);
+            POST((_norm * norms_[index::vertex::BETA]) >= 0.0);
+            POST((_norm * norms_[index::vertex::GAMMA]) >= 0.0);
         }
 
 
