@@ -63,10 +63,13 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const vec3& min() const noexcept;
-            inline const vec3& max() const noexcept;
-            inline double      area() const noexcept;
-            inline double      vol() const noexcept;
+            inline const vec3&                min() const noexcept;
+            inline const vec3&                max() const noexcept;
+            inline double                     area() const noexcept;
+            inline double                     vol() const noexcept;
+            inline const std::array<vec3, 3>& poss() const noexcept;
+            inline const std::array<vec3, 3>& norms() const noexcept;
+            inline const vec3&                norm() const noexcept;
 
             //  -- Collision --
         };
@@ -165,6 +168,21 @@ namespace arc //! arctk namespace
         inline double Triangle::vol() const noexcept
         {
             return (0.0);
+        }
+
+        inline const std::array<vec3, 3>& Triangle::poss() const noexcept
+        {
+            return (_poss);
+        }
+
+        inline const std::array<vec3, 3>& Triangle::norms() const noexcept
+        {
+            return (_poss);
+        }
+
+        inline const vec3& Triangle::norm() const noexcept
+        {
+            return (_poss);
         }
 
 
