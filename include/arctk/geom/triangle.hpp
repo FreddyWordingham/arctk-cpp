@@ -63,8 +63,10 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double area() const noexcept;
-            inline double vol() const noexcept;
+            inline const vec3& min() const noexcept;
+            inline const vec3& max() const noexcept;
+            inline double      area() const noexcept;
+            inline double      vol() const noexcept;
 
             //  -- Collision --
         };
@@ -119,6 +121,29 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        inline const vec3& Triangle::min() const noexcept
+        {
+            vec3 min(std::numeric_limits<double>::max(), std::numeric_limits<double>::max(), std::numeric_limits<double>::max());
+
+            for (size_t i = 0; i < 3; ++i)
+            {
+                for (size_t j = 0; j < 3; ++j)
+                {
+                    if (_poss[i][j] < min[j])
+                    {
+                        min[j] = _poss[i][j];
+                    }
+                }
+            }
+
+            return (min);
+        }
+
+        inline const vec3& Triangle::max() const noexcept
+        {
+            return (_max);
+        }
+
         inline double Triangle::area() const noexcept
         {
             return (math::geom::area(_poss));
