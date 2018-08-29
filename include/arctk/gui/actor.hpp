@@ -874,8 +874,8 @@ namespace arc //! arctk namespace
 
                     for (size_t j = 0; j < 3; ++j)
                     {
-                        verts.emplace_back(glm::vec3(static_cast<float>(tri.pos()[j].x), static_cast<float>(tri.pos()[j].y), static_cast<float>(tri.pos()[j].z)));
-                        verts.emplace_back(glm::vec3(static_cast<float>(tri.norm()[j].x), static_cast<float>(tri.norm()[j].y), static_cast<float>(tri.norm()[j].z)));
+                        verts.emplace_back(glm::vec3(static_cast<float>(tri.poss()[j].x), static_cast<float>(tri.poss()[j].y), static_cast<float>(tri.poss()[j].z)));
+                        verts.emplace_back(glm::vec3(static_cast<float>(tri.norms()[j].x), static_cast<float>(tri.norms()[j].y), static_cast<float>(tri.norms()[j].z)));
                     }
                 }
 
