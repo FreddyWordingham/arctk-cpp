@@ -141,7 +141,20 @@ namespace arc //! arctk namespace
 
         inline const vec3& Triangle::max() const noexcept
         {
-            return (_max);
+            vec3 max(std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest());
+
+            for (size_t i = 0; i < 3; ++i)
+            {
+                for (size_t j = 0; j < 3; ++j)
+                {
+                    if (_poss[i][j] > max[j])
+                    {
+                        max[j] = _poss[i][j];
+                    }
+                }
+            }
+
+            return (max);
         }
 
         inline double Triangle::area() const noexcept
