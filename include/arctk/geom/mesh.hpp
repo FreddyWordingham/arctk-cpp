@@ -247,6 +247,20 @@ namespace arc //! arctk namespace
         //  -- Getters --
         inline vec3 Mesh::min() const noexcept
         {
+            vec3 min(std::numeric_limits<double>::max(), std::numeric_limits<double>::max(), std::numeric_limits<double>::max());
+
+            for (size_t i = 0; i < _tris.size(); ++i)
+            {
+                for (size_t j = 0; j < 3; ++j)
+                {
+                    if (_tris[i].poss()[j] < min[j])
+                    {
+                        min[j] = _tris[i].poss()[j];
+                    }
+                }
+            }
+
+            return (min);
         }
 
         inline vec3 Mesh::max() const noexcept
