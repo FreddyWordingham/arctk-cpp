@@ -207,14 +207,14 @@ namespace arc //! arctk namespace
          */
         inline std::optional<double> Triangle::plane_collision(const vec3& pos_, const vec3& dir_) const noexcept
         {
-            const double denom = _plane_norm * dir_;
+            const double denom = _norm * dir_;
 
             if (math::compare::zero(denom))
             {
                 return (std::nullopt);
             }
 
-            const double dist = ((_pos[index::vertex::ALPHA] - pos_) * _plane_norm) / denom;
+            const double dist = ((_poss[index::vertex::ALPHA] - pos_) * _norm) / denom;
 
             return ((dist < 0.0) ? std::nullopt : std::optional<double>(dist));
         }
@@ -234,8 +234,8 @@ namespace arc //! arctk namespace
         {
             PRE(dir_.normalised());
 
-            const vec3 edge_ab = _pos[index::vertex::BETA] - _pos[index::vertex::ALPHA];
-            const vec3 edge_ac = _pos[index::vertex::GAMMA] - _pos[index::vertex::ALPHA];
+            const vec3 edge_ab = _poss[index::vertex::BETA] - _poss[index::vertex::ALPHA];
+            const vec3 edge_ac = _poss[index::vertex::GAMMA] - _poss[index::vertex::ALPHA];
 
             const vec3   p   = dir_ ^ edge_ac;
             const double det = edge_ab * p;
@@ -245,7 +245,7 @@ namespace arc //! arctk namespace
                 return (std::nullopt);
             }
 
-            const vec3   t = pos_ - _pos[index::vertex::ALPHA];
+            const vec3   t = pos_ - _poss[index::vertex::ALPHA];
             const double u = (t * p) / det;
 
             if ((u < 0.0) || (u > 1.0))
@@ -286,8 +286,8 @@ namespace arc //! arctk namespace
         {
             PRE(dir_.normalised());
 
-            const vec3 edge_ab = _pos[index::vertex::BETA] - _pos[index::vertex::ALPHA];
-            const vec3 edge_ac = _pos[index::vertex::GAMMA] - _pos[index::vertex::ALPHA];
+            const vec3 edge_ab = _poss[index::vertex::BETA] - _poss[index::vertex::ALPHA];
+            const vec3 edge_ac = _poss[index::vertex::GAMMA] - _poss[index::vertex::ALPHA];
 
             const vec3   p   = dir_ ^ edge_ac;
             const double det = edge_ab * p;
@@ -297,7 +297,7 @@ namespace arc //! arctk namespace
                 return (std::nullopt);
             }
 
-            const vec3   t = pos_ - _pos[index::vertex::ALPHA];
+            const vec3   t = pos_ - _poss[index::vertex::ALPHA];
             const double u = (t * p) / det;
 
             if ((u < 0.0) || (u > 1.0))
@@ -320,7 +320,7 @@ namespace arc //! arctk namespace
                 return (std::nullopt);
             }
 
-            return (std::pair(dist, ((_norm[index::vertex::ALPHA] * (1.0 - u - v)) + (_norm[index::vertex::BETA] * u) + (_norm[index::vertex::GAMMA] * v)).normal()));
+            return (std::pair(dist, ((_norms[index::vertex::ALPHA] * (1.0 - u - v)) + (_norms[index::vertex::BETA] * u) + (_norms[index::vertex::GAMMA] * v)).normal()));
         }
 
 
@@ -343,7 +343,7 @@ namespace arc //! arctk namespace
                 b = 1.0 - b;
             }
 
-            return (_pos[index::vertex::GAMMA] + ((_pos[index::vertex::ALPHA] - _pos[index::vertex::GAMMA]) * a) + ((_pos[index::vertex::BETA] - _pos[index::vertex::GAMMA]) * b));
+            return (_poss[index::vertex::GAMMA] + ((_poss[index::vertex::ALPHA] - _poss[index::vertex::GAMMA]) * a) + ((_poss[index::vertex::BETA] - _poss[index::vertex::GAMMA]) * b));
         }
 
         /**
@@ -364,8 +364,8 @@ namespace arc //! arctk namespace
                 b = 1.0 - b;
             }
 
-            const vec3 pos  = _pos[index::vertex::GAMMA] + ((_pos[index::vertex::ALPHA] - _pos[index::vertex::GAMMA]) * a) + ((_pos[index::vertex::BETA] - _pos[index::vertex::GAMMA]) * b);
-            const vec3 norm = ((_norm[index::vertex::ALPHA] * a) + (_norm[index::vertex::BETA] * b) + (_norm[index::vertex::GAMMA] * (1.0 - a - b))).normal();
+            const vec3 pos  = _poss[index::vertex::GAMMA] + ((_poss[index::vertex::ALPHA] - _pos[index::vertex::GAMMA]) * a) + ((_poss[index::vertex::BETA] - _poss[index::vertex::GAMMA]) * b);
+            const vec3 norm = ((_norms[index::vertex::ALPHA] * a) + (_norms[index::vertex::BETA] * b) + (_norms[index::vertex::GAMMA] * (1.0 - a - b))).normal();
 
             return (std::pair<vec3, vec3>(pos, norm));
         }
