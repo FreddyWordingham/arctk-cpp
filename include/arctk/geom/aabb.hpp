@@ -49,6 +49,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline const vec3& min() const noexcept;
+            inline const vec3& max() const noexcept;
+            inline double      area() const noexcept;
+            inline double      vol() const noexcept;
         };
 
 
@@ -72,6 +77,15 @@ namespace arc //! arctk namespace
             PRE(min_.x < max_.x);
             PRE(min_.y < max_.y);
             PRE(min_.z < max_.z);
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        inline const vec3& Aabb::min() const noexcept
+        {
+            return (_min);
         }
 
 
