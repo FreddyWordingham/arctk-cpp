@@ -66,6 +66,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline size_t num_tri() const noexcept;
         };
 
 
@@ -238,7 +239,11 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
-
+        //  -- Getters --
+        inline size_t Mesh::num_tri() const noexcept
+        {
+            return (_tris.size());
+        }
 
 
     } // namespace geom
