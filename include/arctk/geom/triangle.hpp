@@ -63,6 +63,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline double area() const noexcept;
+            inline double vol() const noexcept;
 
             //  -- Collision --
         };
@@ -116,6 +118,16 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Getters --
+        inline double Triangle::area() const noexcept
+        {
+            return (math::geom::area(_poss));
+        }
+
+        inline double Triangle::vol() const noexcept
+        {
+            return (0.0);
+        }
 
 
 
