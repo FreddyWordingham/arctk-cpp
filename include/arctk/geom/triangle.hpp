@@ -84,7 +84,7 @@ namespace arc //! arctk namespace
         inline Triangle::Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) noexcept
           : _poss(poss_)
           , _norms(norms_)
-          , _norm(init_norm(poss_))
+          , _norm(init_norm(poss_, norms_))
         {
             PRE(norm_[index::vertex::ALPHA].normalised());
             PRE(norm_[index::vertex::BETA].normalised());
