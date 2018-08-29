@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/geom/aabb.hpp>
+#include <arctk/geom/triangle.hpp>
 
 
 
