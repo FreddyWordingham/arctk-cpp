@@ -46,6 +46,9 @@ namespace arc //! arctk namespace
             //  -- Triangle Data --
             const std::vector<Triangle> _tris; //!< Vector of triangles forming the mesh.
 
+            //  -- Areas --
+            const std::vector<double> _areas; //!< Normalised relative area of each triangle.
+
 
             //  == INSTANTIATION ==
           public:
