@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <optional>
 
 //  -- Arctk --
 
@@ -54,6 +55,10 @@ namespace arc //! arctk namespace
             inline const vec3& max() const noexcept;
             inline double      area() const noexcept;
             inline double      vol() const noexcept;
+
+            //  -- Collision --
+            inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept;
+            inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept;
         };
 
 
