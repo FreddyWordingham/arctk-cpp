@@ -283,6 +283,7 @@ namespace arc //! arctk namespace
 
         inline vec3 Mesh::max() const noexcept
         {
+            return (_box.max());
         }
 
         inline double Mesh::area() const noexcept
