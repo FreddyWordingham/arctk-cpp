@@ -72,6 +72,9 @@ namespace arc //! arctk namespace
             inline const vec3&                norm() const noexcept;
 
             //  -- Collision --
+            inline std::optional<double>                  plane_collision(const vec3& pos_, const vec3& dir_) const;
+            inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept;
+            inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept;
         };
 
 
@@ -183,6 +186,136 @@ namespace arc //! arctk namespace
         inline const vec3& Triangle::norm() const noexcept
         {
             return (_norm);
+        }
+
+
+        //  -- Collision --
+        /**
+         *  Determine if a collision event occurs between the plane the triangle rests in and a ray.
+         *
+         *  @param  pos_    Position of the ray.
+         *  @param  dir_    Direction of the ray.
+         *
+         *  @pre    dir_ must be normalised.
+         *
+         *  @return Optional collision distance.
+         */
+        inline std::optional<double> Triangle::plane_collision(const vec3& pos_, const vec3& dir_) const noexcept
+        {
+            const double denom = _plane_norm * dir_;
+
+            if (math::compare::zero(denom))
+            {
+                return (std::nullopt);
+            }
+
+            const double dist = ((_pos[index::vertex::ALPHA] - pos_) * _plane_norm) / denom;
+
+            return ((dist < 0.0) ? std::nullopt : std::optional<double>(dist));
+        }
+
+        /**
+         *  Determine if a collision event occurs between the triangle and a ray.
+         *  If a collision does occur, return the distance to the collision point.
+         *
+         *  @param  pos_    Position of the ray.
+         *  @param  dir_    Direction of the ray.
+         *
+         *  @pre    dir_ must be normalised.
+         *
+         *  @return Optional collision distance.
+         */
+        inline std::optional<double> Triangle::collision(const vec3& pos_, const vec3& dir_) const noexcept
+        {
+            PRE(dir_.normalised());
+
+            const vec3 edge_ab = _pos[index::vertex::BETA] - _pos[index::vertex::ALPHA];
+            const vec3 edge_ac = _pos[index::vertex::GAMMA] - _pos[index::vertex::ALPHA];
+
+            const vec3   p   = dir_ ^ edge_ac;
+            const double det = edge_ab * p;
+
+            if (math::compare::zero(det))
+            {
+                return (std::nullopt);
+            }
+
+            const vec3   t = pos_ - _pos[index::vertex::ALPHA];
+            const double u = (t * p) / det;
+
+            if ((u < 0.0) || (u > 1.0))
+            {
+                return (std::nullopt);
+            }
+
+            const vec3   q = t ^ edge_ab;
+            const double v = (dir_ * q) / det;
+
+            if ((v < 0.0) || ((u + v) > 1.0))
+            {
+                return (std::nullopt);
+            }
+
+            const double dist = (edge_ac * q) / det;
+
+            if (dist < 0.0)
+            {
+                return (std::nullopt);
+            }
+
+            return (dist);
+        }
+
+        /**
+         *  Determine if a collision event occurs between the triangle and a ray.
+         *  If a collision does occur, return the distance to the collision point and the normal of the triangle at the collision point.
+         *
+         *  @param  pos_    Position of the ray.
+         *  @param  dir_    Direction of the ray.
+         *
+         *  @pre    dir_ must be normalised.
+         *
+         *  @return Optional collision distance and intersection normal.
+         */
+        inline std::optional<std::pair<double, vec3>> Triangle::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
+        {
+            PRE(dir_.normalised());
+
+            const vec3 edge_ab = _pos[index::vertex::BETA] - _pos[index::vertex::ALPHA];
+            const vec3 edge_ac = _pos[index::vertex::GAMMA] - _pos[index::vertex::ALPHA];
+
+            const vec3   p   = dir_ ^ edge_ac;
+            const double det = edge_ab * p;
+
+            if (math::compare::zero(det))
+            {
+                return (std::nullopt);
+            }
+
+            const vec3   t = pos_ - _pos[index::vertex::ALPHA];
+            const double u = (t * p) / det;
+
+            if ((u < 0.0) || (u > 1.0))
+            {
+                return (std::nullopt);
+            }
+
+            const vec3   q = t ^ edge_ab;
+            const double v = (dir_ * q) / det;
+
+            if ((v < 0.0) || ((u + v) > 1.0))
+            {
+                return (std::nullopt);
+            }
+
+            const double dist = (edge_ac * q) / det;
+
+            if (dist < 0.0)
+            {
+                return (std::nullopt);
+            }
+
+            return (std::pair(dist, ((_norm[index::vertex::ALPHA] * (1.0 - u - v)) + (_norm[index::vertex::BETA] * u) + (_norm[index::vertex::GAMMA] * v)).normal()));
         }
 
 
