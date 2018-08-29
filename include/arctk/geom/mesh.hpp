@@ -269,6 +269,10 @@ namespace arc //! arctk namespace
         /**
          *  Initialise the axis-aligned bounding box containing the mesh.
          *
+         *  @post   min.x must be less than max.x.
+         *  @post   min.y must be less than max.y.
+         *  @post   min.z must be less than max.z.
+         *
          *  @return Initialised axis-aligned bounding box.
          */
         inline Aabb Mesh::init_aabb() const noexcept
