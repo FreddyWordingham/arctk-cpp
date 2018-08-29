@@ -338,6 +338,10 @@ namespace arc //! arctk namespace
                 {
                     vol -= tri_vol;
                 }
+                else
+                {
+                    vol += tri_vol;
+                }
             }
 
             POST(vol > 0.0);
