@@ -266,6 +266,11 @@ namespace arc //! arctk namespace
             return (areas);
         }
 
+        /**
+         *  Initialise the axis-aligned bounding box containing the mesh.
+         *
+         *  @return Initialised axis-aligned bounding box.
+         */
         inline Aabb Mesh::init_aabb() const noexcept
         {
             vec3 min(std::numeric_limits<double>::max(), std::numeric_limits<double>::max(), std::numeric_limits<double>::max());
