@@ -19,6 +19,8 @@
 #include <optional>
 
 //  -- Arctk --
+#include <arctk/math.hpp>
+
 
 
 //  == NAMESPACE ==
