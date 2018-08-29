@@ -91,6 +91,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the minimum bound of the axis-aligned bounding box.
+         *
+         *  @return Minimum bound of the axis-aligned bounding box.
+         */
         inline const vec3& Aabb::min() const noexcept
         {
             return (_min);
