@@ -140,7 +140,9 @@ namespace arc //! arctk namespace
                 std::exit(exit::error::FAILED_INITIALISATION);
             }
 
-            POST(_norm.normalised());
+            POST(norm.normalised());
+
+            return (norm);
         }
 
 
