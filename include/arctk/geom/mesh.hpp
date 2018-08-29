@@ -257,17 +257,24 @@ namespace arc //! arctk namespace
             {
                 for (size_t j = 0; j < 3; ++j)
                 {
-                    if (_tris[i].poss()[j] < min[j])
+                    for (size_t k = 0; k < 3; ++k)
                     {
-                        min[j] = _tris[i].poss()[j];
-                    }
+                        if (_tris[i].poss()[j][k] < min[k])
+                        {
+                            min[k] = _tris[i].poss()[j][k];
+                        }
 
-                    if (_tris[i].poss()[j] < max[j])
-                    {
-                        max[j] = _tris[i].poss()[j];
+                        if (_tris[i].poss()[j][k] > max[k])
+                        {
+                            max[k] = _tris[i].poss()[j][k];
+                        }
                     }
                 }
             }
+
+            POST(min.x < max.x);
+            POST(min.y < max.y);
+            POST(min.z < max.z);
 
             return (Aabb(min, max));
         }
