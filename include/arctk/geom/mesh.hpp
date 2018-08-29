@@ -330,11 +330,11 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i < _tris.size(); ++i)
             {
-                const double tri_vol = std::fabd(((_tris.poss()[index::vertices::ALPHA] ^ _tris.poss()[index::vertices::BETA]) * _tris.poss()[index::vertices::GAMMA]) / 6.0);
+                const double tri_vol = std::fabs(((_tris[i].poss()[index::vertices::ALPHA] ^ _tris[i].poss()[index::vertices::BETA]) * _tris[i].poss()[index::vertices::GAMMA]) / 6.0);
 
-                const vec3 centre = (_tris.poss()[index::vertices::ALPHA] + _tris.poss()[index::vertices::BETA] + _tris.poss()[index::vertices::GAMMA]) / 3.0;
+                const vec3 centre = (_tris[i].poss()[index::vertices::ALPHA] + _tris[i].poss()[index::vertices::BETA] + _tris[i].poss()[index::vertices::GAMMA]) / 3.0;
 
-                if ((centre * _tris.norm()) < 0.0)
+                if ((centre * _tris[i].norm()) < 0.0)
                 {
                     vol -= tri_vol;
                 }
