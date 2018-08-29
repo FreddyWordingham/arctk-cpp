@@ -51,6 +51,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) noexcept;
 
 
             //  == METHODS ==
@@ -64,6 +65,26 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a triangle from three vertex positions and three corresponding vertex normals.
+         *
+         *  @param  poss_   Positions of the vertices.
+         *  @param  norms_  Normals of the vertices.
+         *
+         *  @pre    norms_ vecs must be normalised.
+         *  @post   _norm must be normalised.
+         */
+        inline Triangle::Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) noexcept
+          : _poss(poss_)
+          , _norms(norms_)
+          , _norm(init_norm(pos_))
+        {
+            PRE(norm_[index::vertex::ALPHA].normalised());
+            PRE(norm_[index::vertex::BETA].normalised());
+            PRE(norm_[index::vertex::GAMMA].normalised());
+
+            POST(_plane_norm.normalised());
+        }
 
 
 
