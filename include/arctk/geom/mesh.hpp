@@ -21,6 +21,7 @@
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/geom/triangle.hpp>
 #include <arctk/index.hpp>
 #include <arctk/math.hpp>
 #include <arctk/random.hpp>
