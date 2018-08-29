@@ -43,6 +43,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Triangle Data --
+            const std::vector<Triangle> _tris; //!< Vector of triangles forming the mesh.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
