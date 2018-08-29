@@ -348,6 +348,8 @@ namespace arc //! arctk namespace
         /**
          *  Get the volume of the mesh.
          *
+         *  @post   vol must be positive.
+         *
          *  @return Volume of the mesh.
          */
         inline double Mesh::vol() const noexcept
