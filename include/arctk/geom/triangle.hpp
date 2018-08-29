@@ -75,6 +75,10 @@ namespace arc //! arctk namespace
             inline std::optional<double>                  plane_collision(const vec3& pos_, const vec3& dir_) const;
             inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept;
             inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept;
+
+            //  -- Emission --
+            inline vec3                  random_pos(random::Generator* rng_) const noexcept;
+            inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept;
         };
 
 
@@ -316,6 +320,53 @@ namespace arc //! arctk namespace
             }
 
             return (std::pair(dist, ((_norm[index::vertex::ALPHA] * (1.0 - u - v)) + (_norm[index::vertex::BETA] * u) + (_norm[index::vertex::GAMMA] * v)).normal()));
+        }
+
+
+        //  -- Emission --
+        /**
+         *  Generate a random position on the surface of the triangle.
+         *
+         *  @param  rng_    Random number generator.
+         *
+         *  @return Random position on the surface of the triangle.
+         */
+        inline vec3 Triangle::random_pos(random::Generator* const rng_) const noexcept
+        {
+            double a = rng_->gen();
+            double b = rng_->gen();
+
+            if ((a + b) > 1.0)
+            {
+                a = 1.0 - a;
+                b = 1.0 - b;
+            }
+
+            return (_pos[index::vertex::GAMMA] + ((_pos[index::vertex::ALPHA] - _pos[index::vertex::GAMMA]) * a) + ((_pos[index::vertex::BETA] - _pos[index::vertex::GAMMA]) * b));
+        }
+
+        /**
+         *  Generate a random position, and corresponding normal, on the surface of the triangle.
+         *
+         *  @param  rng_    Random number generator.
+         *
+         *  @return Random position, and corresponding normal, on the surface of the triangle.
+         */
+        inline std::pair<vec3, vec3> Triangle::random_pos_and_norm(random::Generator* rng_) const noexcept
+        {
+            double a = rng_->gen();
+            double b = rng_->gen();
+
+            if ((a + b) > 1.0)
+            {
+                a = 1.0 - a;
+                b = 1.0 - b;
+            }
+
+            const vec3 pos  = _pos[index::vertex::GAMMA] + ((_pos[index::vertex::ALPHA] - _pos[index::vertex::GAMMA]) * a) + ((_pos[index::vertex::BETA] - _pos[index::vertex::GAMMA]) * b);
+            const vec3 norm = ((_norm[index::vertex::ALPHA] * a) + (_norm[index::vertex::BETA] * b) + (_norm[index::vertex::GAMMA] * (1.0 - a - b))).normal();
+
+            return (std::pair<vec3, vec3>(pos, norm));
         }
 
 
