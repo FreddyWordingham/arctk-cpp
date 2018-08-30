@@ -47,7 +47,6 @@ namespace arc //! arctk namespace
         //  -- Constructors --
         inline Cell::Cell(const vec3& min_, const vec3& max_) noexcept
           : Aabb(min_, max_)
-          , _energy(0.0)
         {
             PRE(min_.x < max_.x);
             PRE(min_.y < max_.y);
