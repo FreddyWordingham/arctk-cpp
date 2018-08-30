@@ -68,6 +68,8 @@ namespace arc //! arctk namespace
                 inline const std::array<vec3, 3>& poss() const noexcept;
                 inline const std::array<vec3, 3>& norms() const noexcept;
                 inline const vec3&                norm() const noexcept;
+                inline vec3                       min() const noexcept;
+                inline vec3                       max() const noexcept;
                 inline double                     area() const noexcept override;
                 inline double                     vol() const noexcept override;
 
@@ -141,6 +143,52 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the minimum bound of the triangle.
+             *
+             *  @return Minimum bound of the triangle.
+             */
+            inline vec3 Triangle::min() const noexcept
+            {
+                vec3 min(std::numeric_limits<double>::max(), std::numeric_limits<double>::max(), std::numeric_limits<double>::max());
+
+                for (size_t i = 0; i < 3; ++i)
+                {
+                    for (size_t j = 0; j < 3; ++j)
+                    {
+                        if (_poss[i][j] < min[j])
+                        {
+                            min[j] = _poss[i][j];
+                        }
+                    }
+                }
+
+                return (min);
+            }
+
+            /**
+             *  Get the maximum bound of the triangle.
+             *
+             *  @return Maximum bound of the triangle.
+             */
+            inline vec3 Triangle::max() const noexcept
+            {
+                vec3 max(std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest());
+
+                for (size_t i = 0; i < 3; ++i)
+                {
+                    for (size_t j = 0; j < 3; ++j)
+                    {
+                        if (_poss[i][j] > max[j])
+                        {
+                            max[j] = _poss[i][j];
+                        }
+                    }
+                }
+
+                return (max);
+            }
+
             /**
              *  Get the array of triangle vertices.
              *
