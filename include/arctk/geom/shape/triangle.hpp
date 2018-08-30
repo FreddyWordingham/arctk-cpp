@@ -265,6 +265,8 @@ namespace arc //! arctk namespace
              */
             inline std::optional<double> Triangle::plane_collision(const vec3& pos_, const vec3& dir_) const noexcept
             {
+                PRE(dir_.normalised());
+
                 const double denom = _plane_norm * dir_;
 
                 if (math::compare::zero(denom))
