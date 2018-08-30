@@ -441,7 +441,7 @@ namespace arc //! arctk namespace
             inline Actor aabb(const geom::Shape& shape_) noexcept;
             inline Actor skybox(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor path(const std::vector<Point>& points_) noexcept;
-            inline Actor mesh(const geom::Mesh& mesh_) noexcept;
+            inline Actor mesh(const geom::shape::Mesh& mesh_) noexcept;
 
 
 
@@ -863,7 +863,7 @@ namespace arc //! arctk namespace
              *
              *  @return Mesh actor.
              */
-            inline Actor mesh(const geom::Mesh& mesh_) noexcept
+            inline Actor mesh(const geom::shape::Mesh& mesh_) noexcept
             {
                 std::vector<glm::vec3> verts;
                 verts.reserve(mesh_.num_tri() * 3 * 2);
