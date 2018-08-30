@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/geom.hpp>
 #include <arctk/math.hpp>
 
 
@@ -36,7 +37,6 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
-
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
