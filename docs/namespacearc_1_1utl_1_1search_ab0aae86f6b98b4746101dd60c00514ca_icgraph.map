@@ -1,8 +1,7 @@
 <map id="arc::utl::search::min_index" name="arc::utl::search::min_index">
-<area shape="rect" id="node2" href="$namespacearc_1_1utl_1_1search.html#a7dedb03499315275304d2ee539dbbf81" title="arc::utl::search::min" alt="" coords="191,68,329,93"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_sphere.html#aab65755fc0af549dec1adc2fb89e7f5b" title="arc::geom::shape::Sphere\l::collision" alt="" coords="377,5,551,44"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1str_1_1format.html#acf02bf3b0ce48c5a3925d406986ad52e" title="arc::str::format::time" alt="" coords="394,68,534,93"/>
-<area shape="rect" id="node7" href="$classarc_1_1sys_1_1_balancer.html#ad9892e6ebb8eed6424aad8ae9d3d0c0e" title="arc::sys::Balancer\l::print_info" alt="" coords="604,116,731,155"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1gui_1_1actor.html#a70cd46f071386ec37cd9a7c957b70bd1" title="arc::gui::actor::path" alt="" coords="599,15,735,40"/>
-<area shape="rect" id="node6" href="$classarc_1_1sys_1_1_balancer.html#ad71629ec9e2276d04f58551c1fdc57f1" title="arc::sys::Balancer\l::update" alt="" coords="783,88,910,127"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1utl_1_1search.html#a7dedb03499315275304d2ee539dbbf81" title="arc::utl::search::min" alt="" coords="191,85,329,111"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1str_1_1format.html#acf02bf3b0ce48c5a3925d406986ad52e" title="arc::str::format::time" alt="" coords="377,59,517,84"/>
+<area shape="rect" id="node6" href="$classarc_1_1sys_1_1_balancer.html#ad9892e6ebb8eed6424aad8ae9d3d0c0e" title="arc::sys::Balancer\l::print_info" alt="" coords="569,107,696,145"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1gui_1_1actor.html#a70cd46f071386ec37cd9a7c957b70bd1" title="arc::gui::actor::path" alt="" coords="565,5,700,31"/>
+<area shape="rect" id="node5" href="$classarc_1_1sys_1_1_balancer.html#ad71629ec9e2276d04f58551c1fdc57f1" title="arc::sys::Balancer\l::update" alt="" coords="748,79,875,117"/>
 </map>

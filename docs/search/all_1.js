@@ -1,7 +1,7 @@
 var searchData=
 [
   ['a',['a',['../classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a6ba9864698d49b99bae4003ecd8dbcd9',1,'arc::math::Vec&lt; T, 4 &gt;::a()'],['../namespacearc_1_1index_1_1col.html#a9900ae7a0448a055a3ed314d6521d577a610e68fa4083798c470f8c7c65830a40',1,'arc::index::col::A()']]],
-  ['aabb',['Aabb',['../classarc_1_1geom_1_1shape_1_1_aabb.html',1,'arc::geom::shape::Aabb'],['../classarc_1_1geom_1_1shape_1_1_aabb.html#a611308dbbdad4c74feac3985ae0cc1a1',1,'arc::geom::shape::Aabb::Aabb()'],['../namespacearc_1_1gui_1_1actor.html#a39bd4bd30cb2b2a0ab7ba0fc958c95e2',1,'arc::gui::actor::aabb(const glm::vec3 &amp;min_=glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3 &amp;max_=glm::vec3(1.0f, 1.0f, 1.0f)) noexcept'],['../namespacearc_1_1gui_1_1actor.html#a736f0803bd699a43765867fede6a7e9c',1,'arc::gui::actor::aabb(const geom::shape::Aabb &amp;aabb_) noexcept']]],
+  ['aabb',['Aabb',['../classarc_1_1geom_1_1_aabb.html',1,'arc::geom::Aabb'],['../classarc_1_1geom_1_1_aabb.html#a7ad3c4933093aa6481813110e2fb22e8',1,'arc::geom::Aabb::Aabb()'],['../classarc_1_1geom_1_1_mesh.html#af8d8ada0bf4a60770a782099d6a487c9',1,'arc::geom::Mesh::aabb()'],['../namespacearc_1_1gui_1_1actor.html#a39bd4bd30cb2b2a0ab7ba0fc958c95e2',1,'arc::gui::actor::aabb(const glm::vec3 &amp;min_=glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3 &amp;max_=glm::vec3(1.0f, 1.0f, 1.0f)) noexcept'],['../namespacearc_1_1gui_1_1actor.html#a316c5ef23e2b576cf6c724112a962786',1,'arc::gui::actor::aabb(const geom::Aabb &amp;aabb_) noexcept'],['../namespacearc_1_1gui_1_1actor.html#abb2092d4827c8cca12889a208d4dc72f',1,'arc::gui::actor::aabb(const geom::Mesh &amp;mesh_) noexcept']]],
   ['aabb_2ehpp',['aabb.hpp',['../aabb_8hpp.html',1,'']]],
   ['accelerate',['accelerate',['../classarc_1_1gui_1_1_camera.html#a8549068b026334b122c56dfb4e3bd6d5',1,'arc::gui::Camera']]],
   ['activate',['activate',['../classarc_1_1gui_1_1shader_1_1_ambient.html#a6b08e8eff53877edd89efd679c1b0f66',1,'arc::gui::shader::Ambient::activate()'],['../classarc_1_1gui_1_1shader_1_1_diffuse.html#acf24669bff481df2a0e1bb34d2682bf3',1,'arc::gui::shader::Diffuse::activate()'],['../classarc_1_1gui_1_1shader_1_1_normal.html#aa820db233de00c97d9c0e1285f852758',1,'arc::gui::shader::Normal::activate()'],['../classarc_1_1gui_1_1shader_1_1_ray.html#a600707945e2b2f2f86e934746ad4169e',1,'arc::gui::shader::Ray::activate()'],['../classarc_1_1gui_1_1shader_1_1_skybox.html#a2d28792057d3141c2ba49ce6d9defd82',1,'arc::gui::shader::Skybox::activate()'],['../classarc_1_1gui_1_1shader_1_1_specular.html#a1fd9868745ea17fbd89ac6f13e6ea62f',1,'arc::gui::shader::Specular::activate()']]],
@@ -21,7 +21,7 @@ var searchData=
   ['ansi',['ansi',['../namespacearc_1_1term_1_1ansi.html',1,'arc::term']]],
   ['ansi_2ehpp',['ansi.hpp',['../ansi_8hpp.html',1,'']]],
   ['arc',['arc',['../namespacearc.html',1,'']]],
-  ['area',['area',['../classarc_1_1geom_1_1shape_1_1_triangle.html#a8be439a9da593541ad062115bf6c4fd7',1,'arc::geom::shape::Triangle::area()'],['../namespacearc_1_1math_1_1geom.html#a475dc5533aec7b9caaa0a024f25f0689',1,'arc::math::geom::area()']]],
+  ['area',['area',['../classarc_1_1geom_1_1_aabb.html#a210c87d9353ff6ed576f808a00f6b218',1,'arc::geom::Aabb::area()'],['../classarc_1_1geom_1_1_mesh.html#a6f6af0214f603ec1964238f7948c75b3',1,'arc::geom::Mesh::area()'],['../classarc_1_1geom_1_1_triangle.html#a1612baf7145ea380df3dce277bb97ead',1,'arc::geom::Triangle::area()'],['../namespacearc_1_1math_1_1geom.html#a475dc5533aec7b9caaa0a024f25f0689',1,'arc::math::geom::area()']]],
   ['args',['Args',['../classarc_1_1sys_1_1_args.html',1,'arc::sys::Args&lt; A &gt;'],['../classarc_1_1sys_1_1_args.html#a2bd0defa3860b1487b0187d2bca8120b',1,'arc::sys::Args::Args()']]],
   ['args_2ehpp',['args.hpp',['../args_8hpp.html',1,'']]],
   ['argv',['argv',['../classarc_1_1sys_1_1_args.html#a078094567d6216d185adb85d5f7d3955',1,'arc::sys::Args']]],
@@ -76,7 +76,6 @@ var searchData=
   ['search',['search',['../namespacearc_1_1utl_1_1search.html',1,'arc::utl']]],
   ['settings',['settings',['../namespacearc_1_1settings.html',1,'arc']]],
   ['shader',['shader',['../namespacearc_1_1gui_1_1shader.html',1,'arc::gui']]],
-  ['shape',['shape',['../namespacearc_1_1geom_1_1shape.html',1,'arc::geom']]],
   ['str',['str',['../namespacearc_1_1str.html',1,'arc']]],
   ['stream',['stream',['../namespacearc_1_1utl_1_1stream.html',1,'arc::utl']]],
   ['success',['success',['../namespacearc_1_1exit_1_1success.html',1,'arc::exit']]],

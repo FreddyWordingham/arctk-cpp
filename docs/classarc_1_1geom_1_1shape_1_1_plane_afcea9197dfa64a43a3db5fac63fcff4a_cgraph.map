@@ -1,7 +1,0 @@
-<map id="arc::geom::shape::Plane::random_pos" name="arc::geom::shape::Plane::random_pos">
-<area shape="rect" id="node2" href="$namespacearc_1_1random_1_1distribution.html#a619762488a9e9eedd75f89aea28b4ebe" title="arc::random::distribution\l::uniform" alt="" coords="219,5,384,44"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1convert.html#ac0b319816d18eb6a572ecb9abd2af70d" title="arc::math::convert\l::polar_to_cart" alt="" coords="237,68,365,107"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1math_1_1compare.html#abaf895f8a2b87e8e16e7f7397d2cf0f1" title="arc::math::compare\l::unity" alt="" coords="233,131,369,169"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1random_1_1distribution.html#af0181d183542f6401028a77795026f90" title="arc::random::distribution\l::normal" alt="" coords="219,193,384,232"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="432,131,568,169"/>
-</map>

@@ -1,7 +1,6 @@
 var searchData=
 [
   ['camera_2ehpp',['camera.hpp',['../camera_8hpp.html',1,'']]],
-  ['circle_2ehpp',['circle.hpp',['../circle_8hpp.html',1,'']]],
   ['col_2ehpp',['col.hpp',['../col_8hpp.html',1,'(Global Namespace)'],['../index_2col_8hpp.html',1,'(Global Namespace)']]],
   ['colour_2ehpp',['colour.hpp',['../colour_8hpp.html',1,'']]],
   ['compare_2ehpp',['compare.hpp',['../compare_8hpp.html',1,'']]],
