@@ -39,13 +39,6 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Cell(const vec3& min_, const vec3& max_) noexcept;
-
-
-            //  == METHODS ==
-          public:
-            //  -- Getters --
-            inline double energy() const noexcept;
-            inline double energy_density() const noexcept;
         };
 
 
@@ -59,20 +52,6 @@ namespace arc //! arctk namespace
             PRE(min_.x < max_.x);
             PRE(min_.y < max_.y);
             PRE(min_.z < max_.z);
-        }
-
-
-
-        //  == METHODS ==
-        //  -- Getters --
-        inline double Cell::energy() const noexcept
-        {
-            return (_energy);
-        }
-
-        inline double Cell::energy_density() const noexcept
-        {
-            return (_energy / vol());
         }
 
 
