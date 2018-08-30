@@ -159,6 +159,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the minimum bound of the triangle.
+         *
+         *  @return Minimum bound of the triangle.
+         */
         inline vec3 Triangle::min() const noexcept
         {
             vec3 min(std::numeric_limits<double>::max(), std::numeric_limits<double>::max(), std::numeric_limits<double>::max());
