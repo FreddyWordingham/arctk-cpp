@@ -69,8 +69,6 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline vec3            min() const noexcept;
-            inline vec3            max() const noexcept;
             inline double          area() const noexcept;
             inline double          vol() const noexcept;
             inline const Triangle& tri(size_t index_) const noexcept;
@@ -265,26 +263,6 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        /**
-         *  Get the minimum bound of the axis-aligned bounding box of the mesh.
-         *
-         *  @return Minimum bound of the axis-aligned bounding box of the mesh.
-         */
-        inline vec3 Mesh::min() const noexcept
-        {
-            return (_aabb.min());
-        }
-
-        /**
-         *  Get the maximum bound of the axis-aligned bounding box of the mesh.
-         *
-         *  @return Maximum bound of the axis-aligned bounding box of the mesh.
-         */
-        inline vec3 Mesh::max() const noexcept
-        {
-            return (_aabb.max());
-        }
-
         /**
          *  Get the total surface area of the mesh.
          *
