@@ -230,6 +230,11 @@ namespace arc //! arctk namespace
             return (_poss);
         }
 
+        /**
+         *  Access a const reference to the vertex normals array forming the triangle.
+         *
+         *  @return Const reference to the vertex normals array forming the triangle.
+         */
         inline const std::array<vec3, 3>& Triangle::norms() const noexcept
         {
             return (_norms);
