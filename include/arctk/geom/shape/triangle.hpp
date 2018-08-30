@@ -45,8 +45,8 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Positioning --
-                const std::array<vec3, 3> _poss; //!< Vertex positions.
-                const std::array<vec3, 3> _norm; //!< Vertex normals.
+                const std::array<vec3, 3> _poss;  //!< Vertex positions.
+                const std::array<vec3, 3> _norms; //!< Vertex normals.
 
                 //  -- Properties --
                 const double _area;       //!< Area of the triangle.
@@ -65,8 +65,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline const std::array<vec3, 3>& pos() const noexcept;
-                inline const std::array<vec3, 3>& norm() const noexcept;
+                inline const std::array<vec3, 3>& poss() const noexcept;
+                inline const std::array<vec3, 3>& norms() const noexcept;
                 inline const vec3&                plane_norm() const noexcept;
                 inline double                     area() const noexcept override;
                 inline double                     vol() const noexcept override;
@@ -98,7 +98,7 @@ namespace arc //! arctk namespace
              */
             inline Triangle::Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norm_) noexcept
               : _poss(poss_)
-              , _norm(norm_)
+              , _norms(norm_)
               , _area(math::geom::area(poss_))
               , _plane_norm(init_plane_norm(poss_, norm_))
             {
@@ -146,7 +146,7 @@ namespace arc //! arctk namespace
              *
              *  @return Array of triangle vertices.
              */
-            inline const std::array<vec3, 3>& Triangle::pos() const noexcept
+            inline const std::array<vec3, 3>& Triangle::poss() const noexcept
             {
                 return (_poss);
             }
@@ -156,9 +156,9 @@ namespace arc //! arctk namespace
              *
              *  @return Array of triangle normals.
              */
-            inline const std::array<vec3, 3>& Triangle::norm() const noexcept
+            inline const std::array<vec3, 3>& Triangle::norms() const noexcept
             {
-                return (_norm);
+                return (_norms);
             }
 
             /**
@@ -249,7 +249,7 @@ namespace arc //! arctk namespace
                 }
 
                 const vec3 pos  = _poss[index::vertex::GAMMA] + ((_poss[index::vertex::ALPHA] - _poss[index::vertex::GAMMA]) * a) + ((_poss[index::vertex::BETA] - _poss[index::vertex::GAMMA]) * b);
-                const vec3 norm = ((_norm[index::vertex::ALPHA] * a) + (_norm[index::vertex::BETA] * b) + (_norm[index::vertex::GAMMA] * (1.0 - a - b))).normal();
+                const vec3 norm = ((_norms[index::vertex::ALPHA] * a) + (_norms[index::vertex::BETA] * b) + (_norms[index::vertex::GAMMA] * (1.0 - a - b))).normal();
 
                 POST(norm.normalised());
 
@@ -385,7 +385,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                return (std::pair(dist, ((_norm[index::vertex::ALPHA] * (1.0 - u - v)) + (_norm[index::vertex::BETA] * u) + (_norm[index::vertex::GAMMA] * v)).normal()));
+                return (std::pair(dist, ((_norms[index::vertex::ALPHA] * (1.0 - u - v)) + (_norms[index::vertex::BETA] * u) + (_norms[index::vertex::GAMMA] * v)).normal()));
             }
 
 
