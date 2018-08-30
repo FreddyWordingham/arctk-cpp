@@ -401,6 +401,11 @@ namespace arc //! arctk namespace
             return (_tris[index_]);
         }
 
+        /**
+         *  Get the number of triangles forming the mesh.
+         *
+         *  @return Number of triangles forming the mesh.
+         */
         inline size_t Mesh::num_tri() const noexcept
         {
             return (_tris.size());
