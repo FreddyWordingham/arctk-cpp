@@ -107,17 +107,24 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline vec3 min() const noexcept
             {
-                vec3 min;
+                vec3 delta;
 
-                min.x = _norm.x * _rad;
-                min.y = _norm.y * _rad;
-                min.z = std::sin(std::acos(_norm.z)) * _rad;
+                delta.x = _norm.x * _rad;
+                delta.y = _norm.y * _rad;
+                delta.z = std::sin(std::acos(_norm.z)) * _rad;
 
-                return (_pos - min);
+                return (_pos - delta);
             }
 
             inline vec3 max() const noexcept
             {
+                vec3 delta;
+
+                delta.x = _norm.x * _rad;
+                delta.y = _norm.y * _rad;
+                delta.z = std::sin(std::acos(_norm.z)) * _rad;
+
+                return (_pos + delta);
             }
 
             inline double Circle::area() const noexcept
