@@ -58,7 +58,6 @@ namespace arc //! arctk namespace
             const Aabb _aabb; //!< Axis-aligned bounding box of the mesh.
 
 
-
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
