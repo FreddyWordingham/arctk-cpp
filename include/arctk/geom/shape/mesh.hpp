@@ -364,7 +364,7 @@ namespace arc //! arctk namespace
 
             inline double Mesh::area() const noexcept
             {
-                const double area = 0.0;
+                double area = 0.0;
                 for (size_t i = 0; i < _tris.size(); ++i)
                 {
                     area += _tris[i].area();
