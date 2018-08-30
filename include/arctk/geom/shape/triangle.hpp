@@ -180,6 +180,12 @@ namespace arc //! arctk namespace
                 return (_area);
             }
 
+            /**
+             *  Calculate the bounding volume of a tetrahedron formed of the triangle vertex positions and the origin.
+             *  Note that volume is negative if the normal of the triangle faces to towards the origin.
+             *
+             *  @return Volume of the bound tetrahedron.
+             */
             inline double Triangle::vol() const noexcept
             {
                 const double tri_vol = std::fabs(((_tris[i].poss()[index::vertex::ALPHA] ^ _tris[i].poss()[index::vertex::BETA]) * _tris[i].poss()[index::vertex::GAMMA]) / 6.0);
