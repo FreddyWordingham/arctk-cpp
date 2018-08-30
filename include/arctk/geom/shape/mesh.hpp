@@ -42,6 +42,12 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Primitives --
+
+                //  -- Areas --
+                const std::vector<double> _areas;
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
