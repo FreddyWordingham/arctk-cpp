@@ -18,6 +18,7 @@
 //  -- Arctk --
 #include <arctk/dom/cell.hpp>
 #include <arctk/dom/grid.hpp>
+#include <arctk/dom/grid/fixed.hpp>
 
 
 
