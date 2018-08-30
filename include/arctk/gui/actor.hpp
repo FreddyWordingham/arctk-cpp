@@ -438,7 +438,7 @@ namespace arc //! arctk namespace
             inline Actor axis_helper_y(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor axis_helper_z(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor aabb(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
-            inline Actor aabb(const geom::shape::Aabb& aabb_) noexcept;
+            inline Actor aabb(const geom::Shape& shape_) noexcept;
             inline Actor skybox(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor path(const std::vector<Point>& points_) noexcept;
             //            inline Actor mesh(const geom::Mesh& mesh_) noexcept;
@@ -718,15 +718,15 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Create an axis-aligned bounding box actor from an aabb shape.
+             *  Create an axis-aligned bounding box actor from a geometric shape.
              *
-             *  @param  aabb_   Axis-aligned bounding box shape to create an actor of.
+             *  @param  shape_  Shape to create an axis-aligned bounding box actor of.
              *
              *  @return Axis aligned bounding box actor.
              */
-            inline Actor aabb(const geom::shape::Aabb& aabb_) noexcept
+            inline Actor aabb(const geom::Shape& shape_) noexcept
             {
-                return (aabb(glm::vec3(aabb_.min().x, aabb_.min().y, aabb_.min().z), glm::vec3(aabb_.max().x, aabb_.max().y, aabb_.max().z)));
+                return (aabb(glm::vec3(shape_.min().x, shape_.min().y, shape_.min().z), glm::vec3(shape_.max().x, shape_.max().y, shape_.max().z)));
             }
 
             /**
