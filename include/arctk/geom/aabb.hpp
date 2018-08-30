@@ -152,7 +152,7 @@ namespace arc //! arctk namespace
         //  -- Collision --
         inline bool Aabb::contains(const vec3& pos_) const noexcept
         {
-            return (!((pos_.x < min_.x) || (pos_.x > max_.x) || (pos_.y < min_.y) || (pos_.y > max_.y) || (pos_.z < min_.z) || (pos_.z > max_.z)));
+            return (!((pos_.x < _min.x) || (pos_.x > _max.x) || (pos_.y < _min.y) || (pos_.y > _max.y) || (pos_.z < _min.z) || (pos_.z > _max.z)));
         }
 
         /**
