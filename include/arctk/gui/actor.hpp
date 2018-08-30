@@ -442,6 +442,7 @@ namespace arc //! arctk namespace
             inline Actor skybox(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor path(const std::vector<Point>& points_) noexcept;
             inline Actor act(const geom::shape::Mesh& mesh_) noexcept;
+            inline Actor act(const geom::shape::Triangle& tri_) noexcept;
 
 
 
@@ -857,7 +858,7 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Create a mesh actor from a geometry mesh.
+             *  Create an actor from a mesh shape.
              *
              *  @param  mesh_   Mesh to create an actor of.
              *
@@ -877,6 +878,27 @@ namespace arc //! arctk namespace
                         verts.emplace_back(glm::vec3(static_cast<float>(tri.poss()[j].x), static_cast<float>(tri.poss()[j].y), static_cast<float>(tri.poss()[j].z)));
                         verts.emplace_back(glm::vec3(static_cast<float>(tri.norms()[j].x), static_cast<float>(tri.norms()[j].y), static_cast<float>(tri.norms()[j].z)));
                     }
+                }
+
+                return (Actor(verts, {3, 3}));
+            }
+
+            /**
+             *  Create an actor from a triangle shape.
+             *
+             *  @param  tri_    Triangle to create an actor of.
+             *
+             *  @return Triangle actor.
+             */
+            inline Actor act(const geom::shape::Triangle& tri_) noexcept
+            {
+                std::vector<glm::vec3> verts;
+                verts.reserve(3 * 2);
+
+                for (size_t i = 0; i < 3; ++i)
+                {
+                    verts.emplace_back(glm::vec3(static_cast<float>(tri_.poss()[i].x), static_cast<float>(tri_.poss()[i].y), static_cast<float>(tri_.poss()[i].z)));
+                    verts.emplace_back(glm::vec3(static_cast<float>(tri_.norms()[i].x), static_cast<float>(tri_.norms()[i].y), static_cast<float>(tri_.norms()[i].z)));
                 }
 
                 return (Actor(verts, {3, 3}));
