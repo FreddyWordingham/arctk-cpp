@@ -64,7 +64,6 @@ namespace arc //! arctk namespace
             //  -- Initialisation --
             inline std::vector<Triangle> init_tris(const std::string& serial_, const mat4& transform_) const noexcept;
             inline std::vector<double>   init_areas() const noexcept;
-            inline Aabb                  init_aabb() const noexcept;
 
 
             //  == METHODS ==
@@ -97,7 +96,6 @@ namespace arc //! arctk namespace
         inline Mesh::Mesh(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
           : _tris(init_tris(serial_, math::mat::transform(scale_, rot_, trans_)))
           , _areas(init_areas())
-          , _aabb(init_aabb())
         {
             PRE(!serial_.empty());
         }
@@ -262,46 +260,6 @@ namespace arc //! arctk namespace
             POST(math::compare::unity(areas.back()));
 
             return (areas);
-        }
-
-        /**
-         *  Initialise the axis-aligned bounding box containing the mesh.
-         *
-         *  @post   min.x must be less than max.x.
-         *  @post   min.y must be less than max.y.
-         *  @post   min.z must be less than max.z.
-         *
-         *  @return Initialised axis-aligned bounding box.
-         */
-        inline Aabb Mesh::init_aabb() const noexcept
-        {
-            vec3 min(std::numeric_limits<double>::max(), std::numeric_limits<double>::max(), std::numeric_limits<double>::max());
-            vec3 max(std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest());
-
-            for (size_t i = 0; i < _tris.size(); ++i)
-            {
-                for (size_t j = 0; j < 3; ++j)
-                {
-                    for (size_t k = 0; k < 3; ++k)
-                    {
-                        if (_tris[i].poss()[j][k] < min[k])
-                        {
-                            min[k] = _tris[i].poss()[j][k];
-                        }
-
-                        if (_tris[i].poss()[j][k] > max[k])
-                        {
-                            max[k] = _tris[i].poss()[j][k];
-                        }
-                    }
-                }
-            }
-
-            POST(min.x < max.x);
-            POST(min.y < max.y);
-            POST(min.z < max.z);
-
-            return (Aabb(min, max));
         }
 
 
