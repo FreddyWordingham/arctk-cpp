@@ -33,7 +33,7 @@ namespace arc //! arctk namespace
         /**
          *  Domain gridding class.
          */
-        class Grid
+        class Grid : public geom::Aabb
         {
             //  == FIELDS ==
           private:
