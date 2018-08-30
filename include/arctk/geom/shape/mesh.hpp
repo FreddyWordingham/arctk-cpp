@@ -278,7 +278,14 @@ namespace arc //! arctk namespace
 
             inline double Mesh::vol() const noexcept
             {
-                return (0.0);
+                double vol = 0.0;
+
+                for (size_t i = 0; i < _tris.size(); ++i)
+                {
+                    vol += _tris[i].vol();
+                }
+
+                return (vol);
             }
 
             /**
