@@ -123,6 +123,16 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
+        /**
+         *  Initialise the surface normal of the triangle's plane.
+         *
+         *  @param  poss_   Array of vertex positions forming the triangle.
+         *  @param  norms_  Array of vertex normals forming the triangle.
+         *
+         *  @post   norm must be normalised.
+         *
+         *  @return Initialised surface normal of the triangle's plane.
+         */
         inline vec3 Triangle::init_norm(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) const noexcept
         {
             vec3 norm = ((poss_[index::vertex::BETA] - poss_[index::vertex::ALPHA]) ^ (poss_[index::vertex::GAMMA] - poss_[index::vertex::ALPHA])).normal();
