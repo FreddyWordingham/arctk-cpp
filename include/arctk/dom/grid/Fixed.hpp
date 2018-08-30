@@ -54,6 +54,10 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline Fixed(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept;
 
+              private:
+                //  -- Initialisation --
+                std::vector<std::vector<std::vector<cell::Leaf>>> init_leaves(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept;
+
 
                 //  == METHODS ==
               public:
@@ -75,6 +79,15 @@ namespace arc //! arctk namespace
                 PRE(res_[index::dim::cartesian::X] > 0);
                 PRE(res_[index::dim::cartesian::Y] > 0);
                 PRE(res_[index::dim::cartesian::Z] > 0);
+            }
+
+
+            //  -- Initialisation --
+            std::vector<std::vector<std::vector<cell::Leaf>>> Fixed::init_leaves(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept
+            {
+                std::vector<std::vector<std::vector<cell::Leaf>>> leaves;
+
+                return (leaves);
             }
 
 
