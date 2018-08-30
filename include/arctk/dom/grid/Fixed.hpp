@@ -46,6 +46,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Cells --
+                const std::array<size_t, 3>                       _res; //!< Resolution of the grid.
                 std::vector<std::vector<std::vector<cell::Leaf>>> _leaves;
 
 
