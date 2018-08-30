@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <memory>
 #include <optional>
 
 //  -- Arctk --
@@ -43,6 +44,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Primitives --
+                const std::vector<std::unique_ptr<Shape>> _primitives;
 
                 //  -- Areas --
                 const std::vector<double> _areas;
