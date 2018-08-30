@@ -38,6 +38,7 @@
 #include <arctk/debug/invariant.hpp>
 #include <arctk/debug/location.hpp>
 #include <arctk/dom.hpp>
+#include <arctk/dom/grid.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/exit/error.hpp>
 #include <arctk/exit/success.hpp>
