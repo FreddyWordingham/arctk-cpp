@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            virtual inline vec3 cell(const vec3& pos_) const noexcept = 0;
+            virtual inline const Cell& cell(const vec3& pos_) const noexcept = 0;
         };
 
 
