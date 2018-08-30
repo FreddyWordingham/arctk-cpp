@@ -75,7 +75,6 @@ namespace arc //! arctk namespace
             inline double          vol() const noexcept;
             inline const Triangle& tri(size_t index_) const noexcept;
             inline size_t          num_tri() const noexcept;
-            inline const Aabb&     aabb() const noexcept;
         };
 
 
@@ -363,16 +362,6 @@ namespace arc //! arctk namespace
         inline size_t Mesh::num_tri() const noexcept
         {
             return (_tris.size());
-        }
-
-        /**
-         *  Access a const reference to the meshes' axis-aligned bounding box.
-         *
-         *  @return Const reference to the meshes' axis-aligned bounding box.
-         */
-        inline const Aabb& Mesh::aabb() const noexcept
-        {
-            return (_aabb);
         }
 
 
