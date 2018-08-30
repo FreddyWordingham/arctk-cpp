@@ -182,6 +182,11 @@ namespace arc //! arctk namespace
             return (min);
         }
 
+        /**
+         *  Get the maximum bound of the triangle.
+         *
+         *  @return Maximum bound of the triangle.
+         */
         inline vec3 Triangle::max() const noexcept
         {
             vec3 max(std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest());
