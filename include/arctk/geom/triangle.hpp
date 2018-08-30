@@ -77,7 +77,6 @@ namespace arc //! arctk namespace
             inline vec3                       min() const noexcept;
             inline vec3                       max() const noexcept;
             inline double                     area() const noexcept;
-            inline double                     vol() const noexcept;
             inline const std::array<vec3, 3>& poss() const noexcept;
             inline const std::array<vec3, 3>& norms() const noexcept;
             inline const vec3&                norm() const noexcept;
@@ -219,11 +218,6 @@ namespace arc //! arctk namespace
             POST(area > 0.0);
 
             return (area);
-        }
-
-        inline double Triangle::vol() const noexcept
-        {
-            return (0.0);
         }
 
         inline const std::array<vec3, 3>& Triangle::poss() const noexcept
