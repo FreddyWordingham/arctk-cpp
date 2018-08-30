@@ -220,6 +220,11 @@ namespace arc //! arctk namespace
             return (area);
         }
 
+        /**
+         *  Access a const reference to the vertex position array forming the triangle.
+         *
+         *  @return Const reference to the vertex position array forming the triangle.
+         */
         inline const std::array<vec3, 3>& Triangle::poss() const noexcept
         {
             return (_poss);
