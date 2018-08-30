@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Positioning --
-                const std::array<vec3, 3> _pos;  //!< Vertex positions.
+                const std::array<vec3, 3> _poss; //!< Vertex positions.
                 const std::array<vec3, 3> _norm; //!< Vertex normals.
 
                 //  -- Properties --
@@ -56,10 +56,10 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Triangle(const std::array<vec3, 3>& pos_, const std::array<vec3, 3>& norm_) noexcept;
+                inline Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norm_) noexcept;
 
                 //  -- Initialisation --
-                inline vec3 init_plane_norm(const std::array<vec3, 3>& pos_, const std::array<vec3, 3>& norm_) const noexcept;
+                inline vec3 init_plane_norm(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norm_) const noexcept;
 
 
                 //  == METHODS ==
@@ -88,7 +88,7 @@ namespace arc //! arctk namespace
             /**
              *  Construct a triangle from three vertex positions and three corresponding vertex normals.
              *
-             *  @param  pos_    Positions of the vertices.
+             *  @param  poss_   Positions of the vertices.
              *  @param  norm_   Normals of the vertices.
              *
              *  @pre    norm_ vecs must be normalised.
@@ -96,11 +96,11 @@ namespace arc //! arctk namespace
              *  @post   _area must be positive.
              *  @post   _plane_norm must be normalised.
              */
-            inline Triangle::Triangle(const std::array<vec3, 3>& pos_, const std::array<vec3, 3>& norm_) noexcept
-              : _pos(pos_)
+            inline Triangle::Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norm_) noexcept
+              : _poss(poss_)
               , _norm(norm_)
-              , _area(math::geom::area(pos_))
-              , _plane_norm(init_plane_norm(pos_, norm_))
+              , _area(math::geom::area(poss_))
+              , _plane_norm(init_plane_norm(poss_, norm_))
             {
                 PRE(norm_[index::vertex::ALPHA].normalised());
                 PRE(norm_[index::vertex::BETA].normalised());
@@ -116,16 +116,16 @@ namespace arc //! arctk namespace
              *  Initialise the normal vector of the triangle by determining the cross-product of two of the triangles edges.
              *  Normal must be normalised after determining the cross-product.
              *
-             *  @param  pos_    Positions of the vertices.
+             *  @param  poss_   Positions of the vertices.
              *  @param  norm_   Normals of the vertices.
              *
              *  @post   plane_norm must be normalised.
              *
              *  @return The normal vector of the triangle's plane.
              */
-            inline vec3 Triangle::init_plane_norm(const std::array<vec3, 3>& pos_, const std::array<vec3, 3>& norm_) const noexcept
+            inline vec3 Triangle::init_plane_norm(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norm_) const noexcept
             {
-                vec3 plane_norm = ((pos_[index::vertex::BETA] - pos_[index::vertex::ALPHA]) ^ (pos_[index::vertex::GAMMA] - pos_[index::vertex::ALPHA])).normal();
+                vec3 plane_norm = ((poss_[index::vertex::BETA] - poss_[index::vertex::ALPHA]) ^ (poss_[index::vertex::GAMMA] - poss_[index::vertex::ALPHA])).normal();
 
                 if ((plane_norm * (norm_[index::vertex::ALPHA] + norm_[index::vertex::BETA] + norm_[index::vertex::GAMMA])) < 0.0)
                 {
@@ -148,7 +148,7 @@ namespace arc //! arctk namespace
              */
             inline const std::array<vec3, 3>& Triangle::pos() const noexcept
             {
-                return (_pos);
+                return (_poss);
             }
 
             /**
@@ -225,7 +225,7 @@ namespace arc //! arctk namespace
                     b = 1.0 - b;
                 }
 
-                return (_pos[index::vertex::GAMMA] + ((_pos[index::vertex::ALPHA] - _pos[index::vertex::GAMMA]) * a) + ((_pos[index::vertex::BETA] - _pos[index::vertex::GAMMA]) * b));
+                return (_poss[index::vertex::GAMMA] + ((_poss[index::vertex::ALPHA] - _poss[index::vertex::GAMMA]) * a) + ((_poss[index::vertex::BETA] - _poss[index::vertex::GAMMA]) * b));
             }
 
             /**
@@ -248,7 +248,7 @@ namespace arc //! arctk namespace
                     b = 1.0 - b;
                 }
 
-                const vec3 pos  = _pos[index::vertex::GAMMA] + ((_pos[index::vertex::ALPHA] - _pos[index::vertex::GAMMA]) * a) + ((_pos[index::vertex::BETA] - _pos[index::vertex::GAMMA]) * b);
+                const vec3 pos  = _poss[index::vertex::GAMMA] + ((_poss[index::vertex::ALPHA] - _poss[index::vertex::GAMMA]) * a) + ((_poss[index::vertex::BETA] - _poss[index::vertex::GAMMA]) * b);
                 const vec3 norm = ((_norm[index::vertex::ALPHA] * a) + (_norm[index::vertex::BETA] * b) + (_norm[index::vertex::GAMMA] * (1.0 - a - b))).normal();
 
                 POST(norm.normalised());
@@ -279,7 +279,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                const double dist = ((_pos[index::vertex::ALPHA] - pos_) * _plane_norm) / denom;
+                const double dist = ((_poss[index::vertex::ALPHA] - pos_) * _plane_norm) / denom;
 
                 return ((dist < 0.0) ? std::nullopt : std::optional<double>(dist));
             }
@@ -299,8 +299,8 @@ namespace arc //! arctk namespace
             {
                 PRE(dir_.normalised());
 
-                const vec3 edge_ab = _pos[index::vertex::BETA] - _pos[index::vertex::ALPHA];
-                const vec3 edge_ac = _pos[index::vertex::GAMMA] - _pos[index::vertex::ALPHA];
+                const vec3 edge_ab = _poss[index::vertex::BETA] - _poss[index::vertex::ALPHA];
+                const vec3 edge_ac = _poss[index::vertex::GAMMA] - _poss[index::vertex::ALPHA];
 
                 const vec3   p   = dir_ ^ edge_ac;
                 const double det = edge_ab * p;
@@ -310,7 +310,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                const vec3   t = pos_ - _pos[index::vertex::ALPHA];
+                const vec3   t = pos_ - _poss[index::vertex::ALPHA];
                 const double u = (t * p) / det;
 
                 if ((u < 0.0) || (u > 1.0))
@@ -351,8 +351,8 @@ namespace arc //! arctk namespace
             {
                 PRE(dir_.normalised());
 
-                const vec3 edge_ab = _pos[index::vertex::BETA] - _pos[index::vertex::ALPHA];
-                const vec3 edge_ac = _pos[index::vertex::GAMMA] - _pos[index::vertex::ALPHA];
+                const vec3 edge_ab = _poss[index::vertex::BETA] - _poss[index::vertex::ALPHA];
+                const vec3 edge_ac = _poss[index::vertex::GAMMA] - _poss[index::vertex::ALPHA];
 
                 const vec3   p   = dir_ ^ edge_ac;
                 const double det = edge_ab * p;
@@ -362,7 +362,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                const vec3   t = pos_ - _pos[index::vertex::ALPHA];
+                const vec3   t = pos_ - _poss[index::vertex::ALPHA];
                 const double u = (t * p) / det;
 
                 if ((u < 0.0) || (u > 1.0))
