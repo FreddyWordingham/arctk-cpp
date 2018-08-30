@@ -32,7 +32,7 @@ namespace arc //! arctk namespace
         /**
          *  Domain cell class.
          */
-        class Coll
+        class Cell
         {
             //  == FIELDS ==
           private:
