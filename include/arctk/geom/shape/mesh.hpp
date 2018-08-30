@@ -310,6 +310,44 @@ namespace arc //! arctk namespace
                 return (_tris[index_]);
             }
 
+            /**
+             *  Get the minimum bound of the mesh.
+             *
+             *  @return Minimum bound of the mesh.
+             */
+            inline vec3 Mesh::min() const noexcept
+            {
+                vec3 min(std::numeric_limits<double>::max(), std::numeric_limits<double>::max(), std::numeric_limits<double>::max());
+
+                for (size_t i = 0; i < _tris.size(); ++i)
+                {
+                    for (size_t j = 0; j < 3; ++j)
+                    {
+                        for (size_t k = 0; k < 3; ++k)
+                        {
+                            if (_tris[i].poss()[j][k] < min[k])
+                            {
+                                min[k] = _tris[i].poss()[j][k];
+                            }
+                        }
+                    }
+                }
+
+                return (min);
+            }
+
+            /**
+             *  Get the maximum bound of the mesh.
+             *
+             *  @return Maximum bound of the mesh.
+             */
+            inline vec3 Mesh::max() const noexcept
+            {
+                vec3 max(std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest());
+
+                return (max);
+            }
+
             inline double Mesh::area() const noexcept
             {
                 const double area = 0.0;
