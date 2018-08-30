@@ -56,6 +56,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
+                inline vec3   min() const noexcept;
+                inline vec3   max() const noexcept;
                 inline double area() const noexcept override;
                 inline double vol() const noexcept override;
 
@@ -93,6 +95,26 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the minimum bound of the triangle.
+             *
+             *  @return Minimum bound of the triangle.
+             */
+            inline vec3 Plane::min() const noexcept
+            {
+                return (vec3(std::numeric_limits<double>::max(), std::numeric_limits<double>::max(), std::numeric_limits<double>::max()));
+            }
+
+            /**
+             *  Get the maximum bound of the triangle.
+             *
+             *  @return Maximum bound of the triangle.
+             */
+            inline vec3 Plane::max() const noexcept
+            {
+                return (vec3(std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest()));
+            }
+
             inline double Plane::area() const noexcept
             {
                 return (std::numeric_limits<double>::infinity());
