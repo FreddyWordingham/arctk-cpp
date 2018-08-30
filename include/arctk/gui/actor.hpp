@@ -437,8 +437,8 @@ namespace arc //! arctk namespace
             inline Actor axis_helper_x(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor axis_helper_y(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor axis_helper_z(float length_ = 1.0f, float width_ = 0.01f) noexcept;
-            inline Actor aabb(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
-            inline Actor aabb(const geom::Shape& shape_) noexcept;
+            inline Actor box(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
+            inline Actor box(const geom::Shape& shape_) noexcept;
             inline Actor cuboid(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor path(const std::vector<Point>& points_) noexcept;
             inline Actor act(const geom::shape::Aabb& tri_) noexcept;
@@ -680,7 +680,7 @@ namespace arc //! arctk namespace
              *
              *  @return Axis aligned bounding box actor.
              */
-            inline Actor aabb(const glm::vec3& min_, const glm::vec3& max_) noexcept
+            inline Actor box(const glm::vec3& min_, const glm::vec3& max_) noexcept
             {
                 PRE(min_.x < max_.x);
                 PRE(min_.y < max_.y);
@@ -726,9 +726,9 @@ namespace arc //! arctk namespace
              *
              *  @return Axis aligned bounding box actor.
              */
-            inline Actor aabb(const geom::Shape& shape_) noexcept
+            inline Actor box(const geom::Shape& shape_) noexcept
             {
-                return (aabb(glm::vec3(shape_.min().x, shape_.min().y, shape_.min().z), glm::vec3(shape_.max().x, shape_.max().y, shape_.max().z)));
+                return (box(glm::vec3(shape_.min().x, shape_.min().y, shape_.min().z), glm::vec3(shape_.max().x, shape_.max().y, shape_.max().z)));
             }
 
             /**
