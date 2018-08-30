@@ -19,7 +19,7 @@
 #include <vector>
 
 //  -- Arctk --
-#include <arctk/dom/cell.hpp>
+#include <arctk/dom/cell/leaf.hpp>
 #include <arctk/dom/grid.hpp>
 
 
