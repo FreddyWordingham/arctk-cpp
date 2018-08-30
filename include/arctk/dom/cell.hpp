@@ -35,12 +35,6 @@ namespace arc //! arctk namespace
          */
         class Cell : public geom::Aabb
         {
-            //  == FIELDS ==
-          private:
-            //  -- Data --
-            double _energy; //!< Energy of the cell (J).
-
-
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
