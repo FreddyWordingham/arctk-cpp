@@ -255,7 +255,7 @@ namespace arc //! arctk namespace
                     areas[i] /= areas.back();
                 }
 
-                POST(math::compare::equal(areas.back(), 1.0));
+                POST(math::compare::unity(areas.back()));
 
                 return (areas);
             }
