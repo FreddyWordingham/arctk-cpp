@@ -49,8 +49,8 @@ namespace arc //! arctk namespace
                 const std::array<vec3, 3> _norms; //!< Vertex normals.
 
                 //  -- Properties --
-                const double _area;       //!< Area of the triangle.
-                const vec3   _plane_norm; //!< Normal of the triangle's plane.
+                const double _area; //!< Area of the triangle.
+                const vec3   _norm; //!< Normal of the triangle's plane.
 
 
                 //  == INSTANTIATION ==
@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
                 inline Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) noexcept;
 
                 //  -- Initialisation --
-                inline vec3 init_plane_norm(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) const noexcept;
+                inline vec3 init_norm(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) const noexcept;
 
 
                 //  == METHODS ==
@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
                 //  -- Getters --
                 inline const std::array<vec3, 3>& poss() const noexcept;
                 inline const std::array<vec3, 3>& norms() const noexcept;
-                inline const vec3&                plane_norm() const noexcept;
+                inline const vec3&                norm() const noexcept;
                 inline double                     area() const noexcept override;
                 inline double                     vol() const noexcept override;
 
@@ -94,20 +94,20 @@ namespace arc //! arctk namespace
              *  @pre    norms_ vecs must be normalised.
              *
              *  @post   _area must be positive.
-             *  @post   _plane_norm must be normalised.
+             *  @post   _norm must be normalised.
              */
             inline Triangle::Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) noexcept
               : _poss(poss_)
               , _norms(norms_)
               , _area(math::geom::area(poss_))
-              , _plane_norm(init_plane_norm(poss_, norms_))
+              , _norm(init_norm(poss_, norms_))
             {
                 PRE(norms_[index::vertex::ALPHA].normalised());
                 PRE(norms_[index::vertex::BETA].normalised());
                 PRE(norms_[index::vertex::GAMMA].normalised());
 
                 POST(_area > 0.0);
-                POST(_plane_norm.normalised());
+                POST(_norm.normalised());
             }
 
 
@@ -119,22 +119,22 @@ namespace arc //! arctk namespace
              *  @param  poss_   Positions of the vertices.
              *  @param  norms_  Normals of the vertices.
              *
-             *  @post   plane_norm must be normalised.
+             *  @post   norm must be normalised.
              *
              *  @return The normal vector of the triangle's plane.
              */
-            inline vec3 Triangle::init_plane_norm(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) const noexcept
+            inline vec3 Triangle::init_norm(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) const noexcept
             {
-                vec3 plane_norm = ((poss_[index::vertex::BETA] - poss_[index::vertex::ALPHA]) ^ (poss_[index::vertex::GAMMA] - poss_[index::vertex::ALPHA])).normal();
+                vec3 norm = ((poss_[index::vertex::BETA] - poss_[index::vertex::ALPHA]) ^ (poss_[index::vertex::GAMMA] - poss_[index::vertex::ALPHA])).normal();
 
-                if ((plane_norm * (norms_[index::vertex::ALPHA] + norms_[index::vertex::BETA] + norms_[index::vertex::GAMMA])) < 0.0)
+                if ((norm * (norms_[index::vertex::ALPHA] + norms_[index::vertex::BETA] + norms_[index::vertex::GAMMA])) < 0.0)
                 {
-                    plane_norm *= -1.0;
+                    norm *= -1.0;
                 }
 
-                POST(plane_norm.normalised());
+                POST(norm.normalised());
 
-                return (plane_norm);
+                return (norm);
             }
 
 
@@ -166,9 +166,9 @@ namespace arc //! arctk namespace
              *
              *  @return Normal of triangles plane.
              */
-            inline const vec3& Triangle::plane_norm() const noexcept
+            inline const vec3& Triangle::norm() const noexcept
             {
-                return (_plane_norm);
+                return (_norm);
             }
 
             /**
@@ -272,14 +272,14 @@ namespace arc //! arctk namespace
             {
                 PRE(dir_.normalised());
 
-                const double denom = _plane_norm * dir_;
+                const double denom = _norm * dir_;
 
                 if (math::compare::zero(denom))
                 {
                     return (std::nullopt);
                 }
 
-                const double dist = ((_poss[index::vertex::ALPHA] - pos_) * _plane_norm) / denom;
+                const double dist = ((_poss[index::vertex::ALPHA] - pos_) * _norm) / denom;
 
                 return ((dist < 0.0) ? std::nullopt : std::optional<double>(dist));
             }
