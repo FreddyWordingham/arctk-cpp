@@ -441,6 +441,7 @@ namespace arc //! arctk namespace
             inline Actor aabb(const geom::Shape& shape_) noexcept;
             inline Actor skybox(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor path(const std::vector<Point>& points_) noexcept;
+            inline Actor act(const geom::shape::Aabb& tri_) noexcept;
             inline Actor act(const geom::shape::Mesh& mesh_) noexcept;
             inline Actor act(const geom::shape::Triangle& tri_) noexcept;
 
@@ -855,6 +856,18 @@ namespace arc //! arctk namespace
                 }
 
                 return (Actor(verts, {3, 1, 1}, GL_LINE_STRIP));
+            }
+
+            /**
+             *  Create an actor from a axis-aligned bounding box shape.
+             *
+             *  @param  aabb_   Axis-aligned bounding box to create an actor of.
+             *
+             *  @return Axis-aligned bounding box actor.
+             */
+            inline Actor act(const geom::shape::Aabb& aabb_) noexcept
+            {
+                return (cuboid(aabb_.min(), aabb_.max()));
             }
 
             /**
