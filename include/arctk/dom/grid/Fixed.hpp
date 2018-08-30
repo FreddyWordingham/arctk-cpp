@@ -72,6 +72,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Fixed::Fixed(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept
               : Grid(min_, max_)
+              , _res(res_)
               , _leaves(init_leaves(min_, max_, res_))
             {
                 PRE(min_.x < max_.x);
