@@ -285,6 +285,8 @@ namespace arc //! arctk namespace
                     vol += _tris[i].vol();
                 }
 
+                POST(vol > 0.0);
+
                 return (vol);
             }
 
