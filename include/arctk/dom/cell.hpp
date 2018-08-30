@@ -38,6 +38,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Bounds --
             const vec3 _min; //!< Minimum bound of the cell.
+            const vec3 _max; //!< Maximum bound of the cell.
 
 
             //  == INSTANTIATION ==
