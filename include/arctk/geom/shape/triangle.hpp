@@ -68,8 +68,8 @@ namespace arc //! arctk namespace
                 inline const std::array<vec3, 3>& poss() const noexcept;
                 inline const std::array<vec3, 3>& norms() const noexcept;
                 inline const vec3&                norm() const noexcept;
-                inline vec3                       min() const noexcept;
-                inline vec3                       max() const noexcept;
+                inline vec3                       min() const noexcept override;
+                inline vec3                       max() const noexcept override;
                 inline double                     area() const noexcept override;
                 inline double                     vol() const noexcept override;
 
