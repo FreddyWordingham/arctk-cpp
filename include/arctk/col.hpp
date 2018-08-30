@@ -3,7 +3,7 @@
  *  @date   12/07/2018
  *  @author Freddy Wordingham
  *
- *  Collection colour functions.
+ *  Collection of colour functions.
  */
 
 
