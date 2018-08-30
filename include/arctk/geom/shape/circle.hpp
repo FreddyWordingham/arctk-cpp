@@ -112,7 +112,7 @@ namespace arc //! arctk namespace
 
                 delta.x = _norm.x * _rad;
                 delta.y = _norm.y * _rad;
-                delta.z = std::sin(std::acos(_norm.z)) * _rad;
+                delta.z = std::abs(std::sin(std::acos(_norm.z)) * _rad);
 
                 return (_pos - delta);
             }
