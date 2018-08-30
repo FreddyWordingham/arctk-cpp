@@ -205,6 +205,13 @@ namespace arc //! arctk namespace
             return (max);
         }
 
+        /**
+         *  Get the surface area of the triangle.
+         *
+         *  @post   area must be positive.
+         *
+         *  @return Surface area of the triangle.
+         */
         inline double Triangle::area() const noexcept
         {
             const double area = math::geom::area(_poss);
