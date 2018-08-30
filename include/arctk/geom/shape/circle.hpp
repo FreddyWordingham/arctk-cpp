@@ -20,6 +20,7 @@
 #include <optional>
 
 //  -- Arctk --
+#include <arctk/consts.hpp>
 #include <arctk/geom/shape.hpp>
 #include <arctk/math.hpp>
 
@@ -108,10 +109,12 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline vec3 Circle::min() const noexcept
             {
+                vec3 norm_xy = vec3(_norm.x, _norm.y, 0.0).normal();
+
                 vec3 delta;
 
-                delta.x = _norm.x * _rad;
-                delta.y = _norm.y * _rad;
+                delta.x = std::abs(std::sin(std::acos(_norm.x)) * _rad);
+                delta.y = std::abs(std::sin(std::acos(_norm.y)) * _rad);
                 delta.z = std::abs(std::sin(std::acos(_norm.z)) * _rad);
 
                 return (_pos - delta);
@@ -119,11 +122,13 @@ namespace arc //! arctk namespace
 
             inline vec3 Circle::max() const noexcept
             {
+                vec3 norm_xy = vec3(_norm.x, _norm.y, 0.0).normal();
+
                 vec3 delta;
 
-                delta.x = _norm.x * _rad;
-                delta.y = _norm.y * _rad;
-                delta.z = std::sin(std::acos(_norm.z)) * _rad;
+                delta.x = std::abs(std::sin(std::acos(_norm.x)) * _rad);
+                delta.y = std::abs(std::sin(std::acos(_norm.y)) * _rad);
+                delta.z = std::abs(std::sin(std::acos(_norm.z)) * _rad);
 
                 return (_pos + delta);
             }
