@@ -345,6 +345,20 @@ namespace arc //! arctk namespace
             {
                 vec3 max(std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest());
 
+                for (size_t i = 0; i < _tris.size(); ++i)
+                {
+                    for (size_t j = 0; j < 3; ++j)
+                    {
+                        for (size_t k = 0; k < 3; ++k)
+                        {
+                            if (_tris[i].poss()[j][k] > max[k])
+                            {
+                                max[k] = _tris[i].poss()[j][k];
+                            }
+                        }
+                    }
+                }
+
                 return (max);
             }
 
