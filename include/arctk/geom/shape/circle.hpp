@@ -106,7 +106,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            inline vec3 min() const noexcept
+            inline vec3 Circle::min() const noexcept
             {
                 vec3 delta;
 
@@ -117,7 +117,7 @@ namespace arc //! arctk namespace
                 return (_pos - delta);
             }
 
-            inline vec3 max() const noexcept
+            inline vec3 Circle::max() const noexcept
             {
                 vec3 delta;
 
