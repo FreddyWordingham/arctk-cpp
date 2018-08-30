@@ -15,6 +15,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <vector>
+
 //  -- Arctk --
 #include <arctk/dom/cell.hpp>
 #include <arctk/dom/grid.hpp>
@@ -39,6 +42,10 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Cells --
+                std::vector<std::vector<std::vector<cell::Leaf>>> _leaves;
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
