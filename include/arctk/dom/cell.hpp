@@ -78,6 +78,7 @@ namespace arc //! arctk namespace
 
         inline double Cell::energy_density() const noexcept
         {
+            return (_energy / vol());
         }
 
 
