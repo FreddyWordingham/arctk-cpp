@@ -411,6 +411,11 @@ namespace arc //! arctk namespace
             return (_tris.size());
         }
 
+        /**
+         *  Access a const reference to the meshes' axis-aligned bounding box.
+         *
+         *  @return Const reference to the meshes' axis-aligned bounding box.
+         */
         inline const Aabb& Mesh::aabb() const noexcept
         {
             return (_aabb);
