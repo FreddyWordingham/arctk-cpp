@@ -37,7 +37,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Bounds --
-
+            const vec3 _min; //!< Minimum bound of the cell.
 
 
             //  == INSTANTIATION ==
