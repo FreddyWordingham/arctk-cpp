@@ -56,10 +56,10 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norm_) noexcept;
+                inline Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) noexcept;
 
                 //  -- Initialisation --
-                inline vec3 init_plane_norm(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norm_) const noexcept;
+                inline vec3 init_plane_norm(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) const noexcept;
 
 
                 //  == METHODS ==
@@ -89,22 +89,22 @@ namespace arc //! arctk namespace
              *  Construct a triangle from three vertex positions and three corresponding vertex normals.
              *
              *  @param  poss_   Positions of the vertices.
-             *  @param  norm_   Normals of the vertices.
+             *  @param  norms_  Normals of the vertices.
              *
-             *  @pre    norm_ vecs must be normalised.
+             *  @pre    norms_ vecs must be normalised.
              *
              *  @post   _area must be positive.
              *  @post   _plane_norm must be normalised.
              */
-            inline Triangle::Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norm_) noexcept
+            inline Triangle::Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) noexcept
               : _poss(poss_)
-              , _norms(norm_)
+              , _norms(norms_)
               , _area(math::geom::area(poss_))
-              , _plane_norm(init_plane_norm(poss_, norm_))
+              , _plane_norm(init_plane_norm(poss_, norms_))
             {
-                PRE(norm_[index::vertex::ALPHA].normalised());
-                PRE(norm_[index::vertex::BETA].normalised());
-                PRE(norm_[index::vertex::GAMMA].normalised());
+                PRE(norms_[index::vertex::ALPHA].normalised());
+                PRE(norms_[index::vertex::BETA].normalised());
+                PRE(norms_[index::vertex::GAMMA].normalised());
 
                 POST(_area > 0.0);
                 POST(_plane_norm.normalised());
@@ -117,17 +117,17 @@ namespace arc //! arctk namespace
              *  Normal must be normalised after determining the cross-product.
              *
              *  @param  poss_   Positions of the vertices.
-             *  @param  norm_   Normals of the vertices.
+             *  @param  norms_  Normals of the vertices.
              *
              *  @post   plane_norm must be normalised.
              *
              *  @return The normal vector of the triangle's plane.
              */
-            inline vec3 Triangle::init_plane_norm(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norm_) const noexcept
+            inline vec3 Triangle::init_plane_norm(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) const noexcept
             {
                 vec3 plane_norm = ((poss_[index::vertex::BETA] - poss_[index::vertex::ALPHA]) ^ (poss_[index::vertex::GAMMA] - poss_[index::vertex::ALPHA])).normal();
 
-                if ((plane_norm * (norm_[index::vertex::ALPHA] + norm_[index::vertex::BETA] + norm_[index::vertex::GAMMA])) < 0.0)
+                if ((plane_norm * (norms_[index::vertex::ALPHA] + norms_[index::vertex::BETA] + norms_[index::vertex::GAMMA])) < 0.0)
                 {
                     plane_norm *= -1.0;
                 }
