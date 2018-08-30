@@ -182,7 +182,20 @@ namespace arc //! arctk namespace
 
             inline double Triangle::vol() const noexcept
             {
-                return (0.0);
+                const double tri_vol = std::fabs(((_tris[i].poss()[index::vertex::ALPHA] ^ _tris[i].poss()[index::vertex::BETA]) * _tris[i].poss()[index::vertex::GAMMA]) / 6.0);
+
+                const vec3 centre = (_tris[i].poss()[index::vertex::ALPHA] + _tris[i].poss()[index::vertex::BETA] + _tris[i].poss()[index::vertex::GAMMA]) / 3.0;
+
+                if ((centre * _tris[i].norm()) < 0.0)
+                {
+                    vol -= tri_vol;
+                }
+                else
+                {
+                    vol += tri_vol;
+                }
+
+                return (vol);
             }
 
 
