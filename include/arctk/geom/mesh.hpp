@@ -244,6 +244,8 @@ namespace arc //! arctk namespace
         /**
          *  Initialise the vector of normalised relative area of each triangle.
          *
+         *  @post   areas back value must be equal to unity.
+         *
          *  @return Initialise vector of normalised relative area of each triangle.
          */
         inline std::vector<double> Mesh::init_areas() const noexcept
@@ -261,7 +263,7 @@ namespace arc //! arctk namespace
                 areas[i] /= areas.back();
             }
 
-            POST(math::compare::equal(areas.back(), 1.0));
+            POST(math::compare::unity(areas.back()));
 
             return (areas);
         }
