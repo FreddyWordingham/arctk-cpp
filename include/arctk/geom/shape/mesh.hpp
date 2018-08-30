@@ -61,11 +61,11 @@ namespace arc //! arctk namespace
                 //  -- Triangle Data --
                 const std::vector<Triangle> _tris; //!< List of triangles forming the mesh.
 
-                //  -- Bounds --
-                const Aabb _box; //!< Bounding box of the mesh.
-
                 //  -- Areas --
                 const std::vector<double> _areas; //!< Normalised relative area of each triangle forming the mesh.
+
+                //  -- Bounds --
+                const Aabb _box; //!< Bounding box of the mesh.
 
 
                 //  == INSTANTIATION ==
