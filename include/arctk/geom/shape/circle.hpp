@@ -60,6 +60,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
+                inline vec3   min() const noexcept;
+                inline vec3   max() const noexcept;
                 inline double area() const noexcept override;
                 inline double vol() const noexcept override;
 
@@ -103,6 +105,21 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            inline vec3 min() const noexcept
+            {
+                vec3 min;
+
+                min.x = _norm.x * _rad;
+                min.y = _norm.y * _rad;
+                min.z = std::sin(std::acos(_norm.z)) * _rad;
+
+                return (_pos - min);
+            }
+
+            inline vec3 max() const noexcept
+            {
+            }
+
             inline double Circle::area() const noexcept
             {
                 return (consts::math::PI * _rad * _rad);
