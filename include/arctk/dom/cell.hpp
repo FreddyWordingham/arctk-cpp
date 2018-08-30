@@ -37,6 +37,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Data --
+            double _energy; //!< Energy of the cell (J).
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
