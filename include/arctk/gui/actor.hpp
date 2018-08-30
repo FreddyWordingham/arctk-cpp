@@ -438,10 +438,10 @@ namespace arc //! arctk namespace
             inline Actor axis_helper_y(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor axis_helper_z(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor aabb(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
-            inline Actor aabb(const geom::Aabb& aabb_) noexcept;
+            inline Actor aabb(const geom::shape::Aabb& aabb_) noexcept;
             inline Actor skybox(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor path(const std::vector<Point>& points_) noexcept;
-            inline Actor mesh(const geom::Mesh& mesh_) noexcept;
+            //            inline Actor mesh(const geom::Mesh& mesh_) noexcept;
 
 
 
@@ -724,7 +724,7 @@ namespace arc //! arctk namespace
              *
              *  @return Axis aligned bounding box actor.
              */
-            inline Actor aabb(const geom::Aabb& aabb_) noexcept
+            inline Actor aabb(const geom::shape::Aabb& aabb_) noexcept
             {
                 return (aabb(glm::vec3(aabb_.min().x, aabb_.min().y, aabb_.min().z), glm::vec3(aabb_.max().x, aabb_.max().y, aabb_.max().z)));
             }
@@ -863,24 +863,24 @@ namespace arc //! arctk namespace
              *
              *  @return Mesh actor.
              */
-            inline Actor mesh(const geom::Mesh& mesh_) noexcept
-            {
-                std::vector<glm::vec3> verts;
-                verts.reserve(mesh_.num_tri() * 3 * 2);
+            /*            inline Actor mesh(const geom::Mesh& mesh_) noexcept
+                        {
+                            std::vector<glm::vec3> verts;
+                            verts.reserve(mesh_.num_tri() * 3 * 2);
 
-                for (size_t i = 0; i < mesh_.num_tri(); ++i)
-                {
-                    const geom::Triangle& tri = mesh_.tri(i);
+                            for (size_t i = 0; i < mesh_.num_tri(); ++i)
+                            {
+                                const geom::Triangle& tri = mesh_.tri(i);
 
-                    for (size_t j = 0; j < 3; ++j)
-                    {
-                        verts.emplace_back(glm::vec3(static_cast<float>(tri.poss()[j].x), static_cast<float>(tri.poss()[j].y), static_cast<float>(tri.poss()[j].z)));
-                        verts.emplace_back(glm::vec3(static_cast<float>(tri.norms()[j].x), static_cast<float>(tri.norms()[j].y), static_cast<float>(tri.norms()[j].z)));
-                    }
-                }
+                                for (size_t j = 0; j < 3; ++j)
+                                {
+                                    verts.emplace_back(glm::vec3(static_cast<float>(tri.poss()[j].x), static_cast<float>(tri.poss()[j].y), static_cast<float>(tri.poss()[j].z)));
+                                    verts.emplace_back(glm::vec3(static_cast<float>(tri.norms()[j].x), static_cast<float>(tri.norms()[j].y), static_cast<float>(tri.norms()[j].z)));
+                                }
+                            }
 
-                return (Actor(verts, {3, 3}));
-            }
+                            return (Actor(verts, {3, 3}));
+                        }*/
 
 
 
