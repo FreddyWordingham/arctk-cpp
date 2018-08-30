@@ -40,6 +40,7 @@
 #include <arctk/dom.hpp>
 #include <arctk/dom/cell.hpp>
 #include <arctk/dom/grid.hpp>
+#include <arctk/dom/grid/fixed.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/exit/error.hpp>
 #include <arctk/exit/success.hpp>
