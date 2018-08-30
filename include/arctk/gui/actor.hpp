@@ -867,7 +867,7 @@ namespace arc //! arctk namespace
              */
             inline Actor act(const geom::shape::Aabb& aabb_) noexcept
             {
-                return (cuboid(aabb_.min(), aabb_.max()));
+                return (cuboid(glm::vec3(aabb_.min().x, aabb_.min().y, aabb_.min().z), glm::vec3(aabb_.max().x, aabb_.max().y, aabb_.max().z)));
             }
 
             /**
