@@ -84,6 +84,8 @@ namespace arc //! arctk namespace
                 //  -- Getters --
                 inline size_t          num_tri() const noexcept;
                 inline const Triangle& tri(size_t index_) const noexcept;
+                inline vec3            min() const noexcept;
+                inline vec3            max() const noexcept;
                 inline double          area() const noexcept override;
                 inline double          vol() const noexcept override;
 
@@ -282,7 +284,32 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            //  -- Getters --
+            /**
+             *  Get the number of triangles within the mesh.
+             *
+             *  @return Number of triangles within the mesh.
+             */
+            inline size_t Mesh::num_tri() const noexcept
+            {
+                return (_tris.size());
+            }
+
+            /**
+             *  Get a const reference to a triangle within the mesh.
+             *
+             *  @param  index_  Index of the triangle to retrieve.
+             *
+             *  @pre    index_ must be less than _tris.size.
+             *
+             *  @return Const reference to a triangle within the mesh.
+             */
+            inline const Triangle& Mesh::tri(const size_t index_) const noexcept
+            {
+                PRE(index_ < _tris.size());
+
+                return (_tris[index_]);
+            }
+
             inline double Mesh::area() const noexcept
             {
                 const double area = 0.0;
@@ -308,32 +335,6 @@ namespace arc //! arctk namespace
                 POST(vol > 0.0);
 
                 return (vol);
-            }
-
-            /**
-             *  Get the number of triangles within the mesh.
-             *
-             *  @return Number of triangles within the mesh.
-             */
-            inline size_t Mesh::num_tri() const noexcept
-            {
-                return (_tris.size());
-            }
-
-            /**
-             *  Get a const reference to a triangle within the mesh.
-             *
-             *  @param  index_  Index of the triangle to retrieve.
-             *
-             *  @pre    index_ must be less than _tris.size.
-             *
-             *  @return Const reference to a triangle within the mesh.
-             */
-            inline const Triangle& Mesh::tri(const size_t index_) const noexcept
-            {
-                PRE(index_ < _tris.size());
-
-                return (_tris[index_]);
             }
 
 
