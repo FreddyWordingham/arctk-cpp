@@ -60,8 +60,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline vec3   min() const noexcept;
-                inline vec3   max() const noexcept;
+                inline vec3   min() const noexcept override;
+                inline vec3   max() const noexcept override;
                 inline double area() const noexcept override;
                 inline double vol() const noexcept override;
 
