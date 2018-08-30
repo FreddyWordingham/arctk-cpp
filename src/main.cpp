@@ -41,6 +41,12 @@
 #include <arctk/exit/error.hpp>
 #include <arctk/exit/success.hpp>
 #include <arctk/geom.hpp>
+#include <arctk/geom/shape.hpp>
+#include <arctk/geom/shape/aabb.hpp>
+#include <arctk/geom/shape/circle.hpp>
+#include <arctk/geom/shape/plane.hpp>
+#include <arctk/geom/shape/sphere.hpp>
+#include <arctk/geom/shape/triangle.hpp>
 #include <arctk/gui.hpp>
 #include <arctk/gui/actor.hpp>
 #include <arctk/gui/camera.hpp>
