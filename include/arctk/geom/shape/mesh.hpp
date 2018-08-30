@@ -84,8 +84,8 @@ namespace arc //! arctk namespace
                 //  -- Getters --
                 inline size_t          num_tri() const noexcept;
                 inline const Triangle& tri(size_t index_) const noexcept;
-                inline vec3            min() const noexcept;
-                inline vec3            max() const noexcept;
+                inline vec3            min() const noexcept override;
+                inline vec3            max() const noexcept override;
                 inline double          area() const noexcept override;
                 inline double          vol() const noexcept override;
 
