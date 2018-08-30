@@ -61,6 +61,8 @@ namespace arc //! arctk namespace
             //  -- Getters --
             virtual inline double area() const noexcept = 0;
             virtual inline double vol() const noexcept  = 0;
+            virtual inline vec3   min() const noexcept  = 0;
+            virtual inline vec3   max() const noexcept  = 0;
 
             //  -- Emission --
             virtual inline vec3 random_pos(random::Generator* rng_) const noexcept = 0; //!< Generate a random position on the surface of the shape. @param  rng_    Random number generator.    @return Randomly generated point on the surface of the shape.
