@@ -870,7 +870,7 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < mesh_.num_tri(); ++i)
                 {
-                    const geom::Triangle& tri = mesh_.tri(i);
+                    const geom::shape::Triangle& tri = mesh_.tri(i);
 
                     for (size_t j = 0; j < 3; ++j)
                     {
