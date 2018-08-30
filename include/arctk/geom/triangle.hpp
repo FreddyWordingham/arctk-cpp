@@ -240,6 +240,11 @@ namespace arc //! arctk namespace
             return (_norms);
         }
 
+        /**
+         *  Access a const reference to the normal of the triangle's plane.
+         *
+         *  @return Const reference to the normal of the triangle's plane.
+         */
         inline const vec3& Triangle::norm() const noexcept
         {
             return (_norm);
