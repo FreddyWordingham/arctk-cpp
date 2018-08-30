@@ -439,7 +439,7 @@ namespace arc //! arctk namespace
             inline Actor axis_helper_z(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor aabb(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor aabb(const geom::Shape& shape_) noexcept;
-            inline Actor skybox(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
+            inline Actor cuboid(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor path(const std::vector<Point>& points_) noexcept;
             inline Actor act(const geom::shape::Aabb& tri_) noexcept;
             inline Actor act(const geom::shape::Mesh& mesh_) noexcept;
@@ -732,19 +732,19 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Create a skybox actor.
+             *  Create a cuboid actor.
              *  This is a solid cuboid with faces.
              *
-             *  @param  min_    Minimum vertex of the skybox.
-             *  @param  max_    Maximum vertex of the skybox.
+             *  @param  min_    Minimum vertex of the cuboid.
+             *  @param  max_    Maximum vertex of the cuboid.
              *
              *  @pre    min_.x must be less than max_.x.
              *  @pre    min_.y must be less than max_.y.
              *  @pre    min_.z must be less than max_.z.
              *
-             *  @return Skybox actor.
+             *  @return Cuboid actor.
              */
-            inline Actor skybox(const glm::vec3& min_, const glm::vec3& max_) noexcept // NOLINT
+            inline Actor cuboid(const glm::vec3& min_, const glm::vec3& max_) noexcept // NOLINT
             {
                 PRE(min_.x < max_.x);
                 PRE(min_.y < max_.y);
