@@ -33,7 +33,7 @@ namespace arc //! arctk namespace
         /**
          *  Domain cell class.
          */
-        class Cell
+        class Cell : public geom::Aabb
         {
             //  == FIELDS ==
           private:
