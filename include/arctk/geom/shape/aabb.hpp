@@ -76,6 +76,7 @@ namespace arc //! arctk namespace
                 inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept override;
 
                 //  -- Collision --
+                inline bool                                   contains(const vec3& pos_) const noexcept;
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
                 inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
@@ -235,6 +236,11 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
+            inline bool Aabb::contains(const vec3& pos_) const noexcept
+            {
+                return (!((pos_.x < _min.x) || (pos_.x > _max.x) || (pos_.y < _min.y) || (pos_.y > _max.y) || (pos_.z < _min.z) || (pos_.z > _max.z)));
+            }
+
             /**
              *  Determine if a collision event occurs between the axis-aligned bounding box and a ray.
              *  If a collision does occur, return the distance to the collision point.
