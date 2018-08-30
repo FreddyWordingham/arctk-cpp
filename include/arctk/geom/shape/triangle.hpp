@@ -232,6 +232,8 @@ namespace arc //! arctk namespace
              *
              *  @param  rng_    Random number generator.
              *
+             *  @post   norm must be normalised.
+             *
              *  @return Random position, and corresponding normal, on the surface of the triangle.
              */
             inline std::pair<vec3, vec3> Triangle::random_pos_and_norm(random::Generator* rng_) const noexcept
