@@ -273,6 +273,8 @@ namespace arc //! arctk namespace
                     area += _tris[i].area();
                 }
 
+                POST(area > 0.0);
+
                 return (area);
             }
 
