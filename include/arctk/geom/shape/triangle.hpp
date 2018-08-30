@@ -248,6 +248,8 @@ namespace arc //! arctk namespace
                 const vec3 pos  = _pos[index::vertex::GAMMA] + ((_pos[index::vertex::ALPHA] - _pos[index::vertex::GAMMA]) * a) + ((_pos[index::vertex::BETA] - _pos[index::vertex::GAMMA]) * b);
                 const vec3 norm = ((_norm[index::vertex::ALPHA] * a) + (_norm[index::vertex::BETA] * b) + (_norm[index::vertex::GAMMA] * (1.0 - a - b))).normal();
 
+                POST(norm.normalised());
+
                 return (std::pair<vec3, vec3>(pos, norm));
             }
 
