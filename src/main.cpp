@@ -37,11 +37,6 @@
 #include <arctk/debug/contract.hpp>
 #include <arctk/debug/invariant.hpp>
 #include <arctk/debug/location.hpp>
-#include <arctk/dom.hpp>
-#include <arctk/dom/cell.hpp>
-#include <arctk/dom/cell/leaf.hpp>
-#include <arctk/dom/grid.hpp>
-#include <arctk/dom/grid/fixed.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/exit/error.hpp>
 #include <arctk/exit/success.hpp>
