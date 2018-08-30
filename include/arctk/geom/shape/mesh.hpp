@@ -140,6 +140,8 @@ namespace arc //! arctk namespace
 
                 std::vector<vec3> vert_pos, vert_norm;
                 const mat4        inv_transform = transform_.inv().trans();
+                unsigned int      num_verts     = 0;
+                unsigned int      num_faces     = 0;
                 while (std::getline(serial_stream, line))
                 {
                     std::stringstream line_stream(line);
@@ -148,6 +150,8 @@ namespace arc //! arctk namespace
 
                     if (word == POS_KEYWORD)
                     {
+                        ++num_verts;
+
                         vec4 pos;
                         line_stream >> pos.x >> pos.y >> pos.z;
                         pos.w = 1.0;
@@ -183,6 +187,8 @@ namespace arc //! arctk namespace
 
                     if (word == FACE_KEYWORD)
                     {
+                        ++num_faces;
+
                         std::array<std::string, 3> face;
                         line_stream >> face[index::vertex::ALPHA] >> face[index::vertex::BETA] >> face[index::vertex::GAMMA];
 
