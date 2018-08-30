@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/dom/cell.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
 
