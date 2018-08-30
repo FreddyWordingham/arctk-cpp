@@ -37,6 +37,7 @@
 #include <arctk/debug/contract.hpp>
 #include <arctk/debug/invariant.hpp>
 #include <arctk/debug/location.hpp>
+#include <arctk/dom.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/exit/error.hpp>
 #include <arctk/exit/success.hpp>
