@@ -92,6 +92,7 @@ namespace arc //! arctk namespace
              *  @param  norm_   Normals of the vertices.
              *
              *  @pre    norm_ vecs must be normalised.
+             *
              *  @post   _area must be positive.
              *  @post   _plane_norm must be normalised.
              */
