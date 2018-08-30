@@ -54,9 +54,6 @@ namespace arc //! arctk namespace
             //  -- Areas --
             const std::vector<double> _areas; //!< Normalised relative area of each triangle.
 
-            //  -- Bounding --
-            const Aabb _aabb; //!< Axis-aligned bounding box of the mesh.
-
 
             //  == INSTANTIATION ==
           public:
