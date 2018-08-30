@@ -66,10 +66,10 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline const vec3& min() const noexcept;
-                inline const vec3& max() const noexcept;
-                inline double      area() const noexcept override;
-                inline double      vol() const noexcept override;
+                inline vec3   min() const noexcept override;
+                inline vec3   max() const noexcept override;
+                inline double area() const noexcept override;
+                inline double vol() const noexcept override;
 
                 //  -- Emission --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
@@ -155,7 +155,7 @@ namespace arc //! arctk namespace
              *
              *  @return Minimum bound of the aabb.
              */
-            inline const vec3& Aabb::min() const noexcept
+            inline vec3 Aabb::min() const noexcept
             {
                 return (_min);
             }
@@ -165,7 +165,7 @@ namespace arc //! arctk namespace
              *
              *  @return Maximum bound of the aabb.
              */
-            inline const vec3& Aabb::max() const noexcept
+            inline vec3 Aabb::max() const noexcept
             {
                 return (_max);
             }
