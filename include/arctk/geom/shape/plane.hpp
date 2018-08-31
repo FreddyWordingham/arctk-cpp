@@ -108,9 +108,9 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Get the minimum bound of the triangle.
+             *  Get the minimum vec of the smallest bounding box containing the triangle.
              *
-             *  @return Minimum bound of the triangle.
+             *  @return Minimum vec of the smallest bounding box containing the triangle.
              */
             inline vec3 Plane::min() const noexcept
             {
