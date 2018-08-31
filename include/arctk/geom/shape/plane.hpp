@@ -58,10 +58,12 @@ namespace arc //! arctk namespace
                 //  -- Getters --
                 inline const vec3& pos() const noexcept;
                 inline const vec3& norm() const noexcept;
-                inline vec3        min() const noexcept override;
-                inline vec3        max() const noexcept override;
-                inline double      area() const noexcept override;
-                inline double      vol() const noexcept override;
+
+                //  -- Properties --
+                inline vec3   min() const noexcept override;
+                inline vec3   max() const noexcept override;
+                inline double area() const noexcept override;
+                inline double vol() const noexcept override;
 
                 //  -- Emission --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
@@ -107,6 +109,8 @@ namespace arc //! arctk namespace
                 return (_norm);
             }
 
+
+            //  -- Properties --
             /**
              *  Get the minimum vec of the smallest bounding box containing the plane.
              *
