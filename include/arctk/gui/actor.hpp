@@ -442,9 +442,9 @@ namespace arc //! arctk namespace
             inline Actor cuboid(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor path(const std::vector<Point>& points_) noexcept;
             inline Actor act(const geom::shape::Aabb& tri_) noexcept;
-            inline Actor act(const geom::shape::Circle& tri_) noexcept;
+            inline Actor act(const geom::shape::Circle& circ_) noexcept;
             inline Actor act(const geom::shape::Mesh& mesh_) noexcept;
-            inline Actor act(const geom::shape::Plane& tri_) noexcept;
+            inline Actor act(const geom::shape::Plane& plane_) noexcept;
             inline Actor act(const geom::shape::Triangle& tri_) noexcept;
 
 
@@ -934,7 +934,7 @@ namespace arc //! arctk namespace
                 return (Actor(verts, {3, 3}));
             }
 
-            inline Actor act(const geom::shape::Plane& Plane_) noexcept
+            inline Actor act(const geom::shape::Plane& plane_) noexcept
             {
                 const size_t res = 4;
                 const double rad = 1e6;
