@@ -42,14 +42,6 @@ namespace arc //! arctk namespace
 
 
 
-        //  == CONSTANTS ==
-        //  -- Shape Actors --
-        const size_t CIRCLE_RES = 16; //!< Number of triangles used to resolve circle shape actors.
-        const size_t PLANE_RES  = 16; //!< Number of triangles used to resolve plane shape actors.
-        const size_t PLANE_RAD  = 16; //!< Radius to draw plane shape actors.
-
-
-
         //  == CLASS ==
         /**
          *  Renderable actor class.
@@ -450,7 +442,7 @@ namespace arc //! arctk namespace
             inline Actor cuboid(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor path(const std::vector<Point>& points_) noexcept;
             inline Actor act(const geom::shape::Aabb& tri_) noexcept;
-            inline Actor act(const geom::shape::Circle& circ_) noexcept;
+            inline Actor act(const geom::shape::Circle& circ_, const size_t res_ = 16) noexcept;
             inline Actor act(const geom::shape::Mesh& mesh_) noexcept;
             inline Actor act(const geom::shape::Plane& plane_) noexcept;
             inline Actor act(const geom::shape::Sphere& sph_) noexcept;
@@ -888,7 +880,7 @@ namespace arc //! arctk namespace
              *
              *  @return Circle bounding box actor.
              */
-            inline Actor act(const geom::shape::Circle& circ_) noexcept
+            inline Actor act(const geom::shape::Circle& circ_, const size_t res_) noexcept
             {
                 std::vector<glm::vec3> verts;
                 verts.reserve(CIRCLE_RES * 3 * 2);
