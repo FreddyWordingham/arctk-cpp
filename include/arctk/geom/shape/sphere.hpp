@@ -132,9 +132,18 @@ namespace arc //! arctk namespace
                 return (4.0 * consts::math::PI * _rad * _rad);
             }
 
+            /**
+             *  Get the total volume of the mesh.
+             *
+             *  @post   vol must be positive.
+             *
+             *  @return Total volume of the mesh.
+             */
             inline double Sphere::vol() const noexcept
             {
-                return ((4.0 * consts::math::PI * _rad * _rad * _rad) / 3.0);
+                const double vol = (4.0 * consts::math::PI * _rad * _rad * _rad) / 3.0;
+
+                return (vol);
             }
 
 
