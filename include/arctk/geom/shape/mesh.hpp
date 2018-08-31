@@ -344,9 +344,9 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Get the minimum bound of the mesh.
+             *  Get the minimum vec of the smallest bounding box containing the mesh.
              *
-             *  @return Minimum bound of the mesh.
+             *  @return Minimum vec of the smallest bounding box containing the mesh.
              */
             inline vec3 Mesh::min() const noexcept
             {
