@@ -81,7 +81,7 @@ namespace arc //! arctk namespace
               noexcept = 0; //!< Generate a random position, and corresponding normal, on the surface of the shape. @param  rng_    Random number generator.    @return Randomly generated point, and corresponding normal, on the surface of the shape.
 
             //  -- Collision --
-            virtual inline bool                  contained(const shape::Aabb& aabb_) const noexcept;
+            virtual inline bool                  contained(const shape::Aabb& aabb_) const noexcept = 0;
             virtual inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const
               noexcept = 0; //!< Get the collision distance (if one occurs) of a ray.    @param  pos_    Initial position of the ray.    @param  dir_    Direction of ray travel.    @return Optional distance to collision event
             virtual inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const
