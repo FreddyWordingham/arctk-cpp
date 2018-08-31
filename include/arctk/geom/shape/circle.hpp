@@ -171,9 +171,20 @@ namespace arc //! arctk namespace
                 return (_pos + delta);
             }
 
+            /**
+             *  Get the total surface area of the axis-aligned bounding box.
+             *
+             *  @post   area must be positive.
+             *
+             *  @return Total surface area of the axis-aligned bounding box.
+             */
             inline double Circle::area() const noexcept
             {
-                return (consts::math::PI * _rad * _rad);
+                const double area = consts::math::PI * _rad * _rad;
+
+                POST(area > 0.0);
+
+                return (area);
             }
 
             inline double Circle::vol() const noexcept
