@@ -46,6 +46,7 @@ namespace arc //! arctk namespace
         //  -- Shape Actors --
         const size_t CIRCLE_RES = 16; //!< Number of triangles used to resolve circle shape actors.
         const size_t PLANE_RES  = 16; //!< Number of triangles used to resolve plane shape actors.
+        const size_t PLANE_RAD  = 16; //!< Radius to draw plane shape actors.
 
 
 
@@ -881,17 +882,15 @@ namespace arc //! arctk namespace
 
             inline Actor act(const geom::shape::Circle& circ_) noexcept
             {
-                const size_t res = 16;
-
                 std::vector<glm::vec3> verts;
-                verts.reserve(res * 3 * 2);
+                verts.reserve(CIRCLE_RES * 3 * 2);
 
                 const mat4 transform = math::mat::translate(circ_.pos()) * math::mat::rotate_z(std::copysign(std::acos(vec3(circ_.norm().x, circ_.norm().y, 0.0).normal().y), -circ_.norm().x)) * math::mat::rotate_x(-std::acos(circ_.norm().z));
 
                 const vec3 norm(std::sin(circ_.aperture()), 0.0, std::cos(circ_.aperture()));
 
-                const double delta = consts::math::TWO_PI / res;
-                for (size_t i = 0; i < res; ++i)
+                const double delta = consts::math::TWO_PI / CIRCLE_RES;
+                for (size_t i = 0; i < CIRCLE_RES; ++i)
                 {
                     const double phi_0 = delta * static_cast<double>(i);
                     const double phi_1 = delta * static_cast<double>(i + 1);
@@ -943,23 +942,20 @@ namespace arc //! arctk namespace
 
             inline Actor act(const geom::shape::Plane& plane_) noexcept
             {
-                const size_t res = 4;
-                const double rad = 1e6;
-
                 std::vector<glm::vec3> verts;
-                verts.reserve(res * 3 * 2);
+                verts.reserve(PLANE_RES * 3 * 2);
 
                 const mat4 transform = math::mat::translate(plane_.pos()) * math::mat::rotate_z(std::copysign(std::acos(vec3(plane_.norm().x, plane_.norm().y, 0.0).normal().y), -plane_.norm().x)) * math::mat::rotate_x(-std::acos(plane_.norm().z));
 
-                const double delta = consts::math::TWO_PI / res;
-                for (size_t i = 0; i < res; ++i)
+                const double delta = consts::math::TWO_PI / PLANE_RES;
+                for (size_t i = 0; i < PLANE_RES; ++i)
                 {
                     const double phi_0 = delta * static_cast<double>(i);
                     const double phi_1 = delta * static_cast<double>(i + 1);
 
                     const vec4 p_0 = transform * vec4(0.0, 0.0, 0.0, 1.0);
-                    const vec4 p_1 = transform * vec4(std::cos(phi_0) * rad, std::sin(phi_0) * rad, 0.0, 1.0);
-                    const vec4 p_2 = transform * vec4(std::cos(phi_1) * rad, std::sin(phi_1) * rad, 0.0, 1.0);
+                    const vec4 p_1 = transform * vec4(std::cos(phi_0) * PLANE_RAD, std::sin(phi_0) * PLANE_RAD, 0.0, 1.0);
+                    const vec4 p_2 = transform * vec4(std::cos(phi_1) * PLANE_RAD, std::sin(phi_1) * PLANE_RAD, 0.0, 1.0);
 
                     const vec4 norm = transform * vec4(0.0, 0.0, 1.0, 0.0);
 
