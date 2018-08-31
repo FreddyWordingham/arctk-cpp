@@ -97,6 +97,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the position of the sphere.
+             *
+             *  @return Position of the sphere.
+             */
             inline const vec3& Sphere::pos() const noexcept
             {
                 return (_pos);
