@@ -113,6 +113,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the radius of the circle.
+             *
+             *  @return Radius of the circle.
+             */
             inline double Circle::rad() const noexcept
             {
                 return (_rad);
