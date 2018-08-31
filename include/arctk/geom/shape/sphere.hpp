@@ -107,6 +107,11 @@ namespace arc //! arctk namespace
                 return (_pos);
             }
 
+            /**
+             *  Get the radius of the sphere.
+             *
+             *  @return Radius of the sphere.
+             */
             inline double Sphere::rad() const noexcept
             {
                 return (_rad);
