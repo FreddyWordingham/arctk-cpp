@@ -880,7 +880,7 @@ namespace arc //! arctk namespace
 
                 // const mat4 transform = math::mat::rotate_z(math::convert::deg_to_rad(45.0)) * math::mat::rotate_x(30.0);
 
-                const vec3 norm(0.0, 0.0, 1.0);
+                const vec3 norm(std::sin(circ_.aperture()), 0.0, std::cos(circ_.aperture()));
 
                 const double delta = consts::math::TWO_PI / res;
                 for (size_t i = 0; i < res; ++i)
@@ -891,8 +891,8 @@ namespace arc //! arctk namespace
                     const vec3 p_0(std::cos(phi_0) * circ_.rad(), std::sin(phi_0) * circ_.rad(), 0.0);
                     const vec3 p_1(std::cos(phi_1) * circ_.rad(), std::sin(phi_1) * circ_.rad(), 0.0);
 
-                    const vec3 n_0 = norm;
-                    const vec3 n_1 = norm;
+                    const vec3 n_0(std::cos(phi_0) * std::sin(circ_.aperture()), std::sin(phi_0) * std::sin(circ_.aperture()), std::cos(circ_.aperture()));
+                    const vec3 n_1(std::cos(phi_1) * std::sin(circ_.aperture()), std::sin(phi_1) * std::sin(circ_.aperture()), std::cos(circ_.aperture()));
 
                     verts.emplace_back(glm::vec3(0.0f, 0.0f, 0.0f));
                     verts.emplace_back(glm::vec3(0.0f, 0.0f, 1.0f));
