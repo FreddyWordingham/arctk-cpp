@@ -183,6 +183,8 @@ namespace arc //! arctk namespace
 
                 const double area = 2.0 * ((lengths.x * lengths.y) + (lengths.y * lengths.z) + (lengths.z * lengths.x));
 
+                POST(area > 0.0);
+
                 return (area);
             }
 
