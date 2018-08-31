@@ -444,7 +444,7 @@ namespace arc //! arctk namespace
             inline Actor act(const geom::shape::Aabb& tri_) noexcept;
             inline Actor act(const geom::shape::Circle& circ_, const size_t res_ = 16) noexcept;
             inline Actor act(const geom::shape::Mesh& mesh_) noexcept;
-            inline Actor act(const geom::shape::Plane& plane_) noexcept;
+            inline Actor act(const geom::shape::Plane& plane_, const size_t res_ = 4, const double rad_ = 1e6) noexcept;
             inline Actor act(const geom::shape::Sphere& sph_) noexcept;
             inline Actor act(const geom::shape::Triangle& tri_) noexcept;
 
@@ -877,20 +877,25 @@ namespace arc //! arctk namespace
              *  Create an actor from a circle shape.
              *
              *  @param  circ_   Circle to create an actor of.
+             *  @param  res_    Number of triangles used to resolve the circle shape.
+             *
+             *  @pre    res_ must be equal to, or greater than, two.
              *
              *  @return Circle bounding box actor.
              */
             inline Actor act(const geom::shape::Circle& circ_, const size_t res_) noexcept
             {
+                PRE(res_ >= 2);
+
                 std::vector<glm::vec3> verts;
-                verts.reserve(CIRCLE_RES * 3 * 2);
+                verts.reserve(res_ * 3 * 2);
 
                 const mat4 transform = math::mat::translate(circ_.pos()) * math::mat::rotate_z(std::copysign(std::acos(vec3(circ_.norm().x, circ_.norm().y, 0.0).normal().y), -circ_.norm().x)) * math::mat::rotate_x(-std::acos(circ_.norm().z));
 
                 const vec3 norm(std::sin(circ_.aperture()), 0.0, std::cos(circ_.aperture()));
 
-                const double delta = consts::math::TWO_PI / CIRCLE_RES;
-                for (size_t i = 0; i < CIRCLE_RES; ++i)
+                const double delta = consts::math::TWO_PI / res_;
+                for (size_t i = 0; i < res_; ++i)
                 {
                     const double phi_0 = delta * static_cast<double>(i);
                     const double phi_1 = delta * static_cast<double>(i + 1);
