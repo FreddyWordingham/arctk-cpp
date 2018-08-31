@@ -182,11 +182,22 @@ namespace arc //! arctk namespace
                 return (2.0 * ((lengths.x * lengths.y) + (lengths.y * lengths.z) + (lengths.z * lengths.x)));
             }
 
+            /**
+             *  Get the total volume of the axis-aligned bounding box.
+             *
+             *  @post   vol must be positive.
+             *
+             *  @return Total volume of the axis-aligned bounding box.
+             */
             inline double Aabb::vol() const noexcept
             {
                 const vec3 lengths = _max - _min;
 
-                return (lengths.x * lengths.y * lengths.z);
+                const double vol = lengths.x * lengths.y * lengths.z;
+
+                POST(vol > 0.0);
+
+                return (vol);
             }
 
 
