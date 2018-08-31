@@ -894,7 +894,7 @@ namespace arc //! arctk namespace
 
                 const vec3 norm(std::sin(circ_.aperture()), 0.0, std::cos(circ_.aperture()));
 
-                const double delta = consts::math::TWO_PI / res_;
+                const double delta = consts::math::TWO_PI / static_cast<double>(res_);
                 for (size_t i = 0; i < res_; ++i)
                 {
                     const double phi_0 = delta * static_cast<double>(i);
