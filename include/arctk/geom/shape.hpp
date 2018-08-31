@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            virtual vec3          min() const noexcept  = 0;
+            virtual vec3          min() const noexcept  = 0; //!<    Get the minimum vec of the smallest bounding box containing the shape.  @return Minimum vec of the smallest bounding box containing the shape.
             virtual vec3          max() const noexcept  = 0;
             virtual inline double area() const noexcept = 0;
             virtual inline double vol() const noexcept  = 0;
