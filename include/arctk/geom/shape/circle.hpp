@@ -62,14 +62,14 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline double     rad() const noexcept;
-                inline double     aperture() const noexcept;
-                inline const vec& pos() const noexcept;
-                inline const vec& norm() const noexcept;
-                inline vec3       min() const noexcept override;
-                inline vec3       max() const noexcept override;
-                inline double     area() const noexcept override;
-                inline double     vol() const noexcept override;
+                inline double      rad() const noexcept;
+                inline double      aperture() const noexcept;
+                inline const vec3& pos() const noexcept;
+                inline const vec3& norm() const noexcept;
+                inline vec3        min() const noexcept override;
+                inline vec3        max() const noexcept override;
+                inline double      area() const noexcept override;
+                inline double      vol() const noexcept override;
 
                 //  -- Emission --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
@@ -121,12 +121,12 @@ namespace arc //! arctk namespace
                 return (_aperture);
             }
 
-            inline const vec& Circle_::pos() const noexcept
+            inline const vec3& Circle_::pos() const noexcept
             {
                 return (_pos);
             }
 
-            inline const vec& Circle_::norm() const noexcept
+            inline const vec3& Circle_::norm() const noexcept
             {
                 return (_norm);
             }
