@@ -173,13 +173,17 @@ namespace arc //! arctk namespace
             /**
              *  Get the total surface area of the axis-aligned bounding box.
              *
+             *  @post   area must be positive.
+             *
              *  @return Total surface area of the axis-aligned bounding box.
              */
             inline double Aabb::area() const noexcept
             {
                 const vec3 lengths = _max - _min;
 
-                return (2.0 * ((lengths.x * lengths.y) + (lengths.y * lengths.z) + (lengths.z * lengths.x)));
+                const double area = 2.0 * ((lengths.x * lengths.y) + (lengths.y * lengths.z) + (lengths.z * lengths.x));
+
+                return (area);
             }
 
             /**
