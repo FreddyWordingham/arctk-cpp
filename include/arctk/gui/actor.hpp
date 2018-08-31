@@ -945,22 +945,22 @@ namespace arc //! arctk namespace
                 return (Actor(verts, {3, 3}));
             }
 
-            inline Actor act(const geom::shape::Plane& plane_) noexcept
+            inline Actor act(const geom::shape::Plane& plane_, const size_t res_, const double rad_) noexcept
             {
                 std::vector<glm::vec3> verts;
                 verts.reserve(PLANE_RES * 3 * 2);
 
                 const mat4 transform = math::mat::translate(plane_.pos()) * math::mat::rotate_z(std::copysign(std::acos(vec3(plane_.norm().x, plane_.norm().y, 0.0).normal().y), -plane_.norm().x)) * math::mat::rotate_x(-std::acos(plane_.norm().z));
 
-                const double delta = consts::math::TWO_PI / PLANE_RES;
-                for (size_t i = 0; i < PLANE_RES; ++i)
+                const double delta = consts::math::TWO_PI / res_;
+                for (size_t i = 0; i < res_; ++i)
                 {
                     const double phi_0 = delta * static_cast<double>(i);
                     const double phi_1 = delta * static_cast<double>(i + 1);
 
                     const vec4 p_0 = transform * vec4(0.0, 0.0, 0.0, 1.0);
-                    const vec4 p_1 = transform * vec4(std::cos(phi_0) * PLANE_RAD, std::sin(phi_0) * PLANE_RAD, 0.0, 1.0);
-                    const vec4 p_2 = transform * vec4(std::cos(phi_1) * PLANE_RAD, std::sin(phi_1) * PLANE_RAD, 0.0, 1.0);
+                    const vec4 p_1 = transform * vec4(std::cos(phi_0) * rad_, std::sin(phi_0) * rad_, 0.0, 1.0);
+                    const vec4 p_2 = transform * vec4(std::cos(phi_1) * rad_, std::sin(phi_1) * rad_, 0.0, 1.0);
 
                     const vec4 norm = transform * vec4(0.0, 0.0, 1.0, 0.0);
 
