@@ -118,9 +118,9 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Get the maximum bound of the triangle.
+             *  Get the maximum vec of the smallest bounding box containing the triangle.
              *
-             *  @return Maximum bound of the triangle.
+             *  @return Maximum vec of the smallest bounding box containing the triangle.
              */
             inline vec3 Plane::max() const noexcept
             {
