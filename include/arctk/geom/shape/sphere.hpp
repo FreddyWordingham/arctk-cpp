@@ -154,6 +154,8 @@ namespace arc //! arctk namespace
             {
                 const double vol = (4.0 * consts::math::PI * _rad * _rad * _rad) / 3.0;
 
+                POST(vol > 0.0);
+
                 return (vol);
             }
 
