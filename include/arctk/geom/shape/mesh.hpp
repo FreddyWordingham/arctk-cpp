@@ -284,6 +284,15 @@ namespace arc //! arctk namespace
                 return (areas);
             }
 
+            /**
+             *  Initialise the bounding box of the mesh.
+             *
+             *  @post   min.x must be less than max.x.
+             *  @post   min.y must be less than max.y.
+             *  @post   min.z must be less than max.z.
+             *
+             *  @return Initialised bounding box of the mesh.
+             */
             inline Aabb Mesh::init_box() const noexcept
             {
                 vec3 min(std::numeric_limits<double>::max(), std::numeric_limits<double>::max(), std::numeric_limits<double>::max());
