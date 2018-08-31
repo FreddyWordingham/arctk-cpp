@@ -123,6 +123,11 @@ namespace arc //! arctk namespace
                 return (_rad);
             }
 
+            /**
+             *  Get the numerical aperture of the circle.
+             *
+             *  @return Numerical aperture of the circle.
+             */
             inline double Circle::aperture() const noexcept
             {
                 return (_aperture);
