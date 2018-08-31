@@ -77,6 +77,7 @@ namespace arc //! arctk namespace
 
                 //  -- Collision --
                 inline bool                                   contains(const vec3& pos_) const noexcept;
+                inline bool                                   contained(const Aabb& aabb_) const noexcept override;
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
                 inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
@@ -268,6 +269,19 @@ namespace arc //! arctk namespace
             inline bool Aabb::contains(const vec3& pos_) const noexcept
             {
                 return (!((pos_.x < _min.x) || (pos_.x > _max.x) || (pos_.y < _min.y) || (pos_.y > _max.y) || (pos_.z < _min.z) || (pos_.z > _max.z)));
+            }
+
+            inline bool Aabb::contained(const Aabb& aabb_) const noexcept
+            {
+                for (size_t i = 0; i < 3; ++i)
+                {
+                    if ((_max[i] < aabb_.min()[i]) || (_min[i] > aabb_.max()[i]))
+                    {
+                        return (false);
+                    }
+                }
+
+                return (true);
             }
 
             /**
