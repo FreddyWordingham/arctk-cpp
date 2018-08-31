@@ -442,6 +442,7 @@ namespace arc //! arctk namespace
             inline Actor cuboid(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor path(const std::vector<Point>& points_) noexcept;
             inline Actor act(const geom::shape::Aabb& tri_) noexcept;
+            inline Actor act(const geom::shape::Circle& tri_) noexcept;
             inline Actor act(const geom::shape::Mesh& mesh_) noexcept;
             inline Actor act(const geom::shape::Triangle& tri_) noexcept;
 
@@ -868,6 +869,40 @@ namespace arc //! arctk namespace
             inline Actor act(const geom::shape::Aabb& aabb_) noexcept
             {
                 return (cuboid(glm::vec3(aabb_.min().x, aabb_.min().y, aabb_.min().z), glm::vec3(aabb_.max().x, aabb_.max().y, aabb_.max().z)));
+            }
+
+            inline Actor act(const geom::shape::Circle& circ_) noexcept
+            {
+                const size_t res = 8;
+
+                std::vector<glm::vec3> verts;
+                verts.reserve(res * 3 * 2);
+
+                // const mat4 transform = math::mat::rotate_z(math::convert::deg_to_rad(45.0)) * math::mat::rotate_x(30.0);
+
+                const vec3 norm(0.0, 0.0, 1.0);
+
+                const double delta = consts::math::TWO_PI / res;
+                for (size_t i = 0; i < res; ++i)
+                {
+                    const double phi_0 = delta * i;
+                    const double phi_1 = delta * (i + 1);
+
+                    const vec3 p_0(std::cos(phi_0) * circ_.rad(), std::sin(phi_0) * circ_.rad(), 0.0);
+                    const vec3 p_1(std::cos(phi_1) * circ_.rad(), std::sin(phi_1) * circ_.rad(), 0.0);
+
+                    const vec3 n_0 = norm;
+                    const vec3 n_1 = norm;
+
+                    verts.emplace_back(glm::vec3(0.0f, 0.0f, 0.0f));
+                    verts.emplace_back(glm::vec3(0.0f, 0.0f, 1.0f));
+                    verts.emplace_back(glm::vec3(static_cast<float>(p_0.x), static_cast<float>(p_0.y), static_cast<float>(p_0.z)));
+                    verts.emplace_back(glm::vec3(static_cast<float>(n_0.x), static_cast<float>(n_0.y), static_cast<float>(n_0.z)));
+                    verts.emplace_back(glm::vec3(static_cast<float>(p_1.x), static_cast<float>(p_1.y), static_cast<float>(p_1.z)));
+                    verts.emplace_back(glm::vec3(static_cast<float>(n_1.x), static_cast<float>(n_1.y), static_cast<float>(n_1.z)));
+                }
+
+                return (Actor(verts, {3, 3}));
             }
 
             /**
