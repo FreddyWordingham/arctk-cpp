@@ -945,6 +945,18 @@ namespace arc //! arctk namespace
                 return (Actor(verts, {3, 3}));
             }
 
+            /**
+             *  Create an actor from a plane shape.
+             *
+             *  @param  plane_  Plane to create an actor of.
+             *  @param  res_    Number of triangles used to resolve the plane shape.
+             *  @param  rad_    Radius of the circle representing the plane.
+             *
+             *  @pre    res_ must be equal to, or greater than, two.
+             *  @pre    rad_ must be positive.
+             *
+             *  @return Plane actor.
+             */
             inline Actor act(const geom::shape::Plane& plane_, const size_t res_, const double rad_) noexcept
             {
                 PRE(res_ >= 2);
