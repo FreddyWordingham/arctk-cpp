@@ -99,6 +99,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the position of the plane.
+             *
+             *  @return Position of the plane.
+             */
             inline const vec3& Plane::pos() const noexcept
             {
                 return (_pos);
