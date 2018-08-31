@@ -117,6 +117,11 @@ namespace arc //! arctk namespace
                 return (_pos - vec3(_rad, _rad, _rad));
             }
 
+            /**
+             *  Get the maximum vec of the smallest bounding box containing the sphere.
+             *
+             *  @return Maximum vec of the smallest bounding box containing the sphere.
+             */
             inline vec3 Sphere::max() const noexcept
             {
                 return (_pos + vec3(_rad, _rad, _rad));
