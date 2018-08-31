@@ -885,8 +885,8 @@ namespace arc //! arctk namespace
                 const double delta = consts::math::TWO_PI / res;
                 for (size_t i = 0; i < res; ++i)
                 {
-                    const double phi_0 = delta * i;
-                    const double phi_1 = delta * (i + 1);
+                    const double phi_0 = delta * static_cast<double>(i);
+                    const double phi_1 = delta * static_cast<double>(i + 1);
 
                     const vec3 p_0 = transform * vec3(std::cos(phi_0) * circ_.rad(), std::sin(phi_0) * circ_.rad(), 0.0);
                     const vec3 p_1 = transform * vec3(std::cos(phi_1) * circ_.rad(), std::sin(phi_1) * circ_.rad(), 0.0);
