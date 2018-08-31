@@ -62,6 +62,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
+                inline double rad() const noexcept;
+                inline double aperture() const noexcept;
                 inline vec3   min() const noexcept override;
                 inline vec3   max() const noexcept override;
                 inline double area() const noexcept override;
@@ -107,6 +109,16 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            inline double Circle::rad() const noexcept
+            {
+                return (_rad);
+            }
+
+            inline double Circle::aperture() const noexcept
+            {
+                return (_rad);
+            }
+
             inline vec3 Circle::min() const noexcept
             {
                 vec3 norm_xy = vec3(_norm.x, _norm.y, 0.0).normal();
