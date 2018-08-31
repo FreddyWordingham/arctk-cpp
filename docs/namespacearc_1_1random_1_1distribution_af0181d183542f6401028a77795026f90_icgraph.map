@@ -1,4 +1,7 @@
 <map id="arc::random::distribution::normal" name="arc::random::distribution::normal">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1_triangle.html#a36b1fadc3cdcdcbbeab2c4fb8223b1dd" title="arc::geom::Triangle\l::init_norm" alt="" coords="235,5,371,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1_triangle.html#a8eb82f187e90efb83921bea95839f7bf" title="arc::geom::Triangle\l::random_pos_and_norm" alt="" coords="218,68,388,107"/>
+<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_circle.html#a4a4446fa9d8be9e25ed4fde7fb8817ad" title="arc::geom::shape::Circle\l::random_pos" alt="" coords="224,5,390,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_circle.html#ae5a306fcc9cad7eca7a534a825ca0a0a" title="arc::geom::shape::Circle\l::random_pos_and_norm" alt="" coords="222,68,393,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_plane.html#afcea9197dfa64a43a3db5fac63fcff4a" title="arc::geom::shape::Plane\l::random_pos" alt="" coords="224,131,390,169"/>
+<area shape="rect" id="node5" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#a01da723746133f85a4c3ba429b5cc4ee" title="arc::geom::shape::Triangle\l::init_norm" alt="" coords="218,193,397,232"/>
+<area shape="rect" id="node6" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#acd0b54405bc0c9ba1b50a23bef1cfb57" title="arc::geom::shape::Triangle\l::random_pos_and_norm" alt="" coords="218,256,397,295"/>
 </map>

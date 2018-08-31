@@ -1,5 +1,0 @@
-<map id="arc::geom::Aabb::min" name="arc::geom::Aabb::min">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1_mesh.html#a479f80467e65a4ef081bf44cd5083e5f" title="arc::geom::Mesh::min" alt="" coords="201,5,351,31"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1gui_1_1actor.html#a316c5ef23e2b576cf6c724112a962786" title="arc::gui::actor::aabb" alt="" coords="207,55,346,80"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1_mesh.html#ab9a34a442ffca972fb44485881f7ede5" title="arc::geom::Mesh::init_aabb" alt="" coords="399,5,581,31"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="arc::geom::Aabb::max" name="arc::geom::Aabb::max">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1_mesh.html#a3b4822ddf687c2935c4c5c5a4163352f" title="arc::geom::Mesh::max" alt="" coords="205,5,358,31"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1gui_1_1actor.html#a316c5ef23e2b576cf6c724112a962786" title="arc::gui::actor::aabb" alt="" coords="212,55,351,80"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1_mesh.html#ab9a34a442ffca972fb44485881f7ede5" title="arc::geom::Mesh::init_aabb" alt="" coords="406,5,588,31"/>
-</map>

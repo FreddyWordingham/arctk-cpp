@@ -1,5 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classarc_1_1gui_1_1_lens.html" title="arc::gui::Lens" alt="" coords="5,31,107,56"/>
-<area shape="rect" id="node2" href="$classarc_1_1gui_1_1lens_1_1_orthographic.html" title="arc::gui::lens::Orthographic" alt="" coords="155,5,336,31"/>
-<area shape="rect" id="node3" href="$classarc_1_1gui_1_1lens_1_1_perspective.html" title="arc::gui::lens::Perspective" alt="" coords="158,55,332,80"/>
+<area shape="rect" id="node1" href="$classarc_1_1gui_1_1_shader.html" title="arc::gui::Shader" alt="" coords="5,129,121,155"/>
+<area shape="rect" id="node2" href="$classarc_1_1gui_1_1shader_1_1_ambient.html" title="arc::gui::shader::Ambient" alt="" coords="171,5,340,31"/>
+<area shape="rect" id="node3" href="$classarc_1_1gui_1_1shader_1_1_diffuse.html" title="arc::gui::shader::Diffuse" alt="" coords="174,55,336,80"/>
+<area shape="rect" id="node4" href="$classarc_1_1gui_1_1shader_1_1_normal.html" title="arc::gui::shader::Normal" alt="" coords="174,104,337,129"/>
+<area shape="rect" id="node5" href="$classarc_1_1gui_1_1shader_1_1_ray.html" title="arc::gui::shader::Ray" alt="" coords="183,153,328,179"/>
+<area shape="rect" id="node6" href="$classarc_1_1gui_1_1shader_1_1_skybox.html" title="arc::gui::shader::Skybox" alt="" coords="173,203,338,228"/>
+<area shape="rect" id="node7" href="$classarc_1_1gui_1_1shader_1_1_specular.html" title="arc::gui::shader::Specular" alt="" coords="169,252,342,277"/>
 </map>

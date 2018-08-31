@@ -1,7 +1,10 @@
 <map id="arc::math::Vec::normal" name="arc::math::Vec::normal">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1_mesh.html#aceea42c4e3ff31c55821d8430648a85c" title="arc::geom::Mesh::init_tris" alt="" coords="208,5,378,31"/>
-<area shape="rect" id="node3" href="$classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#a1a3af80975b1b52166ac3a05c6c79816" title="arc::math::Vec\&lt; T,\l 2 \&gt;::normal" alt="" coords="229,55,357,93"/>
-<area shape="rect" id="node4" href="$classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#aa33eb319f35e0867e3c16705454e8d4f" title="arc::math::Vec\&lt; T,\l 3 \&gt;::normal" alt="" coords="229,117,357,156"/>
-<area shape="rect" id="node5" href="$classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#ad653cb031e505d7d91529842eae49a5c" title="arc::math::Vec\&lt; T,\l 4 \&gt;::normal" alt="" coords="229,180,357,219"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1phys_1_1optics.html#a4cf9e9ccdf8fa5fc45120dacbc28f43c" title="arc::phys::optics::\lreflection_dir" alt="" coords="231,243,356,281"/>
+<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_circle.html#a4876c2dd17b676b4fa71965e432d62ff" title="arc::geom::shape::Circle::min" alt="" coords="210,5,405,31"/>
+<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_circle.html#a7d3c8421f09cf7a8609063593a217dfe" title="arc::geom::shape::Circle::max" alt="" coords="208,55,406,80"/>
+<area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#aae7413807c30d4d5820ec9278c4b7675" title="arc::geom::shape::Mesh\l::init_tris" alt="" coords="225,104,389,143"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1gui_1_1actor.html#a7167ed0983ba1df0ea1d820908176df0" title="arc::gui::actor::act" alt="" coords="244,167,371,192"/>
+<area shape="rect" id="node6" href="$classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#a1a3af80975b1b52166ac3a05c6c79816" title="arc::math::Vec\&lt; T,\l 2 \&gt;::normal" alt="" coords="243,216,371,255"/>
+<area shape="rect" id="node7" href="$classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#aa33eb319f35e0867e3c16705454e8d4f" title="arc::math::Vec\&lt; T,\l 3 \&gt;::normal" alt="" coords="243,279,371,317"/>
+<area shape="rect" id="node8" href="$classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#ad653cb031e505d7d91529842eae49a5c" title="arc::math::Vec\&lt; T,\l 4 \&gt;::normal" alt="" coords="243,341,371,380"/>
+<area shape="rect" id="node9" href="$namespacearc_1_1phys_1_1optics.html#a4cf9e9ccdf8fa5fc45120dacbc28f43c" title="arc::phys::optics::\lreflection_dir" alt="" coords="245,404,370,443"/>
 </map>

@@ -1,4 +1,4 @@
-<map id="include/arctk/geom/mesh.hpp" name="include/arctk/geom/mesh.hpp">
+<map id="include/arctk/geom/shape/mesh.hpp" name="include/arctk/geom/shape/mesh.hpp">
 <area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="814,472,911,497"/>
 <area shape="rect" id="node3" href="$geom_8hpp.html" title="include/arctk/geom.hpp" alt="" coords="723,92,882,117"/>
 <area shape="rect" id="node4" href="$actor_8hpp.html" title="include/arctk/gui/actor.hpp" alt="" coords="715,165,891,191"/>
