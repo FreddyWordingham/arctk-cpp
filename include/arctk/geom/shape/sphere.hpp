@@ -127,9 +127,20 @@ namespace arc //! arctk namespace
                 return (_pos + vec3(_rad, _rad, _rad));
             }
 
+            /**
+             *  Get the total surface area of the plane.
+             *
+             *  @post   area must be positive.
+             *
+             *  @return Total surface area of the plane.
+             */
             inline double Sphere::area() const noexcept
             {
-                return (4.0 * consts::math::PI * _rad * _rad);
+                const double area = 4.0 * consts::math::PI * _rad * _rad;
+
+                POST(area > 0.0);
+
+                return (area);
             }
 
             /**
