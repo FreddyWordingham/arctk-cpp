@@ -948,7 +948,7 @@ namespace arc //! arctk namespace
             inline Actor act(const geom::shape::Plane& plane_, const size_t res_, const double rad_) noexcept
             {
                 std::vector<glm::vec3> verts;
-                verts.reserve(PLANE_RES * 3 * 2);
+                verts.reserve(res_ * 3 * 2);
 
                 const mat4 transform = math::mat::translate(plane_.pos()) * math::mat::rotate_z(std::copysign(std::acos(vec3(plane_.norm().x, plane_.norm().y, 0.0).normal().y), -plane_.norm().x)) * math::mat::rotate_x(-std::acos(plane_.norm().z));
 
