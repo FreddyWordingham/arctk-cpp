@@ -42,6 +42,12 @@ namespace arc //! arctk namespace
 
 
 
+        //  == CONSTANTS ==
+        //  -- Shape Actors --
+        const size_t CIRCLE_RES = 16; //!< Number of triangles used to resolve circle shape actors.
+
+
+
         //  == CLASS ==
         /**
          *  Renderable actor class.
