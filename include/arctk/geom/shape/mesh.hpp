@@ -400,6 +400,13 @@ namespace arc //! arctk namespace
             }
 
 
+            /**
+             *  Get the total surface area of the mesh.
+             *
+             *  @post   area must be positive.
+             *
+             *  @return Total surface area of the mesh.
+             */
             inline double Mesh::area() const noexcept
             {
                 double area = 0.0;
