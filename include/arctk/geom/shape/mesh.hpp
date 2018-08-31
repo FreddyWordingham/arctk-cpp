@@ -399,6 +399,7 @@ namespace arc //! arctk namespace
                 return (max);
             }
 
+
             inline double Mesh::area() const noexcept
             {
                 double area = 0.0;
@@ -412,6 +413,13 @@ namespace arc //! arctk namespace
                 return (area);
             }
 
+            /**
+             *  Get the total volume of the mesh.
+             *
+             *  @post   vol must be positive.
+             *
+             *  @return Total volume of the mesh.
+             */
             inline double Mesh::vol() const noexcept
             {
                 double vol = 0.0;
