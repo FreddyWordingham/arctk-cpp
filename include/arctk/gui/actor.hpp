@@ -881,7 +881,7 @@ namespace arc //! arctk namespace
              *
              *  @pre    res_ must be equal to, or greater than, two.
              *
-             *  @return Circle bounding box actor.
+             *  @return Circle actor.
              */
             inline Actor act(const geom::shape::Circle& circ_, const size_t res_) noexcept
             {
