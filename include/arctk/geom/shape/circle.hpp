@@ -121,12 +121,12 @@ namespace arc //! arctk namespace
                 return (_aperture);
             }
 
-            inline const vec3& Circle_::pos() const noexcept
+            inline const vec3& Circle::pos() const noexcept
             {
                 return (_pos);
             }
 
-            inline const vec3& Circle_::norm() const noexcept
+            inline const vec3& Circle::norm() const noexcept
             {
                 return (_norm);
             }
