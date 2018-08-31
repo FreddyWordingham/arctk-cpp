@@ -399,7 +399,6 @@ namespace arc //! arctk namespace
                 return (max);
             }
 
-
             /**
              *  Get the total surface area of the mesh.
              *
