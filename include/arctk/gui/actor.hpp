@@ -990,6 +990,13 @@ namespace arc //! arctk namespace
                 return (Actor(verts, {3, 3}));
             }
 
+            /**
+             *  Create an actor from a sphere shape.
+             *
+             *  @param  sph_    Sphere to create an actor of.
+             *
+             *  @return Sphere actor.
+             */
             inline Actor act(const geom::shape::Sphere& sph_) noexcept
             {
                 std::vector<glm::vec3> verts;
