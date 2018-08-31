@@ -116,7 +116,7 @@ namespace arc //! arctk namespace
 
             inline double Circle::aperture() const noexcept
             {
-                return (_rad);
+                return (_aperture);
             }
 
             inline vec3 Circle::min() const noexcept
