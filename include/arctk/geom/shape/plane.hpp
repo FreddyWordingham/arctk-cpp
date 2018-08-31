@@ -147,6 +147,11 @@ namespace arc //! arctk namespace
                 return (area);
             }
 
+            /**
+             *  Get the total volume of the plane.
+             *
+             *  @return Total volume of the plane.
+             */
             inline double Plane::vol() const noexcept
             {
                 return (0.0);
