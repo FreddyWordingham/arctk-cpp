@@ -370,9 +370,9 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Get the maximum bound of the mesh.
+             *  Get the maximum vec of the smallest bounding box containing the mesh.
              *
-             *  @return Maximum bound of the mesh.
+             *  @return Maximum vec of the smallest bounding box containing the mesh.
              */
             inline vec3 Mesh::max() const noexcept
             {
