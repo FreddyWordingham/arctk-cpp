@@ -888,11 +888,11 @@ namespace arc //! arctk namespace
                     const double phi_0 = delta * static_cast<double>(i);
                     const double phi_1 = delta * static_cast<double>(i + 1);
 
-                    const vec3 p_0 = transform * vec3(std::cos(phi_0) * circ_.rad(), std::sin(phi_0) * circ_.rad(), 0.0);
-                    const vec3 p_1 = transform * vec3(std::cos(phi_1) * circ_.rad(), std::sin(phi_1) * circ_.rad(), 0.0);
+                    const vec3 p_0 = transform * vec4(std::cos(phi_0) * circ_.rad(), std::sin(phi_0) * circ_.rad(), 0.0, 1.0);
+                    const vec3 p_1 = transform * vec4(std::cos(phi_1) * circ_.rad(), std::sin(phi_1) * circ_.rad(), 0.0, 1.0);
 
-                    const vec3 n_0 = transform * vec3(std::cos(phi_0) * std::sin(circ_.aperture()), std::sin(phi_0) * std::sin(circ_.aperture()), std::cos(circ_.aperture()));
-                    const vec3 n_1 = transform * vec3(std::cos(phi_1) * std::sin(circ_.aperture()), std::sin(phi_1) * std::sin(circ_.aperture()), std::cos(circ_.aperture()));
+                    const vec3 n_0 = transform * vec4(std::cos(phi_0) * std::sin(circ_.aperture()), std::sin(phi_0) * std::sin(circ_.aperture()), std::cos(circ_.aperture()), 0.0);
+                    const vec3 n_1 = transform * vec4(std::cos(phi_1) * std::sin(circ_.aperture()), std::sin(phi_1) * std::sin(circ_.aperture()), std::cos(circ_.aperture()), 0.0);
 
                     verts.emplace_back(glm::vec3(0.0f, 0.0f, 0.0f));
                     verts.emplace_back(glm::vec3(0.0f, 0.0f, 1.0f));
