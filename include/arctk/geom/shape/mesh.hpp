@@ -465,6 +465,11 @@ namespace arc //! arctk namespace
             {
                 PRE(dir_.normalised());
 
+                if (!_box.contains(pos_) && !_box.collision(pos_, dir_))
+                {
+                    return (std::nullopt);
+                }
+
                 std::optional<double> dist(std::nullopt);
                 for (size_t i = 0; i < _tris.size(); ++i)
                 {
@@ -492,6 +497,11 @@ namespace arc //! arctk namespace
             inline std::optional<std::pair<double, vec3>> Mesh::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 PRE(dir_.normalised());
+
+                if (!_box.contains(pos_) && !_box.collision(pos_, dir_))
+                {
+                    return (std::nullopt);
+                }
 
                 std::optional<std::pair<double, vec3>> dist(std::nullopt);
                 for (size_t i = 0; i < _tris.size(); ++i)
