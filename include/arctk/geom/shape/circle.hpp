@@ -149,6 +149,11 @@ namespace arc //! arctk namespace
                 return (_pos - delta);
             }
 
+            /**
+             *  Get the maximum vec of the smallest bounding box containing the circle.
+             *
+             *  @return Maximum vec of the smallest bounding box containing the circle.
+             */
             inline vec3 Circle::max() const noexcept
             {
                 vec3 norm_xy = vec3(_norm.x, _norm.y, 0.0).normal();
