@@ -881,6 +881,13 @@ namespace arc //! arctk namespace
                 return (cuboid(glm::vec3(aabb_.min().x, aabb_.min().y, aabb_.min().z), glm::vec3(aabb_.max().x, aabb_.max().y, aabb_.max().z)));
             }
 
+            /**
+             *  Create an actor from a circle shape.
+             *
+             *  @param  circ_   Circle to create an actor of.
+             *
+             *  @return Circle bounding box actor.
+             */
             inline Actor act(const geom::shape::Circle& circ_) noexcept
             {
                 std::vector<glm::vec3> verts;
