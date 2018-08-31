@@ -133,6 +133,11 @@ namespace arc //! arctk namespace
                 return (_aperture);
             }
 
+            /**
+             *  Get the position of the circle.
+             *
+             *  @return Position of the circle.
+             */
             inline const vec3& Circle::pos() const noexcept
             {
                 return (_pos);
