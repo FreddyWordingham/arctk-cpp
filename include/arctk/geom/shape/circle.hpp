@@ -128,7 +128,7 @@ namespace arc //! arctk namespace
 
             inline const vec& Circle_::norm() const noexcept
             {
-                return (_pos);
+                return (_norm);
             }
 
             inline vec3 Circle::min() const noexcept
