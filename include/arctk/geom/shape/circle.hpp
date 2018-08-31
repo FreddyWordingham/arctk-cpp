@@ -187,6 +187,11 @@ namespace arc //! arctk namespace
                 return (area);
             }
 
+            /**
+             *  Get the total volume of the circle.
+             *
+             *  @return Total volume of the circle.
+             */
             inline double Circle::vol() const noexcept
             {
                 return (0.0);
