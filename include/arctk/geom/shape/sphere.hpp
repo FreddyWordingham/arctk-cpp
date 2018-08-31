@@ -107,6 +107,11 @@ namespace arc //! arctk namespace
                 return (_rad);
             }
 
+            /**
+             *  Get the minimum vec of the smallest bounding box containing the sphere.
+             *
+             *  @return Minimum vec of the smallest bounding box containing the sphere.
+             */
             inline vec3 Sphere::min() const noexcept
             {
                 return (_pos - vec3(_rad, _rad, _rad));
