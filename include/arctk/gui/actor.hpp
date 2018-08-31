@@ -45,6 +45,7 @@ namespace arc //! arctk namespace
         //  == CONSTANTS ==
         //  -- Shape Actors --
         const size_t CIRCLE_RES = 16; //!< Number of triangles used to resolve circle shape actors.
+        const size_t PLANE_RES  = 16; //!< Number of triangles used to resolve plane shape actors.
 
 
 
