@@ -114,7 +114,7 @@ namespace arc //! arctk namespace
              */
             inline vec3 Plane::min() const noexcept
             {
-                return (vec3(std::numeric_limits<double>::max(), std::numeric_limits<double>::max(), std::numeric_limits<double>::max()));
+                return (vec3(std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest()));
             }
 
             /**
@@ -124,7 +124,7 @@ namespace arc //! arctk namespace
              */
             inline vec3 Plane::max() const noexcept
             {
-                return (vec3(std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest(), std::numeric_limits<double>::lowest()));
+                return (vec3(std::numeric_limits<double>::max(), std::numeric_limits<double>::max(), std::numeric_limits<double>::max()));
             }
 
             inline double Plane::area() const noexcept
