@@ -109,6 +109,11 @@ namespace arc //! arctk namespace
                 return (_pos);
             }
 
+            /**
+             *  Get the normal of the circle.
+             *
+             *  @return Normal of the circle.
+             */
             inline const vec3& Plane::norm() const noexcept
             {
                 return (_norm);
