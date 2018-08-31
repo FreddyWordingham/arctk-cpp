@@ -172,11 +172,11 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Get the total surface area of the axis-aligned bounding box.
+             *  Get the total surface area of the circle.
              *
              *  @post   area must be positive.
              *
-             *  @return Total surface area of the axis-aligned bounding box.
+             *  @return Total surface area of the circle.
              */
             inline double Circle::area() const noexcept
             {
