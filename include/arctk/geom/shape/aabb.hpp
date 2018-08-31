@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
-                //  -- Getters --
+                //  -- Properties --
                 inline vec3   min() const noexcept override;
                 inline vec3   max() const noexcept override;
                 inline double area() const noexcept override;
@@ -149,7 +149,7 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
-            //  -- Getters --
+            //  -- Properties --
             /**
              *  Get the minimum bound of the aabb.
              *
