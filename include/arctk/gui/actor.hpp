@@ -976,9 +976,9 @@ namespace arc //! arctk namespace
                 std::vector<glm::vec3> verts;
                 verts.reserve(20 * 3 * 2);
 
-                const float X = 0.525731112119133606f;
-                const float Z = 0.850650808352039932f;
-                const float N = 0.0f;
+                const float X = 0.525731112119133606f * static_cast<float>(sph_.rad());
+                const float Z = 0.850650808352039932f * static_cast<float>(sph_.rad());
+                const float N = 0.0f * static_cast<float>(sph_.rad());
 
                 static const std::array<glm::vec3, 12> vertices({{glm::vec3(-X, N, Z), glm::vec3(X, N, Z), glm::vec3(-X, N, -Z), glm::vec3(X, N, -Z), glm::vec3(N, Z, X), glm::vec3(N, Z, -X), glm::vec3(N, -Z, X), glm::vec3(N, -Z, -X), glm::vec3(Z, X, N),
                                                                   glm::vec3(-Z, X, N), glm::vec3(Z, -X, N), glm::vec3(-Z, -X, N)}});
