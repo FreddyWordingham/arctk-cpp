@@ -225,7 +225,7 @@ namespace arc //! arctk namespace
              */
             inline double Triangle::area() const noexcept
             {
-                const double area = math::geom::area(poss_);
+                const double area = math::geom::area(_poss);
 
                 POST(area > 0.0);
 
