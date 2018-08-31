@@ -108,9 +108,9 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Get the minimum vec of the smallest bounding box containing the triangle.
+             *  Get the minimum vec of the smallest bounding box containing the plane.
              *
-             *  @return Minimum vec of the smallest bounding box containing the triangle.
+             *  @return Minimum vec of the smallest bounding box containing the plane.
              */
             inline vec3 Plane::min() const noexcept
             {
@@ -118,9 +118,9 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Get the maximum vec of the smallest bounding box containing the triangle.
+             *  Get the maximum vec of the smallest bounding box containing the plane.
              *
-             *  @return Maximum vec of the smallest bounding box containing the triangle.
+             *  @return Maximum vec of the smallest bounding box containing the plane.
              */
             inline vec3 Plane::max() const noexcept
             {
