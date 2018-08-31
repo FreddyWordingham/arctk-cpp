@@ -95,20 +95,17 @@ namespace arc //! arctk namespace
              *
              *  @pre    norms_ vecs must be normalised.
              *
-             *  @post   _area must be positive.
              *  @post   _norm must be normalised.
              */
             inline Triangle::Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) noexcept
               : _poss(poss_)
               , _norms(norms_)
-              , _area(math::geom::area(poss_))
               , _norm(init_norm(poss_, norms_))
             {
                 PRE(norms_[index::vertex::ALPHA].normalised());
                 PRE(norms_[index::vertex::BETA].normalised());
                 PRE(norms_[index::vertex::GAMMA].normalised());
 
-                POST(_area > 0.0);
                 POST(_norm.normalised());
             }
 
