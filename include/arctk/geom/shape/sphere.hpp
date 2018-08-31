@@ -199,6 +199,13 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
+            /**
+             *  Determine if a position falls within the bounds of the sphere.
+             *
+             *  @param  pos_    Position to check.
+             *
+             *  @return True if the position falls within the sphere.
+             */
             inline bool Sphere::contains(const vec3& pos_) const noexcept
             {
                 return (math::geom::distance(pos_, _pos) <= _rad);
