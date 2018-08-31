@@ -444,6 +444,7 @@ namespace arc //! arctk namespace
             inline Actor act(const geom::shape::Aabb& tri_) noexcept;
             inline Actor act(const geom::shape::Circle& tri_) noexcept;
             inline Actor act(const geom::shape::Mesh& mesh_) noexcept;
+            inline Actor act(const geom::shape::Plane& tri_) noexcept;
             inline Actor act(const geom::shape::Triangle& tri_) noexcept;
 
 
@@ -928,6 +929,39 @@ namespace arc //! arctk namespace
                         verts.emplace_back(glm::vec3(static_cast<float>(tri.poss()[j].x), static_cast<float>(tri.poss()[j].y), static_cast<float>(tri.poss()[j].z)));
                         verts.emplace_back(glm::vec3(static_cast<float>(tri.norms()[j].x), static_cast<float>(tri.norms()[j].y), static_cast<float>(tri.norms()[j].z)));
                     }
+                }
+
+                return (Actor(verts, {3, 3}));
+            }
+
+            inline Actor act(const geom::shape::Plane& Plane_) noexcept
+            {
+                const size_t res = 4;
+                const double rad = 1e6;
+
+                std::vector<glm::vec3> verts;
+                verts.reserve(res * 3 * 2);
+
+                const mat4 transform = math::mat::translate(plane_.pos()) * math::mat::rotate_z(std::copysign(std::acos(vec3(plane_.norm().x, plane_.norm().y, 0.0).normal().y), -plane_.norm().x)) * math::mat::rotate_x(-std::acos(plane_.norm().z));
+
+                const double delta = consts::math::TWO_PI / res;
+                for (size_t i = 0; i < res; ++i)
+                {
+                    const double phi_0 = delta * static_cast<double>(i);
+                    const double phi_1 = delta * static_cast<double>(i + 1);
+
+                    const vec4 p_0 = transform * vec4(0.0, 0.0, 0.0, 1.0);
+                    const vec4 p_1 = transform * vec4(std::cos(phi_0) * rad, std::sin(phi_0) * rad, 0.0, 1.0);
+                    const vec4 p_2 = transform * vec4(std::cos(phi_1) * rad, std::sin(phi_1) * rad, 0.0, 1.0);
+
+                    const vec4 norm = transform * vec4(0.0, 0.0, 1.0, 0.0);
+
+                    verts.emplace_back(glm::vec3(static_cast<float>(p_0.x), static_cast<float>(p_0.y), static_cast<float>(p_0.z)));
+                    verts.emplace_back(glm::vec3(static_cast<float>(norm.x), static_cast<float>(norm.y), static_cast<float>(norm.z)));
+                    verts.emplace_back(glm::vec3(static_cast<float>(p_1.x), static_cast<float>(p_1.y), static_cast<float>(p_1.z)));
+                    verts.emplace_back(glm::vec3(static_cast<float>(norm.x), static_cast<float>(norm.y), static_cast<float>(norm.z)));
+                    verts.emplace_back(glm::vec3(static_cast<float>(p_2.x), static_cast<float>(p_2.y), static_cast<float>(p_2.z)));
+                    verts.emplace_back(glm::vec3(static_cast<float>(norm.x), static_cast<float>(norm.y), static_cast<float>(norm.z)));
                 }
 
                 return (Actor(verts, {3, 3}));
