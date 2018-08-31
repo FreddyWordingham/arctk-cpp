@@ -952,7 +952,7 @@ namespace arc //! arctk namespace
 
                 const mat4 transform = math::mat::translate(plane_.pos()) * math::mat::rotate_z(std::copysign(std::acos(vec3(plane_.norm().x, plane_.norm().y, 0.0).normal().y), -plane_.norm().x)) * math::mat::rotate_x(-std::acos(plane_.norm().z));
 
-                const double delta = consts::math::TWO_PI / res_;
+                const double delta = consts::math::TWO_PI / static_cast<double>(res_);
                 for (size_t i = 0; i < res_; ++i)
                 {
                     const double phi_0 = delta * static_cast<double>(i);
