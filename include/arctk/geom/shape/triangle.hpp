@@ -168,9 +168,9 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Get the maximum bound of the triangle.
+             *  Get the maximum vec of the smallest bounding box containing the shape.
              *
-             *  @return Maximum bound of the triangle.
+             *  @return Maximum vec of the smallest bounding box containing the shape.
              */
             inline vec3 Triangle::max() const noexcept
             {
