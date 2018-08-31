@@ -57,10 +57,12 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline vec3   min() const noexcept override;
-                inline vec3   max() const noexcept override;
-                inline double area() const noexcept override;
-                inline double vol() const noexcept override;
+                inline const vec3& pos() const noexcept;
+                inline const vec3& norm() const noexcept;
+                inline vec3        min() const noexcept override;
+                inline vec3        max() const noexcept override;
+                inline double      area() const noexcept override;
+                inline double      vol() const noexcept override;
 
                 //  -- Emission --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
@@ -95,6 +97,16 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            inline const vec3& Sphere::pos() const noexcept
+            {
+                return (_pos);
+            }
+
+            inline double Sphere::rad() const noexcept
+            {
+                return (_rad);
+            }
+
             inline vec3 Sphere::min() const noexcept
             {
                 return (_pos - vec3(_rad, _rad, _rad));

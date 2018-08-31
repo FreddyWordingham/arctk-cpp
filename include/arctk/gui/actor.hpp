@@ -453,6 +453,7 @@ namespace arc //! arctk namespace
             inline Actor act(const geom::shape::Circle& circ_) noexcept;
             inline Actor act(const geom::shape::Mesh& mesh_) noexcept;
             inline Actor act(const geom::shape::Plane& plane_) noexcept;
+            inline Actor act(const geom::shape::Sphere& sph_) noexcept;
             inline Actor act(const geom::shape::Triangle& tri_) noexcept;
 
 
@@ -966,6 +967,163 @@ namespace arc //! arctk namespace
                     verts.emplace_back(glm::vec3(static_cast<float>(p_2.x), static_cast<float>(p_2.y), static_cast<float>(p_2.z)));
                     verts.emplace_back(glm::vec3(static_cast<float>(norm.x), static_cast<float>(norm.y), static_cast<float>(norm.z)));
                 }
+
+                return (Actor(verts, {3, 3}));
+            }
+
+            inline Actor act(const geom::shape::Sphere& sph_) noexcept
+            {
+                std::vector<glm::vec3> verts;
+                verts.reserve(20 * 3 * 2);
+
+                const float X = 0.525731112119133606f;
+                const float Z = 0.850650808352039932f;
+                const float N = 0.0f;
+
+                static const std::array<glm::vec3, 12> vertices({{glm::vec3(-X, N, Z), glm::vec3(X, N, Z), glm::vec3(-X, N, -Z), glm::vec3(X, N, -Z), glm::vec3(N, Z, X), glm::vec3(N, Z, -X), glm::vec3(N, -Z, X), glm::vec3(N, -Z, -X), glm::vec3(Z, X, N),
+                                                                  glm::vec3(-Z, X, N), glm::vec3(Z, -X, N), glm::vec3(-Z, -X, N)}});
+
+                const glm::vec3 pos(sph_.pos().x, sph_.pos().y, sph_.pos().z);
+
+                verts.emplace_back(pos + vertices[0]);
+                verts.emplace_back(glm::normalize(vertices[0]));
+                verts.emplace_back(pos + vertices[4]);
+                verts.emplace_back(glm::normalize(vertices[4]));
+                verts.emplace_back(pos + vertices[1]);
+                verts.emplace_back(glm::normalize(vertices[1]));
+
+                verts.emplace_back(pos + vertices[0]);
+                verts.emplace_back(glm::normalize(vertices[0]));
+                verts.emplace_back(pos + vertices[9]);
+                verts.emplace_back(glm::normalize(vertices[9]));
+                verts.emplace_back(pos + vertices[4]);
+                verts.emplace_back(glm::normalize(vertices[4]));
+
+                verts.emplace_back(pos + vertices[9]);
+                verts.emplace_back(glm::normalize(vertices[9]));
+                verts.emplace_back(pos + vertices[5]);
+                verts.emplace_back(glm::normalize(vertices[5]));
+                verts.emplace_back(pos + vertices[4]);
+                verts.emplace_back(glm::normalize(vertices[4]));
+
+                verts.emplace_back(pos + vertices[4]);
+                verts.emplace_back(glm::normalize(vertices[4]));
+                verts.emplace_back(pos + vertices[5]);
+                verts.emplace_back(glm::normalize(vertices[5]));
+                verts.emplace_back(pos + vertices[8]);
+                verts.emplace_back(glm::normalize(vertices[8]));
+
+                verts.emplace_back(pos + vertices[4]);
+                verts.emplace_back(glm::normalize(vertices[4]));
+                verts.emplace_back(pos + vertices[8]);
+                verts.emplace_back(glm::normalize(vertices[8]));
+                verts.emplace_back(pos + vertices[1]);
+                verts.emplace_back(glm::normalize(vertices[1]));
+
+                verts.emplace_back(pos + vertices[8]);
+                verts.emplace_back(glm::normalize(vertices[8]));
+                verts.emplace_back(pos + vertices[10]);
+                verts.emplace_back(glm::normalize(vertices[10]));
+                verts.emplace_back(pos + vertices[1]);
+                verts.emplace_back(glm::normalize(vertices[1]));
+
+                verts.emplace_back(pos + vertices[8]);
+                verts.emplace_back(glm::normalize(vertices[8]));
+                verts.emplace_back(pos + vertices[3]);
+                verts.emplace_back(glm::normalize(vertices[3]));
+                verts.emplace_back(pos + vertices[10]);
+                verts.emplace_back(glm::normalize(vertices[10]));
+
+                verts.emplace_back(pos + vertices[5]);
+                verts.emplace_back(glm::normalize(vertices[5]));
+                verts.emplace_back(pos + vertices[3]);
+                verts.emplace_back(glm::normalize(vertices[3]));
+                verts.emplace_back(pos + vertices[8]);
+                verts.emplace_back(glm::normalize(vertices[8]));
+
+                verts.emplace_back(pos + vertices[5]);
+                verts.emplace_back(glm::normalize(vertices[5]));
+                verts.emplace_back(pos + vertices[2]);
+                verts.emplace_back(glm::normalize(vertices[2]));
+                verts.emplace_back(pos + vertices[3]);
+                verts.emplace_back(glm::normalize(vertices[3]));
+
+                verts.emplace_back(pos + vertices[2]);
+                verts.emplace_back(glm::normalize(vertices[2]));
+                verts.emplace_back(pos + vertices[7]);
+                verts.emplace_back(glm::normalize(vertices[7]));
+                verts.emplace_back(pos + vertices[3]);
+                verts.emplace_back(glm::normalize(vertices[3]));
+
+                verts.emplace_back(pos + vertices[7]);
+                verts.emplace_back(glm::normalize(vertices[7]));
+                verts.emplace_back(pos + vertices[10]);
+                verts.emplace_back(glm::normalize(vertices[10]));
+                verts.emplace_back(pos + vertices[3]);
+                verts.emplace_back(glm::normalize(vertices[3]));
+
+                verts.emplace_back(pos + vertices[7]);
+                verts.emplace_back(glm::normalize(vertices[7]));
+                verts.emplace_back(pos + vertices[6]);
+                verts.emplace_back(glm::normalize(vertices[6]));
+                verts.emplace_back(pos + vertices[10]);
+                verts.emplace_back(glm::normalize(vertices[10]));
+
+                verts.emplace_back(pos + vertices[7]);
+                verts.emplace_back(glm::normalize(vertices[7]));
+                verts.emplace_back(pos + vertices[11]);
+                verts.emplace_back(glm::normalize(vertices[11]));
+                verts.emplace_back(pos + vertices[6]);
+                verts.emplace_back(glm::normalize(vertices[6]));
+
+                verts.emplace_back(pos + vertices[11]);
+                verts.emplace_back(glm::normalize(vertices[11]));
+                verts.emplace_back(pos + vertices[0]);
+                verts.emplace_back(glm::normalize(vertices[0]));
+                verts.emplace_back(pos + vertices[6]);
+                verts.emplace_back(glm::normalize(vertices[6]));
+
+                verts.emplace_back(pos + vertices[0]);
+                verts.emplace_back(glm::normalize(vertices[0]));
+                verts.emplace_back(pos + vertices[1]);
+                verts.emplace_back(glm::normalize(vertices[1]));
+                verts.emplace_back(pos + vertices[6]);
+                verts.emplace_back(glm::normalize(vertices[6]));
+
+                verts.emplace_back(pos + vertices[6]);
+                verts.emplace_back(glm::normalize(vertices[6]));
+                verts.emplace_back(pos + vertices[1]);
+                verts.emplace_back(glm::normalize(vertices[1]));
+                verts.emplace_back(pos + vertices[10]);
+                verts.emplace_back(glm::normalize(vertices[10]));
+
+                verts.emplace_back(pos + vertices[9]);
+                verts.emplace_back(glm::normalize(vertices[9]));
+                verts.emplace_back(pos + vertices[0]);
+                verts.emplace_back(glm::normalize(vertices[0]));
+                verts.emplace_back(pos + vertices[11]);
+                verts.emplace_back(glm::normalize(vertices[11]));
+
+                verts.emplace_back(pos + vertices[9]);
+                verts.emplace_back(glm::normalize(vertices[9]));
+                verts.emplace_back(pos + vertices[11]);
+                verts.emplace_back(glm::normalize(vertices[11]));
+                verts.emplace_back(pos + vertices[2]);
+                verts.emplace_back(glm::normalize(vertices[2]));
+
+                verts.emplace_back(pos + vertices[9]);
+                verts.emplace_back(glm::normalize(vertices[9]));
+                verts.emplace_back(pos + vertices[2]);
+                verts.emplace_back(glm::normalize(vertices[2]));
+                verts.emplace_back(pos + vertices[5]);
+                verts.emplace_back(glm::normalize(vertices[5]));
+
+                verts.emplace_back(pos + vertices[7]);
+                verts.emplace_back(glm::normalize(vertices[7]));
+                verts.emplace_back(pos + vertices[2]);
+                verts.emplace_back(glm::normalize(vertices[2]));
+                verts.emplace_back(pos + vertices[11]);
+                verts.emplace_back(glm::normalize(vertices[11]));
 
                 return (Actor(verts, {3, 3}));
             }
