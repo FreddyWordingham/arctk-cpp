@@ -56,10 +56,12 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline vec3   min() const noexcept override;
-                inline vec3   max() const noexcept override;
-                inline double area() const noexcept override;
-                inline double vol() const noexcept override;
+                inline const vec3& pos() const noexcept;
+                inline const vec3& norm() const noexcept;
+                inline vec3        min() const noexcept override;
+                inline vec3        max() const noexcept override;
+                inline double      area() const noexcept override;
+                inline double      vol() const noexcept override;
 
                 //  -- Emission --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
@@ -95,6 +97,16 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            inline const vec3& Plane::pos() const noexcept
+            {
+                return (_pos);
+            }
+
+            inline const vec3& Plane::norm() const noexcept
+            {
+                return (_norm);
+            }
+
             /**
              *  Get the minimum bound of the triangle.
              *
