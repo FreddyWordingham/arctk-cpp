@@ -85,10 +85,12 @@ namespace arc //! arctk namespace
                 //  -- Getters --
                 inline size_t          num_tri() const noexcept;
                 inline const Triangle& tri(size_t index_) const noexcept;
-                inline vec3            min() const noexcept override;
-                inline vec3            max() const noexcept override;
-                inline double          area() const noexcept override;
-                inline double          vol() const noexcept override;
+
+                //  -- Properties --
+                inline vec3   min() const noexcept override;
+                inline vec3   max() const noexcept override;
+                inline double area() const noexcept override;
+                inline double vol() const noexcept override;
 
                 //  -- Emission --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
@@ -343,6 +345,8 @@ namespace arc //! arctk namespace
                 return (_tris[index_]);
             }
 
+
+            //  -- Properties --
             /**
              *  Get the minimum vec of the smallest bounding box containing the mesh.
              *
