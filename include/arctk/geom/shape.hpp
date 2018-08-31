@@ -29,6 +29,17 @@ namespace arc //! arctk namespace
 {
     namespace geom //! geometry namespace
     {
+        namespace shape //! shape namespace
+        {
+
+
+
+            //  == CLASS PROTOTYPES ==
+            class Aabb;
+
+
+
+        } // namespace shape
 
 
 
