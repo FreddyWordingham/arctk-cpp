@@ -50,8 +50,7 @@ namespace arc //! arctk namespace
                 const std::array<vec3, 3> _norms; //!< Vertex normals.
 
                 //  -- Properties --
-                const double _area; //!< Area of the triangle.
-                const vec3   _norm; //!< Normal of the triangle's plane.
+                const vec3 _norm; //!< Normal of the triangle's plane.
 
 
                 //  == INSTANTIATION ==
@@ -221,9 +220,11 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Get the area of the triangle.
+             *  Get the total surface area of the plane.
              *
-             *  @return Area of the triangle.
+             *  @post   area must be positive.
+             *
+             *  @return Total surface area of the plane.
              */
             inline double Triangle::area() const noexcept
             {
