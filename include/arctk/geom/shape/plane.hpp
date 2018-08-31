@@ -131,9 +131,20 @@ namespace arc //! arctk namespace
                 return (vec3(std::numeric_limits<double>::max(), std::numeric_limits<double>::max(), std::numeric_limits<double>::max()));
             }
 
+            /**
+             *  Get the total surface area of the plane.
+             *
+             *  @post   area must be positive.
+             *
+             *  @return Total surface area of the plane.
+             */
             inline double Plane::area() const noexcept
             {
-                return (std::numeric_limits<double>::infinity());
+                const double area = std::numeric_limits<double>::infinity();
+
+                POST(area > 0.0);
+
+                return (area);
             }
 
             inline double Plane::vol() const noexcept
