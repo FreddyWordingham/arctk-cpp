@@ -131,6 +131,11 @@ namespace arc //! arctk namespace
                 return (_norm);
             }
 
+            /**
+             *  Get the minimum vec of the smallest bounding box containing the circle.
+             *
+             *  @return Minimum vec of the smallest bounding box containing the circle.
+             */
             inline vec3 Circle::min() const noexcept
             {
                 vec3 norm_xy = vec3(_norm.x, _norm.y, 0.0).normal();
