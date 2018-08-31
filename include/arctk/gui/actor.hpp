@@ -947,6 +947,9 @@ namespace arc //! arctk namespace
 
             inline Actor act(const geom::shape::Plane& plane_, const size_t res_, const double rad_) noexcept
             {
+                PRE(res_ >= 2);
+                PRE(rad_ > 0.0);
+
                 std::vector<glm::vec3> verts;
                 verts.reserve(res_ * 3 * 2);
 
