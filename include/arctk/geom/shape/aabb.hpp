@@ -258,6 +258,13 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
+            /**
+             *  Determine if a position falls within the bounds of the axis-aligned bounding box.
+             *
+             *  @param  pos_    Position to check.
+             *
+             *  @return True if the position falls within the axis-aligned bounding box.
+             */
             inline bool Aabb::contains(const vec3& pos_) const noexcept
             {
                 return (!((pos_.x < _min.x) || (pos_.x > _max.x) || (pos_.y < _min.y) || (pos_.y > _max.y) || (pos_.z < _min.z) || (pos_.z > _max.z)));
