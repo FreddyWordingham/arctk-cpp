@@ -275,13 +275,21 @@ namespace arc //! arctk namespace
             {
                 for (size_t i = 0; i < 3; ++i)
                 {
-                    if ((_max[i] < aabb_.min()[i]) || (_min[i] > aabb_.max()[i]))
+                    if ((_min[i] > aabb_.max()[i]) || (_max[i] < aabb_.min()[i]))
                     {
                         return (false);
                     }
                 }
 
-                return (true);
+                for (size_t i = 0; i < 3; ++i)
+                {
+                    if ((aabb_.min()[i] < _min[i]) || (aabb_.max()[i] > _max[i]))
+                    {
+                        return (true);
+                    }
+                }
+
+                return (false);
             }
 
             /**
