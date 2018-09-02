@@ -76,6 +76,7 @@ namespace arc //! arctk namespace
                 inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept override;
 
                 //  -- Collision --
+                inline vec3                                   closest_point(const vec3& pos_) const noexcept;
                 inline bool                                   contains(const vec3& pos_) const noexcept;
                 inline bool                                   contained(const Aabb& aabb_) const noexcept override;
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -259,6 +260,29 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
+            inline vec3 Aabb::closest_point(const vec3& pos_) const noexcept
+            {
+                vec3 pos;
+
+                for (size_t i = 0; i < 3; ++i)
+                {
+                    if (pos_[i] < _min[i])
+                    {
+                        pos[i] = _min[i];
+                    }
+                    else if (pos_[i] > _max[i])
+                    {
+                        pos[i] = _max[i];
+                    }
+                    else
+                    {
+                        pos[i] = pos_[i];
+                    }
+                }
+
+                return (pos);
+            }
+
             /**
              *  Determine if a position falls within the bounds of the axis-aligned bounding box.
              *
