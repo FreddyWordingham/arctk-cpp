@@ -237,7 +237,7 @@ namespace arc //! arctk namespace
 
             inline bool Sphere::contained(const Aabb& aabb_) const noexcept
             {
-                const vec3 surface_point = closest_surface_point((aabb_.max() - aabb_.min()) * 0.5);
+                return (aabb_.contains(closest_surface_point((aabb_.max() + aabb_.min()) * 0.5)));
             }
 
             /**
