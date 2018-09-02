@@ -77,7 +77,6 @@ namespace arc //! arctk namespace
 
                 //  -- Collision --
                 inline vec3                                   closest_point(const vec3& pos_) const noexcept;
-                inline vec3                                   closest_surface_point(const vec3& pos_) const noexcept;
                 inline bool                                   contains(const vec3& pos_) const noexcept;
                 inline bool                                   contained(const Aabb& aabb_) const noexcept override;
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -263,36 +262,6 @@ namespace arc //! arctk namespace
             //  -- Collision --
             inline vec3 Aabb::closest_point(const vec3& pos_) const noexcept
             {
-                vec3 pos;
-
-                for (size_t i = 0; i < 3; ++i)
-                {
-                    if (pos_[i] > _max[i])
-                    {
-                        pos[i] = _max[i];
-                    }
-                    else if (pos_[i] < _min[i])
-                    {
-                        pos[i] = _min[i];
-                    }
-                    else
-                    {
-                        pos[i] = pos_[i];
-                    }
-                }
-
-                return (pos);
-            }
-
-            inline vec3 Aabb::closest_surface_point(const vec3& pos_) const noexcept
-            {
-                if (contains(pos_))
-                {
-                    const vec3 dir = (pos_ - ((_min + _max) * 0.5)).normal();
-
-                    return (pos_ + (dir * collision(pos_, dir).value()));
-                }
-
                 vec3 pos;
 
                 for (size_t i = 0; i < 3; ++i)
