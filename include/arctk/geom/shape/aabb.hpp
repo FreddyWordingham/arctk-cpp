@@ -286,6 +286,13 @@ namespace arc //! arctk namespace
 
             inline vec3 Aabb::closest_surface_point(const vec3& pos_) const noexcept
             {
+                if (containeds(pos_))
+                {
+                    const vec3 dir = (pos_ - ((_min + _max) * 0.5)).normal();
+
+                    return (pos_ + (dir * collision(pos, dir).value()));
+                }
+
                 vec3 pos;
 
                 for (size_t i = 0; i < 3; ++i)
@@ -294,9 +301,13 @@ namespace arc //! arctk namespace
                     {
                         pos[i] = _max[i];
                     }
-                    else
+                    else if (pos_[i] < _min[i])
                     {
                         pos[i] = _min[i];
+                    }
+                    else
+                    {
+                        pos[i] = pos_[i];
                     }
                 }
 
