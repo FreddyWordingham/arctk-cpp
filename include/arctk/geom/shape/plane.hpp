@@ -72,6 +72,7 @@ namespace arc //! arctk namespace
                 inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_, double rad_) const noexcept;
 
                 //  -- Collision --
+                inline bool                                   contained(const Aabb& aabb_) const noexcept override;
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
                 inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
@@ -237,6 +238,11 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
+            inline bool Plane::contained(const Aabb& aabb_) const noexcept
+            {
+                return (true);
+            }
+
             /**
              *  Determine if a collision event occurs between the plane and a ray.
              *  If a collision does occur, return the distance to the collision point.
