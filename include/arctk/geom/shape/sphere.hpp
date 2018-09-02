@@ -70,6 +70,7 @@ namespace arc //! arctk namespace
 
                 //  -- Collision --
                 inline bool                                   contains(const vec3& pos_) const noexcept;
+                inline bool                                   contained(const Aabb& aabb_) const noexcept override;
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
                 inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
@@ -209,6 +210,11 @@ namespace arc //! arctk namespace
             inline bool Sphere::contains(const vec3& pos_) const noexcept
             {
                 return (math::geom::distance(pos_, _pos) <= _rad);
+            }
+
+            inline bool Sphere::contained(const Aabb& aabb_) const noexcept
+            {
+                return ((_pos - aabb_.closest_point(_pos)).mag_sq() < (_rad * _rad));
             }
 
             /**
