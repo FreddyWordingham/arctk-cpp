@@ -290,7 +290,7 @@ namespace arc //! arctk namespace
                 {
                     const vec3 dir = (pos_ - ((_min + _max) * 0.5)).normal();
 
-                    return (pos_ + (dir * collision(pos, dir).value()));
+                    return (pos_ + (dir * collision(pos_, dir).value()));
                 }
 
                 vec3 pos;
