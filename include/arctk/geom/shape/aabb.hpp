@@ -266,13 +266,13 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < 3; ++i)
                 {
-                    if (pos_[i] < _min[i])
-                    {
-                        pos[i] = _min[i];
-                    }
-                    else if (pos_[i] > _max[i])
+                    if (pos_[i] > _max[i])
                     {
                         pos[i] = _max[i];
+                    }
+                    else if (pos_[i] < _min[i])
+                    {
+                        pos[i] = _min[i];
                     }
                     else
                     {
