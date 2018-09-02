@@ -69,6 +69,8 @@ namespace arc //! arctk namespace
                 inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept override;
 
                 //  -- Collision --
+                inline vec3                                   closest_point(const vec3& pos_) const noexcept;
+                inline vec3                                   closest_surface_point(const vec3& pos_) const noexcept;
                 inline bool                                   contains(const vec3& pos_) const noexcept;
                 inline bool                                   contains(const Aabb& aabb_) const noexcept override;
                 inline bool                                   contained(const Aabb& aabb_) const noexcept override;
@@ -201,6 +203,21 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
+            inline vec3 Sphere::closest_point(const vec3& pos_) const noexcept
+            {
+                if (math::geom::distance(pos_, _pos) < _rad)
+                {
+                    return (pos_);
+                }
+
+                return (closest_surface_point(pos_));
+            }
+
+            inline vec3 Sphere::closest_surface_point(const vec3& pos_) const noexcept
+            {
+                return (((pos_ - _pos).normal() * _rad) + _pos);
+            }
+
             /**
              *  Determine if a position falls within the bounds of the sphere.
              *
