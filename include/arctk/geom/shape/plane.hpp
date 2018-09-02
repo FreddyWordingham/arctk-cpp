@@ -240,7 +240,13 @@ namespace arc //! arctk namespace
             //  -- Collision --
             inline bool Plane::contained(const Aabb& aabb_) const noexcept
             {
-                return (true);
+                const vec3 centre     = (aabb_.max() + aabb_.min()) * 0.5;
+                const vec3 half_width = aabb_.max() - centre;
+
+                const double r = (half_width.x * std::abs(_norm.x)) + (half_width.y * std::abs(_norm.y)) + (half_width.z * std::abs(_norm.z));
+                const double s = (_norm * centre) - (_pos * _norm);
+
+                return (std::abs(s) <= r);
             }
 
             /**
