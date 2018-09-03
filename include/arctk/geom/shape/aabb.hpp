@@ -213,6 +213,11 @@ namespace arc //! arctk namespace
                 return (vol);
             }
 
+            /**
+             *  Get the centre position of the axis-aligned bounding box.
+             *
+             *  @return Centre position of the axis-aligned bounding box.
+             */
             inline vec3 Aabb::centre() const noexcept
             {
                 return ((_max + _min) * 0.5);
