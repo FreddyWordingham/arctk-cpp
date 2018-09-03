@@ -77,6 +77,11 @@ namespace arc //! arctk namespace
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
                 inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept override;
 
+                //  -- Intersection --
+                inline bool   intersect_surf(const shape::Aabb& aabb_) const noexcept override;
+                inline bool   intersect_vol(const shape::Aabb& aabb_) const noexcept override;
+                inline double plane_dist(const vec3& pos_) const noexcept;
+
                 //  -- Collision --
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
                 inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -267,6 +272,36 @@ namespace arc //! arctk namespace
                 }
 
                 return (std::pair<vec3, vec3>(pos + _pos, norm));
+            }
+
+
+            //  -- Intersection --
+            inline bool Circle::intersect_surf(const shape::Aabb& aabb_) const noexcept
+            {
+                const double r = aabb_.half_width() * arc::vec3(std::abs(_norm.x), std::abs(_norm.y), std::abs(_norm.z));
+                const double s = (_norm * aabb_.centre()) - (_pos * _norm);
+
+                if (std::abs(s) > r)
+                {
+                    return (false);
+                }
+
+                if ((_pos - aabb_.nearest_point_vol(_pos)).mag_sq() > (_rad * _rad))
+                {
+                    return (false);
+                }
+
+                const bool side =
+            }
+
+            inline bool Circle::intersect_vol(const shape::Aabb& aabb_) const noexcept
+            {
+                return (intersect_surf(aabb_));
+            }
+
+            inline double Circle::plane_dist(const vec3& pos_) const noexcept
+            {
+                return ((_norm * pos_) - (_norm * _pos));
             }
 
 
