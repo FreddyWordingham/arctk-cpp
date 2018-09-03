@@ -267,6 +267,23 @@ namespace arc //! arctk namespace
             //  -- Intersection --
             inline bool Aabb::intersect_surf(const shape::Aabb& aabb_) const noexcept
             {
+                for (size_t i = 0; i < 3; ++i)
+                {
+                    if ((_min[i] > aabb_.max()[i]) || (_max[i] < aabb_.min()[i]))
+                    {
+                        return (false);
+                    }
+                }
+
+                for (size_t i = 0; i < 3; ++i)
+                {
+                    if ((aabb_.min()[i] < _min[i]) || (aabb_.max()[i] > _max[i]))
+                    {
+                        return (true);
+                    }
+                }
+
+                return (false);
             }
 
             inline bool Aabb::intersect_vol(const shape::Aabb& aabb_) const noexcept
@@ -310,27 +327,6 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
-            inline bool Aabb::contained(const Aabb& aabb_) const noexcept
-            {
-                for (size_t i = 0; i < 3; ++i)
-                {
-                    if ((_min[i] > aabb_.max()[i]) || (_max[i] < aabb_.min()[i]))
-                    {
-                        return (false);
-                    }
-                }
-
-                for (size_t i = 0; i < 3; ++i)
-                {
-                    if ((aabb_.min()[i] < _min[i]) || (aabb_.max()[i] > _max[i]))
-                    {
-                        return (true);
-                    }
-                }
-
-                return (false);
-            }
-
             /**
              *  Determine if a collision event occurs between the axis-aligned bounding box and a ray.
              *  If a collision does occur, return the distance to the collision point.
