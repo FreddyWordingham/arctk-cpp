@@ -309,6 +309,13 @@ namespace arc //! arctk namespace
 
 
             //  -- Intersection --
+            /**
+             *  Determine if an intersection occurs between the triangle's surface and an axis-aligned bounding box.
+             *
+             *  @param  aabb_   Axis-aligned bounding box to test.
+             *
+             *  @return True if the triangle's surface intersects with the axis-aligned bounding box.
+             */
             inline bool Triangle::intersect_surf(const shape::Aabb& aabb_) const noexcept
             {
                 const vec3 centre     = aabb_.centre();
