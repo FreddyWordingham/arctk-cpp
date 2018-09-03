@@ -501,6 +501,8 @@ namespace arc //! arctk namespace
 
             inline bool Mesh::intersect_vol(const shape::Aabb& /*unused*/) const noexcept
             {
+                std::cerr << "WARNING: This method does not yet have a suitable implementation.\n";
+
                 std::exit(exit::error::UNREACHABLE_CODE);
             }
 
