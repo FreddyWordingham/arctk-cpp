@@ -81,8 +81,17 @@ namespace arc //! arctk namespace
               noexcept = 0; //!< Generate a random position, and corresponding normal, on the surface of the shape. @param  rng_    Random number generator.    @return Randomly generated point, and corresponding normal, on the surface of the shape.
 
             //  -- Intersection --
-            virtual inline bool intersect_surf(const shape::Aabb& aabb_) const noexcept = 0;
-            virtual inline bool intersect_vol(const shape::Aabb& aabb_) const noexcept  = 0;
+            virtual inline bool intersect_surf(const shape::Aabb& aabb_) const noexcept = 0; //!< Determine if an intersection occurs between the shape's surface and an axis-aligned bounding box.   @param  aabb_   Axis-aligned bounding box to test. @return
+                                                                                             //!< True if the shape's surface intersects with the axis-aligned bounding box.
+
+            /**
+             *  Determine if an intersection occurs between the shape's surface and an axis-aligned bounding box.
+             *
+             *  @param  aabb_   Axis-aligned bounding box to test.
+             *
+             *  @return True if the shape's surface intersects with the axis-aligned bounding box.
+             */
+            virtual inline bool intersect_vol(const shape::Aabb& aabb_) const noexcept = 0;
 
             //  -- Collision --
             virtual inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const
