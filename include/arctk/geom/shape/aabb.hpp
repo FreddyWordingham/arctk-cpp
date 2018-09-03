@@ -70,6 +70,8 @@ namespace arc //! arctk namespace
                 inline vec3   max() const noexcept override;
                 inline double area() const noexcept override;
                 inline double vol() const noexcept override;
+                inline vec3   centre() const noexcept;
+                inline vec3   half_width() const noexcept;
 
                 //  -- Emission --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
@@ -210,6 +212,17 @@ namespace arc //! arctk namespace
 
                 return (vol);
             }
+
+            inline vec3 Aabb::centre() const noexcept
+            {
+                return ((_max + _min) * 0.5);
+            }
+
+            inline vec3 Aabb::half_width() const noexcept
+            {
+                return ((_max - _min) * 0.5);
+            }
+
 
 
             //  -- Emission --

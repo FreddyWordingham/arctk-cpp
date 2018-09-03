@@ -255,6 +255,7 @@ namespace arc //! arctk namespace
 
             inline bool Plane::intersect_vol(const shape::Aabb& aabb_) const noexcept
             {
+                const vec3 line =
             }
 
             inline vec3 Plane::nearest_point_surf(const vec3& pos_) const noexcept
