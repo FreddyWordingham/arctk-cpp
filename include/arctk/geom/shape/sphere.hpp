@@ -73,6 +73,7 @@ namespace arc //! arctk namespace
                 inline bool intersect_vol(const shape::Aabb& aabb_) const noexcept override;
                 inline vec3 nearest_point_surf(const vec3& pos_) const noexcept;
                 inline vec3 nearest_point_vol(const vec3& pos_) const noexcept;
+                inline bool contains(const vec3& pos_) const noexcept;
 
                 //  -- Collision --
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -229,8 +230,6 @@ namespace arc //! arctk namespace
                 return (closest_surface_point(pos_));
             }
 
-
-            //  -- Collision --
             /**
              *  Determine if a position falls within the bounds of the sphere.
              *
@@ -243,6 +242,8 @@ namespace arc //! arctk namespace
                 return (math::geom::distance(pos_, _pos) <= _rad);
             }
 
+
+            //  -- Collision --
             /**
              *  Determine if a collision event occurs between the sphere and a ray.
              *  If a collision does occur, return the distance to the collision point.
