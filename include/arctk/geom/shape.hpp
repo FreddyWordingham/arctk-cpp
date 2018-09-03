@@ -83,15 +83,8 @@ namespace arc //! arctk namespace
             //  -- Intersection --
             virtual inline bool intersect_surf(const shape::Aabb& aabb_) const noexcept = 0; //!< Determine if an intersection occurs between the shape's surface and an axis-aligned bounding box.   @param  aabb_   Axis-aligned bounding box to test. @return
                                                                                              //!< True if the shape's surface intersects with the axis-aligned bounding box.
-
-            /**
-             *  Determine if an intersection occurs between the shape's surface and an axis-aligned bounding box.
-             *
-             *  @param  aabb_   Axis-aligned bounding box to test.
-             *
-             *  @return True if the shape's surface intersects with the axis-aligned bounding box.
-             */
-            virtual inline bool intersect_vol(const shape::Aabb& aabb_) const noexcept = 0;
+            virtual inline bool intersect_vol(const shape::Aabb& aabb_) const noexcept = 0; //!< Determine if an intersection occurs between the shape's volume and an axis-aligned bounding box.    @param  aabb_   Axis-aligned bounding box to test.  @return
+                                                                                            //!< True if the shape's volume intersects with the axis-aligned bounding box.
 
             //  -- Collision --
             virtual inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const
