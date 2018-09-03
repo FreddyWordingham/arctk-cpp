@@ -506,6 +506,13 @@ namespace arc //! arctk namespace
                 return (false);
             }
 
+            /**
+             *  Determine if an intersection occurs between the mesh's volume and an axis-aligned bounding box.
+             *
+             *  @param  aabb_   Axis-aligned bounding box to test.
+             *
+             *  @return True if the mesh's volume intersects with the axis-aligned bounding box.
+             */
             inline bool Mesh::intersect_vol(const shape::Aabb& /*unused*/) const noexcept
             {
                 std::cerr << "WARNING: This method does not yet have a suitable implementation.\n";
