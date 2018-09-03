@@ -313,6 +313,13 @@ namespace arc //! arctk namespace
                 return (false);
             }
 
+            /**
+             *  Determine if an intersection occurs between the axis-aligned bounding box's volume and an axis-aligned bounding box.
+             *
+             *  @param  aabb_   Axis-aligned bounding box to test.
+             *
+             *  @return True if the axis-aligned bounding box's volume intersects with the axis-aligned bounding box.
+             */
             inline bool Aabb::intersect_vol(const shape::Aabb& aabb_) const noexcept
             {
                 for (size_t i = 0; i < 3; ++i)
