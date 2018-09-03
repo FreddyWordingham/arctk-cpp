@@ -207,7 +207,7 @@ namespace arc //! arctk namespace
             //  -- Intersection --
             inline bool Sphere::intersect_surf(const shape::Aabb& aabb_) const noexcept
             {
-                return (aabb_.contains(closest_surface_point((aabb_.max() + aabb_.min()) * 0.5)));
+                return (aabb_.contains(nearest_point_surf((aabb_.max() + aabb_.min()) * 0.5)));
             }
 
             inline bool Sphere::intersect_vol(const shape::Aabb& aabb_) const noexcept
