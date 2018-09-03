@@ -234,7 +234,6 @@ namespace arc //! arctk namespace
             }
 
 
-
             //  -- Emission --
             /**
              *  Generate a random position on the surface of the axis-aligned bounding box.
