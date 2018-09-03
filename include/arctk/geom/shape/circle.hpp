@@ -80,6 +80,7 @@ namespace arc //! arctk namespace
                 //  -- Intersection --
                 inline bool   intersect_surf(const shape::Aabb& aabb_) const noexcept override;
                 inline bool   intersect_vol(const shape::Aabb& aabb_) const noexcept override;
+                inline vec3   nearest_point_surf(const vec3& pos_) const noexcept;
                 inline double plane_dist(const vec3& pos_) const noexcept;
 
                 //  -- Collision --
@@ -290,13 +291,25 @@ namespace arc //! arctk namespace
                 {
                     return (false);
                 }
-
-                const bool side =
             }
 
             inline bool Circle::intersect_vol(const shape::Aabb& aabb_) const noexcept
             {
                 return (intersect_surf(aabb_));
+            }
+
+            inline vec3 Circle::nearest_point_surf(const vec3& pos_) const noexcept
+            {
+                const vec3 plane_point = pos_ - (_norm * plane_dist(pos_));
+
+                const double dist = math::geom::distance(plane_point, _pos);
+
+                if (dist <= _rad)
+                {
+                    return (plane_point);
+                }
+
+                return (_pos + ((plane_point - _pos).normal() * _rad));
             }
 
             inline double Circle::plane_dist(const vec3& pos_) const noexcept
