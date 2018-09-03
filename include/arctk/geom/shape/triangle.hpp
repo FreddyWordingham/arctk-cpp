@@ -77,8 +77,11 @@ namespace arc //! arctk namespace
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
                 inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept override;
 
+                //  -- Intersection --
+                inline bool intersect_surf(const shape::Aabb& aabb_) const noexcept override;
+                inline bool intersect_vol(const shape::Aabb& aabb_) const noexcept override;
+
                 //  -- Collision --
-                inline bool                                   contained(const Aabb& aabb_) const noexcept override;
                 inline std::optional<double>                  plane_collision(const vec3& pos_, const vec3& dir_) const noexcept;
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
                 inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -305,12 +308,17 @@ namespace arc //! arctk namespace
             }
 
 
-            //  -- Collision --
-            inline bool Triangle::contained(const Aabb& aabb_) const noexcept
+            //  -- Intersection --
+            inline bool Triangle::intersect_surf(const shape::Aabb& aabb_) const noexcept
             {
-                return (true);
             }
 
+            inline bool Triangle::intersect_vol(const shape::Aabb& aabb_) const noexcept
+            {
+            }
+
+
+            //  -- Collision --
             /**
              *  Determine if a collision event occurs between the plane the triangle rests in and a ray.
              *
