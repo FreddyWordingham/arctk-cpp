@@ -72,10 +72,11 @@ namespace arc //! arctk namespace
                 inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_, double rad_) const noexcept;
 
                 //  -- Intersection --
-                inline bool intersect_surf(const shape::Aabb& aabb_) const noexcept override;
-                inline bool intersect_vol(const shape::Aabb& aabb_) const noexcept override;
-                inline vec3 nearest_point_surf(const vec3& pos_) const noexcept;
-                inline bool contains(const vec3& pos_) const noexcept;
+                inline bool   intersect_surf(const shape::Aabb& aabb_) const noexcept override;
+                inline bool   intersect_vol(const shape::Aabb& aabb_) const noexcept override;
+                inline vec3   nearest_point_surf(const vec3& pos_) const noexcept;
+                inline double surf_dist(const vec3& pos_) const noexcept;
+                inline bool   contains(const vec3& pos_) const noexcept;
 
                 //  -- Collision --
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -261,6 +262,11 @@ namespace arc //! arctk namespace
 
             inline vec3 Plane::nearest_point_surf(const vec3& pos_) const noexcept
             {
+            }
+
+            inline double Plane::surf_dist(const vec3& pos_) const noexcept
+            {
+                return (std::abs((_pos * pos_) - (_pos * _norm)) / _pos.mag());
             }
 
             inline bool Plane::contains(const vec3& pos_) const noexcept
