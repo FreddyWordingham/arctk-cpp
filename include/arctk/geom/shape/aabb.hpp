@@ -286,6 +286,15 @@ namespace arc //! arctk namespace
 
             inline bool Aabb::intersect_vol(const shape::Aabb& aabb_) const noexcept
             {
+                for (size_t i = 0; i < 3; ++i)
+                {
+                    if ((_min[i] > aabb_.max()[i]) || (_max[i] < aabb_.min()[i]))
+                    {
+                        return (false);
+                    }
+                }
+
+                return (true);
             }
 
             inline vec3 Aabb::nearest_point_vol(const vec3& pos_) const noexcept
