@@ -244,6 +244,13 @@ namespace arc //! arctk namespace
 
 
             //  -- Intersection --
+            /**
+             *  Determine if an intersection occurs between the plane's surface and an axis-aligned bounding box.
+             *
+             *  @param  aabb_   Axis-aligned bounding box to test.
+             *
+             *  @return True if the plane's surface intersects with the axis-aligned bounding box.
+             */
             inline bool Plane::intersect_surf(const shape::Aabb& aabb_) const noexcept
             {
                 const double r = aabb_.half_width() * arc::vec3(std::abs(_norm.x), std::abs(_norm.y), std::abs(_norm.z));
