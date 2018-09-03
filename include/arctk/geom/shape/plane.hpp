@@ -262,7 +262,7 @@ namespace arc //! arctk namespace
 
             inline vec3 Plane::nearest_point_surf(const vec3& pos_) const noexcept
             {
-                return (pos_ + (_norm * surf_dist(pos_)));
+                return (pos_ - (_norm * surf_dist(pos_)));
             }
 
             inline double Plane::surf_dist(const vec3& pos_) const noexcept
