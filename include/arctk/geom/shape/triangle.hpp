@@ -311,10 +311,49 @@ namespace arc //! arctk namespace
             //  -- Intersection --
             inline bool Triangle::intersect_surf(const shape::Aabb& aabb_) const noexcept
             {
+                const vec3 centre     = aabb_.centre();
+                const vec3 half_width = aabb_.half_width();
+
+                const vec3 v0 = _poss[index::vertex::ALPHA] - centre;
+                const vec3 v1 = _poss[index::vertex::BETA] - centre;
+                const vec3 v2 = _poss[index::vertex::GAMMA] - centre;
+
+                const std::array<vec3, 3> f({{v1 - v0, v2 - v1, v0 - v2}});
+
+                const auto axis_test = [&](const vec3& axis_) {
+                    const double p0 = v0 * axis_;
+                    const double p1 = v1 * axis_;
+                    const double p2 = v2 * axis_;
+
+                    const double r = (std::abs(axis_.x) * half_width.x) + (std::abs(axis_.y) * half_width.y) + (std::abs(axis_.z) * half_width.z);
+
+                    return (std::max(-std::max({p0, p1, p2}), std::min({p0, p1, p2})) <= r);
+                };
+
+                for (size_t i = 0; i < 3; ++i)
+                {
+                    const vec3 axis = math::vec::axis<double, 3>(i);
+
+                    for (size_t j = 0; j < 3; ++j)
+                    {
+                        if (!axis_test(axis ^ f[j]))
+                        {
+                            return (false);
+                        }
+                    }
+
+                    if (!axis_test(axis))
+                    {
+                        return (false);
+                    }
+                }
+
+                return (axis_test(_norm));
             }
 
             inline bool Triangle::intersect_vol(const shape::Aabb& aabb_) const noexcept
             {
+                return (false);
             }
 
 
