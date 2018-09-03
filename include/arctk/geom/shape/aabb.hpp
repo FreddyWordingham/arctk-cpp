@@ -82,8 +82,6 @@ namespace arc //! arctk namespace
                 inline bool contains(const vec3& pos_) const noexcept;
 
                 //  -- Collision --
-                inline bool                                   contains(const vec3& pos_) const noexcept;
-                inline bool                                   contained(const Aabb& aabb_) const noexcept override;
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
                 inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
