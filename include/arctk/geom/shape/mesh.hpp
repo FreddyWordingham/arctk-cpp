@@ -98,7 +98,7 @@ namespace arc //! arctk namespace
 
                 //  -- Intersection --
                 inline bool intersect_surf(const shape::Aabb& aabb_) const noexcept override;
-                inline bool intersect_vol(const shape::Aabb& aabb_) const noexcept override;
+                inline bool intersect_vol(const shape::Aabb& /**/) const noexcept override;
 
                 //  -- Collision --
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -499,7 +499,7 @@ namespace arc //! arctk namespace
                 return (false);
             }
 
-            inline bool Mesh::intersect_vol(const shape::Aabb& aabb_) const noexcept
+            inline bool Mesh::intersect_vol(const shape::Aabb& /*unused*/) const noexcept
             {
                 std::exit(exit::error::UNREACHABLE_CODE);
             }
