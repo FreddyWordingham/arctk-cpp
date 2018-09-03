@@ -256,12 +256,7 @@ namespace arc //! arctk namespace
 
             inline bool Plane::intersect_vol(const shape::Aabb& aabb_) const noexcept
             {
-                if ((aabb_.centre() - _pos) * _norm)
-                {
-                    return (false);
-                }
-
-                return (intersect_surf(aabb_));
+                return (contains(aabb_.centre()) || intersect_surf(aabb_));
             }
 
             inline vec3 Plane::nearest_point_surf(const vec3& pos_) const noexcept
