@@ -75,6 +75,7 @@ namespace arc //! arctk namespace
                 inline bool intersect_surf(const shape::Aabb& aabb_) const noexcept override;
                 inline bool intersect_vol(const shape::Aabb& aabb_) const noexcept override;
                 inline vec3 nearest_point_surf(const vec3& pos_) const noexcept;
+                inline bool contains(const vec3& pos_) const noexcept;
 
                 //  -- Collision --
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -255,11 +256,21 @@ namespace arc //! arctk namespace
 
             inline bool Plane::intersect_vol(const shape::Aabb& aabb_) const noexcept
             {
-                const vec3 line =
+                if ((aabb_.centre() - _pos) * _norm)
+                {
+                    return (false);
+                }
+
+                return (intersect_surf(aabb_));
             }
 
             inline vec3 Plane::nearest_point_surf(const vec3& pos_) const noexcept
             {
+            }
+
+            inline bool Plane::contains(const vec3& pos_) const noexcept
+            {
+                return (((pos_ - _pos) * _norm) <= 0.0);
             }
 
 
