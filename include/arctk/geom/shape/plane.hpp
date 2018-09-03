@@ -266,7 +266,7 @@ namespace arc //! arctk namespace
 
             inline double Plane::surf_dist(const vec3& pos_) const noexcept
             {
-                return (std::abs((_pos * pos_) - (_pos * _norm)) / _pos.mag());
+                return ((_norm * pos_) - (_norm * _pos));
             }
 
             inline bool Plane::contains(const vec3& pos_) const noexcept
