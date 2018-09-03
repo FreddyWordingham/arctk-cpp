@@ -212,7 +212,7 @@ namespace arc //! arctk namespace
 
             inline bool Sphere::intersect_vol(const shape::Aabb& aabb_) const noexcept
             {
-                return ((_pos - aabb_.closest_point(_pos)).mag_sq() < (_rad * _rad));
+                return ((_pos - aabb_.nearest_point_vol(_pos)).mag_sq() < (_rad * _rad));
             }
 
             inline vec3 Sphere::nearest_point_surf(const vec3& pos_) const noexcept
