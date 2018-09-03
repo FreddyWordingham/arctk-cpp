@@ -68,9 +68,13 @@ namespace arc //! arctk namespace
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
                 inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept override;
 
+                //  -- Intersection --
+                inline bool intersect_surf(const shape::Aabb& aabb_) const noexcept override;
+                inline bool intersect_vol(const shape::Aabb& aabb_) const noexcept override;
+                inline vec3 nearest_point_surf(const vec3& pos_) const noexcept;
+                inline vec3 nearest_point_vol(const vec3& pos_) const noexcept;
+
                 //  -- Collision --
-                inline vec3                                   nearest_point_surf(const vec3& pos_) const noexcept;
-                inline vec3                                   nearest_point_vol(const vec3& pos_) const noexcept;
                 inline bool                                   contains(const vec3& pos_) const noexcept;
                 inline bool                                   contains(const Aabb& aabb_) const noexcept;
                 inline bool                                   contained(const Aabb& aabb_) const noexcept override;
@@ -202,7 +206,15 @@ namespace arc //! arctk namespace
             }
 
 
-            //  -- Collision --
+            //  -- Intersection --
+            inline bool Sphere::intersect_surf(const shape::Aabb& aabb_) const noexcept
+            {
+            }
+
+            inline bool Sphere::intersect_vol(const shape::Aabb& aabb_) const noexcept
+            {
+            }
+
             inline vec3 Sphere::nearest_point_surf(const vec3& pos_) const noexcept
             {
                 return (((pos_ - _pos).normal() * _rad) + _pos);
@@ -218,6 +230,8 @@ namespace arc //! arctk namespace
                 return (closest_surface_point(pos_));
             }
 
+
+            //  -- Collision --
             /**
              *  Determine if a position falls within the bounds of the sphere.
              *
