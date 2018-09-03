@@ -481,6 +481,13 @@ namespace arc //! arctk namespace
 
 
             //  -- Intersection --
+            /**
+             *  Determine if an intersection occurs between the mesh's surface and an axis-aligned bounding box.
+             *
+             *  @param  aabb_   Axis-aligned bounding box to test.
+             *
+             *  @return True if the mesh's surface intersects with the axis-aligned bounding box.
+             */
             inline bool Mesh::intersect_surf(const shape::Aabb& aabb_) const noexcept
             {
                 if (!_box.intersect_vol(aabb_))
