@@ -75,8 +75,13 @@ namespace arc //! arctk namespace
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
                 inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept override;
 
+                //  -- Intersection --
+                inline bool intersect_surf(const shape::Aabb& aabb_) const noexcept override;
+                inline bool intersect_vol(const shape::Aabb& aabb_) const noexcept override;
+                inline vec3 nearest_point_vol(const vec3& pos_) const noexcept;
+                inline bool contains(const vec3& pos_) const noexcept;
+
                 //  -- Collision --
-                inline vec3                                   closest_point(const vec3& pos_) const noexcept;
                 inline bool                                   contains(const vec3& pos_) const noexcept;
                 inline bool                                   contained(const Aabb& aabb_) const noexcept override;
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -259,8 +264,16 @@ namespace arc //! arctk namespace
             }
 
 
-            //  -- Collision --
-            inline vec3 Aabb::closest_point(const vec3& pos_) const noexcept
+            //  -- Intersection --
+            inline bool Aabb::intersect_surf(const shape::Aabb& aabb_) const noexcept
+            {
+            }
+
+            inline bool Aabb::intersect_vol(const shape::Aabb& aabb_) const noexcept
+            {
+            }
+
+            inline vec3 Aabb::nearest_point_vol(const vec3& pos_) const noexcept
             {
                 vec3 pos;
 
@@ -295,6 +308,8 @@ namespace arc //! arctk namespace
                 return (!((pos_.x < _min.x) || (pos_.x > _max.x) || (pos_.y < _min.y) || (pos_.y > _max.y) || (pos_.z < _min.z) || (pos_.z > _max.z)));
             }
 
+
+            //  -- Collision --
             inline bool Aabb::contained(const Aabb& aabb_) const noexcept
             {
                 for (size_t i = 0; i < 3; ++i)
