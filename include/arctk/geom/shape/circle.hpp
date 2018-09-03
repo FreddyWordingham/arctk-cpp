@@ -289,6 +289,13 @@ namespace arc //! arctk namespace
                 return (aabb_.contains(nearest_point_surf(aabb_.centre())));
             }
 
+            /**
+             *  Determine if an intersection occurs between the circle's volume and an axis-aligned bounding box.
+             *
+             *  @param  aabb_   Axis-aligned bounding box to test.
+             *
+             *  @return True if the circle's volume intersects with the axis-aligned bounding box.
+             */
             inline bool Circle::intersect_vol(const shape::Aabb& aabb_) const noexcept
             {
                 return (intersect_surf(aabb_));
