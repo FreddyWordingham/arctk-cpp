@@ -279,18 +279,7 @@ namespace arc //! arctk namespace
             //  -- Intersection --
             inline bool Circle::intersect_surf(const shape::Aabb& aabb_) const noexcept
             {
-                const double r = aabb_.half_width() * arc::vec3(std::abs(_norm.x), std::abs(_norm.y), std::abs(_norm.z));
-                const double s = (_norm * aabb_.centre()) - (_pos * _norm);
-
-                if (std::abs(s) > r)
-                {
-                    return (false);
-                }
-
-                if ((_pos - aabb_.nearest_point_vol(_pos)).mag_sq() > (_rad * _rad))
-                {
-                    return (false);
-                }
+                return (aabb_.contains(nearest_point_surf(aabb_.centre())));
             }
 
             inline bool Circle::intersect_vol(const shape::Aabb& aabb_) const noexcept
