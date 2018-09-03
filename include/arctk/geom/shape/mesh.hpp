@@ -483,10 +483,10 @@ namespace arc //! arctk namespace
             //  -- Intersection --
             inline bool Mesh::intersect_surf(const shape::Aabb& aabb_) const noexcept
             {
-                /*                if (!_box.intersect_vol(aabb_))
-                                {
-                                    return (false);
-                                }*/
+                if (!_box.intersect_vol(aabb_))
+                {
+                    return (false);
+                }
 
                 for (size_t i = 0; i < _tris.size(); ++i)
                 {
