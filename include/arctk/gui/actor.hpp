@@ -997,7 +997,7 @@ namespace arc //! arctk namespace
              *
              *  @return Sphere actor.
              */
-            inline Actor act(const geom::shape::Sphere& sph_) noexcept
+            inline Actor act(const geom::shape::Sphere& sph_) noexcept // NOLINT
             {
                 std::vector<glm::vec3> verts;
                 verts.reserve(20 * 3 * 2);
