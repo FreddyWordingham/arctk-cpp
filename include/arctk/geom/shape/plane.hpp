@@ -246,11 +246,8 @@ namespace arc //! arctk namespace
             //  -- Intersection --
             inline bool Plane::intersect_surf(const shape::Aabb& aabb_) const noexcept
             {
-                const vec3 centre     = (aabb_.max() + aabb_.min()) * 0.5;
-                const vec3 half_width = aabb_.max() - centre;
-
-                const double r = (half_width.x * std::abs(_norm.x)) + (half_width.y * std::abs(_norm.y)) + (half_width.z * std::abs(_norm.z));
-                const double s = (_norm * centre) - (_pos * _norm);
+                const double r = aabb_.half_width() * arc::vec3(std::abs(_norm.x), std::abs(_norm.y), std::abs(_norm.z));
+                const double s = (_norm * aabb_.centre()) - (_pos * _norm);
 
                 return (std::abs(s) <= r);
             }
