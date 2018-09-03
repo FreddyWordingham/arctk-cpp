@@ -223,6 +223,11 @@ namespace arc //! arctk namespace
                 return ((_max + _min) * 0.5);
             }
 
+            /**
+             *  Get the half widths of the axis-aligned bounding box.
+             *
+             *  @return Half widths of the axis-aligned bounding box.
+             */
             inline vec3 Aabb::half_width() const noexcept
             {
                 return ((_max - _min) * 0.5);
