@@ -227,7 +227,7 @@ namespace arc //! arctk namespace
                     return (pos_);
                 }
 
-                return (closest_surface_point(pos_));
+                return (nearest_point_surf(pos_));
             }
 
             /**
