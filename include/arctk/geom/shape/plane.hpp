@@ -259,6 +259,13 @@ namespace arc //! arctk namespace
                 return (std::abs(s) <= r);
             }
 
+            /**
+             *  Determine if an intersection occurs between the plane's volume and an axis-aligned bounding box.
+             *
+             *  @param  aabb_   Axis-aligned bounding box to test.
+             *
+             *  @return True if the plane's volume intersects with the axis-aligned bounding box.
+             */
             inline bool Plane::intersect_vol(const shape::Aabb& aabb_) const noexcept
             {
                 return (contains(aabb_.centre()) || intersect_surf(aabb_));
