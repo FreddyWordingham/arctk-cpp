@@ -353,7 +353,7 @@ namespace arc //! arctk namespace
 
             inline bool Triangle::intersect_vol(const shape::Aabb& aabb_) const noexcept
             {
-                return (false);
+                return (intersect_surf(aabb_));
             }
 
 
