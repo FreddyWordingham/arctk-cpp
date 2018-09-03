@@ -96,6 +96,10 @@ namespace arc //! arctk namespace
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
                 inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept override;
 
+                //  -- Intersection --
+                inline bool intersect_surf(const shape::Aabb& aabb_) const noexcept override;
+                inline bool intersect_vol(const shape::Aabb& aabb_) const noexcept override;
+
                 //  -- Collision --
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
                 inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -473,6 +477,30 @@ namespace arc //! arctk namespace
             inline std::pair<vec3, vec3> Mesh::random_pos_and_norm(random::Generator* rng_) const noexcept
             {
                 return (_tris[utl::search::lower(_areas, rng_->gen())].random_pos_and_norm(rng_));
+            }
+
+
+            //  -- Intersection --
+            inline bool Mesh::intersect_surf(const shape::Aabb& aabb_) const noexcept
+            {
+                /*                if (!_box.intersect_vol(aabb_))
+                                {
+                                    return (false);
+                                }*/
+
+                for (size_t i = 0; i < _tris.size(); ++i)
+                {
+                    if (_tris[i].intersect_surf(aabb_))
+                    {
+                        return (true);
+                    }
+                }
+
+                return (false);
+            }
+
+            inline bool Mesh::intersect_vol(const shape::Aabb& aabb_) const noexcept
+            {
             }
 
 
