@@ -206,6 +206,13 @@ namespace arc //! arctk namespace
 
 
             //  -- Intersection --
+            /**
+             *  Determine if an intersection occurs between the sphere's surface and an axis-aligned bounding box.
+             *
+             *  @param  aabb_   Axis-aligned bounding box to test.
+             *
+             *  @return True if the sphere's surface intersects with the axis-aligned bounding box.
+             */
             inline bool Sphere::intersect_surf(const shape::Aabb& aabb_) const noexcept
             {
                 return (aabb_.contains(nearest_point_surf((aabb_.max() + aabb_.min()) * 0.5)));
