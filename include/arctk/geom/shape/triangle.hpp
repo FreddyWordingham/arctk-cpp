@@ -358,6 +358,13 @@ namespace arc //! arctk namespace
                 return (axis_test(_norm));
             }
 
+            /**
+             *  Determine if an intersection occurs between the triangle's volume and an axis-aligned bounding box.
+             *
+             *  @param  aabb_   Axis-aligned bounding box to test.
+             *
+             *  @return True if the triangle's volume intersects with the axis-aligned bounding box.
+             */
             inline bool Triangle::intersect_vol(const shape::Aabb& aabb_) const noexcept
             {
                 return (intersect_surf(aabb_));
