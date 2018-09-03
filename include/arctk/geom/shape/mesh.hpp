@@ -501,6 +501,7 @@ namespace arc //! arctk namespace
 
             inline bool Mesh::intersect_vol(const shape::Aabb& aabb_) const noexcept
             {
+                std::exit(exit::error::UNREACHABLE_CODE);
             }
 
 
