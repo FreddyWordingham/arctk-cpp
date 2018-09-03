@@ -75,9 +75,6 @@ namespace arc //! arctk namespace
                 inline vec3 nearest_point_vol(const vec3& pos_) const noexcept;
 
                 //  -- Collision --
-                inline bool                                   contains(const vec3& pos_) const noexcept;
-                inline bool                                   contains(const Aabb& aabb_) const noexcept;
-                inline bool                                   contained(const Aabb& aabb_) const noexcept override;
                 inline std::optional<double>                  collision(const vec3& pos_, const vec3& dir_) const noexcept override;
                 inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
@@ -209,10 +206,12 @@ namespace arc //! arctk namespace
             //  -- Intersection --
             inline bool Sphere::intersect_surf(const shape::Aabb& aabb_) const noexcept
             {
+                return (aabb_.contains(closest_surface_point((aabb_.max() + aabb_.min()) * 0.5)));
             }
 
             inline bool Sphere::intersect_vol(const shape::Aabb& aabb_) const noexcept
             {
+                return ((_pos - aabb_.closest_point(_pos)).mag_sq() < (_rad * _rad));
             }
 
             inline vec3 Sphere::nearest_point_surf(const vec3& pos_) const noexcept
@@ -242,16 +241,6 @@ namespace arc //! arctk namespace
             inline bool Sphere::contains(const vec3& pos_) const noexcept
             {
                 return (math::geom::distance(pos_, _pos) <= _rad);
-            }
-
-            inline bool Sphere::contains(const Aabb& aabb_) const noexcept
-            {
-                return ((_pos - aabb_.closest_point(_pos)).mag_sq() < (_rad * _rad));
-            }
-
-            inline bool Sphere::contained(const Aabb& aabb_) const noexcept
-            {
-                return (aabb_.contains(closest_surface_point((aabb_.max() + aabb_.min()) * 0.5)));
             }
 
             /**
