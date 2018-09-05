@@ -84,6 +84,7 @@ namespace arc //! arctk namespace
                 //  -- Initialisation --
                 inline std::vector<Triangle> init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const mat4& transform_) const noexcept;
                 inline unsigned int          init_num_poss(const std::vector<vec3>& poss_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
+                inline unsigned int          init_num_norms(const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
                 inline std::vector<double>   init_areas() const noexcept;
                 inline Aabb                  init_box() const noexcept;
 
@@ -169,7 +170,6 @@ namespace arc //! arctk namespace
                     for (size_t j = 0; j < 3; ++j)
                     {
                         PRE(pos_indices[i] < poss_.size());
-                        PRE(norm_indices[i] < norms_.size());
 
                         used[pos_indices[j]] = true;
                     }
@@ -185,6 +185,34 @@ namespace arc //! arctk namespace
                 }
 
                 return (num_poss);
+            }
+
+            inline unsigned int Mesh::init_num_norms(const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
+            {
+                std::vector<bool> used(norms_.size(), false);
+
+                for (size_t i = 0; i < faces_.size(); ++i)
+                {
+                    const std::array<size_t, 3>& norm_indices = faces_[i][1];
+
+                    for (size_t j = 0; j < 3; ++j)
+                    {
+                        PRE(norm_indices[i] < norms_.size());
+
+                        used[norm_indices[j]] = true;
+                    }
+                }
+
+                unsigned int num_norms = 0;
+                for (size_t i = 0; i < used.size(); ++i)
+                {
+                    if (used[i])
+                    {
+                        ++num_norms;
+                    }
+                }
+
+                return (num_norms);
             }
 
             /**
