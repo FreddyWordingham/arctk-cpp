@@ -686,20 +686,28 @@ namespace arc //! arctk namespace
                 return (_tris[index_]);
             }
 
+            /**
+             *  Get the number of vertex positions forming the mesh.
+             *
+             *  @return Number of vertex positions forming the mesh.
+             */
             inline size_t Mesh::num_verts() const noexcept
             {
                 return (_num_verts);
             }
+
 
             inline size_t Mesh::num_norms() const noexcept
             {
                 return (_num_norms);
             }
 
+
             inline size_t Mesh::num_edges() const noexcept
             {
                 return (_num_edges);
             }
+
 
             inline size_t Mesh::num_faces() const noexcept
             {
