@@ -86,17 +86,17 @@ namespace arc //! arctk namespace
 
               private:
                 //  -- Initialisation --
-                inline std::vector<vec3>     parse_poss(const std::string& serial_) const noexcept;
-                inline std::vector<vec3>     parse_norms(const std::string& serial_) const noexcept;
-                inline std::vector<vec3>     parse_faces(const std::string& serial_) const noexcept;
-                inline std::vector<vec3>     transform_poss(const std::vector<vec3>& poss_, const mat4& transform_) const noexcept;
-                inline std::vector<vec3>     transform_norms(const std::vector<vec3>& norms_, const mat4& transform_) const noexcept;
-                inline std::vector<Triangle> init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
-                inline size_t                init_num_verts(const std::vector<vec3>& poss_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
-                inline size_t                init_num_norms(const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
-                inline size_t                init_num_edges(const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
-                inline std::vector<double>   init_areas() const noexcept;
-                inline Aabb                  init_box() const noexcept;
+                inline std::vector<vec3>                                 parse_poss(const std::string& serial_) const noexcept;
+                inline std::vector<vec3>                                 parse_norms(const std::string& serial_) const noexcept;
+                inline std::vector<std::array<std::array<size_t, 3>, 2>> parse_faces(const std::string& serial_) const noexcept;
+                inline std::vector<vec3>                                 transform_poss(const std::vector<vec3>& poss_, const mat4& transform_) const noexcept;
+                inline std::vector<vec3>                                 transform_norms(const std::vector<vec3>& norms_, const mat4& transform_) const noexcept;
+                inline std::vector<Triangle>                             init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
+                inline size_t                                            init_num_verts(const std::vector<vec3>& poss_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
+                inline size_t                                            init_num_norms(const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
+                inline size_t                                            init_num_edges(const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
+                inline std::vector<double>                               init_areas() const noexcept;
+                inline Aabb                                              init_box() const noexcept;
 
 
                 //  == METHODS ==
@@ -192,8 +192,11 @@ namespace arc //! arctk namespace
                 std::stringstream serial_stream(serial_);
                 std::string       line;
 
+                unsigned int line = 0;
                 while (std::getline(serial_stream, line))
                 {
+                    ++line;
+
                     std::stringstream line_stream(line);
                     std::string       word;
                     line_stream >> word;
@@ -202,6 +205,14 @@ namespace arc //! arctk namespace
                     {
                         vec3 pos;
                         line_stream >> pos.x >> pos.y >> pos.z;
+
+                        if (line_stream.rdbuf()->in_avail() != 0)
+                        {
+                            std::cerr << "Unable to construct mesh object.\n"
+                                      << "Non-three dimensional vertex position located at line: `" << line << "`.\n";
+
+                            std::exit(exit::error::FAILED_PARSE);
+                        }
 
                         poss.emplace_back(pos);
                     }
@@ -225,8 +236,11 @@ namespace arc //! arctk namespace
                 std::stringstream serial_stream(serial_);
                 std::string       line;
 
+                unsigned int line = 0;
                 while (std::getline(serial_stream, line))
                 {
+                    ++line;
+
                     std::stringstream line_stream(line);
                     std::string       word;
                     line_stream >> word;
@@ -235,6 +249,14 @@ namespace arc //! arctk namespace
                     {
                         vec3 norm;
                         line_stream >> norm.x >> norm.y >> norm.z;
+
+                        if (line_stream.rdbuf()->in_avail() != 0)
+                        {
+                            std::cerr << "Unable to construct mesh object.\n"
+                                      << "Non-three dimensional vertex normal located at line: `" << line << "`.\n";
+
+                            std::exit(exit::error::FAILED_PARSE);
+                        }
 
                         norms.emplace_back(norm.normal());
                     }
@@ -249,23 +271,68 @@ namespace arc //! arctk namespace
                 return (norms);
             }
 
-            inline std::vector<vec3> Mesh::parse_faces(const std::string& serial_) const noexcept
+            inline std::vector<std::array<std::array<size_t, 3>, 2>> Mesh::parse_faces(const std::string& serial_) const noexcept
             {
                 PRE(!serial_.empty());
 
-                std::vector<vec3> faces;
+                std::vector<std::array<std::array<size_t, 3>, 2>> faces;
 
                 std::stringstream serial_stream(serial_);
                 std::string       line;
 
+                unsigned int line = 0;
                 while (std::getline(serial_stream, line))
                 {
+                    ++line;
+
                     std::stringstream line_stream(line);
                     std::string       word;
                     line_stream >> word;
 
                     if (word == FACE_KEYWORD)
                     {
+                        std::array<std::string, 3> face;
+                        line_stream >> face[index::vertex::ALPHA] >> face[index::vertex::BETA] >> face[index::vertex::GAMMA];
+
+                        if (line_stream.rdbuf()->in_avail() != 0)
+                        {
+                            std::cerr << "Unable to construct mesh object.\n"
+                                      << "Non-triangular face located at line: `" << line << "`.\n";
+
+                            std::exit(exit::error::FAILED_PARSE);
+                        }
+
+
+                        std::array<size_t, 3> pos_index{}, norm_index{};
+                        for (size_t i = 0; i < 3; ++i)
+                        {
+                            const size_t first_slash = face[i].find_first_of('/');
+                            const size_t last_slash  = face[i].find_last_of('/');
+
+                            std::stringstream pos(face[i].substr(0, first_slash));
+                            pos >> pos_index[i];
+                            --pos_index[i];
+
+                            std::stringstream norm(face[i].substr(last_slash + 1));
+                            norm >> norm_index[i];
+                            --norm_index[i];
+
+                            if (pos.fail() || norm.fail())
+                            {
+                                std::cerr << "Unable to construct mesh object.\n"
+                                          << "Unable to parse line: `" << line << "`.\n";
+
+                                std::exit(exit::error::FAILED_PARSE);
+                            }
+                        }
+
+                        faces.emplace_back({{pos_index, norm_index}});
+                    }
+
+                    if (line_stream.fail())
+                    {
+                        std::cerr << "Unable to construct mesh object.\n"
+                                  << "Unable to parse line: `" << line << "`.\n";
                     }
                 }
 
