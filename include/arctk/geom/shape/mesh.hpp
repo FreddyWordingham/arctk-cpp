@@ -696,7 +696,11 @@ namespace arc //! arctk namespace
                 return (_num_verts);
             }
 
-
+            /**
+             *  Get the number of vertex normals forming the mesh.
+             *
+             *  @return Number of vertex normals forming the mesh.
+             */
             inline size_t Mesh::num_norms() const noexcept
             {
                 return (_num_norms);
