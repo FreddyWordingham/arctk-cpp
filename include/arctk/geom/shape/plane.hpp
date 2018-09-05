@@ -283,6 +283,13 @@ namespace arc //! arctk namespace
                 return (pos_ - (_norm * surf_dist(pos_)));
             }
 
+            /**
+             *  Calculate the distance from a point to the surface of the plane.
+             *
+             *  @param  pos_    Position of the of the point.
+             *
+             *  @return Distance from a point to the surface of the plane.
+             */
             inline double Plane::surf_dist(const vec3& pos_) const noexcept
             {
                 return ((_norm * pos_) - (_norm * _pos));
