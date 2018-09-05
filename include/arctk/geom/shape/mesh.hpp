@@ -412,7 +412,7 @@ namespace arc //! arctk namespace
             /**
              *  Transform the vector of vertex normals using a transformation matrix.
              *
-             *  @param  poss_       Vector of vertex normals to be transformed.
+             *  @param  norms_      Vector of vertex normals to be transformed.
              *  @param  transform_  Transformation matrix to apply to the vertex normals.
              *
              *  @pre    norms_ may not be empty.
