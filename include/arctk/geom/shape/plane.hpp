@@ -271,6 +271,13 @@ namespace arc //! arctk namespace
                 return (contains(aabb_.centre()) || intersect_surf(aabb_));
             }
 
+            /**
+             *  Determine the nearest point to a given position on the surface of the plane.
+             *
+             *  @param  pos_    Position to find the nearest surface point to.
+             *
+             *  @return Nearest point to a given position on the surface of the plane.
+             */
             inline vec3 Plane::nearest_point_surf(const vec3& pos_) const noexcept
             {
                 return (pos_ - (_norm * surf_dist(pos_)));
