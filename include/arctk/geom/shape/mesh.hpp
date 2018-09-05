@@ -123,7 +123,7 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) noexcept
+            inline Mesh::Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) noexcept
               : _tris(init_tris(poss_, norms_, faces_))
               , _num_verts(init_num_verts(poss_, faces_))
               , _num_verts(init_num_verts(norms_, faces_))
