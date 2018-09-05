@@ -230,6 +230,13 @@ namespace arc //! arctk namespace
                 return ((_pos - aabb_.nearest_point_vol(_pos)).mag_sq() < (_rad * _rad));
             }
 
+            /**
+             *  Determine the nearest point to a given position on the surface of the sphere.
+             *
+             *  @param  pos_    Position to find the nearest surface point to.
+             *
+             *  @return Nearest point to a given position on the surface of the sphere.
+             */
             inline vec3 Sphere::nearest_point_surf(const vec3& pos_) const noexcept
             {
                 return (((pos_ - _pos).normal() * _rad) + _pos);
