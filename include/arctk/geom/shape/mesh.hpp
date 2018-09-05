@@ -94,6 +94,10 @@ namespace arc //! arctk namespace
               public:
                 //  -- Getters --
                 inline const Triangle& tri(size_t index_) const noexcept;
+                inline size_t          num_verts() const noexcept;
+                inline size_t          num_norms() const noexcept;
+                inline size_t          num_edges() const noexcept;
+                inline size_t          num_faces() const noexcept;
 
                 //  -- Properties --
                 inline vec3   min() const noexcept override;
@@ -339,6 +343,26 @@ namespace arc //! arctk namespace
                 PRE(index_ < _tris.size());
 
                 return (_tris[index_]);
+            }
+
+            inline size_t Mesh::num_verts() const noexcept
+            {
+                return (_num_verts);
+            }
+
+            inline size_t Mesh::num_norms() const noexcept
+            {
+                return (_num_norms);
+            }
+
+            inline size_t Mesh::num_edges() const noexcept
+            {
+                return (_num_edges);
+            }
+
+            inline size_t Mesh::num_faces() const noexcept
+            {
+                return (_num_faces);
             }
 
 
