@@ -283,6 +283,10 @@ namespace arc //! arctk namespace
 
             inline std::vector<Triangle> Mesh::init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
             {
+                PRE(poss_.size() >= 3);
+                PRE(!norms_.empty());
+                PRE(!faces_.empty());
+
                 std::vector<Triangle> tris;
                 tris.reserve(faces_.size());
 
