@@ -325,7 +325,7 @@ namespace arc //! arctk namespace
             /**
              *  Calculate the distance from a point to the plane the circle lies within.
              *
-             *  @param  pos_    Position of the of the point.
+             *  @param  pos_    Position of the point.
              *
              *  @return Distance from a point to the plane the circle lies within.
              */
