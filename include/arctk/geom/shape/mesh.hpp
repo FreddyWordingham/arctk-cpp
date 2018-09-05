@@ -439,6 +439,21 @@ namespace arc //! arctk namespace
                 return (norms);
             }
 
+            /**
+             *  Initialise the vector of triangles forming the mesh.
+             *
+             *  @param  poss_   Vector of vertex positions.
+             *  @param  norms_  Vector of vertex normals.
+             *  @param  faces_  Vector of face data used to construct triangle faces.
+             *
+             *  @pre    poss_ must contain at least three elements.
+             *  @pre    norms_ may not be empty.
+             *  @pre    faces_ may not be empty.
+             *
+             *  @post   tris may not be empty.
+             *
+             *  @return Initialised the vector of triangles forming the mesh.
+             */
             inline std::vector<Triangle> Mesh::init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
             {
                 PRE(poss_.size() >= 3);
