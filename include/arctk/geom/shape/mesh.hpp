@@ -452,7 +452,7 @@ namespace arc //! arctk namespace
                     {
                         for (size_t k = 0; k < 3; ++k)
                         {
-                            if (utl::properties::contains(edges, edge_indices[k]))
+                            if (!utl::properties::contains(edges, edge_indices[k]))
                             {
                                 edges.emplace_back(edge_indices[k]);
                             }
