@@ -76,9 +76,13 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline explicit Mesh(const std::string& serial_, const vec3& scale_ = vec3(1.0, 1.0, 1.0), const vec3& rot_ = vec3(0.0, 0.0, 0.0), const vec3& trans_ = vec3(0.0, 0.0, 0.0)) noexcept;
 
+
+                inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) noexcept;
+
               private:
                 //  -- Initialisation --
                 inline std::vector<Triangle> init_tris(const std::string& serial_, const mat4& transform_) const noexcept;
+                inline std::vector<Triangle> init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const mat4& transform_) const noexcept;
                 inline std::vector<double>   init_areas() const noexcept;
                 inline Aabb                  init_box() const noexcept;
 
@@ -130,6 +134,16 @@ namespace arc //! arctk namespace
               , _box(init_box())
             {
                 PRE(!serial_.empty());
+            }
+
+            inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) noexcept
+              : _tris(init_tris(poss_, norms_, faces_))
+              , _areas(init_areas())
+              , _box(init_box())
+            {
+                PRE(poss_.size() >= 3);
+                PRE(!norms_.empty());
+                PRE(!faces_.empty());
             }
 
 
@@ -263,6 +277,29 @@ namespace arc //! arctk namespace
                 }
 
                 POST(!tris.empty());
+
+                return (tris);
+            }
+
+            inline std::vector<Triangle> Mesh::init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
+            {
+                std::vector<Triangle> tris;
+                tris.reserve(faces_.size());
+
+                for (size_t i = 0; i < faces_.size(); ++i)
+                {
+                    const std::array<size_t, 3>& pos_indices  = faces_[i][0];
+                    const std::array<size_t, 3>& norm_indices = faces_[i][1];
+
+                    for (size_t i = 0; i < 3; ++i)
+                    {
+                        PRE(pos_indices[i] < poss_.size());
+                        PRE(norm_indices[i] < norms_.size());
+                    }
+
+                    tris.emplace_back({{poss_[pos_indices[index::dim::cartesian::X]], poss_[pos_indices[index::dim::cartesian::Y]], poss_[pos_indices[index::dim::cartesian::Z]]}},
+                                      {{norms_[norm_indices[index::dim::cartesian::X]], norms_[norm_indices[index::dim::cartesian::Y]], norms_[norm_indices[index::dim::cartesian::Z]]}});
+                }
 
                 return (tris);
             }
