@@ -286,7 +286,7 @@ namespace arc //! arctk namespace
             /**
              *  Calculate the distance from a point to the surface of the plane.
              *
-             *  @param  pos_    Position of the of the point.
+             *  @param  pos_    Position of the point.
              *
              *  @return Distance from a point to the surface of the plane.
              */
@@ -295,6 +295,13 @@ namespace arc //! arctk namespace
                 return ((_norm * pos_) - (_norm * _pos));
             }
 
+            /**
+             *  Determine if a point is contained within, or beneth, the plane.
+             *
+             *  @param  pos_    Position of the point.
+             *
+             *  @return True if the point is contained within, or beneth, the plane.
+             */
             inline bool Plane::contains(const vec3& pos_) const noexcept
             {
                 return (((pos_ - _pos) * _norm) <= 0.0);
