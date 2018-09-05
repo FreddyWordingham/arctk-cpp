@@ -91,7 +91,6 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline size_t          num_tri() const noexcept;
                 inline const Triangle& tri(size_t index_) const noexcept;
 
                 //  -- Properties --
@@ -228,16 +227,6 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            /**
-             *  Get the number of triangles within the mesh.
-             *
-             *  @return Number of triangles within the mesh.
-             */
-            inline size_t Mesh::num_tri() const noexcept
-            {
-                return (_tris.size());
-            }
-
             /**
              *  Get a const reference to a triangle within the mesh.
              *
