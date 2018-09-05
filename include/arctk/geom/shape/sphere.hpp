@@ -233,7 +233,7 @@ namespace arc //! arctk namespace
             /**
              *  Determine the nearest point to a given position on the surface of the sphere.
              *
-             *  @param  pos_    Position to find the nearest surface point to.
+             *  @param  pos_    Position of the point.
              *
              *  @return Nearest point to a given position on the surface of the sphere.
              */
