@@ -929,9 +929,9 @@ namespace arc //! arctk namespace
             inline Actor act(const geom::shape::Mesh& mesh_) noexcept
             {
                 std::vector<glm::vec3> verts;
-                verts.reserve(mesh_.num_tri() * 3 * 2);
+                verts.reserve(mesh_.num_faces() * 3 * 2);
 
-                for (size_t i = 0; i < mesh_.num_tri(); ++i)
+                for (size_t i = 0; i < mesh_.num_faces(); ++i)
                 {
                     const geom::shape::Triangle& tri = mesh_.tri(i);
 
