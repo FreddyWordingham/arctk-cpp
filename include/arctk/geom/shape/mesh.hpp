@@ -122,7 +122,9 @@ namespace arc //! arctk namespace
               : _tris(init_tris(poss_, norms_, faces_))
               , _num_verts(init_num_verts(poss_, faces_))
               , _num_verts(init_num_verts(norms_, faces_))
+              , _num_edges(init_num_edges())
               , _num_faces(faces_.size())
+              , _closed((_num_verts + _num_faces - _num_edges) == 2)
               , _areas(init_areas())
               , _box(init_box())
             {
