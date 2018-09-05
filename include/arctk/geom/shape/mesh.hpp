@@ -256,6 +256,8 @@ namespace arc //! arctk namespace
              *
              *  @pre    serial_ may not be empty.
              *
+             *  @post   norms may not be empty.
+             *
              *  @return Parsed vector of vertex normals.
              */
             inline std::vector<vec3> Mesh::parse_norms(const std::string& serial_) const noexcept
