@@ -172,8 +172,6 @@ namespace arc //! arctk namespace
                 std::string       line;
                 while (std::getline(serial_stream, line))
                 {
-                    ++line;
-
                     std::stringstream line_stream(line);
                     std::string       word;
                     line_stream >> word;
@@ -214,8 +212,6 @@ namespace arc //! arctk namespace
                 std::string       line;
                 while (std::getline(serial_stream, line))
                 {
-                    ++line;
-
                     std::stringstream line_stream(line);
                     std::string       word;
                     line_stream >> word;
@@ -256,8 +252,6 @@ namespace arc //! arctk namespace
                 std::string       line;
                 while (std::getline(serial_stream, line))
                 {
-                    ++line;
-
                     std::stringstream line_stream(line);
                     std::string       word;
                     line_stream >> word;
