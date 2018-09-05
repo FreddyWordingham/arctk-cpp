@@ -403,6 +403,16 @@ namespace arc //! arctk namespace
                 return (poss);
             }
 
+            /**
+             *  Transform the vector of vertex normals using a transformation matrix.
+             *
+             *  @param  poss_       Vector of vertex normals to be transformed.
+             *  @param  transform_  Transformation matrix to apply to the vertex normals.
+             *
+             *  @pre    norms_ may not be empty.
+             *
+             *  @return Vector of transformed vertex normals.
+             */
             inline std::vector<vec3> Mesh::transform_norms(const std::vector<vec3>& norms_, const mat4& transform_) const noexcept
             {
                 PRE(!norms_.empty());
