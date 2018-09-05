@@ -253,7 +253,7 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                return (edges.size());
+                return (static_cast<unsigned int>(edges.size()));
             }
 
             /**
