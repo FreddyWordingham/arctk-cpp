@@ -334,7 +334,7 @@ namespace arc //! arctk namespace
                     vec4 norm(norms_[i].x, norms_[i].y, norms_[i].z, 0.0);
                     norm = transform * norm;
 
-                    norms.emplace_back(norm.x, norm.y, norm.z);
+                    norms.emplace_back(vec3(norm.x, norm.y, norm.z).normal());
                 }
 
                 return (norms);
