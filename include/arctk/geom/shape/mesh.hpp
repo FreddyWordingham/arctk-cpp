@@ -61,18 +61,18 @@ namespace arc //! arctk namespace
                 //  -- Triangle Data --
                 const std::vector<Triangle> _tris; //!< List of triangles forming the mesh.
 
-                //  -- Areas --
-                const std::vector<double> _areas; //!< Normalised relative area of each triangle forming the mesh.
-
-                //  -- Bounds --
-                const Aabb _box; //!< Bounding box of the mesh.
-
                 //  -- Properties --
                 const unsigned int _num_poss;  //!< Number of unique vertex positions forming the mesh.
                 const unsigned int _num_norms; //!< Number of unique vertex normals forming the mesh.
                 const unsigned int _num_edges; //!< Number of unique edges forming the mesh.
                 const unsigned int _num_faces; //!< Number of unique triangle faces forming the mesh.
                 const bool         _closed;    //!< True if the surface of the mesh forms a closed surface.
+
+                //  -- Areas --
+                const std::vector<double> _areas; //!< Normalised relative area of each triangle forming the mesh.
+
+                //  -- Bounds --
+                const Aabb _box; //!< Bounding box of the mesh.
 
 
                 //  == INSTANTIATION ==
@@ -83,6 +83,7 @@ namespace arc //! arctk namespace
               private:
                 //  -- Initialisation --
                 inline std::vector<Triangle> init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const mat4& transform_) const noexcept;
+                inline unsigned int          init_num_poss(const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
                 inline std::vector<double>   init_areas() const noexcept;
                 inline Aabb                  init_box() const noexcept;
 
