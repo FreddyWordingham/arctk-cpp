@@ -242,7 +242,7 @@ namespace arc //! arctk namespace
                         std::swap(pos_indices[1], pos_indices[2]);
                     }
 
-                    const std::array<std::array<size_t, 2>, 3> edge_indices({{{{pos_indices[0], pos_indices[1]}} {{pos_indices[1], pos_indices[2]}} {{pos_indices[0], pos_indices[2]}}}});
+                    const std::array<std::array<size_t, 2>, 3> edge_indices({{{{pos_indices[0], pos_indices[1]}}, {{pos_indices[1], pos_indices[2]}}, {{pos_indices[0], pos_indices[2]}}}});
 
                     for (size_t j = 0; j < edges.size(); ++j)
                     {
