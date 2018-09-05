@@ -215,9 +215,9 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Get the topology of the shape.
+             *  Get the topology of the axis-aligned bounding box.
              *
-             *  @return True if the surface of the shape forms a bounded volume.
+             *  @return True as the surface of the axis-aligned bounding box forms a bounded volume.
              */
             inline bool Aabb::closed() const noexcept
             {
