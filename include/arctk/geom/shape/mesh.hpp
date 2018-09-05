@@ -141,6 +141,12 @@ namespace arc //! arctk namespace
                 PRE(!serial_.empty());
             }
 
+            inline Mesh::Mesh(const std::string& serial_, const mat4& transform_) noexcept
+              : Mesh(parse_poss(serial_), parse_norms(serial_), parse_faces(serial_), transform_)
+            {
+                PRE(!serial_.empty());
+            }
+
             inline Mesh::Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
               : Mesh(poss_, norms_, faces_, math::mat::transform(scale_, rot_, trans_))
             {
