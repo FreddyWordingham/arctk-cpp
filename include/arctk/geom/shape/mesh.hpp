@@ -305,6 +305,8 @@ namespace arc //! arctk namespace
                                       {{norms_[norm_indices[index::dim::cartesian::X]], norms_[norm_indices[index::dim::cartesian::Y]], norms_[norm_indices[index::dim::cartesian::Z]]}});
                 }
 
+                POST(!tris.empty());
+
                 return (tris);
             }
 
