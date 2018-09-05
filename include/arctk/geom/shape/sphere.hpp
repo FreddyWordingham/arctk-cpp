@@ -259,6 +259,13 @@ namespace arc //! arctk namespace
                 return (nearest_point_surf(pos_));
             }
 
+            /**
+             *  Calculate the distance from a point to the surface of the sphere.
+             *
+             *  @param  pos_    Position of the point.
+             *
+             *  @return Distance from a point to the surface of the sphere.
+             */
             inline double Sphere::surf_dist(const vec3& pos_) const noexcept
             {
                 return (math::geom::distance(pos_, _pos) - _rad);
