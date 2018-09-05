@@ -82,7 +82,7 @@ namespace arc //! arctk namespace
 
               private:
                 //  -- Initialisation --
-                inline std::vector<Triangle> init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const mat4& transform_) const noexcept;
+                inline std::vector<Triangle> init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
                 inline size_t                init_num_verts(const std::vector<vec3>& poss_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
                 inline size_t                init_num_norms(const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
                 inline size_t                init_num_edges(const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
