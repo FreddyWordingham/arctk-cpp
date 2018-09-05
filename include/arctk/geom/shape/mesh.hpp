@@ -182,6 +182,16 @@ namespace arc //! arctk namespace
                 std::vector<vec3> norms;
                 norms.reserve(norms_.size());
 
+                const mat4 transform = transform_.inv().trans();
+
+                for (size_t i = 0; i < norms_.size(); ++i)
+                {
+                    const vec4 norm(norms_[i].x, norms_[i].y, norms_[i].z, 0.0);
+                    norm = transform * norm;
+
+                    norms.emplace_back(norm.x, norm.y, norm.z);
+                }
+
                 return (norms);
             }
 
