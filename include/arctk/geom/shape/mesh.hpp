@@ -131,6 +131,17 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a mesh by parsing a serialised wavefront object.
+             *  Additional transformations may be applied to the base mesh.
+             *
+             *  @param  serial_ String of the serialised wavefront object.
+             *  @param  scale_  Scale transformation to apply to the base wavefront object.
+             *  @param  rot_    Rotation transformation to apply to the base wavefront object.
+             *  @param  trans_  Translation transformation to apply to the base wavefront object.
+             *
+             *  @pre    serial_ may not be empty.
+             */
             inline Mesh::Mesh(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
               : Mesh(parse_poss(serial_), parse_norms(serial_), parse_faces(serial_), scale_, rot_, trans_)
             {
