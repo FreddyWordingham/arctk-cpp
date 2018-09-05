@@ -171,14 +171,11 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Construct a mesh by from by transforming a list of vertex positions and normals.
+             *  Construct a mesh by from a list of vertex positions and normals.
              *
              *  @param  poss_   Vector of vertex positions to be transformed.
              *  @param  norms_  Vector of vertex normals to be transformed.
              *  @param  faces_  Vector of face data used to construct triangle faces.
-             *  @param  scale_  Scale transformation to apply to the base wavefront object.
-             *  @param  rot_    Rotation transformation to apply to the base wavefront object.
-             *  @param  trans_  Translation transformation to apply to the base wavefront object.
              *
              *  @pre    poss_ must contain at least three elements.
              *  @pre    norms_ may not be empty.
