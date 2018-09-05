@@ -70,6 +70,7 @@ namespace arc //! arctk namespace
                 inline vec3   max() const noexcept override;
                 inline double area() const noexcept override;
                 inline double vol() const noexcept override;
+                inline bool   closed() const noexcept override;
                 inline vec3   centre() const noexcept;
                 inline vec3   half_width() const noexcept;
 
@@ -211,6 +212,16 @@ namespace arc //! arctk namespace
                 POST(vol > 0.0);
 
                 return (vol);
+            }
+
+            /**
+             *  Get the topology of the shape.
+             *
+             *  @return True if the surface of the shape forms a bounded volume.
+             */
+            inline bool Aabb::closed() const noexcept
+            {
+                return (true);
             }
 
             /**
