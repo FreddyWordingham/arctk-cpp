@@ -293,7 +293,7 @@ namespace arc //! arctk namespace
                             }
                         }
 
-                        faces.emplace_back({{pos_index, norm_index}});
+                        faces.emplace_back(std::array<std::array<size_t, 3>, 2>({{pos_index, norm_index}}));
                     }
 
                     if (line_stream.fail())
