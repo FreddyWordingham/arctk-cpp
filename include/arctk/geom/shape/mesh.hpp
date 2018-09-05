@@ -293,6 +293,8 @@ namespace arc //! arctk namespace
                     }
                 }
 
+                PRE(!norms.empty());
+
                 return (norms);
             }
 
