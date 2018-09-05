@@ -378,8 +378,8 @@ namespace arc //! arctk namespace
             /**
              *  Transform the vector of vertex positions using a transformation matrix.
              *
-             *  @param  poss_
-             *  @param  transform_
+             *  @param  poss_       Vector of vertex positions to be transformed.
+             *  @param  transform_  Transformation matrix to apply to the vertex positions.
              *
              *  @pre    poss_ must contain at least three elements.
              *
