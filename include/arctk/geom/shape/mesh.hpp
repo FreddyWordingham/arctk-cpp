@@ -521,6 +521,16 @@ namespace arc //! arctk namespace
                 return (num_verts);
             }
 
+            /**
+             *  Initialise the number of unique vertex normals.
+             *
+             *  @param  norms_  Vector of vertex normals.
+             *  @param  faces_  Vector of face data used to construct triangle faces.
+             *
+             *  @pre    Indices used by faces must be less than the size of the norms vector.
+             *
+             *  @return Number of unique vertex normals.
+             */
             inline size_t Mesh::init_num_norms(const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
             {
                 std::vector<bool> used(norms_.size(), false);
