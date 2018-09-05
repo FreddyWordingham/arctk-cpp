@@ -62,11 +62,11 @@ namespace arc //! arctk namespace
                 const std::vector<Triangle> _tris; //!< List of triangles forming the mesh.
 
                 //  -- Properties --
-                const unsigned int _num_verts; //!< Number of unique vertex positions forming the mesh.
-                const unsigned int _num_norms; //!< Number of unique vertex normals forming the mesh.
-                const unsigned int _num_edges; //!< Number of unique edges forming the mesh.
-                const unsigned int _num_faces; //!< Number of unique triangle faces forming the mesh.
-                const bool         _closed;    //!< True if the surface of the mesh forms a closed surface.
+                const size_t _num_verts; //!< Number of unique vertex positions forming the mesh.
+                const size_t _num_norms; //!< Number of unique vertex normals forming the mesh.
+                const size_t _num_edges; //!< Number of unique edges forming the mesh.
+                const size_t _num_faces; //!< Number of unique triangle faces forming the mesh.
+                const bool   _closed;    //!< True if the surface of the mesh forms a closed surface.
 
                 //  -- Areas --
                 const std::vector<double> _areas; //!< Normalised relative area of each triangle forming the mesh.
@@ -83,9 +83,9 @@ namespace arc //! arctk namespace
               private:
                 //  -- Initialisation --
                 inline std::vector<Triangle> init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const mat4& transform_) const noexcept;
-                inline unsigned int          init_num_verts(const std::vector<vec3>& poss_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
-                inline unsigned int          init_num_norms(const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
-                inline unsigned int          init_num_edges(const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
+                inline size_t                init_num_verts(const std::vector<vec3>& poss_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
+                inline size_t                init_num_norms(const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
+                inline size_t                init_num_edges(const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
                 inline std::vector<double>   init_areas() const noexcept;
                 inline Aabb                  init_box() const noexcept;
 
@@ -165,7 +165,7 @@ namespace arc //! arctk namespace
                 return (tris);
             }
 
-            inline unsigned int Mesh::init_num_verts(const std::vector<vec3>& poss_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
+            inline size_t Mesh::init_num_verts(const std::vector<vec3>& poss_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
             {
                 std::vector<bool> used(poss_.size(), false);
 
@@ -181,7 +181,7 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                unsigned int num_verts = 0;
+                size_t num_verts = 0;
                 for (size_t i = 0; i < used.size(); ++i)
                 {
                     if (used[i])
@@ -193,7 +193,7 @@ namespace arc //! arctk namespace
                 return (num_verts);
             }
 
-            inline unsigned int Mesh::init_num_norms(const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
+            inline size_t Mesh::init_num_norms(const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
             {
                 std::vector<bool> used(norms_.size(), false);
 
@@ -209,7 +209,7 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                unsigned int num_norms = 0;
+                size_t num_norms = 0;
                 for (size_t i = 0; i < used.size(); ++i)
                 {
                     if (used[i])
@@ -221,7 +221,7 @@ namespace arc //! arctk namespace
                 return (num_norms);
             }
 
-            inline unsigned int Mesh::init_num_edges(const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
+            inline size_t Mesh::init_num_edges(const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
             {
                 std::vector<std::array<size_t, 2>> edges;
 
@@ -253,7 +253,7 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                return (static_cast<unsigned int>(edges.size()));
+                return (edges.size());
             }
 
             /**
