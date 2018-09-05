@@ -242,6 +242,13 @@ namespace arc //! arctk namespace
                 return (((pos_ - _pos).normal() * _rad) + _pos);
             }
 
+            /**
+             *  Determine the nearest point to a given position within the volume of the sphere.
+             *
+             *  @param  pos_    Position of the point.
+             *
+             *  @return Nearest point to a given position within the volume of the sphere.
+             */
             inline vec3 Sphere::nearest_point_vol(const vec3& pos_) const noexcept
             {
                 if (math::geom::distance(pos_, _pos) < _rad)
