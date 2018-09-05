@@ -170,8 +170,6 @@ namespace arc //! arctk namespace
 
                 std::stringstream serial_stream(serial_);
                 std::string       line;
-
-                unsigned int line = 0;
                 while (std::getline(serial_stream, line))
                 {
                     ++line;
@@ -214,8 +212,6 @@ namespace arc //! arctk namespace
 
                 std::stringstream serial_stream(serial_);
                 std::string       line;
-
-                unsigned int line = 0;
                 while (std::getline(serial_stream, line))
                 {
                     ++line;
@@ -258,8 +254,6 @@ namespace arc //! arctk namespace
 
                 std::stringstream serial_stream(serial_);
                 std::string       line;
-
-                unsigned int line = 0;
                 while (std::getline(serial_stream, line))
                 {
                     ++line;
