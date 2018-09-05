@@ -94,6 +94,7 @@ namespace arc //! arctk namespace
                 inline vec3   max() const noexcept override;
                 inline double area() const noexcept override;
                 inline double vol() const noexcept override;
+                inline bool   closed() const noexcept override;
 
                 //  -- Emission --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
@@ -454,6 +455,16 @@ namespace arc //! arctk namespace
                 POST(vol > 0.0);
 
                 return (vol);
+            }
+
+            /**
+             *  Get the topology of the mesh.
+             *
+             *  @return True if the surface of the mesh forms a bounded volume.
+             */
+            inline bool Mesh::closed() const noexcept
+            {
+                return (_closed);
             }
 
 
