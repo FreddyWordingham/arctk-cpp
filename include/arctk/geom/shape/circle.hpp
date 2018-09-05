@@ -301,6 +301,13 @@ namespace arc //! arctk namespace
                 return (intersect_surf(aabb_));
             }
 
+            /**
+             *  Determine the nearest point to a given position on the surface of the circle.
+             *
+             *  @param  pos_    Position to find the nearest surface point to.
+             *
+             *  @return Nearest point to a given position on the surface of the circle.
+             */
             inline vec3 Circle::nearest_point_surf(const vec3& pos_) const noexcept
             {
                 const vec3 plane_point = pos_ - (_norm * plane_dist(pos_));
