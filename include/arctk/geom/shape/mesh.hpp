@@ -489,6 +489,8 @@ namespace arc //! arctk namespace
              *  @param  poss_   Vector of vertex positions.
              *  @param  faces_  Vector of face data used to construct triangle faces.
              *
+             *  @pre    Indices used by faces must be less than the size of the poss vector.
+             *
              *  @return Number of unique vertex positions.
              */
             inline size_t Mesh::init_num_verts(const std::vector<vec3>& poss_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
