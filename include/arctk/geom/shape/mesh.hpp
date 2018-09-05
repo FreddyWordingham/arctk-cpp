@@ -120,7 +120,9 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) noexcept
               : _tris(init_tris(poss_, norms_, faces_))
-              , _num_verts()
+              , _num_verts(init_num_verts(poss_, faces_))
+              , _num_verts(init_num_verts(norms_, faces_))
+              , _num_faces(faces_.size())
               , _areas(init_areas())
               , _box(init_box())
             {
