@@ -559,6 +559,13 @@ namespace arc //! arctk namespace
                 return (num_norms);
             }
 
+            /**
+             *  Initialise the number of unique edges.
+             *
+             *  @param  faces_  Vector of face data used to construct triangle faces.
+             *
+             *  @return Number of unique edges.
+             */
             inline size_t Mesh::init_num_edges(const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
             {
                 std::vector<std::array<size_t, 2>> edges;
