@@ -79,9 +79,8 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Mesh(const std::string& serial_) noexcept;
+                inline Mesh(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept;
                 inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept;
-                inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const mat4& transform_) noexcept;
                 inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) noexcept;
 
               private:
@@ -132,34 +131,14 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Mesh::Mesh(const std::string& serial_) noexcept
-              : Mesh(parse_poss(serial_), parse_norms(serial_), parse_faces(serial_))
-            {
-                PRE(!serial_.empty());
-            }
-
             inline Mesh::Mesh(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
               : Mesh(parse_poss(serial_), parse_norms(serial_), parse_faces(serial_), scale_, rot_, trans_)
             {
                 PRE(!serial_.empty());
             }
 
-            inline Mesh::Mesh(const std::string& serial_, const mat4& transform_) noexcept
-              : Mesh(parse_poss(serial_), parse_norms(serial_), parse_faces(serial_), transform_)
-            {
-                PRE(!serial_.empty());
-            }
-
             inline Mesh::Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
-              : Mesh(poss_, norms_, faces_, math::mat::transform(scale_, rot_, trans_))
-            {
-                PRE(poss_.size() >= 3);
-                PRE(!norms_.empty());
-                PRE(!faces_.empty());
-            }
-
-            inline Mesh::Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const mat4& transform_) noexcept
-              : Mesh(transform_poss(poss_, transform_), transform_norms(norms_), transform_, faces_)
+              : Mesh(transform_poss(poss_, math::mat::transform(scale_, rot_, trans_)), transform_norms(norms, math::mat::transform(scale_, rot_, trans_)), faces_)
             {
                 PRE(poss_.size() >= 3);
                 PRE(!norms_.empty());
