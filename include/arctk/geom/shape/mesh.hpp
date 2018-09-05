@@ -155,10 +155,10 @@ namespace arc //! arctk namespace
                     const std::array<size_t, 3>& pos_indices  = faces_[i][0];
                     const std::array<size_t, 3>& norm_indices = faces_[i][1];
 
-                    for (size_t i = 0; i < 3; ++i)
+                    for (size_t j = 0; j < 3; ++j)
                     {
-                        PRE(pos_indices[i] < poss_.size());
-                        PRE(norm_indices[i] < norms_.size());
+                        PRE(pos_indices[j] < poss_.size());
+                        PRE(norm_indices[j] < norms_.size());
                     }
 
                     tris.emplace_back(std::array<vec3, 3>({{poss_[pos_indices[index::dim::cartesian::X]], poss_[pos_indices[index::dim::cartesian::Y]], poss_[pos_indices[index::dim::cartesian::Z]]}}),
