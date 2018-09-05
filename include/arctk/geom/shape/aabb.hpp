@@ -336,7 +336,7 @@ namespace arc //! arctk namespace
             /**
              *  Determine the nearest point to a given position within the volume of the axis-aligned bounding box.
              *
-             *  @param  pos_    Position to find the nearest volume point to.
+             *  @param  pos_    Position of the point.
              *
              *  @return Nearest point to a given position within the volume of the axis-aligned bounding box.
              */
