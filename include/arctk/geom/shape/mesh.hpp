@@ -67,6 +67,9 @@ namespace arc //! arctk namespace
                 //  -- Bounds --
                 const Aabb _box; //!< Bounding box of the mesh.
 
+                //  -- Properties --
+                const bool _closed; //!< True if the surface of the mesh forms a closed surface.
+
 
                 //  == INSTANTIATION ==
               public:
