@@ -322,6 +322,13 @@ namespace arc //! arctk namespace
                 return (_pos + ((plane_point - _pos).normal() * _rad));
             }
 
+            /**
+             *  Calculate the distance from a point to the plane the circle lies within.
+             *
+             *  @param  pos_    Position of the of the point.
+             *
+             *  @return Distance from a point to the plane the circle lies within.
+             */
             inline double Circle::plane_dist(const vec3& pos_) const noexcept
             {
                 return ((_norm * pos_) - (_norm * _pos));
