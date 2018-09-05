@@ -79,6 +79,8 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept;
+                inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const vec4& transform_) noexcept;
                 inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) noexcept;
 
               private:
@@ -124,6 +126,22 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
+              : Mesh(poss_, norms_, faces_, math::mat::transform(scale_, rot_, trans_))
+            {
+                PRE(poss_.size() >= 3);
+                PRE(!norms_.empty());
+                PRE(!faces_.empty());
+            }
+
+            inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
+              : Mesh(poss_, norms_, faces_, math::mat::transform(scale_, rot_, trans_))
+            {
+                PRE(poss_.size() >= 3);
+                PRE(!norms_.empty());
+                PRE(!faces_.empty());
+            }
+
             inline Mesh::Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) noexcept
               : _tris(init_tris(poss_, norms_, faces_))
               , _num_verts(init_num_verts(poss_, faces_))
