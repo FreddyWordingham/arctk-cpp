@@ -366,11 +366,22 @@ namespace arc //! arctk namespace
                     }
                 }
 
+                POST(!faces.empty());
+
                 return (faces);
             }
 
+            /**
+             *  Transform
+             *
+             * @param poss_
+             * @param transform_
+             * @return
+             */
             inline std::vector<vec3> Mesh::transform_poss(const std::vector<vec3>& poss_, const mat4& transform_) const noexcept
             {
+                PRE(poss_.size() >= 3);
+
                 std::vector<vec3> poss;
                 poss.reserve(poss_.size());
 
@@ -387,6 +398,8 @@ namespace arc //! arctk namespace
 
             inline std::vector<vec3> Mesh::transform_norms(const std::vector<vec3>& norms_, const mat4& transform_) const noexcept
             {
+                PRE(!norms_.empty());
+
                 std::vector<vec3> norms;
                 norms.reserve(norms_.size());
 
