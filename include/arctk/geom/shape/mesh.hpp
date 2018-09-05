@@ -85,6 +85,7 @@ namespace arc //! arctk namespace
                 inline std::vector<Triangle> init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const mat4& transform_) const noexcept;
                 inline unsigned int          init_num_verts(const std::vector<vec3>& poss_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
                 inline unsigned int          init_num_norms(const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
+                inline unsigned int          init_num_edges(const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
                 inline std::vector<double>   init_areas() const noexcept;
                 inline Aabb                  init_box() const noexcept;
 
@@ -122,7 +123,7 @@ namespace arc //! arctk namespace
               : _tris(init_tris(poss_, norms_, faces_))
               , _num_verts(init_num_verts(poss_, faces_))
               , _num_verts(init_num_verts(norms_, faces_))
-              , _num_edges(init_num_edges())
+              , _num_edges(init_num_edges(faces_))
               , _num_faces(faces_.size())
               , _closed((_num_verts + _num_faces - _num_edges) == 2)
               , _areas(init_areas())
@@ -218,6 +219,41 @@ namespace arc //! arctk namespace
                 }
 
                 return (num_norms);
+            }
+
+            inline unsigned int Mesh::init_num_edges(const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
+            {
+                std::vector<std::array<size_t, 2>> edges;
+
+                for (size_t i = 0; i < faces_.size(); ++i)
+                {
+                    const std::array<size_t, 3> pos_indices = (faces_[i][0]);
+
+                    if (pos_indices[0] > pos_indices[1])
+                    {
+                        std::swap(pos_indices[0], pos_indices[1]);
+                    }
+                    if (pos_indices[0] > pos_indices[2])
+                    {
+                        std::swap(pos_indices[0], pos_indices[2]);
+                    }
+                    if (pos_indices[1] > pos_indices[2])
+                    {
+                        std::swap(pos_indices[1], pos_indices[2]);
+                    }
+
+                    const std::array<std::array<size_t, 2>, 3> edge_indices({{{{pos_indices[0], pos_indices[1]}} {{pos_indices[1], pos_indices[2]}} {{pos_indices[0], pos_indices[2]}}}});
+
+                    for (size_t j = 0; j < edges.size(); ++j)
+                    {
+                        if (utl::properties::contains(edges, edge_indices[j]))
+                        {
+                            edges.emplace_back(edge_indices[j]);
+                        }
+                    }
+                }
+
+                return (edges.size());
             }
 
             /**
