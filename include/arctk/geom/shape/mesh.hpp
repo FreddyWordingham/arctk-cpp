@@ -232,7 +232,7 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < faces_.size(); ++i)
                 {
-                    const std::array<size_t, 3> pos_indices = (faces_[i][0]);
+                    std::array<size_t, 3> pos_indices = faces_[i][0];
 
                     if (pos_indices[0] > pos_indices[1])
                     {
