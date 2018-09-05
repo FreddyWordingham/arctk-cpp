@@ -80,11 +80,13 @@ namespace arc //! arctk namespace
               public:
                 //  -- Constructors --
                 inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept;
-                inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const vec4& transform_) noexcept;
+                inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const mat4& transform_) noexcept;
                 inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) noexcept;
 
               private:
                 //  -- Initialisation --
+                inline std::vector<vec3>     transform_poss(const std::vector<vec3>& poss_, const mat4& transform_) const noexcept;
+                inline std::vector<vec3>     transform_norms(const std::vector<vec3>& norms_, const mat4& transform_) const noexcept;
                 inline std::vector<Triangle> init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
                 inline size_t                init_num_verts(const std::vector<vec3>& poss_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
                 inline size_t                init_num_norms(const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
@@ -134,8 +136,8 @@ namespace arc //! arctk namespace
                 PRE(!faces_.empty());
             }
 
-            inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
-              : Mesh(poss_, norms_, faces_, math::mat::transform(scale_, rot_, trans_))
+            inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const mat4& transform_) noexcept
+              : Mesh(transform_poss(poss_, transform_), transform_norms(norms_), transform_, faces_)
             {
                 PRE(poss_.size() >= 3);
                 PRE(!norms_.empty());
@@ -159,6 +161,30 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
+            inline std::vector<vec3> Mesh::transform_poss(const std::vector<vec3>& poss_, const mat4& transform_) const noexcept
+            {
+                std::vector<vec3> poss;
+                poss.reserve(poss_.size());
+
+                for (size_t i = 0; i < poss_.size(); ++i)
+                {
+                    const vec4 pos(poss_[i].x, poss_[i].y, poss_[i].z, 1.0);
+                    pos = transform_ * pos;
+
+                    poss.emplace_back(pos.x, pos.y, pos.z);
+                }
+
+                return (poss);
+            }
+
+            inline std::vector<vec3> Mesh::transform_norms(const std::vector<vec3>& norms_, const mat4& transform_) const noexcept
+            {
+                std::vector<vec3> norms;
+                norms.reserve(norms_.size());
+
+                return (norms);
+            }
+
             inline std::vector<Triangle> Mesh::init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
             {
                 PRE(poss_.size() >= 3);
