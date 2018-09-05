@@ -68,7 +68,11 @@ namespace arc //! arctk namespace
                 const Aabb _box; //!< Bounding box of the mesh.
 
                 //  -- Properties --
-                const bool _closed; //!< True if the surface of the mesh forms a closed surface.
+                const unsigned int _num_poss;  //!< Number of unique vertex positions forming the mesh.
+                const unsigned int _num_norms; //!< Number of unique vertex normals forming the mesh.
+                const unsigned int _num_edges; //!< Number of unique edges forming the mesh.
+                const unsigned int _num_faces; //!< Number of unique triangle faces forming the mesh.
+                const bool         _closed;    //!< True if the surface of the mesh forms a closed surface.
 
 
                 //  == INSTANTIATION ==
