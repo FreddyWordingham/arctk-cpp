@@ -205,6 +205,12 @@ namespace arc //! arctk namespace
 
                         poss.emplace_back(pos);
                     }
+
+                    if (line_stream.fail())
+                    {
+                        std::cerr << "Unable to construct mesh object.\n"
+                                  << "Unable to parse line: `" << line << "`.\n";
+                    }
                 }
 
                 return (poss);
@@ -231,6 +237,12 @@ namespace arc //! arctk namespace
                         line_stream >> norm.x >> norm.y >> norm.z;
 
                         norms.emplace_back(norm.normal());
+                    }
+
+                    if (line_stream.fail())
+                    {
+                        std::cerr << "Unable to construct mesh object.\n"
+                                  << "Unable to parse line: `" << line << "`.\n";
                     }
                 }
 
