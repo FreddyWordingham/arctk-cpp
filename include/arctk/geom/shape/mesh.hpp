@@ -313,7 +313,7 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < poss_.size(); ++i)
                 {
-                    const vec4 pos(poss_[i].x, poss_[i].y, poss_[i].z, 1.0);
+                    vec4 pos(poss_[i].x, poss_[i].y, poss_[i].z, 1.0);
                     pos = transform_ * pos;
 
                     poss.emplace_back(pos.x, pos.y, pos.z);
@@ -331,7 +331,7 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < norms_.size(); ++i)
                 {
-                    const vec4 norm(norms_[i].x, norms_[i].y, norms_[i].z, 0.0);
+                    vec4 norm(norms_[i].x, norms_[i].y, norms_[i].z, 0.0);
                     norm = transform * norm;
 
                     norms.emplace_back(norm.x, norm.y, norm.z);
