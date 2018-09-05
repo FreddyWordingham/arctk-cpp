@@ -333,6 +333,13 @@ namespace arc //! arctk namespace
                 return (true);
             }
 
+            /**
+             *  Determine the nearest point to a given position within the volume of the axis-aligned bounding box.
+             *
+             *  @param  pos_    Position to find the nearest volume point to.
+             *
+             *  @return Nearest point to a given position within the volume of the axis-aligned bounding box.
+             */
             inline vec3 Aabb::nearest_point_vol(const vec3& pos_) const noexcept
             {
                 vec3 pos;
