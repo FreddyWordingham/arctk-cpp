@@ -173,8 +173,8 @@ namespace arc //! arctk namespace
             /**
              *  Construct a mesh by from a list of vertex positions and normals.
              *
-             *  @param  poss_   Vector of vertex positions to be transformed.
-             *  @param  norms_  Vector of vertex normals to be transformed.
+             *  @param  poss_   Vector of vertex positions.
+             *  @param  norms_  Vector of vertex normals.
              *  @param  faces_  Vector of face data used to construct triangle faces.
              *
              *  @pre    poss_ must contain at least three elements.
@@ -376,11 +376,14 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Transform
+             *  Transform the vector of vertex positions using a transformation matrix.
              *
-             * @param poss_
-             * @param transform_
-             * @return
+             *  @param  poss_
+             *  @param  transform_
+             *
+             *  @pre    poss_ must contain at least three elements.
+             *
+             *  @return Vector of transformed vertex positions.
              */
             inline std::vector<vec3> Mesh::transform_poss(const std::vector<vec3>& poss_, const mat4& transform_) const noexcept
             {
