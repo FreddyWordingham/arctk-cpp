@@ -244,7 +244,7 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                PRE(poss.size() >= 3);
+                POST(poss.size() >= 3);
 
                 return (poss);
             }
