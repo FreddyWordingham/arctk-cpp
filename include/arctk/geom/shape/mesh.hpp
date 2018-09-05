@@ -297,7 +297,7 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                PRE(!norms.empty());
+                POST(!norms.empty());
 
                 return (norms);
             }
