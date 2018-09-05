@@ -1,5 +1,5 @@
 <map id="arc::gui::actor::act" name="arc::gui::actor::act">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a791e68553dbf8c2d2fb9c00ee98782aa" title="arc::geom::shape::Mesh\l::num_tri" alt="" coords="190,5,354,44"/>
+<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a266c2966cfd43fc9b0ebc7db277cdfbe" title="arc::geom::shape::Mesh\l::num_faces" alt="" coords="190,5,354,44"/>
 <area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a2be8cb96279daeff009744a8b70ddb82" title="arc::geom::shape::Mesh::tri" alt="" coords="181,68,364,93"/>
 <area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#abb667d408962d557f6cb663b9c7ab600" title="arc::geom::shape::Triangle\l::poss" alt="" coords="182,117,362,156"/>
 <area shape="rect" id="node5" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#ab2ef6d3518a4bb90da387ca46caffbf3" title="arc::geom::shape::Triangle\l::norms" alt="" coords="182,180,362,219"/>

@@ -114,6 +114,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2a6c074463bff83cd108cb157dc709b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb405bac70ed818b644971cc72a2fa1c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#acb405bac70ed818b644971cc72a2fa1c">vol</a> () const noexcept override</td></tr>
 <tr class="separator:acb405bac70ed818b644971cc72a2fa1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd4d9ae1fa62389e7e8526738416d440"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#afd4d9ae1fa62389e7e8526738416d440">closed</a> () const noexcept override</td></tr>
+<tr class="separator:afd4d9ae1fa62389e7e8526738416d440"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae40e69221dd9c156f56019014e200dd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#ae40e69221dd9c156f56019014e200dd7">centre</a> () const noexcept</td></tr>
 <tr class="separator:ae40e69221dd9c156f56019014e200dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee8a9bf8318eaad540400e99878ef476"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#aee8a9bf8318eaad540400e99878ef476">half_width</a> () const noexcept</td></tr>
@@ -272,6 +274,35 @@ min_.z must be less than max_.z. </dd></dl>
 </div><div class="memdoc">
 <p>Get the centre position of the axis-aligned bounding box.</p>
 <dl class="section return"><dt>Returns</dt><dd>Centre position of the axis-aligned bounding box. </dd></dl>
+
+</div>
+</div>
+<a id="afd4d9ae1fa62389e7e8526738416d440"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd4d9ae1fa62389e7e8526738416d440">&#9670;&nbsp;</a></span>closed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool arc::geom::shape::Aabb::closed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the topology of the axis-aligned bounding box.</p>
+<dl class="section return"><dt>Returns</dt><dd>True as the surface of the axis-aligned bounding box forms a bounded volume. </dd></dl>
+
+<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#aade778405989a372763735de2f91222a">arc::geom::Shape</a>.</p>
 
 </div>
 </div>
@@ -929,7 +960,7 @@ min_.z must be less than max_.z.</dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 5 2018 14:01:04 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 5 2018 17:59:25 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

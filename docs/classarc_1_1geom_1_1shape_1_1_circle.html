@@ -121,6 +121,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a00cd366e1864e811d916617ad59f6fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40c7fd8a5659b3b79787b5723c7d0d4a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a40c7fd8a5659b3b79787b5723c7d0d4a">vol</a> () const noexcept override</td></tr>
 <tr class="separator:a40c7fd8a5659b3b79787b5723c7d0d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40aec37dec963fdba831dd4c157d0f51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a40aec37dec963fdba831dd4c157d0f51">closed</a> () const noexcept override</td></tr>
+<tr class="separator:a40aec37dec963fdba831dd4c157d0f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a4446fa9d8be9e25ed4fde7fb8817ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a4a4446fa9d8be9e25ed4fde7fb8817ad">random_pos</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept override</td></tr>
 <tr class="separator:a4a4446fa9d8be9e25ed4fde7fb8817ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5a306fcc9cad7eca7a534a825ca0a0a"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#ae5a306fcc9cad7eca7a534a825ca0a0a">random_pos_and_norm</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept override</td></tr>
@@ -297,6 +299,35 @@ aperture_ must be between zero and half-Pi. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Total surface area of the circle. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#afe74104ce8d61b0eb0b99f9220ccf6f2">arc::geom::Shape</a>.</p>
+
+</div>
+</div>
+<a id="a40aec37dec963fdba831dd4c157d0f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40aec37dec963fdba831dd4c157d0f51">&#9670;&nbsp;</a></span>closed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool arc::geom::shape::Circle::closed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the topology of the circle.</p>
+<dl class="section return"><dt>Returns</dt><dd>False, as the surface of the circle does not form a bounded volume. </dd></dl>
+
+<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#aade778405989a372763735de2f91222a">arc::geom::Shape</a>.</p>
 
 </div>
 </div>
@@ -1060,7 +1091,7 @@ aperture_ must be between zero and half-Pi. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 5 2018 14:01:04 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 5 2018 17:59:25 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

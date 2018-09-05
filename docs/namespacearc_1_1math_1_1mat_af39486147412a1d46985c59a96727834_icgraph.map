@@ -1,5 +1,6 @@
 <map id="arc::math::mat::transform" name="arc::math::mat::transform">
-<area shape="rect" id="node2" href="$namespacearc_1_1gui_1_1actor.html#a704371572df24855c6cd1456bf4d766b" title="arc::gui::actor::act" alt="" coords="241,5,368,31"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1str_1_1parse.html#a58a373132eb04bcd4f94d61e47ef2204" title="arc::str::parse::parsable\l_to\&lt; bool \&gt;" alt="" coords="224,55,385,93"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1str_1_1parse.html#a0d90413f35d2cb9bcbccd3c57c3c0fe3" title="arc::str::parse::to\l\&lt; bool \&gt;" alt="" coords="244,117,365,156"/>
+<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a0f7bb8e8601c7f953b0498ec2cefe4af" title="arc::geom::shape::Mesh\l::transform_norms" alt="" coords="224,5,388,44"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1gui_1_1actor.html#a704371572df24855c6cd1456bf4d766b" title="arc::gui::actor::act" alt="" coords="242,68,369,93"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1str_1_1parse.html#a58a373132eb04bcd4f94d61e47ef2204" title="arc::str::parse::parsable\l_to\&lt; bool \&gt;" alt="" coords="225,117,386,156"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1str_1_1parse.html#a0d90413f35d2cb9bcbccd3c57c3c0fe3" title="arc::str::parse::to\l\&lt; bool \&gt;" alt="" coords="245,180,366,219"/>
 </map>

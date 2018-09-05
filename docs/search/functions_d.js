@@ -8,6 +8,9 @@ var searchData=
   ['normalise',['normalise',['../classarc_1_1math_1_1_vec.html#abd22cbc8c212fac61b31df11cea46866',1,'arc::math::Vec::normalise()'],['../classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#ad6744754f694c1197db45d6d1e5b93f7',1,'arc::math::Vec&lt; T, 2 &gt;::normalise()'],['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#ac9bdcc68c5d12bd8e30ecf17767de5cf',1,'arc::math::Vec&lt; T, 3 &gt;::normalise()'],['../classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#af5671ad652f8df04ae02aaad65f552a0',1,'arc::math::Vec&lt; T, 4 &gt;::normalise()']]],
   ['normalised',['normalised',['../classarc_1_1math_1_1_vec.html#aa6d4a0162dccc9fc08cb51111aa44825',1,'arc::math::Vec::normalised()'],['../classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#aaea12b9125706cefa537e346d9b82160',1,'arc::math::Vec&lt; T, 2 &gt;::normalised()'],['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#a3783fdda139dd7ec36d48baea223003b',1,'arc::math::Vec&lt; T, 3 &gt;::normalised()'],['../classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a6c7827315ad639489c2fd6f9335fe79b',1,'arc::math::Vec&lt; T, 4 &gt;::normalised()']]],
   ['norms',['norms',['../classarc_1_1geom_1_1shape_1_1_triangle.html#ab2ef6d3518a4bb90da387ca46caffbf3',1,'arc::geom::shape::Triangle']]],
-  ['num_5ftri',['num_tri',['../classarc_1_1geom_1_1shape_1_1_mesh.html#a791e68553dbf8c2d2fb9c00ee98782aa',1,'arc::geom::shape::Mesh']]],
-  ['num_5fvert',['num_vert',['../classarc_1_1gui_1_1_actor.html#a8b457c2ac5cae4710152632d36144e86',1,'arc::gui::Actor']]]
+  ['num_5fedges',['num_edges',['../classarc_1_1geom_1_1shape_1_1_mesh.html#a96791334f328524f1af99e43127e6c09',1,'arc::geom::shape::Mesh']]],
+  ['num_5ffaces',['num_faces',['../classarc_1_1geom_1_1shape_1_1_mesh.html#a266c2966cfd43fc9b0ebc7db277cdfbe',1,'arc::geom::shape::Mesh']]],
+  ['num_5fnorms',['num_norms',['../classarc_1_1geom_1_1shape_1_1_mesh.html#aa9c3acc4af6047608a6a2dcfd56e93c6',1,'arc::geom::shape::Mesh']]],
+  ['num_5fvert',['num_vert',['../classarc_1_1gui_1_1_actor.html#a8b457c2ac5cae4710152632d36144e86',1,'arc::gui::Actor']]],
+  ['num_5fverts',['num_verts',['../classarc_1_1geom_1_1shape_1_1_mesh.html#a2465d9b117ea566ec9d0fa83b2a94ea8',1,'arc::geom::shape::Mesh']]]
 ];

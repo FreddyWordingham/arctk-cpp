@@ -2,6 +2,9 @@ var searchData=
 [
   ['parsable_5fto',['parsable_to',['../namespacearc_1_1str_1_1parse.html#a3780c748752825e6dd9589a4a41808c1',1,'arc::str::parse']]],
   ['parsable_5fto_3c_20bool_20_3e',['parsable_to&lt; bool &gt;',['../namespacearc_1_1str_1_1parse.html#a58a373132eb04bcd4f94d61e47ef2204',1,'arc::str::parse']]],
+  ['parse_5ffaces',['parse_faces',['../classarc_1_1geom_1_1shape_1_1_mesh.html#a09a4bc9c995b86be199b1c7c1abfc6d2',1,'arc::geom::shape::Mesh']]],
+  ['parse_5fnorms',['parse_norms',['../classarc_1_1geom_1_1shape_1_1_mesh.html#aff1b0871a287a5a6fe32799a0a62e27e',1,'arc::geom::shape::Mesh']]],
+  ['parse_5fposs',['parse_poss',['../classarc_1_1geom_1_1shape_1_1_mesh.html#a8852f700393a4fcf6a663891335e0785',1,'arc::geom::shape::Mesh']]],
   ['particle',['Particle',['../classarc_1_1phys_1_1_particle.html#a6f888159c125d08650346184dff6ed1d',1,'arc::phys::Particle::Particle(const vec3 &amp;pos_, const vec3 &amp;dir_, double time_=0.0) noexcept'],['../classarc_1_1phys_1_1_particle.html#aca34bb601b5754e5133d7f6957a0c896',1,'arc::phys::Particle::Particle(const Particle &amp;)=default'],['../classarc_1_1phys_1_1_particle.html#a746961bfc64349291dc3864dd1426dd7',1,'arc::phys::Particle::Particle(Particle &amp;&amp;)=default']]],
   ['path',['path',['../namespacearc_1_1gui_1_1actor.html#a70cd46f071386ec37cd9a7c957b70bd1',1,'arc::gui::actor']]],
   ['perspective',['Perspective',['../classarc_1_1gui_1_1lens_1_1_perspective.html#a4024939be58a97497cc01b7cb61cc658',1,'arc::gui::lens::Perspective']]],
