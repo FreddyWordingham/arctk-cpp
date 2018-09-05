@@ -716,7 +716,11 @@ namespace arc //! arctk namespace
                 return (_num_edges);
             }
 
-
+            /**
+             *  Get the number of triangular faces forming the mesh.
+             *
+             *  @return Number of triangular faces forming the mesh.
+             */
             inline size_t Mesh::num_faces() const noexcept
             {
                 return (_num_faces);
