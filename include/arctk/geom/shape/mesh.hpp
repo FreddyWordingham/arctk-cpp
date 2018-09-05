@@ -86,6 +86,9 @@ namespace arc //! arctk namespace
 
               private:
                 //  -- Initialisation --
+                inline std::vector<vec3>     parse_poss(const std::string& serial_) const noexcept;
+                inline std::vector<vec3>     parse_norms(const std::string& serial_) const noexcept;
+                inline std::vector<vec3>     parse_faces(const std::string& serial_) const noexcept;
                 inline std::vector<vec3>     transform_poss(const std::vector<vec3>& poss_, const mat4& transform_) const noexcept;
                 inline std::vector<vec3>     transform_norms(const std::vector<vec3>& norms_, const mat4& transform_) const noexcept;
                 inline std::vector<Triangle> init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept;
@@ -180,6 +183,83 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
+            inline std::vector<vec3> Mesh::parse_poss(const std::string& serial_) const noexcept
+            {
+                PRE(!serial_.empty());
+
+                std::vector<vec3> poss;
+
+                std::stringstream serial_stream(serial_);
+                std::string       line;
+
+                while (std::getline(serial_stream, line))
+                {
+                    std::stringstream line_stream(line);
+                    std::string       word;
+                    line_stream >> word;
+
+                    if (word == POS_KEYWORD)
+                    {
+                        vec3 pos;
+                        line_stream >> pos.x >> pos.y >> pos.z;
+
+                        poss.emplace_back(pos);
+                    }
+                }
+
+                return (poss);
+            }
+
+            inline std::vector<vec3> Mesh::parse_norms(const std::string& serial_) const noexcept
+            {
+                PRE(!serial_.empty());
+
+                std::vector<vec3> norms;
+
+                std::stringstream serial_stream(serial_);
+                std::string       line;
+
+                while (std::getline(serial_stream, line))
+                {
+                    std::stringstream line_stream(line);
+                    std::string       word;
+                    line_stream >> word;
+
+                    if (word == NORM_KEYWORD)
+                    {
+                        vec3 norm;
+                        line_stream >> norm.x >> norm.y >> norm.z;
+
+                        norms.emplace_back(norm.normal());
+                    }
+                }
+
+                return (norms);
+            }
+
+            inline std::vector<vec3> Mesh::parse_faces(const std::string& serial_) const noexcept
+            {
+                PRE(!serial_.empty());
+
+                std::vector<vec3> faces;
+
+                std::stringstream serial_stream(serial_);
+                std::string       line;
+
+                while (std::getline(serial_stream, line))
+                {
+                    std::stringstream line_stream(line);
+                    std::string       word;
+                    line_stream >> word;
+
+                    if (word == FACE_KEYWORD)
+                    {
+                    }
+                }
+
+                return (faces);
+            }
+
             inline std::vector<vec3> Mesh::transform_poss(const std::vector<vec3>& poss_, const mat4& transform_) const noexcept
             {
                 std::vector<vec3> poss;
