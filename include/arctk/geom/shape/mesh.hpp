@@ -507,9 +507,8 @@ namespace arc //! arctk namespace
             }
 
             /**
+             *  THIS METHOD IS NOT YET IMPLEMENTED.
              *  Determine if an intersection occurs between the mesh's volume and an axis-aligned bounding box.
-             *
-             *  @param  aabb_   Axis-aligned bounding box to test.
              *
              *  @return True if the mesh's volume intersects with the axis-aligned bounding box.
              */
