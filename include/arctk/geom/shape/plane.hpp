@@ -64,6 +64,7 @@ namespace arc //! arctk namespace
                 inline vec3   max() const noexcept override;
                 inline double area() const noexcept override;
                 inline double vol() const noexcept override;
+                inline bool   closed() const noexcept override;
 
                 //  -- Emission --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
@@ -172,6 +173,16 @@ namespace arc //! arctk namespace
             inline double Plane::vol() const noexcept
             {
                 return (0.0);
+            }
+
+            /**
+             *  Get the topology of the plane.
+             *
+             *  @return False, as the surface of the plane does not form a bounded volume.
+             */
+            inline bool Plane::closed() const noexcept
+            {
+                return (false);
             }
 
 
