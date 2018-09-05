@@ -125,6 +125,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acb1c509590fe57967d10c7110504035b"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#acb1c509590fe57967d10c7110504035b">random_pos_and_norm</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept=0</td></tr>
 <tr class="memdesc:acb1c509590fe57967d10c7110504035b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a random position, and corresponding normal, on the surface of the shape.  <a href="#acb1c509590fe57967d10c7110504035b">More...</a><br /></td></tr>
 <tr class="separator:acb1c509590fe57967d10c7110504035b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63459dedcd37c78d590cf9d53ba45163"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#a63459dedcd37c78d590cf9d53ba45163">intersect_surf</a> (const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;aabb_) const noexcept=0</td></tr>
+<tr class="separator:a63459dedcd37c78d590cf9d53ba45163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86d25362a41ce20e988ccf9fd14504fe"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#a86d25362a41ce20e988ccf9fd14504fe">intersect_vol</a> (const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;aabb_) const noexcept=0</td></tr>
+<tr class="separator:a86d25362a41ce20e988ccf9fd14504fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5add15ceb58f262b472cc6a756d2a3f4"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#a5add15ceb58f262b472cc6a756d2a3f4">collision</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept=0</td></tr>
 <tr class="memdesc:a5add15ceb58f262b472cc6a756d2a3f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the collision distance (if one occurs) of a ray.  <a href="#a5add15ceb58f262b472cc6a756d2a3f4">More...</a><br /></td></tr>
 <tr class="separator:a5add15ceb58f262b472cc6a756d2a3f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -263,9 +267,9 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Optional distance to collision event </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Optional distance to collision event. </dd></dl>
 
-<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a30578bd21f0fa9d050cd1879ccae02ab">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#ad8ea8b794628a362acb74a5830ebc1b1">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a4b6012d6e42d5b4fa8e35e3732864ce2">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a3eb52cf315b517ce2392ef463530d1da">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a4109040e404b72535d2f40b3eef29e04">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#aab65755fc0af549dec1adc2fb89e7f5b">arc::geom::shape::Sphere</a>.</p>
+<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a30578bd21f0fa9d050cd1879ccae02ab">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a3eb52cf315b517ce2392ef463530d1da">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a4b6012d6e42d5b4fa8e35e3732864ce2">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#ad8ea8b794628a362acb74a5830ebc1b1">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a4109040e404b72535d2f40b3eef29e04">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#aab65755fc0af549dec1adc2fb89e7f5b">arc::geom::shape::Sphere</a>.</p>
 
 </div>
 </div>
@@ -311,7 +315,77 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Optional distance and normal pair to collision event. </dd></dl>
 
-<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#add182c6ba48e9d2fc73f156a56bfa628">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a7c54d66e2b78105efa9d891f8a153707">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a441a85781105739919238ff1e903794e">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a167f9254248915c4abd7252af2d73d55">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a5047292b8b189a2b73046727238a7b3a">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a9af901ab71725fdacfefccbcce9e09cb">arc::geom::shape::Sphere</a>.</p>
+<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#add182c6ba48e9d2fc73f156a56bfa628">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a167f9254248915c4abd7252af2d73d55">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a441a85781105739919238ff1e903794e">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a7c54d66e2b78105efa9d891f8a153707">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a5047292b8b189a2b73046727238a7b3a">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a9af901ab71725fdacfefccbcce9e09cb">arc::geom::shape::Sphere</a>.</p>
+
+</div>
+</div>
+<a id="a63459dedcd37c78d590cf9d53ba45163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63459dedcd37c78d590cf9d53ba45163">&#9670;&nbsp;</a></span>intersect_surf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool arc::geom::Shape::intersect_surf </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;&#160;</td>
+          <td class="paramname"><em>aabb_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determine if an intersection occurs between the shape's surface and an axis-aligned bounding box.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aabb_</td><td>Axis-aligned bounding box to test. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the shape's surface intersects with the axis-aligned bounding box. </dd></dl>
+
+<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#ab2cdfb5a6ad615574c6d22fb3539548b">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a23c5becc86c3d062e50c464ffffb3e17">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#aff5fa4f0b6cbe06c974d6ddb507357fe">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a89a572e0c7f6c6018bfdbbae3a4e96a4">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#accaf6fd0b23a85dff996d41c867539e8">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a470da4526a16e9778ed7e0c5852f7bbd">arc::geom::shape::Sphere</a>.</p>
+
+</div>
+</div>
+<a id="a86d25362a41ce20e988ccf9fd14504fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86d25362a41ce20e988ccf9fd14504fe">&#9670;&nbsp;</a></span>intersect_vol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool arc::geom::Shape::intersect_vol </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;&#160;</td>
+          <td class="paramname"><em>aabb_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determine if an intersection occurs between the shape's volume and an axis-aligned bounding box.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aabb_</td><td>Axis-aligned bounding box to test. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the shape's volume intersects with the axis-aligned bounding box. </dd></dl>
+
+<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a4d844540e2ecb8b3676e43c1f8a9d06b">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#af535f6af0f94f590d657179318a6521f">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#abe4870473caf98d2ca226eaa589d4621">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a0cc308b85fc3cb44e799169dd1ca7492">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a15822af0ff15433465068fdc7ab9e0f9">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a268c1c49bcec88acb808562329b63a60">arc::geom::shape::Sphere</a>.</p>
 
 </div>
 </div>
@@ -486,7 +560,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Randomly generated point on the surface of the shape. </dd></dl>
 
-<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a6676e63c672f481110026eabdb666ba2">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a4a4446fa9d8be9e25ed4fde7fb8817ad">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#accc984547dc8af83525cd471119adf5f">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a24cdba18a2104159d68430e418806344">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a061627b97c54b06a7647061ffb6b22d2">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#ad37629c5d0ec23226ac5f137e4a7ee50">arc::geom::shape::Sphere</a>.</p>
+<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a6676e63c672f481110026eabdb666ba2">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a24cdba18a2104159d68430e418806344">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a4a4446fa9d8be9e25ed4fde7fb8817ad">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#accc984547dc8af83525cd471119adf5f">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a061627b97c54b06a7647061ffb6b22d2">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#ad37629c5d0ec23226ac5f137e4a7ee50">arc::geom::shape::Sphere</a>.</p>
 
 </div>
 </div>
@@ -523,7 +597,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Randomly generated point, and corresponding normal, on the surface of the shape. </dd></dl>
 
-<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a62b52a5c300082785fc9fd1118d45c94">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#ae5a306fcc9cad7eca7a534a825ca0a0a">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#acd0b54405bc0c9ba1b50a23bef1cfb57">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#aaa1b228682440cfb07ccd640f4e36082">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a42aff69e75f95f1384540a7ce9758fff">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a842378d2874e60bb089d78e28180959d">arc::geom::shape::Sphere</a>.</p>
+<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a62b52a5c300082785fc9fd1118d45c94">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#aaa1b228682440cfb07ccd640f4e36082">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#ae5a306fcc9cad7eca7a534a825ca0a0a">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#acd0b54405bc0c9ba1b50a23bef1cfb57">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a42aff69e75f95f1384540a7ce9758fff">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a842378d2874e60bb089d78e28180959d">arc::geom::shape::Sphere</a>.</p>
 
 </div>
 </div>
@@ -563,7 +637,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 31 2018 15:01:22 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 5 2018 14:01:04 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

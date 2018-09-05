@@ -125,6 +125,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a42aff69e75f95f1384540a7ce9758fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06e3f46f9bc85e3ac7b5069aab6974c1"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a06e3f46f9bc85e3ac7b5069aab6974c1">random_pos_and_norm</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_, double rad_) const noexcept</td></tr>
 <tr class="separator:a06e3f46f9bc85e3ac7b5069aab6974c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accaf6fd0b23a85dff996d41c867539e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#accaf6fd0b23a85dff996d41c867539e8">intersect_surf</a> (const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;aabb_) const noexcept override</td></tr>
+<tr class="separator:accaf6fd0b23a85dff996d41c867539e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15822af0ff15433465068fdc7ab9e0f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a15822af0ff15433465068fdc7ab9e0f9">intersect_vol</a> (const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;aabb_) const noexcept override</td></tr>
+<tr class="separator:a15822af0ff15433465068fdc7ab9e0f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a986caf45b3f75cced4d808e4bb45d339"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a986caf45b3f75cced4d808e4bb45d339">nearest_point_surf</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_) const noexcept</td></tr>
+<tr class="separator:a986caf45b3f75cced4d808e4bb45d339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adec06a184138a89a4e4af0e2af1255d7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#adec06a184138a89a4e4af0e2af1255d7">surf_dist</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_) const noexcept</td></tr>
+<tr class="separator:adec06a184138a89a4e4af0e2af1255d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81031c22e53aabc0259b35c8d0a762e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a81031c22e53aabc0259b35c8d0a762e8">contains</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_) const noexcept</td></tr>
+<tr class="separator:a81031c22e53aabc0259b35c8d0a762e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4109040e404b72535d2f40b3eef29e04"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a4109040e404b72535d2f40b3eef29e04">collision</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
 <tr class="separator:a4109040e404b72535d2f40b3eef29e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5047292b8b189a2b73046727238a7b3a"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::pair&lt; double, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a5047292b8b189a2b73046727238a7b3a">collision_norm</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
@@ -358,6 +368,143 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a81031c22e53aabc0259b35c8d0a762e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81031c22e53aabc0259b35c8d0a762e8">&#9670;&nbsp;</a></span>contains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool arc::geom::shape::Plane::contains </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determine if a point is contained within, or beneth, the plane.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos_</td><td>Position of the point.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the point is contained within, or beneth, the plane. </dd></dl>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_plane_a81031c22e53aabc0259b35c8d0a762e8_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_plane_a81031c22e53aabc0259b35c8d0a762e8_icgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_plane_a81031c22e53aabc0259b35c8d0a762e8_icgraph" id="classarc_1_1geom_1_1shape_1_1_plane_a81031c22e53aabc0259b35c8d0a762e8_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_plane.html#a15822af0ff15433465068fdc7ab9e0f9" title="arc::geom::shape::Plane\l::intersect_vol" alt="" coords="219,5,385,44"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="accaf6fd0b23a85dff996d41c867539e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accaf6fd0b23a85dff996d41c867539e8">&#9670;&nbsp;</a></span>intersect_surf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool arc::geom::shape::Plane::intersect_surf </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;&#160;</td>
+          <td class="paramname"><em>aabb_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determine if an intersection occurs between the plane's surface and an axis-aligned bounding box.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aabb_</td><td>Axis-aligned bounding box to test.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the plane's surface intersects with the axis-aligned bounding box. </dd></dl>
+
+<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#a63459dedcd37c78d590cf9d53ba45163">arc::geom::Shape</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_plane_accaf6fd0b23a85dff996d41c867539e8_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_plane_accaf6fd0b23a85dff996d41c867539e8_icgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_plane_accaf6fd0b23a85dff996d41c867539e8_icgraph" id="classarc_1_1geom_1_1shape_1_1_plane_accaf6fd0b23a85dff996d41c867539e8_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_plane.html#a15822af0ff15433465068fdc7ab9e0f9" title="arc::geom::shape::Plane\l::intersect_vol" alt="" coords="219,5,385,44"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a15822af0ff15433465068fdc7ab9e0f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15822af0ff15433465068fdc7ab9e0f9">&#9670;&nbsp;</a></span>intersect_vol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool arc::geom::shape::Plane::intersect_vol </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;&#160;</td>
+          <td class="paramname"><em>aabb_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determine if an intersection occurs between the plane's volume and an axis-aligned bounding box.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aabb_</td><td>Axis-aligned bounding box to test.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the plane's volume intersects with the axis-aligned bounding box. </dd></dl>
+
+<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#a86d25362a41ce20e988ccf9fd14504fe">arc::geom::Shape</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_plane_a15822af0ff15433465068fdc7ab9e0f9_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_plane_a15822af0ff15433465068fdc7ab9e0f9_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_plane_a15822af0ff15433465068fdc7ab9e0f9_cgraph" id="classarc_1_1geom_1_1shape_1_1_plane_a15822af0ff15433465068fdc7ab9e0f9_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_plane.html#a81031c22e53aabc0259b35c8d0a762e8" title="arc::geom::shape::Plane\l::contains" alt="" coords="219,5,385,44"/>
+<area shape="rect" id="node3" href="classarc_1_1geom_1_1shape_1_1_plane.html#accaf6fd0b23a85dff996d41c867539e8" title="arc::geom::shape::Plane\l::intersect_surf" alt="" coords="219,68,385,107"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="aadda8302992ac1a00bbfd2d530c89b98"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aadda8302992ac1a00bbfd2d530c89b98">&#9670;&nbsp;</a></span>max()</h2>
 
@@ -384,11 +531,11 @@ Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Maximum vec of the smallest bounding box containing the plane. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#a972799ae7e075c2604815d5453c92ace">arc::geom::Shape</a>.</p>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_plane_aadda8302992ac1a00bbfd2d530c89b98_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_plane_aadda8302992ac1a00bbfd2d530c89b98_cgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_plane_aadda8302992ac1a00bbfd2d530c89b98_cgraph" id="classarc_1_1geom_1_1shape_1_1_plane_aadda8302992ac1a00bbfd2d530c89b98_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="252,40,393,65"/>
@@ -429,6 +576,50 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a986caf45b3f75cced4d808e4bb45d339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a986caf45b3f75cced4d808e4bb45d339">&#9670;&nbsp;</a></span>nearest_point_surf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::geom::shape::Plane::nearest_point_surf </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determine the nearest point to a given position on the surface of the plane.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos_</td><td>Position of the point.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Nearest point to a given position on the surface of the plane. </dd></dl>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_plane_a986caf45b3f75cced4d808e4bb45d339_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_plane_a986caf45b3f75cced4d808e4bb45d339_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_plane_a986caf45b3f75cced4d808e4bb45d339_cgraph" id="classarc_1_1geom_1_1shape_1_1_plane_a986caf45b3f75cced4d808e4bb45d339_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_plane.html#adec06a184138a89a4e4af0e2af1255d7" title="arc::geom::shape::Plane\l::surf_dist" alt="" coords="219,5,385,44"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ab0ea4a43ecfc9fb23b417ca89749cecd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0ea4a43ecfc9fb23b417ca89749cecd">&#9670;&nbsp;</a></span>norm()</h2>
 
@@ -453,14 +644,14 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the normal of the circle.</p>
 <dl class="section return"><dt>Returns</dt><dd>Normal of the circle. </dd></dl>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_plane_ab0ea4a43ecfc9fb23b417ca89749cecd_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_plane_ab0ea4a43ecfc9fb23b417ca89749cecd_icgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_plane_ab0ea4a43ecfc9fb23b417ca89749cecd_icgraph" id="classarc_1_1geom_1_1shape_1_1_plane_ab0ea4a43ecfc9fb23b417ca89749cecd_icgraph">
-<area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#a108fde03a6717c6f2eb3e5b4e7d2e4bc" title="arc::gui::actor::act" alt="" coords="219,12,347,37"/>
+<area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#aee6d1f39d0da85ae4cac20d9128770ab" title="arc::gui::actor::act" alt="" coords="219,12,347,37"/>
 </map>
 </div>
 
@@ -490,15 +681,15 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the position of the plane.</p>
 <dl class="section return"><dt>Returns</dt><dd>Position of the plane. </dd></dl>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_plane_a142d3ac4b0afa00c69a7188dfcf2e094_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_plane_a142d3ac4b0afa00c69a7188dfcf2e094_icgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_plane_a142d3ac4b0afa00c69a7188dfcf2e094_icgraph" id="classarc_1_1geom_1_1shape_1_1_plane_a142d3ac4b0afa00c69a7188dfcf2e094_icgraph">
 <area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_plane.html#afcea9197dfa64a43a3db5fac63fcff4a" title="arc::geom::shape::Plane\l::random_pos" alt="" coords="248,5,414,44"/>
-<area shape="rect" id="node3" href="namespacearc_1_1gui_1_1actor.html#a108fde03a6717c6f2eb3e5b4e7d2e4bc" title="arc::gui::actor::act" alt="" coords="267,68,395,93"/>
+<area shape="rect" id="node3" href="namespacearc_1_1gui_1_1actor.html#aee6d1f39d0da85ae4cac20d9128770ab" title="arc::gui::actor::act" alt="" coords="267,68,395,93"/>
 </map>
 </div>
 
@@ -537,11 +728,11 @@ Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Random position on the surface of the plane. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#adb4a5453dfb63827f5f3323e60204040">arc::geom::Shape</a>.</p>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_plane_a061627b97c54b06a7647061ffb6b22d2_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_plane_a061627b97c54b06a7647061ffb6b22d2_icgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_plane_a061627b97c54b06a7647061ffb6b22d2_icgraph" id="classarc_1_1geom_1_1shape_1_1_plane_a061627b97c54b06a7647061ffb6b22d2_icgraph">
 <area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_plane.html#a42aff69e75f95f1384540a7ce9758fff" title="arc::geom::shape::Plane\l::random_pos_and_norm" alt="" coords="219,5,390,44"/>
@@ -593,11 +784,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>rad_ must be positive.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random position on the surface of the plane. </dd></dl>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_plane_afcea9197dfa64a43a3db5fac63fcff4a_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_plane_afcea9197dfa64a43a3db5fac63fcff4a_cgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_plane_afcea9197dfa64a43a3db5fac63fcff4a_cgraph" id="classarc_1_1geom_1_1shape_1_1_plane_afcea9197dfa64a43a3db5fac63fcff4a_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_plane.html#a142d3ac4b0afa00c69a7188dfcf2e094" title="arc::geom::shape::Plane::pos" alt="" coords="219,5,414,31"/>
@@ -644,11 +835,11 @@ Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Random position, and corresponding normal, on the surface of the plane. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#acb1c509590fe57967d10c7110504035b">arc::geom::Shape</a>.</p>
-<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_plane_a42aff69e75f95f1384540a7ce9758fff_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_plane_a42aff69e75f95f1384540a7ce9758fff_cgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_plane_a42aff69e75f95f1384540a7ce9758fff_cgraph" id="classarc_1_1geom_1_1shape_1_1_plane_a42aff69e75f95f1384540a7ce9758fff_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_plane.html#a061627b97c54b06a7647061ffb6b22d2" title="arc::geom::shape::Plane\l::random_pos" alt="" coords="224,5,390,44"/>
@@ -700,14 +891,58 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>rad_ must be positive.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random position, and corresponding normal, on the surface of the plane. </dd></dl>
-<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_plane_a06e3f46f9bc85e3ac7b5069aab6974c1_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_plane_a06e3f46f9bc85e3ac7b5069aab6974c1_cgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_plane_a06e3f46f9bc85e3ac7b5069aab6974c1_cgraph" id="classarc_1_1geom_1_1shape_1_1_plane_a06e3f46f9bc85e3ac7b5069aab6974c1_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_plane.html#a061627b97c54b06a7647061ffb6b22d2" title="arc::geom::shape::Plane\l::random_pos" alt="" coords="224,5,390,44"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adec06a184138a89a4e4af0e2af1255d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adec06a184138a89a4e4af0e2af1255d7">&#9670;&nbsp;</a></span>surf_dist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double arc::geom::shape::Plane::surf_dist </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculate the distance from a point to the surface of the plane.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos_</td><td>Position of the point.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Distance from a point to the surface of the plane. </dd></dl>
+<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_plane_adec06a184138a89a4e4af0e2af1255d7_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_plane_adec06a184138a89a4e4af0e2af1255d7_icgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_plane_adec06a184138a89a4e4af0e2af1255d7_icgraph" id="classarc_1_1geom_1_1shape_1_1_plane_adec06a184138a89a4e4af0e2af1255d7_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_plane.html#a986caf45b3f75cced4d808e4bb45d339" title="arc::geom::shape::Plane\l::nearest_point_surf" alt="" coords="219,5,385,44"/>
 </map>
 </div>
 
@@ -797,7 +1032,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 31 2018 15:01:22 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 5 2018 14:01:04 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

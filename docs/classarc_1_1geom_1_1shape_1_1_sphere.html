@@ -121,6 +121,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad37629c5d0ec23226ac5f137e4a7ee50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a842378d2874e60bb089d78e28180959d"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a842378d2874e60bb089d78e28180959d">random_pos_and_norm</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept override</td></tr>
 <tr class="separator:a842378d2874e60bb089d78e28180959d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a470da4526a16e9778ed7e0c5852f7bbd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a470da4526a16e9778ed7e0c5852f7bbd">intersect_surf</a> (const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;aabb_) const noexcept override</td></tr>
+<tr class="separator:a470da4526a16e9778ed7e0c5852f7bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a268c1c49bcec88acb808562329b63a60"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a268c1c49bcec88acb808562329b63a60">intersect_vol</a> (const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;aabb_) const noexcept override</td></tr>
+<tr class="separator:a268c1c49bcec88acb808562329b63a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b38e8856ff2ce656ee99ed50b4b49c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#ab9b38e8856ff2ce656ee99ed50b4b49c">nearest_point_surf</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_) const noexcept</td></tr>
+<tr class="separator:ab9b38e8856ff2ce656ee99ed50b4b49c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24dc9ffe85d5eca8738293e3521c757c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a24dc9ffe85d5eca8738293e3521c757c">nearest_point_vol</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_) const noexcept</td></tr>
+<tr class="separator:a24dc9ffe85d5eca8738293e3521c757c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78737b3cfb154fabd34ec75532dc2026"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a78737b3cfb154fabd34ec75532dc2026">surf_dist</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_) const noexcept</td></tr>
+<tr class="separator:a78737b3cfb154fabd34ec75532dc2026"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ce04f48737d6a7fbed6299bc4a79a0c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a3ce04f48737d6a7fbed6299bc4a79a0c">contains</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_) const noexcept</td></tr>
 <tr class="separator:a3ce04f48737d6a7fbed6299bc4a79a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab65755fc0af549dec1adc2fb89e7f5b"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#aab65755fc0af549dec1adc2fb89e7f5b">collision</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
@@ -408,6 +418,89 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a470da4526a16e9778ed7e0c5852f7bbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a470da4526a16e9778ed7e0c5852f7bbd">&#9670;&nbsp;</a></span>intersect_surf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool arc::geom::shape::Sphere::intersect_surf </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;&#160;</td>
+          <td class="paramname"><em>aabb_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determine if an intersection occurs between the sphere's surface and an axis-aligned bounding box.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aabb_</td><td>Axis-aligned bounding box to test.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the sphere's surface intersects with the axis-aligned bounding box. </dd></dl>
+
+<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#a63459dedcd37c78d590cf9d53ba45163">arc::geom::Shape</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_sphere_a470da4526a16e9778ed7e0c5852f7bbd_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_sphere_a470da4526a16e9778ed7e0c5852f7bbd_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_sphere_a470da4526a16e9778ed7e0c5852f7bbd_cgraph" id="classarc_1_1geom_1_1shape_1_1_sphere_a470da4526a16e9778ed7e0c5852f7bbd_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_sphere.html#ab9b38e8856ff2ce656ee99ed50b4b49c" title="arc::geom::shape::Sphere\l::nearest_point_surf" alt="" coords="228,5,403,44"/>
+<area shape="rect" id="node3" href="namespacearc_1_1random_1_1distribution.html#af0181d183542f6401028a77795026f90" title="arc::random::distribution\l::normal" alt="" coords="451,5,615,44"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a268c1c49bcec88acb808562329b63a60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a268c1c49bcec88acb808562329b63a60">&#9670;&nbsp;</a></span>intersect_vol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool arc::geom::shape::Sphere::intersect_vol </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;&#160;</td>
+          <td class="paramname"><em>aabb_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determine if an intersection occurs between the sphere's volume and an axis-aligned bounding box.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aabb_</td><td>Axis-aligned bounding box to test.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the sphere's volume intersects with the axis-aligned bounding box. </dd></dl>
+
+<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#a86d25362a41ce20e988ccf9fd14504fe">arc::geom::Shape</a>.</p>
+
+</div>
+</div>
 <a id="a7280d520281a12c4d1f40683bf4a2435"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7280d520281a12c4d1f40683bf4a2435">&#9670;&nbsp;</a></span>max()</h2>
 
@@ -466,6 +559,107 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ab9b38e8856ff2ce656ee99ed50b4b49c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9b38e8856ff2ce656ee99ed50b4b49c">&#9670;&nbsp;</a></span>nearest_point_surf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::geom::shape::Sphere::nearest_point_surf </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determine the nearest point to a given position on the surface of the sphere.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos_</td><td>Position of the point.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Nearest point to a given position on the surface of the sphere. </dd></dl>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_sphere_ab9b38e8856ff2ce656ee99ed50b4b49c_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_sphere_ab9b38e8856ff2ce656ee99ed50b4b49c_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_sphere_ab9b38e8856ff2ce656ee99ed50b4b49c_cgraph" id="classarc_1_1geom_1_1shape_1_1_sphere_ab9b38e8856ff2ce656ee99ed50b4b49c_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1random_1_1distribution.html#af0181d183542f6401028a77795026f90" title="arc::random::distribution\l::normal" alt="" coords="228,5,392,44"/>
+</map>
+</div>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_sphere_ab9b38e8856ff2ce656ee99ed50b4b49c_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_sphere_ab9b38e8856ff2ce656ee99ed50b4b49c_icgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_sphere_ab9b38e8856ff2ce656ee99ed50b4b49c_icgraph" id="classarc_1_1geom_1_1shape_1_1_sphere_ab9b38e8856ff2ce656ee99ed50b4b49c_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a470da4526a16e9778ed7e0c5852f7bbd" title="arc::geom::shape::Sphere\l::intersect_surf" alt="" coords="228,5,403,44"/>
+<area shape="rect" id="node3" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a24dc9ffe85d5eca8738293e3521c757c" title="arc::geom::shape::Sphere\l::nearest_point_vol" alt="" coords="228,68,403,107"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a24dc9ffe85d5eca8738293e3521c757c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24dc9ffe85d5eca8738293e3521c757c">&#9670;&nbsp;</a></span>nearest_point_vol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::geom::shape::Sphere::nearest_point_vol </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determine the nearest point to a given position within the volume of the sphere.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos_</td><td>Position of the point.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Nearest point to a given position within the volume of the sphere. </dd></dl>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_sphere_a24dc9ffe85d5eca8738293e3521c757c_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_sphere_a24dc9ffe85d5eca8738293e3521c757c_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_sphere_a24dc9ffe85d5eca8738293e3521c757c_cgraph" id="classarc_1_1geom_1_1shape_1_1_sphere_a24dc9ffe85d5eca8738293e3521c757c_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="228,5,403,31"/>
+<area shape="rect" id="node3" href="classarc_1_1geom_1_1shape_1_1_sphere.html#ab9b38e8856ff2ce656ee99ed50b4b49c" title="arc::geom::shape::Sphere\l::nearest_point_surf" alt="" coords="228,55,403,93"/>
+<area shape="rect" id="node4" href="namespacearc_1_1random_1_1distribution.html#af0181d183542f6401028a77795026f90" title="arc::random::distribution\l::normal" alt="" coords="451,55,615,93"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a427d1f8457ec0ea8b49b7978d3a68c86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a427d1f8457ec0ea8b49b7978d3a68c86">&#9670;&nbsp;</a></span>pos()</h2>
 
@@ -490,6 +684,16 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the position of the sphere.</p>
 <dl class="section return"><dt>Returns</dt><dd>Position of the sphere. </dd></dl>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_sphere_a427d1f8457ec0ea8b49b7978d3a68c86_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_sphere_a427d1f8457ec0ea8b49b7978d3a68c86_icgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_sphere_a427d1f8457ec0ea8b49b7978d3a68c86_icgraph" id="classarc_1_1geom_1_1shape_1_1_sphere_a427d1f8457ec0ea8b49b7978d3a68c86_icgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#afa61d80e572d4b4b2a840a2825c134e2" title="arc::gui::actor::act" alt="" coords="257,5,384,31"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -517,6 +721,16 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the radius of the sphere.</p>
 <dl class="section return"><dt>Returns</dt><dd>Radius of the sphere. </dd></dl>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_sphere_af73c42ed2c94d3851f0648c93ef0790d_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_sphere_af73c42ed2c94d3851f0648c93ef0790d_icgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_sphere_af73c42ed2c94d3851f0648c93ef0790d_icgraph" id="classarc_1_1geom_1_1shape_1_1_sphere_af73c42ed2c94d3851f0648c93ef0790d_icgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#afa61d80e572d4b4b2a840a2825c134e2" title="arc::gui::actor::act" alt="" coords="255,5,382,31"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -553,11 +767,11 @@ Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Random position on the surface of the sphere. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#adb4a5453dfb63827f5f3323e60204040">arc::geom::Shape</a>.</p>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_sphere_ad37629c5d0ec23226ac5f137e4a7ee50_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_sphere_ad37629c5d0ec23226ac5f137e4a7ee50_cgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_sphere_ad37629c5d0ec23226ac5f137e4a7ee50_cgraph" id="classarc_1_1geom_1_1shape_1_1_sphere_ad37629c5d0ec23226ac5f137e4a7ee50_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1random_1_1distribution.html#a3849967432132a79729022f4b5e011ff" title="arc::random::distribution\l::isotropic" alt="" coords="228,37,392,76"/>
@@ -601,16 +815,60 @@ Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Random position, and corresponding normal, on the surface of the sphere. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#acb1c509590fe57967d10c7110504035b">arc::geom::Shape</a>.</p>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_sphere_a842378d2874e60bb089d78e28180959d_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_sphere_a842378d2874e60bb089d78e28180959d_cgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_sphere_a842378d2874e60bb089d78e28180959d_cgraph" id="classarc_1_1geom_1_1shape_1_1_sphere_a842378d2874e60bb089d78e28180959d_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1random_1_1distribution.html#a3849967432132a79729022f4b5e011ff" title="arc::random::distribution\l::isotropic" alt="" coords="228,37,392,76"/>
 <area shape="rect" id="node3" href="namespacearc_1_1random_1_1distribution.html#af9e55c4d5a5e1965dc94441b0a5b86ab" title="arc::random::distribution\l::uniform" alt="" coords="440,5,605,44"/>
 <area shape="rect" id="node4" href="namespacearc_1_1math_1_1convert.html#ac0b319816d18eb6a572ecb9abd2af70d" title="arc::math::convert\l::polar_to_cart" alt="" coords="459,68,587,107"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a78737b3cfb154fabd34ec75532dc2026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78737b3cfb154fabd34ec75532dc2026">&#9670;&nbsp;</a></span>surf_dist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double arc::geom::shape::Sphere::surf_dist </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculate the distance from a point to the surface of the sphere.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos_</td><td>Position of the point.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Distance from a point to the surface of the sphere. </dd></dl>
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_sphere_a78737b3cfb154fabd34ec75532dc2026_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_sphere_a78737b3cfb154fabd34ec75532dc2026_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_sphere_a78737b3cfb154fabd34ec75532dc2026_cgraph" id="classarc_1_1geom_1_1shape_1_1_sphere_a78737b3cfb154fabd34ec75532dc2026_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="228,12,403,37"/>
 </map>
 </div>
 
@@ -701,7 +959,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 31 2018 15:01:22 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 5 2018 14:01:04 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

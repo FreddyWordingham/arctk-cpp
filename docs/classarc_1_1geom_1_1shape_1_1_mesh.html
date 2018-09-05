@@ -123,6 +123,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6676e63c672f481110026eabdb666ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62b52a5c300082785fc9fd1118d45c94"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a62b52a5c300082785fc9fd1118d45c94">random_pos_and_norm</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept override</td></tr>
 <tr class="separator:a62b52a5c300082785fc9fd1118d45c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2cdfb5a6ad615574c6d22fb3539548b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#ab2cdfb5a6ad615574c6d22fb3539548b">intersect_surf</a> (const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;aabb_) const noexcept override</td></tr>
+<tr class="separator:ab2cdfb5a6ad615574c6d22fb3539548b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d844540e2ecb8b3676e43c1f8a9d06b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a4d844540e2ecb8b3676e43c1f8a9d06b">intersect_vol</a> (const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;) const noexcept override</td></tr>
+<tr class="separator:a4d844540e2ecb8b3676e43c1f8a9d06b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30578bd21f0fa9d050cd1879ccae02ab"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a30578bd21f0fa9d050cd1879ccae02ab">collision</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
 <tr class="separator:a30578bd21f0fa9d050cd1879ccae02ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add182c6ba48e9d2fc73f156a56bfa628"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::pair&lt; double, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#add182c6ba48e9d2fc73f156a56bfa628">collision_norm</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
@@ -521,6 +525,82 @@ min.z must be less than max.z.</dd></dl>
 
 </div>
 </div>
+<a id="ab2cdfb5a6ad615574c6d22fb3539548b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2cdfb5a6ad615574c6d22fb3539548b">&#9670;&nbsp;</a></span>intersect_surf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool arc::geom::shape::Mesh::intersect_surf </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;&#160;</td>
+          <td class="paramname"><em>aabb_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determine if an intersection occurs between the mesh's surface and an axis-aligned bounding box.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aabb_</td><td>Axis-aligned bounding box to test.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the mesh's surface intersects with the axis-aligned bounding box. </dd></dl>
+
+<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#a63459dedcd37c78d590cf9d53ba45163">arc::geom::Shape</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_ab2cdfb5a6ad615574c6d22fb3539548b_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_ab2cdfb5a6ad615574c6d22fb3539548b_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_mesh_ab2cdfb5a6ad615574c6d22fb3539548b_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_ab2cdfb5a6ad615574c6d22fb3539548b_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_aabb.html#af535f6af0f94f590d657179318a6521f" title="arc::geom::shape::Aabb\l::intersect_vol" alt="" coords="218,5,381,44"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4d844540e2ecb8b3676e43c1f8a9d06b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d844540e2ecb8b3676e43c1f8a9d06b">&#9670;&nbsp;</a></span>intersect_vol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool arc::geom::shape::Mesh::intersect_vol </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>THIS METHOD IS NOT YET IMPLEMENTED. Determine if an intersection occurs between the mesh's volume and an axis-aligned bounding box.</p>
+<dl class="section return"><dt>Returns</dt><dd>True if the mesh's volume intersects with the axis-aligned bounding box. </dd></dl>
+
+<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#a86d25362a41ce20e988ccf9fd14504fe">arc::geom::Shape</a>.</p>
+
+</div>
+</div>
 <a id="aadb86a235c411b99e864e5bd1f865cd8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aadb86a235c411b99e864e5bd1f865cd8">&#9670;&nbsp;</a></span>max()</h2>
 
@@ -547,11 +627,11 @@ min.z must be less than max.z.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Maximum vec of the smallest bounding box containing the mesh. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#a972799ae7e075c2604815d5453c92ace">arc::geom::Shape</a>.</p>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_aadb86a235c411b99e864e5bd1f865cd8_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_aadb86a235c411b99e864e5bd1f865cd8_icgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_mesh_aadb86a235c411b99e864e5bd1f865cd8_icgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_aadb86a235c411b99e864e5bd1f865cd8_icgraph">
 <area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a8642c77a26d79ef251e39dbd532e6925" title="arc::geom::shape::Mesh\l::init_box" alt="" coords="250,5,415,44"/>
@@ -586,11 +666,11 @@ min.z must be less than max.z.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Minimum vec of the smallest bounding box containing the mesh. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#aec88d71a33d78dc6674bbd69198ba9ea">arc::geom::Shape</a>.</p>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a1607909cf573f925705a952e99b209f9_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a1607909cf573f925705a952e99b209f9_cgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_mesh_a1607909cf573f925705a952e99b209f9_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a1607909cf573f925705a952e99b209f9_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="247,40,388,65"/>
@@ -599,11 +679,11 @@ min.z must be less than max.z.</dd></dl>
 <area shape="rect" id="node5" href="namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="625,68,800,93"/>
 </map>
 </div>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a1607909cf573f925705a952e99b209f9_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a1607909cf573f925705a952e99b209f9_icgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_mesh_a1607909cf573f925705a952e99b209f9_icgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a1607909cf573f925705a952e99b209f9_icgraph">
 <area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a8642c77a26d79ef251e39dbd532e6925" title="arc::geom::shape::Mesh\l::init_box" alt="" coords="247,5,411,44"/>
@@ -636,11 +716,11 @@ min.z must be less than max.z.</dd></dl>
 </div><div class="memdoc">
 <p>Get the number of triangles within the mesh.</p>
 <dl class="section return"><dt>Returns</dt><dd>Number of triangles within the mesh. </dd></dl>
-<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a791e68553dbf8c2d2fb9c00ee98782aa_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a791e68553dbf8c2d2fb9c00ee98782aa_icgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_mesh_a791e68553dbf8c2d2fb9c00ee98782aa_icgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a791e68553dbf8c2d2fb9c00ee98782aa_icgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#a4f16b1ea42d8d2b246a2f2ec1acf9956" title="arc::gui::actor::act" alt="" coords="218,12,345,37"/>
@@ -682,11 +762,11 @@ min.z must be less than max.z.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random position on the surface of the mesh. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#adb4a5453dfb63827f5f3323e60204040">arc::geom::Shape</a>.</p>
-<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a6676e63c672f481110026eabdb666ba2_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a6676e63c672f481110026eabdb666ba2_cgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_mesh_a6676e63c672f481110026eabdb666ba2_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a6676e63c672f481110026eabdb666ba2_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#a759ee83416f9fb620af459ecb00205f0" title="arc::utl::search::lower" alt="" coords="218,69,366,95"/>
@@ -735,11 +815,11 @@ min.z must be less than max.z.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random position, and corresponding normal, on the surface of the mesh. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#acb1c509590fe57967d10c7110504035b">arc::geom::Shape</a>.</p>
-<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a62b52a5c300082785fc9fd1118d45c94_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a62b52a5c300082785fc9fd1118d45c94_cgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_mesh_a62b52a5c300082785fc9fd1118d45c94_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a62b52a5c300082785fc9fd1118d45c94_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#a759ee83416f9fb620af459ecb00205f0" title="arc::utl::search::lower" alt="" coords="224,69,372,95"/>
@@ -787,11 +867,11 @@ min.z must be less than max.z.</dd></dl>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>index_ must be less than _tris.size.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Const reference to a triangle within the mesh. </dd></dl>
-<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a2be8cb96279daeff009744a8b70ddb82_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a2be8cb96279daeff009744a8b70ddb82_icgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_mesh_a2be8cb96279daeff009744a8b70ddb82_icgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a2be8cb96279daeff009744a8b70ddb82_icgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#a4f16b1ea42d8d2b246a2f2ec1acf9956" title="arc::gui::actor::act" alt="" coords="236,5,364,31"/>
@@ -909,7 +989,7 @@ min.z must be less than max.z.</dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 31 2018 15:01:22 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 5 2018 14:01:04 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

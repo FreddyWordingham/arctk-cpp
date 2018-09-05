@@ -19,6 +19,7 @@ var searchData=
   ['plane',['Plane',['../classarc_1_1geom_1_1shape_1_1_plane.html',1,'arc::geom::shape::Plane'],['../classarc_1_1geom_1_1shape_1_1_plane.html#a9d186df97b468e2336e19e75704c3ca8',1,'arc::geom::shape::Plane::Plane()']]],
   ['plane_2ehpp',['plane.hpp',['../plane_8hpp.html',1,'']]],
   ['plane_5fcollision',['plane_collision',['../classarc_1_1geom_1_1shape_1_1_triangle.html#abe258581ad067c650f2f9a5cbebd4021',1,'arc::geom::shape::Triangle']]],
+  ['plane_5fdist',['plane_dist',['../classarc_1_1geom_1_1shape_1_1_circle.html#a1f5f4fbe5c5ee63fea6a69cd41880607',1,'arc::geom::shape::Circle']]],
   ['point',['Point',['../classarc_1_1gui_1_1_point.html',1,'arc::gui::Point'],['../classarc_1_1gui_1_1_point.html#adc6e6cdf5412b13d1d3067e4368a3d19',1,'arc::gui::Point::Point()']]],
   ['point_2ehpp',['point.hpp',['../point_8hpp.html',1,'']]],
   ['polar_5fto_5fcart',['polar_to_cart',['../namespacearc_1_1math_1_1convert.html#ac0b319816d18eb6a572ecb9abd2af70d',1,'arc::math::convert::polar_to_cart(const Vec&lt; T, 2 &gt; &amp;polar_) noexcept'],['../namespacearc_1_1math_1_1convert.html#a2bfdf58fb7dab454af8768570b672889',1,'arc::math::convert::polar_to_cart(T rho_, T theta_) noexcept'],['../namespacearc_1_1math_1_1convert.html#adc9151d5ba0dcf2846c64d1c1386c191',1,'arc::math::convert::polar_to_cart(const Vec&lt; T, 3 &gt; &amp;polar_) noexcept'],['../namespacearc_1_1math_1_1convert.html#a76fac33706a8927b33f6976065034863',1,'arc::math::convert::polar_to_cart(T rho_, T theta_, T phi_) noexcept']]],

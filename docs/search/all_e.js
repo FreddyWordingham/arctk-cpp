@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['nearest_5fpoint_5fsurf',['nearest_point_surf',['../classarc_1_1geom_1_1shape_1_1_circle.html#aefec3642a27d1405acbbd2661be7d913',1,'arc::geom::shape::Circle::nearest_point_surf()'],['../classarc_1_1geom_1_1shape_1_1_plane.html#a986caf45b3f75cced4d808e4bb45d339',1,'arc::geom::shape::Plane::nearest_point_surf()'],['../classarc_1_1geom_1_1shape_1_1_sphere.html#ab9b38e8856ff2ce656ee99ed50b4b49c',1,'arc::geom::shape::Sphere::nearest_point_surf()']]],
+  ['nearest_5fpoint_5fvol',['nearest_point_vol',['../classarc_1_1geom_1_1shape_1_1_aabb.html#a2c757a57930307460ba90f3fa5062a8c',1,'arc::geom::shape::Aabb::nearest_point_vol()'],['../classarc_1_1geom_1_1shape_1_1_sphere.html#a24dc9ffe85d5eca8738293e3521c757c',1,'arc::geom::shape::Sphere::nearest_point_vol()']]],
   ['next',['next',['../namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c',1,'arc::index::rotate']]],
   ['norm',['norm',['../classarc_1_1geom_1_1shape_1_1_circle.html#a3abf22ffc853ebb6327ef17141058307',1,'arc::geom::shape::Circle::norm()'],['../classarc_1_1geom_1_1shape_1_1_plane.html#ab0ea4a43ecfc9fb23b417ca89749cecd',1,'arc::geom::shape::Plane::norm()'],['../classarc_1_1geom_1_1shape_1_1_triangle.html#aa833baa18585578610a680de93e16bf3',1,'arc::geom::shape::Triangle::norm()']]],
   ['norm_5fkeyword',['NORM_KEYWORD',['../namespacearc_1_1geom_1_1shape.html#a51ca94f24aa65c5f4511eb72ebae84bd',1,'arc::geom::shape']]],

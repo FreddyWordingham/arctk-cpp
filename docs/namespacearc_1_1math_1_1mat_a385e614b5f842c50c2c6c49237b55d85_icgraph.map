@@ -1,6 +1,6 @@
 <map id="arc::math::mat::rotate" name="arc::math::mat::rotate">
 <area shape="rect" id="node2" href="$namespacearc_1_1math_1_1mat.html#af39486147412a1d46985c59a96727834" title="arc::math::mat::transform" alt="" coords="201,61,372,87"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1gui_1_1actor.html#a7167ed0983ba1df0ea1d820908176df0" title="arc::gui::actor::act" alt="" coords="437,5,564,31"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1gui_1_1actor.html#a704371572df24855c6cd1456bf4d766b" title="arc::gui::actor::act" alt="" coords="437,5,564,31"/>
 <area shape="rect" id="node4" href="$namespacearc_1_1str_1_1parse.html#a58a373132eb04bcd4f94d61e47ef2204" title="arc::str::parse::parsable\l_to\&lt; bool \&gt;" alt="" coords="420,55,581,93"/>
 <area shape="rect" id="node5" href="$namespacearc_1_1str_1_1parse.html#a0d90413f35d2cb9bcbccd3c57c3c0fe3" title="arc::str::parse::to\l\&lt; bool \&gt;" alt="" coords="440,117,561,156"/>
 </map>

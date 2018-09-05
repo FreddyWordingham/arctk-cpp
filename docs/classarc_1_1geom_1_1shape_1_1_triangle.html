@@ -125,6 +125,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:accc984547dc8af83525cd471119adf5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd0b54405bc0c9ba1b50a23bef1cfb57"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#acd0b54405bc0c9ba1b50a23bef1cfb57">random_pos_and_norm</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept override</td></tr>
 <tr class="separator:acd0b54405bc0c9ba1b50a23bef1cfb57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89a572e0c7f6c6018bfdbbae3a4e96a4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a89a572e0c7f6c6018bfdbbae3a4e96a4">intersect_surf</a> (const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;aabb_) const noexcept override</td></tr>
+<tr class="separator:a89a572e0c7f6c6018bfdbbae3a4e96a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cc308b85fc3cb44e799169dd1ca7492"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a0cc308b85fc3cb44e799169dd1ca7492">intersect_vol</a> (const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;aabb_) const noexcept override</td></tr>
+<tr class="separator:a0cc308b85fc3cb44e799169dd1ca7492"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe258581ad067c650f2f9a5cbebd4021"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#abe258581ad067c650f2f9a5cbebd4021">plane_collision</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept</td></tr>
 <tr class="separator:abe258581ad067c650f2f9a5cbebd4021"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8ea8b794628a362acb74a5830ebc1b1"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#ad8ea8b794628a362acb74a5830ebc1b1">collision</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
@@ -432,6 +436,121 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a89a572e0c7f6c6018bfdbbae3a4e96a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89a572e0c7f6c6018bfdbbae3a4e96a4">&#9670;&nbsp;</a></span>intersect_surf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool arc::geom::shape::Triangle::intersect_surf </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;&#160;</td>
+          <td class="paramname"><em>aabb_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determine if an intersection occurs between the triangle's surface and an axis-aligned bounding box.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aabb_</td><td>Axis-aligned bounding box to test.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the triangle's surface intersects with the axis-aligned bounding box. </dd></dl>
+
+<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#a63459dedcd37c78d590cf9d53ba45163">arc::geom::Shape</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_triangle_a89a572e0c7f6c6018bfdbbae3a4e96a4_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_triangle_a89a572e0c7f6c6018bfdbbae3a4e96a4_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_triangle_a89a572e0c7f6c6018bfdbbae3a4e96a4_cgraph" id="classarc_1_1geom_1_1shape_1_1_triangle_a89a572e0c7f6c6018bfdbbae3a4e96a4_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="233,19,374,44"/>
+<area shape="rect" id="node6" href="namespacearc_1_1utl_1_1search.html#a7dedb03499315275304d2ee539dbbf81" title="arc::utl::search::min" alt="" coords="235,71,372,96"/>
+<area shape="rect" id="node8" href="namespacearc_1_1math_1_1vec.html#aac2f268a88bb0d0908ab2a0fcd8faabe" title="arc::math::vec::axis" alt="" coords="235,120,372,145"/>
+<area shape="rect" id="node3" href="namespacearc_1_1utl_1_1search.html#a83ff5408af0ccc99c51d3dabf4f4562b" title="arc::utl::search::max\l_index" alt="" coords="422,5,564,44"/>
+<area shape="rect" id="node4" href="namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="639,8,759,47"/>
+<area shape="rect" id="node5" href="namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="612,72,786,97"/>
+<area shape="rect" id="node7" href="namespacearc_1_1utl_1_1search.html#ab0aae86f6b98b4746101dd60c00514ca" title="arc::utl::search::min\l_index" alt="" coords="424,68,562,107"/>
+</map>
+</div>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_triangle_a89a572e0c7f6c6018bfdbbae3a4e96a4_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_triangle_a89a572e0c7f6c6018bfdbbae3a4e96a4_icgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_triangle_a89a572e0c7f6c6018bfdbbae3a4e96a4_icgraph" id="classarc_1_1geom_1_1shape_1_1_triangle_a89a572e0c7f6c6018bfdbbae3a4e96a4_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a0cc308b85fc3cb44e799169dd1ca7492" title="arc::geom::shape::Triangle\l::intersect_vol" alt="" coords="233,5,412,44"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0cc308b85fc3cb44e799169dd1ca7492"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cc308b85fc3cb44e799169dd1ca7492">&#9670;&nbsp;</a></span>intersect_vol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool arc::geom::shape::Triangle::intersect_vol </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;&#160;</td>
+          <td class="paramname"><em>aabb_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determine if an intersection occurs between the triangle's volume and an axis-aligned bounding box.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aabb_</td><td>Axis-aligned bounding box to test.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the triangle's volume intersects with the axis-aligned bounding box. </dd></dl>
+
+<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#a86d25362a41ce20e988ccf9fd14504fe">arc::geom::Shape</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_triangle_a0cc308b85fc3cb44e799169dd1ca7492_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_triangle_a0cc308b85fc3cb44e799169dd1ca7492_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_triangle_a0cc308b85fc3cb44e799169dd1ca7492_cgraph" id="classarc_1_1geom_1_1shape_1_1_triangle_a0cc308b85fc3cb44e799169dd1ca7492_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a89a572e0c7f6c6018bfdbbae3a4e96a4" title="arc::geom::shape::Triangle\l::intersect_surf" alt="" coords="233,64,412,103"/>
+<area shape="rect" id="node3" href="namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="460,19,602,44"/>
+<area shape="rect" id="node7" href="namespacearc_1_1utl_1_1search.html#a7dedb03499315275304d2ee539dbbf81" title="arc::utl::search::min" alt="" coords="462,71,600,96"/>
+<area shape="rect" id="node9" href="namespacearc_1_1math_1_1vec.html#aac2f268a88bb0d0908ab2a0fcd8faabe" title="arc::math::vec::axis" alt="" coords="463,120,599,145"/>
+<area shape="rect" id="node4" href="namespacearc_1_1utl_1_1search.html#a83ff5408af0ccc99c51d3dabf4f4562b" title="arc::utl::search::max\l_index" alt="" coords="650,5,791,44"/>
+<area shape="rect" id="node5" href="namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="866,8,987,47"/>
+<area shape="rect" id="node6" href="namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="839,72,1014,97"/>
+<area shape="rect" id="node8" href="namespacearc_1_1utl_1_1search.html#ab0aae86f6b98b4746101dd60c00514ca" title="arc::utl::search::min\l_index" alt="" coords="651,68,789,107"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="aadf41397f5ad68e29ad8c6022e9ecc68"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aadf41397f5ad68e29ad8c6022e9ecc68">&#9670;&nbsp;</a></span>max()</h2>
 
@@ -487,11 +606,11 @@ Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Minimum vec of the smallest bounding box containing the triangle. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#aec88d71a33d78dc6674bbd69198ba9ea">arc::geom::Shape</a>.</p>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_triangle_a22a5827b33a654d97b01655647a02304_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_triangle_a22a5827b33a654d97b01655647a02304_cgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_triangle_a22a5827b33a654d97b01655647a02304_cgraph" id="classarc_1_1geom_1_1shape_1_1_triangle_a22a5827b33a654d97b01655647a02304_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="262,40,403,65"/>
@@ -527,11 +646,11 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the normal of triangles plane.</p>
 <dl class="section return"><dt>Returns</dt><dd>Normal of triangles plane. </dd></dl>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_triangle_aa833baa18585578610a680de93e16bf3_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_triangle_aa833baa18585578610a680de93e16bf3_icgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_triangle_aa833baa18585578610a680de93e16bf3_icgraph" id="classarc_1_1geom_1_1shape_1_1_triangle_aa833baa18585578610a680de93e16bf3_icgraph">
 <area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a01da723746133f85a4c3ba429b5cc4ee" title="arc::geom::shape::Triangle\l::init_norm" alt="" coords="233,5,412,44"/>
@@ -565,11 +684,11 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the array of triangle normals.</p>
 <dl class="section return"><dt>Returns</dt><dd>Array of triangle normals. </dd></dl>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_triangle_ab2ef6d3518a4bb90da387ca46caffbf3_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_triangle_ab2ef6d3518a4bb90da387ca46caffbf3_icgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_triangle_ab2ef6d3518a4bb90da387ca46caffbf3_icgraph" id="classarc_1_1geom_1_1shape_1_1_triangle_ab2ef6d3518a4bb90da387ca46caffbf3_icgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#a4f16b1ea42d8d2b246a2f2ec1acf9956" title="arc::gui::actor::act" alt="" coords="233,12,360,37"/>
@@ -621,11 +740,11 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>dir_ must be normalised.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Optional collision distance. </dd></dl>
-<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_triangle_abe258581ad067c650f2f9a5cbebd4021_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_triangle_abe258581ad067c650f2f9a5cbebd4021_cgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_triangle_abe258581ad067c650f2f9a5cbebd4021_cgraph" id="classarc_1_1geom_1_1shape_1_1_triangle_abe258581ad067c650f2f9a5cbebd4021_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="233,5,369,44"/>
@@ -658,11 +777,11 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the array of triangle vertices.</p>
 <dl class="section return"><dt>Returns</dt><dd>Array of triangle vertices. </dd></dl>
-<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_triangle_abb667d408962d557f6cb663b9c7ab600_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_triangle_abb667d408962d557f6cb663b9c7ab600_icgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_triangle_abb667d408962d557f6cb663b9c7ab600_icgraph" id="classarc_1_1geom_1_1shape_1_1_triangle_abb667d408962d557f6cb663b9c7ab600_icgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#a4f16b1ea42d8d2b246a2f2ec1acf9956" title="arc::gui::actor::act" alt="" coords="233,12,360,37"/>
@@ -741,11 +860,11 @@ Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Random position, and corresponding normal, on the surface of the triangle. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#acb1c509590fe57967d10c7110504035b">arc::geom::Shape</a>.</p>
-<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_triangle_acd0b54405bc0c9ba1b50a23bef1cfb57_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_triangle_acd0b54405bc0c9ba1b50a23bef1cfb57_cgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_triangle_acd0b54405bc0c9ba1b50a23bef1cfb57_cgraph" id="classarc_1_1geom_1_1shape_1_1_triangle_acd0b54405bc0c9ba1b50a23bef1cfb57_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_triangle.html#aa833baa18585578610a680de93e16bf3" title="arc::geom::shape::Triangle\l::norm" alt="" coords="233,5,412,44"/>
@@ -864,7 +983,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 31 2018 15:01:22 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 5 2018 14:01:04 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
