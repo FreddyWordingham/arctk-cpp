@@ -148,6 +148,20 @@ namespace arc //! arctk namespace
                 PRE(!serial_.empty());
             }
 
+            /**
+             *  Construct a mesh by parsing by transforming a list of vertex positions and normals.
+             *
+             *  @param  poss_   Vector of vertex positions to be transformed.
+             *  @param  norms_  Vector of vertex normals to be transformed.
+             *  @param  faces_  Vector of face data used to construct triangle faces.
+             *  @param  scale_  Scale transformation to apply to the base wavefront object.
+             *  @param  rot_    Rotation transformation to apply to the base wavefront object.
+             *  @param  trans_  Translation transformation to apply to the base wavefront object.
+             *
+             *  @pre    poss_ must contain at least three elements.
+             *  @pre    norms_ may not be empty.
+             *  @pre    faces_ may not be empty.
+             */
             inline Mesh::Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
               : Mesh(transform_poss(poss_, math::mat::transform(scale_, rot_, trans_)), transform_norms(norms_, math::mat::transform(scale_, rot_, trans_)), faces_)
             {
