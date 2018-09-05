@@ -227,7 +227,7 @@ namespace arc //! arctk namespace
             /**
              *  Get the topology of the circle.
              *
-             *  @return False, as the surface of the shape does not form a bounded volume.
+             *  @return False, as the surface of the circle does not form a bounded volume.
              */
             inline bool Circle::closed() const noexcept
             {
