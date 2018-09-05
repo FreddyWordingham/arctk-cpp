@@ -57,13 +57,13 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline const vec3& pos() const noexcept;
-                inline double      rad() const noexcept;
                 inline vec3        min() const noexcept override;
                 inline vec3        max() const noexcept override;
                 inline double      area() const noexcept override;
                 inline double      vol() const noexcept override;
                 inline bool        closed() const noexcept override;
+                inline const vec3& pos() const noexcept;
+                inline double      rad() const noexcept;
 
                 //  -- Emission --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
@@ -105,26 +105,6 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            /**
-             *  Get the position of the sphere.
-             *
-             *  @return Position of the sphere.
-             */
-            inline const vec3& Sphere::pos() const noexcept
-            {
-                return (_pos);
-            }
-
-            /**
-             *  Get the radius of the sphere.
-             *
-             *  @return Radius of the sphere.
-             */
-            inline double Sphere::rad() const noexcept
-            {
-                return (_rad);
-            }
-
             /**
              *  Get the minimum vec of the smallest bounding box containing the sphere.
              *
@@ -187,6 +167,25 @@ namespace arc //! arctk namespace
                 return (true);
             }
 
+            /**
+             *  Get the position of the sphere.
+             *
+             *  @return Position of the sphere.
+             */
+            inline const vec3& Sphere::pos() const noexcept
+            {
+                return (_pos);
+            }
+
+            /**
+             *  Get the radius of the sphere.
+             *
+             *  @return Radius of the sphere.
+             */
+            inline double Sphere::rad() const noexcept
+            {
+                return (_rad);
+            }
 
 
             //  -- Emission --
