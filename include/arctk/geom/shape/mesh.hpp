@@ -450,9 +450,9 @@ namespace arc //! arctk namespace
 
                     for (size_t j = 0; j < 3; ++j)
                     {
-                        if (!utl::properties::contains(edges, edge_indices[3]))
+                        if (!utl::properties::contains(edges, edge_indices[j]))
                         {
-                            edges.emplace_back(edge_indices[3]);
+                            edges.emplace_back(edge_indices[j]);
                         }
                     }
                 }
