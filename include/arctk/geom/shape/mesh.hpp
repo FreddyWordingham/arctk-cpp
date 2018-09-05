@@ -483,6 +483,14 @@ namespace arc //! arctk namespace
                 return (tris);
             }
 
+            /**
+             *  Initialise the number of unique vertex positions.
+             *
+             *  @param  poss_   Vector of vertex positions.
+             *  @param  faces_  Vector of face data used to construct triangle faces.
+             *
+             *  @return Number of unique vertex positions.
+             */
             inline size_t Mesh::init_num_verts(const std::vector<vec3>& poss_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
             {
                 std::vector<bool> used(poss_.size(), false);
