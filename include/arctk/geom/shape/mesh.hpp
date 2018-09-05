@@ -448,14 +448,11 @@ namespace arc //! arctk namespace
 
                     const std::array<std::array<size_t, 2>, 3> edge_indices({{{{pos_indices[0], pos_indices[1]}}, {{pos_indices[1], pos_indices[2]}}, {{pos_indices[0], pos_indices[2]}}}});
 
-                    for (size_t j = 0; j < edges.size(); ++j)
+                    for (size_t j = 0; j < 3; ++j)
                     {
-                        for (size_t k = 0; k < 3; ++k)
+                        if (!utl::properties::contains(edges, edge_indices[3]))
                         {
-                            if (!utl::properties::contains(edges, edge_indices[k]))
-                            {
-                                edges.emplace_back(edge_indices[k]);
-                            }
+                            edges.emplace_back(edge_indices[3]);
                         }
                     }
                 }
