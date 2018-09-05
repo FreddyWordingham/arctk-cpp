@@ -228,6 +228,16 @@ namespace arc //! arctk namespace
             }
 
             /**
+             *  Get the topology of the triangle.
+             *
+             *  @return False, as the surface of the triangle does not form a bounded volume.
+             */
+            inline bool Triangle::closed() const noexcept
+            {
+                return (false);
+            }
+
+            /**
              *  Get the array of triangle vertices.
              *
              *  @return Array of triangle vertices.
