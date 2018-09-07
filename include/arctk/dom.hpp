@@ -20,6 +20,8 @@
 #include <arctk/dom/cell/branch.hpp>
 #include <arctk/dom/cell/leaf.hpp>
 #include <arctk/dom/grid.hpp>
+#include <arctk/dom/grid/adaptive.hpp>
+#include <arctk/dom/grid/fixed.hpp>
 
 
 
