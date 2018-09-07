@@ -30,7 +30,7 @@
 #include <arctk/data/image.hpp>
 #include <arctk/data/image/colour.hpp>
 #include <arctk/data/image/greyscale.hpp>
-#include <arctk/data/quanta.hpp>
+#include <arctk/data/packet.hpp>
 #include <arctk/data/table.hpp>
 
 
