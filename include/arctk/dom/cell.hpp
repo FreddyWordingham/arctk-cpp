@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         inline Cell::Cell(const vec3& min_, const vec3& max_) noexcept
-          : _Aabb(min_, max_)
+          : Aabb(min_, max_)
         {
         }
 
