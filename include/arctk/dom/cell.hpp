@@ -39,6 +39,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Cell(const vec3& min_, const vec3& max_) noexcept;
             inline Cell(const Cell&) = default; //!< Defaulted copy constructor.
             inline Cell(Cell&&)      = default; //!< Defaulted move constructor.
 
@@ -62,6 +63,10 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline Cell::Cell(const vec3& min_, const vec3& max_) noexcept
+          : _Aabb(min_, max_)
+        {
+        }
 
 
 
