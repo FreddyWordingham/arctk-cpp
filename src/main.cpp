@@ -37,6 +37,7 @@
 #include <arctk/debug/contract.hpp>
 #include <arctk/debug/invariant.hpp>
 #include <arctk/debug/location.hpp>
+#include <arctk/dom.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/exit/error.hpp>
 #include <arctk/exit/success.hpp>
@@ -48,7 +49,6 @@
 #include <arctk/geom/shape/plane.hpp>
 #include <arctk/geom/shape/sphere.hpp>
 #include <arctk/geom/shape/triangle.hpp>
-#include <arctk/grid.hpp>
 #include <arctk/gui.hpp>
 #include <arctk/gui/actor.hpp>
 #include <arctk/gui/camera.hpp>
