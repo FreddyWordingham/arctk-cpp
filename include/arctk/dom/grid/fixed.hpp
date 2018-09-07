@@ -82,7 +82,7 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline size_t Fixed::num_cells() const noexcept
             {
-                return (_cells.size() * _cells.first().size() * _cells.first().first().size());
+                return (_cells.size() * _cells.front().size() * _cells.front().front().size());
             }
 
 
