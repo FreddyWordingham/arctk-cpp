@@ -67,6 +67,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline size_t      num_packets() const noexcept;
             inline const vec3& packet_size() const noexcept;
         };
 
@@ -142,6 +143,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        inline size_t Domain::num_packets() const noexcept
+        {
+            return (_packets.size() * _packets.front().size() * _packets.front().front().size());
+        }
+
         inline const vec3& Domain::packet_size() const noexcept
         {
             return (_packet_size);
