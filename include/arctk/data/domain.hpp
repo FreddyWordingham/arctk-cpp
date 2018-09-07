@@ -95,9 +95,9 @@ namespace arc //! arctk namespace
             PRE(min_.x < max_.x);
             PRE(min_.y < max_.y);
             PRE(min_.z < max_.z);
-            PRE(res[index::dim::cartesian::X] > 0);
-            PRE(res[index::dim::cartesian::Y] > 0);
-            PRE(res[index::dim::cartesian::Z] > 0);
+            PRE(res_[index::dim::cartesian::X] > 0);
+            PRE(res_[index::dim::cartesian::Y] > 0);
+            PRE(res_[index::dim::cartesian::Z] > 0);
 
             vec3 packet_size = max_ - min_;
 
