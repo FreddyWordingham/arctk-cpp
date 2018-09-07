@@ -57,6 +57,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
+                inline size_t num_cells() const noexcept;
             };
 
 
@@ -79,6 +80,10 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            inline size_t Fixed::num_cells() const noexcept
+            {
+                return (_cells.size() * _cells.first().size() * _cells.first().first().size());
+            }
 
 
 
