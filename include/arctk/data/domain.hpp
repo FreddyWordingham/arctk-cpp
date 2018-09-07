@@ -96,9 +96,9 @@ namespace arc //! arctk namespace
 
             vec3 packet_size = max_ - min_;
 
-            packet_size.x /= res_[index::dim::cartesian::X];
-            packet_size.y /= res_[index::dim::cartesian::Y];
-            packet_size.z /= res_[index::dim::cartesian::Z];
+            packet_size.x /= static_cast<double>(res_[index::dim::cartesian::X]);
+            packet_size.y /= static_cast<double>(res_[index::dim::cartesian::Y]);
+            packet_size.z /= static_cast<double>(res_[index::dim::cartesian::Z]);
 
             return (packet_size);
         }
