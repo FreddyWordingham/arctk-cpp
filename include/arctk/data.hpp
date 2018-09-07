@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/data/domain.hpp>
 #include <arctk/data/histogram.hpp>
 #include <arctk/data/histogram/average.hpp>
 #include <arctk/data/histogram/average1.hpp>
