@@ -17,7 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
-#include <functional>
+#include <memory>
 
 //  -- Arctk --
 #include <arctk/dom/cell.hpp>
@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Daughters --
-                std::array<std::reference_wrapper<Cell>, 8> _childs;
+                std::array<std::unique_ptr<Cell>, 8> _childs;
 
 
                 //  == INSTANTIATION ==
