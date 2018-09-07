@@ -15,6 +15,8 @@
 
 
 //  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/geom.hpp>
 
 
 
@@ -30,7 +32,7 @@ namespace arc //! arctk namespace
         /**
          *  Domain cell class.
          */
-        class Cell
+        class Cell : public geom::shape::Aabb
         {
             //  == FIELDS ==
           private:
