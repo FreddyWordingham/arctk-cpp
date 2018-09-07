@@ -33,14 +33,10 @@ namespace arc //! arctk namespace
         /**
          *  Domain gridding class.
          */
-        class Grid
+        class Grid : public geom::shape::Aabb
         {
             //  == FIELDS ==
           private:
-            //  -- Bounds --
-            const geom::shape::Aabb _box; //!< Bounds of the grid.
-
-
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
@@ -57,7 +53,7 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         inline Grid::Grid(const vec3& min_, const vec3& max_) noexcept
-          : _box(min_, max_)
+          : Aabb(min_, max_)
         {
             PRE(min_.x < max_.x);
             PRE(min_.y < max_.y);
