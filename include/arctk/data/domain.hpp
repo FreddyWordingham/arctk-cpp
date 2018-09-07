@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
             //  -- Initialisation --
             inline vec3 init_packet_size(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept;
             template <class T>
-            inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> init_packets() const noexcept;
+            inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> init_packets(const std::array<size_t, 3>& res_) const noexcept;
 
 
             //  == METHODS ==
@@ -78,7 +78,7 @@ namespace arc //! arctk namespace
         inline Domain::Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept
           : geom::shape::Aabb(min_, max_)
           , _packet_size(init_packet_size(min_, max_, res_))
-          , _packets(init_packets<T>())
+          , _packets(init_packets<T>(res_))
         {
             PRE(min_.x < max_.x);
             PRE(min_.y < max_.y);
@@ -109,9 +109,31 @@ namespace arc //! arctk namespace
         }
 
         template <class T>
-        inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> Domain::init_packets() const noexcept
+        inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> Domain::init_packets(const std::array<size_t, 3>& res_) const noexcept
         {
             std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> packets;
+            packets.reserve(index::dim::cartesian::X);
+
+            for (size_t i = 0; i < res_[index::dim::cartesian::X]; ++i)
+            {
+                std::vector<std::vector<std::unique_ptr<Packet>>> slice;
+                slice.reserve(res_[index::dim::cartesian::Y]);
+
+                for (size_t j = 0; j < res_[index::dim::cartesian::Y]; ++j)
+                {
+                    std::vector<std::unique_ptr<Packet>> line;
+                    line.reserve(res_[index::dim::cartesian::Z]);
+
+                    for (size_t k = 0; k < res_[index::dim::cartesian::Z]; ++k)
+                    {
+                        line.emplace_back(std::make_unique<T>());
+                    }
+
+                    slice.emplace_back(line);
+                }
+
+                packets.emplace_back(slice);
+            }
 
             return (packets);
         }
