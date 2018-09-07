@@ -1,31 +1,20 @@
 /**
- *  @file   arctk/data/image.hpp
- *  @date   12/07/2018
+ *  @file   arctk/data/packet.hpp
+ *  @date   07/09/2018
  *  @author Freddy Wordingham
  *
- *  Image forming base class.
+ *  Data packet base class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_IMAGE_HPP
-#define ARCTK_DATA_IMAGE_HPP
+#ifndef ARCTK_DATA_PACKET_HPP
+#define ARCTK_DATA_PACKET_HPP
 
 
 
 //  == IMPORTS ==
-//  -- Std --
-#include <algorithm>
-#include <fstream>
-#include <iomanip>
-#include <sstream>
-#include <string>
-#include <vector>
-
-//  -- Arctk --
-#include <arctk/debug.hpp>
-#include <arctk/math.hpp>
 
 
 
@@ -39,9 +28,9 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
-         *  Image data writer.
+         *  Data packet base class.
          */
-        class Image
+        class Packet
         {
             //  == FIELDS ==
           protected:
@@ -74,4 +63,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_DATA_IMAGE_HPP
+#endif // ARCTK_DATA_PACKET_HPP
