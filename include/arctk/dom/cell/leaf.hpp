@@ -32,7 +32,7 @@ namespace arc //! arctk namespace
             /**
              *  Domain leaf cell class.
              */
-            class Leaf
+            class Leaf : public Cell
             {
                 //  == FIELDS ==
               private:
