@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
 
 
