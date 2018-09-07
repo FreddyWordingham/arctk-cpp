@@ -127,7 +127,9 @@ namespace arc //! arctk namespace
 
                     for (size_t k = 0; k < res_[index::dim::cartesian::Z]; ++k)
                     {
-                        line.emplace_back(std::make_unique<T>());
+                        const vec3 packet_min = _min + vec3(i * _packet_size.x, j * _packet_size.y, k * _packet_size.y);
+
+                        line.emplace_back(std::make_unique<T>(packet_min, packet_min + _packet_size));
                     }
 
                     slice.emplace_back(line);
