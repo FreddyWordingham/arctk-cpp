@@ -18,6 +18,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
+#include <arctk/math.hpp>
 
 
 
