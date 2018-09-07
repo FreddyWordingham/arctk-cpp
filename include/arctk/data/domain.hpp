@@ -20,6 +20,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/data/packet.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/index.hpp>
