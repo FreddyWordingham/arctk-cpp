@@ -109,7 +109,7 @@ namespace arc //! arctk namespace
         }
 
         template <class T>
-        inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> init_packets() const noexcept
+        inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> Domain::init_packets() const noexcept
         {
             std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> packets;
 
