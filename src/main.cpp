@@ -39,6 +39,8 @@
 #include <arctk/debug/location.hpp>
 #include <arctk/dom.hpp>
 #include <arctk/dom/cell.hpp>
+#include <arctk/dom/cell/branch.hpp>
+#include <arctk/dom/cell/leaf.hpp>
 #include <arctk/dom/grid.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/exit/error.hpp>
