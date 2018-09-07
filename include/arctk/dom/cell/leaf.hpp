@@ -36,6 +36,9 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Data --
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
