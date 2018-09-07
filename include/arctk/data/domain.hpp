@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
             const vec3 _packet_size; //!< Dimensions of each contained packet.
 
             //  -- Information --
-            const std::vector<std::vector<std::vector<std::unique<Packet>>>> _packets;
+            const std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> _packets;
 
 
             //  == INSTANTIATION ==
