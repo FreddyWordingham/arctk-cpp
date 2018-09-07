@@ -17,6 +17,8 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/dom/cell.hpp>
+#include <arctk/dom/cell/branch.hpp>
+#include <arctk/dom/cell/leaf.hpp>
 #include <arctk/dom/grid.hpp>
 
 
