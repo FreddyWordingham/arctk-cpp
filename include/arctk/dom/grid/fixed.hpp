@@ -19,6 +19,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/dom/cell/leaf.hpp>
 #include <arctk/dom/grid.hpp>
 #include <arctk/index.hpp>
@@ -66,6 +67,12 @@ namespace arc //! arctk namespace
               : Grid(min_, max_)
               , _cells(res_[index::dim::cartesian::X], std::vector<std::vector<cell::Leaf>>(res_[index::dim::cartesian::Y], std::vector<cell::Leaf>(res_[index::dim::cartesian::Z])))
             {
+                PRE(min_.x < max_.x);
+                PRE(min_.y < max_.y);
+                PRE(min_.z < max_.z);
+                PRE(res_[index::dim::cartesian::X] > 0);
+                PRE(res_[index::dim::cartesian::Y] > 0);
+                PRE(res_[index::dim::cartesian::Z] > 0);
             }
 
 
