@@ -18,6 +18,9 @@
 //  -- Std --
 #include <vector>
 
+//  -- Arctk --
+#include <arctk/geom.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -32,11 +35,12 @@ namespace arc //! arctk namespace
         /**
          *  Data domain class.
          */
-        class Domain
+        class Domain : public geom::shape::Aabb
         {
             //  == FIELDS ==
           protected:
             //  -- Information --
+
 
 
             //  == INSTANTIATION ==
