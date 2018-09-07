@@ -39,8 +39,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           protected:
-            //  -- Information --
+            //  -- Resolution --
+            const vec3 _packet_size; //!< Dimensions of each contained packet.
 
+            //  -- Information --
 
 
             //  == INSTANTIATION ==
