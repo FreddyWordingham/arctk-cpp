@@ -15,6 +15,8 @@
 
 
 //  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/geom.hpp>
 
 
 
@@ -34,6 +36,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Bounds --
+            const geom::shape::Aabb _box; //!< Bounds of the grid.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
