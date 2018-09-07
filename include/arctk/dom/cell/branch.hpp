@@ -49,6 +49,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Branch(const vec3& min_, const vec3& max_) noexcept;
 
 
                 //  == METHODS ==
@@ -60,6 +61,10 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Branch::Branch(const vec3& min_, const vec3& max_) noexcept
+              : Cell(min_, max_)
+            {
+            }
 
 
 
