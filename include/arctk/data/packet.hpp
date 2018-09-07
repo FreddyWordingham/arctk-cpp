@@ -14,6 +14,12 @@
 
 
 
+//  == INCLUDES ==
+//  -- Arctk --
+#include <arctk/geom.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -26,7 +32,7 @@ namespace arc //! arctk namespace
         /**
          *  Data packet base class.
          */
-        class Packet
+        class Packet : geom::shape::Aabb
         {
         };
 
