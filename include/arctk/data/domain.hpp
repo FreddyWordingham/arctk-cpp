@@ -159,9 +159,9 @@ namespace arc //! arctk namespace
         inline std::unique_ptr<Packet> Domain::packet(const vec3& pos_) const noexcept
         {
             const vec3   rel_pos = pos_ - _min;
-            const size_t x_index = static_cast<size_t>(rel_pos / _packet_size.x);
-            const size_t y_index = static_cast<size_t>(rel_pos / _packet_size.y);
-            const size_t z_index = static_cast<size_t>(rel_pos / _packet_size.z);
+            const size_t x_index = static_cast<size_t>(rel_pos.x / _packet_size.x);
+            const size_t y_index = static_cast<size_t>(rel_pos.y / _packet_size.y);
+            const size_t z_index = static_cast<size_t>(rel_pos.z / _packet_size.z);
 
             return (_packets[x_index][y_index][z_index]);
         }
