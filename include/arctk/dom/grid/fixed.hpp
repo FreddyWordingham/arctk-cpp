@@ -57,6 +57,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
+                const std::vector < std::vector<std::vector<cell::Leaf>>& cells() const noexcept;
             };
 
 
@@ -79,6 +80,10 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            const std::vector<std::vector<std::vector<cell::Leaf>>>& Fixed::cells() const noexcept
+            {
+                return (_cells);
+            }
 
 
 
