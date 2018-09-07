@@ -23,6 +23,7 @@
 #include <arctk/dom/cell/leaf.hpp>
 #include <arctk/dom/grid.hpp>
 #include <arctk/index.hpp>
+#include <arctk/math.hpp>
 
 
 
