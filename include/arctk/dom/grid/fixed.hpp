@@ -21,6 +21,7 @@
 //  -- Arctk --
 #include <arctk/dom/cell/leaf.hpp>
 #include <arctk/dom/grid.hpp>
+#include <arctk/index.hpp>
 
 
 
@@ -49,6 +50,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Fixed(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept;
 
 
                 //  == METHODS ==
@@ -60,6 +62,11 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Fixed::Fixed(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept
+              : Grid(min_, max_)
+              , _cells(res_[index::dim::cartesian::X], std::vector<std::vector<cell::Leaf>>(res_[index::dim::cartesian::Y], std::vector<cell::Leaf>(res_[index::dim::cartesian::Z])))
+            {
+            }
 
 
 
