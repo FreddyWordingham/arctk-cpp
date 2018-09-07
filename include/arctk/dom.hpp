@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/grid.hpp
+ *  @file   arctk/dom.hpp
  *  @date   07/09/2018
  *  @author Freddy Wordingham
  *
- *  Collection of gridding classes.
+ *  Collection of domain classes.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_GRID_HPP
-#define ARCTK_GRID_HPP
+#ifndef ARCTK_DOM_HPP
+#define ARCTK_DOM_HPP
 
 
 
@@ -20,4 +20,4 @@
 
 
 //  == GUARD END ==
-#endif // ARCTK_GRID_HPP
+#endif // ARCTK_DOM_HPP
