@@ -15,6 +15,8 @@
 
 
 //  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/dom/cell.hpp>
 
 
 
@@ -32,7 +34,7 @@ namespace arc //! arctk namespace
             /**
              *  Domain branch cell class.
              */
-            class Branch
+            class Branch : public Cell
             {
                 //  == FIELDS ==
               private:
