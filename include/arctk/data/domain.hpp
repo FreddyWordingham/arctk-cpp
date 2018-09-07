@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <memory>
 #include <vector>
 
 //  -- Arctk --
@@ -44,6 +45,7 @@ namespace arc //! arctk namespace
             const vec3 _packet_size; //!< Dimensions of each contained packet.
 
             //  -- Information --
+            const std::vector<std::vector<std::vector<std::unique<Packet>>>> _packets;
 
 
             //  == INSTANTIATION ==
