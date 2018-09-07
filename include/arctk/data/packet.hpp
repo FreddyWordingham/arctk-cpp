@@ -14,10 +14,6 @@
 
 
 
-//  == IMPORTS ==
-
-
-
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -32,28 +28,7 @@ namespace arc //! arctk namespace
          */
         class Packet
         {
-            //  == FIELDS ==
-          protected:
-            //  -- Information --
-
-            //  == INSTANTIATION ==
-          public:
-            //  -- Constructors --
-
-            //  == METHODS ==
-          public:
-            //  -- Getters --
         };
-
-
-
-        //  == INSTANTIATION ==
-        //  -- Constructors --
-
-
-
-        //  == METHODS ==
-        //  -- Getters --
 
 
 
