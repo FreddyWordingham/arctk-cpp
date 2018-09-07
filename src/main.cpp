@@ -19,6 +19,7 @@
 #include <arctk/consts/math.hpp>
 #include <arctk/consts/phys.hpp>
 #include <arctk/data.hpp>
+#include <arctk/data/domain.hpp>
 #include <arctk/data/histogram.hpp>
 #include <arctk/data/histogram/average.hpp>
 #include <arctk/data/histogram/average1.hpp>
