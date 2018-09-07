@@ -54,11 +54,14 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            template <class T>
             inline Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept;
 
           private:
             //  -- Initialisation --
             inline vec3 init_packet_size(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept;
+            template <class T>
+            inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> init_packets() const noexcept;
 
 
             //  == METHODS ==
@@ -71,17 +74,18 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        template <class T>
         inline Domain::Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept
           : geom::shape::Aabb(min_, max_)
           , _packet_size(init_packet_size(min_, max_, res_))
-          , _packets(init_packets())
+          , _packets(init_packets<T>())
         {
             PRE(min_.x < max_.x);
             PRE(min_.y < max_.y);
             PRE(min_.z < max_.z);
-            PRE(res[index::dim::cartesian::X] > 0);
-            PRE(res[index::dim::cartesian::Y] > 0);
-            PRE(res[index::dim::cartesian::Z] > 0);
+            PRE(res_[index::dim::cartesian::X] > 0);
+            PRE(res_[index::dim::cartesian::Y] > 0);
+            PRE(res_[index::dim::cartesian::Z] > 0);
         }
 
 
@@ -102,6 +106,14 @@ namespace arc //! arctk namespace
             packet_size.z /= static_cast<double>(res_[index::dim::cartesian::Z]);
 
             return (packet_size);
+        }
+
+        template <class T>
+        inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> init_packets() const noexcept
+        {
+            std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> packets;
+
+            return (packets);
         }
 
 
