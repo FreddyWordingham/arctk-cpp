@@ -54,13 +54,13 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            template <class T>
+            template <typename T>
             inline Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept;
 
           private:
             //  -- Initialisation --
             inline vec3 init_packet_size(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept;
-            template <class T>
+            template <typename T>
             inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> init_packets(const std::array<size_t, 3>& res_) const noexcept;
 
 
@@ -75,7 +75,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        template <class T>
+        template <typename T>
         inline Domain::Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept
           : geom::shape::Aabb(min_, max_)
           , _packet_size(init_packet_size(min_, max_, res_))
@@ -109,7 +109,7 @@ namespace arc //! arctk namespace
             return (packet_size);
         }
 
-        template <class T>
+        template <typename T>
         inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> Domain::init_packets(const std::array<size_t, 3>& res_) const noexcept
         {
             std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> packets;
