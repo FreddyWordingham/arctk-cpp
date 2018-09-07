@@ -20,7 +20,9 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
+#include <arctk/index.hpp>
 #include <arctk/math.hpp>
 
 
@@ -51,6 +53,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept;
 
 
             //  == METHODS ==
@@ -62,6 +65,15 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline Domain::Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept
+        {
+            PRE(min_.x < max_.x);
+            PRE(min_.y < max_.y);
+            PRE(min_.z < max_.z);
+            PRE(res[index::dim::cartesian::X] > 0);
+            PRE(res[index::dim::cartesian::Y] > 0);
+            PRE(res[index::dim::cartesian::Z] > 0);
+        }
 
 
 
