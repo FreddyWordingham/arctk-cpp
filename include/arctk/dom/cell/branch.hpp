@@ -15,6 +15,10 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <array>
+#include <functional>
+
 //  -- Arctk --
 #include <arctk/dom/cell.hpp>
 
@@ -38,6 +42,10 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Daughters --
+                std::array<std::ref<Cell>, 8> _childs;
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --

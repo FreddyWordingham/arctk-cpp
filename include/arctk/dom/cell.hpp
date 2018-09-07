@@ -37,6 +37,18 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Cell(const Cell&) = default; //!< Defaulted copy constructor.
+            inline Cell(Cell&&)      = default; //!< Defaulted move constructor.
+
+            //  -- Destructors --
+            virtual inline ~Cell() noexcept = default;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Cell& operator=(const Cell&) = default;     //!< Defaulted copy operator. @return Reference to copied object.
+            inline Cell& operator=(Cell&&) noexcept = default; //!< Defaulted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
