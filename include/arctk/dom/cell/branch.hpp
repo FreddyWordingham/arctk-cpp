@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Daughters --
-                std::array<std::ref<Cell>, 8> _childs;
+                std::array<std::reference_wrapper<Cell>, 8> _childs;
 
 
                 //  == INSTANTIATION ==
