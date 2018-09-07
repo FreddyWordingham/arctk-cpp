@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
         class Aabb
         {
             //  == FIELDS ==
-          private:
+          protected:
             //  -- Positioning --
             const vec3 _min; //!< Minimum vertex of the aabb.
             const vec3 _max; //!< Maximum vertex of the aabb.
