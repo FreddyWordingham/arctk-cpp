@@ -32,7 +32,7 @@ namespace arc //! arctk namespace
         /**
          *  Data packet base class.
          */
-        class Packet : geom::shape::Aabb
+        class Packet : public geom::shape::Aabb
         {
         };
 
