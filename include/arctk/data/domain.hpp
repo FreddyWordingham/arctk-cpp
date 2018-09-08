@@ -111,7 +111,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> Domain::init_packets(const std::array<size_t, 3>& res_, const T& pack_)) const noexcept
+        inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> Domain::init_packets(const std::array<size_t, 3>& res_, const T& pack_) const noexcept
         {
             std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> packets;
             packets.reserve(index::dim::cartesian::X);
