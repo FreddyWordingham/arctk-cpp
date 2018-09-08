@@ -35,6 +35,10 @@ namespace arc //! arctk namespace
          */
         class Packet
         {
+            //  == INSTANTIATION ==
+          public:
+            //  -- Constructors --
+            inline Packet() = default;
         };
 
 
