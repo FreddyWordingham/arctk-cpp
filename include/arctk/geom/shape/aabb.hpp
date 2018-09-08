@@ -205,9 +205,7 @@ namespace arc //! arctk namespace
              */
             inline double Aabb::vol() const noexcept
             {
-                const vec3 lengths = _max - _min;
-
-                const double vol = lengths.x * lengths.y * lengths.z;
+                const double vol = (_max.x - _min.x) * (_max.y - _min.y) * (_max.z - _min.z);
 
                 POST(vol > 0.0);
 
