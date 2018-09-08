@@ -55,13 +55,13 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             template <typename T>
-            inline Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept;
+            inline Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const T& pack_) noexcept;
 
           private:
             //  -- Initialisation --
             inline vec3 init_packet_size(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept;
             template <typename T>
-            inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> init_packets(const std::array<size_t, 3>& res_) const noexcept;
+            inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> init_packets(const std::array<size_t, 3>& res_, const T& pack_) const noexcept;
 
 
             //  == METHODS ==
@@ -77,10 +77,10 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <typename T>
-        inline Domain::Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept
+        inline Domain::Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const T& pack_)) noexcept
           : geom::shape::Aabb(min_, max_)
           , _packet_size(init_packet_size(min_, max_, res_))
-          , _packets(init_packets<T>(res_))
+          , _packets(init_packets<T>(res_), const T& pack_))
         {
             PRE(min_.x < max_.x);
             PRE(min_.y < max_.y);
@@ -111,7 +111,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> Domain::init_packets(const std::array<size_t, 3>& res_) const noexcept
+        inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> Domain::init_packets(const std::array<size_t, 3>& res_, const T& pack_)) const noexcept
         {
             std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> packets;
             packets.reserve(index::dim::cartesian::X);
@@ -128,9 +128,7 @@ namespace arc //! arctk namespace
 
                     for (size_t k = 0; k < res_[index::dim::cartesian::Z]; ++k)
                     {
-                        const vec3 packet_min = _min + vec3(i * _packet_size.x, j * _packet_size.y, k * _packet_size.y);
-
-                        line.emplace_back(std::make_unique<T>(packet_min, packet_min + _packet_size));
+                        line.emplace_back(std::make_unique<T>(pack_));
                     }
 
                     slice.emplace_back(line);
