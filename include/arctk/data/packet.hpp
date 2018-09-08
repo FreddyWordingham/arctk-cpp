@@ -55,6 +55,12 @@ namespace arc //! arctk namespace
 
 
 
+        //  == INSTANTIATION ==
+        //  -- Destructors --
+        inline Packet::~Packet() noexcept = default;
+
+
+
     } // namespace data
 } // namespace arc
 
