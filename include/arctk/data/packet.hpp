@@ -17,7 +17,6 @@
 //  == INCLUDES ==
 //  -- Arctk --
 #include <arctk/debug.hpp>
-#include <arctk/geom.hpp>
 #include <arctk/math.hpp>
 
 
@@ -34,25 +33,9 @@ namespace arc //! arctk namespace
         /**
          *  Data packet base class.
          */
-        class Packet : public geom::shape::Aabb
+        class Packet
         {
-            //  == INSTANTIATION ==
-          public:
-            //  -- Constructors --
-            inline Packet(const vec3& min_, const vec3& max_) noexcept;
         };
-
-
-
-        //  == INSTANTIATION ==
-        //  -- Constructors --
-        inline Packet::Packet(const vec3& min_, const vec3& max_) noexcept
-          : geom::shape::Aabb(min_, max_)
-        {
-            PRE(min_.x < max_.x);
-            PRE(min_.y < max_.y);
-            PRE(min_.z < max_.z);
-        }
 
 
 
