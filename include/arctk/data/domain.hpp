@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
             const vec3 _packet_size; //!< Dimensions of each contained packet.
 
             //  -- Information --
-            const std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> _packets;
+            std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> _packets;
 
 
             //  == INSTANTIATION ==
@@ -67,9 +67,9 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline size_t                  num_packets() const noexcept;
-            inline const vec3&             packet_size() const noexcept;
-            inline std::unique_ptr<Packet> packet(const vec3& pos_) const noexcept;
+            inline size_t      num_packets() const noexcept;
+            inline const vec3& packet_size() const noexcept;
+            inline Packet*     packet(const vec3& pos_) const noexcept;
         };
 
 
@@ -156,14 +156,14 @@ namespace arc //! arctk namespace
             return (_packet_size);
         }
 
-        inline std::unique_ptr<Packet> Domain::packet(const vec3& pos_) const noexcept
+        inline Packet* Domain::packet(const vec3& pos_) const noexcept
         {
             const vec3   rel_pos = pos_ - _min;
             const size_t x_index = static_cast<size_t>(rel_pos.x / _packet_size.x);
             const size_t y_index = static_cast<size_t>(rel_pos.y / _packet_size.y);
             const size_t z_index = static_cast<size_t>(rel_pos.z / _packet_size.z);
 
-            return (_packets[x_index][y_index][z_index]);
+            return (_packets[x_index][y_index][z_index].get());
         }
 
 
