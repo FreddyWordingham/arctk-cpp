@@ -1,6 +1,6 @@
 /**
  *  @file   arctk/sys/file.hpp
- *  @date   10/08/2018
+ *  @date   10/09/2018
  *  @author Freddy Wordingham
  *
  *  System file managemet functions.
