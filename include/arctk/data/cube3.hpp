@@ -74,6 +74,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline const std::array<size_t, 3> res() const noexcept;
+            inline T                           min() const noexcept;
+            inline T                           max() const noexcept;
         };
 
 
@@ -149,6 +151,50 @@ namespace arc //! arctk namespace
         inline const std::array<size_t, 3> Cube<T, 3>::res() const noexcept
         {
             return (_res);
+        }
+
+        template <typename T>
+        inline T Cube<T, 3>::min() const noexcept
+        {
+            T min = _data.front().front().front();
+
+            for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
+            {
+                for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
+                {
+                    for (size_t k = 0; k < _res[index::dim::cartesian::Z]; ++k)
+                    {
+                        if (_data[i][j][k] < min)
+                        {
+                            min = _data[i][j][k];
+                        }
+                    }
+                }
+            }
+
+            return (min);
+        }
+
+        template <typename T>
+        inline T Cube<T, 3>::max() const noexcept
+        {
+            T max = _data.front().front().front();
+
+            for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
+            {
+                for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
+                {
+                    for (size_t k = 0; k < _res[index::dim::cartesian::Z]; ++k)
+                    {
+                        if (_data[i][j][k] > max)
+                        {
+                            max = _data[i][j][k];
+                        }
+                    }
+                }
+            }
+
+            return (max);
         }
 
 
