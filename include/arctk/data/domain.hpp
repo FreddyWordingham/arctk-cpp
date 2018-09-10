@@ -16,7 +16,6 @@
 
 //  == IMPORTS ==
 //  -- Std --
-#include <experimental/filesystem>
 #include <memory>
 #include <vector>
 
@@ -27,6 +26,7 @@
 #include <arctk/geom.hpp>
 #include <arctk/index.hpp>
 #include <arctk/math.hpp>
+#include <arctk/sys.hpp>
 
 
 
@@ -200,12 +200,12 @@ namespace arc //! arctk namespace
         {
             PRE(!path_.empty());
 
-            std::experimental::filesystem::create_directories(path_);
+            sys::file::mkdir(path_);
 
             for (size_t i = 0; i < index::dim::cartesian::TOTAL; ++i)
             {
                 const std::string dir_string = path_ + "/" + index::dim::name(i);
-                std::experimental::filesystem::create_directories(dir_string);
+                sys::file::mkdir(dir_string);
 
                 for (size_t j = 0; j < _res[i]; ++j)
                 {
