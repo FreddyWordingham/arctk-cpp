@@ -59,6 +59,9 @@ namespace arc //! arctk namespace
             inline Cube(const std::array<size_t, 3>& res_, const T& val_) noexcept;
             inline Cube(const std::vector<std::vector<std::vector<T>>>& data_) noexcept;
 
+            //  -- Initialisation --
+            inline std::array<size_t, 3> init_res(const std::vector<std::vector<std::vector<T>>>& data_) const noexcept;
+
 
             //  == OPERATORS ==
           public:
@@ -100,6 +103,16 @@ namespace arc //! arctk namespace
         template <typename T>
         inline Cube<T, 3>::Cube(const std::vector<std::vector<std::vector<T>>>& data_) noexcept
           : _res(init_res(data_))
+        {
+            PRE(data_.size() > 0);
+            PRE(data_.front().size() > 0);
+            PRE(data_.front().front().size() > 0);
+        }
+
+
+        //  -- Initialisation --
+        template <typename T>
+        inline std::array<size_t, 3> Cube<T, 3>::init_res(const std::vector<std::vector<std::vector<T>>>& data_) const noexcept
         {
             PRE(data.size() > 0);
             PRE(data.front().size() > 0);
