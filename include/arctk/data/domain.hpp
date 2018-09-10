@@ -151,7 +151,7 @@ namespace arc //! arctk namespace
         //  -- Getters --
         inline size_t Domain::num_packets() const noexcept
         {
-            return (_packets.size() * _packets.front().size() * _packets.front().front().size());
+            return (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]);
         }
 
         inline const std::array<size_t, 3>& Domain::res() const noexcept
