@@ -45,7 +45,8 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Resolution --
-            const vec3 _packet_size; //!< Dimensions of each contained packet.
+            const std::array<size_t, 3> _res;         //!< Resolution of the domain.
+            const vec3                  _packet_size; //!< Dimensions of each contained packet.
 
             //  -- Information --
             std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> _packets;
@@ -73,6 +74,9 @@ namespace arc //! arctk namespace
 
             //  -- Retrieval --
             inline Packet* packet(const vec3& pos_) noexcept;
+
+            //  -- Saving --
+            inline void save(const std::string& path_) const noexcept;
         };
 
 
@@ -172,6 +176,12 @@ namespace arc //! arctk namespace
             const size_t z_index = static_cast<size_t>(rel_pos.z / _packet_size.z);
 
             return (_packets[x_index][y_index][z_index].get());
+        }
+
+
+        //  -- Saving --
+        inline void Domain::save(const std::string& path_) const noexcept
+        {
         }
 
 
