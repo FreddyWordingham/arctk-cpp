@@ -201,7 +201,7 @@ namespace arc //! arctk namespace
 
         //  -- Saving --
         template <typename T>
-        inline void Domain::save(const std::string& path_, std::function<double(T*)> func_) const noexcept
+        inline void Domain::save(const std::string& path_, std::function<double(T*)> func_, const std::string& data_name_, const std::string& var_name_) const noexcept
         {
             PRE(!path_.empty());
 
@@ -216,6 +216,8 @@ namespace arc //! arctk namespace
                     }
                 }
             }
+
+            datacube.save(path_, data_name_, var_name_, _min, _max);
         }
 
         template <typename T>
