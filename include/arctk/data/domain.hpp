@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
             inline Packet const* const packet(const size_t index_x_, const size_t index_y_, const size_t index_z_) const noexcept;
 
             //  -- Retrieval --
-            inline Packet* packet(const vec3& pos_) const noexcept;
+            inline Packet* packet(const vec3& pos_) noexcept;
         };
 
 
