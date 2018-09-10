@@ -158,7 +158,7 @@ namespace arc //! arctk namespace
             return (_packet_size);
         }
 
-        inline Packet* Domain::packet(const vec3& pos_) const noexcept
+        inline Packet const* const Domain::packet(const vec3& pos_) const noexcept
         {
             const vec3   rel_pos = pos_ - _min;
             const size_t x_index = static_cast<size_t>(rel_pos.x / _packet_size.x);
