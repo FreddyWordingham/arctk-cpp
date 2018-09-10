@@ -85,11 +85,11 @@ namespace arc //! arctk namespace
             inline Cube<T, 3> normal() const noexcept;
 
             //  -- Saving --
-            inline void save(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept;
+            inline void save(const std::string& path_, const std::string& data_name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept;
 
           private:
             //  -- Saving --
-            inline void save_scalar(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_, const std::string& typename_) const noexcept;
+            inline void save_scalar(const std::string& path_, const std::string& data_name_, const std::string& var_name_, const vec3& min_, const vec3& max_, const std::string& typename_) const noexcept;
         };
 
 
@@ -245,12 +245,12 @@ namespace arc //! arctk namespace
 
         //  -- Saving --
         template <>
-        inline void Cube<int, 3>::save(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept
+        inline void Cube<int, 3>::save(const std::string& path_, const std::string& data_name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept
         {
             PRE(!path_.empty());
-            PRE(!name_.empty());
-            PRE(name_.find_first_of('\n') == std::string::npos);
-            PRE(name_.find_first_of(' ') == std::string::npos);
+            PRE(!data_name_.empty());
+            PRE(data_name_.find_first_of('\n') == std::string::npos);
+            PRE(data_name_.find_first_of(' ') == std::string::npos);
             PRE(!var_name_.empty());
             PRE(var_name_.find_first_of('\n') == std::string::npos);
             PRE(var_name_.find_first_of(' ') == std::string::npos);
@@ -262,12 +262,12 @@ namespace arc //! arctk namespace
         }
 
         template <>
-        inline void Cube<float, 3>::save(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept
+        inline void Cube<float, 3>::save(const std::string& path_, const std::string& data_name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept
         {
             PRE(!path_.empty());
-            PRE(!name_.empty());
-            PRE(name_.find_first_of('\n') == std::string::npos);
-            PRE(name_.find_first_of(' ') == std::string::npos);
+            PRE(!data_name_.empty());
+            PRE(data_name_.find_first_of('\n') == std::string::npos);
+            PRE(data_name_.find_first_of(' ') == std::string::npos);
             PRE(!var_name_.empty());
             PRE(var_name_.find_first_of('\n') == std::string::npos);
             PRE(var_name_.find_first_of(' ') == std::string::npos);
@@ -279,12 +279,12 @@ namespace arc //! arctk namespace
         }
 
         template <>
-        inline void Cube<double, 3>::save(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept
+        inline void Cube<double, 3>::save(const std::string& path_, const std::string& data_name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept
         {
             PRE(!path_.empty());
-            PRE(!name_.empty());
-            PRE(name_.find_first_of('\n') == std::string::npos);
-            PRE(name_.find_first_of(' ') == std::string::npos);
+            PRE(!data_name_.empty());
+            PRE(data_name_.find_first_of('\n') == std::string::npos);
+            PRE(data_name_.find_first_of(' ') == std::string::npos);
             PRE(!var_name_.empty());
             PRE(var_name_.find_first_of('\n') == std::string::npos);
             PRE(var_name_.find_first_of(' ') == std::string::npos);
@@ -296,12 +296,12 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        inline void Cube<T, 3>::save_scalar(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_, const std::string& typename_) const noexcept
+        inline void Cube<T, 3>::save_scalar(const std::string& path_, const std::string& data_name_, const std::string& var_name_, const vec3& min_, const vec3& max_, const std::string& typename_) const noexcept
         {
             PRE(!path_.empty());
-            PRE(!name_.empty());
-            PRE(name_.find_first_of('\n') == std::string::npos);
-            PRE(name_.find_first_of(' ') == std::string::npos);
+            PRE(!data_name_.empty());
+            PRE(data_name_.find_first_of('\n') == std::string::npos);
+            PRE(data_name_.find_first_of(' ') == std::string::npos);
             PRE(!var_name_.empty());
             PRE(var_name_.find_first_of('\n') == std::string::npos);
             PRE(var_name_.find_first_of(' ') == std::string::npos);
@@ -318,7 +318,7 @@ namespace arc //! arctk namespace
             std::ofstream file(path_ + ".vtk");
 
             file << "# vtk DataFile Version 3.0\n"
-                 << "vtk " << name_ << '\n'
+                 << "vtk " << data_name_ << '\n'
                  << "ASCII\n"
                  << "DATASET RECTILINEAR_GRID\n"
                  << "DIMENSIONS " << (_res[index::dim::cartesian::X] + 1) << " " << (_res[index::dim::cartesian::Y] + 1) << " " << (_res[index::dim::cartesian::Z] + 1) << '\n'
