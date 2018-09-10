@@ -41,6 +41,9 @@ namespace arc //! arctk namespace
         class Cube<T, 3>
         {
             //  == FIELDS ==
+          public:
+            //  -- Data --
+            std::vector<std::vector<std::vector<T>>>> data;
 
 
             //  == INSTANTIATION ==
