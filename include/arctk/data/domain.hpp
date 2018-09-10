@@ -202,6 +202,12 @@ namespace arc //! arctk namespace
         inline void Domain::save(const std::string& path_, std::function<double(T*)> func_, const std::string& data_name_, const std::string& var_name_) const noexcept
         {
             PRE(!path_.empty());
+            PRE(!data_name_.empty());
+            PRE(data_name_.find_first_of('\n') == std::string::npos);
+            PRE(data_name_.find_first_of(' ') == std::string::npos);
+            PRE(!var_name_.empty());
+            PRE(var_name_.find_first_of('\n') == std::string::npos);
+            PRE(var_name_.find_first_of(' ') == std::string::npos);
 
             Cube<double, 3> datacube(_res);
             for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
