@@ -198,14 +198,19 @@ namespace arc //! arctk namespace
         inline void Domain::save(const std::string& path_) const noexcept
         {
             PRE(!path_.empty());
+
+            for (size_t i = 0; i < 3; ++i)
+            {
+                char
+            }
         }
 
         inline void Domain::save_slice(const std::string& path_, const size_t dim_, const size_t index_) const noexcept
         {
             PRE(!path_.empty());
 
-            const size_t x = index::rotate::next(dim_, 3, 1);
-            const size_t y = index::rotate::next(dim_, 3, 2);
+            const size_t x = index::rotate::next(dim_, index::dim::cartesian::TOTAL, 1);
+            const size_t y = index::rotate::next(dim_, index::dim::cartesian::TOTAL, 2);
 
             image::Greyscale img(_res[x], _res[y]);
             for (size_t i = 0; i < _res[x]; ++i)
