@@ -14,6 +14,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Std --
+#include <string>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -32,10 +38,23 @@ namespace arc //! arctk namespace
              */
             enum cartesian
             {
-                X, //! X spatial dimension.
-                Y, //! Y spatial dimension.
-                Z  //! Z spatial dimension.
+                X,    //! X spatial dimension.
+                Y,    //! Y spatial dimension.
+                Z,    //! Z spatial dimension.
+                TOTAL //!< Total number of cartesian spatial dimensions.
             };
+
+
+
+            //  == FUNCTION PROTOTYPES ==
+            //  -- Naming --
+            inline std::string name(const size_t dim_) noexcept;
+
+
+
+            //  == FUNCTIONS ==
+            //  -- Naming --
+            inline std::string name(const size_t dim_) noexcept;
 
 
 
