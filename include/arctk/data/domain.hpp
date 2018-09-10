@@ -118,23 +118,19 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i < res_[index::dim::cartesian::X]; ++i)
             {
-                std::vector<std::vector<std::unique_ptr<Packet>>> slice;
-                slice.reserve(res_[index::dim::cartesian::Y]);
+                packets.push_back(std::vector<std::vector<std::unique_ptr<Packet>>>());
+                packets.back().reserve(res_[index::dim::cartesian::Y]);
 
                 for (size_t j = 0; j < res_[index::dim::cartesian::Y]; ++j)
                 {
-                    std::vector<std::unique_ptr<Packet>> line;
-                    line.reserve(res_[index::dim::cartesian::Z]);
+                    packets.back().push_back(std::vector<std::unique_ptr<Packet>>());
+                    packets.back().back().reserve(res_[index::dim::cartesian::Z]);
 
                     for (size_t k = 0; k < res_[index::dim::cartesian::Z]; ++k)
                     {
-                        line.emplace_back(std::make_unique<T>(pack_));
+                        packets.back().back().emplace_back(std::make_unique<T>(pack_));
                     }
-
-                    slice.emplace_back(line);
                 }
-
-                packets.emplace_back(slice);
             }
 
             return (packets);
