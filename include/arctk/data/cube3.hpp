@@ -54,15 +54,13 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline
+            inline Cube(const std::array<size_t, 3>& res_) noexcept;
 
 
-              //  == OPERATORS ==
-              public
-              :
-              //  -- Access --
-              inline std::vector<std::vector<T>>&
-                                                      operator[](size_t index_) noexcept;
+            //  == OPERATORS ==
+          public:
+            //  -- Access --
+            inline std::vector<std::vector<T>>&       operator[](size_t index_) noexcept;
             inline const std::vector<std::vector<T>>& operator[](size_t index_) const noexcept;
 
 
@@ -71,6 +69,19 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline const std::array<size_t, 3> res() const noexcept;
         };
+
+
+
+        //  == INSTANTIATION ==
+        //  -- Constructors --
+        template <typename T>
+        inline Cube<T, 3>::Cube(const std::array<size_t, 3>& res_) noexcept
+          : _data(res_[index::dim::cartesian::X], std::vector<std::vector<T>>(res_[index::dim::cartesian::Y], std::vector<T>(res_[index::dim::cartesian::Z])))
+        {
+            PRE(res_[index::dim::cartesian::X] > 0);
+            PRE(res_[index::dim::cartesian::Y] > 0);
+            PRE(res_[index::dim::cartesian::Z] > 0);
+        }
 
 
 
