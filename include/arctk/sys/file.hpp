@@ -17,6 +17,14 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <string>
+#ifdef __clang__
+#include <experimental/filesystem>
+#else
+#include <filesystem>
+#endif
+
+//  -- Arctk --
+#include <arctk/debug.hpp>
 
 
 
@@ -27,6 +35,27 @@ namespace arc //! arctk namespace
     {
         namespace file //! file namespace
         {
+
+
+
+            //  == FUNCTION PROTOTYPES ==
+            //  -- Directories --
+            inline void mkdir(const std::string& path_) noexcept;
+
+
+
+            //  == FUNCTIONS ==
+            //  -- Directories --
+            inline void mkdir(const std::string& path_) noexcept
+            {
+                PRE(!path_.empty());
+
+#ifdef __clang__
+                std::experimental::filesystem::create_directories(dir_string);
+#else
+                std::filesystem::create_directories(dir_string);
+#endif
+            }
 
 
 
