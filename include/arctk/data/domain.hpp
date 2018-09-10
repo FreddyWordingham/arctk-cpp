@@ -83,8 +83,6 @@ namespace arc //! arctk namespace
             //  -- Saving --
             template <typename T>
             inline void save(const std::string& path_, std::function<double(T*)> func_, const std::string& data_name_, const std::string& var_name_) const noexcept;
-            template <typename T>
-            inline void save_slice(const std::string& path_, const size_t dim_, const size_t index_, std::function<double(T*)> func_) const noexcept;
         };
 
 
@@ -218,33 +216,6 @@ namespace arc //! arctk namespace
             }
 
             datacube.save(path_, data_name_, var_name_, _min, _max);
-        }
-
-        template <typename T>
-        inline void Domain::save_slice(const std::string& path_, const size_t dim_, const size_t index_, std::function<double(T*)> func_) const noexcept
-        {
-            PRE(!path_.empty());
-
-            std::array<size_t, 3> sample{};
-            sample[dim_] = index_;
-
-            const size_t x = index::rotate::next(dim_, index::dim::cartesian::TOTAL, 1);
-            const size_t y = index::rotate::next(dim_, index::dim::cartesian::TOTAL, 2);
-
-            image::Greyscale img(_res[x], _res[y]);
-            for (size_t i = 0; i < _res[x]; ++i)
-            {
-                sample[x] = i;
-
-                for (size_t j = 0; j < _res[y]; ++j)
-                {
-                    sample[y] = j;
-
-                    img.collect(i, j, func_(dynamic_cast<T*>(_packets[sample[0]][sample[1]][sample[2]].get())));
-                }
-            }
-
-            img.save(path_);
         }
 
 
