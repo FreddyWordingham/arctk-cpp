@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
             const std::array<size_t, 3> _res;
 
             //  -- Data --
-            std::vector<std::vector<std::vector<T>>>> _data;
+            std::vector<std::vector<std::vector<T>>> _data;
 
 
             //  == INSTANTIATION ==
