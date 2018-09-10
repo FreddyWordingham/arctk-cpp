@@ -20,6 +20,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/data/image/greyscale.hpp>
 #include <arctk/data/packet.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
@@ -78,6 +79,7 @@ namespace arc //! arctk namespace
 
             //  -- Saving --
             inline void save(const std::string& path_) const noexcept;
+            inline void save_slice(const std::string& path_, const size_t dim_, const size_t index_) const noexcept;
         };
 
 
@@ -195,6 +197,26 @@ namespace arc //! arctk namespace
         //  -- Saving --
         inline void Domain::save(const std::string& path_) const noexcept
         {
+            PRE(!path_.empty());
+        }
+
+        inline void Domain::save_slice(const std::string& path_, const size_t dim_, const size_t index_) const noexcept
+        {
+            PRE(!path_.empty());
+
+            const size_t x = index::rotate::next(dim_, 3, 1);
+            const size_t y = index::rotate::next(dim_, 3, 2);
+
+            image::Greyscale img(_res[x], _res[y]);
+            for (size_t i = 0; i < _res[x]; ++i)
+            {
+                for (size_t j = 0; j < _res[y]; ++j)
+                {
+                    img.collect(i, j, 1.2);
+                }
+            }
+
+            img.save(path_);
         }
 
 
