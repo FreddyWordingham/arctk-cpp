@@ -178,11 +178,15 @@ namespace arc //! arctk namespace
         inline Packet* Domain::packet(const vec3& pos_) noexcept
         {
             const vec3   rel_pos = pos_ - _min;
-            const size_t x_index = static_cast<size_t>(rel_pos.x / _packet_size.x);
-            const size_t y_index = static_cast<size_t>(rel_pos.y / _packet_size.y);
-            const size_t z_index = static_cast<size_t>(rel_pos.z / _packet_size.z);
+            const size_t index_x = static_cast<size_t>(rel_pos.x / _packet_size.x);
+            const size_t index_y = static_cast<size_t>(rel_pos.y / _packet_size.y);
+            const size_t index_z = static_cast<size_t>(rel_pos.z / _packet_size.z);
 
-            return (_packets[x_index][y_index][z_index].get());
+            PRE(index_x < _res[index::dim::cartesian::X]);
+            PRE(index_y < _res[index::dim::cartesian::Y]);
+            PRE(index_z < _res[index::dim::cartesian::Z]);
+
+            return (_packets[index_x][index_y][index_z].get());
         }
 
 
