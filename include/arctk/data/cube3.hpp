@@ -65,6 +65,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline const std::array<size_t, 3> res() const noexcept;
         };
 
 
@@ -85,6 +87,15 @@ namespace arc //! arctk namespace
             PRE(index_ < _res[index::dim::cartesian::X]);
 
             return (_data[index_]);
+        }
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        template <typename T>
+        inline const std::array<size_t, 3> Cube<T, 3>::res() const noexcept
+        {
+            return (_res);
         }
 
 
