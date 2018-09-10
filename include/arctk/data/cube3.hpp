@@ -90,6 +90,7 @@ namespace arc //! arctk namespace
         }
 
 
+
         //  == METHODS ==
         //  -- Getters --
         template <typename T>
