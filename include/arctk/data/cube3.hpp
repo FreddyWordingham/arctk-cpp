@@ -114,9 +114,11 @@ namespace arc //! arctk namespace
         template <typename T>
         inline std::array<size_t, 3> Cube<T, 3>::init_res(const std::vector<std::vector<std::vector<T>>>& data_) const noexcept
         {
-            PRE(data.size() > 0);
-            PRE(data.front().size() > 0);
-            PRE(data.front().front().size() > 0);
+            PRE(data_.size() > 0);
+            PRE(data_.front().size() > 0);
+            PRE(data_.front().front().size() > 0);
+
+            return (std::array<size_t, 3>({{data_.size(), data_.front().size(), data_.front().front().size()}}));
         }
 
 
