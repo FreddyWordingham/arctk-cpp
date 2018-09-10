@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <filesystem>
 #include <memory>
 #include <vector>
 
@@ -199,18 +200,16 @@ namespace arc //! arctk namespace
         {
             PRE(!path_.empty());
 
-            const size_t      extension_pos = path_.find_last_of('.');
-            const std::string prefix        = path_.substr(0, extension_pos);
-            const std::string suffix        = path_.substr(extension_pos);
-            std::cout << "prefix: " << prefix << '\n';
-            std::cout << "suffix: " << suffix << '\n';
+            std::filesystem::create_directories(path_);
 
             for (size_t i = 0; i < index::dim::cartesian::TOTAL; ++i)
             {
-                const std::string dim_string = index::dim::name(i);
+                const std::string dir_string = path_ + "/" + index::dim::name(i);
+                std::filesystem::create_directories(dir_string);
 
                 for (size_t j = 0; j < _res[i]; ++j)
                 {
+                    save_slice(dir_string + "/" + std::to_string(j), i, j);
                 }
             }
         }
