@@ -79,8 +79,10 @@ namespace arc //! arctk namespace
             inline Packet* packet(const vec3& pos_) noexcept;
 
             //  -- Saving --
-            inline void save(const std::string& path_) const noexcept;
-            inline void save_slice(const std::string& path_, const size_t dim_, const size_t index_) const noexcept;
+            template <typename T>
+            inline void save(const std::string& path_, std::function<double(T*)> func_) const noexcept;
+            template <typename T>
+            inline void save_slice(const std::string& path_, const size_t dim_, const size_t index_, std::function<double(T*)> func_) const noexcept;
         };
 
 
@@ -196,7 +198,8 @@ namespace arc //! arctk namespace
 
 
         //  -- Saving --
-        inline void Domain::save(const std::string& path_) const noexcept
+        template <typename T>
+        inline void Domain::save(const std::string& path_, std::function<double(T*)> func_) const noexcept
         {
             PRE(!path_.empty());
 
@@ -209,12 +212,13 @@ namespace arc //! arctk namespace
 
                 for (size_t j = 0; j < _res[i]; ++j)
                 {
-                    save_slice(dir_string + "/" + std::to_string(j), i, j);
+                    save_slice<T>(dir_string + "/" + std::to_string(j), i, j, func_);
                 }
             }
         }
 
-        inline void Domain::save_slice(const std::string& path_, const size_t dim_, const size_t index_) const noexcept
+        template <typename T>
+        inline void Domain::save_slice(const std::string& path_, const size_t dim_, const size_t index_, std::function<double(T*)> func_) const noexcept
         {
             PRE(!path_.empty());
 
@@ -226,7 +230,7 @@ namespace arc //! arctk namespace
             {
                 for (size_t j = 0; j < _res[y]; ++j)
                 {
-                    img.collect(i, j, 1.2);
+                    img.collect(i, j, 12.2);
                 }
             }
 
