@@ -86,6 +86,7 @@ namespace arc //! arctk namespace
         template <typename T>
         inline Domain::Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const T& pack_) noexcept
           : geom::shape::Aabb(min_, max_)
+          , _res(res_)
           , _packet_size(init_packet_size(min_, max_, res_))
           , _packets(init_packets(res_, pack_))
         {
