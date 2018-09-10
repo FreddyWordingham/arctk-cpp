@@ -76,6 +76,10 @@ namespace arc //! arctk namespace
             inline const std::array<size_t, 3> res() const noexcept;
             inline T                           min() const noexcept;
             inline T                           max() const noexcept;
+
+            //  -- Mathematical --
+            inline void       normalise() const noexcept;
+            inline Cube<T, 3> normal() const noexcept;
         };
 
 
@@ -195,6 +199,23 @@ namespace arc //! arctk namespace
             }
 
             return (max);
+        }
+
+
+        //  -- Mathematical --
+        template <typename T>
+        inline void Cube<T, 3>::normalise() const noexcept
+        {
+        }
+
+        template <typename T>
+        inline Cube<T, 3> Cube<T, 3>::normal() const noexcept
+        {
+            Cube<T, 3> cube = *this;
+
+            cube.normalise();
+
+            return (cube);
         }
 
 
