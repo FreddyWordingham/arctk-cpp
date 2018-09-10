@@ -289,21 +289,21 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i <= _res[index::dim::cartesian::X]; ++i)
             {
-                file << (min_.x + (cell_size.x * i)) << ' ';
+                file << (min_.x + (cell_size.x * static_cast<double>(i))) << ' ';
             }
 
             file << "\nY_COORDINATES " << (_res[index::dim::cartesian::Y] + 1) << ' ' + typename_ + '\n';
 
             for (size_t i = 0; i <= _res[index::dim::cartesian::Y]; ++i)
             {
-                file << (min_.x + (cell_size.y * i)) << ' ';
+                file << (min_.x + (cell_size.y * static_cast<double>(i))) << ' ';
             }
 
             file << "\nZ_COORDINATES " << (_res[index::dim::cartesian::Z] + 1) << ' ' + typename_ + '\n';
 
             for (size_t i = 0; i <= _res[index::dim::cartesian::Z]; ++i)
             {
-                file << (min_.x + (cell_size.z * i)) << ' ';
+                file << (min_.x + (cell_size.z * static_cast<double>(i))) << ' ';
             }
 
             file << "\nCELL_DATA " << (std::to_string(_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z])) << '\n'
