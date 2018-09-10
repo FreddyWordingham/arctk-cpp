@@ -18,6 +18,9 @@
 //  -- Std --
 #include <string>
 
+//  -- Arctk --
+#include <arctk/debug.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -54,7 +57,20 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Naming --
-            inline std::string name(const size_t dim_) noexcept;
+            inline std::string name(const size_t dim_) noexcept
+            {
+                PRE(dim_ < cartesian::TOTAL);
+
+                switch (dim_)
+                {
+                    case cartesian::X:
+                        return ("x");
+                    case cartesian::Y:
+                        return ("y");
+                    case cartesian::Z:
+                        return ("z");
+                }
+            }
 
 
 
