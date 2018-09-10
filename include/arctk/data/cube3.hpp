@@ -86,6 +86,7 @@ namespace arc //! arctk namespace
 
             //  -- Saving --
             inline void save(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept;
+            inline void save_scalar(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept;
         };
 
 
@@ -241,7 +242,7 @@ namespace arc //! arctk namespace
 
         //  -- Saving --
         template <typename T>
-        inline void Cube<T, 3>::save(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept
+        inline void Cube<T, 3>::save_scalar(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept
         {
             PRE(!path_.empty());
             PRE(!name_.empty());
