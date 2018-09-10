@@ -17,6 +17,8 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
+#include <fstream>
+#include <string>
 #include <vector>
 
 //  -- Arctk --
@@ -80,6 +82,9 @@ namespace arc //! arctk namespace
             //  -- Mathematical --
             inline void       normalise() const noexcept;
             inline Cube<T, 3> normal() const noexcept;
+
+            //  -- Saving --
+            inline void save_vtk(const std::string& path_, const std::string& name_, const std::string& var_name_) const noexcept;
         };
 
 
@@ -230,6 +235,37 @@ namespace arc //! arctk namespace
             cube.normalise();
 
             return (cube);
+        }
+
+
+        //  -- Saving --
+        template <typename T>
+        inline void Cube<T, 3>::save_vtk(const std::string& path_, const std::string& name_, const std::string& var_name_) const noexcept
+        {
+            PRE(!path_.empty());
+            PRE(name_.find_first_of('\n') == std::string::npos);
+
+            std::ofstream file(path_);
+            file << "# vtk DataFile Version 2.0\n"
+                 << name_ << "\n"
+                 << "ASCII\n"
+                 << "DATASET STRUCTURED_POINTS\n"
+                 << "DIMENSIONS " << _res[index::dim::cartesian::X] << " " << _res[index::dim::cartesian::Y] << " " << _res[index::dim::cartesian::Z] << "\n"
+                 << "SCALARS " << var_name_ << " double 1\n"
+                 << "LOOKUP_TABLE default\n";
+
+            for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
+            {
+                for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
+                {
+                    for (size_t k = 0; k < _res[index::dim::cartesian::Z]; ++k)
+                    {
+                        file << _data[i][j][k] << " ";
+                    }
+
+                    file << '\n';
+                }
+            }
         }
 
 
