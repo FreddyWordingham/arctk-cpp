@@ -20,6 +20,8 @@
 
 //  -- Arctk --
 #include <arctk/data/cube.hpp>
+#include <arctk/debug.hpp>
+#include <arctk/index.hpp>
 
 
 
@@ -41,6 +43,10 @@ namespace arc //! arctk namespace
         class Cube<T, 3>
         {
             //  == FIELDS ==
+          private:
+            //  -- Resolution --
+            const std::array<size_t, 3> _res;
+
           public:
             //  -- Data --
             std::vector<std::vector<std::vector<T>>>> data;
@@ -51,9 +57,36 @@ namespace arc //! arctk namespace
             //  -- Constructors --
 
 
+            //  == OPERATORS ==
+          public:
+            //  -- Access --
+            constexpr inline T&       operator[](size_t index_) noexcept;
+            constexpr inline const T& operator[](size_t index_) const noexcept;
+
+
             //  == METHODS ==
           public:
         };
+
+
+
+        //  == OPERATORS ==
+        //  -- Access --
+        template <typename T>
+        constexpr inline std::vector<std::vector<T>>& Cube<T, 3>::operator[](const size_t index_) noexcept
+        {
+            PRE(index_ < _res[index::dim::cartesian::X]);
+
+            return (_data[index_]);
+        }
+
+        template <typename T>
+        constexpr inline const std::vector<std::vector<T>>& Cube<T, 3>::operator[](const size_t index_) const noexcept
+        {
+            PRE(index_ < _res[index::dim::cartesian::X]);
+
+            return (_data[index_]);
+        }
 
 
 
