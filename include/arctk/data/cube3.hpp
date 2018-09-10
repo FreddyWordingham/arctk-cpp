@@ -275,7 +275,7 @@ namespace arc //! arctk namespace
             PRE(min_.y < max_.y);
             PRE(min_.z < max_.z);
 
-            save_scalar(path_, name_, var_name_, min_, max_, "float");
+            save_scalar(path_, data_name_, var_name_, min_, max_, "float");
         }
 
         template <>
@@ -292,7 +292,7 @@ namespace arc //! arctk namespace
             PRE(min_.y < max_.y);
             PRE(min_.z < max_.z);
 
-            save_scalar(path_, name_, var_name_, min_, max_, "double");
+            save_scalar(path_, data_name_, var_name_, min_, max_, "double");
         }
 
         template <typename T>
