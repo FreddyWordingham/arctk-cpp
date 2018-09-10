@@ -77,6 +77,8 @@ namespace arc //! arctk namespace
 
             //  -- Retrieval --
             inline Packet* packet(const vec3& pos_) noexcept;
+            template <typename T, typename S>
+            inline std::vector<std::vector<std::vector<S>>> data() const noexcept;
 
             //  -- Saving --
             template <typename T>
