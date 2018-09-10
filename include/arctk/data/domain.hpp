@@ -203,7 +203,7 @@ namespace arc //! arctk namespace
         {
             PRE(!path_.empty());
 
-            Cube<3, double> datacube(_res);
+            Cube<double, 3> datacube(_res);
             for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
             {
                 for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
