@@ -82,7 +82,7 @@ namespace arc //! arctk namespace
 
             //  -- Saving --
             template <typename T>
-            inline void save(const std::string& path_, std::function<double(T*)> func_) const noexcept;
+            inline void save(const std::string& path_, std::function<double(T*)> func_, const std::string& data_name_, const std::string& var_name_) const noexcept;
             template <typename T>
             inline void save_slice(const std::string& path_, const size_t dim_, const size_t index_, std::function<double(T*)> func_) const noexcept;
         };
