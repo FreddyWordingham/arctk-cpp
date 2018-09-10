@@ -206,6 +206,20 @@ namespace arc //! arctk namespace
         template <typename T>
         inline void Cube<T, 3>::normalise() const noexcept
         {
+            const T min       = min();
+            const T inv_range = 1.0 / max() - min;
+
+            for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
+            {
+                for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
+                {
+                    for (size_t k = 0; k < _res[index::dim::cartesian::Z]; ++k)
+                    {
+                        _data[i][j][k] -= min;
+                        _data[i][j][k] *= inv_range;
+                    }
+                }
+            }
         }
 
         template <typename T>
