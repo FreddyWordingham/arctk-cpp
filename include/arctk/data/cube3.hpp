@@ -265,9 +265,9 @@ namespace arc //! arctk namespace
                     {
                         file << _data[i][j][k] << " ";
                     }
-
-                    file << '\n';
                 }
+
+                file << '\n';
             }
         }
 
