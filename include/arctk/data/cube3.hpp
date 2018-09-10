@@ -259,6 +259,23 @@ namespace arc //! arctk namespace
         }
 
         template <>
+        inline void Cube<float, 3>::save(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept
+        {
+            PRE(!path_.empty());
+            PRE(!name_.empty());
+            PRE(name_.find_first_of('\n') == std::string::npos);
+            PRE(name_.find_first_of(' ') == std::string::npos);
+            PRE(!var_name_.empty());
+            PRE(var_name_.find_first_of('\n') == std::string::npos);
+            PRE(var_name_.find_first_of(' ') == std::string::npos);
+            PRE(min_.x < max_.x);
+            PRE(min_.y < max_.y);
+            PRE(min_.z < max_.z);
+
+            save_scalar(path_, name_, var_name_, min_, max_, "float");
+        }
+
+        template <>
         inline void Cube<double, 3>::save(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept
         {
             PRE(!path_.empty());
