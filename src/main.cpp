@@ -20,6 +20,7 @@
 #include <arctk/consts/phys.hpp>
 #include <arctk/data.hpp>
 #include <arctk/data/cube.hpp>
+#include <arctk/data/cube3.hpp>
 #include <arctk/data/domain.hpp>
 #include <arctk/data/histogram.hpp>
 #include <arctk/data/histogram/average.hpp>
