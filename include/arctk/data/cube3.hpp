@@ -77,7 +77,7 @@ namespace arc //! arctk namespace
         {
             PRE(index_ < _res[index::dim::cartesian::X]);
 
-            return (_data[index_]);
+            return (data[index_]);
         }
 
         template <typename T>
@@ -85,7 +85,7 @@ namespace arc //! arctk namespace
         {
             PRE(index_ < _res[index::dim::cartesian::X]);
 
-            return (_data[index_]);
+            return (data[index_]);
         }
 
 
