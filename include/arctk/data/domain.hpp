@@ -177,6 +177,8 @@ namespace arc //! arctk namespace
         //  -- Retrieval --
         inline Packet* Domain::packet(const vec3& pos_) noexcept
         {
+            PRE(contains(pos_));
+
             const vec3   rel_pos = pos_ - _min;
             const size_t index_x = static_cast<size_t>(rel_pos.x / _packet_size.x);
             const size_t index_y = static_cast<size_t>(rel_pos.y / _packet_size.y);
