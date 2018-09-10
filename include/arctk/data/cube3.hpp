@@ -259,7 +259,7 @@ namespace arc //! arctk namespace
             cell_size.y /= _res[index::dim::cartesian::Y];
             cell_size.z /= _res[index::dim::cartesian::Z];
 
-            std::ofstream file(path_);
+            std::ofstream file(path_ + ".vtk");
 
             file << "# vtk DataFile Version 3.0\n"
                  << "vtk " << name_ << '\n'
