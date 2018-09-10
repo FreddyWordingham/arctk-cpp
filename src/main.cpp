@@ -72,7 +72,6 @@
 #include <arctk/index.hpp>
 #include <arctk/index/col.hpp>
 #include <arctk/index/dim.hpp>
-#include <arctk/index/name.hpp>
 #include <arctk/index/rotate.hpp>
 #include <arctk/index/vertex.hpp>
 #include <arctk/macro.hpp>
