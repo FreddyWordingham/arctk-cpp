@@ -220,7 +220,7 @@ namespace arc //! arctk namespace
                       << "Current/target   : " << total_ << "/" << _target << '\n'
                       << "Ave rate (/s)    : " << (static_cast<double>(total_) / static_cast<double>(elapsed_time)) << '\n'
                       << "Elapsed time     : " << str::format::time(elapsed_time) << '\n'
-                      << "Estimated time   : " << str::format::time(static_cast<long int>(static_cast<double>(elapsed_time / frac)) - elapsed_time) << '\n';
+                      << "Estimated time   : " << str::format::time(static_cast<long int>(static_cast<double>(elapsed_time) / frac) - elapsed_time) << '\n';
 
             const double max = std::max(1.0, static_cast<double>(*std::max_element(_counts.begin(), _counts.end())));
             for (size_t i = 0; i < _counts.size(); ++i)
@@ -234,7 +234,7 @@ namespace arc //! arctk namespace
                     std::cout << "    ";
                 }
 
-                const double winner = std::min(1.0, _counts[i] / max);
+                const double winner = std::min(1.0, static_cast<double>(_counts[i]) / max);
                 std::cout << std::setw(4) << i << " [";
 
                 if (winner > 0.9)
