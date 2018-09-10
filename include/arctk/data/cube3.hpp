@@ -54,13 +54,16 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline
 
 
-            //  == OPERATORS ==
-          public:
-            //  -- Access --
-            constexpr inline std::vector<std::vector<T>>&       operator[](size_t index_) noexcept;
-            constexpr inline const std::vector<std::vector<T>>& operator[](size_t index_) const noexcept;
+              //  == OPERATORS ==
+              public
+              :
+              //  -- Access --
+              inline std::vector<std::vector<T>>&
+                                                      operator[](size_t index_) noexcept;
+            inline const std::vector<std::vector<T>>& operator[](size_t index_) const noexcept;
 
 
             //  == METHODS ==
@@ -74,7 +77,7 @@ namespace arc //! arctk namespace
         //  == OPERATORS ==
         //  -- Access --
         template <typename T>
-        constexpr inline std::vector<std::vector<T>>& Cube<T, 3>::operator[](const size_t index_) noexcept
+        inline std::vector<std::vector<T>>& Cube<T, 3>::operator[](const size_t index_) noexcept
         {
             PRE(index_ < _res[index::dim::cartesian::X]);
 
@@ -82,7 +85,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        constexpr inline const std::vector<std::vector<T>>& Cube<T, 3>::operator[](const size_t index_) const noexcept
+        inline const std::vector<std::vector<T>>& Cube<T, 3>::operator[](const size_t index_) const noexcept
         {
             PRE(index_ < _res[index::dim::cartesian::X]);
 
