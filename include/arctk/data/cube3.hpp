@@ -86,7 +86,7 @@ namespace arc //! arctk namespace
 
             //  -- Saving --
             inline void save(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept;
-            inline void save_scalar(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept;
+            inline void save_scalar(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_, const std::string& typename_) const noexcept;
         };
 
 
@@ -242,7 +242,10 @@ namespace arc //! arctk namespace
 
         //  -- Saving --
         template <typename T>
-        inline void Cube<T, 3>::save_scalar(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept
+        inline void Cube<T, 3>::save_scalar(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept;
+
+        template <typename T>
+        inline void Cube<T, 3>::save_scalar(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_, const std::string& typename_) const noexcept
         {
             PRE(!path_.empty());
             PRE(!name_.empty());
@@ -267,21 +270,21 @@ namespace arc //! arctk namespace
                  << "ASCII\n"
                  << "DATASET RECTILINEAR_GRID\n"
                  << "DIMENSIONS " << (_res[index::dim::cartesian::X] + 1) << " " << (_res[index::dim::cartesian::Y] + 1) << " " << (_res[index::dim::cartesian::Z] + 1) << '\n'
-                 << "X_COORDINATES " << (_res[index::dim::cartesian::X] + 1) << " double\n";
+                 << "X_COORDINATES " << (_res[index::dim::cartesian::X] + 1) << ' ' + typename_ + '\n';
 
             for (size_t i = 0; i <= _res[index::dim::cartesian::X]; ++i)
             {
                 file << (min_.x + (cell_size.x * i)) << ' ';
             }
 
-            file << "\nY_COORDINATES " << (_res[index::dim::cartesian::Y] + 1) << " double\n";
+            file << "\nY_COORDINATES " << (_res[index::dim::cartesian::Y] + 1) << ' ' + typename_ + '\n';
 
             for (size_t i = 0; i <= _res[index::dim::cartesian::Y]; ++i)
             {
                 file << (min_.x + (cell_size.y * i)) << ' ';
             }
 
-            file << "\nZ_COORDINATES " << (_res[index::dim::cartesian::Z] + 1) << " double\n";
+            file << "\nZ_COORDINATES " << (_res[index::dim::cartesian::Z] + 1) << ' ' + typename_ + '\n';
 
             for (size_t i = 0; i <= _res[index::dim::cartesian::Z]; ++i)
             {
@@ -290,7 +293,7 @@ namespace arc //! arctk namespace
 
             file << "\nCELL_DATA " << (std::to_string(_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z])) << '\n'
                  << "FIELD FieldData 1\n"
-                 << var_name_ << " 1 " << (std::to_string(_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z])) << " double\n";
+                 << var_name_ << " 1 " << (std::to_string(_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z])) << ' ' + typename_ + '\n';
 
             for (size_t i = 0; i < _res[index::dim::cartesian::Z]; ++i)
             {
