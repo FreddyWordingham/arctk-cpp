@@ -47,9 +47,8 @@ namespace arc //! arctk namespace
             //  -- Resolution --
             const std::array<size_t, 3> _res;
 
-          public:
             //  -- Data --
-            std::vector<std::vector<std::vector<T>>>> data;
+            std::vector<std::vector<std::vector<T>>>> _data;
 
 
             //  == INSTANTIATION ==
@@ -77,7 +76,7 @@ namespace arc //! arctk namespace
         {
             PRE(index_ < _res[index::dim::cartesian::X]);
 
-            return (data[index_]);
+            return (_data[index_]);
         }
 
         template <typename T>
@@ -85,7 +84,7 @@ namespace arc //! arctk namespace
         {
             PRE(index_ < _res[index::dim::cartesian::X]);
 
-            return (data[index_]);
+            return (_data[index_]);
         }
 
 
