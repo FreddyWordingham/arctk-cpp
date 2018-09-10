@@ -55,6 +55,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Cube(const std::array<size_t, 3>& res_) noexcept;
+            inline Cube(const std::array<size_t, 3>& res_, const T& val_) noexcept;
 
 
             //  == OPERATORS ==
@@ -77,6 +78,15 @@ namespace arc //! arctk namespace
         template <typename T>
         inline Cube<T, 3>::Cube(const std::array<size_t, 3>& res_) noexcept
           : _data(res_[index::dim::cartesian::X], std::vector<std::vector<T>>(res_[index::dim::cartesian::Y], std::vector<T>(res_[index::dim::cartesian::Z])))
+        {
+            PRE(res_[index::dim::cartesian::X] > 0);
+            PRE(res_[index::dim::cartesian::Y] > 0);
+            PRE(res_[index::dim::cartesian::Z] > 0);
+        }
+
+        template <typename T>
+        inline Cube<T, 3>::Cube(const std::array<size_t, 3>& res_, const T& val_) noexcept
+          : _data(res_[index::dim::cartesian::X], std::vector<std::vector<T>>(res_[index::dim::cartesian::Y], std::vector<T>(res_[index::dim::cartesian::Z], val_)))
         {
             PRE(res_[index::dim::cartesian::X] > 0);
             PRE(res_[index::dim::cartesian::Y] > 0);
