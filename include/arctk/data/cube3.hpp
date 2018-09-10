@@ -55,7 +55,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Cube(const std::array<size_t, 3>& res_) noexcept;
+            inline explicit Cube(const std::array<size_t, 3>& res_) noexcept;
             inline Cube(const std::array<size_t, 3>& res_, const T& val_) noexcept;
 
 
