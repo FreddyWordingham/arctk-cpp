@@ -247,10 +247,13 @@ namespace arc //! arctk namespace
 
             std::ofstream file(path_);
             file << "# vtk DataFile Version 2.0\n"
-                 << name_ << "\n"
+                 << name_ << '\n'
                  << "ASCII\n"
                  << "DATASET STRUCTURED_POINTS\n"
-                 << "DIMENSIONS " << _res[index::dim::cartesian::X] << " " << _res[index::dim::cartesian::Y] << " " << _res[index::dim::cartesian::Z] << "\n"
+                 << "DIMENSIONS " << _res[index::dim::cartesian::X] << " " << _res[index::dim::cartesian::Y] << " " << _res[index::dim::cartesian::Z] << '\n'
+                 << "ASPECT_RATIO 1 1 1\n"
+                 << "ORIGIN 0 0 0\n"
+                 << "POINT_DATA" << (std::to_string(_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z])) << '\n'
                  << "SCALARS " << var_name_ << " double 1\n"
                  << "LOOKUP_TABLE default\n";
 
