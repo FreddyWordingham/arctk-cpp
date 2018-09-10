@@ -274,9 +274,9 @@ namespace arc //! arctk namespace
             PRE(!typename_.empty());
 
             vec3 cell_size = max_ - min_;
-            cell_size.x /= _res[index::dim::cartesian::X];
-            cell_size.y /= _res[index::dim::cartesian::Y];
-            cell_size.z /= _res[index::dim::cartesian::Z];
+            cell_size.x /= static_cast<double>(_res[index::dim::cartesian::X]);
+            cell_size.y /= static_cast<double>(_res[index::dim::cartesian::Y]);
+            cell_size.z /= static_cast<double>(_res[index::dim::cartesian::Z]);
 
             std::ofstream file(path_ + ".vtk");
 
