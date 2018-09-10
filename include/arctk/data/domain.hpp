@@ -199,9 +199,19 @@ namespace arc //! arctk namespace
         {
             PRE(!path_.empty());
 
+            const size_t      extension_pos = path_.find_last_of('.');
+            const std::string prefix        = path_.substr(0, extension_pos);
+            const std::string suffix        = path_.substr(extension_pos);
+            std::cout << "prefix: " << prefix << '\n';
+            std::cout << "suffix: " << suffix << '\n';
+
             for (size_t i = 0; i < index::dim::cartesian::TOTAL; ++i)
             {
-                char
+                const std::string dim_string = index::dim::name(i);
+
+                for (size_t j = 0; j < _res[i]; ++j)
+                {
+                }
             }
         }
 
