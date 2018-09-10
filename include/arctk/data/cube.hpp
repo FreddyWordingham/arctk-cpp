@@ -1,6 +1,6 @@
 /**
  *  @file   arctk/data/cube.hpp
- *  @date   10/08/2018
+ *  @date   10/09/2018
  *  @author Freddy Wordingham
  *
  *  Data cube class.
