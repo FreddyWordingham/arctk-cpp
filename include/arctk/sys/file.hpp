@@ -51,9 +51,9 @@ namespace arc //! arctk namespace
                 PRE(!path_.empty());
 
 #ifdef __clang__
-                std::experimental::filesystem::create_directories(dir_string);
+                std::experimental::filesystem::create_directories(path_);
 #else
-                std::filesystem::create_directories(dir_string);
+                std::filesystem::create_directories(path_);
 #endif
             }
 
