@@ -199,7 +199,7 @@ namespace arc //! arctk namespace
         {
             PRE(!path_.empty());
 
-            for (size_t i = 0; i < 3; ++i)
+            for (size_t i = 0; i < index::dim::cartesian::TOTAL; ++i)
             {
                 char
             }
