@@ -222,15 +222,22 @@ namespace arc //! arctk namespace
         {
             PRE(!path_.empty());
 
+            std::array<size_t, 3> sample{};
+            sample[dim_] = index_;
+
             const size_t x = index::rotate::next(dim_, index::dim::cartesian::TOTAL, 1);
             const size_t y = index::rotate::next(dim_, index::dim::cartesian::TOTAL, 2);
 
             image::Greyscale img(_res[x], _res[y]);
             for (size_t i = 0; i < _res[x]; ++i)
             {
+                sample[x] = i;
+
                 for (size_t j = 0; j < _res[y]; ++j)
                 {
-                    img.collect(i, j, 12.2);
+                    sample[y] = j;
+
+                    img.collect(i, j, func_(dynamic_cast<T*>(_packets[sample[0]][sample[1]][sample[2]].get())));
                 }
             }
 
