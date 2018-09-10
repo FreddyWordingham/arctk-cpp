@@ -25,6 +25,7 @@
 #include <arctk/data/cube.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/index.hpp>
+#include <arctk/math.hpp>
 
 
 
@@ -84,7 +85,7 @@ namespace arc //! arctk namespace
             inline Cube<T, 3> normal() const noexcept;
 
             //  -- Saving --
-            inline void save_vtk(const std::string& path_, const std::string& name_, const std::string& var_name_) const noexcept;
+            inline void save_vtk(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept;
         };
 
 
@@ -240,35 +241,70 @@ namespace arc //! arctk namespace
 
         //  -- Saving --
         template <typename T>
-        inline void Cube<T, 3>::save_vtk(const std::string& path_, const std::string& name_, const std::string& var_name_) const noexcept
+        inline void Cube<T, 3>::save_vtk(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept
         {
             PRE(!path_.empty());
+            PRE(!name_.empty());
             PRE(name_.find_first_of('\n') == std::string::npos);
+            PRE(name_.find_first_of(' ') == std::string::npos);
+            PRE(!var_name_.empty());
+            PRE(var_name_.find_first_of('\n') == std::string::npos);
+            PRE(var_name_.find_first_of(' ') == std::string::npos);
+            PRE(min_.x < max_.x);
+            PRE(min_.y < max_.y);
+            PRE(min_.z < max_.z);
+
+            vec3 cell_size = max_ - min_;
+            cell_size.x /= _res[index::dim::cartesian::X];
+            cell_size.y /= _res[index::dim::cartesian::Y];
+            cell_size.z /= _res[index::dim::cartesian::Z];
 
             std::ofstream file(path_);
-            file << "# vtk DataFile Version 2.0\n"
-                 << name_ << '\n'
-                 << "ASCII\n"
-                 << "DATASET STRUCTURED_POINTS\n"
-                 << "DIMENSIONS " << _res[index::dim::cartesian::X] << " " << _res[index::dim::cartesian::Y] << " " << _res[index::dim::cartesian::Z] << '\n'
-                 << "ASPECT_RATIO 1 1 1\n"
-                 << "ORIGIN 0 0 0\n"
-                 << "POINT_DATA" << (std::to_string(_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z])) << '\n'
-                 << "SCALARS " << var_name_ << " double 1\n"
-                 << "LOOKUP_TABLE default\n";
 
-            for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
+            file << "# vtk DataFile Version 3.0\n"
+                 << "vtk " << name_ << '\n'
+                 << "ASCII\n"
+                 << "DATASET RECTILINEAR_GRID\n"
+                 << "DIMENSIONS " << (_res[index::dim::cartesian::X] + 1) << " " << (_res[index::dim::cartesian::Y] + 1) << " " << (_res[index::dim::cartesian::Z] + 1) << '\n'
+                 << "X_COORDINATES " << (_res[index::dim::cartesian::X] + 1) << " double\n";
+
+            for (size_t i = 0; i <= _res[index::dim::cartesian::X]; ++i)
+            {
+                file << (min_.x + (cell_size.x * i)) << ' ';
+            }
+
+            file << "\nY_COORDINATES " << (_res[index::dim::cartesian::Y] + 1) << " double\n";
+
+            for (size_t i = 0; i <= _res[index::dim::cartesian::Y]; ++i)
+            {
+                file << (min_.x + (cell_size.y * i)) << ' ';
+            }
+
+            file << "\nZ_COORDINATES " << (_res[index::dim::cartesian::Z] + 1) << " double\n";
+
+            for (size_t i = 0; i <= _res[index::dim::cartesian::Z]; ++i)
+            {
+                file << (min_.x + (cell_size.z * i)) << ' ';
+            }
+
+            file << "\nCELL_DATA " << (std::to_string(_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z])) << '\n'
+                 << "FIELD FieldData 1\n"
+                 << var_name_ << " 1 " << (std::to_string(_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z])) << " double\n";
+
+            for (size_t i = 0; i < _res[index::dim::cartesian::Z]; ++i)
             {
                 for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
                 {
-                    for (size_t k = 0; k < _res[index::dim::cartesian::Z]; ++k)
+                    for (size_t k = 0; k < _res[index::dim::cartesian::X]; ++k)
                     {
-                        file << _data[i][j][k] << " ";
+                        file << _data[k][j][i] << ' ';
                     }
                 }
 
                 file << '\n';
             }
+
+            file << "POINT_DATA " << (std::to_string((_res[index::dim::cartesian::X] + 1) * (_res[index::dim::cartesian::Y] + 1) * (_res[index::dim::cartesian::Z] + 1))) << '\n';
         }
 
 
