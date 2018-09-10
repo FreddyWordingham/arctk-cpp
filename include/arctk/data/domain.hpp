@@ -68,9 +68,10 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline size_t              num_packets() const noexcept;
-            inline const vec3&         packet_size() const noexcept;
-            inline Packet const* const packet(const size_t index_x_, const size_t index_y_, const size_t index_z_) const noexcept;
+            inline size_t                       num_packets() const noexcept;
+            inline const std::array<size_t, 3>& res() const noexcept;
+            inline const vec3&                  packet_size() const noexcept;
+            inline Packet const* const          packet(const size_t index_x_, const size_t index_y_, const size_t index_z_) const noexcept;
 
             //  -- Retrieval --
             inline Packet* packet(const vec3& pos_) noexcept;
@@ -151,6 +152,11 @@ namespace arc //! arctk namespace
         inline size_t Domain::num_packets() const noexcept
         {
             return (_packets.size() * _packets.front().size() * _packets.front().front().size());
+        }
+
+        inline const std::array<size_t, 3>& Domain::res() const noexcept
+        {
+            return (_res);
         }
 
         inline const vec3& Domain::packet_size() const noexcept
