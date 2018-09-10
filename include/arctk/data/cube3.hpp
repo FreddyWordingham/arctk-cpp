@@ -86,6 +86,9 @@ namespace arc //! arctk namespace
 
             //  -- Saving --
             inline void save(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_) const noexcept;
+
+          private:
+            //  -- Saving --
             inline void save_scalar(const std::string& path_, const std::string& name_, const std::string& var_name_, const vec3& min_, const vec3& max_, const std::string& typename_) const noexcept;
         };
 

@@ -20,7 +20,7 @@
 #include <vector>
 
 //  -- Arctk --
-#include <arctk/data/image/greyscale.hpp>
+#include <arctk/data/cube3.hpp>
 #include <arctk/data/packet.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
@@ -205,16 +205,15 @@ namespace arc //! arctk namespace
         {
             PRE(!path_.empty());
 
-            sys::file::mkdir(path_);
-
-            for (size_t i = 0; i < index::dim::cartesian::TOTAL; ++i)
+            Cube<3, double> datacube(_res);
+            for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
             {
-                const std::string dir_string = path_ + "/" + index::dim::name(i);
-                sys::file::mkdir(dir_string);
-
-                for (size_t j = 0; j < _res[i]; ++j)
+                for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
                 {
-                    save_slice<T>(dir_string + "/" + std::to_string(j), i, j, func_);
+                    for (size_t k = 0; k < _res[index::dim::cartesian::Z]; ++k)
+                    {
+                        datacube[i][j][k] = func_(dynamic_cast<T*>(_packets[i][j][k].get()));
+                    }
                 }
             }
         }
