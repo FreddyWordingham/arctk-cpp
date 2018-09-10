@@ -67,9 +67,17 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline size_t      num_packets() const noexcept;
-            inline const vec3& packet_size() const noexcept;
-            inline Packet*     packet(const vec3& pos_) const noexcept;
+            inline size_t              num_packets() const noexcept;
+            inline const vec3&         packet_size() const noexcept;
+            inline Packet const* const packet(const vec3& pos_) const noexcept;
+            inline Packet const* const packet(const size_t index_x_, const size_t index_y_, const size_t index_z_) const noexcept
+            {
+                PRE(index_x_ < _packets.size());
+                PRE(index_y_ < _packets.front().size());
+                PRE(index_z_ < _packets.front().front().size());
+
+                return (_packets[index_x_][index_y_][index_z_].get());
+            }
         };
 
 
