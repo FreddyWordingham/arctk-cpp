@@ -229,6 +229,11 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i <= _res[index::dim::cartesian::X]; ++i)
             {
+                if (i != 0)
+                {
+                    file_ << ' ';
+                }
+
                 file << (min_.x + (cell_size.x * static_cast<double>(i))) << ' ';
             }
 
@@ -236,6 +241,11 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i <= _res[index::dim::cartesian::Y]; ++i)
             {
+                if (i != 0)
+                {
+                    file_ << ' ';
+                }
+
                 file << (min_.x + (cell_size.y * static_cast<double>(i))) << ' ';
             }
 
@@ -243,6 +253,11 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i <= _res[index::dim::cartesian::Z]; ++i)
             {
+                if (i != 0)
+                {
+                    file_ << ' ';
+                }
+
                 file << (min_.x + (cell_size.z * static_cast<double>(i))) << ' ';
             }
 
