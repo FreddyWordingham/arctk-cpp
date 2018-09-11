@@ -169,7 +169,7 @@ namespace arc //! arctk namespace
             return (_packet_size);
         }
 
-        inline Packet const* const Domain::packet(const size_t index_x_, const size_t index_y_, const size_t index_z_) const noexcept
+        inline Packet const* Domain::packet(const size_t index_x_, const size_t index_y_, const size_t index_z_) const noexcept
         {
             PRE(index_x_ < _res[index::dim::cartesian::X]);
             PRE(index_y_ < _res[index::dim::cartesian::Y]);
