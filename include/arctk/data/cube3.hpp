@@ -231,7 +231,7 @@ namespace arc //! arctk namespace
             {
                 if (i != 0)
                 {
-                    file_ << ' ';
+                    file << ' ';
                 }
 
                 file << (min_.x + (cell_size.x * static_cast<double>(i))) << ' ';
@@ -243,7 +243,7 @@ namespace arc //! arctk namespace
             {
                 if (i != 0)
                 {
-                    file_ << ' ';
+                    file << ' ';
                 }
 
                 file << (min_.x + (cell_size.y * static_cast<double>(i))) << ' ';
@@ -255,7 +255,7 @@ namespace arc //! arctk namespace
             {
                 if (i != 0)
                 {
-                    file_ << ' ';
+                    file << ' ';
                 }
 
                 file << (min_.x + (cell_size.z * static_cast<double>(i))) << ' ';
