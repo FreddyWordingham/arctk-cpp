@@ -251,7 +251,8 @@ namespace arc //! arctk namespace
             PRE(var_name_.find_first_of('\n') == std::string::npos);
             PRE(var_name_.find_first_of(' ') == std::string::npos);
 
-            file_ << "\nFIELD FieldData 1\n" << var_name_ << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << " double\n";
+            file_ << "\nFIELD FieldData 1\n"
+                  << var_name_ << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << ' ' << vtk_typename<typename std::tuple_element<I, std::tuple<A...>>::type>::name << '\n';
 
             for (size_t i = 0; i < _res[index::dim::cartesian::Z]; ++i)
             {
