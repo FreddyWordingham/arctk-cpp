@@ -232,7 +232,7 @@ namespace arc //! arctk namespace
 
             file << "CELL_DATA " << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << '\n';
 
-            (write_var<I>(var_names_[I], file_), ...);
+            (write_var<I>(var_names_[I], file), ...);
         }
 
         template <typename... A>
