@@ -37,19 +37,6 @@ namespace arc //! arctk namespace
         template <size_t N, typename... A>
         class Cube
         {
-            //  == FIELDS ==
-          private:
-            //  -- Data --
-
-
-            //  == INSTANTIATION ==
-          public:
-            //  -- Constructors --
-
-
-            //  == METHODS ==
-          public:
-            //  -- Getters --
         };
 
 
