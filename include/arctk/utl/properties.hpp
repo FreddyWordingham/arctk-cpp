@@ -60,6 +60,8 @@ namespace arc //! arctk namespace
             inline bool contains(const C& cont_, const T& val_) noexcept;
             template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
             inline bool within(const C& cont_, const T& val_) noexcept;
+            template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
+            inline bool distinct(const C& cont_) noexcept;
 
             //  -- Order --
             template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
@@ -125,6 +127,12 @@ namespace arc //! arctk namespace
                 PRE(monotonic(cont_));
 
                 return (((*std::begin(cont_) <= val_) && (val_ <= *std::rbegin(cont_))) || ((*std::begin(cont_) >= val_) && (val_ >= *std::rbegin(cont_))));
+            }
+
+            template <typename C, typename T, typename I>
+            inline bool distinct(const C& cont_) noexcept
+            {
+                return (std::unique(cont_.begin(), cont_.end()) == cont_.end());
             }
 
 
