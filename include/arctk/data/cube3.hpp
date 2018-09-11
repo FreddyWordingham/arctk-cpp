@@ -205,7 +205,7 @@ namespace arc //! arctk namespace
             std::ofstream file(path_ + ".vtk");
 
             file << "# vtk DataFile Version 3.0\n"
-                 << "vtk " << data_name_ << '\n'
+                 << "vtk " << set_name_ << '\n'
                  << "ASCII\n"
                  << "DATASET RECTILINEAR_GRID\n"
                  << "DIMENSIONS " << (_res[index::dim::cartesian::X] + 1) << " " << (_res[index::dim::cartesian::Y] + 1) << " " << (_res[index::dim::cartesian::Z] + 1) << '\n'
