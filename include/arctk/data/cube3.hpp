@@ -123,7 +123,7 @@ namespace arc //! arctk namespace
         template <size_t I>
         inline typename std::tuple_element<I, std::tuple<A...>>::type Cube<3, A...>::min() const noexcept
         {
-            std::tuple_element<I, std::tuple<A...>>::type min = std::get<I>(_data.front().front().front());
+            typename std::tuple_element<I, std::tuple<A...>>::type min = std::get<I>(_data.front().front().front());
 
             for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
             {
@@ -146,7 +146,7 @@ namespace arc //! arctk namespace
         template <size_t I>
         inline typename std::tuple_element<I, std::tuple<A...>>::type Cube<3, A...>::max() const noexcept
         {
-            std::tuple_element<I, std::tuple<A...>>::type max = std::get<I>(_data.front().front().front());
+            typename std::tuple_element<I, std::tuple<A...>>::type max = std::get<I>(_data.front().front().front());
 
             for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
             {
