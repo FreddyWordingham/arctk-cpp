@@ -78,11 +78,12 @@ namespace arc //! arctk namespace
             inline typename std::tuple_element<I, std::tuple<A...>>::type max() const noexcept;
 
             //  -- Saving --
-            template <size_t... I>
-            inline void save(const std::string& path_, const std::string& set_name_, const std::array<std::string, sizeof...(A)>& var_names_, const vec3& min_, const vec3& max_, const std::index_sequence<I...>) const noexcept;
+            inline void save(const std::string& path_, const std::string& set_name_, const std::array<std::string, sizeof...(A)>& var_names_, const vec3& min_, const vec3& max_) const noexcept;
 
           private:
             //  -- Saving --
+            template <size_t... I>
+            inline void write_data(const std::string& var_name_, std::ofstream& file_, std::index_sequence<I...> /*unused*/) const noexcept;
             template <size_t I>
             inline void write_var(const std::string& var_name_, std::ofstream& file_) const noexcept;
         };
@@ -180,8 +181,7 @@ namespace arc //! arctk namespace
 
         //  -- Saving --
         template <typename... A>
-        template <size_t... I>
-        inline void Cube<3, A...>::save(const std::string& path_, const std::string& set_name_, const std::array<std::string, sizeof...(A)>& var_names_, const vec3& min_, const vec3& max_, const std::index_sequence<I...>) const noexcept
+        inline void Cube<3, A...>::save(const std::string& path_, const std::string& set_name_, const std::array<std::string, sizeof...(A)>& var_names_, const vec3& min_, const vec3& max_) const noexcept
         {
             PRE(!path_.empty());
             PRE(!set_name_.empty());
@@ -233,7 +233,14 @@ namespace arc //! arctk namespace
 
             file << "CELL_DATA " << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << '\n';
 
-            (write_var<I>(var_names_[I], file), ...);
+            write_data(var_names_, file, std::make_index_sequence<sizeof...(A)>());
+        }
+
+        template <typename... A>
+        template <size_t... I>
+        inline void Cube<3, A...>::write_data(const std::string& var_name_, std::ofstream& file_, std::index_sequence<I...> /*unused*/) const noexcept
+        {
+            (write_var(var_name_[I], file_), ...);
         }
 
         template <typename... A>
