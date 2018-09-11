@@ -51,6 +51,12 @@ namespace arc //! arctk namespace
             std::vector<std::vector<std::vector<std::tuple<A...>>>> _data;
 
 
+            //  == INSTANTIATION ==
+          public:
+            //  -- Constructors --
+            inline explicit Cube(const std::array<size_t, 3>& res_) noexcept;
+
+
             //  == OPERATORS ==
           public:
             //  -- Access --
@@ -70,10 +76,20 @@ namespace arc //! arctk namespace
 
 
 
+        //  == INSTANTIATION ==
+      public:
+        //  -- Constructors --
+        template <typename... A>
+        inline Cube<3, A...>::Cube(const std::array<size_t, 3>& res_) noexcept
+        {
+        }
+
+
+
         //  == OPERATORS ==
         //  -- Access --
         template <typename... A>
-        inline std::vector<std::vector<std::tuple<A...>>>& Cube<std::tuple<A...>, 3>::operator[](const size_t index_) noexcept
+        inline std::vector<std::vector<std::tuple<A...>>>& Cube<3, A...>::operator[](const size_t index_) noexcept
         {
             PRE(index_ < _res[index::dim::cartesian::X]);
 
@@ -81,7 +97,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename... A>
-        inline const std::vector<std::vector<std::tuple<A...>>>& Cube<std::tuple<A...>, 3>::operator[](const size_t index_) const noexcept
+        inline const std::vector<std::vector<std::tuple<A...>>>& Cube<3, A...>::operator[](const size_t index_) const noexcept
         {
             PRE(index_ < _res[index::dim::cartesian::X]);
 
@@ -93,14 +109,14 @@ namespace arc //! arctk namespace
         //  == METHODS ==
         //  -- Getters --
         template <typename... A>
-        inline const std::array<size_t, 3> Cube<A..., 3>::res() const noexcept
+        inline const std::array<size_t, 3> Cube<3, A...>::res() const noexcept
         {
             return (_res);
         }
 
         template <typename... A>
         template <size_t I>
-        inline typename std::tuple_element<I, std::tuple<A...>>::type Cube<A..., 3>::min() const noexcept
+        inline typename std::tuple_element<I, std::tuple<A...>>::type Cube<3, A...>::min() const noexcept
         {
             std::tuple_element<I, std::tuple<A...>>::type min = std::get<I>(_data.front().front().front());
 
@@ -123,7 +139,7 @@ namespace arc //! arctk namespace
 
         template <typename... A>
         template <size_t I>
-        inline typename std::tuple_element<I, std::tuple<A...>>::type Cube<A..., 3>::max() const noexcept
+        inline typename std::tuple_element<I, std::tuple<A...>>::type Cube<3, A...>::max() const noexcept
         {
             std::tuple_element<I, std::tuple<A...>>::type max = std::get<I>(_data.front().front().front());
 
