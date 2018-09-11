@@ -66,7 +66,7 @@ namespace arc //! arctk namespace
             inline std::vector<std::tuple<A...>> init_rows(const std::vector<T>& first_col_, const std::vector<B>&... cols_) noexcept;
             inline std::vector<std::tuple<A...>> init_rows(const std::string& serial_, char delim_) noexcept;
             template <size_t... I>
-            inline std::tuple<A...> init_row(size_t index_, std::index_sequence<I...> /*unused*/, const std::vector<A>&... cols_) noexcept;
+            inline std::tuple<A...> init_row(size_t index_, const std::index_sequence<I...>& /*unused*/, const std::vector<A>&... cols_) noexcept;
 
 
             //  == OPERATORS ==
@@ -220,7 +220,7 @@ namespace arc //! arctk namespace
          */
         template <typename... A>
         template <size_t... I>
-        inline std::tuple<A...> Table<A...>::init_row(const size_t index_, std::index_sequence<I...> /*unused*/, const std::vector<A>&... cols_) noexcept
+        inline std::tuple<A...> Table<A...>::init_row(const size_t index_, const std::index_sequence<I...>& /*unused*/, const std::vector<A>&... cols_) noexcept
         {
             std::tuple<A...> tup;
 
