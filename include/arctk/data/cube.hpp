@@ -29,11 +29,12 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
-         *  Data table class.
+         *  Data cube class.
          *
          *  @tparam A   Types stored in data columns.
+         *  @tparam N   Dimensionality of the histogram.
          */
-        template <typename... A>
+        template <typename... A, size_t N>
         class Cube
         {
             //  == FIELDS ==
