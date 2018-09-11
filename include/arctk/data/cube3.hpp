@@ -263,7 +263,7 @@ namespace arc //! arctk namespace
 
             file << "\nCELL_DATA " << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << "\n\n";
 
-            write_data(var_names_, file, std::make_index_sequence<sizeof...(A)>());
+            write_data(var_names_, file, std::index_sequence_for<A>());
         }
 
         template <typename... A>
