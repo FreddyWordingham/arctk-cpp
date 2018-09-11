@@ -41,6 +41,10 @@ namespace arc //! arctk namespace
         template <typename... A>
         class Cube<3, A...>
         {
+            //  == FIELDS ==
+          private:
+            //  -- Data --
+            const std::array<size_t, 3> _res;
         };
 
 
