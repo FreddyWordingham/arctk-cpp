@@ -39,6 +39,14 @@ namespace arc //! arctk namespace
 
 
 
+        //  == STRUCTURES ==
+        template <typename T>
+        struct VtkTypename
+        {
+        }
+
+
+
         //  == CLASS ==
         /**
          *  Three-dimensional data cube class.
@@ -252,7 +260,7 @@ namespace arc //! arctk namespace
             PRE(var_name_.find_first_of(' ') == std::string::npos);
 
             file_ << "\nFIELD FieldData 1\n"
-                  << var_name_ << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << ' ' << vtk_typename<typename std::tuple_element<I, std::tuple<A...>>::type>::name << '\n';
+                  << var_name_ << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << ' ' << VtkTypename<typename std::tuple_element<I, std::tuple<A...>>::type>::name << '\n';
 
             for (size_t i = 0; i < _res[index::dim::cartesian::Z]; ++i)
             {
