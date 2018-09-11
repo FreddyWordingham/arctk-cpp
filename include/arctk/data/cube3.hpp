@@ -203,7 +203,7 @@ namespace arc //! arctk namespace
             PRE(set_name_.find_first_of('\n') == std::string::npos);
             PRE(set_name_.find_first_of(' ') == std::string::npos);
             PRE(!var_names_.empty());
-            for (size_t i = 0; i < var_names_.size(); ++i)
+            for (size_t i = 0; i < sizeof...(A); ++i)
             {
                 PRE(var_names_[i].find_first_of('\n') == std::string::npos);
                 PRE(var_names_[i].find_first_of(' ') == std::string::npos);
@@ -270,6 +270,14 @@ namespace arc //! arctk namespace
         template <size_t... I>
         inline void Cube<3, A...>::write_data(const std::array<std::string, sizeof...(A)>& var_names_, std::ofstream& file_, const std::index_sequence<I...>& /*unused*/) const noexcept
         {
+            PRE(!var_names_.empty());
+            for (size_t i = 0; i < sizeof...(A); ++i)
+            {
+                PRE(var_names_[i].find_first_of('\n') == std::string::npos);
+                PRE(var_names_[i].find_first_of(' ') == std::string::npos);
+            }
+            PRE(utl::properties::distinct(var_names_));
+
             (write_var<I>(var_names_[I], file_), ...);
         }
 
