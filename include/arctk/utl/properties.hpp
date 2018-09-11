@@ -134,11 +134,8 @@ namespace arc //! arctk namespace
             {
                 for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
                 {
-                    std::cout << "i\t" << *it << '\n';
                     for (I jt = std::next(it); jt != std::end(cont_); std::advance(jt, 1))
                     {
-                        std::cout << "j\t" << *jt << '\n';
-
                         if (*it == *jt)
                         {
                             return (false);
