@@ -81,8 +81,8 @@ namespace arc //! arctk namespace
         //  -- Constructors --
         template <typename... A>
         inline Cube<3, A...>::Cube(const std::array<size_t, 3>& res_) noexcept
-            : _res(res_)
-            , _data(res_[index::dim::cartesian::X], std::vector<std::vector<std::tuple<A...>>>(res_[index::dim::cartesian::Y], std::vector<std::tuple<A...>>(res_[index::dim::cartesian::Z]))
+          : _res(res_)
+          , _data(res_[index::dim::cartesian::X], std::vector<std::vector<std::tuple<A...>>>(res_[index::dim::cartesian::Y], std::vector<std::tuple<A...>>(res_[index::dim::cartesian::Z])))
         {
             PRE(res_[index::dim::cartesian::X] > 0);
             PRE(res_[index::dim::cartesian::Y] > 0);
