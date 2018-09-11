@@ -42,15 +42,15 @@ namespace arc //! arctk namespace
         //  == CONSTANTS ==
         //  -- Naming --
         template <typename T>
-        constexpr const char* const VTK_TYPENAME = "UNKNOWN_TYPE";
+        const char* const VTK_TYPENAME = "UNKNOWN_TYPE";
         template <>
-        constexpr const char* const VTK_TYPENAME<int> = "int";
+        const char* const VTK_TYPENAME<int> = "int";
         template <>
-        constexpr const char* const VTK_TYPENAME<char> = "char";
+        const char* const VTK_TYPENAME<char> = "char";
         template <>
-        constexpr const char* const VTK_TYPENAME<float> = "float";
+        const char* const VTK_TYPENAME<float> = "float";
         template <>
-        constexpr const char* const VTK_TYPENAME<double> = "double";
+        const char* const VTK_TYPENAME<double> = "double";
 
 
 
