@@ -39,11 +39,18 @@ namespace arc //! arctk namespace
 
 
 
-        //  == STRUCTURES ==
+        //  == CONSTANTS ==
+        //  -- Naming --
         template <typename T>
-        struct VtkTypename
-        {
-        }
+        constexpr const char* const VTK_TYPENAME = "UNKNOWN_TYPE";
+        template <>
+        constexpr const char* const VTK_TYPENAME<int> = "int";
+        template <>
+        constexpr const char* const VTK_TYPENAME<char> = "char";
+        template <>
+        constexpr const char* const VTK_TYPENAME<float> = "float";
+        template <>
+        constexpr const char* const VTK_TYPENAME<double> = "double";
 
 
 
@@ -260,7 +267,7 @@ namespace arc //! arctk namespace
             PRE(var_name_.find_first_of(' ') == std::string::npos);
 
             file_ << "\nFIELD FieldData 1\n"
-                  << var_name_ << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << ' ' << VtkTypename<typename std::tuple_element<I, std::tuple<A...>>::type>::name << '\n';
+                  << var_name_ << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << ' ' << VTK_TYPENAME<typename std::tuple_element<I, std::tuple<A...>>::type> << '\n';
 
             for (size_t i = 0; i < _res[index::dim::cartesian::Z]; ++i)
             {
