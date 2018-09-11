@@ -240,7 +240,7 @@ namespace arc //! arctk namespace
         template <size_t... I>
         inline void Cube<3, A...>::write_data(const std::array<std::string, sizeof...(A)>& var_names_, std::ofstream& file_, std::index_sequence<I...> /*unused*/) const noexcept
         {
-            (write_var(var_names_[I], file_), ...);
+            (write_var<I>(var_names_[I], file_), ...);
         }
 
         template <typename... A>
