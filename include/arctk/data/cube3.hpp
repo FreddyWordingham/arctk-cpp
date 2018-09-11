@@ -19,6 +19,9 @@
 #include <cstddef>
 #include <vector>
 
+//  -- Arctk --
+#include <arctk/data/cube.hpp>
+
 
 
 //  == NAMESPACE ==
