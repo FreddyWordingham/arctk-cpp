@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_CUBE_HPP
-#define ARCTK_DATA_CUBE_HPP
+#ifndef ARCTK_DATA_CUBE3_HPP
+#define ARCTK_DATA_CUBE3_HPP
 
 
 
@@ -174,4 +174,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_DATA_CUBE_HPP
+#endif // ARCTK_DATA_CUBE3_HPP
