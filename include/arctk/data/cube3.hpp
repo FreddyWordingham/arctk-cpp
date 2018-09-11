@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cstddef>
+#include <tuple>
 #include <vector>
 
 //  -- Arctk --
@@ -44,8 +45,25 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            const std::array<size_t, 3> _res;
+            const std::array<size_t, 3>                             _res;
+            std::vector<std::vector<std::vector<std::tuple<A...>>>> _data;
+
+
+            //  == METHODS ==
+          public:
+            //  -- Getters --
+            inline const std::array<size_t, 3> res() const noexcept;
         };
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        template <typename T>
+        inline const std::array<size_t, 3> Cube<T, 3>::res() const noexcept
+        {
+            return (_res);
+        }
 
 
 
