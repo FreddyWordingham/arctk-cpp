@@ -132,7 +132,21 @@ namespace arc //! arctk namespace
             template <typename C, typename T, typename I>
             inline bool distinct(const C& cont_) noexcept
             {
-                return (std::unique(cont_.begin(), cont_.end()) == cont_.end());
+                for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+                {
+                    std::cout << "i\t" << *it << '\n';
+                    for (I jt = std::next(it); jt != std::end(cont_); std::advance(jt, 1))
+                    {
+                        std::cout << "j\t" << *jt << '\n';
+
+                        if (*it == *jt)
+                        {
+                            return (false);
+                        }
+                    }
+                }
+
+                return (true);
             }
 
 
