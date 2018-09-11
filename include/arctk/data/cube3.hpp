@@ -22,6 +22,8 @@
 
 //  -- Arctk --
 #include <arctk/data/cube.hpp>
+#include <arctk/debug.hpp>
+#include <arctk/index.hpp>
 
 
 
@@ -60,6 +62,10 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline const std::array<size_t, 3> res() const noexcept;
+            template <size_t I>
+            inline typename std::tuple_element<I, std::tuple<A...>>::type min() const noexcept;
+            template <size_t I>
+            inline typename std::tuple_element<I, std::tuple<A...>>::type max() const noexcept;
         };
 
 
@@ -90,6 +96,52 @@ namespace arc //! arctk namespace
         inline const std::array<size_t, 3> Cube<A..., 3>::res() const noexcept
         {
             return (_res);
+        }
+
+        template <typename... A>
+        template <size_t I>
+        inline typename std::tuple_element<I, std::tuple<A...>>::type Cube<A..., 3>::min() const noexcept
+        {
+            std::tuple_element<I, std::tuple<A...>>::type min = std::get<I>(_data.front().front().front());
+
+            for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
+            {
+                for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
+                {
+                    for (size_t k = 0; k < _res[index::dim::cartesian::Z]; ++k)
+                    {
+                        if (std::get<I>(_data[i][j][k]) < min)
+                        {
+                            min = std::get<I>(_data[i][j][k]);
+                        }
+                    }
+                }
+            }
+
+            return (min);
+        }
+
+        template <typename... A>
+        template <size_t I>
+        inline typename std::tuple_element<I, std::tuple<A...>>::type Cube<A..., 3>::max() const noexcept
+        {
+            std::tuple_element<I, std::tuple<A...>>::type max = std::get<I>(_data.front().front().front());
+
+            for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
+            {
+                for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
+                {
+                    for (size_t k = 0; k < _res[index::dim::cartesian::Z]; ++k)
+                    {
+                        if (std::get<I>(_data[i][j][k]) > max)
+                        {
+                            max = std::get<I>(_data[i][j][k]);
+                        }
+                    }
+                }
+            }
+
+            return (max);
         }
 
 
