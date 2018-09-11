@@ -78,7 +78,6 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
-      public:
         //  -- Constructors --
         template <typename... A>
         inline explicit Cube<3, A...>::Cube(const std::array<size_t, 3>& res_) noexcept
