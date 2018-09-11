@@ -98,7 +98,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Saving --
             template <size_t... I>
-            inline void write_data(const std::array<std::string, sizeof...(A)>& var_names_, std::ofstream& file_, std::index_sequence<I...> /*unused*/) const noexcept;
+            inline void write_data(const std::array<std::string, sizeof...(A)>& var_names_, std::ofstream& file_, const std::index_sequence<I...>& /*unused*/) const noexcept;
             template <size_t I>
             inline void write_var(const std::string& var_name_, std::ofstream& file_) const noexcept;
         };
@@ -253,7 +253,7 @@ namespace arc //! arctk namespace
 
         template <typename... A>
         template <size_t... I>
-        inline void Cube<3, A...>::write_data(const std::array<std::string, sizeof...(A)>& var_names_, std::ofstream& file_, std::index_sequence<I...> /*unused*/) const noexcept
+        inline void Cube<3, A...>::write_data(const std::array<std::string, sizeof...(A)>& var_names_, std::ofstream& file_, const std::index_sequence<I...>& /*unused*/) const noexcept
         {
             (write_var<I>(var_names_[I], file_), ...);
         }
