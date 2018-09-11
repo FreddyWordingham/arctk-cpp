@@ -275,7 +275,12 @@ namespace arc //! arctk namespace
                 {
                     for (size_t k = 0; k < _res[index::dim::cartesian::X]; ++k)
                     {
-                        file_ << std::get<I>(_data[k][j][i]) << ' ';
+                        if (k != 0)
+                        {
+                            file_ << ' ';
+                        }
+
+                        file_ << std::get<I>(_data[k][j][i]);
                     }
                     file_ << '\n';
                 }
