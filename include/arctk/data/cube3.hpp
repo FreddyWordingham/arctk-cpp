@@ -18,6 +18,7 @@
 //  -- Std --
 #include <array>
 #include <cstddef>
+#include <fstream>
 #include <tuple>
 #include <vector>
 
@@ -77,6 +78,11 @@ namespace arc //! arctk namespace
 
             //  -- Saving --
             inline void save(const std::string& path_, const std::string& set_name_, const std::array<std::string, sizeof...(A)>& var_names_, const vec3& min_, const vec3& max_) const noexcept;
+
+          private:
+            //  -- Saving --
+            template <size_t I>
+            inline void write_var(const std::string& var_name_, std::ofstream& file_) const noexcept;
         };
 
 
@@ -188,6 +194,65 @@ namespace arc //! arctk namespace
             PRE(min_.x < max_.x);
             PRE(min_.y < max_.y);
             PRE(min_.z < max_.z);
+
+            vec3 cell_size = max_ - min_;
+            cell_size.x /= static_cast<double>(_res[index::dim::cartesian::X]);
+            cell_size.y /= static_cast<double>(_res[index::dim::cartesian::Y]);
+            cell_size.z /= static_cast<double>(_res[index::dim::cartesian::Z]);
+
+            std::ofstream file(path_ + ".vtk");
+
+            file << "# vtk DataFile Version 3.0\n"
+                 << "vtk " << data_name_ << '\n'
+                 << "ASCII\n"
+                 << "DATASET RECTILINEAR_GRID\n"
+                 << "DIMENSIONS " << (_res[index::dim::cartesian::X] + 1) << " " << (_res[index::dim::cartesian::Y] + 1) << " " << (_res[index::dim::cartesian::Z] + 1) << '\n'
+                 << "X_COORDINATES " << (_res[index::dim::cartesian::X] + 1) << ' ' + typename_ + '\n';
+
+            for (size_t i = 0; i <= _res[index::dim::cartesian::X]; ++i)
+            {
+                file << (min_.x + (cell_size.x * static_cast<double>(i))) << ' ';
+            }
+
+            file << "\nY_COORDINATES " << (_res[index::dim::cartesian::Y] + 1) << ' ' + typename_ + '\n';
+
+            for (size_t i = 0; i <= _res[index::dim::cartesian::Y]; ++i)
+            {
+                file << (min_.x + (cell_size.y * static_cast<double>(i))) << ' ';
+            }
+
+            file << "\nZ_COORDINATES " << (_res[index::dim::cartesian::Z] + 1) << ' ' + typename_ + '\n';
+
+            for (size_t i = 0; i <= _res[index::dim::cartesian::Z]; ++i)
+            {
+                file << (min_.x + (cell_size.z * static_cast<double>(i))) << ' ';
+            }
+
+            file << "CELL_DATA " << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << '\n';
+        }
+
+        template <typename... A>
+        template <size_t I>
+        inline void Cube<3, A...>::write_var(const std::string& var_name_, std::ofstream& file_) const noexcept
+        {
+            PRE(!var_name_.empty());
+            PRE(var_name_.find_first_of('\n') == std::string::npos);
+            PRE(var_name_.find_first_of(' ') == std::string::npos);
+
+            file_ << "\nFIELD FieldData 1\n" << var_name_ << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << " double\n";
+
+            for (size_t i = 0; i < _res[index::dim::cartesian::Z]; ++i)
+            {
+                for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
+                {
+                    for (size_t k = 0; k < _res[index::dim::cartesian::X]; ++k)
+                    {
+                        file_ << std::get<I>(_data[k][j][i]) << ' ';
+                    }
+                    file_ << '\n';
+                }
+                file_ << '\n';
+            }
         }
 
 
