@@ -36,19 +36,24 @@ namespace arc //! arctk namespace
         //  == CLASS ==
         /**
          *  Three-dimensional data cube class.
+         *
+         *  @tparam A   Types stored in data columns.
          */
-        template <>
-        class Cube<3>
+        template <typename... A>
+        class Cube<3, A...>
         {
             //  == FIELDS ==
           private:
             //  -- Data --
-            const std::array<size_t, 3> _res;
+            const std::array<size_t, 3>                             _res;
+            std::vector<std::vector<std::vector<std::tuple<A...>>>> _data;
 
 
             //  == OPERATORS ==
           public:
             //  -- Access --
+            inline std::vector<std::vector<std::tuple<A...>>>&       operator[](size_t index_) noexcept;
+            inline const std::vector<std::vector<std::tuple<A...>>>& operator[](size_t index_) const noexcept;
 
 
             //  == METHODS ==
@@ -61,13 +66,28 @@ namespace arc //! arctk namespace
 
         //  == OPERATORS ==
         //  -- Access --
+        template <typename... A>
+        inline std::vector<std::vector<std::tuple<A...>>>& Cube<std::tuple<A...>, 3>::operator[](const size_t index_) noexcept
+        {
+            PRE(index_ < _res[index::dim::cartesian::X]);
+
+            return (_data[index_]);
+        }
+
+        template <typename... A>
+        inline const std::vector<std::vector<std::tuple<A...>>>& Cube<std::tuple<A...>, 3>::operator[](const size_t index_) const noexcept
+        {
+            PRE(index_ < _res[index::dim::cartesian::X]);
+
+            return (_data[index_]);
+        }
 
 
 
         //  == METHODS ==
         //  -- Getters --
-        template <>
-        inline const std::array<size_t, 3> Cube<3>::res() const noexcept
+        template <typename... A>
+        inline const std::array<size_t, 3> Cube<A..., 3>::res() const noexcept
         {
             return (_res);
         }
