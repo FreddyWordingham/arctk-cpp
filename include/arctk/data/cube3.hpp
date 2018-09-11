@@ -26,6 +26,7 @@
 #include <arctk/data/cube.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/index.hpp>
+#include <arctk/math.hpp>
 #include <arctk/utl.hpp>
 
 
