@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
             template <typename... A>
             inline std::tuple<A...> to(const std::vector<std::string>& strs_) noexcept;
             template <typename... A, size_t... I>
-            inline std::tuple<A...> to_helper(const std::vector<std::string>& strs_, std::index_sequence<I...> /*unused*/) noexcept;
+            inline std::tuple<A...> to_helper(const std::vector<std::string>& strs_, const std::index_sequence<I...>& /*unused*/) noexcept;
 
             //  -- From --
             inline std::string from(const std::string& str_, bool /*unused*/ = false) noexcept;
@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
             template <typename... A>
             inline std::string from(const std::tuple<A...>& tup_, bool limiters_ = true) noexcept;
             template <typename... A, size_t... I>
-            inline std::string from_helper(const std::tuple<A...>& tup_, bool limiters_, std::index_sequence<I...> /*unused*/) noexcept;
+            inline std::string from_helper(const std::tuple<A...>& tup_, bool limiters_, const std::index_sequence<I...>& /*unused*/) noexcept;
             template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
             inline std::string from(const C& cont_, bool limiters_ = true) noexcept;
 
@@ -263,7 +263,7 @@ namespace arc //! arctk namespace
              *  @return Parsed tuple of values.
              */
             template <typename... A, size_t... I>
-            inline std::tuple<A...> to_helper(const std::vector<std::string>& strs_, std::index_sequence<I...> /*unused*/) noexcept
+            inline std::tuple<A...> to_helper(const std::vector<std::string>& strs_, const std::index_sequence<I...>& /*unused*/) noexcept
             {
                 PRE(sizeof...(A) == sizeof...(I));
 
@@ -386,7 +386,7 @@ namespace arc //! arctk namespace
              *  @return String parsed from the given tuple.
              */
             template <typename... A, size_t... I>
-            inline std::string from_helper(const std::tuple<A...>& tup_, const bool limiters_, std::index_sequence<I...> /*unused*/) noexcept
+            inline std::string from_helper(const std::tuple<A...>& tup_, const bool limiters_, const std::index_sequence<I...>& /*unused*/) noexcept
             {
                 static_assert(sizeof...(A) > 0);
 
