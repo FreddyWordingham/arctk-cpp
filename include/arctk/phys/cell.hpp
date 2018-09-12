@@ -37,7 +37,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Cell()                     = default;
+            inline Cell() noexcept;
             inline Cell(const Cell&) noexcept = default; //!< Defaulted copy constructor.
             inline Cell(Cell&&) noexcept      = default; //!< Defaulted move constructor.
 
@@ -55,6 +55,13 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
+        //  -- Constructors --
+        inline Cell::Cell() noexcept
+          : _energy(0.0)
+        {
+        }
+
+
         //  -- Destructors --
         inline Cell::~Cell() noexcept = default;
 
