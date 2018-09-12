@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const std::array<size_t, 2> res() const noexcept;
+            inline size_t res() const noexcept;
             template <size_t I>
             inline typename std::tuple_element<I, std::tuple<A...>>::type min() const noexcept;
             template <size_t I>
@@ -125,7 +125,7 @@ namespace arc //! arctk namespace
         //  == METHODS ==
         //  -- Getters --
         template <typename... A>
-        inline const std::array<size_t, 2> Cube<2, A...>::res() const noexcept
+        inline size_t Cube<1, A...>::res() const noexcept
         {
             return (_res);
         }
