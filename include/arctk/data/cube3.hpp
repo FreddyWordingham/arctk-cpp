@@ -328,6 +328,7 @@ namespace arc //! arctk namespace
          *  @pre    var_names_ elements may not contain newline characters.
          *  @pre    var_names_ elements may not contain blank spaces.
          *  @pre    var_names_ may be distinct.
+         *  @pre    file_ must be open.
          */
         template <typename... A>
         template <size_t... I>
@@ -340,6 +341,7 @@ namespace arc //! arctk namespace
                 PRE(var_names_[i].find_first_of(' ') == std::string::npos);
             }
             PRE(utl::properties::distinct(var_names_));
+            PRE(file_.open());
 
             (write_var<I>(var_names_[I], file_), ...);
         }
