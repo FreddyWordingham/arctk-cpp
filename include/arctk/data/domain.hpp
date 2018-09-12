@@ -74,7 +74,8 @@ namespace arc //! arctk namespace
             inline Packet const*                packet(size_t index_x_, size_t index_y_, size_t index_z_) const noexcept;
 
             //  -- Saving --
-            inline void save(const std::string& path_, const std::string& set_name_, const std::array<std::string, sizeof...(A)>& var_names_, const vec3& min_ = vec3(0.0, 0.0, 0.0), const vec3& max_ = vec3(1.0, 1.0, 1.0)) const noexcept;
+            template <typename T>
+            inline void save(const std::string& path_, const std::string& set_name_) const noexcept;
         };
 
 
@@ -172,6 +173,19 @@ namespace arc //! arctk namespace
             PRE(index_z_ < _res[index::dim::cartesian::Z]);
 
             return (_packets[index_x_][index_y_][index_z_].get());
+        }
+
+
+        //  -- Saving --
+        template <typename T>
+        inline void Domain::save(const std::string& path_, const std::string& set_name_) const noexcept
+        {
+            static_assert(std::is_base_of<Packet, T>::value);
+
+            PRE(!path_.empty());
+            PRE(!set_name_.empty());
+            PRE(set_name_.find_first_of('\n') == std::string::npos);
+            PRE(set_name_.find_first_of(' ') == std::string::npos);
         }
 
 
