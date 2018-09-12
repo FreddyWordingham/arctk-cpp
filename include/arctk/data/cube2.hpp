@@ -174,7 +174,7 @@ namespace arc //! arctk namespace
 
         //  -- Saving --
         template <typename... A>
-        inline void Cube<3, A...>::save(const std::string& path_, const std::string& set_name_, const std::array<std::string, sizeof...(A)>& var_names_, const vec3& min_, const vec3& max_) const noexcept // NOLINT
+        inline void Cube<2, A...>::save(const std::string& path_, const std::string& set_name_, const std::array<std::string, sizeof...(A)>& var_names_, const vec3& min_, const vec3& max_) const noexcept // NOLINT
         {
             PRE(!path_.empty());
             PRE(!set_name_.empty());
@@ -246,7 +246,7 @@ namespace arc //! arctk namespace
 
         template <typename... A>
         template <size_t... I>
-        inline void Cube<3, A...>::write_data(const std::array<std::string, sizeof...(A)>& var_names_, std::ofstream& file_, const std::index_sequence<I...>& /*unused*/) const noexcept
+        inline void Cube<2, A...>::write_data(const std::array<std::string, sizeof...(A)>& var_names_, std::ofstream& file_, const std::index_sequence<I...>& /*unused*/) const noexcept
         {
             PRE(!var_names_.empty());
             for (size_t i = 0; i < sizeof...(A); ++i)
