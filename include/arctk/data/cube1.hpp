@@ -149,6 +149,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the resolution of the datacube.
+         *
+         *  @return Resolution of the datacube.
+         */
         template <typename... A>
         inline size_t Cube<1, A...>::res() const noexcept
         {
