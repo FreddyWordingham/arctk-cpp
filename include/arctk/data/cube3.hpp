@@ -224,6 +224,27 @@ namespace arc //! arctk namespace
 
 
         //  -- Saving --
+        /**
+         *  Save the datacube as a vtk file.
+         *
+         *  @param  path_       Path of the save file.
+         *  @param  set_name_   Name of the data set.
+         *  @param  var_names_  Array of data channel names.
+         *  @param  min_        Minimum bound of the datacube.
+         *  @param  max_        Maximum bound of the datacube.
+         *
+         *  @pre    path_ may not be empty.
+         *  @pre    set_name_ may not be empty.
+         *  @pre    set_name_ may not contain newline characters.
+         *  @pre    set_name_ may not contain blank spaces.
+         *  @pre    var_names_ may not be empty.
+         *  @pre    var_names_ elements may not contain newline characters.
+         *  @pre    var_names_ elements may not contain blank spaces.
+         *  @pre    var_names_ may be distinct.
+         *  @pre    min_.x may be less than max_.x.
+         *  @pre    min_.y may be less than max_.y.
+         *  @pre    min_.z may be less than max_.z.
+         */
         template <typename... A>
         inline void Cube<3, A...>::save(const std::string& path_, const std::string& set_name_, const std::array<std::string, sizeof...(A)>& var_names_, const vec3& min_, const vec3& max_) const noexcept // NOLINT
         {
