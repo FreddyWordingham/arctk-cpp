@@ -20,6 +20,7 @@
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/exit.hpp>
 
 
 
@@ -51,7 +52,7 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Naming --
-            inline std::string name(const size_t dim_) noexcept;
+            inline std::string name(const cartesian dim_) noexcept;
 
 
 
@@ -66,7 +67,7 @@ namespace arc //! arctk namespace
              *
              *  @return String name of the cartesian dimension.
              */
-            inline std::string name(const size_t dim_) noexcept
+            inline std::string name(const cartesian dim_) noexcept
             {
                 PRE(dim_ < cartesian::TOTAL);
 
@@ -78,6 +79,9 @@ namespace arc //! arctk namespace
                         return ("y");
                     case cartesian::Z:
                         return ("z");
+                    case cartesian::TOTAL:
+                        std::cerr << "Unreachable location has been reached.\n";
+                        std::exit(exit::error::UNREACHABLE_CODE);
                 }
             }
 
