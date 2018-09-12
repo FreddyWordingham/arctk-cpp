@@ -315,7 +315,7 @@ namespace arc //! arctk namespace
              *
              *  @return Parsed vector of triangle face data.
              */
-            inline std::vector<std::array<std::array<size_t, 3>, 2>> Mesh::parse_faces(const std::string& serial_) const noexcept
+            inline std::vector<std::array<std::array<size_t, 3>, 2>> Mesh::parse_faces(const std::string& serial_) const noexcept // NOLINT
             {
                 PRE(!serial_.empty());
 
