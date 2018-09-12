@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/phys/cell.hpp>
 #include <arctk/phys/material.hpp>
 #include <arctk/phys/material/basic.hpp>
 #include <arctk/phys/material/fluorescent.hpp>
