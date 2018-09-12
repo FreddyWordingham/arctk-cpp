@@ -14,6 +14,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/geom.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -26,7 +32,7 @@ namespace arc //! arctk namespace
         /**
          *  Data packet domain class.
          */
-        class Domain
+        class Domain : public geom::shape::Aabb
         {
             //  == INSTANTIATION ==
           public:
