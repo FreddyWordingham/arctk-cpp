@@ -70,7 +70,7 @@ namespace arc //! arctk namespace
             inline double                     energy_dens() const noexcept;
 
             //  -- Modifiers --
-            inline void add_energy(double energy_) const noexcept;
+            inline void add_energy(double energy_) noexcept;
         };
 
 
@@ -107,7 +107,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Modifiers --
-        inline void Cell::add_energy(const double energy_) const noexcept
+        inline void Cell::add_energy(const double energy_) noexcept
         {
             _energy += energy_;
         }
