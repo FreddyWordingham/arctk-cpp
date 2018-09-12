@@ -101,7 +101,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline bool square(const std::vector<std::vector<T>>& vec_) noexcept
             {
-                const size_t size = vec.front().size();
+                const size_t size = vec_.front().size();
 
                 for (size_t i = 1; i < vec_.size(); ++i)
                 {
@@ -117,7 +117,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline bool cube(const std::vector<std::vector<std::vector<T>>>& vec_) noexcept
             {
-                const std::array<size_t, 2> size({{vec.front().size(), vec.front().front().size()}});
+                const std::array<size_t, 2> size({{vec_.front().size(), vec_.front().front().size()}});
 
                 for (size_t i = 0; i < vec_.size(); ++i)
                 {
