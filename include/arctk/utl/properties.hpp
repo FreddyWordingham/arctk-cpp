@@ -129,6 +129,17 @@ namespace arc //! arctk namespace
                 return (((*std::begin(cont_) <= val_) && (val_ <= *std::rbegin(cont_))) || ((*std::begin(cont_) >= val_) && (val_ >= *std::rbegin(cont_))));
             }
 
+            /**
+             *  Determine if all elements of a container are distinct.
+             *
+             *  @tparam C   Type of container.
+             *  @tparam T   Type stored by C.
+             *  @tparam I   Type of const iterator of C.
+             *
+             *  @param  cont_   Container to test.
+             *
+             *  @return True if no two elements of the container are equal.
+             */
             template <typename C, typename T, typename I>
             inline bool distinct(const C& cont_) noexcept
             {
