@@ -308,7 +308,7 @@ namespace arc //! arctk namespace
          *  @pre    var_names_ may not be empty.
          *  @pre    var_names_ elements may not contain newline characters.
          *  @pre    var_names_ elements may not contain blank spaces.
-         *  @pre    var_names_ may be distinct.
+         *  @pre    var_names_ must be distinct.
          *  @pre    file_ must be open.
          */
         template <typename... A>
