@@ -15,6 +15,10 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <memory>
+#include <vector>
+
 //  -- Arctk --
 #include <arctk/geom.hpp>
 
