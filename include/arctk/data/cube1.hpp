@@ -58,7 +58,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline explicit Cube(const size_t res_) noexcept;
+            inline explicit Cube(size_t res_) noexcept;
 
 
             //  == OPERATORS ==
