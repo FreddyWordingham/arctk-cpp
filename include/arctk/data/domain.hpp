@@ -34,6 +34,13 @@ namespace arc //! arctk namespace
          */
         class Domain : public geom::shape::Aabb
         {
+            //  == FIELDS ==
+          private:
+            //  -- Data --
+            const std::array<size_t, 3>              _res;     //!< Resolution of the data.
+            std::vector<std::vector<std::vector<T>>> _packets; //!< Stored data packets.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
