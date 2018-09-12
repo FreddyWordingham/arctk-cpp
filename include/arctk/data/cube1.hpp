@@ -180,12 +180,9 @@ namespace arc //! arctk namespace
                 PRE(var_names_[i].find_first_of(' ') == std::string::npos);
             }
             PRE(utl::properties::distinct(var_names_));
-            PRE(min_.x < max_.x);
-            PRE(min_.y < max_.y);
+            PRE(min_ < max_);
 
-            vec2 cell_size = max_ - min_;
-            cell_size.x /= static_cast<double>(_res[index::dim::cartesian::X]);
-            cell_size.y /= static_cast<double>(_res[index::dim::cartesian::Y]);
+            double cell_size = (max_ - min_) / static_cast<double>(_res);
 
             std::ofstream file(path_ + ".vtk");
 
@@ -193,35 +190,25 @@ namespace arc //! arctk namespace
                  << "vtk " << set_name_ << '\n'
                  << "ASCII\n"
                  << "DATASET RECTILINEAR_GRID\n"
-                 << "DIMENSIONS " << (_res[index::dim::cartesian::X] + 1) << " " << (_res[index::dim::cartesian::Y] + 1) << " 1\n"
-                 << "X_COORDINATES " << (_res[index::dim::cartesian::X] + 1) << " double\n";
+                 << "DIMENSIONS " << (_res + 1) << " 1 1\n"
+                 << "X_COORDINATES " << (_res + 1) << " double\n";
 
-            for (size_t i = 0; i <= _res[index::dim::cartesian::X]; ++i)
+            for (size_t i = 0; i <= _res; ++i)
             {
                 if (i != 0)
                 {
                     file << ' ';
                 }
 
-                file << (min_.x + (cell_size.x * static_cast<double>(i))) << ' ';
+                file << (min_ + (cell_size * static_cast<double>(i))) << ' ';
             }
 
-            file << "\nY_COORDINATES " << (_res[index::dim::cartesian::Y] + 1) << " double\n";
-
-            for (size_t i = 0; i <= _res[index::dim::cartesian::Y]; ++i)
-            {
-                if (i != 0)
-                {
-                    file << ' ';
-                }
-
-                file << (min_.y + (cell_size.y * static_cast<double>(i))) << ' ';
-            }
-
-            file << "\nZ_COORDINATES 1 double\n"
+            file << "\nY_COORDINATES 1 double\n"
+                 << "0\n"
+                 << "\nZ_COORDINATES 1 double\n"
                  << "0\n";
 
-            file << "\nCELL_DATA " << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y]) << "\n\n";
+            file << "\nCELL_DATA " << _res << "\n\n";
 
             write_data(var_names_, file, std::index_sequence_for<A...>());
         }
