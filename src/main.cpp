@@ -98,6 +98,7 @@
 #include <arctk/math/vec3.hpp>
 #include <arctk/math/vec4.hpp>
 #include <arctk/phys.hpp>
+#include <arctk/phys/cell.hpp>
 #include <arctk/phys/material.hpp>
 #include <arctk/phys/material/basic.hpp>
 #include <arctk/phys/material/fluorescent.hpp>
