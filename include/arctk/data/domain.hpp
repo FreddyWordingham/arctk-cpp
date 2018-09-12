@@ -47,8 +47,9 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            const std::array<size_t, 3>                                    _res;     //!< Resolution of the data.
-            std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> _packets; //!< Stored data packets.
+            const std::array<size_t, 3>                                    _res;         //!< Resolution of the data.
+            const vec3                                                     _packet_size; //!< Dimensions of each contained packet.
+            std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> _packets;     //!< Stored data packets.
 
 
             //  == INSTANTIATION ==
