@@ -341,7 +341,7 @@ namespace arc //! arctk namespace
                 PRE(var_names_[i].find_first_of(' ') == std::string::npos);
             }
             PRE(utl::properties::distinct(var_names_));
-            PRE(file_.open());
+            PRE(file_.is_open());
 
             (write_var<I>(var_names_[I], file_), ...);
         }
@@ -367,7 +367,7 @@ namespace arc //! arctk namespace
             PRE(!var_name_.empty());
             PRE(var_name_.find_first_of('\n') == std::string::npos);
             PRE(var_name_.find_first_of(' ') == std::string::npos);
-            PRE(file_.open());
+            PRE(file_.is_open());
 
             file_ << "\nFIELD FieldData 1\n"
                   << var_name_ << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << ' ' << VTK_TYPENAME<typename std::tuple_element<I, std::tuple<A...>>::type> << '\n';
