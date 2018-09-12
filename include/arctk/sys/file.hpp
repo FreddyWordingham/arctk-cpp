@@ -46,6 +46,13 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Directories --
+            /**
+             *  Create a directory at the given path.
+             *
+             *  @param  path_   Path to the directory to create.
+             *
+             *  @pre    path_ may not be empty.
+             */
             inline void mkdir(const std::string& path_) noexcept
             {
                 PRE(!path_.empty());
