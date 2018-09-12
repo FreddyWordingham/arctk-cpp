@@ -72,6 +72,9 @@ namespace arc //! arctk namespace
             inline const std::array<size_t, 3>& res() const noexcept;
             inline const vec3&                  packet_size() const noexcept;
             inline Packet const*                packet(size_t index_x_, size_t index_y_, size_t index_z_) const noexcept;
+
+            //  -- Saving --
+            inline void save(const std::string& path_, const std::string& set_name_, const std::array<std::string, sizeof...(A)>& var_names_, const vec3& min_ = vec3(0.0, 0.0, 0.0), const vec3& max_ = vec3(1.0, 1.0, 1.0)) const noexcept;
         };
 
 
