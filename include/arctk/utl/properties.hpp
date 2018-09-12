@@ -117,11 +117,6 @@ namespace arc //! arctk namespace
             template <typename T>
             inline bool cube(const std::vector<std::vector<std::vector<T>>>& vec_) noexcept
             {
-                if (vec_.size() <= 1)
-                {
-                    return (true);
-                }
-
                 const std::array<size_t, 2> size({{vec.front().size(), vec.front().front().size()}});
 
                 for (size_t i = 0; i < vec_.size(); ++i)
