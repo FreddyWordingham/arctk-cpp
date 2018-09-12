@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <algorithm>
+#include <array>
 #include <cmath>
 #include <iterator>
 #include <vector>
@@ -100,11 +101,6 @@ namespace arc //! arctk namespace
             template <typename T>
             inline bool square(const std::vector<std::vector<T>>& vec_) noexcept
             {
-                if (vec_.size() <= 1)
-                {
-                    return (true);
-                }
-
                 const size_t size = vec.front().size();
 
                 for (size_t i = 1; i < vec_.size(); ++i)
@@ -121,14 +117,12 @@ namespace arc //! arctk namespace
             template <typename T>
             inline bool cube(const std::vector<std::vector<std::vector<T>>>& vec_) noexcept
             {
-                static_assert(is_vector<T>::value);
-
                 if (vec_.size() <= 1)
                 {
                     return (true);
                 }
 
-                const size_t size = vec.front().size();
+                const std::array<size_t, 2> size = vec.front().size();
 
                 for (size_t i = 1; i < vec_.size(); ++i)
                 {
