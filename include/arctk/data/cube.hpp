@@ -28,6 +28,21 @@ namespace arc //! arctk namespace
 
 
 
+        //  == CONSTANTS ==
+        //  -- Naming --
+        template <typename T>
+        const char* const VTK_TYPENAME = "UNKNOWN_TYPE";
+        template <>
+        const char* const VTK_TYPENAME<int> = "int";
+        template <>
+        const char* const VTK_TYPENAME<char> = "char";
+        template <>
+        const char* const VTK_TYPENAME<float> = "float";
+        template <>
+        const char* const VTK_TYPENAME<double> = "double";
+
+
+
         //  == CLASS ==
         /**
          *  Data cube class.
