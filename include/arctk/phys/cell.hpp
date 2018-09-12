@@ -90,7 +90,7 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        inline std::tuple<double, double> data() const noexcept
+        inline std::tuple<double, double> Cell::data() const noexcept
         {
             return (std::tuple<double, double>(_vol, energy_dens()));
         }
