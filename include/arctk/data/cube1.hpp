@@ -92,6 +92,13 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a one-dimensional data cube with a given resolution.
+         *
+         *  @param  res_    Resolution of the data cube.
+         *
+         *  @pre    res_ must be positive.
+         */
         template <typename... A>
         inline Cube<1, A...>::Cube(const size_t res_) noexcept
           : _res(res_)
