@@ -64,8 +64,8 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Access --
-            inline std::vector<std::tuple<A...>>&       operator[](size_t index_) noexcept;
-            inline const std::vector<std::tuple<A...>>& operator[](size_t index_) const noexcept;
+            inline std::tuple<A...>&       operator[](size_t index_) noexcept;
+            inline const std::tuple<A...>& operator[](size_t index_) const noexcept;
 
 
             //  == METHODS ==
@@ -105,17 +105,17 @@ namespace arc //! arctk namespace
         //  == OPERATORS ==
         //  -- Access --
         template <typename... A>
-        inline std::vector<std::tuple<A...>>& Cube<2, A...>::operator[](const size_t index_) noexcept
+        inline std::tuple<A...>& Cube<1, A...>::operator[](const size_t index_) noexcept
         {
-            PRE(index_ < _res[index::dim::cartesian::X]);
+            PRE(index_ < _res);
 
             return (_data[index_]);
         }
 
         template <typename... A>
-        inline const std::vector<std::tuple<A...>>& Cube<2, A...>::operator[](const size_t index_) const noexcept
+        inline const std::tuple<A...>& Cube<1, A...>::operator[](const size_t index_) const noexcept
         {
-            PRE(index_ < _res[index::dim::cartesian::X]);
+            PRE(index_ < _res);
 
             return (_data[index_]);
         }
