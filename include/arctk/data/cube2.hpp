@@ -112,6 +112,15 @@ namespace arc //! arctk namespace
 
         //  == OPERATORS ==
         //  -- Access --
+        /**
+         *  Access the data vector of the datacube.
+         *
+         *  @param  index_  Index of the x-dimension element to retrieve.
+         *
+         *  @pre    index_ must be less than the x value of the res array.
+         *
+         *  @return Reference to element requested.
+         */
         template <typename... A>
         inline std::vector<std::tuple<A...>>& Cube<2, A...>::operator[](const size_t index_) noexcept
         {
