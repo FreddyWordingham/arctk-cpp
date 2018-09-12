@@ -20,6 +20,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
 
 
@@ -41,13 +42,15 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            const std::array<size_t, 3>              _res;     //!< Resolution of the data.
-            std::vector<std::vector<std::vector<T>>> _packets; //!< Stored data packets.
+            const std::array<size_t, 3>                                    _res;     //!< Resolution of the data.
+            std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> _packets; //!< Stored data packets.
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            template <typename T>
+            inline Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const T& pack_) noexcept;
         };
 
 
