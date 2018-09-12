@@ -188,6 +188,13 @@ namespace arc //! arctk namespace
             return (min);
         }
 
+        /**
+         *  Get the maximum value of a channel contained within the datacube.
+         *
+         *  @tparam I   Index of the channel.
+         *
+         *  @return Maximum value of a channel contained within the datacube.
+         */
         template <typename... A>
         template <size_t I>
         inline typename std::tuple_element<I, std::tuple<A...>>::type Cube<2, A...>::max() const noexcept
