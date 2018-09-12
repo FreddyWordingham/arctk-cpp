@@ -51,8 +51,8 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            const size_t                               _res;
-            std::vector<std::vector<std::tuple<A...>>> _data;
+            const size_t                  _res;
+            std::vector<std::tuple<A...>> _data;
 
 
             //  == INSTANTIATION ==
