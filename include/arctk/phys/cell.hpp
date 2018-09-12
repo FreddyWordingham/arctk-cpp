@@ -31,6 +31,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
+            double _vol;
             double _energy;
 
 
@@ -50,6 +51,11 @@ namespace arc //! arctk namespace
             //  -- Assignment --
             inline Cell& operator=(const Cell&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
             inline Cell& operator=(Cell&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
+
+
+            //  == METHODS ==
+          public:
+            //  -- Getters --
         };
 
 
