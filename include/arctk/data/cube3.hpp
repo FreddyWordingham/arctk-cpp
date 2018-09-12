@@ -122,6 +122,7 @@ namespace arc //! arctk namespace
             PRE(!data_.empty());
             PRE(!data_.front().empty());
             PRE(!data_.front().front().empty());
+            PRE(utl::properties::is_cube(data_));
         }
 
 
