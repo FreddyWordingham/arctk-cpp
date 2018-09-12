@@ -103,7 +103,7 @@ namespace arc //! arctk namespace
             {
                 const size_t size = vec.front().size();
 
-                for (size_t i = 0; i < vec_.size(); ++i)
+                for (size_t i = 1; i < vec_.size(); ++i)
                 {
                     if (vec_[i].size() != size)
                     {
