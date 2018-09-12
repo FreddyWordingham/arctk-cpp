@@ -225,7 +225,7 @@ namespace arc //! arctk namespace
                 file << (min_.y + (cell_size.y * static_cast<double>(i))) << ' ';
             }
 
-            file << "\nZ_COORDINATES " << (_res[index::dim::cartesian::Z] + 1) << " double\n"
+            file << "\nZ_COORDINATES 1 double\n"
                  << "0\n";
 
             file << "\nCELL_DATA " << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y]) << "\n\n";
