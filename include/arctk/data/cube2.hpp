@@ -332,13 +332,13 @@ namespace arc //! arctk namespace
          *
          *  @tparam I   Index of the channel to write.
          *
-         *  @param  var_names_  Array of data channel names.
+         *  @param  var_name_   Name of data channel.
          *  @param  file_       Handle of the file to write to.
          *
-         *  @pre    var_names_ may not be empty.
-         *  @pre    var_names_ elements may not contain newline characters.
-         *  @pre    var_names_ elements may not contain blank spaces.
-         *  @pre    var_names_ must be distinct.
+         *  @pre    var_name_ may not be empty.
+         *  @pre    var_name_ may not contain newline characters.
+         *  @pre    var_name_ may not contain blank spaces.
+         *  @pre    var_name_ must be distinct.
          *  @pre    file_ must be open.
          */
         template <typename... A>
