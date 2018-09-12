@@ -150,6 +150,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the resolution of the datacube.
+         *
+         *  @return Resolution of the datacube.
+         */
         template <typename... A>
         inline const std::array<size_t, 2> Cube<2, A...>::res() const noexcept
         {
