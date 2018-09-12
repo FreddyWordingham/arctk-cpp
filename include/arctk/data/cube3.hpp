@@ -92,6 +92,13 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a three-dimensional data cube with a given resolution in each dimension.
+         *
+         *  @param  res_    Resolution of the data cube in each dimension.
+         *
+         *  @pre    res_ must be positive in each dimension.
+         */
         template <typename... A>
         inline Cube<3, A...>::Cube(const std::array<size_t, 3>& res_) noexcept
           : _res(res_)
