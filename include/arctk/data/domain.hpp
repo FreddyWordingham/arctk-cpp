@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <memory>
+#include <type_traits>
 #include <vector>
 
 //  -- Arctk --
@@ -56,6 +57,23 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
+        //  -- Constructors --
+        template <typename T>
+        inline Domain::Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const T& pack_) noexcept
+          : geom::shape::Aabb(min_, max_)
+          , _res(res_)
+          , _packet_size(init_packet_size(min_, max_, res_))
+          , _packets(init_packets(res_, pack_))
+        {
+            static_assert(std::is_base_of<BaseClass, T>::value);
+
+            PRE(min_.x < max_.x);
+            PRE(min_.y < max_.y);
+            PRE(min_.z < max_.z);
+            PRE(res_[index::dim::cartesian::X] > 0);
+            PRE(res_[index::dim::cartesian::Y] > 0);
+            PRE(res_[index::dim::cartesian::Z] > 0);
+        }
 
 
 
