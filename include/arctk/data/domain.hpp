@@ -21,8 +21,12 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/data/cube3.hpp>
+#include <arctk/data/packet.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
+#include <arctk/index.hpp>
+#include <arctk/math.hpp>
 
 
 
@@ -52,6 +56,10 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             template <typename T>
             inline Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const T& pack_) noexcept;
+
+          private:
+            //  -- Initialisation --
+            inline vec3 init_packet_size(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept;
         };
 
 
@@ -73,6 +81,26 @@ namespace arc //! arctk namespace
             PRE(res_[index::dim::cartesian::X] > 0);
             PRE(res_[index::dim::cartesian::Y] > 0);
             PRE(res_[index::dim::cartesian::Z] > 0);
+        }
+
+
+        //  -- Initialisation --
+        inline vec3 Domain::init_packet_size(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept
+        {
+            PRE(min_.x < max_.x);
+            PRE(min_.y < max_.y);
+            PRE(min_.z < max_.z);
+            PRE(res_[index::dim::cartesian::X] > 0);
+            PRE(res_[index::dim::cartesian::Y] > 0);
+            PRE(res_[index::dim::cartesian::Z] > 0);
+
+            vec3 packet_size = max_ - min_;
+
+            packet_size.x /= static_cast<double>(res_[index::dim::cartesian::X]);
+            packet_size.y /= static_cast<double>(res_[index::dim::cartesian::Y]);
+            packet_size.z /= static_cast<double>(res_[index::dim::cartesian::Z]);
+
+            return (packet_size);
         }
 
 
