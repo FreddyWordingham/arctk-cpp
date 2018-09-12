@@ -56,6 +56,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline double vol() const noexcept;
+            inline double energy_dens() const noexcept;
         };
 
 
@@ -70,6 +72,19 @@ namespace arc //! arctk namespace
 
         //  -- Destructors --
         inline Cell::~Cell() noexcept = default;
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        inline double Cell::vol() const noexcept
+        {
+            return (_vol);
+        }
+
+        inline double Cell::energy_dens() const noexcept
+        {
+        }
 
 
 
