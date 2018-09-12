@@ -231,7 +231,7 @@ namespace arc //! arctk namespace
                     file << ' ';
                 }
 
-                file << (min_.x + (cell_size.y * static_cast<double>(i))) << ' ';
+                file << (min_.y + (cell_size.y * static_cast<double>(i))) << ' ';
             }
 
             file << "\nZ_COORDINATES " << (_res[index::dim::cartesian::Z] + 1) << " double\n";
@@ -243,7 +243,7 @@ namespace arc //! arctk namespace
                     file << ' ';
                 }
 
-                file << (min_.x + (cell_size.z * static_cast<double>(i))) << ' ';
+                file << (min_.z + (cell_size.z * static_cast<double>(i))) << ' ';
             }
 
             file << "\nCELL_DATA " << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << "\n\n";
