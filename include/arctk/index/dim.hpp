@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cstdlib>
 #include <string>
 
 //  -- Arctk --
