@@ -35,7 +35,7 @@ namespace arc //! arctk namespace
         template <>
         const char* const VTK_TYPENAME<int> = "int"; //!< String denoting integer data type used by the vtk file format.
         template <>
-        const char* const VTK_TYPENAME<char> = "char";
+        const char* const VTK_TYPENAME<char> = "char"; //!< String denoting character data type used by the vtk file format.
         template <>
         const char* const VTK_TYPENAME<float> = "float";
         template <>
