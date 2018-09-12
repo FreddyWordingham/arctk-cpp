@@ -327,6 +327,20 @@ namespace arc //! arctk namespace
             (write_var<I>(var_names_[I], file_), ...);
         }
 
+        /**
+         *  Write a channel of data to the file.
+         *
+         *  @tparam I   Index of the channel to write.
+         *
+         *  @param  var_names_  Array of data channel names.
+         *  @param  file_       Handle of the file to write to.
+         *
+         *  @pre    var_names_ may not be empty.
+         *  @pre    var_names_ elements may not contain newline characters.
+         *  @pre    var_names_ elements may not contain blank spaces.
+         *  @pre    var_names_ must be distinct.
+         *  @pre    file_ must be open.
+         */
         template <typename... A>
         template <size_t I>
         inline void Cube<2, A...>::write_var(const std::string& var_name_, std::ofstream& file_) const noexcept
@@ -334,6 +348,7 @@ namespace arc //! arctk namespace
             PRE(!var_name_.empty());
             PRE(var_name_.find_first_of('\n') == std::string::npos);
             PRE(var_name_.find_first_of(' ') == std::string::npos);
+            PRE(file_.open());
 
             file_ << "\nFIELD FieldData 1\n" << var_name_ << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y]) << ' ' << VTK_TYPENAME<typename std::tuple_element<I, std::tuple<A...>>::type> << '\n';
 
