@@ -288,6 +288,7 @@ namespace arc //! arctk namespace
          *  @pre    var_names_ elements may not contain newline characters.
          *  @pre    var_names_ elements may not contain blank spaces.
          *  @pre    var_names_ may be distinct.
+         *  @pre    file_ must be open.
          */
         template <typename... A>
         template <size_t... I>
@@ -300,10 +301,24 @@ namespace arc //! arctk namespace
                 PRE(var_names_[i].find_first_of(' ') == std::string::npos);
             }
             PRE(utl::properties::distinct(var_names_));
+            PRE(file_.open());
 
             (write_var<I>(var_names_[I], file_), ...);
         }
 
+        /**
+         *  Data writing control method.
+         *
+         *  @tparam I   Index of the channel to write.
+         *
+         *  @param  var_names_  Array of data channel names.
+         *  @param  file_       Handle of the file to write to.
+         *
+         *  @pre    var_names_ may not be empty.
+         *  @pre    var_names_ elements may not contain newline characters.
+         *  @pre    var_names_ elements may not contain blank spaces.
+         *  @pre    var_names_ may be distinct.
+         */
         template <typename... A>
         template <size_t I>
         inline void Cube<1, A...>::write_var(const std::string& var_name_, std::ofstream& file_) const noexcept
