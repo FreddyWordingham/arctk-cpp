@@ -61,6 +61,8 @@ namespace arc //! arctk namespace
           private:
             //  -- Initialisation --
             inline vec3 init_packet_size(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept;
+            template <typename T>
+            inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> init_packets(const std::array<size_t, 3>& res_, const T& pack_) const noexcept;
 
 
             //  == METHODS ==
