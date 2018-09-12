@@ -55,6 +55,10 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTION PROTOTYPES ==
+            //  -- Shape --
+            template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
+            inline bool square(const C& cont_) noexcept;
+
             //  -- Contents --
             template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
             inline bool contains(const C& cont_, const T& val_) noexcept;
@@ -86,6 +90,24 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTIONS ==
+            //  -- Shape --
+            template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
+            inline bool square(const C& cont_) noexcept
+            {
+                const size_t size = std::begin(cont_).size();
+
+                for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+                {
+                    if (it.size() != size)
+                    {
+                        return (false);
+                    }
+                }
+
+                return (true);
+            }
+
+
             //  -- Contents --
             /**
              *  Determine if a container contains a value.
