@@ -276,6 +276,19 @@ namespace arc //! arctk namespace
             write_data(var_names_, file, std::index_sequence_for<A...>());
         }
 
+        /**
+         *  Data writing control method.
+         *
+         *  @tparam I   Index sequence of channels to write.
+         *
+         *  @param  var_names_  Array of data channel names.
+         *  @param  file_       Handle of the file to write to.
+         *
+         *  @pre    var_names_ may not be empty.
+         *  @pre    var_names_ elements may not contain newline characters.
+         *  @pre    var_names_ elements may not contain blank spaces.
+         *  @pre    var_names_ may be distinct.
+         */
         template <typename... A>
         template <size_t... I>
         inline void Cube<1, A...>::write_data(const std::array<std::string, sizeof...(A)>& var_names_, std::ofstream& file_, const std::index_sequence<I...>& /*unused*/) const noexcept
