@@ -132,18 +132,15 @@ namespace arc //! arctk namespace
 
         template <typename... A>
         template <size_t I>
-        inline typename std::tuple_element<I, std::tuple<A...>>::type Cube<2, A...>::min() const noexcept
+        inline typename std::tuple_element<I, std::tuple<A...>>::type Cube<1, A...>::min() const noexcept
         {
-            typename std::tuple_element<I, std::tuple<A...>>::type min = std::get<I>(_data.front().front());
+            typename std::tuple_element<I, std::tuple<A...>>::type min = std::get<I>(_data.front());
 
             for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
             {
-                for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
+                if (std::get<I>(_data[i]) < min)
                 {
-                    if (std::get<I>(_data[i][j]) < min)
-                    {
-                        min = std::get<I>(_data[i][j]);
-                    }
+                    min = std::get<I>(_data[i]);
                 }
             }
 
