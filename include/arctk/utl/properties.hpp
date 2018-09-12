@@ -101,14 +101,9 @@ namespace arc //! arctk namespace
             template <typename T>
             inline bool square(const std::vector<std::vector<T>>& vec_) noexcept
             {
-                if (vec_.size() <= 1)
-                {
-                    return (true);
-                }
-
                 const size_t size = vec.front().size();
 
-                for (size_t i = 1; i < vec_.size(); ++i)
+                for (size_t i = 0; i < vec_.size(); ++i)
                 {
                     if (vec_[i].size() != size)
                     {
