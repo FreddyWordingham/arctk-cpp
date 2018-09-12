@@ -218,6 +218,16 @@ namespace arc //! arctk namespace
          *  @param  var_names_  Array of data channel names.
          *  @param  min_        Minimum bound of the datacube.
          *  @param  max_        Maximum bound of the datacube.
+         *
+         *  @pre    path_ may not be empty.
+         *  @pre    set_name_ may not be empty.
+         *  @pre    set_name_ may not contain newline characters.
+         *  @pre    set_name_ may not contain blank spaces.
+         *  @pre    var_names_ may not be empty.
+         *  @pre    var_names_ elements may not contain newline characters.
+         *  @pre    var_names_ elements may not contain blank spaces.
+         *  @pre    var_names_ may be distinct.
+         *  @pre    min_ may be less than max_.
          */
         template <typename... A>
         inline void Cube<1, A...>::save(const std::string& path_, const std::string& set_name_, const std::array<std::string, sizeof...(A)>& var_names_, const double min_, const double max_) const noexcept // NOLINT
