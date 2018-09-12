@@ -122,7 +122,7 @@ namespace arc //! arctk namespace
             PRE(!data_.empty());
             PRE(!data_.front().empty());
             PRE(!data_.front().front().empty());
-            PRE(utl::properties::is_cube(data_));
+            PRE(utl::properties::cube(data_));
         }
 
 
@@ -133,7 +133,7 @@ namespace arc //! arctk namespace
             PRE(!data_.empty());
             PRE(!data_.front().empty());
             PRE(!data_.front().front().empty());
-            PRE(utl::properties::is_cube(data_));
+            PRE(utl::properties::cube(data_));
 
             return (std::array<size_t, 3>({{data_.size(), data_.front().size(), data_.front().front().size()}}));
         }
