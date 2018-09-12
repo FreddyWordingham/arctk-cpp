@@ -31,7 +31,7 @@ namespace arc //! arctk namespace
         //  == CONSTANTS ==
         //  -- Naming --
         template <typename T>
-        const char* const VTK_TYPENAME = "UNKNOWN_TYPE";
+        const char* const VTK_TYPENAME = "UNKNOWN_TYPE"; //!< String denoting unknown data type used by the vtk file format.
         template <>
         const char* const VTK_TYPENAME<int> = "int";
         template <>
