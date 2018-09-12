@@ -122,13 +122,21 @@ namespace arc //! arctk namespace
                     return (true);
                 }
 
-                const std::array<size_t, 2> size = vec.front().size();
+                const std::array<size_t, 2> size({{vec.front().size(), vec.front().front().size()}});
 
-                for (size_t i = 1; i < vec_.size(); ++i)
+                for (size_t i = 0; i < vec_.size(); ++i)
                 {
-                    if (vec_[i].size() != size)
+                    if (vec_[i].size() != size[0])
                     {
                         return (false);
+                    }
+
+                    for (size_t j = 0; j < vec_.size(); ++j)
+                    {
+                        if (vec_[i][j].size() != size[1])
+                        {
+                            return (false);
+                        }
                     }
                 }
 
