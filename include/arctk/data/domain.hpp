@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
           , _packet_size(init_packet_size(min_, max_, res_))
           , _packets(init_packets(res_, pack_))
         {
-            static_assert(std::is_base_of<BaseClass, T>::value);
+            static_assert(std::is_base_of<Packet, T>::value);
 
             PRE(min_.x < max_.x);
             PRE(min_.y < max_.y);
@@ -102,6 +102,34 @@ namespace arc //! arctk namespace
             packet_size.z /= static_cast<double>(res_[index::dim::cartesian::Z]);
 
             return (packet_size);
+        }
+
+        template <typename T>
+        inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> Domain::init_packets(const std::array<size_t, 3>& res_, const T& pack_) const noexcept
+        {
+            static_assert(std::is_base_of<Packet, T>::value);
+
+            std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> packets;
+            packets.reserve(index::dim::cartesian::X);
+
+            for (size_t i = 0; i < res_[index::dim::cartesian::X]; ++i)
+            {
+                packets.emplace_back(std::vector<std::vector<std::unique_ptr<Packet>>>());
+                packets.back().reserve(res_[index::dim::cartesian::Y]);
+
+                for (size_t j = 0; j < res_[index::dim::cartesian::Y]; ++j)
+                {
+                    packets.back().emplace_back(std::vector<std::unique_ptr<Packet>>());
+                    packets.back().back().reserve(res_[index::dim::cartesian::Z]);
+
+                    for (size_t k = 0; k < res_[index::dim::cartesian::Z]; ++k)
+                    {
+                        packets.back().back().emplace_back(std::make_unique<T>(pack_));
+                    }
+                }
+            }
+
+            return (packets);
         }
 
 
