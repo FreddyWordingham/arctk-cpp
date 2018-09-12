@@ -28,6 +28,12 @@ namespace arc //! arctk namespace
          */
         class Cell : public data::Packet
         {
+            //  == FIELDS ==
+          private:
+            //  -- Data --
+            double _energy;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
