@@ -58,6 +58,9 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline double vol() const noexcept;
             inline double energy_dens() const noexcept;
+
+            //  -- Modifiers --
+            inline void add_energy(double energy_) const noexcept;
         };
 
 
@@ -85,6 +88,13 @@ namespace arc //! arctk namespace
         inline double Cell::energy_dens() const noexcept
         {
             return (_energy / _vol);
+        }
+
+
+        //  -- Modifiers --
+        inline void Cell::add_energy(const double energy_) const noexcept
+        {
+            _energy += energy_;
         }
 
 
