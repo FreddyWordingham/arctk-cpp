@@ -78,7 +78,7 @@ namespace arc //! arctk namespace
             inline typename std::tuple_element<I, std::tuple<A...>>::type max() const noexcept;
 
             //  -- Saving --
-            inline void save(const std::string& path_, const std::string& set_name_, const std::array<std::string, sizeof...(A)>& var_names_, const vec2& min_, const vec2& max_) const noexcept;
+            inline void save(const std::string& path_, const std::string& set_name_, const std::array<std::string, sizeof...(A)>& var_names_, const double min_ = 0.0, const double max_ = 1.0) const noexcept;
 
           private:
             //  -- Saving --
@@ -167,7 +167,7 @@ namespace arc //! arctk namespace
 
         //  -- Saving --
         template <typename... A>
-        inline void Cube<2, A...>::save(const std::string& path_, const std::string& set_name_, const std::array<std::string, sizeof...(A)>& var_names_, const vec2& min_, const vec2& max_) const noexcept // NOLINT
+        inline void Cube<1, A...>::save(const std::string& path_, const std::string& set_name_, const std::array<std::string, sizeof...(A)>& var_names_, const double min_, const double max_) const noexcept // NOLINT
         {
             PRE(!path_.empty());
             PRE(!set_name_.empty());
