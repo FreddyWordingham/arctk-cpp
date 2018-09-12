@@ -16,7 +16,9 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <string>
 #include <tuple>
+#include <vector>
 
 //  -- Arctk --
 #include <arctk/data.hpp>
@@ -66,6 +68,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline std::tuple<double, double> data() const noexcept;
+            inline std::vector<std::string>   data_names() const noexcept;
             inline double                     vol() const noexcept;
             inline double                     energy_dens() const noexcept;
 
@@ -93,6 +96,11 @@ namespace arc //! arctk namespace
         inline std::tuple<double, double> Cell::data() const noexcept
         {
             return (std::tuple<double, double>(_vol, energy_dens()));
+        }
+
+        inline std::vector<std::string> Cell::data_names() const noexcept
+        {
+            return (std::vector<std::string>({"vol", "udens"}));
         }
 
         inline double Cell::vol() const noexcept
