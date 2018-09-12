@@ -261,29 +261,24 @@ namespace arc //! arctk namespace
 
         template <typename... A>
         template <size_t I>
-        inline void Cube<3, A...>::write_var(const std::string& var_name_, std::ofstream& file_) const noexcept
+        inline void Cube<2, A...>::write_var(const std::string& var_name_, std::ofstream& file_) const noexcept
         {
             PRE(!var_name_.empty());
             PRE(var_name_.find_first_of('\n') == std::string::npos);
             PRE(var_name_.find_first_of(' ') == std::string::npos);
 
-            file_ << "\nFIELD FieldData 1\n"
-                  << var_name_ << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << ' ' << VTK_TYPENAME<typename std::tuple_element<I, std::tuple<A...>>::type> << '\n';
+            file_ << "\nFIELD FieldData 1\n" << var_name_ << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y]) << ' ' << VTK_TYPENAME<typename std::tuple_element<I, std::tuple<A...>>::type> << '\n';
 
-            for (size_t i = 0; i < _res[index::dim::cartesian::Z]; ++i)
+            for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
             {
-                for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
+                for (size_t k = 0; k < _res[index::dim::cartesian::X]; ++k)
                 {
-                    for (size_t k = 0; k < _res[index::dim::cartesian::X]; ++k)
+                    if (k != 0)
                     {
-                        if (k != 0)
-                        {
-                            file_ << ' ';
-                        }
-
-                        file_ << std::get<I>(_data[k][j][i]);
+                        file_ << ' ';
                     }
-                    file_ << '\n';
+
+                    file_ << std::get<I>(_data[k][j][i]);
                 }
                 file_ << '\n';
             }
