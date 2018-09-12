@@ -161,6 +161,13 @@ namespace arc //! arctk namespace
             return (_res);
         }
 
+        /**
+         *  Get the minimum value of a channel contained within the datacube.
+         *
+         *  @tparam I   Index of the channel.
+         *
+         *  @return Minimum value of a channel contained within the datacube.
+         */
         template <typename... A>
         template <size_t I>
         inline typename std::tuple_element<I, std::tuple<A...>>::type Cube<2, A...>::min() const noexcept
