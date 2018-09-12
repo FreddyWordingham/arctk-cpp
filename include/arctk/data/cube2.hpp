@@ -78,7 +78,7 @@ namespace arc //! arctk namespace
             inline typename std::tuple_element<I, std::tuple<A...>>::type max() const noexcept;
 
             //  -- Saving --
-            inline void save(const std::string& path_, const std::string& set_name_, const std::array<std::string, sizeof...(A)>& var_names_, const vec3& min_, const vec3& max_) const noexcept;
+            inline void save(const std::string& path_, const std::string& set_name_, const std::array<std::string, sizeof...(A)>& var_names_, const vec2& min_, const vec2& max_) const noexcept;
 
           private:
             //  -- Saving --
