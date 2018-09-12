@@ -258,16 +258,16 @@ namespace arc //! arctk namespace
 
             file_ << "\nFIELD FieldData 1\n" << var_name_ << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y]) << ' ' << VTK_TYPENAME<typename std::tuple_element<I, std::tuple<A...>>::type> << '\n';
 
-            for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
+            for (size_t i = 0; i < _res[index::dim::cartesian::Y]; ++i)
             {
-                for (size_t k = 0; k < _res[index::dim::cartesian::X]; ++k)
+                for (size_t j = 0; j < _res[index::dim::cartesian::X]; ++j)
                 {
-                    if (k != 0)
+                    if (j != 0)
                     {
                         file_ << ' ';
                     }
 
-                    file_ << std::get<I>(_data[k][j][i]);
+                    file_ << std::get<I>(_data[j][i]);
                 }
                 file_ << '\n';
             }
