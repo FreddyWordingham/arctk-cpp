@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/data/cube.hpp>
+#include <arctk/data/cube1.hpp>
 #include <arctk/data/cube2.hpp>
 #include <arctk/data/cube3.hpp>
 #include <arctk/data/domain.hpp>
