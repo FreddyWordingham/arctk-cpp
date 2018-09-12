@@ -14,6 +14,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/data.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -56,8 +62,9 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double vol() const noexcept;
-            inline double energy_dens() const noexcept;
+            inline std::tuple<> data() const noexcept;
+            inline double       vol() const noexcept;
+            inline double       energy_dens() const noexcept;
 
             //  -- Modifiers --
             inline void add_energy(double energy_) const noexcept;
