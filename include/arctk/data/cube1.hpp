@@ -136,7 +136,7 @@ namespace arc //! arctk namespace
         {
             typename std::tuple_element<I, std::tuple<A...>>::type min = std::get<I>(_data.front());
 
-            for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
+            for (size_t i = 0; i < _res; ++i)
             {
                 if (std::get<I>(_data[i]) < min)
                 {
@@ -153,7 +153,7 @@ namespace arc //! arctk namespace
         {
             typename std::tuple_element<I, std::tuple<A...>>::type max = std::get<I>(_data.front());
 
-            for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
+            for (size_t i = 0; i < _res; ++i)
             {
                 if (std::get<I>(_data[i]) > max)
                 {
