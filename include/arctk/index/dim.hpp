@@ -57,6 +57,15 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Naming --
+            /**
+             *  Get the name of the cartesian dimension.
+             *
+             *  @param  dim_    Dimension to find the name of.
+             *
+             *  @pre    dim_ must be less than the total number of cartesian dimensions.
+             *
+             *  @return String name of the cartesian dimension.
+             */
             inline std::string name(const size_t dim_) noexcept
             {
                 PRE(dim_ < cartesian::TOTAL);
