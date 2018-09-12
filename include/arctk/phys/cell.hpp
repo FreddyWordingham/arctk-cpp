@@ -15,6 +15,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <tuple>
+
 //  -- Arctk --
 #include <arctk/data.hpp>
 
@@ -62,9 +65,9 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline std::tuple<> data() const noexcept;
-            inline double       vol() const noexcept;
-            inline double       energy_dens() const noexcept;
+            inline std::tuple<double, double> data() const noexcept;
+            inline double                     vol() const noexcept;
+            inline double                     energy_dens() const noexcept;
 
             //  -- Modifiers --
             inline void add_energy(double energy_) const noexcept;
@@ -87,6 +90,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        inline std::tuple<double, double> data() const noexcept
+        {
+            return (std::tuple<double, double>(_vol, energy_dens()));
+        }
+
         inline double Cell::vol() const noexcept
         {
             return (_vol);
