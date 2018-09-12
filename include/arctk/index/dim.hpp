@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Naming --
-            inline std::string name(const cartesian dim_) noexcept;
+            inline std::string name(cartesian dim_) noexcept;
 
 
 
