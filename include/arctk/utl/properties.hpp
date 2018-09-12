@@ -19,6 +19,10 @@
 #include <algorithm>
 #include <cmath>
 #include <iterator>
+#include <vector>
+
+//  -- Arctk --
+#include <arctk/utl/type.hpp>
 
 
 
@@ -56,8 +60,10 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Shape --
-            template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
-            inline bool square(const C& cont_) noexcept;
+            template <typename T>
+            inline bool square(const std::vector<std::vector<T>>& vec_) noexcept;
+            template <typename T>
+            inline bool cube(const std::vector<std::vector<std::vector<T>>>& vec_) noexcept;
 
             //  -- Contents --
             template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
@@ -91,14 +97,37 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Shape --
-            template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
-            inline bool square(const C& cont_) noexcept
+            template <typename T>
+            inline bool square(const std::vector<std::vector<T>>& vec_) noexcept
             {
-                const size_t size = std::begin(cont_).size();
+                static_assert(is_vector<T>::value);
+
+                if (vec_.size() <= 1)
+                {
+                    return (true);
+                }
+
+                const size_t size = vec.front().size();
+
+                for (size_t i = 1; i < vec_.size(); ++i)
+                {
+                    if (vec_[i].size() != size)
+                    {
+                        return (false);
+                    }
+                }
+
+                return (true);
+            }
+
+            template <typename T>
+            inline bool cube(const std::vector<std::vector<std::vector<T>>>& vec_) noexcept
+            {
+                const std::array<size_t, 2> size({{std::begin(cont_).size(), std::begin(std::begin(cont_)).size()}});
 
                 for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
                 {
-                    if (it.size() != size)
+                    if ((it.size() != size) ||)
                     {
                         return (false);
                     }
