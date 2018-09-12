@@ -61,6 +61,15 @@ namespace arc //! arctk namespace
           private:
             //  -- Initialisation --
             inline vec3 init_packet_size(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept;
+
+
+            //  == METHODS ==
+          public:
+            //  -- Getters --
+            inline size_t                       num_packets() const noexcept;
+            inline const std::array<size_t, 3>& res() const noexcept;
+            inline const vec3&                  packet_size() const noexcept;
+            inline Packet const*                packet(size_t index_x_, size_t index_y_, size_t index_z_) const noexcept;
         };
 
 
@@ -130,6 +139,34 @@ namespace arc //! arctk namespace
             }
 
             return (packets);
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        inline size_t Domain::num_packets() const noexcept
+        {
+            return (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]);
+        }
+
+        inline const std::array<size_t, 3>& Domain::res() const noexcept
+        {
+            return (_res);
+        }
+
+        inline const vec3& Domain::packet_size() const noexcept
+        {
+            return (_packet_size);
+        }
+
+        inline Packet const* Domain::packet(const size_t index_x_, const size_t index_y_, const size_t index_z_) const noexcept
+        {
+            PRE(index_x_ < _res[index::dim::cartesian::X]);
+            PRE(index_y_ < _res[index::dim::cartesian::Y]);
+            PRE(index_z_ < _res[index::dim::cartesian::Z]);
+
+            return (_packets[index_x_][index_y_][index_z_].get());
         }
 
 
