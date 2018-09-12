@@ -301,7 +301,7 @@ namespace arc //! arctk namespace
                 PRE(var_names_[i].find_first_of(' ') == std::string::npos);
             }
             PRE(utl::properties::distinct(var_names_));
-            PRE(file_.open());
+            PRE(file_.is_open());
 
             (write_var<I>(var_names_[I], file_), ...);
         }
