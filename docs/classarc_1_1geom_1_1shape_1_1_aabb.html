@@ -70,8 +70,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classarc_1_1geom_1_1shape_1_1_aabb-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">arc::geom::shape::Aabb Class Reference</div>  </div>
@@ -150,13 +150,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa13f277797015749980a9ac43307e95c inherit pub_methods_classarc_1_1geom_1_1_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defaulted move operator.  <a href="classarc_1_1geom_1_1_shape.html#aa13f277797015749980a9ac43307e95c">More...</a><br /></td></tr>
 <tr class="separator:aa13f277797015749980a9ac43307e95c inherit pub_methods_classarc_1_1geom_1_1_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a7eae7576c448b1dca477cf962aede531"><td class="memItemLeft" align="right" valign="top">std::array&lt; double, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a7eae7576c448b1dca477cf962aede531">init_areas</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;min_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;max_) const noexcept</td></tr>
-<tr class="separator:a7eae7576c448b1dca477cf962aede531"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
 <tr class="memitem:a4e89b02e44ee267f25b136ebd1506367"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a4e89b02e44ee267f25b136ebd1506367">_min</a></td></tr>
 <tr class="memdesc:a4e89b02e44ee267f25b136ebd1506367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum vertex of the aabb.  <a href="#a4e89b02e44ee267f25b136ebd1506367">More...</a><br /></td></tr>
 <tr class="separator:a4e89b02e44ee267f25b136ebd1506367"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,6 +161,11 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a70519a1ef339b4eff696df0dba2b3d28"><td class="memItemLeft" align="right" valign="top">std::array&lt; double, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a70519a1ef339b4eff696df0dba2b3d28">_areas</a></td></tr>
 <tr class="memdesc:a70519a1ef339b4eff696df0dba2b3d28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalised relative area of each pair of faces.  <a href="#a70519a1ef339b4eff696df0dba2b3d28">More...</a><br /></td></tr>
 <tr class="separator:a70519a1ef339b4eff696df0dba2b3d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a7eae7576c448b1dca477cf962aede531"><td class="memItemLeft" align="right" valign="top">std::array&lt; double, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a7eae7576c448b1dca477cf962aede531">init_areas</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;min_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;max_) const noexcept</td></tr>
+<tr class="separator:a7eae7576c448b1dca477cf962aede531"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Axis-aligned bounding box shape. </p>
@@ -897,7 +897,7 @@ min_.z must be less than max_.z.</dd></dl>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -921,7 +921,7 @@ min_.z must be less than max_.z.</dd></dl>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -945,7 +945,7 @@ min_.z must be less than max_.z.</dd></dl>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -960,7 +960,7 @@ min_.z must be less than max_.z.</dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 5 2018 17:59:25 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 12 2018 14:37:03 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

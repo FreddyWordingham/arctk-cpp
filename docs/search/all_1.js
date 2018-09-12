@@ -53,6 +53,7 @@ var searchData=
   ['distribution',['distribution',['../namespacearc_1_1random_1_1distribution.html',1,'arc::random']]],
   ['error',['error',['../namespacearc_1_1exit_1_1error.html',1,'arc::exit']]],
   ['exit',['exit',['../namespacearc_1_1exit.html',1,'arc']]],
+  ['file',['file',['../namespacearc_1_1sys_1_1file.html',1,'arc::sys']]],
   ['format',['format',['../namespacearc_1_1settings_1_1format.html',1,'arc::settings::format'],['../namespacearc_1_1str_1_1format.html',1,'arc::str::format']]],
   ['formula',['formula',['../namespacearc_1_1math_1_1formula.html',1,'arc::math']]],
   ['generator',['generator',['../namespacearc_1_1random_1_1generator.html',1,'arc::random']]],

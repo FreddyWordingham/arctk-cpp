@@ -1,6 +1,7 @@
 <map id="arc::str::parse::file" name="arc::str::parse::file">
-<area shape="rect" id="node2" href="$classarc_1_1data_1_1_image.html#a079a037c5919a1dffe4d6c6b4883f48a" title="arc::data::Image::write_ppm" alt="" coords="181,43,367,68"/>
-<area shape="rect" id="node5" href="$classarc_1_1str_1_1_printable.html#a9b6bc7316c18557bb6f05f0795ae5ebc" title="arc::str::Printable\l::save" alt="" coords="213,92,335,131"/>
-<area shape="rect" id="node3" href="$classarc_1_1data_1_1image_1_1_colour.html#a1961f383de6c27c8768e4edf3b00927c" title="arc::data::image::Colour\l::save" alt="" coords="426,5,589,44"/>
-<area shape="rect" id="node4" href="$classarc_1_1data_1_1image_1_1_greyscale.html#af139686e330738ed6a644ad3bef54122" title="arc::data::image::Greyscale\l::save" alt="" coords="415,68,600,107"/>
+<area shape="rect" id="node2" href="$classarc_1_1data_1_1_cube_3_011_00_01_a_8_8_8_01_4.html#a071fc2e50016db990fc0927f420b6c4a" title="arc::data::Cube\&lt; 1,\l A... \&gt;::save" alt="" coords="206,5,341,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1data_1_1_image.html#a079a037c5919a1dffe4d6c6b4883f48a" title="arc::data::Image::write_ppm" alt="" coords="181,68,367,93"/>
+<area shape="rect" id="node6" href="$classarc_1_1str_1_1_printable.html#a9b6bc7316c18557bb6f05f0795ae5ebc" title="arc::str::Printable\l::save" alt="" coords="213,117,335,156"/>
+<area shape="rect" id="node4" href="$classarc_1_1data_1_1image_1_1_colour.html#a1961f383de6c27c8768e4edf3b00927c" title="arc::data::image::Colour\l::save" alt="" coords="426,31,589,69"/>
+<area shape="rect" id="node5" href="$classarc_1_1data_1_1image_1_1_greyscale.html#af139686e330738ed6a644ad3bef54122" title="arc::data::image::Greyscale\l::save" alt="" coords="415,93,600,132"/>
 </map>

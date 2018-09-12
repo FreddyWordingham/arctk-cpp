@@ -39,6 +39,13 @@ var searchData=
   ['contract_2ehpp',['contract.hpp',['../contract_8hpp.html',1,'']]],
   ['convert_2ehpp',['convert.hpp',['../col_2convert_8hpp.html',1,'(Global Namespace)'],['../math_2convert_8hpp.html',1,'(Global Namespace)']]],
   ['counts',['counts',['../classarc_1_1data_1_1histogram_1_1_average_3_01_t_00_011_01_4.html#a90d9106af58e493d83123dbe468156e5',1,'arc::data::histogram::Average&lt; T, 1 &gt;']]],
-  ['cube',['cube',['../namespacearc_1_1math_1_1pow.html#ab77b210403d45d56c61e61d44eccb710',1,'arc::math::pow']]],
+  ['cube',['Cube',['../classarc_1_1data_1_1_cube.html',1,'arc::data::Cube&lt; N, A &gt;'],['../classarc_1_1data_1_1_cube_3_011_00_01_a_8_8_8_01_4.html#a0796e2bb480bc4370ab3ef3de20dee55',1,'arc::data::Cube&lt; 1, A... &gt;::Cube()'],['../classarc_1_1data_1_1_cube_3_012_00_01_a_8_8_8_01_4.html#ae6933b641aaf7202acf40ec7a6297e73',1,'arc::data::Cube&lt; 2, A... &gt;::Cube()'],['../classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4.html#a1aab71c872eebcf5e8e8588d020169c2',1,'arc::data::Cube&lt; 3, A... &gt;::Cube()'],['../namespacearc_1_1math_1_1pow.html#ab77b210403d45d56c61e61d44eccb710',1,'arc::math::pow::cube()']]],
+  ['cube_2ehpp',['cube.hpp',['../cube_8hpp.html',1,'']]],
+  ['cube1_2ehpp',['cube1.hpp',['../cube1_8hpp.html',1,'']]],
+  ['cube2_2ehpp',['cube2.hpp',['../cube2_8hpp.html',1,'']]],
+  ['cube3_2ehpp',['cube3.hpp',['../cube3_8hpp.html',1,'']]],
+  ['cube_3c_201_2c_20a_2e_2e_2e_20_3e',['Cube&lt; 1, A... &gt;',['../classarc_1_1data_1_1_cube_3_011_00_01_a_8_8_8_01_4.html',1,'arc::data']]],
+  ['cube_3c_202_2c_20a_2e_2e_2e_20_3e',['Cube&lt; 2, A... &gt;',['../classarc_1_1data_1_1_cube_3_012_00_01_a_8_8_8_01_4.html',1,'arc::data']]],
+  ['cube_3c_203_2c_20a_2e_2e_2e_20_3e',['Cube&lt; 3, A... &gt;',['../classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4.html',1,'arc::data']]],
   ['cuboid',['cuboid',['../namespacearc_1_1gui_1_1actor.html#a40af9d46d7790d238552324910dfb790',1,'arc::gui::actor']]]
 ];
