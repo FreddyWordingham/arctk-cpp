@@ -58,7 +58,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline explicit Cube(const std::array<size_t, 2>& res_) noexcept;
+            inline explicit Cube(const size_t res_) noexcept;
 
 
             //  == OPERATORS ==
@@ -93,12 +93,11 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <typename... A>
-        inline Cube<2, A...>::Cube(const std::array<size_t, 2>& res_) noexcept
+        inline Cube<1, A...>::Cube(const size_t res_) noexcept
           : _res(res_)
-          , _data(res_[index::dim::cartesian::X], std::vector<std::tuple<A...>>(res_[index::dim::cartesian::Y]))
+          , _data(res_)
         {
-            PRE(res_[index::dim::cartesian::X] > 0);
-            PRE(res_[index::dim::cartesian::Y] > 0);
+            PRE(res_ > 0);
         }
 
 
