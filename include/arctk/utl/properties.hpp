@@ -100,8 +100,6 @@ namespace arc //! arctk namespace
             template <typename T>
             inline bool square(const std::vector<std::vector<T>>& vec_) noexcept
             {
-                static_assert(is_vector<T>::value);
-
                 if (vec_.size() <= 1)
                 {
                     return (true);
@@ -123,11 +121,18 @@ namespace arc //! arctk namespace
             template <typename T>
             inline bool cube(const std::vector<std::vector<std::vector<T>>>& vec_) noexcept
             {
-                const std::array<size_t, 2> size({{std::begin(cont_).size(), std::begin(std::begin(cont_)).size()}});
+                static_assert(is_vector<T>::value);
 
-                for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+                if (vec_.size() <= 1)
                 {
-                    if ((it.size() != size) ||)
+                    return (true);
+                }
+
+                const size_t size = vec.front().size();
+
+                for (size_t i = 1; i < vec_.size(); ++i)
+                {
+                    if (vec_[i].size() != size)
                     {
                         return (false);
                     }
