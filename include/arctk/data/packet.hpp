@@ -31,7 +31,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Packet()                       = default;
+            inline Packet() noexcept              = default;
             inline Packet(const Packet&) noexcept = default; //!< Defaulted copy constructor.
             inline Packet(Packet&&) noexcept      = default; //!< Defaulted move constructor.
 
