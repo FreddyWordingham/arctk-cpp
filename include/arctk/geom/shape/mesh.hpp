@@ -454,7 +454,7 @@ namespace arc //! arctk namespace
              *
              *  @return Initialised the vector of triangles forming the mesh.
              */
-            inline std::vector<Triangle> Mesh::init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
+            inline std::vector<Triangle> Mesh::init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>>& faces_) const noexcept
             {
                 PRE(poss_.size() >= 3);
                 PRE(!norms_.empty());
@@ -493,7 +493,7 @@ namespace arc //! arctk namespace
              *
              *  @return Number of unique vertex positions.
              */
-            inline size_t Mesh::init_num_verts(const std::vector<vec3>& poss_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
+            inline size_t Mesh::init_num_verts(const std::vector<vec3>& poss_, const std::vector<std::array<std::array<size_t, 3>, 2>>& faces_) const noexcept
             {
                 std::vector<bool> used(poss_.size(), false);
 
@@ -531,7 +531,7 @@ namespace arc //! arctk namespace
              *
              *  @return Number of unique vertex normals.
              */
-            inline size_t Mesh::init_num_norms(const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
+            inline size_t Mesh::init_num_norms(const std::vector<vec3>& norms_, const std::vector<std::array<std::array<size_t, 3>, 2>>& faces_) const noexcept
             {
                 std::vector<bool> used(norms_.size(), false);
 
@@ -566,7 +566,7 @@ namespace arc //! arctk namespace
              *
              *  @return Number of unique edges.
              */
-            inline size_t Mesh::init_num_edges(const std::vector<std::array<std::array<size_t, 3>, 2>> faces_) const noexcept
+            inline size_t Mesh::init_num_edges(const std::vector<std::array<std::array<size_t, 3>, 2>>& faces_) const noexcept
             {
                 std::vector<std::array<size_t, 2>> edges;
 
