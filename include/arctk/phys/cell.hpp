@@ -97,6 +97,11 @@ namespace arc //! arctk namespace
             return (std::tuple<double, double>(_vol, energy_dens()));
         }
 
+        /**
+         *  Get an array containing the data names of the core data profile values.
+         *
+         *  @return Array containing the data names of the core data profile values.
+         */
         inline std::array<std::string, 2> Cell::data_names() const noexcept
         {
             return (std::array<std::string, 2>({"vol", "udens"}));
