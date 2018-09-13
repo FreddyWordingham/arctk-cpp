@@ -222,6 +222,11 @@ namespace arc //! arctk namespace
             return (_res);
         }
 
+        /**
+         *  Get the individual packet size.
+         *
+         *  @return Individual packet size.
+         */
         inline const vec3& Domain::packet_size() const noexcept
         {
             return (_packet_size);
