@@ -202,6 +202,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the number of packets stored by the domain.
+         *
+         *  @return Number of packets stored by the domain.
+         */
         inline size_t Domain::num_packets() const noexcept
         {
             return (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]);
