@@ -102,6 +102,11 @@ namespace arc //! arctk namespace
             return (std::array<std::string, 2>({"vol", "udens"}));
         }
 
+        /**
+         *  Get the volume of the cell.
+         *
+         *  @return Volume of the cell.
+         */
         inline double Cell::vol() const noexcept
         {
             return (_vol);
