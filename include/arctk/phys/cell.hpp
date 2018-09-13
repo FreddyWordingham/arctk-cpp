@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Cell(double vol_) noexcept;
+            inline explicit Cell(double vol_) noexcept;
 
 
             //  == METHODS ==
