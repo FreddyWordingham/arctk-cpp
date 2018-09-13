@@ -18,6 +18,7 @@
 //  -- Std --
 #include <memory>
 #include <type_traits>
+#include <utility>
 #include <vector>
 
 //  -- Arctk --
@@ -76,6 +77,11 @@ namespace arc //! arctk namespace
             //  -- Saving --
             template <typename T>
             inline void save(const std::string& path_, const std::string& set_name_) const noexcept;
+
+          private:
+            //  -- Saving --
+            template <typename T, typename... A>
+            inline void save_helper(const std::string& path_, const std::string& set_name_, const std::tuple<A...>& /*unused*/) const noexcept;
         };
 
 
@@ -187,17 +193,25 @@ namespace arc //! arctk namespace
             PRE(set_name_.find_first_of('\n') == std::string::npos);
             PRE(set_name_.find_first_of(' ') == std::string::npos);
 
-            std::vector<std::vector<std::vector<decltype(dynamic_cast<T*>(_packets.front().front().front().get())->data())>>> data;
-            /*for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
+            save_helper<T>(path_, set_name_, dynamic_cast<T*>(_packets.front().front().front().get())->data());
+        }
+
+        template <typename T, typename... A>
+        inline void Domain::save_helper(const std::string& path_, const std::string& set_name_, const std::tuple<A...>& /*unused*/) const noexcept
+        {
+            std::vector<std::vector<std::vector<std::tuple<A...>>>> data(_res[0], std::vector<std::vector<std::tuple<A...>>>(_res[1], std::vector<std::tuple<A...>>(_res[2])));
+            for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
             {
                 for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
                 {
                     for (size_t k = 0; k < _res[index::dim::cartesian::Z]; ++k)
                     {
-                        data[i][j].emplace_back(dynamic_cast<T*>(_packets[i][j][k].get())->data());
+                        data[i][j][k] = dynamic_cast<T*>(_packets[i][j][k].get())->data();
                     }
                 }
-            }*/
+            }
+
+            Cube<3, A...>(data).save(path_, set_name_, dynamic_cast<T*>(_packets[0][0][0].get())->data_names(), _min, _max);
         }
 
 
