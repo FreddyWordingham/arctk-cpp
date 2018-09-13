@@ -287,6 +287,21 @@ namespace arc //! arctk namespace
 
 
         //  -- Saving --
+        /**
+         *  Save the contents of the domain as a vtk file.
+         *
+         *  @tparam T   Type to cast domain packets to.
+         *
+         *  @param  path_       Path to file location.
+         *  @param  set_name_   Name of data set.
+         *
+         *  @pre    T must be derived from Packet.
+         *
+         *  @pre    path_ may not be empty.
+         *  @pre    set_name_ may not be empty.
+         *  @pre    set_name_ may not contain a newline character.
+         *  @pre    set_name_ may not contain a space character.
+         */
         template <typename T>
         inline void Domain::save(const std::string& path_, const std::string& set_name_) const noexcept
         {
