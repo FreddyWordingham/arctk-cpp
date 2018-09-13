@@ -74,6 +74,9 @@ namespace arc //! arctk namespace
             inline const vec3&                  packet_size() const noexcept;
             inline Packet const*                packet(size_t index_x_, size_t index_y_, size_t index_z_) const noexcept;
 
+            //  -- Retrieval --
+            inline Packet* packet(const vec3& pos_) noexcept;
+
             //  -- Saving --
             template <typename T>
             inline void save(const std::string& path_, const std::string& set_name_) const noexcept;
@@ -179,6 +182,24 @@ namespace arc //! arctk namespace
             PRE(index_z_ < _res[index::dim::cartesian::Z]);
 
             return (_packets[index_x_][index_y_][index_z_].get());
+        }
+
+
+        //  -- Retrieval --
+        inline Packet* Domain::packet(const vec3& pos_) noexcept
+        {
+            PRE(contains(pos_));
+
+            const vec3 rel_pos = pos_ - _min;
+            const auto index_x = static_cast<size_t>(rel_pos.x / _packet_size.x);
+            const auto index_y = static_cast<size_t>(rel_pos.y / _packet_size.y);
+            const auto index_z = static_cast<size_t>(rel_pos.z / _packet_size.z);
+
+            POST(index_x < _res[index::dim::cartesian::X]);
+            POST(index_y < _res[index::dim::cartesian::Y]);
+            POST(index_z < _res[index::dim::cartesian::Z]);
+
+            return (_packets[index_x][index_y][index_z].get());
         }
 
 
