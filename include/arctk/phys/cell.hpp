@@ -22,6 +22,7 @@
 
 //  -- Arctk --
 #include <arctk/data.hpp>
+#include <arctk/debug.hpp>
 
 
 
