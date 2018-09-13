@@ -137,6 +137,13 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
+        /**
+         *  Initialise the resolution array of the datacube.
+         *
+         *  @param  data_   Three-dimensional vector of pre-existing data.
+         *
+         *  @return Initialised resolution array of the datacube.
+         */
         template <typename... A>
         inline std::array<size_t, 3> Cube<3, A...>::init_res(const std::vector<std::vector<std::vector<std::tuple<A...>>>>& data_) const noexcept
         {
