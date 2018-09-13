@@ -50,18 +50,6 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Cell() noexcept;
-            inline Cell(const Cell&) noexcept = default; //!< Defaulted copy constructor.
-            inline Cell(Cell&&) noexcept      = default; //!< Defaulted move constructor.
-
-            //  -- Destructors --
-            virtual inline ~Cell() noexcept = 0;
-
-
-            //  == OPERATORS ==
-          public:
-            //  -- Assignment --
-            inline Cell& operator=(const Cell&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
-            inline Cell& operator=(Cell&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
@@ -84,10 +72,6 @@ namespace arc //! arctk namespace
           : _energy(0.0)
         {
         }
-
-
-        //  -- Destructors --
-        inline Cell::~Cell() noexcept = default;
 
 
 

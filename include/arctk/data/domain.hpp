@@ -186,6 +186,18 @@ namespace arc //! arctk namespace
             PRE(!set_name_.empty());
             PRE(set_name_.find_first_of('\n') == std::string::npos);
             PRE(set_name_.find_first_of(' ') == std::string::npos);
+
+            std::vector<std::vector<std::vector<decltype(dynamic_cast<T*>(_packets.front().front().front().get())->data())>>> data;
+            /*for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
+            {
+                for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
+                {
+                    for (size_t k = 0; k < _res[index::dim::cartesian::Z]; ++k)
+                    {
+                        data[i][j].emplace_back(dynamic_cast<T*>(_packets[i][j][k].get())->data());
+                    }
+                }
+            }*/
         }
 
 
