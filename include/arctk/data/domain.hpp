@@ -243,7 +243,7 @@ namespace arc //! arctk namespace
          *  @pre    index_y_ must be less than _res[index::dim::cartesian::Y].
          *  @pre    index_z_ must be less than _res[index::dim::cartesian::Z].
          *
-         *  @return Raw pointer to a domain packet by its index.
+         *  @return Raw pointer to the domain packet.
          */
         inline Packet const* Domain::packet(const size_t index_x_, const size_t index_y_, const size_t index_z_) const noexcept
         {
@@ -256,6 +256,19 @@ namespace arc //! arctk namespace
 
 
         //  -- Retrieval --
+        /**
+         *  Get a raw pointer to a domain packet corresponding to a position within the domain.
+         *
+         *  @param  index_x_    X index of the requested packet.
+         *  @param  index_y_    Y index of the requested packet.
+         *  @param  index_z_    Z index of the requested packet.
+         *
+         *  @pre    index_x_ must be less than _res[index::dim::cartesian::X].
+         *  @pre    index_y_ must be less than _res[index::dim::cartesian::Y].
+         *  @pre    index_z_ must be less than _res[index::dim::cartesian::Z].
+         *
+         *  @return Raw pointer to the domain packet.
+         */
         inline Packet* Domain::packet(const vec3& pos_) noexcept
         {
             PRE(contains(pos_));
