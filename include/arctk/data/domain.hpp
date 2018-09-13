@@ -125,6 +125,20 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
+        /**
+         *  Initialise the size of the data packets.
+         *
+         *  @param  min_    Minimum bound of the domain.
+         *  @param  max_    Maximum bound of the domain.
+         *  @param  res_    Resolution of the domain.
+         *
+         *  @pre    min_.x must be less than max_.x.
+         *  @pre    min_.y must be less than max_.y.
+         *  @pre    min_.z must be less than max_.z.
+         *  @pre    res_ balues must be positive.
+         *
+         *  @return Size of the data packets.
+         */
         inline vec3 Domain::init_packet_size(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept
         {
             PRE(min_.x < max_.x);
