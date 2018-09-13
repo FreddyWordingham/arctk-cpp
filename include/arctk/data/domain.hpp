@@ -90,6 +90,22 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a domain with given bounds, a given resolution and initial data packet data.
+         *
+         *  @tparam T   Type of packet stored by the domain.
+         *
+         *  @param  min_    Minimum bound of the domain.
+         *  @param  max_    Maximum bound of the domain.
+         *  @param  res_    Resolution of the domain.
+         *  @param  pack_   Initial conditions of the data packets.
+         *
+         *  @pre    T must be derived from Packet.
+         *  @pre    min_.x must be less than max_.x.
+         *  @pre    min_.y must be less than max_.y.
+         *  @pre    min_.z must be less than max_.z.
+         *  @pre    res_ balues must be positive.
+         */
         template <typename T>
         inline Domain::Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const T& pack_) noexcept
           : geom::shape::Aabb(min_, max_)
