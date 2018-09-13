@@ -315,9 +315,32 @@ namespace arc //! arctk namespace
             save_helper<T>(path_, set_name_, dynamic_cast<T*>(_packets.front().front().front().get())->data());
         }
 
+        /**
+         *  Save method helper method.
+         *
+         *  @tparam T   Type to cast domain packets to.
+         *  @tparam A   Variadic list of arguments contained by return tuple of data method call.
+         *
+         *  @param  path_       Path to file location.
+         *  @param  set_name_   Name of data set.
+         *
+         *  @pre    T must be derived from Packet.
+         *
+         *  @pre    path_ may not be empty.
+         *  @pre    set_name_ may not be empty.
+         *  @pre    set_name_ may not contain a newline character.
+         *  @pre    set_name_ may not contain a space character.
+         */
         template <typename T, typename... A>
         inline void Domain::save_helper(const std::string& path_, const std::string& set_name_, const std::tuple<A...>& /*unused*/) const noexcept
         {
+            static_assert(std::is_base_of<Packet, T>::value);
+
+            PRE(!path_.empty());
+            PRE(!set_name_.empty());
+            PRE(set_name_.find_first_of('\n') == std::string::npos);
+            PRE(set_name_.find_first_of(' ') == std::string::npos);
+
             std::vector<std::vector<std::vector<std::tuple<A...>>>> data(_res[0], std::vector<std::vector<std::tuple<A...>>>(_res[1], std::vector<std::tuple<A...>>(_res[2])));
             for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
             {
