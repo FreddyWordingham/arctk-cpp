@@ -114,6 +114,11 @@ namespace arc //! arctk namespace
 
 
         //  -- Modifiers --
+        /**
+         *  Added energy to the cell.
+         *
+         *  @param  energy_ Amount of energy to add to the cell.
+         */
         inline void Cell::add_energy(const double energy_) noexcept
         {
             _energy += energy_;
