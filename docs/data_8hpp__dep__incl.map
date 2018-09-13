@@ -1,3 +1,15 @@
 <map id="include/arctk/data.hpp" name="include/arctk/data.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="33,79,130,104"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="770,545,867,571"/>
+<area shape="rect" id="node3" href="$cell_8hpp.html" title="include/arctk/phys\l/cell.hpp" alt="" coords="473,79,601,117"/>
+<area shape="rect" id="node4" href="$phys_8hpp.html" title="include/arctk/phys.hpp" alt="" coords="460,165,614,191"/>
+<area shape="rect" id="node5" href="$actor_8hpp.html" title="include/arctk/gui/actor.hpp" alt="" coords="773,239,949,264"/>
+<area shape="rect" id="node6" href="$ambient_8hpp.html" title="include/arctk/gui/shader\l/ambient.hpp" alt="" coords="568,385,730,424"/>
+<area shape="rect" id="node7" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="747,472,890,497"/>
+<area shape="rect" id="node8" href="$diffuse_8hpp.html" title="include/arctk/gui/shader\l/diffuse.hpp" alt="" coords="856,385,1018,424"/>
+<area shape="rect" id="node9" href="$normal_8hpp.html" title="include/arctk/gui/shader\l/normal.hpp" alt="" coords="1043,385,1205,424"/>
+<area shape="rect" id="node10" href="$ray_8hpp.html" title="include/arctk/gui/shader\l/ray.hpp" alt="" coords="1229,385,1392,424"/>
+<area shape="rect" id="node11" href="$skybox_8hpp.html" title="include/arctk/gui/shader\l/skybox.hpp" alt="" coords="1416,385,1578,424"/>
+<area shape="rect" id="node12" href="$specular_8hpp.html" title="include/arctk/gui/shader\l/specular.hpp" alt="" coords="112,385,274,424"/>
+<area shape="rect" id="node13" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="444,312,635,337"/>
+<area shape="rect" id="node14" href="$keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="350,392,544,417"/>
 </map>

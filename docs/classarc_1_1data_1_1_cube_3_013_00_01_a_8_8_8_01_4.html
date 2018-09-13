@@ -84,6 +84,8 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1aab71c872eebcf5e8e8588d020169c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4.html#a1aab71c872eebcf5e8e8588d020169c2">Cube</a> (const std::array&lt; size_t, 3 &gt; &amp;res_) noexcept</td></tr>
 <tr class="separator:a1aab71c872eebcf5e8e8588d020169c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0b31445ba617afebe53835f91c1ef97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4.html#aa0b31445ba617afebe53835f91c1ef97">Cube</a> (const std::vector&lt; std::vector&lt; std::vector&lt; std::tuple&lt; A... &gt;&gt;&gt;&gt; &amp;data_) noexcept</td></tr>
+<tr class="separator:aa0b31445ba617afebe53835f91c1ef97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2097f4a0693efb7171ad15f74d54de1e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; std::tuple&lt; A... &gt; &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4.html#a2097f4a0693efb7171ad15f74d54de1e">operator[]</a> (size_t index_) noexcept</td></tr>
 <tr class="separator:a2097f4a0693efb7171ad15f74d54de1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a496d778955904b95cadfe52eff8b9af5"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::vector&lt; std::tuple&lt; A... &gt; &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4.html#a496d778955904b95cadfe52eff8b9af5">operator[]</a> (size_t index_) const noexcept</td></tr>
@@ -101,6 +103,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
+<tr class="memitem:a16737043e79a60b40f9b38089d1ccf72"><td class="memItemLeft" align="right" valign="top">std::array&lt; size_t, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4.html#a16737043e79a60b40f9b38089d1ccf72">init_res</a> (const std::vector&lt; std::vector&lt; std::vector&lt; std::tuple&lt; A... &gt;&gt;&gt;&gt; &amp;data_) const noexcept</td></tr>
+<tr class="separator:a16737043e79a60b40f9b38089d1ccf72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17462f8e0e3e66c8646bdd51bdad47d1"><td class="memTemplParams" colspan="2">template&lt;size_t... I&gt; </td></tr>
 <tr class="memitem:a17462f8e0e3e66c8646bdd51bdad47d1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4.html#a17462f8e0e3e66c8646bdd51bdad47d1">write_data</a> (const std::array&lt; std::string, sizeof...(A)&gt; &amp;var_names_, std::ofstream &amp;file_, const std::index_sequence&lt; I... &gt; &amp;) const noexcept</td></tr>
 <tr class="separator:a17462f8e0e3e66c8646bdd51bdad47d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,7 +134,7 @@ class arc::data::Cube&lt; 3, A... &gt;</h3>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1aab71c872eebcf5e8e8588d020169c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1aab71c872eebcf5e8e8588d020169c2">&#9670;&nbsp;</a></span>Cube()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aab71c872eebcf5e8e8588d020169c2">&#9670;&nbsp;</a></span>Cube() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,7 +169,105 @@ template&lt;typename... A&gt; </div>
 
 </div>
 </div>
+<a id="aa0b31445ba617afebe53835f91c1ef97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0b31445ba617afebe53835f91c1ef97">&#9670;&nbsp;</a></span>Cube() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... A&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classarc_1_1data_1_1_cube.html">arc::data::Cube</a>&lt; 3, A... &gt;::<a class="el" href="classarc_1_1data_1_1_cube.html">Cube</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; std::vector&lt; std::tuple&lt; A... &gt;&gt;&gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>data_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Construct a data cube object using a three-dimensional vector of pre-existing data.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data_</td><td>Three-dimensional vector of pre-existing data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>data_ must not be empty. </dd>
+<dd>
+First vector of data_ must not be empty. </dd>
+<dd>
+First vector of the first vector of data_ must not be empty. </dd>
+<dd>
+data_ must be cube shaped. </dd></dl>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_aa0b31445ba617afebe53835f91c1ef97_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_aa0b31445ba617afebe53835f91c1ef97_cgraph" alt=""/></div>
+<map name="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_aa0b31445ba617afebe53835f91c1ef97_cgraph" id="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_aa0b31445ba617afebe53835f91c1ef97_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1utl_1_1properties.html#a1f7876ecfefdb2ace36b58ba9e028860" title="arc::utl::properties\l::cube" alt="" coords="188,5,316,44"/>
+</map>
+</div>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a16737043e79a60b40f9b38089d1ccf72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16737043e79a60b40f9b38089d1ccf72">&#9670;&nbsp;</a></span>init_res()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... A&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; size_t, 3 &gt; <a class="el" href="classarc_1_1data_1_1_cube.html">arc::data::Cube</a>&lt; 3, A... &gt;::init_res </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; std::vector&lt; std::tuple&lt; A... &gt;&gt;&gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>data_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initialise the resolution array of the datacube.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data_</td><td>Three-dimensional vector of pre-existing data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Initialised resolution array of the datacube. </dd></dl>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a16737043e79a60b40f9b38089d1ccf72_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a16737043e79a60b40f9b38089d1ccf72_cgraph" alt=""/></div>
+<map name="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a16737043e79a60b40f9b38089d1ccf72_cgraph" id="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a16737043e79a60b40f9b38089d1ccf72_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1utl_1_1properties.html#a1f7876ecfefdb2ace36b58ba9e028860" title="arc::utl::properties\l::cube" alt="" coords="188,5,316,44"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a3b6276009e6cec869d4ce4fd3cd3f734"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3b6276009e6cec869d4ce4fd3cd3f734">&#9670;&nbsp;</a></span>max()</h2>
 
@@ -200,11 +302,11 @@ template&lt;size_t I&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Maximum value of a channel contained within the datacube. </dd></dl>
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a3b6276009e6cec869d4ce4fd3cd3f734_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a3b6276009e6cec869d4ce4fd3cd3f734_cgraph" alt=""/></div>
 <map name="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a3b6276009e6cec869d4ce4fd3cd3f734_cgraph" id="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a3b6276009e6cec869d4ce4fd3cd3f734_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="188,40,330,65"/>
@@ -250,11 +352,11 @@ template&lt;size_t I&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Minimum value of a channel contained within the datacube. </dd></dl>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a1e4ecd2af437069dff2fc03acad1c970_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a1e4ecd2af437069dff2fc03acad1c970_cgraph" alt=""/></div>
 <map name="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a1e4ecd2af437069dff2fc03acad1c970_cgraph" id="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a1e4ecd2af437069dff2fc03acad1c970_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#a7dedb03499315275304d2ee539dbbf81" title="arc::utl::search::min" alt="" coords="188,40,326,65"/>
@@ -454,11 +556,11 @@ min_.x may be less than max_.x. </dd>
 min_.y may be less than max_.y. </dd>
 <dd>
 min_.z may be less than max_.z. </dd></dl>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a1dcc44c4b05105062b5047d40a983696_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a1dcc44c4b05105062b5047d40a983696_cgraph" alt=""/></div>
 <map name="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a1dcc44c4b05105062b5047d40a983696_cgraph" id="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a1dcc44c4b05105062b5047d40a983696_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1utl_1_1properties.html#aad4c2b9542f17dd7e77e509fbee5b57f" title="arc::utl::properties\l::distinct" alt="" coords="188,5,316,44"/>
@@ -534,11 +636,11 @@ var_names_ elements may not contain blank spaces. </dd>
 var_names_ must be distinct. </dd>
 <dd>
 file_ must be open. </dd></dl>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a17462f8e0e3e66c8646bdd51bdad47d1_cgraph.png" border="0" usemap="#classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a17462f8e0e3e66c8646bdd51bdad47d1_cgraph" alt=""/></div>
 <map name="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a17462f8e0e3e66c8646bdd51bdad47d1_cgraph" id="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4_a17462f8e0e3e66c8646bdd51bdad47d1_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1utl_1_1properties.html#aad4c2b9542f17dd7e77e509fbee5b57f" title="arc::utl::properties\l::distinct" alt="" coords="188,5,316,44"/>
@@ -670,7 +772,7 @@ template&lt;typename... A&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 12 2018 14:37:03 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 13 2018 19:38:02 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
