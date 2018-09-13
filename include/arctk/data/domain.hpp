@@ -212,6 +212,11 @@ namespace arc //! arctk namespace
             return (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]);
         }
 
+        /**
+         *  Get the resolution of the domain.
+         *
+         *  @return Resolution of the domain.
+         */
         inline const std::array<size_t, 3>& Domain::res() const noexcept
         {
             return (_res);
