@@ -118,9 +118,13 @@ namespace arc //! arctk namespace
          *  Added energy to the cell.
          *
          *  @param  energy_ Amount of energy to add to the cell.
+         *
+         *  @pre    energy_ must be positive.
          */
         inline void Cell::add_energy(const double energy_) noexcept
         {
+            PRE(energy_ > 0.0);
+
             _energy += energy_;
         }
 
