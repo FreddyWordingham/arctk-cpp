@@ -166,6 +166,8 @@ namespace arc //! arctk namespace
          *  @param  res_    Resolution of the domain.
          *  @param  pack_   Initial conditions of the data packets.
          *
+         *  @pre    T must be derived from Packet.
+         *
          *  @return Initialised three-dimensional vector of data packets.
          */
         template <typename T>
