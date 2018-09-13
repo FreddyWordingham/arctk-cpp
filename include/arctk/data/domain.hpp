@@ -157,6 +157,16 @@ namespace arc //! arctk namespace
             return (packet_size);
         }
 
+        /**
+         *  Initialise the three-dimensional vector of data packets by copying a given packet and casting it to a unique pointer to a base Packet.
+         *
+         *  @tparam T   Type of packet stored by the domain.
+         *
+         *  @param  res_    Resolution of the domain.
+         *  @param  pack_   Initial conditions of the data packets.
+         *
+         *  @return Initialised three-dimensional vector of data packets.
+         */
         template <typename T>
         inline std::vector<std::vector<std::vector<std::unique_ptr<Packet>>>> Domain::init_packets(const std::array<size_t, 3>& res_, const T& pack_) const noexcept
         {
