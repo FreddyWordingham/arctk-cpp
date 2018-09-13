@@ -114,6 +114,16 @@ namespace arc //! arctk namespace
             PRE(res_[index::dim::cartesian::Z] > 0);
         }
 
+        /**
+         *  Construct a data cube object using a three-dimensional vector of pre-existing data.
+         *
+         *  @param  data_   Three-dimensional vector of pre-existing data.
+         *
+         *  @pre    data_ must not be empty.
+         *  @pre    First vector of data_ must not be empty.
+         *  @pre    First vector of the first vector of data_ must not be empty.
+         *  @pre    data_ must be cube shaped.
+         */
         template <typename... A>
         inline Cube<3, A...>::Cube(const std::vector<std::vector<std::vector<std::tuple<A...>>>>& data_) noexcept
           : _res(init_res(data_))
