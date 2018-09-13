@@ -87,6 +87,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get a tuple containing the cells core data profile.
+         *
+         *  @return Tuple containing the cells core data profile.
+         */
         inline std::tuple<double, double> Cell::data() const noexcept
         {
             return (std::tuple<double, double>(_vol, energy_dens()));
