@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Cell() noexcept;
+            inline Cell(double vol_) noexcept;
 
 
             //  == METHODS ==
@@ -68,9 +68,11 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Cell::Cell() noexcept
-          : _energy(0.0)
+        inline Cell::Cell(const double vol_) noexcept
+          : _vol(vol_)
+          , _energy(0.0)
         {
+            PRE(vol_ > 0.0);
         }
 
 
