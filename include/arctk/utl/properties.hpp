@@ -124,6 +124,16 @@ namespace arc //! arctk namespace
                 return (true);
             }
 
+            /**
+             *  Determine if a given three-dimensional vector may be considered cube.
+             *  To be considered cube, all sub-vectors must be of the same size and all sub-sub-vectors must be of the same size.
+             *
+             *  @tparam T   Type stored by the vector.
+             *
+             *  @param  vec_    Vector to test.
+             *
+             *  @return True if the given vector can be considered cube.
+             */
             template <typename T>
             inline bool cube(const std::vector<std::vector<std::vector<T>>>& vec_) noexcept
             {
