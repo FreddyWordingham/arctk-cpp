@@ -104,7 +104,7 @@ namespace arc //! arctk namespace
          */
         inline std::array<std::string, 2> Cell::data_names() const noexcept
         {
-            return (std::array<std::string, 2>({"vol", "udens"}));
+            return (std::array<std::string, 2>({{"vol", "udens"}}));
         }
 
         /**
