@@ -69,6 +69,13 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a data cell packet with a given volume.
+         *
+         *  @param  vol_    Volume of the cell.
+         *
+         *  @pre    vol_ must be positive.
+         */
         inline Cell::Cell(const double vol_) noexcept
           : _vol(vol_)
           , _energy(0.0)
