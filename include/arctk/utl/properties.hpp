@@ -98,6 +98,16 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Shape --
+            /**
+             *  Determine if a given two-dimensional vector may be considered square.
+             *  To be considered square, all sub-vectors must be of the same size.
+             *
+             *  @tparam T   Type stored by the vector.
+             *
+             *  @param  vec_    Vector to test.
+             *
+             *  @return True if the given vector can be considered square.
+             */
             template <typename T>
             inline bool square(const std::vector<std::vector<T>>& vec_) noexcept
             {
