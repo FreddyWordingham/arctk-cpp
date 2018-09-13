@@ -101,6 +101,7 @@ namespace arc //! arctk namespace
          *  @param  pack_   Initial conditions of the data packets.
          *
          *  @pre    T must be derived from Packet.
+         *
          *  @pre    min_.x must be less than max_.x.
          *  @pre    min_.y must be less than max_.y.
          *  @pre    min_.z must be less than max_.z.
