@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            double _vol;
+            double _vol; //!< Volume of the cell.
             double _energy;
 
 
