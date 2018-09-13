@@ -259,13 +259,13 @@ namespace arc //! arctk namespace
         /**
          *  Get a raw pointer to a domain packet corresponding to a position within the domain.
          *
-         *  @param  index_x_    X index of the requested packet.
-         *  @param  index_y_    Y index of the requested packet.
-         *  @param  index_z_    Z index of the requested packet.
+         *  @param  pos_    Position of the point.
          *
-         *  @pre    index_x_ must be less than _res[index::dim::cartesian::X].
-         *  @pre    index_y_ must be less than _res[index::dim::cartesian::Y].
-         *  @pre    index_z_ must be less than _res[index::dim::cartesian::Z].
+         *  @pre    pos_ must be contained within the domain.
+         *
+         *  @post   index_x must be less than _res[index::dim::cartesian::X].
+         *  @post   index_y must be less than _res[index::dim::cartesian::Y].
+         *  @post   index_z must be less than _res[index::dim::cartesian::Z].
          *
          *  @return Raw pointer to the domain packet.
          */
