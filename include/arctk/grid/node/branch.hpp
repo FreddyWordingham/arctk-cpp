@@ -20,7 +20,6 @@
 #include <memory>
 
 //  -- Arctk --
-#include <arctk/array.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
