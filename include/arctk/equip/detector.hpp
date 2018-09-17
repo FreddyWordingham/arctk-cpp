@@ -14,6 +14,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/geom.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -26,7 +32,7 @@ namespace arc //! arctk namespace
         /**
          *  Detector class.
          */
-        class Detector
+        class Detector : public geom::Shape
         {
             //  == FIELDS ==
           private:
