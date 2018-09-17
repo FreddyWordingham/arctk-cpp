@@ -44,6 +44,7 @@
 #include <arctk/debug/invariant.hpp>
 #include <arctk/debug/location.hpp>
 #include <arctk/equip.hpp>
+#include <arctk/equip/detector.hpp>
 #include <arctk/equip/entity.hpp>
 #include <arctk/equip/light.hpp>
 #include <arctk/exit.hpp>
