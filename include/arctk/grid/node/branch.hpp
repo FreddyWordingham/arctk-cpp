@@ -84,7 +84,7 @@ namespace arc //! arctk namespace
             {
                 PRE(contains(pos_));
 
-                return (_childs[(pos_.x < _centre.x) ? 0 : 1][(pos_.y < _centre.y) ? 0 : 1][(pos_.z < _centre.z) ? 0 : 1].get());
+                return (_childs[(pos_.x < _centre.x) ? 0 : 1][(pos_.y < _centre.y) ? 0 : 1][(pos_.z < _centre.z) ? 0 : 1]->leaf());
             }
 
 
