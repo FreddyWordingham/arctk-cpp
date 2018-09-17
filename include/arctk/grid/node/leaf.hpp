@@ -41,12 +41,28 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+
+
+                //  == METHODS ==
+                //  -- Retrieval --
+                inline Leaf const* leaf(const vec3& pos_) const noexcept;
             };
 
 
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+
+
+
+            //  == METHODS ==
+            //  -- Retrieval --
+            inline Leaf const* Branch::leaf(const vec3& pos_) const noexcept
+            {
+                PRE(contains(pos_));
+
+                return (this);
+            }
 
 
 
