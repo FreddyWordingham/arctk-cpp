@@ -47,6 +47,12 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Detector(const std::string& name_, const geom::Shape& shape_) noexcept;
+
+
+            //  == METHODS ==
+          public:
+            //  -- Getters --
+            inline const std::string& name() const noexcept;
         };
 
 
@@ -57,6 +63,15 @@ namespace arc //! arctk namespace
           : geom::Shape(shape_)
           , _name(name_)
         {
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        inline const std::string& Detector::name() const noexcept
+        {
+            return (_name);
         }
 
 
