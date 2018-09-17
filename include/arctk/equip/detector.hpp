@@ -15,6 +15,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <string>
+
 //  -- Arctk --
 #include <arctk/geom.hpp>
 
@@ -36,6 +39,9 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Data --
+            const std::string& _name;
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
