@@ -40,12 +40,33 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+
+
+            //  == METHODS ==
+          public:
+            //  -- Getters --
+            inline const std::string& name() const noexcept;
+            inline const geom::Shape& surf() const noexcept;
         };
 
 
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        inline const std::string& Entity::name() const noexcept
+        {
+            return (_name);
+        }
+
+        inline const geom::Shape& Entity::surf() const noexcept
+        {
+            return (_surf);
+        }
 
 
 
