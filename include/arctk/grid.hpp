@@ -19,6 +19,7 @@
 #include <arctk/grid/adaptive.hpp>
 #include <arctk/grid/node.hpp>
 #include <arctk/grid/node/branch.hpp>
+#include <arctk/grid/node/leaf.hpp>
 
 
 
