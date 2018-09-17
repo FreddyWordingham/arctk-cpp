@@ -30,6 +30,13 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Data --
+            const std::string& _name;
+
+            //  -- Structure --
+            const geom::Shape& _surf;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
