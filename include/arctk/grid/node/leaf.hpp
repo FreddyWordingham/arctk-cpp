@@ -44,6 +44,7 @@ namespace arc //! arctk namespace
 
 
                 //  == METHODS ==
+              public:
                 //  -- Retrieval --
                 inline Leaf const* leaf(const vec3& pos_) const noexcept;
             };
