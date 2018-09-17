@@ -23,7 +23,6 @@
 #include <arctk/phys/optical.hpp>
 #include <arctk/phys/optics.hpp>
 #include <arctk/phys/particle.hpp>
-#include <arctk/phys/particle/photon.hpp>
 
 
 
