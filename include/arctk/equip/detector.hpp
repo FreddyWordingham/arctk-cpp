@@ -42,6 +42,7 @@ namespace arc //! arctk namespace
             //  -- Data --
             const std::string& _name;
 
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
