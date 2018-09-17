@@ -15,7 +15,12 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <array>
+#include <memory>
+
 //  -- Arctk --
+#include <arctk/array.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
@@ -38,6 +43,13 @@ namespace arc //! arctk namespace
              */
             class Branch : public Node
             {
+                //  == FIELDS ==
+              private:
+                //  -- Children --
+                const std::array<std::unique_ptr<Node>, 8> _childs;
+
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
