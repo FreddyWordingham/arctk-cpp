@@ -14,6 +14,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/geom.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -26,7 +32,7 @@ namespace arc //! arctk namespace
         /**
          *  Grid node base class.
          */
-        class Node
+        class Node : public geom::shape::Aabb
         {
             //  == INSTANTIATION ==
           public:
