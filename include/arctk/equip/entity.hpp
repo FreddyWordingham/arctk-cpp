@@ -14,6 +14,15 @@
 
 
 
+//  == IMPORTS ==
+//  -- Std --
+#include <string>
+
+//  -- Arctk --
+#include <arctk/geom.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
