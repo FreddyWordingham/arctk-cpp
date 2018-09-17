@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/equip/detector.hpp>
 #include <arctk/equip/entity.hpp>
 #include <arctk/equip/light.hpp>
 
