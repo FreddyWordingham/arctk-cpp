@@ -55,6 +55,12 @@ namespace arc //! arctk namespace
               public:
                 //  -- Constructors --
                 inline Branch(const vec3& min_, const vec3& max_) noexcept;
+
+
+                //  == METHODS ==
+              public:
+                //  -- Retrieval --
+                inline Node const* leaf(const vec3& pos_) const noexcept;
             };
 
 
@@ -68,6 +74,17 @@ namespace arc //! arctk namespace
                 PRE(min_.x < max_.x);
                 PRE(min_.y < max_.y);
                 PRE(min_.z < max_.z);
+            }
+
+
+
+            //  == METHODS ==
+            //  -- Retrieval --
+            inline Node const* Branch::leaf(const vec3& pos_) const noexcept
+            {
+                PRE(contains(pos_));
+
+                return (_childs[(pos_.x < _centre.x) ? 0 : 1][(pos_.y < _centre.y) ? 0 : 1][(pos_.z < _centre.z) ? 0 : 1].get());
             }
 
 
