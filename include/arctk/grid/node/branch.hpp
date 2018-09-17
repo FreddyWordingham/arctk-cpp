@@ -56,6 +56,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Branch(const vec3& min_, const vec& max_) noexcept;
             };
 
 
