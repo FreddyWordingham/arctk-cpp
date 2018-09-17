@@ -22,6 +22,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
+#include <arctk/grid/node/branch.hpp>
 #include <arctk/math.hpp>
 
 
@@ -60,7 +61,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Retrieval --
-                inline Node const* leaf(const vec3& pos_) const noexcept;
+                inline Leaf const* leaf(const vec3& pos_) const noexcept;
             };
 
 
@@ -80,7 +81,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Retrieval --
-            inline Node const* Branch::leaf(const vec3& pos_) const noexcept
+            inline Leaf const* Branch::leaf(const vec3& pos_) const noexcept
             {
                 PRE(contains(pos_));
 
