@@ -27,11 +27,17 @@ namespace arc //! arctk namespace
 {
     namespace grid //! grid namespace
     {
+        namespace node //! node namespace
+        {
 
 
 
-        //  == CLASS PROTOTYPES ==
-        class Leaf;
+            //  == CLASS PROTOTYPES ==
+            class Leaf;
+
+
+
+        } // namespace node
 
 
 
@@ -62,7 +68,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Retrieval --
-            virtual Leaf const* leaf(const vec3& pos_) const noexcept = 0;
+            virtual node::Leaf const* leaf(const vec3& pos_) const noexcept = 0;
         };
 
 
