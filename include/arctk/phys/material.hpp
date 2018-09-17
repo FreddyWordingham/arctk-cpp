@@ -68,14 +68,6 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline double min() const noexcept;
             inline double max() const noexcept;
-
-            //  -- Properties --
-            virtual inline void set_optical_props(particle::Photon* phot_) const noexcept = 0; //!< Set the optical properties of a photon. @param  phot_   Photon to set the optical properties of.
-
-            //  -- Interaction --
-            virtual inline double interaction_dist(random::Generator* rng_, const particle::Photon& phot_) const
-              noexcept = 0; //!< Determine the distance until a material interaction occurs. @param  rng_    Random number generator.    @param  phot_   Photon to interact with.    @return Distance to interaction.
-            virtual inline void interact(random::Generator* rng_, particle::Photon* phot_) const noexcept = 0; //!< Perform an interaction on a given photon.   @param  rng_    Random number generator.    @param  phot_   Photon to interact with.
         };
 
 
