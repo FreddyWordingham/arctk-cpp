@@ -35,12 +35,15 @@ namespace arc //! arctk namespace
         /**
          *  Detector class.
          */
-        class Detector : public geom::Shape
+        class Detector
         {
             //  == FIELDS ==
           private:
             //  -- Data --
             const std::string& _name;
+
+            //  -- Structure --
+            const geom::Shape& _surf;
 
 
             //  == INSTANTIATION ==
@@ -60,8 +63,8 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         inline Detector::Detector(const std::string& name_, const geom::Shape& shape_) noexcept
-          : geom::Shape(shape_)
-          , _name(name_)
+          : _name(name_)
+          , _surf(shape_)
         {
         }
 
