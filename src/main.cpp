@@ -60,6 +60,7 @@
 #include <arctk/geom/shape/triangle.hpp>
 #include <arctk/grid.hpp>
 #include <arctk/grid/adaptive.hpp>
+#include <arctk/grid/node.hpp>
 #include <arctk/gui.hpp>
 #include <arctk/gui/actor.hpp>
 #include <arctk/gui/camera.hpp>
