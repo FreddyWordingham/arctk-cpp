@@ -22,7 +22,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
-#include <arctk/grid/node/branch.hpp>
+#include <arctk/grid/node/leaf.hpp>
 #include <arctk/math.hpp>
 
 
