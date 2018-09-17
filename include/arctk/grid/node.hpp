@@ -30,6 +30,11 @@ namespace arc //! arctk namespace
 
 
 
+        //  == CLASS PROTOTYPES ==
+        class Leaf;
+
+
+
         //  == CLASS ==
         /**
          *  Grid node base class.
