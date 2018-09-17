@@ -16,7 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
-#include <arctk/grid.hpp>
+#include <arctk/grid/adaptive.hpp>
 
 
 
