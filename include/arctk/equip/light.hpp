@@ -70,7 +70,7 @@ namespace arc //! arctk namespace
         inline Light::Light(const std::string& name_, const geom::Shape& surf_, const random::distribution::Linear<double>& spec_) noexcept
           : _name(name_)
           , _surf(surf_)
-          , _mat(mat_)
+          , _spec(spec_)
         {
         }
 
