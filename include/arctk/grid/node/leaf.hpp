@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Retrieval --
-            inline Leaf const* Branch::leaf(const vec3& pos_) const noexcept
+            inline Leaf const* Leaf::leaf(const vec3& pos_) const noexcept
             {
                 PRE(contains(pos_));
 
