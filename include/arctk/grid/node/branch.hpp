@@ -45,6 +45,9 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Positioning --
+                const vec3 _centre;
+
                 //  -- Children --
                 const std::array<std::unique_ptr<Node>, 8> _childs;
 
