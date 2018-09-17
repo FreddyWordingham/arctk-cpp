@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Node(const vec3& min_, const vec& max_) noexcept;
+            inline Node(const vec3& min_, const vec3& max_) noexcept;
             inline Node(const Node&) noexcept = default; //!< Defaulted copy constructor.
             inline Node(Node&&) noexcept      = default; //!< Defaulted move constructor.
 
@@ -58,7 +58,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Node::Node(const vec3& min_, const vec& max_) noexcept
+        inline Node::Node(const vec3& min_, const vec3& max_) noexcept
           : geom::shape::Aabb(min_, max_)
         {
             PRE(min_.x < max_.x);
