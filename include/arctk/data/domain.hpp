@@ -270,7 +270,7 @@ namespace arc //! arctk namespace
          *
          *  @return Raw pointer to the domain packet and an axis-aligned bounding box of the packet's sub-domain.
          */
-        inline std::pair<Packet*, geom::shape::Aabb> Domain::packet(const vec3& pos_) noexcept;
+        inline std::pair<Packet*, geom::shape::Aabb> Domain::packet(const vec3& pos_) noexcept
         {
             PRE(contains(pos_));
 
