@@ -53,6 +53,18 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Distribution(T min_, T max_) noexcept;
+            inline Distribution(const Distribution&) noexcept = default; //!< Defaulted copy constructor.
+            inline Distribution(Distribution&&) noexcept      = default; //!< Defaulted move constructor.
+
+            //  -- Destructors --
+            virtual inline ~Distribution() noexcept = default;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Distribution& operator=(const Distribution&) noexcept = delete; //!< Deleted copy operator. @return Reference to copied object.
+            inline Distribution& operator=(Distribution&&) noexcept = delete;      //!< Deleted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
@@ -84,6 +96,13 @@ namespace arc //! arctk namespace
         {
             PRE(min_ < max_);
         }
+
+
+        //  == INSTANTIATION ==
+        //  -- Destructors --
+        template <typename T>
+        inline Distribution<T>::~Distribution() noexcept = default;
+
 
 
         //  == METHODS ==
