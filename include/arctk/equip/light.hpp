@@ -20,6 +20,7 @@
 
 //  -- Arctk --
 #include <arctk/geom.hpp>
+#include <arctk/random.hpp>
 
 
 
@@ -43,7 +44,8 @@ namespace arc //! arctk namespace
             const std::string& _name;
 
             //  -- Structure --
-            const geom::Shape& _surf;
+            const geom::Shape&                 _surf;
+            const random::distribution::Linear _spec;
 
 
             //  == INSTANTIATION ==
