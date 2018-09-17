@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
                 const vec3 _centre;
 
                 //  -- Children --
-                const std::array<std::unique_ptr<Node>, 8> _childs;
+                const std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> _childs;
 
 
                 //  == INSTANTIATION ==
