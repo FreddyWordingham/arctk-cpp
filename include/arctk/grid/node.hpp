@@ -52,6 +52,12 @@ namespace arc //! arctk namespace
             //  -- Assignment --
             inline Node& operator=(const Node&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
             inline Node& operator=(Node&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
+
+
+            //  == METHODS ==
+          public:
+            //  -- Retrieval --
+            virtual Leaf const* leaf(const vec3& pos_) const noexcept = 0;
         };
 
 
