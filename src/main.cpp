@@ -61,6 +61,7 @@
 #include <arctk/grid.hpp>
 #include <arctk/grid/adaptive.hpp>
 #include <arctk/grid/node.hpp>
+#include <arctk/grid/node/branch.hpp>
 #include <arctk/gui.hpp>
 #include <arctk/gui/actor.hpp>
 #include <arctk/gui/camera.hpp>
