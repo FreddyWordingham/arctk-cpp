@@ -103,7 +103,6 @@
 #include <arctk/phys/material.hpp>
 #include <arctk/phys/material/basic.hpp>
 #include <arctk/phys/material/fluorescent.hpp>
-#include <arctk/phys/optical.hpp>
 #include <arctk/phys/optics.hpp>
 #include <arctk/phys/particle.hpp>
 #include <arctk/random.hpp>
