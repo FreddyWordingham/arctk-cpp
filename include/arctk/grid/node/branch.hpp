@@ -52,7 +52,6 @@ namespace arc //! arctk namespace
                 const std::array<std::unique_ptr<Node>, 8> _childs;
 
 
-
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
