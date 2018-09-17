@@ -54,14 +54,14 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Branch(const vec3& min_, const vec& max_) noexcept;
+                inline Branch(const vec3& min_, const vec3& max_) noexcept;
             };
 
 
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Branch::Branch(const vec3& min_, const vec& max_) noexcept
+            inline Branch::Branch(const vec3& min_, const vec3& max_) noexcept
               : Node(min_, max_)
               , _centre(min_.x + max_.x / 2.0, min_.y + max_.y / 2.0, min_.z + max_.z / 2.0)
             {
