@@ -62,6 +62,14 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Branch::Branch(const vec3& min_, const vec& max_) noexcept
+              : Node(min_, max_)
+              , _centre(min_.x + max_.x / 2.0, min_.y + max_.y / 2.0, min_.z + max_.z / 2.0)
+            {
+                PRE(min_.x < max_.x);
+                PRE(min_.y < max_.y);
+                PRE(min_.z < max_.z);
+            }
 
 
 
