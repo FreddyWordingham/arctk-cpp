@@ -57,6 +57,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline double                min_wavelength() const noexcept;
+            inline double                max_wavelength() const noexcept;
             inline const std::string&    name() const noexcept;
             inline const geom::Shape&    surf() const noexcept;
             inline const phys::Material& mat() const noexcept;
@@ -77,6 +79,16 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        inline double Entity::min_wavelength() const noexcept
+        {
+            return (_mat.min());
+        }
+
+        inline double Entity::max_wavelength() const noexcept
+        {
+            return (_mat.max());
+        }
+
         inline const std::string& Entity::name() const noexcept
         {
             return (_name);
