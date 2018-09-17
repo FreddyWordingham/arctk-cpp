@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Light(const std::string& name_, const geom::Shape& surf_, const random::distribution::Linear& spec_) noexcept;
+            inline Light(const std::string& name_, const geom::Shape& surf_, const random::distribution::Linear<double>& spec_) noexcept;
 
 
             //  == METHODS ==
