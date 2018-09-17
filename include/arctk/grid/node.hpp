@@ -16,7 +16,9 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
+#include <arctk/math.hpp>
 
 
 
@@ -37,7 +39,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Node() noexcept            = default;
+            inline Node(const vec3& min_, const vec& max_) noexcept;
             inline Node(const Node&) noexcept = default; //!< Defaulted copy constructor.
             inline Node(Node&&) noexcept      = default; //!< Defaulted move constructor.
 
@@ -55,6 +57,16 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
+        //  -- Constructors --
+        inline Node::Node(const vec3& min_, const vec& max_) noexcept
+          : geom::shape::Aabb(min_, max_)
+        {
+            PRE(min_.x < max_.x);
+            PRE(min_.y < max_.y);
+            PRE(min_.z < max_.z);
+        }
+
+
         //  -- Destructors --
         inline Node::~Node() noexcept = default;
 
