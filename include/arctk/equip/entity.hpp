@@ -56,8 +56,9 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const std::string& name() const noexcept;
-            inline const geom::Shape& surf() const noexcept;
+            inline const std::string&    name() const noexcept;
+            inline const geom::Shape&    surf() const noexcept;
+            inline const phys::Material& mat() const noexcept;
         };
 
 
@@ -77,6 +78,11 @@ namespace arc //! arctk namespace
         inline const geom::Shape& Entity::surf() const noexcept
         {
             return (_surf);
+        }
+
+        inline const phys::Material& Entity::mat() const noexcept
+        {
+            return (_mat);
         }
 
 
