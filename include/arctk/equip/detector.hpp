@@ -46,14 +46,14 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Detector(const std::string& name_, const geom::Shape& shape_) const noexcept;
+            inline Detector(const std::string& name_, const geom::Shape& shape_) noexcept;
         };
 
 
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Detector::Detector(const std::string& name_, const geom::Shape& shape_) const noexcept
+        inline Detector::Detector(const std::string& name_, const geom::Shape& shape_) noexcept
           : geom::Shape(shape_)
           , _name(name_)
         {
