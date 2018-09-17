@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
             inline Packet const*                packet(size_t index_x_, size_t index_y_, size_t index_z_) const noexcept;
 
             //  -- Retrieval --
-            inline Packet* packet(const vec3& pos_) noexcept;
+            inline std::pair<Packet*, geom::shape::Aabb> packet(const vec3& pos_) noexcept;
 
             //  -- Saving --
             template <typename T>
@@ -257,7 +257,8 @@ namespace arc //! arctk namespace
 
         //  -- Retrieval --
         /**
-         *  Get a raw pointer to a domain packet corresponding to a position within the domain.
+         *  Retrieve a raw pointer to a domain packet corresponding to a position within the domain.
+         *  Also get a axis-aligned bounding box outlining the bounds of the packet's sub-domain.
          *
          *  @param  pos_    Position of the point.
          *
@@ -267,9 +268,9 @@ namespace arc //! arctk namespace
          *  @post   index_y must be less than _res[index::dim::cartesian::Y].
          *  @post   index_z must be less than _res[index::dim::cartesian::Z].
          *
-         *  @return Raw pointer to the domain packet.
+         *  @return Raw pointer to the domain packet and an axis-aligned bounding box of the packet's sub-domain.
          */
-        inline Packet* Domain::packet(const vec3& pos_) noexcept
+        inline std::pair<Packet*, geom::shape::Aabb> Domain::packet(const vec3& pos_) noexcept;
         {
             PRE(contains(pos_));
 
@@ -278,11 +279,13 @@ namespace arc //! arctk namespace
             const auto index_y = static_cast<size_t>(rel_pos.y / _packet_size.y);
             const auto index_z = static_cast<size_t>(rel_pos.z / _packet_size.z);
 
+            const vec3 min = -min + vec3(_packet_size.x * index_x, _packet_size.y * index_y, _packet_size.z * index_z);
+
             POST(index_x < _res[index::dim::cartesian::X]);
             POST(index_y < _res[index::dim::cartesian::Y]);
             POST(index_z < _res[index::dim::cartesian::Z]);
 
-            return (_packets[index_x][index_y][index_z].get());
+            return (std::pair<Packet*, geom::shape::Aabb>(_packets[index_x][index_y][index_z].get(), geom::shape::Aabb(min, min + _packet_size)));
         }
 
 
