@@ -37,12 +37,21 @@ namespace arc //! arctk namespace
 
 
 
+            //  == CLASS PROTOTYPES ==
+            class Branch;
+
+
+
             //  == CLASS ==
             /**
              *  Leaf node class.
              */
             class Leaf : public Node
             {
+                //  == FRIENDS ==
+                friend Branch;
+
+
                 //  == FIELDS ==
               private:
                 //  -- Content --
