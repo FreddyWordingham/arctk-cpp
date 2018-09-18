@@ -116,7 +116,7 @@ namespace arc //! arctk namespace
                 {
                     for (size_t j = 0; j <= 1; ++j)
                     {
-                        for (size_t k = 0; k <= k; ++k)
+                        for (size_t k = 0; k <= 1; ++k)
                         {
                             const vec3 min(_min.x + (i * size.x), _min.y + (j * size.y), _min.z + (k * size.z));
                             const vec3 max = min + size;
