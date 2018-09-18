@@ -99,7 +99,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            inline size_t num_cells() const noexcept
+            inline size_t Leaf::num_cells() const noexcept
             {
                 return (1);
             }
