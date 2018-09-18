@@ -68,11 +68,12 @@ namespace arc //! arctk namespace
                 inline const vec3& norm() const noexcept;
 
                 //  -- Properties --
-                inline vec3   min() const noexcept override;
-                inline vec3   max() const noexcept override;
-                inline double area() const noexcept override;
-                inline double vol() const noexcept override;
-                inline bool   closed() const noexcept override;
+                inline vec3                      min() const noexcept override;
+                inline vec3                      max() const noexcept override;
+                inline double                    area() const noexcept override;
+                inline double                    vol() const noexcept override;
+                inline bool                      closed() const noexcept override;
+                inline std::vector<const Shape*> shape_list() const noexcept override;
 
                 //  -- Emission --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
@@ -232,6 +233,11 @@ namespace arc //! arctk namespace
             inline bool Circle::closed() const noexcept
             {
                 return (false);
+            }
+
+            inline std::vector<const Shape*> Circle::shape_list() const noexcept
+            {
+                return (std::vector<const Shape*>({this}));
             }
 
 
