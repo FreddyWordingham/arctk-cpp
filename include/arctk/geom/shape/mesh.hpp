@@ -678,7 +678,7 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < _tris.size(); ++i)
                 {
-                    list.emplace_back(_tris[i]);
+                    list.emplace_back(&_tris[i]);
                 }
 
                 return (list);
