@@ -56,7 +56,14 @@ namespace arc //! arctk namespace
               public:
                 //  -- Constructors --
                 inline Branch(const vec3& min_, const vec3& max_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_,
-                              const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_) noexcept;
+                              const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_, const size_t cur_depth_, const size_t max_depth_, const size_t target_shapes_) noexcept;
+
+                //  -- Initialisation --
+                std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> init_childs(const std::vector<std::pair<const geom::Shape&, const equip::Light&>>&    lights_,
+                                                                                               const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>&   entities_,
+                                                                                               const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_, const size_t depth_, const size_t max_depth_,
+                                                                                               const size_t target_shapes_) const noexcept;
+                std::vector<std::pair<const geom::Shape&, const equip::Light&>>    init_lights_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_) const noexcept;
 
 
                 //  == METHODS ==
@@ -89,6 +96,64 @@ namespace arc //! arctk namespace
                 {
                     PRE(detectors_[i].first.intersect_vol(*this));
                 }
+            }
+
+            //  -- Initialisation --
+            std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> Branch::init_childs(const std::vector<std::pair<const geom::Shape&, const equip::Light&>>&    lights_,
+                                                                                                   const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>&   entities_,
+                                                                                                   const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_, const size_t cur_depth_, const size_t max_depth_,
+                                                                                                   const size_t target_shapes_) const noexcept
+            {
+                std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> childs;
+
+                const vec3 half_width          = half_width();
+                const bool depth_limit_reached = (cur_depth_ + 1) >= max_depth_;
+
+                for (size_t i = 0; i <= 1; ++i)
+                {
+                    for (size_t j = 0; j <= 1; ++j)
+                    {
+                        for (size_t k = 0; k <= k; ++k)
+                        {
+                            const vec3 min(_min.x + (i * _half_width.x), _min.y + (j * _half_width.y), _min.z + (k * _half_width.z));
+                            const vec3 max = min + half_width;
+
+                            const geom::shape::Aabb box(min, max);
+
+                            const std::vector<std::pair<const geom::Shape&, const equip::Light&>>    lights    = init_lights(box, lights_);
+                            const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>   entities  = init_entities(box, entities_);
+                            const std::vector<std::pair<const geom::Shape&, const equip::Detector&>> detectors = init_detectors(box, detectors_);
+
+                            const size_t total_primitives = lights.size() + entities.size() + detectors.size();
+
+                            if (depth_limit_reached || (total_primitives <= target_shapes_))
+                            {
+                                childs[i][j][k] = std::unique_ptr<Node>(Leaf(min, max, lights, entities, detectors));
+                            }
+                            else
+                            {
+                                childs[i][j][k] = std::unique_ptr<Node>(Branch(min, max, lights, entities, detectors));
+                            }
+                        }
+                    }
+                }
+
+                return (childs);
+            }
+
+            std::vector<std::pair<const geom::Shape&, const equip::Light&>> Branch::init_lights_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_) const noexcept
+            {
+                std::vector<std::pair<const geom::Shape&, const equip::Light&>> lights;
+
+                for (size_t i = 0; i < lights_.size(); ++i)
+                {
+                    if (lights_[i].first.intersect_vol(box_))
+                    {
+                        lights.emplace_back(lights_[l]);
+                    }
+                }
+
+                return (lights);
             }
 
 
