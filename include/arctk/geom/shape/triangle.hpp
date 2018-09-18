@@ -148,7 +148,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            inline std::vector<const Shape*> Plane::shape_list() const noexcept
+            inline std::vector<const Shape*> Triangle::shape_list() const noexcept
             {
                 return (std::vector<const Shape*>({this}));
             }
