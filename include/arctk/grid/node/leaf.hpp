@@ -80,15 +80,15 @@ namespace arc //! arctk namespace
                 PRE(min_.z < max_.z);
                 for (size_t i = 0; i < lights_.size(); ++i)
                 {
-                    PRE(contained(lights_[i].first));
+                    PRE(lights_[i].first.intersect_vol(*this));
                 }
                 for (size_t i = 0; i < entities_.size(); ++i)
                 {
-                    PRE(contained(entities_[i].first));
+                    PRE(entities_[i].first.intersect_vol(*this));
                 }
                 for (size_t i = 0; i < detectors_.size(); ++i)
                 {
-                    PRE(contained(detectors_[i].first));
+                    PRE(detectors_[i].first.intersect_vol(*this));
                 }
             }
 
