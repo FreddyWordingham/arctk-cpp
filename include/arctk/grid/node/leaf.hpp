@@ -15,8 +15,13 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <utility>
+#include <vector>
+
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/equip.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
 
@@ -38,6 +43,12 @@ namespace arc //! arctk namespace
              */
             class Leaf : public Node
             {
+                //  == FIELDS ==
+              private:
+                //  -- Content --
+                const std::vector<std::pair<const geom::Shape&, const equip::Entity&>> _ents;
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
