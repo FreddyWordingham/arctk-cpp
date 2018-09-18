@@ -66,13 +66,14 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Properties --
-                inline vec3   min() const noexcept override;
-                inline vec3   max() const noexcept override;
-                inline double area() const noexcept override;
-                inline double vol() const noexcept override;
-                inline bool   closed() const noexcept override;
-                inline vec3   centre() const noexcept;
-                inline vec3   half_width() const noexcept;
+                inline vec3                min() const noexcept override;
+                inline vec3                max() const noexcept override;
+                inline double              area() const noexcept override;
+                inline double              vol() const noexcept override;
+                inline bool                closed() const noexcept override;
+                inline std::vector<Shape*> shape_list() const noexcept override;
+                inline vec3                centre() const noexcept;
+                inline vec3                half_width() const noexcept;
 
                 //  -- Emission --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
@@ -220,6 +221,11 @@ namespace arc //! arctk namespace
             inline bool Aabb::closed() const noexcept
             {
                 return (true);
+            }
+
+            inline std::vector<Shape*> Aabb::shape_list() const noexcept
+            {
+                return (std::vector<Shape*>({this}));
             }
 
             /**
