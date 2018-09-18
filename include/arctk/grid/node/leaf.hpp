@@ -60,6 +60,9 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline size_t num_cells() const noexcept override;
+
                 //  -- Retrieval --
                 inline Leaf const* leaf(const vec3& pos_) const noexcept;
             };
@@ -95,6 +98,12 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Getters --
+            inline size_t num_cells() const noexcept
+            {
+                return (1);
+            }
+
             //  -- Retrieval --
             inline Leaf const* Leaf::leaf(const vec3& pos_) const noexcept
             {
