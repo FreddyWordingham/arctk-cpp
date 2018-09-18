@@ -55,7 +55,8 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Branch(const vec3& min_, const vec3& max_) noexcept;
+                inline Branch(const vec3& min_, const vec3& max_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_,
+                              const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_) noexcept;
 
 
                 //  == METHODS ==
@@ -68,7 +69,8 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Branch::Branch(const vec3& min_, const vec3& max_) noexcept
+            inline Branch::Branch(const vec3& min_, const vec3& max_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_,
+                                  const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_) noexcept
               : Node(min_, max_)
               , _centre(min_.x + max_.x / 2.0, min_.y + max_.y / 2.0, min_.z + max_.z / 2.0)
             {
