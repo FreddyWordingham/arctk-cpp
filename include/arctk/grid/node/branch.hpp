@@ -206,7 +206,7 @@ namespace arc //! arctk namespace
                     {
                         for (size_t k = 0; k <= 1; ++k)
                         {
-                            num_contained += _childs[i][j][k].num_cells();
+                            num_contained += _childs[i][j][k]->num_cells();
                         }
                     }
                 }
