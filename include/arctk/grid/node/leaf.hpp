@@ -47,6 +47,7 @@ namespace arc //! arctk namespace
               private:
                 //  -- Content --
                 const std::vector<std::pair<const geom::Shape&, const equip::Entity&>> _ents;
+                const std::vector<std::pair<const geom::Shape&, const equip::Light&>>  _lights;
 
 
                 //  == INSTANTIATION ==
