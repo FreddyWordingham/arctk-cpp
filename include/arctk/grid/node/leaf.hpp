@@ -54,7 +54,8 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Leaf(const vec3& min_, const vec3& max_) noexcept;
+                inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& _entities, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& _lights,
+                            const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& _detectors) noexcept;
 
 
                 //  == METHODS ==
@@ -67,8 +68,12 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Leaf::Leaf(const vec3& min_, const vec3& max_) noexcept
+            inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_,
+                              const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_) noexcept
               : Node(min_, max_)
+              , _entities(entities_)
+              , _lights(lights_)
+              , _detectors(detectors_)
             {
                 PRE(min_.x < max_.x);
                 PRE(min_.y < max_.y);
