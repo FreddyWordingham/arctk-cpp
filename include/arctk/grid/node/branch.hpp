@@ -133,7 +133,7 @@ namespace arc //! arctk namespace
                             }
                             else
                             {
-                                childs[i][j][k] = std::make_unique<Node>(Branch(min, max, lights, entities, detectors));
+                                childs[i][j][k] = std::make_unique<Node>(Branch(min, max, lights, entities, detectors, cur_depth_ + 1, max_depth_, target_shapes_));
                             }
                         }
                     }
