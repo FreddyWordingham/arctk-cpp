@@ -64,6 +64,8 @@ namespace arc //! arctk namespace
                                                                                                const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_, const size_t depth_, const size_t max_depth_,
                                                                                                const size_t target_shapes_) const noexcept;
                 std::vector<std::pair<const geom::Shape&, const equip::Light&>>    init_lights_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_) const noexcept;
+                std::vector<std::pair<const geom::Shape&, const equip::Entity&>>   init_entities_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_) const noexcept;
+                std::vector<std::pair<const geom::Shape&, const equip::Detector&>> init_detectors_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_) const noexcept;
 
 
                 //  == METHODS ==
@@ -121,9 +123,9 @@ namespace arc //! arctk namespace
 
                             const geom::shape::Aabb box(min, max);
 
-                            const std::vector<std::pair<const geom::Shape&, const equip::Light&>>    lights    = init_lights(box, lights_);
-                            const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>   entities  = init_entities(box, entities_);
-                            const std::vector<std::pair<const geom::Shape&, const equip::Detector&>> detectors = init_detectors(box, detectors_);
+                            const std::vector<std::pair<const geom::Shape&, const equip::Light&>>    lights    = init_lights_intersect(box, lights_);
+                            const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>   entities  = init_entities_intersect(box, entities_);
+                            const std::vector<std::pair<const geom::Shape&, const equip::Detector&>> detectors = init_detectors_intersect(box, detectors_);
 
                             const size_t total_primitives = lights.size() + entities.size() + detectors.size();
 
@@ -155,6 +157,36 @@ namespace arc //! arctk namespace
                 }
 
                 return (lights);
+            }
+
+            std::vector<std::pair<const geom::Shape&, const equip::Entity&>> Branch::init_entities_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_) const noexcept
+            {
+                std::vector<std::pair<const geom::Shape&, const equip::Entity&>> entities;
+
+                for (size_t i = 0; i < entities_.size(); ++i)
+                {
+                    if (entities_[i].first.intersect_vol(box_))
+                    {
+                        entities.emplace_back(entities_[i]);
+                    }
+                }
+
+                return (entities);
+            }
+
+            std::vector<std::pair<const geom::Shape&, const equip::Detector&>> Branch::init_detectors_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_) const noexcept
+            {
+                std::vector<std::pair<const geom::Shape&, const equip::Detector&>> detectors;
+
+                for (size_t i = 0; i < detectors_.size(); ++i)
+                {
+                    if (detectors_[i].first.intersect_vol(box_))
+                    {
+                        detectors.emplace_back(detectors_[i]);
+                    }
+                }
+
+                return (detectors);
             }
 
 
