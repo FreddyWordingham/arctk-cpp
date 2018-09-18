@@ -831,6 +831,11 @@ namespace arc //! arctk namespace
                 return (_closed);
             }
 
+            inline std::vector<const Shape*> Mesh::shape_list() const noexcept
+            {
+                return (std::vector<const Shape*>({this}));
+            }
+
 
             //  -- Emission --
             /**
