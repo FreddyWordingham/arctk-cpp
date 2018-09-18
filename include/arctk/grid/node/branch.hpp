@@ -129,11 +129,11 @@ namespace arc //! arctk namespace
 
                             if (depth_limit_reached || (total_primitives <= target_shapes_))
                             {
-                                childs[i][j][k] = std::make_unique<Node>(Leaf(min, max, lights, entities, detectors));
+                                childs[i][j][k] = std::unique_ptr<Node>(Leaf(min, max, lights, entities, detectors));
                             }
                             else
                             {
-                                childs[i][j][k] = std::make_unique<Node>(Branch(min, max, lights, entities, detectors, cur_depth_ + 1, max_depth_, target_shapes_));
+                                childs[i][j][k] = std::unique_ptr<Node>(Branch(min, max, lights, entities, detectors, cur_depth_ + 1, max_depth_, target_shapes_));
                             }
                         }
                     }
@@ -150,7 +150,7 @@ namespace arc //! arctk namespace
                 {
                     if (lights_[i].first.intersect_vol(box_))
                     {
-                        lights.emplace_back(lights_[l]);
+                        lights.emplace_back(lights_[i]);
                     }
                 }
 
