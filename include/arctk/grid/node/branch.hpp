@@ -107,7 +107,7 @@ namespace arc //! arctk namespace
             {
                 std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> childs;
 
-                const vec3 half_width          = half_width();
+                const vec3 size                = half_width();
                 const bool depth_limit_reached = (cur_depth_ + 1) >= max_depth_;
 
                 for (size_t i = 0; i <= 1; ++i)
@@ -116,8 +116,8 @@ namespace arc //! arctk namespace
                     {
                         for (size_t k = 0; k <= k; ++k)
                         {
-                            const vec3 min(_min.x + (i * _half_width.x), _min.y + (j * _half_width.y), _min.z + (k * _half_width.z));
-                            const vec3 max = min + half_width;
+                            const vec3 min(_min.x + (i * size.x), _min.y + (j * size.y), _min.z + (k * size.z));
+                            const vec3 max = min + size;
 
                             const geom::shape::Aabb box(min, max);
 
