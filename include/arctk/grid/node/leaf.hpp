@@ -37,21 +37,12 @@ namespace arc //! arctk namespace
 
 
 
-            //  == CLASS PROTOTYPES ==
-            class Branch;
-
-
-
             //  == CLASS ==
             /**
              *  Leaf node class.
              */
             class Leaf : public Node
             {
-                //  == FRIENDS ==
-                friend Branch;
-
-
                 //  == FIELDS ==
               private:
                 //  -- Content --
@@ -61,7 +52,7 @@ namespace arc //! arctk namespace
 
 
                 //  == INSTANTIATION ==
-              private:
+              public:
                 //  -- Constructors --
                 inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_,
                             const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_) noexcept;
