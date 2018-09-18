@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline std::vector<const Shape*> shape_list() const noexcept;
+                inline std::vector<const Shape*> shape_list() const noexcept override;
 
                 //  -- Properties --
                 inline vec3                       min() const noexcept override;
