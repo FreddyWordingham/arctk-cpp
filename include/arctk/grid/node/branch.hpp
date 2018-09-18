@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
                 inline size_t num_cells() const noexcept override;
 
                 //  -- Retrieval --
-                inline Leaf const* leaf(const vec3& pos_) const noexcept;
+                inline Leaf const* leaf(const vec3& pos_) const noexcept override;
             };
 
 
