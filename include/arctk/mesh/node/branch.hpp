@@ -314,6 +314,12 @@ namespace arc //! arctk namespace
                 return (max_shapes);
             }
 
+            /**
+             *  Get the total number of nodes related to this node.
+             *  Includes this node in the count.
+             *
+             *  @return Total number of nodes related to this node.
+             */
             inline size_t Branch::num_nodes() const noexcept
             {
                 size_t num_contained = 0;
