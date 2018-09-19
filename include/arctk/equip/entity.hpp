@@ -51,7 +51,8 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Entity(std::unique_ptr<geom::Shape>& surf_, std::unique_ptr<phys::Material>& mat_) noexcept;
+            template <typename T, typename S>
+            inline Entity(const T&& surf_, const S&& mat_) noexcept;
 
 
             //  == METHODS ==
@@ -75,9 +76,10 @@ namespace arc //! arctk namespace
          *
          *  @pre    surf_ must be a closed surface.
          */
-        inline Entity::Entity(std::unique_ptr<geom::Shape>& surf_, std::unique_ptr<phys::Material>& mat_) noexcept
-          : _surf(std::move(surf_))
-          , _mat(std::move(mat_))
+        template <typename T, typename S>
+        inline Entity::Entity(const T&& surf_, const S&& mat_) noexcept
+          : _surf(std::make_unique<T>(surf_))
+          , _mat(std::make_unique<S>(mat_))
         {
             PRE(surf_->closed());
         }
