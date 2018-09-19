@@ -58,8 +58,8 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline double                min_wavelength() const noexcept;
             inline double                max_wavelength() const noexcept;
-            inline const geom::Shape&    surf() const noexcept;
-            inline const phys::Material& mat() const noexcept;
+            inline const geom::Shape*    surf() const noexcept;
+            inline const phys::Material* mat() const noexcept;
         };
 
 
@@ -110,9 +110,9 @@ namespace arc //! arctk namespace
          *
          *  @return Const reference to the surface of the entity.
          */
-        inline const geom::Shape& Entity::surf() const noexcept
+        inline const geom::Shape* Entity::surf() const noexcept
         {
-            return (_surf);
+            return (_surf.get());
         }
 
         /**
@@ -120,9 +120,9 @@ namespace arc //! arctk namespace
          *
          *  @return Const reference to the material of the entity.
          */
-        inline const phys::Material& Entity::mat() const noexcept
+        inline const phys::Material* Entity::mat() const noexcept
         {
-            return (_mat);
+            return (_mat.get());
         }
 
 
