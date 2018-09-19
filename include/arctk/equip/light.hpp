@@ -50,7 +50,8 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Light(std::unique_ptr<geom::Shape>& surf_, const random::distribution::Linear<double>& spec_) noexcept;
+            template <typename T>
+            inline Light(const T&& surf_, const random::distribution::Linear<double>& spec_) noexcept;
 
 
             //  == METHODS ==
@@ -71,8 +72,9 @@ namespace arc //! arctk namespace
          *  @param  surf_ Shape forming the emission surface of the light.
          *  @param  spec_ Spectrum used to draw photon wavelength values from.
          */
-        inline Light::Light(std::unique_ptr<geom::Shape>& surf_, const random::distribution::Linear<double>& spec_) noexcept
-          : _surf(std::move(surf_))
+        template <typename T>
+        inline Light::Light(const T&& surf_, const random::distribution::Linear<double>& spec_) noexcept
+          : _surf(std::make_unique<T>(surf_))
           , _spec(spec_)
         {
         }
