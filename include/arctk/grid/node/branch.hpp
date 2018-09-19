@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Positioning --
-                const vec3 _centre;
+                const vec3 _centre; //!< Centre coordinate of the node.
 
                 //  -- Children --
                 const std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> _childs;
