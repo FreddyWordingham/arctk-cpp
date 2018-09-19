@@ -55,6 +55,22 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct an adaptive mesh.
+         *
+         *  @param  min_            Minimum bound of the mesh.
+         *  @param  max_            Maximum bound of the mesh.
+         *  @param  lights_         Vector of lights that may be found within the mesh's bounds.
+         *  @param  entities_       Vector of entities that may be found within the mesh's bounds.
+         *  @param  detectors_      Vector of detectors that may be found within the mesh's bounds.
+         *  @param  max_depth_      Maximum depth the mesh may reach.
+         *  @param  target_shapes_  Target maximum number of shapes to find within each leaf cell of the mesh.
+         *
+         *  @pre    min_.x must be less than max_.x.
+         *  @pre    min_.y must be less than max_.y.
+         *  @pre    min_.z must be less than max_.z.
+         *  @pre    max_depth_ must be positive.
+         */
         inline Adaptive::Adaptive(const vec3& min_, const vec3& max_, std::vector<equip::Light> lights_, std::vector<equip::Entity> entities_, std::vector<equip::Detector> detectors_, const size_t max_depth_, const size_t target_shapes_) noexcept
           : Branch(min_, max_, init_light_shape_list(geom::shape::Aabb(min_, max_), lights_), init_entity_shape_list(geom::shape::Aabb(min_, max_), entities_), init_detector_shape_list(geom::shape::Aabb(min_, max_), detectors_), 0, max_depth_,
                    target_shapes_)
