@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_GRID_NODE_HPP
-#define ARCTK_GRID_NODE_HPP
+#ifndef ARCTK_MESH_NODE_HPP
+#define ARCTK_MESH_NODE_HPP
 
 
 
@@ -99,4 +99,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_GRID_NODE_HPP
+#endif // ARCTK_MESH_NODE_HPP
