@@ -75,12 +75,16 @@ namespace arc //! arctk namespace
          *  @param  mat_    Material to form the entity volume.
          *
          *  @pre    surf_ must be a closed surface.
+         *
+         *  @pre    T must be derived from geom::Shape.
          */
         template <typename T, typename S>
         inline Entity::Entity(const T&& surf_, const S&& mat_) noexcept
           : _surf(std::make_unique<T>(surf_))
           , _mat(std::make_unique<S>(mat_))
         {
+            static_assert(std::is_base_of<geom::Shape, T>::value);
+
             PRE(surf_->closed());
         }
 
