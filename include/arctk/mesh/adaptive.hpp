@@ -21,7 +21,7 @@
 
 //  -- Arctk --
 #include <arctk/math.hpp>
-#include <arctk/mesh/node.hpp>
+#include <arctk/mesh/node/branch.hpp>
 
 
 
@@ -37,14 +37,8 @@ namespace arc //! arctk namespace
         /**
          *  Mesh node base class.
          */
-        class Adaptive : public geom::shape::Aabb
+        class Adaptive : public node::Branch
         {
-            //  -- Positioning --
-            const vec3 _centre; //!< Centre coordinate of the node.
-
-            //  -- Children --
-            const std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> _childs;
-
             //  -- Properties --
             const size_t _max_shapes;
             const size_t _depth;
@@ -53,7 +47,6 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Branch(const vec3& min_, const vec3& max_, std::vector<equip::Light> lights_, std::vector<equip::Entity> entities_, std::vector<equip::Detector> detectors_, const size_t max_depth_, const size_t target_shapes_) noexcept;
 
 
             //  == METHODS ==
