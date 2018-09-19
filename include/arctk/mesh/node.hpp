@@ -82,7 +82,8 @@ namespace arc //! arctk namespace
               noexcept = 0; //!< Get a vector of all the axis-aligned bounding boxes of the leaf nodes descended from this node. @return Vector of all the axis-aligned bounding boxes of the leaf nodes descended from this node.
 
             //  -- Retrieval --
-            virtual node::Leaf const* leaf(const vec3& pos_) const noexcept = 0;
+            virtual node::Leaf const* leaf(const vec3& pos_) const noexcept = 0; //!< Get the pointer to the leaf node corresponding to a given position within this node.    @param  pos_    Position to find the corresponding leaf node for.   @pre    pos_
+                                                                                 //!< must be contained within this node.    @return Pointer to the leaf node corresponding to a given position within this node.
         };
 
 
