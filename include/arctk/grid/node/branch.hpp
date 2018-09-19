@@ -135,7 +135,7 @@ namespace arc //! arctk namespace
 
                     for (size_t j = 0; j < shapes.size(); ++j)
                     {
-                        if (shapes[j].intersect_vol(*this))
+                        if (shapes[j]->intersect_vol(*this))
                         {
                             list.emplace_back(std::make_pair<const geom::Shape&, const equip::Light&>(*shapes[j], lights_));
                         }
@@ -155,7 +155,7 @@ namespace arc //! arctk namespace
 
                     for (size_t j = 0; j < shapes.size(); ++j)
                     {
-                        if (shapes[j].intersect_vol(*this))
+                        if (shapes[j]->intersect_vol(*this))
                         {
                             list.emplace_back(std::make_pair<const geom::Shape&, const equip::Entity&>(*shapes[j], entities_));
                         }
@@ -175,7 +175,7 @@ namespace arc //! arctk namespace
 
                     for (size_t j = 0; j < shapes.size(); ++j)
                     {
-                        if (shapes[j].intersect_vol(*this))
+                        if (shapes[j]->intersect_vol(*this))
                         {
                             list.emplace_back(std::make_pair<const geom::Shape&, const equip::Detector&>(*shapes[j], detectors_));
                         }
