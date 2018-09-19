@@ -89,6 +89,11 @@ namespace arc //! arctk namespace
             return (_spec.min());
         }
 
+        /**
+         *  Get the maximum wavelength that can be emitted by the light.
+         *
+         *  @return maximum wavelength that can be emitted by the light.
+         */
         inline double Light::max_wavelength() const noexcept
         {
             return (_spec.max());
