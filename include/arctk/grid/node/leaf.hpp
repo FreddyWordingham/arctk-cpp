@@ -104,6 +104,7 @@ namespace arc //! arctk namespace
                 return (1);
             }
 
+
             //  -- Retrieval --
             inline Leaf const* Leaf::leaf(const vec3& pos_) const noexcept
             {
