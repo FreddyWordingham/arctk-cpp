@@ -193,7 +193,7 @@ namespace arc //! arctk namespace
              *  Initialise the vector of shape-light pairs which intersect with the node.
              *
              *  @param  box_    Bounding box of the node.
-             *  @param  lights_ Vector of lights that may be found within the mesh's bounds.
+             *  @param  lights_ Vector of lights that are found within the node's bounds.
              *
              *  @return Initialise vector of shape-light pairs which intersect with the node.
              */
@@ -216,7 +216,7 @@ namespace arc //! arctk namespace
              *  Initialise the vector of shape-entity pairs which intersect with the node.
              *
              *  @param  box_        Bounding box of the node.
-             *  @param  entities_   Vector of entities that may be found within the mesh's bounds.
+             *  @param  entities_   Vector of entities that are found within the node's bounds.
              *
              *  @return Initialise vector of shape-entity pairs which intersect with the node.
              */
@@ -239,7 +239,7 @@ namespace arc //! arctk namespace
              *  Initialise the vector of shape-detector pairs which intersect with the node.
              *
              *  @param  box_        Bounding box of the node.
-             *  @param  detectors_  Vector of detectors that may be found within the mesh's bounds.
+             *  @param  detectors_  Vector of detectors that are found within the node's bounds.
              *
              *  @return Initialise vector of shape-detector pairs which intersect with the node.
              */
