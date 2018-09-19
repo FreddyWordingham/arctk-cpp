@@ -82,7 +82,7 @@ namespace arc //! arctk namespace
          */
         inline const geom::Shape* Detector::surf() const noexcept
         {
-            return (_surf);
+            return (_surf.get());
         }
 
 
