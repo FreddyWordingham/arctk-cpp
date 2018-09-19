@@ -77,6 +77,7 @@ namespace arc //! arctk namespace
          *  @pre    surf_ must be a closed surface.
          *
          *  @pre    T must be derived from geom::Shape.
+         *  @pre    S must be derived from phys::Material.
          */
         template <typename T, typename S>
         inline Entity::Entity(const T&& surf_, const S&& mat_) noexcept
@@ -84,6 +85,7 @@ namespace arc //! arctk namespace
           , _mat(std::make_unique<S>(mat_))
         {
             static_assert(std::is_base_of<geom::Shape, T>::value);
+            static_assert(std::is_base_of<phys::Material, S>::value);
 
             PRE(surf_->closed());
         }
