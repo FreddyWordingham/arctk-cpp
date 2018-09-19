@@ -40,6 +40,14 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Movement --
+            /**
+             *  Append the contents of one vector onto another by moving.
+             *
+             *  @tparam T   Type stored by the vectors.
+             *
+             *  @param  dest_   Vector to be appended to.
+             *  @param  source_ Vector to be moved.
+             */
             template <typename T>
             inline void move_append(std::vector<T>& dest_, std::vector<T>& source_) noexcept
             {
