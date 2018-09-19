@@ -122,6 +122,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the maximum depth of this node and any of its descendents.
+             *
+             *  @return Maximum depth of this node and any of its descendents.
+             */
             inline size_t Leaf::max_depth() const noexcept
             {
                 return (_depth);
