@@ -217,7 +217,7 @@ namespace arc //! arctk namespace
                         {
                             if (_childs[i][j][k]->max_depth() > max_depth)
                             {
-                                max_depth = _childs[i][j][k]->max_depth()
+                                max_depth = _childs[i][j][k]->max_depth();
                             }
                         }
                     }
@@ -238,7 +238,7 @@ namespace arc //! arctk namespace
                         {
                             if (_childs[i][j][k]->max_shapes() > max_shapes)
                             {
-                                max_shapes = _childs[i][j][k]->max_shapes()
+                                max_shapes = _childs[i][j][k]->max_shapes();
                             }
                         }
                     }
