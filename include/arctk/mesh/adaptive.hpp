@@ -83,6 +83,14 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
+        /**
+         *  Initialise the vector of shape-light pairs that are located within the bounds of the mesh.
+         *
+         *  @param  box_    Bounding box of the mesh.
+         *  @param  lights_ Vector of lights that may be found within the mesh's bounds.
+         *
+         *  @return Initialised vector of shape-light pairs that are located within the bounds of the mesh.
+         */
         std::vector<std::pair<const geom::Shape&, const equip::Light&>> Adaptive::init_light_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Light>& lights_) const noexcept
         {
             std::vector<std::pair<const geom::Shape&, const equip::Light&>> list;
