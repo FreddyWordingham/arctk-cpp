@@ -113,6 +113,11 @@ namespace arc //! arctk namespace
             return (_surf);
         }
 
+        /**
+         *  Get a const reference to the material of the entity.
+         *
+         *  @return Const reference to the material of the entity.
+         */
         inline const phys::Material& Entity::mat() const noexcept
         {
             return (_mat);
