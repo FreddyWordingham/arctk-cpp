@@ -110,6 +110,7 @@ namespace arc //! arctk namespace
 
             inline size_t Leaf::max_shapes() const noexcept
             {
+                return (_lights.size() + _entities.size() + _detectors.size());
             }
 
             inline size_t Leaf::num_nodes() const noexcept
