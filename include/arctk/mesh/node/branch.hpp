@@ -74,6 +74,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
+                inline size_t                         max_depth() const noexcept override;
+                inline size_t                         max_shapes() const noexcept override;
                 inline size_t                         num_nodes() const noexcept override;
                 inline std::vector<geom::shape::Aabb> boxes() const noexcept override;
 
@@ -203,6 +205,45 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            inline size_t Branch::max_depth() const noexcept
+            {
+                size_t max_depth = 0;
+
+                for (size_t i = 0; i <= 1; ++i)
+                {
+                    for (size_t j = 0; j <= 1; ++j)
+                    {
+                        for (size_t k = 0; k <= 1; ++k)
+                        {
+                            if (_childs[i][j][k].max_depth() > max_depth)
+                            {
+                                max_depth = _childs[i][j][k].max_depth()
+                            }
+                        }
+                    }
+                }
+
+                return (max_depth);
+            }
+
+            inline size_t Branch::max_shapes() const noexcept
+            {
+                size_t max_shapes = 0;
+
+                for (size_t i = 0; i <= 1; ++i)
+                {
+                    for (size_t j = 0; j <= 1; ++j)
+                    {
+                        for (size_t k = 0; k <= 1; ++k)
+                        {
+                            num_contained += _childs[i][j][k]->num_nodes();
+                        }
+                    }
+                }
+
+                return (max_shapes);
+            }
+
             inline size_t Branch::num_nodes() const noexcept
             {
                 size_t num_contained = 0;
