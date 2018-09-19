@@ -78,7 +78,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline size_t                         num_cells() const noexcept override;
+                inline size_t                         num_nodes() const noexcept override;
                 inline std::vector<geom::shape::Aabb> boxes() const noexcept override;
 
                 //  -- Retrieval --
@@ -275,7 +275,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            inline size_t Branch::num_cells() const noexcept
+            inline size_t Branch::num_nodes() const noexcept
             {
                 size_t num_contained = 0;
 
@@ -285,7 +285,7 @@ namespace arc //! arctk namespace
                     {
                         for (size_t k = 0; k <= 1; ++k)
                         {
-                            num_contained += _childs[i][j][k]->num_cells();
+                            num_contained += _childs[i][j][k]->num_nodes();
                         }
                     }
                 }
