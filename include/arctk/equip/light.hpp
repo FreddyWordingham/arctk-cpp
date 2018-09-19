@@ -63,6 +63,12 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a light from an emission surface and spectrum.
+         *
+         *  @param  surf_ Shape forming the emission surface of the light.
+         *  @param  spec_ Spectrum used to draw photon wavelength values from.
+         */
         inline Light::Light(const geom::Shape& surf_, const random::distribution::Linear<double>& spec_) noexcept
           : _surf(surf_)
           , _spec(spec_)
