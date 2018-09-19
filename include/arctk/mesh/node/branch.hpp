@@ -189,6 +189,14 @@ namespace arc //! arctk namespace
                 return (childs);
             }
 
+            /**
+             *  Initialise the vector of shape-light pairs which intersect with the node.
+             *
+             *  @param  box_    Bounding box of the node.
+             *  @param  lights_ Vector of lights that may be found within the mesh's bounds.
+             *
+             *  @return Initialise vector of shape-light pairs which intersect with the node.
+             */
             std::vector<std::pair<const geom::Shape&, const equip::Light&>> Branch::init_lights_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_) const noexcept
             {
                 std::vector<std::pair<const geom::Shape&, const equip::Light&>> lights;
