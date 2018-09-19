@@ -70,6 +70,8 @@ namespace arc //! arctk namespace
         /**
          *  Construct a light from an emission surface and spectrum.
          *
+         *  @tparam T   Type used to form the surface.
+         *
          *  @param  surf_ Shape forming the emission surface of the light.
          *  @param  spec_ Spectrum used to draw photon wavelength values from.
          *
