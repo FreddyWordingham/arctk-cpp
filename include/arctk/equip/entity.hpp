@@ -56,7 +56,6 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline double                min_wavelength() const noexcept;
             inline double                max_wavelength() const noexcept;
-            inline const std::string&    name() const noexcept;
             inline const geom::Shape&    surf() const noexcept;
             inline const phys::Material& mat() const noexcept;
         };
@@ -83,11 +82,6 @@ namespace arc //! arctk namespace
         inline double Entity::max_wavelength() const noexcept
         {
             return (_mat.max());
-        }
-
-        inline const std::string& Entity::name() const noexcept
-        {
-            return (_name);
         }
 
         inline const geom::Shape& Entity::surf() const noexcept
