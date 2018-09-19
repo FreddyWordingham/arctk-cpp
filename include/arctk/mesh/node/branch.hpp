@@ -23,8 +23,8 @@
 #include <arctk/debug.hpp>
 #include <arctk/equip.hpp>
 #include <arctk/geom.hpp>
-#include <arctk/grid/node/leaf.hpp>
 #include <arctk/math.hpp>
+#include <arctk/mesh/node/leaf.hpp>
 #include <arctk/utl.hpp>
 
 
