@@ -306,7 +306,7 @@ namespace arc //! arctk namespace
                         {
                             std::vector<geom::shape::Aabb> child_boxes = _childs[i][j][k]->boxes();
 
-                            utl::manip::move_append(&boxes, &child_boxes);
+                            utl::manip::move_append(boxes, child_boxes);
                         }
                     }
                 }
