@@ -47,6 +47,12 @@ namespace arc //! arctk namespace
          */
         class Node : public geom::shape::Aabb
         {
+            //  == FIELDS ==
+          private:
+            //  -- Properties --
+            const size_t _depth;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
