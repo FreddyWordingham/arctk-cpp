@@ -41,7 +41,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Structure --
-            const geom::Shape&                         _surf;
+            const geom::Shape&                         _surf; //!< Shape forming the emission surface of the light.
             const random::distribution::Linear<double> _spec;
 
 
