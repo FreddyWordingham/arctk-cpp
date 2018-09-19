@@ -72,6 +72,8 @@ namespace arc //! arctk namespace
          *
          *  @param  surf_ Shape forming the emission surface of the light.
          *  @param  spec_ Spectrum used to draw photon wavelength values from.
+         *
+         *  @pre    T must be derived from geom::Shape.
          */
         template <typename T>
         inline Light::Light(const T&& surf_, const random::distribution::Linear<double>& spec_) noexcept
