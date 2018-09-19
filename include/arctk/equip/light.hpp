@@ -79,6 +79,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the minimum wavelength that can be emitted by the light.
+         *
+         *  @return Minimum wavelength that can be emitted by the light.
+         */
         inline double Light::min_wavelength() const noexcept
         {
             return (_spec.min());
