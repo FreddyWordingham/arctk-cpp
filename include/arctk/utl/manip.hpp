@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
                 {
                     dest_->reserve(dest_->size() + source_->size());
 
-                    std::move(std::begin(&source_), std::end(&source_), std::back_inserter(&dest_));
+                    std::move(std::begin(*source_), std::end(*source_), std::back_inserter(*dest_));
 
                     source_->clear();
                 }
