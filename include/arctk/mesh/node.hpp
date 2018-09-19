@@ -68,8 +68,10 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            virtual size_t                         num_nodes() const noexcept = 0;
-            virtual std::vector<geom::shape::Aabb> boxes() const noexcept     = 0;
+            virtual size_t                         num_nodes() const noexcept  = 0;
+            virtual size_t                         max_shapes() const noexcept = 0;
+            virtual size_t                         max_depth() const noexcept  = 0;
+            virtual std::vector<geom::shape::Aabb> boxes() const noexcept      = 0;
 
             //  -- Retrieval --
             virtual node::Leaf const* leaf(const vec3& pos_) const noexcept = 0;
