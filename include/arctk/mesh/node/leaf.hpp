@@ -77,26 +77,27 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             /**
              *
-             * @param min_
-             * @param max_
-             * @param lights_
-             * @param entities_
-             * @param detectors_
-             * @param cur_depth_
+             *  @param  min_            Minimum bound of the node.
+             *  @param  max_            Maximum bound of the node.
+             *  @param  lights_         Vector of lights that are found within the node's bounds.
+             *  @param  entities_       Vector of entities that are found within the node's bounds.
+             *  @param  detectors_      Vector of detectors that are found within the node's bounds.
+             *  @param  cur_depth_      Current depth of the node.
+
              * @return
              */
 
             /**
              *  Construct a branch node.
              *
-             *  @param  min_            Minimum bound of the mesh.
-             *  @param  max_            Maximum bound of the mesh.
-             *  @param  lights_         Vector of lights that may be found within the mesh's bounds.
-             *  @param  entities_       Vector of entities that may be found within the mesh's bounds.
-             *  @param  detectors_      Vector of detectors that may be found within the mesh's bounds.
+             *  @param  min_            Minimum bound of the node.
+             *  @param  max_            Maximum bound of the node.
+             *  @param  lights_         Vector of lights that are found within the node's bounds.
+             *  @param  entities_       Vector of entities that are found within the node's bounds.
+             *  @param  detectors_      Vector of detectors that are found within the node's bounds.
              *  @param  cur_depth_      Current depth of the node.
              *  @param  max_depth_      Maximum depth the mesh may reach.
-             *  @param  target_shapes_  Target maximum number of shapes to find within each leaf cell of the mesh.
+             *  @param  target_shapes_  Target maximum number of shapes to find within each leaf node of the mesh.
              *
              *  @pre    min_.x must be less than max_.x.
              *  @pre    min_.y must be less than max_.y.
@@ -105,7 +106,6 @@ namespace arc //! arctk namespace
              *  @pre    entities_ shapes must intersect the node.
              *  @pre    detectors_ shapes must intersect the node.
              *  @pre    cur_depth_ must be positive.
-             *  @pre    max_depth_ must be greater than, or equal to, cur_depth_.
              */
             inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_,
                               const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_, const size_t cur_depth_) noexcept
@@ -129,6 +129,7 @@ namespace arc //! arctk namespace
                 {
                     PRE(detectors_[i].first.intersect_vol(*this));
                 }
+                PRE(cur_depth_ > 0);
             }
 
 
