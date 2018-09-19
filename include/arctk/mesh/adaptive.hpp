@@ -41,7 +41,6 @@ namespace arc //! arctk namespace
         {
             //  -- Properties --
             const size_t _max_shapes;
-            const size_t _depth;
 
 
             //  == INSTANTIATION ==
