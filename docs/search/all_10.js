@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['packet',['Packet',['../classarc_1_1data_1_1_packet.html',1,'arc::data::Packet'],['../classarc_1_1data_1_1_domain.html#a7a247182134d983f02e7765b4fa58bd8',1,'arc::data::Domain::packet(size_t index_x_, size_t index_y_, size_t index_z_) const noexcept'],['../classarc_1_1data_1_1_domain.html#a75870a4b7b4bfcb24f86618dfb82e6c0',1,'arc::data::Domain::packet(const vec3 &amp;pos_) noexcept'],['../classarc_1_1data_1_1_packet.html#aaa1a5f05f7733e0ebcc0cad9adc189bc',1,'arc::data::Packet::Packet(const Packet &amp;) noexcept=default'],['../classarc_1_1data_1_1_packet.html#a35a73f21239ebf57f1d6029738e12d81',1,'arc::data::Packet::Packet(Packet &amp;&amp;) noexcept=default']]],
+  ['packet',['Packet',['../classarc_1_1data_1_1_packet.html',1,'arc::data::Packet'],['../classarc_1_1data_1_1_domain.html#a7a247182134d983f02e7765b4fa58bd8',1,'arc::data::Domain::packet(size_t index_x_, size_t index_y_, size_t index_z_) const noexcept'],['../classarc_1_1data_1_1_domain.html#ae69eca270371de174f5fb088e506a8eb',1,'arc::data::Domain::packet(const vec3 &amp;pos_) noexcept'],['../classarc_1_1data_1_1_packet.html#aaa1a5f05f7733e0ebcc0cad9adc189bc',1,'arc::data::Packet::Packet(const Packet &amp;) noexcept=default'],['../classarc_1_1data_1_1_packet.html#a35a73f21239ebf57f1d6029738e12d81',1,'arc::data::Packet::Packet(Packet &amp;&amp;) noexcept=default']]],
   ['packet_2ehpp',['packet.hpp',['../packet_8hpp.html',1,'']]],
   ['packet_5fsize',['packet_size',['../classarc_1_1data_1_1_domain.html#a224868460d4ca4507acb76fa13786094',1,'arc::data::Domain']]],
   ['parsable_5fto',['parsable_to',['../namespacearc_1_1str_1_1parse.html#a3780c748752825e6dd9589a4a41808c1',1,'arc::str::parse']]],
@@ -17,8 +17,6 @@ var searchData=
   ['perspective_5ffar_5fcull_5fdist',['PERSPECTIVE_FAR_CULL_DIST',['../namespacearc_1_1gui_1_1lens.html#ae3eb024a303596ef49eecf17a71313a1',1,'arc::gui::lens']]],
   ['perspective_5fnear_5fcull_5fdist',['PERSPECTIVE_NEAR_CULL_DIST',['../namespacearc_1_1gui_1_1lens.html#aa4d7ba0269eba0918b2e30c9223acf4e',1,'arc::gui::lens']]],
   ['phi',['phi',['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#a3dd81c819a705cebb25e1095ed346f72',1,'arc::math::Vec&lt; T, 3 &gt;']]],
-  ['photon',['Photon',['../classarc_1_1phys_1_1particle_1_1_photon.html',1,'arc::phys::particle::Photon'],['../classarc_1_1phys_1_1particle_1_1_photon.html#a131c409576763970f9dfba027b05f710',1,'arc::phys::particle::Photon::Photon()']]],
-  ['photon_2ehpp',['photon.hpp',['../photon_8hpp.html',1,'']]],
   ['phys_2ehpp',['phys.hpp',['../consts_2phys_8hpp.html',1,'(Global Namespace)'],['../phys_8hpp.html',1,'(Global Namespace)']]],
   ['pi',['PI',['../namespacearc_1_1consts_1_1math.html#a72f9bca0e430f3634683cf7db5e75818',1,'arc::consts::math']]],
   ['pixels',['pixels',['../classarc_1_1data_1_1image_1_1_colour.html#ac82bde2b6c02cdd3a174f5719645bad5',1,'arc::data::image::Colour::pixels()'],['../classarc_1_1data_1_1image_1_1_greyscale.html#adb4c865a821b3ba0980b82c97f409aa5',1,'arc::data::image::Greyscale::pixels()']]],

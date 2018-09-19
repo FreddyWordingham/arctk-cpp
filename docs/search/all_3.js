@@ -9,7 +9,6 @@ var searchData=
   ['cell_2ehpp',['cell.hpp',['../cell_8hpp.html',1,'']]],
   ['centre',['centre',['../classarc_1_1data_1_1_histogram_3_01_t_00_011_01_4.html#a8364261db1bb43ff92be2f4e33ad90c2',1,'arc::data::Histogram&lt; T, 1 &gt;::centre()'],['../classarc_1_1data_1_1_histogram_3_01_t_00_012_01_4.html#a3903022ba94a01dbb2bcf40a8e211725',1,'arc::data::Histogram&lt; T, 2 &gt;::centre()'],['../classarc_1_1geom_1_1shape_1_1_aabb.html#ae40e69221dd9c156f56019014e200dd7',1,'arc::geom::shape::Aabb::centre()']]],
   ['centres',['centres',['../classarc_1_1data_1_1_histogram_3_01_t_00_011_01_4.html#a1638ea1096a7be772ca3c7e456713b6c',1,'arc::data::Histogram&lt; T, 1 &gt;::centres()'],['../classarc_1_1data_1_1_histogram_3_01_t_00_012_01_4.html#aef1e90f1d7295ddcc092c7e5dcc49b52',1,'arc::data::Histogram&lt; T, 2 &gt;::centres()']]],
-  ['change_5fprob',['change_prob',['../classarc_1_1phys_1_1_optical.html#aad40f04b192b9723e2141a64d8533271',1,'arc::phys::Optical']]],
   ['channels',['channels',['../namespacearc_1_1index_1_1col.html#a9900ae7a0448a055a3ed314d6521d577',1,'arc::index::col']]],
   ['check_5fparsable',['check_parsable',['../classarc_1_1sys_1_1_args.html#a397b774de6aea815289d8ab9e58a009a',1,'arc::sys::Args']]],
   ['circle',['Circle',['../classarc_1_1geom_1_1shape_1_1_circle.html',1,'arc::geom::shape::Circle'],['../classarc_1_1geom_1_1shape_1_1_circle.html#a68d374e2a0e875200d9d1ea98258ae0a',1,'arc::geom::shape::Circle::Circle()']]],

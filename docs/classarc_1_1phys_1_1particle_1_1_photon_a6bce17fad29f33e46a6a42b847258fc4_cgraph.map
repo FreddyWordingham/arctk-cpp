@@ -1,4 +1,0 @@
-<map id="arc::phys::particle::Photon::move" name="arc::phys::particle::Photon::move">
-<area shape="rect" id="node2" href="$classarc_1_1math_1_1_vec.html#aa6d4a0162dccc9fc08cb51111aa44825" title="arc::math::Vec::normalised" alt="" coords="179,5,358,31"/>
-<area shape="rect" id="node3" href="$classarc_1_1phys_1_1_optical.html#a376c1f77b7231a761fcb76dc51a49b13" title="arc::phys::Optical\l::ref_index" alt="" coords="207,55,331,93"/>
-</map>

@@ -73,7 +73,7 @@ $(function() {
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classarc_1_1phys_1_1_material-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">arc::phys::Material Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">arc::phys::Material Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -110,15 +110,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad9fe0804a10224247119794a000f5790"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f2edd7706f06c03732fb400b4c2d480"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_material.html#a3f2edd7706f06c03732fb400b4c2d480">max</a> () const noexcept</td></tr>
 <tr class="separator:a3f2edd7706f06c03732fb400b4c2d480"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a9aec1dd460c01501ae890689b3ba99"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_material.html#a0a9aec1dd460c01501ae890689b3ba99">set_optical_props</a> (<a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html">particle::Photon</a> *phot_) const noexcept=0</td></tr>
-<tr class="memdesc:a0a9aec1dd460c01501ae890689b3ba99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the optical properties of a photon.  <a href="#a0a9aec1dd460c01501ae890689b3ba99">More...</a><br /></td></tr>
-<tr class="separator:a0a9aec1dd460c01501ae890689b3ba99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c09fd8365a61fe35a26961e35bcab7a"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_material.html#a1c09fd8365a61fe35a26961e35bcab7a">interaction_dist</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_, const <a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html">particle::Photon</a> &amp;phot_) const noexcept=0</td></tr>
-<tr class="memdesc:a1c09fd8365a61fe35a26961e35bcab7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine the distance until a material interaction occurs.  <a href="#a1c09fd8365a61fe35a26961e35bcab7a">More...</a><br /></td></tr>
-<tr class="separator:a1c09fd8365a61fe35a26961e35bcab7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98d530817733f48bffa2f74d40e36fc9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_material.html#a98d530817733f48bffa2f74d40e36fc9">interact</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_, <a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html">particle::Photon</a> *phot_) const noexcept=0</td></tr>
-<tr class="memdesc:a98d530817733f48bffa2f74d40e36fc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform an interaction on a given photon.  <a href="#a98d530817733f48bffa2f74d40e36fc9">More...</a><br /></td></tr>
-<tr class="separator:a98d530817733f48bffa2f74d40e36fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -234,101 +225,6 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a98d530817733f48bffa2f74d40e36fc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98d530817733f48bffa2f74d40e36fc9">&#9670;&nbsp;</a></span>interact()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void arc::phys::Material::interact </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *&#160;</td>
-          <td class="paramname"><em>rng_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html">particle::Photon</a> *&#160;</td>
-          <td class="paramname"><em>phot_</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Perform an interaction on a given photon. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">rng_</td><td>Random number generator.</td></tr>
-    <tr><td class="paramname">phot_</td><td>Photon to interact with. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implemented in <a class="el" href="classarc_1_1phys_1_1material_1_1_fluorescent.html#abc5121a596fdbb3603aff64e53e476f8">arc::phys::material::Fluorescent</a>, and <a class="el" href="classarc_1_1phys_1_1material_1_1_basic.html#a7f10f42335082fd5b31b96ed0c9a44ae">arc::phys::material::Basic</a>.</p>
-
-</div>
-</div>
-<a id="a1c09fd8365a61fe35a26961e35bcab7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c09fd8365a61fe35a26961e35bcab7a">&#9670;&nbsp;</a></span>interaction_dist()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual double arc::phys::Material::interaction_dist </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *&#160;</td>
-          <td class="paramname"><em>rng_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html">particle::Photon</a> &amp;&#160;</td>
-          <td class="paramname"><em>phot_</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Determine the distance until a material interaction occurs. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">rng_</td><td>Random number generator.</td></tr>
-    <tr><td class="paramname">phot_</td><td>Photon to interact with. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Distance to interaction. </dd></dl>
-
-<p>Implemented in <a class="el" href="classarc_1_1phys_1_1material_1_1_fluorescent.html#a74c5cf6c939e48a84e36f48d1d6e5eac">arc::phys::material::Fluorescent</a>, and <a class="el" href="classarc_1_1phys_1_1material_1_1_basic.html#a7f1cb6b9ced15d92a5a1693fccc1c7c6">arc::phys::material::Basic</a>.</p>
-
-</div>
-</div>
 <a id="a3f2edd7706f06c03732fb400b4c2d480"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f2edd7706f06c03732fb400b4c2d480">&#9670;&nbsp;</a></span>max()</h2>
 
@@ -353,6 +249,16 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the maximum wavelength bound of the material.</p>
 <dl class="section return"><dt>Returns</dt><dd>Maximum wavelength bound of the material. </dd></dl>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1phys_1_1_material_a3f2edd7706f06c03732fb400b4c2d480_icgraph.png" border="0" usemap="#classarc_1_1phys_1_1_material_a3f2edd7706f06c03732fb400b4c2d480_icgraph" alt=""/></div>
+<map name="classarc_1_1phys_1_1_material_a3f2edd7706f06c03732fb400b4c2d480_icgraph" id="classarc_1_1phys_1_1_material_a3f2edd7706f06c03732fb400b4c2d480_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1equip_1_1_entity.html#ada5ea8a0a602df5e4a54bfed01840064" title="arc::equip::Entity\l::max_wavelength" alt="" coords="216,5,345,44"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -380,6 +286,16 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the minimum wavelength bound of the material.</p>
 <dl class="section return"><dt>Returns</dt><dd>Minimum wavelength bound of the material. </dd></dl>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1phys_1_1_material_ad9fe0804a10224247119794a000f5790_icgraph.png" border="0" usemap="#classarc_1_1phys_1_1_material_ad9fe0804a10224247119794a000f5790_icgraph" alt=""/></div>
+<map name="classarc_1_1phys_1_1_material_ad9fe0804a10224247119794a000f5790_icgraph" id="classarc_1_1phys_1_1_material_ad9fe0804a10224247119794a000f5790_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1equip_1_1_entity.html#a895720e57f8d193368cdcaa9becf3b2d" title="arc::equip::Entity\l::min_wavelength" alt="" coords="212,5,338,44"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -441,42 +357,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a0a9aec1dd460c01501ae890689b3ba99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a9aec1dd460c01501ae890689b3ba99">&#9670;&nbsp;</a></span>set_optical_props()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void arc::phys::Material::set_optical_props </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html">particle::Photon</a> *&#160;</td>
-          <td class="paramname"><em>phot_</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the optical properties of a photon. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">phot_</td><td>Photon to set the optical properties of. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implemented in <a class="el" href="classarc_1_1phys_1_1material_1_1_fluorescent.html#a99313cb1a765fcf47deb54b681196652">arc::phys::material::Fluorescent</a>, and <a class="el" href="classarc_1_1phys_1_1material_1_1_basic.html#a3ec041a2a3a6ccb4c2369c65c87a9ceb">arc::phys::material::Basic</a>.</p>
-
-</div>
-</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a4fa8a6f850e962aede84f877257361ff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4fa8a6f850e962aede84f877257361ff">&#9670;&nbsp;</a></span>_max</h2>
@@ -532,7 +412,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 13 2018 19:38:03 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 19 2018 17:29:05 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

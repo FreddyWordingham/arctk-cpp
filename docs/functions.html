@@ -70,7 +70,6 @@ $(function() {
 <li>_albedo
 : <a class="el" href="classarc_1_1phys_1_1material_1_1_basic.html#ae7cb4b8975bfeeeead15d826f0012606">arc::phys::material::Basic</a>
 , <a class="el" href="classarc_1_1phys_1_1material_1_1_fluorescent.html#a42709d936864238bb5822fd9de9c8d12">arc::phys::material::Fluorescent</a>
-, <a class="el" href="classarc_1_1phys_1_1_optical.html#af64a9e147df45fd99c23e38280a359ee">arc::phys::Optical</a>
 </li>
 <li>_aperture
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a4717a29b088cf60426593245b1c16ef5">arc::geom::shape::Circle</a>
@@ -88,7 +87,6 @@ $(function() {
 <li>_asym
 : <a class="el" href="classarc_1_1phys_1_1material_1_1_basic.html#a731b7634943d336ea094b32a469293a3">arc::phys::material::Basic</a>
 , <a class="el" href="classarc_1_1phys_1_1material_1_1_fluorescent.html#aad3e1fe503e0e4bcb37ac4f043faf211">arc::phys::material::Fluorescent</a>
-, <a class="el" href="classarc_1_1phys_1_1_optical.html#a2d4b97743887decaccc27f588e79d24b">arc::phys::Optical</a>
 </li>
 <li>_bin_width
 : <a class="el" href="classarc_1_1data_1_1_histogram_3_01_t_00_011_01_4.html#a20b050f7ca810d8ee2810e23629e77da">arc::data::Histogram&lt; T, 1 &gt;</a>
@@ -112,8 +110,11 @@ $(function() {
 , <a class="el" href="classarc_1_1random_1_1distribution_1_1_discrete.html#aceab0806c7f6101774d060a2e82b1ad6">arc::random::distribution::Discrete&lt; T &gt;</a>
 , <a class="el" href="classarc_1_1random_1_1distribution_1_1_linear.html#ab907adf31f8645aed53557e5e1f83ccf">arc::random::distribution::Linear&lt; T &gt;</a>
 </li>
-<li>_change_prob
-: <a class="el" href="classarc_1_1phys_1_1_optical.html#a6308c4cf87dcf905246b431e96d7aa9b">arc::phys::Optical</a>
+<li>_centre
+: <a class="el" href="classarc_1_1mesh_1_1node_1_1_branch.html#a323beec0ef209b02e3691bddcde218aa">arc::mesh::node::Branch</a>
+</li>
+<li>_childs
+: <a class="el" href="classarc_1_1mesh_1_1node_1_1_branch.html#a3b70b3c84d891f70b315660683f8028c">arc::mesh::node::Branch</a>
 </li>
 <li>_closed
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a3377db5311f392038b843411a327f74f">arc::geom::shape::Mesh</a>
@@ -147,12 +148,21 @@ $(function() {
 <li>_delta_wavelength
 : <a class="el" href="classarc_1_1phys_1_1material_1_1_fluorescent.html#a4a8a86b831a210f97df5bf08cb79d87a">arc::phys::material::Fluorescent</a>
 </li>
+<li>_depth
+: <a class="el" href="classarc_1_1mesh_1_1_node.html#a0033c736b125823f1325ab4e5560e862">arc::mesh::Node</a>
+</li>
+<li>_detectors
+: <a class="el" href="classarc_1_1mesh_1_1node_1_1_leaf.html#a0e4536724c4a13b55b68e9b39765d354">arc::mesh::node::Leaf</a>
+</li>
 <li>_dir
 : <a class="el" href="classarc_1_1gui_1_1camera_1_1_fly.html#a79ff586a7c9d9c418c201c4f6d699eb1">arc::gui::camera::Fly</a>
 , <a class="el" href="classarc_1_1phys_1_1_particle.html#aae8caa3df02cce90d2892628e8f28d64">arc::phys::Particle</a>
 </li>
 <li>_energy
 : <a class="el" href="classarc_1_1phys_1_1_cell.html#a5d67678d8f932bda1617e79cb397b76d">arc::phys::Cell</a>
+</li>
+<li>_entities
+: <a class="el" href="classarc_1_1mesh_1_1node_1_1_leaf.html#a26e0668be5e0da8e909855cefe773266">arc::mesh::node::Leaf</a>
 </li>
 <li>_expr
 : <a class="el" href="classarc_1_1debug_1_1_invariant.html#a659cdb2b5f3a10daf60514264c8827ed">arc::debug::Invariant&lt; T &gt;</a>
@@ -204,16 +214,21 @@ $(function() {
 <li>_interact_coef
 : <a class="el" href="classarc_1_1phys_1_1material_1_1_basic.html#a11ce377d8a2e689a086c7676c1f7069e">arc::phys::material::Basic</a>
 , <a class="el" href="classarc_1_1phys_1_1material_1_1_fluorescent.html#a752baa166bd983058137bb19e001fe4a">arc::phys::material::Fluorescent</a>
-, <a class="el" href="classarc_1_1phys_1_1_optical.html#a62a4d38183e8515cde7f8719549bfe54">arc::phys::Optical</a>
 </li>
 <li>_length
 : <a class="el" href="classarc_1_1gui_1_1shader_1_1_normal.html#a1c4a4e39b30add8d5acdd97ef137c54c">arc::gui::shader::Normal</a>
+</li>
+<li>_lights
+: <a class="el" href="classarc_1_1mesh_1_1node_1_1_leaf.html#ac0f31a532ba2f36c311f9cb964b8a4e2">arc::mesh::node::Leaf</a>
 </li>
 <li>_line
 : <a class="el" href="classarc_1_1debug_1_1_invariant.html#a91f189b45c4ab03c9a4d38f17edf6ad7">arc::debug::Invariant&lt; T &gt;</a>
 </li>
 <li>_map
 : <a class="el" href="classarc_1_1gui_1_1_keymap.html#afea25481141729499fae16fe3633e6fe">arc::gui::Keymap</a>
+</li>
+<li>_mat
+: <a class="el" href="classarc_1_1equip_1_1_entity.html#a28bd9bf608150fc92631de9e2b4937e8">arc::equip::Entity</a>
 </li>
 <li>_max
 : <a class="el" href="classarc_1_1data_1_1_histogram_3_01_t_00_011_01_4.html#a707551019cf2db9dea9ac9952a245d3b">arc::data::Histogram&lt; T, 1 &gt;</a>
@@ -273,9 +288,6 @@ $(function() {
 <li>_num_verts
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a8ce4fb796e6fa5967c67752f9f9d5c7b">arc::geom::shape::Mesh</a>
 </li>
-<li>_opt
-: <a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html#a37fd56f6cb84f734bf50e53637460651">arc::phys::particle::Photon</a>
-</li>
 <li>_packet_size
 : <a class="el" href="classarc_1_1data_1_1_domain.html#ab3ed9abdbc9f4af9f1282d37c2d0b366">arc::data::Domain</a>
 </li>
@@ -321,7 +333,6 @@ $(function() {
 <li>_ref_index
 : <a class="el" href="classarc_1_1phys_1_1material_1_1_basic.html#ab50617cca40c05b5db9c19e723aeaaf6">arc::phys::material::Basic</a>
 , <a class="el" href="classarc_1_1phys_1_1material_1_1_fluorescent.html#a0fea43ae24096c32f5495e4b6d3a45e2">arc::phys::material::Fluorescent</a>
-, <a class="el" href="classarc_1_1phys_1_1_optical.html#a223aca7c4a3e3fc20f39093ab04a5713">arc::phys::Optical</a>
 </li>
 <li>_res
 : <a class="el" href="classarc_1_1data_1_1_cube_3_011_00_01_a_8_8_8_01_4.html#a34e42ae203a6f56988dc10cc115d0588">arc::data::Cube&lt; 1, A... &gt;</a>
@@ -344,6 +355,9 @@ $(function() {
 <li>_skybox
 : <a class="el" href="classarc_1_1gui_1_1shader_1_1_skybox.html#ad0a747b2ff442eb0052c9a06773187ab">arc::gui::shader::Skybox</a>
 </li>
+<li>_spec
+: <a class="el" href="classarc_1_1equip_1_1_light.html#a182738766bd71227ef545545de9e0f25">arc::equip::Light</a>
+</li>
 <li>_speed
 : <a class="el" href="classarc_1_1gui_1_1_camera.html#a5b0e3058cebbd9e510c7c863a0f1491b">arc::gui::Camera</a>
 </li>
@@ -361,6 +375,11 @@ $(function() {
 </li>
 <li>_sun_pos
 : <a class="el" href="classarc_1_1gui_1_1shader_1_1_specular.html#a22df5f710d01d72e58e6757ad2510577">arc::gui::shader::Specular</a>
+</li>
+<li>_surf
+: <a class="el" href="classarc_1_1equip_1_1_detector.html#af4c7bbf67526e0b8c610f12f0ddb154a">arc::equip::Detector</a>
+, <a class="el" href="classarc_1_1equip_1_1_entity.html#a65223d14151b09c8992f1939840a0d21">arc::equip::Entity</a>
+, <a class="el" href="classarc_1_1equip_1_1_light.html#ae6920796d86d76798bd488912c90aa7c">arc::equip::Light</a>
 </li>
 <li>_target
 : <a class="el" href="classarc_1_1sys_1_1_balancer.html#ad67477294401b8f96d02e496dd41e181">arc::sys::Balancer</a>
@@ -424,9 +443,6 @@ $(function() {
 <li>_w
 : <a class="el" href="classarc_1_1random_1_1generator_1_1_quality.html#a0d9473e510d145fdaff009547a4608f7">arc::random::generator::Quality</a>
 </li>
-<li>_wavelength
-: <a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html#a340c1b883e5be8ecf5b380f751d8400e">arc::phys::particle::Photon</a>
-</li>
 <li>_weight
 : <a class="el" href="classarc_1_1phys_1_1_particle.html#a662b25cd5f24029fd393be1919025bec">arc::phys::Particle</a>
 </li>
@@ -445,7 +461,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 13 2018 19:38:03 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 19 2018 17:29:05 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

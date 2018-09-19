@@ -113,12 +113,6 @@ $(function() {
 <li>set_next_seed()
 : <a class="el" href="classarc_1_1random_1_1_generator.html#a63c797cd1f24f809ac78222c11e0c14e">arc::random::Generator</a>
 </li>
-<li>set_optical_props()
-: <a class="el" href="classarc_1_1phys_1_1material_1_1_basic.html#a3ec041a2a3a6ccb4c2369c65c87a9ceb">arc::phys::material::Basic</a>
-, <a class="el" href="classarc_1_1phys_1_1material_1_1_fluorescent.html#a99313cb1a765fcf47deb54b681196652">arc::phys::material::Fluorescent</a>
-, <a class="el" href="classarc_1_1phys_1_1_material.html#a0a9aec1dd460c01501ae890689b3ba99">arc::phys::Material</a>
-, <a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html#a3255e04fd997ceeca45e6cf8a90b78e2">arc::phys::particle::Photon</a>
-</li>
 <li>set_pos()
 : <a class="el" href="classarc_1_1phys_1_1_particle.html#a658815bd6a4ca1980d3e57d925b25629">arc::phys::Particle</a>
 </li>
@@ -150,10 +144,16 @@ $(function() {
 : <a class="el" href="classarc_1_1gui_1_1_shader.html#a2d5ead5b14296655e6ffaf87d71edd4d">arc::gui::Shader</a>
 </li>
 <li>Shape()
-: <a class="el" href="classarc_1_1geom_1_1_shape.html#a8d674a484f1e5ab69a1d68828a8b35d4">arc::geom::Shape</a>
+: <a class="el" href="classarc_1_1geom_1_1_shape.html#a1e4b8481642986ed4be7be8ff0e2d087">arc::geom::Shape</a>
 </li>
-<li>shift_wavelength()
-: <a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html#a5dbcd29a8168d0b7db1b7973d7174713">arc::phys::particle::Photon</a>
+<li>shape_list()
+: <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a4fd755465d9d99a96c2daf5dcd41129b">arc::geom::shape::Aabb</a>
+, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a0e0952a268e895503e4007cda3598366">arc::geom::shape::Circle</a>
+, <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#abe69e6984cc240e4775fdeae8053c9be">arc::geom::shape::Mesh</a>
+, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a838c49ec1c59c244cbb94c355b285888">arc::geom::shape::Plane</a>
+, <a class="el" href="classarc_1_1geom_1_1_shape.html#a9dcfd35f466009edaafa9fd51ba66165">arc::geom::Shape</a>
+, <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a56c58150fd62bebbaed29c2361444082">arc::geom::shape::Sphere</a>
+, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#afa93897b1c6c7eaa8b079761fd7d05bd">arc::geom::shape::Triangle</a>
 </li>
 <li>size()
 : <a class="el" href="classarc_1_1data_1_1_histogram_3_01_t_00_011_01_4.html#a4273284647999934a0a5847f2b47468f">arc::data::Histogram&lt; T, 1 &gt;</a>
@@ -198,6 +198,11 @@ $(function() {
 , <a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#abbc9f5ce39b8a2d0704067677563c406">arc::math::Vec&lt; T, 3 &gt;</a>
 , <a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#ab68552d0d22d64f0845815e2a69a37d5">arc::math::Vec&lt; T, 4 &gt;</a>
 </li>
+<li>surf()
+: <a class="el" href="classarc_1_1equip_1_1_detector.html#addd079e362e70ae9fdc7d83e481109ae">arc::equip::Detector</a>
+, <a class="el" href="classarc_1_1equip_1_1_entity.html#a125efab56c7a11da77088e1c504eb4e2">arc::equip::Entity</a>
+, <a class="el" href="classarc_1_1equip_1_1_light.html#ac0fc03cf03853107361c00cd15600b5e">arc::equip::Light</a>
+</li>
 <li>surf_dist()
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#adec06a184138a89a4e4af0e2af1255d7">arc::geom::shape::Plane</a>
 , <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a78737b3cfb154fabd34ec75532dc2026">arc::geom::shape::Sphere</a>
@@ -209,7 +214,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 13 2018 19:38:03 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 19 2018 17:29:05 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

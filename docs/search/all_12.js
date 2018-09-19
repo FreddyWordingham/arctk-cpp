@@ -10,7 +10,6 @@ var searchData=
   ['ray_2ehpp',['ray.hpp',['../ray_8hpp.html',1,'']]],
   ['ray_5fsource_5ffrag',['RAY_SOURCE_FRAG',['../namespacearc_1_1gui_1_1shader.html#ae7163dbb6c96f70708156c4abf0c2829',1,'arc::gui::shader']]],
   ['ray_5fsource_5fvert',['RAY_SOURCE_VERT',['../namespacearc_1_1gui_1_1shader.html#a5882090533831e1b6726d1c815b6a6ef',1,'arc::gui::shader']]],
-  ['ref_5findex',['ref_index',['../classarc_1_1phys_1_1_optical.html#a376c1f77b7231a761fcb76dc51a49b13',1,'arc::phys::Optical']]],
   ['reflection_5fdir',['reflection_dir',['../namespacearc_1_1phys_1_1optics.html#a4cf9e9ccdf8fa5fc45120dacbc28f43c',1,'arc::phys::optics']]],
   ['reflection_5fprob',['reflection_prob',['../namespacearc_1_1phys_1_1optics.html#ab0a0e4c919285debfff010238d6dadbd',1,'arc::phys::optics']]],
   ['refraction_5fdir',['refraction_dir',['../namespacearc_1_1phys_1_1optics.html#a42d29265dc60850d52659b35e615e47f',1,'arc::phys::optics']]],

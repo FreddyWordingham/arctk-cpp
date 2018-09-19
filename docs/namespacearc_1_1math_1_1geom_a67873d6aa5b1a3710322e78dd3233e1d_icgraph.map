@@ -44,6 +44,6 @@
 <area shape="rect" id="node43" href="$classarc_1_1math_1_1formula_1_1_constant.html#a81be9442c2aaec2b322bda1b185b8085" title="arc::math::formula\l::Constant::operator()" alt="" coords="467,1215,615,1253"/>
 <area shape="rect" id="node44" href="$classarc_1_1random_1_1distribution_1_1_constant.html#aec071ab8271f465317f1112f8d4a2ccc" title="arc::random::distribution\l::Constant::sample" alt="" coords="458,1277,623,1316"/>
 <area shape="rect" id="node45" href="$classarc_1_1math_1_1formula_1_1_linear.html#a0b5fbd46e17ebd4737b924210676c9ca" title="arc::math::formula\l::Linear::operator()" alt="" coords="475,776,606,815"/>
-<area shape="rect" id="node46" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a0fa6aa6641224238ac372116f1459944" title="arc::random::distribution\l::Linear::sample" alt="" coords="458,839,623,877"/>
+<area shape="rect" id="node46" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a0fa6aa6641224238ac372116f1459944" title="arc::random::distribution\l::Linear\&lt; double \&gt;::sample" alt="" coords="451,839,630,877"/>
 <area shape="rect" id="node47" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#a8f239c70e4b6b1a4b6382eaa81dff27d" title="arc::random::distribution\l::Discrete::sample" alt="" coords="458,901,623,940"/>
 </map>
