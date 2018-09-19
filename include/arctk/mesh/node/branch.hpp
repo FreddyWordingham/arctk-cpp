@@ -236,7 +236,10 @@ namespace arc //! arctk namespace
                     {
                         for (size_t k = 0; k <= 1; ++k)
                         {
-                            num_contained += _childs[i][j][k]->num_nodes();
+                            if (_childs[i][j][k].max_shapes() > max_shapes)
+                            {
+                                max_shapes = _childs[i][j][k].max_shapes()
+                            }
                         }
                     }
                 }
