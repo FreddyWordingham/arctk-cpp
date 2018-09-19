@@ -64,10 +64,18 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct an entity from a surface bounding a given material.
+         *
+         * @param surf_
+         * @param mat_
+         * @return
+         */
         inline Entity::Entity(const geom::Shape& surf_, const phys::Material& mat_) noexcept
           : _surf(surf_)
           , _mat(mat_)
         {
+            PRE(surf_.closed());
         }
 
 
