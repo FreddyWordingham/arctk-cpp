@@ -18,6 +18,7 @@
 //  -- Std --
 #include <memory>
 #include <string>
+#include <type_traits>
 #include <utility>
 
 //  -- Arctk --
@@ -77,6 +78,7 @@ namespace arc //! arctk namespace
           : _surf(std::make_unique<T>(surf_))
           , _spec(spec_)
         {
+            static_assert(std::is_base_of<geom::Shape, T>::value);
         }
 
 
