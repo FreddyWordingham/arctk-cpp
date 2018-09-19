@@ -99,6 +99,11 @@ namespace arc //! arctk namespace
             return (_spec.max());
         }
 
+        /**
+         *  Get a const reference to the surface of the light.
+         *
+         *  @return Const reference to the surface of the light.
+         */
         inline const geom::Shape& Light::surf() const noexcept
         {
             return (_surf);
