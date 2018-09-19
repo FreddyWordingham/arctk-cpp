@@ -52,7 +52,6 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const std::string& name() const noexcept;
             inline const geom::Shape& surf() const noexcept;
         };
 
@@ -77,11 +76,6 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        inline const std::string& Detector::name() const noexcept
-        {
-            return (_name);
-        }
-
         inline const geom::Shape& Detector::surf() const noexcept
         {
             return (_surf);
