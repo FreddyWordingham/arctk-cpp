@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
          *  @param  surf_   Surface of the detector.
          */
         inline Detector::Detector(geom::Shape surf_) noexcept
-          : _surf(std::make_unique<geom::Shape>(surf_))
+          : _surf(std::move(surf_))
         {
         }
 
