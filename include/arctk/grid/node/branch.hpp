@@ -63,6 +63,9 @@ namespace arc //! arctk namespace
 
                 //  -- Initialisation --
               private:
+                std::vector<std::pair<const geom::Shape&, const equip::Light&>>    init_light_shape_list(std::vector<equip::Light> lights_) const noexcept;
+                std::vector<std::pair<const geom::Shape&, const equip::Entity&>>   init_light_shape_list(std::vector<equip::Entity> entities_) const noexcept;
+                std::vector<std::pair<const geom::Shape&, const equip::Detector&>> init_light_shape_list(std::vector<equip::Detector> detectors_) const noexcept;
                 std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> init_childs(const std::vector<std::pair<const geom::Shape&, const equip::Light&>>&    lights_,
                                                                                                const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>&   entities_,
                                                                                                const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_, const size_t depth_, const size_t max_depth_,
@@ -87,7 +90,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Branch::Branch(const vec3& min_, const vec3& max_, std::vector<equip::Light> lights_, std::vector<equip::Entity> entities_, std::vector<equip::Detector> detectors_, const size_t cur_depth_, const size_t max_depth_,
                                   const size_t target_shapes_) noexcept
-              : Branch(min_, max_, init_light_shape_list(), init_light_shape_list(), init_light_shape_list(), cur_depth_, max_depth_, target_shapes_)
+              : Branch(min_, max_, init_light_shape_list(lights_), init_entity_shape_list(entities_), init_detector_shape_list(detectors_), cur_depth_, max_depth_, target_shapes_)
             {
                 PRE(min_.x < max_.x);
                 PRE(min_.y < max_.y);
@@ -122,6 +125,66 @@ namespace arc //! arctk namespace
             }
 
             //  -- Initialisation --
+            std::vector<std::pair<const geom::Shape&, const equip::Light&>> Branch::init_light_shape_list(const std::vector<equip::Light>& lights_) const noexcept
+            {
+                std::vector<std::pair<const geom::Shape&, const equip::Light&>> list;
+
+                for (size_t i = 0; i < lights_.size(); ++i)
+                {
+                    const std::vector<const Shape*> shapes = lights_.surf().shape_list();
+
+                    for (size_t j = 0; j < shapes.size(); ++j)
+                    {
+                        if (shapes[j].intersect_vol(*this))
+                        {
+                            list.emplace_back(std::make_pair<const geom::Shape&, const equip::Light&>(*shapes[j], lights_));
+                        }
+                    }
+                }
+
+                return (list);
+            }
+
+            std::vector<std::pair<const geom::Shape&, const equip::Entity&>> Branch::init_light_shape_list(const std::vector<equip::Entity>& entities_) const noexcept
+            {
+                std::vector<std::pair<const geom::Shape&, const equip::Entity&>> list;
+
+                for (size_t i = 0; i < entities_.size(); ++i)
+                {
+                    const std::vector<const Shape*> shapes = entities_.surf().shape_list();
+
+                    for (size_t j = 0; j < shapes.size(); ++j)
+                    {
+                        if (shapes[j].intersect_vol(*this))
+                        {
+                            list.emplace_back(std::make_pair<const geom::Shape&, const equip::Entity&>(*shapes[j], entities_));
+                        }
+                    }
+                }
+
+                return (list);
+            }
+
+            std::vector<std::pair<const geom::Shape&, const equip::Detector&>> Branch::init_light_shape_list(const std::vector<equip::Detector>& detectors_) const noexcept
+            {
+                std::vector<std::pair<const geom::Shape&, const equip::Detector&>> list;
+
+                for (size_t i = 0; i < detectors_.size(); ++i)
+                {
+                    const std::vector<const Shape*> shapes = detectors_.surf().shape_list();
+
+                    for (size_t j = 0; j < shapes.size(); ++j)
+                    {
+                        if (shapes[j].intersect_vol(*this))
+                        {
+                            list.emplace_back(std::make_pair<const geom::Shape&, const equip::Detector&>(*shapes[j], detectors_));
+                        }
+                    }
+                }
+
+                return (list);
+            }
+
             std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> Branch::init_childs(const std::vector<std::pair<const geom::Shape&, const equip::Light&>>&    lights_,
                                                                                                    const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>&   entities_,
                                                                                                    const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_, const size_t cur_depth_, const size_t max_depth_,
