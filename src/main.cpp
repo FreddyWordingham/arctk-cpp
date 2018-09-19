@@ -58,11 +58,6 @@
 #include <arctk/geom/shape/plane.hpp>
 #include <arctk/geom/shape/sphere.hpp>
 #include <arctk/geom/shape/triangle.hpp>
-#include <arctk/grid.hpp>
-#include <arctk/grid/adaptive.hpp>
-#include <arctk/grid/node.hpp>
-#include <arctk/grid/node/branch.hpp>
-#include <arctk/grid/node/leaf.hpp>
 #include <arctk/gui.hpp>
 #include <arctk/gui/actor.hpp>
 #include <arctk/gui/camera.hpp>
@@ -107,6 +102,11 @@
 #include <arctk/math/vec2.hpp>
 #include <arctk/math/vec3.hpp>
 #include <arctk/math/vec4.hpp>
+#include <arctk/mesh.hpp>
+#include <arctk/mesh/adaptive.hpp>
+#include <arctk/mesh/node.hpp>
+#include <arctk/mesh/node/branch.hpp>
+#include <arctk/mesh/node/leaf.hpp>
 #include <arctk/phys.hpp>
 #include <arctk/phys/cell.hpp>
 #include <arctk/phys/material.hpp>
