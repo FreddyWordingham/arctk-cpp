@@ -95,8 +95,7 @@ namespace arc //! arctk namespace
                 PRE(min_.x < max_.x);
                 PRE(min_.y < max_.y);
                 PRE(min_.z < max_.z);
-                PRE(cur_depth_ >= 0);
-                PRE(max_depth_ >= cur_depth_);
+                PRE(max_depth_ > 0);
             }
 
             inline Branch::Branch(const vec3& min_, const vec3& max_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_,
