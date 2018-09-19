@@ -25,6 +25,7 @@
 #include <arctk/geom.hpp>
 #include <arctk/grid/node/leaf.hpp>
 #include <arctk/math.hpp>
+#include <arctk/utl.hpp>
 
 
 
@@ -307,10 +308,7 @@ namespace arc //! arctk namespace
                         {
                             std::vector<geom::shape::Aabb> child_boxes = _childs[i][j][k]->boxes();
 
-                            for (size_t l = 0; l < child_boxes.size(); ++l)
-                            {
-                                boxes.emplace_back(child_boxes[l]);
-                            }
+                            utl::manip::move_append(&boxes, &child_boxes);
                         }
                     }
                 }
