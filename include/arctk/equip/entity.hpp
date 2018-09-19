@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Structure --
             const geom::Shape&    _surf; //!< Shape forming the surface boundary of the entity.
-            const phys::Material& _mat;
+            const phys::Material& _mat;  //!< Matrial composing the entity's volume.
 
 
             //  == INSTANTIATION ==
