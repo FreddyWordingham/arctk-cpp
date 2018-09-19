@@ -305,7 +305,7 @@ namespace arc //! arctk namespace
                     {
                         for (size_t k = 0; k <= 1; ++k)
                         {
-                            const std::vector<geom::shape::Aabb> child_boxes = _childs[i][j][k].boxes();
+                            const std::vector<geom::shape::Aabb> child_boxes = _childs[i][j][k]->boxes();
 
                             boxes.insert(std::end(boxes), std::begin(child_boxes), std::end(child_boxes));
                         }
