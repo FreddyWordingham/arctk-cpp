@@ -41,7 +41,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Structure --
-            const geom::Shape&    _surf;
+            const geom::Shape&    _surf; //!< Shape forming the surface boundary of the entity.
             const phys::Material& _mat;
 
 
