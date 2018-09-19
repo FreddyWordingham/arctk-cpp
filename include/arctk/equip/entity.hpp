@@ -93,6 +93,11 @@ namespace arc //! arctk namespace
             return (_mat.min());
         }
 
+        /**
+         *  Get the maximum wavelength that can be handled by the entity.
+         *
+         *  @return Maximum wavelength that can be handled by the entity.
+         */
         inline double Entity::max_wavelength() const noexcept
         {
             return (_mat.max());
