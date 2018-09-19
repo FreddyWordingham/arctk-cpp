@@ -16,10 +16,10 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
-#include <arctk/grid/adaptive.hpp>
-#include <arctk/grid/node.hpp>
-#include <arctk/grid/node/branch.hpp>
-#include <arctk/grid/node/leaf.hpp>
+#include <arctk/mesh/adaptive.hpp>
+#include <arctk/mesh/node.hpp>
+#include <arctk/mesh/node/branch.hpp>
+#include <arctk/mesh/node/leaf.hpp>
 
 
 
