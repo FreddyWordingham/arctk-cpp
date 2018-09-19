@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/data/node.hpp
+ *  @file   arctk/mesh/node.hpp
  *  @date   17/09/2018
  *  @author Freddy Wordingham
  *
