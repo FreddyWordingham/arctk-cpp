@@ -74,6 +74,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline size_t                          depth() const noexcept;
             virtual size_t                         num_nodes() const noexcept  = 0;
             virtual size_t                         max_shapes() const noexcept = 0;
             virtual size_t                         max_depth() const noexcept  = 0;
@@ -99,6 +100,15 @@ namespace arc //! arctk namespace
 
         //  -- Destructors --
         inline Node::~Node() noexcept = default;
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        inline size_t Node::depth() const noexcept
+        {
+            return (_depth);
+        }
 
 
 
