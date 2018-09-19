@@ -78,7 +78,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline size_t num_cells() const noexcept override;
+                inline size_t                         num_cells() const noexcept override;
+                inline std::vector<geom::shape::Aabb> boxes() const noexcept;
 
                 //  -- Retrieval --
                 inline Leaf const* leaf(const vec3& pos_) const noexcept override;
@@ -292,6 +293,26 @@ namespace arc //! arctk namespace
                 }
 
                 return (1 + num_contained);
+            }
+
+            inline std::vector<geom::shape::Aabb> Branch::boxes() const noexcept
+            {
+                std::vector<geom::shape::Aabb> boxes;
+
+                for (size_t i = 0; i <= 1; ++i)
+                {
+                    for (size_t j = 0; j <= 1; ++j)
+                    {
+                        for (size_t k = 0; k <= 1; ++k)
+                        {
+                            const std::vector<geom::shape::Aabb> child_boxes = _childs[i][j][k].boxes();
+
+                            boxes.insert(std::end(boxes), std::begin(child_boxes), std::end(child_boxes));
+                        }
+                    }
+                }
+
+                return (boxes);
             }
 
 
