@@ -161,6 +161,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Create a vector containing pointers to all shapes forming this shape.
+             *
+             *  @return Vector containing pointers to all shapes forming this shape.
+             */
             inline std::vector<const Shape*> Aabb::shape_list() const noexcept
             {
                 return (std::vector<const Shape*>({this}));
