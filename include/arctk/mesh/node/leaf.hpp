@@ -30,7 +30,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace grid //! grid namespace
+    namespace mesh //! mesh namespace
     {
         namespace node //! node namespace
         {
@@ -122,7 +122,7 @@ namespace arc //! arctk namespace
 
 
         } // namespace node
-    }     // namespace grid
+    }     // namespace mesh
 } // namespace arc
 
 
