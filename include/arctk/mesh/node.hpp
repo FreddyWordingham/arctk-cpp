@@ -95,7 +95,10 @@ namespace arc //! arctk namespace
          *  @param  max_    Maximum bound of the mesh.
          *  @param  depth_  Depth of the node.
          *
-         *
+         *  @pre    min_.x must be less than max_.x.
+         *  @pre    min_.y must be less than max_.y.
+         *  @pre    min_.z must be less than max_.z.
+         *  @pre    depth_ must be non-negative.
          */
         inline Node::Node(const vec3& min_, const vec3& max_, const size_t depth_) noexcept
           : geom::shape::Aabb(min_, max_)
