@@ -62,9 +62,9 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline size_t                         num_nodes() const noexcept override;
-                inline size_t                         max_shapes() const noexcept override;
                 inline size_t                         max_depth() const noexcept override;
+                inline size_t                         max_shapes() const noexcept override;
+                inline size_t                         num_nodes() const noexcept override;
                 inline std::vector<geom::shape::Aabb> boxes() const noexcept override;
 
                 //  -- Retrieval --
@@ -103,17 +103,18 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            inline size_t Leaf::num_nodes() const noexcept
+            inline size_t Leaf::max_depth() const noexcept
             {
-                return (1);
+                return (_depth);
             }
 
             inline size_t Leaf::max_shapes() const noexcept
             {
             }
 
-            inline size_t Leaf::max_depth() const noexcept
+            inline size_t Leaf::num_nodes() const noexcept
             {
+                return (1);
             }
 
             inline std::vector<geom::shape::Aabb> Leaf::boxes() const noexcept
