@@ -142,6 +142,12 @@ namespace arc //! arctk namespace
                 return (_lights.size() + _entities.size() + _detectors.size());
             }
 
+            /**
+             *  Get the total number of nodes related to this node.
+             *  Includes this node in the count.
+             *
+             *  @return Total number of nodes related to this node.
+             */
             inline size_t Leaf::num_nodes() const noexcept
             {
                 return (1);
