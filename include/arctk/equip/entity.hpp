@@ -40,9 +40,6 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
-            //  -- Data --
-            const std::string& _name;
-
             //  -- Structure --
             const geom::Shape&    _surf;
             const phys::Material& _mat;
@@ -51,7 +48,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Entity(const std::string& name_, const geom::Shape& surf_, const phys::Material& mat_) noexcept;
+            inline Entity(const geom::Shape& surf_, const phys::Material& mat_) noexcept;
 
 
             //  == METHODS ==
@@ -68,9 +65,8 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Entity::Entity(const std::string& name_, const geom::Shape& surf_, const phys::Material& mat_) noexcept
-          : _name(name_)
-          , _surf(surf_)
+        inline Entity::Entity(const geom::Shape& surf_, const phys::Material& mat_) noexcept
+          : _surf(surf_)
           , _mat(mat_)
         {
         }
