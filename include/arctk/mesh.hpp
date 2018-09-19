@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_GRID_HPP
-#define ARCTK_GRID_HPP
+#ifndef ARCTK_MESH_HPP
+#define ARCTK_MESH_HPP
 
 
 
@@ -24,4 +24,4 @@
 
 
 //  == GUARD END ==
-#endif // ARCTK_GRID_HPP
+#endif // ARCTK_MESH_HPP
