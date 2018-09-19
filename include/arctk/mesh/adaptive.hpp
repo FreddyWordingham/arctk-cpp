@@ -49,6 +49,12 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Adaptive(const vec3& min_, const vec3& max_, std::vector<equip::Light> lights_, std::vector<equip::Entity> entities_, std::vector<equip::Detector> detectors_, const size_t max_depth_, const size_t target_shapes_) noexcept;
 
+            //  -- Initialisation --
+          private:
+            std::vector<std::pair<const geom::Shape&, const equip::Light&>>    init_light_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Light>& lights_) const noexcept;
+            std::vector<std::pair<const geom::Shape&, const equip::Entity&>>   init_entity_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Entity>& entities_) const noexcept;
+            std::vector<std::pair<const geom::Shape&, const equip::Detector&>> init_detector_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Detector>& detectors_) const noexcept;
+
 
             //  == METHODS ==
           public:
@@ -66,6 +72,68 @@ namespace arc //! arctk namespace
             PRE(min_.y < max_.y);
             PRE(min_.z < max_.z);
             PRE(max_depth_ > 0);
+        }
+
+
+        //  -- Initialisation --
+        std::vector<std::pair<const geom::Shape&, const equip::Light&>> Adaptive::init_light_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Light>& lights_) const noexcept
+        {
+            std::vector<std::pair<const geom::Shape&, const equip::Light&>> list;
+
+            for (size_t i = 0; i < lights_.size(); ++i)
+            {
+                const std::vector<const Shape*> shapes = lights_[i].surf().shape_list();
+
+                for (size_t j = 0; j < shapes.size(); ++j)
+                {
+                    if (shapes[j]->intersect_vol(box_))
+                    {
+                        list.emplace_back(std::pair<const geom::Shape&, const equip::Light&>(*shapes[j], lights_[i]));
+                    }
+                }
+            }
+            std::cout << "lgt" << '\t' << list.size() << '\n';
+            return (list);
+        }
+
+        std::vector<std::pair<const geom::Shape&, const equip::Entity&>> Adaptive::init_entity_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Entity>& entities_) const noexcept
+        {
+            std::vector<std::pair<const geom::Shape&, const equip::Entity&>> list;
+
+            for (size_t i = 0; i < entities_.size(); ++i)
+            {
+                const std::vector<const Shape*> shapes = entities_[i].surf().shape_list();
+
+                for (size_t j = 0; j < shapes.size(); ++j)
+                {
+                    if (shapes[j]->intersect_vol(box_))
+                    {
+                        list.emplace_back(std::pair<const geom::Shape&, const equip::Entity&>(*shapes[j], entities_[i]));
+                    }
+                }
+            }
+            std::cout << "ent" << '\t' << list.size() << '\n';
+            return (list);
+        }
+
+        std::vector<std::pair<const geom::Shape&, const equip::Detector&>> Adaptive::init_detector_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Detector>& detectors_) const noexcept
+        {
+            std::vector<std::pair<const geom::Shape&, const equip::Detector&>> list;
+
+            for (size_t i = 0; i < detectors_.size(); ++i)
+            {
+                const std::vector<const Shape*> shapes = detectors_[i].surf().shape_list();
+
+                for (size_t j = 0; j < shapes.size(); ++j)
+                {
+                    if (shapes[j]->intersect_vol(box_))
+                    {
+                        list.emplace_back(std::pair<const geom::Shape&, const equip::Detector&>(*shapes[j], detectors_[i]));
+                    }
+                }
+            }
+            std::cout << "det" << '\t' << list.size() << '\n';
+            return (list);
         }
 
 
