@@ -100,7 +100,6 @@ namespace arc //! arctk namespace
          *  @pre    min_.x must be less than max_.x.
          *  @pre    min_.y must be less than max_.y.
          *  @pre    min_.z must be less than max_.z.
-         *  @pre    depth_ must be non-negative.
          */
         inline Node::Node(const vec3& min_, const vec3& max_, const size_t depth_) noexcept
           : geom::shape::Aabb(min_, max_)
@@ -109,7 +108,6 @@ namespace arc //! arctk namespace
             PRE(min_.x < max_.x);
             PRE(min_.y < max_.y);
             PRE(min_.z < max_.z);
-            PRE(depth_ >= 0);
         }
 
 
