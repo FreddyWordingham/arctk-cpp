@@ -134,6 +134,7 @@
 #include <arctk/term.hpp>
 #include <arctk/term/ansi.hpp>
 #include <arctk/utl.hpp>
+#include <arctk/utl/manip.hpp>
 #include <arctk/utl/properties.hpp>
 #include <arctk/utl/search.hpp>
 #include <arctk/utl/stream.hpp>
