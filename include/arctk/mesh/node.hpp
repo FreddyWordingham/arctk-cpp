@@ -3,7 +3,7 @@
  *  @date   17/09/2018
  *  @author Freddy Wordingham
  *
- *  Grid node base class.
+ *  Mesh node base class.
  */
 
 
@@ -25,7 +25,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace grid //! grid namespace
+    namespace mesh //! mesh namespace
     {
         namespace node //! node namespace
         {
@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
-         *  Grid node base class.
+         *  Mesh node base class.
          */
         class Node : public geom::shape::Aabb
         {
@@ -93,7 +93,7 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace grid
+    } // namespace mesh
 } // namespace arc
 
 
