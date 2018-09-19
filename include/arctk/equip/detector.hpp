@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Structure --
-            const geom::Shape& _surf; //!< Shape forming the surface of the detector.
+            const geom::Shape _surf; //!< Shape forming the surface of the detector.
 
 
             //  == INSTANTIATION ==
