@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
          */
         inline Entity::Entity(geom::Shape surf_, phys::Material mat_) noexcept
           : _surf(std::make_unique<geom::Shape>(surf_))
-          , _mat(std::make_unique(mat_))
+          , _mat(std::make_unique<phys::Material>(mat_))
         {
             PRE(surf_.closed());
         }
