@@ -83,6 +83,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the minimum wavelength that can be handled by the entity.
+         *
+         *  @return Minimum wavelength that can be handled by the entity.
+         */
         inline double Entity::min_wavelength() const noexcept
         {
             return (_mat.min());
