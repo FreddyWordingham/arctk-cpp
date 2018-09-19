@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Structure --
-            const std::shared_ptr<geom::Shape> _surf; //!< Shape forming the surface of the detector.
+            const std::unique_ptr<geom::Shape> _surf; //!< Shape forming the surface of the detector.
 
 
             //  == INSTANTIATION ==
@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const std::shared_ptr<geom::Shape>& surf() const noexcept;
+            inline const std::unique_ptr<geom::Shape>& surf() const noexcept;
         };
 
 
@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
          *  @param  surf_   Surface of the detector.
          */
         inline Detector::Detector(geom::Shape surf_) noexcept
-          : _surf(std::make_shared<geom::Shape>(surf_))
+          : _surf(std::make_unique<geom::Shape>(surf_))
         {
         }
 
@@ -80,7 +80,7 @@ namespace arc //! arctk namespace
          *
          *  @return Const reference to the shape forming the surface of the detector.
          */
-        inline const std::shared_ptr<geom::Shape>& Detector::surf() const noexcept
+        inline const std::unique_ptr<geom::Shape>& Detector::surf() const noexcept
         {
             return (_surf);
         }
