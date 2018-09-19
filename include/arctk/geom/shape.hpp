@@ -102,6 +102,9 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Destructors --
+        /**
+         *  Defaulted destructor.
+         */
         inline Shape::~Shape() noexcept = default;
 
 
