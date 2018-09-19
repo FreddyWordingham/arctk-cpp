@@ -34,14 +34,14 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Movement --
             template <typename T>
-            void move_append(std::vector<T> dest_*, std::vector<T>* source_);
+            void move_append(std::vector<T>* dest_, std::vector<T>* source_);
 
 
 
             //  == FUNCTIONS ==
             //  -- Movement --
             template <typename T>
-            void move_append(std::vector<T> dest_*, std::vector<T>* source_)
+            void move_append(std::vector<T>* dest_, std::vector<T>* source_)
             {
                 if (dest_->empty())
                 {
