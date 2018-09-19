@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Constructors --
                 inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_,
-                            const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_) noexcept;
+                            const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_, const size_t cur_depth_) noexcept;
 
 
                 //  == METHODS ==
