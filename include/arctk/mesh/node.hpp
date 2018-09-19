@@ -112,6 +112,9 @@ namespace arc //! arctk namespace
 
 
         //  -- Destructors --
+        /**
+         *  Default destructor.
+         */
         inline Node::~Node() noexcept = default;
 
 
