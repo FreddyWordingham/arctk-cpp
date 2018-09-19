@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Detector(const geom::Shape& surf_) noexcept;
+            inline explicit Detector(const geom::Shape& surf_) noexcept;
 
 
             //  == METHODS ==
