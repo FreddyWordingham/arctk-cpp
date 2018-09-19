@@ -103,6 +103,11 @@ namespace arc //! arctk namespace
             return (_mat.max());
         }
 
+        /**
+         *  Get a const reference to the surface of the entity.
+         *
+         *  @return Const reference to the surface of the entity.
+         */
         inline const geom::Shape& Entity::surf() const noexcept
         {
             return (_surf);
