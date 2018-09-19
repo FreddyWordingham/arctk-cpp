@@ -138,9 +138,9 @@ namespace arc //! arctk namespace
             /**
              *  Initialise the three-dimensional array of child nodes.
              *
-             *  @param  lights_         Vector of lights that may be found within the mesh's bounds.
-             *  @param  entities_       Vector of entities that may be found within the mesh's bounds.
-             *  @param  detectors_      Vector of detectors that may be found within the mesh's bounds.
+             *  @param  lights_         Vector of lights that are found within the node's bounds.
+             *  @param  entities_       Vector of entities that are found within the node's bounds.
+             *  @param  detectors_      Vector of detectors that are found within the node's bounds.
              *  @param  cur_depth_      Current depth of the node.
              *  @param  max_depth_      Maximum depth the mesh may reach.
              *  @param  target_shapes_  Target maximum number of shapes to find within each leaf cell of the mesh.
