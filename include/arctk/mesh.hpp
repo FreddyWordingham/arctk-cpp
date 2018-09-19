@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/grid.hpp
+ *  @file   arctk/mesh.hpp
  *  @date   17/09/2018
  *  @author Freddy Wordingham
  *
