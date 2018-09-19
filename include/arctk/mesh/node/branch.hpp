@@ -110,6 +110,7 @@ namespace arc //! arctk namespace
                 PRE(max_depth_ >= cur_depth_);
             }
 
+
             //  -- Initialisation --
             std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> Branch::init_childs(const std::vector<std::pair<const geom::Shape&, const equip::Light&>>&    lights_,
                                                                                                    const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>&   entities_,
