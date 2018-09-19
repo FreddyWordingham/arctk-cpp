@@ -65,6 +65,8 @@ namespace arc //! arctk namespace
         /**
          *  Construct a detector using surface shape.
          *
+         *  @tparam T   Type used to form the surface.
+         *
          *  @param  surf_   Surface of the detector.
          */
         template <typename T>
