@@ -47,6 +47,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Adaptive(const vec3& min_, const vec3& max_, std::vector<equip::Light> lights_, std::vector<equip::Entity> entities_, std::vector<equip::Detector> detectors_, const size_t max_depth_, const size_t target_shapes_) noexcept;
 
 
             //  == METHODS ==
@@ -57,6 +58,15 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline Adaptive::Adaptive(const vec3& min_, const vec3& max_, std::vector<equip::Light> lights_, std::vector<equip::Entity> entities_, std::vector<equip::Detector> detectors_, const size_t max_depth_, const size_t target_shapes_) noexcept
+          : Branch(min_, max_, init_light_shape_list(geom::shape::Aabb(min_, max_), lights_), init_entity_shape_list(geom::shape::Aabb(min_, max_), entities_), init_detector_shape_list(geom::shape::Aabb(min_, max_), detectors_), 0, max_depth_,
+                   target_shapes_)
+        {
+            PRE(min_.x < max_.x);
+            PRE(min_.y < max_.y);
+            PRE(min_.z < max_.z);
+            PRE(max_depth_ > 0);
+        }
 
 
 
