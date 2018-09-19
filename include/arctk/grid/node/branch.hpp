@@ -64,8 +64,8 @@ namespace arc //! arctk namespace
                 //  -- Initialisation --
               private:
                 std::vector<std::pair<const geom::Shape&, const equip::Light&>>    init_light_shape_list(const std::vector<equip::Light>& lights_) const noexcept;
-                std::vector<std::pair<const geom::Shape&, const equip::Entity&>>   init_light_shape_list(const std::vector<equip::Entity>& entities_) const noexcept;
-                std::vector<std::pair<const geom::Shape&, const equip::Detector&>> init_light_shape_list(const std::vector<equip::Detector>& detectors_) const noexcept;
+                std::vector<std::pair<const geom::Shape&, const equip::Entity&>>   init_entity_shape_list(const std::vector<equip::Entity>& entities_) const noexcept;
+                std::vector<std::pair<const geom::Shape&, const equip::Detector&>> init_detector_shape_list(const std::vector<equip::Detector>& detectors_) const noexcept;
                 std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> init_childs(const std::vector<std::pair<const geom::Shape&, const equip::Light&>>&    lights_,
                                                                                                const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>&   entities_,
                                                                                                const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_, const size_t depth_, const size_t max_depth_,
@@ -145,7 +145,7 @@ namespace arc //! arctk namespace
                 return (list);
             }
 
-            std::vector<std::pair<const geom::Shape&, const equip::Entity&>> Branch::init_light_shape_list(const std::vector<equip::Entity>& entities_) const noexcept
+            std::vector<std::pair<const geom::Shape&, const equip::Entity&>> Branch::init_entity_shape_list(const std::vector<equip::Entity>& entities_) const noexcept
             {
                 std::vector<std::pair<const geom::Shape&, const equip::Entity&>> list;
 
@@ -165,7 +165,7 @@ namespace arc //! arctk namespace
                 return (list);
             }
 
-            std::vector<std::pair<const geom::Shape&, const equip::Detector&>> Branch::init_light_shape_list(const std::vector<equip::Detector>& detectors_) const noexcept
+            std::vector<std::pair<const geom::Shape&, const equip::Detector&>> Branch::init_detector_shape_list(const std::vector<equip::Detector>& detectors_) const noexcept
             {
                 std::vector<std::pair<const geom::Shape&, const equip::Detector&>> list;
 
