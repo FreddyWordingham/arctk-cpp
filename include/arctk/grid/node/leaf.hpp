@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline size_t                         num_cells() const noexcept override;
+                inline size_t                         num_nodes() const noexcept override;
                 inline std::vector<geom::shape::Aabb> boxes() const noexcept override;
 
                 //  -- Retrieval --
@@ -100,7 +100,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            inline size_t Leaf::num_cells() const noexcept
+            inline size_t Leaf::num_nodes() const noexcept
             {
                 return (1);
             }
