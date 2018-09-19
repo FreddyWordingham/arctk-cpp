@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const geom::Shape* surf() const noexcept;
+            inline const std::shared_ptr<geom::Shape>& surf() const noexcept;
         };
 
 
@@ -80,9 +80,9 @@ namespace arc //! arctk namespace
          *
          *  @return Const reference to the shape forming the surface of the detector.
          */
-        inline const geom::Shape* Detector::surf() const noexcept
+        inline const std::shared_ptr<geom::Shape>& Detector::surf() const noexcept
         {
-            return (_surf.get());
+            return (_surf);
         }
 
 
