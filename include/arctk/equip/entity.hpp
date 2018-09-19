@@ -92,7 +92,7 @@ namespace arc //! arctk namespace
          */
         inline double Entity::min_wavelength() const noexcept
         {
-            return (_mat.min());
+            return (_mat->min());
         }
 
         /**
@@ -102,7 +102,7 @@ namespace arc //! arctk namespace
          */
         inline double Entity::max_wavelength() const noexcept
         {
-            return (_mat.max());
+            return (_mat->max());
         }
 
         /**
