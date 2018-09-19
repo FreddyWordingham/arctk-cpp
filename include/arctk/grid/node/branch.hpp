@@ -63,9 +63,9 @@ namespace arc //! arctk namespace
 
                 //  -- Initialisation --
               private:
-                std::vector<std::pair<const geom::Shape&, const equip::Light&>>    init_light_shape_list(std::vector<equip::Light> lights_) const noexcept;
-                std::vector<std::pair<const geom::Shape&, const equip::Entity&>>   init_light_shape_list(std::vector<equip::Entity> entities_) const noexcept;
-                std::vector<std::pair<const geom::Shape&, const equip::Detector&>> init_light_shape_list(std::vector<equip::Detector> detectors_) const noexcept;
+                std::vector<std::pair<const geom::Shape&, const equip::Light&>>    init_light_shape_list(const std::vector<equip::Light>& lights_) const noexcept;
+                std::vector<std::pair<const geom::Shape&, const equip::Entity&>>   init_light_shape_list(const std::vector<equip::Entity>& entities_) const noexcept;
+                std::vector<std::pair<const geom::Shape&, const equip::Detector&>> init_light_shape_list(const std::vector<equip::Detector>& detectors_) const noexcept;
                 std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> init_childs(const std::vector<std::pair<const geom::Shape&, const equip::Light&>>&    lights_,
                                                                                                const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>&   entities_,
                                                                                                const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_, const size_t depth_, const size_t max_depth_,
