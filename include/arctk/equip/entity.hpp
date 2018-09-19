@@ -43,8 +43,8 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Structure --
-            const std::unique_ptr<geom::Shape> _surf; //!< Shape forming the surface boundary of the entity.
-            const phys::Material               _mat;  //!< Matrial composing the entity's volume.
+            const std::unique_ptr<geom::Shape>    _surf; //!< Shape forming the surface boundary of the entity.
+            const std::unique_ptr<phys::Material> _mat;  //!< Matrial composing the entity's volume.
 
 
             //  == INSTANTIATION ==
