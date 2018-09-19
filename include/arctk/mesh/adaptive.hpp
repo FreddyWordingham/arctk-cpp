@@ -92,7 +92,7 @@ namespace arc //! arctk namespace
                     }
                 }
             }
-            std::cout << "lgt" << '\t' << list.size() << '\n';
+
             return (list);
         }
 
@@ -112,7 +112,7 @@ namespace arc //! arctk namespace
                     }
                 }
             }
-            std::cout << "ent" << '\t' << list.size() << '\n';
+
             return (list);
         }
 
@@ -132,7 +132,7 @@ namespace arc //! arctk namespace
                     }
                 }
             }
-            std::cout << "det" << '\t' << list.size() << '\n';
+
             return (list);
         }
 
