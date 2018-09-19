@@ -215,9 +215,9 @@ namespace arc //! arctk namespace
                     {
                         for (size_t k = 0; k <= 1; ++k)
                         {
-                            if (_childs[i][j][k].max_depth() > max_depth)
+                            if (_childs[i][j][k]->max_depth() > max_depth)
                             {
-                                max_depth = _childs[i][j][k].max_depth()
+                                max_depth = _childs[i][j][k]->max_depth()
                             }
                         }
                     }
@@ -236,9 +236,9 @@ namespace arc //! arctk namespace
                     {
                         for (size_t k = 0; k <= 1; ++k)
                         {
-                            if (_childs[i][j][k].max_shapes() > max_shapes)
+                            if (_childs[i][j][k]->max_shapes() > max_shapes)
                             {
-                                max_shapes = _childs[i][j][k].max_shapes()
+                                max_shapes = _childs[i][j][k]->max_shapes()
                             }
                         }
                     }
