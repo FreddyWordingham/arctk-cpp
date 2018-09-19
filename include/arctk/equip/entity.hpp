@@ -79,7 +79,7 @@ namespace arc //! arctk namespace
           : _surf(std::move(surf_))
           , _mat(std::move(mat_))
         {
-            PRE(surf_.closed());
+            PRE(surf_->closed());
         }
 
 
