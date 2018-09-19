@@ -197,7 +197,7 @@ namespace arc //! arctk namespace
              *
              *  @return Initialise vector of shape-light pairs which intersect with the node.
              */
-            std::vector<std::pair<const geom::Shape&, const equip::Light&>> Branch::init_lights_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_) const noexcept
+            inline std::vector<std::pair<const geom::Shape&, const equip::Light&>> Branch::init_lights_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_) const noexcept
             {
                 std::vector<std::pair<const geom::Shape&, const equip::Light&>> lights;
 
@@ -220,7 +220,7 @@ namespace arc //! arctk namespace
              *
              *  @return Initialise vector of shape-entity pairs which intersect with the node.
              */
-            std::vector<std::pair<const geom::Shape&, const equip::Entity&>> Branch::init_entities_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_) const noexcept
+            inline std::vector<std::pair<const geom::Shape&, const equip::Entity&>> Branch::init_entities_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_) const noexcept
             {
                 std::vector<std::pair<const geom::Shape&, const equip::Entity&>> entities;
 
@@ -243,7 +243,7 @@ namespace arc //! arctk namespace
              *
              *  @return Initialise vector of shape-detector pairs which intersect with the node.
              */
-            std::vector<std::pair<const geom::Shape&, const equip::Detector&>> Branch::init_detectors_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_) const noexcept
+            inline std::vector<std::pair<const geom::Shape&, const equip::Detector&>> Branch::init_detectors_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_) const noexcept
             {
                 std::vector<std::pair<const geom::Shape&, const equip::Detector&>> detectors;
 
