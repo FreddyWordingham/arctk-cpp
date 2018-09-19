@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Structure --
-            const std::unique_ptr<geom::Shape> _surf; //!< Shape forming the surface of the detector.
+            const std::shared_ptr<geom::Shape> _surf; //!< Shape forming the surface of the detector.
 
 
             //  == INSTANTIATION ==
@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
          *  @param  surf_   Surface of the detector.
          */
         inline Detector::Detector(geom::Shape surf_) noexcept
-          : _surf(std::make_unique<geom::Shape>(surf_))
+          : _surf(std::make_shared<geom::Shape>(surf_))
         {
         }
 
