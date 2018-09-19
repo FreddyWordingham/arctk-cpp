@@ -47,8 +47,8 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Content --
-                const std::vector<std::pair<const geom::Shape&, const equip::Light&>>    _lights; //!< Vector of lights that are found within the node's bounds.
-                const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>   _entities;
+                const std::vector<std::pair<const geom::Shape&, const equip::Light&>>    _lights;    //!< Vector of lights that are found within the node's bounds.
+                const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>   _entities;  //!< Vector of entities that are found within the node's bounds.
                 const std::vector<std::pair<const geom::Shape&, const equip::Detector&>> _detectors; //!< Vector of detectors that are found within the node's bounds.
 
 
