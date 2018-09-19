@@ -165,6 +165,15 @@ namespace arc //! arctk namespace
 
 
             //  -- Retrieval --
+            /**
+             *  Get the pointer to the leaf node corresponding to a given position within this node.
+             *
+             *  @param  pos_    Position to find the corresponding leaf node for.
+             *
+             *  @pre    pos_ must be contained within this node.
+             *
+             *  @return Pointer to the leaf node corresponding to a given position within this node.
+             */
             inline Leaf const* Leaf::leaf(const vec3& pos_) const noexcept
             {
                 PRE(contains(pos_));
