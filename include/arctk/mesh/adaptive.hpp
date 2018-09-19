@@ -114,8 +114,8 @@ namespace arc //! arctk namespace
         /**
          *  Initialise the vector of shape-entity pairs that are located within the bounds of the mesh.
          *
-         *  @param  box_    Bounding box of the mesh.
-         *  @param  entities_ Vector of entities that may be found within the mesh's bounds.
+         *  @param  box_        Bounding box of the mesh.
+         *  @param  entities_   Vector of entities that may be found within the mesh's bounds.
          *
          *  @return Initialised vector of shape-entity pairs that are located within the bounds of the mesh.
          */
