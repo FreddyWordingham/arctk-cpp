@@ -40,9 +40,6 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
-            //  -- Data --
-            const std::string& _name;
-
             //  -- Structure --
             const geom::Shape&                         _surf;
             const random::distribution::Linear<double> _spec;
@@ -51,7 +48,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Light(const std::string& name_, const geom::Shape& surf_, const random::distribution::Linear<double>& spec_) noexcept;
+            inline Light(const geom::Shape& surf_, const random::distribution::Linear<double>& spec_) noexcept;
 
 
             //  == METHODS ==
@@ -67,9 +64,8 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Light::Light(const std::string& name_, const geom::Shape& surf_, const random::distribution::Linear<double>& spec_) noexcept
-          : _name(name_)
-          , _surf(surf_)
+        inline Light::Light(const geom::Shape& surf_, const random::distribution::Linear<double>& spec_) noexcept
+          : _surf(surf_)
           , _spec(spec_)
         {
         }
