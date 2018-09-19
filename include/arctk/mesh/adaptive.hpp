@@ -91,7 +91,7 @@ namespace arc //! arctk namespace
          *
          *  @return Initialised vector of shape-light pairs that are located within the bounds of the mesh.
          */
-        std::vector<std::pair<const geom::Shape&, const equip::Light&>> Adaptive::init_light_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Light>& lights_) const noexcept
+        inline std::vector<std::pair<const geom::Shape&, const equip::Light&>> Adaptive::init_light_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Light>& lights_) const noexcept
         {
             std::vector<std::pair<const geom::Shape&, const equip::Light&>> list;
 
@@ -119,7 +119,7 @@ namespace arc //! arctk namespace
          *
          *  @return Initialised vector of shape-entity pairs that are located within the bounds of the mesh.
          */
-        std::vector<std::pair<const geom::Shape&, const equip::Entity&>> Adaptive::init_entity_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Entity>& entities_) const noexcept
+        inline std::vector<std::pair<const geom::Shape&, const equip::Entity&>> Adaptive::init_entity_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Entity>& entities_) const noexcept
         {
             std::vector<std::pair<const geom::Shape&, const equip::Entity&>> list;
 
@@ -147,7 +147,7 @@ namespace arc //! arctk namespace
          *
          *  @return Initialised vector of shape-detector pairs that are located within the bounds of the mesh.
          */
-        std::vector<std::pair<const geom::Shape&, const equip::Detector&>> Adaptive::init_detector_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Detector>& detectors_) const noexcept
+        inline std::vector<std::pair<const geom::Shape&, const equip::Detector&>> Adaptive::init_detector_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Detector>& detectors_) const noexcept
         {
             std::vector<std::pair<const geom::Shape&, const equip::Detector&>> list;
 
