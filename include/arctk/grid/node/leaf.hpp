@@ -61,7 +61,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline size_t num_cells() const noexcept override;
+                inline size_t                         num_cells() const noexcept override;
+                inline std::vector<geom::shape::Aabb> boxes() const noexcept override;
 
                 //  -- Retrieval --
                 inline Leaf const* leaf(const vec3& pos_) const noexcept override;
@@ -102,6 +103,11 @@ namespace arc //! arctk namespace
             inline size_t Leaf::num_cells() const noexcept
             {
                 return (1);
+            }
+
+            inline std::vector<geom::shape::Aabb> Leaf::boxes() const noexcept
+            {
+                return (std::vector<geom::shape::Aabb>({geom::shape::Aabb(_min, _max)}));
             }
 
 
