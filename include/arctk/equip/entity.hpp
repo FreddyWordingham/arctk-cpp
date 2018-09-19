@@ -71,6 +71,9 @@ namespace arc //! arctk namespace
         /**
          *  Construct an entity from a surface bounding a given material.
          *
+         *  @tparam T   Type used to form the surface.
+         *  @tparam S   Type used to form the material.
+         *
          *  @param  surf_   Bounding surface of the entity.
          *  @param  mat_    Material to form the entity volume.
          *
