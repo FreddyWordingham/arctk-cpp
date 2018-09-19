@@ -132,6 +132,11 @@ namespace arc //! arctk namespace
                 return (_depth);
             }
 
+            /**
+             *  Get the maximum number of shapes contained within this node and any of its descendents.
+             *
+             *  @return Maximum number of shapes contained within this node and any of its descendents.
+             */
             inline size_t Leaf::max_shapes() const noexcept
             {
                 return (_lights.size() + _entities.size() + _detectors.size());
