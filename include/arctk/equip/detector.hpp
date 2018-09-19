@@ -39,9 +39,6 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
-            //  -- Data --
-            const std::string& _name;
-
             //  -- Structure --
             const geom::Shape& _surf;
 
@@ -49,7 +46,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Detector(const std::string& name_, const geom::Shape& surf_) noexcept;
+            inline Detector(const geom::Shape& surf_) noexcept;
 
 
             //  == METHODS ==
@@ -63,7 +60,14 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Detector::Detector(const std::string& name_, const geom::Shape& surf_) noexcept
+        /**
+         *  Construct a detector using surface shape.
+         *
+         *  @param  surf_
+         *
+         * @return
+         */
+        inline Detector::Detector(const geom::Shape& surf_) noexcept
           : _name(name_)
           , _surf(surf_)
         {
