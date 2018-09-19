@@ -62,13 +62,10 @@ namespace arc //! arctk namespace
         /**
          *  Construct a detector using surface shape.
          *
-         *  @param  surf_
-         *
-         * @return
+         *  @param  surf_   Surface of the detector.
          */
         inline Detector::Detector(const geom::Shape& surf_) noexcept
-          : _name(name_)
-          , _surf(surf_)
+          : _surf(surf_)
         {
         }
 
