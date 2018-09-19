@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            virtual size_t                         num_cells() const noexcept = 0;
+            virtual size_t                         num_nodes() const noexcept = 0;
             virtual std::vector<geom::shape::Aabb> boxes() const noexcept     = 0;
 
             //  -- Retrieval --
