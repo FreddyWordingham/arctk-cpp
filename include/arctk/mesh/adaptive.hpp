@@ -37,7 +37,7 @@ namespace arc //! arctk namespace
         /**
          *  Mesh node base class.
          */
-        class Adaptive
+        class Adaptive : public geom::shape::Aabb
         {
             //  -- Positioning --
             const vec3 _centre; //!< Centre coordinate of the node.
