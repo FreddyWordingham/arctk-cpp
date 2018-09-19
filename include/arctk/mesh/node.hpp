@@ -77,7 +77,7 @@ namespace arc //! arctk namespace
             inline size_t  depth() const noexcept;
             virtual size_t max_depth() const noexcept  = 0; //!< Get the maximum depth of this node and any of its descendents.  @return Maximum depth of this node and any of its descendents.
             virtual size_t max_shapes() const noexcept = 0; //!< Get the maximum number of shapes contained within this node and any of its descendents. @return Maximum number of shapes contained within this node and any of its descendents.
-            virtual size_t num_nodes() const noexcept  = 0;
+            virtual size_t num_nodes() const noexcept  = 0; //!< Get the total number of nodes related to this node. Includes this node in the count.    @return Total number of nodes related to this node.
             virtual std::vector<geom::shape::Aabb> boxes() const noexcept = 0;
 
             //  -- Retrieval --
