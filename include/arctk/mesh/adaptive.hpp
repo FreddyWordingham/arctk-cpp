@@ -139,6 +139,14 @@ namespace arc //! arctk namespace
             return (list);
         }
 
+        /**
+         *  Initialise the vector of shape-detector pairs that are located within the bounds of the mesh.
+         *
+         *  @param  box_        Bounding box of the mesh.
+         *  @param  detectors_  Vector of detectors that may be found within the mesh's bounds.
+         *
+         *  @return Initialised vector of shape-detector pairs that are located within the bounds of the mesh.
+         */
         std::vector<std::pair<const geom::Shape&, const equip::Detector&>> Adaptive::init_detector_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Detector>& detectors_) const noexcept
         {
             std::vector<std::pair<const geom::Shape&, const equip::Detector&>> list;
