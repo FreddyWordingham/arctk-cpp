@@ -68,6 +68,7 @@ namespace arc //! arctk namespace
           : Branch(min_, max_, init_light_shape_list(geom::shape::Aabb(min_, max_), lights_), init_entity_shape_list(geom::shape::Aabb(min_, max_), entities_), init_detector_shape_list(geom::shape::Aabb(min_, max_), detectors_), 0, max_depth_,
                    target_shapes_)
           , _max_shapes(max_shapes())
+          , _depth(max_depth())
         {
             PRE(min_.x < max_.x);
             PRE(min_.y < max_.y);
