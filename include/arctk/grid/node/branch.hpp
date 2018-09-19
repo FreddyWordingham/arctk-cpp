@@ -131,7 +131,7 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < lights_.size(); ++i)
                 {
-                    const std::vector<const Shape*> shapes = lights_.surf().shape_list();
+                    const std::vector<const Shape*> shapes = lights_[i].surf().shape_list();
 
                     for (size_t j = 0; j < shapes.size(); ++j)
                     {
@@ -151,7 +151,7 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < entities_.size(); ++i)
                 {
-                    const std::vector<const Shape*> shapes = entities_.surf().shape_list();
+                    const std::vector<const Shape*> shapes = entities_[i].surf().shape_list();
 
                     for (size_t j = 0; j < shapes.size(); ++j)
                     {
@@ -171,7 +171,7 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < detectors_.size(); ++i)
                 {
-                    const std::vector<const Shape*> shapes = detectors_.surf().shape_list();
+                    const std::vector<const Shape*> shapes = detectors_[i].surf().shape_list();
 
                     for (size_t j = 0; j < shapes.size(); ++j)
                     {
