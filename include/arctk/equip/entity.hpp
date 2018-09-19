@@ -75,7 +75,7 @@ namespace arc //! arctk namespace
          *  @pre    surf_ must be a closed surface.
          */
         inline Entity::Entity(geom::Shape surf_, phys::Material mat_) noexcept
-          : _surf(std::make_unique(surf_))
+          : _surf(std::make_unique<geom::Shape>(surf_))
           , _mat(std::make_unique(mat_))
         {
             PRE(surf_.closed());
