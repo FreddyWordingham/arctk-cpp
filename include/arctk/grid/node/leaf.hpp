@@ -107,11 +107,7 @@ namespace arc //! arctk namespace
 
             inline std::vector<geom::shape::Aabb> Leaf::boxes() const noexcept
             {
-                //                std::vector<geom::shape::Aabb> boxes;
-
-                // geom::shape::Aabb box(vec3(_min.x, _min.y, _min.z), vec3(_max.x, _max.y, _max.z));
-
-                //              return (boxes);
+                return (std::vector<geom::shape::Aabb>({geom::shape::Aabb(_min, _max)}));
             }
 
 
