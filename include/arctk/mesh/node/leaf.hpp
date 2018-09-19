@@ -153,6 +153,11 @@ namespace arc //! arctk namespace
                 return (1);
             }
 
+            /**
+             *  Get a vector of all the axis-aligned bounding boxes of the leaf nodes descended from this node.
+             *
+             *  @return Vector of all the axis-aligned bounding boxes of the leaf nodes descended from this node.
+             */
             inline std::vector<geom::shape::Aabb> Leaf::boxes() const noexcept
             {
                 return (std::vector<geom::shape::Aabb>({geom::shape::Aabb(_min, _max)}));
