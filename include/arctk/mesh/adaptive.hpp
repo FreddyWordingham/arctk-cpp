@@ -45,10 +45,15 @@ namespace arc //! arctk namespace
             //  -- Children --
             const std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> _childs;
 
+            //  -- Properties --
+            const size_t _max_shapes;
+            const size_t _depth;
+
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Branch(const vec3& min_, const vec3& max_, std::vector<equip::Light> lights_, std::vector<equip::Entity> entities_, std::vector<equip::Detector> detectors_, const size_t max_depth_, const size_t target_shapes_) noexcept;
 
 
             //  == METHODS ==
