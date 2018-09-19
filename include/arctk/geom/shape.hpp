@@ -70,7 +70,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            virtual inline std::vector<const Shape*> shape_list() const noexcept = 0;
+            virtual inline std::vector<const Shape*> shape_list() const noexcept = 0; //!< Create a vector containing pointers to all shapes forming this shape.   @return Vector containing pointers to all shapes forming this shape.
 
             //  -- Properties --
             virtual vec3          min() const noexcept    = 0; //!< Get the minimum vec of the smallest bounding box containing the shape.  @return Minimum vec of the smallest bounding box containing the shape.
