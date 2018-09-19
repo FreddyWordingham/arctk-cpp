@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
             inline Node(Node&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
-            virtual inline ~Node() noexcept override;
+            inline ~Node() noexcept override;
 
 
             //  == OPERATORS ==
