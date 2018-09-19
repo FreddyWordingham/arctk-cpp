@@ -88,6 +88,15 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a node with given bounds at a given depth.
+         *
+         *  @param  min_    Minimum bound of the mesh.
+         *  @param  max_    Maximum bound of the mesh.
+         *  @param  depth_  Depth of the node.
+         *
+         *
+         */
         inline Node::Node(const vec3& min_, const vec3& max_, const size_t depth_) noexcept
           : geom::shape::Aabb(min_, max_)
           , _depth(depth_)
@@ -95,6 +104,7 @@ namespace arc //! arctk namespace
             PRE(min_.x < max_.x);
             PRE(min_.y < max_.y);
             PRE(min_.z < max_.z);
+            PRE(depth_ >= 0);
         }
 
 
