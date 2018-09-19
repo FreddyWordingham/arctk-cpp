@@ -76,8 +76,8 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_,
-                              const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_) noexcept
-              : Node(min_, max_)
+                              const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_, const size_t cur_depth_) noexcept
+              : Node(min_, max_, cur_depth_)
               , _lights(lights_)
               , _entities(entities_)
               , _detectors(detectors_)
