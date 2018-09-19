@@ -73,6 +73,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get a const reference to the shape forming the surface of the detector.
+         *
+         *  @return Const reference to the shape forming the surface of the detector.
+         */
         inline const geom::Shape& Detector::surf() const noexcept
         {
             return (_surf);
