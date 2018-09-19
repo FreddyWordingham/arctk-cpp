@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline explicit Detector(const std::unique_ptr<geom::Shape>& surf_) noexcept;
+            inline explicit Detector(std::unique_ptr<geom::Shape>& surf_) noexcept;
 
 
             //  == METHODS ==
@@ -66,7 +66,7 @@ namespace arc //! arctk namespace
          *
          *  @param  surf_   Surface of the detector.
          */
-        inline Detector::Detector(const std::unique_ptr<geom::Shape>& surf_) noexcept
+        inline Detector::Detector(std::unique_ptr<geom::Shape>& surf_) noexcept
           : _surf(std::move(surf_))
         {
         }
