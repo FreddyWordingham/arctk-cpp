@@ -146,10 +146,10 @@ namespace arc //! arctk namespace
              *
              *  @return Initialised three-dimensional array of child nodes.
              */
-            std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> Branch::init_childs(const std::vector<std::pair<const geom::Shape&, const equip::Light&>>&    lights_,
-                                                                                                   const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>&   entities_,
-                                                                                                   const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_, const size_t cur_depth_, const size_t max_depth_,
-                                                                                                   const size_t target_shapes_) const noexcept
+            inline std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> Branch::init_childs(const std::vector<std::pair<const geom::Shape&, const equip::Light&>>&    lights_,
+                                                                                                          const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>&   entities_,
+                                                                                                          const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_, const size_t cur_depth_, const size_t max_depth_,
+                                                                                                          const size_t target_shapes_) const noexcept
             {
                 std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> childs;
 
