@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Light(const geom::Shape& surf_, const random::distribution::Linear<double>& spec_) noexcept;
+            inline Light(geom::Shape surf_, const random::distribution::Linear<double>& spec_) noexcept;
 
 
             //  == METHODS ==
@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline double             min_wavelength() const noexcept;
             inline double             max_wavelength() const noexcept;
-            inline const geom::Shape& surf() const noexcept;
+            inline const geom::Shape* surf() const noexcept;
         };
 
 
@@ -70,8 +70,8 @@ namespace arc //! arctk namespace
          *  @param  surf_ Shape forming the emission surface of the light.
          *  @param  spec_ Spectrum used to draw photon wavelength values from.
          */
-        inline Light::Light(const geom::Shape& surf_, const random::distribution::Linear<double>& spec_) noexcept
-          : _surf(surf_)
+        inline Light::Light(geom::Shape surf_, const random::distribution::Linear<double>& spec_) noexcept
+          : _surf(std::make_unique<geom::Shape>(surf_))
           , _spec(spec_)
         {
         }
@@ -105,9 +105,9 @@ namespace arc //! arctk namespace
          *
          *  @return Const reference to the surface of the light.
          */
-        inline const geom::Shape& Light::surf() const noexcept
+        inline const geom::Shape* Light::surf() const noexcept
         {
-            return (_surf);
+            return (_surf.get());
         }
 
 
