@@ -40,8 +40,8 @@ namespace arc //! arctk namespace
         class Adaptive : public node::Branch
         {
             //  -- Properties --
-            //            const size_t _max_shapes;
-            //            const size_t _depth;
+            const size_t _max_shapes;
+            const size_t _depth;
 
 
             //  == INSTANTIATION ==
@@ -67,6 +67,7 @@ namespace arc //! arctk namespace
         inline Adaptive::Adaptive(const vec3& min_, const vec3& max_, std::vector<equip::Light> lights_, std::vector<equip::Entity> entities_, std::vector<equip::Detector> detectors_, const size_t max_depth_, const size_t target_shapes_) noexcept
           : Branch(min_, max_, init_light_shape_list(geom::shape::Aabb(min_, max_), lights_), init_entity_shape_list(geom::shape::Aabb(min_, max_), entities_), init_detector_shape_list(geom::shape::Aabb(min_, max_), detectors_), 0, max_depth_,
                    target_shapes_)
+          , _max_shapes(max_shapes())
         {
             PRE(min_.x < max_.x);
             PRE(min_.y < max_.y);
