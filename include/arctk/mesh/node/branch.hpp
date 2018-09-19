@@ -212,6 +212,14 @@ namespace arc //! arctk namespace
                 return (lights);
             }
 
+            /**
+             *  Initialise the vector of shape-entity pairs which intersect with the node.
+             *
+             *  @param  box_        Bounding box of the node.
+             *  @param  entities_   Vector of entities that may be found within the mesh's bounds.
+             *
+             *  @return Initialise vector of shape-entity pairs which intersect with the node.
+             */
             std::vector<std::pair<const geom::Shape&, const equip::Entity&>> Branch::init_entities_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_) const noexcept
             {
                 std::vector<std::pair<const geom::Shape&, const equip::Entity&>> entities;
