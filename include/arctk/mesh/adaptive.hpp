@@ -40,8 +40,8 @@ namespace arc //! arctk namespace
         class Adaptive : public node::Branch
         {
             //  -- Properties --
-            const size_t _max_shapes;
-            const size_t _depth;
+            //            const size_t _max_shapes;
+            //            const size_t _depth;
 
 
             //  == INSTANTIATION ==

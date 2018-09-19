@@ -24,6 +24,7 @@
 #include <arctk/equip.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
+#include <arctk/mesh/node.hpp>
 
 
 
