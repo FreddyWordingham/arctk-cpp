@@ -90,14 +90,14 @@ namespace arc //! arctk namespace
             /**
              *  Construct a branch node.
              *
-             *  @param  min_            Minimum bound of the mesh.
-             *  @param  max_            Maximum bound of the mesh.
-             *  @param  lights_         Vector of lights that may be found within the mesh's bounds.
-             *  @param  entities_       Vector of entities that may be found within the mesh's bounds.
-             *  @param  detectors_      Vector of detectors that may be found within the mesh's bounds.
+             *  @param  min_            Minimum bound of the node.
+             *  @param  max_            Maximum bound of the node.
+             *  @param  lights_         Vector of lights that are be found within the node's bounds.
+             *  @param  entities_       Vector of entities that are be found within the node's bounds.
+             *  @param  detectors_      Vector of detectors that are be found within the node's bounds.
              *  @param  cur_depth_      Current depth of the node.
              *  @param  max_depth_      Maximum depth the mesh may reach.
-             *  @param  target_shapes_  Target maximum number of shapes to find within each leaf cell of the mesh.
+             *  @param  target_shapes_  Target maximum number of shapes to find within each leaf node of the mesh.
              *
              *  @pre    min_.x must be less than max_.x.
              *  @pre    min_.y must be less than max_.y.
