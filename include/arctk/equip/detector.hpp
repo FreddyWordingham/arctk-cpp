@@ -68,11 +68,14 @@ namespace arc //! arctk namespace
          *  @tparam T   Type used to form the surface.
          *
          *  @param  surf_   Surface of the detector.
+         *
+         *  @pre    T must be derived from geom::Shape.
          */
         template <typename T>
         inline Detector::Detector(const T&& surf_) noexcept
           : _surf(std::make_unique<T>(surf_))
         {
+            static_assert(std::is_base_of<geom::Shape, T>::value);
         }
 
 
