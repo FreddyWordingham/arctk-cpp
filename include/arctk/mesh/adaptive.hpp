@@ -15,7 +15,13 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <array>
+#include <memory>
+
 //  -- Arctk --
+#include <arctk/math.hpp>
+#include <arctk/mesh/node.hpp>
 
 
 
@@ -33,6 +39,13 @@ namespace arc //! arctk namespace
          */
         class Adaptive
         {
+            //  -- Positioning --
+            const vec3 _centre; //!< Centre coordinate of the node.
+
+            //  -- Children --
+            const std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> _childs;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
