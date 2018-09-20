@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Initialisation --
-            nlohmann::json init_data(const std::string& t_serial) const;
+            inline nlohmann::json init_data(const std::string& t_serial) const noexcept;
 
 
             //  == METHODS ==
@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
-        nlohmann::json Json::init_data(const std::string& serial_) const
+        inline nlohmann::json Json::init_data(const std::string& serial_) const noexcept
         {
             nlohmann::json data;
 
