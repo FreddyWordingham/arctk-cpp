@@ -127,7 +127,6 @@
 #include <arctk/str.hpp>
 #include <arctk/str/format.hpp>
 #include <arctk/str/parse.hpp>
-#include <arctk/str/printable.hpp>
 #include <arctk/sys.hpp>
 #include <arctk/sys/args.hpp>
 #include <arctk/sys/balancer.hpp>
