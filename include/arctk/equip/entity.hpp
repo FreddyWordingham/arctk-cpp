@@ -90,7 +90,7 @@ namespace arc //! arctk namespace
             static_assert(std::is_base_of<geom::Shape, T>::value);
             static_assert(std::is_base_of<phys::Material, S>::value);
 
-            PRE(surf_->closed());
+            PRE(surf_.closed());
         }
 
 
