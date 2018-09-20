@@ -20,6 +20,7 @@
 #include <string>
 
 //  -- Arctk --
+#include <arctk/exit.hpp>
 #include <arctk/lib/nlohmann.hpp>
 
 
@@ -84,6 +85,8 @@ namespace arc //! arctk namespace
             {
                 std::cerr << "Unable to construct data::Json object.\n"
                           << "Unable to parse serialised data of.";
+
+                std::exit(exit::error::FAILED_PARSE);
             }
 
             return (data);
