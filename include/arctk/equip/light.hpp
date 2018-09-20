@@ -52,7 +52,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             template <typename T>
-            inline Light(T&& surf_, const random::distribution::Linear<double>& spec_) noexcept;
+            inline Light(T&& surf_, random::distribution::Linear<double>&& spec_) noexcept;
 
 
             //  == METHODS ==
@@ -78,7 +78,7 @@ namespace arc //! arctk namespace
          *  @pre    T must be derived from geom::Shape.
          */
         template <typename T>
-        inline Light::Light(const T&& surf_, const random::distribution::Linear<double>& spec_) noexcept
+        inline Light::Light(T&& surf_, random::distribution::Linear<double>&& spec_) noexcept
           : _surf(std::make_unique<T>(surf_))
           , _spec(spec_)
         {
