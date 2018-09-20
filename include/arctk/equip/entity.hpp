@@ -52,7 +52,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             template <typename T, typename S>
-            inline Entity(const T&& surf_, const S&& mat_) noexcept;
+            inline Entity(T&& surf_, S&& mat_) noexcept;
 
 
             //  == METHODS ==
@@ -83,7 +83,7 @@ namespace arc //! arctk namespace
          *  @pre    S must be derived from phys::Material.
          */
         template <typename T, typename S>
-        inline Entity::Entity(const T&& surf_, const S&& mat_) noexcept
+        inline Entity::Entity(T&& surf_, S&& mat_) noexcept
           : _surf(std::make_unique<T>(surf_))
           , _mat(std::make_unique<S>(mat_))
         {
