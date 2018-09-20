@@ -84,8 +84,8 @@ namespace arc //! arctk namespace
          */
         template <typename T, typename S>
         inline Entity::Entity(T&& surf_, S&& mat_) noexcept
-          : _surf(std::make_unique<T>(surf_))
-          , _mat(std::make_unique<S>(mat_))
+          : _surf(std::make_unique<T>(std::forward<T>(surf_)))
+          , _mat(std::make_unique<S>(std::forward<S>(mat_)))
         {
             static_assert(std::is_base_of<geom::Shape, T>::value);
             static_assert(std::is_base_of<phys::Material, S>::value);
