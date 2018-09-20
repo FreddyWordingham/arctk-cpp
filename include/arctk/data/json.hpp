@@ -36,6 +36,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Data --
+            const std::string _name;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
