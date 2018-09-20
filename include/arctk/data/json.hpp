@@ -37,7 +37,8 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            const std::string _name;
+            const std::string    _name;
+            const nlohmann::json _data;
 
 
             //  == INSTANTIATION ==
