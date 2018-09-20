@@ -1,8 +1,19 @@
+#if defined(__clang__)
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wc++98-compat-pedantic"
 #pragma clang diagnostic ignored "-Wcovered-switch-default"
 #pragma clang diagnostic ignored "-Wdocumentation-unknown-command"
 #pragma clang diagnostic ignored "-Wswitch-enum"
+
+#elif defined(__GNUC__) || defined(__GNUG__)
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wctor-dtor-privacy"
+#pragma GCC diagnostic ignored "-Wdeprecated"
+#pragma GCC diagnostic ignored "-Wswitch-enum"
+
+#endif
 
 
 
@@ -17224,4 +17235,12 @@ return nlohmann::json::json_pointer(std::string(s, n));
 
 
 
+#if defined(__clang__)
+
+#pragma GCC diagnostic pop
+
+#elif defined(__GNUC__) || defined(__GNUG__)
+
 #pragma clang diagnostic pop
+
+#endif
