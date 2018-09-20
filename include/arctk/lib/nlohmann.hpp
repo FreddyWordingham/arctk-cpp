@@ -1,8 +1,5 @@
 #pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wc++98-compat-pedantic"
-#pragma clang diagnostic ignored "-Wcovered-switch-default"
-#pragma clang diagnostic ignored "-Wdocumentation-unknown-command"
-#pragma clang diagnostic ignored "-Wswitch-enum"
+//#pragma clang diagnostic ignored "-Wc++98-compat-pedantic"
 
 
 
