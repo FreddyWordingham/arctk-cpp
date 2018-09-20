@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
          */
         template <typename T>
         inline Detector::Detector(T&& surf_) noexcept
-          : _surf(std::make_unique<T>(surf_))
+          : _surf(std::make_unique<T>(std::forward<T>(surf_)))
         {
             static_assert(std::is_base_of<geom::Shape, T>::value);
         }
