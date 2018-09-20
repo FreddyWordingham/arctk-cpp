@@ -46,6 +46,10 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Json(const std::string& name_, const std::string& serial_) noexcept;
 
+          private:
+            //  -- Initialisation --
+            nlohmann::json init_data(const std::string& t_serial) const;
+
 
             //  == METHODS ==
           public:
@@ -60,6 +64,25 @@ namespace arc //! arctk namespace
           : _name(name_)
           , _data(init_data(serial_))
         {
+        }
+
+
+        //  -- Initialisation --
+        nlohmann::json Json::init_data(const std::string& serial_) const
+        {
+            nlohmann::json data;
+
+            try
+            {
+                std::stringstream(serial_) >> data;
+            }
+            catch (...)
+            {
+                std::cerr << "Unable to construct data::Json object.\n"
+                          << "Unable to parse serialised data of.";
+            }
+
+            return (data);
         }
 
 
