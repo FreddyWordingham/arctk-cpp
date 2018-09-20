@@ -124,9 +124,6 @@
 #include <arctk/random/generator/quality.hpp>
 #include <arctk/settings.hpp>
 #include <arctk/settings/format.hpp>
-#include <arctk/str.hpp>
-#include <arctk/str/format.hpp>
-#include <arctk/str/parse.hpp>
 #include <arctk/sys.hpp>
 #include <arctk/sys/args.hpp>
 #include <arctk/sys/balancer.hpp>
