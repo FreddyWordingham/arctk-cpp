@@ -15,7 +15,8 @@
 
 
 //  == IMPORTS ==
-//  -- Std --
+//  -- Arctk --
+#include <arctk/lib/nlohmann.hpp>
 
 
 
@@ -35,7 +36,6 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
-
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
