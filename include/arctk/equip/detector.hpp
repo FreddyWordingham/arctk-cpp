@@ -42,14 +42,14 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Structure --
-            const std::unique_ptr<geom::Shape> _surf; //!< Shape forming the surface of the detector.
+            std::unique_ptr<geom::Shape> _surf; //!< Shape forming the surface of the detector.
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
             template <typename T>
-            inline explicit Detector(const T&& surf_) noexcept;
+            inline explicit Detector(T&& surf_) noexcept;
 
 
             //  == METHODS ==
@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
          *  @pre    T must be derived from geom::Shape.
          */
         template <typename T>
-        inline Detector::Detector(const T&& surf_) noexcept
+        inline Detector::Detector(T&& surf_) noexcept
           : _surf(std::make_unique<T>(surf_))
         {
             static_assert(std::is_base_of<geom::Shape, T>::value);
