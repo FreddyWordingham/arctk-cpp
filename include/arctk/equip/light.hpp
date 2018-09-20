@@ -80,7 +80,7 @@ namespace arc //! arctk namespace
         template <typename T>
         inline Light::Light(T&& surf_, random::distribution::Linear<double>&& spec_) noexcept
           : _surf(std::make_unique<T>(std::forward<T>(surf_)))
-          , _spec(spec_)
+          , _spec(std::move(spec_))
         {
             static_assert(std::is_base_of<geom::Shape, T>::value);
         }
