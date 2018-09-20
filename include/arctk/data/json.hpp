@@ -44,6 +44,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Json(const std::string& name_, const std::string& serial_) noexcept;
 
 
             //  == METHODS ==
@@ -55,6 +56,11 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        Json::Json(const std::string& name_, const std::string& serial_)
+          : _name(name_)
+          , _data(init_data(serial_))
+        {
+        }
 
 
 
