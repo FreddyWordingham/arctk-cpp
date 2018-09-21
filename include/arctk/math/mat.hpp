@@ -121,9 +121,6 @@ namespace arc //! arctk namespace
             constexpr inline Mat<T, N> trans() const noexcept;
             constexpr inline Mat<T, N> adj() const noexcept;
             constexpr inline Mat<T, N> inv() const noexcept;
-
-            //  -- Printing --
-            inline std::string str() const noexcept override;
         };
 
 
@@ -883,47 +880,6 @@ namespace arc //! arctk namespace
         constexpr inline Mat<T, N> Mat<T, N>::inv() const noexcept
         {
             return (adj() /= det());
-        }
-
-
-        //  -- Printing --
-        /**
-         *  Create a human readable string of the mat.
-         *
-         *  @return Human readable string of the mat.
-         */
-        template <typename T, size_t N>
-        inline std::string Mat<T, N>::str() const noexcept
-        {
-            std::stringstream stream;
-
-            stream << settings::format::VEC_START;
-
-            for (size_t i = 0; i < N; ++i)
-            {
-                if (i != 0)
-                {
-                    stream << '\n' << settings::format::DELIMITER;
-                }
-
-                stream << settings::format::VEC_START;
-
-                for (size_t j = 0; j < N; ++j)
-                {
-                    if (j != 0)
-                    {
-                        stream << settings::format::DELIMITER;
-                    }
-
-                    stream << std::setw(settings::format::PRINT_WIDTH) << _data[i][j];
-                }
-
-                stream << settings::format::VEC_END;
-            }
-
-            stream << settings::format::VEC_END;
-
-            return (stream.str());
         }
 
 
