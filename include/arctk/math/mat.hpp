@@ -177,6 +177,31 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
+        //  -- Writing --
+        template <typename T, size_t N>
+        constexpr inline std::ostream& Vec<T, N>::operator<<(std::ostream& stream_) const noexcept
+        {
+            stream_ << "{{" << _data[0][0];
+            for (size_t i = 1; i < N; ++i)
+            {
+                stream_ << ", " << _data[0][i];
+            }
+            stream_ << '}';
+            for (size_t i = 1; i < N; ++i)
+            {
+                stream_ << "\n{" << _data[i][0];
+                for (size_t j = 1; j < N; ++j)
+                {
+                    stream_ << ", " << _data[i][j];
+                }
+                stream_ << '}';
+            }
+            stream_ << '}';
+
+            return (stream_);
+        }
+
+
         //  -- Assignment --
         /**
          *  Add a value to all elements of the mat.
