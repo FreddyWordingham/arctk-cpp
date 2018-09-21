@@ -25,12 +25,12 @@ namespace arc //! arctk namespace
 {
     namespace write //! write namespace
     {
-        namespace vector //! vector namespace
+        namespace stl //! standard template library namespace
         {
 
 
 
-        } // namespace vector
+        } // namespace stl
     }     // namespace write
 } // namespace arc
 
