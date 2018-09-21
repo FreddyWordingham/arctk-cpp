@@ -17,7 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <iomanip>
-#include <sstream>
+#include <ostream>
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
