@@ -28,6 +28,7 @@ namespace arc //! arctk namespace
             //  -- Bookends --
 
             //  -- Delimiters --
+            constexpr const char const* const DELIM = ", ";
 
 
 
