@@ -23,6 +23,7 @@
 #include <arctk/debug.hpp>
 #include <arctk/math/mat.hpp>
 #include <arctk/math/vec3.hpp>
+#include <arctk/write.hpp>
 
 
 
