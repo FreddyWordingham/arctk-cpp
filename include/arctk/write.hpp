@@ -16,7 +16,6 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
-#include <arctk/write/stl.hpp>
 
 
 
