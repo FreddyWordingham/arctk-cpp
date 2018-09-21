@@ -84,6 +84,9 @@ namespace arc //! arctk namespace
             //  -- Conversion --
             constexpr inline explicit operator std::array<T, 2>() const noexcept;
 
+            //  -- Writing --
+            constexpr inline std::ostream& operator<<(std::ostream& stream_) const noexcept;
+
             //  -- Assignment --
             constexpr inline Vec<T, 2>& operator+=(T val_) noexcept;
             constexpr inline Vec<T, 2>& operator+=(const Vec<T, 2>& vec_) noexcept;
@@ -168,6 +171,16 @@ namespace arc //! arctk namespace
         constexpr inline Vec<T, 2>::operator std::array<T, 2>() const noexcept
         {
             return (std::array<T, 2>({{x, y}}));
+        }
+
+
+        //  -- Writing --
+        template <typename T>
+        constexpr inline std::ostream& Vec<T, 2>::operator<<(std::ostream& stream_) const noexcept
+        {
+            stream_ << '{' << x << ", " << y << '}';
+
+            return (stream_);
         }
 
 
