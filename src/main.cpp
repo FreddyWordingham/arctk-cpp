@@ -123,7 +123,6 @@
 #include <arctk/random/distribution/linear.hpp>
 #include <arctk/random/generator.hpp>
 #include <arctk/random/generator/quality.hpp>
-#include <arctk/read.hpp>
 #include <arctk/sys.hpp>
 #include <arctk/sys/args.hpp>
 #include <arctk/sys/balancer.hpp>
@@ -136,8 +135,6 @@
 #include <arctk/utl/search.hpp>
 #include <arctk/utl/stream.hpp>
 #include <arctk/utl/type.hpp>
-#include <arctk/write.hpp>
-#include <arctk/write/format.hpp>
 
 
 
