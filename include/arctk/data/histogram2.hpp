@@ -25,8 +25,6 @@
 #include <arctk/data/histogram.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
-#include <arctk/settings.hpp>
-#include <arctk/str.hpp>
 
 
 
