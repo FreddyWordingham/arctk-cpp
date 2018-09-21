@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
          *  @tparam N   Size of the vec.
          */
         template <typename T, size_t N>
-        class Vec : public str::Printable
+        class Vec
         {
             //  == ASSERTIONS ==
             //  -- Size --
