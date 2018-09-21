@@ -16,17 +16,31 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <vector>
 
 
 
-//  == NAMESPACE ==
-namespace arc //! arctk namespace
+//  == OPERATOR PROTOTYPES ==
+//  -- Vector --
+template <typename T, typename S>
+inline T& operator<<(T& stream_, const std::vector<S>& vec_) noexcept;
+
+
+
+//  == OPERATORS ==
+//  -- Vector --
+template <typename T, typename S>
+inline T& operator<<(T& stream_, const std::vector<S>& vec_) noexcept
 {
-    namespace print //! printing namespace
+    stream_ << '{' << vec_[0];
+    for (size_t i = 1; i < vec_.size(); ++i)
     {
+        stream_ << ", " << vec_[i];
+    }
+    stream_ << '}';
 
-    } // namespace print
-} // namespace arc
+    return (stream_);
+}
 
 
 
