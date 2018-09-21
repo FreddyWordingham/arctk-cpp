@@ -26,9 +26,11 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Bookends --
+            constexpr const char const* VEC_START = "{";
+            constexpr const char const* VEC_END   = "}";
 
             //  -- Delimiters --
-            constexpr const char const* const DELIM = ", ";
+            constexpr const char const* DELIM = ", ";
 
             //  -- Widths --
             constexpr const size_t FIELD_WIDTH = 16;
