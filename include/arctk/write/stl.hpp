@@ -33,9 +33,11 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Vector --
             template <typename T>
-            inline std::ostream& vector(std::ostream& stream_, const std::vector<T>& vec_, const std::string& open_ = '{', const std::string& close_ = '}', const std::string& delim_ = ", ") noexcept;
+            inline std::ostream& vector(std::ostream& stream_, const std::vector<T>& vec_, const std::string& open_ = '(', const std::string& close_ = ')', const std::string& delim_ = ", ") noexcept;
             template <typename T, size_t N>
-            inline std::ostream& array(std::ostream& stream_, const std::array<T, N>& arr_, const std::string& open_ = '{', const std::string& close_ = '}', const std::string& delim_ = ", ") noexcept;
+            inline std::ostream& array(std::ostream& stream_, const std::array<T, N>& arr_, const std::string& open_ = '[', const std::string& close_ = ']', const std::string& delim_ = ", ") noexcept;
+            template <typename T, typename S>
+            inline std::ostream& map(std::ostream& stream_, const std::map<T, S>& map_, const std::string& link_ = "\t->\t") noexcept;
 
 
 
@@ -63,6 +65,25 @@ namespace arc //! arctk namespace
                     stream_ << delim_ << arr_[i];
                 }
                 stream_ << close_;
+
+                return (stream_);
+            }
+
+            template <typename T, typename S>
+            inline std::ostream& map(std::ostream& stream_, const std::map<T, S>& map_, const std::string& link_ = "\t->\t") noexcept
+            {
+                bool first = true;
+                for (const auto& [key, val] : map_)
+                {
+                    if (!first)
+                    {
+                        stream_ << '\n';
+                    }
+
+                    stream_ << key << link_ << val;
+
+                    first = false;
+                }
 
                 return (stream_);
             }
