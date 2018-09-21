@@ -3,7 +3,7 @@
  *  @date   21/09/2018
  *  @author Freddy Wordingham
  *
- *  Writing formatting constants.
+ *  Input/output formatting constants.
  */
 
 
