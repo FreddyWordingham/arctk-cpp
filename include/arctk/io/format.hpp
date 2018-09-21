@@ -23,7 +23,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace write //! writing namespace
+    namespace io //! input/output namespace
     {
         namespace format //! formatting namespace
         {
@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
 
 
         } // namespace format
-    }     // namespace write
+    }     // namespace io
 } // namespace arc
 
 
