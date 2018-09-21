@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored by the vec.
          */
         template <typename T>
-        class Vec<T, 3> : public str::Printable
+        class Vec<T, 3>
         {
             //  == FIELDS ==
           public:
