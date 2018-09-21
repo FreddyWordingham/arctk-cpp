@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline explicit Table(const std::vector<std::tuple<A...>>& rows_) noexcept;
             inline explicit Table(const std::vector<A>&... cols_) noexcept;
-            inline explicit Table(const std::string& serial_, char delim_ = settings::format::DELIMITER) noexcept;
+            inline explicit Table(const std::string& serial_, char delim_ = ',') noexcept;
 
             //  -- Initialisation --
             template <typename T, typename... B>
