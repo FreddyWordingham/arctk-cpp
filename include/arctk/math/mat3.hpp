@@ -133,8 +133,9 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline std::ostream& Mat<T, 3>::operator<<(std::ostream& stream_) const noexcept
         {
-            stream_ << "{{" << std::setw(16) << x.x << ", " << std::setw(16) << x.y << ", " << std::setw(16) << x.z << "}\n{" << std::setw(16) << y.x << ", " << std::setw(16) << y.y << ", " << std::setw(16) << y.z << "}\n{" << std::setw(16) << z.x << ", "
-                    << std::setw(16) << z.y << ", " << std::setw(16) << z.z << "}}";
+            stream_ << "{{" << std::setw(print::settings::FIELD_WIDTH) << x.x << ", " << std::setw(print::settings::FIELD_WIDTH) << x.y << ", " << std::setw(print::settings::FIELD_WIDTH) << x.z << "}\n{" << std::setw(print::settings::FIELD_WIDTH) << y.x
+                    << ", " << std::setw(print::settings::FIELD_WIDTH) << y.y << ", " << std::setw(print::settings::FIELD_WIDTH) << y.z << "}\n{" << std::setw(print::settings::FIELD_WIDTH) << z.x << ", " << std::setw(print::settings::FIELD_WIDTH) << z.y
+                    << ", " << std::setw(print::settings::FIELD_WIDTH) << z.z << "}}";
 
             return (stream_);
         }
