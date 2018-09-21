@@ -35,7 +35,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline std::ostream& vec(std::ostream& stream_, const std::vector<T>& vec_, const std::string& open_ = '{', const std::string& close_ = '}', const std::string& delim_ = ", ") noexcept;
             template <typename T, size_t N>
-            inline std::ostream& arr(std::ostream& stream_, const std::array<T, N>& arr_, const std::string& open_ = '{', const std::string& close_ = '}', const std::string& delim_ = ", ") noexcept;
+            inline std::ostream& array(std::ostream& stream_, const std::array<T, N>& arr_, const std::string& open_ = '{', const std::string& close_ = '}', const std::string& delim_ = ", ") noexcept;
 
 
 
@@ -55,7 +55,7 @@ namespace arc //! arctk namespace
             }
 
             template <typename T, size_t N>
-            inline std::ostream& arr(std::ostream& stream_, const std::array<T, N>& arr_, const std::string& open_, const std::string& close_, const std::string& delim_) noexcept
+            inline std::ostream& array(std::ostream& stream_, const std::array<T, N>& arr_, const std::string& open_, const std::string& close_, const std::string& delim_) noexcept
             {
                 stream_ << open_ << arr_[0];
                 for (size_t i = 1; i < N; ++i)
