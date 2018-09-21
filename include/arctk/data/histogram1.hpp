@@ -125,7 +125,7 @@ namespace arc //! arctk namespace
         {
             const std::vector<double> centres = Histogram<T, 1>::centres();
 
-            stream_ << std::setw(write::format::FIELD_WIDTH) << centres[i] << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << _bins[i];
+            stream_ << std::setw(write::format::FIELD_WIDTH) << centres[0] << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << _bins[0];
             for (size_t i = 1; i < centres.size(); ++i)
             {
                 stream_ << '\n' << std::setw(write::format::FIELD_WIDTH) << centres[i] << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << _bins[i];
