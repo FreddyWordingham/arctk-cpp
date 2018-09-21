@@ -104,6 +104,9 @@ namespace arc //! arctk namespace
             //  -- Conversion --
             constexpr inline explicit operator std::array<T, 4>() const noexcept;
 
+            //  -- Writing --
+            constexpr inline std::ostream& operator<<(std::ostream& stream_) const noexcept;
+
             //  -- Assignment --
             constexpr inline Vec<T, 4>& operator+=(T val_) noexcept;
             constexpr inline Vec<T, 4>& operator+=(const Vec<T, 4>& vec_) noexcept;
