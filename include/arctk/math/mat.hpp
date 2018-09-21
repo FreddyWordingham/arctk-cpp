@@ -180,22 +180,22 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline std::ostream& Mat<T, N>::operator<<(std::ostream& stream_) const noexcept
         {
-            stream_ << write::format::MAT_ROW_START << write::format::MAT_ROW_START << _data[0][0];
+            stream_ << write::format::MAT_ROW_START << write::format::MAT_ROW_START << std::setw(write::format::FIELD_WIDTH) << _data[0][0];
             for (size_t i = 1; i < N; ++i)
             {
-                stream_ << ", " << _data[0][i];
+                stream_ << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << _data[0][i];
             }
-            stream_ << '}';
+            stream_ << write::format::MAT_ROW_END;
             for (size_t i = 1; i < N; ++i)
             {
-                stream_ << "\n{" << _data[i][0];
+                stream_ << '\n' << write::format::MAT_ROW_START << std::setw(write::format::FIELD_WIDTH) << _data[i][0];
                 for (size_t j = 1; j < N; ++j)
                 {
-                    stream_ << ", " << _data[i][j];
+                    stream_ << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << _data[i][j];
                 }
-                stream_ << '}';
+                stream_ << write::format::MAT_ROW_END;
             }
-            stream_ << '}';
+            stream_ << write::format::MAT_ROW_END;
 
             return (stream_);
         }
