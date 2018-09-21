@@ -30,6 +30,30 @@ namespace arc //! arctk namespace
 
 
 
+            //  == FUNCTION PROTOTYPES ==
+            //  -- Vector --
+            template <typename T>
+            inline std::ostream& vec(std::ostream& stream_, const std::vector<T>& vec_, const std::string& open_ = '{', const std::string& close_ = '}', const std::string& delim_ = ", ") noexcept;
+
+
+
+            //  == FUNCTIONS ==
+            //  -- Vector --
+            template <typename T>
+            inline std::ostream& vec(std::ostream& stream_, const std::vector<T>& vec_, const std::string& open_ = '{', const std::string& close_ = '}', const std::string& delim_ = ", ") noexcept
+            {
+                stream_ << open_ << vec_[0];
+                for (size_t i = 1; i < vec_.size(); ++i)
+                {
+                    stream_ << delim_ << vec_[i];
+                }
+                stream_ << close_;
+
+                return (stream_);
+            }
+
+
+
         } // namespace stl
     }     // namespace write
 } // namespace arc
