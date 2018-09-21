@@ -24,6 +24,7 @@
 #include <arctk/data/histogram.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
+#include <arctk/write.hpp>
 
 
 
@@ -63,6 +64,11 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Histogram(const vec2& min_, const vec2& max_, const vec2s& size_) noexcept;
+
+
+            //  == OPERATORS ==
+            //  -- Writing --
+            inline std::ostream& operator<<(std::ostream& stream_) const noexcept;
 
 
             //  == METHODS ==
@@ -111,6 +117,30 @@ namespace arc //! arctk namespace
             PRE(min_.y < max_.y);
             PRE(size_.x > 0);
             PRE(size_.y > 0);
+        }
+
+
+
+        //  == OPERATORS ==
+        //  -- Writing --
+        template <typename T>
+        inline std::ostream& Histogram<T, 2>::operator<<(std::ostream& stream_) const noexcept
+        {
+            std::cout << std::setw(write::format::FIELD_WIDTH) << _bins[0][0];
+            for (size_t i = 1; i < _bins[0].size(); ++i)
+            {
+                std::cout << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << _bins[0][i];
+            }
+            for (size_t i = 1; i < _bins.size(); ++i)
+            {
+                std::cout << '\n' << std::setw(write::format::FIELD_WIDTH) << _bins[i][0];
+                for (size_t j = 1; j < _bins[i].size(); ++j)
+                {
+                    std::cout << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << _bins[0][i];
+                }
+            }
+
+            return (stream_);
         }
 
 
