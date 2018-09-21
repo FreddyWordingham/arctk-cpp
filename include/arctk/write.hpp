@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_PRINT_HPP
-#define ARCTK_PRINT_HPP
+#ifndef ARCTK_WRITE_HPP
+#define ARCTK_WRITE_HPP
 
 
 
@@ -65,4 +65,4 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec
 
 
 //  == GUARD END ==
-#endif // ARCTK_PRINT_HPP
+#endif // ARCTK_WRITE_HPP
