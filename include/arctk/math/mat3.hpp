@@ -133,9 +133,12 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline std::ostream& Mat<T, 3>::operator<<(std::ostream& stream_) const noexcept
         {
-            stream_ << "{{" << std::setw(write::format::FIELD_WIDTH) << x.x << ", " << std::setw(write::format::FIELD_WIDTH) << x.y << ", " << std::setw(write::format::FIELD_WIDTH) << x.z << "}\n{" << std::setw(write::format::FIELD_WIDTH) << y.x << ", "
-                    << std::setw(write::format::FIELD_WIDTH) << y.y << ", " << std::setw(write::format::FIELD_WIDTH) << y.z << "}\n{" << std::setw(write::format::FIELD_WIDTH) << z.x << ", " << std::setw(write::format::FIELD_WIDTH) << z.y << ", "
-                    << std::setw(write::format::FIELD_WIDTH) << z.z << "}}";
+            stream_ << write::format::MAT_ROW_START << write::format::MAT_ROW_START << std::setw(write::format::FIELD_WIDTH) << std::setw(write::format::FIELD_WIDTH) << x.x << write::format::DELIM << std::setw(write::format::FIELD_WIDTH)
+                    << std::setw(write::format::FIELD_WIDTH) << x.y << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << std::setw(write::format::FIELD_WIDTH) << x.z << write::format::MAT_ROW_END << '\n'
+                    << write::format::MAT_ROW_START << std::setw(write::format::FIELD_WIDTH) << std::setw(write::format::FIELD_WIDTH) << y.x << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << std::setw(write::format::FIELD_WIDTH) << y.y
+                    << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << std::setw(write::format::FIELD_WIDTH) << y.z << write::format::MAT_ROW_END << '\n'
+                    << write::format::MAT_ROW_START << std::setw(write::format::FIELD_WIDTH) << std::setw(write::format::FIELD_WIDTH) << z.x << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << std::setw(write::format::FIELD_WIDTH) << z.y
+                    << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << std::setw(write::format::FIELD_WIDTH) << z.z << write::format::MAT_ROW_END << write::format::MAT_ROW_END;
 
             return (stream_);
         }
