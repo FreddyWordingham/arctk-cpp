@@ -18,7 +18,6 @@
 //  -- Std --
 #include <iomanip>
 #include <sstream>
-#include <string>
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
