@@ -137,7 +137,6 @@
 #include <arctk/utl/stream.hpp>
 #include <arctk/utl/type.hpp>
 #include <arctk/write.hpp>
-#include <arctk/write/stl.hpp>
 
 
 
