@@ -18,6 +18,7 @@
 //  -- Std --
 #include <sstream>
 #include <string>
+#include <type_traits>
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
@@ -47,6 +48,8 @@ namespace arc //! arctk namespace
             template <typename T>
             inline T str(const std::string& str_) noexcept
             {
+                static_assert(std::is_fundamental<T>::value);
+
                 std::stringstream stream;
                 stream << str_;
 
