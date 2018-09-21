@@ -20,5 +20,21 @@
 
 
 
+//  == NAMESPACE ==
+namespace arc //! arctk namespace
+{
+    namespace write //! write namespace
+    {
+        namespace vector //! vector namespace
+        {
+
+
+
+        } // namespace vector
+    }     // namespace write
+} // namespace arc
+
+
+
 //  == GUARD END ==
 #endif // ARCTK_WRITE_VECTOR_HPP
