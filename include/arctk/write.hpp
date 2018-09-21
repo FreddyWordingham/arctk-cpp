@@ -3,7 +3,7 @@
  *  @date   21/09/2018
  *  @author Freddy Wordingham
  *
- *  Collection of printing operators and functions.
+ *  Collection of writing operators and functions.
  */
 
 
