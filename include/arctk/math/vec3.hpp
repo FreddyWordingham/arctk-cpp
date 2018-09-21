@@ -24,8 +24,6 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/math/vec.hpp>
-#include <arctk/settings.hpp>
-#include <arctk/str.hpp>
 
 
 
