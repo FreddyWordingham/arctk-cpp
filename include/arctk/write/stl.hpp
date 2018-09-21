@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_WRITE_VECTOR_HPP
-#define ARCTK_WRITE_VECTOR_HPP
+#ifndef ARCTK_WRITE_STL_HPP
+#define ARCTK_WRITE_STL_HPP
 
 
 
@@ -37,4 +37,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_WRITE_VECTOR_HPP
+#endif // ARCTK_WRITE_STL_HPP
