@@ -129,9 +129,6 @@ namespace arc //! arctk namespace
             constexpr inline T         mag_sq() const noexcept;
             constexpr inline Vec<T, N> normal() const noexcept;
             constexpr inline void      normalise() noexcept;
-
-            //  -- Printing --
-            inline std::string str() const noexcept override;
         };
 
 
