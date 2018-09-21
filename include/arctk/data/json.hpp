@@ -37,65 +37,65 @@ namespace arc //! arctk namespace
         /**
          *  Json parser and data class.
          */
-        class Json
-        {
-            //  == FIELDS ==
-          private:
-            //  -- Data --
-            const std::string    _name;
-            const nlohmann::json _data;
+        /*        class Json
+                {
+                    //  == FIELDS ==
+                  private:
+                    //  -- Data --
+                    const std::string    _name;
+                    const nlohmann::json _data;
 
 
-            //  == INSTANTIATION ==
-          public:
-            //  -- Constructors --
-            inline Json(const std::string& name_, const std::string& serial_) noexcept;
+                    //  == INSTANTIATION ==
+                  public:
+                    //  -- Constructors --
+                    inline Json(const std::string& name_, const std::string& serial_) noexcept;
 
-          private:
-            //  -- Initialisation --
-            inline nlohmann::json init_data(const std::string& t_serial) const noexcept;
-
-
-            //  == METHODS ==
-          public:
-            //  -- Getters --
-        };
+                  private:
+                    //  -- Initialisation --
+                    inline nlohmann::json init_data(const std::string& t_serial) const noexcept;
 
 
-
-        //  == INSTANTIATION ==
-        //  -- Constructors --
-        inline Json::Json(const std::string& name_, const std::string& serial_) noexcept
-          : _name(name_)
-          , _data(init_data(serial_))
-        {
-        }
-
-
-        //  -- Initialisation --
-        inline nlohmann::json Json::init_data(const std::string& serial_) const noexcept
-        {
-            nlohmann::json data;
-
-            try
-            {
-                std::stringstream(serial_) >> data;
-            }
-            catch (...)
-            {
-                std::cerr << "Unable to construct data::Json object.\n"
-                          << "Unable to parse serialised data of.";
-
-                std::exit(exit::error::FAILED_PARSE);
-            }
-
-            return (data);
-        }
+                    //  == METHODS ==
+                  public:
+                    //  -- Getters --
+                };
 
 
 
-        //  == METHODS ==
-        //  -- Getters --
+                //  == INSTANTIATION ==
+                //  -- Constructors --
+                inline Json::Json(const std::string& name_, const std::string& serial_) noexcept
+                  : _name(name_)
+                  , _data(init_data(serial_))
+                {
+                }
+
+
+                //  -- Initialisation --
+                inline nlohmann::json Json::init_data(const std::string& serial_) const noexcept
+                {
+                    nlohmann::json data;
+
+                    try
+                    {
+                        std::stringstream(serial_) >> data;
+                    }
+                    catch (...)
+                    {
+                        std::cerr << "Unable to construct data::Json object.\n"
+                                  << "Unable to parse serialised data of.";
+
+                        std::exit(exit::error::FAILED_PARSE);
+                    }
+
+                    return (data);
+                }
+
+
+
+                //  == METHODS ==
+                //  -- Getters --*/
 
 
 
