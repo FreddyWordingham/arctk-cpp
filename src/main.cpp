@@ -136,6 +136,7 @@
 #include <arctk/utl/search.hpp>
 #include <arctk/utl/stream.hpp>
 #include <arctk/utl/type.hpp>
+#include <arctk/write.hpp>
 
 
 
