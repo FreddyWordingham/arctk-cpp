@@ -75,29 +75,31 @@ namespace arc //! arctk namespace
             template <>
             inline bool primitive(const std::string& str_) noexcept
             {
-                std::stringstream stream;
-                stream << str_;
-
-                T val{};
-                stream >> val;
-
-                if (stream.fail())
+                if (str_ == "0")
                 {
-                    std::cerr << "Unable to parse string: '" << str_ << "' to type.\n"
-                              << "String: '" << str_ << "' can not be parsed to type: '" << typeid(T).name() << "'.\n";
-
-                    std::exit(exit::error::FAILED_PARSE);
+                    return (false);
+                }
+                if (str_ == "1")
+                {
+                    return (true);
                 }
 
-                if (stream.rdbuf()->in_avail() != 0)
-                {
-                    std::cerr << "Unable to parse string to type.\n"
-                              << "String: '" << str_ << "' contains leftover characters after parsing to type: '" << typeid(T).name() << "'.\n";
+                std::string str = str_;
+                std::transform(str.begin(), str.end(), str.begin(), [](unsigned char c_) { return std::tolower(c_); });
 
-                    std::exit(exit::error::FAILED_PARSE);
+                if (str == "false")
+                {
+                    return (false);
+                }
+                if (str == "true")
+                {
+                    return (true);
                 }
 
-                return (val);
+                std::cerr << "Unable to parse string: '" << str_ << "' to type.\n"
+                          << "String: '" << str_ << "' can not be parsed to type: '" << typeid(bool).name() << "'.\n";
+
+                std::exit(exit::error::FAILED_PARSE);
             }
 
 
