@@ -83,9 +83,6 @@ namespace arc //! arctk namespace
             //  -- Collection --
             virtual inline void collect(double   pos_,
                                         const T& val_) noexcept = 0; //!<  Collect a value into the histogram at a given position.  @tparam T   Type binned. @param  pos_    Position of the value to place.  @param  val_    Value to place within the bins.
-
-            //  -- Printing --
-            inline std::string str() const noexcept override;
         };
 
 
@@ -228,33 +225,6 @@ namespace arc //! arctk namespace
             const auto index = static_cast<size_t>((pos_ - _min) / _bin_width);
 
             return ((index == _bins.size()) ? (index - 1) : index);
-        }
-
-
-        //  -- Printing --
-        /**
-         *  Create a human readable string of the histogram.
-         *
-         *  @return Human readable string of the histogram.
-         */
-        template <typename T>
-        inline std::string Histogram<T, 1>::str() const noexcept
-        {
-            const std::vector<double> centres = Histogram<T, 1>::centres();
-
-            std::stringstream stream;
-
-            for (size_t i = 0; i < centres.size(); ++i)
-            {
-                if (i != 0)
-                {
-                    stream << '\n';
-                }
-
-                stream << std::setw(settings::format::PRINT_WIDTH) << centres[i] << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << _bins[i];
-            }
-
-            return (stream.str());
         }
 
 
