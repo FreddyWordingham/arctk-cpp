@@ -25,8 +25,6 @@
 
 //  -- Arctk --
 #include <arctk/exit.hpp>
-#include <arctk/settings.hpp>
-#include <arctk/str.hpp>
 #include <arctk/utl.hpp>
 
 
