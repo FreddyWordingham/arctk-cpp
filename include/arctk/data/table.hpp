@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
          *  @tparam A   Types stored in data columns.
          */
         template <typename... A>
-        class Table : str::Printable
+        class Table
         {
             //  == FIELDS ==
           private:
