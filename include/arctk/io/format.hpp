@@ -32,6 +32,8 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Bookends --
+            constexpr char const* const ARRAY_START  = "[";
+            constexpr char const* const ARRAY_END    = "]";
             constexpr char const* const VECTOR_START = "{";
             constexpr char const* const VECTOR_END   = "}";
 
