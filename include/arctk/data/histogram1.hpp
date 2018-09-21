@@ -25,6 +25,7 @@
 //  -- Arctk --
 #include <arctk/data/histogram.hpp>
 #include <arctk/debug.hpp>
+#include <arctk/write.hpp>
 
 
 
