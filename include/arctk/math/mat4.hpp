@@ -133,6 +133,17 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
+        //  -- Writing --
+        template <typename T>
+        constexpr inline std::ostream& Mat<T, 4>::operator<<(std::ostream& stream_) const noexcept
+        {
+            stream_ << "{{" << x.x << ", " << x.y << ", " << x.z << ", " << x.w << "}\n{" << y.x << ", " << y.y << ", " << y.z << ", " << y.w << "}\n{" << z.x << ", " << z.y << ", " << z.z << ", " << z.w << "}\n{" << w.x << ", " << w.y << ", " << w.z
+                    << ", " << w.w << "}}";
+
+            return (stream_);
+        }
+
+
         //  -- Assignment --
         /**
          *  Add a value to all elements of the mat.
