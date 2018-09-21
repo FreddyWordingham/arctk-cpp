@@ -17,8 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <iomanip>
-#include <sstream>
-#include <string>
+#include <ostream>
 #include <vector>
 
 //  -- Arctk --
@@ -83,9 +82,6 @@ namespace arc //! arctk namespace
             //  -- Collection --
             virtual inline void collect(const vec2& pos_,
                                         const T&    val_) noexcept = 0; //!<  Collect a value into the histogram at a given position.  @tparam T   Type binned. @param  pos_    Position of the value to place.  @param  val_    Value to place within the bins.
-
-            //  -- Printing --
-            inline std::string str() const noexcept override;
         };
 
 
@@ -256,39 +252,6 @@ namespace arc //! arctk namespace
             const auto index_y = static_cast<size_t>((pos_.y - _min.y) / _bin_width.y);
 
             return (vec2s((index_x == _bins.size()) ? (index_x - 1) : index_x, (index_y == _bins.front().size()) ? (index_y - 1) : index_y));
-        }
-
-
-        //  -- Printing --
-        /**
-         *  Create a human readable string of the histogram.
-         *
-         *  @return Human readable string of the histogram.
-         */
-        template <typename T>
-        inline std::string Histogram<T, 2>::str() const noexcept
-        {
-            std::stringstream stream;
-
-            for (size_t i = 0; i < _bins.size(); ++i)
-            {
-                if (i != 0)
-                {
-                    stream << '\n';
-                }
-
-                for (size_t j = 0; j < _bins.front().size(); ++j)
-                {
-                    if (j != 0)
-                    {
-                        stream << settings::format::DELIMITER;
-                    }
-
-                    stream << std::setw(settings::format::PRINT_WIDTH) << _bins[i][j];
-                }
-            }
-
-            return (stream.str());
         }
 
 
