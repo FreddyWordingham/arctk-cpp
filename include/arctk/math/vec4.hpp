@@ -228,6 +228,16 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Writing --
+        template <typename T>
+        constexpr inline std::ostream& Vec<T, 4>::operator<<(std::ostream& stream_) const noexcept
+        {
+            stream_ << '{' << x << ", " << y << ", " << z << ", " << w << '}';
+
+            return (stream_);
+        }
+
+
         //  -- Assignment --
         /**
          *  Add a value to all elements of the vec.
