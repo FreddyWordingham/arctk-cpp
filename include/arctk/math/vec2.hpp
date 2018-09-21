@@ -25,7 +25,6 @@
 #include <arctk/debug.hpp>
 #include <arctk/math/vec.hpp>
 #include <arctk/settings.hpp>
-#include <arctk/str.hpp>
 
 
 
@@ -50,7 +49,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored by the vec.
          */
         template <typename T>
-        class Vec<T, 2> : public str::Printable
+        class Vec<T, 2>
         {
             //  == FIELDS ==
           public:
