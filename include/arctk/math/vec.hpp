@@ -252,12 +252,12 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline std::ostream& Vec<T, N>::operator<<(std::ostream& stream_) const noexcept
         {
-            stream_ << write::format::VEC_START << std::setw(write::format::FIELD_WIDTH) << _data[0];
+            stream_ << io::format::VEC_START << std::setw(io::format::FIELD_WIDTH) << _data[0];
             for (size_t i = 1; i < N; ++i)
             {
-                stream_ << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << _data[i];
+                stream_ << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << _data[i];
             }
-            stream_ << write::format::VEC_END;
+            stream_ << io::format::VEC_END;
 
             return (stream_);
         }
