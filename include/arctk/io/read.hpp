@@ -38,14 +38,14 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Primitive --
             template <typename T>
-            inline T primitive(const std::string& str_) noexcept;
+            inline T string(const std::string& str_) noexcept;
 
 
 
             //  == FUNCTIONS ==
             //  -- Primitive --
             template <typename T>
-            inline T primitive(const std::string& str_) noexcept
+            inline T string(const std::string& str_) noexcept
             {
                 std::stringstream stream;
                 stream << str_;
@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
             }
 
             template <>
-            inline bool primitive(const std::string& str_) noexcept
+            inline bool string(const std::string& str_) noexcept
             {
                 if (str_ == "0")
                 {
