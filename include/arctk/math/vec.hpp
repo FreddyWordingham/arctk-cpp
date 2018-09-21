@@ -85,7 +85,7 @@ namespace arc //! arctk namespace
             constexpr inline explicit operator std::array<T, N>() const noexcept;
 
             //  -- Writing --
-            constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<T, N>& vec_) const noexcept;
+            constexpr inline std::ostream& operator<<(std::ostream& stream_) const noexcept;
 
             //  -- Assignment --
             constexpr inline Vec<T, N>& operator+=(T val_) noexcept;
@@ -251,7 +251,7 @@ namespace arc //! arctk namespace
 
         //  -- Writing --
         template <typename T, size_t N>
-        constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<T, N>& vec_) const noexcept
+        constexpr inline std::ostream& Vec<T, N>::operator<<(std::ostream& stream_) const noexcept
         {
             stream_ << '{';
             for (size_t i = 0; i < N; ++i)
