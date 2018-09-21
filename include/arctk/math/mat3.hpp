@@ -133,7 +133,8 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline std::ostream& Mat<T, 3>::operator<<(std::ostream& stream_) const noexcept
         {
-            stream_ << "{{" << x.x << ", " << x.y << ", " << x.z << "}\n{" << y.x << ", " << y.y << ", " << y.z << "}\n{" << z.x << ", " << z.y << ", " << z.z << "}}";
+            stream_ << "{{" << std::setw(16) << x.x << ", " << std::setw(16) << x.y << ", " << std::setw(16) << x.z << "}\n{" << std::setw(16) << y.x << ", " << std::setw(16) << y.y << ", " << std::setw(16) << y.z << "}\n{" << std::setw(16) << z.x << ", "
+                    << std::setw(16) << z.y << ", " << std::setw(16) << z.z << "}}";
 
             return (stream_);
         }
