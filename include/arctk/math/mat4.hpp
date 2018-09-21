@@ -137,14 +137,14 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline std::ostream& Mat<T, 4>::operator<<(std::ostream& stream_) const noexcept
         {
-            stream_ << write::format::MAT_ROW_START << write::format::MAT_ROW_START << std::setw(write::format::FIELD_WIDTH) << x.x << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << x.y << write::format::DELIM
-                    << std::setw(write::format::FIELD_WIDTH) << x.z << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << x.w << write::format::MAT_ROW_END << '\n'
-                    << write::format::MAT_ROW_START << std::setw(write::format::FIELD_WIDTH) << y.x << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << y.y << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << y.z
-                    << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << y.w << write::format::MAT_ROW_END << '\n'
-                    << write::format::MAT_ROW_START << std::setw(write::format::FIELD_WIDTH) << z.x << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << z.y << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << z.z
-                    << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << z.w << write::format::MAT_ROW_END << '\n'
-                    << write::format::MAT_ROW_START << std::setw(write::format::FIELD_WIDTH) << w.x << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << w.y << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << w.z
-                    << write::format::DELIM << std::setw(write::format::FIELD_WIDTH) << w.w << write::format::MAT_ROW_END << write::format::MAT_ROW_END;
+            stream_ << io::format::MAT_ROW_START << io::format::MAT_ROW_START << std::setw(io::format::FIELD_WIDTH) << x.x << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << x.y << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << x.z
+                    << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << x.w << io::format::MAT_ROW_END << '\n'
+                    << io::format::MAT_ROW_START << std::setw(io::format::FIELD_WIDTH) << y.x << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << y.y << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << y.z << io::format::DELIM
+                    << std::setw(io::format::FIELD_WIDTH) << y.w << io::format::MAT_ROW_END << '\n'
+                    << io::format::MAT_ROW_START << std::setw(io::format::FIELD_WIDTH) << z.x << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << z.y << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << z.z << io::format::DELIM
+                    << std::setw(io::format::FIELD_WIDTH) << z.w << io::format::MAT_ROW_END << '\n'
+                    << io::format::MAT_ROW_START << std::setw(io::format::FIELD_WIDTH) << w.x << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << w.y << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << w.z << io::format::DELIM
+                    << std::setw(io::format::FIELD_WIDTH) << w.w << io::format::MAT_ROW_END << io::format::MAT_ROW_END;
 
             return (stream_);
         }
