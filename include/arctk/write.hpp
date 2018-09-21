@@ -31,7 +31,7 @@ inline std::ostream& operator<<(const std::vector<T>& vec_) noexcept;
 //  == OPERATORS ==
 //  -- Stl --
 template <typename T>
-inline std::ostream& operator<<(const std::vector<T>& vec_) noexcept
+inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec_) noexcept
 {
     stream_ << '{' << vec_[0];
 
@@ -40,7 +40,7 @@ inline std::ostream& operator<<(const std::vector<T>& vec_) noexcept
         stream_ << ", " << vec_[i];
     }
 
-    stream << '}';
+    stream_ << '}';
 }
 
 
