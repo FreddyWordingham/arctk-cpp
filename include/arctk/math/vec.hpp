@@ -25,7 +25,6 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/settings.hpp>
-#include <arctk/str.hpp>
 
 
 
