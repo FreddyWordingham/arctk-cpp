@@ -1,9 +1,9 @@
 /**
- *  @file   arctk/write/vector.hpp
+ *  @file   arctk/write/stl.hpp
  *  @date   21/09/2018
  *  @author Freddy Wordingham
  *
- *  Vector writing operator and function.
+ *  Stl class writing operators and functions.
  */
 
 
