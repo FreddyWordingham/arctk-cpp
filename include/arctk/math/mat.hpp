@@ -74,6 +74,9 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
+            //  -- Writing --
+            constexpr inline std::ostream& operator<<(std::ostream& stream_) const noexcept;
+
             //  -- Assignment --
             constexpr inline Mat<T, N>& operator+=(T val_) noexcept;
             constexpr inline Mat<T, N>& operator+=(const Mat<T, N>& mat_) noexcept;
