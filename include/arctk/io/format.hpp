@@ -36,6 +36,8 @@ namespace arc //! arctk namespace
             constexpr char const* const ARRAY_END    = "]";
             constexpr char const* const VECTOR_START = "{";
             constexpr char const* const VECTOR_END   = "}";
+            constexpr char const* const STRING_START = "\"";
+            constexpr char const* const STRING_END   = "\"";
 
             //  -- Delimiters --
             constexpr char const* const DELIM = ",";
