@@ -133,9 +133,9 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline std::ostream& Mat<T, 3>::operator<<(std::ostream& stream_) const noexcept
         {
-            stream_ << "{{" << std::setw(print::settings::FIELD_WIDTH) << x.x << ", " << std::setw(print::settings::FIELD_WIDTH) << x.y << ", " << std::setw(print::settings::FIELD_WIDTH) << x.z << "}\n{" << std::setw(print::settings::FIELD_WIDTH) << y.x
-                    << ", " << std::setw(print::settings::FIELD_WIDTH) << y.y << ", " << std::setw(print::settings::FIELD_WIDTH) << y.z << "}\n{" << std::setw(print::settings::FIELD_WIDTH) << z.x << ", " << std::setw(print::settings::FIELD_WIDTH) << z.y
-                    << ", " << std::setw(print::settings::FIELD_WIDTH) << z.z << "}}";
+            stream_ << "{{" << std::setw(write::format::FIELD_WIDTH) << x.x << ", " << std::setw(write::format::FIELD_WIDTH) << x.y << ", " << std::setw(write::format::FIELD_WIDTH) << x.z << "}\n{" << std::setw(write::format::FIELD_WIDTH) << y.x << ", "
+                    << std::setw(write::format::FIELD_WIDTH) << y.y << ", " << std::setw(write::format::FIELD_WIDTH) << y.z << "}\n{" << std::setw(write::format::FIELD_WIDTH) << z.x << ", " << std::setw(write::format::FIELD_WIDTH) << z.y << ", "
+                    << std::setw(write::format::FIELD_WIDTH) << z.z << "}}";
 
             return (stream_);
         }
