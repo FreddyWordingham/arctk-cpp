@@ -19,7 +19,7 @@
 #include <array>
 #include <cmath>
 #include <iomanip>
-#include <sstream>
+#include <ostream>
 #include <string>
 
 //  -- Arctk --
@@ -84,8 +84,12 @@ namespace arc //! arctk namespace
             //  -- Conversion --
             constexpr inline explicit operator std::array<T, N>() const noexcept;
 
-            //  -- Assignment --
-            constexpr inline Vec<T, N>& operator+=(T val_) noexcept;
+            //  -- Writing --
+            constexpr inline std::ostream&
+
+              //  -- Assignment --
+              constexpr inline Vec<T, N>&
+                                        operator+=(T val_) noexcept;
             constexpr inline Vec<T, N>& operator+=(const Vec<T, N>& vec_) noexcept;
             constexpr inline Vec<T, N>& operator-=(T val_) noexcept;
             constexpr inline Vec<T, N>& operator-=(const Vec<T, N>& vec_) noexcept;
@@ -243,6 +247,21 @@ namespace arc //! arctk namespace
         constexpr inline Vec<T, N>::operator std::array<T, N>() const noexcept
         {
             return (_data);
+        }
+
+
+        //  -- Writing --
+        template <typename T, size_t N>
+        inline std::ostream& operator<<(std::ostream& stream_, const Vec<T, N>& vec_) const noexcept
+        {
+            stream_ << '{';
+            for (size_t i = 0; i < N; ++i)
+            {
+                stream_ << _data[i] << ", ";
+            }
+            stream_ << '}';
+
+            return (stream_);
         }
 
 
@@ -776,31 +795,6 @@ namespace arc //! arctk namespace
             }
 
             POST(normalised());
-        }
-
-
-        //  -- Printing --
-        /**
-         *  Create a human readable string of the vec.
-         *
-         *  @return Human readable string of the vec.
-         */
-        template <typename T, size_t N>
-        inline std::string Vec<T, N>::str() const noexcept
-        {
-            std::stringstream stream;
-
-            stream << settings::format::VEC_START;
-
-            stream << std::setw(settings::format::PRINT_WIDTH) << _data[0];
-            for (size_t i = 1; i < N; ++i)
-            {
-                stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << _data[i];
-            }
-
-            stream << settings::format::VEC_END;
-
-            return (stream.str());
         }
 
 
