@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
          *  @tparam N   Size of the mat.
          */
         template <typename T, size_t N>
-        class Mat : public str::Printable
+        class Mat
         {
             //  == ASSERTIONS ==
             //  -- Size --
