@@ -146,9 +146,6 @@ namespace arc //! arctk namespace
             constexpr inline T         mag_sq() const noexcept;
             constexpr inline Vec<T, 4> normal() const noexcept;
             constexpr inline void      normalise() noexcept;
-
-            //  -- Printing --
-            inline std::string str() const noexcept override;
         };
 
 
@@ -658,30 +655,6 @@ namespace arc //! arctk namespace
             w *= m;
 
             POST(normalised());
-        }
-
-
-        //  -- Printing --
-        /**
-         *  Create a human readable string of the vec.
-         *
-         *  @return Human readable string of the vec.
-         */
-        template <typename T>
-        inline std::string Vec<T, 4>::str() const noexcept
-        {
-            std::stringstream stream;
-
-            stream << settings::format::VEC_START;
-
-            stream << std::setw(settings::format::PRINT_WIDTH) << x;
-            stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << y;
-            stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << z;
-            stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << w;
-
-            stream << settings::format::VEC_END;
-
-            return (stream.str());
         }
 
 
