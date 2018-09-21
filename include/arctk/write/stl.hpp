@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
             //  == FUNCTIONS ==
             //  -- Vector --
             template <typename T>
-            inline std::ostream& vec(std::ostream& stream_, const std::vector<T>& vec_, const std::string& open_ = '{', const std::string& close_ = '}', const std::string& delim_ = ", ") noexcept
+            inline std::ostream& vec(std::ostream& stream_, const std::vector<T>& vec_, const std::string& open_, const std::string& close_, const std::string& delim_) noexcept
             {
                 stream_ << open_ << vec_[0];
                 for (size_t i = 1; i < vec_.size(); ++i)
