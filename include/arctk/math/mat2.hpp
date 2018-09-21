@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored by the mat.
          */
         template <typename T>
-        class Mat<T, 2> : public str::Printable
+        class Mat<T, 2>
         {
             //  == FIELDS ==
           public:
