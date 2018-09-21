@@ -15,7 +15,8 @@
 
 
 //  == IMPORTS ==
-//  -- Std --
+//  -- Arctk --
+#include <arctk/read/string.hpp>
 
 
 
