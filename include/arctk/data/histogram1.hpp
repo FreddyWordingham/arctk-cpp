@@ -18,7 +18,7 @@
 //  -- Std --
 #include <fstream>
 #include <iomanip>
-#include <sstream>
+#include <ostream>
 #include <string>
 #include <vector>
 
@@ -66,6 +66,11 @@ namespace arc //! arctk namespace
             inline Histogram(double min_, double max_, size_t size_) noexcept;
 
 
+            //  == OPERATORS ==
+            //  -- Writing --
+            inline std::ostream& operator<<(std::ostream& stream_) const noexcept;
+
+
             //  == METHODS ==
           public:
             //  -- Getters --
@@ -108,6 +113,24 @@ namespace arc //! arctk namespace
         {
             PRE(min_ < max_);
             PRE(size_ > 0);
+        }
+
+
+
+        //  == OPERATORS ==
+        //  -- Writing --
+        template <typename T>
+        inline std::ostream& Histogram<T, 1>::operator<<(std::ostream& stream_) const noexcept
+        {
+            const std::vector<double> centres = Histogram<T, 1>::centres();
+
+            stream_ << std::setw(16) << centres[i] << ", " << std::setw(16) << _bins[i];
+            for (size_t i = 1; i < centres.size(); ++i)
+            {
+                stream_ << '\n' << std::setw(16) << centres[i] << ", " << std::setw(16) << _bins[i];
+            }
+
+            return (stream_);
         }
 
 
