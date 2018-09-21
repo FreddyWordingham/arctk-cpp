@@ -40,6 +40,8 @@ namespace arc //! arctk namespace
             //  -- Primitive --
             template <typename T>
             inline T str(const std::string& str_) noexcept;
+            template <typename T, typename S>
+            inline std::pair<T, S> str(const std::string& str_0_, const std::string& str_1_) noexcept;
 
 
 
@@ -103,6 +105,12 @@ namespace arc //! arctk namespace
                           << "String: '" << str_ << "' can not be parsed to type: '" << typeid(bool).name() << "'.\n";
 
                 std::exit(exit::error::FAILED_PARSE);
+            }
+
+            template <typename T, typename S>
+            inline std::pair<T, S> str(const std::string& str_0_, const std::string& str_1_) noexcept
+            {
+                return (std::make_pair(str<T>(str_0_), str<S>(str_1_)));
             }
 
 
