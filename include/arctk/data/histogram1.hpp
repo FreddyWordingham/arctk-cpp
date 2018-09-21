@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type binned.
          */
         template <typename T>
-        class Histogram<T, 1> : public str::Printable
+        class Histogram<T, 1>
         {
             //  == FIELDS ==
           protected:
