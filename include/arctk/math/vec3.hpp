@@ -142,9 +142,6 @@ namespace arc //! arctk namespace
             constexpr inline Vec<T, 3> normal() const noexcept;
             constexpr inline void      normalise() noexcept;
             constexpr inline void      rotate(const math::Vec<T, 3>& axis_, T ang_) noexcept;
-
-            //  -- Printing --
-            inline std::string str() const noexcept override;
         };
 
 
@@ -677,29 +674,6 @@ namespace arc //! arctk namespace
             const double sin_theta = std::sin(ang_);
 
             *this = (*this * cos_theta) + ((axis_ ^ *this) * sin_theta) + ((axis_ * (axis_ * *this)) * (1.0 - cos_theta));
-        }
-
-
-        //  -- Printing --
-        /**
-         *  Create a human readable string of the vec.
-         *
-         *  @return Human readable string of the vec.
-         */
-        template <typename T>
-        inline std::string Vec<T, 3>::str() const noexcept
-        {
-            std::stringstream stream;
-
-            stream << settings::format::VEC_START;
-
-            stream << std::setw(settings::format::PRINT_WIDTH) << x;
-            stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << y;
-            stream << settings::format::DELIMITER << std::setw(settings::format::PRINT_WIDTH) << z;
-
-            stream << settings::format::VEC_END;
-
-            return (stream.str());
         }
 
 
