@@ -19,7 +19,6 @@
 #include <cmath>
 #include <iomanip>
 #include <ostream>
-#include <string>
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
