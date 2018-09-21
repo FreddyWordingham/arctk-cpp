@@ -251,7 +251,7 @@ namespace arc //! arctk namespace
 
         //  -- Writing --
         template <typename T, size_t N>
-        inline std::ostream& operator<<(std::ostream& stream_, const Vec<T, N>& vec_) const noexcept
+        constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<T, N>& vec_) const noexcept
         {
             stream_ << '{';
             for (size_t i = 0; i < N; ++i)
