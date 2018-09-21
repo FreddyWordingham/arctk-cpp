@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/print/stl.hpp
+ *  @file   arctk/write/stl.hpp
  *  @date   21/09/2018
  *  @author Freddy Wordingham
  *
- *  Collection of standard template library printing operator functions.
+ *  Collection of standard template library writing operator functions.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_PRINT_STL_HPP
-#define ARCTK_PRINT_STL_HPP
+#ifndef ARCTK_WRITE_STL_HPP
+#define ARCTK_WRITE_STL_HPP
 
 
 
@@ -61,4 +61,4 @@ inline T& operator<<(T& stream_, const std::array<S, N>& arr_) noexcept
 
 
 //  == GUARD END ==
-#endif // ARCTK_PRINT_STL_HPP
+#endif // ARCTK_WRITE_STL_HPP
