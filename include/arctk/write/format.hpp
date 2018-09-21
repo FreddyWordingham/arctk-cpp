@@ -26,10 +26,10 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Bookends --
-            constexpr const char const* VEC_START = "{";
-            constexpr const char const* VEC_END   = "}";
-            constexpr const char const* MAT_START = "{";
-            constexpr const char const* MAT_END   = "}";
+            constexpr const char const* VEC_START     = "{";
+            constexpr const char const* VEC_END       = "}";
+            constexpr const char const* MAT_ROW_START = "{";
+            constexpr const char const* MAT_ROW_END   = "}";
 
             //  -- Delimiters --
             constexpr const char const* DELIM = ", ";
