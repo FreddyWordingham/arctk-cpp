@@ -79,9 +79,6 @@ namespace arc //! arctk namespace
             inline const std::vector<std::tuple<A...>>& rows() const noexcept;
             template <size_t I>
             inline std::vector<typename std::tuple_element<I, std::tuple<A...>>::type> col() const noexcept;
-
-            //  -- Printing --
-            inline std::string str() const noexcept override;
         };
 
 
@@ -295,31 +292,6 @@ namespace arc //! arctk namespace
             }
 
             return (col);
-        }
-
-
-        //  -- Printing --
-        /**
-         *  Create a human readable string of the table.
-         *
-         *  @return Human readable string of the table.
-         */
-        template <typename... A>
-        inline std::string Table<A...>::str() const noexcept
-        {
-            std::stringstream stream;
-
-            for (size_t i = 0; i < _rows.size(); ++i)
-            {
-                if (i != 0)
-                {
-                    stream << '\n';
-                }
-
-                stream << str::parse::from(_rows[i], false);
-            }
-
-            return (stream.str());
         }
 
 
