@@ -20,6 +20,9 @@
 #include <ostream>
 #include <vector>
 
+//  -- Arctk --
+#include <arctk/write/format.hpp>
+
 
 
 //  == OPERATOR PROTOTYPES ==
