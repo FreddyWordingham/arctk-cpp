@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_WRITE_FORMAT_HPP
-#define ARCTK_WRITE_FORMAT_HPP
+#ifndef ARCTK_IO_FORMAT_HPP
+#define ARCTK_IO_FORMAT_HPP
 
 
 
@@ -52,4 +52,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_WRITE_FORMAT_HPP
+#endif // ARCTK_IO_FORMAT_HPP
