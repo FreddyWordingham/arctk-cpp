@@ -18,7 +18,7 @@
 //  -- Std --
 #include <cmath>
 #include <iomanip>
-#include <sstream>
+#include <ostream>
 #include <string>
 
 //  -- Arctk --
