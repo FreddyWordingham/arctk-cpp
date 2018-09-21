@@ -38,13 +38,41 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Primitive --
             template <typename T>
-            inline bool primitive(const std::string& str_) noexcept;
+            inline T primitive(const std::string& str_) noexcept;
 
 
 
             //  == FUNCTIONS ==
             //  -- Primitive --
             template <typename T>
+            inline T primitive(const std::string& str_) noexcept
+            {
+                std::stringstream stream;
+                stream << str_;
+
+                T val{};
+                stream >> val;
+
+                if (stream.fail())
+                {
+                    std::cerr << "Unable to parse string: '" << str_ << "' to type.\n"
+                              << "String: '" << str_ << "' can not be parsed to type: '" << typeid(T).name() << "'.\n";
+
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+
+                if (stream.rdbuf()->in_avail() != 0)
+                {
+                    std::cerr << "Unable to parse string to type.\n"
+                              << "String: '" << str_ << "' contains leftover characters after parsing to type: '" << typeid(T).name() << "'.\n";
+
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+
+                return (val);
+            }
+
+            template <>
             inline bool primitive(const std::string& str_) noexcept
             {
                 std::stringstream stream;
