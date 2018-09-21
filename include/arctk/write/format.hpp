@@ -30,6 +30,9 @@ namespace arc //! arctk namespace
             //  -- Delimiters --
             constexpr const char const* const DELIM = ", ";
 
+            //  -- Widths --
+            constexpr const size_t FIELD_WIDTH = 16;
+
 
 
         } // namespace format
