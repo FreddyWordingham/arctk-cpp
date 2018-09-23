@@ -54,9 +54,9 @@ namespace arc //! arctk namespace
             constexpr std::array<char, container::TOTAL> CLOSERS({{']', ')', '"', '}', '}'}});
 
             //  -- Special Characters --
-            constexpr char              COMMENT    = '#';
-            constexpr char              DELIM      = ',';
-            constexpr char const* const WHITESPACE = " \t\n";
+            constexpr char                COMMENT = '#';
+            constexpr char                DELIM   = ',';
+            constexpr std::array<char, 4> WHITESPACE({{' ', '\t', '\r', '\n'}});
 
 
 
