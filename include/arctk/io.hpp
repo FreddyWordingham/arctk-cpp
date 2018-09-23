@@ -38,14 +38,14 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         //  -- Reading --
         template <typename T>
-        inline T read(const std::string& str_) noexcept;
+        inline T read(std::string* const str_) noexcept;
 
 
 
         //  == FUNCTIONS ==
         //  -- Reading --
         template <typename T>
-        inline T read(const std::string& str_) noexcept
+        inline T read(std::string* const str_) noexcept
         {
             return (str::parse(utl::Tag<T>(), str_));
         }

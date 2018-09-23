@@ -246,6 +246,22 @@ namespace arc //! arctk namespace
                 return (val);
             }
 
+            template <typename T>
+            std::vector<T> read(Tag<std::vector<T>>, const std::string& str_)
+            {
+
+                std::vector<std::string> tokens = tokenise(internals);
+                std::vector<T>           vec;
+
+                vec.reserve(tokens.size());
+                for (size_t i = 0; i < tokens.size(); ++i)
+                {
+                    vec.emplace_back(read<T>(tokens[i]));
+                }
+
+                return (vec);
+            }
+
 
         } // namespace str
     }     // namespace io
