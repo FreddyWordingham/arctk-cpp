@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
 //  == FUNCTION PROTOTYPES ==
 //  -- Io --
 template <typename... A, size_t... I>
-inline std::string tuple_print_helper(std::ostream& stream_, const std::tuple<A...>& tup_, const std::index_sequence<I...>& /*unused*/) noexcept;
+inline std::ostream& tuple_print_helper(std::ostream& stream_, const std::tuple<A...>& tup_, const std::index_sequence<I...>& /*unused*/) noexcept;
 
 
 
