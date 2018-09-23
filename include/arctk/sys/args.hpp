@@ -61,8 +61,6 @@ namespace arc //! arctk namespace
 
             //  -- Initialisation --
             inline std::tuple<A...> init_argv(int argc_, const char** argv_) noexcept;
-            template <typename T>
-            inline void check_parsable(const std::string& str_) noexcept;
 
 
             //  == METHODS ==
@@ -125,32 +123,8 @@ namespace arc //! arctk namespace
                 std::exit(exit::error::INVALID_COMMAND_LINE_ARGUMENTS);
             }
 
-            size_t i = 0;
-            ((check_parsable<A>(argv[i]), ++i), ...);
-
             // TODO            return (str::parse::to<A...>(argv));
             return (std::tuple<A...>());
-        }
-
-        /**
-         *  Check that a string is parsable into its required type.
-         *  If it is not, report an error.
-         *
-         *  @tparam T   Type to parse string into.
-         *
-         *  @param  str_    String to parse into value.
-         */
-        template <typename... A>
-        template <typename T>
-        inline void Args<A...>::check_parsable(const std::string& str_) noexcept
-        {
-            if (!str::parse::parsable_to<T>(str_))
-            {
-                std::cerr << "Argument string: '" << str_ << "' is not parsable as type: '" << typeid(T).name() << "'.\n"
-                          << "Correct call: " << _prog_name << " " << _call_str << '\n';
-
-                std::exit(exit::error::FAILED_PARSE);
-            }
         }
 
 
