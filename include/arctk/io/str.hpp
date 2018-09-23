@@ -297,6 +297,29 @@ namespace arc //! arctk namespace
                 return (vec);
             }
 
+            template <typename T, size_t N>
+            inline std::array<T, N> parse(utl::Tag<std::array<T, N>> /*unused*/, std::string* const str_) noexcept
+            {
+                std::string& str_ref = *str_;
+
+                extract_contents(str_, format::container::ARRAY);
+                std::vector<std::string> tokens = tokenise(str_ref);
+
+                if (tokens.size() != N)
+                {
+                    std::cerr << "Unable to parse string: '" << str_ref << "' to array type.\n"
+                              << "String: '" << str_ref << "' contains: '" << tokens.size() << "', but exactly '" << N << "' are required.\n";
+                }
+
+                std::array<T, N> arr;
+                for (size_t i = 0; i < N; ++i)
+                {
+                    arr[i] = parse<T>(utl::Tag<T>(), &tokens[i]);
+                }
+
+                return (arr);
+            }
+
 
 
         } // namespace str
