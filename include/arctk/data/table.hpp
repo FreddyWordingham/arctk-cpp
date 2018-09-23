@@ -196,7 +196,7 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::FAILED_INITIALISATION);
                 }
 
-                rows.emplace_back(str::parse::to<A...>(strs));
+                // TODO                rows.emplace_back(str::parse::to<A...>(strs));
             }
 
             return (rows);
