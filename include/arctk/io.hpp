@@ -18,6 +18,7 @@
 //  -- Std --
 #include <array>
 #include <ostream>
+#include <tuple>
 #include <utility>
 #include <vector>
 
