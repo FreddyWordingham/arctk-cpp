@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
 
             //  -- Parsing --
             template <typename T>
-            inline T parse(const utl::Tag<T>& /*unused*/, const std::string& str_) noexcept;
+            inline T parse(const utl::Tag<T>& /*unused*/, std::string* const str_) noexcept;
 
 
 
@@ -217,20 +217,22 @@ namespace arc //! arctk namespace
 
             //  -- Parsing --
             template <typename T>
-            inline T parse(const utl::Tag<T>& /*unused*/, const std::string& str_) noexcept
+            inline T parse(const utl::Tag<T>& /*unused*/, std::string* const str_) noexcept
             {
                 static_assert(std::is_fundamental<T>::value);
 
+                std::string& str_ref = *str_;
+
                 std::stringstream stream;
-                stream << str_;
+                stream << str_ref;
 
                 T val{};
                 stream >> val;
 
                 if (stream.fail())
                 {
-                    std::cerr << "Unable to parse string: '" << str_ << "' to type.\n"
-                              << "String: '" << str_ << "' can not be parsed to type: '" << typeid(T).name() << "'.\n";
+                    std::cerr << "Unable to parse string: '" << str_ref << "' to type.\n"
+                              << "String: '" << str_ref << "' can not be parsed to type: '" << typeid(T).name() << "'.\n";
 
                     std::exit(exit::error::FAILED_PARSE);
                 }
@@ -238,7 +240,7 @@ namespace arc //! arctk namespace
                 if (stream.rdbuf()->in_avail() != 0)
                 {
                     std::cerr << "Unable to parse string to type.\n"
-                              << "String: '" << str_ << "' contains leftover characters after parsing to type: '" << typeid(T).name() << "'.\n";
+                              << "String: '" << str_ref << "' contains leftover characters after parsing to type: '" << typeid(T).name() << "'.\n";
 
                     std::exit(exit::error::FAILED_PARSE);
                 }
@@ -247,7 +249,7 @@ namespace arc //! arctk namespace
             }
 
             template <typename T>
-            std::vector<T> read(Tag<std::vector<T>>, const std::string& str_)
+            std::vector<T> read(Tag<std::vector<T>>, std::string* const str_)
             {
 
                 std::vector<std::string> tokens = tokenise(internals);
