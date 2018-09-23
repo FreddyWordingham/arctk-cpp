@@ -18,6 +18,7 @@
 //  -- Std --
 #include <array>
 #include <ostream>
+#include <utility>
 #include <vector>
 
 //  -- Arctk --
@@ -66,6 +67,8 @@ template <typename T, size_t N>
 inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& arr_) noexcept;
 template <typename T>
 inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec_) noexcept;
+template <typename T, typename S>
+inline std::ostream& operator<<(std::ostream& stream_, const std::pair<T, S>& pair_) noexcept;
 
 
 
@@ -97,6 +100,14 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec
     }
 
     stream_ << arc::io::format::CLOSERS[arc::io::format::container::VECTOR];
+
+    return (stream_);
+}
+
+template <typename T, typename S>
+inline std::ostream& operator<<(std::ostream& stream_, const std::pair<T, S>& pair_) noexcept
+{
+    stream_ << arc::io::format::OPENERS[arc::io::format::container::PAIR] << pair_.first << arc::io::format::DELIM << pair_.second << arc::io::format::CLOSERS[arc::io::format::container::PAIR];
 
     return (stream_);
 }
