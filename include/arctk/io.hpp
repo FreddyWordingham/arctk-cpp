@@ -26,6 +26,29 @@
 
 
 
+//  == NAMESPACE ==
+namespace arc //! arctk namespace
+{
+    namespace io //! input/output namespace
+    {
+
+
+
+        //  == FUNCTION PROTOTYPES ==
+        //  -- Reading --
+
+
+
+        //  == FUNCTIONS ==
+        //  -- Reading --
+
+
+
+    } // namespace io
+} // namespace arc
+
+
+
 //  == OPERATOR PROTOTYPES ==
 //  -- Io --
 template <typename T, size_t N>
