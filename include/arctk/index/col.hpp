@@ -24,7 +24,7 @@ namespace arc //! arctk namespace
 
 
 
-            //  == Enumerations ==
+            //  == ENUMERATIONS ==
             //  -- Colours --
             /**
              *  Enumeration of the colour channels.
