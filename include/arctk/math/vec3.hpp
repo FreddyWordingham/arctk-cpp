@@ -211,7 +211,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline std::ostream& Vec<T, 3>::operator<<(std::ostream& stream_) const noexcept
         {
-            stream_ << io::format::VEC_START << std::setw(io::format::FIELD_WIDTH) << x << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << y << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << z << io::format::VEC_END;
+            stream_ << io::format::OPENERS[io::format::container::VEC] << x << io::format::DELIM << y << io::format::DELIM << z << io::format::CLOSERS[io::format::container::VEC];
 
             return (stream_);
         }
