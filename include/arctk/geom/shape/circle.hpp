@@ -180,8 +180,6 @@ namespace arc //! arctk namespace
              */
             inline vec3 Circle::min() const noexcept
             {
-                vec3 norm_xy = vec3(_norm.x, _norm.y, 0.0).normal();
-
                 vec3 delta;
 
                 delta.x = std::abs(std::sin(std::acos(_norm.x)) * _rad);
@@ -198,8 +196,6 @@ namespace arc //! arctk namespace
              */
             inline vec3 Circle::max() const noexcept
             {
-                vec3 norm_xy = vec3(_norm.x, _norm.y, 0.0).normal();
-
                 vec3 delta;
 
                 delta.x = std::abs(std::sin(std::acos(_norm.x)) * _rad);
