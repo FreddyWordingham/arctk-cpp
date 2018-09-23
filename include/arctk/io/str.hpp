@@ -36,7 +36,7 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Pre-processing --
-            inline filter_comments(std::string* const str_) noexcept;
+            inline void filter_comments(std::string* const str_) noexcept;
 
             //  -- Parsing --
 
@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Pre-processing --
-            inline filter_comments(std::string* const str_) noexcept
+            inline void filter_comments(std::string* const str_) noexcept
             {
                 for (size_t i = 0; i < str_.size(); ++i)
                 {
