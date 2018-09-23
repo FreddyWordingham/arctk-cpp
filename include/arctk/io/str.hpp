@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline T parse(utl::Tag<T> /*unused*/, std::string* const str_) noexcept;
             template <typename... A, size_t... I>
-            inline std::tuple<A...> parse_helper(utl::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>* const tokens_, const std::index_sequence<I...>& /*unused*/) noexcept;
+            inline std::tuple<A...> parse_helper(utl::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>& tokens_, const std::index_sequence<I...>& /*unused*/) noexcept;
 
 
 
@@ -362,13 +362,13 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::FAILED_PARSE);
                 }
 
-                return (parse_helper(utl::Tag<std::tuple<A...>>(), &tokens, std::index_sequence_for<A...>()));
+                return (parse_helper(utl::Tag<std::tuple<A...>>(), tokens, std::index_sequence_for<A...>()));
             }
 
             template <typename... A, size_t... I>
-            inline std::tuple<A...> parse_helper(utl::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>* const tokens_, const std::index_sequence<I...>& /*unused*/) noexcept
+            inline std::tuple<A...> parse_helper(utl::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>& tokens_, const std::index_sequence<I...>& /*unused*/) noexcept
             {
-                PRE(sizeof...(A) == tokens_->size());
+                PRE(sizeof...(A) == tokens_.size());
                 PRE(sizeof...(A) == sizeof...(I));
 
                 std::tuple<A...> tup;
