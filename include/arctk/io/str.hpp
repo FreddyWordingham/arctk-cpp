@@ -50,17 +50,19 @@ namespace arc //! arctk namespace
             template <typename T>
             inline T parse(utl::Tag<T> /*unused*/, std::string* const str_) noexcept;
             template <>
-            inline bool parse(utl::Tag<bool> /*unused*/, std::string& str_) noexcept;
+            inline bool parse(utl::Tag<bool> /*unused*/, std::string* const str_) noexcept;
             template <typename T>
-            inline std::vector<T> parse(utl::Tag<std::vector<T>> /*unused*/, std::string& str_) noexcept;
+            inline std::vector<T> parse(utl::Tag<std::vector<T>> /*unused*/, std::string* const str_) noexcept;
             template <typename T, size_t N>
-            inline std::array<T, N> parse(utl::Tag<std::array<T, N>> /*unused*/, std::string& str_) noexcept;
+            inline std::array<T, N> parse(utl::Tag<std::array<T, N>> /*unused*/, std::string* const str_) noexcept;
             template <typename T, typename S>
-            inline std::pair<T, S> parse(utl::Tag<std::pair<T, S>> /*unused*/, std::string& str_) noexcept;
+            inline std::pair<T, S> parse(utl::Tag<std::pair<T, S>> /*unused*/, std::string* const str_) noexcept;
             template <typename... A>
-            inline std::tuple<A...> parse(utl::Tag<std::tuple<A...>> /*unused*/, std::string& str_) noexcept;
+            inline std::tuple<A...> parse(utl::Tag<std::tuple<A...>> /*unused*/, std::string* const str_) noexcept;
             template <typename... A, size_t... I>
-            inline std::tuple<A...> parse_helper(utl::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>& tokens_, const std::index_sequence<I...>& /*unused*/) noexcept;
+            inline std::tuple<A...> parse_helper(utl::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>* const tokens_, const std::index_sequence<I...>& /*unused*/) noexcept;
+            template <typename... A, size_t... I>
+            inline std::tuple<A...> parse_helper(utl::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>* const tokens_, const std::index_sequence<I...>& /*unused*/) noexcept;
 
 
 
@@ -264,7 +266,7 @@ namespace arc //! arctk namespace
             }
 
             template <>
-            inline bool parse(utl::Tag<bool> /*unused*/, std::string& str_) noexcept
+            inline bool parse(utl::Tag<bool> /*unused*/, std::string* const str_) noexcept
             {
                 std::string& str_ref = *str_;
 
@@ -295,7 +297,7 @@ namespace arc //! arctk namespace
             }
 
             template <typename T>
-            inline std::vector<T> parse(utl::Tag<std::vector<T>> /*unused*/, std::string& str_) noexcept
+            inline std::vector<T> parse(utl::Tag<std::vector<T>> /*unused*/, std::string* const str_) noexcept
             {
                 std::string& str_ref = *str_;
 
@@ -306,14 +308,14 @@ namespace arc //! arctk namespace
                 vec.reserve(tokens.size());
                 for (size_t i = 0; i < tokens.size(); ++i)
                 {
-                    vec.emplace_back(parse(utl::Tag<T>(), &tokens[i]));
+                    vec.emplace_back(parse<T>(utl::Tag<T>(), &tokens[i]));
                 }
 
                 return (vec);
             }
 
             template <typename T, size_t N>
-            inline std::array<T, N> parse(utl::Tag<std::array<T, N>> /*unused*/, std::string& str_) noexcept
+            inline std::array<T, N> parse(utl::Tag<std::array<T, N>> /*unused*/, std::string* const str_) noexcept
             {
                 std::string& str_ref = *str_;
 
@@ -331,14 +333,14 @@ namespace arc //! arctk namespace
                 std::array<T, N> arr;
                 for (size_t i = 0; i < N; ++i)
                 {
-                    arr[i] = parse(utl::Tag<T>(), &tokens[i]);
+                    arr[i] = parse<T>(utl::Tag<T>(), &tokens[i]);
                 }
 
                 return (arr);
             }
 
             template <typename T, typename S>
-            inline std::pair<T, S> parse(utl::Tag<std::pair<T, S>> /*unused*/, std::string& str_) noexcept
+            inline std::pair<T, S> parse(utl::Tag<std::pair<T, S>> /*unused*/, std::string* const str_) noexcept
             {
                 std::string& str_ref = *str_;
 
@@ -353,11 +355,11 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::FAILED_PARSE);
                 }
 
-                return (std::make_pair<T, S>(parse(utl::Tag<T>(), &tokens[0]), parse(utl::Tag<S>(), &tokens[1])));
+                return (std::make_pair<T, S>(parse<T>(utl::Tag<T>(), &tokens[0]), parse<S>(utl::Tag<S>(), &tokens[1])));
             }
 
             template <typename... A>
-            inline std::tuple<A...> parse(utl::Tag<std::tuple<A...>> /*unused*/, std::string& str_) noexcept
+            inline std::tuple<A...> parse(utl::Tag<std::tuple<A...>> /*unused*/, std::string* const str_) noexcept
             {
                 std::string& str_ref = *str_;
 
@@ -372,17 +374,17 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::FAILED_PARSE);
                 }
 
-                return (parse_helper(utl::Tag<std::tuple<A...>>(), tokens, std::index_sequence_for<A...>()));
+                return (parse_helper(utl::Tag<std::tuple<A...>>(), &tokens, std::index_sequence_for<A...>()));
             }
 
             template <typename... A, size_t... I>
-            inline std::tuple<A...> parse_helper(utl::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>& tokens_, const std::index_sequence<I...>& /*unused*/) noexcept
+            inline std::tuple<A...> parse_helper(utl::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>* const tokens_, const std::index_sequence<I...>& /*unused*/) noexcept
             {
-                PRE(sizeof...(A) == tokens_.size());
+                PRE(sizeof...(A) == tokens_->size());
                 PRE(sizeof...(A) == sizeof...(I));
 
                 std::tuple<A...> tup;
-                ((std::get<I>(tup) = parse(utl::Tag<A>(), &tokens_[I])), ...);
+                ((std::get<I>(tup) = parse<A>(utl::Tag<A>(), &tokens_[I])), ...);
 
                 return (tup);
             }
