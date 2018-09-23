@@ -128,7 +128,8 @@ namespace arc //! arctk namespace
             size_t i = 0;
             ((check_parsable<A>(argv[i]), ++i), ...);
 
-            return (str::parse::to<A...>(argv));
+            // TODO            return (str::parse::to<A...>(argv));
+            return (std::tuple<A...>());
         }
 
         /**
