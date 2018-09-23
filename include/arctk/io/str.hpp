@@ -380,11 +380,13 @@ namespace arc //! arctk namespace
             template <typename... A, size_t... I>
             inline std::tuple<A...> parse_helper(utl::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>* const tokens_, const std::index_sequence<I...>& /*unused*/) noexcept
             {
-                PRE(sizeof...(A) == tokens_->size());
+                std::vector<std::string>& tokens_ref = *tokens_;
+
+                PRE(sizeof...(A) == tokens_ref.size());
                 PRE(sizeof...(A) == sizeof...(I));
 
                 std::tuple<A...> tup;
-                ((std::get<I>(tup) = parse(utl::Tag<A>(), &tokens_[I])), ...);
+                ((std::get<I>(tup) = parse(utl::Tag<A>(), &tokens_ref[I])), ...);
 
                 return (tup);
             }
