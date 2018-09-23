@@ -41,6 +41,8 @@ namespace arc //! arctk namespace
                 ARRAY,
                 VECTOR,
                 STRING,
+                PAIR,
+                TUPLE,
                 VEC,
                 MAT,
                 TOTAL
@@ -50,8 +52,8 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Bookends --
-            constexpr std::array<char, container::TOTAL> OPENERS({{'[', '(', '"', '{', '{'}});
-            constexpr std::array<char, container::TOTAL> CLOSERS({{']', ')', '"', '}', '}'}});
+            constexpr std::array<char, container::TOTAL> OPENERS({{'[', '(', '"', '<', '<', '{', '{'}});
+            constexpr std::array<char, container::TOTAL> CLOSERS({{']', ')', '"', '>', '>', '}', '}'}});
 
             //  -- Special Characters --
             constexpr char                COMMENT = '#';
