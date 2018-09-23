@@ -44,8 +44,8 @@ namespace arc //! arctk namespace
             inline std::vector<std::string> tokenise(const std::string& str_) noexcept;
 
             //  -- Parsing --
-            // template <typename T>
-            // inline T parse(utl::Tag<T> /*unused*/, std::string* const str_) noexcept;
+            template <typename T>
+            inline T parse(utl::Tag<T> /*unused*/, std::string* const str_) noexcept;
 
 
 
