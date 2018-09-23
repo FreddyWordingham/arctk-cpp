@@ -134,7 +134,9 @@ namespace arc //! arctk namespace
 
             inline void extract_contents(std::string* const str_, const format::container type_) noexcept
             {
-                const size_t open = str_.find_first_of(format::OPENERS[type_]);
+                std::string& str_ref = *str_;
+
+                const size_t open = str_ref.find_first_of(format::OPENERS[type_]);
                 if (open != 0)
                 {
                     std::cerr << "Error extracting contents of container.\n"
@@ -142,17 +144,17 @@ namespace arc //! arctk namespace
 
                     std::exit(exit::error::FAILED_PARSE);
                 }
-                str.erase(open, 1);
+                str_ref.erase(open, 1);
 
-                const size_t close = str_.find_last_of(format::CLOSERS[type_]);
-                if (close != (str_.size() - 1))
+                const size_t close = str_ref.find_last_of(format::CLOSERS[type_]);
+                if (close != (str_ref.size() - 1))
                 {
                     std::cerr << "Error extracting contents of container.\n"
                               << "Additional characters found after container closer.\n";
 
                     std::exit(exit::error::FAILED_PARSE);
                 }
-                str.erase(close, 1);
+                str_ref.erase(close, 1);
             }
 
 
