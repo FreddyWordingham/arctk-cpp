@@ -321,7 +321,7 @@ namespace arc //! arctk namespace
                 std::array<T, N> arr;
                 for (size_t i = 0; i < N; ++i)
                 {
-                    arr[i] = parse<T>(utl::Tag<T>(), &tokens[i]);
+                    arr[i] = parse(utl::Tag<T>(), &tokens[i]);
                 }
 
                 return (arr);
