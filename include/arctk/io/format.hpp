@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
             constexpr char const* const STRING_END   = "\"";
 
             //  -- Delimiters --
-            constexpr char const* const DELIM = ",";
+            constexpr char DELIM = ',';
 
 
 
