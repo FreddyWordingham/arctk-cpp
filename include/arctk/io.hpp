@@ -61,6 +61,13 @@ namespace arc //! arctk namespace
 
 
 
+//  == FUNCTION PROTOTYPES ==
+//  -- Io --
+template <typename... A, size_t... I>
+inline std::string tuple_print_helper(std::ostream& stream_, const std::tuple<A...>& tup_, const std::index_sequence<I...>& /*unused*/) noexcept;
+
+
+
 //  == OPERATOR PROTOTYPES ==
 //  -- Io --
 template <typename T, size_t N>
@@ -69,6 +76,8 @@ template <typename T>
 inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec_) noexcept;
 template <typename T, typename S>
 inline std::ostream& operator<<(std::ostream& stream_, const std::pair<T, S>& pair_) noexcept;
+template <typename... A>
+inline std::ostream& operator<<(std::ostream& stream_, const std::tuple<A...>& tup_) noexcept;
 
 
 
@@ -108,6 +117,33 @@ template <typename T, typename S>
 inline std::ostream& operator<<(std::ostream& stream_, const std::pair<T, S>& pair_) noexcept
 {
     stream_ << arc::io::format::OPENERS[arc::io::format::container::PAIR] << pair_.first << arc::io::format::DELIM << pair_.second << arc::io::format::CLOSERS[arc::io::format::container::PAIR];
+
+    return (stream_);
+}
+
+template <typename... A>
+inline std::ostream& operator<<(std::ostream& stream_, const std::tuple<A...>& tup_) noexcept
+{
+    stream_ << arc::io::format::OPENERS[arc::io::format::container::TUPLE];
+
+    if (sizeof...(A) > 0)
+    {
+        tuple_print_helper(stream_, tup_, std::make_index_sequence<sizeof...(A) - 1>());
+    }
+
+    stream_ << arc::io::format::CLOSERS[arc::io::format::container::TUPLE];
+
+    return (stream_);
+}
+
+template <typename... A, size_t... I>
+inline std::string tuple_print_helper(std::ostream& stream_, const std::tuple<A...>& tup_, const std::index_sequence<I...>& /*unused*/) noexcept
+{
+    static_assert(sizeof...(A) > 0);
+    static_assert(sizeof...(A) == (sizeof...(I) + 1));
+
+    stream << std::get<0>(tup_);
+    ((stream << arc::io::format::DELIM << std::get<I + 1>(tup_)), ...);
 
     return (stream_);
 }
