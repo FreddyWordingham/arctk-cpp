@@ -248,6 +248,37 @@ namespace arc //! arctk namespace
                 return (val);
             }
 
+            template <>
+            inline bool parse(utl::Tag<bool> /*unused*/, std::string* const str_) noexcept
+            {
+                std::string& str_ref = *str_;
+
+                if (str_ref == "0")
+                {
+                    return (false);
+                }
+                if (str_ref == "1")
+                {
+                    return (true);
+                }
+
+                std::transform(str_ref.begin(), str_ref.end(), str_ref.begin(), [](unsigned char c_) { return std::tolower(c_); });
+
+                if (str_ref == "false")
+                {
+                    return (false);
+                }
+                if (str_ref == "true")
+                {
+                    return (true);
+                }
+
+                std::cerr << "Unable to parse string: '" << str_ref << "' to type.\n"
+                          << "String: '" << str_ref << "' can not be parsed to type: '" << typeid(bool).name() << "'.\n";
+
+                std::exit(exit::error::FAILED_PARSE);
+            }
+
             template <typename T>
             inline std::vector<T> parse(utl::Tag<std::vector<T>> /*unused*/, std::string* const str_) noexcept
             {
