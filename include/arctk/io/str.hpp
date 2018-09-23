@@ -308,7 +308,7 @@ namespace arc //! arctk namespace
                 vec.reserve(tokens.size());
                 for (size_t i = 0; i < tokens.size(); ++i)
                 {
-                    vec.emplace_back(parse<T>(utl::Tag<T>(), &tokens[i]));
+                    vec.emplace_back(parse(utl::Tag<T>(), &tokens[i]));
                 }
 
                 return (vec);
@@ -333,7 +333,7 @@ namespace arc //! arctk namespace
                 std::array<T, N> arr;
                 for (size_t i = 0; i < N; ++i)
                 {
-                    arr[i] = parse<T>(utl::Tag<T>(), &tokens[i]);
+                    arr[i] = parse(utl::Tag<T>(), &tokens[i]);
                 }
 
                 return (arr);
@@ -355,7 +355,7 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::FAILED_PARSE);
                 }
 
-                return (std::make_pair<T, S>(parse<T>(utl::Tag<T>(), &tokens[0]), parse<S>(utl::Tag<S>(), &tokens[1])));
+                return (std::make_pair<T, S>(parse(utl::Tag<T>(), &tokens[0]), parse(utl::Tag<S>(), &tokens[1])));
             }
 
             template <typename... A>
@@ -384,7 +384,7 @@ namespace arc //! arctk namespace
                 PRE(sizeof...(A) == sizeof...(I));
 
                 std::tuple<A...> tup;
-                ((std::get<I>(tup) = parse<A>(utl::Tag<A>(), &tokens_[I])), ...);
+                ((std::get<I>(tup) = parse(utl::Tag<A>(), &tokens_[I])), ...);
 
                 return (tup);
             }
