@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
                 {
                     if (str_[i] == format::OPENERS[format::container::STRING])
                     {
-                        const size_t string_container_end_pos = str_.find_first_of(CLOSERS[i], i + 1);
+                        const size_t string_container_end_pos = str_->find_first_of(CLOSERS[i], i + 1);
 
                         if (string_container_end_pos == std::string::npos)
                         {
