@@ -194,7 +194,7 @@ namespace arc //! arctk namespace
                 {
                     stream_ << io::format::DELIM << _data[i][j];
                 }
-                stream_ << io::format::MAT_ROW_END;
+                stream_ << io::format::CLOSERS[io::format::container::VEC];
             }
             stream_ << io::format::CLOSERS[io::format::container::MAT];
 
