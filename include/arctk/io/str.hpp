@@ -18,6 +18,7 @@
 //  -- Std --
 #include <array>
 #include <string>
+#include <tuple>
 #include <utility>
 #include <vector>
 
@@ -48,6 +49,8 @@ namespace arc //! arctk namespace
             //  -- Parsing --
             template <typename T>
             inline T parse(utl::Tag<T> /*unused*/, std::string* const str_) noexcept;
+            template <typename... A, size_t... I>
+            inline std::tuple<A...> parse_helper(utl::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>* const tokens_, const std::index_sequence<I...>& /*unused*/) noexcept;
 
 
 
@@ -341,6 +344,37 @@ namespace arc //! arctk namespace
                 }
 
                 return (std::make_pair<T, S>(parse<T>(utl::Tag<T>(), &tokens[0]), parse<S>(utl::Tag<S>(), &tokens[1])));
+            }
+
+            template <typename... A>
+            inline std::tuple<A...> parse(utl::Tag<std::tuple<A...>> /*unused*/, std::string* const str_) noexcept
+            {
+                std::string& str_ref = *str_;
+
+                extract_contents(str_, format::container::TUPLE);
+                std::vector<std::string> tokens = tokenise(str_ref);
+
+                if (tokens.size() != sizeof...(A))
+                {
+                    std::cerr << "Unable to parse string: '" << str_ref << "' to tuple type.\n"
+                              << "String: '" << str_ref << "' contains: '" << tokens.size() << "' values, but exactly: '" << sizeof...(A) << "' are required.\n";
+
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+
+                return (parse_helper(utl::Tag<std::tuple<A...>>(), &tokens, std::index_sequence_for<A...>()));
+            }
+
+            template <typename... A, size_t... I>
+            inline std::tuple<A...> parse_helper(utl::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>* const tokens_, const std::index_sequence<I...>& /*unused*/) noexcept
+            {
+                PRE(sizeof...(A) == tokens_->size());
+                PRE(sizeof...(A) == sizeof...(I));
+
+                std::tuple<A...> tup;
+                ((std::get<I>(tup) = parse<A>(utl::Tag<A>(), &tokens_[I])), ...);
+
+                return (tup);
             }
 
 
