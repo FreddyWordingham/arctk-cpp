@@ -181,22 +181,22 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline std::ostream& Mat<T, N>::operator<<(std::ostream& stream_) const noexcept
         {
-            stream_ << io::format::MAT_ROW_START << io::format::MAT_ROW_START << std::setw(io::format::FIELD_WIDTH) << _data[0][0];
+            stream_ << io::format::OPENERS[io::format::container::MAT] << io::format::OPENERS[io::format::container::VEC] << _data[0][0];
             for (size_t i = 1; i < N; ++i)
             {
-                stream_ << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << _data[0][i];
+                stream_ << io::format::DELIM << _data[0][i];
             }
-            stream_ << io::format::MAT_ROW_END;
+            stream_ << io::format::CLOSERS[io::format::container::VEC];
             for (size_t i = 1; i < N; ++i)
             {
-                stream_ << '\n' << io::format::MAT_ROW_START << std::setw(io::format::FIELD_WIDTH) << _data[i][0];
+                stream_ << io::format::DELIM << io::format::OPENERS[io::format::container::VEC] << _data[i][0];
                 for (size_t j = 1; j < N; ++j)
                 {
-                    stream_ << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << _data[i][j];
+                    stream_ << io::format::DELIM << _data[i][j];
                 }
                 stream_ << io::format::MAT_ROW_END;
             }
-            stream_ << io::format::MAT_ROW_END;
+            stream_ << io::format::CLOSERS[io::format::container::MAT];
 
             return (stream_);
         }
