@@ -22,6 +22,7 @@
 //  -- Arctk --
 #include <arctk/exit.hpp>
 #include <arctk/io/format.hpp>
+#include <arctk/utl.hpp>
 
 
 
@@ -43,6 +44,8 @@ namespace arc //! arctk namespace
             inline std::vector<std::string> tokenise(const std::string& str_) noexcept;
 
             //  -- Parsing --
+            template <typename T>
+            inline T read(const utl::Tag<T>& /*unused*/, const std::string& str_) noexcept;
 
 
 
@@ -213,7 +216,35 @@ namespace arc //! arctk namespace
 
 
             //  -- Parsing --
+            template <typename T>
+            inline T read(const utl::Tag<T>& /*unused*/, const std::string& str_) noexcept
+            {
+                static_assert(std::is_fundamental<T>::value);
 
+                std::stringstream stream;
+                stream << str_;
+
+                T val{};
+                stream >> val;
+
+                if (stream.fail())
+                {
+                    std::cerr << "Unable to parse string: '" << str_ << "' to type.\n"
+                              << "String: '" << str_ << "' can not be parsed to type: '" << typeid(T).name() << "'.\n";
+
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+
+                if (stream.rdbuf()->in_avail() != 0)
+                {
+                    std::cerr << "Unable to parse string to type.\n"
+                              << "String: '" << str_ << "' contains leftover characters after parsing to type: '" << typeid(T).name() << "'.\n";
+
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+
+                return (val);
+            }
 
 
         } // namespace str
