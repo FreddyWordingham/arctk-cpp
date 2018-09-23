@@ -31,12 +31,14 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTION PROTOTYPES ==
-            //  -- Primitive --
+            //  -- Pre-processing --
+            //  -- Parsing --
 
 
 
             //  == FUNCTIONS ==
-            //  -- Primitive --
+            //  -- Pre-processing --
+            //  -- Parsing --
 
 
 
