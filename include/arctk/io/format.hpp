@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
             //  == CONSTANTS ==
             //  -- Bookends --
             constexpr std::array<char, container::TOTAL> OPENERS({{'[', '(', '"', '{', '{'}});
-            constexpr std::array<char, container::TOTAL> OPENERS({{']', '(', '"', '{', '{'}});
+            constexpr std::array<char, container::TOTAL> CLOSERS({{']', ')', '"', '}', '}'}});
 
 
             //  -- Delimiters --
