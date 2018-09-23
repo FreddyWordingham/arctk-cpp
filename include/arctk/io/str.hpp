@@ -1,9 +1,9 @@
 /**
- *  @file   arctk/io/read.hpp
+ *  @file   arctk/io/str.hpp
  *  @date   21/09/2018
  *  @author Freddy Wordingham
  *
- *  Input reading functions.
+ *  String input/output functions.
  */
 
 
@@ -16,13 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
-#include <sstream>
 #include <string>
-#include <type_traits>
-
-//  -- Arctk --
-#include <arctk/debug.hpp>
-#include <arctk/exit.hpp>
 
 
 
