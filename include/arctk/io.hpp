@@ -47,6 +47,9 @@ namespace arc //! arctk namespace
         template <typename T>
         inline T read(std::string* const str_) noexcept
         {
+            str::filter_comments(str_);
+            str::filter_whitespace(str_);
+
             return (str::parse(utl::Tag<T>(), str_));
         }
 
