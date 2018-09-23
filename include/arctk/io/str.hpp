@@ -44,8 +44,8 @@ namespace arc //! arctk namespace
             inline std::vector<std::string> tokenise(const std::string& str_) noexcept;
 
             //  -- Parsing --
-            template <typename T>
-            inline T parse(const utl::Tag<T>& /*unused*/, std::string* const str_) noexcept;
+            // template <typename T>
+            // inline T parse(utl::Tag<T> /*unused*/, std::string* const str_) noexcept;
 
 
 
@@ -217,7 +217,25 @@ namespace arc //! arctk namespace
 
             //  -- Parsing --
             template <typename T>
-            inline T parse(const utl::Tag<T>& /*unused*/, std::string* const str_) noexcept
+            inline std::vector<T> parse(utl::Tag<std::vector<T>> /*unused*/, std::string* const str_) noexcept
+            {
+                std::string& str_ref = *str_;
+
+                extract_contents(str_, format::container::VECTOR);
+                std::vector<std::string> tokens = tokenise(str_ref);
+
+                std::vector<T> vec;
+                vec.reserve(tokens.size());
+                for (size_t i = 0; i < tokens.size(); ++i)
+                {
+                    vec.emplace_back(parse<T>(utl::Tag<T>(), tokens[i]));
+                }
+
+                return (vec);
+            }
+
+            template <typename T>
+            inline T parse(utl::Tag<T> /*unused*/, std::string* const str_) noexcept
             {
                 static_assert(std::is_fundamental<T>::value);
 
@@ -248,22 +266,6 @@ namespace arc //! arctk namespace
                 return (val);
             }
 
-            template <typename T>
-            std::vector<T> read(Tag<std::vector<T>>, std::string* const str_)
-            {
-                std::string& str_ref = *str_;
-
-                std::vector<std::string> tokens = tokenise(internals);
-                std::vector<T>           vec;
-
-                vec.reserve(tokens.size());
-                for (size_t i = 0; i < tokens.size(); ++i)
-                {
-                    vec.emplace_back(read<T>(tokens[i]));
-                }
-
-                return (vec);
-            }
 
 
         } // namespace str
