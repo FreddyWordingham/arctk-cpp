@@ -29,16 +29,16 @@
 //  == OPERATOR PROTOTYPES ==
 //  -- Io --
 template <typename T, size_t N>
-inline std::ostream& operator<<(const std::array<T, N>& arr_) noexcept;
+inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& arr_) noexcept;
 template <typename T>
-inline std::ostream& operator<<(const std::vector<T>& vec_) noexcept;
+inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec_) noexcept;
 
 
 
 //  == OPERATORS ==
 //  -- Io --
 template <typename T, size_t N>
-inline std::ostream& operator<<(const std::array<T, N>& arr_) noexcept
+inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& arr_) noexcept
 {
     stream_ << format::OPENERS[container::ARRAY] << arr_[0];
 
