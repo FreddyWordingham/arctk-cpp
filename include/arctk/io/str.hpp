@@ -372,7 +372,7 @@ namespace arc //! arctk namespace
                 PRE(sizeof...(A) == sizeof...(I));
 
                 std::tuple<A...> tup;
-                ((std::get<I>(tup) = parse<A>(utl::Tag<A>(), &tokens_[I])), ...);
+                ((std::get<I>(tup) = parse(utl::Tag<A>(), &tokens_[I])), ...);
 
                 return (tup);
             }
