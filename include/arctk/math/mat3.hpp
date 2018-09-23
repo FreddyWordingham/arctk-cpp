@@ -141,6 +141,9 @@ namespace arc //! arctk namespace
                     << io::format::MAT_ROW_START << std::setw(io::format::FIELD_WIDTH) << std::setw(io::format::FIELD_WIDTH) << z.x << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << std::setw(io::format::FIELD_WIDTH) << z.y << io::format::DELIM
                     << std::setw(io::format::FIELD_WIDTH) << std::setw(io::format::FIELD_WIDTH) << z.z << io::format::MAT_ROW_END << io::format::MAT_ROW_END;
 
+            stream_ << io::format::OPENERS[io::format::container::MAT] << io::format::OPENERS[io::format::container::VEC] << x.x << io::format::DELIM << x.y << io::format::CLOSERS[io::format::container::VEC] << io::format::DELIM
+                    << io::format::OPENERS[io::format::container::VEC] << y.x << io::format::DELIM << y.y << io::format::CLOSERS[io::format::container::VEC] << io::format::CLOSERS[io::format::container::MAT];
+
             return (stream_);
         }
 

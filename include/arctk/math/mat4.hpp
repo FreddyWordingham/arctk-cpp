@@ -137,14 +137,11 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline std::ostream& Mat<T, 4>::operator<<(std::ostream& stream_) const noexcept
         {
-            stream_ << io::format::MAT_ROW_START << io::format::MAT_ROW_START << std::setw(io::format::FIELD_WIDTH) << x.x << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << x.y << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << x.z
-                    << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << x.w << io::format::MAT_ROW_END << '\n'
-                    << io::format::MAT_ROW_START << std::setw(io::format::FIELD_WIDTH) << y.x << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << y.y << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << y.z << io::format::DELIM
-                    << std::setw(io::format::FIELD_WIDTH) << y.w << io::format::MAT_ROW_END << '\n'
-                    << io::format::MAT_ROW_START << std::setw(io::format::FIELD_WIDTH) << z.x << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << z.y << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << z.z << io::format::DELIM
-                    << std::setw(io::format::FIELD_WIDTH) << z.w << io::format::MAT_ROW_END << '\n'
-                    << io::format::MAT_ROW_START << std::setw(io::format::FIELD_WIDTH) << w.x << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << w.y << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << w.z << io::format::DELIM
-                    << std::setw(io::format::FIELD_WIDTH) << w.w << io::format::MAT_ROW_END << io::format::MAT_ROW_END;
+            stream_ << io::format::OPENERS[io::format::container::MAT] << io::format::OPENERS[io::format::container::VEC] << x.x << io::format::DELIM << x.y << io::format::DELIM << x.z << io::format::DELIM << x.w
+                    << io::format::CLOSERS[io::format::container::VEC] << io::format::DELIM << io::format::OPENERS[io::format::container::VEC] << y.x << io::format::DELIM << y.y << io::format::DELIM << y.z << io::format::DELIM << y.w
+                    << io::format::CLOSERS[io::format::container::VEC] << io::format::DELIM << io::format::OPENERS[io::format::container::VEC] << z.x << io::format::DELIM << z.y << io::format::DELIM << z.z << io::format::DELIM << z.w
+                    << io::format::CLOSERS[io::format::container::VEC] << io::format::DELIM << io::format::OPENERS[io::format::container::VEC] << w.x << io::format::DELIM << w.y << io::format::DELIM << w.z << io::format::DELIM << w.w
+                    << io::format::CLOSERS[io::format::container::VEC] << io::format::CLOSERS[io::format::container::MAT];
 
             return (stream_);
         }
