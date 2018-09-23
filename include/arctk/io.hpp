@@ -79,6 +79,8 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& a
     }
 
     stream_ << arc::io::format::CLOSERS[arc::io::format::container::ARRAY];
+
+    return (stream_);
 }
 
 template <typename T>
@@ -92,6 +94,8 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec
     }
 
     stream_ << arc::io::format::CLOSERS[arc::io::format::container::VECTOR];
+
+    return (stream_);
 }
 
 
