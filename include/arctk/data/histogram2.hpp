@@ -126,17 +126,17 @@ namespace arc //! arctk namespace
         template <typename T>
         inline std::ostream& Histogram<T, 2>::operator<<(std::ostream& stream_) const noexcept
         {
-            std::cout << std::setw(io::format::FIELD_WIDTH) << _bins[0][0];
+            std::cout << std::setw(16) << _bins[0][0];
             for (size_t i = 1; i < _bins[0].size(); ++i)
             {
-                std::cout << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << _bins[0][i];
+                std::cout << io::format::DELIM << std::setw(16) << _bins[0][i];
             }
             for (size_t i = 1; i < _bins.size(); ++i)
             {
-                std::cout << '\n' << std::setw(io::format::FIELD_WIDTH) << _bins[i][0];
+                std::cout << '\n' << std::setw(16) << _bins[i][0];
                 for (size_t j = 1; j < _bins[i].size(); ++j)
                 {
-                    std::cout << io::format::DELIM << std::setw(io::format::FIELD_WIDTH) << _bins[0][i];
+                    std::cout << io::format::DELIM << std::setw(16) << _bins[0][i];
                 }
             }
 
