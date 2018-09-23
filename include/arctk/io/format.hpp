@@ -19,6 +19,9 @@
 #include <array>
 #include <cstddef>
 
+//  -- Arctk --
+#include <arctk/debug.hpp>
+
 
 
 //  == NAMESPACE ==
