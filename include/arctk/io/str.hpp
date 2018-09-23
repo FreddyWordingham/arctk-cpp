@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
 
             //  -- Parsing --
             template <typename T>
-            inline T read(const utl::Tag<T>& /*unused*/, const std::string& str_) noexcept;
+            inline T parse(const utl::Tag<T>& /*unused*/, const std::string& str_) noexcept;
 
 
 
@@ -217,7 +217,7 @@ namespace arc //! arctk namespace
 
             //  -- Parsing --
             template <typename T>
-            inline T read(const utl::Tag<T>& /*unused*/, const std::string& str_) noexcept
+            inline T parse(const utl::Tag<T>& /*unused*/, const std::string& str_) noexcept
             {
                 static_assert(std::is_fundamental<T>::value);
 
