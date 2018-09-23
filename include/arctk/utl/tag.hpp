@@ -24,6 +24,10 @@ namespace arc //! arctk namespace
 
         //  == STRUCTURES ==
         //  -- Tag --
+        template <typename T>
+        class Tag
+        {
+        };
 
 
 
