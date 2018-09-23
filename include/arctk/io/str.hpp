@@ -251,6 +251,7 @@ namespace arc //! arctk namespace
             template <typename T>
             std::vector<T> read(Tag<std::vector<T>>, std::string* const str_)
             {
+                std::string& str_ref = *str_;
 
                 std::vector<std::string> tokens = tokenise(internals);
                 std::vector<T>           vec;
