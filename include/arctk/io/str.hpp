@@ -137,7 +137,14 @@ namespace arc //! arctk namespace
                 std::string& str_ref = *str_;
 
                 const size_t open = str_ref.find_first_of(format::OPENERS[type_]);
-                if (open != 0)
+                if (open == std::string::npos)
+                {
+                    std::cerr << "Error extracting contents of container.\n"
+                              << "Containter opener was not found.\n";
+
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+                else if (open != 0)
                 {
                     std::cerr << "Error extracting contents of container.\n"
                               << "Additional characters found before container opener.\n";
@@ -147,7 +154,14 @@ namespace arc //! arctk namespace
                 str_ref.erase(open, 1);
 
                 const size_t close = str_ref.find_last_of(format::CLOSERS[type_]);
-                if (close != (str_ref.size() - 1))
+                if (close == std::string::npos)
+                {
+                    std::cerr << "Error extracting contents of container.\n"
+                              << "Containter closer was not found.\n";
+
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+                else if (close != (str_ref.size() - 1))
                 {
                     std::cerr << "Error extracting contents of container.\n"
                               << "Additional characters found after container closer.\n";
