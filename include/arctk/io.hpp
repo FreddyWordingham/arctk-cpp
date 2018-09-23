@@ -40,27 +40,27 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec
 template <typename T, size_t N>
 inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& arr_) noexcept
 {
-    stream_ << format::OPENERS[container::ARRAY] << arr_[0];
+    stream_ << arc::io::format::OPENERS[container::ARRAY] << arr_[0];
 
     for (size_t i = 1; i < N; ++i)
     {
-        stream_ << format::DELIM << arr_[i];
+        stream_ << arc::io::format::DELIM << arr_[i];
     }
 
-    stream_ << format::CLOSERS[container::ARRAY];
+    stream_ << arc::io::format::CLOSERS[container::ARRAY];
 }
 
 template <typename T>
 inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec_) noexcept
 {
-    stream_ << format::OPENERS[container::VECTOR] << vec_[0];
+    stream_ << arc::io::format::OPENERS[container::VECTOR] << vec_[0];
 
     for (size_t i = 1; i < vec_.size(); ++i)
     {
-        stream_ << format::DELIM << vec_[i];
+        stream_ << arc::io::format::DELIM << vec_[i];
     }
 
-    stream_ << format::CLOSERS[container::VECTOR];
+    stream_ << arc::io::format::CLOSERS[container::VECTOR];
 }
 
 
