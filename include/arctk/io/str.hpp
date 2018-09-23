@@ -296,7 +296,7 @@ namespace arc //! arctk namespace
                 vec.reserve(tokens.size());
                 for (size_t i = 0; i < tokens.size(); ++i)
                 {
-                    vec.emplace_back(parse<T>(utl::Tag<T>(), &tokens[i]));
+                    vec.emplace_back(parse(utl::Tag<T>(), &tokens[i]));
                 }
 
                 return (vec);
