@@ -22,7 +22,7 @@
 
 //  -- Arctk --
 #include <arctk/io/format.hpp>
-#include <arctk/io/read.hpp>
+#include <arctk/io/str.hpp>
 
 
 
