@@ -66,7 +66,8 @@ namespace arc //! arctk namespace
                     }
                     else if (str_ref[i] == format::COMMENT)
                     {
-                        for (size_t j = 0; j < str_ref.size(); ++j)
+                        size_t j;
+                        for (j = i; j < str_ref.size(); ++j)
                         {
                             if (str_ref[j] == format::OPENERS[format::container::STRING])
                             {
@@ -84,16 +85,11 @@ namespace arc //! arctk namespace
                             }
                             else if (str_ref[j] == '\n')
                             {
-                                str_ref.erase(i, j - i);
-
                                 break;
                             }
                         }
 
-                        std::cerr << "Unable to parse string.\n"
-                                  << "String contains comment opener but does not contain a corresponding newline character.\n";
-
-                        std::exit(exit::error::FAILED_PARSE);
+                        str_ref.erase(i, j - i);
                     }
                 }
             }
