@@ -24,7 +24,7 @@ namespace arc //! arctk namespace
 
 
 
-            //  == Enumerations ==
+            //  == ENUMERATIONS ==
             //  -- Vertices --
             /**
              *  Enumeration of the triangle vertices.
