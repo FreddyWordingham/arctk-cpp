@@ -85,7 +85,7 @@
 #include <arctk/index/vertex.hpp>
 #include <arctk/io.hpp>
 #include <arctk/io/format.hpp>
-#include <arctk/io/read.hpp>
+#include <arctk/io/str.hpp>
 #include <arctk/macro.hpp>
 #include <arctk/macro/utility.hpp>
 #include <arctk/math.hpp>
