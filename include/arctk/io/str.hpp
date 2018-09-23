@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <string>
+#include <vector>
 
 //  -- Arctk --
 #include <arctk/exit.hpp>
