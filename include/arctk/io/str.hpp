@@ -25,7 +25,7 @@ namespace arc //! arctk namespace
 {
     namespace io //! input/output namespace
     {
-        namespace read //! reading namespace
+        namespace str //! string namespace
         {
 
 
@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
 
 
 
-        } // namespace read
+        } // namespace str
     }     // namespace io
 } // namespace arc
 
