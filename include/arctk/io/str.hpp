@@ -308,7 +308,7 @@ namespace arc //! arctk namespace
                 if (tokens.size() != N)
                 {
                     std::cerr << "Unable to parse string: '" << str_ref << "' to array type.\n"
-                              << "String: '" << str_ref << "' contains: '" << tokens.size() << "', but exactly '" << N << "' are required.\n";
+                              << "String: '" << str_ref << "' contains: '" << tokens.size() << "' values, but exactly '" << N << "' are required.\n";
                 }
 
                 std::array<T, N> arr;
