@@ -118,6 +118,16 @@ namespace arc //! arctk namespace
                     }
                     else
                     {
+                        for (size_t j = 0; j < format::WHITESPACE.size(); ++j)
+                        {
+                            if (str_ref[i] == format::WHITESPACE[j])
+                            {
+                                str_ref.erase(i, 1);
+                                --i;
+
+                                break;
+                            }
+                        }
                     }
                 }
             }
