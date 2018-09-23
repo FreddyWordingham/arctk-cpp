@@ -343,7 +343,7 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::FAILED_PARSE);
                 }
 
-                return (std::make_pair<T, S>(parse<T>(utl::Tag<T>(), &tokens[0]), parse<S>(utl::Tag<S>(), &tokens[1])));
+                return (std::make_pair<T, S>(parse(utl::Tag<T>(), &tokens[0]), parse(utl::Tag<S>(), &tokens[1])));
             }
 
             template <typename... A>
