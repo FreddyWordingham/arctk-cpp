@@ -137,13 +137,13 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::tuple<A...>& t
 }
 
 template <typename... A, size_t... I>
-inline std::string tuple_print_helper(std::ostream& stream_, const std::tuple<A...>& tup_, const std::index_sequence<I...>& /*unused*/) noexcept
+inline std::ostream& tuple_print_helper(std::ostream& stream_, const std::tuple<A...>& tup_, const std::index_sequence<I...>& /*unused*/) noexcept
 {
     static_assert(sizeof...(A) > 0);
     static_assert(sizeof...(A) == (sizeof...(I) + 1));
 
-    stream << std::get<0>(tup_);
-    ((stream << arc::io::format::DELIM << std::get<I + 1>(tup_)), ...);
+    stream_ << std::get<0>(tup_);
+    ((stream_ << arc::io::format::DELIM << std::get<I + 1>(tup_)), ...);
 
     return (stream_);
 }
