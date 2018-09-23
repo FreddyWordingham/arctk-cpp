@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
             //  -- Pre-processing --
             inline void filter_comments(std::string* const str_) noexcept
             {
-                for (size_t i = 0; i < str_.size(); ++i)
+                for (size_t i = 0; i < str_->size(); ++i)
                 {
                     if (str_[i] == format::OPENERS[format::container::STRING])
                     {
