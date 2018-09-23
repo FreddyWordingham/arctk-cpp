@@ -309,6 +309,8 @@ namespace arc //! arctk namespace
                 {
                     std::cerr << "Unable to parse string: '" << str_ref << "' to array type.\n"
                               << "String: '" << str_ref << "' contains: '" << tokens.size() << "' values, but exactly '" << N << "' are required.\n";
+
+                    std::exit(exit::error::FAILED_PARSE);
                 }
 
                 std::array<T, N> arr;
