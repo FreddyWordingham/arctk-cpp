@@ -35,7 +35,7 @@ namespace arc //! arctk namespace
 
 
 
-            //  == Enumerations ==
+            //  == ENUMERATIONS ==
             //  -- Cartesian --
             /**
              *  Enumeration of the cartesian dimensions.
