@@ -49,7 +49,6 @@ namespace arc //! arctk namespace
             constexpr std::array<char, container::TOTAL> OPENERS({{'[', '(', '"', '{', '{'}});
             constexpr std::array<char, container::TOTAL> CLOSERS({{']', ')', '"', '}', '}'}});
 
-
             //  -- Delimiters --
             constexpr char DELIM = ',';
 
