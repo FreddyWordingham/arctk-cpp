@@ -36,9 +36,10 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Pre-processing --
-            inline void filter_comments(std::string* const str_) noexcept;
-            inline void filter_whitespace(std::string* const str_) noexcept;
-            inline void extract_contents(std::string* const str_, const format::container type_) noexcept;
+            inline void                     filter_comments(std::string* const str_) noexcept;
+            inline void                     filter_whitespace(std::string* const str_) noexcept;
+            inline void                     extract_contents(std::string* const str_, const format::container type_) noexcept;
+            inline std::vector<std::string> tokenise(const std::string& str_) noexcept;
 
             //  -- Parsing --
 
