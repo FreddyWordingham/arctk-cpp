@@ -30,14 +30,25 @@ namespace arc //! arctk namespace
 
 
 
+            //  == ENUMERATIONS ==
+            //  -- Container Types --
+            enum container
+            {
+                ARRAY,
+                VECTOR,
+                STRING,
+                VEC,
+                MAT,
+                TOTAL
+            };
+
+
+
             //  == CONSTANTS ==
             //  -- Bookends --
-            constexpr char const* const ARRAY_START  = "[";
-            constexpr char const* const ARRAY_END    = "]";
-            constexpr char const* const VECTOR_START = "{";
-            constexpr char const* const VECTOR_END   = "}";
-            constexpr char const* const STRING_START = "\"";
-            constexpr char const* const STRING_END   = "\"";
+            constexpr std::array<char, container::TOTAL> OPENERS({{'[', '(', '"', '{', '{'}});
+            constexpr std::array<char, container::TOTAL> OPENERS({{']', '(', '"', '{', '{'}});
+
 
             //  -- Delimiters --
             constexpr char DELIM = ',';
