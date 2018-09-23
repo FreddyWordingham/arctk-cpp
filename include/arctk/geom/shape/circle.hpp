@@ -180,13 +180,7 @@ namespace arc //! arctk namespace
              */
             inline vec3 Circle::min() const noexcept
             {
-                vec3 delta;
-
-                delta.x = std::abs(std::sin(std::acos(_norm.x)) * _rad);
-                delta.y = std::abs(std::sin(std::acos(_norm.y)) * _rad);
-                delta.z = std::abs(std::sin(std::acos(_norm.z)) * _rad);
-
-                return (_pos - delta);
+                return (_pos - vec3(std::abs(std::sin(std::acos(_norm.x)) * _rad), std::abs(std::sin(std::acos(_norm.y)) * _rad), std::abs(std::sin(std::acos(_norm.z)) * _rad)));
             }
 
             /**
@@ -196,13 +190,7 @@ namespace arc //! arctk namespace
              */
             inline vec3 Circle::max() const noexcept
             {
-                vec3 delta;
-
-                delta.x = std::abs(std::sin(std::acos(_norm.x)) * _rad);
-                delta.y = std::abs(std::sin(std::acos(_norm.y)) * _rad);
-                delta.z = std::abs(std::sin(std::acos(_norm.z)) * _rad);
-
-                return (_pos + delta);
+                return (_pos + vec3(std::abs(std::sin(std::acos(_norm.x)) * _rad), std::abs(std::sin(std::acos(_norm.y)) * _rad), std::abs(std::sin(std::acos(_norm.z)) * _rad)));
             }
 
             /**
