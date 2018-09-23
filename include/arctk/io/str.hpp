@@ -171,6 +171,44 @@ namespace arc //! arctk namespace
                 str_ref.erase(close, 1);
             }
 
+            inline std::vector<std::string> tokenise(const std::string& str_) noexcept
+            {
+                std::vector<std::string> tokens;
+
+                size_t prev_delim = 0;
+                for (size_t i = 0; i < str_.size(); ++i)
+                {
+                    if (str_[i] == format::DELIM)
+                    {
+                        tokens.emplace_back(str_.substr(prev_delim, i - prev_delim));
+                        prev_delim = i + 1;
+                    }
+                    else
+                    {
+                        for (size_t j = 0; j < format::OPENERS.size(); ++j)
+                        {
+                            if (str_[i] == format::OPENERS[j])
+                            {
+                                i = str_.find_first_of(format::CLOSERS[j], i + 1);
+
+                                if (i == std::string::npos)
+                                {
+                                    std::cerr << "Error parsing container.\n"
+                                              << "Corresponding container closer was not found.\n";
+
+                                    std::exit(exit::error::FAILED_PARSE);
+                                }
+
+                                break;
+                            }
+                        }
+                    }
+                }
+                tokens.emplace_back(str_.substr(prev_delim, str_.size() - 1));
+
+                return (tokens);
+            }
+
 
             //  -- Parsing --
 
