@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_IO_READ_HPP
-#define ARCTK_IO_READ_HPP
+#ifndef ARCTK_IO_STR_HPP
+#define ARCTK_IO_STR_HPP
 
 
 
@@ -412,4 +412,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_IO_READ_HPP
+#endif // ARCTK_IO_STR_HPP
