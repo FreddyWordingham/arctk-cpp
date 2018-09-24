@@ -182,7 +182,7 @@ namespace arc //! arctk namespace
                 if (close == std::string::npos)
                 {
                     std::cerr << "Error extracting contents of container.\n"
-                              << "Containter closer was not found." << type_ << "\n";
+                              << "Containter closer was not found.\n";
 
                     std::exit(exit::error::FAILED_PARSE);
                 }
