@@ -431,7 +431,7 @@ namespace arc //! arctk namespace
             {
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, consts::format::container::MAP);
+                extract_contents(str_, consts::format::container::VEC);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 if (tokens.size() != 3)
