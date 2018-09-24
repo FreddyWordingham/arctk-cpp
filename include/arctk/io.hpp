@@ -25,7 +25,6 @@
 //  -- Arctk --
 #include <arctk/io/format.hpp>
 #include <arctk/io/str.hpp>
-#include <arctk/io/tuple.hpp>
 #include <arctk/utl.hpp>
 
 
