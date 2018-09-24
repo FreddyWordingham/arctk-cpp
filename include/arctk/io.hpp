@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
-        //  -- Reading --
+        //  -- Parsing --
         template <typename T>
         inline T parse(std::string* const str_) noexcept;
 
@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTIONS ==
-        //  -- Reading --
+        //  -- Parsing --
         template <typename T>
         inline T parse(std::string* const str_) noexcept
         {
