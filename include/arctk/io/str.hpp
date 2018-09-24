@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
             template <typename T, typename S>
             inline std::map<T, S> parse(utl::Tag<std::map<T, S>> /*unused*/, std::string* const str_) noexcept;
             template <typename T>
-            inline math::Vec3<T> parse(utl::Tag<math::Vec3<T>> /*unused*/, std::string* const str_) noexcept;
+            inline math::Vec<T, 3> parse(utl::Tag<math::Vec<T, 3>> /*unused*/, std::string* const str_) noexcept;
 
 
 
@@ -426,7 +426,7 @@ namespace arc //! arctk namespace
             }
 
             template <typename T>
-            inline math::Vec3<T> parse(utl::Tag<math::Vec3<T>> /*unused*/, std::string* const str_) noexcept
+            inline math::Vec<T, 3> parse(utl::Tag<math::Vec<T, 3>> /*unused*/, std::string* const str_) noexcept
             {
                 std::string& str_ref = *str_;
 
@@ -441,7 +441,7 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::FAILED_PARSE);
                 }
 
-                return (math::Vec3<T>(parse(utl::Tag<T>(), &tokens[index::dim::cartesian::X]), parse(utl::Tag<T>(), &tokens[index::dim::cartesian::Y]), parse(utl::Tag<T>(), &tokens[index::dim::cartesian::Z])));
+                return (math::Vec<T, 3>(parse(utl::Tag<T>(), &tokens[index::dim::cartesian::X]), parse(utl::Tag<T>(), &tokens[index::dim::cartesian::Y]), parse(utl::Tag<T>(), &tokens[index::dim::cartesian::Z])));
             }
 
 
