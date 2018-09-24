@@ -55,6 +55,8 @@ namespace arc //! arctk namespace
             inline std::vector<T> parse(utl::Tag<std::vector<T>> /*unused*/, std::string* const str_) noexcept;
             template <typename T, size_t N>
             inline std::array<T, N> parse(utl::Tag<std::array<T, N>> /*unused*/, std::string* const str_) noexcept;
+            template <>
+            inline std::string parse(utl::Tag<std::string> /*unused*/, std::string* const str_) noexcept;
             template <typename T, typename S>
             inline std::pair<T, S> parse(utl::Tag<std::pair<T, S>> /*unused*/, std::string* const str_) noexcept;
             template <typename... A>
@@ -337,6 +339,16 @@ namespace arc //! arctk namespace
                 }
 
                 return (arr);
+            }
+
+            template <>
+            inline std::string parse(utl::Tag<std::string> /*unused*/, std::string* const str_) noexcept
+            {
+                std::string& str_ref = *str_;
+
+                extract_contents(str_, format::container::STRING);
+
+                return (str_ref);
             }
 
             template <typename T, typename S>
