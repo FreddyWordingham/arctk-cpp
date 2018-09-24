@@ -443,12 +443,12 @@ namespace arc //! arctk namespace
                 if (tokens.size() != 2)
                 {
                     std::cerr << "Unable to parse string: '" << str_ref << "' to vec2 type.\n"
-                              << "String: '" << str_ref << "' contains: '" << tokens.size() << "' values, but exactly three are required.\n";
+                              << "String: '" << str_ref << "' contains: '" << tokens.size() << "' values, but exactly two are required.\n";
 
                     std::exit(exit::error::FAILED_PARSE);
                 }
 
-                return (math::Vec<T, 3>(parse(utl::Tag<T>(), &tokens[index::dim::cartesian::X]), parse(utl::Tag<T>(), &tokens[index::dim::cartesian::Y]), parse(utl::Tag<T>(), &tokens[index::dim::cartesian::Z])));
+                return (math::Vec<T, 2>(parse(utl::Tag<T>(), &tokens[index::dim::cartesian::X]), parse(utl::Tag<T>(), &tokens[index::dim::cartesian::Y])));
             }
 
             template <typename T>
