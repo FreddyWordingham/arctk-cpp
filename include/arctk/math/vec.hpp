@@ -83,8 +83,9 @@ namespace arc //! arctk namespace
             //  -- Conversion --
             constexpr inline explicit operator std::array<T, N>() const noexcept;
 
-            //  -- Io --
-            constexpr inline std::ostream& operator<<(std::ostream& stream_) const noexcept;
+            //  -- Printing --
+            template <typename S, size_t M>
+            friend constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<S, M>& vec_) noexcept;
 
             //  -- Assignment --
             constexpr inline Vec<T, N>& operator+=(T val_) noexcept;
@@ -248,14 +249,14 @@ namespace arc //! arctk namespace
         }
 
 
-        //  -- Io --
+        //  -- Printing --
         template <typename T, size_t N>
-        constexpr inline std::ostream& Vec<T, N>::operator<<(std::ostream& stream_) const noexcept
+        constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<T, N>& vec_) noexcept
         {
-            stream_ << io::format::OPENERS[io::format::container::VEC] << _data[0];
+            stream_ << io::format::OPENERS[io::format::container::VEC] << vec_._data[0];
             for (size_t i = 1; i < N; ++i)
             {
-                stream_ << io::format::DELIM << _data[i];
+                stream_ << io::format::DELIM << vec_._data[i];
             }
             stream_ << io::format::CLOSERS[io::format::container::VEC];
 
