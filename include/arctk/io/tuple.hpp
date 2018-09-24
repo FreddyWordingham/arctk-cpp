@@ -32,12 +32,25 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTION PROTOTYPES ==
-            //  -- Pre-processing --
+            //  -- Printing --
+            template <typename... A, size_t... I>
+            inline std::ostream& tuple_print_helper(std::ostream& stream_, const std::tuple<A...>& tup_, const std::index_sequence<I...>& /*unused*/) noexcept;
 
 
 
             //  == FUNCTIONS ==
-            //  -- Pre-processing --
+            //  -- Printing --
+            template <typename... A, size_t... I>
+            inline std::ostream& tuple_print_helper(std::ostream& stream_, const std::tuple<A...>& tup_, const std::index_sequence<I...>& /*unused*/) noexcept
+            {
+                static_assert(sizeof...(A) > 0);
+                static_assert(sizeof...(A) == (sizeof...(I) + 1));
+
+                stream_ << std::get<0>(tup_);
+                ((stream_ << arc::io::format::DELIM << std::get<I + 1>(tup_)), ...);
+
+                return (stream_);
+            }
 
 
 
