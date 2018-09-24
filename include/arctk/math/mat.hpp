@@ -21,8 +21,8 @@
 #include <ostream>
 
 //  -- Arctk --
+#include <arctk/consts.hpp>
 #include <arctk/debug.hpp>
-#include <arctk/io.hpp>
 #include <arctk/math/vec.hpp>
 
 
