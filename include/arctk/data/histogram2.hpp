@@ -21,9 +21,9 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/consts.hpp>
 #include <arctk/data/histogram.hpp>
 #include <arctk/debug.hpp>
-#include <arctk/io.hpp>
 #include <arctk/math.hpp>
 
 
@@ -129,14 +129,14 @@ namespace arc //! arctk namespace
             std::cout << std::setw(16) << _bins[0][0];
             for (size_t i = 1; i < _bins[0].size(); ++i)
             {
-                std::cout << io::format::DELIM << std::setw(16) << _bins[0][i];
+                std::cout << consts::format::DELIM << std::setw(16) << _bins[0][i];
             }
             for (size_t i = 1; i < _bins.size(); ++i)
             {
                 std::cout << '\n' << std::setw(16) << _bins[i][0];
                 for (size_t j = 1; j < _bins[i].size(); ++j)
                 {
-                    std::cout << io::format::DELIM << std::setw(16) << _bins[0][i];
+                    std::cout << consts::format::DELIM << std::setw(16) << _bins[0][i];
                 }
             }
 
