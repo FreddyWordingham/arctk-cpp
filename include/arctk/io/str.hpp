@@ -26,6 +26,7 @@
 //  -- Arctk --
 #include <arctk/exit.hpp>
 #include <arctk/io/format.hpp>
+#include <arctk/math.hpp>
 #include <arctk/utl.hpp>
 
 
@@ -66,6 +67,8 @@ namespace arc //! arctk namespace
             inline std::tuple<A...> parse_helper(utl::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>* const tokens_, const std::index_sequence<I...>& /*unused*/) noexcept;
             template <typename T, typename S>
             inline std::map<T, S> parse(utl::Tag<std::map<T, S>> /*unused*/, std::string* const str_) noexcept;
+            template <typename T>
+            inline math::Vec3<T> parse(utl::Tag<math::Vec3<T>> /*unused*/, std::string* const str_) noexcept;
 
 
 
@@ -407,19 +410,23 @@ namespace arc //! arctk namespace
             template <typename T, typename S>
             inline std::map<T, S> parse(utl::Tag<std::map<T, S>> /*unused*/, std::string* const str_) noexcept
             {
-                std::map<T, S> map;
-
                 std::string& str_ref = *str_;
 
                 extract_contents(str_, format::container::MAP);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
+                std::map<T, S> map;
                 for (size_t i = 0; i < tokens.size(); ++i)
                 {
                     map.emplace(parse(utl::Tag<std::pair<T, S>>(), &tokens[i]));
                 }
 
                 return (map);
+            }
+
+            template <typename T>
+            inline math::Vec3<T> parse(utl::Tag<math::Vec3<T>> /*unused*/, std::string* const str_) noexcept
+            {
             }
 
 
