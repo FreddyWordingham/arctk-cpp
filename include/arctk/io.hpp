@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         //  -- Reading --
         template <typename T>
-        inline T read(std::string* const str_) noexcept;
+        inline T parse(std::string* const str_) noexcept;
 
         //  -- Printing --
         template <typename... A, size_t... I>
@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
         //  == FUNCTIONS ==
         //  -- Reading --
         template <typename T>
-        inline T read(std::string* const str_) noexcept
+        inline T parse(std::string* const str_) noexcept
         {
             str::filter_comments(str_);
             str::filter_whitespace(str_);
