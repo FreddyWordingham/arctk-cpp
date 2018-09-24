@@ -131,7 +131,7 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::tuple<A...>& t
 
     if (sizeof...(A) > 0)
     {
-        tuple_print_helper(stream_, tup_, std::make_index_sequence<sizeof...(A) - 1>());
+        arc::io::tuple::tuple_print_helper(stream_, tup_, std::make_index_sequence<sizeof...(A) - 1>());
     }
 
     stream_ << arc::io::format::CLOSERS[arc::io::format::container::TUPLE];
