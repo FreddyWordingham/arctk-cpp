@@ -133,11 +133,9 @@ namespace arc //! arctk namespace
         //  == OPERATORS ==
         //  -- Io --
         template <typename T>
-        constexpr inline std::ostream& Mat<T, 3>::operator<<(std::ostream& stream_) const noexcept
+        constexpr inline std::ostream& operator<<(std::ostream& stream_, const Mat<T, 2>& mat_) noexcept;
         {
-            stream_ << io::format::OPENERS[io::format::container::MAT] << io::format::OPENERS[io::format::container::VEC] << x.x << io::format::DELIM << x.y << io::format::DELIM << x.z << io::format::CLOSERS[io::format::container::VEC] << io::format::DELIM
-                    << io::format::OPENERS[io::format::container::VEC] << y.x << io::format::DELIM << y.y << io::format::DELIM << y.z << io::format::CLOSERS[io::format::container::VEC] << io::format::DELIM << io::format::OPENERS[io::format::container::VEC]
-                    << z.x << io::format::DELIM << z.y << io::format::DELIM << z.z << io::format::CLOSERS[io::format::container::VEC] << io::format::CLOSERS[io::format::container::MAT];
+            stream_ << io::format::OPENERS[io::format::container::MAT] << io::format::DELIM << x << io::format::DELIM << y << io::format::DELIM << z << io::format::CLOSERS[io::format::container::MAT];
 
             return (stream_);
         }
