@@ -194,9 +194,18 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::map<T, S>& map
 {
     stream_ << arc::io::format::OPENERS[arc::io::format::container::MAP];
 
+    bool first = true;
+
     for (auto const& pair : map_)
     {
-        stream_ << pair << arc::io::format::DELIM;
+        if (!first)
+        {
+            stream_ << arc::io::format::DELIM;
+
+            first = false;
+        }
+
+        stream_ << pair;
     }
 
     stream_ << arc::io::format::CLOSERS[arc::io::format::container::MAP];
