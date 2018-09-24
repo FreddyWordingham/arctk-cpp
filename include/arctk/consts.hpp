@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/consts/format.hpp>
 #include <arctk/consts/math.hpp>
 #include <arctk/consts/phys.hpp>
 
