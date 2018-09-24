@@ -25,6 +25,7 @@
 
 //  -- Arctk --
 #include <arctk/exit.hpp>
+#include <arctk/index.hpp>
 #include <arctk/io/format.hpp>
 #include <arctk/math.hpp>
 #include <arctk/utl.hpp>
@@ -427,6 +428,20 @@ namespace arc //! arctk namespace
             template <typename T>
             inline math::Vec3<T> parse(utl::Tag<math::Vec3<T>> /*unused*/, std::string* const str_) noexcept
             {
+                std::string& str_ref = *str_;
+
+                extract_contents(str_, format::container::MAP);
+                std::vector<std::string> tokens = tokenise(str_ref);
+
+                if (tokens.size() != 3)
+                {
+                    std::cerr << "Unable to parse string: '" << str_ref << "' to vec3 type.\n"
+                              << "String: '" << str_ref << "' contains: '" << tokens.size() << "' values, but exactly three are required.\n";
+
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+
+                return (math::Vec3<T>(parse(utl::Tag<T>(), &tokens[index::dim::cartesian::X]), parse(utl::Tag<T>(), &tokens[index::dim::cartesian::Y]), parse(utl::Tag<T>(), &tokens[index::dim::cartesian::Z])));
             }
 
 
