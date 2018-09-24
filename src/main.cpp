@@ -16,6 +16,7 @@
 #include <arctk/col/map.hpp>
 #include <arctk/config.hpp>
 #include <arctk/consts.hpp>
+#include <arctk/consts/format.hpp>
 #include <arctk/consts/math.hpp>
 #include <arctk/consts/phys.hpp>
 #include <arctk/data.hpp>
