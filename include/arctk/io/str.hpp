@@ -229,7 +229,7 @@ namespace arc //! arctk namespace
                         }
                     }
                 }
-                tokens.emplace_back(str_.substr(prev_delim, str_.size() - 1));
+                tokens.emplace_back(str_.substr(prev_delim, str_.size()));
 
                 return (tokens);
             }
