@@ -25,7 +25,7 @@
 #include <vector>
 
 //  -- Arctk --
-#include <arctk/io/format.hpp>
+#include <arctk/consts.hpp>
 #include <arctk/io/str.hpp>
 #include <arctk/utl.hpp>
 
@@ -99,7 +99,7 @@ namespace arc //! arctk namespace
             static_assert(sizeof...(A) == (sizeof...(I) + 1));
 
             stream_ << std::get<0>(tup_);
-            ((stream_ << format::DELIM << std::get<I + 1>(tup_)), ...);
+            ((stream_ << consts::format::DELIM << std::get<I + 1>(tup_)), ...);
 
             return (stream_);
         }
@@ -132,14 +132,14 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::map<T, S>& map
 template <typename T, size_t N>
 inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& arr_) noexcept
 {
-    stream_ << arc::io::format::OPENERS[arc::io::format::container::ARRAY] << arr_[0];
+    stream_ << arc::consts::format::OPENERS[arc::consts::format::container::ARRAY] << arr_[0];
 
     for (size_t i = 1; i < N; ++i)
     {
-        stream_ << arc::io::format::DELIM << arr_[i];
+        stream_ << arc::consts::format::DELIM << arr_[i];
     }
 
-    stream_ << arc::io::format::CLOSERS[arc::io::format::container::ARRAY];
+    stream_ << arc::consts::format::CLOSERS[arc::consts::format::container::ARRAY];
 
     return (stream_);
 }
@@ -147,21 +147,21 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& a
 template <typename T>
 inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec_) noexcept
 {
-    stream_ << arc::io::format::OPENERS[arc::io::format::container::VECTOR] << vec_[0];
+    stream_ << arc::consts::format::OPENERS[arc::consts::format::container::VECTOR] << vec_[0];
 
     for (size_t i = 1; i < vec_.size(); ++i)
     {
-        stream_ << arc::io::format::DELIM << vec_[i];
+        stream_ << arc::consts::format::DELIM << vec_[i];
     }
 
-    stream_ << arc::io::format::CLOSERS[arc::io::format::container::VECTOR];
+    stream_ << arc::consts::format::CLOSERS[arc::consts::format::container::VECTOR];
 
     return (stream_);
 }
 
 inline std::ostream& operator<<(std::ostream& stream_, const std::string& str_) noexcept
 {
-    stream_ << arc::io::format::OPENERS[arc::io::format::container::STRING] << str_.c_str() << arc::io::format::CLOSERS[arc::io::format::container::STRING];
+    stream_ << arc::consts::format::OPENERS[arc::consts::format::container::STRING] << str_.c_str() << arc::consts::format::CLOSERS[arc::consts::format::container::STRING];
 
     return (stream_);
 }
@@ -169,7 +169,7 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::string& str_) 
 template <typename T, typename S>
 inline std::ostream& operator<<(std::ostream& stream_, const std::pair<T, S>& pair_) noexcept
 {
-    stream_ << arc::io::format::OPENERS[arc::io::format::container::PAIR] << pair_.first << arc::io::format::DELIM << pair_.second << arc::io::format::CLOSERS[arc::io::format::container::PAIR];
+    stream_ << arc::consts::format::OPENERS[arc::consts::format::container::PAIR] << pair_.first << arc::consts::format::DELIM << pair_.second << arc::consts::format::CLOSERS[arc::consts::format::container::PAIR];
 
     return (stream_);
 }
@@ -177,14 +177,14 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::pair<T, S>& pa
 template <typename... A>
 inline std::ostream& operator<<(std::ostream& stream_, const std::tuple<A...>& tup_) noexcept
 {
-    stream_ << arc::io::format::OPENERS[arc::io::format::container::TUPLE];
+    stream_ << arc::consts::format::OPENERS[arc::consts::format::container::TUPLE];
 
     if (sizeof...(A) > 0)
     {
         arc::io::tuple_print_helper(stream_, tup_, std::make_index_sequence<sizeof...(A) - 1>());
     }
 
-    stream_ << arc::io::format::CLOSERS[arc::io::format::container::TUPLE];
+    stream_ << arc::consts::format::CLOSERS[arc::consts::format::container::TUPLE];
 
     return (stream_);
 }
@@ -192,7 +192,7 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::tuple<A...>& t
 template <typename T, typename S>
 inline std::ostream& operator<<(std::ostream& stream_, const std::map<T, S>& map_) noexcept
 {
-    stream_ << arc::io::format::OPENERS[arc::io::format::container::MAP];
+    stream_ << arc::consts::format::OPENERS[arc::consts::format::container::MAP];
 
     bool first = true;
 
@@ -200,7 +200,7 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::map<T, S>& map
     {
         if (!first)
         {
-            stream_ << arc::io::format::DELIM;
+            stream_ << arc::consts::format::DELIM;
 
             first = false;
         }
@@ -208,7 +208,7 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::map<T, S>& map
         stream_ << pair;
     }
 
-    stream_ << arc::io::format::CLOSERS[arc::io::format::container::MAP];
+    stream_ << arc::consts::format::CLOSERS[arc::consts::format::container::MAP];
 
     return (stream_);
 }
