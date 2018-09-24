@@ -122,6 +122,8 @@ template <typename T, typename S>
 inline std::ostream& operator<<(std::ostream& stream_, const std::pair<T, S>& pair_) noexcept;
 template <typename... A>
 inline std::ostream& operator<<(std::ostream& stream_, const std::tuple<A...>& tup_) noexcept;
+template <typename T, typename S>
+inline std::ostream& operator<<(std::ostream& stream_, const std::map<T, S>& map_) noexcept;
 
 
 
@@ -183,6 +185,21 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::tuple<A...>& t
     }
 
     stream_ << arc::io::format::CLOSERS[arc::io::format::container::TUPLE];
+
+    return (stream_);
+}
+
+template <typename T, typename S>
+inline std::ostream& operator<<(std::ostream& stream_, const std::map<T, S>& map_) noexcept
+{
+    stream_ << arc::io::format::OPENERS[arc::io::format::container::MAP];
+
+    for (auto const& pair : map_)
+    {
+        stream_ << pair << arc::io::format::DELIM;
+    }
+
+    stream_ << arc::io::format::CLOSERS[arc::io::format::container::MAP];
 
     return (stream_);
 }
