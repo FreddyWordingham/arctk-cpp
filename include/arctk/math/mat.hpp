@@ -182,12 +182,12 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline std::ostream& operator<<(std::ostream& stream_, const Mat<T, N>& mat_) noexcept
         {
-            stream_ << io::format::OPENERS[io::format::container::MAT] << mat_._data[0];
+            stream_ << consts::format::OPENERS[consts::format::container::MAT] << mat_._data[0];
             for (size_t i = 1; i < N; ++i)
             {
-                stream_ << io::format::DELIM << mat_._data[i];
+                stream_ << consts::format::DELIM << mat_._data[i];
             }
-            stream_ << io::format::CLOSERS[io::format::container::MAT];
+            stream_ << consts::format::CLOSERS[consts::format::container::MAT];
 
             return (stream_);
         }
