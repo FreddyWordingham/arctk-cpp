@@ -17,7 +17,9 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
+#include <fstream>
 #include <ostream>
+#include <string>
 #include <tuple>
 #include <utility>
 #include <vector>
@@ -38,6 +40,9 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTION PROTOTYPES ==
+        //  -- Reading --
+        inline std::string read(const std::string& path_) noexcept;
+
         //  -- Parsing --
         template <typename T>
         inline T parse(std::string* const str_) noexcept;
@@ -49,6 +54,32 @@ namespace arc //! arctk namespace
 
 
         //  == FUNCTIONS ==
+        //  -- Reading --
+        inline std::string read(const std::string& path_) noexcept
+        {
+            PRE(!path_.empty());
+
+            std::ifstream file(path_);
+
+            if (!file.is_open())
+            {
+                std::cerr << "Unable to parse contents of file.\n"
+                          << "Unable to open file: `" << path_ << "`.\n";
+
+                std::exit(exit::error::FILE_OPEN_FAILED);
+            }
+
+            std::string str;
+
+            file.seekg(0, std::ios::end);
+            str.reserve(static_cast<size_t>(file.tellg()));
+            file.seekg(0, std::ios::beg);
+
+            str.assign((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+
+            return (str);
+        }
+
         //  -- Parsing --
         template <typename T>
         inline T parse(std::string* const str_) noexcept
