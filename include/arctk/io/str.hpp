@@ -486,8 +486,7 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::FAILED_PARSE);
                 }
 
-                return (math::Vec<T, 4>(parse(utl::Tag<T>(), &tokens[index::dim::cartesian::X]), parse(utl::Tag<T>(), &tokens[index::dim::cartesian::Y]), parse(utl::Tag<T>(), &tokens[index::dim::cartesian::Z]),
-                                        parse(utl::Tag<T>(), &tokens[index::dim::cartesian::W])));
+                return (math::Vec<T, 4>(parse(utl::Tag<T>(), &tokens[index::dim::cartesian::X]), parse(utl::Tag<T>(), &tokens[index::dim::cartesian::Y]), parse(utl::Tag<T>(), &tokens[index::dim::cartesian::Z]), parse(utl::Tag<T>(), &tokens[3])));
             }
 
             template <typename T, size_t N>
