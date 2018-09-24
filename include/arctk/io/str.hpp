@@ -24,6 +24,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/consts.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/index.hpp>
 #include <arctk/io/format.hpp>
@@ -46,7 +47,7 @@ namespace arc //! arctk namespace
             //  -- Pre-processing --
             inline void                     filter_comments(std::string* const str_) noexcept;
             inline void                     filter_whitespace(std::string* const str_) noexcept;
-            inline void                     extract_contents(std::string* const str_, const format::container type_) noexcept;
+            inline void                     extract_contents(std::string* const str_, const consts::format::container type_) noexcept;
             inline std::vector<std::string> tokenise(const std::string& str_) noexcept;
 
             //  -- Parsing --
@@ -81,9 +82,9 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < str_ref.size(); ++i)
                 {
-                    if (str_ref[i] == format::OPENERS[format::container::STRING])
+                    if (str_ref[i] == consts::format::OPENERS[consts::format::container::STRING])
                     {
-                        const size_t string_container_end_pos = str_ref.find_first_of(format::CLOSERS[format::container::STRING], i + 1);
+                        const size_t string_container_end_pos = str_ref.find_first_of(consts::format::CLOSERS[consts::format::container::STRING], i + 1);
 
                         if (string_container_end_pos == std::string::npos)
                         {
@@ -95,14 +96,14 @@ namespace arc //! arctk namespace
 
                         i = string_container_end_pos;
                     }
-                    else if (str_ref[i] == format::COMMENT)
+                    else if (str_ref[i] == consts::format::COMMENT)
                     {
                         size_t j;
                         for (j = i; j < str_ref.size(); ++j)
                         {
-                            if (str_ref[j] == format::OPENERS[format::container::STRING])
+                            if (str_ref[j] == consts::format::OPENERS[consts::format::container::STRING])
                             {
-                                const size_t string_container_end_pos = str_ref.find_first_of(format::CLOSERS[format::container::STRING], j + 1);
+                                const size_t string_container_end_pos = str_ref.find_first_of(consts::format::CLOSERS[consts::format::container::STRING], j + 1);
 
                                 if (string_container_end_pos == std::string::npos)
                                 {
@@ -131,9 +132,9 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < str_ref.size(); ++i)
                 {
-                    if (str_ref[i] == format::OPENERS[format::container::STRING])
+                    if (str_ref[i] == consts::format::OPENERS[consts::format::container::STRING])
                     {
-                        const size_t string_container_end_pos = str_ref.find_first_of(format::CLOSERS[format::container::STRING], i + 1);
+                        const size_t string_container_end_pos = str_ref.find_first_of(consts::format::CLOSERS[consts::format::container::STRING], i + 1);
 
                         if (string_container_end_pos == std::string::npos)
                         {
@@ -147,9 +148,9 @@ namespace arc //! arctk namespace
                     }
                     else
                     {
-                        for (size_t j = 0; j < format::WHITESPACE.size(); ++j)
+                        for (size_t j = 0; j < consts::format::WHITESPACE.size(); ++j)
                         {
-                            if (str_ref[i] == format::WHITESPACE[j])
+                            if (str_ref[i] == consts::format::WHITESPACE[j])
                             {
                                 str_ref.erase(i, 1);
                                 --i;
@@ -161,11 +162,11 @@ namespace arc //! arctk namespace
                 }
             }
 
-            inline void extract_contents(std::string* const str_, const format::container type_) noexcept
+            inline void extract_contents(std::string* const str_, const consts::format::container type_) noexcept
             {
                 std::string& str_ref = *str_;
 
-                const size_t open = str_ref.find_first_of(format::OPENERS[type_]);
+                const size_t open = str_ref.find_first_of(consts::format::OPENERS[type_]);
                 if (open == std::string::npos)
                 {
                     std::cerr << "Error extracting contents of container.\n"
@@ -182,7 +183,7 @@ namespace arc //! arctk namespace
                 }
                 str_ref.erase(open, 1);
 
-                const size_t close = str_ref.find_last_of(format::CLOSERS[type_]);
+                const size_t close = str_ref.find_last_of(consts::format::CLOSERS[type_]);
                 if (close == std::string::npos)
                 {
                     std::cerr << "Error extracting contents of container.\n"
@@ -207,18 +208,18 @@ namespace arc //! arctk namespace
                 size_t prev_delim = 0;
                 for (size_t i = 0; i < str_.size(); ++i)
                 {
-                    if (str_[i] == format::DELIM)
+                    if (str_[i] == consts::format::DELIM)
                     {
                         tokens.emplace_back(str_.substr(prev_delim, i - prev_delim));
                         prev_delim = i + 1;
                     }
                     else
                     {
-                        for (size_t j = 0; j < format::OPENERS.size(); ++j)
+                        for (size_t j = 0; j < consts::format::OPENERS.size(); ++j)
                         {
-                            if (str_[i] == format::OPENERS[j])
+                            if (str_[i] == consts::format::OPENERS[j])
                             {
-                                i = str_.find_first_of(format::CLOSERS[j], i + 1);
+                                i = str_.find_first_of(consts::format::CLOSERS[j], i + 1);
 
                                 if (i == std::string::npos)
                                 {
@@ -308,7 +309,7 @@ namespace arc //! arctk namespace
             {
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, format::container::VECTOR);
+                extract_contents(str_, consts::format::container::VECTOR);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 std::vector<T> vec;
@@ -326,7 +327,7 @@ namespace arc //! arctk namespace
             {
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, format::container::ARRAY);
+                extract_contents(str_, consts::format::container::ARRAY);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 if (tokens.size() != N)
@@ -351,7 +352,7 @@ namespace arc //! arctk namespace
             {
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, format::container::STRING);
+                extract_contents(str_, consts::format::container::STRING);
 
                 return (str_ref);
             }
@@ -361,7 +362,7 @@ namespace arc //! arctk namespace
             {
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, format::container::PAIR);
+                extract_contents(str_, consts::format::container::PAIR);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 if (tokens.size() != 2)
@@ -380,7 +381,7 @@ namespace arc //! arctk namespace
             {
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, format::container::TUPLE);
+                extract_contents(str_, consts::format::container::TUPLE);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 if (tokens.size() != sizeof...(A))
@@ -413,7 +414,7 @@ namespace arc //! arctk namespace
             {
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, format::container::MAP);
+                extract_contents(str_, consts::format::container::MAP);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 std::map<T, S> map;
@@ -430,7 +431,7 @@ namespace arc //! arctk namespace
             {
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, format::container::MAP);
+                extract_contents(str_, consts::format::container::MAP);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 if (tokens.size() != 3)
