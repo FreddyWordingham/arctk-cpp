@@ -34,35 +34,6 @@ namespace arc //! arctk namespace
 
 
 
-            //  == ENUMERATIONS ==
-            //  -- Container Types --
-            enum container
-            {
-                ARRAY,
-                VECTOR,
-                STRING,
-                PAIR,
-                TUPLE,
-                MAP,
-                VEC,
-                MAT,
-                TOTAL
-            };
-
-
-
-            //  == CONSTANTS ==
-            //  -- Bookends --
-            constexpr std::array<char, container::TOTAL> OPENERS({{'[', '(', '"', '<', '<', ':', '{', '{'}});
-            constexpr std::array<char, container::TOTAL> CLOSERS({{']', ')', '"', '>', '>', ':', '}', '}'}});
-
-            //  -- Special Characters --
-            constexpr char                COMMENT = '#';
-            constexpr char                DELIM   = ',';
-            constexpr std::array<char, 4> WHITESPACE({{' ', '\t', '\r', '\n'}});
-
-
-
             //  == FUNCTION PROTOTYPES ==
             //  -- Time --
             inline std::string time(long int sec_) noexcept;
