@@ -70,7 +70,11 @@ namespace arc //! arctk namespace
             template <typename T, typename S>
             inline std::map<T, S> parse(utl::Tag<std::map<T, S>> /*unused*/, std::string* const str_) noexcept;
             template <typename T>
+            inline math::Vec<T, 2> parse(utl::Tag<math::Vec<T, 2>> /*unused*/, std::string* const str_) noexcept;
+            template <typename T>
             inline math::Vec<T, 3> parse(utl::Tag<math::Vec<T, 3>> /*unused*/, std::string* const str_) noexcept;
+            template <typename T>
+            inline math::Vec<T, 4> parse(utl::Tag<math::Vec<T, 4>> /*unused*/, std::string* const str_) noexcept;
             template <typename T, size_t N>
             inline math::Vec<T, N> parse(utl::Tag<math::Vec<T, N>> /*unused*/, std::string* const str_) noexcept;
 
@@ -429,6 +433,25 @@ namespace arc //! arctk namespace
             }
 
             template <typename T>
+            inline math::Vec<T, 2> parse(utl::Tag<math::Vec<T, 2>> /*unused*/, std::string* const str_) noexcept
+            {
+                std::string& str_ref = *str_;
+
+                extract_contents(str_, consts::format::container::VEC);
+                std::vector<std::string> tokens = tokenise(str_ref);
+
+                if (tokens.size() != 2)
+                {
+                    std::cerr << "Unable to parse string: '" << str_ref << "' to vec2 type.\n"
+                              << "String: '" << str_ref << "' contains: '" << tokens.size() << "' values, but exactly three are required.\n";
+
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+
+                return (math::Vec<T, 3>(parse(utl::Tag<T>(), &tokens[index::dim::cartesian::X]), parse(utl::Tag<T>(), &tokens[index::dim::cartesian::Y]), parse(utl::Tag<T>(), &tokens[index::dim::cartesian::Z])));
+            }
+
+            template <typename T>
             inline math::Vec<T, 3> parse(utl::Tag<math::Vec<T, 3>> /*unused*/, std::string* const str_) noexcept
             {
                 std::string& str_ref = *str_;
@@ -457,7 +480,7 @@ namespace arc //! arctk namespace
 
                 if (tokens.size() != N)
                 {
-                    std::cerr << "Unable to parse string: '" << str_ref << "' to vec3 type.\n"
+                    std::cerr << "Unable to parse string: '" << str_ref << "' to vecN type.\n"
                               << "String: '" << str_ref << "' contains: '" << tokens.size() << "' values, but exactly '" << N << "' are required.\n";
 
                     std::exit(exit::error::FAILED_PARSE);
