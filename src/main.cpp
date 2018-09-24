@@ -86,7 +86,6 @@
 #include <arctk/io.hpp>
 #include <arctk/io/format.hpp>
 #include <arctk/io/str.hpp>
-#include <arctk/io/tuple.hpp>
 #include <arctk/macro.hpp>
 #include <arctk/macro/utility.hpp>
 #include <arctk/math.hpp>
