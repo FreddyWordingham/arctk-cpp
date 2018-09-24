@@ -43,6 +43,10 @@ namespace arc //! arctk namespace
         template <typename T>
         inline T read(std::string* const str_) noexcept;
 
+        //  -- Printing --
+        template <typename... A, size_t... I>
+        inline std::ostream& tuple_print_helper(std::ostream& stream_, const std::tuple<A...>& tup_, const std::index_sequence<I...>& /*unused*/) noexcept;
+
 
 
         //  == FUNCTIONS ==
@@ -54,6 +58,20 @@ namespace arc //! arctk namespace
             str::filter_whitespace(str_);
 
             return (str::parse(utl::Tag<T>(), str_));
+        }
+
+
+        //  -- Printing --
+        template <typename... A, size_t... I>
+        inline std::ostream& tuple_print_helper(std::ostream& stream_, const std::tuple<A...>& tup_, const std::index_sequence<I...>& /*unused*/) noexcept
+        {
+            static_assert(sizeof...(A) > 0);
+            static_assert(sizeof...(A) == (sizeof...(I) + 1));
+
+            stream_ << std::get<0>(tup_);
+            ((stream_ << format::DELIM << std::get<I + 1>(tup_)), ...);
+
+            return (stream_);
         }
 
 
@@ -131,7 +149,7 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::tuple<A...>& t
 
     if (sizeof...(A) > 0)
     {
-        arc::io::tuple::tuple_print_helper(stream_, tup_, std::make_index_sequence<sizeof...(A) - 1>());
+        tuple_print_helper(stream_, tup_, std::make_index_sequence<sizeof...(A) - 1>());
     }
 
     stream_ << arc::io::format::CLOSERS[arc::io::format::container::TUPLE];
