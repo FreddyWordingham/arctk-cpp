@@ -76,6 +76,7 @@ template <typename T, size_t N>
 inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& arr_) noexcept;
 template <typename T>
 inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec_) noexcept;
+inline std::ostream& operator<<(std::ostream& stream_, const std::string& str_) noexcept;
 template <typename T, typename S>
 inline std::ostream& operator<<(std::ostream& stream_, const std::pair<T, S>& pair_) noexcept;
 template <typename... A>
@@ -111,6 +112,13 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec
     }
 
     stream_ << arc::io::format::CLOSERS[arc::io::format::container::VECTOR];
+
+    return (stream_);
+}
+
+inline std::ostream& operator<<(std::ostream& stream_, const std::string& str_) noexcept
+{
+    stream_ << arc::io::format::OPENERS[arc::io::format::container::STRING] << str_.c_str() << arc::io::format::CLOSERS[arc::io::format::container::STRING];
 
     return (stream_);
 }
