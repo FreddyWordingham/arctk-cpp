@@ -875,7 +875,7 @@ namespace arc //! arctk namespace
              *
              *  @return Random position, and corresponding normal, on the surface of the mesh.
              */
-            inline std::pair<vec3, vec3> Mesh::random_pos_and_norm(random::Generator* rng_) const noexcept
+            inline std::pair<vec3, vec3> Mesh::random_pos_and_norm(random::Generator* const rng_) const noexcept
             {
                 return (_tris[utl::search::lower(_areas, rng_->gen())].random_pos_and_norm(rng_));
             }
