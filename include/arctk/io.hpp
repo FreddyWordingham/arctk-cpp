@@ -66,6 +66,8 @@ namespace arc //! arctk namespace
         template <typename T>
         inline T parse(std::string* const str_) noexcept
         {
+            PRE(str_ != nullptr);
+
             input::filter_comments(str_);
             input::filter_whitespace(str_);
 
