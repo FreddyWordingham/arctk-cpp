@@ -220,6 +220,8 @@ namespace arc //! arctk namespace
              *  @pre    T   Must be an arithmetic type.
              *  @pre    T   May not be an integral type.
              *
+             *  @pre    rng_ may not be nullptr.
+             *
              *  @return Random number sampled from a uniform normal distribution.
              */
             template <typename T>
