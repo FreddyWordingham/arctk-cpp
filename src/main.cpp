@@ -131,7 +131,6 @@
 #include <arctk/sys.hpp>
 #include <arctk/sys/args.hpp>
 #include <arctk/sys/balancer.hpp>
-#include <arctk/sys/file.hpp>
 #include <arctk/term.hpp>
 #include <arctk/term/ansi.hpp>
 #include <arctk/utl.hpp>
