@@ -324,6 +324,8 @@ namespace arc //! arctk namespace
              *
              *  @pre    T   Must be a vec type.
              *
+             *  @pre    rng_ may not be nullptr.
+             *
              *  @return Random isotropic direction vec.
              */
             template <typename T>
