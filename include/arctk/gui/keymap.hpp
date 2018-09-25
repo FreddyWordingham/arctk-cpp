@@ -145,6 +145,8 @@ namespace arc //! arctk namespace
          */
         inline void Keymap::use_orbit_controls(Camera* const cam_) noexcept
         {
+            PRE(cam_ != nullptr);
+
             bind(GLFW_KEY_LEFT_SHIFT, [cam_]() { cam_->accelerate(0.01f); }, true);
             bind(GLFW_KEY_LEFT_CONTROL, [cam_]() { cam_->accelerate(-0.01f); }, true);
 
