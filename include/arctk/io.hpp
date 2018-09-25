@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
         //  == FUNCTION PROTOTYPES ==
         //  -- Parsing --
         template <typename T>
-        inline T parse(std::string* const str_) noexcept;
+        inline T parse(std::string* str_) noexcept;
 
         //  -- Printing --
         template <typename... A, size_t... I>
