@@ -272,6 +272,8 @@ namespace arc //! arctk namespace
             template <typename T>
             inline T parse(utl::Tag<T> /*unused*/, std::string* const str_) noexcept
             {
+                PRE(str_ != nullptr);
+
                 static_assert(std::is_fundamental<T>::value);
 
                 std::string& str_ref = *str_;
