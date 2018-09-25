@@ -169,6 +169,8 @@ namespace arc //! arctk namespace
              *
              *  @param  rng_    Random number generator.
              *
+             *  @pre    rng_ may not be nullptr.
+             *
              *  @return Value sampled from the distribution.
              */
             template <typename T>
