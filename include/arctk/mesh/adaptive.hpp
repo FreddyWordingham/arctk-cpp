@@ -44,8 +44,8 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Adaptive(const vec3& min_, const vec3& max_, const std::vector<equip::Light>& lights_, const std::vector<equip::Entity>& entities_, const std::vector<equip::Detector>& detectors_, size_t max_depth_, size_t target_shapes_) noexcept;
 
-            //  -- Initialisation --
           private:
+            //  -- Initialisation --
             std::vector<std::pair<const geom::Shape&, const equip::Light&>>    init_light_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Light>& lights_) const noexcept;
             std::vector<std::pair<const geom::Shape&, const equip::Entity&>>   init_entity_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Entity>& entities_) const noexcept;
             std::vector<std::pair<const geom::Shape&, const equip::Detector&>> init_detector_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Detector>& detectors_) const noexcept;
