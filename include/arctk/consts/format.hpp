@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
             //  == CONSTANTS ==
             //  -- Bookends --
             constexpr std::array<char, container::TOTAL> OPENERS({{'[', '(', '"', '<', '<', ':', '{', '{'}}); //!< Container opening characters.
-            constexpr std::array<char, container::TOTAL> CLOSERS({{']', ')', '"', '>', '>', ':', '}', '}'}});
+            constexpr std::array<char, container::TOTAL> CLOSERS({{']', ')', '"', '>', '>', ':', '}', '}'}}); //!< Container closing characters.
 
             //  -- Special Characters --
             constexpr char                COMMENT = '#';
