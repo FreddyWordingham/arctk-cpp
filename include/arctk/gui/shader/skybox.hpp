@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Shader Source Code --
-            constexpr const char* SKYBOX_SOURCE_VERT = R""(
+            constexpr const char* const SKYBOX_SOURCE_VERT = R""(
                 //  == VERSION ==
                 #version 330 core
 
@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
                     texture_coor = pos;
                 }
             )""; //!< Skybox vertex subshader source code.
-            constexpr const char* SKYBOX_SOURCE_FRAG = R""(
+            constexpr const char* const SKYBOX_SOURCE_FRAG = R""(
                 //  == VERSION ==
                 #version 330 core
 
