@@ -292,6 +292,8 @@ namespace arc //! arctk namespace
              *
              *  @pre    T   Must be an arithmetic type.
              *  @pre    T   May not be an integral type.
+             *
+             *  @pre    rng_ may not be nullptr.
              *  @pre    g_ must be between minus one and one.
              *
              *  @return Random number sampled from a Henyey-Greenstein distribution.
