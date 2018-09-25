@@ -127,7 +127,6 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     ")
 elseif (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}     \
-        -Wabi                                   \
         -Waddress                               \
         -Waggressive-loop-optimizations         \
         -Wall                                   \
