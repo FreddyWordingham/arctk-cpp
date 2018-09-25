@@ -182,6 +182,8 @@ namespace arc //! arctk namespace
             template <typename T>
             inline T Constant<T>::sample(Generator* const rng_) const noexcept
             {
+                PRE(rng_ != nullptr);
+
                 const size_t index = utl::search::lower(_cdfs, rng_->gen());
 
                 return (random::distribution::uniform(rng_, _vals[index], _vals[index + 1]));
