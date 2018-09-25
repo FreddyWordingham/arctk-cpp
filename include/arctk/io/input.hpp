@@ -417,6 +417,8 @@ namespace arc //! arctk namespace
             template <typename... A>
             inline std::tuple<A...> parse(utl::Tag<std::tuple<A...>> /*unused*/, std::string* const str_) noexcept
             {
+                PRE(str_ != nullptr);
+
                 std::string& str_ref = *str_;
 
                 extract_contents(str_, consts::format::container::TUPLE);
