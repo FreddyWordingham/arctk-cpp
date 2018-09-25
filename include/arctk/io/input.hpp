@@ -90,8 +90,17 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Pre-processing --
+            /**
+             *  Filter the comments from a given string.
+             *
+             *  @param  str_    String to be filtered.
+             *
+             *  @pre    str_ may not be nullptr.
+             */
             inline void filter_comments(std::string* const str_) noexcept
             {
+                PRE(str_ != nullptr);
+
                 std::string& str_ref = *str_;
 
                 for (size_t i = 0; i < str_ref.size(); ++i)
