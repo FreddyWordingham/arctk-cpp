@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/io/str.hpp
+ *  @file   arctk/io/in.hpp
  *  @date   21/09/2018
  *  @author Freddy Wordingham
  *
