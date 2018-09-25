@@ -204,7 +204,7 @@ namespace arc //! arctk namespace
                     str += strs[i];
                 }
 
-                rows.emplace_back(io::input::parse<std::tuple<A...>>(str));
+                rows.emplace_back(io::parse<std::tuple<A...>>(str));
             }
 
             return (rows);
