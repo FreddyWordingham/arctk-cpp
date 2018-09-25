@@ -525,7 +525,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                return (std::make_pair<double, vec3>(dist, ((_norms[index::vertex::ALPHA] * (1.0 - u - v)) + (_norms[index::vertex::BETA] * u) + (_norms[index::vertex::GAMMA] * v)).normal()));
+                return (std::pair(dist, ((_norms[index::vertex::ALPHA] * (1.0 - u - v)) + (_norms[index::vertex::BETA] * u) + (_norms[index::vertex::GAMMA] * v)).normal()));
             }
 
 
