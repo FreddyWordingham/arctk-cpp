@@ -225,6 +225,7 @@ namespace arc //! arctk namespace
              */
             inline vec3 Plane::random_pos(random::Generator* const rng_, const double rad_) const noexcept
             {
+                PRE(rng_ != nullptr);
                 PRE(rad_ > 0.0);
 
                 vec3 pos(std::sqrt(random::distribution::uniform(rng_, rad_ * rad_)), arc::consts::math::HALF_PI, random::distribution::uniform(rng_, consts::math::TWO_PI));
