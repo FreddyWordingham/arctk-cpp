@@ -264,6 +264,8 @@ namespace arc //! arctk namespace
              *
              *  @param  rng_    Random number generator.
              *
+             *  @pre    rng_ may not be nullptr.
+             *
              *  @return Random position on the surface of the axis-aligned bounding box.
              */
             inline vec3 Aabb::random_pos(random::Generator* const rng_) const noexcept
