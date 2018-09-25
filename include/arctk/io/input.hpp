@@ -467,6 +467,18 @@ namespace arc //! arctk namespace
                 return (str_ref);
             }
 
+            /**
+             *  Parse a given string to a pair type.
+             *
+             *  @tparam T   First type stored by the pair.
+             *  @tparam S   Second type stored by the pair.
+             *
+             *  @param  str_    String to be parsed.
+             *
+             *  @pre    str_ may not be nullptr.
+             *
+             *  @return Parsed pair.
+             */
             template <typename T, typename S>
             inline std::pair<T, S> parse(utl::Tag<std::pair<T, S>> /*unused*/, std::string* const str_) noexcept
             {
