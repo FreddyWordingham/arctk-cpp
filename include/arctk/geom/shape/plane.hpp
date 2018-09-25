@@ -208,6 +208,8 @@ namespace arc //! arctk namespace
              */
             inline vec3 Plane::random_pos(random::Generator* const rng_) const noexcept
             {
+                PRE(rng_ != nullptr);
+
                 return (random_pos(rng_, 1.0));
             }
 
