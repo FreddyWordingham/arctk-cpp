@@ -59,6 +59,7 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline Linear(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept;
 
+              private:
                 //  -- Initialisation --
                 inline std::vector<double> init_cdfs(const std::vector<T>& vals_, const std::vector<double>& probs_) const noexcept;
                 inline std::vector<double> init_fracs(const std::vector<T>& vals_, const std::vector<double>& probs_) const noexcept;
