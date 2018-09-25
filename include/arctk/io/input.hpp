@@ -195,6 +195,14 @@ namespace arc //! arctk namespace
                 }
             }
 
+            /**
+             *  Extracted the contents of a string container.
+             *
+             *  @param  str_    String to be filtered.
+             *  @param  type_   Container type contained within the string.
+             *
+             *  @pre    str_ may not be nullptr.
+             */
             inline void extract_contents(std::string* const str_, const consts::format::container type_) noexcept
             {
                 PRE(str_ != nullptr);
