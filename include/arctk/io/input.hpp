@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/io/in.hpp
+ *  @file   arctk/io/input.hpp
  *  @date   21/09/2018
  *  @author Freddy Wordingham
  *
@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
 {
     namespace io //! input/output namespace
     {
-        namespace in //! input namespace
+        namespace input //! input namespace
         {
 
 
@@ -607,7 +607,7 @@ namespace arc //! arctk namespace
 
 
 
-        } // namespace in
+        } // namespace input
     }     // namespace io
 } // namespace arc
 
