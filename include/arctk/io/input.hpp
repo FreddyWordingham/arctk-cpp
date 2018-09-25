@@ -532,6 +532,17 @@ namespace arc //! arctk namespace
                 return (parse_helper(utl::Tag<std::tuple<A...>>(), &tokens, std::index_sequence_for<A...>()));
             }
 
+            /**
+             *  Helper function to parse a given string to a tuple type.
+             *
+             *  @tparam A   Types stored by the tuple.
+             *
+             *  @param  str_    String to be parsed.
+             *
+             *  @pre    str_ may not be nullptr.
+             *
+             *  @return Parsed tuple.
+             */
             template <typename... A, size_t... I>
             inline std::tuple<A...> parse_helper(utl::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>* const tokens_, const std::index_sequence<I...>& /*unused*/) noexcept
             {
