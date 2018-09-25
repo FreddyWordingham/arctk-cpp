@@ -152,6 +152,8 @@ namespace arc //! arctk namespace
 
             inline void filter_whitespace(std::string* const str_) noexcept
             {
+                PRE(str_ != nullptr);
+
                 std::string& str_ref = *str_;
 
                 for (size_t i = 0; i < str_ref.size(); ++i)
