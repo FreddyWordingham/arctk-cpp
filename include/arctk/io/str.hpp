@@ -79,6 +79,10 @@ namespace arc //! arctk namespace
             inline math::Vec<T, N> parse(utl::Tag<math::Vec<T, N>> /*unused*/, std::string* const str_) noexcept;
             template <typename T>
             inline math::Mat<T, 2> parse(utl::Tag<math::Mat<T, 2>> /*unused*/, std::string* const str_) noexcept;
+            template <typename T>
+            inline math::Mat<T, 3> parse(utl::Tag<math::Mat<T, 3>> /*unused*/, std::string* const str_) noexcept;
+            template <typename T>
+            inline math::Mat<T, 4> parse(utl::Tag<math::Mat<T, 4>> /*unused*/, std::string* const str_) noexcept;
 
 
 
@@ -533,6 +537,25 @@ namespace arc //! arctk namespace
                 }
 
                 return (math::Mat<T, 2>(parse(utl::Tag<math::Vec<T, 2>>(), &tokens[index::dim::cartesian::X]), parse(utl::Tag<math::Vec<T, 2>>(), &tokens[index::dim::cartesian::Y])));
+            }
+
+            template <typename T>
+            inline math::Mat<T, 3> parse(utl::Tag<math::Mat<T, 3>> /*unused*/, std::string* const str_) noexcept
+            {
+                std::string& str_ref = *str_;
+
+                extract_contents(str_, consts::format::container::MAT);
+                std::vector<std::string> tokens = tokenise(str_ref);
+
+                if (tokens.size() != 3)
+                {
+                    std::cerr << "Unable to parse string: '" << str_ref << "' to mat3 type.\n"
+                              << "String: '" << str_ref << "' contains: '" << tokens.size() << "' values, but exactly three are required.\n";
+
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+
+                return (math::Mat<T, 3>(parse(utl::Tag<math::Vec<T, 3>>(), &tokens[index::dim::cartesian::X]), parse(utl::Tag<math::Vec<T, 3>>(), &tokens[index::dim::cartesian::Y]), parse(utl::Tag<math::Vec<T, 3>>(), &tokens[index::dim::cartesian::Z])));
             }
 
 
