@@ -148,6 +148,16 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& a
     return (stream_);
 }
 
+/**
+ *  Print an vector to a stream.
+ *
+ *  @tparam T   Type stored by the vector.
+ *
+ *  @param  stream_ Stream to print to.
+ *  @param  arr_    Array to be printed.
+ *
+ *  @return Reference to the stream post-print.
+ */
 template <typename T>
 inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec_) noexcept
 {
