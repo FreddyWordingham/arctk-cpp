@@ -25,7 +25,6 @@
 #include <arctk/debug.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/io.hpp>
-#include <arctk/utl.hpp>
 
 
 
@@ -132,7 +131,7 @@ namespace arc //! arctk namespace
                 str += argv[i];
             }
 
-            return (io::input::parse(utl::Tag<std::tuple<A...>>(), str));
+            return (io::parse<std::tuple<A...>>(str));
         }
 
 
