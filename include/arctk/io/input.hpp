@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_IO_IN_HPP
-#define ARCTK_IO_IN_HPP
+#ifndef ARCTK_IO_INPUT_HPP
+#define ARCTK_IO_INPUT_HPP
 
 
 
@@ -614,4 +614,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_IO_IN_HPP
+#endif // ARCTK_IO_INPUT_HPP
