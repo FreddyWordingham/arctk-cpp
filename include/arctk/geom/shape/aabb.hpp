@@ -288,7 +288,7 @@ namespace arc //! arctk namespace
              *
              *  @return Random position, and corresponding normal, on the surface of the axis-aligned bounding box.
              */
-            inline std::pair<vec3, vec3> Aabb::random_pos_and_norm(random::Generator* rng_) const noexcept
+            inline std::pair<vec3, vec3> Aabb::random_pos_and_norm(random::Generator* const rng_) const noexcept
             {
                 const size_t face  = utl::search::lower(_areas, rng_->gen());
                 const size_t dim_0 = index::rotate::next(face, 3, 1);
