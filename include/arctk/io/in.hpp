@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
 {
     namespace io //! input/output namespace
     {
-        namespace str //! string namespace
+        namespace in //! input namespace
         {
 
 
@@ -607,7 +607,7 @@ namespace arc //! arctk namespace
 
 
 
-        } // namespace str
+        } // namespace in
     }     // namespace io
 } // namespace arc
 
