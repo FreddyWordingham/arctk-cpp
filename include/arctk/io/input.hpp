@@ -45,46 +45,46 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Pre-processing --
-            inline void                     filter_comments(std::string* const str_) noexcept;
-            inline void                     filter_whitespace(std::string* const str_) noexcept;
-            inline void                     extract_contents(std::string* const str_, const consts::format::container type_) noexcept;
+            inline void                     filter_comments(std::string* str_) noexcept;
+            inline void                     filter_whitespace(std::string* str_) noexcept;
+            inline void                     extract_contents(std::string* str_, const consts::format::container type_) noexcept;
             inline std::vector<std::string> tokenise(const std::string& str_) noexcept;
 
             //  -- Parsing --
             template <typename T>
-            inline T parse(utl::Tag<T> /*unused*/, std::string* const str_) noexcept;
+            inline T parse(utl::Tag<T> /*unused*/, std::string* str_) noexcept;
             template <>
-            inline bool parse(utl::Tag<bool> /*unused*/, std::string* const str_) noexcept;
+            inline bool parse(utl::Tag<bool> /*unused*/, std::string* str_) noexcept;
             template <typename T>
-            inline std::vector<T> parse(utl::Tag<std::vector<T>> /*unused*/, std::string* const str_) noexcept;
+            inline std::vector<T> parse(utl::Tag<std::vector<T>> /*unused*/, std::string* str_) noexcept;
             template <typename T, size_t N>
-            inline std::array<T, N> parse(utl::Tag<std::array<T, N>> /*unused*/, std::string* const str_) noexcept;
+            inline std::array<T, N> parse(utl::Tag<std::array<T, N>> /*unused*/, std::string* str_) noexcept;
             template <>
-            inline std::string parse(utl::Tag<std::string> /*unused*/, std::string* const str_) noexcept;
+            inline std::string parse(utl::Tag<std::string> /*unused*/, std::string* str_) noexcept;
             template <typename T, typename S>
-            inline std::pair<T, S> parse(utl::Tag<std::pair<T, S>> /*unused*/, std::string* const str_) noexcept;
+            inline std::pair<T, S> parse(utl::Tag<std::pair<T, S>> /*unused*/, std::string* str_) noexcept;
             template <typename... A>
-            inline std::tuple<A...> parse(utl::Tag<std::tuple<A...>> /*unused*/, std::string* const str_) noexcept;
+            inline std::tuple<A...> parse(utl::Tag<std::tuple<A...>> /*unused*/, std::string* str_) noexcept;
             template <typename... A, size_t... I>
-            inline std::tuple<A...> parse_helper(utl::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>* const tokens_, const std::index_sequence<I...>& /*unused*/) noexcept;
+            inline std::tuple<A...> parse_helper(utl::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>* tokens_, const std::index_sequence<I...>& /*unused*/) noexcept;
             template <typename T, typename S>
-            inline std::map<T, S> parse(utl::Tag<std::map<T, S>> /*unused*/, std::string* const str_) noexcept;
+            inline std::map<T, S> parse(utl::Tag<std::map<T, S>> /*unused*/, std::string* str_) noexcept;
             template <typename T>
-            inline math::Vec<T, 2> parse(utl::Tag<math::Vec<T, 2>> /*unused*/, std::string* const str_) noexcept;
+            inline math::Vec<T, 2> parse(utl::Tag<math::Vec<T, 2>> /*unused*/, std::string* str_) noexcept;
             template <typename T>
-            inline math::Vec<T, 3> parse(utl::Tag<math::Vec<T, 3>> /*unused*/, std::string* const str_) noexcept;
+            inline math::Vec<T, 3> parse(utl::Tag<math::Vec<T, 3>> /*unused*/, std::string* str_) noexcept;
             template <typename T>
-            inline math::Vec<T, 4> parse(utl::Tag<math::Vec<T, 4>> /*unused*/, std::string* const str_) noexcept;
+            inline math::Vec<T, 4> parse(utl::Tag<math::Vec<T, 4>> /*unused*/, std::string* str_) noexcept;
             template <typename T, size_t N>
-            inline math::Vec<T, N> parse(utl::Tag<math::Vec<T, N>> /*unused*/, std::string* const str_) noexcept;
+            inline math::Vec<T, N> parse(utl::Tag<math::Vec<T, N>> /*unused*/, std::string* str_) noexcept;
             template <typename T>
-            inline math::Mat<T, 2> parse(utl::Tag<math::Mat<T, 2>> /*unused*/, std::string* const str_) noexcept;
+            inline math::Mat<T, 2> parse(utl::Tag<math::Mat<T, 2>> /*unused*/, std::string* str_) noexcept;
             template <typename T>
-            inline math::Mat<T, 3> parse(utl::Tag<math::Mat<T, 3>> /*unused*/, std::string* const str_) noexcept;
+            inline math::Mat<T, 3> parse(utl::Tag<math::Mat<T, 3>> /*unused*/, std::string* str_) noexcept;
             template <typename T>
-            inline math::Mat<T, 4> parse(utl::Tag<math::Mat<T, 4>> /*unused*/, std::string* const str_) noexcept;
+            inline math::Mat<T, 4> parse(utl::Tag<math::Mat<T, 4>> /*unused*/, std::string* str_) noexcept;
             template <typename T, size_t N>
-            inline math::Mat<T, N> parse(utl::Tag<math::Mat<T, N>> /*unused*/, std::string* const str_) noexcept;
+            inline math::Mat<T, N> parse(utl::Tag<math::Mat<T, N>> /*unused*/, std::string* str_) noexcept;
 
 
 
