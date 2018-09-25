@@ -72,7 +72,6 @@ namespace arc //! arctk namespace
             }
 
 
-
             //  -- Directories --
             /**
              *  Create a directory at the given path.
