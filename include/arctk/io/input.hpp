@@ -190,6 +190,8 @@ namespace arc //! arctk namespace
 
             inline void extract_contents(std::string* const str_, const consts::format::container type_) noexcept
             {
+                PRE(str_ != nullptr);
+
                 std::string& str_ref = *str_;
 
                 const size_t open = str_ref.find_first_of(consts::format::OPENERS[type_]);
