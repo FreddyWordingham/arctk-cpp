@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Shader Source Code --
-            constexpr const char* NORMAL_SOURCE_VERT = R""(
+            constexpr const char* const NORMAL_SOURCE_VERT = R""(
                 //  == VERSION ==
                 #version 330 core
 
@@ -66,7 +66,7 @@ namespace arc //! arctk namespace
                     vert_norm = norm;
                 }
             )""; //!< Normal vertex subshader source code.
-            constexpr const char* NORMAL_SOURCE_GEOM = R""(
+            constexpr const char* const NORMAL_SOURCE_GEOM = R""(
                 //  == VERSION ==
                 #version 330 core
 
@@ -148,7 +148,7 @@ namespace arc //! arctk namespace
                     EndPrimitive();
                 }
             )""; //!< Normal geometry subshader source code.
-            constexpr const char* NORMAL_SOURCE_FRAG = R""(
+            constexpr const char* const NORMAL_SOURCE_FRAG = R""(
                 //  == VERSION ==
                 #version 330 core
 
