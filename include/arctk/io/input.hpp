@@ -244,6 +244,13 @@ namespace arc //! arctk namespace
                 str_ref.erase(close, 1);
             }
 
+            /**
+             *  Split a given string into a vector of token strings which are delimited using the set character.
+             *
+             *  @param  str_    String to be tokenised.
+             *
+             *  @return Vector of string tokens.
+             */
             inline std::vector<std::string> tokenise(const std::string& str_) noexcept
             {
                 std::vector<std::string> tokens;
