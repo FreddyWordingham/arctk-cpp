@@ -67,6 +67,7 @@ namespace arc //! arctk namespace
 
 
             //  == OPERATORS ==
+          public:
             //  -- Writing --
             inline std::ostream& operator<<(std::ostream& stream_) const noexcept;
 
