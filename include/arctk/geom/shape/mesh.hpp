@@ -877,6 +877,8 @@ namespace arc //! arctk namespace
              */
             inline std::pair<vec3, vec3> Mesh::random_pos_and_norm(random::Generator* const rng_) const noexcept
             {
+                PRE(rng_ != nullptr);
+
                 return (_tris[utl::search::lower(_areas, rng_->gen())].random_pos_and_norm(rng_));
             }
 
