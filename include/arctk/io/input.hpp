@@ -378,6 +378,17 @@ namespace arc //! arctk namespace
                 std::exit(exit::error::FAILED_PARSE);
             }
 
+            /**
+             *  Parse a given string to a vector type.
+             *
+             *  @tparam T   Type stored by the vector.
+             *
+             *  @param  str_    String to be parsed.
+             *
+             *  @pre    str_ may not be nullptr.
+             *
+             *  @return Parsed vector.
+             */
             template <typename T>
             inline std::vector<T> parse(utl::Tag<std::vector<T>> /*unused*/, std::string* const str_) noexcept
             {
