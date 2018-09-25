@@ -46,6 +46,15 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Reading --
+            /**
+             *  Read the contents of a file at a given path into a string.
+             *
+             *  @param  path_   Path to the file to be read.
+             *
+             *  @pre    path_ may not be empty.
+             *
+             *  @return Contents of the file in a string.
+             */
             inline std::string read(const std::string& path_) noexcept
             {
                 PRE(!path_.empty());
