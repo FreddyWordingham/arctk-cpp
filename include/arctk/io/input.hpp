@@ -438,6 +438,8 @@ namespace arc //! arctk namespace
             template <typename... A, size_t... I>
             inline std::tuple<A...> parse_helper(utl::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>* const tokens_, const std::index_sequence<I...>& /*unused*/) noexcept
             {
+                PRE(str_ != nullptr);
+
                 std::vector<std::string>& tokens_ref = *tokens_;
 
                 PRE(sizeof...(A) == tokens_ref.size());
