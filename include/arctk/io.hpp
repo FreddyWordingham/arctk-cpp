@@ -189,7 +189,7 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::string& str_) 
 }
 
 /**
- *  Print an string to a stream.
+ *  Print an pair to a stream.
  *
  *  @tparam T   First stored by the pair.
  *  @tparam S   Second stored by the pair.
