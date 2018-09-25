@@ -345,6 +345,11 @@ target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} GLEW)
 target_link_libraries(${PROJECT_NAME} glfw)
+if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+    target_link_libraries(${PROJECT_NAME} c++fs)
+elseif (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
+    target_link_libraries(${PROJECT_NAME} stdc++fs)
+endif()
 
 
 
