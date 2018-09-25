@@ -331,6 +331,8 @@ namespace arc //! arctk namespace
             {
                 static_assert(math::is_vec<T>::value);
 
+                PRE(rng_ != nullptr);
+
                 const double phi   = uniform(rng_, consts::math::TWO_PI);
                 const double theta = std::acos(uniform(rng_, -1.0, 1.0));
 
