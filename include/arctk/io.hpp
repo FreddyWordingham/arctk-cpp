@@ -83,6 +83,9 @@ namespace arc //! arctk namespace
          *  @param  stream_ Stream to print to.
          *  @param  tup_    Tuple to be printed.
          *
+         *  @pre    size of A must be positive.
+         *  @pre    size of A must equal the size of I plus one.
+         *
          *  @return Reference to the stream post-print.
          */
         template <typename... A, size_t... I>
