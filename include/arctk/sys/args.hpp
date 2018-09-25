@@ -132,7 +132,7 @@ namespace arc //! arctk namespace
                 str += argv[i];
             }
 
-            return (io::input::parse(utl::Tag<std::tuple<A>>(), str));
+            return (io::input::parse(utl::Tag<std::tuple<A...>>(), str));
         }
 
 
