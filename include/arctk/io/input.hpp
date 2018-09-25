@@ -336,6 +336,15 @@ namespace arc //! arctk namespace
                 return (val);
             }
 
+            /**
+             *  Parse a given string to a boolean type.
+             *
+             *  @param  str_    String to be parsed.
+             *
+             *  @pre    str_ may not be nullptr.
+             *
+             *  @return Parsed boolean.
+             */
             template <>
             inline bool parse(utl::Tag<bool> /*unused*/, std::string* const str_) noexcept
             {
