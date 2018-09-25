@@ -298,6 +298,8 @@ namespace arc //! arctk namespace
              *
              *  @param  str_    String to be parsed.
              *
+             *  @pre    str_ may not be nullptr.
+             *
              *  @return Parsed type.
              */
             template <typename T>
