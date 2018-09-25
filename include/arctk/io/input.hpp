@@ -339,6 +339,8 @@ namespace arc //! arctk namespace
             template <typename T>
             inline std::vector<T> parse(utl::Tag<std::vector<T>> /*unused*/, std::string* const str_) noexcept
             {
+                PRE(str_ != nullptr);
+
                 std::string& str_ref = *str_;
 
                 extract_contents(str_, consts::format::container::VECTOR);
