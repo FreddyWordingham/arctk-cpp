@@ -448,6 +448,15 @@ namespace arc //! arctk namespace
                 return (arr);
             }
 
+            /**
+             *  Parse a given string to a string type.
+             *
+             *  @param  str_    String to be parsed.
+             *
+             *  @pre    str_ may not be nullptr.
+             *
+             *  @return Parsed string.
+             */
             template <>
             inline std::string parse(utl::Tag<std::string> /*unused*/, std::string* const str_) noexcept
             {
