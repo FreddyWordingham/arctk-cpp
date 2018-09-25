@@ -198,6 +198,7 @@ namespace arc //! arctk namespace
             {
                 static_assert(std::is_arithmetic<T>::value);
 
+                PRE(rng_ != nullptr);
                 PRE(min_ < max_);
 
                 if constexpr (std::is_integral<T>::value) // NOLINT
