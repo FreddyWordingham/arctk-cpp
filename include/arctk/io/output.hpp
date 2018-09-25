@@ -16,6 +16,13 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <iomanip>
+#include <sstream>
+#include <string>
+
+//  -- Arctk --
+#include <arctk/consts.hpp>
+#include <arctk/debug.hpp>
 
 
 
@@ -30,10 +37,31 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTION PROTOTYPES ==
+            //  -- Formatting --
+            template <typename T, typename... A>
+            inline std::string csv(const std::vector<T>& vec_, const A&... vecs_) noexcept;
 
 
 
             //  == FUNCTIONS ==
+            //  -- Formatting --
+            template <typename T, typename... A>
+            inline std::string csv(const std::vector<T>& vec_, const A&... vecs_) noexcept
+            {
+                const size_t rows = vec_.size();
+                (PRE(vecs_.size() == rows), ...);
+
+                std::stringstream stream;
+
+                for (size_t i = 0; i < rows; ++i)
+                {
+                    stream << std::setw(16) << vec_[i];
+                    ((stream << consts::format::DELIM << std::setw(16) << vecs_[i]), ...);
+                    stream << '\n';
+                }
+
+                return (stream.str());
+            }
 
 
 
