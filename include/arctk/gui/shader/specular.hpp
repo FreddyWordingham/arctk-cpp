@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Shader Source Code --
-            constexpr const char* SPECULAR_SOURCE_VERT = R""(
+            constexpr const char* const SPECULAR_SOURCE_VERT = R""(
                 //  == VERSION ==
                 #version 330 core
 
@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
                     gl_Position = proj * view * vec4(vert_pos, 1.0);
                 }
             )""; //!< Specular vertex subshader source code.
-            constexpr const char* SPECULAR_SOURCE_FRAG = R""(
+            constexpr const char* const SPECULAR_SOURCE_FRAG = R""(
                 //  == VERSION ==
                 #version 330 core
 
