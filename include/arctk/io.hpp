@@ -207,6 +207,16 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::pair<T, S>& pa
     return (stream_);
 }
 
+/**
+ *  Print an tuple to a stream.
+ *
+ *  @tparam A   Types stored by the tuple.
+ *
+ *  @param  stream_ Stream to print to.
+ *  @param  tup_    Tuple to be printed.
+ *
+ *  @return Reference to the stream post-print.
+ */
 template <typename... A>
 inline std::ostream& operator<<(std::ostream& stream_, const std::tuple<A...>& tup_) noexcept
 {
