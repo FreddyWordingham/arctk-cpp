@@ -25,6 +25,7 @@
 
 //  -- Arctk --
 #include <arctk/consts.hpp>
+#include <arctk/debug.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/index.hpp>
 #include <arctk/io/format.hpp>
