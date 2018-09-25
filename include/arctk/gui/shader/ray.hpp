@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Shader Source Code --
-            constexpr const char* RAY_SOURCE_VERT = R""(
+            constexpr const char* const RAY_SOURCE_VERT = R""(
                 //  == VERSION ==
                 #version 330 core
 
@@ -131,7 +131,7 @@ namespace arc //! arctk namespace
                     return ((-4.0 * t_x) + 2.5);
                 }
             )""; //!< Ray vertex subshader source code.
-            constexpr const char* RAY_SOURCE_FRAG = R""(
+            constexpr const char* const RAY_SOURCE_FRAG = R""(
                 //  == VERSION ==
                 #version 330 core
 
