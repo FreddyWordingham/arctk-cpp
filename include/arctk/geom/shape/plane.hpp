@@ -221,6 +221,7 @@ namespace arc //! arctk namespace
              *  @param  rng_    Random number generator.
              *  @param  rad_    Radius of point generation.
              *
+             *  @pre    rng_ may not be nullptr.
              *  @pre    rad_ must be positive.
              *
              *  @return Random position on the surface of the plane.
