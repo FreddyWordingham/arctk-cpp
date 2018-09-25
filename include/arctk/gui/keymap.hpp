@@ -144,6 +144,8 @@ namespace arc //! arctk namespace
          *  Setup the keymap to apply an orbit control
          *
          *  @param  cam_    Camera to apply orbit controls to.
+         *
+         *  @pre    cam_ may not be nullptr.
          */
         inline void Keymap::use_orbit_controls(Camera* const cam_) noexcept
         {
