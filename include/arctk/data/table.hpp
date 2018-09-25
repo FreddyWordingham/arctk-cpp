@@ -23,6 +23,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/consts.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/io.hpp>
 
@@ -56,7 +57,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline explicit Table(const std::vector<std::tuple<A...>>& rows_) noexcept;
             inline explicit Table(const std::vector<A>&... cols_) noexcept;
-            inline explicit Table(const std::string& serial_, char delim_ = ',') noexcept;
+            inline explicit Table(const std::string& serial_, char delim_ = consts::format::DELIM) noexcept;
 
             //  -- Initialisation --
             template <typename T, typename... B>
