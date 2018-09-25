@@ -150,6 +150,13 @@ namespace arc //! arctk namespace
                 }
             }
 
+            /**
+             *  Filter the whitespace from a given string.
+             *
+             *  @param  str_    String to be filtered.
+             *
+             *  @pre    str_ may not be nullptr.
+             */
             inline void filter_whitespace(std::string* const str_) noexcept
             {
                 PRE(str_ != nullptr);
