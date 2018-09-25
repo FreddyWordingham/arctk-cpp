@@ -273,6 +273,7 @@ namespace arc //! arctk namespace
                 static_assert(std::is_arithmetic<T>::value);
                 static_assert(!std::is_integral<T>::value);
 
+                PRE(rng_ != nullptr);
                 PRE(var_ > 0.0);
 
                 return ((normal<T>(rng_) * var_) + ave_);
