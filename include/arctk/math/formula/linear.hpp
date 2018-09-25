@@ -54,6 +54,7 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline Linear(const std::vector<double>& xs_, const std::vector<double>& ys_) noexcept;
 
+              private:
                 //  -- Initialisation --
                 inline std::vector<double> init_grads(const std::vector<double>& xs_, const std::vector<double>& ys_) noexcept;
 
