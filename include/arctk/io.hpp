@@ -188,6 +188,17 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::string& str_) 
     return (stream_);
 }
 
+/**
+ *  Print an string to a stream.
+ *
+ *  @tparam T   First stored by the pair.
+ *  @tparam S   Second stored by the pair.
+ *
+ *  @param  stream_ Stream to print to.
+ *  @param  pair_   Pair to be printed.
+ *
+ *  @return Reference to the stream post-print.
+ */
 template <typename T, typename S>
 inline std::ostream& operator<<(std::ostream& stream_, const std::pair<T, S>& pair_) noexcept
 {
