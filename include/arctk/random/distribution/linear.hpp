@@ -248,6 +248,8 @@ namespace arc //! arctk namespace
             template <typename T>
             inline T Linear<T>::sample(Generator* const rng_) const noexcept
             {
+                PRE(rng_ != nullptr);
+
                 const size_t index = utl::search::lower(_cdfs, rng_->gen());
 
                 const double xi = rng_->gen();
