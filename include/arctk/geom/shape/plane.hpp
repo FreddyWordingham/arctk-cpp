@@ -249,6 +249,8 @@ namespace arc //! arctk namespace
              *
              *  @param  rng_    Random number generator.
              *
+             *  @pre    rng_ may not be nullptr.
+             *
              *  @return Random position, and corresponding normal, on the surface of the plane.
              */
             inline std::pair<vec3, vec3> Plane::random_pos_and_norm(random::Generator* const rng_) const noexcept
