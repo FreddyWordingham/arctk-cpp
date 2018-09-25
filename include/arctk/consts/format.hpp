@@ -33,6 +33,9 @@ namespace arc //! arctk namespace
 
             //  == ENUMERATIONS ==
             //  -- Container Types --
+            /**
+             *  Enumeration of container types with specified opener and closer characters.
+             */
             enum container
             {
                 ARRAY,
