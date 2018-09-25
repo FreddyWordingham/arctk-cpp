@@ -302,6 +302,7 @@ namespace arc //! arctk namespace
                 static_assert(std::is_arithmetic<T>::value);
                 static_assert(!std::is_integral<T>::value);
 
+                PRE(rng_ != nullptr);
                 PRE((g_ >= -1.0) && (g_ <= 1.0));
 
                 if (math::compare::zero(g_))
