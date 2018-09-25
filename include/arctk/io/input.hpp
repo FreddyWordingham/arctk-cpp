@@ -409,6 +409,18 @@ namespace arc //! arctk namespace
                 return (vec);
             }
 
+            /**
+             *  Parse a given string to a array type.
+             *
+             *  @tparam T   Type stored by the array.
+             *  @tparam N   Size of the array.
+             *
+             *  @param  str_    String to be parsed.
+             *
+             *  @pre    str_ may not be nullptr.
+             *
+             *  @return Parsed array.
+             */
             template <typename T, size_t N>
             inline std::array<T, N> parse(utl::Tag<std::array<T, N>> /*unused*/, std::string* const str_) noexcept
             {
