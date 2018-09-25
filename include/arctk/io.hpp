@@ -232,6 +232,17 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::tuple<A...>& t
     return (stream_);
 }
 
+/**
+ *  Print an map to a stream.
+ *
+ *  @tparam T   Type used to store map keys.
+ *  @tparam S   Type used to store map values.
+ *
+ *  @param  stream_ Stream to print to.
+ *  @param  map_    Map to be printed.
+ *
+ *  @return Reference to the stream post-print.
+ */
 template <typename T, typename S>
 inline std::ostream& operator<<(std::ostream& stream_, const std::map<T, S>& map_) noexcept
 {
