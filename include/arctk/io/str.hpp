@@ -558,6 +558,26 @@ namespace arc //! arctk namespace
                 return (math::Mat<T, 3>(parse(utl::Tag<math::Vec<T, 3>>(), &tokens[index::dim::cartesian::X]), parse(utl::Tag<math::Vec<T, 3>>(), &tokens[index::dim::cartesian::Y]), parse(utl::Tag<math::Vec<T, 3>>(), &tokens[index::dim::cartesian::Z])));
             }
 
+            template <typename T>
+            inline math::Mat<T, 4> parse(utl::Tag<math::Mat<T, 4>> /*unused*/, std::string* const str_) noexcept
+            {
+                std::string& str_ref = *str_;
+
+                extract_contents(str_, consts::format::container::MAT);
+                std::vector<std::string> tokens = tokenise(str_ref);
+
+                if (tokens.size() != 4)
+                {
+                    std::cerr << "Unable to parse string: '" << str_ref << "' to mat4 type.\n"
+                              << "String: '" << str_ref << "' contains: '" << tokens.size() << "' values, but exactly four are required.\n";
+
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+
+                return (math::Mat<T, 4>(parse(utl::Tag<math::Vec<T, 4>>(), &tokens[index::dim::cartesian::X]), parse(utl::Tag<math::Vec<T, 4>>(), &tokens[index::dim::cartesian::Y]), parse(utl::Tag<math::Vec<T, 4>>(), &tokens[index::dim::cartesian::Z]),
+                                        parse(utl::Tag<math::Vec<T, 4>>(), &tokens[3])));
+            }
+
 
 
         } // namespace str
