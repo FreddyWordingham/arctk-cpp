@@ -80,7 +80,7 @@ namespace arc //! arctk namespace
          *  @tparam A   Types stored by the tuple.
          *  @tparam I   Index sequence of the tuple types.
          *
-         *  @param  stream_ Stream to print the tuple to.
+         *  @param  stream_ Stream to print to.
          *  @param  tup_    Tuple to be printed.
          *
          *  @return Reference to the stream post-print.
@@ -122,6 +122,17 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::map<T, S>& map
 
 //  == OPERATORS ==
 //  -- Io --
+/**
+ *  Print an array to a stream.
+ *
+ *  @tparam T   Type stored by the array.
+ *  @tparam N   Size of the array.
+ *
+ *  @param  stream_ Stream to print to.
+ *  @param  arr_    Array to be printed.
+ *
+ *  @return Reference to the stream post-print.
+ */
 template <typename T, size_t N>
 inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& arr_) noexcept
 {
