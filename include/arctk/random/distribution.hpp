@@ -263,6 +263,8 @@ namespace arc //! arctk namespace
              *
              *  @pre    T   Must be an arithmetic type.
              *  @pre    T   May not be an integral type.
+             *
+             *  @pre    rng_ may not be nullptr.
              *  @pre    var_ must be positive.
              *
              *  @return Random number sampled from a gaussian distribution.
