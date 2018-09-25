@@ -26,6 +26,7 @@
 
 //  -- Arctk --
 #include <arctk/consts.hpp>
+#include <arctk/io/file.hpp>
 #include <arctk/io/input.hpp>
 #include <arctk/io/output.hpp>
 #include <arctk/utl.hpp>
