@@ -68,6 +68,7 @@ namespace arc //! arctk namespace
             constexpr inline explicit Mat(const A&... data_) noexcept;
 
             //  -- Initialisation --
+          private:
             template <typename... A>
             inline std::array<Vec<T, N>, N> init_data(const A&... data_) noexcept;
 
