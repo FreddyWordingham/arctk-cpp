@@ -454,6 +454,8 @@ namespace arc //! arctk namespace
             template <typename T, typename S>
             inline std::map<T, S> parse(utl::Tag<std::map<T, S>> /*unused*/, std::string* const str_) noexcept
             {
+                PRE(str_ != nullptr);
+
                 std::string& str_ref = *str_;
 
                 extract_contents(str_, consts::format::container::MAP);
