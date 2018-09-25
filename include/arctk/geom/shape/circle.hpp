@@ -240,9 +240,9 @@ namespace arc //! arctk namespace
              */
             inline vec3 Circle::random_pos(random::Generator* const rng_) const noexcept
             {
-                *@pre rng_ may not be nullptr.
+                PRE(rng_ != nullptr);
 
-                 vec3 pos(std::sqrt(random::distribution::uniform(rng_, _rad * _rad)), arc::consts::math::HALF_PI, random::distribution::uniform(rng_, consts::math::TWO_PI));
+                vec3 pos(std::sqrt(random::distribution::uniform(rng_, _rad * _rad)), arc::consts::math::HALF_PI, random::distribution::uniform(rng_, consts::math::TWO_PI));
                 pos = math::convert::polar_to_cart(pos);
 
                 if (!math::compare::unity(std::fabs(_norm.z)))
