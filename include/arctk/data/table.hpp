@@ -24,7 +24,7 @@
 
 //  -- Arctk --
 #include <arctk/exit.hpp>
-#include <arctk/utl.hpp>
+#include <arctk/io.hpp>
 
 
 
@@ -196,7 +196,13 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::FAILED_INITIALISATION);
                 }
 
-                // TODO                rows.emplace_back(str::parse::to<A...>(strs));
+                std::string str;
+                for (size_t i = 0; i < strs.size(); ++i)
+                {
+                    str += strs[i];
+                }
+
+                rows.emplace_back(io::input::parse<std::tuple<A...>>(str));
             }
 
             return (rows);
