@@ -605,6 +605,8 @@ namespace arc //! arctk namespace
             template <typename T>
             inline math::Mat<T, 4> parse(utl::Tag<math::Mat<T, 4>> /*unused*/, std::string* const str_) noexcept
             {
+                PRE(str_ != nullptr);
+
                 std::string& str_ref = *str_;
 
                 extract_contents(str_, consts::format::container::MAT);
