@@ -291,6 +291,15 @@ namespace arc //! arctk namespace
 
 
             //  -- Parsing --
+            /**
+             *  Parse a given string to a fundamental type.
+             *
+             *  @tparam T   Type to be parsed into.
+             *
+             *  @param  str_    String to be parsed.
+             *
+             *  @return Parsed type.
+             */
             template <typename T>
             inline T parse(utl::Tag<T> /*unused*/, std::string* const str_) noexcept
             {
