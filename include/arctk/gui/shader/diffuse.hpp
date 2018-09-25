@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Shader Source Code --
-            constexpr const char* DIFFUSE_SOURCE_VERT = R""(
+            constexpr const char* const DIFFUSE_SOURCE_VERT = R""(
                 //  == VERSION ==
                 #version 330 core
 
@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
                     gl_Position = proj * view * vec4(vert_pos, 1.0);
                 }
             )""; //!< Diffuse vertex subshader source code.
-            constexpr const char* DIFFUSE_SOURCE_FRAG = R""(
+            constexpr const char* const DIFFUSE_SOURCE_FRAG = R""(
                 //  == VERSION ==
                 #version 330 core
 
