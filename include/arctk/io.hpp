@@ -173,6 +173,14 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec
     return (stream_);
 }
 
+/**
+ *  Print an string to a stream.
+ *
+ *  @param  stream_ Stream to print to.
+ *  @param  str_    String to be printed.
+ *
+ *  @return Reference to the stream post-print.
+ */
 inline std::ostream& operator<<(std::ostream& stream_, const std::string& str_) noexcept
 {
     stream_ << arc::consts::format::OPENERS[arc::consts::format::container::STRING] << str_.c_str() << arc::consts::format::CLOSERS[arc::consts::format::container::STRING];
