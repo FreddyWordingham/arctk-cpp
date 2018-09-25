@@ -213,6 +213,8 @@ namespace arc //! arctk namespace
              */
             inline vec3 Sphere::random_pos(random::Generator* const rng_) const noexcept
             {
+                PRE(rng_ != nullptr);
+
                 return (_pos + (random::distribution::isotropic(rng_) * _rad));
             }
 
