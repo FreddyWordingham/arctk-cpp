@@ -16,8 +16,12 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <filesystem>
 #include <fstream>
 #include <string>
+
+//  -- Arctk --
+#include <arctk/debug.hpp>
 
 
 
@@ -34,6 +38,9 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Reading --
             inline std::string read(const std::string& path_) noexcept;
+
+            //  -- Directories --
+            inline void mkdir(const std::string& path_) noexcept;
 
 
 
@@ -62,6 +69,23 @@ namespace arc //! arctk namespace
                 str.assign((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
 
                 return (str);
+            }
+
+
+
+            //  -- Directories --
+            /**
+             *  Create a directory at the given path.
+             *
+             *  @param  path_   Path to the directory to create.
+             *
+             *  @pre    path_ may not be empty.
+             */
+            inline void mkdir(const std::string& path_) noexcept
+            {
+                PRE(!path_.empty());
+
+                std::filesystem::create_directories(path_);
             }
 
 
