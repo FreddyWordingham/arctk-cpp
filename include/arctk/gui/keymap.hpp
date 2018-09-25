@@ -115,6 +115,8 @@ namespace arc //! arctk namespace
          *  Setup the keymap to apply an fly control scheme.
          *
          *  @param  cam_    Camera to apply fly controls to.
+         *
+         *  @pre    cam_ may not be nullptr.
          */
         inline void Keymap::use_fly_controls(Camera* const cam_) noexcept
         {
