@@ -494,6 +494,8 @@ namespace arc //! arctk namespace
             template <typename T>
             inline math::Vec<T, 3> parse(utl::Tag<math::Vec<T, 3>> /*unused*/, std::string* const str_) noexcept
             {
+                PRE(str_ != nullptr);
+
                 std::string& str_ref = *str_;
 
                 extract_contents(str_, consts::format::container::VEC);
