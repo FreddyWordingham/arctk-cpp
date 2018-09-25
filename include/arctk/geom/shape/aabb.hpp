@@ -268,6 +268,8 @@ namespace arc //! arctk namespace
              */
             inline vec3 Aabb::random_pos(random::Generator* const rng_) const noexcept
             {
+                PRE(rng_ != nullptr);
+
                 const size_t face  = utl::search::lower(_areas, rng_->gen());
                 const size_t dim_0 = index::rotate::next(face, 3, 1);
                 const size_t dim_1 = index::rotate::next(face, 3, 2);
