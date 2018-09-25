@@ -54,6 +54,15 @@ namespace arc //! arctk namespace
 
         //  == FUNCTIONS ==
         //  -- Parsing --
+        /**
+         *  Parse a given string of characters into a given type.
+         *
+         *  @tparam T   Type to be parsed into.
+         *
+         *  @param  str_    String to be parsed.
+         *
+         *  @return Parsed type.
+         */
         template <typename T>
         inline T parse(std::string* const str_) noexcept
         {
