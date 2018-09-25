@@ -264,6 +264,8 @@ namespace arc //! arctk namespace
              */
             inline std::pair<vec3, vec3> Circle::random_pos_and_norm(random::Generator* const rng_) const noexcept
             {
+                PRE(rng_ != nullptr);
+
                 vec3 pos(std::sqrt(random::distribution::uniform(rng_, _rad * _rad)), arc::consts::math::HALF_PI, random::distribution::uniform(rng_, consts::math::TWO_PI));
 
                 const double alpha = _aperture * (pos.rho / _rad);
