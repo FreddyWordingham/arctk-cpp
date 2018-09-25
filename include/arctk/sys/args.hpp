@@ -59,6 +59,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Args(int argc_, const char** argv_, const std::string& call_str_) noexcept;
 
+          private:
             //  -- Initialisation --
             inline std::tuple<A...> init_argv(int argc_, const char** argv_) noexcept;
 
