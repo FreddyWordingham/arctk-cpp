@@ -290,6 +290,8 @@ namespace arc //! arctk namespace
              */
             inline std::pair<vec3, vec3> Aabb::random_pos_and_norm(random::Generator* const rng_) const noexcept
             {
+                PRE(rng_ != nullptr);
+
                 const size_t face  = utl::search::lower(_areas, rng_->gen());
                 const size_t dim_0 = index::rotate::next(face, 3, 1);
                 const size_t dim_1 = index::rotate::next(face, 3, 2);
