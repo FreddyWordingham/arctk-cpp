@@ -500,6 +500,17 @@ namespace arc //! arctk namespace
                 return (std::make_pair<T, S>(parse(utl::Tag<T>(), &tokens[0]), parse(utl::Tag<S>(), &tokens[1])));
             }
 
+            /**
+             *  Parse a given string to a tuple type.
+             *
+             *  @tparam A   Types stored by the tuple.
+             *
+             *  @param  str_    String to be parsed.
+             *
+             *  @pre    str_ may not be nullptr.
+             *
+             *  @return Parsed tuple.
+             */
             template <typename... A>
             inline std::tuple<A...> parse(utl::Tag<std::tuple<A...>> /*unused*/, std::string* const str_) noexcept
             {
