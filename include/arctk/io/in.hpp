@@ -3,7 +3,7 @@
  *  @date   21/09/2018
  *  @author Freddy Wordingham
  *
- *  String input/output functions.
+ *  Input functions.
  */
 
 
