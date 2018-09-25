@@ -24,6 +24,8 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/exit.hpp>
+#include <arctk/io.hpp>
+#include <arctk/utl.hpp>
 
 
 
@@ -124,8 +126,13 @@ namespace arc //! arctk namespace
                 std::exit(exit::error::INVALID_COMMAND_LINE_ARGUMENTS);
             }
 
-            // TODO            return (str::parse::to<A...>(argv));
-            return (std::tuple<A...>());
+            std::string str;
+            for (size_t i = 0; i < argv.size(); ++i)
+            {
+                str += argv[i];
+            }
+
+            return (io::input::parse(utl::Tag<std::tuple<A>>(), str));
         }
 
 
