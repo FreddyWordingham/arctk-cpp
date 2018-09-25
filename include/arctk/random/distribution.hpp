@@ -189,6 +189,7 @@ namespace arc //! arctk namespace
              *  @param  max_    Maximum bound of the generated value.
              *
              *  @pre    T   Must be an arithmetic type.
+             *  @pre    rng_ may not be nullptr.
              *  @pre    min_ must be less than max_.
              *
              *  @return Random number sampled from a uniform distribution.
