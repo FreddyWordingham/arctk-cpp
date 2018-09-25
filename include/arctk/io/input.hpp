@@ -306,6 +306,8 @@ namespace arc //! arctk namespace
             template <>
             inline bool parse(utl::Tag<bool> /*unused*/, std::string* const str_) noexcept
             {
+                PRE(str_ != nullptr);
+
                 std::string& str_ref = *str_;
 
                 if (str_ref == "0")
