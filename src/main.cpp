@@ -85,6 +85,7 @@
 #include <arctk/index/rotate.hpp>
 #include <arctk/index/vertex.hpp>
 #include <arctk/io.hpp>
+#include <arctk/io/file.hpp>
 #include <arctk/io/format.hpp>
 #include <arctk/io/input.hpp>
 #include <arctk/io/output.hpp>
