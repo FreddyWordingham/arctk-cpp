@@ -26,6 +26,7 @@
 #include <arctk/consts.hpp>
 #include <arctk/data/histogram.hpp>
 #include <arctk/debug.hpp>
+#include <arctk/io.hpp>
 
 
 
@@ -69,8 +70,9 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
-            //  -- Writing --
-            inline std::ostream& operator<<(std::ostream& stream_) const noexcept;
+            //  -- Printing --
+            template <typename S>
+            friend inline std::ostream& operator<<(std::ostream& stream_, const Histogram<S, 1>& hist_) noexcept;
 
 
             //  == METHODS ==
@@ -121,16 +123,20 @@ namespace arc //! arctk namespace
 
         //  == OPERATORS ==
         //  -- Writing --
+        /**
+         *  Print the histogram data to a given stream.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @param  stream_ Stream to print to.
+         *  @param  hist_   Histogram to be printed.
+         *
+         *  @return Reference to the stream post-print.
+         */
         template <typename T>
-        inline std::ostream& Histogram<T, 1>::operator<<(std::ostream& stream_) const noexcept
+        inline std::ostream& operator<<(std::ostream& stream_, const Histogram<T, 1>& hist_) noexcept;
         {
-            const std::vector<double> centres = Histogram<T, 1>::centres();
-
-            stream_ << std::setw(16) << centres[0] << consts::format::DELIM << std::setw(16) << _bins[0];
-            for (size_t i = 1; i < centres.size(); ++i)
-            {
-                stream_ << '\n' << std::setw(16) << centres[i] << consts::format::DELIM << std::setw(16) << _bins[i];
-            }
+            stream_ << io::format::csv(Histogram<T, 1>::centres(), _bins);
 
             return (stream_);
         }
