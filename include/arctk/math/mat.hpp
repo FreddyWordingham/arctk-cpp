@@ -180,6 +180,17 @@ namespace arc //! arctk namespace
 
         //  == OPERATORS ==
         //  -- Printing --
+        /**
+         *  Print the matrix to a stream.
+         *
+         *  @tparam T   Type stored by the matrix.
+         *  @tparam N   Dimensions of the matrix.
+         *
+         *  @param  stream_ Stream to print to.
+         *  @param  mat_    Matrix to be printed.
+         *
+         *  @return Reference to the matrix post-print.
+         */
         template <typename T, size_t N>
         constexpr inline std::ostream& operator<<(std::ostream& stream_, const Mat<T, N>& mat_) noexcept
         {
