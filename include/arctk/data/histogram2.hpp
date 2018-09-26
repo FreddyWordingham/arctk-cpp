@@ -124,21 +124,31 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
-        //  -- Writing --
+        //  -- Printing --
+        /**
+         *  Print the histogram data to a given stream.
+         *
+         *  @tparam T   Type binned.
+         *
+         *  @param  stream_ Stream to print to.
+         *  @param  hist_   Histogram to be printed.
+         *
+         *  @return Reference to the stream post-print.
+         */
         template <typename T>
-        inline std::ostream& Histogram<T, 2>::operator<<(std::ostream& stream_) const noexcept
+        inline std::ostream& operator<<(std::ostream& stream_, const Histogram<T, 1>& hist_) noexcept;
         {
-            std::cout << std::setw(16) << _bins[0][0];
-            for (size_t i = 1; i < _bins[0].size(); ++i)
+            std::cout << std::setw(16) << hist_._bins[0][0];
+            for (size_t i = 1; i < hist_._bins[0].size(); ++i)
             {
-                std::cout << consts::format::DELIM << std::setw(16) << _bins[0][i];
+                std::cout << consts::format::DELIM << std::setw(16) << hist_._bins[0][i];
             }
-            for (size_t i = 1; i < _bins.size(); ++i)
+            for (size_t i = 1; i < hist_._bins.size(); ++i)
             {
-                std::cout << '\n' << std::setw(16) << _bins[i][0];
-                for (size_t j = 1; j < _bins[i].size(); ++j)
+                std::cout << '\n' << std::setw(16) << hist_._bins[i][0];
+                for (size_t j = 1; j < hist_._bins[i].size(); ++j)
                 {
-                    std::cout << consts::format::DELIM << std::setw(16) << _bins[0][i];
+                    std::cout << consts::format::DELIM << std::setw(16) << hist_._bins[0][i];
                 }
             }
 
