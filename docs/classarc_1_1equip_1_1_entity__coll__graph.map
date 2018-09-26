@@ -1,4 +1,0 @@
-<map id="arc::equip::Entity" name="arc::equip::Entity">
-<area shape="rect" id="node2" href="$classarc_1_1phys_1_1_material.html" title="arc::phys::Material" alt="" coords="5,5,136,31"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1_shape.html" title="arc::geom::Shape" alt="" coords="159,5,286,31"/>
-</map>

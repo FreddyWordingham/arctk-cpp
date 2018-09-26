@@ -7,7 +7,7 @@ var searchData=
   ['descend',['descend',['../classarc_1_1data_1_1histogram_1_1_dynamic_3_01_t_00_011_01_4.html#a3c349e693a01254adee4c2b3d033dbee',1,'arc::data::histogram::Dynamic&lt; T, 1 &gt;']]],
   ['descending',['descending',['../namespacearc_1_1utl_1_1properties.html#a16db97d0483cb56664c5cc2fbadf04c0',1,'arc::utl::properties']]],
   ['det',['det',['../classarc_1_1math_1_1_mat.html#a17ff38fa0f4b29f52711441b876d1118',1,'arc::math::Mat::det()'],['../classarc_1_1math_1_1_mat_3_01_t_00_012_01_4.html#a0f5532520f7d33d15f18b903e7b8fc86',1,'arc::math::Mat&lt; T, 2 &gt;::det()'],['../classarc_1_1math_1_1_mat_3_01_t_00_013_01_4.html#a0b68cc7034c34ab281f0f21ffb72da9f',1,'arc::math::Mat&lt; T, 3 &gt;::det()'],['../classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#ab7d94de6c765f1cf06e5e75e4366a3bc',1,'arc::math::Mat&lt; T, 4 &gt;::det()']]],
-  ['detector',['Detector',['../classarc_1_1equip_1_1_detector.html#a10d17ff49a95326f6b9d6730984c86ad',1,'arc::equip::Detector']]],
+  ['detector',['Detector',['../classarc_1_1equip_1_1_detector.html#ab7f0c71a454a6372d2bad95ae99899dc',1,'arc::equip::Detector']]],
   ['diffuse',['Diffuse',['../classarc_1_1gui_1_1shader_1_1_diffuse.html#a31c4ea40b78b82e347f5e361d5e2b1e0',1,'arc::gui::shader::Diffuse']]],
   ['dir',['dir',['../classarc_1_1phys_1_1_particle.html#a9caf5d0d87ebc7779efc294fe3f4a0f3',1,'arc::phys::Particle']]],
   ['discrete',['Discrete',['../classarc_1_1random_1_1distribution_1_1_discrete.html#a0643b275df486dc6b8590259629ed91c',1,'arc::random::distribution::Discrete']]],

@@ -71,6 +71,7 @@ $(function() {
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">arc::data Namespace Reference</div>  </div>
@@ -114,6 +115,15 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1data_1_1_table.html">Table</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a8d8c8b4200712a76ba7453e655091a73"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
+<tr class="memitem:a8d8c8b4200712a76ba7453e655091a73"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1data.html#a8d8c8b4200712a76ba7453e655091a73">operator&lt;&lt;</a> (std::ostream &amp;stream_, const <a class="el" href="classarc_1_1data_1_1_histogram.html">Histogram</a>&lt; S, 1 &gt; &amp;hist_) noexcept</td></tr>
+<tr class="separator:a8d8c8b4200712a76ba7453e655091a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af21fe7874597c248d812f155a5a070a7"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
+<tr class="memitem:af21fe7874597c248d812f155a5a070a7"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1data.html#af21fe7874597c248d812f155a5a070a7">operator&lt;&lt;</a> (std::ostream &amp;stream_, const <a class="el" href="classarc_1_1data_1_1_histogram.html">Histogram</a>&lt; S, 2 &gt; &amp;hist_) noexcept</td></tr>
+<tr class="separator:af21fe7874597c248d812f155a5a070a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a797510396eb62181c6669427dc16ae9c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
@@ -139,7 +149,124 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>data namespace </p>
-</div><h2 class="groupheader">Variable Documentation</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a8d8c8b4200712a76ba7453e655091a73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d8c8b4200712a76ba7453e655091a73">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename S &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; arc::data::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>stream_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1data_1_1_histogram.html">Histogram</a>&lt; S, 1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>hist_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print the histogram data to a given stream.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">S</td><td>Type binned.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream_</td><td>Stream to print to. </td></tr>
+    <tr><td class="paramname">hist_</td><td><a class="el" href="classarc_1_1data_1_1_histogram.html">Histogram</a> to be printed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the stream post-print. </dd></dl>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespacearc_1_1data_a8d8c8b4200712a76ba7453e655091a73_cgraph.png" border="0" usemap="#namespacearc_1_1data_a8d8c8b4200712a76ba7453e655091a73_cgraph" alt=""/></div>
+<map name="namespacearc_1_1data_a8d8c8b4200712a76ba7453e655091a73_cgraph" id="namespacearc_1_1data_a8d8c8b4200712a76ba7453e655091a73_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1io_1_1output.html#a23f5d3f9df2dd704adb19fc0e3cae32f" title="arc::io::output::csv" alt="" coords="199,5,329,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af21fe7874597c248d812f155a5a070a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af21fe7874597c248d812f155a5a070a7">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename S &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; arc::data::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>stream_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1data_1_1_histogram.html">Histogram</a>&lt; S, 2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>hist_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Print the histogram data to a given stream.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">S</td><td>Type binned.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream_</td><td>Stream to print to. </td></tr>
+    <tr><td class="paramname">hist_</td><td><a class="el" href="classarc_1_1data_1_1_histogram.html">Histogram</a> to be printed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the stream post-print. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
 <a id="a797510396eb62181c6669427dc16ae9c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a797510396eb62181c6669427dc16ae9c">&#9670;&nbsp;</a></span>VTK_TYPENAME</h2>
 
@@ -233,7 +360,7 @@ template&lt;&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 19 2018 17:29:04 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 26 2018 13:26:38 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

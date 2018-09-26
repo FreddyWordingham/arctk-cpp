@@ -95,9 +95,8 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_plane__coll__graph.png" border="0" usemap="#arc_1_1geom_1_1shape_1_1_plane_coll__map" alt="Collaboration graph"/></div>
 <map name="arc_1_1geom_1_1shape_1_1_plane_coll__map" id="arc_1_1geom_1_1shape_1_1_plane_coll__map">
-<area shape="rect" id="node2" href="classarc_1_1geom_1_1_shape.html" title="arc::geom::Shape" alt="" coords="5,80,132,105"/>
-<area shape="rect" id="node3" href="classarc_1_1math_1_1_vec.html" title="arc::math::Vec\&lt; T, N \&gt;" alt="" coords="156,80,309,105"/>
-<area shape="rect" id="node4" href="classarc_1_1str_1_1_printable.html" title="arc::str::Printable" alt="" coords="172,5,294,31"/>
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1_shape.html" title="arc::geom::Shape" alt="" coords="5,5,132,31"/>
+<area shape="rect" id="node3" href="classarc_1_1math_1_1_vec.html" title="arc::math::Vec\&lt; T, N \&gt;" alt="" coords="156,5,309,31"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -763,6 +762,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section pre"><dt>Precondition</dt><dd>rng_ may not be nullptr.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random position on the surface of the plane. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#adb4a5453dfb63827f5f3323e60204040">arc::geom::Shape</a>.</p>
@@ -820,7 +820,9 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>rad_ must be positive.</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>rng_ may not be nullptr. </dd>
+<dd>
+rad_ must be positive.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random position on the surface of the plane. </dd></dl>
 <div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -870,6 +872,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section pre"><dt>Precondition</dt><dd>rng_ may not be nullptr.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random position, and corresponding normal, on the surface of the plane. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#acb1c509590fe57967d10c7110504035b">arc::geom::Shape</a>.</p>
@@ -927,7 +930,9 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>rad_ must be positive.</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>rng_ may not be nullptr. </dd>
+<dd>
+rad_ must be positive.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random position, and corresponding normal, on the surface of the plane. </dd></dl>
 <div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -1099,7 +1104,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 19 2018 17:29:04 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 26 2018 13:26:38 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

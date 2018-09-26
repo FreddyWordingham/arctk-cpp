@@ -1,5 +1,5 @@
 <map id="arc::gui::actor::path" name="arc::gui::actor::path">
-<area shape="rect" id="node2" href="$namespacearc_1_1str_1_1format.html#acf02bf3b0ce48c5a3925d406986ad52e" title="arc::str::format::time" alt="" coords="190,40,330,65"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1io_1_1format.html#ad121d26ec02e835850e3377282ad68bc" title="arc::io::format::time" alt="" coords="192,40,328,65"/>
 <area shape="rect" id="node7" href="$classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="189,89,331,115"/>
 <area shape="rect" id="node3" href="$namespacearc_1_1utl_1_1search.html#a7dedb03499315275304d2ee539dbbf81" title="arc::utl::search::min" alt="" coords="396,40,534,65"/>
 <area shape="rect" id="node4" href="$namespacearc_1_1utl_1_1search.html#ab0aae86f6b98b4746101dd60c00514ca" title="arc::utl::search::min\l_index" alt="" coords="612,33,750,72"/>

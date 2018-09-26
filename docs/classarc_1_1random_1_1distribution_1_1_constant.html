@@ -70,6 +70,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classarc_1_1random_1_1distribution_1_1_constant-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -103,8 +104,6 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e47b1aab9ebca91a79b4ab56b2388b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1random_1_1distribution_1_1_constant.html#a3e47b1aab9ebca91a79b4ab56b2388b4">Constant</a> (const std::vector&lt; T &gt; &amp;vals_, const std::vector&lt; double &gt; &amp;probs_) noexcept</td></tr>
 <tr class="separator:a3e47b1aab9ebca91a79b4ab56b2388b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f980fb0c9953089fa5dd9050d377241"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1random_1_1distribution_1_1_constant.html#a5f980fb0c9953089fa5dd9050d377241">init_cdfs</a> (const std::vector&lt; T &gt; &amp;vals_, const std::vector&lt; double &gt; &amp;probs_) const noexcept</td></tr>
-<tr class="separator:a5f980fb0c9953089fa5dd9050d377241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9478bd7c0cabe01b3c20171bc562893c"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1random_1_1distribution_1_1_constant.html#a9478bd7c0cabe01b3c20171bc562893c">vals</a> () const noexcept</td></tr>
 <tr class="separator:a9478bd7c0cabe01b3c20171bc562893c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd1f5168849d7f57adbe12ca258a63c8"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1random_1_1distribution_1_1_constant.html#acd1f5168849d7f57adbe12ca258a63c8">cdfs</a> () const noexcept</td></tr>
@@ -130,6 +129,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae98905d75cf91ea584a2541386519fbe inherit pub_methods_classarc_1_1random_1_1_distribution"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adce54f22994de0c0e5dcc2e0976dba82 inherit pub_methods_classarc_1_1random_1_1_distribution"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1random_1_1_distribution.html#adce54f22994de0c0e5dcc2e0976dba82">max</a> () const noexcept</td></tr>
 <tr class="separator:adce54f22994de0c0e5dcc2e0976dba82 inherit pub_methods_classarc_1_1random_1_1_distribution"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a5f980fb0c9953089fa5dd9050d377241"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1random_1_1distribution_1_1_constant.html#a5f980fb0c9953089fa5dd9050d377241">init_cdfs</a> (const std::vector&lt; T &gt; &amp;vals_, const std::vector&lt; double &gt; &amp;probs_) const noexcept</td></tr>
+<tr class="separator:a5f980fb0c9953089fa5dd9050d377241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -301,7 +305,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -374,6 +378,7 @@ template&lt;typename T &gt; </div>
   </table>
   </dd>
 </dl>
+<dl class="section pre"><dt>Precondition</dt><dd>rng_ may not be nullptr.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Value sampled from the distribution. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1random_1_1_distribution.html#a2d96076a83ffa489c086a35d54ebeee1">arc::random::Distribution&lt; T &gt;</a>.</p>
@@ -486,7 +491,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 19 2018 17:29:05 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 26 2018 13:26:39 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

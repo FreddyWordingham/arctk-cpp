@@ -19,10 +19,11 @@ var searchData=
   ['fg_5fred',['FG_RED',['../namespacearc_1_1term_1_1ansi.html#a98e4a613f9d841a16a96fb988a35a005',1,'arc::term::ansi']]],
   ['fg_5fwhite',['FG_WHITE',['../namespacearc_1_1term_1_1ansi.html#a68aac9f6493a3a7f3ea535163659fe4b',1,'arc::term::ansi']]],
   ['fg_5fyellow',['FG_YELLOW',['../namespacearc_1_1term_1_1ansi.html#a403b00bb346259861d57f65af8635f29',1,'arc::term::ansi']]],
-  ['file',['file',['../namespacearc_1_1str_1_1parse.html#adde18b05b865d3dcae2cccfec5f7e6d8',1,'arc::str::parse']]],
   ['file_2ehpp',['file.hpp',['../file_8hpp.html',1,'']]],
   ['file_5fopen_5ffailed',['FILE_OPEN_FAILED',['../namespacearc_1_1exit_1_1error.html#a2551e7b15a3ca1a65f0ba6f7bef39689',1,'arc::exit::error']]],
   ['fill_5fmode',['fill_mode',['../classarc_1_1gui_1_1_actor.html#a9bcaee8d7f91d373e707b76b9396f8a4',1,'arc::gui::Actor']]],
+  ['filter_5fcomments',['filter_comments',['../namespacearc_1_1io_1_1input.html#a60d8195e97fc0da3b7b00c74d0d77741',1,'arc::io::input']]],
+  ['filter_5fwhitespace',['filter_whitespace',['../namespacearc_1_1io_1_1input.html#a49a945e87ce12557c581dccce8684926',1,'arc::io::input']]],
   ['find_5findex',['find_index',['../classarc_1_1data_1_1_histogram_3_01_t_00_011_01_4.html#a6c91bc1dd68a7cd0aefd9bc77abfd4e9',1,'arc::data::Histogram&lt; T, 1 &gt;::find_index()'],['../classarc_1_1data_1_1_histogram_3_01_t_00_012_01_4.html#ac10b35f634b2d873752d637ac289dfb3',1,'arc::data::Histogram&lt; T, 2 &gt;::find_index()']]],
   ['finished',['finished',['../classarc_1_1sys_1_1_balancer.html#a46a29b17fa1d4617ea9979bc196e2f24',1,'arc::sys::Balancer']]],
   ['fixed',['Fixed',['../classarc_1_1data_1_1histogram_1_1_fixed.html',1,'arc::data::histogram::Fixed&lt; T, N &gt;'],['../classarc_1_1data_1_1histogram_1_1_fixed_3_01_t_00_011_01_4.html#a45eb00881acf2cf2d7cb1b0b279b7224',1,'arc::data::histogram::Fixed&lt; T, 1 &gt;::Fixed()'],['../classarc_1_1data_1_1histogram_1_1_fixed_3_01_t_00_012_01_4.html#aa2ec03b0058794be4343009400980012',1,'arc::data::histogram::Fixed&lt; T, 2 &gt;::Fixed()']]],
@@ -35,10 +36,8 @@ var searchData=
   ['fluorescent_2ehpp',['fluorescent.hpp',['../fluorescent_8hpp.html',1,'']]],
   ['fly',['Fly',['../classarc_1_1gui_1_1camera_1_1_fly.html',1,'arc::gui::camera::Fly'],['../classarc_1_1gui_1_1camera_1_1_fly.html#af46e7a09fb1fbbb0eb761443e742b759',1,'arc::gui::camera::Fly::Fly()']]],
   ['fly_2ehpp',['fly.hpp',['../fly_8hpp.html',1,'']]],
-  ['format_2ehpp',['format.hpp',['../settings_2format_8hpp.html',1,'(Global Namespace)'],['../str_2format_8hpp.html',1,'(Global Namespace)']]],
+  ['format_2ehpp',['format.hpp',['../consts_2format_8hpp.html',1,'(Global Namespace)'],['../io_2format_8hpp.html',1,'(Global Namespace)']]],
   ['formula',['Formula',['../classarc_1_1math_1_1_formula.html',1,'arc::math::Formula'],['../classarc_1_1math_1_1_formula.html#a5e59374dd17a0a25d6cb3c6cbc8a59b6',1,'arc::math::Formula::Formula(double min_, double max_) noexcept'],['../classarc_1_1math_1_1_formula.html#a2bd69ec7ff4e0b898e276d10212b2ce8',1,'arc::math::Formula::Formula(const Formula &amp;) noexcept=default'],['../classarc_1_1math_1_1_formula.html#a5718ec4553ee2dd53d6389e44f21c47a',1,'arc::math::Formula::Formula(Formula &amp;&amp;) noexcept=default']]],
   ['formula_2ehpp',['formula.hpp',['../formula_8hpp.html',1,'']]],
-  ['fracs',['fracs',['../classarc_1_1random_1_1distribution_1_1_linear.html#a5dc893616f6fb4c544eef7a69c65c869',1,'arc::random::distribution::Linear']]],
-  ['from',['from',['../namespacearc_1_1str_1_1parse.html#a3f24aa3819164ee71d82edd27b44322f',1,'arc::str::parse::from(const std::string &amp;str_, bool=false) noexcept'],['../namespacearc_1_1str_1_1parse.html#afe3918c2dba6a2002f6b6286409eca09',1,'arc::str::parse::from(T val_, bool=false) noexcept'],['../namespacearc_1_1str_1_1parse.html#ae6fde6dd74e31f31d765e1fae6b2390e',1,'arc::str::parse::from(const std::pair&lt; T, S &gt; &amp;pair_, bool limiters_=true) noexcept'],['../namespacearc_1_1str_1_1parse.html#ab711eba28c2e1170a5eab0db57ad4796',1,'arc::str::parse::from(const std::tuple&lt; A... &gt; &amp;tup_, bool limiters_=true) noexcept'],['../namespacearc_1_1str_1_1parse.html#a90ea366c6e063443d0e5f884a936a389',1,'arc::str::parse::from(const C &amp;cont_, bool limiters_=true) noexcept'],['../namespacearc_1_1str_1_1parse.html#a5724122a7307d6d0bc1218f82294e877',1,'arc::str::parse::from(const std::tuple&lt;&gt; &amp;, const bool limiters_) noexcept']]],
-  ['from_5fhelper',['from_helper',['../namespacearc_1_1str_1_1parse.html#aa4a9aa7a58edc02bd7db01ac726246fa',1,'arc::str::parse']]]
+  ['fracs',['fracs',['../classarc_1_1random_1_1distribution_1_1_linear.html#a5dc893616f6fb4c544eef7a69c65c869',1,'arc::random::distribution::Linear']]]
 ];

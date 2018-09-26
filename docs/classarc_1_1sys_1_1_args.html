@@ -70,6 +70,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classarc_1_1sys_1_1_args-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -83,16 +84,16 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2bd0defa3860b1487b0187d2bca8120b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1sys_1_1_args.html#a2bd0defa3860b1487b0187d2bca8120b">Args</a> (int argc_, const char **argv_, const std::string &amp;call_str_) noexcept</td></tr>
 <tr class="separator:a2bd0defa3860b1487b0187d2bca8120b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18cbb62fbc71def78864a18030c7fab4"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; A... &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1sys_1_1_args.html#a18cbb62fbc71def78864a18030c7fab4">init_argv</a> (int argc_, const char **argv_) noexcept</td></tr>
-<tr class="separator:a18cbb62fbc71def78864a18030c7fab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a397b774de6aea815289d8ab9e58a009a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a397b774de6aea815289d8ab9e58a009a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classarc_1_1sys_1_1_args.html#a397b774de6aea815289d8ab9e58a009a">check_parsable</a> (const std::string &amp;str_) noexcept</td></tr>
-<tr class="separator:a397b774de6aea815289d8ab9e58a009a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b4acca77441736c096a5cf86cf07b76"><td class="memTemplParams" colspan="2">template&lt;size_t I, typename T  = typename std::tuple_element&lt;I, std::tuple&lt;A...&gt;&gt;::type&gt; </td></tr>
 <tr class="memitem:a4b4acca77441736c096a5cf86cf07b76"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classarc_1_1sys_1_1_args.html#a4b4acca77441736c096a5cf86cf07b76">get</a> () noexcept</td></tr>
 <tr class="separator:a4b4acca77441736c096a5cf86cf07b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a078094567d6216d185adb85d5f7d3955"><td class="memItemLeft" align="right" valign="top">const std::tuple&lt; A... &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1sys_1_1_args.html#a078094567d6216d185adb85d5f7d3955">argv</a> () const noexcept</td></tr>
 <tr class="separator:a078094567d6216d185adb85d5f7d3955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a18cbb62fbc71def78864a18030c7fab4"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; A... &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1sys_1_1_args.html#a18cbb62fbc71def78864a18030c7fab4">init_argv</a> (int argc_, const char **argv_) noexcept</td></tr>
+<tr class="separator:a18cbb62fbc71def78864a18030c7fab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -212,59 +213,6 @@ template&lt;typename... A&gt; </div>
 
 </div>
 </div>
-<a id="a397b774de6aea815289d8ab9e58a009a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a397b774de6aea815289d8ab9e58a009a">&#9670;&nbsp;</a></span>check_parsable()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... A&gt; </div>
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classarc_1_1sys_1_1_args.html">arc::sys::Args</a>&lt; A &gt;::check_parsable </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>str_</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Check that a string is parsable into its required type. If it is not, report an error.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type to parse string into.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">str_</td><td>String to parse into value. </td></tr>
-  </table>
-  </dd>
-</dl>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1sys_1_1_args_a397b774de6aea815289d8ab9e58a009a_cgraph.png" border="0" usemap="#classarc_1_1sys_1_1_args_a397b774de6aea815289d8ab9e58a009a_cgraph" alt=""/></div>
-<map name="classarc_1_1sys_1_1_args_a397b774de6aea815289d8ab9e58a009a_cgraph" id="classarc_1_1sys_1_1_args_a397b774de6aea815289d8ab9e58a009a_cgraph">
-<area shape="rect" id="node2" href="namespacearc_1_1index_1_1dim.html#a94d6b580f62f0e2a338c49901ce4f004" title="arc::index::dim::name" alt="" coords="198,12,346,37"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="a4b4acca77441736c096a5cf86cf07b76"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4b4acca77441736c096a5cf86cf07b76">&#9670;&nbsp;</a></span>get()</h2>
 
@@ -334,7 +282,7 @@ template&lt;typename... A&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -348,14 +296,20 @@ template&lt;typename... A&gt; </div>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>argc_ must be positive.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Initialised tuple of argument values. </dd></dl>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1sys_1_1_args_a18cbb62fbc71def78864a18030c7fab4_cgraph.png" border="0" usemap="#classarc_1_1sys_1_1_args_a18cbb62fbc71def78864a18030c7fab4_cgraph" alt=""/></div>
 <map name="classarc_1_1sys_1_1_args_a18cbb62fbc71def78864a18030c7fab4_cgraph" id="classarc_1_1sys_1_1_args_a18cbb62fbc71def78864a18030c7fab4_cgraph">
-<area shape="rect" id="node2" href="classarc_1_1sys_1_1_args.html#a078094567d6216d185adb85d5f7d3955" title="arc::sys::Args::argv" alt="" coords="213,5,349,31"/>
+<area shape="rect" id="node2" href="classarc_1_1sys_1_1_args.html#a078094567d6216d185adb85d5f7d3955" title="arc::sys::Args::argv" alt="" coords="213,25,349,51"/>
+<area shape="rect" id="node3" href="namespacearc_1_1io.html#ab88c53b708589f0bf66165a63489c0c0" title="arc::io::parse" alt="" coords="232,75,330,100"/>
+<area shape="rect" id="node4" href="namespacearc_1_1io_1_1input.html#a60d8195e97fc0da3b7b00c74d0d77741" title="arc::io::input::filter\l_comments" alt="" coords="401,5,527,44"/>
+<area shape="rect" id="node6" href="namespacearc_1_1io_1_1input.html#a49a945e87ce12557c581dccce8684926" title="arc::io::input::filter\l_whitespace" alt="" coords="401,68,527,107"/>
+<area shape="rect" id="node7" href="namespacearc_1_1io_1_1input.html#a4cd25bb66db16ee951f8d75c180c5ec6" title="arc::io::input::parse" alt="" coords="397,131,531,156"/>
+<area shape="rect" id="node5" href="namespacearc_1_1consts_1_1format.html#a02ddf3d786fde98c6dd1b6fbdbca16d1" title="Container opening characters. " alt="" coords="588,37,719,76"/>
+<area shape="rect" id="node8" href="namespacearc_1_1index_1_1dim.html#a94d6b580f62f0e2a338c49901ce4f004" title="arc::index::dim::name" alt="" coords="579,131,728,156"/>
 </map>
 </div>
 
@@ -446,7 +400,7 @@ template&lt;typename... A&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 19 2018 17:29:05 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 26 2018 13:26:39 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

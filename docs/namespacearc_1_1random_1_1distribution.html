@@ -171,7 +171,9 @@ template&lt;typename T  = double&gt; </div>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>T Must be an arithmetic type. </dd>
 <dd>
-T May not be an integral type. </dd>
+T May not be an integral type.</dd>
+<dd>
+rng_ may not be nullptr. </dd>
 <dd>
 var_ must be positive.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random number sampled from a gaussian distribution. </dd></dl>
@@ -229,7 +231,9 @@ template&lt;typename T  = double&gt; </div>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>T Must be an arithmetic type. </dd>
 <dd>
-T May not be an integral type. </dd>
+T May not be an integral type.</dd>
+<dd>
+rng_ may not be nullptr. </dd>
 <dd>
 g_ must be between minus one and one.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random number sampled from a Henyey-Greenstein distribution. </dd></dl>
@@ -286,7 +290,9 @@ template&lt;typename T  = vec3&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>T Must be a vec type.</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>T Must be a vec type.</dd>
+<dd>
+rng_ may not be nullptr.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random isotropic direction vec. </dd></dl>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -353,7 +359,9 @@ template&lt;typename T  = double&gt; </div>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>T Must be an arithmetic type. </dd>
 <dd>
-T May not be an integral type.</dd></dl>
+T May not be an integral type.</dd>
+<dd>
+rng_ may not be nullptr.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random number sampled from a uniform normal distribution. </dd></dl>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -428,6 +436,8 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>T Must be an arithmetic type. </dd>
+<dd>
+rng_ may not be nullptr. </dd>
 <dd>
 max_ must be positive.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random number sampled from a uniform distribution. </dd></dl>
@@ -508,6 +518,8 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>T Must be an arithmetic type. </dd>
 <dd>
+rng_ may not be nullptr. </dd>
+<dd>
 min_ must be less than max_.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random number sampled from a uniform distribution. </dd></dl>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -529,7 +541,7 @@ min_ must be less than max_.</dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 19 2018 17:29:05 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 26 2018 13:26:39 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
