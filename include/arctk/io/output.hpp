@@ -23,6 +23,7 @@
 //  -- Arctk --
 #include <arctk/consts.hpp>
 #include <arctk/debug.hpp>
+#include <arctk/utl.hpp>
 
 
 
@@ -45,9 +46,24 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Formatting --
+            /**
+             *  Format a group of vectors into a csv-style string.
+             *
+             *  @tparam T   Type stored by the first vector.
+             *  @tparam A   Types stored by the remaining vectors.
+             *
+             *  @param  vec_    Vector forming the first column of the csv.
+             *  @param  vecs_   Vectors forming the remaining columns of the csv.
+             *
+             *  @pre    vecs_ must all be vectors.
+             *  @pre    vecs_ sizes must match the size of vec_.
+             *
+             *  @return String of the csv.
+             */
             template <typename T, typename... A>
             inline std::string csv(const std::vector<T>& vec_, const A&... vecs_) noexcept
             {
+                (PRE(utl::type::is_vector(vecs_)), ...);
                 const size_t rows = vec_.size();
                 (PRE(vecs_.size() == rows), ...);
 
