@@ -53,13 +53,13 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Bookends --
-            constexpr std::array<char, container::TOTAL> OPENERS({{'[', '(', '"', '<', '<', ':', '{', '{'}}); //!< Container opening characters.
-            constexpr std::array<char, container::TOTAL> CLOSERS({{']', ')', '"', '>', '>', ':', '}', '}'}}); //!< Container closing characters.
+            constexpr const std::array<char, container::TOTAL> OPENERS({{'[', '(', '"', '<', '<', ':', '{', '{'}}); //!< Container opening characters.
+            constexpr const std::array<char, container::TOTAL> CLOSERS({{']', ')', '"', '>', '>', ':', '}', '}'}}); //!< Container closing characters.
 
             //  -- Special Characters --
-            constexpr char                COMMENT = '#';                         //!< Default comment starting character.
-            constexpr char                DELIM   = ',';                         //!< Default delimiter character.
-            constexpr std::array<char, 4> WHITESPACE({{' ', '\t', '\r', '\n'}}); //!< Characters considered whitespace.
+            constexpr const char                COMMENT = '#';                         //!< Default comment starting character.
+            constexpr const char                DELIM   = ',';                         //!< Default delimiter character.
+            constexpr const std::array<char, 4> WHITESPACE({{' ', '\t', '\r', '\n'}}); //!< Characters considered whitespace.
 
 
 
