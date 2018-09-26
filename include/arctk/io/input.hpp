@@ -724,6 +724,17 @@ namespace arc //! arctk namespace
                 return (vec);
             }
 
+            /**
+             *  Parse a given string to a two-by-two mat type.
+             *
+             *  @tparam T   Type stored by the mat.
+             *
+             *  @param  str_    String to be parsed.
+             *
+             *  @pre    str_ may not be nullptr.
+             *
+             *  @return Parsed mat.
+             */
             template <typename T>
             inline math::Mat<T, 2> parse(utl::Tag<math::Mat<T, 2>> /*unused*/, std::string* const str_) noexcept
             {
