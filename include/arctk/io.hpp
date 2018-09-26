@@ -240,7 +240,7 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::tuple<A...>& t
 }
 
 /**
- *  Print an map to a stream.
+ *  Print a map to a stream.
  *
  *  @tparam T   Type used to store map keys.
  *  @tparam S   Type used to store map values.

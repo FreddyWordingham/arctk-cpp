@@ -559,6 +559,17 @@ namespace arc //! arctk namespace
                 return (tup);
             }
 
+            /**
+             *  Helper function to parse a given string to a tuple type.
+             *
+             *  @tparam A   Types stored by the tuple.
+             *
+             *  @param  tokens_ Vector of string tokens to be parsed.
+             *
+             *  @pre    tokens_ may not be nullptr.
+             *
+             *  @return Parsed tuple.
+             */
             template <typename T, typename S>
             inline std::map<T, S> parse(utl::Tag<std::map<T, S>> /*unused*/, std::string* const str_) noexcept
             {
