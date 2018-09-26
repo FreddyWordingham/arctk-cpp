@@ -591,7 +591,7 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Parse a given string to a vec type.
+             *  Parse a given string to a two-dimensional vec type.
              *
              *  @tparam T   Type stored by the vec.
              *
