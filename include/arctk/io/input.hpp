@@ -821,6 +821,17 @@ namespace arc //! arctk namespace
                                         parse(utl::Tag<math::Vec<T, 4>>(), &tokens[3])));
             }
 
+            /**
+             *  Parse a given string to a n-by-n mat type.
+             *
+             *  @tparam T   Type stored by the mat.
+             *
+             *  @param  str_    String to be parsed.
+             *
+             *  @pre    str_ may not be nullptr.
+             *
+             *  @return Parsed mat.
+             */
             template <typename T, size_t N>
             inline math::Mat<T, N> parse(utl::Tag<math::Mat<T, N>> /*unused*/, std::string* const str_) noexcept
             {
