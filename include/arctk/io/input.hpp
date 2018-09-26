@@ -537,9 +537,9 @@ namespace arc //! arctk namespace
              *
              *  @tparam A   Types stored by the tuple.
              *
-             *  @param  str_    String to be parsed.
+             *  @param  tokens_ Vector of string tokens to be parsed.
              *
-             *  @pre    str_ may not be nullptr.
+             *  @pre    tokens_ may not be nullptr.
              *
              *  @return Parsed tuple.
              */
