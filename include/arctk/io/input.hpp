@@ -560,15 +560,16 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Helper function to parse a given string to a tuple type.
+             *  Parse a given string to a map type.
              *
-             *  @tparam A   Types stored by the tuple.
+             *  @tparam T   Type used to store map keys.
+             *  @tparam S   Type used to store map values.
              *
-             *  @param  tokens_ Vector of string tokens to be parsed.
+             *  @param  str_    String to be parsed.
              *
-             *  @pre    tokens_ may not be nullptr.
+             *  @pre    str_ may not be nullptr.
              *
-             *  @return Parsed tuple.
+             *  @return Parsed map.
              */
             template <typename T, typename S>
             inline std::map<T, S> parse(utl::Tag<std::map<T, S>> /*unused*/, std::string* const str_) noexcept
