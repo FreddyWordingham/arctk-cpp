@@ -212,15 +212,15 @@ namespace arc //! arctk namespace
         /**
          *  Print the vec to a stream.
          *
-         *  @tparam T   Type stored by the vec.
+         *  @tparam S   Type stored by the vec.
          *
          *  @param  stream_ Stream to print to.
          *  @param  vec_    Vec to be printed.
          *
          *  @return Reference to the vec post-print.
          */
-        template <typename T>
-        constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<T, 3>& vec_) noexcept
+        template <typename S>
+        constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<S, 3>& vec_) noexcept
         {
             stream_ << consts::format::OPENERS[consts::format::container::VEC] << vec_.x << consts::format::DELIM << vec_.y << consts::format::DELIM << vec_.z << consts::format::CLOSERS[consts::format::container::VEC];
 
