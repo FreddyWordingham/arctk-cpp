@@ -654,6 +654,17 @@ namespace arc //! arctk namespace
                 return (math::Vec<T, 3>(parse(utl::Tag<T>(), &tokens[index::dim::cartesian::X]), parse(utl::Tag<T>(), &tokens[index::dim::cartesian::Y]), parse(utl::Tag<T>(), &tokens[index::dim::cartesian::Z])));
             }
 
+            /**
+             *  Parse a given string to a four-dimensional vec type.
+             *
+             *  @tparam T   Type stored by the vec.
+             *
+             *  @param  str_    String to be parsed.
+             *
+             *  @pre    str_ may not be nullptr.
+             *
+             *  @return Parsed vec.
+             */
             template <typename T>
             inline math::Vec<T, 4> parse(utl::Tag<math::Vec<T, 4>> /*unused*/, std::string* const str_) noexcept
             {
