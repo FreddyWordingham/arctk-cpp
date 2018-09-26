@@ -266,7 +266,7 @@ namespace arc //! arctk namespace
         constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<S, M>& vec_) noexcept
         {
             stream_ << consts::format::OPENERS[consts::format::container::VEC] << vec_._data[0];
-            for (size_t i = 1; i < N; ++i)
+            for (size_t i = 1; i < M; ++i)
             {
                 stream_ << consts::format::DELIM << vec_._data[i];
             }
