@@ -136,7 +136,7 @@ namespace arc //! arctk namespace
          *  @return Reference to the stream post-print.
          */
         template <typename T>
-        inline std::ostream& operator<<(std::ostream& stream_, const Histogram<T, 1>& hist_) noexcept
+        inline std::ostream& operator<<(std::ostream& stream_, const Histogram<T, 2>& hist_) noexcept
         {
             std::cout << std::setw(16) << hist_._bins[0][0];
             for (size_t i = 1; i < hist_._bins[0].size(); ++i)
