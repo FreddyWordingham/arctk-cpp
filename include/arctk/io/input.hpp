@@ -590,6 +590,17 @@ namespace arc //! arctk namespace
                 return (map);
             }
 
+            /**
+             *  Parse a given string to a vec type.
+             *
+             *  @tparam T   Type stored by the vec.
+             *
+             *  @param  str_    String to be parsed.
+             *
+             *  @pre    str_ may not be nullptr.
+             *
+             *  @return Parsed vec.
+             */
             template <typename T>
             inline math::Vec<T, 2> parse(utl::Tag<math::Vec<T, 2>> /*unused*/, std::string* const str_) noexcept
             {
