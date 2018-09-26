@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
             //  -- Special Characters --
             constexpr const char                COMMENT = '#';                         //!< Default comment starting character.
             constexpr const char                DELIM   = ',';                         //!< Default delimiter character.
-            constexpr const std::array<char, 4> WHITESPACE({{' ', '\t', '\r', '\n'}}); //!< Characters considered whitespace.
+            constexpr const std::array<char, 4> WHITESPACE({{' ', '\t', '\r', '\n'}}); //!< Characters considered whitespace. @return   Whitespace character array.
 
 
 
