@@ -215,7 +215,7 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::pair<T, S>& pa
 }
 
 /**
- *  Print an tuple to a stream.
+ *  Print a tuple to a stream.
  *
  *  @tparam A   Types stored by the tuple.
  *
