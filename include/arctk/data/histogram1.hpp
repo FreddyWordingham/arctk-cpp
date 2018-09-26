@@ -126,15 +126,15 @@ namespace arc //! arctk namespace
         /**
          *  Print the histogram data to a given stream.
          *
-         *  @tparam T   Type binned.
+         *  @tparam S   Type binned.
          *
          *  @param  stream_ Stream to print to.
          *  @param  hist_   Histogram to be printed.
          *
          *  @return Reference to the stream post-print.
          */
-        template <typename T>
-        inline std::ostream& operator<<(std::ostream& stream_, const Histogram<T, 1>& hist_) noexcept
+        template <typename S>
+        inline std::ostream& operator<<(std::ostream& stream_, const Histogram<S, 1>& hist_) noexcept
         {
             stream_ << io::output::csv(hist_.centres(), hist_._bins);
 
