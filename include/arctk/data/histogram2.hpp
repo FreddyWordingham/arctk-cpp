@@ -68,8 +68,9 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
-            //  -- Writing --
-            inline std::ostream& operator<<(std::ostream& stream_) const noexcept;
+            //  -- Printing --
+            template <typename S>
+            friend inline std::ostream& operator<<(std::ostream& stream_, const Histogram<S, 2>& hist_) noexcept;
 
 
             //  == METHODS ==

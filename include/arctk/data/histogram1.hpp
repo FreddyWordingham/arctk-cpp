@@ -122,7 +122,7 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
-        //  -- Writing --
+        //  -- Printing --
         /**
          *  Print the histogram data to a given stream.
          *
