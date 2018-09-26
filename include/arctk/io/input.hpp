@@ -756,6 +756,17 @@ namespace arc //! arctk namespace
                 return (math::Mat<T, 2>(parse(utl::Tag<math::Vec<T, 2>>(), &tokens[index::dim::cartesian::X]), parse(utl::Tag<math::Vec<T, 2>>(), &tokens[index::dim::cartesian::Y])));
             }
 
+            /**
+             *  Parse a given string to a three-by-three mat type.
+             *
+             *  @tparam T   Type stored by the mat.
+             *
+             *  @param  str_    String to be parsed.
+             *
+             *  @pre    str_ may not be nullptr.
+             *
+             *  @return Parsed mat.
+             */
             template <typename T>
             inline math::Mat<T, 3> parse(utl::Tag<math::Mat<T, 3>> /*unused*/, std::string* const str_) noexcept
             {
