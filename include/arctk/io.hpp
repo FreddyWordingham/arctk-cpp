@@ -156,7 +156,7 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& a
 }
 
 /**
- *  Print an vector to a stream.
+ *  Print a vector to a stream.
  *
  *  @tparam T   Type stored by the vector.
  *
