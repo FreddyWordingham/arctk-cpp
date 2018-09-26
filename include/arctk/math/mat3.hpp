@@ -135,15 +135,15 @@ namespace arc //! arctk namespace
         /**
          *  Print the matrix to a stream.
          *
-         *  @tparam T   Type stored by the matrix.
+         *  @tparam S   Type stored by the matrix.
          *
          *  @param  stream_ Stream to print to.
          *  @param  mat_    Matrix to be printed.
          *
          *  @return Reference to the matrix post-print.
          */
-        template <typename T>
-        constexpr inline std::ostream& operator<<(std::ostream& stream_, const Mat<T, 3>& mat_) noexcept
+        template <typename S>
+        constexpr inline std::ostream& operator<<(std::ostream& stream_, const Mat<S, 3>& mat_) noexcept
         {
             stream_ << consts::format::OPENERS[consts::format::container::MAT] << mat_.x << consts::format::DELIM << mat_.y << consts::format::DELIM << mat_.z << consts::format::CLOSERS[consts::format::container::MAT];
 
