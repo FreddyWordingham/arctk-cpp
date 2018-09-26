@@ -132,6 +132,16 @@ namespace arc //! arctk namespace
 
         //  == OPERATORS ==
         //  -- Io --
+        /**
+         *  Print the matrix to a stream.
+         *
+         *  @tparam T   Type stored by the matrix.
+         *
+         *  @param  stream_ Stream to print to.
+         *  @param  mat_    Matrix to be printed.
+         *
+         *  @return Reference to the matrix post-print.
+         */
         template <typename T>
         constexpr inline std::ostream& operator<<(std::ostream& stream_, const Mat<T, 3>& mat_) noexcept
         {
