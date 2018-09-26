@@ -181,7 +181,7 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec
 }
 
 /**
- *  Print an string to a stream.
+ *  Print a string to a stream.
  *
  *  @param  stream_ Stream to print to.
  *  @param  str_    String to be printed.
