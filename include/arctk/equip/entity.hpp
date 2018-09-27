@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <array>
 #include <memory>
 #include <string>
 #include <utility>
@@ -48,6 +49,7 @@ namespace arc //! arctk namespace
             std::unique_ptr<phys::Material> _mat;  //!< Matrial composing the entity's volume.
 
             //  -- Domain --
+            const std::array<size_t, 3>                                        _res;
             std::vector<std::vector<std::vector<std::unique_ptr<phys::Cell>>>> _cells;
 
 
