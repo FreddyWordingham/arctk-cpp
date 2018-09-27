@@ -50,7 +50,6 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double vol() const noexcept;
             inline double energy_dens() const noexcept;
 
             //  -- Modifiers --
@@ -79,16 +78,6 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        /**
-         *  Get the volume of the cell.
-         *
-         *  @return Volume of the cell.
-         */
-        inline double Cell::vol() const noexcept
-        {
-            return (_vol);
-        }
-
         /**
          *  Get the energy density of the cell.
          *
