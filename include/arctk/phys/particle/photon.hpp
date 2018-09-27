@@ -20,7 +20,6 @@
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
-#include <arctk/equip.hpp>
 #include <arctk/math.hpp>
 
 
@@ -32,6 +31,17 @@ namespace arc //! arctk namespace
     {
         namespace particle //! particle namespace
         {
+            namespace equip //! equipment namespace
+            {
+
+
+
+                //  == CLASS PROTOTYPES ==
+                class Entity;
+
+
+
+            } // namespace equip
 
 
 
