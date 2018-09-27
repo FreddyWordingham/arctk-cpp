@@ -75,7 +75,7 @@ namespace arc //! arctk namespace
                 inline double wavelength() const noexcept;
 
                 //  -- Traversal --
-                inline bool enter_entity(const equip::Entity* ent_) noexcept;
+                inline bool enter_entity(equip::Entity* const ent_) noexcept;
             };
 
 
@@ -111,7 +111,7 @@ namespace arc //! arctk namespace
              *
              *  @return True if entering the entity, false if exiting it.
              */
-            inline bool Photon::enter_entity(const equip::Entity* ent_) noexcept
+            inline bool Photon::enter_entity(equip::Entity* const ent_) noexcept
             {
                 if (ent_ == _cur_ent)
                 {
