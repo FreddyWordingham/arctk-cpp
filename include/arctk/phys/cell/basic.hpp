@@ -33,7 +33,7 @@ namespace arc //! arctk namespace
 
             //  == CLASS ==
             /**
-             *  Basic material class.
+             *  Basic material cell class.
              */
             class Basic : public Cell
             {
