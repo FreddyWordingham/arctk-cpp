@@ -174,6 +174,9 @@ namespace arc //! arctk namespace
              */
             inline Leaf const* Leaf::leaf(const vec3& pos_) const noexcept
             {
+                std::cout << pos_ << '\n';
+                std::cout << _min << '\n';
+                std::cout << _max << '\n';
                 PRE(contains(pos_));
 
                 return (this);
