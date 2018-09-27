@@ -66,7 +66,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Photon(const vec3& pos_, const vec3& dir_, double wavelength_, const equip::Entity* cur_ent_, double energy_ = 1.0, double time_ = 0.0) noexcept;
+                inline Photon(const vec3& pos_, const vec3& dir_, double wavelength_, equip::Entity* const cur_ent_, double energy_ = 1.0, double time_ = 0.0) noexcept;
 
 
                 //  == METHODS ==
@@ -82,7 +82,7 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Photon::Photon(const vec3& pos_, const vec3& dir_, const double wavelength_, const equip::Entity* cur_ent_, const double energy_, const double time_) noexcept
+            inline Photon::Photon(const vec3& pos_, const vec3& dir_, const double wavelength_, equip::Entity* const cur_ent_, const double energy_, const double time_) noexcept
               : Particle(pos_, dir_, time_)
               , _wavelength(wavelength_)
               , _energy(energy_)
