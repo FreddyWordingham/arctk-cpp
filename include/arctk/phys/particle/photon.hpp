@@ -60,6 +60,9 @@ namespace arc //! arctk namespace
               public:
                 //  -- Getters --
                 inline double wavelength() const noexcept;
+
+                //  -- Traversal --
+                inline bool enter_entity(const equip::Entity* ent_) noexcept;
             };
 
 
@@ -82,6 +85,33 @@ namespace arc //! arctk namespace
             inline double Photon::wavelength() const noexcept
             {
                 return (_wavelength);
+            }
+
+
+            //  -- Traversal --
+            /**
+             *  Determine if the photon will enter, or exit, a given entity.
+             *
+             *  @param  ent_    Entity boundary to cross.
+             *
+             *  @return True if entering the entity, false if exiting it.
+             */
+            inline bool Photon::enter_entity(const equip::Entity* ent_) noexcept
+            {
+                if (ent_ == _cur_ent)
+                {
+                    PRE(_ent_stack.size() >= 1);
+
+                    _cur_ent = _ent_stack.top();
+                    _ent_stack.pop();
+
+                    return (false);
+                }
+
+                _ent_stack.push(_cur_ent);
+                _cur_ent = ent_;
+
+                return (true);
             }
 
 
