@@ -41,6 +41,12 @@ namespace arc //! arctk namespace
              */
             class Fluorescent : public Material
             {
+                //  == TYPES ==
+              public:
+                //  -- Cell --
+                typedef cell::Fluorescent CellType;
+
+
                 //  == FIELDS ==
               private:
                 //  -- Optical --
@@ -67,7 +73,8 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
-                //  -- Getters --
+                //  -- Cells --
+                inline std::unique_ptr<Cell> create_cell(const vec3& min_, const vec3& max_) const noexcept override;
             };
 
 
