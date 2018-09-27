@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             template <typename T, typename S>
-            inline Entity(T&& surf_, S&& mat_, data::Domain&& dom_) noexcept;
+            inline Entity(T&& surf_, S&& mat_) noexcept;
 
 
             //  == METHODS ==
@@ -85,10 +85,9 @@ namespace arc //! arctk namespace
          *  @pre    S must be derived from phys::Material.
          */
         template <typename T, typename S>
-        inline Entity::Entity(T&& surf_, S&& mat_, data::Domain&& dom_) noexcept
+        inline Entity::Entity(T&& surf_, S&& mat_) noexcept
           : _surf(std::make_unique<T>(std::forward<T>(surf_)))
           , _mat(std::make_unique<S>(std::forward<S>(mat_)))
-          , _dom(std::make_unique<data::Domain>(std::forward<data::Domain>(dom_)))
         {
             static_assert(std::is_base_of<geom::Shape, T>::value);
             static_assert(std::is_base_of<phys::Material, S>::value);
