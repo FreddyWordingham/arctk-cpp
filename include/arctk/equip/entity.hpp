@@ -71,6 +71,7 @@ namespace arc //! arctk namespace
             inline double                max_wavelength() const noexcept;
             inline const geom::Shape*    surf() const noexcept;
             inline const phys::Material* mat() const noexcept;
+            inline const phys::Cell*     cell(const vec3& pos_) const noexcept;
         };
 
 
@@ -187,6 +188,22 @@ namespace arc //! arctk namespace
         inline const phys::Material* Entity::mat() const noexcept
         {
             return (_mat.get());
+        }
+
+        inline const phys::Cell* Entity::cell(const vec3& pos_) const noexcept
+        {
+            PRE(contains(pos_));
+
+            const vec3 rel_pos = pos_ - _min;
+            const auto index_x = static_cast<size_t>(rel_pos.x / _packet_size.x);
+            const auto index_y = static_cast<size_t>(rel_pos.y / _packet_size.y);
+            const auto index_z = static_cast<size_t>(rel_pos.z / _packet_size.z);
+
+            POST(index_x < _res[index::dim::cartesian::X]);
+            POST(index_y < _res[index::dim::cartesian::Y]);
+            POST(index_z < _res[index::dim::cartesian::Z]);
+
+            return (_cells[index_x][index_y][index_z].get());
         }
 
 
