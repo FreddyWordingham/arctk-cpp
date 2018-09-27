@@ -143,7 +143,7 @@ namespace arc //! arctk namespace
             return (_mat.get());
         }
 
-        inline const data::Dom* Entity::dom() const noexcept
+        inline const data::Domain* Entity::dom() const noexcept
         {
             return (_dom.get());
         }
