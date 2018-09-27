@@ -91,7 +91,6 @@ namespace arc //! arctk namespace
              *  @pre    lights_ shapes must intersect the node.
              *  @pre    entities_ shapes must intersect the node.
              *  @pre    detectors_ shapes must intersect the node.
-             *  @pre    cur_depth_ must be positive.
              */
             inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_,
                               const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_, const size_t cur_depth_) noexcept
@@ -115,7 +114,6 @@ namespace arc //! arctk namespace
                 {
                     PRE(detectors_[i].first.intersect_vol(*this));
                 }
-                PRE(cur_depth_ > 0);
             }
 
 
