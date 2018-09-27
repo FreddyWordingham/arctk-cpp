@@ -22,6 +22,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
+#include <arctk/phys/cell.hpp>
 #include <arctk/phys/material.hpp>
 
 
