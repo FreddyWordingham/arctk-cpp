@@ -36,13 +36,7 @@ namespace arc //! arctk namespace
 
 
 
-            //  == CLASSES ==
-            class BasicCell : public Cell
-            {
-            };
-
-
-
+            //  == CLASS ==
             /**
              *  Basic material particle class.
              */
