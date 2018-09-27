@@ -21,7 +21,6 @@
 #include <utility>
 
 //  -- Arctk --
-#include <arctk/data.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
 #include <arctk/phys.hpp>
