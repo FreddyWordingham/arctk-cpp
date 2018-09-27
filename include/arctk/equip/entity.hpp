@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
 
             //  -- Data --
             std::unique_ptr<data::Domain> _dom; //!< Data domain.
-            om;                                 //!< Data domain.
+
 
             //  == INSTANTIATION ==
           public:
