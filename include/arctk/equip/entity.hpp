@@ -66,7 +66,6 @@ namespace arc //! arctk namespace
             inline double                max_wavelength() const noexcept;
             inline const geom::Shape*    surf() const noexcept;
             inline const phys::Material* mat() const noexcept;
-            inline const data::Domain*   dom() const noexcept;
         };
 
 
@@ -148,11 +147,6 @@ namespace arc //! arctk namespace
         inline const phys::Material* Entity::mat() const noexcept
         {
             return (_mat.get());
-        }
-
-        inline const data::Domain* Entity::dom() const noexcept
-        {
-            return (_dom.get());
         }
 
 
