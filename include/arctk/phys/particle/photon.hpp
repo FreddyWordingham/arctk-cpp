@@ -44,6 +44,7 @@ namespace arc //! arctk namespace
               private:
                 //  -- Properties --
                 const double _wavelength;
+                const double _energy;
 
                 //  -- Tracking --
                 equip::Entity*             _cur_ent;

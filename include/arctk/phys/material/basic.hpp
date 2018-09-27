@@ -66,6 +66,11 @@ namespace arc //! arctk namespace
             };
 
 
+            class BasicCell : public Cell
+            {
+            };
+
+
 
             //  == INSTANTIATION ==
             //  -- Constructors --
