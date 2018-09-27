@@ -75,7 +75,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline double wavelength() const noexcept;
+                inline double               wavelength() const noexcept;
+                inline const equip::Entity* entity() const noexcept;
 
                 //  -- Traversal --
                 inline bool enter_entity(equip::Entity* const ent_) noexcept;
@@ -103,6 +104,11 @@ namespace arc //! arctk namespace
             inline double Photon::wavelength() const noexcept
             {
                 return (_wavelength);
+            }
+
+            inline const equip::Entity* Photon::entity() const noexcept
+            {
+                return (_cur_ent);
             }
 
 
