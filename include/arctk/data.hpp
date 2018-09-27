@@ -20,7 +20,6 @@
 #include <arctk/data/cube1.hpp>
 #include <arctk/data/cube2.hpp>
 #include <arctk/data/cube3.hpp>
-#include <arctk/data/domain.hpp>
 #include <arctk/data/histogram.hpp>
 #include <arctk/data/histogram/average.hpp>
 #include <arctk/data/histogram/average1.hpp>
@@ -35,7 +34,6 @@
 #include <arctk/data/image/colour.hpp>
 #include <arctk/data/image/greyscale.hpp>
 #include <arctk/data/json.hpp>
-#include <arctk/data/packet.hpp>
 #include <arctk/data/table.hpp>
 
 
