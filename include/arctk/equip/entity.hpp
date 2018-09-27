@@ -76,7 +76,6 @@ namespace arc //! arctk namespace
          *
          *  @param  surf_   Bounding surface of the entity.
          *  @param  mat_    Material to form the entity volume.
-         *  @param  dom_    Domain to be taken for this entity.
          *
          *  @pre    surf_ must be a closed surface.
          *
