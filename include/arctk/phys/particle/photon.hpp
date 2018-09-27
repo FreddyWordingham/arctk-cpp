@@ -19,6 +19,7 @@
 #include <stack>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/equip.hpp>
 #include <arctk/math.hpp>
 
