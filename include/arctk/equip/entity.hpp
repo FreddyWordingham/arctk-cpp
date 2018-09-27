@@ -50,6 +50,7 @@ namespace arc //! arctk namespace
 
             //  -- Domain --
             const std::array<size_t, 3>                                        _res;
+            const geom::shape::Aabb                                            _box;
             std::vector<std::vector<std::vector<std::unique_ptr<phys::Cell>>>> _cells;
 
 
