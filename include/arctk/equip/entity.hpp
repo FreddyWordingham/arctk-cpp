@@ -87,6 +87,7 @@ namespace arc //! arctk namespace
          *  @pre    S must be derived from phys::Material.
          *
          *  @pre    surf_ must be a closed surface.
+         *  @pre    res_ values must all be positive.
          */
         template <typename T, typename S>
         inline Entity::Entity(T&& surf_, S&& mat_, const std::array<size_t, 3>& res_) noexcept
