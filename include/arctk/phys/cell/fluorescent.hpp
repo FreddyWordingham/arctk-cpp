@@ -33,7 +33,7 @@ namespace arc //! arctk namespace
 
             //  == CLASS ==
             /**
-             *  Fluorescent cell class.
+             *  Fluorescent material cell class.
              */
             class Fluorescent : public Cell
             {
