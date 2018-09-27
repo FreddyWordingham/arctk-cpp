@@ -21,7 +21,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
-#include <arctk/phys/cell.hpp>
+#include <arctk/phys/cell/basic.hpp>
 #include <arctk/phys/material.hpp>
 
 
@@ -42,6 +42,10 @@ namespace arc //! arctk namespace
              */
             class Basic : public Material
             {
+              public:
+                typedef cell::Basic Cell;
+
+
                 //  == FIELDS ==
               private:
                 //  -- Optical --
