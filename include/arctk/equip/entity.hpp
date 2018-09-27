@@ -92,6 +92,7 @@ namespace arc //! arctk namespace
         inline Entity::Entity(T&& surf_, S&& mat_, const std::array<size_t, 3>& res_) noexcept
           : _surf(std::make_unique<T>(std::forward<T>(surf_)))
           , _mat(std::make_unique<S>(std::forward<S>(mat_)))
+          , _res(res_)
         {
             static_assert(std::is_base_of<geom::Shape, T>::value);
             static_assert(std::is_base_of<phys::Material, S>::value);
