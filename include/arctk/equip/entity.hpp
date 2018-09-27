@@ -49,13 +49,13 @@ namespace arc //! arctk namespace
 
             //  -- Data --
             std::unique_ptr<data::Domain> _dom; //!< Data domain.
-
+            om;                                 //!< Data domain.
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
             template <typename T, typename S>
-            inline Entity(T&& surf_, S&& mat_) noexcept;
+            inline Entity(T&& surf_, S&& mat_, data::Domain&& dom_) noexcept;
 
 
             //  == METHODS ==
@@ -80,6 +80,7 @@ namespace arc //! arctk namespace
          *
          *  @param  surf_   Bounding surface of the entity.
          *  @param  mat_    Material to form the entity volume.
+         *  @param  dom_    Domain to be taken for this entity.
          *
          *  @pre    surf_ must be a closed surface.
          *
@@ -87,9 +88,10 @@ namespace arc //! arctk namespace
          *  @pre    S must be derived from phys::Material.
          */
         template <typename T, typename S>
-        inline Entity::Entity(T&& surf_, S&& mat_) noexcept
+        inline Entity::Entity(T&& surf_, S&& mat_, data::Domain&& dom_) noexcept
           : _surf(std::make_unique<T>(std::forward<T>(surf_)))
           , _mat(std::make_unique<S>(std::forward<S>(mat_)))
+          , _dom(std::make_unique<data::Domain>(std::forward<data::Domain>(dom_)))
         {
             static_assert(std::is_base_of<geom::Shape, T>::value);
             static_assert(std::is_base_of<phys::Material, S>::value);
