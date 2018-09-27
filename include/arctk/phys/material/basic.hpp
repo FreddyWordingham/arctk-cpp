@@ -21,6 +21,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
+#include <arctk/phys/cell.hpp>
 #include <arctk/phys/material.hpp>
 
 
@@ -35,7 +36,13 @@ namespace arc //! arctk namespace
 
 
 
-            //  == CLASS ==
+            //  == CLASSES ==
+            class BasicCell : public Cell
+            {
+            };
+
+
+
             /**
              *  Basic material particle class.
              */
@@ -63,11 +70,6 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
-            };
-
-
-            class BasicCell : public Cell
-            {
             };
 
 
