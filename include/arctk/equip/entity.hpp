@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             template <typename T, typename S>
-            inline Entity(T&& surf_, S&& mat_) noexcept;
+            inline Entity(T&& surf_, S&& mat_, const std::array<size_t, 3>& res_) noexcept;
 
 
             //  == METHODS ==
@@ -81,6 +81,7 @@ namespace arc //! arctk namespace
          *
          *  @param  surf_   Bounding surface of the entity.
          *  @param  mat_    Material to form the entity volume.
+         *  @param  res_    Resolution of the domain.
          *
          *  @pre    surf_ must be a closed surface.
          *
@@ -88,7 +89,7 @@ namespace arc //! arctk namespace
          *  @pre    S must be derived from phys::Material.
          */
         template <typename T, typename S>
-        inline Entity::Entity(T&& surf_, S&& mat_) noexcept
+        inline Entity::Entity(T&& surf_, S&& mat_, const std::array<size_t, 3>& res_) noexcept
           : _surf(std::make_unique<T>(std::forward<T>(surf_)))
           , _mat(std::make_unique<S>(std::forward<S>(mat_)))
         {
