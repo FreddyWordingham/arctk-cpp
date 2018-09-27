@@ -89,7 +89,7 @@ namespace arc //! arctk namespace
             {
                 PRE((wavelength_ > 0.0) && (wavelength_ < 1000e-9));
                 PRE(energy_ > 0.0);
-                PRE(cur_ent_ != nullptr)
+                PRE(cur_ent_ != nullptr);
             }
 
 
