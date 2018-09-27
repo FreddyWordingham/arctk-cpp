@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
             /**
              *  Photon particle class.
              */
-            class Photon
+            class Photon : public Particle
             {
                 //  == FIELDS ==
               private:
