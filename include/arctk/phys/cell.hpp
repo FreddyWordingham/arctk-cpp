@@ -56,10 +56,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline std::tuple<double, double> data() const noexcept;
-            inline std::array<std::string, 2> data_names() const noexcept;
-            inline double                     vol() const noexcept;
-            inline double                     energy_dens() const noexcept;
+            inline double vol() const noexcept;
+            inline double energy_dens() const noexcept;
 
             //  -- Modifiers --
             inline void add_energy(double energy_) noexcept;
@@ -87,26 +85,6 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        /**
-         *  Get a tuple containing the cells core data profile.
-         *
-         *  @return Tuple containing the cells core data profile.
-         */
-        inline std::tuple<double, double> Cell::data() const noexcept
-        {
-            return (std::tuple<double, double>(_vol, energy_dens()));
-        }
-
-        /**
-         *  Get an array containing the data names of the core data profile values.
-         *
-         *  @return Array containing the data names of the core data profile values.
-         */
-        inline std::array<std::string, 2> Cell::data_names() const noexcept
-        {
-            return (std::array<std::string, 2>({{"vol", "udens"}}));
-        }
-
         /**
          *  Get the volume of the cell.
          *
