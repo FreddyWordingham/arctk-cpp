@@ -35,7 +35,13 @@ namespace arc //! arctk namespace
 
 
 
-            //  == CLASS ==
+            //  == CLASSES ==
+            class FluorescentCell : public Cell
+            {
+            };
+
+
+
             /**
              *  Fluorescent material particle class.
              */
