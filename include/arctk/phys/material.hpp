@@ -15,6 +15,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <memory>
+
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/phys/cell.hpp>
@@ -67,7 +70,7 @@ namespace arc //! arctk namespace
             inline double max() const noexcept;
 
             //  -- Cells --
-            virtual Cell* cell(const vec3& min_, const vec3& max_) const noexcept;
+            virtual std::unique_ptr<Cell> cell(const vec3& min_, const vec3& max_) const noexcept;
         };
 
 
