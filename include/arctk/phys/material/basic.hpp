@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Cells --
-                Cell* new_cell(const vec3& min_, const vec3& max_) const noexcept override;
+                inline std::unique_ptr<Cell> create_cell(const vec3& min_, const vec3& max_) const noexcept override;
             };
 
 
@@ -228,7 +228,9 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Cells --
-            Cell* Basic::new_cell(const vec3& min_, const vec3& max_) const noexcept override;
+            inline std::unique_ptr<Cell> Basic::create_cell(const vec3& min_, const vec3& max_) const noexcept override
+            {
+            }
 
 
 
