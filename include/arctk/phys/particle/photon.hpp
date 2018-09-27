@@ -45,7 +45,8 @@ namespace arc //! arctk namespace
                 const double _wavelength;
 
                 //  -- Tracking --
-                std::stack<equip::Entity*> _ent;
+                equip::Entity*             _cur_ent;
+                std::stack<equip::Entity*> _ent_stack;
 
 
                 //  == INSTANTIATION ==
