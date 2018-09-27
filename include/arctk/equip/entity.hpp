@@ -59,6 +59,10 @@ namespace arc //! arctk namespace
             template <typename T, typename S>
             inline Entity(T&& surf_, S&& mat_, const std::array<size_t, 3>& res_) noexcept;
 
+          private:
+            //  -- Initialisation --
+            inline std::vector<std::vector<std::vector<std::unique_ptr<phys::Cell>>>> init_cells(const std::array<size_t, 3>& res_) const noexcept;
+
 
             //  == METHODS ==
           public:
@@ -94,6 +98,7 @@ namespace arc //! arctk namespace
           : _surf(std::make_unique<T>(std::forward<T>(surf_)))
           , _mat(std::make_unique<S>(std::forward<S>(mat_)))
           , _res(res_)
+          , _cells(init_cells(res_))
         {
             static_assert(std::is_base_of<geom::Shape, T>::value);
             static_assert(std::is_base_of<phys::Material, S>::value);
@@ -102,6 +107,42 @@ namespace arc //! arctk namespace
             PRE(res_[index::dim::cartesian::X] > 0);
             PRE(res_[index::dim::cartesian::Y] > 0);
             PRE(res_[index::dim::cartesian::Z] > 0);
+        }
+
+
+        //  -- Initialisation --
+        inline std::vector<std::vector<std::vector<std::unique_ptr<phys::Cell>>>> Entity::init_cells(const std::array<size_t, 3>& res_) const noexcept
+        {
+            PRE(res_[index::dim::cartesian::X] > 0);
+            PRE(res_[index::dim::cartesian::Y] > 0);
+            PRE(res_[index::dim::cartesian::Z] > 0);
+
+            const vec3 min = _mat.min();
+            const vec3 max = _mat.max();
+            const vec3 cell_size((max.x - min.x) / res_[index::dim::cartesian::X], (max.y - min.y) / res_[index::dim::cartesian::Y], (max.z - min.z) / res_[index::dim::cartesian::Z]);
+
+            std::vector<std::vector<std::vector<std::unique_ptr<phys::Cell>>>> cells;
+            cells.reserve(index::dim::cartesian::X);
+
+            for (size_t i = 0; i < res_[index::dim::cartesian::X]; ++i)
+            {
+                cells.emplace_back(std::vector<std::vector<std::unique_ptr<phys::Cell>>>());
+                cells.back().reserve(res_[index::dim::cartesian::Y]);
+
+                for (size_t j = 0; j < res_[index::dim::cartesian::Y]; ++j)
+                {
+                    cells.back().emplace_back(std::vector<std::unique_ptr<phys::Cell>>());
+                    cells.back().back().reserve(res_[index::dim::cartesian::Z]);
+
+                    for (size_t k = 0; k < res_[index::dim::cartesian::Z]; ++k)
+                    {
+                        const vec3 cell_min(min.x + (cell_size.x * i), min.y + (cell_size.y * j), min.z + (cell_size.z * k));
+                        cells.back().back().emplace_back(_mat.create_cell(cell_min, cell_min + cell_size));
+                    }
+                }
+            }
+
+            return (cells);
         }
 
 
