@@ -16,6 +16,10 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <stack>
+
+//  -- Arctk --
+#include <arctk/equip/entity.hpp>
 
 
 
@@ -39,6 +43,9 @@ namespace arc //! arctk namespace
               private:
                 //  -- Properties --
                 const double _wavelength;
+
+                //  -- Tracking --
+                std::stack<equip::Entity*> _ent;
 
 
                 //  == INSTANTIATION ==
