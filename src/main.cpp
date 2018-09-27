@@ -121,6 +121,7 @@
 #include <arctk/phys/material/fluorescent.hpp>
 #include <arctk/phys/optics.hpp>
 #include <arctk/phys/particle.hpp>
+#include <arctk/phys/particle/photon.hpp>
 #include <arctk/random.hpp>
 #include <arctk/random/distribution.hpp>
 #include <arctk/random/distribution/constant.hpp>
