@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
                 //  == TYPES ==
               public:
                 //  -- Cell --
-                typedef cell::Basic Cell;
+                typedef cell::Basic CellType;
 
 
                 //  == FIELDS ==
@@ -230,6 +230,7 @@ namespace arc //! arctk namespace
             //  -- Cells --
             inline std::unique_ptr<Cell> Basic::create_cell(const vec3& min_, const vec3& max_) const noexcept override
             {
+                return (CellType(min_, max_));
             }
 
 
