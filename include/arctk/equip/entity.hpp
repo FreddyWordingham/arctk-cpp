@@ -51,6 +51,7 @@ namespace arc //! arctk namespace
             //  -- Domain --
             const std::array<size_t, 3>                                        _res;
             const geom::shape::Aabb                                            _box;
+            const vec3                                                         _cell_size;
             std::vector<std::vector<std::vector<std::unique_ptr<phys::Cell>>>> _cells;
 
 
@@ -196,10 +197,10 @@ namespace arc //! arctk namespace
         {
             PRE(_box.contains(pos_));
 
-            const vec3 rel_pos = pos_ - _surf->_min;
-            const auto index_x = static_cast<size_t>(rel_pos.x / _packet_size.x);
-            const auto index_y = static_cast<size_t>(rel_pos.y / _packet_size.y);
-            const auto index_z = static_cast<size_t>(rel_pos.z / _packet_size.z);
+            const vec3 rel_pos = pos_ - _box._min;
+            const auto index_x = static_cast<size_t>(rel_pos.x / _cell_size.x);
+            const auto index_y = static_cast<size_t>(rel_pos.y / _cell_size.y);
+            const auto index_z = static_cast<size_t>(rel_pos.z / _cell_size.z);
 
             POST(index_x < _res[index::dim::cartesian::X]);
             POST(index_y < _res[index::dim::cartesian::Y]);
