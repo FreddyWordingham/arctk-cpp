@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/geom.hpp>
 
 
 
@@ -32,7 +33,7 @@ namespace arc //! arctk namespace
         /**
          *  Data packet base class.
          */
-        class Cell
+        class Cell : public geom::shape::Aabb
         {
             //  == FIELDS ==
           private:
