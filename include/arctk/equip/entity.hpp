@@ -117,8 +117,8 @@ namespace arc //! arctk namespace
             PRE(res_[index::dim::cartesian::Y] > 0);
             PRE(res_[index::dim::cartesian::Z] > 0);
 
-            const vec3 min = _mat.min();
-            const vec3 max = _mat.max();
+            const vec3 min = _surf->min();
+            const vec3 max = _surf->max();
             const vec3 cell_size((max.x - min.x) / res_[index::dim::cartesian::X], (max.y - min.y) / res_[index::dim::cartesian::Y], (max.z - min.z) / res_[index::dim::cartesian::Z]);
 
             std::vector<std::vector<std::vector<std::unique_ptr<phys::Cell>>>> cells;
@@ -137,7 +137,7 @@ namespace arc //! arctk namespace
                     for (size_t k = 0; k < res_[index::dim::cartesian::Z]; ++k)
                     {
                         const vec3 cell_min(min.x + (cell_size.x * i), min.y + (cell_size.y * j), min.z + (cell_size.z * k));
-                        cells.back().back().emplace_back(_mat.create_cell(cell_min, cell_min + cell_size));
+                        cells.back().back().emplace_back(_mat->create_cell(cell_min, cell_min + cell_size));
                     }
                 }
             }
