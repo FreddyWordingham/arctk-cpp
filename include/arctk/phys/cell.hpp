@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline explicit Cell(double vol_) noexcept;
+            inline Cell(const vec3& min_, const vec3& max_) noexcept;
 
 
             //  == METHODS ==
@@ -67,11 +67,10 @@ namespace arc //! arctk namespace
          *
          *  @pre    vol_ must be positive.
          */
-        inline Cell::Cell(const double vol_) noexcept
-          : _vol(vol_)
+        inline Cell::Cell(const vec3& min_, const vec3& max_) noexcept
+          : geom::shape::Aabb(min_, max_)
           , _energy(0.0)
         {
-            PRE(vol_ > 0.0);
         }
 
 
