@@ -228,7 +228,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Cells --
-            inline std::unique_ptr<Cell> Basic::create_cell(const vec3& min_, const vec3& max_) const noexcept override
+            inline std::unique_ptr<Cell> Basic::create_cell(const vec3& min_, const vec3& max_) const noexcept
             {
                 return (CellType(min_, max_));
             }
