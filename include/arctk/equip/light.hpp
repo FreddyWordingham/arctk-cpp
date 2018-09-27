@@ -23,6 +23,7 @@
 
 //  -- Arctk --
 #include <arctk/geom.hpp>
+#include <arctk/phys.hpp>
 #include <arctk/random.hpp>
 
 
@@ -58,9 +59,10 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double             min_wavelength() const noexcept;
-            inline double             max_wavelength() const noexcept;
-            inline const geom::Shape* surf() const noexcept;
+            inline double                 min_wavelength() const noexcept;
+            inline double                 max_wavelength() const noexcept;
+            inline const geom::Shape*     surf() const noexcept;
+            inline phys::particle::Photon emit(random::Generator* rng_, equip::Entity* const cur_ent_) const noexcept;
         };
 
 
@@ -117,6 +119,13 @@ namespace arc //! arctk namespace
         inline const geom::Shape* Light::surf() const noexcept
         {
             return (_surf.get());
+        }
+
+        inline phys::particle::Photon Light::emit(random::Generator* rng_, equip::Entity* const cur_ent_) const noexcept
+        {
+            const std::pair<vec3, vec3> pos_norm = _surf->random_pos_and_norm(rng_);
+
+            return (phys::particle::Photon(pos_norm.first, pos_norm.second, _spec.sample(rng_), cur_ent_));
         }
 
 

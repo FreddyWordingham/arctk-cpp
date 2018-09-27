@@ -28,21 +28,24 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
+    namespace equip //! equipment namespace
+    {
+
+
+
+        //  == CLASS PROTOTYPES ==
+        class Entity;
+
+
+
+    } // namespace equip
+
+
+
     namespace phys //! physics namespace
     {
         namespace particle //! particle namespace
         {
-            namespace equip //! equipment namespace
-            {
-
-
-
-                //  == CLASS PROTOTYPES ==
-                class Entity;
-
-
-
-            } // namespace equip
 
 
 
