@@ -100,7 +100,7 @@ namespace arc //! arctk namespace
           : _surf(std::make_unique<T>(std::forward<T>(surf_)))
           , _mat(std::make_unique<S>(std::forward<S>(mat_)))
           , _res(res_)
-          , _box(_surf.min(), _surf.max())
+          , _box(_surf->min(), _surf->max())
           , _cells(init_cells(res_))
         {
             static_assert(std::is_base_of<geom::Shape, T>::value);
