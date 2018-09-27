@@ -22,6 +22,7 @@
 #include <arctk/phys/material/fluorescent.hpp>
 #include <arctk/phys/optics.hpp>
 #include <arctk/phys/particle.hpp>
+#include <arctk/phys/particle/photon.hpp>
 
 
 
