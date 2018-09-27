@@ -19,7 +19,8 @@
 #include <stack>
 
 //  -- Arctk --
-#include <arctk/equip/entity.hpp>
+#include <arctk/equip.hpp>
+#include <arctk/math.hpp>
 
 
 
@@ -52,6 +53,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Photon(const vec3& pos_, const vec3& dir_, const equip::Entity* cur_ent_, double time_ = 0.0) noexcept;
 
 
                 //  == METHODS ==
@@ -63,6 +65,14 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Photon::Photon(const vec3& pos_, const vec3& dir_, const double _wavelength, const equip::Entity* cur_ent_, const double time_) noexcept
+              : Particle(pos_, dir_, time_)
+              , _wavelength(wavelength_)
+              , _cur_ent(cur_ent_)
+            {
+                PRE((wavelength_ > 0.0) && (wavelength_ < 1000e-9));
+                PRE(cur_ent_ != nullptr)
+            }
 
 
 
