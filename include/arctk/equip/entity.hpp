@@ -194,7 +194,7 @@ namespace arc //! arctk namespace
 
         inline const phys::Cell* Entity::cell(const vec3& pos_) const noexcept
         {
-            PRE(contains(pos_));
+            PRE(_box.contains(pos_));
 
             const vec3 rel_pos = pos_ - _min;
             const auto index_x = static_cast<size_t>(rel_pos.x / _packet_size.x);
