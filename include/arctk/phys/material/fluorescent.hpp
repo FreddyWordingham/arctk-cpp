@@ -21,7 +21,6 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
-#include <arctk/phys/cell.hpp>
 #include <arctk/phys/material.hpp>
 
 
@@ -36,13 +35,7 @@ namespace arc //! arctk namespace
 
 
 
-            //  == CLASSES ==
-            class FluorescentCell : public Cell
-            {
-            };
-
-
-
+            //  == CLASS ==
             /**
              *  Fluorescent material particle class.
              */
