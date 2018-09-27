@@ -3,7 +3,7 @@
  *  @date   16/08/2018
  *  @author Freddy Wordingham
  *
- *  basic material physics class.
+ *  Basic material physics class.
  */
 
 
