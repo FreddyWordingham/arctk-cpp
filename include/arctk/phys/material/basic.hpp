@@ -42,7 +42,9 @@ namespace arc //! arctk namespace
              */
             class Basic : public Material
             {
+                //  == TYPES ==
               public:
+                //  -- Cell --
                 typedef cell::Basic Cell;
 
 
@@ -68,6 +70,8 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Cells --
+                Cell* cell(const vec3& min_, const vec3& max_) const noexcept override;
             };
 
 
