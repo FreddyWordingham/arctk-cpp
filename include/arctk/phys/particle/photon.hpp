@@ -37,6 +37,10 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Properties --
+                const double _wavelength;
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
