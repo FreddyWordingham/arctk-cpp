@@ -198,7 +198,7 @@ namespace arc //! arctk namespace
         {
             PRE(_box.contains(pos_));
 
-            const vec3 rel_pos = pos_ - _box._min;
+            const vec3 rel_pos = pos_ - _box.min();
             const auto index_x = static_cast<size_t>(rel_pos.x / _cell_size.x);
             const auto index_y = static_cast<size_t>(rel_pos.y / _cell_size.y);
             const auto index_z = static_cast<size_t>(rel_pos.z / _cell_size.z);
