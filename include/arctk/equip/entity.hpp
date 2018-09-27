@@ -83,10 +83,10 @@ namespace arc //! arctk namespace
          *  @param  mat_    Material to form the entity volume.
          *  @param  res_    Resolution of the domain.
          *
-         *  @pre    surf_ must be a closed surface.
-         *
          *  @pre    T must be derived from geom::Shape.
          *  @pre    S must be derived from phys::Material.
+         *
+         *  @pre    surf_ must be a closed surface.
          */
         template <typename T, typename S>
         inline Entity::Entity(T&& surf_, S&& mat_, const std::array<size_t, 3>& res_) noexcept
@@ -98,6 +98,7 @@ namespace arc //! arctk namespace
             static_assert(std::is_base_of<phys::Material, S>::value);
 
             PRE(surf_.closed());
+            PRE(res_[] > 0);
         }
 
 
