@@ -75,7 +75,6 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline FluorescentCell cell_type() const noexcept;
             };
 
 
@@ -323,10 +322,6 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            inline math::FluorescentCell cell_type() const noexcept
-            {
-                return (FluorescentCell());
-            }
 
 
 
