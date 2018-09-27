@@ -92,12 +92,6 @@ namespace arc //! arctk namespace
             static_assert(std::is_base_of<phys::Material, S>::value);
 
             PRE(surf_.closed());
-            PRE(math::compare::equal(dom_.min().x, surf_.min().x));
-            PRE(math::compare::equal(dom_.min().y, surf_.min().y));
-            PRE(math::compare::equal(dom_.min().z, surf_.min().z));
-            PRE(math::compare::equal(dom_.max().x, surf_.max().x));
-            PRE(math::compare::equal(dom_.max().y, surf_.max().y));
-            PRE(math::compare::equal(dom_.max().z, surf_.max().z));
         }
 
 
