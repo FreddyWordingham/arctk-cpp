@@ -15,13 +15,7 @@
 
 
 //  == IMPORTS ==
-//  -- Std --
-#include <array>
-#include <string>
-#include <tuple>
-
 //  -- Arctk --
-#include <arctk/data.hpp>
 #include <arctk/debug.hpp>
 
 
@@ -38,7 +32,7 @@ namespace arc //! arctk namespace
         /**
          *  Data packet base class.
          */
-        class Cell : public data::Packet
+        class Cell
         {
             //  == FIELDS ==
           private:
