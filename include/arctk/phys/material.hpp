@@ -70,7 +70,7 @@ namespace arc //! arctk namespace
             inline double max() const noexcept;
 
             //  -- Cells --
-            virtual std::unique_ptr<Cell> create_cell(const vec3& min_, const vec3& max_) const noexcept;
+            virtual std::unique_ptr<Cell> create_cell(const vec3& min_, const vec3& max_) const noexcept = 0;
         };
 
 
