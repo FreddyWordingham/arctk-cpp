@@ -98,7 +98,9 @@ namespace arc //! arctk namespace
             static_assert(std::is_base_of<phys::Material, S>::value);
 
             PRE(surf_.closed());
-            PRE(res_[] > 0);
+            PRE(res_[index::dim::cartesian::X] > 0);
+            PRE(res_[index::dim::cartesian::Y] > 0);
+            PRE(res_[index::dim::cartesian::Z] > 0);
         }
 
 
