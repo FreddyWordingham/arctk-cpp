@@ -71,6 +71,9 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline double interact(const particle::Photon& phot_, const Cell& /*unused*/) const noexcept override;
+
                 //  -- Cells --
                 inline std::unique_ptr<Cell> create_cell(const vec3& min_, const vec3& max_) const noexcept override;
             };
@@ -227,6 +230,13 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Getters --
+            inline double Basic::interact(const particle::Photon& phot_, const Cell& /*unused*/) const noexcept
+            {
+                return (1.0);
+            }
+
+
             //  -- Cells --
             inline std::unique_ptr<Cell> Basic::create_cell(const vec3& min_, const vec3& max_) const noexcept
             {
