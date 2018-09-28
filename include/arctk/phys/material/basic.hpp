@@ -245,7 +245,7 @@ namespace arc //! arctk namespace
                 return (-std::log(rng_->gen()) / _interact_coef(phot_.wavelength()));
             }
 
-            inline void Basic::interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const cell_) const noexcept override
+            inline void Basic::interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const cell_) const noexcept
             {
             }
 
