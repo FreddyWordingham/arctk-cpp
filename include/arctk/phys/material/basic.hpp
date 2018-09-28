@@ -77,7 +77,7 @@ namespace arc //! arctk namespace
 
                 //  -- Interaction --
                 inline double interact_dist(random::Generator* const rng_, const particle::Photon& phot_, const Cell& /*unused*/) const noexcept override;
-                inline void   interact(random::Generator* const rng_, particle::Photon* const phot_, const Cell& cell_) const noexcept override;
+                inline void   interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const cell_) const noexcept override;
             };
 
 
@@ -243,6 +243,10 @@ namespace arc //! arctk namespace
             inline double Basic::interact_dist(random::Generator* const rng_, const particle::Photon& phot_, const Cell& /*unused*/) const noexcept
             {
                 return (-std::log(rng_->gen()) / _interact_coef(phot_.wavelength()));
+            }
+
+            inline void Basic::interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const cell_) const noexcept override
+            {
             }
 
 
