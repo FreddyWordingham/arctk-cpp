@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline double  min() const noexcept;
             inline double  max() const noexcept;
-            virtual double interact(const particle::Photon& phot_, const Cell& cell_) const noexcept = 0;
+            virtual double interact(Generator* const rng_, const particle::Photon& phot_, const Cell& cell_) const noexcept = 0;
 
             //  -- Cells --
             virtual std::unique_ptr<Cell> create_cell(const vec3& min_, const vec3& max_) const noexcept = 0;
