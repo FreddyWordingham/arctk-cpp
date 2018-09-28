@@ -250,7 +250,7 @@ namespace arc //! arctk namespace
             {
                 phot_->multiply_weight(_albedo(phot_->wavelength()));
 
-                phot_->rotate(rng_->gen() * consts::math::TWO_PI, random::distribution::henyey_greenstein(rng_, _asym(phot_->wavelength())));
+                phot_->rotate(random::distribution::henyey_greenstein(rng_, _asym(phot_->wavelength())), rng_->gen() * consts::math::TWO_PI);
             }
 
 
