@@ -234,7 +234,7 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline double Basic::interact(random::Generator* const rng_, const particle::Photon& phot_, const Cell& /*unused*/) const noexcept
             {
-                return (-std::log(rng_.gen()) / _interact_coef(phot_.wavelength()));
+                return (-std::log(rng_->gen()) / _interact_coef(phot_.wavelength()));
             }
 
 
