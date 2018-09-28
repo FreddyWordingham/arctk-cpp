@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
             inline double                max_wavelength() const noexcept;
             inline const geom::Shape*    surf() const noexcept;
             inline const phys::Material* mat() const noexcept;
-            inline const phys::Cell*     cell(const vec3& pos_) const noexcept;
+            inline phys::Cell*           cell(const vec3& pos_) const noexcept;
         };
 
 
@@ -194,7 +194,7 @@ namespace arc //! arctk namespace
             return (_mat.get());
         }
 
-        inline const phys::Cell* Entity::cell(const vec3& pos_) const noexcept
+        inline phys::Cell* Entity::cell(const vec3& pos_) const noexcept
         {
             PRE(_box.contains(pos_));
 
