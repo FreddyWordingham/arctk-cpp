@@ -21,6 +21,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/phys/cell.hpp>
+#include <arctk/phys/particle/photon.hpp>
 
 
 
@@ -66,8 +67,9 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double min() const noexcept;
-            inline double max() const noexcept;
+            inline double  min() const noexcept;
+            inline double  max() const noexcept;
+            virtual double interact(const particle::Photon& phot_, const Cell& cell_) const noexcept = 0;
 
             //  -- Cells --
             virtual std::unique_ptr<Cell> create_cell(const vec3& min_, const vec3& max_) const noexcept = 0;
