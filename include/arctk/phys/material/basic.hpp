@@ -20,6 +20,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/consts.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
 #include <arctk/phys/cell/basic.hpp>
@@ -247,6 +248,9 @@ namespace arc //! arctk namespace
 
             inline void Basic::interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const cell_) const noexcept
             {
+                phot_->multiply_weight(_albedo(phot_->wavelength()));
+
+                phot_->rotate(rng_->gen() * consts::math::TWO_PI, random::distribution::henyey_greenstein(rng_, _asym(phot_->wavelength())));
             }
 
 
