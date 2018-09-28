@@ -77,6 +77,10 @@ namespace arc //! arctk namespace
               public:
                 //  -- Cells --
                 inline std::unique_ptr<Cell> create_cell(const vec3& min_, const vec3& max_) const noexcept override;
+
+                //  -- Interaction --
+                inline double interact_dist(random::Generator* const rng_, const particle::Photon& phot_, const Cell& /*unused*/) const noexcept override;
+                inline void   interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const cell_) const noexcept override;
             };
 
 
@@ -327,6 +331,20 @@ namespace arc //! arctk namespace
             inline std::unique_ptr<Cell> Fluorescent::create_cell(const vec3& min_, const vec3& max_) const noexcept
             {
                 return (std::make_unique<CellType>(min_, max_));
+            }
+
+
+            //  -- Interaction --
+            inline double Fluorescent::interact_dist(random::Generator* const rng_, const particle::Photon& phot_, const Cell& /*unused*/) const noexcept
+            {
+                return (-std::log(rng_->gen()) / _interact_coef(phot_.wavelength()));
+            }
+
+            inline void Fluorescent::interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const cell_) const noexcept
+            {
+                phot_->multiply_weight(_albedo(phot_->wavelength()));
+
+                phot_->rotate(random::distribution::henyey_greenstein(rng_, _asym(phot_->wavelength())), rng_->gen() * consts::math::TWO_PI);
             }
 
 
