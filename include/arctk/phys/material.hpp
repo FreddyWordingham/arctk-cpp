@@ -68,12 +68,14 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double  min() const noexcept;
-            inline double  max() const noexcept;
-            virtual double interact(random::Generator* const rng_, const particle::Photon& phot_, const Cell& cell_) const noexcept = 0;
+            inline double min() const noexcept;
+            inline double max() const noexcept;
 
             //  -- Cells --
             virtual std::unique_ptr<Cell> create_cell(const vec3& min_, const vec3& max_) const noexcept = 0;
+
+            //  -- Interaction --
+            virtual double interact_dist(random::Generator* const rng_, const particle::Photon& phot_, const Cell& cell_) const noexcept = 0;
         };
 
 
