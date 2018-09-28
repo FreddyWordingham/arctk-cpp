@@ -72,11 +72,11 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
-                //  -- Getters --
-                inline double interact(random::Generator* const rng_, const particle::Photon& phot_, const Cell& /*unused*/) const noexcept override;
-
                 //  -- Cells --
                 inline std::unique_ptr<Cell> create_cell(const vec3& min_, const vec3& max_) const noexcept override;
+
+                //  -- Interaction --
+                inline double interact(random::Generator* const rng_, const particle::Photon& phot_, const Cell& /*unused*/) const noexcept override;
             };
 
 
@@ -231,17 +231,17 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
-            //  -- Getters --
-            inline double Basic::interact(random::Generator* const rng_, const particle::Photon& phot_, const Cell& /*unused*/) const noexcept
-            {
-                return (-std::log(rng_->gen()) / _interact_coef(phot_.wavelength()));
-            }
-
-
             //  -- Cells --
             inline std::unique_ptr<Cell> Basic::create_cell(const vec3& min_, const vec3& max_) const noexcept
             {
                 return (std::make_unique<CellType>(min_, max_));
+            }
+
+
+            //  -- Interaction --
+            inline double Basic::interact_dist(random::Generator* const rng_, const particle::Photon& phot_, const Cell& /*unused*/) const noexcept
+            {
+                return (-std::log(rng_->gen()) / _interact_coef(phot_.wavelength()));
             }
 
 
