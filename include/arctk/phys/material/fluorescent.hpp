@@ -338,9 +338,6 @@ namespace arc //! arctk namespace
             //  -- Optical Properties --
             inline double Fluorescent::ref_index(const double wavelength_) const noexcept
             {
-                PRE(wavelength_ >= min_);
-                PRE(wavelength_ <= max_);
-
                 return (_ref_index(wavelength_));
             }
 
