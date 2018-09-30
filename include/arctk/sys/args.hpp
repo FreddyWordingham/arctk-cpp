@@ -45,6 +45,11 @@ namespace arc //! arctk namespace
         template <typename... A>
         class Args
         {
+            //  == ASSERTIONS ==
+            //  -- Size --
+            static_assert(sizeof...(A) > 0);
+
+
             //  == FIELDS ==
           private:
             //  -- Information --
@@ -125,12 +130,14 @@ namespace arc //! arctk namespace
                 std::exit(exit::error::INVALID_COMMAND_LINE_ARGUMENTS);
             }
 
-            std::string str("<");
+            std::string str();
+            str += ;
             for (size_t i = 0; i < argv.size(); ++i)
             {
                 str += argv[i];
             }
-            str += '>';
+            str += ;
+            std::cout << ":" << str << ":" << '\n';
 
             return (io::parse<std::tuple<A...>>(&str));
         }
