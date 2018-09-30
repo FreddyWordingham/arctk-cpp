@@ -77,7 +77,7 @@ namespace arc //! arctk namespace
                 inline std::unique_ptr<Cell> create_cell(const vec3& min_, const vec3& max_) const noexcept override;
 
                 //  -- Optical Properties --
-                inline double ref_index() const noexcept override;
+                inline double ref_index(double wavelength_) const noexcept override;
                 inline double interact_dist(random::Generator* const rng_, const particle::Photon& phot_, const Cell& /*unused*/) const noexcept override;
                 inline void   interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const cell_) const noexcept override;
             };
@@ -241,9 +241,13 @@ namespace arc //! arctk namespace
             }
 
 
-            //  -- Interaction --
-            inline double Basic::ref_index() const noexcept override
+            //  -- Optical Properties --
+            inline double Basic::ref_index(const double wavelength_) const noexcept override
             {
+                PRE(wavelength_ >= min_);
+                PRE(wavelength_ <= max_);
+
+                return (_ref_index(wavelength_));
             }
 
             inline double Basic::interact_dist(random::Generator* const rng_, const particle::Photon& phot_, const Cell& /*unused*/) const noexcept
