@@ -131,7 +131,7 @@ namespace arc //! arctk namespace
                 str += argv[i];
             }
 
-            return (io::parse<std::tuple<A...>>(str));
+            return (io::input::parse<std::tuple<A...>>(str));
         }
 
 
