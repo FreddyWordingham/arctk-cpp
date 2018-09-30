@@ -504,7 +504,7 @@ namespace arc //! arctk namespace
 
                     for (size_t j = 0; j < 3; ++j)
                     {
-                        PRE(pos_indices[i] < poss_.size());
+                        PRE(pos_indices[j] < poss_.size());
 
                         used[pos_indices[j]] = true;
                     }
@@ -542,7 +542,7 @@ namespace arc //! arctk namespace
 
                     for (size_t j = 0; j < 3; ++j)
                     {
-                        PRE(norm_indices[i] < norms_.size());
+                        PRE(norm_indices[j] < norms_.size());
 
                         used[norm_indices[j]] = true;
                     }
