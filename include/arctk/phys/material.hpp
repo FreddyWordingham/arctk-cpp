@@ -74,7 +74,8 @@ namespace arc //! arctk namespace
             //  -- Cells --
             virtual std::unique_ptr<Cell> create_cell(const vec3& min_, const vec3& max_) const noexcept = 0;
 
-            //  -- Interaction --
+            //  -- Optical Properties --
+            virtual double ref_index() const noexcept                                                                                    = 0;
             virtual double interact_dist(random::Generator* const rng_, const particle::Photon& phot_, const Cell& cell_) const noexcept = 0;
             virtual void   interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const cell_) const noexcept      = 0;
         };

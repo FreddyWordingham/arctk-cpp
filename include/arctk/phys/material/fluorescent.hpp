@@ -78,7 +78,7 @@ namespace arc //! arctk namespace
                 //  -- Cells --
                 inline std::unique_ptr<Cell> create_cell(const vec3& min_, const vec3& max_) const noexcept override;
 
-                //  -- Interaction --
+                //  -- Optical Properties --
                 inline double interact_dist(random::Generator* const rng_, const particle::Photon& phot_, const Cell& /*unused*/) const noexcept override;
                 inline void   interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const cell_) const noexcept override;
             };
