@@ -17,11 +17,13 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <tuple>
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/consts.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/io.hpp>
@@ -119,7 +121,7 @@ namespace arc //! arctk namespace
         {
             PRE(argc_ > 0);
 
-            const std::vector<std::string> argv(argv_ + 1, argv_ + argc_);
+            const std::vector<const char*> argv(argv_ + 1, argv_ + argc_);
 
             if (argv.size() != sizeof...(A))
             {
@@ -130,14 +132,15 @@ namespace arc //! arctk namespace
                 std::exit(exit::error::INVALID_COMMAND_LINE_ARGUMENTS);
             }
 
-            std::string str();
-            str += ;
-            for (size_t i = 0; i < argv.size(); ++i)
+            std::stringstream stream;
+            stream << consts::format::OPENERS[consts::format::container::TUPLE] << argv[0];
+            for (size_t i = 1; i < argv.size(); ++i)
             {
-                str += argv[i];
+                stream << consts::format::DELIM << argv[i];
             }
-            str += ;
-            std::cout << ":" << str << ":" << '\n';
+            stream << consts::format::CLOSERS[consts::format::container::TUPLE];
+
+            std::string str(stream.str());
 
             return (io::parse<std::tuple<A...>>(&str));
         }
