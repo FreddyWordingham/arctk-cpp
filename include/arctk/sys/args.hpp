@@ -125,13 +125,14 @@ namespace arc //! arctk namespace
                 std::exit(exit::error::INVALID_COMMAND_LINE_ARGUMENTS);
             }
 
-            std::string str;
+            std::string str("<");
             for (size_t i = 0; i < argv.size(); ++i)
             {
                 str += argv[i];
             }
+            str += '>';
 
-            return (io::parse<std::tuple<A...>>(str));
+            return (io::parse<std::tuple<A...>>(&str));
         }
 
 
