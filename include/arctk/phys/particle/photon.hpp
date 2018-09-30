@@ -59,6 +59,7 @@ namespace arc //! arctk namespace
               private:
                 //  -- Properties --
                 const double _wavelength;
+                const double _ref_index;
                 const double _energy;
 
                 //  -- Tracking --
@@ -76,6 +77,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Getters --
                 inline double               wavelength() const noexcept;
+                inline double               ref_index() const noexcept;
                 inline const equip::Entity* entity() const noexcept;
 
                 //  -- Traversal --
