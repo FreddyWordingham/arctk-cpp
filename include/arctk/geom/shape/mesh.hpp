@@ -26,6 +26,7 @@
 #include <arctk/debug.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/geom/shape.hpp>
+#include <arctk/geom/shape/aabb.hpp>
 #include <arctk/geom/shape/triangle.hpp>
 #include <arctk/index.hpp>
 #include <arctk/math.hpp>
