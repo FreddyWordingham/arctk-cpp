@@ -101,7 +101,7 @@ namespace arc //! arctk namespace
           : _surf(std::make_unique<T>(std::forward<T>(surf_)))
           , _mat(std::make_unique<S>(std::forward<S>(mat_)))
           , _res(res_)
-          , _box(_surf->min() - vec3(0.1, 0.1, 0.1), _surf->max() + vec3(0.1, 0.1, 0.1)) // TODO
+          , _box(_surf->min(), _surf->max())
           , _cell_size((_box.max().x - _box.min().x) / res_[index::dim::cartesian::X], (_box.max().y - _box.min().y) / res_[index::dim::cartesian::Y], (_box.max().z - _box.min().z) / res_[index::dim::cartesian::Z])
           , _cells(init_cells(res_))
         {
@@ -122,8 +122,8 @@ namespace arc //! arctk namespace
             PRE(res_[index::dim::cartesian::Y] > 0);
             PRE(res_[index::dim::cartesian::Z] > 0);
 
-            const vec3 min = _surf->min() - vec3(0.1, 0.1, 0.1); // TODO
-            const vec3 max = _surf->max() + vec3(0.1, 0.1, 0.1); // TODO
+            const vec3 min = _surf->min();
+            const vec3 max = _surf->max();
             const vec3 cell_size((max.x - min.x) / res_[index::dim::cartesian::X], (max.y - min.y) / res_[index::dim::cartesian::Y], (max.z - min.z) / res_[index::dim::cartesian::Z]);
 
             std::vector<std::vector<std::vector<std::unique_ptr<phys::Cell>>>> cells;
