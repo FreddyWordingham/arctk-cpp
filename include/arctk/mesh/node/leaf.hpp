@@ -71,6 +71,7 @@ namespace arc //! arctk namespace
                     std::optional<std::tuple<double, vec3, const equip::Entity*>> collision(std::nullopt);
                     for (size_t i = 0; i < _entities.size(); ++i)
                     {
+                        std::cout << i << '\n';
                         const std::optional<std::pair<double, vec3>> coll = _entities[i].first.collision_norm(pos_, dir_);
 
                         if (coll && (!collision || (coll.value().first < std::get<0>(collision.value()))))
@@ -114,6 +115,7 @@ namespace arc //! arctk namespace
               , _entities(entities_)
               , _detectors(detectors_)
             {
+                std::cout << entities_.size() << '\t' << _entities.size() << '\n';
                 PRE(min_.x < max_.x);
                 PRE(min_.y < max_.y);
                 PRE(min_.z < max_.z);

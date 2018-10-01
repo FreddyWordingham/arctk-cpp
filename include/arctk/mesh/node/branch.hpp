@@ -174,7 +174,7 @@ namespace arc //! arctk namespace
 
                             if (depth_limit_reached || (total_primitives <= target_shapes_))
                             {
-                                childs[i][j][k] = std::make_unique<Leaf>(min, max, lights, entities, detectors, cur_depth_);
+                                childs[i][j][k] = std::make_unique<Leaf>(min, max, lights, entities, detectors, cur_depth_ + 1);
                             }
                             else
                             {
