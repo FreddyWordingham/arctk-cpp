@@ -77,6 +77,7 @@ namespace arc //! arctk namespace
                 //  -- Getters --
                 inline double               wavelength() const noexcept;
                 inline const equip::Entity* entity() const noexcept;
+                inline const equip::Entity* prev_entity() const noexcept;
 
                 //  -- Traversal --
                 inline bool enter_entity(equip::Entity* const ent_) noexcept;
@@ -109,6 +110,13 @@ namespace arc //! arctk namespace
             inline const equip::Entity* Photon::entity() const noexcept
             {
                 return (_cur_ent);
+            }
+
+            inline const equip::Entity* prev_entity() const noexcept
+            {
+                PRE(_ent_stack.size() >= 1);
+
+                return (_ent_stack.top());
             }
 
 
