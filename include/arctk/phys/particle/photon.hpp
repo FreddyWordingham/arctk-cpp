@@ -112,7 +112,7 @@ namespace arc //! arctk namespace
                 return (_cur_ent);
             }
 
-            inline const equip::Entity* prev_entity() const noexcept
+            inline const equip::Entity* Photon::prev_entity() const noexcept
             {
                 PRE(_ent_stack.size() >= 1);
 
