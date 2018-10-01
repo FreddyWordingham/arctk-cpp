@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
          */
         inline Adaptive::Adaptive(const vec3& min_, const vec3& max_, const std::vector<equip::Light>& lights_, const std::vector<equip::Entity>& entities_, const std::vector<equip::Detector>& detectors_, const size_t max_depth_,
                                   const size_t target_shapes_) noexcept
-          : Branch(min_, max_, init_light_shape_list(geom::shape::Aabb(min_, max_), lights_), init_entity_shape_list(geom::shape::Aabb(min_, max_), entities_), init_detector_shape_list(geom::shape::Aabb(min_, max_), detectors_), 0, max_depth_,
+          : Branch(min_, max_, init_light_shape_list(geom::shape::Aabb(min_, max_), lights_), init_entity_shape_list(geom::shape::Aabb(min_, max_), entities_), init_detector_shape_list(geom::shape::Aabb(min_, max_), detectors_), 1, max_depth_,
                    target_shapes_)
         {
             PRE(min_.x < max_.x);
