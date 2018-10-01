@@ -62,10 +62,25 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline size_t                         max_depth() const noexcept override;
-                inline size_t                         max_shapes() const noexcept override;
-                inline size_t                         num_nodes() const noexcept override;
-                inline std::vector<geom::shape::Aabb> boxes() const noexcept override;
+                inline size_t                                                        max_depth() const noexcept override;
+                inline size_t                                                        max_shapes() const noexcept override;
+                inline size_t                                                        num_nodes() const noexcept override;
+                inline std::vector<geom::shape::Aabb>                                boxes() const noexcept override;
+                inline std::optional<std::tuple<double, vec3, const equip::Entity*>> intersect_entity(const vec3& pos_, const vec3& dir_) const noexcept
+                {
+                    std::optional<std::tuple<double, vec3, const equip::Entity*>> collision(std::nullopt);
+                    for (size_t i = 0; i < _entities.size(); ++i)
+                    {
+                        const std::optional<std::pair<double, vec3>> coll = _entities[i].first.collision_norm(pos_, dir_);
+
+                        if (coll && (!collision || (coll.value().first < std::get<0>(collision.value()))))
+                        {
+                            collision = std::optional<std::tuple<double, vec3, const equip::Entity*>>(std::tuple<double, vec3, const equip::Entity*>(coll.value().first, coll.value().second, &_entities[i].second));
+                        }
+                    }
+
+                    return (collision);
+                }
 
                 //  -- Retrieval --
                 inline Leaf const* leaf(const vec3& pos_) const noexcept override;
