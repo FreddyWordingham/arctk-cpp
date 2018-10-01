@@ -66,22 +66,7 @@ namespace arc //! arctk namespace
                 inline size_t                                                        max_shapes() const noexcept override;
                 inline size_t                                                        num_nodes() const noexcept override;
                 inline std::vector<geom::shape::Aabb>                                boxes() const noexcept override;
-                inline std::optional<std::tuple<double, vec3, const equip::Entity*>> intersect_entity(const vec3& pos_, const vec3& dir_) const noexcept
-                {
-                    std::optional<std::tuple<double, vec3, const equip::Entity*>> collision(std::nullopt);
-                    for (size_t i = 0; i < _entities.size(); ++i)
-                    {
-                        std::cout << i << '\n';
-                        const std::optional<std::pair<double, vec3>> coll = _entities[i].first.collision_norm(pos_, dir_);
-
-                        if (coll && (!collision || (coll.value().first < std::get<0>(collision.value()))))
-                        {
-                            collision = std::optional<std::tuple<double, vec3, const equip::Entity*>>(std::tuple<double, vec3, const equip::Entity*>(coll.value().first, coll.value().second, &_entities[i].second));
-                        }
-                    }
-
-                    return (collision);
-                }
+                inline std::optional<std::tuple<double, vec3, const equip::Entity*>> intersect_entity(const vec3& pos_, const vec3& dir_) const noexcept;
 
                 //  -- Retrieval --
                 inline Leaf const* leaf(const vec3& pos_) const noexcept override;
@@ -115,7 +100,7 @@ namespace arc //! arctk namespace
               , _entities(entities_)
               , _detectors(detectors_)
             {
-                std::cout << entities_.size() << '\t' << _entities.size() << '\n';
+                std::cout << entities_.size() << '\t' << _entities.size() << ((max_ + min_) / 2.0) << '\n';
                 PRE(min_.x < max_.x);
                 PRE(min_.y < max_.y);
                 PRE(min_.z < max_.z);
@@ -176,6 +161,25 @@ namespace arc //! arctk namespace
             inline std::vector<geom::shape::Aabb> Leaf::boxes() const noexcept
             {
                 return (std::vector<geom::shape::Aabb>({geom::shape::Aabb(_min, _max)}));
+            }
+
+            inline std::optional<std::tuple<double, vec3, const equip::Entity*>> Leaf::intersect_entity(const vec3& pos_, const vec3& dir_) const noexcept
+            {
+                PRE(contains(pos_));
+
+                std::optional<std::tuple<double, vec3, const equip::Entity*>> collision(std::nullopt);
+                for (size_t i = 0; i < _entities.size(); ++i)
+                {
+                    std::cout << i << '\n';
+                    const std::optional<std::pair<double, vec3>> coll = _entities[i].first.collision_norm(pos_, dir_);
+
+                    if (coll && (!collision || (coll.value().first < std::get<0>(collision.value()))))
+                    {
+                        collision = std::optional<std::tuple<double, vec3, const equip::Entity*>>(std::tuple<double, vec3, const equip::Entity*>(coll.value().first, coll.value().second, &_entities[i].second));
+                    }
+                }
+
+                return (collision);
             }
 
 
