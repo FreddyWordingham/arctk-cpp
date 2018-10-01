@@ -101,7 +101,7 @@ namespace arc //! arctk namespace
           : _surf(std::make_unique<T>(std::forward<T>(surf_)))
           , _mat(std::make_unique<S>(std::forward<S>(mat_)))
           , _res(res_)
-          , _box(_surf->min(), _surf->max())
+          , _box(_surf->min() - vec3(0.1, 0.1, 0.1), _surf->max() + vec3(0.1, 0.1, 0.1)) // TODO
           , _cell_size((_box.max().x - _box.min().x) / res_[index::dim::cartesian::X], (_box.max().y - _box.min().y) / res_[index::dim::cartesian::Y], (_box.max().z - _box.min().z) / res_[index::dim::cartesian::Z])
           , _cells(init_cells(res_))
         {
