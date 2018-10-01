@@ -69,15 +69,7 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::FILE_OPEN_FAILED);
                 }
 
-                std::string str;
-
-                file.seekg(0, std::ios::end);
-                str.reserve(static_cast<size_t>(file.tellg()));
-                file.seekg(0, std::ios::beg);
-
-                str.assign((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
-
-                return (str);
+                return (std::string((std::istreambuf_iterator<char>(ifs)), (std::istreambuf_iterator<char>())););
             }
 
 
