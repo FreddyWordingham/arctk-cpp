@@ -100,7 +100,6 @@ namespace arc //! arctk namespace
               , _entities(entities_)
               , _detectors(detectors_)
             {
-                std::cout << entities_.size() << '\t' << _entities.size() << ((max_ + min_) / 2.0) << '\n';
                 PRE(min_.x < max_.x);
                 PRE(min_.y < max_.y);
                 PRE(min_.z < max_.z);
