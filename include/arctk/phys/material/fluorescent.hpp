@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
                 //  == TYPES ==
               public:
                 //  -- Cell --
-                typedef cell::Fluorescent CellType;
+                typedef cell::Fluorescent CellType; //!< Cell type used by the material.
 
 
                 //  == FIELDS ==
