@@ -49,9 +49,9 @@ namespace arc //! arctk namespace
             std::unique_ptr<phys::Material> _mat;  //!< Matrial composing the entity's volume.
 
             //  -- Domain --
-            const std::array<size_t, 3>                                        _res; //!< Resolution of the domain cell grid.
-            const geom::shape::Aabb                                            _box; //!< Bounding box of the entity.
-            const vec3                                                         _cell_size;
+            const std::array<size_t, 3>                                        _res;       //!< Resolution of the domain cell grid.
+            const geom::shape::Aabb                                            _box;       //!< Bounding box of the entity.
+            const vec3                                                         _cell_size; //!< Size of each domain cell.
             std::vector<std::vector<std::vector<std::unique_ptr<phys::Cell>>>> _cells;
 
 
