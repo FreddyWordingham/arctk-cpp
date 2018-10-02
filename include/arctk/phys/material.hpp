@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
             inline double max() const noexcept;
 
             //  -- Cells --
-            virtual std::unique_ptr<Cell> create_cell(const vec3& min_, const vec3& max_) const noexcept = 0;
+            virtual std::unique_ptr<Cell> create_cell(const vec3& min_, const vec3& max_) const noexcept = 0;   //!<  Create a unique pointer to a cell of the type used by the material. @param  min_    Minimum bound of the cell.  @param  max_    Maximum bound of the cell.  @return Unique pointer to a cell of the type used by the material.
 
             //  -- Optical Properties --
             virtual double ref_index(double wavelength_) const noexcept                                                                  = 0;
