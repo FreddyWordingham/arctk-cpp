@@ -329,6 +329,18 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Cells --
+            /**
+             *  Create a unique pointer to a cell of the type used by the material.
+             *
+             *  @param  min_    Minimum bound of the cell.
+             *  @param  max_    Maximum bound of the cell.
+             *
+             *  @pre    min_.x must be less than max_.x.
+             *  @pre    min_.y must be less than max_.y.
+             *  @pre    min_.z must be less than max_.z.
+             *
+             *  @return Unique pointer to a cell of the type used by the material.
+             */
             inline std::unique_ptr<Cell> Fluorescent::create_cell(const vec3& min_, const vec3& max_) const noexcept
             {
                 PRE(min_.x < max_.x);
