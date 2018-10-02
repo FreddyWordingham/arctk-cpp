@@ -364,6 +364,14 @@ namespace arc //! arctk namespace
                 return (_ref_index(wavelength_));
             }
 
+            /**
+             *  Determine the distance to the next photon interaction.
+             *
+             *  @param  rng_    Random number generator.
+             *  @param  phot_   Photon to find the interaction distance for.
+             *
+             *  @return Distance to the next photon interaction.
+             */
             inline double Fluorescent::interact_dist(random::Generator* const rng_, const particle::Photon& phot_, const Cell& /*unused*/) const noexcept
             {
                 return (-std::log(rng_->gen()) / _interact_coef(phot_.wavelength()));
