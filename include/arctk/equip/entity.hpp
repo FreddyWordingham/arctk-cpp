@@ -194,6 +194,13 @@ namespace arc //! arctk namespace
             return (_mat.get());
         }
 
+        /**
+         *  Get the domain cell corresponding to a given position.
+         *
+         *  @param  pos_    Position to find the domain cell for.
+         *
+         *  @return Domain cell corresponding to a given position.
+         */
         inline phys::Cell* Entity::cell(const vec3& pos_) const noexcept
         {
             PRE(_box.contains(pos_));
