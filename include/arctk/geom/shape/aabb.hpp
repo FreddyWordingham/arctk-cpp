@@ -404,8 +404,7 @@ namespace arc //! arctk namespace
              */
             inline bool Aabb::contains(const vec3& pos_) const noexcept
             {
-                // TODO: Optimise
-                return ((pos_.x >= _min.x) && (pos_.x <= _max.x) && (pos_.y >= _min.y) && (pos_.y <= _max.y) && (pos_.z >= _min.z) && (pos_.z <= _max.z));
+                return (!((pos_.x < _min.x) || (pos_.x > _max.x) || (pos_.y < _min.y) || (pos_.y > _max.y) || (pos_.z < _min.z) || (pos_.z > _max.z)));
             }
 
 
