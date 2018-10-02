@@ -63,14 +63,20 @@ namespace arc //! arctk namespace
         /**
          *  Construct a data cell packet with a given volume.
          *
-         *  @param  vol_    Volume of the cell.
+         *  @param  min_    Minimum bound of the cell.
+         *  @param  max_    Maximum bound of the cell.
          *
-         *  @pre    vol_ must be positive.
+         *  @pre    min_.x must be less than max_.x.
+         *  @pre    min_.y must be less than max_.y.
+         *  @pre    min_.z must be less than max_.z.
          */
         inline Cell::Cell(const vec3& min_, const vec3& max_) noexcept
           : geom::shape::Aabb(min_, max_)
           , _energy(0.0)
         {
+            PRE(min_.x < max_.x);
+            PRE(min_.y < max_.y);
+            PRE(min_.z < max_.z);
         }
 
 
