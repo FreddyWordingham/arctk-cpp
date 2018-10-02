@@ -121,6 +121,14 @@ namespace arc //! arctk namespace
             return (_surf.get());
         }
 
+        /**
+         *  Emit a photon from the light source.
+         *
+         *  @param  rng_        Random number generator.
+         *  @param  cur_ent_    Entity to emit the photon within.
+         *
+         *  @return Newly emitted photon.
+         */
         inline phys::particle::Photon Light::emit(random::Generator* rng_, equip::Entity* const cur_ent_) const noexcept
         {
             const std::pair<vec3, vec3> pos_norm = _surf->random_pos_and_norm(rng_);
