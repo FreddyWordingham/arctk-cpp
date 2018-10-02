@@ -352,6 +352,13 @@ namespace arc //! arctk namespace
 
 
             //  -- Optical Properties --
+            /**
+             *  Get the refractive index of the material for a given wavelength.
+             *
+             *  @param  wavelength_ Wavelength to find the refractive index of.
+             *
+             *  @return Refractive index of the material for a given wavelength.
+             */
             inline double Fluorescent::ref_index(const double wavelength_) const noexcept
             {
                 return (_ref_index(wavelength_));
