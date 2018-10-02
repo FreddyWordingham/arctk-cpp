@@ -331,6 +331,10 @@ namespace arc //! arctk namespace
             //  -- Cells --
             inline std::unique_ptr<Cell> Fluorescent::create_cell(const vec3& min_, const vec3& max_) const noexcept
             {
+                PRE(min_.x < max_.x);
+                PRE(min_.y < max_.y);
+                PRE(min_.z < max_.z);
+
                 return (std::make_unique<CellType>(min_, max_));
             }
 
