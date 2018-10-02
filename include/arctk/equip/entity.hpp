@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
             std::unique_ptr<phys::Material> _mat;  //!< Matrial composing the entity's volume.
 
             //  -- Domain --
-            const std::array<size_t, 3>                                        _res;
+            const std::array<size_t, 3>                                        _res; //!< Resolution of the domain cell grid.
             const geom::shape::Aabb                                            _box;
             const vec3                                                         _cell_size;
             std::vector<std::vector<std::vector<std::unique_ptr<phys::Cell>>>> _cells;
@@ -118,9 +118,9 @@ namespace arc //! arctk namespace
         //  -- Initialisation --
         /**
          *  Initialise the three dimensional vector of domain cells.
-         * 
+         *
          *  @param  res_    Resolution of the cell domain.
-         * 
+         *
          *  @return Initialised three dimensional vector of domain cells.
          */
         inline std::vector<std::vector<std::vector<std::unique_ptr<phys::Cell>>>> Entity::init_cells(const std::array<size_t, 3>& res_) const noexcept
