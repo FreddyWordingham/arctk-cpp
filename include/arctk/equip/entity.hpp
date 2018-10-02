@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
 
             //  -- Domain --
             const std::array<size_t, 3>                                        _res; //!< Resolution of the domain cell grid.
-            const geom::shape::Aabb                                            _box;
+            const geom::shape::Aabb                                            _box; //!< Bounding box of the entity.
             const vec3                                                         _cell_size;
             std::vector<std::vector<std::vector<std::unique_ptr<phys::Cell>>>> _cells;
 
