@@ -196,7 +196,6 @@ namespace arc //! arctk namespace
 
         inline phys::Cell* Entity::cell(const vec3& pos_) const noexcept
         {
-            std::cout << pos_ << '\t' << _box.min() << '\t' << _box.max() << '\n';
             PRE(_box.contains(pos_));
 
             const vec3 rel_pos = pos_ - _box.min();
