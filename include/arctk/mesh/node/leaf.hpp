@@ -162,6 +162,17 @@ namespace arc //! arctk namespace
                 return (std::vector<geom::shape::Aabb>({geom::shape::Aabb(_min, _max)}));
             }
 
+            /**
+             *  Determine if a ray intersects any of the entities contained within the cell.
+             *  If an intersection does occur return the distance to intersection, the normal of the entity at the point of intersection and a pointer to the intersecting entity.
+             * 
+             *  @param  pos_    Position of the ray start.
+             *  @param  dir_    Direction of the ray.
+             * 
+             *  @pre    pos_ must be contained within the leaf.
+             * 
+             *  @return Distance to intersection, normal of intersection point, intersecting entity pointer.
+             */
             inline std::optional<std::tuple<double, vec3, const equip::Entity*>> Leaf::intersect_entity(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 PRE(contains(pos_));
