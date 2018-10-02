@@ -165,7 +165,7 @@ namespace arc //! arctk namespace
 
             inline std::optional<std::tuple<double, vec3, const equip::Entity*>> Leaf::intersect_entity(const vec3& pos_, const vec3& dir_) const noexcept
             {
-                //                PRE(contains(pos_));
+                PRE(contains(pos_));
 
                 std::optional<std::tuple<double, vec3, const equip::Entity*>> collision(std::nullopt);
                 for (size_t i = 0; i < _entities.size(); ++i)
