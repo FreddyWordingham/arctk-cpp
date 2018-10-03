@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Structure --
-                random::distribution::Linear<double> _spec; //!< Spectrum used to draw photon wavelength values from.
+                const random::distribution::Linear<double> _spec; //!< Spectrum used to draw photon wavelength values from.
 
 
                 //  == INSTANTIATION ==
