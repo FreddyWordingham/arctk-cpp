@@ -37,16 +37,10 @@ namespace arc //! arctk namespace
              */
             class Basic : public Cell
             {
-                //  == FIELDS ==
-              private:
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
                 inline Basic(const vec3& min_, const vec3& max_) noexcept;
-
-
-                //  == METHODS ==
-              public:
             };
 
 
@@ -70,10 +64,6 @@ namespace arc //! arctk namespace
                 PRE(min_.y < max_.y);
                 PRE(min_.z < max_.z);
             }
-
-
-
-            //  == METHODS ==
 
 
 
