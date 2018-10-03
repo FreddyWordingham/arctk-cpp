@@ -48,6 +48,9 @@ namespace arc //! arctk namespace
             std::unique_ptr<geom::Shape>         _surf; //!< Shape forming the emission surface of the light.
             random::distribution::Linear<double> _spec; //!< Spectrum used to draw photon wavelength values from.
 
+            //  -- Power --
+            const double _power; //!< Power of the light source in Watts.
+
 
             //  == INSTANTIATION ==
           public:
