@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['data',['data',['../classarc_1_1math_1_1_mat.html#af396d79f2d44c34c68beeadc419964e3',1,'arc::math::Mat::data()'],['../classarc_1_1math_1_1_vec.html#ac45e0cd9e0baff7f275a3501c5d9c132',1,'arc::math::Vec::data()'],['../classarc_1_1phys_1_1_cell.html#ad5bc3d67356a5b0154aa674cc6924b2f',1,'arc::phys::Cell::data()']]],
+  ['data',['data',['../classarc_1_1math_1_1_mat.html#af396d79f2d44c34c68beeadc419964e3',1,'arc::math::Mat::data()'],['../classarc_1_1math_1_1_vec.html#ac45e0cd9e0baff7f275a3501c5d9c132',1,'arc::math::Vec::data()']]],
   ['data_2ehpp',['data.hpp',['../data_8hpp.html',1,'']]],
-  ['data_5fnames',['data_names',['../classarc_1_1phys_1_1_cell.html#a75f6834a9493af7c7297a3a32e4ff366',1,'arc::phys::Cell']]],
   ['date',['DATE',['../namespacearc_1_1config.html#aa60520859e13bbee2fb47d352d337c87',1,'arc::config']]],
   ['debug_2ehpp',['debug.hpp',['../debug_8hpp.html',1,'']]],
   ['deg_5fto_5frad',['deg_to_rad',['../namespacearc_1_1math_1_1convert.html#a83d5d2fb474246690ecb1d04a2cd002d',1,'arc::math::convert']]],
@@ -26,8 +25,6 @@ var searchData=
   ['distribution',['Distribution',['../classarc_1_1random_1_1_distribution.html',1,'arc::random::Distribution&lt; T &gt;'],['../classarc_1_1random_1_1_distribution.html#a0ac964b49ab0f23a968eb2a559a0405e',1,'arc::random::Distribution::Distribution(T min_, T max_) noexcept'],['../classarc_1_1random_1_1_distribution.html#a1afe5f4de9e97dff5e10514d77ee18c4',1,'arc::random::Distribution::Distribution(const Distribution &amp;) noexcept=default'],['../classarc_1_1random_1_1_distribution.html#aa4416ca95fe2bc244e1220c34ee7ae7c',1,'arc::random::Distribution::Distribution(Distribution &amp;&amp;) noexcept=default']]],
   ['distribution_2ehpp',['distribution.hpp',['../distribution_8hpp.html',1,'']]],
   ['distribution_3c_20double_20_3e',['Distribution&lt; double &gt;',['../classarc_1_1random_1_1_distribution.html',1,'arc::random']]],
-  ['domain',['Domain',['../classarc_1_1data_1_1_domain.html',1,'arc::data::Domain'],['../classarc_1_1data_1_1_domain.html#af6e8de4e5be75cba3f29a7aa1bd38ca6',1,'arc::data::Domain::Domain()']]],
-  ['domain_2ehpp',['domain.hpp',['../domain_8hpp.html',1,'']]],
   ['dynamic',['Dynamic',['../classarc_1_1data_1_1histogram_1_1_dynamic.html',1,'arc::data::histogram::Dynamic&lt; T, N &gt;'],['../classarc_1_1data_1_1histogram_1_1_dynamic_3_01_t_00_011_01_4.html#a0f44c78a6d914418bc78ef5632ae940a',1,'arc::data::histogram::Dynamic&lt; T, 1 &gt;::Dynamic()']]],
   ['dynamic_2ehpp',['dynamic.hpp',['../dynamic_8hpp.html',1,'']]],
   ['dynamic1_2ehpp',['dynamic1.hpp',['../dynamic1_8hpp.html',1,'']]],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['wavelength',['wavelength',['../classarc_1_1phys_1_1particle_1_1_photon.html#a34dacaafc415ab72497899704751c7be',1,'arc::phys::particle::Photon']]],
   ['weight',['weight',['../classarc_1_1phys_1_1_particle.html#a52661bdc1aa33a935ac7157cdf16ceab',1,'arc::phys::Particle']]],
   ['whitespace',['WHITESPACE',['../namespacearc_1_1consts_1_1format.html#a4d44c3b096871a5c18c005ac26fcf643',1,'arc::consts::format']]],
   ['width',['width',['../classarc_1_1data_1_1_image.html#a9292e970739e7492890a6eb6a6d01bea',1,'arc::data::Image']]],

@@ -73,7 +73,7 @@ $(function() {
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classarc_1_1phys_1_1_material-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">arc::phys::Material Class Reference</div>  </div>
+<div class="title">arc::phys::Material Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -110,6 +110,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad9fe0804a10224247119794a000f5790"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f2edd7706f06c03732fb400b4c2d480"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_material.html#a3f2edd7706f06c03732fb400b4c2d480">max</a> () const noexcept</td></tr>
 <tr class="separator:a3f2edd7706f06c03732fb400b4c2d480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2891c4adaa790c5ceb9e554cf607b442"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classarc_1_1phys_1_1_cell.html">Cell</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_material.html#a2891c4adaa790c5ceb9e554cf607b442">create_cell</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;min_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;max_) const noexcept=0</td></tr>
+<tr class="memdesc:a2891c4adaa790c5ceb9e554cf607b442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a unique pointer to a cell of the type used by the material.  <a href="#a2891c4adaa790c5ceb9e554cf607b442">More...</a><br /></td></tr>
+<tr class="separator:a2891c4adaa790c5ceb9e554cf607b442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90473a40664a1254a61c424dc5dbf2ff"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_material.html#a90473a40664a1254a61c424dc5dbf2ff">interact_dist</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *const rng_, const <a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html">particle::Photon</a> &amp;phot_, const <a class="el" href="classarc_1_1phys_1_1_cell.html">Cell</a> &amp;cell_) const noexcept=0</td></tr>
+<tr class="separator:a90473a40664a1254a61c424dc5dbf2ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a4a622e106a1df5f8dddf2aeb6b835"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_material.html#a36a4a622e106a1df5f8dddf2aeb6b835">interact</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *const rng_, <a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html">particle::Photon</a> *const phot_, <a class="el" href="classarc_1_1phys_1_1_cell.html">Cell</a> *const cell_) const noexcept=0</td></tr>
+<tr class="memdesc:a36a4a622e106a1df5f8dddf2aeb6b835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform an interaction with the photon.  <a href="#a36a4a622e106a1df5f8dddf2aeb6b835">More...</a><br /></td></tr>
+<tr class="separator:a36a4a622e106a1df5f8dddf2aeb6b835"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -225,6 +233,161 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2891c4adaa790c5ceb9e554cf607b442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2891c4adaa790c5ceb9e554cf607b442">&#9670;&nbsp;</a></span>create_cell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classarc_1_1phys_1_1_cell.html">Cell</a>&gt; arc::phys::Material::create_cell </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>min_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>max_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a unique pointer to a cell of the type used by the material. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min_</td><td>Minimum bound of the cell.</td></tr>
+    <tr><td class="paramname">max_</td><td>Maximum bound of the cell. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Unique pointer to a cell of the type used by the material. </dd></dl>
+
+<p>Implemented in <a class="el" href="classarc_1_1phys_1_1material_1_1_fluorescent.html#a890b2f06ee0312f86f0de8e35b512e8a">arc::phys::material::Fluorescent</a>, and <a class="el" href="classarc_1_1phys_1_1material_1_1_basic.html#a82dbc7ae28b8de43beb56bffb3ca51d4">arc::phys::material::Basic</a>.</p>
+
+</div>
+</div>
+<a id="a36a4a622e106a1df5f8dddf2aeb6b835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36a4a622e106a1df5f8dddf2aeb6b835">&#9670;&nbsp;</a></span>interact()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void arc::phys::Material::interact </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *const&#160;</td>
+          <td class="paramname"><em>rng_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html">particle::Photon</a> *const&#160;</td>
+          <td class="paramname"><em>phot_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classarc_1_1phys_1_1_cell.html">Cell</a> *const&#160;</td>
+          <td class="paramname"><em>cell_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Perform an interaction with the photon. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rng_</td><td>Random number generator.</td></tr>
+    <tr><td class="paramname">phot_</td><td>Photon to interact with.</td></tr>
+    <tr><td class="paramname">cell_</td><td>Domain cell the photon is currently within. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classarc_1_1phys_1_1material_1_1_fluorescent.html#ab1f9a62746b062ad1d2c041427a80abf">arc::phys::material::Fluorescent</a>, and <a class="el" href="classarc_1_1phys_1_1material_1_1_basic.html#aab461da93cb530e385ba844e5ed681f1">arc::phys::material::Basic</a>.</p>
+
+</div>
+</div>
+<a id="a90473a40664a1254a61c424dc5dbf2ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90473a40664a1254a61c424dc5dbf2ff">&#9670;&nbsp;</a></span>interact_dist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double arc::phys::Material::interact_dist </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *const&#160;</td>
+          <td class="paramname"><em>rng_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html">particle::Photon</a> &amp;&#160;</td>
+          <td class="paramname"><em>phot_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1phys_1_1_cell.html">Cell</a> &amp;&#160;</td>
+          <td class="paramname"><em>cell_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determine the distance until an interaction occurs.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rng_</td><td>Random number generator.</td></tr>
+    <tr><td class="paramname">phot_</td><td>Photon to determine the interaction distance for.</td></tr>
+    <tr><td class="paramname">cell_</td><td>Domain cell the photon is currently within. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Distance until interaction occurs. </dd></dl>
+
+<p>Implemented in <a class="el" href="classarc_1_1phys_1_1material_1_1_fluorescent.html#a6a905615a95e6ff1572155cec9287e9a">arc::phys::material::Fluorescent</a>, and <a class="el" href="classarc_1_1phys_1_1material_1_1_basic.html#a5212551ea2542c4b2ef48263fa631028">arc::phys::material::Basic</a>.</p>
+
+</div>
+</div>
 <a id="a3f2edd7706f06c03732fb400b4c2d480"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f2edd7706f06c03732fb400b4c2d480">&#9670;&nbsp;</a></span>max()</h2>
 
@@ -392,7 +555,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 26 2018 13:26:38 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 3 2018 13:27:18 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

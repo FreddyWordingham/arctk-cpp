@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['data',['data',['../classarc_1_1math_1_1_mat.html#af396d79f2d44c34c68beeadc419964e3',1,'arc::math::Mat::data()'],['../classarc_1_1math_1_1_vec.html#ac45e0cd9e0baff7f275a3501c5d9c132',1,'arc::math::Vec::data()'],['../classarc_1_1phys_1_1_cell.html#ad5bc3d67356a5b0154aa674cc6924b2f',1,'arc::phys::Cell::data()']]],
-  ['data_5fnames',['data_names',['../classarc_1_1phys_1_1_cell.html#a75f6834a9493af7c7297a3a32e4ff366',1,'arc::phys::Cell']]],
+  ['data',['data',['../classarc_1_1math_1_1_mat.html#af396d79f2d44c34c68beeadc419964e3',1,'arc::math::Mat::data()'],['../classarc_1_1math_1_1_vec.html#ac45e0cd9e0baff7f275a3501c5d9c132',1,'arc::math::Vec::data()']]],
   ['deg_5fto_5frad',['deg_to_rad',['../namespacearc_1_1math_1_1convert.html#a83d5d2fb474246690ecb1d04a2cd002d',1,'arc::math::convert']]],
   ['depth',['depth',['../classarc_1_1mesh_1_1_node.html#a91d948fcf16f262b285cdf5b6f8cf66f',1,'arc::mesh::Node']]],
   ['descend',['descend',['../classarc_1_1data_1_1histogram_1_1_dynamic_3_01_t_00_011_01_4.html#a3c349e693a01254adee4c2b3d033dbee',1,'arc::data::histogram::Dynamic&lt; T, 1 &gt;']]],
@@ -14,6 +13,5 @@ var searchData=
   ['distance',['distance',['../namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d',1,'arc::math::geom']]],
   ['distinct',['distinct',['../namespacearc_1_1utl_1_1properties.html#aad4c2b9542f17dd7e77e509fbee5b57f',1,'arc::utl::properties']]],
   ['distribution',['Distribution',['../classarc_1_1random_1_1_distribution.html#a0ac964b49ab0f23a968eb2a559a0405e',1,'arc::random::Distribution::Distribution(T min_, T max_) noexcept'],['../classarc_1_1random_1_1_distribution.html#a1afe5f4de9e97dff5e10514d77ee18c4',1,'arc::random::Distribution::Distribution(const Distribution &amp;) noexcept=default'],['../classarc_1_1random_1_1_distribution.html#aa4416ca95fe2bc244e1220c34ee7ae7c',1,'arc::random::Distribution::Distribution(Distribution &amp;&amp;) noexcept=default']]],
-  ['domain',['Domain',['../classarc_1_1data_1_1_domain.html#af6e8de4e5be75cba3f29a7aa1bd38ca6',1,'arc::data::Domain']]],
   ['dynamic',['Dynamic',['../classarc_1_1data_1_1histogram_1_1_dynamic_3_01_t_00_011_01_4.html#a0f44c78a6d914418bc78ef5632ae940a',1,'arc::data::histogram::Dynamic&lt; T, 1 &gt;']]]
 ];

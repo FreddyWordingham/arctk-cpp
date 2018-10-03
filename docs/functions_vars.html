@@ -97,7 +97,8 @@ $(function() {
 , <a class="el" href="classarc_1_1data_1_1_histogram_3_01_t_00_012_01_4.html#acd6fdd65d521553780a09f4079b06aa9">arc::data::Histogram&lt; T, 2 &gt;</a>
 </li>
 <li>_box
-: <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#ac82621b72a021f49b5759dcb440d663f">arc::geom::shape::Mesh</a>
+: <a class="el" href="classarc_1_1equip_1_1_entity.html#aeac7a508c3f47bfa24bb0ad5c44862ef">arc::equip::Entity</a>
+, <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#ac82621b72a021f49b5759dcb440d663f">arc::geom::shape::Mesh</a>
 </li>
 <li>_call_str
 : <a class="el" href="classarc_1_1sys_1_1_args.html#aca02746b0680ebe61a5075702569a3c2">arc::sys::Args&lt; A &gt;</a>
@@ -109,6 +110,12 @@ $(function() {
 : <a class="el" href="classarc_1_1random_1_1distribution_1_1_constant.html#a602b687f76f6808e4658e8e13013fb4f">arc::random::distribution::Constant&lt; T &gt;</a>
 , <a class="el" href="classarc_1_1random_1_1distribution_1_1_discrete.html#aceab0806c7f6101774d060a2e82b1ad6">arc::random::distribution::Discrete&lt; T &gt;</a>
 , <a class="el" href="classarc_1_1random_1_1distribution_1_1_linear.html#ab907adf31f8645aed53557e5e1f83ccf">arc::random::distribution::Linear&lt; T &gt;</a>
+</li>
+<li>_cell_size
+: <a class="el" href="classarc_1_1equip_1_1_entity.html#a36277023fa0c2b56441c7b1b88cd8e6b">arc::equip::Entity</a>
+</li>
+<li>_cells
+: <a class="el" href="classarc_1_1equip_1_1_entity.html#a8b230756cea8eeeffad1a9553dc58f6a">arc::equip::Entity</a>
 </li>
 <li>_centre
 : <a class="el" href="classarc_1_1mesh_1_1node_1_1_branch.html#a323beec0ef209b02e3691bddcde218aa">arc::mesh::node::Branch</a>
@@ -138,6 +145,9 @@ $(function() {
 <li>_cubemap
 : <a class="el" href="classarc_1_1gui_1_1shader_1_1_skybox.html#a94e16b52e6853386e0d0fc62e6b1da79">arc::gui::shader::Skybox</a>
 </li>
+<li>_cur_ent
+: <a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html#a015fa315de0b10a73a67ce6f383443cf">arc::phys::particle::Photon</a>
+</li>
 <li>_data
 : <a class="el" href="classarc_1_1data_1_1_cube_3_011_00_01_a_8_8_8_01_4.html#ad96503347b2c6f041368dc281bef858c">arc::data::Cube&lt; 1, A... &gt;</a>
 , <a class="el" href="classarc_1_1data_1_1_cube_3_012_00_01_a_8_8_8_01_4.html#a94b8b4a93c87a49e165d96364df68f26">arc::data::Cube&lt; 2, A... &gt;</a>
@@ -160,6 +170,10 @@ $(function() {
 </li>
 <li>_energy
 : <a class="el" href="classarc_1_1phys_1_1_cell.html#a5d67678d8f932bda1617e79cb397b76d">arc::phys::Cell</a>
+, <a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html#af77c5fd29ac1a73c16b96208a01bd4b7">arc::phys::particle::Photon</a>
+</li>
+<li>_ent_stack
+: <a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html#a5d893668fa0f5f9b827d2b6cd360921b">arc::phys::particle::Photon</a>
 </li>
 <li>_entities
 : <a class="el" href="classarc_1_1mesh_1_1node_1_1_leaf.html#a26e0668be5e0da8e909855cefe773266">arc::mesh::node::Leaf</a>
@@ -288,12 +302,6 @@ $(function() {
 <li>_num_verts
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a8ce4fb796e6fa5967c67752f9f9d5c7b">arc::geom::shape::Mesh</a>
 </li>
-<li>_packet_size
-: <a class="el" href="classarc_1_1data_1_1_domain.html#ab3ed9abdbc9f4af9f1282d37c2d0b366">arc::data::Domain</a>
-</li>
-<li>_packets
-: <a class="el" href="classarc_1_1data_1_1_domain.html#a4a09335f0f47aa56eec360efc18f2f16">arc::data::Domain</a>
-</li>
 <li>_pixels
 : <a class="el" href="classarc_1_1data_1_1image_1_1_colour.html#aa05e01f40bfc3b21852f7edc394301d2">arc::data::image::Colour</a>
 , <a class="el" href="classarc_1_1data_1_1image_1_1_greyscale.html#aa265595e8aed7215ed10b1f8a78e2c1c">arc::data::image::Greyscale</a>
@@ -307,6 +315,9 @@ $(function() {
 </li>
 <li>_poss
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a50e8fa5a074ced2b8f453b331cc1ad63">arc::geom::shape::Triangle</a>
+</li>
+<li>_power
+: <a class="el" href="classarc_1_1equip_1_1_light.html#acd28d63555c7bb6818dc765945e8c9bd">arc::equip::Light</a>
 </li>
 <li>_primitive_type
 : <a class="el" href="classarc_1_1gui_1_1_actor.html#aa2f24e3a54c8aeae4d22f48bcbd426eb">arc::gui::Actor</a>
@@ -338,7 +349,7 @@ $(function() {
 : <a class="el" href="classarc_1_1data_1_1_cube_3_011_00_01_a_8_8_8_01_4.html#a34e42ae203a6f56988dc10cc115d0588">arc::data::Cube&lt; 1, A... &gt;</a>
 , <a class="el" href="classarc_1_1data_1_1_cube_3_012_00_01_a_8_8_8_01_4.html#ab7740f75999fa96eaf06284efcbf4f36">arc::data::Cube&lt; 2, A... &gt;</a>
 , <a class="el" href="classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4.html#adaf423612a6cbc0b2a462320345a5915">arc::data::Cube&lt; 3, A... &gt;</a>
-, <a class="el" href="classarc_1_1data_1_1_domain.html#af511f5d16ed725761eeaaf3fb233ec78">arc::data::Domain</a>
+, <a class="el" href="classarc_1_1equip_1_1_entity.html#ae7536f3e3daf55a1b404dc9093c4a77c">arc::equip::Entity</a>
 </li>
 <li>_rot
 : <a class="el" href="classarc_1_1gui_1_1_actor.html#a1e61195488381da299428004bae3266d">arc::gui::Actor</a>
@@ -437,11 +448,11 @@ $(function() {
 , <a class="el" href="classarc_1_1gui_1_1shader_1_1_skybox.html#a84c3fb393f7276d1f312efb1fdb39438">arc::gui::shader::Skybox</a>
 , <a class="el" href="classarc_1_1gui_1_1shader_1_1_specular.html#ace8e41dd871bba0161b9627cecb86ff8">arc::gui::shader::Specular</a>
 </li>
-<li>_vol
-: <a class="el" href="classarc_1_1phys_1_1_cell.html#abda85fb9091eba13ebc792557709f397">arc::phys::Cell</a>
-</li>
 <li>_w
 : <a class="el" href="classarc_1_1random_1_1generator_1_1_quality.html#a0d9473e510d145fdaff009547a4608f7">arc::random::generator::Quality</a>
+</li>
+<li>_wavelength
+: <a class="el" href="classarc_1_1phys_1_1particle_1_1_photon.html#af7e4e920352dd84d73d2048db80a2824">arc::phys::particle::Photon</a>
 </li>
 <li>_weight
 : <a class="el" href="classarc_1_1phys_1_1_particle.html#a662b25cd5f24029fd393be1919025bec">arc::phys::Particle</a>
@@ -461,7 +472,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 26 2018 13:26:39 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 3 2018 13:27:19 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
