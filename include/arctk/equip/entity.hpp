@@ -126,8 +126,8 @@ namespace arc //! arctk namespace
             PRE(res_[index::dim::cartesian::Y] > 0);
             PRE(res_[index::dim::cartesian::Z] > 0);
 
-            const vec3 min = _surf->min();
-            const vec3 max = _surf->max();
+            const vec3 min = _surf.min();
+            const vec3 max = _surf.max();
             const vec3 cell_size((max.x - min.x) / res_[index::dim::cartesian::X], (max.y - min.y) / res_[index::dim::cartesian::Y], (max.z - min.z) / res_[index::dim::cartesian::Z]);
 
             std::vector<std::vector<std::vector<std::unique_ptr<phys::Cell>>>> cells;
