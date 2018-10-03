@@ -53,8 +53,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                template <typename T>
-                inline Spectrum(T&& surf_, random::distribution::Linear<double>&& spec_, const double power_) noexcept;
+                inline Spectrum(const geom::shape::Mesh& surf_, const random::distribution::Linear<double>& spec_, const double power_) noexcept;
 
 
                 //  == METHODS ==
