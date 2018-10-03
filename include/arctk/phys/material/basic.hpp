@@ -281,9 +281,8 @@ namespace arc //! arctk namespace
              *
              *  @param  rng_    Random number generator.
              *  @param  phot_   Photon to interact with.
-             *  @param  cell_   Domain cell the photon is currently within.
              */
-            inline void Basic::interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const cell_) const noexcept
+            inline void Basic::interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const /*unused*/) const noexcept
             {
                 phot_->multiply_weight(_albedo(phot_->wavelength()));
 
