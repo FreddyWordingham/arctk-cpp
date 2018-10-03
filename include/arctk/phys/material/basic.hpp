@@ -78,7 +78,7 @@ namespace arc //! arctk namespace
 
                 //  -- Optical Properties --
                 inline double interact_dist(random::Generator* const rng_, const particle::Photon& phot_, const Cell& /*unused*/) const noexcept override;
-                inline void   interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const cell_) const noexcept override;
+                inline void   interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const /*unused*/) const noexcept override;
             };
 
 
