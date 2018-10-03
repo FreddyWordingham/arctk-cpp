@@ -371,10 +371,10 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Perform an interaction on a given
+             *  Perform an interaction with the photon.
              *
              *  @param  rng_    Random number generator.
-             *  @param  phot_   Photon to interaction with.
+             *  @param  phot_   Photon to interact with.
              */
             inline void Fluorescent::interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const /*unused*/) const noexcept
             {
