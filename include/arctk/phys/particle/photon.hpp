@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
               private:
                 //  -- Properties --
                 const double _wavelength; //!< Wavelength of the photon.
-                const double _energy;
+                const double _energy;     //!< Energy of the packet.
 
                 //  -- Tracking --
                 equip::Entity*             _cur_ent;
