@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Structure --
-            std::unique_ptr<geom::Shape> _surf; //!< Shape forming the surface of the detector.
+            const std::unique_ptr<geom::Shape> _surf; //!< Shape forming the surface of the detector.
 
 
             //  == INSTANTIATION ==
