@@ -58,8 +58,8 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            template <typename T, typename S>
-            inline Entity(T&& surf_, S&& mat_, const std::array<size_t, 3>& res_) noexcept;
+            template <typename T>
+            inline Entity(const geom::shape::Mesh& surf_, T&& mat_, const std::array<size_t, 3>& res_) noexcept;
 
           private:
             //  -- Initialisation --
@@ -81,32 +81,29 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         /**
-         *  Construct an entity from a surface bounding a given material.
+         *  Construct an entity from a mesh bounding a given material.
          *
-         *  @tparam T   Type used to form the surface.
-         *  @tparam S   Type used to form the material.
+         *  @tparam T   Type used to form the material.
          *
-         *  @param  surf_   Bounding surface of the entity.
+         *  @param  surf_   Mesh bounding surface of the entity.
          *  @param  mat_    Material to form the entity volume.
          *  @param  res_    Resolution of the domain.
          *
-         *  @pre    T must be derived from geom::Shape.
-         *  @pre    S must be derived from phys::Material.
+         *  @pre    T must be derived from phys::Material.
          *
          *  @pre    surf_ must be a closed surface.
          *  @pre    res_ values must all be positive.
          */
-        template <typename T, typename S>
-        inline Entity::Entity(T&& surf_, S&& mat_, const std::array<size_t, 3>& res_) noexcept
-          : _surf(std::make_unique<T>(std::forward<T>(surf_)))
-          , _mat(std::make_unique<S>(std::forward<S>(mat_)))
+        template <typename T>
+        inline Entity::Entity(const geom::shape::Mesh& surf_, T&& mat_, const std::array<size_t, 3>& res_) noexcept
+          : _surf(surf_)
+          , _mat(std::make_unique<T>(std::forward<T>(mat_)))
           , _res(res_)
           , _box(_surf->min(), _surf->max())
           , _cell_size((_box.max().x - _box.min().x) / res_[index::dim::cartesian::X], (_box.max().y - _box.min().y) / res_[index::dim::cartesian::Y], (_box.max().z - _box.min().z) / res_[index::dim::cartesian::Z])
           , _cells(init_cells(res_))
         {
-            static_assert(std::is_base_of<geom::Shape, T>::value);
-            static_assert(std::is_base_of<phys::Material, S>::value);
+            static_assert(std::is_base_of<phys::Material, T>::value);
 
             PRE(surf_.closed());
             PRE(res_[index::dim::cartesian::X] > 0);
