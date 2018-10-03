@@ -37,16 +37,10 @@ namespace arc //! arctk namespace
              */
             class Fluorescent : public Cell
             {
-                //  == FIELDS ==
-              private:
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
                 inline Fluorescent(const vec3& min_, const vec3& max_) noexcept;
-
-
-                //  == METHODS ==
-              public:
             };
 
 
@@ -67,10 +61,6 @@ namespace arc //! arctk namespace
               : Cell(min_, max_)
             {
             }
-
-
-
-            //  == METHODS ==
 
 
 
