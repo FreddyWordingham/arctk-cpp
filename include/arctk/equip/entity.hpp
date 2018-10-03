@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             template <typename T>
-            inline Entity(const geom::shape::Mesh& surf_, T&& mat_, const std::array<size_t, 3>& res_) noexcept;
+            inline Entity(const geom::shape::Mesh& surf_, const T& mat_, const std::array<size_t, 3>& res_) noexcept;
 
           private:
             //  -- Initialisation --
@@ -95,7 +95,7 @@ namespace arc //! arctk namespace
          *  @pre    res_ values must all be positive.
          */
         template <typename T>
-        inline Entity::Entity(const geom::shape::Mesh& surf_, T&& mat_, const std::array<size_t, 3>& res_) noexcept
+        inline Entity::Entity(const geom::shape::Mesh& surf_, const T& mat_, const std::array<size_t, 3>& res_) noexcept
           : _surf(surf_)
           , _mat(std::make_unique<T>(std::forward<T>(mat_)))
           , _res(res_)
