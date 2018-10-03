@@ -42,13 +42,12 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Structure --
-            const std::unique_ptr<geom::Shape> _surf; //!< Shape forming the surface of the detector.
+            const geom::shape::Mesh _surf; //!< Mesh forming the surface of the detector.
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            template <typename T>
             inline explicit Detector(T&& surf_) noexcept;
 
 
