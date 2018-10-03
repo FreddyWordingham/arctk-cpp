@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Structure --
-            std::unique_ptr<geom::Shape> _surf; //!< Shape forming the emission surface of the light.
+            const geom::shape::Mesh _surf; //!< Shape forming the emission surface of the light.
 
             //  -- Power --
             const double _power; //!< Power of the light source in Watts.
@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             template <typename T>
-            inline Light(T&& surf_, const double power_) noexcept;
+            inline Light(const T& surf_, const double power_) noexcept;
 
 
             //  == METHODS ==
@@ -86,7 +86,7 @@ namespace arc //! arctk namespace
          *  @pre    power_ must be positive.
          */
         template <typename T>
-        inline Light::Light(T&& surf_, random::distribution::Linear<double>&& spec_, const double power_) noexcept
+        inline Light::Light(const T& surf_, random::distribution::Linear<double>&& spec_, const double power_) noexcept
           : _surf(std::make_unique<T>(std::forward<T>(surf_)))
           , _spec(std::move(spec_))
           , _power(power_)
