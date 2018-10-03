@@ -46,9 +46,9 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Initialisation --
-            std::vector<std::pair<const geom::Shape&, const equip::Light&>>    init_light_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Light>& lights_) const noexcept;
-            std::vector<std::pair<const geom::Shape&, const equip::Entity&>>   init_entity_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Entity>& entities_) const noexcept;
-            std::vector<std::pair<const geom::Shape&, const equip::Detector&>> init_detector_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Detector>& detectors_) const noexcept;
+            std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>>    init_light_tri_list(const geom::shape::Aabb& box_, const std::vector<equip::Light>& lights_) const noexcept;
+            std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>   init_entity_tri_list(const geom::shape::Aabb& box_, const std::vector<equip::Entity>& entities_) const noexcept;
+            std::vector<std::pair<const equip::Detector&, const geom::shape::Triangle&>> init_detector_tri_list(const geom::shape::Aabb& box_, const std::vector<equip::Detector>& detectors_) const noexcept;
         };
 
 
