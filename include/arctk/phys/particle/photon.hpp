@@ -58,7 +58,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Properties --
-                const double _wavelength;
+                const double _wavelength; //!< Wavelength of the photon.
                 const double _energy;
 
                 //  -- Tracking --
