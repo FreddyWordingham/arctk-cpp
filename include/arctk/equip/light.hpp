@@ -59,10 +59,10 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double             min_wavelength() const noexcept;
-            inline double             max_wavelength() const noexcept;
-            inline const geom::Shape* surf() const noexcept;
-            inline double             power() const noexcept;
+            inline double                   min_wavelength() const noexcept;
+            inline double                   max_wavelength() const noexcept;
+            inline const geom::shape::Mesh& surf() const noexcept;
+            inline double                   power() const noexcept;
 
             //  -- Emission --
             inline phys::particle::Photon emit(random::Generator* rng_, equip::Entity* const cur_ent_) const noexcept;
@@ -108,9 +108,9 @@ namespace arc //! arctk namespace
          *
          *  @return Const reference to the surface of the light.
          */
-        inline const geom::Shape* Light::surf() const noexcept
+        inline const geom::shape::Mesh& Light::surf() const noexcept
         {
-            return (_surf.get());
+            return (_surf);
         }
 
         /**
