@@ -65,6 +65,7 @@ namespace arc //! arctk namespace
             inline double             min_wavelength() const noexcept;
             inline double             max_wavelength() const noexcept;
             inline const geom::Shape* surf() const noexcept;
+            inline double             power() const noexcept;
 
             //  -- Emission --
             inline phys::particle::Photon emit(random::Generator* rng_, equip::Entity* const cur_ent_) const noexcept;
@@ -124,6 +125,11 @@ namespace arc //! arctk namespace
         inline const geom::Shape* Light::surf() const noexcept
         {
             return (_surf.get());
+        }
+
+        inline double Light::power() const noexcept
+        {
+            return (_power);
         }
 
 
