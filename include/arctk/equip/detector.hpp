@@ -15,11 +15,6 @@
 
 
 //  == IMPORTS ==
-//  -- Std --
-#include <memory>
-#include <string>
-#include <utility>
-
 //  -- Arctk --
 #include <arctk/geom.hpp>
 
@@ -62,19 +57,13 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         /**
-         *  Construct a detector using surface shape.
-         *
-         *  @tparam T   Type used to form the surface.
+         *  Construct a detector using surface mesh.
          *
          *  @param  surf_   Surface of the detector.
-         *
-         *  @pre    T must be derived from geom::Shape.
          */
-        template <typename T>
         inline Detector::Detector(T&& surf_) noexcept
           : _surf(std::make_unique<T>(std::forward<T>(surf_)))
         {
-            static_assert(std::is_base_of<geom::Shape, T>::value);
         }
 
 
