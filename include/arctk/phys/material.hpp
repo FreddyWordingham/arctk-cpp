@@ -79,7 +79,8 @@ namespace arc //! arctk namespace
             virtual double interact_dist(random::Generator* const rng_, const particle::Photon& phot_, const Cell& cell_) const
               noexcept = 0; //!< Determine the distance until an interaction occurs. @param  rng_    Random number generator.    @param  phot_   Photon to determine the interaction distance for.   @param  cell_   Domain cell the photon is currently within.
                             //!< @return Distance until interaction occurs.
-            virtual void interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const cell_) const noexcept = 0;
+            virtual void interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const cell_) const
+              noexcept = 0; //!< Perform an interaction with the photon. @param  rng_    Random number generator.    @param  phot_   Photon to interact with.    @param  cell_   Domain cell the photon is currently within.
         };
 
 
