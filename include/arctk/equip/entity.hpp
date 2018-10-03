@@ -183,9 +183,9 @@ namespace arc //! arctk namespace
          *
          *  @return Const reference to the surface of the entity.
          */
-        inline const geom::Shape* Entity::surf() const noexcept
+        inline const geom::shape::Mesh& Entity::surf() const noexcept
         {
-            return (_surf.get());
+            return (_surf);
         }
 
         /**
