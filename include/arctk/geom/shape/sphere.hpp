@@ -57,9 +57,6 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
-                //  -- Getters --
-                inline std::vector<const Shape*> shape_list() const noexcept override;
-
                 //  -- Properties --
                 inline vec3        min() const noexcept override;
                 inline vec3        max() const noexcept override;
@@ -108,18 +105,6 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
-            //  -- Getters --
-            /**
-             *  Create a vector containing pointers to all shapes forming this shape.
-             *
-             *  @return Vector containing pointers to all shapes forming this shape.
-             */
-            inline std::vector<const Shape*> Sphere::shape_list() const noexcept
-            {
-                return (std::vector<const Shape*>({this}));
-            }
-
-
             //  -- Properties --
             /**
              *  Get the minimum vec of the smallest bounding box containing the sphere.
