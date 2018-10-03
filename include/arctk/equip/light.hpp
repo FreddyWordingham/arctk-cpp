@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
             inline double                   power() const noexcept;
 
             //  -- Emission --
-            inline phys::particle::Photon emit(random::Generator* rng_, equip::Entity* const cur_ent_) const noexcept;
+            virtual phys::particle::Photon emit(random::Generator* rng_, equip::Entity* const cur_ent_) const noexcept = 0;
         };
 
 
@@ -84,26 +84,6 @@ namespace arc //! arctk namespace
         //  == METHODS ==
         //  -- Getters --
         /**
-         *  Get the minimum wavelength that can be emitted by the light.
-         *
-         *  @return Minimum wavelength that can be emitted by the light.
-         */
-        inline double Light::min_wavelength() const noexcept
-        {
-            return (_spec.min());
-        }
-
-        /**
-         *  Get the maximum wavelength that can be emitted by the light.
-         *
-         *  @return maximum wavelength that can be emitted by the light.
-         */
-        inline double Light::max_wavelength() const noexcept
-        {
-            return (_spec.max());
-        }
-
-        /**
          *  Get a const reference to the surface of the light.
          *
          *  @return Const reference to the surface of the light.
@@ -121,23 +101,6 @@ namespace arc //! arctk namespace
         inline double Light::power() const noexcept
         {
             return (_power);
-        }
-
-
-        //  -- Emission --
-        /**
-         *  Emit a photon from the light source.
-         *
-         *  @param  rng_        Random number generator.
-         *  @param  cur_ent_    Entity to emit the photon within.
-         *
-         *  @return Newly emitted photon.
-         */
-        inline phys::particle::Photon Light::emit(random::Generator* rng_, equip::Entity* const cur_ent_) const noexcept
-        {
-            const std::pair<vec3, vec3> pos_norm = _surf->random_pos_and_norm(rng_);
-
-            return (phys::particle::Photon(pos_norm.first, pos_norm.second, _spec.sample(rng_), cur_ent_));
         }
 
 
