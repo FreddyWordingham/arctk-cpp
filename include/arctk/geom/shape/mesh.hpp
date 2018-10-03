@@ -102,12 +102,11 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline std::vector<const Shape*> shape_list() const noexcept override;
-                inline const Triangle&           tri(size_t index_) const noexcept;
-                inline size_t                    num_verts() const noexcept;
-                inline size_t                    num_norms() const noexcept;
-                inline size_t                    num_edges() const noexcept;
-                inline size_t                    num_faces() const noexcept;
+                inline const Triangle& tri(size_t index_) const noexcept;
+                inline size_t          num_verts() const noexcept;
+                inline size_t          num_norms() const noexcept;
+                inline size_t          num_edges() const noexcept;
+                inline size_t          num_faces() const noexcept;
 
                 //  -- Properties --
                 inline vec3   min() const noexcept override;
@@ -672,24 +671,6 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            /**
-             *  Create a vector containing pointers to all shapes forming this shape.
-             *
-             *  @return Vector containing pointers to all shapes forming this shape.
-             */
-            inline std::vector<const Shape*> Mesh::shape_list() const noexcept
-            {
-                std::vector<const Shape*> list;
-                list.reserve(_tris.size());
-
-                for (size_t i = 0; i < _tris.size(); ++i)
-                {
-                    list.emplace_back(&_tris[i]);
-                }
-
-                return (list);
-            }
-
             /**
              *  Get a const reference to a triangle within the mesh.
              *
