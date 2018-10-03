@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const geom::Shape* surf() const noexcept;
+            inline const geom::shape::Mesh& surf() const noexcept;
         };
 
 
@@ -71,13 +71,13 @@ namespace arc //! arctk namespace
         //  == METHODS ==
         //  -- Getters --
         /**
-         *  Get a const reference to the shape forming the surface of the detector.
+         *  Get a const reference to the mesh forming the surface of the detector.
          *
-         *  @return Const reference to the shape forming the surface of the detector.
+         *  @return Const reference to the mesh forming the surface of the detector.
          */
-        inline const geom::Shape* Detector::surf() const noexcept
+        inline const geom::shape::Mesh& Detector::surf() const noexcept
         {
-            return (_surf.get());
+            return (_surf);
         }
 
 
