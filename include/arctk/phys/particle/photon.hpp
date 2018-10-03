@@ -62,8 +62,8 @@ namespace arc //! arctk namespace
                 const double _energy;     //!< Energy of the packet.
 
                 //  -- Tracking --
-                equip::Entity*             _cur_ent;
-                std::stack<equip::Entity*> _ent_stack;
+                equip::Entity*             _cur_ent;   //!< Pointer to the current entity the photon is contained within.
+                std::stack<equip::Entity*> _ent_stack; //!< Stack of pointers to additional entities the photon is contained within.
 
 
                 //  == INSTANTIATION ==
