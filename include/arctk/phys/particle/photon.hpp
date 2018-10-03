@@ -87,12 +87,28 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a photon with a given position, direction, wavelength within a given entity.
+             *
+             *  @param pos_         Position of the photon.
+             *  @param dir_         Direction of the photon.
+             *  @param wavelength_  Wavelength of the photon.
+             *  @param cur_ent_     Current entity containing the photon.
+             *  @param energy_      Initial energy associated within the photon.
+             *  @param time_        Initial time of the photon.
+             *
+             *  @pre    dir_ must be normalised.
+             *  @pre    wavelength_ must be greater than zero and less than 1000nm.
+             *  @pre    energy_ must be positive.
+             *  @pre    cur_ent_ may not be nullptr.
+             */
             inline Photon::Photon(const vec3& pos_, const vec3& dir_, const double wavelength_, equip::Entity* const cur_ent_, const double energy_, const double time_) noexcept
               : Particle(pos_, dir_, time_)
               , _wavelength(wavelength_)
               , _energy(energy_)
               , _cur_ent(cur_ent_)
             {
+                PRE(dir_.normalised());
                 PRE((wavelength_ > 0.0) && (wavelength_ < 1000e-9));
                 PRE(energy_ > 0.0);
                 PRE(cur_ent_ != nullptr);
