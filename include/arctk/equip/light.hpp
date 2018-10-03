@@ -17,7 +17,6 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <memory>
-#include <string>
 #include <type_traits>
 #include <utility>
 
@@ -45,8 +44,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Structure --
-            std::unique_ptr<geom::Shape>         _surf; //!< Shape forming the emission surface of the light.
-            random::distribution::Linear<double> _spec; //!< Spectrum used to draw photon wavelength values from.
+            std::unique_ptr<geom::Shape> _surf; //!< Shape forming the emission surface of the light.
 
             //  -- Power --
             const double _power; //!< Power of the light source in Watts.
@@ -56,7 +54,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             template <typename T>
-            inline Light(T&& surf_, random::distribution::Linear<double>&& spec_, const double power_) noexcept;
+            inline Light(T&& surf_, const double power_) noexcept;
 
 
             //  == METHODS ==
