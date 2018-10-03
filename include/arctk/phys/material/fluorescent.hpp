@@ -79,7 +79,6 @@ namespace arc //! arctk namespace
                 inline std::unique_ptr<Cell> create_cell(const vec3& min_, const vec3& max_) const noexcept override;
 
                 //  -- Optical Properties --
-                inline double ref_index(double wavelength_) const noexcept override;
                 inline double interact_dist(random::Generator* const rng_, const particle::Photon& phot_, const Cell& /*unused*/) const noexcept override;
                 inline void   interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const /*unused*/) const noexcept override;
             };
@@ -352,18 +351,6 @@ namespace arc //! arctk namespace
 
 
             //  -- Optical Properties --
-            /**
-             *  Get the refractive index of the material for a given wavelength.
-             *
-             *  @param  wavelength_ Wavelength to find the refractive index of.
-             *
-             *  @return Refractive index of the material for a given wavelength.
-             */
-            inline double Fluorescent::ref_index(const double wavelength_) const noexcept
-            {
-                return (_ref_index(wavelength_));
-            }
-
             /**
              *  Determine the distance to the next photon interaction.
              *
