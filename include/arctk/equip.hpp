@@ -19,6 +19,8 @@
 #include <arctk/equip/detector.hpp>
 #include <arctk/equip/entity.hpp>
 #include <arctk/equip/light.hpp>
+#include <arctk/equip/light/laser.hpp>
+#include <arctk/equip/light/spectrum.hpp>
 
 
 
