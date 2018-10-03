@@ -53,8 +53,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            template <typename T>
-            inline Light(const T& surf_, const double power_) noexcept;
+            inline Light(const geom::shape::Mesh& surf_, const double power_) noexcept;
 
 
             //  == METHODS ==
@@ -73,26 +72,10 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        /**
-         *  Construct a light from an emission surface and spectrum.
-         *
-         *  @tparam T   Type used to form the surface.
-         *
-         *  @param  surf_   Shape forming the emission surface of the light.
-         *  @param  spec_   Spectrum used to draw photon wavelength values from.
-         *  @param  power_  Power of the light source in Watts.
-         *
-         *  @pre    T must be derived from geom::Shape.
-         *  @pre    power_ must be positive.
-         */
-        template <typename T>
-        inline Light::Light(const T& surf_, random::distribution::Linear<double>&& spec_, const double power_) noexcept
-          : _surf(std::make_unique<T>(std::forward<T>(surf_)))
-          , _spec(std::move(spec_))
+        inline Light::Light(const geom::shape::Mesh& surf_, const double power_) noexcept
+          : _surf(surf_)
           , _power(power_)
         {
-            static_assert(std::is_base_of<geom::Shape, T>::value);
-
             PRE(power_ > 0.0);
         }
 
