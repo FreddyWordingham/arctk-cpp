@@ -257,9 +257,23 @@ namespace arc //! arctk namespace
 
 
             //  -- Optical Properties --
+            /**
+             *  Determine the distance until an interaction occurs.
+             *
+             *  @param  rng_    Random number generator.
+             *  @param  phot_   Photon to determine the interaction distance for.
+             *
+             *  @post   dist must be positive.
+             *
+             *  @return Distance until interaction occurs.
+             */
             inline double Basic::interact_dist(random::Generator* const rng_, const particle::Photon& phot_, const Cell& /*unused*/) const noexcept
             {
-                return (-std::log(rng_->gen()) / _interact_coef(phot_.wavelength()));
+                const double dist = -std::log(rng_->gen()) / _interact_coef(phot_.wavelength());
+
+                POST(dist > 0.0);
+
+                return (dist);
             }
 
             inline void Basic::interact(random::Generator* const rng_, particle::Photon* const phot_, Cell* const cell_) const noexcept
