@@ -138,6 +138,11 @@ namespace arc //! arctk namespace
                 return (_cur_ent);
             }
 
+            /**
+             *  Get the pointer to the last entity containing the photon.
+             *
+             *  @return Pointer to the last entity containing the photon.
+             */
             inline const equip::Entity* Photon::prev_entity() const noexcept
             {
                 PRE(_ent_stack.size() >= 1);
