@@ -53,6 +53,16 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a domain cell for a fluorescent material.
+             *
+             *  @param  min_    Minimum bound of the cell.
+             *  @param  max_    Maximum bound of the cell.
+             *
+             *  @pre    min_.x must be less than max_.x.
+             *  @pre    min_.y must be less than max_.y.
+             *  @pre    min_.z must be less than max_.z.
+             */
             inline Fluorescent::Fluorescent(const vec3& min_, const vec3& max_) noexcept
               : Cell(min_, max_)
             {
