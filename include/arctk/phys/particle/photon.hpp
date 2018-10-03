@@ -128,6 +128,11 @@ namespace arc //! arctk namespace
                 return (_wavelength);
             }
 
+            /**
+             *  Get the pointer to the entity currently containing the photon.
+             *
+             *  @return Pointer to the entity currently containing the photon.
+             */
             inline const equip::Entity* Photon::entity() const noexcept
             {
                 return (_cur_ent);
