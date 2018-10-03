@@ -62,11 +62,10 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline std::vector<const Shape*> shape_list() const noexcept override;
-                inline double                    rad() const noexcept;
-                inline double                    aperture() const noexcept;
-                inline const vec3&               pos() const noexcept;
-                inline const vec3&               norm() const noexcept;
+                inline double      rad() const noexcept;
+                inline double      aperture() const noexcept;
+                inline const vec3& pos() const noexcept;
+                inline const vec3& norm() const noexcept;
 
                 //  -- Properties --
                 inline vec3   min() const noexcept override;
@@ -121,16 +120,6 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            /**
-             *  Create a vector containing pointers to all shapes forming this shape.
-             *
-             *  @return Vector containing pointers to all shapes forming this shape.
-             */
-            inline std::vector<const Shape*> Circle::shape_list() const noexcept
-            {
-                return (std::vector<const Shape*>({this}));
-            }
-
             /**
              *  Get the radius of the circle.
              *
