@@ -59,8 +59,6 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double                   min_wavelength() const noexcept;
-            inline double                   max_wavelength() const noexcept;
             inline const geom::shape::Mesh& surf() const noexcept;
             inline double                   power() const noexcept;
 
