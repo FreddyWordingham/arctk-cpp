@@ -57,9 +57,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline std::vector<const Shape*> shape_list() const noexcept override;
-                inline const vec3&               pos() const noexcept;
-                inline const vec3&               norm() const noexcept;
+                inline const vec3& pos() const noexcept;
+                inline const vec3& norm() const noexcept;
 
                 //  -- Properties --
                 inline vec3   min() const noexcept override;
@@ -109,16 +108,6 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            /**
-             *  Create a vector containing pointers to all shapes forming this shape.
-             *
-             *  @return Vector containing pointers to all shapes forming this shape.
-             */
-            inline std::vector<const Shape*> Plane::shape_list() const noexcept
-            {
-                return (std::vector<const Shape*>({this}));
-            }
-
             /**
              *  Get the position of the plane.
              *
