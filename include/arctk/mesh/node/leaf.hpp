@@ -47,9 +47,9 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Content --
-                const std::vector<std::pair<const geom::Shape&, const equip::Light&>>    _lights;    //!< Vector of lights that are found within the node's bounds.
-                const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>   _entities;  //!< Vector of entities that are found within the node's bounds.
-                const std::vector<std::pair<const geom::Shape&, const equip::Detector&>> _detectors; //!< Vector of detectors that are found within the node's bounds.
+                const std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>>    _lights;    //!< Vector of light triangles that are found within the node's bounds.
+                const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>   _entities;  //!< Vector of entity triangles that are found within the node's bounds.
+                const std::vector<std::pair<const equip::Detector&, const geom::shape::Triangle&>> _detectors; //!< Vector of detector triangles that are found within the node's bounds.
 
 
                 //  == INSTANTIATION ==
@@ -165,12 +165,12 @@ namespace arc //! arctk namespace
             /**
              *  Determine if a ray intersects any of the entities contained within the cell.
              *  If an intersection does occur return the distance to intersection, the normal of the entity at the point of intersection and a pointer to the intersecting entity.
-             * 
+             *
              *  @param  pos_    Position of the ray start.
              *  @param  dir_    Direction of the ray.
-             * 
+             *
              *  @pre    pos_ must be contained within the leaf.
-             * 
+             *
              *  @return Distance to intersection, normal of intersection point, intersecting entity pointer.
              */
             inline std::optional<std::tuple<double, vec3, const equip::Entity*>> Leaf::intersect_entity(const vec3& pos_, const vec3& dir_) const noexcept
