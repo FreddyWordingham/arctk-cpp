@@ -59,8 +59,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const geom::shape::Mesh& surf() const noexcept;
             inline double                   power() const noexcept;
+            inline const geom::shape::Mesh& surf() const noexcept;
 
             //  -- Emission --
             virtual phys::particle::Photon emit(random::Generator* rng_, equip::Entity* const cur_ent_) const noexcept = 0;
@@ -70,9 +70,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Light::Light(const double power_, const geom::shape::Mesh& surf_) noexcept
-          , _power(power_)
-          , _surf(surf_)
+        inline Light::Light(const double power_, const geom::shape::Mesh& surf_) noexcept, _power(power_), _surf(surf_)
         {
             PRE(power_ > 0.0);
         }
@@ -82,16 +80,6 @@ namespace arc //! arctk namespace
         //  == METHODS ==
         //  -- Getters --
         /**
-         *  Get a const reference to the surface of the light.
-         *
-         *  @return Const reference to the surface of the light.
-         */
-        inline const geom::shape::Mesh& Light::surf() const noexcept
-        {
-            return (_surf);
-        }
-
-        /**
          *  Get the power of the light source.
          *
          *  @return Power of the light source.
@@ -99,6 +87,16 @@ namespace arc //! arctk namespace
         inline double Light::power() const noexcept
         {
             return (_power);
+        }
+
+        /**
+         *  Get a const reference to the surface of the light.
+         *
+         *  @return Const reference to the surface of the light.
+         */
+        inline const geom::shape::Mesh& Light::surf() const noexcept
+        {
+            return (_surf);
         }
 
 
