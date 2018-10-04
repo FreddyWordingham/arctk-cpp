@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Spectrum(const geom::shape::Mesh& surf_, const double power_, const random::distribution::Linear<double>& spec_) noexcept;
+                inline Spectrum(const double power_, const geom::shape::Mesh& surf_, const random::distribution::Linear<double>& spec_) noexcept;
 
 
                 //  == METHODS ==
@@ -65,6 +65,12 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Spectrum::Spectrum(const double power_, const geom::shape::Mesh& surf_, const random::distribution::Linear<double>& spec_) noexcept
+              : Light(power_, surf_)
+              , _spec(spec_)
+            {
+                PRE(power_ > 0.0);
+            }
 
 
 
