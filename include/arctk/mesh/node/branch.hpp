@@ -190,20 +190,21 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Initialise the vector of shape-light pairs which intersect with the node.
+             *  Initialise the vector of triangle-light pairs which intersect with the node.
              *
              *  @param  box_    Bounding box of the node.
              *  @param  lights_ Vector of lights that are found within the node's bounds.
              *
-             *  @return Initialise vector of shape-light pairs which intersect with the node.
+             *  @return Initialise vector of triangle-light pairs which intersect with the node.
              */
-            inline std::vector<std::pair<const geom::Shape&, const equip::Light&>> Branch::init_lights_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_) const noexcept
+            inline std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>> Branch::init_lights_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>>& lights_) const
+              noexcept
             {
-                std::vector<std::pair<const geom::Shape&, const equip::Light&>> lights;
+                std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>> lights;
 
                 for (size_t i = 0; i < lights_.size(); ++i)
                 {
-                    if (lights_[i].first.intersect_vol(box_))
+                    if (lights_[i].second.intersect_vol(box_))
                     {
                         lights.emplace_back(lights_[i]);
                     }
@@ -213,12 +214,12 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Initialise the vector of shape-entity pairs which intersect with the node.
+             *  Initialise the vector of triangle-entity pairs which intersect with the node.
              *
              *  @param  box_        Bounding box of the node.
              *  @param  entities_   Vector of entities that are found within the node's bounds.
              *
-             *  @return Initialise vector of shape-entity pairs which intersect with the node.
+             *  @return Initialise vector of triangle-entity pairs which intersect with the node.
              */
             inline std::vector<std::pair<const geom::Shape&, const equip::Entity&>> Branch::init_entities_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_) const noexcept
             {
@@ -226,7 +227,7 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < entities_.size(); ++i)
                 {
-                    if (entities_[i].first.intersect_vol(box_))
+                    if (entities_[i].second.intersect_vol(box_))
                     {
                         entities.emplace_back(entities_[i]);
                     }
@@ -236,12 +237,12 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Initialise the vector of shape-detector pairs which intersect with the node.
+             *  Initialise the vector of triangle-detector pairs which intersect with the node.
              *
              *  @param  box_        Bounding box of the node.
              *  @param  detectors_  Vector of detectors that are found within the node's bounds.
              *
-             *  @return Initialise vector of shape-detector pairs which intersect with the node.
+             *  @return Initialise vector of triangle-detector pairs which intersect with the node.
              */
             inline std::vector<std::pair<const geom::Shape&, const equip::Detector&>> Branch::init_detectors_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_) const noexcept
             {
@@ -249,7 +250,7 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < detectors_.size(); ++i)
                 {
-                    if (detectors_[i].first.intersect_vol(box_))
+                    if (detectors_[i].second.intersect_vol(box_))
                     {
                         detectors.emplace_back(detectors_[i]);
                     }
