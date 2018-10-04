@@ -214,16 +214,17 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Initialise the vector of triangle-entity pairs which intersect with the node.
+             *  Initialise the vector of entity-triangle pairs which intersect with the node.
              *
              *  @param  box_        Bounding box of the node.
              *  @param  entities_   Vector of entities that are found within the node's bounds.
              *
-             *  @return Initialise vector of triangle-entity pairs which intersect with the node.
+             *  @return Initialise vector of entity-triangle pairs which intersect with the node.
              */
-            inline std::vector<std::pair<const geom::Shape&, const equip::Entity&>> Branch::init_entities_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_) const noexcept
+            inline std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> Branch::init_entities_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& entities_) const
+              noexcept
             {
-                std::vector<std::pair<const geom::Shape&, const equip::Entity&>> entities;
+                std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> entities;
 
                 for (size_t i = 0; i < entities_.size(); ++i)
                 {
