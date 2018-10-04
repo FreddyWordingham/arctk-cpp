@@ -177,7 +177,7 @@ namespace arc //! arctk namespace
             {
                 PRE(contains(pos_));
 
-                std::optional<std::tuple<double, vec3, const equip::Entity*>> collision(std::nullopt);
+                std::optional<std::tuple<double, vec3, const equip::Entity&>> collision(std::nullopt);
                 for (size_t i = 0; i < _entities.size(); ++i)
                 {
                     const std::optional<std::pair<double, vec3>> coll = _entities[i].second.collision_norm(pos_, dir_);
