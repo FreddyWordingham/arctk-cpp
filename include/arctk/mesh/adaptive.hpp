@@ -119,7 +119,7 @@ namespace arc //! arctk namespace
          */
         inline std::vector<std::pair<const geom::Shape&, const equip::Entity&>> Adaptive::init_entity_tri_list(const geom::shape::Aabb& box_, const std::vector<equip::Entity>& entities_) const noexcept
         {
-            std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>> list;
+            std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> list;
 
             for (size_t i = 0; i < entities_.size(); ++i)
             {
@@ -127,7 +127,7 @@ namespace arc //! arctk namespace
                 {
                     if (entities_[i].surf().tri(j).intersect_vol(box_))
                     {
-                        list.emplace_back(std::pair<const equip::Light&, const geom::shape::Triangle&>(lights_[i], lights_[i].surf().tri(j)));
+                        list.emplace_back(std::pair<const equip::Entity&, const geom::shape::Triangle&>(entities_[i], entities_[i].surf().tri(j)));
                     }
                 }
             }
@@ -145,17 +145,15 @@ namespace arc //! arctk namespace
          */
         inline std::vector<std::pair<const geom::Shape&, const equip::Detector&>> Adaptive::init_detector_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Detector>& detectors_) const noexcept
         {
-            std::vector<std::pair<const geom::Shape&, const equip::Detector&>> list;
+            std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>> list;
 
-            for (size_t i = 0; i < detectors_.size(); ++i)
+            for (size_t i = 0; i < lights_.size(); ++i)
             {
-                const std::vector<const Shape*> shapes = detectors_[i].surf()->shape_list();
-
-                for (size_t j = 0; j < shapes.size(); ++j)
+                for (size_t j = 0; j < lights_.surf().num_faces(); ++j)
                 {
-                    if (shapes[j]->intersect_vol(box_))
+                    if (lights_[i].surf().tri(j).intersect_vol(box_))
                     {
-                        list.emplace_back(std::pair<const geom::Shape&, const equip::Detector&>(*shapes[j], detectors_[i]));
+                        list.emplace_back(std::pair<const equip::Light&, const geom::shape::Triangle&>(lights_[i], lights_[i].surf().tri(j)));
                     }
                 }
             }
