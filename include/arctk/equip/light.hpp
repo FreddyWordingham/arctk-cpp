@@ -43,17 +43,17 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
-            //  -- Structure --
-            const geom::shape::Mesh _surf; //!< Shape forming the emission surface of the light.
-
             //  -- Power --
             const double _power; //!< Power of the light source in Watts.
+
+            //  -- Structure --
+            const geom::shape::Mesh _surf; //!< Shape forming the emission surface of the light.
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Light(const geom::shape::Mesh& surf_, const double power_) noexcept;
+            inline Light(const double power_, const geom::shape::Mesh& surf_) noexcept;
 
 
             //  == METHODS ==
@@ -70,9 +70,9 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Light::Light(const geom::shape::Mesh& surf_, const double power_) noexcept
-          : _surf(surf_)
+        inline Light::Light(const double power_, const geom::shape::Mesh& surf_) noexcept
           , _power(power_)
+          , _surf(surf_)
         {
             PRE(power_ > 0.0);
         }
