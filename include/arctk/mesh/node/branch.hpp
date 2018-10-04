@@ -190,12 +190,12 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Initialise the vector of triangle-light pairs which intersect with the node.
+             *  Initialise the vector of light-triangle pairs which intersect with the node.
              *
              *  @param  box_    Bounding box of the node.
              *  @param  lights_ Vector of lights that are found within the node's bounds.
              *
-             *  @return Initialise vector of triangle-light pairs which intersect with the node.
+             *  @return Initialise vector of light-triangle pairs which intersect with the node.
              */
             inline std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>> Branch::init_lights_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>>& lights_) const
               noexcept
