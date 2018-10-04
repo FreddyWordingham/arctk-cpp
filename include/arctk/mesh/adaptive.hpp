@@ -143,17 +143,17 @@ namespace arc //! arctk namespace
          *
          *  @return Initialised vector of shape-detector pairs that are located within the bounds of the mesh.
          */
-        inline std::vector<std::pair<const geom::Shape&, const equip::Detector&>> Adaptive::init_detector_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Detector>& detectors_) const noexcept
+        inline std::vector<std::pair<const geom::Shape&, const equip::Detector&>> Adaptive::init_detector_tri_list(const geom::shape::Aabb& box_, const std::vector<equip::Detector>& detectors_) const noexcept
         {
-            std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>> list;
+            std::vector<std::pair<const equip::Detector&, const geom::shape::Triangle&>> list;
 
-            for (size_t i = 0; i < lights_.size(); ++i)
+            for (size_t i = 0; i < detectors_.size(); ++i)
             {
-                for (size_t j = 0; j < lights_.surf().num_faces(); ++j)
+                for (size_t j = 0; j < detectors_.surf().num_faces(); ++j)
                 {
-                    if (lights_[i].surf().tri(j).intersect_vol(box_))
+                    if (detectors_[i].surf().tri(j).intersect_vol(box_))
                     {
-                        list.emplace_back(std::pair<const equip::Light&, const geom::shape::Triangle&>(lights_[i], lights_[i].surf().tri(j)));
+                        list.emplace_back(std::pair<const equip::Detector&, const geom::shape::Triangle&>(detectors_[i], detectors_[i].surf().tri(j)));
                     }
                 }
             }
