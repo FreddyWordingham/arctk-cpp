@@ -62,11 +62,11 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline size_t                                                        max_depth() const noexcept override;
-                inline size_t                                                        max_shapes() const noexcept override;
-                inline size_t                                                        num_nodes() const noexcept override;
-                inline std::vector<geom::shape::Aabb>                                boxes() const noexcept override;
-                inline std::optional<std::tuple<double, vec3, const equip::Entity&>> intersect_entity(const vec3& pos_, const vec3& dir_) const noexcept;
+                inline size_t                                                              max_depth() const noexcept override;
+                inline size_t                                                              max_shapes() const noexcept override;
+                inline size_t                                                              num_nodes() const noexcept override;
+                inline std::vector<geom::shape::Aabb>                                      boxes() const noexcept override;
+                inline std::optional<std::tuple<double, vec3, const equip::Entity* const>> intersect_entity(const vec3& pos_, const vec3& dir_) const noexcept;
 
                 //  -- Retrieval --
                 inline Leaf const* leaf(const vec3& pos_) const noexcept override;
@@ -173,18 +173,18 @@ namespace arc //! arctk namespace
              *
              *  @return Distance to intersection, normal of intersection point, intersecting entity pointer.
              */
-            inline std::optional<std::tuple<double, vec3, const equip::Entity&>> Leaf::intersect_entity(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<std::tuple<double, vec3, const equip::Entity* const>> Leaf::intersect_entity(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 PRE(contains(pos_));
 
-                std::optional<std::tuple<double, vec3, const equip::Entity&>> collision(std::nullopt);
+                std::optional<std::tuple<double, vec3, const equip::Entity* const>> collision(std::nullopt);
                 for (size_t i = 0; i < _entities.size(); ++i)
                 {
                     const std::optional<std::pair<double, vec3>> coll = _entities[i].second.collision_norm(pos_, dir_);
 
                     if (coll && (!collision || (coll.value().first < std::get<0>(collision.value()))))
                     {
-                        collision = std::optional<std::tuple<double, vec3, const equip::Entity&>>(std::tuple<double, vec3, const equip::Entity&>(coll.value().first, coll.value().second, _entities[i].first));
+                        collision = std::optional<std::tuple<double, vec3, const equip::Entity* const>>(std::tuple<double, vec3, const equip::Entity* const>(coll.value().first, coll.value().second, _entities[i].first));
                     }
                 }
 
