@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/equip/light.hpp>
+#include <arctk/math.hpp>
 #include <arctk/phys.hpp>
 #include <arctk/random.hpp>
 
@@ -52,7 +53,8 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
-                //  -- Getters --
+                //  -- Emission --
+                inline phys::particle::Photon emit(random::Generator* rng_, equip::Entity* const cur_ent_) const noexcept override;
             };
 
 
@@ -64,6 +66,17 @@ namespace arc //! arctk namespace
               , _wavelength(wavelength_)
             {
                 PRE(wavelength_ > 0.0);
+            }
+
+
+
+            //  == METHODS ==
+            //  -- Emission --
+            inline phys::particle::Photon Laser::emit(random::Generator* rng_, equip::Entity* const cur_ent_) const noexcept
+            {
+                const std::pair<vec3, vec3> pos_norm = _surf.random_pos_and_norm(rng_);
+
+                return (phys::particle::Photon(pos_norm.first, pos_norm.second, _wavelength, cur_ent_));
             }
 
 
