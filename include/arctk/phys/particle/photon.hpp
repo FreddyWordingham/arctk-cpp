@@ -76,6 +76,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Getters --
                 inline double               wavelength() const noexcept;
+                inline double               energy() const noexcept;
                 inline const equip::Entity* entity() const noexcept;
                 inline const equip::Entity* prev_entity() const noexcept;
 
@@ -126,6 +127,16 @@ namespace arc //! arctk namespace
             inline double Photon::wavelength() const noexcept
             {
                 return (_wavelength);
+            }
+
+            /**
+             *  Get the energy of the photon.
+             *
+             *  @return Energy of the photon.
+             */
+            inline double Photon::energy() const noexcept
+            {
+                return (_energy);
             }
 
             /**
