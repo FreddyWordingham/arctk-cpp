@@ -147,9 +147,9 @@ namespace arc //! arctk namespace
              *
              *  @return Initialised three-dimensional array of child nodes.
              */
-            inline std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> Branch::init_childs(const std::vector<std::pair<const geom::Shape&, const equip::Light&>>&    lights_,
-                                                                                                          const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>&   entities_,
-                                                                                                          const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_, const size_t cur_depth_, const size_t max_depth_,
+            inline std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> Branch::init_childs(const std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>>&    lights_,
+                                                                                                          const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>&   entities_,
+                                                                                                          const std::vector<std::pair<const equip::Detector&, const geom::shape::Triangle&>>& detectors_, const size_t cur_depth_, const size_t max_depth_,
                                                                                                           const size_t target_shapes_) const noexcept
             {
                 std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> childs;
@@ -168,9 +168,9 @@ namespace arc //! arctk namespace
 
                             const geom::shape::Aabb box(min, max);
 
-                            const std::vector<std::pair<const geom::Shape&, const equip::Light&>>    lights    = init_lights_intersect(box, lights_);
-                            const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>   entities  = init_entities_intersect(box, entities_);
-                            const std::vector<std::pair<const geom::Shape&, const equip::Detector&>> detectors = init_detectors_intersect(box, detectors_);
+                            const std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>>    lights    = init_lights_intersect(box, lights_);
+                            const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>   entities  = init_entities_intersect(box, entities_);
+                            const std::vector<std::pair<const equip::Detector&, const geom::shape::Triangle&>> detectors = init_detectors_intersect(box, detectors_);
 
                             const size_t total_primitives = lights.size() + entities.size() + detectors.size();
 
