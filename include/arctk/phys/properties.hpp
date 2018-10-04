@@ -36,11 +36,13 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Optical --
+            const double _ref_index;
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline explicit Properties(double ref_index_) const noexcept;
 
 
             //  == METHODS ==
@@ -52,6 +54,11 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline Properties::Properties(const double ref_index_) const noexcept
+          : _ref_index(ref_index_)
+        {
+            PRE(ref_index_ > 0.0);
+        }
 
 
 
