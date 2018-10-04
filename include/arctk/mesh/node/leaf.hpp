@@ -82,7 +82,7 @@ namespace arc //! arctk namespace
              *  @param  min_            Minimum bound of the node.
              *  @param  max_            Maximum bound of the node.
              *  @param  lights_         Vector of light triangles that are found within the node's bounds.
-             *  @param  entities_       Vector of entitie triangles that are found within the node's bounds.
+             *  @param  entities_       Vector of entity triangles that are found within the node's bounds.
              *  @param  detectors_      Vector of detector triangles that are found within the node's bounds.
              *  @param  cur_depth_      Current depth of the node.
              *
