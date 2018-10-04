@@ -55,8 +55,8 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_,
-                            const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_, size_t cur_depth_) noexcept;
+                inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>>& lights_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& entities_,
+                            const std::vector<std::pair<const equip::Detector&, const geom::shape::Triangle&>>& detectors_, size_t cur_depth_) noexcept;
 
 
                 //  == METHODS ==
@@ -81,9 +81,9 @@ namespace arc //! arctk namespace
              *
              *  @param  min_            Minimum bound of the node.
              *  @param  max_            Maximum bound of the node.
-             *  @param  lights_         Vector of lights that are found within the node's bounds.
-             *  @param  entities_       Vector of entities that are found within the node's bounds.
-             *  @param  detectors_      Vector of detectors that are found within the node's bounds.
+             *  @param  lights_         Vector of light triangles that are found within the node's bounds.
+             *  @param  entities_       Vector of entitie triangles that are found within the node's bounds.
+             *  @param  detectors_      Vector of detector triangles that are found within the node's bounds.
              *  @param  cur_depth_      Current depth of the node.
              *
              *  @pre    min_.x must be less than max_.x.
@@ -93,8 +93,8 @@ namespace arc //! arctk namespace
              *  @pre    entities_ shapes must intersect the node.
              *  @pre    detectors_ shapes must intersect the node.
              */
-            inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const geom::Shape&, const equip::Light&>>& lights_, const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>& entities_,
-                              const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_, const size_t cur_depth_) noexcept
+            inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>>& lights_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& entities_,
+                              const std::vector<std::pair<const equip::Detector&, const geom::shape::Triangle&>>& detectors_, const size_t cur_depth_) noexcept
               : Node(min_, max_, cur_depth_)
               , _lights(lights_)
               , _entities(entities_)
@@ -105,15 +105,15 @@ namespace arc //! arctk namespace
                 PRE(min_.z < max_.z);
                 for (size_t i = 0; i < lights_.size(); ++i)
                 {
-                    PRE(lights_[i].first.intersect_vol(*this));
+                    PRE(lights_[i].second.intersect_vol(*this));
                 }
                 for (size_t i = 0; i < entities_.size(); ++i)
                 {
-                    PRE(entities_[i].first.intersect_vol(*this));
+                    PRE(entities_[i].second.intersect_vol(*this));
                 }
                 for (size_t i = 0; i < detectors_.size(); ++i)
                 {
-                    PRE(detectors_[i].first.intersect_vol(*this));
+                    PRE(detectors_[i].second.intersect_vol(*this));
                 }
             }
 
