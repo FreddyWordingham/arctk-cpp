@@ -70,7 +70,9 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Light::Light(const double power_, const geom::shape::Mesh& surf_) noexcept, _power(power_), _surf(surf_)
+        inline Light::Light(const double power_, const geom::shape::Mesh& surf_) noexcept
+          : _power(power_)
+          , _surf(surf_)
         {
             PRE(power_ > 0.0);
         }
