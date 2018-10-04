@@ -238,12 +238,12 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Initialise the vector of triangle-detector pairs which intersect with the node.
+             *  Initialise the vector of detector-triangle pairs which intersect with the node.
              *
              *  @param  box_        Bounding box of the node.
              *  @param  detectors_  Vector of detectors that are found within the node's bounds.
              *
-             *  @return Initialise vector of triangle-detector pairs which intersect with the node.
+             *  @return Initialise vector of detector-triangle pairs which intersect with the node.
              */
             inline std::vector<std::pair<const geom::Shape&, const equip::Detector&>> Branch::init_detectors_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_) const noexcept
             {
