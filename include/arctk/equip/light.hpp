@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
             inline Light(Light&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
-            inline ~Light() noexcept;
+            virtual inline ~Light() noexcept;
 
 
             //  == OPERATORS ==
