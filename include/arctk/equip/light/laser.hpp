@@ -65,6 +65,7 @@ namespace arc //! arctk namespace
               : Light(power_, surf_)
               , _wavelength(wavelength_)
             {
+                PRE(power_ > 0.0);
                 PRE(wavelength_ > 0.0);
             }
 
