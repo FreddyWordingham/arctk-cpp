@@ -97,7 +97,7 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i < lights_.size(); ++i)
             {
-                for (size_t j = 0; j < lights_.surf().num_faces(); ++j)
+                for (size_t j = 0; j < lights_[i].surf().num_faces(); ++j)
                 {
                     if (lights_[i].surf().tri(j).intersect_vol(box_))
                     {
@@ -123,7 +123,7 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i < entities_.size(); ++i)
             {
-                for (size_t j = 0; j < entities_.surf().num_faces(); ++j)
+                for (size_t j = 0; j < entities_[i].surf().num_faces(); ++j)
                 {
                     if (entities_[i].surf().tri(j).intersect_vol(box_))
                     {
@@ -149,7 +149,7 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i < detectors_.size(); ++i)
             {
-                for (size_t j = 0; j < detectors_.surf().num_faces(); ++j)
+                for (size_t j = 0; j < detectors_[i].surf().num_faces(); ++j)
                 {
                     if (detectors_[i].surf().tri(j).intersect_vol(box_))
                     {
