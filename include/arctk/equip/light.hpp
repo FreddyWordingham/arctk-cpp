@@ -46,6 +46,7 @@ namespace arc //! arctk namespace
             //  -- Power --
             const double _power; //!< Power of the light source in Watts.
 
+          protected:
             //  -- Structure --
             const geom::shape::Mesh _surf; //!< Shape forming the emission surface of the light.
 
