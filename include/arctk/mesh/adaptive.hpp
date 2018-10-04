@@ -117,7 +117,7 @@ namespace arc //! arctk namespace
          *
          *  @return Initialised vector of shape-entity pairs that are located within the bounds of the mesh.
          */
-        inline std::vector<std::pair<const geom::Shape&, const equip::Entity&>> Adaptive::init_entity_tri_list(const geom::shape::Aabb& box_, const std::vector<equip::Entity>& entities_) const noexcept
+        inline std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> Adaptive::init_entity_tri_list(const geom::shape::Aabb& box_, const std::vector<equip::Entity>& entities_) const noexcept
         {
             std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> list;
 
