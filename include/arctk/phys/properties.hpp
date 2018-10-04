@@ -37,7 +37,10 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Optical --
+            const double _interaction_coef;
             const double _ref_index;
+            const double _albedo;
+            const double _asym;
 
 
             //  == INSTANTIATION ==
