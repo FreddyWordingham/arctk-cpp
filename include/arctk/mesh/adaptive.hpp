@@ -73,8 +73,7 @@ namespace arc //! arctk namespace
          */
         inline Adaptive::Adaptive(const vec3& min_, const vec3& max_, const std::vector<equip::Light>& lights_, const std::vector<equip::Entity>& entities_, const std::vector<equip::Detector>& detectors_, const size_t max_depth_,
                                   const size_t target_shapes_) noexcept
-          : Branch(min_, max_, init_light_shape_list(geom::shape::Aabb(min_, max_), lights_), init_entity_shape_list(geom::shape::Aabb(min_, max_), entities_), init_detector_shape_list(geom::shape::Aabb(min_, max_), detectors_), 1, max_depth_,
-                   target_shapes_)
+          : Branch(min_, max_, init_light_tri_list(geom::shape::Aabb(min_, max_), lights_), init_entity_tri_list(geom::shape::Aabb(min_, max_), entities_), init_detector_tri_list(geom::shape::Aabb(min_, max_), detectors_), 1, max_depth_, target_shapes_)
         {
             PRE(min_.x < max_.x);
             PRE(min_.y < max_.y);
@@ -85,26 +84,24 @@ namespace arc //! arctk namespace
 
         //  -- Initialisation --
         /**
-         *  Initialise the vector of shape-light pairs that are located within the bounds of the mesh.
+         *  Initialise the vector of light-triangle pairs that are located within the bounds of the mesh.
          *
          *  @param  box_    Bounding box of the mesh.
          *  @param  lights_ Vector of lights that may be found within the mesh's bounds.
          *
-         *  @return Initialised vector of shape-light pairs that are located within the bounds of the mesh.
+         *  @return Initialised vector of light-triangle pairs that are located within the bounds of the mesh.
          */
-        inline std::vector<std::pair<const geom::Shape&, const equip::Light&>> Adaptive::init_light_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Light>& lights_) const noexcept
+        inline std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>> Adaptive::init_light_tri_list(const geom::shape::Aabb& box_, const std::vector<equip::Light>& lights_) const noexcept
         {
-            std::vector<std::pair<const geom::Shape&, const equip::Light&>> list;
+            std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>> list;
 
             for (size_t i = 0; i < lights_.size(); ++i)
             {
-                const std::vector<const Shape*> shapes = lights_[i].surf()->shape_list();
-
-                for (size_t j = 0; j < shapes.size(); ++j)
+                for (size_t j = 0; j < lights_.surf().num_faces(); ++j)
                 {
-                    if (shapes[j]->intersect_vol(box_))
+                    if (lights_[i].surf().tri(j).intersect_vol(box_))
                     {
-                        list.emplace_back(std::pair<const geom::Shape&, const equip::Light&>(*shapes[j], lights_[i]));
+                        list.emplace_back(std::pair<const equip::Light&, const geom::shape::Triangle&>(lights_[i], lights_[i].surf().tri(j)));
                     }
                 }
             }
@@ -120,19 +117,17 @@ namespace arc //! arctk namespace
          *
          *  @return Initialised vector of shape-entity pairs that are located within the bounds of the mesh.
          */
-        inline std::vector<std::pair<const geom::Shape&, const equip::Entity&>> Adaptive::init_entity_shape_list(const geom::shape::Aabb& box_, const std::vector<equip::Entity>& entities_) const noexcept
+        inline std::vector<std::pair<const geom::Shape&, const equip::Entity&>> Adaptive::init_entity_tri_list(const geom::shape::Aabb& box_, const std::vector<equip::Entity>& entities_) const noexcept
         {
-            std::vector<std::pair<const geom::Shape&, const equip::Entity&>> list;
+            std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>> list;
 
             for (size_t i = 0; i < entities_.size(); ++i)
             {
-                const std::vector<const Shape*> shapes = entities_[i].surf()->shape_list();
-
-                for (size_t j = 0; j < shapes.size(); ++j)
+                for (size_t j = 0; j < entities_.surf().num_faces(); ++j)
                 {
-                    if (shapes[j]->intersect_vol(box_))
+                    if (entities_[i].surf().tri(j).intersect_vol(box_))
                     {
-                        list.emplace_back(std::pair<const geom::Shape&, const equip::Entity&>(*shapes[j], entities_[i]));
+                        list.emplace_back(std::pair<const equip::Light&, const geom::shape::Triangle&>(lights_[i], lights_[i].surf().tri(j)));
                     }
                 }
             }
