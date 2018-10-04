@@ -59,7 +59,14 @@ namespace arc //! arctk namespace
             inline Light(Light&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
-            inline ~Light() noexcept override;
+            inline ~Light() noexcept;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Particle& operator=(const Particle&) = default;     //!< Defaulted copy operator. @return Reference to copied object.
+            inline Particle& operator=(Particle&&) noexcept = default; //!< Defaulted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
