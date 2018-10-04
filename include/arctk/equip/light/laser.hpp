@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Laser(const geom::shape::Mesh& surf_, double power_, double wavelength_) noexcept;
+                inline Laser(double power_, const geom::shape::Mesh& surf_, double wavelength_) noexcept;
 
 
                 //  == METHODS ==
@@ -61,8 +61,8 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Laser::Laser(const geom::shape::Mesh& surf_, const double power_, const double wavelength_) noexcept
-              : Light(surf_, power_)
+            inline Laser::Laser(const double power_, const geom::shape::Mesh& surf_, const double wavelength_) noexcept
+              : Light(power_, surf_)
               , _wavelength(wavelength_)
             {
                 PRE(wavelength_ > 0.0);
