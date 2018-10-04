@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline explicit Properties(double ref_index_) const noexcept;
+            inline explicit Properties(double ref_index_) noexcept;
 
 
             //  == METHODS ==
@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Properties::Properties(const double ref_index_) const noexcept
+        inline Properties::Properties(const double ref_index_) noexcept
           : _ref_index(ref_index_)
         {
             PRE(ref_index_ > 0.0);
