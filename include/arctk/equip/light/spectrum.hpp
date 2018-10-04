@@ -58,7 +58,8 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
-                //  -- Getters --
+                //  -- Emission --
+                inline phys::particle::Photon emit(random::Generator* rng_, equip::Entity* const cur_ent_) const noexcept override;
             };
 
 
@@ -70,6 +71,17 @@ namespace arc //! arctk namespace
               , _spec(spec_)
             {
                 PRE(power_ > 0.0);
+            }
+
+
+
+            //  == METHODS ==
+            //  -- Emission --
+            inline phys::particle::Photon Spectrum::emit(random::Generator* rng_, equip::Entity* const cur_ent_) const noexcept
+            {
+                const std::pair<vec3, vec3> pos_norm = _surf.random_pos_and_norm(rng_);
+
+                return (phys::particle::Photon(pos_norm.first, pos_norm.second, _spec.sample(rng_), cur_ent_));
             }
 
 
