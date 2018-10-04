@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Photon(const vec3& pos_, const vec3& dir_, double wavelength_, equip::Entity* const cur_ent_, double energy_ = 1.0, double time_ = 0.0) noexcept;
+                inline Photon(const vec3& pos_, const vec3& dir_, double wavelength_, const equip::Entity* cur_ent_, double energy_ = 1.0, double time_ = 0.0) noexcept;
 
 
                 //  == METHODS ==
@@ -81,7 +81,7 @@ namespace arc //! arctk namespace
                 inline const equip::Entity* prev_entity() const noexcept;
 
                 //  -- Traversal --
-                inline bool enter_entity(equip::Entity* const ent_) noexcept;
+                inline bool enter_entity(const equip::Entity* ent_) noexcept;
             };
 
 
@@ -103,7 +103,7 @@ namespace arc //! arctk namespace
              *  @pre    energy_ must be positive.
              *  @pre    cur_ent_ may not be nullptr.
              */
-            inline Photon::Photon(const vec3& pos_, const vec3& dir_, const double wavelength_, equip::Entity* const cur_ent_, const double energy_, const double time_) noexcept
+            inline Photon::Photon(const vec3& pos_, const vec3& dir_, const double wavelength_, const equip::Entity* cur_ent_, const double energy_, const double time_) noexcept
               : Particle(pos_, dir_, time_)
               , _wavelength(wavelength_)
               , _energy(energy_)
@@ -170,7 +170,7 @@ namespace arc //! arctk namespace
              *
              *  @return True if entering the entity, false if exiting it.
              */
-            inline bool Photon::enter_entity(equip::Entity* const ent_) noexcept
+            inline bool Photon::enter_entity(const equip::Entity* ent_) noexcept
             {
                 if (ent_ == _cur_ent)
                 {
