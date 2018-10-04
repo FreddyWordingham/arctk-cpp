@@ -84,6 +84,13 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Destructors --
+        /**
+         *  Default destructor.
+         */
+        inline Light::~Light() noexcept = default;
+
+
 
         //  == METHODS ==
         //  -- Getters --
