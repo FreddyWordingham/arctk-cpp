@@ -143,7 +143,7 @@ namespace arc //! arctk namespace
          *
          *  @return Initialised vector of shape-detector pairs that are located within the bounds of the mesh.
          */
-        inline std::vector<std::pair<const geom::Shape&, const equip::Detector&>> Adaptive::init_detector_tri_list(const geom::shape::Aabb& box_, const std::vector<equip::Detector>& detectors_) const noexcept
+        inline std::vector<std::pair<const equip::Detector&, const geom::shape::Triangle&>> Adaptive::init_detector_tri_list(const geom::shape::Aabb& box_, const std::vector<equip::Detector>& detectors_) const noexcept
         {
             std::vector<std::pair<const equip::Detector&, const geom::shape::Triangle&>> list;
 
