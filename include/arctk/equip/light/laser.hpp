@@ -47,8 +47,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                template <typename T>
-                inline Laser(const geom::shape::Mesh& surf_, const double wavelength_, const double power_) noexcept;
+                inline Laser(const geom::shape::Mesh& surf_, double power_, double wavelength_) noexcept;
 
 
                 //  == METHODS ==
@@ -60,6 +59,12 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Laser::Laser(const geom::shape::Mesh& surf_, const double power_, const double wavelength_) noexcept
+              : Light(surf_, power_)
+              , _wavelength(wavelength_)
+            {
+                PRE(wavelength_ > 0.0);
+            }
 
 
 
