@@ -55,6 +55,11 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Light(const double power_, const geom::shape::Mesh& surf_) noexcept;
+            inline Light(const Light&) noexcept = default; //!< Defaulted copy constructor.
+            inline Light(Light&&) noexcept      = default; //!< Defaulted move constructor.
+
+            //  -- Destructors --
+            inline ~Light() noexcept override;
 
 
             //  == METHODS ==
