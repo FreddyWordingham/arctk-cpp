@@ -62,10 +62,10 @@ namespace arc //! arctk namespace
 
                 //  -- Initialisation --
               private:
-                inline std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> init_childs(const std::vector<std::pair<const geom::Shape&, const equip::Light&>>&    lights_,
-                                                                                                      const std::vector<std::pair<const geom::Shape&, const equip::Entity&>>&   entities_,
-                                                                                                      const std::vector<std::pair<const geom::Shape&, const equip::Detector&>>& detectors_, size_t cur_depth_, size_t max_depth_, size_t target_shapes_) const
-                  noexcept;
+                inline std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2>         init_childs(const std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>>&    lights_,
+                                                                                                              const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>&   entities_,
+                                                                                                              const std::vector<std::pair<const equip::Detector&, const geom::shape::Triangle&>>& detectors_, size_t cur_depth_, size_t max_depth_,
+                                                                                                              size_t target_shapes_) const noexcept;
                 inline std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>>  init_lights_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const equip::Light&, const geom::shape::Triangle&>>& lights_) const noexcept;
                 inline std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> init_entities_intersect(const geom::shape::Aabb& box_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& entities_) const
                   noexcept;
