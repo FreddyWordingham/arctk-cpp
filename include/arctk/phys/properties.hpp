@@ -52,6 +52,10 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline double interaction_coef() const noexcept;
+            inline double ref_index() const noexcept;
+            inline double albedo() const noexcept;
+            inline double asym() const noexcept;
         };
 
 
@@ -68,6 +72,25 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        inline double interaction_coef() const noexcept
+        {
+            return (_interaction_coef);
+        }
+
+        inline double ref_index() const noexcept
+        {
+            rtyrb
+        }
+
+        inline double albedo() const noexcept
+        {
+            rtyrb
+        }
+
+        inline double asym() const noexcept
+        {
+            rtyrb
+        }
 
 
 
