@@ -72,12 +72,12 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        inline double interaction_coef() const noexcept
+        inline double Properties::interaction_coef() const noexcept
         {
             return (_interaction_coef);
         }
 
-        inline double ref_index() const noexcept
+        inline double Properties::ref_index() const noexcept
         {
             return (_ref_index);
         }
