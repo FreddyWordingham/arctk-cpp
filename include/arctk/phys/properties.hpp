@@ -89,7 +89,7 @@ namespace arc //! arctk namespace
 
         inline double Properties::asym() const noexcept
         {
-            rtyrb
+            return (_asym);
         }
 
 
