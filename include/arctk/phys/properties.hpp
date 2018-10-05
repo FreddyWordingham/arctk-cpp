@@ -82,12 +82,12 @@ namespace arc //! arctk namespace
             return (_ref_index);
         }
 
-        inline double albedo() const noexcept
+        inline double Properties::albedo() const noexcept
         {
-            rtyrb
+            return (_albedo);
         }
 
-        inline double asym() const noexcept
+        inline double Properties::asym() const noexcept
         {
             rtyrb
         }
