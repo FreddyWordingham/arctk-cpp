@@ -79,7 +79,7 @@ namespace arc //! arctk namespace
 
         inline double ref_index() const noexcept
         {
-            rtyrb
+            return (_ref_index);
         }
 
         inline double albedo() const noexcept
