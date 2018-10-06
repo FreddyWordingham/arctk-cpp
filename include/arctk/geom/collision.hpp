@@ -49,8 +49,28 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
-            //  -- Collision --
+            //  -- Getters --
+            inline bool        front() const noexcept;
+            inline double      dist() const noexcept;
+            inline const vec3& norm() const noexcept;
         };
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        inline bool Collision::front() const noexcept
+        {
+        }
+
+        inline double Collision::dist() const noexcept
+        {
+        }
+
+        inline const vec3& Collision::norm() const noexcept
+        {
+            return (_norm);
+        }
 
 
 
