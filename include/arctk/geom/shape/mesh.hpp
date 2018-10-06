@@ -22,6 +22,7 @@
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/geom/shape/triangle.hpp>
 #include <arctk/math.hpp>
 
 
@@ -44,6 +45,9 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Triangles --
+                const std::vector<Triangle> _tris; //!< List of triangles forming the mesh.
+
                 //  -- Properties --
                 const size_t _num_verts; //!< Number of unique vertex positions forming the mesh.
                 const size_t _num_norms; //!< Number of unique vertex normals forming the mesh.
