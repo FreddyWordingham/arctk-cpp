@@ -63,9 +63,10 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                const std::array<vec3, 3>& poss() const noexcept;
-                const std::array<vec3, 3>& norms() const noexcept;
-                const vec3&                plane_norm() const noexcept;
+                inline const std::array<vec3, 3>& poss() const noexcept;
+                inline const std::array<vec3, 3>& norms() const noexcept;
+                inline const vec3&                plane_norm() const noexcept;
+                inline double                     area() const noexcept;
 
                 //  -- Collision --
                 inline std::optional<double>    collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -102,17 +103,17 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            const std::array<vec3, 3>& Triangle::poss() const noexcept
+            inline const std::array<vec3, 3>& Triangle::poss() const noexcept
             {
                 return (_poss);
             }
 
-            const std::array<vec3, 3>& Triangle::norms() const noexcept
+            inline const std::array<vec3, 3>& Triangle::norms() const noexcept
             {
                 return (_norms);
             }
 
-            const vec3& Triangle::plane_norm() const noexcept
+            inline const vec3& Triangle::plane_norm() const noexcept
             {
                 return (_plane_norm);
             }
