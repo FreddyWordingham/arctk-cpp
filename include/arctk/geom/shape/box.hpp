@@ -194,7 +194,7 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                return (axis_test(tri_.norm()));
+                return (axis_test(tri_.plane_norm()));
             }
 
 
