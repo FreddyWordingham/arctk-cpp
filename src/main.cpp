@@ -109,7 +109,6 @@
 #include <arctk/math/vec2.hpp>
 #include <arctk/math/vec3.hpp>
 #include <arctk/math/vec4.hpp>
-#include <arctk/mesh.hpp>
 #include <arctk/phys.hpp>
 #include <arctk/phys/cell.hpp>
 #include <arctk/phys/material.hpp>
@@ -131,6 +130,7 @@
 #include <arctk/sys/balancer.hpp>
 #include <arctk/term.hpp>
 #include <arctk/term/ansi.hpp>
+#include <arctk/tree.hpp>
 #include <arctk/utl.hpp>
 #include <arctk/utl/manip.hpp>
 #include <arctk/utl/properties.hpp>
