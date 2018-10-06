@@ -35,6 +35,11 @@ namespace arc //! arctk namespace
 
 
 
+            //  == CLASS PROTOTYPES ==
+            class Mesh;
+
+
+
             //  == CLASS ==
             /**
              *  Axis-aligned bounding box shape.
@@ -67,6 +72,7 @@ namespace arc //! arctk namespace
                 inline bool intersect(const vec3& pos_) const noexcept;
                 inline bool intersect(const Box& box_) const noexcept;
                 inline bool intersect(const Triangle& tri_) const noexcept;
+                inline bool intersect(const Mesh& mesh_) const noexcept;
 
                 //  -- Collision --
                 inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const noexcept override;
