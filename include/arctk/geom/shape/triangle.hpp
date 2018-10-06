@@ -64,7 +64,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Collision --
                 inline std::optional<double>    collision(const vec3& pos_, const vec3& dir_) const noexcept override;
-                inline std::optional<Collision> collision_info(const vec3& pos_, const vec3& dir_) const noexcept override;
+                inline std::optional<Collision> collision_info(const vec3& pos_, const vec3& dir_) const noexcept;
             };
 
 
