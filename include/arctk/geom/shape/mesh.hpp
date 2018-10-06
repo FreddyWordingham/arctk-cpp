@@ -97,6 +97,9 @@ namespace arc //! arctk namespace
               , _num_faces(faces_.size())
               , _closed((_num_verts + _num_faces - _num_edges) == 2)
             {
+                PRE(poss_.size() >= 3);
+                PRE(!norms_.empty());
+                PRE(!faces_.empty());
             }
 
 
