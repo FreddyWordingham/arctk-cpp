@@ -75,7 +75,7 @@ namespace arc //! arctk namespace
              *
              *  @pre    norms_ vecs must be normalised.
              *
-             *  @post   _norm must be normalised.
+             *  @post   _plane_norm must be normalised.
              */
             inline Triangle::Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) noexcept
               : _poss(poss_)
