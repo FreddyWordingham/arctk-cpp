@@ -48,6 +48,7 @@
 #include <arctk/exit/error.hpp>
 #include <arctk/exit/success.hpp>
 #include <arctk/geom.hpp>
+#include <arctk/geom/collision.hpp>
 #include <arctk/geom/shape.hpp>
 #include <arctk/geom/shape/box.hpp>
 #include <arctk/geom/shape/triangle.hpp>
