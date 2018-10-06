@@ -77,6 +77,14 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             inline Mesh::Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) noexcept
+              : _tris(init_tris())
+              , _areas(init_areas())
+              , _box(init_box())
+              , _num_verts(init_num_verts())
+              , _num_norms(init_num_norms())
+              , _num_edges(init_num_edges())
+              , _num_faces(init_num_faces())
+              , _closed((_num_verts + _num_faces - _num_edges) == 2)
             {
             }
 
