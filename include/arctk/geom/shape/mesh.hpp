@@ -72,6 +72,7 @@ namespace arc //! arctk namespace
                 inline std::vector<Triangle> init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept;
                 inline std::vector<double>   init_areas() const noexcept;
                 inline Box                   init_box() const noexcept;
+                inline size_t                init_num_verts(size_t num_poss, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept;
 
 
                 //  == METHODS ==
@@ -87,7 +88,7 @@ namespace arc //! arctk namespace
               : _tris(init_tris(poss_, norms_, faces_))
               , _areas(init_areas())
               , _box(init_box())
-              , _num_verts(init_num_verts())
+              , _num_verts(init_num_verts(poss_.size(), faces_))
               , _num_norms(init_num_norms())
               , _num_edges(init_num_edges())
               , _num_faces(init_num_faces())
@@ -171,6 +172,32 @@ namespace arc //! arctk namespace
                 }
 
                 return (Box(min, max));
+            }
+
+            inline size_t Box::init_num_verts(const size_t num_poss, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
+            {
+                std::vector<bool> used(num_poss, false);
+
+                for (size_t i = 0; i < faces_.size(); ++i)
+                {
+                    const std::array<size_t, 3>& pos_indices = faces_[i].first;
+
+                    for (size_t j = 0; j < 3; ++j)
+                    {
+                        used[pos_indices[j]] = true;
+                    }
+                }
+
+                size_t num_verts = 0;
+                for (size_t i = 0; i < used.size(); ++i)
+                {
+                    if (used[i])
+                    {
+                        ++num_verts;
+                    }
+                }
+
+                return (num_verts);
             }
 
 
