@@ -50,6 +50,7 @@
 #include <arctk/geom.hpp>
 #include <arctk/geom/shape.hpp>
 #include <arctk/geom/shape/box.hpp>
+#include <arctk/geom/shape/triangle.hpp>
 #include <arctk/gui.hpp>
 #include <arctk/gui/actor.hpp>
 #include <arctk/gui/camera.hpp>
