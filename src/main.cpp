@@ -110,10 +110,6 @@
 #include <arctk/math/vec3.hpp>
 #include <arctk/math/vec4.hpp>
 #include <arctk/mesh.hpp>
-#include <arctk/mesh/adaptive.hpp>
-#include <arctk/mesh/node.hpp>
-#include <arctk/mesh/node/branch.hpp>
-#include <arctk/mesh/node/leaf.hpp>
 #include <arctk/phys.hpp>
 #include <arctk/phys/cell.hpp>
 #include <arctk/phys/material.hpp>
