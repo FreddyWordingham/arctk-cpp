@@ -61,8 +61,7 @@ namespace arc //! arctk namespace
                 inline double      vol() const noexcept;
 
                 //  -- Intersection --
-                inline bool box_surf_intersect(const Box& box_) const noexcept;
-                inline bool box_vol_intersect(const Box& box_) const noexcept;
+                inline bool contains(const Box& box_) const noexcept;
 
                 //  -- Collision --
                 inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -122,28 +121,7 @@ namespace arc //! arctk namespace
 
 
             //  -- Intersection --
-            inline bool Box::box_surf_intersect(const Box& box_) const noexcept
-            {
-                for (size_t i = 0; i < 3; ++i)
-                {
-                    if ((_min[i] > box_.max()[i]) || (_max[i] < box_.min()[i]))
-                    {
-                        return (false);
-                    }
-                }
-
-                for (size_t i = 0; i < 3; ++i)
-                {
-                    if ((box_.min()[i] < _min[i]) || (box_.max()[i] > _max[i]))
-                    {
-                        return (true);
-                    }
-                }
-
-                return (false);
-            }
-
-            inline bool Box::box_vol_intersect(const Box& box_) const noexcept
+            inline bool Box::contains(const Box& box_) const noexcept
             {
                 for (size_t i = 0; i < 3; ++i)
                 {
