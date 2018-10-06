@@ -16,10 +16,6 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
-#include <arctk/mesh/adaptive.hpp>
-#include <arctk/mesh/node.hpp>
-#include <arctk/mesh/node/branch.hpp>
-#include <arctk/mesh/node/leaf.hpp>
 
 
 
