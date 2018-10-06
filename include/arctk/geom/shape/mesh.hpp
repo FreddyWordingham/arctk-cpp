@@ -70,6 +70,7 @@ namespace arc //! arctk namespace
               private:
                 //  -- Initialisation --
                 inline std::vector<Triangle> init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept;
+                inline std::vector<double>   init_areas() const noexcept;
 
 
                 //  == METHODS ==
@@ -122,6 +123,26 @@ namespace arc //! arctk namespace
                 POST(!tris.empty());
 
                 return (tris);
+            }
+
+            inline std::vector<double> Mesh::init_areas() const noexcept
+            {
+                std::vector<double> areas(_tris.size() + 1);
+
+                areas[0] = 0.0;
+                for (size_t i = 1; i < areas.size(); ++i)
+                {
+                    areas[i] = areas[i - 1] + _tris[i - 1].area();
+                }
+
+                for (size_t i = 0; i < areas.size(); ++i)
+                {
+                    areas[i] /= areas.back();
+                }
+
+                POST(math::compare::unity(areas.back()));
+
+                return (areas);
             }
 
 
