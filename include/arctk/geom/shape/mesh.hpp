@@ -100,6 +100,8 @@ namespace arc //! arctk namespace
                 PRE(poss_.size() >= 3);
                 PRE(!norms_.empty());
                 PRE(!faces_.empty());
+
+                POST(!_tris.empty());
             }
 
 
