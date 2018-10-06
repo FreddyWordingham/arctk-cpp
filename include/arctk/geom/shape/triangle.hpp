@@ -46,6 +46,9 @@ namespace arc //! arctk namespace
                 const std::array<vec3, 3> _poss;  //!< Vertex positions.
                 const std::array<vec3, 3> _norms; //!< Vertex normals.
 
+                //  -- Normals --
+                const vec3 _norm; //!< Triangle plane normal.
+
 
 
                 //  == INSTANTIATION ==
