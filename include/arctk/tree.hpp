@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/mesh.hpp
+ *  @file   arctk/tree.hpp
  *  @date   17/09/2018
  *  @author Freddy Wordingham
  *
- *  Collection of mesh classes.
+ *  Collection of tree classes.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_MESH_HPP
-#define ARCTK_MESH_HPP
+#ifndef ARCTK_TREE_HPP
+#define ARCTK_TREE_HPP
 
 
 
@@ -20,4 +20,4 @@
 
 
 //  == GUARD END ==
-#endif // ARCTK_MESH_HPP
+#endif // ARCTK_TREE_HPP
