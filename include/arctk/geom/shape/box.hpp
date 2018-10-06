@@ -57,6 +57,7 @@ namespace arc //! arctk namespace
                 //  -- Getters --
                 inline const vec3& min() const noexcept;
                 inline const vec3& max() const noexcept;
+                inline double      vol() const noexcept;
             };
 
 
@@ -104,6 +105,11 @@ namespace arc //! arctk namespace
             inline const vec3& Box::max() const noexcept
             {
                 return (_max);
+            }
+
+            inline double Box::vol() const noexcept
+            {
+                return ((_max.x - _min.x) * (_max.y - _min.y) * (_max.z - _min.z));
             }
 
 
