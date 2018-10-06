@@ -86,7 +86,7 @@ namespace arc //! arctk namespace
                 PRE(norms_[index::vertex::BETA].normalised());
                 PRE(norms_[index::vertex::GAMMA].normalised());
 
-                POST(_norm.normalised());
+                POST(_plane_norm.normalised());
             }
 
 
