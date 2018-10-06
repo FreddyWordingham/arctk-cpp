@@ -42,6 +42,12 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Vertices --
+                const std::array<vec3, 3> _poss;  //!< Vertex positions.
+                const std::array<vec3, 3> _norms; //!< Vertex normals.
+
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
