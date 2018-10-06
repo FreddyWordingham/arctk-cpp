@@ -204,7 +204,7 @@ namespace arc //! arctk namespace
 
             inline size_t Box::init_num_norms(const size_t num_norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
             {
-                std::vector<bool> used(num_norms, false);
+                std::vector<bool> used(num_norms_, false);
 
                 for (size_t i = 0; i < faces_.size(); ++i)
                 {
