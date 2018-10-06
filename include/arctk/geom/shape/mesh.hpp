@@ -46,7 +46,11 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Triangles --
-                const std::vector<Triangle> _tris; //!< List of triangles forming the mesh.
+                const std::vector<Triangle> _tris;  //!< List of triangles forming the mesh.
+                const std::vector<double>   _areas; //!< Normalised relative area of each triangle forming the mesh.
+
+                //  -- Bounds --
+                const Aabb _box; //!< Bounding box of the mesh.
 
                 //  -- Properties --
                 const size_t _num_verts; //!< Number of unique vertex positions forming the mesh.
