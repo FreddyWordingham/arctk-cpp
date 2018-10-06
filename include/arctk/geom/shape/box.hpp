@@ -142,6 +142,48 @@ namespace arc //! arctk namespace
                 return (true);
             }
 
+            inline bool Box::intersect(const Triangle& tri_) const noexcept
+            {
+                const vec3 centre     = centre();
+                const vec3 half_width = half_width();
+
+                const vec3 v0 = tri_.poss()[index::vertex::ALPHA] - centre;
+                const vec3 v1 = tri_.poss()[index::vertex::BETA] - centre;
+                const vec3 v2 = tri_.poss()[index::vertex::GAMMA] - centre;
+
+                const std::array<vec3, 3> f({{v1 - v0, v2 - v1, v0 - v2}});
+
+                const auto axis_test = [&](const vec3& axis_) {
+                    const double p0 = v0 * axis_;
+                    const double p1 = v1 * axis_;
+                    const double p2 = v2 * axis_;
+
+                    const double r = (std::abs(axis_.x) * half_width.x) + (std::abs(axis_.y) * half_width.y) + (std::abs(axis_.z) * half_width.z);
+
+                    return (std::max(-std::max({p0, p1, p2}), std::min({p0, p1, p2})) <= r);
+                };
+
+                for (size_t i = 0; i < 3; ++i)
+                {
+                    const vec3 axis = math::vec::axis<double, 3>(i);
+
+                    for (size_t j = 0; j < 3; ++j)
+                    {
+                        if (!axis_test(axis ^ f[j]))
+                        {
+                            return (false);
+                        }
+                    }
+
+                    if (!axis_test(axis))
+                    {
+                        return (false);
+                    }
+                }
+
+                return (axis_test(tri_.norm()));
+            }
+
 
             //  -- Collision --
             inline std::optional<double> Box::collision(const vec3& pos_, const vec3& dir_) const noexcept
