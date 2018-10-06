@@ -20,6 +20,7 @@
 #include <optional>
 
 //  -- Arctk --
+#include <arctk/geom/collision.hpp>
 #include <arctk/geom/shape.hpp>
 #include <arctk/index.hpp>
 #include <arctk/math.hpp>
@@ -62,7 +63,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Collision --
-                inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const noexcept override;
+                inline std::optional<double>    collision(const vec3& pos_, const vec3& dir_) const noexcept override;
+                inline std::optional<Collision> collision_info(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
 
 
@@ -134,6 +136,47 @@ namespace arc //! arctk namespace
                 }
 
                 return (dist);
+            }
+
+            inline std::optional<Collision> Triangle::collision_info(const vec3& pos_, const vec3& dir_) const noexcept
+            {
+                PRE(dir_.normalised());
+
+                const vec3 edge_ab = _poss[index::vertex::BETA] - _poss[index::vertex::ALPHA];
+                const vec3 edge_ac = _poss[index::vertex::GAMMA] - _poss[index::vertex::ALPHA];
+
+                const vec3   p   = dir_ ^ edge_ac;
+                const double det = edge_ab * p;
+
+                if (math::compare::zero(det))
+                {
+                    return (std::nullopt);
+                }
+
+                const vec3   t = pos_ - _poss[index::vertex::ALPHA];
+                const double u = (t * p) / det;
+
+                if ((u < 0.0) || (u > 1.0))
+                {
+                    return (std::nullopt);
+                }
+
+                const vec3   q = t ^ edge_ab;
+                const double v = (dir_ * q) / det;
+
+                if ((v < 0.0) || ((u + v) > 1.0))
+                {
+                    return (std::nullopt);
+                }
+
+                const double dist = (edge_ac * q) / det;
+
+                if (dist < 0.0)
+                {
+                    return (std::nullopt);
+                }
+
+                return (Collision((dir_ * _norm) < 0.0, dist, ((_norms[index::vertex::ALPHA] * (1.0 - u - v)) + (_norms[index::vertex::BETA] * u) + (_norms[index::vertex::GAMMA] * v)).normal()));
             }
 
 
