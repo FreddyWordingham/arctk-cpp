@@ -438,7 +438,6 @@ namespace arc //! arctk namespace
             inline Actor axis_helper_y(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor axis_helper_z(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor box(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
-            inline Actor box(const geom::Shape& shape_) noexcept;
             inline Actor cuboid(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor path(const std::vector<Point>& points_) noexcept;
 
@@ -714,18 +713,6 @@ namespace arc //! arctk namespace
                 verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
 
                 return (Actor(verts, {3}, GL_LINES));
-            }
-
-            /**
-             *  Create an axis-aligned bounding box actor from a geometric shape.
-             *
-             *  @param  shape_  Shape to create an axis-aligned bounding box actor of.
-             *
-             *  @return Axis aligned bounding box actor.
-             */
-            inline Actor box(const geom::Shape& shape_) noexcept
-            {
-                return (box(glm::vec3(shape_.min().x, shape_.min().y, shape_.min().z), glm::vec3(shape_.max().x, shape_.max().y, shape_.max().z)));
             }
 
             /**
