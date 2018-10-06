@@ -37,6 +37,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
+            const bool   _front;
             const double _dist;
             const vec3&  _norm;
 
