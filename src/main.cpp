@@ -51,6 +51,7 @@
 #include <arctk/geom/collision.hpp>
 #include <arctk/geom/shape.hpp>
 #include <arctk/geom/shape/box.hpp>
+#include <arctk/geom/shape/mesh.hpp>
 #include <arctk/geom/shape/triangle.hpp>
 #include <arctk/gui.hpp>
 #include <arctk/gui/actor.hpp>
