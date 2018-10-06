@@ -61,6 +61,7 @@ namespace arc //! arctk namespace
         //  -- Getters --
         inline bool Collision::front() const noexcept
         {
+            return (_front);
         }
 
         inline double Collision::dist() const noexcept
