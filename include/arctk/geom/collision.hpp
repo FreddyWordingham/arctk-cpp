@@ -34,13 +34,21 @@ namespace arc //! arctk namespace
          */
         class Collision
         {
-            //  == INSTANTIATION ==
-          public:
-            //  -- Constructors --
+            //  == FIELDS ==
+          private:
+            //  -- Data --
+            const double _dist;
+            const vec3&
 
 
-            //  == METHODS ==
-          public:
+              //  == INSTANTIATION ==
+              public
+              :
+              //  -- Constructors --
+
+
+              //  == METHODS ==
+              public:
             //  -- Collision --
         };
 
