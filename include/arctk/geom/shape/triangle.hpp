@@ -58,10 +58,6 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) noexcept;
 
-              private:
-                //  -- Initialisation --
-                inline vec3 init_plane_norm(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) const noexcept;
-
 
                 //  == METHODS ==
               public:
@@ -84,7 +80,7 @@ namespace arc //! arctk namespace
             inline Triangle::Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) noexcept
               : _poss(poss_)
               , _norms(norms_)
-              , _plane_norm(init_plane_norm(poss_, norms_))
+              , _plane_norm(((poss_[index::vertex::BETA] - poss_[index::vertex::ALPHA]) ^ (poss_[index::vertex::GAMMA] - poss_[index::vertex::ALPHA])).normal())
             {
                 PRE(norms_[index::vertex::ALPHA].normalised());
                 PRE(norms_[index::vertex::BETA].normalised());
