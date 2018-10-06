@@ -38,17 +38,16 @@ namespace arc //! arctk namespace
           private:
             //  -- Data --
             const double _dist;
-            const vec3&
+            const vec3&  _norm;
 
 
-              //  == INSTANTIATION ==
-              public
-              :
-              //  -- Constructors --
+            //  == INSTANTIATION ==
+          public:
+            //  -- Constructors --
 
 
-              //  == METHODS ==
-              public:
+            //  == METHODS ==
+          public:
             //  -- Collision --
         };
 
