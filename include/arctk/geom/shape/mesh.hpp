@@ -176,7 +176,7 @@ namespace arc //! arctk namespace
                 return (Box(min, max));
             }
 
-            inline size_t Box::init_num_verts(const size_t num_poss, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
+            inline size_t Box::init_num_verts(const size_t num_poss_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
             {
                 std::vector<bool> used(num_poss, false);
 
