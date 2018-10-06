@@ -202,7 +202,7 @@ namespace arc //! arctk namespace
                 return (num_verts);
             }
 
-            inline size_t Box::init_num_norms(const size_t num_norms, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
+            inline size_t Box::init_num_norms(const size_t num_norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
             {
                 std::vector<bool> used(num_norms, false);
 
