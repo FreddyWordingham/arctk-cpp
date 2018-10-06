@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/math.hpp>
 
 
@@ -45,6 +46,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Collision(bool front_, double dist_, const vec3& norm_) noexcept;
 
 
             //  == METHODS ==
@@ -54,6 +56,19 @@ namespace arc //! arctk namespace
             inline double      dist() const noexcept;
             inline const vec3& norm() const noexcept;
         };
+
+
+
+        //  == INSTANTIATION ==
+        //  -- Constructors --
+        inline Collision::Collision(const bool front_, const double dist_, const vec3& norm_) noexcept
+          : _front(front_)
+          , _dist(dist_)
+          , _norm(norm_)
+        {
+            PRE(dist_ > 0.0);
+            PRE(norm_.normalised());
+        }
 
 
 
