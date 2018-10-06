@@ -178,7 +178,7 @@ namespace arc //! arctk namespace
 
             inline size_t Box::init_num_verts(const size_t num_poss_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
             {
-                std::vector<bool> used(num_poss, false);
+                std::vector<bool> used(num_poss_, false);
 
                 for (size_t i = 0; i < faces_.size(); ++i)
                 {
