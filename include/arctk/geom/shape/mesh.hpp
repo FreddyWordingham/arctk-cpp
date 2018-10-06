@@ -17,6 +17,8 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <optional>
+#include <utility>
+#include <vector>
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
@@ -41,10 +43,20 @@ namespace arc //! arctk namespace
             class Mesh : public Shape
             {
                 //  == FIELDS ==
-              protected:
+              private:
+                //  -- Properties --
+                const size_t _num_verts; //!< Number of unique vertex positions forming the mesh.
+                const size_t _num_norms; //!< Number of unique vertex normals forming the mesh.
+                const size_t _num_edges; //!< Number of unique edges forming the mesh.
+                const size_t _num_faces; //!< Number of unique triangle faces forming the mesh.
+                const bool   _closed;    //!< True if the surface of the mesh forms a closed surface.
+
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) noexcept;
 
 
                 //  == METHODS ==
@@ -56,6 +68,9 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Mesh::Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) noexcept
+            {
+            }
 
 
 
