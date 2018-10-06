@@ -122,7 +122,7 @@ namespace arc //! arctk namespace
 
 
             //  -- Intersection --
-            inline bool Box::intersect(const vex3& pos_) const noexcept
+            inline bool Box::intersect(const vec3& pos_) const noexcept
             {
                 return (!((pos_.x < _min.x) || (pos_.x > _max.x) || (pos_.y < _min.y) || (pos_.y > _max.y) || (pos_.z < _min.z) || (pos_.z > _max.z)));
             }
