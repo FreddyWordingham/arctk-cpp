@@ -80,6 +80,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
+                inline bool closed() const noexcept;
             };
 
 
@@ -176,7 +177,7 @@ namespace arc //! arctk namespace
                 return (Box(min, max));
             }
 
-            inline size_t Box::init_num_verts(const size_t num_poss_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
+            inline size_t Mesh::init_num_verts(const size_t num_poss_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
             {
                 std::vector<bool> used(num_poss_, false);
 
@@ -202,7 +203,7 @@ namespace arc //! arctk namespace
                 return (num_verts);
             }
 
-            inline size_t Box::init_num_norms(const size_t num_norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
+            inline size_t Mesh::init_num_norms(const size_t num_norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
             {
                 std::vector<bool> used(num_norms_, false);
 
@@ -228,7 +229,7 @@ namespace arc //! arctk namespace
                 return (num_norms);
             }
 
-            inline size_t Box::init_num_edges(const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
+            inline size_t Mesh::init_num_edges(const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
             {
                 std::vector<std::pair<size_t, size_t>> edges;
 
@@ -262,6 +263,15 @@ namespace arc //! arctk namespace
                 }
 
                 return (edges.size());
+            }
+
+
+
+            //  == METHODS ==
+            //  -- Getters --
+            inline bool Mesh::closed() const noexcept
+            {
+                return (_closed);
             }
 
 
