@@ -118,6 +118,11 @@ namespace arc //! arctk namespace
                 return (_plane_norm);
             }
 
+            inline double Triangle::area() const noexcept
+            {
+                return (math::geom::area(_poss));
+            }
+
 
 
             //  -- Collision --
