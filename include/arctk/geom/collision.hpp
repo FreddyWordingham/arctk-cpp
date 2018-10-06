@@ -65,6 +65,7 @@ namespace arc //! arctk namespace
 
         inline double Collision::dist() const noexcept
         {
+            return (_dist);
         }
 
         inline const vec3& Collision::norm() const noexcept
