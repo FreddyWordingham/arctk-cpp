@@ -1,6 +1,6 @@
 /**
  *  @file   arctk/geom.hpp
- *  @date   16/07/2018
+ *  @date   06/10/2018
  *  @author Freddy Wordingham
  *
  *  Collection of geometry classes.
