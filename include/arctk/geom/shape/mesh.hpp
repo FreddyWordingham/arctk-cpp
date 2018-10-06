@@ -73,6 +73,7 @@ namespace arc //! arctk namespace
                 inline std::vector<double>   init_areas() const noexcept;
                 inline Box                   init_box() const noexcept;
                 inline size_t                init_num_verts(size_t num_poss, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept;
+                inline size_t                init_num_norms(size_t num_norms, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept;
 
 
                 //  == METHODS ==
@@ -89,7 +90,7 @@ namespace arc //! arctk namespace
               , _areas(init_areas())
               , _box(init_box())
               , _num_verts(init_num_verts(poss_.size(), faces_))
-              , _num_norms(init_num_norms())
+              , _num_norms(init_num_norms(norms.size(), faces_))
               , _num_edges(init_num_edges())
               , _num_faces(init_num_faces())
               , _closed((_num_verts + _num_faces - _num_edges) == 2)
@@ -198,6 +199,32 @@ namespace arc //! arctk namespace
                 }
 
                 return (num_verts);
+            }
+
+            inline size_t Box::init_num_norms(const size_t num_norms, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
+            {
+                std::vector<bool> used(num_norms, false);
+
+                for (size_t i = 0; i < faces_.size(); ++i)
+                {
+                    const std::array<size_t, 3>& norm_indices = faces_[i].second;
+
+                    for (size_t j = 0; j < 3; ++j)
+                    {
+                        used[norm_indices[j]] = true;
+                    }
+                }
+
+                size_t num_norms = 0;
+                for (size_t i = 0; i < used.size(); ++i)
+                {
+                    if (used[i])
+                    {
+                        ++num_norms;
+                    }
+                }
+
+                return (num_norms);
             }
 
 
