@@ -1,6 +1,6 @@
 /**
  *  @file   arctk/phys.hpp
- *  @date   06/07/2018
+ *  @date   06/10/2018
  *  @author Freddy Wordingham
  *
  *  Collection of physics classes.
