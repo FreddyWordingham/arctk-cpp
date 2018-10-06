@@ -1,6 +1,6 @@
 /**
  *  @file   arctk/equip.hpp
- *  @date   17/09/2018
+ *  @date   06/10/2018
  *  @author Freddy Wordingham
  *
  *  Collection of equipment classes.
