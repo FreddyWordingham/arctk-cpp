@@ -19,6 +19,7 @@
 #include <optional>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/math.hpp>
 
 
@@ -58,6 +59,10 @@ namespace arc //! arctk namespace
                 inline const vec3& min() const noexcept;
                 inline const vec3& max() const noexcept;
                 inline double      vol() const noexcept;
+
+                //  -- Collision --
+                inline std::optional<double>                  collision_dist(const vec3& pos_, const vec3& dir_) const noexcept override;
+                inline std::optional<std::pair<double, vec3>> collision_norm(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
 
 
@@ -110,6 +115,69 @@ namespace arc //! arctk namespace
             inline double Box::vol() const noexcept
             {
                 return ((_max.x - _min.x) * (_max.y - _min.y) * (_max.z - _min.z));
+            }
+
+
+            //  -- Collision --
+            inline std::optional<double> Box::collision_dist(const vec3& pos_, const vec3& dir_) const noexcept
+            {
+                PRE(dir_.normalised());
+
+                double min_x = ((dir_.x < 0.0 ? _max.x : _min.x) - pos_.x) / dir_.x;
+                double max_x = ((dir_.x < 0.0 ? _min.x : _max.x) - pos_.x) / dir_.x;
+                double min_y = ((dir_.y < 0.0 ? _max.y : _min.y) - pos_.y) / dir_.y;
+                double max_y = ((dir_.y < 0.0 ? _min.y : _max.y) - pos_.y) / dir_.y;
+
+                if ((min_x > max_y) || (min_y > max_x))
+                {
+                    return (std::nullopt);
+                }
+
+                if (min_y > min_x)
+                {
+                    min_x = min_y;
+                }
+
+                if (max_y < max_x)
+                {
+                    max_x = max_y;
+                }
+
+                double min_z = ((dir_.z < 0.0 ? _max.z : _min.z) - pos_.z) / dir_.z;
+                double max_z = ((dir_.z < 0.0 ? _min.z : _max.z) - pos_.z) / dir_.z;
+
+                if ((min_x > max_z) || (min_z > max_x))
+                {
+                    return (std::nullopt);
+                }
+
+                if (min_z > min_x)
+                {
+                    min_x = min_z;
+                }
+
+                if (max_z < max_x)
+                {
+                    max_x = max_z;
+                }
+
+                double dist = min_x;
+
+                if (dist < 0.0)
+                {
+                    dist = max_x;
+                }
+
+                if (dist < 0.0)
+                {
+                    return (std::nullopt);
+                }
+
+                return (dist);
+            }
+
+            inline std::optional<std::pair<double, vec3>> Box::collision_norm(const vec3& pos_, const vec3& dir_) const noexcept
+            {
             }
 
 
