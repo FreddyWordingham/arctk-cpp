@@ -60,6 +60,8 @@ namespace arc //! arctk namespace
                 inline const vec3& min() const noexcept;
                 inline const vec3& max() const noexcept;
                 inline double      vol() const noexcept;
+                inline vec3        centre() const noexcept;
+                inline vec3        half_width() const noexcept;
 
                 //  -- Intersection --
                 inline bool intersect(const vec3& pos_) const noexcept;
@@ -121,6 +123,16 @@ namespace arc //! arctk namespace
             {
                 return ((_max.x - _min.x) * (_max.y - _min.y) * (_max.z - _min.z));
             }
+
+            inline vec3 Box::centre() const noexcept
+            {
+                return ((_min + _max) / 2.0);
+            }
+
+            inline vec3 Box::half_width() const noexcept
+            {
+            }
+
 
 
             //  -- Intersection --
