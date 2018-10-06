@@ -61,6 +61,7 @@ namespace arc //! arctk namespace
                 inline double      vol() const noexcept;
 
                 //  -- Intersection --
+                inline bool contains(const vec3& pos_) const noexcept;
                 inline bool contains(const Box& box_) const noexcept;
 
                 //  -- Collision --
@@ -121,6 +122,11 @@ namespace arc //! arctk namespace
 
 
             //  -- Intersection --
+            inline bool Box::contains(const vex3& pos_) const noexcept
+            {
+                return (!((pos_.x < _min.x) || (pos_.x > _max.x) || (pos_.y < _min.y) || (pos_.y > _max.y) || (pos_.z < _min.z) || (pos_.z > _max.z)));
+            }
+
             inline bool Box::contains(const Box& box_) const noexcept
             {
                 for (size_t i = 0; i < 3; ++i)
