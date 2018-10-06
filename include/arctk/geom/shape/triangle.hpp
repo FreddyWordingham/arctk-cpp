@@ -16,10 +16,12 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <array>
 #include <optional>
 
 //  -- Arctk --
 #include <arctk/geom/shape.hpp>
+#include <arctk/index.hpp>
 #include <arctk/math.hpp>
 
 
@@ -47,13 +49,14 @@ namespace arc //! arctk namespace
                 const std::array<vec3, 3> _norms; //!< Vertex normals.
 
                 //  -- Normals --
-                const vec3 _norm; //!< Triangle plane normal.
+                const vec3 _plane_norm; //!< Triangle plane normal.
 
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) noexcept;
 
 
                 //  == METHODS ==
@@ -64,6 +67,27 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a triangle from three vertex positions and three corresponding vertex normals.
+             *
+             *  @param  poss_   Positions of the vertices.
+             *  @param  norms_  Normals of the vertices.
+             *
+             *  @pre    norms_ vecs must be normalised.
+             *
+             *  @post   _norm must be normalised.
+             */
+            inline Triangle::Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) noexcept
+              : _poss(poss_)
+              , _norms(norms_)
+              , _norm(init_plane_norm(poss_, norms_))
+            {
+                PRE(norms_[index::vertex::ALPHA].normalised());
+                PRE(norms_[index::vertex::BETA].normalised());
+                PRE(norms_[index::vertex::GAMMA].normalised());
+
+                POST(_norm.normalised());
+            }
 
 
 
