@@ -90,7 +90,7 @@ namespace arc //! arctk namespace
               , _areas(init_areas())
               , _box(init_box())
               , _num_verts(init_num_verts(poss_.size(), faces_))
-              , _num_norms(init_num_norms(norms.size(), faces_))
+              , _num_norms(init_num_norms(norms_.size(), faces_))
               , _num_edges(init_num_edges())
               , _num_faces(init_num_faces())
               , _closed((_num_verts + _num_faces - _num_edges) == 2)
