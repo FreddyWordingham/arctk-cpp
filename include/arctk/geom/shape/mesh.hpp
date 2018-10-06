@@ -74,6 +74,7 @@ namespace arc //! arctk namespace
                 inline Box                   init_box() const noexcept;
                 inline size_t                init_num_verts(size_t num_poss, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept;
                 inline size_t                init_num_norms(size_t num_norms, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept;
+                inline size_t                init_num_edges(const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept;
 
 
                 //  == METHODS ==
@@ -91,7 +92,7 @@ namespace arc //! arctk namespace
               , _box(init_box())
               , _num_verts(init_num_verts(poss_.size(), faces_))
               , _num_norms(init_num_norms(norms_.size(), faces_))
-              , _num_edges(init_num_edges())
+              , _num_edges(init_num_edges(faces_))
               , _num_faces(init_num_faces())
               , _closed((_num_verts + _num_faces - _num_edges) == 2)
             {
@@ -225,6 +226,42 @@ namespace arc //! arctk namespace
                 }
 
                 return (num_norms);
+            }
+
+            inline size_t Box::init_num_edges(const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
+            {
+                std::vector<std::pair<size_t, size_t>> edges;
+
+                for (size_t i = 0; i < faces_.size(); ++i)
+                {
+                    std::array<size_t, 3> pos_indices = faces_[i].first;
+
+                    if (pos_indices[0] > pos_indices[1])
+                    {
+                        std::swap(pos_indices[0], pos_indices[1]);
+                    }
+                    if (pos_indices[0] > pos_indices[2])
+                    {
+                        std::swap(pos_indices[0], pos_indices[2]);
+                    }
+                    if (pos_indices[1] > pos_indices[2])
+                    {
+                        std::swap(pos_indices[1], pos_indices[2]);
+                    }
+
+                    const std::array<std::pair<size_t, size_t>, 3> edge_indices(
+                      {{std::pair<size_t, size_t>(pos_indices[0], pos_indices[1]), std::pair<size_t, size_t>(pos_indices[1], pos_indices[2]), std::pair<size_t, size_t>(pos_indices[0], pos_indices[2])}});
+
+                    for (size_t j = 0; j < 3; ++j)
+                    {
+                        if (!utl::properties::contains(edges, edge_indices[j]))
+                        {
+                            edges.emplace_back(edge_indices[j]);
+                        }
+                    }
+                }
+
+                return (edges.size());
             }
 
 
