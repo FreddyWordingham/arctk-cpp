@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
                 //  -- Initialisation --
                 inline std::vector<Triangle> init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept;
                 inline std::vector<double>   init_areas() const noexcept;
-                inline std::vector<double>   init_box() const noexcept;
+                inline Box                   init_box() const noexcept;
 
 
                 //  == METHODS ==
