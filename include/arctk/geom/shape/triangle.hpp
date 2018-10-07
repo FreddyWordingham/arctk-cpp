@@ -71,8 +71,8 @@ namespace arc //! arctk namespace
                 inline double                     area() const noexcept;
 
                 //  -- Sampling --
-                inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
-                inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept override;
+                inline vec3                  random_pos(random::Generator* rng_) const noexcept;
+                inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept;
 
                 //  -- Intersection --
                 inline bool intersect(const Triangle& tri_) const noexcept;
