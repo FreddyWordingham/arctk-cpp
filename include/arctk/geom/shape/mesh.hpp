@@ -71,6 +71,8 @@ namespace arc //! arctk namespace
 
               private:
                 //  -- Initialisation --
+                inline std::vector<vec3>     transform_poss(const std::vector<vec3>& poss_, const mat4& transform_) const noexcept;
+                inline std::vector<vec3>     transform_norms(const std::vector<vec3>& norms_, const mat4& transform_) const noexcept;
                 inline std::vector<Triangle> init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept;
                 inline std::vector<double>   init_areas() const noexcept;
                 inline Box                   init_box() const noexcept;
@@ -132,6 +134,64 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
+            /**
+             *  Transform the vector of vertex positions using a transformation matrix.
+             *
+             *  @param  poss_       Vector of vertex positions to be transformed.
+             *  @param  transform_  Transformation matrix to apply to the vertex positions.
+             *
+             *  @pre    poss_ must contain at least three elements.
+             *
+             *  @return Vector of transformed vertex positions.
+             */
+            inline std::vector<vec3> Mesh::transform_poss(const std::vector<vec3>& poss_, const mat4& transform_) const noexcept
+            {
+                PRE(poss_.size() >= 3);
+
+                std::vector<vec3> poss;
+                poss.reserve(poss_.size());
+
+                for (size_t i = 0; i < poss_.size(); ++i)
+                {
+                    vec4 pos(poss_[i].x, poss_[i].y, poss_[i].z, 1.0);
+                    pos = transform_ * pos;
+
+                    poss.emplace_back(pos.x, pos.y, pos.z);
+                }
+
+                return (poss);
+            }
+
+            /**
+             *  Transform the vector of vertex normals using a transformation matrix.
+             *
+             *  @param  norms_      Vector of vertex normals to be transformed.
+             *  @param  transform_  Transformation matrix to apply to the vertex normals.
+             *
+             *  @pre    norms_ may not be empty.
+             *
+             *  @return Vector of transformed vertex normals.
+             */
+            inline std::vector<vec3> Mesh::transform_norms(const std::vector<vec3>& norms_, const mat4& transform_) const noexcept
+            {
+                PRE(!norms_.empty());
+
+                std::vector<vec3> norms;
+                norms.reserve(norms_.size());
+
+                const mat4 transform = transform_.inv().trans();
+
+                for (size_t i = 0; i < norms_.size(); ++i)
+                {
+                    vec4 norm(norms_[i].x, norms_[i].y, norms_[i].z, 0.0);
+                    norm = transform * norm;
+
+                    norms.emplace_back(vec3(norm.x, norm.y, norm.z).normal());
+                }
+
+                return (norms);
+            }
+
             inline std::vector<Triangle> Mesh::init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
             {
                 PRE(poss_.size() >= 3);
