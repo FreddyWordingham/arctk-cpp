@@ -73,8 +73,11 @@ namespace arc //! arctk namespace
 
               private:
                 //  -- Initialisation --
-                inline std::vector<vec3>     transform_poss(const std::vector<vec3>& poss_, const mat4& transform_) const noexcept;
-                inline std::vector<vec3>     transform_norms(const std::vector<vec3>& norms_, const mat4& transform_) const noexcept;
+                inline std::vector<vec3>                                                    parse_poss(const std::string& serial_) const noexcept;
+                inline std::vector<vec3>                                                    parse_norms(const std::string& serial_) const noexcept;
+                inline std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>> parse_faces(const std::string& serial_) const noexcept;
+                inline std::vector<vec3>                                                    transform_poss(const std::vector<vec3>& poss_, const mat4& transform_) const noexcept;
+                inline std::vector<vec3>                                                    transform_norms(const std::vector<vec3>& norms_, const mat4& transform_) const noexcept;
                 inline std::vector<Triangle> init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept;
                 inline std::vector<double>   init_areas() const noexcept;
                 inline Box                   init_box() const noexcept;
@@ -148,6 +151,48 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
+            inline std::vector<vec3> Mesh::parse_poss(const std::string& serial_) const noexcept
+            {
+                PRE(!serial_.empty());
+
+                std::vector<vec3> poss;
+
+                std::stringstream serial_stream(serial_);
+                std::string       line;
+                while (std::getline(serial_stream, line))
+                {
+                    std::stringstream line_stream(line);
+                    std::string       word;
+                    line_stream >> word;
+
+                    if (word == POS_KEYWORD)
+                    {
+                        vec3 pos;
+                        line_stream >> pos.x >> pos.y >> pos.z;
+
+                        if (line_stream.rdbuf()->in_avail() != 0)
+                        {
+                            std::cerr << "Unable to construct mesh object.\n"
+                                      << "Non-three dimensional vertex position located at line: `" << line << "`.\n";
+
+                            std::exit(exit::error::FAILED_PARSE);
+                        }
+
+                        poss.emplace_back(pos);
+                    }
+
+                    if (line_stream.fail())
+                    {
+                        std::cerr << "Unable to construct mesh object.\n"
+                                  << "Unable to parse line: `" << line << "`.\n";
+                    }
+                }
+
+                POST(poss.size() >= 3);
+
+                return (poss);
+            }
+
             /**
              *  Transform the vector of vertex positions using a transformation matrix.
              *
