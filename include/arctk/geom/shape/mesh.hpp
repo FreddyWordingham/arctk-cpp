@@ -304,7 +304,6 @@ namespace arc //! arctk namespace
                 return (_num_faces);
             }
 
-
             inline bool Mesh::closed() const noexcept
             {
                 return (_closed);
