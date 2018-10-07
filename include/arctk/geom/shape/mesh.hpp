@@ -71,7 +71,6 @@ namespace arc //! arctk namespace
                 const bool   _closed;    //!< True if the surface of the mesh forms a closed surface.
 
 
-
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
