@@ -81,6 +81,10 @@ namespace arc //! arctk namespace
               public:
                 //  -- Getters --
                 inline const Box& box() const noexcept;
+                inline size_t     num_verts() const noexcept;
+                inline size_t     num_norms() const noexcept;
+                inline size_t     num_edges() const noexcept;
+                inline size_t     num_faces() const noexcept;
                 inline bool       closed() const noexcept;
             };
 
@@ -279,6 +283,27 @@ namespace arc //! arctk namespace
             {
                 return (_box);
             }
+
+            inline size_t Mesh::num_verts() const noexcept
+            {
+                return (_num_verts);
+            }
+
+            inline size_t Mesh::num_norms() const noexcept
+            {
+                return (_num_verts);
+            }
+
+            inline size_t Mesh::num_edges() const noexcept
+            {
+                return (_num_verts);
+            }
+
+            inline size_t Mesh::num_faces() const noexcept
+            {
+                return (_num_verts);
+            }
+
 
             inline bool Mesh::closed() const noexcept
             {
