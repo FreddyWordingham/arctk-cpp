@@ -1,3 +1,20 @@
+#if defined(__clang__)
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++98-compat-extra-semi"
+#pragma clang diagnostic ignored "-Wdouble-promotion"
+#pragma clang diagnostic ignored "-Wmissing-prototypes"
+#pragma clang diagnostic ignored "-Wunused-parameter"
+
+#elif defined(__GNUC__) || defined(__GNUG__)
+
+#pragma GCC diagnostic push
+//#pragma GCC diagnostic ignored "-Wcast-qual"
+
+#endif
+
+
+
 namespace collision
 {
 
@@ -767,3 +784,15 @@ namespace collision
 
 
 } // namespace collision
+
+
+
+#if defined(__clang__)
+
+#pragma GCC diagnostic pop
+
+#elif defined(__GNUC__) || defined(__GNUG__)
+
+#pragma clang diagnostic pop
+
+#endif

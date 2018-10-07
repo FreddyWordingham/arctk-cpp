@@ -23,6 +23,7 @@
 #include <arctk/geom/collision.hpp>
 #include <arctk/geom/shape.hpp>
 #include <arctk/index.hpp>
+#include <arctk/lib/tri_collision.h>
 #include <arctk/math.hpp>
 
 
