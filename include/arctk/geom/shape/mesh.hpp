@@ -296,7 +296,7 @@ namespace arc //! arctk namespace
 
             inline size_t Mesh::num_edges() const noexcept
             {
-                return (_num_verts);
+                return (_num_edges);
             }
 
             inline size_t Mesh::num_faces() const noexcept
