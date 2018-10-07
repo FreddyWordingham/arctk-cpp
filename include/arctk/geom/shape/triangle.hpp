@@ -68,6 +68,9 @@ namespace arc //! arctk namespace
                 inline const vec3&                plane_norm() const noexcept;
                 inline double                     area() const noexcept;
 
+                //  -- Intersection --
+                inline bool intersect(const Triangle& tri_) const noexcept;
+
                 //  -- Collision --
                 inline std::optional<double>    collision(const vec3& pos_, const vec3& dir_) const noexcept override;
                 inline std::optional<Collision> collision_info(const vec3& pos_, const vec3& dir_) const noexcept;
@@ -123,6 +126,11 @@ namespace arc //! arctk namespace
                 return (math::geom::area(_poss));
             }
 
+
+            //  -- Intersection --
+            inline bool Triangle::intersect(const Triangle& tri_) const noexcept
+            {
+            }
 
 
             //  -- Collision --
