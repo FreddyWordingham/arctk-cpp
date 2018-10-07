@@ -343,9 +343,20 @@ namespace arc //! arctk namespace
 
             inline bool Mesh::intersect(const Mesh& mesh_) const noexcept
             {
-                if (!box.intersect(mesh_.box()))
+                if (!_box.intersect(mesh_.box()))
                 {
                     return (false);
+                }
+
+                for (size_t i = 0; i < _tris.size(); ++i)
+                {
+                    for (size_t j = 0; j < _tris.num_faces(); ++j)
+                    {
+                        if (_tris[i].intersect(mesh_.tri(j)))
+                        {
+                            return (true);
+                        }
+                    }
                 }
 
                 return (false);
