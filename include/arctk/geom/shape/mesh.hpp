@@ -25,6 +25,7 @@
 #include <arctk/geom/shape/triangle.hpp>
 #include <arctk/index.hpp>
 #include <arctk/math.hpp>
+#include <arctk/utl.hpp>
 
 
 
@@ -87,6 +88,10 @@ namespace arc //! arctk namespace
                 inline size_t          num_edges() const noexcept;
                 inline size_t          num_faces() const noexcept;
                 inline bool            closed() const noexcept;
+
+                //  -- Sampling --
+                inline vec3                  random_pos(random::Generator* rng_) const noexcept;
+                inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept;
 
                 //  -- Intersection --
                 inline bool intersect(const Triangle& tri_) const noexcept;
@@ -319,6 +324,19 @@ namespace arc //! arctk namespace
             inline bool Mesh::closed() const noexcept
             {
                 return (_closed);
+            }
+
+
+            //  -- Sampling --
+            inline vec3 Mesh::random_pos(random::Generator* rng_) const noexcept
+            {
+                PRE(rng_ != nullptr);
+
+                return (_tris[utl::search::lower(_areas, rng_->gen())].random_pos(rng_));
+            }
+
+            inline std::pair<vec3, vec3> Mesh::random_pos_and_norm(random::Generator* rng_) const noexcept
+            {
             }
 
 
