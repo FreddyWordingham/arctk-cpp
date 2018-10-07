@@ -80,7 +80,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline bool closed() const noexcept;
+                inline const Box& box() const noexcept;
+                inline bool       closed() const noexcept;
             };
 
 
@@ -274,6 +275,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            inline const Box& Mesh::box() const noexcept
+            {
+                return (_box);
+            }
+
             inline bool Mesh::closed() const noexcept
             {
                 return (_closed);
