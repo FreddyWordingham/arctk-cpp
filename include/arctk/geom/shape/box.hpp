@@ -20,6 +20,7 @@
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/geom/shape.hpp>
 #include <arctk/geom/shape/triangle.hpp>
 #include <arctk/math.hpp>
 
