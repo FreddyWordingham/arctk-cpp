@@ -80,12 +80,13 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline const Box& box() const noexcept;
-                inline size_t     num_verts() const noexcept;
-                inline size_t     num_norms() const noexcept;
-                inline size_t     num_edges() const noexcept;
-                inline size_t     num_faces() const noexcept;
-                inline bool       closed() const noexcept;
+                inline const Triangle& tri(size_t index_) const noexcept;
+                inline const Box&      box() const noexcept;
+                inline size_t          num_verts() const noexcept;
+                inline size_t          num_norms() const noexcept;
+                inline size_t          num_edges() const noexcept;
+                inline size_t          num_faces() const noexcept;
+                inline bool            closed() const noexcept;
             };
 
 
@@ -279,6 +280,13 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            inline const Triangle& Mesh::tri(const size_t index_) const noexcept
+            {
+                PRE(index_ < _tris.size());
+
+                return (_tris[index_]);
+            }
+
             inline const Box& Mesh::box() const noexcept
             {
                 return (_box);
