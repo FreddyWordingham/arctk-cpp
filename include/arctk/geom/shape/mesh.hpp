@@ -325,7 +325,7 @@ namespace arc //! arctk namespace
             //  -- Intersection --
             inline bool Mesh::intersect(const Triangle& tri_) const noexcept
             {
-                if (!box.intersect(tri_))
+                if (!_box.intersect(tri_))
                 {
                     return (false);
                 }
@@ -343,6 +343,11 @@ namespace arc //! arctk namespace
 
             inline bool Mesh::intersect(const Mesh& mesh_) const noexcept
             {
+                if (!box.intersect(mesh_.box()))
+                {
+                    return (false);
+                }
+
                 return (false);
             }
 
