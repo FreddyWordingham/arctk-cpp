@@ -25,6 +25,7 @@
 #include <arctk/index.hpp>
 #include <arctk/lib/tri_collision.h>
 #include <arctk/math.hpp>
+#include <arctk/random.hpp>
 
 
 
