@@ -69,6 +69,10 @@ namespace arc //! arctk namespace
                 inline const vec3&                plane_norm() const noexcept;
                 inline double                     area() const noexcept;
 
+                //  -- Sampling --
+                inline vec3                  random_pos(random::Generator* rng_) const noexcept override;
+                inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept override;
+
                 //  -- Intersection --
                 inline bool intersect(const Triangle& tri_) const noexcept;
 
@@ -125,6 +129,29 @@ namespace arc //! arctk namespace
             inline double Triangle::area() const noexcept
             {
                 return (math::geom::area(_poss));
+            }
+
+
+            //  -- Sampling --
+            inline vec3 Triangle::random_pos(random::Generator* rng_) const noexcept
+            {
+                PRE(rng_ != nullptr);
+
+                double a = rng_->gen();
+                double b = rng_->gen();
+
+                if ((a + b) > 1.0)
+                {
+                    a = 1.0 - a;
+                    b = 1.0 - b;
+                }
+
+                return (_poss[index::vertex::GAMMA] + ((_poss[index::vertex::ALPHA] - _poss[index::vertex::GAMMA]) * a) + ((_poss[index::vertex::BETA] - _poss[index::vertex::GAMMA]) * b));
+            }
+
+            inline std::pair<vec3, vec3> Triangle::random_pos_and_norm(random::Generator* rng_) const noexcept
+            {
+                PRE(rng_ != nullptr);
             }
 
 
