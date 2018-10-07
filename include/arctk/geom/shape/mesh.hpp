@@ -295,8 +295,7 @@ namespace arc //! arctk namespace
                     return (false);
                 }
 
-                for (size_t i = 0; i < mesh_.num_faces())
-                    ; ++i)
+                for (size_t i = 0; i < mesh_.num_faces(); ++i)
                 {
                     if (intersect(mesh_.tri(i)))
                     {
