@@ -66,6 +66,8 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline explicit Mesh(const std::string& serial_) noexcept;
+                inline Mesh(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept;
                 inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept;
                 inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) noexcept;
 
@@ -105,6 +107,18 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Mesh::Mesh(const std::string& serial_) noexcept
+              : Mesh(parse_poss(serial_), parse_norms(serial_), parse_faces(serial_))
+            {
+                PRE(!serial_.empty());
+            }
+
+            inline Mesh::Mesh(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
+              : Mesh(parse_poss(serial_), parse_norms(serial_), parse_faces(serial_), scale_, rot_, trans_)
+            {
+                PRE(!serial_.empty());
+            }
+
             inline Mesh::Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
               : Mesh(transform_poss(poss_, math::mat::transform(scale_, rot_, trans_)), transform_norms(norms_, math::mat::transform(scale_, rot_, trans_)), faces_)
             {
