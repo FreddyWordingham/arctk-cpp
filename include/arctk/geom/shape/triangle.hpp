@@ -152,6 +152,22 @@ namespace arc //! arctk namespace
             inline std::pair<vec3, vec3> Triangle::random_pos_and_norm(random::Generator* rng_) const noexcept
             {
                 PRE(rng_ != nullptr);
+
+                double a = rng_->gen();
+                double b = rng_->gen();
+
+                if ((a + b) > 1.0)
+                {
+                    a = 1.0 - a;
+                    b = 1.0 - b;
+                }
+
+                const vec3 pos  = _poss[index::vertex::GAMMA] + ((_poss[index::vertex::ALPHA] - _poss[index::vertex::GAMMA]) * a) + ((_poss[index::vertex::BETA] - _poss[index::vertex::GAMMA]) * b);
+                const vec3 norm = ((_norms[index::vertex::ALPHA] * a) + (_norms[index::vertex::BETA] * b) + (_norms[index::vertex::GAMMA] * (1.0 - a - b))).normal();
+
+                POST(norm.normalised());
+
+                return (std::pair<vec3, vec3>(pos, norm));
             }
 
 
