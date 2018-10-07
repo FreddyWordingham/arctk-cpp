@@ -319,27 +319,6 @@ namespace arc //! arctk namespace
 
 
 
-            //  == EXTERNAL METHODS ==
-            inline bool Box::intersect(const Mesh& mesh_) const noexcept
-            {
-                if (!intersect(mesh_.box()))
-                {
-                    return (false);
-                }
-
-                for (size_t i = 0; i < mesh_.num_faces(); ++i)
-                {
-                    if (intersect(mesh_.tri(i)))
-                    {
-                        return (true);
-                    }
-                }
-
-                return (false);
-            }
-
-
-
         } // namespace shape
     }     // namespace geom
 } // namespace arc
