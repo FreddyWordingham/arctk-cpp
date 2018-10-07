@@ -87,6 +87,10 @@ namespace arc //! arctk namespace
                 inline size_t          num_edges() const noexcept;
                 inline size_t          num_faces() const noexcept;
                 inline bool            closed() const noexcept;
+
+                //  -- Intersection --
+                inline bool intersect(const Triangle& tri_) const noexcept;
+                inline bool intersect(const Mesh& mesh_) const noexcept;
             };
 
 
@@ -315,6 +319,31 @@ namespace arc //! arctk namespace
             inline bool Mesh::closed() const noexcept
             {
                 return (_closed);
+            }
+
+
+            //  -- Intersection --
+            inline bool Mesh::intersect(const Triangle& tri_) const noexcept
+            {
+                if (!box.intersect(tri_))
+                {
+                    return (false);
+                }
+
+                for (size_t i = 0; i < _tris.size(); ++i)
+                {
+                    if (_tris[i].intersect(tri_))
+                    {
+                        return (true);
+                    }
+                }
+
+                return (false);
+            }
+
+            inline bool Mesh::intersect(const Mesh& mesh_) const noexcept
+            {
+                return (false);
             }
 
 
