@@ -131,6 +131,12 @@ namespace arc //! arctk namespace
             //  -- Intersection --
             inline bool Triangle::intersect(const Triangle& tri_) const noexcept
             {
+                return (collision::tri_tri_overlap_test_3d(std::array<double, 3>({{_poss[index::vertex::ALPHA].x, _poss[index::vertex::ALPHA].y, _poss[index::vertex::ALPHA].z}}).data(),
+                                                           std::array<double, 3>({{_poss[index::vertex::BETA].x, _poss[index::vertex::BETA].y, _poss[index::vertex::BETA].z}}).data(),
+                                                           std::array<double, 3>({{_poss[index::vertex::GAMMA].x, _poss[index::vertex::GAMMA].y, _poss[index::vertex::GAMMA].z}}).data(),
+                                                           std::array<double, 3>({{tri_._poss[index::vertex::ALPHA].x, tri_._poss[index::vertex::ALPHA].y, tri_._poss[index::vertex::ALPHA].z}}).data(),
+                                                           std::array<double, 3>({{tri_._poss[index::vertex::BETA].x, tri_._poss[index::vertex::BETA].y, tri_._poss[index::vertex::BETA].z}}).data(),
+                                                           std::array<double, 3>({{tri_._poss[index::vertex::GAMMA].x, tri_._poss[index::vertex::GAMMA].y, tri_._poss[index::vertex::GAMMA].z}}).data()));
             }
 
 
