@@ -350,7 +350,7 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < _tris.size(); ++i)
                 {
-                    for (size_t j = 0; j < _tris.num_faces(); ++j)
+                    for (size_t j = 0; j < mesh_.num_faces(); ++j)
                     {
                         if (_tris[i].intersect(mesh_.tri(j)))
                         {
