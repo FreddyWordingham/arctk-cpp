@@ -193,6 +193,48 @@ namespace arc //! arctk namespace
                 return (poss);
             }
 
+            inline std::vector<vec3> Mesh::parse_norms(const std::string& serial_) const noexcept
+            {
+                PRE(!serial_.empty());
+
+                std::vector<vec3> norms;
+
+                std::stringstream serial_stream(serial_);
+                std::string       line;
+                while (std::getline(serial_stream, line))
+                {
+                    std::stringstream line_stream(line);
+                    std::string       word;
+                    line_stream >> word;
+
+                    if (word == NORM_KEYWORD)
+                    {
+                        vec3 norm;
+                        line_stream >> norm.x >> norm.y >> norm.z;
+
+                        if (line_stream.rdbuf()->in_avail() != 0)
+                        {
+                            std::cerr << "Unable to construct mesh object.\n"
+                                      << "Non-three dimensional vertex normal located at line: `" << line << "`.\n";
+
+                            std::exit(exit::error::FAILED_PARSE);
+                        }
+
+                        norms.emplace_back(norm.normal());
+                    }
+
+                    if (line_stream.fail())
+                    {
+                        std::cerr << "Unable to construct mesh object.\n"
+                                  << "Unable to parse line: `" << line << "`.\n";
+                    }
+                }
+
+                POST(!norms.empty());
+
+                return (norms);
+            }
+
             /**
              *  Transform the vector of vertex positions using a transformation matrix.
              *
