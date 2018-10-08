@@ -803,7 +803,7 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Determine if an intersection ocurres between the mesh and a triangle.
+             *  Determine if an intersection ocurres between the mesh and another mesh.
              *
              *  @param  mesh_   Mesh to test.
              *
