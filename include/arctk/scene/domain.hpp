@@ -54,10 +54,6 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept;
 
-          private:
-            //  -- Initialisation --
-            inline std::vector<std::vector<std::vector<std::unique_ptr<Cell>>>> init_cells(const std::array<size_t, 3>& res_) const noexcept;
-
 
             //  == METHODS ==
           public:
@@ -70,7 +66,8 @@ namespace arc //! arctk namespace
         inline Domain::Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept
           : Box(min_, max_)
           , _res(res_)
-          , _cells(init_cells(res_))
+          , _cells(std::vector<std::vector<std::vector<std::unique_ptr<Cell>>>>(res_[index::dim::cartesian::X],
+                                                                                std::vector < std::vector<std::unique_ptr<Cell>>(res_[index::dim::cartesian::Y], std::vector < std::unique_ptr<Cell>(res_[index::dim::cartesian::Z]))))
         {
             PRE(min_.x <= max_.x);
             PRE(min_.y <= max_.y);
@@ -78,19 +75,6 @@ namespace arc //! arctk namespace
             PRE(res_[index::dim::cartesian::X] > 0);
             PRE(res_[index::dim::cartesian::Y] > 0);
             PRE(res_[index::dim::cartesian::Z] > 0);
-        }
-
-
-        //  -- Initialisation --
-        inline std::vector<std::vector<std::vector<std::unique_ptr<Cell>>>> Domain::init_cells(const std::array<size_t, 3>& res_) const noexcept
-        {
-            PRE(res_[index::dim::cartesian::X] > 0);
-            PRE(res_[index::dim::cartesian::Y] > 0);
-            PRE(res_[index::dim::cartesian::Z] > 0);
-
-            std::vector<std::vector<std::vector<std::unique_ptr<Cell>>>> cells;
-
-            return (cells);
         }
 
 
