@@ -83,17 +83,17 @@ namespace arc //! arctk namespace
              *  @param  min_    Vertex position of the box.
              *  @param  max_    Vertex position of the box.
              *
-             *  @pre    min_.x must be less than max_.x.
-             *  @pre    min_.y must be less than max_.y.
-             *  @pre    min_.z must be less than max_.z.
+             *  @pre    min_.x must be less than, or equal to, max_.x.
+             *  @pre    min_.y must be less than, or equal to, max_.y.
+             *  @pre    min_.z must be less than, or equal to, max_.z.
              */
             inline Box::Box(const vec3& min_, const vec3& max_) noexcept
               : _min(min_)
               , _max(max_)
             {
-                PRE(min_.x < max_.x);
-                PRE(min_.y < max_.y);
-                PRE(min_.z < max_.z);
+                PRE(min_.x <= max_.x);
+                PRE(min_.y <= max_.y);
+                PRE(min_.z <= max_.z);
             }
 
 
