@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double interactions() const noexcept;
+            inline double interaction_dens() const noexcept;
 
             //  -- Settings --
             inline void add_interactions(double interactions_) const noexcept;
@@ -74,9 +74,9 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        inline double Cell::interactions() const noexcept
+        inline double Cell::interaction_dens() const noexcept
         {
-            return (_interactions);
+            return (_interactions / vol());
         }
 
 
