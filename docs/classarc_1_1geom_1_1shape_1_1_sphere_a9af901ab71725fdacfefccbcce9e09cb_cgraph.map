@@ -1,8 +1,0 @@
-<map id="arc::geom::shape::Sphere::collision_norm" name="arc::geom::shape::Sphere::collision_norm">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_sphere.html#aab65755fc0af549dec1adc2fb89e7f5b" title="arc::geom::shape::Sphere\l::collision" alt="" coords="228,33,403,72"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="452,5,588,44"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1utl_1_1search.html#a7dedb03499315275304d2ee539dbbf81" title="arc::utl::search::min" alt="" coords="451,68,589,93"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1utl_1_1search.html#ab0aae86f6b98b4746101dd60c00514ca" title="arc::utl::search::min\l_index" alt="" coords="637,61,774,100"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="849,33,970,72"/>
-<area shape="rect" id="node7" href="$namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="822,96,997,121"/>
-</map>

@@ -1,5 +1,3 @@
 <map id="arc::math::vec::axis" name="arc::math::vec::axis">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_circle.html#a441a85781105739919238ff1e903794e" title="arc::geom::shape::Circle\l::collision_norm" alt="" coords="196,5,362,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#a89a572e0c7f6c6018bfdbbae3a4e96a4" title="arc::geom::shape::Triangle\l::intersect_surf" alt="" coords="190,68,369,107"/>
-<area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#a0cc308b85fc3cb44e799169dd1ca7492" title="arc::geom::shape::Triangle\l::intersect_vol" alt="" coords="417,68,596,107"/>
+<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_box.html#a9cde8a9b6326466d668211348c07584d" title="arc::geom::shape::Box\l::intersect" alt="" coords="190,5,344,44"/>
 </map>

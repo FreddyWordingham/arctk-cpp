@@ -8,7 +8,6 @@ var searchData=
   ['mat2_2ehpp',['mat2.hpp',['../mat2_8hpp.html',1,'']]],
   ['mat3_2ehpp',['mat3.hpp',['../mat3_8hpp.html',1,'']]],
   ['mat4_2ehpp',['mat4.hpp',['../mat4_8hpp.html',1,'']]],
-  ['material_2ehpp',['material.hpp',['../material_8hpp.html',1,'']]],
   ['math_2ehpp',['math.hpp',['../consts_2math_8hpp.html',1,'(Global Namespace)'],['../math_8hpp.html',1,'(Global Namespace)']]],
-  ['mesh_2ehpp',['mesh.hpp',['../geom_2shape_2mesh_8hpp.html',1,'(Global Namespace)'],['../mesh_8hpp.html',1,'(Global Namespace)']]]
+  ['mesh_2ehpp',['mesh.hpp',['../mesh_8hpp.html',1,'']]]
 ];

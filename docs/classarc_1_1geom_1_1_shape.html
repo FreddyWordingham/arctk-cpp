@@ -84,19 +84,9 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1_shape__inherit__graph.png" border="0" usemap="#arc_1_1geom_1_1_shape_inherit__map" alt="Inheritance graph"/></div>
 <map name="arc_1_1geom_1_1_shape_inherit__map" id="arc_1_1geom_1_1_shape_inherit__map">
-<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_aabb.html" title="arc::geom::shape::Aabb" alt="" coords="188,79,351,104"/>
-<area shape="rect" id="node10" href="classarc_1_1geom_1_1shape_1_1_circle.html" title="arc::geom::shape::Circle" alt="" coords="187,128,353,153"/>
-<area shape="rect" id="node11" href="classarc_1_1geom_1_1shape_1_1_mesh.html" title="arc::geom::shape::Mesh" alt="" coords="187,177,352,203"/>
-<area shape="rect" id="node12" href="classarc_1_1geom_1_1shape_1_1_plane.html" title="arc::geom::shape::Plane" alt="" coords="187,227,353,252"/>
-<area shape="rect" id="node13" href="classarc_1_1geom_1_1shape_1_1_sphere.html" title="arc::geom::shape::Sphere" alt="" coords="182,276,357,301"/>
-<area shape="rect" id="node14" href="classarc_1_1geom_1_1shape_1_1_triangle.html" title="arc::geom::shape::Triangle" alt="" coords="180,325,359,351"/>
-<area shape="rect" id="node3" href="classarc_1_1mesh_1_1_node.html" title="arc::mesh::Node" alt="" coords="407,55,527,80"/>
-<area shape="rect" id="node7" href="classarc_1_1phys_1_1_cell.html" title="arc::phys::Cell" alt="" coords="414,104,520,129"/>
-<area shape="rect" id="node4" href="classarc_1_1mesh_1_1node_1_1_branch.html" title="arc::mesh::node::Branch" alt="" coords="581,5,748,31"/>
-<area shape="rect" id="node6" href="classarc_1_1mesh_1_1node_1_1_leaf.html" title="arc::mesh::node::Leaf" alt="" coords="589,55,740,80"/>
-<area shape="rect" id="node5" href="classarc_1_1mesh_1_1_adaptive.html" title="arc::mesh::Adaptive" alt="" coords="802,5,942,31"/>
-<area shape="rect" id="node8" href="classarc_1_1phys_1_1cell_1_1_basic.html" title="arc::phys::cell::Basic" alt="" coords="593,104,736,129"/>
-<area shape="rect" id="node9" href="classarc_1_1phys_1_1cell_1_1_fluorescent.html" title="arc::phys::cell::Fluorescent" alt="" coords="575,153,754,179"/>
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_box.html" title="arc::geom::shape::Box" alt="" coords="5,79,160,104"/>
+<area shape="rect" id="node3" href="classarc_1_1geom_1_1shape_1_1_mesh.html" title="arc::geom::shape::Mesh" alt="" coords="185,79,349,104"/>
+<area shape="rect" id="node4" href="classarc_1_1geom_1_1shape_1_1_triangle.html" title="arc::geom::shape::Triangle" alt="" coords="373,79,552,104"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -119,39 +109,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa13f277797015749980a9ac43307e95c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarc_1_1geom_1_1_shape.html">Shape</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#aa13f277797015749980a9ac43307e95c">operator=</a> (<a class="el" href="classarc_1_1geom_1_1_shape.html">Shape</a> &amp;&amp;) noexcept=default</td></tr>
 <tr class="memdesc:aa13f277797015749980a9ac43307e95c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defaulted move operator.  <a href="#aa13f277797015749980a9ac43307e95c">More...</a><br /></td></tr>
 <tr class="separator:aa13f277797015749980a9ac43307e95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dcfd35f466009edaafa9fd51ba66165"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; const <a class="el" href="classarc_1_1geom_1_1_shape.html">Shape</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#a9dcfd35f466009edaafa9fd51ba66165">shape_list</a> () const noexcept=0</td></tr>
-<tr class="memdesc:a9dcfd35f466009edaafa9fd51ba66165"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a vector containing pointers to all shapes forming this shape.  <a href="#a9dcfd35f466009edaafa9fd51ba66165">More...</a><br /></td></tr>
-<tr class="separator:a9dcfd35f466009edaafa9fd51ba66165"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec88d71a33d78dc6674bbd69198ba9ea"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#aec88d71a33d78dc6674bbd69198ba9ea">min</a> () const noexcept=0</td></tr>
-<tr class="memdesc:aec88d71a33d78dc6674bbd69198ba9ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the minimum vec of the smallest bounding box containing the shape.  <a href="#aec88d71a33d78dc6674bbd69198ba9ea">More...</a><br /></td></tr>
-<tr class="separator:aec88d71a33d78dc6674bbd69198ba9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a972799ae7e075c2604815d5453c92ace"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#a972799ae7e075c2604815d5453c92ace">max</a> () const noexcept=0</td></tr>
-<tr class="memdesc:a972799ae7e075c2604815d5453c92ace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the maximum vec of the smallest bounding box containing the shape.  <a href="#a972799ae7e075c2604815d5453c92ace">More...</a><br /></td></tr>
-<tr class="separator:a972799ae7e075c2604815d5453c92ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe74104ce8d61b0eb0b99f9220ccf6f2"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#afe74104ce8d61b0eb0b99f9220ccf6f2">area</a> () const noexcept=0</td></tr>
-<tr class="memdesc:afe74104ce8d61b0eb0b99f9220ccf6f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total surface area of the shape.  <a href="#afe74104ce8d61b0eb0b99f9220ccf6f2">More...</a><br /></td></tr>
-<tr class="separator:afe74104ce8d61b0eb0b99f9220ccf6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af959df88187d387b5392f091da08ea39"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#af959df88187d387b5392f091da08ea39">vol</a> () const noexcept=0</td></tr>
-<tr class="memdesc:af959df88187d387b5392f091da08ea39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total volume of the shape.  <a href="#af959df88187d387b5392f091da08ea39">More...</a><br /></td></tr>
-<tr class="separator:af959df88187d387b5392f091da08ea39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aade778405989a372763735de2f91222a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#aade778405989a372763735de2f91222a">closed</a> () const noexcept=0</td></tr>
-<tr class="memdesc:aade778405989a372763735de2f91222a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the topology of the shape.  <a href="#aade778405989a372763735de2f91222a">More...</a><br /></td></tr>
-<tr class="separator:aade778405989a372763735de2f91222a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb4a5453dfb63827f5f3323e60204040"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#adb4a5453dfb63827f5f3323e60204040">random_pos</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept=0</td></tr>
-<tr class="memdesc:adb4a5453dfb63827f5f3323e60204040"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a random position on the surface of the shape.  <a href="#adb4a5453dfb63827f5f3323e60204040">More...</a><br /></td></tr>
-<tr class="separator:adb4a5453dfb63827f5f3323e60204040"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb1c509590fe57967d10c7110504035b"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#acb1c509590fe57967d10c7110504035b">random_pos_and_norm</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept=0</td></tr>
-<tr class="memdesc:acb1c509590fe57967d10c7110504035b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a random position, and corresponding normal, on the surface of the shape.  <a href="#acb1c509590fe57967d10c7110504035b">More...</a><br /></td></tr>
-<tr class="separator:acb1c509590fe57967d10c7110504035b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63459dedcd37c78d590cf9d53ba45163"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#a63459dedcd37c78d590cf9d53ba45163">intersect_surf</a> (const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;aabb_) const noexcept=0</td></tr>
-<tr class="separator:a63459dedcd37c78d590cf9d53ba45163"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86d25362a41ce20e988ccf9fd14504fe"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#a86d25362a41ce20e988ccf9fd14504fe">intersect_vol</a> (const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;aabb_) const noexcept=0</td></tr>
-<tr class="separator:a86d25362a41ce20e988ccf9fd14504fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5add15ceb58f262b472cc6a756d2a3f4"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#a5add15ceb58f262b472cc6a756d2a3f4">collision</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept=0</td></tr>
 <tr class="memdesc:a5add15ceb58f262b472cc6a756d2a3f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the collision distance (if one occurs) of a ray.  <a href="#a5add15ceb58f262b472cc6a756d2a3f4">More...</a><br /></td></tr>
 <tr class="separator:a5add15ceb58f262b472cc6a756d2a3f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac920d4f48aa9788f7596b4e97ee37140"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; std::pair&lt; double, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#ac920d4f48aa9788f7596b4e97ee37140">collision_norm</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept=0</td></tr>
-<tr class="separator:ac920d4f48aa9788f7596b4e97ee37140"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Geometric shape. </p>
@@ -266,66 +226,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="afe74104ce8d61b0eb0b99f9220ccf6f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe74104ce8d61b0eb0b99f9220ccf6f2">&#9670;&nbsp;</a></span>area()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual double arc::geom::Shape::area </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the total surface area of the shape. </p>
-<dl class="section return"><dt>Returns</dt><dd>Total surface area of the shape. </dd></dl>
-
-<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#ac628fcba45b8d72f2764158c613727fa">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a2a6c074463bff83cd108cb157dc709b4">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a00cd366e1864e811d916617ad59f6fdc">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a3dd24e089fe5559dd46af16e5bed190b">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#ae92bebb262abc8d0deadbda847e15fd3">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#afd0118fc6c6e9d02ce8ac180ad41735c">arc::geom::shape::Sphere</a>.</p>
-
-</div>
-</div>
-<a id="aade778405989a372763735de2f91222a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aade778405989a372763735de2f91222a">&#9670;&nbsp;</a></span>closed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool arc::geom::Shape::closed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the topology of the shape. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if the surface of the shape forms a bounded volume. </dd></dl>
-
-<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#aafaa5530866d00803e871ea53bc85125">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#afd4d9ae1fa62389e7e8526738416d440">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a40aec37dec963fdba831dd4c157d0f51">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#aebf9f33887989a67104d127ac3db303a">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#afe17b2a8a6cb33b8b27763ef56558b27">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a16e78882624c4e2fcb2ac6b6565abd6d">arc::geom::shape::Sphere</a>.</p>
-
-</div>
-</div>
 <a id="a5add15ceb58f262b472cc6a756d2a3f4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5add15ceb58f262b472cc6a756d2a3f4">&#9670;&nbsp;</a></span>collision()</h2>
 
@@ -370,203 +270,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Optional distance to collision event. </dd></dl>
 
-<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a30578bd21f0fa9d050cd1879ccae02ab">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a3eb52cf315b517ce2392ef463530d1da">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#ad8ea8b794628a362acb74a5830ebc1b1">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a4b6012d6e42d5b4fa8e35e3732864ce2">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a4109040e404b72535d2f40b3eef29e04">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#aab65755fc0af549dec1adc2fb89e7f5b">arc::geom::shape::Sphere</a>.</p>
-
-</div>
-</div>
-<a id="ac920d4f48aa9788f7596b4e97ee37140"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac920d4f48aa9788f7596b4e97ee37140">&#9670;&nbsp;</a></span>collision_norm()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::optional&lt;std::pair&lt;double, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&gt; &gt; arc::geom::Shape::collision_norm </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td>
-          <td class="paramname"><em>pos_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td>
-          <td class="paramname"><em>dir_</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Get the collision distance (if one occurs) and the normal of the intersection point of a ray.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pos_</td><td>Initial position of the ray.</td></tr>
-    <tr><td class="paramname">dir_</td><td>Direction of ray travel. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Optional distance and normal pair to collision event. </dd></dl>
-
-<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#add182c6ba48e9d2fc73f156a56bfa628">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a167f9254248915c4abd7252af2d73d55">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a7c54d66e2b78105efa9d891f8a153707">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a441a85781105739919238ff1e903794e">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a5047292b8b189a2b73046727238a7b3a">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a9af901ab71725fdacfefccbcce9e09cb">arc::geom::shape::Sphere</a>.</p>
-
-</div>
-</div>
-<a id="a63459dedcd37c78d590cf9d53ba45163"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63459dedcd37c78d590cf9d53ba45163">&#9670;&nbsp;</a></span>intersect_surf()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool arc::geom::Shape::intersect_surf </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;&#160;</td>
-          <td class="paramname"><em>aabb_</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Determine if an intersection occurs between the shape's surface and an axis-aligned bounding box.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">aabb_</td><td>Axis-aligned bounding box to test. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the shape's surface intersects with the axis-aligned bounding box. </dd></dl>
-
-<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#ab2cdfb5a6ad615574c6d22fb3539548b">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a23c5becc86c3d062e50c464ffffb3e17">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a89a572e0c7f6c6018bfdbbae3a4e96a4">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#aff5fa4f0b6cbe06c974d6ddb507357fe">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#accaf6fd0b23a85dff996d41c867539e8">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a470da4526a16e9778ed7e0c5852f7bbd">arc::geom::shape::Sphere</a>.</p>
-
-</div>
-</div>
-<a id="a86d25362a41ce20e988ccf9fd14504fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86d25362a41ce20e988ccf9fd14504fe">&#9670;&nbsp;</a></span>intersect_vol()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool arc::geom::Shape::intersect_vol </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;&#160;</td>
-          <td class="paramname"><em>aabb_</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Determine if an intersection occurs between the shape's volume and an axis-aligned bounding box.</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">aabb_</td><td>Axis-aligned bounding box to test. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the shape's volume intersects with the axis-aligned bounding box. </dd></dl>
-
-<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a4d844540e2ecb8b3676e43c1f8a9d06b">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#af535f6af0f94f590d657179318a6521f">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a0cc308b85fc3cb44e799169dd1ca7492">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#abe4870473caf98d2ca226eaa589d4621">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a15822af0ff15433465068fdc7ab9e0f9">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a268c1c49bcec88acb808562329b63a60">arc::geom::shape::Sphere</a>.</p>
-
-</div>
-</div>
-<a id="a972799ae7e075c2604815d5453c92ace"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a972799ae7e075c2604815d5453c92ace">&#9670;&nbsp;</a></span>max()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::geom::Shape::max </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the maximum vec of the smallest bounding box containing the shape. </p>
-<dl class="section return"><dt>Returns</dt><dd>Maximum vec of the smallest bounding box containing the shape. </dd></dl>
-
-<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#aadb86a235c411b99e864e5bd1f865cd8">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#ab28598b1a117b01da56040a3aab835ce">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a7d3c8421f09cf7a8609063593a217dfe">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#aadf41397f5ad68e29ad8c6022e9ecc68">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#aadda8302992ac1a00bbfd2d530c89b98">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a7280d520281a12c4d1f40683bf4a2435">arc::geom::shape::Sphere</a>.</p>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1geom_1_1_shape_a972799ae7e075c2604815d5453c92ace_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1_shape_a972799ae7e075c2604815d5453c92ace_icgraph" alt=""/></div>
-<map name="classarc_1_1geom_1_1_shape_a972799ae7e075c2604815d5453c92ace_icgraph" id="classarc_1_1geom_1_1_shape_a972799ae7e075c2604815d5453c92ace_icgraph">
-<area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#a82ff1a4415d32bff8e51e776f0362c75" title="arc::gui::actor::box" alt="" coords="213,5,344,31"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="aec88d71a33d78dc6674bbd69198ba9ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec88d71a33d78dc6674bbd69198ba9ea">&#9670;&nbsp;</a></span>min()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::geom::Shape::min </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the minimum vec of the smallest bounding box containing the shape. </p>
-<dl class="section return"><dt>Returns</dt><dd>Minimum vec of the smallest bounding box containing the shape. </dd></dl>
-
-<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a1607909cf573f925705a952e99b209f9">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#ad1311a65692ed54f09ac99c49258cb2a">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a4876c2dd17b676b4fa71965e432d62ff">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a22a5827b33a654d97b01655647a02304">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a0ecd20730108013bfb5384a37a0bac91">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a52f58fc4da2b443d7daf8216cf05b191">arc::geom::shape::Sphere</a>.</p>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1geom_1_1_shape_aec88d71a33d78dc6674bbd69198ba9ea_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1_shape_aec88d71a33d78dc6674bbd69198ba9ea_icgraph" alt=""/></div>
-<map name="classarc_1_1geom_1_1_shape_aec88d71a33d78dc6674bbd69198ba9ea_icgraph" id="classarc_1_1geom_1_1_shape_aec88d71a33d78dc6674bbd69198ba9ea_icgraph">
-<area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#a82ff1a4415d32bff8e51e776f0362c75" title="arc::gui::actor::box" alt="" coords="209,5,340,31"/>
-</map>
-</div>
+<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a30578bd21f0fa9d050cd1879ccae02ab">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#ad8ea8b794628a362acb74a5830ebc1b1">arc::geom::shape::Triangle</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_box.html#af3919e0cb96537e7c7533eab6248c39d">arc::geom::shape::Box</a>.</p>
 
 </div>
 </div>
@@ -628,147 +332,13 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="adb4a5453dfb63827f5f3323e60204040"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb4a5453dfb63827f5f3323e60204040">&#9670;&nbsp;</a></span>random_pos()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::geom::Shape::random_pos </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *&#160;</td>
-          <td class="paramname"><em>rng_</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Generate a random position on the surface of the shape. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">rng_</td><td>Random number generator. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Randomly generated point on the surface of the shape. </dd></dl>
-
-<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a6676e63c672f481110026eabdb666ba2">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a24cdba18a2104159d68430e418806344">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#accc984547dc8af83525cd471119adf5f">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a4a4446fa9d8be9e25ed4fde7fb8817ad">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#ad37629c5d0ec23226ac5f137e4a7ee50">arc::geom::shape::Sphere</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a061627b97c54b06a7647061ffb6b22d2">arc::geom::shape::Plane</a>.</p>
-
-</div>
-</div>
-<a id="acb1c509590fe57967d10c7110504035b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb1c509590fe57967d10c7110504035b">&#9670;&nbsp;</a></span>random_pos_and_norm()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::pair&lt;<a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&gt; arc::geom::Shape::random_pos_and_norm </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *&#160;</td>
-          <td class="paramname"><em>rng_</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Generate a random position, and corresponding normal, on the surface of the shape. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">rng_</td><td>Random number generator. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Randomly generated point, and corresponding normal, on the surface of the shape. </dd></dl>
-
-<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a62b52a5c300082785fc9fd1118d45c94">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#aaa1b228682440cfb07ccd640f4e36082">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#acd0b54405bc0c9ba1b50a23bef1cfb57">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#ae5a306fcc9cad7eca7a534a825ca0a0a">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a42aff69e75f95f1384540a7ce9758fff">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a842378d2874e60bb089d78e28180959d">arc::geom::shape::Sphere</a>.</p>
-
-</div>
-</div>
-<a id="a9dcfd35f466009edaafa9fd51ba66165"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9dcfd35f466009edaafa9fd51ba66165">&#9670;&nbsp;</a></span>shape_list()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::vector&lt;const <a class="el" href="classarc_1_1geom_1_1_shape.html">Shape</a>*&gt; arc::geom::Shape::shape_list </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Create a vector containing pointers to all shapes forming this shape. </p>
-<dl class="section return"><dt>Returns</dt><dd>Vector containing pointers to all shapes forming this shape. </dd></dl>
-
-<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#abe69e6984cc240e4775fdeae8053c9be">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a4fd755465d9d99a96c2daf5dcd41129b">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#afa93897b1c6c7eaa8b079761fd7d05bd">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a0e0952a268e895503e4007cda3598366">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a56c58150fd62bebbaed29c2361444082">arc::geom::shape::Sphere</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a838c49ec1c59c244cbb94c355b285888">arc::geom::shape::Plane</a>.</p>
-
-</div>
-</div>
-<a id="af959df88187d387b5392f091da08ea39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af959df88187d387b5392f091da08ea39">&#9670;&nbsp;</a></span>vol()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual double arc::geom::Shape::vol </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the total volume of the shape. </p>
-<dl class="section return"><dt>Returns</dt><dd>Total volume of the shape. </dd></dl>
-
-<p>Implemented in <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a1c752d5aaf5393c8dd12a85fdec2cb69">arc::geom::shape::Mesh</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html#acb405bac70ed818b644971cc72a2fa1c">arc::geom::shape::Aabb</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_circle.html#a40c7fd8a5659b3b79787b5723c7d0d4a">arc::geom::shape::Circle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a7b2889627dfba34a99888307aa237e43">arc::geom::shape::Triangle</a>, <a class="el" href="classarc_1_1geom_1_1shape_1_1_plane.html#a52a99e84ccc936b654429a325b382147">arc::geom::shape::Plane</a>, and <a class="el" href="classarc_1_1geom_1_1shape_1_1_sphere.html#a4aa81c6849e3d660adca5c527a4561a7">arc::geom::shape::Sphere</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/arctk/geom/<a class="el" href="shape_8hpp_source.html">shape.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 3 2018 13:27:18 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 8 2018 17:05:10 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

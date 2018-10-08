@@ -1,7 +1,0 @@
-<map id="arc::utl::properties::always_less_than_or_equal_to" name="arc::utl::properties::always_less_than_or_equal_to">
-<area shape="rect" id="node2" href="$classarc_1_1phys_1_1material_1_1_basic.html#a12ea3cb0d1a3fa67debe88115604f9e8" title="arc::phys::material\l::Basic::Basic" alt="" coords="229,5,359,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1phys_1_1material_1_1_basic.html#a304090baf4e2487913ac309daf1a1c5f" title="arc::phys::material\l::Basic::init_albedo" alt="" coords="228,68,361,107"/>
-<area shape="rect" id="node4" href="$classarc_1_1phys_1_1material_1_1_fluorescent.html#a12319df1c85339e688679d67edeebd97" title="arc::phys::material\l::Fluorescent::Fluorescent" alt="" coords="207,131,382,169"/>
-<area shape="rect" id="node5" href="$classarc_1_1phys_1_1material_1_1_fluorescent.html#ad6a0f061aed53373dd30d45e56c3375c" title="arc::phys::material\l::Fluorescent::init\l_albedo" alt="" coords="229,193,359,245"/>
-<area shape="rect" id="node6" href="$classarc_1_1phys_1_1material_1_1_fluorescent.html#a85fc95a361d8e4256b842655be40c316" title="arc::phys::material\l::Fluorescent::init\l_flu_prob" alt="" coords="229,269,359,321"/>
-</map>

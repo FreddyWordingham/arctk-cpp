@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quality',['Quality',['../classarc_1_1random_1_1generator_1_1_quality.html',1,'arc::random::generator']]]
+  ['ray',['Ray',['../classarc_1_1gui_1_1shader_1_1_ray.html',1,'arc::gui::shader']]]
 ];

@@ -1,4 +1,0 @@
-<map id="arc::geom::shape::Mesh::collision_norm" name="arc::geom::shape::Mesh::collision_norm">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_aabb.html#a556df24d7d9eac241870840d44494456" title="arc::geom::shape::Aabb\l::contains" alt="" coords="218,5,381,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_aabb.html#a3eb52cf315b517ce2392ef463530d1da" title="arc::geom::shape::Aabb\l::collision" alt="" coords="218,68,381,107"/>
-</map>

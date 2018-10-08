@@ -1,4 +1,0 @@
-<map id="arc::equip::Entity::cell" name="arc::equip::Entity::cell">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_aabb.html#a556df24d7d9eac241870840d44494456" title="arc::geom::shape::Aabb\l::contains" alt="" coords="188,5,351,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_aabb.html#ad1311a65692ed54f09ac99c49258cb2a" title="arc::geom::shape::Aabb::min" alt="" coords="174,68,366,93"/>
-</map>

@@ -1,9 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classarc_1_1gui_1_1_shader.html" title="arc::gui::Shader" alt="" coords="5,129,121,155"/>
-<area shape="rect" id="node2" href="$classarc_1_1gui_1_1shader_1_1_ambient.html" title="arc::gui::shader::Ambient" alt="" coords="171,5,340,31"/>
-<area shape="rect" id="node3" href="$classarc_1_1gui_1_1shader_1_1_diffuse.html" title="arc::gui::shader::Diffuse" alt="" coords="174,55,336,80"/>
-<area shape="rect" id="node4" href="$classarc_1_1gui_1_1shader_1_1_normal.html" title="arc::gui::shader::Normal" alt="" coords="174,104,337,129"/>
-<area shape="rect" id="node5" href="$classarc_1_1gui_1_1shader_1_1_ray.html" title="arc::gui::shader::Ray" alt="" coords="183,153,328,179"/>
-<area shape="rect" id="node6" href="$classarc_1_1gui_1_1shader_1_1_skybox.html" title="arc::gui::shader::Skybox" alt="" coords="173,203,338,228"/>
-<area shape="rect" id="node7" href="$classarc_1_1gui_1_1shader_1_1_specular.html" title="arc::gui::shader::Specular" alt="" coords="169,252,342,277"/>
+<area shape="rect" id="node1" href="$classarc_1_1math_1_1_formula.html" title="arc::math::Formula" alt="" coords="5,75,139,100"/>
+<area shape="rect" id="node2" href="$classarc_1_1math_1_1formula_1_1_constant.html" title="arc::math::formula\l::Constant" alt="" coords="187,5,315,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1math_1_1formula_1_1_linear.html" title="arc::math::formula\l::Linear" alt="" coords="187,68,315,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1math_1_1formula_1_1_polynomial.html" title="arc::math::formula\l::Polynomial\&lt; N \&gt;" alt="" coords="187,131,315,169"/>
 </map>

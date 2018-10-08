@@ -1,4 +1,0 @@
-<map id="arc::gui::actor::box" name="arc::gui::actor::box">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1_shape.html#aec88d71a33d78dc6674bbd69198ba9ea" title="Get the minimum vec of the smallest bounding box containing the shape. " alt="" coords="186,5,342,31"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1_shape.html#a972799ae7e075c2604815d5453c92ace" title="Get the maximum vec of the smallest bounding box containing the shape. " alt="" coords="184,55,344,80"/>
-</map>

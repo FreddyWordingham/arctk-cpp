@@ -1,8 +1,0 @@
-<map id="arc::geom::shape::Circle::random_pos" name="arc::geom::shape::Circle::random_pos">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_circle.html#a413522cea27a42ed5f36c4e11c9143da" title="arc::geom::shape::Circle::pos" alt="" coords="219,5,414,31"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1random_1_1distribution.html#a619762488a9e9eedd75f89aea28b4ebe" title="arc::random::distribution\l::uniform" alt="" coords="234,55,399,93"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1math_1_1convert.html#ac0b319816d18eb6a572ecb9abd2af70d" title="arc::math::convert\l::polar_to_cart" alt="" coords="253,117,381,156"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1math_1_1compare.html#abaf895f8a2b87e8e16e7f7397d2cf0f1" title="arc::math::compare\l::unity" alt="" coords="248,180,385,219"/>
-<area shape="rect" id="node7" href="$namespacearc_1_1random_1_1distribution.html#af0181d183542f6401028a77795026f90" title="arc::random::distribution\l::normal" alt="" coords="234,243,399,281"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="462,180,598,219"/>
-</map>

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['half_5fpi',['HALF_PI',['../namespacearc_1_1consts_1_1math.html#acce762e2a997bf55510c2c160c6aab16',1,'arc::consts::math']]],
-  ['half_5fwidth',['half_width',['../classarc_1_1geom_1_1shape_1_1_aabb.html#aee8a9bf8318eaad540400e99878ef476',1,'arc::geom::shape::Aabb']]],
+  ['half_5fwidth',['half_width',['../classarc_1_1geom_1_1shape_1_1_box.html#a98dad3f2eb7b9bd281e62b957cb58f6e',1,'arc::geom::shape::Box']]],
   ['handle',['handle',['../classarc_1_1gui_1_1_window.html#ac0a644efc151d52ae3e200e2ef01d3c8',1,'arc::gui::Window']]],
   ['hash',['HASH',['../namespacearc_1_1config.html#acba74c1165508123cf039684296dd007',1,'arc::config']]],
   ['height',['height',['../classarc_1_1data_1_1_image.html#a9c0eb9cbac77f38c53f5be4793618fc2',1,'arc::data::Image']]],

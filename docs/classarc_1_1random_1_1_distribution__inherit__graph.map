@@ -1,7 +1,5 @@
 <map id="arc::random::Distribution&lt; T &gt;" name="arc::random::Distribution&lt; T &gt;">
-<area shape="rect" id="node2" href="$classarc_1_1random_1_1distribution_1_1_constant.html" title="arc::random::distribution\l::Constant\&lt; T \&gt;" alt="" coords="318,5,483,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1random_1_1distribution_1_1_discrete.html" title="arc::random::distribution\l::Discrete\&lt; T \&gt;" alt="" coords="318,68,483,107"/>
-<area shape="rect" id="node4" href="$classarc_1_1random_1_1distribution_1_1_linear.html" title="arc::random::distribution\l::Linear\&lt; T \&gt;" alt="" coords="318,131,483,169"/>
-<area shape="rect" id="node6" href="$classarc_1_1random_1_1_distribution.html" title="arc::random::Distribution\l\&lt; double \&gt;" alt="" coords="317,193,484,232"/>
-<area shape="rect" id="node5" href="$classarc_1_1random_1_1distribution_1_1_linear.html" title="arc::random::distribution\l::Linear\&lt; double \&gt;" alt="" coords="599,163,763,201"/>
+<area shape="rect" id="node2" href="$classarc_1_1random_1_1distribution_1_1_constant.html" title="arc::random::distribution\l::Constant\&lt; T \&gt;" alt="" coords="251,5,415,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1random_1_1distribution_1_1_discrete.html" title="arc::random::distribution\l::Discrete\&lt; T \&gt;" alt="" coords="251,68,415,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1random_1_1distribution_1_1_linear.html" title="arc::random::distribution\l::Linear\&lt; T \&gt;" alt="" coords="251,131,415,169"/>
 </map>

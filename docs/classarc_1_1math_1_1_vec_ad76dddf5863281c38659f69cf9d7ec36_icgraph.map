@@ -1,9 +1,6 @@
 <map id="arc::math::Vec::normal" name="arc::math::Vec::normal">
 <area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#aff1b0871a287a5a6fe32799a0a62e27e" title="arc::geom::shape::Mesh\l::parse_norms" alt="" coords="208,5,372,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a0f7bb8e8601c7f953b0498ec2cefe4af" title="arc::geom::shape::Mesh\l::transform_norms" alt="" coords="208,68,372,107"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1gui_1_1actor.html#a704371572df24855c6cd1456bf4d766b" title="arc::gui::actor::act" alt="" coords="227,131,354,156"/>
-<area shape="rect" id="node5" href="$classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#a1a3af80975b1b52166ac3a05c6c79816" title="arc::math::Vec\&lt; T,\l 2 \&gt;::normal" alt="" coords="226,180,354,219"/>
-<area shape="rect" id="node6" href="$classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#aa33eb319f35e0867e3c16705454e8d4f" title="arc::math::Vec\&lt; T,\l 3 \&gt;::normal" alt="" coords="226,243,354,281"/>
-<area shape="rect" id="node7" href="$classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#ad653cb031e505d7d91529842eae49a5c" title="arc::math::Vec\&lt; T,\l 4 \&gt;::normal" alt="" coords="226,305,354,344"/>
-<area shape="rect" id="node8" href="$namespacearc_1_1phys_1_1optics.html#a4cf9e9ccdf8fa5fc45120dacbc28f43c" title="arc::phys::optics::\lreflection_dir" alt="" coords="228,368,353,407"/>
+<area shape="rect" id="node3" href="$classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#a1a3af80975b1b52166ac3a05c6c79816" title="arc::math::Vec\&lt; T,\l 2 \&gt;::normal" alt="" coords="226,68,354,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#aa33eb319f35e0867e3c16705454e8d4f" title="arc::math::Vec\&lt; T,\l 3 \&gt;::normal" alt="" coords="226,131,354,169"/>
+<area shape="rect" id="node5" href="$classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#ad653cb031e505d7d91529842eae49a5c" title="arc::math::Vec\&lt; T,\l 4 \&gt;::normal" alt="" coords="226,193,354,232"/>
 </map>

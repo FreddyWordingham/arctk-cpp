@@ -1,13 +1,9 @@
 var searchData=
 [
   ['name',['name',['../namespacearc_1_1index_1_1dim.html#a94d6b580f62f0e2a338c49901ce4f004',1,'arc::index::dim']]],
-  ['nearest_5fpoint_5fsurf',['nearest_point_surf',['../classarc_1_1geom_1_1shape_1_1_circle.html#aefec3642a27d1405acbbd2661be7d913',1,'arc::geom::shape::Circle::nearest_point_surf()'],['../classarc_1_1geom_1_1shape_1_1_plane.html#a986caf45b3f75cced4d808e4bb45d339',1,'arc::geom::shape::Plane::nearest_point_surf()'],['../classarc_1_1geom_1_1shape_1_1_sphere.html#ab9b38e8856ff2ce656ee99ed50b4b49c',1,'arc::geom::shape::Sphere::nearest_point_surf()']]],
-  ['nearest_5fpoint_5fvol',['nearest_point_vol',['../classarc_1_1geom_1_1shape_1_1_aabb.html#a2c757a57930307460ba90f3fa5062a8c',1,'arc::geom::shape::Aabb::nearest_point_vol()'],['../classarc_1_1geom_1_1shape_1_1_sphere.html#a24dc9ffe85d5eca8738293e3521c757c',1,'arc::geom::shape::Sphere::nearest_point_vol()']]],
   ['next',['next',['../namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c',1,'arc::index::rotate']]],
   ['nlohmann',['nlohmann',['../namespacenlohmann.html',1,'']]],
-  ['node',['Node',['../classarc_1_1mesh_1_1_node.html',1,'arc::mesh::Node'],['../classarc_1_1mesh_1_1_node.html#a748d686109d0270a42ce75dfdcd1a5d1',1,'arc::mesh::Node::Node(const vec3 &amp;min_, const vec3 &amp;max_, size_t depth_) noexcept'],['../classarc_1_1mesh_1_1_node.html#acb1ab8398283f99cf967120d8bceefdf',1,'arc::mesh::Node::Node(const Node &amp;) noexcept=default'],['../classarc_1_1mesh_1_1_node.html#a6803104781829a28306d881559993c2d',1,'arc::mesh::Node::Node(Node &amp;&amp;) noexcept=default']]],
-  ['node_2ehpp',['node.hpp',['../node_8hpp.html',1,'']]],
-  ['norm',['norm',['../classarc_1_1geom_1_1shape_1_1_circle.html#a3abf22ffc853ebb6327ef17141058307',1,'arc::geom::shape::Circle::norm()'],['../classarc_1_1geom_1_1shape_1_1_plane.html#ab0ea4a43ecfc9fb23b417ca89749cecd',1,'arc::geom::shape::Plane::norm()'],['../classarc_1_1geom_1_1shape_1_1_triangle.html#aa833baa18585578610a680de93e16bf3',1,'arc::geom::shape::Triangle::norm()']]],
+  ['norm',['norm',['../classarc_1_1geom_1_1_collision.html#a5b249c3bb11eeaae6afebc3e2e0dbe4b',1,'arc::geom::Collision']]],
   ['norm_5fkeyword',['NORM_KEYWORD',['../namespacearc_1_1geom_1_1shape.html#a51ca94f24aa65c5f4511eb72ebae84bd',1,'arc::geom::shape']]],
   ['normal',['Normal',['../classarc_1_1gui_1_1shader_1_1_normal.html',1,'arc::gui::shader::Normal'],['../classarc_1_1math_1_1_vec.html#ad76dddf5863281c38659f69cf9d7ec36',1,'arc::math::Vec::normal()'],['../classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#a1a3af80975b1b52166ac3a05c6c79816',1,'arc::math::Vec&lt; T, 2 &gt;::normal()'],['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#aa33eb319f35e0867e3c16705454e8d4f',1,'arc::math::Vec&lt; T, 3 &gt;::normal()'],['../classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#ad653cb031e505d7d91529842eae49a5c',1,'arc::math::Vec&lt; T, 4 &gt;::normal()'],['../classarc_1_1gui_1_1shader_1_1_normal.html#ae36b26c07add714d22c0da11a4cefce7',1,'arc::gui::shader::Normal::Normal()'],['../namespacearc_1_1random_1_1distribution.html#af0181d183542f6401028a77795026f90',1,'arc::random::distribution::normal()']]],
   ['normal_2ehpp',['normal.hpp',['../normal_8hpp.html',1,'']]],
@@ -19,7 +15,6 @@ var searchData=
   ['norms',['norms',['../classarc_1_1geom_1_1shape_1_1_triangle.html#ab2ef6d3518a4bb90da387ca46caffbf3',1,'arc::geom::shape::Triangle']]],
   ['num_5fedges',['num_edges',['../classarc_1_1geom_1_1shape_1_1_mesh.html#a96791334f328524f1af99e43127e6c09',1,'arc::geom::shape::Mesh']]],
   ['num_5ffaces',['num_faces',['../classarc_1_1geom_1_1shape_1_1_mesh.html#a266c2966cfd43fc9b0ebc7db277cdfbe',1,'arc::geom::shape::Mesh']]],
-  ['num_5fnodes',['num_nodes',['../classarc_1_1mesh_1_1node_1_1_branch.html#a648e4c4fe7a09fc39dba9e0667c671a3',1,'arc::mesh::node::Branch::num_nodes()'],['../classarc_1_1mesh_1_1node_1_1_leaf.html#af67df8c93c4a223eb2ee69ff79ab4c54',1,'arc::mesh::node::Leaf::num_nodes()'],['../classarc_1_1mesh_1_1_node.html#a6a50e441440be10b651aa41a0adae668',1,'arc::mesh::Node::num_nodes()']]],
   ['num_5fnorms',['num_norms',['../classarc_1_1geom_1_1shape_1_1_mesh.html#aa9c3acc4af6047608a6a2dcfd56e93c6',1,'arc::geom::shape::Mesh']]],
   ['num_5fvert',['num_vert',['../classarc_1_1gui_1_1_actor.html#a8b457c2ac5cae4710152632d36144e86',1,'arc::gui::Actor']]],
   ['num_5fverts',['num_verts',['../classarc_1_1geom_1_1shape_1_1_mesh.html#a2465d9b117ea566ec9d0fa83b2a94ea8',1,'arc::geom::shape::Mesh']]]

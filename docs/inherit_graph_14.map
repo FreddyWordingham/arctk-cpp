@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classarc_1_1equip_1_1_entity.html" title="arc::equip::Entity" alt="" coords="5,5,126,31"/>
+<area shape="rect" id="node1" href="$classarc_1_1geom_1_1_shape.html" title="arc::geom::Shape" alt="" coords="5,55,132,80"/>
+<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_box.html" title="arc::geom::shape::Box" alt="" coords="192,5,347,31"/>
+<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_mesh.html" title="arc::geom::shape::Mesh" alt="" coords="187,55,352,80"/>
+<area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_triangle.html" title="arc::geom::shape::Triangle" alt="" coords="180,104,359,129"/>
 </map>

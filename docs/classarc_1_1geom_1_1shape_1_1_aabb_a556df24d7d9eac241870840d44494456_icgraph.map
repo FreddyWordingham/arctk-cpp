@@ -1,8 +1,0 @@
-<map id="arc::geom::shape::Aabb::contains" name="arc::geom::shape::Aabb::contains">
-<area shape="rect" id="node2" href="$classarc_1_1equip_1_1_entity.html#a1394fe0524ae4a8d15cb2292a5b15993" title="arc::equip::Entity\l::cell" alt="" coords="239,5,360,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a30578bd21f0fa9d050cd1879ccae02ab" title="arc::geom::shape::Mesh\l::collision" alt="" coords="217,68,382,107"/>
-<area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#add182c6ba48e9d2fc73f156a56bfa628" title="arc::geom::shape::Mesh\l::collision_norm" alt="" coords="217,131,382,169"/>
-<area shape="rect" id="node5" href="$classarc_1_1mesh_1_1node_1_1_branch.html#a6763b94f4dd7f292bf4539d61c4f7502" title="arc::mesh::node::Branch\l::leaf" alt="" coords="216,193,383,232"/>
-<area shape="rect" id="node6" href="$classarc_1_1mesh_1_1node_1_1_leaf.html#ae27b119f8c1c8a8e37efa935d5ca94e9" title="arc::mesh::node::Leaf\l::intersect_entity" alt="" coords="224,256,375,295"/>
-<area shape="rect" id="node7" href="$classarc_1_1mesh_1_1node_1_1_leaf.html#a465fef8b8431bd366cb3bc315e7274ab" title="arc::mesh::node::Leaf\l::leaf" alt="" coords="224,319,375,357"/>
-</map>

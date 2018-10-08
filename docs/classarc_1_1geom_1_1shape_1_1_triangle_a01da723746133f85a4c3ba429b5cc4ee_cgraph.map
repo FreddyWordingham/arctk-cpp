@@ -1,5 +1,0 @@
-<map id="arc::geom::shape::Triangle::init_norm" name="arc::geom::shape::Triangle::init_norm">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#aa833baa18585578610a680de93e16bf3" title="arc::geom::shape::Triangle\l::norm" alt="" coords="233,5,412,44"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1random_1_1distribution.html#af0181d183542f6401028a77795026f90" title="arc::random::distribution\l::normal" alt="" coords="240,68,405,107"/>
-<area shape="rect" id="node4" href="$classarc_1_1math_1_1_vec.html#aa6d4a0162dccc9fc08cb51111aa44825" title="arc::math::Vec::normalised" alt="" coords="233,131,412,156"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="arc::mesh::Node" name="arc::mesh::Node">
-<area shape="rect" id="node4" href="$classarc_1_1mesh_1_1node_1_1_branch.html" title="arc::mesh::node::Branch" alt="" coords="5,225,172,251"/>
-<area shape="rect" id="node6" href="$classarc_1_1mesh_1_1node_1_1_leaf.html" title="arc::mesh::node::Leaf" alt="" coords="196,225,346,251"/>
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_aabb.html" title="arc::geom::shape::Aabb" alt="" coords="98,79,261,104"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1_shape.html" title="arc::geom::Shape" alt="" coords="116,5,243,31"/>
-<area shape="rect" id="node5" href="$classarc_1_1mesh_1_1_adaptive.html" title="arc::mesh::Adaptive" alt="" coords="19,299,158,324"/>
-</map>

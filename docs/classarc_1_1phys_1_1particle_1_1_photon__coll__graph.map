@@ -1,8 +1,0 @@
-<map id="arc::phys::particle::Photon" name="arc::phys::particle::Photon">
-<area shape="rect" id="node2" href="$classarc_1_1phys_1_1_particle.html" title="arc::phys::Particle" alt="" coords="34,205,161,231"/>
-<area shape="rect" id="node3" href="$classarc_1_1math_1_1_vec.html" title="arc::math::Vec\&lt; double, 3 \&gt;" alt="" coords="5,105,190,131"/>
-<area shape="rect" id="node4" href="$classarc_1_1math_1_1_vec.html" title="arc::math::Vec\&lt; T, N \&gt;" alt="" coords="161,5,314,31"/>
-<area shape="rect" id="node5" href="$classarc_1_1equip_1_1_entity.html" title="arc::equip::Entity" alt="" coords="185,205,306,231"/>
-<area shape="rect" id="node6" href="$classarc_1_1geom_1_1shape_1_1_aabb.html" title="arc::geom::shape::Aabb" alt="" coords="324,105,487,131"/>
-<area shape="rect" id="node7" href="$classarc_1_1geom_1_1_shape.html" title="arc::geom::Shape" alt="" coords="342,5,469,31"/>
-</map>

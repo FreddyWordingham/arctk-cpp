@@ -1,9 +1,4 @@
 <map id="arc::random::distribution::uniform" name="arc::random::distribution::uniform">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_aabb.html#a24cdba18a2104159d68430e418806344" title="arc::geom::shape::Aabb\l::random_pos" alt="" coords="226,5,389,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_aabb.html#aaa1b228682440cfb07ccd640f4e36082" title="arc::geom::shape::Aabb\l::random_pos_and_norm" alt="" coords="222,68,392,107"/>
-<area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_circle.html#a4a4446fa9d8be9e25ed4fde7fb8817ad" title="arc::geom::shape::Circle\l::random_pos" alt="" coords="224,131,390,169"/>
-<area shape="rect" id="node5" href="$classarc_1_1geom_1_1shape_1_1_circle.html#ae5a306fcc9cad7eca7a534a825ca0a0a" title="arc::geom::shape::Circle\l::random_pos_and_norm" alt="" coords="222,193,392,232"/>
-<area shape="rect" id="node6" href="$classarc_1_1geom_1_1shape_1_1_plane.html#afcea9197dfa64a43a3db5fac63fcff4a" title="arc::geom::shape::Plane\l::random_pos" alt="" coords="224,256,390,295"/>
-<area shape="rect" id="node7" href="$classarc_1_1random_1_1distribution_1_1_constant.html#aec071ab8271f465317f1112f8d4a2ccc" title="arc::random::distribution\l::Constant::sample" alt="" coords="225,319,389,357"/>
-<area shape="rect" id="node8" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a0fa6aa6641224238ac372116f1459944" title="arc::random::distribution\l::Linear\&lt; double \&gt;::sample" alt="" coords="218,381,397,420"/>
+<area shape="rect" id="node2" href="$classarc_1_1random_1_1distribution_1_1_constant.html#aec071ab8271f465317f1112f8d4a2ccc" title="arc::random::distribution\l::Constant::sample" alt="" coords="218,5,382,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a0fa6aa6641224238ac372116f1459944" title="arc::random::distribution\l::Linear::sample" alt="" coords="218,68,382,107"/>
 </map>

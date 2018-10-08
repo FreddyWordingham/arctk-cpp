@@ -78,7 +78,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="geom_2shape_2mesh_8hpp_source.html">mesh.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="mesh_8hpp_source.html">mesh.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for arc::geom::shape::Mesh:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -97,23 +97,25 @@ $(function() {
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh__coll__graph.png" border="0" usemap="#arc_1_1geom_1_1shape_1_1_mesh_coll__map" alt="Collaboration graph"/></div>
 <map name="arc_1_1geom_1_1shape_1_1_mesh_coll__map" id="arc_1_1geom_1_1shape_1_1_mesh_coll__map">
 <area shape="rect" id="node2" href="classarc_1_1geom_1_1_shape.html" title="arc::geom::Shape" alt="" coords="5,5,132,31"/>
-<area shape="rect" id="node3" href="classarc_1_1geom_1_1shape_1_1_aabb.html" title="arc::geom::shape::Aabb" alt="" coords="106,105,269,131"/>
+<area shape="rect" id="node3" href="classarc_1_1geom_1_1shape_1_1_box.html" title="arc::geom::shape::Box" alt="" coords="106,105,261,131"/>
 <area shape="rect" id="node4" href="classarc_1_1math_1_1_vec.html" title="arc::math::Vec\&lt; T, N \&gt;" alt="" coords="156,5,309,31"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9cf85436a93ef12128687b19f2dbf932"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a9cf85436a93ef12128687b19f2dbf932">Mesh</a> (const std::string &amp;serial_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;scale_=<a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>(1.0, 1.0, 1.0), const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;rot_=<a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>(0.0, 0.0, 0.0), const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;trans_=<a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>(0.0, 0.0, 0.0)) noexcept</td></tr>
-<tr class="separator:a9cf85436a93ef12128687b19f2dbf932"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd3d89a25726101ceb7bf97c240bdab3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#abd3d89a25726101ceb7bf97c240bdab3">Mesh</a> (const std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &amp;poss_, const std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &amp;norms_, const std::vector&lt; std::array&lt; std::array&lt; size_t, 3 &gt;, 2 &gt;&gt; &amp;faces_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;scale_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;rot_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;trans_) noexcept</td></tr>
-<tr class="separator:abd3d89a25726101ceb7bf97c240bdab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9297898023853721e4acca242a9c065"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#ab9297898023853721e4acca242a9c065">Mesh</a> (const std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &amp;poss_, const std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &amp;norms_, const std::vector&lt; std::array&lt; std::array&lt; size_t, 3 &gt;, 2 &gt;&gt; &amp;faces_) noexcept</td></tr>
-<tr class="separator:ab9297898023853721e4acca242a9c065"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe69e6984cc240e4775fdeae8053c9be"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="classarc_1_1geom_1_1_shape.html">Shape</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#abe69e6984cc240e4775fdeae8053c9be">shape_list</a> () const noexcept override</td></tr>
-<tr class="separator:abe69e6984cc240e4775fdeae8053c9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b545f6051ecd88429fddf39dcb7902d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a9b545f6051ecd88429fddf39dcb7902d">Mesh</a> (const std::string &amp;serial_) noexcept</td></tr>
+<tr class="separator:a9b545f6051ecd88429fddf39dcb7902d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f212f82898c067afb4cd9144f75045"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a34f212f82898c067afb4cd9144f75045">Mesh</a> (const std::string &amp;serial_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;scale_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;rot_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;trans_) noexcept</td></tr>
+<tr class="separator:a34f212f82898c067afb4cd9144f75045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0c45d3e12eec2b1fd235922ab66d9c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#ae0c45d3e12eec2b1fd235922ab66d9c5">Mesh</a> (const std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &amp;poss_, const std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &amp;norms_, const std::vector&lt; std::pair&lt; std::array&lt; size_t, 3 &gt;, std::array&lt; size_t, 3 &gt;&gt;&gt; &amp;faces_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;scale_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;rot_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;trans_) noexcept</td></tr>
+<tr class="separator:ae0c45d3e12eec2b1fd235922ab66d9c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7128c41df7140dcff1c5bda69bebf6d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a7128c41df7140dcff1c5bda69bebf6d4">Mesh</a> (const std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &amp;poss_, const std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &amp;norms_, const std::vector&lt; std::pair&lt; std::array&lt; size_t, 3 &gt;, std::array&lt; size_t, 3 &gt;&gt;&gt; &amp;faces_) noexcept</td></tr>
+<tr class="separator:a7128c41df7140dcff1c5bda69bebf6d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2be8cb96279daeff009744a8b70ddb82"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html">Triangle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a2be8cb96279daeff009744a8b70ddb82">tri</a> (size_t index_) const noexcept</td></tr>
 <tr class="separator:a2be8cb96279daeff009744a8b70ddb82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a714027ca7c7c7c0f533c95987498f498"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_box.html">Box</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a714027ca7c7c7c0f533c95987498f498">box</a> () const noexcept</td></tr>
+<tr class="separator:a714027ca7c7c7c0f533c95987498f498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2465d9b117ea566ec9d0fa83b2a94ea8"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a2465d9b117ea566ec9d0fa83b2a94ea8">num_verts</a> () const noexcept</td></tr>
 <tr class="separator:a2465d9b117ea566ec9d0fa83b2a94ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9c3acc4af6047608a6a2dcfd56e93c6"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#aa9c3acc4af6047608a6a2dcfd56e93c6">num_norms</a> () const noexcept</td></tr>
@@ -122,28 +124,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a96791334f328524f1af99e43127e6c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a266c2966cfd43fc9b0ebc7db277cdfbe"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a266c2966cfd43fc9b0ebc7db277cdfbe">num_faces</a> () const noexcept</td></tr>
 <tr class="separator:a266c2966cfd43fc9b0ebc7db277cdfbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1607909cf573f925705a952e99b209f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a1607909cf573f925705a952e99b209f9">min</a> () const noexcept override</td></tr>
-<tr class="separator:a1607909cf573f925705a952e99b209f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadb86a235c411b99e864e5bd1f865cd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#aadb86a235c411b99e864e5bd1f865cd8">max</a> () const noexcept override</td></tr>
-<tr class="separator:aadb86a235c411b99e864e5bd1f865cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac628fcba45b8d72f2764158c613727fa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#ac628fcba45b8d72f2764158c613727fa">area</a> () const noexcept override</td></tr>
-<tr class="separator:ac628fcba45b8d72f2764158c613727fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c752d5aaf5393c8dd12a85fdec2cb69"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a1c752d5aaf5393c8dd12a85fdec2cb69">vol</a> () const noexcept override</td></tr>
-<tr class="separator:a1c752d5aaf5393c8dd12a85fdec2cb69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafaa5530866d00803e871ea53bc85125"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#aafaa5530866d00803e871ea53bc85125">closed</a> () const noexcept override</td></tr>
-<tr class="separator:aafaa5530866d00803e871ea53bc85125"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6676e63c672f481110026eabdb666ba2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a6676e63c672f481110026eabdb666ba2">random_pos</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept override</td></tr>
-<tr class="separator:a6676e63c672f481110026eabdb666ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62b52a5c300082785fc9fd1118d45c94"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a62b52a5c300082785fc9fd1118d45c94">random_pos_and_norm</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept override</td></tr>
-<tr class="separator:a62b52a5c300082785fc9fd1118d45c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2cdfb5a6ad615574c6d22fb3539548b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#ab2cdfb5a6ad615574c6d22fb3539548b">intersect_surf</a> (const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;aabb_) const noexcept override</td></tr>
-<tr class="separator:ab2cdfb5a6ad615574c6d22fb3539548b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d844540e2ecb8b3676e43c1f8a9d06b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a4d844540e2ecb8b3676e43c1f8a9d06b">intersect_vol</a> (const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;) const noexcept override</td></tr>
-<tr class="separator:a4d844540e2ecb8b3676e43c1f8a9d06b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84b0b8ec010581fd2deaa258ad98f08a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a84b0b8ec010581fd2deaa258ad98f08a">closed</a> () const noexcept</td></tr>
+<tr class="separator:a84b0b8ec010581fd2deaa258ad98f08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81409b11705fc30225b60cc0e143f7fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a81409b11705fc30225b60cc0e143f7fe">random_pos</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept</td></tr>
+<tr class="separator:a81409b11705fc30225b60cc0e143f7fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fd171bd5f4599da58d70da8da3feaa9"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a6fd171bd5f4599da58d70da8da3feaa9">random_pos_and_norm</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_) const noexcept</td></tr>
+<tr class="separator:a6fd171bd5f4599da58d70da8da3feaa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf9572c733f7ad68c4148d79320ef894"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#abf9572c733f7ad68c4148d79320ef894">intersect</a> (const <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html">Triangle</a> &amp;tri_) const noexcept</td></tr>
+<tr class="separator:abf9572c733f7ad68c4148d79320ef894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a792c957a67088c636870c488d182a527"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a792c957a67088c636870c488d182a527">intersect</a> (const <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html">Mesh</a> &amp;mesh_) const noexcept</td></tr>
+<tr class="separator:a792c957a67088c636870c488d182a527"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30578bd21f0fa9d050cd1879ccae02ab"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a30578bd21f0fa9d050cd1879ccae02ab">collision</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
 <tr class="separator:a30578bd21f0fa9d050cd1879ccae02ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add182c6ba48e9d2fc73f156a56bfa628"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::pair&lt; double, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#add182c6ba48e9d2fc73f156a56bfa628">collision_norm</a> (const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;pos_, const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;dir_) const noexcept override</td></tr>
-<tr class="separator:add182c6ba48e9d2fc73f156a56bfa628"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classarc_1_1geom_1_1_shape"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classarc_1_1geom_1_1_shape')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classarc_1_1geom_1_1_shape.html">arc::geom::Shape</a></td></tr>
 <tr class="memitem:a1e4b8481642986ed4be7be8ff0e2d087 inherit pub_methods_classarc_1_1geom_1_1_shape"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1_shape.html#a1e4b8481642986ed4be7be8ff0e2d087">Shape</a> ()=default</td></tr>
 <tr class="memdesc:a1e4b8481642986ed4be7be8ff0e2d087 inherit pub_methods_classarc_1_1geom_1_1_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defaulted constructor.  <a href="classarc_1_1geom_1_1_shape.html#a1e4b8481642986ed4be7be8ff0e2d087">More...</a><br /></td></tr>
@@ -169,30 +161,36 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a8852f700393a4fcf6a663891335e0785"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff1b0871a287a5a6fe32799a0a62e27e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#aff1b0871a287a5a6fe32799a0a62e27e">parse_norms</a> (const std::string &amp;serial_) const noexcept</td></tr>
 <tr class="separator:aff1b0871a287a5a6fe32799a0a62e27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09a4bc9c995b86be199b1c7c1abfc6d2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::array&lt; std::array&lt; size_t, 3 &gt;, 2 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a09a4bc9c995b86be199b1c7c1abfc6d2">parse_faces</a> (const std::string &amp;serial_) const noexcept</td></tr>
-<tr class="separator:a09a4bc9c995b86be199b1c7c1abfc6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac56237b6fdefbf8467008920c86919ce"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; std::array&lt; size_t, 3 &gt;, std::array&lt; size_t, 3 &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#ac56237b6fdefbf8467008920c86919ce">parse_faces</a> (const std::string &amp;serial_) const noexcept</td></tr>
+<tr class="separator:ac56237b6fdefbf8467008920c86919ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad78fb55eb3fcfd408f038fed02a20d04"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#ad78fb55eb3fcfd408f038fed02a20d04">transform_poss</a> (const std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &amp;poss_, const <a class="el" href="namespacearc.html#a10678f936e6e0dc6f3ada62d03d315bb">mat4</a> &amp;transform_) const noexcept</td></tr>
 <tr class="separator:ad78fb55eb3fcfd408f038fed02a20d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f7bb8e8601c7f953b0498ec2cefe4af"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a0f7bb8e8601c7f953b0498ec2cefe4af">transform_norms</a> (const std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &amp;norms_, const <a class="el" href="namespacearc.html#a10678f936e6e0dc6f3ada62d03d315bb">mat4</a> &amp;transform_) const noexcept</td></tr>
 <tr class="separator:a0f7bb8e8601c7f953b0498ec2cefe4af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a26af075e6f4684d138580e310d2b45"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html">Triangle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a4a26af075e6f4684d138580e310d2b45">init_tris</a> (const std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &amp;poss_, const std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &amp;norms_, const std::vector&lt; std::array&lt; std::array&lt; size_t, 3 &gt;, 2 &gt;&gt; &amp;faces_) const noexcept</td></tr>
-<tr class="separator:a4a26af075e6f4684d138580e310d2b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67b65626d72e3616ba79df4531e63a79"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a67b65626d72e3616ba79df4531e63a79">init_num_verts</a> (const std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &amp;poss_, const std::vector&lt; std::array&lt; std::array&lt; size_t, 3 &gt;, 2 &gt;&gt; &amp;faces_) const noexcept</td></tr>
-<tr class="separator:a67b65626d72e3616ba79df4531e63a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bef56ec4044e70cd93c2fee2c491f2e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a4bef56ec4044e70cd93c2fee2c491f2e">init_num_norms</a> (const std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &amp;norms_, const std::vector&lt; std::array&lt; std::array&lt; size_t, 3 &gt;, 2 &gt;&gt; &amp;faces_) const noexcept</td></tr>
-<tr class="separator:a4bef56ec4044e70cd93c2fee2c491f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51395c997049b5d11094deb00f489f33"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a51395c997049b5d11094deb00f489f33">init_num_edges</a> (const std::vector&lt; std::array&lt; std::array&lt; size_t, 3 &gt;, 2 &gt;&gt; &amp;faces_) const noexcept</td></tr>
-<tr class="separator:a51395c997049b5d11094deb00f489f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0e1fe41600daa6411175f038753de66"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html">Triangle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#ab0e1fe41600daa6411175f038753de66">init_tris</a> (const std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &amp;poss_, const std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &amp;norms_, const std::vector&lt; std::pair&lt; std::array&lt; size_t, 3 &gt;, std::array&lt; size_t, 3 &gt;&gt;&gt; &amp;faces_) const noexcept</td></tr>
+<tr class="separator:ab0e1fe41600daa6411175f038753de66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51623506d468518fe712e25f051ea3c4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a51623506d468518fe712e25f051ea3c4">init_areas</a> () const noexcept</td></tr>
 <tr class="separator:a51623506d468518fe712e25f051ea3c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8642c77a26d79ef251e39dbd532e6925"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">Aabb</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a8642c77a26d79ef251e39dbd532e6925">init_box</a> () const noexcept</td></tr>
-<tr class="separator:a8642c77a26d79ef251e39dbd532e6925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99d3b8648e625769bfa4ea549a0d65bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarc_1_1geom_1_1shape_1_1_box.html">Box</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a99d3b8648e625769bfa4ea549a0d65bf">init_box</a> () const noexcept</td></tr>
+<tr class="separator:a99d3b8648e625769bfa4ea549a0d65bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfd48875c2ab5a6e8c248d4aa8c2e36b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#adfd48875c2ab5a6e8c248d4aa8c2e36b">init_num_verts</a> (size_t num_poss_, const std::vector&lt; std::pair&lt; std::array&lt; size_t, 3 &gt;, std::array&lt; size_t, 3 &gt;&gt;&gt; &amp;faces_) const noexcept</td></tr>
+<tr class="separator:adfd48875c2ab5a6e8c248d4aa8c2e36b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa95404e0a4cb55ad3909059874a87b33"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#aa95404e0a4cb55ad3909059874a87b33">init_num_norms</a> (size_t num_norms_, const std::vector&lt; std::pair&lt; std::array&lt; size_t, 3 &gt;, std::array&lt; size_t, 3 &gt;&gt;&gt; &amp;faces_) const noexcept</td></tr>
+<tr class="separator:aa95404e0a4cb55ad3909059874a87b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06c06232d353e5db76257c63c3ca5aca"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a06c06232d353e5db76257c63c3ca5aca">init_num_edges</a> (const std::vector&lt; std::pair&lt; std::array&lt; size_t, 3 &gt;, std::array&lt; size_t, 3 &gt;&gt;&gt; &amp;faces_) const noexcept</td></tr>
+<tr class="separator:a06c06232d353e5db76257c63c3ca5aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a856717860fe6638d8937af7b8d72584d"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html">Triangle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a856717860fe6638d8937af7b8d72584d">_tris</a></td></tr>
 <tr class="memdesc:a856717860fe6638d8937af7b8d72584d"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of triangles forming the mesh.  <a href="#a856717860fe6638d8937af7b8d72584d">More...</a><br /></td></tr>
 <tr class="separator:a856717860fe6638d8937af7b8d72584d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc6b22575e06f9238f4713a58ad0206e"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#acc6b22575e06f9238f4713a58ad0206e">_areas</a></td></tr>
+<tr class="memdesc:acc6b22575e06f9238f4713a58ad0206e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalised relative area of each triangle forming the mesh.  <a href="#acc6b22575e06f9238f4713a58ad0206e">More...</a><br /></td></tr>
+<tr class="separator:acc6b22575e06f9238f4713a58ad0206e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a200a29536f874f84d6a1745df856c4cc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_box.html">Box</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a200a29536f874f84d6a1745df856c4cc">_box</a></td></tr>
+<tr class="memdesc:a200a29536f874f84d6a1745df856c4cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bounding box of the mesh.  <a href="#a200a29536f874f84d6a1745df856c4cc">More...</a><br /></td></tr>
+<tr class="separator:a200a29536f874f84d6a1745df856c4cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ce4fb796e6fa5967c67752f9f9d5c7b"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a8ce4fb796e6fa5967c67752f9f9d5c7b">_num_verts</a></td></tr>
 <tr class="memdesc:a8ce4fb796e6fa5967c67752f9f9d5c7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of unique vertex positions forming the mesh.  <a href="#a8ce4fb796e6fa5967c67752f9f9d5c7b">More...</a><br /></td></tr>
 <tr class="separator:a8ce4fb796e6fa5967c67752f9f9d5c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,18 +206,46 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a3377db5311f392038b843411a327f74f"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a3377db5311f392038b843411a327f74f">_closed</a></td></tr>
 <tr class="memdesc:a3377db5311f392038b843411a327f74f"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the surface of the mesh forms a closed surface.  <a href="#a3377db5311f392038b843411a327f74f">More...</a><br /></td></tr>
 <tr class="separator:a3377db5311f392038b843411a327f74f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc6b22575e06f9238f4713a58ad0206e"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#acc6b22575e06f9238f4713a58ad0206e">_areas</a></td></tr>
-<tr class="memdesc:acc6b22575e06f9238f4713a58ad0206e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalised relative area of each triangle forming the mesh.  <a href="#acc6b22575e06f9238f4713a58ad0206e">More...</a><br /></td></tr>
-<tr class="separator:acc6b22575e06f9238f4713a58ad0206e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac82621b72a021f49b5759dcb440d663f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">Aabb</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#ac82621b72a021f49b5759dcb440d663f">_box</a></td></tr>
-<tr class="memdesc:ac82621b72a021f49b5759dcb440d663f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bounding box of the mesh.  <a href="#ac82621b72a021f49b5759dcb440d663f">More...</a><br /></td></tr>
-<tr class="separator:ac82621b72a021f49b5759dcb440d663f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Geometric triangle mesh shape. </p>
+<div class="textblock"><p>Triangular mesh shape. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9cf85436a93ef12128687b19f2dbf932"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cf85436a93ef12128687b19f2dbf932">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[1/3]</span></h2>
+<a id="a9b545f6051ecd88429fddf39dcb7902d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b545f6051ecd88429fddf39dcb7902d">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">arc::geom::shape::Mesh::Mesh </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>serial_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Construct a mesh from a serialised wavefront file.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">serial_</td><td>Serialised wavefront file.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>serial_ may not be empty. </dd></dl>
+
+</div>
+</div>
+<a id="a34f212f82898c067afb4cd9144f75045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34f212f82898c067afb4cd9144f75045">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -237,19 +263,19 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td>
-          <td class="paramname"><em>scale_</em> = <code><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>(1.0,&#160;1.0,&#160;1.0)</code>, </td>
+          <td class="paramname"><em>scale_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td>
-          <td class="paramname"><em>rot_</em> = <code><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>(0.0,&#160;0.0,&#160;0.0)</code>, </td>
+          <td class="paramname"><em>rot_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td>
-          <td class="paramname"><em>trans_</em> = <code><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>(0.0,&#160;0.0,&#160;0.0)</code>&#160;</td>
+          <td class="paramname"><em>trans_</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -259,17 +285,17 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Construct a mesh by parsing a serialised wavefront object. Additional transformations may be applied to the base mesh.</p>
+<p>Construct a mesh from a serialised wavefront file and additional transformations.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">serial_</td><td>String of the serialised wavefront object. </td></tr>
-    <tr><td class="paramname">scale_</td><td>Scale transformation to apply to the base wavefront object. </td></tr>
-    <tr><td class="paramname">rot_</td><td>Rotation transformation to apply to the base wavefront object. </td></tr>
-    <tr><td class="paramname">trans_</td><td>Translation transformation to apply to the base wavefront object.</td></tr>
+    <tr><td class="paramname">serial_</td><td>Serialised wavefront file. </td></tr>
+    <tr><td class="paramname">scale_</td><td>Scaling transformation. </td></tr>
+    <tr><td class="paramname">rot_</td><td>Rotation transformation. </td></tr>
+    <tr><td class="paramname">trans_</td><td>Translation transformation.</td></tr>
   </table>
   </dd>
 </dl>
@@ -277,8 +303,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abd3d89a25726101ceb7bf97c240bdab3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd3d89a25726101ceb7bf97c240bdab3">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[2/3]</span></h2>
+<a id="ae0c45d3e12eec2b1fd235922ab66d9c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0c45d3e12eec2b1fd235922ab66d9c5">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -301,7 +327,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; std::array&lt; std::array&lt; size_t, 3 &gt;, 2 &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; std::pair&lt; std::array&lt; size_t, 3 &gt;, std::array&lt; size_t, 3 &gt;&gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>faces_</em>, </td>
         </tr>
         <tr>
@@ -334,28 +360,29 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Construct a mesh by transforming a list of vertex positions and normals.</p>
+<p>Construct a list of vertex positions, normals and face indicies, and additional transformations.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">poss_</td><td>Vector of vertex positions to be transformed. </td></tr>
-    <tr><td class="paramname">norms_</td><td>Vector of vertex normals to be transformed. </td></tr>
-    <tr><td class="paramname">faces_</td><td>Vector of face data used to construct triangle faces. </td></tr>
-    <tr><td class="paramname">scale_</td><td>Scale transformation to apply to the base wavefront object. </td></tr>
-    <tr><td class="paramname">rot_</td><td>Rotation transformation to apply to the base wavefront object. </td></tr>
-    <tr><td class="paramname">trans_</td><td>Translation transformation to apply to the base wavefront object.</td></tr>
+    <tr><td class="paramname">poss_</td><td>List of vertex positions. </td></tr>
+    <tr><td class="paramname">norms_</td><td>List of vertex normals. </td></tr>
+    <tr><td class="paramname">faces_</td><td>List of indices forming triangular faces. </td></tr>
+    <tr><td class="paramname">scale_</td><td>Scaling transformation. </td></tr>
+    <tr><td class="paramname">rot_</td><td>Rotation transformation. </td></tr>
+    <tr><td class="paramname">trans_</td><td>Translation transformation.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>poss_ must contain at least three elements. </dd>
+<dl class="section pre"><dt>Precondition</dt><dd>poss_ must contain at least three entries. </dd>
 <dd>
 norms_ may not be empty. </dd>
 <dd>
-faces_ may not be empty. </dd></dl>
+faces_ may not be empty.</dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>_tris may not be empty. </dd></dl>
 
 </div>
 </div>
-<a id="ab9297898023853721e4acca242a9c065"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9297898023853721e4acca242a9c065">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[3/3]</span></h2>
+<a id="a7128c41df7140dcff1c5bda69bebf6d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7128c41df7140dcff1c5bda69bebf6d4">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -378,7 +405,7 @@ faces_ may not be empty. </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; std::array&lt; std::array&lt; size_t, 3 &gt;, 2 &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; std::pair&lt; std::array&lt; size_t, 3 &gt;, std::array&lt; size_t, 3 &gt;&gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>faces_</em>&#160;</td>
         </tr>
         <tr>
@@ -393,26 +420,27 @@ faces_ may not be empty. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Construct a mesh by from a list of vertex positions and normals.</p>
+<p>Construct a list of vertex positions, normals and face indicies.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">poss_</td><td>Vector of vertex positions. </td></tr>
-    <tr><td class="paramname">norms_</td><td>Vector of vertex normals. </td></tr>
-    <tr><td class="paramname">faces_</td><td>Vector of face data used to construct triangle faces.</td></tr>
+    <tr><td class="paramname">poss_</td><td>List of vertex positions. </td></tr>
+    <tr><td class="paramname">norms_</td><td>List of vertex normals. </td></tr>
+    <tr><td class="paramname">faces_</td><td>List of indices forming triangular faces.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>poss_ must contain at least three elements. </dd>
+<dl class="section pre"><dt>Precondition</dt><dd>poss_ must contain at least three entries. </dd>
 <dd>
 norms_ may not be empty. </dd>
 <dd>
-faces_ may not be empty. </dd></dl>
+faces_ may not be empty.</dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>_tris may not be empty. </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac628fcba45b8d72f2764158c613727fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac628fcba45b8d72f2764158c613727fa">&#9670;&nbsp;</a></span>area()</h2>
+<a id="a714027ca7c7c7c0f533c95987498f498"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a714027ca7c7c7c0f533c95987498f498">&#9670;&nbsp;</a></span>box()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -421,7 +449,7 @@ faces_ may not be empty. </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double arc::geom::shape::Mesh::area </td>
+          <td class="memname">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_box.html">Box</a> &amp; arc::geom::shape::Mesh::box </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -429,20 +457,17 @@ faces_ may not be empty. </dd></dl>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the total surface area of the mesh.</p>
-<dl class="section post"><dt>Postcondition</dt><dd>area must be positive.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Total surface area of the mesh. </dd></dl>
-
-<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#afe74104ce8d61b0eb0b99f9220ccf6f2">arc::geom::Shape</a>.</p>
+<p>Get a const reference to the bounding box of the mesh.</p>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the bounding box of the mesh. </dd></dl>
 
 </div>
 </div>
-<a id="aafaa5530866d00803e871ea53bc85125"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafaa5530866d00803e871ea53bc85125">&#9670;&nbsp;</a></span>closed()</h2>
+<a id="a84b0b8ec010581fd2deaa258ad98f08a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84b0b8ec010581fd2deaa258ad98f08a">&#9670;&nbsp;</a></span>closed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -459,14 +484,12 @@ faces_ may not be empty. </dd></dl>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Get the topology of the mesh.</p>
-<dl class="section return"><dt>Returns</dt><dd>True if the surface of the mesh forms a bounded volume. </dd></dl>
-
-<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#aade778405989a372763735de2f91222a">arc::geom::Shape</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>True if the mesh is closed with no handles. </dd></dl>
 
 </div>
 </div>
@@ -503,16 +526,15 @@ faces_ may not be empty. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Determine if a collision event occurs between the mesh and a ray. If a collision does occur, return the distance to the collision point.</p>
+<p>Get the collision distance (if one occurs) of a ray.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pos_</td><td>Position of the ray. </td></tr>
-    <tr><td class="paramname">dir_</td><td>Direction of the ray.</td></tr>
+    <tr><td class="paramname">pos_</td><td>Initial position of the ray. </td></tr>
+    <tr><td class="paramname">dir_</td><td>Direction of ray travel.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>dir_ must be normalised.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Optional collision distance. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Optional distance to collision event. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#a5add15ceb58f262b472cc6a756d2a3f4">arc::geom::Shape</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -522,67 +544,8 @@ faces_ may not be empty. </dd></dl>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a30578bd21f0fa9d050cd1879ccae02ab_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a30578bd21f0fa9d050cd1879ccae02ab_cgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_mesh_a30578bd21f0fa9d050cd1879ccae02ab_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a30578bd21f0fa9d050cd1879ccae02ab_cgraph">
-<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a556df24d7d9eac241870840d44494456" title="arc::geom::shape::Aabb\l::contains" alt="" coords="218,5,381,44"/>
-<area shape="rect" id="node3" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a3eb52cf315b517ce2392ef463530d1da" title="arc::geom::shape::Aabb\l::collision" alt="" coords="218,68,381,107"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="add182c6ba48e9d2fc73f156a56bfa628"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add182c6ba48e9d2fc73f156a56bfa628">&#9670;&nbsp;</a></span>collision_norm()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::optional&lt; std::pair&lt; double, <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &gt; arc::geom::shape::Mesh::collision_norm </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td>
-          <td class="paramname"><em>pos_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &amp;&#160;</td>
-          <td class="paramname"><em>dir_</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Determine if a collision event occurs between the mesh and a ray. If a collision does occur, return the distance to the collision point and the normal of the mesh at the collision point.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pos_</td><td>Position of the ray. </td></tr>
-    <tr><td class="paramname">dir_</td><td>Direction of the ray.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section pre"><dt>Precondition</dt><dd>dir_ must be normalised.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Optional collision distance and intersection normal. </dd></dl>
-
-<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#ac920d4f48aa9788f7596b4e97ee37140">arc::geom::Shape</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_add182c6ba48e9d2fc73f156a56bfa628_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_add182c6ba48e9d2fc73f156a56bfa628_cgraph" alt=""/></div>
-<map name="classarc_1_1geom_1_1shape_1_1_mesh_add182c6ba48e9d2fc73f156a56bfa628_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_add182c6ba48e9d2fc73f156a56bfa628_cgraph">
-<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a556df24d7d9eac241870840d44494456" title="arc::geom::shape::Aabb\l::contains" alt="" coords="218,5,381,44"/>
-<area shape="rect" id="node3" href="classarc_1_1geom_1_1shape_1_1_aabb.html#a3eb52cf315b517ce2392ef463530d1da" title="arc::geom::shape::Aabb\l::collision" alt="" coords="218,68,381,107"/>
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_box.html#a75b9b1763d42037e103de441aa3ed7bb" title="arc::geom::shape::Box\l::intersect" alt="" coords="218,5,372,44"/>
+<area shape="rect" id="node3" href="classarc_1_1geom_1_1shape_1_1_box.html#af3919e0cb96537e7c7533eab6248c39d" title="arc::geom::shape::Box\l::collision" alt="" coords="218,68,372,107"/>
 </map>
 </div>
 
@@ -610,13 +573,13 @@ faces_ may not be empty. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Initialise the vector of normalised relative area of each triangle.</p>
-<dl class="section return"><dt>Returns</dt><dd>Initialise vector of normalised relative area of each triangle. </dd></dl>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p>Initialise the vector of relative triangle areas.</p>
+<dl class="section return"><dt>Returns</dt><dd>Initialised vector of relative triangle areas. </dd></dl>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a51623506d468518fe712e25f051ea3c4_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a51623506d468518fe712e25f051ea3c4_cgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_mesh_a51623506d468518fe712e25f051ea3c4_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a51623506d468518fe712e25f051ea3c4_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1math_1_1compare.html#abaf895f8a2b87e8e16e7f7397d2cf0f1" title="arc::math::compare\l::unity" alt="" coords="218,5,354,44"/>
@@ -626,8 +589,8 @@ faces_ may not be empty. </dd></dl>
 
 </div>
 </div>
-<a id="a8642c77a26d79ef251e39dbd532e6925"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8642c77a26d79ef251e39dbd532e6925">&#9670;&nbsp;</a></span>init_box()</h2>
+<a id="a99d3b8648e625769bfa4ea549a0d65bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99d3b8648e625769bfa4ea549a0d65bf">&#9670;&nbsp;</a></span>init_box()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -636,7 +599,7 @@ faces_ may not be empty. </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">Aabb</a> arc::geom::shape::Mesh::init_box </td>
+          <td class="memname"><a class="el" href="classarc_1_1geom_1_1shape_1_1_box.html">Box</a> arc::geom::shape::Mesh::init_box </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -649,32 +612,27 @@ faces_ may not be empty. </dd></dl>
 </table>
 </div><div class="memdoc">
 <p>Initialise the bounding box of the mesh.</p>
-<dl class="section post"><dt>Postcondition</dt><dd>min.x must be less than max.x. </dd>
-<dd>
-min.y must be less than max.y. </dd>
-<dd>
-min.z must be less than max.z.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Initialised bounding box of the mesh. </dd></dl>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<dl class="section return"><dt>Returns</dt><dd>Bounding box of the mesh. </dd></dl>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a8642c77a26d79ef251e39dbd532e6925_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a8642c77a26d79ef251e39dbd532e6925_cgraph" alt=""/></div>
-<map name="classarc_1_1geom_1_1shape_1_1_mesh_a8642c77a26d79ef251e39dbd532e6925_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a8642c77a26d79ef251e39dbd532e6925_cgraph">
-<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a1607909cf573f925705a952e99b209f9" title="arc::geom::shape::Mesh::min" alt="" coords="220,15,413,40"/>
-<area shape="rect" id="node3" href="namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="463,40,604,65"/>
-<area shape="rect" id="node7" href="classarc_1_1geom_1_1shape_1_1_mesh.html#aadb86a235c411b99e864e5bd1f865cd8" title="arc::geom::shape::Mesh::max" alt="" coords="218,116,415,141"/>
-<area shape="rect" id="node4" href="namespacearc_1_1utl_1_1search.html#a83ff5408af0ccc99c51d3dabf4f4562b" title="arc::utl::search::max\l_index" alt="" coords="652,33,793,72"/>
-<area shape="rect" id="node5" href="namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="868,5,989,44"/>
-<area shape="rect" id="node6" href="namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="841,68,1016,93"/>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a99d3b8648e625769bfa4ea549a0d65bf_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a99d3b8648e625769bfa4ea549a0d65bf_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_mesh_a99d3b8648e625769bfa4ea549a0d65bf_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a99d3b8648e625769bfa4ea549a0d65bf_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#a7dedb03499315275304d2ee539dbbf81" title="arc::utl::search::min" alt="" coords="220,16,357,41"/>
+<area shape="rect" id="node6" href="namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="218,68,359,93"/>
+<area shape="rect" id="node3" href="namespacearc_1_1utl_1_1search.html#ab0aae86f6b98b4746101dd60c00514ca" title="arc::utl::search::min\l_index" alt="" coords="409,5,547,44"/>
+<area shape="rect" id="node4" href="namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="623,8,744,47"/>
+<area shape="rect" id="node5" href="namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="596,72,771,97"/>
+<area shape="rect" id="node7" href="namespacearc_1_1utl_1_1search.html#a83ff5408af0ccc99c51d3dabf4f4562b" title="arc::utl::search::max\l_index" alt="" coords="407,68,548,107"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a51395c997049b5d11094deb00f489f33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51395c997049b5d11094deb00f489f33">&#9670;&nbsp;</a></span>init_num_edges()</h2>
+<a id="a06c06232d353e5db76257c63c3ca5aca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06c06232d353e5db76257c63c3ca5aca">&#9670;&nbsp;</a></span>init_num_edges()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -685,7 +643,7 @@ min.z must be less than max.z.</dd></dl>
         <tr>
           <td class="memname">size_t arc::geom::shape::Mesh::init_num_edges </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; std::array&lt; std::array&lt; size_t, 3 &gt;, 2 &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; std::pair&lt; std::array&lt; size_t, 3 &gt;, std::array&lt; size_t, 3 &gt;&gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>faces_</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -696,29 +654,29 @@ min.z must be less than max.z.</dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Initialise the number of unique edges.</p>
+<p>Initialise the number of edges used by the mesh</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">faces_</td><td>Vector of face data used to construct triangle faces.</td></tr>
+    <tr><td class="paramname">faces_</td><td>List of indices forming triangular faces.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Number of unique edges. </dd></dl>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<dl class="section return"><dt>Returns</dt><dd>Number of edges used by the mesh. </dd></dl>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a51395c997049b5d11094deb00f489f33_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a51395c997049b5d11094deb00f489f33_cgraph" alt=""/></div>
-<map name="classarc_1_1geom_1_1shape_1_1_mesh_a51395c997049b5d11094deb00f489f33_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a51395c997049b5d11094deb00f489f33_cgraph">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a06c06232d353e5db76257c63c3ca5aca_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a06c06232d353e5db76257c63c3ca5aca_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_mesh_a06c06232d353e5db76257c63c3ca5aca_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a06c06232d353e5db76257c63c3ca5aca_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1utl_1_1properties.html#a7c885f6e7d32d28c656b4b6514e645f8" title="arc::utl::properties\l::contains" alt="" coords="218,5,346,44"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a4bef56ec4044e70cd93c2fee2c491f2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bef56ec4044e70cd93c2fee2c491f2e">&#9670;&nbsp;</a></span>init_num_norms()</h2>
+<a id="aa95404e0a4cb55ad3909059874a87b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa95404e0a4cb55ad3909059874a87b33">&#9670;&nbsp;</a></span>init_num_norms()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -729,13 +687,13 @@ min.z must be less than max.z.</dd></dl>
         <tr>
           <td class="memname">size_t arc::geom::shape::Mesh::init_num_norms </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>norms_</em>, </td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_norms_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; std::array&lt; std::array&lt; size_t, 3 &gt;, 2 &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; std::pair&lt; std::array&lt; size_t, 3 &gt;, std::array&lt; size_t, 3 &gt;&gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>faces_</em>&#160;</td>
         </tr>
         <tr>
@@ -750,31 +708,30 @@ min.z must be less than max.z.</dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Initialise the number of unique vertex normals.</p>
+<p>Initialise the number of vertex normals used by the mesh</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">norms_</td><td>Vector of vertex normals. </td></tr>
-    <tr><td class="paramname">faces_</td><td>Vector of face data used to construct triangle faces.</td></tr>
+    <tr><td class="paramname">num_norms_</td><td>Maximum number of vertex normals. </td></tr>
+    <tr><td class="paramname">faces_</td><td>List of indices forming triangular faces.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>Indices used by faces must be less than the size of the norms vector.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Number of unique vertex normals. </dd></dl>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<dl class="section return"><dt>Returns</dt><dd>Number of vertex normals used by the mesh. </dd></dl>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a4bef56ec4044e70cd93c2fee2c491f2e_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a4bef56ec4044e70cd93c2fee2c491f2e_cgraph" alt=""/></div>
-<map name="classarc_1_1geom_1_1shape_1_1_mesh_a4bef56ec4044e70cd93c2fee2c491f2e_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a4bef56ec4044e70cd93c2fee2c491f2e_cgraph">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_aa95404e0a4cb55ad3909059874a87b33_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_aa95404e0a4cb55ad3909059874a87b33_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_mesh_aa95404e0a4cb55ad3909059874a87b33_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_aa95404e0a4cb55ad3909059874a87b33_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_mesh.html#aa9c3acc4af6047608a6a2dcfd56e93c6" title="arc::geom::shape::Mesh\l::num_norms" alt="" coords="218,5,382,44"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a67b65626d72e3616ba79df4531e63a79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67b65626d72e3616ba79df4531e63a79">&#9670;&nbsp;</a></span>init_num_verts()</h2>
+<a id="adfd48875c2ab5a6e8c248d4aa8c2e36b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfd48875c2ab5a6e8c248d4aa8c2e36b">&#9670;&nbsp;</a></span>init_num_verts()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -785,13 +742,13 @@ min.z must be less than max.z.</dd></dl>
         <tr>
           <td class="memname">size_t arc::geom::shape::Mesh::init_num_verts </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>poss_</em>, </td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_poss_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; std::array&lt; std::array&lt; size_t, 3 &gt;, 2 &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; std::pair&lt; std::array&lt; size_t, 3 &gt;, std::array&lt; size_t, 3 &gt;&gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>faces_</em>&#160;</td>
         </tr>
         <tr>
@@ -806,31 +763,30 @@ min.z must be less than max.z.</dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Initialise the number of unique vertex positions.</p>
+<p>Initialise the number of vertex positions used by the mesh</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">poss_</td><td>Vector of vertex positions. </td></tr>
-    <tr><td class="paramname">faces_</td><td>Vector of face data used to construct triangle faces.</td></tr>
+    <tr><td class="paramname">num_poss_</td><td>Maximum number of vertex positions. </td></tr>
+    <tr><td class="paramname">faces_</td><td>List of indices forming triangular faces.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>Indices used by faces must be less than the size of the poss vector.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Number of unique vertex positions. </dd></dl>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<dl class="section return"><dt>Returns</dt><dd>Number of vertex positions used by the mesh. </dd></dl>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a67b65626d72e3616ba79df4531e63a79_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a67b65626d72e3616ba79df4531e63a79_cgraph" alt=""/></div>
-<map name="classarc_1_1geom_1_1shape_1_1_mesh_a67b65626d72e3616ba79df4531e63a79_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a67b65626d72e3616ba79df4531e63a79_cgraph">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_adfd48875c2ab5a6e8c248d4aa8c2e36b_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_adfd48875c2ab5a6e8c248d4aa8c2e36b_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_mesh_adfd48875c2ab5a6e8c248d4aa8c2e36b_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_adfd48875c2ab5a6e8c248d4aa8c2e36b_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a2465d9b117ea566ec9d0fa83b2a94ea8" title="arc::geom::shape::Mesh\l::num_verts" alt="" coords="218,5,382,44"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a4a26af075e6f4684d138580e310d2b45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a26af075e6f4684d138580e310d2b45">&#9670;&nbsp;</a></span>init_tris()</h2>
+<a id="ab0e1fe41600daa6411175f038753de66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0e1fe41600daa6411175f038753de66">&#9670;&nbsp;</a></span>init_tris()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -853,7 +809,7 @@ min.z must be less than max.z.</dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; std::array&lt; std::array&lt; size_t, 3 &gt;, 2 &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; std::pair&lt; std::array&lt; size_t, 3 &gt;, std::array&lt; size_t, 3 &gt;&gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>faces_</em>&#160;</td>
         </tr>
         <tr>
@@ -871,24 +827,24 @@ min.z must be less than max.z.</dd></dl>
 <p>Initialise the vector of triangles forming the mesh.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">poss_</td><td>Vector of vertex positions. </td></tr>
-    <tr><td class="paramname">norms_</td><td>Vector of vertex normals. </td></tr>
-    <tr><td class="paramname">faces_</td><td>Vector of face data used to construct triangle faces.</td></tr>
+    <tr><td class="paramname">poss_</td><td>Vertex positions. </td></tr>
+    <tr><td class="paramname">norms_</td><td>Vertex normals. </td></tr>
+    <tr><td class="paramname">faces_</td><td>Indices forming the triangles.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>poss_ must contain at least three elements. </dd>
 <dd>
-norms_ may not be empty. </dd>
+norms_ may not empty. </dd>
 <dd>
-faces_ may not be empty.</dd></dl>
+faces_ may not empty.</dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>tris may not be empty.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Initialised the vector of triangles forming the mesh. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of triangles forming the mesh. </dd></dl>
 
 </div>
 </div>
-<a id="ab2cdfb5a6ad615574c6d22fb3539548b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2cdfb5a6ad615574c6d22fb3539548b">&#9670;&nbsp;</a></span>intersect_surf()</h2>
+<a id="abf9572c733f7ad68c4148d79320ef894"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf9572c733f7ad68c4148d79320ef894">&#9670;&nbsp;</a></span>intersect() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -897,44 +853,52 @@ faces_ may not be empty.</dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool arc::geom::shape::Mesh::intersect_surf </td>
+          <td class="memname">bool arc::geom::shape::Mesh::intersect </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;&#160;</td>
-          <td class="paramname"><em>aabb_</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html">Triangle</a> &amp;&#160;</td>
+          <td class="paramname"><em>tri_</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Determine if an intersection occurs between the mesh's surface and an axis-aligned bounding box.</p>
+<p>Determine if an intersection ocurres between the mesh and a triangle.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">aabb_</td><td>Axis-aligned bounding box to test.</td></tr>
+    <tr><td class="paramname">tri_</td><td><a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html">Triangle</a> to test.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the mesh's surface intersects with the axis-aligned bounding box. </dd></dl>
-
-<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#a63459dedcd37c78d590cf9d53ba45163">arc::geom::Shape</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>True if an intersection ocurres. </dd></dl>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_abf9572c733f7ad68c4148d79320ef894_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_abf9572c733f7ad68c4148d79320ef894_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_mesh_abf9572c733f7ad68c4148d79320ef894_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_abf9572c733f7ad68c4148d79320ef894_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_box.html#a75b9b1763d42037e103de441aa3ed7bb" title="arc::geom::shape::Box\l::intersect" alt="" coords="218,5,372,44"/>
+</map>
+</div>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-9-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_ab2cdfb5a6ad615574c6d22fb3539548b_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_ab2cdfb5a6ad615574c6d22fb3539548b_cgraph" alt=""/></div>
-<map name="classarc_1_1geom_1_1shape_1_1_mesh_ab2cdfb5a6ad615574c6d22fb3539548b_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_ab2cdfb5a6ad615574c6d22fb3539548b_cgraph">
-<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_aabb.html#af535f6af0f94f590d657179318a6521f" title="arc::geom::shape::Aabb\l::intersect_vol" alt="" coords="218,5,381,44"/>
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_abf9572c733f7ad68c4148d79320ef894_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_abf9572c733f7ad68c4148d79320ef894_icgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_mesh_abf9572c733f7ad68c4148d79320ef894_icgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_abf9572c733f7ad68c4148d79320ef894_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a792c957a67088c636870c488d182a527" title="arc::geom::shape::Mesh\l::intersect" alt="" coords="218,5,382,44"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a4d844540e2ecb8b3676e43c1f8a9d06b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d844540e2ecb8b3676e43c1f8a9d06b">&#9670;&nbsp;</a></span>intersect_vol()</h2>
+<a id="a792c957a67088c636870c488d182a527"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a792c957a67088c636870c488d182a527">&#9670;&nbsp;</a></span>intersect() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -943,112 +907,36 @@ faces_ may not be empty.</dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool arc::geom::shape::Mesh::intersect_vol </td>
+          <td class="memname">bool arc::geom::shape::Mesh::intersect </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">shape::Aabb</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html">Mesh</a> &amp;&#160;</td>
+          <td class="paramname"><em>mesh_</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>THIS METHOD IS NOT YET IMPLEMENTED. Determine if an intersection occurs between the mesh's volume and an axis-aligned bounding box.</p>
-<dl class="section return"><dt>Returns</dt><dd>True if the mesh's volume intersects with the axis-aligned bounding box. </dd></dl>
-
-<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#a86d25362a41ce20e988ccf9fd14504fe">arc::geom::Shape</a>.</p>
-
-</div>
-</div>
-<a id="aadb86a235c411b99e864e5bd1f865cd8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadb86a235c411b99e864e5bd1f865cd8">&#9670;&nbsp;</a></span>max()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::geom::shape::Mesh::max </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Get the maximum vec of the smallest bounding box containing the mesh.</p>
-<dl class="section return"><dt>Returns</dt><dd>Maximum vec of the smallest bounding box containing the mesh. </dd></dl>
-
-<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#a972799ae7e075c2604815d5453c92ace">arc::geom::Shape</a>.</p>
+<p>Determine if an intersection ocurres between the mesh and another mesh.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh_</td><td><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html">Mesh</a> to test.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if an intersection ocurres. </dd></dl>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-10-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_aadb86a235c411b99e864e5bd1f865cd8_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_aadb86a235c411b99e864e5bd1f865cd8_icgraph" alt=""/></div>
-<map name="classarc_1_1geom_1_1shape_1_1_mesh_aadb86a235c411b99e864e5bd1f865cd8_icgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_aadb86a235c411b99e864e5bd1f865cd8_icgraph">
-<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a8642c77a26d79ef251e39dbd532e6925" title="arc::geom::shape::Mesh\l::init_box" alt="" coords="250,5,415,44"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a1607909cf573f925705a952e99b209f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1607909cf573f925705a952e99b209f9">&#9670;&nbsp;</a></span>min()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::geom::shape::Mesh::min </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Get the minimum vec of the smallest bounding box containing the mesh.</p>
-<dl class="section return"><dt>Returns</dt><dd>Minimum vec of the smallest bounding box containing the mesh. </dd></dl>
-
-<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#aec88d71a33d78dc6674bbd69198ba9ea">arc::geom::Shape</a>.</p>
-<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a1607909cf573f925705a952e99b209f9_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a1607909cf573f925705a952e99b209f9_cgraph" alt=""/></div>
-<map name="classarc_1_1geom_1_1shape_1_1_mesh_a1607909cf573f925705a952e99b209f9_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a1607909cf573f925705a952e99b209f9_cgraph">
-<area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="247,40,388,65"/>
-<area shape="rect" id="node3" href="namespacearc_1_1utl_1_1search.html#a83ff5408af0ccc99c51d3dabf4f4562b" title="arc::utl::search::max\l_index" alt="" coords="436,33,577,72"/>
-<area shape="rect" id="node4" href="namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="652,5,773,44"/>
-<area shape="rect" id="node5" href="namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="625,68,800,93"/>
-</map>
-</div>
-<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-12-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a1607909cf573f925705a952e99b209f9_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a1607909cf573f925705a952e99b209f9_icgraph" alt=""/></div>
-<map name="classarc_1_1geom_1_1shape_1_1_mesh_a1607909cf573f925705a952e99b209f9_icgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a1607909cf573f925705a952e99b209f9_icgraph">
-<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a8642c77a26d79ef251e39dbd532e6925" title="arc::geom::shape::Mesh\l::init_box" alt="" coords="247,5,411,44"/>
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a792c957a67088c636870c488d182a527_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a792c957a67088c636870c488d182a527_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_mesh_a792c957a67088c636870c488d182a527_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a792c957a67088c636870c488d182a527_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_box.html#a75b9b1763d42037e103de441aa3ed7bb" title="arc::geom::shape::Box\l::intersect" alt="" coords="430,5,585,44"/>
+<area shape="rect" id="node3" href="classarc_1_1geom_1_1shape_1_1_mesh.html#abf9572c733f7ad68c4148d79320ef894" title="arc::geom::shape::Mesh\l::intersect" alt="" coords="218,33,382,72"/>
 </map>
 </div>
 
@@ -1076,8 +964,8 @@ faces_ may not be empty.</dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the number of edges forming the mesh.</p>
-<dl class="section return"><dt>Returns</dt><dd>Number of edges forming the mesh. </dd></dl>
+<p>Get the number of edges used by the mesh.</p>
+<dl class="section return"><dt>Returns</dt><dd>Number of edges used by the mesh. </dd></dl>
 
 </div>
 </div>
@@ -1103,16 +991,16 @@ faces_ may not be empty.</dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the number of triangular faces forming the mesh.</p>
-<dl class="section return"><dt>Returns</dt><dd>Number of triangular faces forming the mesh. </dd></dl>
-<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+<p>Get the number of triangle faces used by the mesh.</p>
+<dl class="section return"><dt>Returns</dt><dd>Number of triangle faces used by the mesh. </dd></dl>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a266c2966cfd43fc9b0ebc7db277cdfbe_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a266c2966cfd43fc9b0ebc7db277cdfbe_icgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_mesh_a266c2966cfd43fc9b0ebc7db277cdfbe_icgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a266c2966cfd43fc9b0ebc7db277cdfbe_icgraph">
-<area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#a4f16b1ea42d8d2b246a2f2ec1acf9956" title="arc::gui::actor::act" alt="" coords="218,12,345,37"/>
+<area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#a4518b25ccb33109910c14f99f83719eb" title="arc::gui::actor::shape" alt="" coords="218,12,364,37"/>
 </map>
 </div>
 
@@ -1140,16 +1028,16 @@ faces_ may not be empty.</dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the number of vertex normals forming the mesh.</p>
-<dl class="section return"><dt>Returns</dt><dd>Number of vertex normals forming the mesh. </dd></dl>
-<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+<p>Get the number of vertex normals used by the mesh.</p>
+<dl class="section return"><dt>Returns</dt><dd>Number of vertex normals used by the mesh. </dd></dl>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_aa9c3acc4af6047608a6a2dcfd56e93c6_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_aa9c3acc4af6047608a6a2dcfd56e93c6_icgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_mesh_aa9c3acc4af6047608a6a2dcfd56e93c6_icgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_aa9c3acc4af6047608a6a2dcfd56e93c6_icgraph">
-<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a4bef56ec4044e70cd93c2fee2c491f2e" title="arc::geom::shape::Mesh\l::init_num_norms" alt="" coords="218,5,382,44"/>
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_mesh.html#aa95404e0a4cb55ad3909059874a87b33" title="arc::geom::shape::Mesh\l::init_num_norms" alt="" coords="218,5,382,44"/>
 </map>
 </div>
 
@@ -1177,23 +1065,23 @@ faces_ may not be empty.</dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the number of vertex positions forming the mesh.</p>
-<dl class="section return"><dt>Returns</dt><dd>Number of vertex positions forming the mesh. </dd></dl>
-<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+<p>Get the number of vertex positions used by the mesh.</p>
+<dl class="section return"><dt>Returns</dt><dd>Number of vertex positions used by the mesh. </dd></dl>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a2465d9b117ea566ec9d0fa83b2a94ea8_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a2465d9b117ea566ec9d0fa83b2a94ea8_icgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_mesh_a2465d9b117ea566ec9d0fa83b2a94ea8_icgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a2465d9b117ea566ec9d0fa83b2a94ea8_icgraph">
-<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a67b65626d72e3616ba79df4531e63a79" title="arc::geom::shape::Mesh\l::init_num_verts" alt="" coords="218,5,382,44"/>
+<area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_mesh.html#adfd48875c2ab5a6e8c248d4aa8c2e36b" title="arc::geom::shape::Mesh\l::init_num_verts" alt="" coords="218,5,382,44"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a09a4bc9c995b86be199b1c7c1abfc6d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09a4bc9c995b86be199b1c7c1abfc6d2">&#9670;&nbsp;</a></span>parse_faces()</h2>
+<a id="ac56237b6fdefbf8467008920c86919ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac56237b6fdefbf8467008920c86919ce">&#9670;&nbsp;</a></span>parse_faces()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1202,7 +1090,7 @@ faces_ may not be empty.</dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; std::array&lt; std::array&lt; size_t, 3 &gt;, 2 &gt; &gt; arc::geom::shape::Mesh::parse_faces </td>
+          <td class="memname">std::vector&lt; std::pair&lt; std::array&lt; size_t, 3 &gt;, std::array&lt; size_t, 3 &gt; &gt; &gt; arc::geom::shape::Mesh::parse_faces </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>serial_</em></td><td>)</td>
@@ -1215,16 +1103,16 @@ faces_ may not be empty.</dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Parse the vector of triangle face data from a serialised wavefront object file.</p>
+<p>Parse the list of face forming indices from a serialised wavefront file.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">serial_</td><td>String of the serialised wavefront object.</td></tr>
+    <tr><td class="paramname">serial_</td><td>Serialised wavefront file.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>serial_ may not be empty.</dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>faces may not be empty.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Parsed vector of triangle face data. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>List of face forming indices forming the mesh. </dd></dl>
 
 </div>
 </div>
@@ -1251,21 +1139,21 @@ faces_ may not be empty.</dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Parse the vector of vertex normals from a serialised wavefront object file.</p>
+<p>Parse the list of vertex normals from a serialised wavefront file.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">serial_</td><td>String of the serialised wavefront object.</td></tr>
+    <tr><td class="paramname">serial_</td><td>Serialised wavefront file.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>serial_ may not be empty.</dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>norms may not be empty.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Parsed vector of vertex normals. </dd></dl>
-<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+<dl class="section return"><dt>Returns</dt><dd>List of vertex normals forming the mesh. </dd></dl>
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_aff1b0871a287a5a6fe32799a0a62e27e_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_aff1b0871a287a5a6fe32799a0a62e27e_cgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_mesh_aff1b0871a287a5a6fe32799a0a62e27e_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_aff1b0871a287a5a6fe32799a0a62e27e_cgraph">
 <area shape="rect" id="node2" href="classarc_1_1math_1_1_vec.html#ad76dddf5863281c38659f69cf9d7ec36" title="arc::math::Vec::normal" alt="" coords="218,12,372,37"/>
@@ -1297,21 +1185,21 @@ faces_ may not be empty.</dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Parse the vector of vertex positions from a serialised wavefront object file.</p>
+<p>Parse the list of vertex position from a serialised wavefront file.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">serial_</td><td>String of the serialised wavefront object.</td></tr>
+    <tr><td class="paramname">serial_</td><td>Serialised wavefront file.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>serial_ may not be empty.</dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>poss must contain at least three elements.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Parsed vector of vertex positions. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>poss must contain at least three entries.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>List of vertex position forming the mesh. </dd></dl>
 
 </div>
 </div>
-<a id="a6676e63c672f481110026eabdb666ba2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6676e63c672f481110026eabdb666ba2">&#9670;&nbsp;</a></span>random_pos()</h2>
+<a id="a81409b11705fc30225b60cc0e143f7fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81409b11705fc30225b60cc0e143f7fe">&#9670;&nbsp;</a></span>random_pos()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1329,11 +1217,11 @@ faces_ may not be empty.</dd></dl>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Generate a random position on the surface of the mesh.</p>
+<p>Get a random position on the surface of the mesh.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rng_</td><td>Random number generator.</td></tr>
@@ -1342,15 +1230,13 @@ faces_ may not be empty.</dd></dl>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>rng_ may not be nullptr.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random position on the surface of the mesh. </dd></dl>
-
-<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#adb4a5453dfb63827f5f3323e60204040">arc::geom::Shape</a>.</p>
-<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-17-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a6676e63c672f481110026eabdb666ba2_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a6676e63c672f481110026eabdb666ba2_cgraph" alt=""/></div>
-<map name="classarc_1_1geom_1_1shape_1_1_mesh_a6676e63c672f481110026eabdb666ba2_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a6676e63c672f481110026eabdb666ba2_cgraph">
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a81409b11705fc30225b60cc0e143f7fe_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a81409b11705fc30225b60cc0e143f7fe_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_mesh_a81409b11705fc30225b60cc0e143f7fe_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a81409b11705fc30225b60cc0e143f7fe_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#a759ee83416f9fb620af459ecb00205f0" title="arc::utl::search::lower" alt="" coords="218,69,366,95"/>
 <area shape="rect" id="node3" href="namespacearc_1_1utl_1_1properties.html#a4df19ef005359af15befe0493e491a2d" title="arc::utl::properties\l::ascending" alt="" coords="813,5,941,44"/>
 <area shape="rect" id="node6" href="namespacearc_1_1utl_1_1properties.html#a4586f029de0cc630f2486b90ed38a0b4" title="arc::utl::properties\l::within" alt="" coords="437,63,565,101"/>
@@ -1364,8 +1250,8 @@ faces_ may not be empty.</dd></dl>
 
 </div>
 </div>
-<a id="a62b52a5c300082785fc9fd1118d45c94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62b52a5c300082785fc9fd1118d45c94">&#9670;&nbsp;</a></span>random_pos_and_norm()</h2>
+<a id="a6fd171bd5f4599da58d70da8da3feaa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fd171bd5f4599da58d70da8da3feaa9">&#9670;&nbsp;</a></span>random_pos_and_norm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1383,11 +1269,11 @@ faces_ may not be empty.</dd></dl>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Generate a random position, and corresponding normal, on the surface of the mesh.</p>
+<p>Get a random position, and corresponding normal, on the surface of the mesh.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rng_</td><td>Random number generator.</td></tr>
@@ -1396,15 +1282,13 @@ faces_ may not be empty.</dd></dl>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>rng_ may not be nullptr.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random position, and corresponding normal, on the surface of the mesh. </dd></dl>
-
-<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#acb1c509590fe57967d10c7110504035b">arc::geom::Shape</a>.</p>
-<div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-18-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a62b52a5c300082785fc9fd1118d45c94_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a62b52a5c300082785fc9fd1118d45c94_cgraph" alt=""/></div>
-<map name="classarc_1_1geom_1_1shape_1_1_mesh_a62b52a5c300082785fc9fd1118d45c94_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a62b52a5c300082785fc9fd1118d45c94_cgraph">
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a6fd171bd5f4599da58d70da8da3feaa9_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a6fd171bd5f4599da58d70da8da3feaa9_cgraph" alt=""/></div>
+<map name="classarc_1_1geom_1_1shape_1_1_mesh_a6fd171bd5f4599da58d70da8da3feaa9_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a6fd171bd5f4599da58d70da8da3feaa9_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#a759ee83416f9fb620af459ecb00205f0" title="arc::utl::search::lower" alt="" coords="224,69,372,95"/>
 <area shape="rect" id="node3" href="namespacearc_1_1utl_1_1properties.html#a4df19ef005359af15befe0493e491a2d" title="arc::utl::properties\l::ascending" alt="" coords="818,5,947,44"/>
 <area shape="rect" id="node6" href="namespacearc_1_1utl_1_1properties.html#a4586f029de0cc630f2486b90ed38a0b4" title="arc::utl::properties\l::within" alt="" coords="443,63,571,101"/>
@@ -1415,35 +1299,6 @@ faces_ may not be empty.</dd></dl>
 <area shape="rect" id="node8" href="namespacearc_1_1utl_1_1properties.html#a16db97d0483cb56664c5cc2fbadf04c0" title="arc::utl::properties\l::descending" alt="" coords="818,68,947,107"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="abe69e6984cc240e4775fdeae8053c9be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe69e6984cc240e4775fdeae8053c9be">&#9670;&nbsp;</a></span>shape_list()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; const <a class="el" href="classarc_1_1geom_1_1_shape.html">Shape</a> * &gt; arc::geom::shape::Mesh::shape_list </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Create a vector containing pointers to all shapes forming this shape.</p>
-<dl class="section return"><dt>Returns</dt><dd>Vector containing pointers to all shapes forming this shape. </dd></dl>
-
-<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#a9dcfd35f466009edaafa9fd51ba66165">arc::geom::Shape</a>.</p>
 
 </div>
 </div>
@@ -1490,17 +1345,16 @@ faces_ may not be empty.</dd></dl>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>norms_ may not be empty.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Vector of transformed vertex normals. </dd></dl>
-<div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-19-content" class="dyncontent" style="display:none;">
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a0f7bb8e8601c7f953b0498ec2cefe4af_cgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a0f7bb8e8601c7f953b0498ec2cefe4af_cgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_mesh_a0f7bb8e8601c7f953b0498ec2cefe4af_cgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a0f7bb8e8601c7f953b0498ec2cefe4af_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1math_1_1mat.html#af39486147412a1d46985c59a96727834" title="arc::math::mat::transform" alt="" coords="218,76,388,101"/>
 <area shape="rect" id="node6" href="classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#afa0c845d4af7a20ed6fbf8b0d59d5cec" title="arc::math::Mat\&lt; T,\l 4 \&gt;::inv" alt="" coords="239,147,367,185"/>
 <area shape="rect" id="node11" href="classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#a198fa763c098530d993b54daf00ed62e" title="arc::math::Mat\&lt; T,\l 4 \&gt;::trans" alt="" coords="239,209,367,248"/>
-<area shape="rect" id="node12" href="classarc_1_1math_1_1_vec.html#ad76dddf5863281c38659f69cf9d7ec36" title="arc::math::Vec::normal" alt="" coords="225,272,380,297"/>
 <area shape="rect" id="node3" href="namespacearc_1_1math_1_1mat.html#a8df70b235035d723df62e4a418ac7e94" title="arc::math::mat::translate" alt="" coords="436,5,601,31"/>
 <area shape="rect" id="node4" href="namespacearc_1_1math_1_1mat.html#a385e614b5f842c50c2c6c49237b55d85" title="arc::math::mat::rotate" alt="" coords="444,55,593,80"/>
 <area shape="rect" id="node5" href="namespacearc_1_1math_1_1mat.html#a4aaba718d91ea015418b66dc4f7a7a48" title="arc::math::mat::scale" alt="" coords="446,104,591,129"/>
@@ -1582,55 +1436,25 @@ faces_ may not be empty.</dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get a const reference to a triangle within the mesh.</p>
+<p>Get a const reference to a triangle forming the mesh.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">index_</td><td>Index of the triangle to retrieve.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>index_ must be less than _tris.size.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Const reference to a triangle within the mesh. </dd></dl>
-<div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-20-summary" class="dynsummary" style="display:block;">
+<dl class="section pre"><dt>Precondition</dt><dd>index_ must be less than the size of _tris.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to a triangle forming the mesh. </dd></dl>
+<div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-20-content" class="dyncontent" style="display:none;">
+<div id="dynsection-18-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1geom_1_1shape_1_1_mesh_a2be8cb96279daeff009744a8b70ddb82_icgraph.png" border="0" usemap="#classarc_1_1geom_1_1shape_1_1_mesh_a2be8cb96279daeff009744a8b70ddb82_icgraph" alt=""/></div>
 <map name="classarc_1_1geom_1_1shape_1_1_mesh_a2be8cb96279daeff009744a8b70ddb82_icgraph" id="classarc_1_1geom_1_1shape_1_1_mesh_a2be8cb96279daeff009744a8b70ddb82_icgraph">
-<area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#a4f16b1ea42d8d2b246a2f2ec1acf9956" title="arc::gui::actor::act" alt="" coords="236,5,364,31"/>
+<area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#a4518b25ccb33109910c14f99f83719eb" title="arc::gui::actor::shape" alt="" coords="236,5,382,31"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="a1c752d5aaf5393c8dd12a85fdec2cb69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c752d5aaf5393c8dd12a85fdec2cb69">&#9670;&nbsp;</a></span>vol()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double arc::geom::shape::Mesh::vol </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Get the total volume of the mesh.</p>
-<dl class="section post"><dt>Postcondition</dt><dd>vol must be positive.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Total volume of the mesh. </dd></dl>
-
-<p>Implements <a class="el" href="classarc_1_1geom_1_1_shape.html#af959df88187d387b5392f091da08ea39">arc::geom::Shape</a>.</p>
 
 </div>
 </div>
@@ -1659,8 +1483,8 @@ faces_ may not be empty.</dd></dl>
 
 </div>
 </div>
-<a id="ac82621b72a021f49b5759dcb440d663f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac82621b72a021f49b5759dcb440d663f">&#9670;&nbsp;</a></span>_box</h2>
+<a id="a200a29536f874f84d6a1745df856c4cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a200a29536f874f84d6a1745df856c4cc">&#9670;&nbsp;</a></span>_box</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1669,7 +1493,7 @@ faces_ may not be empty.</dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_aabb.html">Aabb</a> arc::geom::shape::Mesh::_box</td>
+          <td class="memname">const <a class="el" href="classarc_1_1geom_1_1shape_1_1_box.html">Box</a> arc::geom::shape::Mesh::_box</td>
         </tr>
       </table>
   </td>
@@ -1828,12 +1652,12 @@ faces_ may not be empty.</dd></dl>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/arctk/geom/shape/<a class="el" href="geom_2shape_2mesh_8hpp_source.html">mesh.hpp</a></li>
+<li>include/arctk/geom/shape/<a class="el" href="mesh_8hpp_source.html">mesh.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 3 2018 13:27:18 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 8 2018 17:05:10 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

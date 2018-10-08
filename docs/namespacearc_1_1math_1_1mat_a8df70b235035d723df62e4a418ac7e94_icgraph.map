@@ -1,17 +1,13 @@
 <map id="arc::math::mat::translate" name="arc::math::mat::translate">
-<area shape="rect" id="node2" href="$classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="228,104,379,143"/>
-<area shape="rect" id="node9" href="$namespacearc_1_1gui_1_1actor.html#a704371572df24855c6cd1456bf4d766b" title="arc::gui::actor::act" alt="" coords="668,240,795,265"/>
-<area shape="rect" id="node14" href="$namespacearc_1_1math_1_1mat.html#af39486147412a1d46985c59a96727834" title="arc::math::mat::transform" alt="" coords="218,289,389,315"/>
-<area shape="rect" id="node3" href="$classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="448,160,590,185"/>
-<area shape="rect" id="node10" href="$classarc_1_1gui_1_1_actor.html#afa7614a8eaf83751cf0b879934bf8388" title="arc::gui::Actor::translate" alt="" coords="438,111,600,136"/>
-<area shape="rect" id="node11" href="$classarc_1_1gui_1_1_actor.html#ae1bc2cdd561344c3568a41d920653308" title="arc::gui::Actor::rotate" alt="" coords="446,12,591,37"/>
-<area shape="rect" id="node13" href="$classarc_1_1gui_1_1_actor.html#a99572fd0c56545b8512549e3b2d29a94" title="arc::gui::Actor::scale" alt="" coords="448,61,590,87"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1gui_1_1actor.html#a3714767847a4ef34b00d69e3308cd14b" title="arc::gui::actor::box" alt="" coords="666,89,797,115"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1gui_1_1actor.html#a40af9d46d7790d238552324910dfb790" title="arc::gui::actor::cuboid" alt="" coords="657,141,806,167"/>
-<area shape="rect" id="node8" href="$namespacearc_1_1gui_1_1actor.html#a70cd46f071386ec37cd9a7c957b70bd1" title="arc::gui::actor::path" alt="" coords="663,191,799,216"/>
-<area shape="rect" id="node5" href="$classarc_1_1mesh_1_1node_1_1_branch.html#aa7cc49fc3dd956be9ba2bef5724033c6" title="arc::mesh::node::Branch\l::init_childs" alt="" coords="861,81,1028,120"/>
-<area shape="rect" id="node7" href="$namespacearc_1_1gui_1_1actor.html#a6cbf67a53691b4c79d857af5a44bdf2d" title="arc::gui::actor::act" alt="" coords="881,144,1008,169"/>
-<area shape="rect" id="node12" href="$classarc_1_1gui_1_1shader_1_1_skybox.html#af9acffd73ac06a798b1f9ecd4ee35320" title="arc::gui::shader::Skybox\l::Skybox" alt="" coords="649,5,813,44"/>
-<area shape="rect" id="node15" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a0f7bb8e8601c7f953b0498ec2cefe4af" title="arc::geom::shape::Mesh\l::transform_norms" alt="" coords="437,312,601,351"/>
-<area shape="rect" id="node16" href="$namespacearc_1_1io_1_1input.html#a5c7ced3a180c57638e8c4623ed8d3b85" title="arc::io::input::parse" alt="" coords="452,375,586,400"/>
+<area shape="rect" id="node2" href="$classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="228,125,379,164"/>
+<area shape="rect" id="node10" href="$namespacearc_1_1math_1_1mat.html#af39486147412a1d46985c59a96727834" title="arc::math::mat::transform" alt="" coords="218,237,389,263"/>
+<area shape="rect" id="node3" href="$classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="448,33,590,59"/>
+<area shape="rect" id="node6" href="$classarc_1_1gui_1_1_actor.html#afa7614a8eaf83751cf0b879934bf8388" title="arc::gui::Actor::translate" alt="" coords="438,83,600,108"/>
+<area shape="rect" id="node7" href="$classarc_1_1gui_1_1_actor.html#ae1bc2cdd561344c3568a41d920653308" title="arc::gui::Actor::rotate" alt="" coords="446,132,591,157"/>
+<area shape="rect" id="node9" href="$classarc_1_1gui_1_1_actor.html#a99572fd0c56545b8512549e3b2d29a94" title="arc::gui::Actor::scale" alt="" coords="448,181,590,207"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1gui_1_1actor.html#a70cd46f071386ec37cd9a7c957b70bd1" title="arc::gui::actor::path" alt="" coords="663,5,799,31"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1gui_1_1actor.html#aa415db4a76b700c82cc899b033d55d19" title="arc::gui::actor::shape" alt="" coords="658,55,804,80"/>
+<area shape="rect" id="node8" href="$classarc_1_1gui_1_1shader_1_1_skybox.html#af9acffd73ac06a798b1f9ecd4ee35320" title="arc::gui::shader::Skybox\l::Skybox" alt="" coords="649,125,813,164"/>
+<area shape="rect" id="node11" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a0f7bb8e8601c7f953b0498ec2cefe4af" title="arc::geom::shape::Mesh\l::transform_norms" alt="" coords="437,231,601,269"/>
+<area shape="rect" id="node12" href="$namespacearc_1_1io_1_1input.html#a5c7ced3a180c57638e8c4623ed8d3b85" title="arc::io::input::parse" alt="" coords="452,293,586,319"/>
 </map>

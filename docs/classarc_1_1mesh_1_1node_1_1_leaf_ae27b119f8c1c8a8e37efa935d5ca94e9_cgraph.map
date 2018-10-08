@@ -1,4 +1,0 @@
-<map id="arc::mesh::node::Leaf::intersect_entity" name="arc::mesh::node::Leaf::intersect_entity">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_aabb.html#a556df24d7d9eac241870840d44494456" title="arc::geom::shape::Aabb\l::contains" alt="" coords="204,5,367,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_aabb.html#a3eb52cf315b517ce2392ef463530d1da" title="arc::geom::shape::Aabb\l::collision" alt="" coords="204,68,367,107"/>
-</map>

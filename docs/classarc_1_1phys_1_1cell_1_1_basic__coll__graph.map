@@ -1,6 +1,0 @@
-<map id="arc::phys::cell::Basic" name="arc::phys::cell::Basic">
-<area shape="rect" id="node2" href="$classarc_1_1phys_1_1_cell.html" title="arc::phys::Cell" alt="" coords="97,180,203,205"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_aabb.html" title="arc::geom::shape::Aabb" alt="" coords="69,105,231,131"/>
-<area shape="rect" id="node4" href="$classarc_1_1geom_1_1_shape.html" title="arc::geom::Shape" alt="" coords="5,5,132,31"/>
-<area shape="rect" id="node5" href="$classarc_1_1math_1_1_vec.html" title="arc::math::Vec\&lt; T, N \&gt;" alt="" coords="156,5,309,31"/>
-</map>

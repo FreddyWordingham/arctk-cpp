@@ -1,13 +1,12 @@
 <map id="arc::utl::search::min" name="arc::utl::search::min">
-<area shape="rect" id="node2" href="$namespacearc_1_1io_1_1format.html#ad121d26ec02e835850e3377282ad68bc" title="arc::io::format::time" alt="" coords="213,57,348,83"/>
-<area shape="rect" id="node5" href="$classarc_1_1sys_1_1_balancer.html#ad9892e6ebb8eed6424aad8ae9d3d0c0e" title="arc::sys::Balancer\l::print_info" alt="" coords="445,107,572,145"/>
-<area shape="rect" id="node6" href="$classarc_1_1data_1_1_cube_3_011_00_01_a_8_8_8_01_4.html#ace17cc8dfd0bf2049315200e058c6af5" title="arc::data::Cube\&lt; 1,\l A... \&gt;::min" alt="" coords="213,161,348,200"/>
-<area shape="rect" id="node7" href="$classarc_1_1data_1_1_cube_3_012_00_01_a_8_8_8_01_4.html#ac23b2193f3188dfb4eb21da505ab6b1a" title="arc::data::Cube\&lt; 2,\l A... \&gt;::min" alt="" coords="213,224,348,263"/>
-<area shape="rect" id="node8" href="$classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4.html#a1e4ecd2af437069dff2fc03acad1c970" title="arc::data::Cube\&lt; 3,\l A... \&gt;::min" alt="" coords="213,287,348,325"/>
-<area shape="rect" id="node9" href="$classarc_1_1geom_1_1shape_1_1_sphere.html#aab65755fc0af549dec1adc2fb89e7f5b" title="arc::geom::shape::Sphere\l::collision" alt="" coords="193,349,368,388"/>
-<area shape="rect" id="node11" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#a89a572e0c7f6c6018bfdbbae3a4e96a4" title="arc::geom::shape::Triangle\l::intersect_surf" alt="" coords="191,412,370,451"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1gui_1_1actor.html#a70cd46f071386ec37cd9a7c957b70bd1" title="arc::gui::actor::path" alt="" coords="440,5,576,31"/>
-<area shape="rect" id="node4" href="$classarc_1_1sys_1_1_balancer.html#ad71629ec9e2276d04f58551c1fdc57f1" title="arc::sys::Balancer\l::update" alt="" coords="646,79,773,117"/>
-<area shape="rect" id="node10" href="$classarc_1_1geom_1_1shape_1_1_sphere.html#a9af901ab71725fdacfefccbcce9e09cb" title="arc::geom::shape::Sphere\l::collision_norm" alt="" coords="421,349,596,388"/>
-<area shape="rect" id="node12" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#a0cc308b85fc3cb44e799169dd1ca7492" title="arc::geom::shape::Triangle\l::intersect_vol" alt="" coords="418,412,598,451"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1io_1_1format.html#ad121d26ec02e835850e3377282ad68bc" title="arc::io::format::time" alt="" coords="205,57,341,83"/>
+<area shape="rect" id="node5" href="$classarc_1_1sys_1_1_balancer.html#ad9892e6ebb8eed6424aad8ae9d3d0c0e" title="arc::sys::Balancer\l::print_info" alt="" coords="407,107,535,145"/>
+<area shape="rect" id="node6" href="$classarc_1_1data_1_1_cube_3_011_00_01_a_8_8_8_01_4.html#ace17cc8dfd0bf2049315200e058c6af5" title="arc::data::Cube\&lt; 1,\l A... \&gt;::min" alt="" coords="206,161,341,200"/>
+<area shape="rect" id="node7" href="$classarc_1_1data_1_1_cube_3_012_00_01_a_8_8_8_01_4.html#ac23b2193f3188dfb4eb21da505ab6b1a" title="arc::data::Cube\&lt; 2,\l A... \&gt;::min" alt="" coords="206,224,341,263"/>
+<area shape="rect" id="node8" href="$classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4.html#a1e4ecd2af437069dff2fc03acad1c970" title="arc::data::Cube\&lt; 3,\l A... \&gt;::min" alt="" coords="206,287,341,325"/>
+<area shape="rect" id="node9" href="$classarc_1_1geom_1_1shape_1_1_box.html#a9cde8a9b6326466d668211348c07584d" title="arc::geom::shape::Box\l::intersect" alt="" coords="196,349,351,388"/>
+<area shape="rect" id="node10" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a99d3b8648e625769bfa4ea549a0d65bf" title="arc::geom::shape::Mesh\l::init_box" alt="" coords="191,412,355,451"/>
+<area shape="rect" id="node11" href="$namespacearc_1_1gui_1_1actor.html#aa415db4a76b700c82cc899b033d55d19" title="arc::gui::actor::shape" alt="" coords="200,475,346,500"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1gui_1_1actor.html#a70cd46f071386ec37cd9a7c957b70bd1" title="arc::gui::actor::path" alt="" coords="403,5,539,31"/>
+<area shape="rect" id="node4" href="$classarc_1_1sys_1_1_balancer.html#ad71629ec9e2276d04f58551c1fdc57f1" title="arc::sys::Balancer\l::update" alt="" coords="587,79,714,117"/>
 </map>

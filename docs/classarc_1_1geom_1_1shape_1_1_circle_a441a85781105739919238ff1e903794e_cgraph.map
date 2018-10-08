@@ -1,6 +1,0 @@
-<map id="arc::geom::shape::Circle::collision_norm" name="arc::geom::shape::Circle::collision_norm">
-<area shape="rect" id="node2" href="$namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="238,5,375,44"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1vec.html#aac2f268a88bb0d0908ab2a0fcd8faabe" title="arc::math::vec::axis" alt="" coords="238,68,375,93"/>
-<area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_circle.html#a3abf22ffc853ebb6327ef17141058307" title="arc::geom::shape::Circle\l::norm" alt="" coords="224,117,389,156"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="219,180,394,205"/>
-</map>

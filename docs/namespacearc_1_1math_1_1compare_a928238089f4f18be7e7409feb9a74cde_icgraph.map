@@ -1,7 +1,5 @@
 <map id="arc::math::compare::equal" name="arc::math::compare::equal">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_aabb.html#a7eae7576c448b1dca477cf962aede531" title="arc::geom::shape::Aabb\l::init_areas" alt="" coords="201,5,364,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1random_1_1distribution_1_1_constant.html#a5f980fb0c9953089fa5dd9050d377241" title="arc::random::distribution\l::Constant::init_cdfs" alt="" coords="200,68,364,107"/>
-<area shape="rect" id="node4" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a79b38bf15a786c48c8f64ca6ca6b9627" title="arc::random::distribution\l::Linear\&lt; double \&gt;::init_cdfs" alt="" coords="190,131,375,169"/>
-<area shape="rect" id="node5" href="$classarc_1_1phys_1_1_particle.html#ab46d3245680b0cac02e15de315327773" title="arc::phys::Particle\l::rotate" alt="" coords="218,193,346,232"/>
-<area shape="rect" id="node6" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#aa9b8b0c29f8bd71c50c8c5e50cf80946" title="arc::random::distribution\l::Discrete::init_cdfs" alt="" coords="200,256,364,295"/>
+<area shape="rect" id="node2" href="$classarc_1_1random_1_1distribution_1_1_constant.html#a5f980fb0c9953089fa5dd9050d377241" title="arc::random::distribution\l::Constant::init_cdfs" alt="" coords="190,5,354,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a79b38bf15a786c48c8f64ca6ca6b9627" title="arc::random::distribution\l::Linear::init_cdfs" alt="" coords="190,68,354,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#aa9b8b0c29f8bd71c50c8c5e50cf80946" title="arc::random::distribution\l::Discrete::init_cdfs" alt="" coords="190,131,354,169"/>
 </map>

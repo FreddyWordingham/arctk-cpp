@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['wavelength',['wavelength',['../classarc_1_1phys_1_1particle_1_1_photon.html#a34dacaafc415ab72497899704751c7be',1,'arc::phys::particle::Photon']]],
-  ['weight',['weight',['../classarc_1_1phys_1_1_particle.html#a52661bdc1aa33a935ac7157cdf16ceab',1,'arc::phys::Particle']]],
   ['whitespace',['WHITESPACE',['../namespacearc_1_1consts_1_1format.html#a4d44c3b096871a5c18c005ac26fcf643',1,'arc::consts::format']]],
   ['width',['width',['../classarc_1_1data_1_1_image.html#a9292e970739e7492890a6eb6a6d01bea',1,'arc::data::Image']]],
   ['window',['Window',['../classarc_1_1gui_1_1_window.html#a0d3aeb1f87150237a22b20389ebaefdb',1,'arc::gui::Window::Window(const std::string &amp;title_, int width_, int height_, int aa_samples_=4) noexcept'],['../classarc_1_1gui_1_1_window.html#a8a396f0bb9659e6c89f851454b8e401f',1,'arc::gui::Window::Window(const Window &amp;) noexcept=default'],['../classarc_1_1gui_1_1_window.html#a00529f1ad78017ab72ce3d7b42ebdfd5',1,'arc::gui::Window::Window(Window &amp;&amp;) noexcept=default']]],

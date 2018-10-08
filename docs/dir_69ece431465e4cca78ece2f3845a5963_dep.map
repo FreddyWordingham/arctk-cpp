@@ -1,9 +1,0 @@
-<map id="include/arctk/phys" name="include/arctk/phys">
-<area shape="rect" id="node4" href="dir_8b7d57dbd0dc7146889c02a5ac7168d2.html" title="particle" alt="" coords="133,157,205,205"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000026_000029.html" title="1" alt="" coords="174,132,181,145"/>
-<area shape="rect" id="node2" href="dir_50814e957895efe5b9e4aa37dcc82a37.html" title="cell" alt="" coords="37,157,109,205"/>
-<area shape="rect" id="node3" href="dir_f6b8594ba155a18fb466340a430c8bd4.html" title="material" alt="" coords="37,61,109,109"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000028_000027.html" title="2" alt="" coords="78,132,85,145"/>
-<area shape="rect" id="clust2" href="dir_69ece431465e4cca78ece2f3845a5963.html" alt="" coords="27,51,216,216"/>
-<area shape="rect" id="clust1" href="dir_246d7703b1917d529f7795c1438d7849.html" title="arctk" alt="" coords="16,16,227,227"/>
-</map>

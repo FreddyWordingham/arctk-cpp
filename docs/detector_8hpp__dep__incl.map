@@ -1,8 +1,0 @@
-<map id="include/arctk/equip/detector.hpp" name="include/arctk/equip/detector.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="142,499,239,524"/>
-<area shape="rect" id="node3" href="$equip_8hpp.html" title="include/arctk/equip.hpp" alt="" coords="181,92,339,117"/>
-<area shape="rect" id="node4" href="$branch_8hpp.html" title="include/arctk/mesh\l/node/branch.hpp" alt="" coords="142,252,274,291"/>
-<area shape="rect" id="node7" href="$leaf_8hpp.html" title="include/arctk/mesh\l/node/leaf.hpp" alt="" coords="246,165,378,204"/>
-<area shape="rect" id="node5" href="$adaptive_8hpp.html" title="include/arctk/mesh\l/adaptive.hpp" alt="" coords="94,339,226,377"/>
-<area shape="rect" id="node6" href="$mesh_8hpp.html" title="include/arctk/mesh.hpp" alt="" coords="170,425,329,451"/>
-</map>

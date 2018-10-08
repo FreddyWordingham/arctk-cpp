@@ -1,6 +1,0 @@
-<map id="arc::equip::Light" name="arc::equip::Light">
-<area shape="rect" id="node2" href="$classarc_1_1random_1_1distribution_1_1_linear.html" title="arc::random::distribution\l::Linear\&lt; double \&gt;" alt="" coords="100,192,264,231"/>
-<area shape="rect" id="node3" href="$classarc_1_1random_1_1_distribution.html" title="arc::random::Distribution\l\&lt; double \&gt;" alt="" coords="5,92,172,131"/>
-<area shape="rect" id="node4" href="$classarc_1_1random_1_1_distribution.html" title="arc::random::Distribution\&lt; T \&gt;" alt="" coords="83,5,281,31"/>
-<area shape="rect" id="node5" href="$classarc_1_1random_1_1distribution_1_1_linear.html" title="arc::random::distribution\l::Linear\&lt; T \&gt;" alt="" coords="196,92,360,131"/>
-</map>

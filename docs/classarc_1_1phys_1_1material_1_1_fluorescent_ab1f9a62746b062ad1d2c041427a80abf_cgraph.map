@@ -1,6 +1,0 @@
-<map id="arc::phys::material::Fluorescent::interact" name="arc::phys::material::Fluorescent::interact">
-<area shape="rect" id="node2" href="$namespacearc_1_1random_1_1distribution.html#aa72c220ef49e5f1748071c2d83119103" title="arc::random::distribution\l::henyey_greenstein" alt="" coords="203,68,367,107"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="429,5,566,44"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1random_1_1distribution.html#af9e55c4d5a5e1965dc94441b0a5b86ab" title="arc::random::distribution\l::uniform" alt="" coords="415,68,580,107"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1math_1_1pow.html#a673982111327d6a2597e9a381009ce4d" title="arc::math::pow::sq" alt="" coords="432,131,563,156"/>
-</map>

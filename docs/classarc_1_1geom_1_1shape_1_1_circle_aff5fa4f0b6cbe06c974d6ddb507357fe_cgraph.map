@@ -1,6 +1,0 @@
-<map id="arc::geom::shape::Circle::intersect_surf" name="arc::geom::shape::Circle::intersect_surf">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_circle.html#aefec3642a27d1405acbbd2661be7d913" title="arc::geom::shape::Circle\l::nearest_point_surf" alt="" coords="219,61,385,100"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_circle.html#a1f5f4fbe5c5ee63fea6a69cd41880607" title="arc::geom::shape::Circle\l::plane_dist" alt="" coords="437,5,603,44"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="433,68,608,93"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1random_1_1distribution.html#af0181d183542f6401028a77795026f90" title="arc::random::distribution\l::normal" alt="" coords="438,117,603,156"/>
-</map>

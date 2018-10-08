@@ -1,8 +1,4 @@
 <map id="arc::random::distribution::uniform" name="arc::random::distribution::uniform">
-<area shape="rect" id="node2" href="$namespacearc_1_1random_1_1distribution.html#aa72c220ef49e5f1748071c2d83119103" title="arc::random::distribution\l::henyey_greenstein" alt="" coords="218,68,382,107"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1random_1_1distribution.html#a3849967432132a79729022f4b5e011ff" title="arc::random::distribution\l::isotropic" alt="" coords="218,131,382,169"/>
-<area shape="rect" id="node3" href="$classarc_1_1phys_1_1material_1_1_basic.html#aab461da93cb530e385ba844e5ed681f1" title="arc::phys::material\l::Basic::interact" alt="" coords="452,5,583,44"/>
-<area shape="rect" id="node4" href="$classarc_1_1phys_1_1material_1_1_fluorescent.html#ab1f9a62746b062ad1d2c041427a80abf" title="arc::phys::material\l::Fluorescent::interact" alt="" coords="443,68,592,107"/>
-<area shape="rect" id="node6" href="$classarc_1_1geom_1_1shape_1_1_sphere.html#ad37629c5d0ec23226ac5f137e4a7ee50" title="arc::geom::shape::Sphere\l::random_pos" alt="" coords="430,131,605,169"/>
-<area shape="rect" id="node7" href="$classarc_1_1geom_1_1shape_1_1_sphere.html#a842378d2874e60bb089d78e28180959d" title="arc::geom::shape::Sphere\l::random_pos_and_norm" alt="" coords="430,193,605,232"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1random_1_1distribution.html#aa72c220ef49e5f1748071c2d83119103" title="arc::random::distribution\l::henyey_greenstein" alt="" coords="218,5,382,44"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1random_1_1distribution.html#a3849967432132a79729022f4b5e011ff" title="arc::random::distribution\l::isotropic" alt="" coords="218,68,382,107"/>
 </map>

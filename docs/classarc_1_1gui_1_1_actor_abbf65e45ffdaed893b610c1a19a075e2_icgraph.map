@@ -1,8 +1,4 @@
 <map id="arc::gui::Actor::Actor" name="arc::gui::Actor::Actor">
-<area shape="rect" id="node2" href="$namespacearc_1_1gui_1_1actor.html#a3714767847a4ef34b00d69e3308cd14b" title="arc::gui::actor::box" alt="" coords="204,15,335,40"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1gui_1_1actor.html#a40af9d46d7790d238552324910dfb790" title="arc::gui::actor::cuboid" alt="" coords="195,65,344,91"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1gui_1_1actor.html#a70cd46f071386ec37cd9a7c957b70bd1" title="arc::gui::actor::path" alt="" coords="202,115,338,140"/>
-<area shape="rect" id="node7" href="$namespacearc_1_1gui_1_1actor.html#a704371572df24855c6cd1456bf4d766b" title="arc::gui::actor::act" alt="" coords="206,164,334,189"/>
-<area shape="rect" id="node3" href="$classarc_1_1mesh_1_1node_1_1_branch.html#aa7cc49fc3dd956be9ba2bef5724033c6" title="arc::mesh::node::Branch\l::init_childs" alt="" coords="392,5,559,44"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1gui_1_1actor.html#a6cbf67a53691b4c79d857af5a44bdf2d" title="arc::gui::actor::act" alt="" coords="412,68,539,93"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1gui_1_1actor.html#a70cd46f071386ec37cd9a7c957b70bd1" title="arc::gui::actor::path" alt="" coords="201,5,336,31"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1gui_1_1actor.html#aa415db4a76b700c82cc899b033d55d19" title="arc::gui::actor::shape" alt="" coords="195,55,341,80"/>
 </map>

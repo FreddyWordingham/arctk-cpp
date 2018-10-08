@@ -1,6 +1,0 @@
-<map id="arc::phys::Particle::rotate" name="arc::phys::Particle::rotate">
-<area shape="rect" id="node2" href="$classarc_1_1math_1_1_vec.html#aa6d4a0162dccc9fc08cb51111aa44825" title="arc::math::Vec::normalised" alt="" coords="181,5,360,31"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1compare.html#a928238089f4f18be7e7409feb9a74cde" title="arc::math::compare\l::equal" alt="" coords="202,55,338,93"/>
-<area shape="rect" id="node5" href="$classarc_1_1math_1_1_vec.html#abd22cbc8c212fac61b31df11cea46866" title="arc::math::Vec::normalise" alt="" coords="184,117,356,143"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1math_1_1compare.html#a28572b9c6b727e04fd998c1fb5e20434" title="arc::math::compare\l::zero" alt="" coords="408,55,544,93"/>
-</map>

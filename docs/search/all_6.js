@@ -32,12 +32,11 @@ var searchData=
   ['fixed2_2ehpp',['fixed2.hpp',['../fixed2_8hpp.html',1,'']]],
   ['fixed_3c_20t_2c_201_20_3e',['Fixed&lt; T, 1 &gt;',['../classarc_1_1data_1_1histogram_1_1_fixed_3_01_t_00_011_01_4.html',1,'arc::data::histogram']]],
   ['fixed_3c_20t_2c_202_20_3e',['Fixed&lt; T, 2 &gt;',['../classarc_1_1data_1_1histogram_1_1_fixed_3_01_t_00_012_01_4.html',1,'arc::data::histogram']]],
-  ['fluorescent',['Fluorescent',['../classarc_1_1phys_1_1material_1_1_fluorescent.html',1,'arc::phys::material::Fluorescent'],['../classarc_1_1phys_1_1cell_1_1_fluorescent.html',1,'arc::phys::cell::Fluorescent'],['../classarc_1_1phys_1_1cell_1_1_fluorescent.html#a3af609662bb1e38807ca1398728f3cfb',1,'arc::phys::cell::Fluorescent::Fluorescent()'],['../classarc_1_1phys_1_1material_1_1_fluorescent.html#a12319df1c85339e688679d67edeebd97',1,'arc::phys::material::Fluorescent::Fluorescent()']]],
-  ['fluorescent_2ehpp',['fluorescent.hpp',['../cell_2fluorescent_8hpp.html',1,'(Global Namespace)'],['../material_2fluorescent_8hpp.html',1,'(Global Namespace)']]],
   ['fly',['Fly',['../classarc_1_1gui_1_1camera_1_1_fly.html',1,'arc::gui::camera::Fly'],['../classarc_1_1gui_1_1camera_1_1_fly.html#af46e7a09fb1fbbb0eb761443e742b759',1,'arc::gui::camera::Fly::Fly()']]],
   ['fly_2ehpp',['fly.hpp',['../fly_8hpp.html',1,'']]],
   ['format_2ehpp',['format.hpp',['../consts_2format_8hpp.html',1,'(Global Namespace)'],['../io_2format_8hpp.html',1,'(Global Namespace)']]],
   ['formula',['Formula',['../classarc_1_1math_1_1_formula.html',1,'arc::math::Formula'],['../classarc_1_1math_1_1_formula.html#a5e59374dd17a0a25d6cb3c6cbc8a59b6',1,'arc::math::Formula::Formula(double min_, double max_) noexcept'],['../classarc_1_1math_1_1_formula.html#a2bd69ec7ff4e0b898e276d10212b2ce8',1,'arc::math::Formula::Formula(const Formula &amp;) noexcept=default'],['../classarc_1_1math_1_1_formula.html#a5718ec4553ee2dd53d6389e44f21c47a',1,'arc::math::Formula::Formula(Formula &amp;&amp;) noexcept=default']]],
   ['formula_2ehpp',['formula.hpp',['../formula_8hpp.html',1,'']]],
-  ['fracs',['fracs',['../classarc_1_1random_1_1distribution_1_1_linear.html#a5dc893616f6fb4c544eef7a69c65c869',1,'arc::random::distribution::Linear']]]
+  ['fracs',['fracs',['../classarc_1_1random_1_1distribution_1_1_linear.html#a5dc893616f6fb4c544eef7a69c65c869',1,'arc::random::distribution::Linear']]],
+  ['front',['front',['../classarc_1_1geom_1_1_collision.html#a70fc8ca1f7e4b469f063635e06139b9c',1,'arc::geom::Collision']]]
 ];

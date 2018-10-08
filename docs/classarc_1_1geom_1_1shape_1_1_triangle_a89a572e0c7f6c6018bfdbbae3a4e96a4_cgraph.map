@@ -1,9 +1,0 @@
-<map id="arc::geom::shape::Triangle::intersect_surf" name="arc::geom::shape::Triangle::intersect_surf">
-<area shape="rect" id="node2" href="$namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="233,19,374,44"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1utl_1_1search.html#a7dedb03499315275304d2ee539dbbf81" title="arc::utl::search::min" alt="" coords="235,71,372,96"/>
-<area shape="rect" id="node8" href="$namespacearc_1_1math_1_1vec.html#aac2f268a88bb0d0908ab2a0fcd8faabe" title="arc::math::vec::axis" alt="" coords="235,120,372,145"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1utl_1_1search.html#a83ff5408af0ccc99c51d3dabf4f4562b" title="arc::utl::search::max\l_index" alt="" coords="422,5,564,44"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="639,8,759,47"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="612,72,786,97"/>
-<area shape="rect" id="node7" href="$namespacearc_1_1utl_1_1search.html#ab0aae86f6b98b4746101dd60c00514ca" title="arc::utl::search::min\l_index" alt="" coords="424,68,562,107"/>
-</map>
