@@ -261,6 +261,17 @@ namespace arc //! arctk namespace
                 return (poss);
             }
 
+            /**
+             *  Parse the list of vertex normals from a serialised wavefront file.
+             *
+             *  @param  serial_ Serialised wavefront file.
+             *
+             *  @pre    serial_ may not be empty.
+             *
+             *  @post   norms may not be empty.
+             *
+             *  @return List of vertex normals forming the mesh.
+             */
             inline std::vector<vec3> Mesh::parse_norms(const std::string& serial_) const noexcept
             {
                 PRE(!serial_.empty());
