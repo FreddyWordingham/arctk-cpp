@@ -180,6 +180,11 @@ namespace arc //! arctk namespace
                 return (true);
             }
 
+            /**
+             *  Determine if an intersection ocurres between the box and a triangle.
+             *
+             *  @return True if an intersection ocurres.
+             */
             inline bool Box::intersect(const Triangle& tri_) const noexcept
             {
                 const vec3 cent  = centre();
