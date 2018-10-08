@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Call --
-            inline void operator()() const noexcept;
+            inline void operator()() const noexcept; // NOLINT
 
 
             //  == METHODS ==
