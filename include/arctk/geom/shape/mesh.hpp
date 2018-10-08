@@ -731,6 +731,11 @@ namespace arc //! arctk namespace
                 return (_num_faces);
             }
 
+            /**
+             *  Get the topology of the mesh.
+             *
+             *  @return True if the mesh is closed with no handles.
+             */
             inline bool Mesh::closed() const noexcept
             {
                 return (_closed);
