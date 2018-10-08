@@ -122,6 +122,11 @@ namespace arc //! arctk namespace
                 return (_poss);
             }
 
+            /**
+             *  Get the vertex normals forming the triangle.
+             *
+             *  @return Array of vertex normals forming the triangle.
+             */
             inline const std::array<vec3, 3>& Triangle::norms() const noexcept
             {
                 return (_norms);
