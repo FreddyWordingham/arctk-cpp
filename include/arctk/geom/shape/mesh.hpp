@@ -743,6 +743,15 @@ namespace arc //! arctk namespace
 
 
             //  -- Sampling --
+            /**
+             *  Get a random position on the surface of the mesh.
+             *
+             *  @param  rng_    Random number generator.
+             *
+             *  @pre    rng_ may not be nullptr.
+             *
+             *  @return Random position on the surface of the mesh.
+             */
             inline vec3 Mesh::random_pos(random::Generator* rng_) const noexcept
             {
                 PRE(rng_ != nullptr);
