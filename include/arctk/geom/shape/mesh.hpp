@@ -114,7 +114,7 @@ namespace arc //! arctk namespace
                 inline bool intersect(const Mesh& mesh_) const noexcept;
 
                 //  -- Collision --
-                inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const noexcept;
+                inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const noexcept override;
             };
 
 
