@@ -15,10 +15,14 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <vector>
+
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
+#include <arctk/scene/cell.hpp>
 
 
 
@@ -39,6 +43,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
+            std::vector<std::vector<std::vector<std::unique_ptr<Cell>>>> _cells; //!< Three-dimensional vector of cells.
 
 
             //  == INSTANTIATION ==
