@@ -195,7 +195,7 @@ namespace arc //! arctk namespace
              *  @return Random number sampled from a uniform distribution.
              */
             template <typename T>
-            inline T uniform(Generator* const rng_, const T min_, const T max_) noexcept
+            inline T uniform(Generator* const rng_, const T min_, const T max_) noexcept // NOLINT
             {
                 static_assert(std::is_arithmetic<T>::value);
 
