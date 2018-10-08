@@ -98,7 +98,7 @@ namespace arc //! arctk namespace
              *
              *  @pre    str_ may not be nullptr.
              */
-            inline void filter_comments(std::string* const str_) noexcept
+            inline void filter_comments(std::string* const str_) noexcept // NOLINT
             {
                 PRE(str_ != nullptr);
 
