@@ -134,7 +134,7 @@
  *
  *  @return Zero upon a successful 0run.
  */
-int main(const int /*unused*/, char** /*unused*/)
+int main(const int /*unused*/, const char** /*unused*/)
 {
     return (0);
 }
