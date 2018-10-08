@@ -66,8 +66,7 @@ namespace arc //! arctk namespace
         inline Domain::Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept
           : Box(min_, max_)
           , _res(res_)
-          , _cells(std::vector<std::vector<std::vector<std::unique_ptr<Cell>>>>(res_[index::dim::cartesian::X],
-                                                                                std::vector < std::vector<std::unique_ptr<Cell>>(res_[index::dim::cartesian::Y], std::vector < std::unique_ptr<Cell>(res_[index::dim::cartesian::Z]))))
+          , _cells(std::vector<std::vector<std::vector<Cell>>>(res_[index::dim::cartesian::X], std::vector<std::vector<Cell>>(res_[index::dim::cartesian::Y], std::vector<Cell>(res_[index::dim::cartesian::Z]))))
         {
             PRE(min_.x <= max_.x);
             PRE(min_.y <= max_.y);
