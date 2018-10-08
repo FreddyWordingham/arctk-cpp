@@ -691,6 +691,11 @@ namespace arc //! arctk namespace
                 return (_box);
             }
 
+            /**
+             *  Get the number of vertex positions used by the mesh.
+             *
+             *  @return Number of vertex positions used by the mesh.
+             */
             inline size_t Mesh::num_verts() const noexcept
             {
                 return (_num_verts);
