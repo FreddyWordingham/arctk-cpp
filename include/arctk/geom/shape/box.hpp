@@ -167,6 +167,8 @@ namespace arc //! arctk namespace
             /**
              *  Determine if an intersection ocurres between the box and another box.
              *
+             *  @param  box_    Box to test.
+             *
              *  @return True if an intersection ocurres.
              */
             inline bool Box::intersect(const Box& box_) const noexcept
