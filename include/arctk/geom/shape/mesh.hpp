@@ -22,6 +22,7 @@
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/geom/collision.hpp>
 #include <arctk/geom/shape/box.hpp>
 #include <arctk/geom/shape/triangle.hpp>
 #include <arctk/index.hpp>
@@ -114,7 +115,8 @@ namespace arc //! arctk namespace
                 inline bool intersect(const Mesh& mesh_) const noexcept;
 
                 //  -- Collision --
-                inline std::optional<double> collision(const vec3& pos_, const vec3& dir_) const noexcept override; // NOLINT
+                inline std::optional<double>    collision(const vec3& pos_, const vec3& dir_) const noexcept override; // NOLINT
+                inline std::optional<Collision> collision_info(const vec3& pos_, const vec3& dir_) const noexcept;
             };
 
 
@@ -854,6 +856,28 @@ namespace arc //! arctk namespace
                 {
                     const std::optional<double> tri_dist(_tris[i].collision(pos_, dir_));
                     if (tri_dist && (!dist || (tri_dist.value() < dist.value())))
+                    {
+                        dist = tri_dist;
+                    }
+                }
+
+                return (dist);
+            }
+
+            inline std::optional<Collision> Mesh::collision_info(const vec3& pos_, const vec3& dir_) const noexcept
+            {
+                PRE(dir_.normalised());
+
+                if (!_box.intersect(pos_) && !_box.collision(pos_, dir_))
+                {
+                    return (std::nullopt);
+                }
+
+                std::optional<Collision> dist(std::nullopt);
+                for (size_t i = 0; i < _tris.size(); ++i)
+                {
+                    const std::optional<Collision> tri_dist(_tris[i].collision_info(pos_, dir_));
+                    if (tri_dist && (!dist || (tri_dist.value().dist() < dist.value().dist())))
                     {
                         dist = tri_dist;
                     }
