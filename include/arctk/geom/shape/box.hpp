@@ -120,6 +120,11 @@ namespace arc //! arctk namespace
                 return (_max);
             }
 
+            /**
+             *  Get the volume of the box.
+             *
+             *  @return Volume of the box.
+             */
             inline double Box::vol() const noexcept
             {
                 return ((_max.x - _min.x) * (_max.y - _min.y) * (_max.z - _min.z));
