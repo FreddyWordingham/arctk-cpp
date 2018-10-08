@@ -117,7 +117,7 @@ namespace arc //! arctk namespace
                 std::vector<double> grads(xs_.size() - 1);
                 for (size_t i = 0; i < grads.size(); ++i)
                 {
-                    grads[i] = (_ys[i + 1] - _ys[i]) / (_xs[i + 1] - _xs[i]);
+                    grads[i] = (ys_[i + 1] - ys_[i]) / (_xs[i + 1] - _xs[i]);
                 }
 
                 return (grads);
