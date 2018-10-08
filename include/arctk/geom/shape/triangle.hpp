@@ -112,6 +112,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the vertex positions forming the triangle.
+             *
+             *  @return Array of vertex positions forming the triangle.
+             */
             inline const std::array<vec3, 3>& Triangle::poss() const noexcept
             {
                 return (_poss);
