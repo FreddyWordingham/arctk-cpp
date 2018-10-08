@@ -180,7 +180,7 @@ namespace arc //! arctk namespace
              *  Construct a list of vertex positions, normals and face indicies.
              *
              *  @param  poss_   List of vertex positions.
-             *  @param  norm_   List of vertex normals.
+             *  @param  norms_  List of vertex normals.
              *  @param  faces_  List of indices forming triangular faces.
              *
              *  @pre    poss_ must contain at least three entries.
