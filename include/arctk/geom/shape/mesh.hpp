@@ -325,7 +325,7 @@ namespace arc //! arctk namespace
              *
              *  @return List of face forming indices forming the mesh.
              */
-            inline std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>> Mesh::parse_faces(const std::string& serial_) const noexcept
+            inline std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>> Mesh::parse_faces(const std::string& serial_) const noexcept // NOLINT
             {
                 PRE(!serial_.empty());
 
