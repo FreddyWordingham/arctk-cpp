@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Setters --
-            inline void bind(int key_, const std::function<void()>& func_, bool sticky_ = false, int state_ = GLFW_RELEASE) noexcept;
+            inline void bind(int key_, const std::function<void()>& func_, bool sticky_ = false, int state_ = GLFW_RELEASE) noexcept; // NOLINT
             inline void unbind(int key_) noexcept;
             inline void use_fly_controls(Camera* cam_) noexcept;   // NOLINT
             inline void use_orbit_controls(Camera* cam_) noexcept; // NOLINT
