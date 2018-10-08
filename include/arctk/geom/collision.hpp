@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            const bool   _front;
+            const bool   _front; //!< True if the collision ocurres on the front of the surface.
             const double _dist;
             const vec3&  _norm;
 
