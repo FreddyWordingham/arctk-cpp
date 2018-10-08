@@ -17,7 +17,6 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/geom/collision.hpp>
-#include <arctk/geom/intersection.hpp>
 #include <arctk/geom/shape.hpp>
 #include <arctk/geom/shape/box.hpp>
 #include <arctk/geom/shape/mesh.hpp>
