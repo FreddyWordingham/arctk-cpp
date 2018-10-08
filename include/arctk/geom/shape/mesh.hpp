@@ -518,6 +518,11 @@ namespace arc //! arctk namespace
                 return (areas);
             }
 
+            /**
+             *  Initialise the bounding box of the mesh.
+             *
+             *  @return Bounding box of the mesh.
+             */
             inline Box Mesh::init_box() const noexcept
             {
                 vec3 min(std::numeric_limits<double>::max(), std::numeric_limits<double>::max(), std::numeric_limits<double>::max());
