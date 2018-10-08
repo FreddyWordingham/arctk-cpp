@@ -50,6 +50,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline double interactions() const noexcept;
         };
 
 
@@ -68,6 +70,11 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Getters --
+        inline double Cell::interactions() const noexcept
+        {
+            return (_interactions);
+        }
 
 
 
