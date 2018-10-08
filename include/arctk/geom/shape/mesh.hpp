@@ -618,6 +618,13 @@ namespace arc //! arctk namespace
                 return (num_norms);
             }
 
+            /**
+             *  Initialise the number of edges used by the mesh
+             *
+             *  @param  faces_  List of indices forming triangular faces.
+             *
+             *  @return Number of edges used by the mesh.
+             */
             inline size_t Mesh::init_num_edges(const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
             {
                 std::vector<std::pair<size_t, size_t>> edges;
