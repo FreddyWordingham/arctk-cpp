@@ -94,6 +94,11 @@ namespace arc //! arctk namespace
             return (_front);
         }
 
+        /**
+         *  Get the distance to the collision event.
+         *
+         *  @return Distance to the collision event.
+         */
         inline double Collision::dist() const noexcept
         {
             return (_dist);
