@@ -456,6 +456,12 @@ namespace arc //! arctk namespace
              *  @param  norms_  Vertex normals.
              *  @param  faces_  Indices forming the triangles.
              *
+             *  @pre    poss_ must contain at least three elements.
+             *  @pre    norms_ may not empty.
+             *  @pre    faces_ may not empty.
+             *
+             *  @post   tris may not be empty.
+             *
              *  @return Vector of triangles forming the mesh.
              */
             inline std::vector<Triangle> Mesh::init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
