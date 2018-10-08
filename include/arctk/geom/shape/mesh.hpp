@@ -550,6 +550,14 @@ namespace arc //! arctk namespace
                 return (Box(min, max));
             }
 
+            /**
+             *  Initialise the number of vertex positions used by the mesh
+             *
+             *  @param  num_poss_   Maximum number of vertex positions.
+             *  @param  faces_  List of indices forming triangular faces.
+             *
+             *  @return Number of vertex positions used by the mesh.
+             */
             inline size_t Mesh::init_num_verts(const size_t num_poss_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
             {
                 std::vector<bool> used(num_poss_, false);
