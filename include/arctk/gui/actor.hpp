@@ -437,8 +437,6 @@ namespace arc //! arctk namespace
             inline Actor axis_helper_x(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor axis_helper_y(float length_ = 1.0f, float width_ = 0.01f) noexcept;
             inline Actor axis_helper_z(float length_ = 1.0f, float width_ = 0.01f) noexcept;
-            inline Actor box(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
-            inline Actor cuboid(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor path(const std::vector<Point>& points_) noexcept;
             inline Actor act(const geom::shape::Box& box_) noexcept;
             inline Actor act(const geom::shape::Triangle& tri_) noexcept;
@@ -667,161 +665,6 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Create a axis-aligned bounding box actor.
-             *  This is only the frame of the box.
-             *
-             *  @param  min_    Minimum vertex of the box.
-             *  @param  max_    Maximum vertex of the box.
-             *
-             *  @pre    min_.x must be less than max_.x.
-             *  @pre    min_.y must be less than max_.y.
-             *  @pre    min_.z must be less than max_.z.
-             *
-             *  @return Axis aligned bounding box actor.
-             */
-            inline Actor box(const glm::vec3& min_, const glm::vec3& max_) noexcept
-            {
-                PRE(min_.x < max_.x);
-                PRE(min_.y < max_.y);
-                PRE(min_.z < max_.z);
-
-                std::vector<glm::vec3> verts;
-                verts.reserve(2 * 4 * 3);
-
-                verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
-
-                verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
-
-                verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
-
-                return (Actor(verts, {3}, GL_LINES));
-            }
-
-            /**
-             *  Create a cuboid actor.
-             *  This is a solid cuboid with faces.
-             *
-             *  @param  min_    Minimum vertex of the cuboid.
-             *  @param  max_    Maximum vertex of the cuboid.
-             *
-             *  @pre    min_.x must be less than max_.x.
-             *  @pre    min_.y must be less than max_.y.
-             *  @pre    min_.z must be less than max_.z.
-             *
-             *  @return Cuboid actor.
-             */
-            inline Actor cuboid(const glm::vec3& min_, const glm::vec3& max_) noexcept // NOLINT
-            {
-                PRE(min_.x < max_.x);
-                PRE(min_.y < max_.y);
-                PRE(min_.z < max_.z);
-
-                std::vector<glm::vec3> verts;
-                verts.reserve(3 * 2 * 6);
-
-                verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(0.0f, 0.0f, -1.0f));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(0.0f, 0.0f, -1.0f));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(0.0f, 0.0f, -1.0f));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(0.0f, 0.0f, -1.0f));
-                verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(0.0f, 0.0f, -1.0f));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(0.0f, 0.0f, -1.0f));
-
-                verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(0.0f, 0.0f, +1.0f));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
-                verts.emplace_back(glm::vec3(0.0f, 0.0f, +1.0f));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
-                verts.emplace_back(glm::vec3(0.0f, 0.0f, +1.0f));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
-                verts.emplace_back(glm::vec3(0.0f, 0.0f, +1.0f));
-                verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(0.0f, 0.0f, +1.0f));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(0.0f, 0.0f, +1.0f));
-
-                verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(-1.0f, 0.0f, 0.0f));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
-                verts.emplace_back(glm::vec3(-1.0f, 0.0f, 0.0f));
-                verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(-1.0f, 0.0f, 0.0f));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
-                verts.emplace_back(glm::vec3(-1.0f, 0.0f, 0.0f));
-                verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(-1.0f, 0.0f, 0.0f));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(-1.0f, 0.0f, 0.0f));
-
-                verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(+1.0f, 0.0f, 0.0f));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
-                verts.emplace_back(glm::vec3(+1.0f, 0.0f, 0.0f));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(+1.0f, 0.0f, 0.0f));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
-                verts.emplace_back(glm::vec3(+1.0f, 0.0f, 0.0f));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(+1.0f, 0.0f, 0.0f));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(+1.0f, 0.0f, 0.0f));
-
-                verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(0.0f, -1.0f, 0.0f));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(0.0f, -1.0f, 0.0f));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(0.0f, -1.0f, 0.0f));
-                verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(0.0f, -1.0f, 0.0f));
-                verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
-                verts.emplace_back(glm::vec3(0.0f, -1.0f, 0.0f));
-                verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
-                verts.emplace_back(glm::vec3(0.0f, -1.0f, 0.0f));
-
-                verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(0.0f, +1.0f, 0.0f));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
-                verts.emplace_back(glm::vec3(0.0f, +1.0f, 0.0f));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(0.0f, +1.0f, 0.0f));
-                verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
-                verts.emplace_back(glm::vec3(0.0f, +1.0f, 0.0f));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
-                verts.emplace_back(glm::vec3(0.0f, +1.0f, 0.0f));
-                verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
-                verts.emplace_back(glm::vec3(0.0f, +1.0f, 0.0f));
-
-                return (Actor(verts, {3, 3}));
-            }
-
-            /**
              *  Create path actor from a vector of points.
              *
              *  @param  points_ Vector of point data to create a path actor of.
@@ -847,6 +690,40 @@ namespace arc //! arctk namespace
 
             inline Actor act(const geom::shape::Box& box_) noexcept
             {
+                std::vector<glm::vec3> verts;
+                verts.reserve(2 * 4 * 3);
+
+                const vec3& min = box_.min();
+                const vec3& max = box_.max();
+
+                verts.emplace_back(glm::vec3(min.x, min.y, min.z));
+                verts.emplace_back(glm::vec3(max.x, min.y, min.z));
+                verts.emplace_back(glm::vec3(min.x, max.y, min.z));
+                verts.emplace_back(glm::vec3(max.x, max.y, min.z));
+                verts.emplace_back(glm::vec3(min.x, min.y, max.z));
+                verts.emplace_back(glm::vec3(max.x, min.y, max.z));
+                verts.emplace_back(glm::vec3(min.x, max.y, max.z));
+                verts.emplace_back(glm::vec3(max.x, max.y, max.z));
+
+                verts.emplace_back(glm::vec3(min.x, min.y, min.z));
+                verts.emplace_back(glm::vec3(min.x, max.y, min.z));
+                verts.emplace_back(glm::vec3(min.x, min.y, max.z));
+                verts.emplace_back(glm::vec3(min.x, max.y, max.z));
+                verts.emplace_back(glm::vec3(max.x, min.y, min.z));
+                verts.emplace_back(glm::vec3(max.x, max.y, min.z));
+                verts.emplace_back(glm::vec3(max.x, min.y, max.z));
+                verts.emplace_back(glm::vec3(max.x, max.y, max.z));
+
+                verts.emplace_back(glm::vec3(min.x, min.y, min.z));
+                verts.emplace_back(glm::vec3(min.x, min.y, max.z));
+                verts.emplace_back(glm::vec3(max.x, min.y, min.z));
+                verts.emplace_back(glm::vec3(max.x, min.y, max.z));
+                verts.emplace_back(glm::vec3(min.x, max.y, min.z));
+                verts.emplace_back(glm::vec3(min.x, max.y, max.z));
+                verts.emplace_back(glm::vec3(max.x, max.y, min.z));
+                verts.emplace_back(glm::vec3(max.x, max.y, max.z));
+
+                return (Actor(verts, {3}, GL_LINES));
             }
 
             inline Actor act(const geom::shape::Triangle& tri_) noexcept
