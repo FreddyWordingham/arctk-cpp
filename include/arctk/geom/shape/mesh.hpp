@@ -134,6 +134,16 @@ namespace arc //! arctk namespace
                 PRE(!serial_.empty());
             }
 
+            /**
+             *  Construct a mesh from a serialised wavefront file and additional transformations.
+             *
+             *  @param  serial_ Serialised wavefront file.
+             *  @param  scale_  Scaling transformation.
+             *  @param  rot_    Rotation transformation.
+             *  @param  trans_  Translation transformation.
+             *
+             *  @pre    serial_ may not be empty.
+             */
             inline Mesh::Mesh(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
               : Mesh(parse_poss(serial_), parse_norms(serial_), parse_faces(serial_), scale_, rot_, trans_)
             {
