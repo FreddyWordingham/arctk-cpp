@@ -63,7 +63,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept
+        inline Domain::Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept
           : Box(min_, max_)
           , _res(res_)
           , _cells(init_cells(res_))
