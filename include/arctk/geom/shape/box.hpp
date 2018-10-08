@@ -155,6 +155,8 @@ namespace arc //! arctk namespace
             /**
              *  Determine if an intersection ocurres between the box and a given point.
              *
+             *  @param  pos_    Position to test.
+             *
              *  @return True if an intersection ocurres.
              */
             inline bool Box::intersect(const vec3& pos_) const noexcept
