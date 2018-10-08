@@ -132,6 +132,11 @@ namespace arc //! arctk namespace
                 return (_norms);
             }
 
+            /**
+             *  Get the normal of the plane of the triangle.
+             *
+             *  @return Normal of the plane of the triangle.
+             */
             inline const vec3& Triangle::plane_norm() const noexcept
             {
                 return (_plane_norm);
