@@ -230,6 +230,14 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
+            /**
+             *  Get the collision distance (if one occurs) of a ray.
+             *
+             *  @param  pos_    Initial position of the ray.
+             *  @param  dir_    Direction of ray travel.
+             *
+             *  @return Optional distance to collision event.
+             */
             inline std::optional<double> Triangle::collision(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 PRE(dir_.normalised());
