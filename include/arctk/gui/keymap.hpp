@@ -88,7 +88,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    key_ must not be reserved quit key.
          */
-        inline void Keymap::bind(const int key_, const std::function<void()>& func_, const bool sticky_, const int state_) noexcept
+        inline void Keymap::bind(const int key_, const std::function<void()>& func_, const bool sticky_, const int state_) noexcept // NOLINT
         {
             PRE(key_ != QUIT_KEY);
 
