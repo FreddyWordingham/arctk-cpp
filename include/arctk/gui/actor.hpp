@@ -440,6 +440,9 @@ namespace arc //! arctk namespace
             inline Actor box(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor cuboid(const glm::vec3& min_ = glm::vec3(-1.0f, -1.0f, -1.0f), const glm::vec3& max_ = glm::vec3(1.0f, 1.0f, 1.0f)) noexcept;
             inline Actor path(const std::vector<Point>& points_) noexcept;
+            inline Actor act(const geom::shape::Box& box_) noexcept;
+            inline Actor act(const geom::shape::Triangle& tri_) noexcept;
+            inline Actor act(const geom::shape::Mesh& mesh_) noexcept;
 
 
 
@@ -840,6 +843,31 @@ namespace arc //! arctk namespace
                 }
 
                 return (Actor(verts, {3, 1, 1}, GL_LINE_STRIP));
+            }
+
+            inline Actor act(const geom::shape::Box& box_) noexcept
+            {
+            }
+
+            inline Actor act(const geom::shape::Triangle& tri_) noexcept
+            {
+                std::vector<glm::vec3> verts;
+                verts.reserve(3 * 2);
+
+                for (size_t i = 0; i < 3; ++i)
+                {
+                    const vec3& pos = tri_.poss()[i];
+                    verts.emplace_back(glm::vec3(static_cast<float>(pos.x), static_cast<float>(pos.y), static_cast<float>(pos.z)));
+
+                    const vec3& norm = tri_.norms()[i];
+                    verts.emplace_back(glm::vec3(static_cast<float>(norm.x), static_cast<float>(norm.y), static_cast<float>(norm.z)));
+                }
+
+                return (Actor(verts, {3, 3}));
+            }
+
+            inline Actor act(const geom::shape::Mesh& mesh_) noexcept
+            {
             }
 
 
