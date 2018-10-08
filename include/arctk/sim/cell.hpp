@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/debug.hpp>
+#include <arctk/geom.hpp>
 #include <arctk/math.hpp>
 
 
@@ -33,7 +34,7 @@ namespace arc //! arctk namespace
         /**
          *  Scene information cell.
          */
-        class Cell
+        class Cell : public geom::shape::Box
         {
             //  == FIELDS ==
           private:
@@ -44,6 +45,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Cell(const vec3& min_, const vec3& max_) noexcept;
 
 
             //  == METHODS ==
@@ -54,6 +56,14 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline Cell::Cell(const vec3& min_, const vec3& max_) noexcept
+          : Box(min_, max_)
+          , _interactions(0.0)
+        {
+            PRE(min_.x <= max_.x);
+            PRE(min_.y <= max_.y);
+            PRE(min_.z <= max_.z);
+        }
 
 
 
