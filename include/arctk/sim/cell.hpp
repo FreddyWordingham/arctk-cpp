@@ -52,6 +52,9 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline double interactions() const noexcept;
+
+            //  -- Settings --
+            inline void add_interactions(double interactions_) const noexcept;
         };
 
 
@@ -74,6 +77,16 @@ namespace arc //! arctk namespace
         inline double Cell::interactions() const noexcept
         {
             return (_interactions);
+        }
+
+
+        //  -- Settings --
+        inline void Cell::add_interactions(const double interactions_) const noexcept
+        {
+            PRE(interactions_ > 0.0);
+            PRE(interactions_ <= 1.0);
+
+            _interactions += interactions_;
         }
 
 
