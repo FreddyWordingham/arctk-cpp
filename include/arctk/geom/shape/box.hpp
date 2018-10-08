@@ -243,7 +243,7 @@ namespace arc //! arctk namespace
              *
              *  @return Optional distance to collision event.
              */
-            inline std::optional<double> Box::collision(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<double> Box::collision(const vec3& pos_, const vec3& dir_) const noexcept // NOLINT
             {
                 PRE(dir_.normalised());
 
