@@ -121,6 +121,13 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a mesh from a serialised wavefront file.
+             *
+             *  @param  serial_ Serialised wavefront file.
+             *
+             *  @pre    serial_ may not be empty.
+             */
             inline Mesh::Mesh(const std::string& serial_) noexcept
               : Mesh(parse_poss(serial_), parse_norms(serial_), parse_faces(serial_))
             {
