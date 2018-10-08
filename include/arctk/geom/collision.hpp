@@ -84,6 +84,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the front hit status of the collision.
+         *
+         *  @return True if the collision ocurred on the front of the surface.
+         */
         inline bool Collision::front() const noexcept
         {
             return (_front);
