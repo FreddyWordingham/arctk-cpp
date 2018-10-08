@@ -152,6 +152,11 @@ namespace arc //! arctk namespace
 
 
             //  -- Intersection --
+            /**
+             *  Determine if an intersection ocurres between the box and a given point.
+             *
+             *  @return True if an intersection ocurres.
+             */
             inline bool Box::intersect(const vec3& pos_) const noexcept
             {
                 return (!((pos_.x < _min.x) || (pos_.x > _max.x) || (pos_.y < _min.y) || (pos_.y > _max.y) || (pos_.z < _min.z) || (pos_.z > _max.z)));
