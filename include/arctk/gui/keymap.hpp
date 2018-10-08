@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
             inline void use_orbit_controls(Camera* cam_) noexcept;
 
             //  -- Operation --
-            inline bool poll(const Window& win_) noexcept;
+            inline bool poll(const Window& win_) noexcept; // NOLINT
         };
 
 
