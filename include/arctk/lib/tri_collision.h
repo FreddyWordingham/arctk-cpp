@@ -9,7 +9,10 @@
 #elif defined(__GNUC__) || defined(__GNUG__)
 
 #pragma GCC diagnostic push
-//#pragma GCC diagnostic ignored "-Wcast-qual"
+#pragma GCC diagnostic ignored "-Wdouble-promotion"
+#pragma GCC diagnostic ignored "-Wpedantic"
+#pragma GCC diagnostic ignored "-Wmissing-declarations"
+#pragma GCC diagnostic ignored "-Wunused-parameter"
 
 #endif
 
