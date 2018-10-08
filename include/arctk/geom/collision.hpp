@@ -104,6 +104,11 @@ namespace arc //! arctk namespace
             return (_dist);
         }
 
+        /**
+         *  Get the normal of the surface at the point of collision.
+         *
+         *  @return Normal of the surface at the point of collision.
+         */
         inline const vec3& Collision::norm() const noexcept
         {
             return (_norm);
