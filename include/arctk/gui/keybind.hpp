@@ -94,7 +94,7 @@ namespace arc //! arctk namespace
         /**
          *  Call the bound function.
          */
-        inline void Keybind::operator()() const noexcept
+        inline void Keybind::operator()() const noexcept // NOLINT
         {
             _func();
         }
