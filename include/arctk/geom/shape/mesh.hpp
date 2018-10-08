@@ -681,6 +681,11 @@ namespace arc //! arctk namespace
                 return (_tris[index_]);
             }
 
+            /**
+             *  Get a const reference to the bounding box of the mesh.
+             *
+             *  @return Const reference to the bounding box of the mesh.
+             */
             inline const Box& Mesh::box() const noexcept
             {
                 return (_box);
