@@ -688,6 +688,13 @@ namespace arc //! arctk namespace
                 return (Actor(verts, {3, 1, 1}, GL_LINE_STRIP));
             }
 
+            /**
+             *  Create an actor from a box shape.
+             *
+             *  @param  box_    Box to create an actor of.
+             *
+             *  @return Box actor.
+             */
             inline Actor shape(const geom::shape::Box& box_) noexcept
             {
                 std::vector<glm::vec3> verts;
