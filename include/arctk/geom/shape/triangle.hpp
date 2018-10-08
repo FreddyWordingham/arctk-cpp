@@ -211,6 +211,13 @@ namespace arc //! arctk namespace
 
 
             //  -- Intersection --
+            /**
+             *  Determine if an intersection ocurres between the triangle and another triangle.
+             *
+             *  @param  tri_    Triangle to test.
+             *
+             *  @return True if an intersection ocurres.
+             */
             inline bool Triangle::intersect(const Triangle& tri_) const noexcept
             {
                 return (collision::tri_tri_overlap_test_3d(std::array<double, 3>({{_poss[index::vertex::ALPHA].x, _poss[index::vertex::ALPHA].y, _poss[index::vertex::ALPHA].z}}).data(),
