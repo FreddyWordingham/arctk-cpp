@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/scene/cell.hpp>
+#include <arctk/scene/domain.hpp>
 
 
 
