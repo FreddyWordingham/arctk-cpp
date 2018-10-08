@@ -179,7 +179,7 @@ namespace arc //! arctk namespace
          *
          *  @return True if the window should remain open.
          */
-        inline bool Keymap::poll(const Window& win_) noexcept
+        inline bool Keymap::poll(const Window& win_) noexcept // NOLINT
         {
             glfwPollEvents();
 
