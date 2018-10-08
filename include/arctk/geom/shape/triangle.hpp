@@ -179,6 +179,15 @@ namespace arc //! arctk namespace
                 return (_poss[index::vertex::GAMMA] + ((_poss[index::vertex::ALPHA] - _poss[index::vertex::GAMMA]) * a) + ((_poss[index::vertex::BETA] - _poss[index::vertex::GAMMA]) * b));
             }
 
+            /**
+             *  Get a random position, and corresponding normal, on the surface of the triangle.
+             *
+             *  @param  rng_    Random number generator.
+             *
+             *  @pre    rng_ may not be nullptr.
+             *
+             *  @return Random position, and corresponding normal, on the surface of the triangle.
+             */
             inline std::pair<vec3, vec3> Triangle::random_pos_and_norm(random::Generator* rng_) const noexcept
             {
                 PRE(rng_ != nullptr);
