@@ -140,11 +140,15 @@ namespace arc //! arctk namespace
                 return ((_min + _max) / 2.0);
             }
 
+            /**
+             *  Get the half width of the box.
+             *
+             *  @return Half width of the box.
+             */
             inline vec3 Box::half_width() const noexcept
             {
                 return ((_max - _min) / 2.0);
             }
-
 
 
             //  -- Intersection --
