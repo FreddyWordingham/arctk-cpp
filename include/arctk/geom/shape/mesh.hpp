@@ -176,6 +176,19 @@ namespace arc //! arctk namespace
                 POST(!_tris.empty());
             }
 
+            /**
+             *  Construct a list of vertex positions, normals and face indicies.
+             *
+             *  @param  poss_   List of vertex positions.
+             *  @param  norm_   List of vertex normals.
+             *  @param  faces_  List of indices forming triangular faces.
+             *
+             *  @pre    poss_ must contain at least three entries.
+             *  @pre    norms_ may not be empty.
+             *  @pre    faces_ may not be empty.
+             *
+             *  @post   _tris may not be empty.
+             */
             inline Mesh::Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) noexcept
               : _tris(init_tris(poss_, norms_, faces_))
               , _areas(init_areas())
