@@ -130,6 +130,11 @@ namespace arc //! arctk namespace
                 return ((_max.x - _min.x) * (_max.y - _min.y) * (_max.z - _min.z));
             }
 
+            /**
+             *  Get the centre of the box.
+             *
+             *  @return Centre of the box.
+             */
             inline vec3 Box::centre() const noexcept
             {
                 return ((_min + _max) / 2.0);
