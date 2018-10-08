@@ -63,9 +63,9 @@ namespace arc //! arctk namespace
             template <typename T, typename... A>
             inline std::string csv(const std::vector<T>& vec_, const A&... vecs_) noexcept
             {
-                (assert(utl::type::is_vector(vecs_)), ...);
+                (PRE(utl::type::is_vector(vecs_)), ...);
                 const size_t rows = vec_.size();
-                (assert(vecs_.size() == rows), ...);
+                (PRE(vecs_.size() == rows), ...);
 
                 std::stringstream stream;
 
