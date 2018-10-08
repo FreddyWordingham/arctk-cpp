@@ -45,8 +45,8 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            const std::array<size_t, 3>                                  _res;
-            std::vector<std::vector<std::vector<std::unique_ptr<Cell>>>> _cells; //!< Three-dimensional vector of cells.
+            const std::array<size_t, 3>                 _res;
+            std::vector<std::vector<std::vector<Cell>>> _cells; //!< Three-dimensional vector of cells.
 
 
             //  == INSTANTIATION ==
