@@ -8,6 +8,12 @@
 
 
 
+//  == GUARD ==
+#ifndef ARCTK_CONSTS_FORMAT_HPP
+#define ARCTK_CONSTS_FORMAT_HPP
+
+
+
 //  == PRAGMAS ==
 #if defined(__clang__)
 
@@ -15,12 +21,6 @@
 #pragma clang diagnostic ignored "-Wdocumentation"
 
 #endif
-
-
-
-//  == GUARD ==
-#ifndef ARCTK_CONSTS_FORMAT_HPP
-#define ARCTK_CONSTS_FORMAT_HPP
 
 
 
@@ -79,14 +79,14 @@ namespace arc //! arctk namespace
 
 
 
-//  == GUARD END ==
-#endif // ARCTK_CONSTS_FORMAT_HPP
-
-
-
 //  == PRAGMAS ==
 #if defined(__clang__)
 
 #pragma GCC diagnostic pop
 
 #endif
+
+
+
+//  == GUARD END ==
+#endif // ARCTK_CONSTS_FORMAT_HPP
