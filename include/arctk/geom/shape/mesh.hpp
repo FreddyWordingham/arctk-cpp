@@ -711,6 +711,11 @@ namespace arc //! arctk namespace
                 return (_num_norms);
             }
 
+            /**
+             *  Get the number of edges used by the mesh.
+             *
+             *  @return Number of edges used by the mesh.
+             */
             inline size_t Mesh::num_edges() const noexcept
             {
                 return (_num_edges);
