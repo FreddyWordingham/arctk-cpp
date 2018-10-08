@@ -9759,10 +9759,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #if defined(__clang__)
 
-#pragma GCC diagnostic pop
+#pragma clang diagnostic pop
 
 #elif defined(__GNUC__) || defined(__GNUG__)
 
-#pragma clang diagnostic pop
+#pragma GCC diagnostic pop
 
 #endif
