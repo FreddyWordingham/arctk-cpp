@@ -61,6 +61,16 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a collision event.
+         *
+         *  @param  front_  True if the collision ocurred on the front of the surface.
+         *  @param  dist_   Distance to the collision.
+         *  @param  norm_   Normal of the surface at the point of collision.
+         *
+         *  @pre    dist_ must be positive.
+         *  @pre    norm_ must be normalised.
+         */
         inline Collision::Collision(const bool front_, const double dist_, const vec3& norm_) noexcept
           : _front(front_)
           , _dist(dist_)
