@@ -777,6 +777,13 @@ namespace arc //! arctk namespace
 
 
             //  -- Intersection --
+            /**
+             *  Determine if an intersection ocurres between the box and a triangle.
+             *
+             *  @param  tri_    Triangle to test.
+             *
+             *  @return True if an intersection ocurres.
+             */
             inline bool Mesh::intersect(const Triangle& tri_) const noexcept
             {
                 if (!_box.intersect(tri_))
