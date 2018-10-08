@@ -757,6 +757,13 @@ namespace arc //! arctk namespace
                 return (Actor(verts, {3, 3}));
             }
 
+            /**
+             *  Create an actor from a triangle mesh shape.
+             *
+             *  @param  mesh_   Triangle mesh to create an actor of.
+             *
+             *  @return Triangle mesh actor.
+             */
             inline Actor shape(const geom::shape::Mesh& mesh_) noexcept
             {
                 std::vector<glm::vec3> verts;
