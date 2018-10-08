@@ -554,7 +554,7 @@ namespace arc //! arctk namespace
              *  Initialise the number of vertex positions used by the mesh
              *
              *  @param  num_poss_   Maximum number of vertex positions.
-             *  @param  faces_  List of indices forming triangular faces.
+             *  @param  faces_      List of indices forming triangular faces.
              *
              *  @return Number of vertex positions used by the mesh.
              */
@@ -584,6 +584,14 @@ namespace arc //! arctk namespace
                 return (num_verts);
             }
 
+            /**
+             *  Initialise the number of vertex normals used by the mesh
+             *
+             *  @param  num_norms_  Maximum number of vertex normals.
+             *  @param  faces_      List of indices forming triangular faces.
+             *
+             *  @return Number of vertex normals used by the mesh.
+             */
             inline size_t Mesh::init_num_norms(const size_t num_norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
             {
                 std::vector<bool> used(num_norms_, false);
