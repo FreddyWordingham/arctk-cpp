@@ -208,6 +208,15 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
+            /**
+             *  Parse the list of vertex position from a serialised wavefront file.
+             *
+             *  @param  serial_ Serialised wavefront file.
+             *
+             *  @pre    serial_ may not be empty.
+             *
+             *  @return List of vertex position forming the mesh.
+             */
             inline std::vector<vec3> Mesh::parse_poss(const std::string& serial_) const noexcept
             {
                 PRE(!serial_.empty());
