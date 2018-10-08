@@ -154,7 +154,7 @@ namespace arc //! arctk namespace
              *  Construct a list of vertex positions, normals and face indicies, and additional transformations.
              *
              *  @param  poss_   List of vertex positions.
-             *  @param  norm_   List of vertex normals.
+             *  @param  norms_  List of vertex normals.
              *  @param  faces_  List of indices forming triangular faces.
              *  @param  scale_  Scaling transformation.
              *  @param  rot_    Rotation transformation.
