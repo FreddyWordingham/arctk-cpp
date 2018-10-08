@@ -215,6 +215,8 @@ namespace arc //! arctk namespace
              *
              *  @pre    serial_ may not be empty.
              *
+             *  @post   poss must contain at least three entries.
+             *
              *  @return List of vertex position forming the mesh.
              */
             inline std::vector<vec3> Mesh::parse_poss(const std::string& serial_) const noexcept
