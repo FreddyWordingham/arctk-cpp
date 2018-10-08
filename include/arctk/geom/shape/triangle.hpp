@@ -154,6 +154,15 @@ namespace arc //! arctk namespace
 
 
             //  -- Sampling --
+            /**
+             *  Get a random position on the surface of the triangle.
+             *
+             *  @param  rng_    Random number generator.
+             *
+             *  @pre    rng_ may not be nullptr.
+             *
+             *  @return Random position on the surface of the triangle.
+             */
             inline vec3 Triangle::random_pos(random::Generator* rng_) const noexcept
             {
                 PRE(rng_ != nullptr);
