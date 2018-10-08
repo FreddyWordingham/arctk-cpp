@@ -118,7 +118,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    cam_ may not be nullptr.
          */
-        inline void Keymap::use_fly_controls(Camera* const cam_) noexcept
+        inline void Keymap::use_fly_controls(Camera* const cam_) noexcept // NOLINT
         {
             PRE(cam_ != nullptr);
 
