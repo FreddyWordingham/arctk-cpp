@@ -665,6 +665,15 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get a const reference to a triangle forming the mesh.
+             *
+             *  @param  index_  Index of the triangle to retrieve.
+             *
+             *  @pre    index_ must be less than the size of _tris.
+             *
+             *  @return Const reference to a triangle forming the mesh.
+             */
             inline const Triangle& Mesh::tri(const size_t index_) const noexcept
             {
                 PRE(index_ < _tris.size());
