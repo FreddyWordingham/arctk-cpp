@@ -16,9 +16,11 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <utility>
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/equip.hpp>
 #include <arctk/math.hpp>
 #include <arctk/tree/node.hpp>
 
@@ -43,6 +45,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Content --
+                const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle>> _ents;
 
 
                 //  == INSTANTIATION ==
