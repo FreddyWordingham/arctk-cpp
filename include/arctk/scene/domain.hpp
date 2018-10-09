@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
             const vec3                                        _cell_size;
 
             //  -- Tree --
-
+            const std::unique_ptr<tree::Node> _tree;
 
 
             //  == INSTANTIATION ==
