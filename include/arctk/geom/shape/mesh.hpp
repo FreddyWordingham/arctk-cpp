@@ -684,7 +684,7 @@ namespace arc //! arctk namespace
                 return (_tris[index_]);
             }
 
-            inline std::vector<const Triangle*> tri_list() const noexcept
+            inline std::vector<const Triangle*> Mesh::tri_list() const noexcept
             {
                 std::vector<const Triangle*> tris;
                 tris.reserve(_tris.size());
