@@ -85,7 +85,7 @@ namespace arc //! arctk namespace
 
         inline const vec3& Photon::dir() const noexcept
         {
-            return (_pos);
+            return (_dir);
         }
 
 
