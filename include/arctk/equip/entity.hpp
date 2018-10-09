@@ -36,11 +36,6 @@ namespace arc //! arctk namespace
          */
         class Entity : public geom::shape::Mesh
         {
-            //  == FIELDS ==
-          private:
-            //  -- Data --
-
-
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
