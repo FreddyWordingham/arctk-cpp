@@ -22,6 +22,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/equip.hpp>
+#include <arctk/geom.hpp>
 #include <arctk/math.hpp>
 #include <arctk/tree/node.hpp>
 
@@ -65,6 +66,10 @@ namespace arc //! arctk namespace
 
                 //  -- Retrieval --
                 inline const node::Leaf& leaf(const vec3& pos_) const noexcept override;
+
+                //  -- Collision --
+                inline std::optional<std::pair<double, const Equip::Entity&>>          collision(const vec3& pos_, const vec3& dir_) const noexcept;
+                inline std::optional<std::pair<geom::Collision, const Equip::Entity&>> collision_info(const vec3& pos_, const vec3& dir_) const noexcept;
             };
 
 
