@@ -92,16 +92,19 @@ namespace arc //! arctk namespace
         {
             std::vector<std::pair<const equip::Entity*, std::vector<const geom::shape::Triangle*>>> ent_tris;
             ent_tris.reserve(ents_.size());
-
+            std::cout << "Num ents: " << ents_.size() << '\n';
             size_t                 num_tris = 0;
             const geom::shape::Box box(min_, max_);
-            for (size_t i = 0; i < ent_tris.size(); ++i)
+            for (size_t i = 0; i < ents_.size(); ++i)
             {
                 bool entry = false;
+                std::cout << i << "\t# faces\t" << ents_[i]->num_faces() << '\n';
                 for (size_t j = 0; j < ents_[i]->num_faces(); ++j)
                 {
                     if (box.intersect(ents_[i]->tri(j)))
                     {
+                        std::cout << "muh triggers...\n";
+
                         if (!entry)
                         {
                             entry = true;
@@ -114,6 +117,8 @@ namespace arc //! arctk namespace
                 }
             }
 
+            std::cout << "min " << min_ << '\n';
+            std::cout << "max " << max_ << '\n';
             std::cout << "num_tri " << num_tris << '\n';
             if ((max_depth_ == 0) || (num_tris <= tar_tris_))
             {
