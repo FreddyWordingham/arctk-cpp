@@ -58,12 +58,12 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Branch(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& ent_tris_, size_t cur_depth_, size_t max_depth_, size_t tar_tris_) noexcept;
+                inline Branch(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity*, std::vector<const geom::shape::Triangle*>>>& ent_tris_, size_t cur_depth_, size_t max_depth_, size_t tar_tris_) noexcept;
 
               private:
                 //  -- Initialisation --
-                inline std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> init_childs(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& ent_tris_, size_t cur_depth_,
-                                                                                                      size_t max_depth_, size_t tar_tris_) const noexcept;
+                inline std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> init_childs(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity*, std::vector<const geom::shape::Triangle*>>>& ent_tris_,
+                                                                                                      size_t cur_depth_, size_t max_depth_, size_t tar_tris_) const noexcept;
 
 
                 //  == METHODS ==
@@ -82,7 +82,8 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Branch::Branch(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& ent_tris_, const size_t cur_depth_, const size_t max_depth_, const size_t tar_tris_) noexcept
+            inline Branch::Branch(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity*, std::vector<const geom::shape::Triangle*>>>& ent_tris_, const size_t cur_depth_, const size_t max_depth_,
+                                  const size_t tar_tris_) noexcept
               : Node(min_, max_, cur_depth_)
               , _centre((min_ + max_) / 2.0)
               , _childs(init_childs(min_, max_, ent_tris_, cur_depth_, max_depth_, tar_tris_))
@@ -95,7 +96,7 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
-            inline std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> Branch::init_childs(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& ent_tris_,
+            inline std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> Branch::init_childs(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity*, std::vector<const geom::shape::Triangle*>>>& ent_tris_,
                                                                                                           const size_t cur_depth_, const size_t max_depth_, const size_t tar_tris_) const noexcept
             {
                 std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> childs;
