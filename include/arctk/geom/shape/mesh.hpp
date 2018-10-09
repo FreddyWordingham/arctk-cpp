@@ -98,13 +98,14 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline const Triangle& tri(size_t index_) const noexcept;
-                inline const Box&      box() const noexcept;
-                inline size_t          num_verts() const noexcept;
-                inline size_t          num_norms() const noexcept;
-                inline size_t          num_edges() const noexcept;
-                inline size_t          num_faces() const noexcept;
-                inline bool            closed() const noexcept;
+                inline const Triangle&              tri(size_t index_) const noexcept;
+                inline std::vector<const Triangle*> tri_list() const noexcept;
+                inline const Box&                   box() const noexcept;
+                inline size_t                       num_verts() const noexcept;
+                inline size_t                       num_norms() const noexcept;
+                inline size_t                       num_edges() const noexcept;
+                inline size_t                       num_faces() const noexcept;
+                inline bool                         closed() const noexcept;
 
                 //  -- Sampling --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept;
@@ -681,6 +682,19 @@ namespace arc //! arctk namespace
                 PRE(index_ < _tris.size());
 
                 return (_tris[index_]);
+            }
+
+            inline std::vector<const Triangle*> tri_list() const noexcept
+            {
+                std::vector<const Triangle*> tris;
+                tris.reserve(_tris.size());
+
+                for (size_t i = 0; i < _tris.size(); ++i)
+                {
+                    tris.emplace_back(&_tris[i]);
+                }
+
+                return (tris);
             }
 
             /**
