@@ -143,6 +143,7 @@ namespace arc //! arctk namespace
 
         inline std::vector<geom::shape::Box> Root::boxes() const noexcept
         {
+            return (_trunk->boxes());
         }
 
 
