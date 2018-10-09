@@ -55,7 +55,6 @@ namespace arc //! arctk namespace
                 const vec3 _plane_norm; //!< Triangle plane normal.
 
 
-
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
