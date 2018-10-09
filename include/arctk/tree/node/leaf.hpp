@@ -53,9 +53,11 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
 
 
+
                 //  == METHODS ==
               public:
-                //  -- Getters --
+                //  -- Retrieval --
+                const node::Leaf& leaf(const vec3& pos_) const noexcept override;
             };
 
 
@@ -66,7 +68,11 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
-            //  -- Getters --
+            //  -- Retrieval --
+            const node::Leaf& Leaf::leaf(const vec3& pos_) const noexcept
+            {
+                return (*this);
+            }
 
 
 
