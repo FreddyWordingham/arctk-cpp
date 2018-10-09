@@ -134,7 +134,7 @@ namespace arc //! arctk namespace
 
                     if (tri_col && (!coll || (tri_col.value() < coll.value().first)))
                     {
-                        coll = std::optional<std::pair<double, const equip::Entity*>>(std::pair<double, const equip::Entity*>(tri_col.value(), *_tris[i].first));
+                        coll = std::optional<std::pair<double, const equip::Entity*>>(std::pair<double, const equip::Entity*>(tri_col.value(), &_tris[i].first));
                     }
                 }
 
