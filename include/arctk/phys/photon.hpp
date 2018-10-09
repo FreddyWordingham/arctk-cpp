@@ -97,6 +97,7 @@ namespace arc //! arctk namespace
 
         inline double Photon::energy() const noexcept
         {
+            return (_energy);
         }
 
 
