@@ -47,6 +47,10 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Positioning --
+                const vec3 _centre; //!< Centre coordinate of the node.
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
