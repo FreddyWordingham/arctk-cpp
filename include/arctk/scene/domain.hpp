@@ -24,7 +24,7 @@
 #include <arctk/geom.hpp>
 #include <arctk/index.hpp>
 #include <arctk/math.hpp>
-#include <arctk/scene/cell.hpp>
+#include <arctk/phys/cell.hpp>
 
 
 
