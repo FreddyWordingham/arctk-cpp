@@ -74,7 +74,11 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline size_t depth() const noexcept;
+            inline size_t                         depth() const noexcept;
+            virtual size_t                        max_depth() const noexcept  = 0;
+            virtual size_t                        max_shapes() const noexcept = 0;
+            virtual size_t                        num_nodes() const noexcept  = 0;
+            virtual std::vector<geom::shape::Box> boxes() const noexcept      = 0;
 
             //  -- Retrieval --
             virtual const node::Leaf& leaf(const vec3& pos_) const noexcept = 0;
