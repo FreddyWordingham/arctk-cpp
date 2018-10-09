@@ -49,6 +49,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Photon(const vec3& pos_, const vec3& dir_, double wavelength_, double energy_) const noexcept;
 
 
             //  == METHODS ==
@@ -60,6 +61,16 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline Photon::Photon(const vec3& pos_, const vec3& dir_, const double wavelength_, const double energy_) const noexcept
+          : _pos(pos_)
+          , _dir(dir_)
+          , _wavelength(wavelength_)
+          , _energy(energy_)
+        {
+            PRE(dir_.normalised());
+            PRE(wavelength_ > 0.0);
+            PRE(energy > 0.0);
+        }
 
 
 
