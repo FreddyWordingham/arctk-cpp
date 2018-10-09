@@ -157,7 +157,7 @@ namespace arc //! arctk namespace
 
                     if (tri_coll && (!coll || (tri_coll.value().dist() < coll.value().second.dist())))
                     {
-                        coll = std::optional<std::pair<std::reference_wrapper<const equip::Entity>, geom::Collision>>(std::pair<std::reference_wrapper<const equip::Entity>, geom::Collision>(tri_coll.value(), std::ref(_tris[i].first)));
+                        coll = std::optional<std::pair<std::reference_wrapper<const equip::Entity>, geom::Collision>>(std::pair<std::reference_wrapper<const equip::Entity>, geom::Collision>(std::ref(_tris[i].first), tri_coll.value()));
                     }
                 }
 
