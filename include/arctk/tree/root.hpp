@@ -61,7 +61,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const Node*                   trunk() const noexcept;
+            inline const vec3&                   min() const noexcept;
+            inline const vec3&                   max() const noexcept;
             inline size_t                        max_depth() const noexcept;
             inline size_t                        max_tris() const noexcept;
             inline size_t                        num_nodes() const noexcept;
@@ -128,9 +129,14 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        inline const Node* Root::trunk() const noexcept
+        inline const vec3& Root::min() const noexcept
         {
-            return (_trunk.get());
+            return (_trunk->min());
+        }
+
+        inline const vec3& Root::max() const noexcept
+        {
+            return (_trunk->max());
         }
 
         inline size_t Root::max_depth() const noexcept
