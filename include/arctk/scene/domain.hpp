@@ -61,6 +61,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline size_t num_cells() const noexcept;
         };
 
 
@@ -121,6 +123,10 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        inline size_t Domain::num_cells() const noexcept
+        {
+            return (res_[index::dim::cartesian::X] * res_[index::dim::cartesian::Y] * res_[index::dim::cartesian::Z]);
+        }
 
 
 
