@@ -122,7 +122,7 @@ namespace arc //! arctk namespace
 
                                 for (size_t m = 0; m < ent_tris_[l].second.size(); ++m)
                                 {
-                                    if (box.intersect(ent_tris_[l].second[m]))
+                                    if (box.intersect(*ent_tris_[l].second[m]))
                                     {
                                         if (!ent_intersect)
                                         {
@@ -138,7 +138,7 @@ namespace arc //! arctk namespace
                             size_t num_tris = 0;
                             for (size_t i = 0; i < ent_tris.size(); ++i)
                             {
-                                num_tris += ent_tris[i].size();
+                                num_tris += ent_tris[i].second.size();
                             }
 
                             if (depth_limit_reached || (num_tris <= tar_tris_))
