@@ -19,6 +19,8 @@
 #include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
+#include <arctk/phys.hpp>
+#include <arctk/scene.hpp>
 
 
 
@@ -57,6 +59,12 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Collision --
+            inline void hit(phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept;
+
+          private:
+            //  -- Collision --
+            virtual void hit_front() noexcept = 0;
+            virtual void hit_back() noexcept  = 0;
         };
 
 
