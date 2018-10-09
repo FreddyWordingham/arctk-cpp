@@ -19,7 +19,7 @@ arctk_search() {
 
     cd $ARCTK_DIR/include/arctk >/dev/null
 
-    grep -r $1 .
+    grep -r "$1" .
 
     cd - >/dev/null
 }
