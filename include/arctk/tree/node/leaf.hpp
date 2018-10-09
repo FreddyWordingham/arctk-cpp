@@ -54,10 +54,6 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& tris_, size_t cur_depth_) noexcept;
 
-              private:
-                //  -- Initialisation --
-                inline std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> init_tris(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& tris_) const noexcept;
-
 
                 //  == METHODS ==
               public:
@@ -71,7 +67,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& tris_, const size_t cur_depth_) noexcept
               : Node(min_, max_, cur_depth_)
-              , _tris(init_tris(min_, max_, tris_))
+              , _tris(tris_)
             {
                 PRE(min_.x <= max_.x);
                 PRE(min_.y <= max_.y);
@@ -82,24 +78,6 @@ namespace arc //! arctk namespace
                 {
                     POST(intersect(_tris[i].second));
                 }
-            }
-
-
-            //  -- Initialisation --
-            inline std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> Leaf::init_tris(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& tris_) const noexcept
-            {
-                std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> tris;
-
-                const Box box(min_, max_);
-                for (size_t i = 0; i < tris_.size(); ++i)
-                {
-                    if (box.intersect(tris_[i].second))
-                    {
-                        tris.emplace_back(tris_[i]);
-                    }
-                }
-
-                return (tris);
             }
 
 
