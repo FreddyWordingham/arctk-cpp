@@ -203,6 +203,22 @@ namespace arc //! arctk namespace
 
             inline std::vector<geom::shape::Box> Branch::boxes() const noexcept
             {
+                std::vector<geom::shape::Box> boxes;
+
+                for (size_t i = 0; i <= 1; ++i)
+                {
+                    for (size_t j = 0; j <= 1; ++j)
+                    {
+                        for (size_t k = 0; k <= 1; ++k)
+                        {
+                            std::vector<geom::shape::Box> child_boxes = _childs[i][j][k]->boxes();
+
+                            utl::manip::move_append(boxes, child_boxes);
+                        }
+                    }
+                }
+
+                return (boxes);
             }
 
 
