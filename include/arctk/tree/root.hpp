@@ -131,6 +131,7 @@ namespace arc //! arctk namespace
 
         inline size_t Root::max_depth() const noexcept
         {
+            return (_trunk->max_depth());
         }
 
         inline size_t Root::max_tris() const noexcept
