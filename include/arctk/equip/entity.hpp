@@ -56,6 +56,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Collision --
         };
 
 
