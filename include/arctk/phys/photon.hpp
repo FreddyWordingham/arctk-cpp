@@ -37,7 +37,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
-            //  -- Properties --
+            //  -- Particle --
+            vec3 _pos;
+
+            //  -- Photon --
             const double _wavelength; //!< Wavelength of the photon.
             const double _energy;     //!< Energy of the packet.
 
