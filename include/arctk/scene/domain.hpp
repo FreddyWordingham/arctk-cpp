@@ -47,6 +47,7 @@ namespace arc //! arctk namespace
             //  -- Data --
             const std::array<size_t, 3>                 _res;
             std::vector<std::vector<std::vector<Cell>>> _cells; //!< Three-dimensional vector of cells.
+            const vec3                                  _cell_size;
 
 
             //  == INSTANTIATION ==
