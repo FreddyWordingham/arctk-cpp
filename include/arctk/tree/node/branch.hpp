@@ -185,6 +185,20 @@ namespace arc //! arctk namespace
 
             inline size_t Branch::num_nodes() const noexcept
             {
+                size_t num_nodes = 0;
+
+                for (size_t i = 0; i <= 1; ++i)
+                {
+                    for (size_t j = 0; j <= 1; ++j)
+                    {
+                        for (size_t k = 0; k <= 1; ++k)
+                        {
+                            num_nodes += _childs[i][j][k]->num_nodes();
+                        }
+                    }
+                }
+
+                return (num_nodes + 1);
             }
 
             inline std::vector<geom::shape::Box> Branch::boxes() const noexcept
