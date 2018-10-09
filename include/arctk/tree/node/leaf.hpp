@@ -139,6 +139,19 @@ namespace arc //! arctk namespace
             {
                 std::optional<std::pair<const equip::Entity*, double>> coll(std::nullopt);
 
+                for (size_t i = 0; i < _ent_tris.size(); ++i)
+                {
+                    for (size_t j = 0; j < _ent_tris[i].second.size(); ++j)
+                    {
+                        std::optional<double> tri_coll = _ent_tris[i].second[j]->collision(pos_, dir_);
+
+                        if (tri_coll && (!coll || (tri_coll.value() < coll.value().second)))
+                        {
+                            coll = std::optional<std::pair<const equip::Entity*, double>>(std::pair<const equip::Entity*, double>(_ent_tris[i].first, tri_coll.value()));
+                        }
+                    }
+                }
+
                 return (coll);
             }
 
