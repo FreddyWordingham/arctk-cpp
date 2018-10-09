@@ -75,6 +75,7 @@ namespace arc //! arctk namespace
           : Box(min_, max_)
           , _res(res_)
           , _cells(init_cells(min_, max_, res_))
+          , _cell_size((max_.x - min_.x) / res_[index::dim::cartesian::X], (max_.y - min_.y) / res_[index::dim::cartesian::Y], (max_.z - min_.z) / res_[index::dim::cartesian::Z])
         {
             PRE(min_.x <= max_.x);
             PRE(min_.y <= max_.y);
