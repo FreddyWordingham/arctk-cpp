@@ -41,6 +41,7 @@ namespace arc //! arctk namespace
               private:
                 //  -- Reflectance --
                 const double _front_ref;
+                const double _back_ref;
 
 
 
