@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
         class Node : public geom::shape::Box
         {
             //  == FIELDS ==
-          private:
+          protected:
             //  -- Depth --
             const size_t _depth;
 
