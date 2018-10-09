@@ -21,7 +21,6 @@
 #include <arctk/math.hpp>
 #include <arctk/phys.hpp>
 #include <arctk/random.hpp>
-#include <arctk/scene.hpp>
 
 
 

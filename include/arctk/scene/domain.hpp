@@ -25,6 +25,7 @@
 #include <arctk/index.hpp>
 #include <arctk/math.hpp>
 #include <arctk/phys/cell.hpp>
+#include <arctk/tree.hpp>
 
 
 
@@ -48,6 +49,9 @@ namespace arc //! arctk namespace
             const std::array<size_t, 3>                       _res;
             std::vector<std::vector<std::vector<phys::Cell>>> _cells; //!< Three-dimensional vector of cells.
             const vec3                                        _cell_size;
+
+            //  -- Tree --
+
 
 
             //  == INSTANTIATION ==
