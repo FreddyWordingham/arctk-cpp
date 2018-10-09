@@ -20,6 +20,7 @@
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
 #include <arctk/phys.hpp>
+#include <arctk/random.hpp>
 #include <arctk/scene.hpp>
 
 
@@ -59,12 +60,12 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Collision --
-            inline void hit(phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept;
+            inline void hit(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept;
 
           private:
             //  -- Collision --
-            virtual void hit_front(phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept = 0;
-            virtual void hit_back(phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept  = 0;
+            virtual void hit_front(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept = 0;
+            virtual void hit_back(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept  = 0;
         };
 
 
@@ -87,15 +88,15 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Collision --
-        inline void Entity::hit(phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept
+        inline void Entity::hit(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept
         {
             if (coll_.front())
             {
-                hit_front(phot_, cell_, coll_);
+                hit_front(rng_, phot_, cell_, coll_);
             }
             else
             {
-                hit_back(phot_, cell_, coll_);
+                hit_back(rng_, phot_, cell_, coll_);
             }
         }
 
