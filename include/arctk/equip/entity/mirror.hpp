@@ -18,6 +18,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/equip/entity.hpp>
+#include <arctk/phys.hpp>
 
 
 
@@ -53,8 +54,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               private:
                 //  -- Collision --
-                inline bool hit_front(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept override;
-                inline bool hit_back(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept override;
+                inline bool hit_front(random::Generator* rng_, phys::Photon* phot_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
+                inline bool hit_back(random::Generator* rng_, phys::Photon* phot_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
             };
 
 
@@ -74,14 +75,14 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Collision --
-            inline bool Mirror::hit_front(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept
+            inline bool Mirror::hit_front(random::Generator* rng_, phys::Photon* phot_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
                 phot_->move(coll_.dist());
 
                 return (false);
             }
 
-            inline bool Mirror::hit_back(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept
+            inline bool Mirror::hit_back(random::Generator* rng_, phys::Photon* phot_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
                 phot_->move(coll_.dist());
 

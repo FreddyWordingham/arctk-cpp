@@ -45,9 +45,9 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            const std::array<size_t, 3>                 _res;
-            std::vector<std::vector<std::vector<Cell>>> _cells; //!< Three-dimensional vector of cells.
-            const vec3                                  _cell_size;
+            const std::array<size_t, 3>                       _res;
+            std::vector<std::vector<std::vector<phys::Cell>>> _cells; //!< Three-dimensional vector of cells.
+            const vec3                                        _cell_size;
 
 
             //  == INSTANTIATION ==
@@ -57,14 +57,14 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Initialisation --
-            inline std::vector<std::vector<std::vector<Cell>>> init_cells(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept;
+            inline std::vector<std::vector<std::vector<phys::Cell>>> init_cells(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept;
 
 
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline size_t      num_cells() const noexcept;
-            inline const Cell& cell(const vec3& pos_) const noexcept;
+            inline size_t            num_cells() const noexcept;
+            inline const phys::Cell& cell(const vec3& pos_) const noexcept;
         };
 
 
@@ -87,7 +87,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
-        inline std::vector<std::vector<std::vector<Cell>>> Domain::init_cells(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept
+        inline std::vector<std::vector<std::vector<phys::Cell>>> Domain::init_cells(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept
         {
             PRE(min_.x <= max_.x);
             PRE(min_.y <= max_.y);
@@ -98,7 +98,7 @@ namespace arc //! arctk namespace
 
             const vec3 size((max_.x - min_.x) / res_[index::dim::cartesian::X], (max_.y - min_.y) / res_[index::dim::cartesian::Y], (max_.z - min_.z) / res_[index::dim::cartesian::Z]);
 
-            std::vector<std::vector<std::vector<Cell>>> cells(res_[index::dim::cartesian::X], std::vector<std::vector<Cell>>(res_[index::dim::cartesian::Y]));
+            std::vector<std::vector<std::vector<phys::Cell>>> cells(res_[index::dim::cartesian::X], std::vector<std::vector<phys::Cell>>(res_[index::dim::cartesian::Y]));
             for (size_t i = 0; i < res_[index::dim::cartesian::X]; ++i)
             {
                 const double x = min_.x + (i * size.x);
@@ -111,7 +111,7 @@ namespace arc //! arctk namespace
                     {
                         const double z = min_.z + (k * size.z);
 
-                        cells[i][j].emplace_back(Cell(vec3(x, y, z), vec3(x, y, z) + size));
+                        cells[i][j].emplace_back(phys::Cell(vec3(x, y, z), vec3(x, y, z) + size));
                     }
                 }
             }
@@ -128,7 +128,7 @@ namespace arc //! arctk namespace
             return (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]);
         }
 
-        inline const Cell& Domain::cell(const vec3& pos_) const noexcept
+        inline const phys::Cell& Domain::cell(const vec3& pos_) const noexcept
         {
             PRE(intersect(pos_));
 
