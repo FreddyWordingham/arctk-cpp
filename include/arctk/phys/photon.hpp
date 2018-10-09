@@ -55,6 +55,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline const vec3& pos() const noexcept;
+            inline const vec3& dir() const noexcept;
         };
 
 
@@ -70,6 +72,20 @@ namespace arc //! arctk namespace
             PRE(dir_.normalised());
             PRE(wavelength_ > 0.0);
             PRE(energy_ > 0.0);
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        inline const vec3& Photon::pos() const noexcept
+        {
+            return (_pos);
+        }
+
+        inline const vec3& Photon::dir() const noexcept
+        {
+            return (_pos);
         }
 
 
