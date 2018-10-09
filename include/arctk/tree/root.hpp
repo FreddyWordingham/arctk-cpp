@@ -61,6 +61,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline const Node*                   trunk() const noexcept;
             inline size_t                        max_depth() const noexcept;
             inline size_t                        max_tris() const noexcept;
             inline size_t                        num_nodes() const noexcept;
@@ -112,11 +113,14 @@ namespace arc //! arctk namespace
                 }
             }
 
+            std::cout << "num_tri " << num_tris << '\n';
             if ((max_depth_ == 0) || (num_tris <= tar_tris_))
             {
+                std::cout << "leaf<>\n";
                 return (std::make_unique<node::Leaf>(min_, max_, ent_tris, 0));
             }
 
+            std::cout << "branch<>\n";
             return (std::make_unique<node::Branch>(min_, max_, ent_tris, 0, max_depth_, tar_tris_));
         }
 
@@ -124,6 +128,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        inline const Node* Root::trunk() const noexcept
+        {
+            return (_trunk.get());
+        }
+
         inline size_t Root::max_depth() const noexcept
         {
             return (_trunk->max_depth());
