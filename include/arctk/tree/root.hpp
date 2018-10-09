@@ -15,10 +15,14 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <memory>
+
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
+#include <arctk/tree/node.hpp>
 
 
 
@@ -39,6 +43,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Depth --
+            const std::unique_ptr<Node>& _trunk;
 
 
             //  == INSTANTIATION ==
