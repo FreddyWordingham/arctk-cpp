@@ -37,10 +37,17 @@ namespace arc //! arctk namespace
              */
             class Mirror : public Entity
             {
+                //  == FIELDS ==
+              private:
+                //  -- Reflectance --
+                const double _front_ref;
+
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Entity(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept;
+                inline Mirror(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, double front_ref_, double back_ref_) noexcept;
 
 
                 //  == METHODS ==
