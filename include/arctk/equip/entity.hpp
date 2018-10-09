@@ -89,6 +89,14 @@ namespace arc //! arctk namespace
         //  -- Collision --
         inline void Entity::hit(phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept
         {
+            if (coll_.front())
+            {
+                hit_front(phot_, cell_, coll_);
+            }
+            else
+            {
+                hit_back(phot_, cell_, coll_);
+            }
         }
 
 
