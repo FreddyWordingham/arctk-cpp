@@ -69,6 +69,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Retrieval --
+                const node::Leaf& leaf(const vec3& pos_) const noexcept;
             };
 
 
@@ -135,6 +136,12 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Retrieval --
+            const node::Leaf& Branch::leaf(const vec3& pos_) const noexcept
+            {
+                PRE(contains(pos_));
+
+                return (_childs[(pos_.x < _centre.x) ? 0 : 1][(pos_.y < _centre.y) ? 0 : 1][(pos_.z < _centre.z) ? 0 : 1]->leaf(pos_));
+            }
 
 
 
