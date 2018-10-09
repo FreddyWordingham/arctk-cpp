@@ -138,7 +138,7 @@ namespace arc //! arctk namespace
             //  -- Retrieval --
             const node::Leaf& Branch::leaf(const vec3& pos_) const noexcept
             {
-                PRE(contains(pos_));
+                PRE(intersect(pos_));
 
                 return (_childs[(pos_.x < _centre.x) ? 0 : 1][(pos_.y < _centre.y) ? 0 : 1][(pos_.z < _centre.z) ? 0 : 1]->leaf(pos_));
             }
