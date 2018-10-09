@@ -68,8 +68,8 @@ namespace arc //! arctk namespace
                 inline const node::Leaf& leaf(const vec3& pos_) const noexcept override;
 
                 //  -- Collision --
-                inline std::optional<std::pair<std::reference_wrapper<const equip::Entity>, double>>          ent_collision(const vec3& pos_, const vec3& dir_) const noexcept;
-                inline std::optional<std::pair<std::reference_wrapper<const equip::Entity>, geom::Collision>> ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept;
+                inline std::optional<std::pair<const equip::Entity*, double>>          ent_collision(const vec3& pos_, const vec3& dir_) const noexcept;
+                inline std::optional<std::pair<const equip::Entity*, geom::Collision>> ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept;
             };
 
 
@@ -127,16 +127,16 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
-            inline std::optional<std::pair<std::reference_wrapper<const equip::Entity>, double>> Leaf::ent_collision(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<std::pair<const equip::Entity*, double>> Leaf::ent_collision(const vec3& pos_, const vec3& dir_) const noexcept
             {
-                std::optional<std::pair<std::reference_wrapper<const equip::Entity>, double>> coll(std::nullopt);
+                std::optional<std::pair<const equip::Entity*, double>> coll(std::nullopt);
 
                 return (coll);
             }
 
-            inline std::optional<std::pair<std::reference_wrapper<const equip::Entity>, geom::Collision>> Leaf::ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<std::pair<const equip::Entity*, geom::Collision>> Leaf::ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept
             {
-                std::optional<std::pair<std::reference_wrapper<const equip::Entity>, geom::Collision>> coll(std::nullopt);
+                std::optional<std::pair<const equip::Entity*, geom::Collision>> coll(std::nullopt);
 
                 return (coll);
             }
