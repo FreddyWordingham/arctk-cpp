@@ -47,13 +47,13 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Content --
-                const std::vector<std::pair<const equip::Entity&, std::vector<const geom::shape::Triangle&>>> _ent_tris;
+                const std::vector<std::pair<const equip::Entity&, std::vector<const geom::shape::Triangle*>>> _ent_tris;
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, std::vector<const geom::shape::Triangle&>>>& ent_tris_, size_t cur_depth_) noexcept;
+                inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, std::vector<const geom::shape::Triangle*>>>& ent_tris_, size_t cur_depth_) noexcept;
 
 
                 //  == METHODS ==
@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, std::vector<const geom::shape::Triangle&>>>& ent_tris_, const size_t cur_depth_) noexcept
+            inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, std::vector<const geom::shape::Triangle*>>>& ent_tris_, const size_t cur_depth_) noexcept
               : Node(min_, max_, cur_depth_)
               , _ent_tris(ent_tris_)
             {
