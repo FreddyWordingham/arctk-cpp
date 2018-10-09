@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
+#include <functional>
 
 //  -- Arctk --
 #include <arctk/debug.hpp>
@@ -51,7 +52,7 @@ namespace arc //! arctk namespace
                 const vec3 _centre; //!< Centre coordinate of the node.
 
                 //  -- Children --
-                const std::array<std::array<std::array<Node, 2>, 2>, 2> _childs;
+                const std::array<std::array<std::array<std::reference_wrapper<Node>, 2>, 2>, 2> _childs;
 
 
                 //  == INSTANTIATION ==
