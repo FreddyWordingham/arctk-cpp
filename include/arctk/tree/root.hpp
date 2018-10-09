@@ -77,7 +77,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
-        inline Root::init_trunk(const vec3& min_, const vec3& max_, const std::vector<const equip::Entity*>& ents_, const size_t max_depth_, const size_t tar_tris_) noexcept
+        inline std::unique_ptr<Node> Root::init_trunk(const vec3& min_, const vec3& max_, const std::vector<const equip::Entity*>& ents_, const size_t max_depth_, const size_t tar_tris_) noexcept
         {
             std::vector<std::pair<const equip::Entity*, std::vector<const geom::shape::Triangle*>>> ent_tris;
             ent_tris.reserve(ents_.size());
