@@ -61,6 +61,14 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline size_t                        depth() const noexcept;
+            inline size_t                        max_depth() const noexcept;
+            inline size_t                        max_tris() const noexcept;
+            inline size_t                        num_nodes() const noexcept;
+            inline std::vector<geom::shape::Box> boxes() const noexcept;
+
+            //  -- Retrieval --
+            inline const node::Leaf& leaf(const vec3& pos_) const noexcept;
         };
 
 
@@ -117,6 +125,32 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        inline size_t Root::depth() const noexcept
+        {
+        }
+
+        inline size_t Root::max_depth() const noexcept
+        {
+        }
+
+        inline size_t Root::max_tris() const noexcept
+        {
+        }
+
+        inline size_t Root::num_nodes() const noexcept
+        {
+        }
+
+        inline std::vector<geom::shape::Box> Root::boxes() const noexcept
+        {
+        }
+
+
+        //  -- Retrieval --
+        inline const node::Leaf& Root::leaf(const vec3& pos_) const noexcept
+        {
+            return (_trunk->leaf(pos_));
+        }
 
 
 
