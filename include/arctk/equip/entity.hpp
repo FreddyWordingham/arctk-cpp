@@ -68,6 +68,13 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Destructors --
+        /**
+         *  Default destructor.
+         */
+        inline Entity::~Entity() noexcept = default;
+
+
 
         //  == METHODS ==
         //  -- Getters --
