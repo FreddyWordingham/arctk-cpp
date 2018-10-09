@@ -68,8 +68,6 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
-            //  -- Getters --
-
             //  -- Retrieval --
             virtual const node::Leaf& leaf(const vec3& pos_) const noexcept = 0;
         };
