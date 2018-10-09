@@ -68,8 +68,8 @@ namespace arc //! arctk namespace
                 inline const node::Leaf& leaf(const vec3& pos_) const noexcept override;
 
                 //  -- Collision --
-                inline std::optional<std::pair<double, const equip::Entity*>>          ent_collision(const vec3& pos_, const vec3& dir_) const noexcept;
-                inline std::optional<std::pair<geom::Collision, const equip::Entity*>> ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept;
+                inline std::optional<std::pair<double, std::reference_wrapper<const equip::Entity>>>          ent_collision(const vec3& pos_, const vec3& dir_) const noexcept;
+                inline std::optional<std::pair<geom::Collision, std::reference_wrapper<const equip::Entity>>> ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept;
             };
 
 
@@ -124,9 +124,9 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
-            inline std::optional<std::pair<double, const equip::Entity*>> Leaf::ent_collision(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<std::pair<double, std::reference_wrapper<const equip::Entity>>> Leaf::ent_collision(const vec3& pos_, const vec3& dir_) const noexcept
             {
-                std::optional<std::pair<double, const equip::Entity*>> coll(std::nullopt);
+                std::optional<std::pair<double, std::reference_wrapper<const equip::Entity>>> coll(std::nullopt);
 
                 for (size_t i = 0; i < _tris.size(); ++i)
                 {
@@ -134,14 +134,14 @@ namespace arc //! arctk namespace
 
                     if (tri_col && (!coll || (tri_col.value() < coll.value().first)))
                     {
-                        std::optional<std::pair<double, const equip::Entity*>> new (std::pair<double, const equip::Entity*>(tri_col.value(), &_tris[i].first));
+                        coll = std::optional<std::pair<double, std::reference_wrapper<const equip::Entity>>>(std::pair<double, std::reference_wrapper<const equip::Entity>>(tri_col.value(), std::ref(_tris[i].first)));
                     }
                 }
 
                 return (coll);
             }
 
-            inline std::optional<std::pair<geom::Collision, const equip::Entity*>> Leaf::ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<std::pair<geom::Collision, std::reference_wrapper<const equip::Entity>>> Leaf::ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept
             {
             }
 
