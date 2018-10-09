@@ -60,12 +60,12 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Collision --
-            inline void hit(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept;
+            inline bool hit(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept;
 
           private:
             //  -- Collision --
-            virtual void hit_front(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept = 0;
-            virtual void hit_back(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept  = 0;
+            virtual bool hit_front(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept = 0;
+            virtual bool hit_back(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept  = 0;
         };
 
 
@@ -88,16 +88,14 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Collision --
-        inline void Entity::hit(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept
+        inline bool Entity::hit(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept
         {
             if (coll_.front())
             {
-                hit_front(rng_, phot_, cell_, coll_);
+                return (hit_front(rng_, phot_, cell_, coll_));
             }
-            else
-            {
-                hit_back(rng_, phot_, cell_, coll_);
-            }
+
+            return (hit_back(rng_, phot_, cell_, coll_));
         }
 
 
