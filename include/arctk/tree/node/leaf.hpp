@@ -53,6 +53,10 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& ents_, size_t cur_depth_) noexcept;
 
+              private:
+                //  -- Initialisation --
+                inline std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> init_ents(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& ents_) const noexcept;
+
 
                 //  == METHODS ==
               public:
@@ -77,6 +81,24 @@ namespace arc //! arctk namespace
                 {
                     POST(intersect(_ents[i].second));
                 }
+            }
+
+
+            //  -- Initialisation --
+            inline std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> Leaf::init_ents(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& ents_) const noexcept
+            {
+                std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> ents;
+
+                const Box box(min_, max_);
+                for (size_t i = 0; i < ents_.size(); ++i)
+                {
+                    if (box.intersect(ents_[i].second))
+                    {
+                        ents.emplace_back(ents_[i]);
+                    }
+                }
+
+                return (ents);
             }
 
 
