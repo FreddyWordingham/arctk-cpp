@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
 
                 //  -- Collision --
                 inline std::optional<std::pair<double, std::reference_wrapper<const equip::Entity>>>          ent_collision(const vec3& pos_, const vec3& dir_) const noexcept;
-                inline std::optional<std::pair<geom::Collision, std::reference_wrapper<const equip::Entity>>> ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept;
+                inline std::optional<std::pair<std::reference_wrapper<const equip::Entity>, geom::Collision>> ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept;
             };
 
 
@@ -144,9 +144,9 @@ namespace arc //! arctk namespace
                 return (coll);
             }
 
-            inline std::optional<std::pair<geom::Collision, std::reference_wrapper<const equip::Entity>>> Leaf::ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<std::pair<std::reference_wrapper<const equip::Entity>, geom::Collision>> Leaf::ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept
             {
-                std::optional<std::pair<geom::Collision, std::reference_wrapper<const equip::Entity>>> coll(std::nullopt);
+                std::optional<std::pair<std::reference_wrapper<const equip::Entity>, geom::Collision>> coll(std::nullopt);
 
                 for (size_t i = 0; i < _tris.size(); ++i)
                 {
@@ -154,7 +154,7 @@ namespace arc //! arctk namespace
 
                     if (tri_coll && (!coll || (tri_coll.value().dist() < coll.value().first.dist())))
                     {
-                        coll = std::optional<std::pair<geom::Collision, std::reference_wrapper<const equip::Entity>>>(std::pair<geom::Collision, std::reference_wrapper<const equip::Entity>>(tri_coll.value(), std::ref(_tris[i].first)));
+                        coll = std::optional<std::pair<std::reference_wrapper<const equip::Entity>, geom::Collision>>(std::pair<std::reference_wrapper<const equip::Entity>, geom::Collision>(tri_coll.value(), std::ref(_tris[i].first)));
                     }
                 }
 
