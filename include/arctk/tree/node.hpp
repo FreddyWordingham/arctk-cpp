@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
         /**
          *  Tree node base class.
          */
-        class Node : public geom::shape::Aabb
+        class Node : public geom::shape::Box
         {
             //  == FIELDS ==
           private:
