@@ -23,6 +23,8 @@
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
 #include <arctk/tree/node.hpp>
+#include <arctk/tree/node/branch.hpp>
+#include <arctk/tree/node/leaf.hpp>
 
 
 
@@ -87,7 +89,7 @@ namespace arc //! arctk namespace
             for (size_t i = 0; i < ent_tris.size(); ++i)
             {
                 bool entry = false;
-                for (size_t j = 0; j < ents_[i]->num_faces; ++j)
+                for (size_t j = 0; j < ents_[i]->num_faces(); ++j)
                 {
                     if (box.intersect(*ents_[i]->tri[j]))
                     {
@@ -105,10 +107,10 @@ namespace arc //! arctk namespace
 
             if ((max_depth_ == 0) || (num_tris <= tar_tris_))
             {
-                return (std::make_unique<Leaf>(min_, max_, ent_tris, 0));
+                return (std::make_unique<node::Leaf>(min_, max_, ent_tris, 0));
             }
 
-            return (std::make_unique<Branch>(min_, max_, ent_tris, 0, max_depth_, tar_tris_));
+            return (std::make_unique<node::Branch>(min_, max_, ent_tris, 0, max_depth_, tar_tris_));
         }
 
 
