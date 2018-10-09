@@ -63,6 +63,9 @@ namespace arc //! arctk namespace
             inline double      wavelength() const noexcept;
             inline double      energy() const noexcept;
             inline double      weight() const noexcept;
+
+            //  -- Setters --
+            inline void multiply_weight(double mult_) noexcept;
         };
 
 
@@ -107,6 +110,16 @@ namespace arc //! arctk namespace
         inline double Photon::weight() const noexcept
         {
             return (_weight);
+        }
+
+
+        //  -- Setters --
+        inline void Photon::multiply_weight(double mult_) noexcept
+        {
+            PRE(mult_ > 0.0);
+            PRE(mult_ <= 1.0);
+
+            _weight *= mult_;
         }
 
 
