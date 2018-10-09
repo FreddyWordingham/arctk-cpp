@@ -106,6 +106,7 @@
 #include <arctk/math/vec3.hpp>
 #include <arctk/math/vec4.hpp>
 #include <arctk/phys.hpp>
+#include <arctk/phys/cell.hpp>
 #include <arctk/phys/photon.hpp>
 #include <arctk/random.hpp>
 #include <arctk/random/distribution.hpp>
@@ -115,7 +116,6 @@
 #include <arctk/random/generator.hpp>
 #include <arctk/random/generator/quality.hpp>
 #include <arctk/scene.hpp>
-#include <arctk/scene/cell.hpp>
 #include <arctk/scene/domain.hpp>
 #include <arctk/sys.hpp>
 #include <arctk/sys/args.hpp>
