@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         inline Entity::Entity(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
-          : _Mesh(serial_, scale_, rot_, trans_)
+          : Mesh(serial_, scale_, rot_, trans_)
         {
         }
 
