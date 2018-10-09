@@ -44,7 +44,6 @@ namespace arc //! arctk namespace
                 const double _back_ref;
 
 
-
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
