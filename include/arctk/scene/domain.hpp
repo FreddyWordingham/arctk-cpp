@@ -130,7 +130,7 @@ namespace arc //! arctk namespace
 
         inline const Cell& Domain::cell(const vec3& pos_) const noexcept
         {
-            PRE(contains(pos_));
+            PRE(intersect(pos_));
 
             const vec3 rel_pos = pos_ - _min;
             const auto index_x = static_cast<size_t>(rel_pos.x / _cell_size.x);
