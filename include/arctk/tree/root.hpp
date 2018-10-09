@@ -135,6 +135,7 @@ namespace arc //! arctk namespace
 
         inline size_t Root::max_tris() const noexcept
         {
+            return (_trunk->max_tris());
         }
 
         inline size_t Root::num_nodes() const noexcept
