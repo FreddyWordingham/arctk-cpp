@@ -17,6 +17,8 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/tree/node.hpp>
+#include <arctk/tree/node/branch.hpp>
+#include <arctk/tree/node/leaf.hpp>
 
 
 
