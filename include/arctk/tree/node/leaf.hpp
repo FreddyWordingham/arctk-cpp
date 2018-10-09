@@ -20,6 +20,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/debug.hpp>
 #include <arctk/equip.hpp>
 #include <arctk/math.hpp>
 #include <arctk/tree/node.hpp>
