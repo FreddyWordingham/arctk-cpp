@@ -137,7 +137,7 @@ namespace arc //! arctk namespace
                     {
                         const std::optional<double> tri_coll = _tris[i].second[j].collision(pos_, dir_);
 
-                        if (tri_coll && (!coll || (tri_coll.value() < coll.value().first)))
+                        if (tri_coll && (!coll || (tri_coll.value() < coll.value().second)))
                         {
                             coll = std::optional<std::pair<std::reference_wrapper<const equip::Entity>, double>>(std::pair<std::reference_wrapper<const equip::Entity>, double>(std::ref(_tris[i].first), tri_coll.value()));
                         }
@@ -153,9 +153,9 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < _tris.size(); ++i)
                 {
-                    const std::optional<geom::Collision> tri_coll = _tris[i].second.collision_info(pos_, dir_);
+                    const std::optional<geom::Collision> tri_coll = _tris[i].second[j].collision_info(pos_, dir_);
 
-                    if (tri_coll && (!coll || (tri_coll.value().dist() < coll.value().first.dist())))
+                    if (tri_coll && (!coll || (tri_coll.value().dist() < coll.value().second.dist())))
                     {
                         coll = std::optional<std::pair<std::reference_wrapper<const equip::Entity>, geom::Collision>>(std::pair<std::reference_wrapper<const equip::Entity>, geom::Collision>(tri_coll.value(), std::ref(_tris[i].first)));
                     }
