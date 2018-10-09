@@ -23,6 +23,7 @@
 #include <arctk/equip.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
+#include <arctk/tree/node.hpp>
 #include <arctk/tree/node/leaf.hpp>
 #include <arctk/utl.hpp>
 
