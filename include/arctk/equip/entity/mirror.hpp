@@ -53,8 +53,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               private:
                 //  -- Collision --
-                inline void hit_front(phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept override;
-                inline void hit_back(phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept override;
+                inline void hit_front(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept override;
+                inline void hit_back(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept override;
             };
 
 
@@ -74,6 +74,13 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Collision --
+            inline void Mirror::hit_front(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept
+            {
+            }
+
+            inline void Mirror::hit_back(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept
+            {
+            }
 
 
 
