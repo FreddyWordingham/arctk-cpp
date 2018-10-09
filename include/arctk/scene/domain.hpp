@@ -95,10 +95,7 @@ namespace arc //! arctk namespace
             PRE(res_[index::dim::cartesian::Y] > 0);
             PRE(res_[index::dim::cartesian::Z] > 0);
 
-            vec3 size = max_ - min_;
-            size.x /= res_[index::dim::cartesian::X];
-            size.y /= res_[index::dim::cartesian::Y];
-            size.z /= res_[index::dim::cartesian::Z];
+            const vec3 size((max_.x - min_.x) / res_[index::dim::cartesian::X], (max_.y - min_.y) / res_[index::dim::cartesian::Y], (max_.z - min_.z) / res_[index::dim::cartesian::Z]);
 
             std::vector<std::vector<std::vector<Cell>>> cells(res_[index::dim::cartesian::X], std::vector<std::vector<Cell>>(res_[index::dim::cartesian::Y]));
             for (size_t i = 0; i < res_[index::dim::cartesian::X]; ++i)
