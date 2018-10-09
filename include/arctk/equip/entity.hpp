@@ -63,8 +63,8 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Collision --
-            virtual void hit_front() noexcept = 0;
-            virtual void hit_back() noexcept  = 0;
+            virtual void hit_front(phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept = 0;
+            virtual void hit_back(phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept  = 0;
         };
 
 
@@ -86,7 +86,10 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
-        //  -- Getters --
+        //  -- Collision --
+        inline void Entity::hit(phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept
+        {
+        }
 
 
 
