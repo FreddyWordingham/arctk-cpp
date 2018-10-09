@@ -107,6 +107,7 @@ namespace arc //! arctk namespace
 
             inline std::vector<geom::shape::Box> Leaf::boxes() const noexcept
             {
+                return (std::vector<geom::shape::Box>({geom::shape::Box(_min, _max)}));
             }
 
 
