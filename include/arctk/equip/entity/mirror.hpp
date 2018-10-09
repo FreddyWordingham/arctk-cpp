@@ -61,9 +61,13 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Entity::Entity(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
-              : Mesh(serial_, scale_, rot_, trans_)
+            inline Mirror::Mirror(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const double front_ref_, const double back_ref_) noexcept
+              : Entity(serial_, scale_, rot_, trans_)
+              , _front_ref(front_ref_)
+              , _back_ref(back_ref_)
             {
+                PRE((front_ref_ >= 0.0) && (front_ref_ <= 1.0));
+                PRE((back_ref_ >= 0.0) && (back_ref_ <= 1.0));
             }
 
 
