@@ -76,10 +76,12 @@ namespace arc //! arctk namespace
             //  -- Collision --
             inline void Mirror::hit_front(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept
             {
+                phot_.move(coll_.dist());
             }
 
             inline void Mirror::hit_back(random::Generator* rng_, phys::Photon* phot_, scene::Cell* cell_, const geom::Collision& coll_) noexcept
             {
+                phot_.move(coll_.dist());
             }
 
 
