@@ -1,9 +1,9 @@
 /**
- *  @file   arctk/scene/cell.hpp
+ *  @file   arctk/phys/cell.hpp
  *  @date   08/10/2018
  *  @author Freddy Wordingham
  *
- *  Scene cell information class.
+ *  Cell  physical information class.
  */
 
 
@@ -25,7 +25,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace scene //! scene namespace
+    namespace phys //! physics namespace
     {
 
 
@@ -91,7 +91,7 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace scene
+    } // namespace phys
 } // namespace arc
 
 
