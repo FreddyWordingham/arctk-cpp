@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Content --
-                const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> _tris;
+                const std::vector<std::pair<const equip::Entity&, std::vector<const geom::shape::Triangle&>>> _tris;
 
 
                 //  == INSTANTIATION ==
