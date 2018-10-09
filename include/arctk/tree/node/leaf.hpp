@@ -102,6 +102,7 @@ namespace arc //! arctk namespace
 
             inline size_t Leaf::num_nodes() const noexcept
             {
+                return (1);
             }
 
             inline std::vector<geom::shape::Box> Leaf::boxes() const noexcept
