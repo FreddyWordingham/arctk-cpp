@@ -73,6 +73,9 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline size_t depth() const noexcept;
+
             //  -- Retrieval --
             virtual const node::Leaf& leaf(const vec3& pos_) const noexcept = 0;
         };
@@ -101,6 +104,15 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the depth of the node.
+         *
+         *  @return Depth of the node.
+         */
+        inline size_t Node::depth() const noexcept
+        {
+            return (_depth);
+        }
 
 
 
