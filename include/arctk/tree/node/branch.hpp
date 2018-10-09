@@ -68,8 +68,14 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline size_t                        max_depth() const noexcept override;
+                inline size_t                        max_shapes() const noexcept override;
+                inline size_t                        num_nodes() const noexcept override;
+                inline std::vector<geom::shape::Box> boxes() const noexcept override;
+
                 //  -- Retrieval --
-                const node::Leaf& leaf(const vec3& pos_) const noexcept;
+                inline const node::Leaf& leaf(const vec3& pos_) const noexcept;
             };
 
 
@@ -136,7 +142,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Retrieval --
-            const node::Leaf& Branch::leaf(const vec3& pos_) const noexcept
+            inline const node::Leaf& Branch::leaf(const vec3& pos_) const noexcept
             {
                 PRE(intersect(pos_));
 
