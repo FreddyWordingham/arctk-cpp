@@ -47,13 +47,13 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Content --
-                const std::vector<std::pair<const equip::Entity*, const geom::shape::Triangle&>> _tris;
+                const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> _tris;
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity*, const geom::shape::Triangle&>>& tris_, size_t cur_depth_) noexcept;
+                inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& tris_, size_t cur_depth_) noexcept;
 
 
                 //  == METHODS ==
@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity*, const geom::shape::Triangle&>>& tris_, const size_t cur_depth_) noexcept
+            inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& tris_, const size_t cur_depth_) noexcept
               : Node(min_, max_, cur_depth_)
               , _tris(tris_)
             {
@@ -134,7 +134,7 @@ namespace arc //! arctk namespace
 
                     if (tri_col && (!coll || (tri_col.value() < coll.value().first)))
                     {
-                        coll = std::optional<std::pair<double, const equip::Entity*>>(std::pair<double, const equip::Entity*>(tri_col.value(), _tris[i].first));
+                        coll = std::optional<std::pair<double, const equip::Entity*>>(std::pair<double, const equip::Entity*>(tri_col.value(), *_tris[i].first));
                     }
                 }
 
