@@ -66,7 +66,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& ents_, const size_t cur_depth_) noexcept
               : Node(min_, max_, cur_depth_)
-              , _ents(init_ents(const vec3& min_, const vec3& max_, ents_))
+              , _ents(init_ents(min_, max_, ents_))
             {
                 PRE(min_.x <= max_.x);
                 PRE(min_.y <= max_.y);
