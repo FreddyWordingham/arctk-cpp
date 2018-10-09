@@ -85,7 +85,15 @@ namespace arc //! arctk namespace
                 PRE(min_.z <= max_.z);
                 PRE(cur_depth_ > 1);
 
-                // TODO
+                for (size_t i = 0; i < ent_tris_.size(); ++i)
+                {
+                    PRE(!ent_tris_[i].second.empty());
+
+                    for (size_t j = 0; j < ent_tris_[i].second.size(); ++j)
+                    {
+                        PRE(intersect(*ent_tris_[i].second[j]));
+                    }
+                }
             }
 
 
