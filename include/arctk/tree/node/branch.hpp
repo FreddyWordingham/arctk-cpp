@@ -50,6 +50,9 @@ namespace arc //! arctk namespace
                 //  -- Positioning --
                 const vec3 _centre; //!< Centre coordinate of the node.
 
+                //  -- Children --
+                const std::array<std::array<std::array<Node, 2>, 2>, 2> _childs;
+
 
                 //  == INSTANTIATION ==
               public:
