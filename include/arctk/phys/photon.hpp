@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Properties --
-
+            const double _wavelength; //!< Wavelength of the photon.
 
 
             //  == INSTANTIATION ==
