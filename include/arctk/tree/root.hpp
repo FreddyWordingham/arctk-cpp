@@ -82,10 +82,33 @@ namespace arc //! arctk namespace
             std::vector<std::pair<const equip::Entity*, std::vector<const geom::shape::Triangle*>>> ent_tris;
             ent_tris.reserve(ents_.size());
 
+            size_t                 num_tris = 0;
+            const geom::shape::Box box(min_, max_);
             for (size_t i = 0; i < ent_tris.size(); ++i)
             {
-                ent_tris.emplace_back(std::make_pair<const equip::Entity*, std::vector<const geom::shape::Triangle*>>(ent_tris[i], ent_tris[i]->tri_list()));
+                bool entry = false;
+                for (size_t j = 0; j < ents_[i]->num_faces; ++j)
+                {
+                    if (box.intersect(*ents_[i]->tri[j]))
+                    {
+                        if (!entry)
+                        {
+                            entry = true;
+                            ent_tris.emplace_back(std::pair<const equip::Entity*, std::vector<const geom::shape::Triangle*>>(ents_[i], std::vector<const geom::shape::Triangle*>()));
+                        }
+
+                        ent_tris.back().second.emplace_back(ents_[i]->tri[j]);
+                        ++num_tris;
+                    }
+                }
             }
+
+            if ((max_depth_ == 0) || (num_tris <= tar_tris_))
+            {
+                return (std::make_unique<Leaf>(min_, max_, ent_tris, 0));
+            }
+
+            return (std::make_unique<Branch>(min_, max_, ent_tris, 0, max_depth_, tar_tris_));
         }
 
 
