@@ -62,7 +62,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline size_t num_cells() const noexcept;
+            inline size_t      num_cells() const noexcept;
+            inline const Cell& cell(const vec3& pos_) const noexcept;
         };
 
 
@@ -126,6 +127,22 @@ namespace arc //! arctk namespace
         inline size_t Domain::num_cells() const noexcept
         {
             return (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]);
+        }
+
+        inline const Cell& Domain::cell(const vec3& pos_) const noexcept
+        {
+            PRE(_box.contains(pos_));
+
+            const vec3 rel_pos = pos_ - _box.min();
+            const auto index_x = static_cast<size_t>(rel_pos.x / _cell_size.x);
+            const auto index_y = static_cast<size_t>(rel_pos.y / _cell_size.y);
+            const auto index_z = static_cast<size_t>(rel_pos.z / _cell_size.z);
+
+            POST(index_x < _res[index::dim::cartesian::X]);
+            POST(index_y < _res[index::dim::cartesian::Y]);
+            POST(index_z < _res[index::dim::cartesian::Z]);
+
+            return (_cells[index_x][index_y][index_z]);
         }
 
 
