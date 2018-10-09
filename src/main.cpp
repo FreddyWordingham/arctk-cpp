@@ -126,6 +126,7 @@
 #include <arctk/tree/node.hpp>
 #include <arctk/tree/node/branch.hpp>
 #include <arctk/tree/node/leaf.hpp>
+#include <arctk/tree/root.hpp>
 #include <arctk/utl.hpp>
 #include <arctk/utl/manip.hpp>
 #include <arctk/utl/properties.hpp>
