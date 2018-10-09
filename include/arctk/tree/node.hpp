@@ -52,6 +52,18 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Node(const Node&) noexcept = default; //!< Defaulted copy constructor.
+            inline Node(Node&&) noexcept      = default; //!< Defaulted move constructor.
+
+            //  -- Destructors --
+            inline ~Node() noexcept override;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Node& operator=(const Node&) noexcept = default; //!< Deleted copy operator. @return Reference to copied object.
+            inline Node& operator=(Node&&) noexcept = default;      //!< Deleted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
