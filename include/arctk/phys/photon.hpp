@@ -62,6 +62,7 @@ namespace arc //! arctk namespace
             inline const vec3& dir() const noexcept;
             inline double      wavelength() const noexcept;
             inline double      energy() const noexcept;
+            inline double      weight() const noexcept;
         };
 
 
@@ -101,6 +102,11 @@ namespace arc //! arctk namespace
         inline double Photon::energy() const noexcept
         {
             return (_energy);
+        }
+
+        inline double Photon::weight() const noexcept
+        {
+            return (_weight);
         }
 
 
