@@ -46,17 +46,17 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Content --
-                const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> _ents;
+                const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> _tris;
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& ents_, size_t cur_depth_) noexcept;
+                inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& tris_, size_t cur_depth_) noexcept;
 
               private:
                 //  -- Initialisation --
-                inline std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> init_ents(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& ents_) const noexcept;
+                inline std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> init_tris(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& tris_) const noexcept;
 
 
                 //  == METHODS ==
@@ -69,37 +69,37 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& ents_, const size_t cur_depth_) noexcept
+            inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& tris_, const size_t cur_depth_) noexcept
               : Node(min_, max_, cur_depth_)
-              , _ents(init_ents(min_, max_, ents_))
+              , _tris(init_tris(min_, max_, tris_))
             {
                 PRE(min_.x <= max_.x);
                 PRE(min_.y <= max_.y);
                 PRE(min_.z <= max_.z);
                 PRE(cur_depth_ > 1);
 
-                for (size_t i = 0; i < _ents.size(); ++i)
+                for (size_t i = 0; i < _tris.size(); ++i)
                 {
-                    POST(intersect(_ents[i].second));
+                    POST(intersect(_tris[i].second));
                 }
             }
 
 
             //  -- Initialisation --
-            inline std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> Leaf::init_ents(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& ents_) const noexcept
+            inline std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> Leaf::init_tris(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& tris_) const noexcept
             {
-                std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> ents;
+                std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> tris;
 
                 const Box box(min_, max_);
-                for (size_t i = 0; i < ents_.size(); ++i)
+                for (size_t i = 0; i < tris_.size(); ++i)
                 {
-                    if (box.intersect(ents_[i].second))
+                    if (box.intersect(tris_[i].second))
                     {
-                        ents.emplace_back(ents_[i]);
+                        tris.emplace_back(tris_[i]);
                     }
                 }
 
-                return (ents);
+                return (tris);
             }
 
 
