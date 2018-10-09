@@ -57,6 +57,8 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline const vec3& pos() const noexcept;
             inline const vec3& dir() const noexcept;
+            inline double      wavelength() const noexcept;
+            inline double      energy() const noexcept;
         };
 
 
@@ -86,6 +88,15 @@ namespace arc //! arctk namespace
         inline const vec3& Photon::dir() const noexcept
         {
             return (_dir);
+        }
+
+        inline double Photon::wavelength() const noexcept
+        {
+            return (_wavelength);
+        }
+
+        inline double Photon::energy() const noexcept
+        {
         }
 
 
