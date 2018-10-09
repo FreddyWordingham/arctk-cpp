@@ -119,6 +119,7 @@
 #include <arctk/term.hpp>
 #include <arctk/term/ansi.hpp>
 #include <arctk/tree.hpp>
+#include <arctk/tree/node.hpp>
 #include <arctk/utl.hpp>
 #include <arctk/utl/manip.hpp>
 #include <arctk/utl/properties.hpp>
