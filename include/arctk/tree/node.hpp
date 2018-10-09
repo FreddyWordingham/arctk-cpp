@@ -25,7 +25,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace mesh //! mesh namespace
+    namespace tree //! tree namespace
     {
         namespace node //! node namespace
         {
@@ -116,7 +116,7 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace mesh
+    } // namespace tree
 } // namespace arc
 
 
