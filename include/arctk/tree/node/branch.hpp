@@ -113,24 +113,41 @@ namespace arc //! arctk namespace
                             const vec3 min(min_.x + (i * size.x), min_.y + (j * size.y), min_.z + (k * size.z));
                             const vec3 max = min + size;
 
-                            const geom::shape::Box                                                     box(min, max);
-                            std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>> tris;
+                            const geom::shape::Box                                                                  box(min, max);
+                            std::vector<std::pair<const equip::Entity*, std::vector<const geom::shape::Triangle*>>> ent_tris;
 
-                            for (size_t l = 0; l < tris_.size(); ++l)
+                            for (size_t l = 0; l < ent_tris_.size(); ++l)
                             {
-                                if (box.intersect(tris_[l].second))
+                                bool ent_intersect = false;
+
+                                for (size_t m = 0; m < ent_tris_[l].second.size(); ++m)
                                 {
-                                    tris.emplace_back(tris_[l]);
+                                    if (box.intersect(ent_tris_[l].second[m]))
+                                    {
+                                        if (!ent_intersect)
+                                        {
+                                            ent_intersect = true;
+                                            ent_tris.emplace_back(std::pair<const equip::Entity*, std::vector<const geom::shape::Triangle*>>(ent_tris[l].first, std::vector<const geom::shape::Triangle*>()));
+                                        }
+
+                                        ent_tris.back.second.emplace_back(ent_tris_[l].second[m]);
+                                    }
                                 }
                             }
 
-                            if (depth_limit_reached || (tris.size() <= tar_tris_))
+                            size_t num_tris = 0;
+                            for (size_t i = 0; i < ent_tris.size(); ++i)
                             {
-                                childs[i][j][k] = std::make_unique<Leaf>(min, max, tris, cur_depth_ + 1);
+                                num_tris += ent_tris[i].size();
+                            }
+
+                            if (depth_limit_reached || (num_tris <= tar_tris_))
+                            {
+                                childs[i][j][k] = std::make_unique<Leaf>(min, max, ent_tris, cur_depth_ + 1);
                             }
                             else
                             {
-                                childs[i][j][k] = std::make_unique<Branch>(min, max, tris, cur_depth_ + 1, max_depth_, tar_tris_);
+                                childs[i][j][k] = std::make_unique<Branch>(min, max, ent_tris, cur_depth_ + 1, max_depth_, tar_tris_);
                             }
                         }
                     }
