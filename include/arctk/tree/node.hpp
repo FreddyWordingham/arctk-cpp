@@ -49,9 +49,14 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Depth --
+            const size_t _depth;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Node(const vec3& min_, const vec3& max_, size_t depth_) noexcept;
             inline Node(const Node&) noexcept = default; //!< Defaulted copy constructor.
             inline Node(Node&&) noexcept      = default; //!< Defaulted move constructor.
 
@@ -76,6 +81,14 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline Node::Node(const vec3& min_, const vec3& max_, const size_t depth_) noexcept
+          : Box(min_, max_)
+          , _depth(depth_)
+        {
+            PRE(min_.x <= max_.x);
+            PRE(min_.y <= max_.y);
+            PRE(min_.z <= max_.z);
+        }
 
 
 
