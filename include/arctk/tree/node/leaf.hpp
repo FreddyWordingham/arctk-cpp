@@ -97,6 +97,7 @@ namespace arc //! arctk namespace
 
             inline size_t Leaf::max_tris() const noexcept
             {
+                return (_tris.size());
             }
 
             inline size_t Leaf::num_nodes() const noexcept
