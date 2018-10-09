@@ -40,6 +40,18 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Entity(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept;
+            inline Entity(const Entity&) noexcept = default; //!< Defaulted copy constructor.
+            inline Entity(Entity&&) noexcept      = default; //!< Defaulted move constructor.
+
+            //  -- Destructors --
+            inline ~Entity() noexcept override;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Entity& operator=(const Entity&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Entity& operator=(Entity&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
