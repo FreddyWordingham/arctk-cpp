@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& tris_, size_t cur_depth_) noexcept;
+                inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, std::vector<const geom::shape::Triangle&>>>& tris_, size_t cur_depth_) noexcept;
 
 
                 //  == METHODS ==
@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, const geom::shape::Triangle&>>& tris_, const size_t cur_depth_) noexcept
+            inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, std::vector<const geom::shape::Triangle&>>>& tris_, const size_t cur_depth_) noexcept
               : Node(min_, max_, cur_depth_)
               , _tris(tris_)
             {
@@ -87,7 +87,10 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < _tris.size(); ++i)
                 {
-                    POST(intersect(_tris[i].second));
+                    for (size_t j = 0; j < _tris[i].second.size(); ++j)
+                    {
+                        POST(intersect(_tris[i].second[j]));
+                    }
                 }
             }
 
