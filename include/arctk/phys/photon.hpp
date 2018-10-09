@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
             inline double      weight() const noexcept;
 
             //  -- Setters --
-            inline void move(double dist_) const noexcept;
+            inline void move(double dist_) noexcept;
             inline void multiply_weight(double mult_) noexcept;
         };
 
@@ -115,7 +115,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
-        inline void Photon::move(const double dist_) const noexcept
+        inline void Photon::move(const double dist_) noexcept
         {
             _pos += _dir * dist_;
         }
