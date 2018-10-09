@@ -61,7 +61,6 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline size_t                        depth() const noexcept;
             inline size_t                        max_depth() const noexcept;
             inline size_t                        max_tris() const noexcept;
             inline size_t                        num_nodes() const noexcept;
@@ -125,10 +124,6 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        inline size_t Root::depth() const noexcept
-        {
-        }
-
         inline size_t Root::max_depth() const noexcept
         {
             return (_trunk->max_depth());
