@@ -104,6 +104,7 @@
 #include <arctk/math/vec3.hpp>
 #include <arctk/math/vec4.hpp>
 #include <arctk/phys.hpp>
+#include <arctk/phys/photon.hpp>
 #include <arctk/random.hpp>
 #include <arctk/random/distribution.hpp>
 #include <arctk/random/distribution/constant.hpp>
