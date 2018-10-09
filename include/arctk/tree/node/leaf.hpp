@@ -47,13 +47,13 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Content --
-                const std::vector<std::pair<const equip::Entity&, std::vector<const geom::shape::Triangle&>>> _tris;
+                const std::vector<std::pair<const equip::Entity&, std::vector<const geom::shape::Triangle&>>> _ent_tris;
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, std::vector<const geom::shape::Triangle&>>>& tris_, size_t cur_depth_) noexcept;
+                inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, std::vector<const geom::shape::Triangle&>>>& ent_tris_, size_t cur_depth_) noexcept;
 
 
                 //  == METHODS ==
@@ -76,22 +76,16 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, std::vector<const geom::shape::Triangle&>>>& tris_, const size_t cur_depth_) noexcept
+            inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity&, std::vector<const geom::shape::Triangle&>>>& ent_tris_, const size_t cur_depth_) noexcept
               : Node(min_, max_, cur_depth_)
-              , _tris(tris_)
+              , _ent_tris(ent_tris_)
             {
                 PRE(min_.x <= max_.x);
                 PRE(min_.y <= max_.y);
                 PRE(min_.z <= max_.z);
                 PRE(cur_depth_ > 1);
 
-                for (size_t i = 0; i < tris_.size(); ++i)
-                {
-                    for (size_t j = 0; j < tris_[i].second.size(); ++j)
-                    {
-                        PRE(intersect(tris_[i].second[j]));
-                    }
-                }
+                // TODO
             }
 
 
@@ -105,7 +99,13 @@ namespace arc //! arctk namespace
 
             inline size_t Leaf::max_tris() const noexcept
             {
-                return (_tris.size());
+                size_t tris = 0;
+                for (size_t i = 0; i < _ent_tris.size(); ++i)
+                {
+                    tris += _ent_tris[i].second.size();
+                }
+
+                return (tris);
             }
 
             inline size_t Leaf::num_nodes() const noexcept
@@ -131,35 +131,12 @@ namespace arc //! arctk namespace
             {
                 std::optional<std::pair<std::reference_wrapper<const equip::Entity>, double>> coll(std::nullopt);
 
-                for (size_t i = 0; i < _tris.size(); ++i)
-                {
-                    for (size_t j = 0; j < _tris[i].second.size(); ++j)
-                    {
-                        const std::optional<double> tri_coll = _tris[i].second[j].collision(pos_, dir_);
-
-                        if (tri_coll && (!coll || (tri_coll.value() < coll.value().second)))
-                        {
-                            coll = std::optional<std::pair<std::reference_wrapper<const equip::Entity>, double>>(std::pair<std::reference_wrapper<const equip::Entity>, double>(std::ref(_tris[i].first), tri_coll.value()));
-                        }
-                    }
-                }
-
                 return (coll);
             }
 
             inline std::optional<std::pair<std::reference_wrapper<const equip::Entity>, geom::Collision>> Leaf::ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept
             {
                 std::optional<std::pair<std::reference_wrapper<const equip::Entity>, geom::Collision>> coll(std::nullopt);
-
-                for (size_t i = 0; i < _tris.size(); ++i)
-                {
-                    const std::optional<geom::Collision> tri_coll = _tris[i].second[j].collision_info(pos_, dir_);
-
-                    if (tri_coll && (!coll || (tri_coll.value().dist() < coll.value().second.dist())))
-                    {
-                        coll = std::optional<std::pair<std::reference_wrapper<const equip::Entity>, geom::Collision>>(std::pair<std::reference_wrapper<const equip::Entity>, geom::Collision>(std::ref(_tris[i].first), tri_coll.value()));
-                    }
-                }
 
                 return (coll);
             }
