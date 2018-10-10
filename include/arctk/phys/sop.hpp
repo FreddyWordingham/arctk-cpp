@@ -35,6 +35,23 @@ namespace arc //! arctk namespace
          */
         class Sop
         {
+            //  == INSTANTIATION ==
+          public:
+            //  -- Constructors --
+            inline Sop(const Sop&) = default; //!< Defaulted copy constructor.
+            inline Sop(Sop&&)      = default; //!< Defaulted move constructor.
+
+            //  -- Destructors --
+            inline ~Sop() noexcept override;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Sop& operator=(const Sop&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Sop& operator=(Sop&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
+
+
             //  == METHODS ==
           public:
             //  -- Getters --
