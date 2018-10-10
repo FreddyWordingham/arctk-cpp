@@ -122,7 +122,7 @@ namespace arc //! arctk namespace
             _pos += _dir * dist_;
         }
 
-        inline void set_dir(const vec3& dir_) noexcept
+        inline void Photon::set_dir(const vec3& dir_) noexcept
         {
             PRE(dir_.normalised());
 
