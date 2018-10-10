@@ -138,7 +138,7 @@ namespace arc //! arctk namespace
 
         inline const vec3& Domain::cell_size() const noexcept
         {
-            return (cell_size);
+            return (_cell_size);
         }
 
         inline size_t Domain::num_cells() const noexcept
