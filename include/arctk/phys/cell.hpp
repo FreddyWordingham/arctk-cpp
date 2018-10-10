@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_SCENE_CELL_HPP
-#define ARCTK_SCENE_CELL_HPP
+#ifndef ARCTK_PHYS_CELL_HPP
+#define ARCTK_PHYS_CELL_HPP
 
 
 
@@ -97,4 +97,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_SCENE_CELL_HPP
+#endif // ARCTK_PHYS_CELL_HPP
