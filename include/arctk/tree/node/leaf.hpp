@@ -135,7 +135,7 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
-            inline std::optional<std::pair<const equip::Entity*, double>> Leaf::ent_collision(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<std::pair<const equip::Entity*, double>> Leaf::ent_collision(const vec3& pos_, const vec3& dir_) const noexcept // NOLINT
             {
                 std::optional<std::pair<const equip::Entity*, double>> coll(std::nullopt);
 
