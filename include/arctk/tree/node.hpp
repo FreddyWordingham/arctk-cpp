@@ -67,8 +67,8 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            inline Node& operator=(const Node&) noexcept = default; //!< Deleted copy operator. @return Reference to copied object.
-            inline Node& operator=(Node&&) noexcept = default;      //!< Deleted move operator. @return Reference to moved object.
+            inline Node& operator=(const Node&) noexcept = delete; //!< Deleted copy operator. @return Reference to copied object.
+            inline Node& operator=(Node&&) noexcept = delete;      //!< Deleted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
