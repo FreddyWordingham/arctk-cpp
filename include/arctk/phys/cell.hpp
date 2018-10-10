@@ -3,7 +3,7 @@
  *  @date   08/10/2018
  *  @author Freddy Wordingham
  *
- *  Cell  physical information class.
+ *  Cell physical information class.
  */
 
 
