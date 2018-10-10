@@ -79,6 +79,7 @@ namespace arc //! arctk namespace
           , _dir(dir_)
           , _wavelength(wavelength_)
           , _energy(energy_)
+          , _weight(1.0)
         {
             PRE(dir_.normalised());
             PRE(wavelength_ > 0.0);
