@@ -91,7 +91,13 @@ namespace arc //! arctk namespace
 
             inline bool Mirror::hit_back(random::Generator* rng_, phys::Photon* phot_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
-                phot_->move(coll_.dist());
+                if (rng_->gen() <= _back_ref)
+                {
+                    phot_->move(coll_.dist() - consts::num::BUMP);
+                    phot_->set_dir(phys::optics::reflection_dir(phot_->dir(), coll_.norm()));
+                }
+
+                phot_->move(coll_.dist() + consts::num::BUMP);
 
                 return (false);
             }
