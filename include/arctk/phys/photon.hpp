@@ -66,6 +66,7 @@ namespace arc //! arctk namespace
 
             //  -- Setters --
             inline void move(double dist_) noexcept;
+            inline void set_dir(const vec3& dir_) const noexcept;
             inline void multiply_weight(double mult_) noexcept;
         };
 
@@ -118,6 +119,13 @@ namespace arc //! arctk namespace
         inline void Photon::move(const double dist_) noexcept
         {
             _pos += _dir * dist_;
+        }
+
+        inline void set_dir(const vec3& dir_) const noexcept
+        {
+            PRE(dir_.normalised());
+
+            _dir = dir_;
         }
 
         inline void Photon::multiply_weight(double mult_) noexcept
