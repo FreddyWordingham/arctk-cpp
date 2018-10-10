@@ -63,8 +63,9 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline size_t            num_cells() const noexcept;
-            inline const phys::Cell& cell(const vec3& pos_) const noexcept;
+            inline const std::vector<std::vector<std::vector<phys::Cell>>>& cells() const noexcept;
+            inline size_t                                                   num_cells() const noexcept;
+            inline const phys::Cell&                                        cell(const vec3& pos_) const noexcept;
         };
 
 
@@ -123,6 +124,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        inline const std::vector<std::vector<std::vector<phys::Cell>>>& Domain::cells() const noexcept
+        {
+            return (_cells);
+        }
+
         inline size_t Domain::num_cells() const noexcept
         {
             return (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]);
