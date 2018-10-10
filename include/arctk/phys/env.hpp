@@ -35,16 +35,6 @@ namespace arc //! arctk namespace
          */
         class Env
         {
-            //  == FIELDS ==
-          private:
-            //  -- Data --
-
-
-            //  == INSTANTIATION ==
-          public:
-            //  -- Constructors --
-
-
             //  == METHODS ==
           public:
             //  -- Getters --
@@ -53,11 +43,6 @@ namespace arc //! arctk namespace
             //  -- Interaction --
             virtual bool interact(random::Generator* rng_, phys::Photon* phot_, phys::Cell* cell_, const double dist_) const noexcept = 0;
         };
-
-
-
-        //  == INSTANTIATION ==
-        //  -- Constructors --
 
 
 
