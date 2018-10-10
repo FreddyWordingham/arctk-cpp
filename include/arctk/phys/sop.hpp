@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/phys/env.hpp
+ *  @file   arctk/phys/sop.hpp
  *  @date   10/10/2018
  *  @author Freddy Wordingham
  *
- *  Physical environment control class.
+ *  Physical specific-optical-properties control class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_PHYS_ENV_HPP
-#define ARCTK_PHYS_ENV_HPP
+#ifndef ARCTK_PHYS_SOP_HPP
+#define ARCTK_PHYS_SOP_HPP
 
 
 
@@ -31,9 +31,9 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
-         *  Photon environment control class.
+         *  Photon specific-optical-proeprties control class.
          */
-        class Env
+        class Sop
         {
             //  == METHODS ==
           public:
@@ -52,4 +52,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_PHYS_ENV_HPP
+#endif // ARCTK_PHYS_SOP_HPP
