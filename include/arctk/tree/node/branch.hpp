@@ -101,7 +101,7 @@ namespace arc //! arctk namespace
                 std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> childs;
 
                 const vec3 size                = half_width();
-                const bool depth_limit_reached = cur_depth_ >= max_depth_;
+                const bool depth_limit_reached = cur_depth_ >= (max_depth_ + 1);
 
                 for (size_t i = 0; i < 2; ++i)
                 {
