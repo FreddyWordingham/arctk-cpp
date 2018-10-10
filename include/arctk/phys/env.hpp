@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
             //  -- Getters --
 
             //  -- Interaction --
-            virtual bool interact() const noexcept;
+            virtual bool interact(random::Generator* rng_, phys::Photon* phot_, phys::Cell* cell_, const double dist_) const noexcept = 0;
         };
 
 
