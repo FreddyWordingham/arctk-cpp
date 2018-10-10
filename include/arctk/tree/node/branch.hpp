@@ -128,7 +128,7 @@ namespace arc //! arctk namespace
                                         if (!ent_intersect)
                                         {
                                             ent_intersect = true;
-                                            ent_tris.emplace_back(std::pair<const equip::Entity*, std::vector<const geom::shape::Triangle*>>(ent_tris[l].first, std::vector<const geom::shape::Triangle*>()));
+                                            ent_tris.emplace_back(std::pair<const equip::Entity*, std::vector<const geom::shape::Triangle*>>(ent_tris_[l].first, std::vector<const geom::shape::Triangle*>()));
                                         }
 
                                         ent_tris.back().second.emplace_back(ent_tris_[l].second[m]);
