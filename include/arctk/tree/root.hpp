@@ -82,7 +82,6 @@ namespace arc //! arctk namespace
             PRE(min_.x <= max_.x);
             PRE(min_.y <= max_.y);
             PRE(min_.z <= max_.z);
-            PRE(max_depth_ > 0);
             PRE(tar_tris_ > 0);
         }
 
