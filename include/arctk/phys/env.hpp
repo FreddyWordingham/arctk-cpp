@@ -16,6 +16,8 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/phys/cell.hpp>
+#include <arctk/phys/photon.hpp>
 
 
 
@@ -45,6 +47,10 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+
+            //  -- Interaction --
+            virtual bool interact() const noexcept;
         };
 
 

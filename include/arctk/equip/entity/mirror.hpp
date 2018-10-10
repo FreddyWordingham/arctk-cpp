@@ -86,7 +86,7 @@ namespace arc //! arctk namespace
 
                 phot_->move(coll_.dist() + consts::num::BUMP);
 
-                return (false);
+                return (true);
             }
 
             inline bool Mirror::hit_back(random::Generator* rng_, phys::Photon* phot_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept
@@ -99,7 +99,7 @@ namespace arc //! arctk namespace
 
                 phot_->move(coll_.dist() + consts::num::BUMP);
 
-                return (false);
+                return (true);
             }
 
 
