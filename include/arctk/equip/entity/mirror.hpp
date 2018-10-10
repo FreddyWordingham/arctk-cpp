@@ -81,6 +81,7 @@ namespace arc //! arctk namespace
                 if (rng_->gen() <= _front_ref)
                 {
                     phot_->move(coll_.dist() - consts::num::BUMP);
+                    phot_->set_dir(phys::optics::reflection_dir(phot_->dir(), coll_.norm()));
                 }
 
                 phot_->move(coll_.dist() + consts::num::BUMP);
