@@ -63,6 +63,15 @@ namespace arc //! arctk namespace
 
 
 
+        //  == INSTANTIATION ==
+        //  -- Destructors --
+        /**
+         *  Default destructor.
+         */
+        inline Sop::~Sop() noexcept = default;
+
+
+
     } // namespace phys
 } // namespace arc
 
