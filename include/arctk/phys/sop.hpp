@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
             inline Sop(Sop&&)      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
-            inline ~Sop() noexcept override;
+            inline ~Sop() noexcept;
 
 
             //  == OPERATORS ==
