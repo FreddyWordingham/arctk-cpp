@@ -83,8 +83,6 @@ namespace arc //! arctk namespace
                 PRE(min_.x <= max_.x);
                 PRE(min_.y <= max_.y);
                 PRE(min_.z <= max_.z);
-                std::cout << "Leaf depth: " << cur_depth_ << '\n';
-                PRE(cur_depth_ > 1);
 
                 for (size_t i = 0; i < ent_tris_.size(); ++i)
                 {
