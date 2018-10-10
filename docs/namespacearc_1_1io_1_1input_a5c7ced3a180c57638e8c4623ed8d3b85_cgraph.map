@@ -1,7 +1,0 @@
-<map id="arc::io::input::parse" name="arc::io::input::parse">
-<area shape="rect" id="node2" href="$namespacearc_1_1math_1_1mat.html#af39486147412a1d46985c59a96727834" title="arc::math::mat::transform" alt="" coords="188,55,358,80"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1index_1_1dim.html#a94d6b580f62f0e2a338c49901ce4f004" title="arc::index::dim::name" alt="" coords="199,104,348,129"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1mat.html#a8df70b235035d723df62e4a418ac7e94" title="arc::math::mat::translate" alt="" coords="406,5,571,31"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1math_1_1mat.html#a385e614b5f842c50c2c6c49237b55d85" title="arc::math::mat::rotate" alt="" coords="415,55,563,80"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1math_1_1mat.html#a4aaba718d91ea015418b66dc4f7a7a48" title="arc::math::mat::scale" alt="" coords="416,104,561,129"/>
-</map>

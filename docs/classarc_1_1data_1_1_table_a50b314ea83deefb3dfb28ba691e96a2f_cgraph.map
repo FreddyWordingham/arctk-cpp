@@ -1,9 +1,0 @@
-<map id="arc::data::Table::init_rows" name="arc::data::Table::init_rows">
-<area shape="rect" id="node2" href="$classarc_1_1data_1_1_table.html#aed31796666ea7cef1995c6e63ce226dd" title="arc::data::Table::rows" alt="" coords="226,25,374,51"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1io.html#ab88c53b708589f0bf66165a63489c0c0" title="arc::io::parse" alt="" coords="251,75,349,100"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1io_1_1input.html#a60d8195e97fc0da3b7b00c74d0d77741" title="arc::io::input::filter\l_comments" alt="" coords="426,5,553,44"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1io_1_1input.html#a49a945e87ce12557c581dccce8684926" title="arc::io::input::filter\l_whitespace" alt="" coords="426,68,553,107"/>
-<area shape="rect" id="node7" href="$namespacearc_1_1io_1_1input.html#a4cd25bb66db16ee951f8d75c180c5ec6" title="arc::io::input::parse" alt="" coords="422,131,557,156"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1consts_1_1format.html#a02ddf3d786fde98c6dd1b6fbdbca16d1" title="Container opening characters. " alt="" coords="614,37,745,76"/>
-<area shape="rect" id="node8" href="$namespacearc_1_1index_1_1dim.html#a94d6b580f62f0e2a338c49901ce4f004" title="arc::index::dim::name" alt="" coords="605,131,753,156"/>
-</map>

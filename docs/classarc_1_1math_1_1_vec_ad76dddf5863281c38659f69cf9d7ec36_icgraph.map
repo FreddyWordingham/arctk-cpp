@@ -1,6 +1,0 @@
-<map id="arc::math::Vec::normal" name="arc::math::Vec::normal">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#aff1b0871a287a5a6fe32799a0a62e27e" title="arc::geom::shape::Mesh\l::parse_norms" alt="" coords="208,5,372,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#a1a3af80975b1b52166ac3a05c6c79816" title="arc::math::Vec\&lt; T,\l 2 \&gt;::normal" alt="" coords="226,68,354,107"/>
-<area shape="rect" id="node4" href="$classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#aa33eb319f35e0867e3c16705454e8d4f" title="arc::math::Vec\&lt; T,\l 3 \&gt;::normal" alt="" coords="226,131,354,169"/>
-<area shape="rect" id="node5" href="$classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#ad653cb031e505d7d91529842eae49a5c" title="arc::math::Vec\&lt; T,\l 4 \&gt;::normal" alt="" coords="226,193,354,232"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="arc::math::Vec::normalised" name="arc::math::Vec::normalised">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#a82ed5655fee5506bf8d51a96d80c5523" title="arc::geom::shape::Triangle\l::random_pos_and_norm" alt="" coords="233,5,412,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1math_1_1_vec.html#abd22cbc8c212fac61b31df11cea46866" title="arc::math::Vec\&lt; double,\l 2 \&gt;::normalise" alt="" coords="241,68,403,107"/>
-<area shape="rect" id="node4" href="$classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#ad6744754f694c1197db45d6d1e5b93f7" title="arc::math::Vec\&lt; T,\l 2 \&gt;::normalise" alt="" coords="258,131,386,169"/>
-<area shape="rect" id="node5" href="$classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#ac9bdcc68c5d12bd8e30ecf17767de5cf" title="arc::math::Vec\&lt; T,\l 3 \&gt;::normalise" alt="" coords="258,193,386,232"/>
-<area shape="rect" id="node6" href="$classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#af5671ad652f8df04ae02aaad65f552a0" title="arc::math::Vec\&lt; T,\l 4 \&gt;::normalise" alt="" coords="258,256,386,295"/>
-</map>

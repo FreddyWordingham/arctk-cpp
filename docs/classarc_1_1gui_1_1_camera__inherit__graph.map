@@ -1,4 +1,0 @@
-<map id="arc::gui::Camera" name="arc::gui::Camera">
-<area shape="rect" id="node2" href="$classarc_1_1gui_1_1camera_1_1_fly.html" title="arc::gui::camera::Fly" alt="" coords="5,79,147,104"/>
-<area shape="rect" id="node3" href="$classarc_1_1gui_1_1camera_1_1_orbit.html" title="arc::gui::camera::Orbit" alt="" coords="172,79,325,104"/>
-</map>
