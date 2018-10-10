@@ -787,7 +787,7 @@ namespace arc //! arctk namespace
                 return (Actor(verts, {3, 3}));
             }
 
-            inline Actor domain(const scene::Domain& dom_) noexcept
+            inline Actor domain(const scene::Domain& dom_) noexcept // NOLINT
             {
                 std::vector<glm::vec3> verts;
                 auto                   add_box = [&](const vec3& min_, const vec3& max_) {
