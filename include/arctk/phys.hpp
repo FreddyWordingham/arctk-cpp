@@ -17,9 +17,9 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/phys/cell.hpp>
-#include <arctk/phys/env.hpp>
 #include <arctk/phys/optics.hpp>
 #include <arctk/phys/photon.hpp>
+#include <arctk/phys/sop.hpp>
 
 
 
