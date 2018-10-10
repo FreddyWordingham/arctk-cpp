@@ -841,7 +841,7 @@ namespace arc //! arctk namespace
                 return (Actor(verts, {3}, GL_LINES));
             }
 
-            inline Actor tree(const tree::Root& root_) noexcept
+            inline Actor tree(const tree::Root& root_) noexcept // NOLINT
             {
                 std::vector<glm::vec3> verts;
                 auto                   add_box = [&](const vec3& min_, const vec3& max_) {
