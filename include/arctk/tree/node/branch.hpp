@@ -88,11 +88,9 @@ namespace arc //! arctk namespace
               , _centre((min_ + max_) / 2.0)
               , _childs(init_childs(min_, max_, ent_tris_, cur_depth_, max_depth_, tar_tris_))
             {
-                std::cout << "Bran depth: " << cur_depth_ << '\n';
                 PRE(min_.x <= max_.x);
                 PRE(min_.y <= max_.y);
                 PRE(min_.z <= max_.z);
-                PRE(cur_depth_ > 0);
             }
 
 
