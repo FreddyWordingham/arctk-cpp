@@ -65,6 +65,7 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline const std::array<size_t, 3>&                             res() const noexcept;
             inline const std::vector<std::vector<std::vector<phys::Cell>>>& cells() const noexcept;
+            inline const vec3&                                              cell_size() const noexcept;
             inline size_t                                                   num_cells() const noexcept;
             inline const phys::Cell&                                        cell(const vec3& pos_) const noexcept;
         };
@@ -133,6 +134,11 @@ namespace arc //! arctk namespace
         inline const std::vector<std::vector<std::vector<phys::Cell>>>& Domain::cells() const noexcept
         {
             return (_cells);
+        }
+
+        inline const vec3& Domain::cell_size() const noexcept
+        {
+            return (cell_size);
         }
 
         inline size_t Domain::num_cells() const noexcept
