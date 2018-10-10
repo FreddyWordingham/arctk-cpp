@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/consts.hpp>
 #include <arctk/debug.hpp>
 #include <arctk/equip/entity.hpp>
 #include <arctk/phys.hpp>
@@ -77,7 +78,12 @@ namespace arc //! arctk namespace
             //  -- Collision --
             inline bool Mirror::hit_front(random::Generator* rng_, phys::Photon* phot_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
-                phot_->move(coll_.dist());
+                if (rng_->gen() <= _front_ref)
+                {
+                    phot_->move(coll_.dist() - consts::num::BUMP);
+                }
+
+                phot_->move(coll_.dist() + consts::num::BUMP);
 
                 return (false);
             }
