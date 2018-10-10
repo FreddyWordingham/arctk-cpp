@@ -137,7 +137,7 @@ namespace arc //! arctk namespace
                             }
 
                             size_t num_tris = 0;
-                            for (size_t l = 0; l < ent_tris.size(); ++i)
+                            for (size_t l = 0; l < ent_tris.size(); ++l)
                             {
                                 num_tris += ent_tris[l].second.size();
                             }
