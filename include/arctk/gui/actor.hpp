@@ -31,6 +31,7 @@
 #include <arctk/gui/point.hpp>
 #include <arctk/math.hpp>
 #include <arctk/phys.hpp>
+#include <arctk/scene.hpp>
 #include <arctk/tree.hpp>
 
 
@@ -442,6 +443,7 @@ namespace arc //! arctk namespace
             inline Actor shape(const geom::shape::Box& box_) noexcept;
             inline Actor shape(const geom::shape::Triangle& tri_) noexcept;
             inline Actor shape(const geom::shape::Mesh& mesh_) noexcept;
+            inline Actor domain(const scene::Domain& dom_) noexcept;
             inline Actor tree(const tree::Root& root_) noexcept;
 
 
@@ -783,6 +785,60 @@ namespace arc //! arctk namespace
                 }
 
                 return (Actor(verts, {3, 3}));
+            }
+
+            inline Actor domain(const scene::Domain& dom_) noexcept
+            {
+                std::vector<glm::vec3> verts;
+                auto                   add_box = [&](const vec3& min_, const vec3& max_) {
+                    verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
+                    verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
+                    verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
+                    verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
+                    verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
+                    verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
+                    verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
+                    verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
+
+                    verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
+                    verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
+                    verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
+                    verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
+                    verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
+                    verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
+                    verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
+                    verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
+
+                    verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
+                    verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
+                    verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
+                    verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
+                    verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
+                    verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
+                    verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
+                    verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
+                };
+
+                const vec3 min  = dom_.min();
+                const vec3 size = dom_.cell_size();
+                for (size_t i = 0; i < dom_.res()[index::dim::cartesian::X]; ++i)
+                {
+                    const double x = min.x + (i * size.x);
+
+                    for (size_t j = 0; j < dom_.res()[index::dim::cartesian::Y]; ++j)
+                    {
+                        const double y = min.y + (j * size.y);
+
+                        for (size_t k = 0; k < dom_.res()[index::dim::cartesian::Z]; ++k)
+                        {
+                            const double z = min.z + (k * size.z);
+
+                            add_box(vec3(x, y, z), vec3(x, y, z) + size);
+                        }
+                    }
+                }
+
+                return (Actor(verts, {3}, GL_LINES));
             }
 
             inline Actor tree(const tree::Root& root_) noexcept
