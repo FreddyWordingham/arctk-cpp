@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
             inline Sop(Sop&&)      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
-            inline ~Sop() noexcept;
+            virtual ~Sop() noexcept;
 
 
             //  == OPERATORS ==
