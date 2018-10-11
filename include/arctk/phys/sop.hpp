@@ -44,6 +44,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Sop(double ref_index_) const noexcept;
             inline Sop(const Sop&) = default; //!< Defaulted copy constructor.
             inline Sop(Sop&&)      = default; //!< Defaulted move constructor.
 
@@ -70,6 +71,14 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
+        //  -- Destructors --
+        inline Sop::Sop(const double ref_index_) const noexcept
+          : _ref_index(ref_index_)
+        {
+            PRE(ref_index_ >= 1.0);
+        }
+
+
         //  -- Destructors --
         /**
          *  Default destructor.
