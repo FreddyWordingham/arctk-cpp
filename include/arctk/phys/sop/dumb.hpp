@@ -36,6 +36,8 @@ namespace arc //! arctk namespace
          */
         class Dumb : public Sop
         {
+            //  == FIELDS ==
+          private:
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
