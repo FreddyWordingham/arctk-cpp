@@ -35,6 +35,12 @@ namespace arc //! arctk namespace
          */
         class Sop
         {
+            //  == FIELDS ==
+          private:
+            //  -- Optical Properties --
+            const double _ref_index;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
