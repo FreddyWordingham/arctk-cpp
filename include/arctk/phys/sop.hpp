@@ -62,6 +62,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline double  ref_index() const noexcept;
             virtual double interact_dist(random::Generator* rng_, const phys::Photon& phot_, const phys::Cell& cell_) const noexcept = 0;
 
             //  -- Interaction --
@@ -84,6 +85,15 @@ namespace arc //! arctk namespace
          *  Default destructor.
          */
         inline Sop::~Sop() noexcept = default;
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        inline double Sop::ref_index() const noexcept
+        {
+            return (_ref_index);
+        }
 
 
 
