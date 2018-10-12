@@ -108,6 +108,7 @@
 #include <arctk/phys.hpp>
 #include <arctk/phys/cell.hpp>
 #include <arctk/phys/mat.hpp>
+#include <arctk/phys/mat/dumb.hpp>
 #include <arctk/phys/optics.hpp>
 #include <arctk/phys/photon.hpp>
 #include <arctk/phys/sop.hpp>
