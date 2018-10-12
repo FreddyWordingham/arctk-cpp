@@ -51,10 +51,10 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double interact_dist(random::Generator* /*unused*/, const phys::Photon& /*unused*/, const phys::Cell& /*unused*/) const noexcept override;
+            inline double interact_dist(const random::Generator* /*unused*/, const phys::Photon& /*unused*/, const phys::Cell& /*unused*/) const noexcept override;
 
             //  -- Interaction --
-            inline bool interact(random::Generator* /*unused*/, phys::Photon* phot_, phys::Cell* /*unused*/, double dist_) const noexcept override;
+            inline bool interact(const random::Generator* /*unused*/, const phys::Photon* phot_, const phys::Cell* /*unused*/, double dist_) const noexcept override;
         };
 
 
