@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
-        //  -- Destructors --
+        //  -- Constructors --
 
 
         //  -- Destructors --
