@@ -83,6 +83,8 @@ namespace arc //! arctk namespace
         inline bool Dumb::interact(const random::Generator* /*unused*/, phys::Photon* phot_, const phys::Cell* /*unused*/, const double dist_) const noexcept
         {
             phot_->move(dist_);
+
+            return (true);
         }
 
 
