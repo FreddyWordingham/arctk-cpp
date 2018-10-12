@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
             inline double interact_dist(random::Generator* /*unused*/, const phys::Photon& /*unused*/, const phys::Cell& /*unused*/) const noexcept override;
 
             //  -- Interaction --
-            //            virtual bool interact(random::Generator* rng_, phys::Photon* phot_, phys::Cell* cell_, const double dist_) const noexcept = 0;
+            inline bool interact(random::Generator* /*unused*/, phys::Photon* phot_, phys::Cell* /*unused*/, const double dist_) const noexcept override;
         };
 
 
@@ -74,6 +74,13 @@ namespace arc //! arctk namespace
         inline double Dumb::interact_dist(const random::Generator* /*unused*/, const phys::Photon& /*unused*/, const phys::Cell& /*unused*/) const noexcept
         {
             return (_dist);
+        }
+
+
+        //  -- Interaction --
+        inline bool Dumb::interact(const random::Generator* /*unused*/, const phys::Photon* phot_, const phys::Cell* /*unused*/, const double dist_) const noexcept
+        {
+            phot_->move(dist_);
         }
 
 
