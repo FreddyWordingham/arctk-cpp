@@ -40,6 +40,8 @@ namespace arc //! arctk namespace
           private:
             //  -- Optical Properties --
             const double _dist;
+            const double _albedo;
+            const double _asym;
 
 
             //  == INSTANTIATION ==
