@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             inline Dumb::Dumb(const double ref_index_, const double dist_, const double albedo_, const double asym_) noexcept
-              : Sop(ref_index_)
+              : Mat(ref_index_)
               , _dist(dist_)
               , _albedo(albedo_)
               , _asym(asym_)
