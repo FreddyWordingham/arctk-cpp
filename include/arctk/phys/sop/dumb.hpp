@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
-            //  -- Properties --
+            //  -- Optical Properties --
             const double _dist;
 
 
