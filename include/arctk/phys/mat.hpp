@@ -15,7 +15,12 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <memory>
+
 //  -- Arctk --
+#include <arctk/phys/photon.hpp>
+#include <arctk/phys/sop.hpp>
 
 
 
@@ -29,6 +34,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
+         *  An optical properties material capable of generating specific optical properties.
          */
         class Mat
         {
@@ -56,6 +62,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Specific Optical Properties --
+            virtual std::unique_ptr<Sop> gen(const Photon& phot_) const noexcept = 0;
         };
 
 
