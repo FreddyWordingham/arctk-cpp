@@ -38,11 +38,6 @@ namespace arc //! arctk namespace
          */
         class Mat
         {
-            //  == FIELDS ==
-          private:
-            //  -- Optical Properties --
-
-
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
@@ -69,19 +64,11 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
-        //  -- Constructors --
-
-
         //  -- Destructors --
         /**
          *  Default destructor.
          */
         inline Mat::~Mat() noexcept = default;
-
-
-
-        //  == METHODS ==
-        //  -- Getters --
 
 
 
