@@ -38,6 +38,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Properties --
+            const double _dist;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
