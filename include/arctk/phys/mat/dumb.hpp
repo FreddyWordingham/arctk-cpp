@@ -22,6 +22,7 @@
 #include <arctk/phys/mat.hpp>
 #include <arctk/phys/photon.hpp>
 #include <arctk/phys/sop.hpp>
+#include <arctk/phys/sop/dumb.hpp>
 
 
 
@@ -39,7 +40,7 @@ namespace arc //! arctk namespace
             /**
              *  Material with dumb optical properties.
              */
-            class Dumb : public Sop
+            class Dumb : public Mat
             {
                 //  == INSTANTIATION ==
               private:
@@ -58,7 +59,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Specific Optical Properties --
-                virtual std::unique_ptr<Sop> gen(const Photon& phot_) const noexcept = 0;
+                inline std::unique_ptr<Sop> gen(const Photon& phot_) const noexcept override;
             };
 
 
@@ -75,6 +76,15 @@ namespace arc //! arctk namespace
                 PRE(dist_ > 0.0);
                 PRE((albedo_ >= 0.0) || (albedo_ <= 1.0));
                 PRE((asym_ >= -1.0) || (asym_ <= 1.0));
+            }
+
+
+
+            //  == METHODS ==
+            //  -- Specific Optical Properties --
+            inline std::unique_ptr<Sop> Dumb::gen(const Photon& phot_) const noexcept
+            {
+                return (std::make_unique<sop::Dumb>(_ref_index, _dist, _albedo, _asym));
             }
 
 
