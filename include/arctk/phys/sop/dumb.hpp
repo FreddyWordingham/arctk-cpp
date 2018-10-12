@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            //            virtual double interact_dist(random::Generator* rng_, const phys::Photon& phot_, const phys::Cell& cell_) const noexcept = 0;
+            inline double interact_dist(random::Generator* /*unused*/, const phys::Photon& /*unused*/, const phys::Cell& /*unused*/) const noexcept override;
 
             //  -- Interaction --
             //            virtual bool interact(random::Generator* rng_, phys::Photon* phot_, phys::Cell* cell_, const double dist_) const noexcept = 0;
@@ -65,6 +65,15 @@ namespace arc //! arctk namespace
           : _dist(dist_)
         {
             PRE(_dist > 0.0);
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        inline double Dumb::interact_dist(const random::Generator* /*unused*/, const phys::Photon& /*unused*/, const phys::Cell& /*unused*/) const noexcept
+        {
+            return (_dist);
         }
 
 
