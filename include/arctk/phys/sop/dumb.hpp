@@ -45,6 +45,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Dumb(double dist_) noexcept;
 
 
             //  == METHODS ==
@@ -55,6 +56,16 @@ namespace arc //! arctk namespace
             //  -- Interaction --
             //            virtual bool interact(random::Generator* rng_, phys::Photon* phot_, phys::Cell* cell_, const double dist_) const noexcept = 0;
         };
+
+
+
+        //  == INSTANTIATION ==
+        //  -- Constructors --
+        inline Dumb::Dumb(const double dist_) noexcept
+          : _dist(dist_)
+        {
+            PRE(_dist > 0.0);
+        }
 
 
 
