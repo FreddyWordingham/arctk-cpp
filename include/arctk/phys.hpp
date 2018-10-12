@@ -21,6 +21,7 @@
 #include <arctk/phys/optics.hpp>
 #include <arctk/phys/photon.hpp>
 #include <arctk/phys/sop.hpp>
+#include <arctk/phys/sop/dumb.hpp>
 
 
 
