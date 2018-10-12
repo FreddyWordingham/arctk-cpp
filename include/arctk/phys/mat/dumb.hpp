@@ -44,6 +44,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               private:
                 //  -- Optical Properties --
+                const double _dist;
 
 
                 //  == INSTANTIATION ==
