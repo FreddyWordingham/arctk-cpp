@@ -48,6 +48,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Mat(const double min_, const double max_) noexcept;
             inline Mat(const Mat&) = default; //!< Defaulted copy constructor.
             inline Mat(Mat&&)      = default; //!< Defaulted move constructor.
 
@@ -71,6 +72,15 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
+        //  -- Destructors --
+        inline Mat::Mat(const double min_, const double max_) noexcept
+          : _min(min_)
+          , _max(max_)
+        {
+            PRE(min_ <= max_);
+        }
+
+
         //  -- Destructors --
         /**
          *  Default destructor.
