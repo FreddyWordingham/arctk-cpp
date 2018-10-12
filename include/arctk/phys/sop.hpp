@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
-        //  -- Destructors --
+        //  -- Constructors --
         inline Sop::Sop(const double ref_index_) noexcept
           : _ref_index(ref_index_)
         {
