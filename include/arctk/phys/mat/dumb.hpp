@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <limits>
 #include <memory>
 
 //  -- Arctk --
@@ -68,7 +69,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             inline Dumb::Dumb(const double ref_index_, const double dist_, const double albedo_, const double asym_) noexcept
-              : Mat(ref_index_)
+              : Mat(0.0, std::numeric_limits<double>::max())
               , _ref_index(ref_index_)
               , _dist(dist_)
               , _albedo(albedo_)
