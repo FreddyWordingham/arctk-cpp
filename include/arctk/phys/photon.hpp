@@ -66,6 +66,7 @@ namespace arc //! arctk namespace
 
             //  -- Setters --
             inline void move(double dist_) noexcept;
+            inline void rotate(double theta_, double phi_) noexcept;
             inline void set_dir(const vec3& dir_) noexcept;
             inline void multiply_weight(double mult_) noexcept;
         };
@@ -120,6 +121,22 @@ namespace arc //! arctk namespace
         inline void Photon::move(const double dist_) noexcept
         {
             _pos += _dir * dist_;
+        }
+
+        inline void Photon::rotate(const double theta_, const double phi_) noexcept
+        {
+            PRE(_dir.normalised());
+
+            vec3 front = _dir;
+            vec3 right = math::compare::equal(std::fabs(_dir.z), 1.0) ? (_dir ^ vec3(1.0, 0.0, 0.0)) : (_dir ^ vec3(0.0, 0.0, 1.0));
+            right.normalise();
+
+            _dir.rotate(right, theta_);
+            _dir.rotate(front, phi_);
+
+            _dir.normalise();
+
+            POST(_dir.normalised());
         }
 
         inline void Photon::set_dir(const vec3& dir_) noexcept
