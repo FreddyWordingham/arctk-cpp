@@ -65,6 +65,10 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline double min() const noexcept;
+            inline double max() const noexcept;
+
             //  -- Specific Optical Properties --
             virtual std::unique_ptr<Sop> gen(const Photon& phot_) const noexcept = 0;
         };
@@ -86,6 +90,20 @@ namespace arc //! arctk namespace
          *  Default destructor.
          */
         inline Mat::~Mat() noexcept = default;
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        inline double Mat::min() const noexcept
+        {
+            return (_min);
+        }
+
+        inline double Mat::max() const noexcept
+        {
+            return (_max);
+        }
 
 
 
