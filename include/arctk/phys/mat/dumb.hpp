@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Specific Optical Properties --
-                inline std::unique_ptr<Sop> gen(const Photon& phot_) const noexcept override;
+                inline std::unique_ptr<Sop> gen(const Photon& /*unused*/) const noexcept override;
             };
 
 
@@ -85,7 +85,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Specific Optical Properties --
-            inline std::unique_ptr<Sop> Dumb::gen(const Photon& phot_) const noexcept
+            inline std::unique_ptr<Sop> Dumb::gen(const Photon& /*unused*/) const noexcept
             {
                 return (std::make_unique<sop::Dumb>(_ref_index, _dist, _albedo, _asym));
             }
