@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
                 inline double interact_dist(const random::Generator* /*unused*/, const phys::Photon& /*unused*/, const phys::Cell& /*unused*/) const noexcept override;
 
                 //  -- Interaction --
-                inline bool interact(const random::Generator* /*unused*/, phys::Photon* phot_, const phys::Cell* /*unused*/, double dist_) const noexcept override;
+                inline bool interact(const random::Generator* rng_, phys::Photon* phot_, const phys::Cell* /*unused*/, double dist_) const noexcept override;
             };
 
 
@@ -91,7 +91,7 @@ namespace arc //! arctk namespace
 
 
             //  -- Interaction --
-            inline bool Dumb::interact(const random::Generator* /*unused*/, phys::Photon* phot_, const phys::Cell* /*unused*/, const double dist_) const noexcept
+            inline bool Dumb::interact(const random::Generator* rng_, phys::Photon* phot_, const phys::Cell* /*unused*/, const double dist_) const noexcept
             {
                 phot_->move(dist_);
                 phot_->rotate(random::distribution::henyey_greenstein(rng_, _asym), rng_->gen() * consts::math::TWO_PI);
