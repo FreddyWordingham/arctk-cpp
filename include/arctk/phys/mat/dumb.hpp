@@ -45,8 +45,8 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               private:
                 //  -- Optical Properties --
-                const double _dist;
                 const double _ref_index;
+                const double _dist;
                 const double _albedo;
                 const double _asym;
 
@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Dumb(double dist_, double ref_index_, double albedo_, double asym_) noexcept;
+                inline Dumb(double ref_index_, double dist_, double albedo_, double asym_) noexcept;
 
 
                 //  == METHODS ==
@@ -67,15 +67,15 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Dumb::Dumb(const double dist_, const double ref_index_, const double albedo_, const double asym_) noexcept
+            inline Dumb::Dumb(const double ref_index_, const double dist_, const double albedo_, const double asym_) noexcept
               : Mat(ref_index_)
-              , _dist(dist_)
               , _ref_index(ref_index_)
+              , _dist(dist_)
               , _albedo(albedo_)
               , _asym(asym_)
             {
-                PRE(dist_ > 0.0);
                 PRE(ref_index_ >= 1.0);
+                PRE(dist_ > 0.0);
                 PRE((albedo_ >= 0.0) || (albedo_ <= 1.0));
                 PRE((asym_ >= -1.0) || (asym_ <= 1.0));
             }
