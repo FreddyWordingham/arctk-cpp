@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Dumb(double ref_index_, double dist_, double albedo_ = 1.0, double asym_ = 1.0) noexcept;
+                inline Dumb(double ref_index_, double dist_, double albedo_, double asym_) noexcept;
 
 
                 //  == METHODS ==
@@ -68,6 +68,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Dumb::Dumb(const double ref_index_, const double dist_, const double albedo_, const double asym_) noexcept
               : Mat(ref_index_)
+              , _ref_index(ref_index_)
               , _albedo(albedo_)
               , _asym(asym_)
               , _dist(dist_)
