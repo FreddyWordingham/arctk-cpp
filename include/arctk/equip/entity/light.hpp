@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               protected:
                 //  -- Material --
-                const arc::phys::Mat& _mat;
+                const arc::phys::Mat* _mat;
 
               private:
                 //  -- Killing --
