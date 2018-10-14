@@ -15,6 +15,10 @@
 
 
 //  == IMPORTS ==
+//  -- Tuple --
+#include <memory>
+#include <tuple>
+
 //  -- Arctk --
 #include <arctk/consts.hpp>
 #include <arctk/debug.hpp>
@@ -61,7 +65,7 @@ namespace arc //! arctk namespace
                 inline double power() const noexcept;
 
                 //  -- Emission --
-                virtual phys::Photon emit(random::Generator* rng_, double energy_) const noexcept = 0;
+                virtual std::tuple<phys::Photon, arc::phys::Mat*, std::unique_ptr<arc::phys::Sop>> emit(random::Generator* rng_, double energy_) const noexcept = 0;
 
               private:
                 //  -- Collision --
