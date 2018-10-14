@@ -80,7 +80,7 @@ namespace arc //! arctk namespace
 
                     const std::pair<arc::vec3, arc::vec3> pos_norm = random_pos_and_norm(rng_);
 
-                    return (phys::Photon(pos_norm.first, pos_norm.dir, _wavelength, energy_));
+                    return (phys::Photon(pos_norm.first, pos_norm.second, _wavelength, energy_));
                 }
 
 
