@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Root(const vec3& min_, const vec3& max_, const std::vector<const equip::Entity*>& ents_, size_t max_depth_, size_t tar_tris_) noexcept;
+            inline Root(const vec3& min_, const vec3& max_, const std::vector<std::unique_ptr<equip::Entity>>& ents_, size_t max_depth_, size_t tar_tris_) noexcept;
 
           private:
             //  -- Initialsation --
@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Root::Root(const vec3& min_, const vec3& max_, const std::vector<const equip::Entity*>& ents_, const size_t max_depth_, const size_t tar_tris_) noexcept
+        inline Root::Root(const vec3& min_, const vec3& max_, const std::vector<std::unique_ptr<equip::Entity>>& ents_, const size_t max_depth_, const size_t tar_tris_) noexcept
           : _trunk(init_trunk(min_, max_, ents_, max_depth_, tar_tris_))
         {
             PRE(min_.x <= max_.x);
