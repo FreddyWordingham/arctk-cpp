@@ -47,6 +47,7 @@
 #include <arctk/equip.hpp>
 #include <arctk/equip/entity.hpp>
 #include <arctk/equip/entity/light.hpp>
+#include <arctk/equip/entity/light/laser.hpp>
 #include <arctk/equip/entity/mirror.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/exit/error.hpp>
