@@ -67,7 +67,9 @@ namespace arc //! arctk namespace
             inline const std::vector<std::vector<std::vector<phys::Cell>>>& cells() const noexcept;
             inline const vec3&                                              cell_size() const noexcept;
             inline size_t                                                   num_cells() const noexcept;
-            inline phys::Cell*                                              cell(const vec3& pos_) const noexcept;
+
+            //  -- Retrieval --
+            inline phys::Cell* cell(const vec3& pos_) noexcept;
         };
 
 
@@ -146,7 +148,9 @@ namespace arc //! arctk namespace
             return (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]);
         }
 
-        inline phys::Cell* Domain::cell(const vec3& pos_) const noexcept
+
+        //  -- Retrieval --
+        inline phys::Cell* Domain::cell(const vec3& pos_) noexcept
         {
             PRE(intersect(pos_));
 
