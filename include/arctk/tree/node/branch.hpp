@@ -75,7 +75,7 @@ namespace arc //! arctk namespace
                 inline std::vector<geom::shape::Box> boxes() const noexcept override;
 
                 //  -- Retrieval --
-                inline const node::Leaf& leaf(const vec3& pos_) const noexcept override;
+                inline const node::Leaf* leaf(const vec3& pos_) const noexcept override;
             };
 
 
@@ -242,7 +242,7 @@ namespace arc //! arctk namespace
 
 
             //  -- Retrieval --
-            inline const node::Leaf& Branch::leaf(const vec3& pos_) const noexcept
+            inline const node::Leaf* Branch::leaf(const vec3& pos_) const noexcept
             {
                 PRE(intersect(pos_));
 
