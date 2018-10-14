@@ -15,9 +15,6 @@
 
 
 //  == IMPORTS ==
-//  -- Std --
-#include <utility>
-
 //  -- Arctk --
 #include <arctk/consts.hpp>
 #include <arctk/debug.hpp>
@@ -43,11 +40,10 @@ namespace arc //! arctk namespace
             class Light : public Entity
             {
                 //  == FIELDS ==
-              protected:
+              private:
                 //  -- Material --
                 const arc::phys::Mat* _mat;
 
-              private:
                 //  -- Killing --
                 const bool   _kill;
                 const double _power;
@@ -65,7 +61,7 @@ namespace arc //! arctk namespace
                 inline double power() const noexcept;
 
                 //  -- Emission --
-                virtual std::pair<phys::Photon, std::unique_ptr<arc::phys::Sop>> emit(random::Generator* rng_, double energy_) const noexcept = 0;
+                virtual phys::Photon emit(random::Generator* rng_, double energy_) const noexcept = 0;
 
               private:
                 //  -- Collision --
