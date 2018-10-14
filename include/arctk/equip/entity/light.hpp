@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
                 inline bool hit_back(random::Generator* /*unused*/, phys::Photon* phot_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept override;
 
                 //  -- Emission --
-                virtual phys::Photon emit(random::Generator* rng_) const noexcept = 0;
+                virtual phys::Photon emit(random::Generator* rng_, double energy_) const noexcept = 0;
             };
 
 
