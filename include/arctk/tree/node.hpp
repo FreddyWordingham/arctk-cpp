@@ -81,7 +81,7 @@ namespace arc //! arctk namespace
             virtual std::vector<geom::shape::Box> boxes() const noexcept     = 0;
 
             //  -- Retrieval --
-            virtual const node::Leaf& leaf(const vec3& pos_) const noexcept = 0;
+            virtual const node::Leaf* leaf(const vec3& pos_) const noexcept = 0;
         };
 
 
