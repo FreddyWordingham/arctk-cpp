@@ -53,10 +53,11 @@ namespace arc //! arctk namespace
 
 
                 //  == METHODS ==
-              private:
+              public:
                 //  -- Getters --
                 inline double power() const noexcept;
 
+              private:
                 //  -- Collision --
                 inline bool hit_front(random::Generator* /*unused*/, phys::Photon* phot_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept override;
                 inline bool hit_back(random::Generator* /*unused*/, phys::Photon* phot_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept override;
