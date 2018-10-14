@@ -15,6 +15,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <utility>
+
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/equip/entity/light.hpp>
@@ -55,7 +58,7 @@ namespace arc //! arctk namespace
                     //  == METHODS ==
                   public:
                     //  -- Emission --
-                    inline phys::Photon emit(random::Generator* rng_, double energy_) const noexcept override;
+                    inline std::pair<phys::Photon, phys::Sop*> emit(random::Generator* rng_, double energy_) const noexcept override;
                 };
 
 
@@ -75,7 +78,7 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
                 //  -- Emission --
-                inline phys::Photon Laser::emit(random::Generator* rng_, const double energy_) const noexcept
+                inline std::pair<phys::Photon, phys::Sop*> Laser::emit(random::Generator* rng_, const double energy_) const noexcept
                 {
                     PRE(energy_ > 0.0);
 
