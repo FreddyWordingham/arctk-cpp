@@ -66,8 +66,6 @@ namespace arc //! arctk namespace
               : Entity(serial_, scale_, rot_, trans_)
               , _kill(kill_)
             {
-                PRE((front_ref_ >= 0.0) && (front_ref_ <= 1.0));
-                PRE((back_ref_ >= 0.0) && (back_ref_ <= 1.0));
             }
 
 
