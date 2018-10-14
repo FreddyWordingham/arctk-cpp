@@ -42,9 +42,15 @@ namespace arc //! arctk namespace
                 {
                     //  == FIELDS ==
                   private:
+                    //  -- Emission --
+                    const double _wavelength;
+
+
+
                     //  == INSTANTIATION ==
                   public:
                     //  -- Constructors --
+                    inline Light(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, bool kill_, const double wavelength_) noexcept;
 
 
                     //  == METHODS ==
