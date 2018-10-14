@@ -53,6 +53,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               private:
                 //  -- Collision --
+                inline bool hit_front(random::Generator* /*unused*/, phys::Photon* phot_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept override;
+                inline bool hit_back(random::Generator* /*unused*/, phys::Photon* phot_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept override;
             };
 
 
@@ -64,6 +66,20 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Collision --
+            inline bool Light::hit_front(random::Generator* /*unused*/, phys::Photon* phot_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept
+            {
+                phot_->move(coll_.dist() + consts::num::BUMP);
+
+                return (_kill);
+            }
+
+            inline bool Light::hit_back(random::Generator* /*unused*/, phys::Photon* phot_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept 
+            {
+                phot_->move(coll_.dist() + consts::num::BUMP);
+
+                return (_kill);
+            }
+
 
 
 
