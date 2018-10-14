@@ -42,7 +42,8 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Killing --
-                const bool _kill;
+                const bool   _kill;
+                const double _power;
 
 
                 //  == INSTANTIATION ==
