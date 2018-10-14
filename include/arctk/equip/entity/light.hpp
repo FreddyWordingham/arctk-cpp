@@ -49,11 +49,14 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Light(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, bool kill_) noexcept;
+                inline Light(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, bool kill_, double power_) noexcept;
 
 
                 //  == METHODS ==
               private:
+                //  -- Getters --
+                inline double power() const noexcept;
+
                 //  -- Collision --
                 inline bool hit_front(random::Generator* /*unused*/, phys::Photon* phot_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept override;
                 inline bool hit_back(random::Generator* /*unused*/, phys::Photon* phot_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept override;
@@ -66,15 +69,24 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Light::Light(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const bool kill_) noexcept
+            inline Light::Light(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const bool kill_, const double power_) noexcept
               : Entity(serial_, scale_, rot_, trans_)
               , _kill(kill_)
+              , _power(power_)
             {
+                PRE(power_ > 0.0);
             }
 
 
 
             //  == METHODS ==
+            //  -- Getters --
+            inline double Light::power() const noexcept
+            {
+                return (_power);
+            }
+
+
             //  -- Collision --
             inline bool Light::hit_front(random::Generator* /*unused*/, phys::Photon* phot_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept
             {
