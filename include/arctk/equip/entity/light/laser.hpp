@@ -53,7 +53,9 @@ namespace arc //! arctk namespace
 
 
                     //  == METHODS ==
-                  private:
+                  public:
+                    //  -- Emission --
+                    inline phys::Photon emit(random::Generator* rng_) const noexcept override;
                 };
 
 
@@ -70,6 +72,13 @@ namespace arc //! arctk namespace
 
 
                 //  == METHODS ==
+                //  -- Emission --
+                inline phys::Photon Laser::emit(random::Generator* rng_) const noexcept
+                {
+                    const std::pair<arc::vec3, arc::vec3> pos_norm = random_pos_and_norm();
+
+                    return (phys::Photon(pos_norm.first, pos_norm.dir, _wavelength));
+                }
 
 
 
