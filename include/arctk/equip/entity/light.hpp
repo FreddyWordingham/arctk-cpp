@@ -43,10 +43,11 @@ namespace arc //! arctk namespace
             class Light : public Entity
             {
                 //  == FIELDS ==
-              private:
+              protected:
                 //  -- Material --
                 const arc::phys::Mat* _mat;
 
+              private:
                 //  -- Killing --
                 const bool   _kill;
                 const double _power;
