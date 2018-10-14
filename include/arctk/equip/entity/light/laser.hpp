@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
                     //  == METHODS ==
                   public:
                     //  -- Emission --
-                    inline std::tuple<phys::Photon, arc::phys::Mat*, std::unique_ptr<arc::phys::Sop>> emit(random::Generator* rng_, double energy_) const noexcept override;
+                    inline std::tuple<phys::Photon, const arc::phys::Mat*, std::unique_ptr<arc::phys::Sop>> emit(random::Generator* rng_, double energy_) const noexcept override;
                 };
 
 
@@ -79,7 +79,7 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
                 //  -- Emission --
-                inline std::tuple<phys::Photon, arc::phys::Mat*, std::unique_ptr<arc::phys::Sop>> Laser::emit(random::Generator* rng_, const double energy_) const noexcept
+                inline std::tuple<phys::Photon, const arc::phys::Mat*, std::unique_ptr<arc::phys::Sop>> Laser::emit(random::Generator* rng_, const double energy_) const noexcept
                 {
                     PRE(energy_ > 0.0);
 
@@ -87,7 +87,7 @@ namespace arc //! arctk namespace
 
                     phys::Photon phot(pos_norm.first, pos_norm.second, _wavelength, energy_);
 
-                    return (std::tuple<phys::Photon, arc::phys::Mat*, std::unique_ptr<arc::phys::Sop>>(phot, _mat, _mat->gen(phot)));
+                    return (std::tuple<phys::Photon, const arc::phys::Mat*, std::unique_ptr<arc::phys::Sop>>(phot, _mat, _mat->gen(phot)));
                 }
 
 

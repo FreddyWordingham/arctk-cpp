@@ -66,7 +66,7 @@ namespace arc //! arctk namespace
                 inline double power() const noexcept;
 
                 //  -- Emission --
-                virtual std::tuple<phys::Photon, arc::phys::Mat*, std::unique_ptr<arc::phys::Sop>> emit(random::Generator* rng_, double energy_) const noexcept = 0;
+                virtual std::tuple<phys::Photon, const arc::phys::Mat*, std::unique_ptr<arc::phys::Sop>> emit(random::Generator* rng_, double energy_) const noexcept = 0;
 
               private:
                 //  -- Collision --
