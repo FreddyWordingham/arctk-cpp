@@ -55,7 +55,7 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Initialsation --
-            inline std::unique_ptr<Node> init_trunk(const vec3& min_, const vec3& max_, const std::vector<const equip::Entity*>& ents_, size_t max_depth_, size_t tar_tris_) const noexcept;
+            inline std::unique_ptr<Node> init_trunk(const vec3& min_, const vec3& max_, const std::vector<std::unique_ptr<equip::Entity>>& ents_, size_t max_depth_, size_t tar_tris_) const noexcept;
 
 
             //  == METHODS ==
@@ -87,9 +87,9 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
-        inline std::unique_ptr<Node> Root::init_trunk(const vec3& min_, const vec3& max_, const std::vector<const equip::Entity*>& ents_, const size_t max_depth_, const size_t tar_tris_) const noexcept
+        inline std::unique_ptr<Node> Root::init_trunk(const vec3& min_, const vec3& max_, const std::vector<std::unique_ptr<equip::Entity>>& ents_, const size_t max_depth_, const size_t tar_tris_) const noexcept
         {
-            std::vector<std::pair<const equip::Entity*, std::vector<const geom::shape::Triangle*>>> ent_tris;
+            std::vector<std::pair<equip::Entity*, std::vector<const geom::shape::Triangle*>>> ent_tris;
             ent_tris.reserve(ents_.size());
 
             size_t                 num_tris = 0;
@@ -104,7 +104,7 @@ namespace arc //! arctk namespace
                         if (!entry)
                         {
                             entry = true;
-                            ent_tris.emplace_back(std::pair<const equip::Entity*, std::vector<const geom::shape::Triangle*>>(ents_[i], std::vector<const geom::shape::Triangle*>()));
+                            ent_tris.emplace_back(std::pair<equip::Entity*, std::vector<const geom::shape::Triangle*>>(ents_[i].get(), std::vector<const geom::shape::Triangle*>()));
                         }
 
                         ent_tris.back().second.emplace_back(&ents_[i]->tri(j));

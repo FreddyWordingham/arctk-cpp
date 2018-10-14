@@ -47,13 +47,13 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Content --
-                const std::vector<std::pair<const equip::Entity*, std::vector<const geom::shape::Triangle*>>> _ent_tris;
+                const std::vector<std::pair<equip::Entity*, std::vector<const geom::shape::Triangle*>>> _ent_tris;
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity*, std::vector<const geom::shape::Triangle*>>>& ent_tris_, size_t cur_depth_) noexcept;
+                inline Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<equip::Entity*, std::vector<const geom::shape::Triangle*>>>& ent_tris_, size_t cur_depth_) noexcept;
 
 
                 //  == METHODS ==
@@ -68,15 +68,15 @@ namespace arc //! arctk namespace
                 inline const node::Leaf* leaf(const vec3& pos_) const noexcept override;
 
                 //  -- Collision --
-                inline std::optional<std::pair<const equip::Entity*, double>>          ent_collision(const vec3& pos_, const vec3& dir_) const noexcept;
-                inline std::optional<std::pair<const equip::Entity*, geom::Collision>> ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept;
+                inline std::optional<std::pair<equip::Entity*, double>>          ent_collision(const vec3& pos_, const vec3& dir_) const noexcept;
+                inline std::optional<std::pair<equip::Entity*, geom::Collision>> ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept;
             };
 
 
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<const equip::Entity*, std::vector<const geom::shape::Triangle*>>>& ent_tris_, const size_t cur_depth_) noexcept
+            inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<equip::Entity*, std::vector<const geom::shape::Triangle*>>>& ent_tris_, const size_t cur_depth_) noexcept
               : Node(min_, max_, cur_depth_)
               , _ent_tris(ent_tris_)
             {
@@ -135,9 +135,9 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
-            inline std::optional<std::pair<const equip::Entity*, double>> Leaf::ent_collision(const vec3& pos_, const vec3& dir_) const noexcept // NOLINT
+            inline std::optional<std::pair<equip::Entity*, double>> Leaf::ent_collision(const vec3& pos_, const vec3& dir_) const noexcept // NOLINT
             {
-                std::optional<std::pair<const equip::Entity*, double>> coll(std::nullopt);
+                std::optional<std::pair<equip::Entity*, double>> coll(std::nullopt);
 
                 for (size_t i = 0; i < _ent_tris.size(); ++i)
                 {
@@ -147,7 +147,7 @@ namespace arc //! arctk namespace
 
                         if (tri_coll && (!coll || (tri_coll.value() < coll.value().second)))
                         {
-                            coll = std::optional<std::pair<const equip::Entity*, double>>(std::pair<const equip::Entity*, double>(_ent_tris[i].first, tri_coll.value()));
+                            coll = std::optional<std::pair<equip::Entity*, double>>(std::pair<equip::Entity*, double>(_ent_tris[i].first, tri_coll.value()));
                         }
                     }
                 }
@@ -155,9 +155,9 @@ namespace arc //! arctk namespace
                 return (coll);
             }
 
-            inline std::optional<std::pair<const equip::Entity*, geom::Collision>> Leaf::ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept
+            inline std::optional<std::pair<equip::Entity*, geom::Collision>> Leaf::ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept
             {
-                std::optional<std::pair<const equip::Entity*, geom::Collision>> coll(std::nullopt);
+                std::optional<std::pair<equip::Entity*, geom::Collision>> coll(std::nullopt);
 
                 for (size_t i = 0; i < _ent_tris.size(); ++i)
                 {
@@ -167,7 +167,7 @@ namespace arc //! arctk namespace
 
                         if (tri_coll && (!coll || (tri_coll.value().dist() < coll.value().second.dist())))
                         {
-                            coll = std::optional<std::pair<const equip::Entity*, geom::Collision>>(std::pair<const equip::Entity*, geom::Collision>(_ent_tris[i].first, tri_coll.value()));
+                            coll = std::optional<std::pair<equip::Entity*, geom::Collision>>(std::pair<equip::Entity*, geom::Collision>(_ent_tris[i].first, tri_coll.value()));
                         }
                     }
                 }
