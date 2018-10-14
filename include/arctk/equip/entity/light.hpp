@@ -48,6 +48,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Light(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, bool kill_) noexcept;
 
 
                 //  == METHODS ==
@@ -61,6 +62,13 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Light::Light(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const bool kill_) noexcept
+              : Entity(serial_, scale_, rot_, trans_)
+              , _kill(kill_)
+            {
+                PRE((front_ref_ >= 0.0) && (front_ref_ <= 1.0));
+                PRE((back_ref_ >= 0.0) && (back_ref_ <= 1.0));
+            }
 
 
 
@@ -73,13 +81,12 @@ namespace arc //! arctk namespace
                 return (_kill);
             }
 
-            inline bool Light::hit_back(random::Generator* /*unused*/, phys::Photon* phot_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept 
+            inline bool Light::hit_back(random::Generator* /*unused*/, phys::Photon* phot_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept
             {
                 phot_->move(coll_.dist() + consts::num::BUMP);
 
                 return (_kill);
             }
-
 
 
 
