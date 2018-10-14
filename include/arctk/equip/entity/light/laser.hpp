@@ -87,7 +87,7 @@ namespace arc //! arctk namespace
 
                     phys::Photon phot(pos_norm.first, pos_norm.second, _wavelength, energy_);
 
-                    return (std::tuple<phys::Photon, arc::phys::Mat*, std::unique_ptr<arc::phys::Sop>>(phot, _mat, _mat->gen(phot_)));
+                    return (std::tuple<phys::Photon, arc::phys::Mat*, std::unique_ptr<arc::phys::Sop>>(phot, _mat, _mat->gen(phot)));
                 }
 
 
