@@ -46,7 +46,6 @@ namespace arc //! arctk namespace
                     const double _wavelength;
 
 
-
                     //  == INSTANTIATION ==
                   public:
                     //  -- Constructors --
