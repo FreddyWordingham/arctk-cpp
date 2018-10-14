@@ -41,7 +41,8 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
-                //  -- Absorption --
+                //  -- Killing --
+                const bool _kill;
 
 
                 //  == INSTANTIATION ==
