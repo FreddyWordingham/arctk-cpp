@@ -52,7 +52,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Light(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, bool kill_, double power_) noexcept;
+                inline Light(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const arc::phys::Mat* mat_, double power_, bool kill_) noexcept;
 
 
                 //  == METHODS ==
@@ -73,11 +73,13 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Light::Light(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const bool kill_, const double power_) noexcept
+            inline Light::Light(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const arc::phys::Mat* mat_, const double power_, const bool kill_) noexcept
               : Entity(serial_, scale_, rot_, trans_)
+              , _mat(mat_)
               , _kill(kill_)
               , _power(power_)
             {
+                PRE(mat_ != nullptr);
                 PRE(power_ > 0.0);
             }
 
