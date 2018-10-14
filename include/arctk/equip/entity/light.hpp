@@ -84,7 +84,6 @@ namespace arc //! arctk namespace
               , _kill(kill_)
               , _power(power_)
             {
-                PRE(mat_ != nullptr);
                 PRE(power_ > 0.0);
             }
 
