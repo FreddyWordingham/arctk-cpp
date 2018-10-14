@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
                     //  == INSTANTIATION ==
                   public:
                     //  -- Constructors --
-                    inline Light(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, bool kill_, const double wavelength_) noexcept;
+                    inline Laser(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, bool kill_, double wavelength_) noexcept;
 
 
                     //  == METHODS ==
@@ -61,6 +61,12 @@ namespace arc //! arctk namespace
 
                 //  == INSTANTIATION ==
                 //  -- Constructors --
+                inline Laser::Laser(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const bool kill_, const double wavelength_) noexcept
+                  : Light(serial_, scale_, rot_, trans_, kill_)
+                  , _wavelength(wavelength_)
+                {
+                    PRE(wavelength_ > 0.0);
+                }
 
 
 
