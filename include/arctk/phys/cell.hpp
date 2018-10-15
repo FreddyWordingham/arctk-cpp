@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
             inline double scatter_dens() const noexcept;
 
             //  -- Settings --
-            inline void add_interaction(double interactions_) noexcept;
+            inline void add_scatter(double interactions_) noexcept;
         };
 
 
@@ -81,12 +81,12 @@ namespace arc //! arctk namespace
 
 
         //  -- Settings --
-        inline void Cell::add_interaction(const double interactions_) noexcept
+        inline void Cell::add_scatter(const double scatters_) noexcept
         {
-            PRE(interactions_ > 0.0);
-            PRE(interactions_ <= 1.0);
+            PRE(scatters_ > 0.0);
+            PRE(scatters_ <= 1.0);
 
-            _interactions += interactions_;
+            _scatters += scatters_;
         }
 
 
