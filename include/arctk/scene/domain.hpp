@@ -178,7 +178,8 @@ namespace arc //! arctk namespace
             std::ofstream file(path_ + ".vtk");
 
             file << "# vtk DataFile Version 3.0\n"
-                 << "vtk " << set_name_ << '\n'
+                 << "vtk "
+                 << "sim_output" << '\n'
                  << "ASCII\n"
                  << "DATASET RECTILINEAR_GRID\n"
                  << "DIMENSIONS " << (_res[index::dim::cartesian::X] + 1) << " " << (_res[index::dim::cartesian::Y] + 1) << " " << (_res[index::dim::cartesian::Z] + 1) << '\n'
@@ -191,7 +192,7 @@ namespace arc //! arctk namespace
                     file << ' ';
                 }
 
-                file << (min_.x + (cell_size.x * static_cast<double>(i))) << ' ';
+                file << (_min.x + (_cell_size.x * static_cast<double>(i))) << ' ';
             }
 
             file << "\nY_COORDINATES " << (_res[index::dim::cartesian::Y] + 1) << " double\n";
@@ -203,7 +204,7 @@ namespace arc //! arctk namespace
                     file << ' ';
                 }
 
-                file << (min_.y + (cell_size.y * static_cast<double>(i))) << ' ';
+                file << (_min.y + (_cell_size.y * static_cast<double>(i))) << ' ';
             }
 
             file << "\nZ_COORDINATES " << (_res[index::dim::cartesian::Z] + 1) << " double\n";
@@ -215,7 +216,7 @@ namespace arc //! arctk namespace
                     file << ' ';
                 }
 
-                file << (min_.z + (cell_size.z * static_cast<double>(i))) << ' ';
+                file << (_min.z + (_cell_size.z * static_cast<double>(i))) << ' ';
             }
 
             file << "\nCELL_DATA " << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << "\n\n";
