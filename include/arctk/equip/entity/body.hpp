@@ -49,6 +49,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Body(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const phys::Mat& front_mat_, const phys::Mat& back_mat_) noexcept;
 
 
                 //  == METHODS ==
@@ -60,6 +61,12 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Body::Body(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const phys::Mat& front_mat_, const phys::Mat& back_mat_) noexcept
+              : Entity(serial_, scale_, rot_, trans_)
+              , _front_mat(front_mat_)
+              , _back_mat(back_mat_)
+            {
+            }
 
 
 
