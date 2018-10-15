@@ -17,17 +17,23 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace enum //! enumeration namespace
+    namespace type //! type namespace
     {
 
 
         //  == ENUMERATIONS ==
         //  -- Types --
-        enum class collision{};
+        enum class collision
+        {
+            INTERACTION,
+            CELL,
+            NODE,
+            DOM
+        };
 
 
 
-    } // namespace arc
+    } // namespace type
 } // namespace arc
 
 
