@@ -25,7 +25,8 @@ namespace arc //! arctk namespace
         //  -- Types --
         enum class collision
         {
-            INTERACTION,
+            INTER,
+            ENT,
             CELL,
             NODE,
             DOM
