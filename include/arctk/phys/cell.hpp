@@ -40,6 +40,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Data --
             double _scatters;
+            double _energy;
 
 
             //  == INSTANTIATION ==
