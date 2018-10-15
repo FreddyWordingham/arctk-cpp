@@ -44,6 +44,7 @@
 #include <arctk/debug/contract.hpp>
 #include <arctk/debug/invariant.hpp>
 #include <arctk/debug/location.hpp>
+#include <arctk/enum.hpp>
 #include <arctk/equip.hpp>
 #include <arctk/equip/entity.hpp>
 #include <arctk/equip/entity/light.hpp>
