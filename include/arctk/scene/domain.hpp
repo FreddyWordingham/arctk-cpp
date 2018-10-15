@@ -92,6 +92,9 @@ namespace arc //! arctk namespace
             PRE(res_[index::dim::cartesian::X] > 0);
             PRE(res_[index::dim::cartesian::Y] > 0);
             PRE(res_[index::dim::cartesian::Z] > 0);
+            PRE((res_[index::dim::cartesian::X] % 2) != 0);
+            PRE((res_[index::dim::cartesian::Y] % 2) != 0);
+            PRE((res_[index::dim::cartesian::Z] % 2) != 0);
         }
 
 
