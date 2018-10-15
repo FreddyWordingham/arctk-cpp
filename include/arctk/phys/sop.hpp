@@ -63,7 +63,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline double  ref_index() const noexcept;
-            virtual double interact_dist(random::Generator* rng_, const phys::Photon& phot_, const phys::Cell& cell_) const noexcept = 0;
+            virtual double interact_dist(random::Generator* rng_, const phys::Cell& cell_) const noexcept = 0;
 
             //  -- Interaction --
             virtual bool interact(random::Generator* rng_, phys::Photon* phot_, const phys::Cell* cell_, const double dist_) const noexcept = 0;
