@@ -227,7 +227,7 @@ namespace arc //! arctk namespace
 
 
             file << "\nFIELD FieldData 1\n"
-                 << "interaction_dens" << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << ' ' << "double" << '\n';
+                 << "scatter_dens" << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << ' ' << "double" << '\n';
 
             for (size_t i = 0; i < _res[index::dim::cartesian::Z]; ++i)
             {
@@ -240,7 +240,7 @@ namespace arc //! arctk namespace
                             file << ' ';
                         }
 
-                        file << _cells[k][j][i].interaction_dens();
+                        file << _cells[k][j][i].scatter_dens();
                     }
                     file << '\n';
                 }
