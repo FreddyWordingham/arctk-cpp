@@ -59,12 +59,12 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Collision --
-            inline bool hit(random::Generator* rng_, phys::Photon* phot_, const phys::Sop* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept;
+            inline bool hit(random::Generator* rng_, phys::Photon* phot_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept;
 
           private:
             //  -- Collision --
-            virtual bool hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Sop* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept = 0;
-            virtual bool hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Sop* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept  = 0;
+            virtual bool hit_front(random::Generator* rng_, phys::Photon* phot_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept = 0;
+            virtual bool hit_back(random::Generator* rng_, phys::Photon* phot_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept  = 0;
         };
 
 
