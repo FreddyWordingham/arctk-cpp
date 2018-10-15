@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
             inline double      weight() const noexcept;
 
             //  -- Setters --
-            inline void move(double dist_, const phys::Sop* sop_) noexcept;
+            inline void move(double dist_, double ref_index_) noexcept;
             inline void rotate(double theta_, double phi_) noexcept;
             inline void set_dir(const vec3& dir_) noexcept;
             inline void multiply_weight(double mult_) noexcept;
@@ -123,12 +123,12 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
-        inline void Photon::move(const double dist_, const phys::Sop* sop_) noexcept
+        inline void Photon::move(const double dist_, const double ref_index_) noexcept
         {
             PRE(sop_ != nullptr);
 
             _pos += _dir * dist_;
-            _time += ((dist_ * sop_->ref_index()) / consts::phys::SPEED_OF_LIGHT);
+            _time += ((dist_ * ref_index_) / consts::phys::SPEED_OF_LIGHT);
         }
 
         inline void Photon::rotate(const double theta_, const double phi_) noexcept
