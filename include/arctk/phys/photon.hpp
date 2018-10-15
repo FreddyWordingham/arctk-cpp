@@ -65,6 +65,7 @@ namespace arc //! arctk namespace
             inline const vec3& dir() const noexcept;
             inline double      wavelength() const noexcept;
             inline double      energy() const noexcept;
+            inline double      time() const noexcept;
             inline double      weight() const noexcept;
 
             //  -- Setters --
@@ -114,6 +115,11 @@ namespace arc //! arctk namespace
         inline double Photon::energy() const noexcept
         {
             return (_energy);
+        }
+
+        inline double Photon::time() const noexcept
+        {
+            return (_time);
         }
 
         inline double Photon::weight() const noexcept
