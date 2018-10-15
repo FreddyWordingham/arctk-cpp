@@ -125,7 +125,7 @@ namespace arc //! arctk namespace
         //  -- Setters --
         inline void Photon::move(const double dist_, const double ref_index_) noexcept
         {
-            PRE(sop_ != nullptr);
+            PRE(ref_index_ >= 1.0);
 
             _pos += _dir * dist_;
             _time += ((dist_ * ref_index_) / consts::phys::SPEED_OF_LIGHT);
