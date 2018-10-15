@@ -84,7 +84,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            inline double Dumb::interact_dist(random::Generator* /*unused*/, const phys::Cell& /*unused*/) const noexcept
+            inline double Dumb::interact_dist(random::Generator* /*unused*/, const phys::Cell* /*unused*/) const noexcept
             {
                 return (_dist);
             }
