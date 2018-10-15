@@ -55,8 +55,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               private:
                 //  -- Collision --
-                inline bool hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Sop* sop_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept override;
-                inline bool hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Sop* sop_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept override;
+                inline bool hit_front(random::Generator* rng_, phys::Photon* phot_, phys::Mat* mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
+                inline bool hit_back(random::Generator* rng_, phys::Photon* phot_, phys::Mat* mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
             };
 
 
@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Collision --
-            inline bool Mirror::hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Sop* sop_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept
+            inline bool Mirror::hit_front(random::Generator* rng_, phys::Photon* phot_, phys::Mat* mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
                 if (rng_->gen() <= _front_ref)
                 {
@@ -91,7 +91,7 @@ namespace arc //! arctk namespace
                 return (true);
             }
 
-            inline bool Mirror::hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Sop* sop_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept
+            inline bool Mirror::hit_back(random::Generator* rng_, phys::Photon* phot_, phys::Mat* mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
                 if (rng_->gen() <= _back_ref)
                 {
