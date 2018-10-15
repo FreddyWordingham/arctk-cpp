@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/enum/collision.hpp
+ *  @file   arctk/type/collision.hpp
  *  @date   15/10/2018
  *  @author Freddy Wordingham
  *
- *  Collision enumerations.
+ *  Collision types.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_ENUM_COLLISION_HPP
-#define ARCTK_ENUM_COLLISION_HPP
+#ifndef ARCTK_TYPE_COLLISION_HPP
+#define ARCTK_TYPE_COLLISION_HPP
 
 
 
@@ -39,4 +39,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_ENUM_COLLISION_HPP
+#endif // ARCTK_TYPE_COLLISION_HPP
