@@ -55,8 +55,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               private:
                 //  -- Collision --
-                inline bool hit_front(random::Generator* rng_, phys::Photon* phot_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept override;
-                inline bool hit_back(random::Generator* rng_, phys::Photon* phot_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept override;
+                inline bool hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Sop* sop_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept override;
+                inline bool hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Sop* sop_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept override;
             };
 
 
@@ -76,31 +76,31 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Collision --
-            inline bool Mirror::hit_front(random::Generator* rng_, phys::Photon* phot_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept
+            inline bool Mirror::hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Sop* sop_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept
             {
                 if (rng_->gen() <= _front_ref)
                 {
-                    phot_->move(coll_.dist() - consts::num::BUMP);
+                    phot_->move(coll_.dist() - consts::num::BUMP, sop_->ref_index());
                     phot_->set_dir(phys::optics::reflection_dir(phot_->dir(), coll_.norm()));
                 }
                 else
                 {
-                    phot_->move(coll_.dist() + consts::num::BUMP);
+                    phot_->move(coll_.dist() + consts::num::BUMP, sop_->ref_index());
                 }
 
                 return (true);
             }
 
-            inline bool Mirror::hit_back(random::Generator* rng_, phys::Photon* phot_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept
+            inline bool Mirror::hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Sop* sop_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept
             {
                 if (rng_->gen() <= _back_ref)
                 {
-                    phot_->move(coll_.dist() - consts::num::BUMP);
+                    phot_->move(coll_.dist() - consts::num::BUMP, sop_->ref_index());
                     phot_->set_dir(phys::optics::reflection_dir(phot_->dir(), coll_.norm()));
                 }
                 else
                 {
-                    phot_->move(coll_.dist() + consts::num::BUMP);
+                    phot_->move(coll_.dist() + consts::num::BUMP, sop_->ref_index());
                 }
 
                 return (true);
