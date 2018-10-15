@@ -15,6 +15,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <memory>
+
 //  -- Arctk --
 #include <arctk/consts.hpp>
 #include <arctk/debug.hpp>
@@ -44,9 +47,10 @@ namespace arc //! arctk namespace
             vec3 _dir;
 
             //  -- Properties --
-            const double _wavelength; //!< Wavelength of the photon.
-            const double _energy;     //!< Energy of the packet.
-            double       _time;
+            const double         _wavelength; //!< Wavelength of the photon.
+            const double         _energy;     //!< Energy of the packet.
+            double               _time;
+            std::unique_ptr<Sop> _sop;
 
             //  -- Statistical --
             double _weight;
