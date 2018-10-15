@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
             vec3 _pos;
             vec3 _dir;
 
-            //  -- Photon --
+            //  -- Properties --
             const double _wavelength; //!< Wavelength of the photon.
             const double _energy;     //!< Energy of the packet.
             double       _time;
