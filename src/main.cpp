@@ -119,7 +119,6 @@
 #include <arctk/random/distribution.hpp>
 #include <arctk/random/distribution/constant.hpp>
 #include <arctk/random/distribution/discrete.hpp>
-#include <arctk/random/distribution/index.hpp>
 #include <arctk/random/distribution/linear.hpp>
 #include <arctk/random/generator.hpp>
 #include <arctk/random/generator/quality.hpp>
