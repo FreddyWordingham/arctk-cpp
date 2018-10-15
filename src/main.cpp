@@ -44,8 +44,6 @@
 #include <arctk/debug/contract.hpp>
 #include <arctk/debug/invariant.hpp>
 #include <arctk/debug/location.hpp>
-#include <arctk/enum.hpp>
-#include <arctk/enum/collision.hpp>
 #include <arctk/equip.hpp>
 #include <arctk/equip/entity.hpp>
 #include <arctk/equip/entity/light.hpp>
@@ -136,6 +134,8 @@
 #include <arctk/tree/node/branch.hpp>
 #include <arctk/tree/node/leaf.hpp>
 #include <arctk/tree/root.hpp>
+#include <arctk/type.hpp>
+#include <arctk/type/collision.hpp>
 #include <arctk/utl.hpp>
 #include <arctk/utl/manip.hpp>
 #include <arctk/utl/properties.hpp>
