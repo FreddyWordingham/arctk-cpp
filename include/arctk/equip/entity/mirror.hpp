@@ -80,12 +80,12 @@ namespace arc //! arctk namespace
             {
                 if (rng_->gen() <= _front_ref)
                 {
-                    phot_->move(coll_.dist() - consts::num::BUMP, sop_->ref_index());
+                    phot_->move(coll_.dist() - consts::num::BUMP, sop_->get()->ref_index());
                     phot_->set_dir(phys::optics::reflection_dir(phot_->dir(), coll_.norm()));
                 }
                 else
                 {
-                    phot_->move(coll_.dist() + consts::num::BUMP, sop_->ref_index());
+                    phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index());
                 }
 
                 return (true);
@@ -95,12 +95,12 @@ namespace arc //! arctk namespace
             {
                 if (rng_->gen() <= _back_ref)
                 {
-                    phot_->move(coll_.dist() - consts::num::BUMP, sop_->ref_index());
+                    phot_->move(coll_.dist() - consts::num::BUMP, sop_->get()->ref_index());
                     phot_->set_dir(phys::optics::reflection_dir(phot_->dir(), coll_.norm()));
                 }
                 else
                 {
-                    phot_->move(coll_.dist() + consts::num::BUMP, sop_->ref_index());
+                    phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index());
                 }
 
                 return (true);

@@ -100,14 +100,14 @@ namespace arc //! arctk namespace
             //  -- Collision --
             inline bool Light::hit_front(random::Generator* rng_, phys::Photon* phot_, phys::Mat* mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
-                phot_->move(coll_.dist() + consts::num::BUMP, sop_->ref_index());
+                phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index());
 
                 return (_kill);
             }
 
             inline bool Light::hit_back(random::Generator* rng_, phys::Photon* phot_, phys::Mat* mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
-                phot_->move(coll_.dist() + consts::num::BUMP, sop_->ref_index());
+                phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index());
 
                 return (_kill);
             }
