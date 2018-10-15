@@ -53,6 +53,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline double scatter_dens() const noexcept;
+            inline double energy_dens() const noexcept;
 
             //  -- Settings --
             inline void add_scatter(double interactions_) noexcept;
@@ -80,6 +81,11 @@ namespace arc //! arctk namespace
         inline double Cell::scatter_dens() const noexcept
         {
             return (_scatters / vol());
+        }
+
+        inline double Cell::energy_dens() const noexcept
+        {
+            return (_energy / vol());
         }
 
 
