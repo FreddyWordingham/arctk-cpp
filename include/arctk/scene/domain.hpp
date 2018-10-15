@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
+#include <fstream>
 #include <vector>
 
 //  -- Arctk --
@@ -70,6 +71,9 @@ namespace arc //! arctk namespace
 
             //  -- Retrieval --
             inline phys::Cell* cell(const vec3& pos_) noexcept;
+
+            //  -- Saving --
+            inline void save(const std::string& path_) const noexcept;
         };
 
 
@@ -164,6 +168,57 @@ namespace arc //! arctk namespace
             POST(index_z < _res[index::dim::cartesian::Z]);
 
             return (&_cells[index_x][index_y][index_z]);
+        }
+
+        //  -- Saving --
+        inline void Domain::save(const std::string& path_) const noexcept
+        {
+            PRE(!path_.empty());
+
+            std::ofstream file(path_ + ".vtk");
+
+            file << "# vtk DataFile Version 3.0\n"
+                 << "vtk " << set_name_ << '\n'
+                 << "ASCII\n"
+                 << "DATASET RECTILINEAR_GRID\n"
+                 << "DIMENSIONS " << (_res[index::dim::cartesian::X] + 1) << " " << (_res[index::dim::cartesian::Y] + 1) << " " << (_res[index::dim::cartesian::Z] + 1) << '\n'
+                 << "X_COORDINATES " << (_res[index::dim::cartesian::X] + 1) << " double\n";
+
+            for (size_t i = 0; i <= _res[index::dim::cartesian::X]; ++i)
+            {
+                if (i != 0)
+                {
+                    file << ' ';
+                }
+
+                file << (min_.x + (cell_size.x * static_cast<double>(i))) << ' ';
+            }
+
+            file << "\nY_COORDINATES " << (_res[index::dim::cartesian::Y] + 1) << " double\n";
+
+            for (size_t i = 0; i <= _res[index::dim::cartesian::Y]; ++i)
+            {
+                if (i != 0)
+                {
+                    file << ' ';
+                }
+
+                file << (min_.y + (cell_size.y * static_cast<double>(i))) << ' ';
+            }
+
+            file << "\nZ_COORDINATES " << (_res[index::dim::cartesian::Z] + 1) << " double\n";
+
+            for (size_t i = 0; i <= _res[index::dim::cartesian::Z]; ++i)
+            {
+                if (i != 0)
+                {
+                    file << ' ';
+                }
+
+                file << (min_.z + (cell_size.z * static_cast<double>(i))) << ' ';
+            }
+
+            file << "\nCELL_DATA " << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << "\n\n";
         }
 
 
