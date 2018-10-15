@@ -170,6 +170,7 @@ namespace arc //! arctk namespace
             return (&_cells[index_x][index_y][index_z]);
         }
 
+
         //  -- Saving --
         inline void Domain::save(const std::string& path_) const noexcept
         {
@@ -220,6 +221,28 @@ namespace arc //! arctk namespace
             }
 
             file << "\nCELL_DATA " << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << "\n\n";
+
+
+            file << "\nFIELD FieldData 1\n"
+                 << "interaction_dens" << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << ' ' << "double" << '\n';
+
+            for (size_t i = 0; i < _res[index::dim::cartesian::Z]; ++i)
+            {
+                for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
+                {
+                    for (size_t k = 0; k < _res[index::dim::cartesian::X]; ++k)
+                    {
+                        if (k != 0)
+                        {
+                            file << ' ';
+                        }
+
+                        file << _cells[k][j][i].interaction_dens();
+                    }
+                    file << '\n';
+                }
+                file << '\n';
+            }
         }
 
 
