@@ -70,8 +70,8 @@ namespace arc //! arctk namespace
 
               private:
                 //  -- Collision --
-                inline bool hit_front(random::Generator* /*unused*/, phys::Photon* phot_, const phys::Sop* sop_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept override;
-                inline bool hit_back(random::Generator* /*unused*/, phys::Photon* phot_, const phys::Sop* sop_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept override;
+                inline bool hit_front(random::Generator* rng_, phys::Photon* phot_, phys::Mat* mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
+                inline bool hit_back(random::Generator* rng_, phys::Photon* phot_, phys::Mat* mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
             };
 
 
@@ -98,14 +98,14 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
-            inline bool Light::hit_front(random::Generator* /*unused*/, phys::Photon* phot_, const phys::Sop* sop_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept
+            inline bool Light::hit_front(random::Generator* rng_, phys::Photon* phot_, phys::Mat* mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
                 phot_->move(coll_.dist() + consts::num::BUMP, sop_->ref_index());
 
                 return (_kill);
             }
 
-            inline bool Light::hit_back(random::Generator* /*unused*/, phys::Photon* phot_, const phys::Sop* sop_, phys::Cell* /*unused*/, const geom::Collision& coll_) noexcept
+            inline bool Light::hit_back(random::Generator* rng_, phys::Photon* phot_, phys::Mat* mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
                 phot_->move(coll_.dist() + consts::num::BUMP, sop_->ref_index());
 
