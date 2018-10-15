@@ -87,14 +87,14 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Collision --
-        inline bool Entity::hit(random::Generator* rng_, phys::Photon* phot_, const phys::Sop* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
+        inline bool Entity::hit(random::Generator* rng_, phys::Photon* phot_, phys::Mat* mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
         {
             if (coll_.front())
             {
-                return (hit_front(rng_, phot_, sop_, cell_, coll_));
+                return (hit_front(rng_, phot_, mat_, sop_, cell_, coll_));
             }
 
-            return (hit_back(rng_, phot_, sop_, cell_, coll_));
+            return (hit_back(rng_, phot_, mat_, sop_, cell_, coll_));
         }
 
 
