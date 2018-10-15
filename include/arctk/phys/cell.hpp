@@ -56,6 +56,7 @@ namespace arc //! arctk namespace
 
             //  -- Settings --
             inline void add_scatter(double interactions_) noexcept;
+            inline void add_energy(double energy_) noexcept;
         };
 
 
@@ -89,6 +90,13 @@ namespace arc //! arctk namespace
             PRE(scatters_ <= 1.0);
 
             _scatters += scatters_;
+        }
+
+        inline void Cell::add_energy(const double energy_) noexcept
+        {
+            PRE(energy_ > 0.0);
+
+            _energy += energy_;
         }
 
 
