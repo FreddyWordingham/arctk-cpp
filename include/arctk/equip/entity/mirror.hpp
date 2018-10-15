@@ -98,8 +98,10 @@ namespace arc //! arctk namespace
                     phot_->move(coll_.dist() - consts::num::BUMP);
                     phot_->set_dir(phys::optics::reflection_dir(phot_->dir(), coll_.norm()));
                 }
-
-                phot_->move(coll_.dist() + consts::num::BUMP);
+                else
+                {
+                    phot_->move(coll_.dist() + consts::num::BUMP);
+                }
 
                 return (true);
             }
