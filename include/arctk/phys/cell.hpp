@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            double _interactions;
+            double _scatters;
 
 
             //  == INSTANTIATION ==
