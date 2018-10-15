@@ -128,7 +128,7 @@ namespace arc //! arctk namespace
             PRE(sop_ != nullptr);
 
             _pos += _dir * dist_;
-            _time += ((dist_ * sop_->ref_index) / consts::phys::SPEED_OF_LIGHT)
+            _time += ((dist_ * sop_->ref_index) / consts::phys::SPEED_OF_LIGHT);
         }
 
         inline void Photon::rotate(const double theta_, const double phi_) noexcept
