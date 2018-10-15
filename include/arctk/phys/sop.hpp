@@ -70,7 +70,7 @@ namespace arc //! arctk namespace
             virtual double interact_dist(random::Generator* rng_, const phys::Cell* cell_) const noexcept = 0;
 
             //  -- Interaction --
-            virtual bool interact(random::Generator* rng_, phys::Photon* phot_, const phys::Cell* cell_, const double dist_) const noexcept = 0;
+            virtual bool interact(random::Generator* rng_, phys::Photon* phot_, phys::Cell* cell_, const double dist_) const noexcept = 0;
         };
 
 
