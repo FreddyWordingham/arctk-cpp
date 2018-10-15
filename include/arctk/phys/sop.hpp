@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
         class Sop
         {
             //  == FIELDS ==
-          private:
+          protected:
             //  -- Optical Properties --
             const double _ref_index;
 
