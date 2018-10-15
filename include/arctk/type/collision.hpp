@@ -27,8 +27,8 @@ namespace arc //! arctk namespace
         {
             INTER,
             ENT,
+            LEAF,
             CELL,
-            NODE,
             DOM
         };
 
