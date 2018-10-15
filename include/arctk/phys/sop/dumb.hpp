@@ -93,7 +93,7 @@ namespace arc //! arctk namespace
             //  -- Interaction --
             inline bool Dumb::interact(random::Generator* rng_, phys::Photon* phot_, const phys::Cell* cell_, const double dist_) const noexcept
             {
-                cell_->add_interaction(phot->weight());
+                cell_->add_interaction(phot_->weight());
 
                 phot_->move(dist_, _ref_index);
                 phot_->rotate(random::distribution::henyey_greenstein(rng_, _asym), rng_->gen() * consts::math::TWO_PI);
