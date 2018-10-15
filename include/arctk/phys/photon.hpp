@@ -18,6 +18,7 @@
 //  -- Arctk --
 #include <arctk/debug.hpp>
 #include <arctk/math.hpp>
+#include <arctk/phys/sop.hpp>
 
 
 
@@ -121,9 +122,10 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
-        inline void Photon::move(const double dist_) noexcept
+        inline void Photon::move(const double dist_, const phys::Sop* sop_) noexcept
         {
             _pos += _dir * dist_;
+            _time +=
         }
 
         inline void Photon::rotate(const double theta_, const double phi_) noexcept

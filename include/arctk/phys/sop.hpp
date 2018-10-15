@@ -17,7 +17,6 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/phys/cell.hpp>
-#include <arctk/phys/photon.hpp>
 
 
 
@@ -26,6 +25,11 @@ namespace arc //! arctk namespace
 {
     namespace phys //! physics namespace
     {
+
+
+
+        //  == CLASS PROTOTYPES ==
+        class Photon;
 
 
 
