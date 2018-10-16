@@ -221,6 +221,13 @@ namespace arc //! arctk namespace
             POST(_dir.normalised());
         }
 
+        /**
+         *  Set the direction of the photon.
+         *
+         *  @param  dir_    Direction to set for the photon.
+         *
+         *  @pre    dir_ must be normalised.
+         */
         inline void Photon::set_dir(const vec3& dir_) noexcept
         {
             PRE(dir_.normalised());
