@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
               private:
                 //  -- Optical Properties --
                 const double _ref_index; //!< Refractive index.
-                const double _dist;
+                const double _dist;      //!< Interaction distance.
                 const double _albedo;
                 const double _asym;
 
