@@ -84,6 +84,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the distance until the next interaction event.
+             *
+             *  @return Distance until the next interaction event.
+             */
             inline double Dumb::interact_dist(random::Generator* /*unused*/, const phys::Cell* /*unused*/) const noexcept
             {
                 return (_dist);
