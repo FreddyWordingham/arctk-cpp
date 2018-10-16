@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Depth --
-            const size_t _depth;
+            const size_t _depth; //!< Depth of the node.
 
 
             //  == INSTANTIATION ==
