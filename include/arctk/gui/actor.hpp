@@ -788,7 +788,7 @@ namespace arc //! arctk namespace
             }
 
             /**
-             *  Create an actor from a domain shape.
+             *  Create an actor from a domain.
              *
              *  @param  dom_    Domain to create an actor of.
              *
@@ -848,6 +848,13 @@ namespace arc //! arctk namespace
                 return (Actor(verts, {3}, GL_LINES));
             }
 
+            /**
+             *  Create an actor from a tree.
+             *
+             *  @param  roor_   Root cell of the tree to create an actor of.
+             *
+             *  @return Tree actor.
+             */
             inline Actor tree(const tree::Root& root_) noexcept // NOLINT
             {
                 std::vector<glm::vec3> verts;
