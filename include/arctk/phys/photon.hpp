@@ -235,7 +235,13 @@ namespace arc //! arctk namespace
             _dir = dir_;
         }
 
-        inline void Photon::multiply_weight(double mult_) noexcept
+        /**
+         *  Multiply the weight of the photon.
+         *
+         * @param mult_
+         * @return
+         */
+        inline void Photon::multiply_weight(const double mult_) noexcept
         {
             PRE(mult_ > 0.0);
             PRE(mult_ <= 1.0);
