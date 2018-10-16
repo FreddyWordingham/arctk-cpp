@@ -684,6 +684,11 @@ namespace arc //! arctk namespace
                 return (_tris[index_]);
             }
 
+            /**
+             *  Get a vector of pointers to each triangle forming the mesh.
+             *
+             *  @return Vector of pointers to each triangle forming the mesh.
+             */
             inline std::vector<const Triangle*> Mesh::tri_list() const noexcept
             {
                 std::vector<const Triangle*> tris;
