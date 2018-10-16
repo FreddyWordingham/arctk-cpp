@@ -82,6 +82,7 @@ namespace arc //! arctk namespace
               , _front_mat(front_mat_)
               , _back_mat(back_mat_)
             {
+                PRE(!serial_.empty());
                 PRE(scale_.x > 0.0);
                 PRE(scale_.y > 0.0);
                 PRE(scale_.z > 0.0);
