@@ -77,6 +77,13 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a specific-optical-properties object with a given refractive index.
+         *
+         *  @param  ref_index_  Refractive index.
+         *
+         *  @pre    ref_index_ must be greater than, or equal to, unity.
+         */
         inline Sop::Sop(const double ref_index_) noexcept
           : _ref_index(ref_index_)
         {
