@@ -859,6 +859,8 @@ namespace arc //! arctk namespace
              *  @param  pos_    Initial position of the ray.
              *  @param  dir_    Direction of ray travel.
              *
+             *  @pre    dir_ must be normalised.
+             *
              *  @return Optional distance to collision event.
              */
             inline std::optional<double> Mesh::collision(const vec3& pos_, const vec3& dir_) const noexcept // NOLINT
