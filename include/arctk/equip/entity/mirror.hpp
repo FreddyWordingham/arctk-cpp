@@ -68,6 +68,9 @@ namespace arc //! arctk namespace
               , _front_ref(front_ref_)
               , _back_ref(back_ref_)
             {
+                PRE(scale_.x > 0.0);
+                PRE(scale_.y > 0.0);
+                PRE(scale_.z > 0.0);
                 PRE((front_ref_ >= 0.0) && (front_ref_ <= 1.0));
                 PRE((back_ref_ >= 0.0) && (back_ref_ <= 1.0));
             }
