@@ -195,6 +195,16 @@ namespace arc //! arctk namespace
             cell_->add_energy(dist_ * _energy * _weight);
         }
 
+        /**
+         *  Rotate the photon.
+         *
+         *  @param  theta_  Polar angle to rotate.
+         *  @param  phi_    Azimuthal angle to rotate.
+         *
+         *  @pre    _dir must be normalised.
+         *
+         *  @post   _dir must be normalised.
+         */
         inline void Photon::rotate(const double theta_, const double phi_) noexcept
         {
             PRE(_dir.normalised());
