@@ -162,6 +162,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the resolution of the domain cells.
+         *
+         *  @return Resolution of the domain cells.
+         */
         inline const std::array<size_t, 3>& Domain::res() const noexcept
         {
             return (_res);
