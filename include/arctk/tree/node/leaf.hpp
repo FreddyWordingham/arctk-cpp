@@ -164,6 +164,8 @@ namespace arc //! arctk namespace
              *
              *  @param  pos_    Position to retrieve the corresponding leaf cell for.
              *
+             *  @pre    pos_ must intersect this node.
+             *
              *  @return Pointer to the leaf cell for the given position.
              */
             inline const node::Leaf* Leaf::leaf(const vec3& pos_) const noexcept
