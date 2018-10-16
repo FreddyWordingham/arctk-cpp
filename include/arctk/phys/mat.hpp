@@ -77,6 +77,14 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Destructors --
+        /**
+         *  Construct a material which can generate specific-optical-properties for given wavelength bounds.
+         *
+         *  @param  min_    Minimum wavelength bound.
+         *  @param  max_    Maximum wavelength bound.
+         *
+         *  @pre    min_ must be less than, or equal to, max_.
+         */
         inline Mat::Mat(const double min_, const double max_) noexcept
           : _min(min_)
           , _max(max_)
