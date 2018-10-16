@@ -1,0 +1,9 @@
+<map id="arc::math::pow::sq" name="arc::math::pow::sq">
+<area shape="rect" id="node2" href="$namespacearc_1_1phys_1_1optics.html#ab0a0e4c919285debfff010238d6dadbd" title="arc::phys::optics::\lreflection_prob" alt="" coords="203,100,328,139"/>
+<area shape="rect" id="node6" href="$namespacearc_1_1phys_1_1optics.html#a42d29265dc60850d52659b35e615e47f" title="arc::phys::optics::\lrefraction_dir" alt="" coords="203,37,328,76"/>
+<area shape="rect" id="node7" href="$namespacearc_1_1random_1_1distribution.html#aa72c220ef49e5f1748071c2d83119103" title="arc::random::distribution\l::henyey_greenstein" alt="" coords="184,163,348,201"/>
+<area shape="rect" id="node3" href="$classarc_1_1equip_1_1entity_1_1_body.html#a768c28a3110b4bf60860feeb3391b73e" title="arc::equip::entity\l::Body::hit_front" alt="" coords="410,5,529,44"/>
+<area shape="rect" id="node4" href="$classarc_1_1equip_1_1entity_1_1_body.html#accbb9ff581c56cd408f95dec15593568" title="arc::equip::entity\l::Body::hit_back" alt="" coords="410,68,529,107"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1phys_1_1optics.html#acae86bb6de3a5ee533261b3986bfeb13" title="arc::phys::optics::\lrefraction_prob" alt="" coords="407,131,532,169"/>
+<area shape="rect" id="node8" href="$classarc_1_1phys_1_1sop_1_1_dumb.html#a0e923da960f8feb37dad6927059e3abe" title="arc::phys::sop::Dumb\l::interact" alt="" coords="396,193,543,232"/>
+</map>

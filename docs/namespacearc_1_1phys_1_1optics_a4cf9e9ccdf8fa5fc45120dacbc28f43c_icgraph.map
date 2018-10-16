@@ -1,0 +1,6 @@
+<map id="arc::phys::optics::reflection_dir" name="arc::phys::optics::reflection_dir">
+<area shape="rect" id="node2" href="$classarc_1_1equip_1_1entity_1_1_body.html#a768c28a3110b4bf60860feeb3391b73e" title="arc::equip::entity\l::Body::hit_front" alt="" coords="179,5,298,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1equip_1_1entity_1_1_body.html#accbb9ff581c56cd408f95dec15593568" title="arc::equip::entity\l::Body::hit_back" alt="" coords="179,68,298,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1equip_1_1entity_1_1_mirror.html#af130f914bf6fe5fe4bea2a30c8d66cb4" title="arc::equip::entity\l::Mirror::hit_front" alt="" coords="179,131,298,169"/>
+<area shape="rect" id="node5" href="$classarc_1_1equip_1_1entity_1_1_mirror.html#a88726ff72883f5b341d374829da9c18d" title="arc::equip::entity\l::Mirror::hit_back" alt="" coords="178,193,299,232"/>
+</map>

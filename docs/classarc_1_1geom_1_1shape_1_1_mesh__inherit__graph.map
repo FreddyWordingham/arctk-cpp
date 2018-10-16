@@ -1,0 +1,8 @@
+<map id="arc::geom::shape::Mesh" name="arc::geom::shape::Mesh">
+<area shape="rect" id="node3" href="$classarc_1_1equip_1_1_entity.html" title="arc::equip::Entity" alt="" coords="147,152,268,177"/>
+<area shape="rect" id="node2" href="$classarc_1_1geom_1_1_shape.html" title="arc::geom::Shape" alt="" coords="144,5,271,31"/>
+<area shape="rect" id="node4" href="$classarc_1_1equip_1_1entity_1_1_body.html" title="arc::equip::entity\l::Body" alt="" coords="5,225,124,264"/>
+<area shape="rect" id="node5" href="$classarc_1_1equip_1_1entity_1_1_light.html" title="arc::equip::entity\l::Light" alt="" coords="148,225,267,264"/>
+<area shape="rect" id="node7" href="$classarc_1_1equip_1_1entity_1_1_mirror.html" title="arc::equip::entity\l::Mirror" alt="" coords="291,225,410,264"/>
+<area shape="rect" id="node6" href="$classarc_1_1equip_1_1entity_1_1light_1_1_laser.html" title="arc::equip::entity\l::light::Laser" alt="" coords="148,312,267,351"/>
+</map>

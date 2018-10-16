@@ -1,0 +1,6 @@
+<map id="arc::gui::Actor::Actor" name="arc::gui::Actor::Actor">
+<area shape="rect" id="node2" href="$namespacearc_1_1gui_1_1actor.html#a70cd46f071386ec37cd9a7c957b70bd1" title="arc::gui::actor::path" alt="" coords="204,5,340,31"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1gui_1_1actor.html#aa415db4a76b700c82cc899b033d55d19" title="arc::gui::actor::shape" alt="" coords="199,55,345,80"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1gui_1_1actor.html#a0353cbd33112a7c1c20e9eb4344f0a6d" title="arc::gui::actor::domain" alt="" coords="195,104,349,129"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1gui_1_1actor.html#a528cb8607d80ad2c0008f38e8f1c2b63" title="arc::gui::actor::tree" alt="" coords="206,153,338,179"/>
+</map>

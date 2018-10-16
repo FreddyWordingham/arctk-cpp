@@ -1,0 +1,11 @@
+<map id="arc::geom::shape::Box::intersect" name="arc::geom::shape::Box::intersect">
+<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_box.html#aceb455cc31a047d4498f2c134507677b" title="arc::geom::shape::Box\l::centre" alt="" coords="208,5,363,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_box.html#a98dad3f2eb7b9bd281e62b957cb58f6e" title="arc::geom::shape::Box\l::half_width" alt="" coords="208,68,363,107"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="215,131,356,156"/>
+<area shape="rect" id="node8" href="$namespacearc_1_1utl_1_1search.html#a7dedb03499315275304d2ee539dbbf81" title="arc::utl::search::min" alt="" coords="217,180,354,205"/>
+<area shape="rect" id="node10" href="$namespacearc_1_1math_1_1vec.html#aac2f268a88bb0d0908ab2a0fcd8faabe" title="arc::math::vec::axis" alt="" coords="217,229,354,255"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1utl_1_1search.html#a83ff5408af0ccc99c51d3dabf4f4562b" title="arc::utl::search::max\l_index" alt="" coords="411,117,552,156"/>
+<area shape="rect" id="node6" href="$namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="627,120,748,159"/>
+<area shape="rect" id="node7" href="$namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="600,184,775,209"/>
+<area shape="rect" id="node9" href="$namespacearc_1_1utl_1_1search.html#ab0aae86f6b98b4746101dd60c00514ca" title="arc::utl::search::min\l_index" alt="" coords="413,180,550,219"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="arc::equip::entity::Body::hit_back" name="arc::equip::entity::Body::hit_back">
+<area shape="rect" id="node2" href="$namespacearc_1_1phys_1_1optics.html#ab0a0e4c919285debfff010238d6dadbd" title="arc::phys::optics::\lreflection_prob" alt="" coords="172,5,298,44"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1phys_1_1optics.html#a4cf9e9ccdf8fa5fc45120dacbc28f43c" title="arc::phys::optics::\lreflection_dir" alt="" coords="172,131,298,169"/>
+<area shape="rect" id="node7" href="$namespacearc_1_1phys_1_1optics.html#a42d29265dc60850d52659b35e615e47f" title="arc::phys::optics::\lrefraction_dir" alt="" coords="172,68,298,107"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1pow.html#a673982111327d6a2597e9a381009ce4d" title="arc::math::pow::sq" alt="" coords="370,23,500,48"/>
+<area shape="rect" id="node5" href="$classarc_1_1math_1_1_vec.html#aa6d4a0162dccc9fc08cb51111aa44825" title="arc::math::Vec::normalised" alt="" coords="346,81,525,107"/>
+<area shape="rect" id="node6" href="$classarc_1_1math_1_1_vec.html#ad76dddf5863281c38659f69cf9d7ec36" title="arc::math::Vec::normal" alt="" coords="358,137,513,163"/>
+</map>

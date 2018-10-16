@@ -1,0 +1,8 @@
+<map id="arc::gui::camera::Orbit::move" name="arc::gui::camera::Orbit::move">
+<area shape="rect" id="node2" href="$namespacearc_1_1math_1_1convert.html#a19b4ef4a009b9e148760c83ed9cf266c" title="arc::math::convert\l::cart_to_polar" alt="" coords="213,5,341,44"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1convert.html#ac0b319816d18eb6a572ecb9abd2af70d" title="arc::math::convert\l::polar_to_cart" alt="" coords="213,68,341,107"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="207,131,348,156"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1utl_1_1search.html#a83ff5408af0ccc99c51d3dabf4f4562b" title="arc::utl::search::max\l_index" alt="" coords="396,124,537,163"/>
+<area shape="rect" id="node6" href="$namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="612,96,733,135"/>
+<area shape="rect" id="node7" href="$namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="585,159,760,184"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="arc::gui::Lens" name="arc::gui::Lens">
+<area shape="rect" id="node2" href="$classarc_1_1gui_1_1lens_1_1_orthographic.html" title="arc::gui::lens::Orthographic" alt="" coords="5,79,187,104"/>
+<area shape="rect" id="node3" href="$classarc_1_1gui_1_1lens_1_1_perspective.html" title="arc::gui::lens::Perspective" alt="" coords="210,79,384,104"/>
+</map>

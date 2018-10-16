@@ -1,0 +1,5 @@
+<map id="arc::tree::node::Branch::init_childs" name="arc::tree::node::Branch::init_childs">
+<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_box.html#a2d77692206d575b3bc7956a15085a420" title="arc::geom::shape::Box::min" alt="" coords="212,5,396,31"/>
+<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_box.html#a1fc761119e8f66eb64c238f7c5ec27ac" title="arc::geom::shape::Box::max" alt="" coords="210,55,398,80"/>
+<area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_box.html#a75b9b1763d42037e103de441aa3ed7bb" title="arc::geom::shape::Box\l::intersect" alt="" coords="227,104,381,143"/>
+</map>

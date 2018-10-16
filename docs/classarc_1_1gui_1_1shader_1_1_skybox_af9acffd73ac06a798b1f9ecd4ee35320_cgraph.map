@@ -1,0 +1,8 @@
+<map id="arc::gui::shader::Skybox::Skybox" name="arc::gui::shader::Skybox::Skybox">
+<area shape="rect" id="node2" href="$classarc_1_1gui_1_1_actor.html#ae1bc2cdd561344c3568a41d920653308" title="arc::gui::Actor::rotate" alt="" coords="218,80,363,105"/>
+<area shape="rect" id="node3" href="$classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="411,73,563,112"/>
+<area shape="rect" id="node4" href="$classarc_1_1gui_1_1_actor.html#a5251ce8de3e14f4b3daf9e2a7b771eee" title="arc::gui::Actor::model" alt="" coords="619,5,767,31"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1math_1_1mat.html#a8df70b235035d723df62e4a418ac7e94" title="arc::math::mat::translate" alt="" coords="611,55,776,80"/>
+<area shape="rect" id="node6" href="$namespacearc_1_1math_1_1mat.html#acc6349295b1604d5cafa857f97469ed4" title="arc::math::mat::rotate" alt="" coords="619,104,767,129"/>
+<area shape="rect" id="node7" href="$namespacearc_1_1math_1_1mat.html#a4aaba718d91ea015418b66dc4f7a7a48" title="arc::math::mat::scale" alt="" coords="621,153,766,179"/>
+</map>

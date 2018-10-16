@@ -1,0 +1,6 @@
+<map id="arc::tree::Node" name="arc::tree::Node">
+<area shape="rect" id="node4" href="$classarc_1_1tree_1_1node_1_1_branch.html" title="arc::tree::node::Branch" alt="" coords="5,225,162,251"/>
+<area shape="rect" id="node5" href="$classarc_1_1tree_1_1node_1_1_leaf.html" title="arc::tree::node::Leaf" alt="" coords="187,225,327,251"/>
+<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_box.html" title="arc::geom::shape::Box" alt="" coords="93,79,248,104"/>
+<area shape="rect" id="node3" href="$classarc_1_1geom_1_1_shape.html" title="arc::geom::Shape" alt="" coords="107,5,234,31"/>
+</map>
