@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
               private:
                 //  -- Materials --
                 const phys::Mat& _front_mat; //!< Front hit material.
-                const phys::Mat& _back_mat;
+                const phys::Mat& _back_mat;  //!< Back hit material.
 
 
                 //  == INSTANTIATION ==
