@@ -63,6 +63,13 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a body entity which changes the optical properties during a photon collision.
+             *
+
+             *
+             *  @return False if the photon should be removed from the simulation.
+             */
             inline Body::Body(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const phys::Mat& front_mat_, const phys::Mat& back_mat_) noexcept
               : Entity(serial_, scale_, rot_, trans_)
               , _front_mat(front_mat_)
@@ -75,7 +82,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
             //  -- Collision --
             /**
-             *  Construct a body entity which changes the optical properties during a photon collision.
+             *  Perform a front hit event and update the material and specific-optical-properties.
              *
              *  @param  rng_    Random number generator.
              *  @param  phot_   Photon hitting the entity.
