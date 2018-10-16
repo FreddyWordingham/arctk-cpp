@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
                 const double _ref_index; //!< Refractive index.
                 const double _dist;      //!< Interaction distance.
                 const double _albedo;    //!< Single scattering albedo.
-                const double _asym;
+                const double _asym;      //!< Asymmetry factor.
 
 
                 //  == INSTANTIATION ==
