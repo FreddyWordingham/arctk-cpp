@@ -43,9 +43,9 @@ namespace arc //! arctk namespace
              */
             enum cartesian
             {
-                X,    //! X spatial dimension.
-                Y,    //! Y spatial dimension.
-                Z,    //! Z spatial dimension.
+                X,    //!< X spatial dimension.
+                Y,    //!< Y spatial dimension.
+                Z,    //!< Z spatial dimension.
                 TOTAL //!< Total number of cartesian spatial dimensions.
             };
 
