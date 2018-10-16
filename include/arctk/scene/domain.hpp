@@ -172,6 +172,11 @@ namespace arc //! arctk namespace
             return (_res);
         }
 
+        /**
+         *  Get a const reference to the three-dimensional vector of domain cells.
+         *
+         *  @return Const reference to the three-dimensional vector of domain cells.
+         */
         inline const std::vector<std::vector<std::vector<phys::Cell>>>& Domain::cells() const noexcept
         {
             return (_cells);
