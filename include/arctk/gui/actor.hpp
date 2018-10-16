@@ -787,6 +787,13 @@ namespace arc //! arctk namespace
                 return (Actor(verts, {3, 3}));
             }
 
+            /**
+             *  Create an actor from a domain shape.
+             *
+             *  @param  dom_    Domain to create an actor of.
+             *
+             *  @return Domain mesh actor.
+             */
             inline Actor domain(const scene::Domain& dom_) noexcept // NOLINT
             {
                 std::vector<glm::vec3> verts;
