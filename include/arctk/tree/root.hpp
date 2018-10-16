@@ -159,6 +159,11 @@ namespace arc //! arctk namespace
             return (_trunk->max());
         }
 
+        /**
+         *  Get the maximum depth of any cell contained within this cell.
+         *
+         *  @return Maximum depth of any cell contained within this cell.
+         */
         inline size_t Root::max_depth() const noexcept
         {
             return (_trunk->max_depth());
