@@ -74,11 +74,11 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline size_t                         depth() const noexcept;
-            virtual size_t                        max_depth() const noexcept = 0; //!< Get the maximum depth of any cell contained within this cell.  @return   Maximum depth of any cell contained within this cell.
-            virtual size_t                        max_tris() const noexcept  = 0;
-            virtual size_t                        num_nodes() const noexcept = 0;
-            virtual std::vector<geom::shape::Box> boxes() const noexcept     = 0;
+            inline size_t  depth() const noexcept;
+            virtual size_t max_depth() const noexcept = 0; //!< Get the maximum depth of any cell contained within this cell.  @return   Maximum depth of any cell contained within this cell.
+            virtual size_t max_tris() const noexcept  = 0; //!< Get the maximum number of triangles contained within any cell contained within this cell.  @return   Maximum number of triangles contained within any cell contained within this cell.
+            virtual size_t num_nodes() const noexcept = 0;
+            virtual std::vector<geom::shape::Box> boxes() const noexcept = 0;
 
             //  -- Retrieval --
             virtual const node::Leaf* leaf(const vec3& pos_) const noexcept = 0;
