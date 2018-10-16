@@ -96,6 +96,16 @@ namespace arc //! arctk namespace
 
 
             //  -- Interaction --
+            /**
+             *  Perform an interaction event on the photon.
+             *
+             *  @param  rng_    Random number generator.
+             *  @param  phot_   Photon to interact with.
+             *  @param  cell_   Current domain cell.
+             *  @param  dist_   Distance to the interaction event.
+             *
+             *  @return False if the photon should be removed from the loop after interacting.
+             */
             inline bool Dumb::interact(random::Generator* rng_, phys::Photon* phot_, phys::Cell* cell_, const double dist_) const noexcept
             {
                 cell_->add_scatter(phot_->weight());
