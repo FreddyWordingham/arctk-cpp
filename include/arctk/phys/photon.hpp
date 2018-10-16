@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Particle --
             vec3 _pos; //!< Position of the photon.
-            vec3 _dir;
+            vec3 _dir; //!< Direction of the photon.
 
             //  -- Properties --
             const double _wavelength; //!< Wavelength of the photon.
