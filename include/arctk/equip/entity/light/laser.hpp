@@ -101,6 +101,14 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
                 //  -- Emission --
+                /** Emit a photon in a given material with specific-optical-properties.
+                 *
+                 *  @param  rng_    Random number generator.
+                 *  @param  energy_ Initial energy of the photon.
+                 *  @param  time_   Initial timestamp of the photon.
+                 *
+                 *  @return Emitted photon in a material with specific-optical-properties.
+                 */
                 inline std::tuple<phys::Photon, const arc::phys::Mat*, std::unique_ptr<arc::phys::Sop>> Laser::emit(random::Generator* rng_, const double energy_, const double time_) const noexcept
                 {
                     PRE(energy_ > 0.0);
