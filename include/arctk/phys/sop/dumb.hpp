@@ -68,6 +68,17 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a dumb specific-optical-property.
+             *
+             *  @param  ref_index_  Refractive index.
+             *  @param  dist_       Interaction distance.
+             *  @param  albedo_     Single scattering albedo.
+             *  @param  asym_       Asymmetry parameter.
+             *
+             *  @pre    ref_index_ must be greater than, or equal to, unity.
+             *  @pre
+             */
             inline Dumb::Dumb(const double ref_index_, const double dist_, const double albedo_, const double asym_) noexcept
               : Sop(ref_index_)
               , _dist(dist_)
@@ -75,7 +86,7 @@ namespace arc //! arctk namespace
               , _asym(asym_)
             {
                 PRE(ref_index_ >= 1.0);
-                PRE(_dist > 0.0);
+                PRE(dist_ > 0.0);
                 PRE((albedo_ >= 0.0) || (albedo_ <= 1.0));
                 PRE((asym_ >= -1.0) || (asym_ <= 1.0));
             }
