@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
                     //  == FIELDS ==
                   private:
                     //  -- Emission --
-                    const double _wavelength;
+                    const double _wavelength; //!< Emission wavelength.
 
 
                     //  == INSTANTIATION ==
