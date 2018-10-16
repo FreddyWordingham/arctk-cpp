@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
             //  -- Properties --
             const double _wavelength; //!< Wavelength of the photon.
             const double _energy;     //!< Energy of the packet.
-            double       _time;
+            double       _time;       //!< Current photon time.
 
             //  -- Statistical --
             double _weight;
