@@ -175,8 +175,20 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
+            /**
+             *  Determine the entity and distance to the collision event (if there is one) of a ray.
+             *
+             *  @param  pos_    Position of the ray.
+             *  @param  dir_    Direction of the ray.
+             *
+             *  @pre    dir_ must ne normalised.
+             *
+             *  @return Entity and distance to the collision event (if there is one) of a ray.
+             */
             inline std::optional<std::pair<equip::Entity*, double>> Leaf::ent_collision(const vec3& pos_, const vec3& dir_) const noexcept // NOLINT
             {
+                PRE(dir_.normalised());
+
                 std::optional<std::pair<equip::Entity*, double>> coll(std::nullopt);
 
                 for (size_t i = 0; i < _ent_tris.size(); ++i)
