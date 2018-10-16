@@ -63,6 +63,23 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a mirror enity which has a probability of reflecting incident photons.
+             *
+             *  @param  serial_     Serialised wavefront file.
+             *  @param  scale_      Scaling transformation.
+             *  @param  rot_        Rotation transformation.
+             *  @param  trans_      Translation transformation.
+             *  @param  front_ref_  Reflection probability of the front surface.
+             *  @param  back_ref_   Reflection probability of the back surface.
+             *
+             *  @pre    serial may not be empty.
+             *  @pre    scale_.x must be positive.
+             *  @pre    scale_.y must be positive.
+             *  @pre    scale_.z must be positive.
+             *  @pre    front_ref_ must be between zero and unity.
+             *  @pre    back_ref_ must be between zero and unity.
+             */
             inline Mirror::Mirror(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const double front_ref_, const double back_ref_) noexcept
               : Entity(serial_, scale_, rot_, trans_)
               , _front_ref(front_ref_)
