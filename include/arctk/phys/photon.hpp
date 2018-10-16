@@ -152,6 +152,11 @@ namespace arc //! arctk namespace
             return (_energy);
         }
 
+        /**
+         *  Get the time of the photon.
+         *
+         *  @return Time of the photon.
+         */
         inline double Photon::time() const noexcept
         {
             return (_time);
