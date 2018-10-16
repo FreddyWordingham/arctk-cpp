@@ -209,8 +209,20 @@ namespace arc //! arctk namespace
                 return (coll);
             }
 
+            /**
+             *  Determine the entity and information about a collision event (if there is one) of a ray.
+             *
+             *  @param  pos_    Position of the ray.
+             *  @param  dir_    Direction of the ray.
+             *
+             *  @pre    dir_ must be normalised.
+             *
+             *  @return Entity and information about a collision event (if there is one) of a ray.
+             */
             inline std::optional<std::pair<equip::Entity*, geom::Collision>> Leaf::ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept
             {
+                PRE(dir_.normalised());
+
                 std::optional<std::pair<equip::Entity*, geom::Collision>> coll(std::nullopt);
 
                 for (size_t i = 0; i < _ent_tris.size(); ++i)
