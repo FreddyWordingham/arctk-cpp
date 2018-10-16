@@ -189,6 +189,11 @@ namespace arc //! arctk namespace
             return (_trunk->num_nodes());
         }
 
+        /**
+         *  Get a vector of box shapes representing all cells contained within this cell.
+         *
+         *  @return Vector of box shapes representing all cells contained within this cell.
+         */
         inline std::vector<geom::shape::Box> Root::boxes() const noexcept
         {
             return (_trunk->boxes());
