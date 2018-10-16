@@ -32,10 +32,10 @@ namespace arc //! arctk namespace
              */
             enum channels
             {
-                R, //! Red colour channel.
-                G, //! Green colour channel.
-                B, //! Blue colour channel.
-                A  //! Transparency colour channel.
+                R, //!< Red colour channel.
+                G, //!< Green colour channel.
+                B, //!< Blue colour channel.
+                A  //!< Transparency colour channel.
             };
 
 

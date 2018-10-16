@@ -23,6 +23,9 @@ namespace arc //! arctk namespace
 
         //  == ENUMERATIONS ==
         //  -- Types --
+        /**
+         *  Enumeration of collision types that a photon may undergo during simulation.
+         */
         enum class collision
         {
             INTER,
