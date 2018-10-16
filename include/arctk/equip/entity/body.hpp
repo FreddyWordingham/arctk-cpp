@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Materials --
-                const phys::Mat& _front_mat;
+                const phys::Mat& _front_mat; //!< Front hit material.
                 const phys::Mat& _back_mat;
 
 
