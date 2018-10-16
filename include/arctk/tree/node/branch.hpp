@@ -110,6 +110,23 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
+            /**
+             *  Initialise the three-dimensional array of child nodes.
+             *
+             *  @param  min_        Minimum bound of the cell.
+             *  @param  max_        Maximum bound of the cell.
+             *  @param  ent_tris_   Vector of entity triangle list pairings that must intersect this node.
+             *  @param  cur_depth_  Depth of this node.
+             *  @param  max_depth_  Maximum depth of the tree.
+             *  @param  tar_tris_   Target number of triangles for each leaf node.
+             *
+             *  @pre    min_.x must be less than, or equal to, max_.x.
+             *  @pre    min_.y must be less than, or equal to, max_.y.
+             *  @pre    min_.z must be less than, or equal to, max_.z.
+             *  @pre    tar_tris_ must be positive.
+             *
+             *  @return Initialised three-dimensional array of child nodes.
+             */
             inline std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> Branch::init_childs(const vec3& min_, const vec3& max_, const std::vector<std::pair<equip::Entity*, std::vector<const geom::shape::Triangle*>>>& ent_tris_, // NOLINT
                                                                                                           const size_t cur_depth_, const size_t max_depth_, const size_t tar_tris_) const noexcept
             {
