@@ -113,15 +113,15 @@ namespace arc //! arctk namespace
             std::vector<std::vector<std::vector<phys::Cell>>> cells(res_[index::dim::cartesian::X], std::vector<std::vector<phys::Cell>>(res_[index::dim::cartesian::Y]));
             for (size_t i = 0; i < res_[index::dim::cartesian::X]; ++i)
             {
-                const double x = min_.x + (i * size.x);
+                const double x = min_.x + (static_cast<double>(i) * size.x);
 
                 for (size_t j = 0; j < res_[index::dim::cartesian::Y]; ++j)
                 {
-                    const double y = min_.y + (j * size.y);
+                    const double y = min_.y + (static_cast<double>(j) * size.y);
 
                     for (size_t k = 0; k < res_[index::dim::cartesian::Z]; ++k)
                     {
-                        const double z = min_.z + (k * size.z);
+                        const double z = min_.z + (static_cast<double>(k) * size.z);
 
                         cells[i][j].emplace_back(phys::Cell(vec3(x, y, z), vec3(x, y, z) + size));
                     }
