@@ -52,7 +52,7 @@ namespace arc //! arctk namespace
                 const vec3 _centre; //!< Centre coordinate of the node.
 
                 //  -- Children --
-                const std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> _childs;
+                const std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> _childs; //!< Three-dimensional array of child nodes.
 
 
                 //  == INSTANTIATION ==
