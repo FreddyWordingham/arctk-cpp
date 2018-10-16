@@ -94,7 +94,7 @@ namespace arc //! arctk namespace
          *
          *  @param  min_    Minimum bound of the cell.
          *  @param  max_    Maximum bound of the cell.
-         *  @param  depth_  Dpeth of the cell.
+         *  @param  depth_  Depth of the cell.
          *
          *  @pre    min_.x must be less than, or equal to, max_.x.
          *  @pre    min_.y must be less than, or equal to, max_.y.
