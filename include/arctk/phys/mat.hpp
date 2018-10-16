@@ -103,6 +103,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the minimum wavelength bound of the material.
+         *
+         *  @return Minimum wavelength bound of the material.
+         */
         inline double Mat::min() const noexcept
         {
             return (_min);
