@@ -80,6 +80,15 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a domain of cells with given bounds and resolution.
+         *
+         *  @param  min_    Minimum bound of the domain.
+         *  @param  max_    Maximum bound of the domain.
+         *  @param  res_    Resolution of the domain cells.
+         *
+         *  @pre
+         */
         inline Domain::Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept
           : Box(min_, max_)
           , _res(res_)
@@ -92,9 +101,6 @@ namespace arc //! arctk namespace
             PRE(res_[index::dim::cartesian::X] > 0);
             PRE(res_[index::dim::cartesian::Y] > 0);
             PRE(res_[index::dim::cartesian::Z] > 0);
-            PRE((res_[index::dim::cartesian::X] % 2) != 0);
-            PRE((res_[index::dim::cartesian::Y] % 2) != 0);
-            PRE((res_[index::dim::cartesian::Z] % 2) != 0);
         }
 
 
