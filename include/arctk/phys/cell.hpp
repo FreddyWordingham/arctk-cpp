@@ -64,6 +64,16 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a cell with given bounds.
+         *
+         *  @param  min_    Vertex position of the box.
+         *  @param  max_    Vertex position of the box.
+         *
+         *  @pre    min_.x must be less than, or equal to, max_.x.
+         *  @pre    min_.y must be less than, or equal to, max_.y.
+         *  @pre    min_.z must be less than, or equal to, max_.z.
+         */
         inline Cell::Cell(const vec3& min_, const vec3& max_) noexcept
           : Box(min_, max_)
           , _scatters(0.0)
