@@ -95,6 +95,8 @@ namespace arc //! arctk namespace
             {
                 cell_->add_scatter(phot_->weight());
 
+                phot_->multiply_weight(_albedo);
+
                 phot_->move(dist_, _ref_index, cell_);
                 phot_->rotate(random::distribution::henyey_greenstein(rng_, _asym), rng_->gen() * consts::math::TWO_PI);
                 phot_->multiply_weight(_albedo);
