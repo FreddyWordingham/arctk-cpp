@@ -55,8 +55,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               private:
                 //  -- Collision --
-                inline bool hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Mat* mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
-                inline bool hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Mat* mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
+                inline bool hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
+                inline bool hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
             };
 
 
@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Collision --
-            inline bool Body::hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Mat* mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
+            inline bool Body::hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
                 std::unique_ptr<arc::phys::Sop> next_sop = _front_mat.gen(*phot_);
 
@@ -90,14 +90,14 @@ namespace arc //! arctk namespace
 
                     phot_->set_dir(phys::optics::refraction_dir(phot_->dir(), coll_.norm(), sop_->get()->ref_index(), next_sop->ref_index()));
 
-                    mat_  = &_front_mat;
+                    *mat_ = &_front_mat;
                     *sop_ = std::move(next_sop);
                 }
 
                 return (true);
             }
 
-            inline bool Body::hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Mat* mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
+            inline bool Body::hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
                 std::unique_ptr<arc::phys::Sop> next_sop = _back_mat.gen(*phot_);
 
@@ -113,7 +113,7 @@ namespace arc //! arctk namespace
 
                     phot_->set_dir(phys::optics::refraction_dir(phot_->dir(), -coll_.norm(), sop_->get()->ref_index(), next_sop->ref_index()));
 
-                    mat_  = &_back_mat;
+                    *mat_ = &_back_mat;
                     *sop_ = std::move(next_sop);
                 }
 
