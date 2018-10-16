@@ -175,7 +175,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Saving --
-        inline void Domain::save(const std::string& path_) const noexcept
+        inline void Domain::save(const std::string& path_) const noexcept // NOLINT
         {
             PRE(!path_.empty());
 
