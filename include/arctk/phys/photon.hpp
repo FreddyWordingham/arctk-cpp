@@ -136,6 +136,8 @@ namespace arc //! arctk namespace
 
             _pos += _dir * dist_;
             _time += ((dist_ * ref_index_) / consts::phys::SPEED_OF_LIGHT);
+
+            cell_->add_energy(dist_ * _energy * _weight);
         }
 
         inline void Photon::rotate(const double theta_, const double phi_) noexcept
