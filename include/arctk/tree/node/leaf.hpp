@@ -76,6 +76,19 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a leaf tree node.
+             *
+             *  @param  min_        Minimum bound of the cell.
+             *  @param  max_        Maximum bound of the cell.
+             *  @param  ent_tris_   Vector of entity triangle list pairings that must intersect this node.
+             *  @param  cur_depth_  Depth of this node.
+             *
+             *  @pre    min_.x must be less than, or equal to, max_.x.
+             *  @pre    min_.y must be less than, or equal to, max_.y.
+             *  @pre    min_.z must be less than, or equal to, max_.z.
+             *  @pre    Each triangle within ent_tris_ must intersec this node.
+             */
             inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<equip::Entity*, std::vector<const geom::shape::Triangle*>>>& ent_tris_, const size_t cur_depth_) noexcept
               : Node(min_, max_, cur_depth_)
               , _ent_tris(ent_tris_)
