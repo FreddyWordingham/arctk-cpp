@@ -172,6 +172,9 @@ namespace arc //! arctk namespace
              *  @pre    poss_ must contain at least three entries.
              *  @pre    norms_ may not be empty.
              *  @pre    faces_ may not be empty.
+             *  @pre    scale_.x must be positive.
+             *  @pre    scale_.y must be positive.
+             *  @pre    scale_.z must be positive.
              *
              *  @post   _tris may not be empty.
              */
@@ -181,6 +184,9 @@ namespace arc //! arctk namespace
                 PRE(poss_.size() >= 3);
                 PRE(!norms_.empty());
                 PRE(!faces_.empty());
+                PRE(scale_.x > 0.0);
+                PRE(scale_.y > 0.0);
+                PRE(scale_.z > 0.0);
 
                 POST(!_tris.empty());
             }
