@@ -145,6 +145,20 @@ namespace arc //! arctk namespace
                 return (_kill);
             }
 
+            /**
+             *  Perform a back hit event.
+             *
+             *  @param  phot_   Photon hitting the entity.
+             *  @param  sop_    Current specific-optical-properties.
+             *  @param  cell_   Current domain cell.
+             *  @param  coll_   Collision event information.
+             *
+             *  @pre    phot_ may not be nullptr.
+             *  @pre    sop_ may not be nullptr.
+             *  @pre    cell_ may not be nullptr.
+             *
+             *  @return False if the photon should be removed from the simulation.
+             */
             inline bool Light::hit_back(random::Generator* /*unused*/, phys::Photon* phot_, const phys::Mat** /*unused*/, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
                 phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index(), cell_);
