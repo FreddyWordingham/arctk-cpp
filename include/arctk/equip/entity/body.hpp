@@ -76,18 +76,22 @@ namespace arc //! arctk namespace
             //  -- Collision --
             inline bool Body::hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Mat* mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
-                std::unique_ptr<arc::phys::Sop> next_sop = _front_mat->gen(phot);
+                std::unique_ptr<arc::phys::Sop> next_sop = _front_mat.gen(*phot_);
 
-                if (rng_->gen() <= phys::optics::reflection_prob(, sop_->get()->ref_index(), next_sop->ref_index()))
+                if (rng_->gen() <= phys::optics::reflection_prob(std::acos(phot_->dir() * coll_.norm()), sop_->get()->ref_index(), next_sop->ref_index()))
                 {
                     phot_->move(coll_.dist() - consts::num::BUMP, sop_->get()->ref_index(), cell_);
+
+                    phot_->set_dir(phys::optics::reflection_dir(phot_->dir(), coll_.norm()));
                 }
                 else
                 {
                     phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index(), cell_);
 
+                    phot_->set_dir(phys::optics::refraction_dir(phot_->dir(), coll_.norm(), sop_->get()->ref_index(), next_sop->ref_index()));
+
                     mat_  = &_front_mat;
-                    *sop_ = mat_->gen(*phot_);
+                    *sop_ = std::move(next_sop);
                 }
 
                 return (true);
