@@ -146,11 +146,17 @@ namespace arc //! arctk namespace
              *  @param  trans_  Translation transformation.
              *
              *  @pre    serial_ may not be empty.
+             *  @pre    scale_.x must be positive.
+             *  @pre    scale_.y must be positive.
+             *  @pre    scale_.z must be positive.
              */
             inline Mesh::Mesh(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
               : Mesh(parse_poss(serial_), parse_norms(serial_), parse_faces(serial_), scale_, rot_, trans_)
             {
                 PRE(!serial_.empty());
+                PRE(scale_.x > 0.0);
+                PRE(scale_.y > 0.0);
+                PRE(scale_.z > 0.0);
             }
 
             /**
