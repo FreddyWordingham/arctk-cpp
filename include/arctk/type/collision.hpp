@@ -28,11 +28,11 @@ namespace arc //! arctk namespace
          */
         enum class collision
         {
-            INTER,
-            ENT,
-            LEAF,
-            CELL,
-            DOM
+            INTER, //!< Interaction collision event.
+            ENT,   //!< Entity collision event.
+            LEAF,  //!< Leaf cell collision event.
+            CELL,  //!< Domain cell collision event.
+            DOM    //!< Domain collision event.
         };
 
 
