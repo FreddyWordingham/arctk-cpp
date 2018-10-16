@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
             double       _time;       //!< Current photon time.
 
             //  -- Statistical --
-            double _weight;
+            double _weight; //!< Statistical weight of the photon.
 
 
             //  == INSTANTIATION ==
