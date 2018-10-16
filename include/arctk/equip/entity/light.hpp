@@ -84,6 +84,7 @@ namespace arc //! arctk namespace
               , _kill(kill_)
               , _power(power_)
             {
+                PRE(!serial_.empty());
                 PRE(scale_.x > 0.0);
                 PRE(scale_.y > 0.0);
                 PRE(scale_.z > 0.0);
