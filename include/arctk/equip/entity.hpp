@@ -63,8 +63,11 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Collision --
-            virtual bool hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept = 0;
-            virtual bool hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept  = 0;
+            virtual bool hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_,
+                                   const geom::Collision& coll_) noexcept = 0; //!< Perform a hit event on the front face entity.   @param  rng_    Random number generator.    @param  phot_   Photon hitting the entity.  @param  mat_    Current active
+                                                                               //!< material.    @param  sop_    Current specific-optical-properties.    @param  cell_   Current domain cell.    @param  coll_   Collision event information.    @return False
+                                                                               //!< if the photon should be removed from the simulation.
+            virtual bool hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept = 0;
         };
 
 
