@@ -124,6 +124,13 @@ namespace arc //! arctk namespace
             _scatters += scatters_;
         }
 
+        /**
+         *  Add a energy count to the cell.
+         *
+         *  @param  energy_ Energy to add.
+         *
+         *  @pre    energy_ must be positive.
+         */
         inline void Cell::add_energy(const double energy_) noexcept
         {
             PRE(energy_ > 0.0);
