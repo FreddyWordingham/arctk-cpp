@@ -204,6 +204,19 @@ namespace arc //! arctk namespace
 
 
         //  -- Retrieval --
+        /**
+         *  Get the domain cell corresponding to a given position within the domain.
+         *
+         *  @param  pos_    Position within the domain.
+         *
+         *  @pre    pos_ must intersect with the domain.
+         *
+         *  @post   index_x must be less than _res[index::dim::cartesian::X].
+         *  @post   index_y must be less than _res[index::dim::cartesian::Y].
+         *  @post   index_z must be less than _res[index::dim::cartesian::Z].
+         *
+         *  @return Domain cell corresponding to a given position within the domain.
+         */
         inline phys::Cell* Domain::cell(const vec3& pos_) noexcept
         {
             PRE(intersect(pos_));
