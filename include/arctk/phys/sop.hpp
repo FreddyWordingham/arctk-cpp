@@ -59,8 +59,8 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            inline Sop& operator=(const Sop&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
-            inline Sop& operator=(Sop&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
+            inline Sop& operator=(const Sop&) noexcept = delete; //!< Deleted copy operator. @return Reference to copied object.
+            inline Sop& operator=(Sop&&) noexcept = delete;      //!< Deleted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
