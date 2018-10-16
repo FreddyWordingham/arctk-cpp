@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
             inline double energy_dens() const noexcept;
 
             //  -- Settings --
-            inline void add_scatter(double interactions_) noexcept;
+            inline void add_scatter(double scatters_) noexcept;
             inline void add_energy(double energy_) noexcept;
         };
 
