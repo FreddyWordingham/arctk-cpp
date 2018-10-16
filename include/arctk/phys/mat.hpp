@@ -113,6 +113,11 @@ namespace arc //! arctk namespace
             return (_min);
         }
 
+        /**
+         *  Get the maximum wavelength bound of the material.
+         *
+         *  @return Maximum wavelength bound of the material.
+         */
         inline double Mat::max() const noexcept
         {
             return (_max);
