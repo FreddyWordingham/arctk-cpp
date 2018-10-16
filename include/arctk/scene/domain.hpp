@@ -182,6 +182,11 @@ namespace arc //! arctk namespace
             return (_cells);
         }
 
+        /**
+         *  Get the cell size.
+         *
+         *  @return Cell size.
+         */
         inline const vec3& Domain::cell_size() const noexcept
         {
             return (_cell_size);
