@@ -98,6 +98,11 @@ namespace arc //! arctk namespace
             return (_scatters / vol());
         }
 
+        /**
+         *  Get the energy density of the cell.
+         *
+         *  @return Energy density of the cell.
+         */
         inline double Cell::energy_dens() const noexcept
         {
             return (_energy / vol());
