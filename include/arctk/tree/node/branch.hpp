@@ -179,6 +179,11 @@ namespace arc //! arctk namespace
                 return (max_depth);
             }
 
+            /**
+             *  Get the maximum number of triangles contained within any cell contained within this cell.
+             *
+             *  @return Maximum number of triangles contained within any cell contained within this cell.
+             */
             inline size_t Branch::max_tris() const noexcept
             {
                 size_t max_tris = 0;
