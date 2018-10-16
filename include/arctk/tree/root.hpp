@@ -179,6 +179,11 @@ namespace arc //! arctk namespace
             return (_trunk->max_tris());
         }
 
+        /**
+         *  Get the number of nodes contained within this node.
+         *
+         *  @return Number of nodes contained within this node.
+         */
         inline size_t Root::num_nodes() const noexcept
         {
             return (_trunk->num_nodes());
