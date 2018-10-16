@@ -108,7 +108,7 @@ namespace arc //! arctk namespace
             PRE(res_[index::dim::cartesian::Y] > 0);
             PRE(res_[index::dim::cartesian::Z] > 0);
 
-            const vec3 size((max_.x - min_.x) / res_[index::dim::cartesian::X], (max_.y - min_.y) / res_[index::dim::cartesian::Y], (max_.z - min_.z) / res_[index::dim::cartesian::Z]);
+            const vec3 size((max_.x - min_.x) / static_cast<double>(res_[index::dim::cartesian::X]), (max_.y - min_.y) / static_cast<double>(res_[index::dim::cartesian::Y]), (max_.z - min_.z) / static_cast<double>(res_[index::dim::cartesian::Z]));
 
             std::vector<std::vector<std::vector<phys::Cell>>> cells(res_[index::dim::cartesian::X], std::vector<std::vector<phys::Cell>>(res_[index::dim::cartesian::Y]));
             for (size_t i = 0; i < res_[index::dim::cartesian::X]; ++i)
