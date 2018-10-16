@@ -110,6 +110,22 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
+        /**
+         *  Initialise the three-dimensional vector of domain cells.
+         *
+         *  @param  min_    Minimum bound of the domain.
+         *  @param  max_    Maximum bound of the domain.
+         *  @param  res_    Resolution of the domain cells.
+         *
+         *  @pre    min_.x must be less than, or equal to, min.x.
+         *  @pre    min_.y must be less than, or equal to, min.y.
+         *  @pre    min_.z must be less than, or equal to, min.z.
+         *  @pre    res_[index::dim::cartesian::X] must be positive.
+         *  @pre    res_[index::dim::cartesian::Y] must be positive.
+         *  @pre    res_[index::dim::cartesian::Z] must be positive.
+         *
+         *  @return Initialised three-dimensional vector of domain cells.
+         */
         inline std::vector<std::vector<std::vector<phys::Cell>>> Domain::init_cells(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept
         {
             PRE(min_.x <= max_.x);
