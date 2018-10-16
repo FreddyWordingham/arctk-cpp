@@ -162,6 +162,11 @@ namespace arc //! arctk namespace
             return (_time);
         }
 
+        /**
+         *  Get the statistical weight of the photon.
+         *
+         *  @return Statistical weight of the photon.
+         */
         inline double Photon::weight() const noexcept
         {
             return (_weight);
