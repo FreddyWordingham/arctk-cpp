@@ -66,6 +66,25 @@ namespace arc //! arctk namespace
 
                 //  == INSTANTIATION ==
                 //  -- Constructors --
+                /**
+                 *  Construct a light source entity which emits monochromatic photons at its surface.
+                 *
+                 *  @param  serial_     Serialised wavefront file.
+                 *  @param  scale_      Scaling transformation.
+                 *  @param  rot_        Rotation transformation.
+                 *  @param  trans_      Translation transformation.
+                 *  @param  mat_        Material to emit photons into.
+                 *  @param  power_      Power of the light.
+                 *  @param  kill_       Kill photons on collision.
+                 *  @param  wavelength_ Wavelength of emitted photons.
+                 *
+                 *  @pre    serial may not be empty.
+                 *  @pre    scale_.x must be positive.
+                 *  @pre    scale_.y must be positive.
+                 *  @pre    scale_.z must be positive.
+                 *  @pre    power_ must be positive.
+                 *  @pre    wavelength_ must be positive.
+                 */
                 inline Laser::Laser(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const arc::phys::Mat& mat_, const double power_, const bool kill_, const double wavelength_) noexcept
                   : Light(serial_, scale_, rot_, trans_, mat_, power_, kill_)
                   , _wavelength(wavelength_)
