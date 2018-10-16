@@ -78,10 +78,11 @@ namespace arc //! arctk namespace
             virtual size_t max_depth() const noexcept = 0; //!< Get the maximum depth of any cell contained within this cell. @return Maximum depth of any cell contained within this cell.
             virtual size_t max_tris() const noexcept  = 0; //!< Get the maximum number of triangles contained within any cell contained within this cell. @return Maximum number of triangles contained within any cell contained within this cell.
             virtual size_t num_nodes() const noexcept = 0; //!< Get the number of nodes contained within this node. @return Number of nodes contained within this node.
-            virtual std::vector<geom::shape::Box> boxes() const noexcept = 0;
+            virtual std::vector<geom::shape::Box> boxes() const noexcept = 0; //!< Get a vector of box shapes representing all cells contained within this cell.   @return Vector of box shapes representing all cells contained within this cell.
 
             //  -- Retrieval --
-            virtual const node::Leaf* leaf(const vec3& pos_) const noexcept = 0;
+            virtual const node::Leaf* leaf(const vec3& pos_) const
+              noexcept = 0; //!< Retrieve a pointer to the leaf cell for the given position. @param  pos_    Position to retrieve the corresponding leaf cell for.   @return Pointer to the leaf cell for the given position.
         };
 
 

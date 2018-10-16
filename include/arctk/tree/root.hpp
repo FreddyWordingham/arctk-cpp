@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Depth --
-            const std::unique_ptr<Node> _trunk;
+            const std::unique_ptr<Node> _trunk; //!< Unique pointer to the trunk node.
 
 
             //  == INSTANTIATION ==
