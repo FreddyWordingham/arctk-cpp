@@ -174,9 +174,20 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
+        /**
+         *  Move the photon along its current direction vector.
+         *
+         *  @param  dist_       Distance to move the photon.
+         *  @param  ref_index_  Current refractive index of the photon's specific-optical-properties.
+         *  @param  cell_       Current domain cell the photon is within.
+         *
+         *  @pre    ref_index_ must be greater than, or equal to, unity.
+         *  @pre    cell_ must intersect the photon's position.
+         */
         inline void Photon::move(const double dist_, const double ref_index_, Cell* cell_) noexcept
         {
             PRE(ref_index_ >= 1.0);
+            PRE(cell_->intersect(_pos));
 
             _pos += _dir * dist_;
             _time += ((dist_ * ref_index_) / consts::phys::SPEED_OF_LIGHT);
