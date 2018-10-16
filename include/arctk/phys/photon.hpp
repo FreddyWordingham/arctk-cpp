@@ -112,6 +112,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the position of the photon.
+         *
+         *  @return Position of the photon.
+         */
         inline const vec3& Photon::pos() const noexcept
         {
             return (_pos);
