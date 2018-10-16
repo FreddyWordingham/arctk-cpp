@@ -88,6 +88,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the scattering density of the cell.
+         *
+         *  @return Scattering density of the cell.
+         */
         inline double Cell::scatter_dens() const noexcept
         {
             return (_scatters / vol());
