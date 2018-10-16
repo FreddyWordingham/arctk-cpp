@@ -86,6 +86,9 @@ namespace arc //! arctk namespace
          *  @param  trans_  Translation transformation.
          *
          *  @pre    serial_ may not be empty.
+         *  @pre    scale_.x must be positive.
+         *  @pre    scale_.y must be positive.
+         *  @pre    scale_.z must be positive.
          */
         inline Entity::Entity(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
           : Mesh(serial_, scale_, rot_, trans_)
