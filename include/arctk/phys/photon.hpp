@@ -80,6 +80,20 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a photon at a given position with a given direction, wavelength, energy and emission time.
+         *
+         *  @param  pos_        Initial position of the photon.
+         *  @param  dir_        Initial direction of the photon.
+         *  @param  wavelength_ Wavelength of the photon.
+         *  @param  energy_     Energy of the photon.
+         *  @param  time_       Time of photon emission.
+         *
+         *  @pre    dir_ must be normalised.
+         *  @pre    wavelength_ must be non-negative.
+         *  @pre    energy_ must be positive.
+         *  @pre    time_ must be non-negative.
+         */
         inline Photon::Photon(const vec3& pos_, const vec3& dir_, const double wavelength_, const double energy_, const double time_) noexcept
           : _pos(pos_)
           , _dir(dir_)
