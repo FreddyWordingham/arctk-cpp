@@ -181,7 +181,7 @@ namespace arc //! arctk namespace
              *  @param  pos_    Position of the ray.
              *  @param  dir_    Direction of the ray.
              *
-             *  @pre    dir_ must ne normalised.
+             *  @pre    dir_ must be normalised.
              *
              *  @return Entity and distance to the collision event (if there is one) of a ray.
              */
