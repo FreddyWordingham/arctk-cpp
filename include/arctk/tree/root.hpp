@@ -149,6 +149,11 @@ namespace arc //! arctk namespace
             return (_trunk->min());
         }
 
+        /**
+         *  Get the maximum bound of the root.
+         *
+         *  @return Maximum bound of the root.
+         */
         inline const vec3& Root::max() const noexcept
         {
             return (_trunk->max());
