@@ -46,9 +46,9 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            const std::array<size_t, 3>                       _res;   //!< Resolution of the domain cells.
-            std::vector<std::vector<std::vector<phys::Cell>>> _cells; //!< Three-dimensional vector of cells.
-            const vec3                                        _cell_size;
+            const std::array<size_t, 3>                       _res;       //!< Resolution of the domain cells.
+            std::vector<std::vector<std::vector<phys::Cell>>> _cells;     //!< Three-dimensional vector of cells.
+            const vec3                                        _cell_size; //!< Size of each domain cell.
 
 
             //  == INSTANTIATION ==
