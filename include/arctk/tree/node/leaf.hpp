@@ -98,6 +98,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the maximum depth of any cell contained within this cell.
+             *
+             *  @return Maximum depth of any cell contained within this cell.
+             */
             inline size_t Leaf::max_depth() const noexcept
             {
                 return (_depth);
