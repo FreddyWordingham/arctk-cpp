@@ -95,8 +95,8 @@ namespace arc //! arctk namespace
 
 
             //  -- Initialisation --
-            inline std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> Branch::init_childs(const vec3& min_, const vec3& max_, const std::vector<std::pair<equip::Entity*, std::vector<const geom::shape::Triangle*>>>& ent_tris_,
-                                                                                                          const size_t cur_depth_, const size_t max_depth_, const size_t tar_tris_) const noexcept // NOLINT
+            inline std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> Branch::init_childs(const vec3& min_, const vec3& max_, const std::vector<std::pair<equip::Entity*, std::vector<const geom::shape::Triangle*>>>& ent_tris_, // NOLINT
+                                                                                                          const size_t cur_depth_, const size_t max_depth_, const size_t tar_tris_) const noexcept
             {
                 std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> childs;
 
