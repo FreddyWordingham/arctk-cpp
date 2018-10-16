@@ -87,7 +87,12 @@ namespace arc //! arctk namespace
          *  @param  max_    Maximum bound of the domain.
          *  @param  res_    Resolution of the domain cells.
          *
-         *  @pre
+         *  @pre    min_.x must be less than, or equal to, min.x.
+         *  @pre    min_.y must be less than, or equal to, min.y.
+         *  @pre    min_.z must be less than, or equal to, min.z.
+         *  @pre    res_[index::dim::cartesian::X] must be positive.
+         *  @pre    res_[index::dim::cartesian::Y] must be positive.
+         *  @pre    res_[index::dim::cartesian::Z] must be positive.
          */
         inline Domain::Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept
           : Box(min_, max_)
