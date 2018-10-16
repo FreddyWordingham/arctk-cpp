@@ -122,6 +122,11 @@ namespace arc //! arctk namespace
             return (_pos);
         }
 
+        /**
+         *  Get the direction of the photon.
+         *
+         *  @return Direction of the photon.
+         */
         inline const vec3& Photon::dir() const noexcept
         {
             return (_dir);
