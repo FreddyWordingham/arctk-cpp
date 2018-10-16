@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
 
               private:
                 //  -- Killing --
-                const bool   _kill;
+                const bool   _kill; //!< False if photon is killed upon hit.
                 const double _power;
 
 
