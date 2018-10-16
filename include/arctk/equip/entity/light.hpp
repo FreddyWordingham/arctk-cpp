@@ -140,6 +140,10 @@ namespace arc //! arctk namespace
              */
             inline bool Light::hit_front(random::Generator* /*unused*/, phys::Photon* phot_, const phys::Mat** /*unused*/, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
+                PRE(phot_ != nullptr);
+                PRE(sop_ != nullptr);
+                PRE(cell_ != nullptr);
+
                 phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index(), cell_);
 
                 return (_kill);
