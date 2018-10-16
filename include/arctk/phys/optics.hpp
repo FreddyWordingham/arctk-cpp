@@ -68,6 +68,14 @@ namespace arc //! arctk namespace
                 PRE(ref_index_in_ >= 1.0);
                 PRE(ref_index_out_ >= 1.0);
 
+                if (ref_index_in_ > ref_index_out_)
+                {
+                    if (ang_in_ >= asin(ref_index_out_ / ref_index_in_))
+                    {
+                        return (1.0);
+                    }
+                }
+
                 const double cos_ang_in  = std::cos(ang_in_);
                 const double cos_ang_out = std::cos(std::asin(std::sin(ang_in_) * (ref_index_in_ / ref_index_out_)));
 
