@@ -70,7 +70,7 @@ namespace arc //! arctk namespace
 
                 if (ref_index_in_ > ref_index_out_)
                 {
-                    if (ang_in_ >= asin(ref_index_out_ / ref_index_in_))
+                    if (ang_in_ >= std::asin(ref_index_out_ / ref_index_in_))
                     {
                         return (1.0);
                     }

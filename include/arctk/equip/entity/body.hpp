@@ -76,12 +76,19 @@ namespace arc //! arctk namespace
             //  -- Collision --
             inline bool Body::hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Mat* mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
-                phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index(), cell_);
+                std::unique_ptr<arc::phys::Sop> next_sop = _front_mat->gen(phot);
 
+                if (rng_->gen() <= phys::optics::reflection_prob(, sop_->get()->ref_index(), next_sop->ref_index()))
+                {
+                    phot_->move(coll_.dist() - consts::num::BUMP, sop_->get()->ref_index(), cell_);
+                }
+                else
+                {
+                    phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index(), cell_);
 
-
-                mat_  = &_front_mat;
-                *sop_ = mat_->gen(*phot_);
+                    mat_  = &_front_mat;
+                    *sop_ = mat_->gen(*phot_);
+                }
 
                 return (true);
             }
