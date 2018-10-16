@@ -72,12 +72,19 @@ namespace arc //! arctk namespace
              *  @param  trans_      Translation transformation.
              *  @param  front_mat_  Material to enter when hitting the front of the surface.
              *  @param  back_mat_   Material to enter when hitting the back of the surface.
+             *
+             *  @pre    scale_.x must be positive.
+             *  @pre    scale_.y must be positive.
+             *  @pre    scale_.z must be positive.
              */
             inline Body::Body(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const phys::Mat& front_mat_, const phys::Mat& back_mat_) noexcept
               : Entity(serial_, scale_, rot_, trans_)
               , _front_mat(front_mat_)
               , _back_mat(back_mat_)
             {
+                PRE(scale_.x > 0.0);
+                PRE(scale_.y > 0.0);
+                PRE(scale_.z > 0.0);
             }
 
 
