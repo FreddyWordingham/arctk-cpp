@@ -101,8 +101,29 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
+        /**
+         *  Initialise the trunk node of the tree.
+         *
+         *  @param  min_        Minimum bound of the cell.
+         *  @param  max_        Maximum bound of the cell.
+         *  @param  ents_       Vector of entities.
+         *  @param  max_depth_  Maximum depth of the tree.
+         *  @param  tar_tris_   Target number of triangles for each leaf node.
+         *
+         *  @pre    min_.x must be less than, or equal to, max_.x.
+         *  @pre    min_.y must be less than, or equal to, max_.y.
+         *  @pre    min_.z must be less than, or equal to, max_.z.
+         *  @pre    tar_tris_ must be positive.
+         *
+         *  @return Trunk node of the tree.
+         */
         inline std::unique_ptr<Node> Root::init_trunk(const vec3& min_, const vec3& max_, const std::vector<std::unique_ptr<equip::Entity>>& ents_, const size_t max_depth_, const size_t tar_tris_) const noexcept
         {
+            PRE(min_.x <= max_.x);
+            PRE(min_.y <= max_.y);
+            PRE(min_.z <= max_.z);
+            PRE(tar_tris_ > 0);
+
             std::vector<std::pair<equip::Entity*, std::vector<const geom::shape::Triangle*>>> ent_tris;
             ent_tris.reserve(ents_.size());
 
