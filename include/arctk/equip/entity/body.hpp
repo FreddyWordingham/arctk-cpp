@@ -73,6 +73,7 @@ namespace arc //! arctk namespace
              *  @param  front_mat_  Material to enter when hitting the front of the surface.
              *  @param  back_mat_   Material to enter when hitting the back of the surface.
              *
+             *  @pre    serial may not be empty.
              *  @pre    scale_.x must be positive.
              *  @pre    scale_.y must be positive.
              *  @pre    scale_.z must be positive.
