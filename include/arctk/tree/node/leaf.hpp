@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Content --
-                const std::vector<std::pair<equip::Entity*, std::vector<const geom::shape::Triangle*>>> _ent_tris;
+                const std::vector<std::pair<equip::Entity*, std::vector<const geom::shape::Triangle*>>> _ent_tris; //!< Vector of entity triangle list pairings that intersect this node.
 
 
                 //  == INSTANTIATION ==
