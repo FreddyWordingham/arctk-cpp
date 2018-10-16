@@ -41,7 +41,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Particle --
-            vec3 _pos;
+            vec3 _pos; //!< Position of the photon.
             vec3 _dir;
 
             //  -- Properties --
