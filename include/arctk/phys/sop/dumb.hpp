@@ -77,7 +77,9 @@ namespace arc //! arctk namespace
              *  @param  asym_       Asymmetry parameter.
              *
              *  @pre    ref_index_ must be greater than, or equal to, unity.
-             *  @pre
+             *  @pre    dist_ must be positive.
+             *  @pre    albedo_ must be between zero and unity.
+             *  @pre    asym_ must be between minus one and unity.
              */
             inline Dumb::Dumb(const double ref_index_, const double dist_, const double albedo_, const double asym_) noexcept
               : Sop(ref_index_)
