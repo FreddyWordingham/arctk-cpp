@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Optical Properties --
-            const double _ref_index;
+            const double _ref_index; //!< Refractive index.
 
 
             //  == INSTANTIATION ==
