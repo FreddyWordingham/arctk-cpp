@@ -851,7 +851,7 @@ namespace arc //! arctk namespace
             /**
              *  Create an actor from a tree.
              *
-             *  @param  roor_   Root cell of the tree to create an actor of.
+             *  @param  root_   Root cell of the tree to create an actor of.
              *
              *  @return Tree actor.
              */
