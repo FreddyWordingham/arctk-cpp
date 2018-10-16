@@ -67,7 +67,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline double  ref_index() const noexcept;
-            virtual double interact_dist(random::Generator* rng_, const phys::Cell* cell_) const noexcept = 0;
+            virtual double interact_dist(random::Generator* rng_, const phys::Cell* cell_) const
+              noexcept = 0; //!< Get the distance until the next interaction event.  @param  rng_    Random number generator.    @param  cell_   Current domain cell.    @return Distance until the next interaction event.
 
             //  -- Interaction --
             virtual bool interact(random::Generator* rng_, phys::Photon* phot_, phys::Cell* cell_, double dist_) const noexcept = 0;
