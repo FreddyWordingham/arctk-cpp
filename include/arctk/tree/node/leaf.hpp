@@ -119,6 +119,11 @@ namespace arc //! arctk namespace
                 return (1);
             }
 
+            /**
+             *  Get a vector of box shapes representing all cells contained within this cell.
+             *
+             *  @return Vector of box shapes representing all cells contained within this cell.
+             */
             inline std::vector<geom::shape::Box> Leaf::boxes() const noexcept
             {
                 return (std::vector<geom::shape::Box>({geom::shape::Box(_min, _max)}));
