@@ -792,7 +792,7 @@ namespace arc //! arctk namespace
              *
              *  @param  dom_    Domain to create an actor of.
              *
-             *  @return Domain mesh actor.
+             *  @return Domain actor.
              */
             inline Actor domain(const scene::Domain& dom_) noexcept // NOLINT
             {
