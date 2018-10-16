@@ -42,8 +42,8 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Reflectance --
-                const double _front_ref;
-                const double _back_ref;
+                const double _front_ref; //!< Reflectance of the front mirror.
+                const double _back_ref;  //!< Reflectance of the back mirror.
 
 
                 //  == INSTANTIATION ==
