@@ -101,6 +101,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the refractive index of the specific-optical-property.
+         *
+         *  @return Refractive index of the specific-optical-property.
+         */
         inline double Sop::ref_index() const noexcept
         {
             return (_ref_index);
