@@ -128,8 +128,32 @@ namespace arc //! arctk namespace
                 return (true);
             }
 
+            /**
+             *  Perform a back hit event and update the material and specific-optical-properties.
+             *
+             *  @param  rng_    Random number generator.
+             *  @param  phot_   Photon hitting the entity.
+             *  @param  mat_    Current active material.
+             *  @param  sop_    Current specific-optical-properties.
+             *  @param  cell_   Current domain cell.
+             *  @param  coll_   Collision event information.
+             *
+             *  @pre    rng_ may not be nullptr.
+             *  @pre    phot_ may not be nullptr.
+             *  @pre    mat_ may not be nullptr.
+             *  @pre    sop_ may not be nullptr.
+             *  @pre    cell_ may not be nullptr.
+             *
+             *  @return False if the photon should be removed from the simulation.
+             */
             inline bool Body::hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
+                PRE(rng_ != nullptr);
+                PRE(phot_ != nullptr);
+                PRE(mat_ != nullptr);
+                PRE(sop_ != nullptr);
+                PRE(cell_ != nullptr);
+
                 std::unique_ptr<arc::phys::Sop> next_sop = _back_mat.gen(*phot_);
 
                 if (rng_->gen() <= phys::optics::reflection_prob(std::acos(phot_->dir() * coll_.norm()), sop_->get()->ref_index(), next_sop->ref_index()))
