@@ -119,7 +119,6 @@ namespace arc //! arctk namespace
          *  @pre    mat_ may not be nullptr.
          *  @pre    sop_ may not be nullptr.
          *  @pre    cell_ may not be nullptr.
-         *  @pre    coll_ may not be nullptr.
          *
          *  @return False if the photon should be removed from the simulation.
          */
@@ -130,7 +129,6 @@ namespace arc //! arctk namespace
             PRE(mat_ != nullptr);
             PRE(sop_ != nullptr);
             PRE(cell_ != nullptr);
-            PRE(coll_ != nullptr);
 
             if (coll_.front())
             {

@@ -74,6 +74,24 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Collision --
+            /**
+             *  Construct a body entity which changes the optical properties during a photon collision.
+             *
+             *  @param  rng_    Random number generator.
+             *  @param  phot_   Photon hitting the entity.
+             *  @param  mat_    Current active material.
+             *  @param  sop_    Current specific-optical-properties.
+             *  @param  cell_   Current domain cell.
+             *  @param  coll_   Collision event information.
+             *
+             *  @pre    rng_ may not be nullptr.
+             *  @pre    phot_ may not be nullptr.
+             *  @pre    mat_ may not be nullptr.
+             *  @pre    sop_ may not be nullptr.
+             *  @pre    cell_ may not be nullptr.
+             *  @pre    coll_ may not be nullptr.
+             * @return
+             */
             inline bool Body::hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
                 std::unique_ptr<arc::phys::Sop> next_sop = _front_mat.gen(*phot_);
