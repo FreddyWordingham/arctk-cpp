@@ -66,9 +66,12 @@ namespace arc //! arctk namespace
             /**
              *  Construct a body entity which changes the optical properties during a photon collision.
              *
-
-             *
-             *  @return False if the photon should be removed from the simulation.
+             *  @param  serial_     Serialised wavefront file.
+             *  @param  scale_      Scaling transformation.
+             *  @param  rot_        Rotation transformation.
+             *  @param  trans_      Translation transformation.
+             *  @param  front_mat_  Material to enter when hitting the front of the surface.
+             *  @param  back_mat_   Material to enter when hitting the back of the surface.
              */
             inline Body::Body(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const phys::Mat& front_mat_, const phys::Mat& back_mat_) noexcept
               : Entity(serial_, scale_, rot_, trans_)
