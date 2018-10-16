@@ -110,10 +110,16 @@ namespace arc //! arctk namespace
 
 
         //  -- Settings --
+        /**
+         *  Add a scattering count to the cell.
+         *
+         *  @param  scatters_   Scattering count to add.
+         *
+         *  @pre    scatters_ must be positive.
+         */
         inline void Cell::add_scatter(const double scatters_) noexcept
         {
             PRE(scatters_ > 0.0);
-            PRE(scatters_ <= 1.0);
 
             _scatters += scatters_;
         }
