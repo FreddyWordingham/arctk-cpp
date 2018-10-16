@@ -235,6 +235,13 @@ namespace arc //! arctk namespace
 
 
         //  -- Saving --
+        /**
+         *  Save the domain cell data as a vtk file.
+         *
+         *  @param  path_   Path to the vtk save file.
+         *
+         *  @pre    path_ may not be empty.
+         */
         inline void Domain::save(const std::string& path_) const noexcept // NOLINT
         {
             PRE(!path_.empty());
