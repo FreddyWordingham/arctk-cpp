@@ -33,9 +33,9 @@ namespace arc //! arctk namespace
              */
             enum vertices
             {
-                ALPHA, //! First vertex.
-                BETA,  //! Second vertex.
-                GAMMA  //! Third vertex.
+                ALPHA, //!< First vertex.
+                BETA,  //!< Second vertex.
+                GAMMA  //!< Third vertex.
             };
 
 
