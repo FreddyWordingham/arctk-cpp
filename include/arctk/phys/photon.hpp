@@ -142,6 +142,11 @@ namespace arc //! arctk namespace
             return (_wavelength);
         }
 
+        /**
+         *  Get the energy of the photon.
+         *
+         *  @return Energy of the photon.
+         */
         inline double Photon::energy() const noexcept
         {
             return (_energy);
