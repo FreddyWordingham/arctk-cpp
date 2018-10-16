@@ -823,15 +823,15 @@ namespace arc //! arctk namespace
                 const vec3 size = dom_.cell_size();
                 for (size_t i = 0; i < dom_.res()[index::dim::cartesian::X]; ++i)
                 {
-                    const double x = min.x + (i * size.x);
+                    const double x = min.x + (static_cast<double>(i) * size.x);
 
                     for (size_t j = 0; j < dom_.res()[index::dim::cartesian::Y]; ++j)
                     {
-                        const double y = min.y + (j * size.y);
+                        const double y = min.y + (static_cast<double>(j) * size.y);
 
                         for (size_t k = 0; k < dom_.res()[index::dim::cartesian::Z]; ++k)
                         {
-                            const double z = min.z + (k * size.z);
+                            const double z = min.z + (static_cast<double>(k) * size.z);
 
                             add_box(vec3(x, y, z), vec3(x, y, z) + size);
                         }
