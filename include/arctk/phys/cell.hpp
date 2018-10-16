@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Data --
             double _scatters; //!< Total scatterings that occur within in cell.
-            double _energy;
+            double _energy;   //!< Total energy within the cell.
 
 
             //  == INSTANTIATION ==
