@@ -109,7 +109,7 @@ namespace arc //! arctk namespace
                     {
                         for (size_t k = 0; k < 2; ++k)
                         {
-                            const vec3 min(min_.x + (i * size.x), min_.y + (j * size.y), min_.z + (k * size.z));
+                            const vec3 min(min_.x + (static_cast<double>(i) * size.x), min_.y + (static_cast<double>(j) * size.y), min_.z + (static_cast<double>(k) * size.z));
                             const vec3 max = min + size;
 
                             const geom::shape::Box                                                            box(min, max);
