@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
                 //  -- Optical Properties --
                 const double _dist;   //!< Interaction distance.
                 const double _albedo; //!< Single scattering albedo.
-                const double _asym;
+                const double _asym;   //!< Asymmetry factor.
 
 
                 //  == INSTANTIATION ==
