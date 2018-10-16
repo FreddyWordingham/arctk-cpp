@@ -192,6 +192,11 @@ namespace arc //! arctk namespace
             return (_cell_size);
         }
 
+        /**
+         *  Get the total number of cells in the domain.
+         *
+         *  @return Total number of cells in the domain.
+         */
         inline size_t Domain::num_cells() const noexcept
         {
             return (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]);
