@@ -112,6 +112,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the power of the light source.
+             *
+             *  @return Power of the light source.
+             */
             inline double Light::power() const noexcept
             {
                 return (_power);
