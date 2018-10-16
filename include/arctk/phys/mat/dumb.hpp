@@ -85,6 +85,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Specific Optical Properties --
+            /**
+             *  Generate specific-optical-proeprties for a given photon.
+             *
+             *  @return Specific-optical-properties for the given photon.
+             */
             inline std::unique_ptr<Sop> Dumb::gen(const Photon& /*unused*/) const noexcept
             {
                 return (std::make_unique<sop::Dumb>(_ref_index, _dist, _albedo, _asym));
