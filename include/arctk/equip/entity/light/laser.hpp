@@ -70,6 +70,7 @@ namespace arc //! arctk namespace
                   : Light(serial_, scale_, rot_, trans_, mat_, power_, kill_)
                   , _wavelength(wavelength_)
                 {
+                    PRE(!serial_.empty());
                     PRE(scale_.x > 0.0);
                     PRE(scale_.y > 0.0);
                     PRE(scale_.z > 0.0);
