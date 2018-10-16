@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Mat(const double min_, const double max_) noexcept;
+            inline Mat(double min_, double max_) noexcept;
             inline Mat(const Mat&) = default; //!< Defaulted copy constructor.
             inline Mat(Mat&&)      = default; //!< Defaulted move constructor.
 
