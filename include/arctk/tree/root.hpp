@@ -76,6 +76,20 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct the root node of a tree.
+         *
+         *  @param  min_        Minimum bound of the cell.
+         *  @param  max_        Maximum bound of the cell.
+         *  @param  ents_       Vector of entities.
+         *  @param  max_depth_  Maximum depth of the tree.
+         *  @param  tar_tris_   Target number of triangles for each leaf node.
+         *
+         *  @pre    min_.x must be less than, or equal to, max_.x.
+         *  @pre    min_.y must be less than, or equal to, max_.y.
+         *  @pre    min_.z must be less than, or equal to, max_.z.
+         *  @pre    tar_tris_ must be positive.
+         */
         inline Root::Root(const vec3& min_, const vec3& max_, const std::vector<std::unique_ptr<equip::Entity>>& ents_, const size_t max_depth_, const size_t tar_tris_) noexcept
           : _trunk(init_trunk(min_, max_, ents_, max_depth_, tar_tris_))
         {
