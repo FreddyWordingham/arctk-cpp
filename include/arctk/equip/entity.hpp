@@ -108,10 +108,24 @@ namespace arc //! arctk namespace
          *  @param  cell_   Current domain cell.
          *  @param  coll_   Collision event information.
          *
+         *  @pre    rng_ may not be nullptr.
+         *  @pre    phot_ may not be nullptr.
+         *  @pre    mat_ may not be nullptr.
+         *  @pre    sop_ may not be nullptr.
+         *  @pre    cell_ may not be nullptr.
+         *  @pre    coll_ may not be nullptr.
+         *
          *  @return False if the photon should be removed from the simulation.
          */
         inline bool Entity::hit(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
         {
+            PRE(rng_ != nullptr);
+            PRE(phot_ != nullptr);
+            PRE(mat_ != nullptr);
+            PRE(sop_ != nullptr);
+            PRE(cell_ != nullptr);
+            PRE(coll_ != nullptr);
+
             if (coll_.front())
             {
                 return (hit_front(rng_, phot_, mat_, sop_, cell_, coll_));
