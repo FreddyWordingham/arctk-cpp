@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            double _scatters;
+            double _scatters; //!< Total scatterings that occur within in cell.
             double _energy;
 
 
