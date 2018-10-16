@@ -139,6 +139,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the minimum bound of the root.
+         *
+         *  @return Minimum bound of the root.
+         */
         inline const vec3& Root::min() const noexcept
         {
             return (_trunk->min());
