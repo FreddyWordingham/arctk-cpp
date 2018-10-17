@@ -33,7 +33,6 @@
 #include <arctk/data/image.hpp>
 #include <arctk/data/image/colour.hpp>
 #include <arctk/data/image/greyscale.hpp>
-#include <arctk/data/json.hpp>
 #include <arctk/data/table.hpp>
 
 
