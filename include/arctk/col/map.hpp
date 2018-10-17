@@ -34,7 +34,7 @@ namespace arc //! arctk namespace
             //  -- Matlab --
             inline vec3 jet(double x_) noexcept;
             inline vec3 jet_line(double x_) noexcept;
-            inline vec3 jet_block(double x_, int num_ = 10) noexcept;
+            inline vec3 jet_block(double x_, unsigned int num_ = 10) noexcept;
 
 
 

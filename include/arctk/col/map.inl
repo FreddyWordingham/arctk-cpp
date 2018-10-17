@@ -116,7 +116,7 @@ namespace arc //! arctk namespace
              *
              *  @return Colour vec.
              */
-            inline vec3 jet_block(const double x_, const int num_) noexcept
+            inline vec3 jet_block(const double x_, const unsigned int num_) noexcept
             {
                 assert(x_ >= 0.0);
                 assert(x_ <= 1.0);
