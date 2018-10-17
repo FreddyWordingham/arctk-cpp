@@ -48,15 +48,15 @@ namespace arc //! arctk namespace
              */
             enum container
             {
-                ARRAY,
-                VECTOR,
-                STRING,
-                PAIR,
-                TUPLE,
-                MAP,
-                VEC,
-                MAT,
-                TOTAL
+                ARRAY,  //!< Array.
+                VECTOR, //!< Vector.
+                STRING, //!< String.
+                PAIR,   //!< Pair.
+                TUPLE,  //!< Tuple.
+                MAP,    //!< Map.
+                VEC,    //!< Vec.
+                MAT,    //!< Mat.
+                TOTAL   //!< Total number of container types.
             };
 
 
