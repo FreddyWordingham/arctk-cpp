@@ -16,7 +16,6 @@
 
 //  == IMPORTS ==
 //  -- Std --
-#include <cassert>
 #include <iostream>
 
 //  -- Arctk --
