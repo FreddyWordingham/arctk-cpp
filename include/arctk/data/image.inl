@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <algorithm>
+#include <cassert>
 #include <fstream>
 
 //  -- Arctk --
