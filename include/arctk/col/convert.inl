@@ -41,15 +41,19 @@ namespace arc //! arctk namespace
              *  @param  sat_    Colour saturation.
              *  @param  val_    Colour value.
              *
-             *  @pre    sat_ must be between zero and one.
-             *  @pre    val_ must be between zero and one.
+             *  @pre    sat_ must be non-negative.
+             *  @pre    sat_ must be less than, or equal to, unity.
+             *  @pre    val_ must be non-negative.
+             *  @pre    val_ must be less than, or equal to, unity.
              *
              *  @return RGB equivalent of the HSV value.
              */
             inline vec3 hsv_to_rgb(double hue_, const double sat_, const double val_) noexcept
             {
-                assert((sat_ >= 0.0) && (sat_ <= 1.0));
-                assert((val_ >= 0.0) && (val_ <= 1.0));
+                assert(sat_ >= 0.0);
+                assert(sat_ <= 1.0);
+                assert(val_ >= 0.0);
+                assert(val_ <= 1.0);
 
                 hue_ = std::fmod(hue_, 360.0);
 
