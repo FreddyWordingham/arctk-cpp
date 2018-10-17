@@ -11,7 +11,6 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
-#include <arctk/col.hpp>
 #include <arctk/col/convert.hpp>
 #include <arctk/col/map.hpp>
 #include <arctk/config.hpp>
