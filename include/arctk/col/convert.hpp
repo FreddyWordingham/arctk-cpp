@@ -15,9 +15,6 @@
 
 
 //  == IMPORTS ==
-//  -- Std --
-#include <cstddef>
-
 //  -- Arctk --
 #include <arctk/math/vec3.hpp>
 
