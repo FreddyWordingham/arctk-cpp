@@ -19,7 +19,7 @@
 #include <iostream>
 
 //  -- Arctk --
-#include <arctk/exit.hpp>
+#include <arctk/exit/error.hpp>
 #include <arctk/io.hpp>
 
 
