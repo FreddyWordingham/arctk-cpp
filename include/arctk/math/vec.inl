@@ -16,14 +16,10 @@
 
 //  == IMPORTS ==
 //  -- Std --
-#include <array>
 #include <cmath>
-#include <iomanip>
-#include <ostream>
 
 //  -- Arctk --
-#include <arctk/consts.hpp>
-#include <arctk/debug.hpp>
+#include <arctk/consts/format.hpp>
 
 
 
@@ -568,7 +564,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline T& Vec<T, N>::operator[](const size_t index_) noexcept
         {
-            PRE(index_ < N);
+            assert(index_ < N);
 
             return (_data[index_]);
         }
@@ -585,7 +581,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline const T& Vec<T, N>::operator[](const size_t index_) const noexcept
         {
-            PRE(index_ < N);
+            assert(index_ < N);
 
             return (_data[index_]);
         }
@@ -619,7 +615,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline bool Vec<T, N>::normalised(const T tol_) const noexcept
         {
-            PRE(tol_ > 0);
+            assert(tol_ > 0);
 
             return (std::fabs(T{1.0} - mag_sq()) <= tol_);
         }
@@ -703,7 +699,7 @@ namespace arc //! arctk namespace
                 _data[i] *= m;
             }
 
-            POST(normalised());
+            assert(normalised());
         }
 
 
