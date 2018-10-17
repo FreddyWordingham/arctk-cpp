@@ -214,7 +214,7 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < 3; ++i)
                 {
-                    const vec3 axis;
+                    vec3 axis;
                     axis[i] = 1.0;
 
                     for (size_t j = 0; j < 3; ++j)
