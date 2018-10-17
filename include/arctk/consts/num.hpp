@@ -26,7 +26,7 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Buffering --
-            const double BUMP = 1e-6; //!< Distance to bump across boundaries.
+            constexpr const double BUMP = 1e-6; //!< Distance to bump across boundaries.
 
 
 
