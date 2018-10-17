@@ -37,13 +37,15 @@ namespace arc //! arctk namespace
              *
              *  @param  x_  Scalar value to convert to a colour.
              *
-             *  @pre    x_ must be between zero and one.
+             *  @pre    x_ must be non-negative.
+             *  @pre    x_ must be less than unity.
              *
              *  @return Colour vec.
              */
             inline vec3 jet(const double x_) noexcept
             {
-                PRE((x_ >= 0.0) && (x_ <= 1.0));
+                assert(x_ >= 0.0);
+                assert(x_ <= 1.0);
 
                 vec3 col;
 
@@ -83,13 +85,15 @@ namespace arc //! arctk namespace
              *
              *  @param  x_  Scalar value to convert to a colour.
              *
-             *  @pre    x_ must be between zero and one.
+             *  @pre    x_ must be non-negative.
+             *  @pre    x_ must be less than unity.
              *
              *  @return Colour vec.
              */
             inline vec3 jet_line(const double x_) noexcept
             {
-                PRE((x_ >= 0.0) && (x_ <= 1.0));
+                assert(x_ >= 0.0);
+                assert(x_ <= 1.0);
 
                 if (std::fmod(x_, 0.1) < 0.01)
                 {
@@ -106,8 +110,8 @@ namespace arc //! arctk namespace
              *  @param  num_    Number of colour steps.
              *
              *  @pre    x_ must be non-negative.
-             *  @pre    x_ must be between zero and one.
-             *  @pre    x_ must be between zero and one.
+             *  @pre    x_ must be less than unity.
+             *  @pre    num_ must be positive.
              *
              *  @return Colour vec.
              */
