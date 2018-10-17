@@ -355,5 +355,7 @@ endif()
 
 
 #   == INSTALLATION ==
-install(DIRECTORY ./include/arctk/ DESTINATION include/arctk FILES_MATCHING PATTERN "*.h*")
+install(DIRECTORY ./include/arctk/ DESTINATION include/arctk FILES_MATCHING PATTERN "*.h")
+install(DIRECTORY ./include/arctk/ DESTINATION include/arctk FILES_MATCHING PATTERN "*.hpp")
+install(DIRECTORY ./include/arctk/ DESTINATION include/arctk FILES_MATCHING PATTERN "*.inl")
 install(TARGETS arctk EXPORT arctk LIBRARY DESTINATION lib ARCHIVE DESTINATION lib INCLUDES DESTINATION include)
