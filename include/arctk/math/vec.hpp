@@ -16,7 +16,9 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <array>
 #include <cstddef>
+#include <ostream>
 
 
 
@@ -25,6 +27,12 @@ namespace arc //! arctk namespace
 {
     namespace math //! mathematical namespace
     {
+
+
+
+        //  == CLASS PROTOTYPES ==
+        template <typename T, size_t N>
+        class Mat;
 
 
 
