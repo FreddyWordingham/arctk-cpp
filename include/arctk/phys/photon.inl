@@ -21,6 +21,7 @@
 //  -- Arctk --
 #include <arctk/consts/phys.hpp>
 #include <arctk/math/compare.hpp>
+#include <arctk/math/vec3.hpp>
 #include <arctk/phys/cell.hpp>
 
 
