@@ -21,7 +21,7 @@
 #include <fstream>
 
 //  -- Arctk --
-#include <arctk/math.hpp>
+#include <arctk/math/vec3.hpp>
 
 
 
