@@ -8,7 +8,7 @@ arctk_clean() {
     rm -r bin
     rm -r build
     rm -r doc
-    rm include/config.hpp
+    rm include/config/*
 
     cd - >/dev/null
 }
