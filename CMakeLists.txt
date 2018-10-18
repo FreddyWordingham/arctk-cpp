@@ -86,6 +86,10 @@ if (DOCUMENT)
 endif ()
 message("Document: ${DOCUMENT}")
 
+if (UNIT_TESTING)
+endif()
+message("Unit testing: ${UNIT_TESTING}")
+
 
 
 #   == SOURCE CODE ==
