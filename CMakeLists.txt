@@ -341,8 +341,7 @@ install(TARGETS arctk EXPORT arctk LIBRARY DESTINATION lib ARCHIVE DESTINATION l
 
 
 #   == TESTING ==
-if (CMAKE_BUILD_TYPE MATCHES "debug")
-    message("Unit testing enabled.")
+if (UNIT_TESTING)
 
     enable_testing()
 
