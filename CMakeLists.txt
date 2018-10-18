@@ -352,9 +352,9 @@ if (UNIT_TESTING)
     foreach(loop_var ${TEST_SOURCE_FILES})
 
         set(NAME ${loop_var})
-        get_filename_component(NAME ${NAME} NAME)
-        string(REGEX REPLACE "\\.[^.]*$" "" NAME ${NAME})
-        set(NAME ${NAME}_unit_test)
+        STRING(REGEX REPLACE "${CMAKE_SOURCE_DIR}/test/" "" NAME ${NAME})
+        STRING(REGEX REPLACE "/" "_" NAME ${NAME})
+        STRING(REGEX REPLACE ".cpp" "_unit_test" NAME ${NAME})
 
         set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/test)
         add_executable(${NAME} ${loop_var})
