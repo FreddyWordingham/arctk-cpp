@@ -89,9 +89,9 @@ message("Document: ${DOCUMENT}")
 
 
 #   == SOURCE CODE ==
-file(GLOB_RECURSE SOURCE_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 file(GLOB_RECURSE HEADER_FILES ${CMAKE_SOURCE_DIR}/include/arctk/*.hpp)
 file(GLOB_RECURSE IMPL_FILES ${CMAKE_SOURCE_DIR}/include/arctk/*.inl)
+file(GLOB_RECURSE TEST_SOURCE_FILES ${CMAKE_SOURCE_DIR}/test/*.cpp)
 
 
 
@@ -322,35 +322,9 @@ endif ()
 
 
 #   == TARGETS ==
-add_library(arctk STATIC ${SOURCE_FILES} ${HEADER_FILES} ${IMPL_FILES})
-
-
-
-#   == INCLUDES ==
-target_include_directories(arctk PRIVATE ${CMAKE_SOURCE_DIR}/include)
-
-
-
-#   -- Packages --
-find_package(OpenGL REQUIRED)
-find_package(SDL2 REQUIRED)
-find_package(GLEW REQUIRED)
-find_package(glfw3 3.2.1 REQUIRED)
-
-#   -- Include System Directories --
-target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC ${OpenGL_INCLUDE_DIR})
-target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC ${SDL2_INCLUDE_DIR})
-
-#   -- Link Libraries --
-target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES})
-target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES})
-target_link_libraries(${PROJECT_NAME} GLEW)
-target_link_libraries(${PROJECT_NAME} glfw)
-if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-    target_link_libraries(${PROJECT_NAME} c++fs)
-elseif (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
-    target_link_libraries(${PROJECT_NAME} stdc++fs)
-endif()
+add_library(arctk INTERFACE)
+target_include_directories(arctk INTERFACE "${CMAKE_SOURCE_DIR}/include")
+target_sources(arctk INTERFACE ${HEADER_FILES} ${IMPL_FILES})
 
 
 
@@ -359,3 +333,31 @@ install(DIRECTORY ./include/arctk/ DESTINATION include/arctk FILES_MATCHING PATT
 install(DIRECTORY ./include/arctk/ DESTINATION include/arctk FILES_MATCHING PATTERN "*.hpp")
 install(DIRECTORY ./include/arctk/ DESTINATION include/arctk FILES_MATCHING PATTERN "*.inl")
 install(TARGETS arctk EXPORT arctk LIBRARY DESTINATION lib ARCHIVE DESTINATION lib INCLUDES DESTINATION include)
+
+
+
+#   == TESTING ==
+if (CMAKE_BUILD_TYPE MATCHES "debug")
+    message("Unit testing enabled.")
+
+    enable_testing()
+
+    message("Tests: ${TEST_SOURCE_FILES}")
+
+    foreach(loop_var ${TEST_SOURCE_FILES})
+
+        set(NAME ${loop_var})
+        get_filename_component(NAME ${NAME} NAME)
+        string(REGEX REPLACE "\\.[^.]*$" "" NAME ${NAME})
+        set(NAME ${NAME}_unit_test)
+
+        set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/test)
+        add_executable(${NAME} ${loop_var})
+
+        target_include_directories(${NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
+
+        add_test(${NAME} ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${NAME})
+
+    endforeach(loop_var)
+
+endif()
