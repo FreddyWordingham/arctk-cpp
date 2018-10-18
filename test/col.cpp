@@ -1,10 +1,9 @@
 /**
- *  @file   main.cpp
- *  @date   15/05/2018
+ *  @file   col.cpp
+ *  @date   18/10/2018
  *  @author Freddy Wordingham
  *
- *  Main source file of arctk.
- *  Lists all header files fo static-analysis.
+ *  Colour collection test programme.
  */
 
 
@@ -19,10 +18,9 @@
 //  == MAIN ==
 //  -- Function --
 /**
- *  Main function of Arctk.
- *  Serves only as a main entity.
+ *  Unit test function of Arctk colour collection headers.
  *
- *  @return Zero upon a successful 0run.
+ *  @return Zero upon a successful run.
  */
 int main(const int /*unused*/, const char** /*unused*/)
 {
