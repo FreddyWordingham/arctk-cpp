@@ -67,6 +67,8 @@ configure_file(${DOXYFILE_IN} ${DOXYFILE} @ONLY)
 
 
 #   == OPTIONS ==
+message("Unit testing: ${UNIT_TESTING}")
+
 if (CLANG_TIDY)
     set(CMAKE_CXX_CLANG_TIDY "clang-tidy")
 endif ()
@@ -85,10 +87,6 @@ if (DOCUMENT)
         VERBATIM)
 endif ()
 message("Document: ${DOCUMENT}")
-
-if (UNIT_TESTING)
-endif()
-message("Unit testing: ${UNIT_TESTING}")
 
 
 
