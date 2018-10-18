@@ -56,9 +56,13 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib)
 
 
 #   == CONFIGURATION ==
-set(CONFIG_HEADER_IN ${CMAKE_SOURCE_DIR}/config/include/arctk/config.hpp.in)
-set(CONFIG_HEADER ${CMAKE_SOURCE_DIR}/include/arctk/config.hpp)
-configure_file(${CONFIG_HEADER_IN} ${CONFIG_HEADER} @ONLY)
+set(CONFIG_BUILD_HEADER_IN ${CMAKE_SOURCE_DIR}/config/include/arctk/config/build.hpp.in)
+set(CONFIG_BUILD_HEADER ${CMAKE_SOURCE_DIR}/include/arctk/config/build.hpp)
+configure_file(${CONFIG_BUILD_HEADER_IN} ${CONFIG_BUILD_HEADER} @ONLY)
+
+set(CONFIG_VERSION_HEADER_IN ${CMAKE_SOURCE_DIR}/config/include/arctk/config/version.hpp.in)
+set(CONFIG_VERSION_HEADER ${CMAKE_SOURCE_DIR}/include/arctk/config/version.hpp)
+configure_file(${CONFIG_VERSION_HEADER_IN} ${CONFIG_VERSION_HEADER} @ONLY)
 
 set(DOXYFILE_IN ${CMAKE_SOURCE_DIR}/config/docs/Doxyfile.in)
 set(DOXYFILE ${CMAKE_SOURCE_DIR}/build/docs/Doxyfile)
