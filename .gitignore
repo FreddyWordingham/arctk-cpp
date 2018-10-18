@@ -3,4 +3,4 @@
 /build
 /lib
 /.vscode
-/include/arctk/config.hpp
+/include/arctk/config/*

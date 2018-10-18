@@ -26,11 +26,10 @@ namespace arc //! arctk namespace
         //  -- Build Information --
         constexpr const char* DIR      = "/Users/freddy/Projects/arctk";      //!< Build directory.
         constexpr const char* BRANCH   = "master";   //!< Build branch.
-        constexpr const char* HASH     = "b9a0a94e";     //!< Git hash.
+        constexpr const char* HASH     = "96d87556";     //!< Git hash.
         constexpr const char* COMPILER = "Clang"; //!< Compiler id.
         constexpr const char* TYPE     = "debug";     //!< Optimisation type.
         constexpr const char* DATE     = "2018-10-18";     //!< Build date
-        constexpr const char* MOD_CORE = ""; //!< Arctk core module status.
 
 
 
