@@ -1,0 +1,39 @@
+/**
+ *  @file   arctk/config/version.hpp
+ *  @date   18/10/2018
+ *  @author Freddy Wordingham
+ *
+ *  Library version configuration constants.
+ */
+
+
+
+//  == GUARD ==
+#ifndef ARCTK_CONFIG_VERSION_HPP
+#define ARCTK_CONFIG_VERSION_HPP
+
+
+
+//  == NAMESPACE ==
+namespace arc //! arctk namespace
+{
+    namespace config //! configuration namespace
+    {
+
+
+
+        //  == CONSTANTS ==
+        //  -- Version --
+        constexpr const unsigned int VERSION_MAJOR = @ARCTK_VERSION_MAJOR@; //!< Version major number.
+        constexpr const unsigned int VERSION_MINOR = @ARCTK_VERSION_MINOR@; //!< Version minor number.
+        constexpr const unsigned int VERSION_PATCH = @ARCTK_VERSION_PATCH@; //!< Version patch number.
+
+
+
+    } // namespace config
+} // namespace arc
+
+
+
+//  == GUARD END ==
+#endif // ARCTK_CONFIG_VERSION_HPP
