@@ -21,7 +21,11 @@
 #include <limits>
 #include <ostream>
 
+
+
+//  == BASE CLASS ==
 //  -- Arctk --
+#include <arctk/math/vec.hpp>
 
 
 
@@ -131,6 +135,11 @@ namespace arc //! arctk namespace
 
     } // namespace math
 } // namespace arc
+
+
+
+//  == IMPLEMENTATION ==
+#include <arctk/math/vec2.inl>
 
 
 

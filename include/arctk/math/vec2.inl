@@ -17,13 +17,9 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cmath>
-#include <iomanip>
-#include <ostream>
 
 //  -- Arctk --
-#include <arctk/consts.hpp>
-#include <arctk/debug.hpp>
-#include <arctk/math/vec.hpp>
+#include <arctk/consts/format.hpp>
 
 
 
@@ -384,7 +380,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline T& Vec<T, 2>::operator[](const size_t index_) noexcept
         {
-            PRE(index_ < 2);
+            assert(index_ < 2);
 
             return ((&x)[index_]);
         }
@@ -401,7 +397,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline const T& Vec<T, 2>::operator[](const size_t index_) const noexcept
         {
-            PRE(index_ < 2);
+            assert(index_ < 2);
 
             return ((&x)[index_]);
         }
@@ -422,7 +418,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline bool Vec<T, 2>::normalised(const T tol_) const noexcept
         {
-            PRE(tol_ > 0);
+            assert(tol_ > 0);
 
             return (std::fabs(T{1.0} - mag_sq()) <= tol_);
         }
@@ -490,52 +486,12 @@ namespace arc //! arctk namespace
             x *= m;
             y *= m;
 
-            POST(normalised());
+            assert(normalised());
         }
 
 
 
-        namespace vec //! vector namespace
-        {
-
-
-
-            //  == FUNCTION PROTOTYPES ==
-            //  -- Utility --
-            template <typename T>
-            constexpr inline Vec<T, 2> axis(size_t dim_) noexcept;
-
-
-
-            //  == FUNCTIONS ==
-            //  -- Utility --
-            /**
-             *  Construct a unit-axis for a given dimension.
-             *
-             *  @tparam T   Type stored by the vec.
-             *
-             *  @param  dim_    Dimension to create a unit-axis for.
-             *
-             *  @pre    dim_ must be less than 2.
-             *
-             *  @return Unit-axis for a given dimension.
-             */
-            template <typename T>
-            constexpr inline Vec<T, 2> axis(const size_t dim_) noexcept
-            {
-                PRE(dim_ < 2);
-
-                Vec<T, 2> vec;
-
-                vec[dim_] = 1.0;
-
-                return (vec);
-            }
-
-
-
-        } // namespace vec
-    }     // namespace math
+    } // namespace math
 } // namespace arc
 
 
