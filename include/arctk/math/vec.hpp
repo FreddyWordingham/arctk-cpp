@@ -137,5 +137,10 @@ namespace arc //! arctk namespace
 
 
 
+//  == IMPLEMENTATION ==
+#include <arctk/math/vec.inl>
+
+
+
 //  == GUARD END ==
 #endif // ARCTK_MATH_VEC_HPP
