@@ -30,7 +30,6 @@ namespace arc //! arctk namespace
         constexpr const char* COMPILER = "@ARCTK_COMPILER@"; //!< Compiler id.
         constexpr const char* TYPE     = "@ARCTK_TYPE@";     //!< Optimisation type.
         constexpr const char* DATE     = "@ARCTK_DATE@";     //!< Build date
-        constexpr const char* MOD_CORE = "@ARCTK_MOD_CORE@"; //!< Arctk core module status.
 
 
 
