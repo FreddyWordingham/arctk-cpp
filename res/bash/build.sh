@@ -84,6 +84,15 @@ arctk_make_doc() {
     return $cmake_compile_status
 }
 
+#   -- Testing --
+arctk_test() {
+    cd $ARCTK_DIR/build >/dev/null
+
+    make test
+
+    cd - >/dev/null
+}
+
 #   -- Installation --
 arctk_install() {
     cd $ARCTK_DIR/build >/dev/null
