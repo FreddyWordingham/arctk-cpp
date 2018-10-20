@@ -17,7 +17,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace type //! type namespace
+    namespace type //! typeing namespace
     {
 
 
