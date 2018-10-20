@@ -16,10 +16,10 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <vector>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/math.hpp>
 #include <arctk/random/distribution.hpp>
 #include <arctk/utl.hpp>
@@ -96,11 +96,11 @@ namespace arc //! arctk namespace
               , _vals(vals_)
               , _cdfs(init_cdfs(probs_))
             {
-                PRE(!vals_.empty());
-                PRE(!probs_.empty());
-                PRE(vals_.size() == probs_.size());
-                PRE(utl::properties::ascending(vals_));
-                PRE(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
+                assert(!vals_.empty());
+                assert(!probs_.empty());
+                assert(vals_.size() == probs_.size());
+                assert(utl::properties::ascending(vals_));
+                assert(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
             }
 
 
@@ -110,13 +110,18 @@ namespace arc //! arctk namespace
              *
              *  @param  probs_  Corresponding relative probabilities of the values.
              *
+             *  @pre    probs_ may not be empty.
+             *  @pre    probd_ values must all be non-negative.
+             *
+             *  @post   cdfs back value must equal unity.
+             *
              *  @return Initialised vector of cumulative distribution frequency values.
              */
             template <typename T>
             inline std::vector<double> Discrete<T>::init_cdfs(const std::vector<double>& probs_) const noexcept
             {
-                PRE(!probs_.empty());
-                PRE(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
+                assert(!probs_.empty());
+                assert(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
 
                 std::vector<double> cdfs(probs_.size() + 1);
 
@@ -131,7 +136,7 @@ namespace arc //! arctk namespace
                     cdfs[i] /= cdfs.back();
                 }
 
-                POST(math::compare::equal(cdfs.back(), 1.0));
+                assert(math::compare::equal(cdfs.back(), 1.0));
 
                 return (cdfs);
             }
@@ -176,7 +181,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline T Discrete<T>::sample(Generator* const rng_) const noexcept
             {
-                PRE(rng_ != nullptr);
+                assert(rng_ != nullptr);
 
                 return (_vals[utl::search::lower(_cdfs, rng_->gen())]);
             }
