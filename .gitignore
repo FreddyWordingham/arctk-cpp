@@ -3,4 +3,5 @@
 /build
 /lib
 /.vscode
+/.ccls-cache
 /include/arctk/config/*
