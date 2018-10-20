@@ -16,10 +16,10 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <vector>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/random/distribution.hpp>
 
 
@@ -101,11 +101,11 @@ namespace arc //! arctk namespace
               , _cdfs(init_cdfs(vals_, probs_))
               , _fracs(init_fracs(vals_, probs_))
             {
-                PRE(vals_.size() >= 2);
-                PRE(probs_.size() >= 2);
-                PRE(vals_.size() == probs_.size());
-                PRE(utl::properties::ascending(vals_));
-                PRE(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
+                assert(vals_.size() >= 2);
+                assert(probs_.size() >= 2);
+                assert(vals_.size() == probs_.size());
+                assert(utl::properties::ascending(vals_));
+                assert(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
             }
 
 
@@ -122,16 +122,18 @@ namespace arc //! arctk namespace
              *  @pre    vals_ must be sorted in ascending order.
              *  @pre    probs_ must always be greater than, or equal to, zero.
              *
+             *  @post   cdfs back value must equal unity.
+             *
              *  @return Initialised vector of cumulative distribution frequency values.
              */
             template <typename T>
             inline std::vector<double> Linear<T>::init_cdfs(const std::vector<T>& vals_, const std::vector<double>& probs_) const noexcept
             {
-                PRE(vals_.size() >= 2);
-                PRE(probs_.size() >= 2);
-                PRE(vals_.size() == probs_.size());
-                PRE(utl::properties::ascending(vals_));
-                PRE(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
+                assert(vals_.size() >= 2);
+                assert(probs_.size() >= 2);
+                assert(vals_.size() == probs_.size());
+                assert(utl::properties::ascending(vals_));
+                assert(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
 
                 std::vector<double> cdfs(probs_.size());
 
@@ -146,7 +148,7 @@ namespace arc //! arctk namespace
                     cdfs[i] /= cdfs.back();
                 }
 
-                POST(math::compare::equal(cdfs.back(), 1.0));
+                assert(math::compare::equal(cdfs.back(), 1.0));
 
                 return (cdfs);
             }
@@ -169,11 +171,11 @@ namespace arc //! arctk namespace
             template <typename T>
             inline std::vector<double> Linear<T>::init_fracs(const std::vector<T>& vals_, const std::vector<double>& probs_) const noexcept
             {
-                PRE(vals_.size() >= 2);
-                PRE(probs_.size() >= 2);
-                PRE(vals_.size() == probs_.size());
-                PRE(utl::properties::ascending(vals_));
-                PRE(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
+                assert(vals_.size() >= 2);
+                assert(probs_.size() >= 2);
+                assert(vals_.size() == probs_.size());
+                assert(utl::properties::ascending(vals_));
+                assert(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
 
                 std::vector<double> fracs(probs_.size() - 1);
 
@@ -250,7 +252,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline T Linear<T>::sample(Generator* const rng_) const noexcept
             {
-                PRE(rng_ != nullptr);
+                assert(rng_ != nullptr);
 
                 const size_t index = utl::search::lower(_cdfs, rng_->gen());
 
