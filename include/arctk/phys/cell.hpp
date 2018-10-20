@@ -15,8 +15,10 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
 
@@ -79,9 +81,9 @@ namespace arc //! arctk namespace
           , _scatters(0.0)
           , _energy(0.0)
         {
-            PRE(min_.x <= max_.x);
-            PRE(min_.y <= max_.y);
-            PRE(min_.z <= max_.z);
+            assert(min_.x <= max_.x);
+            assert(min_.y <= max_.y);
+            assert(min_.z <= max_.z);
         }
 
 
@@ -119,7 +121,7 @@ namespace arc //! arctk namespace
          */
         inline void Cell::add_scatter(const double scatters_) noexcept
         {
-            PRE(scatters_ > 0.0);
+            assert(scatters_ > 0.0);
 
             _scatters += scatters_;
         }
@@ -133,7 +135,7 @@ namespace arc //! arctk namespace
          */
         inline void Cell::add_energy(const double energy_) noexcept
         {
-            PRE(energy_ > 0.0);
+            assert(energy_ > 0.0);
 
             _energy += energy_;
         }
