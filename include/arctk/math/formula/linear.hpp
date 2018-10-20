@@ -21,7 +21,8 @@
 
 //  -- Arctk --
 #include <arctk/math/formula.hpp>
-#include <arctk/utl.hpp>
+#include <arctk/prop/order.hpp>
+#include <arctk/search/index.hpp>
 
 
 
@@ -89,7 +90,7 @@ namespace arc //! arctk namespace
                 assert(xs_.size() > 1);
                 assert(ys_.size() > 1);
                 assert(xs_.size() == ys_.size());
-                assert(utl::properties::ascending(xs_));
+                assert(prop::order::ascending(xs_));
             }
 
 
@@ -112,7 +113,7 @@ namespace arc //! arctk namespace
                 assert(xs_.size() > 1);
                 assert(ys_.size() > 1);
                 assert(xs_.size() == ys_.size());
-                assert(utl::properties::ascending(xs_));
+                assert(prop::order::ascending(xs_));
 
                 std::vector<double> grads(xs_.size() - 1);
                 for (size_t i = 0; i < grads.size(); ++i)
@@ -142,7 +143,7 @@ namespace arc //! arctk namespace
                 assert(val_ >= _min);
                 assert(val_ <= _max);
 
-                const size_t index = utl::search::lower(_xs, val_);
+                const size_t index = search::index::lower(_xs, val_);
 
                 return (_ys[index] + ((val_ - _xs[index]) * _grads[index]));
             }
