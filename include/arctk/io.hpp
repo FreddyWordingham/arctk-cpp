@@ -30,7 +30,7 @@
 #include <arctk/io/file.hpp>
 #include <arctk/io/input.hpp>
 #include <arctk/io/output.hpp>
-#include <arctk/utl.hpp>
+#include <arctk/type/tag.hpp>
 
 
 
@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
             input::filter_comments(str_);
             input::filter_whitespace(str_);
 
-            return (input::parse(utl::Tag<T>(), str_));
+            return (input::parse(type::Tag<T>(), str_));
         }
 
 
