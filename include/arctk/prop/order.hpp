@@ -33,7 +33,6 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Order --
-            //  -- Order --
             template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
             inline bool ascending(const C& cont_) noexcept;
             template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
