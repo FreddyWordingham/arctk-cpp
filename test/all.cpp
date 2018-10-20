@@ -102,7 +102,6 @@
 #include <arctk/sys.hpp>
 #include <arctk/sys/args.hpp>
 #include <arctk/sys/balancer.hpp>
-#include <arctk/term.hpp>
 #include <arctk/term/ansi.hpp>
 #include <arctk/tree.hpp>
 #include <arctk/tree/node.hpp>
