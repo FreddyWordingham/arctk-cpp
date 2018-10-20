@@ -111,10 +111,6 @@ namespace arc //! arctk namespace
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept;
                 inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept;
 
-                //  -- Intersection --
-                inline bool intersect(const Triangle& tri_) const noexcept;
-                inline bool intersect(const Mesh& mesh_) const noexcept;
-
                 //  -- Collision --
                 inline std::optional<double>    collision(const vec3& pos_, const vec3& dir_) const noexcept override; // NOLINT
                 inline std::optional<Collision> collision_info(const vec3& pos_, const vec3& dir_) const noexcept;
@@ -808,61 +804,6 @@ namespace arc //! arctk namespace
                 assert(rng_ != nullptr);
 
                 return (_tris[utl::search::lower(_areas, rng_->gen())].random_pos_and_norm(rng_));
-            }
-
-
-            //  -- Intersection --
-            /**
-             *  Determine if an intersection ocurres between the mesh and a triangle.
-             *
-             *  @param  tri_    Triangle to test.
-             *
-             *  @return True if an intersection ocurres.
-             */
-            inline bool Mesh::intersect(const Triangle& tri_) const noexcept
-            {
-                if (!_box.intersect(tri_))
-                {
-                    return (false);
-                }
-
-                for (size_t i = 0; i < _tris.size(); ++i)
-                {
-                    if (_tris[i].intersect(tri_))
-                    {
-                        return (true);
-                    }
-                }
-
-                return (false);
-            }
-
-            /**
-             *  Determine if an intersection ocurres between the mesh and another mesh.
-             *
-             *  @param  mesh_   Mesh to test.
-             *
-             *  @return True if an intersection ocurres.
-             */
-            inline bool Mesh::intersect(const Mesh& mesh_) const noexcept
-            {
-                if (!_box.intersect(mesh_.box()))
-                {
-                    return (false);
-                }
-
-                for (size_t i = 0; i < _tris.size(); ++i)
-                {
-                    for (size_t j = 0; j < mesh_.num_faces(); ++j)
-                    {
-                        if (_box.intersect(mesh_.tri(j)) && _tris[i].intersect(mesh_.tri(j)))
-                        {
-                            return (true);
-                        }
-                    }
-                }
-
-                return (false);
             }
 
 
