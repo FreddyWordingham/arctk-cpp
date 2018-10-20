@@ -16,12 +16,12 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <optional>
 #include <utility>
 #include <vector>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/geom/collision.hpp>
 #include <arctk/geom/shape/box.hpp>
 #include <arctk/geom/shape/triangle.hpp>
@@ -134,7 +134,7 @@ namespace arc //! arctk namespace
             inline Mesh::Mesh(const std::string& serial_) noexcept
               : Mesh(parse_poss(serial_), parse_norms(serial_), parse_faces(serial_))
             {
-                PRE(!serial_.empty());
+                assert(!serial_.empty());
             }
 
             /**
@@ -153,10 +153,10 @@ namespace arc //! arctk namespace
             inline Mesh::Mesh(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
               : Mesh(parse_poss(serial_), parse_norms(serial_), parse_faces(serial_), scale_, rot_, trans_)
             {
-                PRE(!serial_.empty());
-                PRE(scale_.x > 0.0);
-                PRE(scale_.y > 0.0);
-                PRE(scale_.z > 0.0);
+                assert(!serial_.empty());
+                assert(scale_.x > 0.0);
+                assert(scale_.y > 0.0);
+                assert(scale_.z > 0.0);
             }
 
             /**
@@ -181,14 +181,14 @@ namespace arc //! arctk namespace
             inline Mesh::Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
               : Mesh(transform_poss(poss_, math::mat::transform(scale_, rot_, trans_)), transform_norms(norms_, math::mat::transform(scale_, rot_, trans_)), faces_)
             {
-                PRE(poss_.size() >= 3);
-                PRE(!norms_.empty());
-                PRE(!faces_.empty());
-                PRE(scale_.x > 0.0);
-                PRE(scale_.y > 0.0);
-                PRE(scale_.z > 0.0);
+                assert(poss_.size() >= 3);
+                assert(!norms_.empty());
+                assert(!faces_.empty());
+                assert(scale_.x > 0.0);
+                assert(scale_.y > 0.0);
+                assert(scale_.z > 0.0);
 
-                POST(!_tris.empty());
+                assert(!_tris.empty());
             }
 
             /**
@@ -214,11 +214,11 @@ namespace arc //! arctk namespace
               , _num_faces(faces_.size())
               , _closed((_num_verts + _num_faces - _num_edges) == 2)
             {
-                PRE(poss_.size() >= 3);
-                PRE(!norms_.empty());
-                PRE(!faces_.empty());
+                assert(poss_.size() >= 3);
+                assert(!norms_.empty());
+                assert(!faces_.empty());
 
-                POST(!_tris.empty());
+                assert(!_tris.empty());
             }
 
 
@@ -236,7 +236,7 @@ namespace arc //! arctk namespace
              */
             inline std::vector<vec3> Mesh::parse_poss(const std::string& serial_) const noexcept
             {
-                PRE(!serial_.empty());
+                assert(!serial_.empty());
 
                 std::vector<vec3> poss;
 
@@ -271,7 +271,7 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                POST(poss.size() >= 3);
+                assert(poss.size() >= 3);
 
                 return (poss);
             }
@@ -289,7 +289,7 @@ namespace arc //! arctk namespace
              */
             inline std::vector<vec3> Mesh::parse_norms(const std::string& serial_) const noexcept
             {
-                PRE(!serial_.empty());
+                assert(!serial_.empty());
 
                 std::vector<vec3> norms;
 
@@ -324,7 +324,7 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                POST(!norms.empty());
+                assert(!norms.empty());
 
                 return (norms);
             }
@@ -342,7 +342,7 @@ namespace arc //! arctk namespace
              */
             inline std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>> Mesh::parse_faces(const std::string& serial_) const noexcept // NOLINT
             {
-                PRE(!serial_.empty());
+                assert(!serial_.empty());
 
                 std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>> faces;
 
@@ -401,7 +401,7 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                POST(!faces.empty());
+                assert(!faces.empty());
 
                 return (faces);
             }
@@ -418,7 +418,7 @@ namespace arc //! arctk namespace
              */
             inline std::vector<vec3> Mesh::transform_poss(const std::vector<vec3>& poss_, const mat4& transform_) const noexcept
             {
-                PRE(poss_.size() >= 3);
+                assert(poss_.size() >= 3);
 
                 std::vector<vec3> poss;
                 poss.reserve(poss_.size());
@@ -446,7 +446,7 @@ namespace arc //! arctk namespace
              */
             inline std::vector<vec3> Mesh::transform_norms(const std::vector<vec3>& norms_, const mat4& transform_) const noexcept
             {
-                PRE(!norms_.empty());
+                assert(!norms_.empty());
 
                 std::vector<vec3> norms;
                 norms.reserve(norms_.size());
@@ -481,9 +481,9 @@ namespace arc //! arctk namespace
              */
             inline std::vector<Triangle> Mesh::init_tris(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) const noexcept
             {
-                PRE(poss_.size() >= 3);
-                PRE(!norms_.empty());
-                PRE(!faces_.empty());
+                assert(poss_.size() >= 3);
+                assert(!norms_.empty());
+                assert(!faces_.empty());
 
                 std::vector<Triangle> tris;
                 tris.reserve(faces_.size());
@@ -503,13 +503,15 @@ namespace arc //! arctk namespace
                                       std::array<vec3, 3>({{norms_[norm_indices[index::dim::cartesian::X]], norms_[norm_indices[index::dim::cartesian::Y]], norms_[norm_indices[index::dim::cartesian::Z]]}}));
                 }
 
-                POST(!tris.empty());
+                assert(!tris.empty());
 
                 return (tris);
             }
 
             /**
              *  Initialise the vector of relative triangle areas.
+             *
+             *  @post   areas back must equal unity.
              *
              *  @return Initialised vector of relative triangle areas.
              */
@@ -528,7 +530,7 @@ namespace arc //! arctk namespace
                     areas[i] /= areas.back();
                 }
 
-                POST(math::compare::unity(areas.back()));
+                assert(math::compare::unity(areas.back()));
 
                 return (areas);
             }
@@ -691,7 +693,7 @@ namespace arc //! arctk namespace
              */
             inline const Triangle& Mesh::tri(const size_t index_) const noexcept
             {
-                PRE(index_ < _tris.size());
+                assert(index_ < _tris.size());
 
                 return (_tris[index_]);
             }
@@ -787,7 +789,7 @@ namespace arc //! arctk namespace
              */
             inline vec3 Mesh::random_pos(random::Generator* rng_) const noexcept
             {
-                PRE(rng_ != nullptr);
+                assert(rng_ != nullptr);
 
                 return (_tris[utl::search::lower(_areas, rng_->gen())].random_pos(rng_));
             }
@@ -803,7 +805,7 @@ namespace arc //! arctk namespace
              */
             inline std::pair<vec3, vec3> Mesh::random_pos_and_norm(random::Generator* rng_) const noexcept
             {
-                PRE(rng_ != nullptr);
+                assert(rng_ != nullptr);
 
                 return (_tris[utl::search::lower(_areas, rng_->gen())].random_pos_and_norm(rng_));
             }
@@ -877,7 +879,7 @@ namespace arc //! arctk namespace
              */
             inline std::optional<double> Mesh::collision(const vec3& pos_, const vec3& dir_) const noexcept // NOLINT
             {
-                PRE(dir_.normalised());
+                assert(dir_.normalised());
 
                 if (!_box.intersect(pos_) && !_box.collision(pos_, dir_))
                 {
@@ -909,7 +911,7 @@ namespace arc //! arctk namespace
              */
             inline std::optional<Collision> Mesh::collision_info(const vec3& pos_, const vec3& dir_) const noexcept
             {
-                PRE(dir_.normalised());
+                assert(dir_.normalised());
 
                 if (!_box.intersect(pos_) && !_box.collision(pos_, dir_))
                 {

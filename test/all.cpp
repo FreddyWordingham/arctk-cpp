@@ -18,7 +18,7 @@
 #include <arctk/consts/format.hpp>
 #include <arctk/consts/math.hpp>
 #include <arctk/consts/num.hpp>
-#include <arctk/consts/phys.hpp>
+#include <arctk/consts/phys.hpp>§
 #include <arctk/equip.hpp>
 #include <arctk/equip/entity.hpp>
 #include <arctk/equip/entity/body.hpp>
