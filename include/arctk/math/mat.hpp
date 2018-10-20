@@ -17,12 +17,12 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
+#include <cassert>
 #include <iomanip>
 #include <ostream>
 
 //  -- Arctk --
 #include <arctk/consts.hpp>
-#include <arctk/debug.hpp>
 #include <arctk/math/vec.hpp>
 
 
@@ -687,7 +687,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline Vec<T, N>& Mat<T, N>::operator[](const size_t index_) noexcept
         {
-            PRE(index_ < N);
+            assert(index_ < N);
 
             return (_data[index_]);
         }
@@ -704,7 +704,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline const Vec<T, N>& Mat<T, N>::operator[](const size_t index_) const noexcept
         {
-            PRE(index_ < N);
+            assert(index_ < N);
 
             return (_data[index_]);
         }
@@ -779,8 +779,8 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline T Mat<T, N>::minors(const size_t row_, const size_t col_) const noexcept
         {
-            PRE(row_ < N);
-            PRE(col_ < N);
+            assert(row_ < N);
+            assert(col_ < N);
 
             Mat<T, N - 1> sub;
             size_t        n = 0;
@@ -843,8 +843,8 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         constexpr inline T Mat<T, N>::cofactor(const size_t row_, const size_t col_) const noexcept
         {
-            PRE(row_ < N);
-            PRE(col_ < N);
+            assert(row_ < N);
+            assert(col_ < N);
 
             return (std::pow(-1, row_ + col_) * minors(row_, col_));
         }
