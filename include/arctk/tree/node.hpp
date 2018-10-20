@@ -15,8 +15,10 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
 
@@ -104,9 +106,9 @@ namespace arc //! arctk namespace
           : Box(min_, max_)
           , _depth(depth_)
         {
-            PRE(min_.x <= max_.x);
-            PRE(min_.y <= max_.y);
-            PRE(min_.z <= max_.z);
+            assert(min_.x <= max_.x);
+            assert(min_.y <= max_.y);
+            assert(min_.z <= max_.z);
         }
 
 
