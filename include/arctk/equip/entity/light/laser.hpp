@@ -16,11 +16,11 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <memory>
 #include <tuple>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/equip/entity/light.hpp>
 #include <arctk/phys.hpp>
 
@@ -89,12 +89,12 @@ namespace arc //! arctk namespace
                   : Light(serial_, scale_, rot_, trans_, mat_, power_, kill_)
                   , _wavelength(wavelength_)
                 {
-                    PRE(!serial_.empty());
-                    PRE(scale_.x > 0.0);
-                    PRE(scale_.y > 0.0);
-                    PRE(scale_.z > 0.0);
-                    PRE(power_ > 0.0);
-                    PRE(wavelength_ > 0.0);
+                    assert(!serial_.empty());
+                    assert(scale_.x > 0.0);
+                    assert(scale_.y > 0.0);
+                    assert(scale_.z > 0.0);
+                    assert(power_ > 0.0);
+                    assert(wavelength_ > 0.0);
                 }
 
 
@@ -107,11 +107,13 @@ namespace arc //! arctk namespace
                  *  @param  energy_ Initial energy of the photon.
                  *  @param  time_   Initial timestamp of the photon.
                  *
+                 *  @pre    energy_ must be positive.
+                 *
                  *  @return Emitted photon in a material with specific-optical-properties.
                  */
                 inline std::tuple<phys::Photon, const arc::phys::Mat*, std::unique_ptr<arc::phys::Sop>> Laser::emit(random::Generator* rng_, const double energy_, const double time_) const noexcept
                 {
-                    PRE(energy_ > 0.0);
+                    assert(energy_ > 0.0);
 
                     const std::pair<arc::vec3, arc::vec3> pos_norm = random_pos_and_norm(rng_);
 
