@@ -25,7 +25,7 @@ namespace arc //! arctk namespace
 {
     namespace type //! typing namespace
     {
-        namespace template //! templating namespace
+        namespace temp //! templating namespace
         {
 
 
@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
 
 
 
-        } // namespace template
+        } // namespace temp
     }     // namespace type
 } // namespace arc
 
