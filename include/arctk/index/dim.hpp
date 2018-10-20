@@ -16,11 +16,11 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <cstdlib>
 #include <string>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/exit.hpp>
 
 
@@ -70,7 +70,7 @@ namespace arc //! arctk namespace
              */
             inline std::string name(const cartesian dim_) noexcept
             {
-                PRE(dim_ < cartesian::TOTAL);
+                assert(dim_ < cartesian::TOTAL);
 
                 switch (dim_)
                 {
