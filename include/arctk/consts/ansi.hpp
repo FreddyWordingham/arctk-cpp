@@ -1,23 +1,23 @@
 /**
- *  @file   arctk/term/ansi.hpp
+ *  @file   arctk/consts/ansi.hpp
  *  @date   05/07/2018
  *  @author Freddy Wordingham
  *
- *  Collection terminal ansi escape strings.
+ *  Collection of terminal ansi escape string constants.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_TERM_ANSI_HPP
-#define ARCTK_TERM_ANSI_HPP
+#ifndef ARCTK_CONSTS_ANSI_HPP
+#define ARCTK_CONSTS_ANSI_HPP
 
 
 
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace term //! terminal namespace
+    namespace consts //! constants namespace
     {
         namespace ansi //! ansi namespace
         {
@@ -53,10 +53,10 @@ namespace arc //! arctk namespace
 
 
         } // namespace ansi
-    }     // namespace term
+    }     // namespace consts
 } // namespace arc
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_TERM_ANSI_HPP
+#endif // ARCTK_CONSTS_ANSI_HPP
