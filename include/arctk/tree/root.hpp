@@ -16,10 +16,10 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <memory>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
 #include <arctk/tree/node.hpp>
@@ -93,10 +93,10 @@ namespace arc //! arctk namespace
         inline Root::Root(const vec3& min_, const vec3& max_, const std::vector<std::unique_ptr<equip::Entity>>& ents_, const size_t max_depth_, const size_t tar_tris_) noexcept
           : _trunk(init_trunk(min_, max_, ents_, max_depth_, tar_tris_))
         {
-            PRE(min_.x <= max_.x);
-            PRE(min_.y <= max_.y);
-            PRE(min_.z <= max_.z);
-            PRE(tar_tris_ > 0);
+            assert(min_.x <= max_.x);
+            assert(min_.y <= max_.y);
+            assert(min_.z <= max_.z);
+            assert(tar_tris_ > 0);
         }
 
 
@@ -119,10 +119,10 @@ namespace arc //! arctk namespace
          */
         inline std::unique_ptr<Node> Root::init_trunk(const vec3& min_, const vec3& max_, const std::vector<std::unique_ptr<equip::Entity>>& ents_, const size_t max_depth_, const size_t tar_tris_) const noexcept
         {
-            PRE(min_.x <= max_.x);
-            PRE(min_.y <= max_.y);
-            PRE(min_.z <= max_.z);
-            PRE(tar_tris_ > 0);
+            assert(min_.x <= max_.x);
+            assert(min_.y <= max_.y);
+            assert(min_.z <= max_.z);
+            assert(tar_tris_ > 0);
 
             std::vector<std::pair<equip::Entity*, std::vector<const geom::shape::Triangle*>>> ent_tris;
             ent_tris.reserve(ents_.size());
