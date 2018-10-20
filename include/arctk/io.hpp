@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
+#include <cassert>
 #include <fstream>
 #include <ostream>
 #include <string>
@@ -68,7 +69,7 @@ namespace arc //! arctk namespace
         template <typename T>
         inline T parse(std::string* const str_) noexcept
         {
-            PRE(str_ != nullptr);
+            assert(str_ != nullptr);
 
             input::filter_comments(str_);
             input::filter_whitespace(str_);

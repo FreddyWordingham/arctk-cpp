@@ -16,13 +16,13 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <iomanip>
 #include <sstream>
 #include <string>
 
 //  -- Arctk --
 #include <arctk/consts.hpp>
-#include <arctk/debug.hpp>
 #include <arctk/utl.hpp>
 
 
