@@ -15,8 +15,10 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/math.hpp>
 
 
@@ -76,8 +78,8 @@ namespace arc //! arctk namespace
           , _dist(dist_)
           , _norm(norm_)
         {
-            PRE(dist_ > 0.0);
-            PRE(norm_.normalised());
+            assert(dist_ > 0.0);
+            assert(norm_.normalised());
         }
 
 
