@@ -110,7 +110,6 @@
 #include <arctk/type/collision.hpp>
 #include <arctk/utl.hpp>
 #include <arctk/utl/manip.hpp>
-#include <arctk/utl/stream.hpp>
 
 
 
