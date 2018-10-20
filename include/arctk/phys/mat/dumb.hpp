@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <limits>
 #include <memory>
 
@@ -78,8 +79,10 @@ namespace arc //! arctk namespace
              *
              *  @pre    ref_index_ must be greater than, or equal to, unity.
              *  @pre    dist_ must be positive.
-             *  @pre    albedo_ must be between zero and unity.
-             *  @pre    asym_ must be between minus one and unity.
+             *  @pre    albedo_ must be positive.
+             *  @pre    albedo_ must less than, or equal to, unity.
+             *  @pre    asym_ must greater than, or equal to, minus one.
+             *  @pre    asym_ must less than, or equal to, unity.
              */
             inline Dumb::Dumb(const double ref_index_, const double dist_, const double albedo_, const double asym_) noexcept
               : Mat(0.0, std::numeric_limits<double>::max())
@@ -88,10 +91,12 @@ namespace arc //! arctk namespace
               , _albedo(albedo_)
               , _asym(asym_)
             {
-                PRE(ref_index_ >= 1.0);
-                PRE(dist_ > 0.0);
-                PRE((albedo_ >= 0.0) || (albedo_ <= 1.0));
-                PRE((asym_ >= -1.0) || (asym_ <= 1.0));
+                assert(ref_index_ >= 1.0);
+                assert(dist_ > 0.0);
+                assert(albedo_ >= 0.0);
+                assert(albedo_ <= 1.0);
+                assert(asym_ >= -1.0);
+                assert(asym_ <= 1.0);
             }
 
 
