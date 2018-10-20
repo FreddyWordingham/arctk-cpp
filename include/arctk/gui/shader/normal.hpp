@@ -237,14 +237,14 @@ namespace arc //! arctk namespace
              *
              *  @param  vert_col_   Colour to draw the vertex normals.
              *
-             *  @pre    col_.r must be non-negative.
-             *  @pre    col_.r must be less than, or equal to, unity.
-             *  @pre    col_.g must be non-negative.
-             *  @pre    col_.g must be less than, or equal to, unity.
-             *  @pre    col_.b must be non-negative.
-             *  @pre    col_.b must be less than, or equal to, unity.
-             *  @pre    col_.a must be non-negative.
-             *  @pre    col_.a must be less than, or equal to, unity.y.
+             *  @pre    vert_col_.r must be non-negative.
+             *  @pre    vert_col_.r must be less than, or equal to, unity.
+             *  @pre    vert_col_.g must be non-negative.
+             *  @pre    vert_col_.g must be less than, or equal to, unity.
+             *  @pre    vert_col_.b must be non-negative.
+             *  @pre    vert_col_.b must be less than, or equal to, unity.
+             *  @pre    vert_col_.a must be non-negative.
+             *  @pre    vert_col_.a must be less than, or equal to, unity.y.
              */
             inline void Normal::set_vert_col(const glm::vec4& vert_col_) noexcept
             {
@@ -265,14 +265,14 @@ namespace arc //! arctk namespace
              *
              *  @param  face_col_   Colour to draw the face normals.
              *
-             *  @pre    col_.r must be non-negative.
-             *  @pre    col_.r must be less than, or equal to, unity.
-             *  @pre    col_.g must be non-negative.
-             *  @pre    col_.g must be less than, or equal to, unity.
-             *  @pre    col_.b must be non-negative.
-             *  @pre    col_.b must be less than, or equal to, unity.
-             *  @pre    col_.a must be non-negative.
-             *  @pre    col_.a must be less than, or equal to, unity.
+             *  @pre    face_col_.r must be non-negative.
+             *  @pre    face_col_.r must be less than, or equal to, unity.
+             *  @pre    face_col_.g must be non-negative.
+             *  @pre    face_col_.g must be less than, or equal to, unity.
+             *  @pre    face_col_.b must be non-negative.
+             *  @pre    face_col_.b must be less than, or equal to, unity.
+             *  @pre    face_col_.a must be non-negative.
+             *  @pre    face_col_.a must be less than, or equal to, unity.
              */
             inline void Normal::set_face_col(const glm::vec4& face_col_) noexcept
             {
