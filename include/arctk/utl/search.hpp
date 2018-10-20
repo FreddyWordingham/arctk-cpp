@@ -17,10 +17,10 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <algorithm>
+#include <cassert>
 #include <iterator>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/utl/properties.hpp>
 
 
@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
             template <typename C, typename T, typename I>
             inline size_t min_index(const C& cont_) noexcept
             {
-                PRE(!cont_.empty());
+                assert(!cont_.empty());
 
                 I min_index = std::begin(cont_);
 
@@ -103,7 +103,7 @@ namespace arc //! arctk namespace
             template <typename C, typename T, typename I>
             inline size_t max_index(const C& cont_) noexcept
             {
-                PRE(!cont_.empty());
+                assert(!cont_.empty());
 
                 I max_index = std::begin(cont_);
 
@@ -134,7 +134,7 @@ namespace arc //! arctk namespace
             template <typename C, typename T, typename I>
             inline T min(const C& cont_) noexcept
             {
-                PRE(!cont_.empty());
+                assert(!cont_.empty());
 
                 return (cont_[min_index(cont_)]);
             }
@@ -155,7 +155,7 @@ namespace arc //! arctk namespace
             template <typename C, typename T, typename I>
             inline T max(const C& cont_) noexcept
             {
-                PRE(!cont_.empty());
+                assert(!cont_.empty());
 
                 return (cont_[max_index(cont_)]);
             }
@@ -181,9 +181,9 @@ namespace arc //! arctk namespace
             template <typename C, typename T, typename I>
             inline size_t lower(const C& cont_, const T& val_) noexcept
             {
-                PRE(!cont_.empty());
-                PRE(utl::properties::ascending(cont_));
-                PRE(utl::properties::within(cont_, val_));
+                assert(!cont_.empty());
+                assert(utl::properties::ascending(cont_));
+                assert(utl::properties::within(cont_, val_));
 
                 const auto index = static_cast<size_t>(std::distance(std::begin(cont_), std::lower_bound(std::begin(cont_), std::end(cont_), val_)));
 
@@ -209,9 +209,9 @@ namespace arc //! arctk namespace
             template <typename C, typename T, typename I>
             inline size_t upper(const C& cont_, const T& val_) noexcept
             {
-                PRE(!cont_.empty());
-                PRE(properties::ascending(cont_));
-                PRE(properties::within(cont_, val_));
+                assert(!cont_.empty());
+                assert(properties::ascending(cont_));
+                assert(properties::within(cont_, val_));
 
                 const auto index = static_cast<size_t>(std::distance(std::begin(cont_), std::upper_bound(std::begin(cont_), std::end(cont_), val_)));
 
