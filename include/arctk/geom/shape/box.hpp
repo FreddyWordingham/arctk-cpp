@@ -16,10 +16,10 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <optional>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/geom/shape.hpp>
 #include <arctk/geom/shape/triangle.hpp>
 #include <arctk/math.hpp>
@@ -91,9 +91,9 @@ namespace arc //! arctk namespace
               : _min(min_)
               , _max(max_)
             {
-                PRE(min_.x <= max_.x);
-                PRE(min_.y <= max_.y);
-                PRE(min_.z <= max_.z);
+                assert(min_.x <= max_.x);
+                assert(min_.y <= max_.y);
+                assert(min_.z <= max_.z);
             }
 
 
@@ -246,7 +246,7 @@ namespace arc //! arctk namespace
              */
             inline std::optional<double> Box::collision(const vec3& pos_, const vec3& dir_) const noexcept // NOLINT
             {
-                PRE(dir_.normalised());
+                assert(dir_.normalised());
 
                 double min_x = ((dir_.x < 0.0 ? _max.x : _min.x) - pos_.x) / dir_.x;
                 double max_x = ((dir_.x < 0.0 ? _min.x : _max.x) - pos_.x) / dir_.x;
