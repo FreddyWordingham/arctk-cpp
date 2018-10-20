@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
+#include <cassert>
 #include <map>
 #include <string>
 #include <tuple>
@@ -25,7 +26,6 @@
 
 //  -- Arctk --
 #include <arctk/consts.hpp>
-#include <arctk/debug.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/index.hpp>
 #include <arctk/io/format.hpp>
@@ -100,7 +100,7 @@ namespace arc //! arctk namespace
              */
             inline void filter_comments(std::string* const str_) noexcept // NOLINT
             {
-                PRE(str_ != nullptr);
+                assert(str_ != nullptr);
 
                 std::string& str_ref = *str_;
 
@@ -159,7 +159,7 @@ namespace arc //! arctk namespace
              */
             inline void filter_whitespace(std::string* const str_) noexcept
             {
-                PRE(str_ != nullptr);
+                assert(str_ != nullptr);
 
                 std::string& str_ref = *str_;
 
@@ -205,7 +205,7 @@ namespace arc //! arctk namespace
              */
             inline void extract_contents(std::string* const str_, const consts::format::container type_) noexcept
             {
-                PRE(str_ != nullptr);
+                assert(str_ != nullptr);
 
                 std::string& str_ref = *str_;
 
@@ -298,6 +298,7 @@ namespace arc //! arctk namespace
              *
              *  @param  str_    String to be parsed.
              *
+             *  @pre    T must be a fundamental type.
              *  @pre    str_ may not be nullptr.
              *
              *  @return Parsed type.
@@ -305,9 +306,9 @@ namespace arc //! arctk namespace
             template <typename T>
             inline T parse(utl::Tag<T> /*unused*/, std::string* const str_) noexcept
             {
-                PRE(str_ != nullptr);
-
                 static_assert(std::is_fundamental<T>::value);
+
+                assert(str_ != nullptr);
 
                 std::string& str_ref = *str_;
 
@@ -348,7 +349,7 @@ namespace arc //! arctk namespace
             template <>
             inline bool parse(utl::Tag<bool> /*unused*/, std::string* const str_) noexcept
             {
-                PRE(str_ != nullptr);
+                assert(str_ != nullptr);
 
                 std::string& str_ref = *str_;
 
@@ -392,7 +393,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline std::vector<T> parse(utl::Tag<std::vector<T>> /*unused*/, std::string* const str_) noexcept
             {
-                PRE(str_ != nullptr);
+                assert(str_ != nullptr);
 
                 std::string& str_ref = *str_;
 
@@ -424,7 +425,7 @@ namespace arc //! arctk namespace
             template <typename T, size_t N>
             inline std::array<T, N> parse(utl::Tag<std::array<T, N>> /*unused*/, std::string* const str_) noexcept
             {
-                PRE(str_ != nullptr);
+                assert(str_ != nullptr);
 
                 std::string& str_ref = *str_;
 
@@ -482,7 +483,7 @@ namespace arc //! arctk namespace
             template <typename T, typename S>
             inline std::pair<T, S> parse(utl::Tag<std::pair<T, S>> /*unused*/, std::string* const str_) noexcept
             {
-                PRE(str_ != nullptr);
+                assert(str_ != nullptr);
 
                 std::string& str_ref = *str_;
 
@@ -514,7 +515,7 @@ namespace arc //! arctk namespace
             template <typename... A>
             inline std::tuple<A...> parse(utl::Tag<std::tuple<A...>> /*unused*/, std::string* const str_) noexcept
             {
-                PRE(str_ != nullptr);
+                assert(str_ != nullptr);
 
                 std::string& str_ref = *str_;
 
@@ -540,18 +541,19 @@ namespace arc //! arctk namespace
              *  @param  tokens_ Vector of string tokens to be parsed.
              *
              *  @pre    tokens_ may not be nullptr.
+             *  @pre    sizeof...(A) must equal tokens_->size.
+             *  @pre    sizeof...(A) must equal sizeof...(I).
              *
              *  @return Parsed tuple.
              */
             template <typename... A, size_t... I>
             inline std::tuple<A...> parse_helper(utl::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>* const tokens_, const std::index_sequence<I...>& /*unused*/) noexcept
             {
-                PRE(tokens_ != nullptr);
+                assert(tokens_ != nullptr);
+                assert(sizeof...(A) == tokens_->size());
+                assert(sizeof...(A) == sizeof...(I));
 
                 std::vector<std::string>& tokens_ref = *tokens_;
-
-                PRE(sizeof...(A) == tokens_ref.size());
-                PRE(sizeof...(A) == sizeof...(I));
 
                 std::tuple<A...> tup;
                 ((std::get<I>(tup) = parse(utl::Tag<A>(), &tokens_ref[I])), ...);
@@ -574,7 +576,7 @@ namespace arc //! arctk namespace
             template <typename T, typename S>
             inline std::map<T, S> parse(utl::Tag<std::map<T, S>> /*unused*/, std::string* const str_) noexcept
             {
-                PRE(str_ != nullptr);
+                assert(str_ != nullptr);
 
                 std::string& str_ref = *str_;
 
@@ -604,7 +606,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline math::Vec<T, 2> parse(utl::Tag<math::Vec<T, 2>> /*unused*/, std::string* const str_) noexcept
             {
-                PRE(str_ != nullptr);
+                assert(str_ != nullptr);
 
                 std::string& str_ref = *str_;
 
@@ -636,7 +638,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline math::Vec<T, 3> parse(utl::Tag<math::Vec<T, 3>> /*unused*/, std::string* const str_) noexcept
             {
-                PRE(str_ != nullptr);
+                assert(str_ != nullptr);
 
                 std::string& str_ref = *str_;
 
@@ -668,7 +670,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline math::Vec<T, 4> parse(utl::Tag<math::Vec<T, 4>> /*unused*/, std::string* const str_) noexcept
             {
-                PRE(str_ != nullptr);
+                assert(str_ != nullptr);
 
                 std::string& str_ref = *str_;
 
@@ -700,7 +702,7 @@ namespace arc //! arctk namespace
             template <typename T, size_t N>
             inline math::Vec<T, N> parse(utl::Tag<math::Vec<T, N>> /*unused*/, std::string* const str_) noexcept
             {
-                PRE(str_ != nullptr);
+                assert(str_ != nullptr);
 
                 std::string& str_ref = *str_;
 
@@ -738,7 +740,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline math::Mat<T, 2> parse(utl::Tag<math::Mat<T, 2>> /*unused*/, std::string* const str_) noexcept
             {
-                PRE(str_ != nullptr);
+                assert(str_ != nullptr);
 
                 std::string& str_ref = *str_;
 
@@ -770,7 +772,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline math::Mat<T, 3> parse(utl::Tag<math::Mat<T, 3>> /*unused*/, std::string* const str_) noexcept
             {
-                PRE(str_ != nullptr);
+                assert(str_ != nullptr);
 
                 std::string& str_ref = *str_;
 
@@ -802,7 +804,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline math::Mat<T, 4> parse(utl::Tag<math::Mat<T, 4>> /*unused*/, std::string* const str_) noexcept
             {
-                PRE(str_ != nullptr);
+                assert(str_ != nullptr);
 
                 std::string& str_ref = *str_;
 
@@ -835,7 +837,7 @@ namespace arc //! arctk namespace
             template <typename T, size_t N>
             inline math::Mat<T, N> parse(utl::Tag<math::Mat<T, N>> /*unused*/, std::string* const str_) noexcept
             {
-                PRE(str_ != nullptr);
+                assert(str_ != nullptr);
 
                 std::string& str_ref = *str_;
 
