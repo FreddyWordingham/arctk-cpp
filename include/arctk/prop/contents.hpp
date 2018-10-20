@@ -19,6 +19,9 @@
 #include <algorithm>
 #include <iterator>
 
+//  -- Arctk --
+#include <arctk/prop/order.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -81,7 +84,7 @@ namespace arc //! arctk namespace
             inline bool within(const C& cont_, const T& val_) noexcept
             {
                 assert(!cont_.empty());
-                assert(monotonic(cont_));
+                assert(prop::order::monotonic(cont_));
 
                 return (((*std::begin(cont_) <= val_) && (val_ <= *std::rbegin(cont_))) || ((*std::begin(cont_) >= val_) && (val_ >= *std::rbegin(cont_))));
             }
