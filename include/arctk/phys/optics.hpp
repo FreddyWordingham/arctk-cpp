@@ -16,10 +16,10 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <cmath>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/math.hpp>
 
 
@@ -64,9 +64,9 @@ namespace arc //! arctk namespace
              */
             inline double reflection_prob(const double ang_in_, const double ref_index_in_, const double ref_index_out_) noexcept
             {
-                PRE((ang_in_ >= 0.0) && (ang_in_ < consts::math::HALF_PI));
-                PRE(ref_index_in_ >= 1.0);
-                PRE(ref_index_out_ >= 1.0);
+                assert((ang_in_ >= 0.0) && (ang_in_ < consts::math::HALF_PI));
+                assert(ref_index_in_ >= 1.0);
+                assert(ref_index_out_ >= 1.0);
 
                 if (ref_index_in_ > ref_index_out_)
                 {
@@ -84,7 +84,7 @@ namespace arc //! arctk namespace
 
                 const double ref_prob = 0.5 * (ref_prob_s + ref_prob_p);
 
-                POST((ref_prob >= 0.0) && (ref_prob <= 1.0));
+                assert((ref_prob >= 0.0) && (ref_prob <= 1.0));
 
                 return (ref_prob);
             }
@@ -106,13 +106,13 @@ namespace arc //! arctk namespace
              */
             inline double refraction_prob(const double ang_in_, const double ref_index_in_, const double ref_index_out_) noexcept
             {
-                PRE((ang_in_ >= 0.0) && (ang_in_ < consts::math::HALF_PI));
-                PRE(ref_index_in_ >= 1.0);
-                PRE(ref_index_out_ >= 1.0);
+                assert((ang_in_ >= 0.0) && (ang_in_ < consts::math::HALF_PI));
+                assert(ref_index_in_ >= 1.0);
+                assert(ref_index_out_ >= 1.0);
 
                 const double ref_prob = 1.0 - reflection_prob(ang_in_, ref_index_in_, ref_index_out_);
 
-                POST((ref_prob >= 0.0) && (ref_prob <= 1.0));
+                assert((ref_prob >= 0.0) && (ref_prob <= 1.0));
 
                 return (ref_prob);
             }
@@ -135,13 +135,13 @@ namespace arc //! arctk namespace
              */
             inline vec3 reflection_dir(const vec3& in_, const vec3& norm_) noexcept
             {
-                PRE(in_.normalised());
-                PRE(norm_.normalised());
-                PRE((in_ * norm_) < 0.0);
+                assert(in_.normalised());
+                assert(norm_.normalised());
+                assert((in_ * norm_) < 0.0);
 
                 const vec3 out = (in_ - (norm_ * (2.0 * (in_ * norm_)))).normal();
 
-                POST(out.normalised());
+                assert(out.normalised());
 
                 return (out);
             }
@@ -164,9 +164,9 @@ namespace arc //! arctk namespace
              */
             inline vec3 refraction_dir(const vec3& in_, const vec3& norm_, const double ref_index_in_, const double ref_index_out_) noexcept
             {
-                PRE(in_.normalised());
-                PRE(norm_.normalised());
-                PRE((in_ * norm_) < 0.0);
+                assert(in_.normalised());
+                assert(norm_.normalised());
+                assert((in_ * norm_) < 0.0);
 
                 const double ref_index_ratio = ref_index_in_ / ref_index_out_;
 
@@ -175,7 +175,7 @@ namespace arc //! arctk namespace
 
                 const vec3 out = (in_ * ref_index_ratio) + (norm_ * ((ref_index_ratio * cos_ang_in) - std::sqrt(1.0 - sin_ang_out_sq)));
 
-                POST(out.normalised());
+                assert(out.normalised());
 
                 return (out);
             }
