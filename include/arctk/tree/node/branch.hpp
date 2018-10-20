@@ -309,11 +309,7 @@ namespace arc //! arctk namespace
              */
             inline const node::Leaf* Branch::leaf(const vec3& pos_) const noexcept
             {
-                assert(min_.x <= max_.x);
-                assert(min_.y <= max_.y);
-                assert(min_.z <= max_.z);
-                assert(cur_depth_ < max_depth_);
-                (intersect(pos_));
+                assert(intersect(pos_));
 
                 return (_childs[(pos_.x < _centre.x) ? 0 : 1][(pos_.y < _centre.y) ? 0 : 1][(pos_.z < _centre.z) ? 0 : 1]->leaf(pos_));
             }
