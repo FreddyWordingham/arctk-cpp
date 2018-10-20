@@ -24,6 +24,7 @@
 #include <arctk/prop/limits.hpp>
 #include <arctk/prop/order.hpp>
 #include <arctk/random/distribution.hpp>
+#include <arctk/search/index.hpp>
 
 
 
@@ -184,7 +185,7 @@ namespace arc //! arctk namespace
             {
                 assert(rng_ != nullptr);
 
-                return (_vals[utl::search::lower(_cdfs, rng_->gen())]);
+                return (_vals[search::index::lower(_cdfs, rng_->gen())]);
             }
 
 
