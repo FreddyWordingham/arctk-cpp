@@ -132,11 +132,15 @@ namespace arc //! arctk namespace
              *
              *  @param  val_    Domain value of the function.
              *
+             *  @pre    val_ must be less than, or equal to, _min.
+             *  @pre    val_ must be greater than, or equal to, _max.
+             *
              *  @return Result of the func for the given value.
              */
             inline double Linear::operator()(const double val_) const noexcept
             {
-                PRE((val_ >= _min) && (val_ <= _max));
+                assert(val_ >= _min);
+                assert(val_ <= _max);
 
                 const size_t index = utl::search::lower(_xs, val_);
 
