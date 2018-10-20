@@ -17,11 +17,11 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
+#include <cassert>
 #include <fstream>
 #include <vector>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/index.hpp>
 #include <arctk/math.hpp>
@@ -100,12 +100,12 @@ namespace arc //! arctk namespace
           , _cells(init_cells(min_, max_, res_))
           , _cell_size((max_.x - min_.x) / static_cast<double>(res_[index::dim::cartesian::X]), (max_.y - min_.y) / static_cast<double>(res_[index::dim::cartesian::Y]), (max_.z - min_.z) / static_cast<double>(res_[index::dim::cartesian::Z]))
         {
-            PRE(min_.x <= max_.x);
-            PRE(min_.y <= max_.y);
-            PRE(min_.z <= max_.z);
-            PRE(res_[index::dim::cartesian::X] > 0);
-            PRE(res_[index::dim::cartesian::Y] > 0);
-            PRE(res_[index::dim::cartesian::Z] > 0);
+            assert(min_.x <= max_.x);
+            assert(min_.y <= max_.y);
+            assert(min_.z <= max_.z);
+            assert(res_[index::dim::cartesian::X] > 0);
+            assert(res_[index::dim::cartesian::Y] > 0);
+            assert(res_[index::dim::cartesian::Z] > 0);
         }
 
 
@@ -128,12 +128,12 @@ namespace arc //! arctk namespace
          */
         inline std::vector<std::vector<std::vector<phys::Cell>>> Domain::init_cells(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept
         {
-            PRE(min_.x <= max_.x);
-            PRE(min_.y <= max_.y);
-            PRE(min_.z <= max_.z);
-            PRE(res_[index::dim::cartesian::X] > 0);
-            PRE(res_[index::dim::cartesian::Y] > 0);
-            PRE(res_[index::dim::cartesian::Z] > 0);
+            assert(min_.x <= max_.x);
+            assert(min_.y <= max_.y);
+            assert(min_.z <= max_.z);
+            assert(res_[index::dim::cartesian::X] > 0);
+            assert(res_[index::dim::cartesian::Y] > 0);
+            assert(res_[index::dim::cartesian::Z] > 0);
 
             const vec3 size((max_.x - min_.x) / static_cast<double>(res_[index::dim::cartesian::X]), (max_.y - min_.y) / static_cast<double>(res_[index::dim::cartesian::Y]), (max_.z - min_.z) / static_cast<double>(res_[index::dim::cartesian::Z]));
 
@@ -219,16 +219,16 @@ namespace arc //! arctk namespace
          */
         inline phys::Cell* Domain::cell(const vec3& pos_) noexcept
         {
-            PRE(intersect(pos_));
+            assert(intersect(pos_));
 
             const vec3 rel_pos = pos_ - _min;
             const auto index_x = static_cast<size_t>(rel_pos.x / _cell_size.x);
             const auto index_y = static_cast<size_t>(rel_pos.y / _cell_size.y);
             const auto index_z = static_cast<size_t>(rel_pos.z / _cell_size.z);
 
-            POST(index_x < _res[index::dim::cartesian::X]);
-            POST(index_y < _res[index::dim::cartesian::Y]);
-            POST(index_z < _res[index::dim::cartesian::Z]);
+            assert(index_x < _res[index::dim::cartesian::X]);
+            assert(index_y < _res[index::dim::cartesian::Y]);
+            assert(index_z < _res[index::dim::cartesian::Z]);
 
             return (&_cells[index_x][index_y][index_z]);
         }
@@ -244,7 +244,7 @@ namespace arc //! arctk namespace
          */
         inline void Domain::save(const std::string& path_) const noexcept // NOLINT
         {
-            PRE(!path_.empty());
+            assert(!path_.empty());
 
             std::ofstream file(path_ + ".vtk");
 
