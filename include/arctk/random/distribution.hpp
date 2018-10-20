@@ -16,10 +16,10 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <cmath>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/math.hpp>
 #include <arctk/random/generator.hpp>
 
@@ -94,7 +94,7 @@ namespace arc //! arctk namespace
           : _min(min_)
           , _max(max_)
         {
-            PRE(min_ < max_);
+            assert(min_ < max_);
         }
 
 
@@ -167,9 +167,8 @@ namespace arc //! arctk namespace
             inline T uniform(Generator* const rng_, const T max_) noexcept // NOLINT
             {
                 static_assert(std::is_arithmetic<T>::value);
-
-                PRE(rng_ != nullptr);
-                PRE(max_ > 0.0);
+                assert(rng_ != nullptr);
+                assert(max_ > 0.0);
 
                 if constexpr (std::is_integral<T>::value) // NOLINT
                 {                                         // NOLINT
@@ -198,9 +197,8 @@ namespace arc //! arctk namespace
             inline T uniform(Generator* const rng_, const T min_, const T max_) noexcept // NOLINT
             {
                 static_assert(std::is_arithmetic<T>::value);
-
-                PRE(rng_ != nullptr);
-                PRE(min_ < max_);
+                assert(rng_ != nullptr);
+                assert(min_ < max_);
 
                 if constexpr (std::is_integral<T>::value) // NOLINT
                 {                                         // NOLINT
@@ -219,7 +217,6 @@ namespace arc //! arctk namespace
              *
              *  @pre    T   Must be an arithmetic type.
              *  @pre    T   May not be an integral type.
-             *
              *  @pre    rng_ may not be nullptr.
              *
              *  @return Random number sampled from a uniform normal distribution.
@@ -229,8 +226,7 @@ namespace arc //! arctk namespace
             {
                 static_assert(std::is_arithmetic<T>::value);
                 static_assert(!std::is_integral<T>::value);
-
-                PRE(rng_ != nullptr);
+                assert(rng_ != nullptr);
 
                 static bool static_gen = false;
                 static_gen             = !static_gen;
@@ -263,7 +259,6 @@ namespace arc //! arctk namespace
              *
              *  @pre    T   Must be an arithmetic type.
              *  @pre    T   May not be an integral type.
-             *
              *  @pre    rng_ may not be nullptr.
              *  @pre    var_ must be positive.
              *
@@ -274,9 +269,8 @@ namespace arc //! arctk namespace
             {
                 static_assert(std::is_arithmetic<T>::value);
                 static_assert(!std::is_integral<T>::value);
-
-                PRE(rng_ != nullptr);
-                PRE(var_ > 0.0);
+                assert(rng_ != nullptr);
+                assert(var_ > 0.0);
 
                 return ((normal<T>(rng_) * var_) + ave_);
             }
@@ -292,7 +286,6 @@ namespace arc //! arctk namespace
              *
              *  @pre    T   Must be an arithmetic type.
              *  @pre    T   May not be an integral type.
-             *
              *  @pre    rng_ may not be nullptr.
              *  @pre    g_ must be between minus one and one.
              *
@@ -303,9 +296,8 @@ namespace arc //! arctk namespace
             {
                 static_assert(std::is_arithmetic<T>::value);
                 static_assert(!std::is_integral<T>::value);
-
-                PRE(rng_ != nullptr);
-                PRE((g_ >= -1.0) && (g_ <= 1.0));
+                assert(rng_ != nullptr);
+                assert((g_ >= -1.0) && (g_ <= 1.0));
 
                 if (math::compare::zero(g_))
                 {
@@ -323,7 +315,6 @@ namespace arc //! arctk namespace
              *  @param  rng_    Random number generator.
              *
              *  @pre    T   Must be a vec type.
-             *
              *  @pre    rng_ may not be nullptr.
              *
              *  @return Random isotropic direction vec.
@@ -332,8 +323,7 @@ namespace arc //! arctk namespace
             inline T isotropic(Generator* const rng_) noexcept
             {
                 static_assert(math::is_vec<T>::value);
-
-                PRE(rng_ != nullptr);
+                assert(rng_ != nullptr);
 
                 const double phi   = uniform(rng_, consts::math::TWO_PI);
                 const double theta = std::acos(uniform(rng_, -1.0, 1.0));
