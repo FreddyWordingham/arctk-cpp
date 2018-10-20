@@ -17,12 +17,12 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <algorithm>
+#include <cassert>
 #include <chrono>
 #include <iostream>
 #include <thread>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/io.hpp>
 #include <arctk/term.hpp>
@@ -102,9 +102,9 @@ namespace arc //! arctk namespace
           , _start_time(std::chrono::steady_clock::now())
           , _updating(false)
         {
-            PRE(target_ > 0);
-            PRE(num_threads_ > 0);
-            PRE(update_delta_ > 0);
+            assert(target_ > 0);
+            assert(num_threads_ > 0);
+            assert(update_delta_ > 0);
         }
 
 
@@ -132,7 +132,7 @@ namespace arc //! arctk namespace
          */
         inline void Balancer::kill() noexcept
         {
-            PRE(!_finished);
+            assert(!_finished);
 
             _finished = true;
         }
@@ -150,7 +150,7 @@ namespace arc //! arctk namespace
          */
         inline bool Balancer::tick(const size_t thread_index_) noexcept
         {
-            PRE(thread_index_ < _counts.size());
+            assert(thread_index_ < _counts.size());
 
             if (!_finished)
             {
