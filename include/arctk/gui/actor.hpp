@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <vector>
 
 //  -- Graphical --
@@ -26,7 +27,6 @@
 #include <glm/gtx/transform.hpp>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/gui/point.hpp>
 #include <arctk/math.hpp>
@@ -136,7 +136,7 @@ namespace arc //! arctk namespace
           , _scale(glm::vec3(1.0f, 1.0f, 1.0f))
           , _col(glm::vec4(1.0f, 0.0f, 1.0f, 1.0f))
         {
-            PRE((verts_.size() % math::container::sum(layout_)) == 0);
+            assert((verts_.size() % math::container::sum(layout_)) == 0);
 
             glBindVertexArray(_vao);
             glBindBuffer(GL_ARRAY_BUFFER, _vbo);
@@ -181,7 +181,7 @@ namespace arc //! arctk namespace
           , _scale(glm::vec3(1.0f, 1.0f, 1.0f))
           , _col(glm::vec4(1.0f, 0.0f, 1.0f, 1.0f))
         {
-            PRE(((verts_.size() * 3) % math::container::sum(layout_)) == 0);
+            assert(((verts_.size() * 3) % math::container::sum(layout_)) == 0);
 
             glBindVertexArray(_vao);
             glBindBuffer(GL_ARRAY_BUFFER, _vbo);
@@ -336,15 +336,21 @@ namespace arc //! arctk namespace
          *
          *  @param  col_    Colour used to render the actor.
          *
-         *  @pre    col_.r must be between zero and unity.
-         *  @pre    col_.g must be between zero and unity.
-         *  @pre    col_.b must be between zero and unity.
+         *  @pre    col_.r must be non-negative.
+         *  @pre    col_.r must be less than, or equal to, unity.
+         *  @pre    col_.g must be non-negative.
+         *  @pre    col_.g must be less than, or equal to, unity.
+         *  @pre    col_.b must be non-negative.
+         *  @pre    col_.b must be less than, or equal to, unity.
          */
         inline void Actor::set_col(const glm::vec3& col_) noexcept
         {
-            PRE((col_.r >= 0.0f) && (col_.r <= 1.0f));
-            PRE((col_.g >= 0.0f) && (col_.g <= 1.0f));
-            PRE((col_.b >= 0.0f) && (col_.b <= 1.0f));
+            assert(col_.r >= 0.0f);
+            assert(col_.r <= 1.0f);
+            assert(col_.g >= 0.0f);
+            assert(col_.g <= 1.0f);
+            assert(col_.b >= 0.0f);
+            assert(col_.b <= 1.0f);
 
             _col = glm::vec4(col_, 1.0f);
         }
@@ -354,17 +360,25 @@ namespace arc //! arctk namespace
          *
          *  @param  col_    Colour used to render the actor.
          *
-         *  @pre    col_.r must be between zero and unity.
-         *  @pre    col_.g must be between zero and unity.
-         *  @pre    col_.b must be between zero and unity.
-         *  @pre    col_.a must be between zero and unity.
+         *  @pre    col_.r must be non-negative.
+         *  @pre    col_.r must be less than, or equal to, unity.
+         *  @pre    col_.g must be non-negative.
+         *  @pre    col_.g must be less than, or equal to, unity.
+         *  @pre    col_.b must be non-negative.
+         *  @pre    col_.b must be less than, or equal to, unity.
+         *  @pre    col_.a must be non-negative.
+         *  @pre    col_.a must be less than, or equal to, unity.
          */
         inline void Actor::set_col(const glm::vec4& col_) noexcept
         {
-            PRE((col_.r >= 0.0f) && (col_.r <= 1.0f));
-            PRE((col_.g >= 0.0f) && (col_.g <= 1.0f));
-            PRE((col_.b >= 0.0f) && (col_.b <= 1.0f));
-            PRE((col_.a >= 0.0f) && (col_.a <= 1.0f));
+            assert(col_.r >= 0.0f);
+            assert(col_.r <= 1.0f);
+            assert(col_.g >= 0.0f);
+            assert(col_.g <= 1.0f);
+            assert(col_.b >= 0.0f);
+            assert(col_.b <= 1.0f);
+            assert(col_.a >= 0.0f);
+            assert(col_.a <= 1.0f);
 
             _col = col_;
         }
@@ -466,10 +480,10 @@ namespace arc //! arctk namespace
              */
             inline Actor grid(const glm::vec2& min_, const glm::vec2& max_, const glm::vec2& cell_size_) noexcept
             {
-                PRE(min_.x < max_.x);
-                PRE(min_.y < max_.y);
-                PRE(cell_size_.x > 0.0f);
-                PRE(cell_size_.y > 0.0f);
+                assert(min_.x < max_.x);
+                assert(min_.y < max_.y);
+                assert(cell_size_.x > 0.0f);
+                assert(cell_size_.y > 0.0f);
 
                 const auto x_start = static_cast<int>(std::trunc(min_.x / cell_size_.x));
                 const auto x_end   = static_cast<int>(std::trunc(max_.x / cell_size_.x));
@@ -510,8 +524,8 @@ namespace arc //! arctk namespace
              */
             inline Actor axis_helper_x(const float length_, const float width_) noexcept
             {
-                PRE(length_ > 0.0f);
-                PRE(width_ > 0.0f);
+                assert(length_ > 0.0f);
+                assert(width_ > 0.0f);
 
                 std::vector<glm::vec3> verts;
                 verts.reserve(3 * 8);
@@ -567,8 +581,8 @@ namespace arc //! arctk namespace
              */
             inline Actor axis_helper_y(const float length_, const float width_) noexcept
             {
-                PRE(length_ > 0.0f);
-                PRE(width_ > 0.0f);
+                assert(length_ > 0.0f);
+                assert(width_ > 0.0f);
 
                 std::vector<glm::vec3> verts;
                 verts.reserve(3 * 8);
@@ -624,8 +638,8 @@ namespace arc //! arctk namespace
              */
             inline Actor axis_helper_z(const float length_, const float width_) noexcept
             {
-                PRE(length_ > 0.0f);
-                PRE(width_ > 0.0f);
+                assert(length_ > 0.0f);
+                assert(width_ > 0.0f);
 
                 std::vector<glm::vec3> verts;
                 verts.reserve(3 * 8);
