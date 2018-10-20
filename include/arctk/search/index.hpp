@@ -18,6 +18,10 @@
 //  -- Std --
 #include <cstddef>
 
+//  -- Arctk --
+#include <arctk/prop/contents.hpp>
+#include <arctk/prop/order.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -61,8 +65,8 @@ namespace arc //! arctk namespace
             inline size_t lower(const C& cont_, const T& val_) noexcept
             {
                 assert(!cont_.empty());
-                assert(utl::properties::ascending(cont_));
-                assert(utl::properties::within(cont_, val_));
+                assert(prop::order::ascending(cont_));
+                assert(prop::contents::within(cont_, val_));
 
                 const auto index = static_cast<size_t>(std::distance(std::begin(cont_), std::lower_bound(std::begin(cont_), std::end(cont_), val_)));
 
@@ -89,8 +93,8 @@ namespace arc //! arctk namespace
             inline size_t upper(const C& cont_, const T& val_) noexcept
             {
                 assert(!cont_.empty());
-                assert(properties::ascending(cont_));
-                assert(properties::within(cont_, val_));
+                assert(prop::order::ascending(cont_));
+                assert(prop::contents::within(cont_, val_));
 
                 const auto index = static_cast<size_t>(std::distance(std::begin(cont_), std::upper_bound(std::begin(cont_), std::end(cont_), val_)));
 
