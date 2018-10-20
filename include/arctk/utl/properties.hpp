@@ -18,6 +18,7 @@
 //  -- Std --
 #include <algorithm>
 #include <array>
+#include <cassert>
 #include <cmath>
 #include <iterator>
 #include <vector>
@@ -196,8 +197,8 @@ namespace arc //! arctk namespace
             template <typename C, typename T, typename I>
             inline bool within(const C& cont_, const T& val_) noexcept
             {
-                PRE(!cont_.empty());
-                PRE(monotonic(cont_));
+                assert(!cont_.empty());
+                assert(monotonic(cont_));
 
                 return (((*std::begin(cont_) <= val_) && (val_ <= *std::rbegin(cont_))) || ((*std::begin(cont_) >= val_) && (val_ >= *std::rbegin(cont_))));
             }
@@ -249,7 +250,7 @@ namespace arc //! arctk namespace
             template <typename C, typename T, typename I>
             inline bool ascending(const C& cont_) noexcept
             {
-                PRE(!cont_.empty());
+                assert(!cont_.empty());
 
                 for (I it = std::begin(cont_); it != std::prev(std::end(cont_)); std::advance(it, 1))
                 {
@@ -279,7 +280,7 @@ namespace arc //! arctk namespace
             template <typename C, typename T, typename I>
             inline bool descending(const C& cont_) noexcept
             {
-                PRE(!cont_.empty());
+                assert(!cont_.empty());
 
                 for (I it = std::begin(cont_); it != std::prev(std::end(cont_)); std::advance(it, 1))
                 {
@@ -309,7 +310,7 @@ namespace arc //! arctk namespace
             template <typename C, typename T, typename I>
             inline bool monotonic(const C& cont_) noexcept
             {
-                PRE(!cont_.empty());
+                assert(!cont_.empty());
 
                 return (ascending(cont_) || descending(cont_));
             }
@@ -330,7 +331,7 @@ namespace arc //! arctk namespace
             template <typename C, typename T, typename I>
             inline bool uniform(const C& cont_) noexcept
             {
-                PRE(!cont_.empty());
+                assert(!cont_.empty());
 
                 if (cont_.size() == 1)
                 {
