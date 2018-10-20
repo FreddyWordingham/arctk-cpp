@@ -20,6 +20,8 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/prop/limits.hpp>
+#include <arctk/prop/order.hpp>
 #include <arctk/random/distribution.hpp>
 
 
@@ -104,8 +106,8 @@ namespace arc //! arctk namespace
                 assert(vals_.size() >= 2);
                 assert(probs_.size() >= 2);
                 assert(vals_.size() == probs_.size());
-                assert(utl::properties::ascending(vals_));
-                assert(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
+                assert(prop::order::ascending(vals_));
+                assert(prop::limits::always_greater_than_or_equal_to(probs_, 0.0));
             }
 
 
@@ -132,8 +134,8 @@ namespace arc //! arctk namespace
                 assert(vals_.size() >= 2);
                 assert(probs_.size() >= 2);
                 assert(vals_.size() == probs_.size());
-                assert(utl::properties::ascending(vals_));
-                assert(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
+                assert(prop::order::ascending(vals_));
+                assert(prop::limits::always_greater_than_or_equal_to(probs_, 0.0));
 
                 std::vector<double> cdfs(probs_.size());
 
@@ -174,8 +176,8 @@ namespace arc //! arctk namespace
                 assert(vals_.size() >= 2);
                 assert(probs_.size() >= 2);
                 assert(vals_.size() == probs_.size());
-                assert(utl::properties::ascending(vals_));
-                assert(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
+                assert(prop::order::ascending(vals_));
+                assert(prop::limits::always_greater_than_or_equal_to(probs_, 0.0));
 
                 std::vector<double> fracs(probs_.size() - 1);
 
