@@ -15,6 +15,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
 //  -- Graphical --
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -234,17 +237,25 @@ namespace arc //! arctk namespace
              *
              *  @param  vert_col_   Colour to draw the vertex normals.
              *
-             *  @pre    vert_col_.r must be between zero and unity.
-             *  @pre    vert_col_.g must be between zero and unity.
-             *  @pre    vert_col_.b must be between zero and unity.
-             *  @pre    vert_col_.a must be between zero and unity.
+             *  @pre    col_.r must be non-negative.
+             *  @pre    col_.r must be less than, or equal to, unity.
+             *  @pre    col_.g must be non-negative.
+             *  @pre    col_.g must be less than, or equal to, unity.
+             *  @pre    col_.b must be non-negative.
+             *  @pre    col_.b must be less than, or equal to, unity.
+             *  @pre    col_.a must be non-negative.
+             *  @pre    col_.a must be less than, or equal to, unity.y.
              */
             inline void Normal::set_vert_col(const glm::vec4& vert_col_) noexcept
             {
-                PRE((vert_col_.r >= 0.0f) && (vert_col_.r <= 1.0f));
-                PRE((vert_col_.g >= 0.0f) && (vert_col_.g <= 1.0f));
-                PRE((vert_col_.b >= 0.0f) && (vert_col_.b <= 1.0f));
-                PRE((vert_col_.a >= 0.0f) && (vert_col_.a <= 1.0f));
+                assert(col_.r >= 0.0f);
+                assert(col_.r <= 1.0f);
+                assert(col_.g >= 0.0f);
+                assert(col_.g <= 1.0f);
+                assert(col_.b >= 0.0f);
+                assert(col_.b <= 1.0f);
+                assert(col_.a >= 0.0f);
+                assert(col_.a <= 1.0f);
 
                 glUniform4fv(_vert_col, 1, &vert_col_[0]);
             }
@@ -254,17 +265,25 @@ namespace arc //! arctk namespace
              *
              *  @param  face_col_   Colour to draw the face normals.
              *
-             *  @pre    face_col_.r must be between zero and unity.
-             *  @pre    face_col_.g must be between zero and unity.
-             *  @pre    face_col_.b must be between zero and unity.
-             *  @pre    face_col_.a must be between zero and unity.
+             *  @pre    col_.r must be non-negative.
+             *  @pre    col_.r must be less than, or equal to, unity.
+             *  @pre    col_.g must be non-negative.
+             *  @pre    col_.g must be less than, or equal to, unity.
+             *  @pre    col_.b must be non-negative.
+             *  @pre    col_.b must be less than, or equal to, unity.
+             *  @pre    col_.a must be non-negative.
+             *  @pre    col_.a must be less than, or equal to, unity.
              */
             inline void Normal::set_face_col(const glm::vec4& face_col_) noexcept
             {
-                PRE((face_col_.r >= 0.0f) && (face_col_.r <= 1.0f));
-                PRE((face_col_.g >= 0.0f) && (face_col_.g <= 1.0f));
-                PRE((face_col_.b >= 0.0f) && (face_col_.b <= 1.0f));
-                PRE((face_col_.a >= 0.0f) && (face_col_.a <= 1.0f));
+                assert(col_.r >= 0.0f);
+                assert(col_.r <= 1.0f);
+                assert(col_.g >= 0.0f);
+                assert(col_.g <= 1.0f);
+                assert(col_.b >= 0.0f);
+                assert(col_.b <= 1.0f);
+                assert(col_.a >= 0.0f);
+                assert(col_.a <= 1.0f);
 
                 glUniform4fv(_face_col, 1, &face_col_[0]);
             }
@@ -278,7 +297,7 @@ namespace arc //! arctk namespace
              */
             inline void Normal::set_length(const float length_) noexcept
             {
-                PRE(length_ > 0.0f);
+                assert(length_ > 0.0f);
 
                 glUniform1f(_length, length_);
             }

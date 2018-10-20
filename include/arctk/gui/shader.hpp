@@ -268,7 +268,7 @@ namespace arc //! arctk namespace
                 std::exit(exit::error::SHADER_COMPILATION_FAILED);
             }
 
-            POST(sub_shader != 0);
+            assert(sub_shader != 0);
 
             return (sub_shader);
         }
