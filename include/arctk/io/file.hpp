@@ -16,12 +16,10 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <filesystem>
 #include <fstream>
 #include <string>
-
-//  -- Arctk --
-#include <arctk/debug.hpp>
 
 
 
@@ -57,7 +55,7 @@ namespace arc //! arctk namespace
              */
             inline std::string read(const std::string& path_) noexcept
             {
-                PRE(!path_.empty());
+                assert(!path_.empty());
 
                 std::ifstream file(path_);
 
@@ -83,7 +81,7 @@ namespace arc //! arctk namespace
              */
             inline void mkdir(const std::string& path_) noexcept
             {
-                PRE(!path_.empty());
+                assert(!path_.empty());
 
                 std::filesystem::create_directories(path_);
             }
