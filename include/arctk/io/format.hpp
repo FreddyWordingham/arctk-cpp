@@ -17,10 +17,8 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
+#include <cassert>
 #include <cstddef>
-
-//  -- Arctk --
-#include <arctk/debug.hpp>
 
 
 
@@ -74,13 +72,15 @@ namespace arc //! arctk namespace
              *  @param  frac_   Fraction of the bar to fill.
              *  @param  fill_   Character used to fill the bar.
              *
-             *  @pre    frac_ must bet between zero and unity.
+             *  @pre    frac_ must be non-negative.
+             *  @pre    frac_ must be less than, or equal to, unity.
              *
              *  @return Formatted bar string.
              */
             inline std::string bar(const unsigned int length_, const double frac_, const char fill_) noexcept
             {
-                PRE((frac_ >= 0.0) && (frac_ <= 1.0));
+                assert(frac_ >= 0.0);
+                assert(frac_ <= 1.0);
 
                 std::string bar(length_, ' ');
 
