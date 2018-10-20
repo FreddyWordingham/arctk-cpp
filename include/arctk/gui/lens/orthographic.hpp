@@ -15,11 +15,13 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
 //  -- Graphical --
 #include <glm/glm.hpp>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/gui/lens.hpp>
 
 
@@ -77,9 +79,9 @@ namespace arc //! arctk namespace
               : _min(min_)
               , _max(max_)
             {
-                PRE(min_.x < max_.x);
-                PRE(min_.y < max_.y);
-                PRE(min_.z < max_.z);
+                assert(min_.x < max_.x);
+                assert(min_.y < max_.y);
+                assert(min_.z < max_.z);
 
                 update_view();
             }
