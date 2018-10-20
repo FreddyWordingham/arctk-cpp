@@ -26,7 +26,6 @@
 #include <arctk/math.hpp>
 #include <arctk/tree/node.hpp>
 #include <arctk/tree/node/leaf.hpp>
-#include <arctk/utl.hpp>
 
 
 
@@ -287,7 +286,18 @@ namespace arc //! arctk namespace
                         {
                             std::vector<geom::shape::Box> child_boxes = _childs[i][j][k]->boxes();
 
-                            utl::manip::move_append(boxes, child_boxes);
+                            if (boxes.empty())
+                            {
+                                boxes = std::move(child_boxes);
+                            }
+                            else
+                            {
+                                boxes.reserve(boxes.size() + child_boxes.size());
+
+                                std::move(std::begin(child_boxes), std::end(child_boxes), std::back_inserter(boxes));
+
+                                child_boxes.clear();
+                            }
                         }
                     }
                 }

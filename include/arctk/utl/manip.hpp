@@ -33,8 +33,8 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Movement --
-            template <typename T>
-            inline void move_append(std::vector<T>& dest_, std::vector<T>& source_) noexcept;
+            /*            template <typename T>
+                        inline void move_append(std::vector<T>& dest_, std::vector<T>& source_) noexcept;*/
 
 
 
@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
              *
              *  @param  dest_   Vector to be appended to.
              *  @param  source_ Vector to be moved.
-             */
+             *//*
             template <typename T>
             inline void move_append(std::vector<T>& dest_, std::vector<T>& source_) noexcept
             {
@@ -63,7 +63,7 @@ namespace arc //! arctk namespace
 
                     source_.clear();
                 }
-            }
+            }*/
 
 
 
