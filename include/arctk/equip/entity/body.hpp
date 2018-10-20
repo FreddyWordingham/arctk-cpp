@@ -15,9 +15,11 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
 //  -- Arctk --
 #include <arctk/consts.hpp>
-#include <arctk/debug.hpp>
 #include <arctk/equip/entity.hpp>
 #include <arctk/phys.hpp>
 
@@ -83,10 +85,10 @@ namespace arc //! arctk namespace
               , _front_mat(front_mat_)
               , _back_mat(back_mat_)
             {
-                PRE(!serial_.empty());
-                PRE(scale_.x > 0.0);
-                PRE(scale_.y > 0.0);
-                PRE(scale_.z > 0.0);
+                assert(!serial_.empty());
+                assert(scale_.x > 0.0);
+                assert(scale_.y > 0.0);
+                assert(scale_.z > 0.0);
             }
 
 
@@ -113,11 +115,11 @@ namespace arc //! arctk namespace
              */
             inline bool Body::hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
-                PRE(rng_ != nullptr);
-                PRE(phot_ != nullptr);
-                PRE(mat_ != nullptr);
-                PRE(sop_ != nullptr);
-                PRE(cell_ != nullptr);
+                assert(rng_ != nullptr);
+                assert(phot_ != nullptr);
+                assert(mat_ != nullptr);
+                assert(sop_ != nullptr);
+                assert(cell_ != nullptr);
 
                 std::unique_ptr<arc::phys::Sop> next_sop = _front_mat.gen(*phot_);
 
@@ -160,11 +162,11 @@ namespace arc //! arctk namespace
              */
             inline bool Body::hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
-                PRE(rng_ != nullptr);
-                PRE(phot_ != nullptr);
-                PRE(mat_ != nullptr);
-                PRE(sop_ != nullptr);
-                PRE(cell_ != nullptr);
+                assert(rng_ != nullptr);
+                assert(phot_ != nullptr);
+                assert(mat_ != nullptr);
+                assert(sop_ != nullptr);
+                assert(cell_ != nullptr);
 
                 std::unique_ptr<arc::phys::Sop> next_sop = _back_mat.gen(*phot_);
 
