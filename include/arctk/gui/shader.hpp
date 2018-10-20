@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <iostream>
 #include <string>
 
@@ -25,7 +26,6 @@
 #include <glm/glm.hpp>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/exit.hpp>
 #define STB_IMAGE_IMPLEMENTATION
 #include <arctk/lib/stb_image.h>
@@ -97,8 +97,8 @@ namespace arc //! arctk namespace
         inline Shader::Shader(const std::string& vert_code_, const std::string& frag_code_) noexcept
           : _handle(init_handle(vert_code_, frag_code_))
         {
-            PRE(!vert_code_.empty());
-            PRE(!frag_code_.empty());
+            assert(!vert_code_.empty());
+            assert(!frag_code_.empty());
         }
 
         /**
@@ -115,9 +115,9 @@ namespace arc //! arctk namespace
         inline Shader::Shader(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) noexcept
           : _handle(init_handle(vert_code_, geom_code_, frag_code_))
         {
-            PRE(!vert_code_.empty());
-            PRE(!geom_code_.empty());
-            PRE(!frag_code_.empty());
+            assert(!vert_code_.empty());
+            assert(!geom_code_.empty());
+            assert(!frag_code_.empty());
         }
 
 
@@ -144,8 +144,8 @@ namespace arc //! arctk namespace
          */
         inline GLuint Shader::init_handle(const std::string& vert_code_, const std::string& frag_code_) const noexcept
         {
-            PRE(!vert_code_.empty());
-            PRE(!frag_code_.empty());
+            assert(!vert_code_.empty());
+            assert(!frag_code_.empty());
 
             const GLuint vert_shader = init_sub_shader(vert_code_, GL_VERTEX_SHADER);
             const GLuint frag_shader = init_sub_shader(frag_code_, GL_FRAGMENT_SHADER);
@@ -193,9 +193,9 @@ namespace arc //! arctk namespace
          */
         inline GLuint Shader::init_handle(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) const noexcept
         {
-            PRE(!vert_code_.empty());
-            PRE(!geom_code_.empty());
-            PRE(!frag_code_.empty());
+            (!vert_code_.empty());
+            (!geom_code_.empty());
+            (!frag_code_.empty());
 
             const GLuint vert_shader = init_sub_shader(vert_code_, GL_VERTEX_SHADER);
             const GLuint geom_shader = init_sub_shader(geom_code_, GL_GEOMETRY_SHADER);
@@ -243,7 +243,7 @@ namespace arc //! arctk namespace
          */
         inline GLuint Shader::init_sub_shader(const std::string& code_, const GLenum type_) const noexcept
         {
-            PRE(!code_.empty());
+            assert(!code_.empty());
 
             const char* code = code_.c_str();
 
@@ -284,7 +284,7 @@ namespace arc //! arctk namespace
          */
         inline GLint Shader::init_uniform(const std::string& name_) const noexcept
         {
-            PRE(!name_.empty());
+            assert(!name_.empty());
 
             GLint handle = glGetUniformLocation(_handle, name_.c_str());
 
