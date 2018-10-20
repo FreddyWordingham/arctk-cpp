@@ -16,10 +16,10 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <vector>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/math/formula.hpp>
 #include <arctk/utl.hpp>
 
@@ -86,10 +86,10 @@ namespace arc //! arctk namespace
               , _ys(ys_)
               , _grads(init_grads(xs_, ys_))
             {
-                PRE(xs_.size() > 1);
-                PRE(ys_.size() > 1);
-                PRE(xs_.size() == ys_.size());
-                PRE(utl::properties::ascending(xs_));
+                assert(xs_.size() > 1);
+                assert(ys_.size() > 1);
+                assert(xs_.size() == ys_.size());
+                assert(utl::properties::ascending(xs_));
             }
 
 
@@ -109,10 +109,10 @@ namespace arc //! arctk namespace
              */
             inline std::vector<double> Linear::init_grads(const std::vector<double>& xs_, const std::vector<double>& ys_) noexcept
             {
-                PRE(xs_.size() > 1);
-                PRE(ys_.size() > 1);
-                PRE(xs_.size() == ys_.size());
-                PRE(utl::properties::ascending(xs_));
+                assert(xs_.size() > 1);
+                assert(ys_.size() > 1);
+                assert(xs_.size() == ys_.size());
+                assert(utl::properties::ascending(xs_));
 
                 std::vector<double> grads(xs_.size() - 1);
                 for (size_t i = 0; i < grads.size(); ++i)
