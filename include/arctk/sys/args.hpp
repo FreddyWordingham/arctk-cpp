@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -24,7 +25,6 @@
 
 //  -- Arctk --
 #include <arctk/consts.hpp>
-#include <arctk/debug.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/io.hpp>
 
@@ -99,7 +99,7 @@ namespace arc //! arctk namespace
           , _call_str(call_str_)
           , _argv(init_argv(argc_, argv_))
         {
-            PRE(argc_ > 0);
+            assert(argc_ > 0);
         }
 
 
@@ -119,7 +119,7 @@ namespace arc //! arctk namespace
         template <typename... A>
         inline std::tuple<A...> Args<A...>::init_argv(const int argc_, const char** argv_) noexcept
         {
-            PRE(argc_ > 0);
+            assert(argc_ > 0);
 
             const std::vector<const char*> argv(argv_ + 1, argv_ + argc_);
 
