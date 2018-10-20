@@ -17,7 +17,6 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/utl/manip.hpp>
-#include <arctk/utl/stream.hpp>
 
 
 
