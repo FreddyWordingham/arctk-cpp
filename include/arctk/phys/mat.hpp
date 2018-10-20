@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <memory>
 
 //  -- Arctk --
@@ -90,7 +91,7 @@ namespace arc //! arctk namespace
           : _min(min_)
           , _max(max_)
         {
-            PRE(min_ <= max_);
+            assert(min_ <= max_);
         }
 
 
