@@ -15,9 +15,11 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
 //  -- Arctk --
 #include <arctk/consts.hpp>
-#include <arctk/debug.hpp>
 #include <arctk/equip/entity.hpp>
 #include <arctk/phys.hpp>
 
@@ -77,20 +79,24 @@ namespace arc //! arctk namespace
              *  @pre    scale_.x must be positive.
              *  @pre    scale_.y must be positive.
              *  @pre    scale_.z must be positive.
-             *  @pre    front_ref_ must be between zero and unity.
-             *  @pre    back_ref_ must be between zero and unity.
+             *  @pre    front_ref_ must be non-negative.
+             *  @pre    front_ref_ must be less than, or equal to, unity.
+             *  @pre    back_ref_ must be non-negative.
+             *  @pre    back_ref_ must be less than, or equal to, unity.
              */
             inline Mirror::Mirror(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const double front_ref_, const double back_ref_) noexcept
               : Entity(serial_, scale_, rot_, trans_)
               , _front_ref(front_ref_)
               , _back_ref(back_ref_)
             {
-                PRE(!serial_.empty());
-                PRE(scale_.x > 0.0);
-                PRE(scale_.y > 0.0);
-                PRE(scale_.z > 0.0);
-                PRE((front_ref_ >= 0.0) && (front_ref_ <= 1.0));
-                PRE((back_ref_ >= 0.0) && (back_ref_ <= 1.0));
+                assert(!serial_.empty());
+                assert(scale_.x > 0.0);
+                assert(scale_.y > 0.0);
+                assert(scale_.z > 0.0);
+                assert(front_ref_ >= 0.0);
+                assert(front_ref_ <= 1.0));
+                assert(back_ref_ >= 0.0);
+                assert(back_ref_ <= 1.0));
             }
 
 
@@ -115,10 +121,10 @@ namespace arc //! arctk namespace
              */
             inline bool Mirror::hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** /*unused*/, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
-                PRE(rng_ != nullptr);
-                PRE(phot_ != nullptr);
-                PRE(sop_ != nullptr);
-                PRE(cell_ != nullptr);
+                assert(rng_ != nullptr);
+                assert(phot_ != nullptr);
+                assert(sop_ != nullptr);
+                assert(cell_ != nullptr);
 
                 if (rng_->gen() <= _front_ref)
                 {
@@ -151,10 +157,10 @@ namespace arc //! arctk namespace
              */
             inline bool Mirror::hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** /*unused*/, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
-                PRE(rng_ != nullptr);
-                PRE(phot_ != nullptr);
-                PRE(sop_ != nullptr);
-                PRE(cell_ != nullptr);
+                assert(rng_ != nullptr);
+                assert(phot_ != nullptr);
+                assert(sop_ != nullptr);
+                assert(cell_ != nullptr);
 
                 if (rng_->gen() <= _back_ref)
                 {
