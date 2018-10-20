@@ -18,6 +18,7 @@
 //  -- Std --
 #include <cassert>
 #include <optional>
+#include <sstream>
 #include <utility>
 #include <vector>
 
