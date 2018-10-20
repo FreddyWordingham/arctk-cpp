@@ -193,9 +193,9 @@ namespace arc //! arctk namespace
          */
         inline GLuint Shader::init_handle(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) const noexcept
         {
-            (!vert_code_.empty());
-            (!geom_code_.empty());
-            (!frag_code_.empty());
+            assert(!vert_code_.empty());
+            assert(!geom_code_.empty());
+            assert(!frag_code_.empty());
 
             const GLuint vert_shader = init_sub_shader(vert_code_, GL_VERTEX_SHADER);
             const GLuint geom_shader = init_sub_shader(geom_code_, GL_GEOMETRY_SHADER);
