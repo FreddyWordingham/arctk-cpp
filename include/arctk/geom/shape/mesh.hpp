@@ -664,7 +664,7 @@ namespace arc //! arctk namespace
 
                     for (size_t j = 0; j < 3; ++j)
                     {
-                        if (!utl::properties::contains(edges, edge_indices[j]))
+                        if (!prop::contents::contains(edges, edge_indices[j]))
                         {
                             edges.emplace_back(edge_indices[j]);
                         }
@@ -787,7 +787,7 @@ namespace arc //! arctk namespace
             {
                 assert(rng_ != nullptr);
 
-                return (_tris[utl::search::lower(_areas, rng_->gen())].random_pos(rng_));
+                return (_tris[search::index::lower(_areas, rng_->gen())].random_pos(rng_));
             }
 
             /**
@@ -803,7 +803,7 @@ namespace arc //! arctk namespace
             {
                 assert(rng_ != nullptr);
 
-                return (_tris[utl::search::lower(_areas, rng_->gen())].random_pos_and_norm(rng_));
+                return (_tris[search::index::lower(_areas, rng_->gen())].random_pos_and_norm(rng_));
             }
 
 
