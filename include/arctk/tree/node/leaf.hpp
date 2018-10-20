@@ -16,11 +16,11 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <utility>
 #include <vector>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/equip.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
@@ -87,22 +87,23 @@ namespace arc //! arctk namespace
              *  @pre    min_.x must be less than, or equal to, max_.x.
              *  @pre    min_.y must be less than, or equal to, max_.y.
              *  @pre    min_.z must be less than, or equal to, max_.z.
+             *  @pre    ent_tris_.second values may not be empty.
              *  @pre    Each triangle within ent_tris_ must intersec this node.
              */
             inline Leaf::Leaf(const vec3& min_, const vec3& max_, const std::vector<std::pair<equip::Entity*, std::vector<const geom::shape::Triangle*>>>& ent_tris_, const size_t cur_depth_) noexcept
               : Node(min_, max_, cur_depth_)
               , _ent_tris(ent_tris_)
             {
-                PRE(min_.x <= max_.x);
-                PRE(min_.y <= max_.y);
-                PRE(min_.z <= max_.z);
+                assert(min_.x <= max_.x);
+                assert(min_.y <= max_.y);
+                assert(min_.z <= max_.z);
                 for (size_t i = 0; i < ent_tris_.size(); ++i)
                 {
-                    PRE(!ent_tris_[i].second.empty());
+                    assert(!ent_tris_[i].second.empty());
 
                     for (size_t j = 0; j < ent_tris_[i].second.size(); ++j)
                     {
-                        PRE(intersect(*ent_tris_[i].second[j]));
+                        assert(intersect(*ent_tris_[i].second[j]));
                     }
                 }
             }
@@ -170,7 +171,7 @@ namespace arc //! arctk namespace
              */
             inline const node::Leaf* Leaf::leaf(const vec3& pos_) const noexcept
             {
-                PRE(intersect(pos_));
+                assert(intersect(pos_));
 
                 return (this);
             }
@@ -189,7 +190,7 @@ namespace arc //! arctk namespace
              */
             inline std::optional<std::pair<equip::Entity*, double>> Leaf::ent_collision(const vec3& pos_, const vec3& dir_) const noexcept // NOLINT
             {
-                PRE(dir_.normalised());
+                assert(dir_.normalised());
 
                 std::optional<std::pair<equip::Entity*, double>> coll(std::nullopt);
 
@@ -221,7 +222,7 @@ namespace arc //! arctk namespace
              */
             inline std::optional<std::pair<equip::Entity*, geom::Collision>> Leaf::ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept
             {
-                PRE(dir_.normalised());
+                assert(dir_.normalised());
 
                 std::optional<std::pair<equip::Entity*, geom::Collision>> coll(std::nullopt);
 
