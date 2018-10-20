@@ -50,7 +50,6 @@
 #include <arctk/gui/shader/diffuse.hpp>
 #include <arctk/gui/shader/normal.hpp>
 #include <arctk/gui/shader/ray.hpp>
-#include <arctk/gui/shader/skybox.hpp>
 #include <arctk/gui/shader/specular.hpp>
 #include <arctk/gui/window.hpp>
 #include <arctk/index.hpp>
