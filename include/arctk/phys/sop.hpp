@@ -15,6 +15,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
 //  -- Arctk --
 #include <arctk/phys/cell.hpp>
 
@@ -90,7 +93,7 @@ namespace arc //! arctk namespace
         inline Sop::Sop(const double ref_index_) noexcept
           : _ref_index(ref_index_)
         {
-            PRE(ref_index_ >= 1.0);
+            assert(ref_index_ >= 1.0);
         }
 
 
