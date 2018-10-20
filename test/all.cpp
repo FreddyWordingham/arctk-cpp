@@ -63,7 +63,6 @@
 #include <arctk/io/format.hpp>
 #include <arctk/io/input.hpp>
 #include <arctk/io/output.hpp>
-#include <arctk/lib/nlohmann.hpp>
 #include <arctk/macro.hpp>
 #include <arctk/macro/utility.hpp>
 #include <arctk/math.hpp>
