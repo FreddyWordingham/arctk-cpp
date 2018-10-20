@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/utl/tag.hpp
+ *  @file   arctk/type/tag.hpp
  *  @date   23/09/2018
  *  @author Freddy Wordingham
  *
@@ -9,15 +9,15 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_UTL_TAG_HPP
-#define ARCTK_UTL_TAG_HPP
+#ifndef ARCTK_TYPE_TAG_HPP
+#define ARCTK_TYPE_TAG_HPP
 
 
 
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace utl //! utility namespace
+    namespace type //! typing namespace
     {
 
 
@@ -31,10 +31,10 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace utl
+    } // namespace type
 } // namespace arc
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_UTL_TAG_HPP
+#endif // ARCTK_TYPE_TAG_HPP
