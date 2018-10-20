@@ -94,9 +94,9 @@ namespace arc //! arctk namespace
                 assert(scale_.y > 0.0);
                 assert(scale_.z > 0.0);
                 assert(front_ref_ >= 0.0);
-                assert(front_ref_ <= 1.0));
+                assert(front_ref_ <= 1.0);
                 assert(back_ref_ >= 0.0);
-                assert(back_ref_ <= 1.0));
+                assert(back_ref_ <= 1.0);
             }
 
 
