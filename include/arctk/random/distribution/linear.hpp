@@ -23,6 +23,7 @@
 #include <arctk/prop/limits.hpp>
 #include <arctk/prop/order.hpp>
 #include <arctk/random/distribution.hpp>
+#include <arctk/search/index.hpp>
 
 
 
@@ -256,7 +257,7 @@ namespace arc //! arctk namespace
             {
                 assert(rng_ != nullptr);
 
-                const size_t index = utl::search::lower(_cdfs, rng_->gen());
+                const size_t index = search::index::lower(_cdfs, rng_->gen());
 
                 const double xi = rng_->gen();
                 if (xi <= _fracs[index])
