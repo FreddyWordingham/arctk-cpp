@@ -95,7 +95,8 @@ namespace arc //! arctk namespace
              *
              *  @param  val_    Domain value of the function.
              *
-             *
+             *  @pre    val_ must be less than, or equal to, min.
+             *  @pre    val_ must be greater than, or equal to, max.
              *
              *  @return Result of the func for the given value.
              */
