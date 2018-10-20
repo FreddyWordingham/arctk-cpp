@@ -20,8 +20,9 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/prop/limits.hpp>
+#include <arctk/prop/order.hpp>
 #include <arctk/random/distribution.hpp>
-#include <arctk/utl.hpp>
 
 
 
@@ -98,8 +99,8 @@ namespace arc //! arctk namespace
                 assert(vals_.size() >= 2);
                 assert(!probs_.empty());
                 assert(vals_.size() == (probs_.size() + 1));
-                assert(utl::properties::ascending(vals_));
-                assert(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
+                assert(prop::order::ascending(vals_));
+                assert(prop::limits::always_greater_than_or_equal_to(probs_, 0.0));
             }
 
 
@@ -126,8 +127,8 @@ namespace arc //! arctk namespace
                 assert(vals_.size() >= 2);
                 assert(!probs_.empty());
                 assert(vals_.size() == (probs_.size() + 1));
-                assert(utl::properties::ascending(vals_));
-                assert(utl::properties::always_greater_than_or_equal_to(probs_, 0.0));
+                assert(prop::order::ascending(vals_));
+                assert(prop::limits::always_greater_than_or_equal_to(probs_, 0.0));
 
                 std::vector<double> cdfs(probs_.size() + 1);
 
