@@ -495,8 +495,8 @@ namespace arc //! arctk namespace
 
                     for (size_t j = 0; j < 3; ++j)
                     {
-                        PRE(pos_indices[j] < poss_.size());
-                        PRE(norm_indices[j] < norms_.size());
+                        assert(pos_indices[j] < poss_.size());
+                        assert(norm_indices[j] < norms_.size());
                     }
 
                     tris.emplace_back(std::array<vec3, 3>({{poss_[pos_indices[index::dim::cartesian::X]], poss_[pos_indices[index::dim::cartesian::Y]], poss_[pos_indices[index::dim::cartesian::Z]]}}),
