@@ -20,8 +20,6 @@
 #include <arctk/utl/properties.hpp>
 #include <arctk/utl/search.hpp>
 #include <arctk/utl/stream.hpp>
-#include <arctk/utl/tag.hpp>
-#include <arctk/utl/type.hpp>
 
 
 
