@@ -677,7 +677,7 @@ namespace arc //! arctk namespace
             y *= m;
             z *= m;
 
-            POST(normalised());
+            assert(normalised());
         }
 
         /**
