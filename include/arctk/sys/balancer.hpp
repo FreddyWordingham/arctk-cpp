@@ -216,7 +216,7 @@ namespace arc //! arctk namespace
             const double   frac         = static_cast<double>(total_) / static_cast<double>(_target);
             const long int elapsed_time = static_cast<long int>(std::chrono::duration<double>(std::chrono::steady_clock::now() - _start_time).count());
 
-            std::cout << term::ansi::CLEAR << '[' << io::format::bar(78, frac) << "]\n\n"
+            std::cout << consts::ansi::CLEAR << '[' << io::format::bar(78, frac) << "]\n\n"
                       << "Percent complete : " << (frac * 100.0) << "%\n"
                       << "Current/target   : " << total_ << "/" << _target << '\n'
                       << "Ave rate (/s)    : " << (static_cast<double>(total_) / static_cast<double>(elapsed_time)) << '\n'
@@ -240,17 +240,17 @@ namespace arc //! arctk namespace
 
                 if (winner > 0.9)
                 {
-                    std::cout << term::ansi::FG_GREEN;
+                    std::cout << consts::ansi::FG_GREEN;
                 }
                 else if (winner > 0.75)
                 {
-                    std::cout << term::ansi::FG_YELLOW;
+                    std::cout << consts::ansi::FG_YELLOW;
                 }
                 else
                 {
-                    std::cout << term::ansi::FG_RED;
+                    std::cout << consts::ansi::FG_RED;
                 }
-                std::cout << io::format::bar(10, winner) << term::ansi::RESET << "]";
+                std::cout << io::format::bar(10, winner) << consts::ansi::RESET << "]";
             }
             std::cout << '\n';
         }
