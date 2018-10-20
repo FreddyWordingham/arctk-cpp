@@ -16,10 +16,10 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <vector>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/math/formula.hpp>
 #include <arctk/utl.hpp>
 
@@ -80,10 +80,10 @@ namespace arc //! arctk namespace
               , _xs(xs_)
               , _ys(ys_)
             {
-                PRE(xs_.size() > 1);
-                PRE(ys_.size() > 1);
-                PRE(xs_.size() == ys_.size());
-                PRE(utl::properties::ascending(xs_));
+                assert(xs_.size() > 1);
+                assert(ys_.size() > 1);
+                assert(xs_.size() == ys_.size());
+                assert(utl::properties::ascending(xs_));
             }
 
 
@@ -95,11 +95,14 @@ namespace arc //! arctk namespace
              *
              *  @param  val_    Domain value of the function.
              *
+             *
+             *
              *  @return Result of the func for the given value.
              */
             inline double Constant::operator()(const double val_) const noexcept
             {
-                PRE((val_ >= _min) && (val_ <= _max));
+                assert(val_ >= _min);
+                assert(val_ <= _max);
 
                 const size_t index = utl::search::lower(_xs, val_);
 
