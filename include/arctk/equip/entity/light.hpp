@@ -16,12 +16,12 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <memory>
 #include <tuple>
 
 //  -- Arctk --
 #include <arctk/consts.hpp>
-#include <arctk/debug.hpp>
 #include <arctk/equip/entity.hpp>
 #include <arctk/phys.hpp>
 
@@ -103,11 +103,11 @@ namespace arc //! arctk namespace
               , _kill(kill_)
               , _power(power_)
             {
-                PRE(!serial_.empty());
-                PRE(scale_.x > 0.0);
-                PRE(scale_.y > 0.0);
-                PRE(scale_.z > 0.0);
-                PRE(power_ > 0.0);
+                assert(!serial_.empty());
+                assert(scale_.x > 0.0);
+                assert(scale_.y > 0.0);
+                assert(scale_.z > 0.0);
+                assert(power_ > 0.0);
             }
 
 
@@ -142,9 +142,9 @@ namespace arc //! arctk namespace
              */
             inline bool Light::hit_front(random::Generator* /*unused*/, phys::Photon* phot_, const phys::Mat** /*unused*/, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
-                PRE(phot_ != nullptr);
-                PRE(sop_ != nullptr);
-                PRE(cell_ != nullptr);
+                assert(phot_ != nullptr);
+                assert(sop_ != nullptr);
+                assert(cell_ != nullptr);
 
                 phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index(), cell_);
 
@@ -167,9 +167,9 @@ namespace arc //! arctk namespace
              */
             inline bool Light::hit_back(random::Generator* /*unused*/, phys::Photon* phot_, const phys::Mat** /*unused*/, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
-                PRE(phot_ != nullptr);
-                PRE(sop_ != nullptr);
-                PRE(cell_ != nullptr);
+                assert(phot_ != nullptr);
+                assert(sop_ != nullptr);
+                assert(cell_ != nullptr);
 
                 phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index(), cell_);
 
