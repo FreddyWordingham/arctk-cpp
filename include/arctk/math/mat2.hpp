@@ -16,12 +16,12 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <iomanip>
 #include <ostream>
 
 //  -- Arctk --
 #include <arctk/consts.hpp>
-#include <arctk/debug.hpp>
 #include <arctk/math/mat.hpp>
 #include <arctk/math/vec2.hpp>
 
@@ -500,7 +500,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline Vec<T, 2>& Mat<T, 2>::operator[](const size_t index_) noexcept
         {
-            PRE(index_ < 2);
+            assert(index_ < 2);
 
             return ((&x)[index_]);
         }
@@ -517,7 +517,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline const Vec<T, 2>& Mat<T, 2>::operator[](const size_t index_) const noexcept
         {
-            PRE(index_ < 2);
+            assert(index_ < 2);
 
             return ((&x)[index_]);
         }
