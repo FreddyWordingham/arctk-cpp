@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <iostream>
 
 //  -- Graphical --
@@ -24,7 +25,6 @@
 #include <glm/glm.hpp>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/gui/actor.hpp>
 #include <arctk/gui/camera.hpp>
@@ -108,10 +108,10 @@ namespace arc //! arctk namespace
         inline Window::Window(const std::string& title_, const int width_, const int height_, const int aa_samples_) noexcept
           : _handle(init_handle(title_, width_, height_, aa_samples_))
         {
-            PRE(!title_.empty());
-            PRE(width_ > 0);
-            PRE(height_ > 0);
-            PRE(aa_samples_ > 0);
+            assert(!title_.empty());
+            assert(width_ > 0);
+            assert(height_ > 0);
+            assert(aa_samples_ > 0);
         }
 
 
@@ -144,10 +144,10 @@ namespace arc //! arctk namespace
          */
         inline GLFWwindow* Window::init_handle(const std::string& title_, const int width_, const int height_, const int aa_samples_) noexcept
         {
-            PRE(!title_.empty());
-            PRE(width_ > 0);
-            PRE(height_ > 0);
-            PRE(aa_samples_ > 0);
+            assert(!title_.empty());
+            assert(width_ > 0);
+            assert(height_ > 0);
+            assert(aa_samples_ > 0);
 
             if (glfwInit() == 0)
             {
@@ -216,15 +216,21 @@ namespace arc //! arctk namespace
          *
          *  @param  col_    Colour used to clear the window.
          *
-         *  @pre    col_.r must be between zero and unity.
-         *  @pre    col_.g must be between zero and unity.
-         *  @pre    col_.b must be between zero and unity.
+         *  @pre    col_.r must be non-negative.
+         *  @pre    col_.r must be less than, or equal to, unity.
+         *  @pre    col_.g must be non-negative.
+         *  @pre    col_.g must be less than, or equal to, unity.
+         *  @pre    col_.b must be non-negative.
+         *  @pre    col_.b must be less than, or equal to, unity.
          */
         inline void Window::set_clear_col(const glm::vec3& col_) noexcept
         {
-            PRE((col_.r >= 0.0f) && (col_.r <= 1.0f));
-            PRE((col_.g >= 0.0f) && (col_.g <= 1.0f));
-            PRE((col_.b >= 0.0f) && (col_.b <= 1.0f));
+            assert(col_.r >= 0.0f);
+            assert(col_.r <= 1.0f);
+            assert(col_.g >= 0.0f);
+            assert(col_.g <= 1.0f);
+            assert(col_.b >= 0.0f);
+            assert(col_.b <= 1.0f);
 
             glClearColor(col_.r, col_.g, col_.b, 1.0f);
         }
@@ -234,17 +240,26 @@ namespace arc //! arctk namespace
          *
          *  @param  col_    Colour used to clear the window.
          *
-         *  @pre    col_.r must be between zero and unity.
-         *  @pre    col_.g must be between zero and unity.
-         *  @pre    col_.b must be between zero and unity.
-         *  @pre    col_.a must be between zero and unity.
+         *  @pre    col_.r must be non-negative.
+         *  @pre    col_.r must be less than, or equal to, unity.
+         *  @pre    col_.g must be non-negative.
+         *  @pre    col_.g must be less than, or equal to, unity.
+         *  @pre    col_.b must be non-negative.
+         *  @pre    col_.b must be less than, or equal to, unity.
+         *  @pre    col_.a must be non-negative.
+         *  @pre    col_.a must be less than, or equal to, unity.
          */
         inline void Window::set_clear_col(const glm::vec4& col_) noexcept
         {
-            PRE((col_.r >= 0.0f) && (col_.r <= 1.0f));
-            PRE((col_.g >= 0.0f) && (col_.g <= 1.0f));
-            PRE((col_.b >= 0.0f) && (col_.b <= 1.0f));
-            PRE((col_.a >= 0.0f) && (col_.a <= 1.0f));
+            assert(col_.r >= 0.0f);
+            assert(col_.r <= 1.0f);
+            assert(col_.g >= 0.0f);
+            assert(col_.g <= 1.0f);
+            assert(col_.b >= 0.0f);
+            assert(col_.b <= 1.0f);
+            assert(col_.a >= 0.0f);
+            assert(col_.a <= 1.0f);
+
 
             glClearColor(col_.r, col_.g, col_.b, col_.a);
         }
