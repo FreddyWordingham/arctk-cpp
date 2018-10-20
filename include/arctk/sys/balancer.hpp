@@ -23,9 +23,9 @@
 #include <thread>
 
 //  -- Arctk --
+#include <arctk/consts/ansi.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/io.hpp>
-#include <arctk/term.hpp>
 
 
 
