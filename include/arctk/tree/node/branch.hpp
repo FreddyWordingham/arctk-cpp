@@ -17,10 +17,10 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
+#include <cassert>
 #include <memory>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/equip.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
@@ -102,10 +102,10 @@ namespace arc //! arctk namespace
               , _centre((min_ + max_) / 2.0)
               , _childs(init_childs(min_, max_, ent_tris_, cur_depth_, max_depth_, tar_tris_))
             {
-                PRE(min_.x <= max_.x);
-                PRE(min_.y <= max_.y);
-                PRE(min_.z <= max_.z);
-                PRE(cur_depth_ < max_depth_);
+                assert(min_.x <= max_.x);
+                assert(min_.y <= max_.y);
+                assert(min_.z <= max_.z);
+                assert(cur_depth_ < max_depth_);
             }
 
 
@@ -130,6 +130,11 @@ namespace arc //! arctk namespace
             inline std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> Branch::init_childs(const vec3& min_, const vec3& max_, const std::vector<std::pair<equip::Entity*, std::vector<const geom::shape::Triangle*>>>& ent_tris_, // NOLINT
                                                                                                           const size_t cur_depth_, const size_t max_depth_, const size_t tar_tris_) const noexcept
             {
+                assert(min_.x <= max_.x);
+                assert(min_.y <= max_.y);
+                assert(min_.z <= max_.z);
+                assert(cur_depth_ < max_depth_);
+
                 std::array<std::array<std::array<std::unique_ptr<Node>, 2>, 2>, 2> childs;
 
                 const vec3 size                = (max_ - min_) / 2.0;
@@ -304,7 +309,11 @@ namespace arc //! arctk namespace
              */
             inline const node::Leaf* Branch::leaf(const vec3& pos_) const noexcept
             {
-                PRE(intersect(pos_));
+                assert(min_.x <= max_.x);
+                assert(min_.y <= max_.y);
+                assert(min_.z <= max_.z);
+                assert(cur_depth_ < max_depth_);
+                (intersect(pos_));
 
                 return (_childs[(pos_.x < _centre.x) ? 0 : 1][(pos_.y < _centre.y) ? 0 : 1][(pos_.z < _centre.z) ? 0 : 1]->leaf(pos_));
             }
