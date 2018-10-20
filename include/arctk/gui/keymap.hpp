@@ -90,7 +90,7 @@ namespace arc //! arctk namespace
          */
         inline void Keymap::bind(const int key_, const std::function<void()>& func_, const bool sticky_, const int state_) noexcept // NOLINT
         {
-            PRE(key_ != QUIT_KEY);
+            assert(key_ != QUIT_KEY);
 
             _map.emplace(std::make_pair(key_, Keybind(func_, sticky_, state_)));
         }
@@ -105,8 +105,8 @@ namespace arc //! arctk namespace
          */
         inline void Keymap::unbind(const int key_) noexcept
         {
-            PRE(key_ != QUIT_KEY);
-            PRE(_map.find(key_) != _map.end());
+            assert(key_ != QUIT_KEY);
+            assert(_map.find(key_) != _map.end());
 
             _map.erase(key_);
         }
@@ -120,7 +120,7 @@ namespace arc //! arctk namespace
          */
         inline void Keymap::use_fly_controls(Camera* const cam_) noexcept // NOLINT
         {
-            PRE(cam_ != nullptr);
+            assert(cam_ != nullptr);
 
             bind(GLFW_KEY_LEFT_SHIFT, [cam_]() { cam_->accelerate(0.01f); }, true);
             bind(GLFW_KEY_LEFT_CONTROL, [cam_]() { cam_->accelerate(-0.01f); }, true);
@@ -149,7 +149,7 @@ namespace arc //! arctk namespace
          */
         inline void Keymap::use_orbit_controls(Camera* const cam_) noexcept // NOLINT
         {
-            PRE(cam_ != nullptr);
+            assert(cam_ != nullptr);
 
             bind(GLFW_KEY_LEFT_SHIFT, [cam_]() { cam_->accelerate(0.01f); }, true);
             bind(GLFW_KEY_LEFT_CONTROL, [cam_]() { cam_->accelerate(-0.01f); }, true);
