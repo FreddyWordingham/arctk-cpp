@@ -276,14 +276,14 @@ namespace arc //! arctk namespace
              */
             inline void Normal::set_face_col(const glm::vec4& face_col_) noexcept
             {
-                assert(vert_col_.r >= 0.0f);
-                assert(vert_col_.r <= 1.0f);
-                assert(vert_col_.g >= 0.0f);
-                assert(vert_col_.g <= 1.0f);
-                assert(vert_col_.b >= 0.0f);
-                assert(vert_col_.b <= 1.0f);
-                assert(vert_col_.a >= 0.0f);
-                assert(vert_col_.a <= 1.0f);
+                assert(face_col_.r >= 0.0f);
+                assert(face_col_.r <= 1.0f);
+                assert(face_col_.g >= 0.0f);
+                assert(face_col_.g <= 1.0f);
+                assert(face_col_.b >= 0.0f);
+                assert(face_col_.b <= 1.0f);
+                assert(face_col_.a >= 0.0f);
+                assert(face_col_.a <= 1.0f);
 
                 glUniform4fv(_face_col, 1, &face_col_[0]);
             }
