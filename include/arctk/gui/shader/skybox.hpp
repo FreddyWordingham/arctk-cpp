@@ -15,6 +15,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
 //  -- Graphical --
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -158,7 +161,7 @@ namespace arc //! arctk namespace
             {
                 for (size_t i = 0; i < images_.size(); ++i)
                 {
-                    PRE(!images_[i].empty());
+                    assert(!images_[i].empty());
                 }
 
                 _cube.rotate(glm::vec3(static_cast<float>(consts::math::HALF_PI), 0.0f, 0.0f));
