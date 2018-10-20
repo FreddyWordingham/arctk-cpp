@@ -15,8 +15,10 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
 #include <arctk/phys.hpp>
@@ -93,10 +95,10 @@ namespace arc //! arctk namespace
         inline Entity::Entity(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
           : Mesh(serial_, scale_, rot_, trans_)
         {
-            PRE(!serial_.empty());
-            PRE(scale_.x > 0.0);
-            PRE(scale_.y > 0.0);
-            PRE(scale_.z > 0.0);
+            assert(!serial_.empty());
+            assert(scale_.x > 0.0);
+            assert(scale_.y > 0.0);
+            assert(scale_.z > 0.0);
         }
 
 
@@ -130,11 +132,11 @@ namespace arc //! arctk namespace
          */
         inline bool Entity::hit(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
         {
-            PRE(rng_ != nullptr);
-            PRE(phot_ != nullptr);
-            PRE(mat_ != nullptr);
-            PRE(sop_ != nullptr);
-            PRE(cell_ != nullptr);
+            assert(rng_ != nullptr);
+            assert(phot_ != nullptr);
+            assert(mat_ != nullptr);
+            assert(sop_ != nullptr);
+            assert(cell_ != nullptr);
 
             if (coll_.front())
             {
