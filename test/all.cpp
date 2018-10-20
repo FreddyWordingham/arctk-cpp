@@ -15,6 +15,7 @@
 #include <arctk/config/build.hpp>
 #include <arctk/config/version.hpp>
 #include <arctk/consts.hpp>
+#include <arctk/consts/ansi.hpp>
 #include <arctk/consts/format.hpp>
 #include <arctk/consts/math.hpp>
 #include <arctk/consts/num.hpp>
@@ -102,7 +103,6 @@
 #include <arctk/sys.hpp>
 #include <arctk/sys/args.hpp>
 #include <arctk/sys/balancer.hpp>
-#include <arctk/term/ansi.hpp>
 #include <arctk/tree.hpp>
 #include <arctk/tree/node.hpp>
 #include <arctk/tree/node/branch.hpp>
