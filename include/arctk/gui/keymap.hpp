@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <map>
 
 //  -- Graphical --
@@ -23,7 +24,6 @@
 #include <GLFW/glfw3.h>
 
 //  -- Arctk --
-#include <arctk/debug.hpp>
 #include <arctk/gui/camera.hpp>
 #include <arctk/gui/keybind.hpp>
 #include <arctk/gui/window.hpp>
