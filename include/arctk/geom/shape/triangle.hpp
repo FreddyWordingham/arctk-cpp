@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
+#include <cassert>
 #include <optional>
 
 //  -- Arctk --
@@ -91,7 +92,9 @@ namespace arc //! arctk namespace
              *  @param  poss_   Positions of the vertices.
              *  @param  norms_  Normals of the vertices.
              *
-             *  @pre    norms_ vecs must be normalised.
+             *  @pre    norms_[index::vertex::ALPHA] must be normalised.
+             *  @pre    norms_[index::vertex::BETA] must be normalised.
+             *  @pre    norms_[index::vertex::GAMMA] must be normalised.
              *
              *  @post   _plane_norm must be normalised.
              */
@@ -100,11 +103,11 @@ namespace arc //! arctk namespace
               , _norms(norms_)
               , _plane_norm(((poss_[index::vertex::BETA] - poss_[index::vertex::ALPHA]) ^ (poss_[index::vertex::GAMMA] - poss_[index::vertex::ALPHA])).normal())
             {
-                PRE(norms_[index::vertex::ALPHA].normalised());
-                PRE(norms_[index::vertex::BETA].normalised());
-                PRE(norms_[index::vertex::GAMMA].normalised());
+                assert(norms_[index::vertex::ALPHA].normalised());
+                assert(norms_[index::vertex::BETA].normalised());
+                assert(norms_[index::vertex::GAMMA].normalised());
 
-                POST(_plane_norm.normalised());
+                assert(_plane_norm.normalised());
             }
 
 
@@ -164,7 +167,7 @@ namespace arc //! arctk namespace
              */
             inline vec3 Triangle::random_pos(random::Generator* rng_) const noexcept
             {
-                PRE(rng_ != nullptr);
+                assert(rng_ != nullptr);
 
                 double a = rng_->gen();
                 double b = rng_->gen();
@@ -185,11 +188,13 @@ namespace arc //! arctk namespace
              *
              *  @pre    rng_ may not be nullptr.
              *
+             *  @post   norm must be normalised.
+             *
              *  @return Random position, and corresponding normal, on the surface of the triangle.
              */
             inline std::pair<vec3, vec3> Triangle::random_pos_and_norm(random::Generator* rng_) const noexcept
             {
-                PRE(rng_ != nullptr);
+                assert(rng_ != nullptr);
 
                 double a = rng_->gen();
                 double b = rng_->gen();
@@ -203,7 +208,7 @@ namespace arc //! arctk namespace
                 const vec3 pos  = _poss[index::vertex::GAMMA] + ((_poss[index::vertex::ALPHA] - _poss[index::vertex::GAMMA]) * a) + ((_poss[index::vertex::BETA] - _poss[index::vertex::GAMMA]) * b);
                 const vec3 norm = ((_norms[index::vertex::ALPHA] * a) + (_norms[index::vertex::BETA] * b) + (_norms[index::vertex::GAMMA] * (1.0 - a - b))).normal();
 
-                POST(norm.normalised());
+                assert(norm.normalised());
 
                 return (std::pair<vec3, vec3>(pos, norm));
             }
@@ -235,11 +240,13 @@ namespace arc //! arctk namespace
              *  @param  pos_    Initial position of the ray.
              *  @param  dir_    Direction of ray travel.
              *
+             *  @pre    dir_ must be normalised.
+             *
              *  @return Optional distance to collision event.
              */
             inline std::optional<double> Triangle::collision(const vec3& pos_, const vec3& dir_) const noexcept
             {
-                PRE(dir_.normalised());
+                assert(dir_.normalised());
 
                 const vec3 edge_ab = _poss[index::vertex::BETA] - _poss[index::vertex::ALPHA];
                 const vec3 edge_ac = _poss[index::vertex::GAMMA] - _poss[index::vertex::ALPHA];
@@ -284,11 +291,13 @@ namespace arc //! arctk namespace
              *  @param  pos_    Initial position of the ray.
              *  @param  dir_    Direction of ray travel.
              *
+             *  @pre    dir_ must be normalised.
+             *
              *  @return Optional information to collision event.
              */
             inline std::optional<Collision> Triangle::collision_info(const vec3& pos_, const vec3& dir_) const noexcept
             {
-                PRE(dir_.normalised());
+                assert(dir_.normalised());
 
                 const vec3 edge_ab = _poss[index::vertex::BETA] - _poss[index::vertex::ALPHA];
                 const vec3 edge_ac = _poss[index::vertex::GAMMA] - _poss[index::vertex::ALPHA];
