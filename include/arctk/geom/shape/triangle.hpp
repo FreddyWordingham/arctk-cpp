@@ -24,7 +24,6 @@
 #include <arctk/geom/collision.hpp>
 #include <arctk/geom/shape.hpp>
 #include <arctk/index.hpp>
-#include <arctk/lib/tri_collision.h>
 #include <arctk/math.hpp>
 #include <arctk/random.hpp>
 
@@ -73,9 +72,6 @@ namespace arc //! arctk namespace
                 //  -- Sampling --
                 inline vec3                  random_pos(random::Generator* rng_) const noexcept;
                 inline std::pair<vec3, vec3> random_pos_and_norm(random::Generator* rng_) const noexcept;
-
-                //  -- Intersection --
-                inline bool intersect(const Triangle& tri_) const noexcept;
 
                 //  -- Collision --
                 inline std::optional<double>    collision(const vec3& pos_, const vec3& dir_) const noexcept override;
@@ -211,25 +207,6 @@ namespace arc //! arctk namespace
                 assert(norm.normalised());
 
                 return (std::pair<vec3, vec3>(pos, norm));
-            }
-
-
-            //  -- Intersection --
-            /**
-             *  Determine if an intersection ocurres between the triangle and another triangle.
-             *
-             *  @param  tri_    Triangle to test.
-             *
-             *  @return True if an intersection ocurres.
-             */
-            inline bool Triangle::intersect(const Triangle& tri_) const noexcept
-            {
-                return (static_cast<bool>(collision::tri_tri_overlap_test_3d(std::array<double, 3>({{_poss[index::vertex::ALPHA].x, _poss[index::vertex::ALPHA].y, _poss[index::vertex::ALPHA].z}}).data(),
-                                                                             std::array<double, 3>({{_poss[index::vertex::BETA].x, _poss[index::vertex::BETA].y, _poss[index::vertex::BETA].z}}).data(),
-                                                                             std::array<double, 3>({{_poss[index::vertex::GAMMA].x, _poss[index::vertex::GAMMA].y, _poss[index::vertex::GAMMA].z}}).data(),
-                                                                             std::array<double, 3>({{tri_._poss[index::vertex::ALPHA].x, tri_._poss[index::vertex::ALPHA].y, tri_._poss[index::vertex::ALPHA].z}}).data(),
-                                                                             std::array<double, 3>({{tri_._poss[index::vertex::BETA].x, tri_._poss[index::vertex::BETA].y, tri_._poss[index::vertex::BETA].z}}).data(),
-                                                                             std::array<double, 3>({{tri_._poss[index::vertex::GAMMA].x, tri_._poss[index::vertex::GAMMA].y, tri_._poss[index::vertex::GAMMA].z}}).data())));
             }
 
 
