@@ -69,7 +69,6 @@ namespace arc //! arctk namespace
             inline GLuint init_handle(const std::string& vert_code_, const std::string& geom_code_, const std::string& frag_code_) const noexcept;
             inline GLuint init_sub_shader(const std::string& code_, GLenum type_) const noexcept;
             inline GLint  init_uniform(const std::string& name_) const noexcept;
-            inline GLuint init_cubemap(const std::array<std::string, 6>& images_) const noexcept;
 
 
             //  == OPERATORS ==
@@ -295,47 +294,6 @@ namespace arc //! arctk namespace
             }
 
             return (handle);
-        }
-
-        /**
-         *  Initialise a cubemap texture.
-         *
-         *  @param  images_ Array of image paths to form cubemap.
-         *
-         *  @return Handle to the initialised cubemap texture.
-         */
-        inline GLuint Shader::init_cubemap(const std::array<std::string, 6>& images_) const noexcept
-        {
-            GLuint cubemap;
-            glGenTextures(1, &cubemap);
-            glBindTexture(GL_TEXTURE_CUBE_MAP, cubemap);
-
-            int width, height, num_channels;
-            for (unsigned int i = 0; i < images_.size(); i++)
-            {
-                unsigned char* data = stbi_load(images_[i].c_str(), &width, &height, &num_channels, 0);
-                if (data == nullptr)
-                {
-                    stbi_image_free(data);
-
-                    std::cerr << "Shader cubemap initialisation failed.\n"
-                              << "Cubemap image: `" << images_[i] << "`, could not be loaded.\n";
-
-                    std::exit(exit::error::TEXTURE_LOAD_FAILED);
-                }
-
-                glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-
-                stbi_image_free(data);
-            }
-
-            glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-            glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-            glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-            glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-            glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
-
-            return (cubemap);
         }
 
 
