@@ -24,17 +24,21 @@ namespace arc //! arctk namespace
 {
     namespace prop //! properties namespace
     {
-        namespace shape //! shape namespace
+        namespace shape //! shape§ namespace
         {
 
 
 
             //  == FUNCTION PROTOTYPES ==
-            //  -- Order --
+            //  -- Shape --
+            template <typename T>
+            inline bool square(const std::vector<std::vector<T>>& vec_) noexcept;
+            template <typename T>
+            inline bool cube(const std::vector<std::vector<std::vector<T>>>& vec_) noexcept;
 
 
             //  == FUNCTIONS ==
-            //  -- Order --
+            //  -- Shape --
 
 
 
