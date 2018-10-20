@@ -16,10 +16,8 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <cstddef>
-
-//  -- Arctk --
-#include <arctk/debug.hpp>
 
 
 
@@ -55,7 +53,7 @@ namespace arc //! arctk namespace
              */
             inline size_t next(const size_t cur_, const size_t size_, const size_t step_) noexcept
             {
-                PRE(step_ < size_);
+                assert(step_ < size_);
 
                 const size_t next = cur_ + step_;
 
@@ -75,7 +73,7 @@ namespace arc //! arctk namespace
              */
             inline size_t prev(const size_t cur_, const size_t size_, const size_t step_) noexcept
             {
-                PRE(step_ < size_);
+                assert(step_ < size_);
 
                 return ((step_ <= cur_) ? (cur_ - step_) : (size_ + cur_ - step_));
             }
