@@ -16,13 +16,13 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <cmath>
 #include <iomanip>
 #include <ostream>
 
 //  -- Arctk --
 #include <arctk/consts.hpp>
-#include <arctk/debug.hpp>
 #include <arctk/math/vec.hpp>
 
 
@@ -574,7 +574,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline T& Vec<T, 3>::operator[](const size_t index_) noexcept
         {
-            PRE(index_ < 3);
+            assert(index_ < 3);
 
             return ((&x)[index_]);
         }
@@ -591,7 +591,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline const T& Vec<T, 3>::operator[](const size_t index_) const noexcept
         {
-            PRE(index_ < 3);
+            assert(index_ < 3);
 
             return ((&x)[index_]);
         }
@@ -692,7 +692,7 @@ namespace arc //! arctk namespace
         template <typename T>
         constexpr inline void Vec<T, 3>::rotate(const math::Vec<T, 3>& axis_, const T ang_) noexcept
         {
-            PRE(axis_.normalised());
+            assert(axis_.normalised());
 
             const double cos_theta = std::cos(ang_);
             const double sin_theta = std::sin(ang_);
@@ -730,7 +730,7 @@ namespace arc //! arctk namespace
             template <typename T>
             constexpr inline Vec<T, 3> axis(const size_t dim_) noexcept
             {
-                PRE(dim_ < 3);
+                assert(dim_ < 3);
 
                 Vec<T, 3> vec;
 
