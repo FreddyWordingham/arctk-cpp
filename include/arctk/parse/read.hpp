@@ -133,7 +133,7 @@ namespace arc //! arctk namespace
             {
                 assert(!path_.empty());
 
-                return (string(sys::file::read(path_)));
+                return (string<T>(sys::file::read(path_)));
             }
 
 
