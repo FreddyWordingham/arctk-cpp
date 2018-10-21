@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/domain/region.hpp
+ *  @file   arctk/dom/region.hpp
  *  @date   08/10/2018
  *  @author Freddy Wordingham
  *
@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_DOMAIN_REGION_HPP
-#define ARCTK_DOMAIN_REGION_HPP
+#ifndef ARCTK_DOM_REGION_HPP
+#define ARCTK_DOM_REGION_HPP
 
 
 
@@ -32,7 +32,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace scene //! scene namespace
+    namespace dom //! domain namespace
     {
 
 
@@ -338,10 +338,10 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace scene
+    } // namespace dom
 } // namespace arc
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_DOMAIN_REGION_HPP
+#endif // ARCTK_DOM_REGION_HPP
