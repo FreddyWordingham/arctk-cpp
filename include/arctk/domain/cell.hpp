@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/phys/cell.hpp
+ *  @file   arctk/dom/cell.hpp
  *  @date   08/10/2018
  *  @author Freddy Wordingham
  *
- *  Cell physical information class.
+ *  Domain cell information class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_PHYS_CELL_HPP
-#define ARCTK_PHYS_CELL_HPP
+#ifndef ARCTK_DOM_CELL_HPP
+#define ARCTK_DOM_CELL_HPP
 
 
 
@@ -27,7 +27,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace phys //! physics namespace
+    namespace dom //! domain namespace
     {
 
 
@@ -142,10 +142,10 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace phys
+    } // namespace dom
 } // namespace arc
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_PHYS_CELL_HPP
+#endif // ARCTK_DOM_CELL_HPP
