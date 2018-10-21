@@ -82,12 +82,7 @@
 #include <arctk/math/vec4.hpp>
 #include <arctk/phys.hpp>
 #include <arctk/phys/cell.hpp>
-#include <arctk/phys/mat.hpp>
-#include <arctk/phys/mat/dumb.hpp>
-#include <arctk/phys/optics.hpp>
 #include <arctk/phys/photon.hpp>
-#include <arctk/phys/sop.hpp>
-#include <arctk/phys/sop/dumb.hpp>
 #include <arctk/random.hpp>
 #include <arctk/random/distribution.hpp>
 #include <arctk/random/distribution/constant.hpp>
