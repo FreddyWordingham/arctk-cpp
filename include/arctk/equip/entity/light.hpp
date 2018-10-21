@@ -58,7 +58,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Light(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const arc::phys::Mat& mat_, double power_, bool kill_) noexcept;
+                inline Light(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const opt::Mat& mat_, double power_, bool kill_) noexcept;
 
 
                 //  == METHODS ==
@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
                 inline double power() const noexcept;
 
                 //  -- Emission --
-                virtual std::tuple<phys::Photon, const arc::phys::Mat*, std::unique_ptr<arc::phys::Sop>> emit(random::Generator* rng_, double energy_, double time_) const
+                virtual std::tuple<phys::Photon, const opt::Mat*, std::unique_ptr<arc::phys::Sop>> emit(random::Generator* rng_, double energy_, double time_) const
                   noexcept = 0; //!< Emit a photon in a given material with specific-optical-properties. @param  rng_    Random number generator.    @param  energy_ Initial energy of the photon.   @param  time_   Initial timestamp of the photon.    @return
                                 //!< Emitted photon in a material with specific-optical-properties.
 
@@ -98,7 +98,7 @@ namespace arc //! arctk namespace
              *  @pre    scale_.z must be positive.
              *  @pre    power_ must be positive.
              */
-            inline Light::Light(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const arc::phys::Mat& mat_, const double power_, const bool kill_) noexcept
+            inline Light::Light(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const opt::Mat& mat_, const double power_, const bool kill_) noexcept
               : Entity(serial_, scale_, rot_, trans_)
               , _mat(mat_)
               , _kill(kill_)
