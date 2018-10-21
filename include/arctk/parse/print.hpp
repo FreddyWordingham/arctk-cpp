@@ -24,6 +24,9 @@
 #include <utility>
 #include <vector>
 
+//  -- Arctk --
+#include <arctk/consts/format.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -199,7 +202,7 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::tuple<A...>& t
 
     if (sizeof...(A) > 0)
     {
-        arc::io::tuple_print_helper(stream_, tup_, std::make_index_sequence<sizeof...(A) - 1>());
+        arc::parse::print::tuple_print_helper(stream_, tup_, std::make_index_sequence<sizeof...(A) - 1>());
     }
 
     stream_ << arc::consts::format::CLOSERS[arc::consts::format::container::TUPLE];
