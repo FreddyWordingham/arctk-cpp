@@ -58,11 +58,6 @@
 #include <arctk/index/dim.hpp>
 #include <arctk/index/rotate.hpp>
 #include <arctk/index/vertex.hpp>
-#include <arctk/io.hpp>
-#include <arctk/io/file.hpp>
-#include <arctk/io/format.hpp>
-#include <arctk/io/input.hpp>
-#include <arctk/io/output.hpp>
 #include <arctk/math.hpp>
 #include <arctk/math/compare.hpp>
 #include <arctk/math/container.hpp>
