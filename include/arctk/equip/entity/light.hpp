@@ -67,14 +67,14 @@ namespace arc //! arctk namespace
                 inline double power() const noexcept;
 
                 //  -- Emission --
-                virtual std::tuple<phys::Photon, const opt::Mat*, std::unique_ptr<arc::phys::Sop>> emit(random::Generator* rng_, double energy_, double time_) const
+                virtual std::tuple<phys::Photon, const opt::Mat*, std::unique_ptr<opt::Sop>> emit(random::Generator* rng_, double energy_, double time_) const
                   noexcept = 0; //!< Emit a photon in a given material with specific-optical-properties. @param  rng_    Random number generator.    @param  energy_ Initial energy of the photon.   @param  time_   Initial timestamp of the photon.    @return
                                 //!< Emitted photon in a material with specific-optical-properties.
 
               private:
                 //  -- Collision --
-                inline bool hit_front(random::Generator* /*unused*/, phys::Photon* phot_, const phys::Mat** /*unused*/, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
-                inline bool hit_back(random::Generator* /*unused*/, phys::Photon* phot_, const phys::Mat** /*unused*/, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
+                inline bool hit_front(random::Generator* /*unused*/, phys::Photon* phot_, const phys::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
+                inline bool hit_back(random::Generator* /*unused*/, phys::Photon* phot_, const phys::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
             };
 
 
@@ -141,7 +141,7 @@ namespace arc //! arctk namespace
              *
              *  @return False if the photon should be removed from the simulation.
              */
-            inline bool Light::hit_front(random::Generator* /*unused*/, phys::Photon* phot_, const phys::Mat** /*unused*/, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
+            inline bool Light::hit_front(random::Generator* /*unused*/, phys::Photon* phot_, const phys::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
                 assert(phot_ != nullptr);
                 assert(sop_ != nullptr);
@@ -166,7 +166,7 @@ namespace arc //! arctk namespace
              *
              *  @return False if the photon should be removed from the simulation.
              */
-            inline bool Light::hit_back(random::Generator* /*unused*/, phys::Photon* phot_, const phys::Mat** /*unused*/, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
+            inline bool Light::hit_back(random::Generator* /*unused*/, phys::Photon* phot_, const phys::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
                 assert(phot_ != nullptr);
                 assert(sop_ != nullptr);
