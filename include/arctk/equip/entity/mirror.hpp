@@ -57,8 +57,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               private:
                 //  -- Collision --
-                inline bool hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** /*unused*/, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
-                inline bool hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** /*unused*/, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
+                inline bool hit_front(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
+                inline bool hit_back(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
             };
 
 
@@ -119,7 +119,7 @@ namespace arc //! arctk namespace
              *
              *  @return False if the photon should be removed from the simulation.
              */
-            inline bool Mirror::hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** /*unused*/, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
+            inline bool Mirror::hit_front(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
@@ -155,7 +155,7 @@ namespace arc //! arctk namespace
              *
              *  @return False if the photon should be removed from the simulation.
              */
-            inline bool Mirror::hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** /*unused*/, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
+            inline bool Mirror::hit_back(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
