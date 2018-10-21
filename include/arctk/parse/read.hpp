@@ -47,6 +47,11 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTION PROTOTYPES ==
+            //  -- Parsing --
+            template <typename T>
+            inline T string(std::string* str_) noexcept;
+
+
             //  -- Helpers --
             template <typename T>
             inline T helper(type::Tag<T> /*unused*/, std::string* str_) noexcept;
@@ -86,6 +91,30 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTIONS ==
+            //  -- Parsing --
+            /**
+             *  Parse a given string of characters into a given type.
+             *
+             *  @tparam T   Type to be parsed into.
+             *
+             *  @param  str_    String to be parsed.
+             *
+             *  @pre    str_ may not be nullptr.
+             *
+             *  @return Parsed type.
+             */
+            template <typename T>
+            inline T string(std::string* const str_) noexcept
+            {
+                assert(str_ != nullptr);
+
+                input::filter_comments(str_);
+                input::filter_whitespace(str_);
+
+                return (input::parse(type::Tag<T>(), str_));
+            }
+
+
             //  -- Helpers --
             /**
              *  Parse a given string to a fundamental type.
