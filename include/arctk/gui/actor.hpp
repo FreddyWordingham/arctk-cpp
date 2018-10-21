@@ -31,7 +31,6 @@
 #include <arctk/gui/point.hpp>
 #include <arctk/math.hpp>
 #include <arctk/phys.hpp>
-#include <arctk/scene.hpp>
 #include <arctk/tree.hpp>
 
 
