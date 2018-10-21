@@ -129,7 +129,7 @@ namespace arc //! arctk namespace
                 if (rng_->gen() <= _front_ref)
                 {
                     phot_->move(coll_.dist() - consts::num::BUMP, sop_->get()->ref_index(), cell_);
-                    phot_->set_dir(phys::optics::reflection_dir(phot_->dir(), coll_.norm()));
+                    phot_->set_dir(opt::func::reflection_dir(phot_->dir(), coll_.norm()));
                 }
                 else
                 {
@@ -165,7 +165,7 @@ namespace arc //! arctk namespace
                 if (rng_->gen() <= _back_ref)
                 {
                     phot_->move(coll_.dist() - consts::num::BUMP, sop_->get()->ref_index(), cell_);
-                    phot_->set_dir(phys::optics::reflection_dir(phot_->dir(), coll_.norm()));
+                    phot_->set_dir(opt::func::reflection_dir(phot_->dir(), coll_.norm()));
                 }
                 else
                 {
