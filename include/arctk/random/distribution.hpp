@@ -22,6 +22,7 @@
 //  -- Arctk --
 #include <arctk/math.hpp>
 #include <arctk/random/generator.hpp>
+#include <arctk/type/temp.hpp>
 
 
 
