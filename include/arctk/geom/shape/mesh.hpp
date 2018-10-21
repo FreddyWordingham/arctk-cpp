@@ -24,6 +24,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/exit/error.hpp>
 #include <arctk/geom/collision.hpp>
 #include <arctk/geom/shape/box.hpp>
 #include <arctk/geom/shape/triangle.hpp>
