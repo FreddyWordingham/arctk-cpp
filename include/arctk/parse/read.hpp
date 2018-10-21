@@ -129,7 +129,7 @@ namespace arc //! arctk namespace
              *  @return Parsed type.
              */
             template <typename T>
-            inline T string(const std::string& path_) noexcept
+            inline T file(const std::string& path_) noexcept
             {
                 assert(!path_.empty());
 
