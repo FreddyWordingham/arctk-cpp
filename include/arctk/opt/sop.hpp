@@ -84,11 +84,11 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline double  ref_index() const noexcept;
-            virtual double interact_dist(random::Generator* rng_, const phys::Cell* cell_) const
+            virtual double interact_dist(random::Generator* rng_, const dom::Cell* cell_) const
               noexcept = 0; //!< Get the distance until the next interaction event.  @param  rng_    Random number generator.    @param  cell_   Current domain cell.    @return Distance until the next interaction event.
 
             //  -- Interaction --
-            virtual bool interact(random::Generator* rng_, phys::Photon* phot_, phys::Cell* cell_, double dist_) const
+            virtual bool interact(random::Generator* rng_, phys::Photon* phot_, dom::Cell* cell_, double dist_) const
               noexcept = 0; //!< Perform an interaction event on the photon. @param  rng_    Random number generator.    @param  phot_   Photon to interact with.    @param  cell_   Current domain cell.    @param  dist_   Distance to the interaction event.
                             //!< @return False if the photon should be removed from the loop after interacting.
         };
