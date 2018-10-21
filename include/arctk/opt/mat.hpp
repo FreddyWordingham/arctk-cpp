@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
             inline double max() const noexcept;
 
             //  -- Specific Optical Properties --
-            virtual std::unique_ptr<Sop> gen(const Photon& phot_) const
+            virtual std::unique_ptr<Sop> gen(const phys::Photon& phot_) const
               noexcept = 0; //!< Generate specific-optical-proeprties for    @param  phot_   Photon to generate specific-optical-properties for. @return Specific-optical-properties for the given photon.
         };
 
