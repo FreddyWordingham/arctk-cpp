@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/phys/optics.hpp
- *  @date   10/10/2018
+ *  @file   arctk/opt/func.hpp
+ *  @date   21/10/2018
  *  @author Freddy Wordingham
  *
- *  Optical physics functions.
+ *  Optical functions.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_PHYS_OPTICS_HPP
-#define ARCTK_PHYS_OPTICS_HPP
+#ifndef ARCTK_OPT_FUNC_HPP
+#define ARCTK_OPT_FUNC_HPP
 
 
 
@@ -20,16 +20,16 @@
 #include <cmath>
 
 //  -- Arctk --
-#include <arctk/math.hpp>
+#include <arctk/math/vec3.hpp>
 
 
 
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace phys //! physics namespace
+    namespace opt //! optics namespace
     {
-        namespace optics //! optical namespace
+        namespace func //! function namespace
         {
 
 
@@ -182,11 +182,11 @@ namespace arc //! arctk namespace
 
 
 
-        } // namespace optics
-    }     // namespace phys
+        } // namespace func
+    }     // namespace opt
 } // namespace arc
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_PHYS_OPTICS_HPP
+#endif // ARCTK_OPT_FUNC_HPP
