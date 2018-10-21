@@ -24,7 +24,6 @@
 #include <arctk/geom/collision.hpp>
 #include <arctk/geom/shape.hpp>
 #include <arctk/index.hpp>
-#include <arctk/math.hpp>
 #include <arctk/random.hpp>
 
 
@@ -147,7 +146,13 @@ namespace arc //! arctk namespace
              */
             inline double Triangle::area() const noexcept
             {
-                return (math::geom::area(_poss));
+                const double length_ab = (pos_[index::vertex::ALPHA], pos_[index::vertex::BETA]).mag;
+                const double length_bc = (pos_[index::vertex::BETA], pos_[index::vertex::GAMMA]).mag;
+                const double length_ca = (pos_[index::vertex::GAMMA], pos_[index::vertex::ALPHA]).mag;
+
+                const double half_perim = (length_ab + length_bc + length_ca) * 0.5;
+
+                return (std::sqrt(half_perim * (half_perim - length_ab) * (half_perim - length_bc) * (half_perim - length_ca)));
             }
 
 
