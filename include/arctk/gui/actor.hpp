@@ -456,7 +456,7 @@ namespace arc //! arctk namespace
             inline Actor shape(const geom::shape::Box& box_) noexcept;
             inline Actor shape(const geom::shape::Triangle& tri_) noexcept;
             inline Actor shape(const geom::shape::Mesh& mesh_) noexcept;
-            inline Actor domain(const scene::Domain& dom_) noexcept;
+            inline Actor domain(const dom::Region& dom_) noexcept;
             inline Actor tree(const tree::Root& root_) noexcept;
 
 
@@ -807,7 +807,7 @@ namespace arc //! arctk namespace
              *
              *  @return Domain actor.
              */
-            inline Actor domain(const scene::Domain& dom_) noexcept // NOLINT
+            inline Actor domain(const dom::Region& dom_) noexcept // NOLINT
             {
                 std::vector<glm::vec3> verts;
                 auto                   add_box = [&](const vec3& min_, const vec3& max_) {
