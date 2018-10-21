@@ -23,6 +23,7 @@
 //  -- Arctk --
 #include <arctk/consts.hpp>
 #include <arctk/equip/entity.hpp>
+#include <arctk/opt/mat.hpp>
 #include <arctk/phys.hpp>
 
 
@@ -46,7 +47,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               protected:
                 //  -- Material --
-                const arc::phys::Mat& _mat; //!< Material to emit photons into.
+                const opt::Mat& _mat; //!< Material to emit photons into.
 
               private:
                 //  -- Killing --
