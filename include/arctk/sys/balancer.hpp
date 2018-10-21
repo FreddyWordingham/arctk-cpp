@@ -25,7 +25,7 @@
 //  -- Arctk --
 #include <arctk/consts/ansi.hpp>
 #include <arctk/exit.hpp>
-#include <arctk/io.hpp>
+#include <arctk/parse/write.hpp>
 
 
 
@@ -185,7 +185,7 @@ namespace arc //! arctk namespace
                     _finished = true;
 
                     std::cout << "Target reached   : " << total << "/" << _target << '\n';
-                    std::cout << "Time taken       : " << io::format::time((std::chrono::steady_clock::now() - _start_time).count() / 1000000) << '\n';
+                    std::cout << "Time taken       : " << parse::write::timestamp((std::chrono::steady_clock::now() - _start_time).count() / 1000000) << '\n';
 
                     _updating = false;
 
@@ -220,8 +220,8 @@ namespace arc //! arctk namespace
                       << "Percent complete : " << (frac * 100.0) << "%\n"
                       << "Current/target   : " << total_ << "/" << _target << '\n'
                       << "Ave rate (/s)    : " << (static_cast<double>(total_) / static_cast<double>(elapsed_time)) << '\n'
-                      << "Elapsed time     : " << io::format::time(elapsed_time) << '\n'
-                      << "Estimated time   : " << io::format::time(static_cast<long int>(static_cast<double>(elapsed_time) / frac) - elapsed_time) << '\n';
+                      << "Elapsed time     : " << parse::write::timestamp(elapsed_time) << '\n'
+                      << "Estimated time   : " << parse::write::timestamp(static_cast<long int>(static_cast<double>(elapsed_time) / frac) - elapsed_time) << '\n';
 
             const double max = std::max(1.0, static_cast<double>(*std::max_element(_counts.begin(), _counts.end())));
             for (size_t i = 0; i < _counts.size(); ++i)
