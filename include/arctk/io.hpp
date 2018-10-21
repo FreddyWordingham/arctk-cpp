@@ -47,10 +47,6 @@ namespace arc //! arctk namespace
         template <typename T>
         inline T parse(std::string* str_) noexcept;
 
-        //  -- Printing --
-        template <typename... A, size_t... I>
-        inline std::ostream& tuple_print_helper(std::ostream& stream_, const std::tuple<A...>& tup_, const std::index_sequence<I...>& /*unused*/) noexcept;
-
 
 
         //  == FUNCTIONS ==
@@ -75,34 +71,6 @@ namespace arc //! arctk namespace
             input::filter_whitespace(str_);
 
             return (input::parse(type::Tag<T>(), str_));
-        }
-
-
-        //  -- Printing --
-        /**
-         *  Tuple printing helper function.
-         *
-         *  @tparam A   Types stored by the tuple.
-         *  @tparam I   Index sequence of the tuple types.
-         *
-         *  @param  stream_ Stream to print to.
-         *  @param  tup_    Tuple to be printed.
-         *
-         *  @pre    size of A must be positive.
-         *  @pre    size of A must equal the size of I plus one.
-         *
-         *  @return Reference to the stream post-print.
-         */
-        template <typename... A, size_t... I>
-        inline std::ostream& tuple_print_helper(std::ostream& stream_, const std::tuple<A...>& tup_, const std::index_sequence<I...>& /*unused*/) noexcept
-        {
-            static_assert(sizeof...(A) > 0);
-            static_assert(sizeof...(A) == (sizeof...(I) + 1));
-
-            stream_ << std::get<0>(tup_);
-            ((stream_ << consts::format::DELIM << std::get<I + 1>(tup_)), ...);
-
-            return (stream_);
         }
 
 
