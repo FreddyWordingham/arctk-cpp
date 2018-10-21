@@ -52,43 +52,6 @@ namespace arc //! arctk namespace
 
 
 
-            //  == FUNCTION PROTOTYPES ==
-            //  -- Naming --
-            inline std::string name(cartesian dim_) noexcept;
-
-
-
-            //  == FUNCTIONS ==
-            //  -- Naming --
-            /**
-             *  Get the name of the cartesian dimension.
-             *
-             *  @param  dim_    Dimension to find the name of.
-             *
-             *  @pre    dim_ must be less than the total number of cartesian dimensions.
-             *
-             *  @return String name of the cartesian dimension.
-             */
-            inline std::string name(const cartesian dim_) noexcept
-            {
-                assert(dim_ < cartesian::TOTAL);
-
-                switch (dim_)
-                {
-                    case cartesian::X:
-                        return ("x");
-                    case cartesian::Y:
-                        return ("y");
-                    case cartesian::Z:
-                        return ("z");
-                    case cartesian::TOTAL:
-                        std::cerr << "Unreachable location has been reached.\n";
-                        std::exit(exit::error::UNREACHABLE_CODE);
-                }
-            }
-
-
-
         } // namespace dim
     }     // namespace index
 } // namespace arc

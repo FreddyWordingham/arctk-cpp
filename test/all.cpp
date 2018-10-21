@@ -108,8 +108,6 @@
 #include <arctk/tree/root.hpp>
 #include <arctk/type.hpp>
 #include <arctk/type/collision.hpp>
-#include <arctk/utl.hpp>
-#include <arctk/utl/manip.hpp>
 
 
 
