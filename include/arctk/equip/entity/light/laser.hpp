@@ -53,13 +53,13 @@ namespace arc //! arctk namespace
                     //  == INSTANTIATION ==
                   public:
                     //  -- Constructors --
-                    inline Laser(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const arc::phys::Mat& mat_, double power_, bool kill_, double wavelength_) noexcept;
+                    inline Laser(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const opt::Mat& mat_, double power_, bool kill_, double wavelength_) noexcept;
 
 
                     //  == METHODS ==
                   public:
                     //  -- Emission --
-                    inline std::tuple<phys::Photon, const arc::phys::Mat*, std::unique_ptr<arc::phys::Sop>> emit(random::Generator* rng_, double energy_, double time_) const noexcept override;
+                    inline std::tuple<phys::Photon, const opt::Mat*, std::unique_ptr<opt::Sop>> emit(random::Generator* rng_, double energy_, double time_) const noexcept override;
                 };
 
 
@@ -85,7 +85,7 @@ namespace arc //! arctk namespace
                  *  @pre    power_ must be positive.
                  *  @pre    wavelength_ must be positive.
                  */
-                inline Laser::Laser(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const arc::phys::Mat& mat_, const double power_, const bool kill_, const double wavelength_) noexcept
+                inline Laser::Laser(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const opt::Mat& mat_, const double power_, const bool kill_, const double wavelength_) noexcept
                   : Light(serial_, scale_, rot_, trans_, mat_, power_, kill_)
                   , _wavelength(wavelength_)
                 {
@@ -111,7 +111,7 @@ namespace arc //! arctk namespace
                  *
                  *  @return Emitted photon in a material with specific-optical-properties.
                  */
-                inline std::tuple<phys::Photon, const arc::phys::Mat*, std::unique_ptr<arc::phys::Sop>> Laser::emit(random::Generator* rng_, const double energy_, const double time_) const noexcept
+                inline std::tuple<phys::Photon, const opt::Mat*, std::unique_ptr<opt::Sop>> Laser::emit(random::Generator* rng_, const double energy_, const double time_) const noexcept
                 {
                     assert(energy_ > 0.0);
 
@@ -119,7 +119,7 @@ namespace arc //! arctk namespace
 
                     phys::Photon phot(pos_norm.first, pos_norm.second, _wavelength, energy_, time_);
 
-                    return (std::tuple<phys::Photon, const arc::phys::Mat*, std::unique_ptr<arc::phys::Sop>>(phot, &_mat, _mat.gen(phot)));
+                    return (std::tuple<phys::Photon, const opt::Mat*, std::unique_ptr<opt::Sop>>(phot, &_mat, _mat.gen(phot)));
                 }
 
 
