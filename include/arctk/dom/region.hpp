@@ -46,9 +46,9 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            const std::array<size_t, 3>                       _res;       //!< Resolution of the domain cells.
-            std::vector<std::vector<std::vector<phys::Cell>>> _cells;     //!< Three-dimensional vector of cells.
-            const vec3                                        _cell_size; //!< Size of each domain cell.
+            const std::array<size_t, 3>                      _res;       //!< Resolution of the domain cells.
+            std::vector<std::vector<std::vector<dom::Cell>>> _cells;     //!< Three-dimensional vector of cells.
+            const vec3                                       _cell_size; //!< Size of each domain cell.
 
 
             //  == INSTANTIATION ==
@@ -58,19 +58,19 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Initialisation --
-            inline std::vector<std::vector<std::vector<phys::Cell>>> init_cells(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept;
+            inline std::vector<std::vector<std::vector<dom::Cell>>> init_cells(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept;
 
 
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const std::array<size_t, 3>&                             res() const noexcept;
-            inline const std::vector<std::vector<std::vector<phys::Cell>>>& cells() const noexcept;
-            inline const vec3&                                              cell_size() const noexcept;
-            inline size_t                                                   num_cells() const noexcept;
+            inline const std::array<size_t, 3>&                            res() const noexcept;
+            inline const std::vector<std::vector<std::vector<dom::Cell>>>& cells() const noexcept;
+            inline const vec3&                                             cell_size() const noexcept;
+            inline size_t                                                  num_cells() const noexcept;
 
             //  -- Retrieval --
-            inline phys::Cell* cell(const vec3& pos_) noexcept;
+            inline dom::Cell* cell(const vec3& pos_) noexcept;
 
             //  -- Saving --
             inline void save(const std::string& path_) const noexcept;
@@ -126,7 +126,7 @@ namespace arc //! arctk namespace
          *
          *  @return Initialised three-dimensional vector of domain cells.
          */
-        inline std::vector<std::vector<std::vector<phys::Cell>>> Region::init_cells(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept
+        inline std::vector<std::vector<std::vector<dom::Cell>>> Region::init_cells(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept
         {
             assert(min_.x <= max_.x);
             assert(min_.y <= max_.y);
@@ -137,7 +137,7 @@ namespace arc //! arctk namespace
 
             const vec3 size((max_.x - min_.x) / static_cast<double>(res_[index::dim::cartesian::X]), (max_.y - min_.y) / static_cast<double>(res_[index::dim::cartesian::Y]), (max_.z - min_.z) / static_cast<double>(res_[index::dim::cartesian::Z]));
 
-            std::vector<std::vector<std::vector<phys::Cell>>> cells(res_[index::dim::cartesian::X], std::vector<std::vector<phys::Cell>>(res_[index::dim::cartesian::Y]));
+            std::vector<std::vector<std::vector<dom::Cell>>> cells(res_[index::dim::cartesian::X], std::vector<std::vector<dom::Cell>>(res_[index::dim::cartesian::Y]));
             for (size_t i = 0; i < res_[index::dim::cartesian::X]; ++i)
             {
                 const double x = min_.x + (static_cast<double>(i) * size.x);
@@ -150,7 +150,7 @@ namespace arc //! arctk namespace
                     {
                         const double z = min_.z + (static_cast<double>(k) * size.z);
 
-                        cells[i][j].emplace_back(phys::Cell(vec3(x, y, z), vec3(x, y, z) + size));
+                        cells[i][j].emplace_back(dom::Cell(vec3(x, y, z), vec3(x, y, z) + size));
                     }
                 }
             }
@@ -177,7 +177,7 @@ namespace arc //! arctk namespace
          *
          *  @return Const reference to the three-dimensional vector of domain cells.
          */
-        inline const std::vector<std::vector<std::vector<phys::Cell>>>& Region::cells() const noexcept
+        inline const std::vector<std::vector<std::vector<dom::Cell>>>& Region::cells() const noexcept
         {
             return (_cells);
         }
@@ -217,7 +217,7 @@ namespace arc //! arctk namespace
          *
          *  @return Domain region cell corresponding to a given position within the domain.
          */
-        inline phys::Cell* Region::cell(const vec3& pos_) noexcept
+        inline dom::Cell* Region::cell(const vec3& pos_) noexcept
         {
             assert(intersect(pos_));
 
