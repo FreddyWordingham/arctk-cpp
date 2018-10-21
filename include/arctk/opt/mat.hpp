@@ -20,8 +20,8 @@
 #include <memory>
 
 //  -- Arctk --
+#include <arctk/opt/sop.hpp>
 #include <arctk/phys/photon.hpp>
-#include <arctk/phys/sop.hpp>
 
 
 
