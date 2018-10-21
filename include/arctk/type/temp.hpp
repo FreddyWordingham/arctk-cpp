@@ -16,7 +16,11 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <type_traits>
 #include <vector>
+
+//  -- Arctk --
+#include <arctk/math/vec.hpp>
 
 
 
@@ -31,19 +35,15 @@ namespace arc //! arctk namespace
 
 
             //  == STRUCTURES ==
-            //  -- Vector --
+            //  -- Std --
             /**
              *  Structure used to determine if a type is a vector.
              *
              *  @tparam T   Type stored by vector.
              */
-            template <class T>
-            struct is_vector // NOLINT
+            template <typename T>
+            struct is_vector : std::false_type
             {
-                //  == FIELDS ==
-              public:
-                //  -- Properties --
-                static const bool value = false; //!< True if T is a vector.
             };
 
             /**
@@ -51,14 +51,13 @@ namespace arc //! arctk namespace
              *
              *  @tparam T   Type stored by vector.
              */
-            template <class T>
-            struct is_vector<std::vector<T>>
+            template <typename T>
+            struct is_vector<std::vector<T>> : std::true_type
             {
-                //  == FIELDS ==
-              public:
-                //  -- Properties --
-                static const bool value = true; //!< True if T is a vector.
             };
+
+
+            //  -- Arctk --
 
 
 
