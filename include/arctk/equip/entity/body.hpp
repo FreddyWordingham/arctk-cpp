@@ -21,7 +21,7 @@
 //  -- Arctk --
 #include <arctk/consts.hpp>
 #include <arctk/equip/entity.hpp>
-#include <arctk/phys.hpp>
+#include <arctk/opt/mat.hpp>
 
 
 
@@ -44,21 +44,21 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Materials --
-                const phys::Mat& _front_mat; //!< Front hit material.
-                const phys::Mat& _back_mat;  //!< Back hit material.
+                const opt::Mat& _front_mat; //!< Front hit material.
+                const opt::Mat& _back_mat;  //!< Back hit material.
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Body(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const phys::Mat& front_mat_, const phys::Mat& back_mat_) noexcept;
+                inline Body(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const opt::Mat& front_mat_, const opt::Mat& back_mat_) noexcept;
 
 
                 //  == METHODS ==
               private:
                 //  -- Collision --
-                inline bool hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
-                inline bool hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
+                inline bool hit_front(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
+                inline bool hit_back(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept override;
             };
 
 
@@ -80,7 +80,7 @@ namespace arc //! arctk namespace
              *  @pre    scale_.y must be positive.
              *  @pre    scale_.z must be positive.
              */
-            inline Body::Body(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const phys::Mat& front_mat_, const phys::Mat& back_mat_) noexcept
+            inline Body::Body(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const opt::Mat& front_mat_, const opt::Mat& back_mat_) noexcept
               : Entity(serial_, scale_, rot_, trans_)
               , _front_mat(front_mat_)
               , _back_mat(back_mat_)
@@ -113,7 +113,7 @@ namespace arc //! arctk namespace
              *
              *  @return False if the photon should be removed from the simulation.
              */
-            inline bool Body::hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
+            inline bool Body::hit_front(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
@@ -160,7 +160,7 @@ namespace arc //! arctk namespace
              *
              *  @return False if the photon should be removed from the simulation.
              */
-            inline bool Body::hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
+            inline bool Body::hit_back(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
             {
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
