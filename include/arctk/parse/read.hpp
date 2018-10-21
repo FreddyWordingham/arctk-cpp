@@ -47,46 +47,46 @@ namespace arc //! arctk namespace
 
 
             //  == FUNCTION PROTOTYPES ==
-            //  -- Reading --
+            //  -- Helpers --
             template <typename T>
-            inline T parse(type::Tag<T> /*unused*/, std::string* str_) noexcept;
+            inline T helper(type::Tag<T> /*unused*/, std::string* str_) noexcept;
             template <>
-            inline bool parse(type::Tag<bool> /*unused*/, std::string* str_) noexcept;
+            inline bool helper(type::Tag<bool> /*unused*/, std::string* str_) noexcept;
             template <typename T>
-            inline std::vector<T> parse(type::Tag<std::vector<T>> /*unused*/, std::string* str_) noexcept;
+            inline std::vector<T> helper(type::Tag<std::vector<T>> /*unused*/, std::string* str_) noexcept;
             template <typename T, size_t N>
-            inline std::array<T, N> parse(type::Tag<std::array<T, N>> /*unused*/, std::string* str_) noexcept;
+            inline std::array<T, N> helper(type::Tag<std::array<T, N>> /*unused*/, std::string* str_) noexcept;
             template <>
-            inline std::string parse(type::Tag<std::string> /*unused*/, std::string* str_) noexcept;
+            inline std::string helper(type::Tag<std::string> /*unused*/, std::string* str_) noexcept;
             template <typename T, typename S>
-            inline std::pair<T, S> parse(type::Tag<std::pair<T, S>> /*unused*/, std::string* str_) noexcept;
+            inline std::pair<T, S> helper(type::Tag<std::pair<T, S>> /*unused*/, std::string* str_) noexcept;
             template <typename... A>
-            inline std::tuple<A...> parse(type::Tag<std::tuple<A...>> /*unused*/, std::string* str_) noexcept;
+            inline std::tuple<A...> helper(type::Tag<std::tuple<A...>> /*unused*/, std::string* str_) noexcept;
             template <typename... A, size_t... I>
             inline std::tuple<A...> parse_helper(type::Tag<std::tuple<A...>> /*unused*/, std::vector<std::string>* tokens_, const std::index_sequence<I...>& /*unused*/) noexcept;
             template <typename T, typename S>
-            inline std::map<T, S> parse(type::Tag<std::map<T, S>> /*unused*/, std::string* str_) noexcept;
+            inline std::map<T, S> helper(type::Tag<std::map<T, S>> /*unused*/, std::string* str_) noexcept;
             template <typename T>
-            inline math::Vec<T, 2> parse(type::Tag<math::Vec<T, 2>> /*unused*/, std::string* str_) noexcept;
+            inline math::Vec<T, 2> helper(type::Tag<math::Vec<T, 2>> /*unused*/, std::string* str_) noexcept;
             template <typename T>
-            inline math::Vec<T, 3> parse(type::Tag<math::Vec<T, 3>> /*unused*/, std::string* str_) noexcept;
+            inline math::Vec<T, 3> helper(type::Tag<math::Vec<T, 3>> /*unused*/, std::string* str_) noexcept;
             template <typename T>
-            inline math::Vec<T, 4> parse(type::Tag<math::Vec<T, 4>> /*unused*/, std::string* str_) noexcept;
+            inline math::Vec<T, 4> helper(type::Tag<math::Vec<T, 4>> /*unused*/, std::string* str_) noexcept;
             template <typename T, size_t N>
-            inline math::Vec<T, N> parse(type::Tag<math::Vec<T, N>> /*unused*/, std::string* str_) noexcept;
+            inline math::Vec<T, N> helper(type::Tag<math::Vec<T, N>> /*unused*/, std::string* str_) noexcept;
             template <typename T>
-            inline math::Mat<T, 2> parse(type::Tag<math::Mat<T, 2>> /*unused*/, std::string* str_) noexcept;
+            inline math::Mat<T, 2> helper(type::Tag<math::Mat<T, 2>> /*unused*/, std::string* str_) noexcept;
             template <typename T>
-            inline math::Mat<T, 3> parse(type::Tag<math::Mat<T, 3>> /*unused*/, std::string* str_) noexcept;
+            inline math::Mat<T, 3> helper(type::Tag<math::Mat<T, 3>> /*unused*/, std::string* str_) noexcept;
             template <typename T>
-            inline math::Mat<T, 4> parse(type::Tag<math::Mat<T, 4>> /*unused*/, std::string* str_) noexcept;
+            inline math::Mat<T, 4> helper(type::Tag<math::Mat<T, 4>> /*unused*/, std::string* str_) noexcept;
             template <typename T, size_t N>
-            inline math::Mat<T, N> parse(type::Tag<math::Mat<T, N>> /*unused*/, std::string* str_) noexcept;
+            inline math::Mat<T, N> helper(type::Tag<math::Mat<T, N>> /*unused*/, std::string* str_) noexcept;
 
 
 
             //  == FUNCTIONS ==
-            //  -- Reading --
+            //  -- Helpers --
             /**
              *  Parse a given string to a fundamental type.
              *
@@ -100,7 +100,7 @@ namespace arc //! arctk namespace
              *  @return Parsed type.
              */
             template <typename T>
-            inline T parse(type::Tag<T> /*unused*/, std::string* const str_) noexcept
+            inline T helper(type::Tag<T> /*unused*/, std::string* const str_) noexcept
             {
                 static_assert(std::is_fundamental<T>::value);
 
@@ -143,7 +143,7 @@ namespace arc //! arctk namespace
              *  @return Parsed boolean.
              */
             template <>
-            inline bool parse(type::Tag<bool> /*unused*/, std::string* const str_) noexcept
+            inline bool helper(type::Tag<bool> /*unused*/, std::string* const str_) noexcept
             {
                 assert(str_ != nullptr);
 
@@ -187,7 +187,7 @@ namespace arc //! arctk namespace
              *  @return Parsed vector.
              */
             template <typename T>
-            inline std::vector<T> parse(type::Tag<std::vector<T>> /*unused*/, std::string* const str_) noexcept
+            inline std::vector<T> helper(type::Tag<std::vector<T>> /*unused*/, std::string* const str_) noexcept
             {
                 assert(str_ != nullptr);
 
@@ -200,7 +200,7 @@ namespace arc //! arctk namespace
                 vec.reserve(tokens.size());
                 for (size_t i = 0; i < tokens.size(); ++i)
                 {
-                    vec.emplace_back(parse(type::Tag<T>(), &tokens[i]));
+                    vec.emplace_back(helper(type::Tag<T>(), &tokens[i]));
                 }
 
                 return (vec);
@@ -219,7 +219,7 @@ namespace arc //! arctk namespace
              *  @return Parsed array.
              */
             template <typename T, size_t N>
-            inline std::array<T, N> parse(type::Tag<std::array<T, N>> /*unused*/, std::string* const str_) noexcept
+            inline std::array<T, N> helper(type::Tag<std::array<T, N>> /*unused*/, std::string* const str_) noexcept
             {
                 assert(str_ != nullptr);
 
@@ -239,7 +239,7 @@ namespace arc //! arctk namespace
                 std::array<T, N> arr;
                 for (size_t i = 0; i < N; ++i)
                 {
-                    arr[i] = parse(type::Tag<T>(), &tokens[i]);
+                    arr[i] = helper(type::Tag<T>(), &tokens[i]);
                 }
 
                 return (arr);
@@ -255,7 +255,7 @@ namespace arc //! arctk namespace
              *  @return Parsed string.
              */
             template <>
-            inline std::string parse(type::Tag<std::string> /*unused*/, std::string* const str_) noexcept
+            inline std::string helper(type::Tag<std::string> /*unused*/, std::string* const str_) noexcept
             {
                 std::string& str_ref = *str_;
 
@@ -277,7 +277,7 @@ namespace arc //! arctk namespace
              *  @return Parsed pair.
              */
             template <typename T, typename S>
-            inline std::pair<T, S> parse(type::Tag<std::pair<T, S>> /*unused*/, std::string* const str_) noexcept
+            inline std::pair<T, S> helper(type::Tag<std::pair<T, S>> /*unused*/, std::string* const str_) noexcept
             {
                 assert(str_ != nullptr);
 
@@ -294,7 +294,7 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::FAILED_PARSE);
                 }
 
-                return (std::make_pair<T, S>(parse(type::Tag<T>(), &tokens[0]), parse(type::Tag<S>(), &tokens[1])));
+                return (std::make_pair<T, S>(helper(type::Tag<T>(), &tokens[0]), helper(type::Tag<S>(), &tokens[1])));
             }
 
             /**
@@ -309,7 +309,7 @@ namespace arc //! arctk namespace
              *  @return Parsed tuple.
              */
             template <typename... A>
-            inline std::tuple<A...> parse(type::Tag<std::tuple<A...>> /*unused*/, std::string* const str_) noexcept
+            inline std::tuple<A...> helper(type::Tag<std::tuple<A...>> /*unused*/, std::string* const str_) noexcept
             {
                 assert(str_ != nullptr);
 
@@ -352,7 +352,7 @@ namespace arc //! arctk namespace
                 std::vector<std::string>& tokens_ref = *tokens_;
 
                 std::tuple<A...> tup;
-                ((std::get<I>(tup) = parse(type::Tag<A>(), &tokens_ref[I])), ...);
+                ((std::get<I>(tup) = helper(type::Tag<A>(), &tokens_ref[I])), ...);
 
                 return (tup);
             }
@@ -370,7 +370,7 @@ namespace arc //! arctk namespace
              *  @return Parsed map.
              */
             template <typename T, typename S>
-            inline std::map<T, S> parse(type::Tag<std::map<T, S>> /*unused*/, std::string* const str_) noexcept
+            inline std::map<T, S> helper(type::Tag<std::map<T, S>> /*unused*/, std::string* const str_) noexcept
             {
                 assert(str_ != nullptr);
 
@@ -382,7 +382,7 @@ namespace arc //! arctk namespace
                 std::map<T, S> map;
                 for (size_t i = 0; i < tokens.size(); ++i)
                 {
-                    map.emplace(parse(type::Tag<std::pair<T, S>>(), &tokens[i]));
+                    map.emplace(helper(type::Tag<std::pair<T, S>>(), &tokens[i]));
                 }
 
                 return (map);
@@ -400,7 +400,7 @@ namespace arc //! arctk namespace
              *  @return Parsed vec.
              */
             template <typename T>
-            inline math::Vec<T, 2> parse(type::Tag<math::Vec<T, 2>> /*unused*/, std::string* const str_) noexcept
+            inline math::Vec<T, 2> helper(type::Tag<math::Vec<T, 2>> /*unused*/, std::string* const str_) noexcept
             {
                 assert(str_ != nullptr);
 
@@ -417,7 +417,7 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::FAILED_PARSE);
                 }
 
-                return (math::Vec<T, 2>(parse(type::Tag<T>(), &tokens[index::dim::cartesian::X]), parse(type::Tag<T>(), &tokens[index::dim::cartesian::Y])));
+                return (math::Vec<T, 2>(helper(type::Tag<T>(), &tokens[index::dim::cartesian::X]), helper(type::Tag<T>(), &tokens[index::dim::cartesian::Y])));
             }
 
             /**
@@ -432,7 +432,7 @@ namespace arc //! arctk namespace
              *  @return Parsed vec.
              */
             template <typename T>
-            inline math::Vec<T, 3> parse(type::Tag<math::Vec<T, 3>> /*unused*/, std::string* const str_) noexcept
+            inline math::Vec<T, 3> helper(type::Tag<math::Vec<T, 3>> /*unused*/, std::string* const str_) noexcept
             {
                 assert(str_ != nullptr);
 
@@ -449,7 +449,7 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::FAILED_PARSE);
                 }
 
-                return (math::Vec<T, 3>(parse(type::Tag<T>(), &tokens[index::dim::cartesian::X]), parse(type::Tag<T>(), &tokens[index::dim::cartesian::Y]), parse(type::Tag<T>(), &tokens[index::dim::cartesian::Z])));
+                return (math::Vec<T, 3>(helper(type::Tag<T>(), &tokens[index::dim::cartesian::X]), helper(type::Tag<T>(), &tokens[index::dim::cartesian::Y]), helper(type::Tag<T>(), &tokens[index::dim::cartesian::Z])));
             }
 
             /**
@@ -464,7 +464,7 @@ namespace arc //! arctk namespace
              *  @return Parsed vec.
              */
             template <typename T>
-            inline math::Vec<T, 4> parse(type::Tag<math::Vec<T, 4>> /*unused*/, std::string* const str_) noexcept
+            inline math::Vec<T, 4> helper(type::Tag<math::Vec<T, 4>> /*unused*/, std::string* const str_) noexcept
             {
                 assert(str_ != nullptr);
 
@@ -481,7 +481,7 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::FAILED_PARSE);
                 }
 
-                return (math::Vec<T, 4>(parse(type::Tag<T>(), &tokens[index::dim::cartesian::X]), parse(type::Tag<T>(), &tokens[index::dim::cartesian::Y]), parse(type::Tag<T>(), &tokens[index::dim::cartesian::Z]), parse(type::Tag<T>(), &tokens[3])));
+                return (math::Vec<T, 4>(helper(type::Tag<T>(), &tokens[index::dim::cartesian::X]), helper(type::Tag<T>(), &tokens[index::dim::cartesian::Y]), helper(type::Tag<T>(), &tokens[index::dim::cartesian::Z]), helper(type::Tag<T>(), &tokens[3])));
             }
 
             /**
@@ -496,7 +496,7 @@ namespace arc //! arctk namespace
              *  @return Parsed vec.
              */
             template <typename T, size_t N>
-            inline math::Vec<T, N> parse(type::Tag<math::Vec<T, N>> /*unused*/, std::string* const str_) noexcept
+            inline math::Vec<T, N> helper(type::Tag<math::Vec<T, N>> /*unused*/, std::string* const str_) noexcept
             {
                 assert(str_ != nullptr);
 
@@ -516,7 +516,7 @@ namespace arc //! arctk namespace
                 math::Vec<T, N> vec;
                 for (size_t i = 0; i < N; ++i)
                 {
-                    vec[i] = parse(type::Tag<T>(), &tokens[i]);
+                    vec[i] = helper(type::Tag<T>(), &tokens[i]);
                 }
 
                 return (vec);
@@ -534,7 +534,7 @@ namespace arc //! arctk namespace
              *  @return Parsed mat.
              */
             template <typename T>
-            inline math::Mat<T, 2> parse(type::Tag<math::Mat<T, 2>> /*unused*/, std::string* const str_) noexcept
+            inline math::Mat<T, 2> helper(type::Tag<math::Mat<T, 2>> /*unused*/, std::string* const str_) noexcept
             {
                 assert(str_ != nullptr);
 
@@ -551,7 +551,7 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::FAILED_PARSE);
                 }
 
-                return (math::Mat<T, 2>(parse(type::Tag<math::Vec<T, 2>>(), &tokens[index::dim::cartesian::X]), parse(type::Tag<math::Vec<T, 2>>(), &tokens[index::dim::cartesian::Y])));
+                return (math::Mat<T, 2>(helper(type::Tag<math::Vec<T, 2>>(), &tokens[index::dim::cartesian::X]), helper(type::Tag<math::Vec<T, 2>>(), &tokens[index::dim::cartesian::Y])));
             }
 
             /**
@@ -566,7 +566,7 @@ namespace arc //! arctk namespace
              *  @return Parsed mat.
              */
             template <typename T>
-            inline math::Mat<T, 3> parse(type::Tag<math::Mat<T, 3>> /*unused*/, std::string* const str_) noexcept
+            inline math::Mat<T, 3> helper(type::Tag<math::Mat<T, 3>> /*unused*/, std::string* const str_) noexcept
             {
                 assert(str_ != nullptr);
 
@@ -584,7 +584,7 @@ namespace arc //! arctk namespace
                 }
 
                 return (
-                  math::Mat<T, 3>(parse(type::Tag<math::Vec<T, 3>>(), &tokens[index::dim::cartesian::X]), parse(type::Tag<math::Vec<T, 3>>(), &tokens[index::dim::cartesian::Y]), parse(type::Tag<math::Vec<T, 3>>(), &tokens[index::dim::cartesian::Z])));
+                  math::Mat<T, 3>(helper(type::Tag<math::Vec<T, 3>>(), &tokens[index::dim::cartesian::X]), helper(type::Tag<math::Vec<T, 3>>(), &tokens[index::dim::cartesian::Y]), helper(type::Tag<math::Vec<T, 3>>(), &tokens[index::dim::cartesian::Z])));
             }
 
             /**
@@ -599,7 +599,7 @@ namespace arc //! arctk namespace
              *  @return Parsed mat.
              */
             template <typename T>
-            inline math::Mat<T, 4> parse(type::Tag<math::Mat<T, 4>> /*unused*/, std::string* const str_) noexcept
+            inline math::Mat<T, 4> helper(type::Tag<math::Mat<T, 4>> /*unused*/, std::string* const str_) noexcept
             {
                 assert(str_ != nullptr);
 
@@ -616,8 +616,8 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::FAILED_PARSE);
                 }
 
-                return (math::Mat<T, 4>(parse(type::Tag<math::Vec<T, 4>>(), &tokens[index::dim::cartesian::X]), parse(type::Tag<math::Vec<T, 4>>(), &tokens[index::dim::cartesian::Y]), parse(type::Tag<math::Vec<T, 4>>(), &tokens[index::dim::cartesian::Z]),
-                                        parse(type::Tag<math::Vec<T, 4>>(), &tokens[3])));
+                return (math::Mat<T, 4>(helper(type::Tag<math::Vec<T, 4>>(), &tokens[index::dim::cartesian::X]), helper(type::Tag<math::Vec<T, 4>>(), &tokens[index::dim::cartesian::Y]),
+                                        helper(type::Tag<math::Vec<T, 4>>(), &tokens[index::dim::cartesian::Z]), helper(type::Tag<math::Vec<T, 4>>(), &tokens[3])));
             }
 
             /**
@@ -632,7 +632,7 @@ namespace arc //! arctk namespace
              *  @return Parsed mat.
              */
             template <typename T, size_t N>
-            inline math::Mat<T, N> parse(type::Tag<math::Mat<T, N>> /*unused*/, std::string* const str_) noexcept
+            inline math::Mat<T, N> helper(type::Tag<math::Mat<T, N>> /*unused*/, std::string* const str_) noexcept
             {
                 assert(str_ != nullptr);
 
@@ -652,7 +652,7 @@ namespace arc //! arctk namespace
                 math::Mat<T, N> mat;
                 for (size_t i = 0; i < N; ++i)
                 {
-                    mat[i] = parse(type::Tag<math::Vec<T, N>>(), &tokens[i]);
+                    mat[i] = helper(type::Tag<math::Vec<T, N>>(), &tokens[i]);
                 }
 
                 return (mat);
