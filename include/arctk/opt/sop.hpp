@@ -19,7 +19,7 @@
 #include <cassert>
 
 //  -- Arctk --
-#include <arctk/phys/cell.hpp>
+#include <arctk/dom/cell.hpp>
 #include <arctk/phys/photon.hpp>
 
 
