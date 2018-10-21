@@ -50,11 +50,6 @@ namespace arc //! arctk namespace
 
 
 
-        //  == CLASS PROTOTYPES ==
-        class Photon;
-
-
-
         //  == CLASS ==
         /**
          *  Photon specific-optical-proeprties control class.
