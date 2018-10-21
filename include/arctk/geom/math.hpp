@@ -27,9 +27,9 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace math //! mathematical namespace
+    namespace geom //! geometry namespace
     {
-        namespace geom //! geometry namespace
+        namespace math //! mathematical namespace
         {
 
 
@@ -89,8 +89,8 @@ namespace arc //! arctk namespace
 
 
 
-        } // namespace geom
-    }     // namespace math
+        } // namespace math
+    }     // namespace geom
 } // namespace arc
 
 
