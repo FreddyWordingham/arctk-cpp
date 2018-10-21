@@ -142,7 +142,7 @@ namespace arc //! arctk namespace
 
             std::string str(stream.str());
 
-            return (parse::read<std::tuple<A...>>(&str));
+            return (parse::read::string<std::tuple<A...>>(&str));
         }
 
 
