@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/phys/sop/dumb.hpp
+ *  @file   arctk/opt/sop/dumb.hpp
  *  @date   10/10/2018
  *  @author Freddy Wordingham
  *
- *  Dumb physical specific-optical-properties control class.
+ *  Dumb specific-optical-properties control class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_PHYS_SOP_DUMB_HPP
-#define ARCTK_PHYS_SOP_DUMB_HPP
+#ifndef ARCTK_OPT_SOP_DUMB_HPP
+#define ARCTK_OPT_SOP_DUMB_HPP
 
 
 
@@ -28,7 +28,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace phys //! physics namespace
+    namespace opt //! optics namespace
     {
         namespace sop //! specific-optical-properties namespace
         {
@@ -139,10 +139,10 @@ namespace arc //! arctk namespace
 
 
         } // namespace sop
-    }     // namespace phys
+    }     // namespace opt
 } // namespace arc
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_PHYS_SOP_DUMB_HPP
+#endif // ARCTK_OPT_SOP_DUMB_HPP
