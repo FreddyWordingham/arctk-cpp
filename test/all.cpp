@@ -89,8 +89,6 @@
 #include <arctk/random/distribution/linear.hpp>
 #include <arctk/random/generator.hpp>
 #include <arctk/random/generator/quality.hpp>
-#include <arctk/scene.hpp>
-#include <arctk/scene/domain.hpp>
 #include <arctk/sys.hpp>
 #include <arctk/sys/args.hpp>
 #include <arctk/sys/balancer.hpp>
