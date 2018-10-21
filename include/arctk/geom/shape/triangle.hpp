@@ -146,9 +146,9 @@ namespace arc //! arctk namespace
              */
             inline double Triangle::area() const noexcept
             {
-                const double length_ab = (_poss[index::vertex::ALPHA] - _poss[index::vertex::BETA]).mag;
-                const double length_bc = (_poss[index::vertex::BETA] - _poss[index::vertex::GAMMA]).mag;
-                const double length_ca = (_poss[index::vertex::GAMMA] - _poss[index::vertex::ALPHA]).mag;
+                const double length_ab = (_poss[index::vertex::ALPHA] - _poss[index::vertex::BETA]).mag();
+                const double length_bc = (_poss[index::vertex::BETA] - _poss[index::vertex::GAMMA]).mag();
+                const double length_ca = (_poss[index::vertex::GAMMA] - _poss[index::vertex::ALPHA]).mag();
 
                 const double half_perim = (length_ab + length_bc + length_ca) * 0.5;
 
