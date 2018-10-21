@@ -22,6 +22,7 @@
 #include <arctk/consts.hpp>
 #include <arctk/equip/entity.hpp>
 #include <arctk/opt/mat.hpp>
+#include <arctk/opt/sop.hpp>
 
 
 
