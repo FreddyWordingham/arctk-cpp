@@ -14,18 +14,6 @@
 
 
 
-//  == IMPORTS ==
-//  -- Std --
-#include <cassert>
-#include <cstdlib>
-#include <iostream>
-#include <string>
-
-//  -- Arctk --
-#include <arctk/exit.hpp>
-
-
-
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
