@@ -20,6 +20,17 @@
 
 
 
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    namespace phys //! physics namespace
+    {
+        class Cell;
+    } // namespace phys
+} // namespace arc
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
