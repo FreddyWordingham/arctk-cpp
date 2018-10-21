@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/phys/sop.hpp
+ *  @file   arctk/opt/sop.hpp
  *  @date   10/10/2018
  *  @author Freddy Wordingham
  *
- *  Physical specific-optical-properties control class.
+ *  Specific-optical-properties control class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_PHYS_SOP_HPP
-#define ARCTK_PHYS_SOP_HPP
+#ifndef ARCTK_OPT_SOP_HPP
+#define ARCTK_OPT_SOP_HPP
 
 
 
@@ -26,7 +26,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace phys //! physics namespace
+    namespace opt //! optics namespace
     {
 
 
@@ -119,10 +119,10 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace phys
+    } // namespace opt
 } // namespace arc
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_PHYS_SOP_HPP
+#endif // ARCTK_OPT_SOP_HPP
