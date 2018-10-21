@@ -20,6 +20,8 @@
 #include <arctk/consts/math.hpp>
 #include <arctk/consts/num.hpp>
 #include <arctk/consts/phys.hpp>
+#include <arctk/dom/cell.hpp>
+#include <arctk/dom/region.hpp>
 #include <arctk/equip.hpp>
 #include <arctk/equip/entity.hpp>
 #include <arctk/equip/entity/body.hpp>
@@ -75,8 +77,21 @@
 #include <arctk/math/vec2.hpp>
 #include <arctk/math/vec3.hpp>
 #include <arctk/math/vec4.hpp>
+#include <arctk/opt/func.hpp>
+#include <arctk/opt/mat.hpp>
+#include <arctk/opt/mat/dumb.hpp>
+#include <arctk/opt/sop.hpp>
+#include <arctk/opt/sop/dumb.hpp>
+#include <arctk/parse/print.hpp>
+#include <arctk/parse/process.hpp>
+#include <arctk/parse/read.hpp>
+#include <arctk/parse/write.hpp>
 #include <arctk/phys.hpp>
 #include <arctk/phys/photon.hpp>
+#include <arctk/prop/contents.hpp>
+#include <arctk/prop/limits.hpp>
+#include <arctk/prop/order.hpp>
+#include <arctk/prop/shape.hpp>
 #include <arctk/random.hpp>
 #include <arctk/random/distribution.hpp>
 #include <arctk/random/distribution/constant.hpp>
@@ -84,9 +99,12 @@
 #include <arctk/random/distribution/linear.hpp>
 #include <arctk/random/generator.hpp>
 #include <arctk/random/generator/quality.hpp>
+#include <arctk/search/index.hpp>
+#include <arctk/search/value.hpp>
 #include <arctk/sys.hpp>
 #include <arctk/sys/args.hpp>
 #include <arctk/sys/balancer.hpp>
+#include <arctk/sys/file.hpp>
 #include <arctk/tree.hpp>
 #include <arctk/tree/node.hpp>
 #include <arctk/tree/node/branch.hpp>
@@ -94,6 +112,8 @@
 #include <arctk/tree/root.hpp>
 #include <arctk/type.hpp>
 #include <arctk/type/collision.hpp>
+#include <arctk/type/tag.hpp>
+#include <arctk/type/temp.hpp>
 
 
 
