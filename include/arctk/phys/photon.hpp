@@ -14,16 +14,9 @@
 
 
 
-//  == CLASS PROTOTYPES ==
-namespace arc //! arctk namespace
-{
-    namespace math //! mathematics namespace
-    {
-        template <typename T, size_t N>
-        class Vec;
-    }                                  // namespace math
-    using vec3 = math::Vec<double, 3>; //!< Three-dimensional double precision vec.
-} // namespace arc
+//  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/math/vec3.hpp>
 
 
 
