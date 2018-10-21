@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/scene/domain.hpp
+ *  @file   arctk/domain/region.hpp
  *  @date   08/10/2018
  *  @author Freddy Wordingham
  *
- *  Domain information class.
+ *  Domain region control class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_SCENE_DOMAIN_HPP
-#define ARCTK_SCENE_DOMAIN_HPP
+#ifndef ARCTK_DOMAIN_REGION_HPP
+#define ARCTK_DOMAIN_REGION_HPP
 
 
 
@@ -39,9 +39,9 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
-         *  Domain information cell.
+         *  Domain region cell.
          */
-        class Domain : public geom::shape::Box
+        class Region : public geom::shape::Box
         {
             //  == FIELDS ==
           private:
@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept;
+            inline Region(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept;
 
           private:
             //  -- Initialisation --
@@ -81,7 +81,7 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         /**
-         *  Construct a domain of cells with given bounds and resolution.
+         *  Construct a domain region of cells with given bounds and resolution.
          *
          *  @param  min_    Minimum bound of the domain.
          *  @param  max_    Maximum bound of the domain.
@@ -94,7 +94,7 @@ namespace arc //! arctk namespace
          *  @pre    res_[index::dim::cartesian::Y] must be positive.
          *  @pre    res_[index::dim::cartesian::Z] must be positive.
          */
-        inline Domain::Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept
+        inline Region::Region(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept
           : Box(min_, max_)
           , _res(res_)
           , _cells(init_cells(min_, max_, res_))
@@ -126,7 +126,7 @@ namespace arc //! arctk namespace
          *
          *  @return Initialised three-dimensional vector of domain cells.
          */
-        inline std::vector<std::vector<std::vector<phys::Cell>>> Domain::init_cells(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept
+        inline std::vector<std::vector<std::vector<phys::Cell>>> Region::init_cells(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) const noexcept
         {
             assert(min_.x <= max_.x);
             assert(min_.y <= max_.y);
@@ -167,7 +167,7 @@ namespace arc //! arctk namespace
          *
          *  @return Resolution of the domain cells.
          */
-        inline const std::array<size_t, 3>& Domain::res() const noexcept
+        inline const std::array<size_t, 3>& Region::res() const noexcept
         {
             return (_res);
         }
@@ -177,7 +177,7 @@ namespace arc //! arctk namespace
          *
          *  @return Const reference to the three-dimensional vector of domain cells.
          */
-        inline const std::vector<std::vector<std::vector<phys::Cell>>>& Domain::cells() const noexcept
+        inline const std::vector<std::vector<std::vector<phys::Cell>>>& Region::cells() const noexcept
         {
             return (_cells);
         }
@@ -187,7 +187,7 @@ namespace arc //! arctk namespace
          *
          *  @return Cell size.
          */
-        inline const vec3& Domain::cell_size() const noexcept
+        inline const vec3& Region::cell_size() const noexcept
         {
             return (_cell_size);
         }
@@ -197,7 +197,7 @@ namespace arc //! arctk namespace
          *
          *  @return Total number of cells in the domain.
          */
-        inline size_t Domain::num_cells() const noexcept
+        inline size_t Region::num_cells() const noexcept
         {
             return (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]);
         }
@@ -215,9 +215,9 @@ namespace arc //! arctk namespace
          *  @post   index_y must be less than _res[index::dim::cartesian::Y].
          *  @post   index_z must be less than _res[index::dim::cartesian::Z].
          *
-         *  @return Domain cell corresponding to a given position within the domain.
+         *  @return Domain region cell corresponding to a given position within the domain.
          */
-        inline phys::Cell* Domain::cell(const vec3& pos_) noexcept
+        inline phys::Cell* Region::cell(const vec3& pos_) noexcept
         {
             assert(intersect(pos_));
 
@@ -242,7 +242,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    path_ may not be empty.
          */
-        inline void Domain::save(const std::string& path_) const noexcept // NOLINT
+        inline void Region::save(const std::string& path_) const noexcept // NOLINT
         {
             assert(!path_.empty());
 
@@ -344,4 +344,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_SCENE_DOMAIN_HPP
+#endif // ARCTK_DOMAIN_REGION_HPP
