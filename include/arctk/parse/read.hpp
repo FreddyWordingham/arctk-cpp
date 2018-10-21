@@ -108,10 +108,10 @@ namespace arc //! arctk namespace
             {
                 assert(str_ != nullptr);
 
-                input::filter_comments(str_);
-                input::filter_whitespace(str_);
+                process::filter_comments(str_);
+                process::filter_whitespace(str_);
 
-                return (input::parse(type::Tag<T>(), str_));
+                return (helper(type::Tag<T>(), str_));
             }
 
 
