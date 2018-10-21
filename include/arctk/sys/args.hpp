@@ -26,7 +26,7 @@
 //  -- Arctk --
 #include <arctk/consts.hpp>
 #include <arctk/exit.hpp>
-#include <arctk/io.hpp>
+#include <arctk/parse/read.hpp>
 
 
 
@@ -142,7 +142,7 @@ namespace arc //! arctk namespace
 
             std::string str(stream.str());
 
-            return (io::parse<std::tuple<A...>>(&str));
+            return (parse::read<std::tuple<A...>>(&str));
         }
 
 
