@@ -32,6 +32,7 @@
 #include <arctk/math/mat.hpp>
 #include <arctk/math/vec.hpp>
 #include <arctk/parse/process.hpp>
+#include <arctk/sys/file.hpp>
 #include <arctk/type/tag.hpp>
 
 
@@ -50,6 +51,8 @@ namespace arc //! arctk namespace
             //  -- Parsing --
             template <typename T>
             inline T string(std::string* str_) noexcept;
+            template <typename T>
+            inline T file(const std::string& path_) noexcept;
 
 
             //  -- Helpers --
@@ -112,6 +115,25 @@ namespace arc //! arctk namespace
                 process::filter_whitespace(str_);
 
                 return (helper(type::Tag<T>(), str_));
+            }
+
+            /**
+             *  Parse a file's contents into a given type.
+             *
+             *  @tparam T   Type to be parsed into.
+             *
+             *  @param  path_   Path to the file to be parsed.
+             *
+             *  @pre    path_ may not be empty.
+             *
+             *  @return Parsed type.
+             */
+            template <typename T>
+            inline T string(const std::string& path_) noexcept
+            {
+                assert(!path_.empty());
+
+                return (string(sys::file::read(path_)));
             }
 
 
