@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
             /**
              *  Structure used to determine if a type is a vector.
              *
-             *  @tparam T   Type stored by vector.
+             *  @tparam T   Type being queried.
              */
             template <typename T>
             struct is_vector : std::false_type
@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
             /**
              *  Specialisation for vector types.
              *
-             *  @tparam T   Type stored by vector.
+             *  @tparam T   Type stored by the vector.
              */
             template <typename T>
             struct is_vector<std::vector<T>> : std::true_type
@@ -58,6 +58,26 @@ namespace arc //! arctk namespace
 
 
             //  -- Arctk --
+            /**
+             *  Structure used to determine if a type is a vec.
+             *
+             *  @tparam T   Type being queried.
+             */
+            template <typename T>
+            struct is_vec : std::false_type
+            {
+            };
+
+            /**
+             *  Specialisation for vec types.
+             *
+             *  @tparam T   Type stored by the vec.
+             *  @tparam N   Size of the vec.
+             */
+            template <typename T, size_t N>
+            struct is_vec<math::vec<T, N>> : std::true_type
+            {
+            };
 
 
 
