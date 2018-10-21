@@ -287,7 +287,8 @@ namespace arc //! arctk namespace
              *  @pre    T   Must be an arithmetic type.
              *  @pre    T   May not be an integral type.
              *  @pre    rng_ may not be nullptr.
-             *  @pre    g_ must be between minus one and one.
+             *  @pre    g_ must be greater than, or equal to, minus one.
+             *  @pre    g_ must be less than, or equal to, unity.
              *
              *  @return Random number sampled from a Henyey-Greenstein distribution.
              */
@@ -297,7 +298,8 @@ namespace arc //! arctk namespace
                 static_assert(std::is_arithmetic<T>::value);
                 static_assert(!std::is_integral<T>::value);
                 assert(rng_ != nullptr);
-                assert((g_ >= -1.0) && (g_ <= 1.0));
+                assert(g_ >= -1.0);
+                assert(g_ <= 1.0);
 
                 if (math::compare::zero(g_))
                 {
@@ -322,7 +324,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline T isotropic(Generator* const rng_) noexcept
             {
-                static_assert(math::is_vec<T>::value);
+                static_assert(type::temp::is_vec<T>::value);
                 assert(rng_ != nullptr);
 
                 const double phi   = uniform(rng_, consts::math::TWO_PI);
