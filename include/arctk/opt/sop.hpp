@@ -20,6 +20,7 @@
 
 //  -- Arctk --
 #include <arctk/phys/cell.hpp>
+#include <arctk/phys/photon.hpp>
 
 
 
