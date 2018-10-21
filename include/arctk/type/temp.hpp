@@ -20,6 +20,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/math/mat.hpp>
 #include <arctk/math/vec.hpp>
 
 
@@ -76,6 +77,27 @@ namespace arc //! arctk namespace
              */
             template <typename T, size_t N>
             struct is_vec<math::vec<T, N>> : std::true_type
+            {
+            };
+
+            /**
+             *  Structure used to determine if a type is a mat.
+             *
+             *  @tparam T   Type being queried.
+             */
+            template <typename T>
+            struct is_mat : std::false_type
+            {
+            };
+
+            /**
+             *  Specialisation for mat types.
+             *
+             *  @tparam T   Type stored by the mat.
+             *  @tparam N   Size of the mat.
+             */
+            template <typename T, size_t N>
+            struct is_mat<math::mat<T, N>> : std::true_type
             {
             };
 

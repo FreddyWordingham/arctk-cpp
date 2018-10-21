@@ -116,26 +116,6 @@ namespace arc //! arctk namespace
 
 
 
-    namespace math //! mathematical namespace
-    {
-
-
-
-        //  == STRUCTURES ==
-        //  -- Sfinae --
-        template <typename T>
-        struct is_mat : std::false_type // NOLINT
-        {
-        };
-
-        template <typename T, size_t N>
-        struct is_mat<math::Mat<T, N>> : std::true_type // NOLINT
-        {
-        };
-
-
-
-    } // namespace math
 } // namespace arc
 
 
