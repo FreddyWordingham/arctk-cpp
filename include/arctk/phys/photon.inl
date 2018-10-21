@@ -139,7 +139,7 @@ namespace arc //! arctk namespace
          *  @pre    ref_index_ must be greater than, or equal to, unity.
          *  @pre    cell_ must intersect the photon's position.
          */
-        inline void Photon::move(const double dist_, const double ref_index_, Cell* cell_) noexcept
+        inline void Photon::move(const double dist_, const double ref_index_, dom::Cell* cell_) noexcept
         {
             assert(ref_index_ >= 1.0);
             assert(cell_->intersect(_pos));
