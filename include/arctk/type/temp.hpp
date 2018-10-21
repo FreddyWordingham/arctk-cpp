@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
              *  @tparam N   Size of the vec.
              */
             template <typename T, size_t N>
-            struct is_vec<math::vec<T, N>> : std::true_type
+            struct is_vec<math::Vec<T, N>> : std::true_type
             {
             };
 
@@ -97,7 +97,7 @@ namespace arc //! arctk namespace
              *  @tparam N   Size of the mat.
              */
             template <typename T, size_t N>
-            struct is_mat<math::mat<T, N>> : std::true_type
+            struct is_mat<math::Mat<T, N>> : std::true_type
             {
             };
 
