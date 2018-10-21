@@ -21,6 +21,7 @@
 //  -- Arctk --
 #include <arctk/geom.hpp>
 #include <arctk/math.hpp>
+#include <arctk/opt/mat.hpp>
 #include <arctk/phys.hpp>
 #include <arctk/random.hpp>
 
@@ -61,15 +62,15 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Collision --
-            inline bool hit(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept;
+            inline bool hit(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept;
 
           private:
             //  -- Collision --
-            virtual bool hit_front(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_,
+            virtual bool hit_front(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_,
                                    const geom::Collision& coll_) noexcept = 0; //!< Perform a hit event on the front face entity.   @param  rng_    Random number generator.    @param  phot_   Photon hitting the entity.  @param  mat_    Current active
                                                                                //!< material.    @param  sop_    Current specific-optical-properties.    @param  cell_   Current domain cell.    @param  coll_   Collision event information.    @return False
                                                                                //!< if the photon should be removed from the simulation.
-            virtual bool hit_back(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_,
+            virtual bool hit_back(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_,
                                   const geom::Collision&
                                     coll_) noexcept = 0; //!< Perform a hit event on the back face entity.   @param  rng_    Random number generator.    @param  phot_   Photon hitting the entity.  @param  mat_    Current active material.    @param  sop_
                                                          //!< Current specific-optical-properties.    @param  cell_   Current domain cell.    @param  coll_   Collision event information.    @return False if the photon should be removed from the simulation.
@@ -130,7 +131,7 @@ namespace arc //! arctk namespace
          *
          *  @return False if the photon should be removed from the simulation.
          */
-        inline bool Entity::hit(random::Generator* rng_, phys::Photon* phot_, const phys::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
+        inline bool Entity::hit(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** mat_, std::unique_ptr<arc::phys::Sop>* sop_, phys::Cell* cell_, const geom::Collision& coll_) noexcept
         {
             assert(rng_ != nullptr);
             assert(phot_ != nullptr);
