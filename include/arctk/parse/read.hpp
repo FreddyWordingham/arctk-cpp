@@ -29,7 +29,7 @@
 #include <arctk/consts/format.hpp>
 #include <arctk/exit/error.hpp>
 #include <arctk/index/dim.hpp>
-#include <arctk/math/mat1.hpp>
+#include <arctk/math/mat.hpp>
 #include <arctk/math/vec.hpp>
 #include <arctk/type/tag.hpp>
 
