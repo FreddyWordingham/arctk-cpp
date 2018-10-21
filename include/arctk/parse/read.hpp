@@ -31,6 +31,7 @@
 #include <arctk/index/dim.hpp>
 #include <arctk/math/mat.hpp>
 #include <arctk/math/vec.hpp>
+#include <arctk/parse/process.hpp>
 #include <arctk/type/tag.hpp>
 
 
@@ -192,7 +193,7 @@ namespace arc //! arctk namespace
 
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, consts::format::container::VECTOR);
+                process::extract_contents(str_, consts::format::container::VECTOR);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 std::vector<T> vec;
@@ -224,7 +225,7 @@ namespace arc //! arctk namespace
 
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, consts::format::container::ARRAY);
+                process::extract_contents(str_, consts::format::container::ARRAY);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 if (tokens.size() != N)
@@ -258,7 +259,7 @@ namespace arc //! arctk namespace
             {
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, consts::format::container::STRING);
+                process::extract_contents(str_, consts::format::container::STRING);
 
                 return (str_ref);
             }
@@ -282,7 +283,7 @@ namespace arc //! arctk namespace
 
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, consts::format::container::PAIR);
+                process::extract_contents(str_, consts::format::container::PAIR);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 if (tokens.size() != 2)
@@ -314,7 +315,7 @@ namespace arc //! arctk namespace
 
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, consts::format::container::TUPLE);
+                process::extract_contents(str_, consts::format::container::TUPLE);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 if (tokens.size() != sizeof...(A))
@@ -375,7 +376,7 @@ namespace arc //! arctk namespace
 
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, consts::format::container::MAP);
+                process::extract_contents(str_, consts::format::container::MAP);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 std::map<T, S> map;
@@ -405,7 +406,7 @@ namespace arc //! arctk namespace
 
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, consts::format::container::VEC);
+                process::extract_contents(str_, consts::format::container::VEC);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 if (tokens.size() != 2)
@@ -437,7 +438,7 @@ namespace arc //! arctk namespace
 
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, consts::format::container::VEC);
+                process::extract_contents(str_, consts::format::container::VEC);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 if (tokens.size() != 3)
@@ -469,7 +470,7 @@ namespace arc //! arctk namespace
 
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, consts::format::container::VEC);
+                process::extract_contents(str_, consts::format::container::VEC);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 if (tokens.size() != 4)
@@ -501,7 +502,7 @@ namespace arc //! arctk namespace
 
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, consts::format::container::VEC);
+                process::extract_contents(str_, consts::format::container::VEC);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 if (tokens.size() != N)
@@ -539,7 +540,7 @@ namespace arc //! arctk namespace
 
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, consts::format::container::MAT);
+                process::extract_contents(str_, consts::format::container::MAT);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 if (tokens.size() != 2)
@@ -571,7 +572,7 @@ namespace arc //! arctk namespace
 
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, consts::format::container::MAT);
+                process::extract_contents(str_, consts::format::container::MAT);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 if (tokens.size() != 3)
@@ -604,7 +605,7 @@ namespace arc //! arctk namespace
 
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, consts::format::container::MAT);
+                process::extract_contents(str_, consts::format::container::MAT);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 if (tokens.size() != 4)
@@ -637,7 +638,7 @@ namespace arc //! arctk namespace
 
                 std::string& str_ref = *str_;
 
-                extract_contents(str_, consts::format::container::MAT);
+                process::extract_contents(str_, consts::format::container::MAT);
                 std::vector<std::string> tokens = tokenise(str_ref);
 
                 if (tokens.size() != N)
