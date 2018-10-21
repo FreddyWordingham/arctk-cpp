@@ -115,7 +115,7 @@ namespace arc //! arctk namespace
                 {
                     assert(energy_ > 0.0);
 
-                    const std::pair<arc::vec3, arc::vec3> pos_norm = random_pos_and_norm(rng_);
+                    const std::pair<vec3, vec3> pos_norm = random_pos_and_norm(rng_);
 
                     phys::Photon phot(pos_norm.first, pos_norm.second, _wavelength, energy_, time_);
 
