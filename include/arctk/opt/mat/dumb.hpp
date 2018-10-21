@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/phys/mat/dumb.hpp
+ *  @file   arctk/opt/mat/dumb.hpp
  *  @date   12/10/2018
  *  @author Freddy Wordingham
  *
- *  Dumb optical-properties material class.
+ *  Dumb optical material class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_PHYS_MAT_DUMB_HPP
-#define ARCTK_PHYS_MAT_DUMB_HPP
+#ifndef ARCTK_OPT_MAT_DUMB_HPP
+#define ARCTK_OPT_MAT_DUMB_HPP
 
 
 
@@ -31,7 +31,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace phys //! physics namespace
+    namespace opt //! optics namespace
     {
         namespace mat //! material namespace
         {
@@ -116,10 +116,10 @@ namespace arc //! arctk namespace
 
 
         } // namespace mat
-    }     // namespace phys
+    }     // namespace opt
 } // namespace arc
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_PHYS_MAT_DUMB_HPP
+#endif // ARCTK_OPT_MAT_DUMB_HPP
