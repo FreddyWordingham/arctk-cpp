@@ -18,7 +18,9 @@
 //  -- Std --
 #include <cassert>
 #include <cstddef>
+#include <iomanip>
 #include <string>
+#include <vector>
 
 
 
@@ -36,6 +38,10 @@ namespace arc //! arctk namespace
             //  -- Format --
             inline std::string timestamp(long int sec_) noexcept;
             inline std::string bar(unsigned int length_, double frac_, char fill_ = '|') noexcept;
+
+            //  -- Table --
+            template <typename T, typename... A>
+            inline std::string csv(const std::vector<T>& vec_, const A&... vecs_, const unsigned int width_ = 16) noexcept;
 
 
 
@@ -90,6 +96,43 @@ namespace arc //! arctk namespace
                 }
 
                 return (bar);
+            }
+
+
+            //  -- Table --
+            /**
+             *  Format a group of vectors into a csv-style string.
+             *
+             *  @tparam T   Type stored by the first vector.
+             *  @tparam A   Types stored by the remaining vectors.
+             *
+             *  @param  vec_    Vector forming the first column of the csv.
+             *  @param  vecs_   Vectors forming the remaining columns of the csv.
+             *  @param  width_  Width of the columns.
+             *
+             *  @pre    vecs_ must all be vectors.
+             *  @pre    vecs_ sizes must match the size of vec_.
+             *  @pre    width_ must be greater than, or equal to, eight.
+             *
+             *  @return String of the csv.
+             */
+            template <typename T, typename... A>
+            inline std::string csv(const std::vector<T>& vec_, const A&... vecs_, const unsigned int width_) noexcept
+            {
+                (assert(type::temp::is_vector<A>::value), ...);
+                (assert(vecs_.size() == vec_.size()), ...);
+                assert(width_ >= 8);
+
+                std::stringstream stream;
+
+                for (size_t i = 0; i < vec_.size(); ++i)
+                {
+                    stream << std::setw(width_) << vec_[i];
+                    ((stream << consts::format::DELIM << std::setw(width_) << vecs_[i]), ...);
+                    stream << '\n';
+                }
+
+                return (stream.str());
             }
 
 

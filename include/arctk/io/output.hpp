@@ -37,49 +37,6 @@ namespace arc //! arctk namespace
 
 
 
-            //  == FUNCTION PROTOTYPES ==
-            //  -- Formatting --
-            template <typename T, typename... A>
-            inline std::string csv(const std::vector<T>& vec_, const A&... vecs_) noexcept;
-
-
-
-            //  == FUNCTIONS ==
-            //  -- Formatting --
-            /**
-             *  Format a group of vectors into a csv-style string.
-             *
-             *  @tparam T   Type stored by the first vector.
-             *  @tparam A   Types stored by the remaining vectors.
-             *
-             *  @param  vec_    Vector forming the first column of the csv.
-             *  @param  vecs_   Vectors forming the remaining columns of the csv.
-             *
-             *  @pre    vecs_ must all be vectors.
-             *  @pre    vecs_ sizes must match the size of vec_.
-             *
-             *  @return String of the csv.
-             */
-            template <typename T, typename... A>
-            inline std::string csv(const std::vector<T>& vec_, const A&... vecs_) noexcept
-            {
-                (assert(type::temp::is_vector<A>::value), ...);
-                (assert(vecs_.size() == vec_.size()), ...);
-
-                std::stringstream stream;
-
-                for (size_t i = 0; i < vec_.size(); ++i)
-                {
-                    stream << std::setw(16) << vec_[i];
-                    ((stream << consts::format::DELIM << std::setw(16) << vecs_[i]), ...);
-                    stream << '\n';
-                }
-
-                return (stream.str());
-            }
-
-
-
         } // namespace output
     }     // namespace io
 } // namespace arc
