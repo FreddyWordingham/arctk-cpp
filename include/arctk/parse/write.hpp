@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
 
             //  -- Table --
             template <typename T, typename... A>
-            inline std::string csv(const std::vector<T>& vec_, const A&... vecs_, const unsigned int width_ = 16) noexcept;
+            inline std::string csv(const std::vector<T>& vec_, const A&... vecs_, unsigned int width_ = 16) noexcept;
 
 
 
