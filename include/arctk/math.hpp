@@ -49,35 +49,25 @@ namespace arc //! arctk namespace
     using vec2i = math::Vec<int, 2>; //!< Two-dimensional integer precision vec.
     using vec3i = math::Vec<int, 3>; //!< Three-dimensional integer precision vec.
     using vec4i = math::Vec<int, 4>; //!< Four-dimensional integer precision vec.
-    template <size_t N>
-    using vecNi = math::Vec<int, N>; //!< N-dimensional integer precision vec.  // NOLINT
 
     //  -- Size Vec --
     using vec2s = math::Vec<size_t, 2>; //!< Two-dimensional size precision vec.
     using vec3s = math::Vec<size_t, 3>; //!< Three-dimensional size precision vec.
     using vec4s = math::Vec<size_t, 4>; //!< Four-dimensional size precision vec.
-    template <size_t N>
-    using vecNs = math::Vec<size_t, N>; //!< N-dimensional size precision vec.  // NOLINT
 
     //  -- Float Vec --
     using vec2f = math::Vec<float, 2>; //!< Two-dimensional float precision vec.
     using vec3f = math::Vec<float, 3>; //!< Three-dimensional float precision vec.
     using vec4f = math::Vec<float, 4>; //!< Four-dimensional float precision vec.
-    template <size_t N>
-    using vecNf = math::Vec<float, N>; //!< N-dimensional float precision vec.  // NOLINT
 
     //  -- Double Vec --
     using vec2 = math::Vec<double, 2>; //!< Two-dimensional double precision vec.
     using vec4 = math::Vec<double, 4>; //!< Four-dimensional double precision vec.
-    template <size_t N>
-    using vecN = math::Vec<double, N>; //!< N-dimensional double precision vec. // NOLINT
 
     //  -- Long Double Vec --
     using vec2l = math::Vec<long double, 2>; //!< Two-dimensional long double precision vec.
     using vec3l = math::Vec<long double, 3>; //!< Three-dimensional long double precision vec.
     using vec4l = math::Vec<long double, 4>; //!< Four-dimensional long double precision vec.
-    template <size_t N>
-    using vecNl = math::Vec<long double, N>; //!< N-dimensional long double precision vec.  // NOLINT
 
     //  -- Int Mat --
     using mat2i = math::Mat<int, 2>; //!< Two-dimensional integer precision mat.
