@@ -123,8 +123,10 @@ namespace arc //! arctk namespace
             template <typename T, typename... A>
             inline std::string csv(const std::vector<T>& vec_, const A&... vecs_, const unsigned int width_) noexcept
             {
+#ifdef NDEBUG
                 (assert(type::temp::is_vector<A>::value), ...);
                 (assert(vecs_.size() == vec_.size()), ...);
+#endif
                 assert(width_ >= 8);
 
                 std::stringstream stream;
