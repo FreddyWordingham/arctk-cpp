@@ -22,6 +22,10 @@
 #include <string>
 #include <vector>
 
+//  -- Arctk --
+#include <arctk/consts/format.hpp>
+#include <arctk/type/temp.hpp>
+
 
 
 //  == NAMESPACE ==

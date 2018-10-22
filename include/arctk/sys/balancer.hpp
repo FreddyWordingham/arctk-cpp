@@ -25,7 +25,8 @@
 
 //  -- Arctk --
 #include <arctk/consts/ansi.hpp>
-#include <arctk/exit.hpp>
+#include <arctk/exit/error.hpp>
+#include <arctk/math/container.hpp>
 #include <arctk/parse/write.hpp>
 
 

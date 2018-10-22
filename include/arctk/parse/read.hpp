@@ -20,6 +20,7 @@
 #include <cassert>
 #include <iostream>
 #include <map>
+#include <sstream>
 #include <string>
 #include <tuple>
 #include <utility>

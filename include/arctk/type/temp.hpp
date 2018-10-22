@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/utl/template.hpp
+ *  @file   arctk/utl/temp.hpp
  *  @date   20/10/2018
  *  @author Freddy Wordingham
  *
@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_TYPE_TEMPLATE_HPP
-#define ARCTK_TYPE_TEMPLATE_HPP
+#ifndef ARCTK_TYPE_TEMP_HPP
+#define ARCTK_TYPE_TEMP_HPP
 
 
 
@@ -110,4 +110,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_TYPE_TEMPLATE_HPP
+#endif // ARCTK_TYPE_TEMP_HPP
