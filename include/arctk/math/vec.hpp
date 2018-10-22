@@ -139,5 +139,12 @@ namespace arc //! arctk namespace
 
 
 
+//  == SPECIALISATIONS ==
+#include <arctk/math/vec2.hpp>
+#include <arctk/math/vec3.hpp>
+#include <arctk/math/vec4.hpp>
+
+
+
 //  == GUARD END ==
 #endif // ARCTK_MATH_VEC_HPP
