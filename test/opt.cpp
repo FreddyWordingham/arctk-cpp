@@ -1,0 +1,31 @@
+/**
+ *  @file   opt.cpp
+ *  @date   22/10/2018
+ *  @author Freddy Wordingham
+ *
+ *  Optical collection test programme.
+ */
+
+
+
+//  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/opt/func.hpp>
+#include <arctk/opt/mat.hpp>
+#include <arctk/opt/mat/dumb.hpp>
+#include <arctk/opt/sop.hpp>
+#include <arctk/opt/sop/dumb.hpp>
+
+
+
+//  == MAIN ==
+//  -- Function --
+/**
+ *  Unit test function of Arctk optical collection headers.
+ *
+ *  @return Zero upon a successful run.
+ */
+int main(const int /*unused*/, const char** /*unused*/)
+{
+    return (0);
+}
