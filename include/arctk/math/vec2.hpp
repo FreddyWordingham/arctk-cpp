@@ -16,7 +16,6 @@
 
 //  == IMPORTS ==
 //  -- Std --
-#include <array>
 #include <cstddef>
 #include <limits>
 #include <ostream>
