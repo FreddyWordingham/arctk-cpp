@@ -101,9 +101,6 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
-            //  -- Conversion --
-            constexpr inline explicit operator std::array<T, 4>() const noexcept;
-
             //  -- Printing --
             template <typename S>
             friend constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<S, 4>& vec_) noexcept; // NOLINT
@@ -219,19 +216,6 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
-        //  -- Conversion --
-        /**
-         *  Convert the vec to a std::array.
-         *
-         *  @return Converted std::array object.
-         */
-        template <typename T>
-        constexpr inline Vec<T, 4>::operator std::array<T, 4>() const noexcept
-        {
-            return (std::array<T, 4>({{x, y, z, w}}));
-        }
-
-
         //  -- Printing --
         /**
          *  Print the vec to a stream.
