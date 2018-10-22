@@ -22,12 +22,6 @@
 
 
 
-//  == BASE CLASS ==
-//  -- Arctk --
-#include <arctk/math/vec.hpp>
-
-
-
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
