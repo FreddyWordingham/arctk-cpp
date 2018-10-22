@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type being queried.
              */
             template <typename T>
-            struct is_vector : std::false_type
+            struct is_vector : std::false_type // NOLINT
             {
             };
 
@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type being queried.
              */
             template <typename T>
-            struct is_vec : std::false_type
+            struct is_vec : std::false_type // NOLINT
             {
             };
 
@@ -86,7 +86,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type being queried.
              */
             template <typename T>
-            struct is_mat : std::false_type
+            struct is_mat : std::false_type // NOLINT
             {
             };
 
