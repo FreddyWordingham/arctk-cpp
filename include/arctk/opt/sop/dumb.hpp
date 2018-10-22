@@ -58,10 +58,10 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline double interact_dist(random::Generator* /*unused*/, const phys::Cell* /*unused*/) const noexcept override;
+                inline double interact_dist(random::Generator* /*unused*/, const dom::Cell* /*unused*/) const noexcept override;
 
                 //  -- Interaction --
-                inline bool interact(random::Generator* rng_, phys::Photon* phot_, phys::Cell* cell_, double dist_) const noexcept override;
+                inline bool interact(random::Generator* rng_, phys::Photon* phot_, dom::Cell* cell_, double dist_) const noexcept override;
             };
 
 
@@ -106,7 +106,7 @@ namespace arc //! arctk namespace
              *
              *  @return Distance until the next interaction event.
              */
-            inline double Dumb::interact_dist(random::Generator* /*unused*/, const phys::Cell* /*unused*/) const noexcept
+            inline double Dumb::interact_dist(random::Generator* /*unused*/, const dom::Cell* /*unused*/) const noexcept
             {
                 return (_dist);
             }
@@ -123,7 +123,7 @@ namespace arc //! arctk namespace
              *
              *  @return False if the photon should be removed from the loop after interacting.
              */
-            inline bool Dumb::interact(random::Generator* rng_, phys::Photon* phot_, phys::Cell* cell_, const double dist_) const noexcept
+            inline bool Dumb::interact(random::Generator* rng_, phys::Photon* phot_, dom::Cell* cell_, const double dist_) const noexcept
             {
                 cell_->add_scatter(phot_->weight());
 
