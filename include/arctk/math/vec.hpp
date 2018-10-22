@@ -76,9 +76,6 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
-            //  -- Conversion --
-            constexpr inline explicit operator std::array<T, N>() const noexcept;
-
             //  -- Printing --
             template <typename S, size_t M>
             friend constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<S, M>& vec_) noexcept;

@@ -132,19 +132,6 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
-        //  -- Conversion --
-        /**
-         *  Convert the vec to a std::array.
-         *
-         *  @return Converted std::array object.
-         */
-        template <typename T, size_t N>
-        constexpr inline Vec<T, N>::operator std::array<T, N>() const noexcept
-        {
-            return (_data);
-        }
-
-
         //  -- Printing --
         /**
          *  Print the vec to a stream.
