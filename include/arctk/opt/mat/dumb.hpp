@@ -21,10 +21,10 @@
 #include <memory>
 
 //  -- Arctk --
-#include <arctk/phys/mat.hpp>
+#include <arctk/opt/mat.hpp>
+#include <arctk/opt/sop.hpp>
+#include <arctk/opt/sop/dumb.hpp>
 #include <arctk/phys/photon.hpp>
-#include <arctk/phys/sop.hpp>
-#include <arctk/phys/sop/dumb.hpp>
 
 
 
