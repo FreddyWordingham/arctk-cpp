@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
             inline dom::Cell* cell(const vec3& pos_) noexcept;
 
             //  -- Saving --
-            inline void save(const std::string& path_) const noexcept;
+            inline void save(const std::string& path_) const noexcept; // NOLINT
         };
 
 
