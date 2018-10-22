@@ -10,6 +10,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/consts/ansi.hpp>
 #include <arctk/consts/format.hpp>
 #include <arctk/consts/math.hpp>
 #include <arctk/consts/num.hpp>
