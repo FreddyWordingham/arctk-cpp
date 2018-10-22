@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
                 inline const node::Leaf* leaf(const vec3& pos_) const noexcept override;
 
                 //  -- Collision --
-                inline std::optional<std::pair<equip::Entity*, double>>          ent_collision(const vec3& pos_, const vec3& dir_) const noexcept;
+                inline std::optional<std::pair<equip::Entity*, double>>          ent_collision(const vec3& pos_, const vec3& dir_) const noexcept; // NOLINT
                 inline std::optional<std::pair<equip::Entity*, geom::Collision>> ent_collision_info(const vec3& pos_, const vec3& dir_) const noexcept;
             };
 
