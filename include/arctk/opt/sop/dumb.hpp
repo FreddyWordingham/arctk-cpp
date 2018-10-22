@@ -17,10 +17,10 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/consts.hpp>
-#include <arctk/phys/cell.hpp>
-#include <arctk/phys/optics.hpp>
+#include <arctk/dom/cell.hpp>
+#include <arctk/opt/func.hpp>
+#include <arctk/opt/sop.hpp>
 #include <arctk/phys/photon.hpp>
-#include <arctk/phys/sop.hpp>
 #include <arctk/random.hpp>
 
 
