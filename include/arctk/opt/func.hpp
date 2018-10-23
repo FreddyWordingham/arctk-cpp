@@ -61,7 +61,8 @@ namespace arc //! arctk namespace
              *  @pre    ref_index_in_ must be greater than, or equal to, unity.
              *  @pre    ref_index_out_ must be greater than, or equal to, unity.
              *
-             *  @post   ref_prob must be between zero and unity.
+             *  @post   ref_prob must be non-negative.
+             *  @post   ref_prob must be less than, or equal to, unity.
              *
              *  @return Probability of reflection.
              */
@@ -88,7 +89,8 @@ namespace arc //! arctk namespace
 
                 const double ref_prob = 0.5 * (ref_prob_s + ref_prob_p);
 
-                assert((ref_prob >= 0.0) && (ref_prob <= 1.0));
+                assert(ref_prob >= 0.0);
+                assert(ref_prob <= 1.0);
 
                 return (ref_prob);
             }
