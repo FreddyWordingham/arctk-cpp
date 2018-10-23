@@ -136,11 +136,11 @@ namespace arc //! arctk namespace
     //  == ALIASES ==
     //  -- Float --
     template <size_t N>
-    using vecNf = math::Vec<float, N>; //!< N-dimensional float precision vec.  // NOLINT
+    using vecNf = math::Vec<float, N>; //!< N-dimensional float precision vec.
 
     //  -- Double --
     template <size_t N>
-    using vecN = math::Vec<double, N>; //!< N-dimensional double precision vec. // NOLINT
+    using vecN = math::Vec<double, N>; //!< N-dimensional double precision vec.
 
 
 
