@@ -22,7 +22,7 @@
 //  -- Arctk --
 #include <arctk/geom/shape.hpp>
 #include <arctk/geom/shape/triangle.hpp>
-#include <arctk/math.hpp>
+#include <arctk/math/vec3.hpp>
 
 
 
