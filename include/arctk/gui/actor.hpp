@@ -30,7 +30,7 @@
 #include <arctk/dom/region.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/gui/point.hpp>
-#include <arctk/math.hpp>
+#include <arctk/math/container.hpp>
 #include <arctk/phys.hpp>
 #include <arctk/tree.hpp>
 
