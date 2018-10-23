@@ -47,5 +47,10 @@ namespace arc //! arctk namespace
 
 
 
+//  == IMPLEMENTATION ==
+#include <arctk/math/compare.inl>
+
+
+
 //  == GUARD END ==
 #endif // ARCTK_MATH_COMPARE_HPP
