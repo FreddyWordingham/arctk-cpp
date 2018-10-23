@@ -14,6 +14,11 @@
 
 
 
+//  == BASE ==
+#include <arctk/math/vec.hpp>
+
+
+
 //  == IMPORTS ==
 //  -- Std --
 #include <cstddef>
