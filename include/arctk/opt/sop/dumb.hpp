@@ -16,7 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
-#include <arctk/consts.hpp>
+#include <arctk/consts/math.hpp>
 #include <arctk/dom/cell.hpp>
 #include <arctk/opt/func.hpp>
 #include <arctk/opt/sop.hpp>
