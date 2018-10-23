@@ -19,7 +19,7 @@
 #include <cassert>
 
 //  -- Arctk --
-#include <arctk/consts.hpp>
+#include <arctk/consts/num.hpp>
 #include <arctk/dom/cell.hpp>
 #include <arctk/equip/entity.hpp>
 #include <arctk/opt/func.hpp>
