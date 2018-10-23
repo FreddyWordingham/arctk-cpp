@@ -18,8 +18,33 @@
 //  -- Std --
 #include <optional>
 
-//  -- Arctk --
-#include <arctk/math.hpp>
+
+
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    namespace math //! mathematical namespace
+    {
+
+
+
+        //  == CLASS PROTOTYPES ==
+        template <typename T, size_t N>
+        class Vec;
+
+
+
+    } // namespace math
+
+
+
+    //  == ALIASES ==
+    //  -- Double --
+    using vec3 = math::Vec<double, 3>; //!< Three-dimensional double precision vec.
+
+
+
+} // namespace arc
 
 
 
