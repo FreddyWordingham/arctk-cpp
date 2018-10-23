@@ -73,5 +73,10 @@ namespace arc //! arctk namespace
 
 
 
+//  == IMPLEMENTATION ==
+#include <arctk/math/formula/linear.inl>
+
+
+
 //  == GUARD END ==
 #endif // ARCTK_MATH_FORMULA_LINEAR_HPP

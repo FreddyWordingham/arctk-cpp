@@ -14,14 +14,15 @@
 
 
 
+//  == BASE ==
+#include <arctk/math/formula.hpp>
+
+
+
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
 #include <cstddef>
-#include <limits>
-
-//  -- Arctk --
-#include <arctk/math/formula.hpp>
 
 
 
@@ -64,49 +65,14 @@ namespace arc //! arctk namespace
 
 
 
-            //  == INSTANTIATION ==
-            //  -- Constructors --
-            /**
-             *  Construct a nth-order polynomial function.
-             *
-             *  @param  coefs_  Array of polynomial coefficients.
-             */
-            template <size_t N>
-            inline Polynomial<N>::Polynomial(const std::array<double, N + 1>& coefs_) noexcept
-              : Formula(std::numeric_limits<double>::lowest(), std::numeric_limits<double>::max())
-              , _coefs(coefs_)
-            {
-            }
-
-
-
-            //  == OPERATORS ==
-            //  -- Call --
-            /**
-             *  Determine the result of the function for a given value.
-             *
-             *  @param  val_    Domain value of the function.
-             *
-             *  @return Result of the func for the given value.
-             */
-            template <size_t N>
-            inline double Polynomial<N>::operator()(const double val_) const noexcept
-            {
-                double result{};
-
-                for (size_t i = 0; i < _coefs.size(); ++i)
-                {
-                    result += _coefs[i] * std::pow(val_, i);
-                }
-
-                return (result);
-            }
-
-
-
         } // namespace formula
     }     // namespace math
 } // namespace arc
+
+
+
+//  == IMPLEMENTATION ==
+#include <arctk/math/formula/polynomial.inl>
 
 
 
