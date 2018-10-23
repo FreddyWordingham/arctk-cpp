@@ -20,7 +20,7 @@
 
 //  -- Arctk --
 #include <arctk/geom.hpp>
-#include <arctk/math.hpp>
+#include <arctk/math/vec3.hpp>
 
 
 
