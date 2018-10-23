@@ -72,9 +72,9 @@ namespace arc //! arctk namespace
              *  @return Spherical-polar vector.
              */
             template <typename T>
-            inline vec2 cart_to_polar(const vec2& cart_) noexcept
+            inline Vec<T, 2> cart_to_polar(const Vec<T, 2>& cart_) noexcept
             {
-                vec2 polar;
+                Vec<T, 2> polar;
 
                 polar.rho   = std::sqrt((cart_.x * cart_.x) + (cart_.y * cart_.y));
                 polar.theta = std::atan2(cart_.y, cart_.x);
@@ -91,9 +91,9 @@ namespace arc //! arctk namespace
              *  @return Spherical-polar vector.
              */
             template <typename T>
-            inline vec2 cart_to_polar(const T x_, const T y_) noexcept
+            inline Vec<T, 2> cart_to_polar(const T x_, const T y_) noexcept
             {
-                return (cart_to_polar(vec2(x_, y_)));
+                return (cart_to_polar(Vec<T, 2>(x_, y_)));
             }
 
             /**
@@ -104,9 +104,9 @@ namespace arc //! arctk namespace
              *  @return Spherical-polar vector.
              */
             template <typename T>
-            inline vec3 cart_to_polar(const vec3& cart_) noexcept
+            inline Vec<T, 3> cart_to_polar(const Vec<T, 3>& cart_) noexcept
             {
-                vec3 polar;
+                Vec<T, 3> polar;
 
                 polar.rho   = std::sqrt((cart_.x * cart_.x) + (cart_.y * cart_.y) + (cart_.z * cart_.z));
                 polar.theta = std::acos(cart_.z / polar.rho);
@@ -125,9 +125,9 @@ namespace arc //! arctk namespace
              *  @return Spherical-polar vector.
              */
             template <typename T>
-            inline vec3 cart_to_polar(const T x_, const T y_, const T z_) noexcept
+            inline Vec<T, 3> cart_to_polar(const T x_, const T y_, const T z_) noexcept
             {
-                return (cart_to_polar(vec3(x_, y_, z_)));
+                return (cart_to_polar(Vec<T, 3>(x_, y_, z_)));
             }
 
             /**
@@ -138,9 +138,9 @@ namespace arc //! arctk namespace
              *  @return Cartesian vector.
              */
             template <typename T>
-            inline vec2 polar_to_cart(const vec2& polar_) noexcept
+            inline Vec<T, 2> polar_to_cart(const Vec<T, 2>& polar_) noexcept
             {
-                vec2 cart;
+                Vec<T, 2> cart;
 
                 cart.x = polar_.rho * std::sin(polar_.theta);
                 cart.y = polar_.rho * std::cos(polar_.theta);
@@ -159,11 +159,11 @@ namespace arc //! arctk namespace
              *  @return Cartesian vector.
              */
             template <typename T>
-            inline vec2 polar_to_cart(const T rho_, const T theta_) noexcept
+            inline Vec<T, 2> polar_to_cart(const T rho_, const T theta_) noexcept
             {
                 assert(rho_ > 0.0);
 
-                return (polar_to_cart(vec2(rho_, theta_)));
+                return (polar_to_cart(Vec<T, 2>(rho_, theta_)));
             }
 
             /**
@@ -174,9 +174,9 @@ namespace arc //! arctk namespace
              *  @return Cartesian vector.
              */
             template <typename T>
-            inline vec3 polar_to_cart(const vec3& polar_) noexcept
+            inline Vec<T, 3> polar_to_cart(const Vec<T, 3>& polar_) noexcept
             {
-                vec3 cart;
+                Vec<T, 3> cart;
 
                 cart.x = polar_.rho * std::sin(polar_.theta) * std::cos(polar_.phi);
                 cart.y = polar_.rho * std::sin(polar_.theta) * std::sin(polar_.phi);
@@ -197,11 +197,11 @@ namespace arc //! arctk namespace
              *  @return Cartesian vector.
              */
             template <typename T>
-            inline vec3 polar_to_cart(const T rho_, const T theta_, const T phi_) noexcept
+            inline Vec<T, 3> polar_to_cart(const T rho_, const T theta_, const T phi_) noexcept
             {
                 assert(rho_ > 0.0);
 
-                return (polar_to_cart(vec3(rho_, theta_, phi_)));
+                return (polar_to_cart(Vec<T, 3>(rho_, theta_, phi_)));
             }
 
 
