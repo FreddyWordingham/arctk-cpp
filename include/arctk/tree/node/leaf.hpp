@@ -23,7 +23,7 @@
 //  -- Arctk --
 #include <arctk/equip.hpp>
 #include <arctk/geom.hpp>
-#include <arctk/math.hpp>
+#include <arctk/math/vec3.hpp>
 #include <arctk/tree/node.hpp>
 
 
