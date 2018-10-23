@@ -100,7 +100,8 @@ namespace arc //! arctk namespace
              *  @param  ref_index_in_   Refractive index of inbound material.
              *  @param  ref_index_out_  Refractive index of outbound material.
              *
-             *  @pre    ang_in_ must between zero and half Pi.
+             *  @pre    ang_in_ must be non-negative.
+             *  @pre    ang_in_ less than pi.
              *  @pre    ref_index_in_ must be greater than, or equal to, unity.
              *  @pre    ref_index_out_ must be greater than, or equal to, unity.
              *
@@ -110,7 +111,8 @@ namespace arc //! arctk namespace
              */
             inline double refraction_prob(const double ang_in_, const double ref_index_in_, const double ref_index_out_) noexcept
             {
-                assert((ang_in_ >= 0.0) && (ang_in_ < consts::math::HALF_PI));
+                assert(ang_in_ >= 0.0);
+                assert(ang_in_ < consts::math::HALF_PI);
                 assert(ref_index_in_ >= 1.0);
                 assert(ref_index_out_ >= 1.0);
 
