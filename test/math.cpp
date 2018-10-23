@@ -18,6 +18,7 @@
 #include <arctk/math/formula/linear.hpp>
 #include <arctk/math/formula/polynomial.hpp>
 #include <arctk/math/mat.hpp>
+#include <arctk/math/mat/transform.hpp>
 #include <arctk/math/mat2.hpp>
 #include <arctk/math/mat3.hpp>
 #include <arctk/math/mat4.hpp>
