@@ -46,23 +46,18 @@ namespace arc //! arctk namespace
 
     //  == ALIASES ==
     //  -- Int Vec --
-    using vec3i = math::Vec<int, 3>; //!< Three-dimensional integer precision vec.
     using vec4i = math::Vec<int, 4>; //!< Four-dimensional integer precision vec.
 
     //  -- Size Vec --
-    using vec3s = math::Vec<size_t, 3>; //!< Three-dimensional size precision vec.
     using vec4s = math::Vec<size_t, 4>; //!< Four-dimensional size precision vec.
 
     //  -- Float Vec --
-    using vec3f = math::Vec<float, 3>; //!< Three-dimensional float precision vec.
     using vec4f = math::Vec<float, 4>; //!< Four-dimensional float precision vec.
 
     //  -- Double Vec --
-    using vec3 = math::Vec<double, 3>; //!< Three-dimensional double precision vec.
     using vec4 = math::Vec<double, 4>; //!< Four-dimensional double precision vec.
 
     //  -- Long Double Vec --
-    using vec3l = math::Vec<long double, 3>; //!< Three-dimensional long double precision vec.
     using vec4l = math::Vec<long double, 4>; //!< Four-dimensional long double precision vec.
 
     //  -- Int Mat --
