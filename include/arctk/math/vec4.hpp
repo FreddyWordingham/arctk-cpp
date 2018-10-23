@@ -26,7 +26,7 @@
 
 
 
-//  == NAMESPACE ==
+//  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
     namespace math //! mathematical namespace
@@ -35,8 +35,21 @@ namespace arc //! arctk namespace
 
 
         //  == CLASS PROTOTYPES ==
-        template <typename T>
-        class Mat<T, 4>;
+        template <typename T, size_t N>
+        class Mat;
+
+
+
+    } // namespace math
+} // namespace arc
+
+
+
+//  == NAMESPACE ==
+namespace arc //! arctk namespace
+{
+    namespace math //! mathematical namespace
+    {
 
 
 
