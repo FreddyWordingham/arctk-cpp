@@ -24,7 +24,7 @@
 #include <vector>
 
 //  -- Arctk --
-#include <arctk/consts.hpp>
+#include <arctk/consts/format.hpp>
 #include <arctk/exit.hpp>
 #include <arctk/parse/read.hpp>
 
