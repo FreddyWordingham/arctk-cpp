@@ -18,7 +18,6 @@
 //  -- Std --
 #include <cstddef>
 #include <limits>
-#include <ostream>
 
 
 

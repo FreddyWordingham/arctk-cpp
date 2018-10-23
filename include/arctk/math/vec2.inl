@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cmath>
+#include <ostream>
 
 //  -- Arctk --
 #include <arctk/consts/format.hpp>
