@@ -64,5 +64,10 @@ namespace arc //! arctk namespace
 
 
 
+//  == IMPLEMENTATION ==
+#include <arctk/math/convert.inl>
+
+
+
 //  == GUARD END ==
 #endif // ARCTK_MATH_CONVERT_HPP
