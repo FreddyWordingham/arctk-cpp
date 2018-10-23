@@ -20,6 +20,7 @@
 #include <cmath>
 
 //  -- Arctk --
+#include <arctk/consts/math.hpp>
 #include <arctk/math.hpp>
 #include <arctk/random/generator.hpp>
 #include <arctk/type/temp.hpp>
