@@ -83,5 +83,10 @@ namespace arc //! arctk namespace
 
 
 
+//  == IMPLEMENTATION ==
+#include <arctk/dom/cell.inl>
+
+
+
 //  == GUARD END ==
 #endif // ARCTK_DOM_CELL_HPP
