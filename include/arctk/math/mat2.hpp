@@ -112,6 +112,18 @@ namespace arc //! arctk namespace
 
 
     } // namespace math
+
+
+
+    //  == ALIASES ==
+    //  -- Float --
+    using mat2f = math::Mat<float, 2>; //!< Two-dimensional float precision mat.
+
+    //  -- Double --
+    using mat2 = math::Mat<double, 2>; //!< Two-dimensional double precision mat.
+
+
+
 } // namespace arc
 
 

@@ -46,27 +46,22 @@ namespace arc //! arctk namespace
 
     //  == ALIASES ==
     //  -- Int Mat --
-    using mat2i = math::Mat<int, 2>; //!< Two-dimensional integer precision mat.
     using mat3i = math::Mat<int, 3>; //!< Three-dimensional integer precision mat.
     using mat4i = math::Mat<int, 4>; //!< Four-dimensional integer precision mat.
 
     //  -- Size Mat --
-    using mat2s = math::Mat<size_t, 2>; //!< Two-dimensional size precision mat.
     using mat3s = math::Mat<size_t, 3>; //!< Three-dimensional size precision mat.
     using mat4s = math::Mat<size_t, 4>; //!< Four-dimensional size precision mat.
 
     //  -- Float Mat --
-    using mat2f = math::Mat<float, 2>; //!< Two-dimensional float precision mat.
     using mat3f = math::Mat<float, 3>; //!< Three-dimensional float precision mat.
     using mat4f = math::Mat<float, 4>; //!< Four-dimensional float precision mat.
 
     //  -- Double Mat --
-    using mat2 = math::Mat<double, 2>; //!< Two-dimensional double precision mat.
     using mat3 = math::Mat<double, 3>; //!< Three-dimensional double precision mat.
     using mat4 = math::Mat<double, 4>; //!< Four-dimensional double precision mat.
 
     //  -- Long Double Mat --
-    using mat2l = math::Mat<long double, 2>; //!< Two-dimensional long double precision mat.
     using mat3l = math::Mat<long double, 3>; //!< Three-dimensional long double precision mat.
     using mat4l = math::Mat<long double, 4>; //!< Four-dimensional long double precision mat.
 
