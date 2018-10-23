@@ -128,6 +128,20 @@ namespace arc //! arctk namespace
 
 
     } // namespace math
+
+
+
+    //  == ALIASES ==
+    //  -- Float --
+    template <size_t N>
+    using matNf = math::Mat<float, N>; //!< N-dimensional float precision mat.
+
+    //  -- Double --
+    template <size_t N>
+    using matN = math::Mat<double, N>; //!< N-dimensional double precision mat.
+
+
+
 } // namespace arc
 
 

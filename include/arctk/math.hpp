@@ -49,36 +49,26 @@ namespace arc //! arctk namespace
     using mat2i = math::Mat<int, 2>; //!< Two-dimensional integer precision mat.
     using mat3i = math::Mat<int, 3>; //!< Three-dimensional integer precision mat.
     using mat4i = math::Mat<int, 4>; //!< Four-dimensional integer precision mat.
-    template <size_t N>
-    using matNi = math::Mat<int, N>; //!< N-dimensional integer precision mat.  // NOLINT
 
     //  -- Size Mat --
     using mat2s = math::Mat<size_t, 2>; //!< Two-dimensional size precision mat.
     using mat3s = math::Mat<size_t, 3>; //!< Three-dimensional size precision mat.
     using mat4s = math::Mat<size_t, 4>; //!< Four-dimensional size precision mat.
-    template <size_t N>
-    using matNs = math::Mat<size_t, N>; //!< N-dimensional size precision mat.  // NOLINT
 
     //  -- Float Mat --
     using mat2f = math::Mat<float, 2>; //!< Two-dimensional float precision mat.
     using mat3f = math::Mat<float, 3>; //!< Three-dimensional float precision mat.
     using mat4f = math::Mat<float, 4>; //!< Four-dimensional float precision mat.
-    template <size_t N>
-    using matNf = math::Mat<float, N>; //!< N-dimensional float precision mat.  // NOLINT
 
     //  -- Double Mat --
     using mat2 = math::Mat<double, 2>; //!< Two-dimensional double precision mat.
     using mat3 = math::Mat<double, 3>; //!< Three-dimensional double precision mat.
     using mat4 = math::Mat<double, 4>; //!< Four-dimensional double precision mat.
-    template <size_t N>
-    using matN = math::Mat<double, N>; //!< N-dimensional double precision mat. // NOLINT
 
     //  -- Long Double Mat --
     using mat2l = math::Mat<long double, 2>; //!< Two-dimensional long double precision mat.
     using mat3l = math::Mat<long double, 3>; //!< Three-dimensional long double precision mat.
     using mat4l = math::Mat<long double, 4>; //!< Four-dimensional long double precision mat.
-    template <size_t N>
-    using matNl = math::Mat<long double, N>; //!< N-dimensional long double precision mat.  // NOLINT
 
 
 
