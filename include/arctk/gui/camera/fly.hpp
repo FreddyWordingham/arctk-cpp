@@ -23,7 +23,6 @@
 
 //  -- Arctk --
 #include <arctk/gui/camera.hpp>
-#include <arctk/math.hpp>
 
 
 
