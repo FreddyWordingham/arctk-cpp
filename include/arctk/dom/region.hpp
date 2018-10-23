@@ -25,7 +25,7 @@
 #include <arctk/dom/cell.hpp>
 #include <arctk/geom.hpp>
 #include <arctk/index.hpp>
-#include <arctk/math.hpp>
+#include <arctk/math/vec3.hpp>
 
 
 
