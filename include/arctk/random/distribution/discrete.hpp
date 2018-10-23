@@ -20,7 +20,7 @@
 #include <vector>
 
 //  -- Arctk --
-#include <arctk/math.hpp>
+#include <arctk/math/compare.hpp>
 #include <arctk/prop/limits.hpp>
 #include <arctk/prop/order.hpp>
 #include <arctk/random/distribution.hpp>
