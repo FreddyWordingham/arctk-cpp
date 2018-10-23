@@ -126,6 +126,18 @@ namespace arc //! arctk namespace
 
 
     } // namespace math
+
+
+
+    //  == ALIASES ==
+    //  -- Float --
+    using vec2f = math::Vec<float, 2>; //!< Two-dimensional float precision vec.
+
+    //  -- Double --
+    using vec2 = math::Vec<double, 2>; //!< Two-dimensional double precision vec.
+
+
+
 } // namespace arc
 
 
