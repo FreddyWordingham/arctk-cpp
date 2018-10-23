@@ -22,7 +22,6 @@
 
 //  -- Arctk --
 #include <arctk/consts/format.hpp>
-#include <arctk/math/vec.hpp>
 
 
 

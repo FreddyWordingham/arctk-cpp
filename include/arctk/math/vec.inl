@@ -22,6 +22,7 @@
 
 //  -- Arctk --
 #include <arctk/consts/format.hpp>
+#include <arctk/math/mat.hpp>
 
 
 
