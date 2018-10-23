@@ -29,8 +29,9 @@
 #include <arctk/geom/shape/box.hpp>
 #include <arctk/geom/shape/triangle.hpp>
 #include <arctk/index.hpp>
-#include <arctk/math.hpp>
+#include <arctk/math/compare.hpp>
 #include <arctk/math/mat/transform.hpp>
+#include <arctk/math/vec3.hpp>
 #include <arctk/search/index.hpp>
 
 
