@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
                 template <typename T>
                 constexpr inline Mat<T, 4> translate(const Vec<T, 3>& trans_) noexcept;
                 template <typename T>
-                constexpr inline Mat<T, 4> transform(const Vec<T, 3>& scale_, const Vec<T, 3>& rot_, const Vec<T, 3>& trans_) noexcept;
+                constexpr inline Mat<T, 4> scale_rotate_trans(const Vec<T, 3>& scale_, const Vec<T, 3>& rot_, const Vec<T, 3>& trans_) noexcept;
 
 
 

@@ -172,7 +172,7 @@ namespace arc //! arctk namespace
                  *  @return Transformation matrix.
                  */
                 template <typename T>
-                constexpr inline Mat<T, 4> transform(const Vec<T, 3>& scale_, const Vec<T, 3>& rot_, const Vec<T, 3>& trans_) noexcept
+                constexpr inline Mat<T, 4> scale_rotate_trans(const Vec<T, 3>& scale_, const Vec<T, 3>& rot_, const Vec<T, 3>& trans_) noexcept
                 {
                     return (translate(trans_) * rotate(rot_) * scale(scale_));
                 }
