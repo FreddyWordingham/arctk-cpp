@@ -21,7 +21,7 @@
 
 //  -- Arctk --
 #include <arctk/geom.hpp>
-#include <arctk/math.hpp>
+#include <arctk/math/vec3.hpp>
 #include <arctk/tree/node.hpp>
 #include <arctk/tree/node/branch.hpp>
 #include <arctk/tree/node/leaf.hpp>
