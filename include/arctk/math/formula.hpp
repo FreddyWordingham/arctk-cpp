@@ -14,12 +14,6 @@
 
 
 
-//  == IMPORTS ==
-//  -- Std --
-#include <cassert>
-
-
-
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -71,51 +65,13 @@ namespace arc //! arctk namespace
 
 
 
-        //  == INSTANTIATION ==
-        //  -- Constructors --
-        /**
-         *  Construct a formula with given domain bounds.
-         *
-         *  @param  min_    Minimum domain bound of the formula.
-         *  @param  max_    Maximum domain bound of the formula.
-         *
-         *  @pre    min_ must be less than max_.
-         */
-        inline Formula::Formula(const double min_, const double max_) noexcept
-          : _min(min_)
-          , _max(max_)
-        {
-            assert(min_ < max_);
-        }
-
-
-
-        //  == METHODS ==
-        //  -- Getters --
-        /**
-         *  Get the minimum bound of the formula.
-         *
-         *  @return Minimum bound of the formula.
-         */
-        inline double Formula::min() const noexcept
-        {
-            return (_min);
-        }
-
-        /**
-         *  Get the maximum bound of the formula.
-         *
-         *  @return Maximum bound of the formula.
-         */
-        inline double Formula::max() const noexcept
-        {
-            return (_max);
-        }
-
-
-
     } // namespace math
 } // namespace arc
+
+
+
+//  == IMPLEMENTATION ==
+#include <arctk/math/formula.inl>
 
 
 
