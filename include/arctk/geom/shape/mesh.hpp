@@ -30,6 +30,7 @@
 #include <arctk/geom/shape/triangle.hpp>
 #include <arctk/index.hpp>
 #include <arctk/math.hpp>
+#include <arctk/math/mat/transform.hpp>
 #include <arctk/search/index.hpp>
 
 
@@ -178,7 +179,7 @@ namespace arc //! arctk namespace
              *  @post   _tris may not be empty.
              */
             inline Mesh::Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
-              : Mesh(transform_poss(poss_, math::mat::transform(scale_, rot_, trans_)), transform_norms(norms_, math::mat::transform(scale_, rot_, trans_)), faces_)
+              : Mesh(transform_poss(poss_, math::mat::transform::scale_rotate_trans(scale_, rot_, trans_)), transform_norms(norms_, math::mat::transform::scale_rotate_trans(scale_, rot_, trans_)), faces_)
             {
                 assert(poss_.size() >= 3);
                 assert(!norms_.empty());
