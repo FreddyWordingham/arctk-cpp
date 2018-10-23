@@ -21,7 +21,9 @@
 
 //  -- Arctk --
 #include <arctk/consts/math.hpp>
-#include <arctk/math.hpp>
+#include <arctk/math/compare.hpp>
+#include <arctk/math/pow.hpp>
+#include <arctk/math/vec3.hpp>
 #include <arctk/random/generator.hpp>
 #include <arctk/type/temp.hpp>
 
