@@ -1,0 +1,534 @@
+./include/arctk//tree/node.hpp:#include <cassert>
+./include/arctk//tree/node.hpp:            assert(min_.x <= max_.x);
+./include/arctk//tree/node.hpp:            assert(min_.y <= max_.y);
+./include/arctk//tree/node.hpp:            assert(min_.z <= max_.z);
+./include/arctk//tree/root.hpp:#include <cassert>
+./include/arctk//tree/root.hpp:            assert(min_.x <= max_.x);
+./include/arctk//tree/root.hpp:            assert(min_.y <= max_.y);
+./include/arctk//tree/root.hpp:            assert(min_.z <= max_.z);
+./include/arctk//tree/root.hpp:            assert(tar_tris_ > 0);
+./include/arctk//tree/root.hpp:            assert(min_.x <= max_.x);
+./include/arctk//tree/root.hpp:            assert(min_.y <= max_.y);
+./include/arctk//tree/root.hpp:            assert(min_.z <= max_.z);
+./include/arctk//tree/root.hpp:            assert(tar_tris_ > 0);
+./include/arctk//tree/node/branch.hpp:#include <cassert>
+./include/arctk//tree/node/branch.hpp:                assert(min_.x <= max_.x);
+./include/arctk//tree/node/branch.hpp:                assert(min_.y <= max_.y);
+./include/arctk//tree/node/branch.hpp:                assert(min_.z <= max_.z);
+./include/arctk//tree/node/branch.hpp:                assert(cur_depth_ < max_depth_);
+./include/arctk//tree/node/branch.hpp:                assert(min_.x <= max_.x);
+./include/arctk//tree/node/branch.hpp:                assert(min_.y <= max_.y);
+./include/arctk//tree/node/branch.hpp:                assert(min_.z <= max_.z);
+./include/arctk//tree/node/branch.hpp:                assert(cur_depth_ < max_depth_);
+./include/arctk//tree/node/branch.hpp:                assert(intersect(pos_));
+./include/arctk//tree/node/leaf.hpp:#include <cassert>
+./include/arctk//tree/node/leaf.hpp:                assert(min_.x <= max_.x);
+./include/arctk//tree/node/leaf.hpp:                assert(min_.y <= max_.y);
+./include/arctk//tree/node/leaf.hpp:                assert(min_.z <= max_.z);
+./include/arctk//tree/node/leaf.hpp:                    assert(!ent_tris_[i].second.empty());
+./include/arctk//tree/node/leaf.hpp:                        assert(intersect(*ent_tris_[i].second[j]));
+./include/arctk//tree/node/leaf.hpp:                assert(intersect(pos_));
+./include/arctk//tree/node/leaf.hpp:                assert(dir_.normalised());
+./include/arctk//tree/node/leaf.hpp:                assert(dir_.normalised());
+./include/arctk//prop/contents.hpp:                assert(!cont_.empty());
+./include/arctk//prop/contents.hpp:                assert(prop::order::monotonic(cont_));
+./include/arctk//prop/order.hpp:                assert(!cont_.empty());
+./include/arctk//prop/order.hpp:                assert(!cont_.empty());
+./include/arctk//prop/order.hpp:                assert(!cont_.empty());
+./include/arctk//prop/order.hpp:                assert(!cont_.empty());
+./include/arctk//parse/read.hpp:#include <cassert>
+./include/arctk//parse/read.hpp:                assert(str_ != nullptr);
+./include/arctk//parse/read.hpp:                assert(!path_.empty());
+./include/arctk//parse/read.hpp:                static_assert(std::is_fundamental<T>::value);
+./include/arctk//parse/read.hpp:                assert(str_ != nullptr);
+./include/arctk//parse/read.hpp:                assert(str_ != nullptr);
+./include/arctk//parse/read.hpp:                assert(str_ != nullptr);
+./include/arctk//parse/read.hpp:                assert(str_ != nullptr);
+./include/arctk//parse/read.hpp:                assert(str_ != nullptr);
+./include/arctk//parse/read.hpp:                assert(str_ != nullptr);
+./include/arctk//parse/read.hpp:                assert(tokens_ != nullptr);
+./include/arctk//parse/read.hpp:                assert(sizeof...(A) == tokens_->size());
+./include/arctk//parse/read.hpp:                assert(sizeof...(A) == sizeof...(I));
+./include/arctk//parse/read.hpp:                assert(str_ != nullptr);
+./include/arctk//parse/read.hpp:                assert(str_ != nullptr);
+./include/arctk//parse/read.hpp:                assert(str_ != nullptr);
+./include/arctk//parse/read.hpp:                assert(str_ != nullptr);
+./include/arctk//parse/read.hpp:                assert(str_ != nullptr);
+./include/arctk//parse/read.hpp:                assert(str_ != nullptr);
+./include/arctk//parse/read.hpp:                assert(str_ != nullptr);
+./include/arctk//parse/read.hpp:                assert(str_ != nullptr);
+./include/arctk//parse/read.hpp:                assert(str_ != nullptr);
+./include/arctk//parse/print.hpp:                static_assert(sizeof...(A) > 0);
+./include/arctk//parse/print.hpp:                static_assert(sizeof...(A) == (sizeof...(I) + 1));
+./include/arctk//parse/write.hpp:#include <cassert>
+./include/arctk//parse/write.hpp:                assert(frac_ >= 0.0);
+./include/arctk//parse/write.hpp:                assert(frac_ <= 1.0);
+./include/arctk//parse/write.hpp:                (assert(type::temp::is_vector<A>::value), ...);
+./include/arctk//parse/write.hpp:                (assert(vecs_.size() == vec_.size()), ...);
+./include/arctk//parse/write.hpp:                assert(width_ >= 8);
+./include/arctk//parse/process.hpp:#include <cassert>
+./include/arctk//parse/process.hpp:                assert(str_ != nullptr);
+./include/arctk//parse/process.hpp:                assert(str_ != nullptr);
+./include/arctk//parse/process.hpp:                assert(str_ != nullptr);
+./include/arctk//equip/entity/body.inl:#include <cassert>
+./include/arctk//equip/entity/body.inl:                assert(!serial_.empty());
+./include/arctk//equip/entity/body.inl:                assert(scale_.x > 0.0);
+./include/arctk//equip/entity/body.inl:                assert(scale_.y > 0.0);
+./include/arctk//equip/entity/body.inl:                assert(scale_.z > 0.0);
+./include/arctk//equip/entity/body.inl:                assert(rng_ != nullptr);
+./include/arctk//equip/entity/body.inl:                assert(phot_ != nullptr);
+./include/arctk//equip/entity/body.inl:                assert(mat_ != nullptr);
+./include/arctk//equip/entity/body.inl:                assert(sop_ != nullptr);
+./include/arctk//equip/entity/body.inl:                assert(cell_ != nullptr);
+./include/arctk//equip/entity/body.inl:                assert(rng_ != nullptr);
+./include/arctk//equip/entity/body.inl:                assert(phot_ != nullptr);
+./include/arctk//equip/entity/body.inl:                assert(mat_ != nullptr);
+./include/arctk//equip/entity/body.inl:                assert(sop_ != nullptr);
+./include/arctk//equip/entity/body.inl:                assert(cell_ != nullptr);
+./include/arctk//equip/entity/mirror.hpp:#include <cassert>
+./include/arctk//equip/entity/mirror.hpp:                assert(!serial_.empty());
+./include/arctk//equip/entity/mirror.hpp:                assert(scale_.x > 0.0);
+./include/arctk//equip/entity/mirror.hpp:                assert(scale_.y > 0.0);
+./include/arctk//equip/entity/mirror.hpp:                assert(scale_.z > 0.0);
+./include/arctk//equip/entity/mirror.hpp:                assert(front_ref_ >= 0.0);
+./include/arctk//equip/entity/mirror.hpp:                assert(front_ref_ <= 1.0);
+./include/arctk//equip/entity/mirror.hpp:                assert(back_ref_ >= 0.0);
+./include/arctk//equip/entity/mirror.hpp:                assert(back_ref_ <= 1.0);
+./include/arctk//equip/entity/mirror.hpp:                assert(rng_ != nullptr);
+./include/arctk//equip/entity/mirror.hpp:                assert(phot_ != nullptr);
+./include/arctk//equip/entity/mirror.hpp:                assert(sop_ != nullptr);
+./include/arctk//equip/entity/mirror.hpp:                assert(cell_ != nullptr);
+./include/arctk//equip/entity/mirror.hpp:                assert(rng_ != nullptr);
+./include/arctk//equip/entity/mirror.hpp:                assert(phot_ != nullptr);
+./include/arctk//equip/entity/mirror.hpp:                assert(sop_ != nullptr);
+./include/arctk//equip/entity/mirror.hpp:                assert(cell_ != nullptr);
+./include/arctk//equip/entity/light.hpp:#include <cassert>
+./include/arctk//equip/entity/light.hpp:                assert(!serial_.empty());
+./include/arctk//equip/entity/light.hpp:                assert(scale_.x > 0.0);
+./include/arctk//equip/entity/light.hpp:                assert(scale_.y > 0.0);
+./include/arctk//equip/entity/light.hpp:                assert(scale_.z > 0.0);
+./include/arctk//equip/entity/light.hpp:                assert(power_ > 0.0);
+./include/arctk//equip/entity/light.hpp:                assert(phot_ != nullptr);
+./include/arctk//equip/entity/light.hpp:                assert(sop_ != nullptr);
+./include/arctk//equip/entity/light.hpp:                assert(cell_ != nullptr);
+./include/arctk//equip/entity/light.hpp:                assert(phot_ != nullptr);
+./include/arctk//equip/entity/light.hpp:                assert(sop_ != nullptr);
+./include/arctk//equip/entity/light.hpp:                assert(cell_ != nullptr);
+./include/arctk//equip/entity/light/laser.hpp:#include <cassert>
+./include/arctk//equip/entity/light/laser.hpp:                    assert(!serial_.empty());
+./include/arctk//equip/entity/light/laser.hpp:                    assert(scale_.x > 0.0);
+./include/arctk//equip/entity/light/laser.hpp:                    assert(scale_.y > 0.0);
+./include/arctk//equip/entity/light/laser.hpp:                    assert(scale_.z > 0.0);
+./include/arctk//equip/entity/light/laser.hpp:                    assert(power_ > 0.0);
+./include/arctk//equip/entity/light/laser.hpp:                    assert(wavelength_ > 0.0);
+./include/arctk//equip/entity/light/laser.hpp:                    assert(energy_ > 0.0);
+./include/arctk//equip/entity.inl:#include <cassert>
+./include/arctk//equip/entity.inl:            assert(!serial_.empty());
+./include/arctk//equip/entity.inl:            assert(scale_.x > 0.0);
+./include/arctk//equip/entity.inl:            assert(scale_.y > 0.0);
+./include/arctk//equip/entity.inl:            assert(scale_.z > 0.0);
+./include/arctk//equip/entity.inl:            assert(rng_ != nullptr);
+./include/arctk//equip/entity.inl:            assert(phot_ != nullptr);
+./include/arctk//equip/entity.inl:            assert(mat_ != nullptr);
+./include/arctk//equip/entity.inl:            assert(sop_ != nullptr);
+./include/arctk//equip/entity.inl:            assert(cell_ != nullptr);
+./include/arctk//math/mat.inl:#include <cassert>
+./include/arctk//math/mat.inl:            static_assert(sizeof...(A) == N);
+./include/arctk//math/mat.inl:            static_assert(sizeof...(A) == N);
+./include/arctk//math/mat.inl:            assert(index_ < N);
+./include/arctk//math/mat.inl:            assert(index_ < N);
+./include/arctk//math/mat.inl:            assert(row_ < N);
+./include/arctk//math/mat.inl:            assert(col_ < N);
+./include/arctk//math/mat.inl:            assert(row_ < N);
+./include/arctk//math/mat.inl:            assert(col_ < N);
+./include/arctk//math/mat2.inl:#include <cassert>
+./include/arctk//math/mat2.inl:            assert(index_ < 2);
+./include/arctk//math/mat2.inl:            assert(index_ < 2);
+./include/arctk//math/mat3.inl:#include <cassert>
+./include/arctk//math/mat3.inl:            assert(index_ < 3);
+./include/arctk//math/mat3.inl:            assert(index_ < 3);
+./include/arctk//math/mat/transform.inl:                    assert(axis_.normalised());
+./include/arctk//math/formula.inl:#include <cassert>
+./include/arctk//math/formula.inl:            assert(min_ < max_);
+./include/arctk//math/mat4.inl:#include <cassert>
+./include/arctk//math/mat4.inl:            assert(index_ < 4);
+./include/arctk//math/mat4.inl:            assert(index_ < 4);
+./include/arctk//math/vec3.inl:            assert(index_ < 3);
+./include/arctk//math/vec3.inl:            assert(index_ < 3);
+./include/arctk//math/vec3.inl:            assert(normalised());
+./include/arctk//math/vec3.inl:            assert(axis_.normalised());
+./include/arctk//math/vec2.inl:            assert(index_ < 2);
+./include/arctk//math/vec2.inl:            assert(index_ < 2);
+./include/arctk//math/vec2.inl:            assert(tol_ > 0);
+./include/arctk//math/vec2.inl:            assert(normalised());
+./include/arctk//math/mat.hpp:            static_assert(N > 4);
+./include/arctk//math/vec4.inl:            assert(index_ < 4);
+./include/arctk//math/vec4.inl:            assert(index_ < 4);
+./include/arctk//math/vec4.inl:            assert(normalised());
+./include/arctk//math/convert.inl:#include <cassert>
+./include/arctk//math/convert.inl:                assert(rho_ > 0.0);
+./include/arctk//math/convert.inl:                assert(rho_ > 0.0);
+./include/arctk//math/vec.inl:#include <cassert>
+./include/arctk//math/vec.inl:            static_assert(sizeof...(A) == N);
+./include/arctk//math/vec.inl:            static_assert((sizeof...(A) + M) == N);
+./include/arctk//math/vec.inl:            static_assert(sizeof...(A) == N);
+./include/arctk//math/vec.inl:            static_assert((sizeof...(A) + M) == N);
+./include/arctk//math/vec.inl:            assert(index_ < N);
+./include/arctk//math/vec.inl:            assert(index_ < N);
+./include/arctk//math/vec.inl:            assert(tol_ > 0);
+./include/arctk//math/vec.inl:            assert(normalised());
+./include/arctk//math/formula/constant.inl:#include <cassert>
+./include/arctk//math/formula/constant.inl:                assert(xs_.size() > 1);
+./include/arctk//math/formula/constant.inl:                assert(ys_.size() > 1);
+./include/arctk//math/formula/constant.inl:                assert(xs_.size() == ys_.size());
+./include/arctk//math/formula/constant.inl:                assert(prop::order::ascending(xs_));
+./include/arctk//math/formula/constant.inl:                assert(val_ >= _min);
+./include/arctk//math/formula/constant.inl:                assert(val_ <= _max);
+./include/arctk//math/formula/linear.inl:#include <cassert>
+./include/arctk//math/formula/linear.inl:                assert(xs_.size() > 1);
+./include/arctk//math/formula/linear.inl:                assert(ys_.size() > 1);
+./include/arctk//math/formula/linear.inl:                assert(xs_.size() == ys_.size());
+./include/arctk//math/formula/linear.inl:                assert(prop::order::ascending(xs_));
+./include/arctk//math/formula/linear.inl:                assert(xs_.size() > 1);
+./include/arctk//math/formula/linear.inl:                assert(ys_.size() > 1);
+./include/arctk//math/formula/linear.inl:                assert(xs_.size() == ys_.size());
+./include/arctk//math/formula/linear.inl:                assert(prop::order::ascending(xs_));
+./include/arctk//math/formula/linear.inl:                assert(val_ >= _min);
+./include/arctk//math/formula/linear.inl:                assert(val_ <= _max);
+./include/arctk//math/vec.hpp:            static_assert(N > 4);
+./include/arctk//phys/photon.inl:            assert(dir_.normalised());
+./include/arctk//phys/photon.inl:            assert(wavelength_ > 0.0);
+./include/arctk//phys/photon.inl:            assert(energy_ > 0.0);
+./include/arctk//phys/photon.inl:            assert(time_ >= 0.0);
+./include/arctk//phys/photon.inl:            assert(ref_index_ >= 1.0);
+./include/arctk//phys/photon.inl:            assert(cell_->intersect(_pos));
+./include/arctk//phys/photon.inl:            assert(_dir.normalised());
+./include/arctk//phys/photon.inl:            assert(_dir.normalised());
+./include/arctk//phys/photon.inl:            assert(dir_.normalised());
+./include/arctk//phys/photon.inl:            assert(mult_ > 0.0);
+./include/arctk//phys/photon.inl:            assert(mult_ <= 1.0);
+./include/arctk//search/index.hpp:                assert(!cont_.empty());
+./include/arctk//search/index.hpp:                assert(prop::order::ascending(cont_));
+./include/arctk//search/index.hpp:                assert(prop::contents::within(cont_, val_));
+./include/arctk//search/index.hpp:                assert(!cont_.empty());
+./include/arctk//search/index.hpp:                assert(prop::order::ascending(cont_));
+./include/arctk//search/index.hpp:                assert(prop::contents::within(cont_, val_));
+./include/arctk//search/value.hpp:                assert(!cont_.empty());
+./include/arctk//search/value.hpp:                assert(!cont_.empty());
+./include/arctk//search/value.hpp:                assert(!cont_.empty());
+./include/arctk//search/value.hpp:                assert(!cont_.empty());
+./include/arctk//sys/balancer.hpp:#include <cassert>
+./include/arctk//sys/balancer.hpp:            assert(target_ > 0);
+./include/arctk//sys/balancer.hpp:            assert(num_threads_ > 0);
+./include/arctk//sys/balancer.hpp:            assert(update_delta_ > 0);
+./include/arctk//sys/balancer.hpp:            assert(!_finished);
+./include/arctk//sys/balancer.hpp:            assert(thread_index_ < _counts.size());
+./include/arctk//sys/file.hpp:#include <cassert>
+./include/arctk//sys/file.hpp:                assert(!path_.empty());
+./include/arctk//sys/file.hpp:                assert(!path_.empty());
+./include/arctk//sys/args.hpp:#include <cassert>
+./include/arctk//sys/args.hpp:            static_assert(sizeof...(A) > 0);
+./include/arctk//sys/args.hpp:            assert(argc_ > 0);
+./include/arctk//sys/args.hpp:            assert(argc_ > 0);
+./include/arctk//geom/shape/triangle.hpp:#include <cassert>
+./include/arctk//geom/shape/triangle.hpp:                assert(norms_[index::vertex::ALPHA].normalised());
+./include/arctk//geom/shape/triangle.hpp:                assert(norms_[index::vertex::BETA].normalised());
+./include/arctk//geom/shape/triangle.hpp:                assert(norms_[index::vertex::GAMMA].normalised());
+./include/arctk//geom/shape/triangle.hpp:                assert(_plane_norm.normalised());
+./include/arctk//geom/shape/triangle.hpp:                assert(rng_ != nullptr);
+./include/arctk//geom/shape/triangle.hpp:                assert(rng_ != nullptr);
+./include/arctk//geom/shape/triangle.hpp:                assert(norm.normalised());
+./include/arctk//geom/shape/triangle.hpp:                assert(dir_.normalised());
+./include/arctk//geom/shape/triangle.hpp:                assert(dir_.normalised());
+./include/arctk//geom/shape/mesh.hpp:#include <cassert>
+./include/arctk//geom/shape/mesh.hpp:                assert(!serial_.empty());
+./include/arctk//geom/shape/mesh.hpp:                assert(!serial_.empty());
+./include/arctk//geom/shape/mesh.hpp:                assert(scale_.x > 0.0);
+./include/arctk//geom/shape/mesh.hpp:                assert(scale_.y > 0.0);
+./include/arctk//geom/shape/mesh.hpp:                assert(scale_.z > 0.0);
+./include/arctk//geom/shape/mesh.hpp:                assert(poss_.size() >= 3);
+./include/arctk//geom/shape/mesh.hpp:                assert(!norms_.empty());
+./include/arctk//geom/shape/mesh.hpp:                assert(!faces_.empty());
+./include/arctk//geom/shape/mesh.hpp:                assert(scale_.x > 0.0);
+./include/arctk//geom/shape/mesh.hpp:                assert(scale_.y > 0.0);
+./include/arctk//geom/shape/mesh.hpp:                assert(scale_.z > 0.0);
+./include/arctk//geom/shape/mesh.hpp:                assert(!_tris.empty());
+./include/arctk//geom/shape/mesh.hpp:                assert(poss_.size() >= 3);
+./include/arctk//geom/shape/mesh.hpp:                assert(!norms_.empty());
+./include/arctk//geom/shape/mesh.hpp:                assert(!faces_.empty());
+./include/arctk//geom/shape/mesh.hpp:                assert(!_tris.empty());
+./include/arctk//geom/shape/mesh.hpp:                assert(!serial_.empty());
+./include/arctk//geom/shape/mesh.hpp:                assert(poss.size() >= 3);
+./include/arctk//geom/shape/mesh.hpp:                assert(!serial_.empty());
+./include/arctk//geom/shape/mesh.hpp:                assert(!norms.empty());
+./include/arctk//geom/shape/mesh.hpp:                assert(!serial_.empty());
+./include/arctk//geom/shape/mesh.hpp:                assert(!faces.empty());
+./include/arctk//geom/shape/mesh.hpp:                assert(poss_.size() >= 3);
+./include/arctk//geom/shape/mesh.hpp:                assert(!norms_.empty());
+./include/arctk//geom/shape/mesh.hpp:                assert(poss_.size() >= 3);
+./include/arctk//geom/shape/mesh.hpp:                assert(!norms_.empty());
+./include/arctk//geom/shape/mesh.hpp:                assert(!faces_.empty());
+./include/arctk//geom/shape/mesh.hpp:                        assert(pos_indices[j] < poss_.size());
+./include/arctk//geom/shape/mesh.hpp:                        assert(norm_indices[j] < norms_.size());
+./include/arctk//geom/shape/mesh.hpp:                assert(!tris.empty());
+./include/arctk//geom/shape/mesh.hpp:                assert(math::compare::unity(areas.back()));
+./include/arctk//geom/shape/mesh.hpp:                assert(index_ < _tris.size());
+./include/arctk//geom/shape/mesh.hpp:                assert(rng_ != nullptr);
+./include/arctk//geom/shape/mesh.hpp:                assert(rng_ != nullptr);
+./include/arctk//geom/shape/mesh.hpp:                assert(dir_.normalised());
+./include/arctk//geom/shape/mesh.hpp:                assert(dir_.normalised());
+./include/arctk//geom/shape/box.hpp:#include <cassert>
+./include/arctk//geom/shape/box.hpp:                assert(min_.x <= max_.x);
+./include/arctk//geom/shape/box.hpp:                assert(min_.y <= max_.y);
+./include/arctk//geom/shape/box.hpp:                assert(min_.z <= max_.z);
+./include/arctk//geom/shape/box.hpp:                assert(dir_.normalised());
+./include/arctk//geom/collision.hpp:#include <cassert>
+./include/arctk//geom/collision.hpp:            assert(dist_ > 0.0);
+./include/arctk//geom/collision.hpp:            assert(norm_.normalised());
+./include/arctk//gui/keymap.hpp:#include <cassert>
+./include/arctk//gui/keymap.hpp:            assert(key_ != QUIT_KEY);
+./include/arctk//gui/keymap.hpp:            assert(key_ != QUIT_KEY);
+./include/arctk//gui/keymap.hpp:            assert(_map.find(key_) != _map.end());
+./include/arctk//gui/keymap.hpp:            assert(cam_ != nullptr);
+./include/arctk//gui/keymap.hpp:            assert(cam_ != nullptr);
+./include/arctk//gui/point.hpp:#include <cassert>
+./include/arctk//gui/point.hpp:            assert(time_ >= 0.0f);
+./include/arctk//gui/point.hpp:            assert(wavelength_ > 0.0f);
+./include/arctk//gui/window.hpp:#include <cassert>
+./include/arctk//gui/window.hpp:            assert(!title_.empty());
+./include/arctk//gui/window.hpp:            assert(width_ > 0);
+./include/arctk//gui/window.hpp:            assert(height_ > 0);
+./include/arctk//gui/window.hpp:            assert(aa_samples_ > 0);
+./include/arctk//gui/window.hpp:            assert(!title_.empty());
+./include/arctk//gui/window.hpp:            assert(width_ > 0);
+./include/arctk//gui/window.hpp:            assert(height_ > 0);
+./include/arctk//gui/window.hpp:            assert(aa_samples_ > 0);
+./include/arctk//gui/window.hpp:            assert(col_.r >= 0.0f);
+./include/arctk//gui/window.hpp:            assert(col_.r <= 1.0f);
+./include/arctk//gui/window.hpp:            assert(col_.g >= 0.0f);
+./include/arctk//gui/window.hpp:            assert(col_.g <= 1.0f);
+./include/arctk//gui/window.hpp:            assert(col_.b >= 0.0f);
+./include/arctk//gui/window.hpp:            assert(col_.b <= 1.0f);
+./include/arctk//gui/window.hpp:            assert(col_.r >= 0.0f);
+./include/arctk//gui/window.hpp:            assert(col_.r <= 1.0f);
+./include/arctk//gui/window.hpp:            assert(col_.g >= 0.0f);
+./include/arctk//gui/window.hpp:            assert(col_.g <= 1.0f);
+./include/arctk//gui/window.hpp:            assert(col_.b >= 0.0f);
+./include/arctk//gui/window.hpp:            assert(col_.b <= 1.0f);
+./include/arctk//gui/window.hpp:            assert(col_.a >= 0.0f);
+./include/arctk//gui/window.hpp:            assert(col_.a <= 1.0f);
+./include/arctk//gui/lens/perspective.hpp:#include <cassert>
+./include/arctk//gui/lens/perspective.hpp:                assert(fov_ > 0.0f);
+./include/arctk//gui/lens/orthographic.hpp:#include <cassert>
+./include/arctk//gui/lens/orthographic.hpp:                assert(min_.x < max_.x);
+./include/arctk//gui/lens/orthographic.hpp:                assert(min_.y < max_.y);
+./include/arctk//gui/lens/orthographic.hpp:                assert(min_.z < max_.z);
+./include/arctk//gui/actor.hpp:#include <cassert>
+./include/arctk//gui/actor.hpp:            assert((verts_.size() % math::container::sum(layout_)) == 0);
+./include/arctk//gui/actor.hpp:            assert(((verts_.size() * 3) % math::container::sum(layout_)) == 0);
+./include/arctk//gui/actor.hpp:            assert(col_.r >= 0.0f);
+./include/arctk//gui/actor.hpp:            assert(col_.r <= 1.0f);
+./include/arctk//gui/actor.hpp:            assert(col_.g >= 0.0f);
+./include/arctk//gui/actor.hpp:            assert(col_.g <= 1.0f);
+./include/arctk//gui/actor.hpp:            assert(col_.b >= 0.0f);
+./include/arctk//gui/actor.hpp:            assert(col_.b <= 1.0f);
+./include/arctk//gui/actor.hpp:            assert(col_.r >= 0.0f);
+./include/arctk//gui/actor.hpp:            assert(col_.r <= 1.0f);
+./include/arctk//gui/actor.hpp:            assert(col_.g >= 0.0f);
+./include/arctk//gui/actor.hpp:            assert(col_.g <= 1.0f);
+./include/arctk//gui/actor.hpp:            assert(col_.b >= 0.0f);
+./include/arctk//gui/actor.hpp:            assert(col_.b <= 1.0f);
+./include/arctk//gui/actor.hpp:            assert(col_.a >= 0.0f);
+./include/arctk//gui/actor.hpp:            assert(col_.a <= 1.0f);
+./include/arctk//gui/actor.hpp:                assert(min_.x < max_.x);
+./include/arctk//gui/actor.hpp:                assert(min_.y < max_.y);
+./include/arctk//gui/actor.hpp:                assert(cell_size_.x > 0.0f);
+./include/arctk//gui/actor.hpp:                assert(cell_size_.y > 0.0f);
+./include/arctk//gui/actor.hpp:                assert(length_ > 0.0f);
+./include/arctk//gui/actor.hpp:                assert(width_ > 0.0f);
+./include/arctk//gui/actor.hpp:                assert(length_ > 0.0f);
+./include/arctk//gui/actor.hpp:                assert(width_ > 0.0f);
+./include/arctk//gui/actor.hpp:                assert(length_ > 0.0f);
+./include/arctk//gui/actor.hpp:                assert(width_ > 0.0f);
+./include/arctk//gui/shader.hpp:#include <cassert>
+./include/arctk//gui/shader.hpp:            assert(!vert_code_.empty());
+./include/arctk//gui/shader.hpp:            assert(!frag_code_.empty());
+./include/arctk//gui/shader.hpp:            assert(!vert_code_.empty());
+./include/arctk//gui/shader.hpp:            assert(!geom_code_.empty());
+./include/arctk//gui/shader.hpp:            assert(!frag_code_.empty());
+./include/arctk//gui/shader.hpp:            assert(!vert_code_.empty());
+./include/arctk//gui/shader.hpp:            assert(!frag_code_.empty());
+./include/arctk//gui/shader.hpp:            assert(!vert_code_.empty());
+./include/arctk//gui/shader.hpp:            assert(!geom_code_.empty());
+./include/arctk//gui/shader.hpp:            assert(!frag_code_.empty());
+./include/arctk//gui/shader.hpp:            assert(!code_.empty());
+./include/arctk//gui/shader.hpp:            assert(sub_shader != 0);
+./include/arctk//gui/shader.hpp:            assert(!name_.empty());
+./include/arctk//gui/shader/specular.hpp:                assert(sun_col_.r >= 0.0f);
+./include/arctk//gui/shader/specular.hpp:                assert(sun_col_.r <= 1.0f);
+./include/arctk//gui/shader/specular.hpp:                assert(sun_col_.g >= 0.0f);
+./include/arctk//gui/shader/specular.hpp:                assert(sun_col_.g <= 1.0f);
+./include/arctk//gui/shader/specular.hpp:                assert(sun_col_.b >= 0.0f);
+./include/arctk//gui/shader/specular.hpp:                assert(sun_col_.b <= 1.0f);
+./include/arctk//gui/shader/normal.hpp:#include <cassert>
+./include/arctk//gui/shader/normal.hpp:                assert(vert_col_.r >= 0.0f);
+./include/arctk//gui/shader/normal.hpp:                assert(vert_col_.r <= 1.0f);
+./include/arctk//gui/shader/normal.hpp:                assert(vert_col_.g >= 0.0f);
+./include/arctk//gui/shader/normal.hpp:                assert(vert_col_.g <= 1.0f);
+./include/arctk//gui/shader/normal.hpp:                assert(vert_col_.b >= 0.0f);
+./include/arctk//gui/shader/normal.hpp:                assert(vert_col_.b <= 1.0f);
+./include/arctk//gui/shader/normal.hpp:                assert(vert_col_.a >= 0.0f);
+./include/arctk//gui/shader/normal.hpp:                assert(vert_col_.a <= 1.0f);
+./include/arctk//gui/shader/normal.hpp:                assert(face_col_.r >= 0.0f);
+./include/arctk//gui/shader/normal.hpp:                assert(face_col_.r <= 1.0f);
+./include/arctk//gui/shader/normal.hpp:                assert(face_col_.g >= 0.0f);
+./include/arctk//gui/shader/normal.hpp:                assert(face_col_.g <= 1.0f);
+./include/arctk//gui/shader/normal.hpp:                assert(face_col_.b >= 0.0f);
+./include/arctk//gui/shader/normal.hpp:                assert(face_col_.b <= 1.0f);
+./include/arctk//gui/shader/normal.hpp:                assert(face_col_.a >= 0.0f);
+./include/arctk//gui/shader/normal.hpp:                assert(face_col_.a <= 1.0f);
+./include/arctk//gui/shader/normal.hpp:                assert(length_ > 0.0f);
+./include/arctk//dom/region.inl:#include <cassert>
+./include/arctk//dom/region.inl:            assert(min_.x <= max_.x);
+./include/arctk//dom/region.inl:            assert(min_.y <= max_.y);
+./include/arctk//dom/region.inl:            assert(min_.z <= max_.z);
+./include/arctk//dom/region.inl:            assert(res_[index::dim::cartesian::X] > 0);
+./include/arctk//dom/region.inl:            assert(res_[index::dim::cartesian::Y] > 0);
+./include/arctk//dom/region.inl:            assert(res_[index::dim::cartesian::Z] > 0);
+./include/arctk//dom/region.inl:            assert(min_.x <= max_.x);
+./include/arctk//dom/region.inl:            assert(min_.y <= max_.y);
+./include/arctk//dom/region.inl:            assert(min_.z <= max_.z);
+./include/arctk//dom/region.inl:            assert(res_[index::dim::cartesian::X] > 0);
+./include/arctk//dom/region.inl:            assert(res_[index::dim::cartesian::Y] > 0);
+./include/arctk//dom/region.inl:            assert(res_[index::dim::cartesian::Z] > 0);
+./include/arctk//dom/region.inl:            assert(intersect(pos_));
+./include/arctk//dom/region.inl:            assert(index_x < _res[index::dim::cartesian::X]);
+./include/arctk//dom/region.inl:            assert(index_y < _res[index::dim::cartesian::Y]);
+./include/arctk//dom/region.inl:            assert(index_z < _res[index::dim::cartesian::Z]);
+./include/arctk//dom/region.inl:            assert(!path_.empty());
+./include/arctk//dom/cell.inl:#include <cassert>
+./include/arctk//dom/cell.inl:            assert(min_.x <= max_.x);
+./include/arctk//dom/cell.inl:            assert(min_.y <= max_.y);
+./include/arctk//dom/cell.inl:            assert(min_.z <= max_.z);
+./include/arctk//dom/cell.inl:            assert(scatters_ > 0.0);
+./include/arctk//dom/cell.inl:            assert(energy_ > 0.0);
+./include/arctk//exit/error.hpp:            constexpr const int PRE_CONDITION_FAILURE  = 110; //!< Pre-condition assertion failed.
+./include/arctk//exit/error.hpp:            constexpr const int POST_CONDITION_FAILURE = 111; //!< Post-condition assertion failed.
+./include/arctk//exit/error.hpp:            constexpr const int INVARIANT_FAILURE      = 112; //!< Invariant assertion failed.
+./include/arctk//index/rotate.hpp:#include <cassert>
+./include/arctk//index/rotate.hpp:                assert(step_ < size_);
+./include/arctk//index/rotate.hpp:                assert(step_ < size_);
+./include/arctk//opt/mat/dumb.hpp:#include <cassert>
+./include/arctk//opt/mat/dumb.hpp:                assert(ref_index_ >= 1.0);
+./include/arctk//opt/mat/dumb.hpp:                assert(dist_ > 0.0);
+./include/arctk//opt/mat/dumb.hpp:                assert(albedo_ >= 0.0);
+./include/arctk//opt/mat/dumb.hpp:                assert(albedo_ <= 1.0);
+./include/arctk//opt/mat/dumb.hpp:                assert(asym_ >= -1.0);
+./include/arctk//opt/mat/dumb.hpp:                assert(asym_ <= 1.0);
+./include/arctk//opt/sop/dumb.hpp:                assert(ref_index_ >= 1.0);
+./include/arctk//opt/sop/dumb.hpp:                assert(dist_ > 0.0);
+./include/arctk//opt/sop/dumb.hpp:                assert(albedo_ >= 0.0);
+./include/arctk//opt/sop/dumb.hpp:                assert(albedo_ <= 1.0);
+./include/arctk//opt/sop/dumb.hpp:                assert(asym_ >= -1.0);
+./include/arctk//opt/sop/dumb.hpp:                assert(asym_ <= 1.0);
+./include/arctk//opt/mat.hpp:#include <cassert>
+./include/arctk//opt/mat.hpp:            assert(min_ <= max_);
+./include/arctk//opt/func.hpp:#include <cassert>
+./include/arctk//opt/func.hpp:                assert(ang_in_ >= 0.0);
+./include/arctk//opt/func.hpp:                assert(ang_in_ < consts::math::HALF_PI);
+./include/arctk//opt/func.hpp:                assert(ref_index_in_ >= 1.0);
+./include/arctk//opt/func.hpp:                assert(ref_index_out_ >= 1.0);
+./include/arctk//opt/func.hpp:                assert(ref_prob >= 0.0);
+./include/arctk//opt/func.hpp:                assert(ref_prob <= 1.0);
+./include/arctk//opt/func.hpp:                assert(ang_in_ >= 0.0);
+./include/arctk//opt/func.hpp:                assert(ang_in_ < consts::math::HALF_PI);
+./include/arctk//opt/func.hpp:                assert(ref_index_in_ >= 1.0);
+./include/arctk//opt/func.hpp:                assert(ref_index_out_ >= 1.0);
+./include/arctk//opt/func.hpp:                assert(ref_prob >= 0.0);
+./include/arctk//opt/func.hpp:                assert(ref_prob <= 1.0);
+./include/arctk//opt/func.hpp:                assert(in_.normalised());
+./include/arctk//opt/func.hpp:                assert(norm_.normalised());
+./include/arctk//opt/func.hpp:                assert((in_ * norm_) < 0.0);
+./include/arctk//opt/func.hpp:                assert(out.normalised());
+./include/arctk//opt/func.hpp:                assert(in_.normalised());
+./include/arctk//opt/func.hpp:                assert(norm_.normalised());
+./include/arctk//opt/func.hpp:                assert((in_ * norm_) < 0.0);
+./include/arctk//opt/func.hpp:                assert(out.normalised());
+./include/arctk//opt/sop.hpp:#include <cassert>
+./include/arctk//opt/sop.hpp:            assert(ref_index_ >= 1.0);
+./include/arctk//random/distribution/constant.hpp:#include <cassert>
+./include/arctk//random/distribution/constant.hpp:                assert(vals_.size() >= 2);
+./include/arctk//random/distribution/constant.hpp:                assert(!probs_.empty());
+./include/arctk//random/distribution/constant.hpp:                assert(vals_.size() == (probs_.size() + 1));
+./include/arctk//random/distribution/constant.hpp:                assert(prop::order::ascending(vals_));
+./include/arctk//random/distribution/constant.hpp:                assert(prop::limits::always_greater_than_or_equal_to(probs_, 0.0));
+./include/arctk//random/distribution/constant.hpp:                assert(vals_.size() >= 2);
+./include/arctk//random/distribution/constant.hpp:                assert(!probs_.empty());
+./include/arctk//random/distribution/constant.hpp:                assert(vals_.size() == (probs_.size() + 1));
+./include/arctk//random/distribution/constant.hpp:                assert(prop::order::ascending(vals_));
+./include/arctk//random/distribution/constant.hpp:                assert(prop::limits::always_greater_than_or_equal_to(probs_, 0.0));
+./include/arctk//random/distribution/constant.hpp:                assert(math::compare::equal(cdfs.back(), 1.0));
+./include/arctk//random/distribution/constant.hpp:                assert(rng_ != nullptr);
+./include/arctk//random/distribution/discrete.hpp:#include <cassert>
+./include/arctk//random/distribution/discrete.hpp:                assert(!vals_.empty());
+./include/arctk//random/distribution/discrete.hpp:                assert(!probs_.empty());
+./include/arctk//random/distribution/discrete.hpp:                assert(vals_.size() == probs_.size());
+./include/arctk//random/distribution/discrete.hpp:                assert(prop::order::ascending(vals_));
+./include/arctk//random/distribution/discrete.hpp:                assert(prop::limits::always_greater_than_or_equal_to(probs_, 0.0));
+./include/arctk//random/distribution/discrete.hpp:                assert(!probs_.empty());
+./include/arctk//random/distribution/discrete.hpp:                assert(prop::limits::always_greater_than_or_equal_to(probs_, 0.0));
+./include/arctk//random/distribution/discrete.hpp:                assert(math::compare::equal(cdfs.back(), 1.0));
+./include/arctk//random/distribution/discrete.hpp:                assert(rng_ != nullptr);
+./include/arctk//random/distribution/linear.hpp:#include <cassert>
+./include/arctk//random/distribution/linear.hpp:                assert(vals_.size() >= 2);
+./include/arctk//random/distribution/linear.hpp:                assert(probs_.size() >= 2);
+./include/arctk//random/distribution/linear.hpp:                assert(vals_.size() == probs_.size());
+./include/arctk//random/distribution/linear.hpp:                assert(prop::order::ascending(vals_));
+./include/arctk//random/distribution/linear.hpp:                assert(prop::limits::always_greater_than_or_equal_to(probs_, 0.0));
+./include/arctk//random/distribution/linear.hpp:                assert(vals_.size() >= 2);
+./include/arctk//random/distribution/linear.hpp:                assert(probs_.size() >= 2);
+./include/arctk//random/distribution/linear.hpp:                assert(vals_.size() == probs_.size());
+./include/arctk//random/distribution/linear.hpp:                assert(prop::order::ascending(vals_));
+./include/arctk//random/distribution/linear.hpp:                assert(prop::limits::always_greater_than_or_equal_to(probs_, 0.0));
+./include/arctk//random/distribution/linear.hpp:                assert(math::compare::equal(cdfs.back(), 1.0));
+./include/arctk//random/distribution/linear.hpp:                assert(vals_.size() >= 2);
+./include/arctk//random/distribution/linear.hpp:                assert(probs_.size() >= 2);
+./include/arctk//random/distribution/linear.hpp:                assert(vals_.size() == probs_.size());
+./include/arctk//random/distribution/linear.hpp:                assert(prop::order::ascending(vals_));
+./include/arctk//random/distribution/linear.hpp:                assert(prop::limits::always_greater_than_or_equal_to(probs_, 0.0));
+./include/arctk//random/distribution/linear.hpp:                assert(rng_ != nullptr);
+./include/arctk//random/distribution.hpp:#include <cassert>
+./include/arctk//random/distribution.hpp:            assert(min_ < max_);
+./include/arctk//random/distribution.hpp:                static_assert(std::is_arithmetic<T>::value);
+./include/arctk//random/distribution.hpp:                assert(rng_ != nullptr);
+./include/arctk//random/distribution.hpp:                assert(max_ > 0.0);
+./include/arctk//random/distribution.hpp:                static_assert(std::is_arithmetic<T>::value);
+./include/arctk//random/distribution.hpp:                assert(rng_ != nullptr);
+./include/arctk//random/distribution.hpp:                assert(min_ < max_);
+./include/arctk//random/distribution.hpp:                static_assert(std::is_arithmetic<T>::value);
+./include/arctk//random/distribution.hpp:                static_assert(!std::is_integral<T>::value);
+./include/arctk//random/distribution.hpp:                assert(rng_ != nullptr);
+./include/arctk//random/distribution.hpp:                static_assert(std::is_arithmetic<T>::value);
+./include/arctk//random/distribution.hpp:                static_assert(!std::is_integral<T>::value);
+./include/arctk//random/distribution.hpp:                assert(rng_ != nullptr);
+./include/arctk//random/distribution.hpp:                assert(var_ > 0.0);
+./include/arctk//random/distribution.hpp:                static_assert(std::is_arithmetic<T>::value);
+./include/arctk//random/distribution.hpp:                static_assert(!std::is_integral<T>::value);
+./include/arctk//random/distribution.hpp:                assert(rng_ != nullptr);
+./include/arctk//random/distribution.hpp:                assert(g_ >= -1.0);
+./include/arctk//random/distribution.hpp:                assert(g_ <= 1.0);
+./include/arctk//random/distribution.hpp:                static_assert(type::temp::is_vec<T>::value);
+./include/arctk//random/distribution.hpp:                assert(rng_ != nullptr);
+./include/arctk//col/map.inl:#include <cassert>
+./include/arctk//col/map.inl:                assert(x_ >= 0.0);
+./include/arctk//col/map.inl:                assert(x_ <= 1.0);
+./include/arctk//col/map.inl:                assert(x_ >= 0.0);
+./include/arctk//col/map.inl:                assert(x_ <= 1.0);
+./include/arctk//col/map.inl:                assert(x_ >= 0.0);
+./include/arctk//col/map.inl:                assert(x_ <= 1.0);
+./include/arctk//col/map.inl:                assert(num_ > 0);
+./include/arctk//col/convert.inl:#include <cassert>
+./include/arctk//col/convert.inl:                assert(sat_ >= 0.0);
+./include/arctk//col/convert.inl:                assert(sat_ <= 1.0);
+./include/arctk//col/convert.inl:                assert(val_ >= 0.0);
+./include/arctk//col/convert.inl:                assert(val_ <= 1.0);
