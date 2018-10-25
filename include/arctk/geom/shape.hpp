@@ -20,34 +20,6 @@
 
 
 
-//  == CLASS PROTOTYPES ==
-namespace arc //! arctk namespace
-{
-    namespace math //! mathematical namespace
-    {
-
-
-
-        //  == CLASS PROTOTYPES ==
-        template <typename T, size_t N>
-        class Vec;
-
-
-
-    } // namespace math
-
-
-
-    //  == ALIASES ==
-    //  -- Double --
-    using vec3 = math::Vec<double, 3>; //!< Three-dimensional double precision vec.
-
-
-
-} // namespace arc
-
-
-
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -89,17 +61,13 @@ namespace arc //! arctk namespace
 
 
 
-        //  == INSTANTIATION ==
-        //  -- Destructors --
-        /**
-         *  Defaulted destructor.
-         */
-        inline Shape::~Shape() noexcept = default;
-
-
-
     } // namespace geom
 } // namespace arc
+
+
+
+//  == IMPLEMENTATION ==
+#include <arctk/geom/shape.inl>
 
 
 
