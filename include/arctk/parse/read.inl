@@ -21,7 +21,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <sstream>
-#include <type_trait>
+#include <type_traits>
 
 //  -- Arctk --
 #include <arctk/consts/format.hpp>
