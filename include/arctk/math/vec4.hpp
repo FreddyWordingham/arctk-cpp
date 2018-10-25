@@ -162,10 +162,10 @@ namespace arc //! arctk namespace
 
     //  == ALIASES ==
     //  -- Float --
-    using vec4f = math::Vec<float, 4>; //!< Four-dimensional float precision vec.
+    using vec4f = math::Vec<float, 4>; // NOLINT    //!< Four-dimensional float precision vec.
 
     //  -- Double --
-    using vec4 = math::Vec<double, 4>; //!< Four-dimensional double precision vec.
+    using vec4 = math::Vec<double, 4>; // NOLINT    //!< Four-dimensional double precision vec.
 
 
 
