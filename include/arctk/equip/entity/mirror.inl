@@ -21,7 +21,8 @@
 //  -- Arctk --
 #include <arctk/consts/num.hpp>
 #include <arctk/equip/entity.hpp>
-#include <arctk/phys.hpp>
+#include <arctk/math/vec3.hpp>
+#include <arctk/phys/photon.hpp>
 
 
 
