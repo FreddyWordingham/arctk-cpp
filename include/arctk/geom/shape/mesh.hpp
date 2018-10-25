@@ -43,9 +43,9 @@ namespace arc //! arctk namespace
     {
         template <typename T, size_t N>
         class Mat;
-    } // namespace math
-    using mat4 = math::Mat<double, 4>;
-    namespace random //! random number namespace
+    }                                  // namespace math
+    using mat4 = math::Mat<double, 4>; //!< Four-dimensional double precision mat.
+    namespace random                   //! random number namespace
     {
         class Generator;
     } // namespace random
