@@ -142,10 +142,10 @@ namespace arc //! arctk namespace
 
     //  == ALIASES ==
     //  -- Float --
-    using vec2f = math::Vec<float, 2>; // NOLINT    //!< Two-dimensional float precision vec.
+    using vec2f = math::Vec<float, 2>; //!< Two-dimensional float precision vec.    // NOLINT
 
     //  -- Double --
-    using vec2 = math::Vec<double, 2>; // NOLINT    //!< Two-dimensional double precision vec.
+    using vec2 = math::Vec<double, 2>; //!< Two-dimensional double precision vec.   // NOLINT
 
 
 
