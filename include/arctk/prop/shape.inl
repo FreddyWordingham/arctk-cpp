@@ -71,18 +71,19 @@ namespace arc //! arctk namespace
             template <typename T>
             inline bool cube(const std::vector<std::vector<std::vector<T>>>& vec_) noexcept
             {
-                const std::array<size_t, 2> size({{vec_.front().size(), vec_.front().front().size()}});
+                const size_t width  = vec_.front().size();
+                const size_t height = vec_.front().front().size();
 
                 for (size_t i = 0; i < vec_.size(); ++i)
                 {
-                    if (vec_[i].size() != size[0])
+                    if (vec_[i].size() != width)
                     {
                         return (false);
                     }
 
                     for (size_t j = 0; j < vec_.size(); ++j)
                     {
-                        if (vec_[i][j].size() != size[1])
+                        if (vec_[i][j].size() != height)
                         {
                             return (false);
                         }
