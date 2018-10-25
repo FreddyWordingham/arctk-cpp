@@ -26,6 +26,7 @@
 //  -- Arctk --
 #include <arctk/consts/format.hpp>
 #include <arctk/exit/error.hpp>
+#include <arctk/index/dim.hpp>
 #include <arctk/parse/process.hpp>
 #include <arctk/sys/file.hpp>
 
