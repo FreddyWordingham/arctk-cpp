@@ -134,11 +134,11 @@ namespace arc //! arctk namespace
     //  == ALIASES ==
     //  -- Float --
     template <size_t N>
-    using matNf = math::Mat<float, N>; // NOLINT    //!< N-dimensional float precision mat.
+    using matNf = math::Mat<float, N>; //!< N-dimensional float precision mat.  // NOLINT
 
     //  -- Double --
     template <size_t N>
-    using matN = math::Mat<double, N>; // NOLINT    //!< N-dimensional double precision mat.
+    using matN = math::Mat<double, N>; //!< N-dimensional double precision mat. // NOLINT
 
 
 
