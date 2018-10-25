@@ -19,6 +19,7 @@
 #include <cassert>
 #include <iostream>
 #include <limits>
+#include <sstream>
 
 //  -- Arctk --
 #include <arctk/exit/error.hpp>
