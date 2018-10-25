@@ -27,6 +27,7 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         class Vec;
     } // namespace math
+    using vec3 = math::Vec<double, 3>;
 } // namespace arc
 
 
