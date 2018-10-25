@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/equip/entity/light.hpp
+ *  @file   arctk/equip/entity/light.inl
  *  @date   14/10/2018
  *  @author Freddy Wordingham
  *
@@ -9,23 +9,18 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_EQUIP_ENTITY_LIGHT_HPP
-#define ARCTK_EQUIP_ENTITY_LIGHT_HPP
+#ifndef ARCTK_EQUIP_ENTITY_LIGHT_INL
+#define ARCTK_EQUIP_ENTITY_LIGHT_INL
 
 
 
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
-#include <memory>
-#include <tuple>
 
 //  -- Arctk --
 #include <arctk/consts/num.hpp>
-#include <arctk/dom/cell.hpp>
-#include <arctk/equip/entity.hpp>
-#include <arctk/opt/mat.hpp>
-#include <arctk/phys.hpp>
+#include <arctk/geom/collision.hpp>
 
 
 
@@ -36,47 +31,6 @@ namespace arc //! arctk namespace
     {
         namespace entity //! entity namespace
         {
-
-
-
-            //  == CLASS ==
-            /**
-             *  Light entity equipment base class.
-             */
-            class Light : public Entity
-            {
-                //  == FIELDS ==
-              protected:
-                //  -- Material --
-                const opt::Mat& _mat; //!< Material to emit photons into.
-
-              private:
-                //  -- Killing --
-                const bool   _kill;  //!< False if photon is killed upon hit.
-                const double _power; //!< Power of the light.
-
-
-                //  == INSTANTIATION ==
-              public:
-                //  -- Constructors --
-                inline Light(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const opt::Mat& mat_, double power_, bool kill_) noexcept;
-
-
-                //  == METHODS ==
-              public:
-                //  -- Getters --
-                inline double power() const noexcept;
-
-                //  -- Emission --
-                virtual std::tuple<phys::Photon, const opt::Mat*, std::unique_ptr<opt::Sop>> emit(random::Generator* rng_, double energy_, double time_) const
-                  noexcept = 0; //!< Emit a photon in a given material with specific-optical-properties. @param  rng_    Random number generator.    @param  energy_ Initial energy of the photon.   @param  time_   Initial timestamp of the photon.    @return
-                                //!< Emitted photon in a material with specific-optical-properties.
-
-              private:
-                //  -- Collision --
-                inline bool hit_front(random::Generator* /*unused*/, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept override;
-                inline bool hit_back(random::Generator* /*unused*/, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept override;
-            };
 
 
 
@@ -187,4 +141,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_EQUIP_ENTITY_LIGHT_HPP
+#endif // ARCTK_EQUIP_ENTITY_LIGHT_INL
