@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.5.1)
 
 
 #   == PROJECTS ==
-#   -- Project --
+#   -- Arctk --
 project(arctk)
 
 
