@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <cstdlib>
 #include <iostream>
 #include <limits>
 #include <sstream>
