@@ -119,10 +119,10 @@ namespace arc //! arctk namespace
 
     //  == ALIASES ==
     //  -- Float --
-    using mat4f = math::Mat<float, 4>; //!< Four-dimensional float precision mat.
+    using mat4f = math::Mat<float, 4>; // NOLINT    //!< Four-dimensional float precision mat.
 
     //  -- Double --
-    using mat4 = math::Mat<double, 4>; //!< Four-dimensional double precision mat.
+    using mat4 = math::Mat<double, 4>; // NOLINT    //!< Four-dimensional double precision mat.
 
 
 
