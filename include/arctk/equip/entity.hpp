@@ -30,27 +30,27 @@
 
 
 //  == CLASS PROTOTYPES ==
-namespace arc
+namespace arc //! arctk namespace
 {
-    namespace geom
+    namespace geom //! geometric namespace
     {
         class Collision;
-    } // namespace geom
-    namespace math
+    }              // namespace geom
+    namespace math //! mathematical namespace
     {
         template <typename T, size_t N>
         class Vec;
         using vec3 = math::Vec<double, 3>;
-    } // namespace math
-    namespace opt
+    }             // namespace math
+    namespace opt //! optical namespace
     {
         class Mat;
-    } // namespace opt
-    namespace phys
+    }              // namespace opt
+    namespace phys //! physics namespace
     {
         class Photon;
-    } // namespace phys
-    namespace random
+    }                // namespace phys
+    namespace random //! random number namespace
     {
         class Generator;
     } // namespace random
