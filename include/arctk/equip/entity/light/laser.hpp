@@ -38,8 +38,8 @@ namespace arc //! arctk namespace
     {
         template <typename T, size_t N>
         class Vec;
-        using vec3 = math::Vec<double, 3>;
-    }             // namespace math
+    } // namespace math
+    using vec3 = math::Vec<double, 3>;
     namespace opt //! optical namespace
     {
         class Mat;
