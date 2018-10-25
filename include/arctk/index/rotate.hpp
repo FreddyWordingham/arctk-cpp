@@ -16,7 +16,6 @@
 
 //  == IMPORTS ==
 //  -- Std --
-#include <cassert>
 #include <cstddef>
 
 
@@ -38,51 +37,14 @@ namespace arc //! arctk namespace
 
 
 
-            //  == FUNCTIONS ==
-            //  -- Rotate --
-            /**
-             *  Step forward in a index rotation of a given size.
-             *
-             *  @param  cur_    Current index value.
-             *  @param  size_   Size of the index roll.
-             *  @param  step_   Step size.
-             *
-             *  @pre    step_ must be less than size_.
-             *
-             *  @return Next index after stepping forward.
-             */
-            inline size_t next(const size_t cur_, const size_t size_, const size_t step_) noexcept
-            {
-                assert(step_ < size_);
-
-                const size_t next = cur_ + step_;
-
-                return ((next < size_) ? next : (next - size_));
-            }
-
-            /**
-             *  Step backward in a index rotation of a given size.
-             *
-             *  @param  cur_    Current index value.
-             *  @param  size_   Size of the index roll.
-             *  @param  step_   Step size.
-             *
-             *  @pre    step_ must be less than size_.
-             *
-             *  @return Previous index after stepping backward.
-             */
-            inline size_t prev(const size_t cur_, const size_t size_, const size_t step_) noexcept
-            {
-                assert(step_ < size_);
-
-                return ((step_ <= cur_) ? (cur_ - step_) : (size_ + cur_ - step_));
-            }
-
-
-
         } // namespace rotate
     }     // namespace index
 } // namespace arc
+
+
+
+//  == IMPLEMENTATION ==
+#include <arctk/index/rotate.inl>
 
 
 
