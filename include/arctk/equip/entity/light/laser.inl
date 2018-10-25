@@ -17,9 +17,11 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <utility>
 
 //  -- Arctk --
 #include <arctk/math/vec3.hpp>
+#include <arctk/opt/mat.hpp>
 
 
 
