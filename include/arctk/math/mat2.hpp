@@ -117,10 +117,10 @@ namespace arc //! arctk namespace
 
     //  == ALIASES ==
     //  -- Float --
-    using mat2f = math::Mat<float, 2>; // NOLINT    //!< Two-dimensional float precision mat.
+    using mat2f = math::Mat<float, 2>; //!< Two-dimensional float precision mat.    // NOLINT
 
     //  -- Double --
-    using mat2 = math::Mat<double, 2>; // NOLINT    //!< Two-dimensional double precision mat.
+    using mat2 = math::Mat<double, 2>; //!< Two-dimensional double precision mat.   // NOLINT
 
 
 
