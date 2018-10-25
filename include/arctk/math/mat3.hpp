@@ -114,10 +114,10 @@ namespace arc //! arctk namespace
 
         //  == ALIASES ==
         //  -- Float --
-        using mat3f = math::Mat<float, 3>; // NOLINT    //!< Three-dimensional float precision mat.
+        using mat3f = math::Mat<float, 3>; //!< Three-dimensional float precision mat.  // NOLINT
 
         //  -- Double --
-        using mat3 = math::Mat<double, 3>; // NOLINT    //!< Three-dimensional double precision mat.
+        using mat3 = math::Mat<double, 3>; //!< Three-dimensional double precision mat. // NOLINT
 
 
 
