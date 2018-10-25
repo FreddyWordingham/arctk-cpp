@@ -20,6 +20,19 @@
 
 
 
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    namespace math //! mathematical namespace
+    {
+        template <typename T, size_t N>
+        class Vec;
+    } // namespace math
+    using vec3 = math::Vec<double, 3>;
+} // namespace arc
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
