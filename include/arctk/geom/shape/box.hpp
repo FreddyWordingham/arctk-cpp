@@ -33,8 +33,11 @@ namespace arc //! arctk namespace
 {
     namespace geom //! geometry namespace
     {
-        class Triangle;
-    } // namespace geom
+        namespace shape //! shape namespace
+        {
+            class Triangle;
+        } // namespace shape
+    }     // namespace geom
 } // namespace arc
 
 
