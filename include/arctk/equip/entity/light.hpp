@@ -14,6 +14,11 @@
 
 
 
+//  == BASE ==
+#include <arctk/equip/entity.hpp>
+
+
+
 //  == IMPORTS ==
 //  -- Std --
 #include <memory>
