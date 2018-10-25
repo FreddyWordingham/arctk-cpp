@@ -25,15 +25,8 @@ namespace arc //! arctk namespace
 {
     namespace math //! mathematical namespace
     {
-
-
-
-        //  == CLASS PROTOTYPES ==
         template <typename T, size_t N>
         class Vec;
-
-
-
     } // namespace math
 } // namespace arc
 
