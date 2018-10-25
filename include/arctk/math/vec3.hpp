@@ -158,10 +158,10 @@ namespace arc //! arctk namespace
 
     //  == ALIASES ==
     //  -- Float --
-    using vec3f = math::Vec<float, 3>; // NOLINT    //!< Three-dimensional float precision vec.
+    using vec3f = math::Vec<float, 3>; //!< Three-dimensional float precision vec.  // NOLINT
 
     //  -- Double --
-    using vec3 = math::Vec<double, 3>; // NOLINT    //!< Three-dimensional double precision vec.
+    using vec3 = math::Vec<double, 3>; //!< Three-dimensional double precision vec. // NOLINT
 
 
 
