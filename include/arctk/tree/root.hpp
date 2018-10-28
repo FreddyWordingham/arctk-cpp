@@ -35,10 +35,13 @@ namespace arc //! arctk namespace
         class Vec;
     }                                  // namespace math
     using vec3 = math::Vec<double, 3>; //!< Three-dimensional double precision vec.
-    namespace node                     //! node namespace
+    namespace tree                     //! tree namespace
     {
-        class Leaf;
-    } // namespace node
+        namespace node //! node namespace
+        {
+            class Leaf;
+        } // namespace node
+    }     // namespace tree
 } // namespace arc
 
 
