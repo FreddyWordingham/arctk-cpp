@@ -23,9 +23,9 @@
 #include <arctk/equip/entity.hpp>
 #include <arctk/geom/shape/triangle.hpp>
 #include <arctk/math/vec3.hpp>
-#include <arctk/node.hpp>
-#include <arctk/node/branch.hpp>
-#include <arctk/node/leaf.hpp>
+#include <arctk/tree/node.hpp>
+#include <arctk/tree/node/branch.hpp>
+#include <arctk/tree/node/leaf.hpp>
 
 
 
