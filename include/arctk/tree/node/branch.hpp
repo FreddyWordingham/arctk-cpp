@@ -47,10 +47,13 @@ namespace arc //! arctk namespace
             class Triangle;
         }          // namespace shape
     }              // namespace geom
-    namespace node //! node namespace
+    namespace tree //! tree namespace
     {
-        class Leaf;
-    } // namespace node
+        namespace node //! node namespace
+        {
+            class Leaf;
+        } // namespace node
+    }     // namespace tree
 } // namespace arc
 
 
