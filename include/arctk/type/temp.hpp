@@ -19,9 +19,19 @@
 #include <type_traits>
 #include <vector>
 
-//  -- Arctk --
-#include <arctk/math/mat.hpp>
-#include <arctk/math/vec.hpp>
+
+
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    namespace math //! mathematical namespace
+    {
+        template <typename T, size_t N>
+        class Vec;
+        template <typename T, size_t N>
+        class Mat;
+    } // namespace math
+} // namespace arc
 
 
 
