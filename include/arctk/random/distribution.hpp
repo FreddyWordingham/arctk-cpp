@@ -14,6 +14,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/math/vec3.hpp>
+
+
+
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {

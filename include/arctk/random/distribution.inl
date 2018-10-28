@@ -254,25 +254,21 @@ namespace arc //! arctk namespace
             /**
              *  Generate a random isotropic direction vec.
              *
-             *  @tparam T   Type to be uniformly generated.
-             *
              *  @param  rng_    Random number generator.
              *
-             *  @pre    T   Must be a vec type.
              *  @pre    rng_ may not be nullptr.
              *
              *  @return Random isotropic direction vec.
              */
             template <typename T>
-            inline T isotropic(Generator* const rng_) noexcept
+            inline vec3 isotropic(Generator* const rng_) noexcept
             {
-                static_assert(type::temp::is_vec<T>::value);
                 assert(rng_ != nullptr);
 
                 const double phi   = uniform(rng_, consts::math::TWO_PI);
                 const double theta = std::acos(uniform(rng_, -1.0, 1.0));
 
-                return (math::convert::polar_to_cart(T(1.0, theta, phi)));
+                return (math::convert::polar_to_cart<double>(1.0, theta, phi));
             }
 
 
