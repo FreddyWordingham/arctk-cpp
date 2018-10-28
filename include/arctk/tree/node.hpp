@@ -14,13 +14,35 @@
 
 
 
+//  == BASE ==
+#include <arctk/geom/shape/box.hpp>
+
+
+
 //  == IMPORTS ==
 //  -- Std --
-#include <cassert>
+#include <cstddef>
+#include <vector>
 
 //  -- Arctk --
-#include <arctk/geom.hpp>
-#include <arctk/math/vec3.hpp>
+#include <arctk/geom/shape/box.hpp>
+
+
+
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    namespace math //! mathematical namespace
+    {
+        template <typename T, size_t N>
+        class Vec;
+    }                                  // namespace math
+    using vec3 = math::Vec<double, 3>; //!< Three-dimensional double precision vec.
+    namespace node                     //! node namespace
+    {
+        class Leaf;
+    } // namespace node
+} // namespace arc
 
 
 
@@ -29,17 +51,6 @@ namespace arc //! arctk namespace
 {
     namespace tree //! tree namespace
     {
-        namespace node //! node namespace
-        {
-
-
-
-            //  == CLASS PROTOTYPES ==
-            class Leaf;
-
-
-
-        } // namespace node
 
 
 
@@ -89,53 +100,13 @@ namespace arc //! arctk namespace
 
 
 
-        //  == INSTANTIATION ==
-        //  -- Constructors --
-        /**
-         *  Construct a node with given bounds and depth.
-         *
-         *  @param  min_    Minimum bound of the cell.
-         *  @param  max_    Maximum bound of the cell.
-         *  @param  depth_  Depth of the cell.
-         *
-         *  @pre    min_.x must be less than, or equal to, max_.x.
-         *  @pre    min_.y must be less than, or equal to, max_.y.
-         *  @pre    min_.z must be less than, or equal to, max_.z.
-         */
-        inline Node::Node(const vec3& min_, const vec3& max_, const size_t depth_) noexcept
-          : Box(min_, max_)
-          , _depth(depth_)
-        {
-            assert(min_.x <= max_.x);
-            assert(min_.y <= max_.y);
-            assert(min_.z <= max_.z);
-        }
-
-
-        //  -- Destructors --
-        /**
-         *  Default destructor.
-         */
-        inline Node::~Node() noexcept = default;
-
-
-
-        //  == METHODS ==
-        //  -- Getters --
-        /**
-         *  Get the depth of the node.
-         *
-         *  @return Depth of the node.
-         */
-        inline size_t Node::depth() const noexcept
-        {
-            return (_depth);
-        }
-
-
-
     } // namespace tree
 } // namespace arc
+
+
+
+//  == IMPLEMENTATION ==
+#include <arctk/tree/node.inl>
 
 
 
