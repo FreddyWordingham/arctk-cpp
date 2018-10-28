@@ -101,9 +101,8 @@ namespace arc //! arctk namespace
             template <typename T = double>
             inline T gaussian(Generator* rng_, T ave_, T var_) noexcept;
             template <typename T = double>
-            inline T henyey_greenstein(Generator* rng_, T g_) noexcept;
-            template <typename T = vec3>
-            inline T isotropic(Generator* rng_) noexcept;
+            inline T    henyey_greenstein(Generator* rng_, T g_) noexcept;
+            inline vec3 isotropic(Generator* rng_) noexcept;
 
 
 
