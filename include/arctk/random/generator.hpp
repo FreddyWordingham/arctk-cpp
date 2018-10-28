@@ -17,7 +17,6 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cstdint>
-#include <ctime>
 
 
 
@@ -78,53 +77,13 @@ namespace arc //! arctk namespace
 
 
 
-        //  == INSTANTIATION ==
-        //  -- Seed --
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wglobal-constructors"
-        uint64_t Generator::_next_seed = static_cast<uint64_t>(std::time(nullptr)); // NOLINT
-#pragma clang diagnostic pop
-
-
-        //  -- Constructors --
-        /**
-         *  Initialise a generator using the next seed value.
-         */
-        inline Generator::Generator() noexcept
-          : _seed(_next_seed++)
-        {
-        }
-
-
-
-        //  == METHODS ==
-        //  -- Getters --
-        /**
-         *  Get the value used to seed the generator.
-         *
-         *  @return Value used to seed the generator.
-         */
-        inline uint64_t Generator::seed() noexcept
-        {
-            return (_seed);
-        }
-
-
-        //  -- Setters --
-        /**
-         *  Set the value of the next seed to be used to construct a generator.
-         *
-         *  @param  next_seed_  Value of the next seed to be used.
-         */
-        inline void Generator::set_next_seed(const uint64_t next_seed_) noexcept
-        {
-            _next_seed = next_seed_;
-        }
-
-
-
     } // namespace random
 } // namespace arc
+
+
+
+//  == IMPLEMENTATION ==
+#include <arctk/random/generator.inl>
 
 
 
