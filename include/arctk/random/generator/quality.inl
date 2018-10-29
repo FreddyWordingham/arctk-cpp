@@ -30,37 +30,6 @@ namespace arc //! arctk namespace
 
 
 
-            //  == CLASS ==
-            /**
-             *  Pseudo random number generator engine focusing on quality.
-             *  Period of generator is approximately 3.138e57.
-             *  Relative speed is 1.0 for doubles, 1.9 for uint64.
-             */
-            class Quality : public Generator
-            {
-                //  == FIELDS ==
-              private:
-                //  -- Generation --
-                uint64_t _u; //!< First generation variable.
-                uint64_t _v; //!< Second generation variable.
-                uint64_t _w; //!< Third generation variable.
-
-
-                //  == INSTANTIATION ==
-              public:
-                //  -- Constructors --
-                inline Quality() noexcept;
-
-
-                //  == METHODS ==
-              public:
-                //  -- Generation --
-                inline uint64_t gen_base() noexcept;
-                inline double   gen() noexcept override;
-            };
-
-
-
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
