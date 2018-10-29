@@ -14,14 +14,7 @@
 
 
 
-//  == IMPORTS ==
-//  -- Std --
-#include <cassert>
-
-//  -- Graphical --
-#include <glm/glm.hpp>
-
-//  -- Arctk --
+//  == BASE ==
 #include <arctk/gui/lens.hpp>
 
 

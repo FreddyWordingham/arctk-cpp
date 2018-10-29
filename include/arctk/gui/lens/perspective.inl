@@ -18,6 +18,9 @@
 //  -- Std --
 #include <cassert>
 
+//  -- Graphical --
+#include <glm/glm.hpp>
+
 
 
 //  == NAMESPACE ==
