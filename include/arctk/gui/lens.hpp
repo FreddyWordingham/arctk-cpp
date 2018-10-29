@@ -70,31 +70,13 @@ namespace arc //! arctk namespace
 
 
 
-        //  == INSTANTIATION ==
-        //  -- Destructors --
-        /**
-         *  Defaulted destructor method.
-         */
-        inline Lens::~Lens() noexcept = default;
-
-
-
-        //  == METHODS ==
-        //  -- Getters --
-        /**
-         *  Get the projection matrix used to render the actor.
-         *
-         *  @return Projection matrix used to render the actor.
-         */
-        inline const glm::mat4& Lens::proj() const noexcept
-        {
-            return (_proj);
-        }
-
-
-
     } // namespace gui
 } // namespace arc
+
+
+
+//  == IMPLEMENTATION ==
+#include <arctk/gui/lens.inl>
 
 
 
