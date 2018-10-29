@@ -14,14 +14,32 @@
 
 
 
+//  == BASE ==
+#include <arctk/opt/mat.hpp>
+
+
+
 //  == IMPORTS ==
+//  -- Std --
+#include <memory>
+
 //  -- Arctk --
-#include <arctk/consts/math.hpp>
-#include <arctk/dom/cell.hpp>
-#include <arctk/opt/func.hpp>
 #include <arctk/opt/sop.hpp>
-#include <arctk/phys/photon.hpp>
-#include <arctk/random.hpp>
+
+
+
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    namespace random //! random number namespace
+    {
+        class Photon;
+    }              // namespace random
+    namespace phys //! physics namespace
+    {
+        class Photon;
+    } // namespace phys
+} // namespace arc
 
 
 
@@ -63,78 +81,6 @@ namespace arc //! arctk namespace
                 //  -- Interaction --
                 inline bool interact(random::Generator* rng_, phys::Photon* phot_, dom::Cell* cell_, double dist_) const noexcept override;
             };
-
-
-
-            //  == INSTANTIATION ==
-            //  -- Constructors --
-            /**
-             *  Construct a dumb specific-optical-property.
-             *
-             *  @param  ref_index_  Refractive index.
-             *  @param  dist_       Interaction distance.
-             *  @param  albedo_     Single scattering albedo.
-             *  @param  asym_       Asymmetry parameter.
-             *
-             *  @pre    ref_index_ must be greater than, or equal to, unity.
-             *  @pre    dist_ must be positive.
-             *  @pre    albedo_ must be positive.
-             *  @pre    albedo_ must less than, or equal to, unity.
-             *  @pre    asym_ must greater than, or equal to, minus one.
-             *  @pre    asym_ must less than, or equal to, unity.
-             */
-            inline Dumb::Dumb(const double ref_index_, const double dist_, const double albedo_, const double asym_) noexcept
-              : Sop(ref_index_)
-              , _dist(dist_)
-              , _albedo(albedo_)
-              , _asym(asym_)
-            {
-                assert(ref_index_ >= 1.0);
-                assert(dist_ > 0.0);
-                assert(albedo_ >= 0.0);
-                assert(albedo_ <= 1.0);
-                assert(asym_ >= -1.0);
-                assert(asym_ <= 1.0);
-            }
-
-
-
-            //  == METHODS ==
-            //  -- Getters --
-            /**
-             *  Get the distance until the next interaction event.
-             *
-             *  @return Distance until the next interaction event.
-             */
-            inline double Dumb::interact_dist(random::Generator* /*unused*/, const dom::Cell* /*unused*/) const noexcept
-            {
-                return (_dist);
-            }
-
-
-            //  -- Interaction --
-            /**
-             *  Perform an interaction event on the photon.
-             *
-             *  @param  rng_    Random number generator.
-             *  @param  phot_   Photon to interact with.
-             *  @param  cell_   Current domain cell.
-             *  @param  dist_   Distance to the interaction event.
-             *
-             *  @return False if the photon should be removed from the loop after interacting.
-             */
-            inline bool Dumb::interact(random::Generator* rng_, phys::Photon* phot_, dom::Cell* cell_, const double dist_) const noexcept
-            {
-                cell_->add_scatter(phot_->weight());
-
-                phot_->multiply_weight(_albedo);
-
-                phot_->move(dist_, _ref_index, cell_);
-                phot_->rotate(random::distribution::henyey_greenstein(rng_, _asym), rng_->gen() * consts::math::TWO_PI);
-                phot_->multiply_weight(_albedo);
-
-                return (true);
-            }
 
 
 

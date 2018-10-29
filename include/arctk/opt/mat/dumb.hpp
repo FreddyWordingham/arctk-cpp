@@ -31,7 +31,7 @@
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
-    namespace phys //! physics number namespace
+    namespace phys //! physics namespace
     {
         class Photon;
     } // namespace phys
