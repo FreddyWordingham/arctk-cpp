@@ -23,6 +23,7 @@
 //  -- Arctk --
 #include <arctk/equip/entity.hpp>
 #include <arctk/geom/shape/box.hpp>
+#include <arctk/tree/node.hpp>
 
 
 
