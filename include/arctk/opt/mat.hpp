@@ -16,12 +16,21 @@
 
 //  == IMPORTS ==
 //  -- Std --
-#include <cassert>
 #include <memory>
 
 //  -- Arctk --
 #include <arctk/opt/sop.hpp>
-#include <arctk/phys/photon.hpp>
+
+
+
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    namespace phys //! physics namespace
+    {
+        class Photon;
+    } // namespace phys
+} // namespace arc
 
 
 
@@ -77,58 +86,13 @@ namespace arc //! arctk namespace
 
 
 
-        //  == INSTANTIATION ==
-        //  -- Destructors --
-        /**
-         *  Construct a material which can generate specific-optical-properties for given wavelength bounds.
-         *
-         *  @param  min_    Minimum wavelength bound.
-         *  @param  max_    Maximum wavelength bound.
-         *
-         *  @pre    min_ must be less than, or equal to, max_.
-         */
-        inline Mat::Mat(const double min_, const double max_) noexcept
-          : _min(min_)
-          , _max(max_)
-        {
-            assert(min_ <= max_);
-        }
-
-
-        //  -- Destructors --
-        /**
-         *  Default destructor.
-         */
-        inline Mat::~Mat() noexcept = default;
-
-
-
-        //  == METHODS ==
-        //  -- Getters --
-        /**
-         *  Get the minimum wavelength bound of the material.
-         *
-         *  @return Minimum wavelength bound of the material.
-         */
-        inline double Mat::min() const noexcept
-        {
-            return (_min);
-        }
-
-        /**
-         *  Get the maximum wavelength bound of the material.
-         *
-         *  @return Maximum wavelength bound of the material.
-         */
-        inline double Mat::max() const noexcept
-        {
-            return (_max);
-        }
-
-
-
     } // namespace opt
 } // namespace arc
+
+
+
+//  == IMPLEMENTATION ==
+#include <arctk/opt/mat.inl>
 
 
 
