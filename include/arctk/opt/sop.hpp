@@ -14,30 +14,21 @@
 
 
 
-//  == IMPORTS ==
-//  -- Std --
-#include <cassert>
-
-//  -- Arctk --
-#include <arctk/dom/cell.hpp>
-#include <arctk/phys/photon.hpp>
-
-
-
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
-    namespace phys //! physics namespace
+    namespace dom //! domain number namespace
     {
-
-
-
-        //  == CLASS PROTOTYPES ==
+        class Cell;
+    }              // namespace dom
+    namespace phys //! physics number namespace
+    {
         class Photon;
-
-
-
-    } // namespace phys
+    }                // namespace phys
+    namespace random //! random number namespace
+    {
+        class Generator;
+    } // namespace random
 } // namespace arc
 
 
@@ -95,46 +86,13 @@ namespace arc //! arctk namespace
 
 
 
-        //  == INSTANTIATION ==
-        //  -- Constructors --
-        /**
-         *  Construct a specific-optical-properties object with a given refractive index.
-         *
-         *  @param  ref_index_  Refractive index.
-         *
-         *  @pre    ref_index_ must be greater than, or equal to, unity.
-         */
-        inline Sop::Sop(const double ref_index_) noexcept
-          : _ref_index(ref_index_)
-        {
-            assert(ref_index_ >= 1.0);
-        }
-
-
-        //  -- Destructors --
-        /**
-         *  Default destructor.
-         */
-        inline Sop::~Sop() noexcept = default;
-
-
-
-        //  == METHODS ==
-        //  -- Getters --
-        /**
-         *  Get the refractive index of the specific-optical-property.
-         *
-         *  @return Refractive index of the specific-optical-property.
-         */
-        inline double Sop::ref_index() const noexcept
-        {
-            return (_ref_index);
-        }
-
-
-
     } // namespace opt
 } // namespace arc
+
+
+
+//  == IMPLEMENTATION ==
+#include <arctk/opt/sop.inl>
 
 
 
