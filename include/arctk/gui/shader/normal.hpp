@@ -22,7 +22,7 @@
 //  == IMPORTS ==
 //  -- Graphical --
 #include <GL/glew.h>
-#include <glm/glm.h>
+#include <glm/glm.hpp>
 
 
 
