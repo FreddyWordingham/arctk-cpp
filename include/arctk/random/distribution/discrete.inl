@@ -17,13 +17,13 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
-#include <vector>
 
 //  -- Arctk --
 #include <arctk/math/compare.hpp>
 #include <arctk/prop/limits.hpp>
 #include <arctk/prop/order.hpp>
 #include <arctk/random/distribution.hpp>
+#include <arctk/random/generator.hpp>
 #include <arctk/search/index.hpp>
 
 
