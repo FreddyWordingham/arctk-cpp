@@ -17,9 +17,10 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
-#include <vector>
+#include <cmath>
 
 //  -- Arctk --
+#include <arctk/math/compare.hpp>
 #include <arctk/prop/limits.hpp>
 #include <arctk/prop/order.hpp>
 #include <arctk/random/distribution.hpp>

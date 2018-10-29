@@ -15,15 +15,24 @@
 
 
 //  == IMPORTS ==
+#include <arctk/random/distribution.hpp>
+
+
+
+//  == IMPORTS ==
 //  -- Std --
-#include <cassert>
 #include <vector>
 
-//  -- Arctk --
-#include <arctk/prop/limits.hpp>
-#include <arctk/prop/order.hpp>
-#include <arctk/random/distribution.hpp>
-#include <arctk/search/index.hpp>
+
+
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    namespace random //! random number namespace
+    {
+        class Generator;
+    } // namespace random
+} // namespace arc
 
 
 
