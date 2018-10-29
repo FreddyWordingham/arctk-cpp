@@ -15,13 +15,15 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
 //  -- Arctk --
 #include <arctk/consts/math.hpp>
 #include <arctk/dom/cell.hpp>
-#include <arctk/opt/func.hpp>
-#include <arctk/opt/sop.hpp>
 #include <arctk/phys/photon.hpp>
-#include <arctk/random.hpp>
+#include <arctk/random/distribution.hpp>
+#include <arctk/random/generator.hpp>
 
 
 

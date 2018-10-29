@@ -15,7 +15,7 @@
 
 
 //  == BASE ==
-#include <arctk/opt/mat.hpp>
+#include <arctk/opt/sop.hpp>
 
 
 
@@ -23,22 +23,23 @@
 //  -- Std --
 #include <memory>
 
-//  -- Arctk --
-#include <arctk/opt/sop.hpp>
-
 
 
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
-    namespace random //! random number namespace
+    namespace dom //! domain namespace
     {
-        class Photon;
-    }              // namespace random
+        class Cell;
+    }              // namespace dom
     namespace phys //! physics namespace
     {
         class Photon;
-    } // namespace phys
+    }                // namespace phys
+    namespace random //! random number namespace
+    {
+        class Generator;
+    } // namespace random
 } // namespace arc
 
 
@@ -87,6 +88,11 @@ namespace arc //! arctk namespace
         } // namespace sop
     }     // namespace opt
 } // namespace arc
+
+
+
+//  == IMPLEMENTATION ==
+#include <arctk/opt/sop/dumb.inl>
 
 
 
