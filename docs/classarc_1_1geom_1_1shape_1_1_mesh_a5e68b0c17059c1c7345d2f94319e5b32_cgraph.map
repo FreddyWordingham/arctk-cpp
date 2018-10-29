@@ -1,4 +1,0 @@
-<map id="arc::geom::shape::Mesh::collision_info" name="arc::geom::shape::Mesh::collision_info">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_box.html#a75b9b1763d42037e103de441aa3ed7bb" title="arc::geom::shape::Box\l::intersect" alt="" coords="218,5,372,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_box.html#af3919e0cb96537e7c7533eab6248c39d" title="arc::geom::shape::Box\l::collision" alt="" coords="218,68,372,107"/>
-</map>

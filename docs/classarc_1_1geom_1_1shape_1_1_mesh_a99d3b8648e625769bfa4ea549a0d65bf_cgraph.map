@@ -1,8 +1,7 @@
 <map id="arc::geom::shape::Mesh::init_box" name="arc::geom::shape::Mesh::init_box">
-<area shape="rect" id="node2" href="$namespacearc_1_1utl_1_1search.html#a7dedb03499315275304d2ee539dbbf81" title="arc::utl::search::min" alt="" coords="220,16,357,41"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="218,68,359,93"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1utl_1_1search.html#ab0aae86f6b98b4746101dd60c00514ca" title="arc::utl::search::min\l_index" alt="" coords="409,5,547,44"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="623,8,744,47"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="596,72,771,97"/>
-<area shape="rect" id="node7" href="$namespacearc_1_1utl_1_1search.html#a83ff5408af0ccc99c51d3dabf4f4562b" title="arc::utl::search::max\l_index" alt="" coords="407,68,548,107"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1search_1_1value.html#aae5e1d5e5a6ea96ef29ca3c819a4724f" title="arc::search::value::min" alt="" coords="220,16,375,41"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1search_1_1value.html#a38e0b67d4c9fb9be98ea9a2c487db51a" title="arc::search::value::max" alt="" coords="218,68,377,93"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1search_1_1value.html#a054f87cdf39a68c636e89677a24f9a9b" title="arc::search::value\l::min_index" alt="" coords="425,5,551,44"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="599,37,720,76"/>
+<area shape="rect" id="node6" href="$namespacearc_1_1search_1_1value.html#ae6de88857d2b0411f8a5d932fe9780f8" title="arc::search::value\l::max_index" alt="" coords="425,68,551,107"/>
 </map>

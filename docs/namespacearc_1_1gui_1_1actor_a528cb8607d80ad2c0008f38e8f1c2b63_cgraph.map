@@ -1,16 +1,7 @@
 <map id="arc::gui::actor::tree" name="arc::gui::actor::tree">
-<area shape="rect" id="node2" href="$classarc_1_1tree_1_1_root.html#a7d43551902f33cbbab8bd33d0e73d88b" title="arc::tree::Root::boxes" alt="" coords="186,5,335,31"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1utl_1_1search.html#a7dedb03499315275304d2ee539dbbf81" title="arc::utl::search::min" alt="" coords="191,55,329,80"/>
-<area shape="rect" id="node7" href="$namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="190,104,331,129"/>
-<area shape="rect" id="node9" href="$classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="189,160,331,185"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1utl_1_1search.html#ab0aae86f6b98b4746101dd60c00514ca" title="arc::utl::search::min\l_index" alt="" coords="400,35,537,73"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="629,36,750,75"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="602,101,777,127"/>
-<area shape="rect" id="node8" href="$namespacearc_1_1utl_1_1search.html#a83ff5408af0ccc99c51d3dabf4f4562b" title="arc::utl::search::max\l_index" alt="" coords="398,97,539,136"/>
-<area shape="rect" id="node10" href="$namespacearc_1_1math_1_1container.html#af7a7e70fec2026804d07178e063a2236" title="arc::math::container::sum" alt="" coords="383,160,554,185"/>
-<area shape="rect" id="node11" href="$classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="393,209,544,248"/>
-<area shape="rect" id="node12" href="$classarc_1_1gui_1_1_actor.html#a5251ce8de3e14f4b3daf9e2a7b771eee" title="arc::gui::Actor::model" alt="" coords="616,259,763,284"/>
-<area shape="rect" id="node13" href="$namespacearc_1_1math_1_1mat.html#a8df70b235035d723df62e4a418ac7e94" title="arc::math::mat::translate" alt="" coords="607,308,772,333"/>
-<area shape="rect" id="node14" href="$namespacearc_1_1math_1_1mat.html#acc6349295b1604d5cafa857f97469ed4" title="arc::math::mat::rotate" alt="" coords="616,160,764,185"/>
-<area shape="rect" id="node15" href="$namespacearc_1_1math_1_1mat.html#a4aaba718d91ea015418b66dc4f7a7a48" title="arc::math::mat::scale" alt="" coords="617,209,762,235"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1search_1_1value.html#aae5e1d5e5a6ea96ef29ca3c819a4724f" title="arc::search::value::min" alt="" coords="188,16,343,41"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1search_1_1value.html#a38e0b67d4c9fb9be98ea9a2c487db51a" title="arc::search::value::max" alt="" coords="186,68,345,93"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1search_1_1value.html#a054f87cdf39a68c636e89677a24f9a9b" title="arc::search::value\l::min_index" alt="" coords="393,5,520,44"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="568,37,688,76"/>
+<area shape="rect" id="node6" href="$namespacearc_1_1search_1_1value.html#ae6de88857d2b0411f8a5d932fe9780f8" title="arc::search::value\l::max_index" alt="" coords="393,68,520,107"/>
 </map>

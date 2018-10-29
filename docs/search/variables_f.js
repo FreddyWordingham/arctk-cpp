@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['r',['r',['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#afd853a4a9e7930de9c4dccde66e26f83',1,'arc::math::Vec&lt; T, 3 &gt;::r()'],['../classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#a573f34e173fea2024086c7f6c63f95eb',1,'arc::math::Vec&lt; T, 4 &gt;::r()']]],
-  ['ray_5fsource_5ffrag',['RAY_SOURCE_FRAG',['../namespacearc_1_1gui_1_1shader.html#aa776cc0609df4447fdd236c2c87a242b',1,'arc::gui::shader']]],
-  ['ray_5fsource_5fvert',['RAY_SOURCE_VERT',['../namespacearc_1_1gui_1_1shader.html#ac4941fcb85469bdf5b459e573ddbc186',1,'arc::gui::shader']]],
-  ['reset',['RESET',['../namespacearc_1_1term_1_1ansi.html#a4d9b3960e7c026deb58c73ada6ca7c08',1,'arc::term::ansi']]],
-  ['rho',['rho',['../classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#a88027759e9e0e2191517ffaa6c7ea49b',1,'arc::math::Vec&lt; T, 2 &gt;::rho()'],['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#abb5508b715b4588acbdd048663f61f9c',1,'arc::math::Vec&lt; T, 3 &gt;::rho()']]]
+  ['shader_5fcompilation_5ffailed',['SHADER_COMPILATION_FAILED',['../namespacearc_1_1exit_1_1error.html#a2719339d5d6170b79efcdd5e78a10f24',1,'arc::exit::error']]],
+  ['shader_5flinking_5ffailed',['SHADER_LINKING_FAILED',['../namespacearc_1_1exit_1_1error.html#af6d96c3598f24a0b33ea3bf70ab88bd1',1,'arc::exit::error']]],
+  ['shader_5funiform_5fduplicate',['SHADER_UNIFORM_DUPLICATE',['../namespacearc_1_1exit_1_1error.html#a8c36d4dfa54cc5c10f3e3235983abc6c',1,'arc::exit::error']]],
+  ['shader_5funiform_5fnot_5ffound',['SHADER_UNIFORM_NOT_FOUND',['../namespacearc_1_1exit_1_1error.html#a5a902f03db9415b023c3283db0253bb9',1,'arc::exit::error']]],
+  ['singleton_5fviolation',['SINGLETON_VIOLATION',['../namespacearc_1_1exit_1_1error.html#a5a6749486b28cbc4c62d80794d66a815',1,'arc::exit::error']]],
+  ['specular_5fsource_5ffrag',['SPECULAR_SOURCE_FRAG',['../namespacearc_1_1gui_1_1shader.html#a1186fcb90fdf371090c3ef7afa7b72eb',1,'arc::gui::shader']]],
+  ['specular_5fsource_5fvert',['SPECULAR_SOURCE_VERT',['../namespacearc_1_1gui_1_1shader.html#a73770d0d4151228ef3aa764f0e9e1f9c',1,'arc::gui::shader']]],
+  ['speed_5fof_5flight',['SPEED_OF_LIGHT',['../namespacearc_1_1consts_1_1phys.html#a890931739999d1d4bbcaf3d9b48a6177',1,'arc::consts::phys']]]
 ];

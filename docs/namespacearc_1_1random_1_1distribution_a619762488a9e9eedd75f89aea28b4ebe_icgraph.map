@@ -1,4 +1,7 @@
 <map id="arc::random::distribution::uniform" name="arc::random::distribution::uniform">
 <area shape="rect" id="node2" href="$classarc_1_1random_1_1distribution_1_1_constant.html#aec071ab8271f465317f1112f8d4a2ccc" title="arc::random::distribution\l::Constant::sample" alt="" coords="218,5,382,44"/>
 <area shape="rect" id="node3" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a0fa6aa6641224238ac372116f1459944" title="arc::random::distribution\l::Linear::sample" alt="" coords="218,68,382,107"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1random_1_1distribution.html#aa72c220ef49e5f1748071c2d83119103" title="arc::random::distribution\l::henyey_greenstein" alt="" coords="218,131,382,169"/>
+<area shape="rect" id="node6" href="$namespacearc_1_1random_1_1distribution.html#ac0372011220d7b2d6604f7fd2c777f04" title="arc::random::distribution\l::isotropic" alt="" coords="218,193,382,232"/>
+<area shape="rect" id="node5" href="$classarc_1_1opt_1_1sop_1_1_dumb.html#ac2b0da14d4b78eb0ffb9febdd584f995" title="arc::opt::sop::Dumb\l::interact" alt="" coords="430,131,568,169"/>
 </map>

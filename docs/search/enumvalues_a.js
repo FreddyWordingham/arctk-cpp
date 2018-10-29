@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x',['X',['../namespacearc_1_1index_1_1dim.html#aa029790f1ea3973564bcd01a5a1a79b6aa85c5e80e548ceca3a4033c8d6f3e0a5',1,'arc::index::dim']]]
+  ['r',['R',['../namespacearc_1_1index_1_1col.html#a9900ae7a0448a055a3ed314d6521d577a593ebc633bd1f9f635d2b338d70db786',1,'arc::index::col']]]
 ];

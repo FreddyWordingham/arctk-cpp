@@ -1,0 +1,5 @@
+<map id="arc::equip::entity::Mirror::hit_front" name="arc::equip::entity::Mirror::hit_front">
+<area shape="rect" id="node2" href="$namespacearc_1_1opt_1_1func.html#a63b373122d1d842ec64e66f974919a42" title="arc::opt::func::reflection_dir" alt="" coords="172,31,355,56"/>
+<area shape="rect" id="node3" href="$classarc_1_1math_1_1_vec.html#ad76dddf5863281c38659f69cf9d7ec36" title="arc::math::Vec::normal" alt="" coords="415,5,570,31"/>
+<area shape="rect" id="node4" href="$classarc_1_1math_1_1_vec.html#aa6d4a0162dccc9fc08cb51111aa44825" title="arc::math::Vec::normalised" alt="" coords="403,55,582,80"/>
+</map>

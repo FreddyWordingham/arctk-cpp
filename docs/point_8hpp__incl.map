@@ -1,11 +1,3 @@
 <map id="include/arctk/gui/point.hpp" name="include/arctk/gui/point.hpp">
-<area shape="rect" id="node3" href="$debug_8hpp.html" title="arctk/debug.hpp" alt="" coords="644,79,761,104"/>
-<area shape="rect" id="node4" href="$contract_8hpp.html" title="arctk/debug/contract.hpp" alt="" coords="426,152,594,177"/>
-<area shape="rect" id="node7" href="$location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="321,225,488,251"/>
-<area shape="rect" id="node15" href="$exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="653,225,753,251"/>
-<area shape="rect" id="node18" href="$invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="617,152,788,177"/>
-<area shape="rect" id="node20" href="$macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="879,152,996,177"/>
-<area shape="rect" id="node16" href="$error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="708,299,840,324"/>
-<area shape="rect" id="node17" href="$success_8hpp.html" title="arctk/exit/success.hpp" alt="" coords="864,299,1017,324"/>
-<area shape="rect" id="node21" href="$utility_8hpp.html" title="arctk/macro/utility.hpp" alt="" coords="880,225,1030,251"/>
+<area shape="rect" id="node3" href="$point_8inl.html" title="arctk/gui/point.inl" alt="" coords="124,79,245,104"/>
 </map>

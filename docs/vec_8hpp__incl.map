@@ -1,16 +1,5 @@
 <map id="include/arctk/math/vec.hpp" name="include/arctk/math/vec.hpp">
-<area shape="rect" id="node6" href="$consts_8hpp.html" title="arctk/consts.hpp" alt="" coords="303,92,422,117"/>
-<area shape="rect" id="node12" href="$debug_8hpp.html" title="arctk/debug.hpp" alt="" coords="904,92,1021,117"/>
-<area shape="rect" id="node7" href="$consts_2format_8hpp.html" title="arctk/consts/format.hpp" alt="" coords="372,165,532,191"/>
-<area shape="rect" id="node9" href="$consts_2math_8hpp.html" title="arctk/consts/math.hpp" alt="" coords="556,165,708,191"/>
-<area shape="rect" id="node10" href="$num_8hpp.html" title="arctk/consts/num.hpp" alt="" coords="26,165,174,191"/>
-<area shape="rect" id="node11" href="$consts_2phys_8hpp.html" title="arctk/consts/phys.hpp" alt="" coords="198,165,348,191"/>
-<area shape="rect" id="node13" href="$contract_8hpp.html" title="arctk/debug/contract.hpp" alt="" coords="783,165,951,191"/>
-<area shape="rect" id="node16" href="$location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="678,239,845,264"/>
-<area shape="rect" id="node24" href="$exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="1010,239,1110,264"/>
-<area shape="rect" id="node27" href="$invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="974,165,1146,191"/>
-<area shape="rect" id="node29" href="$macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="1238,165,1354,191"/>
-<area shape="rect" id="node25" href="$error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="1065,312,1197,337"/>
-<area shape="rect" id="node26" href="$success_8hpp.html" title="arctk/exit/success.hpp" alt="" coords="1221,312,1374,337"/>
-<area shape="rect" id="node30" href="$utility_8hpp.html" title="arctk/macro/utility.hpp" alt="" coords="1237,239,1387,264"/>
+<area shape="rect" id="node5" href="$vec_8inl.html" title="arctk/math/vec.inl" alt="" coords="267,92,392,117"/>
+<area shape="rect" id="node9" href="$format_8hpp.html" title="arctk/consts/format.hpp" alt="" coords="183,165,343,191"/>
+<area shape="rect" id="node10" href="$math_2mat_8hpp.html" title="arctk/math/mat.hpp" alt="" coords="23,165,158,191"/>
 </map>

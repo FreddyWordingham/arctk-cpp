@@ -70,19 +70,16 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">keymap.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;map&gt;</code><br />
-<code>#include &lt;GL/glew.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
 <code>#include &lt;GLFW/glfw3.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="debug_8hpp_source.html">arctk/debug.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="camera_8hpp_source.html">arctk/gui/camera.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="keybind_8hpp_source.html">arctk/gui/keybind.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="window_8hpp_source.html">arctk/gui/window.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="keymap_8inl.html">arctk/gui/keymap.inl</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for keymap.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -90,50 +87,14 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="keymap_8hpp__incl.png" border="0" usemap="#include_2arctk_2gui_2keymap_8hpp" alt=""/></div>
 <map name="include_2arctk_2gui_2keymap_8hpp" id="include_2arctk_2gui_2keymap_8hpp">
-<area shape="rect" id="node5" href="debug_8hpp.html" title="arctk/debug.hpp" alt="" coords="1646,752,1763,777"/>
-<area shape="rect" id="node24" href="camera_8hpp.html" title="arctk/gui/camera.hpp" alt="" coords="480,152,625,177"/>
-<area shape="rect" id="node26" href="keybind_8hpp.html" title="arctk/gui/keybind.hpp" alt="" coords="207,152,354,177"/>
-<area shape="rect" id="node27" href="window_8hpp.html" title="arctk/gui/window.hpp" alt="" coords="640,79,785,104"/>
-<area shape="rect" id="node6" href="contract_8hpp.html" title="arctk/debug/contract.hpp" alt="" coords="1727,825,1895,851"/>
-<area shape="rect" id="node9" href="location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="1503,899,1669,924"/>
-<area shape="rect" id="node17" href="exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="1910,899,2011,924"/>
-<area shape="rect" id="node20" href="invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="1532,825,1703,851"/>
-<area shape="rect" id="node22" href="macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="2021,825,2138,851"/>
-<area shape="rect" id="node18" href="error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="1895,972,2026,997"/>
-<area shape="rect" id="node19" href="success_8hpp.html" title="arctk/exit/success.hpp" alt="" coords="2051,972,2203,997"/>
-<area shape="rect" id="node23" href="utility_8hpp.html" title="arctk/macro/utility.hpp" alt="" coords="2035,899,2185,924"/>
-<area shape="rect" id="node28" href="actor_8hpp.html" title="arctk/gui/actor.hpp" alt="" coords="998,152,1128,177"/>
-<area shape="rect" id="node50" href="lens_8hpp.html" title="arctk/gui/lens.hpp" alt="" coords="700,152,826,177"/>
-<area shape="rect" id="node30" href="geom_8hpp.html" title="arctk/geom.hpp" alt="" coords="1007,225,1120,251"/>
-<area shape="rect" id="node32" href="math_8hpp.html" title="arctk/math.hpp" alt="" coords="1026,592,1135,617"/>
-<area shape="rect" id="node46" href="point_8hpp.html" title="arctk/gui/point.hpp" alt="" coords="802,225,932,251"/>
-<area shape="rect" id="node47" href="phys_8hpp.html" title="arctk/phys.hpp" alt="" coords="1195,225,1303,251"/>
-<area shape="rect" id="node48" href="scene_8hpp.html" title="arctk/scene.hpp" alt="" coords="1327,225,1442,251"/>
-<area shape="rect" id="node49" href="tree_8hpp.html" title="arctk/tree.hpp" alt="" coords="1466,225,1569,251"/>
-<area shape="rect" id="node31" href="geom_2collision_8hpp.html" title="arctk/geom/collision.hpp" alt="" coords="1302,519,1467,544"/>
-<area shape="rect" id="node42" href="shape_8hpp.html" title="arctk/geom/shape.hpp" alt="" coords="891,519,1044,544"/>
-<area shape="rect" id="node43" href="box_8hpp.html" title="arctk/geom/shape/box.hpp" alt="" coords="998,372,1176,397"/>
-<area shape="rect" id="node44" href="triangle_8hpp.html" title="arctk/geom/shape/triangle.hpp" alt="" coords="867,445,1068,471"/>
-<area shape="rect" id="node45" href="mesh_8hpp.html" title="arctk/geom/shape/mesh.hpp" alt="" coords="1119,299,1309,324"/>
-<area shape="rect" id="node34" href="compare_8hpp.html" title="arctk/math/compare.hpp" alt="" coords="626,672,791,697"/>
-<area shape="rect" id="node35" href="container_8hpp.html" title="arctk/math/container.hpp" alt="" coords="816,672,983,697"/>
-<area shape="rect" id="node36" href="math_2convert_8hpp.html" title="arctk/math/convert.hpp" alt="" coords="1007,672,1164,697"/>
-<area shape="rect" id="node37" href="formula_8hpp.html" title="arctk/math/formula.hpp" alt="" coords="272,752,430,777"/>
-<area shape="rect" id="node38" href="math_2formula_2constant_8hpp.html" title="arctk/math/formula\l/constant.hpp" alt="" coords="1188,665,1320,704"/>
-<area shape="rect" id="node39" href="math_2formula_2linear_8hpp.html" title="arctk/math/formula\l/linear.hpp" alt="" coords="364,665,496,704"/>
-<area shape="rect" id="node40" href="polynomial_8hpp.html" title="arctk/math/formula\l/polynomial.hpp" alt="" coords="208,665,340,704"/>
-<area shape="rect" id="node41" href="math_2geom_8hpp.html" title="arctk/math/geom.hpp" alt="" coords="1343,672,1490,697"/>
-</map>
-</div>
-</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="keymap_8hpp__dep__incl.png" border="0" usemap="#include_2arctk_2gui_2keymap_8hppdep" alt=""/></div>
-<map name="include_2arctk_2gui_2keymap_8hppdep" id="include_2arctk_2gui_2keymap_8hppdep">
-<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="54,152,151,177"/>
-<area shape="rect" id="node3" href="gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="85,79,229,104"/>
+<area shape="rect" id="node5" href="keybind_8hpp.html" title="arctk/gui/keybind.hpp" alt="" coords="126,79,274,104"/>
+<area shape="rect" id="node7" href="keymap_8inl.html" title="arctk/gui/keymap.inl" alt="" coords="350,79,490,104"/>
+<area shape="rect" id="node6" href="keybind_8inl.html" title="arctk/gui/keybind.inl" alt="" coords="131,152,269,177"/>
+<area shape="rect" id="node11" href="camera_8hpp.html" title="arctk/gui/camera.hpp" alt="" coords="470,152,616,177"/>
+<area shape="rect" id="node14" href="window_8hpp.html" title="arctk/gui/window.hpp" alt="" coords="639,152,785,177"/>
+<area shape="rect" id="node13" href="camera_8inl.html" title="arctk/gui/camera.inl" alt="" coords="394,225,531,251"/>
+<area shape="rect" id="node16" href="window_8inl.html" title="arctk/gui/window.inl" alt="" coords="751,225,887,251"/>
+<area shape="rect" id="node19" href="error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="879,299,1011,324"/>
 </map>
 </div>
 </div>
@@ -152,12 +113,6 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacearc_1_1gui"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui.html">arc::gui</a></td></tr>
 <tr class="memdesc:namespacearc_1_1gui"><td class="mdescLeft">&#160;</td><td class="mdescRight">graphical-user-interface namespace <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a024202603b564b58ffba3e754f8100ac"><td class="memItemLeft" align="right" valign="top">constexpr const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui.html#a024202603b564b58ffba3e754f8100ac">arc::gui::QUIT_KEY</a> = GLFW_KEY_ESCAPE</td></tr>
-<tr class="memdesc:a024202603b564b58ffba3e754f8100ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key used to close open window.  <a href="namespacearc_1_1gui.html#a024202603b564b58ffba3e754f8100ac">More...</a><br /></td></tr>
-<tr class="separator:a024202603b564b58ffba3e754f8100ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section date"><dt>Date</dt><dd>02/08/2018 </dd></dl>
@@ -166,7 +121,7 @@ Variables</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 17 2018 00:26:00 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 29 2018 01:41:17 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

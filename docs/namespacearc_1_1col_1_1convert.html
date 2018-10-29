@@ -80,7 +80,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:abaa9e878e39a4e9441010a888961f496"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1col_1_1convert.html#abaa9e878e39a4e9441010a888961f496">hsv_to_rgb</a> (double hue_, double sat_, double val_) noexcept</td></tr>
+<tr class="memitem:abaa9e878e39a4e9441010a888961f496"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1col_1_1convert.html#abaa9e878e39a4e9441010a888961f496">hsv_to_rgb</a> (double hue_, double sat_, double val_) noexcept</td></tr>
 <tr class="separator:abaa9e878e39a4e9441010a888961f496"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -96,7 +96,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacearc.html#ad775440c0194b95d118a1c537aa58885">vec3</a> arc::col::convert::hsv_to_rgb </td>
+          <td class="memname"><a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> arc::col::convert::hsv_to_rgb </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>hue_</em>, </td>
@@ -134,9 +134,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>sat_ must be between zero and one. </dd>
+<dl class="section pre"><dt>Precondition</dt><dd>sat_ must be non-negative. </dd>
 <dd>
-val_ must be between zero and one.</dd></dl>
+sat_ must be less than, or equal to, unity. </dd>
+<dd>
+val_ must be non-negative. </dd>
+<dd>
+val_ must be less than, or equal to, unity.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>RGB equivalent of the HSV value. </dd></dl>
 
 </div>
@@ -144,7 +148,7 @@ val_ must be between zero and one.</dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 17 2018 00:26:00 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 29 2018 01:41:18 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

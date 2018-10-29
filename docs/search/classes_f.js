@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['perspective',['Perspective',['../classarc_1_1gui_1_1lens_1_1_perspective.html',1,'arc::gui::lens']]],
-  ['photon',['Photon',['../classarc_1_1phys_1_1_photon.html',1,'arc::phys']]],
-  ['point',['Point',['../classarc_1_1gui_1_1_point.html',1,'arc::gui']]],
-  ['polynomial',['Polynomial',['../classarc_1_1math_1_1formula_1_1_polynomial.html',1,'arc::math::formula']]]
+  ['ray',['Ray',['../classarc_1_1gui_1_1shader_1_1_ray.html',1,'arc::gui::shader']]],
+  ['region',['Region',['../classarc_1_1dom_1_1_region.html',1,'arc::dom']]],
+  ['root',['Root',['../classarc_1_1tree_1_1_root.html',1,'arc::tree']]]
 ];

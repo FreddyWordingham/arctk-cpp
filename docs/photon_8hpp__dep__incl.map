@@ -1,27 +1,12 @@
 <map id="include/arctk/phys/photon.hpp" name="include/arctk/phys/photon.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="633,1312,730,1337"/>
-<area shape="rect" id="node3" href="$mat_2dumb_8hpp.html" title="include/arctk/phys\l/mat/dumb.hpp" alt="" coords="351,179,479,217"/>
-<area shape="rect" id="node4" href="$phys_8hpp.html" title="include/arctk/phys.hpp" alt="" coords="464,265,618,291"/>
-<area shape="rect" id="node25" href="$phys_2mat_8hpp.html" title="include/arctk/phys\l/mat.hpp" alt="" coords="249,92,377,131"/>
-<area shape="rect" id="node26" href="$sop_2dumb_8hpp.html" title="include/arctk/phys\l/sop/dumb.hpp" alt="" coords="553,92,681,131"/>
-<area shape="rect" id="node5" href="$body_8hpp.html" title="include/arctk/equip\l/entity/body.hpp" alt="" coords="475,512,608,551"/>
-<area shape="rect" id="node10" href="$actor_8hpp.html" title="include/arctk/gui/actor.hpp" alt="" coords="1153,1005,1329,1031"/>
-<area shape="rect" id="node21" href="$laser_8hpp.html" title="include/arctk/equip\l/entity/light/laser.hpp" alt="" coords="1873,512,2015,551"/>
-<area shape="rect" id="node22" href="$light_8hpp.html" title="include/arctk/equip\l/entity/light.hpp" alt="" coords="579,425,712,464"/>
-<area shape="rect" id="node23" href="$mirror_8hpp.html" title="include/arctk/equip\l/entity/mirror.hpp" alt="" coords="144,425,277,464"/>
-<area shape="rect" id="node24" href="$entity_8hpp.html" title="include/arctk/equip\l/entity.hpp" alt="" coords="371,339,504,377"/>
-<area shape="rect" id="node6" href="$equip_8hpp.html" title="include/arctk/equip.hpp" alt="" coords="406,599,565,624"/>
-<area shape="rect" id="node7" href="$branch_8hpp.html" title="include/arctk/tree\l/node/branch.hpp" alt="" coords="348,759,473,797"/>
-<area shape="rect" id="node20" href="$leaf_8hpp.html" title="include/arctk/tree\l/node/leaf.hpp" alt="" coords="448,672,571,711"/>
-<area shape="rect" id="node8" href="$root_8hpp.html" title="include/arctk/tree\l/root.hpp" alt="" coords="448,845,571,884"/>
-<area shape="rect" id="node9" href="$tree_8hpp.html" title="include/arctk/tree.hpp" alt="" coords="448,932,597,957"/>
-<area shape="rect" id="node11" href="$ambient_8hpp.html" title="include/arctk/gui/shader\l/ambient.hpp" alt="" coords="1904,1152,2066,1191"/>
-<area shape="rect" id="node12" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="1202,1239,1345,1264"/>
-<area shape="rect" id="node13" href="$diffuse_8hpp.html" title="include/arctk/gui/shader\l/diffuse.hpp" alt="" coords="600,1152,762,1191"/>
-<area shape="rect" id="node14" href="$normal_8hpp.html" title="include/arctk/gui/shader\l/normal.hpp" alt="" coords="787,1152,949,1191"/>
-<area shape="rect" id="node15" href="$ray_8hpp.html" title="include/arctk/gui/shader\l/ray.hpp" alt="" coords="974,1152,1136,1191"/>
-<area shape="rect" id="node16" href="$skybox_8hpp.html" title="include/arctk/gui/shader\l/skybox.hpp" alt="" coords="1160,1152,1322,1191"/>
-<area shape="rect" id="node17" href="$specular_8hpp.html" title="include/arctk/gui/shader\l/specular.hpp" alt="" coords="1398,1152,1560,1191"/>
-<area shape="rect" id="node18" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="1522,1079,1713,1104"/>
-<area shape="rect" id="node19" href="$keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="1635,1159,1829,1184"/>
+<area shape="rect" id="node2" href="$body_8inl.html" title="include/arctk/equip\l/entity/body.inl" alt="" coords="5,92,138,131"/>
+<area shape="rect" id="node4" href="$laser_8hpp.html" title="include/arctk/equip\l/entity/light/laser.hpp" alt="" coords="183,179,326,217"/>
+<area shape="rect" id="node5" href="$light_8hpp.html" title="include/arctk/equip\l/entity/light.hpp" alt="" coords="213,92,346,131"/>
+<area shape="rect" id="node6" href="$mirror_8inl.html" title="include/arctk/equip\l/entity/mirror.inl" alt="" coords="369,92,502,131"/>
+<area shape="rect" id="node8" href="$sop_2dumb_8inl.html" title="include/arctk/opt/sop\l/dumb.inl" alt="" coords="526,92,670,131"/>
+<area shape="rect" id="node3" href="$body_8hpp.html" title="include/arctk/equip\l/entity/body.hpp" alt="" coords="5,179,138,217"/>
+<area shape="rect" id="node7" href="$mirror_8hpp.html" title="include/arctk/equip\l/entity/mirror.hpp" alt="" coords="369,179,502,217"/>
+<area shape="rect" id="node9" href="$sop_2dumb_8hpp.html" title="include/arctk/opt/sop\l/dumb.hpp" alt="" coords="526,179,670,217"/>
+<area shape="rect" id="node10" href="$mat_2dumb_8inl.html" title="include/arctk/opt/mat\l/dumb.inl" alt="" coords="526,265,670,304"/>
+<area shape="rect" id="node11" href="$mat_2dumb_8hpp.html" title="include/arctk/opt/mat\l/dumb.hpp" alt="" coords="526,352,670,391"/>
 </map>

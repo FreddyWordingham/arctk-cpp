@@ -321,16 +321,6 @@ aa_samples_ must be positive. </dd></dl>
 </div><div class="memdoc">
 <p>Get the handle of the window.</p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classarc_1_1gui_1_1_window.html">Window</a> handle. </dd></dl>
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1gui_1_1_window_ac0a644efc151d52ae3e200e2ef01d3c8_icgraph.png" border="0" usemap="#classarc_1_1gui_1_1_window_ac0a644efc151d52ae3e200e2ef01d3c8_icgraph" alt=""/></div>
-<map name="classarc_1_1gui_1_1_window_ac0a644efc151d52ae3e200e2ef01d3c8_icgraph" id="classarc_1_1gui_1_1_window_ac0a644efc151d52ae3e200e2ef01d3c8_icgraph">
-<area shape="rect" id="node2" href="classarc_1_1gui_1_1_window.html#ad1d384136c2294e4041301e85b4033db" title="arc::gui::Window::init\l_handle" alt="" coords="221,5,365,44"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -397,16 +387,6 @@ height_ must be positive. </dd>
 <dd>
 aa_samples_ must be positive.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Initialised window handle. </dd></dl>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1gui_1_1_window_ad1d384136c2294e4041301e85b4033db_cgraph.png" border="0" usemap="#classarc_1_1gui_1_1_window_ad1d384136c2294e4041301e85b4033db_cgraph" alt=""/></div>
-<map name="classarc_1_1gui_1_1_window_ad1d384136c2294e4041301e85b4033db_cgraph" id="classarc_1_1gui_1_1_window_ad1d384136c2294e4041301e85b4033db_cgraph">
-<area shape="rect" id="node2" href="classarc_1_1gui_1_1_window.html#ac0a644efc151d52ae3e200e2ef01d3c8" title="arc::gui::Window::handle" alt="" coords="198,12,365,37"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -498,11 +478,17 @@ aa_samples_ must be positive.</dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>col_.r must be between zero and unity. </dd>
+<dl class="section pre"><dt>Precondition</dt><dd>col_.r must be non-negative. </dd>
 <dd>
-col_.g must be between zero and unity. </dd>
+col_.r must be less than, or equal to, unity. </dd>
 <dd>
-col_.b must be between zero and unity. </dd></dl>
+col_.g must be non-negative. </dd>
+<dd>
+col_.g must be less than, or equal to, unity. </dd>
+<dd>
+col_.b must be non-negative. </dd>
+<dd>
+col_.b must be less than, or equal to, unity. </dd></dl>
 
 </div>
 </div>
@@ -536,13 +522,21 @@ col_.b must be between zero and unity. </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>col_.r must be between zero and unity. </dd>
+<dl class="section pre"><dt>Precondition</dt><dd>col_.r must be non-negative. </dd>
 <dd>
-col_.g must be between zero and unity. </dd>
+col_.r must be less than, or equal to, unity. </dd>
 <dd>
-col_.b must be between zero and unity. </dd>
+col_.g must be non-negative. </dd>
 <dd>
-col_.a must be between zero and unity. </dd></dl>
+col_.g must be less than, or equal to, unity. </dd>
+<dd>
+col_.b must be non-negative. </dd>
+<dd>
+col_.b must be less than, or equal to, unity. </dd>
+<dd>
+col_.a must be non-negative. </dd>
+<dd>
+col_.a must be less than, or equal to, unity. </dd></dl>
 
 </div>
 </div>
@@ -597,13 +591,14 @@ col_.a must be between zero and unity. </dd></dl>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/arctk/gui/<a class="el" href="window_8hpp_source.html">window.hpp</a></li>
+<li>include/arctk/gui/<a class="el" href="window_8inl.html">window.inl</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 17 2018 00:26:00 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 29 2018 01:41:18 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

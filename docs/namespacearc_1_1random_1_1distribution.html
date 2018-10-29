@@ -105,9 +105,8 @@ Functions</h2></td></tr>
 <tr class="memitem:aa72c220ef49e5f1748071c2d83119103"><td class="memTemplParams" colspan="2">template&lt;typename T  = double&gt; </td></tr>
 <tr class="memitem:aa72c220ef49e5f1748071c2d83119103"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1random_1_1distribution.html#aa72c220ef49e5f1748071c2d83119103">henyey_greenstein</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">Generator</a> *rng_, T g_) noexcept</td></tr>
 <tr class="separator:aa72c220ef49e5f1748071c2d83119103"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3849967432132a79729022f4b5e011ff"><td class="memTemplParams" colspan="2">template&lt;typename T  = vec3&gt; </td></tr>
-<tr class="memitem:a3849967432132a79729022f4b5e011ff"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1random_1_1distribution.html#a3849967432132a79729022f4b5e011ff">isotropic</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">Generator</a> *rng_) noexcept</td></tr>
-<tr class="separator:a3849967432132a79729022f4b5e011ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0372011220d7b2d6604f7fd2c777f04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1random_1_1distribution.html#ac0372011220d7b2d6604f7fd2c777f04">isotropic</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">Generator</a> *rng_) noexcept</td></tr>
+<tr class="separator:ac0372011220d7b2d6604f7fd2c777f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>probability distribution namespace </p>
@@ -171,7 +170,7 @@ template&lt;typename T  = double&gt; </div>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>T Must be an arithmetic type. </dd>
 <dd>
-T May not be an integral type.</dd>
+T May not be an integral type. </dd>
 <dd>
 rng_ may not be nullptr. </dd>
 <dd>
@@ -231,11 +230,13 @@ template&lt;typename T  = double&gt; </div>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>T Must be an arithmetic type. </dd>
 <dd>
-T May not be an integral type.</dd>
+T May not be an integral type. </dd>
 <dd>
 rng_ may not be nullptr. </dd>
 <dd>
-g_ must be between minus one and one.</dd></dl>
+g_ must be greater than, or equal to, minus one. </dd>
+<dd>
+g_ must be less than, or equal to, unity.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random number sampled from a Henyey-Greenstein distribution. </dd></dl>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -245,7 +246,7 @@ g_ must be between minus one and one.</dd></dl>
 <div class="center"><img src="namespacearc_1_1random_1_1distribution_aa72c220ef49e5f1748071c2d83119103_cgraph.png" border="0" usemap="#namespacearc_1_1random_1_1distribution_aa72c220ef49e5f1748071c2d83119103_cgraph" alt=""/></div>
 <map name="namespacearc_1_1random_1_1distribution_aa72c220ef49e5f1748071c2d83119103_cgraph" id="namespacearc_1_1random_1_1distribution_aa72c220ef49e5f1748071c2d83119103_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1math_1_1compare.html#a6fdf1ccf7e257c599fa273e28f605ffd" title="arc::math::compare\l::zero" alt="" coords="232,5,368,44"/>
-<area shape="rect" id="node3" href="namespacearc_1_1random_1_1distribution.html#af9e55c4d5a5e1965dc94441b0a5b86ab" title="arc::random::distribution\l::uniform" alt="" coords="218,68,382,107"/>
+<area shape="rect" id="node3" href="namespacearc_1_1random_1_1distribution.html#a619762488a9e9eedd75f89aea28b4ebe" title="arc::random::distribution\l::uniform" alt="" coords="218,68,382,107"/>
 <area shape="rect" id="node4" href="namespacearc_1_1math_1_1pow.html#a673982111327d6a2597e9a381009ce4d" title="arc::math::pow::sq" alt="" coords="235,131,365,156"/>
 </map>
 </div>
@@ -256,25 +257,23 @@ g_ must be between minus one and one.</dd></dl>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="namespacearc_1_1random_1_1distribution_aa72c220ef49e5f1748071c2d83119103_icgraph.png" border="0" usemap="#namespacearc_1_1random_1_1distribution_aa72c220ef49e5f1748071c2d83119103_icgraph" alt=""/></div>
 <map name="namespacearc_1_1random_1_1distribution_aa72c220ef49e5f1748071c2d83119103_icgraph" id="namespacearc_1_1random_1_1distribution_aa72c220ef49e5f1748071c2d83119103_icgraph">
-<area shape="rect" id="node2" href="classarc_1_1phys_1_1sop_1_1_dumb.html#a0e923da960f8feb37dad6927059e3abe" title="arc::phys::sop::Dumb\l::interact" alt="" coords="218,5,365,44"/>
+<area shape="rect" id="node2" href="classarc_1_1opt_1_1sop_1_1_dumb.html#ac2b0da14d4b78eb0ffb9febdd584f995" title="arc::opt::sop::Dumb\l::interact" alt="" coords="218,5,355,44"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a3849967432132a79729022f4b5e011ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3849967432132a79729022f4b5e011ff">&#9670;&nbsp;</a></span>isotropic()</h2>
+<a id="ac0372011220d7b2d6604f7fd2c777f04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0372011220d7b2d6604f7fd2c777f04">&#9670;&nbsp;</a></span>isotropic()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T  = vec3&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T arc::random::distribution::isotropic </td>
+          <td class="memname"><a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> arc::random::distribution::isotropic </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classarc_1_1random_1_1_generator.html">Generator</a> *const&#160;</td>
           <td class="paramname"><em>rng_</em></td><td>)</td>
@@ -288,31 +287,22 @@ template&lt;typename T  = vec3&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Generate a random isotropic direction vec.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type to be uniformly generated.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rng_</td><td>Random number generator.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>T Must be a vec type.</dd>
-<dd>
-rng_ may not be nullptr.</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>rng_ may not be nullptr.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random isotropic direction vec. </dd></dl>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="namespacearc_1_1random_1_1distribution_a3849967432132a79729022f4b5e011ff_cgraph.png" border="0" usemap="#namespacearc_1_1random_1_1distribution_a3849967432132a79729022f4b5e011ff_cgraph" alt=""/></div>
-<map name="namespacearc_1_1random_1_1distribution_a3849967432132a79729022f4b5e011ff_cgraph" id="namespacearc_1_1random_1_1distribution_a3849967432132a79729022f4b5e011ff_cgraph">
-<area shape="rect" id="node2" href="namespacearc_1_1random_1_1distribution.html#af9e55c4d5a5e1965dc94441b0a5b86ab" title="arc::random::distribution\l::uniform" alt="" coords="218,5,382,44"/>
-<area shape="rect" id="node3" href="namespacearc_1_1math_1_1convert.html#ac0b319816d18eb6a572ecb9abd2af70d" title="arc::math::convert\l::polar_to_cart" alt="" coords="236,68,364,107"/>
+<div class="center"><img src="namespacearc_1_1random_1_1distribution_ac0372011220d7b2d6604f7fd2c777f04_cgraph.png" border="0" usemap="#namespacearc_1_1random_1_1distribution_ac0372011220d7b2d6604f7fd2c777f04_cgraph" alt=""/></div>
+<map name="namespacearc_1_1random_1_1distribution_ac0372011220d7b2d6604f7fd2c777f04_cgraph" id="namespacearc_1_1random_1_1distribution_ac0372011220d7b2d6604f7fd2c777f04_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1random_1_1distribution.html#a619762488a9e9eedd75f89aea28b4ebe" title="arc::random::distribution\l::uniform" alt="" coords="218,5,382,44"/>
 </map>
 </div>
 
@@ -358,7 +348,7 @@ template&lt;typename T  = double&gt; </div>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>T Must be an arithmetic type. </dd>
 <dd>
-T May not be an integral type.</dd>
+T May not be an integral type. </dd>
 <dd>
 rng_ may not be nullptr.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random number sampled from a uniform normal distribution. </dd></dl>
@@ -371,6 +361,7 @@ rng_ may not be nullptr.</dd></dl>
 <map name="namespacearc_1_1random_1_1distribution_af0181d183542f6401028a77795026f90_icgraph" id="namespacearc_1_1random_1_1distribution_af0181d183542f6401028a77795026f90_icgraph">
 <area shape="rect" id="node2" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a82ed5655fee5506bf8d51a96d80c5523" title="arc::geom::shape::Triangle\l::random_pos_and_norm" alt="" coords="218,5,397,44"/>
 <area shape="rect" id="node3" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a3696bd2a6e0205dd6858b6c32f014428" title="arc::geom::shape::Triangle\l::collision_info" alt="" coords="218,68,397,107"/>
+<area shape="rect" id="node4" href="classarc_1_1math_1_1_vec.html#ad76dddf5863281c38659f69cf9d7ec36" title="arc::math::Vec\&lt; double,\l 3 \&gt;::normal" alt="" coords="227,131,388,169"/>
 </map>
 </div>
 
@@ -440,6 +431,9 @@ max_ must be positive.</dd></dl>
 <map name="namespacearc_1_1random_1_1distribution_a619762488a9e9eedd75f89aea28b4ebe_icgraph" id="namespacearc_1_1random_1_1distribution_a619762488a9e9eedd75f89aea28b4ebe_icgraph">
 <area shape="rect" id="node2" href="classarc_1_1random_1_1distribution_1_1_constant.html#aec071ab8271f465317f1112f8d4a2ccc" title="arc::random::distribution\l::Constant::sample" alt="" coords="218,5,382,44"/>
 <area shape="rect" id="node3" href="classarc_1_1random_1_1distribution_1_1_linear.html#a0fa6aa6641224238ac372116f1459944" title="arc::random::distribution\l::Linear::sample" alt="" coords="218,68,382,107"/>
+<area shape="rect" id="node4" href="namespacearc_1_1random_1_1distribution.html#aa72c220ef49e5f1748071c2d83119103" title="arc::random::distribution\l::henyey_greenstein" alt="" coords="218,131,382,169"/>
+<area shape="rect" id="node6" href="namespacearc_1_1random_1_1distribution.html#ac0372011220d7b2d6604f7fd2c777f04" title="arc::random::distribution\l::isotropic" alt="" coords="218,193,382,232"/>
+<area shape="rect" id="node5" href="classarc_1_1opt_1_1sop_1_1_dumb.html#ac2b0da14d4b78eb0ffb9febdd584f995" title="arc::opt::sop::Dumb\l::interact" alt="" coords="430,131,568,169"/>
 </map>
 </div>
 
@@ -507,25 +501,13 @@ rng_ may not be nullptr. </dd>
 <dd>
 min_ must be less than max_.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Random number sampled from a uniform distribution. </dd></dl>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="namespacearc_1_1random_1_1distribution_af9e55c4d5a5e1965dc94441b0a5b86ab_icgraph.png" border="0" usemap="#namespacearc_1_1random_1_1distribution_af9e55c4d5a5e1965dc94441b0a5b86ab_icgraph" alt=""/></div>
-<map name="namespacearc_1_1random_1_1distribution_af9e55c4d5a5e1965dc94441b0a5b86ab_icgraph" id="namespacearc_1_1random_1_1distribution_af9e55c4d5a5e1965dc94441b0a5b86ab_icgraph">
-<area shape="rect" id="node2" href="namespacearc_1_1random_1_1distribution.html#aa72c220ef49e5f1748071c2d83119103" title="arc::random::distribution\l::henyey_greenstein" alt="" coords="218,5,382,44"/>
-<area shape="rect" id="node4" href="namespacearc_1_1random_1_1distribution.html#a3849967432132a79729022f4b5e011ff" title="arc::random::distribution\l::isotropic" alt="" coords="218,68,382,107"/>
-<area shape="rect" id="node3" href="classarc_1_1phys_1_1sop_1_1_dumb.html#a0e923da960f8feb37dad6927059e3abe" title="arc::phys::sop::Dumb\l::interact" alt="" coords="430,5,577,44"/>
-</map>
-</div>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 17 2018 00:26:00 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 29 2018 01:41:18 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

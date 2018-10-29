@@ -70,18 +70,15 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">normal.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;GL/glew.h&gt;</code><br />
-<code>#include &lt;GLFW/glfw3.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="actor_8hpp_source.html">arctk/gui/actor.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="camera_8hpp_source.html">arctk/gui/camera.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="lens_8hpp_source.html">arctk/gui/lens.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="shader_8hpp_source.html">arctk/gui/shader.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="shader_8hpp_source.html">arctk/gui/shader.hpp</a>&gt;</code><br />
+<code>#include &lt;GL/glew.h&gt;</code><br />
+<code>#include &lt;glm/glm.hpp&gt;</code><br />
+<code>#include &lt;<a class="el" href="normal_8inl.html">arctk/gui/shader/normal.inl</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for normal.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -89,57 +86,40 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="normal_8hpp__incl.png" border="0" usemap="#include_2arctk_2gui_2shader_2normal_8hpp" alt=""/></div>
 <map name="include_2arctk_2gui_2shader_2normal_8hpp" id="include_2arctk_2gui_2shader_2normal_8hpp">
-<area shape="rect" id="node4" href="actor_8hpp.html" title="arctk/gui/actor.hpp" alt="" coords="751,92,881,117"/>
-<area shape="rect" id="node47" href="camera_8hpp.html" title="arctk/gui/camera.hpp" alt="" coords="37,92,183,117"/>
-<area shape="rect" id="node48" href="lens_8hpp.html" title="arctk/gui/lens.hpp" alt="" coords="469,92,595,117"/>
-<area shape="rect" id="node49" href="shader_8hpp.html" title="arctk/gui/shader.hpp" alt="" coords="2526,92,2667,117"/>
-<area shape="rect" id="node8" href="debug_8hpp.html" title="arctk/debug.hpp" alt="" coords="1880,985,1997,1011"/>
-<area shape="rect" id="node16" href="geom_8hpp.html" title="arctk/geom.hpp" alt="" coords="809,312,922,337"/>
-<area shape="rect" id="node18" href="math_8hpp.html" title="arctk/math.hpp" alt="" coords="1113,679,1223,704"/>
-<area shape="rect" id="node41" href="point_8hpp.html" title="arctk/gui/point.hpp" alt="" coords="556,165,687,191"/>
-<area shape="rect" id="node42" href="phys_8hpp.html" title="arctk/phys.hpp" alt="" coords="762,165,870,191"/>
-<area shape="rect" id="node45" href="scene_8hpp.html" title="arctk/scene.hpp" alt="" coords="291,165,406,191"/>
-<area shape="rect" id="node46" href="tree_8hpp.html" title="arctk/tree.hpp" alt="" coords="430,165,533,191"/>
-<area shape="rect" id="node9" href="contract_8hpp.html" title="arctk/debug/contract.hpp" alt="" coords="2598,1059,2766,1084"/>
-<area shape="rect" id="node12" href="location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="2400,1132,2566,1157"/>
-<area shape="rect" id="node13" href="exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="2222,1132,2323,1157"/>
-<area shape="rect" id="node14" href="invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="2133,1059,2304,1084"/>
-<area shape="rect" id="node15" href="macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="2328,1059,2445,1084"/>
-<area shape="rect" id="node17" href="geom_2collision_8hpp.html" title="arctk/geom/collision.hpp" alt="" coords="562,605,726,631"/>
-<area shape="rect" id="node37" href="shape_8hpp.html" title="arctk/geom/shape.hpp" alt="" coords="976,605,1129,631"/>
-<area shape="rect" id="node38" href="box_8hpp.html" title="arctk/geom/shape/box.hpp" alt="" coords="903,459,1081,484"/>
-<area shape="rect" id="node39" href="triangle_8hpp.html" title="arctk/geom/shape/triangle.hpp" alt="" coords="809,532,1010,557"/>
-<area shape="rect" id="node40" href="mesh_8hpp.html" title="arctk/geom/shape/mesh.hpp" alt="" coords="639,385,828,411"/>
-<area shape="rect" id="node20" href="compare_8hpp.html" title="arctk/math/compare.hpp" alt="" coords="1439,759,1604,784"/>
-<area shape="rect" id="node21" href="container_8hpp.html" title="arctk/math/container.hpp" alt="" coords="1629,759,1796,784"/>
-<area shape="rect" id="node22" href="math_2convert_8hpp.html" title="arctk/math/convert.hpp" alt="" coords="2300,759,2457,784"/>
-<area shape="rect" id="node23" href="vec3_8hpp.html" title="arctk/math/vec3.hpp" alt="" coords="2158,839,2299,864"/>
-<area shape="rect" id="node24" href="vec_8hpp.html" title="arctk/math/vec.hpp" alt="" coords="1949,912,2083,937"/>
-<area shape="rect" id="node25" href="formula_8hpp.html" title="arctk/math/formula.hpp" alt="" coords="671,839,828,864"/>
-<area shape="rect" id="node26" href="math_2formula_2constant_8hpp.html" title="arctk/math/formula\l/constant.hpp" alt="" coords="533,752,665,791"/>
-<area shape="rect" id="node27" href="math_2formula_2linear_8hpp.html" title="arctk/math/formula\l/linear.hpp" alt="" coords="377,752,509,791"/>
-<area shape="rect" id="node28" href="polynomial_8hpp.html" title="arctk/math/formula\l/polynomial.hpp" alt="" coords="689,752,821,791"/>
-<area shape="rect" id="node29" href="math_2geom_8hpp.html" title="arctk/math/geom.hpp" alt="" coords="2343,839,2490,864"/>
-<area shape="rect" id="node30" href="math_2mat_8hpp.html" title="arctk/math/mat.hpp" alt="" coords="1858,839,1993,864"/>
-<area shape="rect" id="node31" href="mat2_8hpp.html" title="arctk/math/mat2.hpp" alt="" coords="946,759,1089,784"/>
-<area shape="rect" id="node32" href="vec2_8hpp.html" title="arctk/math/vec2.hpp" alt="" coords="1158,839,1299,864"/>
-<area shape="rect" id="node33" href="mat3_8hpp.html" title="arctk/math/mat3.hpp" alt="" coords="2082,759,2225,784"/>
-<area shape="rect" id="node34" href="mat4_8hpp.html" title="arctk/math/mat4.hpp" alt="" coords="1165,759,1308,784"/>
-<area shape="rect" id="node35" href="vec4_8hpp.html" title="arctk/math/vec4.hpp" alt="" coords="1476,839,1618,864"/>
-<area shape="rect" id="node36" href="pow_8hpp.html" title="arctk/math/pow.hpp" alt="" coords="1820,759,1957,784"/>
-<area shape="rect" id="node43" href="cell_8hpp.html" title="arctk/phys/cell.hpp" alt="" coords="492,239,623,264"/>
-<area shape="rect" id="node44" href="phys_2mat_8hpp.html" title="arctk/phys/mat.hpp" alt="" coords="737,239,871,264"/>
-</map>
-</div>
-</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="normal_8hpp__dep__incl.png" border="0" usemap="#include_2arctk_2gui_2shader_2normal_8hppdep" alt=""/></div>
-<map name="include_2arctk_2gui_2shader_2normal_8hppdep" id="include_2arctk_2gui_2shader_2normal_8hppdep">
-<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="38,165,135,191"/>
-<area shape="rect" id="node3" href="gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="69,92,213,117"/>
+<area shape="rect" id="node2" href="shader_8hpp.html" title="arctk/gui/shader.hpp" alt="" coords="189,165,331,191"/>
+<area shape="rect" id="node12" href="normal_8inl.html" title="arctk/gui/shader/normal.inl" alt="" coords="2394,92,2572,117"/>
+<area shape="rect" id="node5" href="shader_8inl.html" title="arctk/gui/shader.inl" alt="" coords="95,532,228,557"/>
+<area shape="rect" id="node10" href="error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="225,679,357,704"/>
+<area shape="rect" id="node13" href="actor_8hpp.html" title="arctk/gui/actor.hpp" alt="" coords="2212,165,2342,191"/>
+<area shape="rect" id="node47" href="camera_8hpp.html" title="arctk/gui/camera.hpp" alt="" coords="2564,165,2710,191"/>
+<area shape="rect" id="node49" href="lens_8hpp.html" title="arctk/gui/lens.hpp" alt="" coords="2734,165,2860,191"/>
+<area shape="rect" id="node14" href="point_8hpp.html" title="arctk/gui/point.hpp" alt="" coords="2315,239,2445,264"/>
+<area shape="rect" id="node16" href="actor_8inl.html" title="arctk/gui/actor.inl" alt="" coords="1803,239,1925,264"/>
+<area shape="rect" id="node15" href="point_8inl.html" title="arctk/gui/point.inl" alt="" coords="2323,752,2445,777"/>
+<area shape="rect" id="node19" href="region_8hpp.html" title="arctk/dom/region.hpp" alt="" coords="1620,459,1767,484"/>
+<area shape="rect" id="node20" href="box_8hpp.html" title="arctk/geom/shape/box.hpp" alt="" coords="1224,605,1403,631"/>
+<area shape="rect" id="node30" href="triangle_8hpp.html" title="arctk/geom/shape/triangle.hpp" alt="" coords="1117,752,1318,777"/>
+<area shape="rect" id="node37" href="dim_8hpp.html" title="arctk/index/dim.hpp" alt="" coords="1876,679,2012,704"/>
+<area shape="rect" id="node38" href="mesh_8hpp.html" title="arctk/geom/shape/mesh.hpp" alt="" coords="816,532,1005,557"/>
+<area shape="rect" id="node40" href="container_8hpp.html" title="arctk/math/container.hpp" alt="" coords="1902,312,2069,337"/>
+<area shape="rect" id="node42" href="root_8hpp.html" title="arctk/tree/root.hpp" alt="" coords="589,312,718,337"/>
+<area shape="rect" id="node23" href="vec3_8hpp.html" title="arctk/math/vec3.hpp" alt="" coords="1576,899,1717,924"/>
+<area shape="rect" id="node34" href="cell_8hpp.html" title="arctk/dom/cell.hpp" alt="" coords="1619,532,1749,557"/>
+<area shape="rect" id="node36" href="region_8inl.html" title="arctk/dom/region.inl" alt="" coords="1875,605,2013,631"/>
+<area shape="rect" id="node21" href="geom_2shape_8hpp.html" title="arctk/geom/shape.hpp" alt="" coords="938,825,1091,851"/>
+<area shape="rect" id="node29" href="box_8inl.html" title="arctk/geom/shape/box.inl" alt="" coords="1478,679,1647,704"/>
+<area shape="rect" id="node24" href="vec_8hpp.html" title="arctk/math/vec.hpp" alt="" coords="1266,972,1400,997"/>
+<area shape="rect" id="node28" href="vec3_8inl.html" title="arctk/math/vec3.inl" alt="" coords="1656,972,1789,997"/>
+<area shape="rect" id="node32" href="geom_2collision_8hpp.html" title="arctk/geom/collision.hpp" alt="" coords="1483,825,1648,851"/>
+<area shape="rect" id="node33" href="triangle_8inl.html" title="arctk/geom/shape/triangle.inl" alt="" coords="1267,825,1459,851"/>
+<area shape="rect" id="node35" href="cell_8inl.html" title="arctk/dom/cell.inl" alt="" coords="1874,825,1995,851"/>
+<area shape="rect" id="node39" href="mesh_8inl.html" title="arctk/geom/shape/mesh.inl" alt="" coords="456,605,637,631"/>
+<area shape="rect" id="node41" href="container_8inl.html" title="arctk/math/container.inl" alt="" coords="1906,385,2065,411"/>
+<area shape="rect" id="node44" href="entity_8hpp.html" title="arctk/equip/entity.hpp" alt="" coords="654,459,802,484"/>
+<area shape="rect" id="node45" href="node_8hpp.html" title="arctk/tree/node.hpp" alt="" coords="411,532,547,557"/>
+<area shape="rect" id="node46" href="root_8inl.html" title="arctk/tree/root.inl" alt="" coords="1020,385,1140,411"/>
+<area shape="rect" id="node48" href="camera_8inl.html" title="arctk/gui/camera.inl" alt="" coords="2570,239,2707,264"/>
+<area shape="rect" id="node50" href="lens_8inl.html" title="arctk/gui/lens.inl" alt="" coords="2832,239,2949,264"/>
 </map>
 </div>
 </div>
@@ -161,18 +141,6 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacearc_1_1gui_1_1shader"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1shader.html">arc::gui::shader</a></td></tr>
 <tr class="memdesc:namespacearc_1_1gui_1_1shader"><td class="mdescLeft">&#160;</td><td class="mdescRight">shader namespace <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a1b81608ed6276377bff48da62e9b775c"><td class="memItemLeft" align="right" valign="top">constexpr const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1shader.html#a1b81608ed6276377bff48da62e9b775c">arc::gui::shader::NORMAL_SOURCE_VERT</a></td></tr>
-<tr class="memdesc:a1b81608ed6276377bff48da62e9b775c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classarc_1_1gui_1_1shader_1_1_normal.html">Normal</a> vertex subshader source code.  <a href="namespacearc_1_1gui_1_1shader.html#a1b81608ed6276377bff48da62e9b775c">More...</a><br /></td></tr>
-<tr class="separator:a1b81608ed6276377bff48da62e9b775c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afef7bddaf565b197dbb42495350838fc"><td class="memItemLeft" align="right" valign="top">constexpr const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1shader.html#afef7bddaf565b197dbb42495350838fc">arc::gui::shader::NORMAL_SOURCE_GEOM</a></td></tr>
-<tr class="memdesc:afef7bddaf565b197dbb42495350838fc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classarc_1_1gui_1_1shader_1_1_normal.html">Normal</a> geometry subshader source code.  <a href="namespacearc_1_1gui_1_1shader.html#afef7bddaf565b197dbb42495350838fc">More...</a><br /></td></tr>
-<tr class="separator:afef7bddaf565b197dbb42495350838fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8bb7a6ac50b565d0b924912a839330f"><td class="memItemLeft" align="right" valign="top">constexpr const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1shader.html#ac8bb7a6ac50b565d0b924912a839330f">arc::gui::shader::NORMAL_SOURCE_FRAG</a></td></tr>
-<tr class="memdesc:ac8bb7a6ac50b565d0b924912a839330f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classarc_1_1gui_1_1shader_1_1_normal.html">Normal</a> fragment subshader source code.  <a href="namespacearc_1_1gui_1_1shader.html#ac8bb7a6ac50b565d0b924912a839330f">More...</a><br /></td></tr>
-<tr class="separator:ac8bb7a6ac50b565d0b924912a839330f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section date"><dt>Date</dt><dd>07/08/2018 </dd></dl>
@@ -181,7 +149,7 @@ Variables</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 17 2018 00:26:00 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 29 2018 01:41:17 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

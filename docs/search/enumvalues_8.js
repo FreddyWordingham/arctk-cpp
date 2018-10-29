@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['r',['R',['../namespacearc_1_1index_1_1col.html#a9900ae7a0448a055a3ed314d6521d577a593ebc633bd1f9f635d2b338d70db786',1,'arc::index::col']]]
+  ['map',['MAP',['../namespacearc_1_1consts_1_1format.html#a4cc74732cb8267729b896318c9968debaa984408a25bb4e6e89c86c68dbec0991',1,'arc::consts::format']]],
+  ['mat',['MAT',['../namespacearc_1_1consts_1_1format.html#a4cc74732cb8267729b896318c9968deba580de396f9c81c69b413ad4be7e27a0e',1,'arc::consts::format']]]
 ];

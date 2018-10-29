@@ -1,13 +1,8 @@
 var searchData=
 [
-  ['shader_5fcompilation_5ffailed',['SHADER_COMPILATION_FAILED',['../namespacearc_1_1exit_1_1error.html#a2719339d5d6170b79efcdd5e78a10f24',1,'arc::exit::error']]],
-  ['shader_5flinking_5ffailed',['SHADER_LINKING_FAILED',['../namespacearc_1_1exit_1_1error.html#af6d96c3598f24a0b33ea3bf70ab88bd1',1,'arc::exit::error']]],
-  ['shader_5funiform_5fduplicate',['SHADER_UNIFORM_DUPLICATE',['../namespacearc_1_1exit_1_1error.html#a8c36d4dfa54cc5c10f3e3235983abc6c',1,'arc::exit::error']]],
-  ['shader_5funiform_5fnot_5ffound',['SHADER_UNIFORM_NOT_FOUND',['../namespacearc_1_1exit_1_1error.html#a5a902f03db9415b023c3283db0253bb9',1,'arc::exit::error']]],
-  ['singleton_5fviolation',['SINGLETON_VIOLATION',['../namespacearc_1_1exit_1_1error.html#a5a6749486b28cbc4c62d80794d66a815',1,'arc::exit::error']]],
-  ['skybox_5fsource_5ffrag',['SKYBOX_SOURCE_FRAG',['../namespacearc_1_1gui_1_1shader.html#a0ece6dc0aed9e7dfbd55a4d85581e7f5',1,'arc::gui::shader']]],
-  ['skybox_5fsource_5fvert',['SKYBOX_SOURCE_VERT',['../namespacearc_1_1gui_1_1shader.html#adab0d42d2126288a09204ebe57c5d299',1,'arc::gui::shader']]],
-  ['specular_5fsource_5ffrag',['SPECULAR_SOURCE_FRAG',['../namespacearc_1_1gui_1_1shader.html#a1186fcb90fdf371090c3ef7afa7b72eb',1,'arc::gui::shader']]],
-  ['specular_5fsource_5fvert',['SPECULAR_SOURCE_VERT',['../namespacearc_1_1gui_1_1shader.html#a73770d0d4151228ef3aa764f0e9e1f9c',1,'arc::gui::shader']]],
-  ['speed_5fof_5flight',['SPEED_OF_LIGHT',['../namespacearc_1_1consts_1_1phys.html#a890931739999d1d4bbcaf3d9b48a6177',1,'arc::consts::phys']]]
+  ['texture_5fload_5ffailed',['TEXTURE_LOAD_FAILED',['../namespacearc_1_1exit_1_1error.html#aff1f4dd5e09c00075884098ec546cef8',1,'arc::exit::error']]],
+  ['theta',['theta',['../classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#a357fe02d643ac29446ed8b546ca2a9b4',1,'arc::math::Vec&lt; T, 2 &gt;::theta()'],['../classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#a88061d3cd409f42814718c7d255eb293',1,'arc::math::Vec&lt; T, 3 &gt;::theta()']]],
+  ['time',['time',['../classarc_1_1gui_1_1_point.html#a3c8d3d9e4a5476f6e3b53053e0d0162a',1,'arc::gui::Point']]],
+  ['two_5fpi',['TWO_PI',['../namespacearc_1_1consts_1_1math.html#a1832a23aeb648a8c587118f0c034812e',1,'arc::consts::math']]],
+  ['type',['TYPE',['../namespacearc_1_1config.html#ad6eeea3db680c98dc954b7951924fb0b',1,'arc::config']]]
 ];

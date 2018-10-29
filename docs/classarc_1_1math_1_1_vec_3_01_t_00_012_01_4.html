@@ -95,8 +95,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae5d26a5a6f805560d1d6210467cc0a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe0b455ea6dd1047ce5f94684c2c97ee"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#afe0b455ea6dd1047ce5f94684c2c97ee">Vec</a> (T x_, T y_) noexcept</td></tr>
 <tr class="separator:afe0b455ea6dd1047ce5f94684c2c97ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ef5ac53cdac1a52d35f17a8fb7537e3"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#a1ef5ac53cdac1a52d35f17a8fb7537e3">operator std::array&lt; T, 2 &gt;</a> () const noexcept</td></tr>
-<tr class="separator:a1ef5ac53cdac1a52d35f17a8fb7537e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bdb5519c9107e5a0995d1fc92702767"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classarc_1_1math_1_1_vec.html">Vec</a>&lt; T, 2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#a9bdb5519c9107e5a0995d1fc92702767">operator+=</a> (T val_) noexcept</td></tr>
 <tr class="separator:a9bdb5519c9107e5a0995d1fc92702767"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3620796da3a4269dcab613c24e069fdb"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classarc_1_1math_1_1_vec.html">Vec</a>&lt; T, 2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#a3620796da3a4269dcab613c24e069fdb">operator+=</a> (const <a class="el" href="classarc_1_1math_1_1_vec.html">Vec</a>&lt; T, 2 &gt; &amp;vec_) noexcept</td></tr>
@@ -447,45 +445,6 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>tol_ must be positive.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the vec is normalised. </dd></dl>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1math_1_1_vec_3_01_t_00_012_01_4_aaea12b9125706cefa537e346d9b82160_cgraph.png" border="0" usemap="#classarc_1_1math_1_1_vec_3_01_t_00_012_01_4_aaea12b9125706cefa537e346d9b82160_cgraph" alt=""/></div>
-<map name="classarc_1_1math_1_1_vec_3_01_t_00_012_01_4_aaea12b9125706cefa537e346d9b82160_cgraph" id="classarc_1_1math_1_1_vec_3_01_t_00_012_01_4_aaea12b9125706cefa537e346d9b82160_cgraph">
-<area shape="rect" id="node2" href="classarc_1_1math_1_1_vec.html#a00bd5df29b26536d5f5a48e4ff765aef" title="arc::math::Vec::mag_sq" alt="" coords="182,12,343,37"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a1ef5ac53cdac1a52d35f17a8fb7537e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ef5ac53cdac1a52d35f17a8fb7537e3">&#9670;&nbsp;</a></span>operator std::array&lt; T, 2 &gt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr <a class="el" href="classarc_1_1math_1_1_vec.html">arc::math::Vec</a>&lt; T, 2 &gt;::operator std::array&lt; T, 2 &gt; </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Convert the vec to a std::array.</p>
-<dl class="section return"><dt>Returns</dt><dd>Converted std::array object. </dd></dl>
 
 </div>
 </div>
@@ -1431,13 +1390,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/arctk/math/<a class="el" href="vec2_8hpp_source.html">vec2.hpp</a></li>
+<li>include/arctk/math/<a class="el" href="vec2_8inl.html">vec2.inl</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 17 2018 00:26:00 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 29 2018 01:41:18 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

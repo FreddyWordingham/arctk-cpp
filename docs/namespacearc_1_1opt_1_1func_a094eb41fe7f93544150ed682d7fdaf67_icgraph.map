@@ -1,0 +1,5 @@
+<map id="arc::opt::func::reflection_prob" name="arc::opt::func::reflection_prob">
+<area shape="rect" id="node2" href="$classarc_1_1equip_1_1entity_1_1_body.html#a56f911d2d41eec4e102c2dee9d7579ba" title="arc::equip::entity\l::Body::hit_front" alt="" coords="286,5,405,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1equip_1_1entity_1_1_body.html#aa760ea21c61493fd994ea26f892a02f9" title="arc::equip::entity\l::Body::hit_back" alt="" coords="286,68,405,107"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1opt_1_1func.html#a3314bc85de79b330e8511eb6ed10a93f" title="arc::opt::func::refraction_prob" alt="" coords="247,131,443,156"/>
+</map>

@@ -1,15 +1,12 @@
 <map id="arc::math::Vec::normalised" name="arc::math::Vec::normalised">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#a0610a8855a45c7c7201a54ab5638b0bd" title="arc::geom::shape::Triangle\l::Triangle" alt="" coords="233,5,412,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#a82ed5655fee5506bf8d51a96d80c5523" title="arc::geom::shape::Triangle\l::random_pos_and_norm" alt="" coords="233,68,412,107"/>
-<area shape="rect" id="node4" href="$classarc_1_1math_1_1_vec.html#abd22cbc8c212fac61b31df11cea46866" title="arc::math::Vec\&lt; double,\l 2 \&gt;::normalise" alt="" coords="241,131,403,169"/>
-<area shape="rect" id="node5" href="$classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#ad6744754f694c1197db45d6d1e5b93f7" title="arc::math::Vec\&lt; T,\l 2 \&gt;::normalise" alt="" coords="258,193,386,232"/>
-<area shape="rect" id="node6" href="$classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#ac9bdcc68c5d12bd8e30ecf17767de5cf" title="arc::math::Vec\&lt; T,\l 3 \&gt;::normalise" alt="" coords="258,256,386,295"/>
-<area shape="rect" id="node7" href="$classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#af5671ad652f8df04ae02aaad65f552a0" title="arc::math::Vec\&lt; T,\l 4 \&gt;::normalise" alt="" coords="258,319,386,357"/>
-<area shape="rect" id="node8" href="$namespacearc_1_1phys_1_1optics.html#a4cf9e9ccdf8fa5fc45120dacbc28f43c" title="arc::phys::optics::\lreflection_dir" alt="" coords="260,444,385,483"/>
-<area shape="rect" id="node13" href="$namespacearc_1_1phys_1_1optics.html#a42d29265dc60850d52659b35e615e47f" title="arc::phys::optics::\lrefraction_dir" alt="" coords="260,381,385,420"/>
-<area shape="rect" id="node14" href="$classarc_1_1phys_1_1_photon.html#ad35560524a1e5f15a73e3105a47e19a1" title="arc::phys::Photon::\lrotate" alt="" coords="256,507,388,545"/>
-<area shape="rect" id="node9" href="$classarc_1_1equip_1_1entity_1_1_body.html#a768c28a3110b4bf60860feeb3391b73e" title="arc::equip::entity\l::Body::hit_front" alt="" coords="461,349,580,388"/>
-<area shape="rect" id="node10" href="$classarc_1_1equip_1_1entity_1_1_body.html#accbb9ff581c56cd408f95dec15593568" title="arc::equip::entity\l::Body::hit_back" alt="" coords="461,412,580,451"/>
-<area shape="rect" id="node11" href="$classarc_1_1equip_1_1entity_1_1_mirror.html#af130f914bf6fe5fe4bea2a30c8d66cb4" title="arc::equip::entity\l::Mirror::hit_front" alt="" coords="461,475,580,513"/>
-<area shape="rect" id="node12" href="$classarc_1_1equip_1_1entity_1_1_mirror.html#a88726ff72883f5b341d374829da9c18d" title="arc::equip::entity\l::Mirror::hit_back" alt="" coords="460,537,581,576"/>
+<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_triangle.html#a82ed5655fee5506bf8d51a96d80c5523" title="arc::geom::shape::Triangle\l::random_pos_and_norm" alt="" coords="235,5,414,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1math_1_1_vec_3_01_t_00_012_01_4.html#ad6744754f694c1197db45d6d1e5b93f7" title="arc::math::Vec\&lt; T,\l 2 \&gt;::normalise" alt="" coords="260,68,388,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1math_1_1_vec_3_01_t_00_013_01_4.html#ac9bdcc68c5d12bd8e30ecf17767de5cf" title="arc::math::Vec\&lt; T,\l 3 \&gt;::normalise" alt="" coords="260,131,388,169"/>
+<area shape="rect" id="node5" href="$classarc_1_1math_1_1_vec_3_01_t_00_014_01_4.html#af5671ad652f8df04ae02aaad65f552a0" title="arc::math::Vec\&lt; T,\l 4 \&gt;::normalise" alt="" coords="260,193,388,232"/>
+<area shape="rect" id="node6" href="$namespacearc_1_1opt_1_1func.html#a63b373122d1d842ec64e66f974919a42" title="arc::opt::func::reflection_dir" alt="" coords="233,305,415,331"/>
+<area shape="rect" id="node11" href="$namespacearc_1_1opt_1_1func.html#ab8e00b2efc6d940c7db8c9c26ec55a5d" title="arc::opt::func::refraction_dir" alt="" coords="233,256,416,281"/>
+<area shape="rect" id="node7" href="$classarc_1_1equip_1_1entity_1_1_body.html#a56f911d2d41eec4e102c2dee9d7579ba" title="arc::equip::entity\l::Body::hit_front" alt="" coords="465,211,584,249"/>
+<area shape="rect" id="node8" href="$classarc_1_1equip_1_1entity_1_1_body.html#aa760ea21c61493fd994ea26f892a02f9" title="arc::equip::entity\l::Body::hit_back" alt="" coords="465,273,584,312"/>
+<area shape="rect" id="node9" href="$classarc_1_1equip_1_1entity_1_1_mirror.html#a86ce9c61784467eccf270848af4545c1" title="arc::equip::entity\l::Mirror::hit_front" alt="" coords="465,336,584,375"/>
+<area shape="rect" id="node10" href="$classarc_1_1equip_1_1entity_1_1_mirror.html#ae8138e6b3ea77d71cee11b4edddb26cb" title="arc::equip::entity\l::Mirror::hit_back" alt="" coords="464,399,585,437"/>
 </map>

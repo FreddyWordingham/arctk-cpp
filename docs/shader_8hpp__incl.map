@@ -1,11 +1,4 @@
 <map id="include/arctk/gui/shader.hpp" name="include/arctk/gui/shader.hpp">
-<area shape="rect" id="node7" href="$debug_8hpp.html" title="arctk/debug.hpp" alt="" coords="417,79,534,104"/>
-<area shape="rect" id="node17" href="$exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="337,225,438,251"/>
-<area shape="rect" id="node8" href="$contract_8hpp.html" title="arctk/debug/contract.hpp" alt="" coords="676,152,845,177"/>
-<area shape="rect" id="node9" href="$location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="564,225,731,251"/>
-<area shape="rect" id="node20" href="$invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="431,152,602,177"/>
-<area shape="rect" id="node22" href="$macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="239,152,356,177"/>
-<area shape="rect" id="node18" href="$error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="5,299,137,324"/>
-<area shape="rect" id="node19" href="$success_8hpp.html" title="arctk/exit/success.hpp" alt="" coords="162,299,314,324"/>
-<area shape="rect" id="node23" href="$utility_8hpp.html" title="arctk/macro/utility.hpp" alt="" coords="163,225,313,251"/>
+<area shape="rect" id="node4" href="$shader_8inl.html" title="arctk/gui/shader.inl" alt="" coords="187,79,320,104"/>
+<area shape="rect" id="node9" href="$error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="396,152,528,177"/>
 </map>

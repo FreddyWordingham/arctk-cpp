@@ -1,0 +1,8 @@
+<map id="include/arctk/gui/shader.inl" name="include/arctk/gui/shader.inl">
+<area shape="rect" id="node2" href="$shader_8hpp.html" title="include/arctk/gui/shader.hpp" alt="" coords="366,79,553,104"/>
+<area shape="rect" id="node3" href="$ambient_8hpp.html" title="include/arctk/gui/shader\l/ambient.hpp" alt="" coords="5,152,167,191"/>
+<area shape="rect" id="node4" href="$diffuse_8hpp.html" title="include/arctk/gui/shader\l/diffuse.hpp" alt="" coords="192,152,354,191"/>
+<area shape="rect" id="node5" href="$normal_8hpp.html" title="include/arctk/gui/shader\l/normal.hpp" alt="" coords="379,152,541,191"/>
+<area shape="rect" id="node6" href="$ray_8hpp.html" title="include/arctk/gui/shader\l/ray.hpp" alt="" coords="565,152,727,191"/>
+<area shape="rect" id="node7" href="$specular_8hpp.html" title="include/arctk/gui/shader\l/specular.hpp" alt="" coords="752,152,914,191"/>
+</map>

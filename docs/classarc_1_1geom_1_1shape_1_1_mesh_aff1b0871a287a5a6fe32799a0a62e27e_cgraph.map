@@ -1,3 +1,10 @@
 <map id="arc::geom::shape::Mesh::parse_norms" name="arc::geom::shape::Mesh::parse_norms">
-<area shape="rect" id="node2" href="$classarc_1_1math_1_1_vec.html#ad76dddf5863281c38659f69cf9d7ec36" title="arc::math::Vec::normal" alt="" coords="218,12,372,37"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1parse_1_1read.html#a473be0f29d4eed0c87003efed3623670" title="arc::parse::read::string" alt="" coords="218,75,372,100"/>
+<area shape="rect" id="node9" href="$classarc_1_1math_1_1_vec.html#ad76dddf5863281c38659f69cf9d7ec36" title="arc::math::Vec::normal" alt="" coords="218,124,372,149"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1parse_1_1process.html#aa43d6f4b4ac01f1b503fdf5b630f02b1" title="arc::parse::process\l::filter_comments" alt="" coords="433,5,567,44"/>
+<area shape="rect" id="node6" href="$namespacearc_1_1parse_1_1process.html#a1b896981b6feb909c2bddb07a9c78f56" title="arc::parse::process\l::filter_whitespace" alt="" coords="433,68,567,107"/>
+<area shape="rect" id="node8" href="$namespacearc_1_1parse_1_1read.html#a7d7bd8339f8ced08982de0d04ab07088" title="arc::parse::read::helper" alt="" coords="420,131,580,156"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1consts_1_1format.html#a02ddf3d786fde98c6dd1b6fbdbca16d1" title="Container opening characters. " alt="" coords="628,68,759,107"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1consts_1_1format.html#aef9289d10d56f95c2b899cb442e1b820" title="Container closing characters. " alt="" coords="628,5,759,44"/>
+<area shape="rect" id="node7" href="$namespacearc_1_1consts_1_1format.html#a4d44c3b096871a5c18c005ac26fcf643" title="Characters considered whitespace. " alt="" coords="628,131,759,169"/>
 </map>

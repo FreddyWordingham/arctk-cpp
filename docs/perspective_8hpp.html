@@ -70,15 +70,13 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">perspective.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;glm/glm.hpp&gt;</code><br />
-<code>#include &lt;<a class="el" href="debug_8hpp_source.html">arctk/debug.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="lens_8hpp_source.html">arctk/gui/lens.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="lens_8hpp_source.html">arctk/gui/lens.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="perspective_8inl.html">arctk/gui/lens/perspective.inl</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for perspective.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -86,27 +84,9 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="perspective_8hpp__incl.png" border="0" usemap="#include_2arctk_2gui_2lens_2perspective_8hpp" alt=""/></div>
 <map name="include_2arctk_2gui_2lens_2perspective_8hpp" id="include_2arctk_2gui_2lens_2perspective_8hpp">
-<area shape="rect" id="node3" href="debug_8hpp.html" title="arctk/debug.hpp" alt="" coords="539,92,656,117"/>
-<area shape="rect" id="node22" href="lens_8hpp.html" title="arctk/gui/lens.hpp" alt="" coords="232,92,358,117"/>
-<area shape="rect" id="node4" href="contract_8hpp.html" title="arctk/debug/contract.hpp" alt="" coords="611,165,779,191"/>
-<area shape="rect" id="node7" href="location_8hpp.html" title="arctk/debug/location.hpp" alt="" coords="292,239,458,264"/>
-<area shape="rect" id="node15" href="exit_8hpp.html" title="arctk/exit.hpp" alt="" coords="733,239,833,264"/>
-<area shape="rect" id="node18" href="invariant_8hpp.html" title="arctk/debug/invariant.hpp" alt="" coords="416,165,587,191"/>
-<area shape="rect" id="node20" href="macro_8hpp.html" title="arctk/macro.hpp" alt="" coords="864,165,981,191"/>
-<area shape="rect" id="node16" href="error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="884,312,1015,337"/>
-<area shape="rect" id="node17" href="success_8hpp.html" title="arctk/exit/success.hpp" alt="" coords="707,312,859,337"/>
-<area shape="rect" id="node21" href="utility_8hpp.html" title="arctk/macro/utility.hpp" alt="" coords="857,239,1007,264"/>
-</map>
-</div>
-</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="perspective_8hpp__dep__incl.png" border="0" usemap="#include_2arctk_2gui_2lens_2perspective_8hppdep" alt=""/></div>
-<map name="include_2arctk_2gui_2lens_2perspective_8hppdep" id="include_2arctk_2gui_2lens_2perspective_8hppdep">
-<area shape="rect" id="node2" href="main_8cpp.html" title="src/main.cpp" alt="" coords="30,165,127,191"/>
-<area shape="rect" id="node3" href="gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="61,92,205,117"/>
+<area shape="rect" id="node2" href="lens_8hpp.html" title="arctk/gui/lens.hpp" alt="" coords="26,92,152,117"/>
+<area shape="rect" id="node5" href="perspective_8inl.html" title="arctk/gui/lens/perspective.inl" alt="" coords="176,92,365,117"/>
+<area shape="rect" id="node4" href="lens_8inl.html" title="arctk/gui/lens.inl" alt="" coords="5,165,122,191"/>
 </map>
 </div>
 </div>
@@ -128,15 +108,6 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacearc_1_1gui_1_1lens"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1lens.html">arc::gui::lens</a></td></tr>
 <tr class="memdesc:namespacearc_1_1gui_1_1lens"><td class="mdescLeft">&#160;</td><td class="mdescRight">lens namespace <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:aa4d7ba0269eba0918b2e30c9223acf4e"><td class="memItemLeft" align="right" valign="top">constexpr const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1lens.html#aa4d7ba0269eba0918b2e30c9223acf4e">arc::gui::lens::PERSPECTIVE_NEAR_CULL_DIST</a> = 1e-3f</td></tr>
-<tr class="memdesc:aa4d7ba0269eba0918b2e30c9223acf4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Far culling distance for the perspective lens.  <a href="namespacearc_1_1gui_1_1lens.html#aa4d7ba0269eba0918b2e30c9223acf4e">More...</a><br /></td></tr>
-<tr class="separator:aa4d7ba0269eba0918b2e30c9223acf4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3eb024a303596ef49eecf17a71313a1"><td class="memItemLeft" align="right" valign="top">constexpr const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui_1_1lens.html#ae3eb024a303596ef49eecf17a71313a1">arc::gui::lens::PERSPECTIVE_FAR_CULL_DIST</a> = 1e+3f</td></tr>
-<tr class="memdesc:ae3eb024a303596ef49eecf17a71313a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Near culling distance for the perspective lens.  <a href="namespacearc_1_1gui_1_1lens.html#ae3eb024a303596ef49eecf17a71313a1">More...</a><br /></td></tr>
-<tr class="separator:ae3eb024a303596ef49eecf17a71313a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section date"><dt>Date</dt><dd>02/08/2018 </dd></dl>
@@ -145,7 +116,7 @@ Variables</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 17 2018 00:26:00 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 29 2018 01:41:17 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

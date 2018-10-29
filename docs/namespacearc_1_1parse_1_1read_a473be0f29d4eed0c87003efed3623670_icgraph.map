@@ -1,0 +1,23 @@
+<map id="arc::parse::read::string" name="arc::parse::read::string">
+<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a8852f700393a4fcf6a663891335e0785" title="arc::geom::shape::Mesh\l::parse_poss" alt="" coords="208,5,372,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#aff1b0871a287a5a6fe32799a0a62e27e" title="arc::geom::shape::Mesh\l::parse_norms" alt="" coords="208,68,372,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#ac56237b6fdefbf8467008920c86919ce" title="arc::geom::shape::Mesh\l::parse_faces" alt="" coords="208,131,372,169"/>
+<area shape="rect" id="node5" href="$classarc_1_1gui_1_1_shader.html#acb10d2b89a01c426c4f52af8670f596d" title="arc::gui::Shader::init\l_handle" alt="" coords="220,193,360,232"/>
+<area shape="rect" id="node6" href="$classarc_1_1gui_1_1_shader.html#a6980a0f6a388ebf0c05730a88d6db80c" title="arc::gui::Shader::init\l_sub_shader" alt="" coords="220,256,360,295"/>
+<area shape="rect" id="node7" href="$namespacearc_1_1parse_1_1process.html#aa43d6f4b4ac01f1b503fdf5b630f02b1" title="arc::parse::process\l::filter_comments" alt="" coords="223,319,358,357"/>
+<area shape="rect" id="node8" href="$namespacearc_1_1parse_1_1process.html#a1b896981b6feb909c2bddb07a9c78f56" title="arc::parse::process\l::filter_whitespace" alt="" coords="223,381,358,420"/>
+<area shape="rect" id="node9" href="$namespacearc_1_1parse_1_1process.html#a71cef55843d9b7db0982a4b386b2013d" title="arc::parse::process\l::extract_contents" alt="" coords="223,444,358,483"/>
+<area shape="rect" id="node11" href="$namespacearc_1_1parse_1_1read.html#a7d7bd8339f8ced08982de0d04ab07088" title="arc::parse::read::helper" alt="" coords="211,507,370,532"/>
+<area shape="rect" id="node17" href="$namespacearc_1_1parse_1_1write.html#ab26c48f1cddaaa74bff92879ac4371c6" title="arc::parse::write::\ltimestamp" alt="" coords="228,556,352,595"/>
+<area shape="rect" id="node18" href="$namespacearc_1_1parse_1_1write.html#a581167de43e24fb0a2789b1451bde532" title="arc::parse::write::bar" alt="" coords="219,619,362,644"/>
+<area shape="rect" id="node19" href="$classarc_1_1sys_1_1_args.html#a18cbb62fbc71def78864a18030c7fab4" title="arc::sys::Args::init_argv" alt="" coords="210,668,370,693"/>
+<area shape="rect" id="node20" href="$namespacearc_1_1sys_1_1file.html#a181277361a6bb9c563a5348c37b0a06d" title="arc::sys::file::read" alt="" coords="227,717,353,743"/>
+<area shape="rect" id="node10" href="$namespacearc_1_1parse_1_1read.html#afc295b1aef90b6e905ea1a45704f6644" title="arc::parse::read::helper" alt="" coords="420,403,580,428"/>
+<area shape="rect" id="node12" href="$namespacearc_1_1gui_1_1actor.html#aa12d3fb0657b2792bd3ba876ce4907a5" title="arc::gui::actor::axis\l_helper_x" alt="" coords="433,452,567,491"/>
+<area shape="rect" id="node13" href="$namespacearc_1_1gui_1_1actor.html#ab01f626a818923366521b28eeef26b54" title="arc::gui::actor::axis\l_helper_y" alt="" coords="433,515,567,553"/>
+<area shape="rect" id="node14" href="$namespacearc_1_1gui_1_1actor.html#af27ba3b5ff5632c95c6bc8a9ec2b3725" title="arc::gui::actor::axis\l_helper_z" alt="" coords="433,577,567,616"/>
+<area shape="rect" id="node15" href="$namespacearc_1_1parse_1_1read.html#a2988135438a5d4c02f15a25b0aaad748" title="arc::parse::read::parse\l_helper" alt="" coords="422,640,578,679"/>
+<area shape="rect" id="node16" href="$namespacearc_1_1parse_1_1read.html#acfa589bc25098001d11e108362343dea" title="arc::parse::read::helper" alt="" coords="628,647,787,672"/>
+<area shape="rect" id="node21" href="$namespacearc_1_1parse_1_1read.html#ae36701cafec6b29e5c8ccea80e0de5d9" title="arc::parse::read::file" alt="" coords="430,717,570,743"/>
+<area shape="rect" id="node22" href="$classarc_1_1dom_1_1_region.html#afe42a3906214f2b4593e26597627dcf7" title="arc::dom::Region::save" alt="" coords="628,717,786,743"/>
+</map>

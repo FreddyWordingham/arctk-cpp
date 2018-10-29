@@ -1,13 +1,12 @@
 <map id="include/arctk/gui/point.hpp" name="include/arctk/gui/point.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="760,385,857,411"/>
-<area shape="rect" id="node3" href="$actor_8hpp.html" title="include/arctk/gui/actor.hpp" alt="" coords="775,79,952,104"/>
-<area shape="rect" id="node5" href="$gui_8hpp.html" title="include/arctk/gui.hpp" alt="" coords="628,312,771,337"/>
-<area shape="rect" id="node4" href="$ambient_8hpp.html" title="include/arctk/gui/shader\l/ambient.hpp" alt="" coords="694,225,857,264"/>
-<area shape="rect" id="node6" href="$diffuse_8hpp.html" title="include/arctk/gui/shader\l/diffuse.hpp" alt="" coords="881,225,1043,264"/>
-<area shape="rect" id="node7" href="$normal_8hpp.html" title="include/arctk/gui/shader\l/normal.hpp" alt="" coords="1068,225,1230,264"/>
-<area shape="rect" id="node8" href="$ray_8hpp.html" title="include/arctk/gui/shader\l/ray.hpp" alt="" coords="1254,225,1417,264"/>
-<area shape="rect" id="node9" href="$skybox_8hpp.html" title="include/arctk/gui/shader\l/skybox.hpp" alt="" coords="1441,225,1603,264"/>
-<area shape="rect" id="node10" href="$specular_8hpp.html" title="include/arctk/gui/shader\l/specular.hpp" alt="" coords="86,225,249,264"/>
-<area shape="rect" id="node11" href="$window_8hpp.html" title="include/arctk/gui/window.hpp" alt="" coords="415,152,606,177"/>
-<area shape="rect" id="node12" href="$keymap_8hpp.html" title="include/arctk/gui/keymap.hpp" alt="" coords="375,232,569,257"/>
+<area shape="rect" id="node2" href="$actor_8hpp.html" title="include/arctk/gui/actor.hpp" alt="" coords="372,79,548,104"/>
+<area shape="rect" id="node3" href="$ambient_8inl.html" title="include/arctk/gui/shader\l/ambient.inl" alt="" coords="5,152,167,191"/>
+<area shape="rect" id="node5" href="$diffuse_8inl.html" title="include/arctk/gui/shader\l/diffuse.inl" alt="" coords="192,152,354,191"/>
+<area shape="rect" id="node7" href="$normal_8inl.html" title="include/arctk/gui/shader\l/normal.inl" alt="" coords="379,152,541,191"/>
+<area shape="rect" id="node9" href="$ray_8inl.html" title="include/arctk/gui/shader\l/ray.inl" alt="" coords="565,152,727,191"/>
+<area shape="rect" id="node11" href="$specular_8inl.html" title="include/arctk/gui/shader\l/specular.inl" alt="" coords="752,152,914,191"/>
+<area shape="rect" id="node4" href="$ambient_8hpp.html" title="include/arctk/gui/shader\l/ambient.hpp" alt="" coords="5,239,167,277"/>
+<area shape="rect" id="node6" href="$diffuse_8hpp.html" title="include/arctk/gui/shader\l/diffuse.hpp" alt="" coords="192,239,354,277"/>
+<area shape="rect" id="node8" href="$normal_8hpp.html" title="include/arctk/gui/shader\l/normal.hpp" alt="" coords="379,239,541,277"/>
+<area shape="rect" id="node10" href="$ray_8hpp.html" title="include/arctk/gui/shader\l/ray.hpp" alt="" coords="565,239,727,277"/>
 </map>

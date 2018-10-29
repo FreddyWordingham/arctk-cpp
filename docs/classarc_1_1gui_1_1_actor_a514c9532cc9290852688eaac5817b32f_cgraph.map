@@ -1,6 +1,6 @@
 <map id="arc::gui::Actor::update_model" name="arc::gui::Actor::update_model">
-<area shape="rect" id="node2" href="$classarc_1_1gui_1_1_actor.html#a5251ce8de3e14f4b3daf9e2a7b771eee" title="arc::gui::Actor::model" alt="" coords="214,5,361,31"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1mat.html#a8df70b235035d723df62e4a418ac7e94" title="arc::math::mat::translate" alt="" coords="205,55,370,80"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1math_1_1mat.html#acc6349295b1604d5cafa857f97469ed4" title="arc::math::mat::rotate" alt="" coords="214,104,362,129"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1math_1_1mat.html#a4aaba718d91ea015418b66dc4f7a7a48" title="arc::math::mat::scale" alt="" coords="215,153,360,179"/>
+<area shape="rect" id="node2" href="$classarc_1_1gui_1_1_actor.html#a5251ce8de3e14f4b3daf9e2a7b771eee" title="arc::gui::Actor::model" alt="" coords="217,5,364,31"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1mat_1_1transform.html#a66d0e12f7f7dfa9753e22e251a45058a" title="arc::math::mat::transform\l::translate" alt="" coords="205,55,375,93"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1math_1_1mat_1_1transform.html#a9e93071387ea2436052d8f87ab72cd17" title="arc::math::mat::transform\l::rotate" alt="" coords="205,117,375,156"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1math_1_1mat_1_1transform.html#ab4cbef827ac40c28096d4cf1c0fd52cb" title="arc::math::mat::transform\l::scale" alt="" coords="205,180,375,219"/>
 </map>

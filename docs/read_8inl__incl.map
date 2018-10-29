@@ -1,0 +1,9 @@
+<map id="include/arctk/parse/read.inl" name="include/arctk/parse/read.inl">
+<area shape="rect" id="node9" href="$format_8hpp.html" title="arctk/consts/format.hpp" alt="" coords="836,165,996,191"/>
+<area shape="rect" id="node12" href="$error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="492,239,624,264"/>
+<area shape="rect" id="node13" href="$dim_8hpp.html" title="arctk/index/dim.hpp" alt="" coords="1169,92,1306,117"/>
+<area shape="rect" id="node14" href="$process_8hpp.html" title="arctk/parse/process.hpp" alt="" coords="548,92,711,117"/>
+<area shape="rect" id="node18" href="$file_8hpp.html" title="arctk/sys/file.hpp" alt="" coords="155,92,275,117"/>
+<area shape="rect" id="node17" href="$process_8inl.html" title="arctk/parse/process.inl" alt="" coords="474,165,628,191"/>
+<area shape="rect" id="node19" href="$file_8inl.html" title="arctk/sys/file.inl" alt="" coords="159,165,271,191"/>
+</map>

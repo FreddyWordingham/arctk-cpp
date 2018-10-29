@@ -1,4 +1,0 @@
-<map id="arc::phys::optics::refraction_dir" name="arc::phys::optics::refraction_dir">
-<area shape="rect" id="node2" href="$classarc_1_1equip_1_1entity_1_1_body.html#a768c28a3110b4bf60860feeb3391b73e" title="arc::equip::entity\l::Body::hit_front" alt="" coords="178,5,298,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1equip_1_1entity_1_1_body.html#accbb9ff581c56cd408f95dec15593568" title="arc::equip::entity\l::Body::hit_back" alt="" coords="178,68,298,107"/>
-</map>

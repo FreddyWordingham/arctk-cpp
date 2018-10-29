@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['quality',['Quality',['../classarc_1_1random_1_1generator_1_1_quality.html',1,'arc::random::generator']]]
+  ['shader',['Shader',['../classarc_1_1gui_1_1_shader.html',1,'arc::gui']]],
+  ['shape',['Shape',['../classarc_1_1geom_1_1_shape.html',1,'arc::geom']]],
+  ['sop',['Sop',['../classarc_1_1opt_1_1_sop.html',1,'arc::opt']]],
+  ['specular',['Specular',['../classarc_1_1gui_1_1shader_1_1_specular.html',1,'arc::gui::shader']]]
 ];

@@ -1,6 +1,0 @@
-<map id="arc::phys::sop::Dumb::interact" name="arc::phys::sop::Dumb::interact">
-<area shape="rect" id="node2" href="$namespacearc_1_1random_1_1distribution.html#aa72c220ef49e5f1748071c2d83119103" title="arc::random::distribution\l::henyey_greenstein" alt="" coords="201,68,365,107"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1compare.html#a6fdf1ccf7e257c599fa273e28f605ffd" title="arc::math::compare\l::zero" alt="" coords="427,5,563,44"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1random_1_1distribution.html#af9e55c4d5a5e1965dc94441b0a5b86ab" title="arc::random::distribution\l::uniform" alt="" coords="413,68,577,107"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1math_1_1pow.html#a673982111327d6a2597e9a381009ce4d" title="arc::math::pow::sq" alt="" coords="430,131,560,156"/>
-</map>

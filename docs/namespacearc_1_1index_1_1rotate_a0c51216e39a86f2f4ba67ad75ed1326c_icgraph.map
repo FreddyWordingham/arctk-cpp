@@ -1,51 +1,39 @@
 <map id="arc::index::rotate::next" name="arc::index::rotate::next">
-<area shape="rect" id="node2" href="$namespacearc_1_1utl_1_1properties.html#aad4c2b9542f17dd7e77e509fbee5b57f" title="arc::utl::properties\l::distinct" alt="" coords="181,193,309,232"/>
-<area shape="rect" id="node9" href="$namespacearc_1_1utl_1_1properties.html#a4df19ef005359af15befe0493e491a2d" title="arc::utl::properties\l::ascending" alt="" coords="181,747,309,785"/>
-<area shape="rect" id="node30" href="$namespacearc_1_1utl_1_1properties.html#a16db97d0483cb56664c5cc2fbadf04c0" title="arc::utl::properties\l::descending" alt="" coords="181,1049,309,1088"/>
-<area shape="rect" id="node31" href="$namespacearc_1_1utl_1_1properties.html#ad590dd04af47f0a2f2b5acbbb221d9e4" title="arc::utl::properties\l::uniform" alt="" coords="181,1112,309,1151"/>
-<area shape="rect" id="node32" href="$namespacearc_1_1utl_1_1search.html#ab0aae86f6b98b4746101dd60c00514ca" title="arc::utl::search::min\l_index" alt="" coords="176,1467,313,1505"/>
-<area shape="rect" id="node44" href="$namespacearc_1_1utl_1_1search.html#a83ff5408af0ccc99c51d3dabf4f4562b" title="arc::utl::search::max\l_index" alt="" coords="174,1269,315,1308"/>
-<area shape="rect" id="node3" href="$classarc_1_1data_1_1_cube_3_011_00_01_a_8_8_8_01_4.html#a071fc2e50016db990fc0927f420b6c4a" title="arc::data::Cube\&lt; 1,\l A... \&gt;::save" alt="" coords="378,5,513,44"/>
-<area shape="rect" id="node4" href="$classarc_1_1data_1_1_cube_3_011_00_01_a_8_8_8_01_4.html#a34207df4d77a079e1cb87263efe92714" title="arc::data::Cube\&lt; 1,\l A... \&gt;::write_data" alt="" coords="378,68,513,107"/>
-<area shape="rect" id="node5" href="$classarc_1_1data_1_1_cube_3_012_00_01_a_8_8_8_01_4.html#a70b621e17fb31964373077fe04da8213" title="arc::data::Cube\&lt; 2,\l A... \&gt;::save" alt="" coords="378,131,513,169"/>
-<area shape="rect" id="node6" href="$classarc_1_1data_1_1_cube_3_012_00_01_a_8_8_8_01_4.html#af0d46fb9f4091c936399a9920c55e44a" title="arc::data::Cube\&lt; 2,\l A... \&gt;::write_data" alt="" coords="378,193,513,232"/>
-<area shape="rect" id="node7" href="$classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4.html#a1dcc44c4b05105062b5047d40a983696" title="arc::data::Cube\&lt; 3,\l A... \&gt;::save" alt="" coords="378,256,513,295"/>
-<area shape="rect" id="node8" href="$classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4.html#a17462f8e0e3e66c8646bdd51bdad47d1" title="arc::data::Cube\&lt; 3,\l A... \&gt;::write_data" alt="" coords="378,319,513,357"/>
-<area shape="rect" id="node10" href="$classarc_1_1math_1_1formula_1_1_constant.html#a9a6d9c9ca87530841e626b1aa5feba82" title="arc::math::formula\l::Constant::Constant" alt="" coords="374,621,517,660"/>
-<area shape="rect" id="node11" href="$classarc_1_1random_1_1distribution_1_1_constant.html#a3e47b1aab9ebca91a79b4ab56b2388b4" title="arc::random::distribution\l::Constant::Constant" alt="" coords="363,684,528,723"/>
-<area shape="rect" id="node12" href="$classarc_1_1random_1_1distribution_1_1_constant.html#a5f980fb0c9953089fa5dd9050d377241" title="arc::random::distribution\l::Constant::init_cdfs" alt="" coords="363,747,528,785"/>
-<area shape="rect" id="node13" href="$classarc_1_1math_1_1formula_1_1_linear.html#a6244446d242ae39947a7c6e5e3c07445" title="arc::math::formula\l::Linear::Linear" alt="" coords="381,809,510,848"/>
-<area shape="rect" id="node14" href="$classarc_1_1math_1_1formula_1_1_linear.html#a1315f3bad5bab261377e8dd2717ff12f" title="arc::math::formula\l::Linear::init_grads" alt="" coords="380,872,511,911"/>
-<area shape="rect" id="node15" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a061096961c96bcdca96eba49fba38eb7" title="arc::random::distribution\l::Linear::Linear" alt="" coords="363,935,528,973"/>
-<area shape="rect" id="node16" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a79b38bf15a786c48c8f64ca6ca6b9627" title="arc::random::distribution\l::Linear::init_cdfs" alt="" coords="363,381,528,420"/>
-<area shape="rect" id="node17" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a46538f676264f51b1f8902ff0dbec236" title="arc::random::distribution\l::Linear::init_fracs" alt="" coords="363,444,528,483"/>
-<area shape="rect" id="node18" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#a0643b275df486dc6b8590259629ed91c" title="arc::random::distribution\l::Discrete::Discrete" alt="" coords="363,507,528,545"/>
-<area shape="rect" id="node19" href="$namespacearc_1_1utl_1_1properties.html#ad688778f1731b099b418122f2e92ca0c" title="arc::utl::properties\l::monotonic" alt="" coords="382,1049,510,1088"/>
-<area shape="rect" id="node21" href="$namespacearc_1_1utl_1_1search.html#a759ee83416f9fb620af459ecb00205f0" title="arc::utl::search::lower" alt="" coords="809,761,957,787"/>
-<area shape="rect" id="node29" href="$namespacearc_1_1utl_1_1search.html#aaceae6e461089b2e63a30d9f035427d3" title="arc::utl::search::upper" alt="" coords="808,1028,958,1053"/>
-<area shape="rect" id="node20" href="$namespacearc_1_1utl_1_1properties.html#a4586f029de0cc630f2486b90ed38a0b4" title="arc::utl::properties\l::within" alt="" coords="604,1049,732,1088"/>
-<area shape="rect" id="node22" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a81409b11705fc30225b60cc0e143f7fe" title="arc::geom::shape::Mesh\l::random_pos" alt="" coords="1009,567,1174,605"/>
-<area shape="rect" id="node23" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a6fd171bd5f4599da58d70da8da3feaa9" title="arc::geom::shape::Mesh\l::random_pos_and_norm" alt="" coords="1006,629,1177,668"/>
-<area shape="rect" id="node24" href="$classarc_1_1math_1_1formula_1_1_constant.html#a81be9442c2aaec2b322bda1b185b8085" title="arc::math::formula\l::Constant::operator()" alt="" coords="1017,692,1166,731"/>
-<area shape="rect" id="node25" href="$classarc_1_1random_1_1distribution_1_1_constant.html#aec071ab8271f465317f1112f8d4a2ccc" title="arc::random::distribution\l::Constant::sample" alt="" coords="1009,755,1174,793"/>
-<area shape="rect" id="node26" href="$classarc_1_1math_1_1formula_1_1_linear.html#a0b5fbd46e17ebd4737b924210676c9ca" title="arc::math::formula\l::Linear::operator()" alt="" coords="1026,817,1157,856"/>
-<area shape="rect" id="node27" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a0fa6aa6641224238ac372116f1459944" title="arc::random::distribution\l::Linear::sample" alt="" coords="1009,880,1174,919"/>
-<area shape="rect" id="node28" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#a8f239c70e4b6b1a4b6382eaa81dff27d" title="arc::random::distribution\l::Discrete::sample" alt="" coords="1009,943,1174,981"/>
-<area shape="rect" id="node33" href="$namespacearc_1_1utl_1_1search.html#a7dedb03499315275304d2ee539dbbf81" title="arc::utl::search::min" alt="" coords="377,1701,514,1727"/>
-<area shape="rect" id="node34" href="$namespacearc_1_1io_1_1format.html#ad121d26ec02e835850e3377282ad68bc" title="arc::io::format::time" alt="" coords="600,1701,736,1727"/>
-<area shape="rect" id="node35" href="$classarc_1_1sys_1_1_balancer.html#ad9892e6ebb8eed6424aad8ae9d3d0c0e" title="arc::sys::Balancer\l::print_info" alt="" coords="820,1695,947,1733"/>
-<area shape="rect" id="node36" href="$classarc_1_1data_1_1_cube_3_011_00_01_a_8_8_8_01_4.html#ace17cc8dfd0bf2049315200e058c6af5" title="arc::data::Cube\&lt; 1,\l A... \&gt;::min" alt="" coords="600,1977,735,2016"/>
-<area shape="rect" id="node37" href="$classarc_1_1data_1_1_cube_3_012_00_01_a_8_8_8_01_4.html#ac23b2193f3188dfb4eb21da505ab6b1a" title="arc::data::Cube\&lt; 2,\l A... \&gt;::min" alt="" coords="600,1751,735,1789"/>
-<area shape="rect" id="node38" href="$classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4.html#a1e4ecd2af437069dff2fc03acad1c970" title="arc::data::Cube\&lt; 3,\l A... \&gt;::min" alt="" coords="600,1813,735,1852"/>
-<area shape="rect" id="node39" href="$classarc_1_1geom_1_1shape_1_1_box.html#a9cde8a9b6326466d668211348c07584d" title="arc::geom::shape::Box\l::intersect" alt="" coords="591,1639,745,1677"/>
-<area shape="rect" id="node40" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a99d3b8648e625769bfa4ea549a0d65bf" title="arc::geom::shape::Mesh\l::init_box" alt="" coords="586,1477,750,1516"/>
-<area shape="rect" id="node41" href="$namespacearc_1_1gui_1_1actor.html#aa415db4a76b700c82cc899b033d55d19" title="arc::gui::actor::shape" alt="" coords="595,1540,741,1565"/>
-<area shape="rect" id="node42" href="$namespacearc_1_1gui_1_1actor.html#a0353cbd33112a7c1c20e9eb4344f0a6d" title="arc::gui::actor::domain" alt="" coords="591,1876,745,1901"/>
-<area shape="rect" id="node43" href="$namespacearc_1_1gui_1_1actor.html#a528cb8607d80ad2c0008f38e8f1c2b63" title="arc::gui::actor::tree" alt="" coords="602,1589,734,1615"/>
-<area shape="rect" id="node45" href="$namespacearc_1_1utl_1_1search.html#aa99df786eaa2bc8d519f4e51a37f585e" title="arc::utl::search::max" alt="" coords="375,1369,516,1395"/>
-<area shape="rect" id="node46" href="$classarc_1_1data_1_1_cube_3_011_00_01_a_8_8_8_01_4.html#ae1309d6d7fdc2122470bac915d83e36a" title="arc::data::Cube\&lt; 1,\l A... \&gt;::max" alt="" coords="600,1175,735,1213"/>
-<area shape="rect" id="node47" href="$classarc_1_1data_1_1_cube_3_012_00_01_a_8_8_8_01_4.html#a424cfe4b81f47ab36294faca61a6a213" title="arc::data::Cube\&lt; 2,\l A... \&gt;::max" alt="" coords="600,1237,735,1276"/>
-<area shape="rect" id="node48" href="$classarc_1_1data_1_1_cube_3_013_00_01_a_8_8_8_01_4.html#a3b6276009e6cec869d4ce4fd3cd3f734" title="arc::data::Cube\&lt; 3,\l A... \&gt;::max" alt="" coords="600,1300,735,1339"/>
-<area shape="rect" id="node49" href="$classarc_1_1data_1_1image_1_1_colour.html#a1961f383de6c27c8768e4edf3b00927c" title="arc::data::image::Colour\l::save" alt="" coords="586,1363,750,1401"/>
-<area shape="rect" id="node50" href="$classarc_1_1data_1_1image_1_1_greyscale.html#af139686e330738ed6a644ad3bef54122" title="arc::data::image::Greyscale\l::save" alt="" coords="576,1112,760,1151"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1prop_1_1contents.html#abd8d7e37e9f12b1f7f56d02e0d77be3f" title="arc::prop::contents\l::distinct" alt="" coords="202,265,334,304"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1prop_1_1order.html#aa4093b496503227bc6426506da50ad41" title="arc::prop::order::ascending" alt="" coords="178,377,358,403"/>
+<area shape="rect" id="node24" href="$namespacearc_1_1prop_1_1order.html#afe04e94c07a0aa2a62eab27eb0f15b21" title="arc::prop::order::descending" alt="" coords="174,328,362,353"/>
+<area shape="rect" id="node25" href="$namespacearc_1_1prop_1_1order.html#a3b183d49069ab59e470ab2815e041d7b" title="arc::prop::order::uniform" alt="" coords="186,427,350,452"/>
+<area shape="rect" id="node26" href="$namespacearc_1_1search_1_1value.html#a054f87cdf39a68c636e89677a24f9a9b" title="arc::search::value\l::min_index" alt="" coords="205,719,331,757"/>
+<area shape="rect" id="node35" href="$namespacearc_1_1search_1_1value.html#ae6de88857d2b0411f8a5d932fe9780f8" title="arc::search::value\l::max_index" alt="" coords="205,536,331,575"/>
+<area shape="rect" id="node4" href="$classarc_1_1math_1_1formula_1_1_constant.html#a9a6d9c9ca87530841e626b1aa5feba82" title="arc::math::formula\l::Constant::Constant" alt="" coords="429,548,572,587"/>
+<area shape="rect" id="node5" href="$classarc_1_1random_1_1distribution_1_1_constant.html#a3e47b1aab9ebca91a79b4ab56b2388b4" title="arc::random::distribution\l::Constant::Constant" alt="" coords="419,611,583,649"/>
+<area shape="rect" id="node6" href="$classarc_1_1random_1_1distribution_1_1_constant.html#a5f980fb0c9953089fa5dd9050d377241" title="arc::random::distribution\l::Constant::init_cdfs" alt="" coords="419,673,583,712"/>
+<area shape="rect" id="node7" href="$classarc_1_1math_1_1formula_1_1_linear.html#a6244446d242ae39947a7c6e5e3c07445" title="arc::math::formula\l::Linear::Linear" alt="" coords="436,120,565,159"/>
+<area shape="rect" id="node8" href="$classarc_1_1math_1_1formula_1_1_linear.html#a1315f3bad5bab261377e8dd2717ff12f" title="arc::math::formula\l::Linear::init_grads" alt="" coords="435,183,566,221"/>
+<area shape="rect" id="node9" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a061096961c96bcdca96eba49fba38eb7" title="arc::random::distribution\l::Linear::Linear" alt="" coords="419,245,583,284"/>
+<area shape="rect" id="node10" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a79b38bf15a786c48c8f64ca6ca6b9627" title="arc::random::distribution\l::Linear::init_cdfs" alt="" coords="419,308,583,347"/>
+<area shape="rect" id="node11" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a46538f676264f51b1f8902ff0dbec236" title="arc::random::distribution\l::Linear::init_fracs" alt="" coords="419,371,583,409"/>
+<area shape="rect" id="node12" href="$namespacearc_1_1prop_1_1order.html#a6b2e66e4dd0736ed73701ed202c6e08b" title="arc::prop::order::monotonic" alt="" coords="410,19,591,44"/>
+<area shape="rect" id="node14" href="$namespacearc_1_1search_1_1index.html#a46e0f95a8c4004833018a61fcb8661f0" title="arc::search::index\l::lower" alt="" coords="852,248,978,287"/>
+<area shape="rect" id="node22" href="$namespacearc_1_1search_1_1index.html#ac06e21b796a9bf0a92ad9709bd130d47" title="arc::search::index\l::upper" alt="" coords="852,35,978,73"/>
+<area shape="rect" id="node23" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#a0643b275df486dc6b8590259629ed91c" title="arc::random::distribution\l::Discrete::Discrete" alt="" coords="419,485,583,524"/>
+<area shape="rect" id="node13" href="$namespacearc_1_1prop_1_1contents.html#a7299eff4da63e5d81d792f4aa654b866" title="arc::prop::contents\l::within" alt="" coords="656,5,788,44"/>
+<area shape="rect" id="node15" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a81409b11705fc30225b60cc0e143f7fe" title="arc::geom::shape::Mesh\l::random_pos" alt="" coords="1029,60,1194,99"/>
+<area shape="rect" id="node16" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a6fd171bd5f4599da58d70da8da3feaa9" title="arc::geom::shape::Mesh\l::random_pos_and_norm" alt="" coords="1026,123,1197,161"/>
+<area shape="rect" id="node17" href="$classarc_1_1math_1_1formula_1_1_constant.html#a81be9442c2aaec2b322bda1b185b8085" title="arc::math::formula\l::Constant::operator()" alt="" coords="1038,185,1186,224"/>
+<area shape="rect" id="node18" href="$classarc_1_1random_1_1distribution_1_1_constant.html#aec071ab8271f465317f1112f8d4a2ccc" title="arc::random::distribution\l::Constant::sample" alt="" coords="1029,248,1194,287"/>
+<area shape="rect" id="node19" href="$classarc_1_1math_1_1formula_1_1_linear.html#a0b5fbd46e17ebd4737b924210676c9ca" title="arc::math::formula\l::Linear::operator()" alt="" coords="1046,311,1177,349"/>
+<area shape="rect" id="node20" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a0fa6aa6641224238ac372116f1459944" title="arc::random::distribution\l::Linear::sample" alt="" coords="1029,373,1194,412"/>
+<area shape="rect" id="node21" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#a8f239c70e4b6b1a4b6382eaa81dff27d" title="arc::random::distribution\l::Discrete::sample" alt="" coords="1029,436,1194,475"/>
+<area shape="rect" id="node27" href="$namespacearc_1_1search_1_1value.html#aae5e1d5e5a6ea96ef29ca3c819a4724f" title="arc::search::value::min" alt="" coords="423,792,579,817"/>
+<area shape="rect" id="node28" href="$classarc_1_1geom_1_1shape_1_1_box.html#a9cde8a9b6326466d668211348c07584d" title="arc::geom::shape::Box\l::intersect" alt="" coords="644,757,799,796"/>
+<area shape="rect" id="node29" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a99d3b8648e625769bfa4ea549a0d65bf" title="arc::geom::shape::Mesh\l::init_box" alt="" coords="639,820,804,859"/>
+<area shape="rect" id="node30" href="$namespacearc_1_1gui_1_1actor.html#aa415db4a76b700c82cc899b033d55d19" title="arc::gui::actor::shape" alt="" coords="649,883,795,908"/>
+<area shape="rect" id="node31" href="$namespacearc_1_1gui_1_1actor.html#afbd2cc1b6e2893ac05778bc975a32d5e" title="arc::gui::actor::domain" alt="" coords="645,932,798,957"/>
+<area shape="rect" id="node32" href="$namespacearc_1_1gui_1_1actor.html#a528cb8607d80ad2c0008f38e8f1c2b63" title="arc::gui::actor::tree" alt="" coords="655,645,788,671"/>
+<area shape="rect" id="node33" href="$namespacearc_1_1parse_1_1write.html#ab26c48f1cddaaa74bff92879ac4371c6" title="arc::parse::write::\ltimestamp" alt="" coords="660,981,783,1020"/>
+<area shape="rect" id="node34" href="$classarc_1_1tree_1_1node_1_1_branch.html#a920ac1b8616d3f82d1001764c4ccf627" title="arc::tree::node::Branch\l::init_childs" alt="" coords="643,695,800,733"/>
+<area shape="rect" id="node36" href="$namespacearc_1_1search_1_1value.html#a38e0b67d4c9fb9be98ea9a2c487db51a" title="arc::search::value::max" alt="" coords="421,736,580,761"/>
+<area shape="rect" id="node37" href="$classarc_1_1gui_1_1camera_1_1_orbit.html#ab0062f89065280998577ed4781a22fd8" title="arc::gui::camera::Orbit\l::move" alt="" coords="645,520,798,559"/>
+<area shape="rect" id="node38" href="$classarc_1_1random_1_1generator_1_1_quality.html#a62c1690d7eb9dd323ffe92051fca040c" title="arc::random::generator\l::Quality::gen" alt="" coords="643,583,800,621"/>
 </map>

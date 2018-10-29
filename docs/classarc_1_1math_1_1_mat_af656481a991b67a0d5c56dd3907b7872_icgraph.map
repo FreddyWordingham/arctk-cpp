@@ -1,7 +1,5 @@
 <map id="arc::math::Mat::adj" name="arc::math::Mat::adj">
-<area shape="rect" id="node2" href="$classarc_1_1math_1_1_mat.html#ada19a34fc5169413915ca03d6d17c9f2" title="arc::math::Mat::inv" alt="" coords="185,5,316,31"/>
-<area shape="rect" id="node3" href="$classarc_1_1math_1_1_mat_3_01_t_00_012_01_4.html#ab1f0f496b6b81fcd65334e12f3bd6f93" title="arc::math::Mat\&lt; T,\l 2 \&gt;::inv" alt="" coords="186,55,315,93"/>
-<area shape="rect" id="node4" href="$classarc_1_1math_1_1_mat_3_01_t_00_013_01_4.html#a7d374849e7402999da09159003bc87b6" title="arc::math::Mat\&lt; T,\l 3 \&gt;::inv" alt="" coords="186,117,315,156"/>
-<area shape="rect" id="node5" href="$classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#afa0c845d4af7a20ed6fbf8b0d59d5cec" title="arc::math::Mat\&lt; T,\l 4 \&gt;::inv" alt="" coords="186,180,315,219"/>
-<area shape="rect" id="node6" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a0f7bb8e8601c7f953b0498ec2cefe4af" title="arc::geom::shape::Mesh\l::transform_norms" alt="" coords="364,180,528,219"/>
+<area shape="rect" id="node2" href="$classarc_1_1math_1_1_mat_3_01_t_00_012_01_4.html#ab1f0f496b6b81fcd65334e12f3bd6f93" title="arc::math::Mat\&lt; T,\l 2 \&gt;::inv" alt="" coords="185,5,313,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1math_1_1_mat_3_01_t_00_013_01_4.html#a7d374849e7402999da09159003bc87b6" title="arc::math::Mat\&lt; T,\l 3 \&gt;::inv" alt="" coords="185,68,313,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#afa0c845d4af7a20ed6fbf8b0d59d5cec" title="arc::math::Mat\&lt; T,\l 4 \&gt;::inv" alt="" coords="185,131,313,169"/>
 </map>

@@ -225,10 +225,10 @@ probs_ must always be greater than, or equal to, zero. </dd></dl>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1random_1_1distribution_1_1_discrete_a0643b275df486dc6b8590259629ed91c_cgraph.png" border="0" usemap="#classarc_1_1random_1_1distribution_1_1_discrete_a0643b275df486dc6b8590259629ed91c_cgraph" alt=""/></div>
 <map name="classarc_1_1random_1_1distribution_1_1_discrete_a0643b275df486dc6b8590259629ed91c_cgraph" id="classarc_1_1random_1_1distribution_1_1_discrete_a0643b275df486dc6b8590259629ed91c_cgraph">
-<area shape="rect" id="node2" href="namespacearc_1_1utl_1_1properties.html#a4df19ef005359af15befe0493e491a2d" title="arc::utl::properties\l::ascending" alt="" coords="230,36,358,75"/>
-<area shape="rect" id="node5" href="namespacearc_1_1utl_1_1properties.html#a01f8654e7820cf22aee9d6dfd045413b" title="arc::utl::properties\l::always_greater_than\l_or_equal_to" alt="" coords="218,99,370,151"/>
-<area shape="rect" id="node3" href="namespacearc_1_1index_1_1rotate.html#a7f591e13cc190f28640512d8d8339fb6" title="arc::index::rotate\l::prev" alt="" coords="418,5,539,44"/>
-<area shape="rect" id="node4" href="namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="418,68,539,107"/>
+<area shape="rect" id="node2" href="namespacearc_1_1prop_1_1order.html#aa4093b496503227bc6426506da50ad41" title="arc::prop::order::ascending" alt="" coords="218,43,398,68"/>
+<area shape="rect" id="node5" href="namespacearc_1_1prop_1_1limits.html#afae63c4f6c4685948edcda990d288ecd" title="arc::prop::limits::\lalways_greater_than\l_or_equal_to" alt="" coords="235,92,381,144"/>
+<area shape="rect" id="node3" href="namespacearc_1_1index_1_1rotate.html#a7f591e13cc190f28640512d8d8339fb6" title="arc::index::rotate\l::prev" alt="" coords="446,5,567,44"/>
+<area shape="rect" id="node4" href="namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="446,68,567,107"/>
 </map>
 </div>
 
@@ -261,16 +261,6 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Get the vector of cumulative distribution frequency values.</p>
 <dl class="section return"><dt>Returns</dt><dd>Vector of cumulative distribution frequency values. </dd></dl>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1random_1_1distribution_1_1_discrete_ad6af5fb76f15fc80a2aa5ffe59458a8e_icgraph.png" border="0" usemap="#classarc_1_1random_1_1distribution_1_1_discrete_ad6af5fb76f15fc80a2aa5ffe59458a8e_icgraph" alt=""/></div>
-<map name="classarc_1_1random_1_1distribution_1_1_discrete_ad6af5fb76f15fc80a2aa5ffe59458a8e_icgraph" id="classarc_1_1random_1_1distribution_1_1_discrete_ad6af5fb76f15fc80a2aa5ffe59458a8e_icgraph">
-<area shape="rect" id="node2" href="classarc_1_1random_1_1distribution_1_1_discrete.html#aa9b8b0c29f8bd71c50c8c5e50cf80946" title="arc::random::distribution\l::Discrete::init_cdfs" alt="" coords="218,5,382,44"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -306,18 +296,21 @@ template&lt;typename T &gt; </div>
   </table>
   </dd>
 </dl>
+<dl class="section pre"><dt>Precondition</dt><dd>probs_ may not be empty. </dd>
+<dd>
+probd_ values must all be non-negative.</dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>cdfs back value must equal unity.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Initialised vector of cumulative distribution frequency values. </dd></dl>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1random_1_1distribution_1_1_discrete_aa9b8b0c29f8bd71c50c8c5e50cf80946_cgraph.png" border="0" usemap="#classarc_1_1random_1_1distribution_1_1_discrete_aa9b8b0c29f8bd71c50c8c5e50cf80946_cgraph" alt=""/></div>
 <map name="classarc_1_1random_1_1distribution_1_1_discrete_aa9b8b0c29f8bd71c50c8c5e50cf80946_cgraph" id="classarc_1_1random_1_1distribution_1_1_discrete_aa9b8b0c29f8bd71c50c8c5e50cf80946_cgraph">
-<area shape="rect" id="node2" href="namespacearc_1_1utl_1_1properties.html#a01f8654e7820cf22aee9d6dfd045413b" title="arc::utl::properties\l::always_greater_than\l_or_equal_to" alt="" coords="224,5,376,57"/>
-<area shape="rect" id="node3" href="classarc_1_1random_1_1distribution_1_1_discrete.html#ad6af5fb76f15fc80a2aa5ffe59458a8e" title="arc::random::distribution\l::Discrete::cdfs" alt="" coords="218,81,382,120"/>
-<area shape="rect" id="node4" href="namespacearc_1_1math_1_1compare.html#abad9ddbaad39a082bc67db04ad1ea56d" title="arc::math::compare\l::equal" alt="" coords="232,144,368,183"/>
-<area shape="rect" id="node5" href="namespacearc_1_1math_1_1compare.html#a6fdf1ccf7e257c599fa273e28f605ffd" title="arc::math::compare\l::zero" alt="" coords="430,144,566,183"/>
+<area shape="rect" id="node2" href="namespacearc_1_1prop_1_1limits.html#afae63c4f6c4685948edcda990d288ecd" title="arc::prop::limits::\lalways_greater_than\l_or_equal_to" alt="" coords="218,5,363,57"/>
+<area shape="rect" id="node3" href="namespacearc_1_1math_1_1compare.html#abad9ddbaad39a082bc67db04ad1ea56d" title="arc::math::compare\l::equal" alt="" coords="222,81,358,120"/>
+<area shape="rect" id="node4" href="namespacearc_1_1math_1_1compare.html#a6fdf1ccf7e257c599fa273e28f605ffd" title="arc::math::compare\l::zero" alt="" coords="411,81,547,120"/>
 </map>
 </div>
 
@@ -359,21 +352,20 @@ template&lt;typename T &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>Value sampled from the distribution. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1random_1_1_distribution.html#a2d96076a83ffa489c086a35d54ebeee1">arc::random::Distribution&lt; T &gt;</a>.</p>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1random_1_1distribution_1_1_discrete_a8f239c70e4b6b1a4b6382eaa81dff27d_cgraph.png" border="0" usemap="#classarc_1_1random_1_1distribution_1_1_discrete_a8f239c70e4b6b1a4b6382eaa81dff27d_cgraph" alt=""/></div>
 <map name="classarc_1_1random_1_1distribution_1_1_discrete_a8f239c70e4b6b1a4b6382eaa81dff27d_cgraph" id="classarc_1_1random_1_1distribution_1_1_discrete_a8f239c70e4b6b1a4b6382eaa81dff27d_cgraph">
-<area shape="rect" id="node2" href="namespacearc_1_1utl_1_1search.html#a759ee83416f9fb620af459ecb00205f0" title="arc::utl::search::lower" alt="" coords="218,69,366,95"/>
-<area shape="rect" id="node3" href="namespacearc_1_1utl_1_1properties.html#a4df19ef005359af15befe0493e491a2d" title="arc::utl::properties\l::ascending" alt="" coords="813,5,941,44"/>
-<area shape="rect" id="node6" href="namespacearc_1_1utl_1_1properties.html#a4586f029de0cc630f2486b90ed38a0b4" title="arc::utl::properties\l::within" alt="" coords="437,63,565,101"/>
-<area shape="rect" id="node9" href="namespacearc_1_1math_1_1geom.html#a67873d6aa5b1a3710322e78dd3233e1d" title="arc::math::geom::distance" alt="" coords="414,125,588,151"/>
-<area shape="rect" id="node4" href="namespacearc_1_1index_1_1rotate.html#a7f591e13cc190f28640512d8d8339fb6" title="arc::index::rotate\l::prev" alt="" coords="989,5,1109,44"/>
-<area shape="rect" id="node5" href="namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="989,68,1109,107"/>
-<area shape="rect" id="node7" href="namespacearc_1_1utl_1_1properties.html#ad688778f1731b099b418122f2e92ca0c" title="arc::utl::properties\l::monotonic" alt="" coords="636,63,765,101"/>
-<area shape="rect" id="node8" href="namespacearc_1_1utl_1_1properties.html#a16db97d0483cb56664c5cc2fbadf04c0" title="arc::utl::properties\l::descending" alt="" coords="813,68,941,107"/>
+<area shape="rect" id="node2" href="namespacearc_1_1search_1_1index.html#a46e0f95a8c4004833018a61fcb8661f0" title="arc::search::index\l::lower" alt="" coords="218,37,344,76"/>
+<area shape="rect" id="node3" href="namespacearc_1_1prop_1_1order.html#aa4093b496503227bc6426506da50ad41" title="arc::prop::order::ascending" alt="" coords="805,19,986,44"/>
+<area shape="rect" id="node6" href="namespacearc_1_1prop_1_1contents.html#a7299eff4da63e5d81d792f4aa654b866" title="arc::prop::contents\l::within" alt="" coords="392,65,524,104"/>
+<area shape="rect" id="node4" href="namespacearc_1_1index_1_1rotate.html#a7f591e13cc190f28640512d8d8339fb6" title="arc::index::rotate\l::prev" alt="" coords="1038,5,1158,44"/>
+<area shape="rect" id="node5" href="namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="1038,68,1158,107"/>
+<area shape="rect" id="node7" href="namespacearc_1_1prop_1_1order.html#a6b2e66e4dd0736ed73701ed202c6e08b" title="arc::prop::order::monotonic" alt="" coords="572,68,753,93"/>
+<area shape="rect" id="node8" href="namespacearc_1_1prop_1_1order.html#afe04e94c07a0aa2a62eab27eb0f15b21" title="arc::prop::order::descending" alt="" coords="801,68,990,93"/>
 </map>
 </div>
 
@@ -461,13 +453,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/arctk/random/distribution/<a class="el" href="discrete_8hpp_source.html">discrete.hpp</a></li>
+<li>include/arctk/random/distribution/<a class="el" href="discrete_8inl.html">discrete.inl</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 17 2018 00:26:00 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 29 2018 01:41:19 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
