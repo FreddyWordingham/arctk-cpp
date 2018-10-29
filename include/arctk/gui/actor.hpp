@@ -155,7 +155,7 @@ namespace arc //! arctk namespace
 
 
 //  == IMPLEMENTATION ==
-#include <arctk/gui/camera.inl>
+#include <arctk/gui/actor.inl>
 
 
 
