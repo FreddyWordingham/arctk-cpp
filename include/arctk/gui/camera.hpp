@@ -93,5 +93,10 @@ namespace arc //! arctk namespace
 
 
 
+//  == IMPLEMENTATION ==
+#include <arctk/gui/camera.inl>
+
+
+
 //  == GUARD END ==
 #endif // ARCTK_GUI_CAMERA_HPP
