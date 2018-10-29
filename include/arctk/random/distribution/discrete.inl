@@ -1,29 +1,29 @@
 /**
- *  @file   arctk/random/distribution/constant.inl
- *  @date   16/07/2018
+ *  @file   arctk/random/distribution/discrete.inl
+ *  @date   13/07/2018
  *  @author Freddy Wordingham
  *
- *  Constant probability random distribution.
+ *  Discrete probability random distribution.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_RANDOM_DISTRIBUTION_CONSTANT_INL
-#define ARCTK_RANDOM_DISTRIBUTION_CONSTANT_INL
+#ifndef ARCTK_RANDOM_DISTRIBUTION_DISCRETE_INL
+#define ARCTK_RANDOM_DISTRIBUTION_DISCRETE_INL
 
 
 
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <vector>
 
 //  -- Arctk --
 #include <arctk/math/compare.hpp>
 #include <arctk/prop/limits.hpp>
 #include <arctk/prop/order.hpp>
 #include <arctk/random/distribution.hpp>
-#include <arctk/random/generator.hpp>
 #include <arctk/search/index.hpp>
 
 
@@ -41,26 +41,26 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
-             *  Construct a constant (step) distribution from a vector of values and their corresponding relative intermediate probabilities.
+             *  Construct a discrete distribution from a vector of values and their corresponding relative probabilities.
              *
              *  @param  vals_   Values generated from the distribution.
-             *  @param  probs_  Corresponding relative intermediate probabilities of the values.
+             *  @param  probs_  Corresponding relative probabilities of the values.
              *
-             *  @pre    vals_ must contain at least two values.
+             *  @pre    vals_ may not be empty.
              *  @pre    probs_ may not be empty.
-             *  @pre    vals_ size must match probs_ size plus one.
+             *  @pre    vals_ size must match probs_ size.
              *  @pre    vals_ must be sorted in ascending order.
              *  @pre    probs_ must always be greater than, or equal to, zero.
              */
             template <typename T>
-            inline Constant<T>::Constant(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept
+            inline Discrete<T>::Discrete(const std::vector<T>& vals_, const std::vector<double>& probs_) noexcept
               : Distribution<T>(vals_.front(), vals_.back())
               , _vals(vals_)
-              , _cdfs(init_cdfs(vals_, probs_))
+              , _cdfs(init_cdfs(probs_))
             {
-                assert(vals_.size() >= 2);
+                assert(!vals_.empty());
                 assert(!probs_.empty());
-                assert(vals_.size() == (probs_.size() + 1));
+                assert(vals_.size() == probs_.size());
                 assert(prop::order::ascending(vals_));
                 assert(prop::limits::always_greater_than_or_equal_to(probs_, 0.0));
             }
@@ -70,26 +70,19 @@ namespace arc //! arctk namespace
             /**
              *  Initialise the vector of cumulative distribution frequency values.
              *
-             *  @param  vals_   Values generated from the distribution.
              *  @param  probs_  Corresponding relative probabilities of the values.
              *
-             *  @pre    vals_ must contain at least two values.
              *  @pre    probs_ may not be empty.
-             *  @pre    vals_ size must match probs_ size plus one.
-             *  @pre    vals_ must be sorted in ascending order.
-             *  @pre    probs_ must always be greater than, or equal to, zero.
+             *  @pre    probd_ values must all be non-negative.
              *
              *  @post   cdfs back value must equal unity.
              *
              *  @return Initialised vector of cumulative distribution frequency values.
              */
             template <typename T>
-            inline std::vector<double> Constant<T>::init_cdfs(const std::vector<T>& vals_, const std::vector<double>& probs_) const noexcept
+            inline std::vector<double> Discrete<T>::init_cdfs(const std::vector<double>& probs_) const noexcept
             {
-                assert(vals_.size() >= 2);
                 assert(!probs_.empty());
-                assert(vals_.size() == (probs_.size() + 1));
-                assert(prop::order::ascending(vals_));
                 assert(prop::limits::always_greater_than_or_equal_to(probs_, 0.0));
 
                 std::vector<double> cdfs(probs_.size() + 1);
@@ -97,7 +90,7 @@ namespace arc //! arctk namespace
                 cdfs[0] = 0.0;
                 for (size_t i = 0; i < probs_.size(); ++i)
                 {
-                    cdfs[i + 1] = cdfs[i] + (probs_[i] * (vals_[i + 1] - vals_[i]));
+                    cdfs[i + 1] = cdfs[i] + probs_[i];
                 }
 
                 for (size_t i = 0; i < cdfs.size(); ++i)
@@ -111,6 +104,7 @@ namespace arc //! arctk namespace
             }
 
 
+
             //  == METHODS ==
             //  -- Getters --
             /**
@@ -119,7 +113,7 @@ namespace arc //! arctk namespace
              *  @return Vector of values generated from the distribution.
              */
             template <typename T>
-            inline const std::vector<T>& Constant<T>::vals() const noexcept
+            inline const std::vector<T>& Discrete<T>::vals() const noexcept
             {
                 return (_vals);
             }
@@ -130,7 +124,7 @@ namespace arc //! arctk namespace
              *  @return Vector of cumulative distribution frequency values.
              */
             template <typename T>
-            inline const std::vector<double>& Constant<T>::cdfs() const noexcept
+            inline const std::vector<double>& Discrete<T>::cdfs() const noexcept
             {
                 return (_cdfs);
             }
@@ -147,13 +141,11 @@ namespace arc //! arctk namespace
              *  @return Value sampled from the distribution.
              */
             template <typename T>
-            inline T Constant<T>::sample(Generator* const rng_) const noexcept
+            inline T Discrete<T>::sample(Generator* const rng_) const noexcept
             {
                 assert(rng_ != nullptr);
 
-                const size_t index = search::index::lower(_cdfs, rng_->gen());
-
-                return (random::distribution::uniform(rng_, _vals[index], _vals[index + 1]));
+                return (_vals[search::index::lower(_cdfs, rng_->gen())]);
             }
 
 
@@ -165,4 +157,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_RANDOM_DISTRIBUTION_CONSTANT_INL
+#endif // ARCTK_RANDOM_DISTRIBUTION_DISCRETE_INL
