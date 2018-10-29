@@ -22,7 +22,7 @@
 #include <vector>
 
 //  -- Arctk --
-#include <arctk/exit.hpp>
+#include <arctk/exit/error.hpp>
 
 
 
