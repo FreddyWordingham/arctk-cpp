@@ -1,6 +1,6 @@
 <map id="include/arctk/index/vertex.hpp" name="include/arctk/index/vertex.hpp">
 <area shape="rect" id="node2" href="$mesh_8inl.html" title="include/arctk/geom\l/shape/mesh.inl" alt="" coords="1289,179,1423,217"/>
-<area shape="rect" id="node25" href="$triangle_8inl.html" title="include/arctk/geom\l/shape/triangle.inl" alt="" coords="851,92,984,131"/>
+<area shape="rect" id="node26" href="$triangle_8inl.html" title="include/arctk/geom\l/shape/triangle.inl" alt="" coords="851,92,984,131"/>
 <area shape="rect" id="node3" href="$mesh_8hpp.html" title="include/arctk/geom\l/shape/mesh.hpp" alt="" coords="976,439,1109,477"/>
 <area shape="rect" id="node4" href="$entity_8hpp.html" title="include/arctk/equip\l/entity.hpp" alt="" coords="976,525,1109,564"/>
 <area shape="rect" id="node14" href="$actor_8inl.html" title="include/arctk/gui/actor.inl" alt="" coords="611,959,778,984"/>
@@ -23,16 +23,17 @@
 <area shape="rect" id="node19" href="$diffuse_8hpp.html" title="include/arctk/gui/shader\l/diffuse.hpp" alt="" coords="427,1192,589,1231"/>
 <area shape="rect" id="node21" href="$normal_8hpp.html" title="include/arctk/gui/shader\l/normal.hpp" alt="" coords="614,1192,776,1231"/>
 <area shape="rect" id="node23" href="$ray_8hpp.html" title="include/arctk/gui/shader\l/ray.hpp" alt="" coords="800,1192,962,1231"/>
-<area shape="rect" id="node26" href="$triangle_8hpp.html" title="include/arctk/geom\l/shape/triangle.hpp" alt="" coords="823,179,958,217"/>
-<area shape="rect" id="node27" href="$box_8inl.html" title="include/arctk/geom\l/shape/box.inl" alt="" coords="497,265,631,304"/>
-<area shape="rect" id="node37" href="$leaf_8inl.html" title="include/arctk/tree\l/node/leaf.inl" alt="" coords="680,352,803,391"/>
-<area shape="rect" id="node28" href="$box_8hpp.html" title="include/arctk/geom\l/shape/box.hpp" alt="" coords="424,352,557,391"/>
-<area shape="rect" id="node29" href="$cell_8hpp.html" title="include/arctk/dom/cell.hpp" alt="" coords="176,445,352,471"/>
-<area shape="rect" id="node30" href="$region_8hpp.html" title="include/arctk/dom/region.hpp" alt="" coords="210,532,403,557"/>
-<area shape="rect" id="node35" href="$leaf_8hpp.html" title="include/arctk/tree\l/node/leaf.hpp" alt="" coords="680,525,803,564"/>
-<area shape="rect" id="node36" href="$node_8hpp.html" title="include/arctk/tree\l/node.hpp" alt="" coords="531,439,653,477"/>
-<area shape="rect" id="node31" href="$sop_2dumb_8inl.html" title="include/arctk/opt/sop\l/dumb.inl" alt="" coords="43,525,186,564"/>
-<area shape="rect" id="node32" href="$sop_2dumb_8hpp.html" title="include/arctk/opt/sop\l/dumb.hpp" alt="" coords="43,612,186,651"/>
-<area shape="rect" id="node33" href="$mat_2dumb_8inl.html" title="include/arctk/opt/mat\l/dumb.inl" alt="" coords="42,699,187,737"/>
-<area shape="rect" id="node34" href="$mat_2dumb_8hpp.html" title="include/arctk/opt/mat\l/dumb.hpp" alt="" coords="42,785,187,824"/>
+<area shape="rect" id="node25" href="$specular_8hpp.html" title="include/arctk/gui/shader\l/specular.hpp" alt="" coords="987,1192,1149,1231"/>
+<area shape="rect" id="node27" href="$triangle_8hpp.html" title="include/arctk/geom\l/shape/triangle.hpp" alt="" coords="823,179,958,217"/>
+<area shape="rect" id="node28" href="$box_8inl.html" title="include/arctk/geom\l/shape/box.inl" alt="" coords="497,265,631,304"/>
+<area shape="rect" id="node38" href="$leaf_8inl.html" title="include/arctk/tree\l/node/leaf.inl" alt="" coords="680,352,803,391"/>
+<area shape="rect" id="node29" href="$box_8hpp.html" title="include/arctk/geom\l/shape/box.hpp" alt="" coords="424,352,557,391"/>
+<area shape="rect" id="node30" href="$cell_8hpp.html" title="include/arctk/dom/cell.hpp" alt="" coords="176,445,352,471"/>
+<area shape="rect" id="node31" href="$region_8hpp.html" title="include/arctk/dom/region.hpp" alt="" coords="210,532,403,557"/>
+<area shape="rect" id="node36" href="$leaf_8hpp.html" title="include/arctk/tree\l/node/leaf.hpp" alt="" coords="680,525,803,564"/>
+<area shape="rect" id="node37" href="$node_8hpp.html" title="include/arctk/tree\l/node.hpp" alt="" coords="531,439,653,477"/>
+<area shape="rect" id="node32" href="$sop_2dumb_8inl.html" title="include/arctk/opt/sop\l/dumb.inl" alt="" coords="43,525,186,564"/>
+<area shape="rect" id="node33" href="$sop_2dumb_8hpp.html" title="include/arctk/opt/sop\l/dumb.hpp" alt="" coords="43,612,186,651"/>
+<area shape="rect" id="node34" href="$mat_2dumb_8inl.html" title="include/arctk/opt/mat\l/dumb.inl" alt="" coords="42,699,187,737"/>
+<area shape="rect" id="node35" href="$mat_2dumb_8hpp.html" title="include/arctk/opt/mat\l/dumb.hpp" alt="" coords="42,785,187,824"/>
 </map>

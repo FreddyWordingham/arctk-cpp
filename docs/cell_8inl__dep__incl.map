@@ -1,7 +1,7 @@
 <map id="include/arctk/dom/cell.inl" name="include/arctk/dom/cell.inl">
 <area shape="rect" id="node2" href="$cell_8hpp.html" title="include/arctk/dom/cell.hpp" alt="" coords="747,79,922,104"/>
 <area shape="rect" id="node3" href="$region_8hpp.html" title="include/arctk/dom/region.hpp" alt="" coords="642,159,835,184"/>
-<area shape="rect" id="node15" href="$sop_2dumb_8inl.html" title="include/arctk/opt/sop\l/dumb.inl" alt="" coords="904,152,1048,191"/>
+<area shape="rect" id="node16" href="$sop_2dumb_8inl.html" title="include/arctk/opt/sop\l/dumb.inl" alt="" coords="904,152,1048,191"/>
 <area shape="rect" id="node4" href="$actor_8inl.html" title="include/arctk/gui/actor.inl" alt="" coords="565,245,733,271"/>
 <area shape="rect" id="node5" href="$actor_8hpp.html" title="include/arctk/gui/actor.hpp" alt="" coords="382,332,559,357"/>
 <area shape="rect" id="node6" href="$ambient_8inl.html" title="include/arctk/gui/shader\l/ambient.inl" alt="" coords="5,412,167,451"/>
@@ -13,7 +13,8 @@
 <area shape="rect" id="node9" href="$diffuse_8hpp.html" title="include/arctk/gui/shader\l/diffuse.hpp" alt="" coords="192,499,354,537"/>
 <area shape="rect" id="node11" href="$normal_8hpp.html" title="include/arctk/gui/shader\l/normal.hpp" alt="" coords="379,499,541,537"/>
 <area shape="rect" id="node13" href="$ray_8hpp.html" title="include/arctk/gui/shader\l/ray.hpp" alt="" coords="565,499,727,537"/>
-<area shape="rect" id="node16" href="$sop_2dumb_8hpp.html" title="include/arctk/opt/sop\l/dumb.hpp" alt="" coords="909,239,1053,277"/>
-<area shape="rect" id="node17" href="$mat_2dumb_8inl.html" title="include/arctk/opt/mat\l/dumb.inl" alt="" coords="932,325,1076,364"/>
-<area shape="rect" id="node18" href="$mat_2dumb_8hpp.html" title="include/arctk/opt/mat\l/dumb.hpp" alt="" coords="938,412,1083,451"/>
+<area shape="rect" id="node15" href="$specular_8hpp.html" title="include/arctk/gui/shader\l/specular.hpp" alt="" coords="752,499,914,537"/>
+<area shape="rect" id="node17" href="$sop_2dumb_8hpp.html" title="include/arctk/opt/sop\l/dumb.hpp" alt="" coords="909,239,1053,277"/>
+<area shape="rect" id="node18" href="$mat_2dumb_8inl.html" title="include/arctk/opt/mat\l/dumb.inl" alt="" coords="932,325,1076,364"/>
+<area shape="rect" id="node19" href="$mat_2dumb_8hpp.html" title="include/arctk/opt/mat\l/dumb.hpp" alt="" coords="938,412,1083,451"/>
 </map>

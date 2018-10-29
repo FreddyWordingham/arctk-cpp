@@ -17,6 +17,8 @@
 <area shape="rect" id="node10" href="$mat_2dumb_8inl.html" title="include/arctk/opt/mat\l/dumb.inl" alt="" coords="818,612,962,651"/>
 <area shape="rect" id="node11" href="$mat_2dumb_8hpp.html" title="include/arctk/opt/mat\l/dumb.hpp" alt="" coords="818,699,962,737"/>
 <area shape="rect" id="node19" href="$func_8hpp.html" title="include/arctk/opt/func.hpp" alt="" coords="629,185,802,211"/>
-<area shape="rect" id="node20" href="$body_8inl.html" title="include/arctk/equip\l/entity/body.inl" alt="" coords="649,265,782,304"/>
-<area shape="rect" id="node21" href="$body_8hpp.html" title="include/arctk/equip\l/entity/body.hpp" alt="" coords="649,352,782,391"/>
+<area shape="rect" id="node20" href="$body_8inl.html" title="include/arctk/equip\l/entity/body.inl" alt="" coords="796,265,928,304"/>
+<area shape="rect" id="node22" href="$mirror_8inl.html" title="include/arctk/equip\l/entity/mirror.inl" alt="" coords="640,265,772,304"/>
+<area shape="rect" id="node21" href="$body_8hpp.html" title="include/arctk/equip\l/entity/body.hpp" alt="" coords="796,352,928,391"/>
+<area shape="rect" id="node23" href="$mirror_8hpp.html" title="include/arctk/equip\l/entity/mirror.hpp" alt="" coords="640,352,772,391"/>
 </map>

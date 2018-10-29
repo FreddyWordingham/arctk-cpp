@@ -78,6 +78,7 @@ $(function() {
 <div class="textblock"><code>#include &lt;<a class="el" href="shader_8hpp_source.html">arctk/gui/shader.hpp</a>&gt;</code><br />
 <code>#include &lt;GL/glew.h&gt;</code><br />
 <code>#include &lt;glm/glm.hpp&gt;</code><br />
+<code>#include &lt;<a class="el" href="specular_8inl.html">arctk/gui/shader/specular.inl</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for specular.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -85,9 +86,40 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="specular_8hpp__incl.png" border="0" usemap="#include_2arctk_2gui_2shader_2specular_8hpp" alt=""/></div>
 <map name="include_2arctk_2gui_2shader_2specular_8hpp" id="include_2arctk_2gui_2shader_2specular_8hpp">
-<area shape="rect" id="node2" href="shader_8hpp.html" title="arctk/gui/shader.hpp" alt="" coords="152,92,294,117"/>
-<area shape="rect" id="node5" href="shader_8inl.html" title="arctk/gui/shader.inl" alt="" coords="146,165,278,191"/>
-<area shape="rect" id="node10" href="error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="354,239,486,264"/>
+<area shape="rect" id="node2" href="shader_8hpp.html" title="arctk/gui/shader.hpp" alt="" coords="187,165,328,191"/>
+<area shape="rect" id="node12" href="specular_8inl.html" title="arctk/gui/shader/specular.inl" alt="" coords="1003,92,1189,117"/>
+<area shape="rect" id="node5" href="shader_8inl.html" title="arctk/gui/shader.inl" alt="" coords="459,532,592,557"/>
+<area shape="rect" id="node10" href="error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="686,679,818,704"/>
+<area shape="rect" id="node13" href="actor_8hpp.html" title="arctk/gui/actor.hpp" alt="" coords="823,165,953,191"/>
+<area shape="rect" id="node47" href="camera_8hpp.html" title="arctk/gui/camera.hpp" alt="" coords="1124,165,1270,191"/>
+<area shape="rect" id="node49" href="lens_8hpp.html" title="arctk/gui/lens.hpp" alt="" coords="1345,165,1471,191"/>
+<area shape="rect" id="node14" href="point_8hpp.html" title="arctk/gui/point.hpp" alt="" coords="979,239,1109,264"/>
+<area shape="rect" id="node16" href="actor_8inl.html" title="arctk/gui/actor.inl" alt="" coords="827,239,949,264"/>
+<area shape="rect" id="node15" href="point_8inl.html" title="arctk/gui/point.inl" alt="" coords="523,752,645,777"/>
+<area shape="rect" id="node19" href="region_8hpp.html" title="arctk/dom/region.hpp" alt="" coords="883,459,1029,484"/>
+<area shape="rect" id="node20" href="box_8hpp.html" title="arctk/geom/shape/box.hpp" alt="" coords="1229,605,1408,631"/>
+<area shape="rect" id="node30" href="triangle_8hpp.html" title="arctk/geom/shape/triangle.hpp" alt="" coords="1309,752,1510,777"/>
+<area shape="rect" id="node37" href="dim_8hpp.html" title="arctk/index/dim.hpp" alt="" coords="246,679,383,704"/>
+<area shape="rect" id="node38" href="mesh_8hpp.html" title="arctk/geom/shape/mesh.hpp" alt="" coords="1700,532,1889,557"/>
+<area shape="rect" id="node40" href="container_8hpp.html" title="arctk/math/container.hpp" alt="" coords="680,312,848,337"/>
+<area shape="rect" id="node42" href="root_8hpp.html" title="arctk/tree/root.hpp" alt="" coords="1349,312,1478,337"/>
+<area shape="rect" id="node23" href="vec3_8hpp.html" title="arctk/math/vec3.hpp" alt="" coords="1659,899,1800,924"/>
+<area shape="rect" id="node34" href="cell_8hpp.html" title="arctk/dom/cell.hpp" alt="" coords="938,532,1067,557"/>
+<area shape="rect" id="node36" href="region_8inl.html" title="arctk/dom/region.inl" alt="" coords="195,605,333,631"/>
+<area shape="rect" id="node21" href="geom_2shape_8hpp.html" title="arctk/geom/shape.hpp" alt="" coords="1201,825,1354,851"/>
+<area shape="rect" id="node29" href="box_8inl.html" title="arctk/geom/shape/box.inl" alt="" coords="1003,679,1173,704"/>
+<area shape="rect" id="node24" href="vec_8hpp.html" title="arctk/math/vec.hpp" alt="" coords="1662,972,1796,997"/>
+<area shape="rect" id="node28" href="vec3_8inl.html" title="arctk/math/vec3.inl" alt="" coords="975,972,1108,997"/>
+<area shape="rect" id="node32" href="geom_2collision_8hpp.html" title="arctk/geom/collision.hpp" alt="" coords="1580,825,1745,851"/>
+<area shape="rect" id="node33" href="triangle_8inl.html" title="arctk/geom/shape/triangle.inl" alt="" coords="689,825,881,851"/>
+<area shape="rect" id="node35" href="cell_8inl.html" title="arctk/dom/cell.inl" alt="" coords="956,825,1076,851"/>
+<area shape="rect" id="node39" href="mesh_8inl.html" title="arctk/geom/shape/mesh.inl" alt="" coords="560,605,741,631"/>
+<area shape="rect" id="node41" href="container_8inl.html" title="arctk/math/container.inl" alt="" coords="685,385,843,411"/>
+<area shape="rect" id="node44" href="entity_8hpp.html" title="arctk/equip/entity.hpp" alt="" coords="1556,459,1703,484"/>
+<area shape="rect" id="node45" href="node_8hpp.html" title="arctk/tree/node.hpp" alt="" coords="1345,532,1481,557"/>
+<area shape="rect" id="node46" href="root_8inl.html" title="arctk/tree/root.inl" alt="" coords="1458,385,1579,411"/>
+<area shape="rect" id="node48" href="camera_8inl.html" title="arctk/gui/camera.inl" alt="" coords="1234,239,1371,264"/>
+<area shape="rect" id="node50" href="lens_8inl.html" title="arctk/gui/lens.inl" alt="" coords="1446,239,1562,264"/>
 </map>
 </div>
 </div>
@@ -117,7 +149,7 @@ Namespaces</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 29 2018 01:41:17 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 29 2018 13:45:17 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

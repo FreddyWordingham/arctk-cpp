@@ -2,7 +2,7 @@
 <area shape="rect" id="node2" href="$branch_8hpp.html" title="include/arctk/tree\l/node/branch.hpp" alt="" coords="149,92,274,131"/>
 <area shape="rect" id="node4" href="$root_8inl.html" title="include/arctk/tree\l/root.inl" alt="" coords="324,179,447,217"/>
 <area shape="rect" id="node5" href="$root_8hpp.html" title="include/arctk/tree\l/root.hpp" alt="" coords="398,265,521,304"/>
-<area shape="rect" id="node17" href="$leaf_8hpp.html" title="include/arctk/tree\l/node/leaf.hpp" alt="" coords="298,92,421,131"/>
+<area shape="rect" id="node18" href="$leaf_8hpp.html" title="include/arctk/tree\l/node/leaf.hpp" alt="" coords="298,92,421,131"/>
 <area shape="rect" id="node3" href="$branch_8inl.html" title="include/arctk/tree\l/node/branch.inl" alt="" coords="150,179,273,217"/>
 <area shape="rect" id="node6" href="$actor_8inl.html" title="include/arctk/gui/actor.inl" alt="" coords="376,352,543,377"/>
 <area shape="rect" id="node7" href="$actor_8hpp.html" title="include/arctk/gui/actor.hpp" alt="" coords="372,425,548,451"/>
@@ -15,4 +15,5 @@
 <area shape="rect" id="node11" href="$diffuse_8hpp.html" title="include/arctk/gui/shader\l/diffuse.hpp" alt="" coords="192,585,354,624"/>
 <area shape="rect" id="node13" href="$normal_8hpp.html" title="include/arctk/gui/shader\l/normal.hpp" alt="" coords="379,585,541,624"/>
 <area shape="rect" id="node15" href="$ray_8hpp.html" title="include/arctk/gui/shader\l/ray.hpp" alt="" coords="565,585,727,624"/>
+<area shape="rect" id="node17" href="$specular_8hpp.html" title="include/arctk/gui/shader\l/specular.hpp" alt="" coords="752,585,914,624"/>
 </map>
