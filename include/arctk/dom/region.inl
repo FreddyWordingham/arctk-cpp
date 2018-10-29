@@ -20,7 +20,7 @@
 #include <fstream>
 
 //  -- Arctk --
-#include <arctk/index.hpp>
+#include <arctk/index/dim.hpp>
 
 
 
