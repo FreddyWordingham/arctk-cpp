@@ -20,7 +20,7 @@
 #include <limits>
 
 //  -- Arctk --
-#include <arctk/sop/dumb.hpp>
+#include <arctk/opt/sop/dumb.hpp>
 
 
 
