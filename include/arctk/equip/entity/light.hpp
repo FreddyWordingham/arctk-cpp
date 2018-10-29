@@ -91,6 +91,18 @@ namespace arc //! arctk namespace
               public:
                 //  -- Constructors --
                 inline Light(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const opt::Mat& mat_, double power_, bool kill_) noexcept;
+                inline Light(const Light&) = default; //!< Defaulted copy constructor.
+                inline Light(Light&&)      = default; //!< Defaulted move constructor.
+
+                //  -- Destructors --
+                inline ~Light() noexcept override;
+
+
+                //  == OPERATORS ==
+              public:
+                //  -- Assignment --
+                inline Light& operator=(const Light&) noexcept = delete; //!< Deleted copy operator. @return Reference to copied object.
+                inline Light& operator=(Light&&) noexcept = delete;      //!< Deleted move operator. @return Reference to moved object.
 
 
                 //  == METHODS ==
