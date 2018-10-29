@@ -14,16 +14,14 @@
 
 
 
-//  == IMPORTS ==
-//  -- Std --
-#include <algorithm>
-
-//  -- Graphical --
-#include <glm/gtx/polar_coordinates.hpp>
-
-//  -- Arctk --
+//  == BASE ==
 #include <arctk/gui/camera.hpp>
-#include <arctk/math/convert.hpp>
+
+
+
+//  == IMPORTS ==
+//  -- Graphical --
+#include <glm/glm.hpp>
 
 
 
@@ -58,56 +56,14 @@ namespace arc //! arctk namespace
 
 
 
-            //  == INSTANTIATION ==
-            //  -- Constructors --
-            /**
-             *  Construct an orbital camera at a given position with a given focus point and up direction.
-             *
-             *  @param  pos_    Position of the camera.
-             *  @param  focus_  Point to focus the camera on.
-             *  @param  up_     Up direction of the camera.
-             */
-            inline Orbit::Orbit(const glm::vec3& pos_, const glm::vec3& focus_, const glm::vec3& up_) noexcept
-              : Camera(pos_, focus_, up_)
-            {
-            }
-
-
-
-            //  == METHODS ==
-            //  -- Control --
-            /**
-             *  Move the camera position.
-             *
-             *  @param  forward_    Distance to move the camera forward.
-             *  @param  right_      Distance to move the camera to the right.
-             *  @param  up_         Distance to move the camera upward.
-             */
-            inline void Orbit::move(const float forward_, const float right_, const float up_) noexcept
-            {
-                vec3f pos = math::convert::cart_to_polar(vec3f(_pos.x, _pos.y, _pos.z));
-
-                pos = math::convert::polar_to_cart(vec3f(std::max(pos.rho + (forward_ * _speed), 0.001f), std::clamp(pos.theta - (up_ * _speed), 0.001f, 3.140f), pos.phi + (right_ * _speed)));
-
-                _pos.x = pos.x;
-                _pos.y = pos.y;
-                _pos.z = pos.z;
-
-                update_view();
-            }
-
-            /**
-             *  Rotate the camera's orientation.
-             */
-            inline void Orbit::rotate(const float /*unused*/, const float /*unused*/, const float /*unused*/) noexcept
-            {
-            }
-
-
-
         } // namespace camera
     }     // namespace gui
 } // namespace arc
+
+
+
+//  == IMPLEMENTATION ==
+#include <arctk/gui/camera/orbit.inl>
 
 
 
