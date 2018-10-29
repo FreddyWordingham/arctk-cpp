@@ -15,6 +15,11 @@
 
 
 //  == IMPORTS ==
+#include <arctk/random/distribution.hpp>
+
+
+
+//  == IMPORTS ==
 //  -- Std --
 #include <vector>
 
