@@ -14,12 +14,14 @@
 
 
 
+//  == BASE ==
+#include <arctk/random/generator.hpp>
+
+
+
 //  == IMPORTS ==
 //  -- Std --
-#include <limits>
-
-//  -- Arctk --
-#include <arctk/random/generator.hpp>
+#include <cstdint>
 
 
 
@@ -64,62 +66,14 @@ namespace arc //! arctk namespace
 
 
 
-            //  == INSTANTIATION ==
-            //  -- Constructors --
-            /**
-             *  Construct a quality generator.
-             */
-            inline Quality::Quality() noexcept
-              : _u(static_cast<uint64_t>(0))
-              , _v(static_cast<uint64_t>(4101842887655102017))
-              , _w(static_cast<uint64_t>(1))
-            {
-                _u = _seed ^ _v;
-                gen_base();
-                _v = _u;
-                gen_base();
-                _w = _v;
-                gen_base();
-            }
-
-
-
-            //  == METHODS ==
-            //  -- Generation --
-            /**
-             *  Generate a base value which can then be transformed into a double.
-             *
-             *  @return Random integral value.
-             */
-            inline uint64_t Quality::gen_base() noexcept
-            {
-                _u = _u * static_cast<uint64_t>(2862933555777941757) + static_cast<uint64_t>(7046029254386353087);
-                _v ^= _v >> 17;                                                                  // NOLINT
-                _v ^= _v << 31;                                                                  // NOLINT
-                _v ^= _v >> 8;                                                                   // NOLINT
-                _w         = static_cast<uint64_t>(4294957665) * (_w & 0xffffffff) + (_w >> 32); // NOLINT
-                uint64_t x = _u ^ (_u << 21);                                                    // NOLINT
-                x ^= x >> 35;                                                                    // NOLINT
-                x ^= x << 4;                                                                     // NOLINT
-
-                return ((x + _v) ^ _w);
-            }
-
-            /**
-             *  Generate a floating point value between zero and unity.
-             *
-             *  @return Floating point value between zero and unity.
-             */
-            inline double Quality::gen() noexcept
-            {
-                return (static_cast<double>(gen_base()) * (1.0 / static_cast<double>(std::numeric_limits<uint64_t>::max())));
-            }
-
-
-
         } // namespace generator
     }     // namespace random
 } // namespace arc
+
+
+
+//  == IMPLEMENTATION ==
+#include <arctk/random/generator/quality.inl>
 
 
 
