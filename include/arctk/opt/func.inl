@@ -135,7 +135,7 @@ namespace arc //! arctk namespace
                 assert(in_.normalised());
                 assert(norm_.normalised());
 
-                const vec3 out = (in_ - (norm_ * (-2.0 * std::fabs(in_ * norm_)))).normal();
+                const vec3 out = (in_ - (norm_ * (2.0 * (in_ * norm_)))).normal();
 
                 assert(out.normalised());
 
@@ -164,7 +164,7 @@ namespace arc //! arctk namespace
 
                 const double ref_index_ratio = ref_index_in_ / ref_index_out_;
 
-                const double cos_ang_in     = -std::fabs(in_ * norm_);
+                const double cos_ang_in     = -(in_ * norm_);
                 const double sin_ang_out_sq = math::pow::sq(ref_index_ratio) * (1.0 - math::pow::sq(cos_ang_in));
 
                 const vec3 out = (in_ * ref_index_ratio) + (norm_ * ((ref_index_ratio * cos_ang_in) - std::sqrt(1.0 - sin_ang_out_sq)));
