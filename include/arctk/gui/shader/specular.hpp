@@ -92,5 +92,10 @@ namespace arc //! arctk namespace
 
 
 
+//  == IMPLEMENTATION ==
+#include <arctk/gui/shader/specular.inl>
+
+
+
 //  == GUARD END ==
 #endif // ARCTK_GUI_SHADER_SPECULAR_HPP
