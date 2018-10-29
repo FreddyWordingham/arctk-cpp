@@ -121,43 +121,6 @@ namespace arc //! arctk namespace
 
 
 
-            //  == CLASS ==
-            /**
-             *  Shader using a specular lighting source.
-             */
-            class Specular : public Shader
-            {
-                //  == FIELDS ==
-              private:
-                //  -- Uniforms --
-                const GLint _model;   //!< Model matrix uniform handle.
-                const GLint _view;    //!< View matrix uniform handle.
-                const GLint _proj;    //!< Projection matrix uniform handle.
-                const GLint _col;     //!< Colour uniform handle.
-                const GLint _cam_pos; //!< Camera position uniform handle.
-                const GLint _sun_col; //!< Colour of the sun illuminator.
-                const GLint _sun_pos; //!< Position of the sun illuminator.
-
-
-                //  == INSTANTIATION ==
-              public:
-                //  -- Constructors --
-                inline Specular() noexcept;
-
-
-                //  == METHODS ==
-              public:
-                //  -- Setters --
-                inline void set_sun_col(const glm::vec3& sun_col_) noexcept;
-                inline void set_sun_pos(const glm::vec3& sun_pos_) noexcept;
-
-                //  -- Rendering --
-                inline void activate(const Lens& lens_, const Camera& cam_) noexcept;
-                inline void render(const Actor& act_) noexcept;
-            };
-
-
-
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
