@@ -17,11 +17,11 @@
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
-    namespace dom //! domain number namespace
+    namespace dom //! domain namespace
     {
         class Cell;
     }              // namespace dom
-    namespace phys //! physics number namespace
+    namespace phys //! physics namespace
     {
         class Photon;
     }                // namespace phys
