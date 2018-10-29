@@ -9,7 +9,7 @@ var searchData=
   ['lens',['Lens',['../classarc_1_1gui_1_1_lens.html',1,'arc::gui::Lens'],['../classarc_1_1gui_1_1_lens.html#a3cca8b107f21e4f8291cfdc6f985c77c',1,'arc::gui::Lens::Lens()=default'],['../classarc_1_1gui_1_1_lens.html#a8eb6b17b3837e749ca64546b01dfabab',1,'arc::gui::Lens::Lens(const Lens &amp;)=default'],['../classarc_1_1gui_1_1_lens.html#aeb1f0f570d3f5c5ae8b1db53212737b8',1,'arc::gui::Lens::Lens(Lens &amp;&amp;)=default']]],
   ['lens_2ehpp',['lens.hpp',['../lens_8hpp.html',1,'']]],
   ['lens_2einl',['lens.inl',['../lens_8inl.html',1,'']]],
-  ['light',['Light',['../classarc_1_1equip_1_1entity_1_1_light.html',1,'arc::equip::entity::Light'],['../classarc_1_1equip_1_1entity_1_1_light.html#aea37d27cabbdeb66b9d3b3fcd6a0135a',1,'arc::equip::entity::Light::Light()']]],
+  ['light',['Light',['../classarc_1_1equip_1_1entity_1_1_light.html',1,'arc::equip::entity::Light'],['../classarc_1_1equip_1_1entity_1_1_light.html#aea37d27cabbdeb66b9d3b3fcd6a0135a',1,'arc::equip::entity::Light::Light(const std::string &amp;serial_, const vec3 &amp;scale_, const vec3 &amp;rot_, const vec3 &amp;trans_, const opt::Mat &amp;mat_, double power_, bool kill_) noexcept'],['../classarc_1_1equip_1_1entity_1_1_light.html#a049eab19b883c012663b4928318e36a8',1,'arc::equip::entity::Light::Light(const Light &amp;)=default'],['../classarc_1_1equip_1_1entity_1_1_light.html#ae8db6af3db7e4505b9e3835318587886',1,'arc::equip::entity::Light::Light(Light &amp;&amp;)=default']]],
   ['light_2ehpp',['light.hpp',['../light_8hpp.html',1,'']]],
   ['light_2einl',['light.inl',['../light_8inl.html',1,'']]],
   ['limits_2ehpp',['limits.hpp',['../limits_8hpp.html',1,'']]],
