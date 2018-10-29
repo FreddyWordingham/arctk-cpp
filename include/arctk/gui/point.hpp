@@ -15,9 +15,6 @@
 
 
 //  == IMPORTS ==
-//  -- Std --
-#include <cassert>
-
 //  -- Graphical --
 #include <glm/glm.hpp>
 
@@ -57,31 +54,13 @@ namespace arc //! arctk namespace
 
 
 
-        //  == INSTANTIATION ==
-        //  -- Constructors --
-        /**
-         *  Construct a data point recording the time and wavelength at a given position.
-         *
-         *  @param  pos_        Position of the data point.
-         *  @param  time_       Time of the data point.
-         *  @param  wavelength_ Wavelength of the data point.
-         *
-         *  @pre    time_ must be non-negative.
-         *  @pre    wavelength_ must be positive.
-         */
-        inline Point::Point(const glm::vec3& pos_, const float time_, const float wavelength_) noexcept
-          : pos(pos_)
-          , time(time_)
-          , wavelength(wavelength_)
-        {
-            assert(time_ >= 0.0f);
-            assert(wavelength_ > 0.0f);
-        }
-
-
-
     } // namespace gui
 } // namespace arc
+
+
+
+//  == IMPLEMENTATION ==
+#include <arctk/gui/point.inl>
 
 
 
