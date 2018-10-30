@@ -69,6 +69,7 @@ namespace arc //! arctk namespace
 
             //  -- Settings --
             inline void add_scatter(double scatters_) noexcept;
+            inline void add_absorb(double scatters_) noexcept;
             inline void add_energy(double energy_) noexcept;
         };
 

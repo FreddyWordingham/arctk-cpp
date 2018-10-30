@@ -105,6 +105,20 @@ namespace arc //! arctk namespace
         }
 
         /**
+         *  Add an absorption count to the cell.
+         *
+         *  @param  absorbs_    Absorption count to add.
+         *
+         *  @pre    absorbs_ must be positive.
+         */
+        inline void Cell::add_absorb(double absorbs_) noexcept
+        {
+            assert(absorbs_ > 0.0);
+
+            _absorbs += absorbs_;
+        }
+
+        /**
          *  Add a energy count to the cell.
          *
          *  @param  energy_ Energy to add.
