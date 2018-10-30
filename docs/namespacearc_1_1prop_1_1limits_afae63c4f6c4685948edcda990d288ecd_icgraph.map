@@ -4,6 +4,7 @@
 <area shape="rect" id="node4" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a061096961c96bcdca96eba49fba38eb7" title="arc::random::distribution\l::Linear::Linear" alt="" coords="198,131,363,169"/>
 <area shape="rect" id="node5" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a79b38bf15a786c48c8f64ca6ca6b9627" title="arc::random::distribution\l::Linear::init_cdfs" alt="" coords="198,193,363,232"/>
 <area shape="rect" id="node6" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a46538f676264f51b1f8902ff0dbec236" title="arc::random::distribution\l::Linear::init_fracs" alt="" coords="198,256,363,295"/>
-<area shape="rect" id="node7" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#a0643b275df486dc6b8590259629ed91c" title="arc::random::distribution\l::Discrete::Discrete" alt="" coords="198,319,363,357"/>
-<area shape="rect" id="node8" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#aa9b8b0c29f8bd71c50c8c5e50cf80946" title="arc::random::distribution\l::Discrete::init_cdfs" alt="" coords="198,381,363,420"/>
+<area shape="rect" id="node7" href="$classarc_1_1opt_1_1mat_1_1_simple.html#a927a719c374336a1f6ff9bd17961385f" title="arc::opt::mat::Simple\l::Simple" alt="" coords="209,319,352,357"/>
+<area shape="rect" id="node8" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#a0643b275df486dc6b8590259629ed91c" title="arc::random::distribution\l::Discrete::Discrete" alt="" coords="198,381,363,420"/>
+<area shape="rect" id="node9" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#aa9b8b0c29f8bd71c50c8c5e50cf80946" title="arc::random::distribution\l::Discrete::init_cdfs" alt="" coords="198,444,363,483"/>
 </map>

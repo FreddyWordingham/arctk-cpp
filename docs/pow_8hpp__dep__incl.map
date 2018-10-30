@@ -1,22 +1,26 @@
 <map id="include/arctk/math/pow.hpp" name="include/arctk/math/pow.hpp">
 <area shape="rect" id="node2" href="$polynomial_8inl.html" title="include/arctk/math\l/formula/polynomial.inl" alt="" coords="15,92,169,131"/>
 <area shape="rect" id="node4" href="$func_8inl.html" title="include/arctk/opt/func.inl" alt="" coords="197,99,361,124"/>
-<area shape="rect" id="node10" href="$distribution_8inl.html" title="include/arctk/random\l/distribution.inl" alt="" coords="490,92,635,131"/>
+<area shape="rect" id="node10" href="$distribution_8inl.html" title="include/arctk/random\l/distribution.inl" alt="" coords="574,92,719,131"/>
 <area shape="rect" id="node3" href="$polynomial_8hpp.html" title="include/arctk/math\l/formula/polynomial.hpp" alt="" coords="5,179,168,217"/>
 <area shape="rect" id="node5" href="$func_8hpp.html" title="include/arctk/opt/func.hpp" alt="" coords="192,185,365,211"/>
 <area shape="rect" id="node6" href="$body_8inl.html" title="include/arctk/equip\l/entity/body.inl" alt="" coords="57,265,189,304"/>
 <area shape="rect" id="node8" href="$mirror_8inl.html" title="include/arctk/equip\l/entity/mirror.inl" alt="" coords="213,265,345,304"/>
 <area shape="rect" id="node7" href="$body_8hpp.html" title="include/arctk/equip\l/entity/body.hpp" alt="" coords="57,352,189,391"/>
 <area shape="rect" id="node9" href="$mirror_8hpp.html" title="include/arctk/equip\l/entity/mirror.hpp" alt="" coords="213,352,345,391"/>
-<area shape="rect" id="node11" href="$distribution_8hpp.html" title="include/arctk/random\l/distribution.hpp" alt="" coords="654,179,799,217"/>
+<area shape="rect" id="node11" href="$distribution_8hpp.html" title="include/arctk/random\l/distribution.hpp" alt="" coords="764,179,909,217"/>
 <area shape="rect" id="node12" href="$sop_2dumb_8inl.html" title="include/arctk/opt/sop\l/dumb.inl" alt="" coords="370,265,513,304"/>
-<area shape="rect" id="node16" href="$random_2distribution_2constant_8hpp.html" title="include/arctk/random\l/distribution/constant.hpp" alt="" coords="559,352,729,391"/>
-<area shape="rect" id="node17" href="$random_2distribution_2constant_8inl.html" title="include/arctk/random\l/distribution/constant.inl" alt="" coords="588,265,748,304"/>
-<area shape="rect" id="node18" href="$discrete_8hpp.html" title="include/arctk/random\l/distribution/discrete.hpp" alt="" coords="785,352,951,391"/>
-<area shape="rect" id="node19" href="$discrete_8inl.html" title="include/arctk/random\l/distribution/discrete.inl" alt="" coords="823,265,980,304"/>
-<area shape="rect" id="node20" href="$random_2distribution_2linear_8hpp.html" title="include/arctk/random\l/distribution/linear.hpp" alt="" coords="1005,265,1156,304"/>
-<area shape="rect" id="node21" href="$random_2distribution_2linear_8inl.html" title="include/arctk/random\l/distribution/linear.inl" alt="" coords="1180,265,1325,304"/>
+<area shape="rect" id="node16" href="$sop_2simple_8inl.html" title="include/arctk/opt/sop\l/simple.inl" alt="" coords="538,265,681,304"/>
+<area shape="rect" id="node20" href="$random_2distribution_2constant_8hpp.html" title="include/arctk/random\l/distribution/constant.hpp" alt="" coords="727,352,897,391"/>
+<area shape="rect" id="node21" href="$random_2distribution_2constant_8inl.html" title="include/arctk/random\l/distribution/constant.inl" alt="" coords="756,265,916,304"/>
+<area shape="rect" id="node22" href="$discrete_8hpp.html" title="include/arctk/random\l/distribution/discrete.hpp" alt="" coords="953,352,1119,391"/>
+<area shape="rect" id="node23" href="$discrete_8inl.html" title="include/arctk/random\l/distribution/discrete.inl" alt="" coords="991,265,1148,304"/>
+<area shape="rect" id="node24" href="$random_2distribution_2linear_8hpp.html" title="include/arctk/random\l/distribution/linear.hpp" alt="" coords="1173,265,1324,304"/>
+<area shape="rect" id="node25" href="$random_2distribution_2linear_8inl.html" title="include/arctk/random\l/distribution/linear.inl" alt="" coords="1348,265,1493,304"/>
 <area shape="rect" id="node13" href="$sop_2dumb_8hpp.html" title="include/arctk/opt/sop\l/dumb.hpp" alt="" coords="370,352,513,391"/>
 <area shape="rect" id="node14" href="$mat_2dumb_8inl.html" title="include/arctk/opt/mat\l/dumb.inl" alt="" coords="369,439,514,477"/>
 <area shape="rect" id="node15" href="$mat_2dumb_8hpp.html" title="include/arctk/opt/mat\l/dumb.hpp" alt="" coords="369,525,514,564"/>
+<area shape="rect" id="node17" href="$sop_2simple_8hpp.html" title="include/arctk/opt/sop\l/simple.hpp" alt="" coords="538,352,681,391"/>
+<area shape="rect" id="node18" href="$mat_2simple_8inl.html" title="include/arctk/opt/mat\l/simple.inl" alt="" coords="537,439,682,477"/>
+<area shape="rect" id="node19" href="$mat_2simple_8hpp.html" title="include/arctk/opt/mat\l/simple.hpp" alt="" coords="537,525,682,564"/>
 </map>

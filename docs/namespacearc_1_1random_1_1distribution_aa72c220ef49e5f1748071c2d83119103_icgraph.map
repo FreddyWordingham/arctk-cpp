@@ -1,3 +1,4 @@
 <map id="arc::random::distribution::henyey_greenstein" name="arc::random::distribution::henyey_greenstein">
-<area shape="rect" id="node2" href="$classarc_1_1opt_1_1sop_1_1_dumb.html#ac2b0da14d4b78eb0ffb9febdd584f995" title="arc::opt::sop::Dumb\l::interact" alt="" coords="218,5,355,44"/>
+<area shape="rect" id="node2" href="$classarc_1_1opt_1_1sop_1_1_dumb.html#ac2b0da14d4b78eb0ffb9febdd584f995" title="arc::opt::sop::Dumb\l::interact" alt="" coords="220,5,358,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1opt_1_1sop_1_1_simple.html#aa04b998ea78926a3016c96832ede87a6" title="arc::opt::sop::Simple\l::interact" alt="" coords="218,68,361,107"/>
 </map>
