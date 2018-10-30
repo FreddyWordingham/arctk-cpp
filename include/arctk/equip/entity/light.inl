@@ -110,7 +110,8 @@ namespace arc //! arctk namespace
                 assert(sop_ != nullptr);
                 assert(cell_ != nullptr);
 
-                phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index(), cell_);
+                phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index());
+                cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
 
                 return (_kill);
             }
@@ -135,7 +136,8 @@ namespace arc //! arctk namespace
                 assert(sop_ != nullptr);
                 assert(cell_ != nullptr);
 
-                phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index(), cell_);
+                phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index());
+                cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
 
                 return (_kill);
             }
