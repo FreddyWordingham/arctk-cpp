@@ -94,7 +94,7 @@ namespace arc //! arctk namespace
              */
             inline std::unique_ptr<Sop> Simple::gen(const phys::Photon& phot_) const noexcept
             {
-                return (std::make_unique<sop::Simple>(_ref_index(phot_->wavelength()), _dist(phot_->wavelength()), _albedo(phot_->wavelength()), _asym(phot_->wavelength())));
+                return (std::make_unique<sop::Simple>(_ref_index(phot_.wavelength()), _dist(phot_.wavelength()), _albedo(phot_.wavelength()), _asym(phot_.wavelength())));
             }
 
 
