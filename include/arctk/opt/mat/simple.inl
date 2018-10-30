@@ -98,6 +98,8 @@ namespace arc //! arctk namespace
                     interact_coef.emplace_back(scat_coef_[i] + abs_coef_[i]);
                 }
 
+                assert(prop::limits::always_greater_than(interact_coef, 0.0));
+
                 return (math::formula::Linear(wavelengths_, interact_coef));
             }
 
