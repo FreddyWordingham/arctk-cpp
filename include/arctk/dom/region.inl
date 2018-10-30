@@ -288,6 +288,27 @@ namespace arc //! arctk namespace
                 }
                 file << '\n';
             }
+
+            file << "\nFIELD FieldData 1\n"
+                 << "absorb_dens" << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << ' ' << "double" << '\n';
+
+            for (size_t i = 0; i < _res[index::dim::cartesian::Z]; ++i)
+            {
+                for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
+                {
+                    for (size_t k = 0; k < _res[index::dim::cartesian::X]; ++k)
+                    {
+                        if (k != 0)
+                        {
+                            file << ' ';
+                        }
+
+                        file << _cells[k][j][i].absorb_dens();
+                    }
+                    file << '\n';
+                }
+                file << '\n';
+            }
         }
 
 
