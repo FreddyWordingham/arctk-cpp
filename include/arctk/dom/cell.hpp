@@ -50,6 +50,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Data --
             double _scatters; //!< Total scatterings that occur within in cell.
+            double _absorbs;  //!< Total number of absorptions that occur within in cell.
             double _energy;   //!< Total energy within the cell.
 
 
