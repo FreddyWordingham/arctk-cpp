@@ -64,6 +64,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline double scatter_dens() const noexcept;
+            inline double absorb_dens() const noexcept;
             inline double energy_dens() const noexcept;
 
             //  -- Settings --

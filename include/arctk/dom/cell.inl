@@ -69,6 +69,16 @@ namespace arc //! arctk namespace
         }
 
         /**
+         *  Get the absorption density of the cell.
+         *
+         *  @return Absorption density of the cell.
+         */
+        inline double Cell::absorb_dens() const noexcept
+        {
+            return (_absorbs / vol());
+        }
+
+        /**
          *  Get the energy density of the cell.
          *
          *  @return Energy density of the cell.
