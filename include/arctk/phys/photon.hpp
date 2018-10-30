@@ -77,7 +77,7 @@ namespace arc //! arctk namespace
             inline double      weight() const noexcept;
 
             //  -- Setters --
-            inline void move(double dist_, double ref_index_, dom::Cell* cell_) noexcept;
+            inline void move(double dist_, double ref_index_) noexcept;
             inline void rotate(double theta_, double phi_) noexcept;
             inline void set_dir(const vec3& dir_) noexcept;
             inline void multiply_weight(double mult_) noexcept;
