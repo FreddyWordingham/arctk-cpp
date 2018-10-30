@@ -103,14 +103,13 @@ namespace arc //! arctk namespace
              */
             inline bool Simple::interact(random::Generator* rng_, phys::Photon* phot_, dom::Cell* cell_, const double dist_) const noexcept
             {
+                cell_->add_energy(dist_ * phot_->energy() * phot_->weight());
+                cell_->add_absorb(phot_->weight() * (1.0 - _albedo));
                 cell_->add_scatter(phot_->weight());
 
-                cell_->add_absorb(phot_->weight() * (1.0 - _albedo));
+                phot_->move(dist_, _ref_index);
                 phot_->multiply_weight(_albedo);
-
-                phot_->move(dist_, _ref_index, cell_);
                 phot_->rotate(random::distribution::henyey_greenstein(rng_, _asym), rng_->gen() * consts::math::TWO_PI);
-                phot_->multiply_weight(_albedo);
 
                 return (true);
             }
