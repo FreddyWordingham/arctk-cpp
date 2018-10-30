@@ -84,7 +84,7 @@ namespace arc //! arctk namespace
              */
             inline double Simple::interact_dist(random::Generator* rng_, const dom::Cell* /*unused*/) const noexcept
             {
-                PRE(rng_ != nullptr);
+                assert(rng_ != nullptr);
 
                 return (-std::log(rng_->gen()) / _dist);
             }
