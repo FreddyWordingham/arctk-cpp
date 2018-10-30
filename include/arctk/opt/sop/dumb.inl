@@ -98,6 +98,7 @@ namespace arc //! arctk namespace
             {
                 cell_->add_scatter(phot_->weight());
 
+                cell_->add_absorb(phot_->weight() * (1.0 - _albedo));
                 phot_->multiply_weight(_albedo);
 
                 phot_->move(dist_, _ref_index, cell_);
