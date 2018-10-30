@@ -13,6 +13,7 @@
 #include <arctk/opt/func.hpp>
 #include <arctk/opt/mat.hpp>
 #include <arctk/opt/mat/dumb.hpp>
+#include <arctk/opt/mat/simple.hpp>
 #include <arctk/opt/sop.hpp>
 #include <arctk/opt/sop/dumb.hpp>
 
