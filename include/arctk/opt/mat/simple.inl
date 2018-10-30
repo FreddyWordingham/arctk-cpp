@@ -20,7 +20,7 @@
 #include <limits>
 
 //  -- Arctk --
-//#include <arctk/opt/sop/dumb.hpp>
+#include <arctk/opt/sop/simple.hpp>
 #include <arctk/prop/limits.hpp>
 #include <arctk/prop/order.hpp>
 
@@ -85,15 +85,17 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Specific Optical Properties --
-            // /**
-            //  *  Generate specific-optical-proeprties for a given photon.
-            //  *
-            //  *  @return Specific-optical-properties for the given photon.
-            //  */
-            // inline std::unique_ptr<Sop> Dumb::gen(const phys::Photon& /*unused*/) const noexcept
-            // {
-            //     return (std::make_unique<sop::Dumb>(_ref_index, _dist, _albedo, _asym));
-            // }
+            /**
+             *  Generate specific-optical-proeprties for a given photon.
+             *
+             *  @param  phot_   Photon to generate specific-optical-proeprties for.
+             *
+             *  @return Specific-optical-properties for the given photon.
+             */
+            inline std::unique_ptr<Sop> Simple::gen(const phys::Photon& phot_) const noexcept
+            {
+                return (std::make_unique<sop::Simple>(_ref_index(phot_->wavelength()), _dist(phot_->wavelength()), _albedo(phot_->wavelength()), _asym(phot_->wavelength())));
+            }
 
 
 

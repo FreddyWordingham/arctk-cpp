@@ -75,7 +75,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Specific Optical Properties --
-                inline std::unique_ptr<Sop> gen(const phys::Photon& /*unused*/) const noexcept override;
+                inline std::unique_ptr<Sop> gen(const phys::Photon& phot_) const noexcept override;
             };
 
 
