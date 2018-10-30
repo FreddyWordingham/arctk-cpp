@@ -22,8 +22,10 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <memory>
+#include <vector>
 
 //  -- Arctk --
+#include <arctk/math/formula/linear.hpp>
 #include <arctk/opt/sop.hpp>
 
 
@@ -58,16 +60,16 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               private:
                 //  -- Optical Properties --
-                const double _ref_index; //!< Refractive index.
-                const double _dist;      //!< Interaction distance.
-                const double _albedo;    //!< Single scattering albedo.
-                const double _asym;      //!< Asymmetry factor.
+                const math::formula::Linear _ref_index; //!< Refractive index.
+                const math::formula::Linear _dist;      //!< Interaction distance.
+                const math::formula::Linear _albedo;    //!< Single scattering albedo.
+                const math::formula::Linear _asym;      //!< Asymmetry factor.
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Dumb(double ref_index_, double dist_, double albedo_, double asym_) noexcept;
+                inline Simple(const std::vector<double>& wavelengths_, const std::vector<double>& ref_indexs_, const std::vector<double>& dists_, const std::vector<double>& albedos_, const std::vector<double>& asyms_) noexcept;
 
 
                 //  == METHODS ==
