@@ -62,10 +62,10 @@ namespace arc //! arctk namespace
              */
             inline Simple::Simple(const std::vector<double>& wavelengths_, const std::vector<double>& ref_indexs_, const std::vector<double>& dists_, const std::vector<double>& albedos_, const std::vector<double>& asyms_) noexcept
               : Mat(wavelengths_.front(), wavelengths_.back())
-              , _ref_index(wavelengths_, ref_index_)
-              , _dist(wavelengths_, dist_)
-              , _albedo(wavelengths_, albedo_)
-              , _asym(wavelengths_, asym_)
+              , _ref_index(wavelengths_, ref_indexs_)
+              , _dist(wavelengths_, dists_)
+              , _albedo(wavelengths_, albedos_)
+              , _asym(wavelengths_, asyms_)
             {
                 assert(prop::limits::always_greater_than(wavelengths_, 0.0));
                 assert(prop::order::ascending(wavelengths_));
