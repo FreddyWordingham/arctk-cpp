@@ -102,14 +102,14 @@ namespace arc //! arctk namespace
                 if (rng_->gen() <= opt::func::reflection_prob(std::acos(phot_->dir() * -coll_.norm()), sop_->get()->ref_index(), next_sop->ref_index()))
                 {
                     phot_->move(coll_.dist() - consts::num::BUMP, sop_->get()->ref_index());
-                    cell_->add_energy(dist_ * phot_->energy() * phot_->weight());
+                    cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
 
                     phot_->set_dir(opt::func::reflection_dir(phot_->dir(), coll_.norm()));
                 }
                 else
                 {
                     phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index());
-                    cell_->add_energy(dist_ * phot_->energy() * phot_->weight());
+                    cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
 
                     phot_->set_dir(opt::func::refraction_dir(phot_->dir(), coll_.norm(), sop_->get()->ref_index(), next_sop->ref_index()));
 
@@ -151,14 +151,14 @@ namespace arc //! arctk namespace
                 if (rng_->gen() <= opt::func::reflection_prob(std::acos(phot_->dir() * coll_.norm()), sop_->get()->ref_index(), next_sop->ref_index()))
                 {
                     phot_->move(coll_.dist() - consts::num::BUMP, sop_->get()->ref_index());
-                    cell_->add_energy(dist_ * phot_->energy() * phot_->weight());
+                    cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
 
                     phot_->set_dir(opt::func::reflection_dir(phot_->dir(), -coll_.norm()));
                 }
                 else
                 {
                     phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index());
-                    cell_->add_energy(dist_ * phot_->energy() * phot_->weight());
+                    cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
 
                     phot_->set_dir(opt::func::refraction_dir(phot_->dir(), -coll_.norm(), sop_->get()->ref_index(), next_sop->ref_index()));
 
