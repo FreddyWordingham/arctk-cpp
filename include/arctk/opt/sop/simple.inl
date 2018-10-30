@@ -43,26 +43,26 @@ namespace arc //! arctk namespace
             /**
              *  Construct a simple specific-optical-property.
              *
-             *  @param  ref_index_  Refractive index.
-             *  @param  dist_       Interaction distance.
-             *  @param  albedo_     Single scattering albedo.
-             *  @param  asym_       Asymmetry parameter.
+             *  @param  ref_index_          Refractive index.
+             *  @param  interaction_coef_   Interaction coefficient.
+             *  @param  albedo_             Single scattering albedo.
+             *  @param  asym_               Asymmetry parameter.
              *
              *  @pre    ref_index_ must be greater than, or equal to, unity.
-             *  @pre    dist_ must be positive.
+             *  @pre    interaction_coef_ must be positive.
              *  @pre    albedo_ must be positive.
              *  @pre    albedo_ must less than, or equal to, unity.
              *  @pre    asym_ must greater than, or equal to, minus one.
              *  @pre    asym_ must less than, or equal to, unity.
              */
-            inline Simple::Simple(const double ref_index_, const double dist_, const double albedo_, const double asym_) noexcept
+            inline Simple::Simple(const double ref_index_, const double interaction_coef_, const double albedo_, const double asym_) noexcept
               : Sop(ref_index_)
-              , _dist(dist_)
+              , _interaction_coef(interaction_coef_)
               , _albedo(albedo_)
               , _asym(asym_)
             {
                 assert(ref_index_ >= 1.0);
-                assert(dist_ > 0.0);
+                assert(interaction_coef_ > 0.0);
                 assert(albedo_ >= 0.0);
                 assert(albedo_ <= 1.0);
                 assert(asym_ >= -1.0);

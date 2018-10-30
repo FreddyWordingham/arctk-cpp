@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Simple(double ref_index_, double dist_, double albedo_, double asym_) noexcept;
+                inline Simple(double ref_index_, double interaction_coef_, double albedo_, double asym_) noexcept;
 
 
                 //  == METHODS ==
