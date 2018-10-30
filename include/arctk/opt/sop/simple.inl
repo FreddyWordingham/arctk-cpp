@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             /**
-             *  Construct a dumb specific-optical-property.
+             *  Construct a simple specific-optical-property.
              *
              *  @param  ref_index_  Refractive index.
              *  @param  dist_       Interaction distance.
