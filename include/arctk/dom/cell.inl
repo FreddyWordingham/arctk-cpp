@@ -46,6 +46,7 @@ namespace arc //! arctk namespace
         inline Cell::Cell(const vec3& min_, const vec3& max_) noexcept
           : Box(min_, max_)
           , _scatters(0.0)
+          , _absorbs(0.0)
           , _energy(0.0)
         {
             assert(min_.x <= max_.x);
