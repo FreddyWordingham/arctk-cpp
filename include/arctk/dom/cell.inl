@@ -111,7 +111,7 @@ namespace arc //! arctk namespace
          *
          *  @pre    absorbs_ must be positive.
          */
-        inline void Cell::add_absorb(double absorbs_) noexcept
+        inline void Cell::add_absorb(const double absorbs_) noexcept
         {
             assert(absorbs_ > 0.0);
 
