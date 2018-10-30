@@ -86,7 +86,7 @@ namespace arc //! arctk namespace
             {
                 assert(rng_ != nullptr);
 
-                return (-std::log(rng_->gen()) / _dist);
+                return (-std::log(rng_->gen()) / _interaction_coef);
             }
 
 
