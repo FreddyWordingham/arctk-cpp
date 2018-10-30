@@ -80,6 +80,28 @@ namespace arc //! arctk namespace
             }
 
 
+            //  -- Initialisation --
+            inline math::formula::Linear Simple::init_interact_coef(const std::vector<double>& wavelengths_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_) const noexcept
+            {
+                assert(prop::limits::always_greater_than(wavelengths_, 0.0));
+                assert(prop::order::ascending(wavelengths_));
+                assert(scat_coef_.size() == wavelengths_.size());
+                assert(prop::limits::always_greater_than(scat_coef_, 0.0));
+                assert(abs_coef_.size() == wavelengths_.size());
+                assert(prop::limits::always_greater_than(abs_coef_, 0.0));
+
+                std::vector<double> interact_coef;
+                interact_coef.reserve(wavelengths_.size());
+
+                for (size_t i = 0; i < wavelengths_.size(); ++i)
+                {
+                    interact_coef.emplace_back(scat_coef_[i] + abs_coef_[i]);
+                }
+
+                return (math::formula::Linear(wavelengths_, interact_coef));
+            }
+
+
 
             //  == METHODS ==
             //  -- Specific Optical Properties --

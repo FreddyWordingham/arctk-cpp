@@ -60,16 +60,21 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               private:
                 //  -- Optical Properties --
-                const math::formula::Linear _ref_index; //!< Refractive index.
-                const math::formula::Linear _dist;      //!< Interaction distance.
-                const math::formula::Linear _albedo;    //!< Single scattering albedo.
-                const math::formula::Linear _asym;      //!< Asymmetry factor.
+                const math::formula::Linear _ref_index;     //!< Refractive index.
+                const math::formula::Linear _interact_coef; //!< Interaction distance.
+                const math::formula::Linear _albedo;        //!< Single scattering albedo.
+                const math::formula::Linear _asym;          //!< Asymmetry factor.
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
                 inline Simple(const std::vector<double>& wavelengths_, const std::vector<double>& ref_indexs_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& asyms_) noexcept;
+
+              private:
+                //  -- Initialisation --
+                inline math::formula::Linear init_interact_coef(const std::vector<double>& wavelengths_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_) const noexcept;
+
 
 
                 //  == METHODS ==
