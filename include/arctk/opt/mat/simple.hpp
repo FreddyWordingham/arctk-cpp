@@ -74,6 +74,7 @@ namespace arc //! arctk namespace
               private:
                 //  -- Initialisation --
                 inline math::formula::Linear init_interact_coef(const std::vector<double>& wavelengths_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_) const noexcept;
+                inline math::formula::Linear init_albedo(const std::vector<double>& wavelengths_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_) const noexcept;
 
 
 
