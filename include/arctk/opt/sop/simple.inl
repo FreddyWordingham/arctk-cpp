@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <cmath>
 
 //  -- Arctk --
 #include <arctk/consts/math.hpp>
@@ -75,11 +76,17 @@ namespace arc //! arctk namespace
             /**
              *  Get the distance until the next interaction event.
              *
+             *  @param  rng_    Random number generator.
+             *
+             *  @pre    rng_ may not be nullptr.
+             *
              *  @return Distance until the next interaction event.
              */
-            inline double Simple::interact_dist(random::Generator* /*unused*/, const dom::Cell* /*unused*/) const noexcept
+            inline double Simple::interact_dist(random::Generator* rng_, const dom::Cell* /*unused*/) const noexcept
             {
-                return (_dist);
+                PRE(rng_ != nullptr);
+
+                return (-std::log(rng_->gen()) / _dist);
             }
 
 
