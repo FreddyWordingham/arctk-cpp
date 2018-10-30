@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Simple(const std::vector<double>& wavelengths_, const std::vector<double>& ref_indexs_, const std::vector<double>& dists_, const std::vector<double>& albedos_, const std::vector<double>& asyms_) noexcept;
+                inline Simple(const std::vector<double>& wavelengths_, const std::vector<double>& ref_indexs_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& asyms_) noexcept;
 
 
                 //  == METHODS ==
