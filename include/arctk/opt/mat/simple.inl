@@ -62,8 +62,8 @@ namespace arc //! arctk namespace
             inline Simple::Simple(const std::vector<double>& wavelengths_, const std::vector<double>& ref_indexs_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& asyms_) noexcept
               : Mat(wavelengths_.front(), wavelengths_.back())
               , _ref_index(wavelengths_, ref_indexs_)
-              , _dist(wavelengths_, scat_coef_)
-              , _albedo(wavelengths_, abs_coef_)
+              , _interact_coef(init_interact_coef(wavelengths_, scat_coef_, abs_coef_))
+              , _albedo(init_albedo(wavelengths_, scat_coef_, abs_coef_))
               , _asym(wavelengths_, asyms_)
             {
                 assert(prop::limits::always_greater_than(wavelengths_, 0.0));
