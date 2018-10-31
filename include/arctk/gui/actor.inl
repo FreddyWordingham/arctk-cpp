@@ -66,13 +66,13 @@ namespace arc //! arctk namespace
           , _scale(glm::vec3(1.0f, 1.0f, 1.0f))
           , _col(glm::vec4(1.0f, 0.0f, 1.0f, 1.0f))
         {
-            assert((verts_.size() % math::container::sum(layout_)) == 0);
+            assert((verts_.size() % math::container::sum<size_t>(layout_)) == 0);
 
             glBindVertexArray(_vao);
             glBindBuffer(GL_ARRAY_BUFFER, _vbo);
             glBufferData(GL_ARRAY_BUFFER, static_cast<GLsizeiptr>(verts_.size() * sizeof(GLfloat)), &verts_.front(), GL_STATIC_DRAW);
 
-            const size_t chunk_size = math::container::sum(layout_) * sizeof(GLfloat);
+            const size_t chunk_size = math::container::sum<size_t>(layout_) * sizeof(GLfloat);
             size_t       start      = 0;
             for (size_t i = 0; i < layout_.size(); ++i)
             {
