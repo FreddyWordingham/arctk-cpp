@@ -44,14 +44,20 @@ namespace arc //! arctk namespace
             template <typename T, typename>
             inline typename T::value_type sum(const T& cont_) noexcept
             {
-                typename T::value_type total{};
-
-                for (typename T::const_iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+                if constexpr (type::temp::is_iterable<typename T::value_type>::value)
                 {
-                    total += *it;
                 }
+                else
+                {
+                    typename T::value_type total{};
 
-                return (total);
+                    for (typename T::const_iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+                    {
+                        total += *it;
+                    }
+
+                    return (total);
+                }
             }
 
             /**
