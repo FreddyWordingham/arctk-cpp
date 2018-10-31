@@ -208,12 +208,11 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::map<T, S>& map
 
     for (auto const& pair : map_)
     {
-        if (first)
+        if (!first)
         {
             stream_ << arc::consts::format::DELIM;
-
-            first = false;
         }
+        first = false;
 
         stream_ << pair;
     }
