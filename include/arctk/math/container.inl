@@ -94,7 +94,7 @@ namespace arc //! arctk namespace
              *  @return Average of all elements.
              */
             template <typename C>
-            inline typename type::temp::core_type<C> ave(const C& cont_) noexcept
+            inline typename type::temp::core_type<C>::type ave(const C& cont_) noexcept
             {
                 return (sum(cont_) / size(cont_));
             }
