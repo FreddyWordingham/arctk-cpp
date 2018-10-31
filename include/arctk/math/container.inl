@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
 
                     for (typename C::const_iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
                     {
-                        total += sum(*it);
+                        total += sum<T>(*it);
                     }
 
                     return (total);
