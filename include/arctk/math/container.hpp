@@ -19,7 +19,7 @@
 #include <type_traits>
 
 //  -- Arctk --
-#include <arctk/multi/vector.hpp>
+#include <arctk/type/temp.hpp>
 
 
 
@@ -35,12 +35,12 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Iterator --
-            template <typename T, typename C>
+            template <typename C>
             inline size_t size(const C& cont_) noexcept;
-            template <typename T, typename C>
-            inline T sum(const C& cont_) noexcept;
-            template <typename T, typename C>
-            inline T ave(const C& cont_) noexcept;
+            template <typename C>
+            inline typename type::temp::core_type<C>::type sum(const C& cont_) noexcept;
+            template <typename C>
+            inline typename type::temp::core_type<C>::type ave(const C& cont_) noexcept;
 
 
 

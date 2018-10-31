@@ -64,16 +64,16 @@ namespace arc //! arctk namespace
              *
              *  @return Sum of all elements.
              */
-            template <typename T, typename C>
-            inline T sum(const C& cont_) noexcept
+            template <typename C>
+            inline typename type::temp::core_type<C>::type sum(const C& cont_) noexcept
             {
                 if constexpr (type::temp::is_iterable<C>::value)
                 {
-                    T total{};
+                    typename type::temp::core_type<C>::type total{};
 
                     for (typename C::const_iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
                     {
-                        total += sum<T>(*it);
+                        total += sum(*it);
                     }
 
                     return (total);
@@ -93,8 +93,8 @@ namespace arc //! arctk namespace
              *
              *  @return Average of all elements.
              */
-            template <typename T, typename C>
-            inline T ave(const C& cont_) noexcept
+            template <typename C>
+            inline typename type::temp::core_type<C> ave(const C& cont_) noexcept
             {
                 return (sum(cont_) / size(cont_));
             }
