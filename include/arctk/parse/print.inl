@@ -82,11 +82,16 @@ namespace arc //! arctk namespace
 template <typename T, size_t N>
 inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& arr_) noexcept
 {
-    stream_ << arc::consts::format::OPENERS[arc::consts::format::container::ARRAY] << arr_[0];
+    stream_ << arc::consts::format::OPENERS[arc::consts::format::container::ARRAY];
 
-    for (size_t i = 1; i < N; ++i)
+    if (N != 0)
     {
-        stream_ << arc::consts::format::DELIM << arr_[i];
+        stream_ << arr_[0];
+
+        for (size_t i = 1; i < N; ++i)
+        {
+            stream_ << arc::consts::format::DELIM << arr_[i];
+        }
     }
 
     stream_ << arc::consts::format::CLOSERS[arc::consts::format::container::ARRAY];
