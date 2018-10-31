@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type being queried.
              */
             template <typename T>
-            struct is_vector : std::false_type // NOLINT
+            struct is_vector : public std::false_type // NOLINT
             {
             };
 
@@ -64,7 +64,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type stored by the vector.
              */
             template <typename T>
-            struct is_vector<std::vector<T>> : std::true_type
+            struct is_vector<std::vector<T>> : public std::true_type
             {
             };
 
@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type being queried.
              */
             template <typename T>
-            struct is_array : std::false_type // NOLINT
+            struct is_array : public std::false_type // NOLINT
             {
             };
 
@@ -85,12 +85,12 @@ namespace arc //! arctk namespace
              *  @tparam N   Size of the array.
              */
             template <typename T, size_t N>
-            struct is_array<std::array<T, N>> : std::true_type
+            struct is_array<std::array<T, N>> : public std::true_type
             {
             };
 
             template <typename T, typename _ = void>
-            struct is_iterable : std::false_type
+            struct is_iterable : public std::false_type
             {
             };
 
@@ -125,7 +125,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type being queried.
              */
             template <typename T>
-            struct is_vec : std::false_type // NOLINT
+            struct is_vec : public std::false_type // NOLINT
             {
             };
 
@@ -136,7 +136,7 @@ namespace arc //! arctk namespace
              *  @tparam N   Size of the vec.
              */
             template <typename T, size_t N>
-            struct is_vec<math::Vec<T, N>> : std::true_type
+            struct is_vec<math::Vec<T, N>> : public std::true_type
             {
             };
 
@@ -146,7 +146,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type being queried.
              */
             template <typename T>
-            struct is_mat : std::false_type // NOLINT
+            struct is_mat : public std::false_type // NOLINT
             {
             };
 
@@ -157,7 +157,7 @@ namespace arc //! arctk namespace
              *  @tparam N   Size of the mat.
              */
             template <typename T, size_t N>
-            struct is_mat<math::Mat<T, N>> : std::true_type
+            struct is_mat<math::Mat<T, N>> : public std::true_type
             {
             };
 
