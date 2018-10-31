@@ -49,8 +49,10 @@ namespace arc //! arctk namespace
 
                     return (total);
                 }
-
-                return (1);
+                else
+                {
+                    return (1);
+                }
             }
 
             /**
@@ -76,8 +78,10 @@ namespace arc //! arctk namespace
 
                     return (total);
                 }
-
-                return (cont_);
+                else
+                {
+                    return (cont_);
+                }
             }
 
             /**
