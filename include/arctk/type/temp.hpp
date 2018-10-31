@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <array>
 #include <type_traits>
 #include <vector>
 
@@ -64,6 +65,27 @@ namespace arc //! arctk namespace
              */
             template <typename T>
             struct is_vector<std::vector<T>> : std::true_type
+            {
+            };
+
+            /**
+             *  Structure used to determine if a type is an array.
+             *
+             *  @tparam T   Type being queried.
+             */
+            template <typename T>
+            struct is_array : std::false_type // NOLINT
+            {
+            };
+
+            /**
+             *  Specialisation for array types.
+             *
+             *  @tparam T   Type stored by the array.
+             *  @tparam N   Size of the array.
+             */
+            template <typename T, size_t N>
+            struct is_array<std::array<T, N>> : std::true_type
             {
             };
 
