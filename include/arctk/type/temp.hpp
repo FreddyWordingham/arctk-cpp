@@ -89,6 +89,37 @@ namespace arc //! arctk namespace
             {
             };
 
+            /**
+             *  Structure used to determine if a type is a container.
+             *
+             *  @tparam T   Type being queried.
+             */
+            template <typename T>
+            struct is_container : std::false_type // NOLINT
+            {
+            };
+
+            /**
+             *  Specialisation for vector types.
+             *
+             *  @tparam T   Type stored by the vector.
+             */
+            template <typename T>
+            struct is_container<std::vector<T>> : std::true_type
+            {
+            };
+
+            /**
+             *  Specialisation for array types.
+             *
+             *  @tparam T   Type stored by the array.
+             *  @tparam N   Size of the array.
+             */
+            template <typename T, size_t N>
+            struct is_container<std::array<T, N>> : std::true_type
+            {
+            };
+
 
             //  -- Arctk --
             /**
