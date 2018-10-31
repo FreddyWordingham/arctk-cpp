@@ -18,6 +18,9 @@
 //  -- Std --
 #include <iterator>
 
+//  -- Arctk --
+#include <arctk/type/temp.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -32,6 +35,24 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Iterator --
+            template <typename C>
+            inline size_t size(const C& cont_) noexcept
+            {
+                if constexpr (type::temp::is_iterable<C>::value)
+                {
+                    size_t total = 0;
+
+                    for (typename C::const_iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+                    {
+                        total += size(*it);
+                    }
+
+                    return (total);
+                }
+
+                return (1);
+            }
+
             /**
              *  Determine the sum of all elements within a container.
              *
@@ -41,23 +62,22 @@ namespace arc //! arctk namespace
              *
              *  @return Sum of all elements.
              */
-            template <typename T, typename>
-            inline typename T::value_type sum(const T& cont_) noexcept
+            template <typename T, typename C>
+            inline T sum(const C& cont_) noexcept
             {
-                if constexpr (type::temp::is_iterable<typename T::value_type>::value)
+                if constexpr (type::temp::is_iterable<C>::value)
                 {
-                }
-                else
-                {
-                    typename T::value_type total{};
+                    T total{};
 
-                    for (typename T::const_iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+                    for (typename C::const_iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
                     {
-                        total += *it;
+                        total += sum(*it);
                     }
 
                     return (total);
                 }
+
+                return (cont_);
             }
 
             /**
@@ -69,10 +89,24 @@ namespace arc //! arctk namespace
              *
              *  @return Average of all elements.
              */
-            template <typename T, typename>
-            inline double ave(const T& cont_) noexcept
+            template <typename T, typename C>
+            inline T ave(const C& cont_) noexcept
             {
-                return (static_cast<double>(sum(cont_)) / cont_.size());
+                if constexpr (type::temp::is_iterable<C>::value)
+                {
+                    T total{};
+
+                    typename C::const_iterator min_index = std::begin(cont_);
+
+                    for (typename C::const_iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+                    {
+                        total += sum(*it);
+                    }
+
+                    return (total);
+                }
+
+                return (cont_);
             }
 
 
