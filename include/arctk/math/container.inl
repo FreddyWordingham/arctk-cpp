@@ -35,20 +35,18 @@ namespace arc //! arctk namespace
             /**
              *  Determine the sum of all elements within a container.
              *
-             *  @tparam C   Type of container.
-             *  @tparam T   Type stored by C.
-             *  @tparam I   Type of const iterator used by C.
+             *  @tparam T   Type of container.
              *
              *  @param  cont_   Container to sum.
              *
              *  @return Sum of all elements.
              */
-            template <typename C, typename T, typename I>
-            inline T sum(const C& cont_) noexcept
+            template <typename T, typename>
+            inline typename T::value_type sum(const T& cont_) noexcept
             {
-                T total{};
+                typename T::value_type total{};
 
-                for (I it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+                for (typename T::const_iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
                 {
                     total += *it;
                 }
@@ -59,18 +57,16 @@ namespace arc //! arctk namespace
             /**
              *  Determine the average of all elements within a container.
              *
-             *  @tparam C   Type of container.
-             *  @tparam T   Type stored by C.
-             *  @tparam I   Type of const iterator used by C.
+             *  @tparam T   Type of container.
              *
              *  @param  cont_   Container to determine the average of.
              *
              *  @return Average of all elements.
              */
-            template <typename C, typename T, typename I>
-            inline T ave(const C& cont_) noexcept
+            template <typename T, typename>
+            inline double ave(const T& cont_) noexcept
             {
-                return (static_cast<T>(static_cast<double>(sum(cont_)) / static_cast<double>(cont_.size())));
+                return (static_cast<double>(sum(cont_)) / cont_.size());
             }
 
 

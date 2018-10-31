@@ -14,6 +14,15 @@
 
 
 
+//  == IMPORTS ==
+//  -- Std --
+#include <type_traits>
+
+//  -- Arctk --
+#include <arctk/type/temp.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -26,10 +35,10 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Iterator --
-            template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
-            inline T sum(const C& cont_) noexcept;
-            template <typename C, typename T = typename C::value_type, typename I = typename C::const_iterator>
-            inline T ave(const C& cont_) noexcept;
+            template <typename T, typename = std::enable_if<type::temp::is_iterable<T>::value>>
+            inline typename T::value_type sum(const T& cont_) noexcept;
+            template <typename T, typename = std::enable_if<type::temp::is_iterable<T>::value>>
+            inline double ave(const T& cont_) noexcept;
 
 
 
