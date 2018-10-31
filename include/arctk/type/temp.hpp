@@ -89,34 +89,18 @@ namespace arc //! arctk namespace
             {
             };
 
-            /**
-             *  Structure used to determine if a type is a container.
-             *
-             *  @tparam T   Type being queried.
-             */
-            template <typename T>
-            struct is_container : std::false_type // NOLINT
+            template <typename T, typename _ = void>
+            struct is_iterable : std::false_type
             {
             };
 
-            /**
-             *  Specialisation for vector types.
-             *
-             *  @tparam T   Type stored by the vector.
-             */
-            template <typename T>
-            struct is_container<std::vector<T>> : std::true_type
+            template <typename, typename, typename, typename>
+            struct is_iterable_helper
             {
             };
 
-            /**
-             *  Specialisation for array types.
-             *
-             *  @tparam T   Type stored by the array.
-             *  @tparam N   Size of the array.
-             */
-            template <typename T, size_t N>
-            struct is_container<std::array<T, N>> : std::true_type
+            template <typename T>
+            struct is_iterable<T, std::conditional_t<false, is_iterable_helper<typename T::value_type, typename T::const_iterator, decltype(std::begin(std::declval<T>())), decltype(std::end(std::declval<T>()))>, void>> : public std::true_type
             {
             };
 
