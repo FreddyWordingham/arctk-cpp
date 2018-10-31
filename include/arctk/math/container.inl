@@ -92,21 +92,7 @@ namespace arc //! arctk namespace
             template <typename T, typename C>
             inline T ave(const C& cont_) noexcept
             {
-                if constexpr (type::temp::is_iterable<C>::value)
-                {
-                    T total{};
-
-                    typename C::const_iterator min_index = std::begin(cont_);
-
-                    for (typename C::const_iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
-                    {
-                        total += sum(*it);
-                    }
-
-                    return (total);
-                }
-
-                return (cont_);
+                return (sum(cont_) / size(cont_));
             }
 
 
