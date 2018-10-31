@@ -35,12 +35,12 @@ namespace arc //! arctk namespace
 
             //  == FUNCTION PROTOTYPES ==
             //  -- Iterator --
-            template <typename C>
-            inline size_t size(const C& cont_) noexcept;
-            template <typename C>
-            inline typename type::temp::core_type<C>::type sum(const C& cont_) noexcept;
-            template <typename C>
-            inline typename type::temp::core_type<C>::type ave(const C& cont_) noexcept;
+            template <typename T>
+            inline size_t size(const T& cont_) noexcept;
+            template <typename T>
+            inline typename type::temp::core_type<T>::type sum(const T& cont_) noexcept;
+            template <typename T>
+            inline typename type::temp::core_type<T>::type ave(const T& cont_) noexcept;
 
 
 
