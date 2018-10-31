@@ -107,11 +107,16 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& a
 template <typename T>
 inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec_) noexcept
 {
-    stream_ << arc::consts::format::OPENERS[arc::consts::format::container::VECTOR] << vec_[0];
+    stream_ << arc::consts::format::OPENERS[arc::consts::format::container::VECTOR];
 
-    for (size_t i = 1; i < vec_.size(); ++i)
+    if (!vec_.empty())
     {
-        stream_ << arc::consts::format::DELIM << vec_[i];
+        stream_ << vec_[0];
+
+        for (size_t i = 1; i < vec_.size(); ++i)
+        {
+            stream_ << arc::consts::format::DELIM << vec_[i];
+        }
     }
 
     stream_ << arc::consts::format::CLOSERS[arc::consts::format::container::VECTOR];
