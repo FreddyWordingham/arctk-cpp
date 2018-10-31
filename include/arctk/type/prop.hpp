@@ -34,6 +34,24 @@ namespace arc //! arctk namespace
             //  == STRUCTURES ==
             //  -- Containers --
             /**
+             *  Structure used to determine if a type supports iterators.
+             *
+             *  @tparam T   Type being queried.
+             */
+            template <typename T>
+            struct has_iterator // NOLINT
+            {
+              private:
+                template <typename C>
+                static char test(typename C::iterator*);
+                template <typename C>
+                static int test(...);
+
+              public:
+                const bool value = sizeof(test<T>(0)) == sizeof(char);
+            };
+
+            /**
              *  Structure used to determine if a type supports const iterators.
              *
              *  @tparam T   Type being queried.
