@@ -104,6 +104,19 @@ namespace arc //! arctk namespace
             {
             };
 
+            template <typename T, typename = void>
+            struct core_type : public std::false_type
+            {
+                typedef T type;
+            };
+
+            template <typename T>
+            struct core_type<T, typename std::enable_if_t<is_iterable<T>::value>> : public std::true_type
+            {
+                typedef typename core_type<typename T::value_type>::type type;
+            };
+
+
 
             //  -- Arctk --
             /**
