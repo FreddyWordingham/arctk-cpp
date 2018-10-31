@@ -11,6 +11,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/type/collision.hpp>
+#include <arctk/type/prop.hpp>
 #include <arctk/type/tag.hpp>
 #include <arctk/type/temp.hpp>
 
