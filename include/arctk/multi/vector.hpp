@@ -23,12 +23,32 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace mutli //! mutliple-dimension namespace
+    namespace multi //! multiple-dimension namespace
     {
 
 
 
-    } // namespace mutli
+        template <class T, size_t N>
+        struct vector_helper;
+
+        template <class T>
+        struct vector_helper<T, 1>
+        {
+            using type = std::vector<T>;
+        };
+
+        template <class T, size_t N>
+        struct vector_helper
+        {
+            using type = std::vector<typename vector_helper<T, N - 1>::type>;
+        };
+
+        template <class T, size_t N>
+        using vector = typename vector_helper<T, N>::type;
+
+
+
+    } // namespace multi
 } // namespace arc
 
 
