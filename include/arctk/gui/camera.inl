@@ -37,7 +37,7 @@ namespace arc //! arctk namespace
          *  @param  focus_  Focus position of the camera.
          *  @param  up_     Up direction of the camera.
          *  @param  speed_  Initial speed of the camera.
-         * 
+         *
          *  @pre    speed_ must be positive.
          */
         inline Camera::Camera(const glm::vec3& pos_, const glm::vec3& focus_, const glm::vec3& up_, const float speed_) noexcept
@@ -88,15 +88,14 @@ namespace arc //! arctk namespace
          *  Accelerate the camera's speed.
          *
          *  @param  delta_  Speed to accelerate the camera.
+         *
+         *  @pre    delta_ must be positive.
          */
         inline void Camera::accelerate(const float delta_) noexcept
         {
-            _speed += delta_;
+            assert(delta_ > 0.0f);
 
-            if (_speed < 0.0f)
-            {
-                _speed = 0.0f;
-            }
+            _speed *= delta_;
         }
 
 
