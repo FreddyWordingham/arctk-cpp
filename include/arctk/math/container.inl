@@ -36,7 +36,7 @@ namespace arc //! arctk namespace
             //  == FUNCTIONS ==
             //  -- Iterator --
             template <typename T>
-            inline size_t size(const T& cont_) noexcept
+            inline size_t num_elem(const T& cont_) noexcept
             {
                 if constexpr (type::temp::is_iterable<T>::value)
                 {
@@ -96,7 +96,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline typename type::temp::core_type<T>::type ave(const T& cont_) noexcept
             {
-                return (sum(cont_) / size(cont_));
+                return (sum(cont_) / num_elem(cont_));
             }
 
 

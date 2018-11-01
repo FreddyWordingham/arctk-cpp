@@ -36,7 +36,7 @@ namespace arc //! arctk namespace
             //  == FUNCTION PROTOTYPES ==
             //  -- Iterator --
             template <typename T>
-            inline size_t size(const T& cont_) noexcept;
+            inline size_t num_elem(const T& cont_) noexcept;
             template <typename T>
             inline typename type::temp::core_type<T>::type sum(const T& cont_) noexcept;
             template <typename T>
