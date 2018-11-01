@@ -43,8 +43,8 @@ namespace arc //! arctk namespace
 
 
         //  == ALIASES ==
-        template <class T, size_t N>
-        using array = typename array_helper<T, N...>::type;
+        template <class T, size_t... Ns>
+        using array = typename array_helper<T, Ns...>::type;
 
 
 
