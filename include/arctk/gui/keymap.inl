@@ -81,64 +81,58 @@ namespace arc //! arctk namespace
          *  Setup the keymap to apply an fly control scheme.
          *
          *  @param  cam_    Camera to apply fly controls to.
-         *  @param  speed_  Speed to fly the camera.
          *
          *  @pre    cam_ may not be nullptr.
-         *  @pre    speed_ must be positive.
          */
-        inline void Keymap::use_fly_controls(Camera* const cam_, const float speed_) noexcept // NOLINT
+        inline void Keymap::use_fly_controls(Camera* const cam_) noexcept // NOLINT
         {
             assert(cam_ != nullptr);
-            assert(speed_ > 0.0f);
 
-            bind(GLFW_KEY_LEFT_SHIFT, [cam_]() { cam_->accelerate(1.1f); }, true);
-            bind(GLFW_KEY_LEFT_CONTROL, [cam_]() { cam_->accelerate(0.9f); }, true);
+            bind(GLFW_KEY_LEFT_SHIFT, [cam_]() { cam_->accelerate(0.01f); }, true);
+            bind(GLFW_KEY_LEFT_CONTROL, [cam_]() { cam_->accelerate(-0.01f); }, true);
 
-            bind(GLFW_KEY_W, [cam_]() { cam_->move(+0.1f * speed_, +0.00f, +0.00f); }, true);
-            bind(GLFW_KEY_S, [cam_]() { cam_->move(-0.1f * speed_, +0.00f, +0.00f); }, true);
-            bind(GLFW_KEY_D, [cam_]() { cam_->move(+0.00f, +0.1f * speed_, +0.00f); }, true);
-            bind(GLFW_KEY_A, [cam_]() { cam_->move(+0.00f, -0.1f * speed_, +0.00f); }, true);
-            bind(GLFW_KEY_E, [cam_]() { cam_->move(+0.00f, +0.00f, +0.1f * speed_); }, true);
-            bind(GLFW_KEY_Q, [cam_]() { cam_->move(+0.00f, +0.00f, -0.1f * speed_); }, true);
+            bind(GLFW_KEY_W, [cam_]() { cam_->move(+0.10f, +0.00f, +0.00f); }, true);
+            bind(GLFW_KEY_S, [cam_]() { cam_->move(-0.10f, +0.00f, +0.00f); }, true);
+            bind(GLFW_KEY_D, [cam_]() { cam_->move(+0.00f, +0.10f, +0.00f); }, true);
+            bind(GLFW_KEY_A, [cam_]() { cam_->move(+0.00f, -0.10f, +0.00f); }, true);
+            bind(GLFW_KEY_E, [cam_]() { cam_->move(+0.00f, +0.00f, +0.10f); }, true);
+            bind(GLFW_KEY_Q, [cam_]() { cam_->move(+0.00f, +0.00f, -0.10f); }, true);
 
-            bind(GLFW_KEY_O, [cam_]() { cam_->rotate(+0.01f * speed_, +0.00f, +0.00f); }, true);
-            bind(GLFW_KEY_U, [cam_]() { cam_->rotate(-0.01f * speed_, +0.00f, +0.00f); }, true);
-            bind(GLFW_KEY_I, [cam_]() { cam_->rotate(+0.00f, +0.01f * speed_, +0.00f); }, true);
-            bind(GLFW_KEY_K, [cam_]() { cam_->rotate(+0.00f, -0.01f * speed_, +0.00f); }, true);
-            bind(GLFW_KEY_J, [cam_]() { cam_->rotate(+0.00f, +0.00f, +0.01f * speed_); }, true);
-            bind(GLFW_KEY_L, [cam_]() { cam_->rotate(+0.00f, +0.00f, -0.01f * speed_); }, true);
+            bind(GLFW_KEY_O, [cam_]() { cam_->rotate(+0.02f, +0.00f, +0.00f); }, true);
+            bind(GLFW_KEY_U, [cam_]() { cam_->rotate(-0.02f, +0.00f, +0.00f); }, true);
+            bind(GLFW_KEY_I, [cam_]() { cam_->rotate(+0.00f, +0.02f, +0.00f); }, true);
+            bind(GLFW_KEY_K, [cam_]() { cam_->rotate(+0.00f, -0.02f, +0.00f); }, true);
+            bind(GLFW_KEY_J, [cam_]() { cam_->rotate(+0.00f, +0.00f, +0.02f); }, true);
+            bind(GLFW_KEY_L, [cam_]() { cam_->rotate(+0.00f, +0.00f, -0.02f); }, true);
         }
 
         /**
          *  Setup the keymap to apply an orbit control
          *
          *  @param  cam_    Camera to apply orbit controls to.
-         *  @param  speed_  Speed to fly the camera.
          *
          *  @pre    cam_ may not be nullptr.
-         *  @pre    speed_ must be positive.
          */
-        inline void Keymap::use_orbit_controls(Camera* const cam_, const float speed_) noexcept // NOLINT
+        inline void Keymap::use_orbit_controls(Camera* const cam_) noexcept // NOLINT
         {
             assert(cam_ != nullptr);
-            assert(speed_ > 0.0f);
 
-            bind(GLFW_KEY_LEFT_SHIFT, [cam_]() { cam_->accelerate(1.1f); }, true);
-            bind(GLFW_KEY_LEFT_CONTROL, [cam_]() { cam_->accelerate(0.9f); }, true);
+            bind(GLFW_KEY_LEFT_SHIFT, [cam_]() { cam_->accelerate(0.01f); }, true);
+            bind(GLFW_KEY_LEFT_CONTROL, [cam_]() { cam_->accelerate(-0.01f); }, true);
 
-            bind(GLFW_KEY_W, [cam_]() { cam_->move(+0.00f, +0.00f, +0.1f * speed_); }, true);
-            bind(GLFW_KEY_S, [cam_]() { cam_->move(+0.00f, +0.00f, -0.1f * speed_); }, true);
-            bind(GLFW_KEY_D, [cam_]() { cam_->move(+0.00f, +0.1f * speed_, +0.00f); }, true);
-            bind(GLFW_KEY_A, [cam_]() { cam_->move(+0.00f, -0.1f * speed_, +0.00f); }, true);
-            bind(GLFW_KEY_E, [cam_]() { cam_->move(-0.1f * speed_, +0.00f, +0.00f); }, true);
-            bind(GLFW_KEY_Q, [cam_]() { cam_->move(+0.1f * speed_, +0.00f, +0.00f); }, true);
+            bind(GLFW_KEY_W, [cam_]() { cam_->move(+0.00f, +0.00f, +0.10f); }, true);
+            bind(GLFW_KEY_S, [cam_]() { cam_->move(+0.00f, +0.00f, -0.10f); }, true);
+            bind(GLFW_KEY_D, [cam_]() { cam_->move(+0.00f, +0.10f, +0.00f); }, true);
+            bind(GLFW_KEY_A, [cam_]() { cam_->move(+0.00f, -0.10f, +0.00f); }, true);
+            bind(GLFW_KEY_E, [cam_]() { cam_->move(-0.10f, +0.00f, +0.00f); }, true);
+            bind(GLFW_KEY_Q, [cam_]() { cam_->move(+0.10f, +0.00f, +0.00f); }, true);
 
-            bind(GLFW_KEY_I, [cam_]() { cam_->rotate(+0.01f * speed_, +0.00f, +0.00f); }, true);
-            bind(GLFW_KEY_K, [cam_]() { cam_->rotate(-0.01f * speed_, +0.00f, +0.00f); }, true);
-            bind(GLFW_KEY_L, [cam_]() { cam_->rotate(+0.00f, +0.01f * speed_, +0.00f); }, true);
-            bind(GLFW_KEY_J, [cam_]() { cam_->rotate(+0.00f, -0.01f * speed_, +0.00f); }, true);
-            bind(GLFW_KEY_O, [cam_]() { cam_->rotate(+0.00f, +0.00f, +0.01f * speed_); }, true);
-            bind(GLFW_KEY_U, [cam_]() { cam_->rotate(+0.00f, +0.00f, -0.01f * speed_); }, true);
+            bind(GLFW_KEY_I, [cam_]() { cam_->rotate(+0.02f, +0.00f, +0.00f); }, true);
+            bind(GLFW_KEY_K, [cam_]() { cam_->rotate(-0.02f, +0.00f, +0.00f); }, true);
+            bind(GLFW_KEY_L, [cam_]() { cam_->rotate(+0.00f, +0.02f, +0.00f); }, true);
+            bind(GLFW_KEY_J, [cam_]() { cam_->rotate(+0.00f, -0.02f, +0.00f); }, true);
+            bind(GLFW_KEY_O, [cam_]() { cam_->rotate(+0.00f, +0.00f, +0.02f); }, true);
+            bind(GLFW_KEY_U, [cam_]() { cam_->rotate(+0.00f, +0.00f, -0.02f); }, true);
         }
 
 
