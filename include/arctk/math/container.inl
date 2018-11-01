@@ -151,10 +151,39 @@ namespace arc //! arctk namespace
             }
 
 
+            //  -- Vector --
+            // template <typename T, size_t N>
+            // inline multi::vector<double, N> normalise(const multi::vector<T, N>& data_) noexcept
+            // {
+            //     const T min_val = min(data_);
+            //     const T min_val = max(data_);
+
+
+            // }
+
+
 
         } // namespace container
     }     // namespace math
 } // namespace arc
+
+
+
+//  == OPERATORS ==
+//  -- Mathematical --
+template <typename T>
+inline std::vector<T> operator-(const std::vector<T>& vec_) noexcept
+{
+    std::vector<T> vec;
+    vec.reserve(vec_.size());
+
+    for (size_t i = 0; i < vec_.size(); ++i)
+    {
+        vec.emplace_back(-vec_[i]);
+    }
+
+    return (vec);
+}
 
 
 

@@ -46,11 +46,22 @@ namespace arc //! arctk namespace
             template <typename T>
             inline typename type::temp::core_type<T>::type max(const T& cont_) noexcept;
 
+            //  -- Vector --
+            // template <typename T, size_t N>
+            // inline multi::vector<double, N> normalise(const multi::vector<T, N>& data_) noexcept;
+
 
 
         } // namespace container
     }     // namespace math
 } // namespace arc
+
+
+
+//  == OPERATOR PROTOTYPES ==
+//  -- Mathematical --
+template <typename T>
+inline std::vector<T> operator-(const std::vector<T>& vec_) noexcept;
 
 
 
