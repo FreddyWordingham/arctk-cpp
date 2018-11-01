@@ -14,6 +14,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -30,13 +36,18 @@ namespace arc //! arctk namespace
          *  @param  pos_    Initial position of the camera.
          *  @param  focus_  Focus position of the camera.
          *  @param  up_     Up direction of the camera.
+         *  @param  speed_  Initial speed of the camera.
+         * 
+         *  @pre    speed_ must be positive.
          */
-        inline Camera::Camera(const glm::vec3& pos_, const glm::vec3& focus_, const glm::vec3& up_) noexcept
-          : _speed(1.0f)
+        inline Camera::Camera(const glm::vec3& pos_, const glm::vec3& focus_, const glm::vec3& up_, const float speed_) noexcept
+          : _speed(speed_)
           , _pos(pos_)
           , _focus(focus_)
           , _up(up_)
         {
+            assert(speed_ > 0.0f);
+
             update_view();
         }
 

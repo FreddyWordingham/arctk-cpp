@@ -52,7 +52,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Camera(const glm::vec3& pos_, const glm::vec3& focus_, const glm::vec3& up_) noexcept;
+            inline Camera(const glm::vec3& pos_, const glm::vec3& focus_, const glm::vec3& up_, float speed_ = 1.0f) noexcept;
             inline Camera(const Camera&) = default; //!< Defaulted copy constructor.
             inline Camera(Camera&&)      = default; //!< Defaulted move constructor.
 
