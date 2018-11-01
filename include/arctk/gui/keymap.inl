@@ -88,8 +88,8 @@ namespace arc //! arctk namespace
         {
             assert(cam_ != nullptr);
 
-            bind(GLFW_KEY_LEFT_SHIFT, [cam_]() { cam_->accelerate(0.01f); }, true);
-            bind(GLFW_KEY_LEFT_CONTROL, [cam_]() { cam_->accelerate(-0.01f); }, true);
+            bind(GLFW_KEY_LEFT_SHIFT, [cam_]() { cam_->accelerate(1.1f); }, true);
+            bind(GLFW_KEY_LEFT_CONTROL, [cam_]() { cam_->accelerate(0.9f); }, true);
 
             bind(GLFW_KEY_W, [cam_]() { cam_->move(+0.10f, +0.00f, +0.00f); }, true);
             bind(GLFW_KEY_S, [cam_]() { cam_->move(-0.10f, +0.00f, +0.00f); }, true);
@@ -117,8 +117,8 @@ namespace arc //! arctk namespace
         {
             assert(cam_ != nullptr);
 
-            bind(GLFW_KEY_LEFT_SHIFT, [cam_]() { cam_->accelerate(0.01f); }, true);
-            bind(GLFW_KEY_LEFT_CONTROL, [cam_]() { cam_->accelerate(-0.01f); }, true);
+            bind(GLFW_KEY_LEFT_SHIFT, [cam_]() { cam_->accelerate(1.1f); }, true);
+            bind(GLFW_KEY_LEFT_CONTROL, [cam_]() { cam_->accelerate(0.9f); }, true);
 
             bind(GLFW_KEY_W, [cam_]() { cam_->move(+0.00f, +0.00f, +0.10f); }, true);
             bind(GLFW_KEY_S, [cam_]() { cam_->move(+0.00f, +0.00f, -0.10f); }, true);
