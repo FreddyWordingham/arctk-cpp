@@ -128,6 +128,26 @@ namespace arc //! arctk namespace
             template <typename T>
             inline typename type::temp::core_type<T>::type max(const T& cont_) noexcept
             {
+                if constexpr (type::temp::is_iterable<T>::value)
+                {
+                    typename type::temp::core_type<T>::type max = std::numeric_limits<type::temp::core_type<T>::type>::min();
+
+                    for (typename T::const_iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+                    {
+                        typename type::temp::core_type<T>::type val = max(*it);
+
+                        if (val < max)
+                        {
+                            max = val;
+                        }
+                    }
+
+                    return (max);
+                }
+                else
+                {
+                    return (cont_);
+                }
             }
 
 
