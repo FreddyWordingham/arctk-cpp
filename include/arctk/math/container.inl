@@ -171,18 +171,17 @@ namespace arc //! arctk namespace
 
 //  == OPERATORS ==
 //  -- Mathematical --
-template <typename T>
-inline std::vector<T> operator-(const std::vector<T>& vec_) noexcept
+template <typename T, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
+inline T operator-(const T& cont_) noexcept
 {
-    std::vector<T> vec;
-    vec.reserve(vec_.size());
+    T cont = cont_;
 
-    for (size_t i = 0; i < vec_.size(); ++i)
+    for (typename T::iterator it = std::begin(cont); it != std::end(cont); std::advance(it, 1))
     {
-        vec.emplace_back(-vec_[i]);
+        *it = -*it;
     }
 
-    return (vec);
+    return (cont);
 }
 
 

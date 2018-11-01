@@ -60,8 +60,8 @@ namespace arc //! arctk namespace
 
 //  == OPERATOR PROTOTYPES ==
 //  -- Mathematical --
-template <typename T>
-inline std::vector<T> operator-(const std::vector<T>& vec_) noexcept;
+template <typename T, typename>
+inline T operator-(const T& cont_) noexcept;
 
 
 
