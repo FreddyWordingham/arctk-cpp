@@ -120,12 +120,12 @@ namespace arc //! arctk namespace
             bind(GLFW_KEY_LEFT_SHIFT, [cam_]() { cam_->accelerate(1.1f); }, true);
             bind(GLFW_KEY_LEFT_CONTROL, [cam_]() { cam_->accelerate(0.9f); }, true);
 
-            bind(GLFW_KEY_W, [cam_]() { cam_->move(+0.00f, +0.00f, +0.10f); }, true);
-            bind(GLFW_KEY_S, [cam_]() { cam_->move(+0.00f, +0.00f, -0.10f); }, true);
+            bind(GLFW_KEY_E, [cam_]() { cam_->move(+0.00f, +0.00f, +0.10f); }, true);
+            bind(GLFW_KEY_Q, [cam_]() { cam_->move(+0.00f, +0.00f, -0.10f); }, true);
             bind(GLFW_KEY_D, [cam_]() { cam_->move(+0.00f, +0.10f, +0.00f); }, true);
             bind(GLFW_KEY_A, [cam_]() { cam_->move(+0.00f, -0.10f, +0.00f); }, true);
-            bind(GLFW_KEY_E, [cam_]() { cam_->move(-0.10f, +0.00f, +0.00f); }, true);
-            bind(GLFW_KEY_Q, [cam_]() { cam_->move(+0.10f, +0.00f, +0.00f); }, true);
+            bind(GLFW_KEY_W, [cam_]() { cam_->move(+0.10f, +0.00f, +0.00f); }, true);
+            bind(GLFW_KEY_S, [cam_]() { cam_->move(-0.10f, +0.00f, +0.00f); }, true);
 
             bind(GLFW_KEY_I, [cam_]() { cam_->rotate(+0.02f, +0.00f, +0.00f); }, true);
             bind(GLFW_KEY_K, [cam_]() { cam_->rotate(-0.02f, +0.00f, +0.00f); }, true);
