@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
             {
                 vec3f pos = math::convert::cart_to_polar(vec3f(_pos.x, _pos.y, _pos.z));
 
-                pos = math::convert::polar_to_cart(vec3f(std::max(pos.rho + (forward_ * _speed), 0.001f), std::clamp(pos.theta - (up_ * _speed), 0.001f, 3.140f), pos.phi + (right_ * _speed)));
+                pos = math::convert::polar_to_cart(vec3f(std::max(pos.rho + (forward_ * _speed), 0.001f), std::clamp(pos.theta - up_, 0.001f, 3.140f), pos.phi + (right_));
 
                 _pos.x = pos.x;
                 _pos.y = pos.y;
