@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <iterator>
+#include <limits>
 
 //  -- Arctk --
 #include <arctk/type/temp.hpp>
@@ -97,6 +98,36 @@ namespace arc //! arctk namespace
             inline typename type::temp::core_type<T>::type ave(const T& cont_) noexcept
             {
                 return (sum(cont_) / num_elem(cont_));
+            }
+
+            template <typename T>
+            inline typename type::temp::core_type<T>::type min(const T& cont_) noexcept
+            {
+                if constexpr (type::temp::is_iterable<T>::value)
+                {
+                    typename type::temp::core_type<T>::type min = std::numeric_limits<type::temp::core_type<T>::type>::max();
+
+                    for (typename T::const_iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+                    {
+                        typename type::temp::core_type<T>::type val = min(*it);
+
+                        if (val < min)
+                        {
+                            min = val;
+                        }
+                    }
+
+                    return (min);
+                }
+                else
+                {
+                    return (cont_);
+                }
+            }
+
+            template <typename T>
+            inline typename type::temp::core_type<T>::type max(const T& cont_) noexcept
+            {
             }
 
 

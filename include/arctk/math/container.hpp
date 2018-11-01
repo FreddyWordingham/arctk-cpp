@@ -41,6 +41,10 @@ namespace arc //! arctk namespace
             inline typename type::temp::core_type<T>::type sum(const T& cont_) noexcept;
             template <typename T>
             inline typename type::temp::core_type<T>::type ave(const T& cont_) noexcept;
+            template <typename T>
+            inline typename type::temp::core_type<T>::type min(const T& cont_) noexcept;
+            template <typename T>
+            inline typename type::temp::core_type<T>::type max(const T& cont_) noexcept;
 
 
 

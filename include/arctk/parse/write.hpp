@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
 
             //  -- Image --
             // template <typename T>
-            // inline std::string ppm(const std::string& path_, const multi::vector<double, 2>& data_) noexcept;
+            // inline std::string ppm(const std::string& path_, const multi::vector<T, 2>& data_) noexcept;
 
 
 
