@@ -105,19 +105,19 @@ namespace arc //! arctk namespace
             {
                 if constexpr (type::temp::is_iterable<T>::value)
                 {
-                    typename type::temp::core_type<T>::type min = std::numeric_limits<typename type::temp::core_type<T>::type>::max();
+                    typename type::temp::core_type<T>::type min_val = std::numeric_limits<typename type::temp::core_type<T>::type>::max();
 
                     for (typename T::const_iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
                     {
                         typename type::temp::core_type<T>::type val = min(*it);
 
-                        if (val < min)
+                        if (val < min_val)
                         {
-                            min = val;
+                            min_val = val;
                         }
                     }
 
-                    return (min);
+                    return (min_val);
                 }
                 else
                 {
@@ -130,19 +130,19 @@ namespace arc //! arctk namespace
             {
                 if constexpr (type::temp::is_iterable<T>::value)
                 {
-                    typename type::temp::core_type<T>::type max = std::numeric_limits<typename type::temp::core_type<T>::type>::min();
+                    typename type::temp::core_type<T>::type max_val = std::numeric_limits<typename type::temp::core_type<T>::type>::min();
 
                     for (typename T::const_iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
                     {
                         typename type::temp::core_type<T>::type val = max(*it);
 
-                        if (val > max)
+                        if (val > max_val)
                         {
-                            max = val;
+                            max_val = val;
                         }
                     }
 
-                    return (max);
+                    return (max_val);
                 }
                 else
                 {
