@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <algorithm>
+#include <cassert>
 
 //  -- Graphical --
 #include <glm/gtx/polar_coordinates.hpp>
@@ -45,10 +46,14 @@ namespace arc //! arctk namespace
              *  @param  pos_    Position of the camera.
              *  @param  focus_  Point to focus the camera on.
              *  @param  up_     Up direction of the camera.
+             *  @param  speed_  Initial speed of the camera.
+             *
+             *  @pre    speed_ must be positive.
              */
-            inline Orbit::Orbit(const glm::vec3& pos_, const glm::vec3& focus_, const glm::vec3& up_) noexcept
-              : Camera(pos_, focus_, up_)
+            inline Orbit::Orbit(const glm::vec3& pos_, const glm::vec3& focus_, const glm::vec3& up_, const float speed_) noexcept
+              : Camera(pos_, focus_, up_, speed_)
             {
+                assert(speed_ > 0.0f);
             }
 
 
