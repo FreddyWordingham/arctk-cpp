@@ -19,6 +19,9 @@
 #include <string>
 #include <vector>
 
+//  -- Arctk --
+#include <arctk/multi/vector.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -39,6 +42,10 @@ namespace arc //! arctk namespace
             //  -- Table --
             template <typename T, typename... A>
             inline std::string csv(const std::vector<T>& vec_, const A&... vecs_, unsigned int width_ = 16) noexcept;
+
+            //  -- Image --
+            // template <typename T>
+            // inline std::string ppm(const std::string& path_, const multi::vector<double, 2>& data_) noexcept;
 
 
 
