@@ -43,6 +43,9 @@ namespace arc //! arctk namespace
             using type = std::vector<typename vector_helper<T, N - 1>::type>;
         };
 
+
+
+        //  == ALIASES ==
         template <class T, size_t N>
         using vector = typename vector_helper<T, N>::type;
 

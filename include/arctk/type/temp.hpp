@@ -117,7 +117,6 @@ namespace arc //! arctk namespace
             };
 
 
-
             //  -- Arctk --
             /**
              *  Structure used to determine if a type is a vec.
