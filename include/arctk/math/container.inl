@@ -172,6 +172,19 @@ namespace arc //! arctk namespace
 //  == OPERATORS ==
 //  -- Mathematical --
 template <typename T, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
+inline T operator+(const T& cont_) noexcept
+{
+    T cont = cont_;
+
+    for (typename T::iterator it = std::begin(cont); it != std::end(cont); std::advance(it, 1))
+    {
+        *it = +*it;
+    }
+
+    return (cont);
+}
+
+template <typename T, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
 inline T operator-(const T& cont_) noexcept
 {
     T cont = cont_;
