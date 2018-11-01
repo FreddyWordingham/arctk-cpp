@@ -105,7 +105,7 @@ namespace arc //! arctk namespace
             {
                 if constexpr (type::temp::is_iterable<T>::value)
                 {
-                    typename type::temp::core_type<T>::type min = std::numeric_limits<type::temp::core_type<T>::type>::max();
+                    typename type::temp::core_type<T>::type min = std::numeric_limits<typename type::temp::core_type<T>::type>::max();
 
                     for (typename T::const_iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
                     {
@@ -130,7 +130,7 @@ namespace arc //! arctk namespace
             {
                 if constexpr (type::temp::is_iterable<T>::value)
                 {
-                    typename type::temp::core_type<T>::type max = std::numeric_limits<type::temp::core_type<T>::type>::min();
+                    typename type::temp::core_type<T>::type max = std::numeric_limits<typename type::temp::core_type<T>::type>::min();
 
                     for (typename T::const_iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
                     {
