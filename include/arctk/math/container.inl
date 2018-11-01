@@ -136,7 +136,7 @@ namespace arc //! arctk namespace
                     {
                         typename type::temp::core_type<T>::type val = max(*it);
 
-                        if (val < max)
+                        if (val > max)
                         {
                             max = val;
                         }
