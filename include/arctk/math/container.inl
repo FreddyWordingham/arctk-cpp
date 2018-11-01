@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
 
                     for (typename T::const_iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
                     {
-                        total += size(*it);
+                        total += num_elem(*it);
                     }
 
                     return (total);
