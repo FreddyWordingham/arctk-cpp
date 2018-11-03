@@ -112,7 +112,6 @@ if (CMAKE_BUILD_TYPE MATCHES "debug")
         -DDEBUG                             \
         -g                                  \
         -O0                                 \
-        -fsanitize=undefined                \
     ")
 elseif (CMAKE_BUILD_TYPE MATCHES "release")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
