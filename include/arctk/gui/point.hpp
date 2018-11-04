@@ -44,6 +44,7 @@ namespace arc //! arctk namespace
 
             //  -- Optical --
             const float wavelength; //!< Wavelength of the data point.
+            const float phase;
 
 
             //  == INSTANTIATION ==
