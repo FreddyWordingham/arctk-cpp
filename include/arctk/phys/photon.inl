@@ -43,18 +43,20 @@ namespace arc //! arctk namespace
          *  @param  wavelength_ Wavelength of the photon.
          *  @param  energy_     Energy of the photon.
          *  @param  time_       Time of photon emission.
+         *  @param  phase_      Initial phase of the photon.
          *
          *  @pre    dir_ must be normalised.
          *  @pre    wavelength_ must be non-negative.
          *  @pre    energy_ must be positive.
          *  @pre    time_ must be non-negative.
          */
-        inline Photon::Photon(const vec3& pos_, const vec3& dir_, const double wavelength_, const double energy_, const double time_) noexcept
+        inline Photon::Photon(const vec3& pos_, const vec3& dir_, const double wavelength_, const double energy_, const double time_, const double phase_) noexcept
           : _pos(pos_)
           , _dir(dir_)
           , _wavelength(wavelength_)
           , _energy(energy_)
           , _time(time_)
+          , _phase(phase_)
           , _weight(1.0)
         {
             assert(dir_.normalised());
