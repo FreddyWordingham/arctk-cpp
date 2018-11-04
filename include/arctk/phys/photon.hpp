@@ -75,6 +75,7 @@ namespace arc //! arctk namespace
             inline double      wavelength() const noexcept;
             inline double      energy() const noexcept;
             inline double      time() const noexcept;
+            inline double      phase() const noexcept;
             inline double      weight() const noexcept;
 
             //  -- Setters --
