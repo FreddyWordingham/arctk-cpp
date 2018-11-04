@@ -74,7 +74,8 @@ namespace arc //! arctk namespace
                 {
                     gl_Position = proj * view * model * vec4(pos, 1.0);
 
-                    vert_col  = colourmap((wavelength - 400E-9) / 300E-9);
+//                    vert_col  = colourmap((wavelength - 400E-9) / 300E-9);
+                    vert_col  = colourmap((cos(phase)+1.0)*0.5);
                     vert_time = time;
                 }
 
