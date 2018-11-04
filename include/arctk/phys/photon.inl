@@ -153,6 +153,8 @@ namespace arc //! arctk namespace
         {
             assert(ref_index_ >= 1.0);
 
+            _phase += dist_ * ref_index_;
+
             _pos += _dir * dist_;
             _time += ((dist_ * ref_index_) / consts::phys::SPEED_OF_LIGHT);
         }
