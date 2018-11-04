@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Point(const glm::vec3& pos_, float time_, float wavelength_) noexcept;
+            inline Point(const glm::vec3& pos_, float time_, float wavelength_, float phase_) noexcept;
         };
 
 

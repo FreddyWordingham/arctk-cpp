@@ -36,14 +36,16 @@ namespace arc //! arctk namespace
          *  @param  pos_        Position of the data point.
          *  @param  time_       Time of the data point.
          *  @param  wavelength_ Wavelength of the data point.
+         *  @param  phase_      Phase of the data point.
          *
          *  @pre    time_ must be non-negative.
          *  @pre    wavelength_ must be positive.
          */
-        inline Point::Point(const glm::vec3& pos_, const float time_, const float wavelength_) noexcept
+        inline Point::Point(const glm::vec3& pos_, const float time_, const float wavelength_, const float phase_) noexcept
           : pos(pos_)
           , time(time_)
           , wavelength(wavelength_)
+          , phase(phase_)
         {
             assert(time_ >= 0.0f);
             assert(wavelength_ > 0.0f);
