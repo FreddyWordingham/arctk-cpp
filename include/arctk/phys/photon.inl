@@ -120,6 +120,16 @@ namespace arc //! arctk namespace
         }
 
         /**
+         *  Get the phase of the photon.
+         *
+         *  @return Phase of the photon.
+         */
+        inline double Photon::phase() const noexcept
+        {
+            return (_phase);
+        }
+
+        /**
          *  Get the statistical weight of the photon.
          *
          *  @return Statistical weight of the photon.
