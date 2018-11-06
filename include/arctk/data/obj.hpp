@@ -44,11 +44,11 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Obj(const std::string& str_) noexcept;
+            inline Obj(const std::string& path_) noexcept;
 
           private:
             //  -- Initialisation --
-            inline std::map<std::string, std::string> init_data(const std::string& str_) const noexcept;
+            inline std::map<std::string, std::string> init_data(const std::string& path_) const noexcept;
 
 
             //  == METHODS ==
