@@ -37,6 +37,12 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Initialisation --
+        inline std::map<std::string, std::string> Obj::init_data(const std::string& str_) const noexcept
+        {
+        }
+
+
 
         //  == METHODS ==
 
