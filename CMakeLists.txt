@@ -326,6 +326,7 @@ endif ()
 
 #   == TARGETS ==
 add_library(arctk INTERFACE)
+include_directories(SYSTEM "/usr/local/include")
 target_include_directories(arctk INTERFACE "${CMAKE_SOURCE_DIR}/include")
 target_sources(arctk INTERFACE ${HEADER_FILES} ${IMPL_FILES})
 
