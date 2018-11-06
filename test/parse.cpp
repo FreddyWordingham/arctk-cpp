@@ -14,7 +14,7 @@
 #include <arctk/parse/process.hpp>
 #include <arctk/parse/read.hpp>
 #include <arctk/parse/write.hpp>
-#include <vector>
+
 
 
 //  == MAIN ==
@@ -26,9 +26,5 @@
  */
 int main(const int /*unused*/, const char** /*unused*/)
 {
-
-    std::string str = "7";
-    std::cout << arc::parse::read::string<int>(&str) << '\n';
-
     return (0);
 }
