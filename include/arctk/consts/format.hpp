@@ -68,8 +68,9 @@ namespace arc //! arctk namespace
             constexpr const std::array<char, container::TOTAL> CLOSERS({{']', ']', '"', '>', '>', ':', ')', ')', '}'}}); //!< Container closing characters. @return Container closing characters.
 
             //  -- Special Characters --
-            constexpr const char                COMMENT = '#';                         //!< Default comment starting character.
-            constexpr const char                DELIM   = ',';                         //!< Default delimiter character.
+            constexpr const char                COMMENT = '#';                         //!< Comment starting character.
+            constexpr const char                DELIM   = ',';                         //!< Delimiter character.
+            constexpr const char                LINKER  = '=';                         //!< Key-value pair liker character.
             constexpr const std::array<char, 4> WHITESPACE({{' ', '\t', '\r', '\n'}}); //!< Characters considered whitespace. @return Whitespace character array.
 
 

@@ -51,9 +51,14 @@ namespace arc //! arctk namespace
             parse::process::filter_whitespace(&contents);
             std::cout << contents << '\n';
 
-            parse::process::extract_contents(str_, consts::format::container::VECTOR);
-            std::vector<std::string> tokens = parse::process::tokenise(str_ref);
-            std::cout << tokens << '\n';
+            parse::process::extract_contents(&contents, consts::format::container::OBJ);
+            std::cout << contents << '\n';
+            std::vector<std::string> tokens = parse::process::tokenise(contents);
+
+            for (size_t i = 0; i < tokens.size(); ++i)
+            {
+                std::cout << i << '\t' << tokens[i] << '\n';
+            }
 
             std::map<std::string, std::string> data;
 
