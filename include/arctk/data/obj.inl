@@ -15,6 +15,8 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cassert>
 
 
 
@@ -28,6 +30,11 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline Obj::Obj(const std::string& str_) noexcept
+          : _data(init_data(str_))
+        {
+            assert(!str_.empty());
+        }
 
 
 

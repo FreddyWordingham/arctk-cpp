@@ -44,6 +44,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Obj(const std::string& str_) noexcept;
 
 
             //  == METHODS ==

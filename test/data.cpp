@@ -24,5 +24,7 @@
  */
 int main(const int /*unused*/, const char** /*unused*/)
 {
+    arc::data::Obj obj("test.param");
+
     return (0);
 }
