@@ -14,6 +14,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Std --
+#include <map>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -31,6 +37,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
+            std::map<std::string, std::string> _data;
 
 
             //  == INSTANTIATION ==
