@@ -111,7 +111,7 @@ namespace arc //! arctk namespace
                 std::string& str_ref = *str_;
 
                 std::stringstream stream;
-                stream << str_ref;
+                stream << str_ref.c_str();
 
                 T val{};
                 stream >> val;

@@ -26,8 +26,9 @@
  */
 int main(const int /*unused*/, const char** /*unused*/)
 {
-    std::vector<std::tuple<char, int>> table = arc::parse::read::file<std::vector<std::tuple<char, int>>>("test.txt");
-    std::cout << table << '\n';
+
+    std::string str = "7";
+    std::cout << arc::parse::read::string<int>(&str) << '\n';
 
     return (0);
 }
