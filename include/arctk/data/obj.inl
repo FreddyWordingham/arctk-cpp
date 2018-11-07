@@ -17,8 +17,11 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <cstdlib>
 
 //  -- Arctk --
+#include <arctk/consts/format.hpp>
+#include <arctk/exit/error.hpp>
 #include <arctk/parse/process.hpp>
 #include <arctk/sys/file.hpp>
 
@@ -55,12 +58,36 @@ namespace arc //! arctk namespace
             std::cout << contents << '\n';
             std::vector<std::string> tokens = parse::process::tokenise(contents);
 
+            std::map<std::string, std::string> data;
             for (size_t i = 0; i < tokens.size(); ++i)
             {
-                std::cout << i << '\t' << tokens[i] << '\n';
-            }
+                if (tokens[i].empty())
+                {
+                    std::cerr << "Key-value pairs may not be empty.\n";
 
-            std::map<std::string, std::string> data;
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+
+                if (tokens[i].front() != consts::format::OPENERS[consts::format::container::STRING])
+                {
+                    std::cerr << "Key value must be a string.\n";
+
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+
+                const size_t key_end = tokens[i].find_first_of(consts::format::CLOSERS[consts::format::container::string], 1);
+                if (key_end == std::string::npos)
+                {
+                    std::cerr << "Key value must be a string.\n";
+
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+
+                const std::string key = tokens[i].substr(1, key_end - 1);
+                std::cout << "key: " << key << '\n';
+
+                tokens[i].erase(0, key_end);
+            }
 
             return (data);
         }
