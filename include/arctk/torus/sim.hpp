@@ -36,8 +36,12 @@ namespace arc //! arctk namespace
         namespace entity //! entity namespace
         {
             class Light;
-        } // namespace entity
-    }     // namespace equip
+        }         // namespace entity
+    }             // namespace equip
+    namespace opt //! optical namespace
+    {
+        class Mat;
+    } // namespace opt
 } // namespace arc
 
 
@@ -58,6 +62,9 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Materials --
+            std::unique_ptr<opt::Mat>& _aether;
+
             //  -- Entities --
             std::vector<std::unique_ptr<equip::Entity>> _ents;
             std::vector<equip::entity::Light*>          _lights;
