@@ -152,7 +152,7 @@ namespace arc //! arctk namespace
         {
             if (exists(key_))
             {
-                value(key_);
+                value<T>(key_);
             }
 
             return (default_);
