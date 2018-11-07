@@ -122,7 +122,9 @@ namespace arc //! arctk namespace
         {
             assert(_data.count(key_) == 1);
 
-            return (parse::read::string<T>(_data.find(key_)->second));
+            std::string str = _data.find(key_)->second;
+
+            return (parse::read::string<T>(&str));
         }
 
 
