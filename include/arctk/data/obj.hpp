@@ -54,14 +54,7 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Access --
-            inline Obj operator[](const std::string& key_) noexcept
-            {
-                assert(_data.count(key_) == 1);
-
-                std::string str = _data.find(key_)->second;
-
-                return (Obj(str));
-            }
+            inline Obj operator[](const std::string& key_) const noexcept;
 
 
             //  == METHODS ==

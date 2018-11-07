@@ -115,6 +115,19 @@ namespace arc //! arctk namespace
 
 
 
+        //  == OPERATORS ==
+        //  -- Access --
+        inline Obj::Obj operator[](const std::string& key_) const noexcept
+        {
+            assert(_data.count(key_) == 1);
+
+            std::string str = _data.find(key_)->second;
+
+            return (Obj(str));
+        }
+
+
+
         //  == METHODS ==
         //  -- Parsing --
         template <typename T>
