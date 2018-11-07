@@ -23,6 +23,7 @@
 #include <arctk/consts/format.hpp>
 #include <arctk/exit/error.hpp>
 #include <arctk/parse/process.hpp>
+#include <arctk/parse/read.hpp>
 #include <arctk/sys/file.hpp>
 
 
@@ -121,7 +122,7 @@ namespace arc //! arctk namespace
         {
             assert(_data.count(key_) == 1);
 
-            return (parse::read::string<T>(_data[key_]));
+            return (parse::read::string<T>(_data.find(key_)->second));
         }
 
 
