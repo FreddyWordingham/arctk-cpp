@@ -49,13 +49,10 @@ namespace arc //! arctk namespace
         {
             std::string contents = sys::file::read(path_);
 
-            std::cout << contents << '\n';
             parse::process::filter_comments(&contents);
             parse::process::filter_whitespace(&contents);
-            std::cout << contents << '\n';
 
             parse::process::extract_contents(&contents, consts::format::container::OBJ);
-            std::cout << contents << '\n';
             std::vector<std::string> tokens = parse::process::tokenise(contents);
 
             std::map<std::string, std::string> data;
@@ -70,23 +67,46 @@ namespace arc //! arctk namespace
 
                 if (tokens[i].front() != consts::format::OPENERS[consts::format::container::STRING])
                 {
-                    std::cerr << "Key value must be a string.\n";
+                    std::cerr << "Key must be a string.\n";
 
                     std::exit(exit::error::FAILED_PARSE);
                 }
 
-                const size_t key_end = tokens[i].find_first_of(consts::format::CLOSERS[consts::format::container::string], 1);
+                const size_t key_end = tokens[i].find_first_of(consts::format::CLOSERS[consts::format::container::STRING], 1);
                 if (key_end == std::string::npos)
                 {
-                    std::cerr << "Key value must be a string.\n";
+                    std::cerr << "Key must be a string.\n";
 
                     std::exit(exit::error::FAILED_PARSE);
                 }
 
                 const std::string key = tokens[i].substr(1, key_end - 1);
-                std::cout << "key: " << key << '\n';
+                tokens[i].erase(0, key_end + 1);
 
-                tokens[i].erase(0, key_end);
+                if (tokens[i].front() != consts::format::LINKER)
+                {
+                    std::cerr << "Key-value pair must contain linker symbol.\n";
+
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+
+                tokens[i].erase(0, 1);
+
+                if (tokens[i].empty())
+                {
+                    std::cerr << "Value may not be empty\n";
+
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+
+                if (data.count(key) != 0)
+                {
+                    std::cerr << "All key values within an object must be unique.\n";
+
+                    std::exit(exit::error::FAILED_PARSE);
+                }
+
+                data[key] = tokens[i];
             }
 
             return (data);
