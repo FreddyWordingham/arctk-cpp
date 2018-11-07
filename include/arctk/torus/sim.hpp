@@ -30,7 +30,14 @@ namespace arc //! arctk namespace
     namespace data //! data namespace
     {
         class Obj;
-    } // namespace data
+    }               // namespace data
+    namespace equip //! equipment namespace
+    {
+        namespace entity //! entity namespace
+        {
+            class Light;
+        } // namespace entity
+    }     // namespace equip
 } // namespace arc
 
 
@@ -52,7 +59,8 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Entities --
-            std::vector<std::unique_ptr<arc::equip::Entity>> _ents;
+            std::vector<std::unique_ptr<equip::Entity>> _ents;
+            std::vector<equip::entity::Light*>          _lights;
 
 
             //  == INSTANTIATION ==
