@@ -27,6 +27,7 @@ int main(const int /*unused*/, const char** /*unused*/)
     arc::data::Obj obj(arc::sys::file::read("test.param"));
 
     std::cout << obj.value<int>("one") << '\n';
+    std::cout << obj["book"].value<double>("bean") << '\n';
 
     return (0);
 }
