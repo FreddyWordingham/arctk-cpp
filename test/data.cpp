@@ -12,6 +12,7 @@
 //  -- Arctk --
 #include <arctk/data/obj.hpp>
 #include <arctk/data/table.hpp>
+#include <arctk/parse/print.hpp>
 
 
 
@@ -28,6 +29,7 @@ int main(const int /*unused*/, const char** /*unused*/)
 
     std::cout << obj.value<int>("one") << '\n';
     std::cout << obj["book"].value<double>("been") << '\n';
+    std::cout << obj["book"]["page"].value<std::vector<int>>("vector") << '\n';
 
     return (0);
 }

@@ -59,9 +59,14 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Checking --
+            inline bool exists(const std::string& key_) const noexcept;
+
             //  -- Parsing --
             template <typename T>
             inline T value(const std::string& key_) const noexcept;
+            template <typename T>
+            inline T value(const std::string& key_, const T& default_) const noexcept;
         };
 
 

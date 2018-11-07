@@ -129,9 +129,26 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Checking --
+        inline bool Obj::exists(const std::string& key_) const noexcept
+        {
+            return (_data.count(key_) > 0);
+        }
+
+
         //  -- Parsing --
         template <typename T>
         inline T Obj::value(const std::string& key_) const noexcept
+        {
+            assert(_data.count(key_) == 1);
+
+            std::string str = _data.find(key_)->second;
+
+            return (parse::read::string<T>(&str));
+        }
+
+        template <typename T>
+        inline T value(const std::string& key_, const T& default_) const noexcept
         {
             assert(_data.count(key_) == 1);
 
