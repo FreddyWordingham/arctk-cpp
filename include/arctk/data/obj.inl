@@ -140,7 +140,7 @@ namespace arc //! arctk namespace
         template <typename T>
         inline T Obj::value(const std::string& key_) const noexcept
         {
-            assert(_data.count(key_) == 1);
+            assert(exists(key_));
 
             std::string str = _data.find(key_)->second;
 
