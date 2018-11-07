@@ -148,7 +148,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        inline T value(const std::string& key_, const T& default_) const noexcept
+        inline T Obj::value(const std::string& key_, const T& default_) const noexcept
         {
             if (exists(key_))
             {
