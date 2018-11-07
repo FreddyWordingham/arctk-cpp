@@ -37,23 +37,23 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Obj::Obj(const std::string& path_) noexcept
-          : _data(init_data(path_))
+        inline Obj::Obj(const std::string& serial_) noexcept
+          : _data(init_data(serial_))
         {
-            assert(!path_.empty());
+            assert(!serial_.empty());
         }
 
 
         //  -- Initialisation --
-        inline std::map<std::string, std::string> Obj::init_data(const std::string& path_) const noexcept
+        inline std::map<std::string, std::string> Obj::init_data(const std::string& serial_) const noexcept
         {
-            std::string contents = sys::file::read(path_);
+            std::string serial = serial_;
 
-            parse::process::filter_comments(&contents);
-            parse::process::filter_whitespace(&contents);
+            parse::process::filter_comments(&serial);
+            parse::process::filter_whitespace(&serial);
 
-            parse::process::extract_contents(&contents, consts::format::container::OBJ);
-            std::vector<std::string> tokens = parse::process::tokenise(contents);
+            parse::process::extract_contents(&serial, consts::format::container::OBJ);
+            std::vector<std::string> tokens = parse::process::tokenise(serial);
 
             std::map<std::string, std::string> data;
             for (size_t i = 0; i < tokens.size(); ++i)

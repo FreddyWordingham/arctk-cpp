@@ -26,5 +26,8 @@ int main(const int /*unused*/, const char** /*unused*/)
 {
     arc::data::Obj obj("test.param");
 
+    std::cout << obj["one"] << '\n';
+    std::cout << obj["book"] << '\n';
+
     return (0);
 }
