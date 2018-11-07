@@ -115,6 +115,14 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Parsing --
+        template <typename T>
+        inline T Obj::value(const std::string& key_) const noexcept
+        {
+            assert(_data.count(key_) == 1);
+
+            return (parse::read::string<T>(_data[key_]));
+        }
 
 
 

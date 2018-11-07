@@ -58,6 +58,13 @@ namespace arc //! arctk namespace
             {
                 return (_data[key_]);
             }
+
+
+            //  == METHODS ==
+          public:
+            //  -- Parsing --
+            template <typename T>
+            inline T value(const std::string& key_) const noexcept;
         };
 
 
