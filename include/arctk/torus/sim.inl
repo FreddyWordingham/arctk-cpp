@@ -18,6 +18,7 @@
 //  -- Std --
 
 //  -- Arctk --
+#include <arctk/data/obj.hpp>
 
 
 

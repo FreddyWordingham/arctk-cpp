@@ -15,8 +15,23 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <memory>
+#include <vector>
+
 //  -- Arctk --
-#include <arctk/data/obj.hpp>
+#include <arctk/equip/entity.hpp>
+
+
+
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    namespace data //! data namespace
+    {
+        class Obj;
+    } // namespace data
+} // namespace arc
 
 
 
@@ -36,7 +51,8 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
-            //  -- Data --
+            //  -- Entities --
+            std::vector<std::unique_ptr<arc::equip::Entity>> _ents;
 
 
             //  == INSTANTIATION ==
