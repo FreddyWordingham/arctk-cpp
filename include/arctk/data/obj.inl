@@ -150,11 +150,12 @@ namespace arc //! arctk namespace
         template <typename T>
         inline T value(const std::string& key_, const T& default_) const noexcept
         {
-            assert(_data.count(key_) == 1);
+            if (exists(key_))
+            {
+                value(key_);
+            }
 
-            std::string str = _data.find(key_)->second;
-
-            return (parse::read::string<T>(&str));
+            return (default_);
         }
 
 
