@@ -47,17 +47,17 @@ namespace arc //! arctk namespace
              *  @param  abs_coef_       Corresponding absorption coefficients.
              *  @param  asyms_          Corresponding symmetry factors.
              *
-             *  @pre    wavelengths_ must all be positive.
-             *  @pre    wavelengths_ must be ascending.
-             *  @pre    ref_indexs_ must be the same size as wavelengths_.
-             *  @pre    ref_indexs_ must all be greater than, or equal to, unity.
-             *  @pre    scat_coef_ must be the same size as wavelengths_.
-             *  @pre    scat_coef_ must all be positive.
-             *  @pre    abs_coef_ must be the same size as wavelengths_.
-             *  @pre    abs_coef_ must all be positive.
-             *  @pre    asyms_ must be the same size as wavelengths_.
-             *  @pre    asyms_ must all greater than, or equal to, minus one.
-             *  @pre    asyms_ must all less than, or equal to, unity.
+             *  @pre    wavelengths_ values must all be positive.
+             *  @pre    wavelengths_ values must be ascending.
+             *  @pre    ref_indexs_ values must be the same size as wavelengths_.
+             *  @pre    ref_indexs_ values must all be greater than, or equal to, unity.
+             *  @pre    scat_coef_ values must be the same size as wavelengths_.
+             *  @pre    scat_coef_ values must all be positive.
+             *  @pre    abs_coef_ values must be the same size as wavelengths_.
+             *  @pre    abs_coef_ values must all be positive.
+             *  @pre    asyms_ values must be the same size as wavelengths_.
+             *  @pre    asyms_ values must all greater than, or equal to, minus one.
+             *  @pre    asyms_ values must all less than, or equal to, unity.
              */
             inline Simple::Simple(const std::vector<double>& wavelengths_, const std::vector<double>& ref_indexs_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& asyms_) noexcept
               : Mat(wavelengths_.front(), wavelengths_.back())
@@ -88,12 +88,12 @@ namespace arc //! arctk namespace
              *  @param  scat_coef_      Corresponding scattering coefficients.
              *  @param  abs_coef_       Corresponding absorption coefficients.
              *
-             *  @pre    wavelengths_ must all be positive.
-             *  @pre    wavelengths_ must be ascending.
-             *  @pre    scat_coef_ must be the same size as wavelengths_.
-             *  @pre    scat_coef_ must all be positive.
-             *  @pre    abs_coef_ must be the same size as wavelengths_.
-             *  @pre    abs_coef_ must all be positive.
+             *  @pre    wavelengths_ values must all be positive.
+             *  @pre    wavelengths_ values must be ascending.
+             *  @pre    scat_coef_ values must be the same size as wavelengths_.
+             *  @pre    scat_coef_ values must all be positive.
+             *  @pre    abs_coef_ values must be the same size as wavelengths_.
+             *  @pre    abs_coef_ values must all be positive.
              *
              *  @post   interact_coef must all be positive.
              *
@@ -128,12 +128,15 @@ namespace arc //! arctk namespace
              *  @param  scat_coef_      Corresponding scattering coefficients.
              *  @param  abs_coef_       Corresponding absorption coefficients.
              *
-             *  @pre    wavelengths_ must all be positive.
-             *  @pre    wavelengths_ must be ascending.
-             *  @pre    scat_coef_ must be the same size as wavelengths_.
-             *  @pre    scat_coef_ must all be positive.
-             *  @pre    abs_coef_ must be the same size as wavelengths_.
-             *  @pre    abs_coef_ must all be positive.
+             *  @pre    wavelengths_ values must all be positive.
+             *  @pre    wavelengths_ values must be ascending.
+             *  @pre    scat_coef_ values must be the same size as wavelengths_.
+             *  @pre    scat_coef_ values must all be positive.
+             *  @pre    abs_coef_ values must be the same size as wavelengths_.
+             *  @pre    abs_coef_ values must all be positive.
+             *
+             *  @post   albedo must all be non-negative.
+             *  @post   albedo must all be less than, or equal to, unity.
              *
              *  @return Initialised albedo linear formula.
              */
