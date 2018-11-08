@@ -19,6 +19,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Std --
+#include <mutex>
+
+
+
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
@@ -52,6 +58,9 @@ namespace arc //! arctk namespace
             double _scatters; //!< Total scatterings that occur within in cell.
             double _absorbs;  //!< Total number of absorptions that occur within in cell.
             double _energy;   //!< Total energy within the cell.
+
+            //  -- Mutex --
+            std::mutex _write_mutex;
 
 
             //  == INSTANTIATION ==
