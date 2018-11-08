@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
         template <class T, size_t N, size_t... Ns>
         struct array_helper
         {
-            using type = std::array<typename array_helper<T, Ns...>::type, N>;
+            using type = std::array<typename array_helper<T, Ns...>::type, N>; //!< Type alias.
         };
 
         /**
@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
         template <class T, size_t N>
         struct array_helper<T, N>
         {
-            using type = std::array<T, N>;
+            using type = std::array<T, N>; //!< Type alias.
         };
 
 
