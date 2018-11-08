@@ -89,6 +89,11 @@ namespace arc //! arctk namespace
             {
             };
 
+            /**
+             *  Structure used to determine if a type is an iterable.
+             *
+             *  @tparam T   Type being queried.
+             */
             template <typename T, typename _ = void>
             struct is_iterable : public std::false_type
             {
