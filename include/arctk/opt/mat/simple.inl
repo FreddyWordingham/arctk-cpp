@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
              *  @param  abs_coef_       Corresponding absorption coefficients.
              *  @param  asyms_          Corresponding symmetry factors.
              *
-             *  @pre    wavelengths_ must all be greater than zero.
+             *  @pre    wavelengths_ must all be positive.
              *  @pre    wavelengths_ must be ascending.
              *  @pre    ref_indexs_ must be the same size as wavelengths_.
              *  @pre    ref_indexs_ must all be greater than, or equal to, unity.
@@ -88,12 +88,14 @@ namespace arc //! arctk namespace
              *  @param  scat_coef_      Corresponding scattering coefficients.
              *  @param  abs_coef_       Corresponding absorption coefficients.
              *
-             *  @pre    wavelengths_ must all be greater than zero.
+             *  @pre    wavelengths_ must all be positive.
              *  @pre    wavelengths_ must be ascending.
              *  @pre    scat_coef_ must be the same size as wavelengths_.
              *  @pre    scat_coef_ must all be positive.
              *  @pre    abs_coef_ must be the same size as wavelengths_.
              *  @pre    abs_coef_ must all be positive.
+             *
+             *  @post   interact_coef must all be positive.
              *
              *  @return Initialised interaction coefficient linear formula.
              */
@@ -119,6 +121,22 @@ namespace arc //! arctk namespace
                 return (math::formula::Linear(wavelengths_, interact_coef));
             }
 
+            /**
+             *  Initialise the albedo linear formula.
+             *
+             *  @param  wavelengths_    Wavelengths.
+             *  @param  scat_coef_      Corresponding scattering coefficients.
+             *  @param  abs_coef_       Corresponding absorption coefficients.
+             *
+             *  @pre    wavelengths_ must all be positive.
+             *  @pre    wavelengths_ must be ascending.
+             *  @pre    scat_coef_ must be the same size as wavelengths_.
+             *  @pre    scat_coef_ must all be positive.
+             *  @pre    abs_coef_ must be the same size as wavelengths_.
+             *  @pre    abs_coef_ must all be positive.
+             *
+             *  @return Initialised albedo linear formula.
+             */
             inline math::formula::Linear Simple::init_albedo(const std::vector<double>& wavelengths_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_) const noexcept
             {
                 assert(prop::limits::always_greater_than(wavelengths_, 0.0));
