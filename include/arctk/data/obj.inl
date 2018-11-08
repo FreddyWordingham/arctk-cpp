@@ -131,6 +131,15 @@ namespace arc //! arctk namespace
 
         //  == OPERATORS ==
         //  -- Access --
+        /**
+         *  Create a child obj of an object within this obj.
+         *
+         *  @param  key_    Key string of child object to form.
+         *
+         *  @pre    key_ must exist within _data.
+         *
+         *  @return Child obj.
+         */
         inline Obj Obj::operator[](const std::string& key_) const noexcept
         {
             assert(_data.count(key_) == 1);
