@@ -188,6 +188,17 @@ namespace arc //! arctk namespace
             return (parse::read::string<T>(&str));
         }
 
+        /**
+         *  Parse the value of a child within the data map of key-value string pairs.
+         *  If the given key does not exist within the data map return the given default value.
+         *
+         *  @tparam T   Type to parse into.
+         *
+         *  @param  key_        Key of value to parse.
+         *  @param  default_    Value to return if the key_ does not exist within _data.
+         *
+         *  @return Value of the given key or the given default if key does not exist within the data map of key-value string pairs.
+         */
         template <typename T>
         inline T Obj::value(const std::string& key_, const T& default_) const noexcept
         {
