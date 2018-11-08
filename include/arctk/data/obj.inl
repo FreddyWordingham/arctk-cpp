@@ -53,6 +53,13 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
+        /**
+         *  Initialise the data map of key-value pairs.
+         *
+         *  @param  serial_ Serialised obj to form into an obj.
+         *
+         *  @return Initialised data map of key-value pairs.
+         */
         inline std::map<std::string, std::string> Obj::init_data(const std::string& serial_) const noexcept
         {
             std::string serial = serial_;
