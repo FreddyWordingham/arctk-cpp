@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <memory>
 #include <mutex>
 
 
@@ -60,7 +61,7 @@ namespace arc //! arctk namespace
             double _energy;   //!< Total energy within the cell.
 
             //  -- Mutex --
-            std::mutex _write_mutex;
+            std::shared_ptr<std::mutex> _write_mutex;
 
 
             //  == INSTANTIATION ==

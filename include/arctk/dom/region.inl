@@ -91,28 +91,22 @@ namespace arc //! arctk namespace
 
             const vec3 size((max_.x - min_.x) / static_cast<double>(res_[index::dim::cartesian::X]), (max_.y - min_.y) / static_cast<double>(res_[index::dim::cartesian::Y]), (max_.z - min_.z) / static_cast<double>(res_[index::dim::cartesian::Z]));
 
-            std::vector<std::vector<std::vector<dom::Cell>>> cells;
+            std::vector<std::vector<std::vector<dom::Cell>>> cells(res_[index::dim::cartesian::X], std::vector<std::vector<dom::Cell>>(res_[index::dim::cartesian::Y]));
             for (size_t i = 0; i < res_[index::dim::cartesian::X]; ++i)
             {
-                const double                        x = min_.x + (static_cast<double>(i) * size.x);
-                std::vector<std::vector<dom::Cell>> cell_col;
+                const double x = min_.x + (static_cast<double>(i) * size.x);
 
                 for (size_t j = 0; j < res_[index::dim::cartesian::Y]; ++j)
                 {
-                    const double           y = min_.y + (static_cast<double>(j) * size.y);
-                    std::vector<dom::Cell> cell_row;
+                    const double y = min_.y + (static_cast<double>(j) * size.y);
 
                     for (size_t k = 0; k < res_[index::dim::cartesian::Z]; ++k)
                     {
                         const double z = min_.z + (static_cast<double>(k) * size.z);
 
-                        cell_row.emplace_back(dom::Cell(vec3(x, y, z), vec3(x, y, z) + size));
+                        cells[i][j].emplace_back(dom::Cell(vec3(x, y, z), vec3(x, y, z) + size));
                     }
-
-                    cell_col.emplace_back(std::move(cell_row));
                 }
-
-                cells.emplace_back(std::move(cell_col));
             }
 
             return (cells);
