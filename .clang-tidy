@@ -397,13 +397,13 @@ CheckOptions:
   - key:               readability-identifier-naming.TypedefSuffix
     value:             ''
   - key:               readability-identifier-naming.TypeTemplateParameterCase
-    value:             CamelCase
+    value:             UPPER_CASE
   - key:               readability-identifier-naming.TypeTemplateParameterPrefix
     value:             ''
   - key:               readability-identifier-naming.TypeTemplateParameterSuffix
     value:             ''
   - key:               readability-identifier-naming.ValueTemplateParameterCase
-    value:             UPPER_CASE
+    value:             CamelCase
   - key:               readability-identifier-naming.ValueTemplateParameterPrefix
     value:             ''
   - key:               readability-identifier-naming.ValueTemplateParameterSuffix
