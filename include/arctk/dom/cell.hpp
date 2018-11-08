@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
             double _energy;   //!< Total energy within the cell.
 
             //  -- Mutex --
-            std::unique_ptr<std::mutex> _write_mutex;
+            std::unique_ptr<std::mutex> _write_mutex; //!< Write protection mutex.
 
 
             //  == INSTANTIATION ==
