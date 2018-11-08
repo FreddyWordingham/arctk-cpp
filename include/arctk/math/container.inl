@@ -198,6 +198,15 @@ namespace arc //! arctk namespace
 
 //  == OPERATORS ==
 //  -- Mathematical --
+/**
+ *  Create a positive copy of a multi-dimensional container.
+ *
+ *  @tparam T   Type of container.
+ *
+ *  @param  cont_   Container to positive copy.
+ *
+ *  @return Positive copy of the multi-dimensional container.
+ */
 template <typename T, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
 inline T operator+(const T& cont_) noexcept
 {
