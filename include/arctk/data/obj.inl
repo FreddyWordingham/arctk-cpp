@@ -38,6 +38,13 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct an obj from a serialisation.
+         *
+         *  @param  serial_ Serialised obj to form into an obj.
+         *
+         *  @pre    serial_ may not be empty.
+         */
         inline Obj::Obj(const std::string& serial_) noexcept
           : _data(init_data(serial_))
         {
