@@ -28,12 +28,23 @@ namespace arc //! arctk namespace
 
 
 
+        /**
+         *  Structure used in helping the contruction of multi-dimensional vectors.
+         *
+         *  @tparam T   Type stored by the multi-dimensional vector.
+         *  @tparam N   Size of this multi-dimensional vector.
+         */
         template <class T, size_t N>
         struct vector_helper
         {
             using type = std::vector<typename vector_helper<T, N - 1>::type>;
         };
 
+        /**
+         *  Structure used in helping the contruction of multi-dimensional vectors.
+         *
+         *  @tparam T   Type stored by the multi-dimensional vector.
+         */
         template <class T>
         struct vector_helper<T, 1>
         {
