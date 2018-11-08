@@ -125,7 +125,7 @@ namespace arc //! arctk namespace
             template <typename T, typename = void>
             struct core_type // NOLINT
             {
-                typedef T type; //!< Core type.
+                using type = T; //!< Core type.
             };
 
             /**
@@ -136,7 +136,7 @@ namespace arc //! arctk namespace
             template <typename T>
             struct core_type<T, typename std::enable_if_t<is_iterable<T>::value>> // NOLINT
             {
-                typedef typename core_type<typename T::value_type>::type type; //!< Core type.
+                using type = typename core_type<typename T::value_type>::type; //!< Core type.
             };
 
 
