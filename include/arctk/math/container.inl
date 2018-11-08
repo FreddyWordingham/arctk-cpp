@@ -36,6 +36,15 @@ namespace arc //! arctk namespace
 
             //  == FUNCTIONS ==
             //  -- Iterator --
+            /**
+             *  Determine the number of end elements in a multi-dimensional container.
+             *
+             *  @tparam T   Type to test.
+             *
+             *  @param  cont_   Container to test.
+             *
+             *  @return Number of end elements within the multi-dimensional container.
+             */
             template <typename T>
             inline size_t num_elem(const T& cont_) noexcept
             {
