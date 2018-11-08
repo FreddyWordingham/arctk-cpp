@@ -28,6 +28,13 @@ namespace arc //! arctk namespace
 
 
 
+        /**
+         *  Structure used in helping the contruction of multi-dimensional arrays.
+         *
+         *  @tparam T   Type stored by the multi-dimensional array.
+         *  @tparam N   Size of this multi-dimensional array.
+         *  @tparam Ns  Sizes of child arrays.
+         */
         template <class T, size_t N, size_t... Ns>
         struct array_helper
         {
