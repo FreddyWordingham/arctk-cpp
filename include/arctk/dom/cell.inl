@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <iostream>
 
 //  -- Arctk --
 #include <arctk/math/vec3.hpp>
@@ -48,6 +49,7 @@ namespace arc //! arctk namespace
           , _scatters(0.0)
           , _absorbs(0.0)
           , _energy(0.0)
+          , _write_mutex(std::make_unique<std::mutex>())
         {
             assert(min_.x <= max_.x);
             assert(min_.y <= max_.y);
