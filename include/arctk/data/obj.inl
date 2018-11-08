@@ -136,7 +136,7 @@ namespace arc //! arctk namespace
          *
          *  @param  key_    Key string of child object to form.
          *
-         *  @pre    key_ must exist within _data.
+         *  @pre    key_ must be a valid key within _data.
          *
          *  @return Child obj.
          */
@@ -167,6 +167,17 @@ namespace arc //! arctk namespace
 
 
         //  -- Parsing --
+        /**
+         *  Parse the value of a child within the data map of key-value string pairs.
+         *
+         *  @tparam T   Type to parse into.
+         *
+         *  @param  key_    Key of value to parse.
+         *
+         *  @pre    key_ must be a valid key within _data.
+         *
+         *  @return Value of the given key.
+         */
         template <typename T>
         inline T Obj::value(const std::string& key_) const noexcept
         {
