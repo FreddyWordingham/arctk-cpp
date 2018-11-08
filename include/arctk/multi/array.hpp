@@ -41,6 +41,12 @@ namespace arc //! arctk namespace
             using type = std::array<typename array_helper<T, Ns...>::type, N>;
         };
 
+        /**
+         *  Structure used in helping the contruction of multi-dimensional arrays.
+         *
+         *  @tparam T   Type stored by the multi-dimensional array.
+         *  @tparam N   Size of this multi-dimensional array.
+         */
         template <class T, size_t N>
         struct array_helper<T, N>
         {
