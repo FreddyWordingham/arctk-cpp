@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
-            std::map<std::string, std::string> _data;
+            std::map<std::string, std::string> _data; //!< Map of data values.
 
 
             //  == INSTANTIATION ==
