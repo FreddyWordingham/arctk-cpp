@@ -1,6 +1,5 @@
 <map id="arc::random::generator::Quality::gen" name="arc::random::generator::Quality::gen">
-<area shape="rect" id="node2" href="$classarc_1_1random_1_1generator_1_1_quality.html#ae462b3d2ad0323e5952fa109a79b18f8" title="arc::random::generator\l::Quality::gen_base" alt="" coords="211,5,368,44"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1search_1_1value.html#a38e0b67d4c9fb9be98ea9a2c487db51a" title="arc::search::value::max" alt="" coords="210,68,369,93"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1search_1_1value.html#ae6de88857d2b0411f8a5d932fe9780f8" title="arc::search::value\l::max_index" alt="" coords="417,61,544,100"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="592,61,713,100"/>
+<area shape="rect" id="node2" href="$classarc_1_1random_1_1generator_1_1_quality.html#ae462b3d2ad0323e5952fa109a79b18f8" title="arc::random::generator\l::Quality::gen_base" alt="" coords="218,5,375,44"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1container.html#a8080312bec0b12bcea9927c1f0dbd029" title="arc::math::container::max" alt="" coords="210,68,382,93"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1math_1_1container.html#aa11d30fe929faeff3dc3215c6e3c7a1a" title="arc::math::container::min" alt="" coords="430,68,598,93"/>
 </map>

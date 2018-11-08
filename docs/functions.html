@@ -67,6 +67,9 @@ $(function() {
 <div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div>
 
 <h3><a id="index__"></a>- _ -</h3><ul>
+<li>_absorbs
+: <a class="el" href="classarc_1_1dom_1_1_cell.html#aa74f1fcbed6d4db7c3a76bf72613dfa7">arc::dom::Cell</a>
+</li>
 <li>_albedo
 : <a class="el" href="classarc_1_1opt_1_1mat_1_1_dumb.html#a6df214eecbac920108cdf631c5d71276">arc::opt::mat::Dumb</a>
 , <a class="el" href="classarc_1_1opt_1_1mat_1_1_simple.html#abb0c13a1ed45e35446fc89f51efa63df">arc::opt::mat::Simple</a>
@@ -133,7 +136,8 @@ $(function() {
 , <a class="el" href="classarc_1_1gui_1_1shader_1_1_specular.html#aa05213df2676d142bf9a955934260448">arc::gui::shader::Specular</a>
 </li>
 <li>_data
-: <a class="el" href="classarc_1_1math_1_1_mat.html#a45938c6cb757a44a7391d5c7314c25a8">arc::math::Mat&lt; T, N &gt;</a>
+: <a class="el" href="classarc_1_1data_1_1_obj.html#a5cea90309b706df5a30c9f6c1b99d934">arc::data::Obj</a>
+, <a class="el" href="classarc_1_1math_1_1_mat.html#a45938c6cb757a44a7391d5c7314c25a8">arc::math::Mat&lt; T, N &gt;</a>
 , <a class="el" href="classarc_1_1math_1_1_vec.html#ae7efd1981f42e1d32f5c61beef055d7c">arc::math::Vec&lt; T, N &gt;</a>
 </li>
 <li>_depth
@@ -146,9 +150,7 @@ $(function() {
 <li>_dist
 : <a class="el" href="classarc_1_1geom_1_1_collision.html#aff5ec1e4fcbea901ee52d4aec7cfeed4">arc::geom::Collision</a>
 , <a class="el" href="classarc_1_1opt_1_1mat_1_1_dumb.html#ab1e46bd3c65ffae3b651c4cb9c82eb20">arc::opt::mat::Dumb</a>
-, <a class="el" href="classarc_1_1opt_1_1mat_1_1_simple.html#ab6ffca2fa54cd62039874babdca3f404">arc::opt::mat::Simple</a>
 , <a class="el" href="classarc_1_1opt_1_1sop_1_1_dumb.html#a865f4571dccb734b70e3b8834e7db4f2">arc::opt::sop::Dumb</a>
-, <a class="el" href="classarc_1_1opt_1_1sop_1_1_simple.html#ab1649ab8cc4ee86c0155e9c57b3507a7">arc::opt::sop::Simple</a>
 </li>
 <li>_energy
 : <a class="el" href="classarc_1_1dom_1_1_cell.html#a9cdb75793c61164a32821ee268b27a5c">arc::dom::Cell</a>
@@ -190,6 +192,12 @@ $(function() {
 <li>_handle
 : <a class="el" href="classarc_1_1gui_1_1_shader.html#a5de0c33ff93b27ccc9b8387ab3c78df9">arc::gui::Shader</a>
 , <a class="el" href="classarc_1_1gui_1_1_window.html#ae64db24c1d33f4530044023f25fa1814">arc::gui::Window</a>
+</li>
+<li>_interact_coef
+: <a class="el" href="classarc_1_1opt_1_1mat_1_1_simple.html#aaedd4193d71dc89436bf5172c972785f">arc::opt::mat::Simple</a>
+</li>
+<li>_interaction_coef
+: <a class="el" href="classarc_1_1opt_1_1sop_1_1_simple.html#a53d681e25e1ddda017ba4aa7dba82986">arc::opt::sop::Simple</a>
 </li>
 <li>_kill
 : <a class="el" href="classarc_1_1equip_1_1entity_1_1_light.html#afaed1437fd18d52d8fe6243219d1681c">arc::equip::entity::Light</a>
@@ -248,6 +256,9 @@ $(function() {
 </li>
 <li>_num_verts
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a8ce4fb796e6fa5967c67752f9f9d5c7b">arc::geom::shape::Mesh</a>
+</li>
+<li>_phase
+: <a class="el" href="classarc_1_1phys_1_1_photon.html#aecd8af3cff38f49d6cd99dcf5734d33b">arc::phys::Photon</a>
 </li>
 <li>_plane_norm
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a1aa75e6f1c42143299c908b272dc4d9c">arc::geom::shape::Triangle</a>
@@ -373,6 +384,9 @@ $(function() {
 <li>_weight
 : <a class="el" href="classarc_1_1phys_1_1_photon.html#a5b641bffc049cf8aac69d21415466821">arc::phys::Photon</a>
 </li>
+<li>_write_mutex
+: <a class="el" href="classarc_1_1dom_1_1_cell.html#ae5594d1ec259b4d1191e075b17f5fd58">arc::dom::Cell</a>
+</li>
 <li>_xs
 : <a class="el" href="classarc_1_1math_1_1formula_1_1_constant.html#aa309e17918850ba05ec5df46b867ab34">arc::math::formula::Constant</a>
 , <a class="el" href="classarc_1_1math_1_1formula_1_1_linear.html#afba716e83b341f3ad43e2fd308bcc8d9">arc::math::formula::Linear</a>
@@ -385,7 +399,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 30 2018 00:17:07 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Nov 8 2018 13:50:04 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

@@ -1,12 +1,11 @@
 <map id="arc::parse::write::timestamp" name="arc::parse::write::timestamp">
-<area shape="rect" id="node2" href="$namespacearc_1_1search_1_1value.html#aae5e1d5e5a6ea96ef29ca3c819a4724f" title="arc::search::value::min" alt="" coords="177,51,332,76"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1parse_1_1read.html#a473be0f29d4eed0c87003efed3623670" title="arc::parse::read::string" alt="" coords="177,137,332,163"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1search_1_1value.html#a054f87cdf39a68c636e89677a24f9a9b" title="arc::search::value\l::min_index" alt="" coords="397,5,523,44"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="593,5,713,44"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1parse_1_1process.html#aa43d6f4b4ac01f1b503fdf5b630f02b1" title="arc::parse::process\l::filter_comments" alt="" coords="393,68,527,107"/>
-<area shape="rect" id="node9" href="$namespacearc_1_1parse_1_1process.html#a1b896981b6feb909c2bddb07a9c78f56" title="arc::parse::process\l::filter_whitespace" alt="" coords="393,131,527,169"/>
-<area shape="rect" id="node11" href="$namespacearc_1_1parse_1_1read.html#a7d7bd8339f8ced08982de0d04ab07088" title="arc::parse::read::helper" alt="" coords="380,193,540,219"/>
-<area shape="rect" id="node7" href="$namespacearc_1_1consts_1_1format.html#a02ddf3d786fde98c6dd1b6fbdbca16d1" title="Container opening characters. " alt="" coords="588,131,719,169"/>
-<area shape="rect" id="node8" href="$namespacearc_1_1consts_1_1format.html#aef9289d10d56f95c2b899cb442e1b820" title="Container closing characters. " alt="" coords="588,68,719,107"/>
-<area shape="rect" id="node10" href="$namespacearc_1_1consts_1_1format.html#a4d44c3b096871a5c18c005ac26fcf643" title="Characters considered whitespace. " alt="" coords="588,193,719,232"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1math_1_1container.html#aa11d30fe929faeff3dc3215c6e3c7a1a" title="arc::math::container::min" alt="" coords="177,5,345,31"/>
+<area shape="rect" id="node4" href="$namespacearc_1_1parse_1_1read.html#a473be0f29d4eed0c87003efed3623670" title="arc::parse::read::string" alt="" coords="184,124,338,149"/>
+<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1container.html#a8080312bec0b12bcea9927c1f0dbd029" title="arc::math::container::max" alt="" coords="393,5,565,31"/>
+<area shape="rect" id="node5" href="$namespacearc_1_1parse_1_1process.html#aa43d6f4b4ac01f1b503fdf5b630f02b1" title="arc::parse::process\l::filter_comments" alt="" coords="412,55,546,93"/>
+<area shape="rect" id="node8" href="$namespacearc_1_1parse_1_1process.html#a1b896981b6feb909c2bddb07a9c78f56" title="arc::parse::process\l::filter_whitespace" alt="" coords="412,117,546,156"/>
+<area shape="rect" id="node10" href="$namespacearc_1_1parse_1_1read.html#a7d7bd8339f8ced08982de0d04ab07088" title="arc::parse::read::helper" alt="" coords="399,180,558,205"/>
+<area shape="rect" id="node6" href="$namespacearc_1_1consts_1_1format.html#aa395015e7c13d51f0e9969166312cc40" title="Container opening characters. " alt="" coords="613,55,744,93"/>
+<area shape="rect" id="node7" href="$namespacearc_1_1consts_1_1format.html#a72f7c43c53d57cc24efb2466077b8380" title="Container closing characters. " alt="" coords="613,117,744,156"/>
+<area shape="rect" id="node9" href="$namespacearc_1_1consts_1_1format.html#a4d44c3b096871a5c18c005ac26fcf643" title="Characters considered whitespace. " alt="" coords="613,180,744,219"/>
 </map>

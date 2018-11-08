@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['x',['X',['../namespacearc_1_1index_1_1dim.html#aa029790f1ea3973564bcd01a5a1a79b6aa85c5e80e548ceca3a4033c8d6f3e0a5',1,'arc::index::dim']]]
+  ['vec',['VEC',['../namespacearc_1_1consts_1_1format.html#a4cc74732cb8267729b896318c9968deba83a9fcf56d558bca2065accc651c8a07',1,'arc::consts::format']]],
+  ['vector',['VECTOR',['../namespacearc_1_1consts_1_1format.html#a4cc74732cb8267729b896318c9968debaa3e313dab793d1da428f1f309d0201c4',1,'arc::consts::format']]]
 ];

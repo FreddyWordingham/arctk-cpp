@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['vec2',['vec2',['../namespacearc.html#a8eb99660a4000265093cfe51201e32f3',1,'arc']]],
-  ['vec2f',['vec2f',['../namespacearc.html#aa0438e23cf4b7494c3637e4a84fda0e2',1,'arc']]],
-  ['vec3',['vec3',['../namespacearc.html#a840dcfd96b55059c4537a265728436be',1,'arc']]],
-  ['vec3f',['vec3f',['../namespacearc.html#a4a72d1cbcdc02ae6a99e1a442e0475b7',1,'arc']]],
-  ['vec4',['vec4',['../namespacearc.html#aed9f68c777410b2fc16c6d9774da4d0a',1,'arc']]],
-  ['vec4f',['vec4f',['../namespacearc.html#acb3211d2522b67c3448d2e5738d69c39',1,'arc']]],
-  ['vecn',['vecN',['../namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6',1,'arc']]],
-  ['vecnf',['vecNf',['../namespacearc.html#a263f7fcb6fc180a1c28bb496c8edb102',1,'arc']]]
+  ['mat2',['mat2',['../namespacearc.html#a1ec18af7635fac521f0d7aa4c330fcc7',1,'arc']]],
+  ['mat2f',['mat2f',['../namespacearc.html#a62ee066853557e587dbda492a7666e22',1,'arc']]],
+  ['mat3',['mat3',['../namespacearc_1_1math.html#ab2c2d46a7c4a58dddb409c316b99affc',1,'arc::math']]],
+  ['mat3f',['mat3f',['../namespacearc_1_1math.html#a7cf7569e9ac635ce9fce45068dfe9b22',1,'arc::math']]],
+  ['mat4',['mat4',['../namespacearc.html#a6d9a96f9237c5ff807f81df1485cdbdf',1,'arc']]],
+  ['mat4f',['mat4f',['../namespacearc.html#a540ac6294f34703b8f4c14732fb74f94',1,'arc']]],
+  ['matn',['matN',['../namespacearc.html#aef2523196fa58b375801f261ba0338dd',1,'arc']]],
+  ['matnf',['matNf',['../namespacearc.html#aa65067064f77cb5a855ec8841525d4bc',1,'arc']]]
 ];

@@ -81,8 +81,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adc6e6cdf5412b13d1d3067e4368a3d19"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_point.html#adc6e6cdf5412b13d1d3067e4368a3d19">Point</a> (const glm::vec3 &amp;pos_, float time_, float wavelength_) noexcept</td></tr>
-<tr class="separator:adc6e6cdf5412b13d1d3067e4368a3d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e75f8c7ec0f9aab3e10572efeedf2d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_point.html#a4e75f8c7ec0f9aab3e10572efeedf2d4">Point</a> (const glm::vec3 &amp;pos_, float time_, float wavelength_, float phase_) noexcept</td></tr>
+<tr class="separator:a4e75f8c7ec0f9aab3e10572efeedf2d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -95,12 +95,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a3a7f89c3c8cc59fef6482f7f4d83053c"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_point.html#a3a7f89c3c8cc59fef6482f7f4d83053c">wavelength</a></td></tr>
 <tr class="memdesc:a3a7f89c3c8cc59fef6482f7f4d83053c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wavelength of the data point.  <a href="#a3a7f89c3c8cc59fef6482f7f4d83053c">More...</a><br /></td></tr>
 <tr class="separator:a3a7f89c3c8cc59fef6482f7f4d83053c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e2584981322d8d7302e2359b827639b"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1gui_1_1_point.html#a1e2584981322d8d7302e2359b827639b">phase</a></td></tr>
+<tr class="memdesc:a1e2584981322d8d7302e2359b827639b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Phase of the photon.  <a href="#a1e2584981322d8d7302e2359b827639b">More...</a><br /></td></tr>
+<tr class="separator:a1e2584981322d8d7302e2359b827639b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Data point class. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="adc6e6cdf5412b13d1d3067e4368a3d19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc6e6cdf5412b13d1d3067e4368a3d19">&#9670;&nbsp;</a></span>Point()</h2>
+<a id="a4e75f8c7ec0f9aab3e10572efeedf2d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e75f8c7ec0f9aab3e10572efeedf2d4">&#9670;&nbsp;</a></span>Point()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,7 +127,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>wavelength_</em>&#160;</td>
+          <td class="paramname"><em>wavelength_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>phase_</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -143,7 +152,8 @@ Public Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">pos_</td><td>Position of the data point. </td></tr>
     <tr><td class="paramname">time_</td><td>Time of the data point. </td></tr>
-    <tr><td class="paramname">wavelength_</td><td>Wavelength of the data point.</td></tr>
+    <tr><td class="paramname">wavelength_</td><td>Wavelength of the data point. </td></tr>
+    <tr><td class="paramname">phase_</td><td>Phase of the data point.</td></tr>
   </table>
   </dd>
 </dl>
@@ -154,6 +164,22 @@ wavelength_ must be positive. </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1e2584981322d8d7302e2359b827639b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e2584981322d8d7302e2359b827639b">&#9670;&nbsp;</a></span>phase</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float arc::gui::Point::phase</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Phase of the photon. </p>
+
+</div>
+</div>
 <a id="ace129f86345a5c25130aeaa2cbe99aec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace129f86345a5c25130aeaa2cbe99aec">&#9670;&nbsp;</a></span>pos</h2>
 
@@ -209,7 +235,7 @@ wavelength_ must be positive. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 30 2018 00:17:07 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Nov 8 2018 13:50:03 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

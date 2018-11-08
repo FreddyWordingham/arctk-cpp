@@ -1,7 +1,7 @@
 <map id="include/arctk/gui/keymap.inl" name="include/arctk/gui/keymap.inl">
-<area shape="rect" id="node5" href="$camera_8hpp.html" title="arctk/gui/camera.hpp" alt="" coords="474,79,620,104"/>
-<area shape="rect" id="node8" href="$window_8hpp.html" title="arctk/gui/window.hpp" alt="" coords="276,79,421,104"/>
-<area shape="rect" id="node7" href="$camera_8inl.html" title="arctk/gui/camera.inl" alt="" coords="648,152,785,177"/>
-<area shape="rect" id="node11" href="$window_8inl.html" title="arctk/gui/window.inl" alt="" coords="161,152,298,177"/>
-<area shape="rect" id="node14" href="$error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="290,225,422,251"/>
+<area shape="rect" id="node5" href="$camera_8hpp.html" title="arctk/gui/camera.hpp" alt="" coords="157,79,303,104"/>
+<area shape="rect" id="node8" href="$window_8hpp.html" title="arctk/gui/window.hpp" alt="" coords="371,79,516,104"/>
+<area shape="rect" id="node7" href="$camera_8inl.html" title="arctk/gui/camera.inl" alt="" coords="22,152,159,177"/>
+<area shape="rect" id="node11" href="$window_8inl.html" title="arctk/gui/window.inl" alt="" coords="301,152,437,177"/>
+<area shape="rect" id="node14" href="$error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="430,225,561,251"/>
 </map>

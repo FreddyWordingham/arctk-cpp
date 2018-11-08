@@ -77,6 +77,8 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iterator&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;<a class="el" href="temp_8hpp_source.html">arctk/type/temp.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for container.inl:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -84,6 +86,7 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="container_8inl__incl.png" border="0" usemap="#include_2arctk_2math_2container_8inl" alt=""/></div>
 <map name="include_2arctk_2math_2container_8inl" id="include_2arctk_2math_2container_8inl">
+<area shape="rect" id="node4" href="temp_8hpp.html" title="arctk/type/temp.hpp" alt="" coords="168,92,306,117"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -123,21 +126,121 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af7a7e70fec2026804d07178e063a2236"><td class="memTemplParams" colspan="2">template&lt;typename C , typename T  = typename C::value_type, typename I  = typename C::const_iterator&gt; </td></tr>
-<tr class="memitem:af7a7e70fec2026804d07178e063a2236"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math_1_1container.html#af7a7e70fec2026804d07178e063a2236">arc::math::container::sum</a> (const C &amp;cont_) noexcept</td></tr>
-<tr class="separator:af7a7e70fec2026804d07178e063a2236"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43eb40b29b4991c7c10c692ed0f34f0e"><td class="memTemplParams" colspan="2">template&lt;typename C , typename T  = typename C::value_type, typename I  = typename C::const_iterator&gt; </td></tr>
-<tr class="memitem:a43eb40b29b4991c7c10c692ed0f34f0e"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math_1_1container.html#a43eb40b29b4991c7c10c692ed0f34f0e">arc::math::container::ave</a> (const C &amp;cont_) noexcept</td></tr>
-<tr class="separator:a43eb40b29b4991c7c10c692ed0f34f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10ba7552a3afb4991109eaebcfbe2766"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a10ba7552a3afb4991109eaebcfbe2766"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math_1_1container.html#a10ba7552a3afb4991109eaebcfbe2766">arc::math::container::num_elem</a> (const T &amp;cont_) noexcept</td></tr>
+<tr class="separator:a10ba7552a3afb4991109eaebcfbe2766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad07a6746bff1a23167ebc2c23cfb0e38"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad07a6746bff1a23167ebc2c23cfb0e38"><td class="memTemplItemLeft" align="right" valign="top">type::temp::core_type&lt; T &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math_1_1container.html#ad07a6746bff1a23167ebc2c23cfb0e38">arc::math::container::sum</a> (const T &amp;cont_) noexcept</td></tr>
+<tr class="separator:ad07a6746bff1a23167ebc2c23cfb0e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad278c7920db58f42b40e326a07b7ad91"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad278c7920db58f42b40e326a07b7ad91"><td class="memTemplItemLeft" align="right" valign="top">type::temp::core_type&lt; T &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math_1_1container.html#ad278c7920db58f42b40e326a07b7ad91">arc::math::container::ave</a> (const T &amp;cont_) noexcept</td></tr>
+<tr class="separator:ad278c7920db58f42b40e326a07b7ad91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa11d30fe929faeff3dc3215c6e3c7a1a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa11d30fe929faeff3dc3215c6e3c7a1a"><td class="memTemplItemLeft" align="right" valign="top">type::temp::core_type&lt; T &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math_1_1container.html#aa11d30fe929faeff3dc3215c6e3c7a1a">arc::math::container::min</a> (const T &amp;cont_) noexcept</td></tr>
+<tr class="separator:aa11d30fe929faeff3dc3215c6e3c7a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8080312bec0b12bcea9927c1f0dbd029"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8080312bec0b12bcea9927c1f0dbd029"><td class="memTemplItemLeft" align="right" valign="top">type::temp::core_type&lt; T &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacearc_1_1math_1_1container.html#a8080312bec0b12bcea9927c1f0dbd029">arc::math::container::max</a> (const T &amp;cont_) noexcept</td></tr>
+<tr class="separator:a8080312bec0b12bcea9927c1f0dbd029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aabaa5cdfe4759cf976d28b788cca82"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = std::enable_if_t&lt;arc::type::temp::is_iterable&lt;T&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:a1aabaa5cdfe4759cf976d28b788cca82"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="container_8inl.html#a1aabaa5cdfe4759cf976d28b788cca82">operator+</a> (const T &amp;cont_) noexcept</td></tr>
+<tr class="separator:a1aabaa5cdfe4759cf976d28b788cca82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a661eeebb7208328f691ede87124d9"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = std::enable_if_t&lt;arc::type::temp::is_iterable&lt;T&gt;::value&gt;&gt; </td></tr>
+<tr class="memitem:a41a661eeebb7208328f691ede87124d9"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="container_8inl.html#a41a661eeebb7208328f691ede87124d9">operator-</a> (const T &amp;cont_) noexcept</td></tr>
+<tr class="separator:a41a661eeebb7208328f691ede87124d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section date"><dt>Date</dt><dd>07/10/2018 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Freddy Wordingham</dd></dl>
 <p>Math container functions. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a1aabaa5cdfe4759cf976d28b788cca82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aabaa5cdfe4759cf976d28b788cca82">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename  = std::enable_if_t&lt;arc::type::temp::is_iterable&lt;T&gt;::value&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>cont_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create a positive copy of a multi-dimensional container.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of container.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cont_</td><td>Container to positive copy.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Positive copy of the multi-dimensional container. </dd></dl>
+
+</div>
+</div>
+<a id="a41a661eeebb7208328f691ede87124d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41a661eeebb7208328f691ede87124d9">&#9670;&nbsp;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename  = std::enable_if_t&lt;arc::type::temp::is_iterable&lt;T&gt;::value&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T operator- </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>cont_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create a negative copy of a multi-dimensional container.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of container.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cont_</td><td>Container to negative copy.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Negative copy of the multi-dimensional container. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 30 2018 00:17:06 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Nov 8 2018 13:50:03 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

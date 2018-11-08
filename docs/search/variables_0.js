@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['_5fabsorbs',['_absorbs',['../classarc_1_1dom_1_1_cell.html#aa74f1fcbed6d4db7c3a76bf72613dfa7',1,'arc::dom::Cell']]],
   ['_5falbedo',['_albedo',['../classarc_1_1opt_1_1mat_1_1_dumb.html#a6df214eecbac920108cdf631c5d71276',1,'arc::opt::mat::Dumb::_albedo()'],['../classarc_1_1opt_1_1mat_1_1_simple.html#abb0c13a1ed45e35446fc89f51efa63df',1,'arc::opt::mat::Simple::_albedo()'],['../classarc_1_1opt_1_1sop_1_1_dumb.html#a9f056bb653bf4ac1f686f813577ffb5d',1,'arc::opt::sop::Dumb::_albedo()'],['../classarc_1_1opt_1_1sop_1_1_simple.html#ae2b1317d49e837ff8b078a3ac910af8b',1,'arc::opt::sop::Simple::_albedo()']]],
   ['_5fareas',['_areas',['../classarc_1_1geom_1_1shape_1_1_mesh.html#acc6b22575e06f9238f4713a58ad0206e',1,'arc::geom::shape::Mesh']]],
   ['_5fargv',['_argv',['../classarc_1_1sys_1_1_args.html#a8347075c84ef34938bd1d012f9426274',1,'arc::sys::Args']]],
@@ -18,10 +19,10 @@ var searchData=
   ['_5fclosed',['_closed',['../classarc_1_1geom_1_1shape_1_1_mesh.html#a3377db5311f392038b843411a327f74f',1,'arc::geom::shape::Mesh']]],
   ['_5fcoefs',['_coefs',['../classarc_1_1math_1_1formula_1_1_polynomial.html#a0323843e99f9ae1d90b32c9c61371244',1,'arc::math::formula::Polynomial']]],
   ['_5fcol',['_col',['../classarc_1_1gui_1_1_actor.html#a559d11ec7e75c1c62ab30b6243e917bc',1,'arc::gui::Actor::_col()'],['../classarc_1_1gui_1_1shader_1_1_ambient.html#a8def6a68de37f8178f3b96f90e0b1cea',1,'arc::gui::shader::Ambient::_col()'],['../classarc_1_1gui_1_1shader_1_1_diffuse.html#a4402fed1925d87d4fd01d30b004a63a1',1,'arc::gui::shader::Diffuse::_col()'],['../classarc_1_1gui_1_1shader_1_1_specular.html#aa05213df2676d142bf9a955934260448',1,'arc::gui::shader::Specular::_col()']]],
-  ['_5fdata',['_data',['../classarc_1_1math_1_1_mat.html#a45938c6cb757a44a7391d5c7314c25a8',1,'arc::math::Mat::_data()'],['../classarc_1_1math_1_1_vec.html#ae7efd1981f42e1d32f5c61beef055d7c',1,'arc::math::Vec::_data()']]],
+  ['_5fdata',['_data',['../classarc_1_1data_1_1_obj.html#a5cea90309b706df5a30c9f6c1b99d934',1,'arc::data::Obj::_data()'],['../classarc_1_1math_1_1_mat.html#a45938c6cb757a44a7391d5c7314c25a8',1,'arc::math::Mat::_data()'],['../classarc_1_1math_1_1_vec.html#ae7efd1981f42e1d32f5c61beef055d7c',1,'arc::math::Vec::_data()']]],
   ['_5fdepth',['_depth',['../classarc_1_1tree_1_1_node.html#a4d1ec10342e5ba48cc94ffd206942cb9',1,'arc::tree::Node']]],
   ['_5fdir',['_dir',['../classarc_1_1gui_1_1camera_1_1_fly.html#a79ff586a7c9d9c418c201c4f6d699eb1',1,'arc::gui::camera::Fly::_dir()'],['../classarc_1_1phys_1_1_photon.html#a0d852b660cb02108bcee5ff435284713',1,'arc::phys::Photon::_dir()']]],
-  ['_5fdist',['_dist',['../classarc_1_1geom_1_1_collision.html#aff5ec1e4fcbea901ee52d4aec7cfeed4',1,'arc::geom::Collision::_dist()'],['../classarc_1_1opt_1_1mat_1_1_dumb.html#ab1e46bd3c65ffae3b651c4cb9c82eb20',1,'arc::opt::mat::Dumb::_dist()'],['../classarc_1_1opt_1_1mat_1_1_simple.html#ab6ffca2fa54cd62039874babdca3f404',1,'arc::opt::mat::Simple::_dist()'],['../classarc_1_1opt_1_1sop_1_1_dumb.html#a865f4571dccb734b70e3b8834e7db4f2',1,'arc::opt::sop::Dumb::_dist()'],['../classarc_1_1opt_1_1sop_1_1_simple.html#ab1649ab8cc4ee86c0155e9c57b3507a7',1,'arc::opt::sop::Simple::_dist()']]],
+  ['_5fdist',['_dist',['../classarc_1_1geom_1_1_collision.html#aff5ec1e4fcbea901ee52d4aec7cfeed4',1,'arc::geom::Collision::_dist()'],['../classarc_1_1opt_1_1mat_1_1_dumb.html#ab1e46bd3c65ffae3b651c4cb9c82eb20',1,'arc::opt::mat::Dumb::_dist()'],['../classarc_1_1opt_1_1sop_1_1_dumb.html#a865f4571dccb734b70e3b8834e7db4f2',1,'arc::opt::sop::Dumb::_dist()']]],
   ['_5fenergy',['_energy',['../classarc_1_1dom_1_1_cell.html#a9cdb75793c61164a32821ee268b27a5c',1,'arc::dom::Cell::_energy()'],['../classarc_1_1phys_1_1_photon.html#a696fb326d620dfec935ded7e4f661514',1,'arc::phys::Photon::_energy()']]],
   ['_5fent_5ftris',['_ent_tris',['../classarc_1_1tree_1_1node_1_1_leaf.html#afdb5269c78784d100c0afc98d5179438',1,'arc::tree::node::Leaf']]],
   ['_5fface_5fcol',['_face_col',['../classarc_1_1gui_1_1shader_1_1_normal.html#a2a86350009521553a288d3eced634ba0',1,'arc::gui::shader::Normal']]],
@@ -35,6 +36,8 @@ var searchData=
   ['_5ffunc',['_func',['../classarc_1_1gui_1_1_keybind.html#a16e1cb9d5c2f4f1d507e102f12df66b9',1,'arc::gui::Keybind']]],
   ['_5fgrads',['_grads',['../classarc_1_1math_1_1formula_1_1_linear.html#aa65e92ad231ac88748998ea7f7ada68d',1,'arc::math::formula::Linear']]],
   ['_5fhandle',['_handle',['../classarc_1_1gui_1_1_shader.html#a5de0c33ff93b27ccc9b8387ab3c78df9',1,'arc::gui::Shader::_handle()'],['../classarc_1_1gui_1_1_window.html#ae64db24c1d33f4530044023f25fa1814',1,'arc::gui::Window::_handle()']]],
+  ['_5finteract_5fcoef',['_interact_coef',['../classarc_1_1opt_1_1mat_1_1_simple.html#aaedd4193d71dc89436bf5172c972785f',1,'arc::opt::mat::Simple']]],
+  ['_5finteraction_5fcoef',['_interaction_coef',['../classarc_1_1opt_1_1sop_1_1_simple.html#a53d681e25e1ddda017ba4aa7dba82986',1,'arc::opt::sop::Simple']]],
   ['_5fkill',['_kill',['../classarc_1_1equip_1_1entity_1_1_light.html#afaed1437fd18d52d8fe6243219d1681c',1,'arc::equip::entity::Light']]],
   ['_5flength',['_length',['../classarc_1_1gui_1_1shader_1_1_normal.html#a1c4a4e39b30add8d5acdd97ef137c54c',1,'arc::gui::shader::Normal']]],
   ['_5fmap',['_map',['../classarc_1_1gui_1_1_keymap.html#afea25481141729499fae16fe3633e6fe',1,'arc::gui::Keymap']]],
@@ -50,6 +53,7 @@ var searchData=
   ['_5fnum_5fnorms',['_num_norms',['../classarc_1_1geom_1_1shape_1_1_mesh.html#ad255d7c7178342d36f6ed4b5b6b0b47e',1,'arc::geom::shape::Mesh']]],
   ['_5fnum_5fvert',['_num_vert',['../classarc_1_1gui_1_1_actor.html#ab76c2799d8258b67edf0c130566dc496',1,'arc::gui::Actor']]],
   ['_5fnum_5fverts',['_num_verts',['../classarc_1_1geom_1_1shape_1_1_mesh.html#a8ce4fb796e6fa5967c67752f9f9d5c7b',1,'arc::geom::shape::Mesh']]],
+  ['_5fphase',['_phase',['../classarc_1_1phys_1_1_photon.html#aecd8af3cff38f49d6cd99dcf5734d33b',1,'arc::phys::Photon']]],
   ['_5fplane_5fnorm',['_plane_norm',['../classarc_1_1geom_1_1shape_1_1_triangle.html#a1aa75e6f1c42143299c908b272dc4d9c',1,'arc::geom::shape::Triangle']]],
   ['_5fpos',['_pos',['../classarc_1_1gui_1_1_camera.html#aab4f5dea22e2518c862575760dc89a93',1,'arc::gui::Camera::_pos()'],['../classarc_1_1phys_1_1_photon.html#a3f4ec8b3be12921b2bb1a8a0bc3b8567',1,'arc::phys::Photon::_pos()']]],
   ['_5fposs',['_poss',['../classarc_1_1geom_1_1shape_1_1_triangle.html#a50e8fa5a074ced2b8f453b331cc1ad63',1,'arc::geom::shape::Triangle']]],
@@ -86,6 +90,7 @@ var searchData=
   ['_5fw',['_w',['../classarc_1_1random_1_1generator_1_1_quality.html#a0d9473e510d145fdaff009547a4608f7',1,'arc::random::generator::Quality']]],
   ['_5fwavelength',['_wavelength',['../classarc_1_1equip_1_1entity_1_1light_1_1_laser.html#aa73b592dc8255cdc300d14f44f864f98',1,'arc::equip::entity::light::Laser::_wavelength()'],['../classarc_1_1phys_1_1_photon.html#ad0555c9d3ae353a76937b2ac3f6017a6',1,'arc::phys::Photon::_wavelength()']]],
   ['_5fweight',['_weight',['../classarc_1_1phys_1_1_photon.html#a5b641bffc049cf8aac69d21415466821',1,'arc::phys::Photon']]],
+  ['_5fwrite_5fmutex',['_write_mutex',['../classarc_1_1dom_1_1_cell.html#ae5594d1ec259b4d1191e075b17f5fd58',1,'arc::dom::Cell']]],
   ['_5fxs',['_xs',['../classarc_1_1math_1_1formula_1_1_constant.html#aa309e17918850ba05ec5df46b867ab34',1,'arc::math::formula::Constant::_xs()'],['../classarc_1_1math_1_1formula_1_1_linear.html#afba716e83b341f3ad43e2fd308bcc8d9',1,'arc::math::formula::Linear::_xs()']]],
   ['_5fys',['_ys',['../classarc_1_1math_1_1formula_1_1_constant.html#ae2fefff9cba0a18ba47271c61a0c531a',1,'arc::math::formula::Constant::_ys()'],['../classarc_1_1math_1_1formula_1_1_linear.html#a33564522179909afe666589e4e60e96a',1,'arc::math::formula::Linear::_ys()']]]
 ];

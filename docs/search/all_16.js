@@ -1,6 +1,7 @@
 var searchData=
 [
   ['vals',['vals',['../classarc_1_1random_1_1distribution_1_1_constant.html#a9478bd7c0cabe01b3c20171bc562893c',1,'arc::random::distribution::Constant::vals()'],['../classarc_1_1random_1_1distribution_1_1_discrete.html#a9f2a05e35c11c1121f0f24fa565944e8',1,'arc::random::distribution::Discrete::vals()'],['../classarc_1_1random_1_1distribution_1_1_linear.html#aeb9ed1aae69c768490207eb6af2c5c2e',1,'arc::random::distribution::Linear::vals()']]],
+  ['value',['value',['../classarc_1_1data_1_1_obj.html#a47935289a7b4cba0aa1ec562ea79d60d',1,'arc::data::Obj::value(const std::string &amp;key_) const noexcept'],['../classarc_1_1data_1_1_obj.html#ada68abefdc8eef0ef37dca00bf1dce35',1,'arc::data::Obj::value(const std::string &amp;key_, const T &amp;default_) const noexcept']]],
   ['value_2ehpp',['value.hpp',['../value_8hpp.html',1,'']]],
   ['value_2einl',['value.inl',['../value_8inl.html',1,'']]],
   ['vao',['vao',['../classarc_1_1gui_1_1_actor.html#af5fa2a4873e426314fd4ec7690e4b931',1,'arc::gui::Actor']]],
@@ -27,7 +28,10 @@ var searchData=
   ['vec_3c_20t_2c_20n_20_3e',['Vec&lt; T, N &gt;',['../classarc_1_1math_1_1_mat.html#abdb902c2a912ae7a2c9bf55df28a48e6',1,'arc::math::Mat']]],
   ['vecn',['vecN',['../namespacearc.html#aca49b0c81e4606851a4cd97a251d42a6',1,'arc']]],
   ['vecnf',['vecNf',['../namespacearc.html#a263f7fcb6fc180a1c28bb496c8edb102',1,'arc']]],
-  ['vector',['VECTOR',['../namespacearc_1_1consts_1_1format.html#a4cc74732cb8267729b896318c9968debaa3e313dab793d1da428f1f309d0201c4',1,'arc::consts::format']]],
+  ['vector',['vector',['../namespacearc_1_1multi.html#aab867dcec86da74cc92d02e4370653f1',1,'arc::multi::vector()'],['../namespacearc_1_1consts_1_1format.html#a4cc74732cb8267729b896318c9968debaa3e313dab793d1da428f1f309d0201c4',1,'arc::consts::format::VECTOR()']]],
+  ['vector_2ehpp',['vector.hpp',['../vector_8hpp.html',1,'']]],
+  ['vector_5fhelper',['vector_helper',['../structarc_1_1multi_1_1vector__helper.html',1,'arc::multi']]],
+  ['vector_5fhelper_3c_20t_2c_201_20_3e',['vector_helper&lt; T, 1 &gt;',['../structarc_1_1multi_1_1vector__helper_3_01_t_00_011_01_4.html',1,'arc::multi']]],
   ['version_2ehpp',['version.hpp',['../version_8hpp.html',1,'']]],
   ['version_5fmajor',['VERSION_MAJOR',['../namespacearc_1_1config.html#a5dc2a4198dacd9cdfdf4dfd3be7607ba',1,'arc::config']]],
   ['version_5fminor',['VERSION_MINOR',['../namespacearc_1_1config.html#a733299a4f7d0560f62f0104b59b62df4',1,'arc::config']]],

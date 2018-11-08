@@ -101,8 +101,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a77319e8bf4cfa25a9f5fd16cad8d901a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1opt_1_1sop_1_1_simple.html#a77319e8bf4cfa25a9f5fd16cad8d901a">Simple</a> (double ref_index_, double dist_, double albedo_, double asym_) noexcept</td></tr>
-<tr class="separator:a77319e8bf4cfa25a9f5fd16cad8d901a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49a9daddb529dba0a3e7a29737216115"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1opt_1_1sop_1_1_simple.html#a49a9daddb529dba0a3e7a29737216115">Simple</a> (double ref_index_, double interaction_coef_, double albedo_, double asym_) noexcept</td></tr>
+<tr class="separator:a49a9daddb529dba0a3e7a29737216115"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e450949f314e7b36fc8f905c8a834e6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1opt_1_1sop_1_1_simple.html#a9e450949f314e7b36fc8f905c8a834e6">interact_dist</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_, const <a class="el" href="classarc_1_1dom_1_1_cell.html">dom::Cell</a> *) const noexcept override</td></tr>
 <tr class="separator:a9e450949f314e7b36fc8f905c8a834e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa04b998ea78926a3016c96832ede87a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1opt_1_1sop_1_1_simple.html#aa04b998ea78926a3016c96832ede87a6">interact</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">random::Generator</a> *rng_, <a class="el" href="classarc_1_1phys_1_1_photon.html">phys::Photon</a> *phot_, <a class="el" href="classarc_1_1dom_1_1_cell.html">dom::Cell</a> *cell_, double dist_) const noexcept override</td></tr>
@@ -129,9 +129,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ab1649ab8cc4ee86c0155e9c57b3507a7"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1opt_1_1sop_1_1_simple.html#ab1649ab8cc4ee86c0155e9c57b3507a7">_dist</a></td></tr>
-<tr class="memdesc:ab1649ab8cc4ee86c0155e9c57b3507a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interaction distance.  <a href="#ab1649ab8cc4ee86c0155e9c57b3507a7">More...</a><br /></td></tr>
-<tr class="separator:ab1649ab8cc4ee86c0155e9c57b3507a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d681e25e1ddda017ba4aa7dba82986"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1opt_1_1sop_1_1_simple.html#a53d681e25e1ddda017ba4aa7dba82986">_interaction_coef</a></td></tr>
+<tr class="memdesc:a53d681e25e1ddda017ba4aa7dba82986"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interaction coefficient.  <a href="#a53d681e25e1ddda017ba4aa7dba82986">More...</a><br /></td></tr>
+<tr class="separator:a53d681e25e1ddda017ba4aa7dba82986"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2b1317d49e837ff8b078a3ac910af8b"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1opt_1_1sop_1_1_simple.html#ae2b1317d49e837ff8b078a3ac910af8b">_albedo</a></td></tr>
 <tr class="memdesc:ae2b1317d49e837ff8b078a3ac910af8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single scattering albedo.  <a href="#ae2b1317d49e837ff8b078a3ac910af8b">More...</a><br /></td></tr>
 <tr class="separator:ae2b1317d49e837ff8b078a3ac910af8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,8 +149,8 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classarc_1_1opt_1_1sop_1_1_simple.html">Simple</a> specific-optical-proeprties control class. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a77319e8bf4cfa25a9f5fd16cad8d901a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77319e8bf4cfa25a9f5fd16cad8d901a">&#9670;&nbsp;</a></span>Simple()</h2>
+<a id="a49a9daddb529dba0a3e7a29737216115"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49a9daddb529dba0a3e7a29737216115">&#9670;&nbsp;</a></span>Simple()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,7 +168,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dist_</em>, </td>
+          <td class="paramname"><em>interaction_coef_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -198,7 +198,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ref_index_</td><td>Refractive index. </td></tr>
-    <tr><td class="paramname">dist_</td><td>Interaction distance. </td></tr>
+    <tr><td class="paramname">interaction_coef_</td><td>Interaction coefficient. </td></tr>
     <tr><td class="paramname">albedo_</td><td>Single scattering albedo. </td></tr>
     <tr><td class="paramname">asym_</td><td>Asymmetry parameter.</td></tr>
   </table>
@@ -206,7 +206,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>ref_index_ must be greater than, or equal to, unity. </dd>
 <dd>
-dist_ must be positive. </dd>
+interaction_coef_ must be positive. </dd>
 <dd>
 albedo_ must be positive. </dd>
 <dd>
@@ -389,8 +389,8 @@ asym_ must less than, or equal to, unity. </dd></dl>
 
 </div>
 </div>
-<a id="ab1649ab8cc4ee86c0155e9c57b3507a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1649ab8cc4ee86c0155e9c57b3507a7">&#9670;&nbsp;</a></span>_dist</h2>
+<a id="a53d681e25e1ddda017ba4aa7dba82986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d681e25e1ddda017ba4aa7dba82986">&#9670;&nbsp;</a></span>_interaction_coef</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -399,7 +399,7 @@ asym_ must less than, or equal to, unity. </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const double arc::opt::sop::Simple::_dist</td>
+          <td class="memname">const double arc::opt::sop::Simple::_interaction_coef</td>
         </tr>
       </table>
   </td>
@@ -409,7 +409,7 @@ asym_ must less than, or equal to, unity. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Interaction distance. </p>
+<p>Interaction coefficient. </p>
 
 </div>
 </div>
@@ -420,7 +420,7 @@ asym_ must less than, or equal to, unity. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 30 2018 00:17:07 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Nov 8 2018 13:50:04 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

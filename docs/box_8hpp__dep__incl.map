@@ -3,10 +3,10 @@
 <area shape="rect" id="node3" href="$region_8hpp.html" title="include/arctk/dom/region.hpp" alt="" coords="5,185,198,211"/>
 <area shape="rect" id="node4" href="$actor_8inl.html" title="include/arctk/gui/actor.inl" alt="" coords="513,612,680,637"/>
 <area shape="rect" id="node24" href="$mesh_8hpp.html" title="include/arctk/geom\l/shape/mesh.hpp" alt="" coords="608,92,742,131"/>
-<area shape="rect" id="node32" href="$branch_8hpp.html" title="include/arctk/tree\l/node/branch.hpp" alt="" coords="1356,352,1482,391"/>
-<area shape="rect" id="node34" href="$root_8hpp.html" title="include/arctk/tree\l/root.hpp" alt="" coords="1183,525,1306,564"/>
-<area shape="rect" id="node35" href="$leaf_8hpp.html" title="include/arctk/tree\l/node/leaf.hpp" alt="" coords="1434,179,1556,217"/>
-<area shape="rect" id="node36" href="$node_8hpp.html" title="include/arctk/tree\l/node.hpp" alt="" coords="1532,92,1655,131"/>
+<area shape="rect" id="node33" href="$branch_8hpp.html" title="include/arctk/tree\l/node/branch.hpp" alt="" coords="1536,352,1662,391"/>
+<area shape="rect" id="node35" href="$root_8hpp.html" title="include/arctk/tree\l/root.hpp" alt="" coords="1336,525,1459,564"/>
+<area shape="rect" id="node36" href="$leaf_8hpp.html" title="include/arctk/tree\l/node/leaf.hpp" alt="" coords="1487,179,1610,217"/>
+<area shape="rect" id="node37" href="$node_8hpp.html" title="include/arctk/tree\l/node.hpp" alt="" coords="1734,92,1856,131"/>
 <area shape="rect" id="node16" href="$sop_2dumb_8inl.html" title="include/arctk/opt/sop\l/dumb.inl" alt="" coords="222,179,365,217"/>
 <area shape="rect" id="node20" href="$sop_2simple_8inl.html" title="include/arctk/opt/sop\l/simple.inl" alt="" coords="390,179,533,217"/>
 <area shape="rect" id="node5" href="$actor_8hpp.html" title="include/arctk/gui/actor.hpp" alt="" coords="508,685,684,711"/>
@@ -26,12 +26,13 @@
 <area shape="rect" id="node21" href="$sop_2simple_8hpp.html" title="include/arctk/opt/sop\l/simple.hpp" alt="" coords="390,265,533,304"/>
 <area shape="rect" id="node22" href="$mat_2simple_8inl.html" title="include/arctk/opt/mat\l/simple.inl" alt="" coords="389,352,534,391"/>
 <area shape="rect" id="node23" href="$mat_2simple_8hpp.html" title="include/arctk/opt/mat\l/simple.hpp" alt="" coords="389,439,534,477"/>
-<area shape="rect" id="node25" href="$entity_8hpp.html" title="include/arctk/equip\l/entity.hpp" alt="" coords="1022,179,1155,217"/>
-<area shape="rect" id="node26" href="$body_8hpp.html" title="include/arctk/equip\l/entity/body.hpp" alt="" coords="1074,265,1207,304"/>
-<area shape="rect" id="node27" href="$light_8hpp.html" title="include/arctk/equip\l/entity/light.hpp" alt="" coords="710,265,843,304"/>
-<area shape="rect" id="node29" href="$mirror_8hpp.html" title="include/arctk/equip\l/entity/mirror.hpp" alt="" coords="923,352,1056,391"/>
-<area shape="rect" id="node30" href="$mirror_8inl.html" title="include/arctk/equip\l/entity/mirror.inl" alt="" coords="866,265,999,304"/>
-<area shape="rect" id="node31" href="$branch_8inl.html" title="include/arctk/tree\l/node/branch.inl" alt="" coords="1332,265,1455,304"/>
-<area shape="rect" id="node33" href="$root_8inl.html" title="include/arctk/tree\l/root.inl" alt="" coords="1358,439,1480,477"/>
-<area shape="rect" id="node28" href="$laser_8hpp.html" title="include/arctk/equip\l/entity/light/laser.hpp" alt="" coords="710,352,853,391"/>
+<area shape="rect" id="node25" href="$entity_8hpp.html" title="include/arctk/equip\l/entity.hpp" alt="" coords="1074,179,1207,217"/>
+<area shape="rect" id="node26" href="$body_8hpp.html" title="include/arctk/equip\l/entity/body.hpp" alt="" coords="918,265,1051,304"/>
+<area shape="rect" id="node27" href="$light_8hpp.html" title="include/arctk/equip\l/entity/light.hpp" alt="" coords="1074,265,1207,304"/>
+<area shape="rect" id="node29" href="$mirror_8hpp.html" title="include/arctk/equip\l/entity/mirror.hpp" alt="" coords="762,352,895,391"/>
+<area shape="rect" id="node30" href="$mirror_8inl.html" title="include/arctk/equip\l/entity/mirror.inl" alt="" coords="710,265,843,304"/>
+<area shape="rect" id="node31" href="$sim_8hpp.html" title="include/arctk/torus\l/sim.hpp" alt="" coords="1230,265,1360,304"/>
+<area shape="rect" id="node32" href="$branch_8inl.html" title="include/arctk/tree\l/node/branch.inl" alt="" coords="1536,265,1659,304"/>
+<area shape="rect" id="node34" href="$root_8inl.html" title="include/arctk/tree\l/root.inl" alt="" coords="1438,439,1560,477"/>
+<area shape="rect" id="node28" href="$laser_8hpp.html" title="include/arctk/equip\l/entity/light/laser.hpp" alt="" coords="1069,352,1212,391"/>
 </map>

@@ -1,9 +1,0 @@
-<map id="arc::search::value::min" name="arc::search::value::min">
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1shape_1_1_box.html#a9cde8a9b6326466d668211348c07584d" title="arc::geom::shape::Box\l::intersect" alt="" coords="214,5,368,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_mesh.html#a99d3b8648e625769bfa4ea549a0d65bf" title="arc::geom::shape::Mesh\l::init_box" alt="" coords="209,68,373,107"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1gui_1_1actor.html#aa415db4a76b700c82cc899b033d55d19" title="arc::gui::actor::shape" alt="" coords="218,131,364,156"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1gui_1_1actor.html#afbd2cc1b6e2893ac05778bc975a32d5e" title="arc::gui::actor::domain" alt="" coords="214,180,368,205"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1gui_1_1actor.html#a528cb8607d80ad2c0008f38e8f1c2b63" title="arc::gui::actor::tree" alt="" coords="225,229,357,255"/>
-<area shape="rect" id="node7" href="$namespacearc_1_1parse_1_1write.html#ab26c48f1cddaaa74bff92879ac4371c6" title="arc::parse::write::\ltimestamp" alt="" coords="229,279,353,317"/>
-<area shape="rect" id="node8" href="$classarc_1_1tree_1_1node_1_1_branch.html#a920ac1b8616d3f82d1001764c4ccf627" title="arc::tree::node::Branch\l::init_childs" alt="" coords="212,341,369,380"/>
-</map>

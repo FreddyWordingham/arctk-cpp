@@ -11,6 +11,7 @@ var searchData=
   ['entity_2einl',['entity.inl',['../entity_8inl.html',1,'']]],
   ['equal',['equal',['../namespacearc_1_1math_1_1compare.html#abad9ddbaad39a082bc67db04ad1ea56d',1,'arc::math::compare']]],
   ['error_2ehpp',['error.hpp',['../error_8hpp.html',1,'']]],
+  ['exists',['exists',['../classarc_1_1data_1_1_obj.html#aecce6214e3949c305e6c3275c9c1eb5c',1,'arc::data::Obj']]],
   ['exp',['EXP',['../namespacearc_1_1consts_1_1math.html#ab07231a4ed02572cf56c522e2ad94b98',1,'arc::consts::math']]],
   ['extract_5fcontents',['extract_contents',['../namespacearc_1_1parse_1_1process.html#a71cef55843d9b7db0982a4b386b2013d',1,'arc::parse::process']]]
 ];

@@ -70,6 +70,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classarc_1_1opt_1_1mat_1_1_simple-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -103,8 +104,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a927a719c374336a1f6ff9bd17961385f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1opt_1_1mat_1_1_simple.html#a927a719c374336a1f6ff9bd17961385f">Simple</a> (const std::vector&lt; double &gt; &amp;wavelengths_, const std::vector&lt; double &gt; &amp;ref_indexs_, const std::vector&lt; double &gt; &amp;dists_, const std::vector&lt; double &gt; &amp;albedos_, const std::vector&lt; double &gt; &amp;asyms_) noexcept</td></tr>
-<tr class="separator:a927a719c374336a1f6ff9bd17961385f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addb32675281d9b73f26373a1398279b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1opt_1_1mat_1_1_simple.html#addb32675281d9b73f26373a1398279b7">Simple</a> (const std::vector&lt; double &gt; &amp;wavelengths_, const std::vector&lt; double &gt; &amp;ref_indexs_, const std::vector&lt; double &gt; &amp;scat_coef_, const std::vector&lt; double &gt; &amp;abs_coef_, const std::vector&lt; double &gt; &amp;asyms_) noexcept</td></tr>
+<tr class="separator:addb32675281d9b73f26373a1398279b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66d449808f580a06f3da204779736882"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classarc_1_1opt_1_1_sop.html">Sop</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1opt_1_1mat_1_1_simple.html#a66d449808f580a06f3da204779736882">gen</a> (const <a class="el" href="classarc_1_1phys_1_1_photon.html">phys::Photon</a> &amp;phot_) const noexcept override</td></tr>
 <tr class="separator:a66d449808f580a06f3da204779736882"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classarc_1_1opt_1_1_mat"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classarc_1_1opt_1_1_mat')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classarc_1_1opt_1_1_mat.html">arc::opt::Mat</a></td></tr>
@@ -129,14 +130,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abab58949dfcd08aac8e6ef739630ac26 inherit pub_methods_classarc_1_1opt_1_1_mat"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1opt_1_1_mat.html#abab58949dfcd08aac8e6ef739630ac26">max</a> () const noexcept</td></tr>
 <tr class="separator:abab58949dfcd08aac8e6ef739630ac26 inherit pub_methods_classarc_1_1opt_1_1_mat"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a2892146be79ca7f0095414bdf53cea8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarc_1_1math_1_1formula_1_1_linear.html">math::formula::Linear</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1opt_1_1mat_1_1_simple.html#a2892146be79ca7f0095414bdf53cea8e">init_interact_coef</a> (const std::vector&lt; double &gt; &amp;wavelengths_, const std::vector&lt; double &gt; &amp;scat_coef_, const std::vector&lt; double &gt; &amp;abs_coef_) const noexcept</td></tr>
+<tr class="separator:a2892146be79ca7f0095414bdf53cea8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae74bff361ec447030ba506668586a91b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarc_1_1math_1_1formula_1_1_linear.html">math::formula::Linear</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1opt_1_1mat_1_1_simple.html#ae74bff361ec447030ba506668586a91b">init_albedo</a> (const std::vector&lt; double &gt; &amp;wavelengths_, const std::vector&lt; double &gt; &amp;scat_coef_, const std::vector&lt; double &gt; &amp;abs_coef_) const noexcept</td></tr>
+<tr class="separator:ae74bff361ec447030ba506668586a91b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a40f91bc72de6818f78c9230f03d7500f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classarc_1_1math_1_1formula_1_1_linear.html">math::formula::Linear</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1opt_1_1mat_1_1_simple.html#a40f91bc72de6818f78c9230f03d7500f">_ref_index</a></td></tr>
 <tr class="memdesc:a40f91bc72de6818f78c9230f03d7500f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refractive index.  <a href="#a40f91bc72de6818f78c9230f03d7500f">More...</a><br /></td></tr>
 <tr class="separator:a40f91bc72de6818f78c9230f03d7500f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6ffca2fa54cd62039874babdca3f404"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classarc_1_1math_1_1formula_1_1_linear.html">math::formula::Linear</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1opt_1_1mat_1_1_simple.html#ab6ffca2fa54cd62039874babdca3f404">_dist</a></td></tr>
-<tr class="memdesc:ab6ffca2fa54cd62039874babdca3f404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interaction distance.  <a href="#ab6ffca2fa54cd62039874babdca3f404">More...</a><br /></td></tr>
-<tr class="separator:ab6ffca2fa54cd62039874babdca3f404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaedd4193d71dc89436bf5172c972785f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classarc_1_1math_1_1formula_1_1_linear.html">math::formula::Linear</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1opt_1_1mat_1_1_simple.html#aaedd4193d71dc89436bf5172c972785f">_interact_coef</a></td></tr>
+<tr class="memdesc:aaedd4193d71dc89436bf5172c972785f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interaction distance.  <a href="#aaedd4193d71dc89436bf5172c972785f">More...</a><br /></td></tr>
+<tr class="separator:aaedd4193d71dc89436bf5172c972785f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb0c13a1ed45e35446fc89f51efa63df"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classarc_1_1math_1_1formula_1_1_linear.html">math::formula::Linear</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1opt_1_1mat_1_1_simple.html#abb0c13a1ed45e35446fc89f51efa63df">_albedo</a></td></tr>
 <tr class="memdesc:abb0c13a1ed45e35446fc89f51efa63df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single scattering albedo.  <a href="#abb0c13a1ed45e35446fc89f51efa63df">More...</a><br /></td></tr>
 <tr class="separator:abb0c13a1ed45e35446fc89f51efa63df"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,8 +155,8 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Material with simple optical properties. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a927a719c374336a1f6ff9bd17961385f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a927a719c374336a1f6ff9bd17961385f">&#9670;&nbsp;</a></span>Simple()</h2>
+<a id="addb32675281d9b73f26373a1398279b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addb32675281d9b73f26373a1398279b7">&#9670;&nbsp;</a></span>Simple()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -172,13 +180,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>dists_</em>, </td>
+          <td class="paramname"><em>scat_coef_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>albedos_</em>, </td>
+          <td class="paramname"><em>abs_coef_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -203,42 +211,40 @@ Private Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">wavelengths_</td><td>Wavelengths. </td></tr>
     <tr><td class="paramname">ref_indexs_</td><td>Corresponding refractive indices. </td></tr>
-    <tr><td class="paramname">dists_</td><td>Corresponding interaction distances. </td></tr>
-    <tr><td class="paramname">albedos_</td><td>Corresponding single scattering albedos. </td></tr>
+    <tr><td class="paramname">scat_coef_</td><td>Corresponding scattering coefficients. </td></tr>
+    <tr><td class="paramname">abs_coef_</td><td>Corresponding absorption coefficients. </td></tr>
     <tr><td class="paramname">asyms_</td><td>Corresponding symmetry factors.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>wavelengths_ must all be greater than zero. </dd>
+<dl class="section pre"><dt>Precondition</dt><dd>wavelengths_ values must all be positive. </dd>
 <dd>
-wavelengths_ must be ascending. </dd>
+wavelengths_ values must be ascending. </dd>
 <dd>
-ref_indexs_ must be the same size as wavelengths_. </dd>
+ref_indexs_ values must be the same size as wavelengths_. </dd>
 <dd>
-ref_indexs_ must all be greater than, or equal to, unity. </dd>
+ref_indexs_ values must all be greater than, or equal to, unity. </dd>
 <dd>
-dists_ must be the same size as wavelengths_. </dd>
+scat_coef_ values must be the same size as wavelengths_. </dd>
 <dd>
-dists_ must all be positive. </dd>
+scat_coef_ values must all be positive. </dd>
 <dd>
-albedos_ must be the same size as wavelengths_. </dd>
+abs_coef_ values must be the same size as wavelengths_. </dd>
 <dd>
-albedos_ must all be positive. </dd>
+abs_coef_ values must all be positive. </dd>
 <dd>
-albedos_ must all less than, or equal to, unity. </dd>
+asyms_ values must be the same size as wavelengths_. </dd>
 <dd>
-asyms_ must be the same size as wavelengths_. </dd>
+asyms_ values must all greater than, or equal to, minus one. </dd>
 <dd>
-asyms_ must all greater than, or equal to, minus one. </dd>
-<dd>
-asyms_ must all less than, or equal to, unity. </dd></dl>
+asyms_ values must all less than, or equal to, unity. </dd></dl>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classarc_1_1opt_1_1mat_1_1_simple_a927a719c374336a1f6ff9bd17961385f_cgraph.png" border="0" usemap="#classarc_1_1opt_1_1mat_1_1_simple_a927a719c374336a1f6ff9bd17961385f_cgraph" alt=""/></div>
-<map name="classarc_1_1opt_1_1mat_1_1_simple_a927a719c374336a1f6ff9bd17961385f_cgraph" id="classarc_1_1opt_1_1mat_1_1_simple_a927a719c374336a1f6ff9bd17961385f_cgraph">
+<div class="center"><img src="classarc_1_1opt_1_1mat_1_1_simple_addb32675281d9b73f26373a1398279b7_cgraph.png" border="0" usemap="#classarc_1_1opt_1_1mat_1_1_simple_addb32675281d9b73f26373a1398279b7_cgraph" alt=""/></div>
+<map name="classarc_1_1opt_1_1mat_1_1_simple_addb32675281d9b73f26373a1398279b7_cgraph" id="classarc_1_1opt_1_1mat_1_1_simple_addb32675281d9b73f26373a1398279b7_cgraph">
 <area shape="rect" id="node2" href="namespacearc_1_1prop_1_1limits.html#a5a87121633b177b9265366ff74b0b8ba" title="arc::prop::limits::\lalways_greater_than" alt="" coords="215,5,360,44"/>
 <area shape="rect" id="node3" href="namespacearc_1_1prop_1_1order.html#aa4093b496503227bc6426506da50ad41" title="arc::prop::order::ascending" alt="" coords="197,68,378,93"/>
 <area shape="rect" id="node6" href="namespacearc_1_1prop_1_1limits.html#afae63c4f6c4685948edcda990d288ecd" title="arc::prop::limits::\lalways_greater_than\l_or_equal_to" alt="" coords="215,117,360,169"/>
@@ -284,6 +290,164 @@ asyms_ must all less than, or equal to, unity. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Specific-optical-properties for the given photon. </dd></dl>
 
 <p>Implements <a class="el" href="classarc_1_1opt_1_1_mat.html#a2213aabdaeda4bcba9f3b61abdb17475">arc::opt::Mat</a>.</p>
+
+</div>
+</div>
+<a id="ae74bff361ec447030ba506668586a91b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae74bff361ec447030ba506668586a91b">&#9670;&nbsp;</a></span>init_albedo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classarc_1_1math_1_1formula_1_1_linear.html">math::formula::Linear</a> arc::opt::mat::Simple::init_albedo </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>wavelengths_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>scat_coef_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>abs_coef_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initialise the albedo linear formula.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wavelengths_</td><td>Wavelengths. </td></tr>
+    <tr><td class="paramname">scat_coef_</td><td>Corresponding scattering coefficients. </td></tr>
+    <tr><td class="paramname">abs_coef_</td><td>Corresponding absorption coefficients.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>wavelengths_ values must all be positive. </dd>
+<dd>
+wavelengths_ values must be ascending. </dd>
+<dd>
+scat_coef_ values must be the same size as wavelengths_. </dd>
+<dd>
+scat_coef_ values must all be positive. </dd>
+<dd>
+abs_coef_ values must be the same size as wavelengths_. </dd>
+<dd>
+abs_coef_ values must all be positive.</dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>albedo must all be non-negative. </dd>
+<dd>
+albedo must all be less than, or equal to, unity.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Initialised albedo linear formula. </dd></dl>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1opt_1_1mat_1_1_simple_ae74bff361ec447030ba506668586a91b_cgraph.png" border="0" usemap="#classarc_1_1opt_1_1mat_1_1_simple_ae74bff361ec447030ba506668586a91b_cgraph" alt=""/></div>
+<map name="classarc_1_1opt_1_1mat_1_1_simple_ae74bff361ec447030ba506668586a91b_cgraph" id="classarc_1_1opt_1_1mat_1_1_simple_ae74bff361ec447030ba506668586a91b_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1prop_1_1limits.html#a5a87121633b177b9265366ff74b0b8ba" title="arc::prop::limits::\lalways_greater_than" alt="" coords="215,5,360,44"/>
+<area shape="rect" id="node3" href="namespacearc_1_1prop_1_1order.html#aa4093b496503227bc6426506da50ad41" title="arc::prop::order::ascending" alt="" coords="197,68,378,93"/>
+<area shape="rect" id="node6" href="namespacearc_1_1prop_1_1limits.html#afae63c4f6c4685948edcda990d288ecd" title="arc::prop::limits::\lalways_greater_than\l_or_equal_to" alt="" coords="215,117,360,169"/>
+<area shape="rect" id="node7" href="namespacearc_1_1prop_1_1limits.html#a48f3c2364fbb5e9f7ee38bf5a03b1abe" title="arc::prop::limits::\lalways_less_than_or\l_equal_to" alt="" coords="214,193,360,245"/>
+<area shape="rect" id="node4" href="namespacearc_1_1index_1_1rotate.html#a7f591e13cc190f28640512d8d8339fb6" title="arc::index::rotate\l::prev" alt="" coords="426,31,546,69"/>
+<area shape="rect" id="node5" href="namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="426,93,546,132"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2892146be79ca7f0095414bdf53cea8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2892146be79ca7f0095414bdf53cea8e">&#9670;&nbsp;</a></span>init_interact_coef()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classarc_1_1math_1_1formula_1_1_linear.html">math::formula::Linear</a> arc::opt::mat::Simple::init_interact_coef </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>wavelengths_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>scat_coef_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>abs_coef_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initialise the interaction coefficient linear formula.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wavelengths_</td><td>Wavelengths. </td></tr>
+    <tr><td class="paramname">scat_coef_</td><td>Corresponding scattering coefficients. </td></tr>
+    <tr><td class="paramname">abs_coef_</td><td>Corresponding absorption coefficients.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>wavelengths_ values must all be positive. </dd>
+<dd>
+wavelengths_ values must be ascending. </dd>
+<dd>
+scat_coef_ values must be the same size as wavelengths_. </dd>
+<dd>
+scat_coef_ values must all be positive. </dd>
+<dd>
+abs_coef_ values must be the same size as wavelengths_. </dd>
+<dd>
+abs_coef_ values must all be positive.</dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>interact_coef must all be positive.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Initialised interaction coefficient linear formula. </dd></dl>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1opt_1_1mat_1_1_simple_a2892146be79ca7f0095414bdf53cea8e_cgraph.png" border="0" usemap="#classarc_1_1opt_1_1mat_1_1_simple_a2892146be79ca7f0095414bdf53cea8e_cgraph" alt=""/></div>
+<map name="classarc_1_1opt_1_1mat_1_1_simple_a2892146be79ca7f0095414bdf53cea8e_cgraph" id="classarc_1_1opt_1_1mat_1_1_simple_a2892146be79ca7f0095414bdf53cea8e_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1prop_1_1limits.html#a5a87121633b177b9265366ff74b0b8ba" title="arc::prop::limits::\lalways_greater_than" alt="" coords="215,5,360,44"/>
+<area shape="rect" id="node3" href="namespacearc_1_1prop_1_1order.html#aa4093b496503227bc6426506da50ad41" title="arc::prop::order::ascending" alt="" coords="197,68,378,93"/>
+<area shape="rect" id="node4" href="namespacearc_1_1index_1_1rotate.html#a7f591e13cc190f28640512d8d8339fb6" title="arc::index::rotate\l::prev" alt="" coords="426,29,546,68"/>
+<area shape="rect" id="node5" href="namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="426,92,546,131"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -336,8 +500,8 @@ asyms_ must all less than, or equal to, unity. </dd></dl>
 
 </div>
 </div>
-<a id="ab6ffca2fa54cd62039874babdca3f404"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6ffca2fa54cd62039874babdca3f404">&#9670;&nbsp;</a></span>_dist</h2>
+<a id="aaedd4193d71dc89436bf5172c972785f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaedd4193d71dc89436bf5172c972785f">&#9670;&nbsp;</a></span>_interact_coef</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -346,7 +510,7 @@ asyms_ must all less than, or equal to, unity. </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classarc_1_1math_1_1formula_1_1_linear.html">math::formula::Linear</a> arc::opt::mat::Simple::_dist</td>
+          <td class="memname">const <a class="el" href="classarc_1_1math_1_1formula_1_1_linear.html">math::formula::Linear</a> arc::opt::mat::Simple::_interact_coef</td>
         </tr>
       </table>
   </td>
@@ -391,7 +555,7 @@ asyms_ must all less than, or equal to, unity. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 30 2018 00:17:07 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Nov 8 2018 13:50:04 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
