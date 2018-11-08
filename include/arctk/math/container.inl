@@ -116,7 +116,7 @@ namespace arc //! arctk namespace
              *
              *  @param  cont_   Container to test.
              *
-             *  @return Minmum element value within the multi-dimensional container.
+             *  @return Minimum element value within the multi-dimensional container.
              */
             template <typename T>
             inline typename type::temp::core_type<T>::type min(const T& cont_) noexcept
