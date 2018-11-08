@@ -153,6 +153,13 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Checking --
+        /**
+         *  Determine if a key exists within the data map of key-value string pairs.
+         *
+         *  @param  key_    Key to test.
+         *
+         *  @return True if the key exists within the data map of key-value string pairs.
+         */
         inline bool Obj::exists(const std::string& key_) const noexcept
         {
             return (_data.count(key_) > 0);
