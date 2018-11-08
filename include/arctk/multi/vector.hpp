@@ -54,6 +54,11 @@ namespace arc //! arctk namespace
 
 
         //  == ALIASES ==
+        /**
+         *  Alias used to construct multi-dimensional vectors.
+         *
+         *  @tparam N   Dimensionality of the multi-dimensional vector.
+         */
         template <class T, size_t N>
         using vector = typename vector_helper<T, N>::type;
 
