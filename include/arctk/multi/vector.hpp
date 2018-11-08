@@ -35,7 +35,7 @@ namespace arc //! arctk namespace
          *  @tparam N   Dimensionality of the multi-dimensional vector.
          */
         template <class T, size_t N>
-        struct vector_helper
+        struct vector_helper // NOLINT
         {
             using type = std::vector<typename vector_helper<T, N - 1>::type>; //!< Type alias.
         };
@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
          *  @tparam T   Type stored by the multi-dimensional vector.
          */
         template <class T>
-        struct vector_helper<T, 1>
+        struct vector_helper<T, 1> // NOLINT
         {
             using type = std::vector<T>; //!< Type alias.
         };
