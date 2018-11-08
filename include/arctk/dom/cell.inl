@@ -101,7 +101,11 @@ namespace arc //! arctk namespace
         {
             assert(scatters_ > 0.0);
 
+            _write_mutex.lock();
+
             _scatters += scatters_;
+
+            _write_mutex.unlock();
         }
 
         /**
@@ -115,7 +119,11 @@ namespace arc //! arctk namespace
         {
             assert(absorbs_ > 0.0);
 
+            _write_mutex.lock();
+
             _absorbs += absorbs_;
+
+            _write_mutex.unlock();
         }
 
         /**
@@ -129,7 +137,11 @@ namespace arc //! arctk namespace
         {
             assert(energy_ > 0.0);
 
+            _write_mutex.lock();
+
             _energy += energy_;
+
+            _write_mutex.unlock();
         }
 
 
