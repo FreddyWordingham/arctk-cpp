@@ -99,6 +99,9 @@ namespace arc //! arctk namespace
             {
             };
 
+            /**
+             *  Helper structure used to determine if a type is an iterable.
+             */
             template <typename, typename, typename, typename>
             struct is_iterable_helper
             {
