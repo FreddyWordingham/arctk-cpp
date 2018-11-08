@@ -64,7 +64,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type stored by the vector.
              */
             template <typename T>
-            struct is_vector<std::vector<T>> : public std::true_type
+            struct is_vector<std::vector<T>> : public std::true_type // NOLINT
             {
             };
 
@@ -85,7 +85,7 @@ namespace arc //! arctk namespace
              *  @tparam N   Size of the array.
              */
             template <typename T, size_t N>
-            struct is_array<std::array<T, N>> : public std::true_type
+            struct is_array<std::array<T, N>> : public std::true_type // NOLINT
             {
             };
 
@@ -95,7 +95,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type being queried.
              */
             template <typename T, typename _ = void>
-            struct is_iterable : public std::false_type
+            struct is_iterable : public std::false_type // NOLINT
             {
             };
 
@@ -103,7 +103,7 @@ namespace arc //! arctk namespace
              *  Helper structure used to determine if a type is an iterable.
              */
             template <typename, typename, typename, typename>
-            struct is_iterable_helper
+            struct is_iterable_helper // NOLINT
             {
             };
 
@@ -113,7 +113,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type being queried.
              */
             template <typename T>
-            struct is_iterable<T, std::conditional_t<false, is_iterable_helper<typename T::value_type, typename T::const_iterator, decltype(std::begin(std::declval<T>())), decltype(std::end(std::declval<T>()))>, void>> : public std::true_type
+            struct is_iterable<T, std::conditional_t<false, is_iterable_helper<typename T::value_type, typename T::const_iterator, decltype(std::begin(std::declval<T>())), decltype(std::end(std::declval<T>()))>, void>> : public std::true_type // NOLINT
             {
             };
 
@@ -123,7 +123,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type to
              */
             template <typename T, typename = void>
-            struct core_type
+            struct core_type // NOLINT
             {
                 typedef T type; //!< Core type.
             };
@@ -134,7 +134,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type being queried.
              */
             template <typename T>
-            struct core_type<T, typename std::enable_if_t<is_iterable<T>::value>>
+            struct core_type<T, typename std::enable_if_t<is_iterable<T>::value>> // NOLINT
             {
                 typedef typename core_type<typename T::value_type>::type type; //!< Core type.
             };
@@ -158,7 +158,7 @@ namespace arc //! arctk namespace
              *  @tparam N   Size of the vec.
              */
             template <typename T, size_t N>
-            struct is_vec<math::Vec<T, N>> : public std::true_type
+            struct is_vec<math::Vec<T, N>> : public std::true_type // NOLINT
             {
             };
 
@@ -179,7 +179,7 @@ namespace arc //! arctk namespace
              *  @tparam N   Size of the mat.
              */
             template <typename T, size_t N>
-            struct is_mat<math::Mat<T, N>> : public std::true_type
+            struct is_mat<math::Mat<T, N>> : public std::true_type // NOLINT
             {
             };
 
