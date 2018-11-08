@@ -37,7 +37,7 @@ namespace arc //! arctk namespace
         template <class T, size_t N>
         struct vector_helper
         {
-            using type = std::vector<typename vector_helper<T, N - 1>::type>;
+            using type = std::vector<typename vector_helper<T, N - 1>::type>; //!< Type alias.
         };
 
         /**
@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
         template <class T>
         struct vector_helper<T, 1>
         {
-            using type = std::vector<T>;
+            using type = std::vector<T>; //!< Type alias.
         };
 
 
