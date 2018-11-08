@@ -107,6 +107,11 @@ namespace arc //! arctk namespace
             {
             };
 
+            /**
+             *  Specialisation for iterable types.
+             *
+             *  @tparam T   Type being queried.
+             */
             template <typename T>
             struct is_iterable<T, std::conditional_t<false, is_iterable_helper<typename T::value_type, typename T::const_iterator, decltype(std::begin(std::declval<T>())), decltype(std::end(std::declval<T>()))>, void>> : public std::true_type
             {
