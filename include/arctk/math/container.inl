@@ -143,6 +143,15 @@ namespace arc //! arctk namespace
                 }
             }
 
+            /**
+             *  Determine the maximum value of all elements within a multi-dimensional container.
+             *
+             *  @tparam T   Type of container.
+             *
+             *  @param  cont_   Container to test.
+             *
+             *  @return Maximum element value within the multi-dimensional container.
+             */
             template <typename T>
             inline typename type::temp::core_type<T>::type max(const T& cont_) noexcept
             {
