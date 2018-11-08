@@ -62,18 +62,9 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
-            //  -- Materials --
-            std::unique_ptr<opt::Mat>& _aether;
-
-            //  -- Entities --
-            std::vector<std::unique_ptr<equip::Entity>> _ents;
-            std::vector<equip::entity::Light*>          _lights;
-
-
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Sim(const data::Obj& param_) noexcept;
 
           private:
             //  -- Initialisation --
