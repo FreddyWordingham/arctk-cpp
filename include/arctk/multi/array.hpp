@@ -36,7 +36,7 @@ namespace arc //! arctk namespace
          *  @tparam Ns  Sizes of child arrays.
          */
         template <class T, size_t N, size_t... Ns>
-        struct array_helper
+        struct array_helper // NOLINT
         {
             using type = std::array<typename array_helper<T, Ns...>::type, N>; //!< Type alias.
         };
@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
          *  @tparam N   Size of this multi-dimensional array.
          */
         template <class T, size_t N>
-        struct array_helper<T, N>
+        struct array_helper<T, N> // NOLINT
         {
             using type = std::array<T, N>; //!< Type alias.
         };
