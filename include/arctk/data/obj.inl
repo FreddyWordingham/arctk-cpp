@@ -142,7 +142,7 @@ namespace arc //! arctk namespace
          */
         inline Obj Obj::operator[](const std::string& key_) const noexcept
         {
-            assert(_data.count(key_) == 1);
+            assert(exists(key_));
 
             std::string str = _data.find(key_)->second;
 
