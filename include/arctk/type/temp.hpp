@@ -117,6 +117,11 @@ namespace arc //! arctk namespace
             {
             };
 
+            /**
+             *  Structure used to determine the core type of a multi-dimensional iterable type.
+             *
+             *  @tparam T   Type to
+             */
             template <typename T, typename = void>
             struct core_type : public std::false_type
             {
