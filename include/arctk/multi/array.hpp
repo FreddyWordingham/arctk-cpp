@@ -56,6 +56,12 @@ namespace arc //! arctk namespace
 
 
         //  == ALIASES ==
+        /**
+         *  Alias used to construct multi-dimensional arrays.
+         *
+         *  @tparam T   Type stored by the multi-dimensional array.
+         *  @tparam Ns  Size of each array dimension.
+         */
         template <class T, size_t... Ns>
         using array = typename array_helper<T, Ns...>::type;
 
