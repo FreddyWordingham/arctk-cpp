@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Obj(const std::string& serial_) noexcept;
+            inline explicit Obj(const std::string& serial_) noexcept;
 
           private:
             //  -- Initialisation --
