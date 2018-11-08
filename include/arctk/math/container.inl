@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
             /**
              *  Determine the number of end elements in a multi-dimensional container.
              *
-             *  @tparam T   Type to test.
+             *  @tparam T   Type of container.
              *
              *  @param  cont_   Container to test.
              *
@@ -109,6 +109,15 @@ namespace arc //! arctk namespace
                 return (sum(cont_) / num_elem(cont_));
             }
 
+            /**
+             *  Determine the minimum value of all elements within a multi-dimensional container.
+             *
+             *  @tparam T   Type of container.
+             *
+             *  @param  cont_   Container to test.
+             *
+             *  @return Minmum element value within the multi-dimensional container.
+             */
             template <typename T>
             inline typename type::temp::core_type<T>::type min(const T& cont_) noexcept
             {
