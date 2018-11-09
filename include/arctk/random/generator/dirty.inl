@@ -53,6 +53,16 @@ namespace arc //! arctk namespace
                 return (_u);
             }
 
+            /**
+             *  Generate a floating point value between zero and unity.
+             *
+             *  @return Floating point value between zero and unity.
+             */
+            inline double Dirty::gen() noexcept
+            {
+                return (static_cast<double>(gen_base()) * (1.0 / static_cast<double>(std::numeric_limits<uint64_t>::max())));
+            }
+
 
 
         } // namespace generator
