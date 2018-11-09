@@ -16,6 +16,7 @@
 #include <arctk/random/distribution/linear.hpp>
 #include <arctk/random/generator.hpp>
 #include <arctk/random/generator/dirty.hpp>
+#include <arctk/random/generator/fast.hpp>
 #include <arctk/random/generator/quality.hpp>
 
 
