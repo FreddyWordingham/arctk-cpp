@@ -26,6 +26,16 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a dirty generator.
+             */
+            inline Dirty::Dirty() noexcept
+              : _u(_seed)
+            {
+                gen_base();
+                gen_base();
+                gen_base();
+            }
 
 
 
