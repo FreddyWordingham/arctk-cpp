@@ -66,6 +66,7 @@ namespace arc //! arctk namespace
                 float colourmap_red(const float t_x);
                 float colourmap_green(const float t_x);
                 float colourmap_blue(const float t_x);
+                vec3 hsv2rgb(vec3 c);
 
 
 
@@ -75,7 +76,7 @@ namespace arc //! arctk namespace
                     gl_Position = proj * view * model * vec4(pos, 1.0);
 
 //                    vert_col  = colourmap((wavelength - 400E-9) / 300E-9);
-                    vert_col  = colourmap((cos(phase)+1.0)*0.5);
+                    vert_col  = vec4(hsv2rgb(vec3(phase, 1.0, 1.0)), 1.0);
                     vert_time = time;
                 }
 
@@ -127,6 +128,13 @@ namespace arc //! arctk namespace
 
                     return ((-4.0 * t_x) + 2.5);
                 }
+
+vec3 hsv2rgb(vec3 c)
+{
+    vec4 K = vec4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
+    vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
+    return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
+}
             )""; //!< Ray vertex subshader source code.
             constexpr const char* const RAY_SOURCE_FRAG = R""(
                 //  == VERSION ==
