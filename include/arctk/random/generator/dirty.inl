@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
              */
             inline uint64_t Dirty::gen_base() noexcept
             {
-                _u = (1664525 * _u) + 1013904223;
+                _u = (static_cast<uint64_t>(1664525) * _u) + static_cast<uint64_t>(1013904223);
 
                 return (_u);
             }
