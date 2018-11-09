@@ -41,6 +41,17 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Generation --
+            /**
+             *  Generate a base value which can then be transformed into a double.
+             *
+             *  @return Random integral value.
+             */
+            inline uint64_t Dirty::gen_base() noexcept
+            {
+                _u = (1664525 * _u) + 1013904223;
+
+                return (_u);
+            }
 
 
 
