@@ -68,6 +68,11 @@ namespace arc //! arctk namespace
             assert(!output_dir_.empty());
 
             _output_dir = output_dir_;
+
+            if (_output_dir.back() != '/')
+            {
+                _output_dir += '/';
+            }
         }
 
 
@@ -87,7 +92,7 @@ namespace arc //! arctk namespace
 
         inline void Sim::write_pre_flight_info() const noexcept
         {
-            std::ofstream file();
+            std::ofstream file(_output_dir + PRE_FLIGHT_FILENAME);
         }
 
 
