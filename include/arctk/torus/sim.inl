@@ -24,6 +24,8 @@
 #include <type_traits>
 
 //  -- Arctk --
+#include <arctk/config/build.hpp>
+#include <arctk/config/version.hpp>
 #include <arctk/data/obj.hpp>
 #include <arctk/equip/entity.hpp>
 #include <arctk/equip/entity/detector.hpp>
@@ -151,7 +153,21 @@ namespace arc //! arctk namespace
         {
             std::ofstream file(_output_dir + INFO_FILENAME);
 
-            file << "Threads used: " << _num_threads << '\n';
+            file << "Built using the Arctk library.\nArctk version          : " << config::version::MAJOR << '.' config::version::MINOR << '.' config::version::PATCH << '\n'
+                 << "Arctk directory        : " << config::build::DIR << '\n'
+                 << "Arctk branch           : " << config::build::BRANCH << '\n'
+                 << "Arctk build hash       : " << config::build::HASH << '\n'
+                 << "Arctk compiler         : " << config::build::COMPILER << '\n'
+                 << "Arctk build type       : " << config::build::TYPE << '\n'
+                 << "Arctk build date       : " << config::build::DATE << "\n\n";
+
+            file << "Output directory       : " << _output_dir << "\n\n";
+
+            file << "Threads used           : " << _num_threads << "\n\n";
+
+            file << "Total entities         : " << _entities.size() << '\n' << "Of which are lights    : " << _entities.size() << '\n' << "Of which are detectors : " << _entities.size() << "\n\n";
+
+            file << "Total photons          : " << total_phot() << '\n' << "Total light power: " << total_power() << "W\n\n";
         }
 
         inline unsigned long int Sim::total_phot() const noexcept
