@@ -45,6 +45,8 @@ namespace arc //! arctk namespace
               , _colour_map([](const double x_) { return (vec3(x_, x_, x_)); })
             {
                 assert(prop::shape::square(pixels_));
+                assert(!pixels_.empty());
+                assert(!pixels_.front().empty());
                 assert(_max >= _min);
             }
 
