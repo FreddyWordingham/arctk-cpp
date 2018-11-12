@@ -15,6 +15,7 @@
 #include <arctk/geom/shape/box.hpp>
 #include <arctk/geom/shape/mesh.hpp>
 #include <arctk/geom/shape/triangle.hpp>
+#include <arctk/geom/wavefront.hpp>
 
 
 
