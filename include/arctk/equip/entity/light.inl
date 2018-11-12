@@ -91,7 +91,15 @@ namespace arc //! arctk namespace
                 return (_num_phot);
             }
 
-            inline double phot_power() const noexcept;
+            /**
+             *  Get the Power of each photon to be emitted by the light source.
+             *
+             *  @return Power of each photon to be emitted by the light source.
+             */
+            inline double Light::phot_power() const noexcept
+            {
+                return (phot_power_);
+            }
 
 
             //  -- Collision --
