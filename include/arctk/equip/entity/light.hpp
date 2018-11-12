@@ -81,11 +81,11 @@ namespace arc //! arctk namespace
                 //  -- Material --
                 const opt::Mat& _mat; //!< Material to emit photons into.
 
-              private:
                 //  -- Power --
                 const double            _power;    //!< Power of the light.
                 const unsigned long int _num_phot; //!< Number of photons for the light source to emit.
 
+              private:
                 //  -- Killing --
                 const bool _kill; //!< False if photon is killed upon hit.
 
