@@ -53,6 +53,9 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Access --
+            inline const double& operator[](const size_t index_) const noexcept;
+            inline double&       operator[](const size_t index_) noexcept;
+
 
             //  == METHODS ==
           public:

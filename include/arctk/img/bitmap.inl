@@ -43,6 +43,24 @@ namespace arc //! arctk namespace
 
 
 
+        //  == OPERATORS ==
+        //  -- Access --
+        inline const double& Bitmap::operator[](const size_t index_) const noexcept
+        {
+            assert(index_ <= _data.size());
+
+            return (_data[index_]);
+        }
+
+        inline double& Bitmap::operator[](const size_t index_) noexcept
+        {
+            assert(index_ <= _data.size());
+
+            return (_data[index_]);
+        }
+
+
+
         //  == METHODS ==
         //  -- Setters --
         inline void Bitmap::set_min(const double min_) noexcept
