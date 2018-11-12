@@ -87,7 +87,7 @@ namespace arc //! arctk namespace
                     //  == METHODS ==
                   public:
                     //  -- Emission --
-                    inline std::tuple<phys::Photon, const opt::Mat*, std::unique_ptr<opt::Sop>> emit(random::Generator* rng_, double energy_, double time_) const noexcept override;
+                    inline std::tuple<phys::Photon, const opt::Mat*, std::unique_ptr<opt::Sop>> emit(random::Generator* rng_, double time_) const noexcept override;
                 };
 
 
