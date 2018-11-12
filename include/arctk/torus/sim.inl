@@ -95,7 +95,7 @@ namespace arc //! arctk namespace
                 return;
             }
 
-            _res = {{res_, res_, res_}};
+            _res = std::array<size_t, 3>({{res_, res_, res_}});
         }
 
         inline void Sim::set_res(const std::array<size_t, 3>& res_) noexcept
