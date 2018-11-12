@@ -93,7 +93,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Light(const geom::shape::Mesh& surf_, const opt::Mat& mat_, double power_, bool kill_) noexcept;
+                inline Light(const geom::shape::Mesh& surf_, const opt::Mat& mat_, double power_, unsigned long int num_phot_, bool kill_) noexcept;
                 inline Light(const Light&) = default; //!< Defaulted copy constructor.
                 inline Light(Light&&)      = default; //!< Defaulted move constructor.
 
