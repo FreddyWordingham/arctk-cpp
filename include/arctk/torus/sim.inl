@@ -167,7 +167,7 @@ namespace arc //! arctk namespace
 
             file << "Total entities         : " << _entities.size() << '\n' << "Of which are lights    : " << _lights.size() << '\n' << "Of which are detectors : " << _detectors.size() << "\n\n";
 
-            file << "Total photons          : " << total_phot() << '\n' << "Total light power: " << total_power() << "W\n\n";
+            file << "Total photons          : " << total_phot() << '\n' << "Total light power      : " << total_power() << "W\n\n";
         }
 
         inline unsigned long int Sim::total_phot() const noexcept
