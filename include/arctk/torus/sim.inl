@@ -41,6 +41,8 @@ namespace arc //! arctk namespace
         inline Sim::Sim(const vec3& min_, const vec3& max_) noexcept
           : _min(min_)
           , _max(max_)
+          , _num_threads(1)
+          , _output_dir("output/")
         {
             assert(min_.x < max_.x);
             assert(min_.y < max_.y);
