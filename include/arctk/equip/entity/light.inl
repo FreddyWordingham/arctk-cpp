@@ -54,6 +54,7 @@ namespace arc //! arctk namespace
               , _mat(mat_)
               , _power(power_)
               , _num_phot(num_phot_)
+              , _phot_power(power_ / num_phot_)
               , _kill(kill_)
             {
                 assert(power_ > 0.0);
