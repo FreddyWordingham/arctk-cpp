@@ -24,14 +24,14 @@ namespace arc //! arctk namespace
 
 
 
-        //  == CONSTANTS ==
-        //  -- Build Information --
-        constexpr const char* DIR      = "@ARCTK_DIR@";      //!< Build directory.
-        constexpr const char* BRANCH   = "@ARCTK_BRANCH@";   //!< Build branch.
-        constexpr const char* HASH     = "@ARCTK_HASH@";     //!< Git hash.
-        constexpr const char* COMPILER = "@ARCTK_COMPILER@"; //!< Compiler id.
-        constexpr const char* TYPE     = "@ARCTK_TYPE@";     //!< Optimisation type.
-        constexpr const char* DATE     = "@ARCTK_DATE@";     //!< Build date
+            //  == CONSTANTS ==
+            //  -- Build Information --
+            constexpr const char* DIR      = "@ARCTK_DIR@";      //!< Build directory.
+            constexpr const char* BRANCH   = "@ARCTK_BRANCH@";   //!< Build branch.
+            constexpr const char* HASH     = "@ARCTK_HASH@";     //!< Git hash.
+            constexpr const char* COMPILER = "@ARCTK_COMPILER@"; //!< Compiler id.
+            constexpr const char* TYPE     = "@ARCTK_TYPE@";     //!< Optimisation type.
+            constexpr const char* DATE     = "@ARCTK_DATE@";     //!< Build date
 
 
 
