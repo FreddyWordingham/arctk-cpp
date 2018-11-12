@@ -16,11 +16,13 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cstdlib>
 #include <filesystem>
 #include <thread>
 
 //  -- Arctk --
 #include <arctk/data/obj.hpp>
+#include <arctk/exit/error.hpp>
 
 
 
@@ -65,6 +67,12 @@ namespace arc //! arctk namespace
 
             if (!std::filesystem::exists(output_dir_))
             {
+                if (!create_directory(output_dir_))
+                {
+                    std::cerr << "Unable to create output directory at: `" << output_dir_ << "`.\n";
+
+                    std::exit();
+                }
             }
 
             _output_dir = output_dir_;
