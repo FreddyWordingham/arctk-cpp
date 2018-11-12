@@ -69,6 +69,9 @@ namespace arc //! arctk namespace
             //  -- Setters --
             inline void set_num_threads(const size_t num_threads_) noexcept;
             inline void set_output_dir(const std::string& output_dir_) noexcept;
+
+            //  -- Pre-flight --
+            inline void create_output_dir() const noexcept;
         };
 
 

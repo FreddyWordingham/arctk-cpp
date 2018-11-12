@@ -66,17 +66,22 @@ namespace arc //! arctk namespace
         {
             assert(!output_dir_.empty());
 
-            if (!std::filesystem::exists(output_dir_))
+            _output_dir = output_dir_;
+        }
+
+
+        //  -- Pre-flight --
+        inline void Sim::create_output_dir() const noexcept
+        {
+            if (!std::filesystem::exists(_output_dir))
             {
-                if (!std::filesystem::create_directory(output_dir_))
+                if (!std::filesystem::create_directory(_output_dir))
                 {
-                    std::cerr << "Unable to create output directory at: `" << output_dir_ << "`.\n";
+                    std::cerr << "Unable to create output directory at: `" << _output_dir << "`.\n";
 
                     std::exit(exit::error::DIR_CREATION_FAILED);
                 }
             }
-
-            _output_dir = output_dir_;
         }
 
 
