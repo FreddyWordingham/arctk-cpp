@@ -42,8 +42,6 @@ namespace arc //! arctk namespace
              */
             class Detector : public Entity
             {
-                //  == FIELDS ==
-              private:
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
