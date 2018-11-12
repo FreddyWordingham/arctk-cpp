@@ -14,17 +14,13 @@
 
 
 
-//  == BASE ==
-#include <arctk/geom/shape/mesh.hpp>
-
-
-
 //  == IMPORTS ==
 //  -- Std --
 #include <memory>
 #include <string>
 
 //  -- Arctk --
+#include <arctk/geom/shape/mesh.hpp>
 #include <arctk/opt/sop.hpp>
 
 
@@ -70,8 +66,14 @@ namespace arc //! arctk namespace
         /**
          *  Entity equipment class.
          */
-        class Entity : public geom::shape::Mesh
+        class Entity
         {
+            //  == FIELDS ==
+          private:
+            //  -- Geometry --
+            const geom::shape::Mesh _surf; //!< Surface of the entity.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
