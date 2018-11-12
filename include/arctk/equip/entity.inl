@@ -55,7 +55,7 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        inline const geom::shape::Mesh& Entity::mesh() const noexcept
+        inline const geom::shape::Mesh& Entity::surf() const noexcept
         {
             return (_surf);
         }
