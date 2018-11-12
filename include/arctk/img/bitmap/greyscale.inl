@@ -118,10 +118,20 @@ namespace arc //! arctk namespace
             {
                 multi::vector<vec3, 2> pixels(_pixels.size(), std::vector<vec3>(_pixels.front().size()));
 
-                std::ofstream file(path_ + ".ppm");
-
                 const size_t width  = pixels.size();
                 const size_t height = pixels.front().size();
+
+                const double range = _max - _min;
+
+                for (size_t i = 0; i < width; ++i)
+                {
+                    for (size_t j = 0; j < height; ++j)
+                    {
+                        pixels[i][j] = _colour_map(_scale_map((_pixels[i][j] - _min) / range));
+                    }
+                }
+
+                std::ofstream file(path_ + ".ppm");
 
                 file << "P3\n"
                      << width << " " << height << "\n"
