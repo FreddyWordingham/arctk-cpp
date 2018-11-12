@@ -63,7 +63,7 @@ namespace arc //! arctk namespace
         class Entity
         {
             //  == FIELDS ==
-          private:
+          protected:
             //  -- Geometry --
             const geom::shape::Mesh _surf; //!< Surface of the entity.
 
