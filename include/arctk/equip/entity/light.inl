@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
             /**
              *  Construct a light source entity which emits photons at its surface.
              *
-             *  @param  surf_       Entity surface.
+             *  @param  surf_       Surface of the light source.
              *  @param  mat_        Material to emit photons into.
              *  @param  power_      Power of the light.
              *  @param  kill_       Kill photons on collision.
