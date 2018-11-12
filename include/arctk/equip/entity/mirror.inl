@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
             /**
              *  Construct a mirror entity which has a probability of reflecting incident photons.
              *
-             *  @param  surf_       Surface of the detector.
+             *  @param  surf_       Surface of the mirror.
              *  @param  front_ref_  Reflection probability of the front surface.
              *  @param  back_ref_   Reflection probability of the back surface.
              *
