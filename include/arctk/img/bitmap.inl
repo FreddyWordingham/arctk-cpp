@@ -20,6 +20,7 @@
 
 //  -- Arctk --
 #include <arctk/math/container.hpp>
+#include <arctk/prop/shape.hpp>
 
 
 
@@ -40,6 +41,7 @@ namespace arc //! arctk namespace
           , _scale_map([](const double x_) { return (x_); })
           , _colour_map([](const double x_) { return (vec3(x_, x_, x_)); })
         {
+            assert(prop::shape::square(pixels_));
             assert(_max >= _min);
         }
 
