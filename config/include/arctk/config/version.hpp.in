@@ -19,17 +19,20 @@ namespace arc //! arctk namespace
 {
     namespace config //! configuration namespace
     {
+        namespace version //! version namespace
+        {
 
 
 
-        //  == CONSTANTS ==
-        //  -- Version --
-        constexpr const unsigned int VERSION_MAJOR = @ARCTK_VERSION_MAJOR@; //!< Version major number.
-        constexpr const unsigned int VERSION_MINOR = @ARCTK_VERSION_MINOR@; //!< Version minor number.
-        constexpr const unsigned int VERSION_PATCH = @ARCTK_VERSION_PATCH@; //!< Version patch number.
+            //  == CONSTANTS ==
+            //  -- Version --
+            constexpr const unsigned int VERSION_MAJOR = @ARCTK_VERSION_MAJOR@; //!< Version major number.
+            constexpr const unsigned int VERSION_MINOR = @ARCTK_VERSION_MINOR@; //!< Version minor number.
+            constexpr const unsigned int VERSION_PATCH = @ARCTK_VERSION_PATCH@; //!< Version patch number.
 
 
 
+        } // namespace version
     } // namespace config
 } // namespace arc
 
