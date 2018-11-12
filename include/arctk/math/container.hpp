@@ -68,15 +68,24 @@ template <typename T, typename S, typename>
 T& operator*=(T& cont_, const S& val_);
 template <typename T, typename S, typename>
 T& operator/=(T& cont_, const S& val_);
+template <typename T, typename S, typename>
+T& operator%=(T& cont_, const S& val_);
 
 //  -- Arithmetic --
 template <typename T, typename>
 inline T operator+(const T& cont_) noexcept;
 template <typename T, typename>
 inline T operator-(const T& cont_) noexcept;
-
+template <typename T, typename S, typename>
+inline T operator+(const T& cont_, const S& val_);
 template <typename T, typename S, typename>
 inline T operator-(const T& cont_, const S& val_);
+template <typename T, typename S, typename>
+inline T operator*(const T& cont_, const S& val_);
+template <typename T, typename S, typename>
+inline T operator/(const T& cont_, const S& val_);
+template <typename T, typename S, typename>
+inline T operator%(const T& cont_, const S& val_);
 
 
 

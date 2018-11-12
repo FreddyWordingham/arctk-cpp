@@ -242,6 +242,17 @@ T& operator/=(T& cont_, const S& val_)
     return (cont_);
 }
 
+template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
+T& operator%=(T& cont_, const S& val_)
+{
+    for (typename T::iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+    {
+        *it %= val_;
+    }
+
+    return (cont_);
+}
+
 
 
 //  -- Arithmetic --
@@ -290,6 +301,19 @@ inline T operator-(const T& cont_) noexcept
 }
 
 template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
+inline T operator+(const T& cont_, const S val_)
+{
+    T cont = cont_;
+
+    for (typename T::iterator it = std::begin(cont); it != std::end(cont); std::advance(it, 1))
+    {
+        *it += val_;
+    }
+
+    return (cont);
+}
+
+template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
 inline T operator-(const T& cont_, const S val_)
 {
     T cont = cont_;
@@ -297,6 +321,32 @@ inline T operator-(const T& cont_, const S val_)
     for (typename T::iterator it = std::begin(cont); it != std::end(cont); std::advance(it, 1))
     {
         *it -= val_;
+    }
+
+    return (cont);
+}
+
+template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
+inline T operator*(const T& cont_, const S val_)
+{
+    T cont = cont_;
+
+    for (typename T::iterator it = std::begin(cont); it != std::end(cont); std::advance(it, 1))
+    {
+        *it *= val_;
+    }
+
+    return (cont);
+}
+
+template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
+inline T operator/(const T& cont_, const S val_)
+{
+    T cont = cont_;
+
+    for (typename T::iterator it = std::begin(cont); it != std::end(cont); std::advance(it, 1))
+    {
+        *it /= val_;
     }
 
     return (cont);
