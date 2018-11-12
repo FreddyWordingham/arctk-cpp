@@ -1,6 +1,6 @@
 /**
  *  @file   arctk/data/table.hpp
- *  @date   06/12/2018
+ *  @date   06/11/2018
  *  @author Freddy Wordingham
  *
  *  Data table class.
