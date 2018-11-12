@@ -98,7 +98,7 @@ namespace arc //! arctk namespace
             //  -- Saving --
             inline void Greyscale::save(const std::string& path_) const noexcept
             {
-                std::fstream(path_ + ".ppm");
+                std::fstream file(path_ + ".ppm");
             }
 
 

@@ -59,6 +59,10 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Properties --
+            virtual inline size_t width() const noexcept  = 0;
+            virtual inline size_t height() const noexcept = 0;
+
             //  -- Saving --
             virtual inline void save(const std::string& path_) const noexcept = 0;
         };
