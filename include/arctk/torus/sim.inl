@@ -153,7 +153,7 @@ namespace arc //! arctk namespace
         {
             std::ofstream file(_output_dir + INFO_FILENAME);
 
-            file << "Built using the Arctk library.\nArctk version          : " << config::version::MAJOR << '.' config::version::MINOR << '.' config::version::PATCH << '\n'
+            file << "Built using the Arctk library.\nArctk version          : " << config::version::MAJOR << '.' << config::version::MINOR << '.' << config::version::PATCH << '\n'
                  << "Arctk directory        : " << config::build::DIR << '\n'
                  << "Arctk branch           : " << config::build::BRANCH << '\n'
                  << "Arctk build hash       : " << config::build::HASH << '\n'
