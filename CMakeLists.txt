@@ -370,6 +370,9 @@ if (UNIT_TESTING)
         target_include_directories(${NAME} SYSTEM PUBLIC ${GLEW_INCLUDE_DIRS})
         target_include_directories(${NAME} SYSTEM PUBLIC ${GLFW_INCLUDE_DIRS})
 
+        message("Check: ${OpenGL_INCLUDE_DIR}");
+        message("Check: ${OpenGL_INCLUDE_DIRS}");
+
         #   -- Link Libraries --
         target_link_libraries(${NAME} c++fs)
         target_link_libraries(${NAME} ${OPENGL_LIBRARIES})
