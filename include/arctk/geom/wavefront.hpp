@@ -56,6 +56,10 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline const vec3& scale() const noexcept;
+            inline const vec3& rot() const noexcept;
+            inline const vec3& trans() const noexcept;
         };
 
 

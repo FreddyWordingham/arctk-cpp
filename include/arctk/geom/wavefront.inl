@@ -35,6 +35,25 @@ namespace arc //! arctk namespace
 
 
 
+        //  == METHODS ==
+        //  -- Getters --
+        inline const vec3& Wavefront::scale() const noexcept
+        {
+            return (_scale);
+        }
+
+        inline const vec3& Wavefront::rot() const noexcept
+        {
+            return (_rot);
+        }
+
+        inline const vec3& Wavefront::trans() const noexcept
+        {
+            return (_trans);
+        }
+
+
+
     } // namespace geom
 } // namespace arc
 
