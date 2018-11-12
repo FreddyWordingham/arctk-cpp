@@ -14,12 +14,6 @@
 #include <arctk/img/bitmap/greyscale.hpp>
 
 
-//  -- Temp --
-#include <arctk/parse/print.hpp>
-#include <cmath>
-#include <iostream>
-
-
 
 //  == MAIN ==
 //  -- Function --
@@ -30,10 +24,5 @@
  */
 int main(const int /*unused*/, const char** /*unused*/)
 {
-    std::vector<std::vector<double>> vec_a({{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}});
-
-    arc::img::bitmap::Greyscale img(vec_a);
-    img.save("output");
-
     return (0);
 }
