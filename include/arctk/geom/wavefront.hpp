@@ -43,6 +43,9 @@ namespace arc //! arctk namespace
             const std::string& _base;
 
             //  -- Transform --
+            vec3 _scale;
+            vec3 _rot;
+            vec3 _trans;
 
 
             //  == INSTANTIATION ==
