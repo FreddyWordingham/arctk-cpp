@@ -365,15 +365,15 @@ if (UNIT_TESTING)
 
         #   -- Include System Directories --
         target_include_directories(${NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
-        target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC ${OpenGL_INCLUDE_DIR})
-        target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC ${SDL2_INCLUDE_DIR})
+        target_include_directories(${NAME} SYSTEM PUBLIC ${OpenGL_INCLUDE_DIR})
+        target_include_directories(${NAME} SYSTEM PUBLIC ${SDL2_INCLUDE_DIR})
 
         #   -- Link Libraries --
-        target_link_libraries(${PROJECT_NAME} c++fs)
-        target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES})
-        target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES})
-        target_link_libraries(${PROJECT_NAME} GLEW)
-        target_link_libraries(${PROJECT_NAME} glfw)
+        target_link_libraries(${NAME} c++fs)
+        target_link_libraries(${NAME} ${OPENGL_LIBRARIES})
+        target_link_libraries(${NAME} ${SDL2_LIBRARIES})
+        target_link_libraries(${NAME} GLEW)
+        target_link_libraries(${NAME} glfw)
 
         add_test(${NAME} ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${NAME})
 
