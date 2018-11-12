@@ -15,6 +15,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <string>
+
 //  -- Arctk --
 #include <arctk/math/vec3.hpp>
 
@@ -34,6 +37,14 @@ namespace arc //! arctk namespace
          */
         class Wavefront
         {
+            //  == FIELDS ==
+          private:
+            //  -- File --
+            const std::string& _base;
+
+            //  -- Transform --
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
