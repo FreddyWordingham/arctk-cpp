@@ -26,6 +26,8 @@
 //  -- Arctk --
 #include <arctk/data/obj.hpp>
 #include <arctk/equip/entity.hpp>
+#include <arctk/equip/entity/detector.hpp>
+#include <arctk/equip/entity/light.hpp>
 #include <arctk/exit/error.hpp>
 
 
@@ -173,6 +175,16 @@ namespace arc //! arctk namespace
             static_assert(std::is_base_of<equip::Entity, T>::value);
 
             _entities.emplace_back(std::make_unique<T>(ent_));
+        }
+
+        template <typename T>
+        inline void Sim::add_light(T&& light_) noexcept
+        {
+            static_assert(std::is_base_of<equip::entity::Light, T>::value);
+
+            _entities.emplace_back(std::make_unique<T>(light_));
+
+            _lights.emplace_back(dynamic_cast<arc::equip::entity::Light*>(_entities.back().get()));
         }
 
 

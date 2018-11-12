@@ -84,9 +84,9 @@ namespace arc //! arctk namespace
             size_t _tar_tris;
 
             //  -- Entities --
-            std::vector<std::unique_ptr<equip::Entity>>                            _entities;
-            std::vector<std::pair<const equip::entity::Light*, unsigned long int>> _lights;
-            std::vector<std::pair<const equip::entity::Detector*, std::string>>    _detectors;
+            std::vector<std::unique_ptr<equip::Entity>>                         _entities;
+            std::vector<const equip::entity::Light*>                            _lights;
+            std::vector<std::pair<const equip::entity::Detector*, std::string>> _detectors;
 
 
             //  == INSTANTIATION ==
@@ -117,6 +117,8 @@ namespace arc //! arctk namespace
             //  -- Additions --
             template <typename T>
             inline void add_entity(T&& ent_) noexcept;
+            template <typename T>
+            inline void add_light(T&& light_) noexcept;
 
             //  -- Pre-flight --
           private:
