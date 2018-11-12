@@ -118,7 +118,7 @@ namespace arc //! arctk namespace
             {
                 multi::vector<vec3, 2> pixels(_pixels.size(), std::vector<vec3>(_pixels.front().size()));
 
-                std::fstream file(path_ + ".ppm");
+                std::ofstream file(path_ + ".ppm");
 
                 const size_t width  = pixels.size();
                 const size_t height = pixels.front().size();
