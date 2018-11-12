@@ -20,6 +20,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/math/vec3.hpp>
 #include <arctk/multi/vector.hpp>
 
 
@@ -47,6 +48,7 @@ namespace arc //! arctk namespace
 
             //  -- Mapping --
             std::function<double(double)> _scale_map;
+            std::function<vec3(double)>   _colour_map;
 
 
             //  == INSTANTIATION ==
