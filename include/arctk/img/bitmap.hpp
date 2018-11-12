@@ -70,6 +70,7 @@ namespace arc //! arctk namespace
             inline void set_min(const double min_) noexcept;
             inline void set_max(const double max_) noexcept;
             inline void set_scale_map(std::function<double(double)> scale_map_) noexcept;
+            inline void set_colour_map(std::function<vec3(double)> colour_map_) noexcept;
         };
 
 

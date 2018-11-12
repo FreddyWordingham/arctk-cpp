@@ -86,6 +86,11 @@ namespace arc //! arctk namespace
             _scale_map = scale_map_;
         }
 
+        inline void Bitmap::set_colour_map(std::function<vec3(double)> colour_map_) noexcept
+        {
+            _colour_map = colour_map_;
+        }
+
 
 
     } // namespace img
