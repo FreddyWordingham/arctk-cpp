@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
              *  @param  front_mat_  Material to enter when hitting the front of the surface.
              *  @param  back_mat_   Material to enter when hitting the back of the surface.
              */
-            inline Body::Body(const geom::Mesh& surf_, const opt::Mat& front_mat_, const opt::Mat& back_mat_) noexcept
+            inline Body::Body(const geom::shape::Mesh& surf_, const opt::Mat& front_mat_, const opt::Mat& back_mat_) noexcept
               : Entity(surf_)
               , _front_mat(front_mat_)
               , _back_mat(back_mat_)
