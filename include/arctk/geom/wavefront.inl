@@ -30,13 +30,13 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Wavefront::Wavefront(const std::string& file§_) noexcept
-          : _base(file§_)
+        inline Wavefront::Wavefront(const std::string& file_) noexcept
+          : _base(file_)
           , _scale(1.0, 1.0, 1.0)
           , _rot(0.0, 0.0, 0.0)
           , _trans(0.0, 0.0, 0.0)
         {
-            assert(!file§_.empty());
+            assert(!file_.empty());
         }
 
 
