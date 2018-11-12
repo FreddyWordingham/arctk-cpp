@@ -19,6 +19,8 @@ namespace arc //! arctk namespace
 {
     namespace config //! configuration namespace
     {
+        namespace build //! build namespace
+        {
 
 
 
@@ -33,6 +35,7 @@ namespace arc //! arctk namespace
 
 
 
+        } // namespace build
     } // namespace config
 } // namespace arc
 
