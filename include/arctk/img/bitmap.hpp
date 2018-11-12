@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <vector>
 
 //  -- Arctk --
 #include <arctk/multi/vector.hpp>
@@ -53,8 +54,8 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Access --
-            inline double&       operator[](const size_t index_) noexcept;
-            inline const double& operator[](const size_t index_) const noexcept;
+            inline std::vector<double>&       operator[](const size_t index_) noexcept;
+            inline const std::vector<double>& operator[](const size_t index_) const noexcept;
 
 
             //  == METHODS ==

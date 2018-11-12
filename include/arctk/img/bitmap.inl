@@ -45,14 +45,14 @@ namespace arc //! arctk namespace
 
         //  == OPERATORS ==
         //  -- Access --
-        inline double& Bitmap::operator[](const size_t index_) noexcept
+        inline std::vector<double>& Bitmap::operator[](const size_t index_) noexcept
         {
             assert(index_ <= _pixels.size());
 
             return (_pixels[index_]);
         }
 
-        inline const double& Bitmap::operator[](const size_t index_) const noexcept
+        inline const std::vector<double>& Bitmap::operator[](const size_t index_) const noexcept
         {
             assert(index_ <= _pixels.size());
 
