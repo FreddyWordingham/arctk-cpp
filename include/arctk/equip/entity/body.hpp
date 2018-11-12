@@ -42,9 +42,8 @@ namespace arc //! arctk namespace
         namespace shape //! shape namespace
         {
             class Mesh;
-        } // namespace shape
-    }     // namespace geom
-    using vec3 = math::Vec<double, 3>;
+        }         // namespace shape
+    }             // namespace geom
     namespace opt //! optical namespace
     {
         class Mat;
