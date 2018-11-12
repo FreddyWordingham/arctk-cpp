@@ -110,7 +110,7 @@ namespace arc //! arctk namespace
         //  -- Post-flight --
         inline void Sim::post_flight_info_write() const noexcept
         {
-            std::ofstream file(_output_dir + INFO_FILENAME);
+            std::ofstream file(_output_dir + INFO_FILENAME, std::ofstream::app);
 
             file << "================================================================\nSimulation complete." << '\n';
         }
