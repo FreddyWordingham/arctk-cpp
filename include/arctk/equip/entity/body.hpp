@@ -88,7 +88,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Body(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const opt::Mat& front_mat_, const opt::Mat& back_mat_) noexcept;
+                inline Body(const geom::Mesh& surf_, const opt::Mat& front_mat_, const opt::Mat& back_mat_) noexcept;
 
 
                 //  == METHODS ==
