@@ -15,6 +15,7 @@
 
 
 //  -- Temp --
+#include <arctk/parse/print.hpp>
 #include <cmath>
 #include <iostream>
 
@@ -29,9 +30,10 @@
  */
 int main(const int /*unused*/, const char** /*unused*/)
 {
-    std::function<double(double)> lamb = [](const double x_) { return (std::log10(x_)); };
+    std::vector<std::vector<double>> vec_a({{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}});
 
-    std::cout << lamb(1000.0) << '\n';
+    arc::img::bitmap::Greyscale img(vec_a);
+    img.save("output");
 
     return (0);
 }

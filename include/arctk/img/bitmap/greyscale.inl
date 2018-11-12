@@ -16,12 +16,16 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <algorithm>
 #include <cassert>
 #include <fstream>
 
 //  -- Arctk --
 #include <arctk/math/container.hpp>
 #include <arctk/prop/shape.hpp>
+
+#include <arctk/parse/print.hpp>
+#include <iostream>
 
 
 
@@ -112,9 +116,29 @@ namespace arc //! arctk namespace
             //  -- Saving --
             inline void Greyscale::save(const std::string& path_) const noexcept
             {
-                multi::vector<double, 2> pixels = (_pixels - _min) / (_max - _min);
+                multi::vector<vec3, 2> pixels(_pixels.size(), std::vector<vec3>(_pixels.front().size()));
 
                 std::fstream file(path_ + ".ppm");
+
+                const size_t width  = pixels.size();
+                const size_t height = pixels.front().size();
+
+                file << "P3\n"
+                     << width << " " << height << "\n"
+                     << "255\n";
+
+                for (size_t i = 0; i < width; ++i)
+                {
+                    for (size_t j = 0; j < height; ++j)
+                    {
+                        for (size_t k = 0; k < 3; ++k)
+                        {
+                            file << std::setw(4) << std::clamp(static_cast<int>(255 * pixels[i][j][k]), 0, 255);
+                        }
+                    }
+                    file << '\t';
+                }
+                file << '\n';
             }
 
 
