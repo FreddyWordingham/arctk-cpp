@@ -19,6 +19,7 @@
 #include <cassert>
 #include <cstdlib>
 #include <filesystem>
+#include <fstream>
 #include <thread>
 
 //  -- Arctk --
@@ -82,6 +83,11 @@ namespace arc //! arctk namespace
                     std::exit(exit::error::DIR_CREATION_FAILED);
                 }
             }
+        }
+
+        inline void Sim::write_pre_flight_info() const noexcept
+        {
+            std::ofstream file();
         }
 
 

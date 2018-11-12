@@ -36,6 +36,12 @@ namespace arc //! arctk namespace
 
 
 
+        //  == SETTINGS ==
+        //  -- Filenames --
+        constexpr const char* const PRE_FLIGHT_FILENAME = "info.txt";
+
+
+
         //  == CLASS ==
         /**
          *  Radiative transfer simulation class.
