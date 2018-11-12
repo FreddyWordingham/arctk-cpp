@@ -118,6 +118,8 @@ namespace arc //! arctk namespace
         inline void Sim::set_max_depth(const size_t max_depth_) noexcept
         {
             assert(max_depth_ > 0);
+
+            _max_depth = max_depth_;
         }
 
         inline void Sim::set_tar_tris(const size_t tar_tris_) noexcept
