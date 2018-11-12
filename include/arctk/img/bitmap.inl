@@ -22,6 +22,15 @@ namespace arc //! arctk namespace
 
 
 
+        //  == INSTANTIATION ==
+        //  -- Destructors --
+        /**
+         *  Defaulted destructor.
+         */
+        inline Bitmap::~Bitmap() noexcept = default;
+
+
+
     } // namespace img
 } // namespace arc
 
