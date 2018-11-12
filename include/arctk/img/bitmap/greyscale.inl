@@ -24,9 +24,6 @@
 #include <arctk/math/container.hpp>
 #include <arctk/prop/shape.hpp>
 
-#include <arctk/parse/print.hpp>
-#include <iostream>
-
 
 
 //  == NAMESPACE ==
