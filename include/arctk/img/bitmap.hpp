@@ -44,6 +44,9 @@ namespace arc //! arctk namespace
             double                   _min;
             double                   _max;
 
+            //  -- Mapping --
+            std::function<double(double)> _scale_map;
+
 
             //  == INSTANTIATION ==
           public:

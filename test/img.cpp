@@ -13,6 +13,11 @@
 #include <arctk/img/bitmap.hpp>
 
 
+//  -- Temp --
+#include <cmath>
+#include <iostream>
+
+
 
 //  == MAIN ==
 //  -- Function --
@@ -23,5 +28,9 @@
  */
 int main(const int /*unused*/, const char** /*unused*/)
 {
+    std::function<double(double)> lamb = [](const double x_) { return (std::log10(x_)); };
+
+    std::cout << lamb(1000.0) << '\n';
+
     return (0);
 }
