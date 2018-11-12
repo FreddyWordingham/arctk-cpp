@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            explicit inline Bitmap(const multi::vector<double, 2>& pixels_) const noexcept;
+            inline explicit Bitmap(const multi::vector<double, 2>& pixels_) noexcept;
 
 
             //  == OPERATORS ==
