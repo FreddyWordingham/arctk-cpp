@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <functional>
 #include <vector>
 
 //  -- Arctk --
@@ -66,6 +67,7 @@ namespace arc //! arctk namespace
             //  -- Setters --
             inline void set_min(const double min_) noexcept;
             inline void set_max(const double max_) noexcept;
+            inline void set_scale_map(std::function<double(double)> scale_map_) noexcept;
         };
 
 

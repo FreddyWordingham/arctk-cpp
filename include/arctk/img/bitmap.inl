@@ -78,6 +78,11 @@ namespace arc //! arctk namespace
             _max = max_;
         }
 
+        inline void Bitmap::set_scale_map(std::function<double(double)> scale_map_) noexcept
+        {
+            _scale_map = scale_map_;
+        }
+
 
 
     } // namespace img
