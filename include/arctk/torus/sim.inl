@@ -187,6 +187,16 @@ namespace arc //! arctk namespace
             _lights.emplace_back(dynamic_cast<arc::equip::entity::Light*>(_entities.back().get()));
         }
 
+        template <typename T>
+        inline void Sim::add_detector(T&& det_, const std::string& path_) noexcept
+        {
+            static_assert(std::is_base_of<equip::entity::Detector, T>::value);
+
+            _entities.emplace_back(std::make_unique<T>(det_));
+
+            _detectors.emplace_back(std::make_pair(dynamic_cast<arc::equip::entity::Detector*>(_entities.back().get()), path_));
+        }
+
 
         //  -- Simulate --
         inline void Sim::run_pre_flight() const noexcept
