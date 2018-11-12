@@ -169,7 +169,7 @@ namespace arc //! arctk namespace
         {
             static_assert(std::is_base_of<equip::Entity, T>::value);
 
-            _ents.emplace_back(std::make_unique<T>(ent_));
+            _entities.emplace_back(std::make_unique<T>(ent_));
         }
 
 
