@@ -26,9 +26,9 @@ namespace arc //! arctk namespace
 
             //  == CONSTANTS ==
             //  -- Version --
-            constexpr const unsigned int VERSION_MAJOR = @ARCTK_VERSION_MAJOR@; //!< Version major number.
-            constexpr const unsigned int VERSION_MINOR = @ARCTK_VERSION_MINOR@; //!< Version minor number.
-            constexpr const unsigned int VERSION_PATCH = @ARCTK_VERSION_PATCH@; //!< Version patch number.
+            constexpr const unsigned int MAJOR = @ARCTK_VERSION_MAJOR@; //!< Version major number.
+            constexpr const unsigned int MINOR = @ARCTK_VERSION_MINOR@; //!< Version minor number.
+            constexpr const unsigned int PATCH = @ARCTK_VERSION_PATCH@; //!< Version patch number.
 
 
 
