@@ -24,6 +24,7 @@
 
 //  -- Arctk --
 #include <arctk/data/obj.hpp>
+#include <arctk/equip/entity.hpp>
 #include <arctk/exit/error.hpp>
 
 
@@ -158,6 +159,13 @@ namespace arc //! arctk namespace
             std::ofstream file(_output_dir + INFO_FILENAME, std::ofstream::app);
 
             file << "================================================================\nSimulation complete." << '\n';
+        }
+
+
+        //  -- Additions --
+        inline void Sim::add_entity(equip::Entity&& ent_) noexcept
+        {
+            //            _ents.emplace_back(std::make_unique<equip::Entity>(ent_));
         }
 
 

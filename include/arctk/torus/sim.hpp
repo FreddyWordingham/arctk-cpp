@@ -18,7 +18,9 @@
 //  -- Std --
 #include <array>
 #include <cstddef>
+#include <memory>
 #include <string>
+#include <vector>
 
 //  -- Arctk --
 #include <arctk/math/vec3.hpp>
@@ -28,6 +30,13 @@
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
+    namespace equip //! equipment namespace
+    {
+        class Entity;
+        namespace entity //! entity namespace
+        {
+        } // namespace entity
+    }     // namespace equip
 } // namespace arc
 
 
@@ -71,6 +80,9 @@ namespace arc //! arctk namespace
             size_t _max_depth;
             size_t _tar_tris;
 
+            //  -- Entities --
+            std::vector<std::unique_ptr<arc::equip::Entity>> _ents;
+
 
             //  == INSTANTIATION ==
           public:
@@ -96,6 +108,9 @@ namespace arc //! arctk namespace
             inline void set_res(const std::array<size_t, 3>& res_) noexcept;
             inline void set_max_depth(const size_t max_depth_) noexcept;
             inline void set_tar_tris(const size_t tar_tris_) noexcept;
+
+            //  -- Additions --
+            inline void add_entity(equip::Entity&& ent_) noexcept;
 
             //  -- Pre-flight --
           private:
