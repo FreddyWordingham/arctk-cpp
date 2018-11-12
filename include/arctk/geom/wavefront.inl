@@ -60,22 +60,22 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
-        inline void Wavefront::set_scale(const double scale_) const noexcept
+        inline void Wavefront::set_scale(const double scale_) noexcept
         {
             _scale = vec3(scale_, scale_, scale_);
         }
 
-        inline void Wavefront::set_scale(const vec3& scale_) const noexcept
+        inline void Wavefront::set_scale(const vec3& scale_) noexcept
         {
             _scale = scale_;
         }
 
-        inline void Wavefront::set_rot(const vec3& rot_) const noexcept
+        inline void Wavefront::set_rot(const vec3& rot_) noexcept
         {
             _rot = rot_;
         }
 
-        inline void Wavefront::set_trans(const vec3& trans_) const noexcept
+        inline void Wavefront::set_trans(const vec3& trans_) noexcept
         {
             _trans = trans_;
         }
