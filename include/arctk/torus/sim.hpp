@@ -63,6 +63,9 @@ namespace arc //! arctk namespace
             //  -- Output --
             std::string _output_dir;
 
+            //  -- Domain --
+            const std::array<size_t, 3> _res;
+
 
             //  == INSTANTIATION ==
           public:
