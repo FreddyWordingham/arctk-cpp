@@ -357,7 +357,23 @@ if (UNIT_TESTING)
         set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/test)
         add_executable(${NAME} ${loop_var})
 
+        #   -- Packages --
+        find_package(OpenGL REQUIRED)
+        find_package(SDL2 REQUIRED)
+        find_package(GLEW REQUIRED)
+        find_package(glfw3 3.2.1 REQUIRED)
+
+        #   -- Include System Directories --
         target_include_directories(${NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
+        target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC ${OpenGL_INCLUDE_DIR})
+        target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC ${SDL2_INCLUDE_DIR})
+
+        #   -- Link Libraries --
+        target_link_libraries(${PROJECT_NAME} c++fs)
+        target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES})
+        target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES})
+        target_link_libraries(${PROJECT_NAME} GLEW)
+        target_link_libraries(${PROJECT_NAME} glfw)
 
         add_test(${NAME} ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${NAME})
 
