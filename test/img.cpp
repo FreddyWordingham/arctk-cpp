@@ -11,6 +11,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/img/bitmap.hpp>
+#include <arctk/img/bitmap/greyscale.hpp>
 
 
 //  -- Temp --
