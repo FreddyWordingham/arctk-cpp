@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cstddef>
+#include <string>
 
 
 
@@ -45,6 +46,9 @@ namespace arc //! arctk namespace
           private:
             //  -- Parallelisation --
             const size_t _num_threads;
+
+            //  -- Output --
+            std::string _output_dir;
 
 
             //  == INSTANTIATION ==
