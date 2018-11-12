@@ -17,6 +17,9 @@
 //  == IMPORTS ==
 //  -- Std --
 
+//  -- Arctk --
+#include <arctk/multi/vector.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -36,6 +39,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Data --
+            multi::vector<double, 2> _pixels;
 
 
             //  == INSTANTIATION ==
