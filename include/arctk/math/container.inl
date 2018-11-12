@@ -290,6 +290,11 @@ inline T operator++(const T& cont_, const int /*unused*/)
 template <typename T, typename>
 inline T operator--(const T& cont_, const int /*unused*/)
 {
+    T cont = cont_;
+
+    --cont;
+
+    return (cont);
 }
 
 
