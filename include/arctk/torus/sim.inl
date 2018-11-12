@@ -44,6 +44,8 @@ namespace arc //! arctk namespace
           , _num_threads(1)
           , _output_dir("output/")
           , _res({{25, 25, 25}})
+          , _max_depth(6)
+          , _tar_tris(10)
         {
             assert(min_.x < max_.x);
             assert(min_.y < max_.y);
