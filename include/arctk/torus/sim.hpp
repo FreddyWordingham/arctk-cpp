@@ -36,6 +36,8 @@ namespace arc //! arctk namespace
         class Entity;
         namespace entity //! entity namespace
         {
+            class Detector;
+            class Light;
         } // namespace entity
     }     // namespace equip
 } // namespace arc
