@@ -23,6 +23,15 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
+        //  -- Constructors --
+        inline Wavefront::Wavefront(const std::string& base_) noexcept
+          : _base(base_)
+          , _scale(1.0, 1.0, 1.0)
+          , _rot(0.0, 0.0, 0.0)
+          , _trans(0.0, 0.0, 0.0)
+        {
+            assert(!base_.empty());
+        }
 
 
 
