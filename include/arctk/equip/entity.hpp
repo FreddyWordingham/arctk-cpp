@@ -77,12 +77,12 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Entity(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept;
-            inline Entity(const Entity&) = default; //!< Defaulted copy constructor.
-            inline Entity(Entity&&)      = default; //!< Defaulted move constructor.
+            inline Entity(const geom::shape::Mesh& surf_) noexcept;
+            inline Entity(const Entity&) noexcept = default; //!< Defaulted copy constructor.
+            inline Entity(Entity&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
-            inline ~Entity() noexcept override;
+            virtual inline ~Entity() noexcept;
 
 
             //  == OPERATORS ==

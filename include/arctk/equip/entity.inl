@@ -47,13 +47,18 @@ namespace arc //! arctk namespace
          *  @pre    scale_.y must be positive.
          *  @pre    scale_.z must be positive.
          */
-        inline Entity::Entity(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
-          : Mesh(serial_, scale_, rot_, trans_)
+        // inline Entity::Entity(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept
+        //   : Mesh(serial_, scale_, rot_, trans_)
+        // {
+        //     assert(!serial_.empty());
+        //     assert(scale_.x > 0.0);
+        //     assert(scale_.y > 0.0);
+        //     assert(scale_.z > 0.0);
+        // }
+
+        inline Entity::Entity(const geom::shape::Mesh& surf_) noexcept
+          : _surf(surf_)
         {
-            assert(!serial_.empty());
-            assert(scale_.x > 0.0);
-            assert(scale_.y > 0.0);
-            assert(scale_.z > 0.0);
         }
 
 
