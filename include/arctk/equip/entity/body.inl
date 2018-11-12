@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
             /**
              *  Construct a body entity which changes the optical properties during a photon collision.
              *
-             *  @param  surf_       Surface of the detector.
+             *  @param  surf_       Surface of the body.
              *  @param  front_mat_  Material to enter when hitting the front of the surface.
              *  @param  back_mat_   Material to enter when hitting the back of the surface.
              */
