@@ -38,6 +38,14 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline Sim::Sim(const vec3& min_, const vec3& max_) noexcept
+          : _min(min_)
+          , _max(max_)
+        {
+            assert(min_.x < max_.x);
+            assert(min_.y < max_.y);
+            assert(min_.z < max_.z);
+        }
 
 
 
