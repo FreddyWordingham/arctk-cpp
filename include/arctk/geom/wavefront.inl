@@ -30,19 +30,24 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Wavefront::Wavefront(const std::string& file_) noexcept
-          : _base(file_)
+        inline Wavefront::Wavefront(const std::string& file§_) noexcept
+          : _base(file§_)
           , _scale(1.0, 1.0, 1.0)
           , _rot(0.0, 0.0, 0.0)
           , _trans(0.0, 0.0, 0.0)
         {
-            assert(!file_.empty());
+            assert(!file§_.empty());
         }
 
 
 
         //  == METHODS ==
         //  -- Getters --
+        inline const std::string& Wavefront::file() const noexcept
+        {
+            return (_file);
+        }
+
         inline const vec3& Wavefront::scale() const noexcept
         {
             return (_scale);
