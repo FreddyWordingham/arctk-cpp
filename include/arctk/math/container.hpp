@@ -61,15 +61,19 @@ namespace arc //! arctk namespace
 //  == OPERATOR PROTOTYPES ==
 //  -- Assignment --
 template <typename T, typename S, typename>
-T& operator+=(T& cont_, const S& val_);
+inline T& operator+=(T& cont_, const S& val_);
 template <typename T, typename S, typename>
-T& operator-=(T& cont_, const S& val_);
+inline T& operator-=(T& cont_, const S& val_);
 template <typename T, typename S, typename>
-T& operator*=(T& cont_, const S& val_);
+inline T& operator*=(T& cont_, const S& val_);
 template <typename T, typename S, typename>
-T& operator/=(T& cont_, const S& val_);
+inline T& operator/=(T& cont_, const S& val_);
 template <typename T, typename S, typename>
-T& operator%=(T& cont_, const S& val_);
+inline T& operator%=(T& cont_, const S& val_);
+
+//  -- Increment / Decrement --
+template <typename T, typename>
+
 
 //  -- Arithmetic --
 template <typename T, typename>

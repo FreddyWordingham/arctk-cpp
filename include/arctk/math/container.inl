@@ -199,7 +199,7 @@ namespace arc //! arctk namespace
 //  == OPERATORS ==
 //  -- Assignment --
 template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
-T& operator+=(T& cont_, const S& val_)
+inline T& operator+=(T& cont_, const S& val_)
 {
     for (typename T::iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
     {
@@ -210,7 +210,7 @@ T& operator+=(T& cont_, const S& val_)
 }
 
 template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
-T& operator-=(T& cont_, const S& val_)
+inline T& operator-=(T& cont_, const S& val_)
 {
     for (typename T::iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
     {
@@ -221,7 +221,7 @@ T& operator-=(T& cont_, const S& val_)
 }
 
 template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
-T& operator*=(T& cont_, const S& val_)
+inline T& operator*=(T& cont_, const S& val_)
 {
     for (typename T::iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
     {
@@ -232,7 +232,7 @@ T& operator*=(T& cont_, const S& val_)
 }
 
 template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
-T& operator/=(T& cont_, const S& val_)
+inline T& operator/=(T& cont_, const S& val_)
 {
     for (typename T::iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
     {
@@ -243,7 +243,7 @@ T& operator/=(T& cont_, const S& val_)
 }
 
 template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
-T& operator%=(T& cont_, const S& val_)
+inline T& operator%=(T& cont_, const S& val_)
 {
     for (typename T::iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
     {
@@ -252,7 +252,6 @@ T& operator%=(T& cont_, const S& val_)
 
     return (cont_);
 }
-
 
 
 //  -- Arithmetic --
