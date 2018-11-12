@@ -39,6 +39,24 @@ namespace arc //! arctk namespace
          */
         class Bitmap
         {
+            //  == INSTANTIATION ==
+          public:
+            //  -- Constructors --
+            inline Bitmap()                       = default; //!< Defaulted constructor.
+            inline Bitmap(const Bitmap&) noexcept = default; //!< Defaulted copy constructor.
+            inline Bitmap(Bitmap&&) noexcept      = default; //!< Defaulted move constructor.
+
+            //  -- Destructors --
+            virtual inline ~Bitmap() noexcept = 0;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Bitmap& operator=(const Bitmap&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Bitmap& operator=(Bitmap&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
+
+
             //  == METHODS ==
           public:
             //  -- Saving --
