@@ -167,7 +167,7 @@ namespace arc //! arctk namespace
         template <typename T>
         inline void Sim::add_entity(T&& ent_) noexcept
         {
-            static_assert(std::is_base_of<T, equip::Entity>::value);
+            static_assert(std::is_base_of<equip::Entity, T>::value);
 
             _ents.emplace_back(std::make_unique<T>(ent_));
         }
