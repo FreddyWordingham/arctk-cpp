@@ -40,11 +40,14 @@ namespace arc //! arctk namespace
           private:
             //  -- Data --
             multi::vector<double, 2> _pixels;
+            double                   _min;
+            double                   _max;
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            explicit inline Bitmap(const multi::vector<double, 2>& pixels_) const noexcept;
 
 
             //  == OPERATORS ==
