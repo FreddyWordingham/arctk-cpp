@@ -95,7 +95,7 @@ namespace arc //! arctk namespace
             for (size_t i = 0; i < ents_.size(); ++i)
             {
                 bool entry = false;
-                for (size_t j = 0; j < ents_[i]->num_faces(); ++j)
+                for (size_t j = 0; j < ents_[i]->surf().num_faces(); ++j)
                 {
                     if (box.intersect(ents_[i]->tri(j)))
                     {
