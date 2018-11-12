@@ -56,6 +56,9 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Setters --
+            inline void set_min(const double min_) noexcept;
+            inline void set_max(const double max_) noexcept;
         };
 
 
