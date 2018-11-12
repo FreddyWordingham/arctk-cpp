@@ -165,7 +165,7 @@ namespace arc //! arctk namespace
         //  -- Additions --
         inline void Sim::add_entity(equip::Entity&& ent_) noexcept
         {
-            //            _ents.emplace_back(std::make_unique<equip::Entity>(ent_));
+            _ents.emplace_back(std::make_unique<equip::Entity>(ent_));
         }
 
 
