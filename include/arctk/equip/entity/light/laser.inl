@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
                  *  @pre    wavelength_ must be positive.
                  */
                 inline Laser::Laser(const geom::shape::Mesh& surf_, const opt::Mat& mat_, const double power_, const bool kill_, const double wavelength_) noexcept
-                  : Light(surf_, power_, kill_)
+                  : Light(surf_, mat_, power_, kill_)
                   , _wavelength(wavelength_)
                 {
                     assert(power_ > 0.0);
