@@ -67,11 +67,11 @@ namespace arc //! arctk namespace
 
             if (!std::filesystem::exists(output_dir_))
             {
-                if (!create_directory(output_dir_))
+                if (!std::filesystem::create_directory(output_dir_))
                 {
                     std::cerr << "Unable to create output directory at: `" << output_dir_ << "`.\n";
 
-                    std::exit();
+                    std::exit(exit::error::DIR_CREATION_FAILED);
                 }
             }
 
