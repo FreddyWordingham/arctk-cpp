@@ -21,6 +21,7 @@
 //  -- Arctk --
 #include <arctk/consts/num.hpp>
 #include <arctk/geom/collision.hpp>
+#include <arctk/geom/shape/mesh.hpp>
 #include <arctk/math/vec3.hpp>
 
 
