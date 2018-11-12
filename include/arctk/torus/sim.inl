@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <filesystem>
 #include <thread>
 
 //  -- Arctk --
@@ -60,6 +61,12 @@ namespace arc //! arctk namespace
 
         inline void Sim::set_output_dir(const std::string& output_dir_) noexcept
         {
+            assert(!output_dir_.empty());
+
+            if (!std::filesystem::exists())
+            {
+            }
+
             _output_dir = output_dir_;
         }
 

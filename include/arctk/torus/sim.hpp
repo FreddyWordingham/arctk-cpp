@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Parallelisation --
-            const size_t _num_threads;
+            size_t _num_threads;
 
             //  -- Output --
             std::string _output_dir;
