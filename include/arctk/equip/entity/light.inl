@@ -53,10 +53,6 @@ namespace arc //! arctk namespace
               , _kill(kill_)
               , _power(power_)
             {
-                assert(!serial_.empty());
-                assert(scale_.x > 0.0);
-                assert(scale_.y > 0.0);
-                assert(scale_.z > 0.0);
                 assert(power_ > 0.0);
             }
 
