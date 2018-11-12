@@ -23,6 +23,20 @@
 
 
 
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    namespace geom //! geometry namespace
+    {
+        namespace shape //! shape namespace
+        {
+            class Mesh;
+        } // namespace shape
+    }     // namespace geom
+} // namespace arc
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -67,6 +81,9 @@ namespace arc //! arctk namespace
             inline void set_scale(const vec3& scale_) noexcept;
             inline void set_rot(const vec3& rot_) noexcept;
             inline void set_trans(const vec3& trans_) noexcept;
+
+            //  -- Creation --
+            inline shape::Mesh create_mesh() const noexcept;
         };
 
 

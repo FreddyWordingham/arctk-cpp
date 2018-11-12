@@ -18,6 +18,9 @@
 //  -- Std --
 #include <cassert>
 
+//  -- Arctk --
+#include <arctk/geom/shape/mesh.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -83,6 +86,13 @@ namespace arc //! arctk namespace
         inline void Wavefront::set_trans(const vec3& trans_) noexcept
         {
             _trans = trans_;
+        }
+
+
+        //  -- Creation --
+        inline shape::Mesh Wavefront::create_mesh() const noexcept
+        {
+            return (shape::Mesh(_file, _scale, _rot, _trans));
         }
 
 
