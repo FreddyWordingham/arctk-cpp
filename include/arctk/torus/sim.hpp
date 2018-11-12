@@ -94,15 +94,6 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Sim(const vec3& min_, const vec3& max_) noexcept;
 
-          private:
-            //  -- Initialisation --
-
-
-
-            //  == OPERATORS ==
-          public:
-            //  -- Access --
-
 
             //  == METHODS ==
           public:

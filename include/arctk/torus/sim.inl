@@ -61,10 +61,6 @@ namespace arc //! arctk namespace
 
 
 
-        //  == OPERATORS ==
-
-
-
         //  == METHODS ==
         //  -- Setters --
         inline void Sim::set_num_threads(const size_t num_threads_) noexcept
