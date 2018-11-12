@@ -63,7 +63,7 @@ namespace arc //! arctk namespace
         {
             assert(!output_dir_.empty());
 
-            if (!std::filesystem::exists())
+            if (!std::filesystem::exists(output_dir_))
             {
             }
 
