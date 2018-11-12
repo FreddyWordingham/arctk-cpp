@@ -254,6 +254,35 @@ inline T& operator%=(T& cont_, const S& val_)
 }
 
 
+//  -- Increment / Decrement --
+template <typename T, typename>
+inline T& operator++(T& cont_)
+{
+    for (typename T::iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+    {
+        ++*it;
+    }
+
+    return (cont_);
+}
+
+template <typename T, typename>
+inline T& operator--(T& cont_)
+{
+}
+
+template <typename T, typename>
+inline T operator++(const T& cont_, const int /*unused*/)
+{
+}
+
+template <typename T, typename>
+inline T operator--(const T& cont_, const int /*unused*/)
+{
+}
+
+
+
 //  -- Arithmetic --
 /**
  *  Create a positive copy of a multi-dimensional container.
