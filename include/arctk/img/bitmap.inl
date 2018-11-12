@@ -47,11 +47,15 @@ namespace arc //! arctk namespace
         //  -- Setters --
         inline void Bitmap::set_min(const double min_) noexcept
         {
+            assert(min_ <= _max);
+
             _min = min_;
         }
 
         inline void Bitmap::set_max(const double max_) noexcept
         {
+            assert(max_ >= _min);
+
             _max = max_;
         }
 
