@@ -111,7 +111,9 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline double power() const noexcept;
+                inline double            power() const noexcept;
+                inline unsigned long int num_phot() const noexcept;
+                inline double            phot_power() const noexcept;
 
                 //  -- Emission --
                 virtual std::tuple<phys::Photon, const opt::Mat*, std::unique_ptr<opt::Sop>> emit(random::Generator* rng_, double time_) const

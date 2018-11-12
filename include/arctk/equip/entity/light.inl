@@ -81,6 +81,18 @@ namespace arc //! arctk namespace
                 return (_power);
             }
 
+            /**
+             *  Get the number of photons to be emitted by the light source.
+             *
+             *  @return Number of photons to be emitted by the light source.
+             */
+            inline unsigned long int Light::num_phot() const noexcept
+            {
+                return (_num_phot);
+            }
+
+            inline double phot_power() const noexcept;
+
 
             //  -- Collision --
             /**
