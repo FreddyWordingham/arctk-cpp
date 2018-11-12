@@ -249,7 +249,7 @@ inline T operator-(const T& cont_, const S val_)
 
     for (typename T::iterator it = std::begin(cont); it != std::end(cont); std::advance(it, 1))
     {
-        *it = *it - val_;
+        *it -= val_;
     }
 
     return (cont);
