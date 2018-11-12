@@ -112,6 +112,8 @@ namespace arc //! arctk namespace
             //  -- Saving --
             inline void Greyscale::save(const std::string& path_) const noexcept
             {
+                multi::vector<double, 2> pixels = (_pixels - _min) / (_max - _min);
+
                 std::fstream file(path_ + ".ppm");
             }
 
