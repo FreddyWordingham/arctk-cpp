@@ -34,12 +34,14 @@
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
-    namespace math //! mathematical namespace
+    namespace geom //! geometric namespace
     {
-        template <typename T, size_t N>
-        class Vec;
-    } // namespace math
-    using vec3 = math::Vec<double, 3>;
+        class Collision;
+        namespace shape //! shape namespace
+        {
+            class Mesh;
+        }         // namespace shape
+    }             // namespace geom
     namespace opt //! optical namespace
     {
         class Mat;
@@ -79,7 +81,7 @@ namespace arc //! arctk namespace
                     //  == INSTANTIATION ==
                   public:
                     //  -- Constructors --
-                    inline Laser(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, const opt::Mat& mat_, double power_, bool kill_, double wavelength_) noexcept;
+                    inline Laser(const geom::shape::Mesh& surf_, const opt::Mat& mat_, double power_, bool kill_, double wavelength_) noexcept;
 
 
                     //  == METHODS ==

@@ -31,13 +31,7 @@ namespace arc //! arctk namespace
     namespace geom //! geometric namespace
     {
         class Collision;
-    }              // namespace geom
-    namespace math //! mathematical namespace
-    {
-        template <typename T, size_t N>
-        class Vec;
-    } // namespace math
-    using vec3 = math::Vec<double, 3>;
+    }             // namespace geom
     namespace opt //! optical namespace
     {
         class Mat;
