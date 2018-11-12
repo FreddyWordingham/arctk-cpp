@@ -94,6 +94,8 @@ namespace arc //! arctk namespace
             inline void set_output_dir(const std::string& output_dir_) noexcept;
             inline void set_res(const size_t res_) noexcept;
             inline void set_res(const std::array<size_t, 3>& res_) noexcept;
+            inline void set_max_depth(const size_t max_depth_) noexcept;
+            inline void set_tar_tris(const size_t tar_tris_) noexcept;
 
             //  -- Pre-flight --
           private:

@@ -115,6 +115,18 @@ namespace arc //! arctk namespace
             _res = res_;
         }
 
+        inline void Sim::set_max_depth(const size_t max_depth_) noexcept
+        {
+            assert(max_depth_ > 0);
+        }
+
+        inline void Sim::set_tar_tris(const size_t tar_tris_) noexcept
+        {
+            assert(tar_tris_ > 0);
+
+            _tar_tris = tar_tris_;
+        }
+
 
         //  -- Pre-flight --
         inline void Sim::create_output_dir() const noexcept
