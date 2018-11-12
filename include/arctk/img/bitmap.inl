@@ -41,6 +41,7 @@ namespace arc //! arctk namespace
         {
             //            assert(prop::limits::always_greater_than_or_equal_to(pixels_)); TODO
             assert(_min >= 0.0);
+            assert(_max >= _min);
         }
 
 
