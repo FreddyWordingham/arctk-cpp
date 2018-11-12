@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- File --
-            const std::string& _base;
+            const std::string& _file;
 
             //  -- Transform --
             vec3 _scale;
@@ -51,15 +51,16 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Wavefront(const std::string& base_) noexcept;
+            inline Wavefront(const std::string& file_) noexcept;
 
 
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const vec3& scale() const noexcept;
-            inline const vec3& rot() const noexcept;
-            inline const vec3& trans() const noexcept;
+            inline const std::string& file() const noexcept;
+            inline const vec3&        scale() const noexcept;
+            inline const vec3&        rot() const noexcept;
+            inline const vec3&        trans() const noexcept;
 
             //  -- Setters --
             inline void set_scale(const double scale_) noexcept;
