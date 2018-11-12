@@ -22,7 +22,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace data //! data namespace
+    namespace img //! image namespace
     {
 
 
@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace data
+    } // namespace img
 } // namespace arc
 
 
