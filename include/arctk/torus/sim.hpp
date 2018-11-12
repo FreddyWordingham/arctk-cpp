@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <array>
 #include <cstddef>
 #include <string>
 
@@ -87,6 +88,8 @@ namespace arc //! arctk namespace
             //  -- Setters --
             inline void set_num_threads(const size_t num_threads_) noexcept;
             inline void set_output_dir(const std::string& output_dir_) noexcept;
+            inline void set_res(const size_t res_) noexcept;
+            inline void set_res(const std::array<size_t, 3>& res_) noexcept;
 
             //  -- Pre-flight --
           private:

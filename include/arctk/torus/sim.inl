@@ -86,6 +86,33 @@ namespace arc //! arctk namespace
             }
         }
 
+        inline void Sim::set_res(const size_t res_) noexcept
+        {
+            if ((res_ % 2) == 0)
+            {
+                std::cout << "Warning! The resolution of the domain should be odd in all dimensions.\n";
+
+                return;
+            }
+
+            _res = std::array<size_t, 3>(res_, res_, res_);
+        }
+
+        inline void Sim::set_res(const std::array<size_t, 3>& res_) noexcept
+        {
+            for (size_t i = 0; i < res_.size(); ++i)
+            {
+                if ((res_[i] % 2) == 0)
+                {
+                    std::cout << "Warning! The resolution of the domain should be odd in all dimensions.\n";
+
+                    return;
+                }
+            }
+
+            _res = res_;
+        }
+
 
         //  -- Pre-flight --
         inline void Sim::create_output_dir() const noexcept
