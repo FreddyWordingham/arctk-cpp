@@ -269,6 +269,12 @@ inline T& operator++(T& cont_)
 template <typename T, typename>
 inline T& operator--(T& cont_)
 {
+    for (typename T::iterator it = std::begin(cont_); it != std::end(cont_); std::advance(it, 1))
+    {
+        --*it;
+    }
+
+    return (cont_);
 }
 
 template <typename T, typename>
