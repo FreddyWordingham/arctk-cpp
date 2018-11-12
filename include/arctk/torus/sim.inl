@@ -165,7 +165,7 @@ namespace arc //! arctk namespace
 
             file << "Threads used           : " << _num_threads << "\n\n";
 
-            file << "Total entities         : " << _entities.size() << '\n' << "Of which are lights    : " << _entities.size() << '\n' << "Of which are detectors : " << _entities.size() << "\n\n";
+            file << "Total entities         : " << _entities.size() << '\n' << "Of which are lights    : " << _lights.size() << '\n' << "Of which are detectors : " << _detectors.size() << "\n\n";
 
             file << "Total photons          : " << total_phot() << '\n' << "Total light power: " << total_power() << "W\n\n";
         }
