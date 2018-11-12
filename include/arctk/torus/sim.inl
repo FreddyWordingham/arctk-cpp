@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <thread>
 
 //  -- Arctk --
 #include <arctk/data/obj.hpp>
@@ -40,6 +41,25 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Setters --
+        inline void Sim::set_num_threads(const size_t num_threads_) noexcept
+        {
+            assert(num_threads_ > 0);
+
+            if (num_threads_ > std::thread::hardware_concurrency())
+            {
+                std::cout << "Warning! Number of threads can not exceed the value supported by hardware concurrency: `" << std::thread::hardware_concurrency() << "`.\n";
+
+                _num_threads = std::thread::hardware_concurrency();
+            }
+
+            _num_threads = num_threads_;
+        }
+
+        inline void Sim::set_output_dir(const std::string& str_) noexcept
+        {
+            _num_threads = num_threads_;
+        }
 
 
 
