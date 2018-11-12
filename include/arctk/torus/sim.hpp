@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
 
         //  == SETTINGS ==
         //  -- Filenames --
-        constexpr const char* const PRE_FLIGHT_FILENAME = "info.txt";
+        constexpr const char* const INFO_FILENAME = "info.txt";
 
 
 
@@ -78,6 +78,7 @@ namespace arc //! arctk namespace
 
             //  -- Pre-flight --
             inline void create_output_dir() const noexcept;
+            inline void pre_flight_info_write() const noexcept;
         };
 
 

@@ -90,9 +90,11 @@ namespace arc //! arctk namespace
             }
         }
 
-        inline void Sim::write_pre_flight_info() const noexcept
+        inline void Sim::pre_flight_info_write() const noexcept
         {
-            std::ofstream file(_output_dir + PRE_FLIGHT_FILENAME);
+            std::ofstream file(_output_dir + INFO_FILENAME);
+
+            file << "Threads used: " << _num_threads << '\n';
         }
 
 
