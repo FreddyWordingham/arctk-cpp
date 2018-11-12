@@ -10,6 +10,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/img/bitmap.hpp>
 
 
 
