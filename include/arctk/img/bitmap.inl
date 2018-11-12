@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <fstream>
 
 //  -- Arctk --
 #include <arctk/math/container.hpp>
@@ -89,6 +90,13 @@ namespace arc //! arctk namespace
         inline void Bitmap::set_colour_map(std::function<vec3(double)> colour_map_) noexcept
         {
             _colour_map = colour_map_;
+        }
+
+
+        //  -- Saving --
+        inline void Bitmap::save(const std::string& path_) const noexcept
+        {
+            std::fstream(path_ + ".ppm");
         }
 
 
