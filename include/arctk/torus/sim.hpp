@@ -117,8 +117,8 @@ namespace arc //! arctk namespace
           private:
             inline void              create_output_dir() const noexcept;
             inline void              pre_flight_info_write() const noexcept;
-            inline unsigned long int total_phots() const noexcept;
-            inline double total_power() const noexcept;
+            inline unsigned long int total_phot() const noexcept;
+            inline double            total_power() const noexcept;
 
             //  -- Post-flight --
           private:

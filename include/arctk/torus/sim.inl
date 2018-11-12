@@ -154,8 +154,16 @@ namespace arc //! arctk namespace
             file << "Threads used: " << _num_threads << '\n';
         }
 
-        inline unsigned long int Sim::total_phots() const noexcept
+        inline unsigned long int Sim::total_phot() const noexcept
         {
+            unsigned long int total_phot = 0;
+
+            for (size_t i = 0; i < _lights.size(); ++i)
+            {
+                total_phot += _lights[i]->num_phot();
+            }
+
+            return (total_phot);
         }
 
         inline double Sim::total_power() const noexcept
