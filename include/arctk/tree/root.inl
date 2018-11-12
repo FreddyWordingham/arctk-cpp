@@ -105,7 +105,7 @@ namespace arc //! arctk namespace
                             ent_tris.emplace_back(std::pair<equip::Entity*, std::vector<const geom::shape::Triangle*>>(ents_[i].get(), std::vector<const geom::shape::Triangle*>()));
                         }
 
-                        ent_tris.back().second.emplace_back(&ents_[i]->tri(j));
+                        ent_tris.back().second.emplace_back(&ents_[i]->surf().tri(j));
                         ++num_tris;
                     }
                 }
