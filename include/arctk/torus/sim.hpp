@@ -90,6 +90,10 @@ namespace arc //! arctk namespace
             inline void create_output_dir() const noexcept;
             inline void pre_flight_info_write() const noexcept;
 
+            //  -- Post-flight --
+          private:
+            inline void post_flight_info_write() const noexcept;
+
             //  -- Simulate --
             inline void run_pre_flight() const noexcept;
             inline void run_post_flight() const noexcept;

@@ -107,6 +107,14 @@ namespace arc //! arctk namespace
             file << "Threads used: " << _num_threads << '\n';
         }
 
+        //  -- Post-flight --
+        inline void Sim::post_flight_info_write() const noexcept
+        {
+            std::ofstream file(_output_dir + INFO_FILENAME);
+
+            file << "================================================================\nSimulation complete." << '\n';
+        }
+
 
         //  -- Simulate --
         inline void Sim::run_pre_flight() const noexcept
