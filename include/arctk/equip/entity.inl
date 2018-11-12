@@ -54,6 +54,13 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Getters --
+        inline const geom::shape::Mesh& Entity::mesh() const noexcept
+        {
+            return (_surf);
+        }
+
+
         //  -- Collision --
         /**
          *  Perform a hit event on the entity.
