@@ -51,14 +51,16 @@ namespace arc //! arctk namespace
                 std::cout << "Warning! Number of threads can not exceed the value supported by hardware concurrency: `" << std::thread::hardware_concurrency() << "`.\n";
 
                 _num_threads = std::thread::hardware_concurrency();
+
+                return;
             }
 
             _num_threads = num_threads_;
         }
 
-        inline void Sim::set_output_dir(const std::string& str_) noexcept
+        inline void Sim::set_output_dir(const std::string& output_dir_) noexcept
         {
-            _num_threads = num_threads_;
+            _output_dir = output_dir_;
         }
 
 
