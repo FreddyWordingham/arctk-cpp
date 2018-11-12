@@ -71,6 +71,18 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+            //  -- Getters --
+            inline size_t Greyscale::width() const noexcept
+            {
+                return (_pixels.size());
+            }
+
+            inline size_t Greyscale::height() const noexcept
+            {
+                return (_pixels.front().size());
+            }
+
+
             //  -- Setters --
             inline void Greyscale::set_min(const double min_) noexcept
             {

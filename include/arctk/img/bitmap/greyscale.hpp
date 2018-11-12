@@ -73,6 +73,10 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline size_t width() const noexcept override;
+                inline size_t height() const noexcept override;
+
                 //  -- Setters --
                 inline void set_min(const double min_) noexcept;
                 inline void set_max(const double max_) noexcept;
@@ -80,7 +84,7 @@ namespace arc //! arctk namespace
                 inline void set_colour_map(std::function<vec3(double)> colour_map_) noexcept;
 
                 //  -- Saving --
-                inline void save(const std::string& path_) const noexcept;
+                inline void save(const std::string& path_) const noexcept override;
             };
 
 

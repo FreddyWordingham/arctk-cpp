@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
-            //  -- Properties --
+            //  -- Getters --
             virtual inline size_t width() const noexcept  = 0;
             virtual inline size_t height() const noexcept = 0;
 
