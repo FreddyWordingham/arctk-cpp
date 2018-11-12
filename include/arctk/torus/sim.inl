@@ -21,6 +21,7 @@
 #include <filesystem>
 #include <fstream>
 #include <thread>
+#include <type_traits>
 
 //  -- Arctk --
 #include <arctk/data/obj.hpp>
@@ -163,9 +164,12 @@ namespace arc //! arctk namespace
 
 
         //  -- Additions --
-        inline void Sim::add_entity(equip::Entity&& ent_) noexcept
+        template <typename T>
+        inline void Sim::add_entity(T&& ent_) noexcept
         {
-            _ents.emplace_back(std::make_unique<equip::Entity>(ent_));
+            static_assert(std::is_base_of<T, equip::Entity>::value);
+
+            _ents.emplace_back(std::make_unique<T>(ent_));
         }
 
 

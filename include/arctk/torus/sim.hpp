@@ -110,7 +110,8 @@ namespace arc //! arctk namespace
             inline void set_tar_tris(const size_t tar_tris_) noexcept;
 
             //  -- Additions --
-            inline void add_entity(equip::Entity&& ent_) noexcept;
+            template <typename T>
+            inline void add_entity(T&& ent_) noexcept;
 
             //  -- Pre-flight --
           private:
