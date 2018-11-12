@@ -67,6 +67,10 @@ namespace arc //! arctk namespace
             //  -- Domain --
             std::array<size_t, 3> _res;
 
+            //  -- Tree --
+            const size_t _max_depth;
+            const size_t _tar_tris;
+
 
             //  == INSTANTIATION ==
           public:
