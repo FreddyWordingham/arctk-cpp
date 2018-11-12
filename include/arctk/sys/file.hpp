@@ -34,9 +34,6 @@ namespace arc //! arctk namespace
             //  -- Reading --
             inline std::string read(const std::string& path_) noexcept;
 
-            //  -- Directories --
-            inline void mkdir(const std::string& path_) noexcept;
-
 
 
         } // namespace file
