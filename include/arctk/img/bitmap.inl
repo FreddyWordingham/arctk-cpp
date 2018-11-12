@@ -15,6 +15,12 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
+//  -- Arctk --
+#include <arctk/math/container.hpp>
+#include <arctk/prop/limits.hpp>
 
 
 
@@ -28,6 +34,13 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline Bitmap::Bitmap(const multi::vector<double, 2>& pixels_) noexcept
+          : _pixels(pixels_)
+          , _min(math::container::min(pixels_))
+          , _max(math::container::max(pixels_))
+        {
+            //            assert(prop::limits::always_greater_than_or_equal_to(pixels_));
+        }
 
 
 
