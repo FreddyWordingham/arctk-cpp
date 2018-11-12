@@ -361,7 +361,7 @@ if (UNIT_TESTING)
         find_package(OpenGL REQUIRED)
         find_package(SDL2 REQUIRED)
         find_package(GLEW REQUIRED)
-        find_package(GLFW3 3.2.1 REQUIRED)
+        find_package(glfw3 3.2.1 REQUIRED)
 
         #   -- Include System Directories --
         target_include_directories(${NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
@@ -374,7 +374,7 @@ if (UNIT_TESTING)
         target_link_libraries(${NAME} ${OPENGL_LIBRARIES})
         target_link_libraries(${NAME} ${SDL2_LIBRARIES})
         target_link_libraries(${NAME} ${GLEW_LIBRARIES})
-        target_link_libraries(${NAME} GLFW)
+        target_link_libraries(${NAME} glfw)
 
         add_test(${NAME} ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${NAME})
 
