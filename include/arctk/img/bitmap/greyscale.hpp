@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline explicit Bitmap(const multi::vector<double, 2>& pixels_) noexcept;
+                inline explicit Greyscale(const multi::vector<double, 2>& pixels_) noexcept;
 
 
                 //  == OPERATORS ==
