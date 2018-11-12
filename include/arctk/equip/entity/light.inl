@@ -99,7 +99,7 @@ namespace arc //! arctk namespace
              */
             inline double Light::phot_power() const noexcept
             {
-                return (phot_power_);
+                return (_phot_power);
             }
 
 
