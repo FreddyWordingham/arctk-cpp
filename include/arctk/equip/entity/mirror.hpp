@@ -81,7 +81,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Mirror(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_, double front_ref_, double back_ref_) noexcept;
+                inline Mirror(const geom::shape::Mesh& surf_, double front_ref_, double back_ref_) noexcept;
 
 
                 //  == METHODS ==
