@@ -16,32 +16,13 @@
 
 //  == IMPORTS ==
 //  -- Std --
-#include <memory>
-#include <vector>
-
-//  -- Arctk --
-#include <arctk/equip/entity.hpp>
+#include <cstddef>
 
 
 
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
-    namespace data //! data namespace
-    {
-        class Obj;
-    }               // namespace data
-    namespace equip //! equipment namespace
-    {
-        namespace entity //! entity namespace
-        {
-            class Light;
-        }         // namespace entity
-    }             // namespace equip
-    namespace opt //! optical namespace
-    {
-        class Mat;
-    } // namespace opt
 } // namespace arc
 
 
