@@ -38,6 +38,7 @@ namespace arc //! arctk namespace
           , _min(math::container::min(pixels_))
           , _max(math::container::max(pixels_))
           , _scale_map([](const double x_) { return (x_); })
+          , _colour_map([](const double x_) { return (vec3(x_, x_, x_)); })
         {
             assert(_max >= _min);
         }
