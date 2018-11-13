@@ -65,7 +65,6 @@ namespace arc //! arctk namespace
          */
         inline Window::~Window() noexcept
         {
-            glfwWindowShouldClose(_handle);
             glfwDestroyWindow(_handle);
             glfwTerminate();
         }
