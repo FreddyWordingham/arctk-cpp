@@ -92,7 +92,7 @@ namespace arc //! arctk namespace
              *  @param  cell_   Current domain cell.
              *  @param  dist_   Distance to the interaction event.
              *
-             *  @return False if the photon should be removed from the loop after interacting.
+             *  @return True if the photon's specific-optical-properties require updating after the interaction event.
              */
             inline bool Dumb::interact(random::Generator* rng_, phys::Photon* phot_, dom::Cell* cell_, const double dist_) const noexcept
             {
@@ -104,7 +104,7 @@ namespace arc //! arctk namespace
                 phot_->multiply_weight(_albedo);
                 phot_->rotate(random::distribution::henyey_greenstein(rng_, _asym), rng_->gen() * consts::math::TWO_PI);
 
-                return (true);
+                return (false);
             }
 
 
