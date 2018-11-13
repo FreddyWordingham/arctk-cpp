@@ -267,8 +267,8 @@ namespace arc //! arctk namespace
             dom::Region dom(_min, _max, _res);
             tree::Root  tree(_min, _max, _entities, _max_depth, _tar_tris);
 
-            auto start = std::chrono::system_clock::now();
-            auto end   = std::chrono::system_clock::now();
+            std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
+            std::chrono::time_point<std::chrono::system_clock> end   = std::chrono::system_clock::now();
 
             return (std::chrono::duration_cast<std::chrono::seconds>(end - start).count());
         }
