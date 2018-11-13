@@ -33,6 +33,7 @@
 #include <arctk/equip/entity/detector.hpp>
 #include <arctk/equip/entity/light.hpp>
 #include <arctk/exit/error.hpp>
+#include <arctk/math/container.hpp>
 #include <arctk/parse/print.hpp>
 #include <arctk/parse/write.hpp>
 #include <arctk/tree/root.hpp>
@@ -71,7 +72,7 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Setters --
-        inline void set_update_delta(const unsigned int update_delta_) noexcept
+        inline void Sim::set_update_delta(const unsigned int update_delta_) noexcept
         {
             assert(update_delta_ > 0);
 
@@ -287,10 +288,17 @@ namespace arc //! arctk namespace
             {
                 std::cout << "Simulating light " << i << " of " << _lights.size() << ".\n";
 
+                std::vector<unsigned long int> thread_phot(_num_threads);
+                std::thread                    reporter(&Sim::report, this, i, _lights[i]->num_phot(), &thread_phot);
+
                 for (size_t n = 0; n < _lights[i]->num_phot(); ++n)
                 {
-                    std::cout << (n * 100.0 / _lights[i]->num_phot()) << '\n';
+                    ++thread_phot[0];
+
+                    std::this_thread::sleep_for(std::chrono::milliseconds(2));
                 }
+
+                reporter.join();
             }
 
 
@@ -311,8 +319,18 @@ namespace arc //! arctk namespace
             file << "Tree max depth         : " << tree.max_depth() << '\n' << "Tree max triangles     : " << tree.max_tris() << '\n' << "Tree nodes             : " << tree.num_nodes() << "\n\n";
         }
 
-        inline void Sim::reporter(const unsigned long int num_phot_, const std::vector<unsigned long int>* thread_phot_) const noexcept
+        inline void Sim::report(const size_t light_index_, const unsigned long int num_phot_, const std::vector<unsigned long int>* thread_phot_) const noexcept
         {
+            unsigned long int total = math::container::sum(*thread_phot_);
+
+            while (total < num_phot_)
+            {
+                total = math::container::sum(*thread_phot_);
+
+                std::cout << "Light " << light_index_ << " : " << total << '/' << num_phot_ << " (" << (total * 100.0 / num_phot_) << "%)\n";
+
+                std::this_thread::sleep_for(std::chrono::seconds(_update_delta));
+            }
         }
 
 
