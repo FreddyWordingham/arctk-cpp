@@ -553,7 +553,7 @@ namespace arc //! arctk namespace
                 win.swap_buffer();
             }
 
-            glfwDestroyWindow(win);
+            glfwDestroyWindow(win.handle());
             glfwTerminate();
 #endif
         }
