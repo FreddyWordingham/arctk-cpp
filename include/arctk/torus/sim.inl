@@ -206,7 +206,7 @@ namespace arc //! arctk namespace
         {
             std::ofstream file(_output_dir + INFO_FILENAME, std::ofstream::app);
 
-            file << "\n================================================================\n\n";
+            file << "================================================================\n\n";
 
             file << "Simulation complete.\n";
         }
@@ -273,7 +273,7 @@ namespace arc //! arctk namespace
 
             std::ofstream file(_output_dir + INFO_FILENAME, std::ofstream::app);
 
-            file << "\n================================================================\n\n";
+            file << "================================================================\n\n";
 
             file << "Simulation run time : " << std::chrono::duration_cast<std::chrono::seconds>(end - start).count() << '\n';
 
