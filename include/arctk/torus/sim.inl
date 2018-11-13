@@ -33,6 +33,7 @@
 #include <arctk/equip/entity/detector.hpp>
 #include <arctk/equip/entity/light.hpp>
 #include <arctk/exit/error.hpp>
+#include <arctk/parse/print.hpp>
 #include <arctk/parse/write.hpp>
 #include <arctk/tree/root.hpp>
 
@@ -270,11 +271,13 @@ namespace arc //! arctk namespace
             std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
             std::chrono::time_point<std::chrono::system_clock> end   = std::chrono::system_clock::now();
 
+            std::ofstream file(_output_dir + INFO_FILENAME, std::ofstream::app);
+
             file << "\n================================================================\n\n";
 
             file << "Simulation run time : " << std::chrono::duration_cast<std::chrono::seconds>(end - start).count() << '\n';
 
-            file << "Domain resolution   : " << dom.res() << '\n' << "Domain cell count   : " << dom.num_cells() << '\n' << "Domain cell size    : " << dom.cell_size() << "\n\n";
+            file << "Domain resolution   : " << _res << '\n' << "Domain cell count   : " << dom.num_cells() << '\n' << "Domain cell size    : " << dom.cell_size() << "\n\n";
 
             file << "Tree max depth      : " << tree.max_depth() << '\n' << "Tree max triangles  : " << tree.max_tris() << '\n' << "Tree nodes          : " << tree.num_nodes() << "\n\n";
         }
