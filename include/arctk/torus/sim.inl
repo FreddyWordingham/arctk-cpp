@@ -18,6 +18,7 @@
 //  -- Std --
 #include <cassert>
 #include <chrono>
+#include <cmath>
 #include <cstdlib>
 #include <filesystem>
 #include <fstream>
@@ -314,15 +315,15 @@ namespace arc //! arctk namespace
 
         inline void Sim::simulate() const noexcept
         {
+            dom::Region dom(_min, _max, _res);
+            tree::Root  tree(_min, _max, _entities, _max_depth, _tar_tris);
+
 #ifdef RENDER
             if (_pre_render)
             {
-                render();
+                render(dom, tree);
             }
 #endif
-
-            dom::Region dom(_min, _max, _res);
-            tree::Root  tree(_min, _max, _entities, _max_depth, _tar_tris);
 
             std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
 
@@ -368,7 +369,7 @@ namespace arc //! arctk namespace
 #ifdef RENDER
             if (_post_render)
             {
-                render();
+                render(dom, tree);
             }
 #endif
         }
@@ -484,7 +485,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Rendering --
-        inline void Sim::render(const std::vector<std::vector<gui::Point>>& paths_) const noexcept
+        inline void Sim::render(const dom::Region& dom_, const tree::Root& tree_, const std::vector<std::vector<gui::Point>>& paths_) const noexcept
         {
 #ifdef RENDER
             gui::Window win("Arctorus", 1600, 1200, 4);
@@ -512,11 +513,11 @@ namespace arc //! arctk namespace
             gui::Actor axis_helper_y = gui::actor::axis_helper_y(scale, scale / 10.0f);
             gui::Actor axis_helper_z = gui::actor::axis_helper_z(scale, scale / 10.0f);
 
-            // gui::Actor dom_act = gui::actor::shape(dom);
-            // dom_act.set_col(glm::vec3(1.0f, 1.0f, 0.0f));
+            gui::Actor dom_act = gui::actor::shape(dom_);
+            dom_act.set_col(glm::vec3(1.0f, 1.0f, 0.0f));
 
-            // gui::Actor cell_act = gui::actor::domain(dom);
-            // cell_act.set_col(glm::vec3(1.0f, 0.8f, 0.0f));
+            gui::Actor cell_act = gui::actor::domain(dom_);
+            cell_act.set_col(glm::vec3(1.0f, 0.8f, 0.0f));
 
             std::vector<gui::Actor> ent_acts;
             for (size_t i = 0; i < _entities.size(); ++i)
@@ -524,8 +525,8 @@ namespace arc //! arctk namespace
                 ent_acts.emplace_back(gui::actor::shape(_entities[i]->surf()));
             }
 
-            // gui::Actor tree_act = gui::actor::tree(tree);
-            // tree_act.set_col(glm::vec3(0.0, 1.0, 0.0));
+            gui::Actor tree_act = gui::actor::tree(tree_);
+            tree_act.set_col(glm::vec3(0.0, 1.0, 0.0));
 
             while (map.poll(win))
             {
@@ -536,7 +537,7 @@ namespace arc //! arctk namespace
                 amb_shader.render(axis_helper_x);
                 amb_shader.render(axis_helper_y);
                 amb_shader.render(axis_helper_z);
-                // amb_shader.render(dom_act);
+                amb_shader.render(dom_act);
 
                 spec_shader.activate(lens, cam);
                 for (size_t i = 0; i < ent_acts.size(); ++i)
