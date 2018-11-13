@@ -27,6 +27,7 @@
 //  -- Arctk --
 #include <arctk/config/build.hpp>
 #include <arctk/config/version.hpp>
+#include <arctk/consts/num.hpp>
 #include <arctk/data/obj.hpp>
 #include <arctk/dom/region.hpp>
 #include <arctk/equip/entity.hpp>
@@ -34,9 +35,12 @@
 #include <arctk/equip/entity/light.hpp>
 #include <arctk/exit/error.hpp>
 #include <arctk/math/container.hpp>
+#include <arctk/opt/mat.hpp>
+#include <arctk/opt/sop.hpp>
 #include <arctk/parse/print.hpp>
 #include <arctk/parse/write.hpp>
 #include <arctk/random/generator/quality.hpp>
+#include <arctk/tree/node/leaf.hpp>
 #include <arctk/tree/root.hpp>
 
 
@@ -242,7 +246,7 @@ namespace arc //! arctk namespace
 
             _entities.emplace_back(std::make_unique<T>(light_));
 
-            _lights.emplace_back(dynamic_cast<arc::equip::entity::Light*>(_entities.back().get()));
+            _lights.emplace_back(dynamic_cast<equip::entity::Light*>(_entities.back().get()));
         }
 
         template <typename T>
@@ -252,7 +256,7 @@ namespace arc //! arctk namespace
 
             _entities.emplace_back(std::make_unique<T>(det_));
 
-            _detectors.emplace_back(std::make_pair(dynamic_cast<arc::equip::entity::Detector*>(_entities.back().get()), path_));
+            _detectors.emplace_back(std::make_pair(dynamic_cast<equip::entity::Detector*>(_entities.back().get()), path_));
         }
 
 
@@ -284,28 +288,26 @@ namespace arc //! arctk namespace
 
             std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
 
-
             for (size_t i = 0; i < _lights.size(); ++i)
             {
                 std::cout << "Simulating light " << i << " of " << _lights.size() << ".\n";
 
                 std::vector<unsigned long int> thread_phot(_num_threads);
-                std::thread                    reporter(&Sim::report, this, _lights[i]->num_phot(), thread_phot, i);
+                std::thread                    reporter(&Sim::report, this, _lights[i]->num_phot(), &thread_phot, i);
 
                 std::vector<std::thread> threads;
                 for (size_t t = 0; t < _num_threads; ++t)
                 {
-                    threads.emplace_back(&Sim::simulate_thread, this, t, _lights[i]->num_phot(), &thread_phot, i);
+                    threads.emplace_back(&Sim::simulate_thread, this, t, _lights[i]->num_phot(), &thread_phot, i, &dom, std::cref(tree));
                 }
 
-                for (size_t t = 0; t < _num_threads; ++t)
+                for (size_t t = 0; t < threads.size(); ++t)
                 {
-                    threads[i].join();
+                    threads[t].join();
                 }
 
                 reporter.join();
             }
-
 
             std::chrono::time_point<std::chrono::system_clock> end = std::chrono::system_clock::now();
 
@@ -324,26 +326,105 @@ namespace arc //! arctk namespace
             file << "Tree max depth         : " << tree.max_depth() << '\n' << "Tree max triangles     : " << tree.max_tris() << '\n' << "Tree nodes             : " << tree.num_nodes() << "\n\n";
         }
 
-        inline void Sim::simulate_thread(const size_t thread_index_, const unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_, const size_t light_index_) const noexcept
+        inline void Sim::simulate_thread(const size_t thread_index_, const unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_, const size_t light_index_, dom::Region* dom_, const tree::Root& tree_) const noexcept
         {
             random::generator::Quality rng;
 
-            unsigned long int total = math::container::sum(*thread_phot_);
-            while (total < num_phot_)
+            while (math::container::sum(*thread_phot_) < num_phot_)
             {
                 ++(*thread_phot_)[thread_index_];
 
-                std::this_thread::sleep_for(std::chrono::milliseconds(2));
+                auto [phot, mat, sop]        = _lights[light_index_]->emit(&rng, 0.0);
+                const tree::node::Leaf* leaf = tree_.leaf(phot.pos());
+                dom::Cell*              cell = dom_->cell(phot.pos());
+
+                phot.move(consts::num::BUMP, sop->ref_index());
+
+                double energy_debt = 0.0;
+                bool   loop        = true;
+
+                while (loop)
+                {
+                    leaf = tree_.leaf(phot.pos()); // TODO Test removal
+                    cell = dom_->cell(phot.pos()); // TODO Test removal
+
+                    const double                                                    inter_dist = sop->interact_dist(&rng, cell);
+                    const std::optional<std::pair<equip::Entity*, geom::Collision>> ent_dist   = leaf->ent_collision_info(phot.pos(), phot.dir());
+                    const std::optional<double>                                     leaf_dist  = leaf->collision(phot.pos(), phot.dir());
+                    const std::optional<double>                                     cell_dist  = cell->collision(phot.pos(), phot.dir());
+                    const std::optional<double>                                     dom_dist   = dom_->collision(phot.pos(), phot.dir());
+
+                    switch (collide(inter_dist, ent_dist, leaf_dist, cell_dist, dom_dist))
+                    {
+                        case type::collision::INTER:
+                            sop->interact(&rng, &phot, cell, inter_dist);
+                            break;
+                        case type::collision::ENT:
+                            loop = ent_dist.value().first->hit(&rng, &phot, &mat, &sop, cell, ent_dist.value().second);
+                            break;
+                        case type::collision::LEAF:
+                            phot.move(leaf_dist.value() + consts::num::BUMP, sop->ref_index());
+                            energy_debt += leaf_dist.value() * phot.energy() * phot.weight();
+                            leaf = tree_.leaf(phot.pos());
+                            break;
+                        case type::collision::CELL:
+                            phot.move(cell_dist.value() + consts::num::BUMP, sop->ref_index());
+                            energy_debt += cell_dist.value() * phot.energy() * phot.weight();
+                            cell->add_energy(energy_debt);
+                            energy_debt = 0.0;
+                            cell        = dom_->cell(phot.pos());
+                            break;
+                        case type::collision::DOM:
+                            phot.move(dom_dist.value(), sop->ref_index());
+                            energy_debt += dom_dist.value() * phot.energy() * phot.weight();
+                            loop = false;
+                            break;
+                    }
+                }
             }
         }
 
-        inline void Sim::report(const unsigned long int num_phot_, const std::vector<unsigned long int>& thread_phot_, const size_t light_index_) const noexcept
+        inline arc::type::collision Sim::collide(const double inter_, const std::optional<std::pair<arc::equip::Entity*, arc::geom::Collision>>& ent_, const std::optional<double>& leaf_, const std::optional<double>& cell_,
+                                                 const std::optional<double>& dom_) const noexcept
+        {
+            arc::type::collision type = arc::type::collision::INTER;
+            double               dist = inter_;
+
+            if (ent_ && (ent_.value().second.dist() <= dist))
+            {
+                type = arc::type::collision::ENT;
+                dist = ent_.value().second.dist();
+            }
+
+            if (leaf_ && (leaf_.value() <= dist))
+            {
+                type = arc::type::collision::LEAF;
+                dist = leaf_.value();
+            }
+
+            if (cell_ && (cell_.value() <= dist))
+            {
+                type = arc::type::collision::CELL;
+                dist = cell_.value();
+            }
+
+            if (dom_ && ((dom_.value() - arc::consts::num::BUMP) <= dist))
+            {
+                type = arc::type::collision::DOM;
+                dist = dom_.value();
+            }
+
+            return (type);
+        }
+
+        inline void Sim::report(const unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_, const size_t light_index_) const noexcept
         {
             unsigned long int total = 0;
 
             while (total < num_phot_)
             {
-                total = math::container::sum(thread_phot_);
+
+                total = math::container::sum(*thread_phot_);
 
                 std::cout << "Light " << light_index_ << " : " << total << '/' << num_phot_ << " (" << (total * 100.0 / num_phot_) << "%)\n";
 
