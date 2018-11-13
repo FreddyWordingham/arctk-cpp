@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
             inline Generator(Generator&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
-            virtual inline ~Generator() noexcept = default;
+            virtual inline ~Generator() noexcept;
 
             //  -- Initialisation --
           private:

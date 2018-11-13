@@ -46,6 +46,13 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Destructors --
+        /**
+         *  Default destructor.
+         */
+        inline Generator::~Generator() noexcept = default;
+
+
         //  -- Initialisation --
         inline uint64_t Generator::init_next_seed() noexcept
         {
