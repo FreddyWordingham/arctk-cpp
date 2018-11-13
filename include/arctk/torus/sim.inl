@@ -287,7 +287,7 @@ namespace arc //! arctk namespace
                  << "Domain cell count      : " << dom.num_cells() << '\n'
                  << "Domain cell size       : " << dom.cell_size() << "\n\n";
 
-            file << "Tree max depth         : " << tree.max_depth() << '\n' << "Tree max triangles    : " << tree.max_tris() << '\n' << "Tree nodes            : " << tree.num_nodes() << "\n\n";
+            file << "Tree max depth         : " << tree.max_depth() << '\n' << "Tree max triangles     : " << tree.max_tris() << '\n' << "Tree nodes             : " << tree.num_nodes() << "\n\n";
         }
 
 
