@@ -502,20 +502,20 @@ namespace arc //! arctk namespace
             gui::Actor axis_helper_y = gui::actor::axis_helper_y(scale, scale / 10.0f);
             gui::Actor axis_helper_z = gui::actor::axis_helper_z(scale, scale / 10.0f);
 
-            gui::Actor dom_act = gui::actor::shape(dom);
-            dom_act.set_col(glm::vec3(1.0f, 1.0f, 0.0f));
+            // gui::Actor dom_act = gui::actor::shape(dom);
+            // dom_act.set_col(glm::vec3(1.0f, 1.0f, 0.0f));
 
-            gui::Actor cell_act = gui::actor::domain(dom);
-            cell_act.set_col(glm::vec3(1.0f, 0.8f, 0.0f));
+            // gui::Actor cell_act = gui::actor::domain(dom);
+            // cell_act.set_col(glm::vec3(1.0f, 0.8f, 0.0f));
 
             std::vector<gui::Actor> ent_acts;
             for (size_t i = 0; i < _entities.size(); ++i)
             {
-                ent_acts.emplace_back(gui::actor::shape(*_entities[i].get()));
+                ent_acts.emplace_back(gui::actor::shape(_entities[i]->surf()));
             }
 
-            gui::Actor tree_act = gui::actor::tree(tree);
-            tree_act.set_col(glm::vec3(0.0, 1.0, 0.0));
+            // gui::Actor tree_act = gui::actor::tree(tree);
+            // tree_act.set_col(glm::vec3(0.0, 1.0, 0.0));
 
             while (map.poll(win))
             {
@@ -526,7 +526,7 @@ namespace arc //! arctk namespace
                 amb_shader.render(axis_helper_x);
                 amb_shader.render(axis_helper_y);
                 amb_shader.render(axis_helper_z);
-                amb_shader.render(dom_act);
+                // amb_shader.render(dom_act);
 
                 spec_shader.activate(lens, cam);
                 for (size_t i = 0; i < ent_acts.size(); ++i)
@@ -534,11 +534,11 @@ namespace arc //! arctk namespace
                     spec_shader.render(ent_acts[i]);
                 }
 
-                ray_shader.activate(lens, cam);
-                for (size_t i = 0; i < paths.size(); ++i)
-                {
-                    ray_shader.render(paths[i]);
-                }
+                // ray_shader.activate(lens, cam);
+                // for (size_t i = 0; i < paths.size(); ++i)
+                // {
+                //     ray_shader.render(paths[i]);
+                // }
 
                 win.swap_buffer();
             }
