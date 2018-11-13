@@ -31,8 +31,10 @@ namespace arc //! arctk namespace
         //  == FIELDS ==
         //  -- Seed --
 #pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wexit-time-destructors"
 #pragma clang diagnostic ignored "-Wglobal-constructors"
-        uint64_t Generator::_next_seed = static_cast<uint64_t>(std::time(nullptr)); // NOLINT
+        std::mutex Generator::_seed_mutex;
+        uint64_t   Generator::_next_seed = static_cast<uint64_t>(std::time(nullptr)); // NOLINT
 #pragma clang diagnostic pop
 
 
