@@ -99,14 +99,14 @@ namespace arc //! arctk namespace
             size_t _max_depth;
             size_t _tar_tris;
 
+            //  -- Rendering --
+            bool _pre_render;
+            bool _post_render;
+
             //  -- Entities --
             std::vector<std::unique_ptr<equip::Entity>>                         _entities;
             std::vector<const equip::entity::Light*>                            _lights;
             std::vector<std::pair<const equip::entity::Detector*, std::string>> _detectors;
-
-            //  -- Rendering --
-            bool _pre_render;
-            bool _post_render;
 
 
             //  == INSTANTIATION ==
