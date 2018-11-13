@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cstdint>
+#include <mutex>
 
 
 
@@ -38,7 +39,8 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Seed --
-            static uint64_t _next_seed; //!< Value of the next seed to be used. // NOLINT
+            static std::mutex _seed_mutex;
+            static uint64_t   _next_seed; //!< Value of the next seed to be used. // NOLINT
 
           protected:
             //  -- Seed --
