@@ -275,7 +275,7 @@ namespace arc //! arctk namespace
 
             file << "================================================================\n\n";
 
-            file << "Simulation run time : " << std::chrono::duration_cast<std::chrono::seconds>(end - start).count() << '\n';
+            file << "Simulation run time : " << std::chrono::duration_cast<std::chrono::seconds>(end - start).count() << "\n\n";
 
             file << "Domain resolution   : " << _res << '\n' << "Domain cell count   : " << dom.num_cells() << '\n' << "Domain cell size    : " << dom.cell_size() << "\n\n";
 
