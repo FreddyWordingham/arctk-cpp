@@ -81,6 +81,12 @@ namespace arc //! arctk namespace
                 phot_->multiply_weight(_albedo);
                 phot_->rotate(random::distribution::henyey_greenstein(rng_, _asym), rng_->gen() * consts::math::TWO_PI);
 
+                if (rng_->gen() > _raman_prob)
+                {
+                    phot_->shift_wavelength(_wavelength_delta);
+                    phot_->rotate(random::distribution::henyey_greenstein(rng_, 0.0), rng_->gen() * consts::math::TWO_PI);
+                }
+
                 return (true);
             }
 
