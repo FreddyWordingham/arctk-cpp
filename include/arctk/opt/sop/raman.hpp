@@ -63,9 +63,9 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Optical Properties --
-                const double _dist;       //!< Interaction distance.
-                const double _albedo;     //!< Single scattering albedo.
-                const double _raman_prob; //!< Raman scattering probability.
+                const double _interaction_coef; //!< Interaction coefficient.
+                const double _albedo;           //!< Single scattering albedo.
+                const double _raman_prob;       //!< Raman scattering probability.
                 const double _wavelength_delta;
                 const double _asym; //!< Asymmetry factor.
 
