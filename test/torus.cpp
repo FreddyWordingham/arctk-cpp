@@ -8,6 +8,12 @@
 
 
 
+//  == MACROS ==
+//  -- Options --
+#define RENDER
+
+
+
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/torus/sim.hpp>
