@@ -36,6 +36,7 @@
 #include <arctk/math/container.hpp>
 #include <arctk/parse/print.hpp>
 #include <arctk/parse/write.hpp>
+#include <arctk/random/generator/quality.hpp>
 #include <arctk/tree/root.hpp>
 
 
@@ -289,13 +290,17 @@ namespace arc //! arctk namespace
                 std::cout << "Simulating light " << i << " of " << _lights.size() << ".\n";
 
                 std::vector<unsigned long int> thread_phot(_num_threads);
-                std::thread                    reporter(&Sim::report, this, i, _lights[i]->num_phot(), &thread_phot);
+                std::thread                    reporter(&Sim::report, this, _lights[i]->num_phot(), thread_phot, i);
 
-                for (size_t n = 0; n < _lights[i]->num_phot(); ++n)
+                std::vector<std::thread> threads;
+                for (size_t t = 0; t < _num_threads; ++t)
                 {
-                    ++thread_phot[0];
+                    threads.emplace_back(&Sim::simulate_thread, this, t, _lights[i]->num_phot(), &thread_phot, i);
+                }
 
-                    std::this_thread::sleep_for(std::chrono::milliseconds(2));
+                for (size_t t = 0; t < _num_threads; ++t)
+                {
+                    threads[i].join();
                 }
 
                 reporter.join();
@@ -319,13 +324,26 @@ namespace arc //! arctk namespace
             file << "Tree max depth         : " << tree.max_depth() << '\n' << "Tree max triangles     : " << tree.max_tris() << '\n' << "Tree nodes             : " << tree.num_nodes() << "\n\n";
         }
 
-        inline void Sim::report(const size_t light_index_, const unsigned long int num_phot_, const std::vector<unsigned long int>* thread_phot_) const noexcept
+        inline void Sim::simulate_thread(const size_t thread_index_, const unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_, const size_t light_index_) const noexcept
         {
+            random::generator::Quality rng;
+
             unsigned long int total = math::container::sum(*thread_phot_);
+            while (total < num_phot_)
+            {
+                ++(*thread_phot_)[thread_index_];
+
+                std::this_thread::sleep_for(std::chrono::milliseconds(2));
+            }
+        }
+
+        inline void Sim::report(const unsigned long int num_phot_, const std::vector<unsigned long int>& thread_phot_, const size_t light_index_) const noexcept
+        {
+            unsigned long int total = 0;
 
             while (total < num_phot_)
             {
-                total = math::container::sum(*thread_phot_);
+                total = math::container::sum(thread_phot_);
 
                 std::cout << "Light " << light_index_ << " : " << total << '/' << num_phot_ << " (" << (total * 100.0 / num_phot_) << "%)\n";
 
