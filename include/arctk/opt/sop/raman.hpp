@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Dumb(double ref_index_, double dist_, double albedo_, double raman_prob_, double wavelength_delta_, double asym_) noexcept;
+                inline Raman(double ref_index_, double dist_, double albedo_, double raman_prob_, double wavelength_delta_, double asym_) noexcept;
 
 
                 //  == METHODS ==
