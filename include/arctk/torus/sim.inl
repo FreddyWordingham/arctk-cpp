@@ -238,6 +238,15 @@ namespace arc //! arctk namespace
 
 
         //  -- Simulate --
+        inline void Sim::run() const noexcept
+        {
+            run_pre_flight();
+
+            simulate();
+
+            run_post_flight();
+        }
+
         inline void Sim::run_pre_flight() const noexcept
         {
             create_output_dir();
@@ -247,15 +256,6 @@ namespace arc //! arctk namespace
         inline void Sim::run_post_flight() const noexcept
         {
             post_flight_info_write();
-        }
-
-        inline void Sim::run() const noexcept
-        {
-            run_pre_flight();
-
-            simulate();
-
-            run_post_flight();
         }
 
         inline void Sim::simulate() const noexcept

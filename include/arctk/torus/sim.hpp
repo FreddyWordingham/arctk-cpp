@@ -125,12 +125,13 @@ namespace arc //! arctk namespace
             inline void post_flight_info_write() const noexcept;
 
             //  -- Simulate --
+          public:
+            inline void run() const noexcept;
+
+          private:
             inline void run_pre_flight() const noexcept;
             inline void run_post_flight() const noexcept;
             inline void simulate() const noexcept;
-
-          public:
-            inline void run() const noexcept;
         };
 
 
