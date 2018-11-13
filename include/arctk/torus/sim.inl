@@ -279,15 +279,15 @@ namespace arc //! arctk namespace
 
             file << "================================================================\n\n";
 
-            file << "Simulation run time : " << std::chrono::duration_cast<std::chrono::seconds>(end - start).count() << "\n\n";
+            file << "Simulation run time    : " << std::chrono::duration_cast<std::chrono::seconds>(end - start).count() << "\n\n";
 
-            file << "Domain min          : " << _min << '\n'
-                 << "Domain max          : " << _max << '\n'
-                 << "Domain resolution   : " << _res << '\n'
-                 << "Domain cell count   : " << dom.num_cells() << '\n'
-                 << "Domain cell size    : " << dom.cell_size() << "\n\n";
+            file << "Domain min             : " << _min << '\n'
+                 << "Domain max             : " << _max << '\n'
+                 << "Domain resolution      : " << _res << '\n'
+                 << "Domain cell count      : " << dom.num_cells() << '\n'
+                 << "Domain cell size       : " << dom.cell_size() << "\n\n";
 
-            file << "Tree max depth      : " << tree.max_depth() << '\n' << "Tree max triangles  : " << tree.max_tris() << '\n' << "Tree nodes          : " << tree.num_nodes() << "\n\n";
+            file << "Tree max depth         : " << tree.max_depth() << '\n' << "Tree max triangles    : " << tree.max_tris() << '\n' << "Tree nodes            : " << tree.num_nodes() << "\n\n";
         }
 
 
