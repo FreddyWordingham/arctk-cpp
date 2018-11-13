@@ -329,7 +329,7 @@ namespace arc //! arctk namespace
 
                 std::cout << "Light " << light_index_ << " : " << total << '/' << num_phot_ << " (" << (total * 100.0 / num_phot_) << "%)\n";
 
-                std::this_thread::sleep_for(std::chrono::seconds(_update_delta));
+                std::this_thread::sleep_for(std::chrono::milliseconds(_update_delta));
             }
         }
 
