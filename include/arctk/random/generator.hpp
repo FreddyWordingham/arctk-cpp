@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
 
             //  -- Initialisation --
           private:
-            static inline uint64_t init_next_seed() noexcept;
+            static inline uint64_t init_seed() noexcept;
 
 
             //  == OPERATORS ==

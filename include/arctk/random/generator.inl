@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
          *  Initialise a generator using the next seed value.
          */
         inline Generator::Generator() noexcept
-          : _seed(_next_seed++)
+          : _seed(init_seed())
         {
         }
 
@@ -56,9 +56,15 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
-        inline uint64_t Generator::init_next_seed() noexcept
+        inline uint64_t Generator::init_seed() noexcept
         {
-            return (_next_seed++);
+            _seed_mutex.lock();
+
+            const uint64_t seed = _next_seed++;
+
+            _seed_mutex.unlock();
+
+            return (seed);
         }
 
 
