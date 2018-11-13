@@ -71,13 +71,14 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Simple(const std::vector<double>& wavelengths_, const std::vector<double>& ref_indexs_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& asyms_) noexcept;
+                inline Simple(const std::vector<double>& wavelengths_, const std::vector<double>& ref_indexs_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& raman_coef_,
+                              const std::vector<double>& wavelength_delta_, const std::vector<double>& asyms_) noexcept;
 
               private:
                 //  -- Initialisation --
-                inline math::formula::Linear init_interact_coef(const std::vector<double>& wavelengths_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_) const noexcept;
-                inline math::formula::Linear init_albedo(const std::vector<double>& wavelengths_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_) const noexcept;
-
+                inline math::formula::Linear init_interact_coef(const std::vector<double>& wavelengths_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& raman_coef_) const noexcept;
+                inline math::formula::Linear init_albedo(const std::vector<double>& wavelengths_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& raman_coef_) const noexcept;
+                inline math::formula::Linear init_raman_prob(const std::vector<double>& wavelengths_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& raman_coef_) const noexcept;
 
 
                 //  == METHODS ==
