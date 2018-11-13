@@ -46,6 +46,13 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Initialisation --
+        inline uint64_t Generator::init_next_seed() noexcept
+        {
+            return (_next_seed++);
+        }
+
+
 
         //  == METHODS ==
         //  -- Getters --

@@ -63,7 +63,7 @@ namespace arc //! arctk namespace
             inline Distribution(Distribution&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
-            virtual inline ~Distribution() noexcept = default;
+            virtual inline ~Distribution() noexcept;
 
 
             //  == OPERATORS ==

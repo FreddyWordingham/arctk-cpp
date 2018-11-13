@@ -57,6 +57,14 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Destructors --
+        /**
+         *  Default destructor.
+         */
+        template <typename T>
+        inline Distribution<T>::~Distribution() noexcept = default;
+
+
 
         //  == METHODS ==
         //  -- Getters --

@@ -51,11 +51,17 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline explicit Generator() noexcept;
+
+          private:
             inline Generator(const Generator&) noexcept = default; //!< Defaulted copy constructor.
             inline Generator(Generator&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
             virtual inline ~Generator() noexcept = default;
+
+            //  -- Initialisation --
+          private:
+            static inline uint64_t init_next_seed() noexcept;
 
 
             //  == OPERATORS ==
