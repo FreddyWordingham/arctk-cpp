@@ -83,11 +83,11 @@ namespace arc //! arctk namespace
           , _res({{25, 25, 25}})
           , _max_depth(6)
           , _tar_tris(10)
+          , _pre_render(false)
+          , _post_render(false)
           , _entities(0)
           , _lights(0)
           , _detectors(0)
-          , _pre_render(false)
-          , _post_render(false)
         {
             assert(min_.x < max_.x);
             assert(min_.y < max_.y);
