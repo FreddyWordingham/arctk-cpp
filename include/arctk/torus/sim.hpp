@@ -125,6 +125,8 @@ namespace arc //! arctk namespace
             inline void set_res(const std::array<size_t, 3>& res_) noexcept;
             inline void set_max_depth(const size_t max_depth_) noexcept;
             inline void set_tar_tris(const size_t tar_tris_) noexcept;
+            inline void set_pre_render(const bool pre_render_) noexcept;
+            inline void set_post_render(const bool post_render_) noexcept;
 
             //  -- Additions --
             template <typename T>

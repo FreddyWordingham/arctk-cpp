@@ -174,6 +174,16 @@ namespace arc //! arctk namespace
             _tar_tris = tar_tris_;
         }
 
+        inline void Sim::set_pre_render(const bool pre_render_) noexcept
+        {
+            _pre_render = pre_render_;
+        }
+
+        inline void Sim::set_post_render(const bool post_render_) noexcept
+        {
+            _post_render = post_render_;
+        }
+
 
         //  -- Pre-flight --
         inline void Sim::create_output_dir() const noexcept
