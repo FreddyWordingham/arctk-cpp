@@ -34,6 +34,7 @@
 #include <arctk/equip/entity/detector.hpp>
 #include <arctk/equip/entity/light.hpp>
 #include <arctk/exit/error.hpp>
+#include <arctk/gui/point.hpp>
 #include <arctk/math/container.hpp>
 #include <arctk/opt/mat.hpp>
 #include <arctk/opt/sop.hpp>
@@ -42,6 +43,24 @@
 #include <arctk/random/generator/quality.hpp>
 #include <arctk/tree/node/leaf.hpp>
 #include <arctk/tree/root.hpp>
+#ifdef RENDER
+#include <arctk/gui/actor.hpp>
+#include <arctk/gui/camera/fly.hpp>
+#include <arctk/gui/keymap.hpp>
+#include <arctk/gui/lens/perspective.hpp>
+#include <arctk/gui/shader/ambient.hpp>
+#include <arctk/gui/shader/normal.hpp>
+#include <arctk/gui/shader/ray.hpp>
+#include <arctk/gui/shader/specular.hpp>
+#include <arctk/gui/window.hpp>
+#endif
+
+//  -- Graphical --
+#ifdef RENDER
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
+#endif
 
 
 
@@ -389,33 +408,33 @@ namespace arc //! arctk namespace
             }
         }
 
-        inline arc::type::collision Sim::collide(const double inter_, const std::optional<std::pair<arc::equip::Entity*, arc::geom::Collision>>& ent_, const std::optional<double>& leaf_, const std::optional<double>& cell_,
-                                                 const std::optional<double>& dom_) const noexcept
+        inline type::collision Sim::collide(const double inter_, const std::optional<std::pair<equip::Entity*, geom::Collision>>& ent_, const std::optional<double>& leaf_, const std::optional<double>& cell_, const std::optional<double>& dom_) const
+          noexcept
         {
-            arc::type::collision type = arc::type::collision::INTER;
-            double               dist = inter_;
+            type::collision type = type::collision::INTER;
+            double          dist = inter_;
 
             if (ent_ && (ent_.value().second.dist() <= dist))
             {
-                type = arc::type::collision::ENT;
+                type = type::collision::ENT;
                 dist = ent_.value().second.dist();
             }
 
             if (leaf_ && (leaf_.value() <= dist))
             {
-                type = arc::type::collision::LEAF;
+                type = type::collision::LEAF;
                 dist = leaf_.value();
             }
 
             if (cell_ && (cell_.value() <= dist))
             {
-                type = arc::type::collision::CELL;
+                type = type::collision::CELL;
                 dist = cell_.value();
             }
 
-            if (dom_ && ((dom_.value() - arc::consts::num::BUMP) <= dist))
+            if (dom_ && ((dom_.value() - consts::num::BUMP) <= dist))
             {
-                type = arc::type::collision::DOM;
+                type = type::collision::DOM;
                 dist = dom_.value();
             }
 
@@ -435,6 +454,79 @@ namespace arc //! arctk namespace
 
                 std::this_thread::sleep_for(std::chrono::milliseconds(_update_delta));
             }
+        }
+
+
+        //  -- Rendering --
+        inline void Sim::render(const std::vector<std::vector<gui::Point>>& paths_) const noexcept
+        {
+#ifdef RENDER
+            gui::Window win("Arctorus", 1600, 1200, 4);
+            win.set_clear_col(glm::vec4(0.0f, 0.1f, 0.2f, 0.0f));
+
+            gui::lens::Perspective lens(70.0f, 1600.0f / 1200.0f);
+
+            const float scale = powf(10.0f, floorf(log10f(static_cast<float>((_max - _min).mag()))));
+            std::cout << "Graphical scale unit: " << scale << "m\n";
+
+            gui::camera::Fly cam(glm::vec3(_max.x * 2, _max.y * 2, _max.z * 2), glm::vec3(_min.x - _max.x, _min.y - _max.y, _min.z - _max.z), glm::vec3(0.0f, 0.0f, 1.0f), scale / 10.0f);
+
+            gui::Keymap map;
+            map.use_fly_controls(&cam);
+
+            gui::shader::Ambient  amb_shader;
+            gui::shader::Normal   norm_shader;
+            gui::shader::Specular spec_shader;
+            gui::shader::Ray      ray_shader;
+
+            gui::Actor grid = gui::actor::grid(glm::vec2(_min.x, _min.y), glm::vec2(_max.x, _max.y), glm::vec2(scale, scale));
+            grid.set_col(glm::vec3(0.5f, 0.0f, 0.5f));
+
+            gui::Actor axis_helper_x = gui::actor::axis_helper_x(scale, scale / 10.0f);
+            gui::Actor axis_helper_y = gui::actor::axis_helper_y(scale, scale / 10.0f);
+            gui::Actor axis_helper_z = gui::actor::axis_helper_z(scale, scale / 10.0f);
+
+            gui::Actor dom_act = gui::actor::shape(dom);
+            dom_act.set_col(glm::vec3(1.0f, 1.0f, 0.0f));
+
+            gui::Actor cell_act = gui::actor::domain(dom);
+            cell_act.set_col(glm::vec3(1.0f, 0.8f, 0.0f));
+
+            std::vector<gui::Actor> ent_acts;
+            for (size_t i = 0; i < _entities.size(); ++i)
+            {
+                ent_acts.emplace_back(gui::actor::shape(*_entities[i].get()));
+            }
+
+            gui::Actor tree_act = gui::actor::tree(tree);
+            tree_act.set_col(glm::vec3(0.0, 1.0, 0.0));
+
+            while (map.poll(win))
+            {
+                win.clear_buffer();
+
+                amb_shader.activate(lens, cam);
+                amb_shader.render(grid);
+                amb_shader.render(axis_helper_x);
+                amb_shader.render(axis_helper_y);
+                amb_shader.render(axis_helper_z);
+                amb_shader.render(dom_act);
+
+                spec_shader.activate(lens, cam);
+                for (size_t i = 0; i < ent_acts.size(); ++i)
+                {
+                    spec_shader.render(ent_acts[i]);
+                }
+
+                ray_shader.activate(lens, cam);
+                for (size_t i = 0; i < paths.size(); ++i)
+                {
+                    ray_shader.render(paths[i]);
+                }
+
+                win.swap_buffer();
+            }
+#endif
         }
 
 
