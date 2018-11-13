@@ -28,7 +28,7 @@ namespace arc //! arctk namespace
 
 
 
-        //  == SETTINGS ==
+        //  == FIELDS ==
         //  -- Seed --
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wglobal-constructors"
