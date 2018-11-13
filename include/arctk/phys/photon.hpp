@@ -82,6 +82,7 @@ namespace arc //! arctk namespace
             inline void move(double dist_, double ref_index_) noexcept;
             inline void rotate(double theta_, double phi_) noexcept;
             inline void set_dir(const vec3& dir_) noexcept;
+            inline void shift_wavelength(double delta_) noexcept;
             inline void multiply_weight(double mult_) noexcept;
         };
 

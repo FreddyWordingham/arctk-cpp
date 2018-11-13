@@ -199,6 +199,11 @@ namespace arc //! arctk namespace
             _dir = dir_;
         }
 
+        inline void Photon::shift_wavelength(const double delta_) noexcept
+        {
+            _wavelength += delta_;
+        }
+
         /**
          *  Multiply the weight of the photon.
          *

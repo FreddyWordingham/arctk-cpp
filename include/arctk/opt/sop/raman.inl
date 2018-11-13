@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            inline double Dumb::interact_dist(random::Generator* rng_, const dom::Cell* /*unused*/) const noexcept
+            inline double Raman::interact_dist(random::Generator* rng_, const dom::Cell* /*unused*/) const noexcept
             {
                 assert(rng_ != nullptr);
 
@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
 
 
             //  -- Interaction --
-            inline bool Dumb::interact(random::Generator* rng_, phys::Photon* phot_, dom::Cell* cell_, const double dist_) const noexcept
+            inline bool Raman::interact(random::Generator* rng_, phys::Photon* phot_, dom::Cell* cell_, const double dist_) const noexcept
             {
                 cell_->add_energy(dist_ * phot_->energy() * phot_->weight());
                 cell_->add_absorb(phot_->weight() * (1.0 - _albedo));
