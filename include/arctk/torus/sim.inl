@@ -86,6 +86,8 @@ namespace arc //! arctk namespace
           , _entities(0)
           , _lights(0)
           , _detectors(0)
+          , _pre_render(false)
+          , _post_render(false)
         {
             assert(min_.x < max_.x);
             assert(min_.y < max_.y);
