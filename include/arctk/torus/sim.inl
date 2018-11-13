@@ -52,6 +52,7 @@ namespace arc //! arctk namespace
         inline Sim::Sim(const vec3& min_, const vec3& max_) noexcept
           : _min(min_)
           , _max(max_)
+          , _update_delta(60)
           , _num_threads(1)
           , _output_dir("output/")
           , _res({{25, 25, 25}})
