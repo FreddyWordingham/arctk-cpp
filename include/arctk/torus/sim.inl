@@ -70,6 +70,13 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Setters --
+        inline void set_update_delta(const unsigned int update_delta_) noexcept
+        {
+            assert(update_delta_ > 0);
+
+            _update_delta = update_delta_;
+        }
+
         inline void Sim::set_num_threads(const size_t num_threads_) noexcept
         {
             assert(num_threads_ > 0);

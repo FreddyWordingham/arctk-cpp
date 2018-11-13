@@ -99,6 +99,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Setters --
+            inline void set_update_delta(const unsigned int update_delta_) noexcept;
             inline void set_num_threads(const size_t num_threads_) noexcept;
             inline void set_output_dir(const std::string& output_dir_) noexcept;
             inline void set_res(const size_t res_) noexcept;
