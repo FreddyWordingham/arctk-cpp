@@ -28,7 +28,7 @@ namespace arc //! arctk namespace
 
 
 
-        //  == INSTANTIATION ==
+        //  == SETTINGS ==
         //  -- Seed --
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wglobal-constructors"
@@ -36,6 +36,8 @@ namespace arc //! arctk namespace
 #pragma clang diagnostic pop
 
 
+
+        //  == INSTANTIATION ==
         //  -- Constructors --
         /**
          *  Initialise a generator using the next seed value.
