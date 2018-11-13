@@ -51,8 +51,6 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline explicit Generator() noexcept;
-
-          private:
             inline Generator(const Generator&) noexcept = default; //!< Defaulted copy constructor.
             inline Generator(Generator&&) noexcept      = default; //!< Defaulted move constructor.
 
