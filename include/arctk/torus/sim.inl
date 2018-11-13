@@ -201,13 +201,13 @@ namespace arc //! arctk namespace
 
 
         //  -- Post-flight --
-        inline void Sim::post_flight_info_write(const long int sim_time_) const noexcept
+        inline void Sim::post_flight_info_write() const noexcept
         {
             std::ofstream file(_output_dir + INFO_FILENAME, std::ofstream::app);
 
-            file << "================================================================\n\n";
+            file << "\n================================================================\n\n";
 
-            file << "Simulation complete.\nSimulation time: " << parse::write::timestamp(sim_time_) << '\n';
+            file << "Simulation complete.\n";
         }
 
 
@@ -246,9 +246,9 @@ namespace arc //! arctk namespace
         {
             run_pre_flight();
 
-            const long int run_time = simulate();
+            simulate();
 
-            run_post_flight(run_time);
+            run_post_flight();
         }
 
         inline void Sim::run_pre_flight() const noexcept
@@ -257,12 +257,12 @@ namespace arc //! arctk namespace
             pre_flight_info_write();
         }
 
-        inline void Sim::run_post_flight(const long int sim_time_) const noexcept
+        inline void Sim::run_post_flight() const noexcept
         {
-            post_flight_info_write(sim_time_);
+            post_flight_info_write();
         }
 
-        inline long int Sim::simulate() const noexcept
+        inline void Sim::simulate() const noexcept
         {
             dom::Region dom(_min, _max, _res);
             tree::Root  tree(_min, _max, _entities, _max_depth, _tar_tris);
@@ -270,7 +270,13 @@ namespace arc //! arctk namespace
             std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
             std::chrono::time_point<std::chrono::system_clock> end   = std::chrono::system_clock::now();
 
-            return (std::chrono::duration_cast<std::chrono::seconds>(end - start).count());
+            file << "\n================================================================\n\n";
+
+            file << "Simulation run time : " << std::chrono::duration_cast<std::chrono::seconds>(end - start).count() << '\n';
+
+            file << "Domain resolution   : " << dom.res() << '\n' << "Domain cell count   : " << dom.num_cells() << '\n' << "Domain cell size    : " << dom.cell_size() << "\n\n";
+
+            file << "Tree max depth      : " << tree.max_depth() << '\n' << "Tree max triangles  : " << tree.max_tris() << '\n' << "Tree nodes          : " << tree.num_nodes() << "\n\n";
         }
 
 
