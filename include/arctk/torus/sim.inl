@@ -359,7 +359,10 @@ namespace arc //! arctk namespace
                     switch (collide(inter_dist, ent_dist, leaf_dist, cell_dist, dom_dist))
                     {
                         case type::collision::INTER:
-                            sop->interact(&rng, &phot, cell, inter_dist);
+                            if (sop->interact(&rng, &phot, cell, inter_dist))
+                            {
+                                sop = mat->gen(phot);
+                            }
                             break;
                         case type::collision::ENT:
                             loop = ent_dist.value().first->hit(&rng, &phot, &mat, &sop, cell, ent_dist.value().second);
