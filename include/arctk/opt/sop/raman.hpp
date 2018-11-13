@@ -66,13 +66,14 @@ namespace arc //! arctk namespace
                 const double _dist;       //!< Interaction distance.
                 const double _albedo;     //!< Single scattering albedo.
                 const double _raman_prob; //!< Raman scattering probability.
-                const double _asym;       //!< Asymmetry factor.
+                const double _wavelength_delta;
+                const double _asym; //!< Asymmetry factor.
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Dumb(double ref_index_, double dist_, double albedo_, double asym_) noexcept;
+                inline Dumb(double ref_index_, double dist_, double albedo_, double raman_prob_, double wavelength_delta_, double asym_) noexcept;
 
 
                 //  == METHODS ==
