@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
                                 const std::vector<double>& wavelength_delta_, const std::vector<double>& asyms_) noexcept
               : Mat(wavelengths_.front(), wavelengths_.back())
               , _ref_index(wavelengths_, ref_indexs_)
-              , _interact_coef(init_interact_coef(wavelengths_, scat_coef_, abs_coef_))
+              , _interact_coef(init_interact_coef(wavelengths_, scat_coef_, abs_coef_, raman_coef_))
               , _albedo(init_albedo(wavelengths_, scat_coef_, abs_coef_, raman_coef_))
               , _raman_prob(init_raman_prob(wavelengths_, scat_coef_, abs_coef_, raman_coef_))
               , _wavelength_delta(wavelengths_, wavelength_delta_)
