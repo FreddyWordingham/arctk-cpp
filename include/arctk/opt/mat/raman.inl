@@ -131,7 +131,7 @@ namespace arc //! arctk namespace
                 assert(raman_coef_.size() == wavelengths_.size());
                 assert(prop::limits::always_greater_than(raman_coef_, 0.0));
 
-                std::vector<double> albedo;
+                std::vector<double> raman_prob;
                 raman_prob.reserve(wavelengths_.size());
 
                 for (size_t i = 0; i < wavelengths_.size(); ++i)
