@@ -71,7 +71,8 @@ namespace arc //! arctk namespace
             const vec3 _max;
 
             //  -- Parallelisation --
-            size_t _num_threads;
+            unsigned int _update_delta;
+            size_t       _num_threads;
 
             //  -- Output --
             std::string _output_dir;
@@ -132,6 +133,8 @@ namespace arc //! arctk namespace
             inline void run_pre_flight() const noexcept;
             inline void run_post_flight() const noexcept;
             inline void simulate() const noexcept;
+            inline void report(const unsigned long int num_phot_, const std::vector<unsigned long int>* thread_phot_) const noexcept;
+            //            inline void simulate_thread() const noexcept;
         };
 
 

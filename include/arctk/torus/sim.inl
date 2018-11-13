@@ -273,7 +273,20 @@ namespace arc //! arctk namespace
             tree::Root  tree(_min, _max, _entities, _max_depth, _tar_tris);
 
             std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
-            std::chrono::time_point<std::chrono::system_clock> end   = std::chrono::system_clock::now();
+
+
+            for (size_t i = 0; i < _lights.size(); ++i)
+            {
+                std::cout << "Simulating light " << i << " of " << _lights.size() << ".\n";
+
+                for (size_t n = 0; n < _lights[i]->num_phot(); ++n)
+                {
+                    std::cout << (n * 100.0 / _lights[i]->num_phot()) << '\n';
+                }
+            }
+
+
+            std::chrono::time_point<std::chrono::system_clock> end = std::chrono::system_clock::now();
 
             std::ofstream file(_output_dir + INFO_FILENAME, std::ofstream::app);
 
@@ -288,6 +301,10 @@ namespace arc //! arctk namespace
                  << "Domain cell size       : " << dom.cell_size() << "\n\n";
 
             file << "Tree max depth         : " << tree.max_depth() << '\n' << "Tree max triangles     : " << tree.max_tris() << '\n' << "Tree nodes             : " << tree.num_nodes() << "\n\n";
+        }
+
+        inline void Sim::reporter(const unsigned long int num_phot_, const std::vector<unsigned long int>* thread_phot_) const noexcept
+        {
         }
 
 
