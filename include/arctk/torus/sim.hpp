@@ -104,6 +104,10 @@ namespace arc //! arctk namespace
             std::vector<const equip::entity::Light*>                            _lights;
             std::vector<std::pair<const equip::entity::Detector*, std::string>> _detectors;
 
+            //  -- Rendering --
+            bool _pre_render;
+            bool _post_render;
+
 
             //  == INSTANTIATION ==
           public:
