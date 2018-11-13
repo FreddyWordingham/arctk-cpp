@@ -552,6 +552,9 @@ namespace arc //! arctk namespace
 
                 win.swap_buffer();
             }
+
+            glfwDestroyWindow(win);
+            glfwTerminate();
 #endif
         }
 
