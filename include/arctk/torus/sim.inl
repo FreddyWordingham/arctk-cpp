@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <chrono>
 #include <cstdlib>
 #include <filesystem>
 #include <fstream>
@@ -32,6 +33,7 @@
 #include <arctk/equip/entity/detector.hpp>
 #include <arctk/equip/entity/light.hpp>
 #include <arctk/exit/error.hpp>
+#include <arctk/parse/write.hpp>
 #include <arctk/tree/root.hpp>
 
 
@@ -199,11 +201,13 @@ namespace arc //! arctk namespace
 
 
         //  -- Post-flight --
-        inline void Sim::post_flight_info_write() const noexcept
+        inline void Sim::post_flight_info_write(const long int sim_time_) const noexcept
         {
             std::ofstream file(_output_dir + INFO_FILENAME, std::ofstream::app);
 
-            file << "================================================================\nSimulation complete." << '\n';
+            file << "================================================================\n\n";
+
+            file << "Simulation complete.\nSimulation time: " << parse::write::timestamp(sim_time_) << '\n';
         }
 
 
@@ -242,9 +246,9 @@ namespace arc //! arctk namespace
         {
             run_pre_flight();
 
-            simulate();
+            const long int run_time = simulate();
 
-            run_post_flight();
+            run_post_flight(run_time);
         }
 
         inline void Sim::run_pre_flight() const noexcept
@@ -253,15 +257,20 @@ namespace arc //! arctk namespace
             pre_flight_info_write();
         }
 
-        inline void Sim::run_post_flight() const noexcept
+        inline void Sim::run_post_flight(const long int sim_time_) const noexcept
         {
-            post_flight_info_write();
+            post_flight_info_write(sim_time_);
         }
 
-        inline void Sim::simulate() const noexcept
+        inline long int Sim::simulate() const noexcept
         {
             dom::Region dom(_min, _max, _res);
             tree::Root  tree(_min, _max, _entities, _max_depth, _tar_tris);
+
+            auto start = std::chrono::system_clock::now();
+            auto end   = std::chrono::system_clock::now();
+
+            return (std::chrono::duration_cast<std::chrono::seconds>(end - start).count());
         }
 
 
