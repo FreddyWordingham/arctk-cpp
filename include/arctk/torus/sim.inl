@@ -492,7 +492,7 @@ namespace arc //! arctk namespace
 
             gui::lens::Perspective lens(70.0f, 1600.0f / 1200.0f);
 
-            const float scale = powf(10.0f, floorf(log10f(static_cast<float>((_max - _min).mag()))));
+            const float scale = powf(10.0f, floorf(log10f(static_cast<float>((_max - _min).mag()) / 10.0f)));
             std::cout << "Graphical scale unit: " << scale << "m\n";
 
             gui::camera::Fly cam(glm::vec3(_max.x * 2, _max.y * 2, _max.z * 2), glm::vec3(_min.x - _max.x, _min.y - _max.y, _min.z - _max.z), glm::vec3(0.0f, 0.0f, 1.0f), scale / 10.0f);
