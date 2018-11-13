@@ -304,6 +304,13 @@ namespace arc //! arctk namespace
 
         inline void Sim::simulate() const noexcept
         {
+#ifdef RENDER
+            if (_pre_render)
+            {
+                render();
+            }
+#endif
+
             dom::Region dom(_min, _max, _res);
             tree::Root  tree(_min, _max, _entities, _max_depth, _tar_tris);
 
@@ -347,6 +354,13 @@ namespace arc //! arctk namespace
             file << "Tree max depth         : " << tree.max_depth() << '\n' << "Tree max triangles     : " << tree.max_tris() << '\n' << "Tree nodes             : " << tree.num_nodes() << "\n\n";
 
             dom.save(_output_dir + "domain");
+
+#ifdef RENDER
+            if (_post_render)
+            {
+                render();
+            }
+#endif
         }
 
         inline void Sim::simulate_thread(const size_t thread_index_, const unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_, const size_t light_index_, dom::Region* dom_, const tree::Root& tree_) const noexcept
