@@ -39,16 +39,16 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Raman::Raman(const double ref_index_, const double dist_, const double albedo_, const double raman_prob_, const double wavelength_delta_, const double asym_) noexcept
+            inline Raman::Raman(const double ref_index_, const double interaction_coef_, const double albedo_, const double raman_prob_, const double wavelength_delta_, const double asym_) noexcept
               : Sop(ref_index_)
-              , _dist(dist_)
+              , _interaction_coef(interaction_coef_)
               , _albedo(albedo_)
               , _raman_prob(raman_prob_)
               , _wavelength_delta(wavelength_delta_)
               , _asym(asym_)
             {
                 assert(ref_index_ >= 1.0);
-                assert(dist_ > 0.0);
+                assert(interaction_coef_ > 0.0);
                 assert(albedo_ >= 0.0);
                 assert(albedo_ <= 1.0);
                 assert(raman_prob_ >= 0.0);
