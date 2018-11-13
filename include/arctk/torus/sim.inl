@@ -161,8 +161,7 @@ namespace arc //! arctk namespace
                  << "Arctk build type       : " << config::build::TYPE << '\n'
                  << "Arctk build date       : " << config::build::DATE << "\n\n";
 
-            file << "Working directory      : " << std::filesystem::current_path() << "\n\n";
-            file << "Output directory       : " << _output_dir << "\n\n";
+            file << "Working directory      : " << std::filesystem::current_path() << '\n' << "Output directory       : " << _output_dir << "\n\n";
 
             file << "Threads used           : " << _num_threads << "\n\n";
 
