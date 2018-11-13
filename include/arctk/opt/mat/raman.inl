@@ -151,7 +151,7 @@ namespace arc //! arctk namespace
             //  -- Specific Optical Properties --
             inline std::unique_ptr<Sop> Raman::gen(const phys::Photon& phot_) const noexcept
             {
-                return (std::make_unique<sop::Raman>(_ref_index(phot_.wavelength()), _interact_coef(phot_.wavelength()), _albedo(phot_.wavelength()), _asym(phot_.wavelength())));
+                return (std::make_unique<sop::Raman>(_ref_index(phot_.wavelength()), _interact_coef(phot_.wavelength()), _albedo(phot_.wavelength()), _raman_prob(phot_.wavelength()), _wavelength_delta(phot_.wavelength()), _asym(phot_.wavelength())));
             }
 
 
