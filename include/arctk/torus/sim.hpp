@@ -127,6 +127,7 @@ namespace arc //! arctk namespace
             //  -- Simulate --
             inline void run_pre_flight() const noexcept;
             inline void run_post_flight() const noexcept;
+            inline void simulate() const noexcept;
 
           public:
             inline void run() const noexcept;

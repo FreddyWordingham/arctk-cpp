@@ -27,10 +27,12 @@
 #include <arctk/config/build.hpp>
 #include <arctk/config/version.hpp>
 #include <arctk/data/obj.hpp>
+#include <arctk/dom/region.hpp>
 #include <arctk/equip/entity.hpp>
 #include <arctk/equip/entity/detector.hpp>
 #include <arctk/equip/entity/light.hpp>
 #include <arctk/exit/error.hpp>
+#include <arctk/tree/root.hpp>
 
 
 
@@ -251,7 +253,15 @@ namespace arc //! arctk namespace
         {
             run_pre_flight();
 
+            simulate();
+
             run_post_flight();
+        }
+
+        inline void Sim::simulate() const noexcept
+        {
+            dom::Region dom(_min, _max, _res);
+            tree::Root  tree(_min, _max, _entities, _max_depth, _tar_tris);
         }
 
 
