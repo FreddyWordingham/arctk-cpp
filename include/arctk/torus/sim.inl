@@ -14,6 +14,13 @@
 
 
 
+//  == MACROS ==
+#ifdef RENDER
+#define TRACK paths.back().emplace_back(gui::Point(glm::vec3(phot.pos().x, phot.pos().y, phot.pos().z), static_cast<float>(phot.time()), static_cast<float>(phot.wavelength()), static_cast<float>(phot.phase())));
+#endif
+
+
+
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
@@ -379,13 +386,18 @@ namespace arc //! arctk namespace
         inline std::vector<std::vector<gui::Point>> Sim::simulate_thread(const size_t thread_index_, const unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_, const size_t light_index_, dom::Region* dom_,
                                                                          const tree::Root& tree_) const noexcept
         {
+#ifdef RENDER
             std::vector<std::vector<gui::Point>> paths;
+#endif
 
             random::generator::Quality rng;
 
             while (math::container::sum(*thread_phot_) < num_phot_)
             {
                 ++(*thread_phot_)[thread_index_];
+#ifdef RENDER
+                paths.emplace_back(std::vector<gui::Point>());
+#endif
 
                 auto [phot, mat, sop]        = _lights[light_index_]->emit(&rng, 0.0);
                 const tree::node::Leaf* leaf = tree_.leaf(phot.pos());
@@ -398,6 +410,8 @@ namespace arc //! arctk namespace
 
                 while (loop)
                 {
+                    TRACK;
+
                     leaf = tree_.leaf(phot.pos()); // TODO Test removal
                     cell = dom_->cell(phot.pos()); // TODO Test removal
 
@@ -437,6 +451,8 @@ namespace arc //! arctk namespace
                             break;
                     }
                 }
+
+                TRACK;
             }
 
             return (paths);
