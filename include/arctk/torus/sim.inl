@@ -17,6 +17,8 @@
 //  == MACROS ==
 #ifdef RENDER
 #define TRACK paths.back().emplace_back(gui::Point(glm::vec3(phot.pos().x, phot.pos().y, phot.pos().z), static_cast<float>(phot.time()), static_cast<float>(phot.wavelength()), static_cast<float>(phot.phase())));
+#elif
+#define TRACK ;
 #endif
 
 
