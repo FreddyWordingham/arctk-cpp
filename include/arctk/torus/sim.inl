@@ -576,7 +576,7 @@ namespace arc //! arctk namespace
                 }
             }
             float       render_time       = 0.0f;
-            const float render_time_delta = max_time / 100000.0f;
+            const float render_time_delta = max_time / 10000.0f;
             const float render_time_step  = render_time_delta / 10.0f;
             std::cout << "Creating path actors complete!\n";
 
