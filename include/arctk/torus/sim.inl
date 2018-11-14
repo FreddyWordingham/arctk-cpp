@@ -388,9 +388,7 @@ namespace arc //! arctk namespace
         inline std::vector<std::vector<gui::Point>> Sim::simulate_thread(const size_t thread_index_, const unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_, const size_t light_index_, dom::Region* dom_,
                                                                          const tree::Root& tree_) const noexcept
         {
-#ifdef RENDER
             std::vector<std::vector<gui::Point>> paths;
-#endif
 
             random::generator::Quality rng;
 
