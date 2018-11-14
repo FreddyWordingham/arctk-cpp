@@ -22,6 +22,7 @@
 #include <cstdlib>
 #include <filesystem>
 #include <fstream>
+#include <future>
 #include <thread>
 #include <type_traits>
 
@@ -325,6 +326,7 @@ namespace arc //! arctk namespace
             }
 #endif
 
+            std::vector<std::vector<std::vector<gui::Point>>>  paths;
             std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
 
             for (size_t i = 0; i < _lights.size(); ++i)
@@ -334,15 +336,15 @@ namespace arc //! arctk namespace
                 std::vector<unsigned long int> thread_phot(_num_threads);
                 std::thread                    reporter(&Sim::report, this, _lights[i]->num_phot(), &thread_phot, i);
 
-                std::vector<std::thread> threads;
+                std::vector<std::future<std::vector<std::vector<gui::Point>>>> threads;
                 for (size_t t = 0; t < _num_threads; ++t)
                 {
-                    threads.emplace_back(&Sim::simulate_thread, this, t, _lights[i]->num_phot(), &thread_phot, i, &dom, std::cref(tree));
+                    threads.emplace_back(std::async(&Sim::simulate_thread, this, t, _lights[i]->num_phot(), &thread_phot, i, &dom, std::cref(tree)));
                 }
 
                 for (size_t t = 0; t < threads.size(); ++t)
                 {
-                    threads[t].join();
+                    paths.emplace_back(threads[t].get());
                 }
 
                 reporter.join();
@@ -369,13 +371,16 @@ namespace arc //! arctk namespace
 #ifdef RENDER
             if (_post_render)
             {
-                render(dom, tree);
+                render(dom, tree, paths);
             }
 #endif
         }
 
-        inline void Sim::simulate_thread(const size_t thread_index_, const unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_, const size_t light_index_, dom::Region* dom_, const tree::Root& tree_) const noexcept
+        inline std::vector<std::vector<gui::Point>> Sim::simulate_thread(const size_t thread_index_, const unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_, const size_t light_index_, dom::Region* dom_,
+                                                                         const tree::Root& tree_) const noexcept
         {
+            std::vector<std::vector<gui::Point>> paths;
+
             random::generator::Quality rng;
 
             while (math::container::sum(*thread_phot_) < num_phot_)
@@ -433,6 +438,8 @@ namespace arc //! arctk namespace
                     }
                 }
             }
+
+            return (paths);
         }
 
         inline type::collision Sim::collide(const double inter_, const std::optional<std::pair<equip::Entity*, geom::Collision>>& ent_, const std::optional<double>& leaf_, const std::optional<double>& cell_, const std::optional<double>& dom_) const
@@ -485,7 +492,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Rendering --
-        inline void Sim::render(const dom::Region& dom_, const tree::Root& tree_, const std::vector<std::vector<gui::Point>>& paths_) const noexcept
+        inline void Sim::render(const dom::Region& dom_, const tree::Root& tree_, const std::vector<std::vector<std::vector<gui::Point>>>& paths_) const noexcept
         {
 #ifdef RENDER
             gui::Window win("Arctorus", 1600, 1200, 4);
@@ -528,6 +535,25 @@ namespace arc //! arctk namespace
             gui::Actor tree_act = gui::actor::tree(tree_);
             tree_act.set_col(glm::vec3(0.0, 1.0, 0.0));
 
+            std::vector<gui::Actor> paths;
+            size_t                  num_paths = 0;
+            for (size_t i = 0; i < paths_.size(); ++i)
+            {
+                num_paths += paths_[i].size();
+            }
+            paths.reserve(num_paths);
+
+            std::cout << "Creating path actors...\n";
+            for (size_t i = 0; i < paths_.size(); ++i)
+            {
+                std::cout << "Processing path batch " << i << " of " << paths_.size() << '\n';
+                for (size_t j = 0; j < paths_[i].size(); ++j)
+                {
+                    paths.emplace_back(arc::gui::actor::path(paths_[i][j]));
+                }
+            }
+            std::cout << "Creating path actors complete!\n";
+
             while (map.poll(win))
             {
                 win.clear_buffer();
@@ -545,11 +571,11 @@ namespace arc //! arctk namespace
                     spec_shader.render(ent_acts[i]);
                 }
 
-                // ray_shader.activate(lens, cam);
-                // for (size_t i = 0; i < paths.size(); ++i)
-                // {
-                //     ray_shader.render(paths[i]);
-                // }
+                ray_shader.activate(lens, cam);
+                for (size_t i = 0; i < paths.size(); ++i)
+                {
+                    ray_shader.render(paths[i]);
+                }
 
                 win.swap_buffer();
             }
