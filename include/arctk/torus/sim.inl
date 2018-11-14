@@ -560,14 +560,22 @@ namespace arc //! arctk namespace
             paths.reserve(num_paths);
 
             std::cout << "Creating path actors...\n";
+            float max_time = 0.0;
             for (size_t i = 0; i < paths_.size(); ++i)
             {
                 std::cout << "Processing path batch " << i << " of " << paths_.size() << '\n';
                 for (size_t j = 0; j < paths_[i].size(); ++j)
                 {
-                    paths.emplace_back(arc::gui::actor::path(paths_[i][j]));
+                    if (paths_[i][j].back().time > max_time)
+                    {
+                        max_time = paths_[i][j].back().time;
+                    }
+                    paths.emplace_back(gui::actor::path(paths_[i][j]));
                 }
             }
+            float       render_time       = 0.0f;
+            const float render_time_delta = max_time / 1.0e6f;
+            const float render_time_step  = render_time_delta / 10.0f;
             std::cout << "Creating path actors complete!\n";
 
             while (map.poll(win))
@@ -588,6 +596,13 @@ namespace arc //! arctk namespace
                 }
 
                 ray_shader.activate(lens, cam);
+                render_time += render_time_step;
+                ray_shader.set_time_start(render_time);
+                ray_shader.set_time_end(render_time + render_time_delta);
+                if (render_time > max_time)
+                {
+                    render_time = 0.0f;
+                }
                 for (size_t i = 0; i < paths.size(); ++i)
                 {
                     ray_shader.render(paths[i]);
