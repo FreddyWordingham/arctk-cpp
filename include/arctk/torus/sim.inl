@@ -156,6 +156,13 @@ namespace arc //! arctk namespace
             _num_threads = num_threads_;
         }
 
+        /**
+         *  Set the path to the output directory.
+         *
+         *  @param  output_dir_ Path to the output directory.
+         *
+         *  @pre    output_dir_ may not be empty.
+         */
         inline void Sim::set_output_dir(const std::string& output_dir_) noexcept
         {
             assert(!output_dir_.empty());
