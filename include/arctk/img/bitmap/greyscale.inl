@@ -111,8 +111,17 @@ namespace arc //! arctk namespace
 
 
             //  -- Saving --
+            /**
+             *  Save the state of the bitmap as an ppm image.
+             *
+             *  @param  path_   Path to the images save location.
+             *
+             *  @pre    path_ may not be empty.
+             */
             inline void Greyscale::save(const std::string& path_) const noexcept
             {
+                assert(!path_.empty());
+
                 multi::vector<vec3, 2> pixels(_pixels.size(), std::vector<vec3>(_pixels.front().size()));
 
                 const size_t width  = pixels.size();
