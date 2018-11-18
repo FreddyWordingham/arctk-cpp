@@ -299,6 +299,16 @@ inline T& operator%=(T& cont_, const S& val_)
 
 
 //  -- Increment / Decrement --
+/**
+ *  Increment the elements of a container.
+ *  Return a reference to the container post-increment.
+ * 
+ *  @tparam T   Type of container.
+ * 
+ *  @param  cont_   Container to be incremented.
+ *  
+ *  @return Reference to the container post-increment.
+ */
 template <typename T, typename>
 inline T& operator++(T& cont_)
 {
