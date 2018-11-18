@@ -476,6 +476,17 @@ inline T operator-(const T& cont_, const S val_)
     return (cont);
 }
 
+/**
+ *  Create a container by multiplying the elements of a container by a value.
+ * 
+ *  @tparam T   Type of container.
+ *  @tparam S   Type of value to multiply by.
+ * 
+ *  @param  cont_   Container to be multiplied.
+ *  @param  val_    Value used to multiply.
+ * 
+ *  @return Container formed by multiplying the elements of a container by a value.
+ */
 template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
 inline T operator*(const T& cont_, const S val_)
 {
