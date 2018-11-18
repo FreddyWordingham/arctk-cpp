@@ -53,6 +53,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the file path to the base wavefront file.
+         *
+         *  @return File path to the base wavefront file.
+         */
         inline const std::string& Wavefront::file() const noexcept
         {
             return (_file);
