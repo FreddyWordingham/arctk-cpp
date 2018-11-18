@@ -209,6 +209,17 @@ inline T& operator+=(T& cont_, const S& val_)
     return (cont_);
 }
 
+/**
+ *  Subtract a value to each element of a container.
+ * 
+ *  @tparam T   Type of container.
+ *  @tparam S   Type to be subtracted from the container.
+ * 
+ *  @param  cont_   Container to be subtracted from.
+ *  @param  val_    Value to be subtracted.
+ * 
+ *  @return Reference to the container.
+ */
 template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
 inline T& operator-=(T& cont_, const S& val_)
 {
