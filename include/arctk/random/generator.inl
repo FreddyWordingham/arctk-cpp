@@ -58,6 +58,11 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
+        /**
+         *  Initalise the seed for the generator to use.
+         *
+         *  @return Seed for the generator to use.
+         */
         inline uint64_t Generator::init_seed() noexcept
         {
             _seed_mutex.lock();
