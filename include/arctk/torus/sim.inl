@@ -369,6 +369,13 @@ namespace arc //! arctk namespace
 
 
         //  -- Additions --
+        /**
+         *  Add an entity to the simulation.
+         *
+         *  @tparam T   Type of entity to add.
+         *
+         *  @param  ent_    Entity to add to the simulation.
+         */
         template <typename T>
         inline void Sim::add_entity(T&& ent_) noexcept
         {
