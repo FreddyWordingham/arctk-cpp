@@ -262,6 +262,11 @@ namespace arc //! arctk namespace
             _pre_render = pre_render_;
         }
 
+        /**
+         *  Set the post-render toggle value.
+         *
+         *  @param  post_render_    Post-render toggle value.
+         */
         inline void Sim::set_post_render(const bool post_render_) noexcept
         {
             _post_render = post_render_;
