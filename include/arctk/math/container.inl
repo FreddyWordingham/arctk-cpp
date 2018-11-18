@@ -361,6 +361,16 @@ inline T operator++(const T& cont_, const int /*unused*/)
     return (cont);
 }
 
+/**
+ *  Decrement the elements of a container.
+ *  Return a copy of the container pre-decrement.
+ * 
+ *  @tparam T   Type of container.
+ * 
+ *  @param  cont_   Container to be decremented.
+ *  
+ *  @return Copy of the container pre-decrement.
+ */
 template <typename T, typename>
 inline T operator--(const T& cont_, const int /*unused*/)
 {
