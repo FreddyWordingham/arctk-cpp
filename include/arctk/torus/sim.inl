@@ -335,6 +335,11 @@ namespace arc //! arctk namespace
             return (total_phot);
         }
 
+        /**
+         *  Calculate the total power of the light sources.
+         *
+         *  @return Total power of the light sources.
+         */
         inline double Sim::total_power() const noexcept
         {
             double total_power = 0.0;
