@@ -103,6 +103,11 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the width of the image in pixels.
+             *
+             *  @return Width of the image in pixels.
+             */
             inline size_t Greyscale::width() const noexcept
             {
                 return (_pixels.size());
