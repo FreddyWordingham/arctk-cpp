@@ -38,6 +38,33 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a raman scattering material.
+             *
+             *  @param  wavelengths_        Wavelengths.
+             *  @param  ref_indexs_         Corresponding refractive indices.
+             *  @param  scat_coef_          Corresponding scattering coefficients.
+             *  @param  abs_coef_           Corresponding absorption coefficients.
+             *  @param  raman_coef_         Corresponding raman scattering coefficients.
+             *  @param  wavelength_delta_   Corresponding wavelength deltas.
+             *  @param  asyms_              Corresponding symmetry factors.
+             *
+             *  @pre    wavelengths_ values must all be positive.
+             *  @pre    wavelengths_ values must be ascending.
+             *  @pre    ref_indexs_ values must be the same size as wavelengths_.
+             *  @pre    ref_indexs_ values must all be greater than, or equal to, unity.
+             *  @pre    scat_coef_ values must be the same size as wavelengths_.
+             *  @pre    scat_coef_ values must all be positive.
+             *  @pre    abs_coef_ values must be the same size as wavelengths_.
+             *  @pre    abs_coef_ values must all be positive.
+             *  @pre    raman_coef_ values must be the same size as wavelengths_.
+             *  @pre    raman_coef_ values must all be positive.
+             *  @pre    wavelength_delta_ values must be the same size as wavelengths_.
+             *  @pre    wavelength_delta_ values when added to each corresponding value of wavelengths_ must fall within the bounds of the wavelengths_ vector.
+             *  @pre    asyms_ values must be the same size as wavelengths_.
+             *  @pre    asyms_ values must all greater than, or equal to, minus one.
+             *  @pre    asyms_ values must all less than, or equal to, unity.
+             */
             inline Raman::Raman(const std::vector<double>& wavelengths_, const std::vector<double>& ref_indexs_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& raman_coef_,
                                 const std::vector<double>& wavelength_delta_, const std::vector<double>& asyms_) noexcept
               : Mat(wavelengths_.front(), wavelengths_.back())
