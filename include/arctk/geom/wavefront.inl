@@ -95,6 +95,11 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
+        /**
+         *  Set the scaling vector.
+         *
+         *  @param  scale_  Scaling to be applied in each axis.
+         */
         inline void Wavefront::set_scale(const double scale_) noexcept
         {
             _scale = vec3(scale_, scale_, scale_);
