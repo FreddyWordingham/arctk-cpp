@@ -153,6 +153,11 @@ namespace arc //! arctk namespace
                 _max = max_;
             }
 
+            /**
+             *  Set the function pointer to use when performing scaling during a save.
+             *
+             *  @param  scale_map_  Function pointer to scaling method.
+             */
             inline void Greyscale::set_scale_map(std::function<double(double)> scale_map_) noexcept
             {
                 _scale_map = scale_map_;
