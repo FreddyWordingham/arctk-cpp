@@ -341,6 +341,16 @@ inline T& operator--(T& cont_)
     return (cont_);
 }
 
+/**
+ *  Increment the elements of a container.
+ *  Return a copy of the container pre-increment.
+ * 
+ *  @tparam T   Type of container.
+ * 
+ *  @param  cont_   Container to be incremented.
+ *  
+ *  @return Copy of the container pre-increment.
+ */
 template <typename T, typename>
 inline T operator++(const T& cont_, const int /*unused*/)
 {
