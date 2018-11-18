@@ -197,8 +197,20 @@ namespace arc //! arctk namespace
             _res = std::array<size_t, 3>({{res_, res_, res_}});
         }
 
+        /**
+         *  Set the resolution of the domain.
+         *
+         *  @param  res_    Resolution of the domain.
+         *
+         *  @pre    res_[i] values must be odd.
+         */
         inline void Sim::set_res(const std::array<size_t, 3>& res_) noexcept
         {
+            for (size_t i = 0; i < res_.size(); ++i)
+            {
+                assert((res_[i] % 2) == 1);
+            }
+
             for (size_t i = 0; i < res_.size(); ++i)
             {
                 if ((res_[i] % 2) == 0)
