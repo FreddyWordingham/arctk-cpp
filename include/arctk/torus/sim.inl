@@ -180,9 +180,13 @@ namespace arc //! arctk namespace
          *  Same value is used in splitting each dimension.
          *
          *  @param  res_    Resolution of the domain.
+         *
+         *  @pre    res_ must be odd.
          */
         inline void Sim::set_res(const size_t res_) noexcept
         {
+            assert((res_ % 2) == 1);
+
             if ((res_ % 2) == 0)
             {
                 std::cout << "Warning! The resolution of the domain should be odd in all dimensions.\n";
