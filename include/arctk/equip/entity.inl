@@ -55,6 +55,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        /**
+         *  Get the surface mesh of an entity.
+         * 
+         *  @return Surface mesh of an entity.
+         */
         inline const geom::shape::Mesh& Entity::surf() const noexcept
         {
             return (_surf);
