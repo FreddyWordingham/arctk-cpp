@@ -238,6 +238,13 @@ namespace arc //! arctk namespace
             _max_depth = max_depth_;
         }
 
+        /**
+         *  Set the target maximum number of triangles for each tree leaf cell to contain.
+         *
+         *  @param  tar_tris_   Target maximum number of triangles for each tree leaf cell to contain.
+         *
+         *  @pre    tar_tris_ must be positive.
+         */
         inline void Sim::set_tar_tris(const size_t tar_tris_) noexcept
         {
             assert(tar_tris_ > 0);
