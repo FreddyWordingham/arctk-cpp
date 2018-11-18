@@ -83,6 +83,11 @@ namespace arc //! arctk namespace
             return (_rot);
         }
 
+        /**
+         *  Get the translation vector.
+         *
+         *  @return Translation vector.
+         */
         inline const vec3& Wavefront::trans() const noexcept
         {
             return (_trans);
