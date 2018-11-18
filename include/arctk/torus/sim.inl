@@ -384,6 +384,13 @@ namespace arc //! arctk namespace
             _entities.emplace_back(std::make_unique<T>(ent_));
         }
 
+        /**
+         *  Add a light source to the simulation.
+         *
+         *  @tparam T   Type of light source to add.
+         *
+         *  @param  light_  Light source to add to the simulation.
+         */
         template <typename T>
         inline void Sim::add_light(T&& light_) noexcept
         {
