@@ -64,7 +64,7 @@ namespace arc //! arctk namespace
             virtual inline size_t height() const noexcept = 0; //!< Get the height of the bitmap in pixels.  @return Height of the bitmap in pixels.
 
             //  -- Saving --
-            virtual inline void save(const std::string& path_) const noexcept = 0;
+            virtual inline void save(const std::string& path_) const noexcept = 0; //!< Save the state of the bitmap as an ppm image.   @param  path_   Path to the images save location.
         };
 
 
