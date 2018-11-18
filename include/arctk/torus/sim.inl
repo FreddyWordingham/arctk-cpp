@@ -376,7 +376,7 @@ namespace arc //! arctk namespace
          *
          *  @param  ent_    Entity to add to the simulation.
          *
-         *  @pre    equip::entity::Detector must be a base of T.
+         *  @pre    equip::Entity must be a base of T.
          */
         template <typename T>
         inline void Sim::add_entity(T&& ent_) noexcept
