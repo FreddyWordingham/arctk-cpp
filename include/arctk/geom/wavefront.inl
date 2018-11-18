@@ -64,7 +64,7 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Get the Scaling vector.
+         *  Get the scaling vector.
          *
          *  @return Scaling vector.
          */
