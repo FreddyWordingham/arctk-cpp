@@ -428,6 +428,9 @@ namespace arc //! arctk namespace
 
 
         //  -- Simulate --
+        /**
+         *  Run the simulation.
+         */
         inline void Sim::run() const noexcept
         {
             run_pre_flight();
