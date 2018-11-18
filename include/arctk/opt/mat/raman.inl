@@ -190,6 +190,28 @@ namespace arc //! arctk namespace
                 return (math::formula::Linear(wavelengths_, albedo));
             }
 
+            /**
+             *  Initialise the raman scattering probability linear formula.
+             *
+             *  @param  wavelengths_    Wavelengths.
+             *  @param  scat_coef_      Corresponding scattering coefficients.
+             *  @param  abs_coef_       Corresponding absorption coefficients.
+             *  @param  raman_coef_     Corresponding raman scattering coefficients.
+             *
+             *  @pre    wavelengths_ values must all be positive.
+             *  @pre    wavelengths_ values must be ascending.
+             *  @pre    scat_coef_ values must be the same size as wavelengths_.
+             *  @pre    scat_coef_ values must all be positive.
+             *  @pre    abs_coef_ values must be the same size as wavelengths_.
+             *  @pre    abs_coef_ values must all be positive.
+             *  @pre    raman_coef_ values must be the same size as wavelengths_.
+             *  @pre    raman_coef_ values must all be positive.
+             *
+             *  @post   raman_prob must all be non-negative.
+             *  @post   raman_prob must all be less than, or equal to, unity.
+             *
+             *  @return Initialised raman scattering probability linear formula.
+             */
             inline math::formula::Linear Raman::init_raman_prob(const std::vector<double>& wavelengths_, const std::vector<double>& scat_coef_, const std::vector<double>& abs_coef_, const std::vector<double>& raman_coef_) const noexcept
             {
                 assert(prop::limits::always_greater_than(wavelengths_, 0.0));
