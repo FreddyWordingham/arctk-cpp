@@ -125,6 +125,11 @@ namespace arc //! arctk namespace
             _rot = rot_;
         }
 
+        /**
+         *  Set the translation vector.
+         *
+         *  @param  trans_  Translation to be applied.
+         */
         inline void Wavefront::set_trans(const vec3& trans_) noexcept
         {
             _trans = trans_;
