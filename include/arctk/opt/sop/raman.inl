@@ -62,6 +62,15 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            /**
+             *  Get the distance until the next interaction event.
+             *
+             *  @param  rng_    Random number generator.
+             *
+             *  @pre    rng_ may not be nullptr.
+             *
+             *  @return Distance until the next interaction event.
+             */
             inline double Raman::interact_dist(random::Generator* rng_, const dom::Cell* /*unused*/) const noexcept
             {
                 assert(rng_ != nullptr);
