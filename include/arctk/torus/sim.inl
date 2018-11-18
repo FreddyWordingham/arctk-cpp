@@ -85,6 +85,16 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct an empty simulation with given bounds.
+         *
+         *  @param  min_    Minimum bound of the simulation.
+         *  @param  max_    Maximum bound of the simulation.
+         *
+         *  @pre    min_.x must be less than max_.x.
+         *  @pre    min_.y must be less than max_.y.
+         *  @pre    min_.z must be less than max_.z.
+         */
         inline Sim::Sim(const vec3& min_, const vec3& max_) noexcept
           : _min(min_)
           , _max(max_)
