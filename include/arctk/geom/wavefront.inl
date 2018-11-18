@@ -33,6 +33,13 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        /**
+         *  Construct a wavefront helper object.
+         *
+         *  @param  file_   Path to the base wavefront file.
+         *
+         *  @pre    file_ may not be empty.
+         */
         inline Wavefront::Wavefront(const std::string& file_) noexcept
           : _file(file_)
           , _scale(1.0, 1.0, 1.0)
