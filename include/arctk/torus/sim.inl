@@ -290,6 +290,9 @@ namespace arc //! arctk namespace
             }
         }
 
+        /**
+         *  Write the pre-flight information files.
+         */
         inline void Sim::pre_flight_info_write() const noexcept
         {
             std::ofstream file(_output_dir + INFO_FILENAME);
