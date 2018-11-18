@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
 
         //  == SETTINGS ==
         //  -- Filenames --
-        constexpr const char* const INFO_FILENAME = "info.txt";
+        constexpr const char* const INFO_FILENAME = "info.txt"; //!< Name of produced information file.
 
 
 
