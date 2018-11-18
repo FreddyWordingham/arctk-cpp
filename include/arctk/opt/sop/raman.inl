@@ -40,6 +40,25 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a raman scattering specific-optical-property.
+             *
+             *  @param  ref_index_          Refractive index.
+             *  @param  interaction_coef_   Interaction coefficient.
+             *  @param  albedo_             Single scattering albedo.
+             *  @param  raman_prob_         Raman scattering probability.
+             *  @param  wavelength_delta_   Wavelength change to occur during a raman scattering event.
+             *  @param  asym_               Asymmetry parameter.
+             *
+             *  @pre    ref_index_ must be greater than, or equal to, unity.
+             *  @pre    interaction_coef_ must be positive.
+             *  @pre    albedo_ must be positive.
+             *  @pre    albedo_ must less than, or equal to, unity.
+             *  @pre    raman_prob_ must be positive.
+             *  @pre    raman_prob_ must less than, or equal to, unity.
+             *  @pre    asym_ must greater than, or equal to, minus one.
+             *  @pre    asym_ must less than, or equal to, unity.
+             */
             inline Raman::Raman(const double ref_index_, const double interaction_coef_, const double albedo_, const double raman_prob_, const double wavelength_delta_, const double asym_) noexcept
               : Sop(ref_index_)
               , _interaction_coef(interaction_coef_)
