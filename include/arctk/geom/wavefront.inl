@@ -73,6 +73,11 @@ namespace arc //! arctk namespace
             return (_scale);
         }
 
+        /**
+         *  Get the rotation vector.
+         *
+         *  @return Rotation vector.
+         */
         inline const vec3& Wavefront::rot() const noexcept
         {
             return (_rot);
