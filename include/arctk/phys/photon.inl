@@ -199,6 +199,11 @@ namespace arc //! arctk namespace
             _dir = dir_;
         }
 
+        /**
+         *  Shift the wavelength of the photon.
+         *
+         *  @param  delta_  Wavelength shift.
+         */
         inline void Photon::shift_wavelength(const double delta_) noexcept
         {
             _wavelength += delta_;
