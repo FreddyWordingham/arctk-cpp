@@ -178,17 +178,6 @@ namespace arc //! arctk namespace
             }
 
 
-            //  -- Vector --
-            // template <typename T, size_t N>
-            // inline multi::vector<double, N> normalise(const multi::vector<T, N>& data_) noexcept
-            // {
-            //     const T min_val = min(data_);
-            //     const T min_val = max(data_);
-
-
-            // }
-
-
 
         } // namespace container
     }     // namespace math
@@ -198,6 +187,17 @@ namespace arc //! arctk namespace
 
 //  == OPERATORS ==
 //  -- Assignment --
+/**
+ *  Add a value to each element of a container.
+ * 
+ *  @tparam T   Type of container.
+ *  @tparam S   Type to be added to the container.
+ * 
+ *  @param  cont_   Container to be added to.
+ *  @param  val_    Value to be added.
+ * 
+ *  @return Reference to the container.
+ */
 template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
 inline T& operator+=(T& cont_, const S& val_)
 {

@@ -46,10 +46,6 @@ namespace arc //! arctk namespace
             template <typename T>
             inline typename type::temp::core_type<T>::type max(const T& cont_) noexcept;
 
-            //  -- Vector --
-            // template <typename T, size_t N>
-            // inline multi::vector<double, N> normalise(const multi::vector<T, N>& data_) noexcept;
-
 
 
         } // namespace container
