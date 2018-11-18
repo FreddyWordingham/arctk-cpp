@@ -449,6 +449,9 @@ namespace arc //! arctk namespace
             pre_flight_info_write();
         }
 
+        /**
+         *  Run the simulation post-flight.
+         */
         inline void Sim::run_post_flight() const noexcept
         {
             post_flight_info_write();
