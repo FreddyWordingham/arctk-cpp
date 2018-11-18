@@ -428,6 +428,17 @@ inline T operator-(const T& cont_) noexcept
     return (cont);
 }
 
+/**
+ *  Create a container by adding a value to a container.
+ * 
+ *  @tparam T   Type of container.
+ *  @tparam S   Type of value to be added.
+ * 
+ *  @param  cont_   Container to be added to.
+ *  @param  val_    Value to be added.
+ * 
+ *  @return Container formed by adding a value to a container.
+ */
 template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
 inline T operator+(const T& cont_, const S val_)
 {
