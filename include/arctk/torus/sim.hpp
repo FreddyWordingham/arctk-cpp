@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_TORUS_SIM_HPP
-#define ARCTK_TORUS_SIM_HPP
+//#ifndef ARCTK_TORUS_SIM_HPP
+//#define ARCTK_TORUS_SIM_HPP
 
 
 
@@ -177,4 +177,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_TORUS_SIM_HPP
+//#endif // ARCTK_TORUS_SIM_HPP
