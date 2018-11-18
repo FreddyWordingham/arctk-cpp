@@ -57,9 +57,9 @@ namespace arc //! arctk namespace
             const std::string& _file;
 
             //  -- Transform --
-            vec3 _scale;
-            vec3 _rot;
-            vec3 _trans;
+            vec3 _scale; //!< Scaleing transformation.
+            vec3 _rot;   //!< Rotation transformation.
+            vec3 _trans; //!< Translation transformation.
 
 
             //  == INSTANTIATION ==
