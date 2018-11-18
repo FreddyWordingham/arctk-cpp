@@ -224,6 +224,13 @@ namespace arc //! arctk namespace
             _res = res_;
         }
 
+        /**
+         *  Set the maximum depth that the tree may split to.
+         *
+         *  @param  max_depth_  Maximum depth that the tree may split to.
+         *
+         *  @pre    max_depth_ must be positive.
+         */
         inline void Sim::set_max_depth(const size_t max_depth_) noexcept
         {
             assert(max_depth_ > 0);
