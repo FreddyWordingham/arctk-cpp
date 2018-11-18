@@ -401,6 +401,17 @@ namespace arc //! arctk namespace
             _lights.emplace_back(dynamic_cast<equip::entity::Light*>(_entities.back().get()));
         }
 
+        /**
+         *  Add a detector to the simulation.
+         *
+         *  @tparam T   Type of detector to add.
+         *
+         *  @param  det_    Detector to add to the simulation.
+         *  @param  path_   Path to the file to save the detector output to.
+         *
+         *  @pre    equip::entity::Detector must be a base of T.
+         *  @pre    path_ may not be empty.
+         */
         template <typename T>
         inline void Sim::add_detector(T&& det_, const std::string& path_) noexcept
         {
