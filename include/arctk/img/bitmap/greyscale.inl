@@ -83,6 +83,15 @@ namespace arc //! arctk namespace
                 return (_pixels[index_]);
             }
 
+            /**
+             *  Access a const column vector of pixel data.
+             *
+             *  @param  index_ Index of the column to access.
+             *
+             *  @pre    index_ must be less than pixels size.
+             *
+             *  @return Const reference to a column vector of pixel data.
+             */
             inline const std::vector<double>& Greyscale::operator[](const size_t index_) const noexcept
             {
                 assert(index_ < _pixels.size());
