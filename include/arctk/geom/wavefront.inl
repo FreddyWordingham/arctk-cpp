@@ -137,6 +137,11 @@ namespace arc //! arctk namespace
 
 
         //  -- Creation --
+        /**
+         *  Construct a mesh from the wavefront helper's current fields.
+         *
+         *  @return Created mesh object.
+         */
         inline shape::Mesh Wavefront::create_mesh() const noexcept
         {
             return (shape::Mesh(_file, _scale, _rot, _trans));
