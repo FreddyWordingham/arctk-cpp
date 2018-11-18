@@ -163,6 +163,11 @@ namespace arc //! arctk namespace
                 _scale_map = scale_map_;
             }
 
+            /**
+             *  Set the function pointer to use when performing colouring during a save.
+             *
+             *  @param  scale_map_  Function pointer to colouring method.
+             */
             inline void Greyscale::set_colour_map(std::function<vec3(double)> colour_map_) noexcept
             {
                 _colour_map = colour_map_;
