@@ -63,6 +63,11 @@ namespace arc //! arctk namespace
             return (_file);
         }
 
+        /**
+         *  Get the Scaling vector.
+         *
+         *  @return Scaling vector.
+         */
         inline const vec3& Wavefront::scale() const noexcept
         {
             return (_scale);
