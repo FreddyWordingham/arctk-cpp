@@ -440,7 +440,7 @@ inline T operator-(const T& cont_) noexcept
  *  @return Container formed by adding a value to a container.
  */
 template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
-inline T operator+(const T& cont_, const S val_)
+inline T operator+(const T& cont_, const S& val_)
 {
     T cont = cont_;
 
@@ -464,7 +464,7 @@ inline T operator+(const T& cont_, const S val_)
  *  @return Container formed by subtracting a value to a container.
  */
 template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
-inline T operator-(const T& cont_, const S val_)
+inline T operator-(const T& cont_, const S& val_)
 {
     T cont = cont_;
 
@@ -488,7 +488,7 @@ inline T operator-(const T& cont_, const S val_)
  *  @return Container formed by multiplying the elements of a container by a value.
  */
 template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
-inline T operator*(const T& cont_, const S val_)
+inline T operator*(const T& cont_, const S& val_)
 {
     T cont = cont_;
 
@@ -512,7 +512,7 @@ inline T operator*(const T& cont_, const S val_)
  *  @return Container formed by dividing the elements of a container by a value.
  */
 template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
-inline T operator/(const T& cont_, const S val_)
+inline T operator/(const T& cont_, const S& val_)
 {
     T cont = cont_;
 
@@ -536,7 +536,7 @@ inline T operator/(const T& cont_, const S val_)
  *  @return Container formed by modulating the elements of a container by a value.
  */
 template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
-inline T operator%(const T& cont_, const S val_)
+inline T operator%(const T& cont_, const S& val_)
 {
     T cont = cont_;
 
