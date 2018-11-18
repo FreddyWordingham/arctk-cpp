@@ -252,6 +252,11 @@ namespace arc //! arctk namespace
             _tar_tris = tar_tris_;
         }
 
+        /**
+         *  Set the pre-render toggle value.
+         *
+         *  @param  pre_render_ Pre-render toggle value.
+         */
         inline void Sim::set_pre_render(const bool pre_render_) noexcept
         {
             _pre_render = pre_render_;
