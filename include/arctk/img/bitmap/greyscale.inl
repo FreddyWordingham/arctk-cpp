@@ -38,6 +38,17 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a greyscale object from a two-dimensional vector of pixel data.
+             *
+             *  @param  pixels_ Two-dimensional vector of pixel data.
+             *
+             *  @pre    pixels_ must be a square shape.
+             *  @pre    pixels_ may not be empty.
+             *  @pre    pixels_.front() may not be empty.
+             *
+             *  @post   _max must be greater than, or equal to, _min.
+             */
             inline Greyscale::Greyscale(const multi::vector<double, 2>& pixels_) noexcept
               : _pixels(pixels_)
               , _min(math::container::min(pixels_))
@@ -48,6 +59,7 @@ namespace arc //! arctk namespace
                 assert(prop::shape::square(pixels_));
                 assert(!pixels_.empty());
                 assert(!pixels_.front().empty());
+
                 assert(_max >= _min);
             }
 
