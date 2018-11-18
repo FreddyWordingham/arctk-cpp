@@ -142,7 +142,7 @@ namespace arc //! arctk namespace
             /**
              *  Set the value used as the maximum when scaling the image during a save.
              *
-             *  @param  min_    Value to set as the maximum.
+             *  @param  max_    Value to set as the maximum.
              *
              *  @pre    max_ must be greater than, or equal to, _min.
              */
