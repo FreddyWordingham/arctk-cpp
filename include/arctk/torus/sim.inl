@@ -119,6 +119,13 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Setters --
+        /**
+         *  Set the time to wait between update reports in milliseconds.
+         *
+         *  @param  update_delta_ Time to wait between update reports in milliseconds.
+         *
+         *  @pre    update_delta_ value must be positive.
+         */
         inline void Sim::set_update_delta(const unsigned int update_delta_) noexcept
         {
             assert(update_delta_ > 0);
