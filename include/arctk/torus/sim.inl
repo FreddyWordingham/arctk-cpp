@@ -133,6 +133,13 @@ namespace arc //! arctk namespace
             _update_delta = update_delta_;
         }
 
+        /**
+         *  Set the number of treads to use during simulation.
+         *
+         *  @param  num_threads_    Number of threads to use during simulation.
+         *
+         *  @pre    num_threads_ value must be positive.
+         */
         inline void Sim::set_num_threads(const size_t num_threads_) noexcept
         {
             assert(num_threads_ > 0);
