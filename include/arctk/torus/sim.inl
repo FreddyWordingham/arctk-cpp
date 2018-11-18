@@ -175,6 +175,12 @@ namespace arc //! arctk namespace
             }
         }
 
+        /**
+         *  Set the resolution of the domain.
+         *  Same value is used in splitting each dimension.
+         *
+         *  @param  res_    Resolution of the domain.
+         */
         inline void Sim::set_res(const size_t res_) noexcept
         {
             if ((res_ % 2) == 0)
