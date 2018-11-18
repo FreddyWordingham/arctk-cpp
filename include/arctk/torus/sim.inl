@@ -318,6 +318,11 @@ namespace arc //! arctk namespace
             file << "Total photons          : " << total_phot() << '\n' << "Total light power      : " << total_power() << "W\n\n";
         }
 
+        /**
+         *  Calculate the total number of photons to be run by the simulation.
+         *
+         *  @return Total number of photons to be run by the simulation.
+         */
         inline unsigned long int Sim::total_phot() const noexcept
         {
             unsigned long int total_phot = 0;
