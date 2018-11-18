@@ -320,6 +320,16 @@ inline T& operator++(T& cont_)
     return (cont_);
 }
 
+/**
+ *  Decrement the elements of a container.
+ *  Return a reference to the container post-decrement.
+ * 
+ *  @tparam T   Type of container.
+ * 
+ *  @param  cont_   Container to be decremented.
+ *  
+ *  @return Reference to the container post-decrement.
+ */
 template <typename T, typename>
 inline T& operator--(T& cont_)
 {
