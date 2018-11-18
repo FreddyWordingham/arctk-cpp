@@ -274,6 +274,9 @@ namespace arc //! arctk namespace
 
 
         //  -- Pre-flight --
+        /**
+         *  Create the output directory.
+         */
         inline void Sim::create_output_dir() const noexcept
         {
             if (!std::filesystem::exists(_output_dir))
