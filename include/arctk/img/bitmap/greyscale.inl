@@ -67,16 +67,25 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
             //  -- Access --
+            /**
+             *  Access a column vector of pixel data.
+             *
+             *  @param  index_ Index of the column to access.
+             *
+             *  @pre    index_ must be less than pixels size.
+             *
+             *  @return Reference to a column vector of pixel data.
+             */
             inline std::vector<double>& Greyscale::operator[](const size_t index_) noexcept
             {
-                assert(index_ <= _pixels.size());
+                assert(index_ < _pixels.size());
 
                 return (_pixels[index_]);
             }
 
             inline const std::vector<double>& Greyscale::operator[](const size_t index_) const noexcept
             {
-                assert(index_ <= _pixels.size());
+                assert(index_ < _pixels.size());
 
                 return (_pixels[index_]);
             }
