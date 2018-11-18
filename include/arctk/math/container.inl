@@ -259,7 +259,7 @@ inline T& operator*=(T& cont_, const S& val_)
  *  @tparam T   Type of container.
  *  @tparam S   Type used to divide elements of the container.
  * 
- *  @param  cont_   Container to be added to.
+ *  @param  cont_   Container to be divided.
  *  @param  val_    Value used to divide.
  * 
  *  @return Reference to the container.
