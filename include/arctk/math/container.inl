@@ -452,6 +452,17 @@ inline T operator+(const T& cont_, const S val_)
     return (cont);
 }
 
+/**
+ *  Create a container by subtracting a value to a container.
+ * 
+ *  @tparam T   Type of container.
+ *  @tparam S   Type of value to be subtracted.
+ * 
+ *  @param  cont_   Container to be subtracted to.
+ *  @param  val_    Value to be subtracted.
+ * 
+ *  @return Container formed by subtracting a value to a container.
+ */
 template <typename T, typename S, typename = std::enable_if_t<arc::type::temp::is_iterable<T>::value>>
 inline T operator-(const T& cont_, const S val_)
 {
