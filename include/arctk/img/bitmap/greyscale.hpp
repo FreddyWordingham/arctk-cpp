@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
                 //  -- Data --
                 multi::vector<double, 2> _pixels; //!< Pixel data.
                 double                   _min;    //!< Minimum scaling value.
-                double                   _max;
+                double                   _max;    //!< Maximum scaling value.
 
                 //  -- Mapping --
                 std::function<double(double)> _scale_map;
