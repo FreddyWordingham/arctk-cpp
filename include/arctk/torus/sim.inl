@@ -375,6 +375,8 @@ namespace arc //! arctk namespace
          *  @tparam T   Type of entity to add.
          *
          *  @param  ent_    Entity to add to the simulation.
+         *
+         *  @pre    equip::entity::Detector must be a base of T.
          */
         template <typename T>
         inline void Sim::add_entity(T&& ent_) noexcept
@@ -390,6 +392,8 @@ namespace arc //! arctk namespace
          *  @tparam T   Type of light source to add.
          *
          *  @param  light_  Light source to add to the simulation.
+         *
+         *  @pre    equip::entity::Light must be a base of T.
          */
         template <typename T>
         inline void Sim::add_light(T&& light_) noexcept
