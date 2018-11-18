@@ -219,6 +219,13 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Specific Optical Properties --
+            /**
+             *  Generate specific-optical-proeprties for a given photon.
+             *
+             *  @param  phot_   Photon to generate specific-optical-proeprties for.
+             *
+             *  @return Specific-optical-properties for the given photon.
+             */
             inline std::unique_ptr<Sop> Raman::gen(const phys::Photon& phot_) const noexcept
             {
                 return (std::make_unique<sop::Raman>(_ref_index(phot_.wavelength()), _interact_coef(phot_.wavelength()), _albedo(phot_.wavelength()), _raman_prob(phot_.wavelength()), _wavelength_delta(phot_.wavelength()), _asym(phot_.wavelength())));
