@@ -113,6 +113,11 @@ namespace arc //! arctk namespace
                 return (_pixels.size());
             }
 
+            /**
+             *  Get the height of the image in pixels.
+             *
+             *  @return Height of the image in pixels.
+             */
             inline size_t Greyscale::height() const noexcept
             {
                 return (_pixels.front().size());
