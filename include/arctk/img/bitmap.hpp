@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            virtual inline size_t width() const noexcept  = 0;
+            virtual inline size_t width() const noexcept  = 0; //!< Get the width of the bitmap in pixels.  @return Width of the bitmap in pixels.
             virtual inline size_t height() const noexcept = 0;
 
             //  -- Saving --
