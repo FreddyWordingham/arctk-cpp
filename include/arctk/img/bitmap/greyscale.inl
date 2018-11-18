@@ -125,6 +125,13 @@ namespace arc //! arctk namespace
 
 
             //  -- Setters --
+            /**
+             *  Set the value used as the minimum when scaling the image during a save.
+             *
+             *  @param  min_    Value to set as the minimum.
+             *
+             *  @pre    min_ must be less than, or equal to, _max.
+             */
             inline void Greyscale::set_min(const double min_) noexcept
             {
                 assert(min_ <= _max);
