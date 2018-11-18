@@ -66,8 +66,8 @@ namespace arc //! arctk namespace
                 const double _interaction_coef; //!< Interaction coefficient.
                 const double _albedo;           //!< Single scattering albedo.
                 const double _raman_prob;       //!< Raman scattering probability.
-                const double _wavelength_delta;
-                const double _asym; //!< Asymmetry factor.
+                const double _wavelength_delta; //!< Wavelength change to occur during a raman scattering event.
+                const double _asym;             //!< Asymmetry factor.
 
 
                 //  == INSTANTIATION ==
