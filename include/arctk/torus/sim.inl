@@ -440,6 +440,9 @@ namespace arc //! arctk namespace
             run_post_flight();
         }
 
+        /**
+         *  Run the simulation pre-flight.
+         */
         inline void Sim::run_pre_flight() const noexcept
         {
             create_output_dir();
