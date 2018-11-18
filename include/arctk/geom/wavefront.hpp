@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- File --
-            const std::string& _file;
+            const std::string& _file; //!< Path to base wavefront file to read from.
 
             //  -- Transform --
             vec3 _scale; //!< Scaleing transformation.
