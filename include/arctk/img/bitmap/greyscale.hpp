@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
               private:
                 //  -- Data --
                 multi::vector<double, 2> _pixels; //!< Pixel data.
-                double                   _min;
+                double                   _min;    //!< Minimum scaling value.
                 double                   _max;
 
                 //  -- Mapping --
