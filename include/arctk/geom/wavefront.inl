@@ -115,6 +115,11 @@ namespace arc //! arctk namespace
             _scale = scale_;
         }
 
+        /**
+         *  Set the rotation vector.
+         *
+         *  @param  rot_    Rotation to be applied.
+         */
         inline void Wavefront::set_rot(const vec3& rot_) noexcept
         {
             _rot = rot_;
