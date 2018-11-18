@@ -80,6 +80,16 @@ namespace arc //! arctk namespace
 
 
             //  -- Interaction --
+            /**
+             *  Perform an interaction event on the photon.
+             *
+             *  @param  rng_    Random number generator.
+             *  @param  phot_   Photon to interact with.
+             *  @param  cell_   Current domain cell.
+             *  @param  dist_   Distance to the interaction event.
+             *
+             *  @return True if the photon's specific-optical-properties require updating after the interaction event.
+             */
             inline bool Raman::interact(random::Generator* rng_, phys::Photon* phot_, dom::Cell* cell_, const double dist_) const noexcept
             {
                 cell_->add_energy(dist_ * phot_->energy() * phot_->weight());
