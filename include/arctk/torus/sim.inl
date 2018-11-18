@@ -457,6 +457,9 @@ namespace arc //! arctk namespace
             post_flight_info_write();
         }
 
+        /**
+         *  Perform the simulation.
+         */
         inline void Sim::simulate() const noexcept
         {
             dom::Region dom(_min, _max, _res);
