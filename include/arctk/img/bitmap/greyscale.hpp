@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
                 double                   _max;    //!< Maximum scaling value.
 
                 //  -- Mapping --
-                std::function<double(double)> _scale_map;
+                std::function<double(double)> _scale_map; //!< Function pointer to scaling mapper.
                 std::function<vec3(double)>   _colour_map;
 
 
