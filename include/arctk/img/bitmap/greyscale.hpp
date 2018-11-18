@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Data --
-                multi::vector<double, 2> _pixels;
+                multi::vector<double, 2> _pixels; //!< Pixel data.
                 double                   _min;
                 double                   _max;
 
