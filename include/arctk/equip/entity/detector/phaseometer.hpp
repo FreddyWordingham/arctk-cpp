@@ -59,6 +59,10 @@ namespace arc //! arctk namespace
 
 
                     //  == METHODS ==
+                  public:
+                    //  -- Saving --
+                    void save(const std::string& path_) const noexcept override;
+
                   private:
                     //  -- Collision --
                     bool hit_front(random::Generator* /*unused*/, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept override;

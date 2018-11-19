@@ -15,7 +15,11 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <fstream>
+
 //  -- Arctk --
+#include <arctk/math/convert.hpp>
 
 
 
@@ -43,6 +47,18 @@ namespace arc //! arctk namespace
 
 
                 //  == METHODS ==
+                //  -- Saving --
+                void Phaseometer::save(const std::string& path_) const noexcept
+                {
+                    const vec2 phase = cart_to_polar(_total_phase);
+
+                    std::ofstream file(path_);
+
+                    file << "Phase     : " << phase.theta << '\n';
+                    file << "Magnitude : " << phase.rho << '\n';
+                }
+
+
                 //  -- Collision --
                 bool Phaseometer::hit_front(random::Generator* /*unused*/, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept
                 {
