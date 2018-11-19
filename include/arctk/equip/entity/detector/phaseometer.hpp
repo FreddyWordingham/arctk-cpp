@@ -47,6 +47,9 @@ namespace arc //! arctk namespace
                     //  -- Detector --
                     const bool _double_sided;
 
+                    //  -- Data --
+                    vec2 _total_phase;
+
 
                     //  == INSTANTIATION ==
                   public:
