@@ -115,11 +115,11 @@ namespace arc //! arctk namespace
          *
          *  @param  absorbs_    Absorption count to add.
          *
-         *  @pre    absorbs_ must be positive.
+         *  @pre    absorbs_ must be non-negative.
          */
         inline void Cell::add_absorb(const double absorbs_) noexcept
         {
-            assert(absorbs_ > 0.0);
+            assert(absorbs_ >= 0.0);
 
             _write_mutex->lock();
 
