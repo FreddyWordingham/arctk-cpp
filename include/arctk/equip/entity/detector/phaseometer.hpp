@@ -49,6 +49,7 @@ namespace arc //! arctk namespace
                     const bool _double_sided;
 
                     //  -- Data --
+                    double _total_weight;
                     vec2 _total_phase;
 
 
