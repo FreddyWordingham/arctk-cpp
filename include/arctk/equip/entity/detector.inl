@@ -31,6 +31,15 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            /**
+             *  Construct a detector with a surface.
+             *
+             *  @param  surf_   Surface of the detector.
+             */
+            inline Detector::Detector(const geom::shape::Mesh& surf_) noexcept
+              : Entity(surf_)
+            {
+            }
 
 
 
