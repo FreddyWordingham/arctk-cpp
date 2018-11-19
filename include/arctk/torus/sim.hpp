@@ -82,8 +82,8 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Bounds --
-            const vec3 _min;
-            const vec3 _max;
+            const vec3 _min; //!< Minimum bound of the domain.
+            const vec3 _max; //!< Maximum bound of the domain.
 
             //  -- Parallelisation --
             unsigned int _update_delta;
