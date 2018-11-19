@@ -40,6 +40,7 @@ namespace arc //! arctk namespace
                 inline Phaseometer::Phaseometer(const geom::shape::Mesh& surf_, const bool double_sided_) noexcept
                   : Detector(surf_)
                   , _double_sided(double_sided_)
+                  , _total_weight(0.0)
                   , _total_phase(0.0, 0.0)
                 {
                 }
