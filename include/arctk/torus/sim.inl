@@ -10,7 +10,7 @@
 
 //  == GUARD ==
 #ifndef ARCTK_TORUS_SIM_INL
-#define ARCTK_TORUS_SIM_INL
+#define ARCTK_TORUS_SIM_INL //!< Implementation guard.
 
 
 
