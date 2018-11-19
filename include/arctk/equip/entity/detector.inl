@@ -14,6 +14,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/geom/shape/mesh.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
