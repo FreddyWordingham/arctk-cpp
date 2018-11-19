@@ -2,7 +2,7 @@
 <area shape="rect" id="node2" href="$classarc_1_1gui_1_1_actor.html#abbf65e45ffdaed893b610c1a19a075e2" title="arc::gui::Actor::Actor" alt="" coords="238,5,380,31"/>
 <area shape="rect" id="node3" href="$namespacearc_1_1math_1_1container.html#ad278c7920db58f42b40e326a07b7ad91" title="arc::math::container::ave" alt="" coords="225,55,393,80"/>
 <area shape="rect" id="node4" href="$classarc_1_1math_1_1_mat.html#a582b7b2bd3f03bd41d997e3989fadd83" title="arc::math::Mat::sum" alt="" coords="240,104,379,129"/>
-<area shape="rect" id="node5" href="$classarc_1_1math_1_1_vec.html#a54cfd272959ca5d20452a38ee028df65" title="arc::math::Vec\&lt; double,\l 3 \&gt;::sum" alt="" coords="228,153,390,192"/>
+<area shape="rect" id="node5" href="$classarc_1_1math_1_1_vec.html#a54cfd272959ca5d20452a38ee028df65" title="arc::math::Vec\&lt; double,\l 2 \&gt;::sum" alt="" coords="228,153,390,192"/>
 <area shape="rect" id="node6" href="$classarc_1_1torus_1_1_sim.html#a6b8ed6000b57f5e13c3626aaab80668b" title="arc::torus::Sim::simulate\l_thread" alt="" coords="227,216,391,255"/>
 <area shape="rect" id="node9" href="$classarc_1_1torus_1_1_sim.html#a02353289ae116ed6e2e3bda387fc2755" title="arc::torus::Sim::report" alt="" coords="234,279,384,304"/>
 <area shape="rect" id="node7" href="$classarc_1_1torus_1_1_sim.html#aa43474ecd5d97be889455edb1af54dcd" title="arc::torus::Sim::simulate" alt="" coords="441,251,606,276"/>

@@ -7,6 +7,7 @@ var searchData=
   ['path',['path',['../namespacearc_1_1gui_1_1actor.html#a70cd46f071386ec37cd9a7c957b70bd1',1,'arc::gui::actor']]],
   ['perspective',['Perspective',['../classarc_1_1gui_1_1lens_1_1_perspective.html#a4024939be58a97497cc01b7cb61cc658',1,'arc::gui::lens::Perspective']]],
   ['phase',['phase',['../classarc_1_1phys_1_1_photon.html#afacbbb4565a2d07c910ba20013c4816a',1,'arc::phys::Photon']]],
+  ['phaseometer',['Phaseometer',['../classarc_1_1equip_1_1entity_1_1detector_1_1_phaseometer.html#a8b696a80e58ab2aee79c6ad9fd6d6da3',1,'arc::equip::entity::detector::Phaseometer']]],
   ['phasor',['phasor',['../classarc_1_1phys_1_1_photon.html#a339992851aa84b033cfe2969557998bb',1,'arc::phys::Photon']]],
   ['phot_5fpower',['phot_power',['../classarc_1_1equip_1_1entity_1_1_light.html#a2abf2691b33c551c97ae87a712882fb7',1,'arc::equip::entity::Light']]],
   ['photon',['Photon',['../classarc_1_1phys_1_1_photon.html#a636c29b024d9647cf571635d7b7d01d5',1,'arc::phys::Photon']]],

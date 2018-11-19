@@ -14,6 +14,7 @@ var searchData=
   ['contents',['contents',['../namespacearc_1_1prop_1_1contents.html',1,'arc::prop']]],
   ['convert',['convert',['../namespacearc_1_1col_1_1convert.html',1,'arc::col::convert'],['../namespacearc_1_1math_1_1convert.html',1,'arc::math::convert']]],
   ['data',['data',['../namespacearc_1_1data.html',1,'arc']]],
+  ['detector',['detector',['../namespacearc_1_1equip_1_1entity_1_1detector.html',1,'arc::equip::entity']]],
   ['dim',['dim',['../namespacearc_1_1index_1_1dim.html',1,'arc::index']]],
   ['distribution',['distribution',['../namespacearc_1_1random_1_1distribution.html',1,'arc::random']]],
   ['dom',['dom',['../namespacearc_1_1dom.html',1,'arc']]],

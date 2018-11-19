@@ -14,7 +14,7 @@ var searchData=
   ['light_2einl',['light.inl',['../light_8inl.html',1,'']]],
   ['limits_2ehpp',['limits.hpp',['../limits_8hpp.html',1,'']]],
   ['limits_2einl',['limits.inl',['../limits_8inl.html',1,'']]],
-  ['linear',['Linear',['../classarc_1_1math_1_1formula_1_1_linear.html',1,'arc::math::formula::Linear'],['../classarc_1_1random_1_1distribution_1_1_linear.html',1,'arc::random::distribution::Linear&lt; T &gt;'],['../classarc_1_1math_1_1formula_1_1_linear.html#a6244446d242ae39947a7c6e5e3c07445',1,'arc::math::formula::Linear::Linear()'],['../classarc_1_1random_1_1distribution_1_1_linear.html#a061096961c96bcdca96eba49fba38eb7',1,'arc::random::distribution::Linear::Linear()']]],
+  ['linear',['Linear',['../classarc_1_1random_1_1distribution_1_1_linear.html',1,'arc::random::distribution::Linear&lt; T &gt;'],['../classarc_1_1math_1_1formula_1_1_linear.html',1,'arc::math::formula::Linear'],['../classarc_1_1math_1_1formula_1_1_linear.html#a6244446d242ae39947a7c6e5e3c07445',1,'arc::math::formula::Linear::Linear()'],['../classarc_1_1random_1_1distribution_1_1_linear.html#a061096961c96bcdca96eba49fba38eb7',1,'arc::random::distribution::Linear::Linear()']]],
   ['linear_2ehpp',['linear.hpp',['../math_2formula_2linear_8hpp.html',1,'(Global Namespace)'],['../random_2distribution_2linear_8hpp.html',1,'(Global Namespace)']]],
   ['linear_2einl',['linear.inl',['../math_2formula_2linear_8inl.html',1,'(Global Namespace)'],['../random_2distribution_2linear_8inl.html',1,'(Global Namespace)']]],
   ['linker',['LINKER',['../namespacearc_1_1consts_1_1format.html#a6037c825d17b39dd0d2f482c201bb42d',1,'arc::consts::format']]],

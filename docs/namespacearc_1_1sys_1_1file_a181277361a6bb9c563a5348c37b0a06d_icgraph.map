@@ -1,11 +1,12 @@
 <map id="arc::sys::file::read" name="arc::sys::file::read">
-<area shape="rect" id="node2" href="$namespacearc_1_1parse_1_1read.html#ae36701cafec6b29e5c8ccea80e0de5d9" title="arc::parse::read::file" alt="" coords="179,113,318,139"/>
-<area shape="rect" id="node3" href="$classarc_1_1dom_1_1_region.html#afe42a3906214f2b4593e26597627dcf7" title="arc::dom::Region::save" alt="" coords="379,5,537,31"/>
-<area shape="rect" id="node4" href="$classarc_1_1torus_1_1_sim.html#aa43474ecd5d97be889455edb1af54dcd" title="arc::torus::Sim::simulate" alt="" coords="598,56,762,81"/>
-<area shape="rect" id="node6" href="$classarc_1_1img_1_1bitmap_1_1_greyscale.html#ac9372abe3426e7bf1314a23e112ab626" title="arc::img::bitmap::Greyscale\l::save" alt="" coords="366,107,550,145"/>
-<area shape="rect" id="node7" href="$classarc_1_1torus_1_1_sim.html#aebedc55998a8e1d9386819373569c43b" title="arc::torus::Sim::pre\l_flight_info_write" alt="" coords="391,169,525,208"/>
-<area shape="rect" id="node9" href="$classarc_1_1torus_1_1_sim.html#ac0a4564959584b2a56fad6d1f6358f59" title="arc::torus::Sim::post\l_flight_info_write" alt="" coords="388,232,528,271"/>
-<area shape="rect" id="node5" href="$classarc_1_1torus_1_1_sim.html#a54f39f2e207f3594301a511eed439a1d" title="arc::torus::Sim::run" alt="" coords="810,176,944,201"/>
-<area shape="rect" id="node8" href="$classarc_1_1torus_1_1_sim.html#a6134358647e9c117dc618c00dd8b3a97" title="arc::torus::Sim::run\l_pre_flight" alt="" coords="613,169,747,208"/>
-<area shape="rect" id="node10" href="$classarc_1_1torus_1_1_sim.html#af3c18cd6a7ba73fe8f47dcdce4a7a007" title="arc::torus::Sim::run\l_post_flight" alt="" coords="613,232,747,271"/>
+<area shape="rect" id="node2" href="$namespacearc_1_1parse_1_1read.html#ae36701cafec6b29e5c8ccea80e0de5d9" title="arc::parse::read::file" alt="" coords="179,145,318,171"/>
+<area shape="rect" id="node3" href="$classarc_1_1dom_1_1_region.html#afe42a3906214f2b4593e26597627dcf7" title="arc::dom::Region::save" alt="" coords="387,5,545,31"/>
+<area shape="rect" id="node4" href="$classarc_1_1torus_1_1_sim.html#aa43474ecd5d97be889455edb1af54dcd" title="arc::torus::Sim::simulate" alt="" coords="614,56,778,81"/>
+<area shape="rect" id="node6" href="$classarc_1_1equip_1_1entity_1_1detector_1_1_phaseometer.html#aadeb71d4f86c3dbdb39ec8242ff6fc1c" title="arc::equip::entity\l::detector::Phaseometer::save" alt="" coords="366,107,566,145"/>
+<area shape="rect" id="node7" href="$classarc_1_1img_1_1bitmap_1_1_greyscale.html#ac9372abe3426e7bf1314a23e112ab626" title="arc::img::bitmap::Greyscale\l::save" alt="" coords="374,169,558,208"/>
+<area shape="rect" id="node8" href="$classarc_1_1torus_1_1_sim.html#aebedc55998a8e1d9386819373569c43b" title="arc::torus::Sim::pre\l_flight_info_write" alt="" coords="399,232,533,271"/>
+<area shape="rect" id="node10" href="$classarc_1_1torus_1_1_sim.html#ac0a4564959584b2a56fad6d1f6358f59" title="arc::torus::Sim::post\l_flight_info_write" alt="" coords="396,295,536,333"/>
+<area shape="rect" id="node5" href="$classarc_1_1torus_1_1_sim.html#a54f39f2e207f3594301a511eed439a1d" title="arc::torus::Sim::run" alt="" coords="826,239,960,264"/>
+<area shape="rect" id="node9" href="$classarc_1_1torus_1_1_sim.html#a6134358647e9c117dc618c00dd8b3a97" title="arc::torus::Sim::run\l_pre_flight" alt="" coords="629,232,763,271"/>
+<area shape="rect" id="node11" href="$classarc_1_1torus_1_1_sim.html#af3c18cd6a7ba73fe8f47dcdce4a7a007" title="arc::torus::Sim::run\l_post_flight" alt="" coords="629,295,763,333"/>
 </map>
