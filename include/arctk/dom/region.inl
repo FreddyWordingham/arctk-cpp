@@ -208,6 +208,7 @@ namespace arc //! arctk namespace
 
             std::ofstream file(path_ + ".vtk");
 
+            std::cout << "Writing header.\n";
             file << "# vtk DataFile Version 3.0\n"
                  << "vtk "
                  << "sim_output" << '\n'
@@ -253,6 +254,7 @@ namespace arc //! arctk namespace
             file << "\nCELL_DATA " << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << "\n\n";
 
 
+            std::cout << "Writing scattering density data.\n";
             file << "\nFIELD FieldData 1\n"
                  << "scatter_dens" << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << ' ' << "double" << '\n';
 
@@ -274,6 +276,7 @@ namespace arc //! arctk namespace
                 file << '\n';
             }
 
+            std::cout << "Writing energy density data.\n";
             file << "\nFIELD FieldData 1\n"
                  << "energy_dens" << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << ' ' << "double" << '\n';
 
@@ -295,6 +298,7 @@ namespace arc //! arctk namespace
                 file << '\n';
             }
 
+            std::cout << "Writing absorption density data.\n";
             file << "\nFIELD FieldData 1\n"
                  << "absorb_dens" << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << ' ' << "double" << '\n';
 
