@@ -45,6 +45,19 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Detector(const geom::shape::Mesh& surf_) noexcept;
+                inline Detector(const Detector&) = default; //!< Defaulted copy constructor.
+                inline Detector(Detector&&)      = default; //!< Defaulted move constructor.
+
+                //  -- Destructors --
+                inline ~Detector() noexcept override;
+
+
+                //  == OPERATORS ==
+              public:
+                //  -- Assignment --
+                inline Detector& operator=(const Detector&) noexcept = delete; //!< Deleted copy operator. @return Reference to copied object.
+                inline Detector& operator=(Detector&&) noexcept = delete;      //!< Deleted move operator. @return Reference to moved object.
 
 
                 //  == METHODS ==
