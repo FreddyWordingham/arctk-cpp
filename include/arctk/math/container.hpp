@@ -73,9 +73,9 @@ inline T& operator++(T& cont_);
 template <typename T, typename>
 inline T& operator--(T& cont_);
 template <typename T, typename>
-inline T operator++(const T& cont_, int /*unused*/);
+inline T operator++(const T& cont_, int /*unused*/); // NOLINT
 template <typename T, typename>
-inline T operator--(const T& cont_, int /*unused*/);
+inline T operator--(const T& cont_, int /*unused*/); // NOLINT
 
 //  -- Arithmetic --
 template <typename T, typename>
