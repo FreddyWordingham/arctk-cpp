@@ -240,12 +240,10 @@ namespace arc //! arctk namespace
          *  @param  mult_   Value to multiply the weight of the photon by.
          *
          *  @pre    mult_ must be positive.
-         *  @pre    mult_ must be less than, or equal to, unity.
          */
         inline void Photon::multiply_weight(const double mult_) noexcept
         {
             assert(mult_ > 0.0);
-            assert(mult_ <= 1.0);
 
             _weight *= mult_;
         }
