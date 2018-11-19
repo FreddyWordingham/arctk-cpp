@@ -104,9 +104,9 @@ namespace arc //! arctk namespace
             bool _post_render; //!< Post-rendering toggle.
 
             //  -- Entities --
-            std::vector<std::unique_ptr<equip::Entity>>                         _entities;
-            std::vector<const equip::entity::Light*>                            _lights;
-            std::vector<std::pair<const equip::entity::Detector*, std::string>> _detectors;
+            std::vector<std::unique_ptr<equip::Entity>>                         _entities;  //!< Vector of entities within the simulation.
+            std::vector<const equip::entity::Light*>                            _lights;    //!< Vector of light sources within the simulation.
+            std::vector<std::pair<const equip::entity::Detector*, std::string>> _detectors; //!< Vector of detectors within the simulation.
 
 
             //  == INSTANTIATION ==
