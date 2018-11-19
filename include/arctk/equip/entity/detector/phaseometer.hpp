@@ -49,8 +49,8 @@ namespace arc //! arctk namespace
                     const bool _double_sided;
 
                     //  -- Data --
-                    double _total_weight;
-                    vec2 _total_phase;
+                    double _total_weight; //!< Total statistical weight of photons hitting the detector.
+                    vec2   _total_phase;
 
 
                     //  == INSTANTIATION ==
