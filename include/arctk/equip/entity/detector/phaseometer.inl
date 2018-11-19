@@ -44,7 +44,7 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
                 //  -- Collision --
-                bool Phaseometer::hit_front(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** mat_, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept
+                bool Phaseometer::hit_front(random::Generator* /*unused*/, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept
                 {
                     assert(phot_ != nullptr);
                     assert(sop_ != nullptr);
@@ -58,7 +58,7 @@ namespace arc //! arctk namespace
                     return (false);
                 }
 
-                bool Phaseometer::hit_back(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** mat_, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept
+                bool Phaseometer::hit_back(random::Generator* /*unused*/, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept
                 {
                     if (_double_sided)
                     {
