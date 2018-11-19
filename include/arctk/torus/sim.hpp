@@ -93,7 +93,7 @@ namespace arc //! arctk namespace
             std::string _output_dir; //!< Path to the output directory.
 
             //  -- Domain --
-            std::array<size_t, 3> _res;
+            std::array<size_t, 3> _res; //!< Resolution of the domain.
 
             //  -- Tree --
             size_t _max_depth;
