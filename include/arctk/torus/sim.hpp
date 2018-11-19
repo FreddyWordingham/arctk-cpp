@@ -155,13 +155,13 @@ namespace arc //! arctk namespace
             inline void run() const noexcept; // NOLINT
 
           private:
-            inline void                                 run_pre_flight() const noexcept;  // NOLINT
-            inline void                                 run_post_flight() const noexcept; // NOLINT
-            inline void                                 simulate() const noexcept;        // NOLINT
-            inline std::vector<std::vector<gui::Point>> simulate_thread(size_t thread_index_, unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_, size_t light_index_, dom::Region* dom_, const tree::Root& tree_) const
-              noexcept; // NOLINT
-            inline type::collision collide(double inter_, const std::optional<std::pair<equip::Entity*, geom::Collision>>& ent_, const std::optional<double>& leaf_, const std::optional<double>& cell_, const std::optional<double>& dom_) const
-              noexcept; // NOLINT
+            inline void                                 run_pre_flight() const noexcept;                                                                                                                                                          // NOLINT
+            inline void                                 run_post_flight() const noexcept;                                                                                                                                                         // NOLINT
+            inline void                                 simulate() const noexcept;                                                                                                                                                                // NOLINT
+            inline std::vector<std::vector<gui::Point>> simulate_thread(size_t thread_index_, unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_, size_t light_index_, dom::Region* dom_, const tree::Root& tree_) const   // NOLINT
+              noexcept;                                                                                                                                                                                                                           // NOLINT
+            inline type::collision collide(double inter_, const std::optional<std::pair<equip::Entity*, geom::Collision>>& ent_, const std::optional<double>& leaf_, const std::optional<double>& cell_, const std::optional<double>& dom_) const // NOLINT
+              noexcept;                                                                                                                                                                                                                           // NOLINT
             inline void report(unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_, size_t light_index_) const noexcept;
 
             //  -- Rendering --
