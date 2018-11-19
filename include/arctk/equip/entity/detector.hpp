@@ -26,6 +26,20 @@
 
 
 
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    namespace geom //! geometric namespace
+    {
+        namespace shape //! shape namespace
+        {
+            class Mesh;
+        } // namespace shape
+    }     // namespace geom
+} // namespace arc
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
