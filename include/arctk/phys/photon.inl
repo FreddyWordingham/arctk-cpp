@@ -130,6 +130,16 @@ namespace arc //! arctk namespace
         }
 
         /**
+         *  Get the phase of the photon as a vector.
+         *
+         *  @return Phase of the photon as a vector.
+         */
+        inline vec2 Photon::phasor() const noexcept
+        {
+            return (vec2(std::cos(_phase), std::sin(_phase)));
+        }
+
+        /**
          *  Get the statistical weight of the photon.
          *
          *  @return Statistical weight of the photon.
