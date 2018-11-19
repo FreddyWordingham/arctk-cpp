@@ -210,6 +210,20 @@ namespace arc //! arctk namespace
         }
 
         /**
+         *  Increase the phase of the photon forward.
+         *
+         *  @param  delta_  Value to increase the phase by.
+         *
+         *  @pre    delta_ must be positive.
+         */
+        inline void Photon::increase_phase(const double delta_) noexcept
+        {
+            assert(delta_ > 0.0);
+
+            _phase += delta_;
+        }
+
+        /**
          *  Multiply the weight of the photon.
          *
          *  @param  mult_   Value to multiply the weight of the photon by.
