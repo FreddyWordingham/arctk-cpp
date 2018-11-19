@@ -325,6 +325,10 @@ namespace arc //! arctk namespace
 
         inline void Sim::set_roulette_chance(const double roulette_chance_) noexcept
         {
+            assert(roulette_chance_ > 0.0);
+            assert(roulette_chance_ < 1.0);
+
+            _roulette_chance = roulette_chance_;
         }
 
 
