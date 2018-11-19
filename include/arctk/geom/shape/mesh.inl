@@ -77,6 +77,24 @@ namespace arc //! arctk namespace
              *  @param  trans_  Translation transformation.
              *
              *  @pre    serial_ may not be empty.
+             *  @pre    scale_ must be positive.
+             */
+            inline Mesh::Mesh(const std::string& serial_, const double scale_, const vec3& rot_, const vec3& trans_) noexcept
+              : Mesh(serial_, vec3(scale_, scale_, scale_), rot_, trans_)
+            {
+                assert(!serial_.empty());
+                assert(scale_ > 0.0);
+            }
+
+            /**
+             *  Construct a mesh from a serialised wavefront file and additional transformations.
+             *
+             *  @param  serial_ Serialised wavefront file.
+             *  @param  scale_  Scaling transformation.
+             *  @param  rot_    Rotation transformation.
+             *  @param  trans_  Translation transformation.
+             *
+             *  @pre    serial_ may not be empty.
              *  @pre    scale_.x must be positive.
              *  @pre    scale_.y must be positive.
              *  @pre    scale_.z must be positive.

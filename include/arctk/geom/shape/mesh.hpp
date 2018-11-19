@@ -90,6 +90,7 @@ namespace arc //! arctk namespace
               public:
                 //  -- Constructors --
                 inline explicit Mesh(const std::string& serial_) noexcept;
+                inline Mesh(const std::string& serial_, double scale_, const vec3& rot_, const vec3& trans_) noexcept;
                 inline Mesh(const std::string& serial_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept;
                 inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_, const vec3& scale_, const vec3& rot_, const vec3& trans_) noexcept;
                 inline Mesh(const std::vector<vec3>& poss_, const std::vector<vec3>& norms_, const std::vector<std::pair<std::array<size_t, 3>, std::array<size_t, 3>>>& faces_) noexcept;
