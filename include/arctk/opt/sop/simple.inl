@@ -103,10 +103,9 @@ namespace arc //! arctk namespace
              */
             inline bool Simple::interact(random::Generator* rng_, phys::Photon* phot_, dom::Cell* cell_, const double dist_) const noexcept
             {
-                std::cout << "phot weight: " << phot_->weight() << '\n';
-                std::cout << " albedo    : " << _albedo << '\n';
-                std::cout << " total     : " << (phot_->weight() * (1.0 - _albedo)) << '\n';
-                cell_->add_energy(dist_ * phot_->energy() * phot_->weight());
+                assert()
+
+                  cell_->add_energy(dist_ * phot_->energy() * phot_->weight());
                 cell_->add_absorb(phot_->weight() * (1.0 - _albedo));
                 cell_->add_scatter(phot_->weight());
 
