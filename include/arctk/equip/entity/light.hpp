@@ -41,6 +41,10 @@ namespace arc //! arctk namespace
     namespace geom //! geometric namespace
     {
         class Collision;
+        namespace shape //! shape namespace
+        {
+            class Mesh;
+        }          // namespace shape
     }              // namespace geom
     namespace math //! mathematical namespace
     {
