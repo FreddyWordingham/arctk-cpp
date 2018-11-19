@@ -55,7 +55,7 @@ namespace arc //! arctk namespace
                     //  == INSTANTIATION ==
                   public:
                     //  -- Constructors --
-                    inline Phaseometer(const geom::shape::Mesh& surf_) noexcept;
+                    inline Phaseometer(const geom::shape::Mesh& surf_, bool double_sided_) noexcept;
 
 
                     //  == METHODS ==
