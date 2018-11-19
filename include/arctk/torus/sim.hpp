@@ -86,8 +86,8 @@ namespace arc //! arctk namespace
             const vec3 _max; //!< Maximum bound of the domain.
 
             //  -- Parallelisation --
-            unsigned int _update_delta;
-            size_t       _num_threads;
+            unsigned int _update_delta; //!< Update delta (ms).
+            size_t       _num_threads;  //!< Number of simulation threads.
 
             //  -- Output --
             std::string _output_dir;
