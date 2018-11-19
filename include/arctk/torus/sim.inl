@@ -574,6 +574,19 @@ namespace arc //! arctk namespace
 
                 while (loop)
                 {
+                    if (_roulette && (phot.weight() <= _roulette_limit))
+                    {
+                        if (rng.gen() > _roulette_chance)
+                        {
+                            loop = false;
+                            break;
+                        }
+                        else
+                        {
+                            phot.multiply_weight(1.0 / _roulette_chance);
+                        }
+                    }
+
                     TRACK;
 
                     leaf = tree_.leaf(phot.pos()); // TODO Test removal
