@@ -106,6 +106,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0680fb9037f9e914398f451dbf328789"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afacbbb4565a2d07c910ba20013c4816a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_photon.html#afacbbb4565a2d07c910ba20013c4816a">phase</a> () const noexcept</td></tr>
 <tr class="separator:afacbbb4565a2d07c910ba20013c4816a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a339992851aa84b033cfe2969557998bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc.html#a8eb99660a4000265093cfe51201e32f3">vec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_photon.html#a339992851aa84b033cfe2969557998bb">phasor</a> () const noexcept</td></tr>
+<tr class="separator:a339992851aa84b033cfe2969557998bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66a3190932f5406e68f6c111a27fd92"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_photon.html#ae66a3190932f5406e68f6c111a27fd92">weight</a> () const noexcept</td></tr>
 <tr class="separator:ae66a3190932f5406e68f6c111a27fd92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf9751f821c2aa221d2b34a4a9c84bc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_photon.html#abf9751f821c2aa221d2b34a4a9c84bc4">move</a> (double dist_, double ref_index_) noexcept</td></tr>
@@ -116,6 +118,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a50d4deb43419310ed60de21292f2a44a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c2c6df532ac401732d98e12c4cd0f27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_photon.html#a6c2c6df532ac401732d98e12c4cd0f27">shift_wavelength</a> (double delta_) noexcept</td></tr>
 <tr class="separator:a6c2c6df532ac401732d98e12c4cd0f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae49fcb0ad522e0a9563b5090cc1861c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_photon.html#aae49fcb0ad522e0a9563b5090cc1861c">increase_phase</a> (double delta_) noexcept</td></tr>
+<tr class="separator:aae49fcb0ad522e0a9563b5090cc1861c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00293b2891ad1412f78fe5ff8d63c90c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1phys_1_1_photon.html#a00293b2891ad1412f78fe5ff8d63c90c">multiply_weight</a> (double mult_) noexcept</td></tr>
 <tr class="separator:a00293b2891ad1412f78fe5ff8d63c90c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -280,6 +284,40 @@ time_ must be non-negative. </dd></dl>
 
 </div>
 </div>
+<a id="aae49fcb0ad522e0a9563b5090cc1861c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae49fcb0ad522e0a9563b5090cc1861c">&#9670;&nbsp;</a></span>increase_phase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::phys::Photon::increase_phase </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>delta_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Increase the phase of the photon forward.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delta_</td><td>Value to increase the phase by.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>delta_ must be positive. </dd></dl>
+
+</div>
+</div>
 <a id="abf9751f821c2aa221d2b34a4a9c84bc4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abf9751f821c2aa221d2b34a4a9c84bc4">&#9670;&nbsp;</a></span>move()</h2>
 
@@ -385,6 +423,33 @@ mult_ must be less than, or equal to, unity. </dd></dl>
 </div><div class="memdoc">
 <p>Get the phase of the photon.</p>
 <dl class="section return"><dt>Returns</dt><dd>Phase of the photon. </dd></dl>
+
+</div>
+</div>
+<a id="a339992851aa84b033cfe2969557998bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a339992851aa84b033cfe2969557998bb">&#9670;&nbsp;</a></span>phasor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacearc.html#a8eb99660a4000265093cfe51201e32f3">vec2</a> arc::phys::Photon::phasor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the phase of the photon as a vector.</p>
+<dl class="section return"><dt>Returns</dt><dd>Phase of the photon as a vector. </dd></dl>
 
 </div>
 </div>
@@ -797,7 +862,7 @@ mult_ must be less than, or equal to, unity. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 19 2018 02:14:07 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 19 2018 14:27:08 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

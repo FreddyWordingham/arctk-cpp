@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['increase_5fphase',['increase_phase',['../classarc_1_1phys_1_1_photon.html#aae49fcb0ad522e0a9563b5090cc1861c',1,'arc::phys::Photon']]],
   ['init_5falbedo',['init_albedo',['../classarc_1_1opt_1_1mat_1_1_raman.html#ae7a72c1adb1beef7d9a8cb2fe461b788',1,'arc::opt::mat::Raman::init_albedo()'],['../classarc_1_1opt_1_1mat_1_1_simple.html#ae74bff361ec447030ba506668586a91b',1,'arc::opt::mat::Simple::init_albedo()']]],
   ['init_5fareas',['init_areas',['../classarc_1_1geom_1_1shape_1_1_mesh.html#a51623506d468518fe712e25f051ea3c4',1,'arc::geom::shape::Mesh']]],
   ['init_5fargv',['init_argv',['../classarc_1_1sys_1_1_args.html#a18cbb62fbc71def78864a18030c7fab4',1,'arc::sys::Args']]],

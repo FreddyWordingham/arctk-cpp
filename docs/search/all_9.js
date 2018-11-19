@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['increase_5fphase',['increase_phase',['../classarc_1_1phys_1_1_photon.html#aae49fcb0ad522e0a9563b5090cc1861c',1,'arc::phys::Photon']]],
   ['index_2ehpp',['index.hpp',['../index_8hpp.html',1,'']]],
   ['index_2einl',['index.inl',['../index_8inl.html',1,'']]],
   ['info_5ffilename',['INFO_FILENAME',['../namespacearc_1_1torus.html#a0ed9ff53086aecd3af016151715ded7b',1,'arc::torus']]],
