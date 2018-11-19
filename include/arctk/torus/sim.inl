@@ -313,7 +313,7 @@ namespace arc //! arctk namespace
 
         /**
          *  Set the roulette routine toggle.
-         * 
+         *
          *  @param  roulette_   Roulette routine toggle value.
          */
         inline void Sim::set_roulette(const bool roulette_) noexcept
@@ -323,9 +323,9 @@ namespace arc //! arctk namespace
 
         /**
          *  Set the roulette routine limit.
-         * 
+         *
          *  @param  roulette_limit_ Roulette routine limit value.
-         * 
+         *
          *  @pre    roulette_limit_ must be positive.
          */
         inline void Sim::set_roulette_limit(const double roulette_limit_) noexcept
@@ -335,6 +335,14 @@ namespace arc //! arctk namespace
             _roulette_limit = roulette_limit_;
         }
 
+        /**
+         *  Set the roulette routine kill chance.
+         *
+         *  @param  roulette_chance_ Roulette routine kill chance value.
+         *
+         *  @pre    roulette_chance_ must be positive.
+         *  @pre    roulette_chance_ must be less than unity.
+         */
         inline void Sim::set_roulette_chance(const double roulette_chance_) noexcept
         {
             assert(roulette_chance_ > 0.0);
