@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
                     //  == METHODS ==
                   public:
                     //  -- Saving --
-                    void save(const std::string& path_) const noexcept override;
+                    void save(const std::string& path_) const noexcept override; // NOLINT
 
                   private:
                     //  -- Collision --
