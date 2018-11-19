@@ -106,6 +106,8 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9b545f6051ecd88429fddf39dcb7902d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a9b545f6051ecd88429fddf39dcb7902d">Mesh</a> (const std::string &amp;serial_) noexcept</td></tr>
 <tr class="separator:a9b545f6051ecd88429fddf39dcb7902d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a303ec8850779d533ec276b74ef6fa1e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a303ec8850779d533ec276b74ef6fa1e2">Mesh</a> (const std::string &amp;serial_, double scale_, const <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> &amp;rot_, const <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> &amp;trans_) noexcept</td></tr>
+<tr class="separator:a303ec8850779d533ec276b74ef6fa1e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34f212f82898c067afb4cd9144f75045"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a34f212f82898c067afb4cd9144f75045">Mesh</a> (const std::string &amp;serial_, const <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> &amp;scale_, const <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> &amp;rot_, const <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> &amp;trans_) noexcept</td></tr>
 <tr class="separator:a34f212f82898c067afb4cd9144f75045"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0c45d3e12eec2b1fd235922ab66d9c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#ae0c45d3e12eec2b1fd235922ab66d9c5">Mesh</a> (const std::vector&lt; <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> &gt; &amp;poss_, const std::vector&lt; <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> &gt; &amp;norms_, const std::vector&lt; std::pair&lt; std::array&lt; size_t, 3 &gt;, std::array&lt; size_t, 3 &gt;&gt;&gt; &amp;faces_, const <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> &amp;scale_, const <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> &amp;rot_, const <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> &amp;trans_) noexcept</td></tr>
@@ -211,7 +213,7 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>Triangular mesh shape. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9b545f6051ecd88429fddf39dcb7902d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b545f6051ecd88429fddf39dcb7902d">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b545f6051ecd88429fddf39dcb7902d">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -244,8 +246,69 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a303ec8850779d533ec276b74ef6fa1e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a303ec8850779d533ec276b74ef6fa1e2">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">arc::geom::shape::Mesh::Mesh </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>serial_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>rot_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>trans_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Construct a mesh from a serialised wavefront file and additional transformations.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">serial_</td><td>Serialised wavefront file. </td></tr>
+    <tr><td class="paramname">scale_</td><td>Scaling transformation. </td></tr>
+    <tr><td class="paramname">rot_</td><td>Rotation transformation. </td></tr>
+    <tr><td class="paramname">trans_</td><td>Translation transformation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>serial_ may not be empty. </dd>
+<dd>
+scale_ must be positive. </dd></dl>
+
+</div>
+</div>
 <a id="a34f212f82898c067afb4cd9144f75045"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34f212f82898c067afb4cd9144f75045">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a34f212f82898c067afb4cd9144f75045">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -310,7 +373,7 @@ scale_.z must be positive. </dd></dl>
 </div>
 </div>
 <a id="ae0c45d3e12eec2b1fd235922ab66d9c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0c45d3e12eec2b1fd235922ab66d9c5">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0c45d3e12eec2b1fd235922ab66d9c5">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -394,7 +457,7 @@ scale_.z must be positive.</dd></dl>
 </div>
 </div>
 <a id="a7128c41df7140dcff1c5bda69bebf6d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7128c41df7140dcff1c5bda69bebf6d4">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7128c41df7140dcff1c5bda69bebf6d4">&#9670;&nbsp;</a></span>Mesh() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1600,7 +1663,7 @@ faces_ may not empty.</dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 19 2018 15:49:37 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 19 2018 22:49:47 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

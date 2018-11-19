@@ -1,4 +1,7 @@
 <map id="arc::random::generator::Quality::gen_base" name="arc::random::generator::Quality::gen_base">
 <area shape="rect" id="node2" href="$classarc_1_1random_1_1generator_1_1_quality.html#a7c9573cbce31fa810b35a5965c5fc98b" title="arc::random::generator\l::Quality::Quality" alt="" coords="210,5,367,44"/>
 <area shape="rect" id="node3" href="$classarc_1_1random_1_1generator_1_1_quality.html#a62c1690d7eb9dd323ffe92051fca040c" title="arc::random::generator\l::Quality::gen" alt="" coords="210,68,367,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1torus_1_1_sim.html#a6b8ed6000b57f5e13c3626aaab80668b" title="arc::torus::Sim::simulate\l_thread" alt="" coords="415,68,580,107"/>
+<area shape="rect" id="node5" href="$classarc_1_1torus_1_1_sim.html#aa43474ecd5d97be889455edb1af54dcd" title="arc::torus::Sim::simulate" alt="" coords="628,75,792,100"/>
+<area shape="rect" id="node6" href="$classarc_1_1torus_1_1_sim.html#a54f39f2e207f3594301a511eed439a1d" title="arc::torus::Sim::run" alt="" coords="840,75,974,100"/>
 </map>
