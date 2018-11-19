@@ -58,7 +58,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Detector(const geom::shape::Mesh& surf_) noexcept;
+                inline explicit Detector(const geom::shape::Mesh& surf_) noexcept;
                 inline Detector(const Detector&) = default; //!< Defaulted copy constructor.
                 inline Detector(Detector&&)      = default; //!< Defaulted move constructor.
 
