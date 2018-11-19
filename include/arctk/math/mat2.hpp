@@ -63,7 +63,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Printing --
             template <typename S>
-            friend constexpr inline std::ostream& operator<<(std::ostream& stream_, const Mat<S, 2>& mat_) noexcept;
+            friend constexpr inline std::ostream& operator<<(std::ostream& stream_, const Mat<S, 2>& mat_) noexcept; // NOLINT
 
             //  -- Assignment --
             constexpr inline Mat<T, 2>& operator+=(T val_) noexcept;
