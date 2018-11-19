@@ -37,6 +37,13 @@ namespace arc //! arctk namespace
             }
 
 
+            //  -- Destructors --
+            /**
+             *  Default destructor.
+             */
+            inline Detector::~Detector() noexcept = default;
+
+
 
         } // namespace entity
     }     // namespace equip
