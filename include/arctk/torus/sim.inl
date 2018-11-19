@@ -321,6 +321,13 @@ namespace arc //! arctk namespace
             _roulette = roulette_;
         }
 
+        /**
+         *  Set the roulette routine limit.
+         * 
+         *  @param  roulette_limit_ Roulette routine limit value.
+         * 
+         *  @pre    roulette_limit_ must be positive.
+         */
         inline void Sim::set_roulette_limit(const double roulette_limit_) noexcept
         {
             assert(roulette_limit_ > 0.0);
