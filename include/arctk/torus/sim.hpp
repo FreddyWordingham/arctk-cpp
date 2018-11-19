@@ -136,6 +136,9 @@ namespace arc //! arctk namespace
             inline void set_tar_tris(size_t tar_tris_) noexcept;
             inline void set_pre_render(bool pre_render_) noexcept;
             inline void set_post_render(bool post_render_) noexcept;
+            inline void set_roulette(bool roulette_) noexcept;
+            inline void set_roulette_limit(double roulette_limit_) noexcept;
+            inline void set_roulette_chance(double roulette_chance_) noexcept;
 
             //  -- Additions --
             template <typename T>
