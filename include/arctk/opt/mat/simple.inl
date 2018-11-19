@@ -73,7 +73,7 @@ namespace arc //! arctk namespace
                 assert(scat_coef_.size() == wavelengths_.size());
                 assert(prop::limits::always_greater_than(scat_coef_, 0.0));
                 assert(abs_coef_.size() == wavelengths_.size());
-                assert(prop::limits::always_greater_than(abs_coef_, 0.0));
+                assert(prop::limits::always_greater_than_or_equal_to(abs_coef_, 0.0));
                 assert(asyms_.size() == wavelengths_.size());
                 assert(prop::limits::always_greater_than_or_equal_to(asyms_, -1.0));
                 assert(prop::limits::always_less_than_or_equal_to(asyms_, 1.0));
@@ -106,7 +106,7 @@ namespace arc //! arctk namespace
                 assert(scat_coef_.size() == wavelengths_.size());
                 assert(prop::limits::always_greater_than(scat_coef_, 0.0));
                 assert(abs_coef_.size() == wavelengths_.size());
-                assert(prop::limits::always_greater_than(abs_coef_, 0.0));
+                assert(prop::limits::always_greater_than_or_equal_to(abs_coef_, 0.0));
 
                 std::vector<double> interact_coef;
                 interact_coef.reserve(wavelengths_.size());
@@ -147,7 +147,7 @@ namespace arc //! arctk namespace
                 assert(scat_coef_.size() == wavelengths_.size());
                 assert(prop::limits::always_greater_than(scat_coef_, 0.0));
                 assert(abs_coef_.size() == wavelengths_.size());
-                assert(prop::limits::always_greater_than(abs_coef_, 0.0));
+                assert(prop::limits::always_greater_than_or_equal_to(abs_coef_, 0.0));
 
                 std::vector<double> albedo;
                 albedo.reserve(wavelengths_.size());
