@@ -90,7 +90,7 @@ namespace arc //! arctk namespace
             size_t       _num_threads;  //!< Number of simulation threads.
 
             //  -- Output --
-            std::string _output_dir;
+            std::string _output_dir; //!< Path to the output directory.
 
             //  -- Domain --
             std::array<size_t, 3> _res;
