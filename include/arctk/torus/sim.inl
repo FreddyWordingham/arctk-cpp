@@ -613,8 +613,8 @@ namespace arc //! arctk namespace
 
                     TRACK;
 
-                    leaf = tree_.leaf(phot.pos()); // TODO Test removal
-                    cell = dom_->cell(phot.pos()); // TODO Test removal
+                    //leaf = tree_.leaf(phot.pos()); // TODO Test removal
+                    //cell = dom_->cell(phot.pos()); // TODO Test removal
 
                     const double                                                    inter_dist = sop->interact_dist(&rng, cell);
                     const std::optional<std::pair<equip::Entity*, geom::Collision>> ent_dist   = leaf->ent_collision_info(phot.pos(), phot.dir());
