@@ -164,7 +164,7 @@ namespace arc //! arctk namespace
 
             //  -- Rendering --
           private:
-            inline void render(const dom::Region& dom_, const tree::Root& tree_, const std::vector<std::vector<std::vector<gui::Point>>>& paths_ = {}) const noexcept;
+            inline void render(const dom::Region& dom_, const tree::Root& tree_, const std::vector<std::vector<std::vector<gui::Point>>>& paths_ = {}) const noexcept; // NOLINT
         };
 
 
