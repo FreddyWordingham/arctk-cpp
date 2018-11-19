@@ -108,6 +108,11 @@ namespace arc //! arctk namespace
             std::vector<const equip::entity::Light*>                            _lights;    //!< Vector of light sources within the simulation.
             std::vector<std::pair<const equip::entity::Detector*, std::string>> _detectors; //!< Vector of detectors within the simulation.
 
+            //  -- Roulette --
+            double _roulette;        //!< If true, perform roulette optimisation.
+            double _roulette_limit;  //!< Weight at which to begin roulette.
+            double _roulette_chance; //!< Chance of photon kill during roulette.
+
 
             //  == INSTANTIATION ==
           public:
