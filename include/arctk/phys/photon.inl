@@ -19,6 +19,7 @@
 #include <cmath>
 
 //  -- Arctk --
+#include <arctk/consts/math.hpp>
 #include <arctk/consts/phys.hpp>
 #include <arctk/dom/cell.hpp>
 #include <arctk/math/compare.hpp>
@@ -163,7 +164,7 @@ namespace arc //! arctk namespace
         {
             assert(ref_index_ >= 1.0);
 
-            _phase += dist_ * ref_index_ / _wavelength;
+            _phase += (consts::math::TWO_PI * dist_ * ref_index_) / _wavelength;
 
             _pos += _dir * dist_;
             _time += ((dist_ * ref_index_) / consts::phys::SPEED_OF_LIGHT);
