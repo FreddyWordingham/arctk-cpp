@@ -78,8 +78,8 @@ namespace arc //! arctk namespace
                 inline size_t height() const noexcept override;
 
                 //  -- Setters --
-                inline void set_min(const double min_) noexcept;
-                inline void set_max(const double max_) noexcept;
+                inline void set_min(double min_) noexcept;
+                inline void set_max(double max_) noexcept;
                 inline void set_scale_map(std::function<double(double)> scale_map_) noexcept;
                 inline void set_colour_map(std::function<vec3(double)> colour_map_) noexcept;
 
