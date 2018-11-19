@@ -524,14 +524,14 @@ namespace arc //! arctk namespace
 
         /**
          *  Perform one thread's simulation.
-         * 
+         *
          *  @param  thread_index_   Index of the thread.
          *  @param  num_phot_       Number of photons to run in total.
          *  @param  thread_phot_    Vector of number of photons run by each thread.
          *  @param  light_index_    Index of the light to emit photons from.
          *  @param  dom_            Simulation domain.
          *  @param  tree_           Simulation tree.
-         * 
+         *
          *  @return Vector of points to render.
          */
         inline std::vector<std::vector<gui::Point>> Sim::simulate_thread(const size_t thread_index_, const unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_, const size_t light_index_, dom::Region* dom_,
@@ -607,6 +607,17 @@ namespace arc //! arctk namespace
             return (paths);
         }
 
+        /**
+         *  Determine which type of collision event will occur.
+         *
+         *  @param  inter_  Distance to scattering inferaction event.
+         *  @param  ent_    Entity collision event information.
+         *  @param  leaf_   Distance to leaf cell collision event.
+         *  @param  cell_   Distance to domain cell collision event.
+         *  @param  dom_    Distance to domain bounds collision event.
+         *
+         *  @return Type of collision event that will occur.
+         */
         inline type::collision Sim::collide(const double inter_, const std::optional<std::pair<equip::Entity*, geom::Collision>>& ent_, const std::optional<double>& leaf_, const std::optional<double>& cell_, const std::optional<double>& dom_) const
           noexcept
         {
