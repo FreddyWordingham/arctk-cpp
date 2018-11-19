@@ -55,8 +55,9 @@ namespace arc //! arctk namespace
 
                     std::ofstream file(path_ + ".dat");
 
-                    file << "Phase     : " << phase.theta << '\n';
-                    file << "Magnitude : " << phase.rho << '\n';
+                    file << "Total weight : " << _total_weight << '\n';
+                    file << "Total phase  : " << phase.theta << '\n';
+                    file << "Coherence    : " << phase.rho / _total_weight << '\n';
                 }
 
 
@@ -70,6 +71,7 @@ namespace arc //! arctk namespace
                     phot_->move(coll_.dist(), sop_->get()->ref_index());
                     cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
 
+                    _total_weight += phot_->weight();
                     _total_phase += phot_->phasor() * phot_->weight();
 
                     return (false);
@@ -82,6 +84,7 @@ namespace arc //! arctk namespace
                         phot_->move(coll_.dist(), sop_->get()->ref_index());
                         cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
 
+                        _total_weight += phot_->weight();
                         _total_phase += phot_->phasor() * phot_->weight();
                     }
 
