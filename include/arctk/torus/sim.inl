@@ -311,6 +311,11 @@ namespace arc //! arctk namespace
             _post_render = post_render_;
         }
 
+        /**
+         *  Set the roulette routine toggle.
+         * 
+         *  @param  roulette_   Roulette routine toggle value.
+         */
         inline void Sim::set_roulette(const bool roulette_) noexcept
         {
             _roulette = roulette_;
