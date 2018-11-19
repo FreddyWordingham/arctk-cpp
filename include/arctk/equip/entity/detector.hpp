@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Saving --
-                virtual void save(const std::string& path_) const noexcept = 0;
+                virtual void save(const std::string& path_) const noexcept = 0; //!< Save the output of the detector.    @param  path_   Path to the output file.    @pre    path_ may not be empty.
             };
 
 
