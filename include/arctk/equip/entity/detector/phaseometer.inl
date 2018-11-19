@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <fstream>
 
 //  -- Arctk --
@@ -55,8 +56,17 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
                 //  -- Saving --
+                /**
+                 *  Save the status of the detector to a file.
+                 *
+                 *  @param  path_   Path to the save file.
+                 *
+                 *  @pre    path_ may not be empty.
+                 */
                 void Phaseometer::save(const std::string& path_) const noexcept
                 {
+                    assert(!path_.empty());
+
                     const vec2 phase = math::convert::cart_to_polar(_total_phase);
 
                     std::ofstream file(path_ + ".dat");
