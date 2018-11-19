@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-//#ifndef ARCTK_TORUS_SIM_INL
-//#define ARCTK_TORUS_SIM_INL
+#ifndef ARCTK_TORUS_SIM_INL
+#define ARCTK_TORUS_SIM_INL
 
 
 
@@ -808,4 +808,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-//#endif // ARCTK_TORUS_SIM_INL
+#endif // ARCTK_TORUS_SIM_INL
