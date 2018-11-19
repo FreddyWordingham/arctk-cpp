@@ -651,6 +651,13 @@ namespace arc //! arctk namespace
             return (type);
         }
 
+        /**
+         *  Report the current simulations progress.
+         *
+         *  @param  num_phot_       Total number of photons being run.
+         *  @param  thread_phot_    Vector of number of photons run by each thread.
+         *  @param  light_index_    Index of the light to emit photons from.
+         */
         inline void Sim::report(const unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_, const size_t light_index_) const noexcept
         {
             unsigned long int total = 0;
