@@ -100,8 +100,8 @@ namespace arc //! arctk namespace
             size_t _tar_tris;  //!< Target maximum number of triangles to contain within tree leaf cells.
 
             //  -- Rendering --
-            bool _pre_render;
-            bool _post_render;
+            bool _pre_render;  //!< Pre-rendering toggle.
+            bool _post_render; //!< Post-rendering toggle.
 
             //  -- Entities --
             std::vector<std::unique_ptr<equip::Entity>>                         _entities;
