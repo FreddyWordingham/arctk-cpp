@@ -133,11 +133,11 @@ namespace arc //! arctk namespace
          *
          *  @param  energy_ Energy to add.
          *
-         *  @pre    energy_ must be positive.
+         *  @pre    energy_ must be non-negative.
          */
         inline void Cell::add_energy(const double energy_) noexcept
         {
-            assert(energy_ > 0.0);
+            assert(energy_ >= 0.0);
 
             _write_mutex->lock();
 
