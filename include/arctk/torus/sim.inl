@@ -377,7 +377,7 @@ namespace arc //! arctk namespace
             {
                 std::cout << "Saving detector " << i << " of " << _detectors.size() << '\n';
 
-                _detectors[i].first->save(_detectors[i].second);
+                _detectors[i].first->save(_output_dir + _detectors[i].second);
             }
         }
 
