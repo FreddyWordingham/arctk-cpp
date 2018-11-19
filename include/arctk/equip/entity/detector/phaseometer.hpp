@@ -44,6 +44,10 @@ namespace arc //! arctk namespace
                 {
                     //  == FIELDS ==
                   private:
+                    //  -- Detector --
+                    const bool _double_sided;
+
+
                     //  == INSTANTIATION ==
                   public:
                     //  -- Constructors --
