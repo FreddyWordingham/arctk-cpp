@@ -109,6 +109,9 @@ namespace arc //! arctk namespace
           , _entities(0)
           , _lights(0)
           , _detectors(0)
+          , _roulette(false)
+          , _roulette_limit(0.1)
+          , _roulette_chance(0.1)
         {
             assert(min_.x < max_.x);
             assert(min_.y < max_.y);
