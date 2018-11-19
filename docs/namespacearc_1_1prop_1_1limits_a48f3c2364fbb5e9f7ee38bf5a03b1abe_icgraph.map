@@ -1,4 +1,7 @@
 <map id="arc::prop::limits::always_less_than_or_equal_to" name="arc::prop::limits::always_less_than_or_equal_to">
-<area shape="rect" id="node2" href="$classarc_1_1opt_1_1mat_1_1_simple.html#addb32675281d9b73f26373a1398279b7" title="arc::opt::mat::Simple\l::Simple" alt="" coords="199,5,343,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1opt_1_1mat_1_1_simple.html#ae74bff361ec447030ba506668586a91b" title="arc::opt::mat::Simple\l::init_albedo" alt="" coords="199,68,343,107"/>
+<area shape="rect" id="node2" href="$classarc_1_1opt_1_1mat_1_1_raman.html#a2258cdd697ca8b046fc933e01c6eaabb" title="arc::opt::mat::Raman\l::Raman" alt="" coords="199,5,345,44"/>
+<area shape="rect" id="node3" href="$classarc_1_1opt_1_1mat_1_1_raman.html#ae7a72c1adb1beef7d9a8cb2fe461b788" title="arc::opt::mat::Raman\l::init_albedo" alt="" coords="199,68,345,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1opt_1_1mat_1_1_raman.html#a311e9e438be062608b329fc62a5d7778" title="arc::opt::mat::Raman\l::init_raman_prob" alt="" coords="199,131,345,169"/>
+<area shape="rect" id="node5" href="$classarc_1_1opt_1_1mat_1_1_simple.html#addb32675281d9b73f26373a1398279b7" title="arc::opt::mat::Simple\l::Simple" alt="" coords="200,193,344,232"/>
+<area shape="rect" id="node6" href="$classarc_1_1opt_1_1mat_1_1_simple.html#ae74bff361ec447030ba506668586a91b" title="arc::opt::mat::Simple\l::init_albedo" alt="" coords="200,256,344,295"/>
 </map>

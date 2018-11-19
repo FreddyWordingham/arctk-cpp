@@ -70,14 +70,22 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">sim.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;optional&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;<a class="el" href="entity_8hpp_source.html">arctk/equip/entity.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="geom_2collision_8hpp_source.html">arctk/geom/collision.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="vec3_8hpp_source.html">arctk/math/vec3.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="type_2collision_8hpp_source.html">arctk/type/collision.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="sim_8inl.html">arctk/torus/sim.inl</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for sim.hpp:</div>
@@ -86,40 +94,36 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="sim_8hpp__incl.png" border="0" usemap="#include_2arctk_2torus_2sim_8hpp" alt=""/></div>
 <map name="include_2arctk_2torus_2sim_8hpp" id="include_2arctk_2torus_2sim_8hpp">
-<area shape="rect" id="node4" href="entity_8hpp.html" title="arctk/equip/entity.hpp" alt="" coords="2437,92,2584,117"/>
-<area shape="rect" id="node44" href="sim_8inl.html" title="arctk/torus/sim.inl" alt="" coords="2701,92,2827,117"/>
-<area shape="rect" id="node5" href="mesh_8hpp.html" title="arctk/geom/shape/mesh.hpp" alt="" coords="1799,165,1988,191"/>
-<area shape="rect" id="node41" href="sop_8hpp.html" title="arctk/opt/sop.hpp" alt="" coords="2510,239,2634,264"/>
-<area shape="rect" id="node43" href="entity_8inl.html" title="arctk/equip/entity.inl" alt="" coords="2058,385,2196,411"/>
-<area shape="rect" id="node6" href="geom_2shape_8hpp.html" title="arctk/geom/shape.hpp" alt="" coords="93,459,246,484"/>
-<area shape="rect" id="node13" href="geom_2collision_8hpp.html" title="arctk/geom/collision.hpp" alt="" coords="1811,459,1976,484"/>
-<area shape="rect" id="node14" href="vec3_8hpp.html" title="arctk/math/vec3.hpp" alt="" coords="1397,532,1539,557"/>
-<area shape="rect" id="node23" href="box_8hpp.html" title="arctk/geom/shape/box.hpp" alt="" coords="408,239,587,264"/>
-<area shape="rect" id="node26" href="triangle_8hpp.html" title="arctk/geom/shape/triangle.hpp" alt="" coords="758,385,959,411"/>
-<area shape="rect" id="node31" href="mesh_8inl.html" title="arctk/geom/shape/mesh.inl" alt="" coords="1666,532,1846,557"/>
-<area shape="rect" id="node8" href="geom_2shape_8inl.html" title="arctk/geom/shape.inl" alt="" coords="80,532,224,557"/>
-<area shape="rect" id="node22" href="collision_8inl.html" title="arctk/geom/collision.inl" alt="" coords="2305,679,2460,704"/>
-<area shape="rect" id="node15" href="vec_8hpp.html" title="arctk/math/vec.hpp" alt="" coords="2540,605,2674,631"/>
-<area shape="rect" id="node21" href="vec3_8inl.html" title="arctk/math/vec3.inl" alt="" coords="650,679,782,704"/>
-<area shape="rect" id="node17" href="vec_8inl.html" title="arctk/math/vec.inl" alt="" coords="2540,679,2665,704"/>
-<area shape="rect" id="node20" href="format_8hpp.html" title="arctk/consts/format.hpp" alt="" coords="2681,752,2841,777"/>
-<area shape="rect" id="node24" href="box_8inl.html" title="arctk/geom/shape/box.inl" alt="" coords="413,312,582,337"/>
-<area shape="rect" id="node27" href="triangle_8inl.html" title="arctk/geom/shape/triangle.inl" alt="" coords="763,532,955,557"/>
-<area shape="rect" id="node28" href="vertex_8hpp.html" title="arctk/index/vertex.hpp" alt="" coords="965,605,1117,631"/>
-<area shape="rect" id="node29" href="compare_8hpp.html" title="arctk/math/compare.hpp" alt="" coords="776,605,941,631"/>
-<area shape="rect" id="node30" href="generator_8hpp.html" title="arctk/random/generator.hpp" alt="" coords="1141,605,1326,631"/>
-<area shape="rect" id="node35" href="error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="2747,605,2879,631"/>
-<area shape="rect" id="node36" href="dim_8hpp.html" title="arctk/index/dim.hpp" alt="" coords="1909,605,2046,631"/>
-<area shape="rect" id="node37" href="transform_8hpp.html" title="arctk/math/mat/transform.hpp" alt="" coords="1450,605,1646,631"/>
-<area shape="rect" id="node38" href="mat4_8hpp.html" title="arctk/math/mat4.hpp" alt="" coords="1611,679,1754,704"/>
-<area shape="rect" id="node39" href="contents_8hpp.html" title="arctk/prop/contents.hpp" alt="" coords="2070,605,2231,631"/>
-<area shape="rect" id="node40" href="index_8hpp.html" title="arctk/search/index.hpp" alt="" coords="1413,752,1568,777"/>
-<area shape="rect" id="node42" href="sop_8inl.html" title="arctk/opt/sop.inl" alt="" coords="2513,312,2628,337"/>
-<area shape="rect" id="node45" href="obj_8hpp.html" title="arctk/data/obj.hpp" alt="" coords="2771,312,2898,337"/>
-<area shape="rect" id="node47" href="obj_8inl.html" title="arctk/data/obj.inl" alt="" coords="2798,385,2917,411"/>
-<area shape="rect" id="node48" href="process_8hpp.html" title="arctk/parse/process.hpp" alt="" coords="3054,459,3218,484"/>
-<area shape="rect" id="node49" href="read_8hpp.html" title="arctk/parse/read.hpp" alt="" coords="2439,459,2582,484"/>
-<area shape="rect" id="node50" href="file_8hpp.html" title="arctk/sys/file.hpp" alt="" coords="2809,459,2930,484"/>
+<area shape="rect" id="node9" href="geom_2collision_8hpp.html" title="arctk/geom/collision.hpp" alt="" coords="523,252,688,277"/>
+<area shape="rect" id="node10" href="vec3_8hpp.html" title="arctk/math/vec3.hpp" alt="" coords="396,325,537,351"/>
+<area shape="rect" id="node21" href="type_2collision_8hpp.html" title="arctk/type/collision.hpp" alt="" coords="2369,92,2525,117"/>
+<area shape="rect" id="node22" href="sim_8inl.html" title="arctk/torus/sim.inl" alt="" coords="2220,92,2345,117"/>
+<area shape="rect" id="node20" href="collision_8inl.html" title="arctk/geom/collision.inl" alt="" coords="1048,399,1203,424"/>
+<area shape="rect" id="node11" href="vec_8hpp.html" title="arctk/math/vec.hpp" alt="" coords="554,399,688,424"/>
+<area shape="rect" id="node18" href="vec3_8inl.html" title="arctk/math/vec3.inl" alt="" coords="768,472,901,497"/>
+<area shape="rect" id="node13" href="vec_8inl.html" title="arctk/math/vec.inl" alt="" coords="925,472,1051,497"/>
+<area shape="rect" id="node17" href="format_8hpp.html" title="arctk/consts/format.hpp" alt="" coords="981,545,1141,571"/>
+<area shape="rect" id="node19" href="mat3_8hpp.html" title="arctk/math/mat3.hpp" alt="" coords="639,545,782,571"/>
+<area shape="rect" id="node30" href="build_8hpp.html" title="arctk/config/build.hpp" alt="" coords="3093,172,3240,197"/>
+<area shape="rect" id="node31" href="version_8hpp.html" title="arctk/config/version.hpp" alt="" coords="3264,172,3426,197"/>
+<area shape="rect" id="node32" href="num_8hpp.html" title="arctk/consts/num.hpp" alt="" coords="3450,172,3598,197"/>
+<area shape="rect" id="node33" href="obj_8hpp.html" title="arctk/data/obj.hpp" alt="" coords="1527,172,1654,197"/>
+<area shape="rect" id="node36" href="error_8hpp.html" title="arctk/exit/error.hpp" alt="" coords="2942,325,3074,351"/>
+<area shape="rect" id="node37" href="region_8hpp.html" title="arctk/dom/region.hpp" alt="" coords="611,172,757,197"/>
+<area shape="rect" id="node39" href="entity_8hpp.html" title="arctk/equip/entity.hpp" alt="" coords="2042,252,2190,277"/>
+<area shape="rect" id="node40" href="sop_8hpp.html" title="arctk/opt/sop.hpp" alt="" coords="2064,325,2187,351"/>
+<area shape="rect" id="node41" href="detector_8hpp.html" title="arctk/equip/entity\l/detector.hpp" alt="" coords="1999,165,2121,204"/>
+<area shape="rect" id="node42" href="light_8hpp.html" title="arctk/equip/entity\l/light.hpp" alt="" coords="2552,165,2674,204"/>
+<area shape="rect" id="node43" href="point_8hpp.html" title="arctk/gui/point.hpp" alt="" coords="1204,172,1334,197"/>
+<area shape="rect" id="node44" href="container_8hpp.html" title="arctk/math/container.hpp" alt="" coords="2699,172,2866,197"/>
+<area shape="rect" id="node45" href="opt_2mat_8hpp.html" title="arctk/opt/mat.hpp" alt="" coords="2702,252,2826,277"/>
+<area shape="rect" id="node46" href="print_8hpp.html" title="arctk/parse/print.hpp" alt="" coords="833,172,975,197"/>
+<area shape="rect" id="node47" href="write_8hpp.html" title="arctk/parse/write.hpp" alt="" coords="1358,172,1503,197"/>
+<area shape="rect" id="node48" href="quality_8hpp.html" title="arctk/random/generator\l/quality.hpp" alt="" coords="1729,165,1889,204"/>
+<area shape="rect" id="node49" href="leaf_8hpp.html" title="arctk/tree/node/leaf.hpp" alt="" coords="323,172,485,197"/>
+<area shape="rect" id="node50" href="root_8hpp.html" title="arctk/tree/root.hpp" alt="" coords="999,172,1129,197"/>
+<area shape="rect" id="node35" href="obj_8inl.html" title="arctk/data/obj.inl" alt="" coords="2901,252,3019,277"/>
+<area shape="rect" id="node38" href="box_8hpp.html" title="arctk/geom/shape/box.hpp" alt="" coords="320,252,499,277"/>
 </map>
 </div>
 </div>
@@ -135,8 +139,8 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacearc"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc.html">arc</a></td></tr>
 <tr class="memdesc:namespacearc"><td class="mdescLeft">&#160;</td><td class="mdescRight">arctk namespace <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacearc_1_1data"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1data.html">arc::data</a></td></tr>
-<tr class="memdesc:namespacearc_1_1data"><td class="mdescLeft">&#160;</td><td class="mdescRight">data namespace <br /></td></tr>
+<tr class="memitem:namespacearc_1_1dom"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1dom.html">arc::dom</a></td></tr>
+<tr class="memdesc:namespacearc_1_1dom"><td class="mdescLeft">&#160;</td><td class="mdescRight">domain namespace <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacearc_1_1equip"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1equip.html">arc::equip</a></td></tr>
 <tr class="memdesc:namespacearc_1_1equip"><td class="mdescLeft">&#160;</td><td class="mdescRight">equipment namespace <br /></td></tr>
@@ -144,12 +148,21 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacearc_1_1equip_1_1entity"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1equip_1_1entity.html">arc::equip::entity</a></td></tr>
 <tr class="memdesc:namespacearc_1_1equip_1_1entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">entity namespace <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacearc_1_1opt"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1opt.html">arc::opt</a></td></tr>
-<tr class="memdesc:namespacearc_1_1opt"><td class="mdescLeft">&#160;</td><td class="mdescRight">optical namespace <br /></td></tr>
+<tr class="memitem:namespacearc_1_1gui"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1gui.html">arc::gui</a></td></tr>
+<tr class="memdesc:namespacearc_1_1gui"><td class="mdescLeft">&#160;</td><td class="mdescRight">graphical-user-interface namespace <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacearc_1_1tree"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1tree.html">arc::tree</a></td></tr>
+<tr class="memdesc:namespacearc_1_1tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">tree namespace <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacearc_1_1torus"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1torus.html">arc::torus</a></td></tr>
 <tr class="memdesc:namespacearc_1_1torus"><td class="mdescLeft">&#160;</td><td class="mdescRight">transport of radiation under skin namespace <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a0ed9ff53086aecd3af016151715ded7b"><td class="memItemLeft" align="right" valign="top">constexpr const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacearc_1_1torus.html#a0ed9ff53086aecd3af016151715ded7b">arc::torus::INFO_FILENAME</a> = &quot;info.txt&quot;</td></tr>
+<tr class="memdesc:a0ed9ff53086aecd3af016151715ded7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of produced information file.  <a href="namespacearc_1_1torus.html#a0ed9ff53086aecd3af016151715ded7b">More...</a><br /></td></tr>
+<tr class="separator:a0ed9ff53086aecd3af016151715ded7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section date"><dt>Date</dt><dd>07/11/2018 </dd></dl>
@@ -158,7 +171,7 @@ Namespaces</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 8 2018 13:50:03 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 19 2018 00:05:43 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

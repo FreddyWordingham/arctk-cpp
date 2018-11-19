@@ -1,0 +1,5 @@
+<map id="arc::gui::actor::path" name="arc::gui::actor::path">
+<area shape="rect" id="node2" href="$classarc_1_1torus_1_1_sim.html#ac4265f843be47f3a3c001d24c6e912c9" title="arc::torus::Sim::render" alt="" coords="189,5,342,31"/>
+<area shape="rect" id="node3" href="$classarc_1_1torus_1_1_sim.html#aa43474ecd5d97be889455edb1af54dcd" title="arc::torus::Sim::simulate" alt="" coords="390,5,554,31"/>
+<area shape="rect" id="node4" href="$classarc_1_1torus_1_1_sim.html#a54f39f2e207f3594301a511eed439a1d" title="arc::torus::Sim::run" alt="" coords="602,5,736,31"/>
+</map>

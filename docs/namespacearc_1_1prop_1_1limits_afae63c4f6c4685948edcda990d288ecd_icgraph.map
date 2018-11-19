@@ -4,8 +4,11 @@
 <area shape="rect" id="node4" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a061096961c96bcdca96eba49fba38eb7" title="arc::random::distribution\l::Linear::Linear" alt="" coords="198,131,363,169"/>
 <area shape="rect" id="node5" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a79b38bf15a786c48c8f64ca6ca6b9627" title="arc::random::distribution\l::Linear::init_cdfs" alt="" coords="198,193,363,232"/>
 <area shape="rect" id="node6" href="$classarc_1_1random_1_1distribution_1_1_linear.html#a46538f676264f51b1f8902ff0dbec236" title="arc::random::distribution\l::Linear::init_fracs" alt="" coords="198,256,363,295"/>
-<area shape="rect" id="node7" href="$classarc_1_1opt_1_1mat_1_1_simple.html#addb32675281d9b73f26373a1398279b7" title="arc::opt::mat::Simple\l::Simple" alt="" coords="209,319,352,357"/>
-<area shape="rect" id="node8" href="$classarc_1_1opt_1_1mat_1_1_simple.html#ae74bff361ec447030ba506668586a91b" title="arc::opt::mat::Simple\l::init_albedo" alt="" coords="209,381,352,420"/>
-<area shape="rect" id="node9" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#a0643b275df486dc6b8590259629ed91c" title="arc::random::distribution\l::Discrete::Discrete" alt="" coords="198,444,363,483"/>
-<area shape="rect" id="node10" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#aa9b8b0c29f8bd71c50c8c5e50cf80946" title="arc::random::distribution\l::Discrete::init_cdfs" alt="" coords="198,507,363,545"/>
+<area shape="rect" id="node7" href="$classarc_1_1opt_1_1mat_1_1_raman.html#a2258cdd697ca8b046fc933e01c6eaabb" title="arc::opt::mat::Raman\l::Raman" alt="" coords="208,319,354,357"/>
+<area shape="rect" id="node8" href="$classarc_1_1opt_1_1mat_1_1_raman.html#ae7a72c1adb1beef7d9a8cb2fe461b788" title="arc::opt::mat::Raman\l::init_albedo" alt="" coords="208,381,354,420"/>
+<area shape="rect" id="node9" href="$classarc_1_1opt_1_1mat_1_1_raman.html#a311e9e438be062608b329fc62a5d7778" title="arc::opt::mat::Raman\l::init_raman_prob" alt="" coords="208,444,354,483"/>
+<area shape="rect" id="node10" href="$classarc_1_1opt_1_1mat_1_1_simple.html#addb32675281d9b73f26373a1398279b7" title="arc::opt::mat::Simple\l::Simple" alt="" coords="209,507,352,545"/>
+<area shape="rect" id="node11" href="$classarc_1_1opt_1_1mat_1_1_simple.html#ae74bff361ec447030ba506668586a91b" title="arc::opt::mat::Simple\l::init_albedo" alt="" coords="209,569,352,608"/>
+<area shape="rect" id="node12" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#a0643b275df486dc6b8590259629ed91c" title="arc::random::distribution\l::Discrete::Discrete" alt="" coords="198,632,363,671"/>
+<area shape="rect" id="node13" href="$classarc_1_1random_1_1distribution_1_1_discrete.html#aa9b8b0c29f8bd71c50c8c5e50cf80946" title="arc::random::distribution\l::Discrete::init_cdfs" alt="" coords="198,695,363,733"/>
 </map>

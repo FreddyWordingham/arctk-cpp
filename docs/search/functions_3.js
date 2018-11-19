@@ -7,6 +7,7 @@ var searchData=
   ['det',['det',['../classarc_1_1math_1_1_mat.html#a17ff38fa0f4b29f52711441b876d1118',1,'arc::math::Mat::det()'],['../classarc_1_1math_1_1_mat_3_01_t_00_012_01_4.html#a0f5532520f7d33d15f18b903e7b8fc86',1,'arc::math::Mat&lt; T, 2 &gt;::det()'],['../classarc_1_1math_1_1_mat_3_01_t_00_013_01_4.html#a0b68cc7034c34ab281f0f21ffb72da9f',1,'arc::math::Mat&lt; T, 3 &gt;::det()'],['../classarc_1_1math_1_1_mat_3_01_t_00_014_01_4.html#ab7d94de6c765f1cf06e5e75e4366a3bc',1,'arc::math::Mat&lt; T, 4 &gt;::det()']]],
   ['diffuse',['Diffuse',['../classarc_1_1gui_1_1shader_1_1_diffuse.html#a31c4ea40b78b82e347f5e361d5e2b1e0',1,'arc::gui::shader::Diffuse']]],
   ['dir',['dir',['../classarc_1_1phys_1_1_photon.html#a3311d8aec67336c41010b9bfd651e783',1,'arc::phys::Photon']]],
+  ['dirty',['Dirty',['../classarc_1_1random_1_1generator_1_1_dirty.html#af50ae1cec3654fcb3b2df5d1e6705d2c',1,'arc::random::generator::Dirty']]],
   ['discrete',['Discrete',['../classarc_1_1random_1_1distribution_1_1_discrete.html#a0643b275df486dc6b8590259629ed91c',1,'arc::random::distribution::Discrete']]],
   ['dist',['dist',['../classarc_1_1geom_1_1_collision.html#a2840d09ad6cb7c2160656f11e28d234f',1,'arc::geom::Collision']]],
   ['distinct',['distinct',['../namespacearc_1_1prop_1_1contents.html#abd8d7e37e9f12b1f7f56d02e0d77be3f',1,'arc::prop::contents']]],

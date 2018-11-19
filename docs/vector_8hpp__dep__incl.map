@@ -1,3 +1,7 @@
 <map id="include/arctk/multi/vector.hpp" name="include/arctk/multi/vector.hpp">
-<area shape="rect" id="node2" href="$write_8hpp.html" title="include/arctk/parse\l/write.hpp" alt="" coords="5,92,139,131"/>
+<area shape="rect" id="node2" href="$greyscale_8hpp.html" title="include/arctk/img/bitmap\l/greyscale.hpp" alt="" coords="5,179,170,217"/>
+<area shape="rect" id="node3" href="$bitmap_8hpp.html" title="include/arctk/img/bitmap.hpp" alt="" coords="59,99,250,124"/>
+<area shape="rect" id="node4" href="$write_8hpp.html" title="include/arctk/parse\l/write.hpp" alt="" coords="275,92,408,131"/>
+<area shape="rect" id="node5" href="$sim_8inl.html" title="include/arctk/torus\l/sim.inl" alt="" coords="276,179,406,217"/>
+<area shape="rect" id="node6" href="$sim_8hpp.html" title="include/arctk/torus\l/sim.hpp" alt="" coords="276,265,406,304"/>
 </map>

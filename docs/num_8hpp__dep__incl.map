@@ -1,9 +1,11 @@
 <map id="include/arctk/consts/num.hpp" name="include/arctk/consts/num.hpp">
 <area shape="rect" id="node2" href="$body_8inl.html" title="include/arctk/equip\l/entity/body.inl" alt="" coords="5,92,138,131"/>
 <area shape="rect" id="node4" href="$light_8inl.html" title="include/arctk/equip\l/entity/light.inl" alt="" coords="161,92,294,131"/>
-<area shape="rect" id="node7" href="$mirror_8inl.html" title="include/arctk/equip\l/entity/mirror.inl" alt="" coords="317,92,450,131"/>
+<area shape="rect" id="node7" href="$sim_8inl.html" title="include/arctk/torus\l/sim.inl" alt="" coords="267,265,396,304"/>
+<area shape="rect" id="node9" href="$mirror_8inl.html" title="include/arctk/equip\l/entity/mirror.inl" alt="" coords="369,92,502,131"/>
 <area shape="rect" id="node3" href="$body_8hpp.html" title="include/arctk/equip\l/entity/body.hpp" alt="" coords="5,179,138,217"/>
 <area shape="rect" id="node5" href="$light_8hpp.html" title="include/arctk/equip\l/entity/light.hpp" alt="" coords="161,179,294,217"/>
-<area shape="rect" id="node6" href="$laser_8hpp.html" title="include/arctk/equip\l/entity/light/laser.hpp" alt="" coords="156,265,299,304"/>
-<area shape="rect" id="node8" href="$mirror_8hpp.html" title="include/arctk/equip\l/entity/mirror.hpp" alt="" coords="317,179,450,217"/>
+<area shape="rect" id="node6" href="$laser_8hpp.html" title="include/arctk/equip\l/entity/light/laser.hpp" alt="" coords="100,265,243,304"/>
+<area shape="rect" id="node8" href="$sim_8hpp.html" title="include/arctk/torus\l/sim.hpp" alt="" coords="267,352,396,391"/>
+<area shape="rect" id="node10" href="$mirror_8hpp.html" title="include/arctk/equip\l/entity/mirror.hpp" alt="" coords="369,179,502,217"/>
 </map>

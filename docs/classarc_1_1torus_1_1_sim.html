@@ -68,21 +68,1801 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="classarc_1_1torus_1_1_sim-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">arc::torus::Sim Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="sim_8hpp_source.html">sim.hpp</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for arc::torus::Sim:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim__coll__graph.png" border="0" usemap="#arc_1_1torus_1_1_sim_coll__map" alt="Collaboration graph"/></div>
+<map name="arc_1_1torus_1_1_sim_coll__map" id="arc_1_1torus_1_1_sim_coll__map">
+<area shape="rect" id="node2" href="classarc_1_1math_1_1_vec.html" title="arc::math::Vec\&lt; T, N \&gt;" alt="" coords="5,5,158,31"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a43482f4fcd1c3f44bbd236016003a1d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a43482f4fcd1c3f44bbd236016003a1d1">Sim</a> (const <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> &amp;min_, const <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> &amp;max_) noexcept</td></tr>
+<tr class="separator:a43482f4fcd1c3f44bbd236016003a1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad073a36815f510b13b9cd3a83fd5fe54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#ad073a36815f510b13b9cd3a83fd5fe54">set_update_delta</a> (const unsigned int update_delta_) noexcept</td></tr>
+<tr class="separator:ad073a36815f510b13b9cd3a83fd5fe54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f5e56f909f6533f24d254b39f44d736"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a1f5e56f909f6533f24d254b39f44d736">set_num_threads</a> (const size_t num_threads_) noexcept</td></tr>
+<tr class="separator:a1f5e56f909f6533f24d254b39f44d736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad56a31083646320ef81646d789a0613e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#ad56a31083646320ef81646d789a0613e">set_output_dir</a> (const std::string &amp;output_dir_) noexcept</td></tr>
+<tr class="separator:ad56a31083646320ef81646d789a0613e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a8cb07b9e3fe9bb26883bce16f95903"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a5a8cb07b9e3fe9bb26883bce16f95903">set_res</a> (const size_t res_) noexcept</td></tr>
+<tr class="separator:a5a8cb07b9e3fe9bb26883bce16f95903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2353077d74bb7644480f5ceebad6b3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#ac2353077d74bb7644480f5ceebad6b3e">set_res</a> (const std::array&lt; size_t, 3 &gt; &amp;res_) noexcept</td></tr>
+<tr class="separator:ac2353077d74bb7644480f5ceebad6b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d1be143744432d788d5d31258fd1d70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a6d1be143744432d788d5d31258fd1d70">set_max_depth</a> (const size_t max_depth_) noexcept</td></tr>
+<tr class="separator:a6d1be143744432d788d5d31258fd1d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8f06927a6156c5b8bc8517827af5782"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#ad8f06927a6156c5b8bc8517827af5782">set_tar_tris</a> (const size_t tar_tris_) noexcept</td></tr>
+<tr class="separator:ad8f06927a6156c5b8bc8517827af5782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6d4d1e971d70658d826d2f6a7ac0f1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#ad6d4d1e971d70658d826d2f6a7ac0f1e">set_pre_render</a> (const bool pre_render_) noexcept</td></tr>
+<tr class="separator:ad6d4d1e971d70658d826d2f6a7ac0f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51326325ab5b21b96e5f06951c64f19c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a51326325ab5b21b96e5f06951c64f19c">set_post_render</a> (const bool post_render_) noexcept</td></tr>
+<tr class="separator:a51326325ab5b21b96e5f06951c64f19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e867c312c95c9ab3632b578d6e81f49"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0e867c312c95c9ab3632b578d6e81f49"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a0e867c312c95c9ab3632b578d6e81f49">add_entity</a> (T &amp;&amp;ent_) noexcept</td></tr>
+<tr class="separator:a0e867c312c95c9ab3632b578d6e81f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accb5dfc6edd416f3e454298d47e18a0f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:accb5dfc6edd416f3e454298d47e18a0f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#accb5dfc6edd416f3e454298d47e18a0f">add_light</a> (T &amp;&amp;light_) noexcept</td></tr>
+<tr class="separator:accb5dfc6edd416f3e454298d47e18a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50c175d629b8a81d2424308b93f0e74c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a50c175d629b8a81d2424308b93f0e74c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a50c175d629b8a81d2424308b93f0e74c">add_detector</a> (T &amp;&amp;det_, const std::string &amp;path_) noexcept</td></tr>
+<tr class="separator:a50c175d629b8a81d2424308b93f0e74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54f39f2e207f3594301a511eed439a1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a54f39f2e207f3594301a511eed439a1d">run</a> () const noexcept</td></tr>
+<tr class="separator:a54f39f2e207f3594301a511eed439a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a215fc5734a598d8584b81acfeca00018"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a215fc5734a598d8584b81acfeca00018">create_output_dir</a> () const noexcept</td></tr>
+<tr class="separator:a215fc5734a598d8584b81acfeca00018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebedc55998a8e1d9386819373569c43b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#aebedc55998a8e1d9386819373569c43b">pre_flight_info_write</a> () const noexcept</td></tr>
+<tr class="separator:aebedc55998a8e1d9386819373569c43b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8613e24dbcaecd383cf3821cf35d6dba"><td class="memItemLeft" align="right" valign="top">unsigned long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a8613e24dbcaecd383cf3821cf35d6dba">total_phot</a> () const noexcept</td></tr>
+<tr class="separator:a8613e24dbcaecd383cf3821cf35d6dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a037c877ffa08d94f42bf1b79659dee3f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a037c877ffa08d94f42bf1b79659dee3f">total_power</a> () const noexcept</td></tr>
+<tr class="separator:a037c877ffa08d94f42bf1b79659dee3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a4564959584b2a56fad6d1f6358f59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#ac0a4564959584b2a56fad6d1f6358f59">post_flight_info_write</a> () const noexcept</td></tr>
+<tr class="separator:ac0a4564959584b2a56fad6d1f6358f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6134358647e9c117dc618c00dd8b3a97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a6134358647e9c117dc618c00dd8b3a97">run_pre_flight</a> () const noexcept</td></tr>
+<tr class="separator:a6134358647e9c117dc618c00dd8b3a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3c18cd6a7ba73fe8f47dcdce4a7a007"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#af3c18cd6a7ba73fe8f47dcdce4a7a007">run_post_flight</a> () const noexcept</td></tr>
+<tr class="separator:af3c18cd6a7ba73fe8f47dcdce4a7a007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa43474ecd5d97be889455edb1af54dcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#aa43474ecd5d97be889455edb1af54dcd">simulate</a> () const noexcept</td></tr>
+<tr class="separator:aa43474ecd5d97be889455edb1af54dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8ed6000b57f5e13c3626aaab80668b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="classarc_1_1gui_1_1_point.html">gui::Point</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a6b8ed6000b57f5e13c3626aaab80668b">simulate_thread</a> (size_t thread_index_, unsigned long int num_phot_, std::vector&lt; unsigned long int &gt; *thread_phot_, size_t light_index_, <a class="el" href="classarc_1_1dom_1_1_region.html">dom::Region</a> *dom_, const <a class="el" href="classarc_1_1tree_1_1_root.html">tree::Root</a> &amp;tree_) const noexcept</td></tr>
+<tr class="separator:a6b8ed6000b57f5e13c3626aaab80668b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0fe3c6c8bde4ba1413b690809506cf5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacearc_1_1type.html#a5dd429094265b7e1d2702e128803fc3f">type::collision</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#ad0fe3c6c8bde4ba1413b690809506cf5">collide</a> (double inter_, const std::optional&lt; std::pair&lt; <a class="el" href="classarc_1_1equip_1_1_entity.html">equip::Entity</a> *, <a class="el" href="classarc_1_1geom_1_1_collision.html">geom::Collision</a> &gt;&gt; &amp;ent_, const std::optional&lt; double &gt; &amp;leaf_, const std::optional&lt; double &gt; &amp;cell_, const std::optional&lt; double &gt; &amp;dom_) const noexcept</td></tr>
+<tr class="separator:ad0fe3c6c8bde4ba1413b690809506cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02353289ae116ed6e2e3bda387fc2755"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a02353289ae116ed6e2e3bda387fc2755">report</a> (unsigned long int num_phot_, std::vector&lt; unsigned long int &gt; *thread_phot_, size_t light_index_) const noexcept</td></tr>
+<tr class="separator:a02353289ae116ed6e2e3bda387fc2755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4265f843be47f3a3c001d24c6e912c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#ac4265f843be47f3a3c001d24c6e912c9">render</a> (const <a class="el" href="classarc_1_1dom_1_1_region.html">dom::Region</a> &amp;dom_, const <a class="el" href="classarc_1_1tree_1_1_root.html">tree::Root</a> &amp;tree_, const std::vector&lt; std::vector&lt; std::vector&lt; <a class="el" href="classarc_1_1gui_1_1_point.html">gui::Point</a> &gt;&gt;&gt; &amp;paths_={}) const noexcept</td></tr>
+<tr class="separator:ac4265f843be47f3a3c001d24c6e912c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a842030f2c9462cb4c778bd6998df9a97"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a842030f2c9462cb4c778bd6998df9a97">_min</a></td></tr>
+<tr class="memdesc:a842030f2c9462cb4c778bd6998df9a97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum bound of the domain.  <a href="#a842030f2c9462cb4c778bd6998df9a97">More...</a><br /></td></tr>
+<tr class="separator:a842030f2c9462cb4c778bd6998df9a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1ce6a6fb90fed8363fdbedf03346f97"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#ad1ce6a6fb90fed8363fdbedf03346f97">_max</a></td></tr>
+<tr class="memdesc:ad1ce6a6fb90fed8363fdbedf03346f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum bound of the domain.  <a href="#ad1ce6a6fb90fed8363fdbedf03346f97">More...</a><br /></td></tr>
+<tr class="separator:ad1ce6a6fb90fed8363fdbedf03346f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08b25b2b3982ab3fbd398375472d34e5"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a08b25b2b3982ab3fbd398375472d34e5">_update_delta</a></td></tr>
+<tr class="memdesc:a08b25b2b3982ab3fbd398375472d34e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update delta (ms).  <a href="#a08b25b2b3982ab3fbd398375472d34e5">More...</a><br /></td></tr>
+<tr class="separator:a08b25b2b3982ab3fbd398375472d34e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d245f6da81308ede3f15f504f2a0941"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a6d245f6da81308ede3f15f504f2a0941">_num_threads</a></td></tr>
+<tr class="memdesc:a6d245f6da81308ede3f15f504f2a0941"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of simulation threads.  <a href="#a6d245f6da81308ede3f15f504f2a0941">More...</a><br /></td></tr>
+<tr class="separator:a6d245f6da81308ede3f15f504f2a0941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02c1c7ac2455391590ce3ccc43b97a1f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a02c1c7ac2455391590ce3ccc43b97a1f">_output_dir</a></td></tr>
+<tr class="memdesc:a02c1c7ac2455391590ce3ccc43b97a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to the output directory.  <a href="#a02c1c7ac2455391590ce3ccc43b97a1f">More...</a><br /></td></tr>
+<tr class="separator:a02c1c7ac2455391590ce3ccc43b97a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c56b667c673bc37c97343eed95a63e4"><td class="memItemLeft" align="right" valign="top">std::array&lt; size_t, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a0c56b667c673bc37c97343eed95a63e4">_res</a></td></tr>
+<tr class="memdesc:a0c56b667c673bc37c97343eed95a63e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolution of the domain.  <a href="#a0c56b667c673bc37c97343eed95a63e4">More...</a><br /></td></tr>
+<tr class="separator:a0c56b667c673bc37c97343eed95a63e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa44a59b9ec070bbd3e5acef5ef67713a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#aa44a59b9ec070bbd3e5acef5ef67713a">_max_depth</a></td></tr>
+<tr class="memdesc:aa44a59b9ec070bbd3e5acef5ef67713a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum depth of the simulation tree.  <a href="#aa44a59b9ec070bbd3e5acef5ef67713a">More...</a><br /></td></tr>
+<tr class="separator:aa44a59b9ec070bbd3e5acef5ef67713a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5668969b8df87ce212d404cddd51192d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a5668969b8df87ce212d404cddd51192d">_tar_tris</a></td></tr>
+<tr class="memdesc:a5668969b8df87ce212d404cddd51192d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Target maximum number of triangles to contain within tree leaf cells.  <a href="#a5668969b8df87ce212d404cddd51192d">More...</a><br /></td></tr>
+<tr class="separator:a5668969b8df87ce212d404cddd51192d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0724c53710b743c48de920ab4d312dc6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a0724c53710b743c48de920ab4d312dc6">_pre_render</a></td></tr>
+<tr class="memdesc:a0724c53710b743c48de920ab4d312dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-rendering toggle.  <a href="#a0724c53710b743c48de920ab4d312dc6">More...</a><br /></td></tr>
+<tr class="separator:a0724c53710b743c48de920ab4d312dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae94d600244bac6490e504943de11b71"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#aae94d600244bac6490e504943de11b71">_post_render</a></td></tr>
+<tr class="memdesc:aae94d600244bac6490e504943de11b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post-rendering toggle.  <a href="#aae94d600244bac6490e504943de11b71">More...</a><br /></td></tr>
+<tr class="separator:aae94d600244bac6490e504943de11b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c15b563b2320edbf2e6d613271cd670"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="classarc_1_1equip_1_1_entity.html">equip::Entity</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a1c15b563b2320edbf2e6d613271cd670">_entities</a></td></tr>
+<tr class="memdesc:a1c15b563b2320edbf2e6d613271cd670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of entities within the simulation.  <a href="#a1c15b563b2320edbf2e6d613271cd670">More...</a><br /></td></tr>
+<tr class="separator:a1c15b563b2320edbf2e6d613271cd670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a7e1422f9f3c486360b43d6f43c2a57"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="classarc_1_1equip_1_1entity_1_1_light.html">equip::entity::Light</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#a5a7e1422f9f3c486360b43d6f43c2a57">_lights</a></td></tr>
+<tr class="memdesc:a5a7e1422f9f3c486360b43d6f43c2a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of light sources within the simulation.  <a href="#a5a7e1422f9f3c486360b43d6f43c2a57">More...</a><br /></td></tr>
+<tr class="separator:a5a7e1422f9f3c486360b43d6f43c2a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed80ea090cb49b20e9c8362881837c7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; const <a class="el" href="classarc_1_1equip_1_1entity_1_1_detector.html">equip::entity::Detector</a> *, std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1torus_1_1_sim.html#abed80ea090cb49b20e9c8362881837c7">_detectors</a></td></tr>
+<tr class="memdesc:abed80ea090cb49b20e9c8362881837c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of detectors within the simulation.  <a href="#abed80ea090cb49b20e9c8362881837c7">More...</a><br /></td></tr>
+<tr class="separator:abed80ea090cb49b20e9c8362881837c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Radiative transfer simulation class. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a43482f4fcd1c3f44bbd236016003a1d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43482f4fcd1c3f44bbd236016003a1d1">&#9670;&nbsp;</a></span>Sim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">arc::torus::Sim::Sim </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>min_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> &amp;&#160;</td>
+          <td class="paramname"><em>max_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Construct an empty simulation with given bounds.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min_</td><td>Minimum bound of the simulation. </td></tr>
+    <tr><td class="paramname">max_</td><td>Maximum bound of the simulation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>min_.x must be less than max_.x. </dd>
+<dd>
+min_.y must be less than max_.y. </dd>
+<dd>
+min_.z must be less than max_.z. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a50c175d629b8a81d2424308b93f0e74c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50c175d629b8a81d2424308b93f0e74c">&#9670;&nbsp;</a></span>add_detector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::add_detector </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>det_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Add a detector to the simulation.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of detector to add.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">det_</td><td>Detector to add to the simulation. </td></tr>
+    <tr><td class="paramname">path_</td><td>Path to the file to save the detector output to.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classarc_1_1equip_1_1entity_1_1_detector.html">equip::entity::Detector</a> must be a base of T. </dd>
+<dd>
+path_ may not be empty. </dd></dl>
+
+</div>
+</div>
+<a id="a0e867c312c95c9ab3632b578d6e81f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e867c312c95c9ab3632b578d6e81f49">&#9670;&nbsp;</a></span>add_entity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::add_entity </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>ent_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Add an entity to the simulation.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of entity to add.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ent_</td><td>Entity to add to the simulation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classarc_1_1equip_1_1_entity.html">equip::Entity</a> must be a base of T. </dd></dl>
+
+</div>
+</div>
+<a id="accb5dfc6edd416f3e454298d47e18a0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accb5dfc6edd416f3e454298d47e18a0f">&#9670;&nbsp;</a></span>add_light()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::add_light </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>light_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Add a light source to the simulation.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of light source to add.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">light_</td><td>Light source to add to the simulation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classarc_1_1equip_1_1entity_1_1_light.html">equip::entity::Light</a> must be a base of T. </dd></dl>
+
+</div>
+</div>
+<a id="ad0fe3c6c8bde4ba1413b690809506cf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0fe3c6c8bde4ba1413b690809506cf5">&#9670;&nbsp;</a></span>collide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacearc_1_1type.html#a5dd429094265b7e1d2702e128803fc3f">type::collision</a> arc::torus::Sim::collide </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>inter_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; std::pair&lt; <a class="el" href="classarc_1_1equip_1_1_entity.html">equip::Entity</a> *, <a class="el" href="classarc_1_1geom_1_1_collision.html">geom::Collision</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>ent_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>leaf_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cell_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dom_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determine which type of collision event will occur.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inter_</td><td>Distance to scattering inferaction event. </td></tr>
+    <tr><td class="paramname">ent_</td><td>Entity collision event information. </td></tr>
+    <tr><td class="paramname">leaf_</td><td>Distance to leaf cell collision event. </td></tr>
+    <tr><td class="paramname">cell_</td><td>Distance to domain cell collision event. </td></tr>
+    <tr><td class="paramname">dom_</td><td>Distance to domain bounds collision event.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Type of collision event that will occur. </dd></dl>
+
+</div>
+</div>
+<a id="a215fc5734a598d8584b81acfeca00018"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a215fc5734a598d8584b81acfeca00018">&#9670;&nbsp;</a></span>create_output_dir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::create_output_dir </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create the output directory. </p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_a215fc5734a598d8584b81acfeca00018_icgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_a215fc5734a598d8584b81acfeca00018_icgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_a215fc5734a598d8584b81acfeca00018_icgraph" id="classarc_1_1torus_1_1_sim_a215fc5734a598d8584b81acfeca00018_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1torus_1_1_sim.html#a6134358647e9c117dc618c00dd8b3a97" title="arc::torus::Sim::run\l_pre_flight" alt="" coords="205,5,339,44"/>
+<area shape="rect" id="node3" href="classarc_1_1torus_1_1_sim.html#a54f39f2e207f3594301a511eed439a1d" title="arc::torus::Sim::run" alt="" coords="387,12,521,37"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac0a4564959584b2a56fad6d1f6358f59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0a4564959584b2a56fad6d1f6358f59">&#9670;&nbsp;</a></span>post_flight_info_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::post_flight_info_write </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Write the post-flight information files. </p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_ac0a4564959584b2a56fad6d1f6358f59_cgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_ac0a4564959584b2a56fad6d1f6358f59_cgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_ac0a4564959584b2a56fad6d1f6358f59_cgraph" id="classarc_1_1torus_1_1_sim_ac0a4564959584b2a56fad6d1f6358f59_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1parse_1_1read.html#ae36701cafec6b29e5c8ccea80e0de5d9" title="arc::parse::read::file" alt="" coords="193,100,332,125"/>
+<area shape="rect" id="node3" href="namespacearc_1_1parse_1_1read.html#a473be0f29d4eed0c87003efed3623670" title="arc::parse::read::string" alt="" coords="554,75,709,100"/>
+<area shape="rect" id="node10" href="namespacearc_1_1sys_1_1file.html#a181277361a6bb9c563a5348c37b0a06d" title="arc::sys::file::read" alt="" coords="380,100,506,125"/>
+<area shape="rect" id="node4" href="namespacearc_1_1parse_1_1process.html#aa43d6f4b4ac01f1b503fdf5b630f02b1" title="arc::parse::process\l::filter_comments" alt="" coords="769,5,904,44"/>
+<area shape="rect" id="node7" href="namespacearc_1_1parse_1_1process.html#a1b896981b6feb909c2bddb07a9c78f56" title="arc::parse::process\l::filter_whitespace" alt="" coords="769,68,904,107"/>
+<area shape="rect" id="node9" href="namespacearc_1_1parse_1_1read.html#a7d7bd8339f8ced08982de0d04ab07088" title="arc::parse::read::helper" alt="" coords="757,131,916,156"/>
+<area shape="rect" id="node5" href="namespacearc_1_1consts_1_1format.html#aa395015e7c13d51f0e9969166312cc40" title="Container opening characters. " alt="" coords="964,68,1095,107"/>
+<area shape="rect" id="node6" href="namespacearc_1_1consts_1_1format.html#a72f7c43c53d57cc24efb2466077b8380" title="Container closing characters. " alt="" coords="964,5,1095,44"/>
+<area shape="rect" id="node8" href="namespacearc_1_1consts_1_1format.html#a4d44c3b096871a5c18c005ac26fcf643" title="Characters considered whitespace. " alt="" coords="964,131,1095,169"/>
+</map>
+</div>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_ac0a4564959584b2a56fad6d1f6358f59_icgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_ac0a4564959584b2a56fad6d1f6358f59_icgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_ac0a4564959584b2a56fad6d1f6358f59_icgraph" id="classarc_1_1torus_1_1_sim_ac0a4564959584b2a56fad6d1f6358f59_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1torus_1_1_sim.html#af3c18cd6a7ba73fe8f47dcdce4a7a007" title="arc::torus::Sim::run\l_post_flight" alt="" coords="193,5,327,44"/>
+<area shape="rect" id="node3" href="classarc_1_1torus_1_1_sim.html#a54f39f2e207f3594301a511eed439a1d" title="arc::torus::Sim::run" alt="" coords="375,12,509,37"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aebedc55998a8e1d9386819373569c43b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebedc55998a8e1d9386819373569c43b">&#9670;&nbsp;</a></span>pre_flight_info_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::pre_flight_info_write </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Write the pre-flight information files. </p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_aebedc55998a8e1d9386819373569c43b_cgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_aebedc55998a8e1d9386819373569c43b_cgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_aebedc55998a8e1d9386819373569c43b_cgraph" id="classarc_1_1torus_1_1_sim_aebedc55998a8e1d9386819373569c43b_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1parse_1_1read.html#ae36701cafec6b29e5c8ccea80e0de5d9" title="arc::parse::read::file" alt="" coords="204,100,344,125"/>
+<area shape="rect" id="node11" href="classarc_1_1torus_1_1_sim.html#a8613e24dbcaecd383cf3821cf35d6dba" title="arc::torus::Sim::total_phot" alt="" coords="187,149,361,175"/>
+<area shape="rect" id="node12" href="classarc_1_1torus_1_1_sim.html#a037c877ffa08d94f42bf1b79659dee3f" title="arc::torus::Sim::total\l_power" alt="" coords="204,199,344,237"/>
+<area shape="rect" id="node3" href="namespacearc_1_1parse_1_1read.html#a473be0f29d4eed0c87003efed3623670" title="arc::parse::read::string" alt="" coords="582,75,737,100"/>
+<area shape="rect" id="node10" href="namespacearc_1_1sys_1_1file.html#a181277361a6bb9c563a5348c37b0a06d" title="arc::sys::file::read" alt="" coords="409,100,534,125"/>
+<area shape="rect" id="node4" href="namespacearc_1_1parse_1_1process.html#aa43d6f4b4ac01f1b503fdf5b630f02b1" title="arc::parse::process\l::filter_comments" alt="" coords="797,5,932,44"/>
+<area shape="rect" id="node7" href="namespacearc_1_1parse_1_1process.html#a1b896981b6feb909c2bddb07a9c78f56" title="arc::parse::process\l::filter_whitespace" alt="" coords="797,68,932,107"/>
+<area shape="rect" id="node9" href="namespacearc_1_1parse_1_1read.html#a7d7bd8339f8ced08982de0d04ab07088" title="arc::parse::read::helper" alt="" coords="785,131,944,156"/>
+<area shape="rect" id="node5" href="namespacearc_1_1consts_1_1format.html#aa395015e7c13d51f0e9969166312cc40" title="Container opening characters. " alt="" coords="992,68,1123,107"/>
+<area shape="rect" id="node6" href="namespacearc_1_1consts_1_1format.html#a72f7c43c53d57cc24efb2466077b8380" title="Container closing characters. " alt="" coords="992,5,1123,44"/>
+<area shape="rect" id="node8" href="namespacearc_1_1consts_1_1format.html#a4d44c3b096871a5c18c005ac26fcf643" title="Characters considered whitespace. " alt="" coords="992,131,1123,169"/>
+</map>
+</div>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_aebedc55998a8e1d9386819373569c43b_icgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_aebedc55998a8e1d9386819373569c43b_icgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_aebedc55998a8e1d9386819373569c43b_icgraph" id="classarc_1_1torus_1_1_sim_aebedc55998a8e1d9386819373569c43b_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1torus_1_1_sim.html#a6134358647e9c117dc618c00dd8b3a97" title="arc::torus::Sim::run\l_pre_flight" alt="" coords="187,5,321,44"/>
+<area shape="rect" id="node3" href="classarc_1_1torus_1_1_sim.html#a54f39f2e207f3594301a511eed439a1d" title="arc::torus::Sim::run" alt="" coords="369,12,503,37"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac4265f843be47f3a3c001d24c6e912c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4265f843be47f3a3c001d24c6e912c9">&#9670;&nbsp;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::render </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1dom_1_1_region.html">dom::Region</a> &amp;&#160;</td>
+          <td class="paramname"><em>dom_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1tree_1_1_root.html">tree::Root</a> &amp;&#160;</td>
+          <td class="paramname"><em>tree_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; std::vector&lt; <a class="el" href="classarc_1_1gui_1_1_point.html">gui::Point</a> &gt;&gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>paths_</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create a rendering of the current simulation setup.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dom_</td><td>Simulation domain. </td></tr>
+    <tr><td class="paramname">tree_</td><td>Simulation tree. </td></tr>
+    <tr><td class="paramname">paths_</td><td>Paths of photons to render. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_ac4265f843be47f3a3c001d24c6e912c9_cgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_ac4265f843be47f3a3c001d24c6e912c9_cgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_ac4265f843be47f3a3c001d24c6e912c9_cgraph" id="classarc_1_1torus_1_1_sim_ac4265f843be47f3a3c001d24c6e912c9_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1gui_1_1_window.html#a19c3b00edced71c7f8beb119589b27e2" title="arc::gui::Window::set\l_clear_col" alt="" coords="221,5,366,44"/>
+<area shape="rect" id="node3" href="namespacearc_1_1math_1_1mat_1_1transform.html#ab4cbef827ac40c28096d4cf1c0fd52cb" title="arc::math::mat::transform\l::scale" alt="" coords="208,68,378,107"/>
+<area shape="rect" id="node4" href="classarc_1_1gui_1_1_keymap.html#a6122524b0fb99b9cf4862cc4ee39e55d" title="arc::gui::Keymap::use\l_fly_controls" alt="" coords="218,131,368,169"/>
+<area shape="rect" id="node5" href="namespacearc_1_1gui_1_1actor.html#a9eee676f0d3f20a50312bd63dbda6419" title="arc::gui::actor::grid" alt="" coords="227,193,359,219"/>
+<area shape="rect" id="node6" href="classarc_1_1gui_1_1_actor.html#a74baecb799eed620efd9c5216ccce7cb" title="arc::gui::Actor::set_col" alt="" coords="435,219,588,244"/>
+<area shape="rect" id="node7" href="namespacearc_1_1gui_1_1actor.html#aa12d3fb0657b2792bd3ba876ce4907a5" title="arc::gui::actor::axis\l_helper_x" alt="" coords="227,295,360,333"/>
+<area shape="rect" id="node15" href="namespacearc_1_1gui_1_1actor.html#ab01f626a818923366521b28eeef26b54" title="arc::gui::actor::axis\l_helper_y" alt="" coords="227,357,360,396"/>
+<area shape="rect" id="node16" href="namespacearc_1_1gui_1_1actor.html#af27ba3b5ff5632c95c6bc8a9ec2b3725" title="arc::gui::actor::axis\l_helper_z" alt="" coords="227,420,360,459"/>
+<area shape="rect" id="node17" href="namespacearc_1_1gui_1_1actor.html#aa415db4a76b700c82cc899b033d55d19" title="arc::gui::actor::shape" alt="" coords="220,581,366,607"/>
+<area shape="rect" id="node20" href="namespacearc_1_1gui_1_1actor.html#afbd2cc1b6e2893ac05778bc975a32d5e" title="arc::gui::actor::domain" alt="" coords="217,532,370,557"/>
+<area shape="rect" id="node21" href="namespacearc_1_1gui_1_1actor.html#a528cb8607d80ad2c0008f38e8f1c2b63" title="arc::gui::actor::tree" alt="" coords="227,483,359,508"/>
+<area shape="rect" id="node22" href="namespacearc_1_1gui_1_1actor.html#a70cd46f071386ec37cd9a7c957b70bd1" title="arc::gui::actor::path" alt="" coords="225,631,361,656"/>
+<area shape="rect" id="node23" href="classarc_1_1gui_1_1_keymap.html#a5454aeffeb8918d01628da42a265b632" title="arc::gui::Keymap::poll" alt="" coords="218,680,368,705"/>
+<area shape="rect" id="node24" href="classarc_1_1gui_1_1_window.html#a0bc0c28783bdcf107bc0d03a7f8582da" title="arc::gui::Window::clear\l_buffer" alt="" coords="215,729,371,768"/>
+<area shape="rect" id="node25" href="classarc_1_1gui_1_1shader_1_1_ambient.html#a6b08e8eff53877edd89efd679c1b0f66" title="arc::gui::shader::Ambient\l::activate" alt="" coords="208,792,378,831"/>
+<area shape="rect" id="node26" href="classarc_1_1gui_1_1shader_1_1_ambient.html#a1f034bc02516d54c4a17a3a8cc7dd757" title="arc::gui::shader::Ambient\l::render" alt="" coords="208,855,378,893"/>
+<area shape="rect" id="node27" href="classarc_1_1gui_1_1shader_1_1_specular.html#a1fd9868745ea17fbd89ac6f13e6ea62f" title="arc::gui::shader::Specular\l::activate" alt="" coords="207,917,380,956"/>
+<area shape="rect" id="node28" href="classarc_1_1gui_1_1shader_1_1_specular.html#ac040044750abeb3017df371fbe772697" title="arc::gui::shader::Specular\l::render" alt="" coords="207,980,380,1019"/>
+<area shape="rect" id="node29" href="classarc_1_1gui_1_1shader_1_1_ray.html#a600707945e2b2f2f86e934746ad4169e" title="arc::gui::shader::Ray\l::activate" alt="" coords="221,1043,365,1081"/>
+<area shape="rect" id="node30" href="classarc_1_1gui_1_1shader_1_1_ray.html#a67d7b0c2d5667a621fa9d5ae55d323b7" title="arc::gui::shader::Ray\l::set_time_start" alt="" coords="221,1105,365,1144"/>
+<area shape="rect" id="node31" href="classarc_1_1gui_1_1shader_1_1_ray.html#aad03f8a223ffdad041f0c0c8c4c53f6d" title="arc::gui::shader::Ray\l::set_time_end" alt="" coords="221,1168,365,1207"/>
+<area shape="rect" id="node32" href="classarc_1_1gui_1_1shader_1_1_ray.html#a9a2d590be284ddcb095986b7fc1d3778" title="arc::gui::shader::Ray\l::render" alt="" coords="221,1231,365,1269"/>
+<area shape="rect" id="node33" href="classarc_1_1gui_1_1_window.html#a8bafc6647a4c4b37047de985d9e961f2" title="arc::gui::Window::swap\l_buffer" alt="" coords="214,1293,372,1332"/>
+<area shape="rect" id="node8" href="namespacearc_1_1parse_1_1read.html#a7d7bd8339f8ced08982de0d04ab07088" title="arc::parse::read::helper" alt="" coords="432,364,591,389"/>
+<area shape="rect" id="node9" href="namespacearc_1_1parse_1_1read.html#a473be0f29d4eed0c87003efed3623670" title="arc::parse::read::string" alt="" coords="652,364,807,389"/>
+<area shape="rect" id="node10" href="namespacearc_1_1parse_1_1process.html#aa43d6f4b4ac01f1b503fdf5b630f02b1" title="arc::parse::process\l::filter_comments" alt="" coords="864,327,998,365"/>
+<area shape="rect" id="node13" href="namespacearc_1_1parse_1_1process.html#a1b896981b6feb909c2bddb07a9c78f56" title="arc::parse::process\l::filter_whitespace" alt="" coords="864,389,998,428"/>
+<area shape="rect" id="node11" href="namespacearc_1_1consts_1_1format.html#aa395015e7c13d51f0e9969166312cc40" title="Container opening characters. " alt="" coords="1046,389,1177,428"/>
+<area shape="rect" id="node12" href="namespacearc_1_1consts_1_1format.html#a72f7c43c53d57cc24efb2466077b8380" title="Container closing characters. " alt="" coords="1046,327,1177,365"/>
+<area shape="rect" id="node14" href="namespacearc_1_1consts_1_1format.html#a4d44c3b096871a5c18c005ac26fcf643" title="Characters considered whitespace. " alt="" coords="1046,452,1177,491"/>
+<area shape="rect" id="node18" href="namespacearc_1_1math_1_1container.html#aa11d30fe929faeff3dc3215c6e3c7a1a" title="arc::math::container::min" alt="" coords="428,532,596,557"/>
+<area shape="rect" id="node19" href="namespacearc_1_1math_1_1container.html#a8080312bec0b12bcea9927c1f0dbd029" title="arc::math::container::max" alt="" coords="644,532,816,557"/>
+</map>
+</div>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_ac4265f843be47f3a3c001d24c6e912c9_icgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_ac4265f843be47f3a3c001d24c6e912c9_icgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_ac4265f843be47f3a3c001d24c6e912c9_icgraph" id="classarc_1_1torus_1_1_sim_ac4265f843be47f3a3c001d24c6e912c9_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1torus_1_1_sim.html#aa43474ecd5d97be889455edb1af54dcd" title="arc::torus::Sim::simulate" alt="" coords="207,5,371,31"/>
+<area shape="rect" id="node3" href="classarc_1_1torus_1_1_sim.html#a54f39f2e207f3594301a511eed439a1d" title="arc::torus::Sim::run" alt="" coords="419,5,553,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a02353289ae116ed6e2e3bda387fc2755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02353289ae116ed6e2e3bda387fc2755">&#9670;&nbsp;</a></span>report()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::report </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long int&#160;</td>
+          <td class="paramname"><em>num_phot_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; unsigned long int &gt; *&#160;</td>
+          <td class="paramname"><em>thread_phot_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>light_index_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Report the current simulations progress.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num_phot_</td><td>Total number of photons being run. </td></tr>
+    <tr><td class="paramname">thread_phot_</td><td>Vector of number of photons run by each thread. </td></tr>
+    <tr><td class="paramname">light_index_</td><td>Index of the light to emit photons from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_a02353289ae116ed6e2e3bda387fc2755_cgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_a02353289ae116ed6e2e3bda387fc2755_cgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_a02353289ae116ed6e2e3bda387fc2755_cgraph" id="classarc_1_1torus_1_1_sim_a02353289ae116ed6e2e3bda387fc2755_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1math_1_1container.html#ad07a6746bff1a23167ebc2c23cfb0e38" title="arc::math::container::sum" alt="" coords="203,5,375,31"/>
+</map>
+</div>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_a02353289ae116ed6e2e3bda387fc2755_icgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_a02353289ae116ed6e2e3bda387fc2755_icgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_a02353289ae116ed6e2e3bda387fc2755_icgraph" id="classarc_1_1torus_1_1_sim_a02353289ae116ed6e2e3bda387fc2755_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1torus_1_1_sim.html#aa43474ecd5d97be889455edb1af54dcd" title="arc::torus::Sim::simulate" alt="" coords="203,5,367,31"/>
+<area shape="rect" id="node3" href="classarc_1_1torus_1_1_sim.html#a54f39f2e207f3594301a511eed439a1d" title="arc::torus::Sim::run" alt="" coords="415,5,549,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a54f39f2e207f3594301a511eed439a1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54f39f2e207f3594301a511eed439a1d">&#9670;&nbsp;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Run the simulation. </p>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_a54f39f2e207f3594301a511eed439a1d_cgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_a54f39f2e207f3594301a511eed439a1d_cgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_a54f39f2e207f3594301a511eed439a1d_cgraph" id="classarc_1_1torus_1_1_sim_a54f39f2e207f3594301a511eed439a1d_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1torus_1_1_sim.html#a6134358647e9c117dc618c00dd8b3a97" title="arc::torus::Sim::run\l_pre_flight" alt="" coords="202,68,336,107"/>
+<area shape="rect" id="node12" href="classarc_1_1torus_1_1_sim.html#aa43474ecd5d97be889455edb1af54dcd" title="arc::torus::Sim::simulate" alt="" coords="187,347,352,372"/>
+<area shape="rect" id="node49" href="classarc_1_1torus_1_1_sim.html#af3c18cd6a7ba73fe8f47dcdce4a7a007" title="arc::torus::Sim::run\l_post_flight" alt="" coords="202,131,336,169"/>
+<area shape="rect" id="node3" href="classarc_1_1torus_1_1_sim.html#a215fc5734a598d8584b81acfeca00018" title="arc::torus::Sim::create\l_output_dir" alt="" coords="414,5,566,44"/>
+<area shape="rect" id="node4" href="classarc_1_1torus_1_1_sim.html#aebedc55998a8e1d9386819373569c43b" title="arc::torus::Sim::pre\l_flight_info_write" alt="" coords="423,68,557,107"/>
+<area shape="rect" id="node5" href="namespacearc_1_1parse_1_1read.html#ae36701cafec6b29e5c8ccea80e0de5d9" title="arc::parse::read::file" alt="" coords="646,149,785,175"/>
+<area shape="rect" id="node10" href="classarc_1_1torus_1_1_sim.html#a8613e24dbcaecd383cf3821cf35d6dba" title="arc::torus::Sim::total_phot" alt="" coords="629,23,802,48"/>
+<area shape="rect" id="node11" href="classarc_1_1torus_1_1_sim.html#a037c877ffa08d94f42bf1b79659dee3f" title="arc::torus::Sim::total\l_power" alt="" coords="646,72,786,111"/>
+<area shape="rect" id="node6" href="namespacearc_1_1parse_1_1read.html#a473be0f29d4eed0c87003efed3623670" title="arc::parse::read::string" alt="" coords="1061,103,1216,128"/>
+<area shape="rect" id="node9" href="namespacearc_1_1sys_1_1file.html#a181277361a6bb9c563a5348c37b0a06d" title="arc::sys::file::read" alt="" coords="864,149,990,175"/>
+<area shape="rect" id="node7" href="namespacearc_1_1parse_1_1process.html#aa43d6f4b4ac01f1b503fdf5b630f02b1" title="arc::parse::process\l::filter_comments" alt="" coords="1289,96,1424,135"/>
+<area shape="rect" id="node8" href="namespacearc_1_1parse_1_1read.html#a7d7bd8339f8ced08982de0d04ab07088" title="arc::parse::read::helper" alt="" coords="1277,159,1436,184"/>
+<area shape="rect" id="node13" href="namespacearc_1_1gui_1_1actor.html#a528cb8607d80ad2c0008f38e8f1c2b63" title="arc::gui::actor::tree" alt="" coords="1072,340,1204,365"/>
+<area shape="rect" id="node16" href="classarc_1_1torus_1_1_sim.html#ac4265f843be47f3a3c001d24c6e912c9" title="arc::torus::Sim::render" alt="" coords="850,752,1004,777"/>
+<area shape="rect" id="node39" href="classarc_1_1torus_1_1_sim.html#a02353289ae116ed6e2e3bda387fc2755" title="arc::torus::Sim::report" alt="" coords="416,397,565,423"/>
+<area shape="rect" id="node41" href="classarc_1_1torus_1_1_sim.html#a6b8ed6000b57f5e13c3626aaab80668b" title="arc::torus::Sim::simulate\l_thread" alt="" coords="408,447,572,485"/>
+<area shape="rect" id="node46" href="classarc_1_1dom_1_1_region.html#a0f21065613e531fbf5e5cced61e2e80f" title="arc::dom::Region::num\l_cells" alt="" coords="412,509,568,548"/>
+<area shape="rect" id="node47" href="classarc_1_1dom_1_1_region.html#a9042883c468f08a51f986790ac07e924" title="arc::dom::Region::cell_size" alt="" coords="400,572,581,597"/>
+<area shape="rect" id="node48" href="classarc_1_1dom_1_1_region.html#afe42a3906214f2b4593e26597627dcf7" title="arc::dom::Region::save" alt="" coords="411,245,570,271"/>
+<area shape="rect" id="node14" href="namespacearc_1_1math_1_1container.html#aa11d30fe929faeff3dc3215c6e3c7a1a" title="arc::math::container::min" alt="" coords="1273,389,1441,415"/>
+<area shape="rect" id="node15" href="namespacearc_1_1math_1_1container.html#a8080312bec0b12bcea9927c1f0dbd029" title="arc::math::container::max" alt="" coords="1489,389,1661,415"/>
+<area shape="rect" id="node17" href="classarc_1_1gui_1_1_window.html#a19c3b00edced71c7f8beb119589b27e2" title="arc::gui::Window::set\l_clear_col" alt="" coords="1066,488,1211,527"/>
+<area shape="rect" id="node18" href="namespacearc_1_1math_1_1mat_1_1transform.html#ab4cbef827ac40c28096d4cf1c0fd52cb" title="arc::math::mat::transform\l::scale" alt="" coords="1053,551,1223,589"/>
+<area shape="rect" id="node19" href="classarc_1_1gui_1_1_keymap.html#a6122524b0fb99b9cf4862cc4ee39e55d" title="arc::gui::Keymap::use\l_fly_controls" alt="" coords="1063,613,1213,652"/>
+<area shape="rect" id="node20" href="namespacearc_1_1gui_1_1actor.html#a9eee676f0d3f20a50312bd63dbda6419" title="arc::gui::actor::grid" alt="" coords="1072,728,1204,753"/>
+<area shape="rect" id="node21" href="classarc_1_1gui_1_1_actor.html#a74baecb799eed620efd9c5216ccce7cb" title="arc::gui::Actor::set_col" alt="" coords="1280,703,1433,728"/>
+<area shape="rect" id="node22" href="namespacearc_1_1gui_1_1actor.html#aa12d3fb0657b2792bd3ba876ce4907a5" title="arc::gui::actor::axis\l_helper_x" alt="" coords="1072,152,1205,191"/>
+<area shape="rect" id="node23" href="namespacearc_1_1gui_1_1actor.html#ab01f626a818923366521b28eeef26b54" title="arc::gui::actor::axis\l_helper_y" alt="" coords="1072,215,1205,253"/>
+<area shape="rect" id="node24" href="namespacearc_1_1gui_1_1actor.html#af27ba3b5ff5632c95c6bc8a9ec2b3725" title="arc::gui::actor::axis\l_helper_z" alt="" coords="1072,277,1205,316"/>
+<area shape="rect" id="node25" href="namespacearc_1_1gui_1_1actor.html#aa415db4a76b700c82cc899b033d55d19" title="arc::gui::actor::shape" alt="" coords="1065,439,1211,464"/>
+<area shape="rect" id="node26" href="namespacearc_1_1gui_1_1actor.html#afbd2cc1b6e2893ac05778bc975a32d5e" title="arc::gui::actor::domain" alt="" coords="1062,389,1215,415"/>
+<area shape="rect" id="node27" href="namespacearc_1_1gui_1_1actor.html#a70cd46f071386ec37cd9a7c957b70bd1" title="arc::gui::actor::path" alt="" coords="1070,777,1206,803"/>
+<area shape="rect" id="node28" href="classarc_1_1gui_1_1_keymap.html#a5454aeffeb8918d01628da42a265b632" title="arc::gui::Keymap::poll" alt="" coords="1063,827,1213,852"/>
+<area shape="rect" id="node29" href="classarc_1_1gui_1_1_window.html#a0bc0c28783bdcf107bc0d03a7f8582da" title="arc::gui::Window::clear\l_buffer" alt="" coords="1060,876,1216,915"/>
+<area shape="rect" id="node30" href="classarc_1_1gui_1_1shader_1_1_ambient.html#a6b08e8eff53877edd89efd679c1b0f66" title="arc::gui::shader::Ambient\l::activate" alt="" coords="1053,939,1223,977"/>
+<area shape="rect" id="node31" href="classarc_1_1gui_1_1shader_1_1_ambient.html#a1f034bc02516d54c4a17a3a8cc7dd757" title="arc::gui::shader::Ambient\l::render" alt="" coords="1053,1001,1223,1040"/>
+<area shape="rect" id="node32" href="classarc_1_1gui_1_1shader_1_1_specular.html#a1fd9868745ea17fbd89ac6f13e6ea62f" title="arc::gui::shader::Specular\l::activate" alt="" coords="1052,1064,1225,1103"/>
+<area shape="rect" id="node33" href="classarc_1_1gui_1_1shader_1_1_specular.html#ac040044750abeb3017df371fbe772697" title="arc::gui::shader::Specular\l::render" alt="" coords="1052,1127,1225,1165"/>
+<area shape="rect" id="node34" href="classarc_1_1gui_1_1shader_1_1_ray.html#a600707945e2b2f2f86e934746ad4169e" title="arc::gui::shader::Ray\l::activate" alt="" coords="1066,1189,1210,1228"/>
+<area shape="rect" id="node35" href="classarc_1_1gui_1_1shader_1_1_ray.html#a67d7b0c2d5667a621fa9d5ae55d323b7" title="arc::gui::shader::Ray\l::set_time_start" alt="" coords="1066,1252,1210,1291"/>
+<area shape="rect" id="node36" href="classarc_1_1gui_1_1shader_1_1_ray.html#aad03f8a223ffdad041f0c0c8c4c53f6d" title="arc::gui::shader::Ray\l::set_time_end" alt="" coords="1066,1315,1210,1353"/>
+<area shape="rect" id="node37" href="classarc_1_1gui_1_1shader_1_1_ray.html#a9a2d590be284ddcb095986b7fc1d3778" title="arc::gui::shader::Ray\l::render" alt="" coords="1066,1377,1210,1416"/>
+<area shape="rect" id="node38" href="classarc_1_1gui_1_1_window.html#a8bafc6647a4c4b37047de985d9e961f2" title="arc::gui::Window::swap\l_buffer" alt="" coords="1059,1440,1217,1479"/>
+<area shape="rect" id="node40" href="namespacearc_1_1math_1_1container.html#ad07a6746bff1a23167ebc2c23cfb0e38" title="arc::math::container::sum" alt="" coords="630,397,802,423"/>
+<area shape="rect" id="node42" href="classarc_1_1tree_1_1node_1_1_leaf.html#abc8a15429a06e0b178f595da332161ed" title="arc::tree::node::Leaf\l::leaf" alt="" coords="645,447,786,485"/>
+<area shape="rect" id="node43" href="classarc_1_1tree_1_1node_1_1_leaf.html#abfe425104be04fa006dd84467cc54ea9" title="arc::tree::node::Leaf\l::ent_collision_info" alt="" coords="645,509,786,548"/>
+<area shape="rect" id="node44" href="classarc_1_1geom_1_1shape_1_1_box.html#af3919e0cb96537e7c7533eab6248c39d" title="arc::geom::shape::Box\l::collision" alt="" coords="638,572,793,611"/>
+<area shape="rect" id="node45" href="classarc_1_1dom_1_1_cell.html#a058af0843e1a22023836fe2c62d17947" title="arc::dom::Cell::add\l_energy" alt="" coords="649,635,782,673"/>
+<area shape="rect" id="node50" href="classarc_1_1torus_1_1_sim.html#ac0a4564959584b2a56fad6d1f6358f59" title="arc::torus::Sim::post\l_flight_info_write" alt="" coords="420,131,560,169"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af3c18cd6a7ba73fe8f47dcdce4a7a007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3c18cd6a7ba73fe8f47dcdce4a7a007">&#9670;&nbsp;</a></span>run_post_flight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::run_post_flight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Run the simulation post-flight. </p>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_af3c18cd6a7ba73fe8f47dcdce4a7a007_cgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_af3c18cd6a7ba73fe8f47dcdce4a7a007_cgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_af3c18cd6a7ba73fe8f47dcdce4a7a007_cgraph" id="classarc_1_1torus_1_1_sim_af3c18cd6a7ba73fe8f47dcdce4a7a007_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1torus_1_1_sim.html#ac0a4564959584b2a56fad6d1f6358f59" title="arc::torus::Sim::post\l_flight_info_write" alt="" coords="187,93,327,132"/>
+<area shape="rect" id="node3" href="namespacearc_1_1parse_1_1read.html#ae36701cafec6b29e5c8ccea80e0de5d9" title="arc::parse::read::file" alt="" coords="375,100,514,125"/>
+<area shape="rect" id="node4" href="namespacearc_1_1parse_1_1read.html#a473be0f29d4eed0c87003efed3623670" title="arc::parse::read::string" alt="" coords="736,75,891,100"/>
+<area shape="rect" id="node11" href="namespacearc_1_1sys_1_1file.html#a181277361a6bb9c563a5348c37b0a06d" title="arc::sys::file::read" alt="" coords="562,100,688,125"/>
+<area shape="rect" id="node5" href="namespacearc_1_1parse_1_1process.html#aa43d6f4b4ac01f1b503fdf5b630f02b1" title="arc::parse::process\l::filter_comments" alt="" coords="951,5,1086,44"/>
+<area shape="rect" id="node8" href="namespacearc_1_1parse_1_1process.html#a1b896981b6feb909c2bddb07a9c78f56" title="arc::parse::process\l::filter_whitespace" alt="" coords="951,68,1086,107"/>
+<area shape="rect" id="node10" href="namespacearc_1_1parse_1_1read.html#a7d7bd8339f8ced08982de0d04ab07088" title="arc::parse::read::helper" alt="" coords="939,131,1098,156"/>
+<area shape="rect" id="node6" href="namespacearc_1_1consts_1_1format.html#aa395015e7c13d51f0e9969166312cc40" title="Container opening characters. " alt="" coords="1146,68,1277,107"/>
+<area shape="rect" id="node7" href="namespacearc_1_1consts_1_1format.html#a72f7c43c53d57cc24efb2466077b8380" title="Container closing characters. " alt="" coords="1146,5,1277,44"/>
+<area shape="rect" id="node9" href="namespacearc_1_1consts_1_1format.html#a4d44c3b096871a5c18c005ac26fcf643" title="Characters considered whitespace. " alt="" coords="1146,131,1277,169"/>
+</map>
+</div>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_af3c18cd6a7ba73fe8f47dcdce4a7a007_icgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_af3c18cd6a7ba73fe8f47dcdce4a7a007_icgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_af3c18cd6a7ba73fe8f47dcdce4a7a007_icgraph" id="classarc_1_1torus_1_1_sim_af3c18cd6a7ba73fe8f47dcdce4a7a007_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1torus_1_1_sim.html#a54f39f2e207f3594301a511eed439a1d" title="arc::torus::Sim::run" alt="" coords="187,12,321,37"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6134358647e9c117dc618c00dd8b3a97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6134358647e9c117dc618c00dd8b3a97">&#9670;&nbsp;</a></span>run_pre_flight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::run_pre_flight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Run the simulation pre-flight. </p>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_a6134358647e9c117dc618c00dd8b3a97_cgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_a6134358647e9c117dc618c00dd8b3a97_cgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_a6134358647e9c117dc618c00dd8b3a97_cgraph" id="classarc_1_1torus_1_1_sim_a6134358647e9c117dc618c00dd8b3a97_cgraph">
+<area shape="rect" id="node2" href="classarc_1_1torus_1_1_sim.html#a215fc5734a598d8584b81acfeca00018" title="arc::torus::Sim::create\l_output_dir" alt="" coords="187,80,339,119"/>
+<area shape="rect" id="node3" href="classarc_1_1torus_1_1_sim.html#aebedc55998a8e1d9386819373569c43b" title="arc::torus::Sim::pre\l_flight_info_write" alt="" coords="196,143,330,181"/>
+<area shape="rect" id="node4" href="namespacearc_1_1parse_1_1read.html#ae36701cafec6b29e5c8ccea80e0de5d9" title="arc::parse::read::file" alt="" coords="404,100,543,125"/>
+<area shape="rect" id="node13" href="classarc_1_1torus_1_1_sim.html#a8613e24dbcaecd383cf3821cf35d6dba" title="arc::torus::Sim::total_phot" alt="" coords="387,149,560,175"/>
+<area shape="rect" id="node14" href="classarc_1_1torus_1_1_sim.html#a037c877ffa08d94f42bf1b79659dee3f" title="arc::torus::Sim::total\l_power" alt="" coords="404,199,544,237"/>
+<area shape="rect" id="node5" href="namespacearc_1_1parse_1_1read.html#a473be0f29d4eed0c87003efed3623670" title="arc::parse::read::string" alt="" coords="782,75,937,100"/>
+<area shape="rect" id="node12" href="namespacearc_1_1sys_1_1file.html#a181277361a6bb9c563a5348c37b0a06d" title="arc::sys::file::read" alt="" coords="608,100,734,125"/>
+<area shape="rect" id="node6" href="namespacearc_1_1parse_1_1process.html#aa43d6f4b4ac01f1b503fdf5b630f02b1" title="arc::parse::process\l::filter_comments" alt="" coords="997,5,1132,44"/>
+<area shape="rect" id="node9" href="namespacearc_1_1parse_1_1process.html#a1b896981b6feb909c2bddb07a9c78f56" title="arc::parse::process\l::filter_whitespace" alt="" coords="997,68,1132,107"/>
+<area shape="rect" id="node11" href="namespacearc_1_1parse_1_1read.html#a7d7bd8339f8ced08982de0d04ab07088" title="arc::parse::read::helper" alt="" coords="985,131,1144,156"/>
+<area shape="rect" id="node7" href="namespacearc_1_1consts_1_1format.html#aa395015e7c13d51f0e9969166312cc40" title="Container opening characters. " alt="" coords="1192,68,1323,107"/>
+<area shape="rect" id="node8" href="namespacearc_1_1consts_1_1format.html#a72f7c43c53d57cc24efb2466077b8380" title="Container closing characters. " alt="" coords="1192,5,1323,44"/>
+<area shape="rect" id="node10" href="namespacearc_1_1consts_1_1format.html#a4d44c3b096871a5c18c005ac26fcf643" title="Characters considered whitespace. " alt="" coords="1192,131,1323,169"/>
+</map>
+</div>
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_a6134358647e9c117dc618c00dd8b3a97_icgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_a6134358647e9c117dc618c00dd8b3a97_icgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_a6134358647e9c117dc618c00dd8b3a97_icgraph" id="classarc_1_1torus_1_1_sim_a6134358647e9c117dc618c00dd8b3a97_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1torus_1_1_sim.html#a54f39f2e207f3594301a511eed439a1d" title="arc::torus::Sim::run" alt="" coords="187,12,321,37"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6d1be143744432d788d5d31258fd1d70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d1be143744432d788d5d31258fd1d70">&#9670;&nbsp;</a></span>set_max_depth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::set_max_depth </td>
+          <td>(</td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>max_depth_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the maximum depth that the tree may split to.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max_depth_</td><td>Maximum depth that the tree may split to.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>max_depth_ must be positive. </dd></dl>
+
+</div>
+</div>
+<a id="a1f5e56f909f6533f24d254b39f44d736"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f5e56f909f6533f24d254b39f44d736">&#9670;&nbsp;</a></span>set_num_threads()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::set_num_threads </td>
+          <td>(</td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>num_threads_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the number of treads to use during simulation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num_threads_</td><td>Number of threads to use during simulation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>num_threads_ value must be positive. </dd></dl>
+
+</div>
+</div>
+<a id="ad56a31083646320ef81646d789a0613e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad56a31083646320ef81646d789a0613e">&#9670;&nbsp;</a></span>set_output_dir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::set_output_dir </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>output_dir_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the path to the output directory.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">output_dir_</td><td>Path to the output directory.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>output_dir_ may not be empty. </dd></dl>
+
+</div>
+</div>
+<a id="a51326325ab5b21b96e5f06951c64f19c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51326325ab5b21b96e5f06951c64f19c">&#9670;&nbsp;</a></span>set_post_render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::set_post_render </td>
+          <td>(</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>post_render_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the post-render toggle value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">post_render_</td><td>Post-render toggle value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad6d4d1e971d70658d826d2f6a7ac0f1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6d4d1e971d70658d826d2f6a7ac0f1e">&#9670;&nbsp;</a></span>set_pre_render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::set_pre_render </td>
+          <td>(</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>pre_render_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the pre-render toggle value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pre_render_</td><td>Pre-render toggle value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5a8cb07b9e3fe9bb26883bce16f95903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a8cb07b9e3fe9bb26883bce16f95903">&#9670;&nbsp;</a></span>set_res() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::set_res </td>
+          <td>(</td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>res_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the resolution of the domain. Same value is used in splitting each dimension.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">res_</td><td>Resolution of the domain.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>res_ must be odd. </dd></dl>
+
+</div>
+</div>
+<a id="ac2353077d74bb7644480f5ceebad6b3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2353077d74bb7644480f5ceebad6b3e">&#9670;&nbsp;</a></span>set_res() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::set_res </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; size_t, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>res_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the resolution of the domain.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">res_</td><td>Resolution of the domain.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>res_[i] values must be odd. </dd></dl>
+
+</div>
+</div>
+<a id="ad8f06927a6156c5b8bc8517827af5782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8f06927a6156c5b8bc8517827af5782">&#9670;&nbsp;</a></span>set_tar_tris()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::set_tar_tris </td>
+          <td>(</td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>tar_tris_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the target maximum number of triangles for each tree leaf cell to contain.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tar_tris_</td><td>Target maximum number of triangles for each tree leaf cell to contain.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>tar_tris_ must be positive. </dd></dl>
+
+</div>
+</div>
+<a id="ad073a36815f510b13b9cd3a83fd5fe54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad073a36815f510b13b9cd3a83fd5fe54">&#9670;&nbsp;</a></span>set_update_delta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::set_update_delta </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>update_delta_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the time to wait between update reports in milliseconds.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">update_delta_</td><td>Time to wait between update reports in milliseconds.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>update_delta_ value must be positive. </dd></dl>
+
+</div>
+</div>
+<a id="aa43474ecd5d97be889455edb1af54dcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa43474ecd5d97be889455edb1af54dcd">&#9670;&nbsp;</a></span>simulate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arc::torus::Sim::simulate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Perform the simulation. </p>
+<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_aa43474ecd5d97be889455edb1af54dcd_cgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_aa43474ecd5d97be889455edb1af54dcd_cgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_aa43474ecd5d97be889455edb1af54dcd_cgraph" id="classarc_1_1torus_1_1_sim_aa43474ecd5d97be889455edb1af54dcd_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1gui_1_1actor.html#a528cb8607d80ad2c0008f38e8f1c2b63" title="arc::gui::actor::tree" alt="" coords="467,1356,600,1381"/>
+<area shape="rect" id="node5" href="classarc_1_1torus_1_1_sim.html#ac4265f843be47f3a3c001d24c6e912c9" title="arc::torus::Sim::render" alt="" coords="232,721,385,747"/>
+<area shape="rect" id="node35" href="classarc_1_1torus_1_1_sim.html#a02353289ae116ed6e2e3bda387fc2755" title="arc::torus::Sim::report" alt="" coords="234,1405,383,1431"/>
+<area shape="rect" id="node37" href="classarc_1_1torus_1_1_sim.html#a6b8ed6000b57f5e13c3626aaab80668b" title="arc::torus::Sim::simulate\l_thread" alt="" coords="226,1455,391,1493"/>
+<area shape="rect" id="node42" href="namespacearc_1_1parse_1_1read.html#ae36701cafec6b29e5c8ccea80e0de5d9" title="arc::parse::read::file" alt="" coords="464,5,603,31"/>
+<area shape="rect" id="node44" href="classarc_1_1dom_1_1_region.html#a0f21065613e531fbf5e5cced61e2e80f" title="arc::dom::Region::num\l_cells" alt="" coords="230,1517,386,1556"/>
+<area shape="rect" id="node45" href="classarc_1_1dom_1_1_region.html#a9042883c468f08a51f986790ac07e924" title="arc::dom::Region::cell_size" alt="" coords="218,1580,399,1605"/>
+<area shape="rect" id="node46" href="classarc_1_1dom_1_1_region.html#afe42a3906214f2b4593e26597627dcf7" title="arc::dom::Region::save" alt="" coords="229,351,388,376"/>
+<area shape="rect" id="node3" href="namespacearc_1_1math_1_1container.html#aa11d30fe929faeff3dc3215c6e3c7a1a" title="arc::math::container::min" alt="" coords="668,1305,836,1331"/>
+<area shape="rect" id="node4" href="namespacearc_1_1math_1_1container.html#a8080312bec0b12bcea9927c1f0dbd029" title="arc::math::container::max" alt="" coords="884,1305,1056,1331"/>
+<area shape="rect" id="node6" href="classarc_1_1gui_1_1_window.html#a19c3b00edced71c7f8beb119589b27e2" title="arc::gui::Window::set\l_clear_col" alt="" coords="461,180,606,219"/>
+<area shape="rect" id="node7" href="namespacearc_1_1math_1_1mat_1_1transform.html#ab4cbef827ac40c28096d4cf1c0fd52cb" title="arc::math::mat::transform\l::scale" alt="" coords="449,243,619,281"/>
+<area shape="rect" id="node8" href="classarc_1_1gui_1_1_keymap.html#a6122524b0fb99b9cf4862cc4ee39e55d" title="arc::gui::Keymap::use\l_fly_controls" alt="" coords="459,305,609,344"/>
+<area shape="rect" id="node9" href="namespacearc_1_1gui_1_1actor.html#a9eee676f0d3f20a50312bd63dbda6419" title="arc::gui::actor::grid" alt="" coords="468,431,600,456"/>
+<area shape="rect" id="node10" href="classarc_1_1gui_1_1_actor.html#a74baecb799eed620efd9c5216ccce7cb" title="arc::gui::Actor::set_col" alt="" coords="676,456,829,481"/>
+<area shape="rect" id="node11" href="namespacearc_1_1gui_1_1actor.html#aa12d3fb0657b2792bd3ba876ce4907a5" title="arc::gui::actor::axis\l_helper_x" alt="" coords="467,55,600,93"/>
+<area shape="rect" id="node19" href="namespacearc_1_1gui_1_1actor.html#ab01f626a818923366521b28eeef26b54" title="arc::gui::actor::axis\l_helper_y" alt="" coords="467,117,600,156"/>
+<area shape="rect" id="node20" href="namespacearc_1_1gui_1_1actor.html#af27ba3b5ff5632c95c6bc8a9ec2b3725" title="arc::gui::actor::axis\l_helper_z" alt="" coords="467,368,600,407"/>
+<area shape="rect" id="node21" href="namespacearc_1_1gui_1_1actor.html#aa415db4a76b700c82cc899b033d55d19" title="arc::gui::actor::shape" alt="" coords="461,532,607,557"/>
+<area shape="rect" id="node22" href="namespacearc_1_1gui_1_1actor.html#afbd2cc1b6e2893ac05778bc975a32d5e" title="arc::gui::actor::domain" alt="" coords="457,1307,610,1332"/>
+<area shape="rect" id="node23" href="namespacearc_1_1gui_1_1actor.html#a70cd46f071386ec37cd9a7c957b70bd1" title="arc::gui::actor::path" alt="" coords="466,644,601,669"/>
+<area shape="rect" id="node24" href="classarc_1_1gui_1_1_keymap.html#a5454aeffeb8918d01628da42a265b632" title="arc::gui::Keymap::poll" alt="" coords="459,693,608,719"/>
+<area shape="rect" id="node25" href="classarc_1_1gui_1_1_window.html#a0bc0c28783bdcf107bc0d03a7f8582da" title="arc::gui::Window::clear\l_buffer" alt="" coords="456,743,612,781"/>
+<area shape="rect" id="node26" href="classarc_1_1gui_1_1shader_1_1_ambient.html#a6b08e8eff53877edd89efd679c1b0f66" title="arc::gui::shader::Ambient\l::activate" alt="" coords="449,805,618,844"/>
+<area shape="rect" id="node27" href="classarc_1_1gui_1_1shader_1_1_ambient.html#a1f034bc02516d54c4a17a3a8cc7dd757" title="arc::gui::shader::Ambient\l::render" alt="" coords="449,868,618,907"/>
+<area shape="rect" id="node28" href="classarc_1_1gui_1_1shader_1_1_specular.html#a1fd9868745ea17fbd89ac6f13e6ea62f" title="arc::gui::shader::Specular\l::activate" alt="" coords="447,931,620,969"/>
+<area shape="rect" id="node29" href="classarc_1_1gui_1_1shader_1_1_specular.html#ac040044750abeb3017df371fbe772697" title="arc::gui::shader::Specular\l::render" alt="" coords="447,993,620,1032"/>
+<area shape="rect" id="node30" href="classarc_1_1gui_1_1shader_1_1_ray.html#a600707945e2b2f2f86e934746ad4169e" title="arc::gui::shader::Ray\l::activate" alt="" coords="462,1056,606,1095"/>
+<area shape="rect" id="node31" href="classarc_1_1gui_1_1shader_1_1_ray.html#a67d7b0c2d5667a621fa9d5ae55d323b7" title="arc::gui::shader::Ray\l::set_time_start" alt="" coords="462,1119,606,1157"/>
+<area shape="rect" id="node32" href="classarc_1_1gui_1_1shader_1_1_ray.html#aad03f8a223ffdad041f0c0c8c4c53f6d" title="arc::gui::shader::Ray\l::set_time_end" alt="" coords="462,1181,606,1220"/>
+<area shape="rect" id="node33" href="classarc_1_1gui_1_1shader_1_1_ray.html#a9a2d590be284ddcb095986b7fc1d3778" title="arc::gui::shader::Ray\l::render" alt="" coords="462,1244,606,1283"/>
+<area shape="rect" id="node34" href="classarc_1_1gui_1_1_window.html#a8bafc6647a4c4b37047de985d9e961f2" title="arc::gui::Window::swap\l_buffer" alt="" coords="454,581,613,620"/>
+<area shape="rect" id="node12" href="namespacearc_1_1parse_1_1read.html#a7d7bd8339f8ced08982de0d04ab07088" title="arc::parse::read::helper" alt="" coords="673,107,832,132"/>
+<area shape="rect" id="node13" href="namespacearc_1_1parse_1_1read.html#a473be0f29d4eed0c87003efed3623670" title="arc::parse::read::string" alt="" coords="893,81,1048,107"/>
+<area shape="rect" id="node14" href="namespacearc_1_1parse_1_1process.html#aa43d6f4b4ac01f1b503fdf5b630f02b1" title="arc::parse::process\l::filter_comments" alt="" coords="1104,43,1239,81"/>
+<area shape="rect" id="node17" href="namespacearc_1_1parse_1_1process.html#a1b896981b6feb909c2bddb07a9c78f56" title="arc::parse::process\l::filter_whitespace" alt="" coords="1104,105,1239,144"/>
+<area shape="rect" id="node15" href="namespacearc_1_1consts_1_1format.html#aa395015e7c13d51f0e9969166312cc40" title="Container opening characters. " alt="" coords="1287,105,1418,144"/>
+<area shape="rect" id="node16" href="namespacearc_1_1consts_1_1format.html#a72f7c43c53d57cc24efb2466077b8380" title="Container closing characters. " alt="" coords="1287,43,1418,81"/>
+<area shape="rect" id="node18" href="namespacearc_1_1consts_1_1format.html#a4d44c3b096871a5c18c005ac26fcf643" title="Characters considered whitespace. " alt="" coords="1287,168,1418,207"/>
+<area shape="rect" id="node36" href="namespacearc_1_1math_1_1container.html#ad07a6746bff1a23167ebc2c23cfb0e38" title="arc::math::container::sum" alt="" coords="448,1405,620,1431"/>
+<area shape="rect" id="node38" href="classarc_1_1tree_1_1node_1_1_leaf.html#abc8a15429a06e0b178f595da332161ed" title="arc::tree::node::Leaf\l::leaf" alt="" coords="463,1643,604,1681"/>
+<area shape="rect" id="node39" href="classarc_1_1tree_1_1node_1_1_leaf.html#abfe425104be04fa006dd84467cc54ea9" title="arc::tree::node::Leaf\l::ent_collision_info" alt="" coords="463,1455,604,1493"/>
+<area shape="rect" id="node40" href="classarc_1_1geom_1_1shape_1_1_box.html#af3919e0cb96537e7c7533eab6248c39d" title="arc::geom::shape::Box\l::collision" alt="" coords="456,1517,611,1556"/>
+<area shape="rect" id="node41" href="classarc_1_1dom_1_1_cell.html#a058af0843e1a22023836fe2c62d17947" title="arc::dom::Cell::add\l_energy" alt="" coords="467,1580,600,1619"/>
+<area shape="rect" id="node43" href="namespacearc_1_1sys_1_1file.html#a181277361a6bb9c563a5348c37b0a06d" title="arc::sys::file::read" alt="" coords="689,5,815,31"/>
+</map>
+</div>
+<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_aa43474ecd5d97be889455edb1af54dcd_icgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_aa43474ecd5d97be889455edb1af54dcd_icgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_aa43474ecd5d97be889455edb1af54dcd_icgraph" id="classarc_1_1torus_1_1_sim_aa43474ecd5d97be889455edb1af54dcd_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1torus_1_1_sim.html#a54f39f2e207f3594301a511eed439a1d" title="arc::torus::Sim::run" alt="" coords="218,5,352,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6b8ed6000b57f5e13c3626aaab80668b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b8ed6000b57f5e13c3626aaab80668b">&#9670;&nbsp;</a></span>simulate_thread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::vector&lt; <a class="el" href="classarc_1_1gui_1_1_point.html">gui::Point</a> &gt; &gt; arc::torus::Sim::simulate_thread </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>thread_index_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long int&#160;</td>
+          <td class="paramname"><em>num_phot_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; unsigned long int &gt; *&#160;</td>
+          <td class="paramname"><em>thread_phot_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>light_index_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classarc_1_1dom_1_1_region.html">dom::Region</a> *&#160;</td>
+          <td class="paramname"><em>dom_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classarc_1_1tree_1_1_root.html">tree::Root</a> &amp;&#160;</td>
+          <td class="paramname"><em>tree_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Perform one thread's simulation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread_index_</td><td>Index of the thread. </td></tr>
+    <tr><td class="paramname">num_phot_</td><td>Number of photons to run in total. </td></tr>
+    <tr><td class="paramname">thread_phot_</td><td>Vector of number of photons run by each thread. </td></tr>
+    <tr><td class="paramname">light_index_</td><td>Index of the light to emit photons from. </td></tr>
+    <tr><td class="paramname">dom_</td><td>Simulation domain. </td></tr>
+    <tr><td class="paramname">tree_</td><td>Simulation tree.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of points to render. </dd></dl>
+<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_a6b8ed6000b57f5e13c3626aaab80668b_cgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_a6b8ed6000b57f5e13c3626aaab80668b_cgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_a6b8ed6000b57f5e13c3626aaab80668b_cgraph" id="classarc_1_1torus_1_1_sim_a6b8ed6000b57f5e13c3626aaab80668b_cgraph">
+<area shape="rect" id="node2" href="namespacearc_1_1math_1_1container.html#ad07a6746bff1a23167ebc2c23cfb0e38" title="arc::math::container::sum" alt="" coords="218,5,389,31"/>
+<area shape="rect" id="node3" href="classarc_1_1tree_1_1node_1_1_leaf.html#abc8a15429a06e0b178f595da332161ed" title="arc::tree::node::Leaf\l::leaf" alt="" coords="233,55,374,93"/>
+<area shape="rect" id="node4" href="classarc_1_1tree_1_1node_1_1_leaf.html#abfe425104be04fa006dd84467cc54ea9" title="arc::tree::node::Leaf\l::ent_collision_info" alt="" coords="233,117,374,156"/>
+<area shape="rect" id="node5" href="classarc_1_1geom_1_1shape_1_1_box.html#af3919e0cb96537e7c7533eab6248c39d" title="arc::geom::shape::Box\l::collision" alt="" coords="226,180,381,219"/>
+<area shape="rect" id="node6" href="classarc_1_1dom_1_1_cell.html#a058af0843e1a22023836fe2c62d17947" title="arc::dom::Cell::add\l_energy" alt="" coords="237,243,370,281"/>
+</map>
+</div>
+<div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-18-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_a6b8ed6000b57f5e13c3626aaab80668b_icgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_a6b8ed6000b57f5e13c3626aaab80668b_icgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_a6b8ed6000b57f5e13c3626aaab80668b_icgraph" id="classarc_1_1torus_1_1_sim_a6b8ed6000b57f5e13c3626aaab80668b_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1torus_1_1_sim.html#aa43474ecd5d97be889455edb1af54dcd" title="arc::torus::Sim::simulate" alt="" coords="218,12,382,37"/>
+<area shape="rect" id="node3" href="classarc_1_1torus_1_1_sim.html#a54f39f2e207f3594301a511eed439a1d" title="arc::torus::Sim::run" alt="" coords="430,12,564,37"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8613e24dbcaecd383cf3821cf35d6dba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8613e24dbcaecd383cf3821cf35d6dba">&#9670;&nbsp;</a></span>total_phot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long int arc::torus::Sim::total_phot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculate the total number of photons to be run by the simulation.</p>
+<dl class="section return"><dt>Returns</dt><dd>Total number of photons to be run by the simulation. </dd></dl>
+<div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-19-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_a8613e24dbcaecd383cf3821cf35d6dba_icgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_a8613e24dbcaecd383cf3821cf35d6dba_icgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_a8613e24dbcaecd383cf3821cf35d6dba_icgraph" id="classarc_1_1torus_1_1_sim_a8613e24dbcaecd383cf3821cf35d6dba_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1torus_1_1_sim.html#aebedc55998a8e1d9386819373569c43b" title="arc::torus::Sim::pre\l_flight_info_write" alt="" coords="227,5,361,44"/>
+<area shape="rect" id="node3" href="classarc_1_1torus_1_1_sim.html#a6134358647e9c117dc618c00dd8b3a97" title="arc::torus::Sim::run\l_pre_flight" alt="" coords="409,5,543,44"/>
+<area shape="rect" id="node4" href="classarc_1_1torus_1_1_sim.html#a54f39f2e207f3594301a511eed439a1d" title="arc::torus::Sim::run" alt="" coords="591,12,724,37"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a037c877ffa08d94f42bf1b79659dee3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a037c877ffa08d94f42bf1b79659dee3f">&#9670;&nbsp;</a></span>total_power()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double arc::torus::Sim::total_power </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculate the total power of the light sources.</p>
+<dl class="section return"><dt>Returns</dt><dd>Total power of the light sources. </dd></dl>
+<div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-20-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-20-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classarc_1_1torus_1_1_sim_a037c877ffa08d94f42bf1b79659dee3f_icgraph.png" border="0" usemap="#classarc_1_1torus_1_1_sim_a037c877ffa08d94f42bf1b79659dee3f_icgraph" alt=""/></div>
+<map name="classarc_1_1torus_1_1_sim_a037c877ffa08d94f42bf1b79659dee3f_icgraph" id="classarc_1_1torus_1_1_sim_a037c877ffa08d94f42bf1b79659dee3f_icgraph">
+<area shape="rect" id="node2" href="classarc_1_1torus_1_1_sim.html#aebedc55998a8e1d9386819373569c43b" title="arc::torus::Sim::pre\l_flight_info_write" alt="" coords="193,5,327,44"/>
+<area shape="rect" id="node3" href="classarc_1_1torus_1_1_sim.html#a6134358647e9c117dc618c00dd8b3a97" title="arc::torus::Sim::run\l_pre_flight" alt="" coords="375,5,509,44"/>
+<area shape="rect" id="node4" href="classarc_1_1torus_1_1_sim.html#a54f39f2e207f3594301a511eed439a1d" title="arc::torus::Sim::run" alt="" coords="557,12,691,37"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="abed80ea090cb49b20e9c8362881837c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abed80ea090cb49b20e9c8362881837c7">&#9670;&nbsp;</a></span>_detectors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::pair&lt;const <a class="el" href="classarc_1_1equip_1_1entity_1_1_detector.html">equip::entity::Detector</a>*, std::string&gt; &gt; arc::torus::Sim::_detectors</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector of detectors within the simulation. </p>
+
+</div>
+</div>
+<a id="a1c15b563b2320edbf2e6d613271cd670"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c15b563b2320edbf2e6d613271cd670">&#9670;&nbsp;</a></span>_entities</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::unique_ptr&lt;<a class="el" href="classarc_1_1equip_1_1_entity.html">equip::Entity</a>&gt; &gt; arc::torus::Sim::_entities</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector of entities within the simulation. </p>
+
+</div>
+</div>
+<a id="a5a7e1422f9f3c486360b43d6f43c2a57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a7e1422f9f3c486360b43d6f43c2a57">&#9670;&nbsp;</a></span>_lights</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;const <a class="el" href="classarc_1_1equip_1_1entity_1_1_light.html">equip::entity::Light</a>*&gt; arc::torus::Sim::_lights</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector of light sources within the simulation. </p>
+
+</div>
+</div>
+<a id="ad1ce6a6fb90fed8363fdbedf03346f97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1ce6a6fb90fed8363fdbedf03346f97">&#9670;&nbsp;</a></span>_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> arc::torus::Sim::_max</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maximum bound of the domain. </p>
+
+</div>
+</div>
+<a id="aa44a59b9ec070bbd3e5acef5ef67713a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa44a59b9ec070bbd3e5acef5ef67713a">&#9670;&nbsp;</a></span>_max_depth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t arc::torus::Sim::_max_depth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maximum depth of the simulation tree. </p>
+
+</div>
+</div>
+<a id="a842030f2c9462cb4c778bd6998df9a97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a842030f2c9462cb4c778bd6998df9a97">&#9670;&nbsp;</a></span>_min</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacearc.html#a840dcfd96b55059c4537a265728436be">vec3</a> arc::torus::Sim::_min</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Minimum bound of the domain. </p>
+
+</div>
+</div>
+<a id="a6d245f6da81308ede3f15f504f2a0941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d245f6da81308ede3f15f504f2a0941">&#9670;&nbsp;</a></span>_num_threads</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t arc::torus::Sim::_num_threads</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of simulation threads. </p>
+
+</div>
+</div>
+<a id="a02c1c7ac2455391590ce3ccc43b97a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02c1c7ac2455391590ce3ccc43b97a1f">&#9670;&nbsp;</a></span>_output_dir</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string arc::torus::Sim::_output_dir</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Path to the output directory. </p>
+
+</div>
+</div>
+<a id="aae94d600244bac6490e504943de11b71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae94d600244bac6490e504943de11b71">&#9670;&nbsp;</a></span>_post_render</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool arc::torus::Sim::_post_render</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Post-rendering toggle. </p>
+
+</div>
+</div>
+<a id="a0724c53710b743c48de920ab4d312dc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0724c53710b743c48de920ab4d312dc6">&#9670;&nbsp;</a></span>_pre_render</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool arc::torus::Sim::_pre_render</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pre-rendering toggle. </p>
+
+</div>
+</div>
+<a id="a0c56b667c673bc37c97343eed95a63e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c56b667c673bc37c97343eed95a63e4">&#9670;&nbsp;</a></span>_res</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;size_t, 3&gt; arc::torus::Sim::_res</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resolution of the domain. </p>
+
+</div>
+</div>
+<a id="a5668969b8df87ce212d404cddd51192d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5668969b8df87ce212d404cddd51192d">&#9670;&nbsp;</a></span>_tar_tris</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t arc::torus::Sim::_tar_tris</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Target maximum number of triangles to contain within tree leaf cells. </p>
+
+</div>
+</div>
+<a id="a08b25b2b3982ab3fbd398375472d34e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08b25b2b3982ab3fbd398375472d34e5">&#9670;&nbsp;</a></span>_update_delta</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int arc::torus::Sim::_update_delta</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update delta (ms). </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/arctk/torus/<a class="el" href="sim_8hpp_source.html">sim.hpp</a></li>
+<li>include/arctk/torus/<a class="el" href="sim_8inl.html">sim.inl</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 8 2018 13:50:04 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 19 2018 00:05:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

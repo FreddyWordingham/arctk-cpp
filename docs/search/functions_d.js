@@ -13,6 +13,7 @@ var searchData=
   ['num_5ffaces',['num_faces',['../classarc_1_1geom_1_1shape_1_1_mesh.html#a266c2966cfd43fc9b0ebc7db277cdfbe',1,'arc::geom::shape::Mesh']]],
   ['num_5fnodes',['num_nodes',['../classarc_1_1tree_1_1node_1_1_branch.html#aa10c1ab4bf1ae2233461f5616a8826ed',1,'arc::tree::node::Branch::num_nodes()'],['../classarc_1_1tree_1_1node_1_1_leaf.html#adae33d084db236bd10cc149f7011005d',1,'arc::tree::node::Leaf::num_nodes()'],['../classarc_1_1tree_1_1_node.html#a0d7ef0aa441a70286792bac23b3ea22a',1,'arc::tree::Node::num_nodes()'],['../classarc_1_1tree_1_1_root.html#a66c6e2ca0da3b44a2908d6c4e37226de',1,'arc::tree::Root::num_nodes()']]],
   ['num_5fnorms',['num_norms',['../classarc_1_1geom_1_1shape_1_1_mesh.html#aa9c3acc4af6047608a6a2dcfd56e93c6',1,'arc::geom::shape::Mesh']]],
+  ['num_5fphot',['num_phot',['../classarc_1_1equip_1_1entity_1_1_light.html#a8f165afe08e8aedd8e06c5dee7fb9977',1,'arc::equip::entity::Light']]],
   ['num_5fvert',['num_vert',['../classarc_1_1gui_1_1_actor.html#a8b457c2ac5cae4710152632d36144e86',1,'arc::gui::Actor']]],
   ['num_5fverts',['num_verts',['../classarc_1_1geom_1_1shape_1_1_mesh.html#a2465d9b117ea566ec9d0fa83b2a94ea8',1,'arc::geom::shape::Mesh']]]
 ];

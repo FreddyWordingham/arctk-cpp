@@ -1,4 +1,11 @@
 <map id="arc::parse::read::file" name="arc::parse::read::file">
-<area shape="rect" id="node2" href="$classarc_1_1dom_1_1_region.html#afe42a3906214f2b4593e26597627dcf7" title="arc::dom::Region::save" alt="" coords="192,5,351,31"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1sys_1_1file.html#a181277361a6bb9c563a5348c37b0a06d" title="arc::sys::file::read" alt="" coords="209,55,335,80"/>
+<area shape="rect" id="node2" href="$classarc_1_1dom_1_1_region.html#afe42a3906214f2b4593e26597627dcf7" title="arc::dom::Region::save" alt="" coords="205,5,364,31"/>
+<area shape="rect" id="node3" href="$classarc_1_1torus_1_1_sim.html#aa43474ecd5d97be889455edb1af54dcd" title="arc::torus::Sim::simulate" alt="" coords="424,56,588,81"/>
+<area shape="rect" id="node5" href="$classarc_1_1img_1_1bitmap_1_1_greyscale.html#ac9372abe3426e7bf1314a23e112ab626" title="arc::img::bitmap::Greyscale\l::save" alt="" coords="192,107,376,145"/>
+<area shape="rect" id="node6" href="$namespacearc_1_1sys_1_1file.html#a181277361a6bb9c563a5348c37b0a06d" title="arc::sys::file::read" alt="" coords="221,169,347,195"/>
+<area shape="rect" id="node7" href="$classarc_1_1torus_1_1_sim.html#aebedc55998a8e1d9386819373569c43b" title="arc::torus::Sim::pre\l_flight_info_write" alt="" coords="217,219,351,257"/>
+<area shape="rect" id="node9" href="$classarc_1_1torus_1_1_sim.html#ac0a4564959584b2a56fad6d1f6358f59" title="arc::torus::Sim::post\l_flight_info_write" alt="" coords="214,281,354,320"/>
+<area shape="rect" id="node4" href="$classarc_1_1torus_1_1_sim.html#a54f39f2e207f3594301a511eed439a1d" title="arc::torus::Sim::run" alt="" coords="636,225,770,251"/>
+<area shape="rect" id="node8" href="$classarc_1_1torus_1_1_sim.html#a6134358647e9c117dc618c00dd8b3a97" title="arc::torus::Sim::run\l_pre_flight" alt="" coords="439,219,573,257"/>
+<area shape="rect" id="node10" href="$classarc_1_1torus_1_1_sim.html#af3c18cd6a7ba73fe8f47dcdce4a7a007" title="arc::torus::Sim::run\l_post_flight" alt="" coords="439,281,573,320"/>
 </map>

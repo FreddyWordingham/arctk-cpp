@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['bitmap_2ehpp',['bitmap.hpp',['../bitmap_8hpp.html',1,'']]],
+  ['bitmap_2einl',['bitmap.inl',['../bitmap_8inl.html',1,'']]],
   ['body_2ehpp',['body.hpp',['../body_8hpp.html',1,'']]],
   ['body_2einl',['body.inl',['../body_8inl.html',1,'']]],
   ['box_2ehpp',['box.hpp',['../box_8hpp.html',1,'']]],

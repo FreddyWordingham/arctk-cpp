@@ -19,7 +19,7 @@ var searchData=
   ['fg_5fred',['FG_RED',['../namespacearc_1_1consts_1_1ansi.html#a340d2f63b292a51f1bf9e5e2b67020bb',1,'arc::consts::ansi']]],
   ['fg_5fwhite',['FG_WHITE',['../namespacearc_1_1consts_1_1ansi.html#abcadf35fad9641443fc59bc89570ede2',1,'arc::consts::ansi']]],
   ['fg_5fyellow',['FG_YELLOW',['../namespacearc_1_1consts_1_1ansi.html#ac11e453d2c8e65ecb0fa21d126125f90',1,'arc::consts::ansi']]],
-  ['file',['file',['../namespacearc_1_1parse_1_1read.html#ae36701cafec6b29e5c8ccea80e0de5d9',1,'arc::parse::read']]],
+  ['file',['file',['../classarc_1_1geom_1_1_wavefront.html#acdf8adf6cb3bca354450b16217614037',1,'arc::geom::Wavefront::file()'],['../namespacearc_1_1parse_1_1read.html#ae36701cafec6b29e5c8ccea80e0de5d9',1,'arc::parse::read::file()']]],
   ['file_2ehpp',['file.hpp',['../file_8hpp.html',1,'']]],
   ['file_2einl',['file.inl',['../file_8inl.html',1,'']]],
   ['file_5fopen_5ffailed',['FILE_OPEN_FAILED',['../namespacearc_1_1exit_1_1error.html#a2551e7b15a3ca1a65f0ba6f7bef39689',1,'arc::exit::error']]],

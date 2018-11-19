@@ -1,4 +1,7 @@
 <map id="arc::math::mat::transform::scale" name="arc::math::mat::transform::scale">
 <area shape="rect" id="node2" href="$classarc_1_1gui_1_1_actor.html#a514c9532cc9290852688eaac5817b32f" title="arc::gui::Actor::update\l_model" alt="" coords="233,5,385,44"/>
 <area shape="rect" id="node3" href="$namespacearc_1_1math_1_1mat_1_1transform.html#a895ec0281f5e5cbe602f7095d9f792ff" title="arc::math::mat::transform\l::scale_rotate_trans" alt="" coords="224,68,394,107"/>
+<area shape="rect" id="node4" href="$classarc_1_1torus_1_1_sim.html#ac4265f843be47f3a3c001d24c6e912c9" title="arc::torus::Sim::render" alt="" coords="232,131,385,156"/>
+<area shape="rect" id="node5" href="$classarc_1_1torus_1_1_sim.html#aa43474ecd5d97be889455edb1af54dcd" title="arc::torus::Sim::simulate" alt="" coords="442,131,606,156"/>
+<area shape="rect" id="node6" href="$classarc_1_1torus_1_1_sim.html#a54f39f2e207f3594301a511eed439a1d" title="arc::torus::Sim::run" alt="" coords="654,131,788,156"/>
 </map>

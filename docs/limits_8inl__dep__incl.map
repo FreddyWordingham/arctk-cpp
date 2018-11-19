@@ -1,10 +1,12 @@
 <map id="include/arctk/prop/limits.inl" name="include/arctk/prop/limits.inl">
-<area shape="rect" id="node2" href="$limits_8hpp.html" title="include/arctk/prop\l/limits.hpp" alt="" coords="286,92,413,131"/>
-<area shape="rect" id="node3" href="$mat_2simple_8inl.html" title="include/arctk/opt/mat\l/simple.inl" alt="" coords="8,179,152,217"/>
-<area shape="rect" id="node5" href="$random_2distribution_2constant_8inl.html" title="include/arctk/random\l/distribution/constant.inl" alt="" coords="179,179,339,217"/>
-<area shape="rect" id="node7" href="$discrete_8inl.html" title="include/arctk/random\l/distribution/discrete.inl" alt="" coords="363,179,520,217"/>
-<area shape="rect" id="node9" href="$random_2distribution_2linear_8inl.html" title="include/arctk/random\l/distribution/linear.inl" alt="" coords="544,179,689,217"/>
-<area shape="rect" id="node4" href="$mat_2simple_8hpp.html" title="include/arctk/opt/mat\l/simple.hpp" alt="" coords="5,265,150,304"/>
-<area shape="rect" id="node6" href="$random_2distribution_2constant_8hpp.html" title="include/arctk/random\l/distribution/constant.hpp" alt="" coords="174,265,344,304"/>
-<area shape="rect" id="node8" href="$discrete_8hpp.html" title="include/arctk/random\l/distribution/discrete.hpp" alt="" coords="368,265,534,304"/>
+<area shape="rect" id="node2" href="$limits_8hpp.html" title="include/arctk/prop\l/limits.hpp" alt="" coords="362,92,489,131"/>
+<area shape="rect" id="node3" href="$mat_2raman_8inl.html" title="include/arctk/opt/mat\l/raman.inl" alt="" coords="7,179,151,217"/>
+<area shape="rect" id="node5" href="$mat_2simple_8inl.html" title="include/arctk/opt/mat\l/simple.inl" alt="" coords="175,179,319,217"/>
+<area shape="rect" id="node7" href="$random_2distribution_2constant_8inl.html" title="include/arctk/random\l/distribution/constant.inl" alt="" coords="345,179,506,217"/>
+<area shape="rect" id="node9" href="$discrete_8inl.html" title="include/arctk/random\l/distribution/discrete.inl" alt="" coords="530,179,687,217"/>
+<area shape="rect" id="node11" href="$random_2distribution_2linear_8inl.html" title="include/arctk/random\l/distribution/linear.inl" alt="" coords="710,179,855,217"/>
+<area shape="rect" id="node4" href="$mat_2raman_8hpp.html" title="include/arctk/opt/mat\l/raman.hpp" alt="" coords="5,265,150,304"/>
+<area shape="rect" id="node6" href="$mat_2simple_8hpp.html" title="include/arctk/opt/mat\l/simple.hpp" alt="" coords="173,265,318,304"/>
+<area shape="rect" id="node8" href="$random_2distribution_2constant_8hpp.html" title="include/arctk/random\l/distribution/constant.hpp" alt="" coords="342,265,512,304"/>
+<area shape="rect" id="node10" href="$discrete_8hpp.html" title="include/arctk/random\l/distribution/discrete.hpp" alt="" coords="536,265,702,304"/>
 </map>

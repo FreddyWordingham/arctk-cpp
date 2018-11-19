@@ -1,6 +1,4 @@
 <map id="arc::equip::entity::light::Laser" name="arc::equip::entity::light::Laser">
-<area shape="rect" id="node2" href="$classarc_1_1equip_1_1entity_1_1_light.html" title="arc::equip::entity\l::Light" alt="" coords="28,225,147,264"/>
-<area shape="rect" id="node3" href="$classarc_1_1equip_1_1_entity.html" title="arc::equip::Entity" alt="" coords="27,152,148,177"/>
-<area shape="rect" id="node4" href="$classarc_1_1geom_1_1shape_1_1_mesh.html" title="arc::geom::shape::Mesh" alt="" coords="5,79,170,104"/>
-<area shape="rect" id="node5" href="$classarc_1_1geom_1_1_shape.html" title="arc::geom::Shape" alt="" coords="24,5,151,31"/>
+<area shape="rect" id="node2" href="$classarc_1_1equip_1_1entity_1_1_light.html" title="arc::equip::entity\l::Light" alt="" coords="6,79,125,117"/>
+<area shape="rect" id="node3" href="$classarc_1_1equip_1_1_entity.html" title="arc::equip::Entity" alt="" coords="5,5,126,31"/>
 </map>

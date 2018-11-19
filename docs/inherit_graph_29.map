@@ -1,6 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classarc_1_1random_1_1_distribution.html" title="arc::random::Distribution\&lt; T \&gt;" alt="" coords="5,75,203,100"/>
-<area shape="rect" id="node2" href="$classarc_1_1random_1_1distribution_1_1_constant.html" title="arc::random::distribution\l::Constant\&lt; T \&gt;" alt="" coords="251,5,415,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1random_1_1distribution_1_1_discrete.html" title="arc::random::distribution\l::Discrete\&lt; T \&gt;" alt="" coords="251,68,415,107"/>
-<area shape="rect" id="node4" href="$classarc_1_1random_1_1distribution_1_1_linear.html" title="arc::random::distribution\l::Linear\&lt; T \&gt;" alt="" coords="251,131,415,169"/>
+<area shape="rect" id="node1" href="$classarc_1_1opt_1_1_mat.html" title="arc::opt::Mat" alt="" coords="5,55,101,80"/>
+<area shape="rect" id="node2" href="$classarc_1_1opt_1_1mat_1_1_dumb.html" title="arc::opt::mat::Dumb" alt="" coords="152,5,291,31"/>
+<area shape="rect" id="node3" href="$classarc_1_1opt_1_1mat_1_1_raman.html" title="arc::opt::mat::Raman" alt="" coords="149,55,295,80"/>
+<area shape="rect" id="node4" href="$classarc_1_1opt_1_1mat_1_1_simple.html" title="arc::opt::mat::Simple" alt="" coords="150,104,293,129"/>
 </map>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['file',['file',['../namespacearc_1_1parse_1_1read.html#ae36701cafec6b29e5c8ccea80e0de5d9',1,'arc::parse::read']]],
+  ['file',['file',['../classarc_1_1geom_1_1_wavefront.html#acdf8adf6cb3bca354450b16217614037',1,'arc::geom::Wavefront::file()'],['../namespacearc_1_1parse_1_1read.html#ae36701cafec6b29e5c8ccea80e0de5d9',1,'arc::parse::read::file()']]],
   ['fill_5fmode',['fill_mode',['../classarc_1_1gui_1_1_actor.html#a9bcaee8d7f91d373e707b76b9396f8a4',1,'arc::gui::Actor']]],
   ['filter_5fcomments',['filter_comments',['../namespacearc_1_1parse_1_1process.html#aa43d6f4b4ac01f1b503fdf5b630f02b1',1,'arc::parse::process']]],
   ['filter_5fwhitespace',['filter_whitespace',['../namespacearc_1_1parse_1_1process.html#a1b896981b6feb909c2bddb07a9c78f56',1,'arc::parse::process']]],

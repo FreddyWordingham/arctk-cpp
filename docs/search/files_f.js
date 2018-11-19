@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['raman_2ehpp',['raman.hpp',['../mat_2raman_8hpp.html',1,'(Global Namespace)'],['../sop_2raman_8hpp.html',1,'(Global Namespace)']]],
+  ['raman_2einl',['raman.inl',['../mat_2raman_8inl.html',1,'(Global Namespace)'],['../sop_2raman_8inl.html',1,'(Global Namespace)']]],
   ['ray_2ehpp',['ray.hpp',['../ray_8hpp.html',1,'']]],
   ['ray_2einl',['ray.inl',['../ray_8inl.html',1,'']]],
   ['read_2ehpp',['read.hpp',['../read_8hpp.html',1,'']]],

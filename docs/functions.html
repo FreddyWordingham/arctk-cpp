@@ -72,8 +72,10 @@ $(function() {
 </li>
 <li>_albedo
 : <a class="el" href="classarc_1_1opt_1_1mat_1_1_dumb.html#a6df214eecbac920108cdf631c5d71276">arc::opt::mat::Dumb</a>
+, <a class="el" href="classarc_1_1opt_1_1mat_1_1_raman.html#ae560af16b7feaa080903a233c4edca9e">arc::opt::mat::Raman</a>
 , <a class="el" href="classarc_1_1opt_1_1mat_1_1_simple.html#abb0c13a1ed45e35446fc89f51efa63df">arc::opt::mat::Simple</a>
 , <a class="el" href="classarc_1_1opt_1_1sop_1_1_dumb.html#a9f056bb653bf4ac1f686f813577ffb5d">arc::opt::sop::Dumb</a>
+, <a class="el" href="classarc_1_1opt_1_1sop_1_1_raman.html#ab6beaaa7b5bee6d8c3772d4d5501fc34">arc::opt::sop::Raman</a>
 , <a class="el" href="classarc_1_1opt_1_1sop_1_1_simple.html#ae2b1317d49e837ff8b078a3ac910af8b">arc::opt::sop::Simple</a>
 </li>
 <li>_areas
@@ -87,8 +89,10 @@ $(function() {
 </li>
 <li>_asym
 : <a class="el" href="classarc_1_1opt_1_1mat_1_1_dumb.html#a7dcfcdd3bcd8777e119f1461810c0086">arc::opt::mat::Dumb</a>
+, <a class="el" href="classarc_1_1opt_1_1mat_1_1_raman.html#a90bfa3d092e008bd0055b0e86f081abd">arc::opt::mat::Raman</a>
 , <a class="el" href="classarc_1_1opt_1_1mat_1_1_simple.html#ab85ea40231e67902127a8a610ee39d2d">arc::opt::mat::Simple</a>
 , <a class="el" href="classarc_1_1opt_1_1sop_1_1_dumb.html#a7b7807ad02262fc49f335e0f693cf97f">arc::opt::sop::Dumb</a>
+, <a class="el" href="classarc_1_1opt_1_1sop_1_1_raman.html#a53f512108134bf0c0a20ab0e89ea1348">arc::opt::sop::Raman</a>
 , <a class="el" href="classarc_1_1opt_1_1sop_1_1_simple.html#ab97c6b27f56a966b47ea5cf14f3381aa">arc::opt::sop::Simple</a>
 </li>
 <li>_back_mat
@@ -135,6 +139,9 @@ $(function() {
 , <a class="el" href="classarc_1_1gui_1_1shader_1_1_diffuse.html#a4402fed1925d87d4fd01d30b004a63a1">arc::gui::shader::Diffuse</a>
 , <a class="el" href="classarc_1_1gui_1_1shader_1_1_specular.html#aa05213df2676d142bf9a955934260448">arc::gui::shader::Specular</a>
 </li>
+<li>_colour_map
+: <a class="el" href="classarc_1_1img_1_1bitmap_1_1_greyscale.html#a2331a9affe1330898adf4466f82997dd">arc::img::bitmap::Greyscale</a>
+</li>
 <li>_data
 : <a class="el" href="classarc_1_1data_1_1_obj.html#a5cea90309b706df5a30c9f6c1b99d934">arc::data::Obj</a>
 , <a class="el" href="classarc_1_1math_1_1_mat.html#a45938c6cb757a44a7391d5c7314c25a8">arc::math::Mat&lt; T, N &gt;</a>
@@ -142,6 +149,9 @@ $(function() {
 </li>
 <li>_depth
 : <a class="el" href="classarc_1_1tree_1_1_node.html#a4d1ec10342e5ba48cc94ffd206942cb9">arc::tree::Node</a>
+</li>
+<li>_detectors
+: <a class="el" href="classarc_1_1torus_1_1_sim.html#abed80ea090cb49b20e9c8362881837c7">arc::torus::Sim</a>
 </li>
 <li>_dir
 : <a class="el" href="classarc_1_1gui_1_1camera_1_1_fly.html#a79ff586a7c9d9c418c201c4f6d699eb1">arc::gui::camera::Fly</a>
@@ -159,8 +169,14 @@ $(function() {
 <li>_ent_tris
 : <a class="el" href="classarc_1_1tree_1_1node_1_1_leaf.html#afdb5269c78784d100c0afc98d5179438">arc::tree::node::Leaf</a>
 </li>
+<li>_entities
+: <a class="el" href="classarc_1_1torus_1_1_sim.html#a1c15b563b2320edbf2e6d613271cd670">arc::torus::Sim</a>
+</li>
 <li>_face_col
 : <a class="el" href="classarc_1_1gui_1_1shader_1_1_normal.html#a2a86350009521553a288d3eced634ba0">arc::gui::shader::Normal</a>
+</li>
+<li>_file
+: <a class="el" href="classarc_1_1geom_1_1_wavefront.html#a60e4f19927cbdf0de8722f82d06b03ec">arc::geom::Wavefront</a>
 </li>
 <li>_fill_mode
 : <a class="el" href="classarc_1_1gui_1_1_actor.html#a2fd27000064f44fe6e91e0c94bb3b8ee">arc::gui::Actor</a>
@@ -194,16 +210,21 @@ $(function() {
 , <a class="el" href="classarc_1_1gui_1_1_window.html#ae64db24c1d33f4530044023f25fa1814">arc::gui::Window</a>
 </li>
 <li>_interact_coef
-: <a class="el" href="classarc_1_1opt_1_1mat_1_1_simple.html#aaedd4193d71dc89436bf5172c972785f">arc::opt::mat::Simple</a>
+: <a class="el" href="classarc_1_1opt_1_1mat_1_1_raman.html#a9826b16a008468eeae6fcb7408fe53ec">arc::opt::mat::Raman</a>
+, <a class="el" href="classarc_1_1opt_1_1mat_1_1_simple.html#aaedd4193d71dc89436bf5172c972785f">arc::opt::mat::Simple</a>
 </li>
 <li>_interaction_coef
-: <a class="el" href="classarc_1_1opt_1_1sop_1_1_simple.html#a53d681e25e1ddda017ba4aa7dba82986">arc::opt::sop::Simple</a>
+: <a class="el" href="classarc_1_1opt_1_1sop_1_1_raman.html#a7b9884a918d50c7db9497e6954a71edf">arc::opt::sop::Raman</a>
+, <a class="el" href="classarc_1_1opt_1_1sop_1_1_simple.html#a53d681e25e1ddda017ba4aa7dba82986">arc::opt::sop::Simple</a>
 </li>
 <li>_kill
 : <a class="el" href="classarc_1_1equip_1_1entity_1_1_light.html#afaed1437fd18d52d8fe6243219d1681c">arc::equip::entity::Light</a>
 </li>
 <li>_length
 : <a class="el" href="classarc_1_1gui_1_1shader_1_1_normal.html#a1c4a4e39b30add8d5acdd97ef137c54c">arc::gui::shader::Normal</a>
+</li>
+<li>_lights
+: <a class="el" href="classarc_1_1torus_1_1_sim.html#a5a7e1422f9f3c486360b43d6f43c2a57">arc::torus::Sim</a>
 </li>
 <li>_map
 : <a class="el" href="classarc_1_1gui_1_1_keymap.html#afea25481141729499fae16fe3633e6fe">arc::gui::Keymap</a>
@@ -214,16 +235,23 @@ $(function() {
 <li>_max
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_box.html#a6511e6a208384ba62c1f0b02c04f792d">arc::geom::shape::Box</a>
 , <a class="el" href="classarc_1_1gui_1_1lens_1_1_orthographic.html#a9c42c93850c8d0c112bb1726073ec8c2">arc::gui::lens::Orthographic</a>
+, <a class="el" href="classarc_1_1img_1_1bitmap_1_1_greyscale.html#a9f4a164854651474144add74b4708fc0">arc::img::bitmap::Greyscale</a>
 , <a class="el" href="classarc_1_1math_1_1_formula.html#a2ed005d77aadd41c68789c1cf9bedab6">arc::math::Formula</a>
 , <a class="el" href="classarc_1_1opt_1_1_mat.html#abb96907cd64a6ae0bd3263fc3c01394d">arc::opt::Mat</a>
 , <a class="el" href="classarc_1_1random_1_1_distribution.html#a4ebb4644ddfc949380bb6c7766ae6dfc">arc::random::Distribution&lt; T &gt;</a>
+, <a class="el" href="classarc_1_1torus_1_1_sim.html#ad1ce6a6fb90fed8363fdbedf03346f97">arc::torus::Sim</a>
+</li>
+<li>_max_depth
+: <a class="el" href="classarc_1_1torus_1_1_sim.html#aa44a59b9ec070bbd3e5acef5ef67713a">arc::torus::Sim</a>
 </li>
 <li>_min
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_box.html#af56d9cb546463ae12f0dd92c12345bec">arc::geom::shape::Box</a>
 , <a class="el" href="classarc_1_1gui_1_1lens_1_1_orthographic.html#ae3cee26eb6ef082a172b02e94c9e6682">arc::gui::lens::Orthographic</a>
+, <a class="el" href="classarc_1_1img_1_1bitmap_1_1_greyscale.html#a397c79bde9fdddd15a0be8df4eb6fec5">arc::img::bitmap::Greyscale</a>
 , <a class="el" href="classarc_1_1math_1_1_formula.html#a8457b443d036f0fd0d2321cc9fb04eef">arc::math::Formula</a>
 , <a class="el" href="classarc_1_1opt_1_1_mat.html#a712bd8e5df058ef1a60826a759d23373">arc::opt::Mat</a>
 , <a class="el" href="classarc_1_1random_1_1_distribution.html#a64ec52c3345ffa16c2594df38c0995f1">arc::random::Distribution&lt; T &gt;</a>
+, <a class="el" href="classarc_1_1torus_1_1_sim.html#a842030f2c9462cb4c778bd6998df9a97">arc::torus::Sim</a>
 </li>
 <li>_model
 : <a class="el" href="classarc_1_1gui_1_1_actor.html#a6ae4cb9573382ba616dd2dce41941876">arc::gui::Actor</a>
@@ -251,14 +279,29 @@ $(function() {
 <li>_num_norms
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#ad255d7c7178342d36f6ed4b5b6b0b47e">arc::geom::shape::Mesh</a>
 </li>
+<li>_num_phot
+: <a class="el" href="classarc_1_1equip_1_1entity_1_1_light.html#aaa7707711546e2c1f1b96aa869b50462">arc::equip::entity::Light</a>
+</li>
+<li>_num_threads
+: <a class="el" href="classarc_1_1torus_1_1_sim.html#a6d245f6da81308ede3f15f504f2a0941">arc::torus::Sim</a>
+</li>
 <li>_num_vert
 : <a class="el" href="classarc_1_1gui_1_1_actor.html#ab76c2799d8258b67edf0c130566dc496">arc::gui::Actor</a>
 </li>
 <li>_num_verts
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a8ce4fb796e6fa5967c67752f9f9d5c7b">arc::geom::shape::Mesh</a>
 </li>
+<li>_output_dir
+: <a class="el" href="classarc_1_1torus_1_1_sim.html#a02c1c7ac2455391590ce3ccc43b97a1f">arc::torus::Sim</a>
+</li>
 <li>_phase
 : <a class="el" href="classarc_1_1phys_1_1_photon.html#aecd8af3cff38f49d6cd99dcf5734d33b">arc::phys::Photon</a>
+</li>
+<li>_phot_power
+: <a class="el" href="classarc_1_1equip_1_1entity_1_1_light.html#a46a89f9c05d81b3f44b5c573f6d54d04">arc::equip::entity::Light</a>
+</li>
+<li>_pixels
+: <a class="el" href="classarc_1_1img_1_1bitmap_1_1_greyscale.html#aeb6f7faad97979bc1dcd061df4d7a026">arc::img::bitmap::Greyscale</a>
 </li>
 <li>_plane_norm
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a1aa75e6f1c42143299c908b272dc4d9c">arc::geom::shape::Triangle</a>
@@ -270,8 +313,14 @@ $(function() {
 <li>_poss
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_triangle.html#a50e8fa5a074ced2b8f453b331cc1ad63">arc::geom::shape::Triangle</a>
 </li>
+<li>_post_render
+: <a class="el" href="classarc_1_1torus_1_1_sim.html#aae94d600244bac6490e504943de11b71">arc::torus::Sim</a>
+</li>
 <li>_power
 : <a class="el" href="classarc_1_1equip_1_1entity_1_1_light.html#ac0cdadbbcf50d838ddf2edbc4532778d">arc::equip::entity::Light</a>
+</li>
+<li>_pre_render
+: <a class="el" href="classarc_1_1torus_1_1_sim.html#a0724c53710b743c48de920ab4d312dc6">arc::torus::Sim</a>
 </li>
 <li>_primitive_type
 : <a class="el" href="classarc_1_1gui_1_1_actor.html#aa2f24e3a54c8aeae4d22f48bcbd426eb">arc::gui::Actor</a>
@@ -290,25 +339,39 @@ $(function() {
 , <a class="el" href="classarc_1_1gui_1_1shader_1_1_ray.html#a86db2eee73a26aacd68907c876f24467">arc::gui::shader::Ray</a>
 , <a class="el" href="classarc_1_1gui_1_1shader_1_1_specular.html#a8a42254e9e00f5e2ffe46cca5f55938b">arc::gui::shader::Specular</a>
 </li>
+<li>_raman_prob
+: <a class="el" href="classarc_1_1opt_1_1mat_1_1_raman.html#a74fe2521a70fa1ec7404ca1e741a91bf">arc::opt::mat::Raman</a>
+, <a class="el" href="classarc_1_1opt_1_1sop_1_1_raman.html#a29c98c827bf57b385a24d9eb4a98abb6">arc::opt::sop::Raman</a>
+</li>
 <li>_ref_index
 : <a class="el" href="classarc_1_1opt_1_1mat_1_1_dumb.html#a51295edde79bd285176ad221fb20fef4">arc::opt::mat::Dumb</a>
+, <a class="el" href="classarc_1_1opt_1_1mat_1_1_raman.html#a33c1da4360e2012c227df688c962dd12">arc::opt::mat::Raman</a>
 , <a class="el" href="classarc_1_1opt_1_1mat_1_1_simple.html#a40f91bc72de6818f78c9230f03d7500f">arc::opt::mat::Simple</a>
 , <a class="el" href="classarc_1_1opt_1_1_sop.html#a9c113e0c92a7ac74ae7e900b8b33355d">arc::opt::Sop</a>
 </li>
 <li>_res
 : <a class="el" href="classarc_1_1dom_1_1_region.html#a62dd8f5c876f4f42e9e311ec8e10d14f">arc::dom::Region</a>
+, <a class="el" href="classarc_1_1torus_1_1_sim.html#a0c56b667c673bc37c97343eed95a63e4">arc::torus::Sim</a>
 </li>
 <li>_rot
-: <a class="el" href="classarc_1_1gui_1_1_actor.html#a1e61195488381da299428004bae3266d">arc::gui::Actor</a>
+: <a class="el" href="classarc_1_1geom_1_1_wavefront.html#ae864c36d95ed361b0e48764ad2e41bdd">arc::geom::Wavefront</a>
+, <a class="el" href="classarc_1_1gui_1_1_actor.html#a1e61195488381da299428004bae3266d">arc::gui::Actor</a>
 </li>
 <li>_scale
-: <a class="el" href="classarc_1_1gui_1_1_actor.html#acdc74ada1ed26159754363d758e8b62f">arc::gui::Actor</a>
+: <a class="el" href="classarc_1_1geom_1_1_wavefront.html#a2245e5cbfe9eaf5aee02005266042d64">arc::geom::Wavefront</a>
+, <a class="el" href="classarc_1_1gui_1_1_actor.html#acdc74ada1ed26159754363d758e8b62f">arc::gui::Actor</a>
+</li>
+<li>_scale_map
+: <a class="el" href="classarc_1_1img_1_1bitmap_1_1_greyscale.html#a4588740a973d8ceb3c1d9d169d7aefcc">arc::img::bitmap::Greyscale</a>
 </li>
 <li>_scatters
 : <a class="el" href="classarc_1_1dom_1_1_cell.html#af3d2ada7b18e059d7e07063e0c883766">arc::dom::Cell</a>
 </li>
 <li>_seed
 : <a class="el" href="classarc_1_1random_1_1_generator.html#afb04ebf2d18783b15e32c06bfe06249f">arc::random::Generator</a>
+</li>
+<li>_seed_mutex
+: <a class="el" href="classarc_1_1random_1_1_generator.html#adc0f87a8e54eb93e2376fe7728fd2dc8">arc::random::Generator</a>
 </li>
 <li>_speed
 : <a class="el" href="classarc_1_1gui_1_1_camera.html#a5b0e3058cebbd9e510c7c863a0f1491b">arc::gui::Camera</a>
@@ -325,6 +388,12 @@ $(function() {
 <li>_sun_pos
 : <a class="el" href="classarc_1_1gui_1_1shader_1_1_specular.html#a22df5f710d01d72e58e6757ad2510577">arc::gui::shader::Specular</a>
 </li>
+<li>_surf
+: <a class="el" href="classarc_1_1equip_1_1_entity.html#a64655655843c33001f32b857caef1bd0">arc::equip::Entity</a>
+</li>
+<li>_tar_tris
+: <a class="el" href="classarc_1_1torus_1_1_sim.html#a5668969b8df87ce212d404cddd51192d">arc::torus::Sim</a>
+</li>
 <li>_time
 : <a class="el" href="classarc_1_1phys_1_1_photon.html#a5a2b524eacfd1d28be2b7bc024ff120c">arc::phys::Photon</a>
 </li>
@@ -335,7 +404,8 @@ $(function() {
 : <a class="el" href="classarc_1_1gui_1_1shader_1_1_ray.html#a20afc50afb918ea3b8f944a6e0e281bb">arc::gui::shader::Ray</a>
 </li>
 <li>_trans
-: <a class="el" href="classarc_1_1gui_1_1_actor.html#a49d360223eaf9ce7a7e8635a51f0a94e">arc::gui::Actor</a>
+: <a class="el" href="classarc_1_1geom_1_1_wavefront.html#a3c75b7bf9d8cd68269c291bd13805df3">arc::geom::Wavefront</a>
+, <a class="el" href="classarc_1_1gui_1_1_actor.html#a49d360223eaf9ce7a7e8635a51f0a94e">arc::gui::Actor</a>
 </li>
 <li>_tris
 : <a class="el" href="classarc_1_1geom_1_1shape_1_1_mesh.html#a856717860fe6638d8937af7b8d72584d">arc::geom::shape::Mesh</a>
@@ -344,10 +414,14 @@ $(function() {
 : <a class="el" href="classarc_1_1tree_1_1_root.html#aad13fd4a0239c6eb72cbb3f7a1099a7f">arc::tree::Root</a>
 </li>
 <li>_u
-: <a class="el" href="classarc_1_1random_1_1generator_1_1_quality.html#aa5d0d7a356aed77e4b0e6ad8603c0416">arc::random::generator::Quality</a>
+: <a class="el" href="classarc_1_1random_1_1generator_1_1_dirty.html#a0b704bf1c9505d7015923c652657f7d1">arc::random::generator::Dirty</a>
+, <a class="el" href="classarc_1_1random_1_1generator_1_1_quality.html#aa5d0d7a356aed77e4b0e6ad8603c0416">arc::random::generator::Quality</a>
 </li>
 <li>_up
 : <a class="el" href="classarc_1_1gui_1_1_camera.html#a16bbe0d82a79bd609a1202c8ba7f2c37">arc::gui::Camera</a>
+</li>
+<li>_update_delta
+: <a class="el" href="classarc_1_1torus_1_1_sim.html#a08b25b2b3982ab3fbd398375472d34e5">arc::torus::Sim</a>
 </li>
 <li>_v
 : <a class="el" href="classarc_1_1random_1_1generator_1_1_quality.html#a9c59b127ba7bd6f9c6f08d3c1b1df503">arc::random::generator::Quality</a>
@@ -379,7 +453,11 @@ $(function() {
 </li>
 <li>_wavelength
 : <a class="el" href="classarc_1_1equip_1_1entity_1_1light_1_1_laser.html#aa73b592dc8255cdc300d14f44f864f98">arc::equip::entity::light::Laser</a>
-, <a class="el" href="classarc_1_1phys_1_1_photon.html#ad0555c9d3ae353a76937b2ac3f6017a6">arc::phys::Photon</a>
+, <a class="el" href="classarc_1_1phys_1_1_photon.html#aa3fbb8be02e5e77e1a33b24aed2dc192">arc::phys::Photon</a>
+</li>
+<li>_wavelength_delta
+: <a class="el" href="classarc_1_1opt_1_1mat_1_1_raman.html#acbaa44bedf73db4d6121162bc1f5bc6b">arc::opt::mat::Raman</a>
+, <a class="el" href="classarc_1_1opt_1_1sop_1_1_raman.html#a94aae2ab8c54cc122abe5841e4aafc09">arc::opt::sop::Raman</a>
 </li>
 <li>_weight
 : <a class="el" href="classarc_1_1phys_1_1_photon.html#a5b641bffc049cf8aac69d21415466821">arc::phys::Photon</a>
@@ -399,7 +477,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 8 2018 13:50:04 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 19 2018 00:05:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

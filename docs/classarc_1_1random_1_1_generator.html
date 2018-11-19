@@ -72,6 +72,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classarc_1_1random_1_1_generator-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -87,7 +88,8 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classarc_1_1random_1_1_generator__inherit__graph.png" border="0" usemap="#arc_1_1random_1_1_generator_inherit__map" alt="Inheritance graph"/></div>
 <map name="arc_1_1random_1_1_generator_inherit__map" id="arc_1_1random_1_1_generator_inherit__map">
-<area shape="rect" id="node2" href="classarc_1_1random_1_1generator_1_1_quality.html" title="arc::random::generator\l::Quality" alt="" coords="7,79,164,117"/>
+<area shape="rect" id="node2" href="classarc_1_1random_1_1generator_1_1_dirty.html" title="arc::random::generator\l::Dirty" alt="" coords="5,79,162,117"/>
+<area shape="rect" id="node3" href="classarc_1_1random_1_1generator_1_1_quality.html" title="arc::random::generator\l::Quality" alt="" coords="187,79,344,117"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -101,6 +103,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3014e80e54730a59a9b3f2d6d2860168"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1random_1_1_generator.html#a3014e80e54730a59a9b3f2d6d2860168">Generator</a> (<a class="el" href="classarc_1_1random_1_1_generator.html">Generator</a> &amp;&amp;) noexcept=default</td></tr>
 <tr class="memdesc:a3014e80e54730a59a9b3f2d6d2860168"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defaulted move constructor.  <a href="#a3014e80e54730a59a9b3f2d6d2860168">More...</a><br /></td></tr>
 <tr class="separator:a3014e80e54730a59a9b3f2d6d2860168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b6134821a463cada9d311f36f9a352c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1random_1_1_generator.html#a8b6134821a463cada9d311f36f9a352c">~Generator</a> () noexcept</td></tr>
+<tr class="separator:a8b6134821a463cada9d311f36f9a352c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5414702d4ebcb6127958ac1b47368d8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classarc_1_1random_1_1_generator.html">Generator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1random_1_1_generator.html#a5414702d4ebcb6127958ac1b47368d8c">operator=</a> (const <a class="el" href="classarc_1_1random_1_1_generator.html">Generator</a> &amp;) noexcept=delete</td></tr>
 <tr class="memdesc:a5414702d4ebcb6127958ac1b47368d8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted copy operator.  <a href="#a5414702d4ebcb6127958ac1b47368d8c">More...</a><br /></td></tr>
 <tr class="separator:a5414702d4ebcb6127958ac1b47368d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,10 +128,18 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:afb04ebf2d18783b15e32c06bfe06249f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value used to initialise the generator.  <a href="#afb04ebf2d18783b15e32c06bfe06249f">More...</a><br /></td></tr>
 <tr class="separator:afb04ebf2d18783b15e32c06bfe06249f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a6c53677fafc65222e545be6612c9876b"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1random_1_1_generator.html#a6c53677fafc65222e545be6612c9876b">init_seed</a> () noexcept</td></tr>
+<tr class="separator:a6c53677fafc65222e545be6612c9876b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
+<tr class="memitem:adc0f87a8e54eb93e2376fe7728fd2dc8"><td class="memItemLeft" align="right" valign="top">static std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1random_1_1_generator.html#adc0f87a8e54eb93e2376fe7728fd2dc8">_seed_mutex</a></td></tr>
+<tr class="memdesc:adc0f87a8e54eb93e2376fe7728fd2dc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seed updating mutex.  <a href="#adc0f87a8e54eb93e2376fe7728fd2dc8">More...</a><br /></td></tr>
+<tr class="separator:adc0f87a8e54eb93e2376fe7728fd2dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08ef7eadad8b178e2d05cdad396056cb"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarc_1_1random_1_1_generator.html#a08ef7eadad8b178e2d05cdad396056cb">_next_seed</a> = static_cast&lt;uint64_t&gt;(std::time(nullptr))</td></tr>
-<tr class="memdesc:a08ef7eadad8b178e2d05cdad396056cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of the next seed to be used. // NOLINT.  <a href="#a08ef7eadad8b178e2d05cdad396056cb">More...</a><br /></td></tr>
+<tr class="memdesc:a08ef7eadad8b178e2d05cdad396056cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of the next seed to be used.  <a href="#a08ef7eadad8b178e2d05cdad396056cb">More...</a><br /></td></tr>
 <tr class="separator:a08ef7eadad8b178e2d05cdad396056cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -215,6 +227,32 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a8b6134821a463cada9d311f36f9a352c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b6134821a463cada9d311f36f9a352c">&#9670;&nbsp;</a></span>~Generator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">arc::random::Generator::~Generator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Default destructor. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a97bd3a4fd637ff97659ab94af9307ca8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a97bd3a4fd637ff97659ab94af9307ca8">&#9670;&nbsp;</a></span>gen()</h2>
@@ -242,7 +280,34 @@ Static Private Attributes</h2></td></tr>
 <p>Generate a random double between zero and unity. </p>
 <dl class="section return"><dt>Returns</dt><dd>Random double between zero and unity. </dd></dl>
 
-<p>Implemented in <a class="el" href="classarc_1_1random_1_1generator_1_1_quality.html#a62c1690d7eb9dd323ffe92051fca040c">arc::random::generator::Quality</a>.</p>
+<p>Implemented in <a class="el" href="classarc_1_1random_1_1generator_1_1_quality.html#a62c1690d7eb9dd323ffe92051fca040c">arc::random::generator::Quality</a>, and <a class="el" href="classarc_1_1random_1_1generator_1_1_dirty.html#a9ee606ea620aa283cf22b0d03d1e3b76">arc::random::generator::Dirty</a>.</p>
+
+</div>
+</div>
+<a id="a6c53677fafc65222e545be6612c9876b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c53677fafc65222e545be6612c9876b">&#9670;&nbsp;</a></span>init_seed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t arc::random::Generator::init_seed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initalise the seed for the generator to use.</p>
+<dl class="section return"><dt>Returns</dt><dd>Seed for the generator to use. </dd></dl>
 
 </div>
 </div>
@@ -385,7 +450,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Value of the next seed to be used. // NOLINT. </p>
+<p>Value of the next seed to be used. </p>
 
 </div>
 </div>
@@ -413,6 +478,30 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="adc0f87a8e54eb93e2376fe7728fd2dc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc0f87a8e54eb93e2376fe7728fd2dc8">&#9670;&nbsp;</a></span>_seed_mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex arc::random::Generator::_seed_mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Seed updating mutex. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/arctk/random/<a class="el" href="generator_8hpp_source.html">generator.hpp</a></li>
 <li>include/arctk/random/<a class="el" href="generator_8inl.html">generator.inl</a></li>
@@ -420,7 +509,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 8 2018 13:50:04 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 19 2018 00:05:44 for arctk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
