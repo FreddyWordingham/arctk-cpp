@@ -99,13 +99,19 @@ namespace arc //! arctk namespace
              *  @param  cell_   Current domain cell.
              *  @param  dist_   Distance to the interaction event.
              *
+             *  @pre    rng_ may not be nullptr.
+             *  @pre    phot_ may not be nullptr.
+             *  @pre    cell_ may not be nullptr.
+             *
              *  @return True if the photon's specific-optical-properties require updating after the interaction event.
              */
             inline bool Simple::interact(random::Generator* rng_, phys::Photon* phot_, dom::Cell* cell_, const double dist_) const noexcept
             {
-                assert()
+                assert(rng_ != nullptr);
+                assert(phot_ != nullptr);
+                assert(cell_ != nullptr);
 
-                  cell_->add_energy(dist_ * phot_->energy() * phot_->weight());
+                cell_->add_energy(dist_ * phot_->energy() * phot_->weight());
                 cell_->add_absorb(phot_->weight() * (1.0 - _albedo));
                 cell_->add_scatter(phot_->weight());
 
