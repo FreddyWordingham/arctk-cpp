@@ -46,6 +46,15 @@ namespace arc //! arctk namespace
                 //  -- Collision --
                 bool Phaseometer::hit_front(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** mat_, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept
                 {
+                    assert(phot_ != nullptr);
+                    assert(sop_ != nullptr);
+                    assert(cell_ != nullptr);
+
+                    phot_->move(coll_.dist(), sop_->get()->ref_index());
+                    cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
+
+                    _total_phase += phot_->phasor() * phot_->weight();
+
                     return (false);
                 }
 
@@ -53,7 +62,10 @@ namespace arc //! arctk namespace
                 {
                     if (_double_sided)
                     {
-                        return (hit_front());
+                        phot_->move(coll_.dist(), sop_->get()->ref_index());
+                        cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
+
+                        _total_phase += phot_->phasor() * phot_->weight();
                     }
 
                     return (false);
