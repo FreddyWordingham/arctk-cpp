@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
                     //  == FIELDS ==
                   private:
                     //  -- Detector --
-                    const bool _double_sided;
+                    const bool _double_sided; //!< True if back hits are counted.
 
                     //  -- Data --
                     double _total_weight; //!< Total statistical weight of photons hitting the detector.
