@@ -45,6 +45,12 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+
+
+                //  == METHODS ==
+              public:
+                //  -- Saving --
+                virtual void save(const std::string& path_) const noexcept = 0;
             };
 
 
