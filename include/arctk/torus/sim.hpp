@@ -117,6 +117,10 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  --  Getters --
+            inline unsigned long int total_phot() const noexcept;
+            inline double            total_power() const noexcept;
+
             //  -- Setters --
             inline void set_update_delta(const unsigned int update_delta_) noexcept;
             inline void set_num_threads(const size_t num_threads_) noexcept;
@@ -138,14 +142,13 @@ namespace arc //! arctk namespace
 
             //  -- Pre-flight --
           private:
-            inline void              create_output_dir() const noexcept;
-            inline void              pre_flight_info_write() const noexcept;
-            inline unsigned long int total_phot() const noexcept;
-            inline double            total_power() const noexcept;
+            inline void create_output_dir() const noexcept;
+            inline void pre_flight_info_write() const noexcept;
 
             //  -- Post-flight --
           private:
             inline void post_flight_info_write() const noexcept;
+            inline void save_data() const noexcept;
 
             //  -- Simulate --
           public:

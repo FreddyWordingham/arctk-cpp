@@ -118,6 +118,42 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Getters --
+        /**
+         *  Calculate the total number of photons to be run by the simulation.
+         *
+         *  @return Total number of photons to be run by the simulation.
+         */
+        inline unsigned long int Sim::total_phot() const noexcept
+        {
+            unsigned long int total_phot = 0;
+
+            for (size_t i = 0; i < _lights.size(); ++i)
+            {
+                total_phot += _lights[i]->num_phot();
+            }
+
+            return (total_phot);
+        }
+
+        /**
+         *  Calculate the total power of the light sources.
+         *
+         *  @return Total power of the light sources.
+         */
+        inline double Sim::total_power() const noexcept
+        {
+            double total_power = 0.0;
+
+            for (size_t i = 0; i < _lights.size(); ++i)
+            {
+                total_power += _lights[i]->power();
+            }
+
+            return (total_power);
+        }
+
+
         //  -- Setters --
         /**
          *  Set the time to wait between update reports in milliseconds.
@@ -317,41 +353,6 @@ namespace arc //! arctk namespace
 
             file << "Total photons          : " << total_phot() << '\n' << "Total light power      : " << total_power() << "W\n\n";
         }
-
-        /**
-         *  Calculate the total number of photons to be run by the simulation.
-         *
-         *  @return Total number of photons to be run by the simulation.
-         */
-        inline unsigned long int Sim::total_phot() const noexcept
-        {
-            unsigned long int total_phot = 0;
-
-            for (size_t i = 0; i < _lights.size(); ++i)
-            {
-                total_phot += _lights[i]->num_phot();
-            }
-
-            return (total_phot);
-        }
-
-        /**
-         *  Calculate the total power of the light sources.
-         *
-         *  @return Total power of the light sources.
-         */
-        inline double Sim::total_power() const noexcept
-        {
-            double total_power = 0.0;
-
-            for (size_t i = 0; i < _lights.size(); ++i)
-            {
-                total_power += _lights[i]->power();
-            }
-
-            return (total_power);
-        }
-
 
 
         //  -- Post-flight --
@@ -677,7 +678,7 @@ namespace arc //! arctk namespace
         //  -- Rendering --
         /**
          *  Create a rendering of the current simulation setup.
-         * 
+         *
          *  @param  dom_    Simulation domain.
          *  @param  tree_   Simulation tree.
          *  @param  paths_  Paths of photons to render.
