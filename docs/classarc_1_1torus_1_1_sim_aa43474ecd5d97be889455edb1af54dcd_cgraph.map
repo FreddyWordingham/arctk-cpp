@@ -6,7 +6,8 @@
 <area shape="rect" id="node42" href="$namespacearc_1_1parse_1_1read.html#ae36701cafec6b29e5c8ccea80e0de5d9" title="arc::parse::read::file" alt="" coords="464,5,603,31"/>
 <area shape="rect" id="node44" href="$classarc_1_1dom_1_1_region.html#a0f21065613e531fbf5e5cced61e2e80f" title="arc::dom::Region::num\l_cells" alt="" coords="230,1517,386,1556"/>
 <area shape="rect" id="node45" href="$classarc_1_1dom_1_1_region.html#a9042883c468f08a51f986790ac07e924" title="arc::dom::Region::cell_size" alt="" coords="218,1580,399,1605"/>
-<area shape="rect" id="node46" href="$classarc_1_1dom_1_1_region.html#afe42a3906214f2b4593e26597627dcf7" title="arc::dom::Region::save" alt="" coords="229,351,388,376"/>
+<area shape="rect" id="node46" href="$classarc_1_1dom_1_1_region.html#afe42a3906214f2b4593e26597627dcf7" title="arc::dom::Region::save" alt="" coords="229,139,388,164"/>
+<area shape="rect" id="node47" href="$classarc_1_1torus_1_1_sim.html#ababc826250903858ebede43717f6ac7a" title="arc::torus::Sim::save\l_output_data" alt="" coords="237,1629,380,1668"/>
 <area shape="rect" id="node3" href="$namespacearc_1_1math_1_1container.html#aa11d30fe929faeff3dc3215c6e3c7a1a" title="arc::math::container::min" alt="" coords="668,1305,836,1331"/>
 <area shape="rect" id="node4" href="$namespacearc_1_1math_1_1container.html#a8080312bec0b12bcea9927c1f0dbd029" title="arc::math::container::max" alt="" coords="884,1305,1056,1331"/>
 <area shape="rect" id="node6" href="$classarc_1_1gui_1_1_window.html#a19c3b00edced71c7f8beb119589b27e2" title="arc::gui::Window::set\l_clear_col" alt="" coords="461,180,606,219"/>

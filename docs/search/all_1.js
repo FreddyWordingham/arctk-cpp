@@ -27,6 +27,7 @@ var searchData=
   ['ansi',['ansi',['../namespacearc_1_1consts_1_1ansi.html',1,'arc::consts']]],
   ['ansi_2ehpp',['ansi.hpp',['../ansi_8hpp.html',1,'']]],
   ['arc',['arc',['../namespacearc.html',1,'']]],
+  ['arctk_5ftorus_5fsim_5finl',['ARCTK_TORUS_SIM_INL',['../sim_8inl.html#a678ee94a1516f46fe33d8fae2dce63ac',1,'sim.inl']]],
   ['area',['area',['../classarc_1_1geom_1_1shape_1_1_triangle.html#a8be439a9da593541ad062115bf6c4fd7',1,'arc::geom::shape::Triangle']]],
   ['args',['Args',['../classarc_1_1sys_1_1_args.html',1,'arc::sys::Args&lt; A &gt;'],['../classarc_1_1sys_1_1_args.html#a2bd0defa3860b1487b0187d2bca8120b',1,'arc::sys::Args::Args()']]],
   ['args_2ehpp',['args.hpp',['../args_8hpp.html',1,'']]],
