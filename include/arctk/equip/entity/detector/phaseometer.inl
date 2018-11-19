@@ -79,13 +79,13 @@ namespace arc //! arctk namespace
 
                 //  -- Collision --
                 /**
-                 *  Recotd a hit event on the front face of the detector.
+                 *  Record a hit event on the front face of the detector.
                  *
                  *  @param  phot_   Photon hitting the entity.
                  *  @param  sop_    Current specific-optical-properties.
                  *  @param  cell_   Current domain cell.
                  *  @param  coll_   Collision event information.
-                 * 
+                 *
                  *  @pre    phot_ may not be nullptr.
                  *  @pre    sop_ may not be nullptr.
                  *  @pre    cell_ may not be nullptr.
@@ -107,6 +107,20 @@ namespace arc //! arctk namespace
                     return (false);
                 }
 
+                /**
+                 *  Record a hit event on the back face of the detector.
+                 *
+                 *  @param  phot_   Photon hitting the entity.
+                 *  @param  sop_    Current specific-optical-properties.
+                 *  @param  cell_   Current domain cell.
+                 *  @param  coll_   Collision event information.
+                 *
+                 *  @pre    phot_ may not be nullptr.
+                 *  @pre    sop_ may not be nullptr.
+                 *  @pre    cell_ may not be nullptr.
+                 *
+                 *  @return False if the photon should be removed from the simulation.
+                 */
                 bool Phaseometer::hit_back(random::Generator* /*unused*/, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept
                 {
                     if (_double_sided)
