@@ -122,15 +122,15 @@ namespace arc //! arctk namespace
             inline double            total_power() const noexcept;
 
             //  -- Setters --
-            inline void set_update_delta(const unsigned int update_delta_) noexcept;
-            inline void set_num_threads(const size_t num_threads_) noexcept;
+            inline void set_update_delta(unsigned int update_delta_) noexcept;
+            inline void set_num_threads(size_t num_threads_) noexcept;
             inline void set_output_dir(const std::string& output_dir_) noexcept;
-            inline void set_res(const size_t res_) noexcept;
+            inline void set_res(size_t res_) noexcept;
             inline void set_res(const std::array<size_t, 3>& res_) noexcept;
-            inline void set_max_depth(const size_t max_depth_) noexcept;
-            inline void set_tar_tris(const size_t tar_tris_) noexcept;
-            inline void set_pre_render(const bool pre_render_) noexcept;
-            inline void set_post_render(const bool post_render_) noexcept;
+            inline void set_max_depth(size_t max_depth_) noexcept;
+            inline void set_tar_tris(size_t tar_tris_) noexcept;
+            inline void set_pre_render(bool pre_render_) noexcept;
+            inline void set_post_render(bool post_render_) noexcept;
 
             //  -- Additions --
             template <typename T>
