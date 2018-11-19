@@ -368,6 +368,17 @@ namespace arc //! arctk namespace
             file << "Simulation complete.\n";
         }
 
+        /**
+         *  Save the detector output.
+         */
+        inline void Sim::save_output_data() const noexcept
+        {
+            for (size_t i = 0; i < _detectors.size(); ++i)
+            {
+                _detectors[i].first->save(_detectors[i].second);
+            }
+        }
+
 
         //  -- Additions --
         /**
@@ -514,6 +525,7 @@ namespace arc //! arctk namespace
             file << "Tree max depth         : " << tree.max_depth() << '\n' << "Tree max triangles     : " << tree.max_tris() << '\n' << "Tree nodes             : " << tree.num_nodes() << "\n\n";
 
             dom.save(_output_dir + "domain");
+            save_output_data();
 
 #ifdef RENDER
             if (_post_render)

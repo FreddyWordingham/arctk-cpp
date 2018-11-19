@@ -148,7 +148,7 @@ namespace arc //! arctk namespace
             //  -- Post-flight --
           private:
             inline void post_flight_info_write() const noexcept;
-            inline void save_data() const noexcept;
+            inline void save_output_data() const noexcept;
 
             //  -- Simulate --
           public:
