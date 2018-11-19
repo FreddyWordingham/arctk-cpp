@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Entity(const geom::shape::Mesh& surf_) noexcept;
+            inline explicit Entity(const geom::shape::Mesh& surf_) noexcept;
             inline Entity(const Entity&) = default; //!< Defaulted copy constructor.
             inline Entity(Entity&&)      = default; //!< Defaulted move constructor.
 

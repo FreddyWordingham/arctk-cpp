@@ -77,7 +77,7 @@ namespace arc //! arctk namespace
             inline const vec3&        trans() const noexcept;
 
             //  -- Setters --
-            inline void set_scale(const double scale_) noexcept;
+            inline void set_scale(double scale_) noexcept;
             inline void set_scale(const vec3& scale_) noexcept;
             inline void set_rot(const vec3& rot_) noexcept;
             inline void set_trans(const vec3& trans_) noexcept;
