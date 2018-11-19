@@ -675,6 +675,13 @@ namespace arc //! arctk namespace
 
 
         //  -- Rendering --
+        /**
+         *  Create a rendering of the current simulation setup.
+         * 
+         *  @param  dom_    Simulation domain.
+         *  @param  tree_   Simulation tree.
+         *  @param  paths_  Paths of photons to render.
+         */
         inline void Sim::render(const dom::Region& dom_, const tree::Root& tree_, const std::vector<std::vector<std::vector<gui::Point>>>& paths_) const noexcept
         {
 #ifdef RENDER
