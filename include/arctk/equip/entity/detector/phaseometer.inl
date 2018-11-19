@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
                 //  -- Saving --
                 void Phaseometer::save(const std::string& path_) const noexcept
                 {
-                    const vec2 phase = cart_to_polar(_total_phase);
+                    const vec2 phase = math::convert::cart_to_polar(_total_phase);
 
                     std::ofstream file(path_);
 
