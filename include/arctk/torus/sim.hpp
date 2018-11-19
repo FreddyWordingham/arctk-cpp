@@ -96,8 +96,8 @@ namespace arc //! arctk namespace
             std::array<size_t, 3> _res; //!< Resolution of the domain.
 
             //  -- Tree --
-            size_t _max_depth;
-            size_t _tar_tris;
+            size_t _max_depth; //!< Maximum depth of the simulation tree.
+            size_t _tar_tris;  //!< Target maximum number of triangles to contain within tree leaf cells.
 
             //  -- Rendering --
             bool _pre_render;
