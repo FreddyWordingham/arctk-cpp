@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Wavefront(const std::string& file_) noexcept;
+            inline explicit Wavefront(const std::string& file_) noexcept;
 
 
             //  == METHODS ==
