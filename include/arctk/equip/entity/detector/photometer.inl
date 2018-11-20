@@ -36,16 +36,15 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
                 //  -- Constructors --
                 /**
-                 *  Construct a phaseometer object.
+                 *  Construct a photometer object.
                  *
-                 *  @param  surf_           Surface of the phaseometer.
+                 *  @param  surf_           Surface of the photometer.
                  *  @param  double_sided_   True if detector may record back hits.
                  */
-                inline Phaseometer::Phaseometer(const geom::shape::Mesh& surf_, const bool double_sided_) noexcept
+                inline Photometer::Photometer(const geom::shape::Mesh& surf_, const bool double_sided_) noexcept
                   : Detector(surf_)
                   , _double_sided(double_sided_)
                   , _total_weight(0.0)
-                  , _total_phase(0.0, 0.0)
                 {
                 }
 
