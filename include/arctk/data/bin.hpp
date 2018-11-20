@@ -46,6 +46,7 @@ namespace arc //! arctk namespace
             vecN<N> _max;
 
             //  -- Data --
+            std::array<size_t, N> _res;
             multi::vector<T, N> _bins;
 
 
@@ -70,13 +71,13 @@ namespace arc //! arctk namespace
 
           private:
             template <size_t M>
-            inline void count_helper(const vecN<N>& pos_, const T& value_, multi::vector<T, N>& bins_) noexcept
+            inline void count_helper(const vecN<N>& pos_, const T& value_, multi::vector<T, M>& bins_) noexcept
             {
                 count_helper<N - 1>(pos_, value_, bins_[0]);
             }
 
             template <>
-            inline void count_helper(const vecN<N>& pos_, const T& value_, multi::vector<T, N>& bins_) noexcept
+            inline void count_helper<1>(const vecN<N>& pos_, const T& value_, std::vector<T>& bins_) noexcept
             {
                 bins_[0] += value_;
             }
