@@ -83,13 +83,13 @@ namespace arc //! arctk namespace
             template <size_t M>
             inline void count_helper(const vecN<N>& pos_, const T& value_, multi::vector<T, M>& bins_) noexcept
             {
-                count_helper<N - 1>(pos_, value_, bins_[static_cast<size_t>((pos_[M] - _min[M]) / (_max[M] - _min[M]))]);
+                count_helper<N - 1>(pos_, value_, bins_[static_cast<size_t>((pos_[M] - _min[M]) / _bin_size[M])]);
             }
 
             template <>
             inline void count_helper<1>(const vecN<N>& pos_, const T& value_, std::vector<T>& bins_) noexcept
             {
-                bins_[static_cast<size_t>((pos_[0] - _min[0]) / (_max[0] - _min[0]))] += value_;
+                bins_[static_cast<size_t>((pos_[0] - _min[0]) / _bin_size[0])] += value_;
             }
         };
 
