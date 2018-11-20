@@ -44,6 +44,14 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Getters --
+        template <typename T>
+        inline const std::vector<T>& Bin<T>::data() const noexcept
+        {
+            return (_data);
+        }
+
+
         //  -- Indexing --
         template <typename T>
         inline size_t Bin<T>::index(const double val_) const noexcept

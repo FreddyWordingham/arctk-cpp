@@ -55,6 +55,10 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
+          public:
+            //  -- Getters --
+            inline const std::vector<T>& data() const noexcept;
+
           private:
             //  -- Indexing --
             inline size_t index(double val_) const noexcept;
