@@ -33,11 +33,22 @@ namespace arc //! arctk namespace
          *  Data binning class.
          *
          *  @tparam T   Type binned.
-         *  @tparam N   Dimensionality of the bin.
          */
-        template <typename T, size_t N>
+        template <typename T>
         class Bin
         {
+            //  == FIELDS ==
+          private:
+            //  -- Data --
+
+
+            //  == INSTANTIATION ==
+          public:
+            //  -- Constructors --
+
+
+            //  == METHODS ==
+          public:
         };
 
 
