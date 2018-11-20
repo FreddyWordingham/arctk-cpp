@@ -15,6 +15,11 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <array>
+#include <cstddef>
+#include <vector>
+
 //  -- Arctk --
 #include <arctk/math/vec.hpp>
 #include <arctk/multi/vector.hpp>
@@ -47,7 +52,7 @@ namespace arc //! arctk namespace
 
             //  -- Data --
             std::array<size_t, N> _res;
-            multi::vector<T, N> _bins;
+            multi::vector<T, N>   _bins;
 
 
             //  == INSTANTIATION ==
