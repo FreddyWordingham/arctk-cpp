@@ -56,6 +56,10 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Finder(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) noexcept;
 
+          private:
+            //  -- Initialisation --
+            inline vecN<N> init_size(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) const noexcept;
+
 
             //  == METHODS ==
           public:
