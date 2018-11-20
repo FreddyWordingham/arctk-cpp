@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i < N; ++i)
             {
-                bin_size[i] /= res_;
+                bin_size[i] /= res_[i];
             }
 
             return (bin_size);
