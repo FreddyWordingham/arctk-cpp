@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/math/vec.hpp>
 #include <arctk/multi/vector.hpp>
 
 
@@ -40,6 +41,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Bounds --
+            math::Vec<double, N> _min;
+            math::Vec<double, N> _max;
+
             //  -- Data --
             multi::vector<T, N> _bins;
 
