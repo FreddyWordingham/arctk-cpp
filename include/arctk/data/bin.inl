@@ -31,11 +31,11 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <typename T, size_t N>
-        inline Bin<T, N>::Bin(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_, const T& init_) noexcept
+        inline Bin<T, N>::Bin(const std::array<double, N>& min_, const std::array<double, N>& max_, const std::array<size_t, N>& res_, const T& init_) noexcept
           : _min(min_)
           , _max(max_)
           , _res(res_)
-          , _bin_size(init_bin_size(min_, max_, res_))
+          , _bin_width(init_bin_width(min_, max_, res_))
           , _bins(multi::vector_helper<T, N>::shape(res_, init_))
         {
             for (size_t i = 0; i < N; ++i)
@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
 
         //  -- Initialisation --
         template <typename T, size_t N>
-        inline vecN<N> Bin<T, N>::init_bin_size(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) const noexcept
+        inline vecN<N> Bin<T, N>::init_bin_size(const std::array<double, N>& min_, const std::array<double, N>& max_, const std::array<size_t, N>& res_) const noexcept
         {
             for (size_t i = 0; i < N; ++i)
             {
@@ -56,14 +56,13 @@ namespace arc //! arctk namespace
                 assert(res_[i] > 0);
             }
 
-            vecN<N> bin_size = max_ - min_;
-
+            std::array<double, N> bin_width;
             for (size_t i = 0; i < N; ++i)
             {
-                bin_size[i] /= res_[i];
+                bin_width[i] = (max_[i] - min_[i]) / res_[i];
             }
 
-            return (bin_size);
+            return (bin_width);
         }
 
 

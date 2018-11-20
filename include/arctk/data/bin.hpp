@@ -50,23 +50,23 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Bounds --
-            vecN<N> _min;
-            vecN<N> _max;
+            std::array<double, N> _min;
+            std::array<double, N> _max;
 
             //  -- Data --
             const std::array<size_t, N> _res;
-            vecN<N>                     _bin_size;
+            std::array<double, N>       _bin_width;
             multi::vector<T, N>         _bins;
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Bin(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_, const T& init_ = {}) noexcept;
+            inline Bin(const std::array<double, N>& min_, const std::array<double, N>& max_, const std::array<size_t, N>& res_, const T& init_ = {}) noexcept;
 
           private:
             //  -- Initialisation --
-            inline vecN<N> init_bin_size(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) const noexcept;
+            inline std::array<double, N> init_bin_width(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) const noexcept;
 
 
             //  == METHODS ==
