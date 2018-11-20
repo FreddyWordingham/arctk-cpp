@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <vector>
 
 
 
@@ -37,6 +38,23 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         class Bin
         {
+        };
+
+
+
+        //  == CLASS SPECIALISATIONS ==
+        /**
+         *  One-dimensional data binning class.
+         *
+         *  @tparam T   Type binned.
+         */
+        template <typename T>
+        class Bin<T, 1>
+        {
+            //  == FIELDS ==
+          private:
+            //  -- Data --
+            std::vector<T> _data;
         };
 
 
