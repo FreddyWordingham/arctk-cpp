@@ -44,6 +44,7 @@ namespace arc //! arctk namespace
             double _max;
 
             //  -- Data --
+            double         _bin_width;
             std::vector<T> _data;
 
 
