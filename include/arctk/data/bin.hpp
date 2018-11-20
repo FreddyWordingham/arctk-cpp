@@ -57,6 +57,23 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            inline void count(const vecN<N>& pos_, const T& value_) noexcept
+            {
+                count_helper<N>(pos_, value_, _bins);
+            }
+
+          private:
+            template <size_t M>
+            inline void count_helper(const vecN<N>& pos_, const T& value_, multi::vector<T, N>& bins_) noexcept
+            {
+                count_helper<N - 1>(pos_, value_, _bins[0]);
+            }
+
+            template <>
+            inline void count_helper(const vecN<N>& pos_, const T& value_, multi::vector<T, N>& bins_) noexcept
+            {
+                _bins[0] += value_;
+            }
         };
 
 
