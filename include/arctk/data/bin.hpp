@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const multi::vector<T, N>& bins() const noexcept
+            inline const multi::vector<T, N>& data() const noexcept
             {
                 return (_bins);
             }
