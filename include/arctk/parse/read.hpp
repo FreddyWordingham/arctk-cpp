@@ -26,9 +26,6 @@
 
 //  -- Arctk --
 #include <arctk/math/mat.hpp>
-#include <arctk/math/mat2.hpp>
-#include <arctk/math/mat3.hpp>
-#include <arctk/math/mat4.hpp>
 #include <arctk/math/vec.hpp>
 #include <arctk/type/tag.hpp>
 

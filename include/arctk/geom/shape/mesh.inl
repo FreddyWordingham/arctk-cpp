@@ -27,8 +27,8 @@
 #include <arctk/index/dim.hpp>
 #include <arctk/index/vertex.hpp>
 #include <arctk/math/compare.hpp>
+#include <arctk/math/mat.hpp>
 #include <arctk/math/mat/transform.hpp>
-#include <arctk/math/mat4.hpp>
 #include <arctk/prop/contents.hpp>
 #include <arctk/random/generator.hpp>
 #include <arctk/search/index.hpp>
