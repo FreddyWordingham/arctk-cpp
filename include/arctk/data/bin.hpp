@@ -39,7 +39,12 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Bounds --
+            double _min;
+            double _max;
+
             //  -- Data --
+            std::vector<T> _data;
 
 
             //  == INSTANTIATION ==
