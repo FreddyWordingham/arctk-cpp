@@ -464,10 +464,10 @@ namespace arc //! arctk namespace
 
 
 //  == IMPLEMENTATION ==
-#include <arctk/math/vec.inl>
 #include <arctk/math/vec2.inl>
 #include <arctk/math/vec3.inl>
 #include <arctk/math/vec4.inl>
+#include <arctk/math/vecN.inl>
 
 
 

@@ -377,10 +377,10 @@ namespace arc //! arctk namespace
 
 
 //  == IMPLEMENTATION ==
-#include <arctk/math/mat.inl>
 #include <arctk/math/mat2.inl>
 #include <arctk/math/mat3.inl>
 #include <arctk/math/mat4.inl>
+#include <arctk/math/matN.inl>
 
 
 
