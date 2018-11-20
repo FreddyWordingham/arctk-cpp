@@ -44,9 +44,6 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         class Bin
         {
-            static_assert(N > 1);
-
-
             //  == FIELDS ==
           private:
             //  -- Bounds --
@@ -62,6 +59,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Bin(double min_, double max_, size_t res_, const T& init_ = {}) noexcept;
             inline Bin(const std::array<double, N>& min_, const std::array<double, N>& max_, const std::array<size_t, N>& res_, const T& init_ = {}) noexcept;
 
           private:

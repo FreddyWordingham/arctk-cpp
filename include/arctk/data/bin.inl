@@ -31,6 +31,20 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <typename T, size_t N>
+        inline Bin<T, N>::Bin(double min_, double max_, size_t res_, const T& init_) noexcept
+          : _min(std::array<double, 1>({{min_}}))
+          , _max(std::array<double, 1>({{max_}}))
+          , _res(std::array<size_t, 1>({{res_}}))
+          , _bin_width(std::array<double, 1>({{(max_ - min_) / res_}}))
+          , _bins(multi::vector_helper<T, 1>::shape(std::array<size_t, 1>({{res_}}), init_))
+        {
+            static_assert(N == 1);
+
+            assert(min_ < max_);
+            assert(res_ > 0);
+        }
+
+        template <typename T, size_t N>
         inline Bin<T, N>::Bin(const std::array<double, N>& min_, const std::array<double, N>& max_, const std::array<size_t, N>& res_, const T& init_) noexcept
           : _min(min_)
           , _max(max_)
@@ -48,7 +62,7 @@ namespace arc //! arctk namespace
 
         //  -- Initialisation --
         template <typename T, size_t N>
-        inline vecN<N> Bin<T, N>::init_bin_size(const std::array<double, N>& min_, const std::array<double, N>& max_, const std::array<size_t, N>& res_) const noexcept
+        inline std::array<double, N> Bin<T, N>::init_bin_width(const std::array<double, N>& min_, const std::array<double, N>& max_, const std::array<size_t, N>& res_) const noexcept
         {
             for (size_t i = 0; i < N; ++i)
             {
