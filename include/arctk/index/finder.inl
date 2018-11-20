@@ -40,6 +40,10 @@ namespace arc //! arctk namespace
           , _size()
           , _res(res_)
         {
+            for (size_t i = 0; i < N; ++i)
+            {
+                assert(min_[i] < max_[i]);
+            }
             assert(prop::limits::always_greater_than(res_, 0));
         }
 
@@ -48,6 +52,10 @@ namespace arc //! arctk namespace
         template <size_t N>
         inline vecN<N> Finder<N>::init_size(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) const noexcept
         {
+            for (size_t i = 0; i < N; ++i)
+            {
+                assert(min_[i] < max_[i]);
+            }
             assert(prop::limits::always_greater_than(res_, 0));
 
             vecN<N> size = max_ - min_;
