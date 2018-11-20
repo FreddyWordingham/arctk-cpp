@@ -66,7 +66,7 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Initialisation --
-            inline std::array<double, N> init_bin_width(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_) const noexcept;
+            inline std::array<double, N> init_bin_width(const std::array<double, N>& min_, const std::array<double, N>& max_, const std::array<size_t, N>& res_) const noexcept;
 
 
             //  == METHODS ==
