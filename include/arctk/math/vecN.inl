@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/math/vec.inl
+ *  @file   arctk/math/vecN.inl
  *  @date   17/10/2018
  *  @author Freddy Wordingham
  *
- *  Mathematical vector class.
+ *  N-dimensional mathematical vector class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_MATH_VEC_INL
-#define ARCTK_MATH_VEC_INL
+#ifndef ARCTK_MATH_VECN_INL
+#define ARCTK_MATH_VECN_INL
 
 
 
@@ -700,4 +700,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_MATH_VEC_INL
+#endif // ARCTK_MATH_VECN_INL
