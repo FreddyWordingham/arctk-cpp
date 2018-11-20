@@ -42,8 +42,8 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Bounds --
-            math::Vec<double, N> _min;
-            math::Vec<double, N> _max;
+            vecN<N> _min;
+            vecN<N> _max;
 
             //  -- Data --
             multi::vector<T, N> _bins;
@@ -52,7 +52,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Bin(const std::array<size_t, N>& res_, const T& init_ = {}) noexcept;
+            inline Bin(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_, const T& init_ = {}) noexcept;
 
 
             //  == METHODS ==

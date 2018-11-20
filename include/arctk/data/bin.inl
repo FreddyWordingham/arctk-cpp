@@ -30,8 +30,10 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <typename T, size_t N>
-        inline Bin::Bin(const std::array<size_t, N>& res_, const T& init_) noexcept
-          : _bins(multi::vector_helper<T, N>::shape(res_, init_))
+        inline Bin<T, N>::Bin(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_, const T& init_) noexcept
+          : _min(min_)
+          , _max(max_)
+          , _bins(multi::vector_helper<T, N>::shape(res_, init_))
         {
         }
 
