@@ -15,7 +15,8 @@
 
 
 //  == IMPORTS ==
-//  -- Std --
+//  -- Arctk --
+#include <arctk/multi/vector.hpp>
 
 
 
@@ -30,12 +31,17 @@ namespace arc //! arctk namespace
         //  == CLASS ==
         /**
          *  Data binning class.
+         *
+         *  @tparam T   Type binned.
+         *  @tparam N   Dimensionality of the bin.
          */
+        template <typename T, size_t N>
         class Bin
         {
             //  == FIELDS ==
           private:
             //  -- Data --
+            multi::vector<T, N> _bins;
 
 
             //  == INSTANTIATION ==
