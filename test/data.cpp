@@ -25,11 +25,11 @@
  */
 int main(const int /*unused*/, const char** /*unused*/)
 {
-    arc::data::Bin<int, 2> bin(arc::vec2(0.0, 0.0), arc::vec2(1.0, 1.0), {{2, 2}});
+    arc::data::Bin<int, 1> bin(0.0, 1.0, 2);
 
-    bin.count(arc::vec2(0.75, 0.75), 1.23);
+    bin.count(0.75, 1.23);
 
-    std::cout << bin.bins() << '\n';
+    std::cout << bin.data() << '\n';
 
     return (0);
 }

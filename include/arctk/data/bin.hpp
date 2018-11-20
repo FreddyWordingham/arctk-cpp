@@ -44,6 +44,9 @@ namespace arc //! arctk namespace
         template <typename T, size_t N>
         class Bin
         {
+            static_assert(N > 1);
+
+
             //  == FIELDS ==
           private:
             //  -- Bounds --
