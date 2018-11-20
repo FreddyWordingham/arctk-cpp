@@ -55,7 +55,9 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
-          public:
+          private:
+            //  -- Indexing --
+            inline size_t index(double val_) const noexcept;
         };
 
 
