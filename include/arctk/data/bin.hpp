@@ -51,8 +51,8 @@ namespace arc //! arctk namespace
             vecN<N> _max;
 
             //  -- Data --
-            std::array<size_t, N> _res;
-            multi::vector<T, N>   _bins;
+            const std::array<size_t, N> _res;
+            multi::vector<T, N>         _bins;
 
 
             //  == INSTANTIATION ==
