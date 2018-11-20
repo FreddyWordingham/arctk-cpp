@@ -26,7 +26,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace data //! data namespace
+    namespace index //! indexing namespace
     {
 
 
@@ -64,7 +64,7 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace data
+    } // namespace index
 } // namespace arc
 
 
