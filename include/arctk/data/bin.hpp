@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
 
 
 //  == IMPLEMENTATION ==
-#include <arctk/data/bin.inl>
+#include <arctk/data/bin1.inl>
 
 
 
