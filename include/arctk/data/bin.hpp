@@ -42,30 +42,13 @@ namespace arc //! arctk namespace
 
 
 
-        //  == CLASS SPECIALISATIONS ==
-        /**
-         *  One-dimensional data binning class.
-         *
-         *  @tparam T   Type binned.
-         */
-        template <typename T>
-        class Bin<T, 1>
-        {
-            //  == FIELDS ==
-          private:
-            //  -- Data --
-            std::vector<T> _data;
-        };
-
-
-
     } // namespace data
 } // namespace arc
 
 
 
 //  == IMPLEMENTATION ==
-#include <arctk/data/bin1.inl>
+#include <arctk/data/bin.inl>
 
 
 

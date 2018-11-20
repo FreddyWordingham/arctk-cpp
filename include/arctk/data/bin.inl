@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/data/bin1.inl
+ *  @file   arctk/data/bin.inl
  *  @date   20/11/2018
  *  @author Freddy Wordingham
  *
@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_BIN1_INL
-#define ARCTK_DATA_BIN1_INL
+#ifndef ARCTK_DATA_BIN_INL
+#define ARCTK_DATA_BIN_INL
 
 
 
@@ -44,4 +44,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_DATA_BIN1_INL
+#endif // ARCTK_DATA_BIN_INL
