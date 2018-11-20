@@ -30,6 +30,16 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        template <typename T>
+        inline Bin::Bin(const double min_, const double max_, const double res_, const T& init_) noexcept
+          : _min(min_)
+          , _max(max_)
+          , _bin_width((max_ - min_) / res_)
+          , _data(res_, init_)
+        {
+            assert(min_ < max_);
+            assert(res_ > 0);
+        }
 
 
 
