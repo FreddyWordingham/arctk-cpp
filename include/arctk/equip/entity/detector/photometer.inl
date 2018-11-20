@@ -59,17 +59,13 @@ namespace arc //! arctk namespace
                  *
                  *  @pre    path_ may not be empty.
                  */
-                void Phaseometer::save(const std::string& path_) const noexcept
+                void Photometer::save(const std::string& path_) const noexcept
                 {
                     assert(!path_.empty());
-
-                    const vec2 phase = math::convert::cart_to_polar(_total_phase);
 
                     std::ofstream file(path_ + ".dat");
 
                     file << "Total weight : " << _total_weight << '\n';
-                    file << "Total phase  : " << phase.theta << '\n';
-                    file << "Coherence    : " << phase.rho / _total_weight << '\n';
                 }
 
 
