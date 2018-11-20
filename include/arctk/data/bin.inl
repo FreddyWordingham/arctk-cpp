@@ -33,6 +33,7 @@ namespace arc //! arctk namespace
         inline Bin<T, N>::Bin(const vecN<N>& min_, const vecN<N>& max_, const std::array<size_t, N>& res_, const T& init_) noexcept
           : _min(min_)
           , _max(max_)
+          , _res(res_)
           , _bins(multi::vector_helper<T, N>::shape(res_, init_))
         {
         }
