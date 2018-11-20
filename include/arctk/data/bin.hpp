@@ -47,6 +47,9 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            //         inline Bin(const std::array<T) noexcept;
+
+            // std::cout << arc::multi::vector_helper<int, 3>::shape({{4, 2, 1}}) << '\n';
 
 
             //  == METHODS ==

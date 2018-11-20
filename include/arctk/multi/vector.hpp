@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Factories --
-            static type shape(const std::array<size_t, N>& size_) noexcept
+            static type shape(const std::array<size_t, N>& size_, const T& init_ = {}) noexcept
             {
                 std::array<size_t, N - 1> size;
                 for (size_t i = 1; i < N; ++i)
@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
                     size[i - 1] = size_[i];
                 }
 
-                return (type(size_[0], vector_helper<T, N - 1>::shape(size)));
+                return (type(size_[0], vector_helper<T, N - 1>::shape(size, init_)));
             }
         };
 
@@ -77,9 +77,9 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Factories --
-            static type shape(const std::array<size_t, 1>& size_) noexcept
+            static type shape(const std::array<size_t, 1>& size_, const T& init_ = {}) noexcept
             {
-                return (std::vector<T>(size_[0]));
+                return (std::vector<T>(size_[0], init_));
             }
         };
 
