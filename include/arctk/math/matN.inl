@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/math/mat.inl
+ *  @file   arctk/math/matN.inl
  *  @date   11/07/2018
  *  @author Freddy Wordingham
  *
- *  Mathematical square matrix class.
+ *  Mathematical N-by-N matrix class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_MATH_MAT_INL
-#define ARCTK_MATH_MAT_INL
+#ifndef ARCTK_MATH_MATN_INL
+#define ARCTK_MATH_MATN_INL
 
 
 
@@ -824,4 +824,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_MATH_MAT_INL
+#endif // ARCTK_MATH_MATN_INL
