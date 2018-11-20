@@ -51,12 +51,12 @@ namespace arc //! arctk namespace
             static type shape(const std::array<size_t, N>& size_) noexcept
             {
                 std::array<size_t, N - 1> size;
-                for (size_t i = 0; i < (N - 1); ++i)
+                for (size_t i = 1; i < N; ++i)
                 {
-                    size[i] = size_[i];
+                    size[i - 1] = size_[i];
                 }
 
-                return (type(size_[N - 1], vector_helper<T, N - 1>::shape(size)));
+                return (type(size_[0], vector_helper<T, N - 1>::shape(size)));
             }
         };
 
