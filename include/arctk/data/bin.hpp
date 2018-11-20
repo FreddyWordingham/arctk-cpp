@@ -75,6 +75,13 @@ namespace arc //! arctk namespace
                 return (_bins);
             }
 
+            inline void count(const double pos_, const T& value_) noexcept
+            {
+                static_assert(N == 1);
+
+                _bins[static_cast<size_t>((pos_ - _min[0]) / _bin_width[0])] += value_;
+            }
+
             inline void count(const vecN<N>& pos_, const T& value_) noexcept
             {
                 count_helper<N>(pos_, value_, _bins);

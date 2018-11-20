@@ -27,7 +27,7 @@ int main(const int /*unused*/, const char** /*unused*/)
 {
     arc::data::Bin<int, 1> bin(0.0, 1.0, 2);
 
-    //  bin.count(0.75, 1.23);
+    bin.count(0.75, 1);
 
     //    std::cout << bin.data() << '\n';
 
