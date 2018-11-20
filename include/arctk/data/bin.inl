@@ -56,8 +56,8 @@ namespace arc //! arctk namespace
         template <typename T>
         inline size_t Bin<T>::index(const double val_) const noexcept
         {
-            assert(val_ >= min_);
-            assert(val_ <= max_);
+            assert(val_ >= _min);
+            assert(val_ <= _max);
 
             const size_t index = static_cast<size_t>((val_ - _min) / _bin_width);
 
