@@ -84,7 +84,7 @@ namespace arc //! arctk namespace
                  *
                  *  @return False if the photon should be removed from the simulation.
                  */
-                bool Phaseometer::hit_front(random::Generator* /*unused*/, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept
+                bool Photometer::hit_front(random::Generator* /*unused*/, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept
                 {
                     assert(phot_ != nullptr);
                     assert(sop_ != nullptr);
@@ -94,7 +94,6 @@ namespace arc //! arctk namespace
                     cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
 
                     _total_weight += phot_->weight();
-                    _total_phase += phot_->phasor() * phot_->weight();
 
                     return (false);
                 }
