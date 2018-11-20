@@ -29,7 +29,7 @@
 
 //  -- Arctk --
 #include <arctk/geom/shape/box.hpp>
-#include <arctk/math/vec3.hpp>
+#include <arctk/math/vec.hpp>
 
 
 

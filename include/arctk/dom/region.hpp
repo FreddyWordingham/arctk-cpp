@@ -27,7 +27,7 @@
 
 //  -- Arctk --
 #include <arctk/dom/cell.hpp>
-#include <arctk/math/vec3.hpp>
+#include <arctk/math/vec.hpp>
 
 
 

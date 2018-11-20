@@ -16,12 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
-#include <functional>
-#include <vector>
-
-//  -- Arctk --
-#include <arctk/math/vec3.hpp>
-#include <arctk/multi/vector.hpp>
+#include <string>
 
 
 

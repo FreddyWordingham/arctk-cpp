@@ -24,7 +24,7 @@
 
 //  -- Arctk --
 #include <arctk/math/convert.hpp>
-#include <arctk/math/vec3.hpp>
+#include <arctk/math/vec.hpp>
 
 
 

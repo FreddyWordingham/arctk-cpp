@@ -20,7 +20,7 @@
 
 //  -- Arctk --
 #include <arctk/geom/collision.hpp>
-#include <arctk/math/vec3.hpp>
+#include <arctk/math/vec.hpp>
 
 
 
@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
         //  -- Getters --
         /**
          *  Get the surface mesh of an entity.
-         * 
+         *
          *  @return Surface mesh of an entity.
          */
         inline const geom::shape::Mesh& Entity::surf() const noexcept

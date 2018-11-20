@@ -26,7 +26,7 @@
 
 //  -- Arctk --
 #include <arctk/geom/collision.hpp>
-#include <arctk/math/vec3.hpp>
+#include <arctk/math/vec.hpp>
 #include <arctk/type/collision.hpp>
 
 
@@ -109,7 +109,7 @@ namespace arc //! arctk namespace
             std::vector<std::pair<const equip::entity::Detector*, std::string>> _detectors; //!< Vector of detectors within the simulation.
 
             //  -- Roulette --
-            bool _roulette;        //!< If true, perform roulette optimisation.
+            bool   _roulette;        //!< If true, perform roulette optimisation.
             double _roulette_limit;  //!< Weight at which to begin roulette.
             double _roulette_chance; //!< Chance of photon kill during roulette.
 
