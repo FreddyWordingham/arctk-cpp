@@ -52,6 +52,7 @@ namespace arc //! arctk namespace
 
             //  -- Data --
             const std::array<size_t, N> _res;
+            vecN<N>                     _bin_size;
             multi::vector<T, N>         _bins;
 
 
