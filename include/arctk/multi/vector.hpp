@@ -16,6 +16,8 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <array>
+#include <cassert>
 #include <vector>
 
 
@@ -37,7 +39,25 @@ namespace arc //! arctk namespace
         template <class T, size_t N>
         struct vector_helper // NOLINT
         {
+            //  == ALIASES ==
+          public:
+            //  -- Type --
             using type = std::vector<typename vector_helper<T, N - 1>::type>; //!< Type alias.
+
+
+            //  == METHODS ==
+          public:
+            //  -- Factories --
+            static type shape(const std::array<size_t, N>& size_) noexcept
+            {
+                std::array<size_t, N - 1> size;
+                for (size_t i = 0; i < (N - 1); ++i)
+                {
+                    size[i] = size_[i];
+                }
+
+                return (type(size_[N - 1], vector_helper<T, N - 1>::shape(size)));
+            }
         };
 
         /**
@@ -48,7 +68,19 @@ namespace arc //! arctk namespace
         template <class T>
         struct vector_helper<T, 1> // NOLINT
         {
+            //  == ALIASES ==
+          public:
+            //  -- Type --
             using type = std::vector<T>; //!< Type alias.
+
+
+            //  == METHODS ==
+          public:
+            //  -- Factories --
+            static type shape(const std::array<size_t, 1>& size_) noexcept
+            {
+                return (std::vector<T>(size_[0]));
+            }
         };
 
 
