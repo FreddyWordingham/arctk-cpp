@@ -48,12 +48,16 @@ namespace arc //! arctk namespace
         template <typename T>
         inline T& Bin<T>::operator[](const size_t index_) noexcept
         {
+            assert(index_ < _data.size());
+
             return (_data[index_]);
         }
 
         template <typename T>
         inline const T& Bin<T>::operator[](const size_t index_) const noexcept
         {
+            assert(index_ < _data.size());
+
             return (_data[index_]);
         }
 
