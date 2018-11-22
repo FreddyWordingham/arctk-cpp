@@ -51,6 +51,9 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            inline double min() const noexcept;
+            inline double max() const noexcept;
         };
 
 

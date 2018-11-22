@@ -34,6 +34,18 @@ namespace arc //! arctk namespace
 
 
         //  == METHODS ==
+        //  -- Getters --
+        template <typename T>
+        inline double Bin<T>::min() const noexcept
+        {
+            return (_min);
+        }
+
+        template <typename T>
+        inline double Bin<T>::max() const noexcept
+        {
+            return (_max);
+        }
 
 
 
