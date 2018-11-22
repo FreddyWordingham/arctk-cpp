@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
 
             //  -- Indexing --
             template <typename T>
-            inline size_t index(const double pos_) const noexcept
+            inline size_t Regular<T>::index(const double pos_) const noexcept
             {
                 assert(pos_ >= _min);
                 assert(pos_ <= _max);
