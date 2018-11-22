@@ -40,6 +40,9 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Interval --
+                const double _interval;
+
 
                 //  == INSTANTIATION ==
               public:
