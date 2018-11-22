@@ -19,6 +19,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Std --
+#include <cstddef>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -66,6 +72,10 @@ namespace arc //! arctk namespace
               public:
                 //  -- Getters --
                 inline double interval() const noexcept;
+
+              private:
+                //  -- Indexing --
+                inline size_t index(double pos_) const noexcept;
             };
 
 

@@ -60,6 +60,19 @@ namespace arc //! arctk namespace
             }
 
 
+            //  -- Indexing --
+            template <typename T>
+            inline size_t index(const double pos_) const noexcept
+            {
+                assert(pos_ >= _min);
+                assert(pos_ <= _max);
+
+                const size_t index = static_cast<size_t>((pos_ - _min) / _interval);
+
+                return ((index == _data.size()) ? (index - 1) : index);
+            }
+
+
 
         } // namespace bin
     }     // namespace data
