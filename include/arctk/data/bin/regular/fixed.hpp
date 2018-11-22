@@ -66,7 +66,7 @@ namespace arc //! arctk namespace
 
 
 //  == IMPLEMENTATION ==
-#include <arctk/data/bin/refular/fixed.inl>
+#include <arctk/data/bin/regular/fixed.inl>
 
 
 
