@@ -36,7 +36,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type binned.
              */
             template <typename T>
-            class Regular : public Bin
+            class Regular : public Bin<T>
             {
                 //  == FIELDS ==
               private:
