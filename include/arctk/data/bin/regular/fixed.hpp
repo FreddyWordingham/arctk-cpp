@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_BIN_FIXED_HPP
-#define ARCTK_DATA_BIN_FIXED_HPP
+#ifndef ARCTK_DATA_BIN_REGULAR_FIXED_HPP
+#define ARCTK_DATA_BIN_REGULAR_FIXED_HPP
 
 
 
@@ -26,44 +26,47 @@ namespace arc //! arctk namespace
     {
         namespace bin //! binning namespace
         {
-
-
-
-            //  == CLASS ==
-            /**
-             *  Fixed range regular interval binning class.
-             *
-             *  @tparam T   Type binned.
-             */
-            template <typename T>
-            class Regular : public Regular
+            namespace regular //! regular interval namespace
             {
-                //  == FIELDS ==
-              private:
-                //  -- Interval --
-                const double _interval;
-
-
-                //  == INSTANTIATION ==
-              public:
-                //  -- Constructors --
-                inline Regular(double min_, double max_, size_t res_, const T& init_ = {}) noexcept;
-
-
-                //  == OPERATORS ==
-              public:
-                //  -- Access --
-
-
-                //  == METHODS ==
-              public:
-                //  -- Getters --
-            };
 
 
 
-        } // namespace bin
-    }     // namespace data
+                //  == CLASS ==
+                /**
+                 *  Fixed range regular interval binning class.
+                 *
+                 *  @tparam T   Type binned.
+                 */
+                template <typename T>
+                class Fixed : public Regular
+                {
+                    //  == FIELDS ==
+                  private:
+                    //  -- Interval --
+                    const double _interval;
+
+
+                    //  == INSTANTIATION ==
+                  public:
+                    //  -- Constructors --
+                    inline Fixed(double min_, double max_, size_t res_, const T& init_ = {}) noexcept;
+
+
+                    //  == OPERATORS ==
+                  public:
+                    //  -- Access --
+
+
+                    //  == METHODS ==
+                  public:
+                    //  -- Getters --
+                };
+
+
+
+            } // namespace regular
+        }     // namespace bin
+    }         // namespace data
 } // namespace arc
 
 
@@ -74,4 +77,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_DATA_BIN_FIXED_HPP
+#endif // ARCTK_DATA_BIN_REGULAR_FIXED_HPP
