@@ -40,12 +40,6 @@ namespace arc //! arctk namespace
                 template <typename T>
                 class Fixed : public Regular
                 {
-                    //  == FIELDS ==
-                  private:
-                    //  -- Interval --
-                    const double _interval;
-
-
                     //  == INSTANTIATION ==
                   public:
                     //  -- Constructors --
