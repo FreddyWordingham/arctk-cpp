@@ -38,7 +38,7 @@ namespace arc //! arctk namespace
                  *  @tparam T   Type binned.
                  */
                 template <typename T>
-                class Fixed : public Regular
+                class Fixed : public Regular<T>
                 {
                     //  == INSTANTIATION ==
                   public:
