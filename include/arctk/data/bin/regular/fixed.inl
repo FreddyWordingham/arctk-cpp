@@ -32,6 +32,10 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            template <typename T>
+            inline Regular<T>::Regular(double min_, double max_, size_t res_, const T& init_ = {}) noexcept
+            {
+            }
 
 
 

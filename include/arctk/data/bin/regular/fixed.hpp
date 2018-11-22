@@ -14,8 +14,8 @@
 
 
 
-//  == IMPORTS ==
-//  -- Std --
+//  == BASE ==
+#include <arctk/data/bin.hpp>
 
 
 
@@ -36,7 +36,7 @@ namespace arc //! arctk namespace
              *  @tparam T   Type binned.
              */
             template <typename T>
-            class Regular
+            class Regular : public Bin
             {
                 //  == FIELDS ==
               private:
@@ -47,6 +47,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Regular(double min_, double max_, size_t res_, const T& init_ = {}) noexcept;
 
 
                 //  == OPERATORS ==
