@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
 
 
 //  == IMPLEMENTATION ==
-#include <arctk/data/bin/fixed.inl>
+#include <arctk/data/bin/refular/fixed.inl>
 
 
 
