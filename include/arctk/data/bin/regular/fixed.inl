@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_BIN_INL
-#define ARCTK_DATA_BIN_INL
+#ifndef ARCTK_DATA_BIN_REGULAR_INL
+#define ARCTK_DATA_BIN_REGULAR_INL
 
 
 
