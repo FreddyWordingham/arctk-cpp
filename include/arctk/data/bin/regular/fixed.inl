@@ -46,6 +46,21 @@ namespace arc //! arctk namespace
 
                 //  == OPERATORS ==
                 //  -- Access --
+                inline T& Fixed<T>::operator[](const double pos_) noexcept override
+                {
+                    assert(pos_ >= _min);
+                    assert(pos_ <= _max);
+
+                    return (_data[index(pos_)]);
+                }
+
+                inline const T& Fixed<T>::operator[](const double pos_) const noexcept override
+                {
+                    assert(pos_ >= _min);
+                    assert(pos_ <= _max);
+
+                    return (_data[index(pos_)]);
+                }
 
 
 
