@@ -52,10 +52,19 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Bin(double min_, double max_, size_t res_, const T& init_ = {}) noexcept;
+            inline Bin(const Bin&) = default; //!< Defaulted copy constructor.
+            inline Bin(Bin&&)      = default; //!< Defaulted move constructor.
+
+            //  -- Destructors --
+            virtual inline ~Bin() noexcept;
 
 
             //  == OPERATORS ==
           public:
+            //  -- Assignment --
+            inline Bin& operator=(const Bin&) noexcept = delete; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Bin& operator=(Bin&&) noexcept = delete;      //!< Defaulted move operator. @return Reference to moved object.
+
             //  -- Access --
             inline T&        operator[](size_t index_) noexcept;
             inline const T&  operator[](size_t index_) const noexcept;
