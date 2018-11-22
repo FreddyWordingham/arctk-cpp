@@ -11,6 +11,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/data/bin.hpp>
+#include <arctk/data/bin/fixed.hpp>
 #include <arctk/data/obj.hpp>
 #include <arctk/data/table.hpp>
 
