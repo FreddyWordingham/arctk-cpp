@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_BIN_REGULAR_INL
-#define ARCTK_DATA_BIN_REGULAR_INL
+#ifndef ARCTK_DATA_BIN_REGULAR_FIXED_INL
+#define ARCTK_DATA_BIN_REGULAR_FIXED_INL
 
 
 
@@ -27,28 +27,31 @@ namespace arc //! arctk namespace
     {
         namespace bin //! binning namespace
         {
-
-
-
-            //  == INSTANTIATION ==
-            //  -- Constructors --
-            template <typename T>
-            inline Regular<T>::Regular(double min_, double max_, size_t res_, const T& init_ = {}) noexcept
+            namespace regular //! regular interval namespace
             {
-            }
 
 
 
-            //  == OPERATORS ==
-            //  -- Access --
+                //  == INSTANTIATION ==
+                //  -- Constructors --
+                template <typename T>
+                inline Fixed<T>::Fixed(double min_, double max_, size_t res_, const T& init_ = {}) noexcept
+                {
+                }
 
 
 
-        } // namespace bin
-    }     // namespace data
+                //  == OPERATORS ==
+                //  -- Access --
+
+
+
+            } // namespace regular
+        }     // namespace bin
+    }         // namespace data
 } // namespace arc
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_DATA_BIN_REGULAR_INL
+#endif // ARCTK_DATA_BIN_REGULAR_FIXED_INL
