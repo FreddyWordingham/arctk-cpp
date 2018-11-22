@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/data/bin/regular.inl
+ *  @file   arctk/data/bin/regular/fixed.inl
  *  @date   22/11/2018
  *  @author Freddy Wordingham
  *
