@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_BIN_REGULAR_FIXED_HPP
-#define ARCTK_DATA_BIN_REGULAR_FIXED_HPP
+#ifndef ARCTK_DATA_BIN_REGULAR_HPP
+#define ARCTK_DATA_BIN_REGULAR_HPP
 
 
 
@@ -74,4 +74,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_DATA_BIN_REGULAR_FIXED_HPP
+#endif // ARCTK_DATA_BIN_REGULAR_HPP
