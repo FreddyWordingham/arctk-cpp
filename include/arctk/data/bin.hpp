@@ -51,6 +51,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Bin(double min_, double max_, size_t res_, const T& init_) const noexcept;
 
 
             //  == METHODS ==
@@ -59,7 +60,7 @@ namespace arc //! arctk namespace
             inline double         min() const noexcept;
             inline double         max() const noexcept;
             const std::vector<T>& data() const noexcept;
-            inline size_t         size() const noexcept;
+            inline size_t         res() const noexcept;
         };
 
 

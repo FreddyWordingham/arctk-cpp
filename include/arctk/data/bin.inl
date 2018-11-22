@@ -54,7 +54,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        inline size_t Bin<T>::size() const noexcept
+        inline size_t Bin<T>::res() const noexcept
         {
             return (_data.size());
         }
