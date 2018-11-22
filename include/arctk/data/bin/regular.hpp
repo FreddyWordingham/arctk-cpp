@@ -48,6 +48,18 @@ namespace arc //! arctk namespace
               public:
                 //  -- Constructors --
                 inline Regular(double min_, double max_, size_t res_, const T& init_ = {}) noexcept;
+                inline Regular(const Regular&) = default; //!< Defaulted copy constructor.
+                inline Regular(Regular&&)      = default; //!< Defaulted move constructor.
+
+                //  -- Destructors --
+                virtual inline ~Regular() noexcept;
+
+
+                //  == OPERATORS ==
+              public:
+                //  -- Assignment --
+                inline Regular& operator=(const Regular&) noexcept = delete; //!< Defaulted copy operator. @return Reference to copied object.
+                inline Regular& operator=(Regular&&) noexcept = delete;      //!< Defaulted move operator. @return Reference to moved object.
 
 
                 //  == METHODS ==

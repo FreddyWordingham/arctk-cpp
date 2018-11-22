@@ -42,6 +42,14 @@ namespace arc //! arctk namespace
             }
 
 
+            //  -- Destructors --
+            /**
+             *  Default destructor.
+             */
+            template <typename T>
+            inline Regular<T>::~Regular() noexcept = default;
+
+
 
             //  == Methods ==
             //  -- Getters --
