@@ -57,12 +57,10 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Access --
-            inline T&       operator[](size_t index_) noexcept;
-            inline const T& operator[](size_t index_) const noexcept;
-
-            //  -- Other --
-            virtual T&       operator()(double pos_) noexcept       = 0;
-            virtual const T& operator()(double pos_) const noexcept = 0;
+            inline T&        operator[](size_t index_) noexcept;
+            inline const T&  operator[](size_t index_) const noexcept;
+            virtual T&       operator[](double pos_) noexcept       = 0;
+            virtual const T& operator[](double pos_) const noexcept = 0;
 
 
             //  == METHODS ==
