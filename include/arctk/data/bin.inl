@@ -30,39 +30,10 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        template <typename T>
-        inline Bin<T>::Bin(const double min_, const double max_, const double res_, const T& init_) noexcept
-          : _min(min_)
-          , _max(max_)
-          , _bin_width((max_ - min_) / res_)
-          , _data(res_, init_)
-        {
-            assert(min_ < max_);
-            assert(res_ > 0);
-        }
 
 
 
         //  == METHODS ==
-        //  -- Getters --
-        template <typename T>
-        inline const std::vector<T>& Bin<T>::data() const noexcept
-        {
-            return (_data);
-        }
-
-
-        //  -- Indexing --
-        template <typename T>
-        inline size_t Bin<T>::index(const double val_) const noexcept
-        {
-            assert(val_ >= _min);
-            assert(val_ <= _max);
-
-            const size_t index = static_cast<size_t>((val_ - _min) / _bin_width);
-
-            return ((index == _data.size()) ? (index - 1) : index);
-        }
 
 
 
