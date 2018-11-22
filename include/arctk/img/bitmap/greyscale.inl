@@ -19,6 +19,7 @@
 #include <algorithm>
 #include <cassert>
 #include <fstream>
+#include <iomanip>
 
 //  -- Arctk --
 #include <arctk/math/container.hpp>
