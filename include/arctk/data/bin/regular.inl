@@ -33,7 +33,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename T>
-            inline Regular<T>::Regular(const double min_, const double max_, const size_t res_, const T& init_ = {}) noexcept
+            inline Regular<T>::Regular(const double min_, const double max_, const size_t res_, const T& init_) noexcept
               : _Bin(min_, max_, res_, init_)
               , _interval((max_ - min_) / res_)
             {
