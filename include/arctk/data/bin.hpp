@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cstddef>
 #include <vector>
 
 
@@ -43,6 +44,9 @@ namespace arc //! arctk namespace
             double _min;
             double _max;
 
+            //  -- Data --
+            std::vector<T> _data;
+
 
             //  == INSTANTIATION ==
           public:
@@ -52,8 +56,10 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double min() const noexcept;
-            inline double max() const noexcept;
+            inline double         min() const noexcept;
+            inline double         max() const noexcept;
+            const std::vector<T>& data() const noexcept;
+            inline size_t         size() const noexcept;
         };
 
 

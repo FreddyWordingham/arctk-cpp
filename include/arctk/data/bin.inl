@@ -47,6 +47,17 @@ namespace arc //! arctk namespace
             return (_max);
         }
 
+        template <typename T>
+        const std::vector<T>& Bin<T>::data() const noexcept
+        {
+            return (_data);
+        }
+
+        template <typename T>
+        inline size_t Bin<T>::size() const noexcept
+        {
+        }
+
 
 
     } // namespace data
