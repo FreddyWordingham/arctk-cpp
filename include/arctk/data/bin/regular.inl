@@ -43,8 +43,13 @@ namespace arc //! arctk namespace
 
 
 
-            //  == OPERATORS ==
-            //  -- Access --
+            //  == Methods ==
+            //  -- Getters --
+            template <typename T>
+            inline double Regular<T>::interval() const noexcept
+            {
+                return (_interval);
+            }
 
 
 

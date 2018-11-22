@@ -50,14 +50,10 @@ namespace arc //! arctk namespace
                 inline Regular(double min_, double max_, size_t res_, const T& init_ = {}) noexcept;
 
 
-                //  == OPERATORS ==
-              public:
-                //  -- Access --
-
-
                 //  == METHODS ==
               public:
                 //  -- Getters --
+                inline double interval() const noexcept;
             };
 
 
