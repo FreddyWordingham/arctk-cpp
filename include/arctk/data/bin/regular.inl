@@ -64,12 +64,12 @@ namespace arc //! arctk namespace
             template <typename T>
             inline size_t Regular<T>::index(const double pos_) const noexcept
             {
-                assert(pos_ >= _min);
-                assert(pos_ <= _max);
+                assert(pos_ >= Bin<T>::_min);
+                assert(pos_ <= Bin<T>::_max);
 
-                const size_t index = static_cast<size_t>((pos_ - _min) / _interval);
+                const size_t index = static_cast<size_t>((pos_ - Bin<T>::_min) / _interval);
 
-                return ((index == _data.size()) ? (index - 1) : index);
+                return ((index == Bin<T>::_data.size()) ? (index - 1) : index);
             }
 
 

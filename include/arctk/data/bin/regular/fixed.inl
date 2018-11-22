@@ -46,20 +46,22 @@ namespace arc //! arctk namespace
 
                 //  == OPERATORS ==
                 //  -- Access --
-                inline T& Fixed<T>::operator[](const double pos_) noexcept override
+                template <typename T>
+                inline T& Fixed<T>::operator[](const double pos_) noexcept
                 {
-                    assert(pos_ >= _min);
-                    assert(pos_ <= _max);
+                    assert(pos_ >= Bin<T>::_min);
+                    assert(pos_ <= Bin<T>::_max);
 
-                    return (_data[index(pos_)]);
+                    return (Bin<T>::_data[Regular<T>::index(pos_)]);
                 }
 
-                inline const T& Fixed<T>::operator[](const double pos_) const noexcept override
+                template <typename T>
+                inline const T& Fixed<T>::operator[](const double pos_) const noexcept
                 {
-                    assert(pos_ >= _min);
-                    assert(pos_ <= _max);
+                    assert(pos_ >= Bin<T>::_min);
+                    assert(pos_ <= Bin<T>::_max);
 
-                    return (_data[index(pos_)]);
+                    return (Bin<T>::_data[Regular<T>::index(pos_)]);
                 }
 
 
