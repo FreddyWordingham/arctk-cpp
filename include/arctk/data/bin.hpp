@@ -54,6 +54,13 @@ namespace arc //! arctk namespace
             inline Bin(double min_, double max_, size_t res_, const T& init_ = {}) noexcept;
 
 
+            //  == OPERATORS ==
+          public:
+            //  -- Access --
+            constexpr inline T&       operator[](size_t index_) noexcept;
+            constexpr inline const T& operator[](size_t index_) const noexcept;
+
+
             //  == METHODS ==
           public:
             //  -- Getters --

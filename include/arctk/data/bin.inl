@@ -43,6 +43,22 @@ namespace arc //! arctk namespace
 
 
 
+        //  == OPERATORS ==
+        //  -- Access --
+        template <typename T>
+        constexpr inline T& Bin<T>::operator[](const size_t index_) noexcept
+        {
+            return (_data[index_]);
+        }
+
+        template <typename T>
+        constexpr inline const T& Bin<T>::operator[](const size_t index_) const noexcept
+        {
+            return (_data[index_]);
+        }
+
+
+
         //  == METHODS ==
         //  -- Getters --
         template <typename T>
