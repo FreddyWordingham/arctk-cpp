@@ -64,10 +64,10 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double         min() const noexcept;
-            inline double         max() const noexcept;
-            const std::vector<T>& data() const noexcept;
-            inline size_t         res() const noexcept;
+            inline double                min() const noexcept;
+            inline double                max() const noexcept;
+            inline const std::vector<T>& data() const noexcept;
+            inline size_t                res() const noexcept;
         };
 
 

@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        const std::vector<T>& Bin<T>::data() const noexcept
+        inline const std::vector<T>& Bin<T>::data() const noexcept
         {
             return (_data);
         }
