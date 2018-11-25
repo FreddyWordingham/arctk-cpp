@@ -80,6 +80,7 @@ namespace arc //! arctk namespace
             inline double                min() const noexcept;
             inline double                max() const noexcept;
             inline const std::vector<T>& data() const noexcept;
+            virtual std::vector<double>  bounds() const noexcept = 0;
             inline size_t                res() const noexcept;
         };
 
