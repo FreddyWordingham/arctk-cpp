@@ -77,12 +77,12 @@ namespace arc //! arctk namespace
 
                     for (size_t i = 0; i < (Sorter<T, 1>::_data.size() / 2); ++i)
                     {
-                        const size_t index        = (2 * i);
-                        Histogram<T, 1>::_bins[i] = Histogram<T, 1>::_bins[index] + Histogram<T, 1>::_bins[index + 1];
+                        const size_t index     = (2 * i);
+                        Sorter<T, 1>::_data[i] = Histogram<T, 1>::_data[index] + Histogram<T, 1>::_data[index + 1];
                     }
-                    for (size_t i = (Histogram<T, 1>::_bins.size() / 2); i < Histogram<T, 1>::_bins.size(); ++i)
+                    for (size_t i = (Histogram<T, 1>::_data.size() / 2); i < Histogram<T, 1>::_data.size(); ++i)
                     {
-                        Histogram<T, 1>::_bins[i] = 0.0;
+                        Histogram<T, 1>::_data[i] = {};
                     }
                 }
 
