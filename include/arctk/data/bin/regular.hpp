@@ -58,7 +58,7 @@ namespace arc //! arctk namespace
                 inline Regular(Regular&&)      = default; //!< Defaulted move constructor.
 
                 //  -- Destructors --
-                virtual inline ~Regular() noexcept;
+                inline ~Regular() noexcept override;
 
 
                 //  == OPERATORS ==
