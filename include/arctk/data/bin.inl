@@ -88,7 +88,7 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i < bin_._data.size(); ++i)
             {
-                stream_ << std::setw(PRINT_WIDTH) << bounds[i] << '-' << std::setw(PRINT_WIDTH) << bounds[i + 1] << '\t' << std::setw(PRINT_WIDTH) << _data[i] << '\n';
+                stream_ << std::setw(PRINT_WIDTH) << bounds[i] << '-' << std::setw(PRINT_WIDTH) << bounds[i + 1] << '\t' << std::setw(PRINT_WIDTH) << bin_._data[i] << '\n';
             }
 
             return (stream_);
