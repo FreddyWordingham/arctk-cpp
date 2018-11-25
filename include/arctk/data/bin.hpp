@@ -29,6 +29,12 @@ namespace arc //! arctk namespace
 
 
 
+        //  == CONSTANTS ==
+        //  -- Printing --
+        constexpr const int PRINT_WIDTH = 8; //!< Allocated printing space.
+
+
+
         //  == CLASS ==
         /**
          *  Data binning class.
