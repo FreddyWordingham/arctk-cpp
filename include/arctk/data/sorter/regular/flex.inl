@@ -46,12 +46,18 @@ namespace arc //! arctk namespace
 
 
                 //  == OPERATORS ==
-                //  -- Access --
+                //  -- Call --
                 template <typename T>
                 inline T& Flex<T>::operator()(const double pos_) noexcept
                 {
-                    assert(pos_ >= Sorter<T>::_min);
-                    assert(pos_ <= Sorter<T>::_max);
+                    while (pos_ < Sorter<T>::_min)
+                    {
+                        descend();
+                    }
+                    while (pos_ > Sorter<T>::_max)
+                    {
+                        ascend();
+                    }
 
                     return (Sorter<T>::_data[Regular<T>::index(pos_)]);
                 }
@@ -59,9 +65,6 @@ namespace arc //! arctk namespace
                 template <typename T>
                 inline const T& Flex<T>::operator()(const double pos_) const noexcept
                 {
-                    assert(pos_ >= Sorter<T>::_min);
-                    assert(pos_ <= Sorter<T>::_max);
-
                     return (Sorter<T>::_data[Regular<T>::index(pos_)]);
                 }
 
