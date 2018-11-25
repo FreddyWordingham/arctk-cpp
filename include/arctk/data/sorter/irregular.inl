@@ -20,6 +20,7 @@
 
 //  -- Arctk --
 #include <arctk/prop/order.hpp>
+#include <arctk/search/index.hpp>
 
 
 
@@ -62,10 +63,17 @@ namespace arc //! arctk namespace
                 return (_bounds);
             }
 
+
             //  -- Indexing --
             template <typename T>
-            inline size_t Irregular<T>::index(double pos_) const noexcept
+            inline size_t Irregular<T>::index(const double pos_) const noexcept
             {
+                assert(pos_ >= Sorter<T>::_min);
+                assert(pos_ <= Sorter<T>::_max);
+
+                const size_t index = search::index::lower(_bounds, pos_);
+
+                return ((index == Sorter<T>::_data.size()) ? (index - 1) : index);
             }
 
 
