@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
         class Bin
         {
             //  == FIELDS ==
-          private:
+          protected:
             //  -- Bounds --
             double _min;
             double _max;
