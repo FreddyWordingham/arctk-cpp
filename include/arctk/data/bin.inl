@@ -17,7 +17,9 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
-#include <iomanip>
+
+//  -- Arctk --
+#include <arctk/consts/format.hpp>
 
 
 
@@ -88,7 +90,7 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i < bin_._data.size(); ++i)
             {
-                stream_ << std::setw(PRINT_WIDTH) << bounds[i] << '-' << std::setw(PRINT_WIDTH) << bounds[i + 1] << '\t' << std::setw(PRINT_WIDTH) << bin_._data[i] << '\n';
+                stream_ << bounds[i] << consts::format::DELIM << '\t' << bounds[i + 1] << consts::format::DELIM << '\t' << bin_._data[i] << '\n';
             }
 
             return (stream_);

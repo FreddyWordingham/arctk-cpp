@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cstddef>
+#include <ostream>
 #include <vector>
 
 
@@ -26,12 +27,6 @@ namespace arc //! arctk namespace
 {
     namespace data //! data namespace
     {
-
-
-
-        //  == CONSTANTS ==
-        //  -- Printing --
-        constexpr const int PRINT_WIDTH = 8; //!< Allocated printing space.
 
 
 

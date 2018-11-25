@@ -29,5 +29,7 @@ int main(const int /*unused*/, const char** /*unused*/)
 {
     arc::data::bin::regular::Fixed<double> bin(-1.0, +2.0, 30);
 
+    std::cout << bin << '\n';
+
     return (0);
 }
