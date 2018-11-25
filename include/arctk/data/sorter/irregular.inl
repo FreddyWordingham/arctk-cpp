@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
              *  Default destructor.
              */
             template <typename T>
-            inline Regular<T>::~Regular() noexcept = default;
+            inline Irregular<T>::~Irregular() noexcept = default;
 
 
 
