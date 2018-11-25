@@ -56,6 +56,17 @@ namespace arc //! arctk namespace
 
             //  == Methods ==
             //  -- Getters --
+            template <typename T>
+            inline std::vector<double> Irregular<T>::bounds() const noexcept
+            {
+                return (_bounds);
+            }
+
+            //  -- Indexing --
+            template <typename T>
+            inline size_t Irregular<T>::index(double pos_) const noexcept
+            {
+            }
 
 
 

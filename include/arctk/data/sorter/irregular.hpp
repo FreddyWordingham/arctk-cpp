@@ -67,6 +67,16 @@ namespace arc //! arctk namespace
                 //  -- Assignment --
                 inline Irregular& operator=(const Irregular&) noexcept = delete; //!< Defaulted copy operator. @return Reference to copied object.
                 inline Irregular& operator=(Irregular&&) noexcept = delete;      //!< Defaulted move operator. @return Reference to moved object.
+
+
+                //  == METHODS ==
+              public:
+                //  -- Getters --
+                inline std::vector<double> bounds() const noexcept override;
+
+              protected:
+                //  -- Indexing --
+                inline size_t index(double pos_) const noexcept override;
             };
 
 
