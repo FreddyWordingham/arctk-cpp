@@ -87,6 +87,10 @@ namespace arc //! arctk namespace
             inline const std::vector<T>& data() const noexcept;
             virtual std::vector<double>  bounds() const noexcept = 0;
             inline size_t                res() const noexcept;
+
+          protected:
+            //  -- Indexing --
+            virtual size_t index(double pos_) const noexcept = 0;
         };
 
 
