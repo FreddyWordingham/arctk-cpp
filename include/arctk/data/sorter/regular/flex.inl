@@ -88,6 +88,18 @@ namespace arc //! arctk namespace
                 template <typename T>
                 inline void Flex<T>::descend() noexcept
                 {
+                    Sorter<T>::_min -= Sorter<T>::_max - Sorter<T>::_min;
+                    Sorter<T>::_interval *= 2.0;
+
+                    for (size_t i = (Sorter<T>::_data.size() - 1); i >= (Sorter<T>::_data.size() / 2); --i)
+                    {
+                        const size_t index  = (2 * i) - Sorter<T>::_data.size();
+                        Sorter<T>::_data[i] = Sorter<T>::_data[index] + Sorter<T>::_data[index + 1];
+                    }
+                    for (size_t i = 0; i < (Sorter<T>::_data.size() / 2); ++i)
+                    {
+                        Sorter<T>::_data[i] = {};
+                    }
                 }
 
 
