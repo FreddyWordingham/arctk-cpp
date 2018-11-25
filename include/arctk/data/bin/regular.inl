@@ -54,6 +54,22 @@ namespace arc //! arctk namespace
             //  == Methods ==
             //  -- Getters --
             template <typename T>
+            inline std::vector<double> Regular<T>::bounds() const noexcept
+            {
+                std::vector<double> bounds(Bin<T>::_data.size() + 1);
+
+                bounds.front() = Bin<T>::_min;
+                bounds.back()  = Bin<T>::_max;
+
+                for (size_t i = 1; i < (bounds.size() - 1); ++i)
+                {
+                    bounds[i] = bounds[i - 1] + _interval;
+                }
+
+                return (bounds);
+            }
+
+            template <typename T>
             inline double Regular<T>::interval() const noexcept
             {
                 return (_interval);

@@ -71,7 +71,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline double interval() const noexcept;
+                inline std::vector<double> bounds() const noexcept override;
+                inline double              interval() const noexcept;
 
               private:
                 //  -- Indexing --
