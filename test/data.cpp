@@ -16,6 +16,8 @@
 #include <arctk/data/obj.hpp>
 #include <arctk/data/table.hpp>
 
+#include <arctk/random/generator/quality.hpp>
+
 
 
 //  == MAIN ==
@@ -28,6 +30,13 @@
 int main(const int /*unused*/, const char** /*unused*/)
 {
     arc::data::bin::regular::Fixed<double> bin(-1.0, +2.0, 30);
+
+    arc::random::generator::Quality rng;
+
+    for (size_t i = 0; i < 1e6; ++i)
+    {
+        ++bin(rng.gen());
+    }
 
     std::cout << bin << '\n';
 
