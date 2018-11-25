@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
                 {
                     assert(min_ < max_);
                     assert(res_ > 0);
-                    assert((size_ % 2) == 0);
+                    assert((res_ % 2) == 0);
                 }
 
 
