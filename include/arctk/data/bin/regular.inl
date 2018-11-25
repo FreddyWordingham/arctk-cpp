@@ -63,7 +63,7 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 1; i < (bounds.size() - 1); ++i)
                 {
-                    bounds[i] = bounds[i - 1] + _interval;
+                    bounds[i] = Bin<T>::_min + (i * _interval);
                 }
 
                 return (bounds);
