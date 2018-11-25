@@ -13,6 +13,7 @@
 #include <arctk/data/obj.hpp>
 #include <arctk/data/sorter.hpp>
 #include <arctk/data/sorter/irregular.hpp>
+#include <arctk/data/sorter/irregular/fixed.hpp>
 #include <arctk/data/sorter/regular.hpp>
 #include <arctk/data/sorter/regular/fixed.hpp>
 #include <arctk/data/sorter/regular/flex.hpp>
