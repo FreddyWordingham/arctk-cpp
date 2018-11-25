@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/data/sorter/regular/fixed.inl
- *  @date   22/11/2018
+ *  @file   arctk/data/sorter/regular/flex.inl
+ *  @date   25/11/2018
  *  @author Freddy Wordingham
  *
- *  Fixed range regular interval sorting class.
+ *  Flexible range regular interval sorting class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_SORTER_REGULAR_FIXED_INL
-#define ARCTK_DATA_SORTER_REGULAR_FIXED_INL
+#ifndef ARCTK_DATA_SORTER_REGULAR_FLEX_INL
+#define ARCTK_DATA_SORTER_REGULAR_FLEX_INL
 
 
 
@@ -35,7 +35,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
                 //  -- Constructors --
                 template <typename T>
-                inline Fixed<T>::Fixed(const double min_, const double max_, const size_t res_, const T& init_) noexcept
+                inline Flex<T>::Flex(const double min_, const double max_, const size_t res_, const T& init_) noexcept
                   : Regular<T>(min_, max_, res_, init_)
                 {
                     assert(min_ < max_);
@@ -74,4 +74,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_DATA_SORTER_REGULAR_FIXED_INL
+#endif // ARCTK_DATA_SORTER_REGULAR_FLEX_INL
