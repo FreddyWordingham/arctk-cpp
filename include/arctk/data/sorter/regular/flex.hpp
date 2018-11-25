@@ -51,6 +51,13 @@ namespace arc //! arctk namespace
                     //  -- Call --
                     inline T&       operator()(double pos_) noexcept override;
                     inline const T& operator()(double pos_) const noexcept override;
+
+
+                    //  == METHODS ==
+                  private:
+                    //  -- Growth --
+                    inline void ascend() noexcept;
+                    inline void descend() noexcept;
                 };
 
 

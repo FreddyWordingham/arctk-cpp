@@ -40,6 +40,7 @@ namespace arc //! arctk namespace
                 {
                     assert(min_ < max_);
                     assert(res_ > 0);
+                    assert((size_ % 2) == 0);
                 }
 
 
@@ -62,6 +63,32 @@ namespace arc //! arctk namespace
                     assert(pos_ <= Sorter<T>::_max);
 
                     return (Sorter<T>::_data[Regular<T>::index(pos_)]);
+                }
+
+
+                //  == METHODS ==
+              private:
+                //  -- Growth --
+                template <typename T>
+                inline void Flex<T>::ascend() noexcept
+                {
+                    Sorter<T>::_max += Sorter<T>::_max - Sorter<T>::_min;
+                    Regular<T>::_interval *= 2.0;
+
+                    for (size_t i = 0; i < (Sorter<T, 1>::_data.size() / 2); ++i)
+                    {
+                        const size_t index        = (2 * i);
+                        Histogram<T, 1>::_bins[i] = Histogram<T, 1>::_bins[index] + Histogram<T, 1>::_bins[index + 1];
+                    }
+                    for (size_t i = (Histogram<T, 1>::_bins.size() / 2); i < Histogram<T, 1>::_bins.size(); ++i)
+                    {
+                        Histogram<T, 1>::_bins[i] = 0.0;
+                    }
+                }
+
+                template <typename T>
+                inline void Flex<T>::descend() noexcept
+                {
                 }
 
 
