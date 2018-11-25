@@ -65,11 +65,13 @@ namespace arc //! arctk namespace
             inline Bin& operator=(const Bin&) noexcept = delete; //!< Defaulted copy operator. @return Reference to copied object.
             inline Bin& operator=(Bin&&) noexcept = delete;      //!< Defaulted move operator. @return Reference to moved object.
 
+            //  -- Call --
+            virtual T&       operator()(double pos_) noexcept       = 0;
+            virtual const T& operator()(double pos_) const noexcept = 0;
+
             //  -- Access --
-            inline T&        operator[](size_t index_) noexcept;
-            inline const T&  operator[](size_t index_) const noexcept;
-            virtual T&       operator[](double pos_) noexcept       = 0;
-            virtual const T& operator[](double pos_) const noexcept = 0;
+            inline T&       operator[](size_t index_) noexcept;
+            inline const T& operator[](size_t index_) const noexcept;
 
 
             //  == METHODS ==
