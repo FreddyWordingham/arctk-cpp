@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
                 inline std::vector<double> bounds() const noexcept override;
                 inline double              interval() const noexcept;
 
-              private:
+              protected:
                 //  -- Indexing --
                 inline size_t index(double pos_) const noexcept;
             };
