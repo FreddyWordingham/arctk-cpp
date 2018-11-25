@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
                 //  == OPERATORS ==
                 //  -- Access --
                 template <typename T>
-                inline T& Fixed<T>::operator()(const double pos_) noexcept
+                inline T& Flex<T>::operator()(const double pos_) noexcept
                 {
                     assert(pos_ >= Sorter<T>::_min);
                     assert(pos_ <= Sorter<T>::_max);
@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
                 }
 
                 template <typename T>
-                inline const T& Fixed<T>::operator()(const double pos_) const noexcept
+                inline const T& Flex<T>::operator()(const double pos_) const noexcept
                 {
                     assert(pos_ >= Sorter<T>::_min);
                     assert(pos_ <= Sorter<T>::_max);
@@ -67,7 +67,6 @@ namespace arc //! arctk namespace
 
 
                 //  == METHODS ==
-              private:
                 //  -- Growth --
                 template <typename T>
                 inline void Flex<T>::ascend() noexcept
@@ -75,14 +74,14 @@ namespace arc //! arctk namespace
                     Sorter<T>::_max += Sorter<T>::_max - Sorter<T>::_min;
                     Regular<T>::_interval *= 2.0;
 
-                    for (size_t i = 0; i < (Sorter<T, 1>::_data.size() / 2); ++i)
+                    for (size_t i = 0; i < (Sorter<T>::_data.size() / 2); ++i)
                     {
-                        const size_t index     = (2 * i);
-                        Sorter<T, 1>::_data[i] = Histogram<T, 1>::_data[index] + Histogram<T, 1>::_data[index + 1];
+                        const size_t index  = (2 * i);
+                        Sorter<T>::_data[i] = Sorter<T>::_data[index] + Sorter<T>::_data[index + 1];
                     }
-                    for (size_t i = (Histogram<T, 1>::_data.size() / 2); i < Histogram<T, 1>::_data.size(); ++i)
+                    for (size_t i = (Sorter<T>::_data.size() / 2); i < Sorter<T>::_data.size(); ++i)
                     {
-                        Histogram<T, 1>::_data[i] = {};
+                        Sorter<T>::_data[i] = {};
                     }
                 }
 
