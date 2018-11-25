@@ -73,6 +73,10 @@ namespace arc //! arctk namespace
             inline T&       operator[](size_t index_) noexcept;
             inline const T& operator[](size_t index_) const noexcept;
 
+            //  -- Printing --
+            template <typename S>
+            friend constexpr inline std::ostream& operator<<(std::ostream& stream_, const Bin<S>& bin_) noexcept;
+
 
             //  == METHODS ==
           public:

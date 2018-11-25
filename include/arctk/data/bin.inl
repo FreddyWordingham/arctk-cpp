@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <iomanip>
 
 
 
@@ -66,6 +67,33 @@ namespace arc //! arctk namespace
             assert(index_ < _data.size());
 
             return (_data[index_]);
+        }
+
+
+        //  -- Printing --
+        /**
+         *  Print the bin to a stream.
+         *
+         *  @tparam S   Type stored by the bin.
+         *
+         *  @param  stream_ Stream to print to.
+         *  @param  bin_    Bin to be printed.
+         *
+         *  @return Reference to the stream post-print.
+         */
+        template <typename S>
+        constexpr inline std::ostream& operator<<(std::ostream& stream_, const Bin<S>& bin_) noexcept;
+        {
+            const std::vector<double> bounds = bounds();
+
+            stream_ << consts::format::OPENERS[consts::format::container::VEC] << vec_.x << consts::format::DELIM << vec_.y << consts::format::CLOSERS[consts::format::container::VEC];
+
+            for (size_t i = 0; i < _data.size(); ++i)
+            {
+                stream_ << std::setw(PRINT_WIDTH) << bounds[i] << '-' << std::setw(PRINT_WIDTH) << bounds[i + 1] << '\t' << std::setw(PRINT_WIDTH) << _data[i] << '\n';
+            }
+
+            return (stream_);
         }
 
 
