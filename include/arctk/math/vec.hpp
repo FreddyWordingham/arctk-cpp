@@ -83,10 +83,6 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
-            //  -- Printing --
-            template <typename S, size_t M>
-            friend constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<S, M>& vec_) noexcept;
-
             //  -- Assignment --
             constexpr inline Vec<T, N>& operator+=(T val_) noexcept;
             constexpr inline Vec<T, N>& operator+=(const Vec<T, N>& vec_) noexcept;
@@ -116,6 +112,10 @@ namespace arc //! arctk namespace
             //  -- Access --
             constexpr inline T&       operator[](size_t index_) noexcept;
             constexpr inline const T& operator[](size_t index_) const noexcept;
+
+            //  -- Printing --
+            template <typename S, size_t M>
+            friend constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<S, M>& vec_) noexcept;
 
 
             //  == METHODS ==
@@ -176,10 +176,6 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
-            //  -- Printing --
-            template <typename S>
-            friend constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<S, 2>& vec_) noexcept; // NOLINT
-
             //  -- Assignment --
             constexpr inline Vec<T, 2>& operator+=(T val_) noexcept;
             constexpr inline Vec<T, 2>& operator+=(const Vec<T, 2>& vec_) noexcept;
@@ -209,6 +205,10 @@ namespace arc //! arctk namespace
             //  -- Access --
             constexpr inline T&       operator[](size_t index_) noexcept;
             constexpr inline const T& operator[](size_t index_) const noexcept;
+
+            //  -- Printing --
+            template <typename S>
+            friend constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<S, 2>& vec_) noexcept; // NOLINT
 
 
             //  == METHODS ==
@@ -277,10 +277,6 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
-            //  -- Printing --
-            template <typename S>
-            friend constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<S, 3>& vec_) noexcept; // NOLINT
-
             //  -- Assignment --
             constexpr inline Vec<T, 3>& operator+=(T val_) noexcept;
             constexpr inline Vec<T, 3>& operator+=(const Vec<T, 3>& vec_) noexcept;
@@ -312,6 +308,10 @@ namespace arc //! arctk namespace
             //  -- Access --
             constexpr inline T&       operator[](size_t index_) noexcept;
             constexpr inline const T& operator[](size_t index_) const noexcept;
+
+            //  -- Printing --
+            template <typename S>
+            friend constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<S, 3>& vec_) noexcept; // NOLINT
 
 
             //  == METHODS ==
@@ -388,10 +388,6 @@ namespace arc //! arctk namespace
 
             //  == OPERATORS ==
           public:
-            //  -- Printing --
-            template <typename S>
-            friend constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<S, 4>& vec_) noexcept; // NOLINT
-
             //  -- Assignment --
             constexpr inline Vec<T, 4>& operator+=(T val_) noexcept;
             constexpr inline Vec<T, 4>& operator+=(const Vec<T, 4>& vec_) noexcept;
@@ -421,6 +417,10 @@ namespace arc //! arctk namespace
             //  -- Access --
             constexpr inline T&       operator[](size_t index_) noexcept;
             constexpr inline const T& operator[](size_t index_) const noexcept;
+
+            //  -- Printing --
+            template <typename S>
+            friend constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<S, 4>& vec_) noexcept; // NOLINT
 
 
             //  == METHODS ==

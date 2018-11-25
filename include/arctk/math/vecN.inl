@@ -134,32 +134,6 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
-        //  -- Printing --
-        /**
-         *  Print the vec to a stream.
-         *
-         *  @tparam S   Type stored by the vec.
-         *  @tparam M   Size of the vec.
-         *
-         *  @param  stream_ Stream to print to.
-         *  @param  vec_    Vec to be printed.
-         *
-         *  @return Reference to the vec post-print.
-         */
-        template <typename S, size_t M>
-        constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<S, M>& vec_) noexcept
-        {
-            stream_ << consts::format::OPENERS[consts::format::container::VEC] << vec_._data[0];
-            for (size_t i = 1; i < M; ++i)
-            {
-                stream_ << consts::format::DELIM << vec_._data[i];
-            }
-            stream_ << consts::format::CLOSERS[consts::format::container::VEC];
-
-            return (stream_);
-        }
-
-
         //  -- Assignment --
         /**
          *  Add a value to all elements of the vec.
@@ -574,6 +548,32 @@ namespace arc //! arctk namespace
             assert(index_ < N);
 
             return (_data[index_]);
+        }
+
+
+        //  -- Printing --
+        /**
+         *  Print the vec to a stream.
+         *
+         *  @tparam S   Type stored by the vec.
+         *  @tparam M   Size of the vec.
+         *
+         *  @param  stream_ Stream to print to.
+         *  @param  vec_    Vec to be printed.
+         *
+         *  @return Reference to the vec post-print.
+         */
+        template <typename S, size_t M>
+        constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<S, M>& vec_) noexcept
+        {
+            stream_ << consts::format::OPENERS[consts::format::container::VEC] << vec_._data[0];
+            for (size_t i = 1; i < M; ++i)
+            {
+                stream_ << consts::format::DELIM << vec_._data[i];
+            }
+            stream_ << consts::format::CLOSERS[consts::format::container::VEC];
+
+            return (stream_);
         }
 
 

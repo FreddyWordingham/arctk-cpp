@@ -61,26 +61,6 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
-        //  -- Printing --
-        /**
-         *  Print the vec to a stream.
-         *
-         *  @tparam S   Type stored by the vec.
-         *
-         *  @param  stream_ Stream to print to.
-         *  @param  vec_    Vec to be printed.
-         *
-         *  @return Reference to the vec post-print.
-         */
-        template <typename S>
-        constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<S, 2>& vec_) noexcept
-        {
-            stream_ << consts::format::OPENERS[consts::format::container::VEC] << vec_.x << consts::format::DELIM << vec_.y << consts::format::CLOSERS[consts::format::container::VEC];
-
-            return (stream_);
-        }
-
-
         //  -- Assignment --
         /**
          *  Add a value to all elements of the vec.
@@ -402,6 +382,26 @@ namespace arc //! arctk namespace
             assert(index_ < 2);
 
             return ((&x)[index_]);
+        }
+
+
+        //  -- Printing --
+        /**
+         *  Print the vec to a stream.
+         *
+         *  @tparam S   Type stored by the vec.
+         *
+         *  @param  stream_ Stream to print to.
+         *  @param  vec_    Vec to be printed.
+         *
+         *  @return Reference to the vec post-print.
+         */
+        template <typename S>
+        constexpr inline std::ostream& operator<<(std::ostream& stream_, const Vec<S, 2>& vec_) noexcept
+        {
+            stream_ << consts::format::OPENERS[consts::format::container::VEC] << vec_.x << consts::format::DELIM << vec_.y << consts::format::CLOSERS[consts::format::container::VEC];
+
+            return (stream_);
         }
 
 
