@@ -75,7 +75,7 @@ namespace arc //! arctk namespace
 
             //  -- Printing --
             template <typename S>
-            friend constexpr inline std::ostream& operator<<(std::ostream& stream_, const Bin<S>& bin_) noexcept;
+            friend inline std::ostream& operator<<(std::ostream& stream_, const Bin<S>& bin_) noexcept;
 
 
             //  == METHODS ==

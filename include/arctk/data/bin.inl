@@ -82,7 +82,7 @@ namespace arc //! arctk namespace
          *  @return Reference to the stream post-print.
          */
         template <typename S>
-        constexpr inline std::ostream& operator<<(std::ostream& stream_, const Bin<S>& bin_) noexcept;
+        inline std::ostream& operator<<(std::ostream& stream_, const Bin<S>& bin_) noexcept
         {
             const std::vector<double> bounds = bounds();
 
