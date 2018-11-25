@@ -48,9 +48,9 @@ namespace arc //! arctk namespace
 
                     //  == OPERATORS ==
                   public:
-                    //  -- Access --
-                    inline T&       operator[](double pos_) noexcept override;
-                    inline const T& operator[](double pos_) const noexcept override;
+                    //  -- Call --
+                    inline T&       operator()(double pos_) noexcept override;
+                    inline const T& operator()(double pos_) const noexcept override;
                 };
 
 

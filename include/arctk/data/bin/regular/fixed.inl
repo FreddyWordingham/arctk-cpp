@@ -47,7 +47,7 @@ namespace arc //! arctk namespace
                 //  == OPERATORS ==
                 //  -- Access --
                 template <typename T>
-                inline T& Fixed<T>::operator[](const double pos_) noexcept
+                inline T& Fixed<T>::operator()(const double pos_) noexcept
                 {
                     assert(pos_ >= Bin<T>::_min);
                     assert(pos_ <= Bin<T>::_max);
@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
                 }
 
                 template <typename T>
-                inline const T& Fixed<T>::operator[](const double pos_) const noexcept
+                inline const T& Fixed<T>::operator()(const double pos_) const noexcept
                 {
                     assert(pos_ >= Bin<T>::_min);
                     assert(pos_ <= Bin<T>::_max);
