@@ -14,6 +14,7 @@
 #include <arctk/data/sorter.hpp>
 #include <arctk/data/sorter/regular.hpp>
 #include <arctk/data/sorter/regular/fixed.hpp>
+#include <arctk/data/sorter/regular/flex.hpp>
 #include <arctk/data/table.hpp>
 
 #include <arctk/random/generator/quality.hpp>
