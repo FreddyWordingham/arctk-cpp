@@ -54,6 +54,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Irregular(const std::vector<double>& bounds_, const T& init_ = {}) noexcept;
                 inline Irregular(const Irregular&) = default; //!< Defaulted copy constructor.
                 inline Irregular(Irregular&&)      = default; //!< Defaulted move constructor.
 
