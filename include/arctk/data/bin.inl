@@ -84,13 +84,11 @@ namespace arc //! arctk namespace
         template <typename S>
         inline std::ostream& operator<<(std::ostream& stream_, const Bin<S>& bin_) noexcept
         {
-            const std::vector<double> bound = bounds();
-
-            stream_ << consts::format::OPENERS[consts::format::container::VEC] << vec_.x << consts::format::DELIM << vec_.y << consts::format::CLOSERS[consts::format::container::VEC];
+            const std::vector<double> bounds = bin_.bounds();
 
             for (size_t i = 0; i < _data.size(); ++i)
             {
-                stream_ << std::setw(PRINT_WIDTH) << bound[i] << '-' << std::setw(PRINT_WIDTH) << bound[i + 1] << '\t' << std::setw(PRINT_WIDTH) << _data[i] << '\n';
+                stream_ << std::setw(PRINT_WIDTH) << bounds[i] << '-' << std::setw(PRINT_WIDTH) << bounds[i + 1] << '\t' << std::setw(PRINT_WIDTH) << _data[i] << '\n';
             }
 
             return (stream_);
