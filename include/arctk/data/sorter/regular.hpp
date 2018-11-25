@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
             class Regular : public Sorter<T>
             {
                 //  == FIELDS ==
-              private:
+              protected:
                 //  -- Interval --
                 double _interval;
 
