@@ -17,8 +17,6 @@
 #include <arctk/data/sorter/regular/flex.hpp>
 #include <arctk/data/table.hpp>
 
-#include <arctk/random/generator/quality.hpp>
-
 
 
 //  == MAIN ==
@@ -30,16 +28,5 @@
  */
 int main(const int /*unused*/, const char** /*unused*/)
 {
-    arc::data::sorter::regular::Flex<double> sort(0.0, 0.1, 10);
-
-    arc::random::generator::Quality rng;
-
-    for (size_t i = 0; i < 1e6; ++i)
-    {
-        ++sort(rng.gen());
-    }
-
-    std::cout << sort << '\n';
-
     return (0);
 }
