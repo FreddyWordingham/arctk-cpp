@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
 
 
                 //  == OPERATORS ==
-                //  -- Access --
+                //  -- Call --
                 template <typename T>
                 inline T& Fixed<T>::operator()(const double pos_) noexcept
                 {
