@@ -30,7 +30,7 @@
  */
 int main(const int /*unused*/, const char** /*unused*/)
 {
-    arc::data::sorter::regular::Fixed<double> sort(-1.0, +2.0, 30);
+    arc::data::sorter::regular::Flex<double> sort(0.0, 0.1, 10);
 
     arc::random::generator::Quality rng;
 

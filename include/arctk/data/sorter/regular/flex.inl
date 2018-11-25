@@ -92,7 +92,7 @@ namespace arc //! arctk namespace
                 inline void Flex<T>::descend() noexcept
                 {
                     Sorter<T>::_min -= Sorter<T>::_max - Sorter<T>::_min;
-                    Sorter<T>::_interval *= 2.0;
+                    Regular<T>::_interval *= 2.0;
 
                     for (size_t i = (Sorter<T>::_data.size() - 1); i >= (Sorter<T>::_data.size() / 2); --i)
                     {
