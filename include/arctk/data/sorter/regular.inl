@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/data/bin/regular.inl
+ *  @file   arctk/data/sorter/regular.inl
  *  @date   22/11/2018
  *  @author Freddy Wordingham
  *
- *  Regular interval binning class.
+ *  Regular interval sorting class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_BIN_REGULAR_INL
-#define ARCTK_DATA_BIN_REGULAR_INL
+#ifndef ARCTK_DATA_SORTER_REGULAR_INL
+#define ARCTK_DATA_SORTER_REGULAR_INL
 
 
 
@@ -25,7 +25,7 @@ namespace arc //! arctk namespace
 {
     namespace data //! data namespace
     {
-        namespace bin //! binning namespace
+        namespace sorter //! sorting namespace
         {
 
 
@@ -34,7 +34,7 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             template <typename T>
             inline Regular<T>::Regular(const double min_, const double max_, const size_t res_, const T& init_) noexcept
-              : Bin<T>(min_, max_, res_, init_)
+              : Sorter<T>(min_, max_, res_, init_)
               , _interval((max_ - min_) / res_)
             {
                 assert(min_ < max_);
@@ -56,14 +56,14 @@ namespace arc //! arctk namespace
             template <typename T>
             inline std::vector<double> Regular<T>::bounds() const noexcept
             {
-                std::vector<double> bounds(Bin<T>::_data.size() + 1);
+                std::vector<double> bounds(Sorter<T>::_data.size() + 1);
 
-                bounds.front() = Bin<T>::_min;
-                bounds.back()  = Bin<T>::_max;
+                bounds.front() = Sorter<T>::_min;
+                bounds.back()  = Sorter<T>::_max;
 
                 for (size_t i = 1; i < (bounds.size() - 1); ++i)
                 {
-                    bounds[i] = Bin<T>::_min + (i * _interval);
+                    bounds[i] = Sorter<T>::_min + (i * _interval);
                 }
 
                 return (bounds);
@@ -80,21 +80,21 @@ namespace arc //! arctk namespace
             template <typename T>
             inline size_t Regular<T>::index(const double pos_) const noexcept
             {
-                assert(pos_ >= Bin<T>::_min);
-                assert(pos_ <= Bin<T>::_max);
+                assert(pos_ >= Sorter<T>::_min);
+                assert(pos_ <= Sorter<T>::_max);
 
-                const size_t index = static_cast<size_t>((pos_ - Bin<T>::_min) / _interval);
+                const size_t index = static_cast<size_t>((pos_ - Sorter<T>::_min) / _interval);
 
-                return ((index == Bin<T>::_data.size()) ? (index - 1) : index);
+                return ((index == Sorter<T>::_data.size()) ? (index - 1) : index);
             }
 
 
 
-        } // namespace bin
+        } // namespace sorter
     }     // namespace data
 } // namespace arc
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_DATA_BIN_REGULAR_INL
+#endif // ARCTK_DATA_SORTER_REGULAR_INL

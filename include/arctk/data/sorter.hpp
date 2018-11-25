@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/data/bin.hpp
+ *  @file   arctk/data/sorter.hpp
  *  @date   20/11/2018
  *  @author Freddy Wordingham
  *
- *  Data binning class.
+ *  Data sorting class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_BIN_HPP
-#define ARCTK_DATA_BIN_HPP
+#ifndef ARCTK_DATA_SORTER_HPP
+#define ARCTK_DATA_SORTER_HPP
 
 
 
@@ -32,12 +32,12 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
-         *  Data binning class.
+         *  Data sorting class.
          *
-         *  @tparam T   Type binned.
+         *  @tparam T   Type sorted.
          */
         template <typename T>
-        class Bin
+        class Sorter
         {
             //  == FIELDS ==
           protected:
@@ -52,19 +52,19 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Bin(double min_, double max_, size_t res_, const T& init_ = {}) noexcept;
-            inline Bin(const Bin&) = default; //!< Defaulted copy constructor.
-            inline Bin(Bin&&)      = default; //!< Defaulted move constructor.
+            inline Sorter(double min_, double max_, size_t res_, const T& init_ = {}) noexcept;
+            inline Sorter(const Sorter&) = default; //!< Defaulted copy constructor.
+            inline Sorter(Sorter&&)      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
-            virtual inline ~Bin() noexcept;
+            virtual inline ~Sorter() noexcept;
 
 
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            inline Bin& operator=(const Bin&) noexcept = delete; //!< Defaulted copy operator. @return Reference to copied object.
-            inline Bin& operator=(Bin&&) noexcept = delete;      //!< Defaulted move operator. @return Reference to moved object.
+            inline Sorter& operator=(const Sorter&) noexcept = delete; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Sorter& operator=(Sorter&&) noexcept = delete;      //!< Defaulted move operator. @return Reference to moved object.
 
             //  -- Call --
             virtual T&       operator()(double pos_) noexcept       = 0;
@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
 
             //  -- Printing --
             template <typename S>
-            friend inline std::ostream& operator<<(std::ostream& stream_, const Bin<S>& bin_) noexcept;
+            friend inline std::ostream& operator<<(std::ostream& stream_, const Sorter<S>& sort_) noexcept;
 
 
             //  == METHODS ==
@@ -97,9 +97,9 @@ namespace arc //! arctk namespace
 
 
 //  == IMPLEMENTATION ==
-#include <arctk/data/bin.inl>
+#include <arctk/data/sorter.inl>
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_DATA_BIN_HPP
+#endif // ARCTK_DATA_SORTER_HPP

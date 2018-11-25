@@ -10,10 +10,10 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
-#include <arctk/data/bin.hpp>
-#include <arctk/data/bin/regular.hpp>
-#include <arctk/data/bin/regular/fixed.hpp>
 #include <arctk/data/obj.hpp>
+#include <arctk/data/sorter.hpp>
+#include <arctk/data/sorter/regular.hpp>
+#include <arctk/data/sorter/regular/fixed.hpp>
 #include <arctk/data/table.hpp>
 
 #include <arctk/random/generator/quality.hpp>
@@ -29,16 +29,16 @@
  */
 int main(const int /*unused*/, const char** /*unused*/)
 {
-    arc::data::bin::regular::Fixed<double> bin(-1.0, +2.0, 30);
+    arc::data::sorter::regular::Fixed<double> sort(-1.0, +2.0, 30);
 
     arc::random::generator::Quality rng;
 
     for (size_t i = 0; i < 1e6; ++i)
     {
-        ++bin(rng.gen());
+        ++sort(rng.gen());
     }
 
-    std::cout << bin << '\n';
+    std::cout << sort << '\n';
 
     return (0);
 }

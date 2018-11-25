@@ -1,21 +1,21 @@
 /**
- *  @file   arctk/data/bin/regular/fixed.hpp
+ *  @file   arctk/data/sorter/regular/fixed.hpp
  *  @date   22/11/2018
  *  @author Freddy Wordingham
  *
- *  Fixed range regular interval binning class.
+ *  Fixed range regular interval sorting class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_BIN_REGULAR_FIXED_HPP
-#define ARCTK_DATA_BIN_REGULAR_FIXED_HPP
+#ifndef ARCTK_DATA_SORTER_REGULAR_FIXED_HPP
+#define ARCTK_DATA_SORTER_REGULAR_FIXED_HPP
 
 
 
 //  == BASE ==
-#include <arctk/data/bin/regular.hpp>
+#include <arctk/data/sorter/regular.hpp>
 
 
 
@@ -24,7 +24,7 @@ namespace arc //! arctk namespace
 {
     namespace data //! data namespace
     {
-        namespace bin //! binning namespace
+        namespace sorter //! sorting namespace
         {
             namespace regular //! regular interval namespace
             {
@@ -33,9 +33,9 @@ namespace arc //! arctk namespace
 
                 //  == CLASS ==
                 /**
-                 *  Fixed range regular interval binning class.
+                 *  Fixed range regular interval sorting class.
                  *
-                 *  @tparam T   Type binned.
+                 *  @tparam T   Type sorted.
                  */
                 template <typename T>
                 class Fixed : public Regular<T>
@@ -56,16 +56,16 @@ namespace arc //! arctk namespace
 
 
             } // namespace regular
-        }     // namespace bin
+        }     // namespace sorter
     }         // namespace data
 } // namespace arc
 
 
 
 //  == IMPLEMENTATION ==
-#include <arctk/data/bin/regular/fixed.inl>
+#include <arctk/data/sorter/regular/fixed.inl>
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_DATA_BIN_REGULAR_FIXED_HPP
+#endif // ARCTK_DATA_SORTER_REGULAR_FIXED_HPP

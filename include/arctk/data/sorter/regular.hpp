@@ -1,21 +1,21 @@
 /**
- *  @file   arctk/data/bin/regular.hpp
+ *  @file   arctk/data/sorter/regular.hpp
  *  @date   22/11/2018
  *  @author Freddy Wordingham
  *
- *  Regular interval binning class.
+ *  Regular interval sorting class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_BIN_REGULAR_HPP
-#define ARCTK_DATA_BIN_REGULAR_HPP
+#ifndef ARCTK_DATA_SORTER_REGULAR_HPP
+#define ARCTK_DATA_SORTER_REGULAR_HPP
 
 
 
 //  == BASE ==
-#include <arctk/data/bin.hpp>
+#include <arctk/data/sorter.hpp>
 
 
 
@@ -30,19 +30,19 @@ namespace arc //! arctk namespace
 {
     namespace data //! data namespace
     {
-        namespace bin //! binning namespace
+        namespace sorter //! sorting namespace
         {
 
 
 
             //  == CLASS ==
             /**
-             *  Regular interval binning class.
+             *  Regular interval sorting class.
              *
-             *  @tparam T   Type binned.
+             *  @tparam T   Type sorted.
              */
             template <typename T>
-            class Regular : public Bin<T>
+            class Regular : public Sorter<T>
             {
                 //  == FIELDS ==
               private:
@@ -81,16 +81,16 @@ namespace arc //! arctk namespace
 
 
 
-        } // namespace bin
+        } // namespace sorter
     }     // namespace data
 } // namespace arc
 
 
 
 //  == IMPLEMENTATION ==
-#include <arctk/data/bin/regular.inl>
+#include <arctk/data/sorter/regular.inl>
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_DATA_BIN_REGULAR_HPP
+#endif // ARCTK_DATA_SORTER_REGULAR_HPP

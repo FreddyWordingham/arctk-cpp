@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/data/bin.inl
+ *  @file   arctk/data/sorter.inl
  *  @date   20/11/2018
  *  @author Freddy Wordingham
  *
- *  Data binning class.
+ *  Data sorting class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_BIN_INL
-#define ARCTK_DATA_BIN_INL
+#ifndef ARCTK_DATA_SORTTER_INL
+#define ARCTK_DATA_SORTTER_INL
 
 
 
@@ -34,7 +34,7 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <typename T>
-        inline Bin<T>::Bin(const double min_, const double max_, const size_t res_, const T& init_) noexcept
+        inline Sorter<T>::Sorter(const double min_, const double max_, const size_t res_, const T& init_) noexcept
           : _min(min_)
           , _max(max_)
           , _data(res_, init_)
@@ -49,14 +49,14 @@ namespace arc //! arctk namespace
          *  Default destructor.
          */
         template <typename T>
-        inline Bin<T>::~Bin() noexcept = default;
+        inline Sorter<T>::~Sorter() noexcept = default;
 
 
 
         //  == OPERATORS ==
         //  -- Access --
         template <typename T>
-        inline T& Bin<T>::operator[](const size_t index_) noexcept
+        inline T& Sorter<T>::operator[](const size_t index_) noexcept
         {
             assert(index_ < _data.size());
 
@@ -64,7 +64,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        inline const T& Bin<T>::operator[](const size_t index_) const noexcept
+        inline const T& Sorter<T>::operator[](const size_t index_) const noexcept
         {
             assert(index_ < _data.size());
 
@@ -74,23 +74,23 @@ namespace arc //! arctk namespace
 
         //  -- Printing --
         /**
-         *  Print the bin to a stream.
+         *  Print the sorter to a stream.
          *
-         *  @tparam S   Type stored by the bin.
+         *  @tparam S   Type stored by the sorter.
          *
          *  @param  stream_ Stream to print to.
-         *  @param  bin_    Bin to be printed.
+         *  @param  sort_   Sorter to be printed.
          *
          *  @return Reference to the stream post-print.
          */
         template <typename S>
-        inline std::ostream& operator<<(std::ostream& stream_, const Bin<S>& bin_) noexcept
+        inline std::ostream& operator<<(std::ostream& stream_, const Sorter<S>& sort_) noexcept
         {
-            const std::vector<double> bounds = bin_.bounds();
+            const std::vector<double> bounds = sort_.bounds();
 
-            for (size_t i = 0; i < bin_._data.size(); ++i)
+            for (size_t i = 0; i < sort_._data.size(); ++i)
             {
-                stream_ << bounds[i] << consts::format::DELIM << '\t' << bounds[i + 1] << consts::format::DELIM << '\t' << bin_._data[i] << '\n';
+                stream_ << bounds[i] << consts::format::DELIM << '\t' << bounds[i + 1] << consts::format::DELIM << '\t' << sort_._data[i] << '\n';
             }
 
             return (stream_);
@@ -101,25 +101,25 @@ namespace arc //! arctk namespace
         //  == METHODS ==
         //  -- Getters --
         template <typename T>
-        inline double Bin<T>::min() const noexcept
+        inline double Sorter<T>::min() const noexcept
         {
             return (_min);
         }
 
         template <typename T>
-        inline double Bin<T>::max() const noexcept
+        inline double Sorter<T>::max() const noexcept
         {
             return (_max);
         }
 
         template <typename T>
-        inline const std::vector<T>& Bin<T>::data() const noexcept
+        inline const std::vector<T>& Sorter<T>::data() const noexcept
         {
             return (_data);
         }
 
         template <typename T>
-        inline size_t Bin<T>::res() const noexcept
+        inline size_t Sorter<T>::res() const noexcept
         {
             return (_data.size());
         }
@@ -132,4 +132,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_DATA_BIN_INL
+#endif // ARCTK_DATA_SORTTER_INL

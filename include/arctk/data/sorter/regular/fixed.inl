@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/data/bin/regular/fixed.inl
+ *  @file   arctk/data/sorter/regular/fixed.inl
  *  @date   22/11/2018
  *  @author Freddy Wordingham
  *
- *  Fixed range regular interval binning class.
+ *  Fixed range regular interval sorting class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_DATA_BIN_REGULAR_FIXED_INL
-#define ARCTK_DATA_BIN_REGULAR_FIXED_INL
+#ifndef ARCTK_DATA_SORTER_REGULAR_FIXED_INL
+#define ARCTK_DATA_SORTER_REGULAR_FIXED_INL
 
 
 
@@ -25,7 +25,7 @@ namespace arc //! arctk namespace
 {
     namespace data //! data namespace
     {
-        namespace bin //! binning namespace
+        namespace sorter //! sorting namespace
         {
             namespace regular //! regular interval namespace
             {
@@ -49,29 +49,29 @@ namespace arc //! arctk namespace
                 template <typename T>
                 inline T& Fixed<T>::operator()(const double pos_) noexcept
                 {
-                    assert(pos_ >= Bin<T>::_min);
-                    assert(pos_ <= Bin<T>::_max);
+                    assert(pos_ >= Sorter<T>::_min);
+                    assert(pos_ <= Sorter<T>::_max);
 
-                    return (Bin<T>::_data[Regular<T>::index(pos_)]);
+                    return (Sorter<T>::_data[Regular<T>::index(pos_)]);
                 }
 
                 template <typename T>
                 inline const T& Fixed<T>::operator()(const double pos_) const noexcept
                 {
-                    assert(pos_ >= Bin<T>::_min);
-                    assert(pos_ <= Bin<T>::_max);
+                    assert(pos_ >= Sorter<T>::_min);
+                    assert(pos_ <= Sorter<T>::_max);
 
-                    return (Bin<T>::_data[Regular<T>::index(pos_)]);
+                    return (Sorter<T>::_data[Regular<T>::index(pos_)]);
                 }
 
 
 
             } // namespace regular
-        }     // namespace bin
+        }     // namespace sorter
     }         // namespace data
 } // namespace arc
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_DATA_BIN_REGULAR_FIXED_INL
+#endif // ARCTK_DATA_SORTER_REGULAR_FIXED_INL
