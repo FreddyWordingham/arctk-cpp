@@ -47,6 +47,9 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               protected:
+                //  -- Bounds --
+                std::vector<double> _bounds;
+
 
                 //  == INSTANTIATION ==
               public:
