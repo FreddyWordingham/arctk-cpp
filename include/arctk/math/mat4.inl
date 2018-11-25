@@ -54,26 +54,6 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
-        //  -- Printing --
-        /**
-         *  Print the matrix to a stream.
-         *
-         *  @tparam S   Type stored by the matrix.
-         *
-         *  @param  stream_ Stream to print to.
-         *  @param  mat_    Matrix to be printed.
-         *
-         *  @return Reference to the matrix post-print.
-         */
-        template <typename S>
-        constexpr inline std::ostream& operator<<(std::ostream& stream_, const Mat<S, 4>& mat_) noexcept
-        {
-            stream_ << consts::format::OPENERS[consts::format::container::MAT] << mat_.x << consts::format::DELIM << mat_.y << consts::format::DELIM << mat_.z << consts::format::DELIM << mat_.w << consts::format::CLOSERS[consts::format::container::MAT];
-
-            return (stream_);
-        }
-
-
         //  -- Assignment --
         /**
          *  Add a value to all elements of the mat.
@@ -611,6 +591,26 @@ namespace arc //! arctk namespace
             assert(index_ < 4);
 
             return ((&x)[index_]);
+        }
+
+
+        //  -- Printing --
+        /**
+         *  Print the matrix to a stream.
+         *
+         *  @tparam S   Type stored by the matrix.
+         *
+         *  @param  stream_ Stream to print to.
+         *  @param  mat_    Matrix to be printed.
+         *
+         *  @return Reference to the matrix post-print.
+         */
+        template <typename S>
+        constexpr inline std::ostream& operator<<(std::ostream& stream_, const Mat<S, 4>& mat_) noexcept
+        {
+            stream_ << consts::format::OPENERS[consts::format::container::MAT] << mat_.x << consts::format::DELIM << mat_.y << consts::format::DELIM << mat_.z << consts::format::DELIM << mat_.w << consts::format::CLOSERS[consts::format::container::MAT];
+
+            return (stream_);
         }
 
 

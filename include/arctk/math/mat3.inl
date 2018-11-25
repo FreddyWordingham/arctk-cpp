@@ -52,26 +52,6 @@ namespace arc //! arctk namespace
 
 
         //  == OPERATORS ==
-        //  -- Io --
-        /**
-         *  Print the matrix to a stream.
-         *
-         *  @tparam S   Type stored by the matrix.
-         *
-         *  @param  stream_ Stream to print to.
-         *  @param  mat_    Matrix to be printed.
-         *
-         *  @return Reference to the matrix post-print.
-         */
-        template <typename S>
-        constexpr inline std::ostream& operator<<(std::ostream& stream_, const Mat<S, 3>& mat_) noexcept
-        {
-            stream_ << consts::format::OPENERS[consts::format::container::MAT] << mat_.x << consts::format::DELIM << mat_.y << consts::format::DELIM << mat_.z << consts::format::CLOSERS[consts::format::container::MAT];
-
-            return (stream_);
-        }
-
-
         //  -- Assignment --
         /**
          *  Add a value to all elements of the mat.
@@ -450,7 +430,6 @@ namespace arc //! arctk namespace
             return (Vec<T, 3>((x.x * vec_.x) + (x.y * vec_.y) + (x.z * vec_.z), (y.x * vec_.x) + (y.y * vec_.y) + (y.z * vec_.z), (z.x * vec_.x) + (z.y * vec_.y) + (z.z * vec_.z)));
         }
 
-
         /**
          *  Multiply two mats together.
          *
@@ -513,6 +492,26 @@ namespace arc //! arctk namespace
             assert(index_ < 3);
 
             return ((&x)[index_]);
+        }
+
+
+        //  -- Printing --
+        /**
+         *  Print the matrix to a stream.
+         *
+         *  @tparam S   Type stored by the matrix.
+         *
+         *  @param  stream_ Stream to print to.
+         *  @param  mat_    Matrix to be printed.
+         *
+         *  @return Reference to the matrix post-print.
+         */
+        template <typename S>
+        constexpr inline std::ostream& operator<<(std::ostream& stream_, const Mat<S, 3>& mat_) noexcept
+        {
+            stream_ << consts::format::OPENERS[consts::format::container::MAT] << mat_.x << consts::format::DELIM << mat_.y << consts::format::DELIM << mat_.z << consts::format::CLOSERS[consts::format::container::MAT];
+
+            return (stream_);
         }
 
 
