@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
 
               protected:
                 //  -- Indexing --
-                inline size_t index(double pos_) const noexcept;
+                inline size_t index(double pos_) const noexcept override;
             };
 
 
