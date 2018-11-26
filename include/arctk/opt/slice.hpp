@@ -14,6 +14,18 @@
 
 
 
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    class Block;
+    namespace random //! random number namespace
+    {
+        class Generator;
+    } // namespace random
+} // namespace arc
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -49,7 +61,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            virtual double ref_index() const noexcept = 0;
+            virtual double ref_index() const noexcept                                                    = 0;
+            virtual double interaction_dist(random::Generator* rng_, const Block* block_) const noexcept = 0;
         };
 
 
