@@ -40,9 +40,9 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Mix::Mix(const std::vector<std::unique_ptr<Sop>>& bases_, const std::vector<double>& probs_) noexcept
+            inline Mix::Mix(std::vector<std::unique_ptr<Sop>>&& bases_, const std::vector<double>& probs_) noexcept
               : Sop(init_ref_index(bases_, probs_), init_interaction_coef(bases_, probs_))
-              , _bases(bases_)
+              , _bases(std::move(bases_))
               , _probs(probs_)
             {
                 assert(bases_.size() >= 2);
