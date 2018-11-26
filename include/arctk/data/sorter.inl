@@ -17,7 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
-#include <ofstream>
+#include <fstream>
 
 //  -- Arctk --
 #include <arctk/consts/format.hpp>
