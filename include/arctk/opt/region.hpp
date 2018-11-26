@@ -56,6 +56,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           private:
+            //  -- Getters --
+            const std::array<size_t, 3>& res() const noexcept;
         };
 
 
