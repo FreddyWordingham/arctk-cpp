@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
         /**
          *  Optical properties material capable of generating specific optical property slices.
          */
-        class Mat
+        class Material
         {
             //  == INSTANTIATION ==
           private:
@@ -58,19 +58,19 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Mat(double min_, double max_) noexcept;
-            inline Mat(const Mat&) = default; //!< Defaulted copy constructor.
-            inline Mat(Mat&&)      = default; //!< Defaulted move constructor.
+            inline Material(double min_, double max_) noexcept;
+            inline Material(const Material&) = default; //!< Defaulted copy constructor.
+            inline Material(Material&&)      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
-            virtual ~Mat() noexcept;
+            virtual ~Material() noexcept;
 
 
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            inline Mat& operator=(const Mat&) noexcept = default; //!< Default copy operator. @return Reference to copied object.
-            inline Mat& operator=(Mat&&) noexcept = default;      //!< Default move operator. @return Reference to moved object.
+            inline Material& operator=(const Material&) noexcept = default; //!< Default copy operator. @return Reference to copied object.
+            inline Material& operator=(Material&&) noexcept = default;      //!< Default move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
