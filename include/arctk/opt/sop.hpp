@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline explicit Sop(double ref_index_) noexcept;
+            inline explicit Sop(double ref_index_, double interaction_coef_) noexcept;
             inline Sop(const Sop&) = default; //!< Defaulted copy constructor.
             inline Sop(Sop&&)      = default; //!< Defaulted move constructor.
 
