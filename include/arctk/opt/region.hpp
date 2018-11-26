@@ -54,10 +54,11 @@ namespace arc //! arctk namespace
             //  -- Constructors --
 
 
+
             //  == METHODS ==
           private:
             //  -- Getters --
-            const std::array<size_t, 3>& res() const noexcept;
+            inline const std::array<size_t, 3>& res() const noexcept;
         };
 
 
