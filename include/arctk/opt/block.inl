@@ -14,11 +14,6 @@
 
 
 
-//  == IMPORTS ==
-//  -- Std --
-
-
-
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -28,12 +23,11 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
-        //  -- Constructors --
-
-
-
-        //  == METHODS ==
-        //  -- Getters --
+        //  -- Destructors --
+        /**
+         *  Default destructor.
+         */
+        inline Block::~Block() noexcept = default;
 
 
 
