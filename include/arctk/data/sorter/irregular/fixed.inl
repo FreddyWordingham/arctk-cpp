@@ -49,6 +49,23 @@ namespace arc //! arctk namespace
 
                 //  == OPERATORS ==
                 //  -- Call --
+                template <typename T>
+                inline T& Fixed<T>::operator()(const double pos_) noexcept
+                {
+                    assert(pos_ >= Sorter<T>::_min);
+                    assert(pos_ <= Sorter<T>::_max);
+
+                    return (Sorter<T>::_data[Irregular<T>::index(pos_)]);
+                }
+
+                template <typename T>
+                inline const T& Fixed<T>::operator()(const double pos_) const noexcept
+                {
+                    assert(pos_ >= Sorter<T>::_min);
+                    assert(pos_ <= Sorter<T>::_max);
+
+                    return (Sorter<T>::_data[Irregular<T>::index(pos_)]);
+                }
 
 
 
