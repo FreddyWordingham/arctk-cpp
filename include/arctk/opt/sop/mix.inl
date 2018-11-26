@@ -62,7 +62,7 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < bases_.size(); ++i)
                 {
-                    ref_index += bases_[i].ref_index() * probs_[i];
+                    ref_index += bases_[i]->ref_index() * probs_[i];
                 }
 
                 return (ref_index);
@@ -78,7 +78,7 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < bases_.size(); ++i)
                 {
-                    interaction_coef += bases_[i].interaction_coef() * probs_[i];
+                    interaction_coef += bases_[i]->interaction_coef() * probs_[i];
                 }
 
                 return (interaction_coef);
