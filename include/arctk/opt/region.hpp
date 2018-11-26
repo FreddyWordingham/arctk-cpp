@@ -23,19 +23,8 @@
 //  -- Std --
 #include <array>
 
-
-
-//  == CLASS PROTOTYPES ==
-namespace arc //! arctk namespace
-{
-    namespace math //! math namespace
-    {
-        template <typename T, size_t N>
-        class Vec;
-    } // namespace math
-    //  == ALIASES ==
-    using vec3 = math::Vec<double, 3>; //!< Three-dimensional double precision vec.
-} // namespace arc
+//  -- Arctk --
+#include <arctk/math/vec.hpp>
 
 
 
@@ -82,7 +71,10 @@ namespace arc //! arctk namespace
           private:
             //  -- Getters --
             inline const std::array<size_t, 3>& res() const noexcept;
-            inline std::array<size_t, 3>        block_index() const noexcept;
+            inline const vec3&
+
+              inline std::array<size_t, 3>
+              block_index() const noexcept;
         };
 
 

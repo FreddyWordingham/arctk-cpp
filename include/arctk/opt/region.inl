@@ -20,7 +20,6 @@
 
 //  -- Arctk --
 #include <arctk/index/dim.hpp>
-#include <arctk/math/vec.hpp>
 
 
 
@@ -62,6 +61,11 @@ namespace arc //! arctk namespace
         inline const std::array<size_t, 3>& Region::res() const noexcept
         {
             return (_res);
+        }
+
+        inline const vec3& Region::block_size() const noexcept
+        {
+            return (_block_size);
         }
 
 
