@@ -22,6 +22,15 @@ namespace arc //! arctk namespace
 
 
 
+        //  == METHODS ==
+        //  -- Getters --
+        const std::array<size_t, 3>& Region::res() const noexcept
+        {
+            return (_res);
+        }
+
+
+
     } // namespace opt
 } // namespace arc
 
