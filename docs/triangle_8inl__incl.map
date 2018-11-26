@@ -1,7 +1,0 @@
-<map id="include/arctk/geom/shape/triangle.inl" name="include/arctk/geom/shape/triangle.inl">
-<area shape="rect" id="node4" href="$vertex_8hpp.html" title="arctk/index/vertex.hpp" alt="" coords="176,92,328,117"/>
-<area shape="rect" id="node5" href="$compare_8hpp.html" title="arctk/math/compare.hpp" alt="" coords="352,92,517,117"/>
-<area shape="rect" id="node8" href="$generator_8hpp.html" title="arctk/random/generator.hpp" alt="" coords="549,92,734,117"/>
-<area shape="rect" id="node7" href="$compare_8inl.html" title="arctk/math/compare.inl" alt="" coords="357,165,513,191"/>
-<area shape="rect" id="node11" href="$generator_8inl.html" title="arctk/random/generator.inl" alt="" coords="703,165,879,191"/>
-</map>

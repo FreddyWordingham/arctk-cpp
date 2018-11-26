@@ -1,6 +1,0 @@
-<map id="arc::opt::func::reflection_dir" name="arc::opt::func::reflection_dir">
-<area shape="rect" id="node2" href="$classarc_1_1equip_1_1entity_1_1_body.html#a56f911d2d41eec4e102c2dee9d7579ba" title="arc::equip::entity\l::Body::hit_front" alt="" coords="236,5,355,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1equip_1_1entity_1_1_body.html#aa760ea21c61493fd994ea26f892a02f9" title="arc::equip::entity\l::Body::hit_back" alt="" coords="236,68,355,107"/>
-<area shape="rect" id="node4" href="$classarc_1_1equip_1_1entity_1_1_mirror.html#a86ce9c61784467eccf270848af4545c1" title="arc::equip::entity\l::Mirror::hit_front" alt="" coords="236,131,355,169"/>
-<area shape="rect" id="node5" href="$classarc_1_1equip_1_1entity_1_1_mirror.html#ae8138e6b3ea77d71cee11b4edddb26cb" title="arc::equip::entity\l::Mirror::hit_back" alt="" coords="235,193,356,232"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="arc::random::distribution::Discrete::sample" name="arc::random::distribution::Discrete::sample">
-<area shape="rect" id="node2" href="$namespacearc_1_1search_1_1index.html#a46e0f95a8c4004833018a61fcb8661f0" title="arc::search::index\l::lower" alt="" coords="218,37,344,76"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1prop_1_1order.html#aa4093b496503227bc6426506da50ad41" title="arc::prop::order::ascending" alt="" coords="805,19,986,44"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1prop_1_1contents.html#a7299eff4da63e5d81d792f4aa654b866" title="arc::prop::contents\l::within" alt="" coords="392,65,524,104"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1index_1_1rotate.html#a7f591e13cc190f28640512d8d8339fb6" title="arc::index::rotate\l::prev" alt="" coords="1038,5,1158,44"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="1038,68,1158,107"/>
-<area shape="rect" id="node7" href="$namespacearc_1_1prop_1_1order.html#a6b2e66e4dd0736ed73701ed202c6e08b" title="arc::prop::order::monotonic" alt="" coords="572,68,753,93"/>
-<area shape="rect" id="node8" href="$namespacearc_1_1prop_1_1order.html#afe04e94c07a0aa2a62eab27eb0f15b21" title="arc::prop::order::descending" alt="" coords="801,68,990,93"/>
-</map>

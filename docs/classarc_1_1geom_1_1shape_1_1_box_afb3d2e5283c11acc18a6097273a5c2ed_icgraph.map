@@ -1,5 +1,0 @@
-<map id="arc::geom::shape::Box::vol" name="arc::geom::shape::Box::vol">
-<area shape="rect" id="node2" href="$classarc_1_1dom_1_1_cell.html#ab4e7ba8e6755f0d5f935e60aac11a40e" title="arc::dom::Cell::scatter_dens" alt="" coords="233,5,420,31"/>
-<area shape="rect" id="node3" href="$classarc_1_1dom_1_1_cell.html#ad34085781d2cf6ef1aafcc239de3d52f" title="arc::dom::Cell::absorb_dens" alt="" coords="233,55,421,80"/>
-<area shape="rect" id="node4" href="$classarc_1_1dom_1_1_cell.html#a9373c63df0dad57ae05f75a0d2ae5bda" title="arc::dom::Cell::energy_dens" alt="" coords="233,104,421,129"/>
-</map>

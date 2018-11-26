@@ -1,7 +1,0 @@
-<map id="arc::equip::entity::Detector" name="arc::equip::entity::Detector">
-<area shape="rect" id="node2" href="$classarc_1_1equip_1_1_entity.html" title="arc::equip::Entity" alt="" coords="30,279,150,304"/>
-<area shape="rect" id="node3" href="$classarc_1_1geom_1_1shape_1_1_mesh.html" title="arc::geom::shape::Mesh" alt="" coords="8,192,172,217"/>
-<area shape="rect" id="node4" href="$classarc_1_1geom_1_1_shape.html" title="arc::geom::Shape" alt="" coords="5,5,132,31"/>
-<area shape="rect" id="node5" href="$classarc_1_1geom_1_1shape_1_1_box.html" title="arc::geom::shape::Box" alt="" coords="106,105,261,131"/>
-<area shape="rect" id="node6" href="$classarc_1_1math_1_1_vec.html" title="arc::math::Vec\&lt; T, N \&gt;" alt="" coords="156,5,309,31"/>
-</map>

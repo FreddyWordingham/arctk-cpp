@@ -1,8 +1,0 @@
-<map id="arc::equip::Entity" name="arc::equip::Entity">
-<area shape="rect" id="node2" href="$classarc_1_1equip_1_1entity_1_1_body.html" title="arc::equip::entity\l::Body" alt="" coords="174,5,293,44"/>
-<area shape="rect" id="node3" href="$classarc_1_1equip_1_1entity_1_1_detector.html" title="arc::equip::entity\l::Detector" alt="" coords="174,68,293,107"/>
-<area shape="rect" id="node5" href="$classarc_1_1equip_1_1entity_1_1_light.html" title="arc::equip::entity\l::Light" alt="" coords="174,131,293,169"/>
-<area shape="rect" id="node7" href="$classarc_1_1equip_1_1entity_1_1_mirror.html" title="arc::equip::entity\l::Mirror" alt="" coords="174,193,293,232"/>
-<area shape="rect" id="node4" href="$classarc_1_1equip_1_1entity_1_1detector_1_1_phaseometer.html" title="arc::equip::entity\l::detector::Phaseometer" alt="" coords="341,68,505,107"/>
-<area shape="rect" id="node6" href="$classarc_1_1equip_1_1entity_1_1light_1_1_laser.html" title="arc::equip::entity\l::light::Laser" alt="" coords="363,131,483,169"/>
-</map>

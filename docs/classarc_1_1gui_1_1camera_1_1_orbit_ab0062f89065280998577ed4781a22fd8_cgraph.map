@@ -1,6 +1,0 @@
-<map id="arc::gui::camera::Orbit::move" name="arc::gui::camera::Orbit::move">
-<area shape="rect" id="node2" href="$namespacearc_1_1math_1_1convert.html#a19b4ef4a009b9e148760c83ed9cf266c" title="arc::math::convert\l::cart_to_polar" alt="" coords="228,5,356,44"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1math_1_1convert.html#ac0b319816d18eb6a572ecb9abd2af70d" title="arc::math::convert\l::polar_to_cart" alt="" coords="228,68,356,107"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1math_1_1container.html#a8080312bec0b12bcea9927c1f0dbd029" title="arc::math::container::max" alt="" coords="207,131,378,156"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1math_1_1container.html#aa11d30fe929faeff3dc3215c6e3c7a1a" title="arc::math::container::min" alt="" coords="426,131,594,156"/>
-</map>

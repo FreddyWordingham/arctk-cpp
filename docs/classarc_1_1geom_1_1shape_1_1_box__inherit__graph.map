@@ -1,8 +1,0 @@
-<map id="arc::geom::shape::Box" name="arc::geom::shape::Box">
-<area shape="rect" id="node3" href="$classarc_1_1dom_1_1_cell.html" title="arc::dom::Cell" alt="" coords="5,152,109,177"/>
-<area shape="rect" id="node4" href="$classarc_1_1dom_1_1_region.html" title="arc::dom::Region" alt="" coords="133,152,256,177"/>
-<area shape="rect" id="node5" href="$classarc_1_1tree_1_1_node.html" title="arc::tree::Node" alt="" coords="280,152,389,177"/>
-<area shape="rect" id="node2" href="$classarc_1_1geom_1_1_shape.html" title="arc::geom::Shape" alt="" coords="131,5,258,31"/>
-<area shape="rect" id="node6" href="$classarc_1_1tree_1_1node_1_1_branch.html" title="arc::tree::node::Branch" alt="" coords="169,225,326,251"/>
-<area shape="rect" id="node7" href="$classarc_1_1tree_1_1node_1_1_leaf.html" title="arc::tree::node::Leaf" alt="" coords="351,225,491,251"/>
-</map>

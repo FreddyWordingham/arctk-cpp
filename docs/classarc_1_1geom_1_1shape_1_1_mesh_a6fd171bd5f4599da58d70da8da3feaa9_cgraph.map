@@ -1,9 +1,0 @@
-<map id="arc::geom::shape::Mesh::random_pos_and_norm" name="arc::geom::shape::Mesh::random_pos_and_norm">
-<area shape="rect" id="node2" href="$namespacearc_1_1search_1_1index.html#a46e0f95a8c4004833018a61fcb8661f0" title="arc::search::index\l::lower" alt="" coords="224,37,350,76"/>
-<area shape="rect" id="node3" href="$namespacearc_1_1prop_1_1order.html#aa4093b496503227bc6426506da50ad41" title="arc::prop::order::ascending" alt="" coords="811,19,992,44"/>
-<area shape="rect" id="node6" href="$namespacearc_1_1prop_1_1contents.html#a7299eff4da63e5d81d792f4aa654b866" title="arc::prop::contents\l::within" alt="" coords="398,65,530,104"/>
-<area shape="rect" id="node4" href="$namespacearc_1_1index_1_1rotate.html#a7f591e13cc190f28640512d8d8339fb6" title="arc::index::rotate\l::prev" alt="" coords="1043,5,1164,44"/>
-<area shape="rect" id="node5" href="$namespacearc_1_1index_1_1rotate.html#a0c51216e39a86f2f4ba67ad75ed1326c" title="arc::index::rotate\l::next" alt="" coords="1043,68,1164,107"/>
-<area shape="rect" id="node7" href="$namespacearc_1_1prop_1_1order.html#a6b2e66e4dd0736ed73701ed202c6e08b" title="arc::prop::order::monotonic" alt="" coords="578,68,759,93"/>
-<area shape="rect" id="node8" href="$namespacearc_1_1prop_1_1order.html#afe04e94c07a0aa2a62eab27eb0f15b21" title="arc::prop::order::descending" alt="" coords="807,68,995,93"/>
-</map>

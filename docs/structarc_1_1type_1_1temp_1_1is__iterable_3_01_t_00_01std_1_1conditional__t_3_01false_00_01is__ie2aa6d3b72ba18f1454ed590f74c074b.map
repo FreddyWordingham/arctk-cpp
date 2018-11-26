@@ -1,2 +1,0 @@
-<map id="arc::type::temp::is_iterable&lt; T, std::conditional_t&lt; false, is_iterable_helper&lt; typename T::value_type, typename T::const_iterator, decltype(std::begin(std::declval&lt; T &gt;())), decltype(std::end(std::declval&lt; T &gt;()))&gt;, void &gt; &gt;" name="arc::type::temp::is_iterable&lt; T, std::conditional_t&lt; false, is_iterable_helper&lt; typename T::value_type, typename T::const_iterator, decltype(std::begin(std::declval&lt; T &gt;())), decltype(std::end(std::declval&lt; T &gt;()))&gt;, void &gt; &gt;">
-</map>
