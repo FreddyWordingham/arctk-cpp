@@ -28,6 +28,19 @@
 
 
 
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    class Block;
+    class Slice;
+    namespace phys //! physics namespace
+    {
+        class Photon;
+    } // namespace phys
+} // namespace arc
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -72,7 +85,8 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline const std::array<size_t, 3>& res() const noexcept;
             inline const vec3&                  block_size() const noexcept;
-            virtual Block*                      block(const vec3& pos_) const noexcept = 0;
+            virtual Slice*                      slice(const phys::Photon& phot_) const noexcept = 0;
+            virtual Block*                      block(const vec3& pos_) const noexcept          = 0;
 
           private:
             //  -- Indexing --
