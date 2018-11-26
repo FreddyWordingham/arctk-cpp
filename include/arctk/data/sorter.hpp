@@ -42,8 +42,8 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Bounds --
-            double _min;
-            double _max;
+            double _min;    //!< Minimum bound of the sorter.
+            double _max;    //!< Maximum bound of the sorter.
 
             //  -- Data --
             std::vector<T> _data;
