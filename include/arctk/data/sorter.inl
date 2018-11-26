@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <ofstream>
 
 //  -- Arctk --
 #include <arctk/consts/format.hpp>
@@ -122,6 +123,18 @@ namespace arc //! arctk namespace
         inline size_t Sorter<T>::res() const noexcept
         {
             return (_data.size());
+        }
+
+
+        //  -- Saving --
+        template <typename T>
+        inline void Sorter<T>::save(const std::string& path_) const noexcept
+        {
+            assert(!path_.empty());
+
+            std::ofstream file(path_ + ".csv");
+
+            file << *this;
         }
 
 

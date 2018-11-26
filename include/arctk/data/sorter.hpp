@@ -88,6 +88,9 @@ namespace arc //! arctk namespace
             virtual std::vector<double>  bounds() const noexcept = 0;
             inline size_t                res() const noexcept;
 
+            //  -- Saving --
+            inline void save(const std::string& path_) const noexcept;
+
           protected:
             //  -- Indexing --
             virtual size_t index(double pos_) const noexcept = 0;
