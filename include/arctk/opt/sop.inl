@@ -68,16 +68,6 @@ namespace arc //! arctk namespace
             return (_ref_index);
         }
 
-        /**
-         *  Get the interaction coefficient of the specific-optical-property.
-         *
-         *  @return Interaction coefficient of the specific-optical-property.
-         */
-        inline double Sop::interaction_coef() const noexcept
-        {
-            return (_interaction_coef);
-        }
-
 
 
     } // namespace opt

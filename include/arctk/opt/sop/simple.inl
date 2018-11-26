@@ -56,7 +56,8 @@ namespace arc //! arctk namespace
              *  @pre    asym_ must less than, or equal to, unity.
              */
             inline Simple::Simple(const double ref_index_, const double interaction_coef_, const double albedo_, const double asym_) noexcept
-              : Sop(ref_index_, interaction_coef_)
+              : Sop(ref_index_)
+              , _interaction_coef(interaction_coef_)
               , _albedo(albedo_)
               , _asym(asym_)
             {

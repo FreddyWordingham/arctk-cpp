@@ -50,8 +50,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Optical Properties --
-            const double _ref_index;        //!< Refractive index.
-            const double _interaction_coef; //!< Interaction coefficient.
+            const double _ref_index; //!< Refractive index.
 
 
             //  == INSTANTIATION ==
@@ -76,7 +75,6 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline double  ref_index() const noexcept;
-            inline double  interaction_coef() const noexcept;
             virtual double interact_dist(random::Generator* rng_, const dom::Cell* cell_) const
               noexcept = 0; //!< Get the distance until the next interaction event.  @param  rng_    Random number generator.    @param  cell_   Current domain cell.    @return Distance until the next interaction event.
 

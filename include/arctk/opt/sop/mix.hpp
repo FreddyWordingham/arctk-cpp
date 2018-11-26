@@ -84,7 +84,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline double interact_dist(random::Generator* rng_, const dom::Cell* /*unused*/) const noexcept override;
+                inline double interact_dist(random::Generator* rng_, const dom::Cell* cell_) const noexcept override;
 
                 //  -- Interaction --
                 inline bool interact(random::Generator* rng_, phys::Photon* phot_, dom::Cell* cell_, double dist_) const noexcept override;
