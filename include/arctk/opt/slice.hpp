@@ -48,6 +48,8 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Getters --
+            virtual double ref_index() const noexcept = 0;
         };
 
 
