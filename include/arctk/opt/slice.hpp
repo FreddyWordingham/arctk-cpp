@@ -18,6 +18,10 @@
 namespace arc //! arctk namespace
 {
     class Block;
+    namespace phys //! physics namespace
+    {
+        class Photon;
+    }                // namespace phys
     namespace random //! random number namespace
     {
         class Generator;
@@ -63,6 +67,9 @@ namespace arc //! arctk namespace
             //  -- Getters --
             virtual double ref_index() const noexcept                                                    = 0;
             virtual double interaction_dist(random::Generator* rng_, const Block* block_) const noexcept = 0;
+
+            //  -- Interaction --
+            virtual bool interact(random::Generator* rng_, Block* block_, phys::Photon* phot_, double dist_) const noexcept = 0;
         };
 
 
