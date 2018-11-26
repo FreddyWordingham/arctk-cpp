@@ -62,6 +62,7 @@ namespace arc //! arctk namespace
 
                 for (size_t i = 0; i < bases_.size(); ++i)
                 {
+                    ref_index += bases_[i].ref_index() * probs_[i];
                 }
 
                 return (ref_index);
