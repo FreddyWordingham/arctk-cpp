@@ -68,6 +68,7 @@ namespace arc //! arctk namespace
 
                 //  -- Proberbilities --
                 const std::vector<double> _probs;
+                const std::vector<double> _cumulative_probs;
 
 
                 //  == INSTANTIATION ==
@@ -77,9 +78,7 @@ namespace arc //! arctk namespace
 
               private:
                 //  -- Initialisation --
-                inline double init_ref_index(const std::vector<std::unique_ptr<Sop>>& bases_, const std::vector<double>& probs_) const noexcept;
-                inline double init_interaction_coef(const std::vector<std::unique_ptr<Sop>>& bases_, const std::vector<double>& probs_) const noexcept;
-
+                inline std::vector<double> init_cumulative_probs(const std::vector<double>& probs_) const noexcept;
 
                 //  == METHODS ==
               public:

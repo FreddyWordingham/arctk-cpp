@@ -22,6 +22,8 @@
 //  -- Arctk --
 #include <arctk/consts/math.hpp>
 #include <arctk/dom/cell.hpp>
+#include <arctk/math/compare.hpp>
+#include <arctk/math/container.hpp>
 #include <arctk/phys/photon.hpp>
 #include <arctk/random/distribution.hpp>
 #include <arctk/random/generator.hpp>
@@ -44,28 +46,32 @@ namespace arc //! arctk namespace
             inline Mix::Mix(std::vector<std::unique_ptr<Sop>>&& bases_, const std::vector<double>& probs_) noexcept
               : _bases(std::move(bases_))
               , _probs(probs_)
+              , _cumulative_probs(init_cumulative_probs(probs_))
             {
                 assert(bases_.size() >= 2);
                 assert(probs_.size() >= 2);
+                assert(math::compare::unity(math::container::sum(probs_)));
                 assert(bases_.size() == probs_.size());
             }
 
 
             //  -- Initialisation --
-            inline double Mix::init_ref_index(const std::vector<std::unique_ptr<Sop>>& bases_, const std::vector<double>& probs_) const noexcept
+            inline std::vector<double> Mix::init_cumulative_probs(const std::vector<double>& probs_) const noexcept
             {
-                assert(bases_.size() >= 2);
                 assert(probs_.size() >= 2);
-                assert(bases_.size() == probs_.size());
+                assert(math::compare::unity(math::container::sum(probs_)));
 
-                double ref_index = 0.0;
+                std::vector<double> cumulative_probs(probs_.size() + 1);
 
-                for (size_t i = 0; i < bases_.size(); ++i)
+                cumulative_probs[0] = 0.0;
+                for (size_t i = 0; i < probs_.size(); ++i)
                 {
-                    ref_index += bases_[i]->ref_index() * probs_[i];
+                    cumulative_probs[i + 1] = cumulative_probs[i] + probs_[i];
                 }
 
-                return (ref_index);
+                assert(math::compare::unity(cumulative_probs.back()));
+
+                return (cumulative_probs);
             }
 
 
@@ -93,7 +99,7 @@ namespace arc //! arctk namespace
                 assert(rng_ != nullptr);
                 assert(cell_ != nullptr);
 
-                return (_bases[search::index::lower(_cumulative, rng_->gen())]->interact(rng_, phot_, cell_, dist_));
+                return (_bases[search::index::lower(_cumulative_probs, rng_->gen())]->interact(rng_, phot_, cell_, dist_));
             }
 
 
