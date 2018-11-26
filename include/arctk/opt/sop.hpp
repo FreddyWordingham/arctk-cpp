@@ -47,16 +47,9 @@ namespace arc //! arctk namespace
          */
         class Sop
         {
-            //  == FIELDS ==
-          protected:
-            //  -- Optical Properties --
-            const double _ref_index; //!< Refractive index.
-
-
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline explicit Sop(double ref_index_, double interaction_coef_) noexcept;
             inline Sop(const Sop&) = default; //!< Defaulted copy constructor.
             inline Sop(Sop&&)      = default; //!< Defaulted move constructor.
 
