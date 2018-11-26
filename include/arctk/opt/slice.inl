@@ -21,6 +21,16 @@ namespace arc //! arctk namespace
     {
 
 
+
+        //  == INSTANTIATION ==
+        //  -- Destructors --
+        /**
+         *  Default destructor.
+         */
+        inline Slice::~Slice() noexcept = default;
+
+
+
     } // namespace opt
 } // namespace arc
 
