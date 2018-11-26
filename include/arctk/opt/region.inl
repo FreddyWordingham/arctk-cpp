@@ -44,6 +44,13 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Destructors --
+        /**
+         *  Default destructor.
+         */
+        inline Region::~Region() noexcept = default;
+
+
 
         //  == METHODS ==
         //  -- Getters --
