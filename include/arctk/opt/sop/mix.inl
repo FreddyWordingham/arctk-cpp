@@ -45,6 +45,26 @@ namespace arc //! arctk namespace
               , _bases(bases_)
               , _probs(probs_)
             {
+                assert(bases_.size() >= 2);
+                assert(probs_.size() >= 2);
+                assert(bases_.size() == probs_.size());
+            }
+
+
+            //  -- Initialisation --
+            inline double Mix::init_ref_index(const std::vector<std::unique_ptr<Sop>>& bases_, const std::vector<double>& probs_) const noexcept
+            {
+                assert(bases_.size() >= 2);
+                assert(probs_.size() >= 2);
+                assert(bases_.size() == probs_.size());
+
+                double ref_index = 0.0;
+
+                for (size_t i = 0; i < bases_.size(); ++i)
+                {
+                }
+
+                return (ref_index);
             }
 
 

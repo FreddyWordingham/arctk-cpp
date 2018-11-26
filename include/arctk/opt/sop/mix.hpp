@@ -75,6 +75,10 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline Mix(const std::vector<std::unique_ptr<Sop>>& bases_, const std::vector<double>& probs_) noexcept;
 
+              private:
+                //  -- Initialisation --
+                inline double init_ref_index(const std::vector<std::unique_ptr<Sop>>& bases_, const std::vector<double>& probs_) const noexcept;
+
 
                 //  == METHODS ==
               public:
