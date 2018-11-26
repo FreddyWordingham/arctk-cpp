@@ -19,6 +19,12 @@
 
 
 
+//  == IMOPORTS ==
+//  -- Std --
+#include <vector>
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -43,7 +49,7 @@ namespace arc //! arctk namespace
                     //  == INSTANTIATION ==
                   public:
                     //  -- Constructors --
-                    inline Fixed(double min_, double max_, size_t res_, const T& init_ = {}) noexcept;
+                    inline Fixed(const std::vector<double>& bounds_, const T& init_ = {}) noexcept;
 
 
                     //  == OPERATORS ==
