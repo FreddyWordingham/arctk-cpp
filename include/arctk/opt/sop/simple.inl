@@ -73,6 +73,18 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            //  -- Getters --
+            inline double Simple::ref_index() const noexcept
+            {
+                return (_ref_index);
+            }
+
+            inline double Simple::interaction_coef() const noexcept
+            {
+                return (_interaction_coef);
+            }
+
+
             /**
              *  Get the distance until the next interaction event.
              *
