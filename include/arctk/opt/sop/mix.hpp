@@ -57,9 +57,9 @@ namespace arc //! arctk namespace
 
             //  == CLASS ==
             /**
-             *  Raman specific-optical-proeprties control class.
+             *  Mixture specific-optical-proeprties control class.
              */
-            class Raman : public Sop
+            class Mix : public Sop
             {
                 //  == FIELDS ==
               private:
@@ -73,6 +73,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+
 
 
                 //  == METHODS ==
