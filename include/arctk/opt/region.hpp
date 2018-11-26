@@ -63,6 +63,18 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Region(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept;
+            inline Region(const Region&) = default; //!< Defaulted copy constructor.
+            inline Region(Region&&)      = default; //!< Defaulted move constructor.
+
+            //  -- Destructors --
+            virtual ~Region() noexcept;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Region& operator=(const Region&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Region& operator=(Region&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
