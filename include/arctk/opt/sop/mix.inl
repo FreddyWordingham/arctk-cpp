@@ -40,6 +40,11 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Mix::Mix(const std::vector<std::unique_ptr<Sop>>& bases_, const std::vector<double>& probs_) noexcept
+              : _bases(bases_)
+              , _probs(probs_)
+            {
+            }
 
 
 
