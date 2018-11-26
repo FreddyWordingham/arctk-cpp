@@ -39,7 +39,7 @@ namespace arc //! arctk namespace
         /**
          *  Optical region class.
          */
-        class Region : geom::shape::Box
+        class Region : public geom::shape::Box
         {
             //  == FIELDS ==
           private:
