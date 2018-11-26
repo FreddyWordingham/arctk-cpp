@@ -19,12 +19,6 @@
 
 
 
-//  == IMPORTS ==
-//  -- Std --
-#include <memory>
-
-
-
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
