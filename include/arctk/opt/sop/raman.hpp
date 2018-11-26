@@ -74,6 +74,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
+                inline double ref_index() const noexcept override;
+                inline double interaction_coef() const noexcept override;
                 inline double interact_dist(random::Generator* rng_, const dom::Cell* /*unused*/) const noexcept override;
 
                 //  -- Interaction --

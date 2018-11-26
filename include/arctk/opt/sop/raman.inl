@@ -81,6 +81,16 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            inline double Raman::ref_index() const noexcept
+            {
+                return (_ref_index);
+            }
+
+            inline double Raman::interaction_coef() const noexcept
+            {
+                return (_interaction_coef);
+            }
+
             /**
              *  Get the distance until the next interaction event.
              *
