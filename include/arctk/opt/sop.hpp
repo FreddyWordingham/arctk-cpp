@@ -50,6 +50,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Sop()           = default; //!< Defaulted constructor.
             inline Sop(const Sop&) = default; //!< Defaulted copy constructor.
             inline Sop(Sop&&)      = default; //!< Defaulted move constructor.
 
