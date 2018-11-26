@@ -41,7 +41,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
             //  -- Constructors --
             inline Mix::Mix(const std::vector<std::unique_ptr<Sop>>& bases_, const std::vector<double>& probs_) noexcept
-              : Sop(init_ref_index(bases_, probs_))
+              : Sop(init_ref_index(bases_, probs_), init_interaction_coef(bases_, probs_))
               , _bases(bases_)
               , _probs(probs_)
             {
@@ -66,6 +66,22 @@ namespace arc //! arctk namespace
                 }
 
                 return (ref_index);
+            }
+
+            inline double Mix::init_interaction_coef(const std::vector<std::unique_ptr<Sop>>& bases_, const std::vector<double>& probs_) const noexcept
+            {
+                assert(bases_.size() >= 2);
+                assert(probs_.size() >= 2);
+                assert(bases_.size() == probs_.size());
+
+                double interaction_coef = 0.0;
+
+                for (size_t i = 0; i < bases_.size(); ++i)
+                {
+                    interaction_coef += bases_[i].interaction_coef() * probs_[i];
+                }
+
+                return (interaction_coef);
             }
 
 
