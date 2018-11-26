@@ -68,11 +68,12 @@ namespace arc //! arctk namespace
 
 
             //  == METHODS ==
-          private:
+          public:
             //  -- Getters --
             inline const std::array<size_t, 3>& res() const noexcept;
             inline const vec3&                  block_size() const noexcept;
 
+          private:
             //  -- Indexing --
             inline std::array<size_t, 3> block_index(const vec3& pos_) const noexcept;
         };
