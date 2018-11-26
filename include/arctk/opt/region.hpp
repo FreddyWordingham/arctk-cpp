@@ -20,6 +20,8 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <array>
 
 
 
@@ -43,6 +45,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Blocks --
+            const std::array<size_t, 3> _res;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
