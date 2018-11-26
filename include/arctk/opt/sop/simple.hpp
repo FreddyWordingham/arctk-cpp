@@ -63,9 +63,8 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Optical Properties --
-                const double _interaction_coef; //!< Interaction coefficient.
-                const double _albedo;           //!< Single scattering albedo.
-                const double _asym;             //!< Asymmetry factor.
+                const double _albedo; //!< Single scattering albedo.
+                const double _asym;   //!< Asymmetry factor.
 
 
                 //  == INSTANTIATION ==
