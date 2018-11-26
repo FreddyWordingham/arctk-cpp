@@ -25,6 +25,7 @@
 #include <arctk/phys/photon.hpp>
 #include <arctk/random/distribution.hpp>
 #include <arctk/random/generator.hpp>
+#include <arctk/search/index.hpp>
 
 
 
@@ -92,7 +93,7 @@ namespace arc //! arctk namespace
                 assert(rng_ != nullptr);
                 assert(cell_ != nullptr);
 
-                return (false);
+                return (_bases[search::index::lower(_cumulative, rng_->gen())]->interact(rng_, phot_, cell_, dist_));
             }
 
 
