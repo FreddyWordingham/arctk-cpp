@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Blocks --
             const std::array<size_t, 3> _res;
-            const vec3                  block_size;
+            const vec3                  _block_size;
 
 
             //  == INSTANTIATION ==
