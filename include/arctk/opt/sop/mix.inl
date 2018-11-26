@@ -76,7 +76,13 @@ namespace arc //! arctk namespace
                 assert(rng_ != nullptr);
                 assert(cell_ != nullptr);
 
-                return (0.0);
+                double interact_dist = 0.0;
+                for (size_t i = 0; i < _bases.size(); ++i)
+                {
+                    interact_dist += _bases[i]->interact_dist(rng_, cell_) * _probs[i];
+                }
+
+                return (interact_dist);
             }
 
 
