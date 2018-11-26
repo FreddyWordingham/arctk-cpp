@@ -24,13 +24,13 @@
 #include <glm/gtx/transform.hpp>
 
 //  -- Arctk --
-#include <arctk/dom/region.hpp>
+//#include <arctk/dom/region.hpp> TOOD
 #include <arctk/geom/shape/box.hpp>
 #include <arctk/geom/shape/mesh.hpp>
 #include <arctk/geom/shape/triangle.hpp>
 #include <arctk/index/dim.hpp>
 #include <arctk/math/container.hpp>
-#include <arctk/tree/root.hpp>
+// #include <arctk/tree/root.hpp> TODO
 
 
 
@@ -724,59 +724,59 @@ namespace arc //! arctk namespace
              *
              *  @return Domain actor.
              */
-            inline Actor domain(const dom::Region& dom_) noexcept // NOLINT
-            {
-                std::vector<glm::vec3> verts;
-                auto                   add_box = [&](const vec3& min_, const vec3& max_) {
-                    verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
-                    verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
-                    verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
-                    verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
-                    verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
-                    verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
-                    verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
-                    verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
+            // inline Actor domain(const dom::Region& dom_) noexcept // NOLINT TODO
+            // {
+            //     std::vector<glm::vec3> verts;
+            //     auto                   add_box = [&](const vec3& min_, const vec3& max_) {
+            //         verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
 
-                    verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
-                    verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
-                    verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
-                    verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
-                    verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
-                    verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
-                    verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
-                    verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
 
-                    verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
-                    verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
-                    verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
-                    verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
-                    verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
-                    verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
-                    verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
-                    verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
-                };
+            //         verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
+            //     };
 
-                const vec3 min  = dom_.min();
-                const vec3 size = dom_.cell_size();
-                for (size_t i = 0; i < dom_.res()[index::dim::cartesian::X]; ++i)
-                {
-                    const double x = min.x + (static_cast<double>(i) * size.x);
+            //     const vec3 min  = dom_.min();
+            //     const vec3 size = dom_.cell_size();
+            //     for (size_t i = 0; i < dom_.res()[index::dim::cartesian::X]; ++i)
+            //     {
+            //         const double x = min.x + (static_cast<double>(i) * size.x);
 
-                    for (size_t j = 0; j < dom_.res()[index::dim::cartesian::Y]; ++j)
-                    {
-                        const double y = min.y + (static_cast<double>(j) * size.y);
+            //         for (size_t j = 0; j < dom_.res()[index::dim::cartesian::Y]; ++j)
+            //         {
+            //             const double y = min.y + (static_cast<double>(j) * size.y);
 
-                        for (size_t k = 0; k < dom_.res()[index::dim::cartesian::Z]; ++k)
-                        {
-                            const double z = min.z + (static_cast<double>(k) * size.z);
+            //             for (size_t k = 0; k < dom_.res()[index::dim::cartesian::Z]; ++k)
+            //             {
+            //                 const double z = min.z + (static_cast<double>(k) * size.z);
 
-                            add_box(vec3(x, y, z), vec3(x, y, z) + size);
-                        }
-                    }
-                }
+            //                 add_box(vec3(x, y, z), vec3(x, y, z) + size);
+            //             }
+            //         }
+            //     }
 
-                return (Actor(verts, {3}, GL_LINES));
-            }
+            //     return (Actor(verts, {3}, GL_LINES));
+            // }
 
             /**
              *  Create an actor from a tree.
@@ -785,46 +785,46 @@ namespace arc //! arctk namespace
              *
              *  @return Tree actor.
              */
-            inline Actor tree(const tree::Root& root_) noexcept // NOLINT
-            {
-                std::vector<glm::vec3> verts;
-                auto                   add_box = [&](const vec3& min_, const vec3& max_) {
-                    verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
-                    verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
-                    verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
-                    verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
-                    verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
-                    verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
-                    verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
-                    verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
+            // inline Actor tree(const tree::Root& root_) noexcept // NOLINT TODO
+            // {
+            //     std::vector<glm::vec3> verts;
+            //     auto                   add_box = [&](const vec3& min_, const vec3& max_) {
+            //         verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
 
-                    verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
-                    verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
-                    verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
-                    verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
-                    verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
-                    verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
-                    verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
-                    verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
 
-                    verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
-                    verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
-                    verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
-                    verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
-                    verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
-                    verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
-                    verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
-                    verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
-                };
+            //         verts.emplace_back(glm::vec3(min_.x, min_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, min_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, min_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, min_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, max_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(min_.x, max_.y, max_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, max_.y, min_.z));
+            //         verts.emplace_back(glm::vec3(max_.x, max_.y, max_.z));
+            //     };
 
-                const std::vector<geom::shape::Box> boxes = root_.boxes();
-                for (size_t i = 0; i < boxes.size(); ++i)
-                {
-                    add_box(boxes[i].min(), boxes[i].max());
-                }
+            //     const std::vector<geom::shape::Box> boxes = root_.boxes();
+            //     for (size_t i = 0; i < boxes.size(); ++i)
+            //     {
+            //         add_box(boxes[i].min(), boxes[i].max());
+            //     }
 
-                return (Actor(verts, {3}, GL_LINES));
-            }
+            //     return (Actor(verts, {3}, GL_LINES));
+            // }
 
 
 

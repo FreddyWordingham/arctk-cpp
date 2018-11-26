@@ -21,7 +21,7 @@
 
 //  -- Arctk --
 #include <arctk/geom/shape/mesh.hpp>
-#include <arctk/opt/sop.hpp>
+//#include <arctk/opt/sop.hpp> TODO
 
 
 
