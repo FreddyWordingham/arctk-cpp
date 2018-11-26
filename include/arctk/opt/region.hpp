@@ -15,6 +15,7 @@
 
 
 //  == BASE ==
+#include <arctk/geom/shape/box.hpp>
 
 
 
@@ -36,9 +37,9 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
-         *  Body of material entity equipment class.
+         *  Optical region class.
          */
-        class Region
+        class Region : geom::shape::Box
         {
             //  == FIELDS ==
           private:
