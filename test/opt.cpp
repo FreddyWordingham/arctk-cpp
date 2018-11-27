@@ -12,6 +12,7 @@
 //  -- Arctk --
 #include <arctk/opt/block.hpp>
 #include <arctk/opt/material.hpp>
+#include <arctk/opt/material/basic.hpp>
 #include <arctk/opt/region.hpp>
 #include <arctk/opt/slice.hpp>
 
