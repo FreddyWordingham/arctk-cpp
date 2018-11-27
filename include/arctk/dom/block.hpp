@@ -22,7 +22,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace tree //! tree namespace
+    namespace dom //! domain namespace
     {
 
 
@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace tree
+    } // namespace dom
 } // namespace arc
 
 
