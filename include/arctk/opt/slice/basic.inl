@@ -86,6 +86,13 @@ namespace arc //! arctk namespace
             //  -- Interaction --
             inline bool Basic::interact(random::Generator* rng_, Block* block_, phys::Photon* phot_, const double dist_) const noexcept
             {
+                assert(rng_ != nullptr);
+                assert(phot_ != nullptr);
+                assert(cell_ != nullptr);
+
+                // TODO
+
+                return (true)
             }
 
 
