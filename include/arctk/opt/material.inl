@@ -43,6 +43,20 @@ namespace arc //! arctk namespace
 
 
 
+        //  == METHODS ==
+        //  -- Getters --
+        inline double Material::min() const noexcept
+        {
+            return (_min);
+        }
+
+        inline double Material::max() const noexcept
+        {
+            return (_max);
+        }
+
+
+
     } // namespace opt
 } // namespace arc
 
