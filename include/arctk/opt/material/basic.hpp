@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/opt/mat/basic.hpp
+ *  @file   arctk/opt/material/basic.hpp
  *  @date   26/11/2018
  *  @author Freddy Wordingham
  *
