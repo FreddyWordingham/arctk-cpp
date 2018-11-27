@@ -75,6 +75,8 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Specific Optical Properties --
+                inline std::unique_ptr<Slice> slice(const phys::Photon& phot_) const noexcept override;
             };
 
 
