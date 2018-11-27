@@ -15,6 +15,7 @@
 #include <arctk/opt/material/basic.hpp>
 #include <arctk/opt/region.hpp>
 #include <arctk/opt/slice.hpp>
+#include <arctk/opt/slice/basic.hpp>
 
 
 
