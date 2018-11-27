@@ -38,6 +38,11 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Simple::Simple(const std::vector<double>& wavelengths_, const std::vector<double>& ref_indexs_, const std::vector<double>& scat_coefs_, const std::vector<double>& abs_coefs_, const std::vector<double>& asyms_) noexcept
+              : Material(wavelengths_.front(), wavelengths_.back())
+              , _ref_index(wavelengths_, ref_indexs_)
+            {
+            }
 
 
             //  -- Initialisation --

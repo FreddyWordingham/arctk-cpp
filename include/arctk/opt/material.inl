@@ -13,6 +13,11 @@
 #define ARCTK_OPT_MATERIAL_INL
 
 
+//  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
+
 
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
@@ -23,6 +28,13 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
+        //  -- Destructors --
+        inline Material::Material(const double min_, const double max_) noexcept
+        {
+            assert(min_ <= max_);
+        }
+
+
         //  -- Destructors --
         /**
          *  Default destructor.
