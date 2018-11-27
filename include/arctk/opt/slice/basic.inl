@@ -17,6 +17,10 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <cmath>
+
+//  -- Arctk --
+#include <arctk/random/generator.hpp>
 
 
 
