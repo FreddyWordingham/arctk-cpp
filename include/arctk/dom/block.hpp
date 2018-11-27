@@ -39,18 +39,18 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             //     inline Node(const vec3& min_, const vec3& max_, size_t depth_) noexcept;
-            //     inline Node(const Node&) noexcept = default; //!< Defaulted copy constructor.
-            //     inline Node(Node&&) noexcept      = default; //!< Defaulted move constructor.
+            inline Block(const Block&) noexcept = default; //!< Defaulted copy constructor.
+            inline Block(Block&&) noexcept      = default; //!< Defaulted move constructor.
 
-            //     //  -- Destructors --
-            //     inline ~Node() noexcept override;
+            //  -- Destructors --
+            inline ~Block() noexcept override;
 
 
-            //     //  == OPERATORS ==
-            //   public:
-            //     //  -- Assignment --
-            //     inline Node& operator=(const Node&) noexcept = delete; //!< Deleted copy operator. @return Reference to copied object.
-            //     inline Node& operator=(Node&&) noexcept = delete;      //!< Deleted move operator. @return Reference to moved object.
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            inline Block& operator=(const Block&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Block& operator=(Block&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==

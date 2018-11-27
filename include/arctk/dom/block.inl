@@ -33,6 +33,14 @@ namespace arc //! arctk namespace
 
 
 
+        //  -- Destructors --
+        /**
+         *  Default destructor.
+         */
+        inline Block::~Block() noexcept = default;
+
+
+
         //  == METHODS ==
         //  -- Getters --
 
