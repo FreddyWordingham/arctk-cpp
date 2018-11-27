@@ -42,8 +42,8 @@ namespace arc //! arctk namespace
             //     inline Block(const Block&) noexcept = default; //!< Defaulted copy constructor.
             //     inline Block(Block&&) noexcept      = default; //!< Defaulted move constructor.
 
-            //     //  -- Destructors --
-            //     inline ~Block() noexcept override;
+            //  -- Destructors --
+            inline ~Driver() noexcept override;
 
 
             //     //  == OPERATORS ==

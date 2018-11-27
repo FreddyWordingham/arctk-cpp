@@ -37,7 +37,7 @@ namespace arc //! arctk namespace
         /**
          *  Default destructor.
          */
-        inline Block::~Block() noexcept = default;
+        inline Driver::~Driver() noexcept = default;
 
 
 
