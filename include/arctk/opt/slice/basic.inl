@@ -77,11 +77,14 @@ namespace arc //! arctk namespace
 
             inline double Basic::interaction_dist(random::Generator* rng_, const Block* block_) const noexcept
             {
+                assert(rng_ != nullptr);
+
+                return (-std::log(rng_->gen()) / _interact_coef);
             }
 
 
             //  -- Interaction --
-            inline bool Basic::interact(random::Generator* rng_, Block* block_, phys::Photon* phot_, double dist_) const noexcept
+            inline bool Basic::interact(random::Generator* rng_, Block* block_, phys::Photon* phot_, const double dist_) const noexcept
             {
             }
 
