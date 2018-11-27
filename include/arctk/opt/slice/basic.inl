@@ -62,6 +62,7 @@ namespace arc //! arctk namespace
 
             inline double Basic::scat_coef() const noexcept
             {
+                return (_scat_coef);
             }
 
             inline double Basic::abs_coef() const noexcept
