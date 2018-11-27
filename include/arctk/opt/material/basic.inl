@@ -21,6 +21,7 @@
 
 //  -- Arctk --
 #include <arctk/opt/slice/basic.hpp>
+#include <arctk/phys/photon.hpp>
 #include <arctk/prop/limits.hpp>
 #include <arctk/prop/order.hpp>
 
