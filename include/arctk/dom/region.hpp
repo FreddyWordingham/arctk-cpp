@@ -3,7 +3,7 @@
  *  @date   27/11/2018
  *  @author Freddy Wordingham
  *
- *  Domain region controller class.
+ *  Domain region class.
  */
 
 
@@ -34,7 +34,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
-         *  Domain region controller class.
+         *  Domain region class.
          */
         class Region
         {
