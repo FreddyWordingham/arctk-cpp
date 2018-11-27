@@ -40,8 +40,8 @@ namespace arc //! arctk namespace
             inline Basic::Basic(const std::vector<double>& wavelengths_, const std::vector<double>& ref_indexs_, const std::vector<double>& scat_coefs_, const std::vector<double>& abs_coefs_, const std::vector<double>& asyms_) noexcept
               : Material(wavelengths_.front(), wavelengths_.back())
               , _ref_index(wavelengths_, ref_indexs_)
-              , _scat_coefs(wavelengths_, scat_coefs_)
-              , _abs_coefs(wavelengths_, abs_coefs_)
+              , _scat_coef(wavelengths_, scat_coefs_)
+              , _abs_coef(wavelengths_, abs_coefs_)
               , _asym(wavelengths_, asyms_)
             {
                 assert(prop::limits::always_greater_than_or_equal_to(wavelengths_, 0.0));
