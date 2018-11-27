@@ -38,7 +38,6 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            //     inline Node(const vec3& min_, const vec3& max_, size_t depth_) noexcept;
             inline Block(const Block&) noexcept = default; //!< Defaulted copy constructor.
             inline Block(Block&&) noexcept      = default; //!< Defaulted move constructor.
 
