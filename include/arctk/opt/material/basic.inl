@@ -75,9 +75,6 @@ namespace arc //! arctk namespace
             }
 
 
-            //  -- Initialisation --
-
-
 
             //  == METHODS ==
 
