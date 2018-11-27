@@ -53,7 +53,15 @@ namespace arc //! arctk namespace
             {
                 //  == INSTANTIATION ==
               private:
-                //  -- Optical Properties --
+                //  -- Primary Optical Properties --
+                const double _ref_index; //!< Refractive index.
+                const double _scat_coef; //!< Scattering coefficient.
+                const double _abs_coef;  //!< Absorption coefficient.
+                const double _asym;      //!< Asymmetry factor.
+
+                //  -- Secondary Optical Properties --
+                const double _interaction_coef;
+                const double _albedo;
 
 
                 //  == INSTANTIATION ==
