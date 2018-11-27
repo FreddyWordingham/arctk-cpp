@@ -72,6 +72,7 @@ namespace arc //! arctk namespace
 
             inline double Basic::interaction_coef() const noexcept
             {
+                return (_interact_coef);
             }
 
             inline double Basic::interaction_dist(random::Generator* rng_, const Block* block_) const noexcept
