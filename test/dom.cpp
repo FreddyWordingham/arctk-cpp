@@ -11,6 +11,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/dom/block.hpp>
+#include <arctk/dom/driver.hpp>
 
 
 
