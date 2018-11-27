@@ -67,6 +67,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Basic(double ref_index_, double scat_coef_, double abs_coef_, double asym_) noexcept;
 
 
                 //  == METHODS ==
