@@ -89,7 +89,7 @@ namespace arc //! arctk namespace
 
 
 //  == IMPLEMENTATION ==
-#include <arctk/opt/mat/basic.inl>
+#include <arctk/opt/material/basic.inl>
 
 
 
