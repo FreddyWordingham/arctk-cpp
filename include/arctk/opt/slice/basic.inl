@@ -92,7 +92,7 @@ namespace arc //! arctk namespace
             {
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
-                assert(cell_ != nullptr);
+                assert(block_ != nullptr);
 
                 // TODO
 
