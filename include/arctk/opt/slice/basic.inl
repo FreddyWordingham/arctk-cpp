@@ -67,6 +67,7 @@ namespace arc //! arctk namespace
 
             inline double Basic::abs_coef() const noexcept
             {
+                return (_abs_coef);
             }
 
             inline double Basic::interaction_coef() const noexcept
