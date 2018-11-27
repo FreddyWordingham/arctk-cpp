@@ -55,6 +55,32 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
+            inline double Basic::ref_index() const noexcept
+            {
+                return (_ref_index);
+            }
+
+            inline double Basic::scat_coef() const noexcept
+            {
+            }
+
+            inline double Basic::abs_coef() const noexcept
+            {
+            }
+
+            inline double Basic::interaction_coef() const noexcept
+            {
+            }
+
+            inline double Basic::interaction_dist(random::Generator* rng_, const Block* block_) const noexcept
+            {
+            }
+
+
+            //  -- Interaction --
+            inline bool Basic::interact(random::Generator* rng_, Block* block_, phys::Photon* phot_, double dist_) const noexcept
+            {
+            }
 
 
 

@@ -72,6 +72,15 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline double ref_index() const noexcept override;
+                inline double scat_coef() const noexcept override;
+                inline double abs_coef() const noexcept override;
+                inline double interaction_coef() const noexcept override;
+                inline double interaction_dist(random::Generator* rng_, const Block* block_) const noexcept override;
+
+                //  -- Interaction --
+                inline bool interact(random::Generator* rng_, Block* block_, phys::Photon* phot_, double dist_) const noexcept override;
             };
 
 
