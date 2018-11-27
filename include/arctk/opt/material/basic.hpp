@@ -60,6 +60,10 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               private:
                 //  -- Optical Properties --
+                const math::formula::Linear _ref_index; //!< Refractive index.
+                const math::formula::Linear _scat_coef; //!< Scattering coefficient.
+                const math::formula::Linear _abs_coef;  //!< Absorption coefficient.
+                const math::formula::Linear _asym;      //!< Asymmetry factor.
 
 
                 //  == INSTANTIATION ==
