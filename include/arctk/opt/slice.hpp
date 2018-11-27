@@ -66,6 +66,9 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             virtual double ref_index() const noexcept                                                    = 0;
+            virtual double interaction_coef() const noexcept                                             = 0;
+            virtual double scat_coef() const noexcept                                                    = 0;
+            virtual double abs_coef() const noexcept                                                     = 0;
             virtual double interaction_dist(random::Generator* rng_, const Block* block_) const noexcept = 0;
 
             //  -- Interaction --
