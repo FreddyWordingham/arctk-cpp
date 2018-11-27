@@ -1,0 +1,82 @@
+/**
+ *  @file   arctk/opt/slice/basic.hpp
+ *  @date   27/11/2018
+ *  @author Freddy Wordingham
+ *
+ *  Basic specific optical properties class.
+ */
+
+
+
+//  == GUARD ==
+#ifndef ARCTK_OPT_SLICE_BASIC_HPP
+#define ARCTK_OPT_SLICE_BASIC_HPP
+
+
+
+//  == BASE ==
+#include <arctk/opt/slice.hpp>
+
+
+
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    class Block;
+    namespace phys //! physics namespace
+    {
+        class Photon;
+    }                // namespace phys
+    namespace random //! random number namespace
+    {
+        class Generator;
+    } // namespace random
+} // namespace arc
+
+
+
+//  == NAMESPACE ==
+namespace arc //! arctk namespace
+{
+    namespace opt //! optics namespace
+    {
+        namespace slice //! specific optical properties namespace
+        {
+
+
+
+            //  == CLASS ==
+            /**
+             *  Basic specific optical properties.
+             */
+            class Basic : public Slice
+            {
+                //  == INSTANTIATION ==
+              private:
+                //  -- Optical Properties --
+
+
+                //  == INSTANTIATION ==
+              public:
+                //  -- Constructors --
+
+
+                //  == METHODS ==
+              public:
+            };
+
+
+
+        } // namespace slice
+    }     // namespace opt
+} // namespace arc
+
+
+
+//  == IMPLEMENTATION ==
+#include <arctk/opt/slice/basic.inl>
+
+
+
+//  == GUARD END ==
+#endif // ARCTK_OPT_SLICE_BASIC_HPP
