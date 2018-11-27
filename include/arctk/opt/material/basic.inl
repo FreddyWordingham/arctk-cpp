@@ -37,6 +37,23 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Basic::Basic(const double min_, const double max_, const double ref_index_, const double scat_coef_, const double abs_coef_, const double asym_) noexcept
+              : Material(min_, max_)
+              , _ref_index(std::vector<double>({min_, max_}), std::vector<double>({ref_index_, ref_index_}))
+              , _scat_coef(std::vector<double>({min_, max_}), std::vector<double>({scat_coef_, scat_coef_}))
+              , _abs_coef(std::vector<double>({min_, max_}), std::vector<double>({abs_coef_, abs_coef_}))
+              , _asym(std::vector<double>({min_, max_}), std::vector<double>({asym_, asym_}))
+            {
+                assert(min_ >= 0.0);
+                assert(max_ >= 0.0);
+                assert(min_ <= max_);
+                assert(ref_index_ >= 1.0);
+                assert(scat_coef_ > 0.0);
+                assert(abs_coef_ > 0.0);
+                assert(asym_ >= -1.0);
+                assert(asym_ <= 1.0);
+            }
+
             inline Basic::Basic(const std::vector<double>& wavelengths_, const std::vector<double>& ref_indexs_, const std::vector<double>& scat_coefs_, const std::vector<double>& abs_coefs_, const std::vector<double>& asyms_) noexcept
               : Material(wavelengths_.front(), wavelengths_.back())
               , _ref_index(wavelengths_, ref_indexs_)

@@ -69,10 +69,8 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Basic(double min_, double max_, double ref_index_, double scat_coef_, double abs_coef_, double asym_) noexcept;
                 inline Basic(const std::vector<double>& wavelengths_, const std::vector<double>& ref_indexs_, const std::vector<double>& scat_coefs_, const std::vector<double>& abs_coefs_, const std::vector<double>& asyms_) noexcept;
-
-              private:
-                //  -- Initialisation --
 
 
 
