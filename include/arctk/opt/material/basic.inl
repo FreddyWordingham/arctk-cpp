@@ -21,7 +21,7 @@
 
 //  -- Arctk --
 #include <arctk/opt/slice/basic.hpp>
-#include <arctk/phys/photon.hpp>
+// #include <arctk/phys/photon.hpp>
 #include <arctk/prop/limits.hpp>
 #include <arctk/prop/order.hpp>
 
@@ -80,10 +80,10 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Specific Optical Properties --
-            inline std::unique_ptr<Slice> Basic::slice(const phys::Photon& phot_) const noexcept
-            {
-                return (std::make_unique<slice::Basic>(_ref_index(phot_.wavelength()), _scat_coef(phot_.wavelength()), _abs_coef(phot_.wavelength()), _asym(phot_.wavelength())));
-            }
+            // inline std::unique_ptr<Slice> Basic::slice(const phys::Photon& phot_) const noexcept
+            // {
+            //     return (std::make_unique<slice::Basic>(_ref_index(phot_.wavelength()), _scat_coef(phot_.wavelength()), _abs_coef(phot_.wavelength()), _asym(phot_.wavelength())));
+            // }
 
 
 
