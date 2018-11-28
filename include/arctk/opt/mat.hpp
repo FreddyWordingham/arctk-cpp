@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/dom/mat.hpp
+ *  @file   arctk/opt/mat.hpp
  *  @date   28/11/2018
  *  @author Freddy Wordingham
  *
- *  Domain material class.
+ *  Optical material class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_DOM_MAT_HPP
-#define ARCTK_DOM_MAT_HPP
+#ifndef ARCTK_OPT_MAT_HPP
+#define ARCTK_OPT_MAT_HPP
 
 
 
@@ -75,4 +75,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_DOM_MAT_HPP
+#endif // ARCTK_OPT_MAT_HPP

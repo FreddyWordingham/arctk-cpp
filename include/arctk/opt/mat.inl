@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/dom/mat.inl
+ *  @file   arctk/opt/mat.inl
  *  @date   28/11/2018
  *  @author Freddy Wordingham
  *
- *  Domain material class.
+ *  Optical material class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_DOM_MAT_INL
-#define ARCTK_DOM_MAT_INL
+#ifndef ARCTK_OPT_MAT_INL
+#define ARCTK_OPT_MAT_INL
 
 
 
@@ -23,7 +23,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace dom //! domain namespace
+    namespace opt //! optical namespace
     {
 
 
@@ -41,10 +41,10 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace dom
+    } // namespace opt
 } // namespace arc
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_DOM_MAT_INL
+#endif // ARCTK_OPT_MAT_INL
