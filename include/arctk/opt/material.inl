@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/opt/mat.inl
+ *  @file   arctk/opt/material.inl
  *  @date   28/11/2018
  *  @author Freddy Wordingham
  *
@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_OPT_MAT_INL
-#define ARCTK_OPT_MAT_INL
+#ifndef ARCTK_OPT_MATERIAL_INL
+#define ARCTK_OPT_MATERIAL_INL
 
 
 
@@ -37,7 +37,7 @@ namespace arc //! arctk namespace
         /**
          *  Default destructor.
          */
-        inline Mat::~Mat() noexcept = default;
+        inline Material::~Material() noexcept = default;
 
 
 
@@ -47,4 +47,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_OPT_MAT_INL
+#endif // ARCTK_OPT_MATERIAL_INL
