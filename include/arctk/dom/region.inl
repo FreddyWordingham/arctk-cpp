@@ -37,7 +37,6 @@ namespace arc //! arctk namespace
         inline Region::Region(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const Block& aether_) noexcept
           : geom::shape::Box(min_, max_)
           , _res(res_)
-          , _block_size((max_.x - min_.x) / res_[index::dim::cartesian::X], (max_.y - min_.y) / res_[index::dim::cartesian::Y], (max_.z - min_.z) / res_[index::dim::cartesian::Z])
           , _blocks(init_blocks(res_, aether_id_, aether_))
         {
             assert(min_.x < max_.x);
