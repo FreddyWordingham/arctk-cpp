@@ -85,8 +85,7 @@ namespace arc //! arctk namespace
             inline void increase_phase(double delta_) noexcept;
             inline void multiply_weight(double mult_) noexcept;
 
-            //  -- Printing --
-            inline void print_mat_stack() const noexcept;
+            //  -- Materials --
         };
 
 
