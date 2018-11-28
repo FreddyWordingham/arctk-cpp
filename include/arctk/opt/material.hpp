@@ -36,6 +36,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           protected:
+            //  -- Properties --
+            double _energy;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
