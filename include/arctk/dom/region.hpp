@@ -85,6 +85,7 @@ namespace arc //! arctk namespace
             const vec3&                  block_size() const noexcept;
             std::unique_ptr<Driver>      driver(const phys::Photon& phot_) const noexcept;
 
+          private:
             //  -- Indexing --
             const std::array<size_t, 3>& indices(const vec3& pos_) const noexcept;
         };
