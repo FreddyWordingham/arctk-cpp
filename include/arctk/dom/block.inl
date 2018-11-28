@@ -65,9 +65,18 @@ namespace arc //! arctk namespace
         //  -- Getters --
         inline const Mat* Block::mat(const std::string& mat_id_) const noexcept
         {
-            assert(_mats.find(mat_id_) != _mats.end());
+            assert(_mats.contains(mat_id_));
 
             return (_mats.at(mat_id_).get());
+        }
+
+
+        //  -- Setters --
+        inline void Block::add_mat(const std::string& mat_id_, const Mat& mat_) noexcept
+        {
+            assert(!_mats.contains(mat_id_));
+
+            _mats.insert(std::make_pair(aether_id_, aether_.clone()));
         }
 
 

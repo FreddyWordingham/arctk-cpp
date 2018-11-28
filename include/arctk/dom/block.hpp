@@ -85,6 +85,9 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline const Mat* mat(const std::string& mat_id_) const noexcept;
+
+            //  -- Setters --
+            inline void add_mat(const std::string& mat_id_, const Mat& mat_) noexcept;
         };
 
 
