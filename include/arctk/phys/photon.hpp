@@ -60,20 +60,22 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Photon(const vec3& pos_, const vec3& dir_, double wavelength_, double energy_, double time_, double phase_) noexcept;
+            inline Photon(const vec3& pos_, const vec3& dir_, double wavelength_, double energy_, double time_, double phase_, const std::string& cur_mat_id_) noexcept;
 
 
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const vec3& pos() const noexcept;
-            inline const vec3& dir() const noexcept;
-            inline double      wavelength() const noexcept;
-            inline double      energy() const noexcept;
-            inline double      time() const noexcept;
-            inline double      phase() const noexcept;
-            inline vec2        phasor() const noexcept;
-            inline double      weight() const noexcept;
+            inline const vec3&        pos() const noexcept;
+            inline const vec3&        dir() const noexcept;
+            inline double             wavelength() const noexcept;
+            inline double             energy() const noexcept;
+            inline double             time() const noexcept;
+            inline double             phase() const noexcept;
+            inline vec2               phasor() const noexcept;
+            inline double             weight() const noexcept;
+            inline const std::string& cur_mat_id() const noexcept;
+            inline const std::string& prev_mat_id() const noexcept;
 
             //  -- Setters --
             inline void move(double dist_, double ref_index_) noexcept;
@@ -82,6 +84,9 @@ namespace arc //! arctk namespace
             inline void shift_wavelength(double delta_) noexcept;
             inline void increase_phase(double delta_) noexcept;
             inline void multiply_weight(double mult_) noexcept;
+
+            //  -- Printing --
+            inline void print_mat_stack() const noexcept;
         };
 
 

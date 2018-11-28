@@ -37,7 +37,7 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         /**
-         *  Construct a photon at a given position with a given direction, wavelength, energy and emission time.
+         *  Construct a photon at a given position with a given direction, wavelength, energy, emission time and initial material identification.
          *
          *  @param  pos_        Initial position of the photon.
          *  @param  dir_        Initial direction of the photon.
@@ -45,13 +45,15 @@ namespace arc //! arctk namespace
          *  @param  energy_     Energy of the photon.
          *  @param  time_       Time of photon emission.
          *  @param  phase_      Initial phase of the photon.
+         *  @param  cur_mat_id_ Initial material id.
          *
          *  @pre    dir_ must be normalised.
          *  @pre    wavelength_ must be non-negative.
          *  @pre    energy_ must be positive.
          *  @pre    time_ must be non-negative.
+         *  @pre    cur_mat_id_ may not be empty.
          */
-        inline Photon::Photon(const vec3& pos_, const vec3& dir_, const double wavelength_, const double energy_, const double time_, const double phase_) noexcept
+        inline Photon::Photon(const vec3& pos_, const vec3& dir_, const double wavelength_, const double energy_, const double time_, const double phase_, const std::string& cur_mat_id_) noexcept
           : _pos(pos_)
           , _dir(dir_)
           , _wavelength(wavelength_)
@@ -59,11 +61,13 @@ namespace arc //! arctk namespace
           , _time(time_)
           , _phase(phase_)
           , _weight(1.0)
+          , _cur_mat_id(cur_mat_id_)
         {
             assert(dir_.normalised());
             assert(wavelength_ > 0.0);
             assert(energy_ > 0.0);
             assert(time_ >= 0.0);
+            assert(!cur_mat_id_.empty());
         }
 
 
