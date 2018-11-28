@@ -91,6 +91,24 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Indexing --
+        const std::array<size_t, 3>& Region::indices(const vec3& pos_) const noexcept
+        {
+            assert(contains(pos_));
+
+            std::array<size_t, 3> indices;
+
+            for (size_t i = 0; i < 3; ++i)
+            {
+                const size_t index = static_cast<size_t>((pos_[i] - _min[i]) / _block_size[i]);
+
+                indices[i] = (index == _res[i]) ? (index - 1) : index;
+            }
+
+            return (indices);
+        }
+
+
 
     } // namespace dom
 } // namespace arc
