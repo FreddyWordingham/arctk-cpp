@@ -34,7 +34,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Domain::Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const Mat& aether_) noexcept
+        inline Domain::Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const opt::Material& aether_) noexcept
           : geom::shape::Box(min_, max_)
           , _res(res_)
           , _block_size((max_.x - min_.x) / res_[index::dim::cartesian::X], (max_.y - min_.y) / res_[index::dim::cartesian::Y], (max_.z - min_.z) / res_[index::dim::cartesian::Z])
@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
-        inline multi::vector<Block, 3> Domain::init_blocks(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const Mat& aether_) const noexcept
+        inline multi::vector<Block, 3> Domain::init_blocks(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const opt::Material& aether_) const noexcept
         {
             assert(min_.x < max_.x);
             assert(min_.y < max_.y);
@@ -110,7 +110,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
-        inline void Domain::add_mat(const std::string& mat_id_, const Mat& mat_) noexcept
+        inline void Domain::add_mat(const std::string& mat_id_, const opt::Material& mat_) noexcept
         {
             for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
             {

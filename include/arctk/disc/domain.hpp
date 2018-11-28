@@ -72,11 +72,11 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const Mat& aether_) noexcept;
+            inline Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const opt::Material& aether_) noexcept;
 
           private:
             //  -- Initialisation --
-            inline multi::vector<Block, 3> init_blocks(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const Mat& aether_) const noexcept;
+            inline multi::vector<Block, 3> init_blocks(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const opt::Material& aether_) const noexcept;
 
 
             //  == METHODS ==
@@ -86,7 +86,7 @@ namespace arc //! arctk namespace
             inline const Block&                 block(const vec3& pos_) const noexcept;
 
             //  -- Setters --
-            inline void add_mat(const std::string& mat_id_, const Mat& mat_) noexcept;
+            inline void add_mat(const std::string& mat_id_, const opt::Material& mat_) noexcept;
 
           private:
             //  -- Indexing --
