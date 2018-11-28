@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
         //  -- Getters --
         inline const Mat* Block::mat(const std::string& mat_id_) const noexcept
         {
-            assert(_mats.find(math_id_) != _mats.end());
+            assert(_mats.find(mat_id_) != _mats.end());
 
             return (_mats.at(mat_id_).get());
         }
