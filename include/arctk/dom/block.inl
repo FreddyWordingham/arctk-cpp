@@ -55,7 +55,7 @@ namespace arc //! arctk namespace
 
         inline double Block::absorptivity() const noexcept
         {
-            return (_energy / _volume);
+            return (_absorption / _volume);
         }
 
         inline double Block::emissivity() const noexcept
