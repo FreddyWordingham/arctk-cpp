@@ -83,6 +83,10 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline double                   energy_density() const noexcept;
+            inline double                   scatterivity() const noexcept;
+            inline double                   absorptivity() const noexcept;
+            inline double                   emissivity() const noexcept;
             virtual std::unique_ptr<Driver> driver(const phys::Photon& phot_) const noexcept = 0;
         };
 
