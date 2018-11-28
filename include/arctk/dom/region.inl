@@ -99,7 +99,7 @@ namespace arc //! arctk namespace
 
             assert(map.find(phot_.cur_mat_id()) != map.end());
 
-            return (map[phot_.mat_id()].driver(phot_));
+            return (map[phot_.cur_mat_id()].driver(phot_));
         }
 
 
