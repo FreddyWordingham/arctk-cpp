@@ -50,7 +50,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
-        inline multi::vector<Block, 3> Region::init_blocks(const std::array<size_t, 3>& res_, const std::string& aether_id_, const Block& aether_) const noexcept
+        inline multi::vector<Block, 3> Region::init_blocks(const std::array<size_t, 3>& res_, const std::string& aether_id_, const Mat& aether_) const noexcept
         {
             multi::vector<Block, 3> blocks;
             // blocks.reserve(res_[index::dim::cartesian::X]);
