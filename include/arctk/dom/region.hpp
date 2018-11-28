@@ -72,6 +72,7 @@ namespace arc //! arctk namespace
             //  -- Getters --
             const std::array<size_t, 3>& res() const noexcept;
             const vec3&                  block_size() const noexcept;
+            std::unique_ptr<Driver>      driver(const phys::Photon& phot_) const noexcept;
         };
 
 
