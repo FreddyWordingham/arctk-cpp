@@ -1,9 +1,9 @@
 /**
- *  @file   arctk/sim/domain.inl
+ *  @file   arctk/disc/domain.inl
  *  @date   27/11/2018
  *  @author Freddy Wordingham
  *
- *  Simulation domain class.
+ *  Domain class.
  */
 
 
@@ -27,7 +27,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace sim //! simulation namespace
+    namespace disc //! discretisation namespace
     {
 
 
@@ -144,7 +144,7 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace sim
+    } // namespace disc
 } // namespace arc
 
 
