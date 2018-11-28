@@ -31,7 +31,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Block::Block(const vec3& min_, const vec3& max_, const std::string& aether_id_, const Mat& aether_) noexcept
+        inline Block::Block(const vec3& min_, const vec3& max_, const std::string& aether_id_, const opt::Material& aether_) noexcept
           : geom::shape::Box(min_, max_)
           , _mats(init_mats(aether_id_, aether_))
         {
@@ -50,9 +50,9 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
-        inline std::unordered_map<std::string, std::unique_ptr<Mat>> Block::init_mats(const std::string& aether_id_, const Mat& aether_) const noexcept
+        inline std::unordered_map<std::string, std::unique_ptr<opt::Material>> Block::init_mats(const std::string& aether_id_, const opt::Material& aether_) const noexcept
         {
-            std::unordered_map<std::string, std::unique_ptr<Mat>> mats;
+            std::unordered_map<std::string, std::unique_ptr<opt::Material>> mats;
 
             mats.insert(std::make_pair(aether_id_, aether_.clone()));
 
@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
-        inline void Block::add_mat(const std::string& mat_id_, const Mat& mat_) noexcept
+        inline void Block::add_mat(const std::string& mat_id_, const opt::Material& mat_) noexcept
         {
             assert(_mats.count(mat_id_) == 0);
 
