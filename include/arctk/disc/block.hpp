@@ -87,7 +87,7 @@ namespace arc //! arctk namespace
             inline const opt::Material* mat(const std::string& mat_id_) const noexcept;
 
             //  -- Setters --
-            inline void add_mat(const std::string& mat_id_, const Mat& mat_) noexcept;
+            inline void add_mat(const std::string& mat_id_, const opt::Material& mat_) noexcept;
         };
 
 
