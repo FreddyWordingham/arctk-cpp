@@ -15,6 +15,7 @@
 
 
 //  == BASE ==
+#include <arctk/opt/material.hpp>
 
 
 
@@ -52,7 +53,7 @@ namespace arc //! arctk namespace
             /**
              *  Elastic scattering material class.
              */
-            class Elastic
+            class Elastic : public Material
             {
                 //  == FIELDS ==
               private:
