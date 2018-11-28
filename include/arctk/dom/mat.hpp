@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
             inline Mat(Mat&&) noexcept      = default; //!< Defaulted move constructor.
 
             // //  -- Destructors --
-            // virtual ~Block() noexcept;
+            virtual ~Mat() noexcept;
 
 
             //  == OPERATORS ==
