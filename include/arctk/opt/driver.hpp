@@ -60,6 +60,10 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            const double scattering_coef() const noexcept;
+            const double absorption_coef() const noexcept;
+            const double emission_coef() const noexcept;
+            const double interaction_coef() const noexcept;
         };
 
 

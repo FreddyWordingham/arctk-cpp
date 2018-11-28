@@ -43,6 +43,25 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        const double Driver::scattering_coef() const noexcept
+        {
+            return (_scattering_coef);
+        }
+
+        const double Driver::absorption_coef() const noexcept
+        {
+            return (_absorption_coef);
+        }
+
+        const double Driver::emission_coef() const noexcept
+        {
+            return (_emission_coef);
+        }
+
+        const double Driver::interaction_coef() const noexcept
+        {
+            return (_interaction_coef);
+        }
 
 
 
