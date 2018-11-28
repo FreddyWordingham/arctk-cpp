@@ -21,7 +21,6 @@
 //  -- Arctk --
 #include <arctk/consts/math.hpp>
 #include <arctk/consts/phys.hpp>
-#include <arctk/dom/cell.hpp>
 #include <arctk/math/compare.hpp>
 
 
@@ -153,6 +152,17 @@ namespace arc //! arctk namespace
         {
             return (_weight);
         }
+
+        inline const std::string& Photon::cur_mat_id() const noexcept
+        {
+            return (_cur_mat_id);
+        }
+
+        inline const std::string& Photon::prev_mat_id() const noexcept
+        {
+            return (_prev_mat_id.top());
+        }
+
 
 
         //  -- Setters --
