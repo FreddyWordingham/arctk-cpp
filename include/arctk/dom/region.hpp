@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Initialisation --
-            inline multi::vector<Block, 3> init_blocks(const std::array<size_t, 3>& res_, const std::string& aether_id_, const Mat& aether_) const noexcept;
+            inline multi::vector<Block, 3> init_blocks(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const Mat& aether_) const noexcept;
 
 
             //  == METHODS ==
