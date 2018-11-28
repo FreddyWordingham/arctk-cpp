@@ -33,6 +33,7 @@ namespace arc //! arctk namespace
             //  -- Base --
 
             //  -- Derived --
+            const double _albedo;
             const double _interaction_coef;
 
 
