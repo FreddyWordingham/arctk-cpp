@@ -1,26 +1,24 @@
 /**
- *  @file   dom.cpp
+ *  @file   disc.cpp
  *  @date   22/10/2018
  *  @author Freddy Wordingham
  *
- *  Domain collection test programme.
+ *  Discretisation collection test programme.
  */
 
 
 
 //  == IMPORTS ==
 //  -- Arctk --
-#include <arctk/dom/block.hpp>
-#include <arctk/dom/driver.hpp>
-#include <arctk/dom/mat.hpp>
-#include <arctk/dom/region.hpp>
+#include <arctk/disc/block.hpp>
+#include <arctk/disc/domain.hpp>
 
 
 
 //  == MAIN ==
 //  -- Function --
 /**
- *  Unit test function of Arctk domain collection headers.
+ *  Unit test function of Arctk discretisation collection headers.
  *
  *  @return Zero upon a successful run.
  */
