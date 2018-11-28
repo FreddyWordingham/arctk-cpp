@@ -41,9 +41,9 @@ namespace arc //! arctk namespace
         //  -- Getters --
         inline double Driver::interact_dist(random::Generator* rng_) const noexcept
         {
-            _interaction_dist = calc_interaction_dist(rng_);
+            _interact_dist = calc_interact_dist(rng_);
 
-            return (_interaction_dist);
+            return (_interact_dist);
         }
 
 
