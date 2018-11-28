@@ -31,7 +31,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Stored --
-            double _dist; //!< Distance to move photon during an interaction event.
+            double _interact_dist; //!< Distance to the next interaction event.
 
 
             //  == INSTANTIATION ==
@@ -55,6 +55,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             virtual double ref_index() const noexcept                            = 0;
+            virtual double interact_dist(random::Generator* rng_) const noexcept = 0;
             virtual double interact_dist(random::Generator* rng_) const noexcept = 0;
 
             //  -- Interaction --
