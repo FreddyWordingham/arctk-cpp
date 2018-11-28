@@ -29,10 +29,10 @@
 #include <vector>
 
 //  -- Arctk --
-#include <arctk/dom/block.hpp>
-#include <arctk/dom/mat.hpp>
 #include <arctk/math/vec.hpp>
 #include <arctk/multi/vector.hpp>
+#include <arctk/opt/material.hpp>
+#include <arctk/sim/block.hpp>
 
 
 
