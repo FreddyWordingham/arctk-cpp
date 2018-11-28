@@ -41,12 +41,21 @@ namespace arc //! arctk namespace
         }
 
 
-
         //  -- Destructors --
         /**
          *  Default destructor.
          */
         inline Block::~Block() noexcept = default;
+
+
+        //  -- Initialisation --
+        inline std::unordered_map<std::string, std::unique_ptr<Mat>> Block::init_mats(const std::string& aether_id_, const Mat& aether_) const noexcept
+        {
+            std::unordered_map<std::string, std::unique_ptr<Mat>> mats;
+
+
+            return (mats);
+        }
 
 
 
