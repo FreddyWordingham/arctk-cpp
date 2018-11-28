@@ -56,6 +56,8 @@ namespace arc //! arctk namespace
             inline Block(const Block&) noexcept = default; //!< Defaulted copy constructor.
             inline Block(Block&&) noexcept      = default; //!< Defaulted move constructor.
 
+            virtual std::unique_ptr<Block> clone() const = 0;
+
             //  -- Destructors --
             virtual ~Block() noexcept;
 

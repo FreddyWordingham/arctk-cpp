@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
                     for (size_t k = 0; k < res_[index::dim::cartesian::Z]; ++k)
                     {
                         blocks.back().back().emplace_back(std::unordered_map<std::string, std::unique_ptr<Block>>());
-                        blocks.back().back().back().insert(std::make_pair(aether_id_, std::make_unique<Block>(aether_)));
+                        blocks.back().back().back().insert(std::make_pair(aether_id_, aether_.clone()));
                     }
                 }
             }
