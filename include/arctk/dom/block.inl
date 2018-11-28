@@ -43,25 +43,6 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        inline double Block::energy_density() const noexcept
-        {
-            return (_energy / _volume);
-        }
-
-        inline double Block::scatterivity() const noexcept
-        {
-            return (_scatter / _volume);
-        }
-
-        inline double Block::absorptivity() const noexcept
-        {
-            return (_absorption / _volume);
-        }
-
-        inline double Block::emissivity() const noexcept
-        {
-            return (_emission / _volume);
-        }
 
 
 
