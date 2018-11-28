@@ -30,6 +30,9 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline Region::Region(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const Block& aether_) noexcept
+        {
+        }
 
 
 

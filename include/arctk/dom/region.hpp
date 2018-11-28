@@ -14,6 +14,11 @@
 
 
 
+//  == BASE ==
+#include <arctk/geom/shape/box.hpp>
+
+
+
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
@@ -41,7 +46,7 @@ namespace arc //! arctk namespace
         /**
          *  Domain region class.
          */
-        class Region
+        class Region : public geom::shape::Box
         {
             //  == FIELDS ==
           protected:
@@ -53,6 +58,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Region(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const Block& aether_) noexcept;
 
 
             //  == METHODS ==
