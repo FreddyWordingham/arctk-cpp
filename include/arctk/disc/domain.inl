@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_SIM_DOMAIN_INL
-#define ARCTK_SIM_DOMAIN_INL
+#ifndef ARCTK_DISC_DOMAIN_INL
+#define ARCTK_DISC_DOMAIN_INL
 
 
 
@@ -150,4 +150,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_SIM_DOMAIN_INL
+#endif // ARCTK_DISC_DOMAIN_INL
