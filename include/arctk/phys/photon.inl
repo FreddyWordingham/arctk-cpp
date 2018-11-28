@@ -273,7 +273,7 @@ namespace arc //! arctk namespace
             assert(!mat_id_.empty());
             assert(mat_id_ != _cur_mat_id);
 
-            _prev_mat_id.push(cur_mat_id);
+            _prev_mat_id.push(_cur_mat_id);
             _cur_mat_id = mat_id_;
         }
 
