@@ -32,6 +32,7 @@ namespace arc //! arctk namespace
           protected:
             //  -- Base --
             const double _scattering_coef;
+            const double _absorption_coef;
 
             //  -- Derived --
             const double _albedo;
