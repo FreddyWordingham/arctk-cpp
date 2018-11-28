@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
             inline Block(Block&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
-            inline ~Block() noexcept override;
+            virtual ~Block() noexcept;
 
 
             //  == OPERATORS ==

@@ -58,7 +58,11 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Region(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const Block& aether_) noexcept;
+            inline Region(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const Block& aether_) noexcept;
+
+          private:
+            //  -- Initialisation --
+            inline multi::vector<std::unordered_map<std::string, std::unique_ptr<Block>>, 3> init_blocks(const std::array<size_t, 3>& res_, const std::string& aether_id_, const Block& aether_) const noexcept;
 
 
             //  == METHODS ==
