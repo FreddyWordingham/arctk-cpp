@@ -30,9 +30,16 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           protected:
+            //  -- Base --
+
+            //  -- Derived --
+            const double _interaction_coef;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Driver() noexcept;
             inline Driver(const Driver&) noexcept = default; //!< Defaulted copy constructor.
             inline Driver(Driver&&) noexcept      = default; //!< Defaulted move constructor.
 
