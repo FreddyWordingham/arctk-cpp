@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
             double _energy;
             double _scattering;
             double _absorption;
-            //            double _emission;
+            double _emission;
 
 
             //  == INSTANTIATION ==
