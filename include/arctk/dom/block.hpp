@@ -16,6 +16,21 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <memory>
+
+//  -- Arctk --
+#include <arctk/dom/driver.hpp>
+
+
+
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    namespace phys //! physics namespace
+    {
+        class Photon;
+    } // namespace phys
+} // namespace arc
 
 
 
@@ -55,6 +70,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            virtual std::unique_ptr<Driver> driver(const phys::Photon& phot_) const noexcept = 0;
         };
 
 
