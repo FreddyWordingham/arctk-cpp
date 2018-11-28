@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
             virtual ~Mat() noexcept;
 
             //  -- Cloning --
-            virtual std::unique_ptr<Block> clone() const = 0;
+            virtual std::unique_ptr<Mat> clone() const = 0;
 
 
             //  == OPERATORS ==
