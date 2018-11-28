@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_DOM_BLOCK_HPP
-#define ARCTK_DOM_BLOCK_HPP
+#ifndef ARCTK_DISC_BLOCK_HPP
+#define ARCTK_DISC_BLOCK_HPP
 
 
 
@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace dom //! domain namespace
+    namespace disc //! discretisation namespace
     {
 
 
@@ -92,15 +92,15 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace dom
+    } // namespace disc
 } // namespace arc
 
 
 
 //  == IMPLEMENTATION ==
-#include <arctk/dom/block.inl>
+#include <arctk/disc/block.inl>
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_DOM_BLOCK_HPP
+#endif // ARCTK_DISC_BLOCK_HPP
