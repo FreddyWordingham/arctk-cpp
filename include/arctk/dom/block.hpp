@@ -17,6 +17,8 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <memory>
+#include <string>
+#include <unordered_map>
 
 //  -- Arctk --
 #include <arctk/dom/driver.hpp>
@@ -50,6 +52,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           protected:
+            //  -- Materials --
+            std::unordered_map<std::string, std::unique_ptr<Mat>> _mats;
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
