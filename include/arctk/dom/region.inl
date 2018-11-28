@@ -51,7 +51,26 @@ namespace arc //! arctk namespace
         //  -- Initialisation --
         inline multi::vector<std::unordered_map<std::string, std::unique_ptr<Block>>, 3> Region::init_blocks(const std::array<size_t, 3>& res_, const std::string& aether_id_, const Block& aether_) const noexcept
         {
-            multi::vector<std::unordered_map<std::string, std::unique_ptr<Block>>, 3> blocks = multi::vector_helper<std::unordered_map<std::string, std::unique_ptr<Block>>, 3>::shape(res_);
+            multi::vector<std::unordered_map<std::string, std::unique_ptr<Block>>, 3> blocks;
+            blocks.reserve(res_[0]);
+
+            for (size_t i = 0; i < res_[0]; ++i)
+            {
+                blocks.emplace_back(multi::vector<std::unordered_map<std::string, std::unique_ptr<Block>>, 2>());
+                blocks.back().reserve(res_[1]);
+
+                for (size_t j = 0; j < res_[1]; ++j)
+                {
+                    blocks.back().emplace_back(std::vector<std::unordered_map<std::string, std::unique_ptr<Block>>>());
+                    blocks.back().back().reserve(res_[2]);
+
+                    for (size_t k = 0; k < res_[2]; ++k)
+                    {
+                        blocks.back().back().emplace_back(std::unordered_map<std::string, std::unique_ptr<Block>>());
+                        blocks.back().back().back().insert(std::make_pair(aether_id_, std::make_unique<Block>(aether_)));
+                    }
+                }
+            }
 
             return (blocks);
         }
