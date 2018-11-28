@@ -84,6 +84,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline const Mat* mat(const std::string& mat_id_) const noexcept;
         };
 
 
