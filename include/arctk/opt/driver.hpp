@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double  interact_dist(random::Generator* rng_) const noexcept;
+            inline double  interact_dist(random::Generator* rng_) noexcept;
             virtual double ref_index() const noexcept = 0;
 
             //  -- Interaction --
