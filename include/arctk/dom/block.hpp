@@ -52,6 +52,9 @@ namespace arc //! arctk namespace
           protected:
             //  -- Data --
             double _energy;
+            double _scatterivity;
+            double _absorptivity;
+            double _emissivity;
 
 
             //  == INSTANTIATION ==
