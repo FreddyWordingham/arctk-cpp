@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_SIM_DOMAIN_HPP
-#define ARCTK_SIM_DOMAIN_HPP
+#ifndef ARCTK_DISC_DOMAIN_HPP
+#define ARCTK_DISC_DOMAIN_HPP
 
 
 
@@ -106,4 +106,4 @@ namespace arc //! arctk namespace
 
 
 //  == GUARD END ==
-#endif // ARCTK_SIM_DOMAIN_HPP
+#endif // ARCTK_DISC_DOMAIN_HPP
