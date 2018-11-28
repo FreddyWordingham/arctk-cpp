@@ -47,6 +47,30 @@ namespace arc //! arctk namespace
 
 
 
+        //  == METHODS ==
+        //  -- Getters --
+        inline double Material::energy() const noexcept
+        {
+            return (_energy);
+        }
+
+        inline double Material::scattering() const noexcept
+        {
+            return (_scattering);
+        }
+
+        inline double Material::absorption() const noexcept
+        {
+            return (_absorption);
+        }
+
+        inline double Material::emission() const noexcept
+        {
+            return (_emission);
+        }
+
+
+
     } // namespace opt
 } // namespace arc
 

@@ -67,6 +67,10 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline double                   energy() const noexcept;
+            inline double                   scattering() const noexcept;
+            inline double                   absorption() const noexcept;
+            inline double                   emission() const noexcept;
             virtual std::unique_ptr<Driver> driver() const noexcept = 0;
         };
 
