@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Region(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept;
+            inline Region(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const Mat& aether_) noexcept;
 
           private:
             //  -- Initialisation --
