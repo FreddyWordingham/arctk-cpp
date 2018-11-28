@@ -101,6 +101,13 @@ namespace arc //! arctk namespace
             return (_res);
         }
 
+        inline const Block& Region::block(const vec3& pos_) const noexcept
+        {
+            const std::array<size_t, 3> index = indices(pos_);
+
+            return (_blocks[index[index::dim::cartesian::X][index::dim::cartesian::Y][index::dim::cartesian::Z]]);
+        }
+
 
         //  -- Indexing --
         inline std::array<size_t, 3> Region::indices(const vec3& pos_) const noexcept
