@@ -15,19 +15,11 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <stack>
+
 //  -- Arctk --
 #include <arctk/math/vec.hpp>
-
-
-
-//  == CLASS PROTOTYPES ==
-namespace arc //! arctk namespace
-{
-    namespace dom //! domain namespace
-    {
-        class Cell;
-    } // namespace dom
-} // namespace arc
 
 
 
@@ -59,6 +51,10 @@ namespace arc //! arctk namespace
 
             //  -- Statistical --
             double _weight; //!< Statistical weight of the photon.
+
+            //  -- Material --
+            std::string             _cur_mat_id;
+            std::stack<std::string> _prev_mat_id;
 
 
             //  == INSTANTIATION ==
