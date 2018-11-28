@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
 
         inline double Block::emissivity() const noexcept
         {
-            return (_energy / _volume);
+            return (_emission / _volume);
         }
 
 
