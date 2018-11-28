@@ -65,6 +65,7 @@ namespace arc //! arctk namespace
           protected:
             //  -- Blocks --
             const std::array<size_t, 3> _res;
+            const vec3                  _block_size;
             multi::vector<Block, 3>     _blocks;
 
 
