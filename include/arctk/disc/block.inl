@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/dom/block.inl
+ *  @file   arctk/disc/block.inl
  *  @date   27/11/2018
  *  @author Freddy Wordingham
  *
@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_DOM_BLOCK_INL
-#define ARCTK_DOM_BLOCK_INL
+#ifndef ARCTK_DISC_BLOCK_INL
+#define ARCTK_DISC_BLOCK_INL
 
 
 
@@ -24,7 +24,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace dom //! domain namespace
+    namespace disc //! discretisation namespace
     {
 
 
@@ -81,10 +81,10 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace dom
+    } // namespace disc
 } // namespace arc
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_DOM_BLOCK_INL
+#endif // ARCTK_DISC_BLOCK_INL
