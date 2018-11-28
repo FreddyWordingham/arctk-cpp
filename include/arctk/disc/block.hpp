@@ -21,10 +21,10 @@
 #include <unordered_map>
 
 //  -- Arctk --
-#include <arctk/dom/driver.hpp>
-#include <arctk/dom/mat.hpp>
 #include <arctk/geom/shape/box.hpp>
 #include <arctk/math/vec.hpp>
+#include <arctk/opt/driver.hpp>
+#include <arctk/opt/mat.hpp>
 
 
 
