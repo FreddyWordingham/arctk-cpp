@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
         //  -- Initialisation --
         inline multi::vector<std::unordered_map<std::string, std::unique_ptr<Block>>, 3> Region::init_blocks(const std::array<size_t, 3>& res_, const std::string& aether_id_, const Block& aether_) const noexcept
         {
-            multi::vector<std::unordered_map<std::string, std::unique_ptr<Block>>, 3> blocks = multi::vector::shape(res_);
+            multi::vector<std::unordered_map<std::string, std::unique_ptr<Block>>, 3> blocks = multi::vector_helper<std::unordered_map<std::string, std::unique_ptr<Block>>, 3>::shape(res_);
 
             return (blocks);
         }
