@@ -34,7 +34,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Region::Region(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const Block& aether_) noexcept
+        inline Region::Region(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const Mat& aether_) noexcept
           : geom::shape::Box(min_, max_)
           , _res(res_)
           , _blocks(init_blocks(res_, aether_id_, aether_))

@@ -30,6 +30,7 @@
 
 //  -- Arctk --
 #include <arctk/dom/block.hpp>
+#include <arctk/dom/mat.hpp>
 #include <arctk/math/vec.hpp>
 #include <arctk/multi/vector.hpp>
 
@@ -74,7 +75,7 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Initialisation --
-            inline multi::vector<Block, 3> init_blocks(const std::array<size_t, 3>& res_, const std::string& aether_id_, const Block& aether_) const noexcept;
+            inline multi::vector<Block, 3> init_blocks(const std::array<size_t, 3>& res_, const std::string& aether_id_, const Mat& aether_) const noexcept;
 
 
             //  == METHODS ==
