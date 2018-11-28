@@ -30,7 +30,13 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-
+        inline Material::Material() noexcept
+          : _energy(0.0)
+          , _scattering(0.0)
+          , _absorption(0.0)
+          , _emission(0.0)
+        {
+        }
 
 
         //  -- Destructors --

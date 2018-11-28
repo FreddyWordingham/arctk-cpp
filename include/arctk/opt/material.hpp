@@ -46,6 +46,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Material() noexcept;
             inline Material(const Material&) noexcept = default; //!< Defaulted copy constructor.
             inline Material(Material&&) noexcept      = default; //!< Defaulted move constructor.
 
