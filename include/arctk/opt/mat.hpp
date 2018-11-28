@@ -23,7 +23,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace dom //! domain namespace
+    namespace opt //! optical namespace
     {
 
 
@@ -64,13 +64,13 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace dom
+    } // namespace opt
 } // namespace arc
 
 
 
 //  == IMPLEMENTATION ==
-#include <arctk/dom/mat.inl>
+#include <arctk/opt/mat.inl>
 
 
 
