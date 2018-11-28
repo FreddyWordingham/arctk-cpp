@@ -51,28 +51,28 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
-        inline multi::vector<std::unordered_map<std::string, std::unique_ptr<Block>>, 3> Region::init_blocks(const std::array<size_t, 3>& res_, const std::string& aether_id_, const Block& aether_) const noexcept
+        inline multi::vector<Block, 3> Region::init_blocks(const std::array<size_t, 3>& res_, const std::string& aether_id_, const Block& aether_) const noexcept
         {
-            multi::vector<std::unordered_map<std::string, std::unique_ptr<Block>>, 3> blocks;
-            blocks.reserve(res_[index::dim::cartesian::X]);
+            multi::vector<Block, 3> blocks;
+            // blocks.reserve(res_[index::dim::cartesian::X]);
 
-            for (size_t i = 0; i < res_[index::dim::cartesian::X]; ++i)
-            {
-                blocks.emplace_back(multi::vector<std::unordered_map<std::string, std::unique_ptr<Block>>, 2>());
-                blocks.back().reserve(res_[index::dim::cartesian::Y]);
+            // for (size_t i = 0; i < res_[index::dim::cartesian::X]; ++i)
+            // {
+            //     blocks.emplace_back(multi::vector<std::unordered_map<std::string, std::unique_ptr<Block>>, 2>());
+            //     blocks.back().reserve(res_[index::dim::cartesian::Y]);
 
-                for (size_t j = 0; j < res_[index::dim::cartesian::Y]; ++j)
-                {
-                    blocks.back().emplace_back(std::vector<std::unordered_map<std::string, std::unique_ptr<Block>>>());
-                    blocks.back().back().reserve(res_[index::dim::cartesian::Z]);
+            //     for (size_t j = 0; j < res_[index::dim::cartesian::Y]; ++j)
+            //     {
+            //         blocks.back().emplace_back(std::vector<std::unordered_map<std::string, std::unique_ptr<Block>>>());
+            //         blocks.back().back().reserve(res_[index::dim::cartesian::Z]);
 
-                    for (size_t k = 0; k < res_[index::dim::cartesian::Z]; ++k)
-                    {
-                        blocks.back().back().emplace_back(std::unordered_map<std::string, std::unique_ptr<Block>>());
-                        blocks.back().back().back().insert(std::make_pair(aether_id_, aether_.clone()));
-                    }
-                }
-            }
+            //         for (size_t k = 0; k < res_[index::dim::cartesian::Z]; ++k)
+            //         {
+            //             blocks.back().back().emplace_back(std::unordered_map<std::string, std::unique_ptr<Block>>());
+            //             blocks.back().back().back().insert(std::make_pair(aether_id_, aether_.clone()));
+            //         }
+            //     }
+            // }
 
             return (blocks);
         }
