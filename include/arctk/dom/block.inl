@@ -53,6 +53,7 @@ namespace arc //! arctk namespace
         {
             std::unordered_map<std::string, std::unique_ptr<Mat>> mats;
 
+            mats.insert(aether_id_, aether_.clone());
 
             return (mats);
         }
