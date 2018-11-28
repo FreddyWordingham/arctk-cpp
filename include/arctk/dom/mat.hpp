@@ -41,8 +41,11 @@ namespace arc //! arctk namespace
             inline Mat(const Mat&) noexcept = default; //!< Defaulted copy constructor.
             inline Mat(Mat&&) noexcept      = default; //!< Defaulted move constructor.
 
-            // //  -- Destructors --
+            //  -- Destructors --
             virtual ~Mat() noexcept;
+
+            //  -- Cloning --
+            virtual std::unique_ptr<Block> clone() const = 0;
 
 
             //  == OPERATORS ==
