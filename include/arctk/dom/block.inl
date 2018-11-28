@@ -30,6 +30,15 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline Block::Block(const vec3& min_, const vec3& max_, const std::string& aether_id_, const Mat& aether_) noexcept
+          : geom::shape::Box(min_, max_)
+          , _mats(init_mats(aether_id_, aether_))
+        {
+            assert(min_.x < max_.x);
+            assert(min_.y < max_.y);
+            assert(min_.z < max_.z);
+            assert(!aether_id_.empty());
+        }
 
 
 

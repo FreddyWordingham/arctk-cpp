@@ -24,6 +24,7 @@
 #include <arctk/dom/driver.hpp>
 #include <arctk/dom/mat.hpp>
 #include <arctk/geom/shape/box.hpp>
+#include <arctk/math/vec.hpp>
 
 
 
@@ -61,7 +62,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Block() noexcept        = default; //!< Defaulted constructor.
+            inline Block(const vec3& min_, const vec3& max_, const std::string& aether_id_, const Mat& aether_) noexcept;
             inline Block(const Block&)     = default; //!< Defaulted copy constructor.
             inline Block(Block&&) noexcept = default; //!< Defaulted move constructor.
 
