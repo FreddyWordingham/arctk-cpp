@@ -14,6 +14,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Arctk --
+#include <arctk/opt/material/elastic.hpp>
+
+
+
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
@@ -47,6 +53,10 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Material --
+                const material::Elastic* _mat;
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
