@@ -31,6 +31,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Base --
+            const double _scattering_coef;
 
             //  -- Derived --
             const double _albedo;
