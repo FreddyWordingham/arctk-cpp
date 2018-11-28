@@ -93,11 +93,11 @@ namespace arc //! arctk namespace
 
         std::unique_ptr<Driver> Region::driver(const phys::Photon& phot_) const noexcept
         {
-            const std::array<size_t, 3> indices = indices(phot_.pos());
+            const std::array<size_t, 3> index = indices(phot_.pos());
 
-            const std::unordered_map<std::string, std::unique_ptr<Block>>& map = _blocks[indices[index::dim::cartesian::X]][indices[index::dim::cartesian::Y]][indices[index::dim::cartesian::Z]];
+            const std::unordered_map<std::string, std::unique_ptr<Block>>& map = _blocks[index[index::dim::cartesian::X]][index[index::dim::cartesian::Y]][index[index::dim::cartesian::Z]];
 
-            assert(map.find(phot_.mat_id()) != map.end());
+            assert(map.find(phot_.cur_mat_id()) != map.end());
 
             return (map[phot_.mat_id()].driver(phot_));
         }
