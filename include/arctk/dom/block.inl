@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <utility>
 
 
 
@@ -53,7 +54,7 @@ namespace arc //! arctk namespace
         {
             std::unordered_map<std::string, std::unique_ptr<Mat>> mats;
 
-            mats.insert(aether_id_, aether_.clone());
+            mats.insert(std::make_pair(aether_id_, aether_.clone()));
 
             return (mats);
         }
