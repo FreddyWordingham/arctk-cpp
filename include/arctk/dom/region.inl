@@ -109,6 +109,22 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Setters --
+        inline void Region::add_mat(const std::string& mat_id_, const Mat& mat_) noexcept
+        {
+            for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
+            {
+                for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
+                {
+                    for (size_t k = 0; k < _res[index::dim::cartesian::Z]; ++k)
+                    {
+                        _blocks[i][j][k].add_mat(mat_id_, mat_);
+                    }
+                }
+            }
+        }
+
+
         //  -- Indexing --
         inline std::array<size_t, 3> Region::indices(const vec3& pos_) const noexcept
         {

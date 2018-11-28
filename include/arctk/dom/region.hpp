@@ -85,6 +85,9 @@ namespace arc //! arctk namespace
             inline const std::array<size_t, 3>& res() const noexcept;
             inline const Block&                 block(const vec3& pos_) const noexcept;
 
+            //  -- Setters --
+            inline void add_mat(const std::string& mat_id_, const Mat& mat_) noexcept;
+
           private:
             //  -- Indexing --
             inline std::array<size_t, 3> indices(const vec3& pos_) const noexcept;
