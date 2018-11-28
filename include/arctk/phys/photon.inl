@@ -168,25 +168,6 @@ namespace arc //! arctk namespace
             return ((body_mat_id_ == _cur_mat_id) ? _prev_mat_id.top() : body_mat_id_);
         }
 
-        inline void Photon::enter_mat(const std::string& mat_id_) const noexcept
-        {
-            assert(!mat_id_.empty());
-            assert(mat_id_ != _cur_mat_id);
-
-            _prev_mat_id.push(cur_mat_id);
-            _cur_mat_id = mat_id_;
-        }
-
-        inline void Photon::exit_mat(const std::string& mat_id_) const noexcept
-        {
-            assert(!mat_id_.empty());
-            assert(mat_id_ == _cur_mat_id);
-            assert(!_prev_mat_id.empty());
-
-            _cur_mat_id = _prev_mat_id.top();
-            _prev_mat_id.pop();
-        }
-
 
         //  -- Setters --
         /**
@@ -287,6 +268,24 @@ namespace arc //! arctk namespace
 
 
         //  -- Materials --
+        inline void Photon::enter_mat(const std::string& mat_id_) noexcept
+        {
+            assert(!mat_id_.empty());
+            assert(mat_id_ != _cur_mat_id);
+
+            _prev_mat_id.push(cur_mat_id);
+            _cur_mat_id = mat_id_;
+        }
+
+        inline void Photon::exit_mat(const std::string& mat_id_) noexcept
+        {
+            assert(!mat_id_.empty());
+            assert(mat_id_ == _cur_mat_id);
+            assert(!_prev_mat_id.empty());
+
+            _cur_mat_id = _prev_mat_id.top();
+            _prev_mat_id.pop();
+        }
 
 
 
