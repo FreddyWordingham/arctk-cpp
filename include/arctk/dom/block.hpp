@@ -23,6 +23,7 @@
 //  -- Arctk --
 #include <arctk/dom/driver.hpp>
 #include <arctk/dom/mat.hpp>
+#include <arctk/geom/shape/box.hpp>
 
 
 
@@ -49,7 +50,7 @@ namespace arc //! arctk namespace
         /**
          *  Domain discretisation material block class.
          */
-        class Block
+        class Block : geom::shape::Box
         {
             //  == FIELDS ==
           protected:
