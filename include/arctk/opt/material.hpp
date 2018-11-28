@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/opt/mat.hpp
+ *  @file   arctk/opt/material.hpp
  *  @date   28/11/2018
  *  @author Freddy Wordingham
  *
@@ -9,8 +9,8 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_OPT_MAT_HPP
-#define ARCTK_OPT_MAT_HPP
+#ifndef ARCTK_OPT_MATERIAL_HPP
+#define ARCTK_OPT_MATERIAL_HPP
 
 
 
@@ -32,28 +32,28 @@ namespace arc //! arctk namespace
         /**
          *  Domain material class.
          */
-        class Mat
+        class Material
         {
             //  == FIELDS ==
           protected:
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Mat(const Mat&) noexcept = default; //!< Defaulted copy constructor.
-            inline Mat(Mat&&) noexcept      = default; //!< Defaulted move constructor.
+            inline Material(const Material&) noexcept = default; //!< Defaulted copy constructor.
+            inline Material(Material&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
-            virtual ~Mat() noexcept;
+            virtual ~Material() noexcept;
 
             //  -- Cloning --
-            virtual std::unique_ptr<Mat> clone() const = 0;
+            virtual std::unique_ptr<Material> clone() const = 0;
 
 
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            inline Mat& operator=(const Mat&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
-            inline Mat& operator=(Mat&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
+            inline Material& operator=(const Material&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
+            inline Material& operator=(Material&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
@@ -70,9 +70,9 @@ namespace arc //! arctk namespace
 
 
 //  == IMPLEMENTATION ==
-#include <arctk/opt/mat.inl>
+#include <arctk/opt/material.inl>
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_OPT_MAT_HPP
+#endif // ARCTK_OPT_MATERIAL_HPP
