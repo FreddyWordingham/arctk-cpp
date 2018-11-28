@@ -163,6 +163,11 @@ namespace arc //! arctk namespace
             return (_prev_mat_id.top());
         }
 
+        inline const std::string& Photon::next_mat_id(const std::string& body_mat_id_) const noexcept
+        {
+            return ((body_mat_id_ == _cur_mat_id) ? _prev_mat_id.top() : body_mat_id_);
+        }
+
 
         //  -- Setters --
         /**

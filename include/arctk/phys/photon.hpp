@@ -76,6 +76,7 @@ namespace arc //! arctk namespace
             inline double             weight() const noexcept;
             inline const std::string& cur_mat_id() const noexcept;
             inline const std::string& prev_mat_id() const noexcept;
+            inline const std::string& next_mat_id(const std::string& body_mat_id_) const noexcept;
 
             //  -- Setters --
             inline void move(double dist_, double ref_index_) noexcept;
