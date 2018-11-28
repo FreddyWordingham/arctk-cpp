@@ -81,17 +81,17 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        const std::array<size_t, 3>& Region::res() const noexcept
+        inline const std::array<size_t, 3>& Region::res() const noexcept
         {
             return (_res);
         }
 
-        const vec3& Region::block_size() const noexcept
+        inline const vec3& Region::block_size() const noexcept
         {
             return (_block_size);
         }
 
-        std::unique_ptr<Driver> Region::driver(const phys::Photon& phot_) const noexcept
+        inline std::unique_ptr<Driver> Region::driver(const phys::Photon& phot_) const noexcept
         {
             const std::array<size_t, 3> index = indices(phot_.pos());
 
