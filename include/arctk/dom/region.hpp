@@ -87,7 +87,7 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Indexing --
-            const std::array<size_t, 3>& indices(const vec3& pos_) const noexcept;
+            inline std::array<size_t, 3> indices(const vec3& pos_) const noexcept;
         };
 
 

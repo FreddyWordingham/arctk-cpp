@@ -104,20 +104,20 @@ namespace arc //! arctk namespace
 
 
         //  -- Indexing --
-        const std::array<size_t, 3>& Region::indices(const vec3& pos_) const noexcept
+        inline std::array<size_t, 3> Region::indices(const vec3& pos_) const noexcept
         {
             assert(intersect(pos_));
 
-            std::array<size_t, 3> index;
+            std::array<size_t, 3> indices;
 
             for (size_t i = 0; i < 3; ++i)
             {
                 const size_t index = static_cast<size_t>((pos_[i] - _min[i]) / _block_size[i]);
 
-                index[i] = (index == _res[i]) ? (index - 1) : index;
+                indices[i] = (index == _res[i]) ? (index - 1) : index;
             }
 
-            return (index);
+            return (indices);
         }
 
 
