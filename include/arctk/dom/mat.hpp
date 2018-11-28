@@ -59,6 +59,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            virtual std::unique_ptr<Driver> driver() const noexcept = 0;
         };
 
 
