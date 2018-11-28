@@ -51,6 +51,9 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Data --
+            const double _volume;
+
+            //  -- Records --
             double _energy;
             double _scatter;
             double _absorption;
