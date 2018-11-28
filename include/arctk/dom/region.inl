@@ -80,6 +80,14 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        const std::array<size_t, 3>& Region::res() const noexcept
+        {
+        }
+
+        const vec3& Region::block_size() const noexcept
+        {
+            return (_block_size);
+        }
 
 
 

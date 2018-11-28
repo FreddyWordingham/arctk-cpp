@@ -70,6 +70,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            const std::array<size_t, 3>& res() const noexcept;
+            const vec3&                  block_size() const noexcept;
         };
 
 
