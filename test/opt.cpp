@@ -11,7 +11,9 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/opt/driver.hpp>
+#include <arctk/opt/driver/elastic.hpp>
 #include <arctk/opt/material.hpp>
+#include <arctk/opt/material/elastic.hpp>
 
 
 
