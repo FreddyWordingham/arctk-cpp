@@ -164,7 +164,6 @@ namespace arc //! arctk namespace
         }
 
 
-
         //  -- Setters --
         /**
          *  Move the photon along its current direction vector.
