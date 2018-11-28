@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
         {
             assert(_mats.count(mat_id_) == 0);
 
-            _mats.insert(std::make_pair(aether_id_, aether_.clone()));
+            _mats.insert(std::make_pair(mat_id_, mat_.clone()));
         }
 
 
