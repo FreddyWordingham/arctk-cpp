@@ -24,7 +24,7 @@
 #include <arctk/geom/shape/box.hpp>
 #include <arctk/math/vec.hpp>
 #include <arctk/opt/driver.hpp>
-#include <arctk/opt/mat.hpp>
+#include <arctk/opt/material.hpp>
 
 
 
