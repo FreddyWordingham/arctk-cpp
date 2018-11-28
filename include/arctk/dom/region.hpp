@@ -70,7 +70,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Region(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const Block& aether_) noexcept;
+            inline Region(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept;
 
           private:
             //  -- Initialisation --
@@ -81,8 +81,6 @@ namespace arc //! arctk namespace
           public:
             //  -- Getters --
             inline const std::array<size_t, 3>& res() const noexcept;
-            inline const vec3&                  block_size() const noexcept;
-            inline std::unique_ptr<Driver>      driver(const phys::Photon& phot_) const noexcept;
 
           private:
             //  -- Indexing --

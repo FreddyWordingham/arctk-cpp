@@ -86,11 +86,6 @@ namespace arc //! arctk namespace
             return (_res);
         }
 
-        inline const vec3& Region::block_size() const noexcept
-        {
-            return (_block_size);
-        }
-
 
         //  -- Indexing --
         inline std::array<size_t, 3> Region::indices(const vec3& pos_) const noexcept
