@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/dom/region.hpp
+ *  @file   arctk/sim/domain.hpp
  *  @date   27/11/2018
  *  @author Freddy Wordingham
  *
- *  Domain region class.
+ *  Simulation domain class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_DOM_REGION_HPP
-#define ARCTK_DOM_REGION_HPP
+#ifndef ARCTK_SIM_DOMAIN_HPP
+#define ARCTK_SIM_DOMAIN_HPP
 
 
 
@@ -50,16 +50,16 @@ namespace arc //! arctk namespace
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace dom //! domain namespace
+    namespace sim //! simulation namespace
     {
 
 
 
         //  == CLASS ==
         /**
-         *  Domain region class.
+         *  Simulation domain class.
          */
-        class Region : public geom::shape::Box
+        class Domain : public geom::shape::Box
         {
             //  == FIELDS ==
           protected:
@@ -72,7 +72,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Region(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const Mat& aether_) noexcept;
+            inline Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const Mat& aether_) noexcept;
 
           private:
             //  -- Initialisation --
@@ -95,15 +95,15 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace dom
+    } // namespace sim
 } // namespace arc
 
 
 
 //  == IMPLEMENTATION ==
-#include <arctk/dom/region.inl>
+#include <arctk/sim/domain.inl>
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_DOM_REGION_HPP
+#endif // ARCTK_SIM_DOMAIN_HPP

@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/dom/region.inl
+ *  @file   arctk/sim/domain.inl
  *  @date   27/11/2018
  *  @author Freddy Wordingham
  *
- *  Domain region class.
+ *  Simulation domain class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_DOM_REGION_INL
-#define ARCTK_DOM_REGION_INL
+#ifndef ARCTK_SIM_DOMAIN_INL
+#define ARCTK_SIM_DOMAIN_INL
 
 
 
@@ -27,14 +27,14 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace dom //! domain namespace
+    namespace sim //! simulation namespace
     {
 
 
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Region::Region(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const Mat& aether_) noexcept
+        inline Domain::Domain(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const Mat& aether_) noexcept
           : geom::shape::Box(min_, max_)
           , _res(res_)
           , _block_size((max_.x - min_.x) / res_[index::dim::cartesian::X], (max_.y - min_.y) / res_[index::dim::cartesian::Y], (max_.z - min_.z) / res_[index::dim::cartesian::Z])
@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
-        inline multi::vector<Block, 3> Region::init_blocks(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const Mat& aether_) const noexcept
+        inline multi::vector<Block, 3> Domain::init_blocks(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const Mat& aether_) const noexcept
         {
             assert(min_.x < max_.x);
             assert(min_.y < max_.y);
@@ -96,12 +96,12 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        inline const std::array<size_t, 3>& Region::res() const noexcept
+        inline const std::array<size_t, 3>& Domain::res() const noexcept
         {
             return (_res);
         }
 
-        inline const Block& Region::block(const vec3& pos_) const noexcept
+        inline const Block& Domain::block(const vec3& pos_) const noexcept
         {
             const std::array<size_t, 3> index = indices(pos_);
 
@@ -110,7 +110,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
-        inline void Region::add_mat(const std::string& mat_id_, const Mat& mat_) noexcept
+        inline void Domain::add_mat(const std::string& mat_id_, const Mat& mat_) noexcept
         {
             for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
             {
@@ -126,7 +126,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Indexing --
-        inline std::array<size_t, 3> Region::indices(const vec3& pos_) const noexcept
+        inline std::array<size_t, 3> Domain::indices(const vec3& pos_) const noexcept
         {
             assert(intersect(pos_));
 
@@ -144,10 +144,10 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace dom
+    } // namespace sim
 } // namespace arc
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_DOM_REGION_INL
+#endif // ARCTK_SIM_DOMAIN_INL
