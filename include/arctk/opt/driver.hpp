@@ -54,11 +54,11 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            virtual double ref_index() const noexcept                                                    = 0;
-            virtual double interact_dist(random::Generator* rng_, const dom::Cell* cell_) const noexcept = 0;
+            virtual double ref_index() const noexcept                            = 0;
+            virtual double interact_dist(random::Generator* rng_) const noexcept = 0;
 
             //  -- Interaction --
-            virtual bool interact(random::Generator* rng_, phys::Photon* phot_, double dist_) const noexcept = 0;
+            virtual bool interact(random::Generator* rng_, phys::Photon* phot_) const noexcept = 0;
         };
 
 
