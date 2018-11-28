@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Block() const noexcept;                 //!< Defaulted constructor.
+            inline Block() noexcept             = default; //!< Defaulted constructor.
             inline Block(const Block&) noexcept = default; //!< Defaulted copy constructor.
             inline Block(Block&&) noexcept      = default; //!< Defaulted move constructor.
 
