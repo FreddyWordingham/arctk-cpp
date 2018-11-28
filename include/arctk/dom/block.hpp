@@ -69,6 +69,7 @@ namespace arc //! arctk namespace
             //  -- Destructors --
             virtual ~Block() noexcept;
 
+          private:
             //  -- Initialisation --
             inline std::unordered_map<std::string, std::unique_ptr<Mat>> init_mats(const std::string& aether_id_, const Mat& aether_) const noexcept;
 
