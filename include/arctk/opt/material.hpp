@@ -38,7 +38,9 @@ namespace arc //! arctk namespace
           protected:
             //  -- Properties --
             double _energy;
+            double _scattering;
             double _absorption;
+            //            double _emission;
 
 
             //  == INSTANTIATION ==
