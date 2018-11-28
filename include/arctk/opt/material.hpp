@@ -38,6 +38,7 @@ namespace arc //! arctk namespace
           protected:
             //  -- Properties --
             double _energy;
+            double _absorption;
 
 
             //  == INSTANTIATION ==
