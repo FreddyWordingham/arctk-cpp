@@ -14,6 +14,21 @@
 
 
 
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    namespace phys //! physics namespace
+    {
+        class Photon;
+    }                // namespace phys
+    namespace random //! random number namespace
+    {
+        class Generator;
+    } // namespace random
+} // namespace arc
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
