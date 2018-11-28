@@ -1,5 +1,5 @@
 /**
- *  @file   arctk/dom/block.hpp
+ *  @file   arctk/disc/block.hpp
  *  @date   27/11/2018
  *  @author Freddy Wordingham
  *
