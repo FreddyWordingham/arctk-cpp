@@ -30,7 +30,7 @@ namespace arc //! arctk namespace
 
         //  == CLASS ==
         /**
-         *  Domain material class.
+         *  Optical material class.
          */
         class Material
         {
