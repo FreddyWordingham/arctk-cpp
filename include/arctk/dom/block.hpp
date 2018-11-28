@@ -60,9 +60,9 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Block() noexcept             = default; //!< Defaulted constructor.
-            inline Block(const Block&) noexcept = default; //!< Defaulted copy constructor.
-            inline Block(Block&&) noexcept      = default; //!< Defaulted move constructor.
+            inline Block() noexcept        = default; //!< Defaulted constructor.
+            inline Block(const Block&)     = default; //!< Defaulted copy constructor.
+            inline Block(Block&&) noexcept = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
             virtual ~Block() noexcept;
@@ -71,8 +71,8 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            inline Block& operator=(const Block&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
-            inline Block& operator=(Block&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
+            inline Block& operator=(const Block&) = default;     //!< Defaulted copy operator. @return Reference to copied object.
+            inline Block& operator=(Block&&) noexcept = default; //!< Defaulted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
