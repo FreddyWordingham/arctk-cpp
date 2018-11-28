@@ -30,6 +30,7 @@
 
 //  -- Arctk --
 #include <arctk/dom/block.hpp>
+#include <arctk/math/vec.hpp>
 #include <arctk/multi/vector.hpp>
 
 
@@ -52,6 +53,7 @@ namespace arc //! arctk namespace
           protected:
             //  -- Blocks --
             const std::array<size_t, 3>                                               _res;
+            const vec3                                                                _block_size;
             multi::vector<std::unordered_map<std::string, std::unique_ptr<Block>>, 3> _blocks;
 
 
