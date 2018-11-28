@@ -101,7 +101,7 @@ namespace arc //! arctk namespace
 
 
 //  == IMPLEMENTATION ==
-#include <arctk/sim/domain.inl>
+#include <arctk/disc/domain.inl>
 
 
 
