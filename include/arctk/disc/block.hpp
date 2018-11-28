@@ -56,13 +56,13 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           protected:
             //  -- Materials --
-            std::unordered_map<std::string, std::unique_ptr<Mat>> _mats;
+            std::unordered_map<std::string, std::unique_ptr<opt::Material>> _mats;
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Block(const vec3& min_, const vec3& max_, const std::string& aether_id_, const Mat& aether_) noexcept;
+            inline Block(const vec3& min_, const vec3& max_, const std::string& aether_id_, const opt::Material& aether_) noexcept;
             inline Block(const Block&)     = default; //!< Defaulted copy constructor.
             inline Block(Block&&) noexcept = default; //!< Defaulted move constructor.
 
@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
 
           private:
             //  -- Initialisation --
-            inline std::unordered_map<std::string, std::unique_ptr<Mat>> init_mats(const std::string& aether_id_, const Mat& aether_) const noexcept;
+            inline std::unordered_map<std::string, std::unique_ptr<opt::Material>> init_mats(const std::string& aether_id_, const opt::Material& aether_) const noexcept;
 
 
             //  == OPERATORS ==
