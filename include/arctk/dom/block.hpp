@@ -22,6 +22,7 @@
 
 //  -- Arctk --
 #include <arctk/dom/driver.hpp>
+#include <arctk/dom/mat.hpp>
 
 
 
@@ -59,6 +60,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Block() const noexcept;                 //!< Defaulted constructor.
             inline Block(const Block&) noexcept = default; //!< Defaulted copy constructor.
             inline Block(Block&&) noexcept      = default; //!< Defaulted move constructor.
 
