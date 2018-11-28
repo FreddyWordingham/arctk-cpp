@@ -106,7 +106,7 @@ namespace arc //! arctk namespace
         //  -- Indexing --
         const std::array<size_t, 3>& Region::indices(const vec3& pos_) const noexcept
         {
-            assert(contains(pos_));
+            assert(intersect(pos_));
 
             std::array<size_t, 3> index;
 
