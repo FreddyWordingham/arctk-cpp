@@ -42,7 +42,7 @@ namespace arc //! arctk namespace
             inline Driver(Driver&&) noexcept      = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
-            inline ~Driver() noexcept override;
+            virtual ~Driver() noexcept;
 
 
             //  == OPERATORS ==
