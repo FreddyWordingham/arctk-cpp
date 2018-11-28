@@ -1,16 +1,16 @@
 /**
- *  @file   arctk/dom/driver.inl
+ *  @file   arctk/opt/driver.inl
  *  @date   27/11/2018
  *  @author Freddy Wordingham
  *
- *  Photon controller class.
+ *  Optical controller class.
  */
 
 
 
 //  == GUARD ==
-#ifndef ARCTK_DOM_DRIVER_INL
-#define ARCTK_DOM_DRIVER_INL
+#ifndef ARCTK_OPT_DRIVER_INL
+#define ARCTK_OPT_DRIVER_INL
 
 
 
@@ -23,7 +23,7 @@
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace dom //! domain namespace
+    namespace opt //! optical namespace
     {
 
 
@@ -46,10 +46,10 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace dom
+    } // namespace opt
 } // namespace arc
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_DOM_DRIVER_INL
+#endif // ARCTK_OPT_DRIVER_INL

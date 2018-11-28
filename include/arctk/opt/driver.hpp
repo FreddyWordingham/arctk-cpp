@@ -1,9 +1,9 @@
 /**
- *  @file   arctk/dom/driver.hpp
+ *  @file   arctk/opt/driver.hpp
  *  @date   27/11/2018
  *  @author Freddy Wordingham
  *
- *  Photon controller class.
+ *  Optical controller class.
  */
 
 
