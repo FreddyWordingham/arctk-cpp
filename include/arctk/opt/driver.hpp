@@ -28,21 +28,9 @@ namespace arc //! arctk namespace
          */
         class Driver
         {
-            //  == FIELDS ==
-          protected:
-            //  -- Base --
-            const double _scattering_coef;
-            const double _absorption_coef;
-            const double _emission_coef;
-
-            //  -- Derived --
-            const double _interaction_coef;
-
-
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Driver() noexcept;
             inline Driver(const Driver&) noexcept = default; //!< Defaulted copy constructor.
             inline Driver(Driver&&) noexcept      = default; //!< Defaulted move constructor.
 
@@ -55,15 +43,6 @@ namespace arc //! arctk namespace
             //  -- Assignment --
             inline Driver& operator=(const Driver&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
             inline Driver& operator=(Driver&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
-
-
-            //  == METHODS ==
-          public:
-            //  -- Getters --
-            const double scattering_coef() const noexcept;
-            const double absorption_coef() const noexcept;
-            const double emission_coef() const noexcept;
-            const double interaction_coef() const noexcept;
         };
 
 
