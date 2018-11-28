@@ -37,6 +37,17 @@ namespace arc //! arctk namespace
 
 
 
+        //  == METHODS ==
+        //  -- Getters --
+        inline double Driver::interact_dist(random::Generator* rng_) const noexcept
+        {
+            _interaction_dist = calc_interaction_dist(rng_);
+
+            return (_interaction_dist);
+        }
+
+
+
     } // namespace opt
 } // namespace arc
 
