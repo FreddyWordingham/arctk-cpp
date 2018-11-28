@@ -28,6 +28,12 @@ namespace arc //! arctk namespace
          */
         class Driver
         {
+            //  == FIELDS ==
+          private:
+            //  -- Stored --
+            double _dist; //!< Distance to move photon during an interaction event.
+
+
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
@@ -43,6 +49,16 @@ namespace arc //! arctk namespace
             //  -- Assignment --
             inline Driver& operator=(const Driver&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
             inline Driver& operator=(Driver&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
+
+
+            //  == METHODS ==
+          public:
+            //  -- Getters --
+            virtual double ref_index() const noexcept                                                    = 0;
+            virtual double interact_dist(random::Generator* rng_, const dom::Cell* cell_) const noexcept = 0;
+
+            //  -- Interaction --
+            virtual bool interact(random::Generator* rng_, phys::Photon* phot_, double dist_) const noexcept = 0;
         };
 
 
