@@ -12,6 +12,7 @@
 //  -- Arctk --
 #include <arctk/dom/block.hpp>
 #include <arctk/dom/driver.hpp>
+#include <arctk/dom/mat.hpp>
 #include <arctk/dom/region.hpp>
 
 
