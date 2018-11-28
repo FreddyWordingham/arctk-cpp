@@ -9,27 +9,22 @@
 
 
 //  == GUARD ==
-#ifndef ARCTK_DOM_DRIVER_HPP
-#define ARCTK_DOM_DRIVER_HPP
-
-
-
-//  == IMPORTS ==
-//  -- Std --
+#ifndef ARCTK_OPT_DRIVER_HPP
+#define ARCTK_OPT_DRIVER_HPP
 
 
 
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
-    namespace dom //! domain namespace
+    namespace opt //! optical namespace
     {
 
 
 
         //  == CLASS ==
         /**
-         *  Photon controller class.
+         *  Optical controller class.
          */
         class Driver
         {
@@ -59,15 +54,15 @@ namespace arc //! arctk namespace
 
 
 
-    } // namespace dom
+    } // namespace opt
 } // namespace arc
 
 
 
 //  == IMPLEMENTATION ==
-#include <arctk/dom/driver.inl>
+#include <arctk/opt/driver.inl>
 
 
 
 //  == GUARD END ==
-#endif // ARCTK_DOM_DRIVER_HPP
+#endif // ARCTK_OPT_DRIVER_HPP
