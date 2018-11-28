@@ -3,7 +3,7 @@
  *  @date   27/11/2018
  *  @author Freddy Wordingham
  *
- *  Domain discretisation block class.
+ *  Domain discretisation material block class.
  */
 
 
