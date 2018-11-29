@@ -88,7 +88,7 @@ namespace arc //! arctk namespace
                 inline double ref_index() const noexcept override;
 
                 //  -- Interaction --
-              private:
+                inline void   travel(phys::Photon* phot_, double path_length_) noexcept override;
                 inline double interaction_dist(random::Generator* rng_) noexcept override;
                 inline bool   interact(random::Generator* rng_, phys::Photon* phot_) noexcept override;
             };
