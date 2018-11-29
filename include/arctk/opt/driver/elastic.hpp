@@ -66,10 +66,12 @@ namespace arc //! arctk namespace
               private:
                 //  -- Material --
                 const material::Elastic* _mat;
-                const double             _ref_index;
-                const double             _scat_coef;
-                const double             _abs_coef;
-                const double             _asym;
+
+                //  -- Properties --
+                const double _ref_index;
+                const double _scat_coef;
+                const double _abs_coef;
+                const double _asym;
 
 
                 //  == INSTANTIATION ==
