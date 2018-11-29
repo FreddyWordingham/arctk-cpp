@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Driver(const Material* base_mat_) noexcept;
+            inline Driver(Material* const base_mat_) noexcept;
             inline Driver(const Driver&) noexcept = default; //!< Defaulted copy constructor.
             inline Driver(Driver&&) noexcept      = default; //!< Defaulted move constructor.
 

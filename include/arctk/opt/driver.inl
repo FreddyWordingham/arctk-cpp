@@ -59,7 +59,7 @@ namespace arc //! arctk namespace
             return (_path_length);
         }
 
-        inline bool Driver::interact(random::Generator* rng_, phys::Photon* phot_) noexcept
+        inline bool Driver::interact(random::Generator* const rng_, phys::Photon* const phot_) noexcept
         {
             assert(rng_ != nullptr);
             assert(phot_ != nullptr);
