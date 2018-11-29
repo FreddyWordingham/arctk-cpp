@@ -85,10 +85,9 @@ namespace arc //! arctk namespace
                 inline double ref_index() const noexcept override;
 
                 //  -- Interaction --
-                inline bool interact(random::Generator* rng_, phys::Photon* phot_) const noexcept override;
-
               private:
                 inline double calc_interaction_dist(random::Generator* rng_) const noexcept override;
+                inline bool   perform_interaction(random::Generator* rng_, phys::Photon* phot_) const noexcept override;
             };
 
 
