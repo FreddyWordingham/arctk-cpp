@@ -20,6 +20,17 @@
 
 
 
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    namespace phys //! physics namespace
+    {
+        class Photon;
+    } // namespace phys
+} // namespace arc
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -77,7 +88,7 @@ namespace arc //! arctk namespace
             inline double                   scattering() const noexcept;
             inline double                   absorption() const noexcept;
             inline double                   emission() const noexcept;
-            virtual std::unique_ptr<Driver> driver() const noexcept = 0;
+            virtual std::unique_ptr<Driver> driver(const phys::Photon& phot_) const noexcept = 0;
         };
 
 

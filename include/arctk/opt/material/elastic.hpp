@@ -80,6 +80,8 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
+                //  -- Getters --
+                inline std::unique_ptr<Driver> driver() const noexcept override;
             };
 
 

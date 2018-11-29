@@ -49,6 +49,14 @@ namespace arc //! arctk namespace
             }
 
 
+            //  == METHODS ==
+            //  -- Getters --
+            inline std::unique_ptr<Driver> Elastic::driver() const noexcept
+            {
+                return (std::make_unique<driver::Elastic>());
+            }
+
+
 
         } // namespace material
     }     // namespace opt
