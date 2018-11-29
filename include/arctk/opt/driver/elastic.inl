@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <cmath>
 
 //  -- Arctk --
 #include <arctk/opt/material/elastic.hpp>
@@ -69,6 +70,7 @@ namespace arc //! arctk namespace
 
             inline double Elastic::calc_interact_dist(const random::Generator* rng_) const noexcept
             {
+                return (-std::log(rng_->gen() / _interaction_coef));
             }
 
 
