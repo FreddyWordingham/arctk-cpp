@@ -21,6 +21,7 @@
 
 //  -- Arctk --
 #include <arctk/opt/material/elastic.hpp>
+#include <arctk/random/generator.hpp>
 
 
 
