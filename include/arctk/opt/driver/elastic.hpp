@@ -14,6 +14,11 @@
 
 
 
+//  == BASE ==
+#include <arctk/opt/driver.hpp>
+
+
+
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/opt/material/elastic.hpp>
@@ -49,7 +54,7 @@ namespace arc //! arctk namespace
             /**
              *  Elastic scattering controller class.
              */
-            class Elastic
+            class Elastic : public Driver
             {
                 //  == FIELDS ==
               private:
