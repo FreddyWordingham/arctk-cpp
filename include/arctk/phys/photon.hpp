@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Photon(const vec3& pos_, const vec3& dir_, double wavelength_, double energy_, double time_, double phase_, const std::string& cur_mat_id_) noexcept;
+            inline Photon(const vec3& pos_, const vec3& dir_, double wavelength_, double power_, double time_, double phase_, const std::string& cur_mat_id_) noexcept;
 
 
             //  == METHODS ==
@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
             inline const vec3&        pos() const noexcept;
             inline const vec3&        dir() const noexcept;
             inline double             wavelength() const noexcept;
-            inline double             energy() const noexcept;
+            inline double             power() const noexcept;
             inline double             time() const noexcept;
             inline double             phase() const noexcept;
             inline vec2               phasor() const noexcept;
