@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
                 //  -- Optical --
                 math::formula::Linear _ref_index;
                 math::formula::Linear _scattering_coef;
-                //                math::formula::Linear _absorption_coef;
+                math::formula::Linear _absorption_coef;
 
 
                 //  == INSTANTIATION ==
