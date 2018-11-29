@@ -30,12 +30,15 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Material::Material() noexcept
-          : _energy(0.0)
+        inline Material::Material(const double min_, const double max_) noexcept
+          : _min(min_)
+          , _max(max_)
+          , _energy(0.0)
           , _scattering(0.0)
           , _absorption(0.0)
           , _emission(0.0)
         {
+            assert(min_ <= max_);
         }
 
 
