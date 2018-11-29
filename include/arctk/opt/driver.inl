@@ -55,6 +55,16 @@ namespace arc //! arctk namespace
             return (_path_length);
         }
 
+        inline bool Driver::interact(random::Generator* rng_, phys::Photon* phot_) noexcept
+        {
+            assert(rng_ != nullptr);
+            assert(phot_ != nullptr);
+
+            phot_->move(_path_length);
+
+            return (perform_interaction(rng_, phot_));
+        }
+
 
 
     } // namespace opt
