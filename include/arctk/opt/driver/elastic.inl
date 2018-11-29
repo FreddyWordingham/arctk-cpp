@@ -68,7 +68,7 @@ namespace arc //! arctk namespace
 
 
             //  -- Interaction --
-            inline void travel(phys::Photon* const phot_, const double path_length_) noexcept
+            inline void Elastic::travel(phys::Photon* const phot_, const double path_length_) noexcept
             {
                 assert(phot_ != nullptr);
                 assert(path_length_ > 0.0);
