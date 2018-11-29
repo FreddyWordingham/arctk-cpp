@@ -31,7 +31,7 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         inline Driver::Driver() noexcept
-          : _interaction_dist(0.0)
+          : _path_length(0.0)
         {
         }
 
@@ -48,9 +48,9 @@ namespace arc //! arctk namespace
         //  -- Getters --
         inline double Driver::interaction_dist(random::Generator* rng_) noexcept
         {
-            _interaction_dist = calc_interaction_dist(rng_);
+            _path_length = calc_interaction_dist(rng_);
 
-            return (_interaction_dist);
+            return (_path_length);
         }
 
 
