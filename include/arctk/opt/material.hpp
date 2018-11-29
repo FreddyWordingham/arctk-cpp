@@ -91,7 +91,7 @@ namespace arc //! arctk namespace
             virtual std::unique_ptr<Driver> driver(const phys::Photon& phot_) const noexcept = 0;
 
             //  -- Recording --
-            inline void record_travel(const phys::Photon& phot_, double ref_index_, double dist_) noexcept;
+            inline void record_travel(const phys::Photon& phot_, double dist_, double ref_index_) noexcept;
         };
 
 

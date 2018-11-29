@@ -64,6 +64,7 @@ namespace arc //! arctk namespace
             assert(phot_ != nullptr);
 
             phot_->move(_path_length, ref_index());
+            _base_mat->record_travel(phot_, _path_length, ref_index());
 
             return (perform_interaction(rng_, phot_));
         }
