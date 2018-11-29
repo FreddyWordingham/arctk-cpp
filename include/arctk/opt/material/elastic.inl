@@ -63,7 +63,7 @@ namespace arc //! arctk namespace
 
 
             //  -- Evolve --
-            inline void evolve(const double /*unused*/) noexcept
+            inline void Elastic::evolve(const double /*unused*/) noexcept
             {
             }
 
