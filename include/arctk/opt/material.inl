@@ -99,6 +99,9 @@ namespace arc //! arctk namespace
 
         inline void Material::add_scattering(const double scattering_) noexcept
         {
+            assert(scattering_ > 0.0);
+
+            _scattering += scattering_;
         }
 
         inline void Material::add_absorption(const double absorption_) noexcept
