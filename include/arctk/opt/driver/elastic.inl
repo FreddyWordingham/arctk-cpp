@@ -18,6 +18,9 @@
 //  -- Std --
 #include <cassert>
 
+//  -- Arctk --
+#include <arctk/opt/material/elastic.hpp>
+
 
 
 //  == NAMESPACE ==

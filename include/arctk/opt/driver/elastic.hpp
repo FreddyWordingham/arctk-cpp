@@ -21,13 +21,19 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
-//#include <arctk/opt/material/elastic.hpp>
 
 
 
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
+    namespace opt //! optical namespace
+    {
+        namespace material //! material namespace
+        {
+            class Elastic;
+        }          // namespace material
+    }              // namespace opt
     namespace phys //! physics namespace
     {
         class Photon;
