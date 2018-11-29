@@ -71,7 +71,7 @@ namespace arc //! arctk namespace
                 return (true);
             }
 
-            inline double Elastic::calc_interact_dist(const random::Generator* rng_) const noexcept
+            inline double Elastic::calc_interaction_dist(const random::Generator* rng_) const noexcept
             {
                 return (-std::log(rng_->gen() / _interaction_coef));
             }
