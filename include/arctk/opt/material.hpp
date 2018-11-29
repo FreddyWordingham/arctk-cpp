@@ -71,6 +71,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline double                   min() const noexcept;
+            inline double                   max() const noexcept;
             inline double                   energy() const noexcept;
             inline double                   scattering() const noexcept;
             inline double                   absorption() const noexcept;
