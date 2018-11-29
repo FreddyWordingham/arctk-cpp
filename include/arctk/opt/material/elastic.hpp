@@ -20,6 +20,9 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <vector>
+
 //  -- Arctk --
 #include <arctk/math/formula/linear.hpp>
 
