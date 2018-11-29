@@ -18,6 +18,9 @@
 //  -- Std --
 #include <cassert>
 
+//  -- Arctk --
+#include <arctk/phys/photon.hpp>
+
 
 
 //  == NAMESPACE ==
