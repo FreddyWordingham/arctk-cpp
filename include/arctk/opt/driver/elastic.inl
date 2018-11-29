@@ -34,9 +34,9 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Elastic::Elastic(const std::vector<double>& wavelengths_, const std::vector<double>& ref_indexs_, const std::vector<double>& scat_coefs_, const std::vector<double>& abs_coefs_, const std::vector<double>& asyms_) noexcept
               : _ref_index(wavelengths_, ref_indexs_)
-              , _scat_coef(wavelengths, scat_coefs_)
-              , _abs_coef(wavelengths, abs_coefs_)
-              , _asym(wavelengths, asyms_)
+              , _scat_coef(wavelengths_, scat_coefs_)
+              , _abs_coef(wavelengths_, abs_coefs_)
+              , _asym(wavelengths_, asyms_)
             {
             }
 
