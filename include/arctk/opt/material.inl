@@ -113,6 +113,9 @@ namespace arc //! arctk namespace
 
         inline void Material::add_emission(const double emission_) noexcept
         {
+            assert(emission_ > 0.0);
+
+            _emission += emission_;
         }
 
         inline void Material::add_travel_dir(const vec3& travel_dir_) noexcept
