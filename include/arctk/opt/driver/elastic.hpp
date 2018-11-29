@@ -75,6 +75,7 @@ namespace arc //! arctk namespace
 
                 //  -- Derived --
                 const double _interaction_coef;
+                const double _albedo;
 
 
                 //  == INSTANTIATION ==
