@@ -51,9 +51,9 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Getters --
-            inline std::unique_ptr<Driver> Elastic::driver() const noexcept
+            inline std::unique_ptr<Driver> Elastic::driver(const phys::Photon& phot_) const noexcept
             {
-                return (std::make_unique<driver::Elastic>());
+                return (std::make_unique<driver::Elastic>(_ref_index(phot_.wavelength()), _scat_coef(phot_.wavelength()), _abs_coef(phot_.wavelength()), _asym(phot_.wavelength())));
             }
 
 
