@@ -62,6 +62,9 @@ namespace arc //! arctk namespace
                 //  -- Material --
                 material::Elastic* const _mat;
 
+                //  -- Storage --
+                double _path_length;
+
                 //  -- Properties --
                 const double _ref_index;
                 const double _scat_coef;
