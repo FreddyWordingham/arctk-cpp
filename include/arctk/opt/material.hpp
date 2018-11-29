@@ -18,6 +18,9 @@
 //  -- Std --
 #include <memory>
 
+//  -- Arctk --
+#include <arctk/math/vec.hpp>
+
 
 
 //  == CLASS PROTOTYPES ==
@@ -52,6 +55,7 @@ namespace arc //! arctk namespace
             const double _max; //!< Maximum valid wavelength of the material.
 
             //  -- Properties --
+            vec3   _travel_dir;
             double _energy;
             double _scattering;
             double _absorption;
