@@ -79,6 +79,8 @@ namespace arc //! arctk namespace
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
 
+                _mat->add_travel_dir(phot_.dir() * _path_length);
+
                 return (true);
             }
 
