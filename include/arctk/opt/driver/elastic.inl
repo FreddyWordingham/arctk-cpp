@@ -67,7 +67,8 @@ namespace arc //! arctk namespace
             //  -- Interaction --
             inline bool Elastic::interact(random::Generator* rng_, phys::Photon* phot_) const noexcept
             {
-
+                assert(rng_ != nullptr);
+                assert(phot_ != nullptr);
 
                 return (true);
             }
