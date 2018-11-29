@@ -106,6 +106,9 @@ namespace arc //! arctk namespace
 
         inline void Material::add_absorption(const double absorption_) noexcept
         {
+            assert(absorption_ > 0.0);
+
+            _absorption += absorption_;
         }
 
         inline void Material::add_emission(const double emission_) noexcept
