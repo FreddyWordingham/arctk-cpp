@@ -18,9 +18,6 @@
 //  -- Std --
 #include <cassert>
 
-//  -- Arctk --
-#include <arctk/phys/photon.hpp>
-
 
 
 //  == NAMESPACE ==
@@ -89,21 +86,6 @@ namespace arc //! arctk namespace
         inline const vec3& Material::travel_dir() const noexcept
         {
             return (_travel_dir);
-        }
-
-
-        //  -- Recording --
-        inline void Material::record_travel(const phys::Photon& phot_, double dist_, double ref_index_) noexcept
-        {
-            _energy;
-
-            _scattering;
-
-            _absorption;
-
-            _emission;
-
-            _travel_dir += phot_.dir() * dist_;
         }
 
 

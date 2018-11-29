@@ -47,19 +47,9 @@ namespace arc //! arctk namespace
          */
         class Driver
         {
-            //  == FIELDS ==
-          private:
-            //  -- Material --
-            Material* const _base_mat;
-
-            //  -- Stored --
-            double _path_length; //!< Distance to the next interaction event.
-
-
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Driver(Material* const base_mat_) noexcept;
             inline Driver(const Driver&) noexcept = default; //!< Defaulted copy constructor.
             inline Driver(Driver&&) noexcept      = default; //!< Defaulted move constructor.
 
@@ -80,12 +70,8 @@ namespace arc //! arctk namespace
             virtual double ref_index() const noexcept = 0;
 
             //  -- Interaction --
-            inline double interaction_dist(random::Generator* rng_) noexcept;
-            inline bool   interact(random::Generator* rng_, phys::Photon* phot_) noexcept;
-
-          private:
-            virtual double calc_interaction_dist(random::Generator* rng_) const noexcept                    = 0;
-            virtual bool   perform_interaction(random::Generator* rng_, phys::Photon* phot_) const noexcept = 0;
+            virtual double interaction_dist(random::Generator* rng_) noexcept              = 0;
+            virtual bool   interact(random::Generator* rng_, phys::Photon* phot_) noexcept = 0;
         };
 
 
