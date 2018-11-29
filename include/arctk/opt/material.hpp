@@ -82,13 +82,15 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double                   min() const noexcept;
-            inline double                   max() const noexcept;
-            inline double                   energy() const noexcept;
-            inline double                   scattering() const noexcept;
-            inline double                   absorption() const noexcept;
-            inline double                   emission() const noexcept;
-            virtual std::unique_ptr<Driver> driver(const phys::Photon& phot_) const noexcept = 0;
+            inline double min() const noexcept;
+            inline double max() const noexcept;
+            inline double energy() const noexcept;
+            inline double scattering() const noexcept;
+            inline double absorption() const noexcept;
+            inline double emission() const noexcept;
+
+            //  -- Driver --
+            virtual std::unique_ptr<Driver> driver(const phys::Photon& phot_) noexcept = 0;
 
             //  -- Recording --
             inline void record_travel(const phys::Photon& phot_, double dist_, double ref_index_) noexcept;

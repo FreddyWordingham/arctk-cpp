@@ -80,8 +80,8 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
-                //  -- Getters --
-                inline std::unique_ptr<Driver> driver(const phys::Photon& phot_) const noexcept override;
+                //  -- Driver --
+                inline std::unique_ptr<Driver> driver(const phys::Photon& phot_) noexcept override;
             };
 
 
