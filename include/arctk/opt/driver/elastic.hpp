@@ -86,14 +86,14 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
               public:
-                //     //  -- Getters --
-                //     virtual double ref_index() const noexcept = 0;
+                //  -- Getters --
+                inline double ref_index() const noexcept override;
 
-                //     //  -- Interaction --
-                //     virtual bool interact(random::Generator* rng_, phys::Photon* phot_) const noexcept = 0;
+                //  -- Interaction --
+                inline bool interact(random::Generator* rng_, phys::Photon* phot_) const noexcept override;
 
-                //   private:
-                //     virtual double calc_interact_dist(random::Generator* rng_) const noexcept = 0;
+              private:
+                inline double calc_interact_dist(random::Generator* rng_) const noexcept override;
             };
 
 

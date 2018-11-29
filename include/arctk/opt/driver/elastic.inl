@@ -54,6 +54,25 @@ namespace arc //! arctk namespace
 
 
 
+            //  == METHODS ==
+            //  -- Getters --
+            inline double Elastic::ref_index() const noexcept
+            {
+                return (_ref_index);
+            }
+
+
+            //  -- Interaction --
+            inline bool Elastic::interact(const random::Generator* rng_, const phys::Photon* phot_) const noexcept
+            {
+            }
+
+            inline double Elastic::calc_interact_dist(const random::Generator* rng_) const noexcept
+            {
+            }
+
+
+
         } // namespace driver
     }     // namespace opt
 } // namespace arc
