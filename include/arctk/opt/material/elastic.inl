@@ -18,6 +18,9 @@
 //  -- Std --
 #include <cassert>
 
+//  -- Arctk --
+#include <arctk/opt/driver/elastic.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -47,6 +50,7 @@ namespace arc //! arctk namespace
             {
                 return (std::make_unique<Elastic>(*this));
             }
+
 
 
             //  == METHODS ==
