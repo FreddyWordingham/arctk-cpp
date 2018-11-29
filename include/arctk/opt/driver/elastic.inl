@@ -41,6 +41,8 @@ namespace arc //! arctk namespace
               , _scat_coef(scat_coef_)
               , _abs_coef(abs_coef_)
               , _asym(asym_)
+              , _interaction_coef(scat_coef_ + abs_coef_)
+              , _albedo(1.0 - (abs_coef_ / (scat_coef_ + abs_coef_)))
             {
                 assert(mat_ != nullptr);
                 assert(ref_index_ >= 1.0);
