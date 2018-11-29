@@ -69,7 +69,7 @@ namespace arc //! arctk namespace
             {
                 assert(rng_ != nullptr);
 
-                _path_length = -std::log(rng_->gen() / _interaction_coef);
+                _path_length = -std::log(rng_->gen()) / _interaction_coef;
 
                 return (_path_length);
             }
