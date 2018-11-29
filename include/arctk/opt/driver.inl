@@ -29,6 +29,13 @@ namespace arc //! arctk namespace
 
 
         //  == INSTANTIATION ==
+        //  -- Constructors --
+        inline Driver::Driver() noexcept
+          : _interaction_dist(0.0)
+        {
+        }
+
+
         //  -- Destructors --
         /**
          *  Default destructor.
@@ -39,11 +46,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        inline double Driver::interact_dist(random::Generator* rng_) noexcept
+        inline double Driver::interaction_dist(random::Generator* rng_) noexcept
         {
-            _interact_dist = calc_interact_dist(rng_);
+            _interaction_dist = calc_interaction_dist(rng_);
 
-            return (_interact_dist);
+            return (_interaction_dist);
         }
 
 

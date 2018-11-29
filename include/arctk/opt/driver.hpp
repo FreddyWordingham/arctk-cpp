@@ -46,12 +46,13 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Stored --
-            double _interact_dist; //!< Distance to the next interaction event.
+            double _interaction_dist; //!< Distance to the next interaction event.
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            inline Driver() noexcept;
             inline Driver(const Driver&) noexcept = default; //!< Defaulted copy constructor.
             inline Driver(Driver&&) noexcept      = default; //!< Defaulted move constructor.
 
@@ -69,14 +70,14 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double  interact_dist(random::Generator* rng_) noexcept;
+            inline double  interaction_dist(random::Generator* rng_) noexcept;
             virtual double ref_index() const noexcept = 0;
 
             //  -- Interaction --
             virtual bool interact(random::Generator* rng_, phys::Photon* phot_) const noexcept = 0;
 
           private:
-            virtual double calc_interact_dist(random::Generator* rng_) const noexcept = 0;
+            virtual double calc_interaction_dist(random::Generator* rng_) const noexcept = 0;
         };
 
 
