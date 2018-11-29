@@ -66,14 +66,16 @@ namespace arc //! arctk namespace
 
 
             //  -- Interaction --
-            inline double Elastic::calc_interaction_dist(random::Generator* const rng_) const noexcept
+            inline double Elastic::interaction_dist(random::Generator* const rng_) const noexcept
             {
                 assert(rng_ != nullptr);
 
-                return (-std::log(rng_->gen() / _interaction_coef));
+                _path_length = -std::log(rng_->gen() / _interaction_coef);
+
+                return (_path_length);
             }
 
-            inline bool Elastic::perform_interaction(random::Generator* const rng_, phys::Photon* const phot_) const noexcept
+            inline bool Elastic::interact(random::Generator* const rng_, phys::Photon* const phot_) const noexcept
             {
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
