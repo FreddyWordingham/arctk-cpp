@@ -21,7 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
-#include <arctk/opt/material/elastic.hpp>
+//#include <arctk/opt/material/elastic.hpp>
 
 
 
