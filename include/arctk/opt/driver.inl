@@ -34,7 +34,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Driver::Driver(const Material* base_mat_) noexcept
+        inline Driver::Driver(Material* const base_mat_) noexcept
           : _base_mat(base_mat_)
           , _path_length(0.0)
         {
