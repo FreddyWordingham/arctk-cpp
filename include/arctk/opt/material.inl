@@ -40,6 +40,7 @@ namespace arc //! arctk namespace
           , _scattering(0.0)
           , _absorption(0.0)
           , _emission(0.0)
+          , _travel_dir(0.0, 0.0, 0.0)
         {
             assert(min_ <= max_);
         }
@@ -83,6 +84,11 @@ namespace arc //! arctk namespace
         inline double Material::emission() const noexcept
         {
             return (_emission);
+        }
+
+        inline const vec3& Material::travel_dir() const noexcept
+        {
+            return (_travel_dir);
         }
 
 

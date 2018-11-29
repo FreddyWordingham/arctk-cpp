@@ -55,11 +55,11 @@ namespace arc //! arctk namespace
             const double _max; //!< Maximum valid wavelength of the material.
 
             //  -- Properties --
-            vec3   _travel_dir;
             double _energy;
             double _scattering;
             double _absorption;
             double _emission;
+            vec3   _travel_dir;
 
 
             //  == INSTANTIATION ==
@@ -86,12 +86,13 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double min() const noexcept;
-            inline double max() const noexcept;
-            inline double energy() const noexcept;
-            inline double scattering() const noexcept;
-            inline double absorption() const noexcept;
-            inline double emission() const noexcept;
+            inline double      min() const noexcept;
+            inline double      max() const noexcept;
+            inline double      energy() const noexcept;
+            inline double      scattering() const noexcept;
+            inline double      absorption() const noexcept;
+            inline double      emission() const noexcept;
+            inline const vec3& travel_dir() const noexcept;
 
             //  -- Driver --
             virtual std::unique_ptr<Driver> driver(const phys::Photon& phot_) noexcept = 0;
