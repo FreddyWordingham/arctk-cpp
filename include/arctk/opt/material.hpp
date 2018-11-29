@@ -94,6 +94,13 @@ namespace arc //! arctk namespace
             inline double      emission() const noexcept;
             inline const vec3& travel_dir() const noexcept;
 
+            //  -- Setters --
+            inline void add_energy(double energy_) noexcept;
+            inline void add_scattering(double scattering_) noexcept;
+            inline void add_absorption(double absorption_) noexcept;
+            inline void add_emission(double emission_) noexcept;
+            inline void add_travel_dir(const vec3& travel_dir_) noexcept;
+
             //  -- Driver --
             virtual std::unique_ptr<Driver> driver(const phys::Photon& phot_) noexcept = 0;
         };

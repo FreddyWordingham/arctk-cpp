@@ -89,6 +89,31 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Setters --
+        inline void Material::add_energy(const double energy_) noexcept
+        {
+            assert(energy_ > 0.0);
+
+            _energy += energy_;
+        }
+
+        inline void Material::add_scattering(const double scattering_) noexcept
+        {
+        }
+
+        inline void Material::add_absorption(const double absorption_) noexcept
+        {
+        }
+
+        inline void Material::add_emission(const double emission_) noexcept
+        {
+        }
+
+        inline void Material::add_travel_dir(const vec3& travel_dir_) noexcept
+        {
+        }
+
+
 
     } // namespace opt
 } // namespace arc
