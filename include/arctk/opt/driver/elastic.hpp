@@ -19,11 +19,6 @@
 
 
 
-//  == IMPORTS ==
-//  -- Arctk --
-
-
-
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
