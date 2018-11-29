@@ -45,6 +45,9 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Material --
+            const Material* _base_mat;
+
             //  -- Stored --
             double _path_length; //!< Distance to the next interaction event.
 
@@ -52,7 +55,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Driver() noexcept;
+            inline Driver(const Material* base_mat_) noexcept;
             inline Driver(const Driver&) noexcept = default; //!< Defaulted copy constructor.
             inline Driver(Driver&&) noexcept      = default; //!< Defaulted move constructor.
 
