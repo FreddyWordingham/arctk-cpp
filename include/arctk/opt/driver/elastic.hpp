@@ -73,6 +73,9 @@ namespace arc //! arctk namespace
                 const double _abs_coef;
                 const double _asym;
 
+                //  -- Derived --
+                const double _interaction_coef;
+
 
                 //  == INSTANTIATION ==
               public:
