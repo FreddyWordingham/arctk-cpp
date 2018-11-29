@@ -57,6 +57,10 @@ namespace arc //! arctk namespace
             {
                 //  == FIELDS ==
               private:
+                //  -- Optical --
+
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --

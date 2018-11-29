@@ -36,6 +36,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           protected:
+            //  -- Bounds --
+            const double _min; //!< Minimum valid wavelength of the material.
+            const double _max; //!< Maximum valid wavelength of the material.
+
             //  -- Properties --
             double _energy;
             double _scattering;
