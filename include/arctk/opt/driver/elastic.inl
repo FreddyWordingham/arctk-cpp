@@ -42,6 +42,12 @@ namespace arc //! arctk namespace
               , _abs_coef(abs_coef_)
               , _asym(asym_)
             {
+                assert(mat_ != nullptr);
+                assert(ref_index_ >= 1.0);
+                assert(scat_coef_ > 0.0);
+                assert(abs_coef_ >= 0.0);
+                assert(asym_ >= -1.0);
+                assert(asym_ <= 1.0);
             }
 
 
