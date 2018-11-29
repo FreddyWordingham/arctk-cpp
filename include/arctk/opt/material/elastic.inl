@@ -42,6 +42,13 @@ namespace arc //! arctk namespace
             }
 
 
+            //  -- Cloning --
+            inline std::unique_ptr<Material> Elastic::clone() const
+            {
+                return (std::make_unique<Elastic>(*this));
+            }
+
+
 
         } // namespace material
     }     // namespace opt

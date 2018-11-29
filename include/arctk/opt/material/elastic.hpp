@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <memory>
 #include <vector>
 
 //  -- Arctk --
@@ -72,6 +73,9 @@ namespace arc //! arctk namespace
               public:
                 //  -- Constructors --
                 inline Elastic(const std::vector<double>& wavelengths_, const std::vector<double>& ref_indexs_, const std::vector<double>& scat_coefs_, const std::vector<double>& abs_coefs_, const std::vector<double>& asyms_) noexcept;
+
+                //  -- Cloning --
+                inline std::unique_ptr<Material> clone() const;
 
 
                 //  == METHODS ==
