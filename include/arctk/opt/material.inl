@@ -18,6 +18,9 @@
 //  -- Std --
 #include <cassert>
 
+//  -- Arctk --
+#include <arctk/phys/photon.hpp>
+
 
 
 //  == NAMESPACE ==
@@ -81,6 +84,12 @@ namespace arc //! arctk namespace
         {
             return (_emission);
         }
+
+
+        //  -- Recording --
+        inline void Material::record_travel(const phys::Photon& phot_, double ref_index_, double dist_) const noexcept
+        {
+                }
 
 
 

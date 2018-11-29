@@ -89,6 +89,9 @@ namespace arc //! arctk namespace
             inline double                   absorption() const noexcept;
             inline double                   emission() const noexcept;
             virtual std::unique_ptr<Driver> driver(const phys::Photon& phot_) const noexcept = 0;
+
+            //  -- Recording --
+            inline void record_travel(const phys::Photon& phot_, double ref_index_, double dist_) const noexcept;
         };
 
 
