@@ -82,6 +82,9 @@ namespace arc //! arctk namespace
               public:
                 //  -- Driver --
                 inline std::unique_ptr<Driver> driver(const phys::Photon& phot_) noexcept override;
+
+                //  -- Evolve --
+                inline void evolve(double /*unused*/) noexcept override;
             };
 
 

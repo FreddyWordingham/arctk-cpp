@@ -103,6 +103,9 @@ namespace arc //! arctk namespace
 
             //  -- Driver --
             virtual std::unique_ptr<Driver> driver(const phys::Photon& phot_) noexcept = 0;
+
+            //  -- Evolve --
+            virtual void evolve(double time_) noexcept = 0;
         };
 
 

@@ -62,6 +62,12 @@ namespace arc //! arctk namespace
             }
 
 
+            //  -- Evolve --
+            inline void evolve(const double /*unused*/) noexcept override
+            {
+            }
+
+
 
         } // namespace material
     }     // namespace opt
