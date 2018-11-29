@@ -120,6 +120,9 @@ namespace arc //! arctk namespace
 
         inline void Material::add_travel_dir(const vec3& travel_dir_) noexcept
         {
+            assert(travel_dir.mag() > 0.0);
+
+            _travel_dir += travel_dir_;
         }
 
 
