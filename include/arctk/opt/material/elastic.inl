@@ -20,6 +20,7 @@
 
 //  -- Arctk --
 #include <arctk/opt/driver/elastic.hpp>
+#include <arctk/phys/photon.hpp>
 
 
 
