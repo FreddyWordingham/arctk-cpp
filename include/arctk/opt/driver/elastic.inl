@@ -70,6 +70,8 @@ namespace arc //! arctk namespace
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
 
+                phot_->move(_interaction_dist);
+
                 return (true);
             }
 

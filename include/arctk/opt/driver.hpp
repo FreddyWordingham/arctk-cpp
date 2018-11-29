@@ -46,7 +46,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Stored --
-            double _interaction_dist; //!< Distance to the next interaction event.
+            double _path_length; //!< Distance to the next interaction event.
 
 
             //  == INSTANTIATION ==
