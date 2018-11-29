@@ -71,6 +71,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Elastic(const material::Elastic* mat_, double ref_index_, double scat_coef_, double abs_coef_, double asym_) noexcept;
 
 
                 //  == METHODS ==

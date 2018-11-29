@@ -35,6 +35,14 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
+            inline Elastic::Elastic(const material::Elastic* mat_, const double ref_index_, const double scat_coef_, const double abs_coef_, const double asym_) noexcept
+              : _mat(mat_)
+              , _ref_index(ref_index_)
+              , _scat_coef(scat_coef_)
+              , _abs_coef(abs_coef_)
+              , _asym(asym_)
+            {
+            }
 
 
 
