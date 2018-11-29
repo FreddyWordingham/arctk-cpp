@@ -87,7 +87,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Recording --
-        inline void Material::record_travel(const phys::Photon& phot_, double ref_index_, double dist_) noexcept
+        inline void Material::record_travel(const phys::Photon& phot_, double dist_, double ref_index_) noexcept
         {
         }
 
