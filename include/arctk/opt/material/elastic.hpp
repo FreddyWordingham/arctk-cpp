@@ -21,6 +21,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/math/formula/linear.hpp>
 
 
 
@@ -58,7 +59,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Optical --
-
+                math::formula::Linear _ref_index;
 
 
                 //  == INSTANTIATION ==
