@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
 
 
             //  -- Interaction --
-            inline double Elastic::interaction_dist(random::Generator* const rng_) const noexcept
+            inline double Elastic::interaction_dist(random::Generator* const rng_) noexcept
             {
                 assert(rng_ != nullptr);
 
@@ -74,7 +74,7 @@ namespace arc //! arctk namespace
                 return (_path_length);
             }
 
-            inline bool Elastic::interact(random::Generator* const rng_, phys::Photon* const phot_) const noexcept
+            inline bool Elastic::interact(random::Generator* const rng_, phys::Photon* const phot_) noexcept
             {
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);

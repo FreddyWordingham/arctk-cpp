@@ -71,8 +71,8 @@ namespace arc //! arctk namespace
             virtual double ref_index() const noexcept = 0;
 
             //  -- Interaction --
-            virtual double interaction_dist(random::Generator* rng_) const noexcept              = 0;
-            virtual bool   interact(random::Generator* rng_, phys::Photon* phot_) const noexcept = 0;
+            virtual double interaction_dist(random::Generator* rng_) noexcept              = 0;
+            virtual bool   interact(random::Generator* rng_, phys::Photon* phot_) noexcept = 0;
         };
 
 
