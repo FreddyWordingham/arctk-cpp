@@ -60,14 +60,15 @@ namespace arc //! arctk namespace
               private:
                 //  -- Optical --
                 math::formula::Linear _ref_index;
-                math::formula::Linear _scattering_coef;
-                math::formula::Linear _absorption_coef;
+                math::formula::Linear _scat_coef;
+                math::formula::Linear _abs_coef;
                 math::formula::Linear _asym;
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
+                inline Elastic(const std::vector<double>& wavelengths_, const std::vector<double>& ref_indexs_, const std::vector<double>& scat_coefs_, const std::vector<double>& abs_coefs_, const std::vector<double>& asyms_) noexcept;
 
 
                 //  == METHODS ==
