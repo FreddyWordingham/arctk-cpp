@@ -95,6 +95,15 @@ namespace arc //! arctk namespace
         //  -- Recording --
         inline void Material::record_travel(const phys::Photon& phot_, double dist_, double ref_index_) noexcept
         {
+            _energy;
+
+            _scattering;
+
+            _absorption;
+
+            _emission;
+
+            _travel_dir += phot_.dir() * dist_;
         }
 
 
