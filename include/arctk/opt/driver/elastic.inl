@@ -20,7 +20,10 @@
 #include <cmath>
 
 //  -- Arctk --
+#include <arctk/consts/math.hpp>
+#include <arctk/consts/phys.hpp>
 #include <arctk/opt/material/elastic.hpp>
+#include <arctk/random/distribution.hpp>
 #include <arctk/random/generator.hpp>
 
 
@@ -79,7 +82,14 @@ namespace arc //! arctk namespace
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
 
+                _mat->add_energy((phot_->power() * _path_length * _ref_index) / consts::phys::SPEED_OF_LIGHT);
+                _mat->add_scattering(phot_->power() * _path_length * _ref_index * _scat_coef);
+                _mat->add_absorption(phot_->power() * _path_length * _ref_index * _abs_coef);
                 _mat->add_travel_dir(phot_->dir() * _path_length);
+
+                phot_->move(_path_length, _ref_index);
+                phot_->multiply_weight(_albedo);
+                phot_->rotate(random::distribution::henyey_greenstein(rng_, _asym), rng_->gen() * consts::math::TWO_PI);
 
                 return (true);
             }
