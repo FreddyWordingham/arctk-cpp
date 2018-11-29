@@ -19,10 +19,7 @@ namespace arc //! arctk namespace
 {
     namespace opt //! optical namespace
     {
-        namespace material //! material namespace
-        {
-            class Elastic;
-        }          // namespace material
+        class Material;
     }              // namespace opt
     namespace phys //! physics namespace
     {
