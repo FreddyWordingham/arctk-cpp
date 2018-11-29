@@ -37,7 +37,7 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Elastic::Elastic(const material::Elastic* mat_, const double ref_index_, const double scat_coef_, const double abs_coef_, const double asym_) noexcept
+            inline Elastic::Elastic(material::Elastic* const mat_, const double ref_index_, const double scat_coef_, const double abs_coef_, const double asym_) noexcept
               : Driver(mat_)
               , _mat(mat_)
               , _ref_index(ref_index_)
@@ -66,14 +66,14 @@ namespace arc //! arctk namespace
 
 
             //  -- Interaction --
-            inline double Elastic::calc_interaction_dist(random::Generator* rng_) const noexcept
+            inline double Elastic::calc_interaction_dist(random::Generator* const rng_) const noexcept
             {
                 assert(rng_ != nullptr);
 
                 return (-std::log(rng_->gen() / _interaction_coef));
             }
 
-            inline bool Elastic::perform_interaction(random::Generator* rng_, phys::Photon* phot_) const noexcept
+            inline bool Elastic::perform_interaction(random::Generator* const rng_, phys::Photon* const phot_) const noexcept
             {
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);

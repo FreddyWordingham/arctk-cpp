@@ -81,7 +81,7 @@ namespace arc //! arctk namespace
 
             //  -- Interaction --
             inline double interaction_dist(random::Generator* rng_) noexcept;
-
+            inline bool   interact(random::Generator* rng_, phys::Photon* phot_) noexcept;
 
           private:
             virtual double calc_interaction_dist(random::Generator* rng_) const noexcept                    = 0;

@@ -60,7 +60,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Material --
-                const material::Elastic* _mat;
+                material::Elastic* const _mat;
 
                 //  -- Properties --
                 const double _ref_index;
@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Elastic(const material::Elastic* mat_, double ref_index_, double scat_coef_, double abs_coef_, double asym_) noexcept;
+                inline Elastic(material::Elastic* mat_, double ref_index_, double scat_coef_, double abs_coef_, double asym_) noexcept;
 
 
                 //  == METHODS ==
