@@ -80,16 +80,6 @@ namespace arc //! arctk namespace
         }
 
         /**
-         *  Get the wavelength of the photon.
-         *
-         *  @return Wavelength of the photon.
-         */
-        inline double Photon::wavelength() const noexcept
-        {
-            return (_wavelength);
-        }
-
-        /**
          *  Get the power of the photon.
          *
          *  @return Power of the photon.
@@ -100,6 +90,16 @@ namespace arc //! arctk namespace
         }
 
         /**
+         *  Get the wavelength of the photon.
+         *
+         *  @return Wavelength of the photon.
+         */
+        inline double Photon::wavelength() const noexcept
+        {
+            return (_wavelength);
+        }
+
+        /**
          *  Get the time of the photon.
          *
          *  @return Time of the photon.
@@ -107,26 +107,6 @@ namespace arc //! arctk namespace
         inline double Photon::time() const noexcept
         {
             return (_time);
-        }
-
-        /**
-         *  Get the phase of the photon.
-         *
-         *  @return Phase of the photon.
-         */
-        inline double Photon::phase() const noexcept
-        {
-            return (_phase);
-        }
-
-        /**
-         *  Get the phase of the photon as a vector.
-         *
-         *  @return Phase of the photon as a vector.
-         */
-        inline vec2 Photon::phasor() const noexcept
-        {
-            return (vec2(std::cos(_phase), std::sin(_phase)));
         }
 
         /**
@@ -156,24 +136,6 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
-        /**
-         *  Move the photon along its current direction vector.
-         *
-         *  @param  dist_       Distance to move the photon.
-         *  @param  ref_index_  Current refractive index of the photon's specific-optical-properties.
-         *
-         *  @pre    ref_index_ must be greater than, or equal to, unity.
-         */
-        inline void Photon::move(const double dist_, const double ref_index_) noexcept
-        {
-            assert(ref_index_ >= 1.0);
-
-            _phase += (consts::math::TWO_PI * dist_ * ref_index_) / _wavelength;
-
-            _pos += _dir * dist_;
-            _time += ((dist_ * ref_index_) / consts::phys::SPEED_OF_LIGHT);
-        }
-
         /**
          *  Rotate the photon.
          *
@@ -212,30 +174,6 @@ namespace arc //! arctk namespace
             assert(dir_.normalised());
 
             _dir = dir_;
-        }
-
-        /**
-         *  Shift the wavelength of the photon.
-         *
-         *  @param  delta_  Wavelength shift.
-         */
-        inline void Photon::shift_wavelength(const double delta_) noexcept
-        {
-            _wavelength += delta_;
-        }
-
-        /**
-         *  Increase the phase of the photon forward.
-         *
-         *  @param  delta_  Value to increase the phase by.
-         *
-         *  @pre    delta_ must be positive.
-         */
-        inline void Photon::increase_phase(const double delta_) noexcept
-        {
-            assert(delta_ > 0.0);
-
-            _phase += delta_;
         }
 
         /**
