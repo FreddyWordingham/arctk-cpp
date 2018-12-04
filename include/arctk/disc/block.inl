@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
 
             for (auto const& [id, mat] : _mats)
             {
-                const std::map<std::string, double>& mat_data = mat.data();
+                const std::map<std::string, double>& mat_data = mat->data();
 
                 for (auto const& [key, val] : mat_data)
                 {
