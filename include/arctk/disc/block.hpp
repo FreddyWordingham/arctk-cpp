@@ -16,6 +16,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <map>
 #include <memory>
 #include <string>
 #include <unordered_map>
@@ -84,7 +85,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const opt::Material* mat(const std::string& mat_id_) const noexcept;
+            inline const opt::Material*          mat(const std::string& mat_id_) const noexcept;
+            inline std::map<std::string, double> data() const noexcept;
 
             //  -- Setters --
             inline void add_mat(const std::string& mat_id_, const opt::Material& mat_) noexcept;
