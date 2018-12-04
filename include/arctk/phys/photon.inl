@@ -147,7 +147,7 @@ namespace arc //! arctk namespace
         {
             assert(dist_ > 0.0);
 
-            _driver->travel(*this, dist_);
+            _driver->travel(this, dist_);
         }
 
 
