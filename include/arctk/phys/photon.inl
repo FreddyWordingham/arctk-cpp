@@ -173,7 +173,7 @@ namespace arc //! arctk namespace
             assert(_dir.normalised());
         }
 
-        inline void increase_time(const double time_) noexcept
+        inline void Photon::increase_time(const double time_) noexcept
         {
             assert(time_ > 0.0);
 
