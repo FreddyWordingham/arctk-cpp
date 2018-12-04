@@ -21,20 +21,24 @@
 
 //  -- Arctk --
 #include <arctk/geom/shape/mesh.hpp>
-//#include <arctk/opt/sop.hpp> TODO
+#include <arctk/opt/driver.hpp>
 
 
 
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
+    namespace disc //! discretisation namespace
+    {
+        class Block;
+    }              // namespace disc
     namespace geom //! geometric namespace
     {
         class Collision;
     }             // namespace geom
     namespace opt //! optical namespace
     {
-        class Mat;
+        class Material;
     }              // namespace opt
     namespace phys //! physics namespace
     {
@@ -92,18 +96,12 @@ namespace arc //! arctk namespace
             inline const geom::shape::Mesh& surf() const noexcept;
 
             //  -- Collision --
-            inline bool hit(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** mat_, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept;
+            inline bool hit(random::Generator* rng_, phys::Photon* phot_, disc::Block* block_, opt::Material* mat_, opt::Driver* driver_, const geom::Collision& coll_) noexcept;
 
           private:
             //  -- Collision --
-            virtual bool hit_front(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** mat_, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_,
-                                   const geom::Collision& coll_) noexcept = 0; //!< Perform a hit event on the front face entity.   @param  rng_    Random number generator.    @param  phot_   Photon hitting the entity.  @param  mat_    Current active
-                                                                               //!< material.    @param  sop_    Current specific-optical-properties.    @param  cell_   Current domain cell.    @param  coll_   Collision event information.    @return False
-                                                                               //!< if the photon should be removed from the simulation.
-            virtual bool hit_back(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** mat_, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_,
-                                  const geom::Collision&
-                                    coll_) noexcept = 0; //!< Perform a hit event on the back face entity.   @param  rng_    Random number generator.    @param  phot_   Photon hitting the entity.  @param  mat_    Current active material.    @param  sop_
-                                                         //!< Current specific-optical-properties.    @param  cell_   Current domain cell.    @param  coll_   Collision event information.    @return False if the photon should be removed from the simulation.
+            virtual bool hit_front(random::Generator* rng_, phys::Photon* phot_, disc::Block* block_, opt::Material* mat_, opt::Driver* driver_, const geom::Collision& coll_) noexcept = 0;
+            virtual bool hit_back(random::Generator* rng_, phys::Photon* phot_, disc::Block* block_, opt::Material* mat_, opt::Driver* driver_, const geom::Collision& coll_) noexcept  = 0;
         };
 
 
