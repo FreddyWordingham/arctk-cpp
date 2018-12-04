@@ -16,7 +16,9 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <map>
 #include <memory>
+#include <string>
 
 //  -- Arctk --
 #include <arctk/math/vec.hpp>
@@ -55,11 +57,12 @@ namespace arc //! arctk namespace
             const double _max; //!< Maximum valid wavelength of the material.
 
             //  -- Properties --
-            double _energy;
-            double _scattering;
-            double _absorption;
-            double _emission;
-            vec3   _travel_dir;
+            double                        _energy;
+            double                        _scattering;
+            double                        _absorption;
+            double                        _emission;
+            vec3                          _travel_dir;
+            std::map<std::string, double> _data;
 
 
             //  == INSTANTIATION ==
