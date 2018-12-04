@@ -87,6 +87,7 @@ namespace arc //! arctk namespace
             inline void travel(const double dist_) noexcept;
             inline void set_dir(const vec3& dir_) noexcept;
             inline void rotate(const double theta_, const double phi_) noexcept;
+            inline void increase_time(const double time_) noexcept;
 
             //  -- Materials --
             inline void enter_mat(const std::string& mat_id_) noexcept;

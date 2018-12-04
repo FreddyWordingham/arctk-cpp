@@ -173,6 +173,13 @@ namespace arc //! arctk namespace
             assert(_dir.normalised());
         }
 
+        inline void increase_time(const double time_) noexcept
+        {
+            assert(time_ > 0.0);
+
+            _time += time_;
+        }
+
 
         //  -- Materials --
         inline void Photon::enter_mat(const std::string& mat_id_) noexcept
