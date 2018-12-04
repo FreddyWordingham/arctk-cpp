@@ -89,13 +89,14 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double      min() const noexcept;
-            inline double      max() const noexcept;
-            inline double      energy() const noexcept;
-            inline double      scattering() const noexcept;
-            inline double      absorption() const noexcept;
-            inline double      emission() const noexcept;
-            inline const vec3& travel_dir() const noexcept;
+            inline double                               min() const noexcept;
+            inline double                               max() const noexcept;
+            inline double                               energy() const noexcept;
+            inline double                               scattering() const noexcept;
+            inline double                               absorption() const noexcept;
+            inline double                               emission() const noexcept;
+            inline const vec3&                          travel_dir() const noexcept;
+            inline const std::map<std::string, double>& data() const noexcept;
 
             //  -- Setters --
             inline void add_energy(double energy_) noexcept;

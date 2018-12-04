@@ -88,6 +88,11 @@ namespace arc //! arctk namespace
             return (_travel_dir);
         }
 
+        inline const std::map<std::string, double>& Material::data() const noexcept
+        {
+            return (_data);
+        }
+
 
         //  -- Setters --
         inline void Material::add_energy(const double energy_) noexcept
