@@ -48,10 +48,9 @@ namespace arc //! arctk namespace
             vec3 _dir; //!< Direction of the photon.
 
             //  -- Properties --
-            double       _wavelength; //!< Wavelength of the photon.
             const double _power;      //!< Power of the packet.
+            double       _wavelength; //!< Wavelength of the photon.
             double       _time;       //!< Current photon time.
-            double       _phase;      //!< Current photon phase.
 
             //  -- Statistical --
             double _weight; //!< Statistical weight of the photon.
@@ -67,7 +66,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Photon(const vec3& pos_, const vec3& dir_, double wavelength_, double power_, double time_, double phase_, const std::string& cur_mat_id_, opt::Material* mat_) noexcept;
+            inline Photon(const vec3& pos_, const vec3& dir_, double power_, double wavelength_, double time_, const std::string& cur_mat_id_, opt::Material* mat_) noexcept;
 
 
             //  == METHODS ==
@@ -75,22 +74,17 @@ namespace arc //! arctk namespace
             //  -- Getters --
             inline const vec3&        pos() const noexcept;
             inline const vec3&        dir() const noexcept;
-            inline double             wavelength() const noexcept;
             inline double             power() const noexcept;
+            inline double             wavelength() const noexcept;
             inline double             time() const noexcept;
-            inline double             phase() const noexcept;
-            inline vec2               phasor() const noexcept;
             inline double             weight() const noexcept;
             inline const std::string& cur_mat_id() const noexcept;
             inline const std::string& prev_mat_id() const noexcept;
             inline const std::string& next_mat_id(const std::string& body_mat_id_) const noexcept;
 
             //  -- Setters --
-            inline void move(double dist_, double ref_index_) noexcept;
             inline void rotate(double theta_, double phi_) noexcept;
             inline void set_dir(const vec3& dir_) noexcept;
-            inline void shift_wavelength(double delta_) noexcept;
-            inline void increase_phase(double delta_) noexcept;
             inline void multiply_weight(double mult_) noexcept;
 
             //  -- Materials --
