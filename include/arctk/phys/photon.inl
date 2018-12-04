@@ -150,6 +150,29 @@ namespace arc //! arctk namespace
             _driver->travel(this, dist_);
         }
 
+        inline void Photon::set_dir(const vec3& dir_) noexcept
+        {
+            assert(dir_.normalised());
+
+            _dir = dir_;
+        }
+
+        inline void Photon::rotate(const double theta_, const double phi_) noexcept
+        {
+            assert(_dir.normalised());
+
+            vec3 front = _dir;
+            vec3 right = math::compare::equal(std::fabs(_dir.z), 1.0) ? (_dir ^ vec3(1.0, 0.0, 0.0)) : (_dir ^ vec3(0.0, 0.0, 1.0));
+            right.normalise();
+
+            _dir.rotate(right, theta_);
+            _dir.rotate(front, phi_);
+
+            _dir.normalise();
+
+            assert(_dir.normalised());
+        }
+
 
         //  -- Materials --
         inline void Photon::enter_mat(const std::string& mat_id_) noexcept
