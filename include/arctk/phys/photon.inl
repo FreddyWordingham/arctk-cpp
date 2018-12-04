@@ -35,24 +35,7 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        /**
-         *  Construct a photon at a given position with a given direction, wavelength, power, emission time and initial material identification.
-         *
-         *  @param  pos_        Initial position of the photon.
-         *  @param  dir_        Initial direction of the photon.
-         *  @param  wavelength_ Wavelength of the photon.
-         *  @param  power_      Power of the photon.
-         *  @param  time_       Time of photon emission.
-         *  @param  phase_      Initial phase of the photon.
-         *  @param  cur_mat_id_ Initial material id.
-         *
-         *  @pre    dir_ must be normalised.
-         *  @pre    wavelength_ must be non-negative.
-         *  @pre    power_ must be positive.
-         *  @pre    time_ must be non-negative.
-         *  @pre    cur_mat_id_ may not be empty.
-         */
-        inline Photon::Photon(const vec3& pos_, const vec3& dir_, const double wavelength_, const double power_, const double time_, const double phase_, const std::string& cur_mat_id_) noexcept
+        inline Photon::Photon(const vec3& pos_, const vec3& dir_, const double wavelength_, const double power_, const double time_, const double phase_, const std::string& cur_mat_id_, opt::Material* mat_) noexcept
           : _pos(pos_)
           , _dir(dir_)
           , _wavelength(wavelength_)
@@ -61,12 +44,16 @@ namespace arc //! arctk namespace
           , _phase(phase_)
           , _weight(1.0)
           , _cur_mat_id(cur_mat_id_)
+          , _mat(mat_)
         {
             assert(dir_.normalised());
             assert(wavelength_ > 0.0);
             assert(power_ > 0.0);
             assert(time_ >= 0.0);
             assert(!cur_mat_id_.empty());
+            assert(mat_ != nullptr);
+
+            _driver = _mat->driver(*this);
         }
 
 

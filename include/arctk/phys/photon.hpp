@@ -16,10 +16,14 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <memory>
 #include <stack>
+#include <string>
 
 //  -- Arctk --
 #include <arctk/math/vec.hpp>
+#include <arctk/opt/driver.hpp>
+#include <arctk/opt/material.hpp>
 
 
 
@@ -53,14 +57,17 @@ namespace arc //! arctk namespace
             double _weight; //!< Statistical weight of the photon.
 
             //  -- Material --
-            std::string             _cur_mat_id;
-            std::stack<std::string> _prev_mat_id;
+            std::string                  _cur_mat_id;
+            std::stack<std::string>      _prev_mat_id;
+            opt::Material*               _mat;
+            std::unique_ptr<opt::Driver> _driver;
+
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Photon(const vec3& pos_, const vec3& dir_, double wavelength_, double power_, double time_, double phase_, const std::string& cur_mat_id_) noexcept;
+            inline Photon(const vec3& pos_, const vec3& dir_, double wavelength_, double power_, double time_, double phase_, const std::string& cur_mat_id_, opt::Material* mat_) noexcept;
 
 
             //  == METHODS ==

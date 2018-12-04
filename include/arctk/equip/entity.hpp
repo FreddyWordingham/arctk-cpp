@@ -21,7 +21,6 @@
 
 //  -- Arctk --
 #include <arctk/geom/shape/mesh.hpp>
-#include <arctk/opt/driver.hpp>
 
 
 
@@ -38,6 +37,7 @@ namespace arc //! arctk namespace
     }             // namespace geom
     namespace opt //! optical namespace
     {
+        class Driver;
         class Material;
     }              // namespace opt
     namespace phys //! physics namespace

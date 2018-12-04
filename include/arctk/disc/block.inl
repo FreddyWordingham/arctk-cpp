@@ -63,7 +63,7 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
-        inline const opt::Material* Block::mat(const std::string& mat_id_) const noexcept
+        inline opt::Material* Block::mat(const std::string& mat_id_) noexcept
         {
             assert(_mats.count(mat_id_) > 0);
 
