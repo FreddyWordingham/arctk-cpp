@@ -48,7 +48,7 @@ namespace arc //! arctk namespace
 
 
 //  == IMPLEMENTATION ==
-#include <arctk/opt/func.inl>
+#include <arctk/phys/optical.inl>
 
 
 
