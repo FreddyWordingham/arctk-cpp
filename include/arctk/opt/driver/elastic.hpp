@@ -62,9 +62,6 @@ namespace arc //! arctk namespace
                 //  -- Material --
                 material::Elastic* const _mat;
 
-                //  -- Storage --
-                double _path_length;
-
                 //  -- Properties --
                 const double _ref_index;
                 const double _scat_coef;
@@ -88,7 +85,7 @@ namespace arc //! arctk namespace
                 inline double ref_index() const noexcept override;
 
                 //  -- Interaction --
-                inline void   travel(phys::Photon* phot_, double path_length_) noexcept override;
+                inline void   travel(phys::Photon* phot_, double dist_) noexcept override;
                 inline double interaction_dist(random::Generator* rng_) noexcept override;
                 inline bool   interact(random::Generator* rng_, phys::Photon* phot_) noexcept override;
             };

@@ -68,34 +68,33 @@ namespace arc //! arctk namespace
 
 
             //  -- Interaction --
-            inline void Elastic::travel(phys::Photon* const phot_, const double path_length_) noexcept
+            inline void Elastic::travel(phys::Photon* const phot_, const double dist_) noexcept
             {
                 assert(phot_ != nullptr);
-                assert(path_length_ > 0.0);
+                assert(dist_ > 0.0);
 
-                _mat->add_energy((phot_->power() * path_length_ * _ref_index) / consts::phys::SPEED_OF_LIGHT);
-                _mat->add_scattering(phot_->power() * path_length_ * _ref_index * _scat_coef);
-                _mat->add_absorption(phot_->power() * path_length_ * _ref_index * _abs_coef);
-                _mat->add_travel_dir(phot_->dir() * path_length_);
+                phot_._pos += phot_._dir * dist_;
+                phot_._time += ((dist_ * _ref_index) / consts::phys::SPEED_OF_LIGHT);
 
-                phot_->move(path_length_, _ref_index);
+                _mat->add_energy((phot_->power() * dist_ * _ref_index) / consts::phys::SPEED_OF_LIGHT);
+                _mat->add_scattering(phot_->power() * dist_ * _ref_index * _scat_coef);
+                _mat->add_absorption(phot_->power() * dist_ * _ref_index * _abs_coef);
+                _mat->add_travel_dir(phot_->dir() * dist_);
+
+                phot_->move(dist_, _ref_index);
             }
 
             inline double Elastic::interaction_dist(random::Generator* const rng_) noexcept
             {
                 assert(rng_ != nullptr);
 
-                _path_length = -std::log(rng_->gen()) / _interaction_coef;
-
-                return (_path_length);
+                return (-std::log(rng_->gen()) / _interaction_coef);
             }
 
             inline bool Elastic::interact(random::Generator* const rng_, phys::Photon* const phot_) noexcept
             {
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
-
-                travel(phot_, _path_length);
 
                 phot_->multiply_weight(_albedo);
                 phot_->rotate(random::distribution::henyey_greenstein(rng_, _asym), rng_->gen() * consts::math::TWO_PI);

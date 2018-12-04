@@ -82,11 +82,6 @@ namespace arc //! arctk namespace
             inline const std::string& prev_mat_id() const noexcept;
             inline const std::string& next_mat_id(const std::string& body_mat_id_) const noexcept;
 
-            //  -- Setters --
-            inline void rotate(double theta_, double phi_) noexcept;
-            inline void set_dir(const vec3& dir_) noexcept;
-            inline void multiply_weight(double mult_) noexcept;
-
             //  -- Materials --
             inline void enter_mat(const std::string& mat_id_) noexcept;
             inline void exit_mat(const std::string& mat_id_) noexcept;
