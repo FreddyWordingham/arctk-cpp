@@ -11,7 +11,7 @@
 //  == IMPORTS ==
 //  -- Arctk --
 #include <arctk/equip/entity.hpp>
-// #include <arctk/equip/entity/body.hpp>
+#include <arctk/equip/entity/body.hpp>
 // #include <arctk/equip/entity/detector.hpp>
 // #include <arctk/equip/entity/detector/phaseometer.hpp>
 // #include <arctk/equip/entity/detector/photometer.hpp>
