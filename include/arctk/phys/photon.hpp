@@ -41,10 +41,6 @@ namespace arc //! arctk namespace
          */
         class Photon
         {
-            //  == FRIENDS ==
-            friend opt::Driver;
-
-
             //  == FIELDS ==
           private:
             //  -- Particle --
@@ -88,6 +84,7 @@ namespace arc //! arctk namespace
 
             //  -- Setters --
             inline void move(const double dist_) noexcept;
+            inline void travel(const double dist_) noexcept;
 
             //  -- Materials --
             inline void enter_mat(const std::string& mat_id_) noexcept;

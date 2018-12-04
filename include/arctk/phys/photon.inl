@@ -140,6 +140,13 @@ namespace arc //! arctk namespace
         {
             assert(dist_ > 0.0);
 
+            _pos += _dir * dist_;
+        }
+
+        inline void Photon::travel(const double dist_) noexcept
+        {
+            assert(dist_ > 0.0);
+
             _driver->travel(*this, dist_);
         }
 

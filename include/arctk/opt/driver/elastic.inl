@@ -73,8 +73,8 @@ namespace arc //! arctk namespace
                 assert(phot_ != nullptr);
                 assert(dist_ > 0.0);
 
-                phot_._pos += phot_._dir * dist_;
-                phot_._time += ((dist_ * _ref_index) / consts::phys::SPEED_OF_LIGHT);
+                phot_->_pos += phot_._dir * dist_;
+                phot_->_time += ((dist_ * _ref_index) / consts::phys::SPEED_OF_LIGHT);
 
                 _mat->add_energy((phot_->power() * dist_ * _ref_index) / consts::phys::SPEED_OF_LIGHT);
                 _mat->add_scattering(phot_->power() * dist_ * _ref_index * _scat_coef);
