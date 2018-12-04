@@ -180,6 +180,13 @@ namespace arc //! arctk namespace
             _time += time_;
         }
 
+        inline void Photon::multiply_weight(const double mult_) noexcept
+        {
+            assert(mult_ > 0.0);
+
+            _weight *= mult_;
+        }
+
 
         //  -- Materials --
         inline void Photon::enter_mat(const std::string& mat_id_) noexcept
