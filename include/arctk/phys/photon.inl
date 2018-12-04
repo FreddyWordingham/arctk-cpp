@@ -136,58 +136,11 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
-        /**
-         *  Rotate the photon.
-         *
-         *  @param  theta_  Polar angle to rotate.
-         *  @param  phi_    Azimuthal angle to rotate.
-         *
-         *  @pre    _dir must be normalised.
-         *
-         *  @post   _dir must be normalised.
-         */
-        inline void Photon::rotate(const double theta_, const double phi_) noexcept
+        inline void Photon::move(const double dist_) noexcept
         {
-            assert(_dir.normalised());
+            assert(dist_ > 0.0);
 
-            vec3 front = _dir;
-            vec3 right = math::compare::equal(std::fabs(_dir.z), 1.0) ? (_dir ^ vec3(1.0, 0.0, 0.0)) : (_dir ^ vec3(0.0, 0.0, 1.0));
-            right.normalise();
-
-            _dir.rotate(right, theta_);
-            _dir.rotate(front, phi_);
-
-            _dir.normalise();
-
-            assert(_dir.normalised());
-        }
-
-        /**
-         *  Set the direction of the photon.
-         *
-         *  @param  dir_    Direction to set for the photon.
-         *
-         *  @pre    dir_ must be normalised.
-         */
-        inline void Photon::set_dir(const vec3& dir_) noexcept
-        {
-            assert(dir_.normalised());
-
-            _dir = dir_;
-        }
-
-        /**
-         *  Multiply the weight of the photon.
-         *
-         *  @param  mult_   Value to multiply the weight of the photon by.
-         *
-         *  @pre    mult_ must be positive.
-         */
-        inline void Photon::multiply_weight(const double mult_) noexcept
-        {
-            assert(mult_ > 0.0);
-
-            _weight *= mult_;
+            _driver->travel(*this, dist_);
         }
 
 
