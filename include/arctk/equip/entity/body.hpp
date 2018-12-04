@@ -24,29 +24,23 @@
 #include <memory>
 #include <string>
 
-//  -- Arctk --
-#include <arctk/opt/driver.hpp>
-
 
 
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
-    namespace dom //! domain namespace
+    namespace disc //! discretisation namespace
     {
-        class Cell;
-    }              // namespace dom
+        class Block;
+    }              // namespace disc
     namespace geom //! geometric namespace
     {
         class Collision;
-        namespace shape //! shape namespace
-        {
-            class Mesh;
-        }         // namespace shape
     }             // namespace geom
     namespace opt //! optical namespace
     {
-        class Mat;
+        class Driver;
+        class Material;
     }              // namespace opt
     namespace phys //! physics namespace
     {
@@ -79,21 +73,20 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               private:
                 //  -- Materials --
-                const opt::Mat& _front_mat; //!< Front hit material.
-                const opt::Mat& _back_mat;  //!< Back hit material.
+                const std::string _mat_id;
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Body(const geom::shape::Mesh& surf_, const opt::Mat& front_mat_, const opt::Mat& back_mat_) noexcept;
+                inline Body(const geom::shape::Mesh& surf_, const std::string& mat_id_) noexcept;
 
 
                 //  == METHODS ==
               private:
                 //  -- Collision --
-                inline bool hit_front(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** mat_, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept override;
-                inline bool hit_back(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** mat_, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept override;
+                inline bool hit_front(random::Generator* rng_, phys::Photon* phot_, disc::Block* block_, opt::Material* mat_, opt::Driver* driver_, const geom::Collision& coll_) noexcept override;
+                inline bool hit_back(random::Generator* rng_, phys::Photon* phot_, disc::Block* block_, opt::Material* mat_, opt::Driver* driver_, const geom::Collision& coll_) noexcept override;
             };
 
 
