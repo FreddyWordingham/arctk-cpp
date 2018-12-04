@@ -10,6 +10,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/phys/optical.hpp>
 #include <arctk/phys/photon.hpp>
 
 
