@@ -34,7 +34,7 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Body::Body(const geom::shape::Mesh& surf_, const std::string mat_id_) noexcept
+            inline Body::Body(const geom::shape::Mesh& surf_, const std::string& mat_id_) noexcept
               : Entity(surf_)
               , _mat_id(mat_id_)
             {
@@ -45,39 +45,41 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Collision --
-            inline bool Body::hit_front(random::Generator* rng_, phys::Photon* phot_, disc::Block* block_, opt::Material* mat_, opt::Driver* driver_, const geom::Collision& coll_) noexcept
+            inline bool Body::hit_front(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, opt::Material* const mat_, opt::Driver* const driver_, const geom::Collision& coll_) noexcept
             {
-                assert(rng_ != nullptr);
-                assert(phot_ != nullptr);
-                assert(mat_ != nullptr);
-                assert(sop_ != nullptr);
-                assert(cell_ != nullptr);
+                // assert(rng_ != nullptr);
+                // assert(phot_ != nullptr);
+                // assert(mat_ != nullptr);
+                // assert(sop_ != nullptr);
+                // assert(cell_ != nullptr);
 
-                std::unique_ptr<opt::Sop> next_sop = _front_mat.gen(*phot_);
+                // std::unique_ptr<opt::Sop> next_sop = _front_mat.gen(*phot_);
 
-                if (rng_->gen() <= opt::func::reflection_prob(std::acos(phot_->dir() * -coll_.norm()), sop_->get()->ref_index(), next_sop->ref_index()))
-                {
-                    phot_->move(coll_.dist() - consts::num::BUMP, sop_->get()->ref_index());
-                    cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
+                // if (rng_->gen() <= opt::func::reflection_prob(std::acos(phot_->dir() * -coll_.norm()), sop_->get()->ref_index(), next_sop->ref_index()))
+                // {
+                //     phot_->move(coll_.dist() - consts::num::BUMP, sop_->get()->ref_index());
+                //     cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
 
-                    phot_->set_dir(opt::func::reflection_dir(phot_->dir(), coll_.norm()));
-                }
-                else
-                {
-                    phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index());
-                    cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
+                //     phot_->set_dir(opt::func::reflection_dir(phot_->dir(), coll_.norm()));
+                // }
+                // else
+                // {
+                //     phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index());
+                //     cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
 
-                    phot_->set_dir(opt::func::refraction_dir(phot_->dir(), coll_.norm(), sop_->get()->ref_index(), next_sop->ref_index()));
+                //     phot_->set_dir(opt::func::refraction_dir(phot_->dir(), coll_.norm(), sop_->get()->ref_index(), next_sop->ref_index()));
 
-                    *mat_ = &_front_mat;
-                    *sop_ = std::move(next_sop);
-                }
+                //     *mat_ = &_front_mat;
+                //     *sop_ = std::move(next_sop);
+                // }
 
                 return (true);
             }
 
-            inline bool Body::hit_back(random::Generator* rng_, phys::Photon* phot_, disc::Block* block_, opt::Material* mat_, opt::Driver* driver_, const geom::Collision& coll_) noexcept
+            inline bool Body::hit_back(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, opt::Material* const mat_, opt::Driver* const driver_, const geom::Collision& coll_) noexcept
             {
+
+
                 return (true);
             }
 
