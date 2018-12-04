@@ -69,8 +69,8 @@ namespace arc //! arctk namespace
           public:
             //  -- Constructors --
             inline Material(double min_, double max_) noexcept;
-            inline Material(const Material&) noexcept = default; //!< Defaulted copy constructor.
-            inline Material(Material&&) noexcept      = default; //!< Defaulted move constructor.
+            inline Material(const Material&)     = default; //!< Defaulted copy constructor.
+            inline Material(Material&&) noexcept = default; //!< Defaulted move constructor.
 
             //  -- Destructors --
             virtual ~Material() noexcept;
@@ -82,8 +82,8 @@ namespace arc //! arctk namespace
             //  == OPERATORS ==
           public:
             //  -- Assignment --
-            inline Material& operator=(const Material&) noexcept = default; //!< Defaulted copy operator. @return Reference to copied object.
-            inline Material& operator=(Material&&) noexcept = default;      //!< Defaulted move operator. @return Reference to moved object.
+            inline Material& operator=(const Material&) = default;     //!< Defaulted copy operator. @return Reference to copied object.
+            inline Material& operator=(Material&&) noexcept = default; //!< Defaulted move operator. @return Reference to moved object.
 
 
             //  == METHODS ==
