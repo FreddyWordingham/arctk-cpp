@@ -67,20 +67,18 @@ namespace arc //! arctk namespace
 
 
         //  -- Collision --
-        inline bool Entity::hit(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, opt::Material* const mat_, opt::Driver* const driver_, const geom::Collision& coll_) noexcept
+        inline bool Entity::hit(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, const geom::Collision& coll_) noexcept
         {
             assert(rng_ != nullptr);
             assert(phot_ != nullptr);
             assert(block_ != nullptr);
-            assert(mat_ != nullptr);
-            assert(driver_ != nullptr);
 
             if (coll_.front())
             {
-                return (hit_front(rng_, phot_, block_, mat_, driver_, coll_));
+                return (hit_front(rng_, phot_, block_, coll_));
             }
 
-            return (hit_back(rng_, phot_, block_, mat_, driver_, coll_));
+            return (hit_back(rng_, phot_, block_, coll_));
         }
 
 
