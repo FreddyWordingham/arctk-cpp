@@ -36,12 +36,7 @@ namespace arc //! arctk namespace
     namespace geom //! geometric namespace
     {
         class Collision;
-    }             // namespace geom
-    namespace opt //! optical namespace
-    {
-        class Driver;
-        class Material;
-    }              // namespace opt
+    }              // namespace geom
     namespace phys //! physics namespace
     {
         class Photon;
