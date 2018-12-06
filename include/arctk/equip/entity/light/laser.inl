@@ -39,24 +39,11 @@ namespace arc //! arctk namespace
 
                 //  == INSTANTIATION ==
                 //  -- Constructors --
-                /**
-                 *  Construct a light source entity which emits monochromatic photons at its surface.
-                 *
-                 *  @param  surf_       Surface of the laser.
-                 *  @param  mat_        Material to emit photons into.
-                 *  @param  power_      Power of the light.
-                 *  @param  num_phot_   Number of photons for the light to emit.
-                 *  @param  kill_       Kill photons on collision.
-                 *  @param  wavelength_ Wavelength of emitted photons.
-                 *
-                 *  @pre    power_ must be positive.
-                 *  @pre    num_phot_ must be positive.
-                 *  @pre    wavelength_ must be positive.
-                 */
-                inline Laser::Laser(const geom::shape::Mesh& surf_, const opt::Material& mat_, const double power_, const unsigned long int num_phot_, const bool kill_, const double wavelength_) noexcept
-                  : Light(surf_, mat_, power_, num_phot_, kill_)
+                inline Laser::Laser(const geom::shape::Mesh& surf_, const std::string& mat_id_, const opt::Material& mat_, const double power_, const unsigned long int num_phot_, const bool kill_, const double wavelength_) noexcept
+                  : Light(surf_, mat_id_, mat_, power_, num_phot_, kill_)
                   , _wavelength(wavelength_)
                 {
+                    assert(!mat_id_.empty());
                     assert(power_ > 0.0);
                     assert(num_phot_ > 0);
                     assert(wavelength_ > 0.0);
