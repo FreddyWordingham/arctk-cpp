@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Collision --
-        inline bool Entity::hit(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, const geom::Collision& coll_) noexcept
+        inline void Entity::hit(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, const geom::Collision& coll_) noexcept
         {
             assert(rng_ != nullptr);
             assert(phot_ != nullptr);
@@ -75,10 +75,12 @@ namespace arc //! arctk namespace
 
             if (coll_.front())
             {
-                return (hit_front(rng_, phot_, block_, coll_));
+                hit_front(rng_, phot_, block_, coll_);
             }
-
-            return (hit_back(rng_, phot_, block_, coll_));
+            else
+            {
+                hit_back(rng_, phot_, block_, coll_);
+            }
         }
 
 
