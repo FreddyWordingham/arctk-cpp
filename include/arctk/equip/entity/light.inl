@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
              *
              *  @pre    power_ must be positive.
              */
-            inline Light::Light(const geom::shape::Mesh& surf_, const opt::Mat& mat_, const double power_, const unsigned long int num_phot_, const bool kill_) noexcept
+            inline Light::Light(const geom::shape::Mesh& surf_, const opt::Material& mat_, const double power_, const unsigned long int num_phot_, const bool kill_) noexcept
               : Entity(surf_)
               , _mat(mat_)
               , _power(power_)
