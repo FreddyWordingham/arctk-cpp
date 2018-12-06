@@ -87,6 +87,8 @@ namespace arc //! arctk namespace
                 assert(block_ != nullptr);
                 assert(phot_->cur_mat_id() == _mat_id);
 
+                const double cur_ref_index = phot_->driver()->ref_index();
+
                 return (true);
             }
 
