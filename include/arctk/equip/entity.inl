@@ -19,7 +19,6 @@
 #include <cassert>
 
 //  -- Arctk --
-#include <arctk/geom/collision.hpp>
 #include <arctk/math/vec.hpp>
 
 
