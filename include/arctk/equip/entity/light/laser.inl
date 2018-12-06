@@ -57,7 +57,7 @@ namespace arc //! arctk namespace
                 {
                     const std::pair<vec3, vec3> pos_norm = _surf.random_pos_and_norm(rng_);
 
-                    return (phys::Photon(pos_norm.first, pos_norm.second, _phot_power, _wavelength, _phot_power, time_, _mat_id, _mat));
+                    return (phys::Photon(pos_norm.first, pos_norm.second, _phot_power, _wavelength, time_, _mat_id, _mat));
                 }
 
 
