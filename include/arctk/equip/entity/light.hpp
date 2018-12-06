@@ -77,7 +77,7 @@ namespace arc //! arctk namespace
               protected:
                 //  -- Material --
                 const std::string    _mat_id;
-                const opt::Material& _mat; //!< Material to emit photons into.
+                opt::Material* const _mat; //!< Material to emit photons into.
 
                 //  -- Power --
               private:
@@ -93,7 +93,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Light(const geom::shape::Mesh& surf_, const std::string& mat_id_, const opt::Material& mat_, double power_, unsigned long int num_phot_, bool kill_) noexcept;
+                inline Light(const geom::shape::Mesh& surf_, const std::string& mat_id_, opt::Material* const mat_, double power_, unsigned long int num_phot_, bool kill_) noexcept;
                 inline Light(const Light&) = default; //!< Defaulted copy constructor.
                 inline Light(Light&&)      = default; //!< Defaulted move constructor.
 
