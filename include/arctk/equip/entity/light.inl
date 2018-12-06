@@ -104,54 +104,20 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
-            /**
-             *  Perform a front hit event.
-             *
-             *  @param  phot_   Photon hitting the entity.
-             *  @param  sop_    Current specific-optical-properties.
-             *  @param  cell_   Current domain cell.
-             *  @param  coll_   Collision event information.
-             *
-             *  @pre    phot_ may not be nullptr.
-             *  @pre    sop_ may not be nullptr.
-             *  @pre    cell_ may not be nullptr.
-             *
-             *  @return False if the photon should be removed from the simulation.
-             */
-            inline bool Light::hit_front(random::Generator* /*unused*/, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept
+            inline bool Light::hit_front(random::Generator* const /*unused*/, phys::Photon* const phot_, disc::Block* const /*unused*/, const geom::Collision& coll_) noexcept
             {
                 assert(phot_ != nullptr);
-                assert(sop_ != nullptr);
-                assert(cell_ != nullptr);
 
-                phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index());
-                cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
+                phot_->travel(coll_.dist() + consts::num::BUMP);
 
                 return (_kill);
             }
 
-            /**
-             *  Perform a back hit event.
-             *
-             *  @param  phot_   Photon hitting the entity.
-             *  @param  sop_    Current specific-optical-properties.
-             *  @param  cell_   Current domain cell.
-             *  @param  coll_   Collision event information.
-             *
-             *  @pre    phot_ may not be nullptr.
-             *  @pre    sop_ may not be nullptr.
-             *  @pre    cell_ may not be nullptr.
-             *
-             *  @return False if the photon should be removed from the simulation.
-             */
-            inline bool Light::hit_back(random::Generator* /*unused*/, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept
+            inline bool Light::hit_back(random::Generator* const /*unused*/, phys::Photon* const phot_, disc::Block* const /*unused*/, const geom::Collision& coll_) noexcept
             {
                 assert(phot_ != nullptr);
-                assert(sop_ != nullptr);
-                assert(cell_ != nullptr);
 
-                phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index());
-                cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
+                phot_->travel(coll_.dist() + consts::num::BUMP);
 
                 return (_kill);
             }

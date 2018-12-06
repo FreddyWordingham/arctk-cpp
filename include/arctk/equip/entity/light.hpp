@@ -26,7 +26,6 @@
 #include <tuple>
 
 //  -- Arctk --
-#include <arctk/opt/sop.hpp>
 #include <arctk/phys/photon.hpp>
 
 
@@ -34,27 +33,21 @@
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
-    namespace dom //! domain namespace
+    namespace disc //! discretisation namespace
     {
-        class Cell;
-    }              // namespace dom
+        class Block;
+    }              // namespace disc
     namespace geom //! geometric namespace
     {
         class Collision;
         namespace shape //! shape namespace
         {
             class Mesh;
-        }          // namespace shape
-    }              // namespace geom
-    namespace math //! mathematical namespace
-    {
-        template <typename T, size_t N>
-        class Vec;
-    } // namespace math
-    using vec3 = math::Vec<double, 3>;
+        }         // namespace shape
+    }             // namespace geom
     namespace opt //! optical namespace
     {
-        class Mat;
+        class Material;
     }                // namespace opt
     namespace random //! random number namespace
     {
@@ -83,7 +76,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               protected:
                 //  -- Material --
-                const opt::Mat& _mat; //!< Material to emit photons into.
+                const opt::Material& _mat; //!< Material to emit photons into.
 
                 //  -- Power --
               private:
@@ -99,7 +92,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Light(const geom::shape::Mesh& surf_, const opt::Mat& mat_, double power_, unsigned long int num_phot_, bool kill_) noexcept;
+                inline Light(const geom::shape::Mesh& surf_, const opt::Material& mat_, double power_, unsigned long int num_phot_, bool kill_) noexcept;
                 inline Light(const Light&) = default; //!< Defaulted copy constructor.
                 inline Light(Light&&)      = default; //!< Defaulted move constructor.
 
@@ -122,14 +115,12 @@ namespace arc //! arctk namespace
                 inline double            phot_power() const noexcept;
 
                 //  -- Emission --
-                virtual std::tuple<phys::Photon, const opt::Mat*, std::unique_ptr<opt::Sop>> emit(random::Generator* rng_, double time_) const
-                  noexcept = 0; //!< Emit a photon in a given material with specific-optical-properties. @param  rng_    Random number generator.    @param  time_   Initial timestamp of the photon.    @return Emitted photon in a material with
-                                //!< specific-optical-properties.
+                virtual phys::Photon emit(random::Generator* rng_, double time_) const noexcept = 0;
 
               private:
                 //  -- Collision --
-                inline bool hit_front(random::Generator* /*unused*/, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept override;
-                inline bool hit_back(random::Generator* /*unused*/, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept override;
+                inline bool hit_front(random::Generator* rng_, phys::Photon* phot_, disc::Block* block_, const geom::Collision& coll_) noexcept override;
+                inline bool hit_back(random::Generator* rng_, phys::Photon* phot_, disc::Block* block_, const geom::Collision& coll_) noexcept override;
             };
 
 
