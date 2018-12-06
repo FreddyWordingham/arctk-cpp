@@ -91,8 +91,8 @@ namespace arc //! arctk namespace
             inline void multiply_weight(const double mult_) noexcept;
 
             //  -- Materials --
-            inline void enter_mat(const std::string& mat_id_, std::unique_ptr<opt::Driver>&& driver_) noexcept;
-            inline void exit_mat(const std::string& mat_id_, std::unique_ptr<opt::Driver>&& driver_) noexcept;
+            inline void enter_mat(const std::string& mat_id_, std::unique_ptr<opt::Driver> driver_) noexcept;
+            inline void exit_mat(const std::string& mat_id_, std::unique_ptr<opt::Driver> driver_) noexcept;
         };
 
 
