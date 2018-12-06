@@ -58,6 +58,11 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Getters --
+        inline bool Photon::alive() const noexcept
+        {
+            return (_alive);
+        }
+
         /**
          *  Get the position of the photon.
          *
