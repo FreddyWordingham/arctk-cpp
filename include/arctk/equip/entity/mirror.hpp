@@ -85,8 +85,8 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               private:
                 //  -- Collision --
-                inline bool hit_front(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept override;
-                inline bool hit_back(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept override;
+                inline bool hit_front(random::Generator* rng_, phys::Photon* phot_, disc::Block* /**unused*/, const geom::Collision& coll_) noexcept override;
+                inline bool hit_back(random::Generator* rng_, phys::Photon* phot_, disc::Block* /**unused*/, const geom::Collision& coll_) noexcept override;
             };
 
 

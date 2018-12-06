@@ -23,7 +23,7 @@
 #include <arctk/equip/entity.hpp>
 #include <arctk/geom/shape/mesh.hpp>
 #include <arctk/math/vec.hpp>
-#include <arctk/opt/func.hpp>
+#include <arctk/phys/optical.hpp>
 #include <arctk/phys/photon.hpp>
 
 
@@ -67,34 +67,14 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Collision --
-            /**
-             *  Perform a front hit event.
-             *
-             *  @param  rng_    Random number generator.
-             *  @param  phot_   Photon hitting the entity.
-             *  @param  sop_    Current specific-optical-properties.
-             *  @param  cell_   Current domain cell.
-             *  @param  coll_   Collision event information.
-             *
-             *  @pre    rng_ may not be nullptr.
-             *  @pre    phot_ may not be nullptr.
-             *  @pre    sop_ may not be nullptr.
-             *  @pre    cell_ may not be nullptr.
-             *
-             *  @return False if the photon should be removed from the simulation.
-             */
-            inline bool Mirror::hit_front(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept
+            inline bool Mirror::hit_front(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const /*unused*/, const geom::Collision& coll_) noexcept
             {
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
-                assert(sop_ != nullptr);
-                assert(cell_ != nullptr);
 
                 if (rng_->gen() <= _front_ref)
                 {
-                    phot_->move(coll_.dist() - consts::num::BUMP, sop_->get()->ref_index());
-                    cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
-
+                    phot_->travel(coll_.dist() - consts::num::BUMP);
                     phot_->set_dir(opt::func::reflection_dir(phot_->dir(), coll_.norm()));
                 }
                 else
@@ -106,34 +86,14 @@ namespace arc //! arctk namespace
                 return (true);
             }
 
-            /**
-             *  Perform a back hit event.
-             *
-             *  @param  rng_    Random number generator.
-             *  @param  phot_   Photon hitting the entity.
-             *  @param  sop_    Current specific-optical-properties.
-             *  @param  cell_   Current domain cell.
-             *  @param  coll_   Collision event information.
-             *
-             *  @pre    rng_ may not be nullptr.
-             *  @pre    phot_ may not be nullptr.
-             *  @pre    sop_ may not be nullptr.
-             *  @pre    cell_ may not be nullptr.
-             *
-             *  @return False if the photon should be removed from the simulation.
-             */
-            inline bool Mirror::hit_back(random::Generator* rng_, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept
+            inline bool Mirror::hit_back(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const /*unused*/, const geom::Collision& coll_) noexcept
             {
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
-                assert(sop_ != nullptr);
-                assert(cell_ != nullptr);
 
                 if (rng_->gen() <= _back_ref)
                 {
-                    phot_->move(coll_.dist() - consts::num::BUMP, sop_->get()->ref_index());
-                    cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
-
+                    phot_->travel(coll_.dist() - consts::num::BUMP);
                     phot_->set_dir(opt::func::reflection_dir(phot_->dir(), coll_.norm()));
                 }
                 else

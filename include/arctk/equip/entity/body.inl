@@ -24,6 +24,7 @@
 #include <arctk/disc/block.hpp>
 #include <arctk/opt/material.hpp>
 #include <arctk/phys/optical.hpp>
+#include <arctk/phys/photon.hpp>
 
 
 
