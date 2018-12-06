@@ -23,7 +23,6 @@
 #include <arctk/consts/num.hpp>
 #include <arctk/disc/block.hpp>
 #include <arctk/geom/collision.hpp>
-#include <arctk/geom/shape/mesh.hpp>
 #include <arctk/phys/optical.hpp>
 #include <arctk/phys/photon.hpp>
 #include <arctk/random/generator.hpp>
