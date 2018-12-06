@@ -74,6 +74,7 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
+            inline bool                                alive() const noexcept;
             inline const vec3&                         pos() const noexcept;
             inline const vec3&                         dir() const noexcept;
             inline double                              power() const noexcept;
@@ -86,6 +87,7 @@ namespace arc //! arctk namespace
             inline const std::string&                  next_mat_id(const std::string& body_mat_id_) const noexcept;
 
             //  -- Setters --
+            inline void kill() noexcept;
             inline void move(const double dist_) noexcept;
             inline void travel(const double dist_) noexcept;
             inline void set_dir(const vec3& dir_) noexcept;

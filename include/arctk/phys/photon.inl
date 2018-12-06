@@ -146,6 +146,13 @@ namespace arc //! arctk namespace
 
 
         //  -- Setters --
+        inline void Photon::kill() noexcept
+        {
+            assert(_alive);
+
+            _alive = false;
+        }
+
         inline void Photon::move(const double dist_) noexcept
         {
             assert(dist_ > 0.0);
