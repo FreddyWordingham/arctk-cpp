@@ -105,22 +105,28 @@ namespace arc //! arctk namespace
 
 
             //  -- Collision --
-            inline bool Light::hit_front(random::Generator* const /*unused*/, phys::Photon* const phot_, disc::Block* const /*unused*/, const geom::Collision& coll_) noexcept
+            inline void Light::hit_front(random::Generator* const /*unused*/, phys::Photon* const phot_, disc::Block* const /*unused*/, const geom::Collision& coll_) noexcept
             {
                 assert(phot_ != nullptr);
 
                 phot_->travel(coll_.dist() + consts::num::BUMP);
 
-                return (_kill);
+                if (_kill)
+                {
+                    phot_->kill();
+                }
             }
 
-            inline bool Light::hit_back(random::Generator* const /*unused*/, phys::Photon* const phot_, disc::Block* const /*unused*/, const geom::Collision& coll_) noexcept
+            inline void Light::hit_back(random::Generator* const /*unused*/, phys::Photon* const phot_, disc::Block* const /*unused*/, const geom::Collision& coll_) noexcept
             {
                 assert(phot_ != nullptr);
 
                 phot_->travel(coll_.dist() + consts::num::BUMP);
 
-                return (_kill);
+                if (_kill)
+                {
+                    phot_->kill();
+                }
             }
 
 
