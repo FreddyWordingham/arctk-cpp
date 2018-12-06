@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Collision --
-            inline bool Mirror::hit_front(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const /*unused*/, const geom::Collision& coll_) noexcept
+            inline void Mirror::hit_front(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const /*unused*/, const geom::Collision& coll_) noexcept
             {
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
@@ -81,11 +81,9 @@ namespace arc //! arctk namespace
                 {
                     phot_->travel(coll_.dist() + consts::num::BUMP);
                 }
-
-                return (true);
             }
 
-            inline bool Mirror::hit_back(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const /*unused*/, const geom::Collision& coll_) noexcept
+            inline void Mirror::hit_back(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const /*unused*/, const geom::Collision& coll_) noexcept
             {
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
@@ -99,8 +97,6 @@ namespace arc //! arctk namespace
                 {
                     phot_->travel(coll_.dist() + consts::num::BUMP);
                 }
-
-                return (true);
             }
 
 
