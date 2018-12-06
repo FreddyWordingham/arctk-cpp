@@ -19,6 +19,10 @@
 #include <cassert>
 #include <fstream>
 
+//  -- Arctk --
+#include <arctk/geom/collision.hpp>
+#include <arctk/phys/photon.hpp>
+
 
 
 //  == NAMESPACE ==
