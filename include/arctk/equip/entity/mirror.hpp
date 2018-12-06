@@ -33,18 +33,14 @@ namespace arc //! arctk namespace
     {
         class Cell;
     }              // namespace dom
+    namespace disc //! discretisation namespace
+    {
+        class Block;
+    }              // namespace disc
     namespace geom //! geometric namespace
     {
         class Collision;
-        namespace shape //! shape namespace
-        {
-            class Mesh;
-        }         // namespace shape
-    }             // namespace geom
-    namespace opt //! optical namespace
-    {
-        class Mat;
-    }                // namespace opt
+    }                // namespace geom
     namespace random //! random number namespace
     {
         class Generator;
