@@ -43,6 +43,9 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Status --
+            bool _alive;
+
             //  -- Particle --
             vec3 _pos; //!< Position of the photon.
             vec3 _dir; //!< Direction of the photon.
