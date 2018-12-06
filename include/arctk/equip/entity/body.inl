@@ -22,6 +22,7 @@
 #include <arctk/consts/num.hpp>
 #include <arctk/disc/block.hpp>
 #include <arctk/opt/material.hpp>
+#include <arctk/phys/optical.hpp>
 
 
 
@@ -79,29 +80,14 @@ namespace arc //! arctk namespace
                 return (true);
             }
 
-            inline bool Body::hit_back(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, opt::Material* const mat_, opt::Driver* const driver_, const geom::Collision& coll_) noexcept
+            inline bool Body::hit_back(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, const geom::Collision& coll_) noexcept
             {
-                // assert(rng_ != nullptr);
-                // assert(phot_ != nullptr);
-                // assert(block_ != nullptr);
-                // assert(mat_ != nullptr);
-                // assert(driver_ != nullptr);
-                // assert(phot_->cur_mat_id() == _mat_id);
-
-                // const std::string            next_mat_id = phot_->prev_mat_id();
-                // std::unique_ptr<opt::Driver> next_driver = block_->mat(next_mat_id)->driver(*phot_);
-
-                // const double cur_ref_index  = driver_->ref_index();
-                // const double next_ref_index = next_driver->ref_index();
-
-                // if (rng_->gen() <= /*opt::func::reflection_prob(std::acos(), cur_ref_index, next_ref_index)*/ 0.5) // TODO
-                // {                                                                                                  // Reflection
-                //     driver_->travel(coll_.dist() - consts::num::BUMP);
-                //     phot_->set_dir(opt::func::reflection_dir(phot_->dir(), -coll_.norm()));
-                // }
-                // else
-                // { // Transmission
-                // }
+                assert(rng_ != nullptr);
+                assert(phot_ != nullptr);
+                assert(block_ != nullptr);
+                assert(mat_ != nullptr);
+                assert(driver_ != nullptr);
+                assert(phot_->cur_mat_id() == _mat_id);
 
                 return (true);
             }

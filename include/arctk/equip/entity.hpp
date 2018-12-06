@@ -96,12 +96,12 @@ namespace arc //! arctk namespace
             inline const geom::shape::Mesh& surf() const noexcept;
 
             //  -- Collision --
-            inline bool hit(random::Generator* rng_, phys::Photon* phot_, disc::Block* block_, opt::Material* mat_, opt::Driver* driver_, const geom::Collision& coll_) noexcept;
+            inline bool hit(random::Generator* rng_, phys::Photon* phot_, disc::Block* block_, const geom::Collision& coll_) noexcept;
 
           private:
             //  -- Collision --
-            virtual bool hit_front(random::Generator* rng_, phys::Photon* phot_, disc::Block* block_, opt::Material* mat_, opt::Driver* driver_, const geom::Collision& coll_) noexcept = 0;
-            virtual bool hit_back(random::Generator* rng_, phys::Photon* phot_, disc::Block* block_, opt::Material* mat_, opt::Driver* driver_, const geom::Collision& coll_) noexcept  = 0;
+            virtual bool hit_front(random::Generator* rng_, phys::Photon* phot_, disc::Block* block_, const geom::Collision& coll_) noexcept = 0;
+            virtual bool hit_back(random::Generator* rng_, phys::Photon* phot_, disc::Block* block_, const geom::Collision& coll_) noexcept  = 0;
         };
 
 
