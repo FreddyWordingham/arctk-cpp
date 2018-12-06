@@ -43,7 +43,7 @@ namespace arc //! arctk namespace
           , _time(time_)
           , _weight(1.0)
           , _cur_mat_id(cur_mat_id_)
-          , _mat(mat_)
+          , _driver(mat_->driver(*this))
         {
             assert(dir_.normalised());
             assert(wavelength_ > 0.0);
@@ -51,8 +51,6 @@ namespace arc //! arctk namespace
             assert(time_ >= 0.0);
             assert(!cur_mat_id_.empty());
             assert(mat_ != nullptr);
-
-            _driver = _mat->driver(*this);
         }
 
 

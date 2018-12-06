@@ -58,7 +58,6 @@ namespace arc //! arctk namespace
             //  -- Material --
             std::string                  _cur_mat_id;
             std::stack<std::string>      _prev_mat_id;
-            opt::Material*               _mat;
             std::unique_ptr<opt::Driver> _driver;
 
 

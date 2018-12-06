@@ -49,7 +49,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Collision --
-            inline bool Body::hit_front(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, opt::Material* const mat_, opt::Driver* const driver_, const geom::Collision& coll_) noexcept
+            inline bool Body::hit_front(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, const geom::Collision& coll_) noexcept
             {
                 // assert(rng_ != nullptr);
                 // assert(phot_ != nullptr);
@@ -85,8 +85,6 @@ namespace arc //! arctk namespace
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
                 assert(block_ != nullptr);
-                assert(mat_ != nullptr);
-                assert(driver_ != nullptr);
                 assert(phot_->cur_mat_id() == _mat_id);
 
                 return (true);
