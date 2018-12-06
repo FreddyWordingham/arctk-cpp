@@ -22,7 +22,6 @@
 //  -- Arctk --
 #include <arctk/geom/shape/mesh.hpp>
 #include <arctk/math/vec.hpp>
-#include <arctk/opt/mat.hpp>
 
 
 
@@ -54,7 +53,7 @@ namespace arc //! arctk namespace
                  *  @pre    num_phot_ must be positive.
                  *  @pre    wavelength_ must be positive.
                  */
-                inline Laser::Laser(const geom::shape::Mesh& surf_, const opt::Mat& mat_, const double power_, const unsigned long int num_phot_, const bool kill_, const double wavelength_) noexcept
+                inline Laser::Laser(const geom::shape::Mesh& surf_, const opt::Material& mat_, const double power_, const unsigned long int num_phot_, const bool kill_, const double wavelength_) noexcept
                   : Light(surf_, mat_, power_, num_phot_, kill_)
                   , _wavelength(wavelength_)
                 {
@@ -67,20 +66,11 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
                 //  -- Emission --
-                /** Emit a photon in a given material with specific-optical-properties.
-                 *
-                 *  @param  rng_    Random number generator.
-                 *  @param  time_   Initial timestamp of the photon.
-                 *
-                 *  @return Emitted photon in a material with specific-optical-properties.
-                 */
-                inline std::tuple<phys::Photon, const opt::Mat*, std::unique_ptr<opt::Sop>> Laser::emit(random::Generator* rng_, const double time_) const noexcept
+                inline phys::Photon Laser::emit(random::Generator* rng_, const double time_) const noexcept
                 {
                     const std::pair<vec3, vec3> pos_norm = _surf.random_pos_and_norm(rng_);
 
-                    phys::Photon phot(pos_norm.first, pos_norm.second, _wavelength, _phot_power, time_, 0.0);
-
-                    return (std::tuple<phys::Photon, const opt::Mat*, std::unique_ptr<opt::Sop>>(phot, &_mat, _mat.gen(phot)));
+                    return (phys::Photon(pos_norm.first, pos_norm.second, _wavelength, _phot_power, time_, _mat_id, _mat));
                 }
 
 

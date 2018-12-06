@@ -26,7 +26,6 @@
 #include <tuple>
 
 //  -- Arctk --
-#include <arctk/opt/sop.hpp>
 #include <arctk/phys/photon.hpp>
 
 
@@ -34,6 +33,10 @@
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
+    namespace disc //! discretisation namespace
+    {
+        class Block;
+    }              // namespace disc
     namespace geom //! geometric namespace
     {
         class Collision;
@@ -44,7 +47,7 @@ namespace arc //! arctk namespace
     }             // namespace geom
     namespace opt //! optical namespace
     {
-        class Mat;
+        class Material;
     }                // namespace opt
     namespace random //! random number namespace
     {
@@ -81,13 +84,13 @@ namespace arc //! arctk namespace
                     //  == INSTANTIATION ==
                   public:
                     //  -- Constructors --
-                    inline Laser(const geom::shape::Mesh& surf_, const opt::Mat& mat_, double power_, unsigned long int num_phot_, bool kill_, double wavelength_) noexcept;
+                    inline Laser(const geom::shape::Mesh& surf_, const opt::Material& mat_, double power_, unsigned long int num_phot_, bool kill_, double wavelength_) noexcept;
 
 
                     //  == METHODS ==
                   public:
                     //  -- Emission --
-                    inline std::tuple<phys::Photon, const opt::Mat*, std::unique_ptr<opt::Sop>> emit(random::Generator* rng_, double time_) const noexcept override;
+                    inline phys::Photon emit(random::Generator* rng_, double time_) const noexcept override;
                 };
 
 
