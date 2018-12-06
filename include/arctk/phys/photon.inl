@@ -117,6 +117,11 @@ namespace arc //! arctk namespace
             return (_weight);
         }
 
+        inline const std::unique_ptr<opt::Driver>& Photon::driver() const noexcept
+        {
+            return (_driver);
+        }
+
         inline const std::string& Photon::cur_mat_id() const noexcept
         {
             return (_cur_mat_id);

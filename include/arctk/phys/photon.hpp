@@ -71,15 +71,16 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline const vec3&        pos() const noexcept;
-            inline const vec3&        dir() const noexcept;
-            inline double             power() const noexcept;
-            inline double             wavelength() const noexcept;
-            inline double             time() const noexcept;
-            inline double             weight() const noexcept;
-            inline const std::string& cur_mat_id() const noexcept;
-            inline const std::string& prev_mat_id() const noexcept;
-            inline const std::string& next_mat_id(const std::string& body_mat_id_) const noexcept;
+            inline const vec3&                         pos() const noexcept;
+            inline const vec3&                         dir() const noexcept;
+            inline double                              power() const noexcept;
+            inline double                              wavelength() const noexcept;
+            inline double                              time() const noexcept;
+            inline double                              weight() const noexcept;
+            inline const std::unique_ptr<opt::Driver>& driver() const noexcept;
+            inline const std::string&                  cur_mat_id() const noexcept;
+            inline const std::string&                  prev_mat_id() const noexcept;
+            inline const std::string&                  next_mat_id(const std::string& body_mat_id_) const noexcept;
 
             //  -- Setters --
             inline void move(const double dist_) noexcept;
