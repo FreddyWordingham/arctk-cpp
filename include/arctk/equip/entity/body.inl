@@ -87,7 +87,7 @@ namespace arc //! arctk namespace
                 assert(block_ != nullptr);
                 assert(phot_->cur_mat_id() == _mat_id);
 
-                const std::string& cur_mat_id  = phot_->cur_mat_id();
+                const std::string& cur_mat_id  = _mat_id;
                 const std::string& next_mat_id = phot_->prev_mat_id();
 
                 const std::unique_ptr<opt::Driver>& cur_driver  = phot_->driver();
@@ -98,9 +98,15 @@ namespace arc //! arctk namespace
 
                 if (rng_->gen() <= phys::optical::reflection_prob(std::acos(phot_->dir() * -coll_.norm()), cur_ref_index, next_ref_index))
                 {
+                    phot_->travel(coll_.dist() - consts::num::BUMP);
+                    phot_->set_dir(phys::optical::reflection_dir(phot_->dir(), coll_.norm()));
                 }
                 else
                 {
+                    phot_->travel(coll_.dist() + consts::num::BUMP);
+                    phot_->set_dir(phys::optical::refraction_dir(phot_->dir(), coll_.norm(), cur_ref_index, next_ref_index));
+
+                    phot_->exit_mat(_mat_id, next_driver);
                 }
 
                 return (true);
