@@ -17,6 +17,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <utility>
 
 //  -- Arctk --
 #include <arctk/consts/num.hpp>
@@ -91,7 +92,7 @@ namespace arc //! arctk namespace
                 const std::string& next_mat_id = phot_->prev_mat_id();
 
                 const std::unique_ptr<opt::Driver>& cur_driver  = phot_->driver();
-                const std::unique_ptr<opt::Driver>  next_driver = block_->mat(next_mat_id)->driver(*phot_);
+                std::unique_ptr<opt::Driver>        next_driver = block_->mat(next_mat_id)->driver(*phot_);
 
                 const double cur_ref_index  = cur_driver->ref_index();
                 const double next_ref_index = next_driver->ref_index();
@@ -106,7 +107,7 @@ namespace arc //! arctk namespace
                     phot_->travel(coll_.dist() + consts::num::BUMP);
                     phot_->set_dir(phys::optical::refraction_dir(phot_->dir(), coll_.norm(), cur_ref_index, next_ref_index));
 
-                    phot_->exit_mat(_mat_id, next_driver);
+                    phot_->exit_mat(_mat_id, std::move(next_driver));
                 }
 
                 return (true);
