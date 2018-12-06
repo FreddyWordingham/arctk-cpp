@@ -12,9 +12,8 @@
 //  -- Arctk --
 #include <arctk/equip/entity.hpp>
 #include <arctk/equip/entity/body.hpp>
-// #include <arctk/equip/entity/detector.hpp>
-// #include <arctk/equip/entity/detector/phaseometer.hpp>
-// #include <arctk/equip/entity/detector/photometer.hpp>
+#include <arctk/equip/entity/detector.hpp>
+#include <arctk/equip/entity/detector/photometer.hpp>
 #include <arctk/equip/entity/light.hpp>
 #include <arctk/equip/entity/light/laser.hpp>
 #include <arctk/equip/entity/mirror.hpp>
