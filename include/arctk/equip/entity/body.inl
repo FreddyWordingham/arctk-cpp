@@ -90,8 +90,18 @@ namespace arc //! arctk namespace
                 const std::string& cur_mat_id  = phot_->cur_mat_id();
                 const std::string& next_mat_id = phot_->prev_mat_id();
 
-                const std::unique_ptr<opt::Driver>& cur_driver = phot_->driver();
+                const std::unique_ptr<opt::Driver>& cur_driver  = phot_->driver();
+                const std::unique_ptr<opt::Driver>  next_driver = block_->mat(next_mat_id)->driver(*phot_);
 
+                const double cur_ref_index  = cur_driver->ref_index();
+                const double next_ref_index = next_driver->ref_index();
+
+                if (rng_->gen() <= phys::optical::reflection_prob(std::acos(phot_->dir() * -coll_.norm()), cur_ref_index, next_ref_index))
+                {
+                }
+                else
+                {
+                }
 
                 return (true);
             }

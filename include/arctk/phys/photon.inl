@@ -192,16 +192,18 @@ namespace arc //! arctk namespace
 
 
         //  -- Materials --
-        inline void Photon::enter_mat(const std::string& mat_id_) noexcept
+        inline void Photon::enter_mat(const std::string& mat_id_, std::unique_ptr<opt::Driver>&& driver_) noexcept
         {
             assert(!mat_id_.empty());
             assert(mat_id_ != _cur_mat_id);
 
             _prev_mat_id.push(_cur_mat_id);
             _cur_mat_id = mat_id_;
+
+            _driver = driver_;
         }
 
-        inline void Photon::exit_mat(const std::string& mat_id_) noexcept
+        inline void Photon::exit_mat(const std::string& mat_id_, std::unique_ptr<opt::Driver>&& driver_) noexcept
         {
             assert(!mat_id_.empty());
             assert(mat_id_ == _cur_mat_id);
@@ -209,6 +211,8 @@ namespace arc //! arctk namespace
 
             _cur_mat_id = _prev_mat_id.top();
             _prev_mat_id.pop();
+
+            _driver = driver_;
         }
 
 
