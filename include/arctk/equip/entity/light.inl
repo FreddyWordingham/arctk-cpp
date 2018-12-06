@@ -22,7 +22,8 @@
 #include <arctk/consts/num.hpp>
 #include <arctk/geom/collision.hpp>
 #include <arctk/geom/shape/mesh.hpp>
-#include <arctk/math/vec.hpp>
+#include <arctk/opt/material.hpp>
+#include <arctk/phys/photon.hpp>
 
 
 
