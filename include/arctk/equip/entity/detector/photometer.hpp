@@ -19,6 +19,29 @@
 
 
 
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    namespace disc //! discretisation namespace
+    {
+        class Block;
+    }              // namespace disc
+    namespace geom //! geometric namespace
+    {
+        class Collision;
+    }              // namespace geom
+    namespace phys //! physics namespace
+    {
+        class Photon;
+    }                // namespace phys
+    namespace random //! random number namespace
+    {
+        class Generator;
+    } // namespace random
+} // namespace arc
+
+
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -55,12 +78,12 @@ namespace arc //! arctk namespace
                     //  == METHODS ==
                   public:
                     //  -- Saving --
-                    void save(const std::string& path_) const noexcept override; // NOLINT
+                    void save(const std::string& path_) const noexcept override;
 
                   private:
                     //  -- Collision --
-                    bool hit_front(random::Generator* /*unused*/, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept override;
-                    bool hit_back(random::Generator* /*unused*/, phys::Photon* phot_, const opt::Mat** /*unused*/, std::unique_ptr<opt::Sop>* sop_, dom::Cell* cell_, const geom::Collision& coll_) noexcept override;
+                    void hit_front(random::Generator* /*unused*/, phys::Photon* phot_, disc::Block* /*unused*/, const geom::Collision& coll_) noexcept override;
+                    void hit_back(random::Generator* /*unused*/, phys::Photon* phot_, disc::Block* /*unused*/, const geom::Collision& coll_) noexcept override;
                 };
 
 
