@@ -51,7 +51,7 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
             //  -- Collision --
-            inline bool Body::hit_front(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, const geom::Collision& coll_) noexcept
+            inline void Body::hit_front(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, const geom::Collision& coll_) noexcept
             {
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
@@ -78,11 +78,9 @@ namespace arc //! arctk namespace
 
                     phot_->enter_mat(_mat_id, std::move(next_driver));
                 }
-
-                return (true);
             }
 
-            inline bool Body::hit_back(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, const geom::Collision& coll_) noexcept
+            inline void Body::hit_back(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, const geom::Collision& coll_) noexcept
             {
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
@@ -109,8 +107,6 @@ namespace arc //! arctk namespace
 
                     phot_->exit_mat(_mat_id, std::move(next_driver));
                 }
-
-                return (true);
             }
 
 
