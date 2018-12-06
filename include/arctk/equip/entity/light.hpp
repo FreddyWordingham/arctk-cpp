@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
                 //  == FIELDS ==
               protected:
                 //  -- Material --
-                const std::string    mat_id_;
+                const std::string    _mat_id;
                 const opt::Material& _mat; //!< Material to emit photons into.
 
                 //  -- Power --
