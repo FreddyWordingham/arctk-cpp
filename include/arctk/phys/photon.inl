@@ -37,7 +37,8 @@ namespace arc //! arctk namespace
         //  == INSTANTIATION ==
         //  -- Constructors --
         inline Photon::Photon(const vec3& pos_, const vec3& dir_, const double power_, const double wavelength_, const double time_, const std::string& cur_mat_id_, opt::Material* mat_) noexcept
-          : _pos(pos_)
+          : _alive(true)
+          , _pos(pos_)
           , _dir(dir_)
           , _power(power_)
           , _wavelength(wavelength_)
