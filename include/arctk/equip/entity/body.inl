@@ -52,31 +52,32 @@ namespace arc //! arctk namespace
             //  -- Collision --
             inline bool Body::hit_front(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, const geom::Collision& coll_) noexcept
             {
-                // assert(rng_ != nullptr);
-                // assert(phot_ != nullptr);
-                // assert(mat_ != nullptr);
-                // assert(sop_ != nullptr);
-                // assert(cell_ != nullptr);
+                assert(rng_ != nullptr);
+                assert(phot_ != nullptr);
+                assert(block_ != nullptr);
+                assert(phot_->cur_mat_id() != _mat_id);
 
-                // std::unique_ptr<opt::Sop> next_sop = _front_mat.gen(*phot_);
+                const std::string& cur_mat_id  = phot_->cur_mat_id();
+                const std::string& next_mat_id = _mat_id;
 
-                // if (rng_->gen() <= opt::func::reflection_prob(std::acos(phot_->dir() * -coll_.norm()), sop_->get()->ref_index(), next_sop->ref_index()))
-                // {
-                //     phot_->move(coll_.dist() - consts::num::BUMP, sop_->get()->ref_index());
-                //     cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
+                const std::unique_ptr<opt::Driver>& cur_driver  = phot_->driver();
+                std::unique_ptr<opt::Driver>        next_driver = block_->mat(next_mat_id)->driver(*phot_);
 
-                //     phot_->set_dir(opt::func::reflection_dir(phot_->dir(), coll_.norm()));
-                // }
-                // else
-                // {
-                //     phot_->move(coll_.dist() + consts::num::BUMP, sop_->get()->ref_index());
-                //     cell_->add_energy(coll_.dist() * phot_->energy() * phot_->weight());
+                const double cur_ref_index  = cur_driver->ref_index();
+                const double next_ref_index = next_driver->ref_index();
 
-                //     phot_->set_dir(opt::func::refraction_dir(phot_->dir(), coll_.norm(), sop_->get()->ref_index(), next_sop->ref_index()));
+                if (rng_->gen() <= phys::optical::reflection_prob(std::acos(phot_->dir() * -coll_.norm()), cur_ref_index, next_ref_index))
+                {
+                    phot_->travel(coll_.dist() - consts::num::BUMP);
+                    phot_->set_dir(phys::optical::reflection_dir(phot_->dir(), coll_.norm()));
+                }
+                else
+                {
+                    phot_->travel(coll_.dist() + consts::num::BUMP);
+                    phot_->set_dir(phys::optical::refraction_dir(phot_->dir(), coll_.norm(), cur_ref_index, next_ref_index));
 
-                //     *mat_ = &_front_mat;
-                //     *sop_ = std::move(next_sop);
-                // }
+                    phot_->enter_mat(_mat_id, std::move(next_driver));
+                }
 
                 return (true);
             }
