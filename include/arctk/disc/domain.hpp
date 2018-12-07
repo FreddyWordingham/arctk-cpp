@@ -86,7 +86,7 @@ namespace arc //! arctk namespace
             inline const vec3&                  block_size() const noexcept;
 
             //  -- Access --
-            inline const Block& block(const vec3& pos_) noexcept;
+            inline Block* block(const vec3& pos_) noexcept;
 
             //  -- Setters --
             inline void add_mat(const std::string& mat_id_, const opt::Material& mat_) noexcept;

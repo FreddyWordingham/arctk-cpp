@@ -108,11 +108,11 @@ namespace arc //! arctk namespace
 
 
         //  -- Access --
-        inline const Block& Domain::block(const vec3& pos_) noexcept
+        inline Block* Domain::block(const vec3& pos_) noexcept
         {
             const std::array<size_t, 3> index = indices(pos_);
 
-            return (_blocks[index[index::dim::cartesian::X]][index[index::dim::cartesian::Y]][index[index::dim::cartesian::Z]]);
+            return (&_blocks[index[index::dim::cartesian::X]][index[index::dim::cartesian::Y]][index[index::dim::cartesian::Z]]);
         }
 
 
