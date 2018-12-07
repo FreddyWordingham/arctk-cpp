@@ -162,6 +162,16 @@ namespace arc //! arctk namespace
                     for (size_t k = 0; k < _res[index::dim::cartesian::Z]; ++k)
                     {
                         const std::unordered_map<std::string, double> data = _blocks[i][j][k].data();
+
+                        for (auto const& [key, val] : data)
+                        {
+                            if (cube.count(key) == 0)
+                            {
+                                cube[key] = multi::vector_helper<double, 3>::shape(_res);
+                            }
+
+                            cube[key][i][j][k] += val;
+                        }
                     }
                 }
             }
