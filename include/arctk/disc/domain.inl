@@ -101,6 +101,11 @@ namespace arc //! arctk namespace
             return (_res);
         }
 
+        inline const vec3& Domain::block_size() const noexcept
+        {
+            return (_block_size);
+        }
+
         inline const Block& Domain::block(const vec3& pos_) const noexcept
         {
             const std::array<size_t, 3> index = indices(pos_);
