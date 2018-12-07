@@ -16,9 +16,9 @@
 
 //  == IMPORTS ==
 //  -- Std --
-#include <map>
 #include <memory>
 #include <string>
+#include <unordered_map>
 
 //  -- Arctk --
 #include <arctk/math/vec.hpp>
