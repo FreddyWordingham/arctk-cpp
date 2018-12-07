@@ -52,7 +52,7 @@ namespace arc //! arctk namespace
         /**
          *  Domain discretisation material block class.
          */
-        class Block : geom::shape::Box
+        class Block : public geom::shape::Box
         {
             //  == FIELDS ==
           protected:
