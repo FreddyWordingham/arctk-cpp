@@ -61,7 +61,6 @@ namespace arc //! arctk namespace
             double                        _scattering;
             double                        _absorption;
             double                        _emission;
-            vec3                          _travel_dir;
             std::map<std::string, double> _data;
 
 
@@ -95,7 +94,6 @@ namespace arc //! arctk namespace
             inline double                               scattering() const noexcept;
             inline double                               absorption() const noexcept;
             inline double                               emission() const noexcept;
-            inline const vec3&                          travel_dir() const noexcept;
             inline const std::map<std::string, double>& data() const noexcept;
 
             //  -- Setters --
@@ -103,7 +101,6 @@ namespace arc //! arctk namespace
             inline void add_scattering(double scattering_) noexcept;
             inline void add_absorption(double absorption_) noexcept;
             inline void add_emission(double emission_) noexcept;
-            inline void add_travel_dir(const vec3& travel_dir_) noexcept;
 
             //  -- Driver --
             virtual std::unique_ptr<Driver> driver(const phys::Photon& phot_) noexcept = 0;

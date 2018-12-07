@@ -82,6 +82,8 @@ namespace arc //! arctk namespace
                 {
                     data[key] += val;
                 }
+
+                data["energy_density"] += mat->energy();
             }
 
             return (data);

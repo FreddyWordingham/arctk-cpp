@@ -37,7 +37,6 @@ namespace arc //! arctk namespace
           , _scattering(0.0)
           , _absorption(0.0)
           , _emission(0.0)
-          , _travel_dir(0.0, 0.0, 0.0)
         {
             assert(min_ <= max_);
         }
@@ -83,11 +82,6 @@ namespace arc //! arctk namespace
             return (_emission);
         }
 
-        inline const vec3& Material::travel_dir() const noexcept
-        {
-            return (_travel_dir);
-        }
-
         inline const std::map<std::string, double>& Material::data() const noexcept
         {
             return (_data);
@@ -121,13 +115,6 @@ namespace arc //! arctk namespace
             assert(emission_ > 0.0);
 
             _emission += emission_;
-        }
-
-        inline void Material::add_travel_dir(const vec3& travel_dir_) noexcept
-        {
-            assert(travel_dir_.mag() > 0.0);
-
-            _travel_dir += travel_dir_;
         }
 
 
