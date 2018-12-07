@@ -31,8 +31,8 @@ namespace arc //! arctk namespace
         {
             INTER, //!< Interaction collision event.
             ENT,   //!< Entity collision event.
-            LEAF,  //!< Leaf cell collision event.
-            CELL,  //!< Domain cell collision event.
+            CELL,  //!< Leaf cell collision event.
+            BLOCK, //!< Domain block collision event.
             DOM    //!< Domain collision event.
         };
 
