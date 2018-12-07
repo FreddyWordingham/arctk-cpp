@@ -29,6 +29,15 @@ namespace arc //! arctk namespace
 
 
 
+        //  == CONSTANTS ==
+        //  -- Names --
+        constexpr const char* const ENERGY_DENSITY_NAME     = "energy_density";
+        constexpr const char* const SCATTERING_DENSITY_NAME = "scattering_density";
+        constexpr const char* const ABSORPTION_DENSITY_NAME = "absorption_density";
+        constexpr const char* const EMISSION_DENSITY_NAME   = "emission_density";
+
+
+
         //  == INSTANTIATION ==
         //  -- Constructors --
         inline Block::Block(const vec3& min_, const vec3& max_, const std::string& aether_id_, const opt::Material& aether_) noexcept
