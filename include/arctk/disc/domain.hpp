@@ -96,7 +96,7 @@ namespace arc //! arctk namespace
             inline std::array<size_t, 3> indices(const vec3& pos_) const noexcept;
 
             //  -- Reduction --
-            //            inline std::
+            inline std::unordered_map<std::string, multi::vector<double, 3>> create_data_cube() const noexcept;
         };
 
 

@@ -57,11 +57,11 @@ namespace arc //! arctk namespace
             const double _max; //!< Maximum valid wavelength of the material.
 
             //  -- Properties --
-            double                        _energy;
-            double                        _scattering;
-            double                        _absorption;
-            double                        _emission;
-            std::map<std::string, double> _data;
+            double                                  _energy;
+            double                                  _scattering;
+            double                                  _absorption;
+            double                                  _emission;
+            std::unordered_map<std::string, double> _data;
 
 
             //  == INSTANTIATION ==
@@ -88,13 +88,13 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline double                               min() const noexcept;
-            inline double                               max() const noexcept;
-            inline double                               energy() const noexcept;
-            inline double                               scattering() const noexcept;
-            inline double                               absorption() const noexcept;
-            inline double                               emission() const noexcept;
-            inline const std::map<std::string, double>& data() const noexcept;
+            inline double                                         min() const noexcept;
+            inline double                                         max() const noexcept;
+            inline double                                         energy() const noexcept;
+            inline double                                         scattering() const noexcept;
+            inline double                                         absorption() const noexcept;
+            inline double                                         emission() const noexcept;
+            inline const std::unordered_map<std::string, double>& data() const noexcept;
 
             //  -- Setters --
             inline void add_energy(double energy_) noexcept;

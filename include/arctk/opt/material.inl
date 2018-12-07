@@ -82,7 +82,7 @@ namespace arc //! arctk namespace
             return (_emission);
         }
 
-        inline const std::map<std::string, double>& Material::data() const noexcept
+        inline const std::unordered_map<std::string, double>& Material::data() const noexcept
         {
             return (_data);
         }

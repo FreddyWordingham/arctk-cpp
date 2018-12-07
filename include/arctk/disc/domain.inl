@@ -150,6 +150,26 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Reduction --
+        inline std::unordered_map<std::string, multi::vector<double, 3>> Domain::create_data_cube() const noexcept
+        {
+            std::unordered_map<std::string, multi::vector<double, 3>> cube;
+
+            for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
+            {
+                for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
+                {
+                    for (size_t k = 0; k < _res[index::dim::cartesian::Z]; ++k)
+                    {
+                        const std::unordered_map<std::string, double> data = _blocks[i][j][k].data();
+                    }
+                }
+            }
+
+            return (cube);
+        }
+
+
 
     } // namespace disc
 } // namespace arc
