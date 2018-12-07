@@ -106,7 +106,9 @@ namespace arc //! arctk namespace
             return (_block_size);
         }
 
-        inline const Block& Domain::block(const vec3& pos_) const noexcept
+
+        //  -- Access --
+        inline const Block& Domain::block(const vec3& pos_) noexcept
         {
             const std::array<size_t, 3> index = indices(pos_);
 
