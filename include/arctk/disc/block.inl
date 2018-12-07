@@ -79,13 +79,13 @@ namespace arc //! arctk namespace
             return (_mats.at(mat_id_).get());
         }
 
-        inline std::map<std::string, double> Block::data() const noexcept
+        inline std::unordered_map<std::string, double> Block::data() const noexcept
         {
-            std::map<std::string, double> data;
+            std::unordered_map<std::string, double> data;
 
             for (auto const& [id, mat] : _mats)
             {
-                const std::map<std::string, double>& mat_data = mat->data();
+                const std::unordered_map<std::string, double>& mat_data = mat->data();
 
                 for (auto const& [key, val] : mat_data)
                 {

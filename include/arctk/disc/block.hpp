@@ -85,8 +85,8 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Getters --
-            inline opt::Material*                mat(const std::string& mat_id_) noexcept;
-            inline std::map<std::string, double> data() const noexcept;
+            inline opt::Material*                          mat(const std::string& mat_id_) noexcept;
+            inline std::unordered_map<std::string, double> data() const noexcept;
 
             //  -- Setters --
             inline void add_mat(const std::string& mat_id_, const opt::Material& mat_) noexcept;
