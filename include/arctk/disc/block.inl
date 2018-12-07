@@ -92,7 +92,10 @@ namespace arc //! arctk namespace
                     data[key] += val;
                 }
 
-                data["energy_density"] += mat->energy();
+                data[ENERGY_DENSITY_NAME] += mat->energy() / vol();
+                data[SCATTERING_DENSITY_NAME] += mat->scattering() / vol();
+                data[ABSORPTION_DENSITY_NAME] += mat->absorption() / vol();
+                data[EMISSION_DENSITY_NAME] += mat->emission() / vol();
             }
 
             return (data);
