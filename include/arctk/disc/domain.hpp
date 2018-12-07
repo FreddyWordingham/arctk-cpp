@@ -91,6 +91,9 @@ namespace arc //! arctk namespace
             //  -- Setters --
             inline void add_mat(const std::string& mat_id_, const opt::Material& mat_) noexcept;
 
+            //  -- Saving --
+            inline void save(const std::string& path_) const noexcept;
+
           private:
             //  -- Indexing --
             inline std::array<size_t, 3> indices(const vec3& pos_) const noexcept;

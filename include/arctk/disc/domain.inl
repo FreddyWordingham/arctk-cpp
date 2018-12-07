@@ -132,6 +132,15 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Saving --
+        inline void Domain::save(const std::string& path_) const noexcept
+        {
+            assert(!path_.empty());
+
+            const std::unordered_map<std::string, multi::vector<double, 3>> cube = create_data_cube();
+        }
+
+
         //  -- Indexing --
         inline std::array<size_t, 3> Domain::indices(const vec3& pos_) const noexcept
         {
