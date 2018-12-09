@@ -16,6 +16,8 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <array>
+#include <cstddef>
 
 //  -- Arctk --
 #include <arctk/math/vec.hpp>
@@ -42,9 +44,10 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
-            //  -- Bounds --
-            const vec3 _min;
-            const vec3 _max;
+            //  -- Domain --
+            const vec3            _min;
+            const vec3            _max;
+            std::array<size_t, 3> _res;
 
 
             //  == INSTANTIATION ==
