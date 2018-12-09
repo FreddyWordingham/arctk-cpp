@@ -23,6 +23,7 @@
 #include <arctk/consts/math.hpp>
 #include <arctk/consts/phys.hpp>
 #include <arctk/math/compare.hpp>
+#include <arctk/opt/material.hpp>
 
 
 
