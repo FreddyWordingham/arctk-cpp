@@ -23,6 +23,10 @@
 #include <cassert>
 #include <iostream>
 
+//  -- Arctk --
+#include <arctk/equip/entity/detector.hpp>
+#include <arctk/equip/entity/light.hpp>
+
 
 
 //  == NAMESPACE ==
