@@ -20,9 +20,11 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <algorithm>
 #include <cassert>
 #include <cstdlib>
 #include <iostream>
+#include <iterator>
 
 //  -- Arctk --
 #include <arctk/equip/entity/detector.hpp>
@@ -205,15 +207,17 @@ namespace arc //! arctk namespace
                 dir_name_ += '/';
             }
 
-            for (size_t i = 0; i < _detectors.size(); ++i)
-            {
-                if (_detectors[i] == dir_name_)
-                {
-                    std::cerr << "Error! Unable to add detector with directory name: `" << dir_name_ << "`, as directory name is already in use.\n";
+            if (std::count(std::begin(dir_name_), std::end(dir_name_), '/');)
 
-                    std::exit(exit::error::INVALID_DIR_NAME);
+                for (size_t i = 0; i < _detectors.size(); ++i)
+                {
+                    if (_detectors[i] == dir_name_)
+                    {
+                        std::cerr << "Error! Unable to add detector with directory name: `" << dir_name_ << "`, as directory name is already in use.\n";
+
+                        std::exit(exit::error::INVALID_DIR_NAME);
+                    }
                 }
-            }
 
             _entities.emplace_back(std::make_unique<T>(det_));
             _detectors.emplace_back(std::make_pair(dynamic_cast<equip::entity::Detector*>(_entities.back().get()), dir_name_));
