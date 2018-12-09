@@ -135,7 +135,9 @@ namespace arc //! arctk namespace
 
         inline void Sim::set_roulette_limit(const double roulette_limit_) noexcept
         {
-            _rou
+            assert(roulette_limit_ > 0.0);
+
+            _roulette_limit = roulette_limit_;
         }
 
         inline void Sim::set_roulette_chance(const double roulette_chance_) noexcept
