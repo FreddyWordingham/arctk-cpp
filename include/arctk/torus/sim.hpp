@@ -18,18 +18,18 @@
 //  -- Std --
 #include <array>
 #include <cstddef>
-
+§
 //  -- Arctk --
 #include <arctk/math/vec.hpp>
 
 
 
-//  == CLASS PROTOTYPES ==
+  //  == CLASS PROTOTYPES ==
 
 
 
-//  == NAMESPACE ==
-namespace arc //! arctk namespace
+  //  == NAMESPACE ==
+  namespace arc //! arctk namespace
 {
     namespace torus //! transport of radiation under skin namespace
     {
@@ -48,6 +48,10 @@ namespace arc //! arctk namespace
             const vec3            _min;
             const vec3            _max;
             std::array<size_t, 3> _res;
+
+            //  -- Tree --
+            size_t _max_depth;
+            size_t _tar_tris;
 
 
             //  == INSTANTIATION ==
