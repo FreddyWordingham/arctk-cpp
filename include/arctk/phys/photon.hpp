@@ -23,7 +23,17 @@
 //  -- Arctk --
 #include <arctk/math/vec.hpp>
 #include <arctk/opt/driver.hpp>
-#include <arctk/opt/material.hpp>
+
+
+
+//  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    namespace opt //! optical namespace
+    {
+        class Material;
+    } // namespace opt
+} // namespace arc
 
 
 
