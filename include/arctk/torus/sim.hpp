@@ -20,6 +20,7 @@
 #include <cstddef>
 #include <memory>
 #include <string>
+#include <utility>
 #include <vector>
 
 //  -- Arctk --
@@ -50,8 +51,9 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Entities --
-            std::vector<std::unique_ptr<equip::Entity>> _entities;
-            std::vector<equip::entity::Light* const>    _lights;
+            std::vector<std::unique_ptr<equip::Entity>>                         _entities;
+            std::vector<equip::entity::Light* const>                            _lights;
+            std::vector<std::pair<const equip::entity::Detector*, std::string>> _detectors;
 
             //  -- Domain --
             const vec3            _min;
