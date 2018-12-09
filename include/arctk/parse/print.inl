@@ -64,7 +64,7 @@ namespace arc //! arctk namespace
                 assert((title_.size() + 2) <= width_);
                 assert(width_ >= 2);
 
-                const size_t spare = width_ - title.size();
+                const size_t spare = width_ - title_.size();
                 const size_t pre   = width_ / 2;
                 const size_t post  = spare - pre;
 
