@@ -216,7 +216,7 @@ namespace arc //! arctk namespace
 
             for (size_t i = 0; i < _detectors.size(); ++i)
             {
-                if (_detectors[i] == dir_name_)
+                if (_detectors[i].second == dir_name_)
                 {
                     std::cerr << "Error! Unable to add detector with directory name: `" << dir_name_ << "`, as directory name is already in use.\n";
 
