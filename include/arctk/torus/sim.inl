@@ -172,6 +172,18 @@ namespace arc //! arctk namespace
             _post_render = post_render_
         }
 
+        inline void Sim::set_output_dir(const std::string& output_dir_) noexcept
+        {
+            assert(!output_dir_.empty());
+
+            _output_dir = output_dir_;
+
+            if (_output_dir.back() != '/')
+            {
+                _output_dir += '/';
+            }
+        }
+
 
 
     } // namespace torus
