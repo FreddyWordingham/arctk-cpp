@@ -99,6 +99,9 @@ namespace arc //! arctk namespace
             //  -- Constructors --
             inline Sim(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const opt::Material& aether_) noexcept;
 
+            //  -- Destructors --
+            inline ~Sim();
+
 
             //  == METHODS ==
           public:

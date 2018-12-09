@@ -102,7 +102,8 @@ namespace arc //! arctk namespace
         }
 
 
-        inline ~Sim::Sim() noexcept
+        //  -- Destructors --
+        inline Sim::~Sim()
         {
             std::cout << "----------------------------------------------------------------\n\n"
                       << "                      Simulation Complete\n"
