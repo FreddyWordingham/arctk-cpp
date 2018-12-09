@@ -99,6 +99,8 @@ namespace arc //! arctk namespace
             inline void set_roulette_chance(double roulette_chance_) noexcept;
             inline void set_update_delta(unsigned int update_delta_) noexcept;
             inline void set_num_threads(size_t num_threads_) noexcept;
+            inline bool set_pre_render_(bool pre_render_) noexcept;
+            inline bool set_post_render_(bool post_render_) noexcept;
         };
 
 
