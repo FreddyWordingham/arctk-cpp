@@ -18,18 +18,22 @@
 //  -- Std --
 #include <array>
 #include <cstddef>
-§
+#include <memory>
+#include <string>
+#include <vector>
+
 //  -- Arctk --
+#include <arctk/equip/entity.hpp>
 #include <arctk/math/vec.hpp>
 
 
 
-  //  == CLASS PROTOTYPES ==
+//  == CLASS PROTOTYPES ==
 
 
 
-  //  == NAMESPACE ==
-  namespace arc //! arctk namespace
+//  == NAMESPACE ==
+namespace arc //! arctk namespace
 {
     namespace torus //! transport of radiation under skin namespace
     {
@@ -44,6 +48,9 @@
         {
             //  == FIELDS ==
           private:
+            //  -- Entities --
+            std::vector<std::unique_ptr<equip::Entity>> _entities;
+
             //  -- Domain --
             const vec3            _min;
             const vec3            _max;
