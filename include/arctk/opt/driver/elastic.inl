@@ -23,6 +23,7 @@
 #include <arctk/consts/math.hpp>
 #include <arctk/consts/phys.hpp>
 #include <arctk/opt/material/elastic.hpp>
+#include <arctk/phys/photon.hpp>
 #include <arctk/random/distribution.hpp>
 #include <arctk/random/generator.hpp>
 
