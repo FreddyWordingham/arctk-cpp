@@ -182,6 +182,10 @@ namespace arc //! arctk namespace
         inline void Sim::add_light(T&& light_) noexcept
         {
             static_assert(std::is_base_of<equip::entity::Light, T>::value);
+
+            _entities.emplace_back(std::make_unique<T>(light_));
+
+            _lights.emplace_back(dynamic_cast<equip::entity::Light*>(_entities.back().get()));
         }
 
         template <typename T>
