@@ -203,6 +203,27 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Pre-Flight --
+        inline void Sim::pre_flight() const noexcept
+        {
+            std::cout << "Running pre-flight...\n";
+
+
+            std::cout << "Pre-flight complete.\n";
+        }
+
+
+
+        //  -- Post-Flight --
+        inline void Sim::post_flight() const noexcept
+        {
+            std::cout << "Running pre-flight...\n";
+
+
+            std::cout << "Pre-flight complete.\n";
+        }
+
+
 
     } // namespace torus
 } // namespace arc
