@@ -99,8 +99,6 @@ namespace arc //! arctk namespace
             //  == METHODS ==
           public:
             //  -- Setters --
-            inline void set_res(size_t res_) noexcept;
-            inline void set_res(const std::array<size_t, 3>& res_) noexcept;
             inline void set_tree_max_depth(size_t max_depth_) noexcept;
             inline void set_tree_tar_tris(size_t tar_tris_) noexcept;
             inline void set_roulette(bool roulette_) noexcept;
