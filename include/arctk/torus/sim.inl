@@ -128,6 +128,21 @@ namespace arc //! arctk namespace
             _tar_tris = tar_tris_;
         }
 
+        inline void Sim::set_roulette(const bool roulette_) noexcept
+        {
+            _roulette = roulette_;
+        }
+
+        inline void Sim::set_roulette_limit(const double roulette_limit_) noexcept
+        {
+            _rou
+        }
+
+        inline void Sim::set_roulette_chance(const double roulette_chance_) noexcept
+        {
+            _rou
+        }
+
 
 
     } // namespace torus
