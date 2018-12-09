@@ -157,7 +157,9 @@ namespace arc //! arctk namespace
 
         inline void Sim::set_num_threads(const size_t num_threads_) noexcept
         {
-            assert()
+            assert(num_threads_ > 0);
+
+            _num_threads = num_threads_;
         }
 
 
