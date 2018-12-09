@@ -56,13 +56,6 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
                 //  -- Saving --
-                /**
-                 *  Save the status of the detector to a file.
-                 *
-                 *  @param  path_   Path to the save file.
-                 *
-                 *  @pre    path_ may not be empty.
-                 */
                 void Photometer::save(const std::string& path_) const noexcept
                 {
                     assert(!path_.empty());
