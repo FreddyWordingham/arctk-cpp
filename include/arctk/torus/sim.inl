@@ -114,6 +114,17 @@ namespace arc //! arctk namespace
             _res = res_;
         }
 
+        inline void Sim::set_tree_max_depth(const size_t max_depth_) noexcept
+        {
+            assert(max_depth_ > 0);
+
+            _max_depth = max_depth_;
+        }
+
+        inline void Sim::set_tree_tar_tris(const size_t tar_tris_) noexcept
+        {
+        }
+
 
 
     } // namespace torus
