@@ -24,6 +24,7 @@
 #include <vector>
 
 //  -- Arctk --
+#include <arctk/disc/domain.hpp>
 #include <arctk/equip/entity.hpp>
 #include <arctk/math/vec.hpp>
 
@@ -32,10 +33,6 @@
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
-    namespace disc //! discretisation namespace
-    {
-        class Domain;
-    }               // namespace disc
     namespace equip //! equipment namespace
     {
         namespace entity //! entity namespace
@@ -70,7 +67,7 @@ namespace arc //! arctk namespace
             std::vector<std::pair<const equip::entity::Detector*, std::string>> _detectors;
 
             //  -- Domain --
-
+            disc::Domain _dom;
 
             //  -- Tree --
             size_t _max_depth;
