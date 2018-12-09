@@ -10,6 +10,7 @@
 
 //  == IMPORTS ==
 //  -- Arctk --
+#include <arctk/torus/sim.hpp>
 
 
 
