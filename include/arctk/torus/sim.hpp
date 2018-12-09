@@ -44,6 +44,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Bounds --
             const vec3 _min;
+            const vec3 _max;
 
 
             //  == INSTANTIATION ==
