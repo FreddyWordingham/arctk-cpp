@@ -77,6 +77,9 @@ namespace arc //! arctk namespace
             bool _pre_render;
             bool _post_render;
 
+            //  -- Output --
+            std::string _output_dir;
+
 
             //  == INSTANTIATION ==
           public:
