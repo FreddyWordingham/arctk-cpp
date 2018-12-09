@@ -123,6 +123,9 @@ namespace arc //! arctk namespace
 
         inline void Sim::set_tree_tar_tris(const size_t tar_tris_) noexcept
         {
+            assert(tar_tris_ > 0);
+
+            _tar_tris = tar_tris_;
         }
 
 
