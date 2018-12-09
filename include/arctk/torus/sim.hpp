@@ -25,12 +25,26 @@
 
 //  -- Arctk --
 #include <arctk/equip/entity.hpp>
-#include <arctk/equip/entity/light.hpp>
 #include <arctk/math/vec.hpp>
 
 
 
 //  == CLASS PROTOTYPES ==
+namespace arc //! arctk namespace
+{
+    namespace disc //! discretisation namespace
+    {
+        class Domain;
+    }               // namespace disc
+    namespace equip //! equipment namespace
+    {
+        namespace entity //! entity namespace
+        {
+            class Detector;
+            class Light;
+        } // namespace entity
+    }     // namespace equip
+} // namespace arc
 
 
 
@@ -56,9 +70,7 @@ namespace arc //! arctk namespace
             std::vector<std::pair<const equip::entity::Detector*, std::string>> _detectors;
 
             //  -- Domain --
-            const vec3            _min;
-            const vec3            _max;
-            std::array<size_t, 3> _res;
+
 
             //  -- Tree --
             size_t _max_depth;
@@ -102,6 +114,8 @@ namespace arc //! arctk namespace
             inline void set_pre_render_(bool pre_render_) noexcept;
             inline void set_post_render_(bool post_render_) noexcept;
             inline void set_output_dir(const std::string& output_dir_) noexcept;
+
+            //  -- Additions --
         };
 
 
