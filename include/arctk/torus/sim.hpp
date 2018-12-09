@@ -116,6 +116,12 @@ namespace arc //! arctk namespace
 
             //  -- Additions --
             inline void add_mat(const std::string& mat_id_, const opt::Material& mat_) noexcept;
+            template <typename T>
+            inline void add_entity(T&& ent_) noexcept;
+            template <typename T>
+            inline void add_light(T&& light_) noexcept;
+            template <typename T>
+            inline void add_detector(T&& det_, const std::string& dir_name_) noexcept;
         };
 
 

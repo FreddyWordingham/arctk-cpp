@@ -170,6 +170,26 @@ namespace arc //! arctk namespace
             _dom.add_mat(mat_id_, mat_);
         }
 
+        template <typename T>
+        inline void Sim::add_entity(T&& ent_) noexcept
+        {
+            static_assert(std::is_base_of<equip::Entity, T>::value);
+
+            _entities.emplace_back(std::make_unique<T>(ent_));
+        }
+
+        template <typename T>
+        inline void Sim::add_light(T&& light_) noexcept
+        {
+            static_assert(std::is_base_of<equip::entity::Light, T>::value);
+        }
+
+        template <typename T>
+        inline void Sim::add_detector(T&& det_, const std::string& dir_name_) noexcept
+        {
+            static_assert(std::is_base_of<equip::entity::Detector, T>::value);
+        }
+
 
 
     } // namespace torus
