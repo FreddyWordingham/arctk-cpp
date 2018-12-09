@@ -34,17 +34,17 @@ namespace arc //! arctk namespace
 
         //  == CONSTANTS ==
         //  -- Defaults --
-        DEFAULT_RESOLUTION
-        DEFAULT_MAX_DEPTH
-        DEFAULT_TAR_TRIS
-        DEFAULT_ROULETTE_STATUS
-        DEFAULT_ROULETTE_LIMIT
-        DEFAULT_ROULETTE_CHANCE
-        DEFAULT_UPDATE_DELTA
-        DEFAULT_NUM_THREADS
-        DEFAULT_PRE_RENDER
-        DEFAULT_POST_RENDER
-        DEFAULT_OUTPUT_DIR
+        constexpr const size_t       DEFAULT_RESOLUTION      = 11;
+        constexpr const size_t       DEFAULT_MAX_DEPTH       = 6;
+        constexpr const size_t       DEFAULT_TAR_TRIS        = 10;
+        constexpr const bool         DEFAULT_ROULETTE_STATUS = false;
+        constexpr const double       DEFAULT_ROULETTE_LIMIT  = 0.1;
+        constexpr const double       DEFAULT_ROULETTE_CHANCE = 0.1;
+        constexpr const unsigned int DEFAULT_UPDATE_DELTA    = 60000;
+        constexpr const size_t       DEFAULT_NUM_THREADS     = 1;
+        constexpr const bool         DEFAULT_PRE_RENDER      = false;
+        constexpr const bool         DEFAULT_POST_RENDER     = false;
+        constexpr const std::string  DEFAULT_OUTPUT_DIR      = "./";
 
 
 
