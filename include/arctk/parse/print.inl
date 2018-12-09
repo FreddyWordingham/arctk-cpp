@@ -58,6 +58,25 @@ namespace arc //! arctk namespace
                 return (stream_);
             }
 
+            //  -- Formatting --
+            inline std::string section(const std::string& title_, const size_t width_, const char ch_) noexcept
+            {
+                assert((title_.size() + 2) <= width_);
+                assert(width_ >= 2);
+
+                const size_t spare = width_ - title.size();
+                const size_t pre   = width_ / 2;
+                const size_t post  = spare - pre;
+
+                std::string sec(pre, ch_);
+                sec += ' ';
+                sec += title_;
+                sec += ' ';
+                sec += std::string(post, ch_);
+
+                return (sec);
+            }
+
 
 
         } // namespace print

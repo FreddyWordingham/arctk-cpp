@@ -40,6 +40,9 @@ namespace arc //! arctk namespace
             template <typename... A, size_t... I>
             inline std::ostream& tuple_print_helper(std::ostream& stream_, const std::tuple<A...>& tup_, const std::index_sequence<I...>& /*unused*/) noexcept;
 
+            //  -- Formatting --
+            inline std::string section(const std::string& title_, size_t width_, char ch_ = '-') noexcept;
+
 
 
         } // namespace print

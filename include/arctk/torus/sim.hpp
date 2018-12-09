@@ -126,8 +126,11 @@ namespace arc //! arctk namespace
             template <typename T>
             inline void add_detector(T&& det_, std::string dir_name_) noexcept;
 
-            //  -- Pre-Flight --
           private:
+            //  -- Printing --
+            inline void print_section(const std::string& title_) noexcept;
+
+            //  -- Pre-Flight --
             inline void pre_flight() const noexcept;
 
             //  -- Post-Flight --
