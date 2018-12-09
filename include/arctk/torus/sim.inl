@@ -239,7 +239,6 @@ namespace arc //! arctk namespace
         }
 
 
-
         //  -- Post-Flight --
         inline void Sim::post_flight() const noexcept
         {
@@ -247,6 +246,15 @@ namespace arc //! arctk namespace
 
 
             std::cout << "Pre-flight complete.\n";
+        }
+
+
+        //  -- Simulation --
+        inline void Sim::run() const noexcept
+        {
+            pre_flight();
+
+            post_flight();
         }
 
 
