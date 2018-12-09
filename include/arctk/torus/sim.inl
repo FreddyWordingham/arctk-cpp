@@ -21,11 +21,13 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <cstdlib>
 #include <iostream>
 
 //  -- Arctk --
 #include <arctk/equip/entity/detector.hpp>
 #include <arctk/equip/entity/light.hpp>
+#include <arctk/exit/error.hpp>
 
 
 
@@ -188,25 +190,33 @@ namespace arc //! arctk namespace
             static_assert(std::is_base_of<equip::entity::Light, T>::value);
 
             _entities.emplace_back(std::make_unique<T>(light_));
-
             _lights.emplace_back(dynamic_cast<equip::entity::Light*>(_entities.back().get()));
         }
 
         template <typename T>
-        inline void Sim::add_detector(T&& det_, const std::string& dir_name_) noexcept
+        inline void Sim::add_detector(T&& det_, std::string dir_name_) noexcept
         {
             static_assert(std::is_base_of<equip::entity::Detector, T>::value);
 
             assert(!dir_name_.empty());
 
-            _entities.emplace_back(std::make_unique<T>(det_));
-
-            _detectors.emplace_back(std::make_pair(dynamic_cast<equip::entity::Detector*>(_entities.back().get()), dir_name_));
-
-            if (_detectors.back().second.back() != '/')
+            if (dir_name_.back() != '/')
             {
-                _detectors.back().second += '/';
+                dir_name_ += '/';
             }
+
+            for (size_t i = 0; i < _detectors.size(); ++i)
+            {
+                if (_detectors[i] == dir_name_)
+                {
+                    std::cerr << "Error! Unable to add detector with directory name: `" << dir_name_ << "`, as directory name is already in use.\n";
+
+                    std::exit(exit::error::);
+                }
+            }
+
+            _entities.emplace_back(std::make_unique<T>(det_));
+            _detectors.emplace_back(std::make_pair(dynamic_cast<equip::entity::Detector*>(_entities.back().get()), dir_name_));
         }
 
 

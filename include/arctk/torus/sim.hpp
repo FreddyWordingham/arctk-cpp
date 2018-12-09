@@ -121,7 +121,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline void add_light(T&& light_) noexcept;
             template <typename T>
-            inline void add_detector(T&& det_, const std::string& dir_name_) noexcept;
+            inline void add_detector(T&& det_, std::string dir_name_) noexcept;
 
             //  -- Pre-Flight --
           private:

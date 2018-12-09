@@ -41,6 +41,7 @@ namespace arc //! arctk namespace
             //  -- File IO --
             constexpr const int FILE_OPEN_FAILED    = 130; //!< Unable to open a file.
             constexpr const int DIR_CREATION_FAILED = 131; //!< Unable to create a directory.
+            constexpr const int INVALID_DIR_NAME    = 132; //!< Invalid directory name.
 
             //  -- GUI --
             constexpr const int WINDOW_POINTER_INIT_FAILED = 140; //!< Unable initialise a glfw window pointer.
