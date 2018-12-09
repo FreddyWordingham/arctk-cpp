@@ -203,9 +203,9 @@ namespace arc //! arctk namespace
 
             _detectors.emplace_back(std::make_pair(dynamic_cast<equip::entity::Detector*>(_entities.back().get()), dir_name_));
 
-            if (_detectors.back().second().back() != '/')
+            if (_detectors.back().second.back() != '/')
             {
-                _detectors.back().second() += '/';
+                _detectors.back().second += '/';
             }
         }
 
