@@ -73,6 +73,10 @@ namespace arc //! arctk namespace
             unsigned int _update_delta;
             size_t       _num_threads;
 
+            //  -- Rendering --
+            bool _pre_render;
+            bool _post_render;
+
 
             //  == INSTANTIATION ==
           public:
