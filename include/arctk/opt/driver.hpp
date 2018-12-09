@@ -17,10 +17,6 @@
 //  == CLASS PROTOTYPES ==
 namespace arc //! arctk namespace
 {
-    namespace opt //! optical namespace
-    {
-        class Material;
-    }              // namespace opt
     namespace phys //! physics namespace
     {
         class Photon;
