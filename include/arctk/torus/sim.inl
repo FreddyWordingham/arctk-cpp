@@ -102,6 +102,14 @@ namespace arc //! arctk namespace
         }
 
 
+        inline ~Sim::Sim() noexcept
+        {
+            std::cout << "----------------------------------------------------------------\n\n"
+                      << "                      Simulation Complete\n"
+                      << "\n================================================================\n";
+        }
+
+
 
         //  == METHODS ==
         //  -- Setters --
