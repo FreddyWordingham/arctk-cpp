@@ -56,7 +56,7 @@ namespace arc //! arctk namespace
         constexpr const char*        DEFAULT_OUTPUT_DIR      = "./";
 
         //  -- Printing --
-        constexpr const size_t PRINT_WIDTH = 128;
+        constexpr const size_t PRINT_WIDTH = 64;
 
 
 
