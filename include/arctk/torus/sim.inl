@@ -50,11 +50,11 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Sim::Sim(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept
+        inline Sim::Sim(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const opt::Material& aether_) noexcept
           : _entities(0)
           , _lights(0)
           , _detectors(0)
-          , _dom(min_, max_, res_)
+          , _dom(min_, max_, res_, aether_id_, aether_)
           , _max_depth(DEFAULT_MAX_DEPTH)
           , _tar_tris(DEFAULT_TAR_TRIS)
           , _roulette(DEFAULT_ROULETTE_STATUS)
@@ -74,6 +74,7 @@ namespace arc //! arctk namespace
                 assert(res_[i] > 0);
                 assert((res_[i] % 2) == 1);
             }
+            assert(!aether_id_.empty());
 
             for (size_t i = 0; i < res_.size(); ++i)
             {

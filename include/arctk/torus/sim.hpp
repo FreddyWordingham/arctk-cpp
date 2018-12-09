@@ -39,8 +39,12 @@ namespace arc //! arctk namespace
         {
             class Detector;
             class Light;
-        } // namespace entity
-    }     // namespace equip
+        }         // namespace entity
+    }             // namespace equip
+    namespace opt //! optical namespace
+    {
+        class Material;
+    } // namespace opt
 } // namespace arc
 
 
@@ -93,7 +97,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Sim(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept;
+            inline Sim(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const opt::Material& aether_) noexcept;
 
 
             //  == METHODS ==
