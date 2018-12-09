@@ -24,6 +24,7 @@
 
 //  -- Arctk --
 #include <arctk/equip/entity.hpp>
+#include <arctk/equip/entity/light.hpp>
 #include <arctk/math/vec.hpp>
 
 
