@@ -247,7 +247,7 @@ namespace arc //! arctk namespace
         //  -- Pre-Flight --
         inline void Sim::pre_flight() const noexcept
         {
-            std::cout << parse::print::section("Pre-Flight", PRINT_WIDTH);
+            std::cout << parse::print::section("Pre-Flight", PRINT_WIDTH) << '\n';
 
             std::cout << "Pre-flight complete.\n";
         }
@@ -256,8 +256,7 @@ namespace arc //! arctk namespace
         //  -- Post-Flight --
         inline void Sim::post_flight() const noexcept
         {
-            std::cout << "Running pre-flight...\n";
-
+            std::cout << parse::print::section("Post-Flight", PRINT_WIDTH) << '\n';
 
             std::cout << "Pre-flight complete.\n";
         }
