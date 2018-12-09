@@ -66,9 +66,9 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Entities --
-            std::vector<std::unique_ptr<equip::Entity>>                         _entities;
-            std::vector<equip::entity::Light* const>                            _lights;
-            std::vector<std::pair<const equip::entity::Detector*, std::string>> _detectors;
+            std::vector<std::unique_ptr<equip::Entity>>                   _entities;
+            std::vector<equip::entity::Light*>                            _lights;
+            std::vector<std::pair<equip::entity::Detector*, std::string>> _detectors;
 
             //  -- Domain --
             disc::Domain _dom;
