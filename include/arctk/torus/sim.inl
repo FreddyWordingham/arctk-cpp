@@ -95,6 +95,23 @@ namespace arc //! arctk namespace
 
         inline void Sim::set_res(const std::array<size_t, 3>& res_) noexcept
         {
+            for (size_t i = 0; i < res_.size(); ++i)
+            {
+                assert(res_[i] > 0);
+                assert((res_[i] % 2) == 1);
+            }
+
+            for (size_t i = 0; i < res_.size(); ++i)
+            {
+                if ((res_[i] % 2) == 0)
+                {
+                    std::cout << "Warning! The resolution of the domain should be odd in all dimensions.\n";
+
+                    return;
+                }
+            }
+
+            _res = res_;
         }
 
 
