@@ -65,7 +65,7 @@ namespace arc //! arctk namespace
                 assert(width_ >= 2);
 
                 const size_t spare = width_ - title_.size() - 2;
-                const size_t pre   = width_ / 2;
+                const size_t pre   = spare / 2;
                 const size_t post  = spare - pre;
 
                 std::string sec(pre, ch_);
