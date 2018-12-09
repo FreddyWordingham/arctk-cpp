@@ -64,6 +64,11 @@ namespace arc //! arctk namespace
             size_t _max_depth;
             size_t _tar_tris;
 
+            //  -- Roulette --
+            bool   _roulette;
+            double _roulette_limit;
+            double _roulette_chance;
+
 
             //  == INSTANTIATION ==
           public:
