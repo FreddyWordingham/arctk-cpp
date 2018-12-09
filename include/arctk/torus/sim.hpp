@@ -18,6 +18,7 @@
 //  -- Std --
 
 //  -- Arctk --
+#include <arctk/math/vec.hpp>
 
 
 
@@ -42,6 +43,7 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Bounds --
+            const vec3 _min;
 
 
             //  == INSTANTIATION ==
