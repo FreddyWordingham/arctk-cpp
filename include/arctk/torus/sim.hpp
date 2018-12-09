@@ -69,6 +69,10 @@ namespace arc //! arctk namespace
             double _roulette_limit;
             double _roulette_chance;
 
+            //  -- Parallelisation --
+            unsigned int _update_delta;
+            size_t       _num_threads;
+
 
             //  == INSTANTIATION ==
           public:
