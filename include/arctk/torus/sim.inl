@@ -32,6 +32,22 @@ namespace arc //! arctk namespace
 
 
 
+        //  == CONSTANTS ==
+        //  -- Defaults --
+        DEFAULT_RESOLUTION
+        DEFAULT_MAX_DEPTH
+        DEFAULT_TAR_TRIS
+        DEFAULT_ROULETTE_STATUS
+        DEFAULT_ROULETTE_LIMIT
+        DEFAULT_ROULETTE_CHANCE
+        DEFAULT_UPDATE_DELTA
+        DEFAULT_NUM_THREADS
+        DEFAULT_PRE_RENDER
+        DEFAULT_POST_RENDER
+        DEFAULT_OUTPUT_DIR
+
+
+
         //  == INSTANTIATION ==
         //  -- Constructors --
         inline Sim::Sim(const vec3& min_, const vec3& max_) noexcept

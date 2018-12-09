@@ -45,7 +45,7 @@ namespace arc //! arctk namespace
 
 
 
-            //  == SETTINGS ==
+            //  == CONSTANTS ==
             //  -- Wavefront Keywords --
             constexpr const char* POS_KEYWORD  = "v";  //!< Wavefront file keyword identifying vertex positions.
             constexpr const char* NORM_KEYWORD = "vn"; //!< Wavefront file keyword identifying vertex normals.
