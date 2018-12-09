@@ -141,12 +141,12 @@ namespace arc //! arctk namespace
 
         inline bool Sim::set_pre_render_(const bool pre_render_) noexcept
         {
-            _pre_render = pre_render_
+            _pre_render = pre_render_;
         }
 
         inline bool Sim::set_post_render_(const bool post_render_) noexcept
         {
-            _post_render = post_render_
+            _post_render = post_render_;
         }
 
         inline void Sim::set_output_dir(const std::string& output_dir_) noexcept
