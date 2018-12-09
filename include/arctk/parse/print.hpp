@@ -57,7 +57,7 @@ template <typename T, size_t N>
 inline std::ostream& operator<<(std::ostream& stream_, const std::array<T, N>& arr_) noexcept;
 template <typename T>
 inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec_) noexcept;
-inline std::ostream& operator<<(std::ostream& stream_, const std::string& str_) noexcept;
+// inline std::ostream& operator<<(std::ostream& stream_, const std::string& str_) noexcept; TODO
 template <typename T, typename S>
 inline std::ostream& operator<<(std::ostream& stream_, const std::pair<T, S>& pair_) noexcept;
 template <typename... A>

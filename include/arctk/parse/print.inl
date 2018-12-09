@@ -156,12 +156,12 @@ inline std::ostream& operator<<(std::ostream& stream_, const std::vector<T>& vec
  *
  *  @return Reference to the stream post-print.
  */
-inline std::ostream& operator<<(std::ostream& stream_, const std::string& str_) noexcept
-{
-    stream_ << arc::consts::format::OPENERS[arc::consts::format::container::STRING] << str_.c_str() << arc::consts::format::CLOSERS[arc::consts::format::container::STRING];
+// inline std::ostream& operator<<(std::ostream& stream_, const std::string& str_) noexcept
+// {
+//     stream_ << arc::consts::format::OPENERS[arc::consts::format::container::STRING] << str_.c_str() << arc::consts::format::CLOSERS[arc::consts::format::container::STRING];
 
-    return (stream_);
-}
+//     return (stream_);
+// }
 
 /**
  *  Print a pair to a stream.
