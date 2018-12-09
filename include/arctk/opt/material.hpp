@@ -22,6 +22,7 @@
 
 //  -- Arctk --
 #include <arctk/math/vec.hpp>
+#include <arctk/opt/driver.hpp>
 
 
 
