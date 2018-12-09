@@ -35,7 +35,6 @@ namespace arc //! arctk namespace
 
         //  == CONSTANTS ==
         //  -- Defaults --
-        constexpr const size_t       DEFAULT_RESOLUTION      = 11;
         constexpr const size_t       DEFAULT_MAX_DEPTH       = 6;
         constexpr const size_t       DEFAULT_TAR_TRIS        = 10;
         constexpr const bool         DEFAULT_ROULETTE_STATUS = false;
@@ -51,13 +50,11 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Sim::Sim(const vec3& min_, const vec3& max_) noexcept
+        inline Sim::Sim(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept
           : _entities(0)
           , _lights(0)
           , _detectors(0)
-          , _min(min_)
-          , _max(max_)
-          , _res({{DEFAULT_RESOLUTION, DEFAULT_RESOLUTION, DEFAULT_RESOLUTION}})
+          , _dom(min_, max_, res_)
           , _max_depth(DEFAULT_MAX_DEPTH)
           , _tar_tris(DEFAULT_TAR_TRIS)
           , _roulette(DEFAULT_ROULETTE_STATUS)
@@ -72,29 +69,6 @@ namespace arc //! arctk namespace
             assert(min_.x < max_.x);
             assert(min_.y < max_.y);
             assert(min_.z < max_.z);
-        }
-
-
-
-        //  == METHODS ==
-        //  -- Setters --
-        inline void Sim::set_res(const size_t res_) noexcept
-        {
-            assert(res_ > 0);
-            assert(res_ % 2 == 1);
-
-            if ((res_ % 2) == 0)
-            {
-                std::cout << "Warning! The resolution of the domain should be odd in all dimensions.\n";
-
-                return;
-            }
-
-            _res = std::array<size_t, 3>({{res_, res_, res_}});
-        }
-
-        inline void Sim::set_res(const std::array<size_t, 3>& res_) noexcept
-        {
             for (size_t i = 0; i < res_.size(); ++i)
             {
                 assert(res_[i] > 0);
@@ -107,13 +81,15 @@ namespace arc //! arctk namespace
                 {
                     std::cout << "Warning! The resolution of the domain should be odd in all dimensions.\n";
 
-                    return;
+                    break;
                 }
             }
-
-            _res = res_;
         }
 
+
+
+        //  == METHODS ==
+        //  -- Setters --
         inline void Sim::set_tree_max_depth(const size_t max_depth_) noexcept
         {
             assert(max_depth_ > 0);

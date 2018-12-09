@@ -93,7 +93,7 @@ namespace arc //! arctk namespace
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            inline Sim(const vec3& min_, const vec3& max_) noexcept;
+            inline Sim(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_) noexcept;
 
 
             //  == METHODS ==
