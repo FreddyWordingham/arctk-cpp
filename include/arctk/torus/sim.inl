@@ -75,6 +75,22 @@ namespace arc //! arctk namespace
 
 
 
+        //  == METHODS ==
+        //  -- Setters --
+        inline void Sim::set_res(const size_t res_) noexcept
+        {
+            assert(res_ > 0);
+            assert(res_ % 2 != 0);
+
+            _res = std::array<size_t, 3>(res_, res_, res_);
+        }
+
+        inline void Sim::set_res(const std::array<size_t, 3>& res_) noexcept
+        {
+        }
+
+
+
     } // namespace torus
 } // namespace arc
 

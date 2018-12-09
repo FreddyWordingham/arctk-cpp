@@ -89,6 +89,9 @@ namespace arc //! arctk namespace
 
             //  == METHODS ==
           public:
+            //  -- Setters --
+            inline void set_res(size_t res_) noexcept;
+            inline void set_res(const std::array<size_t, 3>& res_) noexcept;
         };
 
 
