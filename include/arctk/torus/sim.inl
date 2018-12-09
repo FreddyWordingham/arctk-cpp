@@ -192,6 +192,10 @@ namespace arc //! arctk namespace
         inline void Sim::add_detector(T&& det_, const std::string& dir_name_) noexcept
         {
             static_assert(std::is_base_of<equip::entity::Detector, T>::value);
+
+            _entities.emplace_back(std::make_unique<T>(det_));
+
+            _detectors.emplace_back(std::make_pair(dynamic_cast<equip::entity::Detector*>(_entities.back().get()), dir_name_));
         }
 
 
