@@ -20,6 +20,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 
 
 
@@ -33,6 +34,28 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
+        inline Sim::Sim(const vec3& min_, const vec3& max_) noexcept
+          : _entities(0)
+          , _lights(0)
+          , _detectors(0)
+          , _min(min_)
+          , _max(max_)
+          , _res({{DEFAULT_RESOLUTION, DEFAULT_RESOLUTION, DEFAULT_RESOLUTION}})
+          , _max_depth(DEFAULT_MAX_DEPTH)
+          , _tar_tris(DEFAULT_TAR_TRIS)
+          , _roulette(DEFAULT_ROULETTE_STATUS)
+          , _roulette_limit(DEFAULT_ROULETTE_LIMIT)
+          , _roulette_chance(DEFAULT_ROULETTE_CHANCE)
+          , _update_delta(DEFAULT_UPDATE_DELTA)
+          , _num_threads(DEFAULT_NUM_THREADS)
+          , _pre_render(DEFAULT_PRE_RENDER)
+          , _post_render(DEFAULT_POST_RENDER)
+          , _output_dir(DEFAULT_OUTPUT_DIR)
+        {
+            assert(min_.x < max_.x);
+            assert(min_.y < max_.y);
+            assert(min_.z < max_.z);
+        }
 
 
 
