@@ -50,6 +50,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Entities --
             std::vector<std::unique_ptr<equip::Entity>> _entities;
+            std::vector<equip::entity::Light* const>    _lights;
 
             //  -- Domain --
             const vec3            _min;
