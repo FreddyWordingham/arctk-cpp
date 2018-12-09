@@ -115,6 +115,7 @@ namespace arc //! arctk namespace
             inline void set_output_dir(const std::string& output_dir_) noexcept;
 
             //  -- Additions --
+            inline void add_mat(const std::string& mat_id_, const opt::Material& mat_) noexcept;
         };
 
 

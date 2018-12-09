@@ -162,6 +162,15 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Additions --
+        inline void Sim::add_mat(const std::string& mat_id_, const opt::Material& mat_) noexcept
+        {
+            assert(!mat_id_.empty());
+
+            _dom.add_mat(mat_id_, mat_);
+        }
+
+
 
     } // namespace torus
 } // namespace arc
