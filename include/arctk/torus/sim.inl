@@ -23,10 +23,13 @@
 #include <algorithm>
 #include <cassert>
 #include <cstdlib>
+#include <fstream>
 #include <iostream>
 #include <iterator>
 
 //  -- Arctk --
+#include <arctk/config/build.hpp>
+#include <arctk/config/version.hpp>
 #include <arctk/equip/entity/detector.hpp>
 #include <arctk/equip/entity/light.hpp>
 #include <arctk/exit/error.hpp>
@@ -287,6 +290,17 @@ namespace arc //! arctk namespace
 
         inline void Sim::write_pre_flight_data() const noexcept
         {
+            std::ofstream file(_output_dir + PRE_FLIGHT_FILENAME + ".txt");
+
+            file << "Built using the Arctk library.\n\n";
+
+            file << "Arctk version          : " << config::version::MAJOR << '.' << config::version::MINOR << '.' << config::version::PATCH << '\n'
+                 << "Arctk directory        : " << config::build::DIR << '\n'
+                 << "Arctk branch           : " << config::build::BRANCH << '\n'
+                 << "Arctk build hash       : " << config::build::HASH << '\n'
+                 << "Arctk compiler         : " << config::build::COMPILER << '\n'
+                 << "Arctk build type       : " << config::build::TYPE << '\n'
+                 << "Arctk build date       : " << config::build::DATE << '\n';
         }
 
 
