@@ -361,6 +361,15 @@ namespace arc //! arctk namespace
             std::cout << "Constructing tree.\n";
             tree::Root tree(_dom.min(), _dom.max(), _entities, _max_depth, _tar_tris);
 
+            if (_pre_render)
+            {
+#ifdef RENDER
+                render(tree);
+#else
+                std::cout << "Warning! Can not perform pre-render as rendering is disabled.\n";
+#endif
+            }
+
             for (size_t t = 0; t < _emission_times.size(); ++t)
             {
                 std::cout << "\nRunning emission timepoint " << t << " of " << _emission_times.size() << ".\n";
@@ -374,6 +383,15 @@ namespace arc //! arctk namespace
                 std::cout << "Saving domain datacube.\n";
                 _dom.save(_output_dir + DOMAIN_OUTPUT_DIR, _time_str);
                 save_detector_data();
+            }
+
+            if (_post_render)
+            {
+#ifdef RENDER
+                render(tree, paths);
+#else
+                std::cout << "Warning! Can not perform post-render as rendering is disabled.\n";
+#endif
             }
 
             post_flight();
