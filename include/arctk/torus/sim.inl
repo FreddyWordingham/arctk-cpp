@@ -348,6 +348,7 @@ namespace arc //! arctk namespace
                 }
 
                 create_time_dir(t);
+                _dom.save(_output_dir + _time_dir);
                 save_detector_data();
 
                 std::cout << '\n';
