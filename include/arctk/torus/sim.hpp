@@ -103,7 +103,7 @@ namespace arc //! arctk namespace
             inline ~Sim();
 
             //  -- Initialisation --
-            inline void init_output_dir() const noexcept;
+            inline std::string init_output_dir() const noexcept;
 
 
             //  == METHODS ==

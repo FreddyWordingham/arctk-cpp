@@ -113,7 +113,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Initialisation --
-        inline void Sim::init_output_dir() const noexcept
+        inline std::string Sim::init_output_dir() const noexcept
         {
             std::string output_dir("output/");
             output_dir += parse::print::timestamp("%Y%m%d");
