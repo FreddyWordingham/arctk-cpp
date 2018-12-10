@@ -20,6 +20,7 @@
 #include <ctime>
 #include <iomanip>
 #include <iostream>
+#include <sstream>
 
 //  -- Arctk --
 #include <arctk/consts/format.hpp>
@@ -85,6 +86,12 @@ namespace arc //! arctk namespace
 
             inline std::string timestamp(const std::string format_) noexcept
             {
+                auto now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+
+                std::stringstream stamp;
+                stamp << std::put_time(std::localtime(&now), format_.c_str()) << "\n";
+
+                return (stamp.str());
             }
 
 
