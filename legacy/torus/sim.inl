@@ -427,15 +427,6 @@ namespace arc //! arctk namespace
 
 
         //  -- Additions --
-        /**
-         *  Add an entity to the simulation.
-         *
-         *  @tparam T   Type of entity to add.
-         *
-         *  @param  ent_    Entity to add to the simulation.
-         *
-         *  @pre    equip::Entity must be a base of T.
-         */
         template <typename T>
         inline void Sim::add_entity(T&& ent_) noexcept
         {
@@ -444,36 +435,18 @@ namespace arc //! arctk namespace
             _entities.emplace_back(std::make_unique<T>(ent_));
         }
 
-        /**
-         *  Add a light source to the simulation.
-         *
-         *  @tparam T   Type of light source to add.
-         *
-         *  @param  light_  Light source to add to the simulation.
-         *
-         *  @pre    equip::entity::Light must be a base of T.
-         */
         template <typename T>
-        inline void Sim::add_light(T&& light_) noexcept
+        inline void Sim::add_light(T&& light_, const double ratio_) noexcept
         {
             static_assert(std::is_base_of<equip::entity::Light, T>::value);
 
+            assert(ratio_ > 0.0);
+
             _entities.emplace_back(std::make_unique<T>(light_));
 
-            _lights.emplace_back(dynamic_cast<equip::entity::Light*>(_entities.back().get()));
+            _lights.emplace_back(std::make_pair(dynamic_cast<equip::entity::Light*>(_entities.back().get()), ratio_));
         }
 
-        /**
-         *  Add a detector to the simulation.
-         *
-         *  @tparam T   Type of detector to add.
-         *
-         *  @param  det_    Detector to add to the simulation.
-         *  @param  path_   Path to the file to save the detector output to.
-         *
-         *  @pre    equip::entity::Detector must be a base of T.
-         *  @pre    path_ may not be empty.
-         */
         template <typename T>
         inline void Sim::add_detector(T&& det_, const std::string& path_) noexcept
         {

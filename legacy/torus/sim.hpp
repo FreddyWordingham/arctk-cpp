@@ -144,7 +144,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline void add_entity(T&& ent_) noexcept;
             template <typename T>
-            inline void add_light(T&& light_) noexcept;
+            inline void add_light(T&& light_, double ratio_ = 1.0) noexcept;
             template <typename T>
             inline void add_detector(T&& det_, const std::string& path_) noexcept;
 
