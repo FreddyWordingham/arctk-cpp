@@ -70,8 +70,9 @@ namespace arc //! arctk namespace
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        inline Sim::Sim(const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const opt::Material& aether_) noexcept
-          : _entities(0)
+        inline Sim::Sim(const unsigned long int num_phot_, const vec3& min_, const vec3& max_, const std::array<size_t, 3>& res_, const std::string& aether_id_, const opt::Material& aether_) noexcept
+          : _num_phot(num_phot_)
+          , _entities(0)
           , _lights(0)
           , _detectors(0)
           , _dom(min_, max_, res_, aether_id_, aether_)
