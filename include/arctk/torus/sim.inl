@@ -458,7 +458,7 @@ namespace arc //! arctk namespace
                     std::vector<std::future<std::vector<std::vector<gui::Point>>>> threads;
                     for (size_t i = 0; i < _num_threads; ++i)
                     {
-                        threads.emplace_back(std::async(&Sim::simulate_thread, this, l, _num_phot_per_light[l], &thread_phot, std::cref(tree)));
+                        threads.emplace_back(std::async(&Sim::simulate_thread, this, i, t, l, _num_phot_per_light[l], &thread_phot, std::cref(tree)));
                     }
 
                     for (size_t i = 0; i < threads.size(); ++i)
@@ -518,6 +518,19 @@ namespace arc //! arctk namespace
 
                 std::this_thread::sleep_for(std::chrono::milliseconds(_update_delta));
             }
+        }
+
+        inline std::vector<std::vector<gui::Point>> Sim::simulate_thread(const size_t thread_index_, const size_t time_index_, const size_t light_index_, const unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_,
+                                                                         const tree::Root& tree_) noexcept
+        {
+            std::vector<std::vector<gui::Point>> paths;
+
+            while (math::container::sum(*thread_phot_) < num_phot_)
+            {
+                ++(*thread_phot_)[thread_index_];
+            }
+
+            return (paths);
         }
 
 
