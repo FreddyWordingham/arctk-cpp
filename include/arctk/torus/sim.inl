@@ -31,6 +31,7 @@
 #include <arctk/equip/entity/light.hpp>
 #include <arctk/exit/error.hpp>
 #include <arctk/parse/print.hpp>
+#include <arctk/sys/file.hpp>
 
 
 
@@ -251,6 +252,13 @@ namespace arc //! arctk namespace
             std::cout << '\n' << parse::print::section("Pre-Flight", PRINT_WIDTH) << '\n';
 
             std::cout << "Pre-flight complete.\n";
+        }
+
+        inline void Sim::create_output_dirs() const noexcept
+        {
+            std::cout << "Creating output directories...";
+
+            sys::file::
         }
 
 
