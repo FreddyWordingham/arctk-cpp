@@ -359,7 +359,7 @@ namespace arc //! arctk namespace
             std::cout << '\n' << parse::print::section("Simulation", PRINT_WIDTH) << '\n';
 
             std::cout << "Constructing tree.\n";
-            tree::Root tree(dom.min(), dom.max(), _entities, _max_depth, _tar_tris);
+            tree::Root tree(_dom.min(), _dom.max(), _entities, _max_depth, _tar_tris);
 
             for (size_t t = 0; t < _emission_times.size(); ++t)
             {
