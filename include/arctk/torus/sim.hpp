@@ -147,11 +147,12 @@ namespace arc //! arctk namespace
 
             //  -- Post-Flight --
             inline void post_flight() const noexcept;
-            inline void save_detector_data() const noexcept;
 
             //  -- Simulation --
           public:
             inline void run() const noexcept;
+            inline void create_time_dir() const noexcept;
+            inline void save_detector_data() const noexcept;
         };
 
 

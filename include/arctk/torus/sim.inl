@@ -329,12 +329,6 @@ namespace arc //! arctk namespace
         inline void Sim::post_flight() const noexcept
         {
             std::cout << '\n' << parse::print::section("Post-Flight", PRINT_WIDTH) << '\n';
-
-            std::cout << "Saving domain datacube.\n";
-            _dom.save(_output_dir);
-
-            std::cout << "Saving detector data.\n";
-            save_detector_data();
         }
 
         inline void Sim::save_detector_data() const noexcept
