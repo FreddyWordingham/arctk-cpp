@@ -28,9 +28,13 @@
 #include <algorithm>
 #include <cassert>
 #include <cstdlib>
+#include <filesystem>
 #include <fstream>
+#include <future>
 #include <iostream>
 #include <iterator>
+#include <thread>
+#include <type_traits>
 
 //  -- Arctk --
 #include <arctk/config/build.hpp>
@@ -453,6 +457,9 @@ namespace arc //! arctk namespace
                 for (size_t l = 0; l < _lights.size(); ++l)
                 {
                     std::cout << "Running light " << l << " of " << _lights.size() << ".\n";
+
+                    std::vector<unsigned long int> thread_phot(_num_threads);
+                    std::thread
                 }
 
                 std::cout << "Saving domain datacube.\n";
