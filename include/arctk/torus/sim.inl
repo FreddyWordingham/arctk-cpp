@@ -108,7 +108,7 @@ namespace arc //! arctk namespace
         //  -- Destructors --
         inline Sim::~Sim()
         {
-            std::cout << '\n' << std::string(PRINT_WIDTH, '-') << "\n\n" << parse::print::section("Simulation Complete.", ' ') << "\n\n" << std::string(PRINT_WIDTH, '=') << '\n';
+            std::cout << '\n' << std::string(PRINT_WIDTH, '-') << "\n\n" << parse::print::section("Simulation Complete.", ' ', PRINT_WIDTH) << "\n\n" << std::string(PRINT_WIDTH, '=') << '\n';
         }
 
 
