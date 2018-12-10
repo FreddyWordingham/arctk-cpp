@@ -251,6 +251,8 @@ namespace arc //! arctk namespace
         {
             std::cout << '\n' << parse::print::section("Pre-Flight", PRINT_WIDTH) << '\n';
 
+            create_output_dirs();
+
             std::cout << "Pre-flight complete.\n";
         }
 
@@ -258,7 +260,7 @@ namespace arc //! arctk namespace
         {
             std::cout << "Creating output directories...";
 
-            sys::file::
+            std::filesystem::create_directories(_output_dir);
         }
 
 
