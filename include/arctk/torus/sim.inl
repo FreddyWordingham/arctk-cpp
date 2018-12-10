@@ -376,7 +376,7 @@ namespace arc //! arctk namespace
         inline void Sim::update_time_str(const size_t time_index_) noexcept
         {
             std::stringstream time_str;
-            time_str << _emission_times[time_index_] << '_';
+            time_str << '_' << _emission_times[time_index_];
 
             _time_str = time_str.str();
         }
