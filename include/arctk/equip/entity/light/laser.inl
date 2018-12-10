@@ -40,7 +40,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
                 //  -- Constructors --
                 inline Laser::Laser(const geom::shape::Mesh& surf_, const std::string& mat_id_, opt::Material* const mat_, const double power_, const bool kill_, const double wavelength_) noexcept
-                  : Light(surf_, mat_id_, mat_, power_, num_phot_, kill_)
+                  : Light(surf_, mat_id_, mat_, power_, kill_)
                   , _wavelength(wavelength_)
                 {
                     assert(!mat_id_.empty());
