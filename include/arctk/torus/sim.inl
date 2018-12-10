@@ -463,7 +463,7 @@ namespace arc //! arctk namespace
 
                     for (size_t i = 0; i < threads.size(); ++i)
                     {
-                        paths.emplace_back(threads[t].get());
+                        paths.emplace_back(threads[i].get());
                     }
 
                     reporter.join();
