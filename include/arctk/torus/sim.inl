@@ -370,13 +370,7 @@ namespace arc //! arctk namespace
             size_t                  index        = 0;
             for (size_t i = 0; i < missing_phot; ++i)
             {
-                ++_num_phot_per_light[index];
-
-                ++index;
-                if (index >= _lights.size())
-                {
-                    index = 0;
-                }
+                ++_num_phot_per_light[i % missing_phot];
             }
 
             assert(math::container::sum(_num_phot_per_light) == _num_phot);
@@ -461,7 +455,9 @@ namespace arc //! arctk namespace
                     std::vector<unsigned long int> thread_phot(_num_threads);
                     std::thread                    reporter(&Sim::report, this, l, _num_phot_per_light[l], &thread_phot);
 
-
+                    for (size_t i = 0; i < _num_phot; ++i)
+                    {
+                    }
 
                     reporter.join();
                 }
