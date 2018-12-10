@@ -145,8 +145,9 @@ namespace arc //! arctk namespace
             inline void print_section(const std::string& title_) noexcept;
 
             //  -- Pre-Flight --
-            inline void pre_flight() const noexcept;
+            inline void pre_flight() noexcept;
             inline void validate_parameters() const noexcept;
+            inline void calc_num_phot_per_light() noexcept;
             inline void create_output_dirs() const noexcept;
             inline void write_pre_flight_data() const noexcept;
 

@@ -313,7 +313,7 @@ namespace arc //! arctk namespace
 
 
         //  -- Pre-Flight --
-        inline void Sim::pre_flight() const noexcept
+        inline void Sim::pre_flight() noexcept
         {
             std::cout << '\n' << parse::print::section("Pre-Flight", PRINT_WIDTH) << '\n';
 
@@ -343,6 +343,11 @@ namespace arc //! arctk namespace
 
                 std::exit(exit::error::INVALID_SIM_PARAMETER);
             }
+        }
+
+        inline void Sim::calc_num_phot_per_light() noexcept
+        {
+            _num_phot_per_light = std::vector<unsigned long int>(_lights.size());
         }
 
         inline void Sim::create_output_dirs() const noexcept
