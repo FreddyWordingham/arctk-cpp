@@ -61,7 +61,7 @@ namespace arc //! arctk namespace
         constexpr const bool         DEFAULT_POST_RENDER     = false;
 
         //  -- Output --
-        constexpr const char* DOMAIN_OUTPUT_DIR    = "domain";
+        constexpr const char* DOMAIN_OUTPUT_DIR    = "domain/";
         constexpr const char* OUTPUT_TIME_FORMAT   = "%Y%m%d_%H%M%S";
         constexpr const char* PRE_FLIGHT_FILENAME  = "pre_flight_data";
         constexpr const char* POST_FLIGHT_FILENAME = "post_flight_data";
@@ -363,7 +363,7 @@ namespace arc //! arctk namespace
                 }
 
                 std::cout << "Saving domain datacube.\n";
-                _dom.save(_output_dir + _time_str);
+                _dom.save(_output_dir + DOMAIN_OUTPUT_DIR + _time_str);
                 save_detector_data();
             }
 
