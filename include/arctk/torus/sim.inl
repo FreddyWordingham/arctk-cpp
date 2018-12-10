@@ -347,13 +347,13 @@ namespace arc //! arctk namespace
             for (size_t t = 0; t < _emission_times.size(); ++t)
             {
                 std::cout << "\nRunning emission timepoint " << t << " of " << _emission_times.size() << ".\n";
+                update_time_str(t);
 
                 for (size_t l = 0; l < _lights.size(); ++l)
                 {
                     std::cout << "Running light " << l << " of " << _lights.size() << ".\n";
                 }
 
-                create_time_dir(t);
                 std::cout << "Saving domain datacube.\n";
                 _dom.save(_output_dir + _time_dir);
                 save_detector_data();
@@ -362,15 +362,12 @@ namespace arc //! arctk namespace
             post_flight();
         }
 
-        inline void Sim::create_time_dir(const size_t time_index_) noexcept
+        inline void Sim::update_time_str(const size_t time_index_) noexcept
         {
-            std::stringstream dir_name;
-            dir_name << _emission_times[time_index_] << '/';
+            std::stringstream time_str;
+            time_str << _emission_times[time_index_] << '_';
 
-            _time_dir = dir_name.str();
-
-            std::cout << "Creating time output directory: " << _time_dir << '\n';
-            std::filesystem::create_directories(_output_dir + _time_dir);
+            _time_str = time_str.str();
         }
 
         inline void Sim::save_detector_data() const noexcept
