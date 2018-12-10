@@ -503,7 +503,7 @@ namespace arc //! arctk namespace
             }
         }
 
-        inline void Sim::reporter(const size_t light_index_, const unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_) const noexcept
+        inline void Sim::report(const size_t light_index_, const unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_) const noexcept
         {
             unsigned long int total = 0;
 

@@ -160,7 +160,7 @@ namespace arc //! arctk namespace
             inline void run() noexcept;
             inline void update_time_str(size_t time_index_) noexcept;
             inline void save_detector_data() const noexcept;
-            inline void reporter(size_t light_index_, unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_) const noexcept;
+            inline void report(size_t light_index_, unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_) const noexcept;
 
           private:
             //  -- Rendering --
