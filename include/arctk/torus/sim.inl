@@ -350,9 +350,26 @@ namespace arc //! arctk namespace
             for (size_t t = 0; t < _emission_times.size(); ++t)
             {
                 std::cout << "Running emission timepoint " << t << " of " << _emission_times.size() << ".\n";
+
+                create_time_dir(t);
             }
 
             post_flight();
+        }
+
+        inline void Sim::create_time_dir(const size_t time_index_) const noexcept
+        {
+            std::stringstream dir_name;
+            dir_name << _emission_times[time_index_] << '/';
+
+            _time_dir = dir_name.str();
+
+            std::cout << "Creating time output directory: " << _time_dir << '\n';
+            std::filesystem::create_directories(_output_dir + _time_dir);
+        }
+
+        inline void Sim::save_detector_data() const noexcept
+        {
         }
 
 

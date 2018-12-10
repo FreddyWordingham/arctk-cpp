@@ -151,7 +151,7 @@ namespace arc //! arctk namespace
           public:
             //  -- Simulation --
             inline void run() const noexcept;
-            inline void create_time_dir() const noexcept;
+            inline void create_time_dir(size_t time_index_) const noexcept;
             inline void save_detector_data() const noexcept;
         };
 
