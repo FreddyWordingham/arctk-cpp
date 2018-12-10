@@ -67,7 +67,7 @@ namespace arc //! arctk namespace
           private:
             //  -- Entities --
             std::vector<std::unique_ptr<equip::Entity>>                   _entities;
-            std::vector<equip::entity::Light*>                            _lights;
+            std::vector<std::pair<equip::entity::Light*, const double>>   _lights;
             std::vector<std::pair<equip::entity::Detector*, std::string>> _detectors;
 
             //  -- Domain --
