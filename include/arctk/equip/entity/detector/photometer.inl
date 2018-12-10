@@ -59,7 +59,6 @@ namespace arc //! arctk namespace
                 void Photometer::save(const std::string& path_) const noexcept
                 {
                     assert(!path_.empty());
-                    assert(path_.back() == '/');
 
                     std::ofstream file(path_ + "count.dat");
 
