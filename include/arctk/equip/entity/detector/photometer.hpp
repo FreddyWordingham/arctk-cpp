@@ -66,7 +66,8 @@ namespace arc //! arctk namespace
                     const bool _double_sided; //!< True if back hits are counted.
 
                     //  -- Data --
-                    double _total_weight; //!< Total statistical weight of photons hitting the detector.
+                    unsigned long int _total_hits;   //!< Total number of photons hitting the detector.
+                    double            _total_weight; //!< Total statistical weight of photons hitting the detector.
 
 
                     //  == INSTANTIATION ==
