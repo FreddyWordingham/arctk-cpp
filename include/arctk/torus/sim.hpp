@@ -92,6 +92,7 @@ namespace arc //! arctk namespace
 
             //  -- Output --
             std::string _output_dir;
+            std::string _time_dir;
 
 
             //  == INSTANTIATION ==
