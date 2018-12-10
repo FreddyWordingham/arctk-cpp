@@ -81,8 +81,7 @@ namespace arc //! arctk namespace
 
                 //  -- Power --
               private:
-                const double            _power;    //!< Power of the light.
-                const unsigned long int _num_phot; //!< Number of photons for the light source to emit.
+                const double _power; //!< Power of the light.
               protected:
                 const double _phot_power; //!< Power of each photon to be emitted from the light source.
 
