@@ -347,7 +347,35 @@ namespace arc //! arctk namespace
 
         inline void Sim::calc_num_phot_per_light() noexcept
         {
+            assert(_num_phot >= _lights.size());
+
             _num_phot_per_light = std::vector<unsigned long int>(_lights.size());
+
+            double total_ratio = 0.0;
+            for (size_t i = 0; i < _lights.size(); ++i)
+            {
+                total_ratio += _lights[i].second;
+            }
+
+            for (size_t i = 0; i < _lights.size(); ++i)
+            {
+                _num_phot_per_light[i] = _num_phot * (_lights[i].second / total_ratio);
+            }
+
+            const unsigned long int excess_phot = math::container::sum(_num_phot_per_light) - _num_phot;
+            size_t                  index       = 0;
+            for (size_t i = 0; i < excess_phot; ++i)
+            {
+                --_num_phot_per_light[index];
+
+                ++index;
+                if (index >= _lights.size())
+                {
+                    index = 0;
+                }
+            }
+
+            assert(math::container::sum(_num_phot_per_light) == _num_phot);
         }
 
         inline void Sim::create_output_dirs() const noexcept
