@@ -319,6 +319,8 @@ namespace arc //! arctk namespace
 
             validate_parameters();
 
+            calc_num_phot_per_light();
+
             create_output_dirs();
 
             write_pre_flight_data();
@@ -331,6 +333,13 @@ namespace arc //! arctk namespace
             if (_emission_times.empty())
             {
                 std::cerr << "Error! Emission times list must contain at least one value.\n";
+
+                std::exit(exit::error::INVALID_SIM_PARAMETER);
+            }
+
+            if (_num_phot < _lights.size())
+            {
+                std::cerr << "Error! Number of photons to simulate must be at least the number of light sources.\n";
 
                 std::exit(exit::error::INVALID_SIM_PARAMETER);
             }
