@@ -57,14 +57,14 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
                 //  -- Saving --
-                void Photometer::save(const std::string& path_) const noexcept
+                void Photometer::save(const std::string& path_, const std::string& time_str_) const noexcept
                 {
                     assert(!path_.empty());
 
-                    std::ofstream weight_file(path_ + "weight.dat");
+                    std::ofstream weight_file(path_ + "weight" + time_str_ + ".dat");
                     weight_file << "Total weight : " << _total_weight << '\n';
 
-                    std::ofstream hit_file(path_ + "hit.dat");
+                    std::ofstream hit_file(path_ + "hit" + time_str_ + ".dat");
                     hit_file << "Total weight : " << _total_hits << '\n';
                 }
 
