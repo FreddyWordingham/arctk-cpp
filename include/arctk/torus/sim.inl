@@ -15,6 +15,11 @@
 
 
 //  == MACROS ==
+#ifdef RENDER
+#define TRACK paths.back().emplace_back(gui::Point(glm::vec3(phot.pos().x, phot.pos().y, phot.pos().z), static_cast<float>(phot.time()), static_cast<float>(phot.wavelength()), 0.0f)); //!< Photon tracking macro.
+#else
+#define TRACK ; //!< Photon tracking placeholder macro.
+#endif
 
 
 
@@ -39,6 +44,24 @@
 #include <arctk/sys/file.hpp>
 #include <arctk/tree/node/leaf.hpp>
 #include <arctk/tree/root.hpp>
+#ifdef RENDER
+#include <arctk/gui/actor.hpp>
+#include <arctk/gui/camera/fly.hpp>
+#include <arctk/gui/keymap.hpp>
+#include <arctk/gui/lens/perspective.hpp>
+#include <arctk/gui/shader/ambient.hpp>
+#include <arctk/gui/shader/normal.hpp>
+#include <arctk/gui/shader/ray.hpp>
+#include <arctk/gui/shader/specular.hpp>
+#include <arctk/gui/window.hpp>
+#endif
+
+//  -- Graphical --
+#ifdef RENDER
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
+#endif
 
 
 
@@ -423,6 +446,110 @@ namespace arc //! arctk namespace
         //  -- Rendering --
         inline void Sim::render(const tree::Root& tree_, const std::vector<std::vector<std::vector<gui::Point>>>& paths_) const noexcept
         {
+#ifdef RENDER
+            gui::Window win("Arc::Torus", 1600, 1200, 4);
+            win.set_clear_col(glm::vec4(0.0f, 0.1f, 0.2f, 0.0f));
+
+            gui::lens::Perspective lens(70.0f, 1600.0f / 1200.0f);
+
+            const float scale = powf(10.0f, floorf(log10f(static_cast<float>((_max - _min).mag()) / 10.0f)));
+            std::cout << "Graphical scale unit: " << scale << "m\n";
+
+            gui::camera::Fly cam(glm::vec3((_max.x * 2) - _min.x, (_max.y * 2) - _min.y, (_max.z * 2) - _min.z), glm::vec3(_min.x - _max.x, _min.y - _max.y, _min.z - _max.z), glm::vec3(0.0f, 0.0f, 1.0f), scale / 10.0f);
+
+            gui::Keymap map;
+            map.use_fly_controls(&cam);
+
+            gui::shader::Ambient  amb_shader;
+            gui::shader::Normal   norm_shader;
+            gui::shader::Specular spec_shader;
+            gui::shader::Ray      ray_shader;
+
+            gui::Actor grid = gui::actor::grid(glm::vec2(_min.x, _min.y), glm::vec2(_max.x, _max.y), glm::vec2(scale, scale));
+            grid.set_col(glm::vec3(0.5f, 0.0f, 0.5f));
+
+            gui::Actor axis_helper_x = gui::actor::axis_helper_x(scale, scale / 10.0f);
+            gui::Actor axis_helper_y = gui::actor::axis_helper_y(scale, scale / 10.0f);
+            gui::Actor axis_helper_z = gui::actor::axis_helper_z(scale, scale / 10.0f);
+
+            gui::Actor dom_act = gui::actor::shape(dom_);
+            dom_act.set_col(glm::vec3(1.0f, 1.0f, 0.0f));
+
+            gui::Actor cell_act = gui::actor::domain(dom_);
+            cell_act.set_col(glm::vec3(1.0f, 0.8f, 0.0f));
+
+            std::vector<gui::Actor> ent_acts;
+            for (size_t i = 0; i < _entities.size(); ++i)
+            {
+                ent_acts.emplace_back(gui::actor::shape(_entities[i]->surf()));
+            }
+
+            gui::Actor tree_act = gui::actor::tree(tree_);
+            tree_act.set_col(glm::vec3(0.0, 1.0, 0.0));
+
+            std::vector<gui::Actor> paths;
+            size_t                  num_paths = 0;
+            for (size_t i = 0; i < paths_.size(); ++i)
+            {
+                num_paths += paths_[i].size();
+            }
+            paths.reserve(num_paths);
+
+            if (num_paths > 0)
+            {
+                std::cout << "Creating path actors...\n";
+                float max_time = 0.0;
+                for (size_t i = 0; i < paths_.size(); ++i)
+                {
+                    std::cout << "Processing path batch " << i << " of " << paths_.size() << '\n';
+                    for (size_t j = 0; j < paths_[i].size(); ++j)
+                    {
+                        if (paths_[i][j].back().time > max_time)
+                        {
+                            max_time = paths_[i][j].back().time;
+                        }
+                        paths.emplace_back(gui::actor::path(paths_[i][j]));
+                    }
+                }
+                float       render_time       = 0.0f;
+                const float render_time_delta = max_time / 1000.0f;
+                const float render_time_step  = render_time_delta / 10.0f;
+            }
+
+            std::cout << "Rendering\n";
+            while (map.poll(win))
+            {
+                win.clear_buffer();
+
+                amb_shader.activate(lens, cam);
+                amb_shader.render(grid);
+                amb_shader.render(axis_helper_x);
+                amb_shader.render(axis_helper_y);
+                amb_shader.render(axis_helper_z);
+                amb_shader.render(dom_act);
+
+                spec_shader.activate(lens, cam);
+                for (size_t i = 0; i < ent_acts.size(); ++i)
+                {
+                    spec_shader.render(ent_acts[i]);
+                }
+
+                ray_shader.activate(lens, cam);
+                render_time += render_time_step;
+                ray_shader.set_time_start(render_time);
+                ray_shader.set_time_end(render_time + render_time_delta);
+                if (render_time > max_time)
+                {
+                    render_time = 0.0f;
+                }
+                for (size_t i = 0; i < paths.size(); ++i)
+                {
+                    ray_shader.render(paths[i]);
+                }
+
+                win.swap_buffer();
+            }
+#endif
         }
 
 
