@@ -34,6 +34,8 @@
 #include <arctk/equip/entity/light.hpp>
 #include <arctk/exit/error.hpp>
 #include <arctk/parse/print.hpp>
+#include <arctk/prop/limits.hpp>
+#include <arctk/prop/order.hpp>
 #include <arctk/sys/file.hpp>
 
 
@@ -136,6 +138,14 @@ namespace arc //! arctk namespace
 
         //  == METHODS ==
         //  -- Setters --
+        inline void Sim::set_emission_times(const std::vector<double>& emission_times_) noexcept
+        {
+            assert(prop::limits::always_greater_than_or_equal_to(emission_times, 0.0));
+            assert(prop::order::ascending(emission_times_));
+
+            _emission_times = emission_times_;
+        }
+
         inline void Sim::set_tree_max_depth(const size_t max_depth_) noexcept
         {
             assert(max_depth_ > 0);
