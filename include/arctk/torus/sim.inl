@@ -455,8 +455,15 @@ namespace arc //! arctk namespace
                     std::vector<unsigned long int> thread_phot(_num_threads);
                     std::thread                    reporter(&Sim::report, this, l, _num_phot_per_light[l], &thread_phot);
 
-                    for (size_t i = 0; i < _num_phot; ++i)
+                    std::vector<std::future<std::vector<std::vector<gui::Point>>>> threads;
+                    for (size_t i = 0; i < _num_threads; ++i)
                     {
+                        threads.emplace_back(std::async(&Sim::simulate_thread, this, l, _num_phot_per_light[l], &thread_phot, std::cref(tree)));
+                    }
+
+                    for (size_t i = 0; i < threads.size(); ++i)
+                    {
+                        paths.emplace_back(threads[t].get());
                     }
 
                     reporter.join();
