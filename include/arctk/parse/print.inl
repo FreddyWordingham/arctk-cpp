@@ -86,7 +86,7 @@ namespace arc //! arctk namespace
 
             inline std::string timestamp(const std::string format_) noexcept
             {
-                int now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+                const time_t now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
 
                 std::stringstream stamp;
                 stamp << std::put_time(std::localtime(&now), format_.c_str()) << "\n";
