@@ -55,6 +55,9 @@ namespace arc //! arctk namespace
         constexpr const bool         DEFAULT_PRE_RENDER      = false;
         constexpr const bool         DEFAULT_POST_RENDER     = false;
 
+        //  -- Output --
+        constexpr const char* OUTPUT_TIME_FORMAT = "%Y%m%d_%H%M%S";
+
         //  -- Printing --
         constexpr const size_t PRINT_WIDTH = 64;
 
@@ -116,7 +119,7 @@ namespace arc //! arctk namespace
         inline std::string Sim::init_output_dir() const noexcept
         {
             std::string output_dir("output/");
-            output_dir += parse::print::timestamp("%Y%m%d_%H%M%S");
+            output_dir += parse::print::timestamp(OUTPUT_TIME_FORMAT);
             output_dir += '/';
 
             return (output_dir);
@@ -263,6 +266,8 @@ namespace arc //! arctk namespace
 
             create_output_dirs();
 
+            write_pre_flight_data();
+
             std::cout << "Pre-flight complete.\n";
         }
 
@@ -276,6 +281,10 @@ namespace arc //! arctk namespace
             {
                 std::filesystem::create_directories(_output_dir + _detectors[i].second);
             }
+        }
+
+        inline void Sim::write_pre_flight_data() const noexcept
+        {
         }
 
 
