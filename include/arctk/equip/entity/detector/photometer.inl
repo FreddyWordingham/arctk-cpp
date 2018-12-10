@@ -61,9 +61,11 @@ namespace arc //! arctk namespace
                 {
                     assert(!path_.empty());
 
-                    std::ofstream file(path_ + "count.dat");
-
+                    std::ofstream file(path_ + "weight.dat");
                     file << "Total weight : " << _total_weight << '\n';
+
+                    std::ofstream file(path_ + "hit.dat");
+                    file << "Total weight : " << _total_hits << '\n';
                 }
 
 
