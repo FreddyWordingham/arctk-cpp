@@ -307,6 +307,10 @@ namespace arc //! arctk namespace
         {
             std::cout << '\n' << parse::print::section("Post-Flight", PRINT_WIDTH) << '\n';
 
+            std::cout << "Saving domain datacube.\n";
+            _dom.save(_output_dir);
+
+            std::cout << "Saving detector data.\n";
             save_detector_data();
         }
 
