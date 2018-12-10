@@ -331,19 +331,9 @@ namespace arc //! arctk namespace
             std::cout << '\n' << parse::print::section("Post-Flight", PRINT_WIDTH) << '\n';
         }
 
-        inline void Sim::save_detector_data() const noexcept
-        {
-            for (size_t i = 0; i < _detectors.size(); ++i)
-            {
-                std::cout << "Saving detector " << i << " of " << _detectors.size() << '\n';
-
-                _detectors[i].first->save(_output_dir + _detectors[i].second);
-            }
-        }
-
 
         //  -- Simulation --
-        inline void Sim::run() const noexcept
+        inline void Sim::run() noexcept
         {
             pre_flight();
 
@@ -357,7 +347,7 @@ namespace arc //! arctk namespace
             post_flight();
         }
 
-        inline void Sim::create_time_dir(const size_t time_index_) const noexcept
+        inline void Sim::create_time_dir(const size_t time_index_) noexcept
         {
             std::stringstream dir_name;
             dir_name << _emission_times[time_index_] << '/';
@@ -370,6 +360,15 @@ namespace arc //! arctk namespace
 
         inline void Sim::save_detector_data() const noexcept
         {
+            for (size_t i = 0; i < _detectors.size(); ++i)
+            {
+                std::cout << "Saving detector output " << i << " of " << _detectors.size() << '\n';
+
+                std::string dir = _output_dir + _time_dir + _detectors[i].second;
+
+                std::filesystem::create_directories(dir);
+                _detectors[i].first->save(dir);
+            }
         }
 
 
