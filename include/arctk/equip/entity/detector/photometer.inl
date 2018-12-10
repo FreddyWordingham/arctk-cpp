@@ -48,6 +48,7 @@ namespace arc //! arctk namespace
                 inline Photometer::Photometer(const geom::shape::Mesh& surf_, const bool double_sided_) noexcept
                   : Detector(surf_)
                   , _double_sided(double_sided_)
+                  , _total_hits(0)
                   , _total_weight(0.0)
                 {
                 }
@@ -73,6 +74,7 @@ namespace arc //! arctk namespace
 
                     phot_->travel(coll_.dist());
 
+                    ++_total_hits;
                     _total_weight += phot_->weight();
 
                     phot_->kill();
@@ -86,6 +88,7 @@ namespace arc //! arctk namespace
 
                     if (_double_sided)
                     {
+                        ++_total_hits;
                         _total_weight += phot_->weight();
                     }
 
