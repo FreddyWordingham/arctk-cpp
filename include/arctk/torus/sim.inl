@@ -452,10 +452,11 @@ namespace arc //! arctk namespace
 
             gui::lens::Perspective lens(70.0f, 1600.0f / 1200.0f);
 
-            const float scale = powf(10.0f, floorf(log10f(static_cast<float>((_max - _min).mag()) / 10.0f)));
+            const float scale = powf(10.0f, floorf(log10f(static_cast<float>((_dom.max() - _dom.min()).mag()) / 10.0f)));
             std::cout << "Graphical scale unit: " << scale << "m\n";
 
-            gui::camera::Fly cam(glm::vec3((_max.x * 2) - _min.x, (_max.y * 2) - _min.y, (_max.z * 2) - _min.z), glm::vec3(_min.x - _max.x, _min.y - _max.y, _min.z - _max.z), glm::vec3(0.0f, 0.0f, 1.0f), scale / 10.0f);
+            gui::camera::Fly cam(glm::vec3((_dom.max().x * 2.0) - _dom.min().x, (_dom.max().y * 2.0) - _dom.min().y, (_dom.max().z * 2.0) - _dom.min().z), glm::vec3(_dom.min().x - _dom.max().x, _dom.min().y - _dom.max().y, _dom.min().z - _dom.max().z),
+                                 glm::vec3(0.0f, 0.0f, 1.0f), scale / 10.0f);
 
             gui::Keymap map;
             map.use_fly_controls(&cam);
@@ -465,17 +466,17 @@ namespace arc //! arctk namespace
             gui::shader::Specular spec_shader;
             gui::shader::Ray      ray_shader;
 
-            gui::Actor grid = gui::actor::grid(glm::vec2(_min.x, _min.y), glm::vec2(_max.x, _max.y), glm::vec2(scale, scale));
+            gui::Actor grid = gui::actor::grid(glm::vec2(_dom.min().x, _dom.min().y), glm::vec2(_dom.max().x, _dom.max().y), glm::vec2(scale, scale));
             grid.set_col(glm::vec3(0.5f, 0.0f, 0.5f));
 
             gui::Actor axis_helper_x = gui::actor::axis_helper_x(scale, scale / 10.0f);
             gui::Actor axis_helper_y = gui::actor::axis_helper_y(scale, scale / 10.0f);
             gui::Actor axis_helper_z = gui::actor::axis_helper_z(scale, scale / 10.0f);
 
-            gui::Actor dom_act = gui::actor::shape(dom_);
+            gui::Actor dom_act = gui::actor::shape(_dom);
             dom_act.set_col(glm::vec3(1.0f, 1.0f, 0.0f));
 
-            gui::Actor cell_act = gui::actor::domain(dom_);
+            gui::Actor cell_act = gui::actor::domain(_dom);
             cell_act.set_col(glm::vec3(1.0f, 0.8f, 0.0f));
 
             std::vector<gui::Actor> ent_acts;
@@ -485,7 +486,7 @@ namespace arc //! arctk namespace
             }
 
             gui::Actor tree_act = gui::actor::tree(tree_);
-            tree_act.set_col(glm::vec3(0.0, 1.0, 0.0));
+            tree_act.set_col(glm::vec3(0.0f, 1.0f, 0.0f));
 
             std::vector<gui::Actor> paths;
             size_t                  num_paths = 0;
@@ -495,10 +496,10 @@ namespace arc //! arctk namespace
             }
             paths.reserve(num_paths);
 
+            float max_time = 0.0f;
             if (num_paths > 0)
             {
                 std::cout << "Creating path actors...\n";
-                float max_time = 0.0;
                 for (size_t i = 0; i < paths_.size(); ++i)
                 {
                     std::cout << "Processing path batch " << i << " of " << paths_.size() << '\n';
@@ -511,12 +512,13 @@ namespace arc //! arctk namespace
                         paths.emplace_back(gui::actor::path(paths_[i][j]));
                     }
                 }
-                float       render_time       = 0.0f;
-                const float render_time_delta = max_time / 1000.0f;
-                const float render_time_step  = render_time_delta / 10.0f;
             }
 
-            std::cout << "Rendering\n";
+            float       render_time       = 0.0f;
+            const float render_time_delta = max_time / 1000.0f;
+            const float render_time_step  = render_time_delta / 10.0f;
+
+            std::cout << "Rendering.\n";
             while (map.poll(win))
             {
                 win.clear_buffer();
