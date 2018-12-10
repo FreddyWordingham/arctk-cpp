@@ -347,6 +347,11 @@ namespace arc //! arctk namespace
         {
             pre_flight();
 
+            for (size_t t = 0; t < _emission_times.size(); ++t)
+            {
+                std::cout << "Running emission timepoint " << t << " of " << _emission_times.size() << ".\n";
+            }
+
             post_flight();
         }
 
