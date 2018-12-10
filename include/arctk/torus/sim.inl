@@ -362,11 +362,11 @@ namespace arc //! arctk namespace
                 _num_phot_per_light[i] = static_cast<unsigned long int>(static_cast<double>(_num_phot) * (_lights[i].second / total_ratio));
             }
 
-            const unsigned long int excess_phot = math::container::sum(_num_phot_per_light) - _num_phot;
-            size_t                  index       = 0;
-            for (size_t i = 0; i < excess_phot; ++i)
+            const unsigned long int missing_phot = math::container::sum(_num_phot_per_light) - _num_phot;
+            size_t                  index        = 0;
+            for (size_t i = 0; i < missing_phot; ++i)
             {
-                --_num_phot_per_light[index];
+                ++_num_phot_per_light[index];
 
                 ++index;
                 if (index >= _lights.size())
