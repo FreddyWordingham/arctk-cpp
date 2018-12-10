@@ -76,7 +76,7 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Saving --
-                virtual void save(const std::string& path_) const noexcept = 0;
+                virtual void save(const std::string& path_, const std::string& time_str_) const noexcept = 0;
             };
 
 
