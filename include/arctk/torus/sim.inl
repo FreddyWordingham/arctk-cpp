@@ -459,7 +459,11 @@ namespace arc //! arctk namespace
                     std::cout << "Running light " << l << " of " << _lights.size() << ".\n";
 
                     std::vector<unsigned long int> thread_phot(_num_threads);
-                    std::thread
+                    std::thread                    reporter(&Sim::report, this, l, _num_phot_per_light[l], &thread_phot);
+
+
+
+                    reporter.join();
                 }
 
                 std::cout << "Saving domain datacube.\n";
@@ -496,6 +500,20 @@ namespace arc //! arctk namespace
                 std::string path = _output_dir + _detectors[i].second;
 
                 _detectors[i].first->save(path, _time_str);
+            }
+        }
+
+        inline void Sim::reporter(const size_t light_index_, const unsigned long int num_phot_, std::vector<unsigned long int>* thread_phot_) const noexcept
+        {
+            unsigned long int total = 0;
+
+            while (total < num_phot_)
+            {
+                total = math::container::sum(*thread_phot_);
+
+                std::cout << "Light " << light_index_ << " : " << total << '/' << num_phot_ << " (" << (total * 100.0 / num_phot_) << "%)\n";
+
+                std::this_thread::sleep_for(std::chrono::milliseconds(_update_delta));
             }
         }
 
