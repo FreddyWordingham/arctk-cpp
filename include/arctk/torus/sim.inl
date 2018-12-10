@@ -316,6 +316,9 @@ namespace arc //! arctk namespace
             std::cout << "Creating base output directory.\n";
             std::filesystem::create_directories(_output_dir);
 
+            std::cout << "Creating domain output directory.\n";
+            std::filesystem::create_directories(_output_dir + DOMAIN_OUTPUT_DIR);
+
             for (size_t i = 0; i < _detectors.size(); ++i)
             {
                 std::cout << "Creating detector output directory " << i << " of " << _detectors.size() << '\n';
