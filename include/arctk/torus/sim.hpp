@@ -65,6 +65,9 @@ namespace arc //! arctk namespace
         {
             //  == FIELDS ==
           private:
+            //  -- Photons --
+            const unsigned long int _num_phot;
+
             //  -- Entities --
             std::vector<std::unique_ptr<equip::Entity>>                   _entities;
             std::vector<std::pair<equip::entity::Light*, const double>>   _lights;
