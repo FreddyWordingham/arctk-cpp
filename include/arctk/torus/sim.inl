@@ -387,9 +387,9 @@ namespace arc //! arctk namespace
             {
                 std::cout << "Saving detector output " << i << " of " << _detectors.size() << '\n';
 
-                std::string path = _output_dir + _detectors[i].second + _time_str;
+                std::string path = _output_dir + _detectors[i].second;
 
-                _detectors[i].first->save(path);
+                _detectors[i].first->save(path, _time_str);
             }
         }
 
