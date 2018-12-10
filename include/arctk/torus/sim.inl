@@ -101,14 +101,14 @@ namespace arc //! arctk namespace
             std::cout << std::string(PRINT_WIDTH, '=') << '\n'
                       << "  ____    _____   ____      ______ _____   _____           ____ \n"
                       << " //__\\\\  ||___)) //   ` o  o  ||  //   \\\\ ||___))  ||  || //___`\n"
-                      << "//    \\\\ ||   \\\\ \\\\___, o  o  ||  \\\\___// ||   \\\\  \\\\__// .___//\n\n";
+                      << "//    \\\\ ||   \\\\ \\\\___, o  o  ||  \\\\___// ||   \\\\  \\\\__// .___//\n";
         }
 
 
         //  -- Destructors --
         inline Sim::~Sim()
         {
-            std::cout << std::string(PRINT_WIDTH, '-') << "\n\nSimulation complete.\n\n" << std::string(PRINT_WIDTH, '=') << '\n';
+            std::cout << '\n' << std::string(PRINT_WIDTH, '-') << "\n\n" << parse::print::section("Simulation Complete.", ' ') << "\n\n" << std::string(PRINT_WIDTH, '=') << '\n';
         }
 
 
@@ -248,7 +248,7 @@ namespace arc //! arctk namespace
         //  -- Pre-Flight --
         inline void Sim::pre_flight() const noexcept
         {
-            std::cout << parse::print::section("Pre-Flight", PRINT_WIDTH) << '\n';
+            std::cout << '\n' << parse::print::section("Pre-Flight", PRINT_WIDTH) << '\n';
 
             std::cout << "Pre-flight complete.\n";
         }
@@ -257,7 +257,7 @@ namespace arc //! arctk namespace
         //  -- Post-Flight --
         inline void Sim::post_flight() const noexcept
         {
-            std::cout << parse::print::section("Post-Flight", PRINT_WIDTH) << '\n';
+            std::cout << '\n' << parse::print::section("Post-Flight", PRINT_WIDTH) << '\n';
 
             std::cout << "Pre-flight complete.\n";
         }
