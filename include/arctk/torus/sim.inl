@@ -286,7 +286,7 @@ namespace arc //! arctk namespace
 
             validate_parameters();
 
-            create_output_dir();
+            create_output_dirs();
 
             write_pre_flight_data();
         }
