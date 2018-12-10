@@ -397,15 +397,23 @@ namespace arc //! arctk namespace
         {
             std::ofstream file(_output_dir + PRE_FLIGHT_FILENAME + ".txt");
 
-            file << "Built using the Arctk library.\n\n";
+            file << "Built using the Arctk library.\n";
 
-            file << "Arctk version          : " << config::version::MAJOR << '.' << config::version::MINOR << '.' << config::version::PATCH << '\n'
+            file << '\n'
+                 << parse::print::section("Build", PRINT_WIDTH) << '\n'
+                 << "Arctk version          : " << config::version::MAJOR << '.' << config::version::MINOR << '.' << config::version::PATCH << '\n'
                  << "Arctk directory        : " << config::build::DIR << '\n'
                  << "Arctk branch           : " << config::build::BRANCH << '\n'
                  << "Arctk build hash       : " << config::build::HASH << '\n'
                  << "Arctk compiler         : " << config::build::COMPILER << '\n'
                  << "Arctk build type       : " << config::build::TYPE << '\n'
                  << "Arctk build date       : " << config::build::DATE << '\n';
+
+            file << '\n' << parse::print::section("Light Source", PRINT_WIDTH) << '\n' << "Total number of lights  : " << _lights.size() << '\n';
+            for (size_t i = 0; i < _lights.size(); ++i)
+            {
+                file << "Light " << i << "                 : " << _num_phot_per_light[i] << " photons.\n";
+            }
         }
 
 
