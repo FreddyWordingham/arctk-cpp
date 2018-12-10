@@ -53,7 +53,7 @@ namespace arc //! arctk namespace
         constexpr const size_t       DEFAULT_NUM_THREADS     = 1;
         constexpr const bool         DEFAULT_PRE_RENDER      = false;
         constexpr const bool         DEFAULT_POST_RENDER     = false;
-        constexpr const char*        DEFAULT_OUTPUT_DIR      = "./";
+        constexpr const char*        DEFAULT_OUTPUT_DIR      = "output/";
 
         //  -- Printing --
         constexpr const size_t PRINT_WIDTH = 64;
