@@ -268,9 +268,14 @@ namespace arc //! arctk namespace
 
         inline void Sim::create_output_dirs() const noexcept
         {
-            std::cout << "Creating output directories...";
-
+            std::cout << "Creating output directory.\n";
             std::filesystem::create_directories(_output_dir);
+
+            std::cout << "Creating detector output directories.\n";
+            for (size_t i = 0; i < _detectors.size(); ++i)
+            {
+                std::filesystem::create_directories(_output_dir + _detectors[i].second);
+            }
         }
 
 
