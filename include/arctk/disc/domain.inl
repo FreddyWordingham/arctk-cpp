@@ -140,7 +140,7 @@ namespace arc //! arctk namespace
 
             const std::unordered_map<std::string, multi::vector<double, 3>> cube = create_data_cube();
 
-            std::fstream file(path_ + "domain.vtk");
+            std::ofstream file(path_ + "domain.vtk");
 
             file << "This is the domain output.\n";
         }
