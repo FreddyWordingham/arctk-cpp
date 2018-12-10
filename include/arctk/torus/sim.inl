@@ -420,6 +420,12 @@ namespace arc //! arctk namespace
         }
 
 
+        //  -- Rendering --
+        inline void Sim::render(const tree::Root& tree_, const std::vector<std::vector<std::vector<gui::Point>>>& paths_) const noexcept
+        {
+        }
+
+
 
     } // namespace torus
 } // namespace arc

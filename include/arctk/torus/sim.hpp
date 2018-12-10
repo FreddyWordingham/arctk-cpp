@@ -26,6 +26,7 @@
 //  -- Arctk --
 #include <arctk/disc/domain.hpp>
 #include <arctk/equip/entity.hpp>
+#include <arctk/gui/point.hpp>
 #include <arctk/math/vec.hpp>
 
 
@@ -44,7 +45,11 @@ namespace arc //! arctk namespace
     namespace opt //! optical namespace
     {
         class Material;
-    } // namespace opt
+    }              // namespace opt
+    namespace tree //! tree namespace
+    {
+        class Root;
+    } // namespace tree
 } // namespace arc
 
 
@@ -153,6 +158,10 @@ namespace arc //! arctk namespace
             inline void run() noexcept;
             inline void update_time_str(size_t time_index_) noexcept;
             inline void save_detector_data() const noexcept;
+
+          private:
+            //  -- Rendering --
+            inline void render(const tree::Root& tree_, const std::vector<std::vector<std::vector<gui::Point>>>& paths_ = {}) const noexcept;
         };
 
 
