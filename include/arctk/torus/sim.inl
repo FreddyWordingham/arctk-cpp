@@ -87,6 +87,7 @@ namespace arc //! arctk namespace
           , _post_render(DEFAULT_POST_RENDER)
           , _output_dir(init_output_dir())
         {
+            assert(num_phot_ > 0);
             assert(min_.x < max_.x);
             assert(min_.y < max_.y);
             assert(min_.z < max_.z);
