@@ -5,3 +5,4 @@
 /.vscode
 /.ccls-cache
 /include/arctk/config/*
+.DS_Store
