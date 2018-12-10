@@ -226,8 +226,10 @@ namespace arc //! arctk namespace
         {
             static_assert(std::is_base_of<equip::entity::Light, T>::value);
 
+            assert(ratio_ > 0.0);
+
             _entities.emplace_back(std::make_unique<T>(light_));
-            _lights.emplace_back(dynamic_cast<equip::entity::Light*>(_entities.back().get()));
+            _lights.emplace_back(std::make_pair(dynamic_cast<equip::entity::Light*>(_entities.back().get()), ratio_));
         }
 
         template <typename T>
