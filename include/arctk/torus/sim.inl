@@ -272,8 +272,6 @@ namespace arc //! arctk namespace
             create_output_dirs();
 
             write_pre_flight_data();
-
-            std::cout << "Pre-flight complete.\n";
         }
 
         inline void Sim::create_output_dirs() const noexcept
@@ -308,8 +306,16 @@ namespace arc //! arctk namespace
         inline void Sim::post_flight() const noexcept
         {
             std::cout << '\n' << parse::print::section("Post-Flight", PRINT_WIDTH) << '\n';
+        }
 
-            std::cout << "Pre-flight complete.\n";
+        inline void Sim::save_detector_data() const noexcept
+        {
+            for (size_t i = 0; i < _detectors.size(); ++i)
+            {
+                std::cout << "Saving detector data " << i << " of " << _detectors.size() << '\n';
+
+                _detectors[i].first.save(_output_dir + _detectors[i].second);
+            }
         }
 
 
