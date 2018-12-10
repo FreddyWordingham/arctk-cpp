@@ -71,8 +71,9 @@ namespace arc //! arctk namespace
             //  == FIELDS ==
           private:
             //  -- Photons --
-            const unsigned long int _num_phot;
-            std::vector<double>     _emission_times;
+            const unsigned long int        _num_phot;
+            std::vector<double>            _emission_times;
+            std::vector<unsigned long int> _num_phot_per_light;
 
             //  -- Entities --
             std::vector<std::unique_ptr<equip::Entity>>                   _entities;
