@@ -134,13 +134,13 @@ namespace arc //! arctk namespace
 
 
         //  -- Saving --
-        inline void Domain::save(const std::string& path_) const noexcept
+        inline void Domain::save(const std::string& path_, const std::string& time_str_) const noexcept
         {
             assert(!path_.empty());
 
             const std::unordered_map<std::string, multi::vector<double, 3>> cube = create_data_cube();
 
-            std::ofstream file(path_ + "domain.vtk");
+            std::ofstream file(path_ + "domain" + time_str_ + ".vtk");
 
             file << "This is the domain output.\n";
         }
