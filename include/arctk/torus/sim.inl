@@ -265,6 +265,13 @@ namespace arc //! arctk namespace
                 std::exit(exit::error::INVALID_DIR_NAME);
             }
 
+            if (dir_name_ == DOMAIN_OUTPUT_DIR)
+            {
+                std::cerr << "Error! Unable to add detector with directory name: `" << dir_name_ << "`, as directory name is already in use.\n";
+
+                std::exit(exit::error::INVALID_DIR_NAME);
+            }
+
             for (size_t i = 0; i < _detectors.size(); ++i)
             {
                 if (_detectors[i].second == dir_name_)
