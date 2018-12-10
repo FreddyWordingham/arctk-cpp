@@ -337,11 +337,20 @@ namespace arc //! arctk namespace
         {
             pre_flight();
 
+            std::cout << '\n' << parse::print::section("Simulation", PRINT_WIDTH) << '\n';
             for (size_t t = 0; t < _emission_times.size(); ++t)
             {
                 std::cout << "Running emission timepoint " << t << " of " << _emission_times.size() << ".\n";
 
+                for (size_t l = 0; l < _lights.size(); ++l)
+                {
+                    std::cout << "Running light " << l << " of " << _lights.size() << ".\n";
+                }
+
                 create_time_dir(t);
+                save_detector_data();
+
+                std::cout << '\n';
             }
 
             post_flight();
