@@ -140,7 +140,7 @@ namespace arc //! arctk namespace
         //  -- Setters --
         inline void Sim::set_emission_times(const std::vector<double>& emission_times_) noexcept
         {
-            assert(prop::limits::always_greater_than_or_equal_to(emission_times, 0.0));
+            assert(prop::limits::always_greater_than_or_equal_to(emission_times_, 0.0));
             assert(prop::order::ascending(emission_times_));
 
             _emission_times = emission_times_;
