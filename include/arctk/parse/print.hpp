@@ -25,6 +25,7 @@
 #include <vector>
 
 
+
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
 {
@@ -42,6 +43,7 @@ namespace arc //! arctk namespace
 
             //  -- Formatting --
             inline std::string section(const std::string& title_, size_t width_, char ch_ = '-') noexcept;
+            inline std::string timestamp(const std::string format_) noexcept;
 
 
 

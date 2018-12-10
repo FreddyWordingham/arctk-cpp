@@ -54,7 +54,6 @@ namespace arc //! arctk namespace
         constexpr const size_t       DEFAULT_NUM_THREADS     = 1;
         constexpr const bool         DEFAULT_PRE_RENDER      = false;
         constexpr const bool         DEFAULT_POST_RENDER     = false;
-        constexpr const char*        DEFAULT_OUTPUT_DIR      = "output/";
 
         //  -- Printing --
         constexpr const size_t PRINT_WIDTH = 64;
@@ -77,7 +76,7 @@ namespace arc //! arctk namespace
           , _num_threads(DEFAULT_NUM_THREADS)
           , _pre_render(DEFAULT_PRE_RENDER)
           , _post_render(DEFAULT_POST_RENDER)
-          , _output_dir(DEFAULT_OUTPUT_DIR)
+          , _output_dir(init_output_dir())
         {
             assert(min_.x < max_.x);
             assert(min_.y < max_.y);
@@ -110,6 +109,17 @@ namespace arc //! arctk namespace
         inline Sim::~Sim()
         {
             std::cout << '\n' << std::string(PRINT_WIDTH, '-') << "\n\n" << parse::print::section("Simulation Complete.", PRINT_WIDTH, ' ') << "\n\n" << std::string(PRINT_WIDTH, '=') << '\n';
+        }
+
+
+        //  -- Initialisation --
+        inline void Sim::init_output_dir() const noexcept
+        {
+            std::string output_dir("output/");
+            output_dir += parse::print::timestamp("%Y%m%d");
+            output_dir += '/';
+
+            return (output_dir);
         }
 
 

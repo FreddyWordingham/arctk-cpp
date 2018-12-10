@@ -15,6 +15,12 @@
 
 
 //  == IMPORTS ==
+//  -- Std --
+#include <chrono>
+#include <ctime>
+#include <iomanip>
+#include <iostream>
+
 //  -- Arctk --
 #include <arctk/consts/format.hpp>
 
@@ -75,6 +81,10 @@ namespace arc //! arctk namespace
                 sec += std::string(post, ch_);
 
                 return (sec);
+            }
+
+            inline std::string timestamp(const std::string format_) noexcept
+            {
             }
 
 

@@ -102,6 +102,9 @@ namespace arc //! arctk namespace
             //  -- Destructors --
             inline ~Sim();
 
+            //  -- Initialisation --
+            inline void init_output_dir() const noexcept;
+
 
             //  == METHODS ==
           public:
