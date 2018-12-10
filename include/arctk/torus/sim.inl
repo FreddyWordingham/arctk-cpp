@@ -284,9 +284,23 @@ namespace arc //! arctk namespace
         {
             std::cout << '\n' << parse::print::section("Pre-Flight", PRINT_WIDTH) << '\n';
 
+            validate_parameters();
+
             create_output_dirs();
 
             write_pre_flight_data();
+        }
+
+        inline void Sim::validate_parameters() const noexcept
+        {
+            std::cout << "Validating simulation parameters.\n";
+
+            if (_emission_times.empty())
+            {
+                std::cerr << "Error! Emission times list must contain at least one value.\n";
+
+                std::exit(exit::error::INVALID_SIM_PARAMETER);
+            }
         }
 
         inline void Sim::create_output_dirs() const noexcept

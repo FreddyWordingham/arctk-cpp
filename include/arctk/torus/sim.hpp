@@ -141,6 +141,7 @@ namespace arc //! arctk namespace
 
             //  -- Pre-Flight --
             inline void pre_flight() const noexcept;
+            inline void validate_parameters() const noexcept;
             inline void create_output_dirs() const noexcept;
             inline void write_pre_flight_data() const noexcept;
 
