@@ -104,9 +104,9 @@ namespace arc //! arctk namespace
             bool _post_render; //!< Post-rendering toggle.
 
             //  -- Entities --
-            std::vector<std::unique_ptr<equip::Entity>>                         _entities;
-            std::vector<std::pair<const equip::entity::Light*, double>>         _lights;
-            std::vector<std::pair<const equip::entity::Detector*, std::string>> _detectors;
+            std::vector<std::unique_ptr<equip::Entity>>                         _entities;  //!< Vector of entities within the simulation.
+            std::vector<const equip::entity::Light*>                            _lights;    //!< Vector of light sources within the simulation.
+            std::vector<std::pair<const equip::entity::Detector*, std::string>> _detectors; //!< Vector of detectors within the simulation.
 
             //  -- Roulette --
             bool   _roulette;        //!< If true, perform roulette optimisation.
@@ -144,7 +144,7 @@ namespace arc //! arctk namespace
             template <typename T>
             inline void add_entity(T&& ent_) noexcept;
             template <typename T>
-            inline void add_light(T&& light_, double ratio_ = 1.0) noexcept;
+            inline void add_light(T&& light_) noexcept;
             template <typename T>
             inline void add_detector(T&& det_, const std::string& path_) noexcept;
 

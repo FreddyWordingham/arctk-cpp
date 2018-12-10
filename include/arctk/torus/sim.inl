@@ -222,7 +222,7 @@ namespace arc //! arctk namespace
         }
 
         template <typename T>
-        inline void Sim::add_light(T&& light_) noexcept
+        inline void Sim::add_light(T&& light_, const double ratio_) noexcept
         {
             static_assert(std::is_base_of<equip::entity::Light, T>::value);
 
