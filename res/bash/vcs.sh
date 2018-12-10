@@ -54,6 +54,18 @@ arctk_push() {
     cd - >/dev/null
 }
 
+arctk_push_no_doc() {
+    cd $ARCTK_DIR >/dev/null
+
+    arctk_clean
+
+    arctk_commit "Cleaned build files."
+
+    git push
+
+    cd - >/dev/null
+}
+
 arctk_update() {
     cd $ARCTK_DIR >/dev/null
 
