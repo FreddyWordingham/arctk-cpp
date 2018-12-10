@@ -37,6 +37,8 @@
 #include <arctk/prop/limits.hpp>
 #include <arctk/prop/order.hpp>
 #include <arctk/sys/file.hpp>
+#include <arctk/tree/node/leaf.hpp>
+#include <arctk/tree/root.hpp>
 
 
 
@@ -355,6 +357,10 @@ namespace arc //! arctk namespace
             pre_flight();
 
             std::cout << '\n' << parse::print::section("Simulation", PRINT_WIDTH) << '\n';
+
+            std::cout << "Constructing tree.\n";
+            tree::Root tree(dom.min(), dom.max(), _entities, _max_depth, _tar_tris);
+
             for (size_t t = 0; t < _emission_times.size(); ++t)
             {
                 std::cout << "\nRunning emission timepoint " << t << " of " << _emission_times.size() << ".\n";
