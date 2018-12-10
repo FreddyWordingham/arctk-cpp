@@ -286,7 +286,7 @@ namespace arc //! arctk namespace
 
             validate_parameters();
 
-            create_output_dirs();
+            create_output_dir();
 
             write_pre_flight_data();
         }
@@ -303,16 +303,10 @@ namespace arc //! arctk namespace
             }
         }
 
-        inline void Sim::create_output_dirs() const noexcept
+        inline void Sim::create_output_dir() const noexcept
         {
-            std::cout << "Creating output directory.\n";
+            std::cout << "Creating base output directory.\n";
             std::filesystem::create_directories(_output_dir);
-
-            std::cout << "Creating detector output directories.\n";
-            for (size_t i = 0; i < _detectors.size(); ++i)
-            {
-                std::filesystem::create_directories(_output_dir + _detectors[i].second);
-            }
         }
 
         inline void Sim::write_pre_flight_data() const noexcept
