@@ -370,6 +370,8 @@ namespace arc //! arctk namespace
 #endif
             }
 
+            std::vector<std::vector<std::vector<gui::Point>>> paths;
+
             for (size_t t = 0; t < _emission_times.size(); ++t)
             {
                 std::cout << "\nRunning emission timepoint " << t << " of " << _emission_times.size() << ".\n";
