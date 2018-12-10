@@ -355,7 +355,7 @@ namespace arc //! arctk namespace
                 }
 
                 std::cout << "Saving domain datacube.\n";
-                _dom.save(_output_dir + _time_dir);
+                _dom.save(_output_dir + _time_str);
                 save_detector_data();
             }
 
