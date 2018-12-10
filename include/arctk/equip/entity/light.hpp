@@ -90,7 +90,7 @@ namespace arc //! arctk namespace
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Light(const geom::shape::Mesh& surf_, const std::string& mat_id_, opt::Material* const mat_, double power_, unsigned long int num_phot_, bool kill_) noexcept;
+                inline Light(const geom::shape::Mesh& surf_, const std::string& mat_id_, opt::Material* const mat_, double power_, bool kill_) noexcept;
                 inline Light(const Light&) = default; //!< Defaulted copy constructor.
                 inline Light(Light&&)      = default; //!< Defaulted move constructor.
 
@@ -108,12 +108,10 @@ namespace arc //! arctk namespace
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                inline double            power() const noexcept;
-                inline unsigned long int num_phot() const noexcept;
-                inline double            phot_power() const noexcept;
+                inline double power() const noexcept;
 
                 //  -- Emission --
-                virtual phys::Photon emit(random::Generator* rng_, double time_) const noexcept = 0;
+                virtual phys::Photon emit(random::Generator* rng_, double time_, double phot_power_) const noexcept = 0;
 
               private:
                 //  -- Collision --

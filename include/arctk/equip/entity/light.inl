@@ -38,18 +38,15 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Light::Light(const geom::shape::Mesh& surf_, const std::string& mat_id_, opt::Material* const mat_, const double power_, const unsigned long int num_phot_, const bool kill_) noexcept
+            inline Light::Light(const geom::shape::Mesh& surf_, const std::string& mat_id_, opt::Material* const mat_, const double power_, const bool kill_) noexcept
               : Entity(surf_)
               , _mat_id(mat_id_)
               , _mat(mat_)
               , _power(power_)
-              , _num_phot(num_phot_)
-              , _phot_power(power_ / num_phot_)
               , _kill(kill_)
             {
                 assert(!mat_id_.empty());
                 assert(power_ > 0.0);
-                assert(num_phot_ > 0);
             }
 
 
@@ -71,26 +68,6 @@ namespace arc //! arctk namespace
             inline double Light::power() const noexcept
             {
                 return (_power);
-            }
-
-            /**
-             *  Get the number of photons to be emitted by the light source.
-             *
-             *  @return Number of photons to be emitted by the light source.
-             */
-            inline unsigned long int Light::num_phot() const noexcept
-            {
-                return (_num_phot);
-            }
-
-            /**
-             *  Get the Power of each photon to be emitted by the light source.
-             *
-             *  @return Power of each photon to be emitted by the light source.
-             */
-            inline double Light::phot_power() const noexcept
-            {
-                return (_phot_power);
             }
 
 
