@@ -56,6 +56,9 @@ namespace arc //! arctk namespace
             //  -- Construction --
             constexpr const int FAILED_INITIALISATION = 150; //!< Failed to construct an object during initialisation.
 
+            //  -- Simulation --
+            constexpr const int INVALID_SIM_PARAMETER = 160; //!< Invalid simulation parameters.
+
 
 
         } // namespace error
