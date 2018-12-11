@@ -541,7 +541,52 @@ namespace arc //! arctk namespace
                 auto [phot, block] = _lights[light_index_].first->emit(&rng, &_dom, _emission_times[time_index_], num_phot_);
                 phot.move(consts::num::BUMP);
                 const tree::node::Leaf* leaf = tree_.leaf(phot.pos());
-                TRACK;
+
+                while (phot.alive())
+                {
+                    if (_roulette && (phot.weight() <= _roulette_limit))
+                    {
+                        if (rng.gen() > _roulette_chance)
+                        {
+                            phot.kill();
+                            break;
+                        }
+                        else
+                        {
+                            phot.multiply_weight(1.0 / _roulette_chance);
+                        }
+                    }
+
+                    TRACK;
+
+                    const double                                                    inter_dist = phot.driver()->interaction_dist(&rng);
+                    const std::optional<std::pair<equip::Entity*, geom::Collision>> ent_dist   = leaf->ent_collision_info(phot.pos(), phot.dir());
+                    const std::optional<double>                                     leaf_dist  = leaf->collision(phot.pos(), phot.dir());
+                    const std::optional<double>                                     block_dist = block->collision(phot.pos(), phot.dir());
+                    const std::optional<double>                                     dom_dist   = _dom.collision(phot.pos(), phot.dir());
+
+                    switch (collide(inter_dist, ent_dist, leaf_dist, block_dist, dom_dist))
+                    {
+                        case type::collision::INTER:
+                            phot.driver()->interact(&rng, &phot);
+                            break;
+                        case type::collision::ENT:
+                            ent_dist.value().first->hit(&rng, &phot, block, ent_dist.value().second);
+                            break;
+                        case type::collision::CELL:
+                            phot.travel(leaf_dist.value() + consts::num::BUMP);
+                            leaf = tree_.leaf(phot.pos());
+                            break;
+                        case type::collision::BLOCK:
+                            phot.travel(block_dist.value() + consts::num::BUMP);
+                            block = _dom.block(phot.pos());
+                            break;
+                        case type::collision::DOM:
+                            phot.travel(dom_dist.value());
+                            phot.kill();
+                            break;
+                    }
+                }
 
                 phot.travel(1.0);
                 TRACK;
