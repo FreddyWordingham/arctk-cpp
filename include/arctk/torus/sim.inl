@@ -42,6 +42,7 @@
 #include <arctk/equip/entity/detector.hpp>
 #include <arctk/equip/entity/light.hpp>
 #include <arctk/exit/error.hpp>
+#include <arctk/math/container.hpp>
 #include <arctk/parse/print.hpp>
 #include <arctk/phys/photon.hpp>
 #include <arctk/prop/limits.hpp>
@@ -537,8 +538,13 @@ namespace arc //! arctk namespace
                 paths.emplace_back(std::vector<gui::Point>());
 #endif
 
-                auto [phot, block]           = _lights[light_index_].first->emit(&rng, &_dom, time_index_, num_phot_);
+                auto [phot, block] = _lights[light_index_].first->emit(&rng, &_dom, time_index_, num_phot_);
+                phot.move(consts::num::BUMP);
                 const tree::node::Leaf* leaf = tree_.leaf(phot.pos());
+                TRACK;
+
+                phot.move(1.0);
+                TRACK;
             }
 
             return (paths);
