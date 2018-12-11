@@ -371,7 +371,6 @@ namespace arc //! arctk namespace
             }
 
             const unsigned long int missing_phot = _num_phot - math::container::sum(_num_phot_per_light);
-            size_t                  index        = 0;
             for (size_t i = 0; i < missing_phot; ++i)
             {
                 ++_num_phot_per_light[i % missing_phot];
