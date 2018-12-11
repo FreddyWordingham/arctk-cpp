@@ -647,9 +647,9 @@ namespace arc //! arctk namespace
                     std::cout << "Processing path batch " << i << " of " << paths_.size() << '\n';
                     for (size_t j = 0; j < paths_[i].size(); ++j)
                     {
-                        if (paths_[i][j].back().time < min_time)
+                        if (paths_[i][j].front().time < min_time)
                         {
-                            min_time = paths_[i][j].back().time;
+                            min_time = paths_[i][j].front().time;
                         }
                         if (paths_[i][j].back().time > max_time)
                         {
