@@ -45,6 +45,7 @@
 #include <arctk/parse/print.hpp>
 #include <arctk/prop/limits.hpp>
 #include <arctk/prop/order.hpp>
+#include <arctk/random/generator/quality.hpp>
 #include <arctk/sys/file.hpp>
 #include <arctk/tree/node/leaf.hpp>
 #include <arctk/tree/root.hpp>
@@ -524,6 +525,8 @@ namespace arc //! arctk namespace
                                                                          const tree::Root& tree_) noexcept
         {
             std::vector<std::vector<gui::Point>> paths;
+
+            random::generator::Quality rng;
 
             while (math::container::sum(*thread_phot_) < num_phot_)
             {
