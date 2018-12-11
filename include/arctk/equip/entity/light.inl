@@ -38,10 +38,9 @@ namespace arc //! arctk namespace
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            inline Light::Light(const geom::shape::Mesh& surf_, const std::string& mat_id_, opt::Material* const mat_, const double power_, const bool kill_) noexcept
+            inline Light::Light(const geom::shape::Mesh& surf_, const std::string& mat_id_, const double power_, const bool kill_) noexcept
               : Entity(surf_)
               , _mat_id(mat_id_)
-              , _mat(mat_)
               , _power(power_)
               , _kill(kill_)
             {

@@ -43,6 +43,7 @@
 #include <arctk/equip/entity/light.hpp>
 #include <arctk/exit/error.hpp>
 #include <arctk/parse/print.hpp>
+#include <arctk/phys/photon.hpp>
 #include <arctk/prop/limits.hpp>
 #include <arctk/prop/order.hpp>
 #include <arctk/random/generator/quality.hpp>
@@ -531,6 +532,14 @@ namespace arc //! arctk namespace
             while (math::container::sum(*thread_phot_) < num_phot_)
             {
                 ++(*thread_phot_)[thread_index_];
+
+#ifdef RENDER
+                paths.emplace_back(std::vector<gui::Point>());
+#endif
+
+                phys::Photon            phot = _lights[light_index_].first->emit(&rng, time_index_, num_phot_);
+                const tree::node::Leaf* leaf = tree_.leaf(phot.pos());
+                disc::Block*            cell = _dom.block(phot.pos());
             }
 
             return (paths);
