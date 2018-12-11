@@ -706,7 +706,7 @@ namespace arc //! arctk namespace
             }
 
             float       render_time       = min_time;
-            const float render_time_delta = (max_time - min_time) / 500.0f;
+            const float render_time_delta = (max_time - min_time) / 10000.0f;
             const float render_time_step  = render_time_delta / 10.0f;
 
             std::cout << "Rendering.\n";

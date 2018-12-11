@@ -73,6 +73,10 @@ namespace arc //! arctk namespace
                 //  -- Constructors --
                 inline Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) noexcept;
 
+              private:
+                //  -- Initialisation --
+                inline vec3 init_plane_norm(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) const noexcept;
+
 
                 //  == METHODS ==
               public:

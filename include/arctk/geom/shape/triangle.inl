@@ -54,13 +54,22 @@ namespace arc //! arctk namespace
             inline Triangle::Triangle(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) noexcept
               : _poss(poss_)
               , _norms(norms_)
-              , _plane_norm(((poss_[index::vertex::BETA] - poss_[index::vertex::ALPHA]) ^ (poss_[index::vertex::GAMMA] - poss_[index::vertex::ALPHA])).normal())
+              , _plane_norm(init_plane_norm(poss_, norms_))
             {
                 assert(norms_[index::vertex::ALPHA].normalised());
                 assert(norms_[index::vertex::BETA].normalised());
                 assert(norms_[index::vertex::GAMMA].normalised());
 
                 assert(_plane_norm.normalised());
+            }
+
+
+            inline vec3 init_plane_norm(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) const noexcept
+            {
+                const vec3 norm  = ((poss_[index::vertex::BETA] - poss_[index::vertex::ALPHA]) ^ (poss_[index::vertex::GAMMA] - poss_[index::vertex::ALPHA])).normal();
+                const vec3 norms = norms_[index::vertex::ALPHA] + norms_[index::vertex::BETA] + norms_[index::vertex::GAMMA];
+
+                return (((norm * norms) <= 0.0) ? norm : -norm);
             }
 
 
