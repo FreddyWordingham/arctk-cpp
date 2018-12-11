@@ -96,7 +96,7 @@ namespace arc //! arctk namespace
                 const double cur_ref_index  = cur_driver->ref_index();
                 const double next_ref_index = next_driver->ref_index();
 
-                if (rng_->gen() <= phys::optical::reflection_prob(std::acos(phot_->dir() * -coll_.norm()), cur_ref_index, next_ref_index))
+                if (rng_->gen() <= phys::optical::reflection_prob(std::acos(phot_->dir() * coll_.norm()), cur_ref_index, next_ref_index))
                 {
                     phot_->travel(coll_.dist() - consts::num::BUMP);
                     phot_->set_dir(phys::optical::reflection_dir(phot_->dir(), coll_.norm()));
