@@ -24,6 +24,7 @@
 #include <memory>
 #include <string>
 #include <tuple>
+#include <utility>
 
 //  -- Arctk --
 #include <arctk/phys/photon.hpp>
@@ -90,7 +91,7 @@ namespace arc //! arctk namespace
                     //  == METHODS ==
                   public:
                     //  -- Emission --
-                    inline phys::Photon emit(random::Generator* rng_, disc::Domain* dom_, double time_, unsigned long int num_phot_) const noexcept override;
+                    inline std::pair<phys::Photon, disc::Block*> emit(random::Generator* rng_, disc::Domain* dom_, double time_, unsigned long int num_phot_) const noexcept override;
                 };
 
 
