@@ -444,12 +444,12 @@ namespace arc //! arctk namespace
 #endif
             }
 
-            std::vector<std::vector<std::vector<gui::Point>>> paths;
-
             for (size_t t = 0; t < _emission_times.size(); ++t)
             {
                 std::cout << "\nRunning emission timepoint " << t << " of " << _emission_times.size() << ".\n";
                 update_time_str(t);
+
+                std::vector<std::vector<std::vector<gui::Point>>> paths;
 
                 for (size_t l = 0; l < _lights.size(); ++l)
                 {
@@ -475,15 +475,15 @@ namespace arc //! arctk namespace
                 std::cout << "Saving domain datacube.\n";
                 _dom.save(_output_dir + DOMAIN_OUTPUT_DIR, _time_str);
                 save_detector_data();
-            }
 
-            if (_post_render)
-            {
+                if (_post_render)
+                {
 #ifdef RENDER
-                render(tree, paths);
+                    render(tree, paths);
 #else
-                std::cout << "Warning! Can not perform post-render as rendering is disabled.\n";
+                    std::cout << "Warning! Can not perform post-render as rendering is disabled.\n";
 #endif
+                }
             }
 
             post_flight();
