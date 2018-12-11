@@ -533,6 +533,39 @@ namespace arc //! arctk namespace
             return (paths);
         }
 
+        inline type::collision Sim::collide(const double inter_, const std::optional<std::pair<equip::Entity*, geom::Collision>>& ent_, const std::optional<double>& leaf_, const std::optional<double>& cell_, const std::optional<double>& dom_) const
+          noexcept
+        {
+            type::collision type = type::collision::INTER;
+            double          dist = inter_;
+
+            if (ent_ && (ent_.value().second.dist() <= dist))
+            {
+                type = type::collision::ENT;
+                dist = ent_.value().second.dist();
+            }
+
+            if (leaf_ && (leaf_.value() <= dist))
+            {
+                type = type::collision::LEAF;
+                dist = leaf_.value();
+            }
+
+            if (cell_ && (cell_.value() <= dist))
+            {
+                type = type::collision::CELL;
+                dist = cell_.value();
+            }
+
+            if (dom_ && ((dom_.value() - consts::num::BUMP) <= dist))
+            {
+                type = type::collision::DOM;
+                dist = dom_.value();
+            }
+
+            return (type);
+        }
+
 
         //  -- Rendering --
         inline void Sim::render(const tree::Root& tree_, const std::vector<std::vector<std::vector<gui::Point>>>& paths_) const noexcept
