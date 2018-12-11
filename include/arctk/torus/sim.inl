@@ -594,7 +594,7 @@ namespace arc //! arctk namespace
             return (paths);
         }
 
-        inline type::collision Sim::collide(const double inter_, const std::optional<std::pair<equip::Entity*, geom::Collision>>& ent_, const std::optional<double>& leaf_, const std::optional<double>& cell_, const std::optional<double>& dom_) const
+        inline type::collision Sim::collide(const double inter_, const std::optional<std::pair<equip::Entity*, geom::Collision>>& ent_, const std::optional<double>& leaf_, const std::optional<double>& block_, const std::optional<double>& dom_) const
           noexcept
         {
             type::collision type = type::collision::INTER;
@@ -612,10 +612,10 @@ namespace arc //! arctk namespace
                 dist = leaf_.value();
             }
 
-            if (cell_ && (cell_.value() <= dist))
+            if (block_ && (block_.value() <= dist))
             {
                 type = type::collision::BLOCK;
-                dist = cell_.value();
+                dist = block_.value();
             }
 
             if (dom_ && ((dom_.value() - consts::num::BUMP) <= dist))
