@@ -283,7 +283,7 @@ namespace arc //! arctk namespace
                     return (std::nullopt);
                 }
 
-                return (Collision((dir_ * _plane_norm) < 0.0, dist, ((_norms[index::vertex::ALPHA] * (1.0 - u - v)) + (_norms[index::vertex::BETA] * u) + (_norms[index::vertex::GAMMA] * v)).normal()));
+                return (Collision((dir_ * _plane_norm) <= 0.0, dist, ((_norms[index::vertex::ALPHA] * (1.0 - u - v)) + (_norms[index::vertex::BETA] * u) + (_norms[index::vertex::GAMMA] * v)).normal()));
             }
 
 
