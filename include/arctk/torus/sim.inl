@@ -588,7 +588,6 @@ namespace arc //! arctk namespace
                     }
                 }
 
-                phot.travel(1.0);
                 TRACK;
             }
 
