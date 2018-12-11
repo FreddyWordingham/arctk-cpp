@@ -83,11 +83,15 @@ namespace arc //! arctk namespace
                 //  -- Power --
                 const double _power; //!< Power of the light.
 
+              private:
+                //  -- Killing --
+                const bool _kill; //!< False if photon is killed upon hit.
+
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                inline Light(const geom::shape::Mesh& surf_, const std::string& mat_id_, double power_) noexcept;
+                inline Light(const geom::shape::Mesh& surf_, const std::string& mat_id_, double power_, bool kill_) noexcept;
                 inline Light(const Light&) = default; //!< Defaulted copy constructor.
                 inline Light(Light&&)      = default; //!< Defaulted move constructor.
 
