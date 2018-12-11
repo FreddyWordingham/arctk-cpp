@@ -83,10 +83,6 @@ namespace arc //! arctk namespace
                 //  -- Power --
                 const double _power; //!< Power of the light.
 
-              private:
-                //  -- Killing --
-                const bool _kill; //!< False if photon is killed upon hit.
-
 
                 //  == INSTANTIATION ==
               public:
