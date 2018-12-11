@@ -52,8 +52,10 @@ namespace arc //! arctk namespace
 
                 //  == METHODS ==
                 //  -- Emission --
-                inline phys::Photon Laser::emit(random::Generator* rng_, const double time_, const unsigned long int num_phot_) const noexcept
+                inline phys::Photon Laser::emit(random::Generator* const rng_, disc::Domain* const dom_, const double time_, const unsigned long int num_phot_) const noexcept
                 {
+                    assert(rng_ != nullptr);
+                    assert(dom_ != nullptr);
                     assert(num_phot_ > 0);
 
                     const std::pair<vec3, vec3> pos_norm = _surf.random_pos_and_norm(rng_);
