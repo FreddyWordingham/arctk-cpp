@@ -33,6 +33,7 @@
 #include <future>
 #include <iostream>
 #include <iterator>
+#include <limits>
 #include <thread>
 #include <type_traits>
 
@@ -637,7 +638,8 @@ namespace arc //! arctk namespace
             }
             paths.reserve(num_paths);
 
-            float max_time = 0.0f;
+            float min_time = std::numeric_limits<float>::max();
+            float max_time = std::numeric_limits<float>::min();
             if (num_paths > 0)
             {
                 std::cout << "Creating path actors...\n";
@@ -646,7 +648,11 @@ namespace arc //! arctk namespace
                     std::cout << "Processing path batch " << i << " of " << paths_.size() << '\n';
                     for (size_t j = 0; j < paths_[i].size(); ++j)
                     {
-                        if (paths_[i][j].back().time > max_time)
+                        if (paths_[i][j].back().time < min_time)
+                        {
+                            max_time = paths_[i][j].back().time;
+                        }
+                        else if (paths_[i][j].back().time > max_time)
                         {
                             max_time = paths_[i][j].back().time;
                         }
@@ -655,8 +661,8 @@ namespace arc //! arctk namespace
                 }
             }
 
-            float       render_time       = 0.0f;
-            const float render_time_delta = max_time / 1000.0f;
+            float       render_time       = min_time;
+            const float render_time_delta = (max_time - min_time) / 1000.0f;
             const float render_time_step  = render_time_delta / 10.0f;
 
             std::cout << "Rendering.\n";
@@ -683,7 +689,7 @@ namespace arc //! arctk namespace
                 ray_shader.set_time_end(render_time + render_time_delta);
                 if (render_time > max_time)
                 {
-                    render_time = 0.0f;
+                    render_time = min_time;
                 }
                 for (size_t i = 0; i < paths.size(); ++i)
                 {
