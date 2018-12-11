@@ -64,12 +64,13 @@ namespace arc //! arctk namespace
             }
 
 
-            inline vec3 init_plane_norm(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) const noexcept
+            //  -- Initialisation --
+            inline vec3 Triangle::init_plane_norm(const std::array<vec3, 3>& poss_, const std::array<vec3, 3>& norms_) const noexcept
             {
-                const vec3 norm  = ((poss_[index::vertex::BETA] - poss_[index::vertex::ALPHA]) ^ (poss_[index::vertex::GAMMA] - poss_[index::vertex::ALPHA])).normal();
-                const vec3 norms = norms_[index::vertex::ALPHA] + norms_[index::vertex::BETA] + norms_[index::vertex::GAMMA];
+                const vec3 plane_norm = ((poss_[index::vertex::BETA] - poss_[index::vertex::ALPHA]) ^ (poss_[index::vertex::GAMMA] - poss_[index::vertex::ALPHA])).normal();
+                const vec3 norms      = norms_[index::vertex::ALPHA] + norms_[index::vertex::BETA] + norms_[index::vertex::GAMMA];
 
-                return (((norm * norms) <= 0.0) ? norm : -norm);
+                return (((plane_norm * norms) > 0.0) ? plane_norm : -plane_norm);
             }
 
 
