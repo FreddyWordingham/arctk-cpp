@@ -568,6 +568,7 @@ namespace arc //! arctk namespace
                     switch (collide(inter_dist, ent_dist, leaf_dist, block_dist, dom_dist))
                     {
                         case type::collision::INTER:
+                            phot.travel(inter_dist);
                             phot.driver()->interact(&rng, &phot);
                             break;
                         case type::collision::ENT:
@@ -661,8 +662,8 @@ namespace arc //! arctk namespace
             gui::Actor dom_act = gui::actor::shape(_dom);
             dom_act.set_col(glm::vec3(1.0f, 1.0f, 0.0f));
 
-            gui::Actor cell_act = gui::actor::domain(_dom);
-            cell_act.set_col(glm::vec3(1.0f, 0.8f, 0.0f));
+            gui::Actor block_act = gui::actor::domain(_dom);
+            block_act.set_col(glm::vec3(1.0f, 0.8f, 0.0f));
 
             std::vector<gui::Actor> ent_acts;
             for (size_t i = 0; i < _entities.size(); ++i)
@@ -705,7 +706,7 @@ namespace arc //! arctk namespace
             }
 
             float       render_time       = min_time;
-            const float render_time_delta = (max_time - min_time) / 1000.0f;
+            const float render_time_delta = (max_time - min_time) / 500.0f;
             const float render_time_step  = render_time_delta / 10.0f;
 
             std::cout << "Rendering.\n";
