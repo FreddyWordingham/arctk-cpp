@@ -538,7 +538,7 @@ namespace arc //! arctk namespace
                 paths.emplace_back(std::vector<gui::Point>());
 #endif
 
-                auto [phot, block] = _lights[light_index_].first->emit(&rng, &_dom, _emission_time[time_index_], num_phot_);
+                auto [phot, block] = _lights[light_index_].first->emit(&rng, &_dom, _emission_times[time_index_], num_phot_);
                 phot.move(consts::num::BUMP);
                 const tree::node::Leaf* leaf = tree_.leaf(phot.pos());
                 TRACK;
