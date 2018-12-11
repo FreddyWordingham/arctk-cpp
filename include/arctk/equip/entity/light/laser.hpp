@@ -84,7 +84,7 @@ namespace arc //! arctk namespace
                     //  == INSTANTIATION ==
                   public:
                     //  -- Constructors --
-                    inline Laser(const geom::shape::Mesh& surf_, const std::string& mat_id_, opt::Material* const mat_, double power_, bool kill_, double wavelength_) noexcept;
+                    inline Laser(const geom::shape::Mesh& surf_, const std::string& mat_id_, double power_, bool kill_, double wavelength_) noexcept;
 
 
                     //  == METHODS ==

@@ -20,6 +20,8 @@
 #include <utility>
 
 //  -- Arctk --
+#include <arctk/disc/block.hpp>
+#include <arctk/disc/domain.hpp>
 #include <arctk/geom/shape/mesh.hpp>
 #include <arctk/math/vec.hpp>
 
@@ -39,8 +41,8 @@ namespace arc //! arctk namespace
 
                 //  == INSTANTIATION ==
                 //  -- Constructors --
-                inline Laser::Laser(const geom::shape::Mesh& surf_, const std::string& mat_id_, opt::Material* const mat_, const double power_, const bool kill_, const double wavelength_) noexcept
-                  : Light(surf_, mat_id_, mat_, power_, kill_)
+                inline Laser::Laser(const geom::shape::Mesh& surf_, const std::string& mat_id_, const double power_, const bool kill_, const double wavelength_) noexcept
+                  : Light(surf_, mat_id_, power_, kill_)
                   , _wavelength(wavelength_)
                 {
                     assert(!mat_id_.empty());
@@ -60,7 +62,7 @@ namespace arc //! arctk namespace
 
                     const std::pair<vec3, vec3> pos_norm = _surf.random_pos_and_norm(rng_);
 
-                    return (phys::Photon(pos_norm.first, pos_norm.second, _power / num_phot_, _wavelength, time_, _mat_id, _mat));
+                    return (phys::Photon(pos_norm.first, pos_norm.second, _power / num_phot_, _wavelength, time_, _mat_id, dom_->block(pos_norm.first)->mat(_mat_id)));
                 }
 
 

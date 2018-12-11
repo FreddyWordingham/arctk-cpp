@@ -36,6 +36,7 @@ namespace arc //! arctk namespace
     namespace disc //! discretisation namespace
     {
         class Block;
+        class Domain;
     }              // namespace disc
     namespace geom //! geometric namespace
     {
