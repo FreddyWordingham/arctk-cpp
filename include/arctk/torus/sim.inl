@@ -711,8 +711,6 @@ namespace arc //! arctk namespace
             std::cout << "Rendering.\n";
             while (map.poll(win))
             {
-                std::cout << render_time << '\t' << min_time << '\t' << max_time << '\n';
-
                 win.clear_buffer();
 
                 amb_shader.activate(lens, cam);
