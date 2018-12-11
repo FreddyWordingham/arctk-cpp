@@ -547,13 +547,13 @@ namespace arc //! arctk namespace
 
             if (leaf_ && (leaf_.value() <= dist))
             {
-                type = type::collision::LEAF;
+                type = type::collision::CELL;
                 dist = leaf_.value();
             }
 
             if (cell_ && (cell_.value() <= dist))
             {
-                type = type::collision::CELL;
+                type = type::collision::BLOCK;
                 dist = cell_.value();
             }
 
