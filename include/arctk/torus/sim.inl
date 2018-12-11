@@ -573,7 +573,7 @@ namespace arc //! arctk namespace
                         case type::collision::ENT:
                             ent_dist.value().first->hit(&rng, &phot, block, ent_dist.value().second);
                             break;
-                        case type::collision::CELL:
+                        case type::collision::LEAF:
                             phot.travel(leaf_dist.value() + consts::num::BUMP);
                             leaf = tree_.leaf(phot.pos());
                             break;
@@ -608,7 +608,7 @@ namespace arc //! arctk namespace
 
             if (leaf_ && (leaf_.value() <= dist))
             {
-                type = type::collision::CELL;
+                type = type::collision::LEAF;
                 dist = leaf_.value();
             }
 
