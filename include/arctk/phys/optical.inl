@@ -18,7 +18,6 @@
 //  -- Std --
 #include <cassert>
 #include <cmath>
-#include <iostream>
 
 //  -- Arctk --
 #include <arctk/consts/math.hpp>
@@ -174,14 +173,6 @@ namespace arc //! arctk namespace
                 const vec3 out = (in_ * ref_index_ratio) + (norm_ * ((ref_index_ratio * cos_ang_in) - std::sqrt(1.0 - sin_ang_out_sq)));
 
                 assert(out.normalised());
-                if (!((in_ * out) > 0.0))
-                {
-                    std::cout << "In: " << in_ << '\n';
-                    std::cout << "Ou: " << out << '\n';
-                    std::cout << "n0: " << ref_index_in_ << '\n';
-                    std::cout << "n1: " << ref_index_out_ << '\n';
-                    std::cout << "n : " << norm_ << '\n';
-                }
                 assert((in_ * out) > 0.0);
 
                 return (out);

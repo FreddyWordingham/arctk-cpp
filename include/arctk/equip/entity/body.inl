@@ -104,8 +104,7 @@ namespace arc //! arctk namespace
                 else
                 {
                     phot_->travel(coll_.dist() + consts::num::BUMP);
-                    phot_->set_dir(-phys::optical::refraction_dir(phot_->dir(), coll_.norm(), cur_ref_index, next_ref_index));
-                    // TODO: Check back reflection negation
+                    phot_->set_dir(phys::optical::refraction_dir(phot_->dir(), coll_.norm(), cur_ref_index, next_ref_index));
 
                     phot_->exit_mat(_mat_id, std::move(next_driver));
                 }
