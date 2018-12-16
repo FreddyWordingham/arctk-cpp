@@ -54,6 +54,8 @@ namespace arc //! arctk namespace
             //  -- Collision --
             inline void Body::hit_front(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, const geom::Collision& coll_) noexcept
             {
+                std::cout << "Front!\n";
+
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
                 assert(block_ != nullptr);
@@ -83,6 +85,8 @@ namespace arc //! arctk namespace
 
             inline void Body::hit_back(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, const geom::Collision& coll_) noexcept
             {
+                std::cout << "Back!\n";
+
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
                 assert(block_ != nullptr);
@@ -99,12 +103,12 @@ namespace arc //! arctk namespace
                 if (rng_->gen() <= phys::optical::reflection_prob(std::acos(phot_->dir() * coll_.norm()), cur_ref_index, next_ref_index))
                 {
                     phot_->travel(coll_.dist() - consts::num::BUMP);
-                    phot_->set_dir(phys::optical::reflection_dir(phot_->dir(), coll_.norm()));
+                    phot_->set_dir(phys::optical::reflection_dir(phot_->dir(), -coll_.norm()));
                 }
                 else
                 {
                     phot_->travel(coll_.dist() + consts::num::BUMP);
-                    phot_->set_dir(phys::optical::refraction_dir(phot_->dir(), coll_.norm(), cur_ref_index, next_ref_index));
+                    phot_->set_dir(phys::optical::refraction_dir(phot_->dir(), -coll_.norm(), cur_ref_index, next_ref_index));
 
                     phot_->exit_mat(_mat_id, std::move(next_driver));
                 }

@@ -128,7 +128,7 @@ namespace arc //! arctk namespace
              *  @post   Dot product of in_ and norm_ must be negative.
              *
              *  @post   out must be normalised.
-             *  @post   Dot product of in_ and out must be negative.
+             *  @post   Dot product of in_ and out must be positive.
              *
              *  @return Reflection direction.
              */
@@ -141,7 +141,7 @@ namespace arc //! arctk namespace
                 const vec3 out = (in_ - (norm_ * (2.0 * (in_ * norm_)))).normal();
 
                 assert(out.normalised());
-                assert((in_ * out) < 0.0);
+                assert((in_ * out) > 0.0);
 
                 return (out);
             }
