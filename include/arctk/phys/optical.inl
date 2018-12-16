@@ -154,6 +154,7 @@ namespace arc //! arctk namespace
              *  @pre    norm_ must be normalised.
              *
              *  @post   out must be normalised.
+             *  @post   Dot product of in_ and out must be positive.
              *
              *  @return Refraction direction.
              */
@@ -170,6 +171,7 @@ namespace arc //! arctk namespace
                 const vec3 out = (in_ * ref_index_ratio) + (norm_ * ((ref_index_ratio * cos_ang_in) - std::sqrt(1.0 - sin_ang_out_sq)));
 
                 assert(out.normalised());
+                assert((in_ * out) > 0.0);
 
                 return (out);
             }

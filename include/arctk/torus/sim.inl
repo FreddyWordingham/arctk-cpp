@@ -541,7 +541,6 @@ namespace arc //! arctk namespace
                 auto [phot, block] = _lights[light_index_].first->emit(&rng, &_dom, _emission_times[time_index_], num_phot_);
                 phot.move(consts::num::BUMP);
                 const tree::node::Leaf* leaf = tree_.leaf(phot.pos());
-
                 while (phot.alive())
                 {
                     if (_roulette && (phot.weight() <= _roulette_limit))
@@ -706,7 +705,7 @@ namespace arc //! arctk namespace
             }
 
             float       render_time       = min_time;
-            const float render_time_delta = (max_time - min_time) / 10000.0f;
+            const float render_time_delta = (max_time - min_time) / 1000.0f;
             const float render_time_step  = render_time_delta / 10.0f;
 
             std::cout << "Rendering.\n";
