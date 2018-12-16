@@ -18,6 +18,7 @@
 //  -- Std --
 #include <cassert>
 #include <cmath>
+#include <iostream>
 
 //  -- Arctk --
 #include <arctk/consts/math.hpp>
@@ -127,6 +128,7 @@ namespace arc //! arctk namespace
              *  @pre    norm_ must be normalised.
              *
              *  @post   out must be normalised.
+             *  @post   Dot product of in_ and out must be negative.
              *
              *  @return Reflection direction.
              */
@@ -138,6 +140,7 @@ namespace arc //! arctk namespace
                 const vec3 out = (in_ - (norm_ * (2.0 * (in_ * norm_)))).normal();
 
                 assert(out.normalised());
+                assert((in_ * out) < 0.0);
 
                 return (out);
             }
@@ -171,6 +174,14 @@ namespace arc //! arctk namespace
                 const vec3 out = (in_ * ref_index_ratio) + (norm_ * ((ref_index_ratio * cos_ang_in) - std::sqrt(1.0 - sin_ang_out_sq)));
 
                 assert(out.normalised());
+                if (!((in_ * out) > 0.0))
+                {
+                    std::cout << "In: " << in_ << '\n';
+                    std::cout << "Ou: " << out << '\n';
+                    std::cout << "n0: " << ref_index_in_ << '\n';
+                    std::cout << "n1: " << ref_index_out_ << '\n';
+                    std::cout << "n : " << norm_ << '\n';
+                }
                 assert((in_ * out) > 0.0);
 
                 return (out);
