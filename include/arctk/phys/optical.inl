@@ -125,6 +125,7 @@ namespace arc //! arctk namespace
              *
              *  @pre    in_ must be normalised.
              *  @pre    norm_ must be normalised.
+             *  @post   Dot product of in_ and norm_ must be negative.
              *
              *  @post   out must be normalised.
              *  @post   Dot product of in_ and out must be negative.
@@ -135,6 +136,7 @@ namespace arc //! arctk namespace
             {
                 assert(in_.normalised());
                 assert(norm_.normalised());
+                assert((in_ * norm_) < 0.0);
 
                 const vec3 out = (in_ - (norm_ * (2.0 * (in_ * norm_)))).normal();
 
@@ -154,6 +156,7 @@ namespace arc //! arctk namespace
              *
              *  @pre    in_ must be normalised.
              *  @pre    norm_ must be normalised.
+             *  @post   Dot product of in_ and norm_ must be negative.
              *
              *  @post   out must be normalised.
              *  @post   Dot product of in_ and out must be positive.
@@ -164,6 +167,7 @@ namespace arc //! arctk namespace
             {
                 assert(in_.normalised());
                 assert(norm_.normalised());
+                assert((in_ * norm_) < 0.0);
 
                 const double ref_index_ratio = ref_index_in_ / ref_index_out_;
 
