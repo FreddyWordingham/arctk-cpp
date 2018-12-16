@@ -129,7 +129,6 @@ namespace arc //! arctk namespace
              *
              *  @post   out must be normalised.
              *  @post   Dot product of out and norm_ must be positive.
-             *  @post   Dot product of out and in_ must be positive.
              *
              *  @return Reflection direction.
              */
@@ -143,7 +142,6 @@ namespace arc //! arctk namespace
 
                 assert(out.normalised());
                 assert((out * norm_) > 0.0);
-                assert((out * in_) < 0.0);
 
                 return (out);
             }
