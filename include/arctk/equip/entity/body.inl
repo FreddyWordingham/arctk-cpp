@@ -54,8 +54,6 @@ namespace arc //! arctk namespace
             //  -- Collision --
             inline void Body::hit_front(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, const geom::Collision& coll_) noexcept
             {
-                std::cout << "Front!\n";
-
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
                 assert(block_ != nullptr);
@@ -85,8 +83,6 @@ namespace arc //! arctk namespace
 
             inline void Body::hit_back(random::Generator* const rng_, phys::Photon* const phot_, disc::Block* const block_, const geom::Collision& coll_) noexcept
             {
-                std::cout << "Back!\n";
-
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
                 assert(block_ != nullptr);
