@@ -23,7 +23,8 @@
 #include <arctk/index/dim.hpp>
 #include <arctk/phys/photon.hpp>
 
-
+#include <arctk/parse/print.hpp>
+#include <iostream>
 
 //  == NAMESPACE ==
 namespace arc //! arctk namespace
@@ -45,8 +46,11 @@ namespace arc //! arctk namespace
             assert(min_.y < max_.y);
             assert(min_.z < max_.z);
             assert(res_[index::dim::cartesian::X] > 0);
+            assert((res_[index::dim::cartesian::X] % 2) == 1);
             assert(res_[index::dim::cartesian::Y] > 0);
+            assert((res_[index::dim::cartesian::Y] % 2) == 1);
             assert(res_[index::dim::cartesian::Z] > 0);
+            assert((res_[index::dim::cartesian::Z] % 2) == 1);
             assert(!aether_id_.empty());
         }
 

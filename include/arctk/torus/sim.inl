@@ -556,6 +556,9 @@ namespace arc //! arctk namespace
                         }
                     }
 
+                    leaf  = tree_.leaf(phot.pos());       // TEMP
+                    block = _dom.block(phot.pos());       // TEMP
+                    assert(block->intersect(phot.pos())); // TEMP
                     TRACK;
 
                     const double                                                    inter_dist = phot.driver()->interaction_dist(&rng);
@@ -578,6 +581,7 @@ namespace arc //! arctk namespace
                             leaf = tree_.leaf(phot.pos());
                             break;
                         case type::collision::BLOCK:
+                            std::cout << "*\n";
                             phot.travel(block_dist.value() + consts::num::BUMP);
                             block = _dom.block(phot.pos());
                             break;
@@ -621,7 +625,6 @@ namespace arc //! arctk namespace
             if (dom_ && ((dom_.value() - consts::num::BUMP) <= dist))
             {
                 type = type::collision::DOM;
-                dist = dom_.value();
             }
 
             return (type);
