@@ -142,7 +142,70 @@ namespace arc //! arctk namespace
 
             std::ofstream file(path_ + "domain" + time_str_ + ".vtk");
 
-            file << "This is the domain output.\n";
+            file << "# vtk DataFile Version 3.0\n"
+                 << "vtk "
+                 << "sim_output" << '\n'
+                 << "ASCII\n"
+                 << "DATASET RECTILINEAR_GRID\n"
+                 << "DIMENSIONS " << (_res[index::dim::cartesian::X] + 1) << " " << (_res[index::dim::cartesian::Y] + 1) << " " << (_res[index::dim::cartesian::Z] + 1) << '\n';
+
+            file << "\nX_COORDINATES " << (_res[index::dim::cartesian::X] + 1) << " double\n";
+            for (size_t i = 0; i <= _res[index::dim::cartesian::X]; ++i)
+            {
+                if (i != 0)
+                {
+                    file << ' ';
+                }
+
+                file << (_min.x + (_block_size.x * static_cast<double>(i))) << ' ';
+            }
+
+            file << "\nY_COORDINATES " << (_res[index::dim::cartesian::Y] + 1) << " double\n";
+            for (size_t i = 0; i <= _res[index::dim::cartesian::Y]; ++i)
+            {
+                if (i != 0)
+                {
+                    file << ' ';
+                }
+
+                file << (_min.y + (_block_size.y * static_cast<double>(i))) << ' ';
+            }
+
+            file << "\nZ_COORDINATES " << (_res[index::dim::cartesian::Z] + 1) << " double\n";
+            for (size_t i = 0; i <= _res[index::dim::cartesian::Z]; ++i)
+            {
+                if (i != 0)
+                {
+                    file << ' ';
+                }
+
+                file << (_min.z + (_block_size.z * static_cast<double>(i))) << ' ';
+            }
+
+            file << "\nCELL_DATA " << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << '\n';
+
+            const std::unordered_map<std::string, multi::vector<double, 3>> data_cube = create_data_cube();
+            for (auto const& [key, data] : data_cube)
+            {
+                file << "\nFIELD FieldData 1\n" << key << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << ' ' << "double" << '\n';
+                for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
+                {
+                    for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
+                    {
+                        for (size_t k = 1; k < _res[index::dim::cartesian::Z]; ++k)
+                        {
+                            if (k != 0)
+                            {
+                                file << ' ';
+                            }
+
+                            file << data[i][j][k];
+                        }
+                        file << '\n';
+                    }
+                    file << '\n';
+                }
+            }
         }
 
 
