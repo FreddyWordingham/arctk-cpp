@@ -654,18 +654,7 @@ namespace arc //! arctk namespace
             return (paths);
         }
 
-        /**
-         *  Determine which type of collision event will occur.
-         *
-         *  @param  inter_  Distance to scattering inferaction event.
-         *  @param  ent_    Entity collision event information.
-         *  @param  leaf_   Distance to leaf cell collision event.
-         *  @param  cell_   Distance to domain cell collision event.
-         *  @param  dom_    Distance to domain bounds collision event.
-         *
-         *  @return Type of collision event that will occur.
-         */
-        inline type::collision Sim::collide(const double inter_, const std::optional<std::pair<equip::Entity*, geom::Collision>>& ent_, const std::optional<double>& leaf_, const std::optional<double>& cell_, const std::optional<double>& dom_) const
+        inline type::collision Sim::collide(const double inter_, const std::optional<std::pair<equip::Entity*, geom::Collision>>& ent_, const std::optional<double>& leaf_, const std::optional<double>& block_, const std::optional<double>& dom_) const
           noexcept
         {
             type::collision type = type::collision::INTER;
@@ -683,10 +672,10 @@ namespace arc //! arctk namespace
                 dist = leaf_.value();
             }
 
-            if (cell_ && (cell_.value() <= dist))
+            if (block_ && (block_.value() <= dist))
             {
-                type = type::collision::CELL;
-                dist = cell_.value();
+                type = type::collision::BLOCK;
+                dist = block_.value();
             }
 
             if (dom_ && ((dom_.value() - consts::num::BUMP) <= dist))
