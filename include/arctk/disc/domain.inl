@@ -62,8 +62,11 @@ namespace arc //! arctk namespace
             assert(min_.y < max_.y);
             assert(min_.z < max_.z);
             assert(res_[index::dim::cartesian::X] > 0);
+            assert((res_[index::dim::cartesian::X] % 2) == 1);
             assert(res_[index::dim::cartesian::Y] > 0);
+            assert((res_[index::dim::cartesian::Y] % 2) == 1);
             assert(res_[index::dim::cartesian::Z] > 0);
+            assert((res_[index::dim::cartesian::Z] % 2) == 1);
             assert(!aether_id_.empty());
 
             const vec3 block_size((max_.x - min_.x) / res_[index::dim::cartesian::X], (max_.y - min_.y) / res_[index::dim::cartesian::Y], (max_.z - min_.z) / res_[index::dim::cartesian::Z]);
