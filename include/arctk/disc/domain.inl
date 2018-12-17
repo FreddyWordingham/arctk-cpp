@@ -90,7 +90,7 @@ namespace arc //! arctk namespace
 
                     for (size_t k = 0; k < res_[index::dim::cartesian::Z]; ++k)
                     {
-                        const double z = min_.z + (block_size.z * j);
+                        const double z = min_.z + (block_size.z * k);
 
                         blocks.back().back().emplace_back(Block(vec3(x, y, z), vec3(x + block_size.x, y + block_size.y, z + block_size.z), aether_id_, aether_));
                     }
@@ -120,7 +120,11 @@ namespace arc //! arctk namespace
         {
             const std::array<size_t, 3> index = indices(pos_);
 
-            return (&_blocks[index[index::dim::cartesian::X]][index[index::dim::cartesian::Y]][index[index::dim::cartesian::Z]]);
+            Block* block = &_blocks[index[index::dim::cartesian::X]][index[index::dim::cartesian::Y]][index[index::dim::cartesian::Z]];
+
+            assert(block->intersect(pos_));
+
+            return (block);
         }
 
 
@@ -229,6 +233,8 @@ namespace arc //! arctk namespace
 
                 indices[i] = (index == _res[i]) ? (index - 1) : index;
             }
+
+            assert(_blocks[indices[0]][indices[1]][indices[2]].intersect(pos_));
 
             return (indices);
         }

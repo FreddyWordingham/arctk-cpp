@@ -556,9 +556,9 @@ namespace arc //! arctk namespace
                         }
                     }
 
-                    leaf  = tree_.leaf(phot.pos());       // TEMP
-                    block = _dom.block(phot.pos());       // TEMP
-                    assert(block->intersect(phot.pos())); // TEMP
+                    leaf  = tree_.leaf(phot.pos()); // TEMP
+                    block = _dom.block(phot.pos()); // TEMP
+
                     TRACK;
 
                     const double                                                    inter_dist = phot.driver()->interaction_dist(&rng);
