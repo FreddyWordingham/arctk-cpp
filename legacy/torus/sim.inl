@@ -633,7 +633,7 @@ namespace arc //! arctk namespace
                             energy_debt += leaf_dist.value() * phot.energy() * phot.weight();
                             leaf = tree_.leaf(phot.pos());
                             break;
-                        case type::collision::CELL:
+                        case type::collision::BLOCK:
                             phot.move(cell_dist.value() + consts::num::BUMP, sop->ref_index());
                             energy_debt += cell_dist.value() * phot.energy() * phot.weight();
                             cell->add_energy(energy_debt);
