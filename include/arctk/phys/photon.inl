@@ -205,6 +205,11 @@ namespace arc //! arctk namespace
             _weight *= mult_;
         }
 
+        inline void Photon::update_driver(std::unique_ptr<opt::Driver> driver_) noexcept
+        {
+            _driver = std::move(driver_);
+        }
+
 
         //  -- Materials --
         inline void Photon::enter_mat(const std::string& mat_id_, std::unique_ptr<opt::Driver> driver_) noexcept
