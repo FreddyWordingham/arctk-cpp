@@ -188,18 +188,18 @@ namespace arc //! arctk namespace
             for (auto const& [key, data] : data_cube)
             {
                 file << "\nFIELD FieldData 1\n" << key << ' ' << 1 << ' ' << (_res[index::dim::cartesian::X] * _res[index::dim::cartesian::Y] * _res[index::dim::cartesian::Z]) << ' ' << "double" << '\n';
-                for (size_t i = 0; i < _res[index::dim::cartesian::X]; ++i)
+                for (size_t i = 0; i < _res[index::dim::cartesian::Z]; ++i)
                 {
                     for (size_t j = 0; j < _res[index::dim::cartesian::Y]; ++j)
                     {
-                        for (size_t k = 1; k < _res[index::dim::cartesian::Z]; ++k)
+                        for (size_t k = 0; k < _res[index::dim::cartesian::X]; ++k)
                         {
                             if (k != 0)
                             {
                                 file << ' ';
                             }
 
-                            file << data[i][j][k];
+                            file << data[k][j][i];
                         }
                         file << '\n';
                     }
