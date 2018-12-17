@@ -587,6 +587,7 @@ namespace arc //! arctk namespace
                         case type::collision::BLOCK:
                             phot.travel(block_dist.value() + consts::num::BUMP);
                             block = _dom.block(phot.pos());
+                            phot.update_driver(block->mat(phot.cur_mat_id())->driver(phot));
                             break;
                         case type::collision::DOM:
                             phot.travel(dom_dist.value());
