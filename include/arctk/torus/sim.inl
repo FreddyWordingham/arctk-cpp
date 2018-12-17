@@ -556,8 +556,8 @@ namespace arc //! arctk namespace
                         }
                     }
 
-                    leaf  = tree_.leaf(phot.pos()); // TEMP
-                    block = _dom.block(phot.pos()); // TEMP
+                    // leaf  = tree_.leaf(phot.pos()); // TEMP
+                    // block = _dom.block(phot.pos()); // TEMP
 
                     TRACK;
 
@@ -581,7 +581,6 @@ namespace arc //! arctk namespace
                             leaf = tree_.leaf(phot.pos());
                             break;
                         case type::collision::BLOCK:
-                            std::cout << "*\n";
                             phot.travel(block_dist.value() + consts::num::BUMP);
                             block = _dom.block(phot.pos());
                             break;
