@@ -556,8 +556,12 @@ namespace arc //! arctk namespace
                         }
                     }
 
-                    // leaf  = tree_.leaf(phot.pos()); // TEMP
-                    // block = _dom.block(phot.pos()); // TEMP
+                    leaf  = tree_.leaf(phot.pos()); // TEMP
+                    block = _dom.block(phot.pos()); // TEMP
+                    if (!block->intersect(phot.pos()))
+                    {
+                        std::cout << "ERROR!\n";
+                    }
 
                     TRACK;
 

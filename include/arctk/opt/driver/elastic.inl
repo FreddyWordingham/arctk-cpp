@@ -77,10 +77,9 @@ namespace arc //! arctk namespace
                 phot_->move(dist_);
                 phot_->increase_time((dist_ * _ref_index) / consts::phys::SPEED_OF_LIGHT);
 
-                //_mat->add_energy((phot_->power() * dist_ * _ref_index) / consts::phys::SPEED_OF_LIGHT);
-                _mat->add_energy(dist_);
-                //_mat->add_scattering(phot_->power() * dist_ * _ref_index * _scat_coef);
-                //_mat->add_absorption(phot_->power() * dist_ * _ref_index * _abs_coef);
+                _mat->add_energy((phot_->power() * dist_ * _ref_index) / consts::phys::SPEED_OF_LIGHT);
+                _mat->add_scattering(phot_->power() * dist_ * _ref_index * _scat_coef);
+                _mat->add_absorption(phot_->power() * dist_ * _ref_index * _abs_coef);
             }
 
             inline double Elastic::interaction_dist(random::Generator* const rng_) noexcept
