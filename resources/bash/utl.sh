@@ -3,7 +3,7 @@
 arctk.search()
 {
     if [ "$#" != "1" ]; then
-        printf "Error! Unable to search Arc files.\n"
+        printf "Error! Unable to search Arctk files.\n"
         printf "Search requires a single regex string.\n"
 
         return
