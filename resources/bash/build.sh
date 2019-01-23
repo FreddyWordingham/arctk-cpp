@@ -139,7 +139,3 @@ arctk.uninstall()
     rm /usr/local/lib/libarctk.a
     rm -r /usr/local/include/arctk/
 }
-
-
-
-printf "Arctk build bash functions loaded.\n"

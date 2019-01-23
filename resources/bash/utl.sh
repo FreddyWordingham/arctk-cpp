@@ -30,11 +30,21 @@ arctk.list()
 }
 
 
+#   -- Installation --
+arctk.install()
+{
+    printf "\n" >> ~/.bash_profile
+    printf "#   == ARCTK ==\n" >> ~/.bash_profile
+    printf "export ARCTK_DIR=\"$PROJECTS_DIR/arctk\"\n" >> ~/.bash_profile
+    printf "source $ARCTK_DIR/resources/bash/vcs.sh\n" >> ~/.bash_profile
+    printf "source $ARCTK_DIR/resources/bash/build.sh\n" >> ~/.bash_profile
+    printf "source $ARCTK_DIR/resources/bash/utl.sh\n" >> ~/.bash_profile
+    printf ". $ARCTK_DIR/.build\n" >> ~/.bash_profile
+}
+
+
 #   -- VSCode --
 arctk.extension()
 {
     cp -r $ARCTK_DIR/resources/vscode/arctk-extension ~/.vscode/extensions/arctk-extension
 }
-
-
-printf "Arctk utility bash functions loaded.\n"

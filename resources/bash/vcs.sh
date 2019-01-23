@@ -58,7 +58,3 @@ arctk.update()
 
     cd - >/dev/null
 }
-
-
-
-printf "Arctk version control bash functions loaded.\n"
