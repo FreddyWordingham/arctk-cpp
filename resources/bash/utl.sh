@@ -33,7 +33,7 @@ arctk.list()
 #   -- VSCode --
 arctk.extension()
 {
-    cp -r $ARCTK_DIR/res/vscode/arctk-extension ~/.vscode/extensions/arctk-extension
+    cp -r $ARCTK_DIR/resources/vscode/arctk-extension ~/.vscode/extensions/arctk-extension
 }
 
 
