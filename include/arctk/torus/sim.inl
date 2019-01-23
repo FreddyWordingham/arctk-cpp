@@ -561,6 +561,7 @@ namespace arc //! arctk namespace
                     if (!block->intersect(phot.pos()))
                     {
                         std::cout << "ERROR!\n";
+                        std::exit(34);
                     }
 
                     TRACK;

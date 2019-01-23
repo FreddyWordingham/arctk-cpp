@@ -86,6 +86,14 @@ namespace arc //! arctk namespace
                 assert(rng_ != nullptr);
                 assert(phot_ != nullptr);
                 assert(block_ != nullptr);
+
+                if (phot_->cur_mat_id() != _mat_id)
+                {
+                    std::cout << "Cur  mat: " << phot_->cur_mat_id() << '\n';
+                    std::cout << "Prev mat: " << phot_->prev_mat_id() << '\n';
+                    std::cout << "ID   mat: " << _mat_id << '\n';
+                }
+
                 assert(phot_->cur_mat_id() == _mat_id);
 
                 const std::string& next_mat_id = phot_->prev_mat_id();
