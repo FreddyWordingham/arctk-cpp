@@ -1,8 +1,24 @@
-# Compiled
-/bin
+#   == CONFIGURATION ==
+#   -- Headers --
+/include/arc/config/*
+
+
+#   == BUILD ==
+#   -- Settings --
+.build
+
+#   -- Files --
 /build
-/lib
-/.vscode
-/.ccls-cache
-/include/arctk/config/*
+
+
+#   == COMPILED ==
+#   -- Binaries --
+/bin
+
+
+#   == Tools ==
+#   -- System --
 .DS_Store
+
+#   -- VS Code --
+/.vscode
