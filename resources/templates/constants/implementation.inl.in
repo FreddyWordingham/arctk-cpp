@@ -6,21 +6,3 @@
 //  == DECLARATIONS ==
 //  -- Arc --
 #include <arctk/@HEADER_PATH@>
-
-
-
-//  == IMPORTS ==
-//  -- Arc --
-
-
-
-//  == NAMESPACE ==
-@NAMESPACES_OPEN@
-
-
-
-@NAMESPACE_INDENT@//  == CONSTANTS ==
-
-
-
-@NAMESPACES_CLOSE@

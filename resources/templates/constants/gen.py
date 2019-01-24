@@ -1,11 +1,11 @@
 #   == IMPORTS ==
 import sys
 sys.path.append("..")
-from file import get_contents, write_file
-from env import ARCTK_DIR
-from args import get_path, get_namespace_list, get_class_name
 from format import indent, get_namespaces_open, get_namespaces_close, get_namespace_indent
-
+from args import get_path, get_namespace_list, get_class_name
+from env import ARCTK_DIR
+from file import get_contents, write_file
+xc
 
 
 #   == MAIN ==
@@ -24,9 +24,6 @@ temp_head = temp_head.replace("@NAMESPACE_INDENT@", get_namespace_indent())
 temp_head = temp_head.replace("@NAMESPACES_CLOSE@", get_namespaces_close())
 
 temp_impl = temp_impl.replace("@HEADER_PATH@", get_path() + ".hpp")
-temp_impl = temp_impl.replace("@NAMESPACES_OPEN@", get_namespaces_open())
-temp_impl = temp_impl.replace("@NAMESPACE_INDENT@", get_namespace_indent())
-temp_impl = temp_impl.replace("@NAMESPACES_CLOSE@", get_namespaces_close())
 
 temp_test = temp_test.replace("@IMPLEMENTATION_PATH@", get_path() + ".inl")
 

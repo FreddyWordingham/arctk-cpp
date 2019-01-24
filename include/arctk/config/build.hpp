@@ -13,12 +13,12 @@ namespace arc
 
         //  == CONSTANTS ==
         //  -- Build Information --
-        constexpr const char* const DIR;
-        constexpr const char* const BRANCH;
-        constexpr const char* const HASH;
-        constexpr const char* const COMPILER;
-        constexpr const char* const TYPE;
-        constexpr const char* const DATE;
+        constexpr const char* const DIR{"/Users/freddy/Projects/arctk"};
+        constexpr const char* const BRANCH{"master"};
+        constexpr const char* const HASH{"16b08e68c"};
+        constexpr const char* const COMPILER{"Clang"};
+        constexpr const char* const TYPE{"debug"};
+        constexpr const char* const DATE{"2019-01-24"};
 
 
 
