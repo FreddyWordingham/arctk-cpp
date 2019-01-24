@@ -186,18 +186,10 @@ namespace arc
     constexpr inline si::Unit<L_SUB_R> operator-(const si::Unit<TL>& lhs_, const si::Unit<TR>& rhs_) noexcept;
     template <typename TL, typename TR, typename L_MULT_R = typename type::mult<TL, TR>>
     constexpr inline si::Unit<L_MULT_R> operator*(const si::Unit<TL>& lhs_, const si::Unit<TR>& rhs_) noexcept;
-
     template <typename TL, typename L_MULT_R = typename type::mult<TL, const double>>
-    constexpr inline si::Unit<L_MULT_R> operator*(const si::Unit<TL>& lhs_, const double rhs_) noexcept
-    {
-        return (si::Unit<L_MULT_R>{lhs_.mag() * rhs_});
-    }
+    constexpr inline si::Unit<L_MULT_R> operator*(const si::Unit<TL>& lhs_, const double rhs_) noexcept;
     template <typename TR, typename L_MULT_R = typename type::mult<const double, TR>>
-    constexpr inline si::Unit<L_MULT_R> operator*(const double lhs_, const si::Unit<TR>& rhs_) noexcept
-    {
-        return (si::Unit<L_MULT_R>{lhs_ * rhs_.mag()});
-    }
-
+    constexpr inline si::Unit<L_MULT_R> operator*(const double lhs_, const si::Unit<TR>& rhs_) noexcept;
     template <typename TL, typename TR, typename L_DIV_R = typename type::div<TL, TR>>
     constexpr inline si::Unit<L_DIV_R> operator/(const si::Unit<TL>& lhs_, const si::Unit<TR>& rhs_) noexcept;
 
