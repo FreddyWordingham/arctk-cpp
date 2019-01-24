@@ -1,1 +1,1 @@
-export ARCTK_BUILD_ARGS='debug clang clang++ true false'
+export ARCTK_BUILD_ARGS='debug clang clang++ true true'

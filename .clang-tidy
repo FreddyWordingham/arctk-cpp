@@ -1,5 +1,5 @@
 ---
-Checks:                '*,-llvm-header-guard'
+Checks:                '*,-cppcoreguidelines-pro-bounds-array-to-pointer-decay,-hicpp-no-array-decay,-llvm-header-guard'
 WarningsAsErrors:      ''
 HeaderFilterRegex:     '.hpp'
 AnalyzeTemporaryDtors: true

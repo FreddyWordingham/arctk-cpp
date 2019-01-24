@@ -2,9 +2,6 @@
 //  -- Arc --
 #include <arctk/config/version.inl>
 
-//  -- Std --
-#include <type_traits>
-
 
 
 //  == NAMESPACE ==
@@ -17,6 +14,9 @@ namespace arc
 
         //  == FUNCTION PROTOTYPES ==
         //  -- Tests --
+        inline void patch() noexcept;
+        inline void minor() noexcept;
+        inline void major() noexcept;
 
 
 
@@ -28,6 +28,10 @@ namespace arc
 //  == MAIN ==
 int main()
 {
+    arc::test::patch();
+    arc::test::minor();
+    arc::test::major();
+
     return (0);
 }
 
@@ -43,6 +47,20 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Tests --
+        inline void patch() noexcept
+        {
+            static_assert(config::VERSION_PATCH >= 0);
+        }
+
+        inline void minor() noexcept
+        {
+            static_assert(config::VERSION_MINOR >= 0);
+        }
+
+        inline void major() noexcept
+        {
+            static_assert(config::VERSION_MAJOR >= 0);
+        }
 
 
 

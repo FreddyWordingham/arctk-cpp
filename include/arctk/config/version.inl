@@ -4,4 +4,4 @@
 
 
 //  == DECLARATIONS ==
-#include <arctk/config/build.hpp>
+#include <arctk/config/version.hpp>
