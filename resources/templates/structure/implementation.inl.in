@@ -1,0 +1,23 @@
+//  == GUARD ==
+#pragma once
+
+
+
+//  == DECLARATIONS ==
+//  -- Arc --
+#include <arctk/@HEADER_PATH@>
+
+
+
+//  == IMPORTS ==
+//  -- Arc --
+#include <xxx.inl>
+
+
+
+//  == NAMESPACE ==
+@NAMESPACES_OPEN@
+
+
+
+@NAMESPACES_CLOSE@

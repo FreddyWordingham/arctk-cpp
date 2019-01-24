@@ -1,0 +1,26 @@
+//  == GUARD ==
+#pragma once
+
+
+
+//  == IMPORTS ==
+//  -- Arc --
+#include <xxx.inl>
+
+
+
+//  == NAMESPACE ==
+@NAMESPACES_OPEN@
+
+
+
+@NAMESPACE_INDENT@//  == STRUCTURE ==
+@NAMESPACE_INDENT@struct @STRUCTURE_NAME@
+@NAMESPACE_INDENT@{
+@NAMESPACE_INDENT@    //  == TYPES ==
+@NAMESPACE_INDENT@  private:
+@NAMESPACE_INDENT@};
+
+
+
+@NAMESPACES_CLOSE@
