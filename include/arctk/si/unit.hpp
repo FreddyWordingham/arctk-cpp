@@ -33,7 +33,7 @@ namespace arc
           public:
             //  -- Constructors --
             constexpr inline explicit Unit() noexcept;
-            constexpr inline explicit Unit(const double mag_) noexcept;
+            constexpr inline explicit Unit(double mag_) noexcept;
 
 
             //  == METHODS ==
@@ -59,13 +59,13 @@ namespace arc
           public:
             //  -- Constructors --
             constexpr inline explicit Unit() noexcept;
-            constexpr inline explicit Unit(const double mag_) noexcept;
+            constexpr inline explicit Unit(double mag_) noexcept;
 
 
             //  == OPERATORS ==
           public:
             //  -- Conversion --
-            constexpr inline operator double() const noexcept;
+            constexpr inline operator double() const noexcept; // NOLINT
 
 
             //  == METHODS ==
@@ -186,16 +186,16 @@ namespace arc
     constexpr inline si::Unit<L_SUB_R> operator-(const si::Unit<TL>& lhs_, const si::Unit<TR>& rhs_) noexcept;
     template <typename TL, typename TR, typename L_MULT_R = typename type::mult<TL, TR>>
     constexpr inline si::Unit<L_MULT_R> operator*(const si::Unit<TL>& lhs_, const si::Unit<TR>& rhs_) noexcept;
-    template <typename TL, typename L_MULT_R = typename type::mult<TL, const double>>
-    constexpr inline si::Unit<L_MULT_R> operator*(const si::Unit<TL>& lhs_, const double rhs_) noexcept;
-    template <typename TR, typename L_MULT_R = typename type::mult<const double, TR>>
-    constexpr inline si::Unit<L_MULT_R> operator*(const double lhs_, const si::Unit<TR>& rhs_) noexcept;
+    template <typename TL, typename L_MULT_R = typename type::mult<TL, double>>
+    constexpr inline si::Unit<L_MULT_R> operator*(const si::Unit<TL>& lhs_, double rhs_) noexcept;
+    template <typename TR, typename L_MULT_R = typename type::mult<double, TR>>
+    constexpr inline si::Unit<L_MULT_R> operator*(double lhs_, const si::Unit<TR>& rhs_) noexcept;
     template <typename TL, typename TR, typename L_DIV_R = typename type::div<TL, TR>>
     constexpr inline si::Unit<L_DIV_R> operator/(const si::Unit<TL>& lhs_, const si::Unit<TR>& rhs_) noexcept;
-    template <typename TL, typename L_DIV_R, typename L_DIR_R = typename type::div<TL, const double>>
-    constexpr inline si::Unit<L_DIV_R> operator/(const si::Unit<TL>& lhs_, const double rhs_) noexcept;
-    template <typename TR, typename L_DIV_R, typename L_DIR_R = typename type::div<const double, TR>>
-    constexpr inline si::Unit<L_DIV_R> operator/(const double lhs_, const si::Unit<TR>& rhs_) noexcept;
+    template <typename TL, typename L_DIV_R, typename L_DIR_R = typename type::div<TL, double>>
+    constexpr inline si::Unit<L_DIV_R> operator/(const si::Unit<TL>& lhs_, double rhs_) noexcept;
+    template <typename TR, typename L_DIV_R, typename L_DIR_R = typename type::div<double, TR>>
+    constexpr inline si::Unit<L_DIV_R> operator/(double lhs_, const si::Unit<TR>& rhs_) noexcept;
 
 
 

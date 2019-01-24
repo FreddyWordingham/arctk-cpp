@@ -1,5 +1,5 @@
 ---
-Checks:                '*,-cppcoreguidelines-pro-bounds-array-to-pointer-decay,-hicpp-no-array-decay,-llvm-header-guard'
+Checks:                '*,-cppcoreguidelines-pro-bounds-array-to-pointer-decay,-fuchsia-default-arguments,-fuchsia-overloaded-operator,-hicpp-no-array-decay,-llvm-header-guard'
 WarningsAsErrors:      ''
 HeaderFilterRegex:     '.hpp'
 AnalyzeTemporaryDtors: true
@@ -421,7 +421,7 @@ CheckOptions:
   - key:               readability-identifier-naming.TemplateParameterSuffix
     value:             ''
   - key:               readability-identifier-naming.TypeAliasCase
-    value:             lower_case
+    value:             CamelCase
   - key:               readability-identifier-naming.TypeAliasPrefix
     value:             ''
   - key:               readability-identifier-naming.TypeAliasSuffix
