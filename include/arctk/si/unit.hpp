@@ -6,6 +6,7 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include <arctk/si/dimension.hpp>
+#include <arctk/type/arithmetic.hpp>
 
 
 
@@ -19,7 +20,7 @@ namespace arc
 
         //  == CLASSES ==
         //  -- Unit --
-        template <typename D>
+        template <typename T>
         class Unit
         {
             //  == FIELDS ==
@@ -170,4 +171,20 @@ namespace arc
 
 
     } // namespace si
+
+
+
+    //  == OPERATORS ==
+    //  -- Arithmetic --
+    template <typename TL, typename TR, typename L_ADD_R = typename type::result<TL, TR>::add>
+    constexpr inline si::Unit<L_ADD_R> operator+(const si::Unit<TL>& lhs_, const si::Unit<TR>& rhs_) noexcept;
+    template <typename TL, typename TR, typename L_SUB_R = typename type::result<TL, TR>::sub>
+    constexpr inline si::Unit<L_SUB_R> operator-(const si::Unit<TL>& lhs_, const si::Unit<TR>& rhs_) noexcept;
+    template <typename TL, typename TR, typename L_MULT_R = typename type::result<TL, TR>::mult>
+    constexpr inline si::Unit<L_MULT_R> operator*(const si::Unit<TL>& lhs_, const si::Unit<TR>& rhs_) noexcept;
+    template <typename TL, typename TR, typename L_DIV_R = typename type::result<TL, TR>::div>
+    constexpr inline si::Unit<L_DIV_R> operator/(const si::Unit<TL>& lhs_, const si::Unit<TR>& rhs_) noexcept;
+
+
+
 } // namespace arc

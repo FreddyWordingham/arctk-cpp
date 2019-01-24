@@ -22,7 +22,7 @@ namespace arc
 
 
         //  == FUNCTIONS ==
-        //  -- Zero --
+        //  -- Compare --
         template <typename T>
         constexpr inline bool zero(T x_, T epsilon_) noexcept
         {
@@ -32,8 +32,6 @@ namespace arc
             return (std::abs(x_) <= epsilon_);
         }
 
-
-        //  -- Equal --
         template <typename T>
         constexpr inline bool equal(T x_, T y_, T epsilon_) noexcept
         {
