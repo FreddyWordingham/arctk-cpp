@@ -11,7 +11,8 @@ namespace arc
 
 
 
-        //  == CLASS ==
+        //  == CLASSES ==
+        //  -- Dimension --
         template <int M, int L, int T, int K, int C, int I, int N, int A>
         class Dimension
         {
