@@ -17,11 +17,13 @@ namespace arc
 
 
         //  == CLASS ==
+        template <typename D>
         class Unit
         {
             //  == FIELDS ==
           private:
-
+            //  -- Magnitude --
+            double _mag;
 
 
             //  == INSTANTIATION ==
@@ -30,14 +32,10 @@ namespace arc
 
 
 
-            //  == OPERATORS ==
-          public:
-
-
-
             //  == METHODS ==
           public:
             //  -- Getters --
+            constexpr inline double mag() const noexcept;
         };
 
 
