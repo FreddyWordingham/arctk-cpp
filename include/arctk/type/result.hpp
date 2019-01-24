@@ -24,10 +24,10 @@ namespace arc
             //  == TYPES ==
           public:
             //  -- Arithmetic --
-            using add  = decltype(std::declval<Tl>{} + std::declval<Tr>{});
-            using sub  = decltype(std::declval<Tl>{} - std::declval<Tr>{});
-            using mult = decltype(std::declval<Tl>{} * std::declval<Tr>{});
-            using div  = decltype(std::declval<Tl>{} / std::declval<Tr>{});
+            using add  = decltype(std::declval<Tl>() + std::declval<Tr>());
+            using sub  = decltype(std::declval<Tl>() - std::declval<Tr>());
+            using mult = decltype(std::declval<Tl>() * std::declval<Tr>());
+            using div  = decltype(std::declval<Tl>() / std::declval<Tr>());
         };
 
 

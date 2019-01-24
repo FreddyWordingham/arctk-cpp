@@ -18,7 +18,7 @@ namespace arc
         //  == FUNCTION PROTOTYPES ==
         //  -- Tests --
         template <typename Tl, typename Tr, typename Add, typename Sub, typename Mult, typename Div>
-        inline void resultant_type();
+        inline void result();
 
 
 
@@ -30,9 +30,11 @@ namespace arc
 //  == MAIN ==
 int main()
 {
-    arc::test::resultant_type<int, int, int, int, int, int>();
-    arc::test::resultant_type<unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int>();
-    arc::test::resultant_type<double, double, double, double, double, double>();
+    arc::test::result<int, int, int, int, int, int>();
+    arc::test::result<unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int>();
+    arc::test::result<double, double, double, double, double, double>();
+    arc::test::result<int, double, double, double, double, double>();
+    arc::test::result<double, int, double, double, double, double>();
 
     return (0);
 }
@@ -50,12 +52,12 @@ namespace arc
         //  == FUNCTIONS ==
         //  -- Tests --
         template <typename Tl, typename Tr, typename Add, typename Sub, typename Mult, typename Div>
-        inline void resultant_type()
+        inline void result()
         {
-            static_assert(std::is_same<typename type::Result<Tl, Tr>::add, Add>::value);
-            static_assert(std::is_same<typename type::Result<Tl, Tr>::sub, Sub>::value);
-            static_assert(std::is_same<typename type::Result<Tl, Tr>::mult, Mult>::value);
-            static_assert(std::is_same<typename type::Result<Tl, Tr>::div, Div>::value);
+            static_assert(std::is_same<typename type::result<Tl, Tr>::add, Add>::value);
+            static_assert(std::is_same<typename type::result<Tl, Tr>::sub, Sub>::value);
+            static_assert(std::is_same<typename type::result<Tl, Tr>::mult, Mult>::value);
+            static_assert(std::is_same<typename type::result<Tl, Tr>::div, Div>::value);
         }
 
 
