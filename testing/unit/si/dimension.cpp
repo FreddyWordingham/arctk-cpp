@@ -40,12 +40,36 @@ int main()
       arc::si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>, //
       arc::si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>  //
       >();
+
+    arc::test::arithmetic<                             //
+      arc::si::Dimension<1, 2, -2, -3, 4, 5, 0, -7>,   //
+      arc::si::Dimension<1, 2, -2, -3, 4, 5, 0, -7>,   //
+      arc::si::Dimension<1, 2, -2, -3, 4, 5, 0, -7>,   //
+      arc::si::Dimension<2, 4, -4, -6, 8, 10, 0, -14>, //
+      arc::si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>       //
+      >();
+
+    arc::test::arithmetic<                           //
+      arc::si::Dimension<1, 2, -2, -3, 4, 5, 0, -7>, //
+      arc::si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>,    //
+      arc::si::Dimension<1, 2, -2, -3, 4, 5, 0, -7>, //
+      arc::si::Dimension<1, 2, -2, -3, 4, 5, 0, -7>  //
+      >();
+
+    arc::test::arithmetic<                           //
+      arc::si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>,    //
+      arc::si::Dimension<1, 2, -2, -3, 4, 5, 0, -7>, //
+      arc::si::Dimension<1, 2, -2, -3, 4, 5, 0, -7>, //
+      arc::si::Dimension<-1, -2, 2, 3, -4, -5, 0, 7> //
+      >();
+
     arc::test::arithmetic<                             //
       arc::si::Dimension<1, 2, -2, -3, 4, 5, 0, -7>,   //
       arc::si::Dimension<4, 2, 1, -1, 2, -2, 3, 4>,    //
       arc::si::Dimension<5, 4, -1, -4, 6, 3, 3, -3>,   //
       arc::si::Dimension<-3, 0, -3, -2, 2, 7, -3, -11> //
       >();
+
     arc::test::arithmetic<                           //
       arc::si::Dimension<4, 2, 1, -1, 2, -2, 3, 4>,  //
       arc::si::Dimension<1, 2, -2, -3, 4, 5, 0, -7>, //
