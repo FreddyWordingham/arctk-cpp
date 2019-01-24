@@ -78,11 +78,10 @@ namespace arc
             assert(math::equal(mass_2.mag(), 2.46));
 
             si::Mass mass_3{0.5 * mass_2};
-            assert(math::equal(mass_3.mag(), 0.615));
+            assert(math::equal(mass_3.mag(), 1.23));
 
-            si::Unit<si::Dimension<2, 0, 0, 0, 0, 0, 0, 0>> energy_0{mass_1 * mass_1};
-            // si::Energy energy_0{mass_1 * (si::Length{1.0} * si::Length{1.0}) / (si::Time{0.5} * si::Time{0.5})};
-            // assert(math::equal(energy_0.mag(), 1.5129));
+            si::Energy energy_0{mass_1 * (si::Length{1.0} * si::Length{1.0}) / (si::Time{0.5} * si::Time{0.5})};
+            assert(math::equal(energy_0.mag(), 4.92));
         }
 
         inline void length() noexcept
@@ -97,7 +96,7 @@ namespace arc
             assert(math::equal(len_2.mag(), 2.46));
 
             si::Length len_3{0.5 * len_2};
-            assert(math::equal(len_3.mag(), 0.615));
+            assert(math::equal(len_3.mag(), 1.23));
 
             si::Velocity vel_0{len_1 / si::Time{0.5}};
             assert(math::equal(vel_0.mag(), 2.46));
