@@ -1,6 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include <arctk/struct/test/this_thing.inl>
+#include <arctk/@IMPLEMENTATION_PATH@>
 
 //  -- Std --
 #include <cassert>

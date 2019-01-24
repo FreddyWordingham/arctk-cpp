@@ -1,0 +1,25 @@
+//  == GUARD ==
+#pragma once
+
+
+
+//  == IMPORTS ==
+//  -- Arc --
+#include <xxx.inl>
+
+
+
+//  == NAMESPACE ==
+@NAMESPACES_OPEN@
+
+
+
+@NAMESPACE_INDENT@//  == FUNCTIONS ==
+
+
+
+@NAMESPACE_INDENT@//  == OPERATORS ==
+
+
+
+@NAMESPACES_CLOSE@
