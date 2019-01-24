@@ -4,7 +4,8 @@
 
 
 //  == IMPORTS ==
-//  -- Arc --
+//  -- Std --
+#include <type_traits>
 
 
 
@@ -17,10 +18,16 @@ namespace arc
 
 
         //  == STRUCTURE ==
-        struct Result
+        template <typename Tl, typename Tr>
+        struct result
         {
             //  == TYPES ==
-          private:
+          public:
+            //  -- Arithmetic --
+            using add  = decltype(std::declval<Tl>{} + std::declval<Tr>{});
+            using sub  = decltype(std::declval<Tl>{} - std::declval<Tr>{});
+            using mult = decltype(std::declval<Tl>{} * std::declval<Tr>{});
+            using div  = decltype(std::declval<Tl>{} / std::declval<Tr>{});
         };
 
 
