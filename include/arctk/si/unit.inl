@@ -78,6 +78,18 @@ namespace arc
 
     //  == OPERATORS ==
     //  -- Arithmetic --
+    template <typename T>
+    constexpr inline si::Unit<T> operator+(const si::Unit<T>& rhs_) noexcept
+    {
+        return (si::Unit<T>{+rhs_.mag()});
+    }
+
+    template <typename T>
+    constexpr inline si::Unit<T> operator-(const si::Unit<T>& rhs_) noexcept
+    {
+        return (si::Unit<T>{-rhs_.mag()});
+    }
+
     template <typename TL, typename TR, typename L_ADD_R>
     constexpr inline si::Unit<L_ADD_R> operator+(const si::Unit<TL>& lhs_, const si::Unit<TR>& rhs_) noexcept
     {
