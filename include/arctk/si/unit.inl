@@ -126,6 +126,18 @@ namespace arc
         return (si::Unit<L_DIV_R>{lhs_.mag() / rhs_.mag()});
     }
 
+    template <typename TL, typename L_DIV_R>
+    constexpr inline si::Unit<L_DIV_R> operator/(const si::Unit<TL>& lhs_, const double rhs_) noexcept
+    {
+        return (si::Unit<L_DIV_R>{lhs_.mag() / rhs_});
+    }
+
+    template <typename TR, typename L_DIV_R>
+    constexpr inline si::Unit<L_DIV_R> operator/(const double lhs_, const si::Unit<TR>& rhs_) noexcept
+    {
+        return (si::Unit<L_DIV_R>{lhs_ / rhs_.mag()});
+    }
+
 
 
 } // namespace arc
