@@ -17,7 +17,7 @@ namespace arc
 
         //  == FUNCTION PROTOTYPES ==
         //  -- Tests --
-        template <typename Tl, typename Tr, typename Add, typename Sub, typename Mult, typename Div>
+        template <typename TL, typename TR, typename ADD, typename SUB, typename MULT, typename DIV>
         inline void result();
 
 
@@ -51,13 +51,13 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Tests --
-        template <typename Tl, typename Tr, typename Add, typename Sub, typename Mult, typename Div>
+        template <typename TL, typename TR, typename ADD, typename SUB, typename MULT, typename DIV>
         inline void result()
         {
-            static_assert(std::is_same<typename type::result<Tl, Tr>::add, Add>::value);
-            static_assert(std::is_same<typename type::result<Tl, Tr>::sub, Sub>::value);
-            static_assert(std::is_same<typename type::result<Tl, Tr>::mult, Mult>::value);
-            static_assert(std::is_same<typename type::result<Tl, Tr>::div, Div>::value);
+            static_assert(std::is_same<typename type::result<TL, TR>::add, ADD>::value);
+            static_assert(std::is_same<typename type::result<TL, TR>::sub, SUB>::value);
+            static_assert(std::is_same<typename type::result<TL, TR>::mult, MULT>::value);
+            static_assert(std::is_same<typename type::result<TL, TR>::div, DIV>::value);
         }
 
 

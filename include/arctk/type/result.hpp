@@ -18,16 +18,16 @@ namespace arc
 
 
         //  == STRUCTURE ==
-        template <typename Tl, typename Tr>
+        template <typename TL, typename TR>
         struct result
         {
             //  == TYPES ==
           public:
             //  -- Arithmetic --
-            using add  = decltype(std::declval<Tl>() + std::declval<Tr>());
-            using sub  = decltype(std::declval<Tl>() - std::declval<Tr>());
-            using mult = decltype(std::declval<Tl>() * std::declval<Tr>());
-            using div  = decltype(std::declval<Tl>() / std::declval<Tr>());
+            using add  = decltype(std::declval<TL>() + std::declval<TR>());
+            using sub  = decltype(std::declval<TL>() - std::declval<TR>());
+            using mult = decltype(std::declval<TL>() * std::declval<TR>());
+            using div  = decltype(std::declval<TL>() / std::declval<TR>());
         };
 
 

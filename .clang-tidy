@@ -1,5 +1,5 @@
 ---
-Checks:                '*'
+Checks:                '*,-llvm-header-guard'
 WarningsAsErrors:      ''
 HeaderFilterRegex:     '.hpp'
 AnalyzeTemporaryDtors: true
@@ -307,7 +307,7 @@ CheckOptions:
   - key:               readability-identifier-naming.AbstractClassSuffix
     value:             ''
   - key:               readability-identifier-naming.StructCase
-    value:             CamelCase
+    value:             lower_case
   - key:               readability-identifier-naming.StructPrefix
     value:             ''
   - key:               readability-identifier-naming.StructSuffix
@@ -421,7 +421,7 @@ CheckOptions:
   - key:               readability-identifier-naming.TemplateParameterSuffix
     value:             ''
   - key:               readability-identifier-naming.TypeAliasCase
-    value:             CamelCase
+    value:             lower_case
   - key:               readability-identifier-naming.TypeAliasPrefix
     value:             ''
   - key:               readability-identifier-naming.TypeAliasSuffix
