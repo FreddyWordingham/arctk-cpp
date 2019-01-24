@@ -3,7 +3,8 @@
 #include <arctk/config/build.inl>
 
 //  -- Std --
-#include <type_traits>
+#include <cassert>
+#include <cstring>
 
 
 
@@ -17,6 +18,12 @@ namespace arc
 
         //  == FUNCTION PROTOTYPES ==
         //  -- Tests --
+        inline void dir() noexcept;
+        inline void branch() noexcept;
+        inline void hash() noexcept;
+        inline void compiler() noexcept;
+        inline void type() noexcept;
+        inline void date() noexcept;
 
 
 
@@ -43,6 +50,35 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Tests --
+        inline void dir() noexcept
+        {
+            assert(std::strlen(config::DIR) > 0);
+        }
+
+        inline void branch() noexcept
+        {
+            assert(std::strlen(config::BRANCH) > 0);
+        }
+
+        inline void hash() noexcept
+        {
+            assert(std::strlen(config::HASH) > 0);
+        }
+
+        inline void compiler() noexcept
+        {
+            assert(std::strlen(config::COMPILER) > 0);
+        }
+
+        inline void type() noexcept
+        {
+            assert(std::strlen(config::TYPE) > 0);
+        }
+
+        inline void date() noexcept
+        {
+            assert(std::strlen(config::DATE) > 0);
+        }
 
 
 
