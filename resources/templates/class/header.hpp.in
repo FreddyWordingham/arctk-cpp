@@ -1,0 +1,42 @@
+//  == GUARD ==
+#pragma once
+
+
+
+//  == IMPORTS ==
+//  -- Arc --
+
+
+
+//  == NAMESPACE ==
+@NAMESPACES_OPEN@
+
+
+
+@NAMESPACE_INDENT@//  == CLASS ==
+@NAMESPACE_INDENT@class @CLASS_NAME@
+@NAMESPACE_INDENT@{
+@NAMESPACE_INDENT@    //  == FIELDS ==
+@NAMESPACE_INDENT@  private:
+
+
+
+@NAMESPACE_INDENT@    //  == INSTANTIATION ==
+@NAMESPACE_INDENT@  public:
+@NAMESPACE_INDENT@    //  -- Constructors --
+
+
+
+@NAMESPACE_INDENT@    //  == OPERATORS ==
+@NAMESPACE_INDENT@  public:
+
+
+
+@NAMESPACE_INDENT@    //  == METHODS ==
+@NAMESPACE_INDENT@  public:
+@NAMESPACE_INDENT@    //  -- Getters --
+@NAMESPACE_INDENT@};
+
+
+
+@NAMESPACES_CLOSE@

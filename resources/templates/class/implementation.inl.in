@@ -1,0 +1,36 @@
+//  == GUARD ==
+#pragma once
+
+
+
+//  == DECLARATIONS ==
+//  -- Arc --
+#include <arctk/@HEADER_PATH@>
+
+
+
+//  == IMPORTS ==
+//  -- Arc --
+
+
+
+//  == NAMESPACE ==
+@NAMESPACES_OPEN@
+
+
+
+@NAMESPACE_INDENT@//  == INSTANTIATION ==
+@NAMESPACE_INDENT@//  -- Constructors --
+
+
+
+@NAMESPACE_INDENT@//  == OPERATORS ==
+
+
+
+@NAMESPACE_INDENT@//  == METHODS ==
+@NAMESPACE_INDENT@//  -- Getters --
+
+
+
+@NAMESPACES_CLOSE@
