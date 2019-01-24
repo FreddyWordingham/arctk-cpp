@@ -1,6 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include <arctk/type/result.inl>
+#include <arctk/type/arithmetic.inl>
 
 //  -- Std --
 #include <type_traits>
@@ -18,7 +18,7 @@ namespace arc
         //  == FUNCTION PROTOTYPES ==
         //  -- Tests --
         template <typename TL, typename TR, typename ADD, typename SUB, typename MULT, typename DIV>
-        inline void result();
+        inline void result() noexcept;
 
 
 
@@ -52,12 +52,12 @@ namespace arc
         //  == FUNCTIONS ==
         //  -- Tests --
         template <typename TL, typename TR, typename ADD, typename SUB, typename MULT, typename DIV>
-        inline void result()
+        inline void result() noexcept
         {
-            static_assert(std::is_same<typename type::result<TL, TR>::add, ADD>::value);
-            static_assert(std::is_same<typename type::result<TL, TR>::sub, SUB>::value);
-            static_assert(std::is_same<typename type::result<TL, TR>::mult, MULT>::value);
-            static_assert(std::is_same<typename type::result<TL, TR>::div, DIV>::value);
+            static_assert(std::is_same<type::add<TL, TR>, ADD>::value);
+            static_assert(std::is_same<type::sub<TL, TR>, SUB>::value);
+            static_assert(std::is_same<type::mult<TL, TR>, MULT>::value);
+            static_assert(std::is_same<type::div<TL, TR>, DIV>::value);
         }
 
 
