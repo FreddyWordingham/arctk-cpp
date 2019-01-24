@@ -1,5 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
+#include <arctk/math/compare.inl>
 #include <arctk/si/dimension.inl>
 #include <arctk/type/arithmetic.inl>
 
