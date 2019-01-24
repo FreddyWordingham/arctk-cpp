@@ -72,11 +72,14 @@ namespace arc
             si::Length len_1{1.23};
             assert(math::equal(len_1.mag(), 1.23));
 
-            // si::Mass mass_2{mass_1 * 2.0};
-            // assert(mass_2.mag() == 2.46);
+            si::Length len_2{len_1 * 2.0};
+            assert(math::equal(len_2.mag(), 2.46));
+
+            si::Length len_3{0.5 * len_2};
+            assert(math::equal(len_3.mag(), 0.615));
 
             si::Velocity vel_0{len_1 / si::Time{0.5}};
-            assert(vel_0.mag() == 2.46);
+            assert(math::equal(vel_0.mag(), 2.46));
         }
 
 
