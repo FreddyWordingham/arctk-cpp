@@ -43,7 +43,7 @@ arctk.build()
     arctk.clean
 
     mkdir $ARCTK_DIR/build
-    cd $ARCTK_DIR/build >/dev/null
+    cd $ARCTK_DIR/build > /dev/null
 
     cmake -j 8 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
         -DCMAKE_BUILD_TYPE=$1 \
@@ -55,7 +55,7 @@ arctk.build()
 
     local cmake_build_status=$?
 
-    cd - >/dev/null
+    cd - > /dev/null
 
     return $cmake_build_status
 }
@@ -64,13 +64,13 @@ arctk.build()
 #   -- Make --
 arctk.make()
 {
-    cd $ARCTK_DIR/build >/dev/null
+    cd $ARCTK_DIR/build > /dev/null
 
     scan-build -analyze-headers --force-analyze-debug-code --view make -j 8
 
     local cmake_compile_status=$?
 
-    cd - >/dev/null
+    cd - > /dev/null
 
     return $cmake_compile_status
 }
@@ -79,11 +79,11 @@ arctk.make()
 #   -- Testing --
 arctk.test()
 {
-    cd $ARCTK_DIR/build >/dev/null
+    cd $ARCTK_DIR/build > /dev/null
 
     make test
 
-    cd - >/dev/null
+    cd - > /dev/null
 }
 
 arctk.cover.gen()
@@ -93,7 +93,7 @@ arctk.cover.gen()
     arctk.build cover clang clang++ true false
     arctk.make
 
-    cd $ARCTK_DIR/bin/test >/dev/null
+    cd $ARCTK_DIR/bin/test > /dev/null
 
     for test in *; do
         printf "Generating coverage data of $test\n"
@@ -103,7 +103,7 @@ arctk.cover.gen()
 
     llvm-profdata merge cover/*.profraw -o cover/complete.profdata
 
-    cd - >/dev/null
+    cd - > /dev/null
 }
 
 arctk.cover.view()
@@ -115,23 +115,23 @@ arctk.cover.view()
         return
     fi
 
-    cd $ARCTK_DIR/bin/test >/dev/null
+    cd $ARCTK_DIR/bin/test > /dev/null
 
     llvm-cov report $2 -instr-profile=cover/complete.profdata -format=$1
 
-    cd - >/dev/null
+    cd - > /dev/null
 }
 
 
 #   -- Installation --
 arctk.install()
 {
-    cd $ARCTK_DIR/build >/dev/null
+    cd $ARCTK_DIR/build > /dev/null
 
     arctk.uninstall
     make install
 
-    cd - >/dev/null
+    cd - > /dev/null
 }
 
 arctk.uninstall()

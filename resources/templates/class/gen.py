@@ -1,8 +1,11 @@
 #   == IMPORTS ==
+import sys
+sys.path.append("..")
 from file import get_contents, write_file
 from env import ARCTK_DIR
 from args import get_path, get_namespace_list, get_class_name
 from format import indent, get_namespaces_open, get_namespaces_close, get_namespace_indent
+
 
 
 #   == MAIN ==

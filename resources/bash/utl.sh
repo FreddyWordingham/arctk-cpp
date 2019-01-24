@@ -9,24 +9,24 @@ arctk.search()
         return
     fi
 
-    cd $ARCTK_DIR/include/arctk >/dev/null
+    cd $ARCTK_DIR/include/arctk > /dev/null
 
     grep -r "$1" .
 
-    cd - >/dev/null
+    cd - > /dev/null
 }
 
 
 #   -- List --
 arctk.list()
 {
-    cd $ARCTK_DIR >/dev/null
+    cd $ARCTK_DIR > /dev/null
 
     find . -name "*.cpp"
     find . -name "*.hpp"
     find . -name "*.inl"
 
-    cd - >/dev/null
+    cd - > /dev/null
 }
 
 
@@ -39,6 +39,7 @@ arctk.install()
     printf "source $ARCTK_DIR/resources/bash/vcs.sh\n" >> ~/.bash_profile
     printf "source $ARCTK_DIR/resources/bash/build.sh\n" >> ~/.bash_profile
     printf "source $ARCTK_DIR/resources/bash/utl.sh\n" >> ~/.bash_profile
+    printf "source $ARCTK_DIR/resources/bash/templates.sh\n" >> ~/.bash_profile
     printf ". $ARCTK_DIR/.build\n" >> ~/.bash_profile
 }
 

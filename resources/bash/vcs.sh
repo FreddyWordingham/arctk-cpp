@@ -14,7 +14,7 @@ arctk.commit()
     git add .
     git commit -m "$1"
 
-    cd - >/dev/null
+    cd - > /dev/null
 }
 
 arctk.amend()
@@ -30,7 +30,7 @@ arctk.amend()
 
     git commit --amend -m "$1"
 
-    cd - >/dev/null
+    cd - > /dev/null
 }
 
 arctk.push()
@@ -42,7 +42,7 @@ arctk.push()
 
     git push
 
-    cd - >/dev/null
+    cd - > /dev/null
 }
 
 
@@ -56,5 +56,5 @@ arctk.update()
     arctk.build $ARCTK_BUILD_ARGS
     arctk.install
 
-    cd - >/dev/null
+    cd - > /dev/null
 }
