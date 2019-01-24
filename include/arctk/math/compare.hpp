@@ -4,7 +4,8 @@
 
 
 //  == IMPORTS ==
-//  -- Arc --
+//  -- Std --
+#include <limits>
 
 
 
@@ -17,10 +18,13 @@ namespace arc
 
 
         //  == FUNCTIONS ==
+        //  -- Zero --
+        template <typename T>
+        constexpr inline Bool zero(T x_, T epsilon_ = std::numeric_limits<T>::epsilon()) noexcept;
 
-
-
-        //  == OPERATORS ==
+        //  -- Equal --
+        template <typename T>
+        constexpr inline Bool equal(T x_, T y_, T epsilon_ = std::numeric_limits<T>::epsilon()) noexcept;
 
 
 
