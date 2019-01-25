@@ -88,17 +88,16 @@ arctk.test()
 
 arctk.cover.gen()
 {
-    arctk.clean
-
-    arctk.build cover clang clang++ true false
-    arctk.make
-
     cd $ARCTK_DIR/bin/test > /dev/null
 
-    for test in *; do
-        printf "Generating coverage data of $test\n"
+    rm -r coverage/ > /dev/null
 
-        LLVM_PROFILE_FILE="./coverage/$test.profraw" ./"$test"
+    for test in *; do
+        if [ -f "$test" ]; then
+            printf "Generating coverage data of $test\n"
+
+            LLVM_PROFILE_FILE="./coverage/$test.profraw" ./"$test" > /dev/null
+        fi
     done
 
     llvm-profdata merge coverage/*.profraw -o coverage/complete.profdata
@@ -108,25 +107,31 @@ arctk.cover.gen()
 
 arctk.cover.view()
 {
-    if [[ ("$#" != "1") && ("$#" != "2") ]]; then
+    if [[ "$#" > "2" ]]; then
         printf "Error! Incorrect number of arguments. ($#)\n"
-        printf "arctk_build <text|html> (unit_test_name)\n"
+        printf "arctk_build (<unit_test_name> (text|html))\n"
 
         return
     fi
 
     cd $ARCTK_DIR/bin/test > /dev/null
 
-    if [ "$#" == "1" ]; then
+    if [ "$#" == "0" ]; then
         for test in *; do
             if [ -f "$test" ]; then
-                output="$(llvm-cov report $test -instr-profile=coverage/complete.profdata -format=$1 | tail -1 | awk '{print $4}')"
-                printf "%s" "$output"
-                printf "\t$test\n"
+                printf "%s\t$test\n" "$(llvm-cov report $test -instr-profile=coverage/complete.profdata -format=text | tail -1 | awk '{print $4}')"
             fi
         done
+    elif [ "$#" == "1" ]; then
+        llvm-cov report $1 -instr-profile=coverage/complete.profdata
     else
-        llvm-cov report $2 -instr-profile=coverage/complete.profdata -format=$1
+        if [ "$2" == "text" ]; then
+            llvm-cov show $1 -Xdemangler c++filt -Xdemangler -n -instr-profile=coverage/complete.profdata -format=text
+        elif [ "$2" == "html" ]; then
+            llvm-cov show $1 -Xdemangler c++filt -Xdemangler -n -instr-profile=coverage/complete.profdata -format=html | bcat
+        else
+            printf "Unknonw render type: $2.\n"
+        fi
     fi
 
     cd - > /dev/null

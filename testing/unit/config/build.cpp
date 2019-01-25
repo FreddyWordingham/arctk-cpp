@@ -35,6 +35,13 @@ namespace arc
 //  == MAIN ==
 int main()
 {
+    arc::test::dir();
+    arc::test::branch();
+    arc::test::hash();
+    arc::test::compiler();
+    arc::test::type();
+    arc::test::date();
+
     return (0);
 }
 
