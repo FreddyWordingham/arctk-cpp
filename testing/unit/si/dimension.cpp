@@ -95,17 +95,17 @@ namespace arc
         template <typename TL, typename TR, typename MULT, typename DIV>
         inline void arithmetic() noexcept
         {
-            static_assert(std::is_same<typename type::mult<TL, TR>, MULT>::value);
-            static_assert(std::is_same<typename type::div<TL, TR>, DIV>::value);
+            static_assert(std::is_same<typename type::arithmetic::mult<TL, TR>, MULT>::value);
+            static_assert(std::is_same<typename type::arithmetic::div<TL, TR>, DIV>::value);
         }
 
         template <typename T, typename ADD, typename SUB, typename MULT, typename DIV>
         inline void arithmetic() noexcept
         {
-            static_assert(std::is_same<typename type::add<T, T>, ADD>::value);
-            static_assert(std::is_same<typename type::sub<T, T>, SUB>::value);
-            static_assert(std::is_same<typename type::mult<T, T>, MULT>::value);
-            static_assert(std::is_same<typename type::div<T, T>, DIV>::value);
+            static_assert(std::is_same<typename type::arithmetic::add<T, T>, ADD>::value);
+            static_assert(std::is_same<typename type::arithmetic::sub<T, T>, SUB>::value);
+            static_assert(std::is_same<typename type::arithmetic::mult<T, T>, MULT>::value);
+            static_assert(std::is_same<typename type::arithmetic::div<T, T>, DIV>::value);
         }
 
 

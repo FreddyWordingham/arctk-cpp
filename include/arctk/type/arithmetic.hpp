@@ -17,16 +17,22 @@ namespace arc
 
 
 
-        //  == ALIASES ==
+        //  == STRUCTURES ==
         //  -- Arithmetic --
-        template <typename TL, typename TR>
-        using add = decltype(std::declval<TL>() + std::declval<TR>()); // NOLINT
-        template <typename TL, typename TR>
-        using sub = decltype(std::declval<TL>() - std::declval<TR>()); // NOLINT
-        template <typename TL, typename TR>
-        using mult = decltype(std::declval<TL>() * std::declval<TR>()); // NOLINT
-        template <typename TL, typename TR>
-        using div = decltype(std::declval<TL>() / std::declval<TR>()); // NOLINT
+        struct arithmetic
+        {
+            //  == ALIASES ==
+          public:
+            //  -- Operations --
+            template <typename TL, typename TR>
+            using add = decltype(std::declval<TL>() + std::declval<TR>()); // NOLINT
+            template <typename TL, typename TR>
+            using sub = decltype(std::declval<TL>() - std::declval<TR>()); // NOLINT
+            template <typename TL, typename TR>
+            using mult = decltype(std::declval<TL>() * std::declval<TR>()); // NOLINT
+            template <typename TL, typename TR>
+            using div = decltype(std::declval<TL>() / std::declval<TR>()); // NOLINT
+        };
 
 
 

@@ -180,21 +180,21 @@ namespace arc
     constexpr inline si::Unit<T> operator+(const si::Unit<T>& rhs_) noexcept;
     template <typename T>
     constexpr inline si::Unit<T> operator-(const si::Unit<T>& rhs_) noexcept;
-    template <typename TL, typename TR, typename L_ADD_R = typename type::add<TL, TR>>
+    template <typename TL, typename TR, typename L_ADD_R = typename type::arithmetic::add<TL, TR>>
     constexpr inline si::Unit<L_ADD_R> operator+(const si::Unit<TL>& lhs_, const si::Unit<TR>& rhs_) noexcept;
-    template <typename TL, typename TR, typename L_SUB_R = typename type::sub<TL, TR>>
+    template <typename TL, typename TR, typename L_SUB_R = typename type::arithmetic::sub<TL, TR>>
     constexpr inline si::Unit<L_SUB_R> operator-(const si::Unit<TL>& lhs_, const si::Unit<TR>& rhs_) noexcept;
-    template <typename TL, typename TR, typename L_MULT_R = typename type::mult<TL, TR>>
+    template <typename TL, typename TR, typename L_MULT_R = typename type::arithmetic::mult<TL, TR>>
     constexpr inline si::Unit<L_MULT_R> operator*(const si::Unit<TL>& lhs_, const si::Unit<TR>& rhs_) noexcept;
-    template <typename TL, typename L_MULT_R = typename type::mult<TL, double>>
+    template <typename TL, typename L_MULT_R = typename type::arithmetic::mult<TL, double>>
     constexpr inline si::Unit<L_MULT_R> operator*(const si::Unit<TL>& lhs_, double rhs_) noexcept;
-    template <typename TR, typename L_MULT_R = typename type::mult<double, TR>>
+    template <typename TR, typename L_MULT_R = typename type::arithmetic::mult<double, TR>>
     constexpr inline si::Unit<L_MULT_R> operator*(double lhs_, const si::Unit<TR>& rhs_) noexcept;
-    template <typename TL, typename TR, typename L_DIV_R = typename type::div<TL, TR>>
+    template <typename TL, typename TR, typename L_DIV_R = typename type::arithmetic::div<TL, TR>>
     constexpr inline si::Unit<L_DIV_R> operator/(const si::Unit<TL>& lhs_, const si::Unit<TR>& rhs_) noexcept;
-    template <typename TL, typename L_DIV_R, typename L_DIR_R = typename type::div<TL, double>>
+    template <typename TL, typename L_DIV_R, typename L_DIR_R = typename type::arithmetic::div<TL, double>>
     constexpr inline si::Unit<L_DIV_R> operator/(const si::Unit<TL>& lhs_, double rhs_) noexcept;
-    template <typename TR, typename L_DIV_R, typename L_DIR_R = typename type::div<double, TR>>
+    template <typename TR, typename L_DIV_R, typename L_DIR_R = typename type::arithmetic::div<double, TR>>
     constexpr inline si::Unit<L_DIV_R> operator/(double lhs_, const si::Unit<TR>& rhs_) noexcept;
 
 
