@@ -36,6 +36,11 @@ namespace arc
             constexpr inline explicit Unit(double mag_) noexcept;
 
 
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+
+
             //  == METHODS ==
           public:
             //  -- Getters --
@@ -66,6 +71,12 @@ namespace arc
           public:
             //  -- Conversion --
             constexpr inline operator double() const noexcept; // NOLINT
+
+            //  -- Assignment --
+
+            //  -- Increment / Decrement --
+            constexpr inline const Unit& operator++() noexcept;
+            constexpr inline const Unit& operator--() noexcept;
 
 
             //  == METHODS ==
@@ -175,6 +186,12 @@ namespace arc
 
 
     //  == OPERATORS ==
+    //  -- Increment / Decrement --
+    template <typename T>
+    constexpr inline si::Unit<T> operator++(si::Unit<T>& lhs_, const int) noexcept;
+    template <typename T>
+    constexpr inline si::Unit<T> operator--(si::Unit<T>& lhs_, const int) noexcept;
+
     //  -- Arithmetic --
     template <typename T>
     constexpr inline si::Unit<T> operator+(const si::Unit<T>& rhs_) noexcept;

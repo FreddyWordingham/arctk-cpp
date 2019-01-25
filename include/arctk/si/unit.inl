@@ -56,6 +56,22 @@ namespace arc
         }
 
 
+        //  -- Increment / Decrement --
+        constexpr inline const Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>& Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>::operator++() noexcept
+        {
+            ++_mag;
+
+            return (*this);
+        }
+
+        constexpr inline const Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>& Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>::operator--() noexcept
+        {
+            --_mag;
+
+            return (*this);
+        }
+
+
 
         //  == METHODS ==
         //  -- Getters --
@@ -77,6 +93,28 @@ namespace arc
 
 
     //  == OPERATORS ==
+    //  -- Increment / Decrement --
+    template <typename T>
+    constexpr inline si::Unit<T> operator++(si::Unit<T>& lhs_, const int) noexcept
+    {
+        si::Unit<T> unit{lhs_.mag()};
+
+        ++lhs_;
+
+        return (unit);
+    }
+
+    template <typename T>
+    constexpr inline si::Unit<T> operator--(si::Unit<T>& lhs_, const int) noexcept
+    {
+        si::Unit<T> unit{lhs_.mag()};
+
+        --lhs_;
+
+        return (unit);
+    }
+
+
     //  -- Arithmetic --
     template <typename T>
     constexpr inline si::Unit<T> operator+(const si::Unit<T>& rhs_) noexcept

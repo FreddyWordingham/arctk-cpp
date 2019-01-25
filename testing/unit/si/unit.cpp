@@ -228,6 +228,20 @@ namespace arc
 
             const double doub_1{scal_1};
             assert(math::equal(doub_1, 1.25));
+
+            si::Scalar scal_2{3.14159};
+            assert(math::equal(scal_2.mag(), 3.14159));
+            assert(math::equal((++scal_2).mag(), 4.14159));
+            assert(math::equal(scal_2.mag(), 4.14159));
+            assert(math::equal((--scal_2).mag(), 3.14159));
+            assert(math::equal(scal_2.mag(), 3.14159));
+
+            si::Scalar scal_3{3.14159};
+            assert(math::equal(scal_3.mag(), 3.14159));
+            assert(math::equal((scal_3++).mag(), 3.14159));
+            assert(math::equal(scal_3.mag(), 4.14159));
+            assert(math::equal((scal_3--).mag(), 4.14159));
+            assert(math::equal(scal_3.mag(), 3.14159));
         }
 
         inline void mass() noexcept
