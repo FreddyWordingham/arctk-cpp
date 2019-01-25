@@ -98,26 +98,36 @@ arctk.cover.gen()
     for test in *; do
         printf "Generating coverage data of $test\n"
 
-        LLVM_PROFILE_FILE="./cover/$test.profraw" ./"$test"
+        LLVM_PROFILE_FILE="./coverage/$test.profraw" ./"$test"
     done
 
-    llvm-profdata merge cover/*.profraw -o cover/complete.profdata
+    llvm-profdata merge coverage/*.profraw -o coverage/complete.profdata
 
     cd - > /dev/null
 }
 
 arctk.cover.view()
 {
-    if [ "$#" != "2" ]; then
+    if [[ ("$#" != "1") && ("$#" != "2") ]]; then
         printf "Error! Incorrect number of arguments. ($#)\n"
-        printf "arctk_build <text|html> <unit_test_name>\n"
+        printf "arctk_build <text|html> (unit_test_name)\n"
 
         return
     fi
 
     cd $ARCTK_DIR/bin/test > /dev/null
 
-    llvm-cov report $2 -instr-profile=cover/complete.profdata -format=$1
+    if [ "$#" == "1" ]; then
+        for test in *; do
+            if [ -f "$test" ]; then
+                output="$(llvm-cov report $test -instr-profile=coverage/complete.profdata -format=$1 | tail -1 | awk '{print $4}')"
+                printf "%s" "$output"
+                printf "\t$test\n"
+            fi
+        done
+    else
+        llvm-cov report $2 -instr-profile=coverage/complete.profdata -format=$1
+    fi
 
     cd - > /dev/null
 }
