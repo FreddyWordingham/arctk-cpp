@@ -58,7 +58,7 @@ namespace arc
 
         //  -- Increment / Decrement --
         template <typename T>
-        constexpr inline const Unit<T>& Unit<T>::operator++() noexcept
+        constexpr inline Unit<T>& Unit<T>::operator++() noexcept
         {
             ++_mag;
 
@@ -66,23 +66,53 @@ namespace arc
         }
 
         template <typename T>
-        constexpr inline const Unit<T>& Unit<T>::operator--() noexcept
+        constexpr inline Unit<T>& Unit<T>::operator--() noexcept
         {
             --_mag;
 
             return (*this);
         }
 
-        constexpr inline const Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>& Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>::operator++() noexcept
+        constexpr inline Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>& Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>::operator++() noexcept
         {
             ++_mag;
 
             return (*this);
         }
 
-        constexpr inline const Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>& Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>::operator--() noexcept
+        constexpr inline Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>& Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>::operator--() noexcept
         {
             --_mag;
+
+            return (*this);
+        }
+
+
+        //  -- Arithmetic --
+        constexpr inline Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>& Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>::operator+=(const Unit& rhs_) noexcept
+        {
+            _mag += rhs_.mag();
+
+            return (*this);
+        }
+
+        constexpr inline Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>& Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>::operator-=(const Unit& rhs_) noexcept
+        {
+            _mag -= rhs_.mag();
+
+            return (*this);
+        }
+
+        constexpr inline Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>& Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>::operator*=(const Unit& rhs_) noexcept
+        {
+            _mag *= rhs_.mag();
+
+            return (*this);
+        }
+
+        constexpr inline Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>& Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>::operator/=(const Unit& rhs_) noexcept
+        {
+            _mag /= rhs_.mag();
 
             return (*this);
         }

@@ -230,18 +230,42 @@ namespace arc
             assert(math::equal(doub_1, 1.25));
 
             si::Scalar scal_2{3.14159};
-            assert(math::equal(scal_2.mag(), 3.14159));
+            assert(math::equal(scal_2.mag(), 3.14159)); /**/
             assert(math::equal((++scal_2).mag(), 4.14159));
             assert(math::equal(scal_2.mag(), 4.14159));
             assert(math::equal((--scal_2).mag(), 3.14159));
             assert(math::equal(scal_2.mag(), 3.14159));
 
             si::Scalar scal_3{3.14159};
-            assert(math::equal(scal_3.mag(), 3.14159));
+            assert(math::equal(scal_3.mag(), 3.14159)); /**/
             assert(math::equal((scal_3++).mag(), 3.14159));
             assert(math::equal(scal_3.mag(), 4.14159));
             assert(math::equal((scal_3--).mag(), 4.14159));
             assert(math::equal(scal_3.mag(), 3.14159));
+
+            si::Scalar scal_4{1.24};
+            scal_4 += 1.24;
+            assert(math::equal(scal_4.mag(), 2.48));
+            scal_4 += scal_3;
+            assert(math::equal(scal_4.mag(), 5.62159));
+
+            si::Scalar scal_5{1.24};
+            scal_5 -= 1.24;
+            assert(math::zero(scal_5.mag()));
+            scal_5 -= scal_3;
+            assert(math::equal(scal_5.mag(), -3.14159));
+
+            si::Scalar scal_6{1.24};
+            scal_6 *= 1.24;
+            assert(math::equal(scal_6.mag(), 1.5376));
+            scal_6 *= scal_1;
+            assert(math::equal(scal_6.mag(), 1.92200));
+
+            si::Scalar scal_7{1.24};
+            scal_7 /= 1.24;
+            assert(math::equal(scal_7.mag(), 1.0));
+            scal_7 /= scal_1;
+            assert(math::equal(scal_7.mag(), 0.8));
         }
 
         inline void mass() noexcept

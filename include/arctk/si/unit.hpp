@@ -41,8 +41,8 @@ namespace arc
             //  -- Assignment --
 
             //  -- Increment / Decrement --
-            constexpr inline const Unit& operator++() noexcept;
-            constexpr inline const Unit& operator--() noexcept;
+            constexpr inline Unit& operator++() noexcept;
+            constexpr inline Unit& operator--() noexcept;
 
 
             //  == METHODS ==
@@ -68,7 +68,7 @@ namespace arc
           public:
             //  -- Constructors --
             constexpr inline explicit Unit() noexcept;
-            constexpr inline explicit Unit(double mag_) noexcept;
+            constexpr inline Unit(double mag_) noexcept;
 
 
             //  == OPERATORS ==
@@ -77,10 +77,14 @@ namespace arc
             constexpr inline operator double() const noexcept; // NOLINT
 
             //  -- Assignment --
+            constexpr inline Unit& operator+=(const Unit& rhs_) noexcept;
+            constexpr inline Unit& operator-=(const Unit& rhs_) noexcept;
+            constexpr inline Unit& operator*=(const Unit& rhs_) noexcept;
+            constexpr inline Unit& operator/=(const Unit& rhs_) noexcept;
 
             //  -- Increment / Decrement --
-            constexpr inline const Unit& operator++() noexcept;
-            constexpr inline const Unit& operator--() noexcept;
+            constexpr inline Unit& operator++() noexcept;
+            constexpr inline Unit& operator--() noexcept;
 
 
             //  == METHODS ==
