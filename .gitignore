@@ -1,6 +1,6 @@
 #   == CONFIGURATION ==
 #   -- Headers --
-/include/arc/config/*
+/include/arctk/config/*
 
 
 #   == BUILD ==
