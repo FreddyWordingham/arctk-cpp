@@ -40,6 +40,10 @@ namespace arc
           public:
             //  -- Assignment --
 
+            //  -- Increment / Decrement --
+            constexpr inline const Unit& operator++() noexcept;
+            constexpr inline const Unit& operator--() noexcept;
+
 
             //  == METHODS ==
           public:

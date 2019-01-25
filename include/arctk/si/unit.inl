@@ -57,6 +57,22 @@ namespace arc
 
 
         //  -- Increment / Decrement --
+        template <typename T>
+        constexpr inline const Unit<T>& Unit<T>::operator++() noexcept
+        {
+            ++_mag;
+
+            return (*this);
+        }
+
+        template <typename T>
+        constexpr inline const Unit<T>& Unit<T>::operator--() noexcept
+        {
+            --_mag;
+
+            return (*this);
+        }
+
         constexpr inline const Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>& Unit<si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>>::operator++() noexcept
         {
             ++_mag;

@@ -260,6 +260,20 @@ namespace arc
 
             const si::Energy energy_0{mass_1 * (si::Length{1.0} * si::Length{1.0}) / (si::Time{0.5} * si::Time{0.5})};
             assert(math::equal(energy_0.mag(), 5.0));
+
+            si::Mass mass_4{3.14159};
+            assert(math::equal(mass_4.mag(), 3.14159));
+            assert(math::equal((++mass_4).mag(), 4.14159));
+            assert(math::equal(mass_4.mag(), 4.14159));
+            assert(math::equal((--mass_4).mag(), 3.14159));
+            assert(math::equal(mass_4.mag(), 3.14159));
+
+            si::Mass mass_5{3.14159};
+            assert(math::equal(mass_5.mag(), 3.14159));
+            assert(math::equal((mass_5++).mag(), 3.14159));
+            assert(math::equal(mass_5.mag(), 4.14159));
+            assert(math::equal((mass_5--).mag(), 4.14159));
+            assert(math::equal(mass_5.mag(), 3.14159));
         }
 
         inline void length() noexcept
@@ -311,6 +325,20 @@ namespace arc
 
             const si::Temperature temp_3{0.5 * temp_2};
             assert(math::equal(temp_3.mag(), 1.25));
+
+            si::Temperature temp_4{3.14159};
+            assert(math::equal(temp_4.mag(), 3.14159));
+            assert(math::equal((++temp_4).mag(), 4.14159));
+            assert(math::equal(temp_4.mag(), 4.14159));
+            assert(math::equal((--temp_4).mag(), 3.14159));
+            assert(math::equal(temp_4.mag(), 3.14159));
+
+            si::Temperature temp_5{3.14159};
+            assert(math::equal(temp_5.mag(), 3.14159));
+            assert(math::equal((temp_5++).mag(), 3.14159));
+            assert(math::equal(temp_5.mag(), 4.14159));
+            assert(math::equal((temp_5--).mag(), 4.14159));
+            assert(math::equal(temp_5.mag(), 3.14159));
         }
 
         inline void current() noexcept
@@ -326,6 +354,20 @@ namespace arc
 
             const si::Current curr_3{0.5 * curr_2};
             assert(math::equal(curr_3.mag(), 1.25));
+
+            si::Current curr_4{3.14159};
+            assert(math::equal(curr_4.mag(), 3.14159));
+            assert(math::equal((++curr_4).mag(), 4.14159));
+            assert(math::equal(curr_4.mag(), 4.14159));
+            assert(math::equal((--curr_4).mag(), 3.14159));
+            assert(math::equal(curr_4.mag(), 3.14159));
+
+            si::Current curr_5{3.14159};
+            assert(math::equal(curr_5.mag(), 3.14159));
+            assert(math::equal((curr_5++).mag(), 3.14159));
+            assert(math::equal(curr_5.mag(), 4.14159));
+            assert(math::equal((curr_5--).mag(), 4.14159));
+            assert(math::equal(curr_5.mag(), 3.14159));
         }
 
         inline void intensity() noexcept
@@ -341,6 +383,20 @@ namespace arc
 
             const si::Intensity intens_3{0.5 * intens_2};
             assert(math::equal(intens_3.mag(), 1.25));
+
+            si::Intensity intens_4{3.14159};
+            assert(math::equal(intens_4.mag(), 3.14159));
+            assert(math::equal((++intens_4).mag(), 4.14159));
+            assert(math::equal(intens_4.mag(), 4.14159));
+            assert(math::equal((--intens_4).mag(), 3.14159));
+            assert(math::equal(intens_4.mag(), 3.14159));
+
+            si::Intensity intens_5{3.14159};
+            assert(math::equal(intens_5.mag(), 3.14159));
+            assert(math::equal((intens_5++).mag(), 3.14159));
+            assert(math::equal(intens_5.mag(), 4.14159));
+            assert(math::equal((intens_5--).mag(), 4.14159));
+            assert(math::equal(intens_5.mag(), 3.14159));
         }
 
         inline void amount() noexcept
@@ -356,6 +412,20 @@ namespace arc
 
             const si::Amount amount_3{0.5 * amount_2};
             assert(math::equal(amount_3.mag(), 1.25));
+
+            si::Amount amount_4{3.14159};
+            assert(math::equal(amount_4.mag(), 3.14159));
+            assert(math::equal((++amount_4).mag(), 4.14159));
+            assert(math::equal(amount_4.mag(), 4.14159));
+            assert(math::equal((--amount_4).mag(), 3.14159));
+            assert(math::equal(amount_4.mag(), 3.14159));
+
+            si::Amount amount_5{3.14159};
+            assert(math::equal(amount_5.mag(), 3.14159));
+            assert(math::equal((amount_5++).mag(), 3.14159));
+            assert(math::equal(amount_5.mag(), 4.14159));
+            assert(math::equal((amount_5--).mag(), 4.14159));
+            assert(math::equal(amount_5.mag(), 3.14159));
         }
 
         inline void angle() noexcept
@@ -371,6 +441,20 @@ namespace arc
 
             const si::Angle angle_3{0.5 * angle_2};
             assert(math::equal(angle_3.mag(), 1.25));
+
+            si::Angle angle_4{3.14159};
+            assert(math::equal(angle_4.mag(), 3.14159));
+            assert(math::equal((++angle_4).mag(), 4.14159));
+            assert(math::equal(angle_4.mag(), 4.14159));
+            assert(math::equal((--angle_4).mag(), 3.14159));
+            assert(math::equal(angle_4.mag(), 3.14159));
+
+            si::Angle angle_5{3.14159};
+            assert(math::equal(angle_5.mag(), 3.14159));
+            assert(math::equal((angle_5++).mag(), 3.14159));
+            assert(math::equal(angle_5.mag(), 4.14159));
+            assert(math::equal((angle_5--).mag(), 4.14159));
+            assert(math::equal(angle_5.mag(), 3.14159));
         }
 
         inline void solid_angle() noexcept
@@ -386,6 +470,20 @@ namespace arc
 
             const si::SolidAngle solid_angle_3{0.5 * solid_angle_2};
             assert(math::equal(solid_angle_3.mag(), 1.25));
+
+            si::SolidAngle solid_angle_4{3.14159};
+            assert(math::equal(solid_angle_4.mag(), 3.14159));
+            assert(math::equal((++solid_angle_4).mag(), 4.14159));
+            assert(math::equal(solid_angle_4.mag(), 4.14159));
+            assert(math::equal((--solid_angle_4).mag(), 3.14159));
+            assert(math::equal(solid_angle_4.mag(), 3.14159));
+
+            si::SolidAngle solid_angle_5{3.14159};
+            assert(math::equal(solid_angle_5.mag(), 3.14159));
+            assert(math::equal((solid_angle_5++).mag(), 3.14159));
+            assert(math::equal(solid_angle_5.mag(), 4.14159));
+            assert(math::equal((solid_angle_5--).mag(), 4.14159));
+            assert(math::equal(solid_angle_5.mag(), 3.14159));
         }
 
         inline void area() noexcept
@@ -401,6 +499,20 @@ namespace arc
 
             const si::Area area_3{0.5 * area_2};
             assert(math::equal(area_3.mag(), 1.25));
+
+            si::Area area_4{3.14159};
+            assert(math::equal(area_4.mag(), 3.14159));
+            assert(math::equal((++area_4).mag(), 4.14159));
+            assert(math::equal(area_4.mag(), 4.14159));
+            assert(math::equal((--area_4).mag(), 3.14159));
+            assert(math::equal(area_4.mag(), 3.14159));
+
+            si::Area area_5{3.14159};
+            assert(math::equal(area_5.mag(), 3.14159));
+            assert(math::equal((area_5++).mag(), 3.14159));
+            assert(math::equal(area_5.mag(), 4.14159));
+            assert(math::equal((area_5--).mag(), 4.14159));
+            assert(math::equal(area_5.mag(), 3.14159));
         }
 
         inline void volume() noexcept
@@ -416,6 +528,20 @@ namespace arc
 
             const si::Volume vol_3{0.5 * vol_2};
             assert(math::equal(vol_3.mag(), 1.25));
+
+            si::Volume vol_4{3.14159};
+            assert(math::equal(vol_4.mag(), 3.14159));
+            assert(math::equal((++vol_4).mag(), 4.14159));
+            assert(math::equal(vol_4.mag(), 4.14159));
+            assert(math::equal((--vol_4).mag(), 3.14159));
+            assert(math::equal(vol_4.mag(), 3.14159));
+
+            si::Volume vol_5{3.14159};
+            assert(math::equal(vol_5.mag(), 3.14159));
+            assert(math::equal((vol_5++).mag(), 3.14159));
+            assert(math::equal(vol_5.mag(), 4.14159));
+            assert(math::equal((vol_5--).mag(), 4.14159));
+            assert(math::equal(vol_5.mag(), 3.14159));
         }
 
         inline void velocity() noexcept
@@ -431,6 +557,20 @@ namespace arc
 
             const si::Velocity vel_3{0.5 * vel_2};
             assert(math::equal(vel_3.mag(), 1.25));
+
+            si::Velocity vel_4{3.14159};
+            assert(math::equal(vel_4.mag(), 3.14159));
+            assert(math::equal((++vel_4).mag(), 4.14159));
+            assert(math::equal(vel_4.mag(), 4.14159));
+            assert(math::equal((--vel_4).mag(), 3.14159));
+            assert(math::equal(vel_4.mag(), 3.14159));
+
+            si::Velocity vel_5{3.14159};
+            assert(math::equal(vel_5.mag(), 3.14159));
+            assert(math::equal((vel_5++).mag(), 3.14159));
+            assert(math::equal(vel_5.mag(), 4.14159));
+            assert(math::equal((vel_5--).mag(), 4.14159));
+            assert(math::equal(vel_5.mag(), 3.14159));
         }
 
         inline void acceleration() noexcept
@@ -446,6 +586,20 @@ namespace arc
 
             const si::Acceleration acc_3{0.5 * acc_2};
             assert(math::equal(acc_3.mag(), 1.25));
+
+            si::Acceleration acc_4{3.14159};
+            assert(math::equal(acc_4.mag(), 3.14159));
+            assert(math::equal((++acc_4).mag(), 4.14159));
+            assert(math::equal(acc_4.mag(), 4.14159));
+            assert(math::equal((--acc_4).mag(), 3.14159));
+            assert(math::equal(acc_4.mag(), 3.14159));
+
+            si::Acceleration acc_5{3.14159};
+            assert(math::equal(acc_5.mag(), 3.14159));
+            assert(math::equal((acc_5++).mag(), 3.14159));
+            assert(math::equal(acc_5.mag(), 4.14159));
+            assert(math::equal((acc_5--).mag(), 4.14159));
+            assert(math::equal(acc_5.mag(), 3.14159));
         }
 
         inline void jerk() noexcept
@@ -461,6 +615,20 @@ namespace arc
 
             const si::Jerk jerk_3{0.5 * jerk_2};
             assert(math::equal(jerk_3.mag(), 1.25));
+
+            si::Jerk jerk_4{3.14159};
+            assert(math::equal(jerk_4.mag(), 3.14159));
+            assert(math::equal((++jerk_4).mag(), 4.14159));
+            assert(math::equal(jerk_4.mag(), 4.14159));
+            assert(math::equal((--jerk_4).mag(), 3.14159));
+            assert(math::equal(jerk_4.mag(), 3.14159));
+
+            si::Jerk jerk_5{3.14159};
+            assert(math::equal(jerk_5.mag(), 3.14159));
+            assert(math::equal((jerk_5++).mag(), 3.14159));
+            assert(math::equal(jerk_5.mag(), 4.14159));
+            assert(math::equal((jerk_5--).mag(), 4.14159));
+            assert(math::equal(jerk_5.mag(), 3.14159));
         }
 
         inline void snap() noexcept
@@ -476,6 +644,20 @@ namespace arc
 
             const si::Snap snap_3{0.5 * snap_2};
             assert(math::equal(snap_3.mag(), 1.25));
+
+            si::Snap snap_4{3.14159};
+            assert(math::equal(snap_4.mag(), 3.14159));
+            assert(math::equal((++snap_4).mag(), 4.14159));
+            assert(math::equal(snap_4.mag(), 4.14159));
+            assert(math::equal((--snap_4).mag(), 3.14159));
+            assert(math::equal(snap_4.mag(), 3.14159));
+
+            si::Snap snap_5{3.14159};
+            assert(math::equal(snap_5.mag(), 3.14159));
+            assert(math::equal((snap_5++).mag(), 3.14159));
+            assert(math::equal(snap_5.mag(), 4.14159));
+            assert(math::equal((snap_5--).mag(), 4.14159));
+            assert(math::equal(snap_5.mag(), 3.14159));
         }
 
         inline void crackle() noexcept
@@ -491,6 +673,20 @@ namespace arc
 
             const si::Crackle crack_3{0.5 * crack_2};
             assert(math::equal(crack_3.mag(), 1.25));
+
+            si::Crackle crack_4{3.14159};
+            assert(math::equal(crack_4.mag(), 3.14159));
+            assert(math::equal((++crack_4).mag(), 4.14159));
+            assert(math::equal(crack_4.mag(), 4.14159));
+            assert(math::equal((--crack_4).mag(), 3.14159));
+            assert(math::equal(crack_4.mag(), 3.14159));
+
+            si::Crackle crack_5{3.14159};
+            assert(math::equal(crack_5.mag(), 3.14159));
+            assert(math::equal((crack_5++).mag(), 3.14159));
+            assert(math::equal(crack_5.mag(), 4.14159));
+            assert(math::equal((crack_5--).mag(), 4.14159));
+            assert(math::equal(crack_5.mag(), 3.14159));
         }
 
         inline void pop() noexcept
@@ -506,6 +702,20 @@ namespace arc
 
             const si::Pop pop_3{0.5 * pop_2};
             assert(math::equal(pop_3.mag(), 1.25));
+
+            si::Pop pop_4{3.14159};
+            assert(math::equal(pop_4.mag(), 3.14159));
+            assert(math::equal((++pop_4).mag(), 4.14159));
+            assert(math::equal(pop_4.mag(), 4.14159));
+            assert(math::equal((--pop_4).mag(), 3.14159));
+            assert(math::equal(pop_4.mag(), 3.14159));
+
+            si::Pop pop_5{3.14159};
+            assert(math::equal(pop_5.mag(), 3.14159));
+            assert(math::equal((pop_5++).mag(), 3.14159));
+            assert(math::equal(pop_5.mag(), 4.14159));
+            assert(math::equal((pop_5--).mag(), 4.14159));
+            assert(math::equal(pop_5.mag(), 3.14159));
         }
 
         inline void wavenumber() noexcept
@@ -521,6 +731,20 @@ namespace arc
 
             const si::Wavenumber wavenum_3{0.5 * wavenum_2};
             assert(math::equal(wavenum_3.mag(), 1.25));
+
+            si::Wavenumber wavenum_4{3.14159};
+            assert(math::equal(wavenum_4.mag(), 3.14159));
+            assert(math::equal((++wavenum_4).mag(), 4.14159));
+            assert(math::equal(wavenum_4.mag(), 4.14159));
+            assert(math::equal((--wavenum_4).mag(), 3.14159));
+            assert(math::equal(wavenum_4.mag(), 3.14159));
+
+            si::Wavenumber wavenum_5{3.14159};
+            assert(math::equal(wavenum_5.mag(), 3.14159));
+            assert(math::equal((wavenum_5++).mag(), 3.14159));
+            assert(math::equal(wavenum_5.mag(), 4.14159));
+            assert(math::equal((wavenum_5--).mag(), 4.14159));
+            assert(math::equal(wavenum_5.mag(), 3.14159));
         }
 
         inline void density() noexcept
@@ -536,6 +760,20 @@ namespace arc
 
             const si::Density dens_3{0.5 * dens_2};
             assert(math::equal(dens_3.mag(), 1.25));
+
+            si::Density dens_4{3.14159};
+            assert(math::equal(dens_4.mag(), 3.14159));
+            assert(math::equal((++dens_4).mag(), 4.14159));
+            assert(math::equal(dens_4.mag(), 4.14159));
+            assert(math::equal((--dens_4).mag(), 3.14159));
+            assert(math::equal(dens_4.mag(), 3.14159));
+
+            si::Density dens_5{3.14159};
+            assert(math::equal(dens_5.mag(), 3.14159));
+            assert(math::equal((dens_5++).mag(), 3.14159));
+            assert(math::equal(dens_5.mag(), 4.14159));
+            assert(math::equal((dens_5--).mag(), 4.14159));
+            assert(math::equal(dens_5.mag(), 3.14159));
         }
 
         inline void surface_density() noexcept
@@ -551,6 +789,20 @@ namespace arc
 
             const si::SurfaceDensity surf_dens_3{0.5 * surf_dens_2};
             assert(math::equal(surf_dens_3.mag(), 1.25));
+
+            si::SurfaceDensity surf_dens_4{3.14159};
+            assert(math::equal(surf_dens_4.mag(), 3.14159));
+            assert(math::equal((++surf_dens_4).mag(), 4.14159));
+            assert(math::equal(surf_dens_4.mag(), 4.14159));
+            assert(math::equal((--surf_dens_4).mag(), 3.14159));
+            assert(math::equal(surf_dens_4.mag(), 3.14159));
+
+            si::SurfaceDensity surf_dens_5{3.14159};
+            assert(math::equal(surf_dens_5.mag(), 3.14159));
+            assert(math::equal((surf_dens_5++).mag(), 3.14159));
+            assert(math::equal(surf_dens_5.mag(), 4.14159));
+            assert(math::equal((surf_dens_5--).mag(), 4.14159));
+            assert(math::equal(surf_dens_5.mag(), 3.14159));
         }
 
         inline void specific_volume() noexcept
@@ -566,6 +818,20 @@ namespace arc
 
             const si::SpecificVolume spec_vol_3{0.5 * spec_vol_2};
             assert(math::equal(spec_vol_3.mag(), 1.25));
+
+            si::SpecificVolume spec_vol_4{3.14159};
+            assert(math::equal(spec_vol_4.mag(), 3.14159));
+            assert(math::equal((++spec_vol_4).mag(), 4.14159));
+            assert(math::equal(spec_vol_4.mag(), 4.14159));
+            assert(math::equal((--spec_vol_4).mag(), 3.14159));
+            assert(math::equal(spec_vol_4.mag(), 3.14159));
+
+            si::SpecificVolume spec_vol_5{3.14159};
+            assert(math::equal(spec_vol_5.mag(), 3.14159));
+            assert(math::equal((spec_vol_5++).mag(), 3.14159));
+            assert(math::equal(spec_vol_5.mag(), 4.14159));
+            assert(math::equal((spec_vol_5--).mag(), 4.14159));
+            assert(math::equal(spec_vol_5.mag(), 3.14159));
         }
 
         inline void current_density() noexcept
@@ -581,6 +847,20 @@ namespace arc
 
             const si::CurrentDensity curr_dens_3{0.5 * curr_dens_2};
             assert(math::equal(curr_dens_3.mag(), 1.25));
+
+            si::CurrentDensity curr_dens_4{3.14159};
+            assert(math::equal(curr_dens_4.mag(), 3.14159));
+            assert(math::equal((++curr_dens_4).mag(), 4.14159));
+            assert(math::equal(curr_dens_4.mag(), 4.14159));
+            assert(math::equal((--curr_dens_4).mag(), 3.14159));
+            assert(math::equal(curr_dens_4.mag(), 3.14159));
+
+            si::CurrentDensity curr_dens_5{3.14159};
+            assert(math::equal(curr_dens_5.mag(), 3.14159));
+            assert(math::equal((curr_dens_5++).mag(), 3.14159));
+            assert(math::equal(curr_dens_5.mag(), 4.14159));
+            assert(math::equal((curr_dens_5--).mag(), 4.14159));
+            assert(math::equal(curr_dens_5.mag(), 3.14159));
         }
 
         inline void magnetic_field_strength() noexcept
@@ -596,6 +876,20 @@ namespace arc
 
             const si::MagneticFieldStrength mfs_3{0.5 * mfs_2};
             assert(math::equal(mfs_3.mag(), 1.25));
+
+            si::MagneticFieldStrength mfs_4{3.14159};
+            assert(math::equal(mfs_4.mag(), 3.14159));
+            assert(math::equal((++mfs_4).mag(), 4.14159));
+            assert(math::equal(mfs_4.mag(), 4.14159));
+            assert(math::equal((--mfs_4).mag(), 3.14159));
+            assert(math::equal(mfs_4.mag(), 3.14159));
+
+            si::MagneticFieldStrength mfs_5{3.14159};
+            assert(math::equal(mfs_5.mag(), 3.14159));
+            assert(math::equal((mfs_5++).mag(), 3.14159));
+            assert(math::equal(mfs_5.mag(), 4.14159));
+            assert(math::equal((mfs_5--).mag(), 4.14159));
+            assert(math::equal(mfs_5.mag(), 3.14159));
         }
 
         inline void concentration() noexcept
@@ -611,6 +905,20 @@ namespace arc
 
             const si::Concentration conc_3{0.5 * conc_2};
             assert(math::equal(conc_3.mag(), 1.25));
+
+            si::Concentration conc_4{3.14159};
+            assert(math::equal(conc_4.mag(), 3.14159));
+            assert(math::equal((++conc_4).mag(), 4.14159));
+            assert(math::equal(conc_4.mag(), 4.14159));
+            assert(math::equal((--conc_4).mag(), 3.14159));
+            assert(math::equal(conc_4.mag(), 3.14159));
+
+            si::Concentration conc_5{3.14159};
+            assert(math::equal(conc_5.mag(), 3.14159));
+            assert(math::equal((conc_5++).mag(), 3.14159));
+            assert(math::equal(conc_5.mag(), 4.14159));
+            assert(math::equal((conc_5--).mag(), 4.14159));
+            assert(math::equal(conc_5.mag(), 3.14159));
         }
 
         inline void luminance() noexcept
@@ -626,6 +934,20 @@ namespace arc
 
             const si::Luminance lum_3{0.5 * lum_2};
             assert(math::equal(lum_3.mag(), 1.25));
+
+            si::Luminance lum_4{3.14159};
+            assert(math::equal(lum_4.mag(), 3.14159));
+            assert(math::equal((++lum_4).mag(), 4.14159));
+            assert(math::equal(lum_4.mag(), 4.14159));
+            assert(math::equal((--lum_4).mag(), 3.14159));
+            assert(math::equal(lum_4.mag(), 3.14159));
+
+            si::Luminance lum_5{3.14159};
+            assert(math::equal(lum_5.mag(), 3.14159));
+            assert(math::equal((lum_5++).mag(), 3.14159));
+            assert(math::equal(lum_5.mag(), 4.14159));
+            assert(math::equal((lum_5--).mag(), 4.14159));
+            assert(math::equal(lum_5.mag(), 3.14159));
         }
 
         inline void illuminance() noexcept
@@ -641,6 +963,20 @@ namespace arc
 
             const si::Illuminance illum_3{0.5 * illum_2};
             assert(math::equal(illum_3.mag(), 1.25));
+
+            si::Illuminance illum_4{3.14159};
+            assert(math::equal(illum_4.mag(), 3.14159));
+            assert(math::equal((++illum_4).mag(), 4.14159));
+            assert(math::equal(illum_4.mag(), 4.14159));
+            assert(math::equal((--illum_4).mag(), 3.14159));
+            assert(math::equal(illum_4.mag(), 3.14159));
+
+            si::Illuminance illum_5{3.14159};
+            assert(math::equal(illum_5.mag(), 3.14159));
+            assert(math::equal((illum_5++).mag(), 3.14159));
+            assert(math::equal(illum_5.mag(), 4.14159));
+            assert(math::equal((illum_5--).mag(), 4.14159));
+            assert(math::equal(illum_5.mag(), 3.14159));
         }
 
         inline void frequency() noexcept
@@ -656,6 +992,20 @@ namespace arc
 
             const si::Frequency freq_3{0.5 * freq_2};
             assert(math::equal(freq_3.mag(), 1.25));
+
+            si::Frequency freq_4{3.14159};
+            assert(math::equal(freq_4.mag(), 3.14159));
+            assert(math::equal((++freq_4).mag(), 4.14159));
+            assert(math::equal(freq_4.mag(), 4.14159));
+            assert(math::equal((--freq_4).mag(), 3.14159));
+            assert(math::equal(freq_4.mag(), 3.14159));
+
+            si::Frequency freq_5{3.14159};
+            assert(math::equal(freq_5.mag(), 3.14159));
+            assert(math::equal((freq_5++).mag(), 3.14159));
+            assert(math::equal(freq_5.mag(), 4.14159));
+            assert(math::equal((freq_5--).mag(), 4.14159));
+            assert(math::equal(freq_5.mag(), 3.14159));
         }
 
         inline void force() noexcept
@@ -671,6 +1021,20 @@ namespace arc
 
             const si::Force force_3{0.5 * force_2};
             assert(math::equal(force_3.mag(), 1.25));
+
+            si::Force force_4{3.14159};
+            assert(math::equal(force_4.mag(), 3.14159));
+            assert(math::equal((++force_4).mag(), 4.14159));
+            assert(math::equal(force_4.mag(), 4.14159));
+            assert(math::equal((--force_4).mag(), 3.14159));
+            assert(math::equal(force_4.mag(), 3.14159));
+
+            si::Force force_5{3.14159};
+            assert(math::equal(force_5.mag(), 3.14159));
+            assert(math::equal((force_5++).mag(), 3.14159));
+            assert(math::equal(force_5.mag(), 4.14159));
+            assert(math::equal((force_5--).mag(), 4.14159));
+            assert(math::equal(force_5.mag(), 3.14159));
         }
 
         inline void pressure() noexcept
@@ -686,6 +1050,20 @@ namespace arc
 
             const si::Pressure pres_3{0.5 * pres_2};
             assert(math::equal(pres_3.mag(), 1.25));
+
+            si::Pressure pres_4{3.14159};
+            assert(math::equal(pres_4.mag(), 3.14159));
+            assert(math::equal((++pres_4).mag(), 4.14159));
+            assert(math::equal(pres_4.mag(), 4.14159));
+            assert(math::equal((--pres_4).mag(), 3.14159));
+            assert(math::equal(pres_4.mag(), 3.14159));
+
+            si::Pressure pres_5{3.14159};
+            assert(math::equal(pres_5.mag(), 3.14159));
+            assert(math::equal((pres_5++).mag(), 3.14159));
+            assert(math::equal(pres_5.mag(), 4.14159));
+            assert(math::equal((pres_5--).mag(), 4.14159));
+            assert(math::equal(pres_5.mag(), 3.14159));
         }
 
         inline void stress() noexcept
@@ -701,6 +1079,20 @@ namespace arc
 
             const si::Stress stress_3{0.5 * stress_2};
             assert(math::equal(stress_3.mag(), 1.25));
+
+            si::Stress stress_4{3.14159};
+            assert(math::equal(stress_4.mag(), 3.14159));
+            assert(math::equal((++stress_4).mag(), 4.14159));
+            assert(math::equal(stress_4.mag(), 4.14159));
+            assert(math::equal((--stress_4).mag(), 3.14159));
+            assert(math::equal(stress_4.mag(), 3.14159));
+
+            si::Stress stress_5{3.14159};
+            assert(math::equal(stress_5.mag(), 3.14159));
+            assert(math::equal((stress_5++).mag(), 3.14159));
+            assert(math::equal(stress_5.mag(), 4.14159));
+            assert(math::equal((stress_5--).mag(), 4.14159));
+            assert(math::equal(stress_5.mag(), 3.14159));
         }
 
         inline void energy_density() noexcept
@@ -716,6 +1108,20 @@ namespace arc
 
             const si::EnergyDensity udens_3{0.5 * udens_2};
             assert(math::equal(udens_3.mag(), 1.25));
+
+            si::EnergyDensity udens_4{3.14159};
+            assert(math::equal(udens_4.mag(), 3.14159));
+            assert(math::equal((++udens_4).mag(), 4.14159));
+            assert(math::equal(udens_4.mag(), 4.14159));
+            assert(math::equal((--udens_4).mag(), 3.14159));
+            assert(math::equal(udens_4.mag(), 3.14159));
+
+            si::EnergyDensity udens_5{3.14159};
+            assert(math::equal(udens_5.mag(), 3.14159));
+            assert(math::equal((udens_5++).mag(), 3.14159));
+            assert(math::equal(udens_5.mag(), 4.14159));
+            assert(math::equal((udens_5--).mag(), 4.14159));
+            assert(math::equal(udens_5.mag(), 3.14159));
         }
 
         inline void energy() noexcept
@@ -731,6 +1137,20 @@ namespace arc
 
             const si::Energy energy_3{0.5 * energy_2};
             assert(math::equal(energy_3.mag(), 1.25));
+
+            si::Energy energy_4{3.14159};
+            assert(math::equal(energy_4.mag(), 3.14159));
+            assert(math::equal((++energy_4).mag(), 4.14159));
+            assert(math::equal(energy_4.mag(), 4.14159));
+            assert(math::equal((--energy_4).mag(), 3.14159));
+            assert(math::equal(energy_4.mag(), 3.14159));
+
+            si::Energy energy_5{3.14159};
+            assert(math::equal(energy_5.mag(), 3.14159));
+            assert(math::equal((energy_5++).mag(), 3.14159));
+            assert(math::equal(energy_5.mag(), 4.14159));
+            assert(math::equal((energy_5--).mag(), 4.14159));
+            assert(math::equal(energy_5.mag(), 3.14159));
         }
 
         inline void work() noexcept
@@ -746,6 +1166,20 @@ namespace arc
 
             const si::Work work_3{0.5 * work_2};
             assert(math::equal(work_3.mag(), 1.25));
+
+            si::Work work_4{3.14159};
+            assert(math::equal(work_4.mag(), 3.14159));
+            assert(math::equal((++work_4).mag(), 4.14159));
+            assert(math::equal(work_4.mag(), 4.14159));
+            assert(math::equal((--work_4).mag(), 3.14159));
+            assert(math::equal(work_4.mag(), 3.14159));
+
+            si::Work work_5{3.14159};
+            assert(math::equal(work_5.mag(), 3.14159));
+            assert(math::equal((work_5++).mag(), 3.14159));
+            assert(math::equal(work_5.mag(), 4.14159));
+            assert(math::equal((work_5--).mag(), 4.14159));
+            assert(math::equal(work_5.mag(), 3.14159));
         }
 
         inline void heat() noexcept
@@ -761,6 +1195,20 @@ namespace arc
 
             const si::Heat heat_3{0.5 * heat_2};
             assert(math::equal(heat_3.mag(), 1.25));
+
+            si::Heat heat_4{3.14159};
+            assert(math::equal(heat_4.mag(), 3.14159));
+            assert(math::equal((++heat_4).mag(), 4.14159));
+            assert(math::equal(heat_4.mag(), 4.14159));
+            assert(math::equal((--heat_4).mag(), 3.14159));
+            assert(math::equal(heat_4.mag(), 3.14159));
+
+            si::Heat heat_5{3.14159};
+            assert(math::equal(heat_5.mag(), 3.14159));
+            assert(math::equal((heat_5++).mag(), 3.14159));
+            assert(math::equal(heat_5.mag(), 4.14159));
+            assert(math::equal((heat_5--).mag(), 4.14159));
+            assert(math::equal(heat_5.mag(), 3.14159));
         }
 
         inline void power() noexcept
@@ -776,6 +1224,20 @@ namespace arc
 
             const si::Power power_3{0.5 * power_2};
             assert(math::equal(power_3.mag(), 1.25));
+
+            si::Power power_4{3.14159};
+            assert(math::equal(power_4.mag(), 3.14159));
+            assert(math::equal((++power_4).mag(), 4.14159));
+            assert(math::equal(power_4.mag(), 4.14159));
+            assert(math::equal((--power_4).mag(), 3.14159));
+            assert(math::equal(power_4.mag(), 3.14159));
+
+            si::Power power_5{3.14159};
+            assert(math::equal(power_5.mag(), 3.14159));
+            assert(math::equal((power_5++).mag(), 3.14159));
+            assert(math::equal(power_5.mag(), 4.14159));
+            assert(math::equal((power_5--).mag(), 4.14159));
+            assert(math::equal(power_5.mag(), 3.14159));
         }
 
         inline void radiant_flux() noexcept
@@ -791,6 +1253,20 @@ namespace arc
 
             const si::RadiantFlux rad_flux_3{0.5 * rad_flux_2};
             assert(math::equal(rad_flux_3.mag(), 1.25));
+
+            si::RadiantFlux rad_flux_4{3.14159};
+            assert(math::equal(rad_flux_4.mag(), 3.14159));
+            assert(math::equal((++rad_flux_4).mag(), 4.14159));
+            assert(math::equal(rad_flux_4.mag(), 4.14159));
+            assert(math::equal((--rad_flux_4).mag(), 3.14159));
+            assert(math::equal(rad_flux_4.mag(), 3.14159));
+
+            si::RadiantFlux rad_flux_5{3.14159};
+            assert(math::equal(rad_flux_5.mag(), 3.14159));
+            assert(math::equal((rad_flux_5++).mag(), 3.14159));
+            assert(math::equal(rad_flux_5.mag(), 4.14159));
+            assert(math::equal((rad_flux_5--).mag(), 4.14159));
+            assert(math::equal(rad_flux_5.mag(), 3.14159));
         }
 
         inline void charge() noexcept
@@ -806,6 +1282,20 @@ namespace arc
 
             const si::Charge charge_3{0.5 * charge_2};
             assert(math::equal(charge_3.mag(), 1.25));
+
+            si::Charge charge_4{3.14159};
+            assert(math::equal(charge_4.mag(), 3.14159));
+            assert(math::equal((++charge_4).mag(), 4.14159));
+            assert(math::equal(charge_4.mag(), 4.14159));
+            assert(math::equal((--charge_4).mag(), 3.14159));
+            assert(math::equal(charge_4.mag(), 3.14159));
+
+            si::Charge charge_5{3.14159};
+            assert(math::equal(charge_5.mag(), 3.14159));
+            assert(math::equal((charge_5++).mag(), 3.14159));
+            assert(math::equal(charge_5.mag(), 4.14159));
+            assert(math::equal((charge_5--).mag(), 4.14159));
+            assert(math::equal(charge_5.mag(), 3.14159));
         }
 
         inline void potential() noexcept
@@ -821,6 +1311,20 @@ namespace arc
 
             const si::Potential pot_3{0.5 * pot_2};
             assert(math::equal(pot_3.mag(), 1.25));
+
+            si::Potential pot_4{3.14159};
+            assert(math::equal(pot_4.mag(), 3.14159));
+            assert(math::equal((++pot_4).mag(), 4.14159));
+            assert(math::equal(pot_4.mag(), 4.14159));
+            assert(math::equal((--pot_4).mag(), 3.14159));
+            assert(math::equal(pot_4.mag(), 3.14159));
+
+            si::Potential pot_5{3.14159};
+            assert(math::equal(pot_5.mag(), 3.14159));
+            assert(math::equal((pot_5++).mag(), 3.14159));
+            assert(math::equal(pot_5.mag(), 4.14159));
+            assert(math::equal((pot_5--).mag(), 4.14159));
+            assert(math::equal(pot_5.mag(), 3.14159));
         }
 
         inline void capacitance() noexcept
@@ -836,6 +1340,20 @@ namespace arc
 
             const si::Capacitance cap_3{0.5 * cap_2};
             assert(math::equal(cap_3.mag(), 1.25));
+
+            si::Capacitance cap_4{3.14159};
+            assert(math::equal(cap_4.mag(), 3.14159));
+            assert(math::equal((++cap_4).mag(), 4.14159));
+            assert(math::equal(cap_4.mag(), 4.14159));
+            assert(math::equal((--cap_4).mag(), 3.14159));
+            assert(math::equal(cap_4.mag(), 3.14159));
+
+            si::Capacitance cap_5{3.14159};
+            assert(math::equal(cap_5.mag(), 3.14159));
+            assert(math::equal((cap_5++).mag(), 3.14159));
+            assert(math::equal(cap_5.mag(), 4.14159));
+            assert(math::equal((cap_5--).mag(), 4.14159));
+            assert(math::equal(cap_5.mag(), 3.14159));
         }
 
         inline void resistance() noexcept
@@ -851,6 +1369,20 @@ namespace arc
 
             const si::Resistance res_3{0.5 * res_2};
             assert(math::equal(res_3.mag(), 1.25));
+
+            si::Resistance res_4{3.14159};
+            assert(math::equal(res_4.mag(), 3.14159));
+            assert(math::equal((++res_4).mag(), 4.14159));
+            assert(math::equal(res_4.mag(), 4.14159));
+            assert(math::equal((--res_4).mag(), 3.14159));
+            assert(math::equal(res_4.mag(), 3.14159));
+
+            si::Resistance res_5{3.14159};
+            assert(math::equal(res_5.mag(), 3.14159));
+            assert(math::equal((res_5++).mag(), 3.14159));
+            assert(math::equal(res_5.mag(), 4.14159));
+            assert(math::equal((res_5--).mag(), 4.14159));
+            assert(math::equal(res_5.mag(), 3.14159));
         }
 
         inline void conductance() noexcept
@@ -866,6 +1398,20 @@ namespace arc
 
             const si::Conductance cond_3{0.5 * cond_2};
             assert(math::equal(cond_3.mag(), 1.25));
+
+            si::Conductance cond_4{3.14159};
+            assert(math::equal(cond_4.mag(), 3.14159));
+            assert(math::equal((++cond_4).mag(), 4.14159));
+            assert(math::equal(cond_4.mag(), 4.14159));
+            assert(math::equal((--cond_4).mag(), 3.14159));
+            assert(math::equal(cond_4.mag(), 3.14159));
+
+            si::Conductance cond_5{3.14159};
+            assert(math::equal(cond_5.mag(), 3.14159));
+            assert(math::equal((cond_5++).mag(), 3.14159));
+            assert(math::equal(cond_5.mag(), 4.14159));
+            assert(math::equal((cond_5--).mag(), 4.14159));
+            assert(math::equal(cond_5.mag(), 3.14159));
         }
 
         inline void magnetic_flux() noexcept
@@ -881,6 +1427,20 @@ namespace arc
 
             const si::MagneticFlux mag_flux_3{0.5 * mag_flux_2};
             assert(math::equal(mag_flux_3.mag(), 1.25));
+
+            si::MagneticFlux mag_flux_4{3.14159};
+            assert(math::equal(mag_flux_4.mag(), 3.14159));
+            assert(math::equal((++mag_flux_4).mag(), 4.14159));
+            assert(math::equal(mag_flux_4.mag(), 4.14159));
+            assert(math::equal((--mag_flux_4).mag(), 3.14159));
+            assert(math::equal(mag_flux_4.mag(), 3.14159));
+
+            si::MagneticFlux mag_flux_5{3.14159};
+            assert(math::equal(mag_flux_5.mag(), 3.14159));
+            assert(math::equal((mag_flux_5++).mag(), 3.14159));
+            assert(math::equal(mag_flux_5.mag(), 4.14159));
+            assert(math::equal((mag_flux_5--).mag(), 4.14159));
+            assert(math::equal(mag_flux_5.mag(), 3.14159));
         }
 
         inline void mag_flux_density() noexcept
@@ -896,6 +1456,20 @@ namespace arc
 
             const si::MagneticFluxDensity mag_flux_dens_3{0.5 * mag_flux_dens_2};
             assert(math::equal(mag_flux_dens_3.mag(), 1.25));
+
+            si::MagneticFluxDensity mag_flux_dens_4{3.14159};
+            assert(math::equal(mag_flux_dens_4.mag(), 3.14159));
+            assert(math::equal((++mag_flux_dens_4).mag(), 4.14159));
+            assert(math::equal(mag_flux_dens_4.mag(), 4.14159));
+            assert(math::equal((--mag_flux_dens_4).mag(), 3.14159));
+            assert(math::equal(mag_flux_dens_4.mag(), 3.14159));
+
+            si::MagneticFluxDensity mag_flux_dens_5{3.14159};
+            assert(math::equal(mag_flux_dens_5.mag(), 3.14159));
+            assert(math::equal((mag_flux_dens_5++).mag(), 3.14159));
+            assert(math::equal(mag_flux_dens_5.mag(), 4.14159));
+            assert(math::equal((mag_flux_dens_5--).mag(), 4.14159));
+            assert(math::equal(mag_flux_dens_5.mag(), 3.14159));
         }
 
         inline void inductance() noexcept
@@ -911,6 +1485,20 @@ namespace arc
 
             const si::Inductance ind_3{0.5 * ind_2};
             assert(math::equal(ind_3.mag(), 1.25));
+
+            si::Inductance ind_4{3.14159};
+            assert(math::equal(ind_4.mag(), 3.14159));
+            assert(math::equal((++ind_4).mag(), 4.14159));
+            assert(math::equal(ind_4.mag(), 4.14159));
+            assert(math::equal((--ind_4).mag(), 3.14159));
+            assert(math::equal(ind_4.mag(), 3.14159));
+
+            si::Inductance ind_5{3.14159};
+            assert(math::equal(ind_5.mag(), 3.14159));
+            assert(math::equal((ind_5++).mag(), 3.14159));
+            assert(math::equal(ind_5.mag(), 4.14159));
+            assert(math::equal((ind_5--).mag(), 4.14159));
+            assert(math::equal(ind_5.mag(), 3.14159));
         }
 
         inline void luminous_flux() noexcept
@@ -926,6 +1514,20 @@ namespace arc
 
             const si::LuminousFlux lum_flux_3{0.5 * lum_flux_2};
             assert(math::equal(lum_flux_3.mag(), 1.25));
+
+            si::LuminousFlux lum_flux_4{3.14159};
+            assert(math::equal(lum_flux_4.mag(), 3.14159));
+            assert(math::equal((++lum_flux_4).mag(), 4.14159));
+            assert(math::equal(lum_flux_4.mag(), 4.14159));
+            assert(math::equal((--lum_flux_4).mag(), 3.14159));
+            assert(math::equal(lum_flux_4.mag(), 3.14159));
+
+            si::LuminousFlux lum_flux_5{3.14159};
+            assert(math::equal(lum_flux_5.mag(), 3.14159));
+            assert(math::equal((lum_flux_5++).mag(), 3.14159));
+            assert(math::equal(lum_flux_5.mag(), 4.14159));
+            assert(math::equal((lum_flux_5--).mag(), 4.14159));
+            assert(math::equal(lum_flux_5.mag(), 3.14159));
         }
 
         inline void activity() noexcept
@@ -941,6 +1543,20 @@ namespace arc
 
             const si::Activity activity_3{0.5 * activity_2};
             assert(math::equal(activity_3.mag(), 1.25));
+
+            si::Activity activity_4{3.14159};
+            assert(math::equal(activity_4.mag(), 3.14159));
+            assert(math::equal((++activity_4).mag(), 4.14159));
+            assert(math::equal(activity_4.mag(), 4.14159));
+            assert(math::equal((--activity_4).mag(), 3.14159));
+            assert(math::equal(activity_4.mag(), 3.14159));
+
+            si::Activity activity_5{3.14159};
+            assert(math::equal(activity_5.mag(), 3.14159));
+            assert(math::equal((activity_5++).mag(), 3.14159));
+            assert(math::equal(activity_5.mag(), 4.14159));
+            assert(math::equal((activity_5--).mag(), 4.14159));
+            assert(math::equal(activity_5.mag(), 3.14159));
         }
 
         inline void absorbed_dose() noexcept
@@ -956,6 +1572,20 @@ namespace arc
 
             const si::AbsorbedDose abs_dose_3{0.5 * abs_dose_2};
             assert(math::equal(abs_dose_3.mag(), 1.25));
+
+            si::AbsorbedDose abs_dose_4{3.14159};
+            assert(math::equal(abs_dose_4.mag(), 3.14159));
+            assert(math::equal((++abs_dose_4).mag(), 4.14159));
+            assert(math::equal(abs_dose_4.mag(), 4.14159));
+            assert(math::equal((--abs_dose_4).mag(), 3.14159));
+            assert(math::equal(abs_dose_4.mag(), 3.14159));
+
+            si::AbsorbedDose abs_dose_5{3.14159};
+            assert(math::equal(abs_dose_5.mag(), 3.14159));
+            assert(math::equal((abs_dose_5++).mag(), 3.14159));
+            assert(math::equal(abs_dose_5.mag(), 4.14159));
+            assert(math::equal((abs_dose_5--).mag(), 4.14159));
+            assert(math::equal(abs_dose_5.mag(), 3.14159));
         }
 
         inline void kerma() noexcept
@@ -971,6 +1601,20 @@ namespace arc
 
             const si::Kerma kerma_3{0.5 * kerma_2};
             assert(math::equal(kerma_3.mag(), 1.25));
+
+            si::Kerma kerma_4{3.14159};
+            assert(math::equal(kerma_4.mag(), 3.14159));
+            assert(math::equal((++kerma_4).mag(), 4.14159));
+            assert(math::equal(kerma_4.mag(), 4.14159));
+            assert(math::equal((--kerma_4).mag(), 3.14159));
+            assert(math::equal(kerma_4.mag(), 3.14159));
+
+            si::Kerma kerma_5{3.14159};
+            assert(math::equal(kerma_5.mag(), 3.14159));
+            assert(math::equal((kerma_5++).mag(), 3.14159));
+            assert(math::equal(kerma_5.mag(), 4.14159));
+            assert(math::equal((kerma_5--).mag(), 4.14159));
+            assert(math::equal(kerma_5.mag(), 3.14159));
         }
 
         inline void specific_energy() noexcept
@@ -986,6 +1630,20 @@ namespace arc
 
             const si::SpecificEnergy spec_energy_3{0.5 * spec_energy_2};
             assert(math::equal(spec_energy_3.mag(), 1.25));
+
+            si::SpecificEnergy spec_energy_4{3.14159};
+            assert(math::equal(spec_energy_4.mag(), 3.14159));
+            assert(math::equal((++spec_energy_4).mag(), 4.14159));
+            assert(math::equal(spec_energy_4.mag(), 4.14159));
+            assert(math::equal((--spec_energy_4).mag(), 3.14159));
+            assert(math::equal(spec_energy_4.mag(), 3.14159));
+
+            si::SpecificEnergy spec_energy_5{3.14159};
+            assert(math::equal(spec_energy_5.mag(), 3.14159));
+            assert(math::equal((spec_energy_5++).mag(), 3.14159));
+            assert(math::equal(spec_energy_5.mag(), 4.14159));
+            assert(math::equal((spec_energy_5--).mag(), 4.14159));
+            assert(math::equal(spec_energy_5.mag(), 3.14159));
         }
 
         inline void dose_equivalent() noexcept
@@ -1001,6 +1659,20 @@ namespace arc
 
             const si::DoseEquivalent dose_equiv_3{0.5 * dose_equiv_2};
             assert(math::equal(dose_equiv_3.mag(), 1.25));
+
+            si::DoseEquivalent dose_equiv_4{3.14159};
+            assert(math::equal(dose_equiv_4.mag(), 3.14159));
+            assert(math::equal((++dose_equiv_4).mag(), 4.14159));
+            assert(math::equal(dose_equiv_4.mag(), 4.14159));
+            assert(math::equal((--dose_equiv_4).mag(), 3.14159));
+            assert(math::equal(dose_equiv_4.mag(), 3.14159));
+
+            si::DoseEquivalent dose_equiv_5{3.14159};
+            assert(math::equal(dose_equiv_5.mag(), 3.14159));
+            assert(math::equal((dose_equiv_5++).mag(), 3.14159));
+            assert(math::equal(dose_equiv_5.mag(), 4.14159));
+            assert(math::equal((dose_equiv_5--).mag(), 4.14159));
+            assert(math::equal(dose_equiv_5.mag(), 3.14159));
         }
 
         inline void catalytic_activity() noexcept
@@ -1016,6 +1688,20 @@ namespace arc
 
             const si::CatalyticActivity cat_act_3{0.5 * cat_act_2};
             assert(math::equal(cat_act_3.mag(), 1.25));
+
+            si::CatalyticActivity cat_act_4{3.14159};
+            assert(math::equal(cat_act_4.mag(), 3.14159));
+            assert(math::equal((++cat_act_4).mag(), 4.14159));
+            assert(math::equal(cat_act_4.mag(), 4.14159));
+            assert(math::equal((--cat_act_4).mag(), 3.14159));
+            assert(math::equal(cat_act_4.mag(), 3.14159));
+
+            si::CatalyticActivity cat_act_5{3.14159};
+            assert(math::equal(cat_act_5.mag(), 3.14159));
+            assert(math::equal((cat_act_5++).mag(), 3.14159));
+            assert(math::equal(cat_act_5.mag(), 4.14159));
+            assert(math::equal((cat_act_5--).mag(), 4.14159));
+            assert(math::equal(cat_act_5.mag(), 3.14159));
         }
 
         inline void dynamic_viscosity() noexcept
@@ -1031,6 +1717,20 @@ namespace arc
 
             const si::DynamicViscosity dyn_visc_3{0.5 * dyn_visc_2};
             assert(math::equal(dyn_visc_3.mag(), 1.25));
+
+            si::DynamicViscosity dyn_visc_4{3.14159};
+            assert(math::equal(dyn_visc_4.mag(), 3.14159));
+            assert(math::equal((++dyn_visc_4).mag(), 4.14159));
+            assert(math::equal(dyn_visc_4.mag(), 4.14159));
+            assert(math::equal((--dyn_visc_4).mag(), 3.14159));
+            assert(math::equal(dyn_visc_4.mag(), 3.14159));
+
+            si::DynamicViscosity dyn_visc_5{3.14159};
+            assert(math::equal(dyn_visc_5.mag(), 3.14159));
+            assert(math::equal((dyn_visc_5++).mag(), 3.14159));
+            assert(math::equal(dyn_visc_5.mag(), 4.14159));
+            assert(math::equal((dyn_visc_5--).mag(), 4.14159));
+            assert(math::equal(dyn_visc_5.mag(), 3.14159));
         }
 
         inline void kinematic_viscosity() noexcept
@@ -1046,6 +1746,20 @@ namespace arc
 
             const si::KinematicViscosity kine_visc_3{0.5 * kine_visc_2};
             assert(math::equal(kine_visc_3.mag(), 1.25));
+
+            si::KinematicViscosity kine_visc_4{3.14159};
+            assert(math::equal(kine_visc_4.mag(), 3.14159));
+            assert(math::equal((++kine_visc_4).mag(), 4.14159));
+            assert(math::equal(kine_visc_4.mag(), 4.14159));
+            assert(math::equal((--kine_visc_4).mag(), 3.14159));
+            assert(math::equal(kine_visc_4.mag(), 3.14159));
+
+            si::KinematicViscosity kine_visc_5{3.14159};
+            assert(math::equal(kine_visc_5.mag(), 3.14159));
+            assert(math::equal((kine_visc_5++).mag(), 3.14159));
+            assert(math::equal(kine_visc_5.mag(), 4.14159));
+            assert(math::equal((kine_visc_5--).mag(), 4.14159));
+            assert(math::equal(kine_visc_5.mag(), 3.14159));
         }
 
         inline void moment() noexcept
@@ -1061,6 +1775,20 @@ namespace arc
 
             const si::Moment moment_3{0.5 * moment_2};
             assert(math::equal(moment_3.mag(), 1.25));
+
+            si::Moment moment_4{3.14159};
+            assert(math::equal(moment_4.mag(), 3.14159));
+            assert(math::equal((++moment_4).mag(), 4.14159));
+            assert(math::equal(moment_4.mag(), 4.14159));
+            assert(math::equal((--moment_4).mag(), 3.14159));
+            assert(math::equal(moment_4.mag(), 3.14159));
+
+            si::Moment moment_5{3.14159};
+            assert(math::equal(moment_5.mag(), 3.14159));
+            assert(math::equal((moment_5++).mag(), 3.14159));
+            assert(math::equal(moment_5.mag(), 4.14159));
+            assert(math::equal((moment_5--).mag(), 4.14159));
+            assert(math::equal(moment_5.mag(), 3.14159));
         }
 
         inline void surface_tension() noexcept
@@ -1076,6 +1804,20 @@ namespace arc
 
             const si::SurfaceTension surf_tens_3{0.5 * surf_tens_2};
             assert(math::equal(surf_tens_3.mag(), 1.25));
+
+            si::SurfaceTension surf_tens_4{3.14159};
+            assert(math::equal(surf_tens_4.mag(), 3.14159));
+            assert(math::equal((++surf_tens_4).mag(), 4.14159));
+            assert(math::equal(surf_tens_4.mag(), 4.14159));
+            assert(math::equal((--surf_tens_4).mag(), 3.14159));
+            assert(math::equal(surf_tens_4.mag(), 3.14159));
+
+            si::SurfaceTension surf_tens_5{3.14159};
+            assert(math::equal(surf_tens_5.mag(), 3.14159));
+            assert(math::equal((surf_tens_5++).mag(), 3.14159));
+            assert(math::equal(surf_tens_5.mag(), 4.14159));
+            assert(math::equal((surf_tens_5--).mag(), 4.14159));
+            assert(math::equal(surf_tens_5.mag(), 3.14159));
         }
 
         inline void angular_velocity() noexcept
@@ -1091,6 +1833,20 @@ namespace arc
 
             const si::AngularVelocity ang_vel_3{0.5 * ang_vel_2};
             assert(math::equal(ang_vel_3.mag(), 1.25));
+
+            si::AngularVelocity ang_vel_4{3.14159};
+            assert(math::equal(ang_vel_4.mag(), 3.14159));
+            assert(math::equal((++ang_vel_4).mag(), 4.14159));
+            assert(math::equal(ang_vel_4.mag(), 4.14159));
+            assert(math::equal((--ang_vel_4).mag(), 3.14159));
+            assert(math::equal(ang_vel_4.mag(), 3.14159));
+
+            si::AngularVelocity ang_vel_5{3.14159};
+            assert(math::equal(ang_vel_5.mag(), 3.14159));
+            assert(math::equal((ang_vel_5++).mag(), 3.14159));
+            assert(math::equal(ang_vel_5.mag(), 4.14159));
+            assert(math::equal((ang_vel_5--).mag(), 4.14159));
+            assert(math::equal(ang_vel_5.mag(), 3.14159));
         }
 
         inline void angular_acceleration() noexcept
@@ -1106,6 +1862,20 @@ namespace arc
 
             const si::AngularAcceleration ang_acc_3{0.5 * ang_acc_2};
             assert(math::equal(ang_acc_3.mag(), 1.25));
+
+            si::AngularAcceleration ang_acc_4{3.14159};
+            assert(math::equal(ang_acc_4.mag(), 3.14159));
+            assert(math::equal((++ang_acc_4).mag(), 4.14159));
+            assert(math::equal(ang_acc_4.mag(), 4.14159));
+            assert(math::equal((--ang_acc_4).mag(), 3.14159));
+            assert(math::equal(ang_acc_4.mag(), 3.14159));
+
+            si::AngularAcceleration ang_acc_5{3.14159};
+            assert(math::equal(ang_acc_5.mag(), 3.14159));
+            assert(math::equal((ang_acc_5++).mag(), 3.14159));
+            assert(math::equal(ang_acc_5.mag(), 4.14159));
+            assert(math::equal((ang_acc_5--).mag(), 4.14159));
+            assert(math::equal(ang_acc_5.mag(), 3.14159));
         }
 
         inline void angular_jerk() noexcept
@@ -1121,6 +1891,20 @@ namespace arc
 
             const si::AngularJerk ang_jerk_3{0.5 * ang_jerk_2};
             assert(math::equal(ang_jerk_3.mag(), 1.25));
+
+            si::AngularJerk ang_jerk_4{3.14159};
+            assert(math::equal(ang_jerk_4.mag(), 3.14159));
+            assert(math::equal((++ang_jerk_4).mag(), 4.14159));
+            assert(math::equal(ang_jerk_4.mag(), 4.14159));
+            assert(math::equal((--ang_jerk_4).mag(), 3.14159));
+            assert(math::equal(ang_jerk_4.mag(), 3.14159));
+
+            si::AngularJerk ang_jerk_5{3.14159};
+            assert(math::equal(ang_jerk_5.mag(), 3.14159));
+            assert(math::equal((ang_jerk_5++).mag(), 3.14159));
+            assert(math::equal(ang_jerk_5.mag(), 4.14159));
+            assert(math::equal((ang_jerk_5--).mag(), 4.14159));
+            assert(math::equal(ang_jerk_5.mag(), 3.14159));
         }
 
         inline void angular_snap() noexcept
@@ -1136,6 +1920,20 @@ namespace arc
 
             const si::AngularSnap ang_snap_3{0.5 * ang_snap_2};
             assert(math::equal(ang_snap_3.mag(), 1.25));
+
+            si::AngularSnap ang_snap_4{3.14159};
+            assert(math::equal(ang_snap_4.mag(), 3.14159));
+            assert(math::equal((++ang_snap_4).mag(), 4.14159));
+            assert(math::equal(ang_snap_4.mag(), 4.14159));
+            assert(math::equal((--ang_snap_4).mag(), 3.14159));
+            assert(math::equal(ang_snap_4.mag(), 3.14159));
+
+            si::AngularSnap ang_snap_5{3.14159};
+            assert(math::equal(ang_snap_5.mag(), 3.14159));
+            assert(math::equal((ang_snap_5++).mag(), 3.14159));
+            assert(math::equal(ang_snap_5.mag(), 4.14159));
+            assert(math::equal((ang_snap_5--).mag(), 4.14159));
+            assert(math::equal(ang_snap_5.mag(), 3.14159));
         }
 
         inline void angular_crackle() noexcept
@@ -1151,6 +1949,20 @@ namespace arc
 
             const si::AngularCrackle ang_crack_3{0.5 * ang_crack_2};
             assert(math::equal(ang_crack_3.mag(), 1.25));
+
+            si::AngularCrackle ang_crack_4{3.14159};
+            assert(math::equal(ang_crack_4.mag(), 3.14159));
+            assert(math::equal((++ang_crack_4).mag(), 4.14159));
+            assert(math::equal(ang_crack_4.mag(), 4.14159));
+            assert(math::equal((--ang_crack_4).mag(), 3.14159));
+            assert(math::equal(ang_crack_4.mag(), 3.14159));
+
+            si::AngularCrackle ang_crack_5{3.14159};
+            assert(math::equal(ang_crack_5.mag(), 3.14159));
+            assert(math::equal((ang_crack_5++).mag(), 3.14159));
+            assert(math::equal(ang_crack_5.mag(), 4.14159));
+            assert(math::equal((ang_crack_5--).mag(), 4.14159));
+            assert(math::equal(ang_crack_5.mag(), 3.14159));
         }
 
         inline void angular_pop() noexcept
@@ -1166,6 +1978,20 @@ namespace arc
 
             const si::AngularPop ang_pop_3{0.5 * ang_pop_2};
             assert(math::equal(ang_pop_3.mag(), 1.25));
+
+            si::AngularPop ang_pop_4{3.14159};
+            assert(math::equal(ang_pop_4.mag(), 3.14159));
+            assert(math::equal((++ang_pop_4).mag(), 4.14159));
+            assert(math::equal(ang_pop_4.mag(), 4.14159));
+            assert(math::equal((--ang_pop_4).mag(), 3.14159));
+            assert(math::equal(ang_pop_4.mag(), 3.14159));
+
+            si::AngularPop ang_pop_5{3.14159};
+            assert(math::equal(ang_pop_5.mag(), 3.14159));
+            assert(math::equal((ang_pop_5++).mag(), 3.14159));
+            assert(math::equal(ang_pop_5.mag(), 4.14159));
+            assert(math::equal((ang_pop_5--).mag(), 4.14159));
+            assert(math::equal(ang_pop_5.mag(), 3.14159));
         }
 
         inline void heat_flux_density() noexcept
@@ -1181,6 +2007,20 @@ namespace arc
 
             const si::HeatFluxDensity heat_flux_dens_3{0.5 * heat_flux_dens_2};
             assert(math::equal(heat_flux_dens_3.mag(), 1.25));
+
+            si::HeatFluxDensity heat_flux_dens_4{3.14159};
+            assert(math::equal(heat_flux_dens_4.mag(), 3.14159));
+            assert(math::equal((++heat_flux_dens_4).mag(), 4.14159));
+            assert(math::equal(heat_flux_dens_4.mag(), 4.14159));
+            assert(math::equal((--heat_flux_dens_4).mag(), 3.14159));
+            assert(math::equal(heat_flux_dens_4.mag(), 3.14159));
+
+            si::HeatFluxDensity heat_flux_dens_5{3.14159};
+            assert(math::equal(heat_flux_dens_5.mag(), 3.14159));
+            assert(math::equal((heat_flux_dens_5++).mag(), 3.14159));
+            assert(math::equal(heat_flux_dens_5.mag(), 4.14159));
+            assert(math::equal((heat_flux_dens_5--).mag(), 4.14159));
+            assert(math::equal(heat_flux_dens_5.mag(), 3.14159));
         }
 
         inline void irradiance() noexcept
@@ -1196,6 +2036,20 @@ namespace arc
 
             const si::Irradiance irrad_3{0.5 * irrad_2};
             assert(math::equal(irrad_3.mag(), 1.25));
+
+            si::Irradiance irrad_4{3.14159};
+            assert(math::equal(irrad_4.mag(), 3.14159));
+            assert(math::equal((++irrad_4).mag(), 4.14159));
+            assert(math::equal(irrad_4.mag(), 4.14159));
+            assert(math::equal((--irrad_4).mag(), 3.14159));
+            assert(math::equal(irrad_4.mag(), 3.14159));
+
+            si::Irradiance irrad_5{3.14159};
+            assert(math::equal(irrad_5.mag(), 3.14159));
+            assert(math::equal((irrad_5++).mag(), 3.14159));
+            assert(math::equal(irrad_5.mag(), 4.14159));
+            assert(math::equal((irrad_5--).mag(), 4.14159));
+            assert(math::equal(irrad_5.mag(), 3.14159));
         }
 
         inline void heat_capacity() noexcept
@@ -1211,6 +2065,20 @@ namespace arc
 
             const si::HeatCapacity heat_cap_3{0.5 * heat_cap_2};
             assert(math::equal(heat_cap_3.mag(), 1.25));
+
+            si::HeatCapacity heat_cap_4{3.14159};
+            assert(math::equal(heat_cap_4.mag(), 3.14159));
+            assert(math::equal((++heat_cap_4).mag(), 4.14159));
+            assert(math::equal(heat_cap_4.mag(), 4.14159));
+            assert(math::equal((--heat_cap_4).mag(), 3.14159));
+            assert(math::equal(heat_cap_4.mag(), 3.14159));
+
+            si::HeatCapacity heat_cap_5{3.14159};
+            assert(math::equal(heat_cap_5.mag(), 3.14159));
+            assert(math::equal((heat_cap_5++).mag(), 3.14159));
+            assert(math::equal(heat_cap_5.mag(), 4.14159));
+            assert(math::equal((heat_cap_5--).mag(), 4.14159));
+            assert(math::equal(heat_cap_5.mag(), 3.14159));
         }
 
         inline void entropy() noexcept
@@ -1226,6 +2094,20 @@ namespace arc
 
             const si::Entropy entr_3{0.5 * entr_2};
             assert(math::equal(entr_3.mag(), 1.25));
+
+            si::Entropy entr_4{3.14159};
+            assert(math::equal(entr_4.mag(), 3.14159));
+            assert(math::equal((++entr_4).mag(), 4.14159));
+            assert(math::equal(entr_4.mag(), 4.14159));
+            assert(math::equal((--entr_4).mag(), 3.14159));
+            assert(math::equal(entr_4.mag(), 3.14159));
+
+            si::Entropy entr_5{3.14159};
+            assert(math::equal(entr_5.mag(), 3.14159));
+            assert(math::equal((entr_5++).mag(), 3.14159));
+            assert(math::equal(entr_5.mag(), 4.14159));
+            assert(math::equal((entr_5--).mag(), 4.14159));
+            assert(math::equal(entr_5.mag(), 3.14159));
         }
 
         inline void specific_heat_capacity() noexcept
@@ -1241,6 +2123,20 @@ namespace arc
 
             const si::SpecificHeatCapacity spec_heat_cap_3{0.5 * spec_heat_cap_2};
             assert(math::equal(spec_heat_cap_3.mag(), 1.25));
+
+            si::SpecificHeatCapacity spec_heat_cap_4{3.14159};
+            assert(math::equal(spec_heat_cap_4.mag(), 3.14159));
+            assert(math::equal((++spec_heat_cap_4).mag(), 4.14159));
+            assert(math::equal(spec_heat_cap_4.mag(), 4.14159));
+            assert(math::equal((--spec_heat_cap_4).mag(), 3.14159));
+            assert(math::equal(spec_heat_cap_4.mag(), 3.14159));
+
+            si::SpecificHeatCapacity spec_heat_cap_5{3.14159};
+            assert(math::equal(spec_heat_cap_5.mag(), 3.14159));
+            assert(math::equal((spec_heat_cap_5++).mag(), 3.14159));
+            assert(math::equal(spec_heat_cap_5.mag(), 4.14159));
+            assert(math::equal((spec_heat_cap_5--).mag(), 4.14159));
+            assert(math::equal(spec_heat_cap_5.mag(), 3.14159));
         }
 
         inline void specific_entropy() noexcept
@@ -1256,6 +2152,20 @@ namespace arc
 
             const si::SpecificEntropy spec_entr_3{0.5 * spec_entr_2};
             assert(math::equal(spec_entr_3.mag(), 1.25));
+
+            si::SpecificEntropy spec_entr_4{3.14159};
+            assert(math::equal(spec_entr_4.mag(), 3.14159));
+            assert(math::equal((++spec_entr_4).mag(), 4.14159));
+            assert(math::equal(spec_entr_4.mag(), 4.14159));
+            assert(math::equal((--spec_entr_4).mag(), 3.14159));
+            assert(math::equal(spec_entr_4.mag(), 3.14159));
+
+            si::SpecificEntropy spec_entr_5{3.14159};
+            assert(math::equal(spec_entr_5.mag(), 3.14159));
+            assert(math::equal((spec_entr_5++).mag(), 3.14159));
+            assert(math::equal(spec_entr_5.mag(), 4.14159));
+            assert(math::equal((spec_entr_5--).mag(), 4.14159));
+            assert(math::equal(spec_entr_5.mag(), 3.14159));
         }
 
         inline void thermal_conductivity() noexcept
@@ -1271,6 +2181,20 @@ namespace arc
 
             const si::ThermalConductivity therm_cond_3{0.5 * therm_cond_2};
             assert(math::equal(therm_cond_3.mag(), 1.25));
+
+            si::ThermalConductivity therm_cond_4{3.14159};
+            assert(math::equal(therm_cond_4.mag(), 3.14159));
+            assert(math::equal((++therm_cond_4).mag(), 4.14159));
+            assert(math::equal(therm_cond_4.mag(), 4.14159));
+            assert(math::equal((--therm_cond_4).mag(), 3.14159));
+            assert(math::equal(therm_cond_4.mag(), 3.14159));
+
+            si::ThermalConductivity therm_cond_5{3.14159};
+            assert(math::equal(therm_cond_5.mag(), 3.14159));
+            assert(math::equal((therm_cond_5++).mag(), 3.14159));
+            assert(math::equal(therm_cond_5.mag(), 4.14159));
+            assert(math::equal((therm_cond_5--).mag(), 4.14159));
+            assert(math::equal(therm_cond_5.mag(), 3.14159));
         }
 
         inline void electric_field_strength() noexcept
@@ -1286,6 +2210,20 @@ namespace arc
 
             const si::ElectricFieldStrength elec_field_stren_3{0.5 * elec_field_stren_2};
             assert(math::equal(elec_field_stren_3.mag(), 1.25));
+
+            si::ElectricFieldStrength elec_field_stren_4{3.14159};
+            assert(math::equal(elec_field_stren_4.mag(), 3.14159));
+            assert(math::equal((++elec_field_stren_4).mag(), 4.14159));
+            assert(math::equal(elec_field_stren_4.mag(), 4.14159));
+            assert(math::equal((--elec_field_stren_4).mag(), 3.14159));
+            assert(math::equal(elec_field_stren_4.mag(), 3.14159));
+
+            si::ElectricFieldStrength elec_field_stren_5{3.14159};
+            assert(math::equal(elec_field_stren_5.mag(), 3.14159));
+            assert(math::equal((elec_field_stren_5++).mag(), 3.14159));
+            assert(math::equal(elec_field_stren_5.mag(), 4.14159));
+            assert(math::equal((elec_field_stren_5--).mag(), 4.14159));
+            assert(math::equal(elec_field_stren_5.mag(), 3.14159));
         }
 
         inline void electric_charge_density() noexcept
@@ -1301,6 +2239,20 @@ namespace arc
 
             const si::ElectricChargeDensity elec_charge_dens_3{0.5 * elec_charge_dens_2};
             assert(math::equal(elec_charge_dens_3.mag(), 1.25));
+
+            si::ElectricChargeDensity elec_charge_dens_4{3.14159};
+            assert(math::equal(elec_charge_dens_4.mag(), 3.14159));
+            assert(math::equal((++elec_charge_dens_4).mag(), 4.14159));
+            assert(math::equal(elec_charge_dens_4.mag(), 4.14159));
+            assert(math::equal((--elec_charge_dens_4).mag(), 3.14159));
+            assert(math::equal(elec_charge_dens_4.mag(), 3.14159));
+
+            si::ElectricChargeDensity elec_charge_dens_5{3.14159};
+            assert(math::equal(elec_charge_dens_5.mag(), 3.14159));
+            assert(math::equal((elec_charge_dens_5++).mag(), 3.14159));
+            assert(math::equal(elec_charge_dens_5.mag(), 4.14159));
+            assert(math::equal((elec_charge_dens_5--).mag(), 4.14159));
+            assert(math::equal(elec_charge_dens_5.mag(), 3.14159));
         }
 
         inline void surface_charge_density() noexcept
@@ -1316,6 +2268,20 @@ namespace arc
 
             const si::SurfaceChargeDensity surf_charge_dens_3{0.5 * surf_charge_dens_2};
             assert(math::equal(surf_charge_dens_3.mag(), 1.25));
+
+            si::SurfaceChargeDensity surf_charge_dens_4{3.14159};
+            assert(math::equal(surf_charge_dens_4.mag(), 3.14159));
+            assert(math::equal((++surf_charge_dens_4).mag(), 4.14159));
+            assert(math::equal(surf_charge_dens_4.mag(), 4.14159));
+            assert(math::equal((--surf_charge_dens_4).mag(), 3.14159));
+            assert(math::equal(surf_charge_dens_4.mag(), 3.14159));
+
+            si::SurfaceChargeDensity surf_charge_dens_5{3.14159};
+            assert(math::equal(surf_charge_dens_5.mag(), 3.14159));
+            assert(math::equal((surf_charge_dens_5++).mag(), 3.14159));
+            assert(math::equal(surf_charge_dens_5.mag(), 4.14159));
+            assert(math::equal((surf_charge_dens_5--).mag(), 4.14159));
+            assert(math::equal(surf_charge_dens_5.mag(), 3.14159));
         }
 
         inline void electric_flux_density() noexcept
@@ -1331,6 +2297,20 @@ namespace arc
 
             const si::ElectricFluxDensity elec_flux_dens_3{0.5 * elec_flux_dens_2};
             assert(math::equal(elec_flux_dens_3.mag(), 1.25));
+
+            si::ElectricFluxDensity elec_flux_dens_4{3.14159};
+            assert(math::equal(elec_flux_dens_4.mag(), 3.14159));
+            assert(math::equal((++elec_flux_dens_4).mag(), 4.14159));
+            assert(math::equal(elec_flux_dens_4.mag(), 4.14159));
+            assert(math::equal((--elec_flux_dens_4).mag(), 3.14159));
+            assert(math::equal(elec_flux_dens_4.mag(), 3.14159));
+
+            si::ElectricFluxDensity elec_flux_dens_5{3.14159};
+            assert(math::equal(elec_flux_dens_5.mag(), 3.14159));
+            assert(math::equal((elec_flux_dens_5++).mag(), 3.14159));
+            assert(math::equal(elec_flux_dens_5.mag(), 4.14159));
+            assert(math::equal((elec_flux_dens_5--).mag(), 4.14159));
+            assert(math::equal(elec_flux_dens_5.mag(), 3.14159));
         }
 
         inline void electric_displacement() noexcept
@@ -1346,6 +2326,20 @@ namespace arc
 
             const si::ElectricDisplacement elec_dis_3{0.5 * elec_dis_2};
             assert(math::equal(elec_dis_3.mag(), 1.25));
+
+            si::ElectricDisplacement elec_dis_4{3.14159};
+            assert(math::equal(elec_dis_4.mag(), 3.14159));
+            assert(math::equal((++elec_dis_4).mag(), 4.14159));
+            assert(math::equal(elec_dis_4.mag(), 4.14159));
+            assert(math::equal((--elec_dis_4).mag(), 3.14159));
+            assert(math::equal(elec_dis_4.mag(), 3.14159));
+
+            si::ElectricDisplacement elec_dis_5{3.14159};
+            assert(math::equal(elec_dis_5.mag(), 3.14159));
+            assert(math::equal((elec_dis_5++).mag(), 3.14159));
+            assert(math::equal(elec_dis_5.mag(), 4.14159));
+            assert(math::equal((elec_dis_5--).mag(), 4.14159));
+            assert(math::equal(elec_dis_5.mag(), 3.14159));
         }
 
         inline void permittivity() noexcept
@@ -1361,6 +2355,20 @@ namespace arc
 
             const si::Permittivity perm_3{0.5 * perm_2};
             assert(math::equal(perm_3.mag(), 1.25));
+
+            si::Permittivity perm_4{3.14159};
+            assert(math::equal(perm_4.mag(), 3.14159));
+            assert(math::equal((++perm_4).mag(), 4.14159));
+            assert(math::equal(perm_4.mag(), 4.14159));
+            assert(math::equal((--perm_4).mag(), 3.14159));
+            assert(math::equal(perm_4.mag(), 3.14159));
+
+            si::Permittivity perm_5{3.14159};
+            assert(math::equal(perm_5.mag(), 3.14159));
+            assert(math::equal((perm_5++).mag(), 3.14159));
+            assert(math::equal(perm_5.mag(), 4.14159));
+            assert(math::equal((perm_5--).mag(), 4.14159));
+            assert(math::equal(perm_5.mag(), 3.14159));
         }
 
         inline void permeability() noexcept
@@ -1376,6 +2384,20 @@ namespace arc
 
             const si::Permeability perm_3{0.5 * perm_2};
             assert(math::equal(perm_3.mag(), 1.25));
+
+            si::Permeability perm_4{3.14159};
+            assert(math::equal(perm_4.mag(), 3.14159));
+            assert(math::equal((++perm_4).mag(), 4.14159));
+            assert(math::equal(perm_4.mag(), 4.14159));
+            assert(math::equal((--perm_4).mag(), 3.14159));
+            assert(math::equal(perm_4.mag(), 3.14159));
+
+            si::Permeability perm_5{3.14159};
+            assert(math::equal(perm_5.mag(), 3.14159));
+            assert(math::equal((perm_5++).mag(), 3.14159));
+            assert(math::equal(perm_5.mag(), 4.14159));
+            assert(math::equal((perm_5--).mag(), 4.14159));
+            assert(math::equal(perm_5.mag(), 3.14159));
         }
 
         inline void molar_energy() noexcept
@@ -1391,6 +2413,20 @@ namespace arc
 
             const si::MolarEnergy molar_energy_3{0.5 * molar_energy_2};
             assert(math::equal(molar_energy_3.mag(), 1.25));
+
+            si::MolarEnergy molar_energy_4{3.14159};
+            assert(math::equal(molar_energy_4.mag(), 3.14159));
+            assert(math::equal((++molar_energy_4).mag(), 4.14159));
+            assert(math::equal(molar_energy_4.mag(), 4.14159));
+            assert(math::equal((--molar_energy_4).mag(), 3.14159));
+            assert(math::equal(molar_energy_4.mag(), 3.14159));
+
+            si::MolarEnergy molar_energy_5{3.14159};
+            assert(math::equal(molar_energy_5.mag(), 3.14159));
+            assert(math::equal((molar_energy_5++).mag(), 3.14159));
+            assert(math::equal(molar_energy_5.mag(), 4.14159));
+            assert(math::equal((molar_energy_5--).mag(), 4.14159));
+            assert(math::equal(molar_energy_5.mag(), 3.14159));
         }
 
         inline void molar_entropy() noexcept
@@ -1406,6 +2442,20 @@ namespace arc
 
             const si::MolarEntropy molar_entr_3{0.5 * molar_entr_2};
             assert(math::equal(molar_entr_3.mag(), 1.25));
+
+            si::MolarEntropy molar_entr_4{3.14159};
+            assert(math::equal(molar_entr_4.mag(), 3.14159));
+            assert(math::equal((++molar_entr_4).mag(), 4.14159));
+            assert(math::equal(molar_entr_4.mag(), 4.14159));
+            assert(math::equal((--molar_entr_4).mag(), 3.14159));
+            assert(math::equal(molar_entr_4.mag(), 3.14159));
+
+            si::MolarEntropy molar_entr_5{3.14159};
+            assert(math::equal(molar_entr_5.mag(), 3.14159));
+            assert(math::equal((molar_entr_5++).mag(), 3.14159));
+            assert(math::equal(molar_entr_5.mag(), 4.14159));
+            assert(math::equal((molar_entr_5--).mag(), 4.14159));
+            assert(math::equal(molar_entr_5.mag(), 3.14159));
         }
 
         inline void molar_heat_capacity() noexcept
@@ -1421,6 +2471,20 @@ namespace arc
 
             const si::MolarHeatCapacity molar_heat_cap_3{0.5 * molar_heat_cap_2};
             assert(math::equal(molar_heat_cap_3.mag(), 1.25));
+
+            si::MolarHeatCapacity molar_heat_cap_4{3.14159};
+            assert(math::equal(molar_heat_cap_4.mag(), 3.14159));
+            assert(math::equal((++molar_heat_cap_4).mag(), 4.14159));
+            assert(math::equal(molar_heat_cap_4.mag(), 4.14159));
+            assert(math::equal((--molar_heat_cap_4).mag(), 3.14159));
+            assert(math::equal(molar_heat_cap_4.mag(), 3.14159));
+
+            si::MolarHeatCapacity molar_heat_cap_5{3.14159};
+            assert(math::equal(molar_heat_cap_5.mag(), 3.14159));
+            assert(math::equal((molar_heat_cap_5++).mag(), 3.14159));
+            assert(math::equal(molar_heat_cap_5.mag(), 4.14159));
+            assert(math::equal((molar_heat_cap_5--).mag(), 4.14159));
+            assert(math::equal(molar_heat_cap_5.mag(), 3.14159));
         }
 
         inline void exposure() noexcept
@@ -1436,6 +2500,20 @@ namespace arc
 
             const si::Exposure expo_3{0.5 * expo_2};
             assert(math::equal(expo_3.mag(), 1.25));
+
+            si::Exposure expo_4{3.14159};
+            assert(math::equal(expo_4.mag(), 3.14159));
+            assert(math::equal((++expo_4).mag(), 4.14159));
+            assert(math::equal(expo_4.mag(), 4.14159));
+            assert(math::equal((--expo_4).mag(), 3.14159));
+            assert(math::equal(expo_4.mag(), 3.14159));
+
+            si::Exposure expo_5{3.14159};
+            assert(math::equal(expo_5.mag(), 3.14159));
+            assert(math::equal((expo_5++).mag(), 3.14159));
+            assert(math::equal(expo_5.mag(), 4.14159));
+            assert(math::equal((expo_5--).mag(), 4.14159));
+            assert(math::equal(expo_5.mag(), 3.14159));
         }
 
         inline void absorbed_dose_rate() noexcept
@@ -1451,6 +2529,20 @@ namespace arc
 
             const si::AbsorbedDoseRate abs_dose_rate_3{0.5 * abs_dose_rate_2};
             assert(math::equal(abs_dose_rate_3.mag(), 1.25));
+
+            si::AbsorbedDoseRate abs_dose_rate_4{3.14159};
+            assert(math::equal(abs_dose_rate_4.mag(), 3.14159));
+            assert(math::equal((++abs_dose_rate_4).mag(), 4.14159));
+            assert(math::equal(abs_dose_rate_4.mag(), 4.14159));
+            assert(math::equal((--abs_dose_rate_4).mag(), 3.14159));
+            assert(math::equal(abs_dose_rate_4.mag(), 3.14159));
+
+            si::AbsorbedDoseRate abs_dose_rate_5{3.14159};
+            assert(math::equal(abs_dose_rate_5.mag(), 3.14159));
+            assert(math::equal((abs_dose_rate_5++).mag(), 3.14159));
+            assert(math::equal(abs_dose_rate_5.mag(), 4.14159));
+            assert(math::equal((abs_dose_rate_5--).mag(), 4.14159));
+            assert(math::equal(abs_dose_rate_5.mag(), 3.14159));
         }
 
         inline void radiant_intensity() noexcept
@@ -1466,6 +2558,20 @@ namespace arc
 
             const si::RadiantIntensity rad_intens_3{0.5 * rad_intens_2};
             assert(math::equal(rad_intens_3.mag(), 1.25));
+
+            si::RadiantIntensity rad_intens_4{3.14159};
+            assert(math::equal(rad_intens_4.mag(), 3.14159));
+            assert(math::equal((++rad_intens_4).mag(), 4.14159));
+            assert(math::equal(rad_intens_4.mag(), 4.14159));
+            assert(math::equal((--rad_intens_4).mag(), 3.14159));
+            assert(math::equal(rad_intens_4.mag(), 3.14159));
+
+            si::RadiantIntensity rad_intens_5{3.14159};
+            assert(math::equal(rad_intens_5.mag(), 3.14159));
+            assert(math::equal((rad_intens_5++).mag(), 3.14159));
+            assert(math::equal(rad_intens_5.mag(), 4.14159));
+            assert(math::equal((rad_intens_5--).mag(), 4.14159));
+            assert(math::equal(rad_intens_5.mag(), 3.14159));
         }
 
         inline void radiance() noexcept
@@ -1481,6 +2587,20 @@ namespace arc
 
             const si::Radiance rad_3{0.5 * rad_2};
             assert(math::equal(rad_3.mag(), 1.25));
+
+            si::Radiance rad_4{3.14159};
+            assert(math::equal(rad_4.mag(), 3.14159));
+            assert(math::equal((++rad_4).mag(), 4.14159));
+            assert(math::equal(rad_4.mag(), 4.14159));
+            assert(math::equal((--rad_4).mag(), 3.14159));
+            assert(math::equal(rad_4.mag(), 3.14159));
+
+            si::Radiance rad_5{3.14159};
+            assert(math::equal(rad_5.mag(), 3.14159));
+            assert(math::equal((rad_5++).mag(), 3.14159));
+            assert(math::equal(rad_5.mag(), 4.14159));
+            assert(math::equal((rad_5--).mag(), 4.14159));
+            assert(math::equal(rad_5.mag(), 3.14159));
         }
 
         inline void cat_act_concentration() noexcept
@@ -1496,6 +2616,20 @@ namespace arc
 
             const si::CatalyticActivityConcentration cat_act_conc_3{0.5 * cat_act_conc_2};
             assert(math::equal(cat_act_conc_3.mag(), 1.25));
+
+            si::CatalyticActivityConcentration cat_act_conc_4{3.14159};
+            assert(math::equal(cat_act_conc_4.mag(), 3.14159));
+            assert(math::equal((++cat_act_conc_4).mag(), 4.14159));
+            assert(math::equal(cat_act_conc_4.mag(), 4.14159));
+            assert(math::equal((--cat_act_conc_4).mag(), 3.14159));
+            assert(math::equal(cat_act_conc_4.mag(), 3.14159));
+
+            si::CatalyticActivityConcentration cat_act_conc_5{3.14159};
+            assert(math::equal(cat_act_conc_5.mag(), 3.14159));
+            assert(math::equal((cat_act_conc_5++).mag(), 3.14159));
+            assert(math::equal(cat_act_conc_5.mag(), 4.14159));
+            assert(math::equal((cat_act_conc_5--).mag(), 4.14159));
+            assert(math::equal(cat_act_conc_5.mag(), 3.14159));
         }
 
         inline void action() noexcept
@@ -1511,6 +2645,20 @@ namespace arc
 
             const si::Action act_3{0.5 * act_2};
             assert(math::equal(act_3.mag(), 1.25));
+
+            si::Action act_4{3.14159};
+            assert(math::equal(act_4.mag(), 3.14159));
+            assert(math::equal((++act_4).mag(), 4.14159));
+            assert(math::equal(act_4.mag(), 4.14159));
+            assert(math::equal((--act_4).mag(), 3.14159));
+            assert(math::equal(act_4.mag(), 3.14159));
+
+            si::Action act_5{3.14159};
+            assert(math::equal(act_5.mag(), 3.14159));
+            assert(math::equal((act_5++).mag(), 3.14159));
+            assert(math::equal(act_5.mag(), 4.14159));
+            assert(math::equal((act_5--).mag(), 4.14159));
+            assert(math::equal(act_5.mag(), 3.14159));
         }
 
 
