@@ -1,0 +1,45 @@
+{
+    "name": "arc-extension",
+    "displayName": "Arc Extension",
+    "description": "Arc extended syntax highlighting for c++ lang",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "cpp",
+                "aliases": [
+                    "C++",
+                    "cpp"
+                ],
+                "extensions": [
+                    ".cpp",
+                    ".hpp",
+                    ".inl"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "injectTo": [
+                    "source.cpp"
+                ],
+                "scopeName": "arc.injection",
+                "path": "./arc.tmLanguage.json"
+            }
+        ],
+        "themes": [
+            {
+                "label": "Arc Monokai extension theme",
+                "uiTheme": "vs-dark",
+                "path": "./arc.tmTheme"
+            }
+        ]
+    }
+}

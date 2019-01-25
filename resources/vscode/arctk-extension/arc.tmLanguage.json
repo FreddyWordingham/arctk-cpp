@@ -1,0 +1,448 @@
+{
+    "injectionSelector": "L:source.cpp",
+    "name": "C++",
+    "patterns": [
+        {
+            "include": "#si"
+        },
+        {
+            "include": "#math"
+        },
+        {
+            "include": "#generic"
+        },
+        {
+            "include": "#naming"
+        },
+        {
+            "include": "#sections"
+        }
+    ],
+    "repository": {
+        "si": {
+            "patterns": [
+                {
+                    "name": "arc.si.scalar",
+                    "match": "Scalar"
+                },
+                {
+                    "name": "arc.si.mass",
+                    "match": "Mass"
+                },
+                {
+                    "name": "arc.si.length",
+                    "match": "Length"
+                },
+                {
+                    "name": "arc.si.time",
+                    "match": "Time"
+                },
+                {
+                    "name": "arc.si.temperature",
+                    "match": "Temperature"
+                },
+                {
+                    "name": "arc.si.current",
+                    "match": "Current"
+                },
+                {
+                    "name": "arc.si.intensity",
+                    "match": "Intensity"
+                },
+                {
+                    "name": "arc.si.amount",
+                    "match": "Amount"
+                },
+                {
+                    "name": "arc.si.angle",
+                    "match": "Angle"
+                },
+                {
+                    "name": "arc.si.solid-angle",
+                    "match": "SolidAngle"
+                },
+                {
+                    "name": "arc.si.area",
+                    "match": "Area"
+                },
+                {
+                    "name": "arc.si.volume",
+                    "match": "Volume"
+                },
+                {
+                    "name": "arc.si.velocity",
+                    "match": "Velocity"
+                },
+                {
+                    "name": "arc.si.acceleration",
+                    "match": "Acceleration"
+                },
+                {
+                    "name": "arc.si.jerk",
+                    "match": "Jerk"
+                },
+                {
+                    "name": "arc.si.snap",
+                    "match": "Snap"
+                },
+                {
+                    "name": "arc.si.crackle",
+                    "match": "Crackle"
+                },
+                {
+                    "name": "arc.si.pop",
+                    "match": "Pop"
+                },
+                {
+                    "name": "arc.si.wavenumber",
+                    "match": "Wavenumber"
+                },
+                {
+                    "name": "arc.si.density",
+                    "match": "Density"
+                },
+                {
+                    "name": "arc.si.surface-density",
+                    "match": "SurfaceDensity"
+                },
+                {
+                    "name": "arc.si.specific-volume",
+                    "match": "SpecificVolume"
+                },
+                {
+                    "name": "arc.si.current-density",
+                    "match": "CurrentDensity"
+                },
+                {
+                    "name": "arc.si.magnetic-field-strength",
+                    "match": "MagneticFieldStrength"
+                },
+                {
+                    "name": "arc.si.concentration",
+                    "match": "Concentration"
+                },
+                {
+                    "name": "arc.si.luminance",
+                    "match": "Luminance"
+                },
+                {
+                    "name": "arc.si.frequency",
+                    "match": "Frequency"
+                },
+                {
+                    "name": "arc.si.force",
+                    "match": "Force"
+                },
+                {
+                    "name": "arc.si.pressure",
+                    "match": "Pressure"
+                },
+                {
+                    "name": "arc.si.stress",
+                    "match": "Stress"
+                },
+                {
+                    "name": "arc.si.energy-density",
+                    "match": "EnergyDensity"
+                },
+                {
+                    "name": "arc.si.energy",
+                    "match": "Energy"
+                },
+                {
+                    "name": "arc.si.work",
+                    "match": "Work"
+                },
+                {
+                    "name": "arc.si.heat",
+                    "match": "Heat"
+                },
+                {
+                    "name": "arc.si.power",
+                    "match": "Power"
+                },
+                {
+                    "name": "arc.si.radiant-flux",
+                    "match": "RadiantFlux"
+                },
+                {
+                    "name": "arc.si.charge",
+                    "match": "Charge"
+                },
+                {
+                    "name": "arc.si.potential",
+                    "match": "Potential"
+                },
+                {
+                    "name": "arc.si.capacitance",
+                    "match": "Capacitance"
+                },
+                {
+                    "name": "arc.si.resistance",
+                    "match": "Resistance"
+                },
+                {
+                    "name": "arc.si.conductance",
+                    "match": "Conductance"
+                },
+                {
+                    "name": "arc.si.magnetic-flux",
+                    "match": "MagneticFlux"
+                },
+                {
+                    "name": "arc.si.magnetic-flux-density",
+                    "match": "MagneticFluxDensity"
+                },
+                {
+                    "name": "arc.si.inductance",
+                    "match": "Inductance"
+                },
+                {
+                    "name": "arc.si.luminous-flux",
+                    "match": "LuminousFlux"
+                },
+                {
+                    "name": "arc.si.activity",
+                    "match": "Activity"
+                },
+                {
+                    "name": "arc.si.absorbed-dose",
+                    "match": "AbsorbedDose"
+                },
+                {
+                    "name": "arc.si.kerma",
+                    "match": "Kerma"
+                },
+                {
+                    "name": "arc.si.specific-energy",
+                    "match": "SpecificEnergy"
+                },
+                {
+                    "name": "arc.si.dose-equivalent",
+                    "match": "DoseEquivalent"
+                },
+                {
+                    "name": "arc.si.catalytic-activity",
+                    "match": "CatalyticActivity"
+                },
+                {
+                    "name": "arc.si.dynamic-viscosity",
+                    "match": "DynamicViscosity"
+                },
+                {
+                    "name": "arc.si.kinematic-viscosity",
+                    "match": "KinematicViscosity"
+                },
+                {
+                    "name": "arc.si.illuminance",
+                    "match": "Illuminance"
+                },
+                {
+                    "name": "arc.si.moment",
+                    "match": "Moment"
+                },
+                {
+                    "name": "arc.si.surface-tension",
+                    "match": "SurfaceTension"
+                },
+                {
+                    "name": "arc.si.angular-velocity",
+                    "match": "AngularVelocity"
+                },
+                {
+                    "name": "arc.si.angular-acceleration",
+                    "match": "AngularAcceleration"
+                },
+                {
+                    "name": "arc.si.angular-jerk",
+                    "match": "AngularJerk"
+                },
+                {
+                    "name": "arc.si.angular-snap",
+                    "match": "AngularSnap"
+                },
+                {
+                    "name": "arc.si.angular-crackle",
+                    "match": "AngularCrackle"
+                },
+                {
+                    "name": "arc.si.angular-pop",
+                    "match": "AngularPop"
+                },
+                {
+                    "name": "arc.si.heat-flux-density",
+                    "match": "HeatFluxDensity"
+                },
+                {
+                    "name": "arc.si.irradiance",
+                    "match": "Irradiance"
+                },
+                {
+                    "name": "arc.si.heat-capacity",
+                    "match": "HeatCapacity"
+                },
+                {
+                    "name": "arc.si.entropy",
+                    "match": "Entropy"
+                },
+                {
+                    "name": "arc.si.specific-heat-capacity",
+                    "match": "SpecificHeatCapacity"
+                },
+                {
+                    "name": "arc.si.specific-entropy",
+                    "match": "SpecificEntropy"
+                },
+                {
+                    "name": "arc.si.thermal-conductivity",
+                    "match": "ThermalConductivity"
+                },
+                {
+                    "name": "arc.si.electric-field-strength",
+                    "match": "ElectricFieldStrength"
+                },
+                {
+                    "name": "arc.si.electric-charge-density",
+                    "match": "ElectricChargeDensity"
+                },
+                {
+                    "name": "arc.si.surface-charge-density",
+                    "match": "SurfaceChargeDensity"
+                },
+                {
+                    "name": "arc.si.electric-flux-density",
+                    "match": "ElectricFluxDensity"
+                },
+                {
+                    "name": "arc.si.electric-displacement",
+                    "match": "ElectricDisplacement"
+                },
+                {
+                    "name": "arc.si.permittivity",
+                    "match": "Permittivity"
+                },
+                {
+                    "name": "arc.si.permeability",
+                    "match": "Permeability"
+                },
+                {
+                    "name": "arc.si.molar-energy",
+                    "match": "MolarEnergy"
+                },
+                {
+                    "name": "arc.si.molar-entropy",
+                    "match": "MolarEntropy"
+                },
+                {
+                    "name": "arc.si.molar-heat-capacity",
+                    "match": "MolarHeatCapacity"
+                },
+                {
+                    "name": "arc.si.exposure",
+                    "match": "Exposure"
+                },
+                {
+                    "name": "arc.si.absorbed-dose-rate",
+                    "match": "AbsorbedDoseRate"
+                },
+                {
+                    "name": "arc.si.radiant-intensity",
+                    "match": "RadiantIntensity"
+                },
+                {
+                    "name": "arc.si.radiance",
+                    "match": "Radiance"
+                },
+                {
+                    "name": "arc.si.catalytic-activity-concentration",
+                    "match": "CatalyticActivityConcentration"
+                },
+                {
+                    "name": "arc.si.action",
+                    "match": "Action"
+                }
+            ]
+        },
+        "math": {
+            "patterns": [
+                {
+                    "name": "arc.math.vec2",
+                    "match": "Vec2"
+                },
+                {
+                    "name": "arc.math.vec3",
+                    "match": "Vec3"
+                },
+                {
+                    "name": "arc.math.vec4",
+                    "match": "Vec4"
+                },
+                {
+                    "name": "arc.math.vecN",
+                    "match": "VecN"
+                },
+                {
+                    "name": "arc.math.mat2",
+                    "match": "Mat2"
+                },
+                {
+                    "name": "arc.math.mat3",
+                    "match": "Mat3"
+                },
+                {
+                    "name": "arc.math.mat4",
+                    "match": "Mat4"
+                },
+                {
+                    "name": "arc.math.matN",
+                    "match": "MatN"
+                }
+            ]
+        },
+        "generic": {
+            "patterns": [
+                {
+                    "name": "arc.generic.typename",
+                    "match": "(?<![a-zA-Z0-9_.-])[A-Z][_LR]?(?![a-zA-Z0-9_.-])"
+                }
+            ]
+        },
+        "naming": {
+            "patterns": [
+                {
+                    "name": "arc.naming.snake-case.leading-underscore",
+                    "match": "\\b(_[a-z][a-z0-9_]*)\\b(?<!_)"
+                },
+                {
+                    "name": "arc.naming.snake-case.trailing-underscore",
+                    "match": "(?!_)\\b([a-z0-9_]*_)\\b"
+                },
+                {
+                    "name": "arc.naming.constant",
+                    "match": "[A-Z_][A-Z0-9_]+"
+                }
+            ]
+        },
+        "sections": {
+            "patterns": [
+                {
+                    "name": "arc.section.block",
+                    "match": "/\\*(.|[\r\n])*?\\*/(?m)"
+                },
+                {
+                    "name": "arc.section.title",
+                    "match": "\/\/  == .+ =="
+                },
+                {
+                    "name": "arc.section.subtitle",
+                    "match": "\/\/  -- .+ --"
+                },
+                {
+                    "name": "arc.section.guard",
+                    "match": "\/\/ [A-Z_]+"
+                }
+            ]
+        }
+    },
+    "scopeName": "arc.injection"
+}

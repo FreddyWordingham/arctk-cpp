@@ -3,13 +3,6 @@
 
 
 
-//  == IMPORTS ==
-//  -- Arc --
-#include <arctk/si/dimension.hpp>
-#include <arctk/type/arithmetic.hpp>
-
-
-
 //  == NAMESPACE ==
 namespace arc
 {
@@ -20,7 +13,7 @@ namespace arc
 
         //  == CLASSES ==
         //  -- Unit --
-        template <typename T>
+        template <int M, int L, int T, int K, int C, int I, int N, int A>
         class Unit
         {
             //  == FIELDS ==
@@ -56,7 +49,7 @@ namespace arc
         //  == SPECIALISATIONS ==
         //  -- Scalar --
         template <>
-        class Unit<Dimension<0, 0, 0, 0, 0, 0, 0, 0>>
+        class Unit<0, 0, 0, 0, 0, 0, 0, 0>
         {
             //  == FIELDS ==
           private:
@@ -97,95 +90,95 @@ namespace arc
 
         //  == ALIASES ==
         //  -- Dimensionless --
-        using Scalar = Unit<Dimension<0, 0, 0, 0, 0, 0, 0, 0>>;
+        using Scalar = Unit<0, 0, 0, 0, 0, 0, 0, 0>;
 
         //  -- Base --
-        using Mass        = Unit<Dimension<1, 0, 0, 0, 0, 0, 0, 0>>;
-        using Length      = Unit<Dimension<0, 1, 0, 0, 0, 0, 0, 0>>;
-        using Time        = Unit<Dimension<0, 0, 1, 0, 0, 0, 0, 0>>;
-        using Temperature = Unit<Dimension<0, 0, 0, 1, 0, 0, 0, 0>>;
-        using Current     = Unit<Dimension<0, 0, 0, 0, 1, 0, 0, 0>>;
-        using Intensity   = Unit<Dimension<0, 0, 0, 0, 0, 1, 0, 0>>;
-        using Amount      = Unit<Dimension<0, 0, 0, 0, 0, 0, 1, 0>>;
-        using Angle       = Unit<Dimension<0, 0, 0, 0, 0, 0, 0, 1>>;
+        using Mass        = Unit<1, 0, 0, 0, 0, 0, 0, 0>;
+        using Length      = Unit<0, 1, 0, 0, 0, 0, 0, 0>;
+        using Time        = Unit<0, 0, 1, 0, 0, 0, 0, 0>;
+        using Temperature = Unit<0, 0, 0, 1, 0, 0, 0, 0>;
+        using Current     = Unit<0, 0, 0, 0, 1, 0, 0, 0>;
+        using Intensity   = Unit<0, 0, 0, 0, 0, 1, 0, 0>;
+        using Amount      = Unit<0, 0, 0, 0, 0, 0, 1, 0>;
+        using Angle       = Unit<0, 0, 0, 0, 0, 0, 0, 1>;
 
         //  -- Derived --
-        using SolidAngle                     = Unit<Dimension<0, 0, 0, 0, 0, 0, 0, 2>>;
-        using Area                           = Unit<Dimension<0, 2, 0, 0, 0, 0, 0, 0>>;
-        using Volume                         = Unit<Dimension<0, 3, 0, 0, 0, 0, 0, 0>>;
-        using Velocity                       = Unit<Dimension<0, 1, -1, 0, 0, 0, 0, 0>>;
-        using Acceleration                   = Unit<Dimension<0, 1, -2, 0, 0, 0, 0, 0>>;
-        using Jerk                           = Unit<Dimension<0, 1, -3, 0, 0, 0, 0, 0>>;
-        using Snap                           = Unit<Dimension<0, 1, -4, 0, 0, 0, 0, 0>>;
-        using Crackle                        = Unit<Dimension<0, 1, -5, 0, 0, 0, 0, 0>>;
-        using Pop                            = Unit<Dimension<0, 1, -6, 0, 0, 0, 0, 0>>;
-        using Wavenumber                     = Unit<Dimension<0, -1, 0, 0, 0, 0, 0, 0>>;
-        using Density                        = Unit<Dimension<1, -3, 0, 0, 0, 0, 0, 0>>;
-        using SurfaceDensity                 = Unit<Dimension<1, -2, 0, 0, 0, 0, 0, 0>>;
-        using SpecificVolume                 = Unit<Dimension<-1, 3, 0, 0, 0, 0, 0, 0>>;
-        using CurrentDensity                 = Unit<Dimension<0, -2, 0, 0, 1, 0, 0, 0>>;
-        using MagneticFieldStrength          = Unit<Dimension<0, -1, 0, 0, 1, 0, 0, 0>>;
-        using Concentration                  = Unit<Dimension<0, -3, 0, 0, 0, 0, 1, 0>>;
-        using Luminance                      = Unit<Dimension<0, -2, 0, 0, 0, 1, 0, 0>>;
-        using Illuminance                    = Unit<Dimension<0, -2, 0, 0, 0, 1, 0, 0>>;
-        using Frequency                      = Unit<Dimension<0, 0, -1, 0, 0, 0, 0, 0>>;
-        using Force                          = Unit<Dimension<1, 1, -2, 0, 0, 0, 0, 0>>;
-        using Pressure                       = Unit<Dimension<1, -1, -2, 0, 0, 0, 0, 0>>;
-        using Stress                         = Unit<Dimension<1, -1, -2, 0, 0, 0, 0, 0>>;
-        using EnergyDensity                  = Unit<Dimension<1, -1, -2, 0, 0, 0, 0, 0>>;
-        using Energy                         = Unit<Dimension<1, 2, -2, 0, 0, 0, 0, 0>>;
-        using Work                           = Unit<Dimension<1, 2, -2, 0, 0, 0, 0, 0>>;
-        using Heat                           = Unit<Dimension<1, 2, -2, 0, 0, 0, 0, 0>>;
-        using Power                          = Unit<Dimension<1, 2, -3, 0, 0, 0, 0, 0>>;
-        using RadiantFlux                    = Unit<Dimension<1, 2, -3, 0, 0, 0, 0, 0>>;
-        using Charge                         = Unit<Dimension<0, 0, 1, 0, 1, 0, 0, 0>>;
-        using Potential                      = Unit<Dimension<1, 2, -3, 0, -1, 0, 0, 0>>;
-        using Capacitance                    = Unit<Dimension<-1, -2, 4, 0, -1, 0, 0, 0>>;
-        using Resistance                     = Unit<Dimension<1, 2, -3, 0, -2, 0, 0, 0>>;
-        using Conductance                    = Unit<Dimension<-1, -2, 3, 0, 2, 0, 0, 0>>;
-        using MagneticFlux                   = Unit<Dimension<1, 2, -2, 0, -1, 0, 0, 0>>;
-        using MagneticFluxDensity            = Unit<Dimension<1, 0, -2, 0, -1, 0, 0, 0>>;
-        using Inductance                     = Unit<Dimension<1, 2, -2, 0, -2, 0, 0, 0>>;
-        using LuminousFlux                   = Unit<Dimension<0, 0, 0, 0, 0, 1, 0, 2>>;
-        using Activity                       = Unit<Dimension<0, 0, -1, 0, 0, 0, 0, 0>>;
-        using AbsorbedDose                   = Unit<Dimension<0, 2, -2, 0, 0, 0, 0, 0>>;
-        using Kerma                          = Unit<Dimension<0, 2, -2, 0, 0, 0, 0, 0>>;
-        using SpecificEnergy                 = Unit<Dimension<0, 2, -2, 0, 0, 0, 0, 0>>;
-        using DoseEquivalent                 = Unit<Dimension<0, 2, -2, 0, 0, 0, 0, 0>>;
-        using CatalyticActivity              = Unit<Dimension<0, 0, -1, 0, 0, 0, 1, 0>>;
-        using DynamicViscosity               = Unit<Dimension<1, -1, -1, 0, 0, 0, 0, 0>>;
-        using KinematicViscosity             = Unit<Dimension<0, 2, -1, 0, 0, 0, 0, 0>>;
-        using Moment                         = Unit<Dimension<1, 2, -2, 0, 0, 0, 0, 0>>;
-        using SurfaceTension                 = Unit<Dimension<1, 0, -2, 0, 0, 0, 0, 0>>;
-        using AngularVelocity                = Unit<Dimension<0, 0, -1, 0, 0, 0, 0, 1>>;
-        using AngularAcceleration            = Unit<Dimension<0, 0, -2, 0, 0, 0, 0, 1>>;
-        using AngularJerk                    = Unit<Dimension<0, 0, -3, 0, 0, 0, 0, 1>>;
-        using AngularSnap                    = Unit<Dimension<0, 0, -4, 0, 0, 0, 0, 1>>;
-        using AngularCrackle                 = Unit<Dimension<0, 0, -5, 0, 0, 0, 0, 1>>;
-        using AngularPop                     = Unit<Dimension<0, 0, -6, 0, 0, 0, 0, 1>>;
-        using HeatFluxDensity                = Unit<Dimension<1, 0, -3, 0, 0, 0, 0, 0>>;
-        using Irradiance                     = Unit<Dimension<1, 0, -3, 0, 0, 0, 0, 0>>;
-        using HeatCapacity                   = Unit<Dimension<1, 2, -2, -1, 0, 0, 0, 0>>;
-        using Entropy                        = Unit<Dimension<1, 2, -2, -1, 0, 0, 0, 0>>;
-        using SpecificHeatCapacity           = Unit<Dimension<0, 2, -2, -1, 0, 0, 0, 0>>;
-        using SpecificEntropy                = Unit<Dimension<0, 2, -2, -1, 0, 0, 0, 0>>;
-        using ThermalConductivity            = Unit<Dimension<1, 1, -3, -1, 0, 0, 0, 0>>;
-        using ElectricFieldStrength          = Unit<Dimension<1, 1, -3, 0, 0, -1, 0, 0>>;
-        using ElectricChargeDensity          = Unit<Dimension<0, -3, 1, 0, 0, 1, 0, 0>>;
-        using SurfaceChargeDensity           = Unit<Dimension<0, -2, 1, 0, 0, 1, 0, 0>>;
-        using ElectricFluxDensity            = Unit<Dimension<0, -2, 1, 0, 0, 1, 0, 0>>;
-        using ElectricDisplacement           = Unit<Dimension<0, -2, 1, 0, 0, 1, 0, 0>>;
-        using Permittivity                   = Unit<Dimension<-1, -3, 4, 0, 0, 2, 0, 0>>;
-        using Permeability                   = Unit<Dimension<1, 1, -2, 0, 0, -2, 0, 0>>;
-        using MolarEnergy                    = Unit<Dimension<1, 2, -2, 0, 0, 0, -1, 0>>;
-        using MolarEntropy                   = Unit<Dimension<1, 2, -2, -1, 0, 0, -1, 0>>;
-        using MolarHeatCapacity              = Unit<Dimension<1, 2, -2, -1, 0, 0, -1, 0>>;
-        using Exposure                       = Unit<Dimension<-1, 0, 1, 0, 0, 1, 0, 0>>;
-        using AbsorbedDoseRate               = Unit<Dimension<0, 2, -3, 0, 0, 0, 0, 0>>;
-        using RadiantIntensity               = Unit<Dimension<1, 2, -3, 0, 0, 0, 0, 2>>;
-        using Radiance                       = Unit<Dimension<1, 0, -3, 0, 0, 0, 0, 2>>;
-        using CatalyticActivityConcentration = Unit<Dimension<0, -3, -1, 0, 0, 0, 1, 0>>;
-        using Action                         = Unit<Dimension<1, 2, -1, 0, 0, 0, 0, 0>>;
+        using SolidAngle                     = Unit<0, 0, 0, 0, 0, 0, 0, 2>;
+        using Area                           = Unit<0, 2, 0, 0, 0, 0, 0, 0>;
+        using Volume                         = Unit<0, 3, 0, 0, 0, 0, 0, 0>;
+        using Velocity                       = Unit<0, 1, -1, 0, 0, 0, 0, 0>;
+        using Acceleration                   = Unit<0, 1, -2, 0, 0, 0, 0, 0>;
+        using Jerk                           = Unit<0, 1, -3, 0, 0, 0, 0, 0>;
+        using Snap                           = Unit<0, 1, -4, 0, 0, 0, 0, 0>;
+        using Crackle                        = Unit<0, 1, -5, 0, 0, 0, 0, 0>;
+        using Pop                            = Unit<0, 1, -6, 0, 0, 0, 0, 0>;
+        using Wavenumber                     = Unit<0, -1, 0, 0, 0, 0, 0, 0>;
+        using Density                        = Unit<1, -3, 0, 0, 0, 0, 0, 0>;
+        using SurfaceDensity                 = Unit<1, -2, 0, 0, 0, 0, 0, 0>;
+        using SpecificVolume                 = Unit<-1, 3, 0, 0, 0, 0, 0, 0>;
+        using CurrentDensity                 = Unit<0, -2, 0, 0, 1, 0, 0, 0>;
+        using MagneticFieldStrength          = Unit<0, -1, 0, 0, 1, 0, 0, 0>;
+        using Concentration                  = Unit<0, -3, 0, 0, 0, 0, 1, 0>;
+        using Luminance                      = Unit<0, -2, 0, 0, 0, 1, 0, 0>;
+        using Illuminance                    = Unit<0, -2, 0, 0, 0, 1, 0, 0>;
+        using Frequency                      = Unit<0, 0, -1, 0, 0, 0, 0, 0>;
+        using Force                          = Unit<1, 1, -2, 0, 0, 0, 0, 0>;
+        using Pressure                       = Unit<1, -1, -2, 0, 0, 0, 0, 0>;
+        using Stress                         = Unit<1, -1, -2, 0, 0, 0, 0, 0>;
+        using EnergyDensity                  = Unit<1, -1, -2, 0, 0, 0, 0, 0>;
+        using Energy                         = Unit<1, 2, -2, 0, 0, 0, 0, 0>;
+        using Work                           = Unit<1, 2, -2, 0, 0, 0, 0, 0>;
+        using Heat                           = Unit<1, 2, -2, 0, 0, 0, 0, 0>;
+        using Power                          = Unit<1, 2, -3, 0, 0, 0, 0, 0>;
+        using RadiantFlux                    = Unit<1, 2, -3, 0, 0, 0, 0, 0>;
+        using Charge                         = Unit<0, 0, 1, 0, 1, 0, 0, 0>;
+        using Potential                      = Unit<1, 2, -3, 0, -1, 0, 0, 0>;
+        using Capacitance                    = Unit<-1, -2, 4, 0, -1, 0, 0, 0>;
+        using Resistance                     = Unit<1, 2, -3, 0, -2, 0, 0, 0>;
+        using Conductance                    = Unit<-1, -2, 3, 0, 2, 0, 0, 0>;
+        using MagneticFlux                   = Unit<1, 2, -2, 0, -1, 0, 0, 0>;
+        using MagneticFluxDensity            = Unit<1, 0, -2, 0, -1, 0, 0, 0>;
+        using Inductance                     = Unit<1, 2, -2, 0, -2, 0, 0, 0>;
+        using LuminousFlux                   = Unit<0, 0, 0, 0, 0, 1, 0, 2>;
+        using Activity                       = Unit<0, 0, -1, 0, 0, 0, 0, 0>;
+        using AbsorbedDose                   = Unit<0, 2, -2, 0, 0, 0, 0, 0>;
+        using Kerma                          = Unit<0, 2, -2, 0, 0, 0, 0, 0>;
+        using SpecificEnergy                 = Unit<0, 2, -2, 0, 0, 0, 0, 0>;
+        using DoseEquivalent                 = Unit<0, 2, -2, 0, 0, 0, 0, 0>;
+        using CatalyticActivity              = Unit<0, 0, -1, 0, 0, 0, 1, 0>;
+        using DynamicViscosity               = Unit<1, -1, -1, 0, 0, 0, 0, 0>;
+        using KinematicViscosity             = Unit<0, 2, -1, 0, 0, 0, 0, 0>;
+        using Moment                         = Unit<1, 2, -2, 0, 0, 0, 0, 0>;
+        using SurfaceTension                 = Unit<1, 0, -2, 0, 0, 0, 0, 0>;
+        using AngularVelocity                = Unit<0, 0, -1, 0, 0, 0, 0, 1>;
+        using AngularAcceleration            = Unit<0, 0, -2, 0, 0, 0, 0, 1>;
+        using AngularJerk                    = Unit<0, 0, -3, 0, 0, 0, 0, 1>;
+        using AngularSnap                    = Unit<0, 0, -4, 0, 0, 0, 0, 1>;
+        using AngularCrackle                 = Unit<0, 0, -5, 0, 0, 0, 0, 1>;
+        using AngularPop                     = Unit<0, 0, -6, 0, 0, 0, 0, 1>;
+        using HeatFluxDensity                = Unit<1, 0, -3, 0, 0, 0, 0, 0>;
+        using Irradiance                     = Unit<1, 0, -3, 0, 0, 0, 0, 0>;
+        using HeatCapacity                   = Unit<1, 2, -2, -1, 0, 0, 0, 0>;
+        using Entropy                        = Unit<1, 2, -2, -1, 0, 0, 0, 0>;
+        using SpecificHeatCapacity           = Unit<0, 2, -2, -1, 0, 0, 0, 0>;
+        using SpecificEntropy                = Unit<0, 2, -2, -1, 0, 0, 0, 0>;
+        using ThermalConductivity            = Unit<1, 1, -3, -1, 0, 0, 0, 0>;
+        using ElectricFieldStrength          = Unit<1, 1, -3, 0, 0, -1, 0, 0>;
+        using ElectricChargeDensity          = Unit<0, -3, 1, 0, 0, 1, 0, 0>;
+        using SurfaceChargeDensity           = Unit<0, -2, 1, 0, 0, 1, 0, 0>;
+        using ElectricFluxDensity            = Unit<0, -2, 1, 0, 0, 1, 0, 0>;
+        using ElectricDisplacement           = Unit<0, -2, 1, 0, 0, 1, 0, 0>;
+        using Permittivity                   = Unit<-1, -3, 4, 0, 0, 2, 0, 0>;
+        using Permeability                   = Unit<1, 1, -2, 0, 0, -2, 0, 0>;
+        using MolarEnergy                    = Unit<1, 2, -2, 0, 0, 0, -1, 0>;
+        using MolarEntropy                   = Unit<1, 2, -2, -1, 0, 0, -1, 0>;
+        using MolarHeatCapacity              = Unit<1, 2, -2, -1, 0, 0, -1, 0>;
+        using Exposure                       = Unit<-1, 0, 1, 0, 0, 1, 0, 0>;
+        using AbsorbedDoseRate               = Unit<0, 2, -3, 0, 0, 0, 0, 0>;
+        using RadiantIntensity               = Unit<1, 2, -3, 0, 0, 0, 0, 2>;
+        using Radiance                       = Unit<1, 0, -3, 0, 0, 0, 0, 2>;
+        using CatalyticActivityConcentration = Unit<0, -3, -1, 0, 0, 0, 1, 0>;
+        using Action                         = Unit<1, 2, -1, 0, 0, 0, 0, 0>;
 
 
 
@@ -195,17 +188,19 @@ namespace arc
 
     //  == OPERATORS ==
     //  -- Increment / Decrement --
-    template <typename T>
-    constexpr inline si::Unit<T> operator++(si::Unit<T>& lhs_, const int) noexcept;
-    template <typename T>
-    constexpr inline si::Unit<T> operator--(si::Unit<T>& lhs_, const int) noexcept;
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline si::Unit<M, L, T, K, C, I, N, A> operator++(si::Unit<M, L, T, K, C, I, N, A>& lhs_, const int) noexcept;
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline si::Unit<M, L, T, K, C, I, N, A> operator--(si::Unit<M, L, T, K, C, I, N, A>& lhs_, const int) noexcept;
 
     //  -- Arithmetic --
-    template <typename T>
-    constexpr inline si::Unit<T> operator+(const si::Unit<T>& rhs_) noexcept;
-    template <typename T>
-    constexpr inline si::Unit<T> operator-(const si::Unit<T>& rhs_) noexcept;
-    template <typename TL, typename TR, typename L_ADD_R = typename type::arithmetic::add<TL, TR>>
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline si::Unit<M, L, T, K, C, I, N, A> operator+(const si::Unit<M, L, T, K, C, I, N, A>& rhs_) noexcept;
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline si::Unit<M, L, T, K, C, I, N, A> operator-(const si::Unit<M, L, T, K, C, I, N, A>& rhs_) noexcept;
+
+
+    template <int ML, int LL, int TL, int KL, int CL, int IL, int NL, int AL, int MR, int LR, int TR, int KR, int CR, int IR, int NR, int AR, typename L_ADD_R = typename type::arithmetic::add<TL, TR>>
     constexpr inline si::Unit<L_ADD_R> operator+(const si::Unit<TL>& lhs_, const si::Unit<TR>& rhs_) noexcept;
     template <typename TL, typename TR, typename L_SUB_R = typename type::arithmetic::sub<TL, TR>>
     constexpr inline si::Unit<L_SUB_R> operator-(const si::Unit<TL>& lhs_, const si::Unit<TR>& rhs_) noexcept;
