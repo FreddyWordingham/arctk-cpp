@@ -51,9 +51,9 @@ namespace arc
         //  -- Tests --
         inline void square() noexcept
         {
-            assert(math::sq(2) == 4);
-            assert(math::sq(-2) == 4);
-            assert(math::sq(2U) == 4);
+            static_assert(math::sq(2) == 4);
+            static_assert(math::sq(-2) == 4);
+            static_assert(math::sq(2U) == 4);
 
             assert(math::equal(math::sq(2.0), 4.0));
             assert(math::equal(math::sq(-2.0), 4.0));
@@ -61,12 +61,12 @@ namespace arc
 
         inline void cube() noexcept
         {
-            assert(math::cube(2) == 8);
-            assert(math::cube(-2) == 8);
-            assert(math::cube(2U) == 8);
+            static_assert(math::cube(2) == 8);
+            static_assert(math::cube(-2) == -8);
+            static_assert(math::cube(2U) == 8);
 
             assert(math::equal(math::cube(2.0), 8.0));
-            assert(math::equal(math::cube(-2.0), 8.0));
+            assert(math::equal(math::cube(-2.0), -8.0));
         }
 
 
