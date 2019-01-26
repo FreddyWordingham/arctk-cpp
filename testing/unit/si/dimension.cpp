@@ -1,7 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include <arctk/math/compare.inl>
-#include <arctk/math/power.inl>
 #include <arctk/si/dimension.inl>
 
 //  -- Std --
@@ -36,6 +35,89 @@ int main()
 {
     arc::test::scalar();
     arc::test::dimensional<arc::si::Mass>();
+    arc::test::dimensional<arc::si::Length>();
+    arc::test::dimensional<arc::si::Time>();
+    arc::test::dimensional<arc::si::Temperature>();
+    arc::test::dimensional<arc::si::Current>();
+    arc::test::dimensional<arc::si::Intensity>();
+    arc::test::dimensional<arc::si::Amount>();
+    arc::test::dimensional<arc::si::Angle>();
+    arc::test::dimensional<arc::si::SolidAngle>();
+    arc::test::dimensional<arc::si::Area>();
+    arc::test::dimensional<arc::si::Volume>();
+    arc::test::dimensional<arc::si::Velocity>();
+    arc::test::dimensional<arc::si::Acceleration>();
+    arc::test::dimensional<arc::si::Jerk>();
+    arc::test::dimensional<arc::si::Snap>();
+    arc::test::dimensional<arc::si::Crackle>();
+    arc::test::dimensional<arc::si::Pop>();
+    arc::test::dimensional<arc::si::Wavenumber>();
+    arc::test::dimensional<arc::si::Density>();
+    arc::test::dimensional<arc::si::SurfaceDensity>();
+    arc::test::dimensional<arc::si::SpecificVolume>();
+    arc::test::dimensional<arc::si::CurrentDensity>();
+    arc::test::dimensional<arc::si::MagneticFieldStrength>();
+    arc::test::dimensional<arc::si::Concentration>();
+    arc::test::dimensional<arc::si::Luminance>();
+    arc::test::dimensional<arc::si::Illuminance>();
+    arc::test::dimensional<arc::si::Frequency>();
+    arc::test::dimensional<arc::si::Force>();
+    arc::test::dimensional<arc::si::Pressure>();
+    arc::test::dimensional<arc::si::Stress>();
+    arc::test::dimensional<arc::si::EnergyDensity>();
+    arc::test::dimensional<arc::si::Energy>();
+    arc::test::dimensional<arc::si::Work>();
+    arc::test::dimensional<arc::si::Heat>();
+    arc::test::dimensional<arc::si::Power>();
+    arc::test::dimensional<arc::si::RadiantFlux>();
+    arc::test::dimensional<arc::si::Charge>();
+    arc::test::dimensional<arc::si::Potential>();
+    arc::test::dimensional<arc::si::Capacitance>();
+    arc::test::dimensional<arc::si::Resistance>();
+    arc::test::dimensional<arc::si::Conductance>();
+    arc::test::dimensional<arc::si::MagneticFlux>();
+    arc::test::dimensional<arc::si::MagneticFluxDensity>();
+    arc::test::dimensional<arc::si::Inductance>();
+    arc::test::dimensional<arc::si::LuminousFlux>();
+    arc::test::dimensional<arc::si::Activity>();
+    arc::test::dimensional<arc::si::AbsorbedDose>();
+    arc::test::dimensional<arc::si::Kerma>();
+    arc::test::dimensional<arc::si::SpecificEnergy>();
+    arc::test::dimensional<arc::si::DoseEquivalent>();
+    arc::test::dimensional<arc::si::CatalyticActivity>();
+    arc::test::dimensional<arc::si::DynamicViscosity>();
+    arc::test::dimensional<arc::si::KinematicViscosity>();
+    arc::test::dimensional<arc::si::Moment>();
+    arc::test::dimensional<arc::si::SurfaceTension>();
+    arc::test::dimensional<arc::si::AngularVelocity>();
+    arc::test::dimensional<arc::si::AngularAcceleration>();
+    arc::test::dimensional<arc::si::AngularJerk>();
+    arc::test::dimensional<arc::si::AngularSnap>();
+    arc::test::dimensional<arc::si::AngularCrackle>();
+    arc::test::dimensional<arc::si::AngularPop>();
+    arc::test::dimensional<arc::si::HeatFluxDensity>();
+    arc::test::dimensional<arc::si::Irradiance>();
+    arc::test::dimensional<arc::si::HeatCapacity>();
+    arc::test::dimensional<arc::si::Entropy>();
+    arc::test::dimensional<arc::si::SpecificHeatCapacity>();
+    arc::test::dimensional<arc::si::SpecificEntropy>();
+    arc::test::dimensional<arc::si::ThermalConductivity>();
+    arc::test::dimensional<arc::si::ElectricFieldStrength>();
+    arc::test::dimensional<arc::si::ElectricChargeDensity>();
+    arc::test::dimensional<arc::si::SurfaceChargeDensity>();
+    arc::test::dimensional<arc::si::ElectricFluxDensity>();
+    arc::test::dimensional<arc::si::ElectricDisplacement>();
+    arc::test::dimensional<arc::si::Permittivity>();
+    arc::test::dimensional<arc::si::Permeability>();
+    arc::test::dimensional<arc::si::MolarEnergy>();
+    arc::test::dimensional<arc::si::MolarEntropy>();
+    arc::test::dimensional<arc::si::MolarHeatCapacity>();
+    arc::test::dimensional<arc::si::Exposure>();
+    arc::test::dimensional<arc::si::AbsorbedDoseRate>();
+    arc::test::dimensional<arc::si::RadiantIntensity>();
+    arc::test::dimensional<arc::si::Radiance>();
+    arc::test::dimensional<arc::si::CatalyticActivityConcentration>();
+    arc::test::dimensional<arc::si::Action>();
     arc::test::cross_dimensional();
 
     return (0);

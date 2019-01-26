@@ -9,12 +9,6 @@
 
 
 
-//  == IMPORTS ==
-//  -- Arc --
-#include <arctk/type/arithmetic.inl>
-
-
-
 //  == NAMESPACE ==
 namespace arc
 {
