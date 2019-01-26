@@ -168,7 +168,7 @@ namespace arc
     //  == OPERATORS ==
     //  -- Increment / Decrement --
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator++(si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const int) noexcept
+    constexpr inline const si::Dimension<M, L, T, K, C, I, N, A> operator++(si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const int) noexcept
     {
         si::Dimension<M, L, T, K, C, I, N, A> unit{lhs_.mag()};
 
@@ -178,7 +178,7 @@ namespace arc
     }
 
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator--(si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const int) noexcept
+    constexpr inline const si::Dimension<M, L, T, K, C, I, N, A> operator--(si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const int) noexcept
     {
         si::Dimension<M, L, T, K, C, I, N, A> unit{lhs_.mag()};
 

@@ -65,7 +65,7 @@ namespace arc
           public:
             //  -- Constructors --
             constexpr inline explicit Dimension() noexcept;
-            constexpr inline Dimension(double mag_) noexcept;
+            constexpr inline Dimension(double mag_) noexcept; // NOLINT
 
 
             //  == OPERATORS ==
@@ -193,9 +193,9 @@ namespace arc
     //  == OPERATORS ==
     //  -- Increment / Decrement --
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator++(si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const int) noexcept;
+    constexpr inline const si::Dimension<M, L, T, K, C, I, N, A> operator++(si::Dimension<M, L, T, K, C, I, N, A>& lhs_, int) noexcept;
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator--(si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const int) noexcept;
+    constexpr inline const si::Dimension<M, L, T, K, C, I, N, A> operator--(si::Dimension<M, L, T, K, C, I, N, A>& lhs_, int) noexcept;
 
     //  -- Arithmetic --
     template <int M, int L, int T, int K, int C, int I, int N, int A>
@@ -204,12 +204,12 @@ namespace arc
     constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator-(const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
     template <int M, int L, int T, int K, int C, int I, int N, int A>
     constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator+(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
-    constexpr inline double                                operator+(const si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>& lhs_, const double rhs_) noexcept;
-    constexpr inline double                                operator+(const double lhs_, const si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>& rhs_) noexcept;
+    constexpr inline double                                operator+(const si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>& lhs_, double rhs_) noexcept;
+    constexpr inline double                                operator+(double lhs_, const si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>& rhs_) noexcept;
     template <int M, int L, int T, int K, int C, int I, int N, int A>
     constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator-(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
-    constexpr inline double                                operator-(const si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>& lhs_, const double rhs_) noexcept;
-    constexpr inline double                                operator-(const double lhs_, const si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>& rhs_) noexcept;
+    constexpr inline double                                operator-(const si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>& lhs_, double rhs_) noexcept;
+    constexpr inline double                                operator-(double lhs_, const si::Dimension<0, 0, 0, 0, 0, 0, 0, 0>& rhs_) noexcept;
     template <int ML, int LL, int TL, int KL, int CL, int IL, int NL, int AL, int MR, int LR, int TR, int KR, int CR, int IR, int NR, int AR>
     constexpr inline si::Dimension<ML + MR, LL + LR, TL + TR, KL + KR, CL + CR, IL + IR, NL + NR, AL + AR> operator*(const si::Dimension<ML, LL, TL, KL, CL, IL, NL, AL>& lhs_, const si::Dimension<MR, LR, TR, KR, CR, IR, NR, AR>& rhs_) noexcept;
     template <int M, int L, int T, int K, int C, int I, int N, int A>

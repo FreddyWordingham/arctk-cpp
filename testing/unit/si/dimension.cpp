@@ -32,7 +32,7 @@ namespace arc
 
 
 //  == MAIN ==
-int main()
+int main() // NOLINT
 {
     arc::test::scalar();
     arc::test::dimensional<arc::si::Mass>();
@@ -136,7 +136,7 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Tests --
-        inline void scalar() noexcept
+        inline void scalar() noexcept // NOLINT
         {
             const si::Scalar scal_0;
             assert(math::zero(scal_0.mag()));
@@ -179,19 +179,19 @@ namespace arc
             assert(math::equal(scal_9.mag(), 2.513272));
 
             si::Scalar scal_10{2.71};
-            assert(math::equal((++scal_10).mag(), 3.71));
+            assert(math::equal((++scal_10).mag(), 3.71)); // NOLINT
             assert(math::equal(scal_10.mag(), 3.71));
 
             si::Scalar scal_11{2.71};
-            assert(math::equal((--scal_11).mag(), 1.71));
+            assert(math::equal((--scal_11).mag(), 1.71)); // NOLINT
             assert(math::equal(scal_11.mag(), 1.71));
 
             si::Scalar scal_12{2.71};
-            assert(math::equal((scal_12++).mag(), 2.71));
+            assert(math::equal((scal_12++).mag(), 2.71)); // NOLINT
             assert(math::equal(scal_12.mag(), 3.71));
 
             si::Scalar scal_13{2.71};
-            assert(math::equal((scal_13--).mag(), 2.71));
+            assert(math::equal((scal_13--).mag(), 2.71)); // NOLINT
             assert(math::equal(scal_13.mag(), 1.71));
 
             const si::Scalar scal_14{+scal_1};
@@ -200,8 +200,8 @@ namespace arc
             const si::Scalar scal_15{-scal_1};
             assert(math::equal(scal_15.mag(), -1.25));
 
-            const si::Scalar scal_16{scal_1 + scal_1};
-            assert(math::equal(scal_16.mag(), 2.5));
+            const si::Scalar scal_16{scal_1 + scal_2};
+            assert(math::equal(scal_16.mag(), 5.64159));
 
             const si::Scalar scal_17{scal_1 + x};
             assert(math::equal(scal_17.mag(), 2.5));
@@ -209,8 +209,8 @@ namespace arc
             const si::Scalar scal_18{x + scal_1};
             assert(math::equal(scal_18.mag(), 2.5));
 
-            const si::Scalar scal_19{scal_1 - scal_1};
-            assert(math::zero(scal_19.mag()));
+            const si::Scalar scal_19{scal_1 - scal_2};
+            assert(math::equal(scal_19.mag(), -3.14159));
 
             const si::Scalar scal_20{scal_1 - x};
             assert(math::zero(scal_20.mag()));
@@ -218,8 +218,8 @@ namespace arc
             const si::Scalar scal_21{x - scal_1};
             assert(math::zero(scal_21.mag()));
 
-            const si::Scalar scal_22{scal_1 * scal_1};
-            assert(math::equal(scal_22.mag(), 1.5625));
+            const si::Scalar scal_22{scal_1 * scal_2};
+            assert(math::equal(scal_22.mag(), 5.4894875));
 
             const si::Scalar scal_23{scal_1 * x};
             assert(math::equal(scal_23.mag(), 1.5625));
@@ -227,8 +227,8 @@ namespace arc
             const si::Scalar scal_24{x * scal_1};
             assert(math::equal(scal_24.mag(), 1.5625));
 
-            const si::Scalar scal_25{scal_1 / scal_1};
-            assert(math::equal(scal_25.mag(), 1.0));
+            const si::Scalar scal_25{scal_1 / si::Scalar{0.2}};
+            assert(math::equal(scal_25.mag(), 6.25));
 
             const si::Scalar scal_26{scal_1 / x};
             assert(math::equal(scal_26.mag(), 1.0));
@@ -238,7 +238,7 @@ namespace arc
         }
 
         template <typename T>
-        inline void dimensional() noexcept
+        inline void dimensional() noexcept // NOLINT
         {
             const T dim_0;
             assert(math::zero(dim_0.mag()));
@@ -265,19 +265,19 @@ namespace arc
             assert(math::equal(dim_5.mag(), 2.513272));
 
             T dim_6{2.71};
-            assert(math::equal((++dim_6).mag(), 3.71));
+            assert(math::equal((++dim_6).mag(), 3.71)); // NOLINT
             assert(math::equal(dim_6.mag(), 3.71));
 
             T dim_7{2.71};
-            assert(math::equal((--dim_7).mag(), 1.71));
+            assert(math::equal((--dim_7).mag(), 1.71)); // NOLINT
             assert(math::equal(dim_7.mag(), 1.71));
 
             T dim_8{2.71};
-            assert(math::equal((dim_8++).mag(), 2.71));
+            assert(math::equal((dim_8++).mag(), 2.71)); // NOLINT
             assert(math::equal(dim_8.mag(), 3.71));
 
             T dim_9{2.71};
-            assert(math::equal((dim_9--).mag(), 2.71));
+            assert(math::equal((dim_9--).mag(), 2.71)); // NOLINT
             assert(math::equal(dim_9.mag(), 1.71));
 
             const T dim_10{+dim_1};
@@ -298,8 +298,8 @@ namespace arc
             const T dim_15{x * dim_1};
             assert(math::equal(dim_15.mag(), 1.5625));
 
-            const T dim_16{dim_1 / dim_1};
-            assert(math::equal(dim_16.mag(), 1.0));
+            const T dim_16{dim_1 / T{0.2}};
+            assert(math::equal(dim_16.mag(), 6.25));
 
             const T dim_17{dim_1 / x};
             assert(math::equal(dim_17.mag(), 1.0));
