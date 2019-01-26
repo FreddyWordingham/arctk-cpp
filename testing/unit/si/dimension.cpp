@@ -310,7 +310,7 @@ namespace arc
             const si::Length leng{40.0};
             const si::Time   time{2.0};
 
-            const si::Energy energy{mass * (leng / time) * (leng / time)};
+            const si::Energy energy{mass * math::sq(leng / time)};
             assert(math::equal(energy.mag(), 500.0));
 
             const si::Velocity vel{leng / time};
