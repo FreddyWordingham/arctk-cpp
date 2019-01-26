@@ -1,6 +1,7 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include <arctk/math/compare.inl>
+#include <arctk/math/power.inl>
 #include <arctk/si/dimension.inl>
 
 //  -- Std --
