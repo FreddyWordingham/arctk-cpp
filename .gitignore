@@ -12,6 +12,9 @@
 #   -- Binaries --
 /bin
 
+#   -- Testing --
+default.profraw
+
 
 #   == Tools ==
 #   -- System --
