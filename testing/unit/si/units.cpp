@@ -56,7 +56,8 @@ namespace arc
 
         inline void mass() noexcept
         {
-            assert(math::equal((1.0_kg).mag(), 1000.0, 0.001));
+            assert(math::equal((1.0_kg).mag(), 1.0));
+            assert(math::equal((1.0_kkg).mag(), 1000.0));
         }
 
 

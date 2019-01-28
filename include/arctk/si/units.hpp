@@ -11,13 +11,13 @@
 
 //  == MACROS ==
 //  -- Conversion --
-#define CONVERT_SET_DECL(type_, unit_, op_to_base_, op_from_base_)                    \
-                                                                                      \
-    constexpr inline const type_ operator""_##unit_(const long double mag_) noexcept; \
-                                                                                      \
-    namespace si                                                                      \
-    {                                                                                 \
-        constexpr inline double to_##unit_(const type_ dim_) noexcept;                \
+#define CONVERT_SET_DECL(type_, unit_, op_to_base_, op_from_base_)              \
+                                                                                \
+    constexpr inline const type_ operator""_##unit_(long double mag_) noexcept; \
+                                                                                \
+    namespace si                                                                \
+    {                                                                           \
+        constexpr inline double to_##unit_(type_ dim_) noexcept;                \
     }
 
 #define METRIC_SET_DECL(type_, unit_)                           \
