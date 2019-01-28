@@ -11,6 +11,7 @@
 
 //  == IMPORTS ==
 //  -- Arc --
+#include <arctk/math/compare.hpp>
 
 
 
@@ -194,6 +195,44 @@ namespace arc
     constexpr inline const alg::Vec<Dim, 3> operator/(const alg::Vec<T, 3>& lhs_, const S& rhs_) noexcept
     {
         return (alg::Vec<Dim, 3>{lhs_.x / rhs_, lhs_.y / rhs_, lhs_.z / rhs_});
+    }
+
+
+    //  -- Comparison --
+    template <typename T>
+    constexpr inline bool operator==(const alg::Vec<T, 3>& lhs_, const alg::Vec<T, 3>& rhs_) noexcept
+    {
+        return (math::equal(lhs_.x, rhs_.x) && math::equal(lhs_.y, rhs_.y) && math::equal(lhs_.z, rhs_.z));
+    }
+
+    template <typename T>
+    constexpr inline bool operator!=(const alg::Vec<T, 3>& lhs_, const alg::Vec<T, 3>& rhs_) noexcept
+    {
+        return (!(lhs_ == rhs_));
+    }
+
+    template <typename T>
+    constexpr inline bool operator<(const alg::Vec<T, 3>& lhs_, const alg::Vec<T, 3>& rhs_) noexcept
+    {
+        return (lhs_.mag() < rhs_.mag());
+    }
+
+    template <typename T>
+    constexpr inline bool operator>(const alg::Vec<T, 3>& lhs_, const alg::Vec<T, 3>& rhs_) noexcept
+    {
+        return (lhs_.mag() > rhs_.mag());
+    }
+
+    template <typename T>
+    constexpr inline bool operator<=(const alg::Vec<T, 3>& lhs_, const alg::Vec<T, 3>& rhs_) noexcept
+    {
+        return (lhs_.mag() <= rhs_.mag());
+    }
+
+    template <typename T>
+    constexpr inline bool operator>=(const alg::Vec<T, 3>& lhs_, const alg::Vec<T, 3>& rhs_) noexcept
+    {
+        return (lhs_.mag() >= rhs_.mag());
     }
 
 
