@@ -19,6 +19,7 @@ namespace arc
         //  == FUNCTION PROTOTYPES ==
         //  -- Tests --
         inline void scalar() noexcept;
+        inline void mass() noexcept;
 
 
 
@@ -31,6 +32,7 @@ namespace arc
 int main()
 {
     arc::test::scalar();
+    arc::test::mass();
 
     return (0);
 }
@@ -49,7 +51,12 @@ namespace arc
         //  -- Tests --
         inline void scalar() noexcept
         {
-            // assert(math::equal((1.0_pi).mag(), 3.14159, 0.001));
+            assert(math::equal((1.0_pi).mag(), 3.14159, 0.001));
+        }
+
+        inline void mass() noexcept
+        {
+            assert(math::equal((1.0_kg).mag(), 1000.0, 0.001));
         }
 
 
