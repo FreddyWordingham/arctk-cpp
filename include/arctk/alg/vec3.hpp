@@ -3,8 +3,16 @@
 
 
 
+//  == BASE ==
+//  -- Arc --
+#include <arctk/alg/vec.hpp>
+
+
+
 //  == IMPORTS ==
 //  -- Arc --
+#include <arctk/si/dimension.hpp>
+#include <arctk/type/arithmetic.hpp>
 
 
 
@@ -16,32 +24,44 @@ namespace arc
 
 
 
-        //  == CLASSES ==
+        //  == SPECILAISATIONS ==
         //  -- Vec3 --
-        class Vec3
+        template <typename T>
+        class Vec<T, 3>
         {
             //  == FIELDS ==
-          private:
-
+          public:
+            //  -- Elements --
+            T x;
+            T y;
+            T z;
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-
-
-
-            //  == OPERATORS ==
-          public:
-
-
-
-            //  == METHODS ==
-          public:
-            //  -- Getters --
+            constexpr inline explicit Vec() noexcept;
+            constexpr inline explicit Vec(const T& x_, const T& y_, const T& z_) noexcept;
         };
 
 
 
+        //  == ALIASES ==
+        //  -- Dimensionless --
+        template <typename T>
+        using Vec3 = Vec<T, 3>;
+
+
+
     } // namespace alg
+
+
+
+    //  == OPERATORS ==
+    //  -- Arithmetic --
+    template <typename T, typename S, typename Dim = typename type::arithmetic::div<T, S>>
+    constexpr inline const alg::Vec<Dim, 3> operator/(const alg::Vec<T, 3>& lhs_, const S& rhs_) noexcept;
+
+
+
 } // namespace arc
