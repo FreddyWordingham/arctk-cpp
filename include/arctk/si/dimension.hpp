@@ -225,17 +225,17 @@ namespace arc
 
     //  -- Comparison --
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline bool operator==(const Dimension<M, L, T, K, C, I, N, A>& lhs_, const Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
+    constexpr inline bool operator==(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline bool operator!=(const Dimension<M, L, T, K, C, I, N, A>& lhs_, const Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
+    constexpr inline bool operator!=(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline bool operator<(const Dimension<M, L, T, K, C, I, N, A>& lhs_, const Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
+    constexpr inline bool operator<(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline bool operator>(const Dimension<M, L, T, K, C, I, N, A>& lhs_, const Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
+    constexpr inline bool operator>(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline bool operator<=(const Dimension<M, L, T, K, C, I, N, A>& lhs_, const Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
+    constexpr inline bool operator<=(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline bool operator>=(const Dimension<M, L, T, K, C, I, N, A>& lhs_, const Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
+    constexpr inline bool operator>=(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
 
 
 

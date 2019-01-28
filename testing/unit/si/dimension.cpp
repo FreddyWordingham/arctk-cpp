@@ -302,6 +302,29 @@ namespace arc
 
             const T dim_17{dim_1 / x};
             assert(math::equal(dim_17.mag(), 1.0));
+
+            const T dim_18{3.14159};
+            assert(math::equal(dim_18.mag(), 3.14159));
+
+            const T dim_19{dim_18};
+            assert(math::equal(dim_18.mag(), dim_19.mag()));
+            assert(dim_18 == dim_19);
+
+            const T dim_20{dim_18 + dim_19};
+            assert(!math::equal(dim_19.mag(), dim_20.mag()));
+            assert(dim_19 != dim_20);
+            assert(dim_19 < dim_20);
+            assert(dim_20 > dim_19);
+            assert(dim_19 <= dim_20);
+            assert(dim_20 >= dim_19);
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-comparison"
+            dim_19 != dim_20;
+            dim_19 < dim_20;
+            dim_20 > dim_19;
+            dim_19 <= dim_20;
+            dim_20 >= dim_19;
+#pragma clang diagnostic pop
         }
 
         inline void cross_dimensional() noexcept
