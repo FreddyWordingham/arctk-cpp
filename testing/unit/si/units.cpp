@@ -819,6 +819,24 @@ namespace arc
 
             assert(math::equal((1.0_ym2).mag(), 1.0e-48));
             assert(math::equal(si::to_ym2(1.0_m2), 1.0e48));
+
+            assert(math::equal((1.0_in2).mag(), 0.00064516));
+            assert(math::equal(si::to_in2(1.0_m2), 1.0 / 0.00064516));
+
+            assert(math::equal((1.0_ft2).mag(), 0.092903));
+            assert(math::equal(si::to_ft2(1.0_m2), 1.0 / 0.092903));
+
+            assert(math::equal((1.0_yd2).mag(), 0.836127));
+            assert(math::equal(si::to_yd2(1.0_m2), 1.0 / 0.836127));
+
+            assert(math::equal((1.0_mi2).mag(), 2.59e6));
+            assert(math::equal(si::to_mi2(1.0_m2), 1.0 / 2.59e6));
+
+            assert(math::equal((1.0_ha).mag(), 1.0e4));
+            assert(math::equal(si::to_ha(1.0_m2), 1.0 / 1.0e4));
+
+            assert(math::equal((1.0_acre).mag(), 4046.86));
+            assert(math::equal(si::to_acre(1.0_m2), 1.0 / 4046.86));
         }
 
         inline void volume() noexcept
@@ -885,6 +903,57 @@ namespace arc
 
             assert(math::equal((1.0_ym3).mag(), 1.0e-72));
             assert(math::equal(si::to_ym3(1.0_m3), 1.0e72));
+
+            assert(math::equal((1.0_L).mag(), 1.0e-3));
+            assert(math::equal(si::to_L(1.0_m3), 1.0 / 1.0e-3));
+
+            assert(math::equal((1.0_in3).mag(), 1.6387e-5));
+            assert(math::equal(si::to_in3(1.0_m3), 1.0 / 1.6387e-5));
+
+            assert(math::equal((1.0_ft3).mag(), 0.0283168));
+            assert(math::equal(si::to_ft3(1.0_m3), 1.0 / 0.0283168));
+
+            assert(math::equal((1.0_tsp).mag(), 5.9194e-6));
+            assert(math::equal(si::to_tsp(1.0_m3), 1.0 / 5.9194e-6));
+
+            assert(math::equal((1.0_tbsp).mag(), 1.7758e-5));
+            assert(math::equal(si::to_tbsp(1.0_m3), 1.0 / 1.7758e-5));
+
+            assert(math::equal((1.0_foz).mag(), 2.8413e-5));
+            assert(math::equal(si::to_foz(1.0_m3), 1.0 / 2.8413e-5));
+
+            assert(math::equal((1.0_cup).mag(), 0.000284131));
+            assert(math::equal(si::to_cup(1.0_m3), 1.0 / 0.000284131));
+
+            assert(math::equal((1.0_pt).mag(), 0.000568261));
+            assert(math::equal(si::to_pt(1.0_m3), 1.0 / 0.000568261));
+
+            assert(math::equal((1.0_qt).mag(), 0.00113652));
+            assert(math::equal(si::to_qt(1.0_m3), 1.0 / 0.00113652));
+
+            assert(math::equal((1.0_gal).mag(), 0.00454609));
+            assert(math::equal(si::to_gal(1.0_m3), 1.0 / 0.00454609));
+
+            assert(math::equal((1.0_UStsp).mag(), 4.9289e-6));
+            assert(math::equal(si::to_UStsp(1.0_m3), 1.0 / 4.9289e-6));
+
+            assert(math::equal((1.0_UStbsp).mag(), 1.4787e-5));
+            assert(math::equal(si::to_UStbsp(1.0_m3), 1.0 / 1.4787e-5));
+
+            assert(math::equal((1.0_USfoz).mag(), 2.9574e-5));
+            assert(math::equal(si::to_USfoz(1.0_m3), 1.0 / 2.9574e-5));
+
+            assert(math::equal((1.0_UScup).mag(), 0.00024));
+            assert(math::equal(si::to_UScup(1.0_m3), 1.0 / 0.00024));
+
+            assert(math::equal((1.0_USpt).mag(), 0.000473176));
+            assert(math::equal(si::to_USpt(1.0_m3), 1.0 / 0.000473176));
+
+            assert(math::equal((1.0_USqt).mag(), 0.000946353));
+            assert(math::equal(si::to_USqt(1.0_m3), 1.0 / 0.000946353));
+
+            assert(math::equal((1.0_USgal).mag(), 0.00378541));
+            assert(math::equal(si::to_USgal(1.0_m3), 1.0 / 0.00378541));
         }
 
         inline void frequency() noexcept
