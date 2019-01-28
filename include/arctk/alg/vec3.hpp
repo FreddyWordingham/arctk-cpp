@@ -74,6 +74,12 @@ namespace arc
 
 
     //  == OPERATORS ==
+    //  -- Increment / Decrement --
+    template <typename T>
+    constexpr inline const alg::Vec<T, 3> operator++(alg::Vec<T, 3>& lhs_, int) noexcept;
+    template <typename T>
+    constexpr inline const alg::Vec<T, 3> operator--(alg::Vec<T, 3>& lhs_, int) noexcept;
+
     //  -- Arithmetic --
     template <typename T>
     constexpr inline const alg::Vec<T, 3> operator+(const alg::Vec<T, 3>& rhs_) noexcept;
