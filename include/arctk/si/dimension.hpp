@@ -223,6 +223,20 @@ namespace arc
     template <int M, int L, int T, int K, int C, int I, int N, int A>
     constexpr inline si::Dimension<-M, -L, -T, -K, -C, -I, -N, -A> operator/(double lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
 
+    //  -- Comparison --
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline bool operator==(const Dimension<M, L, T, K, C, I, N, A>& lhs_, const Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline bool operator!=(const Dimension<M, L, T, K, C, I, N, A>& lhs_, const Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline bool operator<(const Dimension<M, L, T, K, C, I, N, A>& lhs_, const Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline bool operator>(const Dimension<M, L, T, K, C, I, N, A>& lhs_, const Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline bool operator<=(const Dimension<M, L, T, K, C, I, N, A>& lhs_, const Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline bool operator>=(const Dimension<M, L, T, K, C, I, N, A>& lhs_, const Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept;
+
 
 
 } // namespace arc
