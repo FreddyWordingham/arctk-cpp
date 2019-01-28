@@ -58,6 +58,10 @@ namespace arc
             //  -- Increment / Decrement --
             constexpr inline const Vec& operator++() noexcept;
             constexpr inline const Vec& operator--() noexcept;
+
+            //  -- Access --
+            constexpr inline T&       operator[](std::size_t index_) noexcept;
+            constexpr inline const T& operator[](std::size_t index_) const noexcept;
         };
 
 
