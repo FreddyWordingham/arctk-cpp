@@ -1152,6 +1152,12 @@ namespace arc
 
             assert(math::equal((1.0_yPa).mag(), 1.0e-24));
             assert(math::equal(si::to_yPa(1.0_Pa), 1.0e24));
+
+            assert(math::equal((1.0_bar).mag(), 1.0e5));
+            assert(math::equal(si::to_bar(1.0_Pa), 1.0 / 1.0e5));
+
+            assert(math::equal((1.0_atm).mag(), 101325.0));
+            assert(math::equal(si::to_atm(1.0_Pa), 1.0 / 101325.0));
         }
 
         inline void energy() noexcept
@@ -1218,6 +1224,21 @@ namespace arc
 
             assert(math::equal((1.0_yJ).mag(), 1.0e-24));
             assert(math::equal(si::to_yJ(1.0_J), 1.0e24));
+
+            assert(math::equal((1.0_eV).mag(), 1.6022e-19));
+            assert(math::equal(si::to_eV(1.0_J), 1.0 / 1.6022e-19));
+
+            assert(math::equal((1.0_cal).mag(), 4.184));
+            assert(math::equal(si::to_cal(1.0_J), 1.0 / 4.184));
+
+            assert(math::equal((1.0_kcal).mag(), 4184.0));
+            assert(math::equal(si::to_kcal(1.0_J), 1.0 / 4184.0));
+
+            assert(math::equal((1.0_Wh).mag(), 3600.0));
+            assert(math::equal(si::to_Wh(1.0_J), 1.0 / 3600.0));
+
+            assert(math::equal((1.0_KWh).mag(), 3.6e6));
+            assert(math::equal(si::to_KWh(1.0_J), 1.0 / 3.6e6));
         }
 
         inline void power() noexcept
