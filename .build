@@ -1,1 +1,1 @@
-export ARCTK_BUILD_ARGS='cover clang clang++ true true'
+export ARCTK_BUILD_ARGS='debug gcc-8 g++-8 true false'

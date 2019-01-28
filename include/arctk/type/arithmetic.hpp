@@ -4,9 +4,6 @@
 
 
 //  == IMPORTS ==
-//  -- Arc --
-#include <arctk/si/dimension.hpp>
-
 //  -- Std --
 #include <type_traits>
 
