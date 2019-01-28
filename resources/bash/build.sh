@@ -9,7 +9,7 @@ arctk.clean()
     rm -r bin
     rm -r build
     rm -r doc
-    rm include/config/*
+    rm include/arctk/config/*
 
     cd - >/dev/null
 }
