@@ -97,6 +97,8 @@ namespace arc
     constexpr inline const alg::Vec<Dim, 3> operator*(const alg::Vec<T, 3>& lhs_, const S& rhs_) noexcept;
     template <typename T, typename S, typename Dim = type::arithmetic::div<T, S>>
     constexpr inline const alg::Vec<Dim, 3> operator/(const alg::Vec<T, 3>& lhs_, const S& rhs_) noexcept;
+    template <typename T, typename S, typename Dim = type::arithmetic::mult<T, S>>
+    constexpr inline const alg::Vec<Dim, 3> operator^(const alg::Vec<T, 3>& lhs_, const alg::Vec<T, 3>& rhs_) noexcept;
 
     //  -- Comparison --
     template <typename T>

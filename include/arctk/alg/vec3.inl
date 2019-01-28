@@ -219,6 +219,12 @@ namespace arc
         return (alg::Vec<Dim, 3>{lhs_.x / rhs_, lhs_.y / rhs_, lhs_.z / rhs_});
     }
 
+    template <typename T, typename S, typename Dim>
+    constexpr inline const alg::Vec<Dim, 3> operator^(const alg::Vec<T, 3>& lhs_, const alg::Vec<T, 3>& rhs_) noexcept
+    {
+        return (alg::Vec<Dim, 3>{(lhs_.y * rhs_.z) - (lhs_.z * rhs_.y), (lhs_.z * rhs_.x) - (lhs_.x * rhs_.z), (lhs_.x * rhs_.y) - (lhs_.y * rhs_.x)});
+    }
+
 
     //  -- Comparison --
     template <typename T>
