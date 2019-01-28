@@ -42,6 +42,22 @@ namespace arc
             //  -- Constructors --
             constexpr inline explicit Vec() noexcept;
             constexpr inline explicit Vec(const T& x_, const T& y_, const T& z_) noexcept;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Assignment --
+            constexpr inline const Vec& operator+=(const T& rhs_) noexcept;
+            constexpr inline const Vec& operator+=(const Vec& rhs_) noexcept;
+            constexpr inline const Vec& operator-=(const T& rhs_) noexcept;
+            constexpr inline const Vec& operator-=(const Vec& rhs_) noexcept;
+            constexpr inline const Vec& operator*=(const T& rhs_) noexcept;
+            constexpr inline const Vec& operator/=(const T& rhs_) noexcept;
+            constexpr inline const Vec& operator^=(const Vec& rhs_) noexcept;
+
+            //  -- Increment / Decrement --
+            constexpr inline const Vec& operator++() noexcept;
+            constexpr inline const Vec& operator--() noexcept;
         };
 
 

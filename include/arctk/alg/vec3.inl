@@ -26,9 +26,9 @@ namespace arc
         //  -- Constructors --
         template <typename T>
         constexpr inline Vec<T, 3>::Vec() noexcept
-          : x{0}
-          , y{0}
-          , z{0}
+          : x{}
+          , y{}
+          , z{}
         {
         }
 
@@ -38,6 +38,106 @@ namespace arc
           , y{y_}
           , z{z_}
         {
+        }
+
+
+
+        //  == OPERATORS ==
+        //  -- Assignment --
+        template <typename T>
+        constexpr inline const Vec<T, 3>& Vec<T, 3>::operator+=(const T& rhs_) noexcept
+        {
+            x += rhs_;
+            y += rhs_;
+            z += rhs_;
+
+            return (*this);
+        }
+
+        template <typename T>
+        constexpr inline const Vec<T, 3>& Vec<T, 3>::operator+=(const Vec& rhs_) noexcept
+        {
+            x += rhs_.x;
+            y += rhs_.y;
+            z += rhs_.z;
+
+            return (*this);
+        }
+
+        template <typename T>
+        constexpr inline const Vec<T, 3>& Vec<T, 3>::operator-=(const T& rhs_) noexcept
+        {
+            x -= rhs_;
+            y -= rhs_;
+            z -= rhs_;
+
+            return (*this);
+        }
+
+        template <typename T>
+        constexpr inline const Vec<T, 3>& Vec<T, 3>::operator-=(const Vec& rhs_) noexcept
+        {
+            x -= rhs_.x;
+            y -= rhs_.y;
+            z -= rhs_.z;
+
+            return (*this);
+        }
+
+        template <typename T>
+        constexpr inline const Vec<T, 3>& Vec<T, 3>::operator*=(const T& rhs_) noexcept
+        {
+            x *= rhs_;
+            y *= rhs_;
+            z *= rhs_;
+
+            return (*this);
+        }
+
+        template <typename T>
+        constexpr inline const Vec<T, 3>& Vec<T, 3>::operator/=(const T& rhs_) noexcept
+        {
+            x /= rhs_;
+            y /= rhs_;
+            z /= rhs_;
+
+            return (*this);
+        }
+
+        template <typename T>
+        constexpr inline const Vec<T, 3>& Vec<T, 3>::operator^=(const Vec& rhs_) noexcept
+        {
+            const T lhs_x{x};
+            const T lhs_y{y};
+            const T lhs_z{z};
+
+            x = (lhs_y * rhs_.z) - (lhs_z * rhs_.y);
+            y = (lhs_z * rhs_.x) - (lhs_x * rhs_.z);
+            z = (lhs_x * rhs_.y) - (lhs_y * rhs_.x);
+
+            return (*this);
+        }
+
+
+        //  -- Increment / Decrement --
+        template <typename T>
+        constexpr inline const Vec<T, 3>& Vec<T, 3>::operator++() noexcept
+        {
+            ++x;
+            ++y;
+            ++z;
+
+            return (*this);
+        }
+
+        template <typename T>
+        constexpr inline const Vec<T, 3>& Vec<T, 3>::operator--() noexcept
+        {
+            --x;
+            --y;
+            --z;
+
+            return (*this);
         }
 
 
