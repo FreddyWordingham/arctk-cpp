@@ -148,6 +148,48 @@ namespace arc
 
     //  == OPERATORS ==
     //  -- Arithmetic --
+    template <typename T>
+    constexpr inline const alg::Vec<T, 3> operator+(const alg::Vec<T, 3>& rhs_) noexcept
+    {
+        return (alg::Vec<T, 3>{+rhs_.x, +rhs_.y, +rhs_.z});
+    }
+
+    template <typename T>
+    constexpr inline const alg::Vec<T, 3> operator-(const alg::Vec<T, 3>& rhs_) noexcept
+    {
+        return (alg::Vec<T, 3>{-rhs_.x, -rhs_.y, -rhs_.z});
+    }
+
+    template <typename T, typename S, typename Dim>
+    constexpr inline const alg::Vec<Dim, 3> operator+(const alg::Vec<T, 3>& lhs_, const S& rhs_) noexcept
+    {
+        return (alg::Vec<Dim, 3>{lhs_.x + rhs_, lhs_.y + rhs_, lhs_.z + rhs_});
+    }
+
+    template <typename T, typename S, typename Dim>
+    constexpr inline const alg::Vec<Dim, 3> operator+(const alg::Vec<T, 3>& lhs_, const alg::Vec<S, 3>& rhs_) noexcept
+    {
+        return (alg::Vec<Dim, 3>{lhs_.x + rhs_.x, lhs_.y + rhs_.y, lhs_.z + rhs_.z});
+    }
+
+    template <typename T, typename S, typename Dim>
+    constexpr inline const alg::Vec<Dim, 3> operator-(const alg::Vec<T, 3>& lhs_, const S& rhs_) noexcept
+    {
+        return (alg::Vec<Dim, 3>{lhs_.x - rhs_, lhs_.y - rhs_, lhs_.z - rhs_});
+    }
+
+    template <typename T, typename S, typename Dim>
+    constexpr inline const alg::Vec<Dim, 3> operator-(const alg::Vec<T, 3>& lhs_, const alg::Vec<S, 3>& rhs_) noexcept
+    {
+        return (alg::Vec<Dim, 3>{lhs_.x - rhs_.x, lhs_.y - rhs_.y, lhs_.z - rhs_.z});
+    }
+
+    template <typename T, typename S, typename Dim>
+    constexpr inline const alg::Vec<Dim, 3> operator*(const alg::Vec<T, 3>& lhs_, const S& rhs_) noexcept
+    {
+        return (alg::Vec<Dim, 3>{lhs_.x * rhs_, lhs_.y * rhs_, lhs_.z * rhs_});
+    }
+
     template <typename T, typename S, typename Dim>
     constexpr inline const alg::Vec<Dim, 3> operator/(const alg::Vec<T, 3>& lhs_, const S& rhs_) noexcept
     {

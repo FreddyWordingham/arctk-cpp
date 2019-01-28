@@ -75,7 +75,21 @@ namespace arc
 
     //  == OPERATORS ==
     //  -- Arithmetic --
-    template <typename T, typename S, typename Dim = typename type::arithmetic::div<T, S>>
+    template <typename T>
+    constexpr inline const alg::Vec<T, 3> operator+(const alg::Vec<T, 3>& rhs_) noexcept;
+    template <typename T>
+    constexpr inline const alg::Vec<T, 3> operator-(const alg::Vec<T, 3>& rhs_) noexcept;
+    template <typename T, typename S, typename Dim = type::arithmetic::add<T, S>>
+    constexpr inline const alg::Vec<Dim, 3> operator+(const alg::Vec<T, 3>& lhs_, const S& rhs_) noexcept;
+    template <typename T, typename S, typename Dim = type::arithmetic::add<T, S>>
+    constexpr inline const alg::Vec<Dim, 3> operator+(const alg::Vec<T, 3>& lhs_, const alg::Vec<S, 3>& rhs_) noexcept;
+    template <typename T, typename S, typename Dim = type::arithmetic::sub<T, S>>
+    constexpr inline const alg::Vec<Dim, 3> operator-(const alg::Vec<T, 3>& lhs_, const S& rhs_) noexcept;
+    template <typename T, typename S, typename Dim = type::arithmetic::sub<T, S>>
+    constexpr inline const alg::Vec<Dim, 3> operator-(const alg::Vec<T, 3>& lhs_, const alg::Vec<S, 3>& rhs_) noexcept;
+    template <typename T, typename S, typename Dim = type::arithmetic::mult<T, S>>
+    constexpr inline const alg::Vec<Dim, 3> operator*(const alg::Vec<T, 3>& lhs_, const S& rhs_) noexcept;
+    template <typename T, typename S, typename Dim = type::arithmetic::div<T, S>>
     constexpr inline const alg::Vec<Dim, 3> operator/(const alg::Vec<T, 3>& lhs_, const S& rhs_) noexcept;
 
 
