@@ -14,6 +14,9 @@
 #include <arctk/si/dimension.hpp>
 #include <arctk/type/arithmetic.hpp>
 
+//  -- Std --
+#include <cstddef>
+
 
 
 //  == NAMESPACE ==

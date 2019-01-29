@@ -20,9 +20,7 @@ namespace arc
         //  == CLASSES ==
         //  -- Vec --
         template <typename T, std::size_t N>
-        class Vec
-        {
-        };
+        class Vec;
 
 
 
