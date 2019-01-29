@@ -50,6 +50,14 @@ namespace arc
         //  -- Tests --
         inline void comparison() noexcept
         {
+            const std::array<int, 4> arr_0{1, 2, -4, 5};
+            const std::array<int, 4> arr_1{1, 2, -4, 5};
+            const std::array<int, 4> arr_2{4, -7, 3, 0};
+
+            assert(arr_0 == arr_1);
+            assert(!(arr_0 != arr_1));
+            assert(arr_0 != arr_2);
+            assert(!(arr_0 == arr_2));
         }
 
 

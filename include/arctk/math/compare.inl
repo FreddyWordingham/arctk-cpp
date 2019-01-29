@@ -49,6 +49,7 @@ namespace arc
 
 
 
+    //  == OPERATORS ==
     //  -- Comparison --
     template <typename T>
     constexpr inline bool operator==(const T& lhs_, const T& rhs_) noexcept
@@ -60,6 +61,62 @@ namespace arc
     constexpr inline bool operator!=(const T& lhs_, const T& rhs_) noexcept
     {
         return (!(lhs_ == rhs_));
+    }
+
+    template <typename T>
+    constexpr inline bool operator<(const T& lhs_, const T& rhs_) noexcept
+    {
+        for (auto [l, r] : (lhs_, rhs_))
+        {
+            if (l >= r)
+            {
+                return (false);
+            }
+        }
+
+        return (true);
+    }
+
+    template <typename T>
+    constexpr inline bool operator>(const T& lhs_, const T& rhs_) noexcept
+    {
+        for (auto [l, r] : (lhs_, rhs_))
+        {
+            if (l <= r)
+            {
+                return (false);
+            }
+        }
+
+        return (true);
+    }
+
+    template <typename T>
+    constexpr inline bool operator<=(const T& lhs_, const T& rhs_) noexcept
+    {
+        for (auto [l, r] : (lhs_, rhs_))
+        {
+            if (l > r)
+            {
+                return (false);
+            }
+        }
+
+        return (true);
+    }
+
+    template <typename T>
+    constexpr inline bool operator>=(const T& lhs_, const T& rhs_) noexcept
+    {
+        for (auto [l, r] : (lhs_, rhs_))
+        {
+            if (l < r)
+            {
+                return (false);
+            }
+        }
+
+        return (true);
     }
 
 

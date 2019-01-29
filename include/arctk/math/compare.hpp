@@ -36,6 +36,14 @@ namespace arc
     constexpr inline bool operator==(const T& lhs_, const T& rhs_) noexcept;
     template <typename T>
     constexpr inline bool operator!=(const T& lhs_, const T& rhs_) noexcept;
+    template <typename T>
+    constexpr inline bool operator<(const T& lhs_, const T& rhs_) noexcept;
+    template <typename T>
+    constexpr inline bool operator>(const T& lhs_, const T& rhs_) noexcept;
+    template <typename T>
+    constexpr inline bool operator<=(const T& lhs_, const T& rhs_) noexcept;
+    template <typename T>
+    constexpr inline bool operator>=(const T& lhs_, const T& rhs_) noexcept;
 
 
 
