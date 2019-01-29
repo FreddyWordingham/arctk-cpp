@@ -3,7 +3,9 @@
 #include <arctk/math/arithmetic.inl>
 
 //  -- Std --
+#include <array>
 #include <cassert>
+#include <vector>
 
 
 
@@ -17,6 +19,7 @@ namespace arc
 
         //  == FUNCTION PROTOTYPES ==
         //  -- Tests --
+        inline void comparison() noexcept;
 
 
 
@@ -28,6 +31,8 @@ namespace arc
 //  == MAIN ==
 int main()
 {
+    arc::test::comparison();
+
     return (0);
 }
 
@@ -43,6 +48,9 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Tests --
+        inline void comparison() noexcept
+        {
+        }
 
 
 

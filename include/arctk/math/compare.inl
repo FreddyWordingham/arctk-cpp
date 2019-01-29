@@ -8,8 +8,10 @@
 #include <arctk/math/compare.hpp>
 
 //  -- Std --
+#include <algorithm>
 #include <cassert>
 #include <cmath>
+#include <iterator>
 
 
 
@@ -44,4 +46,22 @@ namespace arc
 
 
     } // namespace math
+
+
+
+    //  -- Comparison --
+    template <typename T>
+    constexpr inline bool operator==(const T& lhs_, const T& rhs_) noexcept
+    {
+        return (std::equal(std::begin(lhs_), std::end(lhs_), std::begin(rhs_), std::end(rhs_)));
+    }
+
+    template <typename T>
+    constexpr inline bool operator!=(const T& lhs_, const T& rhs_) noexcept
+    {
+        return (!(lhs_ == rhs_));
+    }
+
+
+
 } // namespace arc
