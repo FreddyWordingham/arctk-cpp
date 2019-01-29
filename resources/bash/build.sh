@@ -86,74 +86,28 @@ arctk.test()
     cd - > /dev/null
 }
 
-arctk.cover.gen()
-{
-    cd $ARCTK_DIR/bin/test > /dev/null
 
-    rm -r coverage/ > /dev/null
-
-    for test in *; do
-        if [ -f "$test" ]; then
-            printf "Generating coverage data of $test\n"
-
-            LLVM_PROFILE_FILE="./coverage/$test.profraw" ./"$test" > /dev/null
-        fi
-    done
-
-    llvm-profdata merge coverage/*.profraw -o coverage/complete.profdata
-
-    cd - > /dev/null
-}
-
-arctk.cover.view()
-{
-    if [[ "$#" > "2" ]]; then
-        printf "Error! Incorrect number of arguments. ($#)\n"
-        printf "arctk_build (<unit_test_name> (text|html))\n"
-
-        return
-    fi
-
-    cd $ARCTK_DIR/bin/test > /dev/null
-
-    if [ "$#" == "0" ]; then
-        for test in *; do
-            if [ -f "$test" ]; then
-                printf "%s\t$test\n" "$(llvm-cov report $test -instr-profile=coverage/complete.profdata -format=text | tail -1 | awk '{print $4}')"
-            fi
-        done
-    elif [ "$#" == "1" ]; then
-        llvm-cov report $1 -instr-profile=coverage/complete.profdata
-    else
-        if [ "$2" == "text" ]; then
-            llvm-cov show $1 -Xdemangler c++filt -Xdemangler -n -instr-profile=coverage/complete.profdata -format=text
-        elif [ "$2" == "html" ]; then
-            llvm-cov show $1 -Xdemangler c++filt -Xdemangler -n -instr-profile=coverage/complete.profdata -format=html | bcat
-        else
-            printf "Unknonw render type: $2.\n"
-        fi
-    fi
-
-    cd - > /dev/null
-}
-
+#   -- Coverage --
 arctk.cover()
 {
-    cd $ARCTK_DIR/bin/test > /dev/null
+    cd $ARCTK_DIR > /dev/null
 
-    for test in *; do
-        if [ -f "$test" ]; then
-            rm -r coverage/ > /dev/null
+    rm -r documentation/coverage
+    mkdir documentation/coverage
 
-            printf "Generating coverage data of $test\n"
-            LLVM_PROFILE_FILE="./coverage/$test.profraw" ./"$test" > /dev/null
-            llvm-profdata merge coverage/$test.profraw -o coverage/complete.profdata
+    gcovr
 
-            llvm-cov report $test -instr-profile=coverage/complete.profdata -format=text
+    cd - > /dev/null
+}
 
-            printf "*******\n\n\n"
-        fi
-    done
+arctk.cover.doc()
+{
+    cd $ARCTK_DIR > /dev/null
+
+    rm -r documentation/coverage
+    mkdir documentation/coverage
+
+    gcovr --html --html-details -o documentation/coverage/cover.html
 
     cd - > /dev/null
 }
