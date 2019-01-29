@@ -137,6 +137,27 @@ arctk.cover.view()
     cd - > /dev/null
 }
 
+arctk.cover()
+{
+    cd $ARCTK_DIR/bin/test > /dev/null
+
+    for test in *; do
+        if [ -f "$test" ]; then
+            rm -r coverage/ > /dev/null
+
+            printf "Generating coverage data of $test\n"
+            LLVM_PROFILE_FILE="./coverage/$test.profraw" ./"$test" > /dev/null
+            llvm-profdata merge coverage/$test.profraw -o coverage/complete.profdata
+
+            llvm-cov report $test -instr-profile=coverage/complete.profdata -format=text
+
+            printf "*******\n\n\n"
+        fi
+    done
+
+    cd - > /dev/null
+}
+
 
 #   -- Installation --
 arctk.install()

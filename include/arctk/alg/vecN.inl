@@ -11,7 +11,7 @@
 
 //  == IMPORTS ==
 //  -- Arc --
-#include <arctk/math/compare.hpp>
+#include <arctk/math/compare.inl>
 
 //  -- Std --
 #include <algorithm>

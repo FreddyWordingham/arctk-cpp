@@ -19,7 +19,6 @@ namespace arc
         //  == FUNCTION PROTOTYPES ==
         //  -- Tests --
         inline void instantiation() noexcept;
-        inline void arithmetic() noexcept;
 
 
 
@@ -32,7 +31,6 @@ namespace arc
 int main()
 {
     arc::test::instantiation();
-    arc::test::arithmetic();
 
     return (0);
 }
@@ -58,10 +56,6 @@ namespace arc
             alg::Vec2<double> vec_1{-1.0, -0.4};
             assert(math::equal(vec_1.x, -1.0));
             assert(math::equal(vec_1.y, -0.4));
-        }
-
-        inline void arithmetic() noexcept
-        {
         }
 
 

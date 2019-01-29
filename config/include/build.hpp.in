@@ -19,7 +19,7 @@ namespace arc
         constexpr const char* const COMPILER{"@ARCTK_COMPILER@"};
         constexpr const char* const TYPE{"@ARCTK_TYPE@"};
         constexpr const char* const DATE{"@ARCTK_DATE@"};
-
+        inline void foo() noexcept;
 
 
     } // namespace config
