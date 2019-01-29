@@ -263,25 +263,25 @@ namespace arc
     template <typename T>
     constexpr inline bool operator<(const alg::Vec<T, 3>& lhs_, const alg::Vec<T, 3>& rhs_) noexcept
     {
-        return (lhs_.mag() < rhs_.mag());
+        return ((lhs_.x < rhs_.x) && (lhs_.y < rhs_.y) && (lhs_.z < rhs_.z));
     }
 
     template <typename T>
     constexpr inline bool operator>(const alg::Vec<T, 3>& lhs_, const alg::Vec<T, 3>& rhs_) noexcept
     {
-        return (lhs_.mag() > rhs_.mag());
+        return ((lhs_.x > rhs_.x) && (lhs_.y > rhs_.y) && (lhs_.z > rhs_.z));
     }
 
     template <typename T>
     constexpr inline bool operator<=(const alg::Vec<T, 3>& lhs_, const alg::Vec<T, 3>& rhs_) noexcept
     {
-        return (lhs_.mag() <= rhs_.mag());
+        return ((lhs_.x <= rhs_.x) && (lhs_.y <= rhs_.y) && (lhs_.z <= rhs_.z));
     }
 
     template <typename T>
     constexpr inline bool operator>=(const alg::Vec<T, 3>& lhs_, const alg::Vec<T, 3>& rhs_) noexcept
     {
-        return (lhs_.mag() >= rhs_.mag());
+        return ((lhs_.x >= rhs_.x) && (lhs_.y >= rhs_.y) && (lhs_.z >= rhs_.z));
     }
 
 
