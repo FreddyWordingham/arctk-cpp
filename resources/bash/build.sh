@@ -90,24 +90,18 @@ arctk.test()
 #   -- Coverage --
 arctk.cover()
 {
-    cd $ARCTK_DIR > /dev/null
+    rm -r $ARCTK_DIR/temp/coverage
+    mkdir $ARCTK_DIR/temp
+    mkdir $ARCTK_DIR/temp/coverage
 
-    rm -r documentation/coverage
-    mkdir documentation/coverage
+    cd $ARCTK_DIR/temp/coverage > /dev/null
 
-    gcovr
+    find ../../build/CMakeFiles -name "*.gcda" -exec mv {} . \;
+    find ../../build/CMakeFiles -name "*.gcno" -exec mv {} . \;
 
-    cd - > /dev/null
-}
+    lcov --capture --directory . --output-file coverage.info
 
-arctk.cover.doc()
-{
-    cd $ARCTK_DIR > /dev/null
-
-    rm -r documentation/coverage
-    mkdir documentation/coverage
-
-    gcovr --html --html-details -o documentation/coverage/cover.html
+    genhtml coverage.info --output-directory $ARCTK_DIR/docs/coverage
 
     cd - > /dev/null
 }
