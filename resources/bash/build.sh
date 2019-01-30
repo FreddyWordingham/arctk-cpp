@@ -116,22 +116,32 @@ arctk.cover.view()
 {
     cd $ARCTK_DIR/bin/test > /dev/null
 
-    if [ "$#" != "1" ]; then
+    if [ "$#" == "0" ]; then
         for test in *; do
             if [ -f "$test" ]; then
-                llvm-cov report ./$test -instr-profile=$ARCTK_DIR/docs/coverage/$test.profdata
+                filename=${test#unit_}
+                filename=${filename%_test}
+                filename=${filename//_//}
+                # llvm-cov report ./$test -instr-profile=$ARCTK_DIR/docs/coverage/$test.profdata
+                printf "$test\t"
+                llvm-cov report ./$test -instr-profile=$ARCTK_DIR/docs/coverage/$test.profdata | grep $filename | awk '{print $4}' | tr "\n" "\t"
                 printf "\n"
             fi
         done
-    elif [ "$1" == show ]; then
-       llvm-cov $1 ./$2 -instr-profile=$ARCTK_DIR/docs/coverage/$2.profdata -format=html | bcat
-        # llvm-cov $1 ./$2 -instr-profile=$ARCTK_DIR/docs/coverage/COMPLETE.profdata -format=html | bcat
+    elif [ "$#" == "1" ]; then
+       llvm-cov report ./$1 -instr-profile=$ARCTK_DIR/docs/coverage/$1.profdata
+        # llvm-cov report ./$1 -instr-profile=$ARCTK_DIR/docs/coverage/COMPLETE.profdata
     else
-       llvm-cov $1 ./$2 -instr-profile=$ARCTK_DIR/docs/coverage/$2.profdata
-        # llvm-cov $1 ./$2 -instr-profile=$ARCTK_DIR/docs/coverage/COMPLETE.profdata
+       llvm-cov show ./$1 -instr-profile=$ARCTK_DIR/docs/coverage/$1.profdata -format=html | bcat
+        # llvm-cov show ./$1 -instr-profile=$ARCTK_DIR/docs/coverage/COMPLETE.profdata -format=html | bcat
     fi
  
     cd - > /dev/null
+}
+
+arctk.cover.table()
+{
+    arctk.cover.view | column -t
 }
 
 
