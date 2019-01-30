@@ -90,6 +90,17 @@ arctk.test()
 
 
 #   -- Coverage --
+arctk.doc()
+{
+    cd $ARCTK_DIR/build > /dev/null
+
+    make doc
+
+    cd - > /dev/null
+}
+
+
+#   -- Coverage --
 arctk.cover.gen()
 {
     cd $ARCTK_DIR/bin/test > /dev/null
