@@ -70,6 +70,10 @@ set(CONFIG_VERSION_IMPLEMENTATION_IN ${CMAKE_SOURCE_DIR}/config/include/version.
 set(CONFIG_VERSION_IMPLEMENTATION ${CMAKE_SOURCE_DIR}/include/arctk/config/version.inl)
 configure_file(${CONFIG_VERSION_IMPLEMENTATION_IN} ${CONFIG_VERSION_IMPLEMENTATION} @ONLY)
 
+set(DOXYFILE_IN ${CMAKE_SOURCE_DIR}/config/docs/Doxyfile.in)
+set(DOXYFILE ${CMAKE_SOURCE_DIR}/build/docs/Doxyfile)
+configure_file(${DOXYFILE_IN} ${DOXYFILE} @ONLY)
+
 
 
 #   == OPTIONS ==
@@ -85,6 +89,19 @@ if (IWYU)
 endif ()
 message("IWYU: ${IWYU}")
 
+if (DOCUMENT)
+    find_package(Doxygen)
+    if (NOT DOXYGEN_FOUND)
+        message(FATAL_ERROR "Doxygen is required to build the wiki.")
+    endif ()
+
+    add_custom_target(doc
+        COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE}
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/build/docs
+        COMMENT "Generating API documentation with Doxygen."
+        VERBATIM)
+endif ()
+message("Document: ${DOCUMENT}")
 
 
 #   == SOURCE CODE ==
