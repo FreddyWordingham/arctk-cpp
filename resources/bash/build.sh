@@ -94,21 +94,19 @@ arctk.cover.gen()
 {
     cd $ARCTK_DIR/bin/test > /dev/null
 
-    rm -r $ARCTK_DIR/docs/coverage
-    mkdir $ARCTK_DIR/docs
-    mkdir $ARCTK_DIR/docs/coverage
+    rm $ARCTK_DIR/build/coverage/*
 
     for test in *; do
         if [ -f "$test" ]; then
             printf "Generating coverage report for test: $test\n"
             ./$test
-            llvm-profdata merge default.profraw -o $ARCTK_DIR/docs/coverage/$test.profdata
+            llvm-profdata merge default.profraw -o $ARCTK_DIR/build/coverage/$test.profdata
             rm default.profraw
         fi
     done
 
-    list=$(ls $ARCTK_DIR/docs/coverage/*.profdata)
-    llvm-profdata merge $list -o $ARCTK_DIR/docs/coverage/COMPLETE.profdata
+    list=$(ls $ARCTK_DIR/build/coverage/*.profdata)
+    llvm-profdata merge $list -o $ARCTK_DIR/build/coverage/COMPLETE.profdata
 
     cd - > /dev/null
 }
@@ -123,18 +121,18 @@ arctk.cover.view()
                 filename=${test#unit_}
                 filename=${filename%_test}
                 filename=${filename//_//}
-                # llvm-cov report ./$test -instr-profile=$ARCTK_DIR/docs/coverage/$test.profdata
+                # llvm-cov report ./$test -instr-profile=$ARCTK_DIR/build/coverage/$test.profdata
                 printf "$test\t"
-                llvm-cov report ./$test -instr-profile=$ARCTK_DIR/docs/coverage/$test.profdata | grep $filename | awk '{print $4}' | tr "\n" "\t"
+                llvm-cov report ./$test -instr-profile=$ARCTK_DIR/build/coverage/$test.profdata | grep $filename | awk '{print $4}' | tr "\n" "\t"
                 printf "\n"
             fi
         done
     elif [ "$#" == "1" ]; then
-       llvm-cov report ./$1 -instr-profile=$ARCTK_DIR/docs/coverage/$1.profdata
-        # llvm-cov report ./$1 -instr-profile=$ARCTK_DIR/docs/coverage/COMPLETE.profdata
+       llvm-cov report ./$1 -instr-profile=$ARCTK_DIR/build/coverage/$1.profdata
+        # llvm-cov report ./$1 -instr-profile=$ARCTK_DIR/build/coverage/COMPLETE.profdata
     else
-       llvm-cov show ./$1 -instr-profile=$ARCTK_DIR/docs/coverage/$1.profdata -format=html | bcat
-        # llvm-cov show ./$1 -instr-profile=$ARCTK_DIR/docs/coverage/COMPLETE.profdata -format=html | bcat
+       llvm-cov show ./$1 -instr-profile=$ARCTK_DIR/build/coverage/$1.profdata -format=html | bcat
+        # llvm-cov show ./$1 -instr-profile=$ARCTK_DIR/build/coverage/COMPLETE.profdata -format=html | bcat
     fi
  
     cd - > /dev/null

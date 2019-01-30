@@ -135,6 +135,7 @@ elseif (CMAKE_BUILD_TYPE MATCHES "cover")
         -fprofile-arcs                      \
         -ftest-coverage                     \
     ")
+    file(MAKE_DIRECTORY "${CMAKE_SOURCE_DIR}/build/coverage")
 elseif (CMAKE_BUILD_TYPE MATCHES "release")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
         -DNDEBUG                            \
