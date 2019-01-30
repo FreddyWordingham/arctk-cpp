@@ -96,6 +96,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 if (CMAKE_BUILD_TYPE MATCHES "debug")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
+        -g3                                 \
         -DDEBUG                             \
         -O0                                 \
     ")
@@ -104,11 +105,14 @@ elseif (CMAKE_BUILD_TYPE MATCHES "cover")
         message(FATAL_ERROR "Cover build type only avalible under clang compiler.")
     endif ()
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
+        -g3                                 \
         -DDEBUG                             \
         -O0                                 \
         -fprofile-arcs                      \
         -ftest-coverage                     \
     ")
+    set(CMAKE_C_OUTPUT_EXTENSION_REPLACE 1)
+    set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE 1)
 elseif (CMAKE_BUILD_TYPE MATCHES "release")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
         -DNDEBUG                            \
@@ -157,9 +161,9 @@ if (UNIT_TESTING)
 
     enable_testing()
 
-    message("Tests: ${TEST_SOURCE_FILES}")
-
     foreach(loop_var ${TEST_SOURCE_FILES})
+
+        message("Creating test from: ${loop_var}")
 
         set(NAME ${loop_var})
         STRING(REGEX REPLACE "${CMAKE_SOURCE_DIR}/testing/" "" NAME ${NAME})

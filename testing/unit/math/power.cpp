@@ -31,7 +31,7 @@ namespace arc
 //  == MAIN ==
 int main()
 {
-    // arc::test::square();
+    arc::test::square();
     arc::test::cube();
 
     return (0);
