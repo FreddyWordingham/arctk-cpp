@@ -31,14 +31,14 @@ arctk.build()
         return
     fi
 
-    if [ "$#" != "5" ]; then
+    if [ "$#" != "6" ]; then
         printf "Error! Incorrect number of arguments. ($#)\n"
-        printf "arctk.build <build_type> <C compiler> <C++ compiler> <unit testing> <clang-tidy>\n"
+        printf "arctk.build <build_type> <C compiler> <C++ compiler> <unit testing> <clang-tidy> <iwyu>\n"
 
         return
     fi
 
-    ARCTK_BUILD_ARGS="$1 $2 $3 $4 $5"
+    ARCTK_BUILD_ARGS="$1 $2 $3 $4 $5 $6"
     printf "export ARCTK_BUILD_ARGS='$ARCTK_BUILD_ARGS'" > $ARCTK_DIR/.build
 
     arctk.clean
@@ -47,11 +47,12 @@ arctk.build()
     cd $ARCTK_DIR/build > /dev/null
 
     cmake -j 8 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
-        -DCMAKE_BUILD_TYPE=$1 \
-        -DCMAKE_C_COMPILER=$2 \
-        -DCMAKE_CXX_COMPILER=$3 \
-        -DUNIT_TESTING=$4 \
-        -DCLANG_TIDY=$5 \
+        -DCMAKE_BUILD_TYPE=$1                     \
+        -DCMAKE_C_COMPILER=$2                     \
+        -DCMAKE_CXX_COMPILER=$3                   \
+        -DUNIT_TESTING=$4                         \
+        -DCLANG_TIDY=$5                           \
+        -DIWYU=$6                                 \
         ..
 
     local cmake_build_status=$?
@@ -142,6 +143,17 @@ arctk.cover.view()
 arctk.cover.table()
 {
     arctk.cover.view | column -t
+}
+
+
+#   -- Imports --
+arctk.import()
+{
+    cd $ARCTK_DIR > /dev/null
+
+    iwyu_tool.py -p build/compile_commands.json
+
+    cd - > /dev/null
 }
 
 

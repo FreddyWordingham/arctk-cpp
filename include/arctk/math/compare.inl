@@ -43,11 +43,6 @@ namespace arc
             return (std::abs(x_ - y_) <= (std::abs(x_) < std::abs(y_) ? std::abs(y_) : std::abs(x_)) * epsilon_);
         }
 
-        constexpr inline bool foo(double x_, double y_, double epsilon_) noexcept
-        {
-            return (false);
-        }
-
 
 
     } // namespace math
