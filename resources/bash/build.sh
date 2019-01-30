@@ -90,12 +90,16 @@ arctk.test()
 }
 
 
-#   -- Coverage --
+#   -- Documentation --
 arctk.doc()
 {
     cd $ARCTK_DIR/build > /dev/null
 
     make doc
+
+    mv docs/ ..
+
+    open ../docs/html/index.html
 
     cd - > /dev/null
 }
