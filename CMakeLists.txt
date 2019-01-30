@@ -96,7 +96,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 if (CMAKE_BUILD_TYPE MATCHES "debug")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
-        -g3                                 \
+        -g                                  \
         -DDEBUG                             \
         -O0                                 \
     ")
@@ -105,14 +105,18 @@ elseif (CMAKE_BUILD_TYPE MATCHES "cover")
         message(FATAL_ERROR "Cover build type only avalible under clang compiler.")
     endif ()
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
-        -g3                                 \
+        -g                                  \
         -DDEBUG                             \
         -O0                                 \
+        -fprofile-instr-generate            \
+        -fcoverage-mapping                  \
         -fprofile-arcs                      \
         -ftest-coverage                     \
+        --coverage                          \
     ")
-    set(CMAKE_C_OUTPUT_EXTENSION_REPLACE 1)
-    set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE 1)
+    SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} \
+        --coverage                                        \
+    ")
 elseif (CMAKE_BUILD_TYPE MATCHES "release")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
         -DNDEBUG                            \

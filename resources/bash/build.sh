@@ -33,7 +33,7 @@ arctk.build()
 
     if [ "$#" != "5" ]; then
         printf "Error! Incorrect number of arguments. ($#)\n"
-        printf "arctk_build <build_type> <C compiler> <C++ compiler> <unit testing> <clang-tidy>\n"
+        printf "arctk.build <build_type> <C compiler> <C++ compiler> <unit testing> <clang-tidy>\n"
 
         return
     fi
@@ -89,21 +89,48 @@ arctk.test()
 
 
 #   -- Coverage --
-arctk.cover()
+arctk.cover.gen()
 {
-    rm -r $ARCTK_DIR/temp/coverage
-    mkdir $ARCTK_DIR/temp
-    mkdir $ARCTK_DIR/temp/coverage
+    cd $ARCTK_DIR/bin/test > /dev/null
 
-    cd $ARCTK_DIR/temp/coverage > /dev/null
+    rm -r $ARCTK_DIR/docs/coverage
+    mkdir $ARCTK_DIR/docs
+    mkdir $ARCTK_DIR/docs/coverage
 
-    find ../../build/CMakeFiles -name "*.gcda" -exec mv {} . \;
-    find ../../build/CMakeFiles -name "*.gcno" -exec mv {} . \;
+    for test in *; do
+        if [ -f "$test" ]; then
+            printf "Generating coverage report for test: $test\n"
+            ./$test
+            llvm-profdata merge default.profraw -o $ARCTK_DIR/docs/coverage/$test.profdata
+            rm default.profraw
+        fi
+    done
 
-    lcov --capture --directory . --output-file coverage.info
+    list=$(ls $ARCTK_DIR/docs/coverage/*.profdata)
+    llvm-profdata merge $list -o $ARCTK_DIR/docs/coverage/COMPLETE.profdata
 
-    genhtml coverage.info --output-directory $ARCTK_DIR/docs/coverage
+    cd - > /dev/null
+}
 
+arctk.cover.view()
+{
+    cd $ARCTK_DIR/bin/test > /dev/null
+
+    if [ "$#" != "1" ]; then
+        for test in *; do
+            if [ -f "$test" ]; then
+                llvm-cov report ./$test -instr-profile=$ARCTK_DIR/docs/coverage/$test.profdata
+                printf "\n"
+            fi
+        done
+    elif [ "$1" == show ]; then
+       llvm-cov $1 ./$2 -instr-profile=$ARCTK_DIR/docs/coverage/$2.profdata -format=html | bcat
+        # llvm-cov $1 ./$2 -instr-profile=$ARCTK_DIR/docs/coverage/COMPLETE.profdata -format=html | bcat
+    else
+       llvm-cov $1 ./$2 -instr-profile=$ARCTK_DIR/docs/coverage/$2.profdata
+        # llvm-cov $1 ./$2 -instr-profile=$ARCTK_DIR/docs/coverage/COMPLETE.profdata
+    fi
+ 
     cd - > /dev/null
 }
 
