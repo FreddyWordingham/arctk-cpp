@@ -138,7 +138,7 @@ arctk.cover.view()
     cd - > /dev/null
 }
 
-arctk.cover.table()
+arctk.cover.view.tab()
 {
     arctk.cover.view | column -t
 }
