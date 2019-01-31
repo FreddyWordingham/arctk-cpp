@@ -85,7 +85,7 @@ endif ()
 message("Clang-Tidy: ${CLANG_TIDY}")
 
 if (IWYU)
-    set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE "include-what-you-use --no_fwd_decls")
+    set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE "include-what-you-use;-Xiwyu;--no_fwd_decls")
 endif ()
 message("IWYU: ${IWYU}")
 
