@@ -166,6 +166,7 @@ arctk.import()
     cd $ARCTK_DIR > /dev/null
 
     iwyu_tool.py -p build/compile_commands.json
+    # iwyu_tool.py -p build/compile_commands.json -- --no_fwd_decls
 
     cd - > /dev/null
 }
