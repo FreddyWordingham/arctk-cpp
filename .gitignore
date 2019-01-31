@@ -5,6 +5,7 @@
 
 #   == BUILD ==
 #   -- Files --
+.build
 /build
 
 #   -- Temporary --

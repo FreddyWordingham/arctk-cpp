@@ -1,1 +1,0 @@
-export ARCTK_BUILD_ARGS='cover clang clang++ true false true false'
