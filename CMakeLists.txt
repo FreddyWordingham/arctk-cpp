@@ -197,7 +197,7 @@ if (UNIT_TESTING)
         set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/test)
         add_executable(${NAME} ${loop_var})
 
-        target_include_directories(${NAME} SYSTEM PUBLIC ${CMAKE_SOURCE_DIR}/include)
+        target_include_directories(${NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
         target_link_libraries(${NAME} c++fs)
 
