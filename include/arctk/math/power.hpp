@@ -24,10 +24,6 @@ namespace arc
         template <typename T, typename R = decltype(std::declval<T>() * std::declval<T>() * std::declval<T>())>
         constexpr inline R cube(const T& x_) noexcept;
 
-        //  -- Power --
-        template <typename T>
-        constexpr inline T pow(const T& x_, int power_) noexcept;
-
 
 
     } // namespace math
