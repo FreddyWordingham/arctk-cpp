@@ -116,13 +116,13 @@ arctk.cover.gen()
         if [ -f "$test" ]; then
             printf "Generating coverage report for test: $test\n"
             ./$test
-            llvm-profdata merge default.profraw -o $ARCTK_DIR/build/coverage/$test.profdata
+            llvm-profdata merge -sparse default.profraw -o $ARCTK_DIR/build/coverage/$test.profdata
             rm default.profraw
         fi
     done
 
     list=$(ls $ARCTK_DIR/build/coverage/*.profdata)
-    llvm-profdata merge $list -o $ARCTK_DIR/build/coverage/COMPLETE.profdata
+    llvm-profdata merge -sparse $list -o $ARCTK_DIR/build/coverage/COMPLETE.profdata
 
     cd - > /dev/null
 }
@@ -147,8 +147,8 @@ arctk.cover.view()
        llvm-cov report ./$1 -instr-profile=$ARCTK_DIR/build/coverage/$1.profdata
         # llvm-cov report ./$1 -instr-profile=$ARCTK_DIR/build/coverage/COMPLETE.profdata
     else
-       llvm-cov show ./$1 -instr-profile=$ARCTK_DIR/build/coverage/$1.profdata -format=html -Xdemangler c++filt -Xdemangler -n | bcat
-        # llvm-cov show ./$1 -instr-profile=$ARCTK_DIR/build/coverage/COMPLETE.profdata -format=html -Xdemangler c++filt -Xdemangler -n | bcat
+       llvm-cov show ./$1 -instr-profile=$ARCTK_DIR/build/coverage/$1.profdata -format=html -Xdemangler c++filt -Xdemangler -n -show-line-counts-or-regions | bcat
+        # llvm-cov show ./$1 -instr-profile=$ARCTK_DIR/build/coverage/COMPLETE.profdata -format=html -Xdemangler c++filt -Xdemangler -n -show-line-counts-or-regions | bcat
     fi
  
     cd - > /dev/null

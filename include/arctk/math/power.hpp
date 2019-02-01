@@ -5,6 +5,8 @@
 
 //  == IMPORTS ==
 //  -- Arc --
+#include <type_traits>
+// #include "arctk/type/arithmetic.hpp"
 
 
 
@@ -18,14 +20,14 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Integral --
-        template <typename T, typename R = type::arithmetic::mult<T, T>>
+        template <typename T, typename R = decltype(std::declval<T>() * std::declval<T>())>
         constexpr inline R sq(const T& x_) noexcept;
-        template <typename T, typename R = type::arithmetic::mult<type::arithmetic::mult<T, T>, T>>
+        template <typename T, typename R = decltype(std::declval<T>() * std::declval<T>() * std::declval<T>())>
         constexpr inline R cube(const T& x_) noexcept;
 
         //  -- Power --
         template <typename T>
-        constexpr inline T pow(const T& x_, const int power_) noexcept;
+        constexpr inline T pow(const T& x_, int power_) noexcept;
 
 
 
