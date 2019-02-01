@@ -5,7 +5,7 @@
 
 //  == DECLARATIONS ==
 //  -- Arc --
-#include <arctk/@HEADER_PATH@>
+#include "arctk/@HEADER_PATH@"
 
 
 

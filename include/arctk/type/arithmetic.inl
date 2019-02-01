@@ -5,4 +5,4 @@
 
 //  == DECLARATIONS ==
 //  -- Arc --
-#include <arctk/arc/type/arithmetic.hpp>
+#include "arctk/type/arithmetic.hpp" // IWYU pragma: export
