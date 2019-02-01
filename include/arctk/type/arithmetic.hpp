@@ -25,13 +25,13 @@ namespace arc
           public:
             //  -- Operations --
             template <typename TL, typename TR>
-            using add = decltype(std::declval<TL>() + std::declval<TR>());
+            using Add = decltype(std::declval<TL>() + std::declval<TR>());
             template <typename TL, typename TR>
-            using sub = decltype(std::declval<TL>() - std::declval<TR>());
+            using Sub = decltype(std::declval<TL>() - std::declval<TR>());
             template <typename TL, typename TR>
-            using mult = decltype(std::declval<TL>() * std::declval<TR>());
+            using Mult = decltype(std::declval<TL>() * std::declval<TR>());
             template <typename TL, typename TR>
-            using div = decltype(std::declval<TL>() / std::declval<TR>());
+            using Div = decltype(std::declval<TL>() / std::declval<TR>());
         };
 
 

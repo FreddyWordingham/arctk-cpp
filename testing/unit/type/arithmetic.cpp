@@ -54,10 +54,10 @@ namespace arc
         template <typename TL, typename TR, typename ADD, typename SUB, typename MULT, typename DIV>
         inline void set() noexcept
         {
-            static_assert(std::is_same<type::arithmetic::add<TL, TR>, ADD>::value);
-            static_assert(std::is_same<type::arithmetic::sub<TL, TR>, SUB>::value);
-            static_assert(std::is_same<type::arithmetic::mult<TL, TR>, MULT>::value);
-            static_assert(std::is_same<type::arithmetic::div<TL, TR>, DIV>::value);
+            static_assert(std::is_same<type::arithmetic::Add<TL, TR>, ADD>::value);
+            static_assert(std::is_same<type::arithmetic::Sub<TL, TR>, SUB>::value);
+            static_assert(std::is_same<type::arithmetic::Mult<TL, TR>, MULT>::value);
+            static_assert(std::is_same<type::arithmetic::Div<TL, TR>, DIV>::value);
         }
 
 
