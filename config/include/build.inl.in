@@ -4,4 +4,4 @@
 
 
 //  == DECLARATIONS ==
-#include "arctk/config/build.hpp"
+#include "arctk/config/build.hpp" // IWYU pragma: export
