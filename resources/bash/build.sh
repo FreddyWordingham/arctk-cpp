@@ -147,8 +147,8 @@ arctk.cover.view()
        llvm-cov report ./$1 -instr-profile=$ARCTK_DIR/build/coverage/$1.profdata
         # llvm-cov report ./$1 -instr-profile=$ARCTK_DIR/build/coverage/COMPLETE.profdata
     else
-       llvm-cov show ./$1 -instr-profile=$ARCTK_DIR/build/coverage/$1.profdata -format=html | bcat
-        # llvm-cov show ./$1 -instr-profile=$ARCTK_DIR/build/coverage/COMPLETE.profdata -format=html | bcat
+       llvm-cov show ./$1 -instr-profile=$ARCTK_DIR/build/coverage/$1.profdata -format=html -Xdemangler c++filt -Xdemangler -n | bcat
+        # llvm-cov show ./$1 -instr-profile=$ARCTK_DIR/build/coverage/COMPLETE.profdata -format=html -Xdemangler c++filt -Xdemangler -n | bcat
     fi
  
     cd - > /dev/null
