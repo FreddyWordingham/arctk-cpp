@@ -38,7 +38,7 @@ namespace arc
         {
             if (power_ == 0)
             {
-                return (1.0);
+                return (1);
             }
 
             if (power_ < 0)

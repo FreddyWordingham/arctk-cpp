@@ -4,9 +4,8 @@
 
 
 //  == IMPORTS ==
-//  -- Arc --
+//  -- Std --
 #include <type_traits>
-// #include "arctk/type/arithmetic.hpp"
 
 
 
