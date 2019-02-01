@@ -3,7 +3,6 @@
 #include <arctk/math/compare.inl>
 
 //  -- Std --
-#include <cassert>
 
 
 

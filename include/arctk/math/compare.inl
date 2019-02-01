@@ -11,6 +11,8 @@
 
 //  == IMPORTS ==
 //  -- Arc --
+#include <cmath>
+#include <type_traits>
 
 
 
@@ -23,10 +25,24 @@ namespace arc
 
 
         //  == FUNCTIONS ==
+        //  -- Compare --
+        template <typename T>
+        constexpr inline bool zero(T x_, T epsilon_) noexcept
+        {
+            static_assert(std::is_floating_point<T>::value);
+            assert(epsilon_ > 0.0);
 
+            return (std::abs(x_) <= epsilon_);
+        }
 
+        template <typename T>
+        constexpr inline bool equal(T x_, T y_, T epsilon_) noexcept
+        {
+            static_assert(std::is_floating_point<T>::value);
+            assert(epsilon_ > 0.0);
 
-        //  == OPERATORS ==
+            return (std::abs(x_ - y_) <= (std::abs(x_) < std::abs(y_) ? std::abs(y_) : std::abs(x_)) * epsilon_);
+        }
 
 
 
