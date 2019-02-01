@@ -11,6 +11,7 @@
 
 //  == IMPORTS ==
 //  -- Arc --
+#include <cassert>
 #include <cmath>
 #include <type_traits>
 
