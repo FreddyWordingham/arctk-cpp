@@ -3,17 +3,12 @@
 
 
 
-//  == IMPORTS ==
-//  -- Arc --
-
-
-
 //  == MACROS ==
-//  -- Assertions --
+//  -- Assert --
 #ifdef NDEBUG
 #define ASSERT(precond_)
 #else
-#define ASSERT(precond_) arc::debug::assert(precond_)
+#define ASSERT(precond_) arc::debug::assertion(precond_, "one", "two", 3)
 #endif
 
 
@@ -27,10 +22,8 @@ namespace arc
 
 
         //  == FUNCTIONS ==
-
-
-
-        //  == OPERATORS ==
+        //  -- Assert --
+        constexpr inline void assertion(const bool result_, const char* const func_, const char* const file_, const int line_) noexcept;
 
 
 

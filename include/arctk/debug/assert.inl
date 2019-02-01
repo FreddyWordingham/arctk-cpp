@@ -10,7 +10,8 @@
 
 
 //  == IMPORTS ==
-//  -- Arc --
+//  -- Std --
+#include <iostream>
 
 
 
@@ -23,10 +24,19 @@ namespace arc
 
 
         //  == FUNCTIONS ==
+        //  -- Assert --
+        constexpr inline void assertion(const bool result_, const char* const func_, const char* const file_, const int line_) noexcept
+        {
+            if (result_)
+            {
+                return;
+            }
 
-
-
-        //  == OPERATORS ==
+            std::cerr << "Error! Assertion failed.\n";
+            std::cerr << "Function: " << func_ << '\n';
+            std::cerr << "File    : " << file_ << '\n';
+            std::cerr << "Line    : " << line_ << '\n';
+        }
 
 
 

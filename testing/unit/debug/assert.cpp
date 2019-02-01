@@ -2,9 +2,6 @@
 //  -- Arc --
 #include <arctk/debug/assert.inl>
 
-//  -- Std --
-#include <cassert>
-
 
 
 //  == NAMESPACE ==
@@ -48,7 +45,7 @@ namespace arc
         //  -- Tests --
         constexpr inline void pass() noexcept
         {
-            arc::debug::assert(false, "void pass()", "assert.cpp", "51");
+            arc::debug::assertion(false, "void pass()", "assert.cpp", 51);
         }
 
 
