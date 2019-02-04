@@ -21,7 +21,12 @@ namespace arc
         //  -- Tests --
         inline void zero() noexcept;
         inline void equal() noexcept;
-        inline void operators() noexcept;
+        inline void operator_equal() noexcept;
+        inline void operator_unequal() noexcept;
+        inline void operator_less_than() noexcept;
+        inline void operator_less_than_equal_to() noexcept;
+        inline void operator_greater_than() noexcept;
+        inline void operator_greater_than_equal_to() noexcept;
 
 
 
@@ -35,7 +40,12 @@ int main()
 {
     arc::test::zero();
     arc::test::equal();
-    arc::test::operators();
+    arc::test::operator_equal();
+    arc::test::operator_unequal();
+    arc::test::operator_less_than();
+    arc::test::operator_less_than_equal_to();
+    arc::test::operator_greater_than();
+    arc::test::operator_greater_than_equal_to();
 
     return (0);
 }
@@ -76,17 +86,58 @@ namespace arc
             assert(!math::equal(0.25, -0.75, 0.5));
         }
 
-        inline void operators() noexcept
+        inline void operator_equal() noexcept
         {
-            const std::vector<double> vec_0{1.0, 2.0, 3.4, -5.6};
-            const std::vector<double> vec_1{-1.0, -2.0, -3.4, -15.6};
+            const std::vector<int> vec_0{1, 2, 3, -5};
+            const std::vector<int> vec_1{-1, -2, -3, -15};
 
             ASSERT(vec_0 == vec_0);
+            ASSERT(vec_1 == vec_1);
+        }
+
+        inline void operator_unequal() noexcept
+        {
+            const std::vector<int> vec_0{1, 2, 3, -5};
+            const std::vector<int> vec_1{-1, -2, -3, -15};
+
             ASSERT(vec_0 != vec_1);
-            ASSERT(vec_0 < vec_1);
-            ASSERT(vec_0 <= vec_1);
+            ASSERT(vec_1 != vec_0);
+        }
+
+        inline void operator_less_than() noexcept
+        {
+            const std::vector<int> vec_0{1, 2, 3, -5};
+            const std::vector<int> vec_1{-1, -2, -3, -15};
+
+            ASSERT(!(vec_0 < vec_1));
+            ASSERT(vec_1 < vec_0);
+        }
+
+        inline void operator_less_than_equal_to() noexcept
+        {
+            const std::vector<int> vec_0{1, 2, 3, -5};
+            const std::vector<int> vec_1{-1, -2, -3, -15};
+
+            ASSERT(!(vec_0 <= vec_1));
+            ASSERT(vec_1 <= vec_0);
+        }
+
+        inline void operator_greater_than() noexcept
+        {
+            const std::vector<int> vec_0{1, 2, 3, -5};
+            const std::vector<int> vec_1{-1, -2, -3, -15};
+
             ASSERT(vec_0 > vec_1);
+            ASSERT(!(vec_1 > vec_0));
+        }
+
+        inline void operator_greater_than_equal_to() noexcept
+        {
+            const std::vector<int> vec_0{1, 2, 3, -5};
+            const std::vector<int> vec_1{-1, -2, -3, -15};
+
             ASSERT(vec_0 >= vec_1);
+            ASSERT(!(vec_1 >= vec_0));
         }
 
 
