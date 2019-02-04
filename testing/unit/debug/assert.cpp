@@ -45,7 +45,8 @@ namespace arc
         //  -- Tests --
         inline void pass() noexcept
         {
-            arc::debug::assertion(false, "false", __PRETTY_FUNCTION__, __FILE__, __LINE__);
+            debug::assertion(true, "true", __PRETTY_FUNCTION__, __FILE__, __LINE__);
+            debug::assertion(false, "false", __PRETTY_FUNCTION__, __FILE__, __LINE__);
         }
 
 

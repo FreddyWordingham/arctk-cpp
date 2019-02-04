@@ -115,7 +115,7 @@ arctk.cover.gen()
     for test in *; do
         if [ -f "$test" ]; then
             printf "Generating coverage report for test: $test\n"
-            ./$test
+            ./$test > /dev/null
             llvm-profdata merge -sparse default.profraw -o $ARCTK_DIR/build/coverage/$test.profdata
             rm default.profraw
         fi

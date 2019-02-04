@@ -14,6 +14,7 @@ namespace arc
 
         //  == FUNCTION PROTOTYPES ==
         //  -- Tests --
+        inline void trace() noexcept;
 
 
 
@@ -25,6 +26,8 @@ namespace arc
 //  == MAIN ==
 int main()
 {
+    arc::test::trace();
+
     return (0);
 }
 
@@ -40,6 +43,9 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Tests --
+        inline void trace() noexcept
+        {
+        }
 
 
 
