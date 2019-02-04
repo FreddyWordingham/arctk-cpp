@@ -1,6 +1,11 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include <arctk/debug/trace.inl>
+#include "arctk/debug/trace.inl"
+#include "arctk/debug/assert.inl"
+
+//  -- Std --
+#include <string>
+#include <vector>
 
 
 
@@ -45,7 +50,7 @@ namespace arc
         //  -- Tests --
         inline void trace() noexcept
         {
-            const std::vector<std::string> trace(debug::stacktrace());
+            ASSERT(debug::stacktrace() == (std::vector<std::string>{"arc::test::trace()", "main"}));
         }
 
 

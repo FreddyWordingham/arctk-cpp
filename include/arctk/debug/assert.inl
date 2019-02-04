@@ -12,10 +12,13 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/debug/trace.inl"
+#include "arctk/exit/error.inl"
 
 //  -- Std --
 #include <cstddef>
+#include <cstdlib>
 #include <iostream>
+#include <string>
 #include <vector>
 
 
@@ -53,7 +56,7 @@ namespace arc
             }
             std::cerr << '\n';
 
-            std::exit(exit::error::ASSERTION_FAILED);
+            std::exit(exit::ASSERTION_FAILED);
         }
 
 

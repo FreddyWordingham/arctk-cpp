@@ -17,7 +17,6 @@
 #include <execinfo.h>
 #include <string>
 #include <vector>
-// IWYU pragma: no_include <iosfwd>
 
 
 

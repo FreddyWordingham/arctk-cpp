@@ -6,9 +6,9 @@
 //  == MACROS ==
 //  -- Assert --
 #ifdef NDEBUG
-#define ASSERT(precond_)
+#define ASSERT(expression_)
 #else
-#define ASSERT(precond_) arc::debug::assertion(precond_, #precond_, __PRETTY_FUNCTION__, __FILE__, __LINE__)
+#define ASSERT(expression_) arc::debug::assertion(expression_, #expression_, __PRETTY_FUNCTION__, __FILE__, __LINE__)
 #endif
 
 
@@ -23,7 +23,7 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Assert --
-        inline void assertion(const bool result_, const char* const func_, const char* const file_, const int line_) noexcept;
+        inline void assertion(const bool result_, const char* const expression_, const char* const func_, const char* const file_, const int line_) noexcept;
 
 
 
