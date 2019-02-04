@@ -52,6 +52,8 @@ namespace arc
                 std::cerr << i << "\t: " << trace[i] << '\n';
             }
             std::cerr << '\n';
+
+            std::exit(exit::error::ASSERTION_FAILED);
         }
 
 

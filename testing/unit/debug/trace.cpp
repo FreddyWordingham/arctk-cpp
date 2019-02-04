@@ -45,6 +45,7 @@ namespace arc
         //  -- Tests --
         inline void trace() noexcept
         {
+            const std::vector<std::string> trace(debug::stacktrace());
         }
 
 

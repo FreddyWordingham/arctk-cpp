@@ -1,10 +1,11 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include <arctk/math/compare.inl>
+#include "arctk/math/compare.inl"
+#include "arctk/debug/assert.inl"
 
 //  -- Std --
 #include <cassert>
-#include <limits>
+#include <vector>
 
 
 
@@ -20,6 +21,7 @@ namespace arc
         //  -- Tests --
         inline void zero() noexcept;
         inline void equal() noexcept;
+        inline void operators() noexcept;
 
 
 
@@ -33,6 +35,7 @@ int main()
 {
     arc::test::zero();
     arc::test::equal();
+    arc::test::operators();
 
     return (0);
 }
@@ -71,6 +74,19 @@ namespace arc
             assert(math::equal(-0.25, -0.75, 1.0));
             assert(!math::equal(-0.25, 0.75, 0.5));
             assert(!math::equal(0.25, -0.75, 0.5));
+        }
+
+        inline void operators() noexcept
+        {
+            const std::vector<double> vec_0{1.0, 2.0, 3.4, -5.6};
+            const std::vector<double> vec_1{-1.0, -2.0, -3.4, -15.6};
+
+            ASSERT(vec_0 == vec_0);
+            ASSERT(vec_0 != vec_1);
+            ASSERT(vec_0 < vec_1);
+            ASSERT(vec_0 <= vec_1);
+            ASSERT(vec_0 > vec_1);
+            ASSERT(vec_0 >= vec_1);
         }
 
 
