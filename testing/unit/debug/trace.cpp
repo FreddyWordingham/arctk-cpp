@@ -2,9 +2,6 @@
 //  -- Arc --
 #include <arctk/debug/trace.inl>
 
-//  -- Std --
-#include <cassert>
-
 
 
 //  == NAMESPACE ==

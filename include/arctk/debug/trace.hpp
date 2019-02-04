@@ -4,7 +4,9 @@
 
 
 //  == IMPORTS ==
-//  -- Arc --
+//  -- Std --
+#include <string>
+#include <vector>
 
 
 
@@ -17,10 +19,8 @@ namespace arc
 
 
         //  == FUNCTIONS ==
-
-
-
-        //  == OPERATORS ==
+        //  -- Stacktrace --
+        inline std::vector<std::string> stacktrace() noexcept;
 
 
 

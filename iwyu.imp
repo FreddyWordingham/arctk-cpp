@@ -1,9 +1,4 @@
 [
-    { symbol: [
-            "abs",
-            "private",
-            "<cmath>",
-            "public"
-        ]
-    }
+    { symbol    : [ "abs", "private", "<cmath>", "public"] },
+    { include   : ["<stddef.h>", public, "<cstddef>", public] }
 ]
