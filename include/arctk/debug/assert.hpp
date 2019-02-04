@@ -8,7 +8,7 @@
 #ifdef NDEBUG
 #define ASSERT(precond_)
 #else
-#define ASSERT(precond_) arc::debug::assertion(precond_, "one", "two", 3)
+#define ASSERT(precond_) arc::debug::assertion(precond_, #precond_, __PRETTY_FUNCTION__, __FILE__, __LINE__)
 #endif
 
 

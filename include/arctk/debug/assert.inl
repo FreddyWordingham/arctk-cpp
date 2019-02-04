@@ -30,22 +30,24 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Assert --
-        inline void assertion(const bool result_, const char* const func_, const char* const file_, const int line_) noexcept
+        inline void assertion(const bool result_, const char* const expression_, const char* const func_, const char* const file_, const int line_) noexcept
         {
             if (result_)
             {
                 return;
             }
 
-            std::cerr << "\nError!\t: Assertion failed.\n\n";
-            std::cerr << "Func\t: " << func_ << '\n';
-            std::cerr << "File\t: " << file_ << '\n';
-            std::cerr << "Line\t: " << line_ << "\n\n";
+            std::cerr << "\n\nError! Assertion failed:\n" << expression_ << "\n\n";
+
+            std::cerr << "Location:\n"
+                      << "Func\t: " << func_ << '\n'
+                      << "File\t: " << file_ << '\n'
+                      << "Line\t: " << line_ << "\n\n";
 
             const std::vector<std::string> trace{stacktrace()};
 
             std::cerr << "Stacktrace:\n";
-            for (std::size_t i = 0; i < trace.size(); ++i)
+            for (std::size_t i = 1; i < trace.size(); ++i)
             {
                 std::cerr << i << "\t: " << trace[i] << '\n';
             }
