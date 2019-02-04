@@ -12,11 +12,15 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/debug/trace.inl"
+#ifndef ARCTK_ASSERT_WAIVE
 #include "arctk/exit/error.inl"
+#endif
 
 //  -- Std --
 #include <cstddef>
+#ifndef ARCTK_ASSERT_WAIVE
 #include <cstdlib>
+#endif
 #include <iostream>
 #include <string>
 #include <vector>
@@ -56,7 +60,12 @@ namespace arc
             }
             std::cerr << '\n';
 
+
+#ifndef ARCTK_ASSERT_WAIVE
             std::exit(exit::ASSERTION_FAILED);
+#else
+            return;
+#endif
         }
 
 

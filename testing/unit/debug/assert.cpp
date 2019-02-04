@@ -1,3 +1,9 @@
+//  == MACROS ==
+//  -- Assertion Control --
+#define ARCTK_ASSERT_WAIVE
+
+
+
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/debug/assert.inl"
@@ -46,9 +52,16 @@ namespace arc
         inline void pass() noexcept
         {
             debug::assertion(true, "true", __PRETTY_FUNCTION__, __FILE__, __LINE__);
+            debug::assertion(false, "false", __PRETTY_FUNCTION__, __FILE__, __LINE__);
         }
 
 
 
     } // namespace test
 } // namespace arc
+
+
+
+//  == CLEAN UP ==
+//  -- Assertion Control --
+#undef ARCTK_ASSERT_WAIVE
