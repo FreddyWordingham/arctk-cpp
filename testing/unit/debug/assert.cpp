@@ -14,7 +14,7 @@ namespace arc
 
         //  == FUNCTION PROTOTYPES ==
         //  -- Tests --
-        constexpr inline void pass() noexcept;
+        inline void pass() noexcept;
 
 
 
@@ -43,7 +43,7 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Tests --
-        constexpr inline void pass() noexcept
+        inline void pass() noexcept
         {
             arc::debug::assertion(false, "void pass()", "assert.cpp", 51);
         }
