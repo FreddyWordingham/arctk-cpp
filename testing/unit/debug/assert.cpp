@@ -45,9 +45,7 @@ namespace arc
         //  -- Tests --
         inline void pass() noexcept
         {
-            // arc::debug::assertion(false, "void pass()", "assert.cpp", 51);
-
-            ASSERT(1 == 2);
+            arc::debug::assertion(false, "false", __PRETTY_FUNCTION__, __FILE__, __LINE__);
         }
 
 
