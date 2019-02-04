@@ -3,11 +3,6 @@
 
 
 
-//  == IMPORTS ==
-//  -- Arc --
-
-
-
 //  == NAMESPACE ==
 namespace arc
 {
@@ -17,6 +12,8 @@ namespace arc
 
 
         //  == CONSTANTS ==
+        //  -- Development --
+        constexpr const int ASSERTION_FAILED = 100;
 
 
 
