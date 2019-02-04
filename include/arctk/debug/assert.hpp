@@ -23,7 +23,7 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Assert --
-        inline void assertion(const bool result_, const char* const expression_, const char* const func_, const char* const file_, const int line_) noexcept;
+        inline void assertion(bool result_, char* expression_, char* func_, char* file_, int line_) noexcept;
 
 
 
