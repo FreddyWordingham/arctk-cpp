@@ -10,13 +10,13 @@
 
 
 //  == IMPORTS ==
+//  -- Arc --
+#include "arctk/debug/trace.inl"
+
 //  -- Std --
 #include <cstddef>
 #include <iostream>
 #include <vector>
-
-//  -- Arc --
-#include <arctk/debug/trace.inl>
 
 
 
