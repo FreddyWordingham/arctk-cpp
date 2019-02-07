@@ -44,6 +44,9 @@ namespace arc
                 return;
             }
 
+#ifdef ARCTK_ASSERT_WAIVE
+            return;
+#else
             std::cerr << "\n\nError! Assertion failed:\n" << expression_ << "\n\n";
 
             std::cerr << "Location:\n"
@@ -60,11 +63,7 @@ namespace arc
             }
             std::cerr << '\n';
 
-
-#ifndef ARCTK_ASSERT_WAIVE
             std::exit(exit::ASSERTION_FAILED);
-#else
-            return;
 #endif
         }
 
