@@ -24,9 +24,34 @@ namespace arc
         class Vec
         {
             //  == FIELDS ==
-          public:
+          private:
             //  -- Elements --
             std::array<T, N> _elems;
+
+
+            //  == INSTANTIATION ==
+          public:
+            //  -- Constructors --
+            constexpr inline explicit Vec() noexcept;
+            template <typename... A>
+            constexpr inline explicit Vec(const A... elems_) noexcept;
+
+          private:
+            //  -- Initialisation --
+            template <typename... A>
+            constexpr inline std::array<T, N> init_elems(const A... elems_) noexcept;
+
+
+            //  == OPERATORS ==
+          public:
+            //  -- Access --
+            constexpr inline T&       operator[](std::size_t index_) noexcept;
+            constexpr inline const T& operator[](std::size_t index_) const noexcept;
+
+
+            //  == METHODS ==
+          public:
+            //  -- Getters --
         };
 
 

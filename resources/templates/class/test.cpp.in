@@ -1,6 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include <arctk/@IMPLEMENTATION_PATH@>
+#include "arctk/@IMPLEMENTATION_PATH@"
 
 //  -- Std --
 #include <cassert>

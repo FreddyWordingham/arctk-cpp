@@ -1,6 +1,9 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include <arctk/lin/vec.inl>
+#include "arctk/lin/vec.inl"
+
+//  -- Std --
+#include <cassert>
 
 
 

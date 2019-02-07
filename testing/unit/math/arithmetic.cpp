@@ -1,6 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include <arctk/math/arithmetic.inl>
+#include "arctk/math/arithmetic.inl"
 
 //  -- Std --
 #include <cassert>
