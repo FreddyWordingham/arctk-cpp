@@ -12,15 +12,10 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/debug/trace.inl"
-#ifndef ARCTK_ASSERT_WAIVE
 #include "arctk/exit/error.inl"
-#endif
 
 //  -- Std --
-#include <cstddef>
-#ifndef ARCTK_ASSERT_WAIVE
 #include <cstdlib>
-#endif
 #include <iostream>
 #include <string>
 #include <vector>
@@ -44,9 +39,6 @@ namespace arc
                 return;
             }
 
-#ifdef ARCTK_ASSERT_WAIVE
-            return;
-#else
             std::cerr << "\n\nError! Assertion failed:\n" << expression_ << "\n\n";
 
             std::cerr << "Location:\n"
@@ -64,7 +56,6 @@ namespace arc
             std::cerr << '\n';
 
             std::exit(exit::ASSERTION_FAILED);
-#endif
         }
 
 

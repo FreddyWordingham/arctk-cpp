@@ -1,6 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/debug/assert.inl"
+#include <arctk/lin/vec.inl>
 
 
 
@@ -14,7 +14,6 @@ namespace arc
 
         //  == FUNCTION PROTOTYPES ==
         //  -- Tests --
-        inline void pass() noexcept;
 
 
 
@@ -26,8 +25,6 @@ namespace arc
 //  == MAIN ==
 int main()
 {
-    arc::test::pass();
-
     return (0);
 }
 
@@ -43,10 +40,6 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Tests --
-        inline void pass() noexcept
-        {
-            debug::assertion(true, "true", __PRETTY_FUNCTION__, __FILE__, __LINE__);
-        }
 
 
 
