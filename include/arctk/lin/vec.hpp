@@ -5,6 +5,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <array>
 #include <cstddef>
 
 
@@ -20,7 +21,13 @@ namespace arc
         //  == CLASSES ==
         //  -- Vec --
         template <typename T, std::size_t N>
-        class Vec;
+        class Vec
+        {
+            //  == FIELDS ==
+          public:
+            //  -- Elements --
+            std::is_array<T, N> _elems;
+        };
 
 
 
