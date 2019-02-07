@@ -10,7 +10,10 @@
 
 
 //  == IMPORTS ==
-//  -- Arc --
+//  -- Std --
+#include <array>
+#include <cstddef>
+#include <type_traits>
 
 
 
@@ -25,14 +28,14 @@ namespace arc
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <typename T, std::size_t N>
-        constexpr inline explicit Vec() noexcept
+        constexpr inline Vec<T, N>::Vec() noexcept
         {
         }
 
         template <typename T, std::size_t N>
         template <typename... A>
-        constexpr inline explicit Vec(const A... elems_) noexcept
-          : _elems(init_elems(elems_))
+        constexpr inline Vec<T, N>::Vec(const A... elems_) noexcept
+          : _elems(init_elems(elems_...))
         {
         }
 
@@ -40,14 +43,14 @@ namespace arc
         //  -- Initialisation --
         template <typename T, std::size_t N>
         template <typename... A>
-        inline std::array<T, N> Vec<T, N>::init_elems(const A... data_) noexcept
+        constexpr inline std::array<T, N> Vec<T, N>::init_elems(const A... data_) noexcept
         {
-            static_assert(std::is_same<T, A>::value);
+            static_assert(std::is_same<T, A...>::value);
             static_assert(sizeof...(A) == N);
 
             std::array<T, N> data;
 
-            size_t i = 0;
+            std::size_t i = 0;
             ((data[i] = data_, ++i), ...);
 
             return (data);
@@ -56,11 +59,32 @@ namespace arc
 
 
         //  == OPERATORS ==
+        //  -- Access --
+        template <typename T, std::size_t N>
+        constexpr inline T& Vec<T, N>::operator[](const std::size_t index_) noexcept
+        {
+            static_assert(index_ < N);
+
+            return (_elems[index_]);
+        }
+
+        template <typename T, std::size_t N>
+        constexpr inline const T& Vec<T, N>::operator[](const std::size_t index_) const noexcept
+        {
+            static_assert(index_ < N);
+
+            return (_elems[index_]);
+        }
 
 
 
         //  == METHODS ==
         //  -- Getters --
+        template <typename T, std::size_t N>
+        constexpr inline const std::array<T, N>& Vec<T, N>::elems() const noexcept
+        {
+            return (_elems);
+        }
 
 
 

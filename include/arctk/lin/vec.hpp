@@ -52,6 +52,7 @@ namespace arc
             //  == METHODS ==
           public:
             //  -- Getters --
+            constexpr inline const std::array<T, N>& elems() const noexcept;
         };
 
 
