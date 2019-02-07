@@ -26,7 +26,7 @@ namespace arc
             //  == FIELDS ==
           public:
             //  -- Elements --
-            std::is_array<T, N> _elems;
+            std::array<T, N> _elems;
         };
 
 
