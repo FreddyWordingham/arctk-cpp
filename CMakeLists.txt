@@ -9,14 +9,6 @@ project(arctk)
 
 
 
-#   == INCLUDES ==
-#   -- GTest --
-if (UNIT_TESTING)
-    include(gtest.cmake)
-endif ()
-
-
-
 #   == VERSION ==
 set(ARCTK_VERSION_MAJOR 0)
 
@@ -86,8 +78,27 @@ configure_file(${DOXYFILE_IN} ${DOXYFILE} @ONLY)
 
 #   == OPTIONS ==
 if (UNIT_TESTING)
-    enable_testing()
+    set(GOOGLETEST_ROOT gtest/googletest CACHE STRING "Google Test source root")
+
+    include_directories(SYSTEM
+        ${PROJECT_SOURCE_DIR}/${GOOGLETEST_ROOT}
+        ${PROJECT_SOURCE_DIR}/${GOOGLETEST_ROOT}/include
+    )
+
+    set(GOOGLETEST_SOURCES
+        ${PROJECT_SOURCE_DIR}/${GOOGLETEST_ROOT}/src/gtest-all.cc
+        ${PROJECT_SOURCE_DIR}/${GOOGLETEST_ROOT}/src/gtest_main.cc
+    )
+
+    foreach (_source ${GOOGLETEST_SOURCES})
+        set_source_files_properties(${_source} PROPERTIES GENERATED 1)
+    endforeach ()
+
+    add_library(gtest ${GOOGLETEST_SOURCES})
+
     find_package(gtest REQUIRED)
+
+    enable_testing()
 endif ()
 message("Unit testing: ${UNIT_TESTING}")
 
@@ -210,7 +221,8 @@ if (UNIT_TESTING)
         target_include_directories(${NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
         # target_link_libraries(${NAME} c++fs)
-        target_link_libraries(${NAME} ${GTEST_LIBRARY} ${GTEST_MAIN_LIBRARY})
+        target_link_libraries(${NAME} gtest ${CMAKE_THREAD_LIBS_INIT})
+        # target_link_libraries(${NAME} ${GTEST_LIBRARY} ${GTEST_MAIN_LIBRARY})
 
         gtest_discover_tests(${NAME})
 
