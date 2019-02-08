@@ -19,6 +19,12 @@ arctk.clean()
 #   -- Build --
 arctk.build()
 {
+    export TRAVIS_COMPILER=clang++-7
+    export CXX=clang++-7
+    export CXX_FOR_BUILD=clang++-7
+    export CC=clang-7
+    export CC_FOR_BUILD=clang-7
+
     if [ "$#" == "0" ]; then
         if [ -z "$ARCTK_BUILD_ARGS" ]; then
             printf "Error! ARCTK_BUILD_ARGS are not set!\n"
