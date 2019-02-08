@@ -1,8 +1,15 @@
 dist: trusty
 sudo: false
 language: cpp
-  
+
+addons:
+    apt:
+        sources:
+            - llvm-toolchain-trusty-7.0
+        packages:
+            - clang-7.0
+
 script:
-  - mkdir build
-  - cd build
-  - cmake -DCMAKE_BUILD_TYPE=debug -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DUNIT_TESTING=true ..
+    - mkdir build
+    - cd build
+    - cmake -DCMAKE_BUILD_TYPE=debug -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DUNIT_TESTING=true ..
