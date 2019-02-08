@@ -105,6 +105,7 @@ endif ()
 message("Document: ${DOCUMENT}")
 
 
+
 #   == SOURCE CODE ==
 file(GLOB_RECURSE HEADER_FILES ${CMAKE_SOURCE_DIR}/include/arctk/*.hpp)
 file(GLOB_RECURSE IMPL_FILES ${CMAKE_SOURCE_DIR}/include/arctk/*.inl)
