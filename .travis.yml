@@ -23,7 +23,6 @@ before_install:
     - cd "${TRAVIS_BUILD_DIR}"
 
 script:
-    - apt-get install libgtest-dev
     - export TRAVIS_COMPILER=clang++-7
     - export CXX=clang++-7
     - export CXX_FOR_BUILD=clang++-7
