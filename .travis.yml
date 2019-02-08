@@ -1,4 +1,4 @@
-dist: trusty
+dist: xenial
 sudo: false
 language: cpp
 
@@ -12,4 +12,4 @@ addons:
 script:
     - mkdir build
     - cd build
-    - cmake -DCMAKE_BUILD_TYPE=debug -DCMAKE_C_COMPILER=clang-7.0 -DCMAKE_CXX_COMPILER=clang++-7.0 -DUNIT_TESTING=true ..
+    - cmake -DCMAKE_BUILD_TYPE=debug -DCMAKE_C_COMPILER=clang-7 -DCMAKE_CXX_COMPILER=clang++-7 -DUNIT_TESTING=true ..
