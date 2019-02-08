@@ -9,6 +9,11 @@ project(arctk)
 
 
 
+#   == MODULES ==
+set(CMAKE_MODULE_PATH ".")
+
+
+
 #   == VERSION ==
 set(ARCTK_VERSION_MAJOR 0)
 
