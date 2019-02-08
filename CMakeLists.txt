@@ -9,11 +9,6 @@ project(arctk)
 
 
 
-#   == MODULES ==
-set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR})
-
-
-
 #   == VERSION ==
 set(ARCTK_VERSION_MAJOR 0)
 
@@ -84,8 +79,7 @@ configure_file(${DOXYFILE_IN} ${DOXYFILE} @ONLY)
 #   == OPTIONS ==
 if (UNIT_TESTING)
     enable_testing()
-    find_package(gtest REQUIRED)
-    find_package(ftest REQUIRED)
+    find_package(GTest REQUIRED)
 endif ()
 message("Unit testing: ${UNIT_TESTING}")
 
