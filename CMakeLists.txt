@@ -181,40 +181,19 @@ install(TARGETS arctk EXPORT arctk LIBRARY DESTINATION lib ARCHIVE DESTINATION l
 
 
 #   == TESTING ==
-# if (UNIT_TESTING)
+if (UNIT_TESTING)
 
-#     foreach(loop_var ${TEST_SOURCE_FILES})
-
-#         message("Creating test from: ${loop_var}")
-
-#         set(NAME ${loop_var})
-#         STRING(REGEX REPLACE "${CMAKE_SOURCE_DIR}/testing/" "" NAME ${NAME})
-#         STRING(REGEX REPLACE "/" "_" NAME ${NAME})
-#         STRING(REGEX REPLACE ".cpp" "_test" NAME ${NAME})
-
-#         set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/test)
-#         add_executable(${NAME} ${loop_var})
-
-#         target_include_directories(${NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
-
-#         # target_link_libraries(${NAME} c++fs)
-#         target_link_libraries(${NAME} ${GTEST_LIBRARY_DEBUG} ${GTEST_MAIN_LIBRARY_DEBUG})
-
-#         gtest_discover_tests(${NAME})
-
-#     endforeach(loop_var)
-
-# endif()
+    foreach(loop_var ${TEST_SOURCE_FILES})
 
         message("Creating test from: ${loop_var}")
 
-        set(NAME "testing/unit/lin/vec.cpp")
+        set(NAME ${loop_var})
         STRING(REGEX REPLACE "${CMAKE_SOURCE_DIR}/testing/" "" NAME ${NAME})
         STRING(REGEX REPLACE "/" "_" NAME ${NAME})
         STRING(REGEX REPLACE ".cpp" "_test" NAME ${NAME})
 
         set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/test)
-        add_executable(${NAME} "testing/unit/lin/vec.cpp")
+        add_executable(${NAME} ${loop_var})
 
         target_include_directories(${NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
@@ -223,3 +202,6 @@ install(TARGETS arctk EXPORT arctk LIBRARY DESTINATION lib ARCHIVE DESTINATION l
 
         gtest_discover_tests(${NAME})
 
+    endforeach(loop_var)
+
+endif()
