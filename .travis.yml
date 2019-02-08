@@ -9,7 +9,7 @@ addons:
         packages:
             - clang-7
 
-before_install:
+script:
     - export TRAVIS_COMPILER=clang++-7
     - export CXX=clang++-7
     - export CXX_FOR_BUILD=clang++-7
