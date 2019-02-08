@@ -9,6 +9,14 @@ project(arctk)
 
 
 
+#   == INCLUDES ==
+#   -- GTest --
+if (UNIT_TESTING)
+    include(gtest.cmake)
+endif ()
+
+
+
 #   == VERSION ==
 set(ARCTK_VERSION_MAJOR 0)
 
@@ -79,7 +87,7 @@ configure_file(${DOXYFILE_IN} ${DOXYFILE} @ONLY)
 #   == OPTIONS ==
 if (UNIT_TESTING)
     enable_testing()
-    # find_package(gtest REQUIRED)
+    find_package(gtest REQUIRED)
 endif ()
 message("Unit testing: ${UNIT_TESTING}")
 
