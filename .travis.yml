@@ -10,6 +10,11 @@ addons:
             - clang-7
 
 script:
+    - export TRAVIS_COMPILER=clang++-7
+    - export CXX=clang++-7
+    - export CXX_FOR_BUILD=clang++-7
+    - export CC=clang-7
+    - export CC_FOR_BUILD=clang-7
     - mkdir build
     - cd build
     - cmake -DCMAKE_BUILD_TYPE=debug -DCMAKE_C_COMPILER=clang-7 -DCMAKE_CXX_COMPILER=clang++-7 -DUNIT_TESTING=true ..
