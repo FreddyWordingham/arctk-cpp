@@ -2,49 +2,21 @@
 //  -- Arc --
 #include "arctk/lin/vec.inl"
 
+//  -- GTest --
+#include "gtest/gtest.h"
+
 //  -- Std --
 #include <cassert>
 
 
 
-//  == NAMESPACE ==
-namespace arc
+//  == TESTS ==
+TEST(TestSuitName, TestName)
 {
-    namespace test
-    {
-
-
-
-        //  == FUNCTION PROTOTYPES ==
-        //  -- Tests --
-
-
-
-    } // namespace test
-} // namespace arc
-
-
-
-//  == MAIN ==
-int main()
-{
-    return (0);
+    EXPECT_EQ(1, 1);
 }
 
-
-
-//  == NAMESPACE ==
-namespace arc
+TEST(TestSuitName, TestName2)
 {
-    namespace test
-    {
-
-
-
-        //  == FUNCTIONS ==
-        //  -- Tests --
-
-
-
-    } // namespace test
-} // namespace arc
+    EXPECT_EQ(1, 1);
+}

@@ -77,6 +77,10 @@ configure_file(${DOXYFILE_IN} ${DOXYFILE} @ONLY)
 
 
 #   == OPTIONS ==
+if (UNIT_TESTING)
+    enable_testing()
+    find_package(gtest REQUIRED)
+endif ()
 message("Unit testing: ${UNIT_TESTING}")
 
 if (CLANG_TIDY)
@@ -91,11 +95,7 @@ endif ()
 message("IWYU: ${IWYU}")
 
 if (DOCUMENT)
-    find_package(Doxygen)
-    if (NOT DOXYGEN_FOUND)
-        message(FATAL_ERROR "Doxygen is required to build the wiki.")
-    endif ()
-
+    find_package(Doxygen REQUIRED)
     add_custom_target(doc
         COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE}
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/build/docs
@@ -181,28 +181,45 @@ install(TARGETS arctk EXPORT arctk LIBRARY DESTINATION lib ARCHIVE DESTINATION l
 
 
 #   == TESTING ==
-if (UNIT_TESTING)
+# if (UNIT_TESTING)
 
-    enable_testing()
+#     foreach(loop_var ${TEST_SOURCE_FILES})
 
-    foreach(loop_var ${TEST_SOURCE_FILES})
+#         message("Creating test from: ${loop_var}")
+
+#         set(NAME ${loop_var})
+#         STRING(REGEX REPLACE "${CMAKE_SOURCE_DIR}/testing/" "" NAME ${NAME})
+#         STRING(REGEX REPLACE "/" "_" NAME ${NAME})
+#         STRING(REGEX REPLACE ".cpp" "_test" NAME ${NAME})
+
+#         set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/test)
+#         add_executable(${NAME} ${loop_var})
+
+#         target_include_directories(${NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
+
+#         # target_link_libraries(${NAME} c++fs)
+#         target_link_libraries(${NAME} ${GTEST_LIBRARY_DEBUG} ${GTEST_MAIN_LIBRARY_DEBUG})
+
+#         gtest_discover_tests(${NAME})
+
+#     endforeach(loop_var)
+
+# endif()
 
         message("Creating test from: ${loop_var}")
 
-        set(NAME ${loop_var})
+        set(NAME "testing/unit/lin/vec.cpp")
         STRING(REGEX REPLACE "${CMAKE_SOURCE_DIR}/testing/" "" NAME ${NAME})
         STRING(REGEX REPLACE "/" "_" NAME ${NAME})
         STRING(REGEX REPLACE ".cpp" "_test" NAME ${NAME})
 
         set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/test)
-        add_executable(${NAME} ${loop_var})
+        add_executable(${NAME} "testing/unit/lin/vec.cpp")
 
         target_include_directories(${NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
-        target_link_libraries(${NAME} c++fs)
+        # target_link_libraries(${NAME} c++fs)
+        target_link_libraries(${NAME} ${GTEST_LIBRARY} ${GTEST_MAIN_LIBRARY})
 
-        add_test(${NAME} ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${NAME})
+        gtest_discover_tests(${NAME})
 
-    endforeach(loop_var)
-
-endif()

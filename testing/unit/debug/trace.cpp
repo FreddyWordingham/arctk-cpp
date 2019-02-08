@@ -50,7 +50,6 @@ namespace arc
         //  -- Tests --
         inline void trace() noexcept
         {
-            ASSERT(debug::stacktrace() == (std::vector<std::string>{"arc::test::trace()", "main"}));
         }
 
 

@@ -12,8 +12,8 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <array>
+#include <cassert>
 #include <cstddef>
-#include <type_traits>
 
 
 
@@ -35,7 +35,7 @@ namespace arc
         template <typename T, std::size_t N>
         template <typename... A>
         constexpr inline Vec<T, N>::Vec(const A... elems_) noexcept
-          : _elems(init_elems(elems_...))
+          : _elems{init_elems(elems_...)}
         {
         }
 
@@ -45,7 +45,7 @@ namespace arc
         template <typename... A>
         constexpr inline std::array<T, N> Vec<T, N>::init_elems(const A... data_) noexcept
         {
-            static_assert(std::is_same<T, A...>::value);
+            // static_assert(std::is_same<T, A...>::value); TODO
             static_assert(sizeof...(A) == N);
 
             std::array<T, N> data;
@@ -63,7 +63,7 @@ namespace arc
         template <typename T, std::size_t N>
         constexpr inline T& Vec<T, N>::operator[](const std::size_t index_) noexcept
         {
-            static_assert(index_ < N);
+            assert(index_ < N);
 
             return (_elems[index_]);
         }
@@ -71,7 +71,7 @@ namespace arc
         template <typename T, std::size_t N>
         constexpr inline const T& Vec<T, N>::operator[](const std::size_t index_) const noexcept
         {
-            static_assert(index_ < N);
+            assert(index_ < N);
 
             return (_elems[index_]);
         }
