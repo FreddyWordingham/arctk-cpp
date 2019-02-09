@@ -29,3 +29,6 @@ script:
     - cd build
     - cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=clang-7 -DCMAKE_CXX_COMPILER=clang++-7 -DUNIT_TESTING=true ..
     - make && make test
+
+after_success:
+    - coveralls --root . -E ".*gtest.*" -E ".*CMakeFiles.*"
