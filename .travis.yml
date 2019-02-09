@@ -9,7 +9,7 @@ addons:
         packages:
             - clang-7
 
-script:
+before_install:
     - export TRAVIS_COMPILER=clang++-7
     - export CXX=clang++-7
     - export CXX_FOR_BUILD=clang++-7
@@ -23,7 +23,9 @@ script:
     - sudo make
     - sudo cp *.a /usr/lib
     - cd -
+
+script:
     - mkdir build
     - cd build
-    - cmake -DCMAKE_BUILD_TYPE=debug -DCMAKE_C_COMPILER=clang-7 -DCMAKE_CXX_COMPILER=clang++-7 -DUNIT_TESTING=true ..
+    - cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=clang-7 -DCMAKE_CXX_COMPILER=clang++-7 -DUNIT_TESTING=true ..
     - make && make test
