@@ -32,4 +32,4 @@ script:
     - make && make test
 
 after_success:
-    - coveralls --root . -E ".*gtest.*" -E ".*CMakeFiles.*"
+    - cpp-coveralls --root . -E "gtest/" -E "build/"
