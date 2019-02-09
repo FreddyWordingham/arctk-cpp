@@ -6,8 +6,10 @@ addons:
     apt:
         sources:
             - llvm-toolchain-trusty-7
+            - ubuntu-toolchain-r-test
         packages:
             - clang-7
+            - g++-8
 
 before_install:
     - export TRAVIS_COMPILER=clang++-7
@@ -18,6 +20,9 @@ before_install:
     - sudo apt-get -qq update
     - sudo apt-get install -y cmake
     - sudo apt-get install -y libgtest-dev
+    - pip install --user gcovr
+    - which gcov
+    - gcov --version
     - pip install --user cpp-coveralls
     - cd /usr/src/gtest
     - sudo cmake CMakeLists.txt
@@ -32,4 +37,4 @@ script:
     - make && make test
 
 after_success:
-    - cpp-coveralls --root . -E "gtest/" -E "build/"
+    - cpp-coveralls --root . -e "gtest/" -e "build/"
