@@ -135,10 +135,10 @@ elseif (CMAKE_BUILD_TYPE MATCHES "cover")
         -g                                  \
         -DDEBUG                             \
         -O0                                 \
-        -fprofile-instr-generate            \
-        -fcoverage-mapping                  \
-        -fprofile-arcs                      \
-        -ftest-coverage                     \
+        --coverage                          \
+    ")
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} \
+        --coverage                                        \
     ")
     file(MAKE_DIRECTORY "${CMAKE_SOURCE_DIR}/build/coverage")
 elseif (CMAKE_BUILD_TYPE MATCHES "release")
