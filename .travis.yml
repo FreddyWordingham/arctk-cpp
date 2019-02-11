@@ -8,7 +8,6 @@ addons:
     brew:
         packages:
             - cmake
-            - lcov
             - llvm
 
 before_install:
@@ -17,6 +16,9 @@ before_install:
     - sudo make
     - sudo make install
     - cd -
+
+install:
+    - brew install lcov
 
 script:
     - mkdir build
