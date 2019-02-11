@@ -54,7 +54,11 @@ before_install:
     - eval "${MATRIX_EVAL}"
     - echo $TRAVIS_OS_NAME
     - echo $CC
+    - which $CC
+    - $CC --version
     - echo $CXX
+    - which $CXX
+    - $CXX --version
     - cd gtest
     - sudo cmake CMakeLists.txt -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -std=c++17 .
     - sudo make
