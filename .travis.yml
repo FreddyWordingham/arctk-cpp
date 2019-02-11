@@ -34,4 +34,4 @@ script:
     - cd ..
 
 after_success:
-    - cpp-coveralls --root . -e "gtest/" -e "build/"
+    - cpp-coveralls -r . -b build/ -e gtest/ -i include/arctk/ --gcov-options '\-lp'
