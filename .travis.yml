@@ -25,10 +25,6 @@ before_install:
     - sudo make
     - sudo cp *.a /usr/lib
     - cd -
-    - g++ --version
-    - gcov --version
-    - lcov --version
-    - lcov --version
 
 script:
     - mkdir build
