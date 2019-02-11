@@ -16,7 +16,7 @@ matrix:
                 - cmake
                 - libgtest-dev
       env:
-         - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
+         - MATRIX_EVAL="CC=gcc && CXX=g++"
 
     - os: linux
       compiler: clang
@@ -38,7 +38,7 @@ matrix:
               packages:
                 - cmake
       env:
-         - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
+         - MATRIX_EVAL="CC=gcc && CXX=g++"
 
     - os: osx
       osx_image: xcode10.1
