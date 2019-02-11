@@ -35,3 +35,19 @@ script:
 after_success:
     - cd ..
     - cpp-coveralls --root . -e gtest/ --gcov-options '\-lp'
+    - cpp-coveralls --root . -e gtest/
+    - cpp-coveralls --root . -e gtest/ -e build/ --gcov-options '\-lp'
+    - cpp-coveralls --root . -e gtest/ -e build/
+    - cpp-coveralls --root . -e gtest/ --gcov-options '\-lp'
+    - cpp-coveralls --root . -e gtest/
+    - cpp-coveralls --root . -e gtest/ -e build/ --gcov-options '\-lp'
+    - cpp-coveralls --root . -e gtest/ -e build/
+    - cd build/
+    - cpp-coveralls --root .. -e ../gtest/ --gcov-options '\-lp'
+    - cpp-coveralls --root .. -e ../gtest/
+    - cpp-coveralls --root .. -e ../gtest/ -e ../build/ --gcov-options '\-lp'
+    - cpp-coveralls --root .. -e ../gtest/ -e ../build/
+    - cpp-coveralls --root .. -e ../gtest/ --gcov-options '\-lp'
+    - cpp-coveralls --root .. -e ../gtest/
+    - cpp-coveralls --root .. -e ../gtest/ -e ../build/ --gcov-options '\-lp'
+    - cpp-coveralls --root .. -e ../gtest/ -e ../build/
