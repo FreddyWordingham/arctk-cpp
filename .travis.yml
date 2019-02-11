@@ -35,7 +35,7 @@ before_install:
             cd -
         elif [ $TRAVIS_OS_NAME = linux ]; then
             cd /usr/src/gtest
-            sudo cmake CMakeLists.txt
+            sudo cmake CMakeLists.txt -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -std=c++17 .
             sudo make
             sudo cp *.a /usr/lib
             cd -
