@@ -4,28 +4,54 @@ sudo: false
 
 language: cpp
 
-os:
-    - osx
-    - linux
+matrix:
+  include:
+    - os: linux
+      addons:
+          apt:
+              sources:
+                - ubuntu-toolchain-r-test
+              packages:
+                - g++-8
+                - cmake
+                - libgtest-dev
+      env:
+         - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
 
-compiler:
-    - clang
-    - gcc
+    - os: linux
+      addons:
+          apt:
+              sources:
+                - llvm-toolchain-trusty-7.0
+              packages:
+                - clang-7.0
+                - cmake
+                - libgtest-dev
+      env:
+         - MATRIX_EVAL="CC=clang-7.0 && CXX=clang++-7.0"
 
-addons:
-    apt:
-        sources:
-            - ubuntu-toolchain-r-test
-        packages:
-            - cmake
-            - libgtest-dev
-    brew:
-        packages:
-            - cmake
-        env:
-            - HOMEBREW_NO_AUTO_UPDATE=1
+    - os: osx
+      osx_image: xcode10.1
+      addons:
+          brew:
+              packages:
+                - cmake
+      env:
+         - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
+
+    - os: osx
+      osx_image: xcode10.1
+      addons:
+          brew:
+              packages:
+                - cmake
+      env:
+        - MATRIX_EVAL="CC=clang && CXX=clang++"
 
 before_install:
+    - eval "${MATRIX_EVAL}"
+    - echo $CC
+    - echo $CXX
     - cd gtest
     - sudo cmake CMakeLists.txt -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -std=c++17 .
     - sudo make
