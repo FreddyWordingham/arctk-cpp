@@ -18,7 +18,7 @@ addons:
 
 before_install:
     - cd gtest
-    - sudo cmake CMakeLists.txt
+    - sudo cmake CMakeLists.txt -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -std=c++17 .
     - sudo make
     - sudo make install
     - cd -
