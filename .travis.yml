@@ -1,22 +1,21 @@
 dist: xenial
 sudo: false
 language: cpp
-compiler: clang
+os: linux
+compiler: gcc
 
 addons:
     apt:
-        sources:
-            - llvm-toolchain-trusty-7
         packages:
-            - clang-7
             - lcov
+            - g++-8
 
 before_install:
-    - export TRAVIS_COMPILER=clang++-7
-    - export CXX=clang++-7
-    - export CXX_FOR_BUILD=clang++-7
-    - export CC=clang-7
-    - export CC_FOR_BUILD=clang-7
+    - export TRAVIS_COMPILER=g++-8
+    - export CXX=g++-8
+    - export CXX_FOR_BUILD=g++-8
+    - export CC=gcc-8
+    - export CC_FOR_BUILD=gcc-8
     - sudo apt-get -qq update
     - sudo apt-get install -y cmake
     - sudo apt-get install -y libgtest-dev
@@ -28,13 +27,12 @@ before_install:
     - cd -
 
 install: 
-    - sudo apt-get install -qq g++-5
-    - sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-5 90
+    - sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-8 50
 
 script:
     - mkdir build
     - cd build
-    - cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=clang-7 -DCMAKE_CXX_COMPILER=clang++-7 -DUNIT_TESTING=true ..
+    - cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=gcc-8 -DCMAKE_CXX_COMPILER=g++-8 -DUNIT_TESTING=true ..
     - make && make test
 
 after_success:
