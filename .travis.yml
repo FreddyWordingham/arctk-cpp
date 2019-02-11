@@ -11,16 +11,13 @@ addons:
         packages:
             - gcc-8
             - g++-8
+            - cmake
+            - liggtest-dev
+        env:
+            - CC=gcc-8
+            - CXX=g++-8
 
 before_install:
-    - export TRAVIS_COMPILER=g++-8
-    - export CXX=g++-8
-    - export CXX_FOR_BUILD=g++-8
-    - export CC=gcc-8
-    - export CC_FOR_BUILD=gcc-8
-    - sudo apt-get -qq update
-    - sudo apt-get install -y cmake
-    - sudo apt-get install -y libgtest-dev
     - sudo pip install codecov
     - cd /usr/src/gtest
     - sudo cmake CMakeLists.txt
