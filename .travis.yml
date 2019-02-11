@@ -2,7 +2,7 @@ dist: xenial
 sudo: false
 language: cpp
 os: linux
-compiler: gcc
+compiler: clang
 
 addons:
     apt:
@@ -10,28 +10,26 @@ addons:
             - ubuntu-toolchain-r-test
         packages:
             - cmake
+            - lcov
+            - llvm
         env:
-            - CC=gcc
-            - CXX=g++
+            - CC=clang
+            - CXX=clang++
 
 before_install:
-    - sudo apt-get install -y libgtest-dev
-    - sudo pip install codecov
-    - cd /usr/src/gtest
+    - cd gtest
     - sudo cmake CMakeLists.txt
     - sudo make
-    - sudo cp *.a /usr/lib
+    - sudo make install
     - cd -
 
 script:
     - mkdir build
     - cd build
-    - cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ -DUNIT_TESTING=true ..
+    - cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DUNIT_TESTING=true ..
     - make && make test
 
 after_success:
-    - g++ --version
-    - gcov --version
     - lcov --capture --directory . --output-file coverage.info
     - lcov --remove coverage.info '/usr/*' --output-file coverage.info
     - lcov --list coverage.info
