@@ -14,9 +14,10 @@ matrix:
                 - ubuntu-toolchain-r-test
               packages:
                 - cmake
+                - g++-8
                 - libgtest-dev
       env:
-        - MATRIX_EVAL="CC=gcc && CXX=g++"
+        - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
         - ARCTK_BUILD_TYPE=debug
 
     - os: linux
@@ -27,9 +28,10 @@ matrix:
                 - llvm-toolchain-trusty-7.0
               packages:
                 - cmake
+                - clang
                 - libgtest-dev
       env:
-        - MATRIX_EVAL="CC=clang && CXX=clang++"
+        - MATRIX_EVAL="CC=clang-7 && CXX=clang++-7"
         - ARCTK_BUILD_TYPE=debug
 
     - os: osx
@@ -39,8 +41,9 @@ matrix:
           brew:
               packages:
                 - cmake
+                - gcc
       env:
-        - MATRIX_EVAL="CC=gcc && CXX=g++"
+        - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
         - ARCTK_BUILD_TYPE=debug
 
     - os: osx
@@ -50,8 +53,9 @@ matrix:
           brew:
               packages:
                 - cmake
+                - llvm
       env:
-        - MATRIX_EVAL="CC=clang && CXX=clang++"
+        - MATRIX_EVAL="CC=clang-7 && CXX=clang++-7"
         - ARCTK_BUILD_TYPE=debug
 
     - os: osx
@@ -61,8 +65,9 @@ matrix:
           brew:
               packages:
                 - cmake
+                - llvm
       env:
-        - MATRIX_EVAL="CC=clang && CXX=clang++"
+        - MATRIX_EVAL="CC=clang-7 && CXX=clang++-7"
         - ARCTK_BUILD_TYPE=coverage
 
 before_install:
