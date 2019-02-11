@@ -33,5 +33,4 @@ script:
     - make && make test
 
 after_success:
-    - cd -
-    - cpp-coveralls -r . -b build/ -e gtest/ --gcov-options '\-lp'
+    - cpp-coveralls -r .. -b . -e ../gtest/ -i ../include/arctk/ -i ../testing/ -y ../.coveralls.yml --gcov-options '\-lp'
