@@ -34,4 +34,4 @@ script:
 
 after_success:
     - cd ..
-    - cpp-coveralls --root . -e gtest/ -b build/ --gcov-options '\-lp'
+    - cpp-coveralls -r . -e gtest/ -b build/ --gcov-options '\-lp'
