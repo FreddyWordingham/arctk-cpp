@@ -9,13 +9,11 @@ addons:
         sources:
             - ubuntu-toolchain-r-test
         packages:
-            - gcc-8
-            - g++-8
             - cmake
             - liggtest-dev
         env:
-            - CC=gcc-8
-            - CXX=g++-8
+            - CC=gcc
+            - CXX=g++
 
 before_install:
     - sudo pip install codecov
@@ -25,13 +23,10 @@ before_install:
     - sudo cp *.a /usr/lib
     - cd -
 
-install: 
-    - sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-8 50
-
 script:
     - mkdir build
     - cd build
-    - cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=gcc-8 -DCMAKE_CXX_COMPILER=g++-8 -DUNIT_TESTING=true ..
+    - cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ -DUNIT_TESTING=true ..
     - make && make test
 
 after_success:
