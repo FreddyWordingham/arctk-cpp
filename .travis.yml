@@ -1,6 +1,7 @@
 dist: xenial
 sudo: false
 language: cpp
+compiler: clang
 
 addons:
     apt:
@@ -8,6 +9,7 @@ addons:
             - llvm-toolchain-trusty-7
         packages:
             - clang-7
+            - lcov
 
 before_install:
     - export TRAVIS_COMPILER=clang++-7
@@ -15,20 +17,29 @@ before_install:
     - export CXX_FOR_BUILD=clang++-7
     - export CC=clang-7
     - export CC_FOR_BUILD=clang-7
+    - export CODECOV_TOKEN="57886efc-8eca-416f-9e8b-1b0ee825efe5"
     - sudo apt-get -qq update
     - sudo apt-get install -y cmake
     - sudo apt-get install -y libgtest-dev
-    - pip install --user gcovr
-    - pip install --user cpp-coveralls
+    - sudo pip install codecov
     - cd /usr/src/gtest
     - sudo cmake CMakeLists.txt
     - sudo make
     - sudo cp *.a /usr/lib
     - cd -
 
+install: 
+    - sudo apt-get install -qq g++-5
+    - sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-5 90
+
 script:
-    - cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=clang-7 -DCMAKE_CXX_COMPILER=clang++-7 -DUNIT_TESTING=true --build .
+    - mkdir build
+    - cd build
+    - cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=clang-7 -DCMAKE_CXX_COMPILER=clang++-7 -DUNIT_TESTING=true ..
     - make && make test
 
 after_success:
-    - coveralls --root . -E ".*gtest.*" -E ".*CMakeFiles.*"
+    - lcov --capture --directory . --output-file coverage.info
+    - lcov --remove coverage.info '/usr/*' --output-file coverage.info
+    - lcov --list coverage.info
+    - bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Codecov did not collect coverage reports"
