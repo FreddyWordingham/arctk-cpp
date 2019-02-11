@@ -17,7 +17,8 @@ matrix:
                 - g++-8
                 - libgtest-dev
       env:
-        - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
+        - CC=gcc-8
+        - CCX=g++-8
         - ARCTK_BUILD_TYPE=debug
 
     - os: linux
@@ -31,7 +32,8 @@ matrix:
                 - clang
                 - libgtest-dev
       env:
-        - MATRIX_EVAL="CC=clang-7 && CXX=clang++-7"
+        - CC=clang-7
+        - CXX=clang++-7
         - ARCTK_BUILD_TYPE=debug
 
     - os: osx
@@ -43,7 +45,8 @@ matrix:
                 - cmake
                 - gcc
       env:
-        - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
+        - CC=gcc-8
+        - CCX=g++-8
         - ARCTK_BUILD_TYPE=debug
 
     - os: osx
@@ -55,7 +58,8 @@ matrix:
                 - cmake
                 - llvm
       env:
-        - MATRIX_EVAL="CC=clang-7 && CXX=clang++-7"
+        - CC=clang-7
+        - CXX=clang++-7
         - ARCTK_BUILD_TYPE=debug
 
     - os: osx
@@ -67,7 +71,8 @@ matrix:
                 - cmake
                 - llvm
       env:
-        - MATRIX_EVAL="CC=clang-7 && CXX=clang++-7"
+        - CC=clang-7
+        - CXX=clang++-7
         - ARCTK_BUILD_TYPE=coverage
 
 before_install:
