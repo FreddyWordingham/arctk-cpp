@@ -6,8 +6,11 @@ compiler: gcc
 
 addons:
     apt:
+        sources:
+            - ubuntu-toolchain-r-test
         packages:
-            - lcov
+            - gcc-8
+            - g++-8
 
 before_install:
     - export TRAVIS_COMPILER=g++-8
