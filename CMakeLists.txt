@@ -128,9 +128,6 @@ if (CMAKE_BUILD_TYPE MATCHES "debug")
         -O0                                 \
     ")
 elseif (CMAKE_BUILD_TYPE MATCHES "cover")
-    if (NOT CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-        message(FATAL_ERROR "Cover build type only avalible under clang compiler.")
-    endif ()
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
         -g                                  \
         -DDEBUG                             \
