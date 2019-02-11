@@ -46,12 +46,12 @@ namespace arc
         constexpr inline std::array<T, N> Vec<T, N>::init_elems(const A... data_) noexcept
         {
             // static_assert(std::is_same<T, A...>::value); TODO
-            static_assert(sizeof...(A) == N);
+            // static_assert(sizeof...(A) == N);
 
             std::array<T, N> data;
 
             std::size_t i = 0;
-            ((data[i] = data_, ++i), ...);
+            // ((data[i] = data_, ++i), ...);
 
             return (data);
         }
