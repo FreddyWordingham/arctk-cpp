@@ -27,10 +27,8 @@ before_install:
     - cd -
 
 script:
-    - mkdir build
-    - cd build
-    - cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=clang-7 -DCMAKE_CXX_COMPILER=clang++-7 -DUNIT_TESTING=true ..
+    - cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=clang-7 -DCMAKE_CXX_COMPILER=clang++-7 -DUNIT_TESTING=true --build .
     - make && make test
 
 after_success:
-    - cpp-coveralls -r .. -b . -e ../gtest/ -i ../include/arctk/ -i ../testing/ -y ../.coveralls.yml --gcov-options '\-lp'
+    - coveralls --root . -E ".*gtest.*" -E ".*CMakeFiles.*"
