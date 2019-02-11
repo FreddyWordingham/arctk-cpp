@@ -8,7 +8,6 @@ addons:
     apt:
         packages:
             - lcov
-            - g++-8
 
 before_install:
     - export TRAVIS_COMPILER=g++-8
