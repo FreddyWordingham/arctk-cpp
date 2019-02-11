@@ -1,24 +1,19 @@
 dist: xenial
 sudo: false
 language: cpp
-os: linux
+os: osx
 compiler: clang
 
 addons:
-    apt:
-        sources:
-            - ubuntu-toolchain-r-test
+    brew:
         packages:
             - cmake
             - lcov
             - llvm
-        env:
-            - CC=clang-7
-            - CXX=clang++-7
 
 before_install:
     - cd gtest
-    - sudo cmake CMakeLists.txt -DCMAKE_C_COMPILER=clang-7 -DCMAKE_CXX_COMPILER=clang++-7 -std=c++17 .
+    - sudo cmake CMakeLists.txt -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -std=c++17 .
     - sudo make
     - sudo make install
     - cd -
@@ -26,7 +21,7 @@ before_install:
 script:
     - mkdir build
     - cd build
-    - cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=clang-7 -DCMAKE_CXX_COMPILER=clang++-7 -DUNIT_TESTING=true ..
+    - cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DUNIT_TESTING=true ..
     - make && make test
 
 after_success:
@@ -35,6 +30,6 @@ after_success:
     - lcov --list coverage.info
     - bash <(curl -s https://codecov.io/bash) -t "57886efc-8eca-416f-9e8b-1b0ee825efe5" -f coverage.info || echo "Codecov did not collect coverage reports"
 
-# notifications:
-#   email:
-#     - fjmw201@exeter.ac.uk
+notifications:
+  email:
+    - fjmw201@exeter.ac.uk
