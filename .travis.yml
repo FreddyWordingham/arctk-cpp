@@ -10,12 +10,12 @@ addons:
             - ubuntu-toolchain-r-test
         packages:
             - cmake
-            - liggtest-dev
         env:
             - CC=gcc
             - CXX=g++
 
 before_install:
+    - sudo apt-get install -y libgtest-dev
     - sudo pip install codecov
     - cd /usr/src/gtest
     - sudo cmake CMakeLists.txt
