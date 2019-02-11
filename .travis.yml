@@ -1,40 +1,39 @@
-language: c++
-
-os:
-    - osx
+dist: xenial
+sudo: false
+language: cpp
 
 addons:
-    homebrew:
+    apt:
+        sources:
+            - llvm-toolchain-trusty-7
         packages:
-            - cmake
-            - llvm
+            - clang-7
 
-compiler:
-    - clang
-
-addons:
-    - export PATH="/usr/local/opt/llvm/bin:$PATH"
-    - export LDFLAGS="-L/usr/local/opt/llvm/lib"
-    - export CPPFLAGS="-I/usr/local/opt/llvm/include"
-    - export TRAVIS_COMPILER=clang++
-    - export CXX=clang++
-    - export CXX_FOR_BUILD=clang++
-    - export CC=clang
-    - export CC_FOR_BUILD=clang
-    - which clang
-    - clang --version
-    - cd gtest
-    - mkdir gtest/build
-    - cd gtest/build
-    - cmake -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -std=c++20 -stdlib=libc++ ..
-    - make
-    - make install
+before_install:
+    - export TRAVIS_COMPILER=clang++-7
+    - export CXX=clang++-7
+    - export CXX_FOR_BUILD=clang++-7
+    - export CC=clang-7
+    - export CC_FOR_BUILD=clang-7
+    - sudo apt-get -qq update
+    - sudo apt-get install -y cmake
+    - sudo apt-get install -y libgtest-dev
+    - pip install --user gcovr
+    - pip install --user cpp-coveralls
+    - cd /usr/src/gtest
+    - sudo cmake CMakeLists.txt
+    - sudo make
+    - sudo cp *.a /usr/lib
     - cd -
+    - g++ --version
+    - gcov --version
+    - lcov --version
+    - lcov --version
 
 script:
     - mkdir build
     - cd build
-    - cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DUNIT_TESTING=true ..
+    - cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=clang-7 -DCMAKE_CXX_COMPILER=clang++-7 -DUNIT_TESTING=true ..
     - make && make test
 
 after_success:
