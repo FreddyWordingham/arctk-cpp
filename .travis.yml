@@ -13,12 +13,12 @@ addons:
             - lcov
             - llvm
         env:
-            - CC=clang
-            - CXX=clang++
+            - CC=clang-7
+            - CXX=clang++-7
 
 before_install:
     - cd gtest
-    - sudo cmake CMakeLists.txt -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -std=c++17 .
+    - sudo cmake CMakeLists.txt -DCMAKE_C_COMPILER=clang-7 -DCMAKE_CXX_COMPILER=clang++-7 -std=c++17 .
     - sudo make
     - sudo make install
     - cd -
@@ -26,7 +26,7 @@ before_install:
 script:
     - mkdir build
     - cd build
-    - cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DUNIT_TESTING=true ..
+    - cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=clang-7 -DCMAKE_CXX_COMPILER=clang++-7 -DUNIT_TESTING=true ..
     - make && make test
 
 after_success:
