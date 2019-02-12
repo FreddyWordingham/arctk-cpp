@@ -72,6 +72,8 @@ matrix:
 
 before_install:
     - eval "${MATRIX_EVAL}"
+    - CC=$ARCTK_CC
+    - CXX=$ARCTK_CXX
     - echo $TRAVIS_OS_NAME
     - echo $ARCTK_CC
     - which $ARCTK_CC
