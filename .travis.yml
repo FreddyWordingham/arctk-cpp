@@ -7,7 +7,6 @@ language: cpp
 matrix:
   include:
     - os: linux
-      compiler: gcc
       addons:
           apt:
               sources:
@@ -22,7 +21,6 @@ matrix:
         - ARCTK_BUILD_TYPE=debug
 
     - os: linux
-      compiler: clang
       addons:
           apt:
               sources:
@@ -38,7 +36,6 @@ matrix:
 
     - os: osx
       osx_image: xcode10.1
-      compiler: gcc
       addons:
           brew:
               packages:
@@ -51,7 +48,6 @@ matrix:
 
     - os: osx
       osx_image: xcode10.1
-      compiler: clang
       addons:
           brew:
               packages:
@@ -64,7 +60,6 @@ matrix:
 
     - os: osx
       osx_image: xcode10.1
-      compiler: clang
       addons:
           brew:
               packages:
