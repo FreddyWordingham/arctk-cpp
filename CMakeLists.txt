@@ -210,7 +210,7 @@ if (UNIT_TESTING)
 
         gtest_discover_tests(${NAME})
 
-    endforeach(loop_var)
+    endforeach()
 
 endif()
 
@@ -221,7 +221,7 @@ if (BENCHMARK)
 
     foreach(loop_var ${BENCH_SOURCE_FILES})
 
-        message("Creating test from: ${loop_var}")
+        message("Creating benchmark from: ${loop_var}")
 
         set(NAME ${loop_var})
         STRING(REGEX REPLACE "${CMAKE_SOURCE_DIR}/benchmark/" "" NAME ${NAME})
@@ -235,6 +235,6 @@ if (BENCHMARK)
 
         target_link_libraries(${NAME} benchmark ${CMAKE_THREAD_LIBS_INIT})
 
-    endforeach(loop_var)
+    endforeach()
 
 endif()
