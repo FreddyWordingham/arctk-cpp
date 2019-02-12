@@ -83,6 +83,10 @@ before_install:
                 sudo brew link gcc
             elif [ $CC = clang ]; then
                 brew install llvm
+                export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+                export PATH="/usr/local/opt/llvm/bin:$PATH"
+                export LDFLAGS="-L/usr/local/opt/llvm/lib"
+                export CPPFLAGS="-I/usr/local/opt/llvm/include"
             fi
         fi
     - CC=$ARCTK_CC
