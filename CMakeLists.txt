@@ -132,18 +132,11 @@ if (CMAKE_BUILD_TYPE MATCHES "debug")
         -g                                  \
         -DDEBUG                             \
         -O0                                 \
-    ")
-elseif (CMAKE_BUILD_TYPE MATCHES "cover")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
-        -g                                  \
-        -DDEBUG                             \
-        -O0                                 \
         --coverage                          \
     ")
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} \
         --coverage                                        \
     ")
-    file(MAKE_DIRECTORY "${CMAKE_SOURCE_DIR}/build/coverage")
 elseif (CMAKE_BUILD_TYPE MATCHES "release")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
         -DNDEBUG                            \
