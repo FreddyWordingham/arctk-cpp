@@ -120,7 +120,7 @@ before_install:
     - |
         if [ $ARCTK_BUILD_TYPE = release ]; then 
             cd gbench
-            sudo cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE CMakeLists.txt -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -std=c++17 .
+            sudo cmake -DBENCHMARK_ENABLE_GTEST_TESTS=OFF -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE CMakeLists.txt -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -std=c++17 .
             sudo make
             sudo make install
             cd -

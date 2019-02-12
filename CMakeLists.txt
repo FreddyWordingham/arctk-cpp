@@ -83,6 +83,11 @@ if (UNIT_TESTING)
 endif ()
 message("Unit testing: ${UNIT_TESTING}")
 
+if (BENCHMARK)
+    find_package(GoogleBenchmark REQUIRED)
+endif ()
+message("Benchmarking: ${BENCHMARK}")
+
 if (CLANG_TIDY)
     set(CMAKE_CXX_CLANG_TIDY "clang-tidy")
 endif ()
