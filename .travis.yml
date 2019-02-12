@@ -16,6 +16,7 @@ matrix:
                 - cmake
                 - g++-8
       env:
+        - ARCTK_COMPILER=gcc
         - CC=gcc-8
         - CXX=g++-8
         - COVERAGE=false
@@ -34,6 +35,7 @@ matrix:
                 - cmake
                 - g++-8
       env:
+        - ARCTK_COMPILER=gcc
         - CC=gcc-8
         - CXX=g++-8
         - COVERAGE=false
@@ -52,6 +54,7 @@ matrix:
                 - cmake
                 - clang
       env:
+        - ARCTK_COMPILER=clang
         - CC=clang
         - CXX=clang++
         - COVERAGE=false
@@ -70,6 +73,7 @@ matrix:
                 - cmake
                 - clang
       env:
+        - ARCTK_COMPILER=clang
         - CC=clang
         - CXX=clang++
         - COVERAGE=false
@@ -87,6 +91,7 @@ matrix:
                 - cmake
       env:
         - HOMEBREW_NO_AUTO_UPDATE=1
+        - ARCTK_COMPILER=gcc
         - CC=gcc-8
         - CXX=g++-8
         - COVERAGE=false
@@ -104,6 +109,7 @@ matrix:
                 - cmake
       env:
         - HOMEBREW_NO_AUTO_UPDATE=1
+        - ARCTK_COMPILER=gcc
         - CC=gcc-8
         - CXX=g++-8
         - COVERAGE=false
@@ -121,6 +127,7 @@ matrix:
                 - cmake
       env:
         - HOMEBREW_NO_AUTO_UPDATE=1
+        - ARCTK_COMPILER=clang
         - CC=clang
         - CXX=clang++
         - COVERAGE=true
@@ -138,6 +145,7 @@ matrix:
                 - cmake
       env:
         - HOMEBREW_NO_AUTO_UPDATE=1
+        - ARCTK_COMPILER=clang
         - CC=clang
         - CXX=clang++
         - COVERAGE=false
@@ -149,10 +157,10 @@ matrix:
 before_install:
     - |
         if [ $TRAVIS_OS_NAME = osx ]; then
-            if [ $ARCTK_CC = gcc-8 ]; then
+            if [ $ARCTK_COMPILER = gcc ]; then
                 brew install gcc
                 brew link gcc
-            elif [ $ARCTK_CC = clang ]; then
+            elif [ $ARCTK_COMPILER = clang ]; then
                 brew install llvm
                 export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
                 export PATH="/usr/local/opt/llvm/bin:$PATH"
