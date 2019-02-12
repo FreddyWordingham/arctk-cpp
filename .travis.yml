@@ -161,6 +161,7 @@ before_install:
             fi
         fi
     - echo $TRAVIS_OS_NAME
+    - echo $ARCTK_BUILD_TYPE
     - echo $ARCTK_CC
     - which $ARCTK_CC
     - $ARCTK_CC --version
