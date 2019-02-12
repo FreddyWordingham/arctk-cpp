@@ -175,17 +175,17 @@ before_install:
     - cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
     - make
     - sudo make install
-    - if [ $TRAVIS_OS_NAME = linux ]; then cp *.a /usr/lib; fi
     - cd -
-    - |
-        if [ $COVERAGE = true ]; then
-            brew install lcov
-        fi
     - cd gbench
     - cmake -DBENCHMARK_ENABLE_GTEST_TESTS=OFF -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
     - make
     - sudo make install
+    - if [ $TRAVIS_OS_NAME = linux ]; then cp *.a /usr/lib; fi
     - cd -
+    - |
+    if [ $COVERAGE = true ]; then
+        brew install lcov
+    fi
 
 script:
     - printf "UNIT TESTING\n"
