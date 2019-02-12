@@ -171,20 +171,12 @@ before_install:
     - echo $ARCTK_CXX
     - which $ARCTK_CXX
     - $ARCTK_CXX --version
-    - |
-        if [ $TRAVIS_OS_NAME = linux ]; then
-            cd /usr/src/gtest
-            cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
-            make
-            cp *.a /usr/lib
-            cd -
-        elif [ $TRAVIS_OS_NAME = osx ]; then
-            cd gtest
-            cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
-            make
-            make install
-            cd -
-        fi
+    - cd gtest
+    - cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
+    - make
+    - sudo make install
+    - if [ $TRAVIS_OS_NAME = linux ]; then cp *.a /usr/lib; fi
+    - cd -
     - |
         if [ $COVERAGE = true ]; then
             brew install lcov
