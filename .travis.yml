@@ -21,6 +21,24 @@ matrix:
         - CXX=g++-8
         - COVERAGE=false
         - ARCTK_DIR=$TRAVIS_BUILD_DIR
+        - ARCTK_BUI=debug
+
+    - os: linux
+      compiler: gcc
+      addons:
+          apt:
+              sources:
+                - ubuntu-toolchain-r-test
+              packages:
+                - cmake
+                - g++-8
+                - libgtest-dev
+      env:
+        - CC=gcc-8
+        - CXX=g++-8
+        - COVERAGE=false
+        - ARCTK_DIR=$TRAVIS_BUILD_DIR
+        - ARCTK_BUI=release
 
     - os: linux
       compiler: clang
@@ -37,6 +55,24 @@ matrix:
         - CXX=clang++
         - COVERAGE=false
         - ARCTK_DIR=$TRAVIS_BUILD_DIR
+        - ARCTK_BUI=debug
+
+    - os: linux
+      compiler: clang
+      addons:
+          apt:
+              sources:
+                - llvm-toolchain-trusty-7.0
+              packages:
+                - cmake
+                - clang
+                - libgtest-dev
+      env:
+        - CC=clang
+        - CXX=clang++
+        - COVERAGE=false
+        - ARCTK_DIR=$TRAVIS_BUILD_DIR
+        - ARCTK_BUI=release
 
     - os: osx
       osx_image: xcode10.1
@@ -51,6 +87,22 @@ matrix:
         - CXX=g++-8
         - COVERAGE=false
         - ARCTK_DIR=$TRAVIS_BUILD_DIR
+        - ARCTK_BUI=debug
+
+    - os: osx
+      osx_image: xcode10.1
+      compiler: gcc
+      addons:
+          brew:
+              packages:
+                - cmake
+      env:
+        - HOMEBREW_NO_AUTO_UPDATE=1
+        - CC=gcc-8
+        - CXX=g++-8
+        - COVERAGE=false
+        - ARCTK_DIR=$TRAVIS_BUILD_DIR
+        - ARCTK_BUI=release
 
     - os: osx
       osx_image: xcode10.1
@@ -65,6 +117,22 @@ matrix:
         - CXX=clang++
         - COVERAGE=true
         - ARCTK_DIR=$TRAVIS_BUILD_DIR
+        - ARCTK_BUI=debug
+
+    - os: osx
+      osx_image: xcode10.1
+      compiler: clang
+      addons:
+          brew:
+              packages:
+                - cmake
+      env:
+        - HOMEBREW_NO_AUTO_UPDATE=1
+        - CC=clang
+        - CXX=clang++
+        - COVERAGE=false
+        - ARCTK_DIR=$TRAVIS_BUILD_DIR
+        - ARCTK_BUI=release
 
 before_install:
     - |
@@ -90,7 +158,7 @@ before_install:
     - |
         if [ $TRAVIS_OS_NAME = linux ]; then
             cd /usr/src/gtest
-            cmake CMakeLists.txt
+            cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -std=c++17 .
             make
             cp *.a /usr/lib
             cd -
@@ -112,10 +180,10 @@ before_install:
     - cd -
 
 script:
-    - printf "DEBUG - UNIT TESTING\n"
+    - printf "UNIT TESTING\n"
     - mkdir $ARCTK_DIR/build
     - cd $ARCTK_DIR/build
-    - cmake -DCMAKE_BUILD_TYPE=debug -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -DUNIT_TESTING=true ..
+    - cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -DUNIT_TESTING=true ..
     - make
     - |
       for test in $ARCTK_DIR/bin/test/*; do
@@ -135,10 +203,10 @@ script:
     - rm -r $ARCTK_DIR/bin
     - rm -r $ARCTK_DIR/include/arctk/config
     - printf "\n"
-    - printf "RELEASE - BENCHMARKING\n"
+    - printf "BENCHMARKING\n"
     - mkdir $ARCTK_DIR/build
     - cd $ARCTK_DIR/build
-    - cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -DBENCHMARK=true ..
+    - cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -DBENCHMARK=true ..
     - make
     - |
       for bench in $ARCTK_DIR/bin/bench/*; do
