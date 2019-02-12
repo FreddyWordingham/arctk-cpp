@@ -107,7 +107,20 @@ before_install:
             cd -
         elif [ $TRAVIS_OS_NAME = osx ]; then
             cd gtest
-            sudo cmake CMakeLists.txt -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -std=c++17 .
+            sudo cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE CMakeLists.txt -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -std=c++17 .
+            sudo make
+            sudo make install
+            cd -
+            cd gbench
+            sudo cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE CMakeLists.txt -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -std=c++17 .
+            sudo make
+            sudo make install
+            cd -
+        fi
+    - |
+        if [ $ARCTK_BUILD_TYPE = release ]; then 
+            cd gbench
+            sudo cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE CMakeLists.txt -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -std=c++17 .
             sudo make
             sudo make install
             cd -
@@ -119,7 +132,7 @@ install:
 script:
     - mkdir build
     - cd build
-    - cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -DUNIT_TESTING=true ..
+    - sudo cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -DUNIT_TESTING=true ..
     - make && make test
 
 after_success:
