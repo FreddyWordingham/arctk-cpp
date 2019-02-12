@@ -175,7 +175,7 @@ before_install:
           make
           cp *.a /usr/lib
           cd -
-      elif [ $TRAVIS_OS_NAME = linux ]; then
+      elif [ $TRAVIS_OS_NAME = osx ]; then
           cd gtest
           cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
           make
