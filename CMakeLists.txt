@@ -84,7 +84,7 @@ endif ()
 message("Unit testing: ${UNIT_TESTING}")
 
 if (BENCHMARK)
-    find_package(Benchmark REQUIRED)
+    find_package(benchmark REQUIRED)
 endif ()
 message("Benchmarking: ${BENCHMARK}")
 

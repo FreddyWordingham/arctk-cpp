@@ -196,7 +196,6 @@ before_install:
       fi
 
 script:
-    - printf "UNIT TESTING\n"
     - mkdir $ARCTK_DIR/build
     - cd $ARCTK_DIR/build
     - cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -DUNIT_TESTING=true ..
@@ -218,8 +217,6 @@ script:
     - rm -r $ARCTK_DIR/build
     - rm -r $ARCTK_DIR/bin
     - rm -r $ARCTK_DIR/include/arctk/config
-    - printf "\n"
-    - printf "BENCHMARKING\n"
     - mkdir $ARCTK_DIR/build
     - cd $ARCTK_DIR/build
     - cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -DBENCHMARK=true ..
@@ -232,7 +229,6 @@ script:
     - rm -r $ARCTK_DIR/build
     - rm -r $ARCTK_DIR/bin
     - rm -r $ARCTK_DIR/include/arctk/config
-    - printf "\n"
 
 notifications:
   email:
