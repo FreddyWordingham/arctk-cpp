@@ -17,8 +17,8 @@ matrix:
                 - g++-8
                 - libgtest-dev
       env:
-        - ARCTK_CC=gcc-8
-        - ARCTK_CXX=g++-8
+        - CC=gcc-8
+        - CXX=g++-8
         - ARCTK_BUILD_TYPE=debug
 
     - os: linux
@@ -32,8 +32,8 @@ matrix:
                 - clang
                 - libgtest-dev
       env:
-        - ARCTK_CC=clang
-        - ARCTK_CXX=clang++
+        - CC=clang
+        - CXX=clang++
         - ARCTK_BUILD_TYPE=debug
 
     - os: osx
@@ -45,8 +45,8 @@ matrix:
                 - cmake
       env:
         - HOMEBREW_NO_AUTO_UPDATE=1
-        - ARCTK_CC=gcc-8
-        - ARCTK_CXX=g++-8
+        - CC=gcc-8
+        - CXX=g++-8
         - ARCTK_BUILD_TYPE=debug
 
     - os: osx
@@ -58,8 +58,8 @@ matrix:
                 - cmake
       env:
         - HOMEBREW_NO_AUTO_UPDATE=1
-        - ARCTK_CC=clang
-        - ARCTK_CXX=clang++
+        - CC=clang
+        - CXX=clang++
         - ARCTK_BUILD_TYPE=debug
 
     - os: osx
@@ -71,8 +71,8 @@ matrix:
                 - cmake
       env:
         - HOMEBREW_NO_AUTO_UPDATE=1
-        - ARCTK_CC=clang
-        - ARCTK_CXX=clang++
+        - CC=clang
+        - CXX=clang++
         - ARCTK_BUILD_TYPE=coverage
 
 before_install:
@@ -89,8 +89,6 @@ before_install:
                 export CPPFLAGS="-I/usr/local/opt/llvm/include"
             fi
         fi
-    - CC=$ARCTK_CC
-    - CXX=$ARCTK_CXX
     - echo $TRAVIS_OS_NAME
     - echo $CC
     - which $CC
