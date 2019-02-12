@@ -183,9 +183,9 @@ before_install:
     - if [ $TRAVIS_OS_NAME = linux ]; then cp *.a /usr/lib; fi
     - cd -
     - |
-    if [ $COVERAGE = true ]; then
-        brew install lcov
-    fi
+      if [ $COVERAGE = true ]; then
+          brew install lcov
+      fi
 
 script:
     - printf "UNIT TESTING\n"
