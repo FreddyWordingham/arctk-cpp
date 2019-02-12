@@ -84,7 +84,7 @@ endif ()
 message("Unit testing: ${UNIT_TESTING}")
 
 if (BENCHMARK)
-    find_package(GoogleBenchmark REQUIRED)
+    find_package(Benchmark REQUIRED)
 endif ()
 message("Benchmarking: ${BENCHMARK}")
 
@@ -115,6 +115,7 @@ message("Document: ${DOCUMENT}")
 file(GLOB_RECURSE HEADER_FILES ${CMAKE_SOURCE_DIR}/include/arctk/*.hpp)
 file(GLOB_RECURSE IMPL_FILES ${CMAKE_SOURCE_DIR}/include/arctk/*.inl)
 file(GLOB_RECURSE TEST_SOURCE_FILES ${CMAKE_SOURCE_DIR}/testing/*.cpp)
+file(GLOB_RECURSE BENCH_SOURCE_FILES ${CMAKE_SOURCE_DIR}/benchmark/*.cpp)
 
 
 
@@ -172,8 +173,9 @@ endif ()
 
 
 #   == TARGETS ==
-add_library(arctk INTERFACE)
 include_directories(SYSTEM "/usr/local/include")
+link_directories(SYSTEM "/usr/local/lib")
+add_library(arctk INTERFACE)
 target_include_directories(arctk INTERFACE "${CMAKE_SOURCE_DIR}/include")
 target_sources(arctk INTERFACE ${HEADER_FILES} ${IMPL_FILES})
 
@@ -207,6 +209,31 @@ if (UNIT_TESTING)
         target_link_libraries(${NAME} ${GTEST_LIBRARY} ${GTEST_MAIN_LIBRARY})
 
         gtest_discover_tests(${NAME})
+
+    endforeach(loop_var)
+
+endif()
+
+
+
+#   == BENCHMARKING ==
+if (BENCHMARK)
+
+    foreach(loop_var ${BENCH_SOURCE_FILES})
+
+        message("Creating test from: ${loop_var}")
+
+        set(NAME ${loop_var})
+        STRING(REGEX REPLACE "${CMAKE_SOURCE_DIR}/benchmark/" "" NAME ${NAME})
+        STRING(REGEX REPLACE "/" "_" NAME ${NAME})
+        STRING(REGEX REPLACE ".cpp" "_bench" NAME ${NAME})
+
+        set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/bench)
+        add_executable(${NAME} ${loop_var})
+
+        target_include_directories(${NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
+
+        target_link_libraries(${NAME} benchmark ${CMAKE_THREAD_LIBS_INIT})
 
     endforeach(loop_var)
 
