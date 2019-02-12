@@ -20,6 +20,7 @@ matrix:
         - CC=gcc-8
         - CXX=g++-8
         - COVERAGE=false
+        - ARCTK_DIR=$TRAVIS_BUILD_DIR
 
     - os: linux
       compiler: clang
@@ -35,6 +36,7 @@ matrix:
         - CC=clang
         - CXX=clang++
         - COVERAGE=false
+        - ARCTK_DIR=$TRAVIS_BUILD_DIR
 
     - os: osx
       osx_image: xcode10.1
@@ -48,6 +50,7 @@ matrix:
         - CC=gcc-8
         - CXX=g++-8
         - COVERAGE=false
+        - ARCTK_DIR=$TRAVIS_BUILD_DIR
 
     - os: osx
       osx_image: xcode10.1
@@ -61,6 +64,7 @@ matrix:
         - CC=clang
         - CXX=clang++
         - COVERAGE=true
+        - ARCTK_DIR=$TRAVIS_BUILD_DIR
 
 before_install:
     - |
@@ -104,49 +108,47 @@ before_install:
     - cd gbench
     - cmake -DBENCHMARK_ENABLE_GTEST_TESTS=OFF -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -std=c++17 .
     - make
-    - make install
+    - sudo make install
     - cd -
 
 script:
-    - mkdir build
-    - cd build
+    - printf "DEBUG - UNIT TESTING\n"
+    - mkdir $ARCTK_DIR/build
+    - cd $ARCTK_DIR/build
     - cmake -DCMAKE_BUILD_TYPE=debug -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -DUNIT_TESTING=true ..
     - make
-    - cd ../bin/test
     - |
-      for test in *; do
+      for test in $ARCTK_DIR/bin/test/*; do
           ./$test
       done
-    - cd ..
-    - rm -r build
+    - cd -
     - |
       if [ $COVERAGE = true ]; then
-          mkdir build
-          cd build
-          cmake -DCMAKE_BUILD_TYPE=coverage -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -DUNIT_TESTING=true ..
-          make
-          cd ../bin/test
-          for test in *; do
-              ./$test
-          done
-          cd ..
+          cd $ARCTK_DIR
           lcov --capture --directory . --output-file coverage.info
           lcov --remove coverage.info '/usr/*' --output-file coverage.info
           lcov --list coverage.info
           bash <(curl -s https://codecov.io/bash) -t "57886efc-8eca-416f-9e8b-1b0ee825efe5" -f coverage.info || echo "Codecov did not collect coverage reports"
-          rm -r build
+          cd -
       fi
-    - mkdir build
-    - cd build
-    - cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -DUNIT_TESTING=true ..
+    - rm -r $ARCTK_DIR/build
+    - rm -r $ARCTK_DIR/bin
+    - rm -r $ARCTK_DIR/include/arctk/config
+    - printf "\n"
+    - printf "RELEASE - BENCHMARKING\n"
+    - mkdir $ARCTK_DIR/build
+    - cd $ARCTK_DIR/build
+    - cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -DBENCHMARK=true ..
     - make
-    - cd ../bin/bench
     - |
-      for bench in *; do
+      for bench in $ARCTK_DIR/bin/bench/*; do
           ./$bench
       done
-    - cd ..
-    - rm -r build
+    - cd -
+    - rm -r $ARCTK_DIR/build
+    - rm -r $ARCTK_DIR/bin
+    - rm -r $ARCTK_DIR/include/arctk/config
+    - printf "\n"
 
 notifications:
   email:
