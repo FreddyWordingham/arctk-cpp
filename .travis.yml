@@ -58,8 +58,8 @@ matrix:
                 - cmake
       env:
         - HOMEBREW_NO_AUTO_UPDATE=1
-        - ARCTK_CC=clang-7
-        - ARCTK_CXX=clang++-7
+        - ARCTK_CC=clang
+        - ARCTK_CXX=clang++
         - ARCTK_BUILD_TYPE=debug
 
     - os: osx
@@ -71,8 +71,8 @@ matrix:
                 - cmake
       env:
         - HOMEBREW_NO_AUTO_UPDATE=1
-        - ARCTK_CC=clang-7
-        - ARCTK_CXX=clang++-7
+        - ARCTK_CC=clang
+        - ARCTK_CXX=clang++
         - ARCTK_BUILD_TYPE=coverage
 
 before_install:
@@ -80,7 +80,7 @@ before_install:
         if [ $TRAVIS_OS_NAME = osx ]; then
             if [ $CC = gcc ]; then
                 brew install gcc
-                sudo brew link gcc
+                brew link gcc
             elif [ $CC = clang ]; then
                 brew install llvm
                 export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
