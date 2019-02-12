@@ -210,7 +210,9 @@ script:
     - make
     - |
       for test in $ARCTK_DIR/bin/test/*; do
-          $test
+          if [ -f $test ]; then
+              $test
+          fi
       done
     - cd -
     - |
@@ -231,7 +233,9 @@ script:
     - make
     - |
       for bench in $ARCTK_DIR/bin/bench/*; do
-          $bench
+          if [ -f $bench ]; then
+              $bench
+          fi
       done
     - cd -
     - rm -r $ARCTK_DIR/build
