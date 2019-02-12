@@ -13,7 +13,6 @@ matrix:
               sources:
                 - ubuntu-toolchain-r-test
               packages:
-                - cmake
                 - g++-8
       env:
         - CC=gcc-8
@@ -31,7 +30,6 @@ matrix:
               sources:
                 - ubuntu-toolchain-r-test
               packages:
-                - cmake
                 - g++-8
       env:
         - CC=gcc-8
@@ -49,7 +47,6 @@ matrix:
               sources:
                 - llvm-toolchain-trusty-7.0
               packages:
-                - cmake
                 - clang
       env:
         - CC=clang
@@ -67,7 +64,6 @@ matrix:
               sources:
                 - llvm-toolchain-trusty-7.0
               packages:
-                - cmake
                 - clang
       env:
         - CC=clang
@@ -170,11 +166,13 @@ before_install:
     - $ARCTK_CXX --version
     - |
       if [ $TRAVIS_OS_NAME = linux ]; then
+          sudo apt-get -qq update
+          sudo apt-get install -y cmake
           sudo apt-get install -y libgtest-dev
           cd /usr/src/gtest
           sudo cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
           sudo make
-          cp *.a /usr/lib
+          sudo cp *.a /usr/lib
           cd -
       elif [ $TRAVIS_OS_NAME = osx ]; then
           cd gtest
