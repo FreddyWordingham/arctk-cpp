@@ -149,7 +149,7 @@ matrix:
 before_install:
     - |
         if [ $TRAVIS_OS_NAME = osx ]; then
-            if [ $ARCTK_CC = gcc ]; then
+            if [ $ARCTK_CC = gcc-8 ]; then
                 brew install gcc
                 brew link gcc
             elif [ $ARCTK_CC = clang ]; then
