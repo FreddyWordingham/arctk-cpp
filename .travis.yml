@@ -180,14 +180,14 @@ before_install:
       if [ $TRAVIS_OS_NAME = linux ]; then
           sudo apt-get install -y libgtest-dev
           cd /usr/src/gtest
-          sudo cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
+          sudo cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
           sudo make
           sudo make install
           sudo cp *.a /usr/lib
           cd -
       elif [ $TRAVIS_OS_NAME = osx ]; then
           cd gtest
-          sudo cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
+          sudo cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
           sudo make
           sudo make install
           cd -
