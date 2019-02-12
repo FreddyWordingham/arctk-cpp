@@ -17,8 +17,8 @@ matrix:
                 - g++-8
                 - libgtest-dev
       env:
-        - $ARCTK_CC=gcc-8
-        - $ARCTK_CXX=g++-8
+        - ARCTK_CC=gcc-8
+        - ARCTK_CXX=g++-8
         - ARCTK_BUILD_TYPE=debug
 
     - os: linux
@@ -32,8 +32,8 @@ matrix:
                 - clang
                 - libgtest-dev
       env:
-        - $ARCTK_CC=clang
-        - $ARCTK_CXX=clang++
+        - ARCTK_CC=clang
+        - ARCTK_CXX=clang++
         - ARCTK_BUILD_TYPE=debug
 
     - os: osx
@@ -44,8 +44,9 @@ matrix:
               packages:
                 - cmake
       env:
-        - $ARCTK_CC=gcc-8
-        - $ARCTK_CXX=g++-8
+        - HOMEBREW_NO_AUTO_UPDATE=1
+        - ARCTK_CC=gcc-8
+        - ARCTK_CXX=g++-8
         - ARCTK_BUILD_TYPE=debug
 
     - os: osx
@@ -56,8 +57,9 @@ matrix:
               packages:
                 - cmake
       env:
-        - $ARCTK_CC=clang-7
-        - $ARCTK_CXX=clang++-7
+        - HOMEBREW_NO_AUTO_UPDATE=1
+        - ARCTK_CC=clang-7
+        - ARCTK_CXX=clang++-7
         - ARCTK_BUILD_TYPE=debug
 
     - os: osx
@@ -68,8 +70,9 @@ matrix:
               packages:
                 - cmake
       env:
-        - $ARCTK_CC=clang-7
-        - $ARCTK_CXX=clang++-7
+        - HOMEBREW_NO_AUTO_UPDATE=1
+        - ARCTK_CC=clang-7
+        - ARCTK_CXX=clang++-7
         - ARCTK_BUILD_TYPE=coverage
 
 before_install:
@@ -77,6 +80,7 @@ before_install:
         if [ $TRAVIS_OS_NAME = osx ]; then
             if [ $CC = gcc ]; then
                 brew install gcc
+                sudo brew link gcc
             elif [ $CC = clang ]; then
                 brew install llvm
             fi
