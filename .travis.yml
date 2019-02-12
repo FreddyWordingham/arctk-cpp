@@ -74,13 +74,13 @@ matrix:
 
 before_install:
     - |
-    if [ $TRAVIS_OS_NAME = osx ]; then
-        if [ $CC = gcc ]; then
-            brew install gcc
-        elif [ $CC = clang ]; then
-            brew install llvm
+        if [ $TRAVIS_OS_NAME = osx ]; then
+            if [ $CC = gcc ]; then
+                brew install gcc
+            elif [ $CC = clang ]; then
+                brew install llvm
+            fi
         fi
-    fi
     - CC=$ARCTK_CC
     - CXX=$ARCTK_CXX
     - echo $TRAVIS_OS_NAME
