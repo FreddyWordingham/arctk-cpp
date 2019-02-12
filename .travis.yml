@@ -109,11 +109,6 @@ before_install:
             sudo make
             sudo make install
             cd -
-            cd gbench
-            sudo cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE CMakeLists.txt -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -std=c++17 .
-            sudo make
-            sudo make install
-            cd -
         fi
     - |
         if [ $ARCTK_BUILD_TYPE = release ]; then 
@@ -131,7 +126,7 @@ script:
     - mkdir build
     - cd build
     - sudo cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -DUNIT_TESTING=true ..
-    - make && make test
+    - make
 
 after_success:
     - |
@@ -140,6 +135,22 @@ after_success:
             lcov --remove coverage.info '/usr/*' --output-file coverage.info
             lcov --list coverage.info
             bash <(curl -s https://codecov.io/bash) -t "57886efc-8eca-416f-9e8b-1b0ee825efe5" -f coverage.info || echo "Codecov did not collect coverage reports"
+        fi
+    - |
+        if [ $ARCTK_BUILD_TYPE = debug ]; then 
+            cd bin/test
+            for test in *; do
+                ./$test
+            done
+            cd -
+        fi
+    - |
+        if [ $ARCTK_BUILD_TYPE = release ]; then 
+            cd bin/bench
+            for bench in *; do
+                ./$bench
+            done
+            cd -
         fi
 
 notifications:
