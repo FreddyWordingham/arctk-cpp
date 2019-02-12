@@ -103,7 +103,6 @@ before_install:
             sudo make
             sudo make install
             cd -
-            if [ $TRAVIS_OS_NAME = osx ]; then
         fi
 
 install:
