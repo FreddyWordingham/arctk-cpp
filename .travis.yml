@@ -16,7 +16,7 @@ matrix:
                 - g++-8
                 - libgtest-dev
       env:
-        - CC=gcc-8
+        - ARCTK_CC=gcc-8
         - CCX=g++-8
         - ARCTK_BUILD_TYPE=debug
 
@@ -30,8 +30,8 @@ matrix:
                 - clang
                 - libgtest-dev
       env:
-        - CC=clang-7
-        - CXX=clang++-7
+        - ARCTK_CC=clang-7
+        - ARCTK_CXX=clang++-7
         - ARCTK_BUILD_TYPE=debug
 
     - os: osx
@@ -42,7 +42,7 @@ matrix:
                 - cmake
                 - gcc
       env:
-        - CC=gcc-8
+        - ARCTK_CC=gcc-8
         - CCX=g++-8
         - ARCTK_BUILD_TYPE=debug
 
@@ -54,8 +54,8 @@ matrix:
                 - cmake
                 - llvm
       env:
-        - CC=clang-7
-        - CXX=clang++-7
+        - ARCTK_CC=clang-7
+        - ARCTK_CXX=clang++-7
         - ARCTK_BUILD_TYPE=debug
 
     - os: osx
@@ -66,19 +66,19 @@ matrix:
                 - cmake
                 - llvm
       env:
-        - CC=clang-7
-        - CXX=clang++-7
+        - ARCTK_CC=clang-7
+        - ARCTK_CXX=clang++-7
         - ARCTK_BUILD_TYPE=coverage
 
 before_install:
     - eval "${MATRIX_EVAL}"
     - echo $TRAVIS_OS_NAME
-    - echo $CC
-    - which $CC
-    - $CC --version
-    - echo $CXX
-    - which $CXX
-    - $CXX --version
+    - echo $ARCTK_CC
+    - which $ARCTK_CC
+    - $ARCTK_CC --version
+    - echo $ARCTK_CXX
+    - which $ARCTK_CXX
+    - $ARCTK_CXX --version
     - |
         if [ $TRAVIS_OS_NAME = linux ]; then 
             cd /usr/src/gtest
@@ -88,7 +88,7 @@ before_install:
             cd -
         elif [ $TRAVIS_OS_NAME = osx ]; then
             cd gtest
-            sudo cmake CMakeLists.txt -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -std=c++17 .
+            sudo cmake CMakeLists.txt -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
             sudo make
             sudo make install
             cd -
@@ -100,7 +100,7 @@ install:
 script:
     - mkdir build
     - cd build
-    - cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX -DUNIT_TESTING=true ..
+    - cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -DUNIT_TESTING=true ..
     - make && make test
 
 after_success:
