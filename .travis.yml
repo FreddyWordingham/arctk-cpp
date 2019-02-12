@@ -43,7 +43,6 @@ matrix:
           brew:
               packages:
                 - cmake
-                - gcc
       env:
         - $ARCTK_CC=gcc-8
         - $ARCTK_CXX=g++-8
@@ -56,7 +55,6 @@ matrix:
           brew:
               packages:
                 - cmake
-                - llvm
       env:
         - $ARCTK_CC=clang-7
         - $ARCTK_CXX=clang++-7
@@ -69,14 +67,20 @@ matrix:
           brew:
               packages:
                 - cmake
-                - llvm
       env:
         - $ARCTK_CC=clang-7
         - $ARCTK_CXX=clang++-7
         - ARCTK_BUILD_TYPE=coverage
 
 before_install:
-    - eval "${MATRIX_EVAL}"
+    - |
+    if [ $TRAVIS_OS_NAME = osx ]; then
+        if [ $CC = gcc ]; then
+            brew install gcc
+        elif [ $CC = clang ]; then
+            brew install llvm
+        fi
+    fi
     - CC=$ARCTK_CC
     - CXX=$ARCTK_CXX
     - echo $TRAVIS_OS_NAME
@@ -86,10 +90,6 @@ before_install:
     - echo $CXX
     - which $CXX
     - $CXX --version
-    - |
-        if [ $TRAVIS_OS_NAME = osx ] && [ $CC = gcc ]; then
-            brew install gcc
-        fi
     - |
         if [ $TRAVIS_OS_NAME = linux ]; then 
             cd /usr/src/gtest
