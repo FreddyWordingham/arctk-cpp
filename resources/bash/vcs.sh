@@ -3,8 +3,8 @@
 arctk.commit()
 {
     if [ "$#" != "1" ]; then
-        printf "Error! Unable to commit files.\n"
-        printf "Commit requires a single commit message string.\n"
+        echo "Error! Unable to commit files."
+        echo "Commit requires a single commit message string."
 
         return
     fi
@@ -20,8 +20,8 @@ arctk.commit()
 arctk.amend()
 {
     if [ "$#" != "1" ]; then
-        printf "Error! Unable to amend commit.\n"
-        printf "Amend requires a single commit message string.\n"
+        echo "Error! Unable to amend commit."
+        echo "Amend requires a single commit message string."
 
         return
     fi
