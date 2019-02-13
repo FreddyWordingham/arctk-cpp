@@ -84,6 +84,19 @@ arctk.test()
     cd -
 }
 
+arctk.bench()
+{
+    cd $ARCTK_DIR/build
+
+    for bench in $ARCTK_DIR/bin/bench/*; do
+        if [ -f $bench ]; then
+            $bench
+        fi
+    done
+
+    cd -
+}
+
 
 #   -- Documentation --
 arctk.doc()
