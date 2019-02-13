@@ -136,12 +136,12 @@ arctk.iwyu()
 #   -- Installation --
 arctk.install()
 {
-    cd $ARCTK_DIR/build > /dev/null
+    cd $ARCTK_DIR/build
 
     arctk.uninstall
     make install
 
-    cd - > /dev/null
+    cd -
 }
 
 arctk.uninstall()
