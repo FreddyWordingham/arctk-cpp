@@ -63,5 +63,6 @@ arctk.install()
 #   -- VSCode --
 arctk.extension()
 {
+    rm -r ~/.vscode/extensions/arctk-extension
     cp -r $ARCTK_DIR/resources/vscode/arctk-extension ~/.vscode/extensions/arctk-extension
 }
