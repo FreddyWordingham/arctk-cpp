@@ -15,7 +15,7 @@ arctk.build()
 {
     if [ "$#" == "0" ]; then
         if [ -z "$ARCTK_BUILD_ARGS" ]; then
-            printf "Error! ARCTK_BUILD_ARGS are not set!\n"
+            echo "Error! ARCTK_BUILD_ARGS are not set!"
 
             return
         fi
@@ -26,14 +26,14 @@ arctk.build()
     fi
 
     if [ "$#" != "7" ]; then
-        printf "Error! Incorrect number of arguments. ($#)\n"
-        printf "arctk.build <build_type> <C compiler> <C++ compiler> <unit testing> <benchmark> <clang-tidy> <iwyu> <document>\n"
+        echo "Error! Incorrect number of arguments. ($#)"
+        echo "arctk.build <build_type> <C compiler> <C++ compiler> <unit testing> <benchmark> <clang-tidy> <iwyu> <document>"
 
         return
     fi
 
     ARCTK_BUILD_ARGS="$1 $2 $3 $4 $5 $6 $7 $8"
-    printf "export ARCTK_BUILD_ARGS='$ARCTK_BUILD_ARGS'" > $ARCTK_DIR/.build
+    echo "export ARCTK_BUILD_ARGS='$ARCTK_BUILD_ARGS'" > $ARCTK_DIR/.build
 
     arctk.clean
 
