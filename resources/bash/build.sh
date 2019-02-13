@@ -58,15 +58,11 @@ arctk.build()
 #   -- Make --
 arctk.make()
 {
-    cd $ARCTK_DIR/bui
+    cd $ARCTK_DIR/build
 
     scan-build -analyze-headers --force-analyze-debug-code --view make -j 8
 
-    local cmake_compile_status=$?
-
-    cd
-
-    return ($cmake_compile_status)
+    cd -
 }
 
 
@@ -104,9 +100,7 @@ arctk.doc()
     cd $ARCTK_DIR/build
 
     make doc
-
     mv docs/ ..
-
     open ../docs/html/index.html
 
     cd -
@@ -114,57 +108,16 @@ arctk.doc()
 
 
 #   -- Coverage --
-arctk.cover.gen()
+arctk.cover()
 {
-    cd $ARCTK_DIR/bin/test > /dev/null
+    cd $ARCTK_DIR
 
-    rm $ARCTK_DIR/build/coverage/*
+    lcov --capture --directory . --output-file coverage.info
+    lcov --remove coverage.info '/usr/*' --output-file coverage.info
+    lcov --list coverage.info
+    bash <(curl -s https://codecov.io/bash) -t "57886efc-8eca-416f-9e8b-1b0ee825efe5" -f coverage.info || echo "Codecov did not collect coverage reports"
 
-    for test in *; do
-        if [ -f "$test" ]; then
-            printf "Generating coverage report for test: $test\n"
-            ./$test > /dev/null
-            llvm-profdata merge -sparse default.profraw -o $ARCTK_DIR/build/coverage/$test.profdata
-            rm default.profraw
-        fi
-    done
-
-    list=$(ls $ARCTK_DIR/build/coverage/*.profdata)
-    llvm-profdata merge -sparse $list -o $ARCTK_DIR/build/coverage/COMPLETE.profdata
-
-    cd - > /dev/null
-}
-
-arctk.cover.view()
-{
-    cd $ARCTK_DIR/bin/test > /dev/null
-
-    if [ "$#" == "0" ]; then
-        for test in *; do
-            if [ -f "$test" ]; then
-                filename=${test#unit_}
-                filename=${filename%_test}
-                filename=${filename//_//}
-                # llvm-cov report ./$test -instr-profile=$ARCTK_DIR/build/coverage/$test.profdata
-                printf "$test\t"
-                llvm-cov report ./$test -instr-profile=$ARCTK_DIR/build/coverage/$test.profdata | grep $filename | awk '{print $4}' | tr "\n" "\t"
-                printf "\n"
-            fi
-        done
-    elif [ "$#" == "1" ]; then
-       llvm-cov report ./$1 -instr-profile=$ARCTK_DIR/build/coverage/$1.profdata
-        # llvm-cov report ./$1 -instr-profile=$ARCTK_DIR/build/coverage/COMPLETE.profdata
-    else
-       llvm-cov show ./$1 -instr-profile=$ARCTK_DIR/build/coverage/$1.profdata -format=text -Xdemangler c++filt -Xdemangler -n -show-line-counts-or-regions | bcat
-        # llvm-cov show ./$1 -instr-profile=$ARCTK_DIR/build/coverage/COMPLETE.profdata -format=html -Xdemangler c++filt -Xdemangler -n -show-line-counts-or-regions | bcat
-    fi
- 
-    cd - > /dev/null
-}
-
-arctk.cover.view.tab()
-{
-    arctk.cover.view | column -t
+    cd -
 }
 
 
