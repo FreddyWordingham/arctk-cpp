@@ -155,10 +155,10 @@ matrix:
         - ARCTK_CXX=clang++
 
 before_install:
-    - printf "TRAVIS_OS_NAME    : $TRAVIS_OS_NAME\n"
-    - printf "ARCTK_BUILD_TYPE  : $ARCTK_BUILD_TYPE\n"
-    - printf "ARCTK_CC          : $ARCTK_CC\n"
-    - printf "ARCTK_CXX         : $ARCTK_CXX\n"
+    - echo $TRAVIS_OS_NAME
+    - echo $ARCTK_BUILD_TYPE
+    - echo $ARCTK_CC
+    - echo $ARCTK_CXX
     - |
         if [ $TRAVIS_OS_NAME = osx ]; then
             if [ $ARCTK_COMPILER = gcc ]; then
@@ -221,7 +221,7 @@ script:
           lcov --capture --directory . --output-file coverage.info
           lcov --remove coverage.info '/usr/*' --output-file coverage.info
           lcov --list coverage.info
-          bash <(curl -s https://codecov.io/bash) -t "57886efc-8eca-416f-9e8b-1b0ee825efe5" -f coverage.info || printf "Codecov did not collect coverage reports.\n"
+          bash <(curl -s https://codecov.io/bash) -t "57886efc-8eca-416f-9e8b-1b0ee825efe5" -f coverage.info || echo "Codecov did not collect coverage reports."
           cd -
       fi
     - rm -r $ARCTK_DIR/build
