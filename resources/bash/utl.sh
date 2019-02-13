@@ -9,11 +9,27 @@ arctk.search()
         return
     fi
 
-    cd $ARCTK_DIR/include/arctk > /dev/null
+    cd $ARCTK_DIR
 
     grep -r "$1" .
 
-    cd - > /dev/null
+    cd -
+}
+
+arctk.search.lib()
+{
+    if [ "$#" != "1" ]; then
+        printf "Error! Unable to search Arctk library files.\n"
+        printf "Search requires a single regex string.\n"
+
+        return
+    fi
+
+    cd $ARCTK_DIR/include/arctk
+
+    grep -r "$1" .
+
+    cd -
 }
 
 
