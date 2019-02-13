@@ -3,8 +3,8 @@
 arctk.search()
 {
     if [ "$#" != "1" ]; then
-        printf "Error! Unable to search Arctk files.\n"
-        printf "Search requires a single regex string.\n"
+    echo "Error! Unable to search Arctk files."
+    echo "Search requires a single regex string."
 
         return
     fi
@@ -19,8 +19,8 @@ arctk.search()
 arctk.search.lib()
 {
     if [ "$#" != "1" ]; then
-        printf "Error! Unable to search Arctk library files.\n"
-        printf "Search requires a single regex string.\n"
+    echo "Error! Unable to search Arctk library files."
+    echo "Search requires a single regex string."
 
         return
     fi
@@ -34,16 +34,16 @@ arctk.search.lib()
 
 arctk.list()
 {
-    printf "\t== Declerations ==\n"
+    echo "\t== Declerations =="
     arctk.list.dec
 
-    printf "\n\t== Implementation ==\n"
+    echo "\n\t== Implementation =="
     arctk.list.impl
 
-    printf "\n\t== Testing ==\n"
+    echo "\n\t== Testing =="
     arctk.list.test
 
-    printf "\n\t== Benchmark ==\n"
+    echo "\n\t== Benchmark =="
     arctk.list.bench
 
 }
@@ -88,14 +88,14 @@ arctk.list.bench()
 #   -- Installation --
 arctk.install.scripts()
 {
-    printf "\n"                                                 >> ~/.bash_profile
-    printf "#   == ARCTK ==\n"                                  >> ~/.bash_profile
-    printf "export ARCTK_DIR=\"$PROJECTS_DIR/arctk\"\n"         >> ~/.bash_profile
-    printf "source $ARCTK_DIR/resources/bash/vcs.sh\n"          >> ~/.bash_profile
-    printf "source $ARCTK_DIR/resources/bash/build.sh\n"        >> ~/.bash_profile
-    printf "source $ARCTK_DIR/resources/bash/utl.sh\n"          >> ~/.bash_profile
-    printf "source $ARCTK_DIR/resources/bash/templates.sh\n"    >> ~/.bash_profile
-    printf ". $ARCTK_DIR/.build\n"                              >> ~/.bash_profile
+    echo ""                                               >> ~/.bash_profile
+    echo "#   == ARCTK =="                                >> ~/.bash_profile
+    echo "export ARCTK_DIR=\"$PROJECTS_DIR/arctk\""       >> ~/.bash_profile
+    echo "source $ARCTK_DIR/resources/bash/vcs.sh"        >> ~/.bash_profile
+    echo "source $ARCTK_DIR/resources/bash/build.sh"      >> ~/.bash_profile
+    echo "source $ARCTK_DIR/resources/bash/utl.sh"        >> ~/.bash_profile
+    echo "source $ARCTK_DIR/resources/bash/templates.sh"  >> ~/.bash_profile
+    echo ". $ARCTK_DIR/.build"                            >> ~/.bash_profile
 }
 
 
