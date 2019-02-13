@@ -13,7 +13,7 @@ arctk.search()
 
     grep -r "$1" .
 
-    cd -
+    cd - > /dev/null
 }
 
 arctk.search.lib()
@@ -29,7 +29,7 @@ arctk.search.lib()
 
     grep -r "$1" .
 
-    cd -
+    cd - > /dev/null
 }
 
 arctk.list()
@@ -54,7 +54,7 @@ arctk.list.dec()
 
     find . -name "*.hpp"
 
-    cd -
+    cd - > /dev/null
 }
 
 arctk.list.impl()
@@ -63,7 +63,7 @@ arctk.list.impl()
 
     find . -name "*.inl"
 
-    cd -
+    cd - > /dev/null
 }
 
 arctk.list.test()
@@ -72,7 +72,7 @@ arctk.list.test()
 
     find . -name "*.cpp"
 
-    cd -
+    cd - > /dev/null
 }
 
 arctk.list.bench()
@@ -81,7 +81,7 @@ arctk.list.bench()
 
     find . -name "*.cpp"
 
-    cd -
+    cd - > /dev/null
 }
 
 

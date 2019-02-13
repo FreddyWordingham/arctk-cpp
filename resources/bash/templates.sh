@@ -6,7 +6,7 @@ arctk.class()
 
     python3 -B gen.py "$@"
 
-    cd -
+    cd - > /dev/null
 }
 
 
@@ -17,7 +17,7 @@ arctk.structure()
 
     python3 -B gen.py "$@"
 
-    cd -
+    cd - > /dev/null
 }
 
 
@@ -28,7 +28,7 @@ arctk.functions()
 
     python3 -B gen.py "$@"
 
-    cd -
+    cd - > /dev/null
 }
 
 
@@ -39,5 +39,5 @@ arctk.constants()
 
     python3 -B gen.py "$@"
 
-    cd -
+    cd - > /dev/null
 }

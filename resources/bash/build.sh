@@ -51,7 +51,7 @@ arctk.build()
         -DDOCUMENT=$8                             \
         ..
 
-    cd -
+    cd - > /dev/null
 }
 
 
@@ -62,7 +62,7 @@ arctk.make()
 
     scan-build -analyze-headers --force-analyze-debug-code --view make -j 8
 
-    cd -
+    cd - > /dev/null
 }
 
 
@@ -77,7 +77,7 @@ arctk.test()
         fi
     done
 
-    cd -
+    cd - > /dev/null
 }
 
 arctk.bench()
@@ -90,7 +90,7 @@ arctk.bench()
         fi
     done
 
-    cd -
+    cd - > /dev/null
 }
 
 
@@ -103,7 +103,7 @@ arctk.doc()
     mv docs/ ..
     open ../docs/html/index.html
 
-    cd -
+    cd - > /dev/null
 }
 
 
@@ -117,7 +117,7 @@ arctk.cover()
     lcov --list coverage.info
     # bash <(curl -s https://codecov.io/bash) -t "57886efc-8eca-416f-9e8b-1b0ee825efe5" -f coverage.info || echo "Codecov did not collect coverage reports"
 
-    cd -
+    cd - > /dev/null
 }
 
 
@@ -129,7 +129,7 @@ arctk.iwyu()
     iwyu_tool.py -p build/compile_commands.json
     # iwyu_tool.py -p build/compile_commands.json -- --no_fwd_decls
 
-    cd -
+    cd - > /dev/null
 }
 
 
@@ -141,7 +141,7 @@ arctk.install()
     arctk.uninstall
     make install
 
-    cd -
+    cd - > /dev/null
 }
 
 arctk.uninstall()
