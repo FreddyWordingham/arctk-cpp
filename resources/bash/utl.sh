@@ -36,13 +36,54 @@ arctk.search.lib()
 #   -- List --
 arctk.list()
 {
-    cd $ARCTK_DIR > /dev/null
+    printf "\t== Declerations ==\n"
+    arctk.list.header()
 
-    find . -name "*.cpp"
+    printf "\t== Implementation ==\n"
+    arctk.list.impl()
+
+    printf "\t== Testing ==\n"
+    arctk.list.test()
+
+    printf "\t== Benchmark ==\n"
+    arctk.list.bench()
+
+}
+
+arctk.list.dec()
+{
+    cd $ARCTK_DIR/include/arctk
+
     find . -name "*.hpp"
+
+    cd -
+}
+
+arctk.list.impl()
+{
+    cd $ARCTK_DIR/include/arctk
+
     find . -name "*.inl"
 
-    cd - > /dev/null
+    cd -
+}
+
+arctk.list.test()
+{
+    cd $ARCTK_DIR/testing
+
+    find . -name "*.cpp"
+
+    cd -
+}
+
+arctk.list.bench()
+{
+    cd $ARCTK_DIR/benchmark
+
+    find . -name "*.cpp"
+
+    cd -
 }
 
 
