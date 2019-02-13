@@ -38,7 +38,7 @@ arctk.build()
     arctk.clean
 
     mkdir $ARCTK_DIR/build
-    cd $ARCTK_DIR/build > /dev/null
+    cd $ARCTK_DIR/build
 
     cmake -j 8 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
         -DCMAKE_BUILD_TYPE=$1                     \
@@ -53,7 +53,7 @@ arctk.build()
 
     local cmake_build_status=$?
 
-    cd - > /dev/null
+    cd -
 
     return $cmake_build_status
 }
