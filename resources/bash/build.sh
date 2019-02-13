@@ -121,15 +121,15 @@ arctk.cover()
 }
 
 
-#   -- Imports --
-arctk.import()
+#   -- Include-What-You-Use --
+arctk.iwyu()
 {
-    cd $ARCTK_DIR > /dev/null
+    cd $ARCTK_DIR
 
     iwyu_tool.py -p build/compile_commands.json
     # iwyu_tool.py -p build/compile_commands.json -- --no_fwd_decls
 
-    cd - > /dev/null
+    cd -
 }
 
 
