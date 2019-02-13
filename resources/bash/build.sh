@@ -2,17 +2,11 @@
 #   -- Clean --
 arctk.clean()
 {
+    rm -r $ARCTK_DIR/build
+    rm -r $ARCTK_DIR/bin
+    rm -r $ARCTK_DIR/include/arctk/config
+
     arctk.uninstall
-
-    cd $ARCTK_DIR >/dev/null
-
-    rm -r bin
-    rm -r build
-    rm -r docs
-    rm -r temp
-    rm include/arctk/config/*
-
-    cd - >/dev/null
 }
 
 
