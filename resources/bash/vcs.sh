@@ -9,7 +9,7 @@ arctk.commit()
         return
     fi
 
-    cd $ARCTK_DIR >/dev/null
+    cd $ARCTK_DIR
 
     git add .
     git commit -m "$1"
@@ -26,7 +26,7 @@ arctk.amend()
         return
     fi
 
-    cd $ARCTK_DIR >/dev/null
+    cd $ARCTK_DIR
 
     git commit --amend -m "$1"
 
@@ -35,7 +35,7 @@ arctk.amend()
 
 arctk.push()
 {
-    cd $ARCTK_DIR >/dev/null
+    cd $ARCTK_DIR
 
     arctk.clean
     arctk.commit "Cleaned build files."
@@ -49,7 +49,7 @@ arctk.push()
 #   -- Updating --
 arctk.update()
 {
-    cd $ARCTK_DIR >/dev/null
+    cd $ARCTK_DIR
 
     git pull origin master
 
