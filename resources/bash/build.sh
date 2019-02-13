@@ -101,7 +101,7 @@ arctk.bench()
 #   -- Documentation --
 arctk.doc()
 {
-    cd $ARCTK_DIR/build > /dev/null
+    cd $ARCTK_DIR/build
 
     make doc
 
@@ -109,7 +109,7 @@ arctk.doc()
 
     open ../docs/html/index.html
 
-    cd - > /dev/null
+    cd -
 }
 
 
