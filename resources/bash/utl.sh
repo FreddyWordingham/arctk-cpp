@@ -47,16 +47,16 @@ arctk.list()
 
 
 #   -- Installation --
-arctk.install()
+arctk.install.scripts()
 {
-    printf "\n" >> ~/.bash_profile
-    printf "#   == ARCTK ==\n" >> ~/.bash_profile
-    printf "export ARCTK_DIR=\"$PROJECTS_DIR/arctk\"\n" >> ~/.bash_profile
-    printf "source $ARCTK_DIR/resources/bash/vcs.sh\n" >> ~/.bash_profile
-    printf "source $ARCTK_DIR/resources/bash/build.sh\n" >> ~/.bash_profile
-    printf "source $ARCTK_DIR/resources/bash/utl.sh\n" >> ~/.bash_profile
-    printf "source $ARCTK_DIR/resources/bash/templates.sh\n" >> ~/.bash_profile
-    printf ". $ARCTK_DIR/.build\n" >> ~/.bash_profile
+    printf "\n"                                                 >> ~/.bash_profile
+    printf "#   == ARCTK ==\n"                                  >> ~/.bash_profile
+    printf "export ARCTK_DIR=\"$PROJECTS_DIR/arctk\"\n"         >> ~/.bash_profile
+    printf "source $ARCTK_DIR/resources/bash/vcs.sh\n"          >> ~/.bash_profile
+    printf "source $ARCTK_DIR/resources/bash/build.sh\n"        >> ~/.bash_profile
+    printf "source $ARCTK_DIR/resources/bash/utl.sh\n"          >> ~/.bash_profile
+    printf "source $ARCTK_DIR/resources/bash/templates.sh\n"    >> ~/.bash_profile
+    printf ". $ARCTK_DIR/.build\n"                              >> ~/.bash_profile
 }
 
 
