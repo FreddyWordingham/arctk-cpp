@@ -73,11 +73,15 @@ arctk.make()
 #   -- Testing --
 arctk.test()
 {
-    cd $ARCTK_DIR/build > /dev/null
+    cd $ARCTK_DIR/build
 
-    make test
+    for test in $ARCTK_DIR/bin/test/*; do
+        if [ -f $test ]; then
+            $test
+        fi
+    done
 
-    cd - > /dev/null
+    cd -
 }
 
 
