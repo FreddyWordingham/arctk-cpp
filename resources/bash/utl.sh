@@ -32,21 +32,19 @@ arctk.search.lib()
     cd -
 }
 
-
-#   -- List --
 arctk.list()
 {
     printf "\t== Declerations ==\n"
-    arctk.list.header()
+    arctk.list.dec
 
-    printf "\t== Implementation ==\n"
-    arctk.list.impl()
+    printf "\n\t== Implementation ==\n"
+    arctk.list.impl
 
-    printf "\t== Testing ==\n"
-    arctk.list.test()
+    printf "\n\t== Testing ==\n"
+    arctk.list.test
 
-    printf "\t== Benchmark ==\n"
-    arctk.list.bench()
+    printf "\n\t== Benchmark ==\n"
+    arctk.list.bench
 
 }
 
