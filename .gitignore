@@ -7,17 +7,14 @@
 #   -- Files --
 .build
 /build
-
-#   -- Temporary --
-/temp
-
-#   -- Documentation --
+/bin
+/lib
 /docs
 
-
-#   == COMPILED ==
-#   -- Binaries --
-/bin
+#   == TEMPORARY ==
+#   -- Files --
+/temp
+coverage.info
 
 #   -- Testing --
 default.profraw
