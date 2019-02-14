@@ -25,7 +25,7 @@ arctk.build()
         return
     fi
 
-    if [ "$#" != "8" ]; then
+    if [ "$#" != "9" ]; then
         echo "Error! Incorrect number of arguments. ($#)"
         echo "arctk.build <build_type> <C compiler> <C++ compiler> <unit testing> <coverage> <benchmark> <clang-tidy> <iwyu> <document>"
 
