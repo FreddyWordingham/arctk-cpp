@@ -2,49 +2,46 @@
 //  -- Arc --
 #include "arctk/math/prime.inl"
 
-//  -- Std --
-#include <cassert>
+//  -- GTest --
+#include <gtest/gtest.h>
+
+
+
+//  == PRAGMAS ==
+//  -- Warnings --
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wglobal-constructors"
 
 
 
 //  == NAMESPACE ==
 namespace arc
 {
-    namespace test
+    namespace math
     {
 
 
 
-        //  == FUNCTION PROTOTYPES ==
-        //  -- Tests --
+        //  == TESTS ==
+        TEST(is_prime, less_than_ten)
+        {
+            ASSERT_TRUE(is_prime(2));
+            ASSERT_TRUE(is_prime(3));
+            ASSERT_FALSE(is_prime(4));
+            ASSERT_TRUE(is_prime(5));
+            ASSERT_FALSE(is_prime(6));
+            ASSERT_TRUE(is_prime(7));
+            ASSERT_FALSE(is_prime(8));
+            ASSERT_FALSE(is_prime(9));
+        }
 
 
 
-    } // namespace test
+    } // namespace math
 } // namespace arc
 
 
 
-//  == MAIN ==
-int main()
-{
-    return (0);
-}
-
-
-
-//  == NAMESPACE ==
-namespace arc
-{
-    namespace test
-    {
-
-
-
-        //  == FUNCTIONS ==
-        //  -- Tests --
-
-
-
-    } // namespace test
-} // namespace arc
+//  == CLEAN UP ==
+//  -- Warnings --
+#pragma clang diagnostic pop
