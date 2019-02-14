@@ -1,6 +1,7 @@
 [
     { symbol    : [ "abs", "private", "<cmath>", "public"] },
     { include   : [ "<stddef.h>", public, "<cstddef>", public] },
+    { include   : [ "<gtest/gtest_pred_impl.h>", public, "<gtest/gtest.h>", public] },
     { symbol    : [ "std::string", private, "<string>", public ] },
     { symbol    : [ "std::stringstream", private, "<sstream>", public ] },
     { symbol    : [ "std::istringstream", private, "<sstream>", public ] },
