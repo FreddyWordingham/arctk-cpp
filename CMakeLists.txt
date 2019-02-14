@@ -165,11 +165,18 @@ endif ()
 
 
 
-#   == TARGETS ==
+#   == GLOBAL IMPORTS ==
 include_directories(SYSTEM "/usr/local/include")
-link_directories(SYSTEM "/usr/local/lib")
+
+link_directories("/usr/local/lib")
+
+
+
+#   == TARGETS ==
 add_library(arctk INTERFACE)
+
 target_include_directories(arctk INTERFACE "${CMAKE_SOURCE_DIR}/include")
+
 target_sources(arctk INTERFACE ${HEADER_FILES} ${IMPL_FILES})
 
 
@@ -196,6 +203,7 @@ if (UNIT_TESTING)
         set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/test)
         add_executable(${NAME} ${loop_var})
 
+        target_include_directories(${NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
         target_include_directories(${NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
         # target_link_libraries(${NAME} c++fs)

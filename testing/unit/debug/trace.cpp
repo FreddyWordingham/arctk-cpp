@@ -2,49 +2,38 @@
 //  -- Arc --
 #include "arctk/debug/trace.inl"
 
+//  -- GTest --
+#include <gtest/gtest.h>
+
 //  -- Std --
 #include <cassert>
+#include <cstdint>
+#include <iostream>
+#include <string>
+#include <vector>
 
 
 
-//  == NAMESPACE ==
-namespace arc
+//  == PRAGMAS ==
+//  -- Warnings --
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wglobal-constructors"
+
+
+
+//  == TESTS ==
+TEST(TestSuitName, TestName)
 {
-    namespace test
+    const std::vector<std::string> trace{arc::debug::stacktrace()};
+
+    for (std::size_t i = 0; i < trace.size(); ++i)
     {
-
-
-
-        //  == FUNCTION PROTOTYPES ==
-        //  -- Tests --
-
-
-
-    } // namespace test
-} // namespace arc
-
-
-
-//  == MAIN ==
-int main()
-{
-    return (0);
+        std::cout << trace[i] << '\n';
+    }
 }
 
 
 
-//  == NAMESPACE ==
-namespace arc
-{
-    namespace test
-    {
-
-
-
-        //  == FUNCTIONS ==
-        //  -- Tests --
-
-
-
-    } // namespace test
-} // namespace arc
+//  == CLEAN UP ==
+//  -- Warnings --
+#pragma clang diagnostic pop
