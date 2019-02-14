@@ -50,7 +50,15 @@ namespace arc
         //  == TESTS ==
         TEST_F(stacktrace_test, is_not_empty)
         {
-            ASSERT_TRUE(!_trace_0.empty());
+            ASSERT_FALSE(_trace_0.empty());
+        }
+
+        TEST_F(stacktrace_test, elements_are_not_empty)
+        {
+            for (const std::string& i : _trace_0)
+            {
+                ASSERT_FALSE(i.empty());
+            }
         }
 
 
