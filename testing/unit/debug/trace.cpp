@@ -6,9 +6,6 @@
 #include <gtest/gtest.h>
 
 //  -- Std --
-#include <cassert>
-#include <cstdint>
-#include <iostream>
 #include <string>
 #include <vector>
 
@@ -21,16 +18,45 @@
 
 
 
-//  == TESTS ==
-TEST(TestSuitName, TestName)
+//  == NAMESPACE ==
+namespace arc
 {
-    const std::vector<std::string> trace{arc::debug::stacktrace()};
-
-    for (std::size_t i = 0; i < trace.size(); ++i)
+    namespace debug
     {
-        std::cout << '[' << i << "]\t" << trace[i] << '\n';
-    }
-}
+
+
+
+        //  == FIXTURES ==
+        //  -- Trace --
+        class stacktrace_test : public ::testing::Test
+        {
+            //  == FIELDS ==
+          protected:
+            //  -- Data --
+            const std::vector<std::string> _trace_0;
+
+
+            //  == INSTANTIATION ==
+          protected:
+            //  -- Constructors --
+            inline explicit stacktrace_test() noexcept
+              : _trace_0{stacktrace()}
+            {
+            }
+        };
+
+
+
+        //  == TESTS ==
+        TEST_F(stacktrace_test, is_not_empty)
+        {
+            ASSERT_TRUE(!_trace_0.empty());
+        }
+
+
+
+    } // namespace debug
+} // namespace arc
 
 
 
