@@ -132,10 +132,6 @@ if (CMAKE_BUILD_TYPE MATCHES "debug")
         -g                                  \
         -DDEBUG                             \
         -O0                                 \
-        --coverage                          \
-    ")
-    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} \
-        --coverage                                        \
     ")
 elseif (CMAKE_BUILD_TYPE MATCHES "release")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
@@ -145,6 +141,16 @@ elseif (CMAKE_BUILD_TYPE MATCHES "release")
 else ()
     message(FATAL_ERROR "Optimisation flags are not defined for build type: ${CMAKE_BUILD_TYPE}")
 endif ()
+
+if (COVERAGE)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
+        --coverage                          \
+    ")
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} \
+        --coverage                                        \
+    ")
+endif ()
+message("COVERAGE: ${COVERAGE}")
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \

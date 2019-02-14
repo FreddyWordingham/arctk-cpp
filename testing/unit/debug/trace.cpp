@@ -28,7 +28,7 @@ TEST(TestSuitName, TestName)
 
     for (std::size_t i = 0; i < trace.size(); ++i)
     {
-        std::cout << trace[i] << '\n';
+        std::cout << '[' << i << "]\t" << trace[i] << '\n';
     }
 }
 
