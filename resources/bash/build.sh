@@ -25,14 +25,14 @@ arctk.build()
         return
     fi
 
-    if [ "$#" != "7" ]; then
+    if [ "$#" != "8" ]; then
         echo "Error! Incorrect number of arguments. ($#)"
-        echo "arctk.build <build_type> <C compiler> <C++ compiler> <unit testing> <benchmark> <clang-tidy> <iwyu> <document>"
+        echo "arctk.build <build_type> <C compiler> <C++ compiler> <unit testing> <coverage> <benchmark> <clang-tidy> <iwyu> <document>"
 
         return
     fi
 
-    ARCTK_BUILD_ARGS="$1 $2 $3 $4 $5 $6 $7 $8"
+    ARCTK_BUILD_ARGS="$1 $2 $3 $4 $5 $6 $7 $8 $9"
     echo "export ARCTK_BUILD_ARGS='$ARCTK_BUILD_ARGS'" > $ARCTK_DIR/.build
 
     arctk.clean
@@ -45,10 +45,11 @@ arctk.build()
         -DCMAKE_C_COMPILER=$2                     \
         -DCMAKE_CXX_COMPILER=$3                   \
         -DUNIT_TESTING=$4                         \
-        -DBENCHMARK=$5                            \
-        -DCLANG_TIDY=$6                           \
-        -DIWYU=$7                                 \
-        -DDOCUMENT=$8                             \
+        -DCOVERAGE=$5                             \
+        -DBENCHMARK=$6                            \
+        -DCLANG_TIDY=$7                           \
+        -DIWYU=$8                                 \
+        -DDOCUMENT=$9                             \
         ..
 
     cd - > /dev/null
