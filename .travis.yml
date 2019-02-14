@@ -206,7 +206,7 @@ before_install:
 script:
     - mkdir $ARCTK_DIR/build
     - cd $ARCTK_DIR/build
-    - cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -DUNIT_TESTING=true ..
+    - cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -DUNIT_TESTING=true -DCOVERAGE=$COVERAGE ..
     - make
     - |
       for test in $ARCTK_DIR/bin/test/*; do
