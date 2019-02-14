@@ -15,6 +15,8 @@ namespace arc
         //  -- Prime --
         template <typename T>
         inline bool is_prime(const T x_) noexcept;
+        template <typename T>
+        inline T next_prime(T x_) noexcept;
 
 
 

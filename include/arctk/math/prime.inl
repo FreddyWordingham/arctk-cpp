@@ -50,6 +50,21 @@ namespace arc
             return (true);
         }
 
+        template <typename T>
+        inline T next_prime(T x_) noexcept
+        {
+            static_assert(std::is_integral<T>::value);
+
+            assert(x_ >= 0);
+
+            while (!is_prime(++x_))
+            {
+            }
+
+            return (x_);
+        }
+
+
 
     } // namespace math
 } // namespace arc
