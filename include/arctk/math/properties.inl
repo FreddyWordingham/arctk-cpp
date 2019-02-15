@@ -30,6 +30,11 @@ namespace arc
         {
             static_assert(std::is_integral<T>::value);
 
+            if (n_ == 1)
+            {
+                return (false);
+            }
+
             if ((n_ == 2) || (n_ == 3))
             {
                 return (true);
@@ -43,9 +48,9 @@ namespace arc
             T i{5};
             T w{2};
 
-            while ((i * i) <= n)
+            while ((i * i) <= n_)
             {
-                if ((n % i) == 0)
+                if ((n_ % i) == 0)
                 {
                     return (false);
                 }

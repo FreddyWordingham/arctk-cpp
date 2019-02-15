@@ -14,7 +14,7 @@ namespace arc
         //  == FUNCTIONS ==
         //  -- Properties --
         template <typename T>
-        constexpr inline bool is_prime(const T x_) noexcept;
+        constexpr inline bool is_prime(const T n_) noexcept;
 
 
 
