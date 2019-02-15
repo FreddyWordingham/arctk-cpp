@@ -133,6 +133,86 @@ namespace arc
             ASSERT_TRUE(_vec_6 != 1);
         }
 
+        TEST_F(array_test, less_than)
+        {
+            ASSERT_FALSE(_arr_0 < 3);
+            ASSERT_TRUE(_arr_1 < 3);
+            ASSERT_FALSE(_arr_2 < 3);
+            ASSERT_FALSE(_arr_3 < 3);
+            ASSERT_TRUE(_arr_4 < 3);
+        }
+
+        TEST_F(vector_test, less_than)
+        {
+            ASSERT_FALSE(_vec_0 < 3);
+            ASSERT_TRUE(_vec_1 < 3);
+            ASSERT_FALSE(_vec_2 < 3);
+            ASSERT_FALSE(_vec_3 < 3);
+            ASSERT_TRUE(_vec_4 < 3);
+            ASSERT_TRUE(_vec_5 < 0);
+            ASSERT_FALSE(_vec_6 < 1);
+        }
+
+        TEST_F(array_test, more_than)
+        {
+            ASSERT_FALSE(_arr_0 > 3);
+            ASSERT_FALSE(_arr_1 > 3);
+            ASSERT_FALSE(_arr_2 > 3);
+            ASSERT_FALSE(_arr_3 > 3);
+            ASSERT_FALSE(_arr_4 > 3);
+        }
+
+        TEST_F(vector_test, more_than)
+        {
+            ASSERT_FALSE(_vec_0 > 3);
+            ASSERT_FALSE(_vec_1 > 3);
+            ASSERT_FALSE(_vec_2 > 3);
+            ASSERT_FALSE(_vec_3 > 3);
+            ASSERT_FALSE(_vec_4 > 3);
+            ASSERT_TRUE(_vec_5 > 0);
+            ASSERT_FALSE(_vec_6 > 1);
+        }
+
+        TEST_F(array_test, less_than_or_equal_to)
+        {
+            ASSERT_FALSE(_arr_0 <= 3);
+            ASSERT_TRUE(_arr_1 <= 3);
+            ASSERT_FALSE(_arr_2 <= 3);
+            ASSERT_FALSE(_arr_3 <= 3);
+            ASSERT_TRUE(_arr_4 <= 3);
+        }
+
+        TEST_F(vector_test, less_than_or_equal_to)
+        {
+            ASSERT_FALSE(_vec_0 <= 3);
+            ASSERT_TRUE(_vec_1 <= 3);
+            ASSERT_FALSE(_vec_2 <= 3);
+            ASSERT_FALSE(_vec_3 <= 3);
+            ASSERT_TRUE(_vec_4 <= 3);
+            ASSERT_TRUE(_vec_5 <= 0);
+            ASSERT_FALSE(_vec_6 <= 1);
+        }
+
+        TEST_F(array_test, more_than_or_equal_to)
+        {
+            ASSERT_FALSE(_arr_0 >= 3);
+            ASSERT_FALSE(_arr_1 >= 3);
+            ASSERT_FALSE(_arr_2 >= 3);
+            ASSERT_FALSE(_arr_3 >= 3);
+            ASSERT_FALSE(_arr_4 >= 3);
+        }
+
+        TEST_F(vector_test, more_than_or_equal_to)
+        {
+            ASSERT_FALSE(_vec_0 >= 3);
+            ASSERT_FALSE(_vec_1 >= 3);
+            ASSERT_FALSE(_vec_2 >= 3);
+            ASSERT_FALSE(_vec_3 >= 3);
+            ASSERT_FALSE(_vec_4 >= 3);
+            ASSERT_TRUE(_vec_5 >= 0);
+            ASSERT_FALSE(_vec_6 >= 1);
+        }
+
 
 
     } // namespace range

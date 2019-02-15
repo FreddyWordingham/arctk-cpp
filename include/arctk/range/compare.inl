@@ -39,6 +39,62 @@ namespace arc
             return (!(lhs_ == rhs_));
         }
 
+        template <typename C, typename T>
+        constexpr inline bool operator<(const C& lhs_, const T& rhs_) noexcept
+        {
+            for (const T& l_ : lhs_)
+            {
+                if (!(l_ < rhs_))
+                {
+                    return (false);
+                }
+            }
+
+            return (true);
+        }
+
+        template <typename C, typename T>
+        constexpr inline bool operator>(const C& lhs_, const T& rhs_) noexcept
+        {
+            for (const T& l_ : lhs_)
+            {
+                if (!(l_ > rhs_))
+                {
+                    return (false);
+                }
+            }
+
+            return (true);
+        }
+
+        template <typename C, typename T>
+        constexpr inline bool operator<=(const C& lhs_, const T& rhs_) noexcept
+        {
+            for (const T& l_ : lhs_)
+            {
+                if (!(l_ <= rhs_))
+                {
+                    return (false);
+                }
+            }
+
+            return (true);
+        }
+
+        template <typename C, typename T>
+        constexpr inline bool operator>=(const C& lhs_, const T& rhs_) noexcept
+        {
+            for (const T& l_ : lhs_)
+            {
+                if (!(l_ >= rhs_))
+                {
+                    return (false);
+                }
+            }
+
+            return (true);
+        }
+
 
 
     } // namespace range
