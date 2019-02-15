@@ -213,15 +213,6 @@ namespace arc
 
         TEST_F(vector_int_test, equal)
         {
-            std::cout << '\n';
-            for (std::size_t i = 0; i < _vec_b.size(); ++i)
-            {
-                for (std::size_t j = 0; j < _vec_b[i].size(); ++j)
-                {
-                    std::cout << i << '\t' << j << '\t' << _vec_b[i][j] << '\n';
-                }
-            }
-
             ASSERT_FALSE(_vec_0 == 1);
             ASSERT_TRUE(_vec_1 == 1);
             ASSERT_FALSE(_vec_2 == 1);
@@ -296,6 +287,76 @@ namespace arc
             ASSERT_FALSE(_vec_6 >= 4);
             ASSERT_FALSE(_vec_a >= 4);
             ASSERT_TRUE(_vec_b >= 4);
+        }
+
+
+        //  -- Vector Double Comparison --
+        class vector_double_test : public ::testing::Test
+        {
+            //  == FIELDS ==
+          protected:
+            //  -- Data --
+            const std::vector<double>              _vec_0{1.0, 2.0, 3.0, 4.0};
+            const std::vector<double>              _vec_1{1.0, 1.0, 1.0, 1.0};
+            const std::vector<double>              _vec_2{9.0, 5.0, 2.0, 7.0};
+            const std::vector<double>              _vec_3{-2.0, 3.0, 8.0, -4.0};
+            const std::vector<double>              _vec_4{-3.0, -3.0, -2.0, -1.0};
+            const std::vector<double>              _vec_5{};
+            const std::vector<double>              _vec_6{-2.0, 2.0};
+            const std::vector<std::vector<double>> _vec_a{{{-3.0, -4.0, -2.0}, {3.0, 2.0, -3.0}, {2.0, 1.0, 3.0}, {-2.0, -3.0, 0.0}}};
+            const std::vector<std::vector<double>> _vec_b{{{}, {}, {}, {}}};
+        };
+
+        TEST_F(vector_double_test, less_than)
+        {
+            ASSERT_FALSE(_vec_0 < 4.0);
+            ASSERT_TRUE(_vec_1 < 4.0);
+            ASSERT_FALSE(_vec_2 < 4.0);
+            ASSERT_FALSE(_vec_3 < 4.0);
+            ASSERT_TRUE(_vec_4 < 4.0);
+            ASSERT_TRUE(_vec_5 < 4.0);
+            ASSERT_TRUE(_vec_6 < 4.0);
+            ASSERT_TRUE(_vec_a < 4.0);
+            ASSERT_TRUE(_vec_b < 4.0);
+        }
+
+        TEST_F(vector_double_test, more_than)
+        {
+            ASSERT_FALSE(_vec_0 > 4.0);
+            ASSERT_FALSE(_vec_1 > 4.0);
+            ASSERT_FALSE(_vec_2 > 4.0);
+            ASSERT_FALSE(_vec_3 > 4.0);
+            ASSERT_FALSE(_vec_4 > 4.0);
+            ASSERT_TRUE(_vec_5 > 4.0);
+            ASSERT_FALSE(_vec_6 > 4.0);
+            ASSERT_FALSE(_vec_a > 4.0);
+            ASSERT_TRUE(_vec_b > 4.0);
+        }
+
+        TEST_F(vector_double_test, less_than_or_equal_to)
+        {
+            ASSERT_TRUE(_vec_0 <= 4.0);
+            ASSERT_TRUE(_vec_1 <= 4.0);
+            ASSERT_FALSE(_vec_2 <= 4.0);
+            ASSERT_FALSE(_vec_3 <= 4.0);
+            ASSERT_TRUE(_vec_4 <= 4.0);
+            ASSERT_TRUE(_vec_5 <= 4.0);
+            ASSERT_TRUE(_vec_6 <= 4.0);
+            ASSERT_TRUE(_vec_a <= 4.0);
+            ASSERT_TRUE(_vec_b <= 4.0);
+        }
+
+        TEST_F(vector_double_test, more_than_or_equal_to)
+        {
+            ASSERT_FALSE(_vec_0 >= 4.0);
+            ASSERT_FALSE(_vec_1 >= 4.0);
+            ASSERT_FALSE(_vec_2 >= 4.0);
+            ASSERT_FALSE(_vec_3 >= 4.0);
+            ASSERT_FALSE(_vec_4 >= 4.0);
+            ASSERT_TRUE(_vec_5 >= 4.0);
+            ASSERT_FALSE(_vec_6 >= 4.0);
+            ASSERT_FALSE(_vec_a >= 4.0);
+            ASSERT_TRUE(_vec_b >= 4.0);
         }
 
 
