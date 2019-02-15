@@ -13,7 +13,7 @@
 //  == NAMESPACE ==
 namespace arc
 {
-    namespace range
+    namespace type
     {
 
 
@@ -21,7 +21,7 @@ namespace arc
         //  == STRUCTURES ==
         //  -- Properties --
         template <typename T, typename = void>
-        struct is_iterable
+        struct is_iterable : public std::false_type
         {
         };
 
@@ -36,5 +36,5 @@ namespace arc
 
 
 
-    } // namespace range
+    } // namespace type
 } // namespace arc

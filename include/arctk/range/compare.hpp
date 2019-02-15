@@ -3,6 +3,15 @@
 
 
 
+//  == IMPORTS ==
+//  -- Std --
+#include <type_traits>
+
+//  -- Arc --
+#include <arctk/type/is_iterable.hpp>
+
+
+
 //  == NAMESPACE ==
 namespace arc
 {
@@ -12,33 +21,19 @@ namespace arc
 
 
         //  == OPERATORS ==
-        //  -- Container-Element Comparison --
-        template <typename C, typename T>
+        //  -- Compare --
+        template <typename C, typename T, typename>
         constexpr inline bool operator==(const C& lhs_, const T& rhs_) noexcept;
-        template <typename C, typename T>
+        template <typename C, typename T, typename>
         constexpr inline bool operator!=(const C& lhs_, const T& rhs_) noexcept;
-        template <typename C, typename T>
+        template <typename C, typename T, typename>
         constexpr inline bool operator<(const C& lhs_, const T& rhs_) noexcept;
-        template <typename C, typename T>
+        template <typename C, typename T, typename>
         constexpr inline bool operator>(const C& lhs_, const T& rhs_) noexcept;
-        template <typename C, typename T>
+        template <typename C, typename T, typename>
         constexpr inline bool operator<=(const C& lhs_, const T& rhs_) noexcept;
-        template <typename C, typename T>
+        template <typename C, typename T, typename>
         constexpr inline bool operator>=(const C& lhs_, const T& rhs_) noexcept;
-
-        //  -- Container-Container Comparison --
-        template <typename C, typename D>
-        constexpr inline bool operator==(const C& lhs_, const D& rhs_) noexcept;
-        template <typename C, typename D>
-        constexpr inline bool operator!=(const C& lhs_, const D& rhs_) noexcept;
-        template <typename C, typename D>
-        constexpr inline bool operator<(const C& lhs_, const D& rhs_) noexcept;
-        template <typename C, typename D>
-        constexpr inline bool operator>(const C& lhs_, const D& rhs_) noexcept;
-        template <typename C, typename D>
-        constexpr inline bool operator<=(const C& lhs_, const D& rhs_) noexcept;
-        template <typename C, typename D>
-        constexpr inline bool operator>=(const C& lhs_, const D& rhs_) noexcept;
 
 
 

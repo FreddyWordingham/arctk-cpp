@@ -89,6 +89,7 @@ namespace arc
 
 
         //  == TESTS ==
+        //  -- Comparison --
         TEST_F(array_test, equal)
         {
             ASSERT_FALSE(_arr_0 == 1);
@@ -96,6 +97,8 @@ namespace arc
             ASSERT_FALSE(_arr_2 == 1);
             ASSERT_FALSE(_arr_3 == 1);
             ASSERT_FALSE(_arr_4 == 1);
+
+            ASSERT_TRUE((std::vector<int>{1, 2, 3} == std::vector<int>{1, 2, 3}));
         }
 
         TEST_F(vector_test, equal)
