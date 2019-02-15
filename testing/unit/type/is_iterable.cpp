@@ -7,6 +7,7 @@
 
 //  -- Std --
 #include <array>
+#include <type_traits>
 #include <vector>
 
 

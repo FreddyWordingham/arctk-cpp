@@ -13,6 +13,9 @@
 //  -- Arc --
 #include "arctk/type/is_iterable.hpp"
 
+//  -- Arc --
+#include <type_traits>
+
 
 
 //  == NAMESPACE ==
@@ -42,7 +45,15 @@ namespace arc
         template <typename C, typename T, typename = typename std::enable_if<type::is_iterable<C>::value && !type::is_iterable<T>::value>::type>
         constexpr inline bool operator!=(const C& lhs_, const T& rhs_) noexcept
         {
-            return (!(lhs_ == rhs_));
+            for (const auto& l : lhs_)
+            {
+                if (!(l != rhs_))
+                {
+                    return (false);
+                }
+            }
+
+            return (true);
         }
 
         template <typename C, typename T, typename = typename std::enable_if<type::is_iterable<C>::value && !type::is_iterable<T>::value>::type>

@@ -20,7 +20,9 @@ namespace arc
         //  == OPERATORS ==
         //  -- Arithmetic --
         template <typename C>
-        constexpr inline C operator-(const C& lhs_) noexcept;
+        constexpr inline C operator-(const C& lhs_) noexcept
+        {
+                }
 
 
 
