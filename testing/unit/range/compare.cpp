@@ -21,7 +21,7 @@
 //  == NAMESPACE ==
 namespace arc
 {
-    namespace range
+    inline namespace range
     {
 
 
@@ -109,6 +109,28 @@ namespace arc
             ASSERT_TRUE(_vec_5 == 0);
             ASSERT_TRUE(_vec_5 == 1);
             ASSERT_FALSE(_vec_6 == 1);
+        }
+
+        TEST_F(array_test, not_equal)
+        {
+            ASSERT_TRUE(_arr_0 != 1);
+            ASSERT_FALSE(_arr_1 != 1);
+            ASSERT_TRUE(_arr_2 != 1);
+            ASSERT_TRUE(_arr_3 != 1);
+            ASSERT_TRUE(_arr_4 != 1);
+        }
+
+        TEST_F(vector_test, not_equal)
+        {
+            ASSERT_TRUE(_vec_0 != 1);
+            ASSERT_TRUE(_vec_1 != 0);
+            ASSERT_FALSE(_vec_1 != 1);
+            ASSERT_TRUE(_vec_2 != 1);
+            ASSERT_TRUE(_vec_3 != 1);
+            ASSERT_TRUE(_vec_4 != 1);
+            ASSERT_FALSE(_vec_5 != 0);
+            ASSERT_FALSE(_vec_5 != 1);
+            ASSERT_TRUE(_vec_6 != 1);
         }
 
 
