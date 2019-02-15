@@ -12,7 +12,7 @@ namespace arc
 
 
         //  == OPERATORS ==
-        //  -- Comparison --
+        //  -- Container-Element Comparison --
         template <typename C, typename T>
         constexpr inline bool operator==(const C& lhs_, const T& rhs_) noexcept;
         template <typename C, typename T>
@@ -25,6 +25,20 @@ namespace arc
         constexpr inline bool operator<=(const C& lhs_, const T& rhs_) noexcept;
         template <typename C, typename T>
         constexpr inline bool operator>=(const C& lhs_, const T& rhs_) noexcept;
+
+        //  -- Container-Container Comparison --
+        template <typename C, typename D>
+        constexpr inline bool operator==(const C& lhs_, const D& rhs_) noexcept;
+        template <typename C, typename D>
+        constexpr inline bool operator!=(const C& lhs_, const D& rhs_) noexcept;
+        template <typename C, typename D>
+        constexpr inline bool operator<(const C& lhs_, const D& rhs_) noexcept;
+        template <typename C, typename D>
+        constexpr inline bool operator>(const C& lhs_, const D& rhs_) noexcept;
+        template <typename C, typename D>
+        constexpr inline bool operator<=(const C& lhs_, const D& rhs_) noexcept;
+        template <typename C, typename D>
+        constexpr inline bool operator>=(const C& lhs_, const D& rhs_) noexcept;
 
 
 
