@@ -83,7 +83,7 @@ namespace arc
             ASSERT_TRUE(_arr_b < 4);
         }
 
-        TEST_F(array_int_test, more_than) // NOLINT
+        TEST_F(array_int_test, greater_than) // NOLINT
         {
             ASSERT_FALSE(_arr_0 > 4);
             ASSERT_FALSE(_arr_1 > 4);
@@ -109,7 +109,77 @@ namespace arc
             ASSERT_TRUE(_arr_b <= 4);
         }
 
-        TEST_F(array_int_test, more_than_or_equal_to) // NOLINT
+        TEST_F(array_int_test, greater_than_or_equal_to) // NOLINT
+        {
+            ASSERT_FALSE(_arr_0 >= 4);
+            ASSERT_FALSE(_arr_1 >= 4);
+            ASSERT_FALSE(_arr_2 >= 4);
+            ASSERT_FALSE(_arr_3 >= 4);
+            ASSERT_FALSE(_arr_4 >= 4);
+            ASSERT_TRUE(_arr_5 >= 4);
+            ASSERT_FALSE(_arr_6 >= 4);
+            ASSERT_FALSE(_arr_a >= 4);
+            ASSERT_TRUE(_arr_b >= 4);
+        }
+
+
+        //  -- Array Double Comparison --
+        class array_double_test : public ::testing::Test
+        {
+            //  == FIELDS ==
+          protected:
+            //  -- Data --
+            const std::array<double, 4>                _arr_0{1.0, 2.0, 3.0, 4.0};
+            const std::array<double, 4>                _arr_1{1.0, 1.0, 1.0, 1.0};
+            const std::array<double, 4>                _arr_2{9.0, 5.0, 2.0, 7.0};
+            const std::array<double, 4>                _arr_3{-2.0, 3.0, 8.0, -4.0};
+            const std::array<double, 4>                _arr_4{-3.0, -3.0, -2.0, -1.0};
+            const std::array<double, 0>                _arr_5{};
+            const std::array<double, 2>                _arr_6{-2.0, 2.0};
+            const std::array<std::array<double, 3>, 4> _arr_a{{{-3.0, -4.0, -2.0}, {3.0, 2.0, -3.0}, {2.0, 1.0, 3.0}, {-2.0, -3.0, 0.0}}};
+            const std::array<std::array<double, 0>, 4> _arr_b{{{}, {}, {}, {}}};
+        };
+
+        TEST_F(array_double_test, less_than) // NOLINT
+        {
+            ASSERT_FALSE(_arr_0 < 4);
+            ASSERT_TRUE(_arr_1 < 4);
+            ASSERT_FALSE(_arr_2 < 4);
+            ASSERT_FALSE(_arr_3 < 4);
+            ASSERT_TRUE(_arr_4 < 4);
+            ASSERT_TRUE(_arr_5 < 4);
+            ASSERT_TRUE(_arr_6 < 4);
+            ASSERT_TRUE(_arr_a < 4);
+            ASSERT_TRUE(_arr_b < 4);
+        }
+
+        TEST_F(array_double_test, greater_than) // NOLINT
+        {
+            ASSERT_FALSE(_arr_0 > 4);
+            ASSERT_FALSE(_arr_1 > 4);
+            ASSERT_FALSE(_arr_2 > 4);
+            ASSERT_FALSE(_arr_3 > 4);
+            ASSERT_FALSE(_arr_4 > 4);
+            ASSERT_TRUE(_arr_5 > 4);
+            ASSERT_FALSE(_arr_6 > 4);
+            ASSERT_FALSE(_arr_a > 4);
+            ASSERT_TRUE(_arr_b > 4);
+        }
+
+        TEST_F(array_double_test, less_than_or_equal_to) // NOLINT
+        {
+            ASSERT_TRUE(_arr_0 <= 4);
+            ASSERT_TRUE(_arr_1 <= 4);
+            ASSERT_FALSE(_arr_2 <= 4);
+            ASSERT_FALSE(_arr_3 <= 4);
+            ASSERT_TRUE(_arr_4 <= 4);
+            ASSERT_TRUE(_arr_5 <= 4);
+            ASSERT_TRUE(_arr_6 <= 4);
+            ASSERT_TRUE(_arr_a <= 4);
+            ASSERT_TRUE(_arr_b <= 4);
+        }
+
+        TEST_F(array_double_test, greater_than_or_equal_to) // NOLINT
         {
             ASSERT_FALSE(_arr_0 >= 4);
             ASSERT_FALSE(_arr_1 >= 4);
