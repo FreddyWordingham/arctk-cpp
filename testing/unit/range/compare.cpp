@@ -304,7 +304,7 @@ namespace arc
             const std::vector<double>              _vec_5{};
             const std::vector<double>              _vec_6{-2.0, 2.0};
             const std::vector<std::vector<double>> _vec_a{{{-3.0, -4.0, -2.0}, {3.0, 2.0, -3.0}, {2.0, 1.0, 3.0}, {-2.0, -3.0, 0.0}}};
-            const std::vector<std::vector<double>> _vec_b{{{}, {}, {}, {}}};
+            const std::vector<std::vector<double>> _vec_b{4, std::vector<double>{}};
         };
 
         TEST_F(vector_double_test, less_than)
