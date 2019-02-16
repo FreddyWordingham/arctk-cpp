@@ -24,6 +24,7 @@ namespace arc
 
 
         //  == FUNCTIONS ==
+        //  -- Properties --
         template <typename C, typename S, typename F>
         constexpr inline bool true_for_all(const C& cont_, F&& func_) noexcept
         {
