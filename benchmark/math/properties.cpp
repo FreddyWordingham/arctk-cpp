@@ -23,14 +23,14 @@ namespace arc
 
 
         //  == BENCHMARKS ==
-        static void is_prime(benchmark::State& state)
+        static void is_prime(benchmark::State& state) // NOLINT
         {
-            for (auto _ : state)
+            for (auto _ : state) // NOLINT
             {
                 is_prime(2147483647);
             }
         }
-        BENCHMARK(is_prime);
+        BENCHMARK(is_prime); // NOLINT
 
 
 

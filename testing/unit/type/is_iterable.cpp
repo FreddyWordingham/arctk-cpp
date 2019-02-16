@@ -28,27 +28,28 @@ namespace arc
 
 
         //  == TESTS ==
-        TEST(is_iterable, int)
+        //  -- Iterable --
+        TEST(is_iterable, int) // NOLINT
         {
             ASSERT_FALSE(is_iterable<int>::value);
         }
 
-        TEST(is_iterable, bool)
+        TEST(is_iterable, bool) // NOLINT
         {
             ASSERT_FALSE(is_iterable<bool>::value);
         }
 
-        TEST(is_iterable, char)
+        TEST(is_iterable, char) // NOLINT
         {
             ASSERT_FALSE(is_iterable<char>::value);
         }
 
-        TEST(is_iterable, vector)
+        TEST(is_iterable, vector) // NOLINT
         {
             ASSERT_TRUE(is_iterable<std::vector<double>>::value);
         }
 
-        TEST(is_iterable, array)
+        TEST(is_iterable, array) // NOLINT
         {
             ASSERT_TRUE((is_iterable<std::array<double, 4>>::value));
         }

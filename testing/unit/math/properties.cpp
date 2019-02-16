@@ -23,7 +23,8 @@ namespace arc
 
 
         //  == TESTS ==
-        TEST(prime, special)
+        //  -- Prime --
+        TEST(prime, special) // NOLINT
         {
             ASSERT_FALSE(is_prime(0));
             ASSERT_FALSE(is_prime(1));
@@ -31,7 +32,7 @@ namespace arc
             ASSERT_TRUE(is_prime(3));
         }
 
-        TEST(prime, small)
+        TEST(prime, small) // NOLINT
         {
             ASSERT_TRUE(is_prime(43));
             ASSERT_FALSE(is_prime(343));
@@ -39,7 +40,7 @@ namespace arc
             ASSERT_FALSE(is_prime(999));
         }
 
-        TEST(prime, large)
+        TEST(prime, large) // NOLINT
         {
             ASSERT_TRUE(is_prime(524287));
             ASSERT_FALSE(is_prime(834674));

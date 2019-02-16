@@ -45,7 +45,7 @@ namespace arc
             const std::array<std::array<int, 0>, 4> _arr_b{{{}, {}, {}, {}}};
         };
 
-        TEST_F(array_int_test, equal)
+        TEST_F(array_int_test, equal) // NOLINT
         {
             ASSERT_FALSE(_arr_0 == 1);
             ASSERT_TRUE(_arr_1 == 1);
@@ -58,7 +58,7 @@ namespace arc
             ASSERT_TRUE(_arr_b == 1);
         }
 
-        TEST_F(array_int_test, not_equal)
+        TEST_F(array_int_test, not_equal) // NOLINT
         {
             ASSERT_FALSE(_arr_0 != 1);
             ASSERT_FALSE(_arr_1 != 1);
@@ -71,7 +71,7 @@ namespace arc
             ASSERT_TRUE(_arr_b != 1);
         }
 
-        TEST_F(array_int_test, less_than)
+        TEST_F(array_int_test, less_than) // NOLINT
         {
             ASSERT_FALSE(_arr_0 < 4);
             ASSERT_TRUE(_arr_1 < 4);
@@ -84,7 +84,7 @@ namespace arc
             ASSERT_TRUE(_arr_b < 4);
         }
 
-        TEST_F(array_int_test, more_than)
+        TEST_F(array_int_test, more_than) // NOLINT
         {
             ASSERT_FALSE(_arr_0 > 4);
             ASSERT_FALSE(_arr_1 > 4);
@@ -97,7 +97,7 @@ namespace arc
             ASSERT_TRUE(_arr_b > 4);
         }
 
-        TEST_F(array_int_test, less_than_or_equal_to)
+        TEST_F(array_int_test, less_than_or_equal_to) // NOLINT
         {
             ASSERT_TRUE(_arr_0 <= 4);
             ASSERT_TRUE(_arr_1 <= 4);
@@ -110,7 +110,7 @@ namespace arc
             ASSERT_TRUE(_arr_b <= 4);
         }
 
-        TEST_F(array_int_test, more_than_or_equal_to)
+        TEST_F(array_int_test, more_than_or_equal_to) // NOLINT
         {
             ASSERT_FALSE(_arr_0 >= 4);
             ASSERT_FALSE(_arr_1 >= 4);
@@ -141,7 +141,7 @@ namespace arc
             const std::array<std::array<double, 0>, 4> _arr_b{{{}, {}, {}, {}}};
         };
 
-        TEST_F(array_double_test, less_than)
+        TEST_F(array_double_test, less_than) // NOLINT
         {
             ASSERT_FALSE(_arr_0 < 4.0);
             ASSERT_TRUE(_arr_1 < 4.0);
@@ -154,7 +154,7 @@ namespace arc
             ASSERT_TRUE(_arr_b < 4.0);
         }
 
-        TEST_F(array_double_test, more_than)
+        TEST_F(array_double_test, more_than) // NOLINT
         {
             ASSERT_FALSE(_arr_0 > 4.0);
             ASSERT_FALSE(_arr_1 > 4.0);
@@ -167,7 +167,7 @@ namespace arc
             ASSERT_TRUE(_arr_b > 4.0);
         }
 
-        TEST_F(array_double_test, less_than_or_equal_to)
+        TEST_F(array_double_test, less_than_or_equal_to) // NOLINT
         {
             ASSERT_TRUE(_arr_0 <= 4.0);
             ASSERT_TRUE(_arr_1 <= 4.0);
@@ -180,7 +180,7 @@ namespace arc
             ASSERT_TRUE(_arr_b <= 4.0);
         }
 
-        TEST_F(array_double_test, more_than_or_equal_to)
+        TEST_F(array_double_test, more_than_or_equal_to) // NOLINT
         {
             ASSERT_FALSE(_arr_0 >= 4.0);
             ASSERT_FALSE(_arr_1 >= 4.0);
@@ -211,7 +211,7 @@ namespace arc
             const std::vector<std::vector<int>> _vec_b{4, std::vector<int>{}};
         };
 
-        TEST_F(vector_int_test, equal)
+        TEST_F(vector_int_test, equal) // NOLINT
         {
             ASSERT_FALSE(_vec_0 == 1);
             ASSERT_TRUE(_vec_1 == 1);
@@ -224,7 +224,7 @@ namespace arc
             ASSERT_TRUE(_vec_b == 1);
         }
 
-        TEST_F(vector_int_test, not_equal)
+        TEST_F(vector_int_test, not_equal) // NOLINT
         {
             ASSERT_FALSE(_vec_0 != 1);
             ASSERT_FALSE(_vec_1 != 1);
@@ -237,7 +237,7 @@ namespace arc
             ASSERT_TRUE(_vec_b != 1);
         }
 
-        TEST_F(vector_int_test, less_than)
+        TEST_F(vector_int_test, less_than) // NOLINT
         {
             ASSERT_FALSE(_vec_0 < 4);
             ASSERT_TRUE(_vec_1 < 4);
@@ -250,7 +250,7 @@ namespace arc
             ASSERT_TRUE(_vec_b < 4);
         }
 
-        TEST_F(vector_int_test, more_than)
+        TEST_F(vector_int_test, more_than) // NOLINT
         {
             ASSERT_FALSE(_vec_0 > 4);
             ASSERT_FALSE(_vec_1 > 4);
@@ -263,7 +263,7 @@ namespace arc
             ASSERT_TRUE(_vec_b > 4);
         }
 
-        TEST_F(vector_int_test, less_than_or_equal_to)
+        TEST_F(vector_int_test, less_than_or_equal_to) // NOLINT
         {
             ASSERT_TRUE(_vec_0 <= 4);
             ASSERT_TRUE(_vec_1 <= 4);
@@ -276,7 +276,7 @@ namespace arc
             ASSERT_TRUE(_vec_b <= 4);
         }
 
-        TEST_F(vector_int_test, more_than_or_equal_to)
+        TEST_F(vector_int_test, more_than_or_equal_to) // NOLINT
         {
             ASSERT_FALSE(_vec_0 >= 4);
             ASSERT_FALSE(_vec_1 >= 4);
@@ -307,7 +307,7 @@ namespace arc
             const std::vector<std::vector<double>> _vec_b{4, std::vector<double>{}};
         };
 
-        TEST_F(vector_double_test, less_than)
+        TEST_F(vector_double_test, less_than) // NOLINT
         {
             ASSERT_FALSE(_vec_0 < 4.0);
             ASSERT_TRUE(_vec_1 < 4.0);
@@ -320,7 +320,7 @@ namespace arc
             ASSERT_TRUE(_vec_b < 4.0);
         }
 
-        TEST_F(vector_double_test, more_than)
+        TEST_F(vector_double_test, more_than) // NOLINT
         {
             ASSERT_FALSE(_vec_0 > 4.0);
             ASSERT_FALSE(_vec_1 > 4.0);
@@ -333,7 +333,7 @@ namespace arc
             ASSERT_TRUE(_vec_b > 4.0);
         }
 
-        TEST_F(vector_double_test, less_than_or_equal_to)
+        TEST_F(vector_double_test, less_than_or_equal_to) // NOLINT
         {
             ASSERT_TRUE(_vec_0 <= 4.0);
             ASSERT_TRUE(_vec_1 <= 4.0);
@@ -346,7 +346,7 @@ namespace arc
             ASSERT_TRUE(_vec_b <= 4.0);
         }
 
-        TEST_F(vector_double_test, more_than_or_equal_to)
+        TEST_F(vector_double_test, more_than_or_equal_to) // NOLINT
         {
             ASSERT_FALSE(_vec_0 >= 4.0);
             ASSERT_FALSE(_vec_1 >= 4.0);
