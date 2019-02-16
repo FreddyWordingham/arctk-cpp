@@ -9,110 +9,98 @@
 
 
 
-//  == IMPORTS ==
-//  -- Arc --
-#include "arctk/type/is_iterable.hpp"
-
-//  -- Arc --
-#include <type_traits>
-
-
-
 //  == NAMESPACE ==
 namespace arc
 {
-    inline namespace range
+
+
+
+    //  == OPERATORS ==
+    //  -- Compare --
+    template <typename C, typename T, typename S>
+    constexpr inline bool operator==(const C& lhs_, const T& rhs_) noexcept
     {
-
-
-
-        //  == OPERATORS ==
-        //  -- Compare --
-        template <typename C, typename T, typename = typename std::enable_if<type::is_iterable<C>::value && !type::is_iterable<T>::value>::type>
-        constexpr inline bool operator==(const C& lhs_, const T& rhs_) noexcept
+        for (const S& l : lhs_)
         {
-            for (const auto& l : lhs_)
+            if (!(l == rhs_))
             {
-                if (!(l == rhs_))
-                {
-                    return (false);
-                }
+                return (false);
             }
-
-            return (true);
         }
 
-        template <typename C, typename T, typename = typename std::enable_if<type::is_iterable<C>::value && !type::is_iterable<T>::value>::type>
-        constexpr inline bool operator!=(const C& lhs_, const T& rhs_) noexcept
-        {
-            for (const auto& l : lhs_)
-            {
-                if (!(l != rhs_))
-                {
-                    return (false);
-                }
-            }
+        return (true);
+    }
 
-            return (true);
+    template <typename C, typename T, typename S>
+    constexpr inline bool operator!=(const C& lhs_, const T& rhs_) noexcept
+    {
+        for (const S& l : lhs_)
+        {
+            if (!(l != rhs_))
+            {
+                return (false);
+            }
         }
 
-        template <typename C, typename T, typename = typename std::enable_if<type::is_iterable<C>::value && !type::is_iterable<T>::value>::type>
-        constexpr inline bool operator<(const C& lhs_, const T& rhs_) noexcept
-        {
-            for (const auto& l : lhs_)
-            {
-                if (!(l < rhs_))
-                {
-                    return (false);
-                }
-            }
+        return (true);
+    }
 
-            return (true);
+    template <typename C, typename T, typename S>
+    constexpr inline bool operator<(const C& lhs_, const T& rhs_) noexcept
+    {
+        for (const S& l : lhs_)
+        {
+            if (!(l < rhs_))
+            {
+                return (false);
+            }
         }
 
-        template <typename C, typename T, typename = typename std::enable_if<type::is_iterable<C>::value && !type::is_iterable<T>::value>::type>
-        constexpr inline bool operator>(const C& lhs_, const T& rhs_) noexcept
-        {
-            for (const auto& l : lhs_)
-            {
-                if (!(l > rhs_))
-                {
-                    return (false);
-                }
-            }
+        return (true);
+    }
 
-            return (true);
+    template <typename C, typename T, typename S>
+    constexpr inline bool operator>(const C& lhs_, const T& rhs_) noexcept
+    {
+        for (const S& l : lhs_)
+        {
+            if (!(l > rhs_))
+            {
+                return (false);
+            }
         }
 
-        template <typename C, typename T, typename = typename std::enable_if<type::is_iterable<C>::value && !type::is_iterable<T>::value>::type>
-        constexpr inline bool operator<=(const C& lhs_, const T& rhs_) noexcept
-        {
-            for (const auto& l : lhs_)
-            {
-                if (!(l <= rhs_))
-                {
-                    return (false);
-                }
-            }
+        return (true);
+    }
 
-            return (true);
+    template <typename C, typename T, typename S>
+    constexpr inline bool operator<=(const C& lhs_, const T& rhs_) noexcept
+    {
+        for (const S& l : lhs_)
+        {
+            if (!(l <= rhs_))
+            {
+                return (false);
+            }
         }
 
-        template <typename C, typename T, typename = typename std::enable_if<type::is_iterable<C>::value && !type::is_iterable<T>::value>::type>
-        constexpr inline bool operator>=(const C& lhs_, const T& rhs_) noexcept
-        {
-            for (const auto& l : lhs_)
-            {
-                if (!(l >= rhs_))
-                {
-                    return (false);
-                }
-            }
+        return (true);
+    }
 
-            return (true);
+    template <typename C, typename T, typename S>
+    constexpr inline bool operator>=(const C& lhs_, const T& rhs_) noexcept
+    {
+        for (const S& l : lhs_)
+        {
+            if (!(l >= rhs_))
+            {
+                return (false);
+            }
         }
 
+        return (true);
+    }
 
 
-    } // namespace range
+
 } // namespace arc
