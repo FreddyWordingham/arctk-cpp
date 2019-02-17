@@ -17,10 +17,10 @@ namespace arc
 
     //  == OPERATORS ==
     //  -- Compare --
-    template <typename C, typename T, typename S>
+    template <typename C, typename T>
     constexpr inline bool operator==(const C& lhs_, const T& rhs_) noexcept
     {
-        for (const S& l : lhs_)
+        for (const auto& l : lhs_)
         {
             if (!(l == rhs_))
             {
@@ -31,10 +31,10 @@ namespace arc
         return (true);
     }
 
-    template <typename C, typename T, typename S>
+    template <typename C, typename T>
     constexpr inline bool operator!=(const C& lhs_, const T& rhs_) noexcept
     {
-        for (const S& l : lhs_)
+        for (const auto& l : lhs_)
         {
             if (!(l != rhs_))
             {
@@ -45,10 +45,10 @@ namespace arc
         return (true);
     }
 
-    template <typename C, typename T, typename S>
+    template <typename C, typename T>
     constexpr inline bool operator<(const C& lhs_, const T& rhs_) noexcept
     {
-        for (const S& l : lhs_)
+        for (const auto& l : lhs_)
         {
             if (!(l < rhs_))
             {
@@ -59,10 +59,10 @@ namespace arc
         return (true);
     }
 
-    template <typename C, typename T, typename S>
+    template <typename C, typename T>
     constexpr inline bool operator>(const C& lhs_, const T& rhs_) noexcept
     {
-        for (const S& l : lhs_)
+        for (const auto& l : lhs_)
         {
             if (!(l > rhs_))
             {
@@ -73,10 +73,10 @@ namespace arc
         return (true);
     }
 
-    template <typename C, typename T, typename S>
+    template <typename C, typename T>
     constexpr inline bool operator<=(const C& lhs_, const T& rhs_) noexcept
     {
-        for (const S& l : lhs_)
+        for (const auto& l : lhs_)
         {
             if (!(l <= rhs_))
             {
@@ -87,10 +87,10 @@ namespace arc
         return (true);
     }
 
-    template <typename C, typename T, typename S>
+    template <typename C, typename T>
     constexpr inline bool operator>=(const C& lhs_, const T& rhs_) noexcept
     {
-        for (const S& l : lhs_)
+        for (const auto& l : lhs_)
         {
             if (!(l >= rhs_))
             {
