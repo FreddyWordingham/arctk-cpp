@@ -26,7 +26,7 @@ namespace arc
     template <typename S, typename C, typename T>
     constexpr inline S& operator<<(S& lhs_, const C& rhs_) noexcept
     {
-        for (const auto& r : range::Over(rhs_, 1, 1))
+        for (const auto& r : range::over(rhs_, 1, 1))
         {
             lhs_ << r << ",\t";
         }

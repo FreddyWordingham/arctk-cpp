@@ -5,6 +5,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <cstddef>
 
 
@@ -20,7 +21,7 @@ namespace arc
         //  == STRUCTURES ==
         //  -- Over --
         template <typename C, typename I = typename C::const_iterator>
-        struct Over
+        struct over
         {
             //  == FIELDS ==
           public:
@@ -32,10 +33,11 @@ namespace arc
             //  == INSTANTATION ==
           public:
             //  -- Constructors --
-            constexpr inline explicit Over(const C& cont_, const std::size_t begin_offset_ = 0, const std::size_t end_offset_ = 0)
+            constexpr inline explicit over(const C& cont_, const std::size_t begin_offset_ = 0, const std::size_t end_offset_ = 0)
               : _begin{cont_.begin() + begin_offset_}
               , _end{cont_.end() - end_offset_}
             {
+                assert((begin_offset_ + end_offset_) <= cont_.size());
             }
 
 
