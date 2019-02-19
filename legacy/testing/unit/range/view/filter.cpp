@@ -58,7 +58,7 @@ namespace arc
 
             for (auto v : filter)
             {
-                std::cout << *v << '\n';
+                std::cout << v << '\n';
             }
 
 
