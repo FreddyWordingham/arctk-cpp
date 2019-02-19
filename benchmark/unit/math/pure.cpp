@@ -1,6 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/math/properties.inl"
+#include "arctk/math/pure.inl"
 
 //  -- GBench --
 #include <benchmark/benchmark.h>
@@ -17,27 +17,24 @@
 
 
 //  == NAMESPACE ==
-namespace arc
+namespace bench
 {
-    namespace math
+
+
+
+    //  == BENCHMARKS ==
+    static void is_prime(benchmark::State& state) // NOLINT
     {
-
-
-
-        //  == BENCHMARKS ==
-        static void is_prime(benchmark::State& state) // NOLINT
+        for (auto _ : state) // NOLINT
         {
-            for (auto _ : state) // NOLINT
-            {
-                is_prime(2147483647);
-            }
+            arc::math::is_prime(2147483647);
         }
-        BENCHMARK(is_prime); // NOLINT
+    }
+    BENCHMARK(is_prime); // NOLINT
 
 
 
-    } // namespace math
-} // namespace arc
+} // namespace bench
 
 
 
