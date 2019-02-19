@@ -11,8 +11,8 @@
 
 //  == IMPORTS ==
 //  -- Arc --
+#include <arctk/range/iterator.hpp>
 #include <iostream>
-
 
 
 //  == NAMESPACE ==
@@ -65,15 +65,15 @@ namespace arc
 
             //  -- Iterators --
             template <typename C, typename F>
-            constexpr inline iterator::Forward<typename Filter<C, F>::value_type> Filter<C, F>::begin() const noexcept
+            constexpr inline Iterator<const typename Filter<C, F>::value_type*> Filter<C, F>::begin() const noexcept
             {
-                return (iterator::Forward<value_type>{*_data.begin()});
+                return (Iterator<const value_type*>{&_data.front()});
             }
 
             template <typename C, typename F>
-            constexpr inline iterator::Forward<typename Filter<C, F>::value_type> Filter<C, F>::end() const noexcept
+            constexpr inline Iterator<const typename Filter<C, F>::value_type*> Filter<C, F>::end() const noexcept
             {
-                return (iterator::Forward<value_type>{*_data.end()});
+                return (Iterator<const value_type*>{(&_data.back()) + 1});
             }
 
 

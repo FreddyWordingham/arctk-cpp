@@ -11,7 +11,7 @@
 
 //  == IMPORTS ==
 //  -- Arc --
-#include <arctk/range/iterator/forward.hpp>
+#include <arctk/range/iterator.hpp>
 
 //  -- Std --
 #include <functional>
@@ -65,8 +65,13 @@ namespace arc
                 constexpr inline const std::function<bool(const value_type&)>& condition() const noexcept;
 
                 //  -- Iterators --
-                constexpr inline iterator::Forward<value_type> begin() const noexcept;
-                constexpr inline iterator::Forward<value_type> end() const noexcept;
+                constexpr inline Iterator<const value_type*> begin() const noexcept;
+                constexpr inline Iterator<const value_type*> end() const noexcept;
+
+                constexpr inline const std::vector<const value_type*>& data() const noexcept
+                {
+                    return (_data);
+                }
             };
 
 

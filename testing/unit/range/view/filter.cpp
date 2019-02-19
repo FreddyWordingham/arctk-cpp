@@ -2,7 +2,6 @@
 //  -- Arc --
 #include "arctk/range/view/filter.inl"
 #include "arctk/range/iterator.inl"
-#include "arctk/range/iterator/forward.inl"
 
 //  -- Std --
 #include <cassert>
@@ -59,8 +58,11 @@ namespace arc
 
             for (auto v : filter)
             {
-                std::cout << v << '\n';
+                std::cout << *v << '\n';
             }
+
+
+            // auto end = filter.end();
         }
 
 
