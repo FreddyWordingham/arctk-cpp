@@ -12,6 +12,8 @@
 #ifdef __clang__
     #pragma clang diagnostic push
     #pragma clang diagnostic ignored "-Wglobal-constructors"
+#elseif __GNUC__
+
 #endif
 
 
@@ -54,4 +56,6 @@ namespace arc
 //  -- Warnings --
 #ifdef __clang__
     #pragma clang diagnostic pop
+#elseif __GNUC__
+
 #endif
