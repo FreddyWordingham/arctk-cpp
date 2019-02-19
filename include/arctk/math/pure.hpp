@@ -3,11 +3,6 @@
 
 
 
-//  == IMPORTS ==
-//  -- Arc --
-
-
-
 //  == NAMESPACE ==
 namespace arc
 {
@@ -17,10 +12,9 @@ namespace arc
 
 
         //  == FUNCTIONS ==
-
-
-
-        //  == OPERATORS ==
+        //  -- Properties --
+        template <typename T>
+        constexpr inline bool is_prime(T n_) noexcept;
 
 
 
