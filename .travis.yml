@@ -15,7 +15,6 @@ matrix:
     #           packages:
     #             - cmake
     #             - g++-8
-    #             - librange-v3-dev
     #   env:
     #     - ARCTK_COMPILER=gcc
     #     - CC=gcc-8
@@ -32,7 +31,6 @@ matrix:
           apt:
               packages:
                 - cmake
-                - librange-v3-dev
       env:
         - ARCTK_COMPILER=clang
         - CC=clang
@@ -49,7 +47,6 @@ matrix:
           apt:
               packages:
                 - cmake
-                - librange-v3-dev
       env:
         - ARCTK_COMPILER=clang
         - CC=clang-7
@@ -66,7 +63,6 @@ matrix:
           apt:
               packages:
                 - cmake
-                - librange-v3-dev
       env:
         - ARCTK_COMPILER=clang
         - CC=clang-7.0
@@ -124,7 +120,6 @@ matrix:
     #           packages:
     #             - cmake
     #             - g++-8
-    #             - librange-v3-dev
     #   env:
     #     - ARCTK_COMPILER=gcc
     #     - CC=gcc-8
@@ -141,7 +136,6 @@ matrix:
     #       apt:
     #           packages:
     #             - cmake
-    #             - librange-v3-dev
     #   env:
     #     - ARCTK_COMPILER=clang
     #     - CC=clang
@@ -216,6 +210,7 @@ before_install:
     - $ARCTK_CXX --version
     - |
       if [ $TRAVIS_OS_NAME = linux ]; then
+          sudo apt-get install -y librange-v3-dev
           sudo apt-get install -y libgtest-dev
           cd /usr/src/gtest
           sudo cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
