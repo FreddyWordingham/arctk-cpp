@@ -1,7 +1,7 @@
 ---
 Checks:                '*,-cppcoreguidelines-pro-bounds-array-to-pointer-decay,-fuchsia-default-arguments,-fuchsia-overloaded-operator,-hicpp-no-array-decay,-llvm-header-guard'
 WarningsAsErrors:      ''
-HeaderFilter:          '.*'
+HeaderFilterRegex:     '.*hpp|.*inl'
 AnalyzeTemporaryDtors: true
 FormatStyle:           none
 User:                  freddy

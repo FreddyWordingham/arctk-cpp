@@ -17,10 +17,8 @@
 
 
 //  == NAMESPACE ==
-namespace arc
+namespace test
 {
-    namespace test
-    {
 
 
 
@@ -33,8 +31,7 @@ namespace arc
 
 
 
-    } // namespace test
-} // namespace arc
+} // namespace test
 
 
 
