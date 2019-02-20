@@ -47,24 +47,24 @@ matrix:
         - ARCTK_CC=clang-7
         - ARCTK_CXX=clang++-7
 
-  - os: osx
-    osx_image: xcode10.1
-    compiler: gcc
-    addons:
-      brew:
-        packages:
-          - cmake
-          - range-v3
-    env:
-      - HOMEBREW_NO_AUTO_UPDATE=1
-      - ARCTK_COMPILER=gcc
-      - CC=gcc-8
-      - CXX=g++-8
-      - COVERAGE=false
-      - ARCTK_DIR=$TRAVIS_BUILD_DIR
-      - ARCTK_BUILD_TYPE=debug
-      - ARCTK_CC=gcc-8
-      - ARCTK_CXX=g++-8
+    - os: osx
+      osx_image: xcode10.1
+      compiler: gcc
+      addons:
+        brew:
+          packages:
+            - cmake
+            - range-v3
+      env:
+        - HOMEBREW_NO_AUTO_UPDATE=1
+        - ARCTK_COMPILER=gcc
+        - CC=gcc-8
+        - CXX=g++-8
+        - COVERAGE=false
+        - ARCTK_DIR=$TRAVIS_BUILD_DIR
+        - ARCTK_BUILD_TYPE=debug
+        - ARCTK_CC=gcc-8
+        - ARCTK_CXX=g++-8
 
   # - os: osx
   #   osx_image: xcode10.1
