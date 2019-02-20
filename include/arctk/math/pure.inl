@@ -9,12 +9,6 @@
 
 
 
-//  == IMPORTS ==
-//  -- Std --
-#include <type_traits>
-
-
-
 //  == NAMESPACE ==
 namespace arc
 {
@@ -25,11 +19,9 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Properties --
-        template <typename T>
+        template <typename T, typename>
         constexpr inline bool is_prime(const T n_) noexcept
         {
-            static_assert(std::is_integral<T>::value);
-
             if (n_ == 1)
             {
                 return (false);
