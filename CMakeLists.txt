@@ -79,6 +79,7 @@ configure_file(${DOXYFILE_IN} ${DOXYFILE} @ONLY)
 #   == OPTIONS ==
 if (UNIT_TESTING)
     enable_testing()
+    set (GTEST_ROOT ${CMAKE_SOURCE_DIR}/gTest)
     find_package(GTest REQUIRED)
 endif ()
 message("Unit testing: ${UNIT_TESTING}")

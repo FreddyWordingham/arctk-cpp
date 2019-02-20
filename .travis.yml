@@ -15,7 +15,6 @@ matrix:
           packages:
             - cmake
             - g++-8
-            - libgtest-dev
       env:
         - ARCTK_COMPILER=gcc
         - CC=gcc-8
@@ -38,7 +37,6 @@ matrix:
           packages:
             - cmake
             - clang-7
-            - libgtest-dev
       env:
         - ARCTK_COMPILER=clang
         - CC=clang-7
@@ -96,7 +94,6 @@ matrix:
           packages:
             - cmake
             - g++-8
-            - libgtest-dev
       env:
         - ARCTK_COMPILER=gcc
         - CC=gcc-8
@@ -114,7 +111,6 @@ matrix:
           packages:
           - cmake
           - clang-7
-          - libgtest-dev
       env:
         - ARCTK_COMPILER=clang
         - CC=clang
@@ -187,23 +183,11 @@ before_install:
   - $ARCTK_CC --version
   - which $ARCTK_CXX
   - $ARCTK_CXX --version
-  - |
-    if [ $TRAVIS_OS_NAME = linux ]; then
-      sudo apt-get install -y librange-v3-dev
-      sudo apt-get install -y libgtest-dev
-      cd /usr/src/gtest
-      sudo cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
-      sudo make
-      sudo make install
-      sudo cp *.a /usr/lib
-      cd -
-    elif [ $TRAVIS_OS_NAME = osx ]; then
-      cd gtest
-      sudo cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
-      sudo make
-      sudo make install
-      cd -
-    fi
+  - cd gtest
+  - sudo cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
+  - sudo make
+  - sudo make install
+  - cd -
   - cd gbench
   - cmake -DBENCHMARK_ENABLE_GTEST_TESTS=OFF -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
   - make
