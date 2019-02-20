@@ -37,6 +37,7 @@ matrix:
           packages:
             - cmake
             - clang-7
+            - g++-8
       env:
         - ARCTK_COMPILER=clang
         - CC=clang-7
@@ -108,9 +109,12 @@ matrix:
       compiler: clang
       addons:
         apt:
+          sources:
+            - ubuntu-toolchain-r-test
           packages:
-          - cmake
-          - clang-7
+            - cmake
+            - clang-7
+            - g++-8
       env:
         - ARCTK_COMPILER=clang
         - CC=clang
