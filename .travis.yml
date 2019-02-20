@@ -5,41 +5,117 @@ sudo: false
 language: cpp
 
 matrix:
-  include:
-    # - os: linux
-    #   compiler: gcc
-    #   addons:
-    #       apt:
-    #           sources:
-    #             - ubuntu-toolchain-r-test
-    #           packages:
-    #             - cmake
-    #             - g++-8
-    #   env:
-    #     - ARCTK_COMPILER=gcc
-    #     - CC=gcc-8
-    #     - CXX=g++-8
-    #     - COVERAGE=false
-    #     - ARCTK_DIR=$TRAVIS_BUILD_DIR
-    #     - ARCTK_BUILD_TYPE=debug
-    #     - ARCTK_CC=gcc-8
-    #     - ARCTK_CXX=g++-8
+    include:
+        # - os: linux
+        #   compiler: gcc
+        #   addons:
+        #       apt:
+        #           sources:
+        #               - ubuntu-toolchain-r-test
+        #           packages:
+        #               - cmake
+        #               - g++-8
+        #   env:
+        #       - ARCTK_COMPILER=gcc
+        #       - CC=gcc-8
+        #       - CXX=g++-8
+        #       - COVERAGE=false
+        #       - ARCTK_DIR=$TRAVIS_BUILD_DIR
+        #       - ARCTK_BUILD_TYPE=debug
+        #       - ARCTK_CC=gcc-8
+        #       - ARCTK_CXX=g++-8
 
     - os: linux
-      compiler: clang
-      addons:
-          apt:
-              packages:
-                - cmake
-      env:
-        - ARCTK_COMPILER=clang
-        - CC=clang
-        - CXX=clang++
-        - COVERAGE=false
-        - ARCTK_DIR=$TRAVIS_BUILD_DIR
-        - ARCTK_BUILD_TYPE=debug
-        - ARCTK_CC=clang
-        - ARCTK_CXX=clang++
+        compiler: clang
+        addons:
+            apt:
+                sources:
+                    - ubuntu-toolchain-r-test
+                    - llvm-toolchain-trusty-7.0
+                    - sourceline: 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-7.0 main'
+                      key_url: 'https://apt.llvm.org/llvm-snapshot.gpg.key'
+                packages:
+                    - cmake
+                    - clang-7
+                    - libstdc++7
+        env:
+          - ARCTK_COMPILER=clang
+          - CC=clang
+          - CXX=clang++
+          - COVERAGE=false
+          - ARCTK_DIR=$TRAVIS_BUILD_DIR
+          - ARCTK_BUILD_TYPE=debug
+          - ARCTK_CC=clang
+          - ARCTK_CXX=clang++
+
+    - os: linux
+        compiler: clang
+        addons:
+            apt:
+                sources:
+                    - ubuntu-toolchain-r-test
+                    - llvm-toolchain-trusty-7
+                    - sourceline: 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-7 main'
+                      key_url: 'https://apt.llvm.org/llvm-snapshot.gpg.key'
+                packages:
+                    - cmake
+                    - clang-7
+                    - libstdc++7
+        env:
+          - ARCTK_COMPILER=clang
+          - CC=clang
+          - CXX=clang++
+          - COVERAGE=false
+          - ARCTK_DIR=$TRAVIS_BUILD_DIR
+          - ARCTK_BUILD_TYPE=debug
+          - ARCTK_CC=clang
+          - ARCTK_CXX=clang++
+
+    - os: linux
+        compiler: clang
+        addons:
+            apt:
+                sources:
+                    - ubuntu-toolchain-r-test
+                    - llvm-toolchain-trusty-7
+                    - sourceline: 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-7 main'
+                      key_url: 'https://apt.llvm.org/llvm-snapshot.gpg.key'
+                packages:
+                    - cmake
+                    - clang-7
+                    - libstdc++7
+        env:
+          - ARCTK_COMPILER=clang
+          - CC=clang-7
+          - CXX=clang++-7
+          - COVERAGE=false
+          - ARCTK_DIR=$TRAVIS_BUILD_DIR
+          - ARCTK_BUILD_TYPE=debug
+          - ARCTK_CC=clang-7
+          - ARCTK_CXX=clang++-7
+
+    - os: linux
+        compiler: clang
+        addons:
+            apt:
+                sources:
+                    - ubuntu-toolchain-r-test
+                    - llvm-toolchain-trusty-7
+                    - sourceline: 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-7 main'
+                      key_url: 'https://apt.llvm.org/llvm-snapshot.gpg.key'
+                packages:
+                    - cmake
+                    - clang-7
+                    - libstdc++7
+        env:
+          - ARCTK_COMPILER=clang
+          - CC=clang-7.0
+          - CXX=clang++-7.0
+          - COVERAGE=false
+          - ARCTK_DIR=$TRAVIS_BUILD_DIR
+          - ARCTK_BUILD_TYPE=debug
+          - ARCTK_CC=clang-7.0
+          - ARCTK_CXX=clang++-7.0
 
     # - os: osx
     #   osx_image: xcode10.1
@@ -160,18 +236,18 @@ before_install:
     - echo $ARCTK_CC
     - echo $ARCTK_CXX
     - |
-        if [ $TRAVIS_OS_NAME = osx ]; then
-            if [ $ARCTK_COMPILER = gcc ]; then
-                brew install gcc
-                brew link gcc
-            elif [ $ARCTK_COMPILER = clang ]; then
-                brew install llvm
-                export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
-                export PATH="/usr/local/opt/llvm/bin:$PATH"
-                export LDFLAGS="-L/usr/local/opt/llvm/lib"
-                export CPPFLAGS="-I/usr/local/opt/llvm/include"
-            fi
-        fi
+      if [ $TRAVIS_OS_NAME = osx ]; then
+          if [ $ARCTK_COMPILER = gcc ]; then
+              brew install gcc
+              brew link gcc
+          elif [ $ARCTK_COMPILER = clang ]; then
+              brew install llvm
+              export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+              export PATH="/usr/local/opt/llvm/bin:$PATH"
+              export LDFLAGS="-L/usr/local/opt/llvm/lib"
+              export CPPFLAGS="-I/usr/local/opt/llvm/include"
+          fi
+      fi
     - which $ARCTK_CC
     - $ARCTK_CC --version
     - which $ARCTK_CXX
@@ -244,5 +320,5 @@ script:
     - rm -r $ARCTK_DIR/include/arctk/config
 
 notifications:
-  email:
-    - fjmw201@exeter.ac.uk
+    email:
+        - fjmw201@exeter.ac.uk
