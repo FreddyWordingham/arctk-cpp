@@ -37,7 +37,6 @@ matrix:
                 packages:
                     - cmake
                     - clang-7
-                    - libstdc++7
         env:
           - ARCTK_COMPILER=clang
           - CC=clang
@@ -60,7 +59,6 @@ matrix:
                 packages:
                     - cmake
                     - clang-7
-                    - libstdc++7
         env:
           - ARCTK_COMPILER=clang
           - CC=clang
@@ -83,7 +81,6 @@ matrix:
                 packages:
                     - cmake
                     - clang-7
-                    - libstdc++7
         env:
           - ARCTK_COMPILER=clang
           - CC=clang-7
@@ -106,7 +103,6 @@ matrix:
                 packages:
                     - cmake
                     - clang-7
-                    - libstdc++7
         env:
           - ARCTK_COMPILER=clang
           - CC=clang-7.0
