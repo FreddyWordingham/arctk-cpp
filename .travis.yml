@@ -27,6 +27,64 @@ matrix:
         - ARCTK_CXX=g++-8
 
     - os: linux
+      compiler: clang
+      addons:
+          apt:
+              sources:
+                - llvm-toolchain-trusty-7.0
+              packages:
+                - cmake
+                - clang
+                - librange-v3-doc
+      env:
+        - ARCTK_COMPILER=clang
+        - CC=clang
+        - CXX=clang++
+        - COVERAGE=false
+        - ARCTK_DIR=$TRAVIS_BUILD_DIR
+        - ARCTK_BUILD_TYPE=debug
+        - ARCTK_CC=clang
+        - ARCTK_CXX=clang++
+
+    - os: osx
+      osx_image: xcode10.1
+      compiler: gcc
+      addons:
+          brew:
+              packages:
+                - cmake
+                - range-v3
+      env:
+        - HOMEBREW_NO_AUTO_UPDATE=1
+        - ARCTK_COMPILER=gcc
+        - CC=gcc-8
+        - CXX=g++-8
+        - COVERAGE=false
+        - ARCTK_DIR=$TRAVIS_BUILD_DIR
+        - ARCTK_BUILD_TYPE=debug
+        - ARCTK_CC=gcc-8
+        - ARCTK_CXX=g++-8
+
+    - os: osx
+      osx_image: xcode10.1
+      compiler: clang
+      addons:
+          brew:
+              packages:
+                - cmake
+                - range-v3
+      env:
+        - HOMEBREW_NO_AUTO_UPDATE=1
+        - ARCTK_COMPILER=clang
+        - CC=clang
+        - CXX=clang++
+        - COVERAGE=true
+        - ARCTK_DIR=$TRAVIS_BUILD_DIR
+        - ARCTK_BUILD_TYPE=debug
+        - ARCTK_CC=clang
+        - ARCTK_CXX=clang++
+
+    - os: linux
       compiler: gcc
       addons:
           apt:
@@ -62,48 +120,9 @@ matrix:
         - CXX=clang++
         - COVERAGE=false
         - ARCTK_DIR=$TRAVIS_BUILD_DIR
-        - ARCTK_BUILD_TYPE=debug
-        - ARCTK_CC=clang
-        - ARCTK_CXX=clang++
-
-    - os: linux
-      compiler: clang
-      addons:
-          apt:
-              sources:
-                - llvm-toolchain-trusty-7.0
-              packages:
-                - cmake
-                - clang
-                - librange-v3-doc
-      env:
-        - ARCTK_COMPILER=clang
-        - CC=clang
-        - CXX=clang++
-        - COVERAGE=false
-        - ARCTK_DIR=$TRAVIS_BUILD_DIR
         - ARCTK_BUILD_TYPE=release
         - ARCTK_CC=clang
         - ARCTK_CXX=clang++
-
-    - os: osx
-      osx_image: xcode10.1
-      compiler: gcc
-      addons:
-          brew:
-              packages:
-                - cmake
-                - range-v3
-      env:
-        - HOMEBREW_NO_AUTO_UPDATE=1
-        - ARCTK_COMPILER=gcc
-        - CC=gcc-8
-        - CXX=g++-8
-        - COVERAGE=false
-        - ARCTK_DIR=$TRAVIS_BUILD_DIR
-        - ARCTK_BUILD_TYPE=debug
-        - ARCTK_CC=gcc-8
-        - ARCTK_CXX=g++-8
 
     - os: osx
       osx_image: xcode10.1
@@ -137,30 +156,13 @@ matrix:
         - ARCTK_COMPILER=clang
         - CC=clang
         - CXX=clang++
-        - COVERAGE=true
-        - ARCTK_DIR=$TRAVIS_BUILD_DIR
-        - ARCTK_BUILD_TYPE=debug
-        - ARCTK_CC=clang
-        - ARCTK_CXX=clang++
-
-    - os: osx
-      osx_image: xcode10.1
-      compiler: clang
-      addons:
-          brew:
-              packages:
-                - cmake
-                - range-v3
-      env:
-        - HOMEBREW_NO_AUTO_UPDATE=1
-        - ARCTK_COMPILER=clang
-        - CC=clang
-        - CXX=clang++
         - COVERAGE=false
         - ARCTK_DIR=$TRAVIS_BUILD_DIR
         - ARCTK_BUILD_TYPE=release
         - ARCTK_CC=clang
         - ARCTK_CXX=clang++
+
+
 
 before_install:
     - echo $TRAVIS_OS_NAME
