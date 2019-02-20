@@ -41,38 +41,6 @@ matrix:
         - ARCTK_CC=clang
         - ARCTK_CXX=clang++
 
-    - os: linux
-      compiler: clang
-      addons:
-          apt:
-              packages:
-                - cmake
-      env:
-        - ARCTK_COMPILER=clang
-        - CC=clang-7
-        - CXX=clang++-7
-        - COVERAGE=false
-        - ARCTK_DIR=$TRAVIS_BUILD_DIR
-        - ARCTK_BUILD_TYPE=debug
-        - ARCTK_CC=clang-7
-        - ARCTK_CXX=clang++-7
-
-    - os: linux
-      compiler: clang
-      addons:
-          apt:
-              packages:
-                - cmake
-      env:
-        - ARCTK_COMPILER=clang
-        - CC=clang-7.0
-        - CXX=clang++-7.0
-        - COVERAGE=false
-        - ARCTK_DIR=$TRAVIS_BUILD_DIR
-        - ARCTK_BUILD_TYPE=debug
-        - ARCTK_CC=clang-7.0
-        - ARCTK_CXX=clang++-7.0
-
     # - os: osx
     #   osx_image: xcode10.1
     #   compiler: gcc
@@ -213,7 +181,7 @@ before_install:
           sudo apt-get install -y librange-v3-dev
           sudo apt-get install -y libgtest-dev
           cd /usr/src/gtest
-          sudo cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
+          sudo -i cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
           sudo make
           sudo make install
           sudo cp *.a /usr/lib
