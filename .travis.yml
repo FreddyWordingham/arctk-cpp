@@ -15,6 +15,7 @@ matrix:
               packages:
                 - cmake
                 - g++-8
+                - librange-v3-doc
       env:
         - ARCTK_COMPILER=gcc
         - CC=gcc-8
@@ -34,6 +35,7 @@ matrix:
               packages:
                 - cmake
                 - g++-8
+                - librange-v3-doc
       env:
         - ARCTK_COMPILER=gcc
         - CC=gcc-8
@@ -53,6 +55,7 @@ matrix:
               packages:
                 - cmake
                 - clang
+                - librange-v3-doc
       env:
         - ARCTK_COMPILER=clang
         - CC=clang
@@ -72,6 +75,7 @@ matrix:
               packages:
                 - cmake
                 - clang
+                - librange-v3-doc
       env:
         - ARCTK_COMPILER=clang
         - CC=clang
@@ -89,6 +93,7 @@ matrix:
           brew:
               packages:
                 - cmake
+                - range-v3
       env:
         - HOMEBREW_NO_AUTO_UPDATE=1
         - ARCTK_COMPILER=gcc
@@ -107,6 +112,7 @@ matrix:
           brew:
               packages:
                 - cmake
+                - range-v3
       env:
         - HOMEBREW_NO_AUTO_UPDATE=1
         - ARCTK_COMPILER=gcc
@@ -125,6 +131,7 @@ matrix:
           brew:
               packages:
                 - cmake
+                - range-v3
       env:
         - HOMEBREW_NO_AUTO_UPDATE=1
         - ARCTK_COMPILER=clang
@@ -143,6 +150,7 @@ matrix:
           brew:
               packages:
                 - cmake
+                - range-v3
       env:
         - HOMEBREW_NO_AUTO_UPDATE=1
         - ARCTK_COMPILER=clang
