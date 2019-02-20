@@ -90,7 +90,7 @@ matrix:
               packages:
                 - cmake
                 - g++-8
-                - librange-v3-doc
+                - librange-v3-dev
       env:
         - ARCTK_COMPILER=gcc
         - CC=gcc-8
@@ -107,7 +107,7 @@ matrix:
           apt:
               packages:
                 - cmake
-                - librange-v3-doc
+                - librange-v3-dev
       env:
         - ARCTK_COMPILER=clang
         - CC=clang
