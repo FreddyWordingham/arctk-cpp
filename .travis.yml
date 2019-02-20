@@ -30,11 +30,8 @@ matrix:
       compiler: clang
       addons:
           apt:
-              sources:
-                - llvm-toolchain-trusty-7
               packages:
                 - cmake
-                - clang
                 - librange-v3-doc
       env:
         - ARCTK_COMPILER=clang
@@ -108,11 +105,8 @@ matrix:
       compiler: clang
       addons:
           apt:
-              sources:
-                - llvm-toolchain-trusty-7
               packages:
                 - cmake
-                - clang
                 - librange-v3-doc
       env:
         - ARCTK_COMPILER=clang
