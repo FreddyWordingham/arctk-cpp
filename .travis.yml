@@ -5,322 +5,250 @@ sudo: false
 language: cpp
 
 matrix:
-  include:
-    # - os: linux
-    #   compiler: gcc
-    #   addons:
-    #     apt:
-    #       sources:
-    #         - ubuntu-toolchain-r-test
-    #       packages:
-    #         - cmake
-    #         - g++-8
-    #   env:
-    #     - ARCTK_COMPILER=gcc
-    #     - CC=gcc-8
-    #     - CXX=g++-8
-    #     - COVERAGE=false
-    #     - ARCTK_DIR=$TRAVIS_BUILD_DIR
-    #     - ARCTK_BUILD_TYPE=debug
-    #     - ARCTK_CC=gcc-8
-    #     - ARCTK_CXX=g++-8
+    include:
+        - os: linux
+            compiler: gcc
+            addons:
+                apt:
+                    sources:
+                        - ubuntu-toolchain-r-test
+                    packages:
+                        - cmake
+                        - g++-8
+            env:
+                - ARCTK_COMPILER=gcc
+                - CC=gcc-8
+                - CXX=g++-8
+                - COVERAGE=false
+                - ARCTK_DIR=$TRAVIS_BUILD_DIR
+                - ARCTK_BUILD_TYPE=debug
+                - ARCTK_CC=gcc-8
+                - ARCTK_CXX=g++-8
+
+        - os: linux
+            compiler: clang
+            addons:
+                apt:
+                    sources:
+                        - ubuntu-toolchain-r-test
+                        - llvm-toolchain-trusty-7
+                        - sourceline: 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-7 main'
+                            key_url: 'https://apt.llvm.org/llvm-snapshot.gpg.key'
+                    packages:
+                        - cmake
+                        - clang-7
+            env:
+                - ARCTK_COMPILER=clang
+                - CC=clang-7
+                - CXX=clang++-7
+                - COVERAGE=false
+                - ARCTK_DIR=$TRAVIS_BUILD_DIR
+                - ARCTK_BUILD_TYPE=debug
+                - ARCTK_CC=clang-7
+                - ARCTK_CXX=clang++-7
+
+    - os: osx
+        osx_image: xcode10.1
+        compiler: gcc
+        addons:
+            brew:
+                packages:
+                    - cmake
+                    - range-v3
+        env:
+            - HOMEBREW_NO_AUTO_UPDATE=1
+            - ARCTK_COMPILER=gcc
+            - CC=gcc-8
+            - CXX=g++-8
+            - COVERAGE=false
+            - ARCTK_DIR=$TRAVIS_BUILD_DIR
+            - ARCTK_BUILD_TYPE=debug
+            - ARCTK_CC=gcc-8
+            - ARCTK_CXX=g++-8
+
+    - os: osx
+        osx_image: xcode10.1
+        compiler: clang
+        addons:
+            brew:
+                packages:
+                    - cmake
+                    - range-v3
+        env:
+            - HOMEBREW_NO_AUTO_UPDATE=1
+            - ARCTK_COMPILER=clang
+            - CC=clang
+            - CXX=clang++
+            - COVERAGE=true
+            - ARCTK_DIR=$TRAVIS_BUILD_DIR
+            - ARCTK_BUILD_TYPE=debug
+            - ARCTK_CC=clang
+            - ARCTK_CXX=clang++
 
     - os: linux
-      compiler: clang
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-trusty-7.0
-            - sourceline: 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-7.0 main'
-              key_url: 'https://apt.llvm.org/llvm-snapshot.gpg.key'
-          packages:
-            - cmake
-            - clang-7
-      env:
-        - ARCTK_COMPILER=clang
-        - CC=clang
-        - CXX=clang++
-        - COVERAGE=false
-        - ARCTK_DIR=$TRAVIS_BUILD_DIR
-        - ARCTK_BUILD_TYPE=debug
-        - ARCTK_CC=clang
-        - ARCTK_CXX=clang++
+        compiler: gcc
+        addons:
+            apt:
+                sources:
+                    - ubuntu-toolchain-r-test
+                packages:
+                    - cmake
+                    - g++-8
+        env:
+            - ARCTK_COMPILER=gcc
+            - CC=gcc-8
+            - CXX=g++-8
+            - COVERAGE=false
+            - ARCTK_DIR=$TRAVIS_BUILD_DIR
+            - ARCTK_BUILD_TYPE=release
+            - ARCTK_CC=gcc-8
+            - ARCTK_CXX=g++-8
 
     - os: linux
-      compiler: clang
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-trusty-7
-            - sourceline: 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-7 main'
-              key_url: 'https://apt.llvm.org/llvm-snapshot.gpg.key'
-          packages:
-            - cmake
-            - clang-7
-      env:
-        - ARCTK_COMPILER=clang
-        - CC=clang
-        - CXX=clang++
-        - COVERAGE=false
-        - ARCTK_DIR=$TRAVIS_BUILD_DIR
-        - ARCTK_BUILD_TYPE=debug
-        - ARCTK_CC=clang
-        - ARCTK_CXX=clang++
+        compiler: clang
+        addons:
+            apt:
+                packages:
+                - cmake
+        env:
+            - ARCTK_COMPILER=clang
+            - CC=clang
+            - CXX=clang++
+            - COVERAGE=false
+            - ARCTK_DIR=$TRAVIS_BUILD_DIR
+            - ARCTK_BUILD_TYPE=release
+            - ARCTK_CC=clang
+            - ARCTK_CXX=clang++
 
-    - os: linux
-      compiler: clang
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-trusty-7
-            - sourceline: 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-7 main'
-              key_url: 'https://apt.llvm.org/llvm-snapshot.gpg.key'
-          packages:
-            - cmake
-            - clang-7
-      env:
-        - ARCTK_COMPILER=clang
-        - CC=clang-7
-        - CXX=clang++-7
-        - COVERAGE=false
-        - ARCTK_DIR=$TRAVIS_BUILD_DIR
-        - ARCTK_BUILD_TYPE=debug
-        - ARCTK_CC=clang-7
-        - ARCTK_CXX=clang++-7
+    - os: osx
+        osx_image: xcode10.1
+        compiler: gcc
+        addons:
+            brew:
+                packages:
+                    - cmake
+                    - range-v3
+        env:
+            - HOMEBREW_NO_AUTO_UPDATE=1
+            - ARCTK_COMPILER=gcc
+            - CC=gcc-8
+            - CXX=g++-8
+            - COVERAGE=false
+            - ARCTK_DIR=$TRAVIS_BUILD_DIR
+            - ARCTK_BUILD_TYPE=release
+            - ARCTK_CC=gcc-8
+            - ARCTK_CXX=g++-8
 
-
-
-
-
-
-
-  # - os: linux
-  #   compiler: clang
-  #   addons:
-  #     apt:
-  #       sources:
-  #         - ubuntu-toolchain-r-test
-  #         - llvm-toolchain-trusty-7
-  #         - sourceline: 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-7 main'
-  #           key_url: 'https://apt.llvm.org/llvm-snapshot.gpg.key'
-  #       packages:
-  #         - cmake
-  #         - clang-7
-  #   env:
-  #     - ARCTK_COMPILER=clang
-  #     - CC=clang-7.0
-  #     - CXX=clang++-7.0
-  #     - COVERAGE=false
-  #     - ARCTK_DIR=$TRAVIS_BUILD_DIR
-  #     - ARCTK_BUILD_TYPE=debug
-  #     - ARCTK_CC=clang-7.0
-  #     - ARCTK_CXX=clang++-7.0
-
-  # - os: osx
-  #   osx_image: xcode10.1
-  #   compiler: gcc
-  #   addons:
-  #     brew:
-  #       packages:
-  #       - cmake
-  #       - range-v3
-  #   env:
-  #   - HOMEBREW_NO_AUTO_UPDATE=1
-  #   - ARCTK_COMPILER=gcc
-  #   - CC=gcc-8
-  #   - CXX=g++-8
-  #   - COVERAGE=false
-  #   - ARCTK_DIR=$TRAVIS_BUILD_DIR
-  #   - ARCTK_BUILD_TYPE=debug
-  #   - ARCTK_CC=gcc-8
-  #   - ARCTK_CXX=g++-8
-
-  # - os: osx
-  #   osx_image: xcode10.1
-  #   compiler: clang
-  #   addons:
-  #     brew:
-  #       packages:
-  #       - cmake
-  #       - range-v3
-  #   env:
-  #   - HOMEBREW_NO_AUTO_UPDATE=1
-  #   - ARCTK_COMPILER=clang
-  #   - CC=clang
-  #   - CXX=clang++
-  #   - COVERAGE=true
-  #   - ARCTK_DIR=$TRAVIS_BUILD_DIR
-  #   - ARCTK_BUILD_TYPE=debug
-  #   - ARCTK_CC=clang
-  #   - ARCTK_CXX=clang++
-
-  # - os: linux
-  #   compiler: gcc
-  #   addons:
-  #     apt:
-  #       sources:
-  #       - ubuntu-toolchain-r-test
-  #       packages:
-  #       - cmake
-  #       - g++-8
-  #   env:
-  #   - ARCTK_COMPILER=gcc
-  #   - CC=gcc-8
-  #   - CXX=g++-8
-  #   - COVERAGE=false
-  #   - ARCTK_DIR=$TRAVIS_BUILD_DIR
-  #   - ARCTK_BUILD_TYPE=release
-  #   - ARCTK_CC=gcc-8
-  #   - ARCTK_CXX=g++-8
-
-  # - os: linux
-  #   compiler: clang
-  #   addons:
-  #     apt:
-  #       packages:
-  #       - cmake
-  #   env:
-  #   - ARCTK_COMPILER=clang
-  #   - CC=clang
-  #   - CXX=clang++
-  #   - COVERAGE=false
-  #   - ARCTK_DIR=$TRAVIS_BUILD_DIR
-  #   - ARCTK_BUILD_TYPE=release
-  #   - ARCTK_CC=clang
-  #   - ARCTK_CXX=clang++
-
-  # - os: osx
-  #   osx_image: xcode10.1
-  #   compiler: gcc
-  #   addons:
-  #     brew:
-  #       packages:
-  #       - cmake
-  #       - range-v3
-  #   env:
-  #   - HOMEBREW_NO_AUTO_UPDATE=1
-  #   - ARCTK_COMPILER=gcc
-  #   - CC=gcc-8
-  #   - CXX=g++-8
-  #   - COVERAGE=false
-  #   - ARCTK_DIR=$TRAVIS_BUILD_DIR
-  #   - ARCTK_BUILD_TYPE=release
-  #   - ARCTK_CC=gcc-8
-  #   - ARCTK_CXX=g++-8
-
-  # - os: osx
-  #   osx_image: xcode10.1
-  #   compiler: clang
-  #   addons:
-  #     brew:
-  #       packages:
-  #       - cmake
-  #       - range-v3
-  #   env:
-  #   - HOMEBREW_NO_AUTO_UPDATE=1
-  #   - ARCTK_COMPILER=clang
-  #   - CC=clang
-  #   - CXX=clang++
-  #   - COVERAGE=false
-  #   - ARCTK_DIR=$TRAVIS_BUILD_DIR
-  #   - ARCTK_BUILD_TYPE=release
-  #   - ARCTK_CC=clang
-  #   - ARCTK_CXX=clang++
+    - os: osx
+        osx_image: xcode10.1
+        compiler: clang
+        addons:
+            brew:
+                packages:
+                - cmake
+                - range-v3
+        env:
+            - HOMEBREW_NO_AUTO_UPDATE=1
+            - ARCTK_COMPILER=clang
+            - CC=clang
+            - CXX=clang++
+            - COVERAGE=false
+            - ARCTK_DIR=$TRAVIS_BUILD_DIR
+            - ARCTK_BUILD_TYPE=release
+            - ARCTK_CC=clang
+            - ARCTK_CXX=clang++
 
 
 
 before_install:
-  - echo $TRAVIS_OS_NAME
-  - echo $ARCTK_BUILD_TYPE
-  - echo $ARCTK_CC
-  - echo $ARCTK_CXX
-  - |
-    if [ $TRAVIS_OS_NAME = osx ]; then
-      if [ $ARCTK_COMPILER = gcc ]; then
-        brew install gcc
-        brew link gcc
-      elif [ $ARCTK_COMPILER = clang ]; then
-        brew install llvm
-        export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
-        export PATH="/usr/local/opt/llvm/bin:$PATH"
-        export LDFLAGS="-L/usr/local/opt/llvm/lib"
-        export CPPFLAGS="-I/usr/local/opt/llvm/include"
-      fi
-    fi
-  - which $ARCTK_CC
-  - $ARCTK_CC --version
-  - which $ARCTK_CXX
-  - $ARCTK_CXX --version
-  - |
-    if [ $TRAVIS_OS_NAME = linux ]; then
-      sudo apt-get install -y librange-v3-dev
-      sudo apt-get install -y libgtest-dev
-      cd /usr/src/gtest
-      sudo -i cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
-      sudo make
-      sudo make install
-      sudo cp *.a /usr/lib
-      cd -
-    elif [ $TRAVIS_OS_NAME = osx ]; then
-      cd gtest
-      sudo cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
-      sudo make
-      sudo make install
-      cd -
-    fi
-  - cd gbench
-  - cmake -DBENCHMARK_ENABLE_GTEST_TESTS=OFF -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
-  - make
-  - sudo make install
-  - if [ $TRAVIS_OS_NAME = linux ]; then sudo cp src/*.a /usr/lib; fi
-  - cd -
-  - |
-    if [ $COVERAGE = true ]; then
-      brew install lcov
-    fi
+    - echo $TRAVIS_OS_NAME
+    - echo $ARCTK_BUILD_TYPE
+    - echo $ARCTK_CC
+    - echo $ARCTK_CXX
+    - |
+        if [ $TRAVIS_OS_NAME = osx ]; then
+            if [ $ARCTK_COMPILER = gcc ]; then
+                brew install gcc
+                brew link gcc
+            elif [ $ARCTK_COMPILER = clang ]; then
+                brew install llvm
+                export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+                export PATH="/usr/local/opt/llvm/bin:$PATH"
+                export LDFLAGS="-L/usr/local/opt/llvm/lib"
+                export CPPFLAGS="-I/usr/local/opt/llvm/include"
+            fi
+        fi
+    - which $ARCTK_CC
+    - $ARCTK_CC --version
+    - which $ARCTK_CXX
+    - $ARCTK_CXX --version
+    - |
+        if [ $TRAVIS_OS_NAME = linux ]; then
+            sudo apt-get install -y librange-v3-dev
+            sudo apt-get install -y libgtest-dev
+            cd /usr/src/gtest
+            sudo -i cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
+            sudo make
+            sudo make install
+            sudo cp *.a /usr/lib
+            cd -
+        elif [ $TRAVIS_OS_NAME = osx ]; then
+            cd gtest
+            sudo cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
+            sudo make
+            sudo make install
+            cd -
+        fi
+    - cd gbench
+    - cmake -DBENCHMARK_ENABLE_GTEST_TESTS=OFF -DCMAKE_BUILD_TYPE=release -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -std=c++17 .
+    - make
+    - sudo make install
+    - if [ $TRAVIS_OS_NAME = linux ]; then sudo cp src/*.a /usr/lib; fi
+    - cd -
+    - |
+        if [ $COVERAGE = true ]; then
+            brew install lcov
+        fi
 
 script:
-  - mkdir $ARCTK_DIR/build
-  - cd $ARCTK_DIR/build
-  - cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -DUNIT_TESTING=true -DCOVERAGE=$COVERAGE ..
-  - make
-  - |
-    for test in $ARCTK_DIR/bin/test/*; do
-      if [ -f $test ]; then
-        $test
-      fi
-    done
-  - cd -
-  - |
-    if [ $COVERAGE = true ]; then
-      cd $ARCTK_DIR
-      lcov --capture --directory . --output-file coverage.info
-      lcov --remove coverage.info '/usr/*' --output-file coverage.info
-      lcov --list coverage.info
-      bash <(curl -s https://codecov.io/bash) -t "57886efc-8eca-416f-9e8b-1b0ee825efe5" -f coverage.info || echo "Codecov did not collect coverage reports."
-      cd -
-    fi
-  - rm -r $ARCTK_DIR/build
-  - rm -r $ARCTK_DIR/bin
-  - rm -r $ARCTK_DIR/include/arctk/config
-  - mkdir $ARCTK_DIR/build
-  - cd $ARCTK_DIR/build
-  - cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -DBENCHMARK=true ..
-  - make
-  - |
-    for bench in $ARCTK_DIR/bin/bench/*; do
-      if [ -f $bench ]; then
-        $bench
-      fi
-    done
-  - cd -
-  - rm -r $ARCTK_DIR/build
-  - rm -r $ARCTK_DIR/bin
-  - rm -r $ARCTK_DIR/include/arctk/config
+    - mkdir $ARCTK_DIR/build
+    - cd $ARCTK_DIR/build
+    - cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -DUNIT_TESTING=true -DCOVERAGE=$COVERAGE ..
+    - make
+    - |
+        for test in $ARCTK_DIR/bin/test/*; do
+            if [ -f $test ]; then
+                $test
+            fi
+        done
+    - cd -
+    - |
+        if [ $COVERAGE = true ]; then
+            cd $ARCTK_DIR
+            lcov --capture --directory . --output-file coverage.info
+            lcov --remove coverage.info '/usr/*' --output-file coverage.info
+            lcov --list coverage.info
+            bash <(curl -s https://codecov.io/bash) -t "57886efc-8eca-416f-9e8b-1b0ee825efe5" -f coverage.info || echo "Codecov did not collect coverage reports."
+            cd -
+        fi
+    - rm -r $ARCTK_DIR/build
+    - rm -r $ARCTK_DIR/bin
+    - rm -r $ARCTK_DIR/include/arctk/config
+    - mkdir $ARCTK_DIR/build
+    - cd $ARCTK_DIR/build
+    - cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -DBENCHMARK=true ..
+    - make
+    - |
+        for bench in $ARCTK_DIR/bin/bench/*; do
+            if [ -f $bench ]; then
+                $bench
+            fi
+        done
+    - cd -
+    - rm -r $ARCTK_DIR/build
+    - rm -r $ARCTK_DIR/bin
+    - rm -r $ARCTK_DIR/include/arctk/config
 
 notifications:
-  email:
-    - fjmw201@exeter.ac.uk
+    email:
+        - fjmw201@exeter.ac.uk
