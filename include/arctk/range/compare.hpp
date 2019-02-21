@@ -15,17 +15,27 @@
 //  == NAMESPACE ==
 namespace arc
 {
-    namespace range
-    {
+    // namespace range
+    // {
 
 
 
-        //  == OPERATORS ==
-        //  -- Comparison --
-        template <typename C, typename T, typename = std::enable_if_t<type::is_rangeable_v<C>>>
-        constexpr inline bool operator==(const C& lhs_, const T& rhs_) noexcept;
+    //  == OPERATORS ==
+    //  -- Comparison --
+    template <typename C, typename T, typename = std::enable_if_t<type::is_rangeable_v<C>>>
+    constexpr inline bool operator==(const C& lhs_, const T& rhs_) noexcept;
+    template <typename C, typename T, typename = std::enable_if_t<type::is_rangeable_v<C>>>
+    constexpr inline bool operator!=(const C& lhs_, const T& rhs_) noexcept;
+    template <typename C, typename T, typename = std::enable_if_t<type::is_rangeable_v<C>>>
+    constexpr inline bool operator<(const C& lhs_, const T& rhs_) noexcept;
+    template <typename C, typename T, typename = std::enable_if_t<type::is_rangeable_v<C>>>
+    constexpr inline bool operator>(const C& lhs_, const T& rhs_) noexcept;
+    template <typename C, typename T, typename = std::enable_if_t<type::is_rangeable_v<C>>>
+    constexpr inline bool operator<=(const C& lhs_, const T& rhs_) noexcept;
+    template <typename C, typename T, typename = std::enable_if_t<type::is_rangeable_v<C>>>
+    constexpr inline bool operator>=(const C& lhs_, const T& rhs_) noexcept;
 
 
 
-    } // namespace range
+    // } // namespace range
 } // namespace arc
