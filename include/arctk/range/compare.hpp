@@ -5,6 +5,10 @@
 
 //  == IMPORTS ==
 //  -- Arc --
+#include <arctk/type/traits.hpp>
+
+//  -- Std --
+#include <type_traits>
 
 
 
@@ -16,11 +20,10 @@ namespace arc
 
 
 
-        //  == FUNCTIONS ==
-
-
-
         //  == OPERATORS ==
+        //  -- Comparison --
+        template <typename C, typename T, typename = std::enable_if_t<type::is_rangeable_v<C>>>
+        constexpr inline bool operator==(const C& lhs_, const T& rhs_) noexcept;
 
 
 

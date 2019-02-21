@@ -20,8 +20,13 @@
     template <typename T>                                      \
     struct name_<T, std::void_t<__VA_ARGS__>> : std::true_type \
     {                                                          \
-    };
-
+    };                                                         \
+                                                               \
+    template <typename Condition, typename T = void>           \
+    using name_##_t = typename name_<Condition, T>::type;      \
+                                                               \
+    template <typename T>                                      \
+    inline constexpr bool name_##_v = name_<T>::value;
 
 
 //  == NAMESPACE ==
