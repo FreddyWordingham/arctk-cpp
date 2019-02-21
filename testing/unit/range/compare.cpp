@@ -22,7 +22,6 @@
 
 //  == ALIASES ==
 //  -- Using --
-using namespace arc;
 
 
 
@@ -52,6 +51,8 @@ namespace test
 
     TEST_F(array_int_test, equal) // NOLINT
     {
+        using namespace arc;
+
         ASSERT_FALSE(_arr_0 == 1);
         ASSERT_TRUE(_arr_1 == 1);
         ASSERT_FALSE(_arr_2 == 1);
