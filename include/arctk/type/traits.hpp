@@ -9,6 +9,21 @@
 
 
 
+//  == MACROS ==
+//  -- Traits --
+#define TRAIT(name_, ...)                                      \
+    template <typename T, typename = void>                     \
+    struct name_ : std::false_type                             \
+    {                                                          \
+    };                                                         \
+                                                               \
+    template <typename T>                                      \
+    struct name_<T, std::void_t<__VA_ARGS__>> : std::true_type \
+    {                                                          \
+    };
+
+
+
 //  == NAMESPACE ==
 namespace arc
 {
@@ -19,25 +34,19 @@ namespace arc
 
         //  == STRUCTURES ==
         //  -- Ranges --
-        template <typename T, typename = void>
-        struct is_rangeable : std::false_type
-        {
-        };
-
-        template <typename T>
-        struct is_rangeable<T, std::void_t<decltype(std::declval<T&>().begin()), decltype(std::declval<T&>().end()), typename T::value_type>> : std::true_type
-        {
-        };
-
-        // TRAIT(is_rangeable,
-        //     (
-        //         decltype(std::declval<T&>().begin()),
-        //         decltype(std::declval<T&>().end()),
-        //         typename T::value_type
-        //     )
-        // )
+        TRAIT(is_rangeable,                         //
+              decltype(std::declval<T&>().begin()), //
+              decltype(std::declval<T&>().end()),   //
+              typename T::value_type                //
+        );
 
 
 
     } // namespace type
 } // namespace arc
+
+
+
+//  == CLEAN UP ==
+//  -- Traits --
+#undef TRAIT
