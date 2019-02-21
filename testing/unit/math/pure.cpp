@@ -24,7 +24,7 @@ namespace test
 
     //  == TESTS ==
     //  -- Prime --
-    TEST(prime, special) // NOLINT
+    TEST(is_prime, special) // NOLINT
     {
         ASSERT_FALSE(arc::math::is_prime(0));
         ASSERT_FALSE(arc::math::is_prime(1));
@@ -33,7 +33,7 @@ namespace test
         ASSERT_FALSE(arc::math::is_prime(4));
     }
 
-    TEST(prime, small) // NOLINT
+    TEST(is_prime, small) // NOLINT
     {
         ASSERT_TRUE(arc::math::is_prime(43));
         ASSERT_FALSE(arc::math::is_prime(343));
@@ -41,7 +41,7 @@ namespace test
         ASSERT_FALSE(arc::math::is_prime(999));
     }
 
-    TEST(prime, large) // NOLINT
+    TEST(is_prime, large) // NOLINT
     {
         ASSERT_TRUE(arc::math::is_prime(524287));
         ASSERT_FALSE(arc::math::is_prime(834674));
