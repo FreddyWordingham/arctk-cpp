@@ -22,16 +22,12 @@
     {                                                          \
     };                                                         \
                                                                \
-                                                               \
-    //  == ALIASES ==                                          \
-    //  -- Type --                                             \
     template <typename Condition, typename T = void>           \
     using name_##_t = typename name_<Condition, T>::type;      \
                                                                \
-                                                               \
-    //  -- Value --                                            \
     template <typename T>                                      \
     inline constexpr bool name_##_v = name_<T>::value;
+
 
 
 //  == NAMESPACE ==
