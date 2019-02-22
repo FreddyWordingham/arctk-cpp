@@ -42,7 +42,7 @@ namespace test
 
     //  == TESTS ==
     //  -- Backward Iterator --
-    TEST_F(forward_iterator, range) // NOLINT
+    TEST_F(backward_iterator, range) // NOLINT
     {
         std::size_t i{0};
         for (auto it{start}; it != end; ++it, ++i)
