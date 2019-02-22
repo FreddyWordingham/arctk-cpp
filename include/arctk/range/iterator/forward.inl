@@ -40,7 +40,7 @@ namespace arc
             template <typename T>
             constexpr inline Forward<T>& Forward<T>::operator++() noexcept
             {
-                ++_pointer;
+                ++Iterator<T>::_pointer;
 
                 return (*this);
             }
@@ -50,7 +50,7 @@ namespace arc
             {
                 Forward<T> it{*this};
 
-                ++_pointer;
+                ++Iterator<T>::_pointer;
 
                 return (it);
             }
