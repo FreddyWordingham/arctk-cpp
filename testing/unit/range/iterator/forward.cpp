@@ -12,8 +12,6 @@
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wglobal-constructors"
-#elif __GNUC__
-
 #endif
 
 
@@ -53,6 +51,4 @@ namespace test
 //  -- Warnings --
 #ifdef __clang__
 #pragma clang diagnostic pop
-#elif __GNUC__
-
 #endif

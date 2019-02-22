@@ -10,6 +10,9 @@
 
 
 //  == IMPORTS ==
+//  -- Arc --
+#include "arctk/range/iterator.inl"
+
 //  -- Std --
 #include <cassert>
 
@@ -56,8 +59,18 @@ namespace arc
             }
 
 
-            //  == METHODS ==
-            //  -- Getters --
+            //  -- Comparison --
+            template <typename T>
+            constexpr inline bool Forward<T>::operator==(const Forward<T>& rhs_) const noexcept
+            {
+                return (Iterator<T>::_pointer == rhs_._pointer);
+            }
+
+            template <typename T>
+            inline bool Forward<T>::operator!=(const Forward<T>& rhs_) const noexcept
+            {
+                return (Iterator<T>::_pointer != rhs_._pointer);
+            }
 
 
 

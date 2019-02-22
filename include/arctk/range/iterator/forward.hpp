@@ -5,7 +5,7 @@
 
 //  == BASE ==
 //  -- Arc --
-#include <arctk/range/iterator.hpp>
+#include "arctk/range/iterator.hpp"
 
 
 
@@ -55,8 +55,8 @@ namespace arc
                 constexpr inline Forward  operator++(const int /*unused*/) noexcept;
 
                 //  -- Comparison --
-                constexpr inline bool operator==(const Forward<T>& rhs_) const noexcept;
-                inline bool           operator!=(const Forward<T>& rhs_) const noexcept;
+                constexpr inline bool operator==(const Forward& rhs_) const noexcept;
+                inline bool           operator!=(const Forward& rhs_) const noexcept;
 
                 //  -- Member Access --
                 constexpr inline reference operator*() noexcept;
