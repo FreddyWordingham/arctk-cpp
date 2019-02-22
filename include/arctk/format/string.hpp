@@ -4,8 +4,12 @@
 
 
 //  == IMPORTS ==
+//  -- Arc --
+#include <arctk/type/traits.hpp>
+
 //  -- Str --
 #include <iosfwd>
+#include <type_traits>
 
 
 
@@ -19,7 +23,7 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- String --
-        template <typename T>
+        template <typename T, typename = std::enable_if_t<type::is_printable_v<T>>>
         inline std::string string(const T& var_) noexcept;
 
 

@@ -26,7 +26,7 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- String --
-        template <typename T>
+        template <typename T, typename>
         inline std::string string(const T& var_) noexcept
         {
             std::stringstream stream{};

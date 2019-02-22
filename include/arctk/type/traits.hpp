@@ -5,6 +5,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <iosfwd>
 #include <type_traits>
 
 
@@ -44,6 +45,11 @@ namespace arc
               decltype(std::declval<T&>().begin()), //
               decltype(std::declval<T&>().end()),   //
               typename T::value_type                //
+        );
+
+        //  -- Printing --
+        TRAIT(is_printable,                                                 //
+              decltype(std::declval<std::ostream&>() << std::declval<T&>()) //
         );
 
 
