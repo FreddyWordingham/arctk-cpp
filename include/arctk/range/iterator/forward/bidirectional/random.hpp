@@ -60,6 +60,12 @@ namespace arc
 
                             return (*this);
                         }
+                        constexpr inline Random& operator-=(const difference_type n_) noexcept
+                        {
+                            Iterator<T>::_pointer -= n_;
+
+                            return (*this);
+                        }
 
                         //  -- Increment / Decrement --
                         constexpr inline Random& operator++() noexcept;
@@ -72,12 +78,36 @@ namespace arc
                         {
                             return (Random<T>{Iterator<T>::_pointer + n_});
                         }
+                        constexpr inline Random operator-(const difference_type n_) noexcept
+                        {
+                            return (Random<T>{Iterator<T>::_pointer - n_});
+                        }
 
                         //  -- Comparison --
                         constexpr inline bool operator==(const Random& rhs_) const noexcept;
                         inline bool           operator!=(const Random& rhs_) const noexcept;
+                        constexpr inline bool operator<(const Random& rhs_) const noexcept
+                        {
+                            return (Iterator<T>::_pointer < rhs_._pointer);
+                        }
+                        constexpr inline bool operator>(const Random& rhs_) const noexcept
+                        {
+                            return (Iterator<T>::_pointer > rhs_._pointer);
+                        }
+                        constexpr inline bool operator<=(const Random& rhs_) const noexcept
+                        {
+                            return (!(Iterator<T>::_pointer > rhs_._pointer));
+                        }
+                        constexpr inline bool operator>=(const Random& rhs_) const noexcept
+                        {
+                            return (!(Iterator<T>::_pointer < rhs_._pointer));
+                        }
 
                         //  -- Member Access --
+                        constexpr inline reference operator[](const difference_type n_) noexcept
+                        {
+                            return (*(Random<T>{Iterator<T>::_pointer + n_}));
+                        }
                         constexpr inline reference operator*() noexcept;
                         constexpr inline pointer   operator->() noexcept;
                     };
