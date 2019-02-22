@@ -43,7 +43,6 @@ namespace arc
                     using reference         = const T&;
 
 
-
                     //  == INSTANTIATION ==
                   public:
                     //  -- Constructors --
