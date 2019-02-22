@@ -51,6 +51,6 @@ namespace test
 //  -- Warnings --
 #ifdef __clang__
 #pragma clang diagnostic pop
-#elseif __GNUC__
+#elif __GNUC__
 
 #endif
