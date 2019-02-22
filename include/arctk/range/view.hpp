@@ -58,8 +58,8 @@ namespace arc
             //  == METHODS ==
           public:
             //  -- Getters --
-            constexpr inline range::iterator::forward::bidirectional::Random<reference> cbegin() const noexcept;
-            constexpr inline range::iterator::forward::bidirectional::Random<reference> cend() const noexcept;
+            constexpr inline range::iterator::forward::bidirectional::Random<reference> begin() const noexcept;
+            constexpr inline range::iterator::forward::bidirectional::Random<reference> end() const noexcept;
         };
 
 

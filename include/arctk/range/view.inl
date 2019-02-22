@@ -10,6 +10,9 @@
 
 
 //  == IMPORTS ==
+//  -- Arc --
+#include "arctk/range/iterator/forward/bidirectional/random.inl"
+
 //  -- Std --
 #include <utility>
 
@@ -64,15 +67,15 @@ namespace arc
         //  == METHODS ==
         //  -- Getters --
         template <typename C>
-        constexpr inline range::iterator::forward::bidirectional::Random<typename std::reference_wrapper<const typename C::value_type>> View<C>::cbegin() const noexcept
+        constexpr inline range::iterator::forward::bidirectional::Random<typename std::reference_wrapper<const typename C::value_type>> View<C>::begin() const noexcept
         {
-            return (range::iterator::forward::bidirectional::Random<reference>{&(*_refs.cbegin())});
+            return (range::iterator::forward::bidirectional::Random<reference>{&(*_refs.begin())});
         }
 
         template <typename C>
-        constexpr inline range::iterator::forward::bidirectional::Random<typename std::reference_wrapper<const typename C::value_type>> View<C>::cend() const noexcept
+        constexpr inline range::iterator::forward::bidirectional::Random<typename std::reference_wrapper<const typename C::value_type>> View<C>::end() const noexcept
         {
-            return (range::iterator::forward::bidirectional::Random<reference>{&(*_refs.cend())});
+            return (range::iterator::forward::bidirectional::Random<reference>{&(*_refs.end())});
         }
 
 

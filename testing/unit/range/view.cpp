@@ -26,8 +26,8 @@ namespace test
 
 
     //  == TESTS ==
-    //  -- Prime --
-    TEST(view, array_int) // NOLINT
+    //  -- Access --
+    TEST(view, access) // NOLINT
     {
         std::array<int, 4> arr{0, 1, 2, 3};
         arc::range::View   view{arr};
@@ -36,6 +36,22 @@ namespace test
         ASSERT_EQ(view[1], 1);
         ASSERT_EQ(view[2], 2);
         ASSERT_EQ(view[3], 3);
+    }
+
+
+    //  -- Range --
+    TEST(view, range) // NOLINT
+    {
+        std::array<int, 4> arr{0, 1, 2, 3};
+        arc::range::View   view{arr};
+
+        int sum{0};
+        for (const auto& v : view)
+        {
+            sum += v;
+        }
+
+        ASSERT_EQ(sum, 6);
     }
 
 
