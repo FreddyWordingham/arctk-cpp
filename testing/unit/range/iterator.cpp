@@ -22,24 +22,14 @@ namespace test
 
 
 
-    //  == FIXTURES ==
-    //  -- Array Int Comparison --
-    //      class array_int_test : public ::testing::Test
-    //      {
-    //          //  == FIELDS ==
-    //        protected:
-    //          //  -- Data --
-    //          const std::array<int, 4>                _arr_0{1, 2, 3, 4};
-    //      };
-
-
-
     //  == TESTS ==
-    //      //  -- Prime --
-    //      TEST(prime, special) // NOLINT
-    //      {
-    //          ASSERT_TRUE(is_prime(2));
-    //      }
+    //  -- Iterator --
+    TEST(prime, special) // NOLINT
+    {
+        const int i{43};
+
+        arc::range::Iterator it{&i};
+    }
 
 
 

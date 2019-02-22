@@ -5,7 +5,7 @@
 
 //  == BASE ==
 //  -- Arc --
-#include "arctk/range/iterator.hpp"
+#include "arctk/range/iterator.hpp" // IWYU pragma: export
 
 
 
@@ -39,7 +39,6 @@ namespace arc
                 using difference_type   = std::ptrdiff_t;
                 using pointer           = const T*;
                 using reference         = const T&;
-
 
 
                 //  == INSTANTIATION ==

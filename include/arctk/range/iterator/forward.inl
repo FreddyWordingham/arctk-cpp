@@ -11,7 +11,8 @@
 
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/range/iterator.inl"
+#include "arctk/range/iterator.inl" // IWYU pragma: keep
+                                    // IWYU pragma: no_include "arctk/range/iterator.hpp"
 
 //  -- Std --
 #include <cassert>
