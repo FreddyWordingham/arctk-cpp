@@ -4,7 +4,12 @@
 
 
 //  == IMPORTS ==
+//  -- Arc --
+#include "arctk/range/iterator/forward/bidirectional/random.hpp"
+#include "arctk/type/traits.hpp"
+
 //  -- Std --
+#include <cstddef>
 #include <functional>
 
 
@@ -25,26 +30,36 @@ namespace arc
             //  == ALIASES ==
           public:
             //  -- Values --
-            using value_type = typename C::value_type;
+            using reference = typename std::reference_wrapper<const typename C::value_type>;
 
 
             //  == FIELDS ==
           private:
             //  -- References -
-            std::vector<std::reference_wrapper<value_type>> _refs;
+            std::vector<reference> _refs;
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            constexpr inline View(const C& cont_) noexcept;
 
+          private:
+            //  -- Initialisation --
+            constexpr inline std::vector<reference> init_refs(const C& cont_) noexcept;
 
 
             //  == OPERATORS ==
           public:
+            //  --  Member Access --
+            constexpr inline reference operator[](const std::size_t index_) noexcept;
+
+
             //  == METHODS ==
           public:
             //  -- Getters --
+            constexpr inline range::iterator::forward::bidirectional::Random<reference> cbegin() const noexcept;
+            constexpr inline range::iterator::forward::bidirectional::Random<reference> cend() const noexcept;
         };
 
 
