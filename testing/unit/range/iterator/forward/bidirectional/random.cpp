@@ -5,13 +5,16 @@
 //  -- GTest --
 #include <gtest/gtest.h>
 
+//  -- Std --
+#include <array>
+
 
 
 //  == PRAGMAS ==
 //  -- Warnings --
 #ifdef __clang__
-    #pragma clang diagnostic push
-    #pragma clang diagnostic ignored "-Wglobal-constructors"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wglobal-constructors"
 #endif
 
 
@@ -22,24 +25,40 @@ namespace test
 
 
 
-        //  == FIXTURES ==
-        //  -- Array Int Comparison --
-//      class array_int_test : public ::testing::Test
-//      {
-//          //  == FIELDS ==
-//        protected:
-//          //  -- Data --
-//          const std::array<int, 4>                _arr_0{1, 2, 3, 4};
-//      };
+    //  == FIXTURES ==
+    //  -- Random Iterator --
+    class random_iterator : public ::testing::Test
+    {
+        //  == FIELDS ==
+      protected:
+        //  -- Data --
+        const std::array<int, 4>                                        _arr_0{0, 1, 2, 3};
+        const arc::range::iterator::forward::bidirectional::Random<int> start{&_arr_0.front()};
+        const arc::range::iterator::forward::bidirectional::Random<int> end{&_arr_0.back() + 1};
+    };
 
 
 
-        //  == TESTS ==
-//      //  -- Prime --
-//      TEST(prime, special) // NOLINT
-//      {
-//          ASSERT_TRUE(is_prime(2));
-//      }
+    //  == TESTS ==
+    //  -- Random Iterator --
+    TEST_F(random_iterator, range) // NOLINT
+    {
+        arc::range::iterator::forward::bidirectional::Random it{start};
+        ASSERT_EQ(*it, 0);
+
+        it += 2;
+        ASSERT_EQ(*it, 2);
+
+        it += 2;
+        ASSERT_EQ(it, end);
+
+        it -= 3;
+        ASSERT_EQ(*it, 1);
+
+        ASSERT_EQ(*(it + 1), 2);
+
+        ASSERT_EQ(*(it - 1), 0);
+    }
 
 
 
@@ -50,5 +69,5 @@ namespace test
 //  == CLEAN UP ==
 //  -- Warnings --
 #ifdef __clang__
-    #pragma clang diagnostic pop
+#pragma clang diagnostic pop
 #endif
