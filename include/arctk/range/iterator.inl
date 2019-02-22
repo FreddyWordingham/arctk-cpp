@@ -5,7 +5,7 @@
 
 //  == DECLARATIONS ==
 //  -- Arc --
-#include "arctk/range/print.hpp" // IWYU pragma: export
+#include "arctk/range/iterator.hpp" // IWYU pragma: export
 
 
 
@@ -22,11 +22,17 @@ namespace arc
 
 
 
-        //  == FUNCTIONS ==
+        //  == INSTANTIATION ==
+        //  -- Constructors --
 
 
 
         //  == OPERATORS ==
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
 
 
 
