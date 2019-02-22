@@ -1,6 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/range/iterator/forward.inl"
+#include "arctk/range/iterator/backward.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
@@ -27,21 +27,21 @@ namespace test
 
 
     //  == FIXTURES ==
-    //  -- Forward Iterator --
-    class forward_iterator : public ::testing::Test
+    //  -- Backward Iterator --
+    class backward_iterator : public ::testing::Test
     {
         //  == FIELDS ==
       protected:
         //  -- Data --
-        const std::array<int, 4>                 _arr_0{0, 1, 2, 3};
-        const arc::range::iterator::Forward<int> start{&_arr_0.front()};
-        const arc::range::iterator::Forward<int> end{&_arr_0.back() + 1};
+        const std::array<int, 4>                  _arr_0{3, 2, 1, 0};
+        const arc::range::iterator::Backward<int> start{&_arr_0.back()};
+        const arc::range::iterator::Backward<int> end{&_arr_0.front() - 1};
     };
 
 
 
     //  == TESTS ==
-    //  -- Forward Iterator --
+    //  -- Backward Iterator --
     TEST_F(forward_iterator, range) // NOLINT
     {
         std::size_t i{0};
