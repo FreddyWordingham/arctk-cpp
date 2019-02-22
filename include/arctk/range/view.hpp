@@ -43,6 +43,7 @@ namespace arc
           public:
             //  -- Constructors --
             constexpr inline View(const C& cont_) noexcept;
+            constexpr inline View(std::vector<reference>&& refs_) noexcept;
 
           private:
             //  -- Initialisation --

@@ -34,6 +34,12 @@ namespace arc
         {
         }
 
+        template <typename C>
+        constexpr inline View<C>::View(std::vector<reference>&& refs_) noexcept
+          : _refs{refs_}
+        {
+        }
+
 
         //  -- Initialisation --
         template <typename C>
