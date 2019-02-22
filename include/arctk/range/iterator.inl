@@ -11,6 +11,7 @@
 
 //  == IMPORTS ==
 //  -- Arc --
+#include <cassert>
 
 
 
@@ -24,15 +25,12 @@ namespace arc
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-
-
-
-        //  == OPERATORS ==
-
-
-
-        //  == METHODS ==
-        //  -- Getters --
+        template <typename T>
+        constexpr inline Iterator<T>::Iterator(const T* pointer_) noexcept
+          : _pointer{pointer_}
+        {
+            assert(pointer_ != nullptr);
+        }
 
 
 

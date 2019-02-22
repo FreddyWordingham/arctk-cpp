@@ -3,11 +3,6 @@
 
 
 
-//  == IMPORTS ==
-//  -- Arc --
-
-
-
 //  == NAMESPACE ==
 namespace arc
 {
@@ -18,27 +13,19 @@ namespace arc
 
         //  == CLASSES ==
         //  -- Iterator --
+        template <typename T>
         class Iterator
         {
             //  == FIELDS ==
-          private:
-
+          protected:
+            //  -- Data --
+            const T* _pointer;
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-
-
-
-            //  == OPERATORS ==
-          public:
-
-
-
-            //  == METHODS ==
-          public:
-            //  -- Getters --
+            constexpr inline Iterator(const T* _pointer) noexcept;
         };
 
 
