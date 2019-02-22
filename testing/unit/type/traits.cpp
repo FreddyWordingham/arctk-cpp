@@ -11,6 +11,7 @@
 #include <map>
 #include <stack>
 #include <string>
+#include <utility>
 #include <vector>
 
 
@@ -80,6 +81,32 @@ namespace test
         ASSERT_TRUE(map_void_double);
         const bool map_double_void{arc::type::is_rangeable_v<std::map<std::array<int, 2>, std::size_t>>};
         ASSERT_TRUE(map_double_void);
+    }
+
+    TEST(is_printable, true) // NOLINT
+    {
+        const bool printable_bool_value{arc::type::is_printable_v<bool>};
+        ASSERT_TRUE(printable_bool_value);
+        const bool printable_int_value{arc::type::is_printable_v<int>};
+        ASSERT_TRUE(printable_int_value);
+        const bool printable_double_value{arc::type::is_printable_v<double>};
+        ASSERT_TRUE(printable_double_value);
+        const bool printable_string_value{arc::type::is_printable_v<std::string>};
+        ASSERT_TRUE(printable_string_value);
+        const bool printable_cstring_value{arc::type::is_printable_v<char*>};
+        ASSERT_TRUE(printable_cstring_value);
+    }
+
+    TEST(is_printable, false) // NOLINT
+    {
+        const bool printable_array_value{arc::type::is_printable_v<std::array<int, 4>>};
+        ASSERT_FALSE(printable_array_value);
+        const bool printable_vector_value{arc::type::is_printable_v<std::vector<double>>};
+        ASSERT_FALSE(printable_vector_value);
+        const bool printable_pair_value{arc::type::is_printable_v<std::pair<int, char>>};
+        ASSERT_FALSE(printable_pair_value);
+        const bool printable_map_value{arc::type::is_printable_v<std::map<std::string, int>>};
+        ASSERT_FALSE(printable_map_value);
     }
 
 
