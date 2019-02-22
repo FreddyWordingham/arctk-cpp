@@ -5,6 +5,10 @@
 //  -- GTest --
 #include <gtest/gtest.h>
 
+//  -- Std --
+#include <array>
+#include <cstddef>
+
 
 
 //  == PRAGMAS ==
@@ -23,23 +27,29 @@ namespace test
 
 
     //  == FIXTURES ==
-    //  -- Array Int Comparison --
-    //      class array_int_test : public ::testing::Test
-    //      {
-    //          //  == FIELDS ==
-    //        protected:
-    //          //  -- Data --
-    //          const std::array<int, 4>                _arr_0{1, 2, 3, 4};
-    //      };
+    //  -- Forward Iterator --
+    class forward_iterator : public ::testing::Test
+    {
+        //  == FIELDS ==
+      protected:
+        //  -- Data --
+        const std::array<int, 4>                 _arr_0{1, 2, 3, 4};
+        const arc::range::iterator::Forward<int> start{&_arr_0.front()};
+        const arc::range::iterator::Forward<int> end{&_arr_0.back() + 1};
+    };
 
 
 
     //  == TESTS ==
-    //      //  -- Prime --
-    //      TEST(prime, special) // NOLINT
-    //      {
-    //          ASSERT_TRUE(is_prime(2));
-    //      }
+    //  -- Forward Iterator --
+    TEST_F(forward_iterator, range) // NOLINT
+    {
+        std::size_t i{0};
+        for (auto it{start}; it != end; ++it, ++i)
+        {
+            ASSERT_EQ(*it, i);
+        }
+    }
 
 
 

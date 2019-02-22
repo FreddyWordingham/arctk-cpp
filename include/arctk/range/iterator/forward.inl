@@ -73,6 +73,20 @@ namespace arc
             }
 
 
+            //  -- Member Access --
+            template <typename T>
+            constexpr inline typename Forward<T>::reference Forward<T>::operator*() noexcept
+            {
+                return (*Iterator<T>::_pointer);
+            }
+
+            template <typename T>
+            constexpr inline typename Forward<T>::pointer Forward<T>::operator->() noexcept
+            {
+                return (Iterator<T>::_pointer);
+            }
+
+
 
         } // namespace iterator
     }     // namespace range
