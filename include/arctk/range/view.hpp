@@ -5,6 +5,7 @@
 
 //  == IMPORTS ==
 //  -- Arc --
+#include "arctk/range/iterator.hpp"
 #include "arctk/type/traits.hpp"
 
 //  -- Std --
@@ -30,8 +31,8 @@ namespace arc
           public:
             //  -- Values --
             using reference      = typename std::reference_wrapper<const typename C::value_type>;
-            using const_iterator = typename std::vector<reference>::const_iterator;
-            using iterator       = typename std::vector<reference>::iterator;
+            using const_iterator = Iterator<typename std::vector<reference>::const_iterator>;
+            using iterator       = Iterator<typename std::vector<reference>::iterator>;
 
 
             //  == FIELDS ==
