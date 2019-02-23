@@ -34,8 +34,6 @@ namespace test
         arc::range::Iterator it{vec.begin()};
 
         ASSERT_EQ(*it, 43);
-        ASSERT_EQ(*(++it), 42);
-        ASSERT_EQ(*(++(++it)), 41);
     }
 
 

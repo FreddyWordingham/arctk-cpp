@@ -6,7 +6,6 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/range/iterator.hpp"
-#include "arctk/type/traits.hpp"
 
 //  -- Std --
 #include <cstddef>

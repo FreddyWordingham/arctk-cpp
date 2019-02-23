@@ -9,11 +9,6 @@
 
 
 
-//  == IMPORTS ==
-//  -- Arc --
-
-
-
 //  == NAMESPACE ==
 namespace arc
 {
