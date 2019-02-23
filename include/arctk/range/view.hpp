@@ -30,7 +30,9 @@ namespace arc
             //  == ALIASES ==
           public:
             //  -- Values --
-            using reference = typename std::reference_wrapper<const typename C::value_type>;
+            using reference      = typename std::reference_wrapper<const typename C::value_type>;
+            using const_iterator = typename std::vector<reference>::const_iterator;
+            using iterator       = typename std::vector<reference>::iterator;
 
 
             //  == FIELDS ==
@@ -59,8 +61,10 @@ namespace arc
             //  == METHODS ==
           public:
             //  -- Getters --
-            constexpr inline range::iterator::forward::bidirectional::Random<reference> begin() const noexcept;
-            constexpr inline range::iterator::forward::bidirectional::Random<reference> end() const noexcept;
+            constexpr inline const_iterator cbegin() const noexcept;
+            constexpr inline iterator       begin() noexcept;
+            constexpr inline const_iterator cend() const noexcept;
+            constexpr inline iterator       end() noexcept;
         };
 
 

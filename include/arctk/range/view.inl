@@ -73,15 +73,27 @@ namespace arc
         //  == METHODS ==
         //  -- Getters --
         template <typename C>
-        constexpr inline range::iterator::forward::bidirectional::Random<typename std::reference_wrapper<const typename C::value_type>> View<C>::begin() const noexcept
+        constexpr inline typename View<C>::const_iterator View<C>::cbegin() const noexcept
         {
-            return (range::iterator::forward::bidirectional::Random<reference>{&(*_refs.begin())});
+            return (_refs.cbegin());
         }
 
         template <typename C>
-        constexpr inline range::iterator::forward::bidirectional::Random<typename std::reference_wrapper<const typename C::value_type>> View<C>::end() const noexcept
+        constexpr inline typename View<C>::iterator View<C>::begin() noexcept
         {
-            return (range::iterator::forward::bidirectional::Random<reference>{&(*_refs.end())});
+            return (_refs.begin());
+        }
+
+        template <typename C>
+        constexpr inline typename View<C>::const_iterator View<C>::cend() const noexcept
+        {
+            return (_refs.cend());
+        }
+
+        template <typename C>
+        constexpr inline typename View<C>::iterator View<C>::end() noexcept
+        {
+            return (_refs.end());
         }
 
 
