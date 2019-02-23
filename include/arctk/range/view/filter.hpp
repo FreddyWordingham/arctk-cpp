@@ -39,7 +39,7 @@ namespace arc
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Filter(const C& cont_, F condition_) noexcept;
+                constexpr inline Filter(const C& cont_, const F& condition_) noexcept;
 
               private:
                 //  -- Instantiation --

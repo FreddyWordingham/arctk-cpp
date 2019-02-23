@@ -1,6 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/range/view/reverse.inl"
+#include "arctk/range/view/transform.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
@@ -29,13 +29,13 @@ namespace test
     //  -- Access --
     TEST(view, access) // NOLINT
     {
-        std::array<int, 4>        arr{0, 1, 2, 3};
-        arc::range::view::Reverse rev{arr};
+        std::array<int, 4>          arr{0, 1, 2, 3};
+        arc::range::view::Transform trans{arr, [](const int x_) { return (x_ * 2); }};
 
-        ASSERT_EQ(rev[0], 3);
-        ASSERT_EQ(rev[1], 2);
-        ASSERT_EQ(rev[2], 1);
-        ASSERT_EQ(rev[3], 0);
+        ASSERT_EQ(trans[0], 0);
+        ASSERT_EQ(trans[1], 2);
+        ASSERT_EQ(trans[2], 4);
+        ASSERT_EQ(trans[3], 6);
     }
 
 
@@ -45,12 +45,12 @@ namespace test
         std::array<int, 4> arr{0, 1, 2, 3};
 
         int sum{0};
-        for (const auto& v : arc::range::view::Reverse{arr})
+        for (const auto& v : arc::range::view::Transform{arr, [](const int x_) { return (x_ * 2); }})
         {
             sum += v;
         }
 
-        ASSERT_EQ(sum, 6);
+        ASSERT_EQ(sum, 12);
     }
 
 

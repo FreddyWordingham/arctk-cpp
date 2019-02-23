@@ -32,12 +32,12 @@ namespace test
     TEST(view, access) // NOLINT
     {
         std::array<int, 11>      arr{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        arc::range::view::Filter view{arr, [](const int x_) { return (arc::math::is_prime(x_)); }};
+        arc::range::view::Filter filt{arr, [](const int x_) { return (arc::math::is_prime(x_)); }};
 
-        ASSERT_EQ(view[0], 2);
-        ASSERT_EQ(view[1], 3);
-        ASSERT_EQ(view[2], 5);
-        ASSERT_EQ(view[3], 7);
+        ASSERT_EQ(filt[0], 2);
+        ASSERT_EQ(filt[1], 3);
+        ASSERT_EQ(filt[2], 5);
+        ASSERT_EQ(filt[3], 7);
     }
 
 

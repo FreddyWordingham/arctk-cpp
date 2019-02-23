@@ -10,6 +10,7 @@
 //  -- Std --
 #include <cstddef>
 #include <functional>
+#include <vector>
 
 
 
@@ -29,7 +30,8 @@ namespace arc
             //  == ALIASES ==
           public:
             //  -- Values --
-            using reference      = typename std::reference_wrapper<const typename C::value_type>;
+            using value_type     = typename C::value_type;
+            using reference      = typename std::reference_wrapper<const value_type>;
             using const_iterator = Iterator<typename std::vector<reference>::const_iterator>;
             using iterator       = Iterator<typename std::vector<reference>::iterator>;
 

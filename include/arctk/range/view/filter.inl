@@ -28,7 +28,7 @@ namespace arc
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename C, typename F>
-            constexpr inline Filter<C, F>::Filter(const C& cont_, F condition_) noexcept
+            constexpr inline Filter<C, F>::Filter(const C& cont_, const F& condition_) noexcept
               : View<C>{init_refs(cont_, condition_)}
               , _condition{condition_}
             {
