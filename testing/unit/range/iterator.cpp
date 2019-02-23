@@ -5,6 +5,9 @@
 //  -- GTest --
 #include <gtest/gtest.h>
 
+//  -- Std --
+#include <vector>
+
 
 
 //  == PRAGMAS ==
@@ -26,9 +29,13 @@ namespace test
     //  -- Iterator --
     TEST(prime, special) // NOLINT
     {
-        const int i{43};
+        const std::vector<int> vec{43, 42, 41};
 
-        arc::range::Iterator it{&i};
+        arc::range::Iterator it{vec.begin()};
+
+        ASSERT_EQ(*it, 43);
+        ASSERT_EQ(*(++it), 42);
+        ASSERT_EQ(*(++(++it)), 41);
     }
 
 
