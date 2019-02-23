@@ -20,9 +20,9 @@ namespace arc
 
 
             //  == CLASSES ==
-            //  -- Filter --
-            template <typename C, typename F>
-            class Filter : public View<C>
+            //  -- Reverse --
+            template <typename C>
+            class Reverse : public View<C>
             {
                 //  == ALIASES ==
               private:
@@ -30,20 +30,14 @@ namespace arc
                 using reference = typename View<C>::reference;
 
 
-                //  == FIELDS ==
-              private:
-                //  -- Condition --
-                F _condition;
-
-
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Filter(const C& cont_, F condition_) noexcept;
+                constexpr inline Reverse(const C& cont_) noexcept;
 
               private:
                 //  -- Instantiation --
-                constexpr inline std::vector<reference> init_refs(const C& cont_, F condition_) noexcept;
+                constexpr inline std::vector<reference> init_refs(const C& cont_) noexcept;
             };
 
 

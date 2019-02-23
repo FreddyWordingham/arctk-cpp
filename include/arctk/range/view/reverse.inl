@@ -11,7 +11,13 @@
 
 //  == DECLARATIONS ==
 //  -- Arc --
-#include "arctk/range/view/filter.hpp" // IWYU pragma: export
+#include "arctk/range/view/reverse.hpp" // IWYU pragma: export
+
+
+
+//  == IMPORTS ==
+//  -- Std --
+#include <algorithm>
 
 
 
@@ -27,27 +33,26 @@ namespace arc
 
             //  == INSTANTIATION ==
             //  -- Constructors --
-            template <typename C, typename F>
-            constexpr inline Filter<C, F>::Filter(const C& cont_, F condition_) noexcept
-              : View<C>{init_refs(cont_, condition_)}
-              , _condition{condition_}
+            template <typename C>
+            constexpr inline Reverse<C>::Reverse(const C& cont_) noexcept
+              : View<C>{init_refs(cont_)}
             {
             }
 
 
             //  -- Instantiation --
-            template <typename C, typename F>
-            constexpr inline std::vector<typename Filter<C, F>::reference> Filter<C, F>::init_refs(const C& cont_, F condition_) noexcept
+            template <typename C>
+            constexpr inline std::vector<typename Reverse<C>::reference> Reverse<C>::init_refs(const C& cont_) noexcept
             {
                 std::vector<reference> refs;
+                refs.reserve(cont_.size());
 
                 for (const auto& c : cont_) // TODO
                 {
-                    if (condition_(c))
-                    {
-                        refs.emplace_back(std::cref(c));
-                    }
+                    refs.emplace_back(std::cref(c));
                 }
+
+                std::reverse(refs.begin(), refs.end()); // TODO
 
                 return (refs);
             }
