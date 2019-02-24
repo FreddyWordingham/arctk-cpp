@@ -32,23 +32,17 @@ namespace arc
             {
                 //  == ASSERTIONS ==
                 //  -- Category --
-                static_assert(std::is_same_v<std::random_access_iterator_tag, I::iterator_category>);
+                static_assert(std::is_same_v<std::random_access_iterator_tag, typename I::iterator_category>);
 
 
                 //  == ALIASES ==
-              protected:
-                //  -- Random --
+              public:
+                //  -- Iterator --
                 using iterator_category = typename I::iterator_category;
                 using value_type        = typename I::value_type;
                 using difference_type   = typename I::difference_type;
                 using pointer           = typename I::pointer;
                 using reference         = typename I::reference;
-
-
-                //  == FIELDS ==
-              protected:
-                //  -- Data --
-                I _it;
 
 
                 //  == INSTANTIATION ==
@@ -80,6 +74,10 @@ namespace arc
                 constexpr inline bool operator>(const Random& rhs_) const noexcept;
                 constexpr inline bool operator<=(const Random& rhs_) const noexcept;
                 constexpr inline bool operator>=(const Random& rhs_) const noexcept;
+
+                //  -- Member Access --
+                constexpr inline reference operator*() noexcept;
+                constexpr inline pointer   operator->() noexcept;
             };
 
 

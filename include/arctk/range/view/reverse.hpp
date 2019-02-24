@@ -9,6 +9,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Arc --
+#include "arctk/range/iterator/random.inl"
+
+
+
 //  == NAMESPACE ==
 namespace arc
 {
@@ -26,8 +32,11 @@ namespace arc
             {
                 //  == ALIASES ==
               private:
-                //  -- Iterator --
-                using reference = typename View<C>::reference;
+                //  -- Types --
+                using value_type     = typename C::value_type;
+                using reference      = typename std::reference_wrapper<const value_type>;
+                using const_iterator = iterator::Random<typename std::vector<reference>::const_iterator>;
+                using iterator       = iterator::Random<typename std::vector<reference>::iterator>;
 
 
                 //  == INSTANTIATION ==

@@ -32,8 +32,6 @@ namespace test
         const std::vector<int> vec{43, 42, 41};
 
         arc::range::Iterator it{vec.begin()};
-
-        ASSERT_EQ(*it, 43);
     }
 
 

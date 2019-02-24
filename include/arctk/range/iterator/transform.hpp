@@ -5,7 +5,13 @@
 
 //  == BASE ==
 //  -- Arc --
-#include <arctk/range/iterator.hpp>
+#include "arctk/range/iterator.hpp"
+
+
+
+//  == IMPORTS ==
+//  -- Std --
+#include <iterator>
 
 
 
@@ -24,13 +30,25 @@ namespace arc
             template <typename I, typename F>
             class Transform : public Iterator<I>
             {
+                //  == ASSERTIONS ==
+                //  -- Category --
+                static_assert(std::is_same_v<std::random_access_iterator_tag, typename I::iterator_category>);
+
+
                 //  == ALIASES ==
-              protected:
+              public:
                 //  -- Iterator --
-                using iterator_type     = I;
                 using iterator_category = typename I::iterator_category;
-                using value_type        = typename std::invoke_result_t<F, typename Iterator<I>::value_type>;
+                using value_type        = typename std::invoke_result_t<F, typename I::value_type>;
                 using difference_type   = typename I::difference_type;
+                using pointer           = typename I::pointer;
+                using reference         = typename I::reference;
+
+
+                //  == FIELDS ==
+              protected:
+                //  -- Function --
+                F _trans;
 
 
                 //  == INSTANTIATION ==
@@ -54,6 +72,14 @@ namespace arc
                 //  -- Arithmetic --
                 constexpr inline Transform operator+(const difference_type n_) noexcept;
                 constexpr inline Transform operator-(const difference_type n_) noexcept;
+
+                //  -- Comparison --
+                constexpr inline bool operator==(const Transform& rhs_) const noexcept;
+                inline bool           operator!=(const Transform& rhs_) const noexcept;
+                constexpr inline bool operator<(const Transform& rhs_) const noexcept;
+                constexpr inline bool operator>(const Transform& rhs_) const noexcept;
+                constexpr inline bool operator<=(const Transform& rhs_) const noexcept;
+                constexpr inline bool operator>=(const Transform& rhs_) const noexcept;
 
                 //  -- Member Access --
                 constexpr inline value_type operator*() noexcept;

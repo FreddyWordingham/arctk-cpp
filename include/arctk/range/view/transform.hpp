@@ -36,12 +36,10 @@ namespace arc
                 //  == ALIASES ==
               private:
                 //  -- Iterator --
+                using value_type     = typename std::invoke_result_t<F, typename C::value_type>;
+                using reference      = typename View<C>::reference;
                 using const_iterator = iterator::Transform<typename std::vector<reference>::const_iterator, F>;
                 using iterator       = iterator::Transform<typename std::vector<reference>::iterator, F>;
-
-              private:
-                //  -- Transform --
-                using trans_type = typename std::invoke_result_t<F, typename C::value_type>;
 
 
                 //  == FIELDS ==
@@ -59,7 +57,7 @@ namespace arc
                 //  == OPERATORS ==
               public:
                 //  --  Member Access --
-                constexpr inline trans_type operator[](const std::size_t index_) noexcept;
+                constexpr inline value_type operator[](const std::size_t index_) noexcept;
 
 
                 //  == METHODS ==

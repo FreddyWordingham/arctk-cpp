@@ -5,7 +5,7 @@
 
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/range/iterator.hpp"
+#include "arctk/range/iterator/random.hpp"
 
 //  -- Std --
 #include <cstddef>
@@ -32,12 +32,12 @@ namespace arc
             //  -- Values --
             using value_type     = typename C::value_type;
             using reference      = typename std::reference_wrapper<const value_type>;
-            using const_iterator = Iterator<typename std::vector<reference>::const_iterator>;
-            using iterator       = Iterator<typename std::vector<reference>::iterator>;
+            using const_iterator = iterator::Random<typename std::vector<reference>::const_iterator>;
+            using iterator       = iterator::Random<typename std::vector<reference>::iterator>;
 
 
             //  == FIELDS ==
-          private:
+          protected:
             //  -- References -
             std::vector<reference> _refs;
 

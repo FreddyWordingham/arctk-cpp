@@ -11,7 +11,7 @@
 
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/range/iterator.inl"
+#include "arctk/range/iterator/random.inl"
 
 //  -- Std --
 #include <utility>
@@ -75,25 +75,25 @@ namespace arc
         template <typename C>
         constexpr inline typename View<C>::const_iterator View<C>::cbegin() const noexcept
         {
-            return (_refs.cbegin());
+            return (const_iterator{_refs.cbegin()});
         }
 
         template <typename C>
         constexpr inline typename View<C>::iterator View<C>::begin() noexcept
         {
-            return (_refs.begin());
+            return (iterator{_refs.begin()});
         }
 
         template <typename C>
         constexpr inline typename View<C>::const_iterator View<C>::cend() const noexcept
         {
-            return (_refs.cend());
+            return (const_iterator{_refs.cend()});
         }
 
         template <typename C>
         constexpr inline typename View<C>::iterator View<C>::end() noexcept
         {
-            return (_refs.end());
+            return (iterator{_refs.end()});
         }
 
 

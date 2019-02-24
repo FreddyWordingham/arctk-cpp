@@ -3,6 +3,12 @@
 
 
 
+//  == BASE ==
+//  -- Arc --
+#include "arctk/range/iterator.inl"
+
+
+
 //  == DECLARATIONS ==
 //  -- Arc --
 #include "arctk/range/iterator/transform.hpp" // IWYU pragma: export
@@ -30,7 +36,7 @@ namespace arc
             template <typename I, typename F>
             constexpr inline Transform<I, F>::Transform(I&& it_, const F& trans_) noexcept
               : Iterator<I>{std::move(it_)}
-              , _trans{trans_}
+              , _trans(trans_)
             {
             }
 
@@ -39,17 +45,17 @@ namespace arc
             //  == OPERATORS ==
             //  -- Assignment --
             template <typename I, typename F>
-            constexpr inline Transform<I>& Transform<I, F>::operator+=(const difference_type n_) noexcept
+            constexpr inline Transform<I, F>& Transform<I, F>::operator+=(const difference_type n_) noexcept
             {
-                _it += n_;
+                Iterator<I>::_it += n_;
 
                 return (*this);
             }
 
             template <typename I, typename F>
-            constexpr inline Transform<I>& Transform<I, F>::operator-=(const difference_type n_) noexcept
+            constexpr inline Transform<I, F>& Transform<I, F>::operator-=(const difference_type n_) noexcept
             {
-                _it -= n_;
+                Iterator<I>::_it -= n_;
 
                 return (*this);
             }
@@ -57,37 +63,37 @@ namespace arc
 
             //  -- Increment / Decrement --
             template <typename I, typename F>
-            constexpr inline Transform<I>& Transform<I, F>::operator++() noexcept
+            constexpr inline Transform<I, F>& Transform<I, F>::operator++() noexcept
             {
-                ++_it;
+                ++Iterator<I>::_it;
 
                 return (*this);
             }
 
             template <typename I, typename F>
-            constexpr inline Transform<I> Transform<I, F>::operator++(const int /*unused*/) noexcept
+            constexpr inline Transform<I, F> Transform<I, F>::operator++(const int /*unused*/) noexcept
             {
-                Transform<I> it{*this};
+                Transform<I, F> it{*this};
 
-                ++_it;
+                ++Iterator<I>::_it;
 
                 return (it);
             }
 
             template <typename I, typename F>
-            constexpr inline Transform<I>& Transform<I, F>::operator--() noexcept
+            constexpr inline Transform<I, F>& Transform<I, F>::operator--() noexcept
             {
-                --_it;
+                --Iterator<I>::_it;
 
                 return (*this);
             }
 
             template <typename I, typename F>
-            constexpr inline Transform<I> Transform<I, F>::operator--(const int /*unused*/) noexcept
+            constexpr inline Transform<I, F> Transform<I, F>::operator--(const int /*unused*/) noexcept
             {
-                Transform<I> it{*this};
+                Transform<I, F> it{*this};
 
-                --_it;
+                --Iterator<I>::_it;
 
                 return (it);
             }
@@ -95,24 +101,61 @@ namespace arc
 
             //  -- Arithmetic --
             template <typename I, typename F>
-            constexpr inline Transform<I> Transform<I, F>::operator+(const difference_type n_) noexcept
+            constexpr inline Transform<I, F> Transform<I, F>::operator+(const difference_type n_) noexcept
             {
-                return (Transform<I>{_it + n_});
+                return (Transform<I, F>{Iterator<I>::_it + n_});
             }
 
             template <typename I, typename F>
-            constexpr inline Transform<I> Transform<I, F>::operator-(const difference_type n_) noexcept
+            constexpr inline Transform<I, F> Transform<I, F>::operator-(const difference_type n_) noexcept
             {
-                return (Transform<I>{_it - n_});
+                return (Transform<I, F>{Iterator<I>::_it - n_});
             }
 
+
+            //  -- Comparison --
+            template <typename I, typename F>
+            constexpr inline bool Transform<I, F>::operator==(const Transform<I, F>& rhs_) const noexcept
+            {
+                return (Iterator<I>::_it == rhs_._it);
+            }
+
+            template <typename I, typename F>
+            inline bool Transform<I, F>::operator!=(const Transform<I, F>& rhs_) const noexcept
+            {
+                return (Iterator<I>::_it != rhs_._it);
+            }
+
+            template <typename I, typename F>
+            constexpr inline bool Transform<I, F>::operator<(const Transform& rhs_) const noexcept
+            {
+                return (Iterator<I>::_it < rhs_._it);
+            }
+
+            template <typename I, typename F>
+            constexpr inline bool Transform<I, F>::operator>(const Transform& rhs_) const noexcept
+            {
+                return (Iterator<I>::_it > rhs_._it);
+            }
+
+            template <typename I, typename F>
+            constexpr inline bool Transform<I, F>::operator<=(const Transform& rhs_) const noexcept
+            {
+                return (Iterator<I>::_it <= rhs_._it);
+            }
+
+            template <typename I, typename F>
+            constexpr inline bool Transform<I, F>::operator>=(const Transform& rhs_) const noexcept
+            {
+                return (Iterator<I>::_it >= rhs_._it);
+            }
 
 
             //  -- Member Access --
             template <typename I, typename F>
-            constexpr inline typename iterator::Transform<I, F>::trans_type Transform<I, F>::operator*() noexcept
+            constexpr inline typename Transform<I, F>::value_type Transform<I, F>::operator*() noexcept
             {
-                return (_trans(*_it));
+                return (_trans(*Iterator<I>::_it));
             }
 
 
@@ -125,15 +168,15 @@ namespace arc
     //  == OPERATORS ==
     //  -- Arithetic --
     template <typename I, typename F>
-    constexpr inline range::iterator::Transform<I> operator+(const typename range::iterator::Transform<I>::difference_type n_, const range::Iterator<I>& it_) noexcept
+    constexpr inline range::iterator::Transform<I, F> operator+(const typename range::iterator::Transform<I, F>::difference_type n_, const range::iterator::Transform<I, F>& it_) noexcept
     {
-        return (it_ + n_);
+        return (range::iterator::Transform<I, F>{it_ + n_});
     }
 
     template <typename I, typename F>
-    constexpr inline range::iterator::Transform<I> operator-(const typename range::iterator::Transform<I>::difference_type n_, const range::Iterator<I>& it_) noexcept
+    constexpr inline range::iterator::Transform<I, F> operator-(const typename range::iterator::Transform<I, F>::difference_type n_, const range::iterator::Transform<I, F>& it_) noexcept
     {
-        return (it_ + n_);
+        return (range::iterator::Transform<I, F>{it_ - n_});
     }
 
 

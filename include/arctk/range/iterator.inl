@@ -33,45 +33,5 @@ namespace arc
 
 
 
-        //  == OPERATORS ==
-        //  -- Comparison --
-        template <typename I>
-        constexpr inline bool Iterator<I>::operator==(const Iterator<I>& rhs_) const noexcept
-        {
-            return (_it == rhs_._it);
-        }
-
-        template <typename I>
-        inline bool Iterator<I>::operator!=(const Iterator<I>& rhs_) const noexcept
-        {
-            return (_it != rhs_._it);
-        }
-
-        template <typename I>
-        constexpr inline bool Iterator<I>::operator<(const Iterator& rhs_) const noexcept
-        {
-            return (_it < rhs_._it);
-        }
-
-        template <typename I>
-        constexpr inline bool Iterator<I>::operator>(const Iterator& rhs_) const noexcept
-        {
-            return (_it > rhs_._it);
-        }
-
-        template <typename I>
-        constexpr inline bool Iterator<I>::operator<=(const Iterator& rhs_) const noexcept
-        {
-            return (_it <= rhs_._it);
-        }
-
-        template <typename I>
-        constexpr inline bool Iterator<I>::operator>=(const Iterator& rhs_) const noexcept
-        {
-            return (_it >= rhs_._it);
-        }
-
-
-
     } // namespace range
 } // namespace arc
