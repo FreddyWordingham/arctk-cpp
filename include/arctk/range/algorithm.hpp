@@ -8,6 +8,7 @@
 #include "arctk/type/traits.hpp"
 
 //  -- Std --
+#include <algorithm>
 #include <type_traits>
 
 
@@ -21,6 +22,13 @@ namespace arc
 
 
         //  == FUNCTIONS ==
+        //  -- Range --
+        template <typename R, typename F, typename = std::enable_if_t<type::is_rangeable_v<R>>>
+        constexpr inline void for_each(R& range_, F func_) noexcept
+        {
+            std::for_each(range_.begin(), range_.end(), func_);
+        }
+
         //  -- Mathematical --
         template <typename C, typename T = typename C::value_type, typename = std::enable_if_t<type::is_rangeable_v<C>>>
         constexpr inline T accumulate(const C& cont_) noexcept;
