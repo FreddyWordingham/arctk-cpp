@@ -1,7 +1,7 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/range/properties.inl"
-#include "arctk/math/pure.inl"
+#include "arctk/math/properties.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>

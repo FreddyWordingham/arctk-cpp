@@ -1,6 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/math/pure.inl"
+#include "arctk/math/properties.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
@@ -23,7 +23,7 @@ namespace test
 
 
     //  == TESTS ==
-    //  -- Prime --
+    //  -- Properties --
     TEST(is_prime, special) // NOLINT
     {
         ASSERT_FALSE(arc::math::is_prime(0));
@@ -47,6 +47,18 @@ namespace test
         ASSERT_FALSE(arc::math::is_prime(834674));
         ASSERT_TRUE(arc::math::is_prime(13703077));
         ASSERT_FALSE(arc::math::is_prime(14232872));
+    }
+
+    TEST(is_positive, int) // NOLINT
+    {
+        ASSERT_TRUE(arc::math::is_positive(65));
+        ASSERT_FALSE(arc::math::is_positive(-34));
+    }
+
+    TEST(is_negative, int) // NOLINT
+    {
+        ASSERT_FALSE(arc::math::is_negative(65));
+        ASSERT_TRUE(arc::math::is_negative(-34));
     }
 
 

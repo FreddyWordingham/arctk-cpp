@@ -5,7 +5,7 @@
 
 //  == DECLARATIONS ==
 //  -- Arc --
-#include "arctk/math/compare.hpp" // IWYU pragma: export
+#include "arctk/math/comparison.hpp" // IWYU pragma: export
 
 
 
@@ -25,7 +25,7 @@ namespace arc
 
 
         //  == FUNCTIONS ==
-        //  -- Compare --
+        //  -- Comparison --
         template <typename T, typename>
         constexpr inline bool zero(const T x_, const T epsilon_) noexcept
         {

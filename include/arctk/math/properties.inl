@@ -5,13 +5,13 @@
 
 //  == DECLARATIONS ==
 //  -- Arc --
-#include "arctk/math/pure.hpp" // IWYU pragma: export
+#include "arctk/math/properties.hpp" // IWYU pragma: export
 
 
 
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/math/compare.inl"
+#include "arctk/math/comparison.inl"
 
 
 
@@ -35,18 +35,6 @@ namespace arc
         constexpr inline bool is_negative(const T n_) noexcept
         {
             return (n_ < 0);
-        }
-
-        template <typename T>
-        constexpr inline bool is_zero(const T n_) noexcept
-        {
-            return (n_ == 0);
-        }
-
-        template <>
-        constexpr inline bool is_zero(const double n_) noexcept
-        {
-            return (zero(n_));
         }
 
         template <typename T, typename>
