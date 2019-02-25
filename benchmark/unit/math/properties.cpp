@@ -1,6 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/math/pure.inl"
+#include "arctk/math/properties.inl"
 
 //  -- GBench --
 #include <benchmark/benchmark.h>
