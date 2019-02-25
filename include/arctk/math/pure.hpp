@@ -19,6 +19,14 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Properties --
+        template <typename T>
+        constexpr inline bool is_positive(T n_) noexcept;
+        template <typename T>
+        constexpr inline bool is_negative(T n_) noexcept;
+        template <typename T>
+        constexpr inline bool is_zero(T n_) noexcept;
+        template <>
+        constexpr inline bool is_zero(double n_) noexcept;
         template <typename T, typename = std::enable_if_t<std::is_integral_v<T>>>
         constexpr inline bool is_prime(T n_) noexcept;
 

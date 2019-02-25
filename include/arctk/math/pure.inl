@@ -9,6 +9,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Arc --
+#include "arctk/math/compare.inl"
+
+
+
 //  == NAMESPACE ==
 namespace arc
 {
@@ -19,6 +25,30 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Properties --
+        template <typename T>
+        constexpr inline bool is_positive(const T n_) noexcept
+        {
+            return (n_ > 0);
+        }
+
+        template <typename T>
+        constexpr inline bool is_negative(const T n_) noexcept
+        {
+            return (n_ < 0);
+        }
+
+        template <typename T>
+        constexpr inline bool is_zero(const T n_) noexcept
+        {
+            return (n_ == 0);
+        }
+
+        template <>
+        constexpr inline bool is_zero(const double n_) noexcept
+        {
+            return (zero(n_));
+        }
+
         template <typename T, typename>
         constexpr inline bool is_prime(const T n_) noexcept
         {
