@@ -56,6 +56,26 @@ namespace arc
         }
 
 
+        //  -- Mathematical --
+        template <typename R>
+        constexpr inline auto min(const R& range_) noexcept
+        {
+            return (*std::min_element(range_.begin(), range_.end()));
+        }
+
+        template <typename R>
+        constexpr inline auto max(const R& range_) noexcept
+        {
+            return (*std::max_element(range_.begin(), range_.end()));
+        }
+
+        template <typename R>
+        constexpr inline bool is_sorted(const R& range_) noexcept
+        {
+            return (std::is_sorted(range_.begin(), range_.end()));
+        }
+
+
 
     } // namespace range
 } // namespace arc

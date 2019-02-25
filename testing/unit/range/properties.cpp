@@ -82,6 +82,27 @@ namespace test
         ASSERT_EQ(result_2, 0);
     }
 
+    TEST_F(array_int, min) // NOLINT
+    {
+        ASSERT_EQ(arc::range::min(_arr_ascend), 0);
+        ASSERT_EQ(arc::range::min(_arr_prime), 2);
+        ASSERT_EQ(arc::range::min(_arr_non_prime), 0);
+    }
+
+    TEST_F(array_int, max) // NOLINT
+    {
+        ASSERT_EQ(arc::range::max(_arr_ascend), 7);
+        ASSERT_EQ(arc::range::max(_arr_prime), 19);
+        ASSERT_EQ(arc::range::max(_arr_non_prime), 12);
+    }
+
+    TEST_F(array_int, is_sorted) // NOLINT
+    {
+        ASSERT_TRUE(arc::range::is_sorted(_arr_ascend));
+        ASSERT_TRUE(arc::range::is_sorted(_arr_prime));
+        ASSERT_TRUE(arc::range::is_sorted(_arr_non_prime));
+    }
+
 
 
 } // namespace test

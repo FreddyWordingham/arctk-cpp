@@ -24,6 +24,14 @@ namespace arc
         template <typename R, typename F>
         constexpr inline auto count_if(const R& range_, F pred_) noexcept;
 
+        //  -- Mathematical --
+        template <typename R>
+        constexpr inline auto min(const R& range_) noexcept;
+        template <typename R>
+        constexpr inline auto max(const R& range_) noexcept;
+        template <typename R>
+        constexpr inline bool is_sorted(const R& range_) noexcept;
+
 
 
     } // namespace range
