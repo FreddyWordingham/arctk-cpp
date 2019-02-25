@@ -50,6 +50,14 @@ namespace arc
         }
 
 
+        //  -- Order --
+        template <typename R>
+        constexpr inline void sort(R* const range_) noexcept
+        {
+            std::sort((*range_).begin(), (*range_).end());
+        }
+
+
 
     } // namespace range
 } // namespace arc

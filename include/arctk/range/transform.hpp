@@ -20,6 +20,10 @@ namespace arc
         template <typename R, typename F, typename Ro>
         constexpr inline void transform(const R& range_, F func_, const Ro& range_out_) noexcept;
 
+        //  -- Order --
+        template <typename R>
+        constexpr inline void sort(R* const range_) noexcept;
+
 
 
     } // namespace range

@@ -69,6 +69,8 @@ namespace arc
             return (*std::max_element(range_.begin(), range_.end()));
         }
 
+
+        //  -- Order --
         template <typename R>
         constexpr inline bool is_sorted(const R& range_) noexcept
         {

@@ -29,6 +29,8 @@ namespace arc
         constexpr inline auto min(const R& range_) noexcept;
         template <typename R>
         constexpr inline auto max(const R& range_) noexcept;
+
+        //  -- Order --
         template <typename R>
         constexpr inline bool is_sorted(const R& range_) noexcept;
 

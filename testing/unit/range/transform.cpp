@@ -60,6 +60,13 @@ namespace test
         ASSERT_EQ(vec_is_prime, (std::vector<bool>{true, false, true, false, true, false, false, false}));
     }
 
+    TEST_F(array_int, sort) // NOLINT
+    {
+        std::array<int, 8> arr_0{1, 7, 3, 6, 2, 4, 5, 0};
+        arc::range::sort(&arr_0);
+        ASSERT_EQ(_arr_ascend, arr_0);
+    }
+
 
 
 } // namespace test
