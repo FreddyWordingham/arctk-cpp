@@ -14,9 +14,11 @@ namespace arc
         //  == FUNCTIONS ==
         //  -- Transform --
         template <typename R, typename F>
-        constexpr inline void transform(R& range_, F func_) noexcept;
+        constexpr inline void transform(R* const range_, F func_) noexcept;
+        template <typename R, typename F>
+        constexpr inline void transform(const R& range_, F func_) noexcept;
         template <typename R, typename F, typename Ro>
-        constexpr inline void transform(R& range_, F func_, Ro& range_out_) noexcept;
+        constexpr inline void transform(const R& range_, F func_, const Ro& range_out_) noexcept;
 
 
 

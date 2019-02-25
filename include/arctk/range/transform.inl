@@ -12,6 +12,8 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <algorithm>
+#include <cassert>
+#include <iterator>
 
 
 
@@ -26,15 +28,25 @@ namespace arc
         //  == FUNCTIONS ==
         //  -- Transform --
         template <typename R, typename F>
-        constexpr inline void transform(R& range_, F func_) noexcept
+        constexpr inline void transform(R* const range_, F func_) noexcept
+        {
+            assert(range_ != nullptr);
+
+            std::for_each((*range_).begin(), (*range_).end(), func_);
+        }
+
+        template <typename R, typename F>
+        constexpr inline void transform(const R& range_, F func_) noexcept
         {
             std::for_each(range_.begin(), range_.end(), func_);
         }
 
         template <typename R, typename F, typename Ro>
-        constexpr inline void transform(R& range_, F func_, Ro& range_out_) noexcept
+        constexpr inline void transform(const R& range_, F func_, Ro* const range_out_) noexcept
         {
-            std::transform(range_.begin(), range_.end(), std::back_inserter(range_out_), func_);
+            assert(range_out_ != nullptr);
+
+            std::transform(range_.begin(), range_.end(), std::back_inserter(*range_out_), func_);
         }
 
 
