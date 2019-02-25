@@ -24,6 +24,10 @@ namespace arc
         template <typename T>
         constexpr inline bool is_negative(T n_) noexcept;
         template <typename T, typename = std::enable_if_t<std::is_integral_v<T>>>
+        constexpr inline bool is_even(T n_) noexcept;
+        template <typename T, typename = std::enable_if_t<std::is_integral_v<T>>>
+        constexpr inline bool is_odd(T n_) noexcept;
+        template <typename T, typename = std::enable_if_t<std::is_integral_v<T>>>
         constexpr inline bool is_prime(T n_) noexcept;
 
 

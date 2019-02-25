@@ -10,8 +10,9 @@
 
 
 //  == IMPORTS ==
-//  -- Arc --
-#include "arctk/math/comparison.inl"
+//  -- Std --
+#include <cmath>
+#include <cstdlib> // IWYU pragma: keep
 
 
 
@@ -35,6 +36,18 @@ namespace arc
         constexpr inline bool is_negative(const T n_) noexcept
         {
             return (n_ < 0);
+        }
+
+        template <typename T, typename>
+        constexpr inline bool is_even(const T n_) noexcept
+        {
+            return ((n_ % 2) == 0);
+        }
+
+        template <typename T, typename>
+        constexpr inline bool is_odd(const T n_) noexcept
+        {
+            return ((std::abs(n_) % 2) == 1);
         }
 
         template <typename T, typename>

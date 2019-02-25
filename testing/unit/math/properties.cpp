@@ -55,6 +55,28 @@ namespace test
         ASSERT_FALSE(arc::math::is_positive(-34));
     }
 
+    TEST(is_even, int) // NOLINT
+    {
+        ASSERT_FALSE(arc::math::is_even(-3));
+        ASSERT_TRUE(arc::math::is_even(-2));
+        ASSERT_FALSE(arc::math::is_even(-1));
+        ASSERT_TRUE(arc::math::is_even(0));
+        ASSERT_FALSE(arc::math::is_even(1));
+        ASSERT_TRUE(arc::math::is_even(2));
+        ASSERT_FALSE(arc::math::is_even(3));
+    }
+
+    TEST(is_odd, int) // NOLINT
+    {
+        ASSERT_TRUE(arc::math::is_odd(-3));
+        ASSERT_FALSE(arc::math::is_odd(-2));
+        ASSERT_TRUE(arc::math::is_odd(-1));
+        ASSERT_FALSE(arc::math::is_odd(0));
+        ASSERT_TRUE(arc::math::is_odd(1));
+        ASSERT_FALSE(arc::math::is_odd(2));
+        ASSERT_TRUE(arc::math::is_odd(3));
+    }
+
     TEST(is_negative, int) // NOLINT
     {
         ASSERT_FALSE(arc::math::is_negative(65));
