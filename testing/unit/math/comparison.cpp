@@ -5,6 +5,10 @@
 //  -- GTest --
 #include <gtest/gtest.h>
 
+//  -- Std --
+#include <array>
+#include <vector>
+
 
 
 //  == PRAGMAS ==
@@ -12,6 +16,7 @@
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wglobal-constructors"
+#pragma clang diagnostic ignored "-Wpadded"
 #endif
 
 

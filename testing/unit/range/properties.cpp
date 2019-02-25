@@ -41,7 +41,7 @@ namespace test
 
 
     //  == TESTS ==
-    //  -- Core --
+    //  -- Properties --
     TEST_F(array_int, all_of) // NOLINT
     {
         ASSERT_FALSE(arc::range::all_of(_arr_ascend, [](const int& x_) { return (arc::math::is_prime(x_)); }));
