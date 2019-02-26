@@ -23,6 +23,10 @@ namespace arc
         //  -- Order --
         template <typename R>
         constexpr inline void sort(R* const range_) noexcept;
+        template <typename R>
+        constexpr inline void reverse(R* const range_) noexcept;
+        template <typename R>
+        constexpr inline void rotate(R* const range_) noexcept;
 
 
 

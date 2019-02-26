@@ -67,6 +67,20 @@ namespace test
         ASSERT_EQ(_arr_ascend, arr_0);
     }
 
+    TEST_F(array_int, reverse) // NOLINT
+    {
+        std::array<int, 8> arr_0{7, 6, 5, 4, 3, 2, 1, 0};
+        arc::range::reverse(&arr_0);
+        ASSERT_EQ(_arr_ascend, arr_0);
+    }
+
+    TEST_F(array_int, rotate) // NOLINT
+    {
+        std::array<int, 8> arr_0{5, 6, 7, 0, 1, 2, 3, 4};
+        arc::range::rotate(&arr_0, 3);
+        ASSERT_EQ(_arr_ascend, arr_0);
+    }
+
 
 
 } // namespace test

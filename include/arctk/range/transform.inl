@@ -57,6 +57,20 @@ namespace arc
             std::sort((*range_).begin(), (*range_).end());
         }
 
+        template <typename R>
+        constexpr inline void reverse(R* const range_) noexcept
+        {
+            std::reverse((*range_).begin(), (*range_).end());
+        }
+
+        template <typename R, typename I>
+        constexpr inline void rotate(R* const range_, const I n_) noexcept
+        {
+            assert(n_ >= 0);
+
+            std::rotate((*range_).begin(), (*range_).begin() + n_, (*range_).end());
+        }
+
 
 
     } // namespace range
