@@ -56,6 +56,8 @@ namespace arc
             template <typename I, typename F>
             constexpr inline Filter<I, F>& Filter<I, F>::operator++() noexcept
             {
+                assert(_it != _end);
+
                 ++_it;
 
                 while (!_pred(*_it) && (_it != _end))
