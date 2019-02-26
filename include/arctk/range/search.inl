@@ -17,6 +17,7 @@
 #include <algorithm>
 #include <cassert>
 #include <iterator>
+#include <optional>
 
 
 
@@ -32,6 +33,7 @@ namespace arc
         template <typename R, typename T>
         constexpr inline bool bounded(const R& range_, const T& x_) noexcept
         {
+            assert(!range_.empty());
             assert(is_sorted(range_));
 
             return ((range_.front() <= x_) && (range_.back() >= x_));
@@ -54,9 +56,11 @@ namespace arc
         }
 
         template <typename R, typename T>
-        constexpr inline auto find(const R& range_, const T& x_) noexcept
+        constexpr inline auto find_index(const R& range_, const T& x_) noexcept
         {
-            return (std::find(range_.begin(), range_.end(), x_));
+            const auto it{std::find(range_.begin(), range_.end(), x_)};
+
+            return (it == range_.end() ? std::nullopt : std::make_optional(std::distance(range_.begin(), it)));
         }
 
 

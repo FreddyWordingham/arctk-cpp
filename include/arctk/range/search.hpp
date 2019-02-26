@@ -20,7 +20,7 @@ namespace arc
         template <typename R, typename T>
         constexpr inline auto upper_index(const R& range_, const T& x_) noexcept;
         template <typename R, typename T>
-        constexpr inline auto find(const R& range_, const T& x_) noexcept;
+        constexpr inline auto find_index(const R& range_, const T& x_) noexcept;
 
 
 
