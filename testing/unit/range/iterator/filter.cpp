@@ -7,7 +7,7 @@
 
 //  -- Std --
 #include <array>
-#include <iostream>
+#include <vector>
 
 
 
@@ -16,7 +16,6 @@
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wglobal-constructors"
-#pragma clang diagnostic ignored "-Wpadded"
 #endif
 
 

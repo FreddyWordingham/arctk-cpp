@@ -3,6 +3,12 @@
 
 
 
+//  == BASE ==
+//  -- Arc --
+#include "arctk/range/iterator.hpp"
+
+
+
 //  == IMPORTS ==
 //  -- Std --
 #include <iterator>
@@ -22,7 +28,7 @@ namespace arc
             //  == CLASSES ==
             //  -- Filter --
             template <typename I, typename F>
-            class Filter
+            class Filter : public Iterator<I>
             {
                 //  == ALIASES ==
               public:
@@ -36,10 +42,6 @@ namespace arc
 
                 //  == FIELDS ==
               private:
-                //  -- Iterators --
-                I       _it;
-                const I _end;
-
                 //  -- Functors --
                 F _pred;
 
@@ -59,10 +61,6 @@ namespace arc
                 //  -- Increment / Decrement --
                 constexpr inline Filter& operator++() noexcept;
                 constexpr inline Filter  operator++(const int /*unused*/) noexcept;
-
-                //  -- Comparison --
-                constexpr inline bool operator==(const Filter& rhs_) const noexcept;
-                constexpr inline bool operator!=(const Filter& rhs_) const noexcept;
 
                 //  -- Member Access --
                 constexpr inline reference operator*() noexcept;

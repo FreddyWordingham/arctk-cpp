@@ -3,6 +3,12 @@
 
 
 
+//  == BASE ==
+//  -- Arc --
+#include "arctk/range/iterator.inl"
+
+
+
 //  == DECLARATIONS ==
 //  -- Arc --
 #include "arctk/range/iterator/filter.hpp" // IWYU pragma: export
@@ -29,8 +35,7 @@ namespace arc
             //  -- Constructors --
             template <typename I, typename F>
             constexpr inline Filter<I, F>::Filter(const I& start_, const I& end_, F pred_) noexcept
-              : _it{init_it(start_, end_, pred_)}
-              , _end{end_}
+              : Iterator<I>{init_it(start_, end_, pred_), end_}
               , _pred{pred_}
             {
             }
@@ -57,13 +62,13 @@ namespace arc
             template <typename I, typename F>
             constexpr inline Filter<I, F>& Filter<I, F>::operator++() noexcept
             {
-                assert(_it != _end);
+                assert(Iterator<I>::_it != Iterator<I>::_end);
 
-                ++_it;
+                ++Iterator<I>::_it;
 
-                while (!_pred(*_it) && (_it != _end))
+                while (!_pred(*Iterator<I>::_it) && (Iterator<I>::_it != Iterator<I>::_end))
                 {
-                    ++_it;
+                    ++Iterator<I>::_it;
                 }
 
                 return (*this);
@@ -80,25 +85,11 @@ namespace arc
             }
 
 
-            //  -- Comparison --
-            template <typename I, typename F>
-            constexpr inline bool Filter<I, F>::operator==(const Filter<I, F>& rhs_) const noexcept
-            {
-                return (_it == rhs_._it);
-            }
-
-            template <typename I, typename F>
-            constexpr inline bool Filter<I, F>::operator!=(const Filter<I, F>& rhs_) const noexcept
-            {
-                return (_it != rhs_._it);
-            }
-
-
             //  -- Member Access --
             template <typename I, typename F>
             constexpr inline typename Filter<I, F>::reference Filter<I, F>::operator*() noexcept
             {
-                return (*_it);
+                return (*Iterator<I>::_it);
             }
 
 

@@ -163,6 +163,7 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
         -Wno-c++98-compat                   \
         -Wno-c++98-compat-extra-semi        \
         -Wno-c++98-compat-pedantic          \
+        -Wno-padded                         \
         -Wno-weak-vtables                   \
     ")
 elseif (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
