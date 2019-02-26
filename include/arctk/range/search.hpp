@@ -19,6 +19,8 @@ namespace arc
         constexpr inline auto lower_index(const R& range_, const T& x_) noexcept;
         template <typename R, typename T>
         constexpr inline auto upper_index(const R& range_, const T& x_) noexcept;
+        template <typename R, typename T>
+        constexpr inline auto find(const R& range_, const T& x_) noexcept;
 
 
 

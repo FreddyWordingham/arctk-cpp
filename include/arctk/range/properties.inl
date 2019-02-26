@@ -12,6 +12,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <algorithm>
+#include <cassert>
 
 
 
@@ -60,12 +61,16 @@ namespace arc
         template <typename R>
         constexpr inline auto min(const R& range_) noexcept
         {
+            assert(!range_.empty());
+
             return (*std::min_element(range_.begin(), range_.end()));
         }
 
         template <typename R>
         constexpr inline auto max(const R& range_) noexcept
         {
+            assert(!range_.empty());
+
             return (*std::max_element(range_.begin(), range_.end()));
         }
 

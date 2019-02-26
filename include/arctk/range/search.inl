@@ -53,6 +53,12 @@ namespace arc
             return (std::distance(range_.begin(), std::upper_bound(range_.begin(), range_.end(), x_)));
         }
 
+        template <typename R, typename T>
+        constexpr inline auto find(const R& range_, const T& x_) noexcept
+        {
+            return (std::find(range_.begin(), range_.end(), x_));
+        }
+
 
 
     } // namespace range

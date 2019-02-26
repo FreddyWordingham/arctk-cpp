@@ -65,6 +65,32 @@ namespace test
         ASSERT_EQ(arc::range::upper_index(_arr_non_prime, 5.5), 3);
     }
 
+    TEST_F(array_int, find) // NOLINT
+    {
+        ASSERT_EQ(*arc::range::find(_arr_ascend, 3), 3);
+        ASSERT_EQ(*arc::range::find(_arr_prime, 11), 11);
+        ASSERT_EQ(arc::range::find(_arr_prime, 12), _arr_prime.end());
+        ASSERT_EQ(*arc::range::find(_arr_non_prime, 9), 9);
+    }
+
+    TEST_F(array_int, find_if) // NOLINT
+    {
+        const auto even_and_ge_five = [](const int& x_) { return ((x_ >= 5) && ((x_ % 2) == 0)); };
+
+        ASSERT_EQ(*arc::range::find_if(_arr_ascend, even_and_ge_five), 6);
+        ASSERT_EQ(arc::range::find_if(_arr_prime, even_and_ge_five), _arr_prime.end());
+        ASSERT_EQ(*arc::range::find_if(_arr_non_prime, even_and_ge_five), 9);
+    }
+
+    TEST_F(array_int, find_if_not) // NOLINT
+    {
+        const auto even_and_ge_five = [](const int& x_) { return ((x_ >= 5) && ((x_ % 2) == 0)); };
+
+        ASSERT_EQ(*arc::range::find_if_not(_arr_ascend, even_and_ge_five), 3);
+        ASSERT_EQ(*arc::range::find_if_not(_arr_prime, even_and_ge_five), 11);
+        ASSERT_EQ(*arc::range::find_if_not(_arr_non_prime, even_and_ge_five), 9);
+    }
+
 
 
 } // namespace test
