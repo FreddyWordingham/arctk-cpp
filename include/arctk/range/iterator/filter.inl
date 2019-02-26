@@ -27,21 +27,21 @@ namespace arc
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename I, typename F>
-            constexpr inline Filter<I, F>::Filter(I* const start_, const I& end_, F pred_) noexcept
-              : _it(*start_)
-              , _end(end_)
-              , _pred(pred_)
+            constexpr inline Filter<I, F>::Filter(const I& start_, const I& end_, F pred_) noexcept
+              : _it{init_it(start_, end_, pred_)}
+              , _end{end_}
+              , _pred{pred_}
             {
             }
 
 
             //  -- Initialisation --
             template <typename I, typename F>
-            static constexpr inline I Filter<I, F>::init_it(I* const start_, const I& end_, F pred_) noexcept
+            constexpr inline I Filter<I, F>::init_it(const I& start_, const I& end_, F pred_) noexcept
             {
                 I it{start_};
 
-                while (!pred_(*it) || (it == end_))
+                while (!pred_(*it) && (it != end_))
                 {
                     ++it;
                 }
@@ -69,7 +69,7 @@ namespace arc
             template <typename I, typename F>
             constexpr inline Filter<I, F> Filter<I, F>::operator++(const int /*unused*/) noexcept
             {
-                Filter<I> it{*this};
+                Filter<I, F> it{*this};
 
                 ++(*this);
 
@@ -81,21 +81,21 @@ namespace arc
             template <typename I, typename F>
             constexpr inline bool Filter<I, F>::operator==(const Filter<I, F>& rhs_) const noexcept
             {
-                return (Filter<I, F>::_it == rhs_._it);
+                return (_it == rhs_._it);
             }
 
             template <typename I, typename F>
             constexpr inline bool Filter<I, F>::operator!=(const Filter<I, F>& rhs_) const noexcept
             {
-                return (Filter<I, F>::_it != rhs_._it);
+                return (_it != rhs_._it);
             }
 
 
             //  -- Member Access --
             template <typename I, typename F>
-            constexpr inline Filter<I, F>::reference Filter<I, F>::operator*() noexcept
+            constexpr inline typename Filter<I, F>::reference Filter<I, F>::operator*() noexcept
             {
-                return (*it_);
+                return (*_it);
             }
 
 
