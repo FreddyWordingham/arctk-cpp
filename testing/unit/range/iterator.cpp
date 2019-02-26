@@ -1,6 +1,7 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/range/iterator.inl"
+#include "arctk/range/iterator/filter.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
@@ -43,10 +44,13 @@ namespace test
     //  -- Filter --
     TEST_F(array_int, filter) // NOLINT
     {
-        arc::range::Iterator filter_start{_arr_ascend.begin(), _arr_ascend.end()};
-        arc::range::Iterator filter_end{_arr_ascend.begin(), _arr_ascend.end()};
+        auto is_even = [](const int& i_) { return ((i_ % 2) == 0); };
+
+        arc::range::iterator::Filter filter_start{_arr_ascend.begin(), _arr_ascend.end(), is_even};
+        arc::range::iterator::Filter filter_end{_arr_ascend.end(), _arr_ascend.end(), is_even};
 
         ASSERT_EQ(filter_start, filter_start);
+        ASSERT_EQ(filter_end, filter_end);
         ASSERT_NE(filter_start, filter_end);
     }
 

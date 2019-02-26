@@ -28,9 +28,6 @@ namespace arc
             //  -- Constructors --
             constexpr inline Iterator(const I& start_, const I& end_) noexcept;
 
-            //  -- Destructors --
-            virtual inline ~Iterator() noexcept = default;
-
 
             //  == OPERATORS ==
           public:
