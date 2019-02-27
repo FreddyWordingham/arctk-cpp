@@ -46,7 +46,7 @@ namespace test
     {
         const std::vector<int> expect{3, 4, 5, 6};
 
-        arc::range::view::Skip view(_arr_ascend, 2, 1);
+        arc::range::view::Skip view(&_arr_ascend, 2, 1);
 
         std::vector<int>::size_type index{0};
         for (const auto v : view)

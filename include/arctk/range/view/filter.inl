@@ -34,7 +34,7 @@ namespace arc
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename R, typename F>
-            constexpr inline Filter<R, F>::Filter(const R& range_, const F& pred_) noexcept
+            constexpr inline Filter<R, F>::Filter(R* const range_, const F& pred_) noexcept
               : View<R>{range_}
               , _pred{pred_}
             {
@@ -47,13 +47,13 @@ namespace arc
             template <typename R, typename F>
             constexpr inline auto Filter<R, F>::begin() noexcept
             {
-                return (iterator::Filter{View<R>::_range.begin(), View<R>::_range.end(), _pred});
+                return (iterator::Filter{View<R>::_range->begin(), View<R>::_range->end(), _pred});
             }
 
             template <typename R, typename F>
             constexpr inline auto Filter<R, F>::end() noexcept
             {
-                return (iterator::Filter{View<R>::_range.end(), View<R>::_range.end(), _pred});
+                return (iterator::Filter{View<R>::_range->end(), View<R>::_range->end(), _pred});
             }
 
 

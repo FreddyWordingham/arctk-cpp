@@ -30,7 +30,7 @@ namespace test
     TEST(view, constructor) // NOLINT
     {
         std::vector<int> vec{0, 1, 2, 3};
-        arc::range::View view(vec);
+        arc::range::View view(&vec);
     }
 
 

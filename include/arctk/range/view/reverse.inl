@@ -28,7 +28,7 @@ namespace arc
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename R>
-            constexpr inline Reverse<R>::Reverse(const R& range_) noexcept
+            constexpr inline Reverse<R>::Reverse(R* const range_) noexcept
               : View<R>{range_}
             {
             }
@@ -40,13 +40,13 @@ namespace arc
             template <typename R>
             constexpr inline auto Reverse<R>::begin() noexcept
             {
-                return (View<R>::_range.rbegin());
+                return (View<R>::_range->rbegin());
             }
 
             template <typename R>
             constexpr inline auto Reverse<R>::end() noexcept
             {
-                return (View<R>::_range.rend());
+                return (View<R>::_range->rend());
             }
 
 

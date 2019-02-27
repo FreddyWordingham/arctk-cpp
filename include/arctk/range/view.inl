@@ -9,6 +9,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
+
+
 //  == NAMESPACE ==
 namespace arc
 {
@@ -20,9 +26,10 @@ namespace arc
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <typename R>
-        constexpr inline View<R>::View(const R& range_) noexcept
+        constexpr inline View<R>::View(R* const range_) noexcept
           : _range{range_}
         {
+            assert(range_ != nullptr);
         }
 
 

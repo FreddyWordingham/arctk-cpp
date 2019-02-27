@@ -46,7 +46,7 @@ namespace arc
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Transform(const R& range_, const F& trans_) noexcept;
+                constexpr inline Transform(R* const range_, const F& trans_) noexcept;
 
 
                 //  == METHODS ==

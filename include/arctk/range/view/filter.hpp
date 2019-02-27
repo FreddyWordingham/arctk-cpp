@@ -40,7 +40,7 @@ namespace arc
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Filter(const R& range_, const F& pred_) noexcept;
+                constexpr inline Filter(R* const range_, const F& pred_) noexcept;
 
 
                 //  == METHODS ==

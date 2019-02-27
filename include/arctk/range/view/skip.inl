@@ -34,12 +34,12 @@ namespace arc
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename R>
-            constexpr inline Skip<R>::Skip(const R& range_, const size_type skip_first_, const size_type skip_last_) noexcept
+            constexpr inline Skip<R>::Skip(R* const range_, const size_type skip_first_, const size_type skip_last_) noexcept
               : View<R>{range_}
               , _skip_first{skip_first_}
               , _skip_last{skip_last_}
             {
-                assert(range_.size() >= (skip_first_ + skip_last_));
+                assert(range_->size() >= (skip_first_ + skip_last_));
             }
 
 
@@ -49,13 +49,13 @@ namespace arc
             template <typename R>
             constexpr inline auto Skip<R>::begin() noexcept
             {
-                return (View<R>::_range.begin() + _skip_first + 1);
+                return (View<R>::_range->begin() + _skip_first + 1);
             }
 
             template <typename R>
             constexpr inline auto Skip<R>::end() noexcept
             {
-                return (View<R>::_range.end() - _skip_last);
+                return (View<R>::_range->end() - _skip_last);
             }
 
 

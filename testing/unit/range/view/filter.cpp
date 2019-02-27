@@ -48,7 +48,7 @@ namespace test
 
         const std::vector<int> expect{0, 2, 4, 6};
 
-        arc::range::view::Filter view(_arr_ascend, pred);
+        arc::range::view::Filter view(&_arr_ascend, pred);
 
         std::vector<int>::size_type index{0};
         for (const auto& v : view)

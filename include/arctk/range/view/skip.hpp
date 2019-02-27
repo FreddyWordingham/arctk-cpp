@@ -41,7 +41,7 @@ namespace arc
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Skip(const R& range_, const size_type skip_first_, const size_type skip_last_ = 1) noexcept;
+                constexpr inline Skip(R* const range_, const size_type skip_first_, const size_type skip_last_ = 1) noexcept;
 
 
                 //  == METHODS ==

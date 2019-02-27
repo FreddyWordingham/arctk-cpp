@@ -26,13 +26,13 @@ namespace arc
             //  == FIELDS ==
           protected:
             //  -- References --
-            const R& _range;
+            R* const _range;
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            constexpr inline View(const R& range_) noexcept;
+            constexpr inline View(R* const range_) noexcept;
         };
 
 
