@@ -56,6 +56,34 @@ namespace test
         ASSERT_TRUE(vec_1 == arr_1);
     }
 
+    TEST(not_equal, array_vector) // NOLINT
+    {
+        using namespace arc;
+
+        const std::array<int, 5> arr_0{0, 1, 2, 3, 4};
+        const std::vector<int>   vec_0{0, 1, 2, 3, 4};
+
+        ASSERT_TRUE(!(arr_0 != vec_0));
+        ASSERT_TRUE(!(vec_0 != arr_0));
+
+        const std::array<int, 5> arr_1{2, 3, 5, 7, 11};
+        std::vector<int>         vec_1{2, 3, 5, 7};
+
+        ASSERT_TRUE(arr_1 != vec_1);
+        ASSERT_TRUE(vec_1 != arr_1);
+
+        vec_1.emplace_back(11);
+
+        ASSERT_TRUE(!(arr_0 != vec_0));
+        ASSERT_TRUE(!(vec_0 != arr_0));
+        ASSERT_TRUE(arr_0 != vec_1);
+        ASSERT_TRUE(vec_0 != arr_1);
+        ASSERT_TRUE(arr_1 != vec_0);
+        ASSERT_TRUE(vec_1 != arr_0);
+        ASSERT_TRUE(!(arr_1 != vec_1));
+        ASSERT_TRUE(!(vec_1 != arr_1));
+    }
+
 
 
 } // namespace test

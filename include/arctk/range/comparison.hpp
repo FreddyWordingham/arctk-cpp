@@ -13,6 +13,8 @@ namespace arc
     //  -- Comparison --
     template <typename Rl, typename Rr>
     constexpr inline bool operator==(const Rl& lhs_, const Rr& rhs_) noexcept;
+    template <typename Rl, typename Rr>
+    constexpr inline bool operator!=(const Rl& lhs_, const Rr& rhs_) noexcept;
 
 
 
