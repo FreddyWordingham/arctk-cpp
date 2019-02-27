@@ -5,13 +5,16 @@
 //  -- GTest --
 #include <gtest/gtest.h>
 
+//  -- Std --
+#include <vector>
+
 
 
 //  == PRAGMAS ==
 //  -- Warnings --
 #ifdef __clang__
-    #pragma clang diagnostic push
-    #pragma clang diagnostic ignored "-Wglobal-constructors"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wglobal-constructors"
 #endif
 
 
@@ -22,24 +25,13 @@ namespace test
 
 
 
-        //  == FIXTURES ==
-        //  -- Array Int Comparison --
-//      class array_int_test : public ::testing::Test
-//      {
-//          //  == FIELDS ==
-//        protected:
-//          //  -- Data --
-//          const std::array<int, 4>                _arr_0{1, 2, 3, 4};
-//      };
-
-
-
-        //  == TESTS ==
-//      //  -- Prime --
-//      TEST(prime, special) // NOLINT
-//      {
-//          ASSERT_TRUE(is_prime(2));
-//      }
+    //  == TESTS ==
+    //  -- Prime --
+    TEST(view, constructor) // NOLINT
+    {
+        std::vector<int> vec{0, 1, 2, 3};
+        arc::range::View view(vec);
+    }
 
 
 
@@ -50,5 +42,5 @@ namespace test
 //  == CLEAN UP ==
 //  -- Warnings --
 #ifdef __clang__
-    #pragma clang diagnostic pop
+#pragma clang diagnostic pop
 #endif
