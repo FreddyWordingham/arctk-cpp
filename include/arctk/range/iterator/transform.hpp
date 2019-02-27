@@ -34,11 +34,11 @@ namespace arc
                 //  == ALIASES ==
               public:
                 //  -- Traits --
-                using reference         = typename std::invoke_result_t<F, typename std::iterator_traits<I>::value_type>;
-                using pointer           = typename std::iterator_traits<I>::pointer;
-                using value_type        = typename std::remove_cv<std::remove_reference<reference>>::type;
-                using difference_type   = typename std::iterator_traits<I>::difference_type;
-                using iterator_category = typename std::iterator_traits<I>::iterator_category;
+                using value_type        = typename std::invoke_result_t<F, typename std::iterator_traits<I>::value_type>;
+                using reference         = value_type;
+                using pointer           = value_type;
+                using difference_type   = typename Iterator<I>::difference_type;
+                using iterator_category = typename Iterator<I>::iterator_category;
 
 
                 //  == FIELDS ==

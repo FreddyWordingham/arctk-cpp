@@ -20,9 +20,9 @@ namespace arc
 
 
             //  == CLASSES ==
-            //  -- Reverse --
+            //  -- Skip --
             template <typename R>
-            class Reverse : public View<R>
+            class Skip : public View<R>
             {
                 //  == ALIASES ==
               public:
@@ -31,10 +31,17 @@ namespace arc
                 using size_type  = typename View<R>::size_type;
 
 
+                //  == FIELDS ==
+              private:
+                //  -- Skips --
+                const size_type _skip_first;
+                const size_type _skip_last;
+
+
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Reverse(const R& range_) noexcept;
+                constexpr inline Skip(const R& range_, const size_type skip_first_, const size_type skip_last_ = 1) noexcept;
 
 
                 //  == METHODS ==

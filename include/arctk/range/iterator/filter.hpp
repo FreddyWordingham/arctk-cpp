@@ -33,11 +33,11 @@ namespace arc
                 //  == ALIASES ==
               public:
                 //  -- Traits --
-                using value_type        = typename std::iterator_traits<I>::value_type;
-                using reference         = typename std::iterator_traits<I>::reference;
-                using pointer           = typename std::iterator_traits<I>::pointer;
-                using difference_type   = typename std::iterator_traits<I>::difference_type;
-                using iterator_category = typename std::iterator_traits<I>::iterator_category;
+                using value_type        = typename Iterator<I>::value_type;
+                using reference         = typename Iterator<I>::reference;
+                using pointer           = typename Iterator<I>::pointer;
+                using difference_type   = typename Iterator<I>::difference_type;
+                using iterator_category = typename Iterator<I>::iterator_category;
 
 
                 //  == FIELDS ==

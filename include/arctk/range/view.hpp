@@ -16,6 +16,13 @@ namespace arc
         template <typename R>
         class View
         {
+            //  == ALIASES ==
+          public:
+            //  -- Traits --
+            using value_type = typename R::size_type;
+            using size_type  = typename R::size_type;
+
+
             //  == FIELDS ==
           protected:
             //  -- References --

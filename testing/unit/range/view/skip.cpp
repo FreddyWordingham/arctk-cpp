@@ -1,12 +1,14 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/range/iterator/transform.inl"
+#include "arctk/range/view/skip.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
 
 //  -- Std --
 #include <array>
+#include <vector>
+
 
 
 //  == PRAGMAS ==
@@ -25,30 +27,31 @@ namespace test
 
 
     //  == FIXTURES ==
-    //  -- Filter --
+    //  -- Transform --
     class array_int : public ::testing::Test
     {
         //  == FIELDS ==
       protected:
         //  -- Data --
+        const std::array<int, 8> _arr_ascend{0, 1, 2, 3, 4, 5, 6, 7};
+        const std::array<int, 8> _arr_prime{2, 3, 5, 7, 11, 13, 17, 19};
         const std::array<int, 8> _arr_non_prime{0, 1, 4, 6, 8, 9, 10, 12};
     };
 
 
 
     //  == TESTS ==
-    //  -- Filter --
+    //  -- Transform --
     TEST_F(array_int, filter) // NOLINT
     {
-        const auto                      triple = [](const int& i_) { return (3 * i_); };
-        arc::range::iterator::Transform begin_0{_arr_non_prime.begin(), _arr_non_prime.end(), triple};
-        arc::range::iterator::Transform end_0{_arr_non_prime.end(), _arr_non_prime.end(), triple};
+        const std::vector<int> expect{3, 4, 5, 6};
 
-        std::array<int, 8>                     arr{0, 3, 12, 18, 24, 27, 30, 36};
-        typename std::array<int, 4>::size_type index{0};
-        for (; begin_0 != end_0; ++begin_0)
+        arc::range::view::Skip view(_arr_ascend, 2, 1);
+
+        std::vector<int>::size_type index{0};
+        for (const auto v : view)
         {
-            ASSERT_EQ(*begin_0, arr[index]);
+            ASSERT_EQ(v, expect[index]);
             ++index;
         }
     }
