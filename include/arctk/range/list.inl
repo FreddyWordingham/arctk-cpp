@@ -11,7 +11,7 @@
 
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/math/properties.hpp"
+#include "arctk/math/properties.inl"
 
 //  -- Std --
 #include <cassert>

@@ -19,11 +19,8 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Properties --
-        template <typename T> // TODO
-        constexpr inline T sign(const T n_)
-        {
-            return ((T{0} < n_) - (n_ < T{0}));
-        }
+        template <typename T>
+        constexpr inline T sign(const T n_) noexcept;
         template <typename T>
         constexpr inline bool is_positive(T n_) noexcept;
         template <typename T>
