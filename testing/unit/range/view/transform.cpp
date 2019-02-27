@@ -1,6 +1,7 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/range/view/transform.inl"
+#include "arctk/range/comparison.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
@@ -33,8 +34,6 @@ namespace test
         //  == FIELDS ==
       protected:
         //  -- Data --
-        const std::array<int, 8> _arr_ascend{0, 1, 2, 3, 4, 5, 6, 7};
-        const std::array<int, 8> _arr_prime{2, 3, 5, 7, 11, 13, 17, 19};
         const std::array<int, 8> _arr_non_prime{0, 1, 4, 6, 8, 9, 10, 12};
     };
 
@@ -42,20 +41,20 @@ namespace test
 
     //  == TESTS ==
     //  -- Transform --
-    TEST_F(array_int, filter) // NOLINT
+    TEST_F(array_int, Transform) // NOLINT
     {
-        auto trans = [](const int& i_) { return (((i_ % 2) == 0) ? -1 : (i_ * 3)); };
+        using namespace arc;
 
-        const std::vector<int> expect{-1, 3, -1, 9, -1, 15, -1, 21};
+        auto triple_int  = [](const int& i_) { return (i_ * 3); };
+        auto add_half    = [](const int& i_) { return (i_ + 0.5); };
+        auto triple_doub = [](const double& x_) { return (x_ * 3.0); };
 
-        arc::range::view::Transform view(_arr_ascend, trans);
+        const auto trans = _arr_non_prime                               //
+                           | arc::range::preview::Transform{triple_int} //
+                           | arc::range::preview::Transform{add_half}   //
+                           | arc::range::preview::Transform{triple_doub};
 
-        std::vector<int>::size_type index{0};
-        for (const auto v : view)
-        {
-            ASSERT_EQ(v, expect[index]);
-            ++index;
-        }
+        ASSERT_TRUE(trans == (std::vector<double>{1.5, 10.5, 37.5, 55.5, 73.5, 82.5, 91.5, 109.5}));
     }
 
 

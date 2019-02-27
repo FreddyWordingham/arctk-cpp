@@ -10,6 +10,9 @@
 
 
 //  == IMPORTS ==
+//  -- Arc --
+#include "arctk/range/preview/transform.hpp"
+
 //  -- Std --
 #include <type_traits>
 
@@ -45,12 +48,22 @@ namespace arc
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                constexpr inline auto begin() noexcept;
-                constexpr inline auto end() noexcept;
+                constexpr inline auto begin() const noexcept;
+                constexpr inline auto end() const noexcept;
             };
 
 
 
         } // namespace view
     }     // namespace range
+
+
+
+    //  == OPERATORS ==
+    //  -- Pipe --
+    template <typename R, typename F>
+    constexpr inline range::view::Transform<R, F> operator|(const R& range_, const range::preview::Transform<F>& trans_) noexcept;
+
+
+
 } // namespace arc

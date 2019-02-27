@@ -18,7 +18,8 @@
 
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/range/iterator/transform.inl" // IWYU pragma: keep
+#include "arctk/range/iterator/transform.inl"
+#include "arctk/range/preview/transform.inl"
 
 
 
@@ -46,13 +47,13 @@ namespace arc
             //  == METHODS ==
             //  -- Getters --
             template <typename R, typename F>
-            constexpr inline auto Transform<R, F>::begin() noexcept
+            constexpr inline auto Transform<R, F>::begin() const noexcept
             {
                 return (iterator::Transform{View<R>::_range.begin(), View<R>::_range.end(), _trans});
             }
 
             template <typename R, typename F>
-            constexpr inline auto Transform<R, F>::end() noexcept
+            constexpr inline auto Transform<R, F>::end() const noexcept
             {
                 return (iterator::Transform{View<R>::_range.end(), View<R>::_range.end(), _trans});
             }
@@ -61,4 +62,17 @@ namespace arc
 
         } // namespace view
     }     // namespace range
+
+
+
+    //  == OPERATORS ==
+    //  -- Pipe --
+    template <typename R, typename F>
+    constexpr inline range::view::Transform<R, F> operator|(const R& range_, const range::preview::Transform<F>& trans_) noexcept
+    {
+        return (range::view::Transform<R, F>{range_, trans_.trans});
+    }
+
+
+
 } // namespace arc
