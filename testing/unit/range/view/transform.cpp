@@ -45,9 +45,9 @@ namespace test
     {
         using namespace arc;
 
-        auto triple_int  = [](const int& i_) { return (i_ * 3); };
-        auto add_half    = [](const int& i_) { return (i_ + 0.5); };
-        auto triple_doub = [](const double& x_) { return (x_ * 3.0); };
+        const auto triple_int  = [](const int& i_) { return (i_ * 3); };
+        const auto add_half    = [](const int& i_) { return (i_ + 0.5); };
+        const auto triple_doub = [](const double& x_) { return (x_ * 3.0); };
 
         const auto trans = _arr_non_prime                               //
                            | arc::range::preview::Transform{triple_int} //
