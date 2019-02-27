@@ -18,8 +18,8 @@
 
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/range/iterator/filter.inl" // IWYU pragma: keep
-#include "arctk/range/preview/filter.inl"  // IWYU pragma: keep
+#include "arctk/range/iterator/filter.inl"
+#include "arctk/range/preview/filter.inl"
 
 
 
@@ -39,12 +39,6 @@ namespace arc
             constexpr inline Filter<R, F>::Filter(const R& range_, const F& pred_) noexcept
               : View<R>{range_}
               , _pred{pred_}
-            {
-            }
-
-            template <typename R, typename F>
-            constexpr inline Filter<R, F>::Filter(const R& range_, const preview::Filter<F>& filt_) noexcept
-              : Filter{range_, filt_.pred}
             {
             }
 
@@ -68,4 +62,17 @@ namespace arc
 
         } // namespace view
     }     // namespace range
+
+
+
+    //  == OPERATORS ==
+    //  -- Pipe --
+    template <typename R, typename F>
+    constexpr inline range::view::Filter<R, F> operator|(const R& range_, const range::preview::Filter<F>& filt_) noexcept
+    {
+        return (range::view::Filter<R, F>{range_, filt_.pred});
+    }
+
+
+
 } // namespace arc

@@ -17,6 +17,9 @@
 
 
 //  == IMPORTS ==
+//  -- Arc --
+#include "arctk/range/preview/skip.inl"
+
 //  -- Std --
 #include <cassert>
 
@@ -48,13 +51,13 @@ namespace arc
             //  == METHODS ==
             //  -- Getters --
             template <typename R>
-            constexpr inline auto Skip<R>::begin() noexcept
+            constexpr inline auto Skip<R>::begin() const noexcept
             {
-                return (View<R>::_range.begin() + _skip_first + 1);
+                return (View<R>::_range.begin() + _skip_first);
             }
 
             template <typename R>
-            constexpr inline auto Skip<R>::end() noexcept
+            constexpr inline auto Skip<R>::end() const noexcept
             {
                 return (View<R>::_range.end() - _skip_last);
             }
@@ -63,4 +66,17 @@ namespace arc
 
         } // namespace view
     }     // namespace range
+
+
+
+    //  == OPERATORS ==
+    //  -- Pipe --
+    template <typename R>
+    constexpr inline range::view::Skip<R> operator|(const R& range_, const range::preview::Skip& skip_) noexcept
+    {
+        return (range::view::Skip<R>{range_, skip_.skip_first, skip_.skip_last});
+    }
+
+
+
 } // namespace arc

@@ -56,6 +56,16 @@ namespace test
         ASSERT_TRUE(vec_1 == arr_1);
     }
 
+    TEST(equal, size) // NOLINT
+    {
+        using namespace arc;
+
+        const std::array<int, 3> arr_0{0, 1, 2};
+        const std::vector<int>   vec_0{0, 1, 2, 3, 4};
+
+        ASSERT_FALSE(arr_0 == vec_0);
+    }
+
     TEST(not_equal, array_vector) // NOLINT
     {
         using namespace arc;

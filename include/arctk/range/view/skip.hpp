@@ -9,6 +9,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Arc --
+#include "arctk/range/preview/skip.hpp"
+
+
+
 //  == NAMESPACE ==
 namespace arc
 {
@@ -47,12 +53,22 @@ namespace arc
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                constexpr inline auto begin() noexcept;
-                constexpr inline auto end() noexcept;
+                constexpr inline auto begin() const noexcept;
+                constexpr inline auto end() const noexcept;
             };
 
 
 
         } // namespace view
     }     // namespace range
+
+
+
+    //  == OPERATORS ==
+    //  -- Pipe --
+    template <typename R>
+    constexpr inline range::view::Skip<R> operator|(const R& range_, const range::preview::Skip& skip_) noexcept;
+
+
+
 } // namespace arc

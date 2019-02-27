@@ -1,12 +1,14 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/range/view/skip.inl"
+#include "arctk/range/comparison.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
 
 //  -- Std --
 #include <array>
+#include <iostream>
 #include <vector>
 
 
@@ -27,33 +29,37 @@ namespace test
 
 
     //  == FIXTURES ==
-    //  -- Transform --
+    //  -- Filter --
     class array_int : public ::testing::Test
     {
         //  == FIELDS ==
       protected:
         //  -- Data --
-        const std::array<int, 8> _arr_ascend{0, 1, 2, 3, 4, 5, 6, 7};
-        const std::array<int, 8> _arr_prime{2, 3, 5, 7, 11, 13, 17, 19};
         const std::array<int, 8> _arr_non_prime{0, 1, 4, 6, 8, 9, 10, 12};
     };
 
 
 
     //  == TESTS ==
-    //  -- Transform --
-    TEST_F(array_int, filter) // NOLINT
+    //  -- Filter --
+    TEST_F(array_int, Skip_first) // NOLINT
     {
-        const std::vector<int> expect{3, 4, 5, 6};
+        using namespace arc;
 
-        arc::range::view::Skip view(_arr_ascend, 2, 1);
+        const auto rev = _arr_non_prime //
+                         | arc::range::preview::Skip{4};
 
-        std::vector<int>::size_type index{0};
-        for (const auto v : view)
-        {
-            ASSERT_EQ(v, expect[index]);
-            ++index;
-        }
+        ASSERT_TRUE(rev == (std::vector<int>{8, 9, 10, 12}));
+    }
+
+    TEST_F(array_int, Skip_first_and_last) // NOLINT
+    {
+        using namespace arc;
+
+        const auto rev = _arr_non_prime //
+                         | arc::range::preview::Skip{3, 2};
+
+        ASSERT_TRUE(rev == (std::vector<int>{6, 8, 9}));
     }
 
 

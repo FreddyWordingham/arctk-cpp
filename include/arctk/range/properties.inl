@@ -26,6 +26,12 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Properties --
+        template <typename R>
+        constexpr inline auto num_its(const R& range_) noexcept
+        {
+            return (std::distance(range_.begin(), range_.end()));
+        }
+
         template <typename R, typename F>
         constexpr inline bool all_of(const R& range_, const F& pred_) noexcept
         {

@@ -54,4 +54,17 @@ namespace arc
 
         } // namespace view
     }     // namespace range
+
+
+
+    //  == OPERATORS ==
+    //  -- Pipe --
+    template <typename R>
+    constexpr inline range::view::Reverse<R> operator|(const R& range_, const range::preview::Reverse& /*unused*/) noexcept
+    {
+        return (range::view::Reverse<R>{range_});
+    }
+
+
+
 } // namespace arc

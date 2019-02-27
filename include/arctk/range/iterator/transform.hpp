@@ -38,7 +38,7 @@ namespace arc
                 using reference         = value_type;
                 using pointer           = value_type;
                 using difference_type   = typename Iterator<I>::difference_type;
-                using iterator_category = typename Iterator<I>::iterator_category;
+                using iterator_category = std::forward_iterator_tag;
 
 
                 //  == FIELDS ==
