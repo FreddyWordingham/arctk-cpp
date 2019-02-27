@@ -9,6 +9,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Arc --
+#include "arctk/range/preview/filter.hpp"
+
+
+
 //  == NAMESPACE ==
 namespace arc
 {
@@ -40,18 +46,32 @@ namespace arc
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Filter(R* const range_, const F& pred_) noexcept;
+                constexpr inline Filter(const R& range_, const F& pred_) noexcept;
+                constexpr inline Filter(const R& range_, const preview::Filter<F>& filt_) noexcept;
 
 
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                constexpr inline auto begin() noexcept;
-                constexpr inline auto end() noexcept;
+                constexpr inline auto begin() const noexcept;
+                constexpr inline auto end() const noexcept;
             };
 
 
 
         } // namespace view
     }     // namespace range
+
+
+
+    //  == OPERATORS ==
+    //  -- Pipe --
+    template <typename R, typename F>
+    constexpr inline range::view::Filter<R, F> operator|(const R& range_, const range::preview::Filter<F>& filt_) noexcept
+    {
+        return (range::view::Filter<R, F>{range_, filt_});
+    }
+
+
+
 } // namespace arc

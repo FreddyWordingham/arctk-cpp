@@ -33,8 +33,6 @@ namespace test
         //  == FIELDS ==
       protected:
         //  -- Data --
-        const std::array<int, 8> _arr_ascend{0, 1, 2, 3, 4, 5, 6, 7};
-        const std::array<int, 8> _arr_prime{2, 3, 5, 7, 11, 13, 17, 19};
         const std::array<int, 8> _arr_non_prime{0, 1, 4, 6, 8, 9, 10, 12};
     };
 
@@ -44,16 +42,23 @@ namespace test
     //  -- Filter --
     TEST_F(array_int, filter) // NOLINT
     {
-        auto pred = [](const int& i_) { return ((i_ % 2) == 0); };
+        using namespace arc;
 
-        const std::vector<int> expect{0, 2, 4, 6};
+        auto is_even  = [](const int& i_) { return ((i_ % 2) == 0); };
+        auto is_gt_5  = [](const int& i_) { return (i_ > 5); };
+        auto is_lt_10 = [](const int& i_) { return (i_ < 10); };
 
-        arc::range::view::Filter view(&_arr_ascend, pred);
+        const auto filter = _arr_non_prime                         //
+                            | arc::range::preview::Filter(is_even) //
+                            | arc::range::preview::Filter(is_gt_5) //
+                            | arc::range::preview::Filter(is_lt_10);
 
+        // ASSERT_EQ(filter, (std::vector<int>{6, 8})); // TODO
+        const std::vector<int>      expect{6, 8};
         std::vector<int>::size_type index{0};
-        for (const auto& v : view)
+        for (const auto& f : filter)
         {
-            ASSERT_EQ(v, expect[index]);
+            ASSERT_EQ(f, expect[index]);
             ++index;
         }
     }

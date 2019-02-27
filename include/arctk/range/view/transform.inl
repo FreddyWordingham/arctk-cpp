@@ -34,7 +34,7 @@ namespace arc
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename R, typename F>
-            constexpr inline Transform<R, F>::Transform(R* const range_, const F& trans_) noexcept
+            constexpr inline Transform<R, F>::Transform(const R& range_, const F& trans_) noexcept
               : View<R>{range_}
               , _trans{trans_}
             {
@@ -47,13 +47,13 @@ namespace arc
             template <typename R, typename F>
             constexpr inline auto Transform<R, F>::begin() noexcept
             {
-                return (iterator::Transform{View<R>::_range->begin(), View<R>::_range->end(), _trans});
+                return (iterator::Transform{View<R>::_range.begin(), View<R>::_range.end(), _trans});
             }
 
             template <typename R, typename F>
             constexpr inline auto Transform<R, F>::end() noexcept
             {
-                return (iterator::Transform{View<R>::_range->end(), View<R>::_range->end(), _trans});
+                return (iterator::Transform{View<R>::_range.end(), View<R>::_range.end(), _trans});
             }
 
 

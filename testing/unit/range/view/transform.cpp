@@ -50,7 +50,7 @@ namespace test
 
         const std::vector<int> expect{-1, 3, -1, 9, -1, 15, -1, 21};
 
-        arc::range::view::Transform view(&_arr_ascend, trans);
+        arc::range::view::Transform view(_arr_ascend, trans);
 
         std::vector<int>::size_type index{0};
         for (const auto v : view)

@@ -26,28 +26,9 @@ namespace arc
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <typename R>
-        constexpr inline View<R>::View() noexcept
-          : _range{nullptr}
-        {
-        }
-
-        template <typename R>
-        constexpr inline View<R>::View(R* const range_) noexcept
+        constexpr inline View<R>::View(const R& range_) noexcept
           : _range{range_}
         {
-            assert(range_ != nullptr);
-        }
-
-
-
-        //  == METHODS ==
-        //  -- Setters --
-        template <typename R>
-        constexpr inline void View<R>::set_range(R* const range_) noexcept
-        {
-            assert(range_ != nullptr);
-
-            _range = range_;
         }
 
 

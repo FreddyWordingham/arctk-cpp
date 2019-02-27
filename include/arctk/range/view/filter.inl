@@ -11,13 +11,14 @@
 
 //  == DECLARATIONS ==
 //  -- Arc --
-#include "arctk/range/view/filter.hpp" // IWYU pragma: export, keep
+#include "arctk/range/view/filter.hpp" // IWYU pragma: export
 
 
 
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/range/iterator/filter.inl" // IWYU pragma: keep
+#include "arctk/range/preview/filter.inl"  // IWYU pragma: keep
 
 
 
@@ -34,9 +35,15 @@ namespace arc
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename R, typename F>
-            constexpr inline Filter<R, F>::Filter(R* const range_, const F& pred_) noexcept
+            constexpr inline Filter<R, F>::Filter(const R& range_, const F& pred_) noexcept
               : View<R>{range_}
               , _pred{pred_}
+            {
+            }
+
+            template <typename R, typename F>
+            constexpr inline Filter<R, F>::Filter(const R& range_, const preview::Filter<F>& filt_) noexcept
+              : Filter{range_, filt_.pred}
             {
             }
 
@@ -45,15 +52,15 @@ namespace arc
             //  == METHODS ==
             //  -- Getters --
             template <typename R, typename F>
-            constexpr inline auto Filter<R, F>::begin() noexcept
+            constexpr inline auto Filter<R, F>::begin() const noexcept
             {
-                return (iterator::Filter{View<R>::_range->begin(), View<R>::_range->end(), _pred});
+                return (iterator::Filter{View<R>::_range.begin(), View<R>::_range.end(), _pred});
             }
 
             template <typename R, typename F>
-            constexpr inline auto Filter<R, F>::end() noexcept
+            constexpr inline auto Filter<R, F>::end() const noexcept
             {
-                return (iterator::Filter{View<R>::_range->end(), View<R>::_range->end(), _pred});
+                return (iterator::Filter{View<R>::_range.end(), View<R>::_range.end(), _pred});
             }
 
 
