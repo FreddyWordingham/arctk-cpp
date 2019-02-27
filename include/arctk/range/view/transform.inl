@@ -5,7 +5,8 @@
 
 //  == BASE ==
 //  -- Arc --
-#include "arctk/range/view.inl"
+#include "arctk/range/view.inl" // IWYU pragma: export
+                                // IWYU pragma: no_include "arctk/range/view.hpp"
 
 
 

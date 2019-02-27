@@ -5,7 +5,8 @@
 
 //  == BASE ==
 //  -- Arc --
-#include "arctk/range/iterator.inl"
+#include "arctk/range/iterator.inl" // IWYU pragma: export
+                                    // IWYU pragma: no_include "arctk/range/iterator.hpp"
 
 
 

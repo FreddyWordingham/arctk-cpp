@@ -25,7 +25,7 @@ namespace test
 
     //  == TESTS ==
     //  -- Preview --
-    TEST(preview, construction) // NOLINT
+    TEST(Preview, construction) // NOLINT
     {
         arc::range::Preview preview{};
     }

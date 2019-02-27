@@ -5,13 +5,14 @@
 
 //  == BASE ==
 //  -- Arc --
-#include "arctk/range/view.inl"
+#include "arctk/range/view.inl" // IWYU pragma: export
+                                // IWYU pragma: no_include "arctk/range/view.hpp"
 
 
 
 //  == DECLARATIONS ==
 //  -- Arc --
-#include "arctk/range/view/skip.hpp" // IWYU pragma: export, keep
+#include "arctk/range/view/skip.hpp" // IWYU pragma: export
 
 
 
