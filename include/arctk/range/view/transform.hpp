@@ -30,13 +30,6 @@ namespace arc
             template <typename R, typename F>
             class Transform : public View<R>
             {
-                //  == ALIASES ==
-              public:
-                //  -- Traits --
-                using value_type = typename std::invoke_result_t<F, typename View<R>::value_type>;
-                using size_type  = typename View<R>::size_type;
-
-
                 //  == FIELDS ==
               private:
                 //  -- Functor --

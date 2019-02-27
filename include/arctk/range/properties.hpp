@@ -3,6 +3,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Std --
+#include <cstddef>
+
+
+
 //  == NAMESPACE ==
 namespace arc
 {
@@ -13,6 +19,8 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Properties --
+        template <typename R>
+        constexpr inline std::size_t num_its(const R& range_) noexcept;
         template <typename R, typename F>
         constexpr inline bool all_of(const R& range_, const F& pred_) noexcept;
         template <typename R, typename F>

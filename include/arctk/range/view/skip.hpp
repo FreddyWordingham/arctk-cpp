@@ -13,6 +13,9 @@
 //  -- Arc --
 #include "arctk/range/preview/skip.hpp"
 
+//  -- Std --
+#include <cstddef>
+
 
 
 //  == NAMESPACE ==
@@ -30,24 +33,17 @@ namespace arc
             template <typename R>
             class Skip : public View<R>
             {
-                //  == ALIASES ==
-              public:
-                //  -- Traits --
-                using value_type = typename View<R>::size_type;
-                using size_type  = typename View<R>::size_type;
-
-
                 //  == FIELDS ==
               private:
                 //  -- Skips --
-                const size_type _skip_first;
-                const size_type _skip_last;
+                const std::size_t _skip_first;
+                const std::size_t _skip_last;
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Skip(const R& range_, const size_type skip_first_, const size_type skip_last_ = 1) noexcept;
+                constexpr inline Skip(const R& range_, const std::size_t skip_first_, const std::size_t skip_last_ = 1) noexcept;
 
 
                 //  == METHODS ==

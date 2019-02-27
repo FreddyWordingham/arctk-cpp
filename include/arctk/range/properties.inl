@@ -27,9 +27,13 @@ namespace arc
         //  == FUNCTIONS ==
         //  -- Properties --
         template <typename R>
-        constexpr inline auto num_its(const R& range_) noexcept
+        constexpr inline std::size_t num_its(const R& range_) noexcept
         {
-            return (std::distance(range_.begin(), range_.end()));
+            const auto dist{std::distance(range_.begin(), range_.end())};
+
+            assert(dist >= 0);
+
+            return (static_cast<std::size_t>(dist));
         }
 
         template <typename R, typename F>

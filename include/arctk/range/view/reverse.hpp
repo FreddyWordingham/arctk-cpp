@@ -30,13 +30,6 @@ namespace arc
             template <typename R>
             class Reverse : public View<R>
             {
-                //  == ALIASES ==
-              public:
-                //  -- Traits --
-                using value_type = typename View<R>::size_type;
-                using size_type  = typename View<R>::size_type;
-
-
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --

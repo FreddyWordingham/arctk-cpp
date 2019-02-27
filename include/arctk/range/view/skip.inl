@@ -19,6 +19,7 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/range/preview/skip.inl"
+#include "arctk/range/properties.inl"
 
 //  -- Std --
 #include <cassert>
@@ -38,12 +39,12 @@ namespace arc
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename R>
-            constexpr inline Skip<R>::Skip(const R& range_, const size_type skip_first_, const size_type skip_last_) noexcept
+            constexpr inline Skip<R>::Skip(const R& range_, const std::size_t skip_first_, const std::size_t skip_last_) noexcept
               : View<R>{range_}
               , _skip_first{skip_first_}
               , _skip_last{skip_last_}
             {
-                assert(range_.size() >= (skip_first_ + skip_last_));
+                assert(num_its(range_) >= (skip_first_ + skip_last_));
             }
 
 

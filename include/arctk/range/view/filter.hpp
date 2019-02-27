@@ -30,13 +30,6 @@ namespace arc
             template <typename R, typename F>
             class Filter : public View<R>
             {
-                //  == ALIASES ==
-              public:
-                //  -- Traits --
-                using value_type = typename View<R>::size_type;
-                using size_type  = typename View<R>::size_type;
-
-
                 //  == FIELDS ==
               private:
                 //  -- Functor --
