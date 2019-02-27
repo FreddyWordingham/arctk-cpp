@@ -25,14 +25,21 @@ namespace arc
 
             //  == FIELDS ==
           protected:
-            //  -- References --
-            R* const _range;
+            //  -- Pointers --
+            R* _range;
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
+            constexpr inline View() noexcept;
             constexpr inline View(R* const range_) noexcept;
+
+
+            //  == METHODS ==
+          public:
+            //  -- Setters --
+            constexpr inline void set_range(R* const range_) noexcept;
         };
 
 

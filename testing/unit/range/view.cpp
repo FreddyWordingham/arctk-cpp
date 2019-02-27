@@ -29,8 +29,11 @@ namespace test
     //  -- Prime --
     TEST(view, constructor) // NOLINT
     {
-        std::vector<int> vec{0, 1, 2, 3};
-        arc::range::View view(&vec);
+        std::vector<int> vec_0{0, 1, 2, 3};
+        arc::range::View view(&vec_0);
+
+        std::vector<int> vec_1{4, 5, 6};
+        view.set_range(&vec_1);
     }
 
 
