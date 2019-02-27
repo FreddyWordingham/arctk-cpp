@@ -1,6 +1,7 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/range/view/filter.inl"
+#include "arctk/range/comparison.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
@@ -53,14 +54,7 @@ namespace test
                             | arc::range::preview::Filter(is_gt_5) //
                             | arc::range::preview::Filter(is_lt_10);
 
-        // ASSERT_EQ(filter, (std::vector<int>{6, 8})); // TODO
-        const std::vector<int>      expect{6, 8};
-        std::vector<int>::size_type index{0};
-        for (const auto& f : filter)
-        {
-            ASSERT_EQ(f, expect[index]);
-            ++index;
-        }
+        ASSERT_TRUE(filter == (std::vector<int>{6, 8}));
     }
 
 

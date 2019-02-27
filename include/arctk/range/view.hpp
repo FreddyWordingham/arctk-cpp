@@ -33,6 +33,12 @@ namespace arc
           public:
             //  -- Constructors --
             constexpr inline View(const R& range_) noexcept;
+
+
+            //  == METHODS ==
+          public:
+            //  -- Getters --
+            constexpr inline size_type size() const noexcept;
         };
 
 

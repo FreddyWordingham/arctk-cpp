@@ -9,12 +9,6 @@
 
 
 
-//  == IMPORTS ==
-//  -- Std --
-#include <cassert>
-
-
-
 //  == NAMESPACE ==
 namespace arc
 {
@@ -29,6 +23,16 @@ namespace arc
         constexpr inline View<R>::View(const R& range_) noexcept
           : _range{range_}
         {
+        }
+
+
+
+        //  == METHODS ==
+        //  -- Getters --
+        template <typename R>
+        constexpr inline typename View<R>::size_type View<R>::size() const noexcept
+        {
+            return (_range.size());
         }
 
 

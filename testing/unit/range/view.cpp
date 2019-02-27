@@ -31,27 +31,15 @@ namespace test
     {
         std::vector<int> vec_0{0, 1, 2, 3};
         arc::range::View view_0(vec_0);
-        for (const auto& v0 : vec_0)
-        {
-        }
 
         const std::vector<int> vec_1{0, 1, 2, 3};
         arc::range::View       view_1(vec_1);
-        for (const auto& v1 : vec_1)
-        {
-        }
 
         std::vector<int>       vec_2{0, 1, 2, 3};
         const arc::range::View view_2(vec_2);
-        for (const auto& v2 : vec_2)
-        {
-        }
 
         const std::vector<int> vec_3{0, 1, 2, 3};
         const arc::range::View view_3(vec_3);
-        for (const auto& v3 : vec_3)
-        {
-        }
     }
 
 
