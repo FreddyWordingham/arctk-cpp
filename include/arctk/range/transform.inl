@@ -28,25 +28,25 @@ namespace arc
         //  == FUNCTIONS ==
         //  -- Transform --
         template <typename R, typename F>
-        constexpr inline void transform(R* const range_, F func_) noexcept
+        constexpr inline void transform(R* const range_, const F& trans_) noexcept
         {
             assert(range_ != nullptr);
 
-            std::for_each((*range_).begin(), (*range_).end(), func_);
+            std::for_each((*range_).begin(), (*range_).end(), trans_);
         }
 
         template <typename R, typename F>
-        constexpr inline void transform(const R& range_, F func_) noexcept
+        constexpr inline void transform(const R& range_, const F& trans_) noexcept
         {
-            std::for_each(range_.begin(), range_.end(), func_);
+            std::for_each(range_.begin(), range_.end(), trans_);
         }
 
         template <typename R, typename F, typename Ro>
-        constexpr inline void transform(const R& range_, F func_, Ro* const range_out_) noexcept
+        constexpr inline void transform(const R& range_, const F& trans_, Ro* const range_out_) noexcept
         {
             assert(range_out_ != nullptr);
 
-            std::transform(range_.begin(), range_.end(), std::back_inserter(*range_out_), func_);
+            std::transform(range_.begin(), range_.end(), std::back_inserter(*range_out_), trans_);
         }
 
 

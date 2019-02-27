@@ -12,6 +12,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <iterator>
+#include <type_traits>
 
 
 
@@ -26,16 +27,16 @@ namespace arc
 
 
             //  == CLASSES ==
-            //  -- Filter --
+            //  -- Transform --
             template <typename I, typename F>
-            class Filter : public Iterator<I>
+            class Transform : public Iterator<I>
             {
                 //  == ALIASES ==
               public:
                 //  -- Traits --
-                using value_type        = typename std::iterator_traits<I>::value_type;
-                using reference         = typename std::iterator_traits<I>::reference;
+                using reference         = typename std::invoke_result_t<F, typename std::iterator_traits<I>::value_type>;
                 using pointer           = typename std::iterator_traits<I>::pointer;
+                using value_type        = typename std::remove_cv<std::remove_reference<reference>>::type;
                 using difference_type   = typename std::iterator_traits<I>::difference_type;
                 using iterator_category = typename std::iterator_traits<I>::iterator_category;
 
@@ -43,24 +44,20 @@ namespace arc
                 //  == FIELDS ==
               private:
                 //  -- Functors --
-                const F _pred;
+                const F _trans;
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Filter(const I& start_, const I& end_, const F& pred_) noexcept;
-
-              private:
-                //  -- Initialisation --
-                static constexpr inline I init_it(const I& start_, const I& end_, const F& pred_) noexcept;
+                constexpr inline Transform(const I& start_, const I& end_, const F& trans_) noexcept;
 
 
                 //  == OPERATORS ==
               public:
                 //  -- Increment / Decrement --
-                constexpr inline Filter& operator++() noexcept;
-                constexpr inline Filter  operator++(const int /*unused*/) noexcept;
+                constexpr inline Transform& operator++() noexcept;
+                constexpr inline Transform  operator++(const int /*unused*/) noexcept;
 
                 //  -- Member Access --
                 constexpr inline reference operator*() noexcept;

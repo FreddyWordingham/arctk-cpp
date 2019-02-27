@@ -27,13 +27,13 @@ namespace arc
                 //  == FIELDS ==
               private:
                 //  -- Functor --
-                F _pred;
+                const F _pred;
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Filter(const R& range_, F pred_) noexcept;
+                constexpr inline Filter(const R& range_, const F& pred_) noexcept;
 
 
                 //  == METHODS ==

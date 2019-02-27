@@ -34,7 +34,7 @@ namespace arc
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename I, typename F>
-            constexpr inline Filter<I, F>::Filter(const I& start_, const I& end_, F pred_) noexcept
+            constexpr inline Filter<I, F>::Filter(const I& start_, const I& end_, const F& pred_) noexcept
               : Iterator<I>{init_it(start_, end_, pred_), end_}
               , _pred{pred_}
             {
@@ -43,7 +43,7 @@ namespace arc
 
             //  -- Initialisation --
             template <typename I, typename F>
-            constexpr inline I Filter<I, F>::init_it(const I& start_, const I& end_, F pred_) noexcept
+            constexpr inline I Filter<I, F>::init_it(const I& start_, const I& end_, const F& pred_) noexcept
             {
                 I it{start_};
 

@@ -22,9 +22,9 @@ namespace arc
         template <typename R, typename T>
         constexpr inline auto find_index(const R& range_, const T& val_) noexcept;
         template <typename R, typename F>
-        constexpr inline auto find_index_if(const R& range_, F pred_) noexcept;
+        constexpr inline auto find_index_if(const R& range_, const F& pred_) noexcept;
         template <typename R, typename F>
-        constexpr inline auto find_index_if_not(const R& range_, F pred_) noexcept;
+        constexpr inline auto find_index_if_not(const R& range_, const F& pred_) noexcept;
 
 
 

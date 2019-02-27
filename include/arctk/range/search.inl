@@ -64,7 +64,7 @@ namespace arc
         }
 
         template <typename R, typename F>
-        constexpr inline auto find_index_if(const R& range_, F pred_) noexcept
+        constexpr inline auto find_index_if(const R& range_, const F& pred_) noexcept
         {
             const auto it{std::find_if(range_.begin(), range_.end(), pred_)};
 
@@ -72,7 +72,7 @@ namespace arc
         }
 
         template <typename R, typename F>
-        constexpr inline auto find_index_if_not(const R& range_, F pred_) noexcept
+        constexpr inline auto find_index_if_not(const R& range_, const F& pred_) noexcept
         {
             const auto it{std::find_if_not(range_.begin(), range_.end(), pred_)};
 

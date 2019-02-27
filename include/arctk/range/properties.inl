@@ -27,19 +27,19 @@ namespace arc
         //  == FUNCTIONS ==
         //  -- Properties --
         template <typename R, typename F>
-        constexpr inline bool all_of(const R& range_, F pred_) noexcept
+        constexpr inline bool all_of(const R& range_, const F& pred_) noexcept
         {
             return (std::all_of(range_.begin(), range_.end(), pred_));
         }
 
         template <typename R, typename F>
-        constexpr inline bool any_of(const R& range_, F pred_) noexcept
+        constexpr inline bool any_of(const R& range_, const F& pred_) noexcept
         {
             return (std::any_of(range_.begin(), range_.end(), pred_));
         }
 
         template <typename R, typename F>
-        constexpr inline bool none_of(const R& range_, F pred_) noexcept
+        constexpr inline bool none_of(const R& range_, const F& pred_) noexcept
         {
             return (std::none_of(range_.begin(), range_.end(), pred_));
         }
@@ -51,7 +51,7 @@ namespace arc
         }
 
         template <typename R, typename F>
-        constexpr inline auto count_if(const R& range_, F pred_) noexcept
+        constexpr inline auto count_if(const R& range_, const F& pred_) noexcept
         {
             return (std::count_if(range_.begin(), range_.end(), pred_));
         }
