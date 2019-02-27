@@ -41,7 +41,7 @@ namespace test
 
     //  == TESTS ==
     //  -- Filter --
-    TEST_F(array_int, filter) // NOLINT
+    TEST_F(array_int, Filter) // NOLINT
     {
         using namespace arc;
 
@@ -49,12 +49,12 @@ namespace test
         auto is_gt_5  = [](const int& i_) { return (i_ > 5); };
         auto is_lt_10 = [](const int& i_) { return (i_ < 10); };
 
-        const auto filter = _arr_non_prime                         //
-                            | arc::range::preview::Filter(is_even) //
-                            | arc::range::preview::Filter(is_gt_5) //
-                            | arc::range::preview::Filter(is_lt_10);
+        const auto filt = _arr_non_prime                         //
+                          | arc::range::preview::Filter{is_even} //
+                          | arc::range::preview::Filter{is_gt_5} //
+                          | arc::range::preview::Filter{is_lt_10};
 
-        ASSERT_TRUE(filter == (std::vector<int>{6, 8}));
+        ASSERT_TRUE(filt == (std::vector<int>{6, 8}));
     }
 
 

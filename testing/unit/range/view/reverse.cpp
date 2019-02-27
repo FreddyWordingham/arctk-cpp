@@ -1,6 +1,7 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/range/view/reverse.inl"
+#include "arctk/range/comparison.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
@@ -27,31 +28,27 @@ namespace test
 
 
     //  == FIXTURES ==
-    //  -- Reverse --
+    //  -- Filter --
     class array_int : public ::testing::Test
     {
         //  == FIELDS ==
       protected:
         //  -- Data --
-        const std::array<int, 8> _arr_ascend{0, 1, 2, 3, 4, 5, 6, 7};
+        const std::array<int, 8> _arr_non_prime{0, 1, 4, 6, 8, 9, 10, 12};
     };
 
 
 
     //  == TESTS ==
-    //  -- Reverse --
-    TEST_F(array_int, filter) // NOLINT
+    //  -- Filter --
+    TEST_F(array_int, Reverse) // NOLINT
     {
-        const std::vector<int> expect{7, 6, 5, 4, 3, 2, 1, 0};
+        using namespace arc;
 
-        arc::range::view::Reverse view(_arr_ascend);
+        const auto rev = _arr_non_prime //
+                         | arc::range::preview::Reverse{};
 
-        std::vector<int>::size_type index{0};
-        for (const auto& v : view)
-        {
-            ASSERT_EQ(v, expect[index]);
-            ++index;
-        }
+        ASSERT_TRUE(rev == (std::vector<int>{12, 10, 9, 8, 6, 4, 1, 0}));
     }
 
 

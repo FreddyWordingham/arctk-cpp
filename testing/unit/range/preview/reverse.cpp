@@ -1,6 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/range/preview/filter.inl"
+#include "arctk/range/preview/reverse.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
@@ -25,11 +25,9 @@ namespace test
 
     //  == TESTS ==
     //  -- Preview --
-    TEST(Filter, construction) // NOLINT
+    TEST(Reverse, construction) // NOLINT
     {
-        const auto pred = [](const int i_) { return ((i_ % 2) == 0); };
-
-        arc::range::preview::Filter filt{pred};
+        arc::range::preview::Reverse rev{};
     }
 
 

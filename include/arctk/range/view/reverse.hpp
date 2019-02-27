@@ -9,6 +9,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Arc --
+#include "arctk/range/preview/reverse.hpp"
+
+
+
 //  == NAMESPACE ==
 namespace arc
 {
@@ -40,12 +46,25 @@ namespace arc
                 //  == METHODS ==
               public:
                 //  -- Getters --
-                constexpr inline auto begin() noexcept;
-                constexpr inline auto end() noexcept;
+                constexpr inline auto begin() const noexcept;
+                constexpr inline auto end() const noexcept;
             };
 
 
 
         } // namespace view
     }     // namespace range
+
+
+
+    //  == OPERATORS ==
+    //  -- Pipe --
+    template <typename R>
+    constexpr inline range::view::Reverse<R> operator|(const R& range_, const range::preview::Reverse& /*unused*/) noexcept
+    {
+        return (range::view::Reverse<R>{range_});
+    }
+
+
+
 } // namespace arc

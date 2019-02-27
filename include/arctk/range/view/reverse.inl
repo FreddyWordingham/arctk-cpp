@@ -39,13 +39,13 @@ namespace arc
             //  == METHODS ==
             //  -- Getters --
             template <typename R>
-            constexpr inline auto Reverse<R>::begin() noexcept
+            constexpr inline auto Reverse<R>::begin() const noexcept
             {
                 return (View<R>::_range.rbegin());
             }
 
             template <typename R>
-            constexpr inline auto Reverse<R>::end() noexcept
+            constexpr inline auto Reverse<R>::end() const noexcept
             {
                 return (View<R>::_range.rend());
             }
