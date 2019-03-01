@@ -1,7 +1,8 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/range/view/reverse.inl"
+#include "arctk/range/preview/reverse.inl"
 #include "arctk/range/comparison.inl"
+#include "arctk/range/view/reverse.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>

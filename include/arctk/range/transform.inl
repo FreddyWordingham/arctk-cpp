@@ -13,7 +13,7 @@
 //  -- Std --
 #include <algorithm>
 #include <cassert>
-#include <cstddef>
+#include <cstdlib>
 #include <iterator>
 
 
@@ -43,7 +43,7 @@ namespace arc
         }
 
         template <typename R, typename F, typename RO>
-        constexpr inline void transform(const R& range_, const F& trans_, RO* const range_out_) noexcept
+        inline void transform(const R& range_, const F& trans_, RO* const range_out_) noexcept
         {
             assert(range_out_ != nullptr);
 

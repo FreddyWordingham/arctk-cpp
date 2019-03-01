@@ -1,7 +1,9 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/range/view/transform.inl"
+#include "arctk/range/preview/transform.inl"
 #include "arctk/range/comparison.inl"
+#include "arctk/range/iterator/transform.inl"
+#include "arctk/range/view/transform.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
