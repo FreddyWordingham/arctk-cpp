@@ -58,7 +58,7 @@ namespace arc
 
                 ++Iterator<I>::_it;
 
-                tuple::for_each(&_its, [](auto& it_) { ++it_; });
+                tuple::for_each(&_its, [](auto&& it_) { ++it_; });
 
                 return (*this);
             }

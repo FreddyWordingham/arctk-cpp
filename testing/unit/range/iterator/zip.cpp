@@ -45,6 +45,15 @@ namespace test
     TEST_F(array_int, Zip) // NOLINT
     {
         arc::range::iterator::Zip begin{_arr_ascend.begin(), std::make_tuple(_arr_prime.begin(), _arr_non_prime.begin()), _arr_ascend.end(), std::make_tuple(_arr_prime.end(), _arr_non_prime.end())};
+        arc::range::iterator::Zip end{_arr_ascend.end(), std::make_tuple(_arr_prime.end(), _arr_non_prime.end()), _arr_ascend.end(), std::make_tuple(_arr_prime.end(), _arr_non_prime.end())};
+
+        std::size_t index{0};
+        for (; begin != end; ++begin, ++index)
+        {
+            ASSERT_EQ(*std::get<0>(*begin), _arr_ascend[index]);
+            ASSERT_EQ(*std::get<1>(*begin), _arr_prime[index]);
+            ASSERT_EQ(*std::get<2>(*begin), _arr_non_prime[index]);
+        }
     }
 
 
