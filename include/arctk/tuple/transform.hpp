@@ -57,6 +57,38 @@ namespace arc
         constexpr inline void for_each_zip_helper(std::tuple<A...>* const tuple_0_, std::tuple<A...>* const tuple_1_, const F& func_, R* const res_, std::index_sequence<I...> /*unused*/) noexcept;
 
 
+        template <typename Fn, typename Argument, std::size_t... Ns>
+        auto tuple_transform_impl(Fn&& fn, Argument&& argument, std::index_sequence<Ns...>)
+        {
+            if constexpr (sizeof...(Ns) == 0)
+                return std::tuple<>(); // empty tuple
+            else if constexpr (std::is_same_v<decltype(fn(std::get<0>(argument))), void>)
+            {
+                (fn(std::get<Ns>(argument)), ...); // no return value expected
+                return;
+            }
+            // then dispatch lvalue, rvalue ref, temporary
+            else if constexpr (std::is_lvalue_reference_v<decltype(fn(std::get<0>(argument)))>)
+            {
+                return std::tie(fn(std::get<Ns>(argument))...);
+            }
+            else if constexpr (std::is_rvalue_reference_v<decltype(fn(std::get<0>(argument)))>)
+            {
+                return std::forward_as_tuple(fn(std::get<Ns>(argument))...);
+            }
+            else
+            {
+                return std::tuple(fn(std::get<Ns>(argument))...);
+            }
+        }
+
+        template <typename Fn, typename... Ts>
+        auto tuple_transform(Fn&& fn, const std::tuple<Ts...>& tuple)
+        {
+            return tuple_transform_impl(std::forward<Fn>(fn), tuple, std::make_index_sequence<sizeof...(Ts)>());
+        }
+
+
 
     } // namespace tuple
 } // namespace arc
