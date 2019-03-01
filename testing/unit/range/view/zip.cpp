@@ -28,7 +28,7 @@ namespace test
 
 
     //  == FIXTURES ==
-    //  -- Transform --
+    //  -- Zip --
     class array_int : public ::testing::Test
     {
         //  == FIELDS ==
@@ -41,8 +41,8 @@ namespace test
 
 
     //  == TESTS ==
-    //  -- Transform --
-    TEST_F(array_int, Transform) // NOLINT
+    //  -- Zip --
+    TEST_F(array_int, Zip) // NOLINT
     {
         using namespace arc;
 

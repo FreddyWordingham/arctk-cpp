@@ -11,7 +11,7 @@
 
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/range/preview/reverse.hpp"
+#include "arctk/range/preview/zip.hpp"
 
 //  -- Std --
 #include <tuple>
@@ -58,6 +58,8 @@ namespace arc
 
     //  == OPERATORS ==
     //  -- Pipe --
+    template <typename... A>
+    constexpr inline auto operator|(const std::tuple<const A&...>& ranges_, const range::preview::Zip& zip_) noexcept;
 
 
 
