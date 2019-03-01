@@ -43,7 +43,7 @@ namespace arc
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Skip(const R& range_, const std::size_t skip_first_, const std::size_t skip_last_ = 1) noexcept;
+                constexpr inline Skip(const R& range_, std::size_t skip_first_, std::size_t skip_last_ = 1) noexcept;
 
 
                 //  == METHODS ==

@@ -52,7 +52,7 @@ namespace arc
                 auto begin_extractor = [](const auto& r_) { return (r_.begin()); };
                 auto end_extractor   = [](const auto& r_) { return (r_.end()); };
 
-                return (iterator::Zip{View<R>::_range.begin(), tuple::tuple_transform(begin_extractor, _ranges), View<R>::_range.end(), tuple::tuple_transform(end_extractor, _ranges)});
+                return (iterator::Zip{View<R>::_range.begin(), tuple::transform(_ranges, begin_extractor), View<R>::_range.end(), tuple::transform(_ranges, end_extractor)});
             }
 
             template <typename R, typename... A>
@@ -60,7 +60,7 @@ namespace arc
             {
                 auto end_extractor = [](const auto& r_) { return (r_.end()); };
 
-                return (iterator::Zip{View<R>::_range.end(), tuple::tuple_transform(end_extractor, _ranges), View<R>::_range.end(), tuple::tuple_transform(end_extractor, _ranges)});
+                return (iterator::Zip{View<R>::_range.end(), tuple::transform(_ranges, end_extractor), View<R>::_range.end(), tuple::transform(_ranges, end_extractor)});
             }
 
 

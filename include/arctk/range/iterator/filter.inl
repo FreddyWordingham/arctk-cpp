@@ -76,7 +76,7 @@ namespace arc
             }
 
             template <typename I, typename F>
-            constexpr inline Filter<I, F> Filter<I, F>::operator++(const int /*unused*/) noexcept
+            constexpr inline const Filter<I, F> Filter<I, F>::operator++(const int /*unused*/) noexcept
             {
                 Filter<I, F> it{*this};
 

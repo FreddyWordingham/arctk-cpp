@@ -50,23 +50,22 @@ namespace test
 
         std::array<int, 4>                     arr{6, 8, 10, 12};
         typename std::array<int, 4>::size_type index{0};
-        for (; begin_0 != end_0; ++begin_0)
+        for (; begin_0 != end_0; ++begin_0, ++index)
         {
-            ASSERT_EQ(*begin_0, arr[index]);
-            ++index;
+            ASSERT_EQ(*begin_0, arr[index]); // NOLINT
         }
 
-        std::vector<int>             _vec_ascend{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
-        arc::range::iterator::Filter begin_1{_vec_ascend.begin(), _vec_ascend.end(), even_and_gt_five};
-        arc::range::iterator::Filter end_1{_vec_ascend.end(), _vec_ascend.end(), even_and_gt_five};
+        std::vector<int>             vec_ascend{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+        arc::range::iterator::Filter begin_1{vec_ascend.begin(), vec_ascend.end(), even_and_gt_five};
+        arc::range::iterator::Filter end_1{vec_ascend.end(), vec_ascend.end(), even_and_gt_five};
 
         for (; begin_1 != end_1; ++begin_1)
         {
             *begin_1 = 0;
         }
 
-        const std::vector<int> _vec_ascend_post{0, 1, 2, 3, 4, 5, 0, 7, 0, 9, 0, 11, 0, 13, 0, 15, 0, 17, 0, 19, 0};
-        ASSERT_EQ(_vec_ascend, _vec_ascend_post);
+        const std::vector<int> vec_ascend_post{0, 1, 2, 3, 4, 5, 0, 7, 0, 9, 0, 11, 0, 13, 0, 15, 0, 17, 0, 19, 0};
+        ASSERT_EQ(vec_ascend, vec_ascend_post);
     }
 
 

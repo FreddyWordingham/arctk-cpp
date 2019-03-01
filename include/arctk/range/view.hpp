@@ -32,7 +32,7 @@ namespace arc
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            constexpr inline View(const R& range_) noexcept;
+            constexpr inline explicit View(const R& range_) noexcept;
 
 
             //  == METHODS ==

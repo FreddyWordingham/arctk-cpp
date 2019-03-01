@@ -43,7 +43,7 @@ namespace test
     //  -- Transform --
     TEST_F(array_int, Transform) // NOLINT
     {
-        using namespace arc;
+        using namespace arc; // NOLINT
 
         const auto triple_int  = [](const int& i_) { return (i_ * 3); };
         const auto add_half    = [](const int& i_) { return (i_ + 0.5); };

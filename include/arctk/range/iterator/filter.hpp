@@ -59,8 +59,8 @@ namespace arc
                 //  == OPERATORS ==
               public:
                 //  -- Increment / Decrement --
-                constexpr inline Filter& operator++() noexcept;
-                constexpr inline Filter  operator++(const int /*unused*/) noexcept;
+                constexpr inline Filter&      operator++() noexcept;
+                constexpr inline const Filter operator++(int /*unused*/) noexcept;
 
                 //  -- Member Access --
                 constexpr inline reference operator*() noexcept;

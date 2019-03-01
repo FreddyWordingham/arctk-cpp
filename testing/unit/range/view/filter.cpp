@@ -2,6 +2,8 @@
 //  -- Arc --
 #include "arctk/range/view/filter.inl"
 #include "arctk/range/comparison.inl"
+#include "arctk/range/iterator/filter.inl"
+#include "arctk/range/preview/filter.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
@@ -43,7 +45,7 @@ namespace test
     //  -- Filter --
     TEST_F(array_int, Filter) // NOLINT
     {
-        using namespace arc;
+        using namespace arc; // NOLINT
 
         auto is_even  = [](const int& i_) { return ((i_ % 2) == 0); };
         auto is_gt_5  = [](const int& i_) { return (i_ > 5); };

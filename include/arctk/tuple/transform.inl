@@ -9,6 +9,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Std --
+#include <cstddef>
+
+
+
 //  == NAMESPACE ==
 namespace arc
 {
@@ -66,19 +72,67 @@ namespace arc
         }
 
         template <typename... A, typename F, typename R>
-        constexpr inline void for_each_zip(const std::tuple<A...>& tuple_0_, const std::tuple<A...>& tuple_1_, const F& func_, R* const res_) noexcept
+        inline void for_each_zip(const std::tuple<A...>& tuple_0_, const std::tuple<A...>& tuple_1_, const F& func_, R* const res_) noexcept
         {
-            const auto size{std::tuple_size_v<std::remove_reference_t<std::tuple<A...>>>};
-            res_->reserve(size);
+            try
+            {
+                const auto size{std::tuple_size_v<std::remove_reference_t<std::tuple<A...>>>};
+                res_->reserve(size);
 
-            for_each_zip_helper(tuple_0_, tuple_1_, func_, res_, std::make_index_sequence<size>{});
+                for_each_zip_helper(tuple_0_, tuple_1_, func_, res_, std::make_index_sequence<size>{});
+            }
+            catch (...)
+            {
+                std::exit(1);
+            }
         }
 
         template <typename... A, typename F, typename R, typename std::size_t... I>
-        constexpr inline void for_each_zip_helper(const std::tuple<A...>& tuple_0_, const std::tuple<A...>& tuple_1_, const F& func_, R* const res_, std::index_sequence<I...> /*unused*/) noexcept
+        inline void for_each_zip_helper(const std::tuple<A...>& tuple_0_, const std::tuple<A...>& tuple_1_, const F& func_, R* const res_, std::index_sequence<I...> /*unused*/) noexcept
         {
-            using swallow = int[];
-            (void)swallow{1, (res_->emplace_back(func_(std::get<I>(tuple_0_), std::get<I>(tuple_1_))), void(), int{})...};
+            try
+            {
+                using swallow = int[];
+                (void)swallow{1, (res_->emplace_back(func_(std::get<I>(tuple_0_), std::get<I>(tuple_1_))), void(), int{})...};
+            }
+            catch (...)
+            {
+                std::exit(1);
+            }
+        }
+
+        template <typename A, typename F, std::size_t... I>
+        auto transform_helper(const A& arg_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept
+        {
+            if constexpr (sizeof...(I) == 0)
+            {
+                return (std::tuple<>{});
+            }
+
+            if constexpr (std::is_same_v<decltype(func_(std::get<0>(arg_))), void>)
+            {
+                (func_(std::get<I>(arg_)), ...);
+
+                return;
+            }
+
+            if constexpr (std::is_lvalue_reference_v<decltype(func_(std::get<0>(arg_)))>)
+            {
+                return (std::tie(func_(std::get<I>(arg_))...));
+            }
+
+            if constexpr (std::is_rvalue_reference_v<decltype(func_(std::get<0>(arg_)))>)
+            {
+                return (std::forward_as_tuple(func_(std::get<I>(arg_))...));
+            }
+
+            return (std::tuple{func_(std::get<I>(arg_))...});
+        }
+
+        template <typename... A, typename F>
+        auto transform(const std::tuple<A...>& tuple_, const F& func_) noexcept
+        {
+            return (transform_helper(tuple_, func_, std::make_index_sequence<sizeof...(A)>{}));
         }
 
 

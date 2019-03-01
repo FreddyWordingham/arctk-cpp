@@ -23,9 +23,9 @@ namespace arc
         //  == FUNCTIONS ==
         //  -- Lists --
         template <typename T, typename = std::enable_if_t<std::is_integral_v<T>>>
-        constexpr inline std::vector<T> list(const T first_, const T last_) noexcept;
+        constexpr inline std::vector<T> list(T first_, T last_) noexcept;
         template <typename T, typename = std::enable_if_t<std::is_integral_v<T>>>
-        constexpr inline std::vector<T> list(const T first_, const T last_, const T spacing_) noexcept;
+        constexpr inline std::vector<T> list(T first_, T last_, T spacing_) noexcept;
 
 
 

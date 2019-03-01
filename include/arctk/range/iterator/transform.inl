@@ -56,7 +56,7 @@ namespace arc
             }
 
             template <typename I, typename F>
-            constexpr inline Transform<I, F> Transform<I, F>::operator++(const int /*unused*/) noexcept
+            constexpr inline const Transform<I, F> Transform<I, F>::operator++(const int /*unused*/) noexcept
             {
                 Transform<I, F> it{*this};
 

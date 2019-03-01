@@ -48,7 +48,7 @@ namespace test
         typename std::array<int, 4>::size_type index{0};
         for (; begin_0 != end_0; ++begin_0)
         {
-            ASSERT_EQ(*begin_0, arr[index]);
+            ASSERT_EQ(*begin_0, arr[index]); // NOLINT
             ++index;
         }
     }

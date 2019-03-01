@@ -22,7 +22,7 @@ namespace arc
             //  == CLASSES ==
             //  -- Transform --
             template <typename F>
-            struct Transform : public Preview
+            class Transform : public Preview
             {
                 //  == FIELDS ==
               public:
@@ -33,7 +33,7 @@ namespace arc
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Transform(const F& trans_) noexcept;
+                constexpr inline explicit Transform(const F& trans_) noexcept;
             };
 
 

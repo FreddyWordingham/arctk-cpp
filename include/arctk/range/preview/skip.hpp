@@ -27,7 +27,7 @@ namespace arc
 
             //  == CLASSES ==
             //  -- Filter --
-            struct Skip : public Preview
+            class Skip : public Preview
             {
                 //  == FIELDS ==
               public:
@@ -39,7 +39,7 @@ namespace arc
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Skip(const std::size_t skip_first_, const std::size_t skip_last_ = 0) noexcept;
+                constexpr inline explicit Skip(std::size_t skip_first_, std::size_t skip_last_ = 0) noexcept;
             };
 
 

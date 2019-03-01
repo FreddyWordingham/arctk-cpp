@@ -44,7 +44,7 @@ namespace test
     //  -- Filter --
     TEST_F(array_int, Skip_first) // NOLINT
     {
-        using namespace arc;
+        using namespace arc; // NOLINT
 
         const auto rev = _arr_non_prime //
                          | arc::range::preview::Skip{4};
@@ -54,7 +54,7 @@ namespace test
 
     TEST_F(array_int, Skip_first_and_last) // NOLINT
     {
-        using namespace arc;
+        using namespace arc; // NOLINT
 
         const auto rev = _arr_non_prime //
                          | arc::range::preview::Skip{3, 2};

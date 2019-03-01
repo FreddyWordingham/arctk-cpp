@@ -21,9 +21,9 @@ namespace arc
         //  == FUNCTIONS ==
         //  -- Comparison --
         template <typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
-        constexpr inline bool zero(const T x_, const T epsilon_ = std::numeric_limits<T>::epsilon()) noexcept;
+        constexpr inline bool zero(T x_, T epsilon_ = std::numeric_limits<T>::epsilon()) noexcept;
         template <typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
-        constexpr inline bool equal(const T x_, const T y_, const T epsilon_ = std::numeric_limits<T>::epsilon()) noexcept;
+        constexpr inline bool equal(T x_, T y_, T epsilon_ = std::numeric_limits<T>::epsilon()) noexcept;
 
 
 

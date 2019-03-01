@@ -19,7 +19,7 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/range/iterator/filter.inl"
-#include "arctk/range/preview/filter.inl"
+#include "arctk/range/preview/filter.hpp"
 
 
 

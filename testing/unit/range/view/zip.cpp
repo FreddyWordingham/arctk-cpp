@@ -1,14 +1,12 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/range/view/zip.inl"
-#include "arctk/range/comparison.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
 
 //  -- Std --
 #include <array>
-#include <vector>
 
 
 
@@ -44,7 +42,7 @@ namespace test
     //  -- Zip --
     TEST_F(array_int, Zip) // NOLINT
     {
-        using namespace arc;
+        using namespace arc; // NOLINT
 
         for (auto [prime_0, prime_1, non_prime] : range::view::Zip{_arr_prime, _arr_prime, _arr_non_prime})
         {

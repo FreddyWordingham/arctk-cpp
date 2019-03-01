@@ -30,7 +30,7 @@ namespace test
     //  -- Comparison --
     TEST(equal, array_vector) // NOLINT
     {
-        using namespace arc;
+        using namespace arc; // NOLINT
 
         const std::array<int, 5> arr_0{0, 1, 2, 3, 4};
         const std::vector<int>   vec_0{0, 1, 2, 3, 4};
@@ -58,7 +58,7 @@ namespace test
 
     TEST(equal, size) // NOLINT
     {
-        using namespace arc;
+        using namespace arc; // NOLINT
 
         const std::array<int, 3> arr_0{0, 1, 2};
         const std::vector<int>   vec_0{0, 1, 2, 3, 4};
@@ -68,7 +68,7 @@ namespace test
 
     TEST(not_equal, array_vector) // NOLINT
     {
-        using namespace arc;
+        using namespace arc; // NOLINT
 
         const std::array<int, 5> arr_0{0, 1, 2, 3, 4};
         const std::vector<int>   vec_0{0, 1, 2, 3, 4};

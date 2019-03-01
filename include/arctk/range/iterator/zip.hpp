@@ -57,8 +57,8 @@ namespace arc
                 //  == OPERATORS ==
               public:
                 //  -- Increment / Decrement --
-                constexpr inline Zip& operator++() noexcept;
-                constexpr inline Zip  operator++(const int /*unused*/) noexcept;
+                constexpr inline Zip&      operator++() noexcept;
+                constexpr inline const Zip operator++(int /*unused*/) noexcept;
 
                 //  -- Member Access --
                 constexpr inline std::tuple<I, J...> operator*() noexcept;

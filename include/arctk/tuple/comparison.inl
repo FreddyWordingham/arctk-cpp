@@ -15,6 +15,7 @@
 #include "arctk/tuple/transform.inl"
 
 //  -- Std --
+#include <cstddef>
 #include <vector>
 
 
@@ -33,7 +34,16 @@ namespace arc
         inline auto num_equal_elems(const std::tuple<A...>& tup_0_, const std::tuple<A...>& tup_1_) noexcept
         {
             std::vector<bool> res{};
-            for_each_zip(tup_0_, tup_1_, [](const auto& t_0_, const auto& t_1_) { return (t_0_ == t_1_); }, &res);
+
+            try
+            {
+                for_each_zip(tup_0_, tup_1_, [](const auto& t_0_, const auto& t_1_) { return (t_0_ == t_1_); }, &res);
+            }
+
+            catch (...)
+            {
+                std::exit(1);
+            }
 
             return (range::count(res, true));
         }

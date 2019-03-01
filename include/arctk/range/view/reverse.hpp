@@ -33,7 +33,7 @@ namespace arc
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Reverse(const R& range_) noexcept;
+                constexpr inline explicit Reverse(const R& range_) noexcept;
 
 
                 //  == METHODS ==

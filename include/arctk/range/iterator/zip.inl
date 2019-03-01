@@ -64,7 +64,7 @@ namespace arc
             }
 
             template <typename I, typename... J>
-            constexpr inline Zip<I, J...> Zip<I, J...>::operator++(const int /*unused*/) noexcept
+            constexpr inline const Zip<I, J...> Zip<I, J...>::operator++(const int /*unused*/) noexcept
             {
                 Zip<I, J...> it{*this};
 

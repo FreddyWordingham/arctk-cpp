@@ -13,6 +13,7 @@
 //  -- Std --
 #include <algorithm>
 #include <cassert>
+#include <cstddef>
 #include <iterator>
 
 
@@ -41,12 +42,19 @@ namespace arc
             std::for_each(range_.begin(), range_.end(), trans_);
         }
 
-        template <typename R, typename F, typename Ro>
-        constexpr inline void transform(const R& range_, const F& trans_, Ro* const range_out_) noexcept
+        template <typename R, typename F, typename RO>
+        constexpr inline void transform(const R& range_, const F& trans_, RO* const range_out_) noexcept
         {
             assert(range_out_ != nullptr);
 
-            std::transform(range_.begin(), range_.end(), std::back_inserter(*range_out_), trans_);
+            try
+            {
+                std::transform(range_.begin(), range_.end(), std::back_inserter(*range_out_), trans_);
+            }
+            catch (...)
+            {
+                std::exit(1);
+            }
         }
 
 

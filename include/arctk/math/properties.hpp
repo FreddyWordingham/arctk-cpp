@@ -20,7 +20,7 @@ namespace arc
         //  == FUNCTIONS ==
         //  -- Properties --
         template <typename T>
-        constexpr inline T sign(const T n_) noexcept;
+        constexpr inline T sign(T n_) noexcept;
         template <typename T>
         constexpr inline bool is_positive(T n_) noexcept;
         template <typename T>

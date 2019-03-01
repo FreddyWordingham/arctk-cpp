@@ -21,7 +21,7 @@ namespace arc
 
             //  == CLASSES ==
             //  -- Reverse --
-            struct Reverse : public Preview
+            class Reverse : public Preview
             {
             };
 

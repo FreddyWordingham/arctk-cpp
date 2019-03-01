@@ -22,7 +22,7 @@ namespace arc
             //  == CLASSES ==
             //  -- Filter --
             template <typename F>
-            struct Filter : public Preview
+            class Filter : public Preview
             {
                 //  == FIELDS ==
               public:
@@ -33,7 +33,7 @@ namespace arc
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Filter(const F& pred_) noexcept;
+                constexpr inline explicit Filter(const F& pred_) noexcept;
             };
 
 

@@ -21,7 +21,7 @@ namespace arc
 
             //  == CLASSES ==
             //  -- Zip --
-            struct Zip : public Preview
+            class Zip : public Preview
             {
             };
 

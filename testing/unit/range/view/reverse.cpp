@@ -43,7 +43,7 @@ namespace test
     //  -- Filter --
     TEST_F(array_int, Reverse) // NOLINT
     {
-        using namespace arc;
+        using namespace arc; // NOLINT
 
         const auto rev = _arr_non_prime //
                          | arc::range::preview::Reverse{};
