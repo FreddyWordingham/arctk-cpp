@@ -11,6 +11,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include <cassert>
 #include <cstddef>
 #include <cstdlib>
 #include <tuple>
@@ -60,16 +61,17 @@ namespace arc
             (void)swallow{1, (res_->emplace_back(func_(std::get<I>(tuple_))), void(), int{})...};
         }
 
-        template <typename... A, typename F>
-        constexpr inline void for_each_zip(const std::tuple<A...>& tuple_0_, const std::tuple<A...>& tuple_1_, const F& func_) noexcept
+        template <typename... A, typename... B, typename F>
+        constexpr inline void for_each_zip(const std::tuple<A...>& tuple_0_, const std::tuple<B...>& tuple_1_, const F& func_) noexcept
         {
             const auto size{std::tuple_size_v<std::remove_reference_t<std::tuple<A...>>>};
+            assert(std::tuple_size_v<std::remove_reference_t<std::tuple<B...>>> == size);
 
             for_each_zip_helper(tuple_0_, tuple_1_, func_, std::make_index_sequence<size>{});
         }
 
-        template <typename... A, typename F, typename std::size_t... I>
-        constexpr inline void for_each_zip_helper(const std::tuple<A...>& tuple_0_, const std::tuple<A...>& tuple_1_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept
+        template <typename... A, typename... B, typename F, typename std::size_t... I>
+        constexpr inline void for_each_zip_helper(const std::tuple<A...>& tuple_0_, const std::tuple<B...>& tuple_1_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept
         {
             using swallow = int[];
             (void)swallow{1, (func_(std::get<I>(tuple_0_), std::get<I>(tuple_1_)), void(), int{})...};
@@ -105,6 +107,12 @@ namespace arc
             }
         }
 
+        template <typename... A, typename F>
+        auto transform(const std::tuple<A...>& tuple_, const F& func_) noexcept
+        {
+            return (transform_helper(tuple_, func_, std::make_index_sequence<sizeof...(A)>{}));
+        }
+
         template <typename A, typename F, std::size_t... I>
         auto transform_helper(const A& arg_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept
         {
@@ -131,12 +139,6 @@ namespace arc
             }
 
             return (std::tuple{func_(std::get<I>(arg_))...});
-        }
-
-        template <typename... A, typename F>
-        auto transform(const std::tuple<A...>& tuple_, const F& func_) noexcept
-        {
-            return (transform_helper(tuple_, func_, std::make_index_sequence<sizeof...(A)>{}));
         }
 
 
