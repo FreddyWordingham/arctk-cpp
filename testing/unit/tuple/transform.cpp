@@ -93,6 +93,16 @@ namespace test
         ASSERT_EQ(tup_char_size, std::tuple('x' + 4, 11));
     }
 
+    TEST_F(tuples, for_each_res_mutable) // NOLINT
+    {
+        auto tup_char_int{_tup_char_int};
+        std::vector<bool> res_0;
+        arc::tuple::for_each(&tup_char_int, [](auto t_) {return (arc::math::is_prime(t_++));}, &res_0);
+        const std::vector<bool> expected_res_0{true, false};
+        ASSERT_EQ(res_0, expected_res_0);
+        ASSERT_EQ(tup_char_int, (std::tuple<char, int>{'b', 71}));;
+    }
+
 
 
 } // namespace test
