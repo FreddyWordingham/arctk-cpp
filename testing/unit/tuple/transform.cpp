@@ -61,17 +61,17 @@ namespace test
     TEST_F(tuples, for_each_res_immutable) // NOLINT
     {
         std::vector<bool> res_0;
-        arc::tuple::for_each(_tup_char_int, [](const auto t_) {return (arc::math::is_prime(t_));}, &res_0);
+        arc::tuple::for_each(_tup_char_int, [](const auto t_) { return (arc::math::is_prime(t_)); }, &res_0);
         const std::vector<bool> expected_res_0{true, false};
         ASSERT_EQ(res_0, expected_res_0);
 
         std::vector<bool> res_1;
-        arc::tuple::for_each(_tup_int_double, [](const auto t_) {return (arc::math::equal(static_cast<double>(t_), 3.14159));}, &res_1);
+        arc::tuple::for_each(_tup_int_double, [](const auto t_) { return (arc::math::equal(static_cast<double>(t_), 3.14159)); }, &res_1);
         const std::vector<bool> expected_res_1{false, true};
         ASSERT_EQ(res_1, expected_res_1);
 
         std::vector<bool> res_2;
-        arc::tuple::for_each(_tup_char_size, [](const auto t_) {return (arc::math::is_prime(t_));}, &res_2);
+        arc::tuple::for_each(_tup_char_size, [](const auto t_) { return (arc::math::is_prime(t_)); }, &res_2);
         const std::vector<bool> expected_res_2{false, true};
         ASSERT_EQ(res_2, expected_res_2);
     }
@@ -95,14 +95,26 @@ namespace test
 
     TEST_F(tuples, for_each_res_mutable) // NOLINT
     {
-        auto tup_char_int{_tup_char_int};
+        auto              tup_char_int{_tup_char_int};
         std::vector<bool> res_0;
-        arc::tuple::for_each(&tup_char_int, [](auto t_) {
-            t_++;
-            return (arc::math::is_prime(t_));}, &res_0);
+        arc::tuple::for_each(&tup_char_int, [](auto& t_) { return (arc::math::is_prime(t_++)); }, &res_0);
         const std::vector<bool> expected_res_0{true, false};
         ASSERT_EQ(res_0, expected_res_0);
-        ASSERT_EQ(tup_char_int, (std::tuple<char, int>{'b', 71}));;
+        ASSERT_EQ(tup_char_int, (std::tuple<char, int>{'b', 71}));
+
+        auto              tup_int_double{_tup_int_double};
+        std::vector<bool> res_1;
+        arc::tuple::for_each(&tup_int_double, [](auto& t_) { return (arc::math::equal(static_cast<double>(t_++), 3.14159)); }, &res_1);
+        const std::vector<bool> expected_res_1{false, true};
+        ASSERT_EQ(res_1, expected_res_1);
+        ASSERT_EQ(tup_int_double, (std::tuple<int, double>{-3, 4.14159}));
+
+        auto              tup_char_size{_tup_char_size};
+        std::vector<bool> res_2;
+        arc::tuple::for_each(&tup_char_size, [](auto& t_) { return (arc::math::is_prime(t_++)); }, &res_2);
+        const std::vector<bool> expected_res_2{false, true};
+        ASSERT_EQ(res_2, expected_res_2);
+        ASSERT_EQ(tup_char_size, (std::tuple<char, std::size_t>{'y', 8}));
     }
 
 
