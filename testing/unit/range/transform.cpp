@@ -28,7 +28,7 @@ namespace test
 
 
     //  == FIXTURES ==
-    //  -- Properties --
+    //  -- For Each --
     class array_int : public ::testing::Test
     {
         //  == FIELDS ==
@@ -42,20 +42,20 @@ namespace test
 
 
     //  == TESTS ==
-    //  -- Properties --
+    //  -- For Each --
     TEST_F(array_int, transform) // NOLINT
     {
         std::array<int, 8> arr_0{_arr_ascend};
-        arc::range::transform(&arr_0, [](int& x_) { x_ += 3; });
+        arc::range::for_each(&arr_0, [](int& x_) { x_ += 3; });
         ASSERT_EQ(arr_0, (std::array<int, 8>{3, 4, 5, 6, 7, 8, 9, 10}));
 
         int sum{0};
-        arc::range::transform(_arr_prime, [&](const int& x_) { sum += x_; });
+        arc::range::for_each(_arr_prime, [&](const int& x_) { sum += x_; });
         ASSERT_EQ(sum, 77);
 
         const std::array<int, 8> arr_1{3, 4, 5, 6, 7, 8, 9, 10};
         std::vector<bool>        vec_is_prime{};
-        arc::range::transform(arr_1, [&](const int& x_) { vec_is_prime.emplace_back(arc::math::is_prime(x_)); });
+        arc::range::for_each(arr_1, [&](const int& x_) { vec_is_prime.emplace_back(arc::math::is_prime(x_)); });
 
         ASSERT_EQ(vec_is_prime, (std::vector<bool>{true, false, true, false, true, false, false, false}));
     }

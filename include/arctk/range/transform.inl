@@ -13,8 +13,6 @@
 //  -- Std --
 #include <algorithm>
 #include <cassert>
-#include <cstdlib>
-#include <iterator>
 
 
 
@@ -27,9 +25,9 @@ namespace arc
 
 
         //  == FUNCTIONS ==
-        //  -- Transform --
+        //  -- For Each --
         template <typename R, typename F>
-        constexpr inline void transform(R* const range_, const F& trans_) noexcept
+        constexpr inline void for_each(R* const range_, const F& trans_) noexcept
         {
             assert(range_ != nullptr);
 
@@ -37,7 +35,7 @@ namespace arc
         }
 
         template <typename R, typename F>
-        constexpr inline void transform(const R& range_, const F& trans_) noexcept
+        constexpr inline void for_each(const R& range_, const F& trans_) noexcept
         {
             std::for_each(range_.begin(), range_.end(), trans_);
         }

@@ -12,11 +12,11 @@ namespace arc
 
 
         //  == FUNCTIONS ==
-        //  -- Transform --
+        //  -- For Each --
         template <typename R, typename F>
-        constexpr inline void transform(R* range_, const F& trans_) noexcept;
+        constexpr inline void for_each(R* range_, const F& trans_) noexcept;
         template <typename R, typename F>
-        constexpr inline void transform(const R& range_, const F& trans_) noexcept;
+        constexpr inline void for_each(const R& range_, const F& trans_) noexcept;
 
         //  -- Order --
         template <typename R>

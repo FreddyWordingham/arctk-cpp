@@ -1,14 +1,12 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/tuple/transform.inl"
-#include "arctk/math/comparison.inl"
-#include "arctk/math/properties.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
 
 //  -- Std --
-#include <string>
+#include <sstream>
 
 
 

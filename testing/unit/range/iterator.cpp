@@ -27,7 +27,7 @@ namespace test
 
 
     //  == FIXTURES ==
-    //  -- Properties --
+    //  -- Filter --
     class array_int : public ::testing::Test
     {
         //  == FIELDS ==

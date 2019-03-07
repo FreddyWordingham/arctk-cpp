@@ -18,8 +18,8 @@
 
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/range/iterator/filter.inl"
-#include "arctk/range/preview/filter.inl"
+#include "arctk/range/iterator/filter.inl" // IWYU pragma: keep
+#include "arctk/range/preview/filter.hpp"  // IWYU pragma: keep
 
 
 

@@ -26,7 +26,7 @@ namespace test
 
 
     //  == FIXTURES ==
-    //  -- Properties --
+    //  -- Search --
     class array_int : public ::testing::Test
     {
         //  == FIELDS ==
@@ -40,7 +40,7 @@ namespace test
 
 
     //  == TESTS ==
-    //  -- Properties --
+    //  -- Search --
     TEST_F(array_int, bounded) // NOLINT
     {
         ASSERT_TRUE(arc::range::bounded(_arr_ascend, 5.5));
