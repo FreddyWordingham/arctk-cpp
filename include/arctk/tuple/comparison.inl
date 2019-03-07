@@ -32,8 +32,8 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Comparison --
-        template <typename... A>
-        inline auto num_equal_elems(const std::tuple<A...>& tup_0_, const std::tuple<A...>& tup_1_) noexcept
+        template <typename... A, typename... B, typename>
+        inline auto num_equal_elems(const std::tuple<A...>& tup_0_, const std::tuple<B...>& tup_1_) noexcept
         {
             std::vector<bool> res{};
 

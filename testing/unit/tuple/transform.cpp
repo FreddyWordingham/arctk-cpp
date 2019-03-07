@@ -76,18 +76,18 @@ namespace test
         ASSERT_EQ(res_2, expected_res_2);
     }
 
-    TEST_F(tuples, for_each_zip_immutable) // NOLINT
+    TEST_F(tuples, for_each_zip) // NOLINT
     {
         std::stringstream stream_0;
-        arc::tuple::for_each_zip(_tup_char_int, _tup_int_double, [&](const auto l_, const auto r_) { stream_0 << '[' << l_ << ',' << r_ << ']'; });
+        arc::tuple::for_each_zip(_tup_char_int, _tup_int_double, [&](const auto t_0_, const auto t_1_) { stream_0 << '[' << t_0_ << ',' << t_1_ << ']'; });
         ASSERT_EQ(stream_0.str(), "[a,-4][70,3.14159]");
 
         std::stringstream stream_1;
-        arc::tuple::for_each_zip(_tup_int_double, _tup_char_size, [&](const auto l_, const auto r_) { stream_1 << '[' << l_ << ',' << r_ << ']'; });
+        arc::tuple::for_each_zip(_tup_int_double, _tup_char_size, [&](const auto t_0_, const auto t_1_) { stream_1 << '[' << t_0_ << ',' << t_1_ << ']'; });
         ASSERT_EQ(stream_1.str(), "[-4,x][3.14159,7]");
 
         std::stringstream stream_2;
-        arc::tuple::for_each_zip(_tup_char_size, _tup_char_int, [&](const auto l_, const auto r_) { stream_2 << '[' << l_ << ',' << r_ << ']'; });
+        arc::tuple::for_each_zip(_tup_char_size, _tup_char_int, [&](const auto t_0_, const auto t_1_) { stream_2 << '[' << t_0_ << ',' << t_1_ << ']'; });
         ASSERT_EQ(stream_2.str(), "[x,a][7,70]");
     }
 

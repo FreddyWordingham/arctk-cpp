@@ -29,15 +29,14 @@ namespace arc
         constexpr inline void for_each(const std::tuple<A...>& tuple_, const F& func_, R* res_) noexcept;
         template <typename... A, typename F, typename R, typename std::size_t... I>
         constexpr inline void for_each_helper(const std::tuple<A...>& tuple_, const F& func_, R* res_, std::index_sequence<I...> /*unused*/) noexcept;
-        template <typename... A, typename... B, typename F>
+        template <typename... A, typename... B, typename F, typename = typename std::enable_if_t<sizeof...(A) == sizeof...(B)>>
         constexpr inline void for_each_zip(const std::tuple<A...>& tuple_0_, const std::tuple<B...>& tuple_1_, const F& func_) noexcept;
-        template <typename... A, typename... B, typename F, typename std::size_t... I>
+        template <typename... A, typename... B, typename F, typename std::size_t... I, typename = typename std::enable_if_t<sizeof...(A) == sizeof...(B)>>
         constexpr inline void for_each_zip_helper(const std::tuple<A...>& tuple_0_, const std::tuple<B...>& tuple_1_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept;
-        template <typename... A, typename F, typename R>
-        inline void for_each_zip(const std::tuple<A...>& tuple_0_, const std::tuple<A...>& tuple_1_, const F& func_, R* res_) noexcept;
-        template <typename... A, typename F, typename R, typename std::size_t... I>
-        inline void for_each_zip_helper(const std::tuple<A...>& tuple_0_, const std::tuple<A...>& tuple_1_, const F& func_, R* res_, std::index_sequence<I...> /*unused*/) noexcept;
-
+        template <typename... A, typename... B, typename F, typename R, typename = typename std::enable_if_t<sizeof...(A) == sizeof...(B)>>
+        inline void for_each_zip(const std::tuple<A...>& tuple_0_, const std::tuple<B...>& tuple_1_, const F& func_, R* res_) noexcept;
+        template <typename... A, typename... B, typename F, typename R, typename std::size_t... I, typename = typename std::enable_if_t<sizeof...(A) == sizeof...(B)>>
+        inline void for_each_zip_helper(const std::tuple<A...>& tuple_0_, const std::tuple<B...>& tuple_1_, const F& func_, R* res_, std::index_sequence<I...> /*unused*/) noexcept;
         template <typename A, typename F, std::size_t... I>
         auto transform_helper(const A& arg_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept;
         template <typename... A, typename F>
