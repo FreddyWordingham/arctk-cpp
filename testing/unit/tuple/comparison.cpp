@@ -34,10 +34,10 @@ namespace test
 
     TEST(num_equal_elems, single) // NOLINT
     {
-        const std::tuple<std::size_t> tup_0{7};
-        const std::tuple<int>         tup_1{3};
-        const std::tuple<int>         tup_2{3};
-        const std::tuple<char>        tup_3{7};
+        const std::tuple<std::size_t>   tup_0{7};
+        const std::tuple<unsigned int>  tup_1{3};
+        const std::tuple<unsigned int>  tup_2{3};
+        const std::tuple<unsigned char> tup_3{7};
 
         ASSERT_EQ(arc::tuple::num_equal_elems(tup_0, tup_0), 1);
         ASSERT_EQ(arc::tuple::num_equal_elems(tup_0, tup_1), 0);
@@ -53,9 +53,9 @@ namespace test
 
     TEST(num_equal_elems, multiple) // NOLINT
     {
-        const std::tuple<std::size_t, char, char>                tup_0{7, 1, 7};
-        const std::tuple<int, std::size_t, char>                 tup_1{3, 7, 7};
-        const std::tuple<std::size_t, std::size_t, unsigned int> tup_2{3, 1, 7};
+        const std::tuple<std::size_t, unsigned char, unsigned char> tup_0{7, 1, 7};
+        const std::tuple<unsigned int, std::size_t, unsigned char>  tup_1{3, 7, 7};
+        const std::tuple<std::size_t, std::size_t, unsigned int>    tup_2{3, 1, 7};
 
         ASSERT_EQ(arc::tuple::num_equal_elems(tup_0, tup_0), 3);
         ASSERT_EQ(arc::tuple::num_equal_elems(tup_0, tup_1), 1);
