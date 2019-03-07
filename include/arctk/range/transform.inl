@@ -42,21 +42,6 @@ namespace arc
             std::for_each(range_.begin(), range_.end(), trans_);
         }
 
-        template <typename R, typename F, typename RO>
-        inline void transform(const R& range_, const F& trans_, RO* const range_out_) noexcept
-        {
-            assert(range_out_ != nullptr);
-
-            try
-            {
-                std::transform(range_.begin(), range_.end(), std::back_inserter(*range_out_), trans_);
-            }
-            catch (...)
-            {
-                std::exit(1);
-            }
-        }
-
 
         //  -- Order --
         template <typename R>

@@ -55,7 +55,7 @@ namespace test
 
         const std::array<int, 8> arr_1{3, 4, 5, 6, 7, 8, 9, 10};
         std::vector<bool>        vec_is_prime{};
-        arc::range::transform(arr_1, [](const int& x_) { return (arc::math::is_prime(x_)); }, &vec_is_prime);
+        arc::range::transform(arr_1, [&](const int& x_) { vec_is_prime.emplace_back(arc::math::is_prime(x_)); });
 
         ASSERT_EQ(vec_is_prime, (std::vector<bool>{true, false, true, false, true, false, false, false}));
     }
