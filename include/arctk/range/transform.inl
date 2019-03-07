@@ -13,6 +13,7 @@
 //  -- Std --
 #include <algorithm>
 #include <cassert>
+#include <cstddef>
 
 
 
@@ -45,18 +46,23 @@ namespace arc
         template <typename R>
         constexpr inline void sort(R* const range_) noexcept
         {
+            assert(range_ != nullptr);
+
             std::sort((*range_).begin(), (*range_).end());
         }
 
         template <typename R>
         constexpr inline void reverse(R* const range_) noexcept
         {
+            assert(range_ != nullptr);
+
             std::reverse((*range_).begin(), (*range_).end());
         }
 
         template <typename R, typename I>
         constexpr inline void rotate(R* const range_, const I n_) noexcept
         {
+            assert(range_ != nullptr);
             assert(n_ >= 0);
 
             std::rotate((*range_).begin(), (*range_).begin() + n_, (*range_).end());

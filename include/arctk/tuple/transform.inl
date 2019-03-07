@@ -93,37 +93,37 @@ namespace arc
 
         //  -- Transform --
         template <typename... A, typename F>
-        auto transform(const std::tuple<A...>& tuple_, const F& func_) noexcept
+        constexpr auto transform(const std::tuple<A...>& tuple_, const F& func_) noexcept
         {
             return (transform_helper(tuple_, func_, std::make_index_sequence<sizeof...(A)>{}));
         }
 
         template <typename A, typename F, std::size_t... I>
-        auto transform_helper(const A& arg_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept
+        constexpr auto transform_helper(const A& arg_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept
         {
-            if constexpr (sizeof...(I) == 0)
-            {
+            if constexpr (sizeof...(I) == 0) // NOLINT
+            {                                // NOLINT
                 return (std::tuple<>{});
             }
 
-            if constexpr (std::is_same_v<decltype(func_(std::get<0>(arg_))), void>)
-            {
+            if constexpr (std::is_same_v<decltype(func_(std::get<0>(arg_))), void>) // NOLINT
+            {                                                                       // NOLINT
                 (func_(std::get<I>(arg_)), ...);
 
                 return;
             }
 
-            if constexpr (std::is_lvalue_reference_v<decltype(func_(std::get<0>(arg_)))>)
-            {
+            if constexpr (std::is_lvalue_reference_v<decltype(func_(std::get<0>(arg_)))>) // NOLINT
+            {                                                                             // NOLINT
                 return (std::tie(func_(std::get<I>(arg_))...));
             }
 
-            if constexpr (std::is_rvalue_reference_v<decltype(func_(std::get<0>(arg_)))>)
-            {
+            if constexpr (std::is_rvalue_reference_v<decltype(func_(std::get<0>(arg_)))>) // NOLINT
+            {                                                                             // NOLINT
                 return (std::forward_as_tuple(func_(std::get<I>(arg_))...));
             }
 
-            return (std::tuple{func_(std::get<I>(arg_))...});
+            return (std::tuple{func_(std::get<I>(arg_))...}); // NOLINT
         }
 
 

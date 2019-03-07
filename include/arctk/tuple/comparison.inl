@@ -15,6 +15,7 @@
 #include "arctk/tuple/transform.inl"
 
 //  -- Std --
+#include <cstddef>
 #include <tuple>
 #include <vector>
 // IWYU pragma: no_include <__bit_reference>
@@ -32,14 +33,22 @@ namespace arc
         //  == FUNCTIONS ==
         //  -- Comparison --
         template <typename... A, typename... B, typename>
-        inline auto num_equal_elems(const std::tuple<A...>& tup_0_, const std::tuple<B...>& tup_1_) noexcept
+        constexpr inline auto any_equal_elems(const std::tuple<A...>& tup_0_, const std::tuple<B...>& tup_1_) noexcept
         {
-            std::vector<bool> res{};
+            bool equal{false};
 
-            res.reserve(sizeof...(A));
-            for_each_zip(tup_0_, tup_1_, [&](const auto& t_0_, const auto& t_1_) { res.emplace_back(t_0_ == t_1_); });
+            for_each_zip(tup_0_, tup_1_, [&](const auto& t_0_, const auto& t_1_) { equal = ((!equal) && (t_0_ == t_1_)); });
 
-            return (range::count(res, true));
+            return (equal);
+        }
+
+        template <typename... A, typename... B, typename>
+        constexpr inline auto num_equal_elems(const std::tuple<A...>& tup_0_, const std::tuple<B...>& tup_1_) noexcept
+        {
+            std::size_t num_equal{};
+            for_each_zip(tup_0_, tup_1_, [&](const auto& t_0_, const auto& t_1_) { num_equal += (t_0_ == t_1_) ? 1 : 0; });
+
+            return (num_equal);
         }
 
 

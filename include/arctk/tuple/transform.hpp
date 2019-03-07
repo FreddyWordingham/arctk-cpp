@@ -40,9 +40,9 @@ namespace arc
 
         //  -- Transform --
         template <typename... A, typename F>
-        auto transform(const std::tuple<A...>& tuple_, const F& func_) noexcept;
+        constexpr auto transform(const std::tuple<A...>& tuple_, const F& func_) noexcept;
         template <typename A, typename F, std::size_t... I>
-        auto transform_helper(const A& arg_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept;
+        constexpr auto transform_helper(const A& arg_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept;
 
 
 

@@ -27,6 +27,14 @@ namespace test
 
     //  == TESTS ==
     //  -- Comparisom --
+    TEST(any_equal_elems, empty) // NOLINT
+    {
+        const std::tuple<> tup_0{};
+        const std::tuple<> tup_1{};
+
+        ASSERT_FALSE(arc::tuple::any_equal_elems(tup_0, tup_1));
+    }
+
     TEST(num_equal_elems, empty) // NOLINT
     {
         const std::tuple<> tup_0{};
