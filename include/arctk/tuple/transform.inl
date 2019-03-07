@@ -29,7 +29,7 @@ namespace arc
 
 
         //  == FUNCTIONS ==
-        //  -- Immutable --
+        //  -- For Each --
         template <typename... A, typename F>
         constexpr inline void for_each(const std::tuple<A...>& tuple_, const F& func_) noexcept
         {
@@ -41,6 +41,23 @@ namespace arc
         {
             using swallow = int[];
             (void)swallow{1, (func_(std::get<I>(tuple_)), void(), int{})...};
+        }
+
+        template <typename... A, typename F>
+        constexpr inline void for_each(std::tuple<A...>* const tuple_, const F& func_) noexcept
+        {
+            assert(tuple_ != nullptr);
+
+            for_each_helper(tuple_, func_, std::make_index_sequence<sizeof...(A)>{});
+        }
+
+        template <typename... A, typename F, typename std::size_t... I>
+        constexpr inline void for_each_helper(std::tuple<A...>* const tuple_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept
+        {
+            assert(tuple_ != nullptr);
+
+            using swallow = int[];
+            (void)swallow{1, (func_(std::get<I>(*tuple_)), void(), int{})...};
         }
 
         template <typename... A, typename... B, typename F, typename>
@@ -56,6 +73,27 @@ namespace arc
             (void)swallow{1, (func_(std::get<I>(tuple_0_), std::get<I>(tuple_1_)), void(), int{})...};
         }
 
+        template <typename... A, typename... B, typename F, typename>
+        constexpr inline void for_each_zip(std::tuple<A...>* const tuple_0_, std::tuple<B...>* const tuple_1_, const F& func_) noexcept
+        {
+            assert(tuple_0_ != nullptr);
+            assert(tuple_1_ != nullptr);
+
+            for_each_zip_helper(tuple_0_, tuple_1_, func_, std::make_index_sequence<sizeof...(A)>{});
+        }
+
+        template <typename... A, typename... B, typename F, typename std::size_t... I, typename>
+        constexpr inline void for_each_zip_helper(std::tuple<A...>* const tuple_0_, std::tuple<B...>* const tuple_1_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept
+        {
+            assert(tuple_0_ != nullptr);
+            assert(tuple_1_ != nullptr);
+
+            using swallow = int[];
+            (void)swallow{1, (func_(std::get<I>(*tuple_0_), std::get<I>(*tuple_1_)), void(), int{})...};
+        }
+
+
+        //  -- Transform --
         template <typename... A, typename F>
         auto transform(const std::tuple<A...>& tuple_, const F& func_) noexcept
         {
@@ -88,21 +126,6 @@ namespace arc
             }
 
             return (std::tuple{func_(std::get<I>(arg_))...});
-        }
-
-
-        //  -- Mutable --
-        template <typename... A, typename F>
-        constexpr inline void for_each(std::tuple<A...>* const tuple_, const F& func_) noexcept
-        {
-            for_each_helper(tuple_, func_, std::make_index_sequence<sizeof...(A)>{});
-        }
-
-        template <typename... A, typename F, typename std::size_t... I>
-        constexpr inline void for_each_helper(std::tuple<A...>* const tuple_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept
-        {
-            using swallow = int[];
-            (void)swallow{1, (func_(std::get<I>(*tuple_)), void(), int{})...};
         }
 
 
