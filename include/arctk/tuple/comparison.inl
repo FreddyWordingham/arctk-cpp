@@ -11,13 +11,11 @@
 
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/range/properties.inl"
 #include "arctk/tuple/transform.inl"
 
 //  -- Std --
 #include <cstddef>
 #include <tuple>
-#include <vector>
 // IWYU pragma: no_include <__bit_reference>
 
 
