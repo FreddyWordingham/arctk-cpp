@@ -37,15 +37,8 @@ namespace arc
         {
             std::vector<bool> res{};
 
-            try
-            {
-                for_each_zip(tup_0_, tup_1_, [](const auto& t_0_, const auto& t_1_) { return (t_0_ == t_1_); }, &res);
-            }
-
-            catch (...)
-            {
-                std::exit(1);
-            }
+            res.reserve(sizeof...(A));
+            for_each_zip(tup_0_, tup_1_, [&](const auto& t_0_, const auto& t_1_) { res.emplace_back(t_0_ == t_1_); });
 
             return (range::count(res, true));
         }
