@@ -33,9 +33,7 @@ namespace arc
         template <typename... A, typename F>
         constexpr inline void for_each(const std::tuple<A...>& tuple_, const F& func_) noexcept
         {
-            const auto size{std::tuple_size_v<std::remove_reference_t<std::tuple<A...>>>};
-
-            for_each_helper(tuple_, func_, std::make_index_sequence<size>{});
+            for_each_helper(tuple_, func_, std::make_index_sequence<sizeof...(A)>{});
         }
 
         template <typename... A, typename F, typename std::size_t... I>
@@ -48,10 +46,8 @@ namespace arc
         template <typename... A, typename F, typename R>
         constexpr inline void for_each(const std::tuple<A...>& tuple_, const F& func_, R* const res_) noexcept
         {
-            const auto size{std::tuple_size_v<std::remove_reference_t<std::tuple<A...>>>};
-            res_->reserve(size);
-
-            for_each_helper(tuple_, func_, res_, std::make_index_sequence<size>{});
+            res_->reserve(sizeof...(A));
+            for_each_helper(tuple_, func_, res_, std::make_index_sequence<sizeof...(A)>{});
         }
 
         template <typename... A, typename F, typename R, typename std::size_t... I>
@@ -64,10 +60,7 @@ namespace arc
         template <typename... A, typename... B, typename F, typename>
         constexpr inline void for_each_zip(const std::tuple<A...>& tuple_0_, const std::tuple<B...>& tuple_1_, const F& func_) noexcept
         {
-            const auto size{std::tuple_size_v<std::remove_reference_t<std::tuple<A...>>>};
-            assert(std::tuple_size_v<std::remove_reference_t<std::tuple<B...>>> == size);
-
-            for_each_zip_helper(tuple_0_, tuple_1_, func_, std::make_index_sequence<size>{});
+            for_each_zip_helper(tuple_0_, tuple_1_, func_, std::make_index_sequence<sizeof...(A)>{});
         }
 
         template <typename... A, typename... B, typename F, typename std::size_t... I, typename>
@@ -80,33 +73,15 @@ namespace arc
         template <typename... A, typename... B, typename F, typename R, typename>
         inline void for_each_zip(const std::tuple<A...>& tuple_0_, const std::tuple<B...>& tuple_1_, const F& func_, R* const res_) noexcept
         {
-            try
-            {
-                const auto size{std::tuple_size_v<std::remove_reference_t<std::tuple<A...>>>};
-                assert(std::tuple_size_v<std::remove_reference_t<std::tuple<B...>>> == size);
-
-                res_->reserve(size);
-
-                for_each_zip_helper(tuple_0_, tuple_1_, func_, res_, std::make_index_sequence<size>{});
-            }
-            catch (...)
-            {
-                std::exit(1);
-            }
+            res_->reserve(sizeof...(A));
+            for_each_zip_helper(tuple_0_, tuple_1_, func_, res_, std::make_index_sequence<sizeof...(A)>{});
         }
 
         template <typename... A, typename... B, typename F, typename R, typename std::size_t... I, typename>
         inline void for_each_zip_helper(const std::tuple<A...>& tuple_0_, const std::tuple<B...>& tuple_1_, const F& func_, R* const res_, std::index_sequence<I...> /*unused*/) noexcept
         {
-            try
-            {
-                using swallow = int[];
-                (void)swallow{1, (res_->emplace_back(func_(std::get<I>(tuple_0_), std::get<I>(tuple_1_))), void(), int{})...};
-            }
-            catch (...)
-            {
-                std::exit(1);
-            }
+            using swallow = int[];
+            (void)swallow{1, (res_->emplace_back(func_(std::get<I>(tuple_0_), std::get<I>(tuple_1_))), void(), int{})...};
         }
 
         template <typename... A, typename F>
@@ -148,9 +123,7 @@ namespace arc
         template <typename... A, typename F>
         constexpr inline void for_each(std::tuple<A...>* const tuple_, const F& func_) noexcept
         {
-            const auto size{std::tuple_size_v<std::remove_reference_t<std::tuple<A...>>>}; // TODO use sizeof...
-
-            for_each_helper(tuple_, func_, std::make_index_sequence<size>{});
+            for_each_helper(tuple_, func_, std::make_index_sequence<sizeof...(A)>{});
         }
 
         template <typename... A, typename F, typename std::size_t... I>
@@ -163,10 +136,8 @@ namespace arc
         template <typename... A, typename F, typename R>
         constexpr inline void for_each(std::tuple<A...>* const tuple_, const F& func_, R* const res_) noexcept
         {
-            const auto size{std::tuple_size_v<std::remove_reference_t<std::tuple<A...>>>};
-            res_->reserve(size);
-
-            for_each_helper(tuple_, func_, res_, std::make_index_sequence<size>{});
+            res_->reserve(sizeof...(A));
+            for_each_helper(tuple_, func_, res_, std::make_index_sequence<sizeof...(A)>{});
         }
 
         template <typename... A, typename F, typename R, typename std::size_t... I>
