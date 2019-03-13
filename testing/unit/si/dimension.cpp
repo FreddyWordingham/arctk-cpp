@@ -10,8 +10,8 @@
 //  == PRAGMAS ==
 //  -- Warnings --
 #ifdef __clang__
-    #pragma clang diagnostic push
-    #pragma clang diagnostic ignored "-Wglobal-constructors"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wglobal-constructors"
 #endif
 
 
@@ -22,24 +22,30 @@ namespace test
 
 
 
-        //  == FIXTURES ==
-        //  -- Array Int Comparison --
-//      class array_int_test : public ::testing::Test
-//      {
-//          //  == FIELDS ==
-//        protected:
-//          //  -- Data --
-//          const std::array<int, 4>                _arr_0{1, 2, 3, 4};
-//      };
+    //  == FIXTURES ==
+    //  -- Units --
+    class si_unit_test : public ::testing::Test
+    {
+        //  == FIELDS ==
+      protected:
+        //  -- Data --
+        const arc::si::Scalar scalar{};
+        const arc::si::Mass   mass{};
+        const arc::si::Length length{1.0};
+        const arc::si::Time   time{2.0};
+    };
 
 
 
-        //  == TESTS ==
-//      //  -- Prime --
-//      TEST(prime, special) // NOLINT
-//      {
-//          ASSERT_TRUE(is_prime(2));
-//      }
+    //  == TESTS ==
+    //  -- SI Units --
+    TEST_F(si_unit_test, construction) // NOLINT
+    {
+        ASSERT_EQ(scalar.mag(), 0.0);
+        ASSERT_EQ(mass.mag(), 0.0);
+        ASSERT_EQ(length.mag(), 1.0);
+        ASSERT_EQ(time.mag(), 2.0);
+    }
 
 
 
@@ -50,5 +56,5 @@ namespace test
 //  == CLEAN UP ==
 //  -- Warnings --
 #ifdef __clang__
-    #pragma clang diagnostic pop
+#pragma clang diagnostic pop
 #endif
