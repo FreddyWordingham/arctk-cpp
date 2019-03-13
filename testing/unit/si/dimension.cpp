@@ -1,6 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/unit/dimension.inl"
+#include "arctk/si/dimension.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>

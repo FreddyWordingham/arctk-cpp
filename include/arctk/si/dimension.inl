@@ -5,7 +5,7 @@
 
 //  == DECLARATIONS ==
 //  -- Arc --
-#include "arctk/unit/dimension.hpp" // IWYU pragma: export
+#include "arctk/si/dimension.hpp" // IWYU pragma: export
 
 
 
@@ -17,7 +17,7 @@
 //  == NAMESPACE ==
 namespace arc
 {
-    namespace unit
+    namespace si
     {
 
 
@@ -36,5 +36,5 @@ namespace arc
 
 
 
-    } // namespace unit
+    } // namespace si
 } // namespace arc
