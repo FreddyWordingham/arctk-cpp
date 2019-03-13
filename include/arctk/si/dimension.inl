@@ -26,26 +26,25 @@ namespace arc
 
         //  == CONSTANTS ==
         //  -- Bases --
-        template <signed char M, signed char L, signed char T, signed char K, signed char C, signed char I, signed char N, signed char A>
-        const signed char Dimension<M, L, T, K, C, I, N, A>::MASS_EXPONENT{M};
-        template <signed char M, signed char L, signed char T, signed char K, signed char C, signed char I, signed char N, signed char A>
-        const signed char Dimension<M, L, T, K, C, I, N, A>::LENGTH_EXPONENT{L};
-        template <signed char M, signed char L, signed char T, signed char K, signed char C, signed char I, signed char N, signed char A>
-        const signed char Dimension<M, L, T, K, C, I, N, A>::TIME_EXPONENT{T};
-        template <signed char M, signed char L, signed char T, signed char K, signed char C, signed char I, signed char N, signed char A>
-        const signed char Dimension<M, L, T, K, C, I, N, A>::TEMPERATURE_EXPONENT{K};
-        template <signed char M, signed char L, signed char T, signed char K, signed char C, signed char I, signed char N, signed char A>
-        const signed char Dimension<M, L, T, K, C, I, N, A>::CURRENT_EXPONENT{C};
-        template <signed char M, signed char L, signed char T, signed char K, signed char C, signed char I, signed char N, signed char A>
-        const signed char Dimension<M, L, T, K, C, I, N, A>::INTENSITY_EXPONENT{I};
-        template <signed char M, signed char L, signed char T, signed char K, signed char C, signed char I, signed char N, signed char A>
-        const signed char Dimension<M, L, T, K, C, I, N, A>::AMOUNT_EXPONENT{N};
-        template <signed char M, signed char L, signed char T, signed char K, signed char C, signed char I, signed char N, signed char A>
-        const signed char Dimension<M, L, T, K, C, I, N, A>::ANGLE_EXPONENT{A};
+        template <int M, int L, int T, int K, int C, int I, int N, int A>
+        const int Dimension<M, L, T, K, C, I, N, A>::MASS_EXPONENT{M};
+        template <int M, int L, int T, int K, int C, int I, int N, int A>
+        const int Dimension<M, L, T, K, C, I, N, A>::LENGTH_EXPONENT{L};
+        template <int M, int L, int T, int K, int C, int I, int N, int A>
+        const int Dimension<M, L, T, K, C, I, N, A>::TIME_EXPONENT{T};
+        template <int M, int L, int T, int K, int C, int I, int N, int A>
+        const int Dimension<M, L, T, K, C, I, N, A>::TEMPERATURE_EXPONENT{K};
+        template <int M, int L, int T, int K, int C, int I, int N, int A>
+        const int Dimension<M, L, T, K, C, I, N, A>::CURRENT_EXPONENT{C};
+        template <int M, int L, int T, int K, int C, int I, int N, int A>
+        const int Dimension<M, L, T, K, C, I, N, A>::INTENSITY_EXPONENT{I};
+        template <int M, int L, int T, int K, int C, int I, int N, int A>
+        const int Dimension<M, L, T, K, C, I, N, A>::AMOUNT_EXPONENT{N};
+        template <int M, int L, int T, int K, int C, int I, int N, int A>
+        const int Dimension<M, L, T, K, C, I, N, A>::ANGLE_EXPONENT{A};
 
 
         //  -- Units --
-        template <>
         const char* const Scalar::UNITS{"_"};
         template <>
         const char* const Mass::UNITS{"kg"};
@@ -186,14 +185,25 @@ namespace arc
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        template <signed char M, signed char L, signed char T, signed char K, signed char C, signed char I, signed char N, signed char A>
+        template <int M, int L, int T, int K, int C, int I, int N, int A>
         constexpr inline Dimension<M, L, T, K, C, I, N, A>::Dimension() noexcept
           : _mag{0.0}
         {
         }
 
-        template <signed char M, signed char L, signed char T, signed char K, signed char C, signed char I, signed char N, signed char A>
+        constexpr inline Dimension<0, 0, 0, 0, 0, 0, 0, 0>::Dimension() noexcept
+          : _mag{0.0}
+        {
+        }
+
+        template <int M, int L, int T, int K, int C, int I, int N, int A>
         constexpr inline Dimension<M, L, T, K, C, I, N, A>::Dimension(const double mag_) noexcept
+          : _mag{mag_}
+        {
+            assert(!std::isnan(mag_));
+        }
+
+        constexpr inline Dimension<0, 0, 0, 0, 0, 0, 0, 0>::Dimension(const double mag_) noexcept
           : _mag{mag_}
         {
             assert(!std::isnan(mag_));
@@ -203,7 +213,7 @@ namespace arc
 
         //  == OPERATORS ==
         //  -- Assignment --
-        template <signed char M, signed char L, signed char T, signed char K, signed char C, signed char I, signed char N, signed char A>
+        template <int M, int L, int T, int K, int C, int I, int N, int A>
         constexpr inline const Dimension<M, L, T, K, C, I, N, A>& Dimension<M, L, T, K, C, I, N, A>::operator+=(const Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
         {
             _mag += rhs_.mag();
@@ -211,7 +221,14 @@ namespace arc
             return (*this);
         }
 
-        template <signed char M, signed char L, signed char T, signed char K, signed char C, signed char I, signed char N, signed char A>
+        constexpr inline const Dimension<0, 0, 0, 0, 0, 0, 0, 0>& Dimension<0, 0, 0, 0, 0, 0, 0, 0>::operator+=(const Dimension<0, 0, 0, 0, 0, 0, 0, 0>& rhs_) noexcept
+        {
+            _mag += rhs_.mag();
+
+            return (*this);
+        }
+
+        template <int M, int L, int T, int K, int C, int I, int N, int A>
         constexpr inline const Dimension<M, L, T, K, C, I, N, A>& Dimension<M, L, T, K, C, I, N, A>::operator-=(const Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
         {
             _mag -= rhs_.mag();
@@ -219,7 +236,14 @@ namespace arc
             return (*this);
         }
 
-        template <signed char M, signed char L, signed char T, signed char K, signed char C, signed char I, signed char N, signed char A>
+        constexpr inline const Dimension<0, 0, 0, 0, 0, 0, 0, 0>& Dimension<0, 0, 0, 0, 0, 0, 0, 0>::operator-=(const Dimension<0, 0, 0, 0, 0, 0, 0, 0>& rhs_) noexcept
+        {
+            _mag -= rhs_.mag();
+
+            return (*this);
+        }
+
+        template <int M, int L, int T, int K, int C, int I, int N, int A>
         constexpr inline const Dimension<M, L, T, K, C, I, N, A>& Dimension<M, L, T, K, C, I, N, A>::operator*=(const double rhs_) noexcept
         {
             _mag *= rhs_;
@@ -227,8 +251,22 @@ namespace arc
             return (*this);
         }
 
-        template <signed char M, signed char L, signed char T, signed char K, signed char C, signed char I, signed char N, signed char A>
+        constexpr inline const Dimension<0, 0, 0, 0, 0, 0, 0, 0>& Dimension<0, 0, 0, 0, 0, 0, 0, 0>::operator*=(const double rhs_) noexcept
+        {
+            _mag *= rhs_;
+
+            return (*this);
+        }
+
+        template <int M, int L, int T, int K, int C, int I, int N, int A>
         constexpr inline const Dimension<M, L, T, K, C, I, N, A>& Dimension<M, L, T, K, C, I, N, A>::operator/=(const double rhs_) noexcept
+        {
+            _mag /= rhs_;
+
+            return (*this);
+        }
+
+        constexpr inline const Dimension<0, 0, 0, 0, 0, 0, 0, 0>& Dimension<0, 0, 0, 0, 0, 0, 0, 0>::operator/=(const double rhs_) noexcept
         {
             _mag /= rhs_;
 
@@ -237,7 +275,7 @@ namespace arc
 
 
         //  -- Increment / Decrement --
-        template <signed char M, signed char L, signed char T, signed char K, signed char C, signed char I, signed char N, signed char A>
+        template <int M, int L, int T, int K, int C, int I, int N, int A>
         constexpr inline const Dimension<M, L, T, K, C, I, N, A>& Dimension<M, L, T, K, C, I, N, A>::operator++() noexcept
         {
             ++_mag;
@@ -245,8 +283,22 @@ namespace arc
             return (*this);
         }
 
-        template <signed char M, signed char L, signed char T, signed char K, signed char C, signed char I, signed char N, signed char A>
+        constexpr inline const Dimension<0, 0, 0, 0, 0, 0, 0, 0>& Dimension<0, 0, 0, 0, 0, 0, 0, 0>::operator++() noexcept
+        {
+            ++_mag;
+
+            return (*this);
+        }
+
+        template <int M, int L, int T, int K, int C, int I, int N, int A>
         constexpr inline const Dimension<M, L, T, K, C, I, N, A>& Dimension<M, L, T, K, C, I, N, A>::operator--() noexcept
+        {
+            --_mag;
+
+            return (*this);
+        }
+
+        constexpr inline const Dimension<0, 0, 0, 0, 0, 0, 0, 0>& Dimension<0, 0, 0, 0, 0, 0, 0, 0>::operator--() noexcept
         {
             --_mag;
 
@@ -257,11 +309,14 @@ namespace arc
 
         //  == METHODS ==
         //  -- Getters --
-        template <signed char M, signed char L, signed char T, signed char K, signed char C, signed char I, signed char N, signed char A>
+        template <int M, int L, int T, int K, int C, int I, int N, int A>
         constexpr inline double Dimension<M, L, T, K, C, I, N, A>::mag() const noexcept
         {
-            assert(!std::isnan(_mag));
+            return (_mag);
+        }
 
+        constexpr inline double Dimension<0, 0, 0, 0, 0, 0, 0, 0>::mag() const noexcept
+        {
             return (_mag);
         }
 

@@ -18,28 +18,28 @@ namespace arc
 
         //  == CLASSES ==
         //  -- Dimension --
-        template <signed char M, // Mass
-                  signed char L, // Length
-                  signed char T, // Time
-                  signed char K, // Temperature
-                  signed char C, // Current
-                  signed char I, // signed charensity
-                  signed char N, // Amount
-                  signed char A  // Angle
+        template <int M, // Mass
+                  int L, // Length
+                  int T, // Time
+                  int K, // Temperature
+                  int C, // Current
+                  int I, // Intensity
+                  int N, // Amount
+                  int A  // Angle
                   >
         class Dimension
         {
             //  == CONSTANTS ==
           public:
             //  -- Bases --
-            static const signed char MASS_EXPONENT;
-            static const signed char LENGTH_EXPONENT;
-            static const signed char TIME_EXPONENT;
-            static const signed char TEMPERATURE_EXPONENT;
-            static const signed char CURRENT_EXPONENT;
-            static const signed char INTENSITY_EXPONENT;
-            static const signed char AMOUNT_EXPONENT;
-            static const signed char ANGLE_EXPONENT;
+            static const int MASS_EXPONENT;
+            static const int LENGTH_EXPONENT;
+            static const int TIME_EXPONENT;
+            static const int TEMPERATURE_EXPONENT;
+            static const int CURRENT_EXPONENT;
+            static const int INTENSITY_EXPONENT;
+            static const int AMOUNT_EXPONENT;
+            static const int ANGLE_EXPONENT;
 
             //  -- Units --
             static const char* const UNITS;
@@ -60,6 +60,65 @@ namespace arc
 
             //  == OPERATORS ==
           public:
+            //  -- Assignment --
+            constexpr inline const Dimension& operator+=(const Dimension& rhs_) noexcept;
+            constexpr inline const Dimension& operator-=(const Dimension& rhs_) noexcept;
+            constexpr inline const Dimension& operator*=(const double rhs_) noexcept;
+            constexpr inline const Dimension& operator/=(const double rhs_) noexcept;
+
+            //  -- Increment / Decrement --
+            constexpr inline const Dimension& operator++() noexcept;
+            constexpr inline const Dimension& operator--() noexcept;
+
+
+            //  == METHODS ==
+          public:
+            //  -- Getters --
+            constexpr inline double mag() const noexcept;
+        };
+
+
+        //  -- Specialisations --
+        template <>
+        class Dimension<0, 0, 0, 0, 0, 0, 0, 0>
+        {
+            //  == CONSTANTS ==
+          public:
+            //  -- Bases --
+            static const int MASS_EXPONENT{0};
+            static const int LENGTH_EXPONENT{0};
+            static const int TIME_EXPONENT{0};
+            static const int TEMPERATURE_EXPONENT{0};
+            static const int CURRENT_EXPONENT{0};
+            static const int INTENSITY_EXPONENT{0};
+            static const int AMOUNT_EXPONENT{0};
+            static const int ANGLE_EXPONENT{0};
+
+            //  -- Units --
+            static const char* const UNITS;
+
+
+            //  == FIELDS ==
+          private:
+            //  -- Magnitude --
+            double _mag;
+
+
+            //  == INSTANTIATION ==
+          public:
+            //  -- Constructors --
+            constexpr inline explicit Dimension() noexcept;
+            constexpr inline Dimension(const double mag_) noexcept;
+
+
+            //  == OPERATORS ==
+          public:
+            // //  -- Conversion --
+            // constexpr inline operator double() const
+            // {
+            //     return (_mag);
+            // }
+
             //  -- Assignment --
             constexpr inline const Dimension& operator+=(const Dimension& rhs_) noexcept;
             constexpr inline const Dimension& operator-=(const Dimension& rhs_) noexcept;

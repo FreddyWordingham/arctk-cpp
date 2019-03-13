@@ -22,29 +22,62 @@ namespace test
 
 
 
-    //  == FIXTURES ==
+    //  == Dimension ==
     //  -- Units --
-    class si_unit_test : public ::testing::Test
+    class si_dimension_test : public ::testing::Test
     {
         //  == FIELDS ==
       protected:
         //  -- Data --
-        const arc::si::Scalar scalar{};
-        const arc::si::Mass   mass{};
-        const arc::si::Length length{1.0};
-        const arc::si::Time   time{2.0};
+        const arc::si::Scalar _scalar{};
+        const arc::si::Mass   _mass{};
+        const arc::si::Length _length{1.0};
+        const arc::si::Time   _time{2.0};
     };
 
 
 
     //  == TESTS ==
-    //  -- SI Units --
-    TEST_F(si_unit_test, construction) // NOLINT
+    //  -- Dimension --
+    TEST_F(si_dimension_test, construction) // NOLINT
     {
+        ASSERT_EQ(_scalar.mag(), 0.0);
+        ASSERT_EQ(_mass.mag(), 0.0);
+        ASSERT_EQ(_length.mag(), 1.0);
+        ASSERT_EQ(_time.mag(), 2.0);
+    }
+
+    TEST_F(si_dimension_test, copy_construction) // NOLINT
+    {
+        const auto scalar{_scalar};
         ASSERT_EQ(scalar.mag(), 0.0);
+
+        const auto mass{_mass};
         ASSERT_EQ(mass.mag(), 0.0);
+
+        const auto length{_length};
         ASSERT_EQ(length.mag(), 1.0);
+
+        const auto time{_time};
         ASSERT_EQ(time.mag(), 2.0);
+    }
+
+    TEST(si_dimension_test, assignment) // NOLINT
+    {
+        arc::si::Scalar scalar = 0.0;
+        ASSERT_EQ(scalar.mag(), 0.0);
+
+        scalar += 1.0;
+        ASSERT_EQ(scalar.mag(), 1.0);
+
+        scalar -= -1.0;
+        ASSERT_EQ(scalar.mag(), 2.0);
+
+        scalar *= 2.0;
+        ASSERT_EQ(scalar.mag(), 4.0);
+
+        scalar /= 4.0;
+        ASSERT_EQ(scalar.mag(), 1.0);
     }
 
 
