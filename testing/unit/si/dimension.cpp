@@ -147,6 +147,12 @@ namespace test
         ASSERT_TRUE((_length - _length) == si::Length{0.0});
         ASSERT_TRUE((_time + _time) == si::Time{4.0});
         ASSERT_TRUE((vel * _time) == _length);
+
+        ASSERT_TRUE((2.0 * _time) == si::Time{4.0});
+        ASSERT_TRUE((_time * 0.5) == si::Time{1.0});
+
+        ASSERT_TRUE((2.0 / _time) == si::Frequency{1.0});
+        ASSERT_TRUE((_time / 0.5) == si::Time{4.0});
     }
 
     TEST_F(si_dimension_test, comparison) // NOLINT
