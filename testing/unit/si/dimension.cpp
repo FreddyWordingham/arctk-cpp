@@ -97,20 +97,37 @@ namespace test
 
     TEST_F(si_dimension_test, increment_decrement) // NOLINT
     {
+        using namespace arc;
+
         arc::si::Scalar scalar = 0.0;
         ASSERT_EQ(scalar.mag(), 0.0);
 
-        scalar += 1.0;
+        ASSERT_EQ((scalar++).mag(), 0.0);
         ASSERT_EQ(scalar.mag(), 1.0);
 
-        scalar -= -1.0;
-        ASSERT_EQ(scalar.mag(), 2.0);
+        ASSERT_EQ((scalar--).mag(), 1.0);
+        ASSERT_EQ(scalar.mag(), 0.0);
 
-        scalar *= 2.0;
-        ASSERT_EQ(scalar.mag(), 4.0);
-
-        scalar /= 4.0;
+        ASSERT_EQ((++scalar).mag(), 1.0);
         ASSERT_EQ(scalar.mag(), 1.0);
+
+        ASSERT_EQ((--scalar).mag(), 0.0);
+        ASSERT_EQ(scalar.mag(), 0.0);
+
+        arc::si::Mass mass{0.0};
+        ASSERT_EQ(mass.mag(), 0.0);
+
+        ASSERT_EQ((mass++).mag(), 0.0);
+        ASSERT_EQ(mass.mag(), 1.0);
+
+        ASSERT_EQ((mass--).mag(), 1.0);
+        ASSERT_EQ(mass.mag(), 0.0);
+
+        ASSERT_EQ((++mass).mag(), 1.0);
+        ASSERT_EQ(mass.mag(), 1.0);
+
+        ASSERT_EQ((--mass).mag(), 0.0);
+        ASSERT_EQ(mass.mag(), 0.0);
     }
 
 

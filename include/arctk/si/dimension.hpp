@@ -233,4 +233,16 @@ namespace arc
 
 
     } // namespace si
+
+
+
+    //  == OPERATORS ==
+    //  -- Increment / Decrement --
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline auto operator++(si::Dimension<M, L, T, K, C, I, N, A>& dim_, const int /*unused*/) noexcept;
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline auto operator--(si::Dimension<M, L, T, K, C, I, N, A>& dim_, const int /*unused*/) noexcept;
+
+
+
 } // namespace arc
