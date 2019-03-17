@@ -49,6 +49,8 @@ namespace test
 
     TEST_F(si_dimension_test, copy_construction) // NOLINT
     {
+        using namespace arc;
+
         const auto scalar{_scalar};
         ASSERT_EQ(scalar.mag(), 0.0);
 
@@ -60,6 +62,12 @@ namespace test
 
         const auto time{_time};
         ASSERT_EQ(time.mag(), 2.0);
+
+        const auto time_1{+_time};
+        ASSERT_EQ(time_1.mag(), +2.0);
+
+        const auto time_2{-_time};
+        ASSERT_EQ(time_2.mag(), -2.0);
     }
 
     TEST_F(si_dimension_test, assignment) // NOLINT

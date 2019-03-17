@@ -337,6 +337,20 @@ namespace arc
 
 
     //  == OPERATORS ==
+    //  -- Arithmetic --
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator+(const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    {
+        return (si::Dimension<M, L, T, K, C, I, N, A>{+rhs_.mag()});
+    }
+
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator-(const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    {
+        return (si::Dimension<M, L, T, K, C, I, N, A>{-rhs_.mag()});
+    }
+
+
     //  -- Increment / Decrement --
     template <int M, int L, int T, int K, int C, int I, int N, int A>
     constexpr inline auto operator++(si::Dimension<M, L, T, K, C, I, N, A>& dim_, const int /*unused*/) noexcept
