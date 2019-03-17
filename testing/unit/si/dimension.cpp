@@ -138,6 +138,17 @@ namespace test
         ASSERT_EQ(mass.mag(), 0.0);
     }
 
+    TEST_F(si_dimension_test, arithmetic) // NOLINT
+    {
+        using namespace arc;
+
+        const auto vel{_length / _time};
+        ASSERT_TRUE(vel == si::Velocity{0.5});
+        ASSERT_TRUE((_length - _length) == si::Length{0.0});
+        ASSERT_TRUE((_time + _time) == si::Time{4.0});
+        ASSERT_TRUE((vel * _time) == _length);
+    }
+
     TEST_F(si_dimension_test, comparison) // NOLINT
     {
         using namespace arc;
