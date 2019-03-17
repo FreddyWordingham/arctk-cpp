@@ -14,6 +14,9 @@
 #include <cassert>
 #include <cmath>
 
+//  -- Arc --
+#include "arctk/math/comparison.inl"
+
 
 
 //  == NAMESPACE ==
@@ -212,6 +215,13 @@ namespace arc
 
 
         //  == OPERATORS ==
+        //  -- Conversion --
+        constexpr inline Dimension<0, 0, 0, 0, 0, 0, 0, 0>::operator double() const
+        {
+            return (_mag);
+        }
+
+
         //  -- Assignment --
         template <int M, int L, int T, int K, int C, int I, int N, int A>
         constexpr inline const Dimension<M, L, T, K, C, I, N, A>& Dimension<M, L, T, K, C, I, N, A>::operator+=(const Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
@@ -346,6 +356,44 @@ namespace arc
         --dim_;
 
         return (dim);
+    }
+
+
+    //  -- Comparison --
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline bool operator==(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    {
+        return (math::equal(lhs_.mag(), rhs_.mag()));
+    }
+
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline bool operator!=(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    {
+        return (!(lhs_.mag() == rhs_.mag()));
+    }
+
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline bool operator<(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    {
+        return (lhs_.mag() < rhs_.mag());
+    }
+
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline bool operator>(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    {
+        return (lhs_.mag() > rhs_.mag());
+    }
+
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline bool operator<=(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    {
+        return (lhs_.mag() <= rhs_.mag());
+    }
+
+    template <int M, int L, int T, int K, int C, int I, int N, int A>
+    constexpr inline bool operator>=(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    {
+        return (lhs_.mag() >= rhs_.mag());
     }
 
 

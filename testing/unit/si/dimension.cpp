@@ -130,6 +130,41 @@ namespace test
         ASSERT_EQ(mass.mag(), 0.0);
     }
 
+    TEST_F(si_dimension_test, comparison) // NOLINT
+    {
+        using namespace arc;
+
+        ASSERT_TRUE(_scalar == 0.0);
+        ASSERT_FALSE(_scalar == 1.0);
+
+        ASSERT_TRUE(_scalar < 1.0);
+        ASSERT_FALSE(_scalar < -1.0);
+
+        ASSERT_TRUE(_scalar <= 1.0);
+        ASSERT_FALSE(_scalar <= -1.0);
+
+        ASSERT_TRUE(1.0 > _scalar);
+        ASSERT_FALSE(-1.0 > _scalar);
+
+        ASSERT_TRUE(1.0 >= _scalar);
+        ASSERT_FALSE(-1.0 >= _scalar);
+
+        ASSERT_TRUE(_mass == si::Mass{0.0});
+        ASSERT_FALSE(_mass == si::Mass{1.0});
+
+        ASSERT_TRUE(_mass < si::Mass{1.0});
+        ASSERT_FALSE(_mass < si::Mass{-1.0});
+
+        ASSERT_TRUE(_mass <= si::Mass{1.0});
+        ASSERT_FALSE(_mass <= si::Mass{-1.0});
+
+        ASSERT_TRUE(si::Mass{1.0} > _mass);
+        ASSERT_FALSE(si::Mass{-1.0} > _mass);
+
+        ASSERT_TRUE(si::Mass{1.0} >= _mass);
+        ASSERT_FALSE(si::Mass{-1.0} >= _mass);
+    }
+
 
 
 } // namespace test
