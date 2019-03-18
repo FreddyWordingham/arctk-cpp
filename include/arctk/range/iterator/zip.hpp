@@ -61,7 +61,7 @@ namespace arc
                 constexpr inline const Zip operator++(int /*unused*/) noexcept;
 
                 //  -- Member Access --
-                constexpr inline std::tuple<I, J...> operator*() noexcept;
+                constexpr inline auto operator*() noexcept;
             };
 
 

@@ -50,9 +50,14 @@ namespace test
         std::size_t index{0};
         for (; begin != end; ++begin, ++index)
         {
-            ASSERT_EQ(*std::get<0>(*begin), _arr_ascend[index]);    // NOLINT
-            ASSERT_EQ(*std::get<1>(*begin), _arr_prime[index]);     // NOLINT
-            ASSERT_EQ(*std::get<2>(*begin), _arr_non_prime[index]); // NOLINT
+            const auto ans_0 = std::get<0>(*begin);
+            ASSERT_EQ(ans_0, _arr_ascend[index]); // NOLINT
+
+            const auto ans_1 = std::get<1>(*begin);
+            ASSERT_EQ(ans_1, _arr_prime[index]); // NOLINT
+
+            const auto ans_2 = std::get<2>(*begin);
+            ASSERT_EQ(ans_2, _arr_non_prime[index]); // NOLINT
         }
     }
 

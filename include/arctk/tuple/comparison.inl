@@ -31,7 +31,7 @@ namespace arc
         //  == FUNCTIONS ==
         //  -- Comparison --
         template <typename... A, typename... B, typename>
-        constexpr inline auto any_equal_elems(const std::tuple<A...>& tup_0_, const std::tuple<B...>& tup_1_) noexcept
+        constexpr inline bool any_equal_elems(const std::tuple<A...>& tup_0_, const std::tuple<B...>& tup_1_) noexcept
         {
             bool equal{false};
 
@@ -41,7 +41,7 @@ namespace arc
         }
 
         template <typename... A, typename... B, typename>
-        constexpr inline auto num_equal_elems(const std::tuple<A...>& tup_0_, const std::tuple<B...>& tup_1_) noexcept
+        constexpr inline std::size_t num_equal_elems(const std::tuple<A...>& tup_0_, const std::tuple<B...>& tup_1_) noexcept
         {
             std::size_t num_equal{};
             for_each_zip(tup_0_, tup_1_, [&](const auto& t_0_, const auto& t_1_) { num_equal += (t_0_ == t_1_) ? 1 : 0; });
