@@ -8,7 +8,7 @@
 //  -- Std --
 #include <array>
 
-#include <iostream>
+
 
 //  == PRAGMAS ==
 //  -- Warnings --
@@ -49,7 +49,6 @@ namespace test
             ASSERT_EQ(prime_0, prime_1);
             ASSERT_NE(prime_0, non_prime);
             ASSERT_NE(prime_1, non_prime);
-            std::cout << prime_1 << '\n';
         }
     }
 
