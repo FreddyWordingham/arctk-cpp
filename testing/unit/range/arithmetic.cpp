@@ -95,6 +95,18 @@ namespace test
         ASSERT_TRUE(res == ans);
     }
 
+    TEST(array_array_arithmetic, addition_1) // NOLINT
+    {
+        using namespace arc; // NOLINT
+
+        const std::array<int, 5>  vec_0{0, 1, 2, 3, 4};
+        const std::array<char, 5> arr_0{1, 1, 2, 3, 5};
+        const auto                res{vec_0 + arr_0};
+
+        const std::vector<int> ans{1, 2, 4, 6, 9};
+        ASSERT_TRUE(res == ans);
+    }
+
 
 
 } // namespace test
