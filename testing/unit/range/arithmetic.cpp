@@ -184,6 +184,28 @@ namespace test
         ASSERT_TRUE(res == ans);
     }
 
+    TEST(vector_primitive_arithmetic, addition) // NOLINT
+    {
+        using namespace arc; // NOLINT
+
+        const std::vector<int> vec_0{8, 8, 5, 2, 6};
+        const auto             res{vec_0 + 7};
+
+        const std::vector<int> ans{15, 15, 12, 9, 13};
+        ASSERT_TRUE(res == ans);
+    }
+
+    TEST(array_primitive_arithmetic, addition) // NOLINT
+    {
+        using namespace arc; // NOLINT
+
+        const std::array<int, 5> arr_0{8, 8, 5, 2, 6};
+        const auto               res{arr_0 + 7};
+
+        const std::vector<int> ans{15, 15, 12, 9, 13};
+        ASSERT_TRUE(res == ans);
+    }
+
     TEST(vector_vector_arithmetic, addition) // NOLINT
     {
         using namespace arc; // NOLINT
@@ -229,6 +251,28 @@ namespace test
         const auto               res{vec_0 + arr_0};
 
         const std::vector<int> ans{9, 9, 7, 5, 11};
+        ASSERT_TRUE(res == ans);
+    }
+
+    TEST(vector_primitive_arithmetic, subtraction) // NOLINT
+    {
+        using namespace arc; // NOLINT
+
+        const std::vector<int> vec_0{8, 8, 5, 2, 6};
+        const auto             res{vec_0 - 7};
+
+        const std::vector<int> ans{1, 1, -2, -5, -1};
+        ASSERT_TRUE(res == ans);
+    }
+
+    TEST(array_primitive_arithmetic, subtraction) // NOLINT
+    {
+        using namespace arc; // NOLINT
+
+        const std::array<int, 5> arr_0{8, 8, 5, 2, 6};
+        const auto               res{arr_0 - 7};
+
+        const std::vector<int> ans{1, 1, -2, -5, -1};
         ASSERT_TRUE(res == ans);
     }
 
@@ -280,6 +324,28 @@ namespace test
         ASSERT_TRUE(res == ans);
     }
 
+    TEST(vector_primitive_arithmetic, multiplication) // NOLINT
+    {
+        using namespace arc; // NOLINT
+
+        const std::vector<int> vec_0{8, 8, 5, 2, 6};
+        const auto             res{vec_0 * 7};
+
+        const std::vector<int> ans{56, 56, 35, 14, 42};
+        ASSERT_TRUE(res == ans);
+    }
+
+    TEST(array_primitive_arithmetic, multiplication) // NOLINT
+    {
+        using namespace arc; // NOLINT
+
+        const std::array<int, 5> arr_0{8, 8, 5, 2, 6};
+        const auto               res{arr_0 * 7};
+
+        const std::vector<int> ans{56, 56, 35, 14, 42};
+        ASSERT_TRUE(res == ans);
+    }
+
     TEST(vector_vector_arithmetic, multiplication) // NOLINT
     {
         using namespace arc; // NOLINT
@@ -328,6 +394,28 @@ namespace test
         ASSERT_TRUE(res == ans);
     }
 
+    TEST(vector_primitive_arithmetic, division) // NOLINT
+    {
+        using namespace arc; // NOLINT
+
+        const std::vector<int> vec_0{8, 8, 5, 2, 6};
+        const auto             res{vec_0 / 7};
+
+        const std::vector<int> ans{1, 1, 0, 0, 0};
+        ASSERT_TRUE(res == ans);
+    }
+
+    TEST(array_primitive_arithmetic, division) // NOLINT
+    {
+        using namespace arc; // NOLINT
+
+        const std::array<int, 5> arr_0{8, 8, 5, 2, 6};
+        const auto               res{arr_0 / 7};
+
+        const std::vector<int> ans{1, 1, 0, 0, 0};
+        ASSERT_TRUE(res == ans);
+    }
+
     TEST(vector_vector_arithmetic, division) // NOLINT
     {
         using namespace arc; // NOLINT
@@ -373,6 +461,28 @@ namespace test
         const auto               res{vec_0 / arr_0};
 
         const std::vector<int> ans{8, 8, 3, 1, 4};
+        ASSERT_TRUE(res == ans);
+    }
+
+    TEST(vector_primitive_arithmetic, modulo) // NOLINT
+    {
+        using namespace arc; // NOLINT
+
+        const std::vector<int> vec_0{8, 8, 5, 2, 6};
+        const auto             res{vec_0 % 7};
+
+        const std::vector<int> ans{1, 1, 5, 2, 6};
+        ASSERT_TRUE(res == ans);
+    }
+
+    TEST(array_primitive_arithmetic, modulo) // NOLINT
+    {
+        using namespace arc; // NOLINT
+
+        const std::array<int, 5> arr_0{8, 8, 5, 2, 6};
+        const auto               res{arr_0 % 7};
+
+        const std::vector<int> ans{1, 1, 5, 2, 6};
         ASSERT_TRUE(res == ans);
     }
 

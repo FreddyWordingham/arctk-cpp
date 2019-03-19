@@ -109,6 +109,20 @@ namespace arc
         return (range);
     }
 
+    template <typename R, typename T, typename>
+    inline std::vector<decltype(*(std::declval<R>().begin()) + std::declval<T>())> operator+(const R& lhs_, const T& rhs_) noexcept
+    {
+        std::vector<decltype(*(std::declval<R>().begin()) + std::declval<T>())> res;
+        res.reserve(lhs_.size());
+
+        for (const auto l : lhs_)
+        {
+            res.emplace_back(l + rhs_);
+        }
+
+        return (res);
+    }
+
     template <typename Rl, typename Rr, typename>
     inline std::vector<decltype(*(std::declval<Rl>().begin()) + *(std::declval<Rr>().begin()))> operator+(const Rl& lhs_, const Rr& rhs_) noexcept
     {
@@ -120,6 +134,20 @@ namespace arc
         for (const auto [l, r] : range::view::Zip{lhs_, rhs_})
         {
             res.emplace_back(l + r);
+        }
+
+        return (res);
+    }
+
+    template <typename R, typename T, typename>
+    inline std::vector<decltype(*(std::declval<R>().begin()) - std::declval<T>())> operator-(const R& lhs_, const T& rhs_) noexcept
+    {
+        std::vector<decltype(*(std::declval<R>().begin()) - std::declval<T>())> res;
+        res.reserve(lhs_.size());
+
+        for (const auto l : lhs_)
+        {
+            res.emplace_back(l - rhs_);
         }
 
         return (res);
@@ -141,6 +169,20 @@ namespace arc
         return (res);
     }
 
+    template <typename R, typename T, typename>
+    inline std::vector<decltype(*(std::declval<R>().begin()) * std::declval<T>())> operator*(const R& lhs_, const T& rhs_) noexcept
+    {
+        std::vector<decltype(*(std::declval<R>().begin()) * std::declval<T>())> res;
+        res.reserve(lhs_.size());
+
+        for (const auto l : lhs_)
+        {
+            res.emplace_back(l * rhs_);
+        }
+
+        return (res);
+    }
+
     template <typename Rl, typename Rr, typename>
     inline std::vector<decltype(*(std::declval<Rl>().begin()) * *(std::declval<Rr>().begin()))> operator*(const Rl& lhs_, const Rr& rhs_) noexcept
     {
@@ -157,6 +199,20 @@ namespace arc
         return (res);
     }
 
+    template <typename R, typename T, typename>
+    inline std::vector<decltype(*(std::declval<R>().begin()) / std::declval<T>())> operator/(const R& lhs_, const T& rhs_) noexcept
+    {
+        std::vector<decltype(*(std::declval<R>().begin()) / std::declval<T>())> res;
+        res.reserve(lhs_.size());
+
+        for (const auto l : lhs_)
+        {
+            res.emplace_back(l / rhs_);
+        }
+
+        return (res);
+    }
+
     template <typename Rl, typename Rr, typename>
     inline std::vector<decltype(*(std::declval<Rl>().begin()) / *(std::declval<Rr>().begin()))> operator/(const Rl& lhs_, const Rr& rhs_) noexcept
     {
@@ -168,6 +224,20 @@ namespace arc
         for (const auto [l, r] : range::view::Zip{lhs_, rhs_})
         {
             res.emplace_back(l / r);
+        }
+
+        return (res);
+    }
+
+    template <typename R, typename T, typename>
+    inline std::vector<decltype(*(std::declval<R>().begin()) % std::declval<T>())> operator%(const R& lhs_, const T& rhs_) noexcept
+    {
+        std::vector<decltype(*(std::declval<R>().begin()) % std::declval<T>())> res;
+        res.reserve(lhs_.size());
+
+        for (const auto l : lhs_)
+        {
+            res.emplace_back(l % rhs_);
         }
 
         return (res);
