@@ -12,7 +12,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
-#include <utility>
+#include <tuple>
 
 
 
@@ -26,29 +26,29 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- For Each --
-        template <typename... A, typename F>
-        constexpr inline void for_each(const std::tuple<A...>& tuple_, const F& func_) noexcept
+        template <template <typename...> typename T, typename... A, typename F>
+        constexpr inline void for_each(const T<A...>& tuple_, const F& func_) noexcept
         {
             for_each_helper(tuple_, func_, std::make_index_sequence<sizeof...(A)>{});
         }
 
-        template <typename... A, typename F, typename std::size_t... I>
-        constexpr inline void for_each_helper(const std::tuple<A...>& tuple_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept
+        template <template <typename...> typename T, typename... A, typename F, typename std::size_t... I>
+        constexpr inline void for_each_helper(const T<A...>& tuple_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept
         {
             using swallow = int[];
             (void)swallow{1, (func_(std::get<I>(tuple_)), void(), int{})...};
         }
 
-        template <typename... A, typename F>
-        constexpr inline void for_each(std::tuple<A...>* const tuple_, const F& func_) noexcept
+        template <template <typename...> typename T, typename... A, typename F>
+        constexpr inline void for_each(T<A...>* const tuple_, const F& func_) noexcept
         {
             assert(tuple_ != nullptr);
 
             for_each_helper(tuple_, func_, std::make_index_sequence<sizeof...(A)>{});
         }
 
-        template <typename... A, typename F, typename std::size_t... I>
-        constexpr inline void for_each_helper(std::tuple<A...>* const tuple_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept
+        template <template <typename...> typename T, typename... A, typename F, typename std::size_t... I>
+        constexpr inline void for_each_helper(T<A...>* const tuple_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept
         {
             assert(tuple_ != nullptr);
 
@@ -56,21 +56,21 @@ namespace arc
             (void)swallow{1, (func_(std::get<I>(*tuple_)), void(), int{})...};
         }
 
-        template <typename... A, typename... B, typename F, typename>
-        constexpr inline void for_each_zip(const std::tuple<A...>& tuple_0_, const std::tuple<B...>& tuple_1_, const F& func_) noexcept
+        template <template <typename...> typename T, typename... A, typename... B, typename F, typename>
+        constexpr inline void for_each_zip(const T<A...>& tuple_0_, const T<B...>& tuple_1_, const F& func_) noexcept
         {
             for_each_zip_helper(tuple_0_, tuple_1_, func_, std::make_index_sequence<sizeof...(A)>{});
         }
 
-        template <typename... A, typename... B, typename F, typename std::size_t... I, typename>
-        constexpr inline void for_each_zip_helper(const std::tuple<A...>& tuple_0_, const std::tuple<B...>& tuple_1_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept
+        template <template <typename...> typename T, typename... A, typename... B, typename F, typename std::size_t... I, typename>
+        constexpr inline void for_each_zip_helper(const T<A...>& tuple_0_, const T<B...>& tuple_1_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept
         {
             using swallow = int[];
             (void)swallow{1, (func_(std::get<I>(tuple_0_), std::get<I>(tuple_1_)), void(), int{})...};
         }
 
-        template <typename... A, typename... B, typename F, typename>
-        constexpr inline void for_each_zip(std::tuple<A...>* const tuple_0_, std::tuple<B...>* const tuple_1_, const F& func_) noexcept
+        template <template <typename...> typename T, typename... A, typename... B, typename F, typename>
+        constexpr inline void for_each_zip(T<A...>* const tuple_0_, T<B...>* const tuple_1_, const F& func_) noexcept
         {
             assert(tuple_0_ != nullptr);
             assert(tuple_1_ != nullptr);
@@ -78,8 +78,8 @@ namespace arc
             for_each_zip_helper(tuple_0_, tuple_1_, func_, std::make_index_sequence<sizeof...(A)>{});
         }
 
-        template <typename... A, typename... B, typename F, typename std::size_t... I, typename>
-        constexpr inline void for_each_zip_helper(std::tuple<A...>* const tuple_0_, std::tuple<B...>* const tuple_1_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept
+        template <template <typename...> typename T, typename... A, typename... B, typename F, typename std::size_t... I, typename>
+        constexpr inline void for_each_zip_helper(T<A...>* const tuple_0_, T<B...>* const tuple_1_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept
         {
             assert(tuple_0_ != nullptr);
             assert(tuple_1_ != nullptr);
@@ -90,8 +90,8 @@ namespace arc
 
 
         //  -- Transform --
-        template <typename... A, typename F>
-        constexpr auto transform(const std::tuple<A...>& tuple_, const F& func_) noexcept
+        template <template <typename...> typename T, typename... A, typename F>
+        constexpr auto transform(const T<A...>& tuple_, const F& func_) noexcept
         {
             return (transform_helper(tuple_, func_, std::make_index_sequence<sizeof...(A)>{}));
         }
