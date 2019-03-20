@@ -9,6 +9,12 @@
 
 
 
+//  == IMPORTS ==
+//  -- Std --
+#include <cassert>
+
+
+
 //  == NAMESPACE ==
 namespace arc
 {
@@ -54,6 +60,22 @@ namespace arc
 
 
         //  == OPERATORS ==
+        //  -- Access --
+        template <typename T, std::size_t N>
+        constexpr inline T& Col<T, N>::operator[](const std::size_t index_) noexcept
+        {
+            assert(index_ < N);
+
+            return (_elems[index_]);
+        }
+
+        template <typename T, std::size_t N>
+        constexpr inline const T& Col<T, N>::operator[](const std::size_t index_) const noexcept
+        {
+            assert(index_ < N);
+
+            return (_elems[index_]);
+        }
 
 
 

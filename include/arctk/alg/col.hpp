@@ -44,6 +44,11 @@ namespace arc
 
             //  == OPERATORS ==
           public:
+            //  -- Access --
+            constexpr inline T&       operator[](const std::size_t index_) noexcept;
+            constexpr inline const T& operator[](const std::size_t index_) const noexcept;
+
+
             //  == METHODS ==
           public:
             //  -- Getters --
