@@ -43,8 +43,7 @@ namespace arc
         //  -- Ranges --
         TRAIT(is_rangeable,                             //
               decltype(std::begin(std::declval<T&>())), //
-              decltype(std::end(std::declval<T&>())),   //
-              typename T::value_type                    //
+              decltype(std::end(std::declval<T&>()))    //
         );
 
 

@@ -43,7 +43,7 @@ namespace arc
                 //  == FIELDS ==
               private:
                 //  -- Functors --
-                const F _pred;
+                F _pred;
 
 
                 //  == INSTANTIATION ==
@@ -54,7 +54,6 @@ namespace arc
               private:
                 //  -- Initialisation --
                 static constexpr inline I init_it(const I& start_, const I& end_, const F& pred_) noexcept;
-
 
                 //  == OPERATORS ==
               public:

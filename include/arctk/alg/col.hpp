@@ -44,6 +44,10 @@ namespace arc
 
             //  == OPERATORS ==
           public:
+            //  -- Assignment --
+            template <typename S>
+            constexpr inline Col& operator+=(const S& val_) noexcept;
+
             //  -- Access --
             constexpr inline T&       operator[](const std::size_t index_) noexcept;
             constexpr inline const T& operator[](const std::size_t index_) const noexcept;

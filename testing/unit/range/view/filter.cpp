@@ -59,6 +59,25 @@ namespace test
         ASSERT_TRUE(filt == (std::vector<int>{6, 8}));
     }
 
+    TEST_F(array_int, Filter2) // NOLINT
+    {
+        auto               is_lt_10 = [](const int& i_) { return (i_ < 10); };
+        std::array<int, 8> arr{0, 1, 4, 6, 8, 9, 10, 12};
+
+        {
+            auto barr = arc::range::view::Filter{arr, is_lt_10};
+
+            auto&& __range = barr;
+            auto   __begin = std::begin(barr);
+            auto   __end   = std::end(barr);
+            for (; __begin != __end; ++__begin)
+            {
+                auto& x = *__begin;
+                x += 2;
+            }
+        }
+    }
+
 
 
 } // namespace test

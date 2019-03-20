@@ -11,6 +11,7 @@
 
 //  == IMPORTS ==
 //  -- Std --
+#include "arctk/range/properties.inl"
 #include "arctk/range/view/zip.inl"
 
 //  -- Std --
@@ -29,9 +30,21 @@ namespace arc
     template <typename R, typename T, typename>
     inline R& operator+=(R& lhs_, const T& rhs_) noexcept
     {
-        for (auto& l : lhs_)
+        if constexpr (type::is_rangeable_v<T>)
         {
-            l += rhs_;
+            assert(range::num_its(lhs_) == range::num_its(rhs_));
+
+            // for (auto& [l, r] : range::view::Zip{lhs_, rhs_}) // TODO find a way of zipping a const and non-const range.
+            // {
+            //     l += r;
+            // }
+        }
+        else
+        {
+            for (auto& l : lhs_)
+            {
+                l += rhs_;
+            }
         }
 
         return (lhs_);
