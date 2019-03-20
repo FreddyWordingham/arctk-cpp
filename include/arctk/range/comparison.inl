@@ -15,6 +15,7 @@
 
 //  -- Std --
 #include <algorithm>
+#include <iterator>
 
 
 
@@ -29,7 +30,7 @@ namespace arc
     template <typename RL, typename RR, typename>
     constexpr inline bool operator==(const RL& lhs_, const RR& rhs_) noexcept
     {
-        return ((range::num_its(lhs_) == range::num_its(rhs_)) && std::equal(lhs_.begin(), lhs_.end(), rhs_.begin()));
+        return ((range::num_its(lhs_) == range::num_its(rhs_)) && std::equal(std::begin(lhs_), std::end(lhs_), std::begin(rhs_)));
     }
 
     template <typename RL, typename RR, typename>

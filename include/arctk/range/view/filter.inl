@@ -21,6 +21,9 @@
 #include "arctk/range/iterator/filter.inl" // IWYU pragma: keep
 #include "arctk/range/preview/filter.hpp"  // IWYU pragma: keep
 
+//  -- Std --
+#include <iterator>
+
 
 
 //  == NAMESPACE ==
@@ -49,13 +52,13 @@ namespace arc
             template <typename R, typename F>
             constexpr inline auto Filter<R, F>::begin() const noexcept
             {
-                return (iterator::Filter{View<R>::_range.begin(), View<R>::_range.end(), _pred});
+                return (iterator::Filter{std::begin(View<R>::_range), std::end(View<R>::_range), _pred});
             }
 
             template <typename R, typename F>
             constexpr inline auto Filter<R, F>::end() const noexcept
             {
-                return (iterator::Filter{View<R>::_range.end(), View<R>::_range.end(), _pred});
+                return (iterator::Filter{std::end(View<R>::_range), std::end(View<R>::_range), _pred});
             }
 
 

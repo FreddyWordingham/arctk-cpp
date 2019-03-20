@@ -21,6 +21,9 @@
 #include "arctk/range/iterator/transform.inl"
 #include "arctk/range/preview/transform.inl"
 
+//  -- Std --
+#include <iterator>
+
 
 
 //  == NAMESPACE ==
@@ -49,13 +52,13 @@ namespace arc
             template <typename R, typename F>
             constexpr inline auto Transform<R, F>::begin() const noexcept
             {
-                return (iterator::Transform{View<R>::_range.begin(), View<R>::_range.end(), _trans});
+                return (iterator::Transform{std::begin(View<R>::_range), std::end(View<R>::_range), _trans}); // TODO change to functions
             }
 
             template <typename R, typename F>
             constexpr inline auto Transform<R, F>::end() const noexcept
             {
-                return (iterator::Transform{View<R>::_range.end(), View<R>::_range.end(), _trans});
+                return (iterator::Transform{std::end(View<R>::_range), std::end(View<R>::_range), _trans}); // TODO change to functions
             }
 
 

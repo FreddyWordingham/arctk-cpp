@@ -4,7 +4,8 @@
 
 
 //  == IMPORTS ==
-//  -- Arc --
+//  -- Std --
+#include <iterator>
 #include <utility>
 
 
@@ -40,10 +41,10 @@ namespace arc
 
         //  == STRUCTURES ==
         //  -- Ranges --
-        TRAIT(is_rangeable,                        //
-              decltype(begin(std::declval<T&>())), //
-              decltype(end(std::declval<T&>())),   //
-              typename T::value_type               //
+        TRAIT(is_rangeable,                             //
+              decltype(std::begin(std::declval<T&>())), //
+              decltype(std::end(std::declval<T&>())),   //
+              typename T::value_type                    //
         );
 
 

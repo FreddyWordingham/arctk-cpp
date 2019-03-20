@@ -13,6 +13,7 @@
 //  -- Std --
 #include <algorithm>
 #include <cassert>
+#include <iterator>
 
 
 
@@ -31,13 +32,13 @@ namespace arc
         {
             assert(range_ != nullptr);
 
-            std::for_each((*range_).begin(), (*range_).end(), trans_);
+            std::for_each(std::begin(*range_), std::end(*range_), trans_);
         }
 
         template <typename R, typename F>
         constexpr inline void for_each(const R& range_, const F& trans_) noexcept
         {
-            std::for_each(range_.begin(), range_.end(), trans_);
+            std::for_each(std::begin(range_), std::end(range_), trans_);
         }
 
 
@@ -47,7 +48,7 @@ namespace arc
         {
             assert(range_ != nullptr);
 
-            std::sort((*range_).begin(), (*range_).end());
+            std::sort(std::begin(*range_), std::end(*range_));
         }
 
         template <typename R>
@@ -55,7 +56,7 @@ namespace arc
         {
             assert(range_ != nullptr);
 
-            std::reverse((*range_).begin(), (*range_).end());
+            std::reverse(std::begin(*range_), std::end(*range_));
         }
 
         template <typename R, typename I>
@@ -64,7 +65,7 @@ namespace arc
             assert(range_ != nullptr);
             assert(n_ >= 0);
 
-            std::rotate((*range_).begin(), (*range_).begin() + n_, (*range_).end());
+            std::rotate(std::begin(*range_), std::begin(*range_) + n_, std::end(*range_));
         }
 
 

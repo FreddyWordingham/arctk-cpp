@@ -33,6 +33,9 @@ namespace arc
             template <typename R, typename... A>
             class Zip : public View<R>
             {
+                //  == FIELDS ==
+              private:
+                //  -- Iterators --
                 const std::tuple<const A&...> _ranges;
 
 

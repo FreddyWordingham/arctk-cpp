@@ -44,7 +44,7 @@ namespace arc
         {
             assert(bounded(range_, x_));
 
-            return (std::distance(range_.begin(), std::lower_bound(range_.begin(), range_.end(), x_)) - 1);
+            return (std::distance(std::begin(range_), std::lower_bound(std::begin(range_), std::end(range_), x_)) - 1);
         }
 
         template <typename R, typename T>
@@ -52,31 +52,31 @@ namespace arc
         {
             assert(bounded(range_, x_));
 
-            return (std::distance(range_.begin(), std::upper_bound(range_.begin(), range_.end(), x_)));
+            return (std::distance(std::begin(range_), std::upper_bound(std::begin(range_), std::end(range_), x_)));
         }
 
         template <typename R, typename T>
         constexpr inline auto find_index(const R& range_, const T& val_) noexcept
         {
-            const auto it{std::find(range_.begin(), range_.end(), val_)};
+            const auto it{std::find(std::begin(range_), std::end(range_), val_)};
 
-            return (it == range_.end() ? std::nullopt : std::make_optional(std::distance(range_.begin(), it)));
+            return (it == std::end(range_) ? std::nullopt : std::make_optional(std::distance(std::begin(range_), it)));
         }
 
         template <typename R, typename F>
         constexpr inline auto find_index_if(const R& range_, const F& pred_) noexcept
         {
-            const auto it{std::find_if(range_.begin(), range_.end(), pred_)};
+            const auto it{std::find_if(std::begin(range_), std::end(range_), pred_)};
 
-            return (it == range_.end() ? std::nullopt : std::make_optional(std::distance(range_.begin(), it)));
+            return (it == std::end(range_) ? std::nullopt : std::make_optional(std::distance(std::begin(range_), it)));
         }
 
         template <typename R, typename F>
         constexpr inline auto find_index_if_not(const R& range_, const F& pred_) noexcept
         {
-            const auto it{std::find_if_not(range_.begin(), range_.end(), pred_)};
+            const auto it{std::find_if_not(std::begin(range_), std::end(range_), pred_)};
 
-            return (it == range_.end() ? std::nullopt : std::make_optional(std::distance(range_.begin(), it)));
+            return (it == std::end(range_) ? std::nullopt : std::make_optional(std::distance(std::begin(range_), it)));
         }
 
 

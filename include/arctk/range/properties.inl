@@ -31,7 +31,7 @@ namespace arc
         template <typename R>
         constexpr inline std::size_t num_its(const R& range_) noexcept
         {
-            const auto dist{std::distance(range_.begin(), range_.end())};
+            const auto dist{std::distance(std::begin(range_), std::end(range_))};
 
             assert(dist >= 0);
 
@@ -41,31 +41,31 @@ namespace arc
         template <typename R, typename F>
         constexpr inline bool all_of(const R& range_, const F& pred_) noexcept
         {
-            return (std::all_of(range_.begin(), range_.end(), pred_));
+            return (std::all_of(std::begin(range_), std::end(range_), pred_));
         }
 
         template <typename R, typename F>
         constexpr inline bool any_of(const R& range_, const F& pred_) noexcept
         {
-            return (std::any_of(range_.begin(), range_.end(), pred_));
+            return (std::any_of(std::begin(range_), std::end(range_), pred_));
         }
 
         template <typename R, typename F>
         constexpr inline bool none_of(const R& range_, const F& pred_) noexcept
         {
-            return (std::none_of(range_.begin(), range_.end(), pred_));
+            return (std::none_of(std::begin(range_), std::end(range_), pred_));
         }
 
         template <typename R, typename T>
         constexpr inline auto count(const R& range_, const T& val_) noexcept
         {
-            return (std::count(range_.begin(), range_.end(), val_));
+            return (std::count(std::begin(range_), std::end(range_), val_));
         }
 
         template <typename R, typename F>
         constexpr inline auto count_if(const R& range_, const F& pred_) noexcept
         {
-            return (std::count_if(range_.begin(), range_.end(), pred_));
+            return (std::count_if(std::begin(range_), std::end(range_), pred_));
         }
 
 
@@ -75,7 +75,7 @@ namespace arc
         {
             assert(!range_.empty());
 
-            return (*std::min_element(range_.begin(), range_.end()));
+            return (*std::min_element(std::begin(range_), std::end(range_)));
         }
 
         template <typename R>
@@ -83,7 +83,7 @@ namespace arc
         {
             assert(!range_.empty());
 
-            return (*std::max_element(range_.begin(), range_.end()));
+            return (*std::max_element(std::begin(range_), std::end(range_)));
         }
 
 
@@ -91,7 +91,7 @@ namespace arc
         template <typename R>
         constexpr inline bool is_sorted(const R& range_) noexcept
         {
-            return (std::is_sorted(range_.begin(), range_.end()));
+            return (std::is_sorted(std::begin(range_), std::end(range_)));
         }
 
 
