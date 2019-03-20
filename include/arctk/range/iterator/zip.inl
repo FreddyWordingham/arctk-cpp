@@ -19,7 +19,6 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
-#include <tuple>
 
 //  -- Arc --
 #include "arctk/tuple/comparison.inl"
@@ -80,7 +79,7 @@ namespace arc
             template <typename I, typename... J>
             constexpr auto Zip<I, J...>::operator*() noexcept
             {
-                return (std::tuple_cat(std::make_tuple(*Iterator<I>::_it), tuple::transform(_its, [](const auto& it_) { return (*it_); })));
+                return (std::tuple_cat(std::make_tuple(Iterator<I>::_it), _its));
             }
 
 

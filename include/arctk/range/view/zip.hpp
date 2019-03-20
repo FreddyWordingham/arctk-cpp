@@ -36,7 +36,7 @@ namespace arc
                 //  == FIELDS ==
               private:
                 //  -- Iterators --
-                const std::tuple<const A&...> _ranges;
+                const std::tuple<A&...> _ranges;
 
 
                 //  == INSTANTIATION ==
@@ -56,14 +56,4 @@ namespace arc
 
         } // namespace view
     }     // namespace range
-
-
-
-    //  == OPERATORS ==
-    //  -- Pipe --
-    template <typename... A>
-    constexpr inline auto operator|(const std::tuple<const A&...>& ranges_, const range::preview::Zip& zip_) noexcept;
-
-
-
 } // namespace arc

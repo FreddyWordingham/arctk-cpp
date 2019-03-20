@@ -50,9 +50,9 @@ namespace test
         std::size_t index{0};
         for (; begin != end; ++begin, ++index)
         {
-            ASSERT_EQ(std::get<0>(*begin), _arr_ascend[index]);
-            ASSERT_EQ(std::get<1>(*begin), _arr_prime[index]);
-            ASSERT_EQ(std::get<2>(*begin), _arr_non_prime[index]);
+            ASSERT_EQ(*std::get<0>(*begin), _arr_ascend[index]);
+            ASSERT_EQ(*std::get<1>(*begin), _arr_prime[index]);
+            ASSERT_EQ(*std::get<2>(*begin), _arr_non_prime[index]);
         }
     }
 

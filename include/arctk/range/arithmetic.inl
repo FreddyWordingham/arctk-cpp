@@ -34,10 +34,10 @@ namespace arc
         {
             assert(range::num_its(lhs_) == range::num_its(rhs_));
 
-            // for (auto& [l, r] : range::view::Zip{lhs_, rhs_}) // TODO find a way of zipping a const and non-const range.
-            // {
-            //     l += r;
-            // }
+            for (auto [l, r] : range::view::Zip{lhs_, rhs_}) // TODO find a way of auto dereferencing when using tuple.
+            {
+                *l += *r;
+            }
         }
         else
         {
@@ -146,7 +146,7 @@ namespace arc
 
         for (const auto [l, r] : range::view::Zip{lhs_, rhs_})
         {
-            res.emplace_back(l + r);
+            res.emplace_back(*l + *r);
         }
 
         return (res);
@@ -176,7 +176,7 @@ namespace arc
 
         for (const auto [l, r] : range::view::Zip{lhs_, rhs_})
         {
-            res.emplace_back(l - r);
+            res.emplace_back(*l - *r);
         }
 
         return (res);
@@ -206,7 +206,7 @@ namespace arc
 
         for (const auto [l, r] : range::view::Zip{lhs_, rhs_})
         {
-            res.emplace_back(l * r);
+            res.emplace_back(*l * *r);
         }
 
         return (res);
@@ -236,7 +236,7 @@ namespace arc
 
         for (const auto [l, r] : range::view::Zip{lhs_, rhs_})
         {
-            res.emplace_back(l / r);
+            res.emplace_back(*l / *r);
         }
 
         return (res);
@@ -266,7 +266,7 @@ namespace arc
 
         for (const auto [l, r] : range::view::Zip{lhs_, rhs_})
         {
-            res.emplace_back(l % r);
+            res.emplace_back(*l % *r);
         }
 
         return (res);

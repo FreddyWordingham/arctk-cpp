@@ -39,7 +39,7 @@ namespace test
         ASSERT_TRUE(arr == ans);
     }
 
-    TEST(vector_arithmetic, addition) // NOLINT
+    TEST(vector_arithmetic, val_addition) // NOLINT
     {
         using namespace arc; // NOLINT
 
@@ -47,6 +47,17 @@ namespace test
         vec += 7;
 
         const std::vector<int> ans{7, 8, 9, 10, 11};
+        ASSERT_TRUE(vec == ans);
+    }
+
+    TEST(vector_arithmetic, vector_addition) // NOLINT
+    {
+        using namespace arc; // NOLINT
+
+        std::vector<int> vec{0, 1, 2, 3, 4};
+        vec += vec;
+
+        const std::vector<int> ans{0, 2, 4, 6, 8};
         ASSERT_TRUE(vec == ans);
     }
 

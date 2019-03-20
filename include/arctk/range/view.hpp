@@ -26,7 +26,7 @@ namespace arc
             //  == FIELDS ==
           protected:
             //  -- Pointers --
-            const R& _range;
+            R& _range;
 
 
             //  == INSTANTIATION ==

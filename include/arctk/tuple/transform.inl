@@ -99,29 +99,28 @@ namespace arc
         template <typename A, typename F, std::size_t... I>
         constexpr auto transform_helper(const A& arg_, const F& func_, std::index_sequence<I...> /*unused*/) noexcept
         {
-            if constexpr (sizeof...(I) == 0) // NOLINT
-            {                                // NOLINT
+            if constexpr (sizeof...(I) == 0)
+            {
                 return (std::tuple<>{});
             }
-
-            if constexpr (std::is_same_v<decltype(func_(std::get<0>(arg_))), void>) // NOLINT
-            {                                                                       // NOLINT
+            else if constexpr (std::is_same_v<decltype(func_(std::get<0>(arg_))), void>)
+            {
                 (func_(std::get<I>(arg_)), ...);
 
                 return;
             }
-
-            if constexpr (std::is_lvalue_reference_v<decltype(func_(std::get<0>(arg_)))>) // NOLINT
-            {                                                                             // NOLINT
+            else if constexpr (std::is_lvalue_reference_v<decltype(func_(std::get<0>(arg_)))>)
+            {
                 return (std::tie(func_(std::get<I>(arg_))...));
             }
-
-            if constexpr (std::is_rvalue_reference_v<decltype(func_(std::get<0>(arg_)))>) // NOLINT
-            {                                                                             // NOLINT
+            else if constexpr (std::is_rvalue_reference_v<decltype(func_(std::get<0>(arg_)))>)
+            {
                 return (std::forward_as_tuple(func_(std::get<I>(arg_))...));
             }
-
-            return (std::tuple{func_(std::get<I>(arg_))...}); // NOLINT
+            else
+            {
+                return (std::tuple{func_(std::get<I>(arg_))...});
+            }
         }
 
 

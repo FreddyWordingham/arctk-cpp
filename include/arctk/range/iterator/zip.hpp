@@ -12,6 +12,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <iterator>
+#include <optional>
 #include <tuple>
 
 
