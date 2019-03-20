@@ -53,6 +53,24 @@ namespace arc
           public:
             //  -- Getters --
             constexpr inline const std::array<T, N>& elems() const noexcept;
+
+            //  -- Range --
+            constexpr inline auto begin() noexcept
+            {
+                return (_elems.begin());
+            }
+            constexpr inline auto begin() const noexcept
+            {
+                return (_elems.begin());
+            }
+            constexpr inline auto end() noexcept
+            {
+                return (_elems.end());
+            }
+            constexpr inline auto end() const noexcept
+            {
+                return (_elems.end());
+            }
         };
 
 
