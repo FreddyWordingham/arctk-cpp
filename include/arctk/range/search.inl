@@ -30,13 +30,14 @@ namespace arc
 
 
         //  == FUNCTIONS ==
+        //  -- Search --
         template <typename R, typename T>
         constexpr inline bool bounded(const R& range_, const T& x_) noexcept
         {
             assert(!range_.empty());
             assert(is_sorted(range_));
 
-            return ((range_.front() <= x_) && (range_.back() >= x_));
+            return ((*std::begin(range_) <= x_) && (*std::prev(std::end(range_)) >= x_));
         }
 
         template <typename R, typename T>

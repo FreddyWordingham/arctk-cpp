@@ -23,15 +23,6 @@ namespace arc
         template <typename T, std::size_t N>
         class Col
         {
-            //  == FRIENDS ==
-          private:
-            //  -- Range --
-            template <typename T_, std::size_t N_>
-            friend constexpr inline auto begin(Col<T_, N_>& col_) noexcept;
-            template <typename T_, std::size_t N_>
-            friend constexpr inline auto end(Col<T_, N_>& col_) noexcept;
-
-
             //  == FIELDS ==
           private:
             //  -- Elements --
@@ -62,6 +53,12 @@ namespace arc
           public:
             //  -- Getters --
             constexpr inline const std::array<T, N>& elems() const noexcept;
+
+            //  -- Range --
+            constexpr inline auto begin() noexcept;
+            constexpr inline auto begin() const noexcept;
+            constexpr inline auto end() noexcept;
+            constexpr inline auto end() const noexcept;
         };
 
 

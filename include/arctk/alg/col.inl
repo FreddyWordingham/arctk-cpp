@@ -12,6 +12,7 @@
 //  == IMPORTS ==
 //  -- Std --
 #include <cassert>
+#include <iterator>
 
 
 
@@ -85,6 +86,32 @@ namespace arc
         constexpr inline const std::array<T, N>& Col<T, N>::elems() const noexcept
         {
             return (_elems);
+        }
+
+
+        //  -- Range --
+        template <typename T, std::size_t N>
+        constexpr inline auto Col<T, N>::begin() noexcept
+        {
+            return (std::begin(_elems));
+        }
+
+        template <typename T, std::size_t N>
+        constexpr inline auto Col<T, N>::begin() const noexcept
+        {
+            return (std::begin(_elems));
+        }
+
+        template <typename T, std::size_t N>
+        constexpr inline auto Col<T, N>::end() noexcept
+        {
+            return (std::end(_elems));
+        }
+
+        template <typename T, std::size_t N>
+        constexpr inline auto Col<T, N>::end() const noexcept
+        {
+            return (std::end(_elems));
         }
 
 
