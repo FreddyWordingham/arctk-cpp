@@ -9,11 +9,6 @@
 
 
 
-//  == IMPORTS ==
-//  -- Arc --
-
-
-
 //  == NAMESPACE ==
 namespace arc
 {
@@ -51,7 +46,7 @@ namespace arc
             std::array<T, N> elems{};
 
             std::size_t i = 0;
-            ((elems[i] = elems_, ++i), ...);
+            ((elems[i] = static_cast<T>(elems_), ++i), ...);
 
             return (elems);
         }
@@ -64,7 +59,8 @@ namespace arc
 
         //  == METHODS ==
         //  -- Getters --
-        constexpr inline const std::array<T, N>& elems() const noexcept
+        template <typename T, std::size_t N>
+        constexpr inline const std::array<T, N>& Col<T, N>::elems() const noexcept
         {
             return (_elems);
         }
