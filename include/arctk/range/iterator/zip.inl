@@ -80,7 +80,7 @@ namespace arc
             template <typename I, typename... J>
             constexpr auto Zip<I, J...>::operator*() noexcept
             {
-                return (std::tuple_cat(std::make_tuple(*Iterator<I>::_it), tuple::transform(_its, [](const auto& it_) { return (*it_); }))); // TODO possibly make this a function rather than a lambda?
+                return (std::tuple_cat(std::make_tuple(*Iterator<I>::_it), tuple::transform(_its, [](const auto& it_) { return (*it_); })));
             }
 
 
