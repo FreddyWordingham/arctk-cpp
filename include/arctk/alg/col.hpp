@@ -55,22 +55,10 @@ namespace arc
             constexpr inline const std::array<T, N>& elems() const noexcept;
 
             //  -- Range --
-            constexpr inline auto begin() noexcept
-            {
-                return (_elems.begin());
-            }
-            constexpr inline auto begin() const noexcept
-            {
-                return (_elems.begin());
-            }
-            constexpr inline auto end() noexcept
-            {
-                return (_elems.end());
-            }
-            constexpr inline auto end() const noexcept
-            {
-                return (_elems.end());
-            }
+            constexpr inline auto begin() noexcept;
+            constexpr inline auto begin() const noexcept;
+            constexpr inline auto end() noexcept;
+            constexpr inline auto end() const noexcept;
         };
 
 
