@@ -52,13 +52,13 @@ namespace arc
             template <typename R, typename F>
             constexpr inline auto Transform<R, F>::begin() const noexcept
             {
-                return (iterator::Transform{std::begin(View<R>::_range), std::end(View<R>::_range), _trans}); // TODO change to functions
+                return (iterator::Transform{std::begin(View<R>::_range), std::end(View<R>::_range), _trans});
             }
 
             template <typename R, typename F>
             constexpr inline auto Transform<R, F>::end() const noexcept
             {
-                return (iterator::Transform{std::end(View<R>::_range), std::end(View<R>::_range), _trans}); // TODO change to functions
+                return (iterator::Transform{std::end(View<R>::_range), std::end(View<R>::_range), _trans});
             }
 
 
