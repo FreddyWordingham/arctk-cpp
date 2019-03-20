@@ -40,10 +40,10 @@ namespace arc
 
         //  == STRUCTURES ==
         //  -- Ranges --
-        TRAIT(is_rangeable,                         //
-              decltype(std::declval<T&>().begin()), //
-              decltype(std::declval<T&>().end()),   //
-              typename T::value_type                //
+        TRAIT(is_rangeable,                        //
+              decltype(begin(std::declval<T&>())), //
+              decltype(end(std::declval<T&>())),   //
+              typename T::value_type               //
         );
 
 

@@ -88,32 +88,6 @@ namespace arc
         }
 
 
-        //  -- Range --
-        template <typename T, std::size_t N>
-        constexpr inline auto Col<T, N>::begin() noexcept
-        {
-            return (_elems.begin());
-        }
-
-        template <typename T, std::size_t N>
-        constexpr inline auto Col<T, N>::begin() const noexcept
-        {
-            return (_elems.cbegin());
-        }
-
-        template <typename T, std::size_t N>
-        constexpr inline auto Col<T, N>::end() noexcept
-        {
-            return (_elems.end());
-        }
-
-        template <typename T, std::size_t N>
-        constexpr inline auto Col<T, N>::end() const noexcept
-        {
-            return (_elems.cend());
-        }
-
-
 
     } // namespace alg
 } // namespace arc
