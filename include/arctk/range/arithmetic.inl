@@ -34,9 +34,9 @@ namespace arc
         {
             assert(range::num_its(lhs_) == range::num_its(rhs_));
 
-            for (auto [l, r] : range::view::Zip{lhs_, rhs_}) // TODO find a way of auto dereferencing when using tuple.
+            for (auto& [l, r] : range::view::Zip{lhs_, rhs_}) // TODO find a way of auto dereferencing when using tuple.
             {
-                *l += *r;
+                l += r;
             }
         }
         else
@@ -146,7 +146,7 @@ namespace arc
 
         for (const auto [l, r] : range::view::Zip{lhs_, rhs_})
         {
-            res.emplace_back(*l + *r);
+            res.emplace_back(l + r);
         }
 
         return (res);
@@ -176,7 +176,7 @@ namespace arc
 
         for (const auto [l, r] : range::view::Zip{lhs_, rhs_})
         {
-            res.emplace_back(*l - *r);
+            res.emplace_back(l - r);
         }
 
         return (res);
@@ -206,7 +206,7 @@ namespace arc
 
         for (const auto [l, r] : range::view::Zip{lhs_, rhs_})
         {
-            res.emplace_back(*l * *r);
+            res.emplace_back(l * r);
         }
 
         return (res);
@@ -218,7 +218,7 @@ namespace arc
         std::vector<decltype(*(std::begin(std::declval<R>())) / std::declval<T>())> res;
         res.reserve(lhs_.size());
 
-        for (const auto l : lhs_)
+        for (const auto& l : lhs_)
         {
             res.emplace_back(l / rhs_);
         }
@@ -236,7 +236,7 @@ namespace arc
 
         for (const auto [l, r] : range::view::Zip{lhs_, rhs_})
         {
-            res.emplace_back(*l / *r);
+            res.emplace_back(l / r);
         }
 
         return (res);
@@ -266,7 +266,7 @@ namespace arc
 
         for (const auto [l, r] : range::view::Zip{lhs_, rhs_})
         {
-            res.emplace_back(*l % *r);
+            res.emplace_back(l % r);
         }
 
         return (res);

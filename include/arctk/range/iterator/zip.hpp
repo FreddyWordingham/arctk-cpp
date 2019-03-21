@@ -16,6 +16,9 @@
 #include <tuple>
 
 
+#include "arctk/tuple/transform.inl"
+
+
 
 //  == NAMESPACE ==
 namespace arc
@@ -24,6 +27,45 @@ namespace arc
     {
         namespace iterator
         {
+
+
+
+            template <typename... Ts>
+            struct zip_tuple : std::tuple<Ts...>
+            {
+                using base = std::tuple<Ts...>;
+                using base::base;
+
+                template <typename... Us, std::enable_if_t<(std::is_constructible_v<Ts, Us&&> && ...), int> = 0>
+                zip_tuple(std::tuple<Us...>&& rhs)
+                  : base(std::move(rhs))
+                {
+                }
+
+                template <size_t I>
+                auto& get() &
+                {
+                    return std::get<I>(*this);
+                }
+
+                template <size_t I>
+                auto& get() const&
+                {
+                    return std::get<I>(*this);
+                }
+
+                template <size_t I>
+                auto get() &&
+                {
+                    return std::get<I>(*this);
+                }
+
+                template <size_t I>
+                auto get() const&&
+                {
+                    return std::get<I>(*this);
+                }
+            };
 
 
 
@@ -48,6 +90,10 @@ namespace arc
                 std::tuple<J...>       _its;
                 const std::tuple<J...> _ends;
 
+                //  -- Temporaries --
+                using deref_types = zip_tuple<decltype(*std::declval<I>()), decltype(*std::declval<J>())...>;
+                std::optional<deref_types> value;
+
 
                 //  == INSTANTIATION ==
               public:
@@ -61,8 +107,17 @@ namespace arc
                 constexpr inline Zip&      operator++() noexcept;
                 constexpr inline const Zip operator++(int /*unused*/) noexcept;
 
+                // //  -- Member Access --
+                // constexpr inline auto operator*() noexcept;
+
+
                 //  -- Member Access --
-                constexpr inline auto operator*() noexcept;
+                constexpr auto& operator*() noexcept
+                {
+                    value.emplace(tuple::transform(std::tuple_cat(std::make_tuple(Iterator<I>::_it), _its), [](auto& it_) { return std::reference_wrapper(*it_); }));
+
+                    return (*value);
+                }
             };
 
 
@@ -70,3 +125,17 @@ namespace arc
         } // namespace iterator
     }     // namespace range
 } // namespace arc
+
+
+namespace std
+{
+    template <typename... Ts>
+    struct tuple_size<arc::range::iterator::zip_tuple<Ts...>> : tuple_size<tuple<Ts...>>
+    {
+    };
+
+    template <size_t I, typename... Ts>
+    struct tuple_element<I, arc::range::iterator::zip_tuple<Ts...>> : tuple_element<I, tuple<remove_reference_t<Ts>...>>
+    {
+    };
+} // namespace std
