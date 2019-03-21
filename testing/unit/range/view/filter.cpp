@@ -60,6 +60,29 @@ namespace test
         ASSERT_TRUE(filt == (std::vector<int>{6, 8}));
     }
 
+    TEST_F(array_int, Filter_mutable) // NOLINT
+    {
+        using namespace arc; // NOLINT
+
+        auto is_even  = [](const int& i_) { return ((i_ % 2) == 0); };
+        auto is_gt_5  = [](const int& i_) { return (i_ > 5); };
+        auto is_lt_10 = [](const int& i_) { return (i_ < 10); };
+
+        auto arr{_arr_non_prime};
+
+        auto filt{arr                                    //
+                  | arc::range::preview::Filter{is_even} //
+                  | arc::range::preview::Filter{is_gt_5} //
+                  | arc::range::preview::Filter{is_lt_10}};
+
+        for (auto& f : filt)
+        {
+            f = 0;
+        }
+
+        ASSERT_TRUE(arr == (std::vector<int>{0, 1, 4, 0, 0, 9, 10, 12}));
+    }
+
 
 
 } // namespace test
