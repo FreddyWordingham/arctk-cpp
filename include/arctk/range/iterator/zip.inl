@@ -76,11 +76,15 @@ namespace arc
 
 
             // //  -- Member Access --
-            // template <typename I, typename... J>
-            // constexpr auto Zip<I, J...>::operator*() noexcept
-            // {
-            //     return (std::tuple_cat(std::make_tuple(Iterator<I>::_it), _its));
-            // }
+            template <typename I, typename... J>
+            constexpr inline auto& Zip<I, J...>::operator*() noexcept
+            {
+                _value.emplace(tuple::transform(std::tuple_cat(std::make_tuple(Iterator<I>::_it), _its), [](auto& it_) { return std::reference_wrapper(*it_); }));
+
+                assert(_value);
+
+                return (*_value);
+            }
 
 
 

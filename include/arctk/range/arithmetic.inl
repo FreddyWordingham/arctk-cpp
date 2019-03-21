@@ -34,7 +34,7 @@ namespace arc
         {
             assert(range::num_its(lhs_) == range::num_its(rhs_));
 
-            for (auto& [l, r] : range::view::Zip{lhs_, rhs_}) // TODO find a way of auto dereferencing when using tuple.
+            for (auto& [l, r] : range::view::Zip{lhs_, rhs_})
             {
                 l += r;
             }
@@ -53,9 +53,21 @@ namespace arc
     template <typename R, typename T, typename>
     inline R& operator-=(R& lhs_, const T& rhs_) noexcept
     {
-        for (auto& l : lhs_)
+        if constexpr (type::is_rangeable_v<T>)
         {
-            l -= rhs_;
+            assert(range::num_its(lhs_) == range::num_its(rhs_));
+
+            for (auto& [l, r] : range::view::Zip{lhs_, rhs_})
+            {
+                l -= r;
+            }
+        }
+        else
+        {
+            for (auto& l : lhs_)
+            {
+                l -= rhs_;
+            }
         }
 
         return (lhs_);
@@ -64,9 +76,21 @@ namespace arc
     template <typename R, typename T, typename>
     inline R& operator*=(R& lhs_, const T& rhs_) noexcept
     {
-        for (auto& l : lhs_)
+        if constexpr (type::is_rangeable_v<T>)
         {
-            l *= rhs_;
+            assert(range::num_its(lhs_) == range::num_its(rhs_));
+
+            for (auto& [l, r] : range::view::Zip{lhs_, rhs_}) // TODO find a way of auto dereferencing when using tuple.
+            {
+                l *= r;
+            }
+        }
+        else
+        {
+            for (auto& l : lhs_)
+            {
+                l *= rhs_;
+            }
         }
 
         return (lhs_);
@@ -75,9 +99,21 @@ namespace arc
     template <typename R, typename T, typename>
     inline R& operator/=(R& lhs_, const T& rhs_) noexcept
     {
-        for (auto& l : lhs_)
+        if constexpr (type::is_rangeable_v<T>)
         {
-            l /= rhs_;
+            assert(range::num_its(lhs_) == range::num_its(rhs_));
+
+            for (auto& [l, r] : range::view::Zip{lhs_, rhs_}) // TODO find a way of auto dereferencing when using tuple.
+            {
+                l /= r;
+            }
+        }
+        else
+        {
+            for (auto& l : lhs_)
+            {
+                l /= rhs_;
+            }
         }
 
         return (lhs_);
@@ -86,9 +122,21 @@ namespace arc
     template <typename R, typename T, typename>
     inline R& operator%=(R& lhs_, const T& rhs_) noexcept
     {
-        for (auto& l : lhs_)
+        if constexpr (type::is_rangeable_v<T>)
         {
-            l %= rhs_;
+            assert(range::num_its(lhs_) == range::num_its(rhs_));
+
+            for (auto& [l, r] : range::view::Zip{lhs_, rhs_}) // TODO find a way of auto dereferencing when using tuple.
+            {
+                l %= r;
+            }
+        }
+        else
+        {
+            for (auto& l : lhs_)
+            {
+                l %= rhs_;
+            }
         }
 
         return (lhs_);
@@ -128,7 +176,7 @@ namespace arc
         std::vector<decltype(*(std::begin(std::declval<R>())) + std::declval<T>())> res;
         res.reserve(lhs_.size());
 
-        for (const auto l : lhs_)
+        for (const auto& l : lhs_)
         {
             res.emplace_back(l + rhs_);
         }
@@ -144,7 +192,7 @@ namespace arc
         std::vector<decltype(*(std::begin(lhs_)) + *(std::begin(rhs_)))> res;
         res.reserve(lhs_.size());
 
-        for (const auto [l, r] : range::view::Zip{lhs_, rhs_})
+        for (const auto& [l, r] : range::view::Zip{lhs_, rhs_})
         {
             res.emplace_back(l + r);
         }
@@ -158,7 +206,7 @@ namespace arc
         std::vector<decltype(*(std::begin(std::declval<R>())) - std::declval<T>())> res;
         res.reserve(lhs_.size());
 
-        for (const auto l : lhs_)
+        for (const auto& l : lhs_)
         {
             res.emplace_back(l - rhs_);
         }
@@ -174,7 +222,7 @@ namespace arc
         std::vector<decltype(*(std::begin(lhs_)) - *(std::begin(rhs_)))> res;
         res.reserve(lhs_.size());
 
-        for (const auto [l, r] : range::view::Zip{lhs_, rhs_})
+        for (const auto& [l, r] : range::view::Zip{lhs_, rhs_})
         {
             res.emplace_back(l - r);
         }
@@ -188,7 +236,7 @@ namespace arc
         std::vector<decltype(*(std::begin(std::declval<R>())) * std::declval<T>())> res;
         res.reserve(lhs_.size());
 
-        for (const auto l : lhs_)
+        for (const auto& l : lhs_)
         {
             res.emplace_back(l * rhs_);
         }
@@ -204,7 +252,7 @@ namespace arc
         std::vector<decltype(*(std::begin(lhs_)) * *(std::begin(rhs_)))> res;
         res.reserve(lhs_.size());
 
-        for (const auto [l, r] : range::view::Zip{lhs_, rhs_})
+        for (const auto& [l, r] : range::view::Zip{lhs_, rhs_})
         {
             res.emplace_back(l * r);
         }
@@ -234,7 +282,7 @@ namespace arc
         std::vector<decltype(*(std::begin(lhs_)) / *(std::begin(rhs_)))> res;
         res.reserve(lhs_.size());
 
-        for (const auto [l, r] : range::view::Zip{lhs_, rhs_})
+        for (const auto& [l, r] : range::view::Zip{lhs_, rhs_})
         {
             res.emplace_back(l / r);
         }
@@ -248,7 +296,7 @@ namespace arc
         std::vector<decltype(*(std::begin(std::declval<R>())) % std::declval<T>())> res;
         res.reserve(lhs_.size());
 
-        for (const auto l : lhs_)
+        for (const auto& l : lhs_)
         {
             res.emplace_back(l % rhs_);
         }
@@ -264,7 +312,7 @@ namespace arc
         std::vector<decltype(*(std::begin(lhs_)) % *(std::begin(rhs_)))> res;
         res.reserve(lhs_.size());
 
-        for (const auto [l, r] : range::view::Zip{lhs_, rhs_})
+        for (const auto& [l, r] : range::view::Zip{lhs_, rhs_})
         {
             res.emplace_back(l % r);
         }
