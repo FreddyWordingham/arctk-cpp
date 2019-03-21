@@ -70,7 +70,7 @@ namespace test
 
         auto arr{_arr_non_prime};
 
-        auto filt{arr                                    //
+        auto filt{_arr_non_prime                         //
                   | arc::range::preview::Filter{is_even} //
                   | arc::range::preview::Filter{is_gt_5} //
                   | arc::range::preview::Filter{is_lt_10}};
@@ -80,7 +80,7 @@ namespace test
             f = 0;
         }
 
-        ASSERT_TRUE(arr == (std::vector<int>{0, 1, 4, 0, 0, 9, 10, 12}));
+        ASSERT_TRUE(_arr_non_prime == (std::vector<int>{0, 1, 4, 0, 0, 9, 10, 12}));
     }
 
 

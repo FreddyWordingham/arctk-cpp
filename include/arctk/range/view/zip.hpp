@@ -42,7 +42,7 @@ namespace arc
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline explicit Zip(const R& range_, const A&... ranges_) noexcept;
+                constexpr inline explicit Zip(R& range_, A&... ranges_) noexcept;
 
 
                 //  == METHODS ==

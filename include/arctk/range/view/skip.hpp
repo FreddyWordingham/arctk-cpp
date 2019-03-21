@@ -43,7 +43,7 @@ namespace arc
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Skip(const R& range_, std::size_t skip_first_, std::size_t skip_last_ = 1) noexcept;
+                constexpr inline Skip(R& range_, std::size_t skip_first_, std::size_t skip_last_ = 1) noexcept;
 
 
                 //  == METHODS ==
@@ -63,7 +63,7 @@ namespace arc
     //  == OPERATORS ==
     //  -- Pipe --
     template <typename R>
-    constexpr inline range::view::Skip<R> operator|(const R& range_, const range::preview::Skip& skip_) noexcept;
+    constexpr inline range::view::Skip<R> operator|(R& range_, const range::preview::Skip& skip_) noexcept;
 
 
 

@@ -39,13 +39,15 @@ namespace arc
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Filter(const R& range_, const F& pred_) noexcept;
+                constexpr inline Filter(R& range_, const F& pred_) noexcept;
 
 
                 //  == METHODS ==
               public:
                 //  -- Getters --
+                constexpr inline auto begin() noexcept;
                 constexpr inline auto begin() const noexcept;
+                constexpr inline auto end() noexcept;
                 constexpr inline auto end() const noexcept;
             };
 
@@ -59,7 +61,7 @@ namespace arc
     //  == OPERATORS ==
     //  -- Pipe --
     template <typename R, typename F>
-    constexpr inline range::view::Filter<R, F> operator|(const R& range_, const range::preview::Filter<F>& filt_) noexcept;
+    constexpr inline range::view::Filter<R, F> operator|(R& range_, const range::preview::Filter<F>& filt_) noexcept;
 
 
 

@@ -20,8 +20,8 @@ namespace arc
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <typename R>
-        constexpr inline View<R>::View(const R& range_) noexcept
-          : _range{const_cast<R&>(range_)} // TODO is this the best way to handle possiblity of non-const?
+        constexpr inline View<R>::View(R& range_) noexcept
+          : _range{range_}
         {
         }
 

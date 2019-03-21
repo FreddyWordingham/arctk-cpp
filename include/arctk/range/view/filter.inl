@@ -39,7 +39,7 @@ namespace arc
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename R, typename F>
-            constexpr inline Filter<R, F>::Filter(const R& range_, const F& pred_) noexcept
+            constexpr inline Filter<R, F>::Filter(R& range_, const F& pred_) noexcept
               : View<R>{range_}
               , _pred{pred_}
             {
@@ -50,15 +50,27 @@ namespace arc
             //  == METHODS ==
             //  -- Getters --
             template <typename R, typename F>
-            constexpr inline auto Filter<R, F>::begin() const noexcept
+            constexpr inline auto Filter<R, F>::begin() noexcept
             {
                 return (iterator::Filter{std::begin(View<R>::_range), std::end(View<R>::_range), _pred});
             }
 
             template <typename R, typename F>
-            constexpr inline auto Filter<R, F>::end() const noexcept
+            constexpr inline auto Filter<R, F>::begin() const noexcept
+            {
+                return (iterator::Filter{std::cbegin(View<R>::_range), std::cend(View<R>::_range), _pred});
+            }
+
+            template <typename R, typename F>
+            constexpr inline auto Filter<R, F>::end() noexcept
             {
                 return (iterator::Filter{std::end(View<R>::_range), std::end(View<R>::_range), _pred});
+            }
+
+            template <typename R, typename F>
+            constexpr inline auto Filter<R, F>::end() const noexcept
+            {
+                return (iterator::Filter{std::cend(View<R>::_range), std::cend(View<R>::_range), _pred});
             }
 
 
@@ -71,7 +83,7 @@ namespace arc
     //  == OPERATORS ==
     //  -- Pipe --
     template <typename R, typename F>
-    constexpr inline range::view::Filter<R, F> operator|(const R& range_, const range::preview::Filter<F>& filt_) noexcept
+    constexpr inline range::view::Filter<R, F> operator|(R& range_, const range::preview::Filter<F>& filt_) noexcept
     {
         return (range::view::Filter<R, F>{range_, filt_.pred});
     }

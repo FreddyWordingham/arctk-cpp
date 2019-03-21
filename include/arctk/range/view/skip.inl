@@ -41,7 +41,7 @@ namespace arc
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename R>
-            constexpr inline Skip<R>::Skip(const R& range_, const std::size_t skip_first_, const std::size_t skip_last_) noexcept
+            constexpr inline Skip<R>::Skip(R& range_, const std::size_t skip_first_, const std::size_t skip_last_) noexcept
               : View<R>{range_}
               , _skip_first{skip_first_}
               , _skip_last{skip_last_}
@@ -75,7 +75,7 @@ namespace arc
     //  == OPERATORS ==
     //  -- Pipe --
     template <typename R>
-    constexpr inline range::view::Skip<R> operator|(const R& range_, const range::preview::Skip& skip_) noexcept
+    constexpr inline range::view::Skip<R> operator|(R& range_, const range::preview::Skip& skip_) noexcept
     {
         return (range::view::Skip<R>{range_, skip_.skip_first, skip_.skip_last});
     }

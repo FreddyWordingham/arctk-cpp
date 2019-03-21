@@ -42,7 +42,7 @@ namespace arc
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Transform(const R& range_, const F& trans_) noexcept;
+                constexpr inline Transform(R& range_, const F& trans_) noexcept;
 
 
                 //  == METHODS ==
@@ -62,7 +62,7 @@ namespace arc
     //  == OPERATORS ==
     //  -- Pipe --
     template <typename R, typename F>
-    constexpr inline range::view::Transform<R, F> operator|(const R& range_, const range::preview::Transform<F>& trans_) noexcept;
+    constexpr inline range::view::Transform<R, F> operator|(R& range_, const range::preview::Transform<F>& trans_) noexcept;
 
 
 

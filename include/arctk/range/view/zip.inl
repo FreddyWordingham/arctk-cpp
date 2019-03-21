@@ -39,9 +39,9 @@ namespace arc
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename R, typename... A>
-            constexpr inline Zip<R, A...>::Zip(const R& range_, const A&... ranges_) noexcept
+            constexpr inline Zip<R, A...>::Zip(R& range_, A&... ranges_) noexcept
               : View<R>{range_}
-              , _ranges{const_cast<A&>(ranges_)...}
+              , _ranges{ranges_...}
             {
             }
 
@@ -70,12 +70,4 @@ namespace arc
 
         } // namespace view
     }     // namespace range
-
-
-
-    //  == OPERATORS ==
-    //  -- Pipe -- // TODO ?
-
-
-
 } // namespace arc

@@ -35,7 +35,7 @@ namespace arc
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename R>
-            constexpr inline Reverse<R>::Reverse(const R& range_) noexcept
+            constexpr inline Reverse<R>::Reverse(R& range_) noexcept
               : View<R>{range_}
             {
             }
@@ -66,7 +66,7 @@ namespace arc
     //  == OPERATORS ==
     //  -- Pipe --
     template <typename R>
-    constexpr inline range::view::Reverse<R> operator|(const R& range_, const range::preview::Reverse& /*unused*/) noexcept
+    constexpr inline range::view::Reverse<R> operator|(R& range_, const range::preview::Reverse& /*unused*/) noexcept
     {
         return (range::view::Reverse<R>{range_});
     }

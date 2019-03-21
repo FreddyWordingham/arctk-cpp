@@ -39,7 +39,7 @@ namespace arc
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename R, typename F>
-            constexpr inline Transform<R, F>::Transform(const R& range_, const F& trans_) noexcept
+            constexpr inline Transform<R, F>::Transform(R& range_, const F& trans_) noexcept
               : View<R>{range_}
               , _trans{trans_}
             {
@@ -71,7 +71,7 @@ namespace arc
     //  == OPERATORS ==
     //  -- Pipe --
     template <typename R, typename F>
-    constexpr inline range::view::Transform<R, F> operator|(const R& range_, const range::preview::Transform<F>& trans_) noexcept
+    constexpr inline range::view::Transform<R, F> operator|(R& range_, const range::preview::Transform<F>& trans_) noexcept
     {
         return (range::view::Transform<R, F>{range_, trans_.trans});
     }
