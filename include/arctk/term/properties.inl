@@ -5,4 +5,4 @@
 
 //  == DECLARATIONS ==
 //  -- Arc --
-#include "arctk/term/ansi.hpp" // IWYU pragma: export
+#include "arctk/term/properties.hpp" // IWYU pragma: export

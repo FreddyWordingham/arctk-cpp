@@ -16,7 +16,8 @@ namespace arc
 
 
 
-        //  == CONSTANTS ==
+        //  == FUNCTIONS ==
+        //  -- Colouring --
 
 
 

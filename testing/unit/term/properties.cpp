@@ -1,6 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/term/ansi.inl"
+#include "arctk/term/properties.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
