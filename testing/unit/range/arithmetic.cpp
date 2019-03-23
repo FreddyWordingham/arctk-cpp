@@ -65,6 +65,33 @@ namespace test
         ASSERT_EQ(vec_1, ans_1);
     }
 
+    TEST(vector_arithmetic, sq_vector_addition) // NOLINT
+    {
+        using namespace arc; // NOLINT
+
+        std::vector<std::vector<int>> vec_0{{0, 1, 2, 3, 4},       //
+                                            {5, 6, 7, 8, 9},       //
+                                            {0, -1, -2, -3, -4},   //
+                                            {-5, -6, -7, -8, -9}}; //
+        std::vector<std::vector<int>> vec_1{{5, 4, -3, 2, 1},      //
+                                            {-5, -4, -3, -2, -1},  //
+                                            {0, 1, 2, 3, 4},       //
+                                            {-5, 4, -3, 2, -1}};   //
+        vec_0 += vec_1;
+
+        std::vector<std::vector<int>> ans_0{{5, 5, -1, 5, 5},         //
+                                            {0, 2, 4, 6, 8},          //
+                                            {0, 0, 0, 0, 0},          //
+                                            {-10, -2, -10, -6, -10}}; //
+        ASSERT_EQ(vec_0, ans_0);
+
+        std::vector<std::vector<int>> ans_1{{5, 4, -3, 2, 1},     //
+                                            {-5, -4, -3, -2, -1}, //
+                                            {0, 1, 2, 3, 4},      //
+                                            {-5, 4, -3, 2, -1}};  //
+        ASSERT_EQ(vec_1, ans_1);
+    }
+
     TEST(array_arithmetic, subtraction) // NOLINT
     {
         using namespace arc; // NOLINT
@@ -99,6 +126,33 @@ namespace test
         ASSERT_EQ(vec_0, ans_0);
 
         const std::vector<int> ans_1{5, 4, 3, 2, 1};
+        ASSERT_EQ(vec_1, ans_1);
+    }
+
+    TEST(vector_arithmetic, sq_vector_subtraction) // NOLINT
+    {
+        using namespace arc; // NOLINT
+
+        std::vector<std::vector<int>> vec_0{{0, 1, 2, 3, 4},       //
+                                            {5, 6, 7, 8, 9},       //
+                                            {0, -1, -2, -3, -4},   //
+                                            {-5, -6, -7, -8, -9}}; //
+        std::vector<std::vector<int>> vec_1{{5, 4, -3, 2, 1},      //
+                                            {-5, -4, -3, -2, -1},  //
+                                            {0, 1, 2, 3, 4},       //
+                                            {-5, 4, -3, 2, -1}};   //
+        vec_0 -= vec_1;
+
+        std::vector<std::vector<int>> ans_0{{-5, -3, 5, 1, 3},      //
+                                            {10, 10, 10, 10, 10},   //
+                                            {0, -2, -4, -6, -8},    //
+                                            {0, -10, -4, -10, -8}}; //
+        ASSERT_EQ(vec_0, ans_0);
+
+        std::vector<std::vector<int>> ans_1{{5, 4, -3, 2, 1},     //
+                                            {-5, -4, -3, -2, -1}, //
+                                            {0, 1, 2, 3, 4},      //
+                                            {-5, 4, -3, 2, -1}};  //
         ASSERT_EQ(vec_1, ans_1);
     }
 
@@ -139,6 +193,33 @@ namespace test
         ASSERT_EQ(vec_1, ans_1);
     }
 
+    TEST(vector_arithmetic, sq_vector_multiplication) // NOLINT
+    {
+        using namespace arc; // NOLINT
+
+        std::vector<std::vector<int>> vec_0{{0, 1, 2, 3, 4},       //
+                                            {5, 6, 7, 8, 9},       //
+                                            {0, -1, -2, -3, -4},   //
+                                            {-5, -6, -7, -8, -9}}; //
+        std::vector<std::vector<int>> vec_1{{5, 4, -3, 2, 1},      //
+                                            {-5, -4, -3, -2, -1},  //
+                                            {0, 1, 2, 3, 4},       //
+                                            {-5, 4, -3, 2, -1}};   //
+        vec_0 *= vec_1;
+
+        std::vector<std::vector<int>> ans_0{{0, 4, -6, 6, 4},         //
+                                            {-25, -24, -21, -16, -9}, //
+                                            {0, -1, -4, -9, -16},     //
+                                            {25, -24, 21, -16, 9}};   //
+        ASSERT_EQ(vec_0, ans_0);
+
+        std::vector<std::vector<int>> ans_1{{5, 4, -3, 2, 1},     //
+                                            {-5, -4, -3, -2, -1}, //
+                                            {0, 1, 2, 3, 4},      //
+                                            {-5, 4, -3, 2, -1}};  //
+        ASSERT_EQ(vec_1, ans_1);
+    }
+
     TEST(array_arithmetic, division) // NOLINT
     {
         using namespace arc; // NOLINT
@@ -176,6 +257,33 @@ namespace test
         ASSERT_EQ(vec_1, ans_1);
     }
 
+    TEST(vector_arithmetic, sq_vector_division) // NOLINT
+    {
+        using namespace arc; // NOLINT
+
+        std::vector<std::vector<int>> vec_0{{0, 1, 2, 3, 4},       //
+                                            {5, 6, 7, 8, 9},       //
+                                            {0, -1, -2, -3, -4},   //
+                                            {-5, -6, -7, -8, -9}}; //
+        std::vector<std::vector<int>> vec_1{{5, 4, -3, 2, 1},      //
+                                            {-5, -4, -3, -2, -1},  //
+                                            {1, 1, 2, 3, 4},       //
+                                            {-5, 4, -3, 2, -1}};   //
+        vec_0 /= vec_1;
+
+        std::vector<std::vector<int>> ans_0{{0, 0, 0, 1, 4},      //
+                                            {-1, -1, -2, -4, -9}, //
+                                            {0, -1, -1, -1, -1},  //
+                                            {1, -1, 2, -4, 9}};   //
+        ASSERT_EQ(vec_0, ans_0);
+
+        std::vector<std::vector<int>> ans_1{{5, 4, -3, 2, 1},     //
+                                            {-5, -4, -3, -2, -1}, //
+                                            {1, 1, 2, 3, 4},      //
+                                            {-5, 4, -3, 2, -1}};  //
+        ASSERT_EQ(vec_1, ans_1);
+    }
+
     TEST(array_arithmetic, modulo) // NOLINT
     {
         using namespace arc; // NOLINT
@@ -210,6 +318,33 @@ namespace test
         ASSERT_EQ(vec_0, ans_0);
 
         const std::vector<int> ans_1{5, 4, 3, 2, 1};
+        ASSERT_EQ(vec_1, ans_1);
+    }
+
+    TEST(vector_arithmetic, sq_vector_modulo) // NOLINT
+    {
+        using namespace arc; // NOLINT
+
+        std::vector<std::vector<int>> vec_0{{0, 1, 2, 3, 4},       //
+                                            {5, 6, 7, 8, 9},       //
+                                            {0, -1, -2, -3, -4},   //
+                                            {-5, -6, -7, -8, -9}}; //
+        std::vector<std::vector<int>> vec_1{{5, 4, -3, 2, 1},      //
+                                            {-5, -4, -3, -2, -1},  //
+                                            {1, 1, 2, 3, 4},       //
+                                            {-5, 4, -3, 2, -1}};   //
+        vec_0 %= vec_1;
+
+        std::vector<std::vector<int>> ans_0{{0, 1, 2, 1, 0},    //
+                                            {0, 2, 1, 0, 0},    //
+                                            {0, 0, 0, 0, 0},    //
+                                            {0, -2, -1, 0, 0}}; //
+        ASSERT_EQ(vec_0, ans_0);
+
+        std::vector<std::vector<int>> ans_1{{5, 4, -3, 2, 1},     //
+                                            {-5, -4, -3, -2, -1}, //
+                                            {1, 1, 2, 3, 4},      //
+                                            {-5, 4, -3, 2, -1}};  //
         ASSERT_EQ(vec_1, ans_1);
     }
 
