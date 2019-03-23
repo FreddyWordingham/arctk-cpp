@@ -63,6 +63,8 @@ namespace arc
     //  -- Pipe --
     template <typename R, typename F>
     constexpr inline range::view::Transform<R, F> operator|(R& range_, const range::preview::Transform<F>& trans_) noexcept;
+    template <typename R, typename F>
+    constexpr inline range::view::Transform<R, F> operator|(R&& range_, const range::preview::Transform<F>& trans_) noexcept;
 
 
 

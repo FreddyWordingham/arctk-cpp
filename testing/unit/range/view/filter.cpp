@@ -68,9 +68,9 @@ namespace test
         auto is_gt_5  = [](const int& i_) { return (i_ > 5); };
         auto is_lt_10 = [](const int& i_) { return (i_ < 10); };
 
-        auto arr{_arr_non_prime};
+        std::array<int, 8> arr{_arr_non_prime};
 
-        auto filt{_arr_non_prime                         //
+        auto filt{arr                                    //
                   | arc::range::preview::Filter{is_even} //
                   | arc::range::preview::Filter{is_gt_5} //
                   | arc::range::preview::Filter{is_lt_10}};
@@ -80,7 +80,7 @@ namespace test
             f = 0;
         }
 
-        ASSERT_TRUE(_arr_non_prime == (std::vector<int>{0, 1, 4, 0, 0, 9, 10, 12}));
+        ASSERT_TRUE(arr == (std::vector<int>{0, 1, 4, 0, 0, 9, 10, 12}));
     }
 
 

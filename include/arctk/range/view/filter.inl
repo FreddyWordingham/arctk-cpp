@@ -88,6 +88,12 @@ namespace arc
         return (range::view::Filter<R, F>{range_, filt_.pred});
     }
 
+    template <typename R, typename F>
+    constexpr inline range::view::Filter<R, F> operator|(R&& range_, const range::preview::Filter<F>& filt_) noexcept
+    {
+        return (range::view::Filter<R, F>{range_, filt_.pred});
+    }
+
 
 
 } // namespace arc

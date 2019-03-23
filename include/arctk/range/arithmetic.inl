@@ -80,7 +80,7 @@ namespace arc
         {
             assert(range::num_its(lhs_) == range::num_its(rhs_));
 
-            for (auto& [l, r] : range::view::Zip{lhs_, rhs_}) // TODO find a way of auto dereferencing when using tuple.
+            for (auto& [l, r] : range::view::Zip{lhs_, rhs_})
             {
                 l *= r;
             }
@@ -103,7 +103,7 @@ namespace arc
         {
             assert(range::num_its(lhs_) == range::num_its(rhs_));
 
-            for (auto& [l, r] : range::view::Zip{lhs_, rhs_}) // TODO find a way of auto dereferencing when using tuple.
+            for (auto& [l, r] : range::view::Zip{lhs_, rhs_})
             {
                 l /= r;
             }
@@ -126,7 +126,7 @@ namespace arc
         {
             assert(range::num_its(lhs_) == range::num_its(rhs_));
 
-            for (auto& [l, r] : range::view::Zip{lhs_, rhs_}) // TODO find a way of auto dereferencing when using tuple.
+            for (auto& [l, r] : range::view::Zip{lhs_, rhs_})
             {
                 l %= r;
             }

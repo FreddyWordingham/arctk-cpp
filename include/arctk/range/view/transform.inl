@@ -76,6 +76,12 @@ namespace arc
         return (range::view::Transform<R, F>{range_, trans_.trans});
     }
 
+    template <typename R, typename F>
+    constexpr inline range::view::Transform<R, F> operator|(R&& range_, const range::preview::Transform<F>& trans_) noexcept
+    {
+        return (range::view::Transform<R, F>{range_, trans_.trans});
+    }
+
 
 
 } // namespace arc
