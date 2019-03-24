@@ -7,6 +7,7 @@
 
 //  -- Std --
 #include <sstream>
+#include <string>
 
 
 
