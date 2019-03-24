@@ -18,8 +18,17 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Colouring --
+        // template <typename T>
+        // constexpr inline
 
 
 
     } // namespace term
+
+
+
+    //  ==  OPERATORS ==
+
+
+
 } // namespace arc
