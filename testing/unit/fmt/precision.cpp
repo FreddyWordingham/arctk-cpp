@@ -1,6 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/fmt/pad.inl"
+#include "arctk/fmt/precision.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
@@ -27,28 +27,28 @@ namespace test
 
     //  == TESTS ==
     //  -- Prime --
-    TEST(string, small) // NOLINT
-    {
-        using namespace arc;
-
-        std::ostringstream stream;
-        stream << arc::fmt::Pad{8} << "Hello!";
-
-        const auto str{stream.str()};
-
-        ASSERT_EQ(str, "  Hello!");
-    }
-
     TEST(int, small) // NOLINT
     {
         using namespace arc;
 
         std::ostringstream stream;
-        stream << arc::fmt::Pad{8, '*'} << 374;
+        stream << arc::fmt::Precision{5} << 324;
 
         const auto str{stream.str()};
 
-        ASSERT_EQ(str, "*****374");
+        ASSERT_EQ(str, "324");
+    }
+
+    TEST(double, small) // NOLINT
+    {
+        using namespace arc;
+
+        std::ostringstream stream;
+        stream << arc::fmt::Precision{8} << (2.0 / 3.0);
+
+        const auto str{stream.str()};
+
+        ASSERT_EQ(str, "0.66666667");
     }
 
 

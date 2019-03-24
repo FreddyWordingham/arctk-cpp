@@ -2,6 +2,7 @@
 #pragma once
 
 
+
 //  == NAMESPACE ==
 namespace arc
 {
@@ -12,26 +13,24 @@ namespace arc
 
         //  == CLASSES ==
         //  -- Pad --
-        class Pad
+        class Precision
         {
             //  == FIELDS ==
           private:
             //  -- Formatting --
-            const int  _width;
-            const char _fill;
+            const int _prec;
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            constexpr inline explicit Pad(const int width_, const char fill_ = ' ') noexcept;
+            constexpr inline explicit Precision(const int precision_) noexcept;
 
 
             //  == METHODS ==
           public:
             //  -- Getters --
-            constexpr inline int  width() const noexcept;
-            constexpr inline char fill() const noexcept;
+            constexpr inline int prec() const noexcept;
         };
 
 
@@ -43,7 +42,7 @@ namespace arc
     //  == OPERATORS ==
     //  -- Printing --
     template <typename T>
-    constexpr inline T& operator<<(T& stream_, const fmt::Pad& val_) noexcept;
+    constexpr inline T& operator<<(T& stream_, const fmt::Precision& val_) noexcept;
 
 
 

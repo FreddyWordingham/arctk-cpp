@@ -26,8 +26,9 @@ namespace arc
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        constexpr inline Pad::Pad(const int width_) noexcept
+        constexpr inline Pad::Pad(const int width_, const char fill_) noexcept
           : _width{width_}
+          , _fill{fill_}
         {
             assert(width_ > 6);
         }
@@ -41,6 +42,11 @@ namespace arc
             return (_width);
         }
 
+        constexpr inline char Pad::fill() const noexcept
+        {
+            return (_fill);
+        }
+
 
 
     } // namespace fmt
@@ -52,7 +58,7 @@ namespace arc
     template <typename T>
     constexpr inline T& operator<<(T& stream_, const fmt::Pad& val_) noexcept
     {
-        stream_ << std::setw(val_.width());
+        stream_ << std::setfill(val_.fill()) << std::setw(val_.width());
 
         return (stream_);
     }
