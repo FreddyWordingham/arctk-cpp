@@ -44,33 +44,6 @@ namespace test
     }
 
 
-    //  -- Assignment --
-    TEST(col, assignment_val_addition) // NOLINT
-    {
-        arc::alg::Col<int, 4> col_0{3, 5, 2, -9};
-
-        col_0 += 7;
-
-        ASSERT_EQ(col_0[0], 10);
-        ASSERT_EQ(col_0[1], 12);
-        ASSERT_EQ(col_0[2], 9);
-        ASSERT_EQ(col_0[3], -2);
-    }
-
-    TEST(col, assignment_col_addition) // NOLINT
-    {
-        arc::alg::Col<int, 4> col_0{3, 5, 2, -9};
-        arc::alg::Col<int, 4> col_1{1, 1, 2, 3};
-
-        col_0 += col_1;
-
-        ASSERT_EQ(col_0[0], 4);
-        ASSERT_EQ(col_0[1], 6);
-        ASSERT_EQ(col_0[2], 4);
-        ASSERT_EQ(col_0[3], -6);
-    }
-
-
     //  -- Access --
     TEST(col, access) // NOLINT
     {

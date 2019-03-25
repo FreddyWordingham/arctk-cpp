@@ -23,6 +23,13 @@ namespace arc
         template <typename T, std::size_t N>
         class Col
         {
+            //  == ALIASES ==
+          public:
+            //  -- Traits --
+            using value_type = typename std::size_t;
+            using size_type  = typename std::size_t;
+
+
             //  == FIELDS ==
           private:
             //  -- Elements --
@@ -44,10 +51,6 @@ namespace arc
 
             //  == OPERATORS ==
           public:
-            //  -- Assignment --
-            template <typename S>
-            constexpr inline Col& operator+=(const S& val_) noexcept;
-
             //  -- Access --
             constexpr inline T&       operator[](const std::size_t index_) noexcept;
             constexpr inline const T& operator[](const std::size_t index_) const noexcept;

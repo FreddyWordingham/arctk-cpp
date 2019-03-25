@@ -64,16 +64,6 @@ namespace arc
 
 
         //  == OPERATORS ==
-        //  -- Assignment --
-        template <typename T, std::size_t N>
-        template <typename S>
-        constexpr inline Col<T, N>& Col<T, N>::operator+=(const S& val_) noexcept
-        {
-            _elems += val_;
-
-            return (*this);
-        }
-
         //  -- Access --
         template <typename T, std::size_t N>
         constexpr inline T& Col<T, N>::operator[](const std::size_t index_) noexcept
