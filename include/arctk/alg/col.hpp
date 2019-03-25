@@ -76,6 +76,32 @@ namespace arc
     //  == OPERATORS ==
     //  -- Arithmetic --
     template <typename T, std::size_t N, typename S>
+    inline alg::Col<decltype(std::declval<T>() + std::declval<S>()), N> operator+(const alg::Col<T, N>& lhs_, const S& rhs_) noexcept
+    {
+        alg::Col<decltype(std::declval<T>() + std::declval<S>()), N> col{};
+
+        for (auto& [c, l] : range::view::Zip{col, lhs_})
+        {
+            c = l + rhs_;
+        }
+
+        return (col);
+    }
+
+    template <typename T, std::size_t N, typename S>
+    inline alg::Col<decltype(std::declval<T>() - std::declval<S>()), N> operator-(const alg::Col<T, N>& lhs_, const S& rhs_) noexcept
+    {
+        alg::Col<decltype(std::declval<T>() - std::declval<S>()), N> col{};
+
+        for (auto& [c, l] : range::view::Zip{col, lhs_})
+        {
+            c = l - rhs_;
+        }
+
+        return (col);
+    }
+
+    template <typename T, std::size_t N, typename S>
     inline alg::Col<decltype(std::declval<T>() * std::declval<S>()), N> operator*(const alg::Col<T, N>& lhs_, const S& rhs_) noexcept
     {
         alg::Col<decltype(std::declval<T>() * std::declval<S>()), N> col{};
