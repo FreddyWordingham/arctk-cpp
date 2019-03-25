@@ -21,6 +21,12 @@ namespace arc
 
 
         //  == FUNCTIONS ==
+        //  -- Reset --
+        inline std::string reset() noexcept;
+
+        //  -- Effects --
+        inline std::string font() noexcept;
+
         //  -- Colouring --
         inline std::string col(const ansi::colour fg_ = ansi::colour::DEFAULT, const ansi::colour bg_ = ansi::colour::DEFAULT) noexcept;
 

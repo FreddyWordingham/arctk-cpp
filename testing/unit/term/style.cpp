@@ -26,6 +26,16 @@ namespace test
 
 
     //  == TESTS ==
+    //  -- Effects --
+    TEST(effects, font) // NOLINT
+    {
+        for (size_t i = 0; i < 100; ++i)
+        {
+            std::cout << "Hello " << arc::term::font() << "world!" << arc::term::reset() << '\n';
+        }
+    }
+
+
     //  -- Colours --
     TEST(colouring, red_fg) // NOLINT
     {
