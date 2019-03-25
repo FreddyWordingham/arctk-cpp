@@ -42,14 +42,21 @@ namespace arc
 
                 //  == FIELDS ==
               private:
+                //  -- Iterations --
+                std::size_t       _current;
+                const std::size_t _expected;
+
                 //  -- Stream --
                 T& _stream;
+
+                //  -- Formatting --
+                const int _length;
 
 
                 //  == INSTANTIATION ==
               public:
                 //  -- Constructors --
-                constexpr inline Progress(const I& start_, const I& end_, T& stream_) noexcept;
+                constexpr inline Progress(const I& start_, const I& end_, T& stream_, const int length_, const std::size_t expected_) noexcept;
 
 
                 //  == OPERATORS ==

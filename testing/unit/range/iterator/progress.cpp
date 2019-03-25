@@ -44,8 +44,8 @@ namespace test
     //  -- Progress --
     TEST_F(array_int, progress) // NOLINT
     {
-        arc::range::iterator::Progress begin_0{_arr_non_prime.begin(), _arr_non_prime.end(), std::cout};
-        arc::range::iterator::Progress end_0{_arr_non_prime.end(), _arr_non_prime.end(), std::cout};
+        arc::range::iterator::Progress begin_0{_arr_non_prime.begin(), _arr_non_prime.end(), std::cout, 20, 8};
+        arc::range::iterator::Progress end_0{_arr_non_prime.end(), _arr_non_prime.end(), std::cout, 20, 8};
 
         std::array<int, 8>                     arr{_arr_non_prime};
         typename std::array<int, 8>::size_type index{0};

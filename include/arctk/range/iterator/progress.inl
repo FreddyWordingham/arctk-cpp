@@ -17,6 +17,9 @@
 
 
 //  == IMPORTS ==
+//  -- Arc --
+#include "arctk/fmt/progress.inl"
+
 //  -- Std --
 #include <cassert>
 
@@ -35,10 +38,16 @@ namespace arc
             //  == INSTANTIATION ==
             //  -- Constructors --
             template <typename I, typename T>
-            constexpr inline Progress<I, T>::Progress(const I& start_, const I& end_, T& stream_) noexcept
+            constexpr inline Progress<I, T>::Progress(const I& start_, const I& end_, T& stream_, const int length_, const std::size_t expected_) noexcept
               : Iterator<I>{start_, end_}
+              , _current{0}
+              , _expected{expected_}
               , _stream{stream_}
+              , _length{length_}
             {
+                assert(_expected > 0);
+                assert(_expected > 0);
+                assert(length_ > 10); // TODO
             }
 
 
@@ -50,8 +59,9 @@ namespace arc
             {
                 assert(Iterator<I>::_it != Iterator<I>::_end);
 
-                _stream << "Tick\n";
+                _stream << fmt::progress(_length, static_cast<double>(_current) / _expected) << '\n';
 
+                ++_current;
                 ++Iterator<I>::_it;
 
                 return (*this);
