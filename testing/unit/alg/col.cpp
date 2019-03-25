@@ -2,9 +2,11 @@
 //  -- Arc --
 #include "arctk/alg/col.inl"
 #include "arctk/range/arithmetic.inl"
+#include "arctk/si/dimension.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
+
 
 
 //  == PRAGMAS ==
@@ -41,6 +43,20 @@ namespace test
         arc::alg::Col<char, 7>    col_3{'a', 'a', 'b', 'c', 'e', 'h', 'm'};
         const std::array<char, 7> ans_3{'a', 'a', 'b', 'c', 'e', 'h', 'm'};
         ASSERT_EQ(col_3.elems(), ans_3);
+    }
+
+
+    //  -- Arithmetic --
+    TEST(col, multiplication) // NOLINT
+    {
+        using namespace arc;
+        arc::alg::Col<arc::si::Velocity, 3> vel_vec{arc::si::Velocity{1.0}, arc::si::Velocity{2.0}, arc::si::Velocity{3.0}};
+        arc::alg::Col<arc::si::Length, 3>   len_vec{vel_vec * arc::si::Time{2.0}};
+
+        const arc::alg::Col<arc::si::Length, 3> ans{arc::si::Length{2.0}, arc::si::Length{4.0}, arc::si::Length{6.0}};
+        ASSERT_TRUE(len_vec[0] == ans[0]);
+        ASSERT_TRUE(len_vec[1] == ans[1]);
+        ASSERT_TRUE(len_vec[2] == ans[2]);
     }
 
 
