@@ -3,14 +3,6 @@
 
 
 
-//  == IMPORTS ==
-//  -- Std --
-#include <cstdio>
-#include <iostream>
-#include <unistd.h>
-
-
-
 //  == PRAGMAS ==
 //  -- Warnings --
 #ifdef __clang__
@@ -30,7 +22,7 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Support --
-        const bool ANSI_ENABLED{isatty(fileno(stdout)) == 1};
+        inline bool ansi_enabled() noexcept;
 
 
 

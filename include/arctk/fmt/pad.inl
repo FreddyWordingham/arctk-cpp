@@ -30,7 +30,7 @@ namespace arc
           : _width{width_}
           , _fill{fill_}
         {
-            assert(width_ > 6);
+            assert(width_ > 0);
         }
 
 

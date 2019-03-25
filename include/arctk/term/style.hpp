@@ -5,6 +5,10 @@
 
 //  == IMPORTS ==
 //  -- Arc --
+#include "arctk/term/ansi/colours.hpp"
+
+//  -- Std --
+#include <iosfwd>
 
 
 
@@ -18,17 +22,9 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Colouring --
-        // template <typename T>
-        // constexpr inline
+        inline std::string col(const ansi::colour fg_ = ansi::colour::DEFAULT, const ansi::colour bg_ = ansi::colour::DEFAULT) noexcept;
 
 
 
     } // namespace term
-
-
-
-    //  ==  OPERATORS ==
-
-
-
 } // namespace arc
