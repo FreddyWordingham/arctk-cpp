@@ -6,6 +6,7 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/term/ansi/colours.hpp"
+#include "arctk/term/ansi/styles.hpp"
 
 //  -- Std --
 #include <iosfwd>
@@ -21,11 +22,8 @@ namespace arc
 
 
         //  == FUNCTIONS ==
-        //  -- Reset --
-        inline std::string reset() noexcept;
-
         //  -- Effects --
-        inline std::string font() noexcept;
+        inline std::string style(const ansi::style style_ = ansi::style::DEFAULT) noexcept;
 
         //  -- Colouring --
         inline std::string col(const ansi::colour fg_ = ansi::colour::DEFAULT, const ansi::colour bg_ = ansi::colour::DEFAULT) noexcept;

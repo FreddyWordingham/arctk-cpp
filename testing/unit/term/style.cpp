@@ -26,13 +26,35 @@ namespace test
 
 
     //  == TESTS ==
-    //  -- Effects --
-    TEST(effects, font) // NOLINT
+    //  -- Styles --
+    TEST(styling, bold) // NOLINT
     {
-        for (size_t i = 0; i < 100; ++i)
-        {
-            std::cout << "Hello " << arc::term::font() << "world!" << arc::term::reset() << '\n';
-        }
+        std::cout << "Hello " << arc::term::style(arc::term::ansi::style::BOLD) << "world!" << arc::term::style() << '\n';
+    }
+
+    TEST(styling, faint) // NOLINT
+    {
+        std::cout << "Hello " << arc::term::style(arc::term::ansi::style::FAINT) << "world!" << arc::term::style() << '\n';
+    }
+
+    TEST(styling, italic) // NOLINT
+    {
+        std::cout << "Hello " << arc::term::style(arc::term::ansi::style::ITALIC) << "world!" << arc::term::style() << '\n';
+    }
+
+    TEST(styling, underline) // NOLINT
+    {
+        std::cout << "Hello " << arc::term::style(arc::term::ansi::style::UNDERLINE) << "world!" << arc::term::style() << '\n';
+    }
+
+    TEST(styling, reverse) // NOLINT
+    {
+        std::cout << "Hello " << arc::term::style(arc::term::ansi::style::REVERSE) << "world!" << arc::term::style() << '\n';
+    }
+
+    TEST(styling, conceal) // NOLINT
+    {
+        std::cout << "Hello " << arc::term::style(arc::term::ansi::style::CONCEAL) << "world!" << arc::term::style() << '\n';
     }
 
 

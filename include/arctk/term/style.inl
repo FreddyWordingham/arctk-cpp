@@ -11,8 +11,6 @@
 
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/term/ansi/colours.inl"
-#include "arctk/term/ansi/escape.inl"
 #include "arctk/term/properties.inl"
 
 //  -- Std --
@@ -38,19 +36,10 @@ namespace arc
 
 
         //  == FUNCTIONS ==
-        //  -- Reset --
-        inline std::string reset() noexcept
-        {
-            return (ansi_enabled() ? (std::string{} + ansi::START + std::to_string(ansi::RESET) + ansi::END) : "");
-        }
-
-
         //  -- Effects --
-        inline std::string font() noexcept
+        inline std::string style(const ansi::style style_) noexcept
         {
-            static int i{0};
-            ++i;
-            return (ansi_enabled() ? (std::string{} + ansi::START + std::to_string(i) + ansi::END) : "");
+            return (ansi_enabled() ? (std::string{} + ansi::START + std::to_string(static_cast<int>(style_)) + ansi::END) : "");
         }
 
 
