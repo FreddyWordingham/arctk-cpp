@@ -31,35 +31,18 @@ namespace arc
         //  -- Constructors --
         template <typename T, std::size_t N>
         constexpr inline Col<T, N>::Col() noexcept
-          : _elems{}
+          : _elems()
         {
         }
 
         template <typename T, std::size_t N>
         template <typename... A>
         constexpr inline Col<T, N>::Col(const A... elems_) noexcept
-          : _elems{init_elems(elems_...)}
+          : _elems{elems_...}
         {
-            static_assert(sizeof...(A) == N);
         }
 
         // TODO col and row conversion constructors / operators?
-
-
-        //  -- Instantiation --
-        template <typename T, std::size_t N>
-        template <typename... A>
-        constexpr inline std::array<T, N> Col<T, N>::init_elems(const A... elems_) noexcept
-        {
-            static_assert(sizeof...(A) == N);
-
-            std::array<T, N> elems{};
-
-            std::size_t i = 0;
-            ((elems[i] = static_cast<T>(elems_), ++i), ...);
-
-            return (elems);
-        }
 
 
 

@@ -5,6 +5,10 @@
 
 //  == IMPORTS ==
 //  -- Arc --
+#include "arctk/range/view/zip.inl" // TODO find a way to remove this? Need it to know result of operator/ etc.
+#include "arctk/si/dimension.hpp"
+
+//  -- Std --
 #include <array>
 #include <cstddef>
 
@@ -41,12 +45,7 @@ namespace arc
             //  -- Constructors --
             constexpr inline explicit Col() noexcept;
             template <typename... A>
-            constexpr inline explicit Col(const A... elems_) noexcept;
-
-          private:
-            //  -- Instantiation --
-            template <typename... A>
-            constexpr inline std::array<T, N> init_elems(const A... elems_) noexcept;
+            constexpr inline Col(const A... elems_) noexcept;
 
 
             //  == OPERATORS ==
@@ -71,4 +70,37 @@ namespace arc
 
 
     } // namespace alg
+
+
+
+    //  == OPERATORS ==
+    //  -- Arithmetic --
+    template <typename T, std::size_t N, typename S>
+    inline alg::Col<decltype(std::declval<T>() * std::declval<S>()), N> operator*(const alg::Col<T, N>& lhs_, const S& rhs_) noexcept
+    {
+        alg::Col<decltype(std::declval<T>() * std::declval<S>()), N> col{};
+
+        for (auto& [c, l] : range::view::Zip{col, lhs_})
+        {
+            c = l * rhs_;
+        }
+
+        return (col);
+    }
+
+    template <typename T, std::size_t N, typename S>
+    inline alg::Col<decltype(std::declval<T>() / std::declval<S>()), N> operator/(const alg::Col<T, N>& lhs_, const S& rhs_) noexcept
+    {
+        alg::Col<decltype(std::declval<T>() / std::declval<S>()), N> col{};
+
+        for (auto& [c, l] : range::view::Zip{col, lhs_})
+        {
+            c = l / rhs_;
+        }
+
+        return (col);
+    }
+
+
+
 } // namespace arc

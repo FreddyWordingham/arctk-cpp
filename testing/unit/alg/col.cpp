@@ -1,10 +1,10 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/alg/col.inl"
+#include "arctk/range/arithmetic.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
-
 
 
 //  == PRAGMAS ==
@@ -38,8 +38,8 @@ namespace test
         const std::array<int, 3> ans_2{1, 2, 3};
         ASSERT_EQ(col_2.elems(), ans_2);
 
-        arc::alg::Col<char, 7>    col_3{1, 1, 2, 3, 5, 8, 13};
-        const std::array<char, 7> ans_3{1, 1, 2, 3, 5, 8, 13};
+        arc::alg::Col<char, 7>    col_3{'a', 'a', 'b', 'c', 'e', 'h', 'm'};
+        const std::array<char, 7> ans_3{'a', 'a', 'b', 'c', 'e', 'h', 'm'};
         ASSERT_EQ(col_3.elems(), ans_3);
     }
 
