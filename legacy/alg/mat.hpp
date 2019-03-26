@@ -118,6 +118,8 @@ namespace arc
     inline alg::Mat<decltype(std::declval<T>() - std::declval<S>()), M, N> operator-(const alg::Mat<T, M, N>& lhs_, const S& rhs_) noexcept;
     template <typename T, std::size_t M, std::size_t N, typename S>
     inline alg::Mat<decltype(std::declval<T>() * std::declval<S>()), M, N> operator*(const alg::Mat<T, M, N>& lhs_, const S& rhs_) noexcept;
+    template <typename T, std::size_t M, std::size_t N, typename S, std::size_t O, >
+    inline alg::Mat<decltype(std::declval<T>() * std::declval<S>()), M, O> operator*(const alg::Mat<T, M, N>& lhs_, const alg::Mat<T, N, O>& lhs_) noexcept;
     template <typename T, std::size_t M, std::size_t N, typename S>
     inline alg::Mat<decltype(std::declval<T>() / std::declval<S>()), M, N> operator/(const alg::Mat<T, M, N>& lhs_, const S& rhs_) noexcept;
 
