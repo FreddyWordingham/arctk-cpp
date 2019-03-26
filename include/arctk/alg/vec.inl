@@ -37,13 +37,10 @@ namespace arc
         }
 
         template <typename T, std::size_t N>
-        template <typename... A>
-        constexpr inline Vec<T, N>::Vec(const A... elems_) noexcept
-          : _elems{elems_...}
+        constexpr inline Vec<T, N>::Vec(const std::array<T, N>& elems_) noexcept
+          : _elems{elems_}
         {
         }
-
-        // TODO col and row conversion constructors / operators?
 
 
 
@@ -156,7 +153,6 @@ namespace arc
         }
 
 
-
         //  -- Range --
         template <typename T, std::size_t N>
         constexpr inline auto Vec<T, N>::begin() noexcept
@@ -193,40 +189,40 @@ namespace arc
     template <typename T, std::size_t N, typename S>
     inline alg::Vec<decltype(std::declval<T>() + std::declval<S>()), N> operator+(const alg::Vec<T, N>& lhs_, const S& rhs_) noexcept
     {
-        alg::Vec<decltype(std::declval<T>() + std::declval<S>()), N> col{};
+        alg::Vec<decltype(std::declval<T>() + std::declval<S>()), N> vec{};
 
-        for (auto& [c, l] : range::view::Zip{col, lhs_})
+        for (auto& [v, l] : range::view::Zip{vec, lhs_})
         {
-            c = l + rhs_;
+            v = l + rhs_;
         }
 
-        return (col);
+        return (vec);
     }
 
     template <typename T, std::size_t N, typename S>
     inline alg::Vec<decltype(std::declval<T>() - std::declval<S>()), N> operator-(const alg::Vec<T, N>& lhs_, const S& rhs_) noexcept
     {
-        alg::Vec<decltype(std::declval<T>() - std::declval<S>()), N> col{};
+        alg::Vec<decltype(std::declval<T>() - std::declval<S>()), N> vec{};
 
-        for (auto& [c, l] : range::view::Zip{col, lhs_})
+        for (auto& [v, l] : range::view::Zip{vec, lhs_})
         {
-            c = l - rhs_;
+            v = l - rhs_;
         }
 
-        return (col);
+        return (vec);
     }
 
     template <typename T, std::size_t N, typename S>
     inline alg::Vec<decltype(std::declval<T>() * std::declval<S>()), N> operator*(const alg::Vec<T, N>& lhs_, const S& rhs_) noexcept
     {
-        alg::Vec<decltype(std::declval<T>() * std::declval<S>()), N> col{};
+        alg::Vec<decltype(std::declval<T>() * std::declval<S>()), N> vec{};
 
-        for (auto& [c, l] : range::view::Zip{col, lhs_})
+        for (auto& [v, l] : range::view::Zip{vec, lhs_})
         {
-            c = l * rhs_;
+            v = l * rhs_;
         }
 
-        return (col);
+        return (vec);
     }
 
     template <typename T, std::size_t N, typename S>
@@ -245,20 +241,20 @@ namespace arc
     template <typename T, std::size_t N, typename S>
     inline alg::Vec<decltype(std::declval<T>() / std::declval<S>()), N> operator/(const alg::Vec<T, N>& lhs_, const S& rhs_) noexcept
     {
-        alg::Vec<decltype(std::declval<T>() / std::declval<S>()), N> col{};
+        alg::Vec<decltype(std::declval<T>() / std::declval<S>()), N> vec{};
 
-        for (auto& [c, l] : range::view::Zip{col, lhs_})
+        for (auto& [v, l] : range::view::Zip{vec, lhs_})
         {
-            c = l / rhs_;
+            v = l / rhs_;
         }
 
-        return (col);
+        return (vec);
     }
 
     template <typename T, typename S>
     inline alg::Vec<decltype(std::declval<T>() * std::declval<S>()), 3> operator^(const alg::Vec<T, 3>& lhs_, const alg::Vec<S, 3>& rhs_) noexcept
     {
-        return (alg::Vec<decltype(std::declval<T>() * std::declval<S>()), 3>{(lhs_.y() * rhs_.z()) - (lhs_.z() * rhs_.y()), (lhs_.z() * rhs_.x()) - (lhs_.x() * rhs_.z()), (lhs_.x() * rhs_.y()) - (lhs_.y() * rhs_.x())});
+        return (alg::Vec<decltype(std::declval<T>() * std::declval<S>()), 3>{{(lhs_.y() * rhs_.z()) - (lhs_.z() * rhs_.y()), (lhs_.z() * rhs_.x()) - (lhs_.x() * rhs_.z()), (lhs_.x() * rhs_.y()) - (lhs_.y() * rhs_.x())}});
     }
 
 

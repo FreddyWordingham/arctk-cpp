@@ -41,7 +41,7 @@ namespace arc
         template <typename T, std::size_t N>
         class Vec
         {
-            //  == ALIASES ==
+            //  == ASSERTIONS ==
             //  -- Size --
             static_assert(N > 1);
 
@@ -63,8 +63,7 @@ namespace arc
           public:
             //  -- Constructors --
             constexpr inline explicit Vec() noexcept;
-            template <typename... A>
-            constexpr inline Vec(const A... elems_) noexcept;
+            constexpr inline Vec(const std::array<T, N>& elems_) noexcept;
 
 
             //  == OPERATORS ==
