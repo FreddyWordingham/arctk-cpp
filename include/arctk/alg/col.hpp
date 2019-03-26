@@ -60,6 +60,16 @@ namespace arc
             //  -- Getters --
             constexpr inline const std::array<T, N>& elems() const noexcept;
 
+            //  -- Dimensions --
+            constexpr inline T&       x() noexcept;
+            constexpr inline const T& x() const noexcept;
+            constexpr inline T&       y() noexcept;
+            constexpr inline const T& y() const noexcept;
+            constexpr inline T&       z() noexcept;
+            constexpr inline const T& z() const noexcept;
+            constexpr inline T&       w() noexcept;
+            constexpr inline const T& w() const noexcept;
+
             //  -- Range --
             constexpr inline auto begin() noexcept;
             constexpr inline auto begin() const noexcept;
@@ -125,6 +135,12 @@ namespace arc
         }
 
         return (col);
+    }
+
+    template <typename T, typename S>
+    inline alg::Col<decltype(std::declval<T>() * std::declval<S>()), 3> operator^(const alg::Col<T, 3>& lhs_, const alg::Col<S, 3>& rhs_) noexcept
+    {
+        return (alg::Col<decltype(std::declval<T>() * std::declval<S>()), 3>{(lhs_.y() * rhs_.z()) - (lhs_.z() * rhs_.y()), (lhs_.z() * rhs_.x()) - (lhs_.x() * rhs_.z()), (lhs_.x() * rhs_.y()) - (lhs_.y() * rhs_.x())});
     }
 
 

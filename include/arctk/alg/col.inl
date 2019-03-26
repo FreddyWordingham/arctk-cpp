@@ -75,6 +75,73 @@ namespace arc
         }
 
 
+        //  -- Dimensions --
+        template <typename T, std::size_t N>
+        constexpr inline T& Col<T, N>::x() noexcept
+        {
+            static_assert(N >= 1);
+
+            return (_elems[0]);
+        }
+
+        template <typename T, std::size_t N>
+        constexpr inline const T& Col<T, N>::x() const noexcept
+        {
+            static_assert(N >= 1);
+
+            return (_elems[0]);
+        }
+
+        template <typename T, std::size_t N>
+        constexpr inline T& Col<T, N>::y() noexcept
+        {
+            static_assert(N >= 2);
+
+            return (_elems[1]);
+        }
+
+        template <typename T, std::size_t N>
+        constexpr inline const T& Col<T, N>::y() const noexcept
+        {
+            static_assert(N >= 2);
+
+            return (_elems[1]);
+        }
+
+        template <typename T, std::size_t N>
+        constexpr inline T& Col<T, N>::z() noexcept
+        {
+            static_assert(N >= 3);
+
+            return (_elems[2]);
+        }
+
+        template <typename T, std::size_t N>
+        constexpr inline const T& Col<T, N>::z() const noexcept
+        {
+            static_assert(N >= 3);
+
+            return (_elems[2]);
+        }
+
+        template <typename T, std::size_t N>
+        constexpr inline T& Col<T, N>::w() noexcept
+        {
+            static_assert(N >= 4);
+
+            return (_elems[3]);
+        }
+
+        template <typename T, std::size_t N>
+        constexpr inline const T& Col<T, N>::w() const noexcept
+        {
+            static_assert(N >= 4);
+
+            return (_elems[3]);
+        }
+
+
+
         //  -- Range --
         template <typename T, std::size_t N>
         constexpr inline auto Col<T, N>::begin() noexcept

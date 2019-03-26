@@ -59,6 +59,19 @@ namespace test
         ASSERT_TRUE(len_vec[2] == ans[2]);
     }
 
+    TEST(col, cross_product) // NOLINT
+    {
+        using namespace arc;
+        arc::alg::Col<arc::si::Velocity, 3> vel_vec{arc::si::Velocity{1.0}, arc::si::Velocity{2.0}, arc::si::Velocity{3.0}};
+        arc::alg::Col<arc::si::Time, 3>     time_vec{arc::si::Time{1.0}, arc::si::Time{-2.0}, arc::si::Time{1.0 / 3.0}};
+        arc::alg::Col<arc::si::Length, 3>   len_vec{vel_vec ^ time_vec};
+
+        const arc::alg::Col<arc::si::Length, 3> ans{arc::si::Length{20.0 / 3.0}, arc::si::Length{8.0 / 3.0}, arc::si::Length{-4.0}};
+        ASSERT_TRUE(len_vec[0] == ans[0]);
+        ASSERT_TRUE(len_vec[1] == ans[1]);
+        ASSERT_TRUE(len_vec[2] == ans[2]);
+    }
+
 
     //  -- Access --
     TEST(col, access) // NOLINT
