@@ -63,7 +63,8 @@ namespace arc
           public:
             //  -- Constructors --
             constexpr inline explicit Vec() noexcept;
-            constexpr inline Vec(const std::array<T, N>& elems_) noexcept;
+            template <typename... A>
+            constexpr inline explicit Vec(const A... elems_) noexcept;
 
 
             //  == OPERATORS ==
@@ -100,6 +101,14 @@ namespace arc
         template <typename T, std::size_t N>
         class Col : public Vec<T, N>
         {
+            //  == INSTANTIATION ==
+          public:
+            //  -- Constructors --
+            constexpr inline explicit Col() noexcept;
+            template <typename... A>
+            constexpr inline explicit Col(const A... elems_) noexcept;
+
+
             //  == OPERATORS ==
           public:
             //  -- Conversions --
@@ -111,6 +120,14 @@ namespace arc
         template <typename T, std::size_t N>
         class Row : public Vec<T, N>
         {
+            //  == INSTANTIATION ==
+          public:
+            //  -- Constructors --
+            constexpr inline explicit Row() noexcept;
+            template <typename... A>
+            constexpr inline explicit Row(const A... elems_) noexcept;
+
+
             //  == OPERATORS ==
           public:
             //  -- Conversions --

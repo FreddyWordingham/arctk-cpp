@@ -37,9 +37,39 @@ namespace arc
         }
 
         template <typename T, std::size_t N>
-        constexpr inline Vec<T, N>::Vec(const std::array<T, N>& elems_) noexcept
-          : _elems{elems_}
+        constexpr inline Col<T, N>::Col() noexcept
+          : Vec<T, N>{}
         {
+        }
+
+        template <typename T, std::size_t N>
+        constexpr inline Row<T, N>::Row() noexcept
+          : Vec<T, N>{}
+        {
+        }
+
+        template <typename T, std::size_t N>
+        template <typename... A>
+        constexpr inline Vec<T, N>::Vec(const A... elems_) noexcept
+          : _elems{elems_...}
+        {
+            static_assert(sizeof...(A) == N);
+        }
+
+        template <typename T, std::size_t N>
+        template <typename... A>
+        constexpr inline Col<T, N>::Col(const A... elems_) noexcept
+          : Vec<T, N>{elems_...}
+        {
+            static_assert(sizeof...(A) == N);
+        }
+
+        template <typename T, std::size_t N>
+        template <typename... A>
+        constexpr inline Row<T, N>::Row(const A... elems_) noexcept
+          : Vec<T, N>{elems_...}
+        {
+            static_assert(sizeof...(A) == N);
         }
 
 
@@ -254,7 +284,7 @@ namespace arc
     template <typename T, typename S>
     inline alg::Vec<decltype(std::declval<T>() * std::declval<S>()), 3> operator^(const alg::Vec<T, 3>& lhs_, const alg::Vec<S, 3>& rhs_) noexcept
     {
-        return (alg::Vec<decltype(std::declval<T>() * std::declval<S>()), 3>{{(lhs_.y() * rhs_.z()) - (lhs_.z() * rhs_.y()), (lhs_.z() * rhs_.x()) - (lhs_.x() * rhs_.z()), (lhs_.x() * rhs_.y()) - (lhs_.y() * rhs_.x())}});
+        return (alg::Vec<decltype(std::declval<T>() * std::declval<S>()), 3>{(lhs_.y() * rhs_.z()) - (lhs_.z() * rhs_.y()), (lhs_.z() * rhs_.x()) - (lhs_.x() * rhs_.z()), (lhs_.x() * rhs_.y()) - (lhs_.y() * rhs_.x())});
     }
 
 
