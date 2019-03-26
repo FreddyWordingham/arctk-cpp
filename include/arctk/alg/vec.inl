@@ -48,6 +48,20 @@ namespace arc
 
 
         //  == OPERATORS ==
+        //  -- Conversions --
+        template <typename T, std::size_t N>
+        constexpr inline Col<T, N>::operator Row<T, N>() noexcept
+        {
+            return (Row<T, N>{Vec<T, N>::_elems});
+        }
+
+        template <typename T, std::size_t N>
+        constexpr inline Row<T, N>::operator Col<T, N>() noexcept
+        {
+            return (Col<T, N>{Vec<T, N>::_elems});
+        }
+
+
         //  -- Access --
         template <typename T, std::size_t N>
         constexpr inline T& Vec<T, N>::operator[](const std::size_t index_) noexcept

@@ -21,6 +21,21 @@ namespace arc
 
 
 
+        //  == CLASS PROTOTYPES ==
+        //  -- Vec --
+        template <typename T, std::size_t N>
+        class Vec;
+
+        //  -- Col --
+        template <typename T, std::size_t N>
+        class Col;
+
+        //  -- Row --
+        template <typename T, std::size_t N>
+        class Row;
+
+
+
         //  == CLASSES ==
         //  -- Vec --
         template <typename T, std::size_t N>
@@ -34,7 +49,7 @@ namespace arc
             //  == ALIASES ==
           public:
             //  -- Traits --
-            using value_type = typename std::size_t;
+            using value_type = T;
             using size_type  = typename std::size_t;
 
 
@@ -86,6 +101,10 @@ namespace arc
         template <typename T, std::size_t N>
         class Col : public Vec<T, N>
         {
+            //  == OPERATORS ==
+          public:
+            //  -- Conversions --
+            constexpr inline explicit operator Row<T, N>() noexcept;
         };
 
 
@@ -93,6 +112,10 @@ namespace arc
         template <typename T, std::size_t N>
         class Row : public Vec<T, N>
         {
+            //  == OPERATORS ==
+          public:
+            //  -- Conversions --
+            constexpr inline explicit operator Col<T, N>() noexcept;
         };
 
 
