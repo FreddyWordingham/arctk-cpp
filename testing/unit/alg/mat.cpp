@@ -110,6 +110,70 @@ namespace test
         ASSERT_EQ(mat_4[3][6], ans_4[3][6]);
     }
 
+    TEST(mat, row) // NOLINT
+    {
+        arc::alg::Mat<int, 3, 2> mat{arc::alg::Row<int, 2>{1, 2}, arc::alg::Row<int, 2>{0, 0}, arc::alg::Row<int, 2>{-1, -2}};
+
+        const auto row_0{mat.row(0)};
+        ASSERT_EQ(*row_0[0], 1);
+        ASSERT_EQ(*row_0[1], 2);
+
+        const auto row_1{mat.row(1)};
+        ASSERT_EQ(*row_1[0], 0);
+        ASSERT_EQ(*row_1[1], 0);
+
+        const auto row_2{mat.row(2)};
+        ASSERT_EQ(*row_2[0], -1);
+        ASSERT_EQ(*row_2[1], -2);
+    }
+
+    TEST(mat, const_row) // NOLINT
+    {
+        const arc::alg::Mat<int, 3, 2> mat{arc::alg::Row<int, 2>{1, 2}, arc::alg::Row<int, 2>{0, 0}, arc::alg::Row<int, 2>{-1, -2}};
+
+        const auto row_0{mat.row(0)};
+        ASSERT_EQ(*row_0[0], 1);
+        ASSERT_EQ(*row_0[1], 2);
+
+        const auto row_1{mat.row(1)};
+        ASSERT_EQ(*row_1[0], 0);
+        ASSERT_EQ(*row_1[1], 0);
+
+        const auto row_2{mat.row(2)};
+        ASSERT_EQ(*row_2[0], -1);
+        ASSERT_EQ(*row_2[1], -2);
+    }
+
+    TEST(mat, col) // NOLINT
+    {
+        arc::alg::Mat<int, 3, 2> mat{arc::alg::Col<int, 3>{1, 0, -1}, arc::alg::Col<int, 3>{2, 0, -2}};
+
+        const auto col_0{mat.col(0)};
+        ASSERT_EQ(*col_0[0], 1);
+        ASSERT_EQ(*col_0[1], 0);
+        ASSERT_EQ(*col_0[2], -1);
+
+        const auto col_1{mat.col(1)};
+        ASSERT_EQ(*col_1[0], 2);
+        ASSERT_EQ(*col_1[1], 0);
+        ASSERT_EQ(*col_1[2], -2);
+    }
+
+    TEST(mat, const_col) // NOLINT
+    {
+        const arc::alg::Mat<int, 3, 2> mat{arc::alg::Col<int, 3>{1, 0, -1}, arc::alg::Col<int, 3>{2, 0, -2}};
+
+        const auto col_0{mat.col(0)};
+        ASSERT_EQ(*col_0[0], 1);
+        ASSERT_EQ(*col_0[1], 0);
+        ASSERT_EQ(*col_0[2], -1);
+
+        const auto col_1{mat.col(1)};
+        ASSERT_EQ(*col_1[0], 2);
+        ASSERT_EQ(*col_1[1], 0);
+        ASSERT_EQ(*col_1[2], -2);
+    }
+
 
     //  -- Arithmetic --
     TEST(mat, multiplication) // NOLINT

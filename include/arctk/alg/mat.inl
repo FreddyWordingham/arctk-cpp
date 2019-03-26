@@ -102,31 +102,63 @@ namespace arc
         }
 
         template <typename T, std::size_t M, std::size_t N>
-        constexpr inline Row<std::reference_wrapper<T>, N> Mat<T, M, N>::row(const std::size_t index_) noexcept
+        constexpr inline Row<std::shared_ptr<T>, N> Mat<T, M, N>::row(const std::size_t index_) noexcept
         {
             assert(index_ < M);
+
+            Row<std::shared_ptr<T>, N> row;
+
+            for (auto& [r, x] : arc::range::view::Zip{row, _rows[index_]})
+            {
+                r = std::make_shared<T>(x);
+            }
+
+            return (row);
         }
 
         template <typename T, std::size_t M, std::size_t N>
-        constexpr inline Row<const std::reference_wrapper<T>, N> Mat<T, M, N>::row(const std::size_t index_) const noexcept
+        constexpr inline Row<std::shared_ptr<const T>, N> Mat<T, M, N>::row(const std::size_t index_) const noexcept
         {
             assert(index_ < M);
+
+            Row<std::shared_ptr<const T>, N> row;
+
+            for (auto& [r, x] : arc::range::view::Zip{row, _rows[index_]})
+            {
+                r = std::make_shared<const T>(x);
+            }
+
+            return (row);
         }
 
         template <typename T, std::size_t M, std::size_t N>
-        constexpr inline Col<std::reference_wrapper<T>, M> Mat<T, M, N>::col(const std::size_t index_) noexcept
+        constexpr inline Col<std::shared_ptr<T>, M> Mat<T, M, N>::col(const std::size_t index_) noexcept
         {
             assert(index_ < N);
 
-            return (_rows[index_]);
+            Col<std::shared_ptr<T>, M> col;
+
+            for (auto& [c, row] : arc::range::view::Zip{col, _rows})
+            {
+                c = std::make_shared<T>(row[index_]);
+            }
+
+            return (col);
         }
 
         template <typename T, std::size_t M, std::size_t N>
-        constexpr inline Col<const std::reference_wrapper<T>, M> Mat<T, M, N>::col(const std::size_t index_) const noexcept
+        constexpr inline Col<std::shared_ptr<const T>, M> Mat<T, M, N>::col(const std::size_t index_) const noexcept
         {
             assert(index_ < N);
 
-            return (_rows[index_]);
+            Col<std::shared_ptr<const T>, M> col;
+
+            for (auto& [c, row] : arc::range::view::Zip{col, _rows})
+            {
+                c = std::make_shared<const T>(row[index_]);
+            }
+
+            return (col);
         }
 
 

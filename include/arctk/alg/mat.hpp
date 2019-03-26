@@ -10,7 +10,7 @@
 //  -- Std --
 #include <array>
 #include <cstddef>
-#include <functional>
+#include <memory>
 
 
 
@@ -70,11 +70,11 @@ namespace arc
             //  == METHODS ==
           public:
             //  -- Getters --
-            constexpr inline const std::array<Row<T, N>, M>&         rows() const noexcept;
-            constexpr inline Row<std::reference_wrapper<T>, N>       row(const std::size_t index_) noexcept;
-            constexpr inline Row<const std::reference_wrapper<T>, N> row(const std::size_t index_) const noexcept;
-            constexpr inline Col<std::reference_wrapper<T>, M>       col(const std::size_t index_) noexcept;
-            constexpr inline Col<const std::reference_wrapper<T>, M> col(const std::size_t index_) const noexcept;
+            constexpr inline const std::array<Row<T, N>, M>&  rows() const noexcept;
+            constexpr inline Row<std::shared_ptr<T>, N>       row(const std::size_t index_) noexcept;
+            constexpr inline Row<std::shared_ptr<const T>, N> row(const std::size_t index_) const noexcept;
+            constexpr inline Col<std::shared_ptr<T>, M>       col(const std::size_t index_) noexcept;
+            constexpr inline Col<std::shared_ptr<const T>, M> col(const std::size_t index_) const noexcept;
 
             //  -- Dimensions --
             constexpr inline Row<T, M>&       x() noexcept;
