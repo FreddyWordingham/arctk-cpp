@@ -86,11 +86,11 @@ namespace arc
         //  == ALIASES ==
         //  -- Size --
         template <typename T>
-        using col2 = Col<T, 2>;
+        using Col2 = Col<T, 2>;
         template <typename T>
-        using col3 = Col<T, 3>;
+        using Col3 = Col<T, 3>;
         template <typename T>
-        using col4 = Col<T, 4>;
+        using Col4 = Col<T, 4>;
 
 
 
