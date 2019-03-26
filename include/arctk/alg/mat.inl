@@ -33,8 +33,9 @@ namespace arc
         }
 
         template <typename T, std::size_t N, std::size_t M>
-        constexpr inline Mat<T, N, M>::Mat(const std::array<Row<T, M>, N>& rows_) noexcept
-          : _rows{rows_}
+        template <typename... A>
+        constexpr inline Mat<T, N, M>::Mat(const A... rows_) noexcept
+          : _rows{rows_...}
         {
         }
 

@@ -48,8 +48,7 @@ namespace test
         ASSERT_EQ(mat_1[2][1], ans_1[2][1]);
         ASSERT_EQ(mat_1[2][2], ans_1[2][2]);
 
-        arc::alg::Row<int, 3>                   row_0{1, 2, 3};
-        arc::alg::Mat<int, 3, 3>                mat_2{};
+        arc::alg::Mat<int, 3, 3>                mat_2{arc::alg::Row<int, 3>{1, 2, 3}, arc::alg::Row<int, 3>{4, -5, 6}, arc::alg::Row<int, 3>{7, 8, 9}};
         const std::array<std::array<int, 3>, 3> ans_2{{{{1, 2, 3}}, {{4, -5, 6}}, {{7, 8, 9}}}};
         ASSERT_EQ(mat_2[0][0], ans_2[0][0]);
         ASSERT_EQ(mat_2[0][1], ans_2[0][1]);
@@ -61,9 +60,22 @@ namespace test
         ASSERT_EQ(mat_2[2][1], ans_2[2][1]);
         ASSERT_EQ(mat_2[2][2], ans_2[2][2]);
 
-        // arc::alg::Mat<char, 2, 7>                mat_3{{{'a', 'a'}}, {{'b', 'c'}}, {{'e', 'h'}}, {{'m', 'a'}}, {{'b', 'c'}}, {{'d', 'f'}}, {{'i', 'n'}}};
-        // const std::array<std::array<char, 7>, 2> ans_3{{{'a', 'a'}}, {{'b', 'c'}}, {{'e', 'h'}}, {{'m', 'a'}}, {{'b', 'c'}}, {{'d', 'f'}}, {{'i', 'n'}}};
-        // ASSERT_EQ(mat_3.rows(), ans_3);
+        arc::alg::Mat<char, 2, 7>                mat_3{arc::alg::Row<char, 7>{'a', 'a', 'b', 'c', 'e', 'h', 'm'}, arc::alg::Row<char, 7>{'a', 'b', 'c', 'd', 'f', 'i', 'n'}};
+        const std::array<std::array<char, 7>, 2> ans_3{{{{'a', 'a', 'b', 'c', 'e', 'h', 'm'}}, {{'a', 'b', 'c', 'd', 'f', 'i', 'n'}}}};
+        ASSERT_EQ(mat_3[0][0], ans_3[0][0]);
+        ASSERT_EQ(mat_3[0][1], ans_3[0][1]);
+        ASSERT_EQ(mat_3[0][2], ans_3[0][2]);
+        ASSERT_EQ(mat_3[0][3], ans_3[0][3]);
+        ASSERT_EQ(mat_3[0][4], ans_3[0][4]);
+        ASSERT_EQ(mat_3[0][5], ans_3[0][5]);
+        ASSERT_EQ(mat_3[0][6], ans_3[0][6]);
+        ASSERT_EQ(mat_3[1][0], ans_3[1][0]);
+        ASSERT_EQ(mat_3[1][1], ans_3[1][1]);
+        ASSERT_EQ(mat_3[1][2], ans_3[1][2]);
+        ASSERT_EQ(mat_3[1][3], ans_3[1][3]);
+        ASSERT_EQ(mat_3[1][4], ans_3[1][4]);
+        ASSERT_EQ(mat_3[1][5], ans_3[1][5]);
+        ASSERT_EQ(mat_3[1][6], ans_3[1][6]);
     }
 
 
