@@ -64,7 +64,7 @@ namespace arc
             //  -- Constructors --
             constexpr inline explicit Vec() noexcept;
             template <typename... A>
-            constexpr inline explicit Vec(const A... elems_) noexcept;
+            constexpr inline explicit Vec(const T& elem_, const A&... elems_) noexcept;
 
 
             //  == OPERATORS ==
@@ -106,7 +106,7 @@ namespace arc
             //  -- Constructors --
             constexpr inline explicit Col() noexcept;
             template <typename... A>
-            constexpr inline explicit Col(const A... elems_) noexcept;
+            constexpr inline explicit Col(const T& elem_, const A&... elems_) noexcept;
 
 
             //  == OPERATORS ==
@@ -125,7 +125,7 @@ namespace arc
             //  -- Constructors --
             constexpr inline explicit Row() noexcept;
             template <typename... A>
-            constexpr inline explicit Row(const A... elems_) noexcept;
+            constexpr inline explicit Row(const T& elem_, const A&... elems_) noexcept;
 
 
             //  == OPERATORS ==

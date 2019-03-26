@@ -54,7 +54,7 @@ namespace arc
             constexpr inline Zip<I, J...>& Zip<I, J...>::operator++() noexcept
             {
                 assert(Iterator<I>::_it != Iterator<I>::_end);
-                assert(tuple::num_equal_elems(_its, _ends) == 0);
+                // assert(tuple::num_equal_elems(_its, _ends) == 0);
 
                 ++Iterator<I>::_it;
 

@@ -30,6 +30,12 @@ namespace arc
         //  == FUNCTIONS ==
         //  -- Lists --
         template <typename T, typename>
+        constexpr inline std::vector<T> list(const T last_) noexcept
+        {
+            return (list(T{}, last_, math::sign(last_)));
+        }
+
+        template <typename T, typename>
         constexpr inline std::vector<T> list(const T first_, const T last_) noexcept
         {
             return (list(first_, last_, math::sign(last_ - first_)));
@@ -38,7 +44,7 @@ namespace arc
         template <typename T, typename>
         constexpr inline std::vector<T> list(const T first_, const T last_, const T spacing_) noexcept
         {
-            assert(std::abs(spacing_) > 0);
+            assert(spacing_ != 0);
             assert(((last_ - first_) % spacing_) == 0);
             assert(((last_ - first_) * spacing_) > 0);
 

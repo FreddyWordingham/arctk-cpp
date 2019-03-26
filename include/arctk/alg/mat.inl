@@ -12,6 +12,7 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/alg/vec.inl"
+#include "arctk/range/list.inl"
 #include "arctk/range/view/zip.inl"
 
 
@@ -26,35 +27,66 @@ namespace arc
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        template <typename T, std::size_t N, std::size_t M>
-        constexpr inline Mat<T, N, M>::Mat() noexcept
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline Mat<T, M, N>::Mat() noexcept
           : _rows()
         {
         }
 
-        template <typename T, std::size_t N, std::size_t M>
+        template <typename T, std::size_t M, std::size_t N>
         template <typename... A>
-        constexpr inline Mat<T, N, M>::Mat(const A... rows_) noexcept
-          : _rows{rows_...}
+        constexpr inline Mat<T, M, N>::Mat(const Row<T, N>& row_, const A&... rows_) noexcept
+          : _rows{row_, rows_...}
         {
+            static_assert(sizeof...(A) == (M - 1));
+        }
+
+        template <typename T, std::size_t M, std::size_t N>
+        template <typename... A>
+        constexpr inline Mat<T, M, N>::Mat(const Col<T, M>& col_, const A&... cols_) noexcept
+          : _rows{init_rows(col_, cols_...)}
+        {
+            static_assert(sizeof...(A) == (N - 1));
+        }
+
+
+        //  -- Initialisation --
+        template <typename T, std::size_t M, std::size_t N>
+        template <typename... A>
+        constexpr inline std::array<Row<T, N>, M> Mat<T, M, N>::init_rows(const Col<T, M>& col_, const A&... cols_) noexcept
+        {
+            static_assert(sizeof...(A) == (N - 1));
+
+            std::array<Col<T, M>, N> cols{col_, cols_...};
+            std::array<Row<T, N>, M> rows;
+
+            for (auto& [row, row_index] : arc::range::view::Zip{rows, arc::range::list(M)})
+            {
+                for (auto& [x, col] : arc::range::view::Zip{row, cols})
+                {
+                    x = col[row_index];
+                }
+            }
+
+            return (rows);
         }
 
 
 
         //  == OPERATORS ==
         //  -- Access --
-        template <typename T, std::size_t N, std::size_t M>
-        constexpr inline Row<T, M>& Mat<T, N, M>::operator[](const std::size_t index_) noexcept
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline Row<T, N>& Mat<T, M, N>::operator[](const std::size_t index_) noexcept
         {
-            assert(index_ < N);
+            assert(index_ < M);
 
             return (_rows[index_]);
         }
 
-        template <typename T, std::size_t N, std::size_t M>
-        constexpr inline const Row<T, M>& Mat<T, N, M>::operator[](const std::size_t index_) const noexcept
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline const Row<T, N>& Mat<T, M, N>::operator[](const std::size_t index_) const noexcept
         {
-            assert(index_ < N);
+            assert(index_ < M);
 
             return (_rows[index_]);
         }
@@ -63,100 +95,129 @@ namespace arc
 
         //  == METHODS ==
         //  -- Getters --
-        template <typename T, std::size_t N, std::size_t M>
-        constexpr inline const std::array<Row<T, M>, N>& Mat<T, N, M>::rows() const noexcept
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline const std::array<Row<T, N>, M>& Mat<T, M, N>::rows() const noexcept
         {
             return (_rows);
         }
 
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline Row<std::reference_wrapper<T>, N> Mat<T, M, N>::row(const std::size_t index_) noexcept
+        {
+            assert(index_ < M);
+        }
+
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline Row<const std::reference_wrapper<T>, N> Mat<T, M, N>::row(const std::size_t index_) const noexcept
+        {
+            assert(index_ < M);
+        }
+
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline Col<std::reference_wrapper<T>, M> Mat<T, M, N>::col(const std::size_t index_) noexcept
+        {
+            assert(index_ < N);
+
+            return (_rows[index_]);
+        }
+
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline Col<const std::reference_wrapper<T>, M> Mat<T, M, N>::col(const std::size_t index_) const noexcept
+        {
+            assert(index_ < N);
+
+            return (_rows[index_]);
+        }
+
+
 
         //  -- Dimensions --
-        template <typename T, std::size_t N, std::size_t M>
-        constexpr inline Row<T, M>& Mat<T, N, M>::x() noexcept
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline Row<T, M>& Mat<T, M, N>::x() noexcept
         {
-            static_assert(N >= 1);
+            static_assert(M > 0);
 
             return (_rows[0]);
         }
 
-        template <typename T, std::size_t N, std::size_t M>
-        constexpr inline const Row<T, M>& Mat<T, N, M>::x() const noexcept
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline const Row<T, M>& Mat<T, M, N>::x() const noexcept
         {
-            static_assert(N >= 1);
+            static_assert(M > 0);
 
             return (_rows[0]);
         }
 
-        template <typename T, std::size_t N, std::size_t M>
-        constexpr inline Row<T, M>& Mat<T, N, M>::y() noexcept
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline Row<T, M>& Mat<T, M, N>::y() noexcept
         {
-            static_assert(N >= 2);
+            static_assert(M > 1);
 
             return (_rows[1]);
         }
 
-        template <typename T, std::size_t N, std::size_t M>
-        constexpr inline const Row<T, M>& Mat<T, N, M>::y() const noexcept
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline const Row<T, M>& Mat<T, M, N>::y() const noexcept
         {
-            static_assert(N >= 2);
+            static_assert(M > 1);
 
             return (_rows[1]);
         }
 
-        template <typename T, std::size_t N, std::size_t M>
-        constexpr inline Row<T, M>& Mat<T, N, M>::z() noexcept
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline Row<T, M>& Mat<T, M, N>::z() noexcept
         {
-            static_assert(N >= 3);
+            static_assert(M > 2);
 
             return (_rows[2]);
         }
 
-        template <typename T, std::size_t N, std::size_t M>
-        constexpr inline const Row<T, M>& Mat<T, N, M>::z() const noexcept
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline const Row<T, M>& Mat<T, M, N>::z() const noexcept
         {
-            static_assert(N >= 3);
+            static_assert(M > 2);
 
             return (_rows[2]);
         }
 
-        template <typename T, std::size_t N, std::size_t M>
-        constexpr inline Row<T, M>& Mat<T, N, M>::w() noexcept
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline Row<T, M>& Mat<T, M, N>::w() noexcept
         {
-            static_assert(N >= 4);
+            static_assert(M > 3);
 
             return (_rows[3]);
         }
 
-        template <typename T, std::size_t N, std::size_t M>
-        constexpr inline const Row<T, M>& Mat<T, N, M>::w() const noexcept
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline const Row<T, M>& Mat<T, M, N>::w() const noexcept
         {
-            static_assert(N >= 4);
+            static_assert(M > 3);
 
             return (_rows[3]);
         }
 
 
         //  -- Range --
-        template <typename T, std::size_t N, std::size_t M>
-        constexpr inline auto Mat<T, N, M>::begin() noexcept
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline auto Mat<T, M, N>::begin() noexcept
         {
             return (std::begin(_rows));
         }
 
-        template <typename T, std::size_t N, std::size_t M>
-        constexpr inline auto Mat<T, N, M>::begin() const noexcept
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline auto Mat<T, M, N>::begin() const noexcept
         {
             return (std::begin(_rows));
         }
 
-        template <typename T, std::size_t N, std::size_t M>
-        constexpr inline auto Mat<T, N, M>::end() noexcept
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline auto Mat<T, M, N>::end() noexcept
         {
             return (std::end(_rows));
         }
 
-        template <typename T, std::size_t N, std::size_t M>
-        constexpr inline auto Mat<T, N, M>::end() const noexcept
+        template <typename T, std::size_t M, std::size_t N>
+        constexpr inline auto Mat<T, M, N>::end() const noexcept
         {
             return (std::end(_rows));
         }
@@ -169,10 +230,10 @@ namespace arc
 
     //  == OPERATORS ==
     //  -- Arithmetic --
-    template <typename T, std::size_t N, std::size_t M, typename S>
-    inline alg::Mat<decltype(std::declval<T>() + std::declval<S>()), N, M> operator+(const alg::Mat<T, N, M>& lhs_, const S& rhs_) noexcept
+    template <typename T, std::size_t M, std::size_t N, typename S>
+    inline alg::Mat<decltype(std::declval<T>() + std::declval<S>()), M, N> operator+(const alg::Mat<T, M, N>& lhs_, const S& rhs_) noexcept
     {
-        alg::Mat<decltype(std::declval<T>() + std::declval<S>()), N, M> mat{};
+        alg::Mat<decltype(std::declval<T>() + std::declval<S>()), M, N> mat{};
 
         for (auto& [m, l] : range::view::Zip{mat, lhs_})
         {
@@ -182,10 +243,10 @@ namespace arc
         return (mat);
     }
 
-    template <typename T, std::size_t N, std::size_t M, typename S>
-    inline alg::Mat<decltype(std::declval<T>() - std::declval<S>()), N, M> operator-(const alg::Mat<T, N, M>& lhs_, const S& rhs_) noexcept
+    template <typename T, std::size_t M, std::size_t N, typename S>
+    inline alg::Mat<decltype(std::declval<T>() - std::declval<S>()), M, N> operator-(const alg::Mat<T, M, N>& lhs_, const S& rhs_) noexcept
     {
-        alg::Mat<decltype(std::declval<T>() - std::declval<S>()), N, M> mat{};
+        alg::Mat<decltype(std::declval<T>() - std::declval<S>()), M, N> mat{};
 
         for (auto& [m, l] : range::view::Zip{mat, lhs_})
         {
@@ -195,10 +256,10 @@ namespace arc
         return (mat);
     }
 
-    template <typename T, std::size_t N, std::size_t M, typename S>
-    inline alg::Mat<decltype(std::declval<T>() * std::declval<S>()), N, M> operator*(const alg::Mat<T, N, M>& lhs_, const S& rhs_) noexcept
+    template <typename T, std::size_t M, std::size_t N, typename S>
+    inline alg::Mat<decltype(std::declval<T>() * std::declval<S>()), M, N> operator*(const alg::Mat<T, M, N>& lhs_, const S& rhs_) noexcept
     {
-        alg::Mat<decltype(std::declval<T>() * std::declval<S>()), N, M> mat{};
+        alg::Mat<decltype(std::declval<T>() * std::declval<S>()), M, N> mat{};
 
         for (auto& [mat_row, lhs_row] : range::view::Zip{mat, lhs_})
         {
@@ -211,10 +272,10 @@ namespace arc
         return (mat);
     }
 
-    template <typename T, std::size_t N, std::size_t M, typename S>
-    inline alg::Mat<decltype(std::declval<T>() / std::declval<S>()), N, M> operator/(const alg::Mat<T, N, M>& lhs_, const S& rhs_) noexcept
+    template <typename T, std::size_t M, std::size_t N, typename S>
+    inline alg::Mat<decltype(std::declval<T>() / std::declval<S>()), M, N> operator/(const alg::Mat<T, M, N>& lhs_, const S& rhs_) noexcept
     {
-        alg::Mat<decltype(std::declval<T>() / std::declval<S>()), N, M> mat{};
+        alg::Mat<decltype(std::declval<T>() / std::declval<S>()), M, N> mat{};
 
         for (auto& [m, l] : range::view::Zip{mat, lhs_})
         {

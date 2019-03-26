@@ -10,6 +10,7 @@
 //  -- Std --
 #include <array>
 #include <cstddef>
+#include <functional>
 
 
 
@@ -23,7 +24,7 @@ namespace arc
 
         //  == CLASSES ==
         //  -- Mat --
-        template <typename T, std::size_t N, std::size_t M>
+        template <typename T, std::size_t M, std::size_t N>
         class Mat
         {
             //  == ASSERTIONS ==
@@ -41,7 +42,7 @@ namespace arc
             //  == FIELDS ==
           private:
             //  -- Elements --
-            std::array<Row<T, M>, N> _rows;
+            std::array<Row<T, N>, M> _rows;
 
 
             //  == INSTANTIATION ==
@@ -49,20 +50,31 @@ namespace arc
             //  -- Constructors --
             constexpr inline explicit Mat() noexcept;
             template <typename... A>
-            constexpr inline explicit Mat(const A... rows_) noexcept;
+            constexpr inline explicit Mat(const Row<T, N>& row_, const A&... rows_) noexcept;
+            template <typename... A>
+            constexpr inline explicit Mat(const Col<T, M>& col_, const A&... cols_) noexcept;
+
+          private:
+            //  -- Initialisation --
+            template <typename... A>
+            constexpr inline std::array<Row<T, N>, M> init_rows(const Col<T, M>& col_, const A&... cols_) noexcept;
 
 
             //  == OPERATORS ==
           public:
             //  -- Access --
-            constexpr inline Row<T, M>&       operator[](const std::size_t index_) noexcept;
-            constexpr inline const Row<T, M>& operator[](const std::size_t index_) const noexcept;
+            constexpr inline Row<T, N>&       operator[](const std::size_t index_) noexcept;
+            constexpr inline const Row<T, N>& operator[](const std::size_t index_) const noexcept;
 
 
             //  == METHODS ==
           public:
             //  -- Getters --
-            constexpr inline const std::array<Row<T, M>, N>& rows() const noexcept;
+            constexpr inline const std::array<Row<T, N>, M>&         rows() const noexcept;
+            constexpr inline Row<std::reference_wrapper<T>, N>       row(const std::size_t index_) noexcept;
+            constexpr inline Row<const std::reference_wrapper<T>, N> row(const std::size_t index_) const noexcept;
+            constexpr inline Col<std::reference_wrapper<T>, M>       col(const std::size_t index_) noexcept;
+            constexpr inline Col<const std::reference_wrapper<T>, M> col(const std::size_t index_) const noexcept;
 
             //  -- Dimensions --
             constexpr inline Row<T, M>&       x() noexcept;
@@ -100,14 +112,14 @@ namespace arc
 
     //  == OPERATORS ==
     //  -- Arithmetic --
-    template <typename T, std::size_t N, std::size_t M, typename S>
-    inline alg::Mat<decltype(std::declval<T>() + std::declval<S>()), N, M> operator+(const alg::Mat<T, N, M>& lhs_, const S& rhs_) noexcept;
-    template <typename T, std::size_t N, std::size_t M, typename S>
-    inline alg::Mat<decltype(std::declval<T>() - std::declval<S>()), N, M> operator-(const alg::Mat<T, N, M>& lhs_, const S& rhs_) noexcept;
-    template <typename T, std::size_t N, std::size_t M, typename S>
-    inline alg::Mat<decltype(std::declval<T>() * std::declval<S>()), N, M> operator*(const alg::Mat<T, N, M>& lhs_, const S& rhs_) noexcept;
-    template <typename T, std::size_t N, std::size_t M, typename S>
-    inline alg::Mat<decltype(std::declval<T>() / std::declval<S>()), N, M> operator/(const alg::Mat<T, N, M>& lhs_, const S& rhs_) noexcept;
+    template <typename T, std::size_t M, std::size_t N, typename S>
+    inline alg::Mat<decltype(std::declval<T>() + std::declval<S>()), M, N> operator+(const alg::Mat<T, M, N>& lhs_, const S& rhs_) noexcept;
+    template <typename T, std::size_t M, std::size_t N, typename S>
+    inline alg::Mat<decltype(std::declval<T>() - std::declval<S>()), M, N> operator-(const alg::Mat<T, M, N>& lhs_, const S& rhs_) noexcept;
+    template <typename T, std::size_t M, std::size_t N, typename S>
+    inline alg::Mat<decltype(std::declval<T>() * std::declval<S>()), M, N> operator*(const alg::Mat<T, M, N>& lhs_, const S& rhs_) noexcept;
+    template <typename T, std::size_t M, std::size_t N, typename S>
+    inline alg::Mat<decltype(std::declval<T>() / std::declval<S>()), M, N> operator/(const alg::Mat<T, M, N>& lhs_, const S& rhs_) noexcept;
 
 
 

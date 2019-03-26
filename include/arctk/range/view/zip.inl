@@ -45,6 +45,13 @@ namespace arc
             {
             }
 
+            template <typename R, typename... A>
+            constexpr inline Zip<R, A...>::Zip(R& range_, A&&... ranges_) noexcept
+              : View<R>{range_}
+              , _ranges{ranges_...}
+            {
+            }
+
 
 
             //  == METHODS ==

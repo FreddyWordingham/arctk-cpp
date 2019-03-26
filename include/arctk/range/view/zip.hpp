@@ -43,6 +43,7 @@ namespace arc
               public:
                 //  -- Constructors --
                 constexpr inline explicit Zip(R& range_, A&... ranges_) noexcept;
+                constexpr inline explicit Zip(R& range_, A&&... ranges_) noexcept;
 
 
                 //  == METHODS ==

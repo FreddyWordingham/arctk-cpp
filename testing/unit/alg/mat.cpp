@@ -76,6 +76,38 @@ namespace test
         ASSERT_EQ(mat_3[1][4], ans_3[1][4]);
         ASSERT_EQ(mat_3[1][5], ans_3[1][5]);
         ASSERT_EQ(mat_3[1][6], ans_3[1][6]);
+
+        arc::alg::Mat<char, 4, 7>                mat_4{arc::alg::Col<char, 4>{'a', 'a', 'a', 'z'}, arc::alg::Col<char, 4>{'b', 'c', 'b', 'x'}, arc::alg::Col<char, 4>{'e', 'h', 'e', 's'}, arc::alg::Col<char, 4>{'m', 'a', 'm', 'z'},
+                                        arc::alg::Col<char, 4>{'b', 'c', 'b', 'x'}, arc::alg::Col<char, 4>{'d', 'f', 'd', 'u'}, arc::alg::Col<char, 4>{'i', 'n', 'i', 'm'}};
+        const std::array<std::array<char, 7>, 4> ans_4{{{{'a', 'b', 'e', 'm', 'b', 'd', 'i'}}, {{'a', 'c', 'h', 'a', 'c', 'f', 'n'}}, {{'a', 'b', 'e', 'm', 'b', 'd', 'i'}}, {{'z', 'x', 's', 'z', 'x', 'u', 'm'}}}};
+        ASSERT_EQ(mat_4[0][0], ans_4[0][0]);
+        ASSERT_EQ(mat_4[0][1], ans_4[0][1]);
+        ASSERT_EQ(mat_4[0][2], ans_4[0][2]);
+        ASSERT_EQ(mat_4[0][3], ans_4[0][3]);
+        ASSERT_EQ(mat_4[0][4], ans_4[0][4]);
+        ASSERT_EQ(mat_4[0][5], ans_4[0][5]);
+        ASSERT_EQ(mat_4[0][6], ans_4[0][6]);
+        ASSERT_EQ(mat_4[1][0], ans_4[1][0]);
+        ASSERT_EQ(mat_4[1][1], ans_4[1][1]);
+        ASSERT_EQ(mat_4[1][2], ans_4[1][2]);
+        ASSERT_EQ(mat_4[1][3], ans_4[1][3]);
+        ASSERT_EQ(mat_4[1][4], ans_4[1][4]);
+        ASSERT_EQ(mat_4[1][5], ans_4[1][5]);
+        ASSERT_EQ(mat_4[1][6], ans_4[1][6]);
+        ASSERT_EQ(mat_4[2][0], ans_4[2][0]);
+        ASSERT_EQ(mat_4[2][1], ans_4[2][1]);
+        ASSERT_EQ(mat_4[2][2], ans_4[2][2]);
+        ASSERT_EQ(mat_4[2][3], ans_4[2][3]);
+        ASSERT_EQ(mat_4[2][4], ans_4[2][4]);
+        ASSERT_EQ(mat_4[2][5], ans_4[2][5]);
+        ASSERT_EQ(mat_4[2][6], ans_4[2][6]);
+        ASSERT_EQ(mat_4[3][0], ans_4[3][0]);
+        ASSERT_EQ(mat_4[3][1], ans_4[3][1]);
+        ASSERT_EQ(mat_4[3][2], ans_4[3][2]);
+        ASSERT_EQ(mat_4[3][3], ans_4[3][3]);
+        ASSERT_EQ(mat_4[3][4], ans_4[3][4]);
+        ASSERT_EQ(mat_4[3][5], ans_4[3][5]);
+        ASSERT_EQ(mat_4[3][6], ans_4[3][6]);
     }
 
 

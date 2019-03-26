@@ -50,26 +50,26 @@ namespace arc
 
         template <typename T, std::size_t N>
         template <typename... A>
-        constexpr inline Vec<T, N>::Vec(const A... elems_) noexcept
-          : _elems{elems_...}
+        constexpr inline Vec<T, N>::Vec(const T& elem_, const A&... elems_) noexcept
+          : _elems{elem_, elems_...}
         {
-            static_assert(sizeof...(A) == N);
+            static_assert(sizeof...(A) == (N - 1));
         }
 
         template <typename T, std::size_t N>
         template <typename... A>
-        constexpr inline Col<T, N>::Col(const A... elems_) noexcept
-          : Vec<T, N>{elems_...}
+        constexpr inline Col<T, N>::Col(const T& elem_, const A&... elems_) noexcept
+          : Vec<T, N>{elem_, elems_...}
         {
-            static_assert(sizeof...(A) == N);
+            static_assert(sizeof...(A) == (N - 1));
         }
 
         template <typename T, std::size_t N>
         template <typename... A>
-        constexpr inline Row<T, N>::Row(const A... elems_) noexcept
-          : Vec<T, N>{elems_...}
+        constexpr inline Row<T, N>::Row(const T& elem_, const A&... elems_) noexcept
+          : Vec<T, N>{elem_, elems_...}
         {
-            static_assert(sizeof...(A) == N);
+            static_assert(sizeof...(A) == (N - 1));
         }
 
 
