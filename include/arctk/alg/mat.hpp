@@ -48,8 +48,7 @@ namespace arc
           public:
             //  -- Constructors --
             constexpr inline explicit Mat() noexcept;
-            template <typename... A>
-            constexpr inline explicit Mat(const A... rows_) noexcept;
+            constexpr inline explicit Mat(const std::array<Row<T, M>, N>& rows_) noexcept;
 
 
             //  == OPERATORS ==
