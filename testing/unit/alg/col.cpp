@@ -28,8 +28,8 @@ namespace test
     //  -- Instantiation --
     TEST(col, construction) // NOLINT
     {
-        arc::alg::Col<int, 0>    col_0{};
-        const std::array<int, 0> ans_0{};
+        arc::alg::Col<int, 2>    col_0{};
+        const std::array<int, 2> ans_0{0, 0};
         ASSERT_EQ(col_0.elems(), ans_0);
 
         arc::alg::Col<int, 3>    col_1{};

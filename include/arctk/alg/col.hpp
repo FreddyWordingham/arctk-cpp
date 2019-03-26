@@ -27,6 +27,11 @@ namespace arc
         class Col
         {
             //  == ALIASES ==
+            //  -- Size --
+            static_assert(N > 1);
+
+
+            //  == ALIASES ==
           public:
             //  -- Traits --
             using value_type = typename std::size_t;
@@ -75,6 +80,17 @@ namespace arc
             constexpr inline auto end() noexcept;
             constexpr inline auto end() const noexcept;
         };
+
+
+
+        //  == ALIASES ==
+        //  -- Size --
+        template <typename T>
+        using col2 = Col<T, 2>;
+        template <typename T>
+        using col3 = Col<T, 3>;
+        template <typename T>
+        using col4 = Col<T, 4>;
 
 
 
