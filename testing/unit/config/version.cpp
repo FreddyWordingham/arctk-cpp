@@ -28,7 +28,7 @@ namespace test
 
 
 
-    //  == TESTS ==
+    //  == CONSTANT TESTS ==
     //  -- Version --
     TEST(VERSION_MAJOR, non_negative) // NOLINT
     {

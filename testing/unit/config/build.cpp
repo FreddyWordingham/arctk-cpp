@@ -32,7 +32,7 @@ namespace test
 
 
 
-    //  == TESTS ==
+    //  == CONSTANT TESTS ==
     //  -- Build Information  --
     TEST(DIR, occupied) // NOLINT
     {
