@@ -22,9 +22,9 @@ namespace arc
 
 
         //  == CLASSES ==
-        //  -- Col --
+        //  -- Vec --
         template <typename T, std::size_t N>
-        class Col
+        class Vec
         {
             //  == ALIASES ==
             //  -- Size --
@@ -47,9 +47,9 @@ namespace arc
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            constexpr inline explicit Col() noexcept;
+            constexpr inline explicit Vec() noexcept;
             template <typename... A>
-            constexpr inline Col(const A... elems_) noexcept;
+            constexpr inline Vec(const A... elems_) noexcept;
 
 
             //  == OPERATORS ==
@@ -82,15 +82,37 @@ namespace arc
         };
 
 
+        //  -- Col --
+        template <typename T, std::size_t N>
+        class Col : public Vec<T, N>
+        {
+        };
+
+
+        //  -- Row --
+        template <typename T, std::size_t N>
+        class Row : public Vec<T, N>
+        {
+        };
+
+
 
         //  == ALIASES ==
-        //  -- Size --
+        //  -- Col --
         template <typename T>
         using Col2 = Col<T, 2>;
         template <typename T>
         using Col3 = Col<T, 3>;
         template <typename T>
         using Col4 = Col<T, 4>;
+
+        //  -- Row --
+        template <typename T>
+        using Row2 = Row<T, 2>;
+        template <typename T>
+        using Row3 = Row<T, 3>;
+        template <typename T>
+        using Row4 = Row<T, 4>;
 
 
 
@@ -101,15 +123,17 @@ namespace arc
     //  == OPERATORS ==
     //  -- Arithmetic --
     template <typename T, std::size_t N, typename S>
-    inline alg::Col<decltype(std::declval<T>() + std::declval<S>()), N> operator+(const alg::Col<T, N>& lhs_, const S& rhs_) noexcept;
+    inline alg::Vec<decltype(std::declval<T>() + std::declval<S>()), N> operator+(const alg::Vec<T, N>& lhs_, const S& rhs_) noexcept;
     template <typename T, std::size_t N, typename S>
-    inline alg::Col<decltype(std::declval<T>() - std::declval<S>()), N> operator-(const alg::Col<T, N>& lhs_, const S& rhs_) noexcept;
+    inline alg::Vec<decltype(std::declval<T>() - std::declval<S>()), N> operator-(const alg::Vec<T, N>& lhs_, const S& rhs_) noexcept;
     template <typename T, std::size_t N, typename S>
-    inline alg::Col<decltype(std::declval<T>() * std::declval<S>()), N> operator*(const alg::Col<T, N>& lhs_, const S& rhs_) noexcept;
+    inline alg::Vec<decltype(std::declval<T>() * std::declval<S>()), N> operator*(const alg::Vec<T, N>& lhs_, const S& rhs_) noexcept;
     template <typename T, std::size_t N, typename S>
-    inline alg::Col<decltype(std::declval<T>() / std::declval<S>()), N> operator/(const alg::Col<T, N>& lhs_, const S& rhs_) noexcept;
+    inline decltype(std::declval<T>() * std::declval<S>()) operator*(const alg::Vec<T, N>& lhs_, const alg::Vec<S, N>& rhs_) noexcept;
+    template <typename T, std::size_t N, typename S>
+    inline alg::Vec<decltype(std::declval<T>() / std::declval<S>()), N> operator/(const alg::Vec<T, N>& lhs_, const S& rhs_) noexcept;
     template <typename T, typename S>
-    inline alg::Col<decltype(std::declval<T>() * std::declval<S>()), 3> operator^(const alg::Col<T, 3>& lhs_, const alg::Col<S, 3>& rhs_) noexcept;
+    inline alg::Vec<decltype(std::declval<T>() * std::declval<S>()), 3> operator^(const alg::Vec<T, 3>& lhs_, const alg::Vec<S, 3>& rhs_) noexcept;
 
 
 

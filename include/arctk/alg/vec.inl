@@ -5,7 +5,7 @@
 
 //  == DECLARATIONS ==
 //  -- Arc --
-#include "arctk/alg/col.hpp" // IWYU pragma: export
+#include "arctk/alg/vec.hpp" // IWYU pragma: export
 
 
 
@@ -31,14 +31,14 @@ namespace arc
         //  == INSTANTIATION ==
         //  -- Constructors --
         template <typename T, std::size_t N>
-        constexpr inline Col<T, N>::Col() noexcept
+        constexpr inline Vec<T, N>::Vec() noexcept
           : _elems()
         {
         }
 
         template <typename T, std::size_t N>
         template <typename... A>
-        constexpr inline Col<T, N>::Col(const A... elems_) noexcept
+        constexpr inline Vec<T, N>::Vec(const A... elems_) noexcept
           : _elems{elems_...}
         {
         }
@@ -50,7 +50,7 @@ namespace arc
         //  == OPERATORS ==
         //  -- Access --
         template <typename T, std::size_t N>
-        constexpr inline T& Col<T, N>::operator[](const std::size_t index_) noexcept
+        constexpr inline T& Vec<T, N>::operator[](const std::size_t index_) noexcept
         {
             assert(index_ < N);
 
@@ -58,7 +58,7 @@ namespace arc
         }
 
         template <typename T, std::size_t N>
-        constexpr inline const T& Col<T, N>::operator[](const std::size_t index_) const noexcept
+        constexpr inline const T& Vec<T, N>::operator[](const std::size_t index_) const noexcept
         {
             assert(index_ < N);
 
@@ -70,7 +70,7 @@ namespace arc
         //  == METHODS ==
         //  -- Getters --
         template <typename T, std::size_t N>
-        constexpr inline const std::array<T, N>& Col<T, N>::elems() const noexcept
+        constexpr inline const std::array<T, N>& Vec<T, N>::elems() const noexcept
         {
             return (_elems);
         }
@@ -78,7 +78,7 @@ namespace arc
 
         //  -- Dimensions --
         template <typename T, std::size_t N>
-        constexpr inline T& Col<T, N>::x() noexcept
+        constexpr inline T& Vec<T, N>::x() noexcept
         {
             static_assert(N >= 1);
 
@@ -86,7 +86,7 @@ namespace arc
         }
 
         template <typename T, std::size_t N>
-        constexpr inline const T& Col<T, N>::x() const noexcept
+        constexpr inline const T& Vec<T, N>::x() const noexcept
         {
             static_assert(N >= 1);
 
@@ -94,7 +94,7 @@ namespace arc
         }
 
         template <typename T, std::size_t N>
-        constexpr inline T& Col<T, N>::y() noexcept
+        constexpr inline T& Vec<T, N>::y() noexcept
         {
             static_assert(N >= 2);
 
@@ -102,7 +102,7 @@ namespace arc
         }
 
         template <typename T, std::size_t N>
-        constexpr inline const T& Col<T, N>::y() const noexcept
+        constexpr inline const T& Vec<T, N>::y() const noexcept
         {
             static_assert(N >= 2);
 
@@ -110,7 +110,7 @@ namespace arc
         }
 
         template <typename T, std::size_t N>
-        constexpr inline T& Col<T, N>::z() noexcept
+        constexpr inline T& Vec<T, N>::z() noexcept
         {
             static_assert(N >= 3);
 
@@ -118,7 +118,7 @@ namespace arc
         }
 
         template <typename T, std::size_t N>
-        constexpr inline const T& Col<T, N>::z() const noexcept
+        constexpr inline const T& Vec<T, N>::z() const noexcept
         {
             static_assert(N >= 3);
 
@@ -126,7 +126,7 @@ namespace arc
         }
 
         template <typename T, std::size_t N>
-        constexpr inline T& Col<T, N>::w() noexcept
+        constexpr inline T& Vec<T, N>::w() noexcept
         {
             static_assert(N >= 4);
 
@@ -134,7 +134,7 @@ namespace arc
         }
 
         template <typename T, std::size_t N>
-        constexpr inline const T& Col<T, N>::w() const noexcept
+        constexpr inline const T& Vec<T, N>::w() const noexcept
         {
             static_assert(N >= 4);
 
@@ -145,25 +145,25 @@ namespace arc
 
         //  -- Range --
         template <typename T, std::size_t N>
-        constexpr inline auto Col<T, N>::begin() noexcept
+        constexpr inline auto Vec<T, N>::begin() noexcept
         {
             return (std::begin(_elems));
         }
 
         template <typename T, std::size_t N>
-        constexpr inline auto Col<T, N>::begin() const noexcept
+        constexpr inline auto Vec<T, N>::begin() const noexcept
         {
             return (std::begin(_elems));
         }
 
         template <typename T, std::size_t N>
-        constexpr inline auto Col<T, N>::end() noexcept
+        constexpr inline auto Vec<T, N>::end() noexcept
         {
             return (std::end(_elems));
         }
 
         template <typename T, std::size_t N>
-        constexpr inline auto Col<T, N>::end() const noexcept
+        constexpr inline auto Vec<T, N>::end() const noexcept
         {
             return (std::end(_elems));
         }
@@ -177,9 +177,9 @@ namespace arc
     //  == OPERATORS ==
     //  -- Arithmetic --
     template <typename T, std::size_t N, typename S>
-    inline alg::Col<decltype(std::declval<T>() + std::declval<S>()), N> operator+(const alg::Col<T, N>& lhs_, const S& rhs_) noexcept
+    inline alg::Vec<decltype(std::declval<T>() + std::declval<S>()), N> operator+(const alg::Vec<T, N>& lhs_, const S& rhs_) noexcept
     {
-        alg::Col<decltype(std::declval<T>() + std::declval<S>()), N> col{};
+        alg::Vec<decltype(std::declval<T>() + std::declval<S>()), N> col{};
 
         for (auto& [c, l] : range::view::Zip{col, lhs_})
         {
@@ -190,9 +190,9 @@ namespace arc
     }
 
     template <typename T, std::size_t N, typename S>
-    inline alg::Col<decltype(std::declval<T>() - std::declval<S>()), N> operator-(const alg::Col<T, N>& lhs_, const S& rhs_) noexcept
+    inline alg::Vec<decltype(std::declval<T>() - std::declval<S>()), N> operator-(const alg::Vec<T, N>& lhs_, const S& rhs_) noexcept
     {
-        alg::Col<decltype(std::declval<T>() - std::declval<S>()), N> col{};
+        alg::Vec<decltype(std::declval<T>() - std::declval<S>()), N> col{};
 
         for (auto& [c, l] : range::view::Zip{col, lhs_})
         {
@@ -203,9 +203,9 @@ namespace arc
     }
 
     template <typename T, std::size_t N, typename S>
-    inline alg::Col<decltype(std::declval<T>() * std::declval<S>()), N> operator*(const alg::Col<T, N>& lhs_, const S& rhs_) noexcept
+    inline alg::Vec<decltype(std::declval<T>() * std::declval<S>()), N> operator*(const alg::Vec<T, N>& lhs_, const S& rhs_) noexcept
     {
-        alg::Col<decltype(std::declval<T>() * std::declval<S>()), N> col{};
+        alg::Vec<decltype(std::declval<T>() * std::declval<S>()), N> col{};
 
         for (auto& [c, l] : range::view::Zip{col, lhs_})
         {
@@ -216,9 +216,22 @@ namespace arc
     }
 
     template <typename T, std::size_t N, typename S>
-    inline alg::Col<decltype(std::declval<T>() / std::declval<S>()), N> operator/(const alg::Col<T, N>& lhs_, const S& rhs_) noexcept
+    inline decltype(std::declval<T>() * std::declval<S>()) operator*(const alg::Vec<T, N>& lhs_, const alg::Vec<S, N>& rhs_) noexcept
     {
-        alg::Col<decltype(std::declval<T>() / std::declval<S>()), N> col{};
+        decltype(std::declval<T>() * std::declval<S>()) sum{};
+
+        for (const auto& [l, r] : range::view::Zip{lhs_, rhs_})
+        {
+            sum += l * r;
+        }
+
+        return (sum);
+    }
+
+    template <typename T, std::size_t N, typename S>
+    inline alg::Vec<decltype(std::declval<T>() / std::declval<S>()), N> operator/(const alg::Vec<T, N>& lhs_, const S& rhs_) noexcept
+    {
+        alg::Vec<decltype(std::declval<T>() / std::declval<S>()), N> col{};
 
         for (auto& [c, l] : range::view::Zip{col, lhs_})
         {
@@ -229,9 +242,9 @@ namespace arc
     }
 
     template <typename T, typename S>
-    inline alg::Col<decltype(std::declval<T>() * std::declval<S>()), 3> operator^(const alg::Col<T, 3>& lhs_, const alg::Col<S, 3>& rhs_) noexcept
+    inline alg::Vec<decltype(std::declval<T>() * std::declval<S>()), 3> operator^(const alg::Vec<T, 3>& lhs_, const alg::Vec<S, 3>& rhs_) noexcept
     {
-        return (alg::Col<decltype(std::declval<T>() * std::declval<S>()), 3>{(lhs_.y() * rhs_.z()) - (lhs_.z() * rhs_.y()), (lhs_.z() * rhs_.x()) - (lhs_.x() * rhs_.z()), (lhs_.x() * rhs_.y()) - (lhs_.y() * rhs_.x())});
+        return (alg::Vec<decltype(std::declval<T>() * std::declval<S>()), 3>{(lhs_.y() * rhs_.z()) - (lhs_.z() * rhs_.y()), (lhs_.z() * rhs_.x()) - (lhs_.x() * rhs_.z()), (lhs_.x() * rhs_.y()) - (lhs_.y() * rhs_.x())});
     }
 
 
