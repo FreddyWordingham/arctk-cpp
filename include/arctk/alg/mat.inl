@@ -200,9 +200,12 @@ namespace arc
     {
         alg::Mat<decltype(std::declval<T>() * std::declval<S>()), N, M> mat{};
 
-        for (auto& [m, l] : range::view::Zip{mat, lhs_})
+        for (auto& [mat_row, lhs_row] : range::view::Zip{mat, lhs_})
         {
-            m = l * rhs_;
+            for (auto& [m, l] : range::view::Zip{mat_row, lhs_row})
+            {
+                m = l * rhs_;
+            }
         }
 
         return (mat);

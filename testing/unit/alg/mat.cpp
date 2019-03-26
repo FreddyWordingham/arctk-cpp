@@ -79,18 +79,24 @@ namespace test
     }
 
 
-    // //  -- Arithmetic --
-    // TEST(vec, multiplication) // NOLINT
-    // {
-    //     using namespace arc;
-    //     arc::alg::Vec<arc::si::Velocity, 3> vel_vec{arc::si::Velocity{1.0}, arc::si::Velocity{2.0}, arc::si::Velocity{3.0}};
-    //     arc::alg::Vec<arc::si::Length, 3>   len_vec{vel_vec * arc::si::Time{2.0}};
+    //  -- Arithmetic --
+    TEST(mat, multiplication) // NOLINT
+    {
+        using namespace arc;
+        arc::alg::Mat<arc::si::Velocity, 3, 2> vel_mat{arc::alg::Row<arc::si::Velocity, 2>{arc::si::Velocity{1.0}, arc::si::Velocity{2.0}}, arc::alg::Row<arc::si::Velocity, 2>{arc::si::Velocity{0.0}, arc::si::Velocity{0.5}},
+                                                       arc::alg::Row<arc::si::Velocity, 2>{arc::si::Velocity{-1.0}, arc::si::Velocity{-2.0}}};
+        arc::alg::Mat<arc::si::Length, 3, 2>   len_mat{vel_mat * arc::si::Time{2.0}};
 
-    //     const arc::alg::Vec<arc::si::Length, 3> ans{arc::si::Length{2.0}, arc::si::Length{4.0}, arc::si::Length{6.0}};
-    //     ASSERT_TRUE(len_vec[0] == ans[0]);
-    //     ASSERT_TRUE(len_vec[1] == ans[1]);
-    //     ASSERT_TRUE(len_vec[2] == ans[2]);
-    // }
+        arc::alg::Mat<arc::si::Length, 3, 2> ans{arc::alg::Row<arc::si::Length, 2>{arc::si::Length{2.0}, arc::si::Length{4.0}}, arc::alg::Row<arc::si::Length, 2>{arc::si::Length{0.0}, arc::si::Length{1.0}},
+                                                 arc::alg::Row<arc::si::Length, 2>{arc::si::Length{-2.0}, arc::si::Length{-4.0}}};
+
+        ASSERT_TRUE(len_mat[0][0] == ans[0][0]);
+        ASSERT_TRUE(len_mat[0][1] == ans[0][1]);
+        ASSERT_TRUE(len_mat[1][0] == ans[1][0]);
+        ASSERT_TRUE(len_mat[1][1] == ans[1][1]);
+        ASSERT_TRUE(len_mat[2][0] == ans[2][0]);
+        ASSERT_TRUE(len_mat[2][1] == ans[2][1]);
+    }
 
     // TEST(vec, dot_product) // NOLINT
     // {
