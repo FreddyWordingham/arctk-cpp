@@ -12,6 +12,7 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/range/arithmetic.inl"
+#include "arctk/range/view/zip.inl" // TODO find a way to remove this? Need it to know result of operator/ etc.
 
 //  -- Std --
 #include <cassert>
@@ -170,4 +171,69 @@ namespace arc
 
 
     } // namespace alg
+
+
+
+    //  == OPERATORS ==
+    //  -- Arithmetic --
+    template <typename T, std::size_t N, typename S>
+    inline alg::Col<decltype(std::declval<T>() + std::declval<S>()), N> operator+(const alg::Col<T, N>& lhs_, const S& rhs_) noexcept
+    {
+        alg::Col<decltype(std::declval<T>() + std::declval<S>()), N> col{};
+
+        for (auto& [c, l] : range::view::Zip{col, lhs_})
+        {
+            c = l + rhs_;
+        }
+
+        return (col);
+    }
+
+    template <typename T, std::size_t N, typename S>
+    inline alg::Col<decltype(std::declval<T>() - std::declval<S>()), N> operator-(const alg::Col<T, N>& lhs_, const S& rhs_) noexcept
+    {
+        alg::Col<decltype(std::declval<T>() - std::declval<S>()), N> col{};
+
+        for (auto& [c, l] : range::view::Zip{col, lhs_})
+        {
+            c = l - rhs_;
+        }
+
+        return (col);
+    }
+
+    template <typename T, std::size_t N, typename S>
+    inline alg::Col<decltype(std::declval<T>() * std::declval<S>()), N> operator*(const alg::Col<T, N>& lhs_, const S& rhs_) noexcept
+    {
+        alg::Col<decltype(std::declval<T>() * std::declval<S>()), N> col{};
+
+        for (auto& [c, l] : range::view::Zip{col, lhs_})
+        {
+            c = l * rhs_;
+        }
+
+        return (col);
+    }
+
+    template <typename T, std::size_t N, typename S>
+    inline alg::Col<decltype(std::declval<T>() / std::declval<S>()), N> operator/(const alg::Col<T, N>& lhs_, const S& rhs_) noexcept
+    {
+        alg::Col<decltype(std::declval<T>() / std::declval<S>()), N> col{};
+
+        for (auto& [c, l] : range::view::Zip{col, lhs_})
+        {
+            c = l / rhs_;
+        }
+
+        return (col);
+    }
+
+    template <typename T, typename S>
+    inline alg::Col<decltype(std::declval<T>() * std::declval<S>()), 3> operator^(const alg::Col<T, 3>& lhs_, const alg::Col<S, 3>& rhs_) noexcept
+    {
+        return (alg::Col<decltype(std::declval<T>() * std::declval<S>()), 3>{(lhs_.y() * rhs_.z()) - (lhs_.z() * rhs_.y()), (lhs_.z() * rhs_.x()) - (lhs_.x() * rhs_.z()), (lhs_.x() * rhs_.y()) - (lhs_.y() * rhs_.x())});
+    }
+
+
+
 } // namespace arc
