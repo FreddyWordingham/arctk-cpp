@@ -24,7 +24,7 @@ namespace arc
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            constexpr inline explicit Pad(const int width_, const char fill_ = ' ') noexcept;
+            constexpr inline explicit Pad(int width_, char fill_ = ' ') noexcept;
 
 
             //  == METHODS ==
