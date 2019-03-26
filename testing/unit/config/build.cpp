@@ -7,6 +7,7 @@
 
 //  -- Std --
 #include <cstring>
+#include <string>
 
 
 
@@ -34,9 +35,7 @@ namespace test
 
     TEST(DIR, contains_arctk_keyword) // NOLINT
     {
-        const std::string dir{arc::config::DIR};
-
-        ASSERT_TRUE(dir.find("arctk") != std::string::npos);
+        ASSERT_TRUE(std::string{arc::config::DIR}.find("arctk") != std::string::npos);
     }
 
 
