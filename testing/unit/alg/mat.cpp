@@ -36,8 +36,8 @@ namespace test
         ASSERT_EQ(mat_0[1][0], ans_0[1][0]);
         ASSERT_EQ(mat_0[1][1], ans_0[1][1]);
 
-        // arc::alg::Mat<int, 3, 3>                mat_1{};
-        // const std::array<std::array<int, 3>, 3> ans_1{{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
+        arc::alg::Mat<int, 3, 3>                mat_1{};
+        const std::array<std::array<int, 3>, 3> ans_1{{{{0, 0, 0}}, {{0, 0, 0}}, {{0, 0, 0}}}};
         // ASSERT_EQ(mat_1.rows(), ans_1);
 
         // arc::alg::Mat<int, 3, 3>                mat_2{{1, 2, 3}};
