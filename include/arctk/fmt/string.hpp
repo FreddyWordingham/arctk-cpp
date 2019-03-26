@@ -19,6 +19,7 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Formatting --
+        inline std::string str(bool val_) noexcept;
         template <typename T>
         inline std::string str(const T& val_) noexcept;
 

@@ -30,40 +30,24 @@ namespace test
 
 
 
-    //  == FIXTURES ==
-    //  -- Filter --
-    template <typename T>
-    class Pad : public ::testing::Test
-    {
-        //  == FIELDS ==
-      protected:
-        //  -- Immutable --
-        const fmt::Pad _immutable_width{10};
-        const fmt::Pad _immutable_width_fill{8, '*'};
-
-        //  -- Mutable --
-        fmt::Pad _mutable_width{10};
-        fmt::Pad _mutable_width_fill{8, '*'};
-    };
-
-
-    //  -- Type List --
-    using T = ::testing::Types<char, int, unsigned int>;
-    TYPED_TEST_SUITE(Pad, T);
-
-
-
     //  == FREE FUNCTION TESTS ==
     //  -- Formatting --
-    TEST_F(str, width) // NOLINT
+    TEST(str, simple) // NOLINT
     {
-        ASSERT_EQ(_immutable_width.width(), 10);
-
-        ASSERT_EQ(_immutable_width_fill.width(), 8);
-
-        ASSERT_EQ(_mutable_width.width(), 10);
-
-        ASSERT_EQ(_mutable_width_fill.width(), 8);
+        ASSERT_EQ(fmt::str(true), "true");
+        ASSERT_EQ(fmt::str('a'), "a");
+        ASSERT_EQ(fmt::str(-'a'), "-97");
+        ASSERT_EQ(fmt::str(97U), "97");
+        ASSERT_EQ(fmt::str(-97), "-97");
+        ASSERT_EQ(fmt::str(97UL), "97");
+        ASSERT_EQ(fmt::str(-97L), "-97");
+        ASSERT_EQ(fmt::str(97ULL), "97");
+        ASSERT_EQ(fmt::str(-97LL), "-97");
+        ASSERT_EQ(fmt::str(3.141f), "3.141");
+        ASSERT_EQ(fmt::str(-3.141f), "-3.141");
+        ASSERT_EQ(fmt::str(3.141), "3.141");
+        ASSERT_EQ(fmt::str(-3.141), "-3.141");
+        ASSERT_EQ(fmt::str("I love pi!\n"), "I love pi!\n");
     }
 
 

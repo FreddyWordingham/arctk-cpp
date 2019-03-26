@@ -11,7 +11,6 @@
 
 //  == IMPORTS ==
 //  -- Std --
-#include <cstdio>
 #include <sstream>
 #include <string>
 
@@ -27,6 +26,11 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Formatting --
+        inline std::string str(const bool val_) noexcept
+        {
+            return (val_ ? "true" : "false");
+        }
+
         template <typename T>
         inline std::string str(const T& val_) noexcept
         {
