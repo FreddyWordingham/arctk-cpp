@@ -15,7 +15,10 @@
 //  -- Warnings --
 #ifdef __clang__
 #pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wexit-time-destructors"
 #pragma clang diagnostic ignored "-Wglobal-constructors"
+#pragma clang diagnostic ignored "-Wgnu-zero-variadic-macro-arguments"
+#pragma clang diagnostic ignored "-Wused-but-marked-unused"
 #endif
 
 
@@ -38,11 +41,13 @@ namespace test
     {
         //  == FIELDS ==
       protected:
-        //  -- Immutable --
+        //  -- Precs --
+        const fmt::Precision _immutable_precision_low{6};
+        fmt::Precision       _mutable_precision_low{6};
         const fmt::Precision _immutable_precision{8};
-
-        //  -- Mutable --
-        fmt::Precision _mutable_precision{8};
+        fmt::Precision       _mutable_precision{8};
+        const fmt::Precision _immutable_precision_high{12};
+        fmt::Precision       _mutable_precision_high{12};
     };
 
 
@@ -51,9 +56,17 @@ namespace test
     //  -- Getters --
     TEST_F(Precision, precision) // NOLINT
     {
+        ASSERT_EQ(_immutable_precision_low.precision(), 6);
+
+        ASSERT_EQ(_mutable_precision_low.precision(), 6);
+
         ASSERT_EQ(_immutable_precision.precision(), 8);
 
         ASSERT_EQ(_mutable_precision.precision(), 8);
+
+        ASSERT_EQ(_immutable_precision_high.precision(), 12);
+
+        ASSERT_EQ(_mutable_precision_high.precision(), 12);
     }
 
 
@@ -70,13 +83,107 @@ namespace test
             return (stream.str());
         };
 
-        ASSERT_EQ(test(_immutable_precision, 100.0f / 3.0f), "33.333332\n");
-        ASSERT_EQ(test(_immutable_precision, 100.0 / 3.0), "33.333333\n");
-        ASSERT_EQ(test(_immutable_precision, 100.0l / 3.0l), "33.333333\n");
+        ASSERT_EQ(test(_immutable_precision_low, true / 3), "0\n");
+        ASSERT_EQ(test(_immutable_precision_low, 'a' / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision_low, -'a' / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision_low, 97U / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision_low, -97 / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision_low, 97UL / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision_low, -97L / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision_low, 97ULL / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision_low, -97LL / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision_low, 3.141f / 3), "1.047\n");
+        ASSERT_EQ(test(_immutable_precision_low, -3.141f / 3), "-1.047\n");
+        ASSERT_EQ(test(_immutable_precision_low, 3.141 / 3), "1.047\n");
+        ASSERT_EQ(test(_immutable_precision_low, -3.141 / 3), "-1.047\n");
+        ASSERT_EQ(test(_immutable_precision_low, 3.141l / 3), "1.047\n");
+        ASSERT_EQ(test(_immutable_precision_low, -3.141l / 3), "-1.047\n");
+        ASSERT_EQ(test(_immutable_precision_low, "I love pi!\n"), "I love pi!\n\n");
 
-        ASSERT_EQ(test(_mutable_precision, 100.0f / 3.0f), "33.333332\n");
-        ASSERT_EQ(test(_mutable_precision, 100.0 / 3.0), "33.333333\n");
-        ASSERT_EQ(test(_mutable_precision, 100.0l / 3.0l), "33.333333\n");
+        ASSERT_EQ(test(_mutable_precision_low, true / 3), "0\n");
+        ASSERT_EQ(test(_mutable_precision_low, 'a' / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision_low, -'a' / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision_low, 97U / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision_low, -97 / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision_low, 97UL / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision_low, -97L / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision_low, 97ULL / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision_low, -97LL / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision_low, 3.141f / 3), "1.047\n");
+        ASSERT_EQ(test(_mutable_precision_low, -3.141f / 3), "-1.047\n");
+        ASSERT_EQ(test(_mutable_precision_low, 3.141 / 3), "1.047\n");
+        ASSERT_EQ(test(_mutable_precision_low, -3.141 / 3), "-1.047\n");
+        ASSERT_EQ(test(_mutable_precision_low, 3.141l / 3), "1.047\n");
+        ASSERT_EQ(test(_mutable_precision_low, -3.141l / 3), "-1.047\n");
+        ASSERT_EQ(test(_mutable_precision_low, "I love pi!\n"), "I love pi!\n\n");
+
+        ASSERT_EQ(test(_immutable_precision, true / 3), "0\n");
+        ASSERT_EQ(test(_immutable_precision, 'a' / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision, -'a' / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision, 97U / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision, -97 / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision, 97UL / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision, -97L / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision, 97ULL / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision, -97LL / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision, 3.141f / 3), "1.0470001\n");
+        ASSERT_EQ(test(_immutable_precision, -3.141f / 3), "-1.0470001\n");
+        ASSERT_EQ(test(_immutable_precision, 3.141 / 3), "1.047\n");
+        ASSERT_EQ(test(_immutable_precision, -3.141 / 3), "-1.047\n");
+        ASSERT_EQ(test(_immutable_precision, 3.141l / 3), "1.047\n");
+        ASSERT_EQ(test(_immutable_precision, -3.141l / 3), "-1.047\n");
+        ASSERT_EQ(test(_immutable_precision, "I love pi!\n"), "I love pi!\n\n");
+
+        ASSERT_EQ(test(_mutable_precision, true / 3), "0\n");
+        ASSERT_EQ(test(_mutable_precision, 'a' / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision, -'a' / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision, 97U / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision, -97 / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision, 97UL / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision, -97L / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision, 97ULL / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision, -97LL / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision, 3.141f / 3), "1.0470001\n");
+        ASSERT_EQ(test(_mutable_precision, -3.141f / 3), "-1.0470001\n");
+        ASSERT_EQ(test(_mutable_precision, 3.141 / 3), "1.047\n");
+        ASSERT_EQ(test(_mutable_precision, -3.141 / 3), "-1.047\n");
+        ASSERT_EQ(test(_mutable_precision, 3.141l / 3), "1.047\n");
+        ASSERT_EQ(test(_mutable_precision, -3.141l / 3), "-1.047\n");
+        ASSERT_EQ(test(_mutable_precision, "I love pi!\n"), "I love pi!\n\n");
+
+        ASSERT_EQ(test(_immutable_precision_high, true / 3), "0\n");
+        ASSERT_EQ(test(_immutable_precision_high, 'a' / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision_high, -'a' / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision_high, 97U / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision_high, -97 / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision_high, 97UL / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision_high, -97L / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision_high, 97ULL / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision_high, -97LL / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision_high, 3.141f / 3), "1.04700005054\n");
+        ASSERT_EQ(test(_immutable_precision_high, -3.141f / 3), "-1.04700005054\n");
+        ASSERT_EQ(test(_immutable_precision_high, 3.141 / 3), "1.047\n");
+        ASSERT_EQ(test(_immutable_precision_high, -3.141 / 3), "-1.047\n");
+        ASSERT_EQ(test(_immutable_precision_high, 3.141l / 3), "1.047\n");
+        ASSERT_EQ(test(_immutable_precision_high, -3.141l / 3), "-1.047\n");
+        ASSERT_EQ(test(_immutable_precision_high, "I love pi!\n"), "I love pi!\n\n");
+
+        ASSERT_EQ(test(_mutable_precision_high, true / 3), "0\n");
+        ASSERT_EQ(test(_mutable_precision_high, 'a' / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision_high, -'a' / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision_high, 97U / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision_high, -97 / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision_high, 97UL / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision_high, -97L / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision_high, 97ULL / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision_high, -97LL / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision_high, 3.141f / 3), "1.04700005054\n");
+        ASSERT_EQ(test(_mutable_precision_high, -3.141f / 3), "-1.04700005054\n");
+        ASSERT_EQ(test(_mutable_precision_high, 3.141 / 3), "1.047\n");
+        ASSERT_EQ(test(_mutable_precision_high, -3.141 / 3), "-1.047\n");
+        ASSERT_EQ(test(_mutable_precision_high, 3.141l / 3), "1.047\n");
+        ASSERT_EQ(test(_mutable_precision_high, -3.141l / 3), "-1.047\n");
+        ASSERT_EQ(test(_mutable_precision_high, "I love pi!\n"), "I love pi!\n\n");
     }
 
     TEST_F(Precision, print_operator_large) // NOLINT
@@ -89,13 +196,107 @@ namespace test
             return (stream.str());
         };
 
-        ASSERT_EQ(test(_immutable_precision, (1.0e4f / 9.0f) * (1.0e4f / 9.0f)), "1234567.9\n");
-        ASSERT_EQ(test(_immutable_precision, (1.0e4 / 9.0) * (1.0e4 / 9.0)), "1234567.9\n");
-        ASSERT_EQ(test(_immutable_precision, (1.0e4l / 9.0l) * (1.0e4l / 9.0l)), "1234567.9\n");
+        ASSERT_EQ(test(_immutable_precision_low, true / 3), "0\n");
+        ASSERT_EQ(test(_immutable_precision_low, 'a' / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision_low, -'a' / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision_low, 97U / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision_low, -97 / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision_low, 97UL / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision_low, -97L / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision_low, 97ULL / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision_low, -97LL / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision_low, 3.141f / 3), "1.047\n");
+        ASSERT_EQ(test(_immutable_precision_low, -3.141f / 3), "-1.047\n");
+        ASSERT_EQ(test(_immutable_precision_low, 3.141 / 3), "1.047\n");
+        ASSERT_EQ(test(_immutable_precision_low, -3.141 / 3), "-1.047\n");
+        ASSERT_EQ(test(_immutable_precision_low, 3.141l / 3), "1.047\n");
+        ASSERT_EQ(test(_immutable_precision_low, -3.141l / 3), "-1.047\n");
+        ASSERT_EQ(test(_immutable_precision_low, "I love pi!\n"), "I love pi!\n\n");
 
-        ASSERT_EQ(test(_mutable_precision, (1.0e4f / 9.0f) * (1.0e4f / 9.0f)), "1234567.9\n");
-        ASSERT_EQ(test(_mutable_precision, (1.0e4 / 9.0) * (1.0e4 / 9.0)), "1234567.9\n");
-        ASSERT_EQ(test(_mutable_precision, (1.0e4l / 9.0l) * (1.0e4l / 9.0l)), "1234567.9\n");
+        ASSERT_EQ(test(_mutable_precision_low, true / 3), "0\n");
+        ASSERT_EQ(test(_mutable_precision_low, 'a' / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision_low, -'a' / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision_low, 97U / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision_low, -97 / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision_low, 97UL / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision_low, -97L / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision_low, 97ULL / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision_low, -97LL / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision_low, 3.141f / 3), "1.047\n");
+        ASSERT_EQ(test(_mutable_precision_low, -3.141f / 3), "-1.047\n");
+        ASSERT_EQ(test(_mutable_precision_low, 3.141 / 3), "1.047\n");
+        ASSERT_EQ(test(_mutable_precision_low, -3.141 / 3), "-1.047\n");
+        ASSERT_EQ(test(_mutable_precision_low, 3.141l / 3), "1.047\n");
+        ASSERT_EQ(test(_mutable_precision_low, -3.141l / 3), "-1.047\n");
+        ASSERT_EQ(test(_mutable_precision_low, "I love pi!\n"), "I love pi!\n\n");
+
+        ASSERT_EQ(test(_immutable_precision, true / 3), "0\n");
+        ASSERT_EQ(test(_immutable_precision, 'a' / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision, -'a' / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision, 97U / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision, -97 / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision, 97UL / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision, -97L / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision, 97ULL / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision, -97LL / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision, 3.141f / 3), "1.0470001\n");
+        ASSERT_EQ(test(_immutable_precision, -3.141f / 3), "-1.0470001\n");
+        ASSERT_EQ(test(_immutable_precision, 3.141 / 3), "1.047\n");
+        ASSERT_EQ(test(_immutable_precision, -3.141 / 3), "-1.047\n");
+        ASSERT_EQ(test(_immutable_precision, 3.141l / 3), "1.047\n");
+        ASSERT_EQ(test(_immutable_precision, -3.141l / 3), "-1.047\n");
+        ASSERT_EQ(test(_immutable_precision, "I love pi!\n"), "I love pi!\n\n");
+
+        ASSERT_EQ(test(_mutable_precision, true / 3), "0\n");
+        ASSERT_EQ(test(_mutable_precision, 'a' / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision, -'a' / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision, 97U / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision, -97 / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision, 97UL / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision, -97L / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision, 97ULL / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision, -97LL / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision, 3.141f / 3), "1.0470001\n");
+        ASSERT_EQ(test(_mutable_precision, -3.141f / 3), "-1.0470001\n");
+        ASSERT_EQ(test(_mutable_precision, 3.141 / 3), "1.047\n");
+        ASSERT_EQ(test(_mutable_precision, -3.141 / 3), "-1.047\n");
+        ASSERT_EQ(test(_mutable_precision, 3.141l / 3), "1.047\n");
+        ASSERT_EQ(test(_mutable_precision, -3.141l / 3), "-1.047\n");
+        ASSERT_EQ(test(_mutable_precision, "I love pi!\n"), "I love pi!\n\n");
+
+        ASSERT_EQ(test(_immutable_precision_high, true / 3), "0\n");
+        ASSERT_EQ(test(_immutable_precision_high, 'a' / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision_high, -'a' / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision_high, 97U / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision_high, -97 / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision_high, 97UL / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision_high, -97L / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision_high, 97ULL / 3), "32\n");
+        ASSERT_EQ(test(_immutable_precision_high, -97LL / 3), "-32\n");
+        ASSERT_EQ(test(_immutable_precision_high, 3.141f / 3), "1.04700005054\n");
+        ASSERT_EQ(test(_immutable_precision_high, -3.141f / 3), "-1.04700005054\n");
+        ASSERT_EQ(test(_immutable_precision_high, 3.141 / 3), "1.047\n");
+        ASSERT_EQ(test(_immutable_precision_high, -3.141 / 3), "-1.047\n");
+        ASSERT_EQ(test(_immutable_precision_high, 3.141l / 3), "1.047\n");
+        ASSERT_EQ(test(_immutable_precision_high, -3.141l / 3), "-1.047\n");
+        ASSERT_EQ(test(_immutable_precision_high, "I love pi!\n"), "I love pi!\n\n");
+
+        ASSERT_EQ(test(_mutable_precision_high, true / 3), "0\n");
+        ASSERT_EQ(test(_mutable_precision_high, 'a' / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision_high, -'a' / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision_high, 97U / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision_high, -97 / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision_high, 97UL / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision_high, -97L / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision_high, 97ULL / 3), "32\n");
+        ASSERT_EQ(test(_mutable_precision_high, -97LL / 3), "-32\n");
+        ASSERT_EQ(test(_mutable_precision_high, 3.141f / 3), "1.04700005054\n");
+        ASSERT_EQ(test(_mutable_precision_high, -3.141f / 3), "-1.04700005054\n");
+        ASSERT_EQ(test(_mutable_precision_high, 3.141 / 3), "1.047\n");
+        ASSERT_EQ(test(_mutable_precision_high, -3.141 / 3), "-1.047\n");
+        ASSERT_EQ(test(_mutable_precision_high, 3.141l / 3), "1.047\n");
+        ASSERT_EQ(test(_mutable_precision_high, -3.141l / 3), "-1.047\n");
+        ASSERT_EQ(test(_mutable_precision_high, "I love pi!\n"), "I love pi!\n\n");
     }
 
 
