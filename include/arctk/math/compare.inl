@@ -5,7 +5,7 @@
 
 //  == DECLARATIONS ==
 //  -- Arc --
-#include "arctk/math/comparison.hpp" // IWYU pragma: export
+#include "arctk/math/compare.hpp" // IWYU pragma: export
 
 
 
@@ -29,7 +29,7 @@ namespace arc
         template <typename T, typename>
         constexpr inline bool zero(const T x_, const T epsilon_) noexcept
         {
-            assert(epsilon_ > 0.0);
+            assert(epsilon_ > T{0});
 
             return (std::abs(x_) <= epsilon_);
         }
@@ -37,7 +37,7 @@ namespace arc
         template <typename T, typename>
         constexpr inline bool equal(const T x_, const T y_, const T epsilon_) noexcept
         {
-            assert(epsilon_ > 0.0);
+            assert(epsilon_ > T{0});
 
             return (std::abs(x_ - y_) <= (std::abs(x_) < std::abs(y_) ? std::abs(y_) : std::abs(x_)) * epsilon_);
         }

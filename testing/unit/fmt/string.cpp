@@ -5,8 +5,6 @@
 //  -- GTest --
 #include <gtest/gtest.h>
 
-//  -- Std --
-
 
 
 //  == PRAGMAS ==
