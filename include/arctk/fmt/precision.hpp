@@ -12,25 +12,25 @@ namespace arc
 
 
         //  == CLASSES ==
-        //  -- Pad --
+        //  -- Precision --
         class Precision
         {
             //  == FIELDS ==
           private:
             //  -- Formatting --
-            const int _prec;
+            const int _precision;
 
 
             //  == INSTANTIATION ==
           public:
             //  -- Constructors --
-            constexpr inline explicit Precision(const int precision_) noexcept;
+            constexpr inline explicit Precision(int precision_) noexcept;
 
 
             //  == METHODS ==
           public:
             //  -- Getters --
-            constexpr inline int prec() const noexcept;
+            constexpr inline int precision() const noexcept;
         };
 
 

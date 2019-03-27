@@ -33,18 +33,18 @@ namespace test
 
 
     //  == FIXTURES ==
-    //  -- Filter --
+    //  -- Pad --
     class Pad : public ::testing::Test
     {
         //  == FIELDS ==
       protected:
-        //  -- Immutable --
+        //  -- Pads --
+        const fmt::Pad _immutable_small_width{4};
+        fmt::Pad       _mutable_small_width{4};
         const fmt::Pad _immutable_width{10};
-        const fmt::Pad _immutable_width_fill{8, '*'};
-
-        //  -- Mutable --
-        fmt::Pad _mutable_width{10};
-        fmt::Pad _mutable_width_fill{8, '*'};
+        fmt::Pad       _mutable_width{10};
+        const fmt::Pad _immutable_width_fill{7, '*'};
+        fmt::Pad       _mutable_width_fill{7, '*'};
     };
 
 
@@ -53,22 +53,30 @@ namespace test
     //  -- Getters --
     TEST_F(Pad, width) // NOLINT
     {
-        ASSERT_EQ(_immutable_width.width(), 10);
+        ASSERT_EQ(_immutable_small_width.width(), 4);
 
-        ASSERT_EQ(_immutable_width_fill.width(), 8);
+        ASSERT_EQ(_mutable_small_width.width(), 4);
+
+        ASSERT_EQ(_immutable_width.width(), 10);
 
         ASSERT_EQ(_mutable_width.width(), 10);
 
-        ASSERT_EQ(_mutable_width_fill.width(), 8);
+        ASSERT_EQ(_immutable_width_fill.width(), 7);
+
+        ASSERT_EQ(_mutable_width_fill.width(), 7);
     }
 
     TEST_F(Pad, fill) // NOLINT
     {
+        ASSERT_EQ(_immutable_small_width.fill(), ' ');
+
+        ASSERT_EQ(_mutable_small_width.fill(), ' ');
+
         ASSERT_EQ(_immutable_width.fill(), ' ');
 
-        ASSERT_EQ(_immutable_width_fill.fill(), '*');
-
         ASSERT_EQ(_mutable_width.fill(), ' ');
+
+        ASSERT_EQ(_immutable_width_fill.fill(), '*');
 
         ASSERT_EQ(_mutable_width_fill.fill(), '*');
     }
@@ -79,18 +87,115 @@ namespace test
     //  -- Printing --
     TEST_F(Pad, print_operator) // NOLINT
     {
-        auto test = [&](const auto& pad_) {
+        auto test = [&](const auto& pad_, const auto val_) {
             std::stringstream stream;
 
-            stream << pad_ << 3.141 << '\n';
+            stream << pad_ << val_ << '\n';
 
             return (stream.str());
         };
 
-        ASSERT_EQ(test(_immutable_width), "     3.141\n");
-        ASSERT_EQ(test(_immutable_width_fill), "***3.141\n");
-        ASSERT_EQ(test(_mutable_width), "     3.141\n");
-        ASSERT_EQ(test(_mutable_width_fill), "***3.141\n");
+        ASSERT_EQ(test(_immutable_small_width, true), "   1\n");
+        ASSERT_EQ(test(_immutable_small_width, 'a'), "   a\n");
+        ASSERT_EQ(test(_immutable_small_width, -'a'), " -97\n");
+        ASSERT_EQ(test(_immutable_small_width, 97U), "  97\n");
+        ASSERT_EQ(test(_immutable_small_width, -97), " -97\n");
+        ASSERT_EQ(test(_immutable_small_width, 97UL), "  97\n");
+        ASSERT_EQ(test(_immutable_small_width, -97L), " -97\n");
+        ASSERT_EQ(test(_immutable_small_width, 97ULL), "  97\n");
+        ASSERT_EQ(test(_immutable_small_width, -97LL), " -97\n");
+        ASSERT_EQ(test(_immutable_small_width, 3.141f), "3.141\n");
+        ASSERT_EQ(test(_immutable_small_width, -3.141f), "-3.141\n");
+        ASSERT_EQ(test(_immutable_small_width, 3.141), "3.141\n");
+        ASSERT_EQ(test(_immutable_small_width, -3.141), "-3.141\n");
+        ASSERT_EQ(test(_immutable_small_width, 3.141l), "3.141\n");
+        ASSERT_EQ(test(_immutable_small_width, -3.141l), "-3.141\n");
+        ASSERT_EQ(test(_immutable_small_width, "I love pi!\n"), "I love pi!\n\n");
+
+        ASSERT_EQ(test(_mutable_small_width, true), "   1\n");
+        ASSERT_EQ(test(_mutable_small_width, 'a'), "   a\n");
+        ASSERT_EQ(test(_mutable_small_width, -'a'), " -97\n");
+        ASSERT_EQ(test(_mutable_small_width, 97U), "  97\n");
+        ASSERT_EQ(test(_mutable_small_width, -97), " -97\n");
+        ASSERT_EQ(test(_mutable_small_width, 97UL), "  97\n");
+        ASSERT_EQ(test(_mutable_small_width, -97L), " -97\n");
+        ASSERT_EQ(test(_mutable_small_width, 97ULL), "  97\n");
+        ASSERT_EQ(test(_mutable_small_width, -97LL), " -97\n");
+        ASSERT_EQ(test(_mutable_small_width, 3.141f), "3.141\n");
+        ASSERT_EQ(test(_mutable_small_width, -3.141f), "-3.141\n");
+        ASSERT_EQ(test(_mutable_small_width, 3.141), "3.141\n");
+        ASSERT_EQ(test(_mutable_small_width, -3.141), "-3.141\n");
+        ASSERT_EQ(test(_mutable_small_width, 3.141l), "3.141\n");
+        ASSERT_EQ(test(_mutable_small_width, -3.141l), "-3.141\n");
+        ASSERT_EQ(test(_mutable_small_width, "I love pi!\n"), "I love pi!\n\n");
+
+        ASSERT_EQ(test(_immutable_width, true), "         1\n");
+        ASSERT_EQ(test(_immutable_width, 'a'), "         a\n");
+        ASSERT_EQ(test(_immutable_width, -'a'), "       -97\n");
+        ASSERT_EQ(test(_immutable_width, 97U), "        97\n");
+        ASSERT_EQ(test(_immutable_width, -97), "       -97\n");
+        ASSERT_EQ(test(_immutable_width, 97UL), "        97\n");
+        ASSERT_EQ(test(_immutable_width, -97L), "       -97\n");
+        ASSERT_EQ(test(_immutable_width, 97ULL), "        97\n");
+        ASSERT_EQ(test(_immutable_width, -97LL), "       -97\n");
+        ASSERT_EQ(test(_immutable_width, 3.141f), "     3.141\n");
+        ASSERT_EQ(test(_immutable_width, -3.141f), "    -3.141\n");
+        ASSERT_EQ(test(_immutable_width, 3.141), "     3.141\n");
+        ASSERT_EQ(test(_immutable_width, -3.141), "    -3.141\n");
+        ASSERT_EQ(test(_immutable_width, 3.141l), "     3.141\n");
+        ASSERT_EQ(test(_immutable_width, -3.141l), "    -3.141\n");
+        ASSERT_EQ(test(_immutable_width, "I love pi!\n"), "I love pi!\n\n");
+
+        ASSERT_EQ(test(_mutable_width, true), "         1\n");
+        ASSERT_EQ(test(_mutable_width, 'a'), "         a\n");
+        ASSERT_EQ(test(_mutable_width, -'a'), "       -97\n");
+        ASSERT_EQ(test(_mutable_width, 97U), "        97\n");
+        ASSERT_EQ(test(_mutable_width, -97), "       -97\n");
+        ASSERT_EQ(test(_mutable_width, 97UL), "        97\n");
+        ASSERT_EQ(test(_mutable_width, -97L), "       -97\n");
+        ASSERT_EQ(test(_mutable_width, 97ULL), "        97\n");
+        ASSERT_EQ(test(_mutable_width, -97LL), "       -97\n");
+        ASSERT_EQ(test(_mutable_width, 3.141f), "     3.141\n");
+        ASSERT_EQ(test(_mutable_width, -3.141f), "    -3.141\n");
+        ASSERT_EQ(test(_mutable_width, 3.141), "     3.141\n");
+        ASSERT_EQ(test(_mutable_width, -3.141), "    -3.141\n");
+        ASSERT_EQ(test(_mutable_width, 3.141l), "     3.141\n");
+        ASSERT_EQ(test(_mutable_width, -3.141l), "    -3.141\n");
+        ASSERT_EQ(test(_mutable_width, "I love pi!\n"), "I love pi!\n\n");
+
+        ASSERT_EQ(test(_immutable_width_fill, true), "******1\n");
+        ASSERT_EQ(test(_immutable_width_fill, 'a'), "******a\n");
+        ASSERT_EQ(test(_immutable_width_fill, -'a'), "****-97\n");
+        ASSERT_EQ(test(_immutable_width_fill, 97U), "*****97\n");
+        ASSERT_EQ(test(_immutable_width_fill, -97), "****-97\n");
+        ASSERT_EQ(test(_immutable_width_fill, 97UL), "*****97\n");
+        ASSERT_EQ(test(_immutable_width_fill, -97L), "****-97\n");
+        ASSERT_EQ(test(_immutable_width_fill, 97ULL), "*****97\n");
+        ASSERT_EQ(test(_immutable_width_fill, -97LL), "****-97\n");
+        ASSERT_EQ(test(_immutable_width_fill, 3.141f), "**3.141\n");
+        ASSERT_EQ(test(_immutable_width_fill, -3.141f), "*-3.141\n");
+        ASSERT_EQ(test(_immutable_width_fill, 3.141), "**3.141\n");
+        ASSERT_EQ(test(_immutable_width_fill, -3.141), "*-3.141\n");
+        ASSERT_EQ(test(_immutable_width_fill, 3.141l), "**3.141\n");
+        ASSERT_EQ(test(_immutable_width_fill, -3.141l), "*-3.141\n");
+        ASSERT_EQ(test(_immutable_width_fill, "I love pi!\n"), "I love pi!\n\n");
+
+        ASSERT_EQ(test(_mutable_width_fill, true), "******1\n");
+        ASSERT_EQ(test(_mutable_width_fill, 'a'), "******a\n");
+        ASSERT_EQ(test(_mutable_width_fill, -'a'), "****-97\n");
+        ASSERT_EQ(test(_mutable_width_fill, 97U), "*****97\n");
+        ASSERT_EQ(test(_mutable_width_fill, -97), "****-97\n");
+        ASSERT_EQ(test(_mutable_width_fill, 97UL), "*****97\n");
+        ASSERT_EQ(test(_mutable_width_fill, -97L), "****-97\n");
+        ASSERT_EQ(test(_mutable_width_fill, 97ULL), "*****97\n");
+        ASSERT_EQ(test(_mutable_width_fill, -97LL), "****-97\n");
+        ASSERT_EQ(test(_mutable_width_fill, 3.141f), "**3.141\n");
+        ASSERT_EQ(test(_mutable_width_fill, -3.141f), "*-3.141\n");
+        ASSERT_EQ(test(_mutable_width_fill, 3.141), "**3.141\n");
+        ASSERT_EQ(test(_mutable_width_fill, -3.141), "*-3.141\n");
+        ASSERT_EQ(test(_mutable_width_fill, 3.141l), "**3.141\n");
+        ASSERT_EQ(test(_mutable_width_fill, -3.141l), "*-3.141\n");
+        ASSERT_EQ(test(_mutable_width_fill, "I love pi!\n"), "I love pi!\n\n");
     }
 
 

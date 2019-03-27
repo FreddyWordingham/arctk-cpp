@@ -47,6 +47,8 @@ namespace test
         ASSERT_EQ(fmt::str(-3.141f), "-3.141");
         ASSERT_EQ(fmt::str(3.141), "3.141");
         ASSERT_EQ(fmt::str(-3.141), "-3.141");
+        ASSERT_EQ(fmt::str(3.141l), "3.141");
+        ASSERT_EQ(fmt::str(-3.141l), "-3.141");
         ASSERT_EQ(fmt::str("I love pi!\n"), "I love pi!\n");
     }
 

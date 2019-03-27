@@ -26,19 +26,19 @@ namespace arc
 
         //  == INSTANTIATION ==
         //  -- Constructors --
-        constexpr inline Precision::Precision(const int prec_) noexcept
-          : _prec{prec_}
+        constexpr inline Precision::Precision(const int precision_) noexcept
+          : _precision{precision_}
         {
-            assert(prec_ > 0);
+            assert(precision_ > 5);
         }
 
 
 
         //  == METHODS ==
         //  -- Getters --
-        constexpr inline int Precision::prec() const noexcept
+        constexpr inline int Precision::precision() const noexcept
         {
-            return (_prec);
+            return (_precision);
         }
 
 
@@ -52,7 +52,7 @@ namespace arc
     template <typename T>
     constexpr inline T& operator<<(T& stream_, const fmt::Precision& val_) noexcept
     {
-        stream_ << std::setprecision(val_.prec());
+        stream_ << std::setprecision(val_.precision());
 
         return (stream_);
     }
