@@ -39,7 +39,7 @@ namespace test
         ASSERT_EQ(math::sign(char{'a'}), char{1});
         ASSERT_EQ(math::sign(int{-32749}), int{-1});
         ASSERT_EQ(math::sign(std::size_t{67280421310721}), std::size_t{1});
-        ASSERT_EQ(math::sign(double{-3.14159265358979323846}), double{-1.0});
+        ASSERT_EQ(math::sign(double{-3.14159}), double{-1.0});
     }
 
     TEST(properties, is_positive) // NOLINT
@@ -52,7 +52,7 @@ namespace test
         ASSERT_FALSE(math::is_positive(int{0}));
         ASSERT_TRUE(math::is_positive(std::size_t{67280421310721}));
         ASSERT_FALSE(math::is_positive(std::size_t{0}));
-        ASSERT_FALSE(math::is_positive(double{-3.14159265358979323846}));
+        ASSERT_FALSE(math::is_positive(double{-3.14159}));
         ASSERT_FALSE(math::is_positive(double{0.0}));
     }
 
@@ -66,7 +66,7 @@ namespace test
         ASSERT_FALSE(math::is_negative(int{0}));
         ASSERT_FALSE(math::is_negative(std::size_t{67280421310721}));
         ASSERT_FALSE(math::is_negative(std::size_t{0}));
-        ASSERT_TRUE(math::is_negative(double{-3.14159265358979323846}));
+        ASSERT_TRUE(math::is_negative(double{-3.14159}));
         ASSERT_FALSE(math::is_negative(double{0.0}));
     }
 

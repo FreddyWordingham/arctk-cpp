@@ -100,42 +100,42 @@ namespace test
         ASSERT_EQ(test(_immutable_small_width, char{'a'}), "   a\n");
         ASSERT_EQ(test(_immutable_small_width, int{-32749}), "-32749\n");
         ASSERT_EQ(test(_immutable_small_width, std::size_t{67280421310721}), "67280421310721\n");
-        ASSERT_EQ(test(_immutable_small_width, double{-3.14159265358979323846}), "-3.14159\n");
+        ASSERT_EQ(test(_immutable_small_width, double{-3.14159}), "-3.14159\n");
         ASSERT_EQ(test(_immutable_small_width, std::string{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n\n");
 
         ASSERT_EQ(test(_mutable_small_width, bool{true}), "   1\n");
         ASSERT_EQ(test(_mutable_small_width, char{'a'}), "   a\n");
         ASSERT_EQ(test(_mutable_small_width, int{-32749}), "-32749\n");
         ASSERT_EQ(test(_mutable_small_width, std::size_t{67280421310721}), "67280421310721\n");
-        ASSERT_EQ(test(_mutable_small_width, double{-3.14159265358979323846}), "-3.14159\n");
+        ASSERT_EQ(test(_mutable_small_width, double{-3.14159}), "-3.14159\n");
         ASSERT_EQ(test(_mutable_small_width, std::string{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n\n");
 
         ASSERT_EQ(test(_immutable_width, bool{true}), "         1\n");
         ASSERT_EQ(test(_immutable_width, char{'a'}), "         a\n");
         ASSERT_EQ(test(_immutable_width, int{-32749}), "    -32749\n");
         ASSERT_EQ(test(_immutable_width, std::size_t{67280421310721}), "67280421310721\n");
-        ASSERT_EQ(test(_immutable_width, double{-3.14159265358979323846}), "  -3.14159\n");
+        ASSERT_EQ(test(_immutable_width, double{-3.14159}), "  -3.14159\n");
         ASSERT_EQ(test(_immutable_width, std::string{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n\n");
 
         ASSERT_EQ(test(_mutable_width, bool{true}), "         1\n");
         ASSERT_EQ(test(_mutable_width, char{'a'}), "         a\n");
         ASSERT_EQ(test(_mutable_width, int{-32749}), "    -32749\n");
         ASSERT_EQ(test(_mutable_width, std::size_t{67280421310721}), "67280421310721\n");
-        ASSERT_EQ(test(_mutable_width, double{-3.14159265358979323846}), "  -3.14159\n");
+        ASSERT_EQ(test(_mutable_width, double{-3.14159}), "  -3.14159\n");
         ASSERT_EQ(test(_mutable_width, std::string{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n\n");
 
         ASSERT_EQ(test(_immutable_width_fill, bool{true}), "******1\n");
         ASSERT_EQ(test(_immutable_width_fill, char{'a'}), "******a\n");
         ASSERT_EQ(test(_immutable_width_fill, int{-32749}), "*-32749\n");
         ASSERT_EQ(test(_immutable_width_fill, std::size_t{67280421310721}), "67280421310721\n");
-        ASSERT_EQ(test(_immutable_width_fill, double{-3.14159265358979323846}), "-3.14159\n");
+        ASSERT_EQ(test(_immutable_width_fill, double{-3.14159}), "-3.14159\n");
         ASSERT_EQ(test(_immutable_width_fill, std::string{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n\n");
 
         ASSERT_EQ(test(_mutable_width_fill, bool{true}), "******1\n");
         ASSERT_EQ(test(_mutable_width_fill, char{'a'}), "******a\n");
         ASSERT_EQ(test(_mutable_width_fill, int{-32749}), "*-32749\n");
         ASSERT_EQ(test(_mutable_width_fill, std::size_t{67280421310721}), "67280421310721\n");
-        ASSERT_EQ(test(_mutable_width_fill, double{-3.14159265358979323846}), "-3.14159\n");
+        ASSERT_EQ(test(_mutable_width_fill, double{-3.14159}), "-3.14159\n");
         ASSERT_EQ(test(_mutable_width_fill, std::string{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n\n");
     }
 

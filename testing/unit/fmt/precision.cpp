@@ -83,12 +83,12 @@ namespace test
             return (stream.str());
         };
 
-        ASSERT_EQ(test(_immutable_precision_low, double{-3.14159265358979323846}), "-3.14159\n");
-        ASSERT_EQ(test(_mutable_precision_low, double{-3.14159265358979323846}), "-3.14159\n");
-        ASSERT_EQ(test(_immutable_precision, double{-3.14159265358979323846}), "-3.1415927\n");
-        ASSERT_EQ(test(_mutable_precision, double{-3.14159265358979323846}), "-3.1415927\n");
-        ASSERT_EQ(test(_immutable_precision_high, double{-3.14159265358979323846}), "-3.14159265359\n");
-        ASSERT_EQ(test(_mutable_precision_high, double{-3.14159265358979323846}), "-3.14159265359\n");
+        ASSERT_EQ(test(_immutable_precision_low, double{-3.14159}), "-3.14159\n");
+        ASSERT_EQ(test(_mutable_precision_low, double{-3.14159}), "-3.14159\n");
+        ASSERT_EQ(test(_immutable_precision, double{-3.14159}), "-3.14159\n");
+        ASSERT_EQ(test(_mutable_precision, double{-3.14159}), "-3.14159\n");
+        ASSERT_EQ(test(_immutable_precision_high, double{-3.14159}), "-3.14159\n");
+        ASSERT_EQ(test(_mutable_precision_high, double{-3.14159}), "-3.14159\n");
     }
 
 

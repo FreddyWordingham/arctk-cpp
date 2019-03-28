@@ -232,14 +232,14 @@ namespace arc
 
         //  -- Assignment --
         template <int M, int L, int T, int K, int C, int I, int N, int A>
-        constexpr inline const Dimension<M, L, T, K, C, I, N, A>& Dimension<M, L, T, K, C, I, N, A>::operator+=(const Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+        constexpr inline const Dimension<M, L, T, K, C, I, N, A>& Dimension<M, L, T, K, C, I, N, A>::operator+=(const Dimension<M, L, T, K, C, I, N, A> rhs_) noexcept
         {
             _mag += rhs_.mag();
 
             return (*this);
         }
 
-        constexpr inline const Dimension<0, 0, 0, 0, 0, 0, 0, 0>& Dimension<0, 0, 0, 0, 0, 0, 0, 0>::operator+=(const Dimension<0, 0, 0, 0, 0, 0, 0, 0>& rhs_) noexcept
+        constexpr inline const Dimension<0, 0, 0, 0, 0, 0, 0, 0>& Dimension<0, 0, 0, 0, 0, 0, 0, 0>::operator+=(const Dimension<0, 0, 0, 0, 0, 0, 0, 0> rhs_) noexcept
         {
             _mag += rhs_.mag();
 
@@ -247,14 +247,14 @@ namespace arc
         }
 
         template <int M, int L, int T, int K, int C, int I, int N, int A>
-        constexpr inline const Dimension<M, L, T, K, C, I, N, A>& Dimension<M, L, T, K, C, I, N, A>::operator-=(const Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+        constexpr inline const Dimension<M, L, T, K, C, I, N, A>& Dimension<M, L, T, K, C, I, N, A>::operator-=(const Dimension<M, L, T, K, C, I, N, A> rhs_) noexcept
         {
             _mag -= rhs_.mag();
 
             return (*this);
         }
 
-        constexpr inline const Dimension<0, 0, 0, 0, 0, 0, 0, 0>& Dimension<0, 0, 0, 0, 0, 0, 0, 0>::operator-=(const Dimension<0, 0, 0, 0, 0, 0, 0, 0>& rhs_) noexcept
+        constexpr inline const Dimension<0, 0, 0, 0, 0, 0, 0, 0>& Dimension<0, 0, 0, 0, 0, 0, 0, 0>::operator-=(const Dimension<0, 0, 0, 0, 0, 0, 0, 0> rhs_) noexcept
         {
             _mag -= rhs_.mag();
 
@@ -347,61 +347,61 @@ namespace arc
     //  == OPERATORS ==
     //  -- Arithmetic --
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator+(const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator+(const si::Dimension<M, L, T, K, C, I, N, A> rhs_) noexcept
     {
         return (si::Dimension<M, L, T, K, C, I, N, A>{+rhs_.mag()});
     }
 
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator-(const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator-(const si::Dimension<M, L, T, K, C, I, N, A> rhs_) noexcept
     {
         return (si::Dimension<M, L, T, K, C, I, N, A>{-rhs_.mag()});
     }
 
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator+(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator+(const si::Dimension<M, L, T, K, C, I, N, A> lhs_, const si::Dimension<M, L, T, K, C, I, N, A> rhs_) noexcept
     {
         return (si::Dimension<M, L, T, K, C, I, N, A>{lhs_.mag() + rhs_.mag()});
     }
 
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator-(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator-(const si::Dimension<M, L, T, K, C, I, N, A> lhs_, const si::Dimension<M, L, T, K, C, I, N, A> rhs_) noexcept
     {
         return (si::Dimension<M, L, T, K, C, I, N, A>{lhs_.mag() - rhs_.mag()});
     }
 
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator*(const double lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator*(const double lhs_, const si::Dimension<M, L, T, K, C, I, N, A> rhs_) noexcept
     {
         return (si::Dimension<M, L, T, K, C, I, N, A>{lhs_ * rhs_.mag()});
     }
 
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator*(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const double rhs_) noexcept
+    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator*(const si::Dimension<M, L, T, K, C, I, N, A> lhs_, const double rhs_) noexcept
     {
         return (si::Dimension<M, L, T, K, C, I, N, A>{lhs_.mag() * rhs_});
     }
 
     template <int Ml, int Ll, int Tl, int Kl, int Cl, int Il, int Nl, int Al, int Mr, int Lr, int Tr, int Kr, int Cr, int Ir, int Nr, int Ar>
-    constexpr inline si::Dimension<Ml + Mr, Ll + Lr, Tl + Tr, Kl + Kr, Cl + Cr, Il + Ir, Nl + Nr, Al + Ar> operator*(const si::Dimension<Ml, Ll, Tl, Kl, Cl, Il, Nl, Al>& lhs_, const si::Dimension<Mr, Lr, Tr, Kr, Cr, Ir, Nr, Ar>& rhs_) noexcept
+    constexpr inline si::Dimension<Ml + Mr, Ll + Lr, Tl + Tr, Kl + Kr, Cl + Cr, Il + Ir, Nl + Nr, Al + Ar> operator*(const si::Dimension<Ml, Ll, Tl, Kl, Cl, Il, Nl, Al> lhs_, const si::Dimension<Mr, Lr, Tr, Kr, Cr, Ir, Nr, Ar> rhs_) noexcept
     {
         return (si::Dimension<Ml + Mr, Ll + Lr, Tl + Tr, Kl + Kr, Cl + Cr, Il + Ir, Nl + Nr, Al + Ar>{lhs_.mag() * rhs_.mag()});
     }
 
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline si::Dimension<-M, -L, -T, -K, -C, -I, -N, -A> operator/(const double lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    constexpr inline si::Dimension<-M, -L, -T, -K, -C, -I, -N, -A> operator/(const double lhs_, const si::Dimension<M, L, T, K, C, I, N, A> rhs_) noexcept
     {
         return (si::Dimension<-M, -L, -T, -K, -C, -I, -N, -A>{lhs_ / rhs_.mag()});
     }
 
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator/(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const double rhs_) noexcept
+    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator/(const si::Dimension<M, L, T, K, C, I, N, A> lhs_, const double rhs_) noexcept
     {
         return (si::Dimension<M, L, T, K, C, I, N, A>{lhs_.mag() / rhs_});
     }
 
     template <int Ml, int Ll, int Tl, int Kl, int Cl, int Il, int Nl, int Al, int Mr, int Lr, int Tr, int Kr, int Cr, int Ir, int Nr, int Ar>
-    constexpr inline si::Dimension<Ml - Mr, Ll - Lr, Tl - Tr, Kl - Kr, Cl - Cr, Il - Ir, Nl - Nr, Al - Ar> operator/(const si::Dimension<Ml, Ll, Tl, Kl, Cl, Il, Nl, Al>& lhs_, const si::Dimension<Mr, Lr, Tr, Kr, Cr, Ir, Nr, Ar>& rhs_) noexcept
+    constexpr inline si::Dimension<Ml - Mr, Ll - Lr, Tl - Tr, Kl - Kr, Cl - Cr, Il - Ir, Nl - Nr, Al - Ar> operator/(const si::Dimension<Ml, Ll, Tl, Kl, Cl, Il, Nl, Al> lhs_, const si::Dimension<Mr, Lr, Tr, Kr, Cr, Ir, Nr, Ar> rhs_) noexcept
     {
         return (si::Dimension<Ml - Mr, Ll - Lr, Tl - Tr, Kl - Kr, Cl - Cr, Il - Ir, Nl - Nr, Al - Ar>{lhs_.mag() / rhs_.mag()});
     }
@@ -409,7 +409,7 @@ namespace arc
 
     //  -- Increment / Decrement --
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator++(si::Dimension<M, L, T, K, C, I, N, A>& dim_, const int /*unused*/) noexcept
+    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator++(si::Dimension<M, L, T, K, C, I, N, A> dim_, const int /*unused*/) noexcept
     {
         const auto dim{dim_};
 
@@ -419,7 +419,7 @@ namespace arc
     }
 
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator--(si::Dimension<M, L, T, K, C, I, N, A>& dim_, const int /*unused*/) noexcept
+    constexpr inline si::Dimension<M, L, T, K, C, I, N, A> operator--(si::Dimension<M, L, T, K, C, I, N, A> dim_, const int /*unused*/) noexcept
     {
         const auto dim{dim_};
 
@@ -431,37 +431,37 @@ namespace arc
 
     //  -- Comparison --
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline bool operator==(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    constexpr inline bool operator==(const si::Dimension<M, L, T, K, C, I, N, A> lhs_, const si::Dimension<M, L, T, K, C, I, N, A> rhs_) noexcept
     {
         return (math::equal(lhs_.mag(), rhs_.mag()));
     }
 
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline bool operator!=(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    constexpr inline bool operator!=(const si::Dimension<M, L, T, K, C, I, N, A> lhs_, const si::Dimension<M, L, T, K, C, I, N, A> rhs_) noexcept
     {
         return (!(lhs_.mag() == rhs_.mag()));
     }
 
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline bool operator<(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    constexpr inline bool operator<(const si::Dimension<M, L, T, K, C, I, N, A> lhs_, const si::Dimension<M, L, T, K, C, I, N, A> rhs_) noexcept
     {
         return (lhs_.mag() < rhs_.mag());
     }
 
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline bool operator>(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    constexpr inline bool operator>(const si::Dimension<M, L, T, K, C, I, N, A> lhs_, const si::Dimension<M, L, T, K, C, I, N, A> rhs_) noexcept
     {
         return (lhs_.mag() > rhs_.mag());
     }
 
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline bool operator<=(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    constexpr inline bool operator<=(const si::Dimension<M, L, T, K, C, I, N, A> lhs_, const si::Dimension<M, L, T, K, C, I, N, A> rhs_) noexcept
     {
         return (lhs_.mag() <= rhs_.mag());
     }
 
     template <int M, int L, int T, int K, int C, int I, int N, int A>
-    constexpr inline bool operator>=(const si::Dimension<M, L, T, K, C, I, N, A>& lhs_, const si::Dimension<M, L, T, K, C, I, N, A>& rhs_) noexcept
+    constexpr inline bool operator>=(const si::Dimension<M, L, T, K, C, I, N, A> lhs_, const si::Dimension<M, L, T, K, C, I, N, A> rhs_) noexcept
     {
         return (lhs_.mag() >= rhs_.mag());
     }

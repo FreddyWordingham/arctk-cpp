@@ -39,7 +39,7 @@ namespace test
         ASSERT_EQ(fmt::str(char{'a'}), "a");
         ASSERT_EQ(fmt::str(int{-32749}), "-32749");
         ASSERT_EQ(fmt::str(std::size_t{67280421310721}), "67280421310721");
-        ASSERT_EQ(fmt::str(double{-3.14159265358979323846}), "-3.14159");
+        ASSERT_EQ(fmt::str(double{-3.14159}), "-3.14159");
         ASSERT_EQ(fmt::str(std::string{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n");
     }
 
