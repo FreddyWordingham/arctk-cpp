@@ -11,7 +11,7 @@
 
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/math/comparison.inl"
+#include "arctk/math/compare.inl"
 
 //  -- Std --
 #include <cassert>
@@ -31,20 +31,28 @@ namespace arc
         //  -- Bases --
         template <int M, int L, int T, int K, int C, int I, int N, int A>
         const int Dimension<M, L, T, K, C, I, N, A>::MASS_EXPONENT{M};
+        const int Dimension<0, 0, 0, 0, 0, 0, 0, 0>::MASS_EXPONENT{0};
         template <int M, int L, int T, int K, int C, int I, int N, int A>
         const int Dimension<M, L, T, K, C, I, N, A>::LENGTH_EXPONENT{L};
+        const int Dimension<0, 0, 0, 0, 0, 0, 0, 0>::LENGTH_EXPONENT{0};
         template <int M, int L, int T, int K, int C, int I, int N, int A>
         const int Dimension<M, L, T, K, C, I, N, A>::TIME_EXPONENT{T};
+        const int Dimension<0, 0, 0, 0, 0, 0, 0, 0>::TIME_EXPONENT{0};
         template <int M, int L, int T, int K, int C, int I, int N, int A>
         const int Dimension<M, L, T, K, C, I, N, A>::TEMPERATURE_EXPONENT{K};
+        const int Dimension<0, 0, 0, 0, 0, 0, 0, 0>::TEMPERATURE_EXPONENT{0};
         template <int M, int L, int T, int K, int C, int I, int N, int A>
         const int Dimension<M, L, T, K, C, I, N, A>::CURRENT_EXPONENT{C};
+        const int Dimension<0, 0, 0, 0, 0, 0, 0, 0>::CURRENT_EXPONENT{0};
         template <int M, int L, int T, int K, int C, int I, int N, int A>
         const int Dimension<M, L, T, K, C, I, N, A>::INTENSITY_EXPONENT{I};
+        const int Dimension<0, 0, 0, 0, 0, 0, 0, 0>::INTENSITY_EXPONENT{0};
         template <int M, int L, int T, int K, int C, int I, int N, int A>
         const int Dimension<M, L, T, K, C, I, N, A>::AMOUNT_EXPONENT{N};
+        const int Dimension<0, 0, 0, 0, 0, 0, 0, 0>::AMOUNT_EXPONENT{0};
         template <int M, int L, int T, int K, int C, int I, int N, int A>
         const int Dimension<M, L, T, K, C, I, N, A>::ANGLE_EXPONENT{A};
+        const int Dimension<0, 0, 0, 0, 0, 0, 0, 0>::ANGLE_EXPONENT{0};
 
 
         //  -- Units --
@@ -116,7 +124,7 @@ namespace arc
         template <>
         const char* const Capacitance::UNITS{"F"};
         template <>
-        const char* const Resistance::UNITS{"Ω"};
+        const char* const Resistance::UNITS{"Ohm"};
         template <>
         const char* const Conductance::UNITS{"S"};
         template <>

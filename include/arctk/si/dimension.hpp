@@ -80,14 +80,14 @@ namespace arc
             //  == CONSTANTS ==
           public:
             //  -- Bases --
-            static const int MASS_EXPONENT{0};
-            static const int LENGTH_EXPONENT{0};
-            static const int TIME_EXPONENT{0};
-            static const int TEMPERATURE_EXPONENT{0};
-            static const int CURRENT_EXPONENT{0};
-            static const int INTENSITY_EXPONENT{0};
-            static const int AMOUNT_EXPONENT{0};
-            static const int ANGLE_EXPONENT{0};
+            static const int MASS_EXPONENT;
+            static const int LENGTH_EXPONENT;
+            static const int TIME_EXPONENT;
+            static const int TEMPERATURE_EXPONENT;
+            static const int CURRENT_EXPONENT;
+            static const int INTENSITY_EXPONENT;
+            static const int AMOUNT_EXPONENT;
+            static const int ANGLE_EXPONENT;
 
             //  -- Units --
             static const char* const UNITS;
