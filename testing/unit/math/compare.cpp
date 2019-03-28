@@ -50,6 +50,26 @@ namespace test
         ASSERT_FALSE(math::zero(-3.141l));
     }
 
+    TEST(zero, true_epsilon)
+    {
+        ASSERT_TRUE(math::zero(3.141f, 4.0f));
+        ASSERT_TRUE(math::zero(-3.141f, 4.0f));
+        ASSERT_TRUE(math::zero(3.141, 4.0));
+        ASSERT_TRUE(math::zero(-3.141, 4.0));
+        ASSERT_TRUE(math::zero(3.141l, 4.0l));
+        ASSERT_TRUE(math::zero(-3.141l, 4.0l));
+    }
+
+    TEST(zero, false_epsilon)
+    {
+        ASSERT_FALSE(math::zero(3.141f, 3.0f));
+        ASSERT_FALSE(math::zero(-3.141f, 3.0f));
+        ASSERT_FALSE(math::zero(3.141, 3.0));
+        ASSERT_FALSE(math::zero(-3.141, 3.0));
+        ASSERT_FALSE(math::zero(3.141l, 3.0l));
+        ASSERT_FALSE(math::zero(-3.141l, 3.0l));
+    }
+
     TEST(equal, true)
     {
         ASSERT_TRUE(math::equal(3.141f, 2.07f + 1.071f));

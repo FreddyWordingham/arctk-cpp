@@ -11,6 +11,7 @@
 //  -- Warnings --
 #ifdef __clang__
 #pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wabsolute-value"
 #pragma clang diagnostic ignored "-Wglobal-constructors"
 #endif
 

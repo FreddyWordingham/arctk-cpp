@@ -32,22 +32,12 @@ namespace test
     //  -- Formatting --
     TEST(str, simple) // NOLINT
     {
-        ASSERT_EQ(fmt::str(true), "true");
-        ASSERT_EQ(fmt::str('a'), "a");
-        ASSERT_EQ(fmt::str(-'a'), "-97");
-        ASSERT_EQ(fmt::str(97U), "97");
-        ASSERT_EQ(fmt::str(-97), "-97");
-        ASSERT_EQ(fmt::str(97UL), "97");
-        ASSERT_EQ(fmt::str(-97L), "-97");
-        ASSERT_EQ(fmt::str(97ULL), "97");
-        ASSERT_EQ(fmt::str(-97LL), "-97");
-        ASSERT_EQ(fmt::str(3.141f), "3.141");
-        ASSERT_EQ(fmt::str(-3.141f), "-3.141");
-        ASSERT_EQ(fmt::str(3.141), "3.141");
-        ASSERT_EQ(fmt::str(-3.141), "-3.141");
-        ASSERT_EQ(fmt::str(3.141l), "3.141");
-        ASSERT_EQ(fmt::str(-3.141l), "-3.141");
-        ASSERT_EQ(fmt::str("I love pi!\n"), "I love pi!\n");
+        ASSERT_EQ(fmt::str(bool{true}), "true");
+        ASSERT_EQ(fmt::str(char{'a'}), "a");
+        ASSERT_EQ(fmt::str(int{-32749}), "-32749");
+        ASSERT_EQ(fmt::str(std::size_t{67280421310721}), "67280421310721");
+        ASSERT_EQ(fmt::str(double{-3.14159265358979323846}), "-3.14159");
+        ASSERT_EQ(fmt::str(std::string{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n");
     }
 
 
