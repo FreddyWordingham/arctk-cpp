@@ -6,6 +6,7 @@
 #include <gtest/gtest.h>
 
 //  -- Std --
+#include <cstddef>
 #include <sstream>
 #include <string>
 
