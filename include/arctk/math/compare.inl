@@ -25,7 +25,7 @@ namespace arc
 
 
         //  == FUNCTIONS ==
-        //  -- Comparison --
+        //  -- Compare --
         template <typename T, typename>
         constexpr inline bool zero(const T x_, const T epsilon_) noexcept
         {

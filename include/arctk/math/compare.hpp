@@ -19,7 +19,7 @@ namespace arc
 
 
         //  == FUNCTIONS ==
-        //  -- Comparison --
+        //  -- Compare --
         template <typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
         constexpr inline bool zero(T x_, T epsilon_ = std::numeric_limits<T>::epsilon()) noexcept;
         template <typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>

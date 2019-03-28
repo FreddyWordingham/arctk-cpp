@@ -53,7 +53,7 @@ namespace arc
         template <typename T, typename>
         constexpr inline bool is_odd(const T n_) noexcept
         {
-            return ((std::abs(n_) % 2) == 1);
+            return (!is_even(n_));
         }
 
         template <typename T, typename>
