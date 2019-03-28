@@ -33,7 +33,7 @@ namespace test
 
     //  == FREE FUNCTION TESTS ==
     //  -- Properties --
-    TEST(properties, sign)
+    TEST(properties, sign) // NOLINT
     {
         ASSERT_EQ(math::sign(bool{true}), bool{true});
         ASSERT_EQ(math::sign(char{'a'}), char{1});
@@ -42,7 +42,7 @@ namespace test
         ASSERT_EQ(math::sign(double{-3.14159265358979323846}), double{-1.0});
     }
 
-    TEST(properties, is_positive)
+    TEST(properties, is_positive) // NOLINT
     {
         ASSERT_TRUE(math::is_positive(bool{true}));
         ASSERT_FALSE(math::is_positive(bool{false}));
@@ -56,7 +56,7 @@ namespace test
         ASSERT_FALSE(math::is_positive(double{0.0}));
     }
 
-    TEST(properties, is_negative)
+    TEST(properties, is_negative) // NOLINT
     {
         ASSERT_FALSE(math::is_negative(bool{true}));
         ASSERT_FALSE(math::is_negative(bool{false}));
@@ -70,7 +70,7 @@ namespace test
         ASSERT_FALSE(math::is_negative(double{0.0}));
     }
 
-    TEST(properties, is_even)
+    TEST(properties, is_even) // NOLINT
     {
         ASSERT_FALSE(math::is_even(bool{true}));
         ASSERT_TRUE(math::is_even(bool{false}));
@@ -82,7 +82,7 @@ namespace test
         ASSERT_TRUE(math::is_even(std::size_t{0}));
     }
 
-    TEST(properties, is_odd)
+    TEST(properties, is_odd) // NOLINT
     {
         ASSERT_TRUE(math::is_odd(bool{true}));
         ASSERT_FALSE(math::is_odd(bool{false}));
@@ -94,7 +94,7 @@ namespace test
         ASSERT_FALSE(math::is_odd(std::size_t{0}));
     }
 
-    TEST(properties, is_prime)
+    TEST(properties, is_prime) // NOLINT
     {
         ASSERT_TRUE(math::is_prime(char{'a'}));
         ASSERT_FALSE(math::is_prime(char{0}));

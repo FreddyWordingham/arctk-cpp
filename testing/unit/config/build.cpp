@@ -34,47 +34,38 @@ namespace test
 
     //  == CONSTANT TESTS ==
     //  -- Build Information  --
-    TEST(DIR, occupied) // NOLINT
+    TEST(build, DIR) // NOLINT
     {
         ASSERT_GT(std::strlen(arc::config::DIR), 5);
-    }
 
-    TEST(DIR, contains_arctk_keyword) // NOLINT
-    {
         ASSERT_TRUE(std::string{arc::config::DIR}.find("arctk") != std::string::npos);
     }
 
-    TEST(BRANCH, occupied) // NOLINT
+    TEST(build, BRANCH) // NOLINT
     {
         ASSERT_GE(std::strlen(arc::config::BRANCH), 3);
     }
 
-    TEST(HASH, occupied) // NOLINT
+    TEST(build, HASH) // NOLINT
     {
         ASSERT_GT(std::strlen(arc::config::HASH), 8);
     }
 
-    TEST(COMPILER, occupied) // NOLINT
+    TEST(build, COMPILER) // NOLINT
     {
         ASSERT_GE(std::strlen(arc::config::COMPILER), 3);
-    }
 
-    TEST(COMPILER, valid) // NOLINT
-    {
         ASSERT_TRUE((arc::config::COMPILER == "Clang") || (arc::config::COMPILER == "GNU"));
     }
 
-    TEST(TYPE, occupied) // NOLINT
+    TEST(build, TYPE) // NOLINT
     {
         ASSERT_GT(std::strlen(arc::config::TYPE), 0);
-    }
 
-    TEST(TYPE, valid) // NOLINT
-    {
         ASSERT_TRUE((arc::config::TYPE == "debug") || (arc::config::TYPE == "release"));
     }
 
-    TEST(DATE, occupied) // NOLINT
+    TEST(build, DATE) // NOLINT
     {
         ASSERT_EQ(std::strlen(arc::config::DATE), 10);
     }

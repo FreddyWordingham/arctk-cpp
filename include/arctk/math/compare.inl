@@ -39,7 +39,7 @@ namespace arc
         {
             assert(epsilon_ > T{0});
 
-            return (std::abs(x_ - y_) <= (std::abs(x_) < std::abs(y_) ? std::abs(y_) : std::abs(x_)) * epsilon_);
+            return (std::abs(x_ - y_) <= ((std::abs(x_) < std::abs(y_) ? std::abs(y_) : std::abs(x_)) * epsilon_));
         }
 
 

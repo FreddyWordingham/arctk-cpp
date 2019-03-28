@@ -30,17 +30,17 @@ namespace test
 
     //  == CONSTANT TESTS ==
     //  -- Version --
-    TEST(VERSION_MAJOR, non_negative) // NOLINT
+    TEST(version, VERSION_MAJOR) // NOLINT
     {
         ASSERT_GE(arc::config::VERSION_MAJOR, 0);
     }
 
-    TEST(VERSION_MINOR, non_negative) // NOLINT
+    TEST(version, VERSION_MINOR) // NOLINT
     {
         ASSERT_GE(arc::config::VERSION_MINOR, 0);
     }
 
-    TEST(VERSION_PATCH, non_negative) // NOLINT
+    TEST(version, VERSION_PATCH) // NOLINT
     {
         ASSERT_GE(arc::config::VERSION_PATCH, 0);
     }
