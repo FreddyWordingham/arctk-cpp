@@ -16,9 +16,17 @@
 
 
 
+//  == ALIASES ==
+//  -- Namespaces --
+using namespace arc; // NOLINT
+
+
+
 //  == NAMESPACE ==
-namespace test
+namespace testing
 {
+    namespace unit
+    {
 
 
 
@@ -43,7 +51,8 @@ namespace test
 
 
 
-} // namespace test
+    } // namespace unit
+} // namespace testing
 
 
 

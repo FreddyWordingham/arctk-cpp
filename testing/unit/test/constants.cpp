@@ -1,6 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/config/version.inl"
+#include "arctk/test/constants.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
@@ -30,21 +30,31 @@ namespace testing
 
 
 
-        //  == CONSTANT TESTS ==
-        //  -- Version --
-        TEST(config, VERSION_MAJOR) // NOLINT
+        //  == TESTS ==
+        //  -- Primitives --
+        TEST(arc_test, CHAR) // NOLINT
         {
-            ASSERT_GE(config::VERSION_MAJOR, 0);
+            ASSERT_EQ(test::CHAR, 'a');
         }
 
-        TEST(config, VERSION_MINOR) // NOLINT
+        TEST(arc_test, INT) // NOLINT
         {
-            ASSERT_GE(config::VERSION_MINOR, 0);
+            ASSERT_EQ(test::INT, -32749);
         }
 
-        TEST(config, VERSION_PATCH) // NOLINT
+        TEST(arc_test, SIZE) // NOLINT
         {
-            ASSERT_GE(config::VERSION_PATCH, 0);
+            ASSERT_EQ(test::SIZE, 67280421310721);
+        }
+
+        TEST(arc_test, FLOAT) // NOLINT
+        {
+            ASSERT_EQ(test::FLOAT, -3.14159);
+        }
+
+        TEST(arc_test, CSTR) // NOLINT
+        {
+            ASSERT_STREQ(test::CSTR, "Hello Arc::Torus!\n");
         }
 
 

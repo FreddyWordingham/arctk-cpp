@@ -1,5 +1,5 @@
 //  == IMPORTS ==
-//  -- Unit --
+//  -- Arc --
 #include "arctk/config/build.inl"
 
 //  -- GTest --
@@ -27,52 +27,56 @@ using namespace arc; // NOLINT
 
 
 //  == NAMESPACE ==
-namespace test
+namespace testing
 {
-
-
-
-    //  == CONSTANT TESTS ==
-    //  -- Build Information  --
-    TEST(build, DIR) // NOLINT
+    namespace unit
     {
-        ASSERT_GT(std::strlen(arc::config::DIR), 5);
-
-        ASSERT_TRUE(std::string{arc::config::DIR}.find("arctk") != std::string::npos);
-    }
-
-    TEST(build, BRANCH) // NOLINT
-    {
-        ASSERT_GE(std::strlen(arc::config::BRANCH), 3);
-    }
-
-    TEST(build, HASH) // NOLINT
-    {
-        ASSERT_GT(std::strlen(arc::config::HASH), 8);
-    }
-
-    TEST(build, COMPILER) // NOLINT
-    {
-        ASSERT_GE(std::strlen(arc::config::COMPILER), 3);
-
-        ASSERT_TRUE((arc::config::COMPILER == "Clang") || (arc::config::COMPILER == "GNU"));
-    }
-
-    TEST(build, TYPE) // NOLINT
-    {
-        ASSERT_GT(std::strlen(arc::config::TYPE), 0);
-
-        ASSERT_TRUE((arc::config::TYPE == "debug") || (arc::config::TYPE == "release"));
-    }
-
-    TEST(build, DATE) // NOLINT
-    {
-        ASSERT_EQ(std::strlen(arc::config::DATE), 10);
-    }
 
 
 
-} // namespace test
+        //  == CONSTANT TESTS ==
+        //  -- Build Information  --
+        TEST(config, DIR) // NOLINT
+        {
+            ASSERT_GT(std::strlen(config::DIR), 5);
+
+
+            ASSERT_TRUE(std::string{config::DIR}.find("arctk") != std::string::npos);
+        }
+
+        TEST(config, BRANCH) // NOLINT
+        {
+            ASSERT_GE(std::strlen(config::BRANCH), 3);
+        }
+
+        TEST(config, HASH) // NOLINT
+        {
+            ASSERT_GT(std::strlen(config::HASH), 8);
+        }
+
+        TEST(config, COMPILER) // NOLINT
+        {
+            ASSERT_GE(std::strlen(config::COMPILER), 3);
+
+            ASSERT_TRUE((config::COMPILER == "Clang") || (config::COMPILER == "GNU"));
+        }
+
+        TEST(config, TYPE) // NOLINT
+        {
+            ASSERT_GT(std::strlen(config::TYPE), 0);
+
+            ASSERT_TRUE((config::TYPE == "debug") || (config::TYPE == "release"));
+        }
+
+        TEST(config, DATE) // NOLINT
+        {
+            ASSERT_EQ(std::strlen(config::DATE), 10);
+        }
+
+
+
+    } // namespace unit
+} // namespace testing
 
 
 
