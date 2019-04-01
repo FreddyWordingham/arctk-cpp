@@ -1,6 +1,8 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/fmt/pad.inl"
+#include "arctk/test/constants.inl"
+#include "arctk/test/types.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
@@ -80,53 +82,53 @@ namespace testing
         //  -- Printing --
         TEST_F(fmt_Pad, operator_stream_out) // NOLINT
         {
-            auto test = [&](const auto& pad_, const auto val_) {
+            auto test = [](const auto& pad_, const auto val_) {
                 std::stringstream stream;
                 stream << pad_ << val_ << '\n';
-                return (stream.str());
+                return (stream.c_str());
             };
 
-            ASSERT_EQ(test(_mutable_small_width, bool{true}), "   1\n");
-            ASSERT_EQ(test(_immutable_small_width, bool{true}), "   1\n");
-            ASSERT_EQ(test(_mutable_width, bool{true}), "         1\n");
-            ASSERT_EQ(test(_immutable_width, bool{true}), "         1\n");
-            ASSERT_EQ(test(_mutable_width_fill, bool{true}), "******1\n");
-            ASSERT_EQ(test(_immutable_width_fill, bool{true}), "******1\n");
+            ASSERT_STREQ(test(_mutable_small_width, test::BOOL_CANON), "   1\n");
+            ASSERT_STREQ(test(_immutable_small_width, test::BOOL_CANON), "   1\n");
+            ASSERT_STREQ(test(_mutable_width, test::BOOL_CANON), "         1\n");
+            ASSERT_STREQ(test(_immutable_width, test::BOOL_CANON), "         1\n");
+            ASSERT_STREQ(test(_mutable_width_fill, test::BOOL_CANON), "******1\n");
+            ASSERT_STREQ(test(_immutable_width_fill, test::BOOL_CANON), "******1\n");
 
-            ASSERT_EQ(test(_mutable_small_width, char{'a'}), "   a\n");
-            ASSERT_EQ(test(_immutable_small_width, char{'a'}), "   a\n");
-            ASSERT_EQ(test(_mutable_width, char{'a'}), "         a\n");
-            ASSERT_EQ(test(_immutable_width, char{'a'}), "         a\n");
-            ASSERT_EQ(test(_mutable_width_fill, char{'a'}), "******a\n");
-            ASSERT_EQ(test(_immutable_width_fill, char{'a'}), "******a\n");
+            ASSERT_STREQ(test(_mutable_small_width, test::CHAR_CANON), "   a\n");
+            ASSERT_STREQ(test(_immutable_small_width, test::CHAR_CANON), "   a\n");
+            ASSERT_STREQ(test(_mutable_width, test::CHAR_CANON), "         a\n");
+            ASSERT_STREQ(test(_immutable_width, test::CHAR_CANON), "         a\n");
+            ASSERT_STREQ(test(_mutable_width_fill, test::CHAR_CANON), "******a\n");
+            ASSERT_STREQ(test(_immutable_width_fill, test::CHAR_CANON), "******a\n");
 
-            ASSERT_EQ(test(_mutable_small_width, int{-32749}), "-32749\n");
-            ASSERT_EQ(test(_immutable_small_width, int{-32749}), "-32749\n");
-            ASSERT_EQ(test(_mutable_width, int{-32749}), "    -32749\n");
-            ASSERT_EQ(test(_immutable_width, int{-32749}), "    -32749\n");
-            ASSERT_EQ(test(_mutable_width_fill, int{-32749}), "*-32749\n");
-            ASSERT_EQ(test(_immutable_width_fill, int{-32749}), "*-32749\n");
+            ASSERT_STREQ(test(_mutable_small_width, test::INT_CANON), "-32749\n");
+            ASSERT_STREQ(test(_immutable_small_width, test::INT_CANON), "-32749\n");
+            ASSERT_STREQ(test(_mutable_width, test::INT_CANON), "    -32749\n");
+            ASSERT_STREQ(test(_immutable_width, test::INT_CANON), "    -32749\n");
+            ASSERT_STREQ(test(_mutable_width_fill, test::INT_CANON), "*-32749\n");
+            ASSERT_STREQ(test(_immutable_width_fill, test::INT_CANON), "*-32749\n");
 
-            ASSERT_EQ(test(_mutable_small_width, std::size_t{67280421310721}), "67280421310721\n");
-            ASSERT_EQ(test(_immutable_small_width, std::size_t{67280421310721}), "67280421310721\n");
-            ASSERT_EQ(test(_mutable_width, std::size_t{67280421310721}), "67280421310721\n");
-            ASSERT_EQ(test(_immutable_width, std::size_t{67280421310721}), "67280421310721\n");
-            ASSERT_EQ(test(_mutable_width_fill, std::size_t{67280421310721}), "67280421310721\n");
-            ASSERT_EQ(test(_immutable_width_fill, std::size_t{67280421310721}), "67280421310721\n");
+            ASSERT_STREQ(test(_mutable_small_width, test::SIZE_CANON), "67280421310721\n");
+            ASSERT_STREQ(test(_immutable_small_width, test::SIZE_CANON), "67280421310721\n");
+            ASSERT_STREQ(test(_mutable_width, test::SIZE_CANON), "67280421310721\n");
+            ASSERT_STREQ(test(_immutable_width, test::SIZE_CANON), "67280421310721\n");
+            ASSERT_STREQ(test(_mutable_width_fill, test::SIZE_CANON), "67280421310721\n");
+            ASSERT_STREQ(test(_immutable_width_fill, test::SIZE_CANON), "67280421310721\n");
 
-            ASSERT_EQ(test(_mutable_small_width, double{-3.14159}), "-3.14159\n");
-            ASSERT_EQ(test(_immutable_small_width, double{-3.14159}), "-3.14159\n");
-            ASSERT_EQ(test(_mutable_width, double{-3.14159}), "  -3.14159\n");
-            ASSERT_EQ(test(_immutable_width, double{-3.14159}), "  -3.14159\n");
-            ASSERT_EQ(test(_mutable_width_fill, double{-3.14159}), "-3.14159\n");
-            ASSERT_EQ(test(_immutable_width_fill, double{-3.14159}), "-3.14159\n");
+            ASSERT_STREQ(test(_mutable_small_width, test::FLOAT_CANON), "-3.14159\n");
+            ASSERT_STREQ(test(_immutable_small_width, test::FLOAT_CANON), "-3.14159\n");
+            ASSERT_STREQ(test(_mutable_width, test::FLOAT_CANON), "  -3.14159\n");
+            ASSERT_STREQ(test(_immutable_width, test::FLOAT_CANON), "  -3.14159\n");
+            ASSERT_STREQ(test(_mutable_width_fill, test::FLOAT_CANON), "-3.14159\n");
+            ASSERT_STREQ(test(_immutable_width_fill, test::FLOAT_CANON), "-3.14159\n");
 
-            ASSERT_EQ(test(_mutable_small_width, std::string{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n\n");
-            ASSERT_EQ(test(_immutable_small_width, std::string{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n\n");
-            ASSERT_EQ(test(_mutable_width, std::string{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n\n");
-            ASSERT_EQ(test(_immutable_width, std::string{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n\n");
-            ASSERT_EQ(test(_mutable_width_fill, std::string{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n\n");
-            ASSERT_EQ(test(_immutable_width_fill, std::string{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n\n");
+            ASSERT_STREQ(test(_mutable_small_width, test::C_STR_CANON{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n\n");
+            ASSERT_STREQ(test(_immutable_small_width, test::C_STR_CANON{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n\n");
+            ASSERT_STREQ(test(_mutable_width, test::C_STR_CANON{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n\n");
+            ASSERT_STREQ(test(_immutable_width, test::C_STR_CANON{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n\n");
+            ASSERT_STREQ(test(_mutable_width_fill, test::C_STR_CANON{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n\n");
+            ASSERT_STREQ(test(_immutable_width_fill, test::C_STR_CANON{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n\n");
         }
 
 

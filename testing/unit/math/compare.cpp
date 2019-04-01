@@ -1,6 +1,7 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/math/compare.inl"
+#include "arctk/test/constants.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
@@ -32,32 +33,36 @@ namespace testing
 
         //  == FREE FUNCTION TESTS ==
         //  -- Compare --
-        TEST(compare, zero_x) // NOLINT
+        TEST(arc_compare, zero_x) // NOLINT
         {
-            ASSERT_TRUE(math::zero(double{0.0}));
+            ASSERT_TRUE(math::zero(test::FLOAT_ZERO));
 
-            ASSERT_FALSE(math::zero(double{-3.14159}));
+
+            ASSERT_FALSE(math::zero(test::FLOAT_CANON));
         }
 
-        TEST(compare, equal_x_epsilon) // NOLINT
+        TEST(arc_compare, equal_x_epsilon) // NOLINT
         {
-            ASSERT_TRUE(math::zero(double{-3.14159}, double{4.0}));
+            ASSERT_TRUE(math::zero(test::FLOAT_CANON, test::FLOAT_CANON + 0.1));
 
-            ASSERT_FALSE(math::zero(double{-3.14159}, double{3.0}));
+
+            ASSERT_FALSE(math::zero(test::FLOAT_CANON, test::FLOAT_CANON - 0.1));
         }
 
-        TEST(compare, equal_x_y) // NOLINT
+        TEST(arc_compare, equal_x_y) // NOLINT
         {
-            ASSERT_TRUE(math::equal(double{-3.14159}, double{-3.14159}));
+            ASSERT_TRUE(math::equal(test::FLOAT_CANON, test::FLOAT_CANON));
 
-            ASSERT_FALSE(math::equal(double{-3.14159}, double{3.14159}));
+
+            ASSERT_FALSE(math::equal(test::FLOAT_POS, test::FLOAT_NEG));
         }
 
-        TEST(compare, equal_x_y_epsilon) // NOLINT
+        TEST(arc_compare, equal_x_y_epsilon) // NOLINT
         {
-            ASSERT_TRUE(math::equal(double{-3.14159}, double{3.14159}, 2.0));
+            ASSERT_TRUE(math::equal(test::FLOAT_POS, test::FLOAT_NEG, 2.0));
 
-            ASSERT_FALSE(math::equal(double{-3.14159}, double{3.14159}, 1.9));
+
+            ASSERT_FALSE(math::equal(test::FLOAT_POS, test::FLOAT_NEG, 1.9));
         }
 
 

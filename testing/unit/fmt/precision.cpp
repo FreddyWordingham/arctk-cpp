@@ -1,6 +1,8 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/fmt/precision.inl"
+#include "arctk/test/constants.inl"
+#include "arctk/test/types.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
@@ -44,12 +46,12 @@ namespace testing
             //  == FIELDS ==
           protected:
             //  -- Precs --
-            const fmt::Precision _immutable_precision_low{6};
             fmt::Precision       _mutable_precision_low{6};
-            const fmt::Precision _immutable_precision{8};
+            const fmt::Precision _immutable_precision_low{6};
             fmt::Precision       _mutable_precision{8};
-            const fmt::Precision _immutable_precision_high{12};
+            const fmt::Precision _immutable_precision{8};
             fmt::Precision       _mutable_precision_high{12};
+            const fmt::Precision _immutable_precision_high{12};
         };
 
 
@@ -58,17 +60,12 @@ namespace testing
         //  -- Getters --
         TEST_F(Precision, precision) // NOLINT
         {
-            ASSERT_EQ(_immutable_precision_low.precision(), 6);
-
             ASSERT_EQ(_mutable_precision_low.precision(), 6);
-
-            ASSERT_EQ(_immutable_precision.precision(), 8);
-
+            ASSERT_EQ(_immutable_precision_low.precision(), 6);
             ASSERT_EQ(_mutable_precision.precision(), 8);
-
-            ASSERT_EQ(_immutable_precision_high.precision(), 12);
-
+            ASSERT_EQ(_immutable_precision.precision(), 8);
             ASSERT_EQ(_mutable_precision_high.precision(), 12);
+            ASSERT_EQ(_immutable_precision_high.precision(), 12);
         }
 
 
@@ -77,20 +74,18 @@ namespace testing
         //  -- Printing --
         TEST_F(Precision, print_operator) // NOLINT
         {
-            auto test = [](const auto& prec_, const auto& val_) {
+            auto test = [](const auto& prec_, const auto val_) {
                 std::stringstream stream;
-
                 stream << prec_ << val_ << '\n';
-
                 return (stream.str());
             };
 
-            ASSERT_EQ(test(_immutable_precision_low, double{-3.14159}), "-3.14159\n");
-            ASSERT_EQ(test(_mutable_precision_low, double{-3.14159}), "-3.14159\n");
-            ASSERT_EQ(test(_immutable_precision, double{-3.14159}), "-3.14159\n");
-            ASSERT_EQ(test(_mutable_precision, double{-3.14159}), "-3.14159\n");
-            ASSERT_EQ(test(_immutable_precision_high, double{-3.14159}), "-3.14159\n");
-            ASSERT_EQ(test(_mutable_precision_high, double{-3.14159}), "-3.14159\n");
+            ASSERT_STREQ(test(_mutable_precision_low, test::FLOAT_CANON), "-3.14159\n");
+            ASSERT_STREQ(test(_immutable_precision_low, test::FLOAT_CANON), "-3.14159\n");
+            ASSERT_STREQ(test(_mutable_precision, test::FLOAT_CANON), "-3.14159\n");
+            ASSERT_STREQ(test(_immutable_precision, test::FLOAT_CANON), "-3.14159\n");
+            ASSERT_STREQ(test(_mutable_precision_high, test::FLOAT_CANON), "-3.14159\n");
+            ASSERT_STREQ(test(_immutable_precision_high, test::FLOAT_CANON), "-3.14159\n");
         }
 
 

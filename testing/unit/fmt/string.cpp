@@ -1,6 +1,7 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/fmt/string.inl"
+#include "arctk/test/constants.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
@@ -35,14 +36,14 @@ namespace testing
 
         //  == FREE FUNCTION TESTS ==
         //  -- Formatting --
-        TEST(str, simple) // NOLINT
+        TEST(arc_fmt, str_val) // NOLINT
         {
-            ASSERT_EQ(fmt::str(bool{true}), "true");
-            ASSERT_EQ(fmt::str(char{'a'}), "a");
-            ASSERT_EQ(fmt::str(int{-32749}), "-32749");
-            ASSERT_EQ(fmt::str(std::size_t{67280421310721}), "67280421310721");
-            ASSERT_EQ(fmt::str(double{-3.14159}), "-3.14159");
-            ASSERT_EQ(fmt::str(std::string{"Hello Arc::Torus!\n"}), "Hello Arc::Torus!\n");
+            ASSERT_EQ(fmt::str(test::BOOL_CANON), "true");
+            ASSERT_EQ(fmt::str(test::CHAR_CANON), "a");
+            ASSERT_EQ(fmt::str(test::INT_CANON), "-32749");
+            ASSERT_EQ(fmt::str(test::SIZE_CANON), "67280421310721");
+            ASSERT_EQ(fmt::str(test::FLOAT_CANON), "-3.14159");
+            ASSERT_EQ(fmt::str(test::C_STR_CANON), "Hello Arc::Torus!\n");
         }
 
 

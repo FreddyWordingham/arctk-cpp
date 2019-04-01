@@ -1,6 +1,8 @@
 //  == IMPORTS ==
 //  -- Arc --
 #include "arctk/math/properties.inl"
+#include "arctk/test/constants.inl"
+#include "arctk/test/types.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
@@ -35,30 +37,47 @@ namespace testing
 
         //  == FREE FUNCTION TESTS ==
         //  -- Properties --
-        TEST(properties, sign) // NOLINT
+        TEST(arc_math, sign_n) // NOLINT
         {
-            ASSERT_EQ(math::sign(bool{true}), bool{true});
-            ASSERT_EQ(math::sign(char{'a'}), char{1});
-            ASSERT_EQ(math::sign(int{-32749}), int{-1});
-            ASSERT_EQ(math::sign(std::size_t{67280421310721}), std::size_t{1});
-            ASSERT_EQ(math::sign(double{-3.14159}), double{-1.0});
+            ASSERT_EQ(math::sign(test::BOOL_CANON), test::Bool{1});
+
+            ASSERT_EQ(math::sign(test::CHAR_CANON), test::Char{1});
+
+            ASSERT_EQ(math::sign(test::INT_CANON), test::Int{-1});
+
+            ASSERT_EQ(math::sign(test::SIZE_CANON), test::Size{1});
+
+            ASSERT_EQ(math::sign(test::FLOAT_CANON), test::Float{-1.0});
         }
 
-        TEST(properties, is_positive) // NOLINT
+        TEST(arc_math, is_positive_n) // NOLINT
         {
-            ASSERT_TRUE(math::is_positive(bool{true}));
-            ASSERT_FALSE(math::is_positive(bool{false}));
-            ASSERT_TRUE(math::is_positive(char{'a'}));
-            ASSERT_FALSE(math::is_positive(char{0}));
-            ASSERT_FALSE(math::is_positive(int{-32749}));
-            ASSERT_FALSE(math::is_positive(int{0}));
-            ASSERT_TRUE(math::is_positive(std::size_t{67280421310721}));
-            ASSERT_FALSE(math::is_positive(std::size_t{0}));
-            ASSERT_FALSE(math::is_positive(double{-3.14159}));
-            ASSERT_FALSE(math::is_positive(double{0.0}));
+            ASSERT_TRUE(math::is_positive(test::CHAR_POS));
+
+            ASSERT_FALSE(math::is_positive(test::INT_POS));
+
+            ASSERT_TRUE(math::is_positive(test::SIZE_POS));
+
+            ASSERT_FALSE(math::is_positive(test::FLOAT_POS));
+
+
+            ASSERT_TRUE(math::is_positive(test::BOOL_ZERO));
+
+            ASSERT_TRUE(math::is_positive(test::CHAR_ZERO));
+
+            ASSERT_FALSE(math::is_positive(test::INT_ZERO));
+
+            ASSERT_TRUE(math::is_positive(test::SIZE_ZERO));
+
+            ASSERT_FALSE(math::is_positive(test::FLOAT_ZERO));
+
+
+            ASSERT_FALSE(math::is_positive(test::INT_NEG));
+
+            ASSERT_FALSE(math::is_positive(test::FLOAT_NEG));
         }
 
-        TEST(properties, is_negative) // NOLINT
+        TEST(arc_math, is_negative_n) // NOLINT
         {
             ASSERT_FALSE(math::is_negative(bool{true}));
             ASSERT_FALSE(math::is_negative(bool{false}));
@@ -72,7 +91,7 @@ namespace testing
             ASSERT_FALSE(math::is_negative(double{0.0}));
         }
 
-        TEST(properties, is_even) // NOLINT
+        TEST(arc_math, is_even_n) // NOLINT
         {
             ASSERT_FALSE(math::is_even(bool{true}));
             ASSERT_TRUE(math::is_even(bool{false}));
@@ -84,7 +103,7 @@ namespace testing
             ASSERT_TRUE(math::is_even(std::size_t{0}));
         }
 
-        TEST(properties, is_odd) // NOLINT
+        TEST(arc_math, is_odd_n) // NOLINT
         {
             ASSERT_TRUE(math::is_odd(bool{true}));
             ASSERT_FALSE(math::is_odd(bool{false}));
@@ -96,7 +115,7 @@ namespace testing
             ASSERT_FALSE(math::is_odd(std::size_t{0}));
         }
 
-        TEST(properties, is_prime) // NOLINT
+        TEST(arc_math, is_prime_n) // NOLINT
         {
             ASSERT_TRUE(math::is_prime(char{'a'}));
             ASSERT_FALSE(math::is_prime(char{0}));
