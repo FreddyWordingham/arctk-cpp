@@ -66,17 +66,17 @@ namespace testing
 
         TEST(arc_test, INT_POS)
         {
-            ASSERT_LT(test::INT_POS, test::INT_ZERO);
+            ASSERT_GT(test::INT_POS, test::INT_ZERO);
         }
 
         TEST(arc_test, SIZE_POS)
         {
-            ASSERT_LT(test::SIZE_POS, test::SIZE_ZERO);
+            ASSERT_GT(test::SIZE_POS, test::SIZE_ZERO);
         }
 
         TEST(arc_test, FLOAT_POS)
         {
-            ASSERT_LT(test::FLOAT_POS, test::FLOAT_ZERO);
+            ASSERT_GT(test::FLOAT_POS, test::FLOAT_ZERO);
         }
 
 
