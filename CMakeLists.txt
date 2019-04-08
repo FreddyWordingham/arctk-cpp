@@ -56,18 +56,18 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib)
 
 
 #   == CONFIGURATION ==
-set(CONFIG_BUILD_HEADER_IN ${CMAKE_SOURCE_DIR}/config/include/build.hpp.in)
-set(CONFIG_BUILD_HEADER ${CMAKE_SOURCE_DIR}/include/arctk/config/build.hpp)
+set(CONFIG_BUILD_HEADER_IN ${CMAKE_SOURCE_DIR}/config/include/cfg/build.hpp.in)
+set(CONFIG_BUILD_HEADER ${CMAKE_SOURCE_DIR}/include/arctk/cfg/build.hpp)
 configure_file(${CONFIG_BUILD_HEADER_IN} ${CONFIG_BUILD_HEADER} @ONLY)
-set(CONFIG_BUILD_IMPLEMENTATION_IN ${CMAKE_SOURCE_DIR}/config/include/build.inl.in)
-set(CONFIG_BUILD_IMPLEMENTATION ${CMAKE_SOURCE_DIR}/include/arctk/config/build.inl)
+set(CONFIG_BUILD_IMPLEMENTATION_IN ${CMAKE_SOURCE_DIR}/config/include/cfg/build.inl.in)
+set(CONFIG_BUILD_IMPLEMENTATION ${CMAKE_SOURCE_DIR}/include/arctk/cfg/build.inl)
 configure_file(${CONFIG_BUILD_IMPLEMENTATION_IN} ${CONFIG_BUILD_IMPLEMENTATION} @ONLY)
 
-set(CONFIG_VERSION_HEADER_IN ${CMAKE_SOURCE_DIR}/config/include/version.hpp.in)
-set(CONFIG_VERSION_HEADER ${CMAKE_SOURCE_DIR}/include/arctk/config/version.hpp)
+set(CONFIG_VERSION_HEADER_IN ${CMAKE_SOURCE_DIR}/config/include/cfg/version.hpp.in)
+set(CONFIG_VERSION_HEADER ${CMAKE_SOURCE_DIR}/include/arctk/cfg/version.hpp)
 configure_file(${CONFIG_VERSION_HEADER_IN} ${CONFIG_VERSION_HEADER} @ONLY)
-set(CONFIG_VERSION_IMPLEMENTATION_IN ${CMAKE_SOURCE_DIR}/config/include/version.inl.in)
-set(CONFIG_VERSION_IMPLEMENTATION ${CMAKE_SOURCE_DIR}/include/arctk/config/version.inl)
+set(CONFIG_VERSION_IMPLEMENTATION_IN ${CMAKE_SOURCE_DIR}/config/include/cfg/version.inl.in)
+set(CONFIG_VERSION_IMPLEMENTATION ${CMAKE_SOURCE_DIR}/include/arctk/cfg/version.inl)
 configure_file(${CONFIG_VERSION_IMPLEMENTATION_IN} ${CONFIG_VERSION_IMPLEMENTATION} @ONLY)
 
 set(DOXYFILE_IN ${CMAKE_SOURCE_DIR}/config/docs/Doxyfile.in)

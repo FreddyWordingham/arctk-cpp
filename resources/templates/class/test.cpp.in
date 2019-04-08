@@ -16,12 +16,6 @@
 
 
 
-//  == ALIASES ==
-//  -- Namespaces --
-using namespace arc; // NOLINT
-
-
-
 //  == NAMESPACE ==
 namespace testing
 {

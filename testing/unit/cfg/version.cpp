@@ -1,6 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/@IMPLEMENTATION_PATH@"
+#include "arctk/cfg/version.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
@@ -10,8 +10,8 @@
 //  == PRAGMAS ==
 //  -- Warnings --
 #ifdef __clang__
-    #pragma clang diagnostic push
-    #pragma clang diagnostic ignored "-Wglobal-constructors"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wglobal-constructors"
 #endif
 
 
@@ -25,11 +25,11 @@ namespace testing
 
 
         //  == TESTS ==
-//      //  -- Prime --
-//      TEST(prime, special) // NOLINT
-//      {
-//          ASSERT_TRUE(is_prime(2));
-//      }
+        //  -- Prime --
+        TEST(arc::cfg, version::DIR) // NOLINT
+        {
+            GTEST_FAIL();
+        }
 
 
 
@@ -41,5 +41,5 @@ namespace testing
 //  == CLEAN UP ==
 //  -- Warnings --
 #ifdef __clang__
-    #pragma clang diagnostic pop
+#pragma clang diagnostic pop
 #endif
