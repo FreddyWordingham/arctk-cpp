@@ -17,7 +17,7 @@
 
 
 //  == NAMESPACE ==
-namespace testing
+namespace test
 {
     namespace unit
     {
@@ -46,7 +46,7 @@ namespace testing
 
 
     } // namespace unit
-} // namespace testing
+} // namespace test
 
 
 

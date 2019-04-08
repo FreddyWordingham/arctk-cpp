@@ -17,7 +17,7 @@
 
 
 //  == NAMESPACE ==
-namespace testing
+namespace test
 {
     namespace unit
     {
@@ -26,15 +26,15 @@ namespace testing
 
         //  == TESTS ==
         //  -- Prime --
-        TEST(arc::cfg, version::DIR) // NOLINT
+        TEST(arc_cfg__VERSION_MINOR, is_non_negative) // NOLINT
         {
-            GTEST_FAIL();
+            ASSERT_GE(arc::cfg::VERSION_MINOR, 0);
         }
 
 
 
     } // namespace unit
-} // namespace testing
+} // namespace test
 
 
 
