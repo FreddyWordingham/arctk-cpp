@@ -12,7 +12,7 @@ project(arctk)
 #   == VERSION ==
 set(ARCTK_VERSION_MAJOR 0)
 
-set(ARCTK_VERSION_MINOR 1)
+set(ARCTK_VERSION_MINOR 2)
 
 execute_process(COMMAND git rev-list --count HEAD OUTPUT_VARIABLE ARCTK_VERSION_PATCH)
 string(REGEX REPLACE "\n$" "" ARCTK_VERSION_PATCH "${ARCTK_VERSION_PATCH}")
@@ -95,8 +95,7 @@ endif ()
 message("Clang-Tidy: ${CLANG_TIDY}")
 
 if (IWYU)
-    set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE "include-what-you-use;-Xiwyu;--mapping_file=../iwyu.imp")
-    # set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE "include-what-you-use;-Xiwyu;--mapping_file=iwyu.imp;--no_fwd_decls")
+    set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE "include-what-you-use;-Xiwyu;--mapping_file=iwyu.imp;--no_fwd_decls")
 endif ()
 message("IWYU: ${IWYU}")
 
