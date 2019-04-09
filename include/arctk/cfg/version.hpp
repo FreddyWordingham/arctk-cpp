@@ -13,9 +13,7 @@ namespace arc
 
         //  == CONSTANTS ==
         //  -- Version --
-        constexpr const int VERSION_MAJOR{0};
-        constexpr const int VERSION_MINOR{1};
-        constexpr const int VERSION_PATCH{13495};
+        constexpr int VERSION_MINOR{0};
 
 
 
