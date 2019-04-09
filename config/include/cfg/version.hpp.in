@@ -13,7 +13,9 @@ namespace arc
 
         //  == CONSTANTS ==
         //  -- Version --
-        constexpr int VERSION_MINOR{0};
+        constexpr int VERSION_MAJOR{@ARCTK_VERSION_MAJOR@};
+        constexpr int VERSION_MINOR{@ARCTK_VERSION_MINOR@};
+        constexpr int VERSION_PATCH{@ARCTK_VERSION_PATCH@};
 
 
 

@@ -31,6 +31,16 @@ namespace test
             ASSERT_GE(arc::cfg::VERSION_MINOR, 0);
         }
 
+        TEST(arc_cfg__VERSION_MAJOR, is_non_negative) // NOLINT
+        {
+            ASSERT_GE(arc::cfg::VERSION_MAJOR, 0);
+        }
+
+        TEST(arc_cfg__VERSION_PATCH, is_non_negative) // NOLINT
+        {
+            ASSERT_GE(arc::cfg::VERSION_PATCH, 0);
+        }
+
 
 
     } // namespace unit
