@@ -13,6 +13,12 @@ namespace arc
 
         //  == CONSTANTS ==
         //  -- Build Information --
+        constexpr const char* DIR{"@ARCTK_DIR@"};
+        constexpr const char* BRANCH{"@ARCTK_BRANCH@"};
+        constexpr const char* HASH{"@ARCTK_HASH@"};
+        constexpr const char* COMPILER{"@ARCTK_COMPILER@"};
+        constexpr const char* TYPE{"@ARCTK_TYPE@"};
+        constexpr const char* DATE{"@ARCTK_DATE@"};
 
 
 

@@ -25,7 +25,7 @@ namespace test
 
 
         //  == TESTS ==
-        //  -- Prime --
+        //  -- Version --
         TEST(arc_cfg__VERSION_MINOR, is_non_negative) // NOLINT
         {
             ASSERT_GE(arc::cfg::VERSION_MINOR, 0);
