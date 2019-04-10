@@ -29,27 +29,23 @@ namespace test
 
         //  == TESTS ==
         //  -- Build Information --
-        TEST(arc_cfg_DIR, is_not_empty) // NOLINT
+        TEST(arc_cfg, DIR) // NOLINT
         {
             ASSERT_GE(std::strlen(arc::cfg::DIR), 5);
-        }
-
-        TEST(arc_cfg_DIR, contains_arctk) // NOLINT
-        {
             ASSERT_NE(std::string{arc::cfg::DIR}.find("arctk"), std::string::npos);
         }
 
-        TEST(arc_cfg_BRANCH, is_not_empty) // NOLINT
+        TEST(arc_cfg, BRANCH) // NOLINT
         {
             ASSERT_GE(std::strlen(arc::cfg::BRANCH), 3);
         }
 
-        TEST(arc_cfg_HASH, is_not_empty) // NOLINT
+        TEST(arc_cfg, HASH) // NOLINT
         {
             ASSERT_GE(std::strlen(arc::cfg::HASH), 6);
         }
 
-        TEST(arc_cfg_COMPILER, is_valid) // NOLINT
+        TEST(arc_cfg, COMPILER) // NOLINT
         {
 #ifdef __clang__
             ASSERT_STREQ(arc::cfg::COMPILER, "Clang");
@@ -60,7 +56,7 @@ namespace test
 #endif
         }
 
-        TEST(arc_cfg_TYPE, is_valid) // NOLINT
+        TEST(arc_cfg, TYPE) // NOLINT
         {
 #ifdef DEBUG
             ASSERT_STREQ(arc::cfg::TYPE, "debug");
@@ -69,7 +65,7 @@ namespace test
 #endif
         }
 
-        TEST(arc_cfg_DATE, is_valid) // NOLINT
+        TEST(arc_cfg, DATE) // NOLINT
         {
             const std::string date{arc::cfg::DATE};
 

@@ -26,17 +26,17 @@ namespace test
 
         //  == TESTS ==
         //  -- Version --
-        TEST(arc_cfg_VERSION_MINOR, is_non_negative) // NOLINT
+        TEST(arc_cfg, VERSION_MINOR) // NOLINT
         {
             ASSERT_GE(arc::cfg::VERSION_MINOR, 0);
         }
 
-        TEST(arc_cfg_VERSION_MAJOR, is_non_negative) // NOLINT
+        TEST(arc_cfg, VERSION_MAJOR) // NOLINT
         {
             ASSERT_GE(arc::cfg::VERSION_MAJOR, 0);
         }
 
-        TEST(arc_cfg_VERSION_PATCH, is_non_negative) // NOLINT
+        TEST(arc_cfg, VERSION_PATCH) // NOLINT
         {
             ASSERT_GE(arc::cfg::VERSION_PATCH, 0);
         }
