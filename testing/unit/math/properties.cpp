@@ -26,6 +26,26 @@ namespace test
 
         //  == TESTS ==
         //  -- Properties --
+        TEST(arc_math_sign, zero) // NOLINT
+        {
+            ASSERT_EQ(arc::math::sign(0.0), 0.0);
+            ASSERT_EQ(arc::math::sign(-0), 0);
+        }
+
+        TEST(arc_math_sign, positive) // NOLINT
+        {
+            ASSERT_EQ(arc::math::sign(243), 1);
+            ASSERT_EQ(arc::math::sign(3.142), 1.0);
+            ASSERT_EQ(arc::math::sign(0.15f), 1.0f);
+        }
+
+        TEST(arc_math_sign, negative) // NOLINT
+        {
+            ASSERT_EQ(arc::math::sign(-324), -1);
+            ASSERT_EQ(arc::math::sign(-4.6237e5), -1.0);
+            ASSERT_EQ(arc::math::sign(-85.3f), -1.0f);
+        }
+
         TEST(arc_math_is_prime, special_cases) // NOLINT
         {
             ASSERT_FALSE(arc::math::is_prime(0));

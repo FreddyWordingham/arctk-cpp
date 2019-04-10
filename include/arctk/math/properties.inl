@@ -19,6 +19,36 @@ namespace arc
 
         //  == FUNCTIONS ==
         //  -- Properties --
+        template <typename T>
+        constexpr inline T sign(const T n_) noexcept
+        {
+            return ((T{0} < n_) - (n_ < T{0}));
+        }
+
+        template <typename T>
+        constexpr inline bool is_positive(const T n_) noexcept
+        {
+            return (n_ > 0);
+        }
+
+        template <typename T>
+        constexpr inline bool is_negative(const T n_) noexcept
+        {
+            return (n_ < 0);
+        }
+
+        template <typename T, typename>
+        constexpr inline bool is_even(const T n_) noexcept
+        {
+            return ((n_ % 2) == 0);
+        }
+
+        template <typename T, typename>
+        constexpr inline bool is_odd(const T n_) noexcept
+        {
+            return (!is_even(n_));
+        }
+
         template <typename T, typename>
         constexpr bool is_prime(T n_) noexcept
         {

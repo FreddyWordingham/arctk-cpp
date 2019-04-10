@@ -225,7 +225,7 @@ script:
     fi
   - rm -r $ARCTK_DIR/build
   - rm -r $ARCTK_DIR/bin
-  - rm -r $ARCTK_DIR/include/arctk/config
+  - rm -r $ARCTK_DIR/include/arctk/cfg
   - mkdir $ARCTK_DIR/build
   - cd $ARCTK_DIR/build
   - cmake -DCMAKE_BUILD_TYPE=$ARCTK_BUILD_TYPE -DCMAKE_C_COMPILER=$ARCTK_CC -DCMAKE_CXX_COMPILER=$ARCTK_CXX -DBENCHMARK=true ..
@@ -239,7 +239,7 @@ script:
   - cd -
   - rm -r $ARCTK_DIR/build
   - rm -r $ARCTK_DIR/bin
-  - rm -r $ARCTK_DIR/include/arctk/config
+  - rm -r $ARCTK_DIR/include/arctk/cfg
 
 notifications:
   email:
