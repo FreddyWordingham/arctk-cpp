@@ -1,6 +1,6 @@
 //  == IMPORTS ==
 //  -- Arc --
-#include "arctk/cfg/version.inl"
+#include "arctk/fmt/string.inl"
 
 //  -- GTest --
 #include <gtest/gtest.h>
@@ -25,20 +25,13 @@ namespace test
 
 
         //  == TESTS ==
-        //  -- Version --
-        TEST(arc_cfg_VERSION_MINOR, is_non_negative) // NOLINT
+        //  -- Formatting --
+        TEST(arc_fmt_string, handles_primitives) // NOLINT
         {
-            ASSERT_GE(arc::cfg::VERSION_MINOR, 0);
-        }
-
-        TEST(arc_cfg_VERSION_MAJOR, is_non_negative) // NOLINT
-        {
-            ASSERT_GE(arc::cfg::VERSION_MAJOR, 0);
-        }
-
-        TEST(arc_cfg_VERSION_PATCH, is_non_negative) // NOLINT
-        {
-            ASSERT_GE(arc::cfg::VERSION_PATCH, 0);
+            ASSERT_EQ(arc::fmt::string(true), "true");
+            ASSERT_EQ(arc::fmt::string(-7), "-7");
+            ASSERT_EQ(arc::fmt::string(3.14), "3.14");
+            ASSERT_EQ(arc::fmt::string("Hello arc::torus!\n"), "Hello arc::torus!\n");
         }
 
 

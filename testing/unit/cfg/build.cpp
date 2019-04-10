@@ -29,17 +29,17 @@ namespace test
 
         //  == TESTS ==
         //  -- Build Information --
-        TEST(arc_cfg__DIR, is_not_empty) // NOLINT
+        TEST(arc_cfg_DIR, is_not_empty) // NOLINT
         {
             ASSERT_GE(std::strlen(arc::cfg::DIR), 5);
         }
 
-        TEST(arc_cfg__DIR, contains_arctk) // NOLINT
+        TEST(arc_cfg_DIR, contains_arctk) // NOLINT
         {
             ASSERT_NE(std::string{arc::cfg::DIR}.find("arctk"), std::string::npos);
         }
 
-        TEST(arc_cfg__BRANCH, is_not_empty) // NOLINT
+        TEST(arc_cfg_BRANCH, is_not_empty) // NOLINT
         {
             ASSERT_GE(std::strlen(arc::cfg::BRANCH), 3);
         }
@@ -69,7 +69,7 @@ namespace test
 #endif
         }
 
-        TEST(arc_cfg__DATE, is_valid) // NOLINT
+        TEST(arc_cfg_DATE, is_valid) // NOLINT
         {
             const std::string date{arc::cfg::DATE};
 
