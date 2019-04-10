@@ -46,7 +46,7 @@ namespace test
 
         TEST(arc_cfg_HASH, is_not_empty) // NOLINT
         {
-            ASSERT_GE(std::strlen(arc::cfg::HASH), 8);
+            ASSERT_GE(std::strlen(arc::cfg::HASH), 6);
         }
 
         TEST(arc_cfg_COMPILER, is_valid) // NOLINT
