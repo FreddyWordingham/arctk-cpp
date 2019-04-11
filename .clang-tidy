@@ -1,5 +1,5 @@
 ---
-Checks:                '*,-bugprone-exception-escape,-cppcoreguidelines-pro-bounds-array-to-pointer-decay,-fuchsia-default-arguments,-fuchsia-overloaded-operator,-fuchsia-trailing-return,-hicpp-no-array-decay,-llvm-header-guard'
+Checks:                '*,-cppcoreguidelines-pro-bounds-array-to-pointer-decay,-hicpp-no-array-decay,-fuchsia-default-arguments,-fuchsia-overloaded-operator,-llvm-header-guard'
 WarningsAsErrors:      ''
 HeaderFilterRegex:     '.*'
 AnalyzeTemporaryDtors: true
