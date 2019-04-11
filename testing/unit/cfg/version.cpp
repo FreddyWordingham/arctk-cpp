@@ -17,34 +17,31 @@
 
 
 //  == NAMESPACE ==
-namespace test
+namespace test::unit
 {
-    namespace unit
+
+
+
+    //  == TESTS ==
+    //  -- Version --
+    TEST(arc_cfg, VERSION_MINOR) // NOLINT
     {
+        ASSERT_GE(arc::cfg::VERSION_MINOR, 0);
+    }
+
+    TEST(arc_cfg, VERSION_MAJOR) // NOLINT
+    {
+        ASSERT_GE(arc::cfg::VERSION_MAJOR, 0);
+    }
+
+    TEST(arc_cfg, VERSION_PATCH) // NOLINT
+    {
+        ASSERT_GE(arc::cfg::VERSION_PATCH, 0);
+    }
 
 
 
-        //  == TESTS ==
-        //  -- Version --
-        TEST(arc_cfg, VERSION_MINOR) // NOLINT
-        {
-            ASSERT_GE(arc::cfg::VERSION_MINOR, 0);
-        }
-
-        TEST(arc_cfg, VERSION_MAJOR) // NOLINT
-        {
-            ASSERT_GE(arc::cfg::VERSION_MAJOR, 0);
-        }
-
-        TEST(arc_cfg, VERSION_PATCH) // NOLINT
-        {
-            ASSERT_GE(arc::cfg::VERSION_PATCH, 0);
-        }
-
-
-
-    } // namespace unit
-} // namespace test
+} // namespace test::unit
 
 
 

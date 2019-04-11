@@ -13,24 +13,23 @@ def indent(level_):
 
 def get_namespaces_open():
     namespace_list = get_namespace_list()
-    opener = ""
-    for i in range(len(namespace_list)):
-        indentation = indent(4 * i)
-        opener += indentation + "namespace " + namespace_list[i] + "\n"
-        opener += indentation + "{"
-        if i != (len(namespace_list) - 1):
-            opener += "\n"
+    opener = "namespace "
+    for i in range(len(namespace_list) - 1):
+        opener += namespace_list[i]
+        opener += "::"
+    opener += namespace_list[-1]
+    opener += "\n{\n"
     return (opener)
 
 
 def get_namespaces_close():
     namespace_list = get_namespace_list()
-    closer = ""
-    for i in range(len(namespace_list) - 1, -1, -1):
-        indentation = indent(4 * i)
-        closer += indentation + "} // namespace " + namespace_list[i]
-        if i != 0:
-            closer += "\n"
+    closer = "} // namespace "
+    for i in range(len(namespace_list) - 1):
+        closer += namespace_list[i]
+        closer += "::"
+    closer += namespace_list[-1]
+    closer += '\n'
     return (closer)
 
 

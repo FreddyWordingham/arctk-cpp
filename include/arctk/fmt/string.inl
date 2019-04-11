@@ -17,31 +17,28 @@
 
 
 //  == NAMESPACE ==
-namespace arc
+namespace arc::fmt
 {
-    namespace fmt
+
+
+
+    //  == FUNCTIONS ==
+    //  -- Formatting --
+    inline std::string string(const bool val_) noexcept
     {
+        return (val_ ? "true" : "false");
+    }
+
+    template <typename T>
+    inline std::string string(const T& val_) noexcept
+    {
+        std::ostringstream stream;
+
+        stream << val_;
+
+        return (stream.str());
+    }
 
 
 
-        //  == FUNCTIONS ==
-        //  -- Formatting --
-        inline std::string string(const bool val_) noexcept
-        {
-            return (val_ ? "true" : "false");
-        }
-
-        template <typename T>
-        inline std::string string(const T& val_) noexcept
-        {
-            std::ostringstream stream;
-
-            stream << val_;
-
-            return (stream.str());
-        }
-
-
-
-    } // namespace fmt
-} // namespace arc
+} // namespace arc::fmt

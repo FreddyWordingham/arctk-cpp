@@ -17,24 +17,22 @@
 
 
 //  == NAMESPACE ==
-namespace test
+namespace test::unit
 {
-    namespace unit
-    {
 
 
 
-        //  == TESTS ==
-//      //  -- Prime --
-//      TEST(prime, special) // NOLINT
-//      {
-//          ASSERT_TRUE(is_prime(2));
-//      }
+    //  == TESTS ==
+//  //  -- Prime --
+//  TEST(arc_math, is_prime) // NOLINT
+//  {
+//      ASSERT_TRUE(is_prime(2));
+//      ASSERT_FALSE(is_prime(3));
+//  }
 
 
 
-    } // namespace unit
-} // namespace test
+} // namespace test::unit
 
 
 

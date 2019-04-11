@@ -4,23 +4,20 @@
 
 
 //  == NAMESPACE ==
-namespace arc
+namespace arc::cfg
 {
-    namespace cfg
-    {
 
 
 
-        //  == CONSTANTS ==
-        //  -- Build Information --
-        constexpr const char* DIR{"@ARCTK_DIR@"};
-        constexpr const char* BRANCH{"@ARCTK_BRANCH@"};
-        constexpr const char* HASH{"@ARCTK_HASH@"};
-        constexpr const char* COMPILER{"@ARCTK_COMPILER@"};
-        constexpr const char* TYPE{"@ARCTK_TYPE@"};
-        constexpr const char* DATE{"@ARCTK_DATE@"};
+    //  == CONSTANTS ==
+    //  -- Build Information --
+    constexpr const char* DIR{"@ARCTK_DIR@"};
+    constexpr const char* BRANCH{"@ARCTK_BRANCH@"};
+    constexpr const char* HASH{"@ARCTK_HASH@"};
+    constexpr const char* COMPILER{"@ARCTK_COMPILER@"};
+    constexpr const char* TYPE{"@ARCTK_TYPE@"};
+    constexpr const char* DATE{"@ARCTK_DATE@"};
 
 
 
-    } // namespace cfg
-} // namespace arc
+} // namespace arc::cfg

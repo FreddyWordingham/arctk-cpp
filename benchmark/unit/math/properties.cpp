@@ -17,28 +17,24 @@
 
 
 //  == NAMESPACE ==
-namespace bench
+namespace bench::unit
 {
-    namespace unit
+
+
+    //  == BENCHMARKS ==
+    //  -- Properties --
+    static void is_prime(benchmark::State& state) // NOLINT
     {
-
-
-
-        //  == BENCHMARKS ==
-        //  -- Properties --
-        static void is_prime(benchmark::State& state) // NOLINT
+        for (auto _ : state) // NOLINT
         {
-            for (auto _ : state) // NOLINT
-            {
-                arc::math::is_prime(2147483647);
-            }
+            arc::math::is_prime(2147483647); // NOLINT
         }
-        BENCHMARK(is_prime); // NOLINT
+    }
+    BENCHMARK(is_prime); // NOLINT
 
 
 
-    } // namespace unit
-} // namespace bench
+} // namespace bench::unit
 
 
 

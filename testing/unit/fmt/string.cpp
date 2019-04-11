@@ -17,30 +17,27 @@
 
 
 //  == NAMESPACE ==
-namespace test
+namespace test::unit
 {
-    namespace unit
+
+
+
+    //  == TESTS ==
+    //  -- Formatting --
+    TEST(arc_fmt, string) // NOLINT
     {
+        ASSERT_EQ(arc::fmt::string(true), "true");
+
+        ASSERT_EQ(arc::fmt::string(-7), "-7");
+
+        ASSERT_EQ(arc::fmt::string(3.14), "3.14");
+
+        ASSERT_EQ(arc::fmt::string("Hello arc::torus!\n"), "Hello arc::torus!\n");
+    }
 
 
 
-        //  == TESTS ==
-        //  -- Formatting --
-        TEST(arc_fmt, string) // NOLINT
-        {
-            ASSERT_EQ(arc::fmt::string(true), "true");
-
-            ASSERT_EQ(arc::fmt::string(-7), "-7");
-
-            ASSERT_EQ(arc::fmt::string(3.14), "3.14");
-
-            ASSERT_EQ(arc::fmt::string("Hello arc::torus!\n"), "Hello arc::torus!\n");
-        }
-
-
-
-    } // namespace unit
-} // namespace test
+} // namespace test::unit
 
 
 

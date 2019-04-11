@@ -4,23 +4,20 @@
 
 
 //  == NAMESPACE ==
-namespace arc
+namespace arc::cfg
 {
-    namespace cfg
-    {
 
 
 
-        //  == CONSTANTS ==
-        //  -- Build Information --
-        constexpr const char* DIR{"/Users/freddy/Projects/arctk"};
-        constexpr const char* BRANCH{"master"};
-        constexpr const char* HASH{"1cffa4547"};
-        constexpr const char* COMPILER{"Clang"};
-        constexpr const char* TYPE{"debug"};
-        constexpr const char* DATE{"2019-04-11"};
+    //  == CONSTANTS ==
+    //  -- Build Information --
+    constexpr const char* DIR{"/Users/freddy/Projects/arctk"};
+    constexpr const char* BRANCH{"master"};
+    constexpr const char* HASH{"e24b1d4f1"};
+    constexpr const char* COMPILER{"Clang"};
+    constexpr const char* TYPE{"debug"};
+    constexpr const char* DATE{"2019-04-11"};
 
 
 
-    } // namespace cfg
-} // namespace arc
+} // namespace arc::cfg
