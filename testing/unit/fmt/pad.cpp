@@ -56,7 +56,7 @@ namespace test::unit
     //  -- Printing --
     TEST(, printing) // NOLINT
     {
-        const auto lamb = [](const auto& pad_, const auto& val_) {
+        const auto test = [](const auto& pad_, const auto& val_) {
             std::ostringstream stream;
 
             stream << pad_ << val_;
@@ -64,10 +64,10 @@ namespace test::unit
             return (stream.str());
         };
 
-        ASSERT_EQ(lamb(arc::fmt::Pad{7}, 3.14), "   3.14");
-        ASSERT_EQ(lamb(arc::fmt::Pad{12}, 3.14), "        3.14");
-        ASSERT_EQ(lamb(arc::fmt::Pad{7, '*'}, 3.14), "***3.14");
-        ASSERT_EQ(lamb(arc::fmt::Pad{12, '['}, 3.14), "[[[[[[[[3.14");
+        ASSERT_EQ(test(arc::fmt::Pad{7}, 3.14), "   3.14");
+        ASSERT_EQ(test(arc::fmt::Pad{12}, 3.14), "        3.14");
+        ASSERT_EQ(test(arc::fmt::Pad{7, '*'}, 3.14), "***3.14");
+        ASSERT_EQ(test(arc::fmt::Pad{12, '['}, 3.14), "[[[[[[[[3.14");
     }
 
 
